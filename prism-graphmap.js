@@ -398,6 +398,9 @@ const PrismGraphmap = (function () {
       pinchDist: 0,              // last pinch distance for touch zoom
     };
 
+    // Morph rotation offset — composed with orbit in animation loop
+    const morphOffset = { x: 0, y: 0 };
+
     // ── Beat engine state (scripted orbit choreography) ──
     let beatState = null;
     // When active: { sequence, options, index, phase, phaseStart,
@@ -495,8 +498,8 @@ const PrismGraphmap = (function () {
       // ── Apply orbit to graph group ──
       // Always apply rotation so spinTo() works even when user drag is disabled.
       // The orbit capability only gates pointer-drag input, not rotation itself.
-      group.rotation.y = orbit.yaw;
-      group.rotation.x = orbit.pitch;
+      group.rotation.y = orbit.yaw + morphOffset.y;
+      group.rotation.x = orbit.pitch + morphOffset.x;
 
       // ── Apply zoom ──
       camera.position.z = orbit.zoom;
@@ -839,6 +842,8 @@ const PrismGraphmap = (function () {
       unbindDragEvents();
       if (canvas.parentElement) canvas.parentElement.removeChild(canvas);
       group.rotation.set(0, 0, 0);
+      morphOffset.x = 0;
+      morphOffset.y = 0;
       orbit.yaw = 0;
       orbit.pitch = 0;
       orbit.velocityX = 0;
@@ -1339,6 +1344,9 @@ const PrismGraphmap = (function () {
       setZoom,
       getZoom,
       spinTo,
+
+      // Morph rotation offset (composed with orbit)
+      setMorphRotation(x, y) { morphOffset.x = x; morphOffset.y = y; },
 
       // Beat engine (scripted orbit choreography)
       playBeats,

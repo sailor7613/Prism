@@ -5608,6 +5608,15 @@ function applyPrismMorph(t) {
     wrap.style.overflow = '';
   }
 
+  // ── 3D group rotation — flat at 0, tilted perspective at 1 ──
+  if (morphMounted && graphmapInst) {
+    // Ease-in curve so rotation accelerates into the tilt
+    const ease = t * t * (3 - 2 * t); // smoothstep
+    const targetPitch = -0.22;  // rad — top tilts away
+    const targetYaw   =  0.10;  // rad — slight rightward
+    graphmapInst.setMorphRotation(targetPitch * ease, targetYaw * ease);
+  }
+
   // ── Outer axis labels fade + drift ──
   const qSection = document.getElementById('quadrantSection');
   if (qSection) {
