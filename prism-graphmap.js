@@ -131,6 +131,7 @@ const PrismGraphmap = (function () {
       vertexColors: true, roughness: 0.35, metalness: 0.45,
       emissive: 0x050510, emissiveIntensity: 0.08,
       side: THREE.DoubleSide,
+      transparent: true, opacity: 0.50,
     })));
 
     // Grid lines (10 divisions)
@@ -931,6 +932,8 @@ const PrismGraphmap = (function () {
       const x = (normX - 0.5) * GRAPH_SIZE;
       const y = (0.5 - normY) * GRAPH_SIZE;
       const z = (normZ || 0) * Z_EXTENT * 0.8;  // gallery-matched: gz * zExtent * 0.8
+
+
 
       // Fast path: skip geometry rebuild if quadrant unchanged and pin exists
       const needsRebuild = !pinMeshes || !pinData || pinData.quadrant !== quadrant;
