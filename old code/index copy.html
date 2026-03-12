@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Prism — Political Position Mapping</title>
+<meta name="description" content="A political opinion-mapping prototype. Place your position, reveal your depth.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- SPLASH SCREEN -->
+<div id="splash">
+  <img class="splash-wordmark" src="assets/Font_logo_1.png" alt="Prism">
+  <img class="splash-logo-img" src="assets/Logo_1.png" alt="Prism logo">
+  <img class="splash-avatar" src="assets/Avatar_cluster.png" alt="">
+  <button class="splash-enter" onclick="enterApp()">Beam</button>
+  <div class="splash-sub">Western Diametrica<br>By Pacific Software<br>An Intermaritime Project</div>
+  <div class="splash-note">Demo prototype · No data is collected or stored</div>
+</div>
+
+<div class="phone" id="phone">
+  <div class="beam-header"><canvas id="beamCanvas"></canvas></div>
+
+  <div class="panels" id="panels" style="transform: translateX(-100%); transition: none;">
+
+    <!-- PANEL 1: THE BEAM -->
+    <div class="panel p1" id="panel0">
+      <div class="profile-header">
+        <div class="avatar-lg">J</div>
+        <div>
+          <div class="profile-name">Your Profile</div>
+          <div class="profile-meta">New York, NY &nbsp;·&nbsp; Since Feb 2026</div>
+        </div>
+      </div>
+      <div class="position-card">
+        <div class="position-card-label">Your Current Center of Gravity</div>
+        <div class="position-axes">
+          <div class="pos-axis">
+            <div class="pos-axis-name">L ←→ R</div>
+            <div class="pos-axis-bar"><div class="pos-axis-fill" style="width:22%;right:auto;"></div></div>
+            <div class="pos-axis-val">−38</div>
+          </div>
+          <div class="pos-axis">
+            <div class="pos-axis-name">Intra-party</div>
+            <div class="pos-axis-bar"><div class="pos-axis-fill down" style="width:28%;right:auto;"></div></div>
+            <div class="pos-axis-val">−52</div>
+          </div>
+        </div>
+      </div>
+      <div class="section-label">Response History</div>
+      <div class="response-log">
+        <div class="log-entry">
+          <div class="log-mini-quad"><div class="log-dot" style="background:#4a8c5a;left:22%;top:68%;"></div></div>
+          <div class="log-content">
+            <div class="log-topic">Coal subsidies &amp; energy policy</div>
+            <div class="log-bottom"><span class="log-coords">(−55, −72)</span><span class="log-intensity conviction">Conviction</span></div>
+          </div>
+        </div>
+        <div class="log-entry">
+          <div class="log-mini-quad"><div class="log-dot" style="background:#3a5a8c;left:28%;top:30%;"></div></div>
+          <div class="log-content">
+            <div class="log-topic">Marijuana &amp; psychedelic policy</div>
+            <div class="log-bottom"><span class="log-coords">(−44, +40)</span><span class="log-intensity coalition">Coalition</span></div>
+          </div>
+        </div>
+        <div class="log-entry">
+          <div class="log-mini-quad"><div class="log-dot" style="background:#c94040;left:65%;top:22%;"></div></div>
+          <div class="log-content">
+            <div class="log-topic">NATO burden sharing &amp; Ukraine</div>
+            <div class="log-bottom"><span class="log-coords">(+30, +56)</span><span class="log-intensity coalition">Coalition</span></div>
+          </div>
+        </div>
+        <div class="log-entry">
+          <div class="log-mini-quad"><div class="log-dot" style="background:#4a8c5a;left:20%;top:72%;"></div></div>
+          <div class="log-content">
+            <div class="log-topic">Rent control &amp; housing supply</div>
+            <div class="log-bottom"><span class="log-coords">(−60, −65)</span><span class="log-intensity">Nominal</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANEL 2: THE PRISM -->
+    <div class="panel p2" id="panel1">
+      <div class="event-header">
+        <div>
+          <div class="event-issue-tag"><div class="live-dot"></div>Foreign Policy &nbsp;·&nbsp; East Asia</div>
+          <div class="event-headline">US moves carrier group into Taiwan Strait</div>
+        </div>
+        <div class="event-date">Feb 19, 2026</div>
+      </div>
+
+      <div class="framing-text">
+        Two carrier strike groups entered the Taiwan Strait following PRC live-fire exercises near the median line. Pentagon calls it "routine freedom of navigation." Beijing calls it a "grave provocation."
+      </div>
+
+      <div class="answers-area">
+        <div class="answers-label">What's your read?</div>
+        <div class="answers-grid" id="answersGrid"></div>
+      </div>
+
+      <div class="quadrant-section" id="quadrantSection">
+        <div class="q-wrap">
+          <div class="q-axis-label">Interventionist</div>
+          <div class="q-middle-row">
+            <div class="q-axis-side">Democrat</div>
+            <div class="quadrant-3d-wrap" id="q3dWrap">
+              <div class="quadrant" id="quadrant">
+                <div class="q-grid"></div>
+                <div class="q-axes"></div>
+                <div class="q-quad-shade A" id="shade-A"></div>
+                <div class="q-quad-shade B" id="shade-B"></div>
+                <div class="q-quad-shade C" id="shade-C"></div>
+                <div class="q-quad-shade D" id="shade-D"></div>
+                <div class="q-corner-label A" id="ql-A"></div>
+                <div class="q-corner-label B" id="ql-B"></div>
+                <div class="q-corner-label C" id="ql-C"></div>
+                <div class="q-corner-label D" id="ql-D"></div>
+                <div class="user-pin" id="userPin">
+                  <div class="pin-ring" id="pinRing"></div>
+                  <div class="pin-pulse" id="pinPulse"></div>
+                </div>
+              </div>
+            </div>
+            <div class="q-axis-side right">Republican</div>
+          </div>
+          <div class="q-axis-label">Anti-Interventionist</div>
+          <div class="coords-display" id="coordsDisplay"></div>
+          <div class="z-hint" id="zHint">↓ Z-axis: ethical depth revealed</div>
+        </div>
+      </div>
+
+      <div class="z-badge" id="zBadge">
+        <div class="z-badge-dot"></div>
+        <span id="zBadgeText">depth gap detected</span>
+      </div>
+
+      <div class="response-section" style="margin-top: 8px;">
+        <div class="response-label">
+          <span>Your take</span>
+          <span class="z-analyzing" id="zAnalyzing">analyzing depth…</span>
+        </div>
+        <textarea id="responseText" placeholder="Say more if you want. (180 chars)" maxlength="180" oninput="onResponseInput()"></textarea>
+        <div class="char-row"><span class="char-count" id="charCount">0 / 180</span></div>
+      </div>
+
+      <div class="submit-area">
+        <button class="submit-btn" id="submitBtn" onclick="submitResponse()">Record Position</button>
+      </div>
+    </div>
+
+    <!-- PANEL 3: REFRACTION -->
+    <div class="panel p3" id="panel2">
+      <div class="agg-header">
+        <div>
+          <div class="agg-headline">Taiwan Strait<br><em>Where does it land?</em></div>
+          <div class="agg-sub">3,847 responses &nbsp;·&nbsp; live</div>
+        </div>
+        <div class="view-toggle">
+          <button class="tog active" id="togScatter" onclick="setView('scatter')">Scatter</button>
+          <button class="tog" id="togHeat" onclick="setView('heat')">Heat</button>
+        </div>
+      </div>
+      <div class="agg-quadrant-section">
+        <div class="agg-q-wrap">
+          <div class="agg-q-axis-label">Interventionist</div>
+          <div class="agg-q-side-row">
+            <div class="agg-q-side-label">Democrat</div>
+            <div style="flex:1;">
+              <div class="agg-quad" id="aggQuad">
+                <div class="agg-quad-grid"></div>
+                <div class="agg-quad-axes"></div>
+                <canvas class="agg-canvas" id="aggCanvas"></canvas>
+                <div class="your-pin" id="yourPin"></div>
+                <div class="agg-locked" id="aggLocked">
+                  <div class="locked-icon">◈</div>
+                  <div class="locked-msg">Submit to unlock</div>
+                </div>
+              </div>
+            </div>
+            <div class="agg-q-side-label right">Republican</div>
+          </div>
+          <div class="agg-q-axis-label">Anti-Interventionist</div>
+        </div>
+      </div>
+      <div class="stats-row">
+        <div class="stat"><div class="stat-val">3,847</div><div class="stat-label">Responses</div></div>
+        <div class="stat"><div class="stat-val">−12</div><div class="stat-label">Mean L/R</div></div>
+        <div class="stat"><div class="stat-val">+8</div><div class="stat-label">Mean I/A</div></div>
+      </div>
+      <div class="distribution-section">
+        <div class="dist-label">Quadrant Distribution</div>
+        <div class="dist-bars">
+          <div class="dist-bar-row"><span class="dist-bar-label" style="color:var(--red)">A</span><div class="dist-bar-track"><div class="dist-bar-fill A" id="distA" style="width:0%"></div></div><span class="dist-bar-pct">38%</span></div>
+          <div class="dist-bar-row"><span class="dist-bar-label" style="color:var(--blue)">B</span><div class="dist-bar-track"><div class="dist-bar-fill B" id="distB" style="width:0%"></div></div><span class="dist-bar-pct">22%</span></div>
+          <div class="dist-bar-row"><span class="dist-bar-label" style="color:var(--green)">C</span><div class="dist-bar-track"><div class="dist-bar-fill C" id="distC" style="width:0%"></div></div><span class="dist-bar-pct">27%</span></div>
+          <div class="dist-bar-row"><span class="dist-bar-label" style="color:var(--orange)">D</span><div class="dist-bar-track"><div class="dist-bar-fill D" id="distD" style="width:0%"></div></div><span class="dist-bar-pct">13%</span></div>
+        </div>
+      </div>
+      <div class="voices-section">
+        <div class="section-label" style="padding:12px 0 8px;">Other Voices</div>
+        <div id="otherVoices">
+          <div style="padding:16px 0;font-family:'DM Mono',monospace;font-size:8px;color:var(--muted);letter-spacing:0.18em;text-transform:uppercase;text-align:center;">Submit your response to see others</div>
+        </div>
+      </div>
+      <div class="legislation-section">
+        <div class="section-label" style="padding:0 0 8px;">Legislative Context</div>
+        <div class="leg-card">
+          <div class="leg-label">Related Legislation</div>
+          <div class="leg-title">Taiwan Relations Act (1979) &amp; TAIPEI Act (2020)</div>
+          <div class="leg-body">Congressional support for Taiwan defense remains bipartisan but contested. Recent polling shows 52% of Americans support military intervention — though support drops to 34% when framed as potential direct conflict with China.</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /panels -->
+
+  <div class="panel-dots">
+    <div class="pdot" id="dot0"></div>
+    <div class="pdot active" id="dot1"></div>
+    <div class="pdot" id="dot2"></div>
+  </div>
+  <div class="swipe-hint">drag the beam · swipe to navigate</div>
+</div><!-- /phone -->
+
+<script src="data.js"></script>
+<script src="quadrant.js"></script>
+<script src="zaxis.js"></script>
+<script src="main.js"></script>

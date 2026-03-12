@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prism Graphmap Factory — Multi-Instance Test</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0c0b09;
+    color: #f5f0e8;
+    font-family: 'Georgia', serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+  h1 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+    opacity: 0.7;
+  }
+  .subtitle {
+    font-size: 0.85rem;
+    opacity: 0.4;
+    margin-bottom: 2rem;
+  }
+  .instances {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 1100px;
+  }
+  .instance-card {
+    flex: 1 1 400px;
+    max-width: 520px;
+  }
+  .instance-label {
+    font-size: 0.9rem;
+    opacity: 0.5;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.06em;
+  }
+  .mode-tag {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    border-radius: 2px;
+    font-size: 0.65rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-left: 0.4rem;
+    vertical-align: middle;
+  }
+  .mode-tag.analytical { background: rgba(201, 64, 64, 0.2); color: #c94040; }
+  .mode-tag.readonly { background: rgba(74, 140, 90, 0.2); color: #4a8c5a; }
+  .mode-tag.embed { background: rgba(200, 122, 48, 0.2); color: #c87a30; }
+  .scroll-spacer {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .scroll-arrow {
+    font-size: 0.8rem;
+    opacity: 0.15;
+    letter-spacing: 0.1em;
+    animation: pulse-arrow 2s ease-in-out infinite;
+  }
+  @keyframes pulse-arrow { 0%, 100% { opacity: 0.1; } 50% { opacity: 0.25; } }
+  .viewport-status {
+    font-size: 0.65rem;
+    font-family: monospace;
+    padding: 0.15rem 0.5rem;
+    border-radius: 2px;
+    margin-left: auto;
+  }
+  .viewport-status.active { color: #4a8c5a; }
+  .viewport-status.paused { color: #c87a30; }
+  .graph-container {
+    width: 100%;
+    aspect-ratio: 1;
+    position: relative;
+    border: 1px solid rgba(245, 240, 232, 0.06);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .controls {
+    margin-top: 0.75rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  button {
+    background: rgba(245, 240, 232, 0.06);
+    border: 1px solid rgba(245, 240, 232, 0.12);
+    color: #f5f0e8;
+    padding: 0.35rem 0.75rem;
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  button:hover { background: rgba(245, 240, 232, 0.12); }
+  button.accent {
+    background: rgba(201, 64, 64, 0.15);
+    border-color: rgba(201, 64, 64, 0.3);
+  }
+  button.accent:hover { background: rgba(201, 64, 64, 0.25); }
+  .orbit-readout {
+    font-size: 0.7rem;
+    opacity: 0.3;
+    font-family: monospace;
+    margin-left: auto;
+  }
+  .status {
+    margin-top: 2rem;
+    font-size: 0.75rem;
+    opacity: 0.3;
+    text-align: center;
+    max-width: 700px;
+    line-height: 1.6;
+  }
+  .hint {
+    font-size: 0.7rem;
+    opacity: 0.25;
+    margin-top: 0.3rem;
+    font-style: italic;
+  }
+
+  /* Inspect toast */
+  .inspect-toast {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: rgba(245, 240, 232, 0.08);
+    border: 1px solid rgba(245, 240, 232, 0.15);
+    backdrop-filter: blur(12px);
+    padding: 0.8rem 1.4rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    pointer-events: none;
+    z-index: 100;
+    text-align: center;
+    min-width: 280px;
+  }
+  .inspect-toast.visible {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  .inspect-toast .label { opacity: 0.4; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.08em; }
+  .inspect-toast .values { margin-top: 0.3rem; font-family: monospace; font-size: 0.85rem; }
+  .inspect-toast .quad { font-weight: bold; }
+  .inspect-toast .quad-A { color: #c94040; }
+  .inspect-toast .quad-B { color: #3a5a8c; }
+  .inspect-toast .quad-C { color: #4a8c5a; }
+  .inspect-toast .quad-D { color: #c87a30; }
+</style>
+</head>
+<body>
+
+<h1>Graphmap Factory — Multi-Instance Test</h1>
+<p class="subtitle">Billboard labels · gallery-matched sprites · per-event axis + corner labels · drag-to-rotate · hold-to-inspect</p>
+
+<div class="instances">
+  <!-- Instance A -->
+  <div class="instance-card">
+    <div class="instance-label">
+      Instance A <span class="mode-tag analytical">analytical</span>
+    </div>
+    <div class="graph-container" id="container-a"></div>
+    <div class="controls">
+      <button onclick="dropPinA()">Drop Pin</button>
+      <button onclick="clearPinA()">Clear Pin</button>
+      <button onclick="scatterDotsA()">Scatter Dots</button>
+      <button onclick="clearDotsA()">Clear Dots</button>
+      <button class="accent" onclick="spinA()">Spin 180°</button>
+      <button onclick="customAxesA()">Custom Axes</button>
+      <button onclick="resetA()">Reset</button>
+      <span class="orbit-readout" id="readout-a"></span>
+    </div>
+    <div class="hint">Drag to orbit — labels fade as plane turns away. Try "Custom Axes".</div>
+  </div>
+
+  <!-- Instance B -->
+  <div class="instance-card">
+    <div class="instance-label">
+      Instance B <span class="mode-tag readonly">read-only</span>
+    </div>
+    <div class="graph-container" id="container-b"></div>
+    <div class="controls">
+      <button onclick="dropPinB()">Drop Pin</button>
+      <button onclick="clearPinB()">Clear</button>
+      <button class="accent" onclick="spinB()">Spin 180°</button>
+      <button onclick="resetB()">Reset</button>
+      <span class="orbit-readout" id="readout-b"></span>
+    </div>
+    <div class="hint">Same interaction, independent state.</div>
+  </div>
+</div>
+
+<!-- Viewport Lifecycle Demo -->
+<div class="scroll-spacer">
+  <div class="scroll-arrow">↓ Scroll to see viewport lifecycle ↓</div>
+</div>
+
+<div class="instances">
+  <div class="instance-card" style="max-width: 520px;">
+    <div class="instance-label">
+      Instance C <span class="mode-tag embed">viewport-gated</span>
+    </div>
+    <div class="graph-container" id="container-c"></div>
+    <div class="controls">
+      <button class="accent" onclick="spinC()">Spin 180°</button>
+      <button onclick="resetC()">Reset</button>
+      <span class="orbit-readout" id="readout-c"></span>
+      <span class="viewport-status" id="viewport-status">⏸ offscreen</span>
+    </div>
+    <div class="hint">This instance only animates when visible. Scroll it out of view and back.</div>
+  </div>
+</div>
+
+<div class="inspect-toast" id="inspect-toast">
+  <div class="label">Pin Inspect</div>
+  <div class="values" id="inspect-values"></div>
+</div>
+
+<div class="status" id="status">Loading…</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="prism-graphmap.js"></script>
+<script>
+  let instA, instB, instC;
+
+  const QUAD_NAMES = {
+    A: 'Auth-Right', B: 'Auth-Left',
+    C: 'Lib-Left',   D: 'Lib-Right'
+  };
+
+  function showInspect(data) {
+    const toast = document.getElementById('inspect-toast');
+    const vals = document.getElementById('inspect-values');
+    const xVal = Math.round((data.normX - 0.5) * 200);
+    const yVal = Math.round((0.5 - data.normY) * 200);
+    const zVal = Math.round((data.normZ || 0) * 100);
+    const mode = data.instance.config.mode;
+    const label = data.label ? '<br><span style="opacity:0.5">' + data.label + '</span>' : '';
+    vals.innerHTML =
+      '<span class="quad quad-' + data.quadrant + '">' + QUAD_NAMES[data.quadrant] + '</span>' +
+      '  ·  X: ' + (xVal >= 0 ? '+' : '') + xVal +
+      '  Y: ' + (yVal >= 0 ? '+' : '') + yVal +
+      '  Z: ' + (zVal >= 0 ? '+' : '') + zVal +
+      '  <span style="opacity:0.4">(' + mode + ')</span>' + label;
+    toast.classList.add('visible');
+    clearTimeout(toast._hideTimer);
+    toast._hideTimer = setTimeout(() => toast.classList.remove('visible'), 2500);
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    // Instance A — analytical
+    instA = PrismGraphmap.create({
+      container: document.getElementById('container-a'),
+      mode: 'analytical',
+      capabilities: { orbit: true, zInput: true, zRender: true, diatribeSlider: true },
+    });
+    instA.onInspect(showInspect);
+
+    // Instance B — read-only
+    instB = PrismGraphmap.create({
+      container: document.getElementById('container-b'),
+      mode: 'readonly',
+      capabilities: { orbit: true, zInput: false, zRender: true, diatribeSlider: false },
+    });
+    instB.onInspect(showInspect);
+    instB.setPin(0.72, 0.28, 'A', 0.35);
+
+    // Populate Instance B with aggregate dots (gallery-style editorial snapshot)
+    instB.addDot(0.65, 0.22, 'A', 0.55,  { label: 'Constitutional Originalists' });
+    instB.addDot(0.78, 0.35, 'A', -0.20, { label: 'Enforcement Hawks' });
+    instB.addDot(0.28, 0.25, 'B', 0.40,  { label: 'Regulatory Framework' });
+    instB.addDot(0.35, 0.18, 'B', -0.45, { label: 'Institutional Trust' });
+    instB.addDot(0.30, 0.72, 'C', 0.30,  { label: 'Community Safety' });
+    instB.addDot(0.22, 0.68, 'C', -0.50, { label: 'Mutual Aid Networks' });
+    instB.addDot(0.70, 0.75, 'D', -0.30, { label: 'Individual Sovereignty' });
+    instB.addDot(0.75, 0.65, 'D', 0.50,  { label: 'Market Solutions' });
+
+    // Instance B: editorial snapshot — gallery-style labels
+    instB.setCornerLabels({
+      A: 'Auth · Left',
+      B: 'Auth · Right',
+      C: 'Lib · Left',
+      D: 'Lib · Right',
+    });
+    instB.setAxisLabels({
+      xNeg: '← Individual',
+      xPos: 'Collective →',
+      yPos: 'Authority',
+      yNeg: 'Liberty',
+    });
+
+    // Instance C — viewport-gated embed
+    instC = PrismGraphmap.create({
+      container: document.getElementById('container-c'),
+      mode: 'embed',
+      capabilities: { orbit: true, zInput: false, zRender: true },
+      lifecycle: { activateOnViewport: true, deactivateOnExit: true },
+    });
+    instC.onInspect(showInspect);
+    instC.setPin(0.35, 0.65, 'C', 0.4);
+    instC.addDot(0.25, 0.72, 'C', 0.3, { label: 'Grassroots Org' });
+    instC.addDot(0.42, 0.58, 'C', -0.2, { label: 'Policy Reform' });
+    instC.addDot(0.68, 0.70, 'D', 0.5, { label: 'Deregulation' });
+    instC.addDot(0.75, 0.30, 'A', -0.4, { label: 'Law & Order' });
+    instC.setAxisLabels({
+      xNeg: '← Individual',
+      xPos: 'Collective →',
+      yPos: 'Authority',
+      yNeg: 'Liberty',
+    });
+
+    document.getElementById('status').textContent =
+      'A/B: always animating. C: viewport-gated — scroll down to activate. ' +
+      'Watch the status indicator switch between ▶ active and ⏸ paused.';
+
+    // Readout + viewport status indicator
+    const vpStatus = document.getElementById('viewport-status');
+    setInterval(() => {
+      const a = instA.getOrbit();
+      const b = instB.getOrbit();
+      document.getElementById('readout-a').textContent =
+        'yaw: ' + a.yaw.toFixed(1) + '\u00B0  pitch: ' + a.pitch.toFixed(1) + '\u00B0';
+      document.getElementById('readout-b').textContent =
+        'yaw: ' + b.yaw.toFixed(1) + '\u00B0  pitch: ' + b.pitch.toFixed(1) + '\u00B0';
+
+      const c = instC.getOrbit();
+      document.getElementById('readout-c').textContent =
+        'yaw: ' + c.yaw.toFixed(1) + '\u00B0  pitch: ' + c.pitch.toFixed(1) + '\u00B0';
+
+      // Viewport status visual
+      // We can infer active state: if animId is running, getOrbit changes when dragging
+      // Simpler: check the container's intersection directly
+      const rect = document.getElementById('container-c').getBoundingClientRect();
+      const inView = rect.bottom > 0 && rect.top < window.innerHeight;
+      vpStatus.textContent = inView ? '▶ active' : '⏸ paused';
+      vpStatus.className = 'viewport-status ' + (inView ? 'active' : 'paused');
+    }, 200);
+  });
+
+  // Controls
+  function quadFromPos(x, y) { return x > 0.5 ? (y < 0.5 ? 'A' : 'D') : (y < 0.5 ? 'B' : 'C'); }
+  function randPin() {
+    const x = 0.15 + Math.random() * 0.7;
+    const y = 0.15 + Math.random() * 0.7;
+    const z = (Math.random() - 0.5) * 1.2;
+    return { x, y, q: quadFromPos(x, y), z };
+  }
+
+  function dropPinA()  { const p = randPin(); instA.setPin(p.x, p.y, p.q, p.z); }
+  function clearPinA() { instA.clearPin(); }
+  function scatterDotsA() {
+    instA.clearDots();
+    const quads = ['A', 'B', 'C', 'D'];
+    for (let i = 0; i < 12; i++) {
+      const x = 0.1 + Math.random() * 0.8;
+      const y = 0.1 + Math.random() * 0.8;
+      const z = (Math.random() - 0.5) * 1.4;
+      const q = quadFromPos(x, y);
+      instA.addDot(x, y, q, z, { label: 'Dot ' + (i + 1) });
+    }
+  }
+  function clearDotsA() { instA.clearDots(); }
+  function spinA()     { const c = instA.getOrbit(); instA.spinTo(c.yaw + 180, c.pitch, 1200); }
+  function resetA()    { instA.spinTo(0, 0, 600); }
+
+  function dropPinB()  { const p = randPin(); instB.setPin(p.x, p.y, p.q, p.z); }
+  function clearPinB() { instB.clearPin(); }
+  function spinB()     { const c = instB.getOrbit(); instB.spinTo(c.yaw + 180, c.pitch, 1200); }
+  function resetB()    { instB.spinTo(0, 0, 600); }
+
+  function spinC()     { const c = instC.getOrbit(); instC.spinTo(c.yaw + 180, c.pitch, 1200); }
+  function resetC()    { instC.spinTo(0, 0, 600); }
+
+  // Custom axes demo — swaps default labels for event-specific ones
+  let axisToggle = false;
+  function customAxesA() {
+    axisToggle = !axisToggle;
+    if (axisToggle) {
+      instA.setCornerLabels({
+        A: 'Auth · Left',
+        B: 'Auth · Right',
+        C: 'Lib · Left',
+        D: 'Lib · Right',
+      });
+      instA.setAxisLabels({
+        xNeg: '← Individual',
+        xPos: 'Collective →',
+        yPos: 'Authority',
+        yNeg: 'Liberty',
+      });
+    } else {
+      instA.setCornerLabels({ A: 'A', B: 'B', C: 'C', D: 'D' });
+      instA.setAxisLabels({ xPos: 'Right', xNeg: 'Left', yPos: 'Up', yNeg: 'Down' });
+    }
+  }
+</script>
+
+</body>
+</html>
