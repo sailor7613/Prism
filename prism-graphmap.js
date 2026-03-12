@@ -17,8 +17,8 @@ const PrismGraphmap = (function () {
 
   // ── Shared constants (no per-instance state here) ──
   const C = {
-    authLeft: 0x3a5a8c, authRight: 0xc94040,
-    libLeft:  0x4a8c5a, libRight:  0xc87a30,
+    authLeft: 0x3868a8, authRight: 0xb83a3a,
+    libLeft:  0x3a8a52, libRight:  0xb87828,
     cream:    0xf5f0e8, bg:        0x0c0b09,
   };
   const GRAPH_SIZE = 2.8, GH = GRAPH_SIZE / 2;
@@ -123,13 +123,13 @@ const PrismGraphmap = (function () {
       else if (x > 0 && y >= 0) c = new THREE.Color(C.authRight);
       else if (x <= 0 && y < 0) c = new THREE.Color(C.libLeft);
       else c = new THREE.Color(C.libRight);
-      c.multiplyScalar(0.55);
+      c.multiplyScalar(0.38);
       colors.push(c.r, c.g, c.b);
     }
     geo.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
     group.add(new THREE.Mesh(geo, new THREE.MeshStandardMaterial({
-      vertexColors: true, roughness: 0.45, metalness: 0.35,
-      emissive: 0x0a0a1e, emissiveIntensity: 0.15,
+      vertexColors: true, roughness: 0.35, metalness: 0.45,
+      emissive: 0x050510, emissiveIntensity: 0.08,
       side: THREE.DoubleSide,
     })));
 
@@ -138,7 +138,7 @@ const PrismGraphmap = (function () {
     for (let i = 0; i <= divs; i++) {
       const p = -GH + i * step, isAxis = (i === divs / 2);
       const mat = new THREE.LineBasicMaterial({
-        color: 0x1a1a2e, transparent: true, opacity: isAxis ? 0.35 : 0.12,
+        color: 0xf5f0e8, transparent: true, opacity: isAxis ? 0.25 : 0.08,
       });
       group.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([
         new THREE.Vector3(-GH, p, 0.003), new THREE.Vector3(GH, p, 0.003),
@@ -153,7 +153,7 @@ const PrismGraphmap = (function () {
       new THREE.Vector3(-GH, -GH, 0.004), new THREE.Vector3(GH, -GH, 0.004),
       new THREE.Vector3(GH, GH, 0.004), new THREE.Vector3(-GH, GH, 0.004),
       new THREE.Vector3(-GH, -GH, 0.004),
-    ]), new THREE.LineBasicMaterial({ color: 0x1a1a2e, transparent: true, opacity: 0.25 })));
+    ]), new THREE.LineBasicMaterial({ color: 0xf5f0e8, transparent: true, opacity: 0.15 })));
 
     // Quadrant shading overlays
     [
@@ -165,7 +165,7 @@ const PrismGraphmap = (function () {
       const m = new THREE.Mesh(
         new THREE.PlaneGeometry(GH, GH),
         new THREE.MeshStandardMaterial({
-          color: cfg.color, transparent: true, opacity: 0.22,
+          color: cfg.color, transparent: true, opacity: 0.10,
           side: THREE.DoubleSide, roughness: 1,
         })
       );
@@ -189,7 +189,7 @@ const PrismGraphmap = (function () {
     const ctx = cvs.getContext('2d');
     cvs.width = 512; cvs.height = 64;
     ctx.font = (fontSize || 20) + 'px Georgia';
-    ctx.fillStyle = color || 'rgba(26,26,46,0.4)';
+    ctx.fillStyle = color || 'rgba(245,240,232,0.5)';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillText(text, 256, 32);
@@ -206,10 +206,10 @@ const PrismGraphmap = (function () {
     // ── Quadrant corner letters (billboard sprites in quadrant colors) ──
     // A = upper left, B = upper right, C = lower left, D = lower right
     const cornerDefs = [
-      { key: 'A', text: 'A', x: -GH + 0.45, y:  GH - 0.2, color: 'rgba(201,64,64,0.65)' },
-      { key: 'B', text: 'B', x:  GH - 0.45, y:  GH - 0.2, color: 'rgba(58,90,140,0.65)' },
-      { key: 'C', text: 'C', x: -GH + 0.45, y: -GH + 0.2, color: 'rgba(74,140,90,0.65)' },
-      { key: 'D', text: 'D', x:  GH - 0.45, y: -GH + 0.2, color: 'rgba(200,122,48,0.65)' },
+      { key: 'A', text: 'A', x: -GH + 0.45, y:  GH - 0.2, color: 'rgba(184,58,58,0.75)' },
+      { key: 'B', text: 'B', x:  GH - 0.45, y:  GH - 0.2, color: 'rgba(56,104,168,0.75)' },
+      { key: 'C', text: 'C', x: -GH + 0.45, y: -GH + 0.2, color: 'rgba(58,138,82,0.75)' },
+      { key: 'D', text: 'D', x:  GH - 0.45, y: -GH + 0.2, color: 'rgba(184,120,40,0.75)' },
     ];
     const cornerEntries = {};
     cornerDefs.forEach(function (c) {
@@ -228,7 +228,7 @@ const PrismGraphmap = (function () {
     ];
     const axisEntries = {};
     axisDefs.forEach(function (a) {
-      const lbl = makeLabelSprite(a.text, 'rgba(26,26,46,0.35)', 15);
+      const lbl = makeLabelSprite(a.text, 'rgba(245,240,232,0.4)', 15);
       lbl.sprite.scale.set(1.1, 0.14, 1);
       lbl.sprite.position.set(a.x, a.y, 0);
       labelsGroup.add(lbl.sprite);
@@ -236,7 +236,7 @@ const PrismGraphmap = (function () {
     });
 
     // ── Z depth label ──
-    const zLbl = makeLabelSprite('Z · Depth', 'rgba(26,26,46,0.18)', 13);
+    const zLbl = makeLabelSprite('Z · Depth', 'rgba(245,240,232,0.2)', 13);
     zLbl.sprite.scale.set(0.9, 0.12, 1);
     zLbl.sprite.position.set(0.2, 0.15, Z_EXTENT + 0.3);
     labelsGroup.add(zLbl.sprite);
@@ -256,7 +256,7 @@ const PrismGraphmap = (function () {
       pinGroup.remove(child);
     }
 
-    const baseColor = PIN_COLORS[quadrant] || 0xc94040;
+    const baseColor = PIN_COLORS[quadrant] || 0xb83a3a;
     const col = new THREE.Color(baseColor);
 
     // ── Iridescent square halo (sits on the plane surface) ──
@@ -287,10 +287,10 @@ const PrismGraphmap = (function () {
     // Same rotation as gallery: graphUserPin.rotation.x = -Math.PI/2
     const pinGeo = new THREE.ConeGeometry(0.06, 0.16, 8);
     const brightPin = col.clone();
-    brightPin.offsetHSL(0, 0.3, 0.08); // extra saturation punch for user pin
+    brightPin.offsetHSL(0, 0.2, -0.02); // saturate, slight darken
     const pinMat = new THREE.MeshStandardMaterial({
-      color: brightPin, emissive: brightPin, emissiveIntensity: 0.5,
-      roughness: 0.2, metalness: 0.0,
+      color: brightPin, emissive: brightPin, emissiveIntensity: 0.35,
+      roughness: 0.25, metalness: 0.1,
     });
     const pin = new THREE.Mesh(pinGeo, pinMat);
     pin.rotation.x = -Math.PI / 2;   // tip points -Z (toward plane surface)
@@ -887,7 +887,7 @@ const PrismGraphmap = (function () {
         zConnector = null;
       }
       if (config.capabilities.zRender && normZ && Math.abs(normZ) > 0.01) {
-        const baseColor = PIN_COLORS[quadrant] || 0xc94040;
+        const baseColor = PIN_COLORS[quadrant] || 0xb83a3a;
         const lineGeo = new THREE.BufferGeometry().setFromPoints([
           new THREE.Vector3(x, y, 0),
           new THREE.Vector3(x, y, z),
@@ -930,12 +930,18 @@ const PrismGraphmap = (function () {
       const y = (0.5 - normY) * GRAPH_SIZE;
       const z = (normZ || 0) * Z_EXTENT * 0.8;
 
-      // Sphere — flat-lit, vivid, fully opaque
+      // Sphere — deep base with emissive inner glow (Getty style)
       const brightCol = col.clone();
-      brightCol.offsetHSL(0, 0.35, 0.1); // punch saturation hard
+      brightCol.offsetHSL(0, 0.2, -0.05); // saturate but darken
       const mesh = new THREE.Mesh(
         new THREE.SphereGeometry(opts.radius || 0.05, 14, 10),
-        new THREE.MeshBasicMaterial({ color: brightCol })
+        new THREE.MeshStandardMaterial({
+          color: brightCol,
+          emissive: brightCol,
+          emissiveIntensity: 0.4,
+          roughness: 0.3,
+          metalness: 0.2,
+        })
       );
       mesh.position.set(x, y, z);
       dotsGroup.add(mesh);
@@ -1148,7 +1154,7 @@ const PrismGraphmap = (function () {
           entry.label.texture.dispose();
 
           // Build replacement billboard sprite
-          var newLbl = makeLabelSprite(cfg[key], 'rgba(26,26,46,0.35)', 15);
+          var newLbl = makeLabelSprite(cfg[key], 'rgba(245,240,232,0.4)', 15);
           newLbl.sprite.scale.set(1.1, 0.14, 1);
           newLbl.sprite.position.copy(savedPos);
           labels.labelsGroup.add(newLbl.sprite);
@@ -1220,7 +1226,7 @@ const PrismGraphmap = (function () {
       ctx.lineWidth = 3;
       ctx.strokeText(text, 512, 64);
       // Colored fill on top
-      ctx.fillStyle = color || 'rgba(26,26,46,0.6)';
+      ctx.fillStyle = color || 'rgba(245,240,232,0.6)';
       ctx.fillText(text, 512, 64);
       var tex = new THREE.CanvasTexture(cvs);
       var mat = new THREE.SpriteMaterial({ map: tex, transparent: true, depthTest: false, depthWrite: false });
