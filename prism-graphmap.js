@@ -23,7 +23,7 @@ const PrismGraphmap = (function () {
   };
   const GRAPH_SIZE = 2.8, GH = GRAPH_SIZE / 2;
   const Z_EXTENT = 2.2;   // gallery-matched: max Z displacement from plane
-  const PIN_COLORS = { A: C.authRight, B: C.authLeft, C: C.libLeft, D: C.libRight };
+  const PIN_COLORS = { A: C.authRight, B: C.authLeft, C: C.libLeft, D: C.libRight, T: C.cream };
 
   // ── Default config ──
   const DEFAULTS = {
@@ -235,14 +235,44 @@ const PrismGraphmap = (function () {
       axisEntries[a.key] = { label: lbl, pos: new THREE.Vector3(a.x, a.y, 0) };
     });
 
-    // ── Z depth label ──
+    // ── Z-axis reference line (positive + negative space) ──
+    const zAxisGeo = new THREE.BufferGeometry().setFromPoints([
+      new THREE.Vector3(0, 0, -Z_EXTENT),
+      new THREE.Vector3(0, 0, Z_EXTENT),
+    ]);
+    const zAxisLine = new THREE.Line(zAxisGeo, new THREE.LineBasicMaterial({
+      color: 0xf5f0e8, transparent: true, opacity: 0.12,
+    }));
+    labelsGroup.add(zAxisLine);
+
+    // Tick marks along Z-axis (every 0.25 in normalized space)
+    for (let zt = -1.0; zt <= 1.0; zt += 0.25) {
+      if (Math.abs(zt) < 0.01) continue; // skip origin
+      const zWorld = zt * Z_EXTENT * 0.8;
+      const tickLen = 0.06;
+      const tickGeo = new THREE.BufferGeometry().setFromPoints([
+        new THREE.Vector3(-tickLen, 0, zWorld),
+        new THREE.Vector3(tickLen, 0, zWorld),
+      ]);
+      labelsGroup.add(new THREE.Line(tickGeo, new THREE.LineBasicMaterial({
+        color: 0xf5f0e8, transparent: true, opacity: 0.08,
+      })));
+    }
+
+    // ── Z depth label (above plane) ──
     const zLbl = makeLabelSprite('Z · Depth', 'rgba(245,240,232,0.2)', 13);
     zLbl.sprite.scale.set(0.9, 0.12, 1);
     zLbl.sprite.position.set(0.2, 0.15, Z_EXTENT + 0.3);
     labelsGroup.add(zLbl.sprite);
 
+    // ── Negative Z label (below plane) ──
+    const zNegLbl = makeLabelSprite('Z · Below Surface', 'rgba(160,120,220,0.25)', 12);
+    zNegLbl.sprite.scale.set(1.1, 0.12, 1);
+    zNegLbl.sprite.position.set(0.25, 0.15, -Z_EXTENT * 0.7);
+    labelsGroup.add(zNegLbl.sprite);
+
     group.add(labelsGroup);
-    return { labelsGroup, cornerEntries, axisEntries, zLabel: zLbl };
+    return { labelsGroup, cornerEntries, axisEntries, zLabel: zLbl, zNegLabel: zNegLbl, zAxisLine };
   }
 
   // ── Pin mesh builder (per instance, called on setPin) ──
@@ -357,6 +387,8 @@ const PrismGraphmap = (function () {
     // Gate: hide Z depth label when zRender disabled
     if (!config.capabilities.zRender && labels.zLabel) {
       labels.zLabel.sprite.visible = false;
+      if (labels.zNegLabel) labels.zNegLabel.sprite.visible = false;
+      if (labels.zAxisLine) labels.zAxisLine.visible = false;
     }
 
     let mounted = false;
@@ -858,6 +890,36 @@ const PrismGraphmap = (function () {
       return instance;
     }
 
+    // ── Reparent: move canvas to a new container without destroying WebGL context ──
+    // Events stay bound to canvas. Only DOM parent, ResizeObserver, and size update.
+
+    function reparent(newContainer) {
+      if (!mounted || !newContainer) return instance;
+
+      // Move canvas
+      newContainer.style.position = newContainer.style.position || 'relative';
+      newContainer.appendChild(canvas);
+      containerEl = newContainer;
+
+      // Switch ResizeObserver
+      if (resizeObserver) {
+        resizeObserver.disconnect();
+        resizeObserver.observe(newContainer);
+      }
+
+      // Switch IntersectionObserver
+      if (intersectionObserver) {
+        intersectionObserver.disconnect();
+        intersectionObserver.observe(newContainer);
+      }
+
+      // Resize to new container dimensions
+      resize();
+      // Render immediately so it's not blank during transition
+      renderer.render(scene, camera);
+      return instance;
+    }
+
     // ── Pin API ──
 
     let zConnector = null; // line from plane surface to pin
@@ -1323,6 +1385,7 @@ const PrismGraphmap = (function () {
       // Lifecycle
       mount,
       unmount,
+      reparent,
       resize,
       destroy,
       activate,
