@@ -276,6 +276,151 @@ const PrismGraphmap = (function () {
     return { labelsGroup, cornerEntries, axisEntries, zLabel: zLbl, zNegLabel: zNegLbl, zAxisLine };
   }
 
+  // ── Z Boundary Planes builder ──
+  // Two translucent quads at z = ±Z_EXTENT×0.8 with text labels + optional photo textures.
+  // The positive plane = "Winner" (the determining force succeeds).
+  // The negative plane = "Loser" (the determining force is constrained/defeated).
+
+  function buildBoundaryPlanes(group) {
+    var bpGroup = new THREE.Group();
+    var zWorld = Z_EXTENT * 0.8;              // ±1.76
+    var planeSize = GRAPH_SIZE * 0.82;        // slightly smaller than base plane
+
+    // ── Helper: create one boundary quad + label + photo surface ──
+    function makeBoundary(zPos, labelText) {
+      // Translucent cream quad
+      var geo = new THREE.PlaneGeometry(planeSize, planeSize);
+      var mat = new THREE.MeshStandardMaterial({
+        color: C.cream,
+        transparent: true,
+        opacity: 0.06,
+        side: THREE.DoubleSide,
+        roughness: 1,
+        metalness: 0,
+        depthWrite: false,
+      });
+      var mesh = new THREE.Mesh(geo, mat);
+      mesh.position.set(0, 0, zPos);
+      mesh.renderOrder = 2;
+      bpGroup.add(mesh);
+
+      // Text label sprite — positioned at upper edge of boundary plane
+      var lbl = makeLabelSprite(labelText, 'rgba(245,240,232,0.35)', 18);
+      lbl.sprite.scale.set(1.6, 0.20, 1);
+      var labelYOffset = planeSize * 0.42;
+      lbl.sprite.position.set(0, labelYOffset, zPos + (zPos > 0 ? 0.05 : -0.05));
+      lbl.sprite.renderOrder = 10;
+      bpGroup.add(lbl.sprite);
+
+      // Photo surface — same size as boundary, starts invisible.
+      // Uses a canvas texture composited with alpha for translucency.
+      var photoCvs = document.createElement('canvas');
+      photoCvs.width = 512;
+      photoCvs.height = 512;
+      var photoTex = new THREE.CanvasTexture(photoCvs);
+      photoTex.encoding = THREE.sRGBEncoding;
+      var photoGeo = new THREE.PlaneGeometry(planeSize, planeSize);
+      var photoMat = new THREE.MeshBasicMaterial({
+        map: photoTex,
+        transparent: true,
+        opacity: 0,           // starts invisible — set by setBoundaryContent
+        side: THREE.DoubleSide,
+        depthWrite: false,
+      });
+      var photoMesh = new THREE.Mesh(photoGeo, photoMat);
+      photoMesh.position.set(0, 0, zPos + (zPos > 0 ? 0.02 : -0.02));
+      photoMesh.renderOrder = 3;
+      photoMesh.visible = false;
+      bpGroup.add(photoMesh);
+
+      return {
+        mesh: mesh,
+        mat: mat,
+        label: lbl,
+        photoMesh: photoMesh,
+        photoMat: photoMat,
+        photoCvs: photoCvs,
+        photoTex: photoTex,
+      };
+    }
+
+    var positive = makeBoundary(zWorld, 'Winner');
+    var negative = makeBoundary(-zWorld, 'Loser');
+
+    group.add(bpGroup);
+
+    return {
+      bpGroup: bpGroup,
+      positive: positive,
+      negative: negative,
+      zWorld: zWorld,
+      planeSize: planeSize,
+    };
+  }
+
+  // ── Boundary plane photo loader ──
+  // Loads an image (URL or base64 data URI) into a boundary's canvas texture.
+  // Draws the image centered with configurable alpha, optionally tinted.
+
+  function loadBoundaryPhoto(boundary, src, opts) {
+    opts = opts || {};
+    var alpha = opts.alpha != null ? opts.alpha : 0.25;
+    var tint = opts.tint || null;   // optional: 'rgba(r,g,b,a)' overlay
+    var cvs = boundary.photoCvs;
+    var ctx = cvs.getContext('2d');
+
+    // Clear
+    ctx.clearRect(0, 0, cvs.width, cvs.height);
+
+    if (!src) {
+      boundary.photoMesh.visible = false;
+      boundary.photoMat.opacity = 0;
+      boundary.photoTex.needsUpdate = true;
+      return;
+    }
+
+    var img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = function () {
+      ctx.clearRect(0, 0, cvs.width, cvs.height);
+      ctx.globalAlpha = alpha;
+
+      // Draw image fitted to canvas (contain — no crop, no stretch)
+      var aspect = img.width / img.height;
+      var dw, dh, dx, dy;
+      if (aspect > 1) {
+        // Landscape: fit width, letterbox top/bottom
+        dw = cvs.width;
+        dh = dw / aspect;
+        dx = 0;
+        dy = (cvs.height - dh) / 2;
+      } else {
+        // Portrait: fit height, pillarbox left/right
+        dh = cvs.height;
+        dw = dh * aspect;
+        dx = (cvs.width - dw) / 2;
+        dy = 0;
+      }
+      ctx.drawImage(img, dx, dy, dw, dh);
+
+      // Optional color tint overlay
+      if (tint) {
+        ctx.globalAlpha = 0.15;
+        ctx.fillStyle = tint;
+        ctx.fillRect(0, 0, cvs.width, cvs.height);
+      }
+
+      boundary.photoTex.needsUpdate = true;
+      boundary.photoMesh.visible = true;
+      boundary.photoMat.opacity = 1;  // alpha is baked into canvas
+    };
+    img.onerror = function () {
+      console.warn('[PrismGraphmap] Boundary photo failed to load:', src);
+      boundary.photoMesh.visible = false;
+    };
+    img.src = src;
+  }
+
   // ── Pin mesh builder (per instance, called on setPin) ──
 
   function rebuildPin(pinGroup, quadrant) {
@@ -390,6 +535,14 @@ const PrismGraphmap = (function () {
       labels.zLabel.sprite.visible = false;
       if (labels.zNegLabel) labels.zNegLabel.sprite.visible = false;
       if (labels.zAxisLine) labels.zAxisLine.visible = false;
+    }
+
+    // ── Z Boundary Planes (translucent quads at ±Z ceiling) ──
+    const boundaries = buildBoundaryPlanes(group);
+
+    // Gate: hide boundary planes when zRender disabled
+    if (!config.capabilities.zRender) {
+      boundaries.bpGroup.visible = false;
     }
 
     let mounted = false;
@@ -602,6 +755,24 @@ const PrismGraphmap = (function () {
           }
         });
       });
+
+      // ── Keyword sprite pulse (children of dot meshes, gentle breathe) ──
+      for (var dki = 0; dki < dots.length; dki++) {
+        var dkEntry = dots[dki];
+        if (!dkEntry.keywordSprites || !dkEntry.keywordSprites.length) continue;
+        for (var ksi = 0; ksi < dkEntry.keywordSprites.length; ksi++) {
+          var ksSprite = dkEntry.keywordSprites[ksi].sprite;
+          var ksUd = ksSprite.userData;
+          if (!ksUd || !ksUd.baseScaleX) continue;
+          var ksBreathe = Math.sin(wt * (0.5 + ksUd.weight * 0.3) + ksUd.phase);
+          var ksPulse = 1.0 + ksBreathe * 0.10;
+          ksSprite.scale.x = ksUd.baseScaleX * ksPulse;
+          ksSprite.scale.y = ksUd.baseScaleY * ksPulse;
+          if (ksSprite.material) {
+            ksSprite.material.opacity = 0.6 + ksBreathe * 0.3;
+          }
+        }
+      }
 
       renderer.render(scene, camera);
     }
@@ -1040,16 +1211,59 @@ const PrismGraphmap = (function () {
 
       const dotEntry = {
         mesh, connector, glow, glowMat,
+        keywordSprites: [],   // { sprite, material, texture } — children of mesh
         pulseSpeed: 0,    // 0 = no pulse, set by computeProximity()
         pulsePhase: Math.random() * Math.PI * 2, // random offset so neighbors don't sync
         data: { normX, normY, quadrant, normZ: normZ || 0, label: opts.label || '', desc: opts.desc || '' },
       };
+
+      // ── Keyword sprites (orbit around the dot in 3D) ──
+      if (opts.keywords && opts.keywords.length > 0) {
+        var kwColor = WORD_COLORS[quadrant] || 'rgba(245,240,232,0.7)';
+        var count = opts.keywords.length;
+        for (var ki = 0; ki < count; ki++) {
+          var kw = opts.keywords[ki];
+          var text = typeof kw === 'string' ? kw : kw.text;
+          var weight = (typeof kw === 'object' && kw.weight != null) ? kw.weight : 0.6;
+          var fs = Math.round(22 + weight * 18);
+          var kwSprite = makeWordSprite(text, kwColor, fs);
+
+          // Position in a ring around the orb — slight Z scatter for depth
+          var angle = (ki / count) * Math.PI * 2 + ki * 0.3;
+          var ringR = (opts.radius || 0.05) * 4 + 0.12;
+          kwSprite.sprite.position.set(
+            Math.cos(angle) * ringR,
+            Math.sin(angle) * ringR,
+            (Math.random() - 0.5) * 0.08
+          );
+          kwSprite.sprite.renderOrder = 100;
+          kwSprite.sprite.userData = {
+            baseScaleX: kwSprite.sprite.scale.x,
+            baseScaleY: kwSprite.sprite.scale.y,
+            weight: weight,
+            phase: ki * 1.2 + Math.random(),
+            quadrant: quadrant,
+          };
+          mesh.add(kwSprite.sprite);
+          dotEntry.keywordSprites.push(kwSprite);
+        }
+      }
+
       dots.push(dotEntry);
       return dotEntry;
     }
 
     function clearDots() {
       dots.forEach(d => {
+        // Dispose keyword sprites (children of mesh)
+        if (d.keywordSprites) {
+          d.keywordSprites.forEach(function (ks) {
+            if (ks.material) ks.material.dispose();
+            if (ks.texture) ks.texture.dispose();
+            d.mesh.remove(ks.sprite);
+          });
+          d.keywordSprites.length = 0;
+        }
         if (d.glowMat) d.glowMat.dispose();
         if (d.mesh.geometry) d.mesh.geometry.dispose();
         if (d.mesh.material) d.mesh.material.dispose();
@@ -1202,6 +1416,7 @@ const PrismGraphmap = (function () {
     function destroy() {
       unmount();
       clearAllWords();
+      clearBoundaryPhotos();
       disposeGroup(group);
       disposeGroup(pinGroup);
       renderer.dispose();
@@ -1382,6 +1597,61 @@ const PrismGraphmap = (function () {
       return instance;
     }
 
+    // ── Z Boundary Planes API ──
+    // setBoundaryContent({ positive: { text, photo, photoAlpha }, negative: { text, photo, photoAlpha } })
+    //   text: string — label text (replaces "Winner"/"Loser")
+    //   photo: string — URL or base64 data URI for portrait
+    //   photoAlpha: number — 0-1, controls portrait translucency (default 0.25)
+    // clearBoundaryPhotos() — removes all portrait textures, keeps planes + labels
+
+    function setBoundaryContent(cfg) {
+      if (!cfg) return instance;
+
+      ['positive', 'negative'].forEach(function (side) {
+        var data = cfg[side];
+        if (!data) return;
+        var bp = boundaries[side];
+
+        // Update label text if provided
+        if (data.text != null) {
+          var oldSprite = bp.label.sprite;
+          var oldPos = oldSprite.position.clone();
+          boundaries.bpGroup.remove(oldSprite);
+          bp.label.material.dispose();
+          bp.label.texture.dispose();
+
+          var newLbl = makeLabelSprite(data.text, 'rgba(245,240,232,0.35)', 18);
+          newLbl.sprite.scale.set(1.6, 0.20, 1);
+          newLbl.sprite.position.copy(oldPos);
+          newLbl.sprite.renderOrder = 10;
+          boundaries.bpGroup.add(newLbl.sprite);
+          bp.label = newLbl;
+        }
+
+        // Update photo if provided (null/empty string clears)
+        if (data.photo !== undefined) {
+          loadBoundaryPhoto(bp, data.photo || null, {
+            alpha: data.photoAlpha != null ? data.photoAlpha : 0.25,
+          });
+        }
+      });
+
+      return instance;
+    }
+
+    function clearBoundaryPhotos() {
+      ['positive', 'negative'].forEach(function (side) {
+        var bp = boundaries[side];
+        loadBoundaryPhoto(bp, null);
+      });
+      return instance;
+    }
+
+    function setBoundaryVisible(visible) {
+      boundaries.bpGroup.visible = visible;
+      return instance;
+    }
+
     // ── Instance object ──
 
     const instance = {
@@ -1428,6 +1698,11 @@ const PrismGraphmap = (function () {
       showQuadrantWords,
       clearAllWords,
 
+      // Z boundary planes (translucent quads at ±Z ceiling)
+      setBoundaryContent,
+      clearBoundaryPhotos,
+      setBoundaryVisible,
+
       // Inspect — register a callback for hold-to-inspect on pins
       // Callback receives: { normX, normY, quadrant, instance }
       onInspect(fn) {
@@ -1441,6 +1716,7 @@ const PrismGraphmap = (function () {
       renderer,
       group,
       canvas,
+      boundaries,
 
       // Config (read-only reference)
       config,
