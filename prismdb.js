@@ -8,7 +8,8 @@ const PrismDB = (() => {
     responses: 'prism_responses',
     state:     'prism_state',
     user:      'prism_user',
-    snapshots: 'prism_parallax_snapshots'
+    snapshots: 'prism_parallax_snapshots',
+    arcs:      'prism_arcs'
   };
 
   function _get(key) {
@@ -174,10 +175,86 @@ const PrismDB = (() => {
     return snap;
   }
 
+  // ── Arcs ─────────────────────────────────────────────────
+  // An arc is a temporally ordered sequence of events with a
+  // unified determining object. Each event carries per-quadrant
+  // Subject Z values and subject labels (who occupies each
+  // quadrant for that event).
+  //
+  // Schema:
+  // {
+  //   id: 'arc_cs04',
+  //   title: 'Immigration Arc (1982–2026)',
+  //   description: '...',
+  //   object: 'The Empire',
+  //   objectDescription: 'U.S. institutional apparatus...',
+  //   events: [
+  //     {
+  //       id: 'e4.1',
+  //       label: 'Iran-Contra / Didion / Webb',
+  //       date: '1982',
+  //       x: 0.7, y: 0.95, z: 0.85,   // Object Z
+  //       dia: 80,
+  //       type: 'event',
+  //       qz: { A: 0.85, B: 0.40, C: -0.90, D: -0.60 },
+  //       subjects: {
+  //         A: '',  // e.g. "Covert ops apparatus, NSC"
+  //         B: '',  // e.g. "Institutional Democrats, Cold War liberals"
+  //         C: '',  // e.g. "Displaced Central Americans, anti-war activists"
+  //         D: ''   // e.g. "Libertarian skeptics, fiscal conservatives"
+  //       }
+  //     }
+  //   ],
+  //   linkedArticleId: null,
+  //   created: '...', updated: '...'
+  // }
+
+  function getArcs() { return _get(KEYS.arcs) || []; }
+
+  function getArc(id) {
+    return getArcs().find(a => a.id === id) || null;
+  }
+
+  function saveArc(arc) {
+    const arcs = getArcs();
+    const now = new Date().toISOString();
+
+    // Generate ID if new
+    if (!arc.id) {
+      const maxNum = arcs.reduce((max, a) => {
+        const n = parseInt(a.id.replace('arc_', ''), 10);
+        return isNaN(n) ? max : Math.max(max, n);
+      }, 0);
+      arc.id = 'arc_' + String(maxNum + 1).padStart(3, '0');
+      arc.created = now;
+    }
+    arc.updated = now;
+
+    // Ensure events array exists
+    if (!Array.isArray(arc.events)) arc.events = [];
+
+    // Upsert: replace existing or append
+    const idx = arcs.findIndex(a => a.id === arc.id);
+    if (idx !== -1) {
+      arcs[idx] = arc;
+    } else {
+      arcs.push(arc);
+    }
+
+    _set(KEYS.arcs, arcs);
+    return arc;
+  }
+
+  function deleteArc(id) {
+    const arcs = getArcs().filter(a => a.id !== id);
+    _set(KEYS.arcs, arcs);
+    return true;
+  }
+
   // ── Dev Utilities ───────────────────────────────────────
   function clear() {
     Object.values(KEYS).forEach(k => localStorage.removeItem(k));
-    console.log('PrismDB cleared.');
+    console.log('PrismDB cleared (including arcs).');
   }
 
   // ── Seed ────────────────────────────────────────────────
@@ -884,6 +961,7 @@ const PrismDB = (() => {
     getResponses, getResponsesForEvent, hasRespondedToEvent, saveResponse,
     getAggregateForEvent,
     getSnapshots, getSnapshotsForEvent, saveSnapshot,
+    getArcs, getArc, saveArc, deleteArc,
     getState, setState,
     getUser, setUser,
     clear, seed
