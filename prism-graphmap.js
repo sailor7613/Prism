@@ -582,6 +582,8 @@ const PrismGraphmap = (function () {
       zoomMax: 9.0,              // farthest zoom (small graph)
       zoomSensitivity: 0.003,    // scroll delta multiplier
       pinchDist: 0,              // last pinch distance for touch zoom
+      focusX: 0,                 // graph-local X offset for orbit pivot (0 = center)
+      focusY: 0,                 // graph-local Y offset for orbit pivot (0 = center)
     };
 
     // Morph rotation offset — composed with orbit in animation loop
@@ -590,7 +592,9 @@ const PrismGraphmap = (function () {
     // ── Beat engine state (scripted orbit choreography) ──
     let beatState = null;
     // When active: { sequence, options, index, phase, phaseStart,
-    //                startYaw, startPitch, targetYaw, targetPitch }
+    //                startYaw, startPitch, targetYaw, targetPitch,
+    //                startFocusX, startFocusY, targetFocusX, targetFocusY,
+    //                startZoom, targetZoom }
 
     // ── Beat engine tick (called from animate loop) ──
 
@@ -614,6 +618,9 @@ const PrismGraphmap = (function () {
           // Instant snap
           orbit.yaw = beatState.targetYaw;
           orbit.pitch = beatState.targetPitch;
+          orbit.focusX = beatState.targetFocusX;
+          orbit.focusY = beatState.targetFocusY;
+          orbit.zoom = beatState.targetZoom;
           beatState.phase = 'hold';
           beatState.phaseStart = now;
         } else {
@@ -622,9 +629,15 @@ const PrismGraphmap = (function () {
           var ease = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
           orbit.yaw = beatState.startYaw + (beatState.targetYaw - beatState.startYaw) * ease;
           orbit.pitch = beatState.startPitch + (beatState.targetPitch - beatState.startPitch) * ease;
+          orbit.focusX = beatState.startFocusX + (beatState.targetFocusX - beatState.startFocusX) * ease;
+          orbit.focusY = beatState.startFocusY + (beatState.targetFocusY - beatState.startFocusY) * ease;
+          orbit.zoom = beatState.startZoom + (beatState.targetZoom - beatState.startZoom) * ease;
           if (t >= 1) {
             orbit.yaw = beatState.targetYaw;
             orbit.pitch = beatState.targetPitch;
+            orbit.focusX = beatState.targetFocusX;
+            orbit.focusY = beatState.targetFocusY;
+            orbit.zoom = beatState.targetZoom;
             beatState.phase = 'hold';
             beatState.phaseStart = now;
           }
@@ -649,9 +662,22 @@ const PrismGraphmap = (function () {
           var next = beatState.sequence[beatState.index];
           beatState.startYaw = orbit.yaw;
           beatState.startPitch = orbit.pitch;
+          beatState.startFocusX = orbit.focusX;
+          beatState.startFocusY = orbit.focusY;
+          beatState.startZoom = orbit.zoom;
           beatState.targetYaw = (next.yaw || 0) * Math.PI / 180;
           beatState.targetPitch = Math.max(-orbit.pitchClamp,
             Math.min(orbit.pitchClamp, (next.pitch || 0) * Math.PI / 180));
+          // Focus: if beat specifies focus, convert normalized→graph coords; else hold current
+          if (next.focus) {
+            beatState.targetFocusX = (next.focus.x - 0.5) * GRAPH_SIZE;
+            beatState.targetFocusY = (0.5 - next.focus.y) * GRAPH_SIZE;
+          } else {
+            beatState.targetFocusX = orbit.focusX;
+            beatState.targetFocusY = orbit.focusY;
+          }
+          // Zoom: if beat specifies zoom, use it; else hold current
+          beatState.targetZoom = (next.zoom != null) ? next.zoom : orbit.zoom;
           beatState.phase = 'transition';
           beatState.phaseStart = now;
         }
@@ -686,6 +712,10 @@ const PrismGraphmap = (function () {
       // The orbit capability only gates pointer-drag input, not rotation itself.
       group.rotation.y = orbit.yaw + morphOffset.y;
       group.rotation.x = orbit.pitch + morphOffset.x;
+
+      // ── Apply focus (shift group so focus point is at rotation center) ──
+      group.position.x = -orbit.focusX;
+      group.position.y = -orbit.focusY;
 
       // ── Apply zoom ──
       camera.position.z = orbit.zoom;
@@ -1046,6 +1076,7 @@ const PrismGraphmap = (function () {
       unbindDragEvents();
       if (canvas.parentElement) canvas.parentElement.removeChild(canvas);
       group.rotation.set(0, 0, 0);
+      group.position.set(0, 0, 0);
       morphOffset.x = 0;
       morphOffset.y = 0;
       orbit.yaw = 0;
@@ -1053,6 +1084,8 @@ const PrismGraphmap = (function () {
       orbit.velocityX = 0;
       orbit.velocityY = 0;
       orbit.zoom = 5.4;
+      orbit.focusX = 0;
+      orbit.focusY = 0;
       orbit.pinchDist = 0;
       beatState = null;
       clearPin();
@@ -1346,6 +1379,21 @@ const PrismGraphmap = (function () {
       return orbit.zoom;
     }
 
+    // Focus: set the orbit pivot point in normalized coords (0-1)
+    // (0.5, 0.5) = graph center. Shift is immediate (no animation).
+    function setFocus(normX, normY) {
+      orbit.focusX = ((normX != null ? normX : 0.5) - 0.5) * GRAPH_SIZE;
+      orbit.focusY = (0.5 - (normY != null ? normY : 0.5)) * GRAPH_SIZE;
+      return instance;
+    }
+
+    function getFocus() {
+      return {
+        x: orbit.focusX / GRAPH_SIZE + 0.5,
+        y: 0.5 - orbit.focusY / GRAPH_SIZE,
+      };
+    }
+
     function spinTo(yawDeg, pitchDeg, durationMs) {
       // Animated transition to target rotation
       // Stops any running beat sequence — spinTo is a manual override
@@ -1381,6 +1429,13 @@ const PrismGraphmap = (function () {
       if (!sequence || !sequence.length) return instance;
       opts = opts || {};
       var first = sequence[0];
+      // Focus: convert normalized coords to graph-local; hold current if unspecified
+      var tFocusX = orbit.focusX;
+      var tFocusY = orbit.focusY;
+      if (first.focus) {
+        tFocusX = (first.focus.x - 0.5) * GRAPH_SIZE;
+        tFocusY = (0.5 - first.focus.y) * GRAPH_SIZE;
+      }
       beatState = {
         sequence: sequence,
         options: { loop: !!opts.loop, onComplete: opts.onComplete || null },
@@ -1392,6 +1447,12 @@ const PrismGraphmap = (function () {
         targetYaw: (first.yaw || 0) * Math.PI / 180,
         targetPitch: Math.max(-orbit.pitchClamp,
           Math.min(orbit.pitchClamp, (first.pitch || 0) * Math.PI / 180)),
+        startFocusX: orbit.focusX,
+        startFocusY: orbit.focusY,
+        targetFocusX: tFocusX,
+        targetFocusY: tFocusY,
+        startZoom: orbit.zoom,
+        targetZoom: (first.zoom != null) ? first.zoom : orbit.zoom,
       };
       orbit.velocityX = 0;
       orbit.velocityY = 0;
@@ -1679,6 +1740,8 @@ const PrismGraphmap = (function () {
       getOrbit,
       setZoom,
       getZoom,
+      setFocus,
+      getFocus,
       spinTo,
 
       // Morph rotation offset (composed with orbit)

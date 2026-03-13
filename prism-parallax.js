@@ -643,6 +643,12 @@ function handleZSlider(val) {
     renderParallaxAggregate();
   }
 
+  // ── If graphmap beat sequence is running, stop it ──
+  if (graphmapInst && graphmapInst.isPlaying()) {
+    graphmapInst.stopBeats();
+    setBeatDisplay(raw > 0 ? 'back' : 'over');
+  }
+
   // ── Always reset the 6-second timer on any slider input ──
   if (orbitDelayTimer) {
     clearTimeout(orbitDelayTimer);
@@ -710,13 +716,16 @@ function handleZSlider(val) {
     );
   }
 
-  // ── 6-second static hold → orbit (CSS orbit only — skip in graphmap view) ──
-  if (raw !== 0 && veilState !== 'graphmap-lock') {
+  // ── 6-second static hold → orbit ──
+  if (raw !== 0) {
     orbitDelayTimer = setTimeout(() => {
       orbitDelayTimer = null;
       const curSlider = document.getElementById('zOrbitSlider');
       const curVal = curSlider ? parseInt(curSlider.value, 10) : 0;
-      if (curVal !== 0) {
+      if (curVal === 0) return;
+      if (veilState === 'graphmap-lock' && graphmapInst) {
+        startGraphmapOrbitSequence();
+      } else {
         startOrbitSequence();
       }
     }, ORBIT_DELAY_MS);
@@ -728,6 +737,8 @@ function handleZSlider(val) {
     orbitAzimuth = 0;
     orbitFocus   = { x: 0.5, y: 0.5 };
     orbitUserPin = null;
+    // Reset graphmap focus to center
+    if (graphmapInst) graphmapInst.setFocus(0.5, 0.5);
     const _wrap = document.getElementById('q3dWrap');
     if (_wrap) {
       _wrap.style.transition = 'transform 0.15s ease-out';
@@ -774,6 +785,49 @@ function startOrbitSequence() {
   stopOrbitAnimation();
   renderParallaxAggregate();
   orbitAnimId = requestAnimationFrame(tickOrbit);
+}
+
+function startGraphmapOrbitSequence() {
+  const evt = PrismDB.getActiveEvent();
+  const agg = evt ? PrismDB.getAggregateForEvent(evt.id) : [];
+
+  // Anchors
+  const userPin = (submitted && typeof pinX !== 'undefined')
+    ? { x: pinX, y: pinY }
+    : { x: 0.5, y: 0.5 };
+  const centroid = computeWeightedCentroid(agg);
+
+  // Starting rotation direction from slider
+  const sliderEl = document.getElementById('zOrbitSlider');
+  const curVal = sliderEl ? parseInt(sliderEl.value, 10) : 0;
+  const sign = curVal >= 0 ? 1 : -1;
+
+  setBeatDisplay('seeing orbit');
+
+  graphmapInst.playBeats([
+    // Beat 1: seeing orbit — centered on user pin, gentle swing
+    { yaw: 20 * sign, pitch: 6, focus: userPin, duration: 2800, hold: 200 },
+    { yaw: -18 * sign, pitch: 4, focus: userPin, duration: 2700, hold: 0 },
+    // Beat 2: drift — focus migrates to centroid
+    { yaw: 15 * sign, pitch: 5, focus: centroid, duration: 4500, hold: 0 },
+    // Beat 3: centroid orbit — slow oscillation
+    { yaw: -12 * sign, pitch: 3, focus: centroid, duration: 3500, hold: 500 },
+    { yaw: 12 * sign, pitch: -3, focus: centroid, duration: 3500, hold: 500 },
+  ], {
+    loop: false,
+    onComplete(reason) {
+      if (reason === 'interrupted') {
+        setBeatDisplay('');
+      } else {
+        // After main sequence, loop the centroid orbit
+        setBeatDisplay('center of mass');
+        graphmapInst.playBeats([
+          { yaw: -12 * sign, pitch: 3, focus: centroid, duration: 3500, hold: 500 },
+          { yaw: 12 * sign, pitch: -3, focus: centroid, duration: 3500, hold: 500 },
+        ], { loop: true, onComplete() { setBeatDisplay(''); } });
+      }
+    }
+  });
 }
 
 function tickOrbit(timestamp) {
