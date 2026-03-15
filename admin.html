@@ -1586,6 +1586,54 @@ body {
   transition: transform 0.2s;
 }
 .para-desk.open .para-desk-chevron { transform: rotate(180deg); }
+.para-derive-btn {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  padding: 4px 12px;
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  background: var(--paper);
+  color: var(--ink-light);
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-left: auto;
+  margin-right: 12px;
+}
+.para-derive-btn:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.para-derive-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.para-derive-btn:disabled:hover { background: var(--paper); color: var(--ink-light); border-color: var(--border-strong); }
+/* Annotation fields in refinement audit view */
+.para-z-annotation {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--ink-light);
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 6px 10px;
+  width: 100%;
+  margin-top: 4px;
+  resize: none;
+  height: 28px;
+  transition: border-color 0.2s;
+}
+.para-z-annotation:focus { border-color: var(--ink-light); outline: none; }
+.para-z-annotation::placeholder { color: var(--muted); font-style: italic; }
+.para-z-derived-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  color: var(--green);
+  margin-left: 8px;
+}
+.para-z-manual-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  color: var(--orange);
+  margin-left: 8px;
+}
 .para-desk-body {
   display: none;
   flex-direction: column;
@@ -2453,6 +2501,7 @@ At nominal good faith, all four quadrants present recognizable positions...
       <div class="para-desk" id="paraDesk">
         <div class="para-desk-header" onclick="paraToggleDesk()">
           <h5>✦ Editorial Desk</h5>
+          <button class="para-derive-btn" id="paraDeriveBtn" onclick="event.stopPropagation(); paraDerive();" title="Derive keywords, Z values, and axis-load phrases from current article">◆ Derive</button>
           <span class="para-desk-chevron">▼</span>
         </div>
         <div class="para-desk-body">
@@ -2490,30 +2539,35 @@ At nominal good faith, all four quadrants present recognizable positions...
         <div class="para-refine-group-label">Z-Axis Values</div>
         <div class="para-z-sliders">
           <div class="para-z-row">
-            <label>Object Z</label>
-            <input type="range" id="paraObjZ" min="-100" max="100" value="0" oninput="paraUpdateZVal(this, 'paraObjZVal')">
+            <label>Object Z <span class="para-z-derived-tag" id="paraObjZTag"></span></label>
+            <input type="range" id="paraObjZ" min="-100" max="100" value="0" oninput="paraUpdateZVal(this, 'paraObjZVal'); paraMarkManual('paraObjZTag')">
             <span class="para-z-val" id="paraObjZVal">0.00</span>
           </div>
+          <textarea class="para-z-annotation" id="paraObjZNote" placeholder="override reason…" rows="1"></textarea>
           <div class="para-z-row">
-            <label>Subject Z · A</label>
-            <input type="range" id="paraSubZA" min="-100" max="100" value="0" oninput="paraUpdateZVal(this, 'paraSubZAVal')">
+            <label>Subject Z · A <span class="para-z-derived-tag" id="paraSubZATag"></span></label>
+            <input type="range" id="paraSubZA" min="-100" max="100" value="0" oninput="paraUpdateZVal(this, 'paraSubZAVal'); paraMarkManual('paraSubZATag')">
             <span class="para-z-val" id="paraSubZAVal">0.00</span>
           </div>
+          <textarea class="para-z-annotation" id="paraSubZANote" placeholder="override reason…" rows="1"></textarea>
           <div class="para-z-row">
-            <label>Subject Z · B</label>
-            <input type="range" id="paraSubZB" min="-100" max="100" value="0" oninput="paraUpdateZVal(this, 'paraSubZBVal')">
+            <label>Subject Z · B <span class="para-z-derived-tag" id="paraSubZBTag"></span></label>
+            <input type="range" id="paraSubZB" min="-100" max="100" value="0" oninput="paraUpdateZVal(this, 'paraSubZBVal'); paraMarkManual('paraSubZBTag')">
             <span class="para-z-val" id="paraSubZBVal">0.00</span>
           </div>
+          <textarea class="para-z-annotation" id="paraSubZBNote" placeholder="override reason…" rows="1"></textarea>
           <div class="para-z-row">
-            <label>Subject Z · C</label>
-            <input type="range" id="paraSubZC" min="-100" max="100" value="0" oninput="paraUpdateZVal(this, 'paraSubZCVal')">
+            <label>Subject Z · C <span class="para-z-derived-tag" id="paraSubZCTag"></span></label>
+            <input type="range" id="paraSubZC" min="-100" max="100" value="0" oninput="paraUpdateZVal(this, 'paraSubZCVal'); paraMarkManual('paraSubZCTag')">
             <span class="para-z-val" id="paraSubZCVal">0.00</span>
           </div>
+          <textarea class="para-z-annotation" id="paraSubZCNote" placeholder="override reason…" rows="1"></textarea>
           <div class="para-z-row">
-            <label>Subject Z · D</label>
-            <input type="range" id="paraSubZD" min="-100" max="100" value="0" oninput="paraUpdateZVal(this, 'paraSubZDVal')">
+            <label>Subject Z · D <span class="para-z-derived-tag" id="paraSubZDTag"></span></label>
+            <input type="range" id="paraSubZD" min="-100" max="100" value="0" oninput="paraUpdateZVal(this, 'paraSubZDVal'); paraMarkManual('paraSubZDTag')">
             <span class="para-z-val" id="paraSubZDVal">0.00</span>
           </div>
+          <textarea class="para-z-annotation" id="paraSubZDNote" placeholder="override reason…" rows="1"></textarea>
         </div>
       </div>
 
@@ -6726,6 +6780,182 @@ function paraDeskReset() {
 }
 
 // ============================================================
+// DERIVE — AI-driven extraction from editorial article
+// ============================================================
+
+function paraMarkManual(tagId) {
+  const el = document.getElementById(tagId);
+  if (el) { el.textContent = 'MANUAL'; el.className = 'para-z-manual-tag'; }
+}
+
+async function paraDerive() {
+  const btn = document.getElementById('paraDeriveBtn');
+  const articleContent = document.getElementById('paraMdEditor').value.trim();
+  if (!articleContent) { toast('Write some article content first', true); return; }
+
+  const linkedEventId = document.getElementById('paraLinkedEvent').value;
+  if (!linkedEventId) { toast('Link an event to derive from', true); return; }
+
+  const evt = PrismDB.getEvent(linkedEventId);
+  if (!evt) { toast('Linked event not found in PrismDB', true); return; }
+
+  const apiKey = document.getElementById('aiApiKey').value.trim();
+  if (!apiKey) { toast('Enter your Anthropic API key in the event form first', true); return; }
+
+  // Build context: event parameters + article content
+  const context = paraBuildEditorialContext();
+
+  const derivePrompt = `You are performing a dialectical derivation from a Parallelogram editorial article.
+
+Given the article content and linked event parameters below, extract:
+
+1. **keywords** — For each quadrant (A, B, C, D), identify the 6-10 words or short phrases from the article that carry the most axis load for that quadrant's position. Weight each 0.0-1.0 based on dialectical significance. These will appear as floating word clouds on the 3D graphmap.
+
+2. **zValues** — Derive the Z-axis displacement for the object and each quadrant's subject. Z ranges from -1.0 to +1.0. Positive Z = the subject's position was delivered/validated by institutional outcomes. Negative Z = the subject's position was promised but not delivered, or the subject was displaced by the object. Use the J encoding's Z-axis protocol: Z measures the gap between institutional promise and institutional delivery as experienced by each quadrant's subject.
+
+3. **axisLoadPhrases** — Identify 3-8 specific phrases from the article text that carry the highest analytical density — the sentences or fragments that would trigger the deepest recognition in a reader positioned in the relevant quadrant. Note which quadrant and which axis (x or y) each phrase loads.
+
+Respond with ONLY valid JSON, no markdown fences, no preamble:
+{
+  "keywords": {
+    "A": [{"text": "...", "weight": 0.0-1.0}],
+    "B": [{"text": "...", "weight": 0.0-1.0}],
+    "C": [{"text": "...", "weight": 0.0-1.0}],
+    "D": [{"text": "...", "weight": 0.0-1.0}]
+  },
+  "zValues": {
+    "object": 0.0,
+    "A": 0.0, "B": 0.0, "C": 0.0, "D": 0.0
+  },
+  "axisLoadPhrases": [
+    {"phrase": "...", "quadrant": "A", "axis": "x|y", "weight": 0.0-1.0}
+  ]
+}
+
+--- EDITORIAL CONTEXT ---
+${context}`;
+
+  // Open the desk so user can see progress
+  document.getElementById('paraDesk').classList.add('open');
+  btn.disabled = true;
+  btn.textContent = '◆ Deriving…';
+
+  // Show derive message in desk
+  paraDeskMessages.push({ role: 'user', content: '◆ Derive: extracting keywords, Z values, and axis-load phrases from article…', id: Date.now() });
+  paraDeskRenderMessages();
+  document.getElementById('paraDeskTyping').classList.add('visible');
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 4096,
+        system: PARA_DESK_SYSTEM,
+        messages: [{ role: 'user', content: derivePrompt }]
+      })
+    });
+
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err?.error?.message || `HTTP ${res.status}`);
+    }
+
+    const data = await res.json();
+    const rawReply = (data.content || []).map(b => b.type === 'text' ? b.text : '').join('').trim();
+
+    // Parse JSON — strip any accidental fences
+    const clean = rawReply.replace(/```json|```/g, '').trim();
+    let derived;
+    try {
+      derived = JSON.parse(clean);
+    } catch (parseErr) {
+      throw new Error('Failed to parse derive response as JSON. Raw: ' + rawReply.slice(0, 200));
+    }
+
+    // ── Write keywords into PrismDB words[] arrays ──
+    if (derived.keywords && evt.responses) {
+      ['A', 'B', 'C', 'D'].forEach(q => {
+        const qKeywords = derived.keywords[q];
+        if (!qKeywords || !Array.isArray(qKeywords)) return;
+        const qResp = evt.responses[q];
+        if (!qResp) return;
+
+        // Build words array: [{t: text, w: weight, axis: null, derived: true}]
+        const wordsArr = qKeywords.map(kw => ({
+          t: kw.text,
+          w: typeof kw.weight === 'number' ? kw.weight : 0.5,
+          derived: true
+        }));
+
+        // Write to all three bands (these are quadrant-level keywords)
+        BANDS.forEach(band => {
+          if (qResp[band]) {
+            qResp[band].words = wordsArr;
+          }
+        });
+      });
+    }
+
+    // ── Write Z values into event ──
+    if (derived.zValues) {
+      if (!evt.derivedZ) evt.derivedZ = {};
+      evt.derivedZ = {
+        object: derived.zValues.object || 0,
+        A: derived.zValues.A || 0,
+        B: derived.zValues.B || 0,
+        C: derived.zValues.C || 0,
+        D: derived.zValues.D || 0,
+        derivedAt: new Date().toISOString(),
+        annotations: evt.derivedZ?.annotations || {}
+      };
+    }
+
+    // ── Write axis-load phrases into event ──
+    if (derived.axisLoadPhrases) {
+      evt.axisLoadPhrases = derived.axisLoadPhrases;
+    }
+
+    // ── Persist to PrismDB ──
+    PrismDB.updateEvent(linkedEventId, evt);
+
+    // ── Show results in desk ──
+    const kwSummary = ['A', 'B', 'C', 'D'].map(q => {
+      const kws = derived.keywords?.[q] || [];
+      return `${q}: ${kws.map(k => k.text).join(', ')}`;
+    }).join('\n');
+
+    const zSummary = derived.zValues
+      ? `Object Z: ${derived.zValues.object?.toFixed(2)}, A: ${derived.zValues.A?.toFixed(2)}, B: ${derived.zValues.B?.toFixed(2)}, C: ${derived.zValues.C?.toFixed(2)}, D: ${derived.zValues.D?.toFixed(2)}`
+      : '(none)';
+
+    const phraseSummary = (derived.axisLoadPhrases || [])
+      .map(p => `[${p.quadrant}/${p.axis}] "${p.phrase}"`)
+      .join('\n');
+
+    const summary = `◆ Derivation complete.\n\n**Keywords:**\n${kwSummary}\n\n**Z Values:**\n${zSummary}\n\n**Axis-load phrases:**\n${phraseSummary}\n\nWritten to PrismDB event: ${linkedEventId}`;
+
+    paraDeskMessages.push({ role: 'assistant', content: summary, id: Date.now() + 1 });
+    toast('Derivation complete — keywords + Z values written to PrismDB');
+
+  } catch (err) {
+    paraDeskMessages.push({ role: 'assistant', content: '⚠ Derive failed: ' + (err.message || 'Unknown error'), id: Date.now() + 1, isError: true });
+    toast('Derive failed: ' + err.message, true);
+  } finally {
+    document.getElementById('paraDeskTyping').classList.remove('visible');
+    btn.disabled = false;
+    btn.textContent = '◆ Derive';
+    paraDeskRenderMessages();
+  }
+}
+
+// ============================================================
 // REFINEMENT TAB
 // ============================================================
 
@@ -6736,32 +6966,58 @@ function paraLoadRefinement() {
   if (!eventId) { content.style.display = 'none'; return; }
   content.style.display = 'block';
 
-  // Load refinement data from localStorage (keyed per event)
-  const refKey = 'prism_refine_' + eventId;
-  let refData = {};
-  try { refData = JSON.parse(localStorage.getItem(refKey)) || {}; } catch (e) {}
+  const evt = PrismDB.getEvent(eventId);
+  if (!evt) { content.style.display = 'none'; return; }
 
-  // Z values
-  const objZ = Math.round((refData.objectZ || 0) * 100);
+  // ── Z values: read from event.derivedZ (AI-derived) ──
+  const dz = evt.derivedZ || {};
+  const annotations = dz.annotations || {};
+
+  const objZ = Math.round((dz.object || 0) * 100);
   document.getElementById('paraObjZ').value = objZ;
   document.getElementById('paraObjZVal').textContent = (objZ / 100).toFixed(2);
+  document.getElementById('paraObjZNote').value = annotations.object || '';
+  const objTag = document.getElementById('paraObjZTag');
+  if (dz.derivedAt && !annotations.object) { objTag.textContent = 'DERIVED'; objTag.className = 'para-z-derived-tag'; }
+  else if (annotations.object) { objTag.textContent = 'MANUAL'; objTag.className = 'para-z-manual-tag'; }
+  else { objTag.textContent = ''; }
 
   ['A', 'B', 'C', 'D'].forEach(q => {
-    const val = Math.round((refData.subjectZ?.[q] || 0) * 100);
+    const val = Math.round((dz[q] || 0) * 100);
     document.getElementById('paraSubZ' + q).value = val;
     document.getElementById('paraSubZ' + q + 'Val').textContent = (val / 100).toFixed(2);
+    document.getElementById('paraSubZ' + q + 'Note').value = annotations[q] || '';
+    const tag = document.getElementById('paraSubZ' + q + 'Tag');
+    if (dz.derivedAt && !annotations[q]) { tag.textContent = 'DERIVED'; tag.className = 'para-z-derived-tag'; }
+    else if (annotations[q]) { tag.textContent = 'MANUAL'; tag.className = 'para-z-manual-tag'; }
+    else { tag.textContent = ''; }
   });
 
-  // Keywords
+  // ── Keywords: read from event responses words[] arrays ──
   paraRefineKeywords = { A: [], B: [], C: [], D: [] };
-  if (refData.keywords) {
+  if (evt.responses) {
     ['A', 'B', 'C', 'D'].forEach(q => {
-      paraRefineKeywords[q] = refData.keywords[q] || [];
+      const qResp = evt.responses[q];
+      if (!qResp) return;
+      // Collect unique keywords from goodFaith band (same across bands)
+      const gfWords = qResp.goodFaith?.words || [];
+      const seen = new Set();
+      gfWords.forEach(w => {
+        const text = w.t || w.text || '';
+        if (text && !seen.has(text.toLowerCase())) {
+          seen.add(text.toLowerCase());
+          paraRefineKeywords[q].push(text);
+        }
+      });
     });
   }
   paraRenderAllKeywords();
 
-  // Boundary content
+  // ── Boundary content: read from localStorage (unchanged) ──
+  const refKey = 'prism_refine_' + eventId;
+  let refData = {};
+  try { refData = JSON.parse(localStorage.getItem(refKey)) || {}; } catch (e) {}
+
   paraRefinePhotos = { pos: null, neg: null };
   if (refData.boundaryContent) {
     const bc = refData.boundaryContent;
@@ -6807,11 +7063,60 @@ function paraSaveRefinement() {
   const eventId = document.getElementById('paraRefineEventSelect').value;
   if (!eventId) { toast('Select an event first', true); return; }
 
-  const refData = {
+  const evt = PrismDB.getEvent(eventId);
+  if (!evt) { toast('Event not found', true); return; }
+
+  // ── Write Z values + annotations into event.derivedZ ──
+  const prevDerived = evt.derivedZ || {};
+  const annotations = {};
+  const noteObj = document.getElementById('paraObjZNote').value.trim();
+  if (noteObj) annotations.object = noteObj;
+  ['A', 'B', 'C', 'D'].forEach(q => {
+    const note = document.getElementById('paraSubZ' + q + 'Note').value.trim();
+    if (note) annotations[q] = note;
+  });
+
+  evt.derivedZ = {
+    object: parseInt(document.getElementById('paraObjZ').value) / 100,
+    A: parseInt(document.getElementById('paraSubZA').value) / 100,
+    B: parseInt(document.getElementById('paraSubZB').value) / 100,
+    C: parseInt(document.getElementById('paraSubZC').value) / 100,
+    D: parseInt(document.getElementById('paraSubZD').value) / 100,
+    derivedAt: prevDerived.derivedAt || null,
+    manualAt: new Date().toISOString(),
+    annotations
+  };
+
+  // ── Write keywords into PrismDB words[] arrays ──
+  if (evt.responses) {
+    ['A', 'B', 'C', 'D'].forEach(q => {
+      const qResp = evt.responses[q];
+      if (!qResp) return;
+      const keywords = paraRefineKeywords[q] || [];
+      const wordsArr = keywords.map(kw => ({
+        t: kw,
+        w: 0.7,
+        manual: true
+      }));
+      // Merge: keep derived words, add/replace manual ones
+      BANDS.forEach(band => {
+        if (qResp[band]) {
+          const existing = (qResp[band].words || []).filter(w => w.derived);
+          // Add manual words that aren't duplicates of derived
+          const derivedTexts = new Set(existing.map(w => (w.t || '').toLowerCase()));
+          const manual = wordsArr.filter(w => !derivedTexts.has(w.t.toLowerCase()));
+          qResp[band].words = [...existing, ...manual];
+        }
+      });
+    });
+  }
+
+  // ── Persist to PrismDB ──
+  PrismDB.updateEvent(eventId, evt);
+
+  // ── Boundary content still goes to localStorage (photo data too large for PrismDB) ──
+  const boundaryData = {
     eventId,
-    objectZ: parseInt(document.getElementById('paraObjZ').value) / 100,
-    subjectZ: {},
-    keywords: {},
     boundaryContent: {
       positive: {
         text: document.getElementById('paraBndPosText').value.trim(),
@@ -6826,14 +7131,9 @@ function paraSaveRefinement() {
     },
     updated: new Date().toISOString()
   };
+  localStorage.setItem('prism_refine_' + eventId, JSON.stringify(boundaryData));
 
-  ['A', 'B', 'C', 'D'].forEach(q => {
-    refData.subjectZ[q] = parseInt(document.getElementById('paraSubZ' + q).value) / 100;
-    refData.keywords[q] = [...paraRefineKeywords[q]];
-  });
-
-  localStorage.setItem('prism_refine_' + eventId, JSON.stringify(refData));
-  toast(`Refinement saved for ${eventId}`);
+  toast(`Saved: Z values + keywords → PrismDB, boundaries → localStorage`);
 }
 
 // ── Z slider helper ──

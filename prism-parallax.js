@@ -646,6 +646,11 @@ function handleZSlider(val) {
   // ── If graphmap beat sequence is running, stop it ──
   if (graphmapInst && graphmapInst.isPlaying()) {
     graphmapInst.stopBeats();
+    // Clear any scheduled beat display labels from the tour
+    if (graphmapInst._tourDisplayTimers) {
+      graphmapInst._tourDisplayTimers.forEach(t => clearTimeout(t));
+      graphmapInst._tourDisplayTimers = null;
+    }
     setBeatDisplay(raw > 0 ? 'back' : 'over');
   }
 
@@ -791,39 +796,101 @@ function startGraphmapOrbitSequence() {
   const evt = PrismDB.getActiveEvent();
   const agg = evt ? PrismDB.getAggregateForEvent(evt.id) : [];
 
-  // Anchors
+  // Anchors — user pin + aggregate centroid
   const userPin = (submitted && typeof pinX !== 'undefined')
     ? { x: pinX, y: pinY }
     : { x: 0.5, y: 0.5 };
   const centroid = computeWeightedCentroid(agg);
+
+  // Per-quadrant centroids (filtered subsets)
+  const quadCentroids = {};
+  const quadLabels = { A: 'auth · left', B: 'auth · right', C: 'lib · left', D: 'lib · right' };
+  ['A', 'B', 'C', 'D'].forEach(q => {
+    const qDots = agg.filter(p => p.quadrant === q);
+    quadCentroids[q] = qDots.length > 0
+      ? computeWeightedCentroid(qDots)
+      : null;
+  });
+
+  // Build tour order: only include quadrants with data
+  // Start with user's quadrant (if known), then the rest
+  const userQ = (submitted && typeof finalQuadrant !== 'undefined') ? finalQuadrant : null;
+  const tourOrder = [];
+  if (userQ && quadCentroids[userQ]) tourOrder.push(userQ);
+  ['A', 'B', 'C', 'D'].forEach(q => {
+    if (q !== userQ && quadCentroids[q]) tourOrder.push(q);
+  });
 
   // Starting rotation direction from slider
   const sliderEl = document.getElementById('zOrbitSlider');
   const curVal = sliderEl ? parseInt(sliderEl.value, 10) : 0;
   const sign = curVal >= 0 ? 1 : -1;
 
+  // Zoom out slightly to prevent clipping during rotation
+  const orbitZoom = 6.2;
+
   setBeatDisplay('seeing orbit');
 
-  graphmapInst.playBeats([
-    // Beat 1: seeing orbit — centered on user pin, gentle swing
-    { yaw: 20 * sign, pitch: 6, focus: userPin, duration: 2800, hold: 200 },
-    { yaw: -18 * sign, pitch: 4, focus: userPin, duration: 2700, hold: 0 },
-    // Beat 2: drift — focus migrates to centroid
-    { yaw: 15 * sign, pitch: 5, focus: centroid, duration: 4500, hold: 0 },
-    // Beat 3: centroid orbit — slow oscillation
-    { yaw: -12 * sign, pitch: 3, focus: centroid, duration: 3500, hold: 500 },
-    { yaw: 12 * sign, pitch: -3, focus: centroid, duration: 3500, hold: 500 },
-  ], {
+  // ── Phase 1: Seeing orbit + aggregate drift ──
+  const beats = [
+    { yaw: 20 * sign, pitch: 6, zoom: orbitZoom, focus: userPin, duration: 2800, hold: 200 },
+    { yaw: -18 * sign, pitch: 4, zoom: orbitZoom, focus: userPin, duration: 2700, hold: 0 },
+    { yaw: 15 * sign, pitch: 5, zoom: orbitZoom, focus: centroid, duration: 4500, hold: 800 },
+  ];
+
+  // ── Phase 2: Quadrant centroid tour ──
+  tourOrder.forEach((q, i) => {
+    const c = quadCentroids[q];
+    const swing = 10 + i * 2; // slight variation per stop
+    beats.push(
+      { yaw: swing * sign, pitch: 4, zoom: orbitZoom, focus: c, duration: 3200, hold: 200 },
+      { yaw: -swing * sign, pitch: -2, zoom: orbitZoom, focus: c, duration: 3000, hold: 400 },
+    );
+  });
+
+  // ── Phase 3: Return to aggregate centroid ──
+  beats.push(
+    { yaw: 12 * sign, pitch: 3, zoom: orbitZoom, focus: centroid, duration: 3500, hold: 500 },
+    { yaw: -12 * sign, pitch: -3, zoom: orbitZoom, focus: centroid, duration: 3500, hold: 500 },
+  );
+
+  // ── Beat display labels: scheduled timers matching beat durations ──
+  let displayDelay = 0;
+  const displayTimers = [];
+
+  // Seeing orbit label already set above
+  // Beat 0+1 duration: 2800+200+2700 = 5700ms
+  displayDelay += 5700;
+  displayTimers.push(setTimeout(() => setBeatDisplay('drift'), displayDelay));
+
+  // Beat 2 (drift to aggregate): 4500+800 = 5300ms
+  displayDelay += 5300;
+
+  // Quadrant tour labels
+  tourOrder.forEach((q, i) => {
+    displayTimers.push(setTimeout(() => setBeatDisplay(quadLabels[q]), displayDelay));
+    // Each quad stop: 2 beats, ~3200+200+3000+400 = 6800ms
+    displayDelay += 6800;
+  });
+
+  // Return to aggregate
+  displayTimers.push(setTimeout(() => setBeatDisplay('center of mass'), displayDelay));
+
+  // Store timers for cleanup on interruption
+  graphmapInst._tourDisplayTimers = displayTimers;
+
+  graphmapInst.playBeats(beats, {
     loop: false,
     onComplete(reason) {
+      displayTimers.forEach(t => clearTimeout(t));
       if (reason === 'interrupted') {
         setBeatDisplay('');
       } else {
-        // After main sequence, loop the centroid orbit
+        // Loop aggregate centroid orbit
         setBeatDisplay('center of mass');
         graphmapInst.playBeats([
-          { yaw: -12 * sign, pitch: 3, focus: centroid, duration: 3500, hold: 500 },
-          { yaw: 12 * sign, pitch: -3, focus: centroid, duration: 3500, hold: 500 },
+          { yaw: -12 * sign, pitch: 3, zoom: orbitZoom, focus: centroid, duration: 3500, hold: 500 },
+          { yaw: 12 * sign, pitch: -3, zoom: orbitZoom, focus: centroid, duration: 3500, hold: 500 },
         ], { loop: true, onComplete() { setBeatDisplay(''); } });
       }
     }

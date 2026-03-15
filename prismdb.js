@@ -21,7 +21,17 @@ const PrismDB = (() => {
   }
 
   // ── Events (read) ───────────────────────────────────────
-  function getEvents() { return _get(KEYS.events) || []; }
+  function getEvents() {
+    const events = _get(KEYS.events) || [];
+    let anyDirty = false;
+    events.forEach(evt => {
+      const { dirty } = _normalizeEventWords(evt);
+      if (dirty) anyDirty = true;
+    });
+    // Write back once if any words were derived (lazy migration)
+    if (anyDirty) _set(KEYS.events, events);
+    return events;
+  }
 
   function getEvent(id) {
     return getEvents().find(e => e.id === id) || null;
@@ -92,6 +102,89 @@ const PrismDB = (() => {
     if (r.oppositionCOG === undefined) r.oppositionCOG = null;
     if (r.commentaryScores === undefined) r.commentaryScores = null;
     return r;
+  }
+
+  // ── Word derivation from response text ─────────────────
+  // Generates a words[] array from response text + xWord/yWord
+  // Format matches what syncGraphmapWords() consumes:
+  //   { t: 'word', w: 'x+'|'y+'|null, weight: 0.0–1.0, axis: 'x'|'y'|null }
+  const _STOP_WORDS = new Set([
+    'the','and','but','for','are','was','not','you','all','can','had','her',
+    'one','our','has','his','how','its','may','new','now','old','see','way',
+    'who','did','get','let','say','she','too','use','than','them','then',
+    'they','this','that','what','when','with','from','have','been','will',
+    'more','make','like','just','over','such','take','also','into','some',
+    'could','other','after','would','about','there','their','which','being',
+    'still','where','those','these','should','because','between','before',
+    'every','been','don','didn','isn','it','was','were','does','same','own',
+    'most','very','each','only','back','we','he','me','my','no','so','do',
+    'if','or','an','be','by','at','as','up','on','of','in','is','to','a','i'
+  ]);
+
+  function _deriveWords(text, xWord, yWord) {
+    if (!text) return [];
+    const words = [];
+    const seen = new Set();
+
+    // Parse multi-word xWord/yWord into sets for seen-tracking
+    const xTokens = (xWord || '').toLowerCase().split(/\s+/).filter(Boolean);
+    const yTokens = (yWord || '').toLowerCase().split(/\s+/).filter(Boolean);
+
+    // Add xWord and yWord as high-weight axis-tagged entries first
+    if (xWord && xWord.trim()) {
+      const xClean = xWord.trim();
+      words.push({ t: xClean, w: 'x+', weight: 0.9, axis: 'x' });
+      xClean.toLowerCase().split(/\s+/).forEach(t => seen.add(t));
+    }
+    if (yWord && yWord.trim()) {
+      const yClean = yWord.trim();
+      words.push({ t: yClean, w: 'y+', weight: 0.9, axis: 'y' });
+      yClean.toLowerCase().split(/\s+/).forEach(t => seen.add(t));
+    }
+
+    // Extract additional significant words from text
+    const fragments = text.split(/\s+/);
+    fragments.forEach((frag, i) => {
+      const clean = frag.replace(/[.,!?;:'"()—\-]/g, '').trim();
+      if (!clean || clean.length < 3) return;
+      const lower = clean.toLowerCase();
+      if (_STOP_WORDS.has(lower) || seen.has(lower)) return;
+      seen.add(lower);
+
+      // Weight by position (earlier words slightly heavier) and length (longer = more specific)
+      let weight = 0.4 + (clean.length > 5 ? 0.1 : 0) + (i < fragments.length / 2 ? 0.05 : 0);
+      weight = Math.min(0.7, weight);
+
+      words.push({ t: clean, w: weight, weight: weight, axis: null });
+    });
+
+    return words;
+  }
+
+  // Normalize events on read: backfill empty words[] from text + xWord/yWord
+  const BANDS = ['goodFaith', 'coalition', 'badFaith'];
+
+  function _normalizeEventWords(evt) {
+    if (!evt || !evt.responses) return { evt, dirty: false };
+    let dirty = false;
+
+    ['A', 'B', 'C', 'D'].forEach(q => {
+      const quad = evt.responses[q];
+      if (!quad) return;
+      BANDS.forEach(band => {
+        const resp = quad[band];
+        if (!resp) return;
+        if (!resp.words || resp.words.length === 0) {
+          const derived = _deriveWords(resp.text, resp.xWord, resp.yWord);
+          if (derived.length > 0) {
+            resp.words = derived;
+            dirty = true;
+          }
+        }
+      });
+    });
+
+    return { evt, dirty };
   }
 
   function hasRespondedToEvent(eventId) {
@@ -898,6 +991,9 @@ const PrismDB = (() => {
         }
       }
     ];
+
+    // ── Derive words for all seeded responses ──
+    events.forEach(evt => _normalizeEventWords(evt));
 
     _set(KEYS.events, events);
 
