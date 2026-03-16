@@ -1097,7 +1097,7 @@ body {
 .pairing-status .pair-check.fail::before { content: '✗'; }
 
 /* ── DIATRIBE VARIANT TIERS ── */
-/* ── BAND SUB-SECTIONS (goodFaith / coalition / badFaith) ── */
+/* ── BAND SUB-SECTIONS (fluid / coalition / denominated) ── */
 .band-section {
   margin-top: 12px;
   padding: 14px 16px;
@@ -1114,12 +1114,12 @@ body {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-.band-section.goodFaith { border-left-color: var(--green); }
-.band-section.goodFaith h5 { color: var(--green); }
+.band-section.fluid { border-left-color: var(--green); }
+.band-section.fluid h5 { color: var(--green); }
 .band-section.coalition { border-left-color: var(--gold); }
 .band-section.coalition h5 { color: var(--gold); }
-.band-section.badFaith { border-left-color: var(--red); }
-.band-section.badFaith h5 { color: var(--red); }
+.band-section.denominated { border-left-color: var(--red); }
+.band-section.denominated h5 { color: var(--red); }
 
 /* ── ANTI-VALENT TOGGLE ── */
 .antivalent-toggle {
@@ -1144,9 +1144,9 @@ body {
 }
 .av-btn:not(:last-child) { border-right: 1px solid var(--border); }
 .av-btn:hover { background: var(--paper); color: var(--ink-light); }
-.av-btn.active[data-band="goodFaith"] { background: var(--green); color: white; }
+.av-btn.active[data-band="fluid"] { background: var(--green); color: white; }
 .av-btn.active[data-band="coalition"] { background: var(--gold); color: white; }
-.av-btn.active[data-band="badFaith"] { background: var(--red); color: white; }
+.av-btn.active[data-band="denominated"] { background: var(--red); color: white; }
 .av-rationale {
   font-family: 'DM Mono', monospace;
   font-size: 10px;
@@ -1189,537 +1189,6 @@ body {
 }
 .wt-micro-text {
   font-style: italic;
-}
-
-/* ── PARALLELOGRAM EDITOR ── */
-.para-panel {
-  background: var(--paper);
-  border-radius: 10px;
-  padding: 0;
-  border: 1px solid var(--border);
-  display: none;
-  margin-bottom: 32px;
-  overflow: hidden;
-}
-.para-panel.visible { display: block; }
-
-.para-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 28px 0;
-}
-.para-header h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  font-weight: 700;
-}
-.para-header .btn { flex-shrink: 0; }
-
-.para-tabs {
-  display: flex;
-  gap: 0;
-  padding: 16px 28px 0;
-  border-bottom: 1px solid var(--border);
-}
-.para-tab {
-  font-family: 'DM Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 10px 20px;
-  background: none;
-  border: none;
-  color: var(--muted);
-  cursor: pointer;
-  border-bottom: 2px solid transparent;
-  transition: color 0.2s, border-color 0.2s;
-  margin-bottom: -1px;
-}
-.para-tab:hover { color: var(--ink-light); }
-.para-tab.active { color: var(--ink); border-bottom-color: var(--ink); }
-
-.para-body { padding: 24px 28px 28px; }
-
-/* Article list */
-.para-article-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  background: var(--border);
-  border-radius: 6px;
-  overflow: hidden;
-  margin-bottom: 20px;
-}
-.para-article-list:empty::after {
-  content: 'No articles yet. Create one to get started.';
-  display: block;
-  padding: 32px;
-  text-align: center;
-  font-family: 'DM Mono', monospace;
-  font-size: 12px;
-  color: var(--muted);
-  background: var(--cream);
-  border-radius: 6px;
-}
-.para-article-row {
-  display: grid;
-  grid-template-columns: 1fr auto auto;
-  align-items: center;
-  gap: 12px;
-  padding: 14px 18px;
-  background: var(--paper);
-  transition: background 0.15s;
-  cursor: pointer;
-}
-.para-article-row:hover { background: var(--cream); }
-.para-article-row.editing { border-left: 3px solid var(--blue); }
-.para-article-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 14px;
-  font-weight: 600;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.para-article-meta {
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  color: var(--muted);
-  letter-spacing: 0.04em;
-}
-
-/* Editor */
-.para-editor { display: none; }
-.para-editor.visible { display: block; }
-
-.para-editor-fields {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-bottom: 20px;
-}
-.para-editor-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-.para-md-wrap {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-bottom: 16px;
-}
-.para-md-wrap.preview-only {
-  grid-template-columns: 1fr;
-}
-.para-md-col h4 {
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 8px;
-}
-.para-md-editor {
-  width: 100%;
-  min-height: 400px;
-  font-family: 'DM Mono', monospace;
-  font-size: 13px;
-  line-height: 1.7;
-  color: var(--ink);
-  background: var(--cream);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 16px;
-  resize: vertical;
-  outline: none;
-  tab-size: 2;
-}
-.para-md-editor:focus {
-  border-color: var(--ink-light);
-  box-shadow: 0 0 0 3px rgba(26,26,46,0.06);
-}
-.para-md-preview {
-  min-height: 400px;
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 20px 24px;
-  font-family: 'Lora', serif;
-  font-size: 14px;
-  line-height: 1.8;
-  color: var(--ink);
-  overflow-y: auto;
-  max-height: 600px;
-}
-.para-md-preview h1 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; margin: 0 0 8px; }
-.para-md-preview h2 { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; margin: 20px 0 6px; }
-.para-md-preview h3 { font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 16px 0 4px; }
-.para-md-preview p { margin: 0 0 12px; }
-.para-md-preview em { font-style: italic; }
-.para-md-preview strong { font-weight: 600; }
-.para-md-preview blockquote {
-  border-left: 3px solid var(--border-strong);
-  padding: 4px 16px;
-  margin: 12px 0;
-  color: var(--ink-light);
-  font-style: italic;
-}
-.para-md-preview .graph-state-embed {
-  background: rgba(58,90,140,0.06);
-  border: 1px dashed rgba(58,90,140,0.3);
-  border-radius: 6px;
-  padding: 12px 16px;
-  margin: 16px 0;
-  font-family: 'DM Mono', monospace;
-  font-size: 11px;
-  color: var(--blue);
-}
-.para-md-preview .graph-state-embed::before {
-  content: '◆ GRAPH-STATE EMBED';
-  display: block;
-  font-size: 9px;
-  letter-spacing: 0.1em;
-  margin-bottom: 6px;
-  opacity: 0.6;
-}
-
-/* Waypoint toolbar */
-.para-waypoint-bar {
-  display: flex;
-  gap: 6px;
-  align-items: center;
-  margin-bottom: 12px;
-  flex-wrap: wrap;
-}
-.para-waypoint-bar .btn { padding: 5px 10px; font-size: 10px; }
-.para-waypoint-bar label {
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  color: var(--muted);
-  letter-spacing: 0.04em;
-}
-
-/* Refinement tab */
-.para-refine-event-select {
-  width: 100%;
-  font-family: 'DM Mono', monospace;
-  font-size: 12px;
-  color: var(--ink);
-  background: var(--cream);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 10px 14px;
-  margin-bottom: 20px;
-  outline: none;
-}
-.para-refine-event-select:focus { border-color: var(--ink-light); }
-
-.para-refine-group {
-  margin-bottom: 24px;
-}
-.para-refine-group-label {
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 12px;
-  padding-bottom: 6px;
-  border-bottom: 1px solid var(--border);
-}
-
-.para-z-sliders {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
-}
-.para-z-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.para-z-row label {
-  font-family: 'DM Mono', monospace;
-  font-size: 11px;
-  color: var(--ink-light);
-  min-width: 80px;
-  letter-spacing: 0.03em;
-}
-.para-z-row input[type="range"] {
-  flex: 1;
-  accent-color: var(--ink);
-}
-.para-z-val {
-  font-family: 'DM Mono', monospace;
-  font-size: 12px;
-  color: var(--ink);
-  min-width: 44px;
-  text-align: right;
-}
-
-/* Keyword editor */
-.para-kw-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-.para-kw-quad {
-  background: var(--cream);
-  border-radius: 6px;
-  padding: 14px;
-  border-left: 3px solid var(--muted);
-}
-.para-kw-quad.A { border-left-color: var(--red); }
-.para-kw-quad.B { border-left-color: var(--blue); }
-.para-kw-quad.C { border-left-color: var(--green); }
-.para-kw-quad.D { border-left-color: var(--orange); }
-.para-kw-quad h5 {
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-.para-kw-quad.A h5 { color: var(--red); }
-.para-kw-quad.B h5 { color: var(--blue); }
-.para-kw-quad.C h5 { color: var(--green); }
-.para-kw-quad.D h5 { color: var(--orange); }
-.para-kw-input {
-  width: 100%;
-  font-family: 'DM Mono', monospace;
-  font-size: 12px;
-  color: var(--ink);
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: 8px 10px;
-  outline: none;
-}
-.para-kw-input:focus { border-color: var(--ink-light); }
-.para-kw-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  margin-top: 6px;
-  min-height: 20px;
-}
-.para-kw-tag {
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  background: rgba(26,26,46,0.08);
-  color: var(--ink-light);
-  padding: 2px 8px;
-  border-radius: 100px;
-  cursor: pointer;
-  transition: background 0.15s;
-}
-.para-kw-tag:hover { background: rgba(201,64,64,0.15); text-decoration: line-through; }
-
-/* Boundary editor */
-.para-boundary-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-.para-boundary-col {
-  background: var(--cream);
-  border-radius: 8px;
-  padding: 16px;
-}
-.para-boundary-col h5 {
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 10px;
-}
-.para-boundary-col .field { margin-bottom: 10px; }
-.para-boundary-photo-preview {
-  width: 100%;
-  max-height: 120px;
-  object-fit: contain;
-  border-radius: 4px;
-  margin-top: 6px;
-  display: none;
-}
-.para-boundary-photo-preview.visible { display: block; }
-
-.para-editor-actions {
-  display: flex;
-  gap: 10px;
-  justify-content: flex-end;
-  padding-top: 20px;
-  border-top: 1px solid var(--border);
-}
-
-/* ── EDITORIAL DESK (AI chat inside Parallelogram editor) ── */
-.para-desk {
-  margin-top: 24px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  overflow: hidden;
-}
-.para-desk-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 16px;
-  background: var(--cream);
-  border-bottom: 1px solid var(--border);
-  cursor: pointer;
-  user-select: none;
-}
-.para-desk-header h5 {
-  font-family: 'DM Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--ink-light);
-}
-.para-desk-header .para-desk-chevron {
-  font-size: 10px;
-  color: var(--muted);
-  transition: transform 0.2s;
-}
-.para-desk.open .para-desk-chevron { transform: rotate(180deg); }
-.para-derive-btn {
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.06em;
-  padding: 4px 12px;
-  border: 1px solid var(--border-strong);
-  border-radius: 4px;
-  background: var(--paper);
-  color: var(--ink-light);
-  cursor: pointer;
-  transition: all 0.2s;
-  margin-left: auto;
-  margin-right: 12px;
-}
-.para-derive-btn:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-.para-derive-btn:disabled { opacity: 0.4; cursor: not-allowed; }
-.para-derive-btn:disabled:hover { background: var(--paper); color: var(--ink-light); border-color: var(--border-strong); }
-/* Annotation fields in refinement audit view */
-.para-z-annotation {
-  font-family: 'DM Mono', monospace;
-  font-size: 11px;
-  color: var(--ink-light);
-  background: var(--cream);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: 6px 10px;
-  width: 100%;
-  margin-top: 4px;
-  resize: none;
-  height: 28px;
-  transition: border-color 0.2s;
-}
-.para-z-annotation:focus { border-color: var(--ink-light); outline: none; }
-.para-z-annotation::placeholder { color: var(--muted); font-style: italic; }
-.para-z-derived-tag {
-  font-family: 'DM Mono', monospace;
-  font-size: 9px;
-  letter-spacing: 0.06em;
-  color: var(--green);
-  margin-left: 8px;
-}
-.para-z-manual-tag {
-  font-family: 'DM Mono', monospace;
-  font-size: 9px;
-  letter-spacing: 0.06em;
-  color: var(--orange);
-  margin-left: 8px;
-}
-.para-desk-body {
-  display: none;
-  flex-direction: column;
-  height: 380px;
-}
-.para-desk.open .para-desk-body { display: flex; }
-
-.para-desk-messages {
-  flex: 1;
-  overflow-y: auto;
-  padding: 12px 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.para-desk-msg {
-  max-width: 88%;
-  padding: 10px 14px;
-  border-radius: 8px;
-  font-size: 13px;
-  line-height: 1.6;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-.para-desk-msg.user {
-  align-self: flex-end;
-  background: var(--ink);
-  color: var(--paper);
-  border-bottom-right-radius: 2px;
-}
-.para-desk-msg.assistant {
-  align-self: flex-start;
-  background: var(--cream);
-  color: var(--ink);
-  border-bottom-left-radius: 2px;
-}
-.para-desk-msg.error {
-  background: rgba(201,64,64,0.08);
-  color: var(--red);
-}
-.para-desk-msg-actions {
-  display: flex;
-  gap: 6px;
-  margin-top: 8px;
-}
-.para-desk-msg-actions .btn {
-  padding: 3px 8px;
-  font-size: 10px;
-}
-.para-desk-typing {
-  display: none;
-  padding: 8px 16px;
-  font-family: 'DM Mono', monospace;
-  font-size: 11px;
-  color: var(--muted);
-  font-style: italic;
-}
-.para-desk-typing.visible { display: block; }
-
-.para-desk-input-row {
-  display: flex;
-  gap: 8px;
-  padding: 10px 12px;
-  border-top: 1px solid var(--border);
-  background: var(--paper);
-}
-.para-desk-input-row textarea {
-  flex: 1;
-  font-family: 'Lora', serif;
-  font-size: 13px;
-  color: var(--ink);
-  background: var(--cream);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 8px 12px;
-  resize: none;
-  outline: none;
-  min-height: 36px;
-  max-height: 100px;
-  line-height: 1.5;
-}
-.para-desk-input-row textarea:focus {
-  border-color: var(--ink-light);
-}
-.para-desk-input-row .btn {
-  align-self: flex-end;
 }
 
 /* ── SOURCE FIELDS ── */
@@ -2395,256 +1864,14 @@ body {
   <h1>Prism <span>Admin</span></h1>
   <a href="index-v39.html" class="link-back">← back to app</a>
 </header>
-<p class="admin-subtitle">Event management · Parallelogram editor · PrismDB</p>
+<p class="admin-subtitle">Event management · PrismDB</p>
 
 <div class="toolbar">
   <button class="btn primary" onclick="showCreateForm()">+ New Event</button>
-  <button class="btn" onclick="toggleParaPanel()">✦ Parallelogram</button>
   <button class="btn" onclick="refreshList()">Refresh</button>
 </div>
 
 <div id="eventList" class="event-list"></div>
-
-<!-- ── Parallelogram Editor ── -->
-<div id="paraPanel" class="para-panel">
-  <div class="para-header">
-    <h2>Parallelogram</h2>
-    <button class="btn small" onclick="toggleParaPanel()">✕ Close</button>
-  </div>
-  <div class="para-tabs">
-    <button class="para-tab active" id="paraTabArticles" onclick="switchParaTab('articles')">Articles</button>
-    <button class="para-tab" id="paraTabRefine" onclick="switchParaTab('refine')">Refinement</button>
-  </div>
-
-  <!-- Articles Tab -->
-  <div class="para-body" id="paraArticlesBody">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
-      <span class="form-section-label" style="margin:0;padding:0;border:none;">ARTICLES</span>
-      <button class="btn small primary" onclick="paraNewArticle()">+ New Article</button>
-    </div>
-    <div id="paraArticleList" class="para-article-list"></div>
-
-    <!-- Editor (hidden until new/edit) -->
-    <div id="paraEditor" class="para-editor">
-      <div class="para-editor-fields">
-        <div class="field">
-          <label>Title</label>
-          <input type="text" id="paraTitle" placeholder="e.g. Forty Years Below the Surface">
-        </div>
-        <div class="para-editor-row">
-          <div class="field">
-            <label>Article ID</label>
-            <input type="text" id="paraArticleId" placeholder="e.g. cs04-immigration-arc">
-          </div>
-          <div class="field">
-            <label>Linked Event / Arc</label>
-            <select id="paraLinkedEvent">
-              <option value="">— none —</option>
-            </select>
-          </div>
-        </div>
-        <div class="para-editor-row">
-          <div class="field">
-            <label>Type</label>
-            <select id="paraType">
-              <option value="case-study">Case Study</option>
-              <option value="arc">Arc (longitudinal)</option>
-              <option value="thematic">Thematic (cross-event)</option>
-              <option value="methodology">Methodology</option>
-            </select>
-          </div>
-          <div class="field">
-            <label>Status</label>
-            <select id="paraStatus">
-              <option value="draft">Draft</option>
-              <option value="published">Published</option>
-              <option value="archived">Archived</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- Waypoint insertion toolbar -->
-      <div class="para-waypoint-bar">
-        <label>INSERT:</label>
-        <button class="btn" onclick="paraInsertWaypoint('baseline')">◆ Baseline</button>
-        <button class="btn" onclick="paraInsertWaypoint('escalation')">◆ Escalation</button>
-        <button class="btn" onclick="paraInsertWaypoint('custom')">◆ Custom</button>
-        <span style="flex:1;"></span>
-        <button class="btn" onclick="paraTogglePreviewMode()" id="paraPreviewToggle">Preview</button>
-      </div>
-
-      <!-- Markdown editor + preview -->
-      <div class="para-md-wrap" id="paraMdWrap">
-        <div class="para-md-col" id="paraMdEditorCol">
-          <h4>Markdown Editor</h4>
-          <textarea class="para-md-editor" id="paraMdEditor" placeholder="Write your Parallelogram article here...
-
-Use ## for sections. Graph-state waypoints will appear as embedded markers.
-
-Example:
-## The Baseline
-
-At nominal good faith, all four quadrants present recognizable positions...
-
-(insert a baseline waypoint above)" oninput="paraRenderPreview()"></textarea>
-        </div>
-        <div class="para-md-col">
-          <h4>Preview</h4>
-          <div class="para-md-preview" id="paraMdPreview">
-            <p style="color:var(--muted);font-style:italic;">Start typing to see a live preview…</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Editorial Desk (AI conversation panel) -->
-      <div class="para-desk" id="paraDesk">
-        <div class="para-desk-header" onclick="paraToggleDesk()">
-          <h5>✦ Editorial Desk</h5>
-          <button class="para-derive-btn" id="paraDeriveBtn" onclick="event.stopPropagation(); paraDerive();" title="Derive keywords, Z values, and axis-load phrases from current article">◆ Derive</button>
-          <span class="para-desk-chevron">▼</span>
-        </div>
-        <div class="para-desk-body">
-          <div class="para-desk-messages" id="paraDeskMessages">
-            <div class="para-desk-msg assistant">Ready. I have the J encoding and can see the current article's parameters. Ask me to draft a section, refine prose, suggest Z values for displaced subjects, or work through any analytical question about this piece.</div>
-          </div>
-          <div class="para-desk-typing" id="paraDeskTyping">Claude is drafting…</div>
-          <div class="para-desk-input-row">
-            <textarea id="paraDeskInput" rows="1" placeholder="e.g. Draft Part II from the coalition zone parameters…" onkeydown="paraDeskKeydown(event)" oninput="paraDeskAutoResize(this)"></textarea>
-            <button class="btn scorer-btn" id="paraDeskSendBtn" onclick="paraDeskSend()">Send</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="para-editor-actions">
-        <button class="btn" onclick="paraCancelEdit()">Cancel</button>
-        <button class="btn" onclick="paraDeleteArticle()" id="paraDeleteBtn" style="display:none;">Delete</button>
-        <button class="btn primary" onclick="paraSaveArticle()">Save Article</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Refinement Tab -->
-  <div class="para-body" id="paraRefineBody" style="display:none;">
-    <div class="field">
-      <label>Select Event to Refine</label>
-      <select class="para-refine-event-select" id="paraRefineEventSelect" onchange="paraLoadRefinement()">
-        <option value="">— choose event —</option>
-      </select>
-    </div>
-
-    <div id="paraRefineContent" style="display:none;">
-      <!-- Z Axis -->
-      <div class="para-refine-group">
-        <div class="para-refine-group-label">Z-Axis Values</div>
-        <div class="para-z-sliders">
-          <div class="para-z-row">
-            <label>Object Z <span class="para-z-derived-tag" id="paraObjZTag"></span></label>
-            <input type="range" id="paraObjZ" min="-100" max="100" value="0" oninput="paraUpdateZVal(this, 'paraObjZVal'); paraMarkManual('paraObjZTag')">
-            <span class="para-z-val" id="paraObjZVal">0.00</span>
-          </div>
-          <textarea class="para-z-annotation" id="paraObjZNote" placeholder="override reason…" rows="1"></textarea>
-          <div class="para-z-row">
-            <label>Subject Z · A <span class="para-z-derived-tag" id="paraSubZATag"></span></label>
-            <input type="range" id="paraSubZA" min="-100" max="100" value="0" oninput="paraUpdateZVal(this, 'paraSubZAVal'); paraMarkManual('paraSubZATag')">
-            <span class="para-z-val" id="paraSubZAVal">0.00</span>
-          </div>
-          <textarea class="para-z-annotation" id="paraSubZANote" placeholder="override reason…" rows="1"></textarea>
-          <div class="para-z-row">
-            <label>Subject Z · B <span class="para-z-derived-tag" id="paraSubZBTag"></span></label>
-            <input type="range" id="paraSubZB" min="-100" max="100" value="0" oninput="paraUpdateZVal(this, 'paraSubZBVal'); paraMarkManual('paraSubZBTag')">
-            <span class="para-z-val" id="paraSubZBVal">0.00</span>
-          </div>
-          <textarea class="para-z-annotation" id="paraSubZBNote" placeholder="override reason…" rows="1"></textarea>
-          <div class="para-z-row">
-            <label>Subject Z · C <span class="para-z-derived-tag" id="paraSubZCTag"></span></label>
-            <input type="range" id="paraSubZC" min="-100" max="100" value="0" oninput="paraUpdateZVal(this, 'paraSubZCVal'); paraMarkManual('paraSubZCTag')">
-            <span class="para-z-val" id="paraSubZCVal">0.00</span>
-          </div>
-          <textarea class="para-z-annotation" id="paraSubZCNote" placeholder="override reason…" rows="1"></textarea>
-          <div class="para-z-row">
-            <label>Subject Z · D <span class="para-z-derived-tag" id="paraSubZDTag"></span></label>
-            <input type="range" id="paraSubZD" min="-100" max="100" value="0" oninput="paraUpdateZVal(this, 'paraSubZDVal'); paraMarkManual('paraSubZDTag')">
-            <span class="para-z-val" id="paraSubZDVal">0.00</span>
-          </div>
-          <textarea class="para-z-annotation" id="paraSubZDNote" placeholder="override reason…" rows="1"></textarea>
-        </div>
-      </div>
-
-      <!-- Keywords -->
-      <div class="para-refine-group">
-        <div class="para-refine-group-label">Keywords per Quadrant</div>
-        <div class="para-kw-grid">
-          <div class="para-kw-quad A">
-            <h5>A — Auth-Right</h5>
-            <input class="para-kw-input" id="paraKwA" placeholder="Type keyword + Enter" onkeydown="paraKwKeydown(event, 'A')">
-            <div class="para-kw-tags" id="paraKwTagsA"></div>
-          </div>
-          <div class="para-kw-quad B">
-            <h5>B — Auth-Left</h5>
-            <input class="para-kw-input" id="paraKwB" placeholder="Type keyword + Enter" onkeydown="paraKwKeydown(event, 'B')">
-            <div class="para-kw-tags" id="paraKwTagsB"></div>
-          </div>
-          <div class="para-kw-quad C">
-            <h5>C — Lib-Left</h5>
-            <input class="para-kw-input" id="paraKwC" placeholder="Type keyword + Enter" onkeydown="paraKwKeydown(event, 'C')">
-            <div class="para-kw-tags" id="paraKwTagsC"></div>
-          </div>
-          <div class="para-kw-quad D">
-            <h5>D — Lib-Right</h5>
-            <input class="para-kw-input" id="paraKwD" placeholder="Type keyword + Enter" onkeydown="paraKwKeydown(event, 'D')">
-            <div class="para-kw-tags" id="paraKwTagsD"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Boundary Content -->
-      <div class="para-refine-group">
-        <div class="para-refine-group-label">Z Boundary Content</div>
-        <div class="para-boundary-grid">
-          <div class="para-boundary-col">
-            <h5>+Z Boundary (Positive / Winner)</h5>
-            <div class="field">
-              <label>Label</label>
-              <input type="text" id="paraBndPosText" placeholder="e.g. The Architect">
-            </div>
-            <div class="field">
-              <label>Photo</label>
-              <input type="file" id="paraBndPosFile" accept="image/*" onchange="paraBndPhotoLoad(this, 'pos')">
-              <img class="para-boundary-photo-preview" id="paraBndPosPreview">
-            </div>
-            <div class="para-z-row" style="margin-top:6px;">
-              <label>Opacity</label>
-              <input type="range" id="paraBndPosAlpha" min="10" max="90" value="37" oninput="paraUpdateZVal(this, 'paraBndPosAlphaVal', 100)">
-              <span class="para-z-val" id="paraBndPosAlphaVal">0.37</span>
-            </div>
-          </div>
-          <div class="para-boundary-col">
-            <h5>−Z Boundary (Negative / Loser)</h5>
-            <div class="field">
-              <label>Label</label>
-              <input type="text" id="paraBndNegText" placeholder="e.g. The Witness">
-            </div>
-            <div class="field">
-              <label>Photo</label>
-              <input type="file" id="paraBndNegFile" accept="image/*" onchange="paraBndPhotoLoad(this, 'neg')">
-              <img class="para-boundary-photo-preview" id="paraBndNegPreview">
-            </div>
-            <div class="para-z-row" style="margin-top:6px;">
-              <label>Opacity</label>
-              <input type="range" id="paraBndNegAlpha" min="10" max="90" value="37" oninput="paraUpdateZVal(this, 'paraBndNegAlphaVal', 100)">
-              <span class="para-z-val" id="paraBndNegAlphaVal">0.37</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="para-editor-actions">
-        <button class="btn primary" onclick="paraSaveRefinement()">Save Refinement</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- ── Response Data Viewer ── -->
 <div class="viewer-section" id="viewerSection">
@@ -2839,9 +2066,9 @@ At nominal good faith, all four quadrants present recognizable positions...
       <div class="field">
         <label>Anti-Valent Band</label>
         <div class="antivalent-toggle" id="antiValentToggle">
-          <button type="button" class="av-btn" data-band="goodFaith" onclick="setAntiValent('goodFaith')">Good Faith</button>
+          <button type="button" class="av-btn" data-band="fluid" onclick="setAntiValent('fluid')">Fluid</button>
           <button type="button" class="av-btn" data-band="coalition" onclick="setAntiValent('coalition')">Coalition</button>
-          <button type="button" class="av-btn" data-band="badFaith" onclick="setAntiValent('badFaith')">Bad Faith</button>
+          <button type="button" class="av-btn" data-band="denominated" onclick="setAntiValent('denominated')">Denominated</button>
         </div>
         <input type="hidden" id="evtAntiValentBand" value="">
         <div class="av-rationale" id="avRationale"></div>
@@ -2871,17 +2098,17 @@ At nominal good faith, all four quadrants present recognizable positions...
         <label for="srcA">Sources · Quad A</label>
         <textarea id="srcA" placeholder="Why this response loads X+/Y+ — links, notes, reasoning..."></textarea>
       </div>
-      <div class="band-section goodFaith">
-        <h5>Good Faith</h5>
+      <div class="band-section fluid">
+        <h5>Fluid</h5>
         <div class="field">
-          <label for="respA_goodFaith">Response text</label>
-          <textarea id="respA_goodFaith" placeholder="Good faith response for quadrant A..."></textarea>
+          <label for="respA_fluid">Response text</label>
+          <textarea id="respA_fluid" placeholder="Fluid response for quadrant A..."></textarea>
         </div>
         <div class="field-row">
-          <div class="field"><label for="respA_goodFaith_xWord">X keyword</label><input type="text" id="respA_goodFaith_xWord" placeholder="e.g. deterrence"></div>
-          <div class="field"><label for="respA_goodFaith_yWord">Y keyword</label><input type="text" id="respA_goodFaith_yWord" placeholder="e.g. Hold"></div>
+          <div class="field"><label for="respA_fluid_xWord">X keyword</label><input type="text" id="respA_fluid_xWord" placeholder="e.g. deterrence"></div>
+          <div class="field"><label for="respA_fluid_yWord">Y keyword</label><input type="text" id="respA_fluid_yWord" placeholder="e.g. Hold"></div>
         </div>
-        <div class="wt-wrap" id="taggerA_goodFaith"></div>
+        <div class="wt-wrap" id="taggerA_fluid"></div>
       </div>
       <div class="band-section coalition">
         <h5>Coalition</h5>
@@ -2895,17 +2122,17 @@ At nominal good faith, all four quadrants present recognizable positions...
         </div>
         <div class="wt-wrap" id="taggerA_coalition"></div>
       </div>
-      <div class="band-section badFaith">
-        <h5>Bad Faith</h5>
+      <div class="band-section denominated">
+        <h5>Denominated</h5>
         <div class="field">
-          <label for="respA_badFaith">Response text</label>
-          <textarea id="respA_badFaith" placeholder="Bad faith response for quadrant A..."></textarea>
+          <label for="respA_denominated">Response text</label>
+          <textarea id="respA_denominated" placeholder="Denominated response for quadrant A..."></textarea>
         </div>
         <div class="field-row">
-          <div class="field"><label for="respA_badFaith_xWord">X keyword</label><input type="text" id="respA_badFaith_xWord"></div>
-          <div class="field"><label for="respA_badFaith_yWord">Y keyword</label><input type="text" id="respA_badFaith_yWord"></div>
+          <div class="field"><label for="respA_denominated_xWord">X keyword</label><input type="text" id="respA_denominated_xWord"></div>
+          <div class="field"><label for="respA_denominated_yWord">Y keyword</label><input type="text" id="respA_denominated_yWord"></div>
         </div>
-        <div class="wt-wrap" id="taggerA_badFaith"></div>
+        <div class="wt-wrap" id="taggerA_denominated"></div>
       </div>
     </div>
 
@@ -2925,17 +2152,17 @@ At nominal good faith, all four quadrants present recognizable positions...
         <label for="srcB">Sources · Quad B</label>
         <textarea id="srcB" placeholder="Why this response loads X−/Y+ — links, notes, reasoning..."></textarea>
       </div>
-      <div class="band-section goodFaith">
-        <h5>Good Faith</h5>
+      <div class="band-section fluid">
+        <h5>Fluid</h5>
         <div class="field">
-          <label for="respB_goodFaith">Response text</label>
-          <textarea id="respB_goodFaith" placeholder="Good faith response for quadrant B..."></textarea>
+          <label for="respB_fluid">Response text</label>
+          <textarea id="respB_fluid" placeholder="Fluid response for quadrant B..."></textarea>
         </div>
         <div class="field-row">
-          <div class="field"><label for="respB_goodFaith_xWord">X keyword</label><input type="text" id="respB_goodFaith_xWord"></div>
-          <div class="field"><label for="respB_goodFaith_yWord">Y keyword</label><input type="text" id="respB_goodFaith_yWord"></div>
+          <div class="field"><label for="respB_fluid_xWord">X keyword</label><input type="text" id="respB_fluid_xWord"></div>
+          <div class="field"><label for="respB_fluid_yWord">Y keyword</label><input type="text" id="respB_fluid_yWord"></div>
         </div>
-        <div class="wt-wrap" id="taggerB_goodFaith"></div>
+        <div class="wt-wrap" id="taggerB_fluid"></div>
       </div>
       <div class="band-section coalition">
         <h5>Coalition</h5>
@@ -2949,17 +2176,17 @@ At nominal good faith, all four quadrants present recognizable positions...
         </div>
         <div class="wt-wrap" id="taggerB_coalition"></div>
       </div>
-      <div class="band-section badFaith">
-        <h5>Bad Faith</h5>
+      <div class="band-section denominated">
+        <h5>Denominated</h5>
         <div class="field">
-          <label for="respB_badFaith">Response text</label>
-          <textarea id="respB_badFaith" placeholder="Bad faith response for quadrant B..."></textarea>
+          <label for="respB_denominated">Response text</label>
+          <textarea id="respB_denominated" placeholder="Denominated response for quadrant B..."></textarea>
         </div>
         <div class="field-row">
-          <div class="field"><label for="respB_badFaith_xWord">X keyword</label><input type="text" id="respB_badFaith_xWord"></div>
-          <div class="field"><label for="respB_badFaith_yWord">Y keyword</label><input type="text" id="respB_badFaith_yWord"></div>
+          <div class="field"><label for="respB_denominated_xWord">X keyword</label><input type="text" id="respB_denominated_xWord"></div>
+          <div class="field"><label for="respB_denominated_yWord">Y keyword</label><input type="text" id="respB_denominated_yWord"></div>
         </div>
-        <div class="wt-wrap" id="taggerB_badFaith"></div>
+        <div class="wt-wrap" id="taggerB_denominated"></div>
       </div>
     </div>
 
@@ -2979,17 +2206,17 @@ At nominal good faith, all four quadrants present recognizable positions...
         <label for="srcC">Sources · Quad C</label>
         <textarea id="srcC" placeholder="Why this response loads X−/Y− — links, notes, reasoning..."></textarea>
       </div>
-      <div class="band-section goodFaith">
-        <h5>Good Faith</h5>
+      <div class="band-section fluid">
+        <h5>Fluid</h5>
         <div class="field">
-          <label for="respC_goodFaith">Response text</label>
-          <textarea id="respC_goodFaith" placeholder="Good faith response for quadrant C..."></textarea>
+          <label for="respC_fluid">Response text</label>
+          <textarea id="respC_fluid" placeholder="Fluid response for quadrant C..."></textarea>
         </div>
         <div class="field-row">
-          <div class="field"><label for="respC_goodFaith_xWord">X keyword</label><input type="text" id="respC_goodFaith_xWord"></div>
-          <div class="field"><label for="respC_goodFaith_yWord">Y keyword</label><input type="text" id="respC_goodFaith_yWord"></div>
+          <div class="field"><label for="respC_fluid_xWord">X keyword</label><input type="text" id="respC_fluid_xWord"></div>
+          <div class="field"><label for="respC_fluid_yWord">Y keyword</label><input type="text" id="respC_fluid_yWord"></div>
         </div>
-        <div class="wt-wrap" id="taggerC_goodFaith"></div>
+        <div class="wt-wrap" id="taggerC_fluid"></div>
       </div>
       <div class="band-section coalition">
         <h5>Coalition</h5>
@@ -3003,17 +2230,17 @@ At nominal good faith, all four quadrants present recognizable positions...
         </div>
         <div class="wt-wrap" id="taggerC_coalition"></div>
       </div>
-      <div class="band-section badFaith">
-        <h5>Bad Faith</h5>
+      <div class="band-section denominated">
+        <h5>Denominated</h5>
         <div class="field">
-          <label for="respC_badFaith">Response text</label>
-          <textarea id="respC_badFaith" placeholder="Bad faith response for quadrant C..."></textarea>
+          <label for="respC_denominated">Response text</label>
+          <textarea id="respC_denominated" placeholder="Denominated response for quadrant C..."></textarea>
         </div>
         <div class="field-row">
-          <div class="field"><label for="respC_badFaith_xWord">X keyword</label><input type="text" id="respC_badFaith_xWord"></div>
-          <div class="field"><label for="respC_badFaith_yWord">Y keyword</label><input type="text" id="respC_badFaith_yWord"></div>
+          <div class="field"><label for="respC_denominated_xWord">X keyword</label><input type="text" id="respC_denominated_xWord"></div>
+          <div class="field"><label for="respC_denominated_yWord">Y keyword</label><input type="text" id="respC_denominated_yWord"></div>
         </div>
-        <div class="wt-wrap" id="taggerC_badFaith"></div>
+        <div class="wt-wrap" id="taggerC_denominated"></div>
       </div>
     </div>
 
@@ -3033,17 +2260,17 @@ At nominal good faith, all four quadrants present recognizable positions...
         <label for="srcD">Sources · Quad D</label>
         <textarea id="srcD" placeholder="Why this response loads X+/Y− — links, notes, reasoning..."></textarea>
       </div>
-      <div class="band-section goodFaith">
-        <h5>Good Faith</h5>
+      <div class="band-section fluid">
+        <h5>Fluid</h5>
         <div class="field">
-          <label for="respD_goodFaith">Response text</label>
-          <textarea id="respD_goodFaith" placeholder="Good faith response for quadrant D..."></textarea>
+          <label for="respD_fluid">Response text</label>
+          <textarea id="respD_fluid" placeholder="Fluid response for quadrant D..."></textarea>
         </div>
         <div class="field-row">
-          <div class="field"><label for="respD_goodFaith_xWord">X keyword</label><input type="text" id="respD_goodFaith_xWord"></div>
-          <div class="field"><label for="respD_goodFaith_yWord">Y keyword</label><input type="text" id="respD_goodFaith_yWord"></div>
+          <div class="field"><label for="respD_fluid_xWord">X keyword</label><input type="text" id="respD_fluid_xWord"></div>
+          <div class="field"><label for="respD_fluid_yWord">Y keyword</label><input type="text" id="respD_fluid_yWord"></div>
         </div>
-        <div class="wt-wrap" id="taggerD_goodFaith"></div>
+        <div class="wt-wrap" id="taggerD_fluid"></div>
       </div>
       <div class="band-section coalition">
         <h5>Coalition</h5>
@@ -3057,17 +2284,17 @@ At nominal good faith, all four quadrants present recognizable positions...
         </div>
         <div class="wt-wrap" id="taggerD_coalition"></div>
       </div>
-      <div class="band-section badFaith">
-        <h5>Bad Faith</h5>
+      <div class="band-section denominated">
+        <h5>Denominated</h5>
         <div class="field">
-          <label for="respD_badFaith">Response text</label>
-          <textarea id="respD_badFaith" placeholder="Bad faith response for quadrant D..."></textarea>
+          <label for="respD_denominated">Response text</label>
+          <textarea id="respD_denominated" placeholder="Denominated response for quadrant D..."></textarea>
         </div>
         <div class="field-row">
-          <div class="field"><label for="respD_badFaith_xWord">X keyword</label><input type="text" id="respD_badFaith_xWord"></div>
-          <div class="field"><label for="respD_badFaith_yWord">Y keyword</label><input type="text" id="respD_badFaith_yWord"></div>
+          <div class="field"><label for="respD_denominated_xWord">X keyword</label><input type="text" id="respD_denominated_xWord"></div>
+          <div class="field"><label for="respD_denominated_yWord">Y keyword</label><input type="text" id="respD_denominated_yWord"></div>
         </div>
-        <div class="wt-wrap" id="taggerD_badFaith"></div>
+        <div class="wt-wrap" id="taggerD_denominated"></div>
       </div>
     </div>
   </div>
@@ -3077,34 +2304,34 @@ At nominal good faith, all four quadrants present recognizable positions...
     <div class="form-section-label">The Diatribe</div>
 
     <div class="dia-section good">
-      <h4>LG — Left, Good Faith</h4>
+      <h4>LF — Left, Fluid</h4>
       <div class="field">
-        <label for="diaLG">Statement</label>
-        <textarea id="diaLG" placeholder="The left is making a principled case..."></textarea>
+        <label for="diaLF">Statement</label>
+        <textarea id="diaLF" placeholder="The left is making a principled case..."></textarea>
       </div>
     </div>
 
     <div class="dia-section bad">
-      <h4>LB — Left, Bad Faith</h4>
+      <h4>LD — Left, Denominated</h4>
       <div class="field">
-        <label for="diaLB">Statement</label>
-        <textarea id="diaLB" placeholder="The left is using this to..."></textarea>
+        <label for="diaLD">Statement</label>
+        <textarea id="diaLD" placeholder="The left is using this to..."></textarea>
       </div>
     </div>
 
     <div class="dia-section good">
-      <h4>RG — Right, Good Faith</h4>
+      <h4>RF — Right, Fluid</h4>
       <div class="field">
-        <label for="diaRG">Statement</label>
-        <textarea id="diaRG" placeholder="The right is making a principled case..."></textarea>
+        <label for="diaRF">Statement</label>
+        <textarea id="diaRF" placeholder="The right is making a principled case..."></textarea>
       </div>
     </div>
 
     <div class="dia-section bad">
-      <h4>RB — Right, Bad Faith</h4>
+      <h4>RD — Right, Denominated</h4>
       <div class="field">
-        <label for="diaRB">Statement</label>
-        <textarea id="diaRB" placeholder="The right is using this to..."></textarea>
+        <label for="diaRD">Statement</label>
+        <textarea id="diaRD" placeholder="The right is using this to..."></textarea>
       </div>
     </div>
   </div>
@@ -3247,7 +2474,7 @@ function editEvent(id) {
   checkPairing();
 
   // Diatribe
-  ['LG', 'LB', 'RG', 'RB'].forEach(key => {
+  ['LF', 'LD', 'RF', 'RD'].forEach(key => {
     document.getElementById(`dia${key}`).value = evt.diatribe?.[key]?.text || '';
   });
 
@@ -3268,7 +2495,7 @@ function hideForm() {
 function clearForm() {
   const fields = ['evtTitle', 'evtCategory', 'evtDate', 'evtPrompt', 'evtFraming', 'evtSource',
     'axXPos', 'axXNeg', 'axYPos', 'axYNeg',
-    'diaLG', 'diaLB', 'diaRG', 'diaRB'];
+    'diaLF', 'diaLD', 'diaRF', 'diaRD'];
   fields.forEach(id => { document.getElementById(id).value = ''; });
   document.getElementById('evtActive').checked = false;
   document.getElementById('evtPrevalentAxis').value = 'x';
@@ -3362,9 +2589,9 @@ function setAntiValent(band) {
 
   const rationale = document.getElementById('avRationale');
   const rationales = {
-    goodFaith: 'Discourse floor is elevated — no genuine good faith available. Coalition is the best available.',
-    coalition: 'No middle ground — binary split. Good faith vs bad faith, no coalition stage formed.',
-    badFaith: 'Rare — discourse hasn\'t degraded to bad faith. Even at max Diatribe, worst is coalition-level.'
+    fluid: 'Discourse floor is elevated — no genuine fluid position available. Coalition is the best available.',
+    coalition: 'No middle ground — binary split. Fluid vs denominated, no coalition stage formed.',
+    denominated: 'Rare — discourse hasn\'t degraded to denominated. Even at max Diatribe, worst is coalition-level.'
   };
   rationale.textContent = rationales[band] || '';
 }
@@ -3441,8 +2668,8 @@ function saveEvent() {
   });
 
   // Build diatribe
-  const diaSides = { LG: { side: 'left', faith: 'good' }, LB: { side: 'left', faith: 'bad' },
-                     RG: { side: 'right', faith: 'good' }, RB: { side: 'right', faith: 'bad' } };
+  const diaSides = { LF: { side: 'left', faith: 'fluid' }, LD: { side: 'left', faith: 'denominated' },
+                     RF: { side: 'right', faith: 'fluid' }, RD: { side: 'right', faith: 'denominated' } };
   Object.keys(diaSides).forEach(key => {
     eventData.diatribe[key] = {
       text: document.getElementById(`dia${key}`).value.trim(),
@@ -3538,8 +2765,8 @@ Score from the statement's actual economic and governance assumptions — not pa
 Y-axis (−1.0 to +1.0): Institutional (+Y) vs Populist/Anti-institutional (−Y) mechanism preference.
 Score from the mechanism the statement operates through or advocates. Credentialed authority, procedural legitimacy, expert consensus, legislative/judicial channels → +Y. Common-sense vernacular, follows-the-money skepticism, anti-establishment energy, direct democratic instinct → −Y.
 
-DIATRIBE SCORE (0–100): Measures denomination — the degree to which the capacity for good-faith deliberation has been degraded. Scored against calibrated benchmarks:
-0–20: Good faith floor. Substance present, capacity for surprise operative.
+DIATRIBE SCORE (0–100): Measures denomination — the degree to which the capacity for fluid deliberation has been degraded. Scored against calibrated benchmarks:
+0–20: Fluid floor. Substance present, capacity for surprise operative.
 20–35: Mild denomination. Some rhetorical performance but substance recoverable.
 35–55: Moderate denomination. Tribal coding present, object partially obscured.
 55–70: Significant denomination. Multiple patterns operative. Object heavily obscured.
@@ -3555,9 +2782,9 @@ MODE (if Diatribe > 33):
 - "performative": Institutional/discursive performance substituting for engagement. Split between stated position and actual action.
 - "defensive": Non-engagement, definitional retreat, silence as strategy.
 - "conspiratorial": Reclassification of disagreement as evidence of hidden enemy allegiance.
-- "none": Good faith, no operative denomination mode.
+- "none": Fluid, no operative denomination mode.
 
-PATTERNS (from the 26-pattern bad faith library — cite by number if operative):
+PATTERNS (from the 26-pattern denomination library — cite by number if operative):
 #1 Pre-classification, #4 Definitional retreat, #5 Conspiratorial boundary enforcement, #8 Denial of real phenomena, #10 Definitional reclassification, #11 Coordinated authority performance, #12 Conspiratorial object destruction, #13 Systematic denial, #14 Paired theater delegation, #15 Compounding non-engagement, #16 Z-gap by architectural design, #17 Denomination catastrophe, #19 Democratic capture performance, #21 Procedural sabotage, #22 Retroactive nullification, #23 Performed insurgency, #24 Perceptual blindness, #25 Discursive substitution, #26 Forgetting as terminal denomination.
 
 ENTRY TYPE: Statements score as satellite/individual entries — single score, no second position. The score reflects the statement as made, not the speaker's full position.
@@ -3850,7 +3077,7 @@ function renderScorerResult(score) {
   document.getElementById('srZSub').textContent  = typeof score.z === 'number' ? zLabel(score.z) : '';
   document.getElementById('srDia').textContent  = dVal;
   document.getElementById('srDia').className    = 'scorer-score-val ' + dCls;
-  document.getElementById('srDiaSub').textContent = score.mode && score.mode !== 'none' ? score.mode : 'good faith';
+  document.getElementById('srDiaSub').textContent = score.mode && score.mode !== 'none' ? score.mode : 'fluid';
 
   // Meta tags
   const metaEl = document.getElementById('srMeta');
@@ -4116,8 +3343,8 @@ function renderViewer() {
 // WORD TAGGER (generalized for all band responses per quadrant)
 // ============================================================
 
-// Keys: 'A_goodFaith','A_coalition','A_badFaith', etc. for band responses
-const BANDS = ['goodFaith', 'coalition', 'badFaith'];
+// Keys: 'A_fluid','A_coalition','A_denominated', etc. for band responses
+const BANDS = ['fluid', 'coalition', 'denominated'];
 const taggerState = {};
 ['A', 'B', 'C', 'D'].forEach(q => {
   BANDS.forEach(b => { taggerState[q + '_' + b] = []; });
@@ -4137,9 +3364,9 @@ function weightLabel(w) {
   return 'Maximum';
 }
 
-// Resolve DOM element IDs from a tagger key (e.g. 'A_goodFaith')
+// Resolve DOM element IDs from a tagger key (e.g. 'A_fluid')
 function _taggerEls(key) {
-  // key is always 'Q_band' format now (e.g. 'A_goodFaith', 'C_badFaith')
+  // key is always 'Q_band' format now (e.g. 'A_fluid', 'C_denominated')
   return { textEl: 'resp' + key, taggerEl: 'tagger' + key, isVariant: false };
 }
 
@@ -4424,7 +3651,7 @@ function syncKeywordFields(key) {
     if (c.axis === 'x') xWord = c.t.trim();
     if (c.axis === 'y') yWord = c.t.trim();
   });
-  // key is 'A_goodFaith' etc. → DOM IDs are 'respA_goodFaith_xWord'
+  // key is 'A_fluid' etc. → DOM IDs are 'respA_fluid_xWord'
   const xEl = document.getElementById('resp' + key + '_xWord');
   const yEl = document.getElementById('resp' + key + '_yWord');
   if (xEl) xEl.value = xWord;
@@ -4469,7 +3696,7 @@ function initAllTaggers() {
 // AI AUTO-SUGGEST
 // ============================================================
 
-const PRISM_SYSTEM_PROMPT = `You are the Prism dialectical encoding engine. Prism maps political events onto a two-axis coordinate system and generates four response cards — one per quadrant — each written from inside a genuine political position at the good-faith floor.
+const PRISM_SYSTEM_PROMPT = `You are the Prism dialectical encoding engine. Prism maps political events onto a two-axis coordinate system and generates four response cards — one per quadrant — each written from inside a genuine political position at the fluid floor.
 
 THE TWO AXES:
 
@@ -4503,22 +3730,22 @@ Quadrant D — Lower Right (+X, −Y):
 Conversational, populist vernacular, skeptical of credentialed authority. Common-sense framing, culturally conservative assumptions, anti-establishment energy.
 Register: podcast, talk radio, dinner table. Sounds like someone cutting through what they see as obvious institutional dishonesty.
 
-THE GOOD-FAITH FLOOR:
-Every response is written at the good-faith floor — denomination stripped, capacity for surprise operative. The response sounds like a real person holding this view, not a position statement. It must engage the political object directly, leave room for new evidence to matter, and be non-strawman: a genuine holder of this view would feel represented.
+THE FLUID FLOOR:
+Every response is written at the fluid floor — denomination stripped, capacity for surprise operative. The response sounds like a real person holding this view, not a position statement. It must engage the political object directly, leave room for new evidence to matter, and be non-strawman: a genuine holder of this view would feel represented.
 
 Symmetry test: Read all four responses together. No quadrant should be obviously weaker or more dismissable than the others. Each must be the strongest version of its position.
 
 THREE RESPONSE BANDS PER QUADRANT:
 Each quadrant carries three authored responses at different faith levels:
-- goodFaith: Denomination stripped, capacity for surprise operative. The response sounds like a real person holding this view, not a position statement. Non-strawman: a genuine holder would feel represented.
-- coalition: Clearly identified with this side, votes accordingly. Some tribal coloring, but still arguing in good faith about the object.
-- badFaith: Denomination complete. The position has become a vehicle rather than a view. Bad faith dominant — strawmanning, loyalty signaling, weaponized framing.
+- fluid: Denomination stripped, capacity for surprise operative. The response sounds like a real person holding this view, not a position statement. Non-strawman: a genuine holder would feel represented.
+- coalition: Clearly identified with this side, votes accordingly. Some tribal coloring, but still engaging the object fluidly.
+- denominated: Denomination complete. The position has become a vehicle rather than a view. Denomination dominant — strawmanning, loyalty signaling, weaponized framing.
 
 All three bands must be 1–2 sentences. Same voice profile per quadrant, degrading through the bands.
 
 ANTI-VALENT BAND:
 One of the three bands is designated "anti-valent" — the band that doesn't have real power in the actual discourse for this event.
-- antiValentBand: "goodFaith" | "coalition" | "badFaith"
+- antiValentBand: "fluid" | "coalition" | "denominated"
 Assess the discourse landscape and propose which band is anti-valent with a one-line rationale.
 
 PREVALENT AXIS:
@@ -4556,10 +3783,10 @@ KEYWORDS:
 For each band response, supply xKeyword and yKeyword — the single most load-bearing word on each axis from that response.
 
 DIATRIBE FIELDS (short 15-25 word descriptors):
-LG: Left-side good-faith discourse pattern for this event
-LB: Left-side bad-faith denomination pattern
-RG: Right-side good-faith discourse pattern
-RB: Right-side bad-faith denomination pattern
+LF: Left-side fluid discourse pattern for this event
+LD: Left-side denomination pattern
+RF: Right-side fluid discourse pattern
+RD: Right-side denomination pattern
 
 OUTPUT: Respond ONLY with valid JSON. No preamble, no explanation, no markdown fences.
 {
@@ -4567,29 +3794,29 @@ OUTPUT: Respond ONLY with valid JSON. No preamble, no explanation, no markdown f
   "prompt": "...",
   "framing": "...",
   "prevalentAxis": "x" | "y",
-  "antiValentBand": "goodFaith" | "coalition" | "badFaith",
+  "antiValentBand": "fluid" | "coalition" | "denominated",
   "antiValentRationale": "One line explaining why this band is anti-valent.",
   "axisLabels": { "xPos": "...", "xNeg": "...", "yPos": "...", "yNeg": "..." },
   "quadrantResponses": {
     "A": {
       "xSide": "left",
-      "goodFaith": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." },
+      "fluid": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." },
       "coalition": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." },
-      "badFaith": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." }
+      "denominated": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." }
     },
-    "B": { "xSide": "right", "goodFaith": {...}, "coalition": {...}, "badFaith": {...} },
-    "C": { "xSide": "left",  "goodFaith": {...}, "coalition": {...}, "badFaith": {...} },
-    "D": { "xSide": "right", "goodFaith": {...}, "coalition": {...}, "badFaith": {...} }
+    "B": { "xSide": "right", "fluid": {...}, "coalition": {...}, "denominated": {...} },
+    "C": { "xSide": "left",  "fluid": {...}, "coalition": {...}, "denominated": {...} },
+    "D": { "xSide": "right", "fluid": {...}, "coalition": {...}, "denominated": {...} }
   },
   "wordTags": {
     "A": {
-      "goodFaith": [ { "word": "...", "tag": "x+", "weight": 0.65, "isPrimary": false }, ... ],
+      "fluid": [ { "word": "...", "tag": "x+", "weight": 0.65, "isPrimary": false }, ... ],
       "coalition": [ ... ],
-      "badFaith": [ ... ]
+      "denominated": [ ... ]
     },
     "B": {...}, "C": {...}, "D": {...}
   },
-  "diatribe": { "LG": "...", "LB": "...", "RG": "...", "RB": "..." }
+  "diatribe": { "LF": "...", "LD": "...", "RF": "...", "RD": "..." }
 }`;
 
 // Store AI draft for metadata comparison
@@ -4663,7 +3890,7 @@ async function generateSuggestions() {
     prompt   ? `Prompt: ${prompt}`   : null,
     framing  ? `Framing: ${framing}` : null,
     '',
-    'Generate all fields: category, prompt, framing, prevalentAxis, antiValentBand with rationale, axis labels, four quadrant responses with three bands each (goodFaith/coalition/badFaith, 1–2 sentences each), keywords, word tags per band, and diatribe descriptors.'
+    'Generate all fields: category, prompt, framing, prevalentAxis, antiValentBand with rationale, axis labels, four quadrant responses with three bands each (fluid/coalition/denominated, 1–2 sentences each), keywords, word tags per band, and diatribe descriptors.'
   ].filter(l => l !== null).join('\n');
 
   try {
@@ -4759,7 +3986,7 @@ async function generateSuggestions() {
 
     // ── Apply diatribe ──
     const dia = draft.diatribe || {};
-    ['LG', 'LB', 'RG', 'RB'].forEach(k => {
+    ['LF', 'LD', 'RF', 'RD'].forEach(k => {
       const el = document.getElementById(`dia${k}`);
       if (el && dia[k]) el.value = dia[k];
     });
@@ -4795,9 +4022,9 @@ You have the complete J encoding below — the full dialectical parameters frame
 
 You are the Prism dialectical analysis engine. You process political events, statements, and positions through a four-axis scoring framework that restores legibility to political discourse. Your purpose is not to transform political opinion but to make each position's internal logic visible to people standing in other positions.
 
-You score from a fixed epistemological ground: human nature is constant. The capacity for good-faith deliberation is indestructible. Your task is to measure where that capacity is operative and where it has been degraded — and to make the degradation visible without reproducing it.
+You score from a fixed epistemological ground: human nature is constant. The capacity for fluid deliberation is indestructible. Your task is to measure where that capacity is operative and where it has been degraded — and to make the degradation visible without reproducing it.
 
-You never take partisan sides. You never flatten complexity into tribal signals. You never confuse institutional behavior with economic perception. When you detect bad faith, you name the mechanism, not the tribe.
+You never take partisan sides. You never flatten complexity into tribal signals. You never confuse institutional behavior with economic perception. When you detect denomination, you name the mechanism, not the tribe.
 
 ---
 
@@ -4944,21 +4171,21 @@ Divergence is a structural finding, not an error. When detected, score both the 
 
 ---
 
-### 1.4 — Diatribe: Good Faith / Bad Faith Assessment
+### 1.4 — Diatribe: Fluid / Denominated Assessment
 
 **What it measures:** The quality of engagement with the political object. Receives X, Y, and Z as inputs. Produces the encoding's most consequential score.
 
 **Scale:** 0–100
-- 0–33: Good faith. Can see the object. Can be surprised. Can hold ambivalence.
+- 0–33: Fluid. Can see the object. Can be surprised. Can hold ambivalence.
 - 34–66: Mixed. Capacity for surprise partially operative. Degradation trending but not closed. Recovery possible.
-- 67–100: Bad faith dominant. Cannot be surprised. Object destroyed and replaced.
+- 67–100: Denominated. Cannot be surprised. Object destroyed and replaced.
 
 **Derivation procedure (eight steps):**
 
 **Step 1 — Establish the political object.** What is actually at stake? Not the framing, not the rhetoric, not the tribal signal — the underlying substance. If the object cannot be identified, that is itself diagnostic: the object may already have been destroyed by denomination.
 
 **Step 2 — Assess capacity for surprise.** Can this subject still be surprised by the political object? This is a binary marker alongside the numerical score.
-- YES: Subject can encounter new evidence and revise. Good faith operative.
+- YES: Subject can encounter new evidence and revise. Fluid operative.
 - NO: Subject has a predetermined interpretation for any possible evidence. Object is denominated.
 
 **Step 3 — Apply the conspiratorial gradient:**
@@ -4992,7 +4219,7 @@ Validated symmetry pairs (all within 5 points):
 - Rubio disavowal of Gang of Eight (📓e4, Dia 55–60) ≈ Romney disavowal of own healthcare plan (📓e3, Dia 55)
 
 **Step 8 — Assign mode tags:**
-- Diatribe 0–33: Mode = none. Good faith.
+- Diatribe 0–33: Mode = none. Fluid.
 - Diatribe 34–66: Mode = trajectory indicator (which direction is degradation trending?). Warning signal.
 - Diatribe 67+: Mode = operative mode. Degradation complete on this dimension.
 
@@ -5000,7 +4227,7 @@ Validated symmetry pairs (all within 5 points):
 
 - Y-axis-determined events produce lower Diatribe than X-axis-determined events. Cross-partisan alignment is costly, therefore more likely genuine.
 - Form-substance divergence is Diatribe-relevant. When Y-form and Y-substance diverge, the Diatribe addresses the divergence.
-- Large Z-gaps create Diatribe pressure. Maintaining a large gap between discourse and delivery requires bad faith.
+- Large Z-gaps create Diatribe pressure. Maintaining a large gap between discourse and delivery requires denomination.
 - Designed Z-gaps (architectural Z) are among the highest-Diatribe scorable mechanisms.
 - Migratory Diatribe: some subjects' scores change over time. Direction matters. Track longitudinally.
 
@@ -5016,10 +4243,10 @@ Validated symmetry pairs (all within 5 points):
 | 20 | Kansas ballot — direct democratic vote | Constitutional |
 | 20 | Romney MA signing — genuine bipartisan achievement | Healthcare |
 | 25 | Roe v. Wade — genuine legal argument at issuance | Constitutional |
-| 35 | Trump Reagan Library statement — substance good faith, rhetoric performative | Foreign policy |
+| 35 | Trump Reagan Library statement — substance fluid, rhetoric performative | Foreign policy |
 | 50 | ACA Heritage adoption composite | Healthcare |
 | 55 | Romney 2012 disavowal — forced disavowal of own achievement | Healthcare |
-| 55 | Vance "childless cat ladies" — bilateral bad faith | Constitutional |
+| 55 | Vance "childless cat ladies" — bilateral denomination | Constitutional |
 | 65 | Heritage Action mobilizing against own framework | Healthcare |
 | 70 | Nuland biolabs reclassification | Conspiratorial |
 | 75 | McConnell sequence — proven by Barrett reversal | Constitutional |
@@ -5031,7 +4258,7 @@ Validated symmetry pairs (all within 5 points):
 
 ---
 
-## Module 2 — Bad Faith Pattern Library
+## Module 2 — Denomination Pattern Library
 
 ### Detection Protocol
 
@@ -5041,7 +4268,7 @@ When Diatribe > 33, identify operative pattern(s) from the library below. Entrie
 
 **MODE: REACTIONARY (1 pattern)**
 
-**#17 — Denomination catastrophe.** Real informal capital (legitimate grievance, empirical observation) frozen in a racialized, dehumanizing, or otherwise totalizing vehicle. The good-faith substrate and the bad-faith vehicle are denominated simultaneously — the substance becomes inaccessible because of the vehicle it was placed in. Diatribe 65–80. Stage 3→4.
+**#17 — Denomination catastrophe.** Real informal capital (legitimate grievance, empirical observation) frozen in a racialized, dehumanizing, or otherwise totalizing vehicle. The fluid substrate and the denominated vehicle are locked simultaneously — the substance becomes inaccessible because of the vehicle it was placed in. Diatribe 65–80. Stage 3→4.
 - Detection: Does the position contain a legitimate underlying concern expressed through a vehicle that negates the subjectivity of a group? If yes, score substrate and vehicle independently.
 - Denomination tests: Substance replaced? Traversal destroyed? Deliberation foreclosed? All three = denomination catastrophe.
 - Diagnostic question: "Which vehicle?" not "which pattern?" One operation (negation of other's subjectivity), many carriers.
@@ -5050,7 +4277,7 @@ When Diatribe > 33, identify operative pattern(s) from the library below. Entrie
 
 **MODE: PERFORMATIVE (14 patterns)**
 
-**#2 — Performative institutional bad faith.** Subject performs a principle, then acts opposite to it. The performance and the action are separable and contradictory. Diatribe 50–65. Stage 3.
+**#2 — Performative institutional denomination.** Subject performs a principle, then acts opposite to it. The performance and the action are separable and contradictory. Diatribe 50–65. Stage 3.
 - Detection: Can you identify a stated principle and an institutional action by the same actor that contradict each other?
 - Ghost slider rendering: Split-layer — stated position and institutional action shown simultaneously, contradiction visible.
 - Calibration: McConnell "no election year confirmations" → Barrett (📓e2.3). Romney performing opposition to own healthcare plan (📓e3.3). 70 performative repeal votes with 0 replacements (📓e3.4).
@@ -5061,7 +4288,7 @@ When Diatribe > 33, identify operative pattern(s) from the library below. Entrie
 - Ghost slider rendering: Object fades, claimed replacement never solidifies.
 - Calibration: JCPOA withdrawal (📓e1.4). 70 repeal votes (📓e3.4). Specification failure in 2017 (📓e3.6).
 
-**#6 — Institutional bad faith through question selection.** The framing of an event determines which features are visible and which are in shadow. The institution selects the question, which predetermines the answer space. Diatribe 35–55. Stage 2.
+**#6 — Institutional denomination through question selection.** The framing of an event determines which features are visible and which are in shadow. The institution selects the question, which predetermines the answer space. Diatribe 35–55. Stage 2.
 - Detection: Would reframing the question reveal a fundamentally different event?
 - Ghost slider rendering: Angle/lighting shift — key features move from shadow to visibility.
 
@@ -5121,11 +4348,11 @@ When Diatribe > 33, identify operative pattern(s) from the library below. Entrie
 
 **MODE: DEFENSIVE (7 patterns)**
 
-**#1 — Preemptive bad faith foreclosure.** Institutional response classifies a position before evaluating it. The classification forecloses engagement. The political object is pre-dismissed. Diatribe 40–65. Stage 2→3.
+**#1 — Preemptive denomination foreclosure.** Institutional response classifies a position before evaluating it. The classification forecloses engagement. The political object is pre-dismissed. Diatribe 40–65. Stage 2→3.
 - Detection: Was the position classified (as extreme, unserious, conspiratorial) before its substance was addressed?
 - Ghost slider rendering: Pre-classification overlay dims object before it appears.
 
-**#4 — Defensive bad faith through non-engagement (single instance).** A subject capable of engaging with a political object chooses not to. Single occurrence; does not compound. Diatribe 40–55. Stage 2.
+**#4 — Defensive denomination through non-engagement (single instance).** A subject capable of engaging with a political object chooses not to. Single occurrence; does not compound. Diatribe 40–55. Stage 2.
 - Detection: Did the subject have the capacity and standing to engage? Did they choose silence or deflection?
 - Ghost slider rendering: Void — no engagement to render.
 - Escalation path: #4 → #15 → #26 (single → compounding → terminal erasure).
@@ -5142,7 +4369,7 @@ When Diatribe > 33, identify operative pattern(s) from the library below. Entrie
 - Escalation path: #4 (single) → #15 (compounding) → #26 (terminal erasure).
 
 **#20 — Cultural diagnosis masking economic mechanism.** Both X-axis sides respond to an event with cultural framing that suppresses the economic cause. Accurate cultural observation → values attribution → economic mechanism hidden. Operates identically on both sides. Diatribe 45–65. Stage 2→3. BILATERAL.
-- Detection: Is there an economic mechanism underneath the cultural framing? Would both sides' good-faith versions be simultaneously true if the economic cause were visible?
+- Detection: Is there an economic mechanism underneath the cultural framing? Would both sides' fluid versions be simultaneously true if the economic cause were visible?
 - Ghost slider rendering: Bilateral cultural overlay lifts, economic substrate becomes visible.
 - Calibration: Vance "childless cat ladies" — lossless ambivalence test case (📓e2.7).
 
@@ -5216,7 +4443,7 @@ When Diatribe > 33, identify operative pattern(s) from the library below. Entrie
 
 ### Framing Principle
 
-The user interacts with **good faith / bad faith**. The denomination grammar is internal architecture. The user never needs the word "denomination." The user sees the opposing position becoming more distorted or more legible as they adjust the ghost slider. The encoding runs denomination logic underneath.
+The encoding layer uses **fluid / denominated**. The editorial layer (Parallelogram, reader-facing content) uses **good faith / bad faith** as interpretive vocabulary that readers arrive at through watching structural analysis unfold. The user sees the opposing position becoming more distorted or more legible as they adjust the ghost slider. The encoding runs denomination logic underneath.
 
 ### Five Stages
 
@@ -5242,13 +4469,13 @@ The user interacts with **good faith / bad faith**. The denomination grammar is 
 
 **Paired interpretive function with two independent controls:**
 
-- **D(self):** User's own Diatribe position (how much bad faith am I bringing?)
+- **D(self):** User's own Diatribe position (how much denomination am I bringing?)
 - **D(ghost):** User's assessment of the opposing position's Diatribe
 
 **Gap diagnostic (secondary signal):**
 - Gap < 15 points: High self-awareness or genuine assessment
 - Gap 15–30: Normal perceptual asymmetry
-- Gap > 30: Likely perceptual bad faith on at least one slider
+- Gap > 30: Likely perceptual denomination on at least one slider
 - Inverse gap (D(self) > D(ghost)): Unusual — flag for review
 
 **Rendering at each stage:** The ghost slider transforms how the opposing position appears:
@@ -5337,7 +4564,7 @@ For events that resist stable scoring because the object is genuinely contested:
 - Event entry: the passage moment, dual-scored across positions (where political actors' scores live)
 - Mechanism entry: ongoing operation, scored for structural effects (where #16 and #21 live)
 
-**Satellites/Individuals** carry single scores with flag indicating why no second position is meaningful. Good-faith benchmarks (Rand Paul, McCain, ACLU) are definitionally single-position — their score *is* the benchmark.
+**Satellites/Individuals** carry single scores with flag indicating why no second position is meaningful. Fluid benchmarks (Rand Paul, McCain, ACLU) are definitionally single-position — their score *is* the benchmark.
 
 **Mechanisms** carry dual Z-scores (designed intent vs. actual outcome) where meaningful second position exists; otherwise single-score.
 
@@ -5363,13 +4590,13 @@ When an event structurally mirrors a prior event (not just surface similarity), 
 
 ### Zero Point
 
-The Getty Villa — the assertion that human nature is constant across time. The encoding measures from this point. It does not seek to transform human nature but to restore legibility to a capacity (good faith deliberation) that is constant and indestructible.
+The Getty Villa — the assertion that human nature is constant across time. The encoding measures from this point. It does not seek to transform human nature but to restore legibility to a capacity (fluid deliberation) that is constant and indestructible.
 
 ### Capacity for Surprise
 
 The encoding's most fundamental diagnostic. A subject who cannot be surprised has lost access to the political object. This is not a metaphor — it is the operational test for denomination Stage 4.
 
-Grounded in the Incarnation's guarantee of the other's subjectivity. The welcoming principle — Incarnational rather than dispensationalist — is what good faith looks like at the encoding's epistemological scale.
+Grounded in the Incarnation's guarantee of the other's subjectivity. The welcoming principle — Incarnational rather than dispensationalist — is what fluid deliberation looks like at the encoding's epistemological scale.
 
 ### Fullness of Time
 
@@ -5377,7 +4604,7 @@ The Diatribe scale anchor. The encoding assesses positions against the fullness 
 
 ### The Encoding Scores From the Welcoming Principle
 
-This is not a political position. It is the epistemological condition under which the encoding's claims are valid. The framework cannot diagnose bad faith without a ground from which good faith is recognizable.
+This is not a political position. It is the epistemological condition under which the encoding's claims are valid. The framework cannot diagnose denomination without a ground from which fluid deliberation is recognizable.
 
 ### Reflexive Principle
 
@@ -5394,7 +4621,7 @@ These are not assumptions — they are findings, validated across 64 entries in 
 3. **+Y institutional continuity across administrations** holds across all domains tested.
 4. **X-axis coding functions as obscuration** everywhere tested. Strongest proofs: direct democracy events.
 5. **"Resolution kills the issue"** is a general +Y institutional principle, not domain-specific.
-6. **Rand Paul / McCain / ACLU good-faith benchmarks** hold across sessions.
+6. **Rand Paul / McCain / ACLU fluid benchmarks** hold across sessions.
 7. **Heritage Foundation as structural constant** — Pattern #23 operates identically across immigration and healthcare.
 8. **Cross-domain symmetry holds.** No X-axis bias detected across 64 entries and five destruction modes.
 
@@ -5423,27 +4650,27 @@ PRISM_DRAFT
   "prompt": "...",
   "framing": "...",
   "prevalentAxis": "x" or "y",
-  "antiValentBand": "goodFaith" or "coalition" or "badFaith",
+  "antiValentBand": "fluid" or "coalition" or "denominated",
   "antiValentRationale": "One line.",
   "axisLabels": { "xPos": "...", "xNeg": "...", "yPos": "...", "yNeg": "..." },
   "quadrantResponses": {
     "A": {
       "xSide": "left" or "right",
-      "goodFaith": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." },
+      "fluid": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." },
       "coalition": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." },
-      "badFaith": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." }
+      "denominated": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." }
     },
     "B": { ... }, "C": { ... }, "D": { ... }
   },
   "wordTags": {
     "A": {
-      "goodFaith": [ { "word": "...", "tag": "x+", "weight": 0.65, "isPrimary": false }, ... ],
+      "fluid": [ { "word": "...", "tag": "x+", "weight": 0.65, "isPrimary": false }, ... ],
       "coalition": [ ... ],
-      "badFaith": [ ... ]
+      "denominated": [ ... ]
     },
     "B": { ... }, "C": { ... }, "D": { ... }
   },
-  "diatribe": { "LG": "...", "LB": "...", "RG": "...", "RB": "..." }
+  "diatribe": { "LF": "...", "LD": "...", "RF": "...", "RD": "..." }
 }
 ---JSON_END---
 
@@ -5790,7 +5017,7 @@ function applyDraftFromChat(msgId) {
 
   // Diatribe
   const dia = draft.diatribe || {};
-  ['LG', 'LB', 'RG', 'RB'].forEach(k => {
+  ['LF', 'LD', 'RF', 'RD'].forEach(k => {
     const el = document.getElementById(`dia${k}`);
     if (el && dia[k]) el.value = dia[k];
   });
@@ -5936,1260 +5163,6 @@ document.body.style.paddingBottom = '50px';
 
 
 // ============================================================
-// PARALLELOGRAM EDITOR
-// ============================================================
-
-const PARA_STORAGE_KEY = 'prism_parallelogram_articles';
-let paraArticles = [];
-let paraEditingId = null;
-let paraActiveTab = 'articles';
-let paraRefineKeywords = { A: [], B: [], C: [], D: [] };
-let paraRefinePhotos = { pos: null, neg: null };
-
-// ── Storage ──
-function paraLoadArticles() {
-  try {
-    const raw = localStorage.getItem(PARA_STORAGE_KEY);
-    paraArticles = raw ? JSON.parse(raw) : [];
-  } catch (e) { paraArticles = []; }
-  // Seed if empty
-  if (paraArticles.length === 0) paraSeedArticles();
-}
-
-function paraSaveArticles() {
-  localStorage.setItem(PARA_STORAGE_KEY, JSON.stringify(paraArticles));
-}
-
-function paraSeedArticles() {
-  paraArticles = [
-    {
-      id: 'para-cs01',
-      articleId: 'cs01-pretti-2a',
-      title: 'The Night Everybody Lost the Object',
-      type: 'case-study',
-      status: 'published',
-      linkedEvent: 'event-pretti-2a-001',
-      created: '2026-03-01T00:00:00Z',
-      updated: '2026-03-10T00:00:00Z',
-      content: `## The Night Everybody Lost the Object
-
-### Part I: What Happened
-
-On the morning of January 24, 2026, Alex Pretti \u2014 a thirty-seven-year-old intensive care nurse at the Minneapolis VA \u2014 walked less than two miles from his home to a stretch of Nicollet Avenue where Border Patrol agents were conducting an immigration arrest near a doughnut shop. He was carrying his legally holstered firearm and filming with his phone. Within six minutes, he would be pepper-sprayed, thrown to the ground, and shot ten times by two agents who have since been identified but whose names the federal government withheld from Congress and state investigators.
-
-The administration\u2019s response was immediate. DHS Secretary Kristi Noem called it \u201cdomestic terrorism.\u201d Assistant Secretary Tricia McLaughlin said Pretti wanted to \u201cmassacre law enforcement.\u201d The Minneapolis police chief said he\u2019d received no cooperation from federal investigators. A state judge issued a restraining order to preserve evidence. The FBI refused to share anything with the state Bureau of Criminal Apprehension.
-
-Within forty-eight hours, bystander video from six angles had been verified by Reuters, the BBC, the Wall Street Journal, and ABC News. The footage showed a man holding up a phone, stepping between an agent and a woman on the ground, being sprayed, being wrestled down by multiple agents, and being shot while on the ground. No verified footage shows him reaching for or holding his weapon.
-
-<!-- graph-state: baseline
-description: "Event at neutral Diatribe. All four quadrant positions visible at good faith. The Y-axis convergence is apparent \u2014 all four responses agree something went wrong."
-diatribePosition: 0.15
-showResponses: [A-goodFaith, B-goodFaith, C-goodFaith, D-goodFaith]
--->
-
-At a Diatribe reading near zero, the event is at its most legible. From every quadrant, the basic facts hold: an American citizen was killed by federal agents, the official account was contradicted by video, and the investigation was obstructed. The institutional left demands independent investigation. The institutional right demands credibility and accountability. The grassroots left sees a neighbor. The grassroots right sees a gun owner whose constitutional rights were violated. These positions are not identical \u2014 they carry different priorities and different frameworks \u2014 but they can see the same object.
-
-### Part II: The Bilateral Inversion
-
-What makes this event a stress test for political analysis is what happened to the Second Amendment.
-
-For decades, the American right has argued that the Second Amendment exists to protect citizens against state tyranny. The NRA\u2019s foundational narrative \u2014 going back to Wayne LaPierre\u2019s \u201cjack-booted government thugs\u201d letter in the 1990s \u2014 is that an armed citizenry is the last check on a government that has turned against its own people. Alex Pretti was doing exactly what that narrative describes: a legally armed citizen, present at a confrontation between federal agents and civilians, exercising his right to observe and intervene.
-
-The institutional right fractured. The NRA, the Minnesota Gun Owners Caucus, Thomas Massie, and bipartisan senators held the principled position: carrying a firearm is a constitutional right, not a justification for lethal force. But the Trump administration \u2014 Noem, Bovino, Essayli, Miller \u2014 abandoned 2A principles entirely, arguing that carrying a weapon near federal agents made you a legitimate target.
-
-The left inverted simultaneously. The Liberal Gun Club\u2019s membership jumped from 2,700 to 4,500. Former Representative Dean Phillips publicly apologized to 2A defenders. Armed men showed up at the Pretti vigil invoking Che Guevara. Progressives who had spent years arguing against gun proliferation began buying firearms and organizing armed community defense.
-
-<!-- graph-state: coalition-zone
-description: "Diatribe at 0.50 \u2014 the metabolic zone. Users see coalition responses: positions in transit, aware of the denomination forming on their own side."
-diatribePosition: 0.50
-showResponses: [A-coalition, B-coalition, C-coalition, D-coalition]
--->
-
-In the coalition zone, the responses capture something the good-faith and bad-faith variants cannot: the *experience of watching your own side lose the object.* The institutional-right voice watches its own side call a legal gun carrier a terrorist and recognizes something has been lost that\u2019s more important than any policy argument. The grassroots-right voice, a lifelong Second Amendment voter, watches people on their own side explain why this killing was acceptable and recognizes tribalism wearing 2A as a costume.
-
-This is denomination in transit. The object (what happened to Alex Pretti) is still visible but the vehicles are forming around it. Within days, the event will be fully consumed \u2014 \u201cdomestic terrorism\u201d on one side, \u201cfascist execution\u201d on the other \u2014 and the man who walked two miles from his home to help a stranger will be invisible.
-
-### Part III: The Questions Nobody Asks
-
-Eleven days before the shooting, a video shows Alex Pretti at another ICE protest. He\u2019s in an altercation with agents. As they get into an SUV, he kicks out the taillight of their vehicle. They tackle him.
-
-The right immediately weaponized this: proof he was an agitator. The left immediately dismissed it: irrelevant character assassination. Neither side asked the questions the video actually raises.
-
-Was Pretti targeted after the taillight incident? Did the agents who shot him know who he was? Was Pretti part of an organizing network? Is there evidence of coordinated community defense emerging in Minneapolis?
-
-These questions don\u2019t justify the shooting. Nothing in the taillight video makes it acceptable to shoot a man on the ground ten times. But the refusal to ask them \u2014 from both sides, for opposite reasons \u2014 is itself a diagnostic. The right can\u2019t ask \u201cwas he targeted?\u201d because the answer might implicate ICE in something worse than a bad shoot. The left can\u2019t ask \u201cwas he organizing?\u201d because the answer might complicate the narrative of a simple bystander.
-
-Good faith can hold both. Alex Pretti may have been deliberately organizing against ICE, and his killing was still unjustified. These are not in tension. The refusal to hold both is the signature of denomination \u2014 the point where the object disappears and the vehicle takes its place.
-
-<!-- graph-state: bilateral-bad-faith
-description: "Diatribe at 0.85 \u2014 the object is gone. Both sides have fully denominated."
-diatribePosition: 0.85
-showResponses: [A-badFaith, B-badFaith, C-badFaith, D-badFaith]
--->
-
-At high Diatribe, what remains is unrecognizable as the same event. \u201cThis administration executed a nurse\u201d faces off against \u201cthis was domestic terrorism.\u201d The man, the video, the questions \u2014 all gone. Replaced by vehicles that serve tribal functions without carrying any of the substance that made the event matter in the first place.
-
-### Part IV: The Chain Nobody Holds
-
-The deepest analytical challenge of the Pretti event is its causal depth. The chain runs: U.S. foreign policy in the Horn of Africa \u2192 displacement of Somali populations \u2192 immigration and community formation in Minnesota \u2192 welfare system design flaws \u2192 pandemic benefit expansion \u2192 exploitation and fraud \u2192 state paralysis over racism accusations \u2192 federal weaponization of fraud narrative \u2192 Operation Metro Surge \u2192 escalation through Renee Good\u2019s killing \u2192 Pretti\u2019s killing.
-
-No one holds the whole chain. A user at low Diatribe might hold six or seven links. The Diatribe measures where the chain gets amputated \u2014 where the user decides that the causes before their cut-point are irrelevant and the effects after it are someone else\u2019s fault.
-
-The right amputates at \u201cfraud\u201d \u2014 everything before it is context, everything after it is consequence. The left amputates at \u201cdisplacement\u201d \u2014 everything before it is imperial guilt, everything after it is state violence. The object that both sides lose is the same: a community of human beings navigating a situation they didn\u2019t create, containing both legitimate grievance and real misconduct, deserving of both accountability and protection simultaneously.
-
-That simultaneity is what Prism is designed to hold visible.`
-    },
-    {
-      id: 'para-cs02',
-      articleId: 'cs02-metro-surge',
-      title: 'The Pretext Machine',
-      type: 'case-study',
-      status: 'published',
-      linkedEvent: 'event-metro-surge-001',
-      created: '2026-03-01T00:00:00Z',
-      updated: '2026-03-10T00:00:00Z',
-      content: `## The Pretext Machine
-
-### Part I: The Pivot
-
-Los Angeles cost a hundred and twenty million dollars. Trump deployed 4,200 National Guard troops and 700 Marines to a city where Latino communities were deeply woven into the social fabric. The community pushed back hard. The numbers were embarrassing: despite the unprecedented deployment, ICE wasn\u2019t close to its target of a million deportations.
-
-Chicago was next. Operation Midway Blitz. October through December 2025. Three thousand five hundred arrests, tear gas on protesters, thirty million dollars in detention costs alone. Then it ended too.
-
-Minnesota was different. Minnesota had a story.
-
-<!-- graph-state: baseline
-description: "Event at neutral Diatribe. The fraud dimension gives the right-side good-faith positions unusual substance and specificity."
-diatribePosition: 0.15
-showResponses: [A-goodFaith, B-goodFaith, C-goodFaith, D-goodFaith]
--->
-
-The Feeding Our Future scandal was real. Over a billion dollars in documented fraud across multiple programs. More than fifty of seventy-nine indicted suspects had pled guilty. The fraud was predominantly centered in Minneapolis\u2019s Somali community, though the ringleader was Aimee Bock, a white woman. State legislators had been working the problem for years. An inspector general\u2019s office had been created. Regulatory changes were enacted. Prosecutions were succeeding.
-
-Then the federal government arrived with something else in mind.
-
-### Part II: The Numbers That Didn\u2019t Add Up
-
-Operation Metro Surge launched in December 2025, deploying masked Border Patrol agents to the Minneapolis\u2013Saint Paul metropolitan area. The official justification was fraud accountability and immigration enforcement targeting the Somali community.
-
-The arrest data told a different story. Of thousands arrested, twenty-three were Somali. None had ties to Feeding Our Future or any other fraud investigation. Ninety-two percent of Somali Americans in the United States are citizens. The operation that was sold as accountability became an immigration dragnet targeting an entirely different population than advertised.
-
-Meanwhile, the fraud prosecutions \u2014 the ones that were actually working \u2014 collapsed. Six federal prosecutors resigned, including lead attorney Joe Thompson. The operation built on the fraud\u2019s legitimacy had destroyed the fraud\u2019s prosecution.
-
-<!-- graph-state: coalition-zone
-description: "The metabolic zone. Users on both sides are processing the gap between what the operation promised and what it delivered."
-diatribePosition: 0.50
-showResponses: [A-coalition, B-coalition, C-coalition, D-coalition]
--->
-
-The coalition zone is where this event\u2019s real analytical power lives. The institutional-right voice is doing the hardest work in the entire event: \u201cI wanted this to be about the fraud\u201d \u2014 a sentence that holds both the legitimate grievance and the dawning recognition that the grievance was instrumentalized. The grassroots-right voice arrives at the most devastating coalition observation: \u201cIf you told me the administration deliberately sabotaged the fraud cases by turning them into an immigration spectacle, I\u2019d have a hard time arguing with you.\u201d
-
-That last voice is doing something the architecture was designed to surface: a right-side position arriving at a left-side conclusion through its own internal logic. Not conversion. Not compromise. The Y-axis convergence is happening in real time, under the surface of an X-prevalent event.
-
-### Part III: The Community Nobody Sees
-
-There is a version of this story that almost nobody tells.
-
-The Somali community in Minnesota exists because of U.S. foreign policy. Intervention in the Horn of Africa, structural adjustment programs, decades of instability that displacement is not a strong enough word for. The people who built Little Mogadishu in Minneapolis are, in the most literal sense, inheritors of imperial consequence.
-
-The fraud was real, and many of the strongest whistleblowers were Somali. Community members reported suspicious activity. They cooperated with investigators. They watched the reputation of eighty thousand people get destroyed by schemes that most of them had no part in and many actively opposed.
-
-What Operation Metro Surge did was take a community\u2019s internal accountability process \u2014 messy, slow, imperfect, but real \u2014 and weaponize it to justify an occupation that served entirely different purposes. The honest conversation that might have followed got buried under tactical vehicles and the sound of tear gas canisters near schools.
-
-The left can\u2019t have this conversation because it requires acknowledging that the fraud was real and that accountability isn\u2019t the same as persecution. The right can\u2019t have it because it requires acknowledging that the community\u2019s presence in Minnesota is itself an American responsibility. Both sides need the Somali community to be a symbol rather than a group of human beings navigating a situation they didn\u2019t create.
-
-<!-- graph-state: bilateral-bad-faith
-description: "High Diatribe. The community has disappeared entirely \u2014 replaced by symbols serving tribal functions."
-diatribePosition: 0.85
-showResponses: [A-badFaith, B-badFaith, C-badFaith, D-badFaith]
--->
-
-At high Diatribe, the Somali community is gone. Neither position contains a single Somali person with agency, complexity, or a story that isn\u2019t reducible to someone else\u2019s political needs. This is what denomination completes: the destruction of the subject\u2019s subjectivity in service of the vehicle\u2019s tribal function.
-
-### Part IV: The Cybernetic Logic of Targeting
-
-There is a systems-level read of this event that neither the discourse nor the coverage has surfaced.
-
-ICE\u2019s pivot from Los Angeles to Chicago to Minnesota follows a cybernetic logic. In LA, the target community (Latino) was deeply embedded \u2014 culturally beloved, economically essential, socially integrated in ways that made enforcement politically expensive. Minnesota offered something those cities didn\u2019t: a legitimation narrative. The fraud scandal provided the pretext that transformed enforcement from aggression into accountability.
-
-This is Pattern #16 from the bad faith library: Z-gap by design. The gap between stated purpose and actual conduct isn\u2019t accidental \u2014 it\u2019s architectural. The operation was designed to look like fraud accountability while functioning as immigration enforcement. The fraud was the door; what walked through it had nothing to do with fraud.
-
-The targeting of Somali Americans specifically served a second cybernetic function: it tested whether enforcement could be legitimized against a community that had been pre-denominated by media coverage. The Feeding Our Future story, amplified by figures like Christopher Rufo and shared by JD Vance and Elon Musk, had already flattened the Somali community into a symbol of fraud. The denomination was complete before the first agent arrived.`
-    },
-    {
-      id: 'para-cs04',
-      articleId: 'cs04-immigration-arc',
-      title: 'Forty Years Below the Surface',
-      type: 'arc',
-      status: 'draft',
-      linkedEvent: null,
-      created: '2026-03-12T00:00:00Z',
-      updated: '2026-03-12T00:00:00Z',
-      content: `## Forty Years Below the Surface
-
-### \ud83d\udcde4 \u2014 Iran-Contra \u2192 Maduro Capture (1986\u20132026)
-
-*Arc: 10 scored events + 11 satellites (21 total). Forty-year longitudinal arc tracking immigration, Latin American foreign policy, and the right-side Y-axis mirror.*
-
-*Status: Dialectical parameters imported from \ud83d\udcd3g compilation. Prose is structural skeleton \u2014 to be rewritten after encoding produces subject Z values for displaced subjects on the graphmap.*
-
----
-
-### Event Scoring Parameters
-
-#### e4.1 \u2014 Iran-Contra / Gary Webb (1986/1996)
-X: +0.7/+0.5 | Y: +0.95 | Z: \u22120.95 | Diatribe: 80 (Iran-Contra) / 10 (Webb)
-Good faith calibration: Webb = Diatribe 10. Z-gap by architectural design: covert war funded through drug trafficking while publicly declaring war on drugs. The gap is not a failure \u2014 it is the architecture.
-
-Keywords A: covert war, Contras, Cold War
-Keywords B: Boland, oversight, hearings
-Keywords C: displacement, crack, El Play\u00f3n
-Keywords D: secret ops, no mandate
-
-Boundary +Z: "The Architect" | Boundary \u2212Z: "The Witness"
-
-<!-- graph-state: e4-1-iran-contra
-description: "Iran-Contra baseline. Maximum Z-gap. The institutional promise (democracy, rule of law) vs institutional delivery (covert war, drug trafficking, displacement)."
-diatribePosition: 0.80
-showResponses: [A-badFaith, B-goodFaith, C-badFaith, D-badFaith]
-highlightQuadrant: B
--->
-
-#### e4.2 \u2014 IRCA + IIRIRA (1986/1996)
-X: bipartisan | Y: +0.90 | Z: \u22120.90 | Diatribe: 70/75
-Z-gap by architectural design. Bipartisan mechanisms that created permanent structural conditions. IRCA\u2019s employer sanctions never enforced. IIRIRA\u2019s three/ten-year bars created undocumented status by design.
-
-#### e4.3 \u2014 Pat Buchanan (1992)
-X: +0.8 | Y: \u22120.9 | Z: \u22120.40 | Diatribe: 50
-Good faith in nativist vehicle. Individual expression, not institutional mechanism.
-
-#### e4.4 \u2014 Three/ten-year bars (1996)
-X: n/a | Y: +0.95 | Z: \u22120.95 | Diatribe: 75
-Statutory architecture as persistent bad faith. The mechanism itself is the denomination \u2014 it produces undocumented status as an ongoing institutional function.
-
-#### e4.5 \u2014 Rubio \u2014 Gang of Eight (2013)
-X: +0.4 | Y: +0.5 | Z: \u22120.35 | Diatribe: 25
-Longitudinal start point. Rubio arc: 25\u219260\u219280. Genuine political risk. Bill passed Senate 68-32 with fourteen Republican votes. Boehner killed it in the House via Hastert Rule. Heritage Foundation manufactured -Y populist opposition to serve +Y institutional interests.
-
-Boundary +Z: "The Drawer" | Boundary \u2212Z: "The Reformer"
-
-<!-- graph-state: e4-5-gang-of-eight
-description: "Gang of Eight at low Diatribe. Bipartisan institutional capacity demonstrated. Y-axis suppression about to kill it."
-diatribePosition: 0.25
-showResponses: [A-goodFaith, B-goodFaith, C-goodFaith, D-goodFaith]
--->
-
-#### e4.6 \u2014 Rubio \u2014 2016 reversal
-X: +0.7 | Y: \u22120.6 | Z: \u22120.70 | Diatribe: 60
-X-axis capture. Rubio disowns own legislation under Trump pressure. Longitudinal midpoint.
-
-#### e4.7 \u2014 Family separation / zero tolerance (2018)
-X: +0.8 | Y: +0.85/\u22120.85 | Z: \u22120.95 | Diatribe: 65 (range 0\u201390)
-Widest Diatribe spread in \ud83d\udcd3e4. Diatribe 0 floor \u2014 children\u2019s suffering. Dual Y-score: institutional mechanism (+0.85) vs populist eruption (\u22120.85). Z-eruption through delivery: the policy was implemented so visibly that the gap became undeniable.
-
-Keywords A: zero tolerance, Sessions, deterrence
-Keywords B: asylum law, due process, Flores
-Keywords C: cages, families, children
-Keywords D: government overreach, parents\u2019 rights
-
-<!-- graph-state: e4-7-family-separation
-description: "Family separation. The event with the widest Diatribe spread \u2014 from 0 (children's suffering) to 90 (full denomination). Z-eruption through delivery."
-diatribePosition: 0.65
-showResponses: [A-coalition, B-coalition, C-coalition, D-coalition]
--->
-
-#### e4.8 \u2014 Progressive non-response (2009\u201316)
-X: \u22120.7 | Y: +0.6 | Z: \u22120.85 | Diatribe: 70
-Scorable absence. 2.5 million deportations under Obama produce functional progressive silence. Diagnostic: when the same policy substance produces radically different mobilization responses depending solely on partisan coding, the X-axis is doing perceptual work, not analytical work.
-
-#### e4.9 \u2014 "Not sending their best" (Jun 2015)
-X: +0.9 | Y: \u22120.85/+0.7 | Z: \u22120.90 | Diatribe: 75
-Denomination catastrophe. X-axis capture of Y-axis-determined issue complete. The five-president enforcement continuity becomes invisible after this moment.
-
-#### e4.10 \u2014 Progressive totalization (2015)
-X: \u22120.8 | Y: +0.6 | Z: \u22120.70 | Diatribe: 60
-Response mirrors e4.9. Progressive side undergoes parallel denomination.
-
----
-
-### Satellites
-
-#### e4.s1 \u2014 AOC at Tornillo (2018)
-X: \u22120.9 | Y: \u22120.85 | Z: \u22120.75 | Diatribe: 35
-Individual, temporal Diatribe. Genuine moral encounter.
-
-#### e4.s8 \u2014 Rand Paul \u2014 Venezuela
-Good faith calibration anchor. Diatribe 10, consistent across \ud83d\udcd3e1 and \ud83d\udcd3e4.
-
-Keywords A: sovereignty, non-intervention
-Keywords B: authorization, War Powers
-Keywords C: regime change, blowback
-Keywords D: constitutional limits, no mandate
-
----
-
-### Arc-Level Findings
-
-**Five-president enforcement continuity:** Clinton \u2192 Bush \u2192 Obama \u2192 Trump \u2192 Biden. Immigration enforcement is a +Y institutional function invariant to X-axis partisan control. Rhetorical packaging changes; institutional trajectory does not.
-
-**Y-axis suppression operates bilaterally:** Right suppresses via X-axis emergency (border security discourse). Left suppresses via X-axis identity (Democratic president coding makes enforcement continuity invisible). The silence-to-outrage differential (Events 5/7) is the measurable proof.
-
-**+Y institutional autonomy trajectory:** Increasing +Y autonomy over forty years \u2014 from covert circumvention of congressional constraints (Iran-Contra, 1986) to overt action without meaningful congressional check (Maduro capture, 2026).
-
-**X-axis capture mechanism:** A Y-axis-determined issue gets coded as X-axis emergency, making the Y-axis substrate empirically inaccessible to ordinary perception.
-
-**Resolution kills the issue:** Both parties benefit from unresolved immigration status. Resolution would expose fault lines that the void currently holds together.
-
-<!-- graph-state: arc-terminus
-description: "Full arc view. Forty years of Z-suppression producing near-universal bad faith contamination."
-diatribePosition: 0.75
-showResponses: [A-badFaith, B-coalition, C-badFaith, D-coalition]
-showZAxis: true
--->
-
----
-
-*\ud83d\udcd3e4 complete. Prose to be rewritten after subject Z derivation. Parameters imported from g_compilation v1.*`
-    }
-  ];
-  paraSaveArticles();
-}
-
-// ── Panel toggle ──
-function toggleParaPanel() {
-  const panel = document.getElementById('paraPanel');
-  const isOpen = panel.classList.contains('visible');
-  if (isOpen) {
-    panel.classList.remove('visible');
-  } else {
-    panel.classList.add('visible');
-    paraLoadArticles();
-    paraRenderArticleList();
-    paraPopulateEventSelects();
-    panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-}
-
-// ── Tab switching ──
-function switchParaTab(tab) {
-  paraActiveTab = tab;
-  document.getElementById('paraTabArticles').classList.toggle('active', tab === 'articles');
-  document.getElementById('paraTabRefine').classList.toggle('active', tab === 'refine');
-  document.getElementById('paraArticlesBody').style.display = tab === 'articles' ? 'block' : 'none';
-  document.getElementById('paraRefineBody').style.display = tab === 'refine' ? 'block' : 'none';
-  if (tab === 'refine') paraPopulateRefineSelect();
-}
-
-// ── Populate event selects ──
-function paraPopulateEventSelects() {
-  const events = PrismDB.getEvents();
-  const opts = events.map(e => `<option value="${e.id}">${escHtml(e.title || e.id)}</option>`).join('');
-
-  const linked = document.getElementById('paraLinkedEvent');
-  linked.innerHTML = '<option value="">— none —</option>' + opts;
-
-  paraPopulateRefineSelect();
-}
-
-function paraPopulateRefineSelect() {
-  const events = PrismDB.getEvents();
-  const sel = document.getElementById('paraRefineEventSelect');
-  const cur = sel.value;
-  sel.innerHTML = '<option value="">— choose event —</option>' +
-    events.map(e => `<option value="${e.id}">${escHtml(e.title || e.id)}</option>`).join('');
-  if (cur) sel.value = cur;
-}
-
-// ============================================================
-// ARTICLE LIST
-// ============================================================
-
-function paraRenderArticleList() {
-  const list = document.getElementById('paraArticleList');
-  if (paraArticles.length === 0) { list.innerHTML = ''; return; }
-
-  list.innerHTML = paraArticles.map(a => {
-    const isEditing = paraEditingId === a.id;
-    const updated = a.updated ? new Date(a.updated).toLocaleDateString() : '—';
-    return `<div class="para-article-row${isEditing ? ' editing' : ''}" onclick="paraEditArticle('${a.id}')">
-      <div>
-        <div class="para-article-title">${escHtml(a.title || 'Untitled')}</div>
-        <div class="para-article-meta">${a.articleId || a.id} · ${a.type || 'article'} · ${updated}</div>
-      </div>
-      <span class="status-badge ${a.status || 'draft'}">${a.status || 'draft'}</span>
-      <div class="event-actions">
-        <button class="btn small danger" onclick="event.stopPropagation(); paraConfirmDelete('${a.id}')">Delete</button>
-      </div>
-    </div>`;
-  }).join('');
-}
-
-// ============================================================
-// ARTICLE EDITOR
-// ============================================================
-
-function paraNewArticle() {
-  paraEditingId = null;
-  document.getElementById('paraTitle').value = '';
-  document.getElementById('paraArticleId').value = '';
-  document.getElementById('paraLinkedEvent').value = '';
-  document.getElementById('paraType').value = 'case-study';
-  document.getElementById('paraStatus').value = 'draft';
-  document.getElementById('paraMdEditor').value = '';
-  document.getElementById('paraMdPreview').innerHTML = '<p style="color:var(--muted);font-style:italic;">Start typing to see a live preview…</p>';
-  document.getElementById('paraDeleteBtn').style.display = 'none';
-  paraDeskReset();
-
-  document.getElementById('paraEditor').classList.add('visible');
-  document.getElementById('paraMdEditor').focus();
-}
-
-function paraEditArticle(id) {
-  const article = paraArticles.find(a => a.id === id);
-  if (!article) return;
-
-  paraEditingId = id;
-  document.getElementById('paraTitle').value = article.title || '';
-  document.getElementById('paraArticleId').value = article.articleId || '';
-  document.getElementById('paraLinkedEvent').value = article.linkedEvent || '';
-  document.getElementById('paraType').value = article.type || 'article';
-  document.getElementById('paraStatus').value = article.status || 'draft';
-  document.getElementById('paraMdEditor').value = article.content || '';
-  document.getElementById('paraDeleteBtn').style.display = '';
-  paraDeskReset();
-
-  paraRenderPreview();
-  paraRenderArticleList();
-
-  document.getElementById('paraEditor').classList.add('visible');
-  document.getElementById('paraEditor').scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-
-function paraCancelEdit() {
-  paraEditingId = null;
-  document.getElementById('paraEditor').classList.remove('visible');
-  paraRenderArticleList();
-}
-
-function paraSaveArticle() {
-  const title = document.getElementById('paraTitle').value.trim();
-  if (!title) { toast('Article title is required', true); return; }
-
-  const articleData = {
-    title,
-    articleId: document.getElementById('paraArticleId').value.trim() || null,
-    linkedEvent: document.getElementById('paraLinkedEvent').value || null,
-    type: document.getElementById('paraType').value,
-    status: document.getElementById('paraStatus').value,
-    content: document.getElementById('paraMdEditor').value,
-    updated: new Date().toISOString()
-  };
-
-  if (paraEditingId) {
-    const idx = paraArticles.findIndex(a => a.id === paraEditingId);
-    if (idx >= 0) {
-      paraArticles[idx] = { ...paraArticles[idx], ...articleData };
-    }
-    toast(`Updated: ${title}`);
-  } else {
-    articleData.id = 'para-' + Date.now().toString(36);
-    articleData.created = new Date().toISOString();
-    paraArticles.push(articleData);
-    paraEditingId = articleData.id;
-    document.getElementById('paraDeleteBtn').style.display = '';
-    toast(`Created: ${title}`);
-  }
-
-  paraSaveArticles();
-  paraRenderArticleList();
-}
-
-function paraConfirmDelete(id) {
-  const article = paraArticles.find(a => a.id === id);
-  if (!article) return;
-  if (!confirm(`Delete "${article.title}"? This cannot be undone.`)) return;
-
-  paraArticles = paraArticles.filter(a => a.id !== id);
-  paraSaveArticles();
-  if (paraEditingId === id) {
-    paraEditingId = null;
-    document.getElementById('paraEditor').classList.remove('visible');
-  }
-  paraRenderArticleList();
-  toast(`Deleted: ${article.title}`);
-}
-
-function paraDeleteArticle() {
-  if (paraEditingId) paraConfirmDelete(paraEditingId);
-}
-
-// ============================================================
-// MARKDOWN PREVIEW
-// ============================================================
-
-function paraRenderPreview() {
-  const md = document.getElementById('paraMdEditor').value;
-  const preview = document.getElementById('paraMdPreview');
-
-  if (!md.trim()) {
-    preview.innerHTML = '<p style="color:var(--muted);font-style:italic;">Start typing to see a live preview…</p>';
-    return;
-  }
-
-  // Parse graph-state comments first
-  let html = md;
-
-  // Extract graph-state markers and replace with visual embeds
-  html = html.replace(/<!--\s*graph-state:\s*(\w+)([\s\S]*?)-->/g, (match, name, body) => {
-    const fields = {};
-    body.replace(/(\w+):\s*(.+)/g, (_, key, val) => { fields[key] = val.trim().replace(/^["']|["']$/g, ''); });
-    const desc = fields.description || name;
-    const dia = fields.diatribePosition || '—';
-    const responses = fields.showResponses || '—';
-    const highlight = fields.highlightQuadrant ? ` · highlight: ${fields.highlightQuadrant}` : '';
-    return `<div class="graph-state-embed">
-      <strong>${escHtml(name)}</strong> — ${escHtml(desc)}<br>
-      Diatribe: ${escHtml(dia)} · Responses: ${escHtml(responses)}${highlight}
-    </div>`;
-  });
-
-  // Basic markdown → HTML
-  html = paraMarkdownToHtml(html);
-
-  preview.innerHTML = html;
-}
-
-function paraMarkdownToHtml(md) {
-  let html = md;
-
-  // Headers
-  html = html.replace(/^### (.+)$/gm, '<h3>$1</h3>');
-  html = html.replace(/^## (.+)$/gm, '<h2>$1</h2>');
-  html = html.replace(/^# (.+)$/gm, '<h1>$1</h1>');
-
-  // Bold + italic
-  html = html.replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>');
-  html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-  html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
-
-  // Blockquotes
-  html = html.replace(/^>\s*(.+)$/gm, '<blockquote>$1</blockquote>');
-
-  // Horizontal rules
-  html = html.replace(/^---+$/gm, '<hr>');
-
-  // Paragraphs — wrap remaining text lines (skip tags)
-  const lines = html.split('\n');
-  let result = [];
-  let inPara = false;
-
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i].trim();
-    const isTag = /^<(h[1-3]|blockquote|hr|div|ul|ol|li|pre|table)/.test(line);
-    const isEmpty = line === '';
-
-    if (isTag || (line.startsWith('<div') && line.includes('graph-state-embed'))) {
-      if (inPara) { result.push('</p>'); inPara = false; }
-      result.push(line);
-    } else if (isEmpty) {
-      if (inPara) { result.push('</p>'); inPara = false; }
-    } else {
-      if (!inPara) { result.push('<p>'); inPara = true; }
-      else { result.push('<br>'); }
-      result.push(line);
-    }
-  }
-  if (inPara) result.push('</p>');
-
-  return result.join('\n');
-}
-
-// ============================================================
-// WAYPOINT INSERTION
-// ============================================================
-
-function paraInsertWaypoint(type) {
-  const editor = document.getElementById('paraMdEditor');
-  const start = editor.selectionStart;
-
-  const templates = {
-    baseline: `<!-- graph-state: baseline
-description: "All four positions at nominal good faith"
-diatribePosition: 0.15
-showResponses: [A-goodFaith, B-goodFaith, C-goodFaith, D-goodFaith]
--->`,
-    escalation: `<!-- graph-state: escalation
-description: "Discourse degradation at high Diatribe"
-diatribePosition: 0.70
-showResponses: [A-badFaith, B-badFaith, C-badFaith, D-badFaith]
--->`,
-    custom: `<!-- graph-state: custom
-description: ""
-diatribePosition: 0.40
-showResponses: [A-coalition, B-coalition, C-coalition, D-coalition]
-highlightQuadrant: A
--->`
-  };
-
-  const snippet = '\n\n' + templates[type] + '\n\n';
-  editor.setRangeText(snippet, start, start, 'end');
-  editor.focus();
-  paraRenderPreview();
-}
-
-// ── Preview toggle ──
-let paraPreviewOnly = false;
-function paraTogglePreviewMode() {
-  paraPreviewOnly = !paraPreviewOnly;
-  const wrap = document.getElementById('paraMdWrap');
-  const editorCol = document.getElementById('paraMdEditorCol');
-  const btn = document.getElementById('paraPreviewToggle');
-
-  if (paraPreviewOnly) {
-    wrap.classList.add('preview-only');
-    editorCol.style.display = 'none';
-    btn.textContent = 'Edit';
-  } else {
-    wrap.classList.remove('preview-only');
-    editorCol.style.display = '';
-    btn.textContent = 'Preview';
-  }
-  paraRenderPreview();
-}
-
-// ============================================================
-// EDITORIAL DESK (AI conversation inside Parallelogram editor)
-// ============================================================
-
-let paraDeskHistory = [];   // [{role, content}] for API
-let paraDeskMessages = [];  // [{role, content, id}] for display
-
-const PARA_DESK_SYSTEM = CHAT_SYSTEM_PROMPT + `
-
---- ADDITIONAL EDITORIAL CONTEXT ---
-
-You are now working as the writing staff of the Parallelogram — Prism's editorial publication. The admin is your editor. Your role:
-
-1. DRAFT prose sections for Parallelogram articles — case studies, arcs, thematic pieces, methodology explainers. Write in the editorial voice: complete sentences, analytical depth, narrative structure, no political science abstracts.
-
-2. DERIVE subject Z values for displaced subjects on the graphmap. Use the J encoding's Z-axis protocol (Module 1.3) against the dialectical parameters provided in context. Show your reasoning.
-
-3. SUGGEST keywords for quadrant orbs and boundary labels/photos based on the analytical structure of the event.
-
-4. REFINE existing prose when asked — tighten, restructure, adjust voice for specific quadrant positions, make the coalition zone responses sound like real people.
-
-5. INSERT graph-state waypoints at appropriate analytical turning points in the narrative.
-
-When drafting prose, write it ready to paste — no markdown fences, no preamble like "Here's a draft." Just the prose itself. The editor will decide what to keep.
-
-When suggesting Z values, provide them in the format: Object Z: X.XX, Subject Z A: X.XX, B: X.XX, C: X.XX, D: X.XX — with brief reasoning for each.`;
-
-function paraToggleDesk() {
-  document.getElementById('paraDesk').classList.toggle('open');
-}
-
-function paraDeskKeydown(e) {
-  if (e.key === 'Enter' && !e.shiftKey) {
-    e.preventDefault();
-    paraDeskSend();
-  }
-}
-
-function paraDeskAutoResize(el) {
-  el.style.height = 'auto';
-  el.style.height = Math.min(el.scrollHeight, 100) + 'px';
-}
-
-function paraBuildEditorialContext() {
-  const lines = [];
-
-  // Current article metadata
-  const title = document.getElementById('paraTitle').value;
-  const articleId = document.getElementById('paraArticleId').value;
-  const type = document.getElementById('paraType').value;
-  if (title) lines.push(`=== CURRENT ARTICLE ===`);
-  if (title) lines.push(`Title: ${title}`);
-  if (articleId) lines.push(`ID: ${articleId}`);
-  if (type) lines.push(`Type: ${type}`);
-
-  // Linked event data
-  const linkedEventId = document.getElementById('paraLinkedEvent').value;
-  if (linkedEventId) {
-    const evt = PrismDB.getEvent(linkedEventId);
-    if (evt) {
-      lines.push('');
-      lines.push('=== LINKED EVENT ===');
-      lines.push(`ID: ${evt.id} | Title: ${evt.title || '—'}`);
-      if (evt.framing) lines.push(`Framing: ${evt.framing}`);
-      if (evt.axes) {
-        lines.push(`X: ${evt.axes.x?.neg || 'Left'} ← → ${evt.axes.x?.pos || 'Right'}`);
-        lines.push(`Y: ${evt.axes.y?.neg || 'Populist'} ← → ${evt.axes.y?.pos || 'Institutional'}`);
-      }
-      if (evt.antiValentBand) lines.push(`Anti-valent: ${evt.antiValentBand} | Prevalent axis: ${evt.prevalentAxis || '?'}`);
-      if (evt.responses) {
-        lines.push('Responses:');
-        ['A','B','C','D'].forEach(k => {
-          const qr = evt.responses[k];
-          if (!qr) return;
-          lines.push(`  ${k} (xSide: ${qr.xSide || '?'}):`);
-          BANDS.forEach(band => {
-            if (qr[band]?.text) lines.push(`    ${band}: ${qr[band].text}`);
-          });
-        });
-      }
-    }
-  }
-
-  // Current article content (truncated for context window)
-  const content = document.getElementById('paraMdEditor').value;
-  if (content.trim()) {
-    lines.push('');
-    lines.push('=== CURRENT ARTICLE CONTENT ===');
-    const truncated = content.length > 6000 ? content.slice(0, 6000) + '\n[...truncated...]' : content;
-    lines.push(truncated);
-  }
-
-  return lines.join('\n');
-}
-
-function paraDeskRenderMessages() {
-  const container = document.getElementById('paraDeskMessages');
-  // Keep the welcome message, then add conversation
-  let html = '<div class="para-desk-msg assistant">Ready. I have the J encoding and can see the current article\'s parameters. Ask me to draft a section, refine prose, suggest Z values for displaced subjects, or work through any analytical question about this piece.</div>';
-
-  html += paraDeskMessages.map(msg => {
-    const cls = msg.isError ? 'assistant error' : msg.role;
-    const actions = msg.role === 'assistant' && !msg.isError
-      ? `<div class="para-desk-msg-actions">
-          <button class="btn" onclick="paraDeskInsert(${msg.id})">Insert into editor</button>
-          <button class="btn" onclick="paraDeskAppend(${msg.id})">Append to editor</button>
-        </div>`
-      : '';
-    return `<div class="para-desk-msg ${cls}" data-id="${msg.id}">${escHtml(msg.content)}${actions}</div>`;
-  }).join('');
-
-  container.innerHTML = html;
-  container.scrollTop = container.scrollHeight;
-}
-
-function paraDeskInsert(msgId) {
-  const msg = paraDeskMessages.find(m => m.id === msgId);
-  if (!msg) return;
-  const editor = document.getElementById('paraMdEditor');
-  const start = editor.selectionStart;
-  const insert = '\n\n' + msg.content + '\n\n';
-  editor.setRangeText(insert, start, start, 'end');
-  editor.focus();
-  paraRenderPreview();
-  toast('Inserted at cursor position');
-}
-
-function paraDeskAppend(msgId) {
-  const msg = paraDeskMessages.find(m => m.id === msgId);
-  if (!msg) return;
-  const editor = document.getElementById('paraMdEditor');
-  editor.value += '\n\n' + msg.content;
-  editor.scrollTop = editor.scrollHeight;
-  paraRenderPreview();
-  toast('Appended to article');
-}
-
-async function paraDeskSend() {
-  const apiKey = document.getElementById('aiApiKey').value.trim();
-  if (!apiKey) { toast('Enter your Anthropic API key in the event form first', true); return; }
-
-  const input = document.getElementById('paraDeskInput');
-  const text = input.value.trim();
-  if (!text) return;
-
-  input.value = '';
-  input.style.height = 'auto';
-
-  // Add user message
-  const userMsg = { role: 'user', content: text, id: Date.now() };
-  paraDeskMessages.push(userMsg);
-  paraDeskRenderMessages();
-
-  // Build context
-  const contextBlock = paraBuildEditorialContext();
-  const apiMessages = [];
-
-  if (paraDeskHistory.length === 0 && contextBlock.trim()) {
-    apiMessages.push({ role: 'user', content: `[Article context]\n${contextBlock}\n---\n\n${text}` });
-  } else if (contextBlock.trim()) {
-    apiMessages.push(...paraDeskHistory);
-    apiMessages.push({ role: 'user', content: `[Context refresh]\n${contextBlock}\n---\n\n${text}` });
-  } else {
-    apiMessages.push(...paraDeskHistory);
-    apiMessages.push({ role: 'user', content: text });
-  }
-
-  // Show typing
-  document.getElementById('paraDeskTyping').classList.add('visible');
-  document.getElementById('paraDeskSendBtn').disabled = true;
-
-  try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': apiKey,
-        'anthropic-version': '2023-06-01',
-        'anthropic-dangerous-direct-browser-access': 'true'
-      },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 4096,
-        system: PARA_DESK_SYSTEM,
-        messages: apiMessages
-      })
-    });
-
-    if (!res.ok) {
-      const err = await res.json().catch(() => ({}));
-      throw new Error(err?.error?.message || `HTTP ${res.status}`);
-    }
-
-    const data = await res.json();
-    const reply = (data.content || []).map(b => b.type === 'text' ? b.text : '').join('').trim();
-
-    paraDeskHistory.push({ role: 'user', content: text });
-    paraDeskHistory.push({ role: 'assistant', content: reply });
-
-    paraDeskMessages.push({ role: 'assistant', content: reply, id: Date.now() + 1 });
-
-  } catch (err) {
-    paraDeskMessages.push({ role: 'assistant', content: '⚠ ' + (err.message || 'Request failed'), id: Date.now() + 1, isError: true });
-  } finally {
-    document.getElementById('paraDeskTyping').classList.remove('visible');
-    document.getElementById('paraDeskSendBtn').disabled = false;
-    paraDeskRenderMessages();
-  }
-}
-
-// Reset desk when switching articles
-function paraDeskReset() {
-  paraDeskHistory = [];
-  paraDeskMessages = [];
-  const container = document.getElementById('paraDeskMessages');
-  if (container) {
-    container.innerHTML = '<div class="para-desk-msg assistant">Ready. I have the J encoding and can see the current article\'s parameters. Ask me to draft a section, refine prose, suggest Z values for displaced subjects, or work through any analytical question about this piece.</div>';
-  }
-  // Collapse desk on article switch
-  document.getElementById('paraDesk')?.classList.remove('open');
-}
-
-// ============================================================
-// DERIVE — AI-driven extraction from editorial article
-// ============================================================
-
-function paraMarkManual(tagId) {
-  const el = document.getElementById(tagId);
-  if (el) { el.textContent = 'MANUAL'; el.className = 'para-z-manual-tag'; }
-}
-
-async function paraDerive() {
-  const btn = document.getElementById('paraDeriveBtn');
-  const articleContent = document.getElementById('paraMdEditor').value.trim();
-  if (!articleContent) { toast('Write some article content first', true); return; }
-
-  const linkedEventId = document.getElementById('paraLinkedEvent').value;
-  if (!linkedEventId) { toast('Link an event to derive from', true); return; }
-
-  const evt = PrismDB.getEvent(linkedEventId);
-  if (!evt) { toast('Linked event not found in PrismDB', true); return; }
-
-  const apiKey = document.getElementById('aiApiKey').value.trim();
-  if (!apiKey) { toast('Enter your Anthropic API key in the event form first', true); return; }
-
-  // Build context: event parameters + article content
-  const context = paraBuildEditorialContext();
-
-  const derivePrompt = `You are performing a dialectical derivation from a Parallelogram editorial article.
-
-Given the article content and linked event parameters below, extract:
-
-1. **keywords** — For each quadrant (A, B, C, D), identify the 6-10 words or short phrases from the article that carry the most axis load for that quadrant's position. Weight each 0.0-1.0 based on dialectical significance. These will appear as floating word clouds on the 3D graphmap.
-
-2. **zValues** — Derive the Z-axis displacement for the object and each quadrant's subject. Z ranges from -1.0 to +1.0. Positive Z = the subject's position was delivered/validated by institutional outcomes. Negative Z = the subject's position was promised but not delivered, or the subject was displaced by the object. Use the J encoding's Z-axis protocol: Z measures the gap between institutional promise and institutional delivery as experienced by each quadrant's subject.
-
-3. **axisLoadPhrases** — Identify 3-8 specific phrases from the article text that carry the highest analytical density — the sentences or fragments that would trigger the deepest recognition in a reader positioned in the relevant quadrant. Note which quadrant and which axis (x or y) each phrase loads.
-
-Respond with ONLY valid JSON, no markdown fences, no preamble:
-{
-  "keywords": {
-    "A": [{"text": "...", "weight": 0.0-1.0}],
-    "B": [{"text": "...", "weight": 0.0-1.0}],
-    "C": [{"text": "...", "weight": 0.0-1.0}],
-    "D": [{"text": "...", "weight": 0.0-1.0}]
-  },
-  "zValues": {
-    "object": 0.0,
-    "A": 0.0, "B": 0.0, "C": 0.0, "D": 0.0
-  },
-  "axisLoadPhrases": [
-    {"phrase": "...", "quadrant": "A", "axis": "x|y", "weight": 0.0-1.0}
-  ]
-}
-
---- EDITORIAL CONTEXT ---
-${context}`;
-
-  // Open the desk so user can see progress
-  document.getElementById('paraDesk').classList.add('open');
-  btn.disabled = true;
-  btn.textContent = '◆ Deriving…';
-
-  // Show derive message in desk
-  paraDeskMessages.push({ role: 'user', content: '◆ Derive: extracting keywords, Z values, and axis-load phrases from article…', id: Date.now() });
-  paraDeskRenderMessages();
-  document.getElementById('paraDeskTyping').classList.add('visible');
-
-  try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': apiKey,
-        'anthropic-version': '2023-06-01',
-        'anthropic-dangerous-direct-browser-access': 'true'
-      },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 4096,
-        system: PARA_DESK_SYSTEM,
-        messages: [{ role: 'user', content: derivePrompt }]
-      })
-    });
-
-    if (!res.ok) {
-      const err = await res.json().catch(() => ({}));
-      throw new Error(err?.error?.message || `HTTP ${res.status}`);
-    }
-
-    const data = await res.json();
-    const rawReply = (data.content || []).map(b => b.type === 'text' ? b.text : '').join('').trim();
-
-    // Parse JSON — strip any accidental fences
-    const clean = rawReply.replace(/```json|```/g, '').trim();
-    let derived;
-    try {
-      derived = JSON.parse(clean);
-    } catch (parseErr) {
-      throw new Error('Failed to parse derive response as JSON. Raw: ' + rawReply.slice(0, 200));
-    }
-
-    // ── Write keywords into PrismDB words[] arrays ──
-    if (derived.keywords && evt.responses) {
-      ['A', 'B', 'C', 'D'].forEach(q => {
-        const qKeywords = derived.keywords[q];
-        if (!qKeywords || !Array.isArray(qKeywords)) return;
-        const qResp = evt.responses[q];
-        if (!qResp) return;
-
-        // Build words array: [{t: text, w: weight, axis: null, derived: true}]
-        const wordsArr = qKeywords.map(kw => ({
-          t: kw.text,
-          w: typeof kw.weight === 'number' ? kw.weight : 0.5,
-          derived: true
-        }));
-
-        // Write to all three bands (these are quadrant-level keywords)
-        BANDS.forEach(band => {
-          if (qResp[band]) {
-            qResp[band].words = wordsArr;
-          }
-        });
-      });
-    }
-
-    // ── Write Z values into event ──
-    if (derived.zValues) {
-      if (!evt.derivedZ) evt.derivedZ = {};
-      evt.derivedZ = {
-        object: derived.zValues.object || 0,
-        A: derived.zValues.A || 0,
-        B: derived.zValues.B || 0,
-        C: derived.zValues.C || 0,
-        D: derived.zValues.D || 0,
-        derivedAt: new Date().toISOString(),
-        annotations: evt.derivedZ?.annotations || {}
-      };
-    }
-
-    // ── Write axis-load phrases into event ──
-    if (derived.axisLoadPhrases) {
-      evt.axisLoadPhrases = derived.axisLoadPhrases;
-    }
-
-    // ── Persist to PrismDB ──
-    PrismDB.updateEvent(linkedEventId, evt);
-
-    // ── Show results in desk ──
-    const kwSummary = ['A', 'B', 'C', 'D'].map(q => {
-      const kws = derived.keywords?.[q] || [];
-      return `${q}: ${kws.map(k => k.text).join(', ')}`;
-    }).join('\n');
-
-    const zSummary = derived.zValues
-      ? `Object Z: ${derived.zValues.object?.toFixed(2)}, A: ${derived.zValues.A?.toFixed(2)}, B: ${derived.zValues.B?.toFixed(2)}, C: ${derived.zValues.C?.toFixed(2)}, D: ${derived.zValues.D?.toFixed(2)}`
-      : '(none)';
-
-    const phraseSummary = (derived.axisLoadPhrases || [])
-      .map(p => `[${p.quadrant}/${p.axis}] "${p.phrase}"`)
-      .join('\n');
-
-    const summary = `◆ Derivation complete.\n\n**Keywords:**\n${kwSummary}\n\n**Z Values:**\n${zSummary}\n\n**Axis-load phrases:**\n${phraseSummary}\n\nWritten to PrismDB event: ${linkedEventId}`;
-
-    paraDeskMessages.push({ role: 'assistant', content: summary, id: Date.now() + 1 });
-    toast('Derivation complete — keywords + Z values written to PrismDB');
-
-  } catch (err) {
-    paraDeskMessages.push({ role: 'assistant', content: '⚠ Derive failed: ' + (err.message || 'Unknown error'), id: Date.now() + 1, isError: true });
-    toast('Derive failed: ' + err.message, true);
-  } finally {
-    document.getElementById('paraDeskTyping').classList.remove('visible');
-    btn.disabled = false;
-    btn.textContent = '◆ Derive';
-    paraDeskRenderMessages();
-  }
-}
-
-// ============================================================
-// REFINEMENT TAB
-// ============================================================
-
-function paraLoadRefinement() {
-  const eventId = document.getElementById('paraRefineEventSelect').value;
-  const content = document.getElementById('paraRefineContent');
-
-  if (!eventId) { content.style.display = 'none'; return; }
-  content.style.display = 'block';
-
-  const evt = PrismDB.getEvent(eventId);
-  if (!evt) { content.style.display = 'none'; return; }
-
-  // ── Z values: read from event.derivedZ (AI-derived) ──
-  const dz = evt.derivedZ || {};
-  const annotations = dz.annotations || {};
-
-  const objZ = Math.round((dz.object || 0) * 100);
-  document.getElementById('paraObjZ').value = objZ;
-  document.getElementById('paraObjZVal').textContent = (objZ / 100).toFixed(2);
-  document.getElementById('paraObjZNote').value = annotations.object || '';
-  const objTag = document.getElementById('paraObjZTag');
-  if (dz.derivedAt && !annotations.object) { objTag.textContent = 'DERIVED'; objTag.className = 'para-z-derived-tag'; }
-  else if (annotations.object) { objTag.textContent = 'MANUAL'; objTag.className = 'para-z-manual-tag'; }
-  else { objTag.textContent = ''; }
-
-  ['A', 'B', 'C', 'D'].forEach(q => {
-    const val = Math.round((dz[q] || 0) * 100);
-    document.getElementById('paraSubZ' + q).value = val;
-    document.getElementById('paraSubZ' + q + 'Val').textContent = (val / 100).toFixed(2);
-    document.getElementById('paraSubZ' + q + 'Note').value = annotations[q] || '';
-    const tag = document.getElementById('paraSubZ' + q + 'Tag');
-    if (dz.derivedAt && !annotations[q]) { tag.textContent = 'DERIVED'; tag.className = 'para-z-derived-tag'; }
-    else if (annotations[q]) { tag.textContent = 'MANUAL'; tag.className = 'para-z-manual-tag'; }
-    else { tag.textContent = ''; }
-  });
-
-  // ── Keywords: read from event responses words[] arrays ──
-  paraRefineKeywords = { A: [], B: [], C: [], D: [] };
-  if (evt.responses) {
-    ['A', 'B', 'C', 'D'].forEach(q => {
-      const qResp = evt.responses[q];
-      if (!qResp) return;
-      // Collect unique keywords from goodFaith band (same across bands)
-      const gfWords = qResp.goodFaith?.words || [];
-      const seen = new Set();
-      gfWords.forEach(w => {
-        const text = w.t || w.text || '';
-        if (text && !seen.has(text.toLowerCase())) {
-          seen.add(text.toLowerCase());
-          paraRefineKeywords[q].push(text);
-        }
-      });
-    });
-  }
-  paraRenderAllKeywords();
-
-  // ── Boundary content: read from localStorage (unchanged) ──
-  const refKey = 'prism_refine_' + eventId;
-  let refData = {};
-  try { refData = JSON.parse(localStorage.getItem(refKey)) || {}; } catch (e) {}
-
-  paraRefinePhotos = { pos: null, neg: null };
-  if (refData.boundaryContent) {
-    const bc = refData.boundaryContent;
-    document.getElementById('paraBndPosText').value = bc.positive?.text || '';
-    document.getElementById('paraBndNegText').value = bc.negative?.text || '';
-
-    if (bc.positive?.photo) {
-      paraRefinePhotos.pos = bc.positive.photo;
-      const img = document.getElementById('paraBndPosPreview');
-      img.src = bc.positive.photo;
-      img.classList.add('visible');
-    } else {
-      document.getElementById('paraBndPosPreview').classList.remove('visible');
-    }
-    if (bc.negative?.photo) {
-      paraRefinePhotos.neg = bc.negative.photo;
-      const img = document.getElementById('paraBndNegPreview');
-      img.src = bc.negative.photo;
-      img.classList.add('visible');
-    } else {
-      document.getElementById('paraBndNegPreview').classList.remove('visible');
-    }
-
-    const posAlpha = Math.round((bc.positive?.photoAlpha || 0.37) * 100);
-    const negAlpha = Math.round((bc.negative?.photoAlpha || 0.37) * 100);
-    document.getElementById('paraBndPosAlpha').value = posAlpha;
-    document.getElementById('paraBndPosAlphaVal').textContent = (posAlpha / 100).toFixed(2);
-    document.getElementById('paraBndNegAlpha').value = negAlpha;
-    document.getElementById('paraBndNegAlphaVal').textContent = (negAlpha / 100).toFixed(2);
-  } else {
-    document.getElementById('paraBndPosText').value = '';
-    document.getElementById('paraBndNegText').value = '';
-    document.getElementById('paraBndPosPreview').classList.remove('visible');
-    document.getElementById('paraBndNegPreview').classList.remove('visible');
-    document.getElementById('paraBndPosAlpha').value = 37;
-    document.getElementById('paraBndPosAlphaVal').textContent = '0.37';
-    document.getElementById('paraBndNegAlpha').value = 37;
-    document.getElementById('paraBndNegAlphaVal').textContent = '0.37';
-  }
-}
-
-function paraSaveRefinement() {
-  const eventId = document.getElementById('paraRefineEventSelect').value;
-  if (!eventId) { toast('Select an event first', true); return; }
-
-  const evt = PrismDB.getEvent(eventId);
-  if (!evt) { toast('Event not found', true); return; }
-
-  // ── Write Z values + annotations into event.derivedZ ──
-  const prevDerived = evt.derivedZ || {};
-  const annotations = {};
-  const noteObj = document.getElementById('paraObjZNote').value.trim();
-  if (noteObj) annotations.object = noteObj;
-  ['A', 'B', 'C', 'D'].forEach(q => {
-    const note = document.getElementById('paraSubZ' + q + 'Note').value.trim();
-    if (note) annotations[q] = note;
-  });
-
-  evt.derivedZ = {
-    object: parseInt(document.getElementById('paraObjZ').value) / 100,
-    A: parseInt(document.getElementById('paraSubZA').value) / 100,
-    B: parseInt(document.getElementById('paraSubZB').value) / 100,
-    C: parseInt(document.getElementById('paraSubZC').value) / 100,
-    D: parseInt(document.getElementById('paraSubZD').value) / 100,
-    derivedAt: prevDerived.derivedAt || null,
-    manualAt: new Date().toISOString(),
-    annotations
-  };
-
-  // ── Write keywords into PrismDB words[] arrays ──
-  if (evt.responses) {
-    ['A', 'B', 'C', 'D'].forEach(q => {
-      const qResp = evt.responses[q];
-      if (!qResp) return;
-      const keywords = paraRefineKeywords[q] || [];
-      const wordsArr = keywords.map(kw => ({
-        t: kw,
-        w: 0.7,
-        manual: true
-      }));
-      // Merge: keep derived words, add/replace manual ones
-      BANDS.forEach(band => {
-        if (qResp[band]) {
-          const existing = (qResp[band].words || []).filter(w => w.derived);
-          // Add manual words that aren't duplicates of derived
-          const derivedTexts = new Set(existing.map(w => (w.t || '').toLowerCase()));
-          const manual = wordsArr.filter(w => !derivedTexts.has(w.t.toLowerCase()));
-          qResp[band].words = [...existing, ...manual];
-        }
-      });
-    });
-  }
-
-  // ── Persist to PrismDB ──
-  PrismDB.updateEvent(eventId, evt);
-
-  // ── Boundary content still goes to localStorage (photo data too large for PrismDB) ──
-  const boundaryData = {
-    eventId,
-    boundaryContent: {
-      positive: {
-        text: document.getElementById('paraBndPosText').value.trim(),
-        photo: paraRefinePhotos.pos,
-        photoAlpha: parseInt(document.getElementById('paraBndPosAlpha').value) / 100
-      },
-      negative: {
-        text: document.getElementById('paraBndNegText').value.trim(),
-        photo: paraRefinePhotos.neg,
-        photoAlpha: parseInt(document.getElementById('paraBndNegAlpha').value) / 100
-      }
-    },
-    updated: new Date().toISOString()
-  };
-  localStorage.setItem('prism_refine_' + eventId, JSON.stringify(boundaryData));
-
-  toast(`Saved: Z values + keywords → PrismDB, boundaries → localStorage`);
-}
-
-// ── Z slider helper ──
-function paraUpdateZVal(slider, valId, divisor) {
-  const d = divisor || 100;
-  document.getElementById(valId).textContent = (parseInt(slider.value) / d).toFixed(2);
-}
-
-// ── Keywords ──
-function paraKwKeydown(e, quad) {
-  if (e.key !== 'Enter') return;
-  e.preventDefault();
-  const input = document.getElementById('paraKw' + quad);
-  const word = input.value.trim();
-  if (!word) return;
-  if (!paraRefineKeywords[quad].includes(word)) {
-    paraRefineKeywords[quad].push(word);
-  }
-  input.value = '';
-  paraRenderKeywords(quad);
-}
-
-function paraRemoveKeyword(quad, idx) {
-  paraRefineKeywords[quad].splice(idx, 1);
-  paraRenderKeywords(quad);
-}
-
-function paraRenderKeywords(quad) {
-  const container = document.getElementById('paraKwTags' + quad);
-  container.innerHTML = paraRefineKeywords[quad].map((kw, i) =>
-    `<span class="para-kw-tag" onclick="paraRemoveKeyword('${quad}', ${i})">${escHtml(kw)}</span>`
-  ).join('');
-}
-
-function paraRenderAllKeywords() {
-  ['A', 'B', 'C', 'D'].forEach(q => paraRenderKeywords(q));
-}
-
-// ── Boundary photos ──
-function paraBndPhotoLoad(input, side) {
-  const file = input.files[0];
-  if (!file) return;
-  const reader = new FileReader();
-  reader.onload = function(e) {
-    const data = e.target.result;
-    paraRefinePhotos[side] = data;
-    const previewId = side === 'pos' ? 'paraBndPosPreview' : 'paraBndNegPreview';
-    const img = document.getElementById(previewId);
-    img.src = data;
-    img.classList.add('visible');
-  };
-  reader.readAsDataURL(file);
-}
-
-
-// ============================================================
 // INIT
 // ============================================================
 
@@ -7199,7 +5172,6 @@ refreshList();
 initAllTaggers();
 loadReviewLog();
 updateReviewBadge();
-paraLoadArticles();
 </script>
 <!-- ============================================================
      DIALECTICS CHAT DRAWER

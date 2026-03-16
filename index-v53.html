@@ -2066,7 +2066,7 @@ html, body {
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.5s ease;
-  z-index: 6;  /* above shades/labels, below user orb */
+  z-index: 6;  /* above shades/labels, below user pin */
 }
 .quadrant.parallax-active .quadrant-agg-overlay {
   opacity: 1;
@@ -2754,7 +2754,7 @@ textarea::placeholder { color: var(--text-muted); opacity: 0.7; }
         <!-- SLIDE 2 — How It Works -->
         <div class="ob-slide">
           <div class="ob-slide-label">The Interaction</div>
-          <div class="ob-slide-quote">Each day brings a prompt — a real event, framed without editorial. You choose one of four responses, then place an orb on the graph to mark your intensity. The words around you respond to your position. Say more if you want. The instrument is listening for depth.</div>
+          <div class="ob-slide-quote">Each day brings a prompt — a real event, framed without editorial. You choose one of four responses, then place a pin on the graph to mark your intensity. The words around you respond to your position. Say more if you want. The instrument is listening for depth.</div>
           <div class="ob-slide-attr">Swipe to continue →</div>
         </div>
 
@@ -3264,14 +3264,14 @@ let ANSWERS = PrismDB.getActiveEvent().responses;
 
 // ── Three-band Diatribe aperture ──
 // Determines which response band the user sees (Phase 5 wires this to Diatribe UI)
-let currentBand = 'goodFaith'; // 'goodFaith' | 'coalition' | 'badFaith'
-let apertureBand = 'goodFaith'; // Snapshot of band at diatribe commit
+let currentBand = 'fluid'; // 'fluid' | 'coalition' | 'denominated'
+let apertureBand = 'fluid'; // Snapshot of band at diatribe commit
 
 // Resolve the active band's content for a given quadrant
 function getResponseBand(k) {
   const quad = ANSWERS[k];
   if (!quad) return { text: '', words: [], xWord: '', yWord: '' };
-  // New schema: quad.goodFaith / .coalition / .badFaith
+  // New schema: quad.fluid / .coalition / .denominated
   if (quad[currentBand]) return quad[currentBand];
   // Fallback for legacy flat schema (pre-Para events)
   if (quad.text !== undefined) return quad;
@@ -3304,7 +3304,7 @@ const PIN_IMAGES = {
 };
 
 // ============================================================
-// DIATRIBE RESPONSES — left/right × good/bad faith
+// DIATRIBE RESPONSES — left/right × fluid/denominated
 // ============================================================
 let DIATRIBE_RESPONSES = PrismDB.getActiveEvent().diatribe;
 
@@ -4172,7 +4172,7 @@ function closeParallax() {
   if (quadrant) quadrant.classList.remove('parallax-active');
   const panel1 = document.getElementById('panel1');
   if (panel1) panel1.classList.remove('parallax-mode');
-  // Sync Z-slider to current orb Z (don't reset to 0)
+  // Sync Z-slider to current pin Z (don't reset to 0)
   const zSlider = document.getElementById('zOrbitSlider');
   if (zSlider) {
     const sliderVal = Math.round(currentPinZ * 60);
@@ -4297,7 +4297,7 @@ function renderParallaxAggregate() {
   const filtered = agg.filter(p => plgQuadrants[p.quadrant]);
 
   if (plgViewMode === 'scatter') {
-    // Draw aggregate orbs as sphere-like radial gradients
+    // Draw aggregate dots as sphere-like radial gradients
     filtered.forEach(d => {
       const rel = relevance[d.quadrant] ?? 1.0;
       const sx = d.x * w;
@@ -4368,7 +4368,7 @@ function renderParallaxAggregate() {
   }
 }
 
-/* positionParallaxPin removed — user's real orb on #quadrant is used directly */
+/* positionParallaxPin removed — user's real pin on #quadrant is used directly */
 
 function togglePfChip(btn) {
   const active = document.querySelectorAll('.pf-chip.on');
@@ -4460,7 +4460,7 @@ function stopOrbitAnimation() {
 }
 
 // Beat durations (ms)
-const ORBIT_BEAT1_DUR  = 3200;   // fast orbit around user orb
+const ORBIT_BEAT1_DUR  = 3200;   // fast orbit around user pin
 const ORBIT_BEAT2_DUR  = 5500;   // slow "seeing" orbit
 const ORBIT_DRIFT_DUR  = 4500;   // documentary pan to centroid
 const ORBIT_B1_SPEED   = 360 / ORBIT_BEAT1_DUR;  // deg/ms
@@ -4516,7 +4516,7 @@ function handleZSlider(val) {
   const rotDegCSS = t * t * 25 * (raw >= 0 ? 1 : -1);
   const rotRad = rotDeg3D * Math.PI / 180;
 
-  // Branch: if graphmap view is active, only update orb Z — don't touch orbit
+  // Branch: if graphmap view is active, only update pin Z — don't touch orbit
   if (veilState === 'graphmap-lock') {
     if (pinPlaced && finalQuadrant) {
       currentPinZ = raw / 60;
@@ -4585,14 +4585,14 @@ function startOrbitSequence() {
   const evt = PrismDB.getActiveEvent();
   const agg = evt ? PrismDB.getAggregateForEvent(evt.id) : [];
 
-  // User orb — use pinX/pinY from main graph if submitted
+  // User pin — use pinX/pinY from main graph if submitted
   orbitUserPin = (submitted && typeof pinX !== 'undefined')
     ? { x: pinX, y: pinY }
     : { x: 0.5, y: 0.5 };
 
   orbitCentroid = computeWeightedCentroid(agg);
 
-  // Enter directly at Beat 2: slow "seeing" orbit around user's orb.
+  // Enter directly at Beat 2: slow "seeing" orbit around user's pin.
   orbitFocus    = { x: orbitUserPin.x, y: orbitUserPin.y };
   orbitBeat     = 2;
   orbitAzimuth  = 0;
@@ -4603,7 +4603,7 @@ function startOrbitSequence() {
   const q3dWrap = document.getElementById('q3dWrap');
   if (q3dWrap) q3dWrap.style.transition = 'none';
 
-  // Set transform-origin to user's orb position
+  // Set transform-origin to user's pin position
   if (q3dWrap) {
     q3dWrap.style.transformOrigin = `${(orbitUserPin.x * 100).toFixed(1)}% ${(orbitUserPin.y * 100).toFixed(1)}%`;
   }
@@ -4625,7 +4625,7 @@ function tickOrbit(timestamp) {
   const q3dWrap = document.getElementById('q3dWrap');
 
   switch (orbitBeat) {
-    case 2: {  // Slow orbit around user orb
+    case 2: {  // Slow orbit around user pin
       // Gentle yaw oscillation: swing ±(orbitAngle + 8°) over time
       const swingRange = orbitAngle + 8;
       orbitAzimuth = swingRange * Math.sin(elapsed * 0.0004);
@@ -4717,14 +4717,14 @@ function interruptOrbitDrift() {
 // DIATRIBE — slider drives flanking text zones + response band aperture
 // ============================================================
 let diaScore = 0; // -100 to +100
-let prevDiaBand = 'goodFaith'; // Track for threshold-crossing detection
+let prevDiaBand = 'fluid'; // Track for threshold-crossing detection
 let apertureCommitted = false;
 
 // Map absolute diatribe score to the three response bands
 function diaBandFromScore(absScore) {
-  if (absScore <= 33) return 'goodFaith';
+  if (absScore <= 33) return 'fluid';
   if (absScore <= 66) return 'coalition';
-  return 'badFaith';
+  return 'denominated';
 }
 
 function updateDia(clientX, forcePct) {
@@ -4751,7 +4751,7 @@ function updateDia(clientX, forcePct) {
   diaScore = Math.round((pct - 0.5) * 200);
   const absScore = Math.abs(diaScore);
 
-  // ── Aperture: map intensity to response band (only before commit — orb owns band after) ──
+  // ── Aperture: map intensity to response band (only before commit — pin owns band after) ──
   const newBand = diaBandFromScore(absScore);
   if (!apertureCommitted && newBand !== prevDiaBand) {
     prevDiaBand = newBand;
@@ -4759,14 +4759,14 @@ function updateDia(clientX, forcePct) {
     // Swap the 4 response cards the user sees
     buildAnswerButtons();
     buildCornerLabels();
-    // If user already placed an orb, update word weights for the new text
+    // If user already placed a pin, update word weights for the new text
     if (pinPlaced) updateWordWeights();
   }
 
   // ── Diatribe flanking text ──
-  // goodFaith + coalition bands → good-faith descriptors; badFaith band → bad-faith
-  const leftKey = newBand === 'badFaith' ? 'LB' : 'LG';
-  const rightKey = newBand === 'badFaith' ? 'RB' : 'RG';
+  // fluid + coalition bands → fluid descriptors; denominated band → denominated
+  const leftKey = newBand === 'denominated' ? 'LD' : 'LF';
+  const rightKey = newBand === 'denominated' ? 'RD' : 'RF';
   const leftResp = DIATRIBE_RESPONSES[leftKey];
   const rightResp = DIATRIBE_RESPONSES[rightKey];
 
@@ -4806,7 +4806,7 @@ function updateDia(clientX, forcePct) {
     scoreDisplay.textContent = 'center · neutral';
   } else {
     const side = diaScore < 0 ? 'left' : 'right';
-    const bandLabel = newBand === 'goodFaith' ? 'good faith' : newBand === 'coalition' ? 'coalition' : 'bad faith';
+    const bandLabel = newBand === 'fluid' ? 'fluid' : newBand === 'coalition' ? 'coalition' : 'denominated';
     const subBand = absScore <= 33 ? 'nominal' : absScore <= 66 ? 'coalitional' : 'conviction';
     intensityEl.textContent = `${bandLabel} · ${subBand}`;
     scoreDisplay.textContent = `${side} · ${diaScore >= 0 ? '+' : ''}${diaScore}`;
@@ -5086,9 +5086,9 @@ The administration\u2019s response was immediate. DHS Secretary Kristi Noem call
 Within forty-eight hours, bystander video from six angles had been verified by Reuters, the BBC, the Wall Street Journal, and ABC News. The footage showed a man holding up a phone, stepping between an agent and a woman on the ground, being sprayed, being wrestled down by multiple agents, and being shot while on the ground. No verified footage shows him reaching for or holding his weapon.
 
 <!-- graph-state: baseline
-description: "Event at neutral Diatribe. All four quadrant positions visible at good faith."
+description: "Event at neutral Diatribe. All four quadrant positions visible at fluid floor."
 diatribePosition: 0.15
-showResponses: [A-goodFaith, B-goodFaith, C-goodFaith, D-goodFaith]
+showResponses: [A-fluid, B-fluid, C-fluid, D-fluid]
 -->
 
 At a Diatribe reading near zero, the event is at its most legible. From every quadrant, the basic facts hold: an American citizen was killed by federal agents, the official account was contradicted by video, and the investigation was obstructed. The institutional left demands independent investigation. The institutional right demands credibility and accountability. The grassroots left sees a neighbor. The grassroots right sees a gun owner whose constitutional rights were violated. These positions are not identical \u2014 they carry different priorities and different frameworks \u2014 but they can see the same object.
@@ -5125,10 +5125,10 @@ These questions don\u2019t justify the shooting. Nothing in the taillight video 
 
 Good faith can hold both. Alex Pretti may have been deliberately organizing against ICE, and his killing was still unjustified. These are not in tension. The refusal to hold both is the signature of denomination \u2014 the point where the object disappears and the vehicle takes its place.
 
-<!-- graph-state: bilateral-bad-faith
+<!-- graph-state: bilateral-denominated
 description: "Diatribe at 0.85 \u2014 the object is gone."
 diatribePosition: 0.85
-showResponses: [A-badFaith, B-badFaith, C-badFaith, D-badFaith]
+showResponses: [A-denominated, B-denominated, C-denominated, D-denominated]
 -->
 
 At high Diatribe, what remains is unrecognizable as the same event. \u201cThis administration executed a nurse\u201d faces off against \u201cthis was domestic terrorism.\u201d The man, the video, the questions \u2014 all gone. Replaced by vehicles that serve tribal functions without carrying any of the substance that made the event matter in the first place.
@@ -5144,24 +5144,24 @@ The right amputates at \u201cfraud\u201d \u2014 everything before it is context,
 That simultaneity is what Prism is designed to hold visible.`,
   responses: {
     A: {
-      goodFaith: "A federal agent killed an American citizen who was documenting an enforcement operation and stepped in to protect a bystander. The video evidence directly contradicts the official account. This demands a transparent, independent investigation.",
+      fluid: "A federal agent killed an American citizen who was documenting an enforcement operation and stepped in to protect a bystander. The video evidence directly contradicts the official account. This demands a transparent, independent investigation.",
       coalition: "This demands investigation, obviously. But I keep thinking about how fast we moved from \u2018independent inquiry\u2019 to \u2018abolish ICE\u2019 \u2014 like we skipped the part where we actually build the institutional mechanism that could hold agents accountable.",
-      badFaith: "This administration executed a nurse in the street for holding up a phone, then called him a terrorist, blocked state investigators, and hid the body camera footage. Block every DHS dollar. No investigation is going to come from inside the machine that killed him.",
+      denominated: "This administration executed a nurse in the street for holding up a phone, then called him a terrorist, blocked state investigators, and hid the body camera footage. Block every DHS dollar. No investigation is going to come from inside the machine that killed him.",
     },
     B: {
-      goodFaith: "Immigration enforcement is necessary and lawful, but the credibility of the entire operation depends on accountability when lethal force is used. If the video evidence contradicts the official account, that demands a full joint investigation.",
+      fluid: "Immigration enforcement is necessary and lawful, but the credibility of the entire operation depends on accountability when lethal force is used. If the video evidence contradicts the official account, that demands a full joint investigation.",
       coalition: "I still support immigration enforcement. But watching the administration call this man a domestic terrorist before anyone had reviewed the footage \u2014 and then block state investigators from the scene \u2014 I don\u2019t know how to defend that.",
-      badFaith: "This was domestic terrorism. He arrived armed with a loaded handgun and extra magazines at an active federal enforcement operation. The officers acted defensively \u2014 they are the victims here.",
+      denominated: "This was domestic terrorism. He arrived armed with a loaded handgun and extra magazines at an active federal enforcement operation. The officers acted defensively \u2014 they are the victims here.",
     },
     C: {
-      goodFaith: "Alex Pretti did what neighbors do \u2014 he saw someone being hurt and stepped in. He was a VA nurse, legally armed, legally present, filming what was happening to his community. His death should make us more honest about what we\u2019re facing.",
+      fluid: "Alex Pretti did what neighbors do \u2014 he saw someone being hurt and stepped in. He was a VA nurse, legally armed, legally present, filming what was happening to his community. His death should make us more honest about what we\u2019re facing.",
       coalition: "I went to the vigil. There were guys there with rifles talking about Che Guevara and community defense, and I understood the impulse \u2014 I felt it. But I also watched the discourse go from \u2018what happened to Alex Pretti\u2019 to \u2018arm up against the state\u2019 in about forty-eight hours.",
-      badFaith: "Time to arm up. If this government will execute a white nurse in broad daylight for holding a phone, nobody is safe. The Second Amendment exists for exactly this \u2014 defense against state tyranny.",
+      denominated: "Time to arm up. If this government will execute a white nurse in broad daylight for holding a phone, nobody is safe. The Second Amendment exists for exactly this \u2014 defense against state tyranny.",
     },
     D: {
-      goodFaith: "Carrying a firearm is a constitutionally protected right, not a death sentence. This man had a legal permit. If federal agents can kill a legally armed citizen, refuse to release body camera footage, and block state investigators \u2014 every gun owner should be alarmed.",
+      fluid: "Carrying a firearm is a constitutionally protected right, not a death sentence. This man had a legal permit. If federal agents can kill a legally armed citizen, refuse to release body camera footage, and block state investigators \u2014 every gun owner should be alarmed.",
       coalition: "I\u2019ve been a Second Amendment voter my whole life. When I watched that video, my first thought was: that could be me. Then I watched people on my side start explaining why it was okay \u2014 that\u2019s not 2A. That\u2019s tribalism wearing 2A as a costume.",
-      badFaith: "He showed up armed to interfere with a lawful federal operation. Two weeks before, he was on video kicking out the taillight of an ICE vehicle. You don\u2019t get to physically confront federal officers while carrying a loaded weapon and then claim you\u2019re a peaceful observer.",
+      denominated: "He showed up armed to interfere with a lawful federal operation. Two weeks before, he was on video kicking out the taillight of an ICE vehicle. You don\u2019t get to physically confront federal officers while carrying a loaded weapon and then claim you\u2019re a peaceful observer.",
     },
   },
   // Scoring library coordinates (from Projection 3)
@@ -5444,9 +5444,9 @@ Chicago was next. Operation Midway Blitz. October through December 2025. Three t
 Minnesota was different. Minnesota had a story.
 
 <!-- graph-state: baseline
-description: "Event at neutral Diatribe. The fraud dimension gives the right-side good-faith positions unusual substance."
+description: "Event at neutral Diatribe. The fraud dimension gives the right-side fluid positions unusual substance."
 diatribePosition: 0.15
-showResponses: [A-goodFaith, B-goodFaith, C-goodFaith, D-goodFaith]
+showResponses: [A-fluid, B-fluid, C-fluid, D-fluid]
 -->
 
 The Feeding Our Future scandal was real. Over a billion dollars in documented fraud across multiple programs \u2014 pandemic meal reimbursements, autism therapy, housing stabilization, personal care assistance. More than fifty of seventy-nine indicted suspects had pled guilty. The fraud was predominantly centered in Minneapolis\u2019s Somali community, though the ringleader was Aimee Bock, a white woman. State legislators \u2014 including Republicans \u2014 had been working the problem for years. Prosecutions were succeeding.
@@ -5483,10 +5483,10 @@ What Operation Metro Surge did was take a community\u2019s internal accountabili
 
 The left can\u2019t have this conversation because it requires acknowledging that the fraud was real and that accountability isn\u2019t the same as persecution. The right can\u2019t have it because it requires acknowledging that the community\u2019s presence in Minnesota is itself an American responsibility. Both sides need the Somali community to be a symbol \u2014 of victimhood or of exploitation \u2014 rather than a group of human beings navigating a situation they didn\u2019t create.
 
-<!-- graph-state: bilateral-bad-faith
+<!-- graph-state: bilateral-denominated
 description: "High Diatribe. The community has disappeared entirely."
 diatribePosition: 0.85
-showResponses: [A-badFaith, B-badFaith, C-badFaith, D-badFaith]
+showResponses: [A-denominated, B-denominated, C-denominated, D-denominated]
 -->
 
 At high Diatribe, the Somali community is gone. On the left: \u201cethnic cleansing with extra steps.\u201d On the right: \u201cthey took over an entire neighborhood and funneled money to terrorists.\u201d Neither position contains a single Somali person with agency, complexity, or a story that isn\u2019t reducible to someone else\u2019s political needs. This is what denomination completes: the destruction of the subject\u2019s subjectivity in service of the vehicle\u2019s tribal function.
@@ -5502,24 +5502,24 @@ This is Pattern #16 from the bad faith library: Z-gap by design. The gap between
 The targeting of Somali Americans specifically served a second cybernetic function: it tested whether enforcement could be legitimized against a community that had been pre-denominated by media coverage. The Feeding Our Future story, amplified by figures like Christopher Rufo and shared by JD Vance and Elon Musk, had already flattened the Somali community into a symbol of fraud. The denomination was complete before the first agent arrived.`,
   responses: {
     A: {
-      goodFaith: "Federal agents operating without body cameras, refusing to cooperate with state investigators, and deploying tear gas near schools is not immigration enforcement \u2014 it\u2019s occupation. Operation Metro Surge didn\u2019t advance a single fraud prosecution; it disrupted them. Six federal prosecutors resigned.",
+      fluid: "Federal agents operating without body cameras, refusing to cooperate with state investigators, and deploying tear gas near schools is not immigration enforcement \u2014 it\u2019s occupation. Operation Metro Surge didn\u2019t advance a single fraud prosecution; it disrupted them. Six federal prosecutors resigned.",
       coalition: "The fraud prosecutions were working. Convictions were happening. Then the federal government landed on top of all of that with masked agents and tactical vehicles, and now six of the prosecutors who were actually doing the work have quit. The operation they sent didn\u2019t fix the failure \u2014 it buried the fix that was already underway.",
-      badFaith: "They came for the Somalians because they thought nobody would care. After LA pushed back, after Chicago pushed back, they picked the community Fox News had already dehumanized. Anyone still talking about \u2018legitimate enforcement concerns\u2019 is carrying water for a fascist occupation.",
+      denominated: "They came for the Somalians because they thought nobody would care. After LA pushed back, after Chicago pushed back, they picked the community Fox News had already dehumanized. Anyone still talking about \u2018legitimate enforcement concerns\u2019 is carrying water for a fascist occupation.",
     },
     B: {
-      goodFaith: "The fraud is real \u2014 over a billion dollars stolen from programs meant for children, the disabled, and the homeless. Federal intervention was justified when state systems failed. But the arrest data shows it didn\u2019t target fraud. Three thousand arrests and twenty-three Somalis, none connected to fraud \u2014 that\u2019s a bait and switch.",
+      fluid: "The fraud is real \u2014 over a billion dollars stolen from programs meant for children, the disabled, and the homeless. Federal intervention was justified when state systems failed. But the arrest data shows it didn\u2019t target fraud. Three thousand arrests and twenty-three Somalis, none connected to fraud \u2014 that\u2019s a bait and switch.",
       coalition: "I wanted this to be about the fraud. A billion dollars \u2014 that\u2019s real money stolen from real programs. But then I watched the arrest numbers come in. Three thousand arrests, twenty-three Somali, zero connected to any fraud case. I have to ask whether the operation I supported was ever about what they told me it was about.",
-      badFaith: "Minnesota became a national poster child for public corruption because Democrats let it happen. Fraudsters bilked taxpayers out of a billion dollars, some of which ended up funding terrorism in Somalia. Now when the federal government finally steps in, the same people who enabled the fraud are obstructing enforcement.",
+      denominated: "Minnesota became a national poster child for public corruption because Democrats let it happen. Fraudsters bilked taxpayers out of a billion dollars, some of which ended up funding terrorism in Somalia. Now when the federal government finally steps in, the same people who enabled the fraud are obstructing enforcement.",
     },
     C: {
-      goodFaith: "The Somali community in Minnesota didn\u2019t choose to be here \u2014 decades of U.S. foreign policy created the migration. The fraud was real and the strongest whistleblowers were Somali. What Operation Metro Surge did was weaponize a community\u2019s internal accountability process to justify an occupation that had nothing to do with fraud.",
+      fluid: "The Somali community in Minnesota didn\u2019t choose to be here \u2014 decades of U.S. foreign policy created the migration. The fraud was real and the strongest whistleblowers were Somali. What Operation Metro Surge did was weaponize a community\u2019s internal accountability process to justify an occupation that had nothing to do with fraud.",
       coalition: "I know people in the Somali community who were furious about the fraud before any federal agent showed up. They reported it. They cooperated. Now they\u2019re being collectively punished for something most of them were already trying to fix. Both sides need me to pick one outrage.",
-      badFaith: "Ninety-two percent of Somali Americans are citizens. They built businesses, raised families, became part of Minnesota. Now a white supremacist administration is using a fraud case \u2014 led by a white woman \u2014 to justify the military occupation of a Black immigrant community. This is ethnic cleansing with extra steps.",
+      denominated: "Ninety-two percent of Somali Americans are citizens. They built businesses, raised families, became part of Minnesota. Now a white supremacist administration is using a fraud case \u2014 led by a white woman \u2014 to justify the military occupation of a Black immigrant community. This is ethnic cleansing with extra steps.",
     },
     D: {
-      goodFaith: "Something went seriously wrong in Minnesota. The system paid out hundreds of millions to fake programs and the state looked the other way. But deploying masked federal agents, shooting two citizens, and arresting thousands unconnected to fraud \u2014 that\u2019s not a serious response. That\u2019s political theater using legitimate anger as fuel.",
+      fluid: "Something went seriously wrong in Minnesota. The system paid out hundreds of millions to fake programs and the state looked the other way. But deploying masked federal agents, shooting two citizens, and arresting thousands unconnected to fraud \u2014 that\u2019s not a serious response. That\u2019s political theater using legitimate anger as fuel.",
       coalition: "A billion dollars in fraud and the best the federal government could do was send Border Patrol agents to arrest landscapers? I wanted real accountability. Instead they sent an army that shot two people, and the actual fraud prosecutions fell apart because the prosecutors quit. If you told me the administration deliberately sabotaged the fraud cases, I\u2019d have a hard time arguing.",
-      badFaith: "These people came here as refugees, took over an entire neighborhood, set up fake nonprofits to funnel taxpayer money back to Somalia \u2014 including to terrorists \u2014 and Democrats covered for them. When Trump finally sends in ICE, suddenly it\u2019s an \u2018occupation.\u2019 The fraud was the crime. The enforcement is the consequence.",
+      denominated: "These people came here as refugees, took over an entire neighborhood, set up fake nonprofits to funnel taxpayer money back to Somalia \u2014 including to terrorists \u2014 and Democrats covered for them. When Trump finally sends in ICE, suddenly it\u2019s an \u2018occupation.\u2019 The fraud was the crime. The enforcement is the consequence.",
     },
   },
   // Scoring library coordinates (from Projection 3)
@@ -5654,15 +5654,15 @@ var PARA_QUAD_COLORS = { A: '#b83a3a', B: '#3868a8', C: '#3a8a52', D: '#b87828' 
 var PARA_QUAD_LABELS = { A: 'Auth \u00b7 Right', B: 'Auth \u00b7 Left', C: 'Lib \u00b7 Left', D: 'Lib \u00b7 Right' };
 
 function getDiaBand(dia) {
-  if (dia < 33) return 'goodFaith';
+  if (dia < 33) return 'fluid';
   if (dia < 66) return 'coalition';
-  return 'badFaith';
+  return 'denominated';
 }
 
 function getDiaLabel(dia) {
-  if (dia < 30) return 'Good Faith';
+  if (dia < 30) return 'Fluid';
   if (dia < 65) return 'Coalition';
-  return 'Bad Faith';
+  return 'Denominated';
 }
 
 function getPlottableArc(arc) {
@@ -5670,7 +5670,7 @@ function getPlottableArc(arc) {
   return arc.events.filter(function(e) { return e.x !== null && e.y !== null && e.type !== 'structural'; });
 }
 
-// ── Place cone (object) + four orbs (displaced subjects) ──
+// ── Place cone pin (object) + four orbs (displaced subjects) ──
 function placeArcDots(inst, arcEvent) {
   inst.clearDots();
   inst.clearPin();
@@ -5678,7 +5678,7 @@ function placeArcDots(inst, arcEvent) {
   var objPos = scoringToNorm(arcEvent.x, arcEvent.y);
   var dia01 = (arcEvent.dia || 50) / 100; // normalize to 0-1
 
-  // Cone = the object
+  // Cone pin = the object
   inst.setPin(
     Math.max(0.02, Math.min(0.98, objPos.x)),
     Math.max(0.02, Math.min(0.98, objPos.y)),
@@ -5686,10 +5686,10 @@ function placeArcDots(inst, arcEvent) {
     arcEvent.z || 0
   );
 
-  // Four subject orbs: displaced from cone toward quadrant home by Diatribe
+  // Four subject orbs: displaced from pin toward quadrant home by Diatribe
   ['A', 'B', 'C', 'D'].forEach(function(q) {
     var home = QUAD_HOMES[q];
-    // At dia=0, orbs sit at the cone. At dia=1, orbs at their home corner.
+    // At dia=0, orbs sit at the pin. At dia=1, orbs at their home corner.
     var ox = objPos.x + (home.x - objPos.x) * dia01;
     var oy = objPos.y + (home.y - objPos.y) * dia01;
     // Z: per-quadrant if available, else shared object Z
@@ -5773,7 +5773,7 @@ var paraAnimFrame = null;
 var paraLastPlacedEvent = null; // track what's currently displayed for lerping
 
 function animateToEvent(targetEvent, duration, onDone) {
-  // Smooth lerp from current orb positions to target event positions
+  // Smooth lerp from current dot positions to target event positions
   if (paraAnimFrame) { cancelAnimationFrame(paraAnimFrame); paraAnimFrame = null; }
 
   if (!paraGM || !targetEvent) return;
@@ -5952,7 +5952,7 @@ function reparentToSlot(slotIdx) {
   paraGM.reparent(wrap);
   paraActiveSlotIdx = slotIdx;
 
-  // Animate orbs to this event's position over 800ms
+  // Animate dots to this event's position over 800ms
   var ev = paraGMData.plottable[slotIdx];
   if (ev) {
     animateToEvent(ev, 800, function() {
@@ -6093,7 +6093,7 @@ function mountArcGraphmap(article, plottable) {
     observers: [],
   };
 
-  // Place orbs for first event
+  // Place dots for first event
   var firstEv = plottable[0];
   if (firstEv) {
     placeArcDots(paraGM, firstEv);
@@ -6130,7 +6130,7 @@ function mountStaticGraphmap(article) {
   paraActiveSlotIdx = 0;
   paraGMData = { articleId: article.id, arc: null, plottable: [], currentIndex: 0, observers: [] };
 
-  // Four orbs at scored positions
+  // Four dots at scored positions
   if (article.scoring) {
     var sc = article.scoring;
     var posMap = {
@@ -6463,10 +6463,10 @@ function goToPanel(idx) {
       // 1. Update data references
       ANSWERS = evt.responses;
       DIATRIBE_RESPONSES = evt.diatribe;
-      currentBand = 'goodFaith'; // Reset aperture for new event
-      prevDiaBand = 'goodFaith';
+      currentBand = 'fluid'; // Reset aperture for new event
+      prevDiaBand = 'fluid';
       apertureCommitted = false;
-      apertureBand = 'goodFaith';
+      apertureBand = 'fluid';
 
       // 2. Update prompt display
       const headline = document.querySelector('.event-headline');
@@ -6527,7 +6527,7 @@ function goToPanel(idx) {
       const zBadge = document.querySelector('.z-badge');
       if (zBadge) zBadge.classList.remove('visible');
 
-      // 6. Reset orb
+      // 6. Reset pin
       const pin = document.getElementById('userPin');
       if (pin) { pin.classList.remove('visible'); pin.style.display = ''; }
 
@@ -6540,7 +6540,7 @@ function goToPanel(idx) {
       // 7. Update aggregate scatter for this event
       if (typeof renderAggregate === 'function') renderAggregate();
 
-      // 7b. If graphmap is mounted, refresh 3D orbs and labels for new event
+      // 7b. If graphmap is mounted, refresh 3D dots and labels for new event
       syncGraphmapLabels();
       syncGraphmapDots();
 
@@ -6718,7 +6718,7 @@ function revealQuadrant(chosenKey) {
     finalQuadrant=chosenKey;
     updateCoordsDisplay();
     updateWordWeights();
-    // Set 3D orb in graphmap — initial Z from diatribe score
+    // Set 3D pin in graphmap — initial Z from diatribe score
     const diaZ = diaScore / 100; // -1 to +1
     currentPinZ = diaZ;
     graphmapInst.setPin(px, py, chosenKey, diaZ);
@@ -6837,7 +6837,7 @@ function updatePin(cx, cy) {
     // Shift focus mode to new quadrant
     if (focusQuadrant !== null) enterFocusMode(newQ);
   }
-  // Update 3D orb position (preserve current Z)
+  // Update 3D pin position (preserve current Z)
   graphmapInst.setPin(pinX, pinY, finalQuadrant, currentPinZ);
 
   // ── Pin intensity → band swap ──
@@ -6847,7 +6847,7 @@ function updatePin(cx, cy) {
   const pinBand = diaBandFromScore(pinIntensity);
 
   // Calculate intra-band progress (0→1 within current band)
-  if (pinBand === 'goodFaith') currentBandProgress = Math.min(1, pinIntensity / 33);
+  if (pinBand === 'fluid') currentBandProgress = Math.min(1, pinIntensity / 33);
   else if (pinBand === 'coalition') currentBandProgress = Math.min(1, (pinIntensity - 34) / 32);
   else currentBandProgress = Math.min(1, (pinIntensity - 67) / 33);
 
@@ -6985,8 +6985,8 @@ function submitResponse() {
     diatribeScore: diaScore,
     diatribeBandAtSubmit: currentBand,
     apertureBand: apertureBand,
-    apertureDisplacement: ({ goodFaith: 0, coalition: 1, badFaith: 2 }[currentBand] || 0)
-                        - ({ goodFaith: 0, coalition: 1, badFaith: 2 }[apertureBand] || 0),
+    apertureDisplacement: ({ fluid: 0, coalition: 1, denominated: 2 }[currentBand] || 0)
+                        - ({ fluid: 0, coalition: 1, denominated: 2 }[apertureBand] || 0),
     pinZ: currentPinZ,
     zValue: zValue,
     zReason: ''
@@ -7084,7 +7084,7 @@ function renderVoices() {
 // ============================================================
 let veilState = 'idle'; // 'idle' | 'graphmap-lock'
 
-// ── Sync PrismDB aggregate data → graphmap factory orbs ──
+// ── Sync PrismDB aggregate data → graphmap factory dots ──
 function syncGraphmapDots() {
   if (veilState !== 'graphmap-lock') {
     console.log('[Graphmap] syncDots skipped — veilState:', veilState);
@@ -7167,7 +7167,7 @@ function preMountGraphmap() {
   syncGraphmapDots();
   syncGraphmapWords();
 
-  // Restore orb if placed
+  // Restore pin if placed
   if (pinPlaced && finalQuadrant) {
     graphmapInst.setPin(pinX, pinY, finalQuadrant, currentPinZ);
   }
@@ -7406,7 +7406,7 @@ function enterGraphmapView() {
   graphmapInst.mount(quadrant);
   morphMounted = true;
 
-  // Restore orb if user has already placed one (unmount clears orb state)
+  // Restore pin if user has already placed one (unmount clears pin state)
   if (pinPlaced && finalQuadrant) {
     graphmapInst.setPin(pinX, pinY, finalQuadrant, currentPinZ);
   }
@@ -7428,7 +7428,7 @@ function enterGraphmapView() {
   if (qSection) qSection.classList.add('graphmap-active');
   beamHeader.classList.add('prism-active');
 
-  // Sync aggregate orbs, axis labels, and word clouds from PrismDB
+  // Sync aggregate dots, axis labels, and word clouds from PrismDB
   syncGraphmapLabels();
   syncGraphmapDots();
   syncGraphmapWords();
