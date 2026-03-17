@@ -1,0 +1,521 @@
+/* ================================================================
+   PRISM — DESKTOP TRIPTYCH LAYOUT
+   Drop-in override for index-v55.html (or v53+)
+   Link AFTER the inline <style> block or at end of <head>:
+     <link rel="stylesheet" href="prism-desktop.css">
+   ================================================================ */
+
+/* ── DESKTOP BREAKPOINT ≥ 1200px ─────────────────────── */
+@media (min-width: 1200px) {
+
+  /* ── VIEWPORT RESET ──────────────────────────────────── */
+  html, body {
+    overflow: hidden;
+    align-items: stretch;
+    justify-content: stretch;
+  }
+
+  /* ── PHONE SHELL → FULL VIEWPORT ─────────────────────── */
+  .phone {
+    width: 100vw;
+    height: 100vh;
+    max-width: none;
+    max-height: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  /* ── PANELS → THREE-COLUMN TRIPTYCH ──────────────────── */
+  .panels {
+    display: grid !important;
+    grid-template-columns: 1fr 1.35fr 1fr;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .panel {
+    min-width: 0 !important;
+    width: auto !important;
+    border-right: 1px solid var(--divider);
+    padding-top: 80px;        /* breathing room under header */
+    scroll-behavior: smooth;
+  }
+  .panel:last-child {
+    border-right: none;
+  }
+
+  /* ── HIDE MOBILE NAV AFFORDANCES ─────────────────────── */
+  .panel-dots,
+  .swipe-hint {
+    display: none !important;
+  }
+
+  /* ── BEAM HEADER → FULL-WIDTH NAV BAR ────────────────── */
+  .beam-header {
+    height: 64px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background-color: rgba(24, 24, 37, 0.85);
+    border-bottom: 1px solid var(--divider);
+  }
+  :root.light-mode .beam-header {
+    background-color: rgba(242, 234, 216, 0.88);
+  }
+
+  .beam-logo-bar {
+    height: 64px;
+  }
+
+  /* Center the prism nav image regardless of JS position */
+  .beam-header-img {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    height: 64px;
+    transition: filter 0.8s ease !important;
+  }
+  /* Preserve the Parallelogram mirror flip */
+  .beam-header.para-mirrored .beam-header-img {
+    transform: translateX(-50%) scaleX(-1) !important;
+  }
+
+  /* ── PANEL 1 — THE BEAM (profile) ────────────────────── */
+  .p1 {
+    padding-top: 80px;
+  }
+
+  .profile-header {
+    padding: 24px 32px 18px;
+    gap: 18px;
+  }
+  .avatar-lg {
+    width: 56px;
+    height: 56px;
+    font-size: 21px;
+  }
+  .profile-name {
+    font-size: 24px;
+  }
+  .profile-meta {
+    font-size: 11px;
+    margin-top: 4px;
+  }
+
+  .position-card {
+    margin: 18px 32px;
+    padding: 18px 20px;
+  }
+
+  .section-label {
+    padding: 18px 32px 10px;
+    font-size: 8.5px;
+  }
+
+  .response-log {
+    padding: 0 32px 32px;
+    gap: 10px;
+  }
+  .log-entry {
+    padding: 14px 18px;
+    gap: 14px;
+  }
+  .log-mini-quad {
+    width: 44px;
+    height: 44px;
+  }
+  .log-topic {
+    font-size: 13px;
+  }
+  .log-entry:hover {
+    border-color: var(--divider-strong);
+    background: var(--surface-overlay);
+  }
+
+  /* ── PANEL 2 — THE PRISM (center) ────────────────────── */
+  .p2 {
+    padding-top: 80px;
+    border-left: 1px solid var(--divider);
+    border-right: 1px solid var(--divider);
+  }
+
+  .event-header {
+    padding: 20px 32px;
+  }
+  .event-issue-tag {
+    font-size: 9px;
+    letter-spacing: 0.24em;
+  }
+  .event-headline {
+    font-size: 26px;
+    line-height: 1.35;
+  }
+  .event-date {
+    font-size: 9px;
+  }
+
+  .framing-text {
+    padding: 16px 32px;
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  /* Answer cards */
+  .answers-area {
+    padding: 16px 32px 0;
+  }
+  .answers-label {
+    font-size: 9px;
+    margin-bottom: 14px;
+  }
+  .answers-grid {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .answer-btn {
+    padding: 16px 16px;
+    font-size: 12.5px;
+    line-height: 1.55;
+    min-height: 90px;
+    transition: border-color 0.2s, background 0.2s, transform 0.12s, box-shadow 0.2s;
+  }
+  .answer-btn:hover {
+    border-color: var(--divider-strong);
+    background: var(--surface-overlay);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    transform: translateY(-1px);
+  }
+  .answer-btn:active {
+    transform: translateY(0) scale(0.99);
+  }
+
+  /* Quadrant — larger on desktop */
+  .quadrant-section {
+    padding: 0 32px 16px;
+  }
+  .q-axis-label {
+    font-size: 8.5px;
+    letter-spacing: 0.16em;
+    margin-bottom: 5px;
+  }
+  .q-axis-side {
+    font-size: 8.5px;
+    letter-spacing: 0.14em;
+  }
+  .q-middle-row {
+    gap: 8px;
+  }
+
+  /* Corner labels */
+  .q-corner-label {
+    font-size: 8px;
+  }
+
+  /* Coords display */
+  .coords-display {
+    font-size: 10px;
+  }
+
+  /* Z hint */
+  .z-hint {
+    font-size: 10px;
+  }
+
+  /* Response text area */
+  .response-section {
+    padding: 0 32px 16px;
+  }
+  .response-label {
+    font-size: 9px;
+  }
+  textarea {
+    font-size: 14px;
+    line-height: 1.7;
+    padding: 14px 16px;
+    height: 88px;
+  }
+  textarea:hover {
+    border-color: var(--divider-strong);
+  }
+
+  .char-row {
+    margin-top: 4px;
+  }
+
+  /* Submit */
+  .submit-area {
+    padding: 6px 32px 36px;
+  }
+  .submit-btn {
+    padding: 15px;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    transition: background 0.2s, opacity 0.2s, transform 0.12s;
+  }
+  .submit-btn:hover:not(:disabled) {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+
+  /* Z badge */
+  .z-badge {
+    margin: 6px 32px 0;
+    font-size: 8px;
+  }
+
+  /* ── PANEL 3 — THE REFRACTION ────────────────────────── */
+  .p3 {
+    padding-top: 80px;
+  }
+
+  .agg-header {
+    padding: 18px 32px 14px;
+  }
+  .agg-headline {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+  .agg-sub {
+    font-size: 9px;
+  }
+
+  .agg-quadrant-section {
+    padding: 18px 32px 0;
+  }
+
+  .stats-row {
+    padding: 16px 32px 0;
+    gap: 8px;
+  }
+  .stat {
+    padding: 14px 10px;
+  }
+  .stat-val {
+    font-size: 22px;
+  }
+
+  .distribution-section {
+    padding: 16px 32px 0;
+  }
+  .voices-section {
+    padding: 16px 32px 0;
+  }
+  .voice-name {
+    font-size: 14px;
+  }
+  .voice-quote {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .legislation-section {
+    padding: 16px 32px 40px;
+  }
+  .leg-card {
+    padding: 18px 20px;
+  }
+  .leg-title {
+    font-size: 14px;
+  }
+  .leg-body {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  /* Refraction subscription cards */
+  .ref-sub-card {
+    padding: 12px 18px;
+  }
+  .ref-sub-card:hover {
+    border-color: var(--divider-strong);
+    background: var(--surface-overlay);
+  }
+
+  /* Toggle buttons */
+  .tog {
+    font-size: 9px;
+    padding: 7px 14px;
+    transition: all 0.2s;
+  }
+  .tog:hover:not(.active) {
+    color: var(--text-secondary);
+    background: var(--surface-raised);
+  }
+
+  /* ── PARALLAX OVERLAY — DESKTOP ──────────────────────── */
+  .parallax-overlay {
+    bottom: 0;  /* no bottom offset on desktop */
+  }
+
+  .parallax-nav {
+    height: 44px;
+  }
+  .parallax-nav-btn {
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    transition: color 0.2s, border-bottom-color 0.2s;
+  }
+  .parallax-nav-btn:hover:not(.active) {
+    color: rgba(245,240,232,0.55);
+  }
+
+  .p-panel {
+    padding: 24px 32px;
+  }
+
+  /* Diatribe panel — desktop */
+  .dia-title {
+    font-size: 22px;
+  }
+  .dia-desc {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .dia-text-side {
+    line-height: 1.55;
+  }
+
+  /* Toggle board & input */
+  .pf-drawer {
+    padding: 16px 32px;
+  }
+
+  .px-input {
+    font-size: 13px;
+    padding: 10px 14px;
+  }
+
+  /* Z slider bar */
+  .parallax-z-bar {
+    padding: 14px 32px 24px;
+  }
+
+  /* ── PARALLELOGRAM VIEW — DESKTOP READER ─────────────── */
+  .para-index {
+    padding: 88px 48px 48px;
+    max-width: 840px;
+    margin: 0 auto;
+  }
+
+  .para-reader {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 48px 64px;
+  }
+
+  /* ── SPLASH — DESKTOP ────────────────────────────────── */
+  #splash {
+    /* Let splash breathe on desktop */
+  }
+  .splash-wordmark-wrap img {
+    max-height: 48px;
+  }
+  .splash-logo-wrap img {
+    max-height: 280px;
+  }
+  .splash-enter {
+    font-size: 11px;
+    padding: 14px 40px;
+    letter-spacing: 0.3em;
+  }
+  .splash-enter:hover {
+    background: var(--surface-overlay);
+    border-color: var(--text-secondary);
+    transform: translateY(-1px);
+  }
+  .splash-credit {
+    font-size: 11px;
+  }
+  .splash-sub {
+    font-size: 13px;
+  }
+
+  /* ── ONBOARDING — DESKTOP ────────────────────────────── */
+  #onboarding {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  /* ── PROFILE SETUP — DESKTOP ─────────────────────────── */
+  #profileSetup {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  /* ── GENERAL HOVER STATES ────────────────────────────── */
+  /* Add cursor feedback for interactive elements */
+  .beam-header {
+    cursor: grab;
+  }
+  .beam-header:active {
+    cursor: grabbing;
+  }
+
+  /* Keyboard focus indicators */
+  .answer-btn:focus-visible,
+  .submit-btn:focus-visible,
+  .tog:focus-visible,
+  .parallax-nav-btn:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+  }
+
+  textarea:focus-visible {
+    outline: none;
+    border-color: var(--gold);
+  }
+
+  /* Scrollbar styling for desktop */
+  .panel {
+    scrollbar-width: thin;
+    scrollbar-color: var(--divider) transparent;
+  }
+  .panel::-webkit-scrollbar {
+    display: block !important;
+    width: 4px;
+  }
+  .panel::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .panel::-webkit-scrollbar-thumb {
+    background: var(--divider);
+    border-radius: 2px;
+  }
+  .panel::-webkit-scrollbar-thumb:hover {
+    background: var(--divider-strong);
+  }
+
+}  /* end @media ≥ 1200px */
+
+
+/* ── TABLET / IPAD BREAKPOINT ≥ 768px, < 1200px ──────── */
+@media (min-width: 768px) and (max-width: 1199px) {
+
+  .phone {
+    width: 100vw;
+    height: 100vh;
+    max-width: none;
+    max-height: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  /* Slightly more breathing room on iPad */
+  .event-header { padding: 16px 28px; }
+  .event-headline { font-size: 22px; }
+  .framing-text { padding: 14px 28px; font-size: 13.5px; }
+  .answers-area { padding: 14px 28px 0; }
+  .answer-btn { padding: 14px 14px; font-size: 12px; min-height: 85px; }
+  .quadrant-section { padding: 0 28px 14px; }
+  .response-section { padding: 0 28px 14px; }
+  .submit-area { padding: 4px 28px 32px; }
+  .profile-header { padding: 20px 28px 16px; }
+  .section-label { padding: 16px 28px 8px; }
+  .response-log { padding: 0 28px 28px; }
+  .agg-header { padding: 16px 28px 12px; }
+  .stats-row { padding: 14px 28px 0; }
+  .legislation-section { padding: 14px 28px 36px; }
+
+  /* Beam header — full width */
+  .beam-header { height: 68px; }
+  .beam-logo-bar { height: 68px; }
+  .beam-header-img { height: 68px; }
+}
