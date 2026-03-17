@@ -2961,34 +2961,34 @@ body {
     <div class="form-section-label">The Diatribe</div>
 
     <div class="dia-section good">
-      <h4>LG — Left, Fluid</h4>
+      <h4>LF — Left, Fluid</h4>
       <div class="field">
-        <label for="diaLG">Statement</label>
-        <textarea id="diaLG" placeholder="The left is making a principled case..."></textarea>
+        <label for="diaLF">Statement</label>
+        <textarea id="diaLF" placeholder="The left is making a principled case..."></textarea>
       </div>
     </div>
 
     <div class="dia-section bad">
-      <h4>LB — Left, Denominated</h4>
+      <h4>LD — Left, Denominated</h4>
       <div class="field">
-        <label for="diaLB">Statement</label>
-        <textarea id="diaLB" placeholder="The left is using this to..."></textarea>
+        <label for="diaLD">Statement</label>
+        <textarea id="diaLD" placeholder="The left is using this to..."></textarea>
       </div>
     </div>
 
     <div class="dia-section good">
-      <h4>RG — Right, Fluid</h4>
+      <h4>RF — Right, Fluid</h4>
       <div class="field">
-        <label for="diaRG">Statement</label>
-        <textarea id="diaRG" placeholder="The right is making a principled case..."></textarea>
+        <label for="diaRF">Statement</label>
+        <textarea id="diaRF" placeholder="The right is making a principled case..."></textarea>
       </div>
     </div>
 
     <div class="dia-section bad">
-      <h4>RB — Right, Denominated</h4>
+      <h4>RD — Right, Denominated</h4>
       <div class="field">
-        <label for="diaRB">Statement</label>
-        <textarea id="diaRB" placeholder="The right is using this to..."></textarea>
+        <label for="diaRD">Statement</label>
+        <textarea id="diaRD" placeholder="The right is using this to..."></textarea>
       </div>
     </div>
   </div>
@@ -4835,7 +4835,7 @@ function editEvent(id) {
   checkPairing();
 
   // Diatribe
-  ['LG', 'LB', 'RG', 'RB'].forEach(key => {
+  ['LF', 'LD', 'RF', 'RD'].forEach(key => {
     document.getElementById(`dia${key}`).value = evt.diatribe?.[key]?.text || '';
   });
 
@@ -4856,7 +4856,7 @@ function hideForm() {
 function clearForm() {
   const fields = ['evtTitle', 'evtCategory', 'evtDate', 'evtPrompt', 'evtFraming', 'evtSource',
     'axXPos', 'axXNeg', 'axYPos', 'axYNeg',
-    'diaLG', 'diaLB', 'diaRG', 'diaRB'];
+    'diaLF', 'diaLD', 'diaRF', 'diaRD'];
   fields.forEach(id => { document.getElementById(id).value = ''; });
   document.getElementById('evtActive').checked = false;
   document.getElementById('evtPrevalentAxis').value = 'x';
@@ -5029,8 +5029,8 @@ function saveEvent() {
   });
 
   // Build diatribe
-  const diaSides = { LG: { side: 'left', register: 'fluid' }, LB: { side: 'left', register: 'denominated' },
-                     RG: { side: 'right', register: 'fluid' }, RB: { side: 'right', register: 'denominated' } };
+  const diaSides = { LF: { side: 'left', register: 'fluid' }, LD: { side: 'left', register: 'denominated' },
+                     RF: { side: 'right', register: 'fluid' }, RD: { side: 'right', register: 'denominated' } };
   Object.keys(diaSides).forEach(key => {
     eventData.diatribe[key] = {
       text: document.getElementById(`dia${key}`).value.trim(),
@@ -6144,10 +6144,10 @@ KEYWORDS:
 For each band response, supply xKeyword and yKeyword — the single most load-bearing word on each axis from that response.
 
 DIATRIBE FIELDS (short 15-25 word descriptors):
-LG: Left-side good-faith discourse pattern for this event
-LB: Left-side bad-faith denomination pattern
-RG: Right-side good-faith discourse pattern
-RB: Right-side bad-faith denomination pattern
+LF: Left-side fluid discourse pattern for this event
+LD: Left-side denominated discourse pattern
+RF: Right-side fluid discourse pattern
+RD: Right-side denominated discourse pattern
 
 OUTPUT: Respond ONLY with valid JSON. No preamble, no explanation, no markdown fences.
 {
@@ -6177,7 +6177,7 @@ OUTPUT: Respond ONLY with valid JSON. No preamble, no explanation, no markdown f
     },
     "B": {...}, "C": {...}, "D": {...}
   },
-  "diatribe": { "LG": "...", "LB": "...", "RG": "...", "RB": "..." }
+  "diatribe": { "LF": "...", "LD": "...", "RF": "...", "RD": "..." }
 }`;
 
 // Store AI draft for metadata comparison
@@ -6347,7 +6347,7 @@ async function generateSuggestions() {
 
     // ── Apply diatribe ──
     const dia = draft.diatribe || {};
-    ['LG', 'LB', 'RG', 'RB'].forEach(k => {
+    ['LF', 'LD', 'RF', 'RD'].forEach(k => {
       const el = document.getElementById(`dia${k}`);
       if (el && dia[k]) el.value = dia[k];
     });
@@ -7031,7 +7031,7 @@ PRISM_DRAFT
     },
     "B": { ... }, "C": { ... }, "D": { ... }
   },
-  "diatribe": { "LG": "...", "LB": "...", "RG": "...", "RB": "..." }
+  "diatribe": { "LF": "...", "LD": "...", "RF": "...", "RD": "..." }
 }
 ---JSON_END---
 
@@ -7378,7 +7378,7 @@ function applyDraftFromChat(msgId) {
 
   // Diatribe
   const dia = draft.diatribe || {};
-  ['LG', 'LB', 'RG', 'RB'].forEach(k => {
+  ['LF', 'LD', 'RF', 'RD'].forEach(k => {
     const el = document.getElementById(`dia${k}`);
     if (el && dia[k]) el.value = dia[k];
   });
