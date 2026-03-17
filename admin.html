@@ -1743,7 +1743,7 @@ body {
 .pairing-status .pair-check.fail::before { content: '✗'; }
 
 /* ── DIATRIBE VARIANT TIERS ── */
-/* ── BAND SUB-SECTIONS (goodFaith / coalition / badFaith) ── */
+/* ── BAND SUB-SECTIONS (fluid / coalition / denominated) ── */
 .band-section {
   margin-top: 12px;
   padding: 14px 16px;
@@ -1760,12 +1760,12 @@ body {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-.band-section.goodFaith { border-left-color: var(--green); }
-.band-section.goodFaith h5 { color: var(--green); }
+.band-section.fluid { border-left-color: var(--green); }
+.band-section.fluid h5 { color: var(--green); }
 .band-section.coalition { border-left-color: var(--gold); }
 .band-section.coalition h5 { color: var(--gold); }
-.band-section.badFaith { border-left-color: var(--red); }
-.band-section.badFaith h5 { color: var(--red); }
+.band-section.denominated { border-left-color: var(--red); }
+.band-section.denominated h5 { color: var(--red); }
 
 /* ── ANTI-VALENT TOGGLE ── */
 .antivalent-toggle {
@@ -1790,9 +1790,9 @@ body {
 }
 .av-btn:not(:last-child) { border-right: 1px solid var(--border); }
 .av-btn:hover { background: var(--paper); color: var(--ink-light); }
-.av-btn.active[data-band="goodFaith"] { background: var(--green); color: white; }
+.av-btn.active[data-band="fluid"] { background: var(--green); color: white; }
 .av-btn.active[data-band="coalition"] { background: var(--gold); color: white; }
-.av-btn.active[data-band="badFaith"] { background: var(--red); color: white; }
+.av-btn.active[data-band="denominated"] { background: var(--red); color: white; }
 .av-rationale {
   font-family: 'DM Mono', monospace;
   font-size: 10px;
@@ -2723,9 +2723,9 @@ body {
       <div class="field">
         <label>Anti-Valent Band</label>
         <div class="antivalent-toggle" id="antiValentToggle">
-          <button type="button" class="av-btn" data-band="goodFaith" onclick="setAntiValent('goodFaith')">Good Faith</button>
+          <button type="button" class="av-btn" data-band="fluid" onclick="setAntiValent('fluid')">Fluid</button>
           <button type="button" class="av-btn" data-band="coalition" onclick="setAntiValent('coalition')">Coalition</button>
-          <button type="button" class="av-btn" data-band="badFaith" onclick="setAntiValent('badFaith')">Bad Faith</button>
+          <button type="button" class="av-btn" data-band="denominated" onclick="setAntiValent('denominated')">Denominated</button>
         </div>
         <input type="hidden" id="evtAntiValentBand" value="">
         <div class="av-rationale" id="avRationale"></div>
@@ -2755,17 +2755,17 @@ body {
         <label for="srcA">Sources · Quad A</label>
         <textarea id="srcA" placeholder="Why this response loads X+/Y+ — links, notes, reasoning..."></textarea>
       </div>
-      <div class="band-section goodFaith">
-        <h5>Good Faith</h5>
+      <div class="band-section fluid">
+        <h5>Fluid</h5>
         <div class="field">
-          <label for="respA_goodFaith">Response text</label>
-          <textarea id="respA_goodFaith" placeholder="Good faith response for quadrant A..."></textarea>
+          <label for="respA_fluid">Response text</label>
+          <textarea id="respA_fluid" placeholder="Fluid response for quadrant A..."></textarea>
         </div>
         <div class="field-row">
-          <div class="field"><label for="respA_goodFaith_xWord">X keyword</label><input type="text" id="respA_goodFaith_xWord" placeholder="e.g. deterrence"></div>
-          <div class="field"><label for="respA_goodFaith_yWord">Y keyword</label><input type="text" id="respA_goodFaith_yWord" placeholder="e.g. Hold"></div>
+          <div class="field"><label for="respA_fluid_xWord">X keyword</label><input type="text" id="respA_fluid_xWord" placeholder="e.g. deterrence"></div>
+          <div class="field"><label for="respA_fluid_yWord">Y keyword</label><input type="text" id="respA_fluid_yWord" placeholder="e.g. Hold"></div>
         </div>
-        <div class="wt-wrap" id="taggerA_goodFaith"></div>
+        <div class="wt-wrap" id="taggerA_fluid"></div>
       </div>
       <div class="band-section coalition">
         <h5>Coalition</h5>
@@ -2779,17 +2779,17 @@ body {
         </div>
         <div class="wt-wrap" id="taggerA_coalition"></div>
       </div>
-      <div class="band-section badFaith">
-        <h5>Bad Faith</h5>
+      <div class="band-section denominated">
+        <h5>Denominated</h5>
         <div class="field">
-          <label for="respA_badFaith">Response text</label>
-          <textarea id="respA_badFaith" placeholder="Bad faith response for quadrant A..."></textarea>
+          <label for="respA_denominated">Response text</label>
+          <textarea id="respA_denominated" placeholder="Denominated response for quadrant A..."></textarea>
         </div>
         <div class="field-row">
-          <div class="field"><label for="respA_badFaith_xWord">X keyword</label><input type="text" id="respA_badFaith_xWord"></div>
-          <div class="field"><label for="respA_badFaith_yWord">Y keyword</label><input type="text" id="respA_badFaith_yWord"></div>
+          <div class="field"><label for="respA_denominated_xWord">X keyword</label><input type="text" id="respA_denominated_xWord"></div>
+          <div class="field"><label for="respA_denominated_yWord">Y keyword</label><input type="text" id="respA_denominated_yWord"></div>
         </div>
-        <div class="wt-wrap" id="taggerA_badFaith"></div>
+        <div class="wt-wrap" id="taggerA_denominated"></div>
       </div>
     </div>
 
@@ -2809,17 +2809,17 @@ body {
         <label for="srcB">Sources · Quad B</label>
         <textarea id="srcB" placeholder="Why this response loads X−/Y+ — links, notes, reasoning..."></textarea>
       </div>
-      <div class="band-section goodFaith">
-        <h5>Good Faith</h5>
+      <div class="band-section fluid">
+        <h5>Fluid</h5>
         <div class="field">
-          <label for="respB_goodFaith">Response text</label>
-          <textarea id="respB_goodFaith" placeholder="Good faith response for quadrant B..."></textarea>
+          <label for="respB_fluid">Response text</label>
+          <textarea id="respB_fluid" placeholder="Fluid response for quadrant B..."></textarea>
         </div>
         <div class="field-row">
-          <div class="field"><label for="respB_goodFaith_xWord">X keyword</label><input type="text" id="respB_goodFaith_xWord"></div>
-          <div class="field"><label for="respB_goodFaith_yWord">Y keyword</label><input type="text" id="respB_goodFaith_yWord"></div>
+          <div class="field"><label for="respB_fluid_xWord">X keyword</label><input type="text" id="respB_fluid_xWord"></div>
+          <div class="field"><label for="respB_fluid_yWord">Y keyword</label><input type="text" id="respB_fluid_yWord"></div>
         </div>
-        <div class="wt-wrap" id="taggerB_goodFaith"></div>
+        <div class="wt-wrap" id="taggerB_fluid"></div>
       </div>
       <div class="band-section coalition">
         <h5>Coalition</h5>
@@ -2833,17 +2833,17 @@ body {
         </div>
         <div class="wt-wrap" id="taggerB_coalition"></div>
       </div>
-      <div class="band-section badFaith">
-        <h5>Bad Faith</h5>
+      <div class="band-section denominated">
+        <h5>Denominated</h5>
         <div class="field">
-          <label for="respB_badFaith">Response text</label>
-          <textarea id="respB_badFaith" placeholder="Bad faith response for quadrant B..."></textarea>
+          <label for="respB_denominated">Response text</label>
+          <textarea id="respB_denominated" placeholder="Denominated response for quadrant B..."></textarea>
         </div>
         <div class="field-row">
-          <div class="field"><label for="respB_badFaith_xWord">X keyword</label><input type="text" id="respB_badFaith_xWord"></div>
-          <div class="field"><label for="respB_badFaith_yWord">Y keyword</label><input type="text" id="respB_badFaith_yWord"></div>
+          <div class="field"><label for="respB_denominated_xWord">X keyword</label><input type="text" id="respB_denominated_xWord"></div>
+          <div class="field"><label for="respB_denominated_yWord">Y keyword</label><input type="text" id="respB_denominated_yWord"></div>
         </div>
-        <div class="wt-wrap" id="taggerB_badFaith"></div>
+        <div class="wt-wrap" id="taggerB_denominated"></div>
       </div>
     </div>
 
@@ -2863,17 +2863,17 @@ body {
         <label for="srcC">Sources · Quad C</label>
         <textarea id="srcC" placeholder="Why this response loads X−/Y− — links, notes, reasoning..."></textarea>
       </div>
-      <div class="band-section goodFaith">
-        <h5>Good Faith</h5>
+      <div class="band-section fluid">
+        <h5>Fluid</h5>
         <div class="field">
-          <label for="respC_goodFaith">Response text</label>
-          <textarea id="respC_goodFaith" placeholder="Good faith response for quadrant C..."></textarea>
+          <label for="respC_fluid">Response text</label>
+          <textarea id="respC_fluid" placeholder="Fluid response for quadrant C..."></textarea>
         </div>
         <div class="field-row">
-          <div class="field"><label for="respC_goodFaith_xWord">X keyword</label><input type="text" id="respC_goodFaith_xWord"></div>
-          <div class="field"><label for="respC_goodFaith_yWord">Y keyword</label><input type="text" id="respC_goodFaith_yWord"></div>
+          <div class="field"><label for="respC_fluid_xWord">X keyword</label><input type="text" id="respC_fluid_xWord"></div>
+          <div class="field"><label for="respC_fluid_yWord">Y keyword</label><input type="text" id="respC_fluid_yWord"></div>
         </div>
-        <div class="wt-wrap" id="taggerC_goodFaith"></div>
+        <div class="wt-wrap" id="taggerC_fluid"></div>
       </div>
       <div class="band-section coalition">
         <h5>Coalition</h5>
@@ -2887,17 +2887,17 @@ body {
         </div>
         <div class="wt-wrap" id="taggerC_coalition"></div>
       </div>
-      <div class="band-section badFaith">
-        <h5>Bad Faith</h5>
+      <div class="band-section denominated">
+        <h5>Denominated</h5>
         <div class="field">
-          <label for="respC_badFaith">Response text</label>
-          <textarea id="respC_badFaith" placeholder="Bad faith response for quadrant C..."></textarea>
+          <label for="respC_denominated">Response text</label>
+          <textarea id="respC_denominated" placeholder="Denominated response for quadrant C..."></textarea>
         </div>
         <div class="field-row">
-          <div class="field"><label for="respC_badFaith_xWord">X keyword</label><input type="text" id="respC_badFaith_xWord"></div>
-          <div class="field"><label for="respC_badFaith_yWord">Y keyword</label><input type="text" id="respC_badFaith_yWord"></div>
+          <div class="field"><label for="respC_denominated_xWord">X keyword</label><input type="text" id="respC_denominated_xWord"></div>
+          <div class="field"><label for="respC_denominated_yWord">Y keyword</label><input type="text" id="respC_denominated_yWord"></div>
         </div>
-        <div class="wt-wrap" id="taggerC_badFaith"></div>
+        <div class="wt-wrap" id="taggerC_denominated"></div>
       </div>
     </div>
 
@@ -2917,17 +2917,17 @@ body {
         <label for="srcD">Sources · Quad D</label>
         <textarea id="srcD" placeholder="Why this response loads X+/Y− — links, notes, reasoning..."></textarea>
       </div>
-      <div class="band-section goodFaith">
-        <h5>Good Faith</h5>
+      <div class="band-section fluid">
+        <h5>Fluid</h5>
         <div class="field">
-          <label for="respD_goodFaith">Response text</label>
-          <textarea id="respD_goodFaith" placeholder="Good faith response for quadrant D..."></textarea>
+          <label for="respD_fluid">Response text</label>
+          <textarea id="respD_fluid" placeholder="Fluid response for quadrant D..."></textarea>
         </div>
         <div class="field-row">
-          <div class="field"><label for="respD_goodFaith_xWord">X keyword</label><input type="text" id="respD_goodFaith_xWord"></div>
-          <div class="field"><label for="respD_goodFaith_yWord">Y keyword</label><input type="text" id="respD_goodFaith_yWord"></div>
+          <div class="field"><label for="respD_fluid_xWord">X keyword</label><input type="text" id="respD_fluid_xWord"></div>
+          <div class="field"><label for="respD_fluid_yWord">Y keyword</label><input type="text" id="respD_fluid_yWord"></div>
         </div>
-        <div class="wt-wrap" id="taggerD_goodFaith"></div>
+        <div class="wt-wrap" id="taggerD_fluid"></div>
       </div>
       <div class="band-section coalition">
         <h5>Coalition</h5>
@@ -2941,17 +2941,17 @@ body {
         </div>
         <div class="wt-wrap" id="taggerD_coalition"></div>
       </div>
-      <div class="band-section badFaith">
-        <h5>Bad Faith</h5>
+      <div class="band-section denominated">
+        <h5>Denominated</h5>
         <div class="field">
-          <label for="respD_badFaith">Response text</label>
-          <textarea id="respD_badFaith" placeholder="Bad faith response for quadrant D..."></textarea>
+          <label for="respD_denominated">Response text</label>
+          <textarea id="respD_denominated" placeholder="Denominated response for quadrant D..."></textarea>
         </div>
         <div class="field-row">
-          <div class="field"><label for="respD_badFaith_xWord">X keyword</label><input type="text" id="respD_badFaith_xWord"></div>
-          <div class="field"><label for="respD_badFaith_yWord">Y keyword</label><input type="text" id="respD_badFaith_yWord"></div>
+          <div class="field"><label for="respD_denominated_xWord">X keyword</label><input type="text" id="respD_denominated_xWord"></div>
+          <div class="field"><label for="respD_denominated_yWord">Y keyword</label><input type="text" id="respD_denominated_yWord"></div>
         </div>
-        <div class="wt-wrap" id="taggerD_badFaith"></div>
+        <div class="wt-wrap" id="taggerD_denominated"></div>
       </div>
     </div>
   </div>
@@ -2961,7 +2961,7 @@ body {
     <div class="form-section-label">The Diatribe</div>
 
     <div class="dia-section good">
-      <h4>LG — Left, Good Faith</h4>
+      <h4>LG — Left, Fluid</h4>
       <div class="field">
         <label for="diaLG">Statement</label>
         <textarea id="diaLG" placeholder="The left is making a principled case..."></textarea>
@@ -2969,7 +2969,7 @@ body {
     </div>
 
     <div class="dia-section bad">
-      <h4>LB — Left, Bad Faith</h4>
+      <h4>LB — Left, Denominated</h4>
       <div class="field">
         <label for="diaLB">Statement</label>
         <textarea id="diaLB" placeholder="The left is using this to..."></textarea>
@@ -2977,7 +2977,7 @@ body {
     </div>
 
     <div class="dia-section good">
-      <h4>RG — Right, Good Faith</h4>
+      <h4>RG — Right, Fluid</h4>
       <div class="field">
         <label for="diaRG">Statement</label>
         <textarea id="diaRG" placeholder="The right is making a principled case..."></textarea>
@@ -2985,7 +2985,7 @@ body {
     </div>
 
     <div class="dia-section bad">
-      <h4>RB — Right, Bad Faith</h4>
+      <h4>RB — Right, Denominated</h4>
       <div class="field">
         <label for="diaRB">Statement</label>
         <textarea id="diaRB" placeholder="The right is using this to..."></textarea>
@@ -3174,6 +3174,19 @@ body {
       <div class="editor-outline">
         <div class="editor-outline-header">Outline</div>
         <div id="editorOutlineContent"></div>
+
+        <!-- Inline new event form (hidden by default) -->
+        <div id="editorNewEventForm" style="display:none; padding:10px; border:1px solid var(--border); border-radius:6px; margin:8px 0; background:var(--cream);">
+          <div style="font-size:12px; font-weight:600; margin-bottom:8px; color:var(--fg);">New Event</div>
+          <input type="text" id="editorNewEvtTitle" placeholder="Event title" style="width:100%; margin-bottom:6px; padding:6px 8px; border:1px solid var(--border); border-radius:4px; font-size:13px; background:var(--bg); color:var(--fg);">
+          <input type="date" id="editorNewEvtDate" style="width:100%; margin-bottom:6px; padding:6px 8px; border:1px solid var(--border); border-radius:4px; font-size:13px; background:var(--bg); color:var(--fg);">
+          <textarea id="editorNewEvtFraming" placeholder="Brief framing (optional)" rows="2" style="width:100%; margin-bottom:8px; padding:6px 8px; border:1px solid var(--border); border-radius:4px; font-size:13px; resize:vertical; background:var(--bg); color:var(--fg);"></textarea>
+          <div style="display:flex; gap:6px;">
+            <button class="btn small primary" onclick="editorSaveNewEvent()">Save</button>
+            <button class="btn small" onclick="editorCancelNewEvent()">Cancel</button>
+          </div>
+        </div>
+
         <div class="editor-outline-actions">
           <button class="btn small derive-btn" onclick="editorDerive()">◆ Derive</button>
           <button class="btn small" onclick="editorShowRefinement()">Refinement</button>
@@ -3191,6 +3204,20 @@ body {
           <textarea id="editorTextarea" placeholder="Begin writing, or ask Claude to draft from the brainstorm context..."></textarea>
         </div>
         <div id="editorPreviewMode" class="editor-manuscript-body editor-manuscript-preview" style="display:none;"></div>
+
+        <!-- Refinement mode -->
+        <div id="editorRefinementMode" class="editor-manuscript-body" style="display:none; overflow-y:auto; padding:16px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+            <div style="font-size:14px; font-weight:600; color:var(--fg);">Refinement · Post-Derive Review</div>
+            <button class="btn small" onclick="editorExitRefinement()">← Manuscript</button>
+          </div>
+          <div id="refinementContent" style="font-size:13px;"></div>
+          <div style="margin-top:16px; padding-top:12px; border-top:1px solid var(--border); display:flex; gap:8px;">
+            <button class="btn small primary" onclick="editorSaveRefinement()">Save All Changes</button>
+            <button class="btn small" onclick="editorExitRefinement()">Cancel</button>
+          </div>
+        </div>
+
         <div class="editor-manuscript-toolbar">
           <button class="btn small" onclick="editorInsert('**','**')">B</button>
           <button class="btn small" onclick="editorInsert('*','*')">I</button>
@@ -4475,11 +4502,197 @@ async function editorDerive() {
 }
 
 function editorShowRefinement() {
-  toast('Refinement view — coming soon');
+  // Get linked events
+  let eventIds = [];
+  if (editorState.type === 'arc') {
+    const arc = PrismDB.getArc(editorState.id);
+    if (arc) eventIds = arc.eventIds || [];
+  } else {
+    const art = getArticle(editorState.id);
+    if (art) eventIds = art.eventIds || [];
+  }
+
+  if (eventIds.length === 0) {
+    toast('No events linked — nothing to refine', true);
+    return;
+  }
+
+  // Build refinement UI
+  const container = document.getElementById('refinementContent');
+  let html = '';
+
+  eventIds.forEach((eid, idx) => {
+    const evt = PrismDB.getEvent(eid);
+    if (!evt) return;
+
+    const dz = evt.derivedZ || {};
+    const objZ = dz.objectZ ?? 0;
+    const sqz = dz.subjectZ || {};
+    const provenance = dz.provenance || 'none';
+    const timestamp = dz.timestamp ? new Date(dz.timestamp).toLocaleDateString() : '—';
+    const phrases = (evt.axisLoadPhrases || []).join('; ');
+
+    html += `
+      <div class="refinement-event" style="padding:14px; margin-bottom:14px; border:1px solid var(--border); border-radius:6px; background:var(--bg);" data-event-id="${eid}">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+          <div style="font-weight:600; font-size:13px;">${idx + 1}. ${escHtml(evt.title || eid)}</div>
+          <div style="font-size:11px; color:var(--muted);">
+            <span class="refinement-provenance" data-eid="${eid}" style="padding:2px 6px; border-radius:3px; background:${provenance === 'derived' ? 'var(--green)' : provenance === 'manual' ? '#e8d44d' : 'var(--muted)'}; color:#fff; font-size:10px; text-transform:uppercase;">${provenance}</span>
+            ${timestamp}
+          </div>
+        </div>
+
+        <!-- Object Z -->
+        <div style="margin-bottom:10px;">
+          <label style="font-size:11px; color:var(--muted); display:block; margin-bottom:3px;">Object Z (promise-delivery gap from Object's operative purpose)</label>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <input type="range" min="-1" max="1" step="0.05" value="${objZ}"
+              class="ref-objz-slider" data-eid="${eid}"
+              oninput="this.nextElementSibling.textContent = parseFloat(this.value).toFixed(2)"
+              style="flex:1;">
+            <span style="font-family:monospace; font-size:13px; min-width:40px; text-align:right;">${objZ.toFixed ? objZ.toFixed(2) : '0.00'}</span>
+          </div>
+        </div>
+
+        <!-- Subject Z per quadrant -->
+        <div style="margin-bottom:10px;">
+          <label style="font-size:11px; color:var(--muted); display:block; margin-bottom:6px;">Subject Z (per-quadrant displacement)</label>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px;">
+            ${['A', 'B', 'C', 'D'].map(q => {
+              const val = sqz[q] ?? 0;
+              return `<div style="display:flex; align-items:center; gap:6px;">
+                <span style="font-size:12px; font-weight:600; min-width:16px;">${q}</span>
+                <input type="range" min="-1" max="1" step="0.05" value="${val}"
+                  class="ref-sqz-slider" data-eid="${eid}" data-quad="${q}"
+                  oninput="this.nextElementSibling.textContent = parseFloat(this.value).toFixed(2)"
+                  style="flex:1;">
+                <span style="font-family:monospace; font-size:12px; min-width:36px; text-align:right;">${typeof val === 'number' ? val.toFixed(2) : '0.00'}</span>
+              </div>`;
+            }).join('')}
+          </div>
+        </div>
+
+        <!-- Axis-load phrases -->
+        <div>
+          <label style="font-size:11px; color:var(--muted); display:block; margin-bottom:3px;">Axis-load phrases</label>
+          <input type="text" class="ref-phrases" data-eid="${eid}" value="${escAttr(phrases)}"
+            placeholder="semicolon-separated axis-load phrases"
+            style="width:100%; padding:5px 8px; border:1px solid var(--border); border-radius:4px; font-size:12px; background:var(--bg); color:var(--fg);">
+        </div>
+      </div>`;
+  });
+
+  container.innerHTML = html;
+
+  // Show refinement, hide edit/preview
+  document.getElementById('editorEditMode').style.display = 'none';
+  document.getElementById('editorPreviewMode').style.display = 'none';
+  document.getElementById('editorRefinementMode').style.display = '';
+  document.querySelector('.editor-manuscript-toolbar').style.display = 'none';
+  document.getElementById('editorPreviewToggle').style.display = 'none';
+}
+
+function editorExitRefinement() {
+  document.getElementById('editorRefinementMode').style.display = 'none';
+  document.getElementById('editorEditMode').style.display = '';
+  document.querySelector('.editor-manuscript-toolbar').style.display = '';
+  document.getElementById('editorPreviewToggle').style.display = '';
+  editorState.preview = false;
+}
+
+function editorSaveRefinement() {
+  const blocks = document.querySelectorAll('.refinement-event');
+  let count = 0;
+
+  blocks.forEach(block => {
+    const eid = block.dataset.eventId;
+    const evt = PrismDB.getEvent(eid);
+    if (!evt) return;
+
+    // Read Object Z
+    const objSlider = block.querySelector('.ref-objz-slider');
+    const objectZ = objSlider ? parseFloat(objSlider.value) : 0;
+
+    // Read Subject Z per quadrant
+    const subjectZ = {};
+    block.querySelectorAll('.ref-sqz-slider').forEach(sl => {
+      subjectZ[sl.dataset.quad] = parseFloat(sl.value);
+    });
+
+    // Read axis-load phrases
+    const phrasesInput = block.querySelector('.ref-phrases');
+    const phrases = phrasesInput ? phrasesInput.value.split(';').map(s => s.trim()).filter(Boolean) : [];
+
+    // Write back
+    evt.derivedZ = {
+      objectZ,
+      subjectZ,
+      provenance: 'manual',
+      timestamp: new Date().toISOString()
+    };
+    evt.axisLoadPhrases = phrases;
+
+    PrismDB.updateEvent(eid, evt);
+    count++;
+  });
+
+  // Update provenance badges to 'manual'
+  document.querySelectorAll('.refinement-provenance').forEach(badge => {
+    badge.textContent = 'manual';
+    badge.style.background = '#e8d44d';
+  });
+
+  toast(`Saved refinement data for ${count} event${count !== 1 ? 's' : ''}`);
 }
 
 function editorNewEvent() {
-  toast('Parallelogram event creator — coming soon');
+  if (editorState.type !== 'arc') {
+    toast('New events can only be added to arcs', true);
+    return;
+  }
+  const form = document.getElementById('editorNewEventForm');
+  document.getElementById('editorNewEvtTitle').value = '';
+  document.getElementById('editorNewEvtDate').value = new Date().toISOString().split('T')[0];
+  document.getElementById('editorNewEvtFraming').value = '';
+  form.style.display = '';
+  document.getElementById('editorNewEvtTitle').focus();
+}
+
+function editorCancelNewEvent() {
+  document.getElementById('editorNewEventForm').style.display = 'none';
+}
+
+function editorSaveNewEvent() {
+  const title = document.getElementById('editorNewEvtTitle').value.trim();
+  if (!title) { toast('Event needs a title', true); return; }
+
+  const arc = PrismDB.getArc(editorState.id);
+  if (!arc) { toast('Arc not found', true); return; }
+
+  // Create minimal draft event
+  const eventData = {
+    title,
+    date: document.getElementById('editorNewEvtDate').value || '',
+    framing: document.getElementById('editorNewEvtFraming').value.trim(),
+    category: arc.object ? arc.object : '',
+    prompt: title,
+    active: false,
+    prevalentAxis: 'x',
+    antiValentBand: '',
+    meta: { status: 'draft', editHistory: [], source: 'Created from editor · arc: ' + arc.title },
+    axes: { x: { pos: 'Right', neg: 'Left' }, y: { pos: 'Institutional', neg: 'Grassroots' } },
+    responses: {},
+    diatribe: {}
+  };
+
+  const saved = PrismDB.addEvent(eventData);
+  PrismDB.addEventToArc(saved.id, arc.id, 'confirmed');
+
+  // Hide form, rebuild outline
+  document.getElementById('editorNewEventForm').style.display = 'none';
+  buildOutlineFromArc(PrismDB.getArc(arc.id));
+  document.getElementById('editorDeskContext').textContent = `Arc · ${arc.title} · ${(PrismDB.getArc(arc.id).eventIds || []).length} events`;
+  toast(`Created event: ${title} (${saved.id})`);
 }
 
 // Auto-save manuscript on changes
@@ -4737,9 +4950,9 @@ function setAntiValent(band) {
 
   const rationale = document.getElementById('avRationale');
   const rationales = {
-    goodFaith: 'Discourse floor is elevated — no genuine good faith available. Coalition is the best available.',
+    fluid: 'Discourse floor is elevated — no genuine good faith available. Coalition is the best available.',
     coalition: 'No middle ground — binary split. Good faith vs bad faith, no coalition stage formed.',
-    badFaith: 'Rare — discourse hasn\'t degraded to bad faith. Even at max Diatribe, worst is coalition-level.'
+    denominated: 'Rare — discourse hasn\'t degraded to bad faith. Even at max Diatribe, worst is coalition-level.'
   };
   rationale.textContent = rationales[band] || '';
 }
@@ -4816,8 +5029,8 @@ function saveEvent() {
   });
 
   // Build diatribe
-  const diaSides = { LG: { side: 'left', faith: 'good' }, LB: { side: 'left', faith: 'bad' },
-                     RG: { side: 'right', faith: 'good' }, RB: { side: 'right', faith: 'bad' } };
+  const diaSides = { LG: { side: 'left', register: 'fluid' }, LB: { side: 'left', register: 'denominated' },
+                     RG: { side: 'right', register: 'fluid' }, RB: { side: 'right', register: 'denominated' } };
   Object.keys(diaSides).forEach(key => {
     eventData.diatribe[key] = {
       text: document.getElementById(`dia${key}`).value.trim(),
@@ -5491,8 +5704,8 @@ function renderViewer() {
 // WORD TAGGER (generalized for all band responses per quadrant)
 // ============================================================
 
-// Keys: 'A_goodFaith','A_coalition','A_badFaith', etc. for band responses
-const BANDS = ['goodFaith', 'coalition', 'badFaith'];
+// Keys: 'A_fluid','A_coalition','A_denominated', etc. for band responses
+const BANDS = ['fluid', 'coalition', 'denominated'];
 const taggerState = {};
 ['A', 'B', 'C', 'D'].forEach(q => {
   BANDS.forEach(b => { taggerState[q + '_' + b] = []; });
@@ -5512,9 +5725,9 @@ function weightLabel(w) {
   return 'Maximum';
 }
 
-// Resolve DOM element IDs from a tagger key (e.g. 'A_goodFaith')
+// Resolve DOM element IDs from a tagger key (e.g. 'A_fluid')
 function _taggerEls(key) {
-  // key is always 'Q_band' format now (e.g. 'A_goodFaith', 'C_badFaith')
+  // key is always 'Q_band' format now (e.g. 'A_fluid', 'C_denominated')
   return { textEl: 'resp' + key, taggerEl: 'tagger' + key, isVariant: false };
 }
 
@@ -5799,7 +6012,7 @@ function syncKeywordFields(key) {
     if (c.axis === 'x') xWord = c.t.trim();
     if (c.axis === 'y') yWord = c.t.trim();
   });
-  // key is 'A_goodFaith' etc. → DOM IDs are 'respA_goodFaith_xWord'
+  // key is 'A_fluid' etc. → DOM IDs are 'respA_fluid_xWord'
   const xEl = document.getElementById('resp' + key + '_xWord');
   const yEl = document.getElementById('resp' + key + '_yWord');
   if (xEl) xEl.value = xWord;
@@ -5885,15 +6098,15 @@ Symmetry test: Read all four responses together. No quadrant should be obviously
 
 THREE RESPONSE BANDS PER QUADRANT:
 Each quadrant carries three authored responses at different faith levels:
-- goodFaith: Denomination stripped, capacity for surprise operative. The response sounds like a real person holding this view, not a position statement. Non-strawman: a genuine holder would feel represented.
+- fluid: Denomination stripped, capacity for surprise operative. The response sounds like a real person holding this view, not a position statement. Non-strawman: a genuine holder would feel represented.
 - coalition: Clearly identified with this side, votes accordingly. Some tribal coloring, but still arguing in good faith about the object.
-- badFaith: Denomination complete. The position has become a vehicle rather than a view. Bad faith dominant — strawmanning, loyalty signaling, weaponized framing.
+- denominated: Denomination complete. The position has become a vehicle rather than a view. Bad faith dominant — strawmanning, loyalty signaling, weaponized framing.
 
 All three bands must be 1–2 sentences. Same voice profile per quadrant, degrading through the bands.
 
 ANTI-VALENT BAND:
 One of the three bands is designated "anti-valent" — the band that doesn't have real power in the actual discourse for this event.
-- antiValentBand: "goodFaith" | "coalition" | "badFaith"
+- antiValentBand: "fluid" | "coalition" | "denominated"
 Assess the discourse landscape and propose which band is anti-valent with a one-line rationale.
 
 PREVALENT AXIS:
@@ -5942,25 +6155,25 @@ OUTPUT: Respond ONLY with valid JSON. No preamble, no explanation, no markdown f
   "prompt": "...",
   "framing": "...",
   "prevalentAxis": "x" | "y",
-  "antiValentBand": "goodFaith" | "coalition" | "badFaith",
+  "antiValentBand": "fluid" | "coalition" | "denominated",
   "antiValentRationale": "One line explaining why this band is anti-valent.",
   "axisLabels": { "xPos": "...", "xNeg": "...", "yPos": "...", "yNeg": "..." },
   "quadrantResponses": {
     "A": {
       "xSide": "left",
-      "goodFaith": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." },
+      "fluid": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." },
       "coalition": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." },
-      "badFaith": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." }
+      "denominated": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." }
     },
-    "B": { "xSide": "right", "goodFaith": {...}, "coalition": {...}, "badFaith": {...} },
-    "C": { "xSide": "left",  "goodFaith": {...}, "coalition": {...}, "badFaith": {...} },
-    "D": { "xSide": "right", "goodFaith": {...}, "coalition": {...}, "badFaith": {...} }
+    "B": { "xSide": "right", "fluid": {...}, "coalition": {...}, "denominated": {...} },
+    "C": { "xSide": "left",  "fluid": {...}, "coalition": {...}, "denominated": {...} },
+    "D": { "xSide": "right", "fluid": {...}, "coalition": {...}, "denominated": {...} }
   },
   "wordTags": {
     "A": {
-      "goodFaith": [ { "word": "...", "tag": "x+", "weight": 0.65, "isPrimary": false }, ... ],
+      "fluid": [ { "word": "...", "tag": "x+", "weight": 0.65, "isPrimary": false }, ... ],
       "coalition": [ ... ],
-      "badFaith": [ ... ]
+      "denominated": [ ... ]
     },
     "B": {...}, "C": {...}, "D": {...}
   },
@@ -6038,7 +6251,7 @@ async function generateSuggestions() {
     prompt   ? `Prompt: ${prompt}`   : null,
     framing  ? `Framing: ${framing}` : null,
     '',
-    'Generate all fields: category, prompt, framing, prevalentAxis, antiValentBand with rationale, axis labels, four quadrant responses with three bands each (goodFaith/coalition/badFaith, 1–2 sentences each), keywords, word tags per band, and diatribe descriptors.'
+    'Generate all fields: category, prompt, framing, prevalentAxis, antiValentBand with rationale, axis labels, four quadrant responses with three bands each (fluid/coalition/denominated, 1–2 sentences each), keywords, word tags per band, and diatribe descriptors.'
   ].filter(l => l !== null).join('\n');
 
   try {
@@ -6798,23 +7011,23 @@ PRISM_DRAFT
   "prompt": "...",
   "framing": "...",
   "prevalentAxis": "x" or "y",
-  "antiValentBand": "goodFaith" or "coalition" or "badFaith",
+  "antiValentBand": "fluid" or "coalition" or "denominated",
   "antiValentRationale": "One line.",
   "axisLabels": { "xPos": "...", "xNeg": "...", "yPos": "...", "yNeg": "..." },
   "quadrantResponses": {
     "A": {
       "xSide": "left" or "right",
-      "goodFaith": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." },
+      "fluid": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." },
       "coalition": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." },
-      "badFaith": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." }
+      "denominated": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." }
     },
     "B": { ... }, "C": { ... }, "D": { ... }
   },
   "wordTags": {
     "A": {
-      "goodFaith": [ { "word": "...", "tag": "x+", "weight": 0.65, "isPrimary": false }, ... ],
+      "fluid": [ { "word": "...", "tag": "x+", "weight": 0.65, "isPrimary": false }, ... ],
       "coalition": [ ... ],
-      "badFaith": [ ... ]
+      "denominated": [ ... ]
     },
     "B": { ... }, "C": { ... }, "D": { ... }
   },
