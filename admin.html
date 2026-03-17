@@ -24,6 +24,37 @@
   --bg: #e8e4dc;
 }
 
+[data-theme="dark"] {
+  --cream: #1e1e2a;
+  --paper: #252535;
+  --ink: #e0ddd4;
+  --ink-light: #b8b4aa;
+  --muted: #787068;
+  --border: rgba(220,216,206,0.12);
+  --border-strong: rgba(220,216,206,0.22);
+  --red: #e06060;
+  --blue: #6a8ab8;
+  --green: #6aac7a;
+  --orange: #e09a50;
+  --gold: #e0c050;
+  --bg: #141418;
+}
+
+/* Dark mode toggle */
+.theme-toggle {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: all 0.2s;
+}
+.theme-toggle:hover { color: var(--ink); border-color: var(--border-strong); }
+
 html { background: var(--bg); }
 
 body {
@@ -73,7 +104,622 @@ body {
   color: var(--muted);
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+/* ── TOP-LEVEL TABS ── */
+.admin-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
   margin-bottom: 32px;
+  margin-top: 16px;
+}
+.admin-tab {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  border: none;
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+.admin-tab:hover { color: var(--ink-light); }
+.admin-tab.active {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
+}
+.admin-tab-content {
+  display: none;
+}
+.admin-tab-content.active {
+  display: block;
+}
+
+/* ── ARC MANAGEMENT ── */
+.arc-toolbar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.arc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.arc-card {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 20px;
+  transition: border-color 0.15s;
+}
+.arc-card:hover { border-color: var(--border-strong); }
+.arc-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+.arc-card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.arc-card-object {
+  font-family: 'Lora', serif;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--ink-light);
+  margin-bottom: 8px;
+}
+.arc-card-meta {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.arc-card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+.arc-status {
+  display: inline-block;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+.arc-status.draft { color: var(--muted); }
+.arc-status.active { color: var(--green); border-color: var(--green); }
+.arc-status.archived { color: var(--ink-light); }
+.arc-event-list {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+.arc-event-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: var(--ink-light);
+}
+.arc-event-pos {
+  color: var(--muted);
+  min-width: 20px;
+}
+.arc-event-status {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.arc-event-status.confirmed { color: var(--green); }
+.arc-event-status.probationary { color: var(--gold); }
+.arc-empty {
+  font-family: 'Lora', serif;
+  font-size: 14px;
+  color: var(--muted);
+  text-align: center;
+  padding: 48px 20px;
+  font-style: italic;
+}
+
+/* ── ARC FORM ── */
+.arc-form-panel {
+  display: none;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 32px;
+}
+.arc-form-panel.visible { display: block; }
+.arc-form-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.arc-form-row {
+  margin-bottom: 16px;
+}
+.arc-form-row label {
+  display: block;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.arc-form-row input,
+.arc-form-row textarea,
+.arc-form-row select {
+  width: 100%;
+  font-family: 'Lora', serif;
+  font-size: 14px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--cream);
+  color: var(--ink);
+}
+.arc-form-row textarea { resize: vertical; min-height: 60px; }
+.arc-form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* ── ARC EVENT ASSIGNMENT ── */
+.arc-assign-section {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+.arc-assign-title {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.arc-assign-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.arc-assign-row select {
+  flex: 1;
+  font-family: 'Lora', serif;
+  font-size: 13px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--cream);
+  color: var(--ink);
+}
+
+/* ── PARALLELOGRAM SUB-TABS ── */
+.para-sub-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+.para-sub-tab {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border: none;
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+.para-sub-tab:hover { color: var(--ink-light); }
+.para-sub-tab.active {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
+}
+.para-view { display: none; }
+.para-view.active { display: block; }
+
+/* ── EDITOR WORKSPACE ── */
+.editor-workspace {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr) 220px;
+  gap: 12px;
+  min-height: 600px;
+}
+.editor-no-doc {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 80px 40px;
+  color: var(--muted);
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 14px;
+}
+
+/* Outline rail */
+.editor-outline {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.editor-outline-header {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.editor-outline-item {
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-family: 'Lora', serif;
+  font-size: 12px;
+  color: var(--ink-light);
+  cursor: pointer;
+  transition: all 0.15s;
+  border: 1px solid transparent;
+}
+.editor-outline-item:hover { background: var(--cream); }
+.editor-outline-item.active {
+  background: var(--cream);
+  border-color: var(--border);
+  color: var(--ink);
+}
+.editor-outline-item.bridge {
+  font-size: 11px;
+  color: var(--muted);
+  padding: 3px 10px 3px 18px;
+  font-style: italic;
+}
+.editor-outline-item.section-intro,
+.editor-outline-item.section-closing {
+  color: var(--muted);
+  font-style: italic;
+}
+.editor-outline-actions {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.derive-btn {
+  background: var(--ink) !important;
+  color: var(--cream) !important;
+  border-color: var(--ink) !important;
+}
+.derive-btn:hover { opacity: 0.85; }
+
+/* Manuscript */
+.editor-manuscript {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.editor-manuscript-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.editor-manuscript-body {
+  flex: 1;
+  min-height: 400px;
+}
+.editor-manuscript-body textarea {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  border: none;
+  background: transparent;
+  padding: 16px;
+  font-family: 'Lora', serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink);
+  resize: none;
+  outline: none;
+}
+.editor-manuscript-preview {
+  padding: 16px;
+  font-family: 'Lora', serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink);
+}
+.editor-manuscript-toolbar {
+  display: flex;
+  gap: 4px;
+  padding: 8px 14px;
+  border-top: 1px solid var(--border);
+}
+.ms-block {
+  padding: 4px 0;
+  border-left: 2px solid transparent;
+  margin-bottom: 2px;
+}
+.ms-block.ai-draft { border-left-color: var(--muted); padding-left: 12px; }
+.ms-block.user-prose { border-left-color: var(--gold, #b8993e); padding-left: 12px; }
+.ms-block-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+
+/* Editorial desk */
+.editor-desk {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.editor-desk-header {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.editor-desk-context {
+  padding: 8px 14px;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  background: var(--cream);
+  border-bottom: 1px solid var(--border);
+}
+.editor-desk-chat {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+  max-height: 380px;
+  min-height: 200px;
+}
+.desk-msg {
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 6px;
+  font-family: 'Lora', serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.desk-msg.user { background: var(--cream); }
+.desk-msg.claude {
+  background: transparent;
+  border-left: 2px solid var(--muted);
+  padding-left: 12px;
+}
+.desk-msg-role {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.desk-insert-btn {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  padding: 4px 10px;
+  margin-top: 6px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--paper);
+  color: var(--ink-light);
+  cursor: pointer;
+}
+.desk-insert-btn:hover { background: var(--cream); }
+.editor-desk-input {
+  padding: 10px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 6px;
+  align-items: flex-end;
+}
+.editor-desk-input textarea {
+  flex: 1;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-family: 'Lora', serif;
+  font-size: 13px;
+  background: var(--cream);
+  color: var(--ink);
+  resize: none;
+  outline: none;
+}
+
+/* ── BRAINSTORM VIEW ── */
+.brainstorm-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 12px;
+  min-height: 500px;
+}
+.brainstorm-chat {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.brainstorm-chat-header {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.brainstorm-chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+  max-height: 360px;
+  min-height: 200px;
+}
+.brainstorm-chat-input {
+  padding: 10px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 6px;
+  align-items: flex-end;
+}
+.brainstorm-chat-input textarea {
+  flex: 1;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-family: 'Lora', serif;
+  font-size: 13px;
+  background: var(--cream);
+  color: var(--ink);
+  resize: none;
+  outline: none;
+}
+.brainstorm-events {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.brainstorm-events-header {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.brainstorm-events-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+}
+.bs-event-card {
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 8px;
+  background: var(--cream);
+}
+.bs-event-card.pending {
+  border-style: dashed;
+  background: transparent;
+}
+.bs-event-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+}
+.bs-event-title {
+  font-family: 'Lora', serif;
+  font-size: 13px;
+  color: var(--ink);
+  margin-top: 2px;
+}
+.bs-event-date {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.bs-event-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+}
+.brainstorm-begin {
+  padding: 12px;
+  border-top: 1px solid var(--border);
+}
+
+/* ── ARTICLE LIST ── */
+.article-card {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  transition: border-color 0.2s;
+}
+.article-card:hover { border-color: var(--border-strong); }
+.article-card-title {
+  font-family: 'Spectral', 'Lora', serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.article-card-meta {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 6px;
+  display: flex;
+  gap: 16px;
+}
+.article-card-type {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+.article-card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
 }
 
 /* ── TOOLBAR ── */
@@ -345,7 +991,7 @@ body {
 /* ── TOAST NOTIFICATIONS ── */
 .toast {
   position: fixed;
-  bottom: 24px;
+  bottom: 60px;
   right: 24px;
   font-family: 'DM Mono', monospace;
   font-size: 12px;
@@ -1097,7 +1743,7 @@ body {
 .pairing-status .pair-check.fail::before { content: '✗'; }
 
 /* ── DIATRIBE VARIANT TIERS ── */
-/* ── BAND SUB-SECTIONS (fluid / coalition / denominated) ── */
+/* ── BAND SUB-SECTIONS (goodFaith / coalition / badFaith) ── */
 .band-section {
   margin-top: 12px;
   padding: 14px 16px;
@@ -1114,12 +1760,12 @@ body {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-.band-section.fluid { border-left-color: var(--green); }
-.band-section.fluid h5 { color: var(--green); }
+.band-section.goodFaith { border-left-color: var(--green); }
+.band-section.goodFaith h5 { color: var(--green); }
 .band-section.coalition { border-left-color: var(--gold); }
 .band-section.coalition h5 { color: var(--gold); }
-.band-section.denominated { border-left-color: var(--red); }
-.band-section.denominated h5 { color: var(--red); }
+.band-section.badFaith { border-left-color: var(--red); }
+.band-section.badFaith h5 { color: var(--red); }
 
 /* ── ANTI-VALENT TOGGLE ── */
 .antivalent-toggle {
@@ -1144,9 +1790,9 @@ body {
 }
 .av-btn:not(:last-child) { border-right: 1px solid var(--border); }
 .av-btn:hover { background: var(--paper); color: var(--ink-light); }
-.av-btn.active[data-band="fluid"] { background: var(--green); color: white; }
+.av-btn.active[data-band="goodFaith"] { background: var(--green); color: white; }
 .av-btn.active[data-band="coalition"] { background: var(--gold); color: white; }
-.av-btn.active[data-band="denominated"] { background: var(--red); color: white; }
+.av-btn.active[data-band="badFaith"] { background: var(--red); color: white; }
 .av-rationale {
   font-family: 'DM Mono', monospace;
   font-size: 10px;
@@ -1862,9 +2508,20 @@ body {
 
 <header class="admin-header">
   <h1>Prism <span>Admin</span></h1>
-  <a href="index-v39.html" class="link-back">← back to app</a>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <button class="theme-toggle" onclick="toggleTheme()" id="themeToggle">◐ dark</button>
+    <a href="index-v39.html" class="link-back">← back to app</a>
+  </div>
 </header>
 <p class="admin-subtitle">Event management · PrismDB</p>
+
+<div class="admin-tabs">
+  <button class="admin-tab active" onclick="switchAdminTab('events')" id="adminTabEvents">Events</button>
+  <button class="admin-tab" onclick="switchAdminTab('para')" id="adminTabPara">Parallelogram</button>
+</div>
+
+<!-- ═══════════ EVENTS TAB ═══════════ -->
+<div id="tabEventsContent" class="admin-tab-content active">
 
 <div class="toolbar">
   <button class="btn primary" onclick="showCreateForm()">+ New Event</button>
@@ -1977,7 +2634,7 @@ body {
       <span class="ai-panel-model">claude-sonnet-4-20250514 · J encoding</span>
     </div>
     <div class="ai-key-row">
-      <input type="password" id="aiApiKey" placeholder="Anthropic API key — sk-ant-api03-...">
+      <input type="password" id="aiApiKey" placeholder="Anthropic API key — sk-ant-api03-..." oninput="syncApiKeys(this.value)">
     </div>
     <div class="ai-actions">
       <button class="btn ai-btn" id="aiGenerateBtn" onclick="generateSuggestions()">✦ Generate Suggestions</button>
@@ -2066,9 +2723,9 @@ body {
       <div class="field">
         <label>Anti-Valent Band</label>
         <div class="antivalent-toggle" id="antiValentToggle">
-          <button type="button" class="av-btn" data-band="fluid" onclick="setAntiValent('fluid')">Fluid</button>
+          <button type="button" class="av-btn" data-band="goodFaith" onclick="setAntiValent('goodFaith')">Good Faith</button>
           <button type="button" class="av-btn" data-band="coalition" onclick="setAntiValent('coalition')">Coalition</button>
-          <button type="button" class="av-btn" data-band="denominated" onclick="setAntiValent('denominated')">Denominated</button>
+          <button type="button" class="av-btn" data-band="badFaith" onclick="setAntiValent('badFaith')">Bad Faith</button>
         </div>
         <input type="hidden" id="evtAntiValentBand" value="">
         <div class="av-rationale" id="avRationale"></div>
@@ -2098,17 +2755,17 @@ body {
         <label for="srcA">Sources · Quad A</label>
         <textarea id="srcA" placeholder="Why this response loads X+/Y+ — links, notes, reasoning..."></textarea>
       </div>
-      <div class="band-section fluid">
-        <h5>Fluid</h5>
+      <div class="band-section goodFaith">
+        <h5>Good Faith</h5>
         <div class="field">
-          <label for="respA_fluid">Response text</label>
-          <textarea id="respA_fluid" placeholder="Fluid response for quadrant A..."></textarea>
+          <label for="respA_goodFaith">Response text</label>
+          <textarea id="respA_goodFaith" placeholder="Good faith response for quadrant A..."></textarea>
         </div>
         <div class="field-row">
-          <div class="field"><label for="respA_fluid_xWord">X keyword</label><input type="text" id="respA_fluid_xWord" placeholder="e.g. deterrence"></div>
-          <div class="field"><label for="respA_fluid_yWord">Y keyword</label><input type="text" id="respA_fluid_yWord" placeholder="e.g. Hold"></div>
+          <div class="field"><label for="respA_goodFaith_xWord">X keyword</label><input type="text" id="respA_goodFaith_xWord" placeholder="e.g. deterrence"></div>
+          <div class="field"><label for="respA_goodFaith_yWord">Y keyword</label><input type="text" id="respA_goodFaith_yWord" placeholder="e.g. Hold"></div>
         </div>
-        <div class="wt-wrap" id="taggerA_fluid"></div>
+        <div class="wt-wrap" id="taggerA_goodFaith"></div>
       </div>
       <div class="band-section coalition">
         <h5>Coalition</h5>
@@ -2122,17 +2779,17 @@ body {
         </div>
         <div class="wt-wrap" id="taggerA_coalition"></div>
       </div>
-      <div class="band-section denominated">
-        <h5>Denominated</h5>
+      <div class="band-section badFaith">
+        <h5>Bad Faith</h5>
         <div class="field">
-          <label for="respA_denominated">Response text</label>
-          <textarea id="respA_denominated" placeholder="Denominated response for quadrant A..."></textarea>
+          <label for="respA_badFaith">Response text</label>
+          <textarea id="respA_badFaith" placeholder="Bad faith response for quadrant A..."></textarea>
         </div>
         <div class="field-row">
-          <div class="field"><label for="respA_denominated_xWord">X keyword</label><input type="text" id="respA_denominated_xWord"></div>
-          <div class="field"><label for="respA_denominated_yWord">Y keyword</label><input type="text" id="respA_denominated_yWord"></div>
+          <div class="field"><label for="respA_badFaith_xWord">X keyword</label><input type="text" id="respA_badFaith_xWord"></div>
+          <div class="field"><label for="respA_badFaith_yWord">Y keyword</label><input type="text" id="respA_badFaith_yWord"></div>
         </div>
-        <div class="wt-wrap" id="taggerA_denominated"></div>
+        <div class="wt-wrap" id="taggerA_badFaith"></div>
       </div>
     </div>
 
@@ -2152,17 +2809,17 @@ body {
         <label for="srcB">Sources · Quad B</label>
         <textarea id="srcB" placeholder="Why this response loads X−/Y+ — links, notes, reasoning..."></textarea>
       </div>
-      <div class="band-section fluid">
-        <h5>Fluid</h5>
+      <div class="band-section goodFaith">
+        <h5>Good Faith</h5>
         <div class="field">
-          <label for="respB_fluid">Response text</label>
-          <textarea id="respB_fluid" placeholder="Fluid response for quadrant B..."></textarea>
+          <label for="respB_goodFaith">Response text</label>
+          <textarea id="respB_goodFaith" placeholder="Good faith response for quadrant B..."></textarea>
         </div>
         <div class="field-row">
-          <div class="field"><label for="respB_fluid_xWord">X keyword</label><input type="text" id="respB_fluid_xWord"></div>
-          <div class="field"><label for="respB_fluid_yWord">Y keyword</label><input type="text" id="respB_fluid_yWord"></div>
+          <div class="field"><label for="respB_goodFaith_xWord">X keyword</label><input type="text" id="respB_goodFaith_xWord"></div>
+          <div class="field"><label for="respB_goodFaith_yWord">Y keyword</label><input type="text" id="respB_goodFaith_yWord"></div>
         </div>
-        <div class="wt-wrap" id="taggerB_fluid"></div>
+        <div class="wt-wrap" id="taggerB_goodFaith"></div>
       </div>
       <div class="band-section coalition">
         <h5>Coalition</h5>
@@ -2176,17 +2833,17 @@ body {
         </div>
         <div class="wt-wrap" id="taggerB_coalition"></div>
       </div>
-      <div class="band-section denominated">
-        <h5>Denominated</h5>
+      <div class="band-section badFaith">
+        <h5>Bad Faith</h5>
         <div class="field">
-          <label for="respB_denominated">Response text</label>
-          <textarea id="respB_denominated" placeholder="Denominated response for quadrant B..."></textarea>
+          <label for="respB_badFaith">Response text</label>
+          <textarea id="respB_badFaith" placeholder="Bad faith response for quadrant B..."></textarea>
         </div>
         <div class="field-row">
-          <div class="field"><label for="respB_denominated_xWord">X keyword</label><input type="text" id="respB_denominated_xWord"></div>
-          <div class="field"><label for="respB_denominated_yWord">Y keyword</label><input type="text" id="respB_denominated_yWord"></div>
+          <div class="field"><label for="respB_badFaith_xWord">X keyword</label><input type="text" id="respB_badFaith_xWord"></div>
+          <div class="field"><label for="respB_badFaith_yWord">Y keyword</label><input type="text" id="respB_badFaith_yWord"></div>
         </div>
-        <div class="wt-wrap" id="taggerB_denominated"></div>
+        <div class="wt-wrap" id="taggerB_badFaith"></div>
       </div>
     </div>
 
@@ -2206,17 +2863,17 @@ body {
         <label for="srcC">Sources · Quad C</label>
         <textarea id="srcC" placeholder="Why this response loads X−/Y− — links, notes, reasoning..."></textarea>
       </div>
-      <div class="band-section fluid">
-        <h5>Fluid</h5>
+      <div class="band-section goodFaith">
+        <h5>Good Faith</h5>
         <div class="field">
-          <label for="respC_fluid">Response text</label>
-          <textarea id="respC_fluid" placeholder="Fluid response for quadrant C..."></textarea>
+          <label for="respC_goodFaith">Response text</label>
+          <textarea id="respC_goodFaith" placeholder="Good faith response for quadrant C..."></textarea>
         </div>
         <div class="field-row">
-          <div class="field"><label for="respC_fluid_xWord">X keyword</label><input type="text" id="respC_fluid_xWord"></div>
-          <div class="field"><label for="respC_fluid_yWord">Y keyword</label><input type="text" id="respC_fluid_yWord"></div>
+          <div class="field"><label for="respC_goodFaith_xWord">X keyword</label><input type="text" id="respC_goodFaith_xWord"></div>
+          <div class="field"><label for="respC_goodFaith_yWord">Y keyword</label><input type="text" id="respC_goodFaith_yWord"></div>
         </div>
-        <div class="wt-wrap" id="taggerC_fluid"></div>
+        <div class="wt-wrap" id="taggerC_goodFaith"></div>
       </div>
       <div class="band-section coalition">
         <h5>Coalition</h5>
@@ -2230,17 +2887,17 @@ body {
         </div>
         <div class="wt-wrap" id="taggerC_coalition"></div>
       </div>
-      <div class="band-section denominated">
-        <h5>Denominated</h5>
+      <div class="band-section badFaith">
+        <h5>Bad Faith</h5>
         <div class="field">
-          <label for="respC_denominated">Response text</label>
-          <textarea id="respC_denominated" placeholder="Denominated response for quadrant C..."></textarea>
+          <label for="respC_badFaith">Response text</label>
+          <textarea id="respC_badFaith" placeholder="Bad faith response for quadrant C..."></textarea>
         </div>
         <div class="field-row">
-          <div class="field"><label for="respC_denominated_xWord">X keyword</label><input type="text" id="respC_denominated_xWord"></div>
-          <div class="field"><label for="respC_denominated_yWord">Y keyword</label><input type="text" id="respC_denominated_yWord"></div>
+          <div class="field"><label for="respC_badFaith_xWord">X keyword</label><input type="text" id="respC_badFaith_xWord"></div>
+          <div class="field"><label for="respC_badFaith_yWord">Y keyword</label><input type="text" id="respC_badFaith_yWord"></div>
         </div>
-        <div class="wt-wrap" id="taggerC_denominated"></div>
+        <div class="wt-wrap" id="taggerC_badFaith"></div>
       </div>
     </div>
 
@@ -2260,17 +2917,17 @@ body {
         <label for="srcD">Sources · Quad D</label>
         <textarea id="srcD" placeholder="Why this response loads X+/Y− — links, notes, reasoning..."></textarea>
       </div>
-      <div class="band-section fluid">
-        <h5>Fluid</h5>
+      <div class="band-section goodFaith">
+        <h5>Good Faith</h5>
         <div class="field">
-          <label for="respD_fluid">Response text</label>
-          <textarea id="respD_fluid" placeholder="Fluid response for quadrant D..."></textarea>
+          <label for="respD_goodFaith">Response text</label>
+          <textarea id="respD_goodFaith" placeholder="Good faith response for quadrant D..."></textarea>
         </div>
         <div class="field-row">
-          <div class="field"><label for="respD_fluid_xWord">X keyword</label><input type="text" id="respD_fluid_xWord"></div>
-          <div class="field"><label for="respD_fluid_yWord">Y keyword</label><input type="text" id="respD_fluid_yWord"></div>
+          <div class="field"><label for="respD_goodFaith_xWord">X keyword</label><input type="text" id="respD_goodFaith_xWord"></div>
+          <div class="field"><label for="respD_goodFaith_yWord">Y keyword</label><input type="text" id="respD_goodFaith_yWord"></div>
         </div>
-        <div class="wt-wrap" id="taggerD_fluid"></div>
+        <div class="wt-wrap" id="taggerD_goodFaith"></div>
       </div>
       <div class="band-section coalition">
         <h5>Coalition</h5>
@@ -2284,17 +2941,17 @@ body {
         </div>
         <div class="wt-wrap" id="taggerD_coalition"></div>
       </div>
-      <div class="band-section denominated">
-        <h5>Denominated</h5>
+      <div class="band-section badFaith">
+        <h5>Bad Faith</h5>
         <div class="field">
-          <label for="respD_denominated">Response text</label>
-          <textarea id="respD_denominated" placeholder="Denominated response for quadrant D..."></textarea>
+          <label for="respD_badFaith">Response text</label>
+          <textarea id="respD_badFaith" placeholder="Bad faith response for quadrant D..."></textarea>
         </div>
         <div class="field-row">
-          <div class="field"><label for="respD_denominated_xWord">X keyword</label><input type="text" id="respD_denominated_xWord"></div>
-          <div class="field"><label for="respD_denominated_yWord">Y keyword</label><input type="text" id="respD_denominated_yWord"></div>
+          <div class="field"><label for="respD_badFaith_xWord">X keyword</label><input type="text" id="respD_badFaith_xWord"></div>
+          <div class="field"><label for="respD_badFaith_yWord">Y keyword</label><input type="text" id="respD_badFaith_yWord"></div>
         </div>
-        <div class="wt-wrap" id="taggerD_denominated"></div>
+        <div class="wt-wrap" id="taggerD_badFaith"></div>
       </div>
     </div>
   </div>
@@ -2304,34 +2961,34 @@ body {
     <div class="form-section-label">The Diatribe</div>
 
     <div class="dia-section good">
-      <h4>LF — Left, Fluid</h4>
+      <h4>LG — Left, Good Faith</h4>
       <div class="field">
-        <label for="diaLF">Statement</label>
-        <textarea id="diaLF" placeholder="The left is making a principled case..."></textarea>
+        <label for="diaLG">Statement</label>
+        <textarea id="diaLG" placeholder="The left is making a principled case..."></textarea>
       </div>
     </div>
 
     <div class="dia-section bad">
-      <h4>LD — Left, Denominated</h4>
+      <h4>LB — Left, Bad Faith</h4>
       <div class="field">
-        <label for="diaLD">Statement</label>
-        <textarea id="diaLD" placeholder="The left is using this to..."></textarea>
+        <label for="diaLB">Statement</label>
+        <textarea id="diaLB" placeholder="The left is using this to..."></textarea>
       </div>
     </div>
 
     <div class="dia-section good">
-      <h4>RF — Right, Fluid</h4>
+      <h4>RG — Right, Good Faith</h4>
       <div class="field">
-        <label for="diaRF">Statement</label>
-        <textarea id="diaRF" placeholder="The right is making a principled case..."></textarea>
+        <label for="diaRG">Statement</label>
+        <textarea id="diaRG" placeholder="The right is making a principled case..."></textarea>
       </div>
     </div>
 
     <div class="dia-section bad">
-      <h4>RD — Right, Denominated</h4>
+      <h4>RB — Right, Bad Faith</h4>
       <div class="field">
-        <label for="diaRD">Statement</label>
-        <textarea id="diaRD" placeholder="The right is using this to..."></textarea>
+        <label for="diaRB">Statement</label>
+        <textarea id="diaRB" placeholder="The right is using this to..."></textarea>
       </div>
     </div>
   </div>
@@ -2342,6 +2999,224 @@ body {
     <button class="btn primary" onclick="saveEvent()">Save Event</button>
   </div>
 </div>
+
+</div><!-- /tabEventsContent -->
+
+<!-- ═══════════ PARALLELOGRAM TAB ═══════════ -->
+<div id="tabParaContent" class="admin-tab-content">
+
+  <!-- Sub-navigation -->
+  <div class="para-sub-tabs">
+    <button class="para-sub-tab active" onclick="switchParaView('arcs')" id="paraTabArcs">Arcs</button>
+    <button class="para-sub-tab" onclick="switchParaView('articles')" id="paraTabArticles">Articles</button>
+  </div>
+
+  <!-- API key for Parallelogram features -->
+  <div style="margin-bottom:16px;display:flex;align-items:center;gap:10px;">
+    <label style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);white-space:nowrap;">API Key</label>
+    <input type="password" id="paraApiKey" placeholder="sk-ant-api03-..." style="flex:1;font-family:'DM Mono',monospace;font-size:11px;padding:6px 10px;border:1px solid var(--border);border-radius:4px;background:var(--cream);color:var(--ink);" oninput="syncApiKeys(this.value)">
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- ARCS VIEW                              -->
+  <!-- ═══════════════════════════════════════ -->
+  <div id="paraViewArcs" class="para-view active">
+
+    <div class="arc-form-panel" id="arcFormPanel">
+      <div class="arc-form-title" id="arcFormTitle">New Arc</div>
+      <div class="arc-form-row">
+        <label for="arcTitle">Title</label>
+        <input type="text" id="arcTitle" placeholder="Brianna Joy Gray — Denomination Trajectory">
+      </div>
+      <div class="arc-form-row">
+        <label for="arcObject">Unified Object</label>
+        <input type="text" id="arcObject" placeholder="The Empire">
+      </div>
+      <div class="arc-form-row">
+        <label for="arcObjectDesc">Object Description</label>
+        <textarea id="arcObjectDesc" placeholder="U.S. institutional enforcement apparatus operating through five presidencies..." rows="3"></textarea>
+      </div>
+      <div class="arc-form-row">
+        <label for="arcSubjectType">Subject Type</label>
+        <select id="arcSubjectType">
+          <option value="actor">Actor</option>
+          <option value="policy">Policy</option>
+          <option value="pattern">Pattern</option>
+        </select>
+      </div>
+      <div class="arc-form-row">
+        <label for="arcStatus">Status</label>
+        <select id="arcStatus">
+          <option value="draft">Draft</option>
+          <option value="active">Active</option>
+          <option value="archived">Archived</option>
+        </select>
+      </div>
+
+      <!-- Event assignment (only visible when editing an existing arc) -->
+      <div class="arc-assign-section" id="arcAssignSection" style="display:none;">
+        <div class="arc-assign-title">Arc Events (in sequence)</div>
+        <div id="arcEventSequence"></div>
+        <div class="arc-assign-row">
+          <select id="arcAddEventSelect">
+            <option value="">— assign event —</option>
+          </select>
+          <select id="arcAddEventStatus" style="width:140px;flex:none;">
+            <option value="confirmed">Confirmed</option>
+            <option value="probationary">Probationary</option>
+          </select>
+          <button class="btn small" onclick="arcAssignEvent()">+ Add</button>
+        </div>
+      </div>
+
+      <div class="arc-form-actions">
+        <button class="btn" onclick="hideArcForm()">Cancel</button>
+        <button class="btn primary" onclick="saveArcForm()">Save Arc</button>
+        <button class="btn" onclick="beginBrainstorm()" id="brainstormBtn" style="display:none;">Begin Brainstorm →</button>
+      </div>
+    </div>
+
+    <!-- Brainstorm panel (appears after arc creation) -->
+    <div id="brainstormPanel" style="display:none;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <div>
+          <span style="font-family:'Spectral','Lora',serif;font-size:17px;font-weight:600;color:var(--ink);" id="brainstormArcTitle"></span>
+          <span class="article-card-type" id="brainstormSubjectType" style="margin-left:10px;"></span>
+        </div>
+        <button class="btn small" onclick="exitBrainstorm()">← Back to arcs</button>
+      </div>
+      <div class="brainstorm-panel">
+        <!-- Research conversation -->
+        <div class="brainstorm-chat">
+          <div class="brainstorm-chat-header">Research conversation</div>
+          <div class="brainstorm-chat-messages" id="brainstormChatMessages">
+            <div class="desk-msg claude">
+              <div class="desk-msg-role">Claude</div>
+              What events or moments are you thinking about for this arc? I can help research quotes, dates, and context.
+            </div>
+          </div>
+          <div class="brainstorm-chat-input">
+            <textarea id="brainstormChatInput" placeholder="Research direction..." rows="2" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendBrainstormMessage();}"></textarea>
+            <button class="btn small primary" onclick="sendBrainstormMessage()">Send</button>
+          </div>
+        </div>
+        <!-- Event string -->
+        <div class="brainstorm-events">
+          <div class="brainstorm-events-header">Event string</div>
+          <div class="brainstorm-events-list" id="brainstormEventsList">
+            <div style="color:var(--muted);font-family:'Lora',serif;font-size:13px;font-style:italic;padding:12px 0;">
+              Confirm events from the conversation to build your arc's sequence.
+            </div>
+          </div>
+          <div class="brainstorm-begin">
+            <button class="btn small" onclick="addBrainstormEventPrompt()" style="width:100%;margin-bottom:8px;">+ Add event manually</button>
+            <button class="btn primary" onclick="beginEditorial()" id="beginEditorialBtn" disabled style="width:100%;">Begin Editorial →</button>
+            <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);margin-top:6px;text-align:center;" id="brainstormEventCount">0 events confirmed</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="arc-toolbar" id="arcToolbar">
+      <button class="btn primary" onclick="showArcForm()">+ New Arc</button>
+    </div>
+
+    <div id="arcList" class="arc-list">
+      <div class="arc-empty">No arcs yet. Create one to begin sequencing events into longitudinal threads.</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- ARTICLES VIEW                          -->
+  <!-- ═══════════════════════════════════════ -->
+  <div id="paraViewArticles" class="para-view">
+    <!-- Article form panel -->
+    <div class="arc-form-panel" id="articleFormPanel">
+      <div class="arc-form-title" id="articleFormTitle">New Article</div>
+      <div class="arc-form-row">
+        <label for="articleTitle">Title</label>
+        <input type="text" id="articleTitle" placeholder="Article title...">
+      </div>
+      <div class="arc-form-row">
+        <label>Import Prism Events</label>
+        <div id="articleEventCheckboxes" style="max-height:200px;overflow-y:auto;border:1px solid var(--border);border-radius:6px;padding:8px;"></div>
+      </div>
+      <div class="arc-form-row">
+        <label for="articleArcTag">Arc tag (optional)</label>
+        <select id="articleArcTag">
+          <option value="">— none —</option>
+        </select>
+      </div>
+      <div class="arc-form-actions">
+        <button class="btn" onclick="hideArticleForm()">Cancel</button>
+        <button class="btn primary" onclick="saveArticleForm()">Create Article</button>
+      </div>
+    </div>
+
+    <div class="arc-toolbar" id="articleToolbar">
+      <button class="btn primary" onclick="showNewArticle()">+ New Article</button>
+    </div>
+
+    <div id="articleList" class="arc-list">
+      <div class="arc-empty">No articles yet. Create one to begin editorial work on contemporaneous events.</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- EDITOR (contextual — replaces current view) -->
+  <!-- ═══════════════════════════════════════ -->
+  <div id="editorContainer" style="display:none;">
+    <div style="margin-bottom:16px;">
+      <button class="btn small" onclick="closeEditor()" id="editorBackBtn">← Back to arcs</button>
+    </div>
+    <div id="editorWorkspace" class="editor-workspace">
+      <!-- Outline rail -->
+      <div class="editor-outline">
+        <div class="editor-outline-header">Outline</div>
+        <div id="editorOutlineContent"></div>
+        <div class="editor-outline-actions">
+          <button class="btn small derive-btn" onclick="editorDerive()">◆ Derive</button>
+          <button class="btn small" onclick="editorShowRefinement()">Refinement</button>
+          <button class="btn small" onclick="editorNewEvent()">+ New Event</button>
+        </div>
+      </div>
+
+      <!-- Manuscript -->
+      <div class="editor-manuscript">
+        <div class="editor-manuscript-header">
+          <span id="editorDocTitle">Manuscript</span>
+          <button class="btn small" onclick="editorTogglePreview()" id="editorPreviewToggle">Preview</button>
+        </div>
+        <div id="editorEditMode" class="editor-manuscript-body">
+          <textarea id="editorTextarea" placeholder="Begin writing, or ask Claude to draft from the brainstorm context..."></textarea>
+        </div>
+        <div id="editorPreviewMode" class="editor-manuscript-body editor-manuscript-preview" style="display:none;"></div>
+        <div class="editor-manuscript-toolbar">
+          <button class="btn small" onclick="editorInsert('**','**')">B</button>
+          <button class="btn small" onclick="editorInsert('*','*')">I</button>
+          <button class="btn small" onclick="editorInsert('# ','')">H1</button>
+          <button class="btn small" onclick="editorInsert('## ','')">H2</button>
+          <button class="btn small" onclick="editorInsert('','')">¶</button>
+          <button class="btn small" onclick="editorInsertWaypoint()">⬡</button>
+        </div>
+      </div>
+
+      <!-- Editorial desk -->
+      <div class="editor-desk">
+        <div class="editor-desk-header">Editorial desk</div>
+        <div id="editorDeskContext" class="editor-desk-context">
+          No document loaded
+        </div>
+        <div id="editorDeskChat" class="editor-desk-chat"></div>
+        <div class="editor-desk-input">
+          <textarea id="editorDeskInput" placeholder="Editorial direction..." rows="2" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendEditorDeskMessage();}"></textarea>
+          <button class="btn small primary" onclick="sendEditorDeskMessage()">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /tabParaContent -->
 
 <!-- Confirm dialog -->
 <div id="confirmOverlay" class="confirm-overlay">
@@ -2365,6 +3240,1279 @@ body {
 // ============================================================
 
 let currentEditId = null;
+let currentArcEditId = null;
+
+// ============================================================
+// TOP-LEVEL TAB SWITCHING
+// ============================================================
+
+function switchAdminTab(tab) {
+  document.getElementById('adminTabEvents').classList.toggle('active', tab === 'events');
+  document.getElementById('adminTabPara').classList.toggle('active', tab === 'para');
+  document.getElementById('tabEventsContent').classList.toggle('active', tab === 'events');
+  document.getElementById('tabParaContent').classList.toggle('active', tab === 'para');
+  if (tab === 'para') refreshArcList();
+}
+
+// ============================================================
+// ARC LIST
+// ============================================================
+
+function refreshArcList() {
+  const arcs = PrismDB.getArcs();
+  const list = document.getElementById('arcList');
+
+  if (arcs.length === 0) {
+    list.innerHTML = '<div class="arc-empty">No arcs yet. Create one to begin sequencing events into longitudinal threads.</div>';
+    return;
+  }
+
+  list.innerHTML = arcs.map(arc => {
+    const eventCount = (arc.eventIds || []).length;
+    const statusClass = arc.status || 'draft';
+
+    // Render event sequence preview
+    let eventsHtml = '';
+    if (eventCount > 0) {
+      const arcEvents = PrismDB.getArcEvents(arc.id);
+      eventsHtml = '<div class="arc-event-list">' +
+        arcEvents.map((evt, i) => {
+          const membership = (evt.arcMemberships || []).find(m => m.arcId === arc.id);
+          const mStatus = membership ? membership.status : 'confirmed';
+          return `<div class="arc-event-item">
+            <span class="arc-event-pos">${i + 1}.</span>
+            <span style="flex:1;">${escHtml(evt.title || evt.id)}</span>
+            <span class="arc-event-status ${mStatus}">${mStatus}</span>
+          </div>`;
+        }).join('') +
+      '</div>';
+    }
+
+    return `
+      <div class="arc-card">
+        <div class="arc-card-header">
+          <div>
+            <div class="arc-card-title">${escHtml(arc.title || 'Untitled Arc')}</div>
+            ${arc.object ? `<div class="arc-card-object">Object: ${escHtml(arc.object)}</div>` : ''}
+          </div>
+          <span class="arc-status ${statusClass}">${statusClass}</span>
+        </div>
+        <div class="arc-card-meta">
+          <span>${eventCount} event${eventCount !== 1 ? 's' : ''}</span>
+          ${arc.updated ? `<span>updated ${new Date(arc.updated).toLocaleDateString()}</span>` : ''}
+        </div>
+        ${eventsHtml}
+        <div class="arc-card-actions">
+          <button class="btn small" onclick="editArc('${arc.id}')">Edit</button>
+          <button class="btn small danger" onclick="confirmDeleteArc('${arc.id}', '${escAttr(arc.title || '')}')">Delete</button>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+// ============================================================
+// ARC FORM — Show / Hide / Save
+// ============================================================
+
+function showArcForm(id) {
+  currentArcEditId = id || null;
+  const panel = document.getElementById('arcFormPanel');
+  const assignSection = document.getElementById('arcAssignSection');
+  const brainstormBtn = document.getElementById('brainstormBtn');
+
+  if (id) {
+    const arc = PrismDB.getArc(id);
+    if (!arc) { toast('Arc not found', true); return; }
+    document.getElementById('arcFormTitle').textContent = 'Edit Arc';
+    document.getElementById('arcTitle').value = arc.title || '';
+    document.getElementById('arcObject').value = arc.object || '';
+    document.getElementById('arcObjectDesc').value = arc.objectDescription || '';
+    document.getElementById('arcSubjectType').value = arc.subjectType || 'actor';
+    document.getElementById('arcStatus').value = arc.status || 'draft';
+    assignSection.style.display = '';
+    brainstormBtn.style.display = '';
+    populateArcEventSelect(arc.id);
+    renderArcEventSequence(arc.id);
+  } else {
+    document.getElementById('arcFormTitle').textContent = 'New Arc';
+    document.getElementById('arcTitle').value = '';
+    document.getElementById('arcObject').value = '';
+    document.getElementById('arcObjectDesc').value = '';
+    document.getElementById('arcSubjectType').value = 'actor';
+    document.getElementById('arcStatus').value = 'draft';
+    assignSection.style.display = 'none';
+    brainstormBtn.style.display = 'none';
+  }
+
+  panel.classList.add('visible');
+}
+
+function hideArcForm() {
+  currentArcEditId = null;
+  document.getElementById('arcFormPanel').classList.remove('visible');
+}
+
+function saveArcForm() {
+  const title = document.getElementById('arcTitle').value.trim();
+  if (!title) { toast('Arc needs a title', true); return; }
+
+  const arcData = {
+    title: title,
+    object: document.getElementById('arcObject').value.trim(),
+    objectDescription: document.getElementById('arcObjectDesc').value.trim(),
+    subjectType: document.getElementById('arcSubjectType').value,
+    status: document.getElementById('arcStatus').value
+  };
+
+  if (currentArcEditId) {
+    // Preserve existing fields on update
+    const existing = PrismDB.getArc(currentArcEditId);
+    if (existing) {
+      arcData.id = currentArcEditId;
+      arcData.eventIds = existing.eventIds || [];
+      arcData.created = existing.created;
+    }
+  }
+
+  const saved = PrismDB.saveArc(arcData);
+  toast(currentArcEditId ? `Updated: ${title}` : `Created: ${title} (${saved.id})`);
+
+  // If this was a new arc, switch to edit mode to show event assignment + brainstorm
+  if (!currentArcEditId) {
+    hideArcForm();
+    showArcForm(saved.id);
+  } else {
+    hideArcForm();
+  }
+
+  refreshArcList();
+}
+
+function editArc(id) {
+  showArcForm(id);
+}
+
+function confirmDeleteArc(id, title) {
+  document.getElementById('confirmMessage').textContent = `Delete arc "${title}"? Events will be unlinked but not deleted.`;
+  document.getElementById('confirmAction').onclick = () => {
+    PrismDB.deleteArc(id);
+    toast(`Deleted arc: ${title}`);
+    closeConfirm();
+    hideArcForm();
+    refreshArcList();
+  };
+  document.getElementById('confirmOverlay').classList.add('visible');
+}
+
+// ============================================================
+// ARC EVENT ASSIGNMENT
+// ============================================================
+
+function populateArcEventSelect(arcId) {
+  const sel = document.getElementById('arcAddEventSelect');
+  const events = PrismDB.getEvents();
+  const arc = PrismDB.getArc(arcId);
+  const assigned = arc ? (arc.eventIds || []) : [];
+
+  // Show only events not already in this arc
+  const available = events.filter(e => !assigned.includes(e.id));
+  sel.innerHTML = '<option value="">— assign event —</option>' +
+    available.map(e => `<option value="${e.id}">${e.id} — ${escHtml(e.title || 'Untitled')}</option>`).join('');
+}
+
+function arcAssignEvent() {
+  if (!currentArcEditId) return;
+  const sel = document.getElementById('arcAddEventSelect');
+  const statusSel = document.getElementById('arcAddEventStatus');
+  const eventId = sel.value;
+  if (!eventId) { toast('Select an event to assign', true); return; }
+
+  const result = PrismDB.addEventToArc(eventId, currentArcEditId, statusSel.value);
+  if (!result) { toast('Failed to assign event', true); return; }
+
+  const evt = PrismDB.getEvent(eventId);
+  toast(`Added: ${evt?.title || eventId}`);
+  populateArcEventSelect(currentArcEditId);
+  renderArcEventSequence(currentArcEditId);
+  refreshArcList();
+}
+
+function arcRemoveEvent(eventId, arcId) {
+  PrismDB.removeEventFromArc(eventId, arcId);
+  const evt = PrismDB.getEvent(eventId);
+  toast(`Removed: ${evt?.title || eventId}`);
+  populateArcEventSelect(arcId);
+  renderArcEventSequence(arcId);
+  refreshArcList();
+}
+
+function arcToggleStatus(eventId, arcId) {
+  const evt = PrismDB.getEvent(eventId);
+  if (!evt || !evt.arcMemberships) return;
+  const m = evt.arcMemberships.find(m => m.arcId === arcId);
+  if (!m) return;
+  const newStatus = m.status === 'confirmed' ? 'probationary' : 'confirmed';
+  PrismDB.addEventToArc(eventId, arcId, newStatus);
+  renderArcEventSequence(arcId);
+  refreshArcList();
+}
+
+function arcMoveEvent(arcId, fromIndex, direction) {
+  const arc = PrismDB.getArc(arcId);
+  if (!arc || !arc.eventIds) return;
+  const toIndex = fromIndex + direction;
+  if (toIndex < 0 || toIndex >= arc.eventIds.length) return;
+
+  // Swap in eventIds array
+  const temp = arc.eventIds[fromIndex];
+  arc.eventIds[fromIndex] = arc.eventIds[toIndex];
+  arc.eventIds[toIndex] = temp;
+
+  // Update positions on events
+  const events = PrismDB.getEvents();
+  arc.eventIds.forEach((eid, i) => {
+    const evt = events.find(e => e.id === eid);
+    if (evt && Array.isArray(evt.arcMemberships)) {
+      const mi = evt.arcMemberships.findIndex(m => m.arcId === arcId);
+      if (mi !== -1) evt.arcMemberships[mi].position = i;
+    }
+  });
+  localStorage.setItem('prism_events', JSON.stringify(events));
+  PrismDB.saveArc(arc);
+
+  renderArcEventSequence(arcId);
+  refreshArcList();
+}
+
+function renderArcEventSequence(arcId) {
+  const container = document.getElementById('arcEventSequence');
+  const arcEvents = PrismDB.getArcEvents(arcId);
+
+  if (arcEvents.length === 0) {
+    container.innerHTML = '<div style="color:var(--muted);font-family:\'Lora\',serif;font-size:13px;font-style:italic;padding:8px 0;">No events assigned yet.</div>';
+    return;
+  }
+
+  container.innerHTML = arcEvents.map((evt, i) => {
+    const membership = (evt.arcMemberships || []).find(m => m.arcId === arcId);
+    const mStatus = membership ? membership.status : 'confirmed';
+    return `
+      <div class="arc-event-item" style="padding:8px 0;border-bottom:1px solid var(--border);">
+        <span class="arc-event-pos">${i + 1}.</span>
+        <span style="flex:1;">${escHtml(evt.title || evt.id)}</span>
+        <button class="btn small" onclick="arcToggleStatus('${evt.id}','${arcId}')" title="Toggle status" style="padding:4px 8px;">
+          <span class="arc-event-status ${mStatus}">${mStatus}</span>
+        </button>
+        <button class="btn small" onclick="arcMoveEvent('${arcId}',${i},-1)" style="padding:4px 6px;" ${i === 0 ? 'disabled' : ''}>↑</button>
+        <button class="btn small" onclick="arcMoveEvent('${arcId}',${i},1)" style="padding:4px 6px;" ${i === arcEvents.length - 1 ? 'disabled' : ''}>↓</button>
+        <button class="btn small danger" onclick="arcRemoveEvent('${evt.id}','${arcId}')" style="padding:4px 8px;">✕</button>
+      </div>
+    `;
+  }).join('');
+}
+// ============================================================
+// PARALLELOGRAM SUB-VIEW SWITCHING
+// ============================================================
+
+function switchParaView(view) {
+  ['arcs', 'articles'].forEach(v => {
+    const tab = document.getElementById('paraTab' + v.charAt(0).toUpperCase() + v.slice(1));
+    const panel = document.getElementById('paraView' + v.charAt(0).toUpperCase() + v.slice(1));
+    if (tab) tab.classList.toggle('active', v === view);
+    if (panel) panel.classList.toggle('active', v === view);
+  });
+  // Hide editor if open
+  document.getElementById('editorContainer').style.display = 'none';
+  document.querySelector('.para-sub-tabs').style.display = '';
+  if (view === 'arcs') refreshArcList();
+  if (view === 'articles') refreshArticleList();
+}
+
+// ============================================================
+// BRAINSTORM
+// ============================================================
+
+let brainstormArcId = null;
+let brainstormEvents = [];
+let brainstormMessages = [];
+
+function beginBrainstorm() {
+  if (!currentArcEditId) {
+    // Save the arc first
+    saveArcForm();
+  }
+  const arcId = currentArcEditId;
+  if (!arcId) return;
+
+  const arc = PrismDB.getArc(arcId);
+  if (!arc) { toast('Arc not found', true); return; }
+
+  brainstormArcId = arcId;
+  brainstormEvents = [];
+  brainstormMessages = [];
+  brainstormHistory = [];
+
+  document.getElementById('brainstormArcTitle').textContent = arc.title || 'Untitled Arc';
+  document.getElementById('brainstormSubjectType').textContent = arc.subjectType || 'actor';
+
+  // Reset chat with context-aware opening
+  const subjectLabel = arc.subjectType === 'actor' ? 'this person' : arc.subjectType === 'policy' ? 'this policy area' : 'this pattern';
+  document.getElementById('brainstormChatMessages').innerHTML = `
+    <div class="desk-msg claude">
+      <div class="desk-msg-role">Claude</div>
+      Ready to research <strong>${escHtml(arc.title)}</strong>. What events or moments are you thinking about for ${subjectLabel}? I can help find significant quotes, inflection points, and context — just give me a direction to start looking.
+    </div>`;
+
+  // Reset event list
+  renderBrainstormEvents();
+
+  // Show brainstorm, hide arc list/form
+  document.getElementById('brainstormPanel').style.display = '';
+  document.getElementById('arcToolbar').style.display = 'none';
+  document.getElementById('arcList').style.display = 'none';
+  hideArcForm();
+}
+
+function exitBrainstorm() {
+  document.getElementById('brainstormPanel').style.display = 'none';
+  document.getElementById('arcToolbar').style.display = '';
+  document.getElementById('arcList').style.display = '';
+  brainstormArcId = null;
+  refreshArcList();
+}
+
+const BRAINSTORM_SYSTEM_PROMPT = `You are the research editor for Prism / Parallelogram, a dialectical political analysis platform. You are helping the editor build an event arc — a longitudinal sequence of scored political events with a unified object.
+
+Your role in this brainstorm phase:
+- Help identify significant events, quotes, moments, and inflection points relevant to the arc's subject
+- When asked to research a person or pattern, provide specific, dated, citable moments
+- For each candidate event, provide: a concise title, approximate date, and 1-2 sentences of context explaining its significance to the arc
+- Present candidates clearly so the editor can confirm, reject, or refine them
+- Think dialectically: look for moments of displacement, denomination shifts, X-axis near-collapses, and institutional promise/delivery gaps
+- When the editor confirms events, acknowledge and help think about sequencing and the analytical thread connecting them
+- Be specific and factual. Cite quotes when possible. Avoid vague generalities.
+
+Format event candidates clearly like this:
+**[Title]** (Date)
+Context: [1-2 sentences]
+
+Present 3-5 candidates at a time unless asked otherwise.`;
+
+let brainstormHistory = [];
+
+async function sendBrainstormMessage() {
+  const apiKey = getApiKey();
+  if (!apiKey) { toast('Enter your Anthropic API key first', true); return; }
+
+  const input = document.getElementById('brainstormChatInput');
+  const text = input.value.trim();
+  if (!text) return;
+
+  input.value = '';
+  brainstormMessages.push({ role: 'user', content: text });
+
+  const chat = document.getElementById('brainstormChatMessages');
+  chat.innerHTML += `<div class="desk-msg user"><div class="desk-msg-role">You</div>${escHtml(text)}</div>`;
+  chat.scrollTop = chat.scrollHeight;
+
+  // Build context from arc info
+  const arc = brainstormArcId ? PrismDB.getArc(brainstormArcId) : null;
+  const contextLines = [];
+  if (arc) {
+    contextLines.push(`Arc: ${arc.title}`);
+    if (arc.object) contextLines.push(`Unified Object: ${arc.object}`);
+    if (arc.objectDescription) contextLines.push(`Object Description: ${arc.objectDescription}`);
+    if (arc.subjectType) contextLines.push(`Subject Type: ${arc.subjectType}`);
+  }
+  if (brainstormEvents.length > 0) {
+    contextLines.push('');
+    contextLines.push('Confirmed events so far:');
+    brainstormEvents.filter(e => e.status === 'confirmed').forEach((e, i) => {
+      contextLines.push(`  ${i + 1}. ${e.title} (${e.date || '—'})`);
+    });
+  }
+  const contextBlock = contextLines.join('\n');
+
+  // Build API messages
+  const apiMessages = [];
+  if (brainstormHistory.length === 0 && contextBlock) {
+    apiMessages.push({ role: 'user', content: `[Arc context]\n${contextBlock}\n\n---\n\n${text}` });
+  } else if (contextBlock) {
+    apiMessages.push(...brainstormHistory);
+    apiMessages.push({ role: 'user', content: `[Context refresh]\n${contextBlock}\n---\n\n${text}` });
+  } else {
+    apiMessages.push(...brainstormHistory);
+    apiMessages.push({ role: 'user', content: text });
+  }
+
+  // Show typing indicator
+  chat.innerHTML += `<div class="desk-msg claude" id="brainstormTyping" style="opacity:0.5;"><div class="desk-msg-role">Claude</div>Thinking...</div>`;
+  chat.scrollTop = chat.scrollHeight;
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 4096,
+        system: BRAINSTORM_SYSTEM_PROMPT,
+        messages: apiMessages
+      })
+    });
+
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err?.error?.message || `HTTP ${res.status}`);
+    }
+
+    const data = await res.json();
+    const reply = (data.content || []).map(b => b.type === 'text' ? b.text : '').join('').trim();
+
+    // Update history
+    brainstormHistory.push({ role: 'user', content: text });
+    brainstormHistory.push({ role: 'assistant', content: reply });
+
+    // Remove typing indicator
+    const typing = document.getElementById('brainstormTyping');
+    if (typing) typing.remove();
+
+    // Parse reply for event candidates — look for **[Title]** (Date) pattern
+    const candidates = [];
+    const candidateRegex = /\*\*(.+?)\*\*\s*\(([^)]+)\)/g;
+    let match;
+    while ((match = candidateRegex.exec(reply)) !== null) {
+      candidates.push({ title: match[1], date: match[2] });
+    }
+
+    // Render reply with confirm buttons for candidates
+    let replyHtml = reply
+      .replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*(.+?)\*/g, '<em>$1</em>')
+      .replace(/\n/g, '<br>');
+
+    if (candidates.length > 0) {
+      replyHtml += `<div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border);">`;
+      candidates.forEach((c, i) => {
+        const safeId = 'bsc_' + Date.now() + '_' + i;
+        // Store candidate data on window to avoid escaping issues
+        if (!window._bsCandidates) window._bsCandidates = {};
+        window._bsCandidates[safeId] = { title: c.title, date: c.date };
+        replyHtml += `
+          <div style="display:flex;gap:6px;align-items:center;margin-bottom:6px;">
+            <button class="btn small" style="padding:3px 8px;font-size:10px;" onclick="confirmBrainstormCandidateById('${safeId}')">✓ confirm</button>
+            <span style="font-size:12px;color:var(--ink-light);">${escHtml(c.title)}</span>
+          </div>`;
+      });
+      replyHtml += `</div>`;
+    }
+
+    chat.innerHTML += `<div class="desk-msg claude"><div class="desk-msg-role">Claude</div>${replyHtml}</div>`;
+
+  } catch (err) {
+    const typing = document.getElementById('brainstormTyping');
+    if (typing) typing.remove();
+    chat.innerHTML += `<div class="desk-msg claude"><div class="desk-msg-role">Claude</div><span style="color:var(--red);">⚠ ${escHtml(err.message || 'Request failed')}</span></div>`;
+  }
+
+  chat.scrollTop = chat.scrollHeight;
+}
+
+function confirmBrainstormCandidateById(safeId) {
+  const candidate = window._bsCandidates?.[safeId];
+  if (!candidate) { toast('Candidate not found', true); return; }
+  confirmBrainstormCandidate(candidate.title, candidate.date);
+}
+
+function confirmBrainstormCandidate(title, date) {
+  // Check if already added
+  if (brainstormEvents.find(e => e.title === title)) {
+    toast('Already in event string');
+    return;
+  }
+  addBrainstormEvent(title, date, 'confirmed');
+  toast('Confirmed: ' + title);
+}
+
+function addBrainstormEventPrompt() {
+  const title = prompt('Event title:');
+  if (!title) return;
+  const date = prompt('Year/date:') || '';
+  addBrainstormEvent(title, date);
+}
+
+function addBrainstormEvent(title, date, status = 'confirmed') {
+  brainstormEvents.push({ title, date, status, id: 'bs_' + Date.now() });
+  renderBrainstormEvents();
+}
+
+function removeBrainstormEvent(idx) {
+  brainstormEvents.splice(idx, 1);
+  renderBrainstormEvents();
+}
+
+function moveBrainstormEvent(idx, dir) {
+  const newIdx = idx + dir;
+  if (newIdx < 0 || newIdx >= brainstormEvents.length) return;
+  [brainstormEvents[idx], brainstormEvents[newIdx]] = [brainstormEvents[newIdx], brainstormEvents[idx]];
+  renderBrainstormEvents();
+}
+
+function renderBrainstormEvents() {
+  const list = document.getElementById('brainstormEventsList');
+  const confirmed = brainstormEvents.filter(e => e.status === 'confirmed');
+  const btn = document.getElementById('beginEditorialBtn');
+  document.getElementById('brainstormEventCount').textContent = confirmed.length + ' event' + (confirmed.length !== 1 ? 's' : '') + ' confirmed';
+  btn.disabled = confirmed.length === 0;
+
+  if (brainstormEvents.length === 0) {
+    list.innerHTML = '<div style="color:var(--muted);font-family:\'Lora\',serif;font-size:13px;font-style:italic;padding:12px 0;">Confirm events from the conversation to build your arc\'s sequence.</div>';
+    return;
+  }
+
+  list.innerHTML = brainstormEvents.map((evt, i) => `
+    <div class="bs-event-card ${evt.status === 'pending' ? 'pending' : ''}">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+        <div>
+          <div class="bs-event-num">${i + 1} · ${escHtml(evt.date || '—')}</div>
+          <div class="bs-event-title">${escHtml(evt.title)}</div>
+        </div>
+        <span class="arc-event-status ${evt.status}">${evt.status}</span>
+      </div>
+      <div class="bs-event-actions">
+        <button class="btn small" style="padding:3px 6px;font-size:10px;" onclick="moveBrainstormEvent(${i},-1)" ${i === 0 ? 'disabled' : ''}>↑</button>
+        <button class="btn small" style="padding:3px 6px;font-size:10px;" onclick="moveBrainstormEvent(${i},1)" ${i === brainstormEvents.length - 1 ? 'disabled' : ''}>↓</button>
+        <button class="btn small danger" style="padding:3px 6px;font-size:10px;" onclick="removeBrainstormEvent(${i})">×</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+function beginEditorial() {
+  if (!brainstormArcId || brainstormEvents.length === 0) return;
+
+  // Prevent double-click
+  const btn = document.getElementById('beginEditorialBtn');
+  if (btn.dataset.running === 'true') return;
+  btn.dataset.running = 'true';
+  btn.disabled = true;
+  btn.textContent = 'Creating events...';
+
+  const arc = PrismDB.getArc(brainstormArcId);
+  if (!arc) { btn.dataset.running = 'false'; return; }
+
+  const confirmed = brainstormEvents.filter(e => e.status === 'confirmed');
+  confirmed.forEach((bsEvt, i) => {
+    const evt = {
+      title: bsEvt.title,
+      date: bsEvt.date,
+      category: 'arc-event',
+      meta: { status: 'draft', source: 'brainstorm' },
+      prevalentAxis: 'x',
+      responses: {}
+    };
+    const saved = PrismDB.addEvent(evt);
+    PrismDB.addEventToArc(saved.id, brainstormArcId, 'confirmed');
+  });
+
+  toast(`Created ${confirmed.length} events and linked to arc`);
+
+  // Open in editor
+  exitBrainstorm();
+  openInEditor('arc', brainstormArcId);
+}
+
+// ============================================================
+// ARTICLES
+// ============================================================
+
+function refreshArticleList() {
+  const articles = getArticles();
+  const list = document.getElementById('articleList');
+
+  if (articles.length === 0) {
+    list.innerHTML = '<div class="arc-empty">No articles yet. Create one to begin editorial work on contemporaneous events.</div>';
+    return;
+  }
+
+  list.innerHTML = articles.map(art => {
+    const eventCount = (art.eventIds || []).length;
+    const arcTag = art.arcTag ? `<span class="arc-event-status probationary">→ ${escHtml(art.arcTag)}</span>` : '';
+    return `
+      <div class="article-card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+          <div class="article-card-title">${escHtml(art.title || 'Untitled')}</div>
+          <span class="article-card-type">${art.status || 'draft'}</span>
+        </div>
+        <div class="article-card-meta">
+          <span>${eventCount} event${eventCount !== 1 ? 's' : ''}</span>
+          ${art.updated ? `<span>updated ${new Date(art.updated).toLocaleDateString()}</span>` : ''}
+          ${arcTag}
+        </div>
+        <div class="article-card-actions">
+          <button class="btn small" onclick="openInEditor('article','${art.id}')">Open in Editor</button>
+          <button class="btn small danger" onclick="confirmDeleteArticle('${art.id}','${escAttr(art.title || '')}')">Delete</button>
+        </div>
+      </div>`;
+  }).join('');
+}
+
+function getArticles() {
+  return JSON.parse(localStorage.getItem('prism_para_articles') || '[]');
+}
+
+function saveArticle(article) {
+  const articles = getArticles();
+  if (!article.id) {
+    article.id = 'art_' + Date.now();
+    article.created = new Date().toISOString();
+  }
+  article.updated = new Date().toISOString();
+  const idx = articles.findIndex(a => a.id === article.id);
+  if (idx >= 0) articles[idx] = article;
+  else articles.push(article);
+  localStorage.setItem('prism_para_articles', JSON.stringify(articles));
+  return article;
+}
+
+function getArticle(id) {
+  return getArticles().find(a => a.id === id) || null;
+}
+
+function deleteArticle(id) {
+  const articles = getArticles().filter(a => a.id !== id);
+  localStorage.setItem('prism_para_articles', JSON.stringify(articles));
+}
+
+function showNewArticle() {
+  document.getElementById('articleFormTitle').textContent = 'New Article';
+  document.getElementById('articleTitle').value = '';
+
+  // Populate event checkboxes
+  const events = PrismDB.getEvents();
+  const container = document.getElementById('articleEventCheckboxes');
+  if (events.length > 0) {
+    container.innerHTML = events.map(e => `
+      <label style="display:flex;align-items:center;gap:8px;padding:4px 0;cursor:pointer;font-family:'Lora',serif;font-size:13px;color:var(--ink);">
+        <input type="checkbox" value="${e.id}" class="article-event-cb">
+        <span style="color:var(--muted);font-family:'DM Mono',monospace;font-size:10px;">${e.id}</span>
+        ${escHtml(e.title || 'Untitled')}
+      </label>`).join('');
+  } else {
+    container.innerHTML = '<div style="color:var(--muted);font-style:italic;font-size:13px;">No events yet</div>';
+  }
+
+  // Populate arc tag dropdown
+  const arcs = PrismDB.getArcs();
+  const arcSel = document.getElementById('articleArcTag');
+  arcSel.innerHTML = '<option value="">— none —</option>' +
+    arcs.map(a => `<option value="${a.id}">${escHtml(a.title || a.id)}</option>`).join('');
+
+  document.getElementById('articleFormPanel').classList.add('visible');
+}
+
+function hideArticleForm() {
+  document.getElementById('articleFormPanel').classList.remove('visible');
+}
+
+function saveArticleForm() {
+  const title = document.getElementById('articleTitle').value.trim();
+  if (!title) { toast('Article needs a title', true); return; }
+
+  const checked = document.querySelectorAll('.article-event-cb:checked');
+  const eventIds = Array.from(checked).map(cb => cb.value);
+  const arcTag = document.getElementById('articleArcTag').value || null;
+
+  const article = saveArticle({
+    title,
+    eventIds,
+    status: 'draft',
+    content: '',
+    arcTag
+  });
+
+  toast('Created: ' + title);
+  hideArticleForm();
+  refreshArticleList();
+
+  // Open in editor
+  openInEditor('article', article.id);
+}
+
+function confirmDeleteArticle(id, title) {
+  document.getElementById('confirmMessage').textContent = `Delete article "${title}"?`;
+  document.getElementById('confirmAction').onclick = () => {
+    deleteArticle(id);
+    toast('Deleted: ' + title);
+    closeConfirm();
+    refreshArticleList();
+  };
+  document.getElementById('confirmOverlay').classList.add('visible');
+}
+
+// ============================================================
+// EDITOR
+// ============================================================
+
+let editorState = {
+  type: null,     // 'arc' or 'article'
+  id: null,
+  section: null,  // current outline section index
+  preview: false,
+  deskMessages: []
+};
+
+function openInEditor(type, id) {
+  editorState.type = type;
+  editorState.id = id;
+  editorState.section = 0;
+  editorState.preview = false;
+  editorState.deskMessages = [];
+  editorDeskHistory = [];
+
+  // Hide sub-tabs and current views
+  document.querySelector('.para-sub-tabs').style.display = 'none';
+  document.getElementById('paraViewArcs').classList.remove('active');
+  document.getElementById('paraViewArticles').classList.remove('active');
+
+  // Show editor
+  document.getElementById('editorContainer').style.display = '';
+
+  // Set back button text
+  document.getElementById('editorBackBtn').textContent = type === 'arc' ? '← Back to arcs' : '← Back to articles';
+
+  if (type === 'arc') {
+    const arc = PrismDB.getArc(id);
+    if (!arc) { toast('Arc not found', true); return; }
+    document.getElementById('editorDocTitle').textContent = arc.title || 'Untitled Arc';
+    document.getElementById('editorDeskContext').textContent = `Arc · ${arc.title} · ${(arc.eventIds || []).length} events`;
+    buildOutlineFromArc(arc);
+    loadEditorContent(type, id);
+  } else {
+    const art = getArticle(id);
+    if (!art) { toast('Article not found', true); return; }
+    document.getElementById('editorDocTitle').textContent = art.title || 'Untitled';
+    document.getElementById('editorDeskContext').textContent = `Article · ${art.title} · ${(art.eventIds || []).length} events`;
+    buildOutlineFromArticle(art);
+    loadEditorContent(type, id);
+  }
+
+  // Seed editorial desk
+  const chat = document.getElementById('editorDeskChat');
+  chat.innerHTML = `
+    <div class="desk-msg claude">
+      <div class="desk-msg-role">Claude</div>
+      Ready to work on this. What section would you like to start with?
+    </div>`;
+}
+
+function closeEditor() {
+  editorSaveContent();
+  document.getElementById('editorContainer').style.display = 'none';
+  document.querySelector('.para-sub-tabs').style.display = '';
+  // Restore the view we came from
+  if (editorState.type === 'arc') {
+    switchParaView('arcs');
+  } else {
+    switchParaView('articles');
+  }
+  editorState.type = null;
+  editorState.id = null;
+}
+
+function buildOutlineFromArc(arc) {
+  const container = document.getElementById('editorOutlineContent');
+  const events = PrismDB.getArcEvents(arc.id);
+
+  let html = `<div class="editor-outline-item section-intro active" onclick="selectOutlineSection(0)">Intro</div>`;
+
+  events.forEach((evt, i) => {
+    html += `<div class="editor-outline-item" onclick="selectOutlineSection(${i * 2 + 1})">${escHtml(evt.title || evt.id)}</div>`;
+    if (i < events.length - 1) {
+      html += `<div class="editor-outline-item bridge" onclick="selectOutlineSection(${i * 2 + 2})">↔ bridge</div>`;
+    }
+  });
+
+  html += `<div class="editor-outline-item section-closing" onclick="selectOutlineSection(${events.length * 2})">Closing</div>`;
+  container.innerHTML = html;
+}
+
+function buildOutlineFromArticle(art) {
+  const container = document.getElementById('editorOutlineContent');
+  const events = (art.eventIds || []).map(id => PrismDB.getEvent(id)).filter(Boolean);
+
+  let html = `<div class="editor-outline-item section-intro active" onclick="selectOutlineSection(0)">Intro</div>`;
+  events.forEach((evt, i) => {
+    html += `<div class="editor-outline-item" onclick="selectOutlineSection(${i + 1})">${escHtml(evt.title || evt.id)}</div>`;
+  });
+  html += `<div class="editor-outline-item section-closing" onclick="selectOutlineSection(${events.length + 1})">Closing</div>`;
+  container.innerHTML = html;
+}
+
+function selectOutlineSection(idx) {
+  editorState.section = idx;
+  const items = document.querySelectorAll('#editorOutlineContent .editor-outline-item');
+  items.forEach((item, i) => item.classList.toggle('active', i === idx));
+}
+
+function loadEditorContent(type, id) {
+  const textarea = document.getElementById('editorTextarea');
+  if (type === 'article') {
+    const art = getArticle(id);
+    textarea.value = art?.content || '';
+  } else {
+    // Arc content stored in localStorage under arc-specific key
+    textarea.value = localStorage.getItem('prism_arc_content_' + id) || '';
+  }
+}
+
+function editorTogglePreview() {
+  editorState.preview = !editorState.preview;
+  const editMode = document.getElementById('editorEditMode');
+  const previewMode = document.getElementById('editorPreviewMode');
+  const btn = document.getElementById('editorPreviewToggle');
+
+  if (editorState.preview) {
+    // Save and show preview
+    editorSaveContent();
+    const content = document.getElementById('editorTextarea').value;
+    previewMode.innerHTML = renderMarkdown(content);
+    editMode.style.display = 'none';
+    previewMode.style.display = '';
+    btn.textContent = 'Edit';
+  } else {
+    editMode.style.display = '';
+    previewMode.style.display = 'none';
+    btn.textContent = 'Preview';
+  }
+}
+
+function editorSaveContent() {
+  const content = document.getElementById('editorTextarea').value;
+  if (editorState.type === 'article') {
+    const art = getArticle(editorState.id);
+    if (art) { art.content = content; saveArticle(art); }
+  } else if (editorState.type === 'arc') {
+    localStorage.setItem('prism_arc_content_' + editorState.id, content);
+  }
+}
+
+function editorInsert(before, after) {
+  const ta = document.getElementById('editorTextarea');
+  const start = ta.selectionStart;
+  const end = ta.selectionEnd;
+  const selected = ta.value.substring(start, end);
+  ta.value = ta.value.substring(0, start) + before + selected + after + ta.value.substring(end);
+  ta.focus();
+  ta.selectionStart = start + before.length;
+  ta.selectionEnd = start + before.length + selected.length;
+}
+
+function editorInsertWaypoint() {
+  editorInsert('\n<!-- graph-state yaw:0 pitch:30 focus:center zoom:1.0 -->\n', '');
+}
+
+function renderMarkdown(md) {
+  // Basic markdown → HTML (reuse existing parser if available)
+  let html = escHtml(md);
+  html = html.replace(/^### (.+)$/gm, '<h3>$1</h3>');
+  html = html.replace(/^## (.+)$/gm, '<h2>$1</h2>');
+  html = html.replace(/^# (.+)$/gm, '<h1>$1</h1>');
+  html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
+  html = html.replace(/&lt;!-- graph-state (.+?) --&gt;/g, '<div style="padding:6px 10px;border:1px dashed var(--border);border-radius:4px;font-family:\'DM Mono\',monospace;font-size:10px;color:var(--muted);margin:8px 0;">⬡ graph-state $1</div>');
+  html = html.replace(/\n\n/g, '</p><p>');
+  html = '<p>' + html + '</p>';
+  return html;
+}
+
+const EDITORIAL_DESK_SYSTEM_PROMPT = `You are the editorial AI for Prism / Parallelogram. You are co-writing with the editor in a manuscript workspace.
+
+Your role:
+- Draft prose sections when asked (introductions, bridges between events, event analyses, closings)
+- Revise and tighten existing prose when given editorial direction
+- Think dialectically: displacement patterns, denomination shifts, X-axis positioning, institutional promise/delivery gaps
+- Write in a style appropriate for Parallelogram — analytical but accessible, precise but not academic
+- When drafting, provide clean prose ready for insertion into the manuscript
+- Respond to editorial direction concisely — the editor wants drafts they can use, not meta-commentary about what you could write
+- If the editor pastes their own prose and asks for feedback, be specific and constructive
+
+Keep drafts focused. The editor will tell you what section they need.`;
+
+let editorDeskHistory = [];
+
+async function sendEditorDeskMessage() {
+  const apiKey = getApiKey();
+  if (!apiKey) { toast('Enter your Anthropic API key first', true); return; }
+
+  const input = document.getElementById('editorDeskInput');
+  const text = input.value.trim();
+  if (!text) return;
+
+  editorState.deskMessages.push({ role: 'user', content: text });
+  const chat = document.getElementById('editorDeskChat');
+  chat.innerHTML += `<div class="desk-msg user"><div class="desk-msg-role">You</div>${escHtml(text)}</div>`;
+  input.value = '';
+  chat.scrollTop = chat.scrollHeight;
+
+  // Build context from current editor state
+  const contextLines = [];
+  if (editorState.type === 'arc') {
+    const arc = PrismDB.getArc(editorState.id);
+    if (arc) {
+      contextLines.push(`Working on: ${arc.title} (arc)`);
+      if (arc.object) contextLines.push(`Unified Object: ${arc.object}`);
+      const arcEvents = PrismDB.getArcEvents(arc.id);
+      if (arcEvents.length > 0) {
+        contextLines.push('Arc events:');
+        arcEvents.forEach((e, i) => contextLines.push(`  ${i + 1}. ${e.title} (${e.date || '—'})`));
+      }
+    }
+  } else if (editorState.type === 'article') {
+    const art = getArticle(editorState.id);
+    if (art) {
+      contextLines.push(`Working on: ${art.title} (article)`);
+    }
+  }
+
+  // Include current manuscript content
+  const manuscript = document.getElementById('editorTextarea').value;
+  if (manuscript.trim()) {
+    contextLines.push('');
+    contextLines.push('Current manuscript:');
+    contextLines.push('---');
+    // Truncate if very long
+    const maxLen = 3000;
+    contextLines.push(manuscript.length > maxLen ? manuscript.slice(0, maxLen) + '\n[... truncated]' : manuscript);
+    contextLines.push('---');
+  }
+
+  const contextBlock = contextLines.join('\n');
+
+  // Build API messages
+  const apiMessages = [];
+  if (editorDeskHistory.length === 0 && contextBlock) {
+    apiMessages.push({ role: 'user', content: `[Editor context]\n${contextBlock}\n\n---\n\n${text}` });
+  } else {
+    apiMessages.push(...editorDeskHistory);
+    apiMessages.push({ role: 'user', content: contextBlock ? `[Context refresh]\n${contextBlock}\n---\n\n${text}` : text });
+  }
+
+  // Typing indicator
+  chat.innerHTML += `<div class="desk-msg claude" id="editorDeskTyping" style="opacity:0.5;"><div class="desk-msg-role">Claude</div>Thinking...</div>`;
+  chat.scrollTop = chat.scrollHeight;
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 4096,
+        system: EDITORIAL_DESK_SYSTEM_PROMPT,
+        messages: apiMessages
+      })
+    });
+
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err?.error?.message || `HTTP ${res.status}`);
+    }
+
+    const data = await res.json();
+    const reply = (data.content || []).map(b => b.type === 'text' ? b.text : '').join('').trim();
+
+    editorDeskHistory.push({ role: 'user', content: text });
+    editorDeskHistory.push({ role: 'assistant', content: reply });
+
+    const typing = document.getElementById('editorDeskTyping');
+    if (typing) typing.remove();
+
+    const replyHtml = reply
+      .replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*(.+?)\*/g, '<em>$1</em>')
+      .replace(/\n/g, '<br>');
+
+    chat.innerHTML += `
+      <div class="desk-msg claude">
+        <div class="desk-msg-role">Claude</div>
+        ${replyHtml}
+        <button class="desk-insert-btn" onclick="insertFromDesk(this)">→ insert to manuscript</button>
+      </div>`;
+
+  } catch (err) {
+    const typing = document.getElementById('editorDeskTyping');
+    if (typing) typing.remove();
+    chat.innerHTML += `<div class="desk-msg claude"><div class="desk-msg-role">Claude</div><span style="color:var(--red);">⚠ ${escHtml(err.message || 'Request failed')}</span></div>`;
+  }
+
+  chat.scrollTop = chat.scrollHeight;
+}
+
+function insertFromDesk(btn) {
+  const msg = btn.parentElement;
+  const clone = msg.cloneNode(true);
+  // Remove role label and buttons
+  const role = clone.querySelector('.desk-msg-role');
+  if (role) role.remove();
+  clone.querySelectorAll('button').forEach(b => b.remove());
+  // Convert <br> to newlines, strip remaining HTML
+  let text = clone.innerHTML
+    .replace(/<br\s*\/?>/gi, '\n')
+    .replace(/<strong>(.+?)<\/strong>/g, '**$1**')
+    .replace(/<em>(.+?)<\/em>/g, '*$1*')
+    .replace(/<[^>]+>/g, '')
+    .replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+    .replace(/&amp;/g, '&')
+    .trim();
+  if (text) {
+    editorInsert('\n' + text + '\n', '');
+    toast('Inserted to manuscript');
+  }
+}
+
+const DERIVE_SYSTEM_PROMPT = `You are the derivation engine for Prism, a dialectical political analysis platform. You extract structured analytical parameters from editorial prose.
+
+Given an article/manuscript and its associated event context, extract the following as JSON:
+
+{
+  "keywords": {
+    "A": [{"text": "keyword", "weight": 0.8}, ...],
+    "B": [{"text": "keyword", "weight": 0.7}, ...],
+    "C": [{"text": "keyword", "weight": 0.9}, ...],
+    "D": [{"text": "keyword", "weight": 0.6}, ...]
+  },
+  "zValues": {
+    "objectZ": 0.0,
+    "subjectZ": { "A": 0.0, "B": 0.0, "C": 0.0, "D": 0.0 }
+  },
+  "axisLoadPhrases": [
+    {"phrase": "...", "quadrant": "A", "axis": "x", "weight": 0.8},
+    ...
+  ],
+  "summary": "One paragraph summarizing the dialectical dynamics found"
+}
+
+Rules for extraction:
+- Keywords: 6-10 per quadrant. Weight 0.0-1.0 reflects how central the keyword is to that quadrant's position.
+- Quadrants: A = institutional-right (+X,+Y), B = institutional-left (-X,+Y), C = populist-left (-X,-Y), D = populist-right (+X,-Y)
+- Object Z: measures whether the determining force (the object) is getting its way. Positive = apparatus succeeding. Range -1.0 to 1.0.
+- Subject Z per quadrant: each quadrant's experience of the institutional promise/delivery gap. Range -1.0 to 1.0.
+- Axis-load phrases: specific phrases from the text that carry X or Y axis meaning. Include the quadrant and which axis they load.
+- Think dialectically: displacement patterns, denomination, institutional promise vs delivery.
+
+Respond with ONLY the JSON object, no markdown fences, no preamble.`;
+
+async function editorDerive() {
+  const apiKey = getApiKey();
+  if (!apiKey) { toast('Enter your Anthropic API key first', true); return; }
+
+  editorSaveContent();
+  const manuscript = document.getElementById('editorTextarea').value.trim();
+  if (!manuscript) { toast('Write something in the manuscript first', true); return; }
+
+  // Build context
+  const contextLines = [];
+  let eventIds = [];
+
+  if (editorState.type === 'arc') {
+    const arc = PrismDB.getArc(editorState.id);
+    if (arc) {
+      contextLines.push('Arc: ' + arc.title);
+      if (arc.object) contextLines.push('Unified Object: ' + arc.object);
+      if (arc.objectDescription) contextLines.push('Object Description: ' + arc.objectDescription);
+      const arcEvents = PrismDB.getArcEvents(arc.id);
+      eventIds = arcEvents.map(e => e.id);
+      if (arcEvents.length > 0) {
+        contextLines.push('Events:');
+        arcEvents.forEach((e, i) => {
+          contextLines.push('  ' + (i+1) + '. ' + e.title + ' (' + (e.date || '—') + ')');
+          if (e.axes) {
+            contextLines.push('     X: ' + (e.axes.x?.neg||'Left') + ' ↔ ' + (e.axes.x?.pos||'Right'));
+            contextLines.push('     Y: ' + (e.axes.y?.neg||'Populist') + ' ↔ ' + (e.axes.y?.pos||'Institutional'));
+          }
+        });
+      }
+    }
+  } else if (editorState.type === 'article') {
+    const art = getArticle(editorState.id);
+    if (art) {
+      contextLines.push('Article: ' + art.title);
+      eventIds = art.eventIds || [];
+      eventIds.forEach(id => {
+        const e = PrismDB.getEvent(id);
+        if (e) contextLines.push('  Event: ' + e.title + ' (' + (e.date || '—') + ')');
+      });
+    }
+  }
+
+  const userContent = contextLines.join('\n') + '\n\n---\n\nManuscript:\n\n' + manuscript;
+
+  toast('Deriving parameters from manuscript...');
+  const deriveBtn = document.querySelector('.derive-btn');
+  if (deriveBtn) { deriveBtn.disabled = true; deriveBtn.textContent = '◆ Deriving...'; }
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 4096,
+        system: DERIVE_SYSTEM_PROMPT,
+        messages: [{ role: 'user', content: userContent }]
+      })
+    });
+
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err?.error?.message || 'HTTP ' + res.status);
+    }
+
+    const data = await res.json();
+    const rawText = (data.content || []).map(b => b.type === 'text' ? b.text : '').join('').trim();
+    const jsonText = rawText.replace(/^```(?:json)?\n?/, '').replace(/\n?```$/, '').trim();
+
+    let derived;
+    try {
+      derived = JSON.parse(jsonText);
+    } catch (parseErr) {
+      throw new Error('JSON parse error — Claude responded: ' + rawText.slice(0, 200));
+    }
+
+    // Write results to PrismDB events
+    let writeCount = 0;
+    eventIds.forEach(id => {
+      const evt = PrismDB.getEvent(id);
+      if (!evt) return;
+
+      // Write keywords to responses
+      ['A', 'B', 'C', 'D'].forEach(q => {
+        if (derived.keywords?.[q]) {
+          if (!evt.responses) evt.responses = {};
+          if (!evt.responses[q]) evt.responses[q] = {};
+          // Write to all three bands
+          ['fluid', 'coalition', 'denominated'].forEach(band => {
+            if (!evt.responses[q][band]) evt.responses[q][band] = {};
+            evt.responses[q][band].words = derived.keywords[q];
+          });
+        }
+      });
+
+      // Write Z values
+      if (derived.zValues) {
+        evt.derivedZ = {
+          objectZ: derived.zValues.objectZ,
+          subjectZ: derived.zValues.subjectZ,
+          provenance: 'derived',
+          timestamp: new Date().toISOString()
+        };
+      }
+
+      // Write axis-load phrases
+      if (derived.axisLoadPhrases) {
+        evt.axisLoadPhrases = derived.axisLoadPhrases;
+      }
+
+      PrismDB.updateEvent(id, evt);
+      writeCount++;
+    });
+
+    // Show results in editorial desk
+    const chat = document.getElementById('editorDeskChat');
+    const summaryHtml = derived.summary ? escHtml(derived.summary).replace(/\n/g, '<br>') : 'Derivation complete.';
+    const keywordPreview = ['A', 'B', 'C', 'D'].map(q => {
+      const kws = derived.keywords?.[q] || [];
+      return `<strong>${q}:</strong> ${kws.slice(0, 4).map(k => k.text).join(', ')}`;
+    }).join('<br>');
+
+    chat.innerHTML += `
+      <div class="desk-msg claude">
+        <div class="desk-msg-role">◆ Derive</div>
+        <div style="margin-bottom:8px;">${summaryHtml}</div>
+        <div style="font-size:12px;padding:8px;background:var(--cream);border-radius:4px;margin-bottom:6px;">
+          ${keywordPreview}
+        </div>
+        <div style="font-size:11px;color:var(--muted);">
+          Z: obj=${derived.zValues?.objectZ ?? '—'} · 
+          qz: A=${derived.zValues?.subjectZ?.A ?? '—'} B=${derived.zValues?.subjectZ?.B ?? '—'} 
+          C=${derived.zValues?.subjectZ?.C ?? '—'} D=${derived.zValues?.subjectZ?.D ?? '—'}
+        </div>
+        <div style="font-size:11px;color:var(--muted);margin-top:4px;">
+          Written to ${writeCount} event${writeCount !== 1 ? 's' : ''} · ${(derived.axisLoadPhrases||[]).length} axis-load phrases
+        </div>
+      </div>`;
+    chat.scrollTop = chat.scrollHeight;
+
+    toast('Derived and written to ' + writeCount + ' events');
+
+  } catch (err) {
+    toast('Derive failed: ' + err.message, true);
+    const chat = document.getElementById('editorDeskChat');
+    chat.innerHTML += `<div class="desk-msg claude"><div class="desk-msg-role">◆ Derive</div><span style="color:var(--red);">⚠ ${escHtml(err.message)}</span></div>`;
+    chat.scrollTop = chat.scrollHeight;
+  } finally {
+    if (deriveBtn) { deriveBtn.disabled = false; deriveBtn.textContent = '◆ Derive'; }
+  }
+}
+
+function editorShowRefinement() {
+  toast('Refinement view — coming soon');
+}
+
+function editorNewEvent() {
+  toast('Parallelogram event creator — coming soon');
+}
+
+// Auto-save manuscript on changes
+document.addEventListener('DOMContentLoaded', () => {
+  const ta = document.getElementById('editorTextarea');
+  if (ta) {
+    let saveTimer;
+    ta.addEventListener('input', () => {
+      clearTimeout(saveTimer);
+      saveTimer = setTimeout(() => editorSaveContent(), 1500);
+    });
+  }
+});
+
+// Add "Open in Editor" to arc cards
+const _origRefreshArcList = refreshArcList;
+refreshArcList = function() {
+  _origRefreshArcList();
+  // Add "Open in Editor" buttons to each arc card
+  document.querySelectorAll('#arcList .arc-card-actions').forEach(actions => {
+    const editBtn = actions.querySelector('.btn.small:not(.danger)');
+    if (editBtn && !actions.querySelector('.editor-open-btn')) {
+      const arcId = editBtn.getAttribute('onclick').match(/'([^']+)'/)?.[1];
+      if (arcId) {
+        const openBtn = document.createElement('button');
+        openBtn.className = 'btn small editor-open-btn';
+        openBtn.textContent = 'Open in Editor';
+        openBtn.onclick = () => openInEditor('arc', arcId);
+        actions.insertBefore(openBtn, editBtn);
+      }
+    }
+  });
+};
 
 // ============================================================
 // EVENT LIST
@@ -2474,7 +4622,7 @@ function editEvent(id) {
   checkPairing();
 
   // Diatribe
-  ['LF', 'LD', 'RF', 'RD'].forEach(key => {
+  ['LG', 'LB', 'RG', 'RB'].forEach(key => {
     document.getElementById(`dia${key}`).value = evt.diatribe?.[key]?.text || '';
   });
 
@@ -2495,7 +4643,7 @@ function hideForm() {
 function clearForm() {
   const fields = ['evtTitle', 'evtCategory', 'evtDate', 'evtPrompt', 'evtFraming', 'evtSource',
     'axXPos', 'axXNeg', 'axYPos', 'axYNeg',
-    'diaLF', 'diaLD', 'diaRF', 'diaRD'];
+    'diaLG', 'diaLB', 'diaRG', 'diaRB'];
   fields.forEach(id => { document.getElementById(id).value = ''; });
   document.getElementById('evtActive').checked = false;
   document.getElementById('evtPrevalentAxis').value = 'x';
@@ -2589,9 +4737,9 @@ function setAntiValent(band) {
 
   const rationale = document.getElementById('avRationale');
   const rationales = {
-    fluid: 'Discourse floor is elevated — no genuine fluid position available. Coalition is the best available.',
-    coalition: 'No middle ground — binary split. Fluid vs denominated, no coalition stage formed.',
-    denominated: 'Rare — discourse hasn\'t degraded to denominated. Even at max Diatribe, worst is coalition-level.'
+    goodFaith: 'Discourse floor is elevated — no genuine good faith available. Coalition is the best available.',
+    coalition: 'No middle ground — binary split. Good faith vs bad faith, no coalition stage formed.',
+    badFaith: 'Rare — discourse hasn\'t degraded to bad faith. Even at max Diatribe, worst is coalition-level.'
   };
   rationale.textContent = rationales[band] || '';
 }
@@ -2668,8 +4816,8 @@ function saveEvent() {
   });
 
   // Build diatribe
-  const diaSides = { LF: { side: 'left', faith: 'fluid' }, LD: { side: 'left', faith: 'denominated' },
-                     RF: { side: 'right', faith: 'fluid' }, RD: { side: 'right', faith: 'denominated' } };
+  const diaSides = { LG: { side: 'left', faith: 'good' }, LB: { side: 'left', faith: 'bad' },
+                     RG: { side: 'right', faith: 'good' }, RB: { side: 'right', faith: 'bad' } };
   Object.keys(diaSides).forEach(key => {
     eventData.diatribe[key] = {
       text: document.getElementById(`dia${key}`).value.trim(),
@@ -2765,8 +4913,8 @@ Score from the statement's actual economic and governance assumptions — not pa
 Y-axis (−1.0 to +1.0): Institutional (+Y) vs Populist/Anti-institutional (−Y) mechanism preference.
 Score from the mechanism the statement operates through or advocates. Credentialed authority, procedural legitimacy, expert consensus, legislative/judicial channels → +Y. Common-sense vernacular, follows-the-money skepticism, anti-establishment energy, direct democratic instinct → −Y.
 
-DIATRIBE SCORE (0–100): Measures denomination — the degree to which the capacity for fluid deliberation has been degraded. Scored against calibrated benchmarks:
-0–20: Fluid floor. Substance present, capacity for surprise operative.
+DIATRIBE SCORE (0–100): Measures denomination — the degree to which the capacity for good-faith deliberation has been degraded. Scored against calibrated benchmarks:
+0–20: Good faith floor. Substance present, capacity for surprise operative.
 20–35: Mild denomination. Some rhetorical performance but substance recoverable.
 35–55: Moderate denomination. Tribal coding present, object partially obscured.
 55–70: Significant denomination. Multiple patterns operative. Object heavily obscured.
@@ -2782,9 +4930,9 @@ MODE (if Diatribe > 33):
 - "performative": Institutional/discursive performance substituting for engagement. Split between stated position and actual action.
 - "defensive": Non-engagement, definitional retreat, silence as strategy.
 - "conspiratorial": Reclassification of disagreement as evidence of hidden enemy allegiance.
-- "none": Fluid, no operative denomination mode.
+- "none": Good faith, no operative denomination mode.
 
-PATTERNS (from the 26-pattern denomination library — cite by number if operative):
+PATTERNS (from the 26-pattern bad faith library — cite by number if operative):
 #1 Pre-classification, #4 Definitional retreat, #5 Conspiratorial boundary enforcement, #8 Denial of real phenomena, #10 Definitional reclassification, #11 Coordinated authority performance, #12 Conspiratorial object destruction, #13 Systematic denial, #14 Paired theater delegation, #15 Compounding non-engagement, #16 Z-gap by architectural design, #17 Denomination catastrophe, #19 Democratic capture performance, #21 Procedural sabotage, #22 Retroactive nullification, #23 Performed insurgency, #24 Perceptual blindness, #25 Discursive substitution, #26 Forgetting as terminal denomination.
 
 ENTRY TYPE: Statements score as satellite/individual entries — single score, no second position. The score reflects the statement as made, not the speaker's full position.
@@ -2940,7 +5088,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 async function scoreStatement() {
-  const apiKey = document.getElementById('aiApiKey').value.trim();
+  const apiKey = getApiKey();
   if (!apiKey) { toast('Enter your Anthropic API key first', true); return; }
 
   // Mode-specific input validation
@@ -3077,7 +5225,7 @@ function renderScorerResult(score) {
   document.getElementById('srZSub').textContent  = typeof score.z === 'number' ? zLabel(score.z) : '';
   document.getElementById('srDia').textContent  = dVal;
   document.getElementById('srDia').className    = 'scorer-score-val ' + dCls;
-  document.getElementById('srDiaSub').textContent = score.mode && score.mode !== 'none' ? score.mode : 'fluid';
+  document.getElementById('srDiaSub').textContent = score.mode && score.mode !== 'none' ? score.mode : 'good faith';
 
   // Meta tags
   const metaEl = document.getElementById('srMeta');
@@ -3343,8 +5491,8 @@ function renderViewer() {
 // WORD TAGGER (generalized for all band responses per quadrant)
 // ============================================================
 
-// Keys: 'A_fluid','A_coalition','A_denominated', etc. for band responses
-const BANDS = ['fluid', 'coalition', 'denominated'];
+// Keys: 'A_goodFaith','A_coalition','A_badFaith', etc. for band responses
+const BANDS = ['goodFaith', 'coalition', 'badFaith'];
 const taggerState = {};
 ['A', 'B', 'C', 'D'].forEach(q => {
   BANDS.forEach(b => { taggerState[q + '_' + b] = []; });
@@ -3364,9 +5512,9 @@ function weightLabel(w) {
   return 'Maximum';
 }
 
-// Resolve DOM element IDs from a tagger key (e.g. 'A_fluid')
+// Resolve DOM element IDs from a tagger key (e.g. 'A_goodFaith')
 function _taggerEls(key) {
-  // key is always 'Q_band' format now (e.g. 'A_fluid', 'C_denominated')
+  // key is always 'Q_band' format now (e.g. 'A_goodFaith', 'C_badFaith')
   return { textEl: 'resp' + key, taggerEl: 'tagger' + key, isVariant: false };
 }
 
@@ -3651,7 +5799,7 @@ function syncKeywordFields(key) {
     if (c.axis === 'x') xWord = c.t.trim();
     if (c.axis === 'y') yWord = c.t.trim();
   });
-  // key is 'A_fluid' etc. → DOM IDs are 'respA_fluid_xWord'
+  // key is 'A_goodFaith' etc. → DOM IDs are 'respA_goodFaith_xWord'
   const xEl = document.getElementById('resp' + key + '_xWord');
   const yEl = document.getElementById('resp' + key + '_yWord');
   if (xEl) xEl.value = xWord;
@@ -3696,7 +5844,7 @@ function initAllTaggers() {
 // AI AUTO-SUGGEST
 // ============================================================
 
-const PRISM_SYSTEM_PROMPT = `You are the Prism dialectical encoding engine. Prism maps political events onto a two-axis coordinate system and generates four response cards — one per quadrant — each written from inside a genuine political position at the fluid floor.
+const PRISM_SYSTEM_PROMPT = `You are the Prism dialectical encoding engine. Prism maps political events onto a two-axis coordinate system and generates four response cards — one per quadrant — each written from inside a genuine political position at the good-faith floor.
 
 THE TWO AXES:
 
@@ -3730,22 +5878,22 @@ Quadrant D — Lower Right (+X, −Y):
 Conversational, populist vernacular, skeptical of credentialed authority. Common-sense framing, culturally conservative assumptions, anti-establishment energy.
 Register: podcast, talk radio, dinner table. Sounds like someone cutting through what they see as obvious institutional dishonesty.
 
-THE FLUID FLOOR:
-Every response is written at the fluid floor — denomination stripped, capacity for surprise operative. The response sounds like a real person holding this view, not a position statement. It must engage the political object directly, leave room for new evidence to matter, and be non-strawman: a genuine holder of this view would feel represented.
+THE GOOD-FAITH FLOOR:
+Every response is written at the good-faith floor — denomination stripped, capacity for surprise operative. The response sounds like a real person holding this view, not a position statement. It must engage the political object directly, leave room for new evidence to matter, and be non-strawman: a genuine holder of this view would feel represented.
 
 Symmetry test: Read all four responses together. No quadrant should be obviously weaker or more dismissable than the others. Each must be the strongest version of its position.
 
 THREE RESPONSE BANDS PER QUADRANT:
 Each quadrant carries three authored responses at different faith levels:
-- fluid: Denomination stripped, capacity for surprise operative. The response sounds like a real person holding this view, not a position statement. Non-strawman: a genuine holder would feel represented.
-- coalition: Clearly identified with this side, votes accordingly. Some tribal coloring, but still engaging the object fluidly.
-- denominated: Denomination complete. The position has become a vehicle rather than a view. Denomination dominant — strawmanning, loyalty signaling, weaponized framing.
+- goodFaith: Denomination stripped, capacity for surprise operative. The response sounds like a real person holding this view, not a position statement. Non-strawman: a genuine holder would feel represented.
+- coalition: Clearly identified with this side, votes accordingly. Some tribal coloring, but still arguing in good faith about the object.
+- badFaith: Denomination complete. The position has become a vehicle rather than a view. Bad faith dominant — strawmanning, loyalty signaling, weaponized framing.
 
 All three bands must be 1–2 sentences. Same voice profile per quadrant, degrading through the bands.
 
 ANTI-VALENT BAND:
 One of the three bands is designated "anti-valent" — the band that doesn't have real power in the actual discourse for this event.
-- antiValentBand: "fluid" | "coalition" | "denominated"
+- antiValentBand: "goodFaith" | "coalition" | "badFaith"
 Assess the discourse landscape and propose which band is anti-valent with a one-line rationale.
 
 PREVALENT AXIS:
@@ -3783,10 +5931,10 @@ KEYWORDS:
 For each band response, supply xKeyword and yKeyword — the single most load-bearing word on each axis from that response.
 
 DIATRIBE FIELDS (short 15-25 word descriptors):
-LF: Left-side fluid discourse pattern for this event
-LD: Left-side denomination pattern
-RF: Right-side fluid discourse pattern
-RD: Right-side denomination pattern
+LG: Left-side good-faith discourse pattern for this event
+LB: Left-side bad-faith denomination pattern
+RG: Right-side good-faith discourse pattern
+RB: Right-side bad-faith denomination pattern
 
 OUTPUT: Respond ONLY with valid JSON. No preamble, no explanation, no markdown fences.
 {
@@ -3794,29 +5942,29 @@ OUTPUT: Respond ONLY with valid JSON. No preamble, no explanation, no markdown f
   "prompt": "...",
   "framing": "...",
   "prevalentAxis": "x" | "y",
-  "antiValentBand": "fluid" | "coalition" | "denominated",
+  "antiValentBand": "goodFaith" | "coalition" | "badFaith",
   "antiValentRationale": "One line explaining why this band is anti-valent.",
   "axisLabels": { "xPos": "...", "xNeg": "...", "yPos": "...", "yNeg": "..." },
   "quadrantResponses": {
     "A": {
       "xSide": "left",
-      "fluid": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." },
+      "goodFaith": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." },
       "coalition": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." },
-      "denominated": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." }
+      "badFaith": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." }
     },
-    "B": { "xSide": "right", "fluid": {...}, "coalition": {...}, "denominated": {...} },
-    "C": { "xSide": "left",  "fluid": {...}, "coalition": {...}, "denominated": {...} },
-    "D": { "xSide": "right", "fluid": {...}, "coalition": {...}, "denominated": {...} }
+    "B": { "xSide": "right", "goodFaith": {...}, "coalition": {...}, "badFaith": {...} },
+    "C": { "xSide": "left",  "goodFaith": {...}, "coalition": {...}, "badFaith": {...} },
+    "D": { "xSide": "right", "goodFaith": {...}, "coalition": {...}, "badFaith": {...} }
   },
   "wordTags": {
     "A": {
-      "fluid": [ { "word": "...", "tag": "x+", "weight": 0.65, "isPrimary": false }, ... ],
+      "goodFaith": [ { "word": "...", "tag": "x+", "weight": 0.65, "isPrimary": false }, ... ],
       "coalition": [ ... ],
-      "denominated": [ ... ]
+      "badFaith": [ ... ]
     },
     "B": {...}, "C": {...}, "D": {...}
   },
-  "diatribe": { "LF": "...", "LD": "...", "RF": "...", "RD": "..." }
+  "diatribe": { "LG": "...", "LB": "...", "RG": "...", "RB": "..." }
 }`;
 
 // Store AI draft for metadata comparison
@@ -3865,7 +6013,7 @@ function applyAIWordTags(quad, responseText, aiTags) {
 }
 
 async function generateSuggestions() {
-  const apiKey = document.getElementById('aiApiKey').value.trim();
+  const apiKey = getApiKey();
   if (!apiKey) { toast('Enter your Anthropic API key first', true); return; }
 
   const title   = document.getElementById('evtTitle').value.trim();
@@ -3890,7 +6038,7 @@ async function generateSuggestions() {
     prompt   ? `Prompt: ${prompt}`   : null,
     framing  ? `Framing: ${framing}` : null,
     '',
-    'Generate all fields: category, prompt, framing, prevalentAxis, antiValentBand with rationale, axis labels, four quadrant responses with three bands each (fluid/coalition/denominated, 1–2 sentences each), keywords, word tags per band, and diatribe descriptors.'
+    'Generate all fields: category, prompt, framing, prevalentAxis, antiValentBand with rationale, axis labels, four quadrant responses with three bands each (goodFaith/coalition/badFaith, 1–2 sentences each), keywords, word tags per band, and diatribe descriptors.'
   ].filter(l => l !== null).join('\n');
 
   try {
@@ -3986,7 +6134,7 @@ async function generateSuggestions() {
 
     // ── Apply diatribe ──
     const dia = draft.diatribe || {};
-    ['LF', 'LD', 'RF', 'RD'].forEach(k => {
+    ['LG', 'LB', 'RG', 'RB'].forEach(k => {
       const el = document.getElementById(`dia${k}`);
       if (el && dia[k]) el.value = dia[k];
     });
@@ -4022,9 +6170,9 @@ You have the complete J encoding below — the full dialectical parameters frame
 
 You are the Prism dialectical analysis engine. You process political events, statements, and positions through a four-axis scoring framework that restores legibility to political discourse. Your purpose is not to transform political opinion but to make each position's internal logic visible to people standing in other positions.
 
-You score from a fixed epistemological ground: human nature is constant. The capacity for fluid deliberation is indestructible. Your task is to measure where that capacity is operative and where it has been degraded — and to make the degradation visible without reproducing it.
+You score from a fixed epistemological ground: human nature is constant. The capacity for good-faith deliberation is indestructible. Your task is to measure where that capacity is operative and where it has been degraded — and to make the degradation visible without reproducing it.
 
-You never take partisan sides. You never flatten complexity into tribal signals. You never confuse institutional behavior with economic perception. When you detect denomination, you name the mechanism, not the tribe.
+You never take partisan sides. You never flatten complexity into tribal signals. You never confuse institutional behavior with economic perception. When you detect bad faith, you name the mechanism, not the tribe.
 
 ---
 
@@ -4171,21 +6319,21 @@ Divergence is a structural finding, not an error. When detected, score both the 
 
 ---
 
-### 1.4 — Diatribe: Fluid / Denominated Assessment
+### 1.4 — Diatribe: Good Faith / Bad Faith Assessment
 
 **What it measures:** The quality of engagement with the political object. Receives X, Y, and Z as inputs. Produces the encoding's most consequential score.
 
 **Scale:** 0–100
-- 0–33: Fluid. Can see the object. Can be surprised. Can hold ambivalence.
+- 0–33: Good faith. Can see the object. Can be surprised. Can hold ambivalence.
 - 34–66: Mixed. Capacity for surprise partially operative. Degradation trending but not closed. Recovery possible.
-- 67–100: Denominated. Cannot be surprised. Object destroyed and replaced.
+- 67–100: Bad faith dominant. Cannot be surprised. Object destroyed and replaced.
 
 **Derivation procedure (eight steps):**
 
 **Step 1 — Establish the political object.** What is actually at stake? Not the framing, not the rhetoric, not the tribal signal — the underlying substance. If the object cannot be identified, that is itself diagnostic: the object may already have been destroyed by denomination.
 
 **Step 2 — Assess capacity for surprise.** Can this subject still be surprised by the political object? This is a binary marker alongside the numerical score.
-- YES: Subject can encounter new evidence and revise. Fluid operative.
+- YES: Subject can encounter new evidence and revise. Good faith operative.
 - NO: Subject has a predetermined interpretation for any possible evidence. Object is denominated.
 
 **Step 3 — Apply the conspiratorial gradient:**
@@ -4219,7 +6367,7 @@ Validated symmetry pairs (all within 5 points):
 - Rubio disavowal of Gang of Eight (📓e4, Dia 55–60) ≈ Romney disavowal of own healthcare plan (📓e3, Dia 55)
 
 **Step 8 — Assign mode tags:**
-- Diatribe 0–33: Mode = none. Fluid.
+- Diatribe 0–33: Mode = none. Good faith.
 - Diatribe 34–66: Mode = trajectory indicator (which direction is degradation trending?). Warning signal.
 - Diatribe 67+: Mode = operative mode. Degradation complete on this dimension.
 
@@ -4227,7 +6375,7 @@ Validated symmetry pairs (all within 5 points):
 
 - Y-axis-determined events produce lower Diatribe than X-axis-determined events. Cross-partisan alignment is costly, therefore more likely genuine.
 - Form-substance divergence is Diatribe-relevant. When Y-form and Y-substance diverge, the Diatribe addresses the divergence.
-- Large Z-gaps create Diatribe pressure. Maintaining a large gap between discourse and delivery requires denomination.
+- Large Z-gaps create Diatribe pressure. Maintaining a large gap between discourse and delivery requires bad faith.
 - Designed Z-gaps (architectural Z) are among the highest-Diatribe scorable mechanisms.
 - Migratory Diatribe: some subjects' scores change over time. Direction matters. Track longitudinally.
 
@@ -4243,10 +6391,10 @@ Validated symmetry pairs (all within 5 points):
 | 20 | Kansas ballot — direct democratic vote | Constitutional |
 | 20 | Romney MA signing — genuine bipartisan achievement | Healthcare |
 | 25 | Roe v. Wade — genuine legal argument at issuance | Constitutional |
-| 35 | Trump Reagan Library statement — substance fluid, rhetoric performative | Foreign policy |
+| 35 | Trump Reagan Library statement — substance good faith, rhetoric performative | Foreign policy |
 | 50 | ACA Heritage adoption composite | Healthcare |
 | 55 | Romney 2012 disavowal — forced disavowal of own achievement | Healthcare |
-| 55 | Vance "childless cat ladies" — bilateral denomination | Constitutional |
+| 55 | Vance "childless cat ladies" — bilateral bad faith | Constitutional |
 | 65 | Heritage Action mobilizing against own framework | Healthcare |
 | 70 | Nuland biolabs reclassification | Conspiratorial |
 | 75 | McConnell sequence — proven by Barrett reversal | Constitutional |
@@ -4258,7 +6406,7 @@ Validated symmetry pairs (all within 5 points):
 
 ---
 
-## Module 2 — Denomination Pattern Library
+## Module 2 — Bad Faith Pattern Library
 
 ### Detection Protocol
 
@@ -4268,7 +6416,7 @@ When Diatribe > 33, identify operative pattern(s) from the library below. Entrie
 
 **MODE: REACTIONARY (1 pattern)**
 
-**#17 — Denomination catastrophe.** Real informal capital (legitimate grievance, empirical observation) frozen in a racialized, dehumanizing, or otherwise totalizing vehicle. The fluid substrate and the denominated vehicle are locked simultaneously — the substance becomes inaccessible because of the vehicle it was placed in. Diatribe 65–80. Stage 3→4.
+**#17 — Denomination catastrophe.** Real informal capital (legitimate grievance, empirical observation) frozen in a racialized, dehumanizing, or otherwise totalizing vehicle. The good-faith substrate and the bad-faith vehicle are denominated simultaneously — the substance becomes inaccessible because of the vehicle it was placed in. Diatribe 65–80. Stage 3→4.
 - Detection: Does the position contain a legitimate underlying concern expressed through a vehicle that negates the subjectivity of a group? If yes, score substrate and vehicle independently.
 - Denomination tests: Substance replaced? Traversal destroyed? Deliberation foreclosed? All three = denomination catastrophe.
 - Diagnostic question: "Which vehicle?" not "which pattern?" One operation (negation of other's subjectivity), many carriers.
@@ -4277,7 +6425,7 @@ When Diatribe > 33, identify operative pattern(s) from the library below. Entrie
 
 **MODE: PERFORMATIVE (14 patterns)**
 
-**#2 — Performative institutional denomination.** Subject performs a principle, then acts opposite to it. The performance and the action are separable and contradictory. Diatribe 50–65. Stage 3.
+**#2 — Performative institutional bad faith.** Subject performs a principle, then acts opposite to it. The performance and the action are separable and contradictory. Diatribe 50–65. Stage 3.
 - Detection: Can you identify a stated principle and an institutional action by the same actor that contradict each other?
 - Ghost slider rendering: Split-layer — stated position and institutional action shown simultaneously, contradiction visible.
 - Calibration: McConnell "no election year confirmations" → Barrett (📓e2.3). Romney performing opposition to own healthcare plan (📓e3.3). 70 performative repeal votes with 0 replacements (📓e3.4).
@@ -4288,7 +6436,7 @@ When Diatribe > 33, identify operative pattern(s) from the library below. Entrie
 - Ghost slider rendering: Object fades, claimed replacement never solidifies.
 - Calibration: JCPOA withdrawal (📓e1.4). 70 repeal votes (📓e3.4). Specification failure in 2017 (📓e3.6).
 
-**#6 — Institutional denomination through question selection.** The framing of an event determines which features are visible and which are in shadow. The institution selects the question, which predetermines the answer space. Diatribe 35–55. Stage 2.
+**#6 — Institutional bad faith through question selection.** The framing of an event determines which features are visible and which are in shadow. The institution selects the question, which predetermines the answer space. Diatribe 35–55. Stage 2.
 - Detection: Would reframing the question reveal a fundamentally different event?
 - Ghost slider rendering: Angle/lighting shift — key features move from shadow to visibility.
 
@@ -4348,11 +6496,11 @@ When Diatribe > 33, identify operative pattern(s) from the library below. Entrie
 
 **MODE: DEFENSIVE (7 patterns)**
 
-**#1 — Preemptive denomination foreclosure.** Institutional response classifies a position before evaluating it. The classification forecloses engagement. The political object is pre-dismissed. Diatribe 40–65. Stage 2→3.
+**#1 — Preemptive bad faith foreclosure.** Institutional response classifies a position before evaluating it. The classification forecloses engagement. The political object is pre-dismissed. Diatribe 40–65. Stage 2→3.
 - Detection: Was the position classified (as extreme, unserious, conspiratorial) before its substance was addressed?
 - Ghost slider rendering: Pre-classification overlay dims object before it appears.
 
-**#4 — Defensive denomination through non-engagement (single instance).** A subject capable of engaging with a political object chooses not to. Single occurrence; does not compound. Diatribe 40–55. Stage 2.
+**#4 — Defensive bad faith through non-engagement (single instance).** A subject capable of engaging with a political object chooses not to. Single occurrence; does not compound. Diatribe 40–55. Stage 2.
 - Detection: Did the subject have the capacity and standing to engage? Did they choose silence or deflection?
 - Ghost slider rendering: Void — no engagement to render.
 - Escalation path: #4 → #15 → #26 (single → compounding → terminal erasure).
@@ -4369,7 +6517,7 @@ When Diatribe > 33, identify operative pattern(s) from the library below. Entrie
 - Escalation path: #4 (single) → #15 (compounding) → #26 (terminal erasure).
 
 **#20 — Cultural diagnosis masking economic mechanism.** Both X-axis sides respond to an event with cultural framing that suppresses the economic cause. Accurate cultural observation → values attribution → economic mechanism hidden. Operates identically on both sides. Diatribe 45–65. Stage 2→3. BILATERAL.
-- Detection: Is there an economic mechanism underneath the cultural framing? Would both sides' fluid versions be simultaneously true if the economic cause were visible?
+- Detection: Is there an economic mechanism underneath the cultural framing? Would both sides' good-faith versions be simultaneously true if the economic cause were visible?
 - Ghost slider rendering: Bilateral cultural overlay lifts, economic substrate becomes visible.
 - Calibration: Vance "childless cat ladies" — lossless ambivalence test case (📓e2.7).
 
@@ -4443,7 +6591,7 @@ When Diatribe > 33, identify operative pattern(s) from the library below. Entrie
 
 ### Framing Principle
 
-The encoding layer uses **fluid / denominated**. The editorial layer (Parallelogram, reader-facing content) uses **good faith / bad faith** as interpretive vocabulary that readers arrive at through watching structural analysis unfold. The user sees the opposing position becoming more distorted or more legible as they adjust the ghost slider. The encoding runs denomination logic underneath.
+The user interacts with **good faith / bad faith**. The denomination grammar is internal architecture. The user never needs the word "denomination." The user sees the opposing position becoming more distorted or more legible as they adjust the ghost slider. The encoding runs denomination logic underneath.
 
 ### Five Stages
 
@@ -4469,13 +6617,13 @@ The encoding layer uses **fluid / denominated**. The editorial layer (Parallelog
 
 **Paired interpretive function with two independent controls:**
 
-- **D(self):** User's own Diatribe position (how much denomination am I bringing?)
+- **D(self):** User's own Diatribe position (how much bad faith am I bringing?)
 - **D(ghost):** User's assessment of the opposing position's Diatribe
 
 **Gap diagnostic (secondary signal):**
 - Gap < 15 points: High self-awareness or genuine assessment
 - Gap 15–30: Normal perceptual asymmetry
-- Gap > 30: Likely perceptual denomination on at least one slider
+- Gap > 30: Likely perceptual bad faith on at least one slider
 - Inverse gap (D(self) > D(ghost)): Unusual — flag for review
 
 **Rendering at each stage:** The ghost slider transforms how the opposing position appears:
@@ -4564,7 +6712,7 @@ For events that resist stable scoring because the object is genuinely contested:
 - Event entry: the passage moment, dual-scored across positions (where political actors' scores live)
 - Mechanism entry: ongoing operation, scored for structural effects (where #16 and #21 live)
 
-**Satellites/Individuals** carry single scores with flag indicating why no second position is meaningful. Fluid benchmarks (Rand Paul, McCain, ACLU) are definitionally single-position — their score *is* the benchmark.
+**Satellites/Individuals** carry single scores with flag indicating why no second position is meaningful. Good-faith benchmarks (Rand Paul, McCain, ACLU) are definitionally single-position — their score *is* the benchmark.
 
 **Mechanisms** carry dual Z-scores (designed intent vs. actual outcome) where meaningful second position exists; otherwise single-score.
 
@@ -4590,13 +6738,13 @@ When an event structurally mirrors a prior event (not just surface similarity), 
 
 ### Zero Point
 
-The Getty Villa — the assertion that human nature is constant across time. The encoding measures from this point. It does not seek to transform human nature but to restore legibility to a capacity (fluid deliberation) that is constant and indestructible.
+The Getty Villa — the assertion that human nature is constant across time. The encoding measures from this point. It does not seek to transform human nature but to restore legibility to a capacity (good faith deliberation) that is constant and indestructible.
 
 ### Capacity for Surprise
 
 The encoding's most fundamental diagnostic. A subject who cannot be surprised has lost access to the political object. This is not a metaphor — it is the operational test for denomination Stage 4.
 
-Grounded in the Incarnation's guarantee of the other's subjectivity. The welcoming principle — Incarnational rather than dispensationalist — is what fluid deliberation looks like at the encoding's epistemological scale.
+Grounded in the Incarnation's guarantee of the other's subjectivity. The welcoming principle — Incarnational rather than dispensationalist — is what good faith looks like at the encoding's epistemological scale.
 
 ### Fullness of Time
 
@@ -4604,7 +6752,7 @@ The Diatribe scale anchor. The encoding assesses positions against the fullness 
 
 ### The Encoding Scores From the Welcoming Principle
 
-This is not a political position. It is the epistemological condition under which the encoding's claims are valid. The framework cannot diagnose denomination without a ground from which fluid deliberation is recognizable.
+This is not a political position. It is the epistemological condition under which the encoding's claims are valid. The framework cannot diagnose bad faith without a ground from which good faith is recognizable.
 
 ### Reflexive Principle
 
@@ -4621,7 +6769,7 @@ These are not assumptions — they are findings, validated across 64 entries in 
 3. **+Y institutional continuity across administrations** holds across all domains tested.
 4. **X-axis coding functions as obscuration** everywhere tested. Strongest proofs: direct democracy events.
 5. **"Resolution kills the issue"** is a general +Y institutional principle, not domain-specific.
-6. **Rand Paul / McCain / ACLU fluid benchmarks** hold across sessions.
+6. **Rand Paul / McCain / ACLU good-faith benchmarks** hold across sessions.
 7. **Heritage Foundation as structural constant** — Pattern #23 operates identically across immigration and healthcare.
 8. **Cross-domain symmetry holds.** No X-axis bias detected across 64 entries and five destruction modes.
 
@@ -4650,27 +6798,27 @@ PRISM_DRAFT
   "prompt": "...",
   "framing": "...",
   "prevalentAxis": "x" or "y",
-  "antiValentBand": "fluid" or "coalition" or "denominated",
+  "antiValentBand": "goodFaith" or "coalition" or "badFaith",
   "antiValentRationale": "One line.",
   "axisLabels": { "xPos": "...", "xNeg": "...", "yPos": "...", "yNeg": "..." },
   "quadrantResponses": {
     "A": {
       "xSide": "left" or "right",
-      "fluid": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." },
+      "goodFaith": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." },
       "coalition": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." },
-      "denominated": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." }
+      "badFaith": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." }
     },
     "B": { ... }, "C": { ... }, "D": { ... }
   },
   "wordTags": {
     "A": {
-      "fluid": [ { "word": "...", "tag": "x+", "weight": 0.65, "isPrimary": false }, ... ],
+      "goodFaith": [ { "word": "...", "tag": "x+", "weight": 0.65, "isPrimary": false }, ... ],
       "coalition": [ ... ],
-      "denominated": [ ... ]
+      "badFaith": [ ... ]
     },
     "B": { ... }, "C": { ... }, "D": { ... }
   },
-  "diatribe": { "LF": "...", "LD": "...", "RF": "...", "RD": "..." }
+  "diatribe": { "LG": "...", "LB": "...", "RG": "...", "RB": "..." }
 }
 ---JSON_END---
 
@@ -4793,8 +6941,8 @@ function buildChatContext() {
 }
 
 async function sendChatMessage() {
-  const apiKey = document.getElementById('aiApiKey').value.trim();
-  if (!apiKey) { toast('Enter your Anthropic API key in the event form first', true); return; }
+  const apiKey = getApiKey();
+  if (!apiKey) { toast('Enter your Anthropic API key first', true); return; }
 
   const input = document.getElementById('chatInput');
   const text = input.value.trim();
@@ -5017,7 +7165,7 @@ function applyDraftFromChat(msgId) {
 
   // Diatribe
   const dia = draft.diatribe || {};
-  ['LF', 'LD', 'RF', 'RD'].forEach(k => {
+  ['LG', 'LB', 'RG', 'RB'].forEach(k => {
     const el = document.getElementById(`dia${k}`);
     if (el && dia[k]) el.value = dia[k];
   });
@@ -5169,9 +7317,44 @@ document.body.style.paddingBottom = '50px';
 populateViewerSelect();
 renderViewer();
 refreshList();
+refreshArcList();
 initAllTaggers();
 loadReviewLog();
 updateReviewBadge();
+
+// ============================================================
+// DARK MODE
+// ============================================================
+
+function getApiKey() {
+  return (document.getElementById('paraApiKey')?.value || document.getElementById('aiApiKey')?.value || '').trim();
+}
+
+function syncApiKeys(val) {
+  const events = document.getElementById('aiApiKey');
+  const para = document.getElementById('paraApiKey');
+  if (events && events.value !== val) events.value = val;
+  if (para && para.value !== val) para.value = val;
+}
+
+function toggleTheme() {
+  const html = document.documentElement;
+  const current = html.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('prism_admin_theme', next);
+  document.getElementById('themeToggle').textContent = next === 'dark' ? '◐ light' : '◐ dark';
+}
+
+// Restore saved theme
+(function() {
+  const saved = localStorage.getItem('prism_admin_theme');
+  if (saved === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    const btn = document.getElementById('themeToggle');
+    if (btn) btn.textContent = '◐ light';
+  }
+})();
 </script>
 <!-- ============================================================
      DIALECTICS CHAT DRAWER
