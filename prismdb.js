@@ -119,7 +119,7 @@ const PrismDB = (() => {
 
     // Diatribe derived (legacy v1 — will be replaced by Diatribe UI in Phase 5)
     const absD = Math.abs(resp.diatribeScore || 0);
-    resp.diatribeRegister = absD <= 50 ? 'fluid' : 'denominated';
+    resp.diatribeFaith = absD <= 50 ? 'good' : 'bad';
     resp.diatribeSide = (resp.diatribeScore || 0) < 0 ? 'left' : 'right';
     resp.diatribeBand = absD <= 33 ? 'nominal' : absD <= 66 ? 'coalitional' : 'conviction';
 
@@ -176,27 +176,38 @@ const PrismDB = (() => {
   }
 
   // ── Arcs ─────────────────────────────────────────────────
-  // An arc is a thin analytical record — a table of contents
-  // for a longitudinal sequence of events unified by a single
-  // determining object. The arc doesn't embed event data;
-  // events are standard prism_events that carry arcMemberships.
-  // Heavy analytical content lives in the Parallelogram article.
+  // An arc is a temporally ordered sequence of events with a
+  // unified determining object. Each event carries per-quadrant
+  // Subject Z values and subject labels (who occupies each
+  // quadrant for that event).
   //
   // Schema:
   // {
-  //   id: 'arc_001',
-  //   title: 'Iran-Contra → Maduro: Immigration & The Empire',
+  //   id: 'arc_cs04',
+  //   title: 'Immigration Arc (1982–2026)',
+  //   description: '...',
   //   object: 'The Empire',
-  //   objectDescription: 'U.S. institutional enforcement apparatus...',
-  //   status: 'draft' | 'active' | 'archived',
-  //   eventIds: ['evt_010', 'evt_011', ...],  // ordered sequence
+  //   objectDescription: 'U.S. institutional apparatus...',
+  //   events: [
+  //     {
+  //       id: 'e4.1',
+  //       label: 'Iran-Contra / Didion / Webb',
+  //       date: '1982',
+  //       x: 0.7, y: 0.95, z: 0.85,   // Object Z
+  //       dia: 80,
+  //       type: 'event',
+  //       qz: { A: 0.85, B: 0.40, C: -0.90, D: -0.60 },
+  //       subjects: {
+  //         A: '',  // e.g. "Covert ops apparatus, NSC"
+  //         B: '',  // e.g. "Institutional Democrats, Cold War liberals"
+  //         C: '',  // e.g. "Displaced Central Americans, anti-war activists"
+  //         D: ''   // e.g. "Libertarian skeptics, fiscal conservatives"
+  //       }
+  //     }
+  //   ],
+  //   linkedArticleId: null,
   //   created: '...', updated: '...'
   // }
-  //
-  // On each prism_event (managed by addEventToArc/removeEventFromArc):
-  //   arcMemberships: [
-  //     { arcId: 'arc_001', status: 'confirmed' | 'probationary', position: 0 }
-  //   ]
 
   function getArcs() { return _get(KEYS.arcs) || []; }
 
@@ -219,10 +230,8 @@ const PrismDB = (() => {
     }
     arc.updated = now;
 
-    // Ensure eventIds array exists
-    if (!Array.isArray(arc.eventIds)) arc.eventIds = [];
-    // Default status
-    if (!arc.status) arc.status = 'draft';
+    // Ensure events array exists
+    if (!Array.isArray(arc.events)) arc.events = [];
 
     // Upsert: replace existing or append
     const idx = arcs.findIndex(a => a.id === arc.id);
@@ -237,93 +246,84 @@ const PrismDB = (() => {
   }
 
   function deleteArc(id) {
-    // Remove arc record
+    // Remove arc and clean up arcMemberships on any linked events
+    const arc = getArc(id);
+    if (arc && Array.isArray(arc.eventIds)) {
+      const events = getEvents();
+      arc.eventIds.forEach(eid => {
+        const evt = events.find(e => e.id === eid);
+        if (evt && Array.isArray(evt.arcMemberships)) {
+          evt.arcMemberships = evt.arcMemberships.filter(m => m.arcId !== id);
+        }
+      });
+      _set(KEYS.events, events);
+    }
     const arcs = getArcs().filter(a => a.id !== id);
     _set(KEYS.arcs, arcs);
-
-    // Clean arcMemberships from any events that referenced this arc
-    const events = getEvents();
-    let dirty = false;
-    events.forEach(evt => {
-      if (Array.isArray(evt.arcMemberships)) {
-        const before = evt.arcMemberships.length;
-        evt.arcMemberships = evt.arcMemberships.filter(m => m.arcId !== id);
-        if (evt.arcMemberships.length < before) dirty = true;
-      }
-    });
-    if (dirty) _set(KEYS.events, events);
-
     return true;
   }
 
-  // Get all events for an arc, in sequence order
   function getArcEvents(arcId) {
     const arc = getArc(arcId);
-    if (!arc || !arc.eventIds?.length) return [];
+    if (!arc || !Array.isArray(arc.eventIds)) return [];
     const events = getEvents();
-    // Return in arc sequence order, skip any missing
+    // Resolve in sequence order, skip any that no longer exist
     return arc.eventIds
       .map(eid => events.find(e => e.id === eid))
       .filter(Boolean);
   }
 
-  // Add an event to an arc (manages both sides of the relationship)
-  function addEventToArc(eventId, arcId, status = 'confirmed') {
+  function addEventToArc(eventId, arcId, status) {
     const arc = getArc(arcId);
     if (!arc) return null;
-    if (!Array.isArray(arc.eventIds)) arc.eventIds = [];
-    const events = getEvents();
-    const evtIdx = events.findIndex(e => e.id === eventId);
-    if (evtIdx === -1) return null;
 
-    // Add to arc's eventIds if not already present
+    // Ensure eventIds array
+    if (!Array.isArray(arc.eventIds)) arc.eventIds = [];
+
+    // Add to arc if not already present
     if (!arc.eventIds.includes(eventId)) {
       arc.eventIds.push(eventId);
+    }
+    saveArc(arc);
+
+    // Write arcMembership on the event
+    const events = getEvents();
+    const evt = events.find(e => e.id === eventId);
+    if (!evt) return null;
+
+    if (!Array.isArray(evt.arcMemberships)) evt.arcMemberships = [];
+    const existing = evt.arcMemberships.findIndex(m => m.arcId === arcId);
+    const membership = {
+      arcId: arcId,
+      position: arc.eventIds.indexOf(eventId),
+      status: status || 'confirmed'
+    };
+
+    if (existing !== -1) {
+      evt.arcMemberships[existing] = membership;
+    } else {
+      evt.arcMemberships.push(membership);
+    }
+
+    _set(KEYS.events, events);
+    return membership;
+  }
+
+  function removeEventFromArc(eventId, arcId) {
+    // Remove from arc's eventIds
+    const arc = getArc(arcId);
+    if (arc && Array.isArray(arc.eventIds)) {
+      arc.eventIds = arc.eventIds.filter(eid => eid !== eventId);
       saveArc(arc);
     }
 
-    // Add arcMembership to event
-    if (!Array.isArray(events[evtIdx].arcMemberships)) {
-      events[evtIdx].arcMemberships = [];
-    }
-    const existing = events[evtIdx].arcMemberships.findIndex(m => m.arcId === arcId);
-    const position = arc.eventIds.indexOf(eventId);
-    if (existing !== -1) {
-      events[evtIdx].arcMemberships[existing] = { arcId, status, position };
-    } else {
-      events[evtIdx].arcMemberships.push({ arcId, status, position });
-    }
-    _set(KEYS.events, events);
-
-    return { arc, event: events[evtIdx] };
-  }
-
-  // Remove an event from an arc (manages both sides)
-  function removeEventFromArc(eventId, arcId) {
-    const arc = getArc(arcId);
-    if (!arc) return null;
-
-    // Remove from arc's eventIds
-    arc.eventIds = arc.eventIds.filter(eid => eid !== eventId);
-    saveArc(arc);
-
     // Remove arcMembership from event
     const events = getEvents();
-    const evtIdx = events.findIndex(e => e.id === eventId);
-    if (evtIdx !== -1 && Array.isArray(events[evtIdx].arcMemberships)) {
-      events[evtIdx].arcMemberships = events[evtIdx].arcMemberships.filter(m => m.arcId !== arcId);
+    const evt = events.find(e => e.id === eventId);
+    if (evt && Array.isArray(evt.arcMemberships)) {
+      evt.arcMemberships = evt.arcMemberships.filter(m => m.arcId !== arcId);
       _set(KEYS.events, events);
     }
-
-    // Reindex positions for remaining events
-    arc.eventIds.forEach((eid, i) => {
-      const ei = events.findIndex(e => e.id === eid);
-      if (ei !== -1 && Array.isArray(events[ei].arcMemberships)) {
-        const mi = events[ei].arcMemberships.findIndex(m => m.arcId === arcId);
-        if (mi !== -1) events[ei].arcMemberships[mi].position = i;
-      }
-    });
-    _set(KEYS.events, events);
 
     return true;
   }
@@ -359,7 +359,7 @@ const PrismDB = (() => {
         date: '2026-01-24',
         active: true,
         prevalentAxis: 'x',
-        antiValentBand: 'denominated',
+        antiValentBand: 'badFaith',
         axes: {
           x: { pos: 'Right', neg: 'Left' },
           y: { pos: 'Institutional', neg: 'Grassroots' }
@@ -368,7 +368,7 @@ const PrismDB = (() => {
           A: {
             xSide: 'left',
             source: '',
-            fluid: {
+            goodFaith: {
               text: 'A man was killed by his government. That demands investigation.',
               xWord: 'government', yWord: 'investigation',
               words: []
@@ -378,7 +378,7 @@ const PrismDB = (() => {
               xWord: 'ICE', yWord: 'jumped',
               words: []
             },
-            denominated: {
+            badFaith: {
               text: 'They executed a nurse and hid the footage. Block every DHS dollar.',
               xWord: 'executed', yWord: 'block',
               words: []
@@ -387,7 +387,7 @@ const PrismDB = (() => {
           B: {
             xSide: 'right',
             source: '',
-            fluid: {
+            goodFaith: {
               text: 'Enforcement requires accountability. DHS can\'t investigate itself.',
               xWord: 'enforcement', yWord: 'accountability',
               words: []
@@ -397,7 +397,7 @@ const PrismDB = (() => {
               xWord: 'enforcement', yWord: 'terrorist',
               words: []
             },
-            denominated: {
+            badFaith: {
               text: 'He showed up armed to interfere. The officers are the victims.',
               xWord: 'armed', yWord: 'officers',
               words: []
@@ -406,7 +406,7 @@ const PrismDB = (() => {
           C: {
             xSide: 'left',
             source: '',
-            fluid: {
+            goodFaith: {
               text: 'He saw someone being hurt and stepped in. That\'s what neighbors do.',
               xWord: 'neighbors', yWord: 'stepped in',
               words: []
@@ -416,7 +416,7 @@ const PrismDB = (() => {
               xWord: 'arming', yWord: 'anger',
               words: []
             },
-            denominated: {
+            badFaith: {
               text: 'Arm up. If they\'ll execute a nurse, nobody is safe.',
               xWord: 'arm up', yWord: 'execute',
               words: []
@@ -425,7 +425,7 @@ const PrismDB = (() => {
           D: {
             xSide: 'right',
             source: '',
-            fluid: {
+            goodFaith: {
               text: 'Legal carrier, legal permit, shot on the ground. Every gun owner should worry.',
               xWord: 'legal', yWord: 'gun owner',
               words: []
@@ -435,7 +435,7 @@ const PrismDB = (() => {
               xWord: '2A', yWord: 'tribalism',
               words: []
             },
-            denominated: {
+            badFaith: {
               text: 'He showed up armed at a federal operation. Play stupid games.',
               xWord: 'armed', yWord: 'federal',
               words: []
@@ -443,10 +443,10 @@ const PrismDB = (() => {
           }
         },
         diatribe: {
-          LF: { text: 'The left is demanding institutional accountability for a killing that demands it — investigation before narrative.', side: 'left', register: 'fluid' },
-          LD: { text: 'The left is using Pretti\'s death to advance abolition politics, freezing his identity into a martyr vehicle.', side: 'left', register: 'denominated' },
-          RF: { text: 'The principled right sees a constitutional crisis — a legal carrier killed by federal agents deserves 2A defense regardless of context.', side: 'right', register: 'fluid' },
-          RD: { text: 'The right is performing law-and-order loyalty, selectively applying 2A principles based on who the gun was pointed at.', side: 'right', register: 'denominated' }
+          LG: { text: 'The left is demanding institutional accountability for a killing that demands it — investigation before narrative.', side: 'left', faith: 'good' },
+          LB: { text: 'The left is using Pretti\'s death to advance abolition politics, freezing his identity into a martyr vehicle.', side: 'left', faith: 'bad' },
+          RG: { text: 'The principled right sees a constitutional crisis — a legal carrier killed by federal agents deserves 2A defense regardless of context.', side: 'right', faith: 'good' },
+          RB: { text: 'The right is performing law-and-order loyalty, selectively applying 2A principles based on who the gun was pointed at.', side: 'right', faith: 'bad' }
         }
       },
 
@@ -464,7 +464,7 @@ const PrismDB = (() => {
         date: '2026-01-20',
         active: false,
         prevalentAxis: 'x',
-        antiValentBand: 'denominated',
+        antiValentBand: 'badFaith',
         axes: {
           x: { pos: 'Right', neg: 'Left' },
           y: { pos: 'Institutional', neg: 'Grassroots' }
@@ -473,7 +473,7 @@ const PrismDB = (() => {
           A: {
             xSide: 'left',
             source: '',
-            fluid: {
+            goodFaith: {
               text: 'The fraud was being prosecuted. The operation disrupted it. Six prosecutors quit.',
               xWord: 'prosecuted', yWord: 'prosecutors',
               words: []
@@ -483,7 +483,7 @@ const PrismDB = (() => {
               xWord: 'Minnesota', yWord: 'operation',
               words: []
             },
-            denominated: {
+            badFaith: {
               text: 'They picked the community Fox News already dehumanized. This is occupation.',
               xWord: 'dehumanized', yWord: 'occupation',
               words: []
@@ -492,7 +492,7 @@ const PrismDB = (() => {
           B: {
             xSide: 'right',
             source: '',
-            fluid: {
+            goodFaith: {
               text: 'The fraud is real. Three thousand arrests and zero fraud cases isn\'t accountability.',
               xWord: 'fraud', yWord: 'accountability',
               words: []
@@ -502,7 +502,7 @@ const PrismDB = (() => {
               xWord: 'fraud', yWord: 'arrest',
               words: []
             },
-            denominated: {
+            badFaith: {
               text: 'Democrats covered for a billion in fraud. Enforcement is the consequence.',
               xWord: 'Democrats', yWord: 'enforcement',
               words: []
@@ -511,7 +511,7 @@ const PrismDB = (() => {
           C: {
             xSide: 'left',
             source: '',
-            fluid: {
+            goodFaith: {
               text: 'The strongest whistleblowers were Somali community members themselves.',
               xWord: 'Somali', yWord: 'whistleblowers',
               words: []
@@ -521,7 +521,7 @@ const PrismDB = (() => {
               xWord: 'sides', yWord: 'conversation',
               words: []
             },
-            denominated: {
+            badFaith: {
               text: 'Ethnic cleansing with extra steps. The fraud was a capitalist inevitability.',
               xWord: 'cleansing', yWord: 'capitalist',
               words: []
@@ -530,7 +530,7 @@ const PrismDB = (() => {
           D: {
             xSide: 'right',
             source: '',
-            fluid: {
+            goodFaith: {
               text: 'The fraud was real. Masked agents shooting citizens isn\'t a serious response.',
               xWord: 'fraud', yWord: 'masked agents',
               words: []
@@ -540,7 +540,7 @@ const PrismDB = (() => {
               xWord: 'sabotaged', yWord: 'spectacle',
               words: []
             },
-            denominated: {
+            badFaith: {
               text: 'They set up fake nonprofits to funnel money to Somalia. Enforcement is the consequence.',
               xWord: 'nonprofits', yWord: 'enforcement',
               words: []
@@ -548,10 +548,10 @@ const PrismDB = (() => {
           }
         },
         diatribe: {
-          LF: { text: 'The left is holding the procedural line — state prosecution was working, the federal operation destroyed it.', side: 'left', register: 'fluid' },
-          LD: { text: 'The left is using the community as a shield, refusing to acknowledge real fraud to deny enforcement any legitimacy.', side: 'left', register: 'denominated' },
-          RF: { text: 'The right is responding to a real operational crisis — a billion in fraud with no accountability is a genuine failure.', side: 'right', register: 'fluid' },
-          RD: { text: 'The right is manufacturing urgency to expand executive power — the fraud framing is a pretext for immigration spectacle.', side: 'right', register: 'denominated' }
+          LG: { text: 'The left is holding the procedural line — state prosecution was working, the federal operation destroyed it.', side: 'left', faith: 'good' },
+          LB: { text: 'The left is using the community as a shield, refusing to acknowledge real fraud to deny enforcement any legitimacy.', side: 'left', faith: 'bad' },
+          RG: { text: 'The right is responding to a real operational crisis — a billion in fraud with no accountability is a genuine failure.', side: 'right', faith: 'good' },
+          RB: { text: 'The right is manufacturing urgency to expand executive power — the fraud framing is a pretext for immigration spectacle.', side: 'right', faith: 'bad' }
         }
       },
 
@@ -569,7 +569,7 @@ const PrismDB = (() => {
         date: '2026-02-15',
         active: false,
         prevalentAxis: 'y',
-        antiValentBand: 'denominated',
+        antiValentBand: 'badFaith',
         axes: {
           x: { pos: 'Right', neg: 'Left' },
           y: { pos: 'Institutional', neg: 'Populist' }
@@ -578,7 +578,7 @@ const PrismDB = (() => {
           A: {
             xSide: 'left',
             source: '',
-            fluid: {
+            goodFaith: {
               text: 'It\'s a market design problem with market design solutions. Pass the bill.',
               xWord: 'market', yWord: 'bill',
               words: []
@@ -588,7 +588,7 @@ const PrismDB = (() => {
               xWord: 'bill', yWord: 'legislation',
               words: []
             },
-            denominated: {
+            badFaith: {
               text: 'Every legislator who votes no is running interference for private equity.',
               xWord: 'legislator', yWord: 'private equity',
               words: []
@@ -597,7 +597,7 @@ const PrismDB = (() => {
           B: {
             xSide: 'right',
             source: '',
-            fluid: {
+            goodFaith: {
               text: 'Upzone, reform permitting, build more. Corporate buyers fill a supply vacuum.',
               xWord: 'permitting', yWord: 'supply',
               words: []
@@ -607,7 +607,7 @@ const PrismDB = (() => {
               xWord: 'supply', yWord: 'collusion',
               words: []
             },
-            denominated: {
+            badFaith: {
               text: 'Deregulate construction. The market solves it. Blackstone didn\'t cause this.',
               xWord: 'market', yWord: 'deregulate',
               words: []
@@ -616,7 +616,7 @@ const PrismDB = (() => {
           C: {
             xSide: 'left',
             source: '',
-            fluid: {
+            goodFaith: {
               text: 'Community land trusts work. Tenant unions work. Legislation is a supplement.',
               xWord: 'community', yWord: 'tenant unions',
               words: []
@@ -626,7 +626,7 @@ const PrismDB = (() => {
               xWord: 'neighborhood', yWord: 'NIMBY',
               words: []
             },
-            denominated: {
+            badFaith: {
               text: 'There is no reform. The legislature is the landlord\'s instrument.',
               xWord: 'reform', yWord: 'legislature',
               words: []
@@ -635,7 +635,7 @@ const PrismDB = (() => {
           D: {
             xSide: 'right',
             source: '',
-            fluid: {
+            goodFaith: {
               text: 'A small landlord is a neighbor. Invitation Homes is a spreadsheet.',
               xWord: 'landlord', yWord: 'neighbor',
               words: []
@@ -645,7 +645,7 @@ const PrismDB = (() => {
               xWord: 'free-market', yWord: 'against me',
               words: []
             },
-            denominated: {
+            badFaith: {
               text: 'They outbid every family with cash. Zone them out. Tax them into selling.',
               xWord: 'family', yWord: 'zone',
               words: []
@@ -653,10 +653,10 @@ const PrismDB = (() => {
           }
         },
         diatribe: {
-          LF: { text: 'The left is naming a structural design problem — financialization of housing is a policy choice with policy remedies.', side: 'left', register: 'fluid' },
-          LD: { text: 'The left treats every market participant as private equity, collapsing the distinction between landlords and hedge funds.', side: 'left', register: 'denominated' },
-          RF: { text: 'The right is correct that supply constraints are the foundational driver — building more is a necessary condition.', side: 'right', register: 'fluid' },
-          RD: { text: 'The right invokes "free market" to defend an arrangement where institutional capital faces no friction ordinary buyers face.', side: 'right', register: 'denominated' }
+          LG: { text: 'The left is naming a structural design problem — financialization of housing is a policy choice with policy remedies.', side: 'left', faith: 'good' },
+          LB: { text: 'The left treats every market participant as private equity, collapsing the distinction between landlords and hedge funds.', side: 'left', faith: 'bad' },
+          RG: { text: 'The right is correct that supply constraints are the foundational driver — building more is a necessary condition.', side: 'right', faith: 'good' },
+          RB: { text: 'The right invokes "free market" to defend an arrangement where institutional capital faces no friction ordinary buyers face.', side: 'right', faith: 'bad' }
         }
       },
 
@@ -674,7 +674,7 @@ const PrismDB = (() => {
         date: '2026-02-20',
         active: false,
         prevalentAxis: 'y',
-        antiValentBand: 'denominated',
+        antiValentBand: 'badFaith',
         axes: {
           x: { pos: 'Right', neg: 'Left' },
           y: { pos: 'Hawkish', neg: 'Dovish' }
@@ -683,7 +683,7 @@ const PrismDB = (() => {
           A: {
             xSide: 'left',
             source: '',
-            fluid: {
+            goodFaith: {
               text: '84% enrichment is real. The question is whether to act coherently.',
               xWord: 'enrichment', yWord: 'coherently',
               words: []
@@ -693,7 +693,7 @@ const PrismDB = (() => {
               xWord: 'principle', yWord: 'denomination',
               words: []
             },
-            denominated: {
+            badFaith: {
               text: 'Liberal hawks are always the permission structure for the next war.',
               xWord: 'hawks', yWord: 'permission',
               words: []
@@ -702,7 +702,7 @@ const PrismDB = (() => {
           B: {
             xSide: 'right',
             source: '',
-            fluid: {
+            goodFaith: {
               text: 'Maximum pressure needs a credible backstop. The statement lacked discipline.',
               xWord: 'pressure', yWord: 'backstop',
               words: []
@@ -712,7 +712,7 @@ const PrismDB = (() => {
               xWord: 'hawkish', yWord: 'incoherence',
               words: []
             },
-            denominated: {
+            badFaith: {
               text: 'Iran\'s been at war with us for forty years. When, not whether.',
               xWord: 'Iran', yWord: 'war',
               words: []
@@ -721,7 +721,7 @@ const PrismDB = (() => {
           C: {
             xSide: 'left',
             source: '',
-            fluid: {
+            goodFaith: {
               text: 'The nuclear framing is the surface. Hormuz is the material object.',
               xWord: 'nuclear', yWord: 'Hormuz',
               words: []
@@ -731,7 +731,7 @@ const PrismDB = (() => {
               xWord: 'history', yWord: 'present',
               words: []
             },
-            denominated: {
+            badFaith: {
               text: 'Nuclear program is the pretext. WMDs in Iraq, Gulf of Tonkin, same architecture.',
               xWord: 'pretext', yWord: 'architecture',
               words: []
@@ -740,7 +740,7 @@ const PrismDB = (() => {
           D: {
             xSide: 'right',
             source: '',
-            fluid: {
+            goodFaith: {
               text: 'Who does this war benefit? Not the people fighting it.',
               xWord: 'war', yWord: 'benefit',
               words: []
@@ -750,7 +750,7 @@ const PrismDB = (() => {
               xWord: 'anti-war', yWord: 'vindicated',
               words: []
             },
-            denominated: {
+            badFaith: {
               text: 'Another trillion, another generation of soldiers, same CEOs collecting bonuses.',
               xWord: 'trillion', yWord: 'CEOs',
               words: []
@@ -758,10 +758,10 @@ const PrismDB = (() => {
           }
         },
         diatribe: {
-          LF: { text: 'The left is raising legitimate questions about strategic coherence — signaling without strategy invites escalation.', side: 'left', register: 'fluid' },
-          LD: { text: 'The left is using anti-war framing to avoid engaging with the real enrichment threshold — reflexive opposition as identity.', side: 'left', register: 'denominated' },
-          RF: { text: 'The right is correct that credible deterrence requires willingness to act — ambiguity in the face of 84% enrichment is its own signal.', side: 'right', register: 'fluid' },
-          RD: { text: 'The right is performing toughness for domestic consumption — the statement damaged deterrence by revealing political rather than strategic motivation.', side: 'right', register: 'denominated' }
+          LG: { text: 'The left is raising legitimate questions about strategic coherence — signaling without strategy invites escalation.', side: 'left', faith: 'good' },
+          LB: { text: 'The left is using anti-war framing to avoid engaging with the real enrichment threshold — reflexive opposition as identity.', side: 'left', faith: 'bad' },
+          RG: { text: 'The right is correct that credible deterrence requires willingness to act — ambiguity in the face of 84% enrichment is its own signal.', side: 'right', faith: 'good' },
+          RB: { text: 'The right is performing toughness for domestic consumption — the statement damaged deterrence by revealing political rather than strategic motivation.', side: 'right', faith: 'bad' }
         }
       },
 
@@ -779,7 +779,7 @@ const PrismDB = (() => {
         date: '2026-02-10',
         active: false,
         prevalentAxis: 'y',
-        antiValentBand: 'denominated',
+        antiValentBand: 'badFaith',
         axes: {
           x: { pos: 'Right', neg: 'Left' },
           y: { pos: 'Interventionist', neg: 'Non-Interventionist' }
@@ -788,7 +788,7 @@ const PrismDB = (() => {
           A: {
             xSide: 'left',
             source: '',
-            fluid: {
+            goodFaith: {
               text: 'Israel crossed the line, but conditioning arms mid-war abandons them.',
               xWord: 'arms', yWord: 'conditioning',
               words: []
@@ -798,7 +798,7 @@ const PrismDB = (() => {
               xWord: 'signal', yWord: 'cut',
               words: []
             },
-            denominated: {
+            badFaith: {
               text: 'After the Holocaust and October 7th, there is no red line.',
               xWord: 'Holocaust', yWord: 'red line',
               words: []
@@ -807,7 +807,7 @@ const PrismDB = (() => {
           B: {
             xSide: 'right',
             source: '',
-            fluid: {
+            goodFaith: {
               text: 'The red line should never have been drawn. It damaged every commitment.',
               xWord: 'commitment', yWord: 'red line',
               words: []
@@ -817,7 +817,7 @@ const PrismDB = (() => {
               xWord: 'walking back', yWord: 'mistake',
               words: []
             },
-            denominated: {
+            badFaith: {
               text: 'Condition aid and every ally questions every promise we\'ve ever made.',
               xWord: 'aid', yWord: 'ally',
               words: []
@@ -826,7 +826,7 @@ const PrismDB = (() => {
           C: {
             xSide: 'left',
             source: '',
-            fluid: {
+            goodFaith: {
               text: 'Arms flow or they don\'t. The red line was performance.',
               xWord: 'arms', yWord: 'performance',
               words: []
@@ -836,7 +836,7 @@ const PrismDB = (() => {
               xWord: 'protests', yWord: 'policy',
               words: []
             },
-            denominated: {
+            badFaith: {
               text: 'Settler colonialism from Balfour to Rafah. The line was always complicity.',
               xWord: 'colonialism', yWord: 'complicity',
               words: []
@@ -845,7 +845,7 @@ const PrismDB = (() => {
           D: {
             xSide: 'right',
             source: '',
-            fluid: {
+            goodFaith: {
               text: 'Billions in unconditional aid with zero accountability. Why?',
               xWord: 'aid', yWord: 'accountability',
               words: []
@@ -855,7 +855,7 @@ const PrismDB = (() => {
               xWord: 'antisemitic', yWord: 'isolationist',
               words: []
             },
-            denominated: {
+            badFaith: {
               text: 'Not our war. Not our money. Not our problem.',
               xWord: 'our', yWord: 'war',
               words: []
@@ -863,10 +863,10 @@ const PrismDB = (() => {
           }
         },
         diatribe: {
-          LF: { text: 'The left is naming a real policy gap — a stated red line with no enforcement mechanism is worse than no line at all.', side: 'left', register: 'fluid' },
-          LD: { text: 'The left is collapsing the entire history into a single frame, making every position that acknowledges complexity into complicity.', side: 'left', register: 'denominated' },
-          RF: { text: 'The right is correct that credibility depends on consistency — drawing lines you won\'t enforce damages the alliance framework.', side: 'right', register: 'fluid' },
-          RD: { text: 'The right is using alliance credibility as a shield against any scrutiny of the policy itself — loyalty as discourse terminator.', side: 'right', register: 'denominated' }
+          LG: { text: 'The left is naming a real policy gap — a stated red line with no enforcement mechanism is worse than no line at all.', side: 'left', faith: 'good' },
+          LB: { text: 'The left is collapsing the entire history into a single frame, making every position that acknowledges complexity into complicity.', side: 'left', faith: 'bad' },
+          RG: { text: 'The right is correct that credibility depends on consistency — drawing lines you won\'t enforce damages the alliance framework.', side: 'right', faith: 'good' },
+          RB: { text: 'The right is using alliance credibility as a shield against any scrutiny of the policy itself — loyalty as discourse terminator.', side: 'right', faith: 'bad' }
         }
       },
 
@@ -884,7 +884,7 @@ const PrismDB = (() => {
         date: '2026-03-01',
         active: false,
         prevalentAxis: 'y',
-        antiValentBand: 'denominated',
+        antiValentBand: 'badFaith',
         axes: {
           x: { pos: 'Right', neg: 'Left' },
           y: { pos: 'Institutional', neg: 'Populist' }
@@ -893,7 +893,7 @@ const PrismDB = (() => {
           A: {
             xSide: 'left',
             source: '',
-            fluid: {
+            goodFaith: {
               text: 'Reshoring yes. Tariffs no. Industrial policy is the tool.',
               xWord: 'industrial', yWord: 'policy',
               words: []
@@ -903,7 +903,7 @@ const PrismDB = (() => {
               xWord: 'framework', yWord: 'tariffs',
               words: []
             },
-            denominated: {
+            badFaith: {
               text: 'It\'s a regressive tax with a nationalist paint job.',
               xWord: 'regressive', yWord: 'nationalist',
               words: []
@@ -912,7 +912,7 @@ const PrismDB = (() => {
           B: {
             xSide: 'right',
             source: '',
-            fluid: {
+            goodFaith: {
               text: 'Tariffs distort prices, invite retaliation, and surrender leverage.',
               xWord: 'tariffs', yWord: 'leverage',
               words: []
@@ -922,7 +922,7 @@ const PrismDB = (() => {
               xWord: 'advantage', yWord: 'distribution',
               words: []
             },
-            denominated: {
+            badFaith: {
               text: 'Markets were already reshoring. Politicians just want the photo.',
               xWord: 'markets', yWord: 'politicians',
               words: []
@@ -931,7 +931,7 @@ const PrismDB = (() => {
           C: {
             xSide: 'left',
             source: '',
-            fluid: {
+            goodFaith: {
               text: 'Cheap goods meant exploited workers. The friction is overdue.',
               xWord: 'exploited', yWord: 'friction',
               words: []
@@ -941,7 +941,7 @@ const PrismDB = (() => {
               xWord: 'wanted', yWord: 'wrong reasons',
               words: []
             },
-            denominated: {
+            badFaith: {
               text: 'Reshoring is hegemony maintenance. We\'re forcing the transfer.',
               xWord: 'hegemony', yWord: 'forcing',
               words: []
@@ -950,7 +950,7 @@ const PrismDB = (() => {
           D: {
             xSide: 'right',
             source: '',
-            fluid: {
+            goodFaith: {
               text: 'Thirty years of \'inevitable.\' Now it\'s \'too expensive.\' For who?',
               xWord: 'inevitable', yWord: 'expensive',
               words: []
@@ -960,7 +960,7 @@ const PrismDB = (() => {
               xWord: 'direction', yWord: 'steering',
               words: []
             },
-            denominated: {
+            badFaith: {
               text: 'Bring it all back. Every factory. Every job. American.',
               xWord: 'American', yWord: 'factory',
               words: []
@@ -968,10 +968,10 @@ const PrismDB = (() => {
           }
         },
         diatribe: {
-          LF: { text: 'The left is distinguishing between industrial policy and tariffs — reshoring through targeted investment rather than blunt price distortion.', side: 'left', register: 'fluid' },
-          LD: { text: 'The left is reflexively opposing tariffs because of who enacted them, even when the outcome matches their stated policy goals.', side: 'left', register: 'denominated' },
-          RF: { text: 'The right is correct that decades of offshoring created real distributional harm — the question of friction and cost-bearing is legitimate.', side: 'right', register: 'fluid' },
-          RD: { text: 'The right is wrapping a regressive consumption tax in nationalist language, claiming vindication for an outcome industrial policy produced.', side: 'right', register: 'denominated' }
+          LG: { text: 'The left is distinguishing between industrial policy and tariffs — reshoring through targeted investment rather than blunt price distortion.', side: 'left', faith: 'good' },
+          LB: { text: 'The left is reflexively opposing tariffs because of who enacted them, even when the outcome matches their stated policy goals.', side: 'left', faith: 'bad' },
+          RG: { text: 'The right is correct that decades of offshoring created real distributional harm — the question of friction and cost-bearing is legitimate.', side: 'right', faith: 'good' },
+          RB: { text: 'The right is wrapping a regressive consumption tax in nationalist language, claiming vindication for an outcome industrial policy produced.', side: 'right', faith: 'bad' }
         }
       }
     ];
@@ -1012,7 +1012,7 @@ const PrismDB = (() => {
             intensityBand: intensity <= 33 ? 'nominal' : intensity <= 66 ? 'coalition' : 'conviction',
             text: '',
             diatribeScore: dScore,
-            diatribeRegister: Math.abs(dScore) <= 50 ? 'fluid' : 'denominated',
+            diatribeFaith: Math.abs(dScore) <= 50 ? 'good' : 'bad',
             diatribeSide: dScore < 0 ? 'left' : 'right',
             diatribeBand: Math.abs(dScore) <= 33 ? 'nominal' : Math.abs(dScore) <= 66 ? 'coalitional' : 'conviction',
             zValue: 0,
@@ -1038,7 +1038,8 @@ const PrismDB = (() => {
     getResponses, getResponsesForEvent, hasRespondedToEvent, saveResponse,
     getAggregateForEvent,
     getSnapshots, getSnapshotsForEvent, saveSnapshot,
-    getArcs, getArc, saveArc, deleteArc, getArcEvents, addEventToArc, removeEventFromArc,
+    getArcs, getArc, saveArc, deleteArc,
+    getArcEvents, addEventToArc, removeEventFromArc,
     getState, setState,
     getUser, setUser,
     clear, seed

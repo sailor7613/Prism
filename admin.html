@@ -230,6 +230,118 @@ body {
 }
 .arc-event-status.confirmed { color: var(--green); }
 .arc-event-status.probationary { color: var(--gold); }
+
+/* ── ARC EVENT DETAIL SUB-FORM ── */
+.arc-event-detail {
+  display: none;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px 20px;
+  margin: 8px 0 12px 30px;
+}
+.arc-event-detail.visible { display: block; }
+.arc-event-detail-title {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.arc-event-detail .arc-form-row { margin-bottom: 12px; }
+.arc-event-detail .arc-form-row label {
+  display: block;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.arc-event-detail .arc-form-row input,
+.arc-event-detail .arc-form-row textarea,
+.arc-event-detail .arc-form-row select {
+  width: 100%;
+  font-family: 'Lora', serif;
+  font-size: 13px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--paper);
+  color: var(--ink);
+}
+.arc-event-detail .arc-form-row textarea {
+  resize: vertical;
+  min-height: 40px;
+}
+.arc-detail-scores {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.arc-detail-scores label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+  display: block;
+}
+.arc-detail-scores input {
+  width: 100%;
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--paper);
+  color: var(--ink);
+}
+.arc-detail-qz {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.arc-detail-qz > div label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.arc-detail-qz > div input {
+  width: 100%;
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--paper);
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.arc-detail-qz > div textarea {
+  width: 100%;
+  font-family: 'Lora', serif;
+  font-size: 12px;
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--paper);
+  color: var(--ink);
+  resize: vertical;
+  min-height: 36px;
+}
+.arc-detail-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
 .arc-empty {
   font-family: 'Lora', serif;
   font-size: 14px;
@@ -3026,15 +3138,11 @@ body {
       <div class="arc-form-title" id="arcFormTitle">New Arc</div>
       <div class="arc-form-row">
         <label for="arcTitle">Title</label>
-        <input type="text" id="arcTitle" placeholder="Brianna Joy Gray — Denomination Trajectory">
+        <input type="text" id="arcTitle" placeholder="Dr Strangelove or how I stopped worrying and identified the object">
       </div>
       <div class="arc-form-row">
-        <label for="arcObject">Unified Object</label>
-        <input type="text" id="arcObject" placeholder="The Empire">
-      </div>
-      <div class="arc-form-row">
-        <label for="arcObjectDesc">Object Description</label>
-        <textarea id="arcObjectDesc" placeholder="U.S. institutional enforcement apparatus operating through five presidencies..." rows="3"></textarea>
+        <label for="arcDescription">Arc Description</label>
+        <textarea id="arcDescription" placeholder="The thesis — what this arc is investigating. The unified object will be derived from individual event instantiations." rows="4"></textarea>
       </div>
       <div class="arc-form-row">
         <label for="arcSubjectType">Subject Type</label>
@@ -3053,19 +3161,54 @@ body {
         </select>
       </div>
 
+      <!-- Unified Object (hidden until compilation) -->
+      <div class="arc-assign-section" id="arcObjectSection" style="display:none;">
+        <div class="arc-assign-title">Unified Object (derived)</div>
+        <div class="arc-form-row">
+          <label for="arcObjectSelected">Encoding-Layer Term</label>
+          <input type="text" id="arcObjectSelected" placeholder="Derived after authoring event instantiations">
+        </div>
+        <div class="arc-form-row">
+          <label for="arcObjectEditorial">Editorial Name (Parallelogram)</label>
+          <input type="text" id="arcObjectEditorial" placeholder="Optional — how you'd name it in prose">
+        </div>
+        <div class="arc-form-row">
+          <label for="arcObjectDerivation">Derivation Receipt</label>
+          <textarea id="arcObjectDerivation" placeholder="Why this abstraction — what connects the instantiations" rows="3"></textarea>
+        </div>
+        <div class="arc-form-row">
+          <label for="arcObjectStatus">Object Status</label>
+          <select id="arcObjectStatus">
+            <option value="provisional">Provisional</option>
+            <option value="derived">Derived</option>
+            <option value="confirmed">Confirmed</option>
+          </select>
+        </div>
+      </div>
+
       <!-- Event assignment (only visible when editing an existing arc) -->
       <div class="arc-assign-section" id="arcAssignSection" style="display:none;">
         <div class="arc-assign-title">Arc Events (in sequence)</div>
         <div id="arcEventSequence"></div>
-        <div class="arc-assign-row">
-          <select id="arcAddEventSelect">
-            <option value="">— assign event —</option>
-          </select>
-          <select id="arcAddEventStatus" style="width:140px;flex:none;">
-            <option value="confirmed">Confirmed</option>
-            <option value="probationary">Probationary</option>
-          </select>
-          <button class="btn small" onclick="arcAssignEvent()">+ Add</button>
+
+        <!-- Inline new arc event creator -->
+        <div style="border-top:1px solid var(--border);padding-top:12px;margin-top:8px;">
+          <div class="arc-assign-title" style="margin-bottom:8px;">Add Event</div>
+          <div class="arc-assign-row" style="margin-bottom:8px;">
+            <input type="text" id="arcNewEventTitle" placeholder="Event title" style="flex:1;font-family:'Lora',serif;font-size:13px;padding:8px 10px;border:1px solid var(--border);border-radius:4px;background:var(--cream);color:var(--ink);">
+            <input type="text" id="arcNewEventDate" placeholder="Date" style="width:100px;flex:none;font-family:'DM Mono',monospace;font-size:13px;padding:8px 10px;border:1px solid var(--border);border-radius:4px;background:var(--cream);color:var(--ink);">
+            <button class="btn small primary" onclick="arcCreateInlineEvent()">+ New</button>
+          </div>
+          <div class="arc-assign-row">
+            <select id="arcAddEventSelect">
+              <option value="">— or assign existing event —</option>
+            </select>
+            <select id="arcAddEventStatus" style="width:140px;flex:none;">
+              <option value="confirmed">Confirmed</option>
+              <option value="probationary">Probationary</option>
+            </select>
+            <button class="btn small" onclick="arcAssignEvent()">+ Add</button>
+          </div>
         </div>
       </div>
 
@@ -3073,6 +3216,7 @@ body {
         <button class="btn" onclick="hideArcForm()">Cancel</button>
         <button class="btn primary" onclick="saveArcForm()">Save Arc</button>
         <button class="btn" onclick="beginBrainstorm()" id="brainstormBtn" style="display:none;">Begin Brainstorm →</button>
+        <button class="btn" onclick="arcCompileObject()" id="compileObjectBtn" style="display:none;">Compile Object ◆</button>
       </div>
     </div>
 
@@ -3320,7 +3464,7 @@ function refreshArcList() {
         <div class="arc-card-header">
           <div>
             <div class="arc-card-title">${escHtml(arc.title || 'Untitled Arc')}</div>
-            ${arc.object ? `<div class="arc-card-object">Object: ${escHtml(arc.object)}</div>` : ''}
+            ${arc.objectSelected ? `<div class="arc-card-object">Object: ${escHtml(arc.objectSelected)}</div>` : ''}
           </div>
           <span class="arc-status ${statusClass}">${statusClass}</span>
         </div>
@@ -3347,29 +3491,52 @@ function showArcForm(id) {
   const panel = document.getElementById('arcFormPanel');
   const assignSection = document.getElementById('arcAssignSection');
   const brainstormBtn = document.getElementById('brainstormBtn');
+  const compileBtn = document.getElementById('compileObjectBtn');
+  const objectSection = document.getElementById('arcObjectSection');
 
   if (id) {
     const arc = PrismDB.getArc(id);
     if (!arc) { toast('Arc not found', true); return; }
     document.getElementById('arcFormTitle').textContent = 'Edit Arc';
     document.getElementById('arcTitle').value = arc.title || '';
-    document.getElementById('arcObject').value = arc.object || '';
-    document.getElementById('arcObjectDesc').value = arc.objectDescription || '';
+    document.getElementById('arcDescription').value = arc.description || '';
     document.getElementById('arcSubjectType').value = arc.subjectType || 'actor';
     document.getElementById('arcStatus').value = arc.status || 'draft';
     assignSection.style.display = '';
     brainstormBtn.style.display = '';
+
+    // Inline event creator — clear fields
+    document.getElementById('arcNewEventTitle').value = '';
+    document.getElementById('arcNewEventDate').value = '';
+
+    // Show compile button if 2+ events have objectInstantiation
+    const ed = arc.eventData || {};
+    const instCount = Object.values(ed).filter(d => d.objectInstantiation).length;
+    compileBtn.style.display = instCount >= 2 ? '' : 'none';
+
+    // Show unified object section if object has been derived
+    if (arc.objectSelected || arc.objectStatus === 'derived' || arc.objectStatus === 'confirmed') {
+      objectSection.style.display = '';
+      document.getElementById('arcObjectSelected').value = arc.objectSelected || '';
+      document.getElementById('arcObjectEditorial').value = arc.objectEditorialName || '';
+      document.getElementById('arcObjectDerivation').value = arc.objectDerivation || '';
+      document.getElementById('arcObjectStatus').value = arc.objectStatus || 'provisional';
+    } else {
+      objectSection.style.display = 'none';
+    }
+
     populateArcEventSelect(arc.id);
     renderArcEventSequence(arc.id);
   } else {
     document.getElementById('arcFormTitle').textContent = 'New Arc';
     document.getElementById('arcTitle').value = '';
-    document.getElementById('arcObject').value = '';
-    document.getElementById('arcObjectDesc').value = '';
+    document.getElementById('arcDescription').value = '';
     document.getElementById('arcSubjectType').value = 'actor';
     document.getElementById('arcStatus').value = 'draft';
     assignSection.style.display = 'none';
     brainstormBtn.style.display = 'none';
+    compileBtn.style.display = 'none';
+    objectSection.style.display = 'none';
   }
 
   panel.classList.add('visible');
@@ -3386,8 +3553,7 @@ function saveArcForm() {
 
   const arcData = {
     title: title,
-    object: document.getElementById('arcObject').value.trim(),
-    objectDescription: document.getElementById('arcObjectDesc').value.trim(),
+    description: document.getElementById('arcDescription').value.trim(),
     subjectType: document.getElementById('arcSubjectType').value,
     status: document.getElementById('arcStatus').value
   };
@@ -3398,7 +3564,23 @@ function saveArcForm() {
     if (existing) {
       arcData.id = currentArcEditId;
       arcData.eventIds = existing.eventIds || [];
+      arcData.eventData = existing.eventData || {};
       arcData.created = existing.created;
+
+      // Preserve or update unified object fields
+      const objSection = document.getElementById('arcObjectSection');
+      if (objSection.style.display !== 'none') {
+        arcData.objectSelected = document.getElementById('arcObjectSelected').value.trim();
+        arcData.objectEditorialName = document.getElementById('arcObjectEditorial').value.trim();
+        arcData.objectDerivation = document.getElementById('arcObjectDerivation').value.trim();
+        arcData.objectStatus = document.getElementById('arcObjectStatus').value;
+      } else {
+        arcData.objectSelected = existing.objectSelected || null;
+        arcData.objectEditorialName = existing.objectEditorialName || null;
+        arcData.objectDerivation = existing.objectDerivation || '';
+        arcData.objectStatus = existing.objectStatus || 'provisional';
+        arcData.objectCandidates = existing.objectCandidates || [];
+      }
     }
   }
 
@@ -3512,9 +3694,140 @@ function arcMoveEvent(arcId, fromIndex, direction) {
   refreshArcList();
 }
 
+function arcToggleDetail(eventId, arcId) {
+  const panel = document.getElementById('arcDetail_' + eventId);
+  if (panel) panel.classList.toggle('visible');
+}
+
+function arcSaveEventData(eventId, arcId) {
+  const arc = PrismDB.getArc(arcId);
+  if (!arc) { toast('Arc not found', true); return; }
+
+  if (!arc.eventData) arc.eventData = {};
+
+  const val = (id) => document.getElementById(id)?.value?.trim() || '';
+  const num = (id) => {
+    const v = document.getElementById(id)?.value;
+    return (v !== '' && v !== undefined && v !== null) ? parseFloat(v) : null;
+  };
+
+  arc.eventData[eventId] = {
+    label: val('aed_label_' + eventId),
+    date: val('aed_date_' + eventId),
+    objectInstantiation: val('aed_objInst_' + eventId),
+    x: num('aed_x_' + eventId),
+    y: num('aed_y_' + eventId),
+    z: num('aed_z_' + eventId),
+    dia: num('aed_dia_' + eventId),
+    prevalentAxis: val('aed_prevAxis_' + eventId) || 'x',
+    qz: {
+      A: num('aed_qzA_' + eventId),
+      B: num('aed_qzB_' + eventId),
+      C: num('aed_qzC_' + eventId),
+      D: num('aed_qzD_' + eventId)
+    },
+    subjects: {
+      A: val('aed_subA_' + eventId),
+      B: val('aed_subB_' + eventId),
+      C: val('aed_subC_' + eventId),
+      D: val('aed_subD_' + eventId)
+    }
+  };
+
+  PrismDB.saveArc(arc);
+  toast('Saved arc data for event');
+
+  // Re-render to update the filled/empty indicator
+  renderArcEventSequence(arcId);
+  refreshArcList();
+}
+
+function arcCreateInlineEvent() {
+  if (!currentArcEditId) { toast('Save the arc first', true); return; }
+
+  const title = document.getElementById('arcNewEventTitle').value.trim();
+  if (!title) { toast('Event needs a title', true); return; }
+
+  const date = document.getElementById('arcNewEventDate').value.trim();
+
+  // Create a lightweight event in PrismDB
+  const evt = PrismDB.addEvent({
+    title: title,
+    date: date || '',
+    category: '',
+    prompt: '',
+    framing: '',
+    axes: { x: { pos: '', neg: '' }, y: { pos: '', neg: '' } },
+    prevalentAxis: 'x',
+    antiValentBand: '',
+    responses: {},
+    meta: { source: 'arc-inline', status: 'draft' },
+    active: false
+  });
+
+  // Assign to arc
+  PrismDB.addEventToArc(evt.id, currentArcEditId, 'confirmed');
+  toast(`Created & assigned: ${title}`);
+
+  // Clear fields
+  document.getElementById('arcNewEventTitle').value = '';
+  document.getElementById('arcNewEventDate').value = '';
+
+  // Refresh
+  populateArcEventSelect(currentArcEditId);
+  renderArcEventSequence(currentArcEditId);
+  refreshArcList();
+
+  // Auto-expand the new event's detail panel
+  setTimeout(() => arcToggleDetail(evt.id, currentArcEditId), 100);
+}
+
+function arcCompileObject() {
+  if (!currentArcEditId) return;
+  const arc = PrismDB.getArc(currentArcEditId);
+  if (!arc) return;
+
+  const ed = arc.eventData || {};
+  const instantiations = (arc.eventIds || [])
+    .map(eid => {
+      const d = ed[eid] || {};
+      if (!d.objectInstantiation) return null;
+      return {
+        label: d.label || PrismDB.getEvent(eid)?.title || eid,
+        date: d.date || PrismDB.getEvent(eid)?.date || '',
+        instantiation: d.objectInstantiation
+      };
+    })
+    .filter(Boolean);
+
+  if (instantiations.length < 2) {
+    toast('Need 2+ events with Object Instantiation to compile', true);
+    return;
+  }
+
+  // Build compilation display
+  const list = instantiations.map((inst, i) =>
+    `${i + 1}. ${inst.instantiation} — ${inst.label} (${inst.date})`
+  ).join('\n');
+
+  // Show the object section with compiled instantiations
+  const objectSection = document.getElementById('arcObjectSection');
+  objectSection.style.display = '';
+  document.getElementById('arcObjectDerivation').value =
+    'Compiled instantiations:\n' + list +
+    (arc.objectDerivation ? '\n\n' + arc.objectDerivation : '');
+  document.getElementById('arcObjectStatus').value = arc.objectStatus || 'provisional';
+  document.getElementById('arcObjectSelected').value = arc.objectSelected || '';
+  document.getElementById('arcObjectEditorial').value = arc.objectEditorialName || '';
+
+  toast('Object instantiations compiled — name the unified object');
+}
+
 function renderArcEventSequence(arcId) {
   const container = document.getElementById('arcEventSequence');
   const arcEvents = PrismDB.getArcEvents(arcId);
+  const arc = PrismDB.getArc(arcId);
+  const eventData = (arc && arc.eventData) || {};
 
   if (arcEvents.length === 0) {
     container.innerHTML = '<div style="color:var(--muted);font-family:\'Lora\',serif;font-size:13px;font-style:italic;padding:8px 0;">No events assigned yet.</div>';
@@ -3524,16 +3837,85 @@ function renderArcEventSequence(arcId) {
   container.innerHTML = arcEvents.map((evt, i) => {
     const membership = (evt.arcMemberships || []).find(m => m.arcId === arcId);
     const mStatus = membership ? membership.status : 'confirmed';
+    const ed = eventData[evt.id] || {};
+    const hasData = !!(ed.objectInstantiation || ed.x != null || (ed.qz && Object.values(ed.qz).some(v => v != null)));
+
     return `
       <div class="arc-event-item" style="padding:8px 0;border-bottom:1px solid var(--border);">
         <span class="arc-event-pos">${i + 1}.</span>
         <span style="flex:1;">${escHtml(evt.title || evt.id)}</span>
+        <button class="btn small" onclick="arcToggleDetail('${evt.id}','${arcId}')" title="Edit arc-specific data" style="padding:4px 8px;">
+          ${hasData ? '◆' : '◇'}
+        </button>
         <button class="btn small" onclick="arcToggleStatus('${evt.id}','${arcId}')" title="Toggle status" style="padding:4px 8px;">
           <span class="arc-event-status ${mStatus}">${mStatus}</span>
         </button>
         <button class="btn small" onclick="arcMoveEvent('${arcId}',${i},-1)" style="padding:4px 6px;" ${i === 0 ? 'disabled' : ''}>↑</button>
         <button class="btn small" onclick="arcMoveEvent('${arcId}',${i},1)" style="padding:4px 6px;" ${i === arcEvents.length - 1 ? 'disabled' : ''}>↓</button>
         <button class="btn small danger" onclick="arcRemoveEvent('${evt.id}','${arcId}')" style="padding:4px 8px;">✕</button>
+      </div>
+      <div class="arc-event-detail" id="arcDetail_${evt.id}">
+        <div class="arc-event-detail-title">Arc-Specific Data — ${escHtml(evt.title || evt.id)}</div>
+
+        <div class="arc-form-row">
+          <label>Arc Label (override)</label>
+          <input type="text" id="aed_label_${evt.id}" value="${escAttr(ed.label || '')}" placeholder="${escAttr(evt.title || 'Uses base event title')}">
+        </div>
+
+        <div class="arc-form-row">
+          <label>Date (override)</label>
+          <input type="text" id="aed_date_${evt.id}" value="${escAttr(ed.date || '')}" placeholder="${escAttr(evt.date || '')}">
+        </div>
+
+        <div class="arc-form-row">
+          <label>Object Instantiation</label>
+          <input type="text" id="aed_objInst_${evt.id}" value="${escAttr(ed.objectInstantiation || '')}" placeholder="e.g. NSC covert operations apparatus">
+        </div>
+
+        <div class="arc-event-detail-title" style="margin-top:16px;">Scores</div>
+        <div class="arc-detail-scores">
+          <div>
+            <label>X</label>
+            <input type="number" step="0.01" min="-1" max="1" id="aed_x_${evt.id}" value="${ed.x ?? ''}">
+          </div>
+          <div>
+            <label>Y</label>
+            <input type="number" step="0.01" min="-1" max="1" id="aed_y_${evt.id}" value="${ed.y ?? ''}">
+          </div>
+          <div>
+            <label>Object Z</label>
+            <input type="number" step="0.01" min="-1" max="1" id="aed_z_${evt.id}" value="${ed.z ?? ''}">
+          </div>
+          <div>
+            <label>Diatribe</label>
+            <input type="number" step="1" min="0" max="100" id="aed_dia_${evt.id}" value="${ed.dia ?? ''}">
+          </div>
+        </div>
+
+        <div class="arc-form-row">
+          <label>Prevalent Axis</label>
+          <select id="aed_prevAxis_${evt.id}">
+            <option value="x" ${(ed.prevalentAxis || 'x') === 'x' ? 'selected' : ''}>X — primary contestation axis</option>
+            <option value="y" ${ed.prevalentAxis === 'y' ? 'selected' : ''}>Y — primary contestation axis</option>
+          </select>
+        </div>
+
+        <div class="arc-event-detail-title" style="margin-top:16px;">Quadrant Subject Z</div>
+        <div class="arc-detail-qz">
+          ${['A','B','C','D'].map(q => `
+            <div>
+              <label>Q${q} — Z</label>
+              <input type="number" step="0.01" min="-1" max="1" id="aed_qz${q}_${evt.id}" value="${ed.qz?.[q] ?? ''}">
+              <label>Subject</label>
+              <textarea id="aed_sub${q}_${evt.id}" placeholder="Quadrant ${q} subject">${escHtml(ed.subjects?.[q] || '')}</textarea>
+            </div>
+          `).join('')}
+        </div>
+
+        <div class="arc-detail-actions">
+          <button class="btn small primary" onclick="arcSaveEventData('${evt.id}','${arcId}')">Save Event Data</button>
+          <button class="btn small" onclick="arcToggleDetail('${evt.id}','${arcId}')">Close</button>
+        </div>
       </div>
     `;
   }).join('');
@@ -3648,8 +4030,8 @@ async function sendBrainstormMessage() {
   const contextLines = [];
   if (arc) {
     contextLines.push(`Arc: ${arc.title}`);
-    if (arc.object) contextLines.push(`Unified Object: ${arc.object}`);
-    if (arc.objectDescription) contextLines.push(`Object Description: ${arc.objectDescription}`);
+    if (arc.objectSelected) contextLines.push(`Unified Object: ${arc.objectSelected}`);
+    if (arc.description) contextLines.push(`Arc Description: ${arc.description}`);
     if (arc.subjectType) contextLines.push(`Subject Type: ${arc.subjectType}`);
   }
   if (brainstormEvents.length > 0) {
@@ -4195,7 +4577,7 @@ async function sendEditorDeskMessage() {
     const arc = PrismDB.getArc(editorState.id);
     if (arc) {
       contextLines.push(`Working on: ${arc.title} (arc)`);
-      if (arc.object) contextLines.push(`Unified Object: ${arc.object}`);
+      if (arc.objectSelected) contextLines.push(`Unified Object: ${arc.objectSelected}`);
       const arcEvents = PrismDB.getArcEvents(arc.id);
       if (arcEvents.length > 0) {
         contextLines.push('Arc events:');
@@ -4359,8 +4741,8 @@ async function editorDerive() {
     const arc = PrismDB.getArc(editorState.id);
     if (arc) {
       contextLines.push('Arc: ' + arc.title);
-      if (arc.object) contextLines.push('Unified Object: ' + arc.object);
-      if (arc.objectDescription) contextLines.push('Object Description: ' + arc.objectDescription);
+      if (arc.objectSelected) contextLines.push('Unified Object: ' + arc.objectSelected);
+      if (arc.description) contextLines.push('Arc Description: ' + arc.description);
       const arcEvents = PrismDB.getArcEvents(arc.id);
       eventIds = arcEvents.map(e => e.id);
       if (arcEvents.length > 0) {
@@ -4674,7 +5056,7 @@ function editorSaveNewEvent() {
     title,
     date: document.getElementById('editorNewEvtDate').value || '',
     framing: document.getElementById('editorNewEvtFraming').value.trim(),
-    category: arc.object ? arc.object : '',
+    category: arc.objectSelected ? arc.objectSelected : '',
     prompt: title,
     active: false,
     prevalentAxis: 'x',
