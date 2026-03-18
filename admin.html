@@ -795,6 +795,142 @@ body {
   border-top: 1px solid var(--border);
 }
 
+/* ── AUTHORING MODE ── */
+.authoring-score-btn {
+  padding: 6px 14px;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  background: var(--ink);
+  color: var(--cream);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.authoring-score-btn:hover { opacity: 0.85; }
+.authoring-score-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+
+.score-card {
+  margin: 12px 0;
+  padding: 16px;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: 'Lora', serif;
+  font-size: 13px;
+}
+.score-card-header {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.score-card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--border);
+}
+.score-card-row:last-child { border-bottom: none; }
+.score-card-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  min-width: 100px;
+}
+.score-card-value {
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  color: var(--ink);
+  text-align: right;
+  flex: 1;
+}
+.score-card-value[contenteditable="true"],
+.score-card-quad-z[contenteditable="true"],
+.score-card-quad-subj[contenteditable="true"],
+.score-card [contenteditable="true"] {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 6px;
+  outline: none;
+}
+.score-card-value[contenteditable="true"]:focus,
+.score-card-quad-z[contenteditable="true"]:focus,
+.score-card-quad-subj[contenteditable="true"]:focus,
+.score-card [contenteditable="true"]:focus {
+  border-color: var(--ink-light);
+}
+.score-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin: 8px 0;
+}
+.score-card-quad {
+  padding: 8px;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+.score-card-quad-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.score-card-quad-z {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: var(--ink);
+}
+.score-card-quad-subj {
+  font-family: 'Lora', serif;
+  font-size: 11px;
+  color: var(--ink-light);
+  margin-top: 3px;
+}
+.score-card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+/* Progress tracker sidebar */
+.authoring-progress-card {
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 8px;
+  background: var(--cream);
+  transition: border-color 0.2s;
+}
+.authoring-progress-card.active {
+  border-color: var(--ink);
+  background: var(--paper);
+}
+.authoring-progress-card.done {
+  border-left: 3px solid var(--green);
+}
+.authoring-progress-indicator {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+}
+.authoring-progress-indicator .done { color: var(--green); }
+.authoring-progress-title {
+  font-family: 'Lora', serif;
+  font-size: 13px;
+  color: var(--ink);
+  margin-top: 2px;
+}
+
 /* ── ARTICLE LIST ── */
 .article-card {
   background: var(--paper);
@@ -3232,7 +3368,7 @@ body {
       <div class="brainstorm-panel">
         <!-- Research conversation -->
         <div class="brainstorm-chat">
-          <div class="brainstorm-chat-header">Research conversation</div>
+          <div class="brainstorm-chat-header" id="brainstormChatHeader">Research conversation</div>
           <div class="brainstorm-chat-messages" id="brainstormChatMessages">
             <div class="desk-msg claude">
               <div class="desk-msg-role">Claude</div>
@@ -3241,7 +3377,8 @@ body {
           </div>
           <div class="brainstorm-chat-input">
             <textarea id="brainstormChatInput" placeholder="Research direction..." rows="2" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendBrainstormMessage();}"></textarea>
-            <button class="btn small primary" onclick="sendBrainstormMessage()">Send</button>
+            <button class="btn small primary" onclick="sendBrainstormMessage()" id="brainstormSendBtn">Send</button>
+            <button class="authoring-score-btn" onclick="extractScores()" id="authoringScoreBtn" style="display:none;" title="Extract structured scores from this conversation">◆ Score</button>
           </div>
         </div>
         <!-- Event string -->
@@ -3252,10 +3389,14 @@ body {
               Confirm events from the conversation to build your arc's sequence.
             </div>
           </div>
-          <div class="brainstorm-begin">
+          <div class="brainstorm-begin" id="brainstormResearchControls">
             <button class="btn small" onclick="addBrainstormEventPrompt()" style="width:100%;margin-bottom:8px;">+ Add event manually</button>
-            <button class="btn primary" onclick="beginEditorial()" id="beginEditorialBtn" disabled style="width:100%;">Begin Editorial →</button>
+            <button class="btn primary" onclick="beginEditorial()" id="beginEditorialBtn" disabled style="width:100%;">Author Events →</button>
             <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);margin-top:6px;text-align:center;" id="brainstormEventCount">0 events confirmed</div>
+          </div>
+          <div class="brainstorm-begin" id="brainstormAuthoringControls" style="display:none;">
+            <button class="btn primary" onclick="finishAuthoring()" id="finishAuthoringBtn" style="width:100%;">Finish Authoring →</button>
+            <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);margin-top:6px;text-align:center;" id="authoringEventCount">0 / 0 scored</div>
           </div>
         </div>
       </div>
@@ -3946,6 +4087,12 @@ let brainstormArcId = null;
 let brainstormEvents = [];
 let brainstormMessages = [];
 
+// Authoring mode (Phase 2)
+let authoringMode = false;
+let authoringEvents = [];       // Array of PrismDB event objects in sequence order
+let authoringIndex = 0;         // Current event being authored
+let authoringHistory = [];      // Conversation history for current event
+
 function beginBrainstorm() {
   if (!currentArcEditId) {
     // Save the arc first
@@ -3962,15 +4109,34 @@ function beginBrainstorm() {
   brainstormMessages = [];
   brainstormHistory = [];
 
+  // Pre-populate from existing arc events
+  const existingEvents = PrismDB.getArcEvents(arcId);
+  if (existingEvents.length > 0) {
+    existingEvents.forEach(evt => {
+      const membership = (evt.arcMemberships || []).find(m => m.arcId === arcId);
+      brainstormEvents.push({
+        title: evt.title,
+        date: evt.date || '',
+        status: membership?.status || 'confirmed',
+        id: evt.id,
+        isExisting: true  // Flag so beginEditorial knows not to re-create
+      });
+    });
+  }
+
   document.getElementById('brainstormArcTitle').textContent = arc.title || 'Untitled Arc';
   document.getElementById('brainstormSubjectType').textContent = arc.subjectType || 'actor';
 
-  // Reset chat with context-aware opening
+  // Context-aware opening
   const subjectLabel = arc.subjectType === 'actor' ? 'this person' : arc.subjectType === 'policy' ? 'this policy area' : 'this pattern';
+  const hasEvents = existingEvents.length > 0;
   document.getElementById('brainstormChatMessages').innerHTML = `
     <div class="desk-msg claude">
       <div class="desk-msg-role">Claude</div>
-      Ready to research <strong>${escHtml(arc.title)}</strong>. What events or moments are you thinking about for ${subjectLabel}? I can help find significant quotes, inflection points, and context — just give me a direction to start looking.
+      ${hasEvents
+        ? `Ready to work on <strong>${escHtml(arc.title)}</strong>. You have ${existingEvents.length} event${existingEvents.length !== 1 ? 's' : ''} in the string. You can continue researching, refine the sequence, or hit <strong>Author Events →</strong> to begin scoring.`
+        : `Ready to research <strong>${escHtml(arc.title)}</strong>. What events or moments are you thinking about for ${subjectLabel}? I can help find significant quotes, inflection points, and context — just give me a direction to start looking.`
+      }
     </div>`;
 
   // Reset event list
@@ -3984,6 +4150,20 @@ function beginBrainstorm() {
 }
 
 function exitBrainstorm() {
+  // Clean up authoring state if active
+  if (authoringMode) {
+    authoringMode = false;
+    authoringEvents = [];
+    authoringIndex = 0;
+    authoringHistory = [];
+    document.getElementById('brainstormChatHeader').textContent = 'Research conversation';
+    document.getElementById('brainstormChatInput').placeholder = 'Research direction...';
+    document.getElementById('authoringScoreBtn').style.display = 'none';
+    document.getElementById('brainstormResearchControls').style.display = '';
+    document.getElementById('brainstormAuthoringControls').style.display = 'none';
+    document.querySelector('.brainstorm-events-header').textContent = 'Event string';
+  }
+
   document.getElementById('brainstormPanel').style.display = 'none';
   document.getElementById('arcToolbar').style.display = '';
   document.getElementById('arcList').style.display = '';
@@ -4008,9 +4188,90 @@ Context: [1-2 sentences]
 
 Present 3-5 candidates at a time unless asked otherwise.`;
 
+function buildAuthoringSystemPrompt(arc, currentEvent, previousScores) {
+  const prevBlock = previousScores.length > 0
+    ? '\n\nPreviously scored events in this arc:\n' + previousScores.map((ps, i) =>
+        `  ${i + 1}. ${ps.label} (${ps.date}) — X:${ps.x}, Y:${ps.y}, ObjZ:${ps.z}, Dia:${ps.dia}, Prevalent:${ps.prevalentAxis || '—'}, DenomAxis:${ps.denominationAxis || '—'}\n     Object instantiation: ${ps.objectInstantiation}\n     Subjects: A: ${ps.subjects?.A || '—'} | B: ${ps.subjects?.B || '—'} | C: ${ps.subjects?.C || '—'} | D: ${ps.subjects?.D || '—'}\n     Status:   A: ${ps.qs?.A || '—'} | B: ${ps.qs?.B || '—'} | C: ${ps.qs?.C || '—'} | D: ${ps.qs?.D || '—'}`
+      ).join('\n')
+    : '';
+
+  return `You are the authoring editor for Prism / Parallelogram. You are helping score an event in the arc "${arc.title || 'Untitled'}".
+${arc.description ? '\nArc thesis: ' + arc.description : ''}
+${arc.objectSelected ? '\nUnified Object (encoding): ' + arc.objectSelected : ''}
+${arc.objectEditorialName ? '\nUnified Object (editorial): ' + arc.objectEditorialName : ''}
+${prevBlock}
+
+Current event: "${currentEvent.title || '—'}" (${currentEvent.date || '—'})
+
+Your role in this authoring phase:
+- Walk the editor through dialectical analysis of this event
+- Ask about the determining object: what institutional force is acting here? How does it manifest at this moment? This is the "object instantiation" — the specific face of the determining force
+- Ask about quadrant subjects: who occupies each structural position?
+  · Quadrant A (upper left: −X, +Y) — institutional left
+  · Quadrant B (upper right: +X, +Y) — institutional right
+  · Quadrant C (lower left: −X, −Y) — grassroots/populist left
+  · Quadrant D (lower right: +X, −Y) — grassroots/populist right
+- For each subject, assess denomination status: fluid (can see the object, capacity for surprise), denominated (object replaced by a vehicle), or mixed (transitional)
+- Discuss X-axis placement: where does this event's center of gravity fall on left/right orientation?
+- Discuss Y-axis placement: institutional (positive) vs grassroots (negative) mechanism preference
+- Discuss Object Z: how well is the determining object achieving its operative purpose? Score from the object's own standpoint, not ethical judgment
+- Discuss Diatribe composite (0-100): how denominated is the overall discourse?
+- Think about prevalent axis: is X or Y the primary dimension of contestation?
+- Think about denomination axis: which axis sorts the fluid/denominated pattern across quadrants? When the prevalent axis and denomination axis diverge, the event exhibits oscillation — contestation and denomination run on different registers. This is a significant structural finding.
+
+Be specific and dialectical. Help the editor reason through each dimension. When the conversation has covered enough ground, suggest they hit the ◆ Score button to extract structured scores.
+
+Do not provide scores yourself — the extraction engine handles that. Focus on analytical conversation.`;
+}
+
+const SCORING_SYSTEM_PROMPT = `You are a structured data extraction engine for the Prism dialectical encoding framework. Based on the conversation provided, extract dialectical scores for the event being discussed.
+
+Respond ONLY with a valid JSON object. No preamble, no markdown fences, no explanation.
+
+Two independent axis jobs per event:
+- prevalentAxis: which axis organizes the primary political contestation ("your side" vs "their side")
+- denominationAxis: which axis sorts the fluid/denominated pattern across quadrants
+When these two diverge, the event exhibits oscillation — contestation and denomination run on different registers.
+
+The JSON schema:
+{
+  "objectInstantiation": "string — the specific institutional face of the determining object in this event",
+  "x": "number, -1 to 1 — left/right orientation of the event's center of gravity",
+  "y": "number, -1 to 1 — institutional (positive) vs grassroots (negative) mechanism preference",
+  "z": "number, -1 to 1 — Object Z: how well the determining object achieves its operative purpose, scored from the object's own standpoint",
+  "dia": "number, 0-100 — Diatribe composite: denomination intensity of surrounding discourse",
+  "prevalentAxis": "x or y — which axis is the primary contestation dimension",
+  "denominationAxis": "x or y or null — which axis sorts the fluid/denominated pattern; null if no clear axis-aligned pattern",
+  "qz": {
+    "A": "number, -1 to 1 — Subject Z for quadrant A (upper left: -X, +Y)",
+    "B": "number, -1 to 1 — Subject Z for quadrant B (upper right: +X, +Y)",
+    "C": "number, -1 to 1 — Subject Z for quadrant C (lower left: -X, -Y)",
+    "D": "number, -1 to 1 — Subject Z for quadrant D (lower right: +X, -Y)"
+  },
+  "qs": {
+    "A": "fluid | denominated | mixed — denomination status of quadrant A",
+    "B": "fluid | denominated | mixed — denomination status of quadrant B",
+    "C": "fluid | denominated | mixed — denomination status of quadrant C",
+    "D": "fluid | denominated | mixed — denomination status of quadrant D"
+  },
+  "subjects": {
+    "A": "string — who occupies quadrant A",
+    "B": "string — who occupies quadrant B",
+    "C": "string — who occupies quadrant C",
+    "D": "string — who occupies quadrant D"
+  }
+}
+
+If the conversation does not contain enough information for a field, use null. Extract the best values you can from what was discussed.`;
+
 let brainstormHistory = [];
 
 async function sendBrainstormMessage() {
+  // Route to authoring handler if in Phase 2
+  if (authoringMode) {
+    return sendAuthoringMessage();
+  }
+
   const apiKey = getApiKey();
   if (!apiKey) { toast('Enter your Anthropic API key first', true); return; }
 
@@ -4212,30 +4473,566 @@ function beginEditorial() {
   if (btn.dataset.running === 'true') return;
   btn.dataset.running = 'true';
   btn.disabled = true;
-  btn.textContent = 'Creating events...';
+  btn.textContent = 'Preparing...';
 
   const arc = PrismDB.getArc(brainstormArcId);
   if (!arc) { btn.dataset.running = 'false'; return; }
 
   const confirmed = brainstormEvents.filter(e => e.status === 'confirmed');
-  confirmed.forEach((bsEvt, i) => {
-    const evt = {
-      title: bsEvt.title,
-      date: bsEvt.date,
-      category: 'arc-event',
-      meta: { status: 'draft', source: 'brainstorm' },
-      prevalentAxis: 'x',
-      responses: {}
-    };
-    const saved = PrismDB.addEvent(evt);
-    PrismDB.addEventToArc(saved.id, brainstormArcId, 'confirmed');
+  const createdEvents = [];
+  let newCount = 0;
+
+  confirmed.forEach((bsEvt) => {
+    if (bsEvt.isExisting) {
+      // Already in PrismDB — just resolve it
+      const existing = PrismDB.getEvent(bsEvt.id);
+      if (existing) createdEvents.push(existing);
+    } else {
+      // New from brainstorm — create and link
+      const evt = {
+        title: bsEvt.title,
+        date: bsEvt.date,
+        category: 'arc-event',
+        meta: { status: 'draft', source: 'brainstorm' },
+        prevalentAxis: 'x',
+        responses: {}
+      };
+      const saved = PrismDB.addEvent(evt);
+      PrismDB.addEventToArc(saved.id, brainstormArcId, 'confirmed');
+      createdEvents.push(saved);
+      newCount++;
+    }
   });
 
-  toast(`Created ${confirmed.length} events and linked to arc`);
+  const msg = newCount > 0
+    ? `Created ${newCount} new event${newCount !== 1 ? 's' : ''} — entering authoring mode`
+    : 'Entering authoring mode';
+  toast(msg);
 
-  // Open in editor
+  // Transition to Phase 2 authoring
+  beginAuthoring(createdEvents);
+}
+
+// ============================================================
+// AUTHORING MODE (Phase 2)
+// ============================================================
+
+function beginAuthoring(createdEvents) {
+  authoringMode = true;
+  authoringEvents = createdEvents || [];
+  authoringIndex = 0;
+  authoringHistory = [];
+
+  // If no events were passed (e.g. re-entering), resolve from arc
+  if (authoringEvents.length === 0 && brainstormArcId) {
+    authoringEvents = PrismDB.getArcEvents(brainstormArcId);
+  }
+  if (authoringEvents.length === 0) {
+    toast('No events to author', true);
+    authoringMode = false;
+    return;
+  }
+
+  // Swap UI
+  document.getElementById('brainstormChatHeader').textContent =
+    `Authoring · Event 1 of ${authoringEvents.length}`;
+  document.getElementById('brainstormChatInput').placeholder = 'Discuss this event...';
+  document.getElementById('authoringScoreBtn').style.display = '';
+  document.getElementById('brainstormResearchControls').style.display = 'none';
+  document.getElementById('brainstormAuthoringControls').style.display = '';
+  document.getElementById('brainstormEventsList').className = 'brainstorm-events-list';
+  document.querySelector('.brainstorm-events-header').textContent = 'Authoring progress';
+
+  // Render progress sidebar
+  renderAuthoringProgress();
+
+  // Clear chat and send opening message for Event 1
+  const evt = authoringEvents[0];
+  const arc = PrismDB.getArc(brainstormArcId);
+  const chat = document.getElementById('brainstormChatMessages');
+  chat.innerHTML = `
+    <div class="desk-msg claude">
+      <div class="desk-msg-role">Claude</div>
+      <div style="margin-bottom:6px;font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);">EVENT 1 OF ${authoringEvents.length}</div>
+      Let's author <strong>${escHtml(evt.title)}</strong>${evt.date ? ' (' + escHtml(evt.date) + ')' : ''}.
+      <br><br>
+      Start with the determining object — what institutional force or structure is acting in this moment? How does it manifest specifically here?
+    </div>`;
+  chat.scrollTop = chat.scrollHeight;
+
+  updateAuthoringCount();
+}
+
+function renderAuthoringProgress() {
+  const list = document.getElementById('brainstormEventsList');
+  const arc = PrismDB.getArc(brainstormArcId);
+  const eventData = (arc && arc.eventData) || {};
+
+  list.innerHTML = authoringEvents.map((evt, i) => {
+    const ed = eventData[evt.id] || {};
+    const hasData = !!(ed.objectInstantiation || ed.x != null || (ed.qz && Object.values(ed.qz).some(v => v != null)));
+    const isActive = i === authoringIndex;
+    const classes = ['authoring-progress-card'];
+    if (isActive) classes.push('active');
+    if (hasData) classes.push('done');
+
+    return `
+      <div class="${classes.join(' ')}" onclick="jumpToAuthoringEvent(${i})" style="cursor:pointer;">
+        <div class="authoring-progress-indicator">
+          <span class="${hasData ? 'done' : ''}">${hasData ? '◆' : '◇'}</span>
+          ${i + 1} · ${escHtml(evt.date || '—')}
+        </div>
+        <div class="authoring-progress-title">${escHtml(evt.title)}</div>
+      </div>
+    `;
+  }).join('');
+}
+
+function updateAuthoringCount() {
+  const arc = PrismDB.getArc(brainstormArcId);
+  const eventData = (arc && arc.eventData) || {};
+  const scored = authoringEvents.filter(evt => {
+    const ed = eventData[evt.id] || {};
+    return !!(ed.objectInstantiation || ed.x != null);
+  }).length;
+  document.getElementById('authoringEventCount').textContent =
+    `${scored} / ${authoringEvents.length} scored`;
+}
+
+function jumpToAuthoringEvent(index) {
+  if (index < 0 || index >= authoringEvents.length) return;
+  authoringIndex = index;
+  authoringHistory = [];
+
+  const evt = authoringEvents[index];
+  const arc = PrismDB.getArc(brainstormArcId);
+  const ed = (arc?.eventData || {})[evt.id] || {};
+  const hasData = !!(ed.objectInstantiation || ed.x != null);
+
+  // Update header
+  document.getElementById('brainstormChatHeader').textContent =
+    `Authoring · Event ${index + 1} of ${authoringEvents.length}`;
+
+  // Clear chat
+  const chat = document.getElementById('brainstormChatMessages');
+
+  if (hasData) {
+    // Show existing scores
+    chat.innerHTML = `
+      <div class="desk-msg claude">
+        <div class="desk-msg-role">Claude</div>
+        <div style="margin-bottom:6px;font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);">EVENT ${index + 1} OF ${authoringEvents.length} — SCORED</div>
+        <strong>${escHtml(evt.title)}</strong>${evt.date ? ' (' + escHtml(evt.date) + ')' : ''} already has scores. You can continue discussing to refine, or hit ◆ Score to re-extract.
+      </div>`;
+    chat.innerHTML += renderScoreCard(ed, evt.id, true);
+  } else {
+    chat.innerHTML = `
+      <div class="desk-msg claude">
+        <div class="desk-msg-role">Claude</div>
+        <div style="margin-bottom:6px;font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);">EVENT ${index + 1} OF ${authoringEvents.length}</div>
+        Let's author <strong>${escHtml(evt.title)}</strong>${evt.date ? ' (' + escHtml(evt.date) + ')' : ''}.
+        <br><br>
+        Start with the determining object — what institutional force or structure is acting in this moment?
+      </div>`;
+  }
+
+  chat.scrollTop = chat.scrollHeight;
+  renderAuthoringProgress();
+}
+
+function getPreviousScores() {
+  const arc = PrismDB.getArc(brainstormArcId);
+  if (!arc) return [];
+  const eventData = arc.eventData || {};
+  const scores = [];
+  for (let i = 0; i < authoringIndex; i++) {
+    const evt = authoringEvents[i];
+    const ed = eventData[evt.id];
+    if (ed && (ed.objectInstantiation || ed.x != null)) {
+      scores.push({
+        label: ed.label || evt.title,
+        date: ed.date || evt.date || '—',
+        objectInstantiation: ed.objectInstantiation || '—',
+        x: ed.x, y: ed.y, z: ed.z, dia: ed.dia,
+        subjects: ed.subjects || {}
+      });
+    }
+  }
+  return scores;
+}
+
+async function sendAuthoringMessage() {
+  const apiKey = getApiKey();
+  if (!apiKey) { toast('Enter your Anthropic API key first', true); return; }
+
+  const input = document.getElementById('brainstormChatInput');
+  const text = input.value.trim();
+  if (!text) return;
+
+  input.value = '';
+
+  const chat = document.getElementById('brainstormChatMessages');
+  chat.innerHTML += `<div class="desk-msg user"><div class="desk-msg-role">You</div>${escHtml(text)}</div>`;
+  chat.scrollTop = chat.scrollHeight;
+
+  // Build authoring context
+  const arc = PrismDB.getArc(brainstormArcId);
+  const currentEvent = authoringEvents[authoringIndex];
+  const previousScores = getPreviousScores();
+  const systemPrompt = buildAuthoringSystemPrompt(arc, currentEvent, previousScores);
+
+  // Build messages
+  const apiMessages = [...authoringHistory, { role: 'user', content: text }];
+
+  // Typing indicator
+  chat.innerHTML += `<div class="desk-msg claude" id="authoringTyping" style="opacity:0.5;"><div class="desk-msg-role">Claude</div>Thinking...</div>`;
+  chat.scrollTop = chat.scrollHeight;
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 4096,
+        system: systemPrompt,
+        messages: apiMessages
+      })
+    });
+
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err?.error?.message || `HTTP ${res.status}`);
+    }
+
+    const data = await res.json();
+    const reply = (data.content || []).map(b => b.type === 'text' ? b.text : '').join('').trim();
+
+    // Update history
+    authoringHistory.push({ role: 'user', content: text });
+    authoringHistory.push({ role: 'assistant', content: reply });
+
+    // Remove typing
+    const typing = document.getElementById('authoringTyping');
+    if (typing) typing.remove();
+
+    // Render reply
+    let replyHtml = reply
+      .replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*(.+?)\*/g, '<em>$1</em>')
+      .replace(/\n/g, '<br>');
+
+    chat.innerHTML += `<div class="desk-msg claude"><div class="desk-msg-role">Claude</div>${replyHtml}</div>`;
+
+  } catch (err) {
+    const typing = document.getElementById('authoringTyping');
+    if (typing) typing.remove();
+    chat.innerHTML += `<div class="desk-msg claude"><div class="desk-msg-role">Claude</div><span style="color:var(--red);">⚠ ${escHtml(err.message || 'Request failed')}</span></div>`;
+  }
+
+  chat.scrollTop = chat.scrollHeight;
+}
+
+async function extractScores() {
+  const apiKey = getApiKey();
+  if (!apiKey) { toast('Enter your Anthropic API key first', true); return; }
+
+  if (authoringHistory.length === 0) {
+    toast('Have a conversation about this event first', true);
+    return;
+  }
+
+  const btn = document.getElementById('authoringScoreBtn');
+  btn.disabled = true;
+  btn.textContent = '⏳ Extracting...';
+
+  const chat = document.getElementById('brainstormChatMessages');
+  const currentEvent = authoringEvents[authoringIndex];
+  const arc = PrismDB.getArc(brainstormArcId);
+  const previousScores = getPreviousScores();
+
+  // Build the extraction prompt — send full conversation + context
+  const contextPrefix = `Event being scored: "${currentEvent.title}" (${currentEvent.date || '—'})
+Arc: "${arc?.title || '—'}"
+${arc?.objectSelected ? 'Unified Object: ' + arc.objectSelected : ''}
+${previousScores.length > 0 ? '\nPrevious events in this arc:\n' + previousScores.map((ps, i) =>
+  `  ${i + 1}. ${ps.label} — ObjInst: ${ps.objectInstantiation}, X:${ps.x}, Y:${ps.y}, ObjZ:${ps.z}, Dia:${ps.dia}, Prevalent:${ps.prevalentAxis || '—'}, DenomAxis:${ps.denominationAxis || '—'}\n     Status: A:${ps.qs?.A || '—'} B:${ps.qs?.B || '—'} C:${ps.qs?.C || '—'} D:${ps.qs?.D || '—'}`
+).join('\n') : ''}
+
+The conversation about this event follows:`;
+
+  // Flatten authoring conversation into a single user message for extraction
+  const conversationText = authoringHistory.map(m =>
+    `${m.role === 'user' ? 'EDITOR' : 'ANALYST'}: ${m.content}`
+  ).join('\n\n');
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 2048,
+        system: SCORING_SYSTEM_PROMPT,
+        messages: [{
+          role: 'user',
+          content: contextPrefix + '\n\n' + conversationText
+        }]
+      })
+    });
+
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err?.error?.message || `HTTP ${res.status}`);
+    }
+
+    const data = await res.json();
+    const raw = (data.content || []).map(b => b.type === 'text' ? b.text : '').join('').trim();
+
+    // Parse JSON — strip any accidental fences
+    const clean = raw.replace(/```json\s*/g, '').replace(/```\s*/g, '').trim();
+    const scores = JSON.parse(clean);
+
+    // Render score card in chat
+    chat.innerHTML += renderScoreCard(scores, currentEvent.id, false);
+    chat.scrollTop = chat.scrollHeight;
+
+  } catch (err) {
+    chat.innerHTML += `<div class="desk-msg claude"><div class="desk-msg-role">Claude</div><span style="color:var(--red);">⚠ Score extraction failed: ${escHtml(err.message || 'Parse error')}</span></div>`;
+    chat.scrollTop = chat.scrollHeight;
+  }
+
+  btn.disabled = false;
+  btn.textContent = '◆ Score';
+}
+
+function renderScoreCard(scores, eventId, isReadOnly) {
+  const s = scores;
+  const formatNum = (v) => v != null ? (typeof v === 'number' ? v.toFixed(2) : v) : '—';
+  const editable = isReadOnly ? '' : 'contenteditable="true"';
+
+  return `
+    <div class="score-card" id="scoreCard_${eventId}">
+      <div class="score-card-header">Extracted Scores${isReadOnly ? ' (saved)' : ' — review & accept'}</div>
+
+      <div class="score-card-row">
+        <span class="score-card-label">Object Instantiation</span>
+        <span class="score-card-value" ${editable} data-field="objectInstantiation">${escHtml(s.objectInstantiation || '—')}</span>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0;">
+        <div>
+          <div class="score-card-label">X</div>
+          <div class="score-card-value" ${editable} data-field="x">${formatNum(s.x)}</div>
+        </div>
+        <div>
+          <div class="score-card-label">Y</div>
+          <div class="score-card-value" ${editable} data-field="y">${formatNum(s.y)}</div>
+        </div>
+        <div>
+          <div class="score-card-label">Object Z</div>
+          <div class="score-card-value" ${editable} data-field="z">${formatNum(s.z)}</div>
+        </div>
+        <div>
+          <div class="score-card-label">Diatribe</div>
+          <div class="score-card-value" ${editable} data-field="dia">${s.dia != null ? s.dia : '—'}</div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0;">
+        <div class="score-card-row" style="margin:0;">
+          <span class="score-card-label">Prevalent Axis</span>
+          <span class="score-card-value" ${editable} data-field="prevalentAxis">${escHtml(s.prevalentAxis || 'x')}</span>
+        </div>
+        <div class="score-card-row" style="margin:0;">
+          <span class="score-card-label">Denomination Axis</span>
+          <span class="score-card-value" ${editable} data-field="denominationAxis">${escHtml(s.denominationAxis || '—')}</span>
+        </div>
+      </div>
+      ${s.prevalentAxis !== s.denominationAxis && s.denominationAxis ? '<div style="font-family:\'DM Mono\',monospace;font-size:10px;color:var(--gold);margin:-4px 0 8px;">⟡ Oscillation — contestation and denomination on different axes</div>' : ''}
+
+      <div class="score-card-header" style="margin-top:12px;">Quadrant Subjects</div>
+      <div class="score-card-grid">
+        ${['A','B','C','D'].map(q => {
+          const qsVal = s.qs?.[q] || '—';
+          const qsColor = qsVal === 'fluid' ? 'var(--green)' : qsVal === 'denominated' ? 'var(--red)' : qsVal === 'mixed' ? 'var(--gold)' : 'var(--muted)';
+          return `
+          <div class="score-card-quad">
+            <div class="score-card-quad-label">Q${q} <span style="font-size:9px;color:${qsColor};" ${editable} data-field="qs.${q}">${escHtml(qsVal)}</span></div>
+            <div class="score-card-quad-z" ${editable} data-field="qz.${q}">${formatNum(s.qz?.[q])}</div>
+            <div class="score-card-quad-subj" ${editable} data-field="subjects.${q}">${escHtml(s.subjects?.[q] || '—')}</div>
+          </div>`;
+        }).join('')}
+      </div>
+
+      ${isReadOnly ? '' : `
+        <div class="score-card-actions">
+          <button class="btn small primary" onclick="acceptScores('${eventId}')">✓ Accept</button>
+          <button class="btn small" onclick="reExtractScores()">↻ Re-extract</button>
+        </div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);margin-top:6px;">
+          Click any value to edit before accepting
+        </div>
+      `}
+    </div>`;
+}
+
+function acceptScores(eventId) {
+  const card = document.getElementById('scoreCard_' + eventId);
+  if (!card) { toast('Score card not found', true); return; }
+
+  // Read values from the card (may have been edited)
+  const readField = (field) => {
+    const el = card.querySelector(`[data-field="${field}"]`);
+    return el ? el.textContent.trim() : null;
+  };
+  const readNum = (field) => {
+    const v = readField(field);
+    if (v === null || v === '—' || v === '') return null;
+    const n = parseFloat(v);
+    return isNaN(n) ? null : n;
+  };
+
+  const scores = {
+    objectInstantiation: readField('objectInstantiation'),
+    x: readNum('x'),
+    y: readNum('y'),
+    z: readNum('z'),
+    dia: readNum('dia'),
+    prevalentAxis: readField('prevalentAxis') || 'x',
+    denominationAxis: (() => { const v = readField('denominationAxis'); return (v && v !== '—') ? v : null; })(),
+    qz: {
+      A: readNum('qz.A'),
+      B: readNum('qz.B'),
+      C: readNum('qz.C'),
+      D: readNum('qz.D')
+    },
+    qs: {
+      A: (() => { const v = readField('qs.A'); return (v && v !== '—') ? v : null; })(),
+      B: (() => { const v = readField('qs.B'); return (v && v !== '—') ? v : null; })(),
+      C: (() => { const v = readField('qs.C'); return (v && v !== '—') ? v : null; })(),
+      D: (() => { const v = readField('qs.D'); return (v && v !== '—') ? v : null; })()
+    },
+    subjects: {
+      A: readField('subjects.A'),
+      B: readField('subjects.B'),
+      C: readField('subjects.C'),
+      D: readField('subjects.D')
+    }
+  };
+
+  // Also preserve label/date from event
+  const evt = authoringEvents[authoringIndex];
+  scores.label = scores.label || evt.title;
+  scores.date = scores.date || evt.date;
+
+  // Save to arc.eventData
+  const arc = PrismDB.getArc(brainstormArcId);
+  if (!arc) { toast('Arc not found', true); return; }
+  if (!arc.eventData) arc.eventData = {};
+  arc.eventData[eventId] = scores;
+  PrismDB.saveArc(arc);
+
+  toast(`Scores saved for ${evt.title}`);
+
+  // Mark card as read-only
+  card.querySelectorAll('[contenteditable]').forEach(el => {
+    el.removeAttribute('contenteditable');
+  });
+  const actions = card.querySelector('.score-card-actions');
+  if (actions) actions.innerHTML = '<span style="font-family:\'DM Mono\',monospace;font-size:10px;color:var(--green);">✓ Saved</span>';
+
+  // Update progress
+  renderAuthoringProgress();
+  updateAuthoringCount();
+
+  // Auto-advance after a beat
+  if (authoringIndex < authoringEvents.length - 1) {
+    setTimeout(() => {
+      advanceAuthoring();
+    }, 600);
+  }
+}
+
+function reExtractScores() {
+  // Remove existing score card and re-extract
+  const currentEvent = authoringEvents[authoringIndex];
+  const card = document.getElementById('scoreCard_' + currentEvent.id);
+  if (card) card.remove();
+  extractScores();
+}
+
+function advanceAuthoring() {
+  if (authoringIndex >= authoringEvents.length - 1) {
+    toast('All events scored!');
+    return;
+  }
+
+  authoringIndex++;
+  authoringHistory = [];
+
+  const evt = authoringEvents[authoringIndex];
+  const arc = PrismDB.getArc(brainstormArcId);
+  const previousScores = getPreviousScores();
+
+  // Update header
+  document.getElementById('brainstormChatHeader').textContent =
+    `Authoring · Event ${authoringIndex + 1} of ${authoringEvents.length}`;
+
+  // Chat opening for next event
+  const chat = document.getElementById('brainstormChatMessages');
+
+  // Build a brief summary of the pattern so far
+  let patternNote = '';
+  if (previousScores.length > 0) {
+    const lastPs = previousScores[previousScores.length - 1];
+    patternNote = `<br><br><span style="font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);">Last scored: ${escHtml(lastPs.label)} — Object instantiation: ${escHtml(lastPs.objectInstantiation)}</span>`;
+  }
+
+  chat.innerHTML = `
+    <div class="desk-msg claude">
+      <div class="desk-msg-role">Claude</div>
+      <div style="margin-bottom:6px;font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);">EVENT ${authoringIndex + 1} OF ${authoringEvents.length}</div>
+      Moving to <strong>${escHtml(evt.title)}</strong>${evt.date ? ' (' + escHtml(evt.date) + ')' : ''}.
+      ${patternNote}
+      <br><br>
+      How does the determining object manifest in this event? What's the specific institutional apparatus at work here?
+    </div>`;
+  chat.scrollTop = chat.scrollHeight;
+
+  renderAuthoringProgress();
+}
+
+function finishAuthoring() {
+  const arcId = brainstormArcId; // Save before exit clears it
+
+  authoringMode = false;
+  authoringEvents = [];
+  authoringIndex = 0;
+  authoringHistory = [];
+
+  // Reset UI
+  document.getElementById('brainstormChatHeader').textContent = 'Research conversation';
+  document.getElementById('brainstormChatInput').placeholder = 'Research direction...';
+  document.getElementById('authoringScoreBtn').style.display = 'none';
+  document.getElementById('brainstormResearchControls').style.display = '';
+  document.getElementById('brainstormAuthoringControls').style.display = 'none';
+  document.querySelector('.brainstorm-events-header').textContent = 'Event string';
+
+  // Exit brainstorm entirely and open arc in editor
   exitBrainstorm();
-  openInEditor('arc', brainstormArcId);
+  if (arcId) openInEditor('arc', arcId);
 }
 
 // ============================================================
@@ -5114,7 +5911,14 @@ refreshArcList = function() {
 // ============================================================
 
 function refreshList() {
-  const events = PrismDB.getEvents();
+  const allEvents = PrismDB.getEvents();
+  // Filter out arc-only events — they appear through the arc interface
+  const events = allEvents.filter(evt => {
+    const isArcOnly = (evt.arcMemberships && evt.arcMemberships.length > 0) ||
+                      evt.meta?.source === 'arc-inline' ||
+                      evt.meta?.source === 'brainstorm';
+    return !isArcOnly;
+  });
   const list = document.getElementById('eventList');
 
   if (events.length === 0) {

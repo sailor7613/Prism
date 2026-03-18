@@ -178,8 +178,13 @@ const PrismDB = (() => {
   // ── Arcs ─────────────────────────────────────────────────
   // An arc is a temporally ordered sequence of events with a
   // unified determining object. Each event carries per-quadrant
-  // Subject Z values and subject labels (who occupies each
-  // quadrant for that event).
+  // Subject Z values, subject labels, and denomination status.
+  //
+  // Two independent axis jobs per event:
+  //   prevalentAxis  — which axis organizes primary political contestation
+  //   denominationAxis — which axis sorts the fluid/denominated pattern
+  // When these diverge, the event exhibits oscillation between
+  // contestation and denomination registers.
   //
   // Schema:
   // {
@@ -196,7 +201,10 @@ const PrismDB = (() => {
   //       x: 0.7, y: 0.95, z: 0.85,   // Object Z
   //       dia: 80,
   //       type: 'event',
+  //       prevalentAxis: 'x',           // contestation axis
+  //       denominationAxis: 'x',        // denomination-sorting axis
   //       qz: { A: 0.85, B: 0.40, C: -0.90, D: -0.60 },
+  //       qs: { A: 'fluid', B: 'denominated', C: 'fluid', D: 'mixed' },
   //       subjects: {
   //         A: '',  // e.g. "Covert ops apparatus, NSC"
   //         B: '',  // e.g. "Institutional Democrats, Cold War liberals"
@@ -213,6 +221,16 @@ const PrismDB = (() => {
 
   function getArc(id) {
     return getArcs().find(a => a.id === id) || null;
+  }
+
+  function getArcEvents(arcId) {
+    const arc = getArc(arcId);
+    if (!arc || !Array.isArray(arc.eventIds) || arc.eventIds.length === 0) return [];
+    const allEvents = getEvents();
+    // Resolve IDs to full event objects, preserving arc order
+    return arc.eventIds
+      .map(eid => allEvents.find(e => e.id === eid))
+      .filter(Boolean);
   }
 
   function saveArc(arc) {
@@ -246,85 +264,8 @@ const PrismDB = (() => {
   }
 
   function deleteArc(id) {
-    // Remove arc and clean up arcMemberships on any linked events
-    const arc = getArc(id);
-    if (arc && Array.isArray(arc.eventIds)) {
-      const events = getEvents();
-      arc.eventIds.forEach(eid => {
-        const evt = events.find(e => e.id === eid);
-        if (evt && Array.isArray(evt.arcMemberships)) {
-          evt.arcMemberships = evt.arcMemberships.filter(m => m.arcId !== id);
-        }
-      });
-      _set(KEYS.events, events);
-    }
     const arcs = getArcs().filter(a => a.id !== id);
     _set(KEYS.arcs, arcs);
-    return true;
-  }
-
-  function getArcEvents(arcId) {
-    const arc = getArc(arcId);
-    if (!arc || !Array.isArray(arc.eventIds)) return [];
-    const events = getEvents();
-    // Resolve in sequence order, skip any that no longer exist
-    return arc.eventIds
-      .map(eid => events.find(e => e.id === eid))
-      .filter(Boolean);
-  }
-
-  function addEventToArc(eventId, arcId, status) {
-    const arc = getArc(arcId);
-    if (!arc) return null;
-
-    // Ensure eventIds array
-    if (!Array.isArray(arc.eventIds)) arc.eventIds = [];
-
-    // Add to arc if not already present
-    if (!arc.eventIds.includes(eventId)) {
-      arc.eventIds.push(eventId);
-    }
-    saveArc(arc);
-
-    // Write arcMembership on the event
-    const events = getEvents();
-    const evt = events.find(e => e.id === eventId);
-    if (!evt) return null;
-
-    if (!Array.isArray(evt.arcMemberships)) evt.arcMemberships = [];
-    const existing = evt.arcMemberships.findIndex(m => m.arcId === arcId);
-    const membership = {
-      arcId: arcId,
-      position: arc.eventIds.indexOf(eventId),
-      status: status || 'confirmed'
-    };
-
-    if (existing !== -1) {
-      evt.arcMemberships[existing] = membership;
-    } else {
-      evt.arcMemberships.push(membership);
-    }
-
-    _set(KEYS.events, events);
-    return membership;
-  }
-
-  function removeEventFromArc(eventId, arcId) {
-    // Remove from arc's eventIds
-    const arc = getArc(arcId);
-    if (arc && Array.isArray(arc.eventIds)) {
-      arc.eventIds = arc.eventIds.filter(eid => eid !== eventId);
-      saveArc(arc);
-    }
-
-    // Remove arcMembership from event
-    const events = getEvents();
-    const evt = events.find(e => e.id === eventId);
-    if (evt && Array.isArray(evt.arcMemberships)) {
-      evt.arcMemberships = evt.arcMemberships.filter(m => m.arcId !== arcId);
-      _set(KEYS.events, events);
-    }
-
     return true;
   }
 
@@ -1038,8 +979,7 @@ const PrismDB = (() => {
     getResponses, getResponsesForEvent, hasRespondedToEvent, saveResponse,
     getAggregateForEvent,
     getSnapshots, getSnapshotsForEvent, saveSnapshot,
-    getArcs, getArc, saveArc, deleteArc,
-    getArcEvents, addEventToArc, removeEventFromArc,
+    getArcs, getArc, getArcEvents, saveArc, deleteArc,
     getState, setState,
     getUser, setUser,
     clear, seed
