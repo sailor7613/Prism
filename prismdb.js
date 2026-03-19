@@ -9,7 +9,9 @@ const PrismDB = (() => {
     state:     'prism_state',
     user:      'prism_user',
     snapshots: 'prism_parallax_snapshots',
-    arcs:      'prism_arcs'
+    arcs:      'prism_arcs',
+    members:   'prism_members',
+    memberPos: 'prism_member_positions'
   };
 
   function _get(key) {
@@ -178,13 +180,8 @@ const PrismDB = (() => {
   // ── Arcs ─────────────────────────────────────────────────
   // An arc is a temporally ordered sequence of events with a
   // unified determining object. Each event carries per-quadrant
-  // Subject Z values, subject labels, and denomination status.
-  //
-  // Two independent axis jobs per event:
-  //   prevalentAxis  — which axis organizes primary political contestation
-  //   denominationAxis — which axis sorts the fluid/denominated pattern
-  // When these diverge, the event exhibits oscillation between
-  // contestation and denomination registers.
+  // Subject Z values and subject labels (who occupies each
+  // quadrant for that event).
   //
   // Schema:
   // {
@@ -201,10 +198,7 @@ const PrismDB = (() => {
   //       x: 0.7, y: 0.95, z: 0.85,   // Object Z
   //       dia: 80,
   //       type: 'event',
-  //       prevalentAxis: 'x',           // contestation axis
-  //       denominationAxis: 'x',        // denomination-sorting axis
   //       qz: { A: 0.85, B: 0.40, C: -0.90, D: -0.60 },
-  //       qs: { A: 'fluid', B: 'denominated', C: 'fluid', D: 'mixed' },
   //       subjects: {
   //         A: '',  // e.g. "Covert ops apparatus, NSC"
   //         B: '',  // e.g. "Institutional Democrats, Cold War liberals"
@@ -221,16 +215,6 @@ const PrismDB = (() => {
 
   function getArc(id) {
     return getArcs().find(a => a.id === id) || null;
-  }
-
-  function getArcEvents(arcId) {
-    const arc = getArc(arcId);
-    if (!arc || !Array.isArray(arc.eventIds) || arc.eventIds.length === 0) return [];
-    const allEvents = getEvents();
-    // Resolve IDs to full event objects, preserving arc order
-    return arc.eventIds
-      .map(eid => allEvents.find(e => e.id === eid))
-      .filter(Boolean);
   }
 
   function saveArc(arc) {
@@ -269,10 +253,177 @@ const PrismDB = (() => {
     return true;
   }
 
+  // ── Members ──────────────────────────────────────────────
+  // Schema: { bioguideId, name:{first,last,full}, party, chamber,
+  //   state, district, inOffice, terms, nominateD1, nominateD2,
+  //   photoUrl, lastUpdated }
+
+  function getMembers() { return _get(KEYS.members) || []; }
+
+  function getMember(bioguideId) {
+    return getMembers().find(m => m.bioguideId === bioguideId) || null;
+  }
+
+  function getMembersByState(state) {
+    return getMembers().filter(m => m.state === state);
+  }
+
+  function getMembersByChamber(chamber) {
+    return getMembers().filter(m => m.chamber === chamber);
+  }
+
+  function getMembersByParty(party) {
+    return getMembers().filter(m => m.party === party);
+  }
+
+  function loadMembers(membersArray) {
+    if (!Array.isArray(membersArray)) {
+      console.error('PrismDB.loadMembers: expected array');
+      return false;
+    }
+    _set(KEYS.members, membersArray);
+    console.log('PrismDB: loaded ' + membersArray.length + ' members.');
+    return true;
+  }
+
+  function updateMember(bioguideId, data) {
+    const members = getMembers();
+    const idx = members.findIndex(m => m.bioguideId === bioguideId);
+    if (idx === -1) return null;
+    members[idx] = { ...members[idx], ...data, bioguideId };
+    _set(KEYS.members, members);
+    return members[idx];
+  }
+
+  function searchMembers(query) {
+    const q = query.toLowerCase();
+    return getMembers().filter(m =>
+      m.name.full.toLowerCase().includes(q) ||
+      m.state.toLowerCase().includes(q) ||
+      m.bioguideId.toLowerCase() === q
+    );
+  }
+
+  // ── Member Event Positions ────────────────────────────────
+  // Same ontological structure as Derive output. A member's
+  // position on a Prism event is scored by the same engine that
+  // scores editorial content and user responses.
+  //
+  // Schema: { id, bioguideId, eventId, quadrant, x, y,
+  //   pin:{x,y}, z, diatribe, diatribeBand, confidence,
+  //   method, provenance, sources:{votes,statements,legislation},
+  //   keywords:{A,B,C,D}, adminOverride, timestamp }
+
+  function getMemberPositions() { return _get(KEYS.memberPos) || []; }
+
+  function getMemberPositionsForEvent(eventId) {
+    return getMemberPositions().filter(p => p.eventId === eventId);
+  }
+
+  function getMemberPositionHistory(bioguideId) {
+    return getMemberPositions().filter(p => p.bioguideId === bioguideId);
+  }
+
+  function getMemberPosition(bioguideId, eventId) {
+    return getMemberPositions().find(
+      p => p.bioguideId === bioguideId && p.eventId === eventId
+    ) || null;
+  }
+
+  function saveMemberPosition(pos) {
+    pos.id = pos.id || ('mpos_' + pos.bioguideId + '_' + pos.eventId);
+    pos.timestamp = pos.timestamp || new Date().toISOString();
+
+    // Derive quadrant from pin if not set
+    if (!pos.quadrant && pos.pin) {
+      const right = pos.pin.x >= 0.5;
+      const top = pos.pin.y < 0.5;
+      if (right && top) pos.quadrant = 'A';
+      else if (!right && top) pos.quadrant = 'B';
+      else if (!right && !top) pos.quadrant = 'C';
+      else pos.quadrant = 'D';
+    }
+
+    // Diatribe band
+    if (pos.diatribe != null && !pos.diatribeBand) {
+      pos.diatribeBand = pos.diatribe <= 33 ? 'nominal'
+                       : pos.diatribe <= 66 ? 'coalition'
+                       : 'conviction';
+    }
+
+    // Defaults
+    pos.confidence = pos.confidence ?? 0;
+    pos.method = pos.method || 'derive';
+    pos.provenance = pos.provenance || 'DERIVED';
+    pos.sources = pos.sources || { votes: [], statements: [], legislation: [] };
+    pos.keywords = pos.keywords || { A: [], B: [], C: [], D: [] };
+    pos.adminOverride = pos.adminOverride || false;
+
+    const all = getMemberPositions();
+    const idx = all.findIndex(p => p.id === pos.id);
+    if (idx !== -1) {
+      all[idx] = pos;
+    } else {
+      all.push(pos);
+    }
+    _set(KEYS.memberPos, all);
+    return pos;
+  }
+
+  function saveMemberPositions(positions) {
+    const all = getMemberPositions();
+    const idMap = new Map(all.map((p, i) => [p.id, i]));
+
+    positions.forEach(pos => {
+      pos.id = pos.id || ('mpos_' + pos.bioguideId + '_' + pos.eventId);
+      pos.timestamp = pos.timestamp || new Date().toISOString();
+      const existIdx = idMap.get(pos.id);
+      if (existIdx != null) {
+        all[existIdx] = pos;
+      } else {
+        all.push(pos);
+        idMap.set(pos.id, all.length - 1);
+      }
+    });
+
+    _set(KEYS.memberPos, all);
+    console.log('PrismDB: saved ' + positions.length + ' member positions.');
+    return positions;
+  }
+
+  function deleteMemberPosition(bioguideId, eventId) {
+    const id = 'mpos_' + bioguideId + '_' + eventId;
+    const all = getMemberPositions().filter(p => p.id !== id);
+    _set(KEYS.memberPos, all);
+    return true;
+  }
+
+  // Get member pins in same shape as user aggregate pins
+  // so graphmap can render them alongside user data
+  function getMemberAggregateForEvent(eventId) {
+    return getMemberPositionsForEvent(eventId).map(p => {
+      const member = getMember(p.bioguideId);
+      return {
+        x: p.pin ? p.pin.x : 0.5,
+        y: p.pin ? p.pin.y : 0.5,
+        quadrant: p.quadrant,
+        intensity: p.diatribe || 50,
+        z: p.z || 0,
+        type: 'member',
+        bioguideId: p.bioguideId,
+        name: member ? member.name.full : p.bioguideId,
+        party: member ? member.party : '?',
+        chamber: member ? member.chamber : '',
+        method: p.method,
+        confidence: p.confidence
+      };
+    });
+  }
+
   // ── Dev Utilities ───────────────────────────────────────
   function clear() {
     Object.values(KEYS).forEach(k => localStorage.removeItem(k));
-    console.log('PrismDB cleared (including arcs).');
+    console.log('PrismDB cleared (including arcs, members, positions).');
   }
 
   // ── Seed ────────────────────────────────────────────────
@@ -979,7 +1130,13 @@ const PrismDB = (() => {
     getResponses, getResponsesForEvent, hasRespondedToEvent, saveResponse,
     getAggregateForEvent,
     getSnapshots, getSnapshotsForEvent, saveSnapshot,
-    getArcs, getArc, getArcEvents, saveArc, deleteArc,
+    getArcs, getArc, saveArc, deleteArc,
+    getMembers, getMember, getMembersByState, getMembersByChamber,
+    getMembersByParty, loadMembers, updateMember, searchMembers,
+    getMemberPositions, getMemberPositionsForEvent,
+    getMemberPositionHistory, getMemberPosition,
+    saveMemberPosition, saveMemberPositions, deleteMemberPosition,
+    getMemberAggregateForEvent,
     getState, setState,
     getUser, setUser,
     clear, seed
