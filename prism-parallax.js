@@ -304,6 +304,7 @@ function resizeBeam() {
 function openParallax() {
   shadeOpen = true;
   beamHeader.classList.add('shade-animating');
+  beamHeader.classList.add('shade-open');
   beamHeader.style.top = headerOpenTop() + 'px';
   parallaxOverlay.classList.add('open');
   // Post-submit → Parallax tab; pre-submit → Diatribe tab
@@ -318,6 +319,7 @@ function openParallax() {
 function closeParallax() {
   shadeOpen = false;
   beamHeader.classList.add('shade-animating');
+  beamHeader.classList.remove('shade-open');
   beamHeader.style.top = '0px';
   parallaxOverlay.classList.remove('open');
   parallaxOverlay.classList.remove('graph-mode');

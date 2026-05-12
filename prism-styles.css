@@ -537,16 +537,16 @@ html, body {
   height: 72px;
   z-index: 100;
   background-color: var(--surface);
-  cursor: grab;
   user-select: none;
   border-bottom: 1px solid var(--border);
   overflow: hidden;
   will-change: top;
+  pointer-events: none; /* pass-through — only prism image captures events */
 }
 .beam-header.shade-animating {
   transition: top 0.5s cubic-bezier(0.4,0,0.2,1);
 }
-.beam-header:active { cursor: grabbing; }
+.beam-header-img:active { cursor: grabbing; }
 /* Pressed state — subtle lift when grabbed */
 .beam-header.beam-pressed {
   overflow: visible;
@@ -591,14 +591,15 @@ html, body {
   top: 0; left: 0; right: 0;
   height: 72px;
   z-index: 2;
-  pointer-events: none; /* pass-through — beamHeader gets the events */
+  pointer-events: none; /* pass-through — beam-header-img gets the events */
 }
 
 .beam-header-img {
   position: absolute;
   height: 72px;
   width: auto;
-  pointer-events: none;
+  pointer-events: auto; /* drag handle — captures mouse/touch */
+  cursor: grab;
   top: 0;
   left: -101px;
   z-index: 3;
@@ -633,6 +634,9 @@ html, body {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.4s ease;
+}
+.parallax-overlay:not(.open) * {
+  pointer-events: none !important; /* kill active children when overlay is closed */
 }
 .parallax-overlay.open {
   opacity: 1;
@@ -677,11 +681,19 @@ html, body {
   inset: 0;
   padding: 16px 20px;
   overflow-y: auto;
-  display: none;
+  display: flex;
   color: var(--cream);
   flex-direction: column;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: opacity 0.38s ease, transform 0.38s ease;
 }
-.p-panel.active { display: flex; }
+.p-panel.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
 
 /* Diatribe panel */
 .dia-label {
@@ -2663,3 +2675,82 @@ textarea::placeholder { color: var(--text-muted); opacity: 0.7; }
   transition: color 0.2s;
 }
 .ps-skip:hover { color: var(--text-secondary); }
+
+/* ── Refraction Member Browser ─────────────────────────── */
+.ref-member-browser { padding: 0; }
+.ref-search-bar { display: flex; gap: 6px; padding: 0 24px 10px; }
+.ref-search-bar input {
+  flex: 1; min-width: 0;
+  font-family: 'DM Mono', monospace; font-size: 9px;
+  letter-spacing: 0.06em; color: var(--text);
+  background: var(--surface-raised); border: 1px solid var(--border);
+  padding: 7px 10px; outline: none; transition: border-color 0.2s;
+}
+.ref-search-bar input:focus { border-color: var(--border-strong); }
+.ref-search-bar input::placeholder { color: var(--text-muted); opacity: 0.5; }
+.ref-filter-row { display: flex; gap: 4px; padding: 0 24px 10px; flex-wrap: wrap; }
+.ref-filter-btn {
+  font-family: 'DM Mono', monospace; font-size: 7px;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 4px 8px; background: var(--surface-raised);
+  border: 1px solid var(--border); color: var(--text-muted);
+  cursor: pointer; transition: all 0.2s;
+}
+.ref-filter-btn:hover { border-color: var(--border-strong); }
+.ref-filter-btn.active { background: var(--ink); color: var(--surface); border-color: var(--ink); }
+.ref-filter-btn.active-d { background: var(--blue); border-color: var(--blue); color: white; }
+.ref-filter-btn.active-r { background: var(--red); border-color: var(--red); color: white; }
+.ref-filter-btn.active-i { background: var(--green); border-color: var(--green); color: white; }
+.ref-member-list {
+  max-height: 360px; overflow-y: auto;
+  display: flex; flex-direction: column; gap: 4px; padding: 0 24px;
+  scrollbar-width: thin; scrollbar-color: var(--border) transparent;
+}
+.ref-member-list::-webkit-scrollbar { width: 4px; }
+.ref-member-list::-webkit-scrollbar-track { background: transparent; }
+.ref-member-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+.ref-member-card {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--surface-raised); border: 1px solid var(--border);
+  padding: 8px 12px; position: relative; overflow: hidden;
+  transition: border-color 0.2s; cursor: pointer;
+}
+.ref-member-card:hover { border-color: var(--border-strong); }
+.ref-member-card::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+}
+.ref-member-card.party-d::before { background: var(--blue); }
+.ref-member-card.party-r::before { background: var(--red); }
+.ref-member-card.party-i::before { background: var(--green); }
+.ref-member-card .ref-card-initial {
+  width: 26px; height: 26px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif; font-size: 10px; color: white; flex-shrink: 0;
+}
+.ref-member-card .ref-card-info { flex: 1; min-width: 0; }
+.ref-member-card .ref-card-name {
+  font-family: 'Playfair Display', serif; font-size: 11px; color: var(--text);
+  line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.ref-member-card .ref-card-meta {
+  font-family: 'DM Mono', monospace; font-size: 7px; color: var(--text-muted);
+  letter-spacing: 0.08em; margin-top: 1px;
+}
+.ref-member-card .ref-quad-badge {
+  font-family: 'DM Mono', monospace; font-size: 7px;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 2px 6px; border: 1px solid var(--border);
+  color: var(--text-muted); flex-shrink: 0;
+}
+.ref-member-card .ref-quad-badge.has-position { border-color: var(--gold); color: var(--gold); }
+.ref-member-count {
+  font-family: 'DM Mono', monospace; font-size: 7px;
+  letter-spacing: 0.12em; color: var(--text-muted);
+  padding: 6px 24px 0; text-transform: uppercase;
+}
+.ref-member-empty { padding: 20px 24px; text-align: center; }
+.ref-member-empty .empty-icon { font-size: 16px; opacity: 0.15; margin-bottom: 6px; }
+.ref-member-empty .empty-text {
+  font-family: 'DM Mono', monospace; font-size: 8px;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted);
+}

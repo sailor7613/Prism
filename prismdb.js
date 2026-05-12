@@ -198,7 +198,11 @@ const PrismDB = (() => {
   //       x: 0.7, y: 0.95, z: 0.85,   // Object Z
   //       dia: 80,
   //       type: 'event',
+  //       prevalentAxis: 'y',  // 'x' | 'y'
+  //       denominationAxis: null,  // 'x' | 'y' | null — which axis sorts fluid/denominated pattern; divergence from prevalentAxis = oscillation
+  //       objectInstantiation: '',  // specific institutional face of the Object at this event
   //       qz: { A: 0.85, B: 0.40, C: -0.90, D: -0.60 },
+  //       qs: { A: null, B: null, C: null, D: null },  // 'fluid' | 'denominated' | 'mixed' | null — per-quadrant denomination status
   //       subjects: {
   //         A: '',  // e.g. "Covert ops apparatus, NSC"
   //         B: '',  // e.g. "Institutional Democrats, Cold War liberals"
@@ -238,6 +242,13 @@ const PrismDB = (() => {
     // Upsert: replace existing or append
     const idx = arcs.findIndex(a => a.id === arc.id);
     if (idx !== -1) {
+      // Preserve inline events and eventData if not provided in update
+      if (!Array.isArray(arc.events) || arc.events.length === 0) {
+        arc.events = arcs[idx].events || [];
+      }
+      if (!arc.eventData && arcs[idx].eventData) {
+        arc.eventData = arcs[idx].eventData;
+      }
       arcs[idx] = arc;
     } else {
       arcs.push(arc);
@@ -251,6 +262,79 @@ const PrismDB = (() => {
     const arcs = getArcs().filter(a => a.id !== id);
     _set(KEYS.arcs, arcs);
     return true;
+  }
+
+  // ── Arc ↔ Event linking ─────────────────────────────────
+  // Events in the main store can link to arcs via arcMemberships[].
+  // Seed arcs store events inline. getArcEvents handles both.
+
+  function getArcEvents(arcId) {
+    // 1. Check main events store for membership links
+    const allEvents = getEvents();
+    const linked = allEvents.filter(e =>
+      Array.isArray(e.arcMemberships) &&
+      e.arcMemberships.some(m => m.arcId === arcId)
+    );
+    if (linked.length > 0) return linked;
+
+    // 2. Fall back to inline arc.events[] (seed data)
+    const arc = getArc(arcId);
+    if (!arc || !Array.isArray(arc.events) || arc.events.length === 0) return [];
+
+    // Normalize inline events: map label→title, add synthetic arcMemberships
+    return arc.events.map(e => ({
+      ...e,
+      title: e.title || e.label || e.id,
+      arcMemberships: [{ arcId, status: 'confirmed' }]
+    }));
+  }
+
+  function addEventToArc(eventId, arcId, status) {
+    const events = getEvents();
+    const idx = events.findIndex(e => e.id === eventId);
+    if (idx === -1) return null;
+
+    if (!Array.isArray(events[idx].arcMemberships)) {
+      events[idx].arcMemberships = [];
+    }
+    // Upsert: update status if already linked, otherwise add
+    const mIdx = events[idx].arcMemberships.findIndex(m => m.arcId === arcId);
+    if (mIdx !== -1) {
+      events[idx].arcMemberships[mIdx].status = status || 'confirmed';
+    } else {
+      events[idx].arcMemberships.push({ arcId, status: status || 'confirmed' });
+    }
+
+    _set(KEYS.events, events);
+    return events[idx];
+  }
+
+  function removeEventFromArc(eventId, arcId) {
+    // 1. Strip arcMemberships from main events store (if present)
+    const events = getEvents();
+    const idx = events.findIndex(e => e.id === eventId);
+    if (idx !== -1 && Array.isArray(events[idx].arcMemberships)) {
+      events[idx].arcMemberships = events[idx].arcMemberships.filter(m => m.arcId !== arcId);
+      _set(KEYS.events, events);
+    }
+
+    // 2. Remove from arc's eventIds array and inline events[]
+    const arc = getArc(arcId);
+    if (arc) {
+      if (Array.isArray(arc.eventIds)) {
+        arc.eventIds = arc.eventIds.filter(id => id !== eventId);
+      }
+      if (Array.isArray(arc.events)) {
+        arc.events = arc.events.filter(e => e.id !== eventId);
+      }
+      // Clean up orphaned eventData
+      if (arc.eventData && arc.eventData[eventId]) {
+        delete arc.eventData[eventId];
+      }
+      saveArc(arc);
+    }
+
+    return idx !== -1 ? events[idx] : { id: eventId };
   }
 
   // ── Members ──────────────────────────────────────────────
@@ -1124,6 +1208,88 @@ const PrismDB = (() => {
     return true;
   }
 
+  // ── Arc Seed — CS04: Iran-Contra → Maduro ──────────────
+  function seedArc() {
+    const arc = {
+      id: 'arc_cs04',
+      title: 'Immigration Arc (1982–2026)',
+      subjectType: 'policy',
+      description: 'The Empire as unified determining Object across four decades of immigration policy, from covert war through statutory architecture to populist capture.',
+      object: 'The Empire',
+      objectSelected: 'The Empire',
+      objectEditorialName: 'The Empire',
+      objectStatus: 'provisional',
+      objectDescription: 'U.S. institutional apparatus — executive, legislative, and security establishment — as a continuous actor whose operative purposes persist across administrations.',
+      eventIds: ['e4.1','e4.2','e4.3','e4.4','e4.5','e4.6','e4.7','e4.8','e4.9','e4.10'],
+      events: [
+        { id: 'e4.1', label: 'Iran-Contra / Didion / Webb', date: '1982',
+          x: 0.7, y: 0.95, z: 0.85, dia: 80, type: 'event', prevalentAxis: 'y',
+          denominationAxis: null, objectInstantiation: 'NSC covert operations apparatus',
+          qz: { A: 0.85, B: 0.40, C: -0.90, D: -0.60 },
+          qs: { A: null, B: null, C: null, D: null },
+          subjects: { A: 'Covert ops apparatus, NSC', B: 'Institutional Democrats, Cold War liberals', C: 'Displaced Central Americans, anti-war activists', D: 'Libertarian skeptics, fiscal conservatives' } },
+        { id: 'e4.2', label: 'IRCA + IIRIRA', date: '1986',
+          x: 0, y: 0.90, z: 0.80, dia: 72, type: 'event', prevalentAxis: 'y',
+          denominationAxis: null, objectInstantiation: '',
+          qz: { A: 0.30, B: -0.50, C: -0.40, D: 0.10 },
+          qs: { A: null, B: null, C: null, D: null },
+          subjects: { A: '', B: '', C: '', D: '' } },
+        { id: 'e4.3', label: 'Pat Buchanan', date: '1992',
+          x: 0.8, y: -0.9, z: -0.40, dia: 50, type: 'event', prevalentAxis: 'y',
+          denominationAxis: null, objectInstantiation: '',
+          qz: { A: -0.50, B: -0.20, C: -0.10, D: 0.30 },
+          qs: { A: null, B: null, C: null, D: null },
+          subjects: { A: '', B: '', C: '', D: '' } },
+        { id: 'e4.4', label: 'Three/ten-year bars', date: '1996',
+          x: 0, y: 0.95, z: 0.90, dia: 75, type: 'event', prevalentAxis: 'y',
+          denominationAxis: null, objectInstantiation: '',
+          qz: { A: 0.50, B: -0.80, C: -0.95, D: 0.20 },
+          qs: { A: null, B: null, C: null, D: null },
+          subjects: { A: '', B: '', C: '', D: '' } },
+        { id: 'e4.5', label: 'Rubio \u2014 Gang of Eight', date: '2013',
+          x: 0.4, y: 0.5, z: 0.20, dia: 25, type: 'event', prevalentAxis: 'x',
+          denominationAxis: null, objectInstantiation: '',
+          qz: { A: 0.20, B: 0.40, C: 0.30, D: 0.10 },
+          qs: { A: null, B: null, C: null, D: null },
+          subjects: { A: '', B: '', C: '', D: '' } },
+        { id: 'e4.6', label: 'Rubio \u2014 2016 reversal', date: '2016',
+          x: 0.7, y: -0.6, z: 0.60, dia: 60, type: 'event', prevalentAxis: 'x',
+          denominationAxis: null, objectInstantiation: '',
+          qz: { A: -0.30, B: -0.70, C: -0.80, D: -0.20 },
+          qs: { A: null, B: null, C: null, D: null },
+          subjects: { A: '', B: '', C: '', D: '' } },
+        { id: 'e4.7', label: 'Family separation', date: '2018',
+          x: 0.8, y: 0.85, z: 0.60, dia: 65, type: 'event', prevalentAxis: 'y',
+          denominationAxis: null, objectInstantiation: '',
+          qz: { A: 0.40, B: -0.90, C: -0.95, D: -0.30 },
+          qs: { A: null, B: null, C: null, D: null },
+          subjects: { A: '', B: '', C: '', D: '' } },
+        { id: 'e4.8', label: 'Progressive non-response', date: '2009',
+          x: -0.7, y: 0.6, z: 0.70, dia: 70, type: 'event', prevalentAxis: 'y',
+          denominationAxis: null, objectInstantiation: '',
+          qz: { A: 0.40, B: -0.85, C: -0.90, D: 0.30 },
+          qs: { A: null, B: null, C: null, D: null },
+          subjects: { A: '', B: '', C: '', D: '' } },
+        { id: 'e4.9', label: '\u201cNot sending their best\u201d', date: '2015',
+          x: 0.9, y: -0.85, z: 0.80, dia: 75, type: 'event', prevalentAxis: 'x',
+          denominationAxis: null, objectInstantiation: '',
+          qz: { A: -0.60, B: -0.80, C: -0.95, D: 0.30 },
+          qs: { A: null, B: null, C: null, D: null },
+          subjects: { A: '', B: '', C: '', D: '' } },
+        { id: 'e4.10', label: 'Progressive totalization', date: '2015',
+          x: -0.8, y: 0.6, z: 0.65, dia: 60, type: 'event', prevalentAxis: 'x',
+          denominationAxis: null, objectInstantiation: '',
+          qz: { A: -0.40, B: -0.50, C: -0.70, D: -0.80 },
+          qs: { A: null, B: null, C: null, D: null },
+          subjects: { A: '', B: '', C: '', D: '' } }
+      ],
+      linkedArticleId: null
+    };
+    saveArc(arc);
+    console.log('PrismDB: CS04 arc seeded (' + arc.events.length + ' events).');
+    return arc;
+  }
+
   return {
     getEvents, getEvent, getActiveEvent,
     addEvent, updateEvent, deleteEvent, setActive,
@@ -1131,6 +1297,8 @@ const PrismDB = (() => {
     getAggregateForEvent,
     getSnapshots, getSnapshotsForEvent, saveSnapshot,
     getArcs, getArc, saveArc, deleteArc,
+    getArcEvents, addEventToArc, removeEventFromArc,
+    seedArc,
     getMembers, getMember, getMembersByState, getMembersByChamber,
     getMembersByParty, loadMembers, updateMember, searchMembers,
     getMemberPositions, getMemberPositionsForEvent,

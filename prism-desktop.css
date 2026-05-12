@@ -28,7 +28,7 @@
   /* ── PANELS → THREE-COLUMN TRIPTYCH ──────────────────── */
   .panels {
     display: grid !important;
-    grid-template-columns: 1fr 1.35fr 1fr;
+    grid-template-columns: 0.88fr 1.44fr 0.88fr;
     transform: none !important;
     transition: none !important;
   }
@@ -36,12 +36,103 @@
   .panel {
     min-width: 0 !important;
     width: auto !important;
-    border-right: 1px solid var(--divider);
     padding-top: 80px;        /* breathing room under header */
     scroll-behavior: smooth;
-  }
-  .panel:last-child {
     border-right: none;
+  }
+
+  /* ── FLANKING PANEL RECEDE ─────────────────────────────
+     Side panels step back: visibly darker surface, muted text,
+     strong inset shadow on the edge nearest center.
+     Same principle as axis endpoints on the quadrant graph. */
+  .p1,
+  .p3 {
+    background: #0f0f1a;
+    color: var(--text-secondary);
+  }
+  :root.light-mode .p1,
+  :root.light-mode .p3 {
+    background: #e4dcc8;
+  }
+  /* Inner vignette — inset shadow stays fixed during scroll */
+  .p1 {
+    box-shadow: inset -40px 0 48px -20px rgba(0,0,0,0.35);
+  }
+  .p3 {
+    box-shadow: inset 40px 0 48px -20px rgba(0,0,0,0.35);
+  }
+  :root.light-mode .p1 {
+    box-shadow: inset -40px 0 48px -20px rgba(0,0,0,0.10);
+  }
+  :root.light-mode .p3 {
+    box-shadow: inset 40px 0 48px -20px rgba(0,0,0,0.10);
+  }
+
+  /* Mute text inside flanking panels */
+  .p1 .profile-name,
+  .p3 .agg-headline {
+    color: var(--text);
+    opacity: 0.62;
+  }
+  .p1 .avatar-lg {
+    opacity: 0.55;
+  }
+  .p1 .profile-meta,
+  .p1 .section-label,
+  .p1 .log-topic,
+  .p3 .agg-sub,
+  .p3 .stat-label,
+  .p3 .voice-name,
+  .p3 .leg-title {
+    opacity: 0.5;
+  }
+  .p1 .log-entry,
+  .p1 .position-card,
+  .p3 .stat,
+  .p3 .leg-card,
+  .p3 .ref-sub-card {
+    background: rgba(12,12,22,0.6);
+    border-color: rgba(245,240,232,0.05);
+  }
+  :root.light-mode .p1 .log-entry,
+  :root.light-mode .p1 .position-card,
+  :root.light-mode .p3 .stat,
+  :root.light-mode .p3 .leg-card,
+  :root.light-mode .p3 .ref-sub-card {
+    background: rgba(0,0,0,0.03);
+    border-color: rgba(26,26,46,0.08);
+  }
+
+  /* Member browser in P3 — mute to match recede */
+  .p3 .ref-member-card {
+    opacity: 0.6;
+    transition: opacity 0.25s ease, border-color 0.25s ease;
+  }
+  .p3 .ref-member-card:hover {
+    opacity: 1;
+    border-color: var(--border-strong);
+  }
+  .p3 .ref-member-count {
+    opacity: 0.45;
+  }
+
+  /* ── CENTER PANEL ELEVATION ──────────────────────────── */
+  .p2 {
+    background: var(--surface);
+    box-shadow:
+      -1px 0 0 rgba(245,240,232,0.06),
+       1px 0 0 rgba(245,240,232,0.06),
+      -10px 0 36px rgba(0,0,0,0.30),
+       10px 0 36px rgba(0,0,0,0.30);
+    z-index: 1;
+    position: relative;
+  }
+  :root.light-mode .p2 {
+    box-shadow:
+      -1px 0 0 rgba(26,26,46,0.08),
+       1px 0 0 rgba(26,26,46,0.08),
+      -10px 0 36px rgba(0,0,0,0.08),
+       10px 0 36px rgba(0,0,0,0.08);
   }
 
   /* ── HIDE MOBILE NAV AFFORDANCES ─────────────────────── */
@@ -103,6 +194,13 @@
   .position-card {
     margin: 18px 32px;
     padding: 18px 20px;
+    transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+  }
+  .position-card:hover {
+    background: var(--surface) !important;
+    border-color: var(--divider-strong) !important;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    opacity: 1 !important;
   }
 
   .section-label {
@@ -117,6 +215,7 @@
   .log-entry {
     padding: 14px 18px;
     gap: 14px;
+    transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
   }
   .log-mini-quad {
     width: 44px;
@@ -127,14 +226,13 @@
   }
   .log-entry:hover {
     border-color: var(--divider-strong);
-    background: var(--surface-overlay);
+    background: var(--surface) !important;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
   }
 
   /* ── PANEL 2 — THE PRISM (center) ────────────────────── */
   .p2 {
     padding-top: 80px;
-    border-left: 1px solid var(--divider);
-    border-right: 1px solid var(--divider);
   }
 
   .event-header {
@@ -311,6 +409,12 @@
   }
   .leg-card {
     padding: 18px 20px;
+    transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+  .leg-card:hover {
+    background: var(--surface) !important;
+    border-color: var(--divider-strong) !important;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
   }
   .leg-title {
     font-size: 14px;
@@ -323,10 +427,12 @@
   /* Refraction subscription cards */
   .ref-sub-card {
     padding: 12px 18px;
+    transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
   }
   .ref-sub-card:hover {
-    border-color: var(--divider-strong);
-    background: var(--surface-overlay);
+    border-color: var(--divider-strong) !important;
+    background: var(--surface) !important;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
   }
 
   /* Toggle buttons */
@@ -359,6 +465,9 @@
 
   .p-panel {
     padding: 24px 32px;
+    transform: translateY(14px);
+    transition: opacity 0.42s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.42s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   /* Diatribe panel — desktop */
@@ -443,10 +552,39 @@
   /* ── GENERAL HOVER STATES ────────────────────────────── */
   /* Add cursor feedback for interactive elements */
   .beam-header {
-    cursor: grab;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .beam-header:hover {
+    background-color: rgba(24, 24, 37, 0.95);
+  }
+  :root.light-mode .beam-header:hover {
+    background-color: rgba(242, 234, 216, 0.95);
   }
   .beam-header:active {
     cursor: grabbing;
+  }
+
+  /* Overlay toggle chevron — appears on desktop only */
+  .beam-header::after {
+    content: '▼';
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: 0.12em;
+    color: rgba(245, 240, 232, 0.25);
+    transition: color 0.25s ease, transform 0.35s ease;
+    pointer-events: none;
+  }
+  .beam-header:hover::after {
+    color: rgba(245, 240, 232, 0.5);
+  }
+  /* When overlay is open, chevron flips up */
+  .beam-header.shade-open::after {
+    transform: translateY(-50%) rotate(180deg);
   }
 
   /* Keyboard focus indicators */

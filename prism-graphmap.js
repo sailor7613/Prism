@@ -28,6 +28,9 @@ const PrismGraphmap = (function () {
   // ── Default config ──
   const DEFAULTS = {
     container: null,
+    externalParent: null,        // THREE.Group or THREE.Scene — if set, factory skips
+                                 // scene/camera/renderer creation and adds group here.
+                                 // Caller owns the render loop and calls instance.update(t).
     mode: 'analytical',          // 'analytical' | 'readonly' | 'embed'
     capabilities: {
       orbit: true,
@@ -123,15 +126,15 @@ const PrismGraphmap = (function () {
       else if (x > 0 && y >= 0) c = new THREE.Color(C.authRight);
       else if (x <= 0 && y < 0) c = new THREE.Color(C.libLeft);
       else c = new THREE.Color(C.libRight);
-      c.multiplyScalar(0.38);
+      c.multiplyScalar(0.52);
       colors.push(c.r, c.g, c.b);
     }
     geo.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
     group.add(new THREE.Mesh(geo, new THREE.MeshStandardMaterial({
-      vertexColors: true, roughness: 0.35, metalness: 0.45,
-      emissive: 0x050510, emissiveIntensity: 0.08,
+      vertexColors: true, roughness: 0.55, metalness: 0.15,
+      emissive: 0x080818, emissiveIntensity: 0.20,
       side: THREE.DoubleSide,
-      transparent: true, opacity: 0.50,
+      transparent: false,
     })));
 
     // Grid lines (10 divisions)
@@ -166,8 +169,8 @@ const PrismGraphmap = (function () {
       const m = new THREE.Mesh(
         new THREE.PlaneGeometry(GH, GH),
         new THREE.MeshStandardMaterial({
-          color: cfg.color, transparent: true, opacity: 0.10,
-          side: THREE.DoubleSide, roughness: 1,
+          color: cfg.color, transparent: true, opacity: 0.15,
+          side: THREE.DoubleSide, roughness: 0.8,
         })
       );
       m.position.set(cfg.x, cfg.y, 0.001);
@@ -517,14 +520,24 @@ const PrismGraphmap = (function () {
     };
 
     // ── Instance state ──
-    const scene = buildScene();
-    const camera = buildCamera();
-    const { renderer, canvas } = buildRenderer();
-    const lights = buildLighting(scene);
+    const isExternal = !!config.externalParent;
+
+    // In external mode, the caller owns the scene/camera/renderer.
+    // The factory only builds the group + data objects.
+    const scene = isExternal ? null : buildScene();
+    const camera = isExternal ? null : buildCamera();
+    const rendererBundle = isExternal ? { renderer: null, canvas: null } : buildRenderer();
+    const renderer = rendererBundle.renderer;
+    const canvas = rendererBundle.canvas;
+    const lights = isExternal ? null : buildLighting(scene);
     const group = buildGraphGroup();
     const pinGroup = buildPinGroup();
 
-    scene.add(group);
+    if (isExternal) {
+      config.externalParent.add(group);
+    } else {
+      scene.add(group);
+    }
     group.add(pinGroup);
 
     // ── Labels (billboard sprites, gallery-matched) ──
@@ -804,7 +817,88 @@ const PrismGraphmap = (function () {
         }
       }
 
+      // ── Trace animation ──
+      updateTrace(pinT);
+
       renderer.render(scene, camera);
+    }
+
+    // ── External update tick (called by host render loop when externalParent is set) ──
+    // Drives pin bob, dot pulse, word cloud breathe, keyword sprite pulse.
+    // Does NOT touch orbit, camera, or renderer — host owns those.
+
+    function update(elapsed) {
+      pinT = elapsed;  // use host's clock directly
+
+      // ── Pin hover animation ──
+      if (pinGroup.visible && pinMeshes) {
+        const bob = Math.sin(pinT * 2) * 0.005;
+        const baseZ = (pinData && pinData.normZ) ? (pinData.normZ * Z_EXTENT * 0.8) : 0.02;
+        pinGroup.position.z = baseZ + bob;
+        const shimmer = 0.15 + Math.sin(pinT * 1.5) * 0.08;
+        if (pinMeshes.pinMat) pinMeshes.pinMat.emissiveIntensity = shimmer;
+        if (pinMeshes.glowMat) pinMeshes.glowMat.opacity = 0.06 + Math.sin(pinT * 0.8) * 0.04;
+        if (pinMeshes.haloMat) {
+          pinMeshes.haloMat.emissiveIntensity = 0.1 + Math.sin(pinT * 0.6) * 0.08;
+          pinMeshes.haloMat.opacity = 0.28 + Math.sin(pinT * 1.1) * 0.07;
+        }
+      }
+
+      // ── Aggregate dot proximity pulse ──
+      for (var di = 0; di < dots.length; di++) {
+        var dot = dots[di];
+        if (dot.pulseSpeed > 0 && dot.glowMat) {
+          var pulse = Math.sin(pinT * dot.pulseSpeed + dot.pulsePhase);
+          var maxOpacity = Math.min(0.22, dot.pulseSpeed * 0.03);
+          dot.glowMat.opacity = maxOpacity * (0.5 + 0.5 * pulse);
+          var s = 0.15 + 0.05 * (0.5 + 0.5 * pulse);
+          dot.glow.scale.set(s, s, 1);
+        }
+      }
+
+      // ── Word cloud pulse ──
+      var wt = pinT;
+      ['A', 'B', 'C', 'D'].forEach(function (q) {
+        var wg = wordCloudGroups[q];
+        if (!wg || !wg.visible) return;
+        var qDotCount = 0;
+        for (var dj = 0; dj < dots.length; dj++) {
+          if (dots[dj].data && dots[dj].data.quadrant === q) qDotCount++;
+        }
+        var density = Math.min(1.0, 0.3 + Math.log2(1 + qDotCount) / 4);
+        wg.children.forEach(function (sprite) {
+          var ud = sprite.userData;
+          if (!ud || !ud.baseScaleX) return;
+          var breathe = Math.sin(wt * (0.6 + ud.weight * 0.4) + ud.phase);
+          var pulseFactor = 1.0 + breathe * 0.15 * density;
+          sprite.scale.x = ud.baseScaleX * pulseFactor;
+          sprite.scale.y = ud.baseScaleY * pulseFactor;
+          if (sprite.material) {
+            sprite.material.opacity = 0.65 + breathe * 0.35 * density;
+          }
+        });
+      });
+
+      // ── Keyword sprite pulse ──
+      for (var dki = 0; dki < dots.length; dki++) {
+        var dkEntry = dots[dki];
+        if (!dkEntry.keywordSprites || !dkEntry.keywordSprites.length) continue;
+        for (var ksi = 0; ksi < dkEntry.keywordSprites.length; ksi++) {
+          var ksSprite = dkEntry.keywordSprites[ksi].sprite;
+          var ksUd = ksSprite.userData;
+          if (!ksUd || !ksUd.baseScaleX) continue;
+          var ksBreathe = Math.sin(wt * (0.5 + ksUd.weight * 0.3) + ksUd.phase);
+          var ksPulse = 1.0 + ksBreathe * 0.10;
+          ksSprite.scale.x = ksUd.baseScaleX * ksPulse;
+          ksSprite.scale.y = ksUd.baseScaleY * ksPulse;
+          if (ksSprite.material) {
+            ksSprite.material.opacity = 0.6 + ksBreathe * 0.3;
+          }
+        }
+      }
+
+      // ── Trace animation ──
+      updateTrace(pinT);
     }
 
     // ── Resize (per-instance, uses ResizeObserver on container) ──
@@ -1039,6 +1133,14 @@ const PrismGraphmap = (function () {
     // ── Mount / Unmount ──
 
     function mount(container) {
+      // External mode: group is already parented. Just mark as mounted.
+      if (isExternal) {
+        mounted = true;
+        active = true;
+        console.log('[PrismGraphmap] External instance activated (' + config.mode + ')');
+        return instance;
+      }
+
       if (mounted) unmount();
       containerEl = container || config.container;
       if (!containerEl) {
@@ -1070,6 +1172,18 @@ const PrismGraphmap = (function () {
     function unmount() {
       mounted = false;
       active = false;
+
+      // External mode: remove group from parent, reset transforms
+      if (isExternal) {
+        if (group.parent) group.parent.remove(group);
+        group.rotation.set(0, 0, 0);
+        group.position.set(0, 0, 0);
+        clearPin();
+        clearDots();
+        console.log('[PrismGraphmap] External instance deactivated');
+        return instance;
+      }
+
       if (animId) { cancelAnimationFrame(animId); animId = null; }
       if (resizeObserver) { resizeObserver.disconnect(); resizeObserver = null; }
       unbindViewportObserver();
@@ -1218,6 +1332,7 @@ const PrismGraphmap = (function () {
         })
       );
       mesh.position.set(x, y, z);
+      mesh.userData = { isGraphmapDot: true, label: opts.label || '', desc: opts.desc || '', quadrant, normX, normY, normZ: normZ || 0 };
       dotsGroup.add(mesh);
 
       // Pulse glow sprite — starts invisible, activated by computeProximity()
@@ -1480,7 +1595,7 @@ const PrismGraphmap = (function () {
       clearBoundaryPhotos();
       disposeGroup(group);
       disposeGroup(pinGroup);
-      renderer.dispose();
+      if (renderer) renderer.dispose();
       console.log('[PrismGraphmap] Instance destroyed');
     }
 
@@ -1715,6 +1830,432 @@ const PrismGraphmap = (function () {
 
     // ── Instance object ──
 
+    // ============================================================
+    // TRACE SYSTEM — Refraction-Diffraction Visualization
+    // ============================================================
+
+    const traceGroup = new THREE.Group();
+    traceGroup.visible = false;
+    group.add(traceGroup);
+
+    let traceData = null;
+    let traceObjects = null;
+
+    const PRED_COLORS = {
+      T: 0xf5f0e8, B: 0x8a7a5a, M: 0x4488cc,
+      V: 0x665588, C: 0xcc6644, F: 0x9060c0,
+    };
+
+    function traceToWorld(tx, ty, tz) {
+      return new THREE.Vector3(tx * GH, ty * GH, (tz || 0) * Z_EXTENT * 0.8);
+    }
+
+    function buildObjectMarker(pos, size) {
+      var s = size || 0.09;
+      var geo = new THREE.OctahedronGeometry(s);
+      var mat = new THREE.MeshStandardMaterial({
+        color: C.cream, emissive: C.cream, emissiveIntensity: 0.5,
+        roughness: 0.15, metalness: 0.3, transparent: true, opacity: 0.92,
+      });
+      var mesh = new THREE.Mesh(geo, mat);
+      mesh.position.copy(pos); mesh.castShadow = true;
+      mesh.userData = { isTraceObject: true };
+      var glowMat = new THREE.SpriteMaterial({
+        color: C.cream, transparent: true, opacity: 0.15,
+        blending: THREE.AdditiveBlending, depthWrite: false,
+      });
+      var glow = new THREE.Sprite(glowMat);
+      glow.scale.set(s * 5, s * 5, 1);
+      mesh.add(glow);
+      return { mesh: mesh, mat: mat, glow: glow, glowMat: glowMat };
+    }
+
+    function buildShadowMarker(pos, size) {
+      var s = size || 0.08;
+      var geo = new THREE.OctahedronGeometry(s);
+      var edges = new THREE.EdgesGeometry(geo);
+      var wireMat = new THREE.LineBasicMaterial({ color: 0x9060c0, transparent: true, opacity: 0.7 });
+      var wireframe = new THREE.LineSegments(edges, wireMat);
+      wireframe.position.copy(pos);
+      wireframe.userData = { isTraceShadow: true };
+      var fillMat = new THREE.MeshStandardMaterial({
+        color: 0x9060c0, emissive: 0x9060c0, emissiveIntensity: 0.3,
+        roughness: 0.5, metalness: 0.1, transparent: true, opacity: 0.15, side: THREE.DoubleSide,
+      });
+      var fill = new THREE.Mesh(new THREE.OctahedronGeometry(s * 0.95), fillMat);
+      wireframe.add(fill);
+      var glowMat = new THREE.SpriteMaterial({
+        color: 0x9060c0, transparent: true, opacity: 0.08,
+        blending: THREE.AdditiveBlending, depthWrite: false,
+      });
+      var glow = new THREE.Sprite(glowMat);
+      glow.scale.set(s * 4, s * 4, 1);
+      wireframe.add(glow);
+      return { mesh: wireframe, wireMat: wireMat, fillMat: fillMat, glow: glow, glowMat: glowMat };
+    }
+
+    function buildTransformationVector(fromPos, toPos) {
+      var dir = toPos.clone().sub(fromPos);
+      var len = dir.length();
+      if (len < 0.001) return null;
+      var points = [fromPos.clone(), toPos.clone()];
+      var lineGeo = new THREE.BufferGeometry().setFromPoints(points);
+      var lineMat = new THREE.LineDashedMaterial({
+        color: 0xf5f0e8, transparent: true, opacity: 0.4, dashSize: 0.06, gapSize: 0.04,
+      });
+      var line = new THREE.Line(lineGeo, lineMat);
+      line.computeLineDistances();
+      var arrowGeo = new THREE.ConeGeometry(0.025, 0.08, 6);
+      var arrowMat = new THREE.MeshStandardMaterial({
+        color: 0x9060c0, emissive: 0x9060c0, emissiveIntensity: 0.3,
+        roughness: 0.3, transparent: true, opacity: 0.7,
+      });
+      var arrow = new THREE.Mesh(arrowGeo, arrowMat);
+      arrow.position.copy(toPos);
+      var dirNorm = dir.clone().normalize();
+      var up = new THREE.Vector3(0, 1, 0);
+      var quat = new THREE.Quaternion().setFromUnitVectors(up, dirNorm);
+      arrow.quaternion.copy(quat);
+      return { line: line, lineMat: lineMat, arrow: arrow, arrowMat: arrowMat };
+    }
+
+    function buildPredicateMarker(predData, objectCoords) {
+      var refX, refY, refZ;
+      if (predData.type === 'F') {
+        refX = objectCoords.shadowX || 0; refY = objectCoords.shadowY || 0; refZ = objectCoords.shadowZ || 0;
+      } else {
+        refX = objectCoords.x; refY = objectCoords.y; refZ = objectCoords.z;
+      }
+      var px = (predData.x || 0) * refX, py = (predData.y || 0) * refY, pz = (predData.z || 0) * refZ;
+      if (predData.tension) { px *= 0.5; py *= 0.5; pz *= 0.5; }
+      var radius = 0.035;
+      if (predData.instances && predData.instances > 1) radius = 0.035 + Math.min(predData.instances, 8) * 0.004;
+      var pos = traceToWorld(px, py, pz);
+      var color = PRED_COLORS[predData.type] || C.cream;
+      var geo = new THREE.SphereGeometry(radius, 10, 8);
+      var mat = new THREE.MeshStandardMaterial({
+        color: color, emissive: color, emissiveIntensity: 0.4,
+        roughness: 0.3, metalness: 0.15, transparent: true, opacity: 0.85,
+      });
+      var mesh = new THREE.Mesh(geo, mat);
+      mesh.position.copy(pos);
+      mesh.userData = { isTracePredicate: true, predType: predData.type, predId: predData.id, label: predData.label || '' };
+      var targetPos = predData.type === 'F'
+        ? traceToWorld(objectCoords.shadowX || 0, objectCoords.shadowY || 0, objectCoords.shadowZ || 0)
+        : traceToWorld(objectCoords.x, objectCoords.y, objectCoords.z);
+      var connGeo = new THREE.BufferGeometry().setFromPoints([pos, targetPos]);
+      var connMat = new THREE.LineBasicMaterial({ color: color, transparent: true, opacity: 0.12 });
+      var connector = new THREE.Line(connGeo, connMat);
+      var lblSprite = makeLabelSprite(predData.id,
+        'rgba(' + ((color >> 16) & 0xff) + ',' + ((color >> 8) & 0xff) + ',' + (color & 0xff) + ',0.7)', 14);
+      lblSprite.sprite.scale.set(0.5, 0.07, 1);
+      lblSprite.sprite.position.set(0, radius + 0.04, 0);
+      mesh.add(lblSprite.sprite);
+      return { mesh: mesh, mat: mat, connector: connector, connMat: connMat, labelSprite: lblSprite, data: predData };
+    }
+
+    var boundaryMode = 'threshold';
+
+    function buildDiagnosticBoundary(posData) {
+      if (boundaryMode === 'field') return buildBoundaryField(posData);
+      if (boundaryMode === 'dual') return buildBoundaryDual(posData);
+      return buildBoundaryThreshold(posData);
+    }
+
+    function buildBoundaryThreshold(posData) {
+      var boundaryGroup = new THREE.Group();
+      var distMap = { 'Low': 0.012, 'Moderate': 0.04, 'High': 0.08, 'Very high': 0.14 };
+      var warpAmp = distMap[posData.distinguishability] || 0.04;
+      var objectZWorld = (traceData.object.z || 0) * Z_EXTENT * 0.8;
+      var shadowZWorld = (traceData.shadow.z || 0) * Z_EXTENT * 0.8;
+      var zMidpoint = (objectZWorld + shadowZWorld) / 2;
+      var surfaceSize = 0.55;
+      var cornerPos = {
+        A: { x: -GH + 0.35, y: GH - 0.35 }, B: { x: GH - 0.35, y: GH - 0.35 },
+        C: { x: -GH + 0.35, y: -GH + 0.35 }, D: { x: GH - 0.35, y: -GH + 0.35 },
+      };
+      var cp = cornerPos[posData.quadrant] || cornerPos.A;
+      var quadColors = {
+        A: { r: 56/255, g: 104/255, b: 168/255 }, B: { r: 184/255, g: 58/255, b: 58/255 },
+        C: { r: 58/255, g: 138/255, b: 82/255 }, D: { r: 184/255, g: 120/255, b: 40/255 },
+      };
+      var qc = quadColors[posData.quadrant] || quadColors.A;
+      var segsW = 16, segsH = 16;
+      var geo = new THREE.PlaneGeometry(surfaceSize, surfaceSize, segsW, segsH);
+      var posAttr = geo.attributes.position;
+      var colors = [];
+      var creamR = 245/255, creamG = 240/255, creamB = 232/255;
+      for (var vi = 0; vi < posAttr.count; vi++) {
+        var vx = posAttr.getX(vi), vy = posAttr.getY(vi);
+        var dist = Math.min(1, Math.sqrt(vx * vx + vy * vy) / (surfaceSize * 0.7));
+        colors.push(qc.r*(1-dist)+creamR*dist, qc.g*(1-dist)+creamG*dist, qc.b*(1-dist)+creamB*dist);
+      }
+      geo.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
+      var origPositions = new Float32Array(posAttr.array.length);
+      origPositions.set(posAttr.array);
+      var mat = new THREE.MeshStandardMaterial({
+        vertexColors: true, transparent: true, opacity: 0.35, side: THREE.DoubleSide,
+        roughness: 0.4, metalness: 0.15,
+        emissive: new THREE.Color(qc.r*0.4, qc.g*0.4, qc.b*0.4), emissiveIntensity: 0.25, depthWrite: false,
+      });
+      var mesh = new THREE.Mesh(geo, mat);
+      mesh.userData = { isDiagnosticBoundary: true, positionId: posData.id, quadrant: posData.quadrant };
+      boundaryGroup.add(mesh);
+      boundaryGroup.position.set(cp.x, cp.y, zMidpoint);
+      boundaryGroup.userData = { isDiagnosticBoundary: true, positionId: posData.id, quadrant: posData.quadrant };
+      var idColor = posData.quadrant === 'A' ? 'rgba(56,104,168,0.85)' : posData.quadrant === 'B' ? 'rgba(184,58,58,0.85)' : posData.quadrant === 'C' ? 'rgba(58,138,82,0.85)' : 'rgba(184,120,40,0.85)';
+      var posLabel = makeLabelSprite(posData.id, idColor, 18);
+      posLabel.sprite.scale.set(0.55, 0.08, 1);
+      posLabel.sprite.position.set(0, -surfaceSize/2 - 0.08, 0);
+      boundaryGroup.add(posLabel.sprite);
+      var fluidLabel = makeLabelSprite(posData.fluid || '', 'rgba(245,240,232,0.6)', 12);
+      fluidLabel.sprite.scale.set(0.7, 0.07, 1);
+      fluidLabel.sprite.position.set(0, 0, 0.12);
+      boundaryGroup.add(fluidLabel.sprite);
+      var denomLabel = makeLabelSprite(posData.denominated || '', 'rgba(144,96,192,0.6)', 12);
+      denomLabel.sprite.scale.set(0.7, 0.07, 1);
+      denomLabel.sprite.position.set(0, 0, -0.12);
+      boundaryGroup.add(denomLabel.sprite);
+      return { group: boundaryGroup, mesh: mesh, geo: geo, mat: mat, origPositions: origPositions, warpAmp: warpAmp, boundaryHeight: surfaceSize, segsW: segsW, segsH: segsH, mode: 'threshold', data: posData };
+    }
+
+    function buildBoundaryField(posData) {
+      var boundaryGroup = new THREE.Group();
+      var distMap = { 'Low': 0.08, 'Moderate': 0.3, 'High': 0.6, 'Very high': 1.0 };
+      var warpAmp = distMap[posData.distinguishability] || 0.3;
+      var objectZWorld = (traceData.object.z || 0) * Z_EXTENT * 0.8;
+      var shadowZWorld = (traceData.shadow.z || 0) * Z_EXTENT * 0.8;
+      var zBottom = Math.min(objectZWorld, shadowZWorld), zTop = Math.max(objectZWorld, shadowZWorld);
+      var boundaryHeight = Math.max(0.2, zTop - zBottom);
+      var zMidpoint = (zTop + zBottom) / 2, boundaryWidth = 0.45;
+      var cornerPos = {
+        A: { x: -GH+0.30, y: GH-0.30, angle: -Math.PI*0.25 }, B: { x: GH-0.30, y: GH-0.30, angle: -Math.PI*0.75 },
+        C: { x: -GH+0.30, y: -GH+0.30, angle: Math.PI*0.25 }, D: { x: GH-0.30, y: -GH+0.30, angle: Math.PI*0.75 },
+      };
+      var cp = cornerPos[posData.quadrant] || cornerPos.A;
+      var quadColors = { A:{r:56/255,g:104/255,b:168/255}, B:{r:184/255,g:58/255,b:58/255}, C:{r:58/255,g:138/255,b:82/255}, D:{r:184/255,g:120/255,b:40/255} };
+      var qc = quadColors[posData.quadrant] || quadColors.A;
+      var segsW = 6, segsH = 20;
+      var geo = new THREE.PlaneGeometry(boundaryWidth, boundaryHeight, segsW, segsH);
+      var posAttr = geo.attributes.position;
+      var colors = [];
+      var creamR=245/255,creamG=240/255,creamB=232/255, purpleR=144/255,purpleG=96/255,purpleB=192/255;
+      for (var vi=0; vi<posAttr.count; vi++) {
+        var vy = posAttr.getY(vi);
+        var t = (vy + boundaryHeight/2) / boundaryHeight;
+        var midBlend = Math.sin(t * Math.PI) * 0.35;
+        colors.push(Math.min(1,purpleR*(1-t)+creamR*t+qc.r*midBlend), Math.min(1,purpleG*(1-t)+creamG*t+qc.g*midBlend), Math.min(1,purpleB*(1-t)+creamB*t+qc.b*midBlend));
+      }
+      geo.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
+      var origPositions = new Float32Array(posAttr.array.length);
+      origPositions.set(posAttr.array);
+      var mat = new THREE.MeshStandardMaterial({
+        vertexColors: true, transparent: true, opacity: 0.22, side: THREE.DoubleSide, roughness: 0.6, metalness: 0.1,
+        emissive: new THREE.Color(qc.r*0.3,qc.g*0.3,qc.b*0.3), emissiveIntensity: 0.2, depthWrite: false,
+      });
+      var mesh = new THREE.Mesh(geo, mat);
+      mesh.userData = { isDiagnosticBoundary: true, positionId: posData.id, quadrant: posData.quadrant };
+      mesh.rotation.x = Math.PI/2; mesh.rotation.z = cp.angle;
+      boundaryGroup.add(mesh);
+      boundaryGroup.position.set(cp.x, cp.y, zMidpoint);
+      boundaryGroup.userData = { isDiagnosticBoundary: true, positionId: posData.id, quadrant: posData.quadrant };
+      var idColor = posData.quadrant==='A'?'rgba(56,104,168,0.85)':posData.quadrant==='B'?'rgba(184,58,58,0.85)':posData.quadrant==='C'?'rgba(58,138,82,0.85)':'rgba(184,120,40,0.85)';
+      var posLabel = makeLabelSprite(posData.id, idColor, 18);
+      posLabel.sprite.scale.set(0.55,0.08,1); posLabel.sprite.position.set(0,0,0); boundaryGroup.add(posLabel.sprite);
+      var fluidLabel = makeLabelSprite(posData.fluid||'','rgba(245,240,232,0.6)',13);
+      fluidLabel.sprite.scale.set(0.8,0.08,1); fluidLabel.sprite.position.set(0,0,boundaryHeight/2+0.06); boundaryGroup.add(fluidLabel.sprite);
+      var denomLabel = makeLabelSprite(posData.denominated||'','rgba(144,96,192,0.6)',13);
+      denomLabel.sprite.scale.set(0.8,0.08,1); denomLabel.sprite.position.set(0,0,-boundaryHeight/2-0.06); boundaryGroup.add(denomLabel.sprite);
+      return { group: boundaryGroup, mesh:mesh, geo:geo, mat:mat, origPositions:origPositions, warpAmp:warpAmp, boundaryHeight:boundaryHeight, segsW:segsW, segsH:segsH, mode:'field', data:posData };
+    }
+
+    function buildBoundaryDual(posData) {
+      var boundaryGroup = new THREE.Group();
+      var distMap = { 'Low': 0.008, 'Moderate': 0.025, 'High': 0.05, 'Very high': 0.09 };
+      var warpAmp = distMap[posData.distinguishability] || 0.025;
+      var objectZWorld = (traceData.object.z||0)*Z_EXTENT*0.8, shadowZWorld = (traceData.shadow.z||0)*Z_EXTENT*0.8;
+      var surfaceSize = 0.48;
+      var cornerPos = { A:{x:-GH+0.35,y:GH-0.35}, B:{x:GH-0.35,y:GH-0.35}, C:{x:-GH+0.35,y:-GH+0.35}, D:{x:GH-0.35,y:-GH+0.35} };
+      var cp = cornerPos[posData.quadrant] || cornerPos.A;
+      var quadColors = { A:{r:56/255,g:104/255,b:168/255}, B:{r:184/255,g:58/255,b:58/255}, C:{r:58/255,g:138/255,b:82/255}, D:{r:184/255,g:120/255,b:40/255} };
+      var qc = quadColors[posData.quadrant] || quadColors.A;
+      var creamR=245/255,creamG=240/255,creamB=232/255, purpleR=144/255,purpleG=96/255,purpleB=192/255;
+      var segsW=12, segsH=12;
+      // Object surface
+      var objGeo = new THREE.PlaneGeometry(surfaceSize,surfaceSize,segsW,segsH);
+      var objPosAttr = objGeo.attributes.position; var objColors = [];
+      for (var vi=0;vi<objPosAttr.count;vi++) { var vx=objPosAttr.getX(vi),vy=objPosAttr.getY(vi); var dist=Math.min(1,Math.sqrt(vx*vx+vy*vy)/(surfaceSize*0.7)); objColors.push(creamR*(1-dist*0.3)+qc.r*dist*0.3,creamG*(1-dist*0.3)+qc.g*dist*0.3,creamB*(1-dist*0.3)+qc.b*dist*0.3); }
+      objGeo.setAttribute('color', new THREE.Float32BufferAttribute(objColors,3));
+      var objOrigPositions = new Float32Array(objPosAttr.array.length); objOrigPositions.set(objPosAttr.array);
+      var objMat = new THREE.MeshStandardMaterial({ vertexColors:true, transparent:true, opacity:0.30, side:THREE.DoubleSide, roughness:0.35, metalness:0.15, emissive:new THREE.Color(creamR*0.3,creamG*0.3,creamB*0.3), emissiveIntensity:0.2, depthWrite:false });
+      var objMesh = new THREE.Mesh(objGeo, objMat); objMesh.position.set(0,0,objectZWorld);
+      objMesh.userData = { isDiagnosticBoundary:true, positionId:posData.id, quadrant:posData.quadrant }; boundaryGroup.add(objMesh);
+      // Shadow surface
+      var shdGeo = new THREE.PlaneGeometry(surfaceSize,surfaceSize,segsW,segsH);
+      var shdPosAttr = shdGeo.attributes.position; var shdColors = [];
+      for (var vi=0;vi<shdPosAttr.count;vi++) { var vx=shdPosAttr.getX(vi),vy=shdPosAttr.getY(vi); var dist=Math.min(1,Math.sqrt(vx*vx+vy*vy)/(surfaceSize*0.7)); shdColors.push(purpleR*(1-dist*0.3)+qc.r*dist*0.3,purpleG*(1-dist*0.3)+qc.g*dist*0.3,purpleB*(1-dist*0.3)+qc.b*dist*0.3); }
+      shdGeo.setAttribute('color', new THREE.Float32BufferAttribute(shdColors,3));
+      var shdOrigPositions = new Float32Array(shdPosAttr.array.length); shdOrigPositions.set(shdPosAttr.array);
+      var shdMat = new THREE.MeshStandardMaterial({ vertexColors:true, transparent:true, opacity:0.25, side:THREE.DoubleSide, roughness:0.5, metalness:0.1, emissive:new THREE.Color(purpleR*0.3,purpleG*0.3,purpleB*0.3), emissiveIntensity:0.2, depthWrite:false });
+      var shdMesh = new THREE.Mesh(shdGeo, shdMat); shdMesh.position.set(0,0,shadowZWorld);
+      shdMesh.userData = { isDiagnosticBoundary:true, positionId:posData.id, quadrant:posData.quadrant }; boundaryGroup.add(shdMesh);
+      // Gap connector
+      var gapGeo = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(0,0,objectZWorld),new THREE.Vector3(0,0,shadowZWorld)]);
+      boundaryGroup.add(new THREE.Line(gapGeo, new THREE.LineBasicMaterial({color:new THREE.Color(qc.r,qc.g,qc.b),transparent:true,opacity:0.15})));
+      // Labels
+      var idColor = posData.quadrant==='A'?'rgba(56,104,168,0.85)':posData.quadrant==='B'?'rgba(184,58,58,0.85)':posData.quadrant==='C'?'rgba(58,138,82,0.85)':'rgba(184,120,40,0.85)';
+      var zMid = (objectZWorld+shadowZWorld)/2;
+      var posLabel = makeLabelSprite(posData.id,idColor,18); posLabel.sprite.scale.set(0.55,0.08,1); posLabel.sprite.position.set(0,-surfaceSize/2-0.08,zMid); boundaryGroup.add(posLabel.sprite);
+      var fluidLabel = makeLabelSprite(posData.fluid||'','rgba(245,240,232,0.7)',13); fluidLabel.sprite.scale.set(0.7,0.08,1); fluidLabel.sprite.position.set(0,0,objectZWorld+0.06); boundaryGroup.add(fluidLabel.sprite);
+      var denomLabel = makeLabelSprite(posData.denominated||'','rgba(144,96,192,0.7)',13); denomLabel.sprite.scale.set(0.7,0.08,1); denomLabel.sprite.position.set(0,0,shadowZWorld-0.06); boundaryGroup.add(denomLabel.sprite);
+      var oSurfLabel = makeLabelSprite('O','rgba(245,240,232,0.35)',10); oSurfLabel.sprite.scale.set(0.35,0.05,1); oSurfLabel.sprite.position.set(surfaceSize/2-0.05,surfaceSize/2-0.05,objectZWorld+0.03); boundaryGroup.add(oSurfLabel.sprite);
+      var sSurfLabel = makeLabelSprite("O'",'rgba(144,96,192,0.35)',10); sSurfLabel.sprite.scale.set(0.35,0.05,1); sSurfLabel.sprite.position.set(surfaceSize/2-0.05,surfaceSize/2-0.05,shadowZWorld-0.03); boundaryGroup.add(sSurfLabel.sprite);
+      boundaryGroup.position.set(cp.x, cp.y, 0);
+      boundaryGroup.userData = { isDiagnosticBoundary:true, positionId:posData.id, quadrant:posData.quadrant };
+      return { group:boundaryGroup, mesh:objMesh, geo:objGeo, mat:objMat, origPositions:objOrigPositions, shadowMesh:shdMesh, shadowGeo:shdGeo, shadowMat:shdMat, shadowOrigPositions:shdOrigPositions, warpAmp:warpAmp, boundaryHeight:surfaceSize, segsW:segsW, segsH:segsH, mode:'dual', data:posData };
+    }
+
+    function buildCoordinateSubjectMarker(posData, type) {
+      var isFluid = type === 'fluid';
+      var label = isFluid ? posData.fluid : posData.denominated;
+      var objectZWorld = (traceData.object.z||0)*Z_EXTENT*0.8, shadowZWorld = (traceData.shadow.z||0)*Z_EXTENT*0.8;
+      var zPos = isFluid ? objectZWorld : shadowZWorld;
+      var cornerPos = { A:{x:-GH+0.35,y:GH-0.35}, B:{x:GH-0.35,y:GH-0.35}, C:{x:-GH+0.35,y:-GH+0.35}, D:{x:GH-0.35,y:-GH+0.35} };
+      var cp = cornerPos[posData.quadrant] || cornerPos.A;
+      var xOffset = isFluid ? -0.12 : 0.12;
+      var color = isFluid ? C.cream : 0x9060c0, size = 0.035;
+      var geo = new THREE.OctahedronGeometry(size);
+      var mat = new THREE.MeshStandardMaterial({ color:color, emissive:color, emissiveIntensity:isFluid?0.5:0.35, roughness:0.2, metalness:0.2, transparent:true, opacity:0.85 });
+      var mesh = new THREE.Mesh(geo, mat);
+      mesh.position.set(cp.x+xOffset, cp.y, zPos);
+      mesh.userData = { isCoordinateSubject:true, csType:type, positionId:posData.id, quadrant:posData.quadrant, label:label };
+      var glowMat = new THREE.SpriteMaterial({ color:color, transparent:true, opacity:isFluid?0.12:0.08, blending:THREE.AdditiveBlending, depthWrite:false });
+      var glow = new THREE.Sprite(glowMat); glow.scale.set(size*5,size*5,1); mesh.add(glow);
+      var connGeo = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(cp.x+xOffset,cp.y,0),new THREE.Vector3(cp.x+xOffset,cp.y,zPos)]);
+      var connMat = new THREE.LineBasicMaterial({ color:color, transparent:true, opacity:0.12 });
+      var connector = new THREE.Line(connGeo, connMat);
+      var lblColor = isFluid ? 'rgba(245,240,232,0.6)' : 'rgba(144,96,192,0.6)';
+      var lbl = makeLabelSprite(label||'',lblColor,11); lbl.sprite.scale.set(0.6,0.06,1); lbl.sprite.position.set(0,size+0.04,0); mesh.add(lbl.sprite);
+      var tagText = isFluid ? 'fluid' : 'denom';
+      var tag = makeLabelSprite(tagText,isFluid?'rgba(245,240,232,0.3)':'rgba(144,96,192,0.3)',8); tag.sprite.scale.set(0.4,0.04,1); tag.sprite.position.set(0,-(size+0.04),0); mesh.add(tag.sprite);
+      var keywordSprites = [];
+      var keywords = isFluid ? (posData.fluidKeywords||[]) : (posData.denomKeywords||[]);
+      if (keywords.length > 0) {
+        var kwColor = isFluid ? 'rgba(245,240,232,0.7)' : 'rgba(144,96,192,0.7)';
+        var count = keywords.length;
+        for (var ki=0;ki<count;ki++) { var kw=keywords[ki]; var text=typeof kw==='string'?kw:kw.text; var weight=(typeof kw==='object'&&kw.weight!=null)?kw.weight:0.5; var fs=Math.round(18+weight*14); var kwSprite=makeWordSprite(text,kwColor,fs); var angle=(ki/count)*Math.PI*2+ki*0.4; var ringR=size*4+0.10; kwSprite.sprite.position.set(Math.cos(angle)*ringR,Math.sin(angle)*ringR,(Math.random()-0.5)*0.06); kwSprite.sprite.renderOrder=100; kwSprite.sprite.userData={baseScaleX:kwSprite.sprite.scale.x,baseScaleY:kwSprite.sprite.scale.y,weight:weight,phase:ki*1.0+Math.random()*1.2,quadrant:posData.quadrant}; mesh.add(kwSprite.sprite); keywordSprites.push(kwSprite); }
+      }
+      return { mesh:mesh, mat:mat, glow:glow, glowMat:glowMat, connector:connector, connMat:connMat, keywordSprites:keywordSprites, pulsePhase:Math.random()*Math.PI*2, type:type, data:posData };
+    }
+
+    function buildTraceZConnector(worldPos, color, opacity) {
+      if (Math.abs(worldPos.z) < 0.02) return null;
+      var surfacePos = new THREE.Vector3(worldPos.x, worldPos.y, 0);
+      var geo = new THREE.BufferGeometry().setFromPoints([surfacePos, worldPos]);
+      return new THREE.Line(geo, new THREE.LineBasicMaterial({ color:color||C.cream, transparent:true, opacity:opacity||0.15 }));
+    }
+
+    function buildShadowProjection(worldPos) {
+      var geo = new THREE.RingGeometry(0.04, 0.06, 16);
+      var mat = new THREE.MeshBasicMaterial({ color:0x9060c0, transparent:true, opacity:0.2, side:THREE.DoubleSide, depthWrite:false });
+      var ring = new THREE.Mesh(geo, mat);
+      ring.position.set(worldPos.x, worldPos.y, 0.005);
+      return ring;
+    }
+
+    function loadTrace(data) {
+      clearTrace(); if (!data) return instance;
+      traceData = data; traceGroup.visible = true;
+      var objs = { objectMarker:null, shadowMarker:null, vector:null, predicates:[], diagnostics:[], zConnectors:[], projections:[] };
+      var oPos = traceToWorld(data.object.x, data.object.y, data.object.z);
+      objs.objectMarker = buildObjectMarker(oPos); traceGroup.add(objs.objectMarker.mesh);
+      var oConn = buildTraceZConnector(oPos, C.cream, 0.2); if (oConn) { traceGroup.add(oConn); objs.zConnectors.push(oConn); }
+      var oProj = buildShadowProjection(oPos); oProj.material.color.set(C.cream); oProj.material.opacity=0.15; traceGroup.add(oProj); objs.projections.push(oProj);
+      var sPos = traceToWorld(data.shadow.x, data.shadow.y, data.shadow.z);
+      objs.shadowMarker = buildShadowMarker(sPos); traceGroup.add(objs.shadowMarker.mesh);
+      var sConn = buildTraceZConnector(sPos, 0x9060c0, 0.15); if (sConn) { traceGroup.add(sConn); objs.zConnectors.push(sConn); }
+      var sProj = buildShadowProjection(sPos); traceGroup.add(sProj); objs.projections.push(sProj);
+      objs.vector = buildTransformationVector(oPos, sPos);
+      if (objs.vector) { traceGroup.add(objs.vector.line); traceGroup.add(objs.vector.arrow); }
+      var oLabel = makeLabelSprite('O','rgba(245,240,232,0.7)',16); oLabel.sprite.scale.set(0.4,0.06,1); oLabel.sprite.position.set(0,0.14,0); objs.objectMarker.mesh.add(oLabel.sprite);
+      var sLabel = makeLabelSprite("O'",'rgba(144,96,192,0.7)',16); sLabel.sprite.scale.set(0.4,0.06,1); sLabel.sprite.position.set(0,0.12,0); objs.shadowMarker.mesh.add(sLabel.sprite);
+      if (data.predicates) {
+        var allPreds = (data.predicates.operative||[]).concat(data.predicates.stated||[]);
+        var coordRef = { x:data.object.x, y:data.object.y, z:data.object.z, shadowX:data.shadow.x, shadowY:data.shadow.y, shadowZ:data.shadow.z };
+        allPreds.forEach(function(pred) { var pm=buildPredicateMarker(pred,coordRef); traceGroup.add(pm.mesh); traceGroup.add(pm.connector); objs.predicates.push(pm); });
+      }
+      if (data.positions) { data.positions.forEach(function(pos) { var diag=buildDiagnosticBoundary(pos); traceGroup.add(diag.group); objs.diagnostics.push(diag); }); }
+      objs.csMarkers = [];
+      if (data.positions) { data.positions.forEach(function(pos) { var fluidCS=buildCoordinateSubjectMarker(pos,'fluid'); traceGroup.add(fluidCS.mesh); traceGroup.add(fluidCS.connector); objs.csMarkers.push(fluidCS); var denomCS=buildCoordinateSubjectMarker(pos,'denominated'); traceGroup.add(denomCS.mesh); traceGroup.add(denomCS.connector); objs.csMarkers.push(denomCS); }); }
+      traceObjects = objs; return instance;
+    }
+
+    function setBoundaryMode(mode) {
+      if (mode!=='threshold'&&mode!=='field'&&mode!=='dual') return instance;
+      if (mode===boundaryMode) return instance;
+      boundaryMode = mode;
+      if (traceData && traceObjects) {
+        traceObjects.diagnostics.forEach(function(d) { d.group.traverse(function(child) { if(child.geometry)child.geometry.dispose(); if(child.material){if(Array.isArray(child.material))child.material.forEach(function(m){m.dispose();});else child.material.dispose();} }); traceGroup.remove(d.group); });
+        traceObjects.diagnostics = [];
+        if (traceData.positions) { traceData.positions.forEach(function(pos) { var diag=buildDiagnosticBoundary(pos); traceGroup.add(diag.group); traceObjects.diagnostics.push(diag); }); }
+      }
+      return instance;
+    }
+    function getBoundaryMode() { return boundaryMode; }
+
+    function clearTrace() {
+      if (traceObjects) {
+        traceGroup.traverse(function(child) { if(child.geometry)child.geometry.dispose(); if(child.material){if(Array.isArray(child.material))child.material.forEach(function(m){m.dispose();});else child.material.dispose();} });
+        while (traceGroup.children.length>0) traceGroup.remove(traceGroup.children[0]);
+        traceObjects = null;
+      }
+      traceData = null; traceGroup.visible = false; return instance;
+    }
+    function getTrace() { return traceData; }
+    function setTraceVisible(v) { traceGroup.visible = v; return instance; }
+    function setTraceLayerVisible(layer, v) {
+      if (!traceObjects) return instance;
+      switch(layer) {
+        case 'object': if(traceObjects.objectMarker) traceObjects.objectMarker.mesh.visible=v; break;
+        case 'shadow': if(traceObjects.shadowMarker) traceObjects.shadowMarker.mesh.visible=v; break;
+        case 'vector': if(traceObjects.vector){traceObjects.vector.line.visible=v;traceObjects.vector.arrow.visible=v;} break;
+        case 'predicates': traceObjects.predicates.forEach(function(p){p.mesh.visible=v;p.connector.visible=v;}); break;
+        case 'diagnostics': traceObjects.diagnostics.forEach(function(d){d.group.visible=v;}); break;
+        case 'csMarkers': if(traceObjects.csMarkers){traceObjects.csMarkers.forEach(function(cs){cs.mesh.visible=v;cs.connector.visible=v;});} break;
+      }
+      return instance;
+    }
+
+    function updateTrace(t) {
+      if (!traceObjects) return;
+      if (traceObjects.objectMarker) { var om=traceObjects.objectMarker; om.mesh.rotation.y=t*0.3; om.mesh.rotation.x=Math.sin(t*0.2)*0.1; if(om.glowMat)om.glowMat.opacity=0.10+Math.sin(t*1.2)*0.06; }
+      if (traceObjects.shadowMarker) { var sm=traceObjects.shadowMarker; sm.mesh.rotation.y=-t*0.25; sm.mesh.rotation.x=Math.sin(t*0.15+1.0)*0.08; if(sm.glowMat)sm.glowMat.opacity=0.05+Math.sin(t*0.9)*0.04; }
+      traceObjects.predicates.forEach(function(p,i) { if(p._baseY==null)p._baseY=p.mesh.position.y; p.mesh.position.y=p._baseY+Math.sin(t*0.8+i*1.1)*0.008; if(p.mat)p.mat.emissiveIntensity=0.3+Math.sin(t*0.6+i*0.9)*0.15; });
+      traceObjects.diagnostics.forEach(function(d,di) {
+        if(!d.origPositions||!d.geo) return;
+        var posAttr=d.geo.attributes.position; var orig=d.origPositions; var amp=d.warpAmp;
+        if(d.mode==='threshold'||d.mode==='dual') {
+          var halfSize=(d.geo.parameters?d.geo.parameters.width/2:0.275);
+          for(var vi=0;vi<posAttr.count;vi++){var ox=orig[vi*3],oy=orig[vi*3+1],oz=orig[vi*3+2];var rad=Math.min(1,Math.sqrt(ox*ox+oy*oy)/halfSize);var angle=Math.atan2(oy,ox);var r1=Math.sin(rad*Math.PI*3.0-t*0.6+di*1.7)*0.5;var r2=Math.sin(angle*2.0+rad*Math.PI*2.0+t*0.35+di*0.8)*0.3;var r3=Math.sin(t*0.2+di*2.3)*0.2;var env=1.0-rad*rad*0.6;posAttr.setZ(vi,oz+(r1+r2+r3)*amp*env);}
+          posAttr.needsUpdate=true; d.geo.computeVertexNormals();
+          if(d.mode==='dual'&&d.shadowGeo&&d.shadowOrigPositions){var sAttr=d.shadowGeo.attributes.position;var sOrig=d.shadowOrigPositions;var sHalf=(d.shadowGeo.parameters?d.shadowGeo.parameters.width/2:0.24);for(var svi=0;svi<sAttr.count;svi++){var sox=sOrig[svi*3],soy=sOrig[svi*3+1],soz=sOrig[svi*3+2];var srad=Math.min(1,Math.sqrt(sox*sox+soy*soy)/sHalf);var sangle=Math.atan2(soy,sox);var sr1=Math.sin(srad*Math.PI*2.5-t*0.4+di*2.1)*0.5;var sr2=Math.sin(sangle*3.0+srad*Math.PI*1.5+t*0.25+di*1.2)*0.3;var sr3=Math.sin(t*0.15+di*1.8)*0.2;var senv=1.0-srad*srad*0.6;sAttr.setZ(svi,soz+(sr1+sr2+sr3)*amp*0.7*senv);}sAttr.needsUpdate=true;d.shadowGeo.computeVertexNormals();if(d.shadowMat){var sBr=Math.sin(t*0.25+di*1.5);d.shadowMat.opacity=0.20+sBr*0.06*amp;d.shadowMat.emissiveIntensity=0.15+sBr*0.08*amp;}}
+        } else {
+          var h=d.boundaryHeight;var halfW=(d.geo.parameters?d.geo.parameters.width/2:0.225);
+          for(var vi=0;vi<posAttr.count;vi++){var ox=orig[vi*3],oy=orig[vi*3+1],oz=orig[vi*3+2];var ht=(oy+h/2)/h;var wt=ox/halfW;var w1=Math.sin(ht*Math.PI*2.5+t*0.4+di*1.7)*0.06;var w2=Math.sin(ht*Math.PI*4.0+wt*Math.PI*1.5+t*0.9+di*0.8)*0.025;var w3=Math.sin(ht*Math.PI*1.0+t*0.15+di*2.3)*0.035;var env=Math.sin(ht*Math.PI)*(0.5+Math.abs(wt)*0.5);posAttr.setZ(vi,oz+(w1+w2+w3)*amp*env);}
+          posAttr.needsUpdate=true; d.geo.computeVertexNormals();
+        }
+        if(d.mat){var br=Math.sin(t*0.3+di*1.2);var baseOp=d.mode==='threshold'?0.28:d.mode==='dual'?0.24:0.18;d.mat.opacity=baseOp+br*0.08*amp;d.mat.emissiveIntensity=0.2+br*0.1*amp;}
+      });
+      if (traceObjects.csMarkers) {
+        traceObjects.csMarkers.forEach(function(cs,ci) {
+          cs.mesh.rotation.y=t*0.4+ci*0.8; cs.mesh.rotation.x=Math.sin(t*0.25+ci*1.3)*0.12;
+          if(cs.mat){var be=cs.type==='fluid'?0.4:0.25;cs.mat.emissiveIntensity=be+Math.sin(t*0.7+ci*1.1)*0.15;}
+          if(cs.glowMat){var bg=cs.type==='fluid'?0.10:0.06;var gp=Math.sin(t*1.0+cs.pulsePhase)*0.5+0.5;cs.glowMat.opacity=bg+gp*0.08;var gs=(cs.type==='fluid'?0.18:0.15)+gp*0.04;cs.glow.scale.set(gs,gs,1);}
+          if(cs.keywordSprites&&cs.keywordSprites.length>0){for(var ksi=0;ksi<cs.keywordSprites.length;ksi++){var ksSprite=cs.keywordSprites[ksi].sprite;var ksUd=ksSprite.userData;if(!ksUd||!ksUd.baseScaleX)continue;var ksBr=Math.sin(t*(0.5+ksUd.weight*0.3)+ksUd.phase);var ksP=1.0+ksBr*0.12;ksSprite.scale.x=ksUd.baseScaleX*ksP;ksSprite.scale.y=ksUd.baseScaleY*ksP;if(ksSprite.material)ksSprite.material.opacity=0.55+ksBr*0.30;}}
+        });
+      }
+    }
+
     const instance = {
       // Lifecycle
       mount,
@@ -1766,10 +2307,28 @@ const PrismGraphmap = (function () {
       clearBoundaryPhotos,
       setBoundaryVisible,
 
+      // Trace system (refraction-diffraction visualization)
+      loadTrace,
+      clearTrace,
+      getTrace,
+      setTraceVisible,
+      setTraceLayerVisible,
+      setBoundaryMode,
+      getBoundaryMode,
+
       // Inspect — register a callback for hold-to-inspect on pins
       // Callback receives: { normX, normY, quadrant, instance }
       onInspect(fn) {
         onInspectCallback = fn;
+        return instance;
+      },
+
+      // External mode: host calls update(elapsedSeconds) each frame
+      update,
+
+      // Visibility toggle (convenience for host scene management)
+      setVisible(v) {
+        group.visible = v;
         return instance;
       },
 
@@ -1778,11 +2337,14 @@ const PrismGraphmap = (function () {
       camera,
       renderer,
       group,
+      dotsGroup,
+      traceGroup,
       canvas,
       boundaries,
 
       // Config (read-only reference)
       config,
+      isExternal,
 
       // Constants
       GRAPH_SIZE,
@@ -1791,8 +2353,10 @@ const PrismGraphmap = (function () {
       C,
     };
 
-    // Auto-mount if container was provided in config
-    if (config.container) {
+    // Auto-mount: container mode attaches to DOM, external mode just activates
+    if (isExternal) {
+      mount();  // lightweight — sets mounted=true, logs activation
+    } else if (config.container) {
       mount(config.container);
     }
 

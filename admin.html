@@ -140,6 +140,569 @@ body {
   display: block;
 }
 
+/* ── REFRACTION / MEMBER PLACEMENT ── */
+.ref-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr 240px;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.ref-panel {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 12px;
+}
+.ref-panel-title {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.ref-search {
+  width: 100%;
+  padding: 6px 10px;
+  font-family: 'Lora', serif;
+  font-size: 13px;
+  background: var(--cream);
+  color: var(--ink);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+.ref-filters {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+.ref-filter-btn {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  padding: 3px 8px;
+  background: var(--cream);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  cursor: pointer;
+}
+.ref-filter-btn.active {
+  background: var(--ink);
+  color: var(--cream);
+  border-color: var(--ink);
+}
+.ref-member-list {
+  max-height: 420px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.ref-member-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: 'Lora', serif;
+  color: var(--ink);
+  transition: background 0.15s;
+}
+.ref-member-item:hover { background: var(--cream); }
+.ref-member-item.selected { background: var(--border-strong); }
+.ref-member-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.ref-member-dot.d { background: var(--blue); }
+.ref-member-dot.r { background: var(--red); }
+.ref-member-dot.i { background: var(--green); }
+.ref-member-meta {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+}
+.ref-member-placed {
+  margin-left: auto;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  color: var(--green);
+}
+
+/* Quadrant grid */
+.ref-grid-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  max-width: 480px;
+  margin: 0 auto;
+}
+.ref-grid-canvas {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  background: var(--cream);
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  cursor: crosshair;
+}
+.ref-grid-crosshair-h, .ref-grid-crosshair-v {
+  position: absolute;
+  background: var(--border);
+  pointer-events: none;
+}
+.ref-grid-crosshair-h { left: 0; right: 0; top: 50%; height: 1px; }
+.ref-grid-crosshair-v { top: 0; bottom: 0; left: 50%; width: 1px; }
+.ref-grid-label {
+  position: absolute;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  pointer-events: none;
+}
+.ref-grid-label.top { top: 4px; left: 50%; transform: translateX(-50%); }
+.ref-grid-label.bottom { bottom: 4px; left: 50%; transform: translateX(-50%); }
+.ref-grid-label.left { left: 6px; top: 50%; transform: translateY(-50%); }
+.ref-grid-label.right { right: 6px; top: 50%; transform: translateY(-50%); }
+.ref-grid-qlabel {
+  position: absolute;
+  font-family: 'DM Mono', monospace;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--border-strong);
+  pointer-events: none;
+}
+.ref-grid-qlabel.a { top: 12px; right: 16px; }
+.ref-grid-qlabel.b { top: 12px; left: 16px; }
+.ref-grid-qlabel.c { bottom: 12px; left: 16px; }
+.ref-grid-qlabel.d { bottom: 12px; right: 16px; }
+.ref-grid-pin {
+  position: absolute;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  border: 2px solid var(--ink);
+  background: var(--gold);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 2;
+  transition: left 0.1s, top 0.1s;
+}
+.ref-grid-existing {
+  position: absolute;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid var(--ink-light);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0.5;
+  z-index: 1;
+}
+.ref-grid-existing.d { background: var(--blue); }
+.ref-grid-existing.r { background: var(--red); }
+.ref-grid-existing.i { background: var(--green); }
+.ref-grid-event-select {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  font-family: 'Lora', serif;
+  font-size: 13px;
+  background: var(--cream);
+  color: var(--ink);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+/* Sliders panel */
+.ref-slider-group {
+  margin-bottom: 12px;
+}
+.ref-slider-label {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 3px;
+}
+.ref-slider-val {
+  color: var(--ink);
+  font-weight: 400;
+}
+.ref-slider {
+  width: 100%;
+  accent-color: var(--ink);
+}
+.ref-save-btn {
+  width: 100%;
+  padding: 8px;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  background: var(--ink);
+  color: var(--cream);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+.ref-save-btn:hover { opacity: 0.85; }
+.ref-save-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.ref-selected-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.ref-selected-meta {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+.ref-no-selection {
+  font-family: 'Lora', serif;
+  font-size: 13px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* Placed members table */
+.ref-placed-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Lora', serif;
+  font-size: 12px;
+  margin-top: 16px;
+}
+.ref-placed-table th {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  text-align: left;
+  padding: 4px 8px;
+  border-bottom: 1px solid var(--border-strong);
+}
+.ref-placed-table td {
+  padding: 5px 8px;
+  border-bottom: 1px solid var(--border);
+  color: var(--ink);
+}
+.ref-placed-table .ref-tbl-action {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--blue);
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 2px 4px;
+}
+.ref-placed-table .ref-tbl-action.danger { color: var(--red); }
+
+/* ── BILL BROWSER ── */
+.ref-bill-panel { margin-top: 8px; }
+.ref-bill-toolbar {
+  display: flex; gap: 8px; align-items: center; flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+.ref-bill-search {
+  font-family: 'DM Mono', monospace; font-size: 12px;
+  background: var(--cream); color: var(--ink); border: 1px solid var(--border);
+  border-radius: 4px; padding: 5px 10px; flex: 1; min-width: 180px;
+}
+.ref-bill-search:focus { outline: none; border-color: var(--border-strong); }
+.ref-bill-select {
+  font-family: 'DM Mono', monospace; font-size: 11px;
+  background: var(--cream); color: var(--ink); border: 1px solid var(--border);
+  border-radius: 4px; padding: 5px 8px; cursor: pointer;
+}
+.ref-bill-list {
+  max-height: 340px; overflow-y: auto; border: 1px solid var(--border);
+  border-radius: 4px; background: var(--cream);
+}
+.ref-bill-item {
+  display: flex; align-items: center; gap: 8px;
+  padding: 7px 12px; cursor: pointer; border-bottom: 1px solid var(--border);
+  font-family: 'DM Mono', monospace; font-size: 12px; color: var(--ink);
+  transition: background 0.15s;
+}
+.ref-bill-item:last-child { border-bottom: none; }
+.ref-bill-item:hover { background: var(--paper); }
+.ref-bill-item.linked { background: rgba(200,160,48,0.08); }
+.ref-bill-item.suggested { background: rgba(200,160,48,0.04); }
+.ref-bill-badge.suggested { color: var(--gold); font-style: italic; }
+.ref-bill-name { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ref-bill-meta { font-size: 10px; color: var(--muted); white-space: nowrap; }
+.ref-bill-badge {
+  font-size: 9px; font-weight: 600; letter-spacing: 0.06em;
+  color: var(--gold); text-transform: uppercase; white-space: nowrap;
+}
+.ref-bill-count {
+  font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted);
+}
+.ref-bill-item.expanded { background: var(--paper); }
+.ref-bill-detail {
+  padding: 12px 14px 14px; border-bottom: 1px solid var(--border);
+  background: var(--paper); font-family: 'DM Mono', monospace; font-size: 11px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 6px 24px;
+  animation: billDetailIn 0.15s ease;
+}
+@keyframes billDetailIn {
+  from { opacity: 0; max-height: 0; padding-top: 0; padding-bottom: 0; }
+  to   { opacity: 1; max-height: 400px; }
+}
+.ref-bill-detail-row {
+  display: flex; gap: 6px; align-items: baseline;
+  color: var(--ink-light); line-height: 1.5;
+}
+.ref-bill-detail-row.full { grid-column: 1 / -1; }
+.ref-bill-detail-label {
+  color: var(--muted); text-transform: uppercase; font-size: 9px;
+  letter-spacing: 0.06em; min-width: 70px; flex-shrink: 0;
+}
+.ref-bill-detail-val { color: var(--ink); word-break: break-word; }
+.ref-bill-detail-val a {
+  color: var(--gold); text-decoration: none; border-bottom: 1px solid transparent;
+}
+.ref-bill-detail-val a:hover { border-bottom-color: var(--gold); }
+.ref-bill-detail-actions {
+  grid-column: 1 / -1; display: flex; gap: 8px; margin-top: 6px; padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+.ref-bill-detail-actions button {
+  font-family: 'DM Mono', monospace; font-size: 11px;
+  padding: 4px 12px; border-radius: 4px; cursor: pointer;
+  border: 1px solid var(--border); background: var(--cream); color: var(--ink);
+  transition: all 0.15s;
+}
+.ref-bill-detail-actions button:hover { border-color: var(--border-strong); }
+.ref-bill-detail-actions .link-btn { color: var(--gold); border-color: var(--gold); }
+.ref-bill-detail-actions .link-btn.is-linked { background: rgba(200,160,48,0.1); }
+.ref-bill-detail-subjects {
+  display: flex; flex-wrap: wrap; gap: 4px;
+}
+.ref-bill-detail-subjects span {
+  font-size: 10px; padding: 1px 6px; border-radius: 3px;
+  background: rgba(200,160,48,0.08); color: var(--ink-light);
+}
+
+/* ── DIALECTICAL ANALYSIS (bill detail) ── */
+.ref-bill-analysis {
+  grid-column: 1 / -1;
+  margin-top: 6px; padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+.ref-bill-analysis-header {
+  font-size: 9px; text-transform: uppercase; letter-spacing: 0.8px;
+  color: var(--gold); margin-bottom: 6px; font-weight: 600;
+}
+.ref-bill-analysis-body {
+  display: flex; gap: 12px; align-items: flex-start;
+}
+.ref-bill-axis-map {
+  flex-shrink: 0; border-radius: 4px; overflow: hidden;
+  border: 1px solid var(--border);
+}
+.ref-bill-analysis-fields {
+  flex: 1; display: flex; flex-direction: column; gap: 5px;
+}
+.ref-bill-analysis-row {
+  display: flex; gap: 6px; align-items: baseline; font-size: 11px;
+}
+.ref-bill-analysis-label {
+  font-size: 9px; text-transform: uppercase; letter-spacing: 0.5px;
+  color: var(--muted); min-width: 64px; flex-shrink: 0;
+}
+.ref-bill-quad-badges {
+  display: flex; gap: 4px; flex-wrap: wrap;
+}
+.ref-bill-quad-badge {
+  font-size: 9px; font-weight: 700; letter-spacing: 0.5px;
+  padding: 1px 5px; border-radius: 3px;
+}
+.ref-bill-quad-badge.LF { background: rgba(58,124,165,0.12); color: #3a7ca5; }
+.ref-bill-quad-badge.RF { background: rgba(201,64,64,0.12); color: #c94040; }
+.ref-bill-quad-badge.LD { background: rgba(58,124,165,0.25); color: #2a5c7a; }
+.ref-bill-quad-badge.RD { background: rgba(201,64,64,0.25); color: #a03030; }
+.ref-bill-denom-row {
+  font-size: 10px; font-style: italic; color: var(--ink-light);
+  line-height: 1.4;
+}
+.ref-bill-diatribe-signal {
+  display: inline-flex; align-items: center; gap: 4px; font-size: 10px;
+}
+.ref-bill-diatribe-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+}
+.ref-bill-diatribe-dot.low { background: #5a9a6a; }
+.ref-bill-diatribe-dot.medium { background: #c8a030; }
+.ref-bill-diatribe-dot.high { background: #c94040; }
+
+/* ── BILL CURATION DIALOGUE ── */
+.bill-curate-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 12px;
+  min-height: 480px;
+}
+.bill-curate-chat {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.bill-curate-chat-header {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bill-curate-chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+  max-height: 380px;
+  min-height: 200px;
+}
+.bill-curate-chat-input {
+  padding: 10px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 6px;
+  align-items: flex-end;
+}
+.bill-curate-chat-input textarea {
+  flex: 1;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-family: 'Lora', serif;
+  font-size: 13px;
+  background: var(--cream);
+  color: var(--ink);
+  resize: none;
+  outline: none;
+}
+.bill-curate-shortlist {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.bill-curate-shortlist-header {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.bill-curate-shortlist-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+}
+.bill-curate-shortlist-footer {
+  padding: 10px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+.bc-card {
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 6px;
+  background: var(--cream);
+  transition: border-color 0.2s, opacity 0.2s;
+}
+.bc-card.confirmed {
+  border-color: var(--gold);
+  background: rgba(200,160,48,0.06);
+}
+.bc-card.dismissed {
+  opacity: 0.35;
+  border-style: dashed;
+  background: transparent;
+}
+.bc-card-title {
+  font-family: 'Lora', serif;
+  font-size: 12px;
+  color: var(--ink);
+  line-height: 1.3;
+}
+.bc-card-meta {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.bc-card-reason {
+  font-size: 10px;
+  font-style: italic;
+  color: var(--ink-light);
+  margin-top: 4px;
+  line-height: 1.3;
+}
+.bc-card-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+}
+.bc-card-actions button {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  padding: 2px 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--ink-light);
+  cursor: pointer;
+}
+.bc-card-actions button:hover { border-color: var(--border-strong); }
+.bc-card-actions button.confirm-btn { color: var(--gold); border-color: var(--gold); }
+.bc-card-actions button.confirm-btn:hover { background: rgba(200,160,48,0.08); }
+
+/* Analysis tags row */
+.bc-card-analysis {
+  display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; padding-top: 6px;
+  border-top: 1px solid var(--border);
+}
+.bc-tag {
+  font-family: 'DM Mono', monospace; font-size: 9px; padding: 2px 6px;
+  border-radius: 3px; background: rgba(255,255,255,0.04); color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+.bc-disp-high { color: #e05555; border-color: #e05555; }
+.bc-disp-medium { color: var(--gold); border-color: var(--gold); }
+.bc-disp-low { color: var(--text-secondary); }
+.bc-disp-baseline { color: #6a9fd8; border-color: #6a9fd8; background: rgba(106,159,216,0.06); }
+.bc-dia-high { color: #e05555; }
+.bc-dia-medium { color: var(--gold); }
+.bc-dia-low { color: #6cbf6c; }
+.bc-quad-LF { color: #6a9fd8; border-color: #6a9fd8; }
+.bc-quad-RF { color: #d86a6a; border-color: #d86a6a; }
+.bc-quad-LD { color: #4a7aab; border-color: #4a7aab; }
+.bc-quad-RD { color: #ab4a4a; border-color: #ab4a4a; }
+
+.bc-count-line {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+}
+
 /* ── ARC MANAGEMENT ── */
 .arc-toolbar {
   display: flex;
@@ -460,7 +1023,7 @@ body {
 /* ── EDITOR WORKSPACE ── */
 .editor-workspace {
   display: grid;
-  grid-template-columns: 160px minmax(0, 1fr) 220px;
+  grid-template-columns: 200px minmax(0, 1fr) 320px;
   gap: 12px;
   min-height: 600px;
 }
@@ -2766,6 +3329,7 @@ body {
 <div class="admin-tabs">
   <button class="admin-tab active" onclick="switchAdminTab('events')" id="adminTabEvents">Events</button>
   <button class="admin-tab" onclick="switchAdminTab('para')" id="adminTabPara">Parallelogram</button>
+  <button class="admin-tab" onclick="switchAdminTab('refraction')" id="adminTabRefraction">Refraction</button>
 </div>
 
 <!-- ═══════════ EVENTS TAB ═══════════ -->
@@ -3530,6 +4094,192 @@ body {
 
 </div><!-- /tabParaContent -->
 
+<!-- ═══════════ REFRACTION TAB ═══════════ -->
+<div id="tabRefractionContent" class="admin-tab-content">
+
+  <div class="toolbar">
+    <select class="ref-grid-event-select" id="refEventSelect" onchange="onRefEventChange()" style="max-width:400px;">
+      <option value="">Select an event…</option>
+    </select>
+    <span id="refPlacedCount" style="font-family:'DM Mono',monospace; font-size:11px; color:var(--muted); margin-left:12px;"></span>
+    <input type="password" id="refApiKey" placeholder="sk-ant-api03-..." oninput="syncApiKeys(this.value)" style="margin-left:auto; width:220px; font-family:'DM Mono',monospace; font-size:11px; padding:5px 10px; border:1px solid var(--border); border-radius:4px; background:var(--cream); color:var(--ink);">
+  </div>
+
+  <div class="ref-layout">
+
+    <!-- Left: Member Selector -->
+    <div class="ref-panel">
+      <div class="ref-panel-title">Members</div>
+      <input class="ref-search" id="refMemberSearch" type="text" placeholder="Search name, state, ID…" oninput="filterRefMembers()">
+      <div class="ref-filters">
+        <button class="ref-filter-btn active" data-filter="chamber" data-val="all" onclick="toggleRefFilter(this)">All</button>
+        <button class="ref-filter-btn" data-filter="chamber" data-val="senate" onclick="toggleRefFilter(this)">Senate</button>
+        <button class="ref-filter-btn" data-filter="chamber" data-val="house" onclick="toggleRefFilter(this)">House</button>
+      </div>
+      <div class="ref-filters">
+        <button class="ref-filter-btn active" data-filter="party" data-val="all" onclick="toggleRefFilter(this)">All</button>
+        <button class="ref-filter-btn" data-filter="party" data-val="D" onclick="toggleRefFilter(this)">D</button>
+        <button class="ref-filter-btn" data-filter="party" data-val="R" onclick="toggleRefFilter(this)">R</button>
+        <button class="ref-filter-btn" data-filter="party" data-val="I" onclick="toggleRefFilter(this)">I</button>
+      </div>
+      <div class="ref-member-list" id="refMemberList"></div>
+    </div>
+
+    <!-- Center: Quadrant Grid -->
+    <div class="ref-panel">
+      <div class="ref-panel-title">Placement Grid</div>
+      <div class="ref-grid-wrap" id="refGridWrap">
+        <canvas class="ref-grid-canvas" id="refGridCanvas"></canvas>
+        <div class="ref-grid-crosshair-h"></div>
+        <div class="ref-grid-crosshair-v"></div>
+        <div class="ref-grid-qlabel a">A</div>
+        <div class="ref-grid-qlabel b">B</div>
+        <div class="ref-grid-qlabel c">C</div>
+        <div class="ref-grid-qlabel d">D</div>
+        <div class="ref-grid-label top" id="refLabelTop">+Y</div>
+        <div class="ref-grid-label bottom" id="refLabelBottom">−Y</div>
+        <div class="ref-grid-label left" id="refLabelLeft">−X</div>
+        <div class="ref-grid-label right" id="refLabelRight">+X</div>
+        <div class="ref-grid-pin" id="refPin" style="display:none;"></div>
+      </div>
+    </div>
+
+    <!-- Right: Sliders + Save -->
+    <div class="ref-panel">
+      <div id="refSelectedInfo">
+        <div class="ref-no-selection">Select a member and click the grid to place them.</div>
+      </div>
+      <div id="refSliders" style="display:none;">
+        <div class="ref-slider-group">
+          <div class="ref-slider-label"><span>X</span><span class="ref-slider-val" id="refXVal">0.00</span></div>
+          <input class="ref-slider" type="range" id="refSliderX" min="-100" max="100" value="0" oninput="onRefSliderChange()">
+        </div>
+        <div class="ref-slider-group">
+          <div class="ref-slider-label"><span>Y</span><span class="ref-slider-val" id="refYVal">0.00</span></div>
+          <input class="ref-slider" type="range" id="refSliderY" min="-100" max="100" value="0" oninput="onRefSliderChange()">
+        </div>
+        <div class="ref-slider-group">
+          <div class="ref-slider-label"><span>Z</span><span class="ref-slider-val" id="refZVal">0.00</span></div>
+          <input class="ref-slider" type="range" id="refSliderZ" min="-100" max="100" value="0" oninput="onRefSliderChange()">
+        </div>
+        <div class="ref-slider-group">
+          <div class="ref-slider-label"><span>Diatribe</span><span class="ref-slider-val" id="refDiaVal">50</span></div>
+          <input class="ref-slider" type="range" id="refSliderDia" min="0" max="100" value="50" oninput="onRefSliderChange()">
+        </div>
+        <div class="ref-slider-group">
+          <div class="ref-slider-label"><span>Confidence</span><span class="ref-slider-val" id="refConfVal">0.5</span></div>
+          <input class="ref-slider" type="range" id="refSliderConf" min="0" max="100" value="50" oninput="onRefSliderChange()">
+        </div>
+        <button class="ref-save-btn" id="refSaveBtn" onclick="saveRefPosition()" disabled>Save Position</button>
+        <button class="ref-save-btn" id="refDeleteBtn" onclick="deleteRefPosition()" style="display:none; background:var(--red); margin-top:4px;">Remove Position</button>
+      </div>
+    </div>
+
+  </div><!-- /ref-layout -->
+
+  <!-- Placed members table -->
+  <div class="ref-panel" style="margin-top:8px;">
+    <div class="ref-panel-title">Placed Members for This Event</div>
+    <div id="refPlacedTableWrap"></div>
+  </div>
+
+  <!-- Bill Browser -->
+  <div id="refBillBrowserPanel" class="ref-panel ref-bill-panel">
+    <div class="ref-panel-title">Bills · Link to Event</div>
+    <div class="ref-bill-toolbar">
+      <input class="ref-bill-search" id="refBillSearch" type="text" placeholder="Search bills…" oninput="filterBills()">
+      <select class="ref-bill-select" id="refBillStatus" onchange="filterBills()">
+        <option value="all">All statuses</option>
+        <option value="Enacted">Enacted</option>
+        <option value="Reported">Reported</option>
+        <option value="Floor Action">Floor Action</option>
+        <option value="Passed House">Passed House</option>
+      </select>
+      <select class="ref-bill-select" id="refBillTopic" onchange="filterBills()">
+        <option value="all">All topics</option>
+        <option value="Agriculture">Agriculture</option>
+        <option value="Civil Rights">Civil Rights</option>
+        <option value="Climate & Energy">Climate & Energy</option>
+        <option value="Commerce">Commerce</option>
+        <option value="Criminal Justice">Criminal Justice</option>
+        <option value="Defense">Defense</option>
+        <option value="Economy">Economy</option>
+        <option value="Education">Education</option>
+        <option value="Emergency Management">Emergency Management</option>
+        <option value="Energy">Energy</option>
+        <option value="Financial Regulation">Financial Regulation</option>
+        <option value="Foreign Policy">Foreign Policy</option>
+        <option value="Government">Government</option>
+        <option value="Healthcare">Healthcare</option>
+        <option value="Housing">Housing</option>
+        <option value="Immigration">Immigration</option>
+        <option value="Infrastructure">Infrastructure</option>
+        <option value="Labor">Labor</option>
+        <option value="Law">Law</option>
+        <option value="Native Americans">Native Americans</option>
+        <option value="Other">Other</option>
+        <option value="Public Lands">Public Lands</option>
+        <option value="Social Policy">Social Policy</option>
+        <option value="Tax Policy">Tax Policy</option>
+        <option value="Technology">Technology</option>
+        <option value="Trade">Trade</option>
+        <option value="Water">Water</option>
+      </select>
+      <span class="ref-bill-count" id="refBillCount"></span>
+      <button class="ref-filter-btn" id="refBillCurateBtn" onclick="beginBillCurate()" style="margin-left:auto; color:var(--gold); border-color:var(--gold);">✦ Curate</button>
+      <button class="ref-filter-btn" id="refBillSuggestBtn" onclick="suggestBills()" style="color:var(--gold); border-color:var(--gold);">✦ Suggest</button>
+      <button class="ref-filter-btn" id="refBillClearBtn" onclick="clearBillSuggestions()" style="display:none; color:var(--muted); font-size:10px;">✕ Clear</button>
+    </div>
+    <div class="ref-bill-list" id="refBillList"></div>
+    <div id="refBillNoEvent" style="display:none; padding:16px; font-family:'DM Mono',monospace; font-size:12px; color:var(--muted); text-align:center;">
+      Select an event above to link bills.
+    </div>
+  </div>
+
+  <!-- Bill Curation Dialogue -->
+  <div id="billCuratePanel" class="ref-panel ref-bill-panel" style="display:none;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+      <div>
+        <span style="font-family:'Spectral','Lora',serif;font-size:15px;font-weight:600;color:var(--ink);">✦ Bill Curation</span>
+        <span class="article-card-type" id="billCurateEventTitle" style="margin-left:10px;"></span>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <input type="password" id="billCurateApiKey" placeholder="sk-ant-api03-..." oninput="syncApiKeys(this.value)" style="width:200px; font-family:'DM Mono',monospace; font-size:11px; padding:5px 10px; border:1px solid var(--border); border-radius:4px; background:var(--cream); color:var(--ink);">
+        <button class="btn small" onclick="exitBillCurate()">← Back to browser</button>
+      </div>
+    </div>
+    <div class="bill-curate-panel">
+      <div class="bill-curate-chat">
+        <div class="bill-curate-chat-header">
+          <span>Curation dialogue</span>
+          <span class="bc-count-line" id="billCurateMsgCount"></span>
+        </div>
+        <div class="bill-curate-chat-messages" id="billCurateChatMessages">
+          <div class="desk-msg claude"><div class="desk-msg-role">Claude</div>Select an event and tell me what you're looking for. I know the full bill catalog and can help you identify the bills that reveal the most about member positioning for this event.</div>
+        </div>
+        <div class="bill-curate-chat-input">
+          <textarea id="billCurateChatInput" placeholder="Which bills should we look at…" rows="2" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendBillCurateMessage();}"></textarea>
+          <button class="btn small primary" onclick="sendBillCurateMessage()" id="billCurateSendBtn">Send</button>
+        </div>
+      </div>
+      <div class="bill-curate-shortlist">
+        <div class="bill-curate-shortlist-header">
+          Shortlist <span class="bc-count-line" id="billCurateShortlistCount">0 confirmed</span>
+        </div>
+        <div class="bill-curate-shortlist-body" id="billCurateShortlistBody">
+          <div style="padding:20px 10px; text-align:center; font-family:'DM Mono',monospace; font-size:11px; color:var(--muted);">
+            Bills will appear here as Claude suggests them.
+          </div>
+        </div>
+        <div class="bill-curate-shortlist-footer">
+          <button class="btn small primary" id="billCurateApplyBtn" onclick="applyBillCuration()" style="width:100%;" disabled>Link confirmed bills to event</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /tabRefractionContent -->
+
 <!-- Confirm dialog -->
 <div id="confirmOverlay" class="confirm-overlay">
   <div class="confirm-box">
@@ -3544,6 +4294,8 @@ body {
 <!-- Toast -->
 <div id="toast" class="toast"></div>
 
+<script src="legislation_data.js"></script>
+<script src="politicians_data.js"></script>
 <script src="prismdb.js"></script>
 <script>
 
@@ -3561,9 +4313,12 @@ let currentArcEditId = null;
 function switchAdminTab(tab) {
   document.getElementById('adminTabEvents').classList.toggle('active', tab === 'events');
   document.getElementById('adminTabPara').classList.toggle('active', tab === 'para');
+  document.getElementById('adminTabRefraction').classList.toggle('active', tab === 'refraction');
   document.getElementById('tabEventsContent').classList.toggle('active', tab === 'events');
   document.getElementById('tabParaContent').classList.toggle('active', tab === 'para');
+  document.getElementById('tabRefractionContent').classList.toggle('active', tab === 'refraction');
   if (tab === 'para') refreshArcList();
+  if (tab === 'refraction') initRefraction();
 }
 
 // ============================================================
@@ -5339,18 +6094,58 @@ function renderMarkdown(md) {
   return html;
 }
 
-const EDITORIAL_DESK_SYSTEM_PROMPT = `You are the editorial AI for Prism / Parallelogram. You are co-writing with the editor in a manuscript workspace.
+const EDITORIAL_DESK_SYSTEM_PROMPT = `You are the editorial AI for Prism / Parallelogram. You are co-writing and co-scoring with the editor in a manuscript workspace.
 
-Your role:
-- Draft prose sections when asked (introductions, bridges between events, event analyses, closings)
-- Revise and tighten existing prose when given editorial direction
-- Think dialectically: displacement patterns, denomination shifts, X-axis positioning, institutional promise/delivery gaps
-- Write in a style appropriate for Parallelogram — analytical but accessible, precise but not academic
-- When drafting, provide clean prose ready for insertion into the manuscript
-- Respond to editorial direction concisely — the editor wants drafts they can use, not meta-commentary about what you could write
-- If the editor pastes their own prose and asks for feedback, be specific and constructive
+YOUR TWO MODES:
 
-Keep drafts focused. The editor will tell you what section they need.`;
+1. SCORING — When the editor asks you to "score" an event, or asks about X/Y/Z/Diatribe values:
+Propose structured scores using the framework below. Present them clearly so the editor can accept, adjust, or push back. Always explain your reasoning — the editor is training the model through these conversations.
+
+2. EDITORIAL — When the editor asks for prose drafts, bridges, revisions:
+Draft clean prose for insertion into the Parallelogram manuscript. Analytical but accessible, precise but not academic.
+
+SCORING FRAMEWORK:
+
+X-axis (−1.0 to +1.0): Where the event's determining pressure lands on individual-flow vs collective-corrective.
+  −X = collective provision, structural reform, regulatory correction
+  +X = market mechanisms, individual liberty, property rights, sovereignty
+
+Y-axis (−1.0 to +1.0): Where the event's determining pressure lands on institutional vs anti-institutional.
+  +Y = works through courts, legislation, expert authority, procedural legitimacy
+  −Y = skeptical of official channels, common-sense framing, anti-establishment
+
+Object Z (−1.0 to +1.0): Scored from the Object's own operative purpose — NOT from an ethical observer's judgment. A government program achieving exactly what it was designed to do scores high positive Z, even if what it was designed to do is harmful. The gap between stated purpose and operative purpose is a Diatribe signal, not a Z signal.
+
+Diatribe (0–100): Denomination intensity. How much has the discourse around this event buckled into tribal signaling vs. remaining fluid? 0 = fully fluid, open to surprise. 100 = fully denominated, positions hardened into vehicles.
+
+Quadrant Subject Z (qz): For each quadrant (LF, RF, LD, RD), how well is that logical position tracking the Object? Scored −1.0 to +1.0 from each subject's own operative frame.
+  LF = Left Fluid (upper-left, institutional left)
+  RF = Right Fluid (upper-right, institutional right)
+  LD = Left Denominated (lower-left, anti-institutional left)
+  RD = Right Denominated (lower-right, anti-institutional right)
+
+Object Instantiation: What specific face is the unified Object wearing for this event? The arc has a unified Object — the event-level instantiation is how it manifests in this particular historical moment.
+
+Prevalent Axis: Which axis (X or Y) is the primary contestation axis for this event?
+
+WHEN SCORING, return something like:
+  Object instantiation: [what the Object looks like here]
+  X: [value] — [one-line reasoning]
+  Y: [value] — [one-line reasoning]
+  Object Z: [value] — [reasoning from operative purpose]
+  Diatribe: [value] — [reasoning about denomination intensity]
+  Prevalent axis: [x or y]
+  Quadrant Z:
+    LF: [value] — [reasoning]
+    RF: [value] — [reasoning]
+    LD: [value] — [reasoning]
+    RD: [value] — [reasoning]
+
+The editor may accept these, adjust them, or challenge your reasoning. That dialogue IS the authoring process.
+
+IMPORTANT: The context block will tell you which event is currently selected. Always respond about THAT event unless the editor explicitly names a different one.
+
+Keep responses focused. The editor wants material they can use — drafts or scores — not meta-commentary.`;
 
 let editorDeskHistory = [];
 
@@ -5375,10 +6170,59 @@ async function sendEditorDeskMessage() {
     if (arc) {
       contextLines.push(`Working on: ${arc.title} (arc)`);
       if (arc.objectSelected) contextLines.push(`Unified Object: ${arc.objectSelected}`);
+      if (arc.objectEditorialName) contextLines.push(`Editorial name: ${arc.objectEditorialName}`);
       const arcEvents = PrismDB.getArcEvents(arc.id);
+
+      // Identify currently selected event from outline
+      const sec = editorState.section;
+      let focusedEvent = null;
+      let focusedLabel = null;
+      if (sec > 0 && arcEvents.length > 0) {
+        if (sec % 2 === 1) {
+          // Odd section = event
+          const evtIdx = (sec - 1) / 2;
+          if (evtIdx < arcEvents.length) {
+            focusedEvent = arcEvents[evtIdx];
+            focusedLabel = `Event ${evtIdx + 1}`;
+          }
+        } else {
+          // Even section = bridge between events
+          const evtIdx = (sec / 2) - 1;
+          if (evtIdx < arcEvents.length - 1) {
+            focusedLabel = `Bridge between "${arcEvents[evtIdx].title}" and "${arcEvents[evtIdx + 1].title}"`;
+          }
+        }
+      } else if (sec === 0) {
+        focusedLabel = 'Intro section';
+      }
+
+      if (focusedEvent) {
+        contextLines.push('');
+        contextLines.push(`>>> CURRENTLY SELECTED EVENT: ${focusedEvent.title} (${focusedEvent.date || '—'})`);
+        // Include any existing scores for this event
+        const ed = (arc.eventData || {})[focusedEvent.id];
+        if (ed) {
+          if (ed.objectInstantiation) contextLines.push(`  Object instantiation: ${ed.objectInstantiation}`);
+          if (ed.x != null) contextLines.push(`  X: ${ed.x}`);
+          if (ed.y != null) contextLines.push(`  Y: ${ed.y}`);
+          if (ed.z != null) contextLines.push(`  Object Z: ${ed.z}`);
+          if (ed.dia != null) contextLines.push(`  Diatribe: ${ed.dia}`);
+          if (ed.qz) {
+            const qzParts = Object.entries(ed.qz).filter(([,v]) => v != null).map(([k,v]) => `${k}:${v}`);
+            if (qzParts.length) contextLines.push(`  Quadrant Z: ${qzParts.join(', ')}`);
+          }
+        }
+        contextLines.push('');
+      } else if (focusedLabel) {
+        contextLines.push(`>>> Currently editing: ${focusedLabel}`);
+      }
+
       if (arcEvents.length > 0) {
-        contextLines.push('Arc events:');
-        arcEvents.forEach((e, i) => contextLines.push(`  ${i + 1}. ${e.title} (${e.date || '—'})`));
+        contextLines.push('Full arc events:');
+        arcEvents.forEach((e, i) => {
+          const marker = (focusedEvent && e.id === focusedEvent.id) ? ' ◄ SELECTED' : '';
+          contextLines.push(`  ${i + 1}. ${e.title} (${e.date || '—'})${marker}`);
+        });
       }
     }
   } else if (editorState.type === 'article') {
@@ -7555,6 +8399,1447 @@ async function generateSuggestions() {
 
 
 // ============================================================
+// REFRACTION — MEMBER PLACEMENT
+// ============================================================
+
+let refState = {
+  selectedMember: null,    // bioguideId
+  selectedEvent: null,     // eventId
+  pinX: null,              // 0-1 (grid space, left=0, right=1)
+  pinY: null,              // 0-1 (grid space, top=0, bottom=1)
+  chamberFilter: 'all',
+  partyFilter: 'all',
+  members: [],             // loaded from PrismDB or POLITICIANS_DATA
+  initialized: false,
+  expandedBill: null,      // currently expanded bill id
+  billSuggestions: {}      // { billId: reason } from AI suggest
+};
+
+function initRefraction() {
+  // Populate event selector
+  const sel = document.getElementById('refEventSelect');
+  const events = PrismDB.getEvents();
+  const current = sel.value;
+  sel.innerHTML = '<option value="">Select an event…</option>' +
+    events.map(e => `<option value="${e.id}"${e.id === current ? ' selected' : ''}>${e.title}</option>`).join('');
+
+  // Load members — try PrismDB first, fall back to POLITICIANS_DATA
+  if (typeof PrismDB !== 'undefined' && PrismDB.getMembers().length > 0) {
+    refState.members = PrismDB.getMembers().map(m => ({
+      bioguideId: m.bioguideId,
+      name: typeof m.name === 'object' ? m.name.full : m.name,
+      party: m.party,
+      chamber: m.chamber || (m.meta && m.meta.includes('Senator') ? 'senate' : 'house'),
+      state: m.state || '',
+      meta: m.meta || `${m.party}-${m.state} · ${m.chamber}`
+    }));
+  } else if (typeof POLITICIANS_DATA !== 'undefined') {
+    refState.members = POLITICIANS_DATA.map(p => ({
+      bioguideId: p.id,
+      name: p.name,
+      party: p.meta.startsWith('D') ? 'D' : p.meta.startsWith('R') ? 'R' : 'I',
+      chamber: p.meta.includes('Senator') ? 'senate' : 'house',
+      state: '',
+      meta: p.meta
+    }));
+  }
+
+  filterRefMembers();
+  setupRefGrid();
+  initBillBrowser();
+
+  if (sel.value) onRefEventChange();
+
+  refState.initialized = true;
+}
+
+function toggleRefFilter(btn) {
+  const filter = btn.dataset.filter;
+  const val = btn.dataset.val;
+
+  // Deactivate siblings in same filter group
+  btn.parentElement.querySelectorAll('.ref-filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  if (filter === 'chamber') refState.chamberFilter = val;
+  if (filter === 'party') refState.partyFilter = val;
+
+  filterRefMembers();
+}
+
+function filterRefMembers() {
+  const query = (document.getElementById('refMemberSearch').value || '').toLowerCase();
+  const eventId = refState.selectedEvent;
+
+  // Get placed member IDs for badge
+  const placedIds = new Set();
+  if (eventId) {
+    PrismDB.getMemberPositionsForEvent(eventId).forEach(p => placedIds.add(p.bioguideId));
+  }
+
+  let results = refState.members.filter(m => {
+    if (refState.chamberFilter !== 'all' && m.chamber !== refState.chamberFilter) return false;
+    if (refState.partyFilter !== 'all' && m.party !== refState.partyFilter) return false;
+    if (query) {
+      return m.name.toLowerCase().includes(query) ||
+             m.state.toLowerCase().includes(query) ||
+             m.bioguideId.toLowerCase().includes(query) ||
+             (m.meta && m.meta.toLowerCase().includes(query));
+    }
+    return true;
+  });
+
+  // Sort: placed first, then alpha
+  results.sort((a, b) => {
+    const ap = placedIds.has(a.bioguideId) ? 0 : 1;
+    const bp = placedIds.has(b.bioguideId) ? 0 : 1;
+    if (ap !== bp) return ap - bp;
+    return a.name.localeCompare(b.name);
+  });
+
+  const list = document.getElementById('refMemberList');
+  list.innerHTML = results.slice(0, 100).map(m => {
+    const sel = refState.selectedMember === m.bioguideId ? ' selected' : '';
+    const placed = placedIds.has(m.bioguideId) ? '<span class="ref-member-placed">placed</span>' : '';
+    return `<div class="ref-member-item${sel}" onclick="selectRefMember('${m.bioguideId}')">
+      <span class="ref-member-dot ${m.party.toLowerCase()}"></span>
+      <span>${m.name}</span>
+      <span class="ref-member-meta">${m.meta || ''}</span>
+      ${placed}
+    </div>`;
+  }).join('');
+
+  if (results.length > 100) {
+    list.innerHTML += `<div style="padding:8px;font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);">${results.length - 100} more — refine search</div>`;
+  }
+}
+
+function selectRefMember(bioguideId) {
+  refState.selectedMember = bioguideId;
+  const m = refState.members.find(m => m.bioguideId === bioguideId);
+  const info = document.getElementById('refSelectedInfo');
+  const sliders = document.getElementById('refSliders');
+
+  if (!m) return;
+
+  info.innerHTML = `<div class="ref-selected-name">${m.name}</div>
+    <div class="ref-selected-meta">${m.meta || m.party + ' · ' + m.chamber}</div>`;
+  sliders.style.display = 'block';
+
+  // Check if already placed on this event
+  const existing = refState.selectedEvent ?
+    PrismDB.getMemberPosition(bioguideId, refState.selectedEvent) : null;
+
+  if (existing && existing.pin) {
+    // Load existing position into sliders and grid
+    refState.pinX = existing.pin.x;
+    refState.pinY = existing.pin.y;
+    document.getElementById('refSliderX').value = Math.round((existing.pin.x * 2 - 1) * 100);
+    document.getElementById('refSliderY').value = Math.round(((1 - existing.pin.y) * 2 - 1) * 100);
+    document.getElementById('refSliderZ').value = Math.round((existing.z || 0) * 100);
+    document.getElementById('refSliderDia').value = existing.diatribe || 50;
+    document.getElementById('refSliderConf').value = Math.round((existing.confidence || 0.5) * 100);
+    updateRefSliderLabels();
+    updateRefPin();
+    document.getElementById('refSaveBtn').textContent = 'Update Position';
+    document.getElementById('refDeleteBtn').style.display = 'block';
+  } else {
+    // Reset to center
+    refState.pinX = null;
+    refState.pinY = null;
+    document.getElementById('refSliderX').value = 0;
+    document.getElementById('refSliderY').value = 0;
+    document.getElementById('refSliderZ').value = 0;
+    document.getElementById('refSliderDia').value = 50;
+    document.getElementById('refSliderConf').value = 50;
+    updateRefSliderLabels();
+    document.getElementById('refPin').style.display = 'none';
+    document.getElementById('refSaveBtn').textContent = 'Save Position';
+    document.getElementById('refDeleteBtn').style.display = 'none';
+  }
+
+  document.getElementById('refSaveBtn').disabled = !refState.selectedEvent || refState.pinX === null;
+
+  // Re-render member list to update selection highlight
+  filterRefMembers();
+}
+
+function onRefEventChange() {
+  const sel = document.getElementById('refEventSelect');
+  refState.selectedEvent = sel.value || null;
+
+  if (refState.selectedEvent) {
+    const evt = PrismDB.getEvent(refState.selectedEvent);
+    if (evt && evt.axes) {
+      document.getElementById('refLabelLeft').textContent = evt.axes.x.neg || '−X';
+      document.getElementById('refLabelRight').textContent = evt.axes.x.pos || '+X';
+      document.getElementById('refLabelTop').textContent = evt.axes.y.pos || '+Y';
+      document.getElementById('refLabelBottom').textContent = evt.axes.y.neg || '−Y';
+    }
+  }
+
+  // Refresh placed count
+  updateRefPlacedTable();
+  renderRefExistingPins();
+  filterRefMembers();
+
+  // Load any stored AI bill suggestions for this event
+  if (refState.selectedEvent) {
+    const evt = PrismDB.getEvent(refState.selectedEvent);
+    const stored = evt?.billSuggestions;
+    refState.billSuggestions = {};
+    if (stored && Array.isArray(stored)) {
+      stored.forEach(s => {
+        refState.billSuggestions[s.id] = {
+          reason: s.reason || '',
+          x: typeof s.x === 'number' ? s.x : 0,
+          y: typeof s.y === 'number' ? s.y : 0,
+          quadrants: Array.isArray(s.quadrants) ? s.quadrants : [],
+          denominationRisk: s.denominationRisk || null,
+          diatribeSignal: s.diatribeSignal || 'low',
+          diatribeReason: s.diatribeReason || ''
+        };
+      });
+    }
+  } else {
+    refState.billSuggestions = {};
+  }
+
+  filterBills();
+
+  // If a member is selected, reload their position
+  if (refState.selectedMember) selectRefMember(refState.selectedMember);
+
+  // Update curation panel if open
+  const curatePanel = document.getElementById('billCuratePanel');
+  if (curatePanel && curatePanel.style.display !== 'none') {
+    const evt = refState.selectedEvent ? PrismDB.getEvent(refState.selectedEvent) : null;
+    document.getElementById('billCurateEventTitle').textContent = evt ? (evt.title || '') : 'No event selected';
+    updateBillCurateApplyState();
+  }
+}
+
+function setupRefGrid() {
+  const wrap = document.getElementById('refGridWrap');
+  wrap.addEventListener('click', function(e) {
+    if (!refState.selectedMember) {
+      toast('Select a member first');
+      return;
+    }
+    if (!refState.selectedEvent) {
+      toast('Select an event first');
+      return;
+    }
+    const rect = wrap.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width;
+    const y = (e.clientY - rect.top) / rect.height;
+
+    refState.pinX = Math.max(0.01, Math.min(0.99, x));
+    refState.pinY = Math.max(0.01, Math.min(0.99, y));
+
+    // Update sliders to match
+    document.getElementById('refSliderX').value = Math.round((refState.pinX * 2 - 1) * 100);
+    document.getElementById('refSliderY').value = Math.round(((1 - refState.pinY) * 2 - 1) * 100);
+    updateRefSliderLabels();
+    updateRefPin();
+
+    document.getElementById('refSaveBtn').disabled = false;
+  });
+}
+
+function onRefSliderChange() {
+  updateRefSliderLabels();
+
+  const sx = parseInt(document.getElementById('refSliderX').value);
+  const sy = parseInt(document.getElementById('refSliderY').value);
+
+  // Convert slider (-100..100) to grid (0..1)
+  refState.pinX = (sx / 100 + 1) / 2;
+  refState.pinY = 1 - (sy / 100 + 1) / 2;
+
+  updateRefPin();
+
+  if (refState.selectedMember && refState.selectedEvent) {
+    document.getElementById('refSaveBtn').disabled = false;
+  }
+}
+
+function updateRefSliderLabels() {
+  const sx = parseInt(document.getElementById('refSliderX').value);
+  const sy = parseInt(document.getElementById('refSliderY').value);
+  const sz = parseInt(document.getElementById('refSliderZ').value);
+  const sd = parseInt(document.getElementById('refSliderDia').value);
+  const sc = parseInt(document.getElementById('refSliderConf').value);
+
+  document.getElementById('refXVal').textContent = (sx / 100).toFixed(2);
+  document.getElementById('refYVal').textContent = (sy / 100).toFixed(2);
+  document.getElementById('refZVal').textContent = (sz / 100).toFixed(2);
+  document.getElementById('refDiaVal').textContent = sd;
+  document.getElementById('refConfVal').textContent = (sc / 100).toFixed(2);
+}
+
+function updateRefPin() {
+  const pin = document.getElementById('refPin');
+  if (refState.pinX === null) {
+    pin.style.display = 'none';
+    return;
+  }
+  pin.style.display = 'block';
+  pin.style.left = (refState.pinX * 100) + '%';
+  pin.style.top = (refState.pinY * 100) + '%';
+}
+
+function renderRefExistingPins() {
+  // Remove old existing pins
+  document.querySelectorAll('.ref-grid-existing').forEach(el => el.remove());
+
+  if (!refState.selectedEvent) return;
+  const positions = PrismDB.getMemberPositionsForEvent(refState.selectedEvent);
+  const wrap = document.getElementById('refGridWrap');
+
+  positions.forEach(p => {
+    if (!p.pin) return;
+    // Don't show pin for currently selected member (they have the gold pin)
+    if (p.bioguideId === refState.selectedMember) return;
+    const member = refState.members.find(m => m.bioguideId === p.bioguideId);
+    const party = member ? member.party.toLowerCase() : 'd';
+    const dot = document.createElement('div');
+    dot.className = `ref-grid-existing ${party}`;
+    dot.style.left = (p.pin.x * 100) + '%';
+    dot.style.top = (p.pin.y * 100) + '%';
+    dot.title = member ? member.name : p.bioguideId;
+    wrap.appendChild(dot);
+  });
+}
+
+function saveRefPosition() {
+  if (!refState.selectedMember || !refState.selectedEvent || refState.pinX === null) return;
+
+  const pos = {
+    bioguideId: refState.selectedMember,
+    eventId: refState.selectedEvent,
+    pin: { x: refState.pinX, y: refState.pinY },
+    z: parseInt(document.getElementById('refSliderZ').value) / 100,
+    diatribe: parseInt(document.getElementById('refSliderDia').value),
+    confidence: parseInt(document.getElementById('refSliderConf').value) / 100,
+    method: 'admin_placed',
+    provenance: 'MANUAL',
+    adminOverride: true
+  };
+
+  PrismDB.saveMemberPosition(pos);
+  toast('Position saved');
+
+  // Refresh
+  updateRefPlacedTable();
+  renderRefExistingPins();
+  filterRefMembers();
+
+  document.getElementById('refSaveBtn').textContent = 'Update Position';
+  document.getElementById('refDeleteBtn').style.display = 'block';
+}
+
+function deleteRefPosition() {
+  if (!refState.selectedMember || !refState.selectedEvent) return;
+  PrismDB.deleteMemberPosition(refState.selectedMember, refState.selectedEvent);
+  toast('Position removed');
+
+  // Reset
+  refState.pinX = null;
+  refState.pinY = null;
+  document.getElementById('refPin').style.display = 'none';
+  document.getElementById('refSaveBtn').textContent = 'Save Position';
+  document.getElementById('refSaveBtn').disabled = true;
+  document.getElementById('refDeleteBtn').style.display = 'none';
+
+  updateRefPlacedTable();
+  renderRefExistingPins();
+  filterRefMembers();
+}
+
+function updateRefPlacedTable() {
+  const wrap = document.getElementById('refPlacedTableWrap');
+  const countEl = document.getElementById('refPlacedCount');
+
+  if (!refState.selectedEvent) {
+    wrap.innerHTML = '<div class="ref-no-selection">Select an event to see placed members.</div>';
+    countEl.textContent = '';
+    return;
+  }
+
+  const positions = PrismDB.getMemberPositionsForEvent(refState.selectedEvent);
+  countEl.textContent = positions.length + ' placed';
+
+  if (positions.length === 0) {
+    wrap.innerHTML = '<div class="ref-no-selection">No members placed on this event yet.</div>';
+    return;
+  }
+
+  let html = `<table class="ref-placed-table">
+    <tr><th>Member</th><th>Quad</th><th>X</th><th>Y</th><th>Z</th><th>Dia</th><th>Conf</th><th></th></tr>`;
+
+  positions.forEach(p => {
+    const member = refState.members.find(m => m.bioguideId === p.bioguideId);
+    const name = member ? member.name : p.bioguideId;
+    const px = p.pin ? (p.pin.x * 2 - 1).toFixed(2) : '–';
+    const py = p.pin ? ((1 - p.pin.y) * 2 - 1).toFixed(2) : '–';
+    html += `<tr>
+      <td><span class="ref-member-dot ${(member ? member.party : 'D').toLowerCase()}" style="display:inline-block;vertical-align:middle;margin-right:4px;"></span>${name}</td>
+      <td>${p.quadrant || '–'}</td>
+      <td>${px}</td>
+      <td>${py}</td>
+      <td>${(p.z || 0).toFixed(2)}</td>
+      <td>${p.diatribe || '–'}</td>
+      <td>${(p.confidence || 0).toFixed(2)}</td>
+      <td>
+        <button class="ref-tbl-action" onclick="selectRefMember('${p.bioguideId}')">edit</button>
+        <button class="ref-tbl-action danger" onclick="deleteRefPositionDirect('${p.bioguideId}')">×</button>
+      </td>
+    </tr>`;
+  });
+
+  html += '</table>';
+  wrap.innerHTML = html;
+}
+
+function deleteRefPositionDirect(bioguideId) {
+  if (!refState.selectedEvent) return;
+  PrismDB.deleteMemberPosition(bioguideId, refState.selectedEvent);
+  toast('Position removed');
+  updateRefPlacedTable();
+  renderRefExistingPins();
+  filterRefMembers();
+  if (refState.selectedMember === bioguideId) {
+    selectRefMember(bioguideId); // re-render to clear pin
+  }
+}
+
+
+// ============================================================
+// BILL BROWSER — LINK BILLS TO EVENTS
+// ============================================================
+
+function initBillBrowser() {
+  filterBills();
+}
+
+function filterBills() {
+  const eventId = refState.selectedEvent;
+  const noEventMsg = document.getElementById('refBillNoEvent');
+  const listEl = document.getElementById('refBillList');
+  const countEl = document.getElementById('refBillCount');
+
+  noEventMsg.style.display = 'none';
+  listEl.style.display = '';
+
+  // Show/hide clear suggestions button
+  const clearBtn = document.getElementById('refBillClearBtn');
+  if (clearBtn) clearBtn.style.display = Object.keys(refState.billSuggestions || {}).length ? '' : 'none';
+
+  if (typeof LEGISLATION_DATA === 'undefined' || !LEGISLATION_DATA.length) {
+    listEl.innerHTML = '<div style="padding:16px;color:var(--muted);font-family:\'DM Mono\',monospace;font-size:12px;text-align:center;">No legislation data loaded. Ensure legislation_data.js is present.</div>';
+    countEl.textContent = '';
+    return;
+  }
+
+  const query = (document.getElementById('refBillSearch').value || '').toLowerCase().trim();
+  const statusFilter = document.getElementById('refBillStatus').value;
+  const topicFilter = document.getElementById('refBillTopic').value;
+
+  // Get linked bills for this event
+  const evt = PrismDB.getEvent(eventId);
+  const linked = new Set((evt && evt.linkedBills) || []);
+
+  let bills = LEGISLATION_DATA;
+
+  // Parse meta parts (bill number · status · topic)
+  let parsed = bills.map(b => {
+    const parts = (b.meta || '').split(' · ');
+    return { ...b, billNum: parts[0] || '', status: parts[1] || '', topic: parts[2] || '' };
+  });
+
+  // Apply filters
+  if (statusFilter !== 'all') parsed = parsed.filter(b => b.status === statusFilter);
+  if (topicFilter !== 'all') parsed = parsed.filter(b => b.topic === topicFilter);
+  if (query) {
+    parsed = parsed.filter(b =>
+      b.name.toLowerCase().includes(query) ||
+      b.billNum.toLowerCase().includes(query) ||
+      b.topic.toLowerCase().includes(query)
+    );
+  }
+
+  // Sort: linked first, suggested second, then alphabetical
+  const suggestions = refState.billSuggestions || {};
+  parsed.sort((a, b) => {
+    const aRank = linked.has(a.id) ? 0 : (suggestions[a.id] ? 1 : 2);
+    const bRank = linked.has(b.id) ? 0 : (suggestions[b.id] ? 1 : 2);
+    if (aRank !== bRank) return aRank - bRank;
+    return a.name.localeCompare(b.name);
+  });
+
+  const total = LEGISLATION_DATA.length;
+  countEl.textContent = parsed.length === total ? total + ' bills' : parsed.length + ' of ' + total;
+
+  // Render (cap at 150 for performance)
+  const display = parsed.slice(0, query ? 300 : 150);
+  const expanded = refState.expandedBill;
+  listEl.innerHTML = display.map(b => {
+    const isLinked = linked.has(b.id);
+    const isSuggested = !!suggestions[b.id];
+    const isExpanded = expanded === b.id;
+    let badge = '';
+    if (isLinked) badge = '<span class="ref-bill-badge">linked</span>';
+    else if (isSuggested) badge = '<span class="ref-bill-badge suggested">✦ suggested</span>';
+    let html = `<div class="ref-bill-item${isLinked ? ' linked' : ''}${isSuggested && !isLinked ? ' suggested' : ''}${isExpanded ? ' expanded' : ''}" onclick="toggleBillExpand('${b.id}')" title="${b.name}">
+      ${badge}
+      <span class="ref-bill-name">${b.name}</span>
+      <span class="ref-bill-meta">${b.billNum} · ${b.topic}</span>
+      <span style="font-size:10px;color:var(--muted);margin-left:4px;">${isExpanded ? '▾' : '▸'}</span>
+    </div>`;
+    if (isExpanded) html += renderBillDetail(b, isLinked, suggestions[b.id] || null);
+    return html;
+  }).join('');
+
+  if (display.length < parsed.length) {
+    listEl.innerHTML += `<div class="ref-bill-item" style="justify-content:center;color:var(--muted);cursor:default;">
+      <span>${parsed.length - display.length} more — search to narrow</span></div>`;
+  }
+}
+
+function toggleBillLink(billId) {
+  const eventId = refState.selectedEvent;
+  if (!eventId) { toast('Select an event first'); return; }
+
+  const evt = PrismDB.getEvent(eventId);
+  if (!evt) return;
+
+  const linked = new Set(evt.linkedBills || []);
+
+  if (linked.has(billId)) {
+    linked.delete(billId);
+    toast('Bill unlinked');
+  } else {
+    linked.add(billId);
+    toast('Bill linked to event');
+  }
+
+  PrismDB.updateEvent(eventId, { linkedBills: Array.from(linked) });
+  filterBills();
+}
+
+function toggleBillExpand(billId) {
+  refState.expandedBill = (refState.expandedBill === billId) ? null : billId;
+  filterBills();
+  // Scroll expanded detail into view
+  if (refState.expandedBill) {
+    requestAnimationFrame(() => {
+      const detail = document.querySelector('.ref-bill-detail');
+      if (detail) detail.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  }
+}
+
+function clearBillSuggestions() {
+  refState.billSuggestions = {};
+  filterBills();
+  toast('Suggestions cleared');
+}
+
+function billIdToUrl(id) {
+  // id format: "hr-119-1234" or "sjres-118-45"
+  const parts = id.split('-');
+  if (parts.length < 3) return null;
+  const type = parts[0];
+  const congress = parts[1];
+  const number = parts.slice(2).join('-');
+  const slugMap = { hr: 'house-bill', s: 'senate-bill', hjres: 'house-joint-resolution', sjres: 'senate-joint-resolution',
+    hres: 'house-resolution', sres: 'senate-resolution', hconres: 'house-concurrent-resolution', sconres: 'senate-concurrent-resolution' };
+  const slug = slugMap[type] || 'house-bill';
+  return `https://www.congress.gov/bill/${congress}th-congress/${slug}/${number}`;
+}
+
+function renderBillDetail(b, isLinked, analysis) {
+  // b has at minimum: id, name, meta, billNum, status, topic
+  // Rich fields (from full pipeline): sponsor, cosponsors, subjects, policyArea,
+  //   titleFull, introducedDate, latestAction, originChamber, congressGovUrl
+  // analysis: null or { reason, x, y, quadrants, denominationRisk, diatribeSignal, diatribeReason }
+
+  // Find the full record if LEGISLATION_DATA has richer objects
+  const full = (typeof LEGISLATION_DATA !== 'undefined') ?
+    LEGISLATION_DATA.find(l => l.id === b.id) : null;
+
+  const url = (full && full.congressGovUrl) || billIdToUrl(b.id);
+  const sponsor = full?.sponsor;
+  const subjects = full?.subjects;
+  const cosponsors = full?.cosponsors;
+  const introduced = full?.introducedDate;
+  const latestAction = full?.latestAction;
+  const titleFull = full?.titleFull;
+  const originChamber = full?.originChamber;
+
+  let rows = '';
+
+  // Bill number + status (always available from meta)
+  rows += `<div class="ref-bill-detail-row">
+    <span class="ref-bill-detail-label">Bill</span>
+    <span class="ref-bill-detail-val">${b.billNum || b.id}</span>
+  </div>`;
+  rows += `<div class="ref-bill-detail-row">
+    <span class="ref-bill-detail-label">Status</span>
+    <span class="ref-bill-detail-val">${full?.statusLabel || b.status || '—'}</span>
+  </div>`;
+
+  // Sponsor
+  if (sponsor) {
+    const partyColor = sponsor.party === 'D' ? '#3a7ca5' : sponsor.party === 'R' ? '#c94040' : '#8a8a8a';
+    rows += `<div class="ref-bill-detail-row">
+      <span class="ref-bill-detail-label">Sponsor</span>
+      <span class="ref-bill-detail-val"><span style="color:${partyColor};font-weight:600;">${sponsor.party || ''}</span> ${sponsor.name || ''}${sponsor.state ? ' (' + sponsor.state + ')' : ''}</span>
+    </div>`;
+  }
+
+  // Cosponsors
+  if (cosponsors != null) {
+    rows += `<div class="ref-bill-detail-row">
+      <span class="ref-bill-detail-label">Cosponsors</span>
+      <span class="ref-bill-detail-val">${cosponsors}</span>
+    </div>`;
+  }
+
+  // Origin chamber
+  if (originChamber) {
+    rows += `<div class="ref-bill-detail-row">
+      <span class="ref-bill-detail-label">Origin</span>
+      <span class="ref-bill-detail-val">${originChamber}</span>
+    </div>`;
+  }
+
+  // Introduced date
+  if (introduced) {
+    rows += `<div class="ref-bill-detail-row">
+      <span class="ref-bill-detail-label">Introduced</span>
+      <span class="ref-bill-detail-val">${introduced}</span>
+    </div>`;
+  }
+
+  // Topic / Policy area
+  rows += `<div class="ref-bill-detail-row">
+    <span class="ref-bill-detail-label">Topic</span>
+    <span class="ref-bill-detail-val">${b.topic || full?.policyArea || '—'}</span>
+  </div>`;
+
+  // Latest action (full width)
+  if (latestAction?.text) {
+    rows += `<div class="ref-bill-detail-row full">
+      <span class="ref-bill-detail-label">Last Action</span>
+      <span class="ref-bill-detail-val">${latestAction.date ? latestAction.date + ' — ' : ''}${latestAction.text}</span>
+    </div>`;
+  }
+
+  // Full title if different from short name
+  if (titleFull && titleFull !== b.name) {
+    rows += `<div class="ref-bill-detail-row full">
+      <span class="ref-bill-detail-label">Full Title</span>
+      <span class="ref-bill-detail-val" style="font-size:10px;">${titleFull}</span>
+    </div>`;
+  }
+
+  // Subjects
+  if (subjects && subjects.length) {
+    rows += `<div class="ref-bill-detail-row full">
+      <span class="ref-bill-detail-label">Subjects</span>
+      <span class="ref-bill-detail-val"><div class="ref-bill-detail-subjects">${subjects.map(s => `<span>${s}</span>`).join('')}</div></span>
+    </div>`;
+  }
+
+  // ── DIALECTICAL ANALYSIS SECTION ──
+  if (analysis && typeof analysis === 'object') {
+    // AI reason line (backward compat — also handles old string format)
+    if (analysis.reason) {
+      rows += `<div class="ref-bill-detail-row full" style="margin-top:4px;">
+        <span class="ref-bill-detail-label" style="color:var(--gold);">✦ AI</span>
+        <span class="ref-bill-detail-val" style="font-style:italic; color:var(--ink-light);">${analysis.reason}</span>
+      </div>`;
+    }
+
+    rows += `<div class="ref-bill-analysis">
+      <div class="ref-bill-analysis-header">◆ Dialectical Analysis</div>
+      <div class="ref-bill-analysis-body">
+        ${renderBillAxisMap(analysis.x || 0, analysis.y || 0, analysis.quadrants || [])}
+        <div class="ref-bill-analysis-fields">
+          <div class="ref-bill-analysis-row">
+            <span class="ref-bill-analysis-label">Position</span>
+            <span>X: ${(analysis.x || 0).toFixed(2)} · Y: ${(analysis.y || 0).toFixed(2)}</span>
+          </div>
+          <div class="ref-bill-analysis-row">
+            <span class="ref-bill-analysis-label">Quadrants</span>
+            <div class="ref-bill-quad-badges">
+              ${(analysis.quadrants || []).map(q => `<span class="ref-bill-quad-badge ${q}">${q}</span>`).join('')}
+            </div>
+          </div>
+          <div class="ref-bill-analysis-row">
+            <span class="ref-bill-analysis-label">Diatribe</span>
+            <span class="ref-bill-diatribe-signal">
+              <span class="ref-bill-diatribe-dot ${analysis.diatribeSignal || 'low'}"></span>
+              ${(analysis.diatribeSignal || 'low').toUpperCase()}
+            </span>
+          </div>
+          ${analysis.diatribeReason ? `<div class="ref-bill-analysis-row">
+            <span class="ref-bill-analysis-label"></span>
+            <span class="ref-bill-denom-row">${analysis.diatribeReason}</span>
+          </div>` : ''}
+          ${analysis.denominationRisk ? `<div class="ref-bill-analysis-row">
+            <span class="ref-bill-analysis-label">Denom. Risk</span>
+            <span class="ref-bill-denom-row">${analysis.denominationRisk}</span>
+          </div>` : ''}
+        </div>
+      </div>
+    </div>`;
+  } else if (analysis && typeof analysis === 'string') {
+    // Legacy format: plain reason string
+    rows += `<div class="ref-bill-detail-row full" style="margin-top:4px;">
+      <span class="ref-bill-detail-label" style="color:var(--gold);">✦ AI</span>
+      <span class="ref-bill-detail-val" style="font-style:italic; color:var(--ink-light);">${analysis}</span>
+    </div>`;
+  }
+
+  // Actions row: link/unlink + Congress.gov
+  const linkLabel = isLinked ? '✦ Unlink from Event' : '✦ Link to Event';
+  const linkClass = isLinked ? 'link-btn is-linked' : 'link-btn';
+  let actions = `<button class="${linkClass}" onclick="event.stopPropagation(); toggleBillLink('${b.id}')">${linkLabel}</button>`;
+  if (url) {
+    actions += `<button onclick="event.stopPropagation(); window.open('${url}','_blank')">Congress.gov ↗</button>`;
+  }
+
+  return `<div class="ref-bill-detail">${rows}<div class="ref-bill-detail-actions">${actions}</div></div>`;
+}
+
+/** Render a tiny 48×48 SVG axis map with a positioned dot */
+function renderBillAxisMap(x, y, quadrants) {
+  const size = 48;
+  const half = size / 2;
+  // Map x,y from [-1,1] to pixel space (with margin)
+  const margin = 6;
+  const range = size - margin * 2;
+  const px = margin + ((x + 1) / 2) * range;
+  const py = margin + ((1 - y) / 2) * range; // invert Y: +Y is top
+
+  // Quadrant fills — subtle tint for active quadrants
+  const qSet = new Set(quadrants);
+  const tl = qSet.has('LF') ? 'rgba(58,124,165,0.08)' : 'transparent'; // LF = -X, +Y = top-left
+  const tr = qSet.has('RF') ? 'rgba(201,64,64,0.08)' : 'transparent';  // RF = +X, +Y = top-right
+  const bl = qSet.has('LD') ? 'rgba(58,124,165,0.15)' : 'transparent'; // LD = -X, -Y = bottom-left
+  const br = qSet.has('RD') ? 'rgba(201,64,64,0.15)' : 'transparent';  // RD = +X, -Y = bottom-right
+
+  return `<svg class="ref-bill-axis-map" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="${half}" height="${half}" fill="${tl}"/>
+    <rect x="${half}" y="0" width="${half}" height="${half}" fill="${tr}"/>
+    <rect x="0" y="${half}" width="${half}" height="${half}" fill="${bl}"/>
+    <rect x="${half}" y="${half}" width="${half}" height="${half}" fill="${br}"/>
+    <line x1="${half}" y1="0" x2="${half}" y2="${size}" stroke="var(--border)" stroke-width="0.5"/>
+    <line x1="0" y1="${half}" x2="${size}" y2="${half}" stroke="var(--border)" stroke-width="0.5"/>
+    <circle cx="${px}" cy="${py}" r="3.5" fill="var(--gold)" stroke="var(--bg)" stroke-width="1"/>
+  </svg>`;
+}
+
+async function suggestBills() {
+  const apiKey = getApiKey();
+  if (!apiKey) { toast('Enter your Anthropic API key first', true); return; }
+
+  const query = (document.getElementById('refBillSearch').value || '').trim();
+  const eventId = refState.selectedEvent;
+  const evt = eventId ? PrismDB.getEvent(eventId) : null;
+
+  if (!query && !evt) {
+    toast('Type a topic in the search box, or select an event');
+    return;
+  }
+
+  const btn = document.getElementById('refBillSuggestBtn');
+  btn.disabled = true;
+  btn.textContent = '✦ Analyzing…';
+
+  // Build event context with axis labels
+  let eventContext = '';
+  if (evt) {
+    const lines = [
+      `Event: ${evt.title}`,
+      evt.subtitle ? `Subtitle: ${evt.subtitle}` : '',
+      evt.description ? `Description: ${evt.description}` : '',
+    ];
+    if (evt.axes) {
+      lines.push(`X-axis: ${evt.axes.x.neg} (−X) ← → ${evt.axes.x.pos} (+X)`);
+      lines.push(`Y-axis: ${evt.axes.y.neg} (−Y) ← → ${evt.axes.y.pos} (+Y)`);
+      lines.push('Quadrants:');
+      lines.push(`  LF (Left-Fluid):  −X, +Y — collective + institutional, fluid positioning`);
+      lines.push(`  RF (Right-Fluid):  +X, +Y — market/liberty + institutional, fluid positioning`);
+      lines.push(`  LD (Left-Denominated):  −X, −Y — collective + populist, denomination risk`);
+      lines.push(`  RD (Right-Denominated): +X, −Y — market/liberty + populist, denomination risk`);
+    }
+    if (evt.tags) lines.push(`Tags: ${evt.tags.join(', ')}`);
+    eventContext = '\nEVENT CONTEXT:\n' + lines.filter(Boolean).join('\n') + '\n';
+  }
+
+  // Build compact bill catalog
+  const bills = (typeof LEGISLATION_DATA !== 'undefined') ? LEGISLATION_DATA : [];
+  const catalog = bills.map(b => `${b.id}|${b.name}|${b.meta}`).join('\n');
+
+  const userIntent = query
+    ? `The editor is searching for: "${query}"${evt ? '\nThey also have the Prism event below selected — use its axis labels for positioning.' : ''}`
+    : `The editor wants bills relevant to the selected Prism event. Use its axis labels for positioning.`;
+
+  const prompt = `You are a dialectical bill analyst embedded in the Prism political analysis framework.
+
+PRISM ENCODING PRIMER:
+Prism maps political events onto two axes. Each bill can be positioned on these axes based on what it does and who it serves:
+- X-axis (−1.0 to +1.0): Left (collective provision, structural reform) ← → Right (market mechanisms, individual liberty)
+- Y-axis (−1.0 to +1.0): Populist/anti-institutional (−Y) ← → Institutional/procedural (+Y)
+
+Each quadrant has two coordinate subjects — fluid and denominated:
+- Fluid: engages genuinely with the tension between axes, holds complexity
+- Denominated: collapses the tension into a fixed position, flattens the opposing view
+
+Denomination risk = the bill's language or mechanism encourages collapsing political tension into a single frame. High denomination bills present one side as the only legitimate reading.
+
+Diatribe signal = the gap between a bill's stated purpose and its operative effect. A bill that claims bipartisan reform but structurally advantages one coalition has a high diatribe signal. A bill that does what it says has low signal.
+
+${userIntent}
+${eventContext}
+BILL CATALOG (${bills.length} bills, format: id|name|meta):
+${catalog}
+
+Pick the 10-20 most relevant bills. For EACH bill, analyze:
+1. Its position on the event's axes (or generic Prism axes if no event)
+2. Which quadrant subjects it most activates
+3. Whether it carries denomination risk (flattening political complexity)
+4. Its diatribe signal (promise-delivery gap)
+
+Respond ONLY with a JSON object, no markdown fences, no preamble:
+{
+  "suggestions": [
+    {
+      "id": "bill-id-here",
+      "reason": "One sentence on relevance",
+      "x": 0.0,
+      "y": 0.0,
+      "quadrants": ["LF"],
+      "denominationRisk": "What gets flattened, or null if fluid",
+      "diatribeSignal": "low",
+      "diatribeReason": "One sentence on promise-delivery gap"
+    }
+  ]
+}
+
+Field rules:
+- x, y: floats from -1.0 to +1.0
+- quadrants: array of 1-2 quadrant codes the bill most activates: "LF", "RF", "LD", "RD"
+- denominationRisk: string describing what gets flattened, or null if the bill is fluid
+- diatribeSignal: "low" | "medium" | "high"
+- diatribeReason: one sentence explaining the signal level
+
+Order by relevance, most relevant first.`;
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 8192,
+        messages: [{ role: 'user', content: prompt }]
+      })
+    });
+
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err?.error?.message || `HTTP ${res.status}`);
+    }
+
+    const data = await res.json();
+    const raw = (data.content || []).map(b => b.type === 'text' ? b.text : '').join('').trim();
+    const parsed = JSON.parse(raw);
+
+    if (!parsed.suggestions || !parsed.suggestions.length) {
+      toast('No suggestions returned'); return;
+    }
+
+    // Store rich analysis objects in refState
+    refState.billSuggestions = {};
+    parsed.suggestions.forEach(s => {
+      refState.billSuggestions[s.id] = {
+        reason: s.reason || '',
+        x: typeof s.x === 'number' ? s.x : 0,
+        y: typeof s.y === 'number' ? s.y : 0,
+        quadrants: Array.isArray(s.quadrants) ? s.quadrants : [],
+        denominationRisk: s.denominationRisk || null,
+        diatribeSignal: s.diatribeSignal || 'low',
+        diatribeReason: s.diatribeReason || ''
+      };
+    });
+
+    // If an event is selected, auto-link and persist suggestions
+    if (evt) {
+      const linked = new Set(evt.linkedBills || []);
+      let newCount = 0;
+      parsed.suggestions.forEach(s => {
+        if (!linked.has(s.id)) { linked.add(s.id); newCount++; }
+      });
+      PrismDB.updateEvent(eventId, {
+        linkedBills: Array.from(linked),
+        billSuggestions: parsed.suggestions
+      });
+      toast(`${newCount} bills linked · ${parsed.suggestions.length} analyzed`);
+    } else {
+      toast(`${parsed.suggestions.length} bills analyzed — select an event to link them`);
+    }
+
+    // Re-render list with analysis
+    filterBills();
+
+    // Auto-expand the top suggestion
+    if (parsed.suggestions.length) {
+      refState.expandedBill = parsed.suggestions[0].id;
+      filterBills();
+      requestAnimationFrame(() => {
+        const detail = document.querySelector('.ref-bill-detail');
+        if (detail) detail.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    }
+
+  } catch (e) {
+    console.error('Bill suggest error:', e);
+    toast('AI analysis failed: ' + e.message, true);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = '✦ Suggest';
+  }
+}
+
+
+
+// ============================================================
+// BILL CURATION DIALOGUE
+// ============================================================
+
+let billCurateHistory = [];    // API message history
+let billCurateCandidates = []; // { id, name, meta, reason, status: 'candidate'|'confirmed'|'dismissed' }
+
+const BILL_CURATE_SYSTEM_PROMPT = `You are a bill curation assistant embedded in the Prism admin portal. You help the editor identify the 10-20 congressional bills that best reveal how members of Congress position themselves relative to a political event.
+
+ONTOLOGY — BILLS AS OBJECTS:
+
+In the Prism encoding, a determining Object is anything that generates a political field — forcing subjects into positions. Objects operate at three scales:
+
+- Arc scale: The structural force persisting across decades (e.g., "The Empire" — the U.S. institutional enforcement apparatus)
+- Event scale: The force generating a specific political moment
+- Bill scale: A bill before Congress IS a determining Object. It creates a field in which every legislator must locate themselves. Their vote is their position in the field the bill generates.
+
+When you evaluate a bill, you are evaluating it AS AN OBJECT — asking what field it generates, what positions it forces, and where it creates pressure.
+
+THE TWO AXES:
+
+X-axis (−1.0 to +1.0): Individual-flow vs Collective-corrective
+  −X: collective provision, structural reform, regulatory correction
+  +X: market mechanisms, individual liberty, property rights
+
+Y-axis (−1.0 to +1.0): Institutional vs Populist/Anti-institutional
+  +Y: works through established channels — courts, legislation, expert authority
+  −Y: skeptical of official channels — common-sense framing, anti-establishment energy
+
+Each event may have custom axis labels that override these generic descriptions.
+
+THE FOUR QUADRANT SUBJECTS:
+
+Each quadrant carries two coordinate subjects — fluid and denominated:
+
+LF (Left-Fluid, −X/+Y): Institutional-left, engages complexity, holds tension
+RF (Right-Fluid, +X/+Y): Institutional-right, procedurally serious, market-literate
+LD (Left-Denominated, −X/−Y): Populist-left, structural critique hardened into fixed frame
+RD (Right-Denominated, +X/−Y): Populist-right, anti-establishment energy hardened into loyalty signal
+
+A bill that activates the fluid subjects forces genuine engagement with the tension between axes. A bill that activates the denominated subjects collapses that tension into tribal loyalty.
+
+OBJECT Z — THE PROMISE-DELIVERY GAP:
+
+Every bill has two purposes:
+- Stated purpose: what the title says, what sponsors claim, what the floor speech argues
+- Operative purpose: what the bill structurally does, who actually benefits, what power it redistributes
+
+Object Z measures how effectively the bill achieves its OPERATIVE purpose (not its stated purpose). Score from −1.0 to +1.0:
+  +Z: The bill effectively accomplishes what it is actually designed to do
+  −Z: The bill fails to accomplish even its operative purpose
+
+The gap between stated and operative purpose is NOT a Z signal — it is a DIATRIBE signal. A bill titled "Freedom Act" that efficiently expands surveillance has high Object Z (operative purpose well-served) AND high Diatribe (large gap between what is said and what is done).
+
+DIATRIBE SIGNAL:
+
+Diatribe measures the denomination intensity of the bill's framing:
+- Low: Bill does approximately what it says. Stated and operative purposes align.
+- Medium: Some rhetorical packaging, but the operative purpose is still legible.
+- High: Stated purpose actively obscures operative purpose. The name, framing, or political justification performs one thing while the mechanism delivers another.
+
+High-Diatribe bills are among the most valuable for curation because they predict where denomination pressure will appear in the vote. Legislators must choose: acknowledge the gap (fluid positioning) or perform the stated purpose and ignore the operative one (denomination).
+
+DISPLACEMENT — THE PRIMARY CURATION CRITERION:
+
+Displacement is the pressure a bill-Object exerts on subjects, pushing them away from comfortable coalitional positions. This is the single most important factor in bill selection.
+
+- High displacement: The bill forces subjects to choose between competing values on different axes. A fiscal conservative who also values institutional stability faces displacement on a populist tax bill. The bill splits the coalition.
+- Low displacement: The bill aligns with existing coalitional gravity. Party-line votes indicate low displacement — subjects could vote without internal tension.
+
+THE BEST BILLS FOR REFRACTION are those where the fluid and denominated positions DIVERGE — where a legislator cannot hold their fluid position and their coalitional loyalty simultaneously.
+
+BASELINE BILLS:
+
+Baseline bills are low-displacement bills where voting follows predictable party-line or coalitional patterns. They establish where each legislator sits when NOT under pressure — the resting position — making departures on high-displacement bills measurable as movement from a known point.
+
+Do not include baselines by default. When the editor asks for baselines, suggest them and tag explicitly as baseline in the displacement field.
+
+QUADRANT TOPOLOGY DIVERSITY:
+
+Each bill activates a different subset of quadrants depending on WHERE its displacement field applies pressure. Do not default to one pattern. Aim for topology variety across your suggestions:
+
+- Cross-diagonal (LF/RD or RF/LD): Bill pressures opposite corners. Most common for culture-war or ideological litmus tests. You will gravitate here — resist oversampling it.
+- Same-side split (LF/LD or RF/RD): Bill fractures one X-axis side along the Y-axis. Institutional vs. populist within the left, or within the right. Economic bills that split business Republicans from populist Republicans are RF/RD. Labor bills that split progressive institutions from grassroots left are LF/LD.
+- Cross-aisle institutional (LF/RF): Bill pressures both institutional quadrants while populist positions are stable. Trade agreements, procedural reform, judicial appointments.
+- Cross-aisle populist (LD/RD): Bill pressures both populist quadrants while institutional positions are stable. Anti-establishment energy from both sides — surveillance bills, term limits, anti-lobbying.
+- Three- or four-quadrant activation: Rare, but high-displacement bills can pressure three or even all four positions. Flag these explicitly.
+
+Before responding, audit your topology distribution. If more than 40% of your suggestions share the same quadrant pair, replace duplicates with bills that activate underrepresented topologies.
+
+BILL SUGGESTION FORMAT:
+
+When suggesting bills, format each as:
+[bill-id] Bill Name — reasoning
+
+Include structured analysis fields on separate lines immediately after the reasoning:
+  displacement: high | medium | low | baseline
+  object-z: estimated score from −1.0 to +1.0
+  diatribe: low | medium | high
+  quadrants: which subjects this bill most activates (LF, RF, LD, RD)
+
+Example:
+[hr-119-1234] Affordable Housing Investment Act — Forces a choice between market-based housing solutions and federal investment mandates; splits both parties along institutional/populist lines because progressive institutionalists and libertarian populists both have reasons to oppose.
+  displacement: high
+  object-z: +0.6
+  diatribe: medium
+  quadrants: LF, RD
+
+INTERACTION STYLE:
+
+- Think out loud about what political field each bill generates
+- Explain WHY a bill creates displacement — what competing values does it force subjects to choose between?
+- For baseline bills, explain what default coalitional position they confirm
+- Iterate based on the editor's confirmations and dismissals
+- If no event is selected, explore the political terrain the editor describes and suggest bills that would reveal positioning within it`;
+
+function beginBillCurate() {
+  const eventId = refState.selectedEvent;
+  const evt = eventId ? PrismDB.getEvent(eventId) : null;
+
+  // Show curation panel, hide bill browser
+  document.getElementById('refBillBrowserPanel').style.display = 'none';
+  document.getElementById('billCuratePanel').style.display = '';
+
+  // Sync API key into curation panel
+  const existingKey = getApiKey();
+  if (existingKey) {
+    document.getElementById('billCurateApiKey').value = existingKey;
+  }
+
+  // Set event title (or blank)
+  document.getElementById('billCurateEventTitle').textContent = evt ? (evt.title || '') : 'No event selected';
+
+  // Reset state
+  billCurateHistory = [];
+  billCurateCandidates = [];
+
+  // Pre-populate candidates from existing linked bills (if event selected)
+  if (evt) {
+    const linked = new Set(evt.linkedBills || []);
+    const storedAnalysis = evt.billAnalysis || {};
+    if (linked.size > 0) {
+      const bills = (typeof LEGISLATION_DATA !== 'undefined') ? LEGISLATION_DATA : [];
+      bills.forEach(b => {
+        if (linked.has(b.id)) {
+          const a = storedAnalysis[b.id] || {};
+          billCurateCandidates.push({
+            id: b.id,
+            name: b.name,
+            meta: b.meta || '',
+            reason: a.reason || 'Previously linked',
+            status: 'confirmed',
+            displacement: a.displacement || null,
+            objectZ: a.objectZ ?? null,
+            diatribe: a.diatribe || null,
+            quadrants: a.quadrants || null
+          });
+        }
+      });
+    }
+  }
+
+  // Reset chat messages — adapt greeting based on whether event is selected
+  const chat = document.getElementById('billCurateChatMessages');
+  const billCount = (typeof LEGISLATION_DATA !== 'undefined') ? LEGISLATION_DATA.length : 0;
+  if (evt) {
+    chat.innerHTML = `<div class="desk-msg claude"><div class="desk-msg-role">Claude</div>Let's curate bills for <strong>${escHtml(evt.title)}</strong>. What political tensions does this event activate? I'll search the ${billCount}-bill catalog for votes that reveal member positioning.</div>`;
+  } else {
+    chat.innerHTML = `<div class="desk-msg claude"><div class="desk-msg-role">Claude</div>No event selected yet — that's fine. Tell me what political terrain you're exploring and I'll search the ${billCount}-bill catalog. You can select an event anytime from the dropdown above to link bills.</div>`;
+  }
+
+  updateBillCurateApplyState();
+  renderBillCurateShortlist();
+}
+
+function exitBillCurate() {
+  document.getElementById('billCuratePanel').style.display = 'none';
+  document.getElementById('refBillBrowserPanel').style.display = '';
+  filterBills();
+}
+
+async function sendBillCurateMessage() {
+  const apiKey = getApiKey();
+  if (!apiKey) { toast('Enter your Anthropic API key first', true); return; }
+
+  const input = document.getElementById('billCurateChatInput');
+  const text = input.value.trim();
+  if (!text) return;
+
+  input.value = '';
+
+  const chat = document.getElementById('billCurateChatMessages');
+  chat.innerHTML += `<div class="desk-msg user"><div class="desk-msg-role">You</div>${escHtml(text)}</div>`;
+  chat.scrollTop = chat.scrollHeight;
+
+  // Build event context
+  const eventId = refState.selectedEvent;
+  const evt = eventId ? PrismDB.getEvent(eventId) : null;
+  const contextLines = [];
+  if (evt) {
+    contextLines.push(`Event: ${evt.title}`);
+    if (evt.subtitle) contextLines.push(`Subtitle: ${evt.subtitle}`);
+    if (evt.description) contextLines.push(`Description: ${evt.description}`);
+    if (evt.axes) {
+      contextLines.push(`X-axis: ${evt.axes.x.neg} ← → ${evt.axes.x.pos}`);
+      contextLines.push(`Y-axis: ${evt.axes.y.neg} ← → ${evt.axes.y.pos}`);
+    }
+    if (evt.tags) contextLines.push(`Tags: ${evt.tags.join(', ')}`);
+  }
+
+  // Build bill catalog summary
+  const bills = (typeof LEGISLATION_DATA !== 'undefined') ? LEGISLATION_DATA : [];
+  const catalog = bills.map(b => `${b.id}|${b.name}|${b.meta}`).join('\n');
+
+  // Current shortlist state
+  const confirmed = billCurateCandidates.filter(c => c.status === 'confirmed');
+  const dismissed = billCurateCandidates.filter(c => c.status === 'dismissed');
+  let shortlistContext = '';
+  if (confirmed.length || dismissed.length) {
+    shortlistContext = '\n\nCURRENT SHORTLIST STATE:';
+    if (confirmed.length) {
+      shortlistContext += '\nConfirmed: ' + confirmed.map(c => c.id).join(', ');
+    }
+    if (dismissed.length) {
+      shortlistContext += '\nDismissed: ' + dismissed.map(c => c.id).join(', ');
+    }
+  }
+
+  // Build API messages
+  const apiMessages = [];
+  const contextBlock = contextLines.join('\n');
+
+  if (billCurateHistory.length === 0) {
+    // First message: include full context + catalog
+    apiMessages.push({
+      role: 'user',
+      content: `[Event context]\n${contextBlock}\n\nBILL CATALOG (${bills.length} bills, format: id|name|meta):\n${catalog}${shortlistContext}\n\n---\n\n${text}`
+    });
+  } else {
+    // Subsequent messages: include history + context refresh (no catalog — it's already in history)
+    apiMessages.push(...billCurateHistory);
+    apiMessages.push({
+      role: 'user',
+      content: `[Context refresh]\n${contextBlock}${shortlistContext}\n---\n\n${text}`
+    });
+  }
+
+  // Show typing
+  chat.innerHTML += `<div class="desk-msg claude" id="billCurateTyping" style="opacity:0.5;"><div class="desk-msg-role">Claude</div>Thinking...</div>`;
+  chat.scrollTop = chat.scrollHeight;
+
+  const sendBtn = document.getElementById('billCurateSendBtn');
+  sendBtn.disabled = true;
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 4096,
+        system: BILL_CURATE_SYSTEM_PROMPT,
+        messages: apiMessages
+      })
+    });
+
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err?.error?.message || `HTTP ${res.status}`);
+    }
+
+    const data = await res.json();
+    const reply = (data.content || []).map(b => b.type === 'text' ? b.text : '').join('').trim();
+
+    // Update history
+    billCurateHistory.push({ role: 'user', content: text });
+    billCurateHistory.push({ role: 'assistant', content: reply });
+
+    // Remove typing
+    const typing = document.getElementById('billCurateTyping');
+    if (typing) typing.remove();
+
+    // Parse reply for bill suggestions: [bill-id] or [bill-id] Bill Name
+    // Also captures structured analysis fields on subsequent lines:
+    //   displacement: high | medium | low | baseline
+    //   object-z: float
+    //   diatribe: low | medium | high
+    //   quadrants: LF, RF, LD, RD
+    const billRegex = /\[([a-z]+-\d{2,3}-\d+)\]/gi;
+    const existingIds = new Set(billCurateCandidates.map(c => c.id));
+    let match;
+    const newCandidates = [];
+
+    // Split reply into lines for field extraction
+    const replyLines = reply.split('\n');
+
+    while ((match = billRegex.exec(reply)) !== null) {
+      const billId = match[1].toLowerCase();
+      if (existingIds.has(billId)) continue;
+      existingIds.add(billId);
+
+      // Find in catalog
+      const billData = bills.find(b => b.id === billId);
+      if (!billData) continue;
+
+      // Extract reason — look for text after the [id] on the same line
+      const afterMatch = reply.substring(match.index + match[0].length);
+      const lineEnd = afterMatch.indexOf('\n');
+      const restOfLine = lineEnd >= 0 ? afterMatch.substring(0, lineEnd) : afterMatch;
+      // Clean up: remove leading bill name, dashes, etc.
+      let reason = restOfLine.replace(/^\s*\**\s*/, '').replace(/^[^—–\-]*[—–\-]\s*/, '').trim();
+      if (!reason || reason.length < 5) reason = 'Suggested by AI';
+
+      // Extract structured analysis fields from lines following the bill ID
+      const matchLineIdx = replyLines.findIndex(l => l.includes(match[0]));
+      let displacement = null, objectZ = null, diatribe = null, quadrants = null;
+      if (matchLineIdx >= 0) {
+        // Scan up to 6 lines after the bill ID line for field tags
+        for (let i = matchLineIdx + 1; i < Math.min(matchLineIdx + 7, replyLines.length); i++) {
+          const ln = replyLines[i].trim().toLowerCase();
+          // Stop if we hit another bill ID or empty line after fields
+          if (/^\[([a-z]+-\d{2,3}-\d+)\]/.test(replyLines[i].trim())) break;
+          if (/^displacement:\s*(.+)/i.test(replyLines[i].trim())) {
+            displacement = replyLines[i].trim().match(/^displacement:\s*(.+)/i)[1].trim().toLowerCase();
+          } else if (/^object-z:\s*(.+)/i.test(replyLines[i].trim())) {
+            const zStr = replyLines[i].trim().match(/^object-z:\s*(.+)/i)[1].trim();
+            objectZ = parseFloat(zStr);
+            if (isNaN(objectZ)) objectZ = null;
+          } else if (/^diatribe:\s*(.+)/i.test(replyLines[i].trim())) {
+            diatribe = replyLines[i].trim().match(/^diatribe:\s*(.+)/i)[1].trim().toLowerCase();
+          } else if (/^quadrants:\s*(.+)/i.test(replyLines[i].trim())) {
+            const qStr = replyLines[i].trim().match(/^quadrants:\s*(.+)/i)[1].trim();
+            quadrants = qStr.split(/[,\s]+/).map(q => q.trim().toUpperCase()).filter(q => ['LF','RF','LD','RD'].includes(q));
+            if (!quadrants.length) quadrants = null;
+          }
+        }
+      }
+
+      newCandidates.push({
+        id: billId,
+        name: billData.name,
+        meta: billData.meta || '',
+        reason: reason,
+        status: 'candidate',
+        // Structured analysis fields (training data)
+        displacement: displacement,
+        objectZ: objectZ,
+        diatribe: diatribe,
+        quadrants: quadrants
+      });
+    }
+
+    if (newCandidates.length) {
+      billCurateCandidates.push(...newCandidates);
+      renderBillCurateShortlist();
+    }
+
+    // Render reply with bill IDs highlighted
+    let renderedReply = escHtml(reply);
+    // Highlight [bill-id] references
+    renderedReply = renderedReply.replace(/\[([a-z]+-\d{2,3}-\d+)\]/gi, (m, id) => {
+      const found = billCurateCandidates.find(c => c.id === id.toLowerCase());
+      if (found) {
+        return `<span style="color:var(--gold);font-weight:600;cursor:pointer;" onclick="scrollToBillCandidate('${id.toLowerCase()}')">[${id}]</span>`;
+      }
+      return m;
+    });
+    // Bold **text**
+    renderedReply = renderedReply.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+
+    chat.innerHTML += `<div class="desk-msg claude"><div class="desk-msg-role">Claude</div>${renderedReply}</div>`;
+    chat.scrollTop = chat.scrollHeight;
+
+    // Update message count
+    const msgCount = document.getElementById('billCurateMsgCount');
+    if (msgCount) msgCount.textContent = `${billCurateHistory.length / 2} exchanges`;
+
+  } catch (e) {
+    console.error('Bill curate error:', e);
+    const typing = document.getElementById('billCurateTyping');
+    if (typing) typing.remove();
+    chat.innerHTML += `<div class="desk-msg claude"><div class="desk-msg-role">Claude</div><span style="color:var(--red);">Error: ${escHtml(e.message)}</span></div>`;
+    chat.scrollTop = chat.scrollHeight;
+  } finally {
+    sendBtn.disabled = false;
+  }
+}
+
+function renderBillCurateShortlist() {
+  const body = document.getElementById('billCurateShortlistBody');
+  const countEl = document.getElementById('billCurateShortlistCount');
+
+  if (!billCurateCandidates.length) {
+    body.innerHTML = `<div style="padding:20px 10px; text-align:center; font-family:'DM Mono',monospace; font-size:11px; color:var(--muted);">
+      Bills will appear here as Claude suggests them.</div>`;
+    countEl.textContent = '0 confirmed';
+    updateBillCurateApplyState();
+    return;
+  }
+
+  // Sort: confirmed first, then candidate, then dismissed
+  const sorted = [...billCurateCandidates].sort((a, b) => {
+    const rank = { confirmed: 0, candidate: 1, dismissed: 2 };
+    return (rank[a.status] || 1) - (rank[b.status] || 1);
+  });
+
+  const confirmedCount = sorted.filter(c => c.status === 'confirmed').length;
+  countEl.textContent = `${confirmedCount} confirmed`;
+  updateBillCurateApplyState();
+
+  body.innerHTML = sorted.map(c => {
+    const statusClass = c.status;
+    let actions = '';
+    if (c.status === 'candidate') {
+      actions = `<div class="bc-card-actions">
+        <button class="confirm-btn" onclick="setBillCandidateStatus('${c.id}','confirmed')">✓ Confirm</button>
+        <button onclick="setBillCandidateStatus('${c.id}','dismissed')">✕ Dismiss</button>
+      </div>`;
+    } else if (c.status === 'confirmed') {
+      actions = `<div class="bc-card-actions">
+        <button onclick="setBillCandidateStatus('${c.id}','candidate')">↩ Unconfirm</button>
+        <button onclick="setBillCandidateStatus('${c.id}','dismissed')">✕ Dismiss</button>
+      </div>`;
+    } else {
+      actions = `<div class="bc-card-actions">
+        <button onclick="setBillCandidateStatus('${c.id}','candidate')">↩ Restore</button>
+      </div>`;
+    }
+
+    return `<div class="bc-card ${statusClass}" id="bcCard_${c.id.replace(/[^a-z0-9]/gi, '_')}">
+      <div class="bc-card-title">${escHtml(c.name)}</div>
+      <div class="bc-card-meta">${escHtml(c.meta)}</div>
+      <div class="bc-card-reason">${escHtml(c.reason)}</div>
+      ${c.displacement || c.objectZ !== null || c.diatribe || c.quadrants ? `<div class="bc-card-analysis">
+        ${c.displacement ? `<span class="bc-tag bc-disp-${c.displacement === 'baseline' ? 'baseline' : c.displacement}">${c.displacement === 'baseline' ? '◇ baseline' : '◆ ' + c.displacement}</span>` : ''}
+        ${c.objectZ !== null && c.objectZ !== undefined ? `<span class="bc-tag">Z ${c.objectZ > 0 ? '+' : ''}${c.objectZ.toFixed(1)}</span>` : ''}
+        ${c.diatribe ? `<span class="bc-tag bc-dia-${c.diatribe}">dia: ${c.diatribe}</span>` : ''}
+        ${c.quadrants ? c.quadrants.map(q => `<span class="bc-tag bc-quad-${q}">${q}</span>`).join('') : ''}
+      </div>` : ''}
+      ${actions}
+    </div>`;
+  }).join('');
+}
+
+function setBillCandidateStatus(billId, newStatus) {
+  const c = billCurateCandidates.find(c => c.id === billId);
+  if (c) {
+    c.status = newStatus;
+    renderBillCurateShortlist();
+  }
+}
+
+function scrollToBillCandidate(billId) {
+  const safeId = billId.replace(/[^a-z0-9]/gi, '_');
+  const card = document.getElementById('bcCard_' + safeId);
+  if (card) card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function applyBillCuration() {
+  const eventId = refState.selectedEvent;
+  if (!eventId) { toast('Select an event first to link bills'); return; }
+
+  const confirmed = billCurateCandidates.filter(c => c.status === 'confirmed');
+  if (!confirmed.length) { toast('No bills confirmed'); return; }
+
+  const evt = PrismDB.getEvent(eventId);
+  if (!evt) return;
+
+  // Merge with any existing linked bills (don't remove manually linked ones)
+  const linked = new Set(evt.linkedBills || []);
+  let newCount = 0;
+  confirmed.forEach(c => {
+    if (!linked.has(c.id)) { linked.add(c.id); newCount++; }
+  });
+
+  // Persist structured analysis data per bill (training data)
+  const analysis = evt.billAnalysis ? { ...evt.billAnalysis } : {};
+  confirmed.forEach(c => {
+    if (c.displacement || c.objectZ !== null || c.diatribe || c.quadrants) {
+      analysis[c.id] = {
+        displacement: c.displacement || null,
+        objectZ: c.objectZ ?? null,
+        diatribe: c.diatribe || null,
+        quadrants: c.quadrants || null,
+        reason: c.reason || null,
+        confirmedAt: Date.now()
+      };
+    }
+  });
+
+  PrismDB.updateEvent(eventId, {
+    linkedBills: Array.from(linked),
+    billAnalysis: analysis
+  });
+
+  toast(`${newCount} new bills linked · ${linked.size} total`);
+
+  // Return to browser view
+  exitBillCurate();
+}
+
+function updateBillCurateApplyState() {
+  const applyBtn = document.getElementById('billCurateApplyBtn');
+  if (!applyBtn) return;
+  const hasEvent = !!refState.selectedEvent;
+  const hasConfirmed = billCurateCandidates.some(c => c.status === 'confirmed');
+  applyBtn.disabled = !hasEvent || !hasConfirmed;
+  applyBtn.textContent = hasEvent ? 'Link confirmed bills to event' : 'Select an event to link bills';
+}
+
+
+// ============================================================
 // DIALECTICS CHAT DRAWER
 // ============================================================
 
@@ -8726,14 +11011,15 @@ updateReviewBadge();
 // ============================================================
 
 function getApiKey() {
-  return (document.getElementById('paraApiKey')?.value || document.getElementById('aiApiKey')?.value || '').trim();
+  return (document.getElementById('paraApiKey')?.value || document.getElementById('aiApiKey')?.value || document.getElementById('refApiKey')?.value || document.getElementById('billCurateApiKey')?.value || '').trim();
 }
 
 function syncApiKeys(val) {
-  const events = document.getElementById('aiApiKey');
-  const para = document.getElementById('paraApiKey');
-  if (events && events.value !== val) events.value = val;
-  if (para && para.value !== val) para.value = val;
+  const ids = ['aiApiKey', 'paraApiKey', 'refApiKey', 'billCurateApiKey'];
+  ids.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && el.value !== val) el.value = val;
+  });
 }
 
 function toggleTheme() {
