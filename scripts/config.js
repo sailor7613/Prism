@@ -23,5 +23,5 @@ module.exports = {
   DELAY_MS: 500,           // Pause between API calls (conservative)
   RETRY_DELAY_MS: 60000,   // Wait on rate limit (429)
   VOTEVIEW_URL: 'https://voteview.com/static/data/out/members/HSall_members.csv',
-  OUTPUT_DIR: path.join(__dirname, 'output'),
+  OUTPUT_DIR: path.join(__dirname, '..', 'data'),
 };
