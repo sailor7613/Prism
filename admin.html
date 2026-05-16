@@ -3481,6 +3481,10 @@ body {
       <label for="evtFraming">Framing (longer contextual text)</label>
       <textarea id="evtFraming" class="tall" placeholder="The full framing paragraph shown to users..."></textarea>
     </div>
+    <div class="field">
+      <label for="evtFramingKeywords">Framing keywords (cloud)</label>
+      <input type="text" id="evtFramingKeywords" placeholder="3–6 comma-separated short phrases — e.g. ICE killing, gun rights inversion, armed civilian">
+    </div>
     <div class="field source-field">
       <label for="evtSource">Sources &amp; context</label>
       <textarea id="evtSource" placeholder="Links, articles, screenshots, notes on why this event was chosen..."></textarea>
@@ -6828,6 +6832,7 @@ function editEvent(id) {
   document.getElementById('evtDate').value = evt.date || '';
   document.getElementById('evtPrompt').value = evt.prompt || '';
   document.getElementById('evtFraming').value = evt.framing || '';
+  document.getElementById('evtFramingKeywords').value = Array.isArray(evt.framingKeywords) ? evt.framingKeywords.join(', ') : '';
   document.getElementById('evtSource').value = evt.meta?.source || '';
   document.getElementById('evtStatus').value = evt.meta?.status || 'draft';
   document.getElementById('evtActive').checked = !!evt.active;
@@ -6884,7 +6889,7 @@ function hideForm() {
 }
 
 function clearForm() {
-  const fields = ['evtTitle', 'evtCategory', 'evtDate', 'evtPrompt', 'evtFraming', 'evtSource',
+  const fields = ['evtTitle', 'evtCategory', 'evtDate', 'evtPrompt', 'evtFraming', 'evtFramingKeywords', 'evtSource',
     'axXPos', 'axXNeg', 'axYPos', 'axYNeg',
     'diaLF', 'diaLD', 'diaRF', 'diaRD'];
   fields.forEach(id => { document.getElementById(id).value = ''; });
@@ -7010,6 +7015,10 @@ function saveEvent() {
     date: document.getElementById('evtDate').value,
     prompt: document.getElementById('evtPrompt').value.trim(),
     framing: document.getElementById('evtFraming').value.trim(),
+    framingKeywords: document.getElementById('evtFramingKeywords').value
+      .split(',')
+      .map(s => s.trim())
+      .filter(Boolean),
     active: document.getElementById('evtActive').checked,
     prevalentAxis: document.getElementById('evtPrevalentAxis').value,
     antiValentBand: document.getElementById('evtAntiValentBand').value,
@@ -8170,8 +8179,16 @@ Also generate:
 - prompt: a single declarative sentence summarizing the news event (max 20 words)
 - framing: 2–3 sentences of neutral background context shown to users before they respond
 
-KEYWORDS:
-For each band response, supply xKeyword and yKeyword — the single most load-bearing word on each axis from that response.
+FRAMING KEYWORDS (event-level cloud):
+- framingKeywords: 3–6 short phrases (1–4 words each) that condense the framing's central tension into visible anchors. These will appear as a floating keyword cloud at the top of the user's screen during the Diatribe scoring step, after a splash that shows the full framing. The user reads the framing, taps to advance, and these keywords persist as referents while they score.
+Selection criteria:
+  - Each keyword must carry dialectical load — name an entity, claim, or tension actually in dispute, not generic framing words.
+  - Together they should reconstruct enough of the framing's argument to gut-check meaning at a glance.
+  - Prefer noun phrases over verbs; prefer specifics over abstractions (e.g. "84% enrichment" over "nuclear concern").
+  - No stopwords-only phrases. No quadrant-aligned slogans — these are pre-scoring referents, not positions.
+
+RESPONSE-LEVEL KEYWORDS:
+For each band response, supply xKeyword and yKeyword — the single most load-bearing word on each axis from that response. (These are distinct from the event-level framingKeywords above.)
 
 DIATRIBE FIELDS (short 15-25 word descriptors):
 LF: Left-side fluid discourse pattern for this event
@@ -8184,6 +8201,7 @@ OUTPUT: Respond ONLY with valid JSON. No preamble, no explanation, no markdown f
   "category": "...",
   "prompt": "...",
   "framing": "...",
+  "framingKeywords": ["...", "...", "..."],
   "prevalentAxis": "x" | "y",
   "antiValentBand": "fluid" | "coalition" | "denominated",
   "antiValentRationale": "One line explaining why this band is anti-valent.",
@@ -8281,7 +8299,7 @@ async function generateSuggestions() {
     prompt   ? `Prompt: ${prompt}`   : null,
     framing  ? `Framing: ${framing}` : null,
     '',
-    'Generate all fields: category, prompt, framing, prevalentAxis, antiValentBand with rationale, axis labels, four quadrant responses with three bands each (fluid/coalition/denominated, 1–2 sentences each), keywords, word tags per band, and diatribe descriptors.'
+    'Generate all fields: category, prompt, framing, framingKeywords (3–6 short phrases for the event-level cloud), prevalentAxis, antiValentBand with rationale, axis labels, four quadrant responses with three bands each (fluid/coalition/denominated, 1–2 sentences each), xKeyword/yKeyword per band, word tags per band, and diatribe descriptors.'
   ].filter(l => l !== null).join('\n');
 
   try {
@@ -8324,6 +8342,10 @@ async function generateSuggestions() {
     setIfEmpty('evtCategory', draft.category);
     setIfEmpty('evtPrompt',   draft.prompt);
     setIfEmpty('evtFraming',  draft.framing);
+    if (Array.isArray(draft.framingKeywords) && draft.framingKeywords.length > 0) {
+      const kwEl = document.getElementById('evtFramingKeywords');
+      if (kwEl && !kwEl.value.trim()) kwEl.value = draft.framingKeywords.join(', ');
+    }
 
     // ── Apply axis labels ──
     const ax = draft.axisLabels || {};
@@ -10797,6 +10819,10 @@ function applyDraftFromChat(msgId) {
   setIfEmpty('evtCategory', draft.category);
   setIfEmpty('evtPrompt',   draft.prompt);
   setIfEmpty('evtFraming',  draft.framing);
+  if (Array.isArray(draft.framingKeywords) && draft.framingKeywords.length > 0) {
+    const kwEl = document.getElementById('evtFramingKeywords');
+    if (kwEl && !kwEl.value.trim()) kwEl.value = draft.framingKeywords.join(', ');
+  }
 
   // Axis labels (always overwrite — draft is the authority)
   const ax = draft.axisLabels || {};
