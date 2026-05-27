@@ -8054,8 +8054,8 @@ function syncKeywordFields(key) {
   // key is 'A_fluid' etc. → DOM IDs are 'respA_fluid_xWord'
   const xEl = document.getElementById('resp' + key + '_xWord');
   const yEl = document.getElementById('resp' + key + '_yWord');
-  if (xEl) xEl.value = xWord;
-  if (yEl) yEl.value = yWord;
+  if (xEl && xWord) xEl.value = xWord;
+  if (yEl && yWord) yEl.value = yWord;
 }
 
 function updateMicroPreview(key) {
@@ -8188,7 +8188,7 @@ Selection criteria:
   - No stopwords-only phrases. No quadrant-aligned slogans — these are pre-scoring referents, not positions.
 
 RESPONSE-LEVEL KEYWORDS:
-For each band response, supply xKeyword and yKeyword — the single most load-bearing word on each axis from that response. (These are distinct from the event-level framingKeywords above.)
+For each band response, supply xWord and yWord — the single most load-bearing word on each axis from that response. (These are distinct from the event-level framingKeywords above.)
 
 DIATRIBE FIELDS (short 15-25 word descriptors):
 LF: Left-side fluid discourse pattern for this event
@@ -8209,9 +8209,9 @@ OUTPUT: Respond ONLY with valid JSON. No preamble, no explanation, no markdown f
   "quadrantResponses": {
     "A": {
       "xSide": "left",
-      "fluid": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." },
-      "coalition": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." },
-      "denominated": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." }
+      "fluid": { "text": "1-2 sentences.", "xWord": "...", "yWord": "..." },
+      "coalition": { "text": "1-2 sentences.", "xWord": "...", "yWord": "..." },
+      "denominated": { "text": "1-2 sentences.", "xWord": "...", "yWord": "..." }
     },
     "B": { "xSide": "right", "fluid": {...}, "coalition": {...}, "denominated": {...} },
     "C": { "xSide": "left",  "fluid": {...}, "coalition": {...}, "denominated": {...} },
@@ -8299,7 +8299,7 @@ async function generateSuggestions() {
     prompt   ? `Prompt: ${prompt}`   : null,
     framing  ? `Framing: ${framing}` : null,
     '',
-    'Generate all fields: category, prompt, framing, framingKeywords (3–6 short phrases for the event-level cloud), prevalentAxis, antiValentBand with rationale, axis labels, four quadrant responses with three bands each (fluid/coalition/denominated, 1–2 sentences each), xKeyword/yKeyword per band, word tags per band, and diatribe descriptors.'
+    'Generate all fields: category, prompt, framing, framingKeywords (3–6 short phrases for the event-level cloud), prevalentAxis, antiValentBand with rationale, axis labels, four quadrant responses with three bands each (fluid/coalition/denominated, 1–2 sentences each), xWord/yWord per band, word tags per band, and diatribe descriptors.'
   ].filter(l => l !== null).join('\n');
 
   try {
@@ -8375,8 +8375,8 @@ async function generateSuggestions() {
         if (!bandData) return;
         const prefix = `resp${q}_${band}`;
         if (bandData.text) document.getElementById(prefix).value = bandData.text;
-        if (bandData.xKeyword) { const el = document.getElementById(`${prefix}_xWord`); if (el) el.value = bandData.xKeyword; }
-        if (bandData.yKeyword) { const el = document.getElementById(`${prefix}_yWord`); if (el) el.value = bandData.yKeyword; }
+        if (bandData.xWord) { const el = document.getElementById(`${prefix}_xWord`); if (el) el.value = bandData.xWord; }
+        if (bandData.yWord) { const el = document.getElementById(`${prefix}_yWord`); if (el) el.value = bandData.yWord; }
       });
     });
 
@@ -10510,9 +10510,9 @@ PRISM_DRAFT
   "quadrantResponses": {
     "A": {
       "xSide": "left" or "right",
-      "fluid": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." },
-      "coalition": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." },
-      "denominated": { "text": "1-2 sentences.", "xKeyword": "...", "yKeyword": "..." }
+      "fluid": { "text": "1-2 sentences.", "xWord": "...", "yWord": "..." },
+      "coalition": { "text": "1-2 sentences.", "xWord": "...", "yWord": "..." },
+      "denominated": { "text": "1-2 sentences.", "xWord": "...", "yWord": "..." }
     },
     "B": { ... }, "C": { ... }, "D": { ... }
   },
@@ -10852,8 +10852,8 @@ function applyDraftFromChat(msgId) {
       if (!bandData) return;
       const prefix = `resp${q}_${band}`;
       if (bandData.text) document.getElementById(prefix).value = bandData.text;
-      if (bandData.xKeyword) { const el = document.getElementById(`${prefix}_xWord`); if (el) el.value = bandData.xKeyword; }
-      if (bandData.yKeyword) { const el = document.getElementById(`${prefix}_yWord`); if (el) el.value = bandData.yKeyword; }
+      if (bandData.xWord) { const el = document.getElementById(`${prefix}_xWord`); if (el) el.value = bandData.xWord; }
+      if (bandData.yWord) { const el = document.getElementById(`${prefix}_yWord`); if (el) el.value = bandData.yWord; }
     });
   });
 
