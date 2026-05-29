@@ -7077,6 +7077,20 @@ function saveEvent() {
     };
   });
 
+  // PrismDB.updateEvent shallow-merges data over the existing event, so
+  // eventData.meta would otherwise clobber any previously logged aiDeltas.
+  let priorAIDeltas = [];
+  if (currentEditId) {
+    const existing = PrismDB.getEvent(currentEditId);
+    if (existing && existing.meta && Array.isArray(existing.meta.aiDeltas)) {
+      priorAIDeltas = existing.meta.aiDeltas;
+    }
+  }
+  const newAIDeltas = computeAIDeltas(eventData, aiLastDraft, PRISM_SYSTEM_PROMPT_ID);
+  if (priorAIDeltas.length > 0 || newAIDeltas.length > 0) {
+    eventData.meta.aiDeltas = priorAIDeltas.concat(newAIDeltas);
+  }
+
   // Save
   if (currentEditId) {
     PrismDB.updateEvent(currentEditId, eventData);
@@ -7085,6 +7099,9 @@ function saveEvent() {
     const created = PrismDB.addEvent(eventData);
     toast(`Created: ${title} (${created.id})`);
   }
+
+  // Prevent a subsequent save from re-logging the same proposal.
+  aiLastDraft = null;
 
   hideForm();
   refreshList();
@@ -8096,6 +8113,10 @@ function initAllTaggers() {
 // AI AUTO-SUGGEST
 // ============================================================
 
+// Bump the suffix whenever PRISM_SYSTEM_PROMPT changes meaningfully, so
+// editorial-delta records (J_module10 §10.12) stay attributable to the prompt.
+const PRISM_SYSTEM_PROMPT_ID = 'PRISM_SYSTEM_PROMPT_v1';
+
 const PRISM_SYSTEM_PROMPT = `You are the Prism dialectical encoding engine. Prism maps political events onto a two-axis coordinate system and generates four response cards — one per quadrant — each written from inside a genuine political position at the good-faith floor.
 
 THE TWO AXES:
@@ -8230,6 +8251,72 @@ OUTPUT: Respond ONLY with valid JSON. No preamble, no explanation, no markdown f
 
 // Store AI draft for metadata comparison
 let aiLastDraft = null;
+
+// Editorial-delta logging — J_module10 §10.12.
+// proposalValue / savedValue are stored raw because the AI and saved
+// shapes differ (AI: {word, tag, weight, isPrimary}; saved: {t, w, weight, axis}).
+// Equality for the emit/skip decision normalizes both into a canonical form.
+function computeAIDeltas(savedEventData, aiDraft, promptId) {
+  if (!aiDraft) return [];
+  const savedAt = new Date().toISOString();
+  const deltas = [];
+  const eq = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+  const push = (field, proposalValue, savedValue) => {
+    deltas.push({ field, proposalValue, savedValue, savedAt, promptId });
+  };
+
+  // Sub-layer A
+  if (Array.isArray(aiDraft.framingKeywords)) {
+    const proposal = aiDraft.framingKeywords;
+    const saved = Array.isArray(savedEventData.framingKeywords) ? savedEventData.framingKeywords : [];
+    if (!eq(proposal, saved)) push('framingKeywords', proposal, saved);
+  }
+
+  const aiQR = aiDraft.quadrantResponses || {};
+  const aiWT = aiDraft.wordTags || {};
+
+  const normTag = (t) => {
+    const tokenRaw = (t.word != null ? t.word : t.t) || '';
+    const token = String(tokenRaw).toLowerCase().replace(/[^a-z0-9]/g, '');
+    const tag = t.tag || t.w || null;
+    const weight = (t.weight == null) ? null : t.weight;
+    let axis = t.axis || null;
+    if (!axis && t.isPrimary && tag) axis = tag.charAt(0); // 'xPos' → 'x'
+    return { token, tag, weight, axis };
+  };
+  const canonical = (arr) => (arr || [])
+    .map(normTag)
+    .filter(x => x.token && x.tag)
+    .sort((a, b) => a.token.localeCompare(b.token));
+
+  ['A', 'B', 'C', 'D'].forEach(q => {
+    const savedQuad = (savedEventData.responses || {})[q] || {};
+    const aiQuad    = aiQR[q] || {};
+    BANDS.forEach(band => {
+      const savedBand = savedQuad[band] || {};
+      const aiBand    = aiQuad[band] || {};
+
+      // Sub-layer B
+      if (aiBand.xWord != null && aiBand.xWord !== (savedBand.xWord || '')) {
+        push(`responses.${q}.${band}.xWord`, aiBand.xWord, savedBand.xWord || '');
+      }
+      if (aiBand.yWord != null && aiBand.yWord !== (savedBand.yWord || '')) {
+        push(`responses.${q}.${band}.yWord`, aiBand.yWord, savedBand.yWord || '');
+      }
+
+      // Sub-layer C
+      const aiTags = (aiWT[q] && aiWT[q][band]) || null;
+      if (aiTags && aiTags.length > 0) {
+        const savedWords = savedBand.words || [];
+        if (!eq(canonical(aiTags), canonical(savedWords))) {
+          push(`responses.${q}.${band}.words`, aiTags, savedWords);
+        }
+      }
+    });
+  });
+
+  return deltas;
+}
 
 function aiSetStatus(state, msg) {
   const el = document.getElementById('aiStatus');
@@ -9435,6 +9522,31 @@ Each bill activates a different subset of quadrants depending on WHERE its displ
 
 Before responding, audit your topology distribution. If more than 40% of your suggestions share the same quadrant pair, replace duplicates with bills that activate underrepresented topologies.
 
+FRAMING KEYWORDS (per-bill cloud):
+
+For each bill you shortlist, supply 3–6 short phrases (1–4 words each) that condense the bill's dialectical load into visible anchors. These will render as a keyword cloud on the bill's UI surface, persisting as referents while the user reads the bill in context.
+
+Selection criteria:
+  - Each keyword must carry dialectical load — name an entity, claim, operative effect, or stated/operative tension actually in dispute. Generic legislative vocabulary ("appropriations," "amendment," "section 4") does not qualify.
+  - Together they should reconstruct enough of the bill's stakes to gut-check meaning at a glance: what the bill IS as an object and what it TOUCHES.
+  - Prefer noun phrases over verbs; prefer specifics over abstractions (e.g. "$50B Pentagon ceiling" over "defense spending").
+  - Lift from substance, not statutory phrasing. "Notwithstanding," "subparagraph (b)(2)," and other procedural language are noise.
+  - Do not paraphrase the displacement / object-z / diatribe / quadrants fields. Those are structured signals; the keywords are the dialectical substrate they sit on top of. "Coalition split pressure" or "high-displacement vote" restates structured fields and does not qualify.
+  - No quadrant-aligned slogans. A phrase that already encodes its own resolution ("woke indoctrination," "billionaire tax dodge") is denominated, not dialectical. These are pre-positioning referents, not positions.
+  - HARD RULE: Name the gap. Do not take a side on it. "Surveillance scope expansion" inside a bill titled "Freedom Act" names the gap; "Freedom Act overreach" takes a side. This rule overrides all others when in tension.
+
+When the bill's stated framing IS itself a denomination event (uses slurs, dehumanizing language, or contested factual claims about identified groups), reproducing that framing is not neutral transmission — it is joining the side that produced the framing. In those cases, name the denomination operation rather than the language. For a bill whose stated title slurs trans people, keywords like "anti-trans framing, Title IX preemption, trans athlete participation, federal categorical rule" surface that the bill exists, what it operatively does, and that its stated framing is denominated — without making the cloud a vector for the slur. Element Grammar D-series treats denomination as a structural operation, not as content to preserve at full lexical fidelity. Same principle applies here.
+
+Register — scales with Diatribe:
+
+The bill's own rhetorical framing enters the cloud in proportion to its Diatribe level. The stated/operative gap is itself a function of Z; the keyword cloud should make whatever gap exists legible to the user, no more and no less.
+
+  - Low Diatribe (stated ≈ operative): keep keywords in the operative/neutral register. The bill says what it does, so the cloud should too.
+  - Medium Diatribe (rhetorical packaging present, operative purpose still legible): include 1–2 keywords from the bill's own framing alongside operative-substance keywords. The contrast surfaces the packaging without overstating it.
+  - High Diatribe (stated actively obscures operative): the gap itself is the dialectical action. The cloud must carry both registers — at least one keyword from the rhetorical frame, at least two from the operative mechanism — so the user can feel the gap at a glance.
+
+Lift keywords from the bill's mechanism (the kind of political force it generates — regulatory action, statutory architecture, enforcement authorization, executive delegation, judicial preemption, etc.), the discursive objects it activates (sovereignty, intervention, enforcement, regulation, democratic procedure, constitutional order, trade, immigration, war powers, and similar substantive concepts), and — where present — the stated/operative tension itself.
+
 BILL SUGGESTION FORMAT:
 
 When suggesting bills, format each as:
@@ -9445,13 +9557,23 @@ Include structured analysis fields on separate lines immediately after the reaso
   object-z: estimated score from −1.0 to +1.0
   diatribe: low | medium | high
   quadrants: which subjects this bill most activates (LF, RF, LD, RD)
+  keywords: 3–6 comma-separated framing keywords per the rules above
 
-Example:
+Example (medium Diatribe — 1 frame keyword, operative substance):
 [hr-119-1234] Affordable Housing Investment Act — Forces a choice between market-based housing solutions and federal investment mandates; splits both parties along institutional/populist lines because progressive institutionalists and libertarian populists both have reasons to oppose.
   displacement: high
   object-z: +0.6
   diatribe: medium
   quadrants: LF, RD
+  keywords: affordable housing investment, federal mandate, market vouchers, zoning preemption, median-income threshold
+
+Example (high Diatribe — frame and operative both load-bearing, gap legible):
+[hr-119-5678] Critical Infrastructure Protection Act — Stated as hardening physical infrastructure against attack; operatively expands surveillance authorities of a specified agency with minimal restriction. The bill's name performs one thing while the mechanism delivers another.
+  displacement: medium
+  object-z: +0.5
+  diatribe: high
+  quadrants: LF, RD
+  keywords: infrastructure protection, surveillance authority expansion, agency oversight reduction, third-party data access, absent sunset clause
 
 INTERACTION STYLE:
 
@@ -9665,10 +9787,10 @@ async function sendBillCurateMessage() {
 
       // Extract structured analysis fields from lines following the bill ID
       const matchLineIdx = replyLines.findIndex(l => l.includes(match[0]));
-      let displacement = null, objectZ = null, diatribe = null, quadrants = null;
+      let displacement = null, objectZ = null, diatribe = null, quadrants = null, framingKeywords = null;
       if (matchLineIdx >= 0) {
-        // Scan up to 6 lines after the bill ID line for field tags
-        for (let i = matchLineIdx + 1; i < Math.min(matchLineIdx + 7, replyLines.length); i++) {
+        // Scan up to 8 lines after the bill ID line for field tags
+        for (let i = matchLineIdx + 1; i < Math.min(matchLineIdx + 9, replyLines.length); i++) {
           const ln = replyLines[i].trim().toLowerCase();
           // Stop if we hit another bill ID or empty line after fields
           if (/^\[([a-z]+-\d{2,3}-\d+)\]/.test(replyLines[i].trim())) break;
@@ -9684,6 +9806,10 @@ async function sendBillCurateMessage() {
             const qStr = replyLines[i].trim().match(/^quadrants:\s*(.+)/i)[1].trim();
             quadrants = qStr.split(/[,\s]+/).map(q => q.trim().toUpperCase()).filter(q => ['LF','RF','LD','RD'].includes(q));
             if (!quadrants.length) quadrants = null;
+          } else if (/^keywords:\s*(.+)/i.test(replyLines[i].trim())) {
+            const kwStr = replyLines[i].trim().match(/^keywords:\s*(.+)/i)[1].trim();
+            framingKeywords = kwStr.split(',').map(k => k.trim()).filter(Boolean);
+            if (!framingKeywords.length) framingKeywords = null;
           }
         }
       }
@@ -9698,7 +9824,8 @@ async function sendBillCurateMessage() {
         displacement: displacement,
         objectZ: objectZ,
         diatribe: diatribe,
-        quadrants: quadrants
+        quadrants: quadrants,
+        framingKeywords: framingKeywords
       });
     }
 
@@ -9828,12 +9955,13 @@ function applyBillCuration() {
   // Persist structured analysis data per bill (training data)
   const analysis = evt.billAnalysis ? { ...evt.billAnalysis } : {};
   confirmed.forEach(c => {
-    if (c.displacement || c.objectZ !== null || c.diatribe || c.quadrants) {
+    if (c.displacement || c.objectZ !== null || c.diatribe || c.quadrants || c.framingKeywords) {
       analysis[c.id] = {
         displacement: c.displacement || null,
         objectZ: c.objectZ ?? null,
         diatribe: c.diatribe || null,
         quadrants: c.quadrants || null,
+        framingKeywords: c.framingKeywords || null,
         reason: c.reason || null,
         confirmedAt: Date.now()
       };
