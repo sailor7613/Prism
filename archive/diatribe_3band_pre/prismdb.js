@@ -619,12 +619,10 @@ const PrismDB = (() => {
           }
         },
         diatribe: {
-          LF: { text: 'The left is holding what\'s true — a federal agent killed a legally armed American citizen — and asking for the institutional response that fact demands: investigation, evidence, accountability before narrative.', side: 'left', band: 'fluid' },
-          LC: { text: 'The left is watching its own discourse skip from "independent inquiry" to "abolish ICE" in forty-eight hours, and only the people still inside the move can feel it slipping.', side: 'left', band: 'coalition' },
-          LD: { text: 'The left is reading the killing as proof of state fascism and treating every prior framework as collaboration — Pretti frozen into martyr vehicle, the institution frozen into machine.', side: 'left', band: 'denominated' },
-          RF: { text: 'The principled right is holding the constitutional line — a legal carrier killed by federal agents demands the same 2A defense that would extend to anyone else, regardless of context.', side: 'right', band: 'fluid' },
-          RC: { text: 'The right is watching its own people call a legal gun carrier a domestic terrorist and starting to see 2A becoming tribalism in costume — not switching sides, but not pretending it\'s fine.', side: 'right', band: 'coalition' },
-          RD: { text: 'The right is performing law-and-order loyalty: a man with a holstered weapon near federal agents becomes "domestic terrorism," and sanctuary cities become the cause of the killing the agents committed.', side: 'right', band: 'denominated' }
+          LG: { text: 'The left is demanding institutional accountability for a killing that demands it — investigation before narrative.', side: 'left', faith: 'good' },
+          LB: { text: 'The left is using Pretti\'s death to advance abolition politics, freezing his identity into a martyr vehicle.', side: 'left', faith: 'bad' },
+          RG: { text: 'The principled right sees a constitutional crisis — a legal carrier killed by federal agents deserves 2A defense regardless of context.', side: 'right', faith: 'good' },
+          RB: { text: 'The right is performing law-and-order loyalty, selectively applying 2A principles based on who the gun was pointed at.', side: 'right', faith: 'bad' }
         }
       },
 
@@ -726,12 +724,10 @@ const PrismDB = (() => {
           }
         },
         diatribe: {
-          LF: { text: 'The left is holding the procedural line — state fraud prosecutions were working, six federal prosecutors resigned, the operation buried the fix that was already underway.', side: 'left', band: 'fluid' },
-          LC: { text: 'The left knows the fraud was real and that Somali whistleblowers reported it first — and can\'t have the harder conversation because both sides demand the position pick one outrage.', side: 'left', band: 'coalition' },
-          LD: { text: 'The left is reading Metro Surge as ethnic cleansing with extra steps, treating the fraud as a capitalist pretext and anyone naming enforcement concerns as carrying water for fascism.', side: 'left', band: 'denominated' },
-          RF: { text: 'The right is responding to a real operational crisis — a billion in fraud with no accountability is a genuine failure that state systems wouldn\'t engage.', side: 'right', band: 'fluid' },
-          RC: { text: 'The right wanted accountability and got Border Patrol arresting landscapers — three thousand arrests, zero fraud convictions, the prosecutors quit, the fraud cases collapsed.', side: 'right', band: 'coalition' },
-          RD: { text: 'The right is using the fraud as permission structure for an immigration spectacle, framing state caution as cover for terror financing and federal agents as the only adults in the room.', side: 'right', band: 'denominated' }
+          LG: { text: 'The left is holding the procedural line — state prosecution was working, the federal operation destroyed it.', side: 'left', faith: 'good' },
+          LB: { text: 'The left is using the community as a shield, refusing to acknowledge real fraud to deny enforcement any legitimacy.', side: 'left', faith: 'bad' },
+          RG: { text: 'The right is responding to a real operational crisis — a billion in fraud with no accountability is a genuine failure.', side: 'right', faith: 'good' },
+          RB: { text: 'The right is manufacturing urgency to expand executive power — the fraud framing is a pretext for immigration spectacle.', side: 'right', faith: 'bad' }
         }
       },
 
@@ -833,12 +829,10 @@ const PrismDB = (() => {
           }
         },
         diatribe: {
-          LF: { text: 'The left is naming a structural design problem — financialization of housing is a documented architecture with documented policy remedies, blocked by lobbying not by complexity.', side: 'left', band: 'fluid' },
-          LC: { text: 'The left is watching three versions of the same bill die in committee and recognizing that belief in the legislative path is also belief in the institutions that keep deciding not to use it.', side: 'left', band: 'coalition' },
-          LD: { text: 'The left is reading every market participant as private equity, treating rent itself as illegitimate income and any reformist position as complicity in dispossession.', side: 'left', band: 'denominated' },
-          RF: { text: 'The right is correct that supply constraints are the foundational driver — fifty years of exclusion zoning created the vacuum institutional buyers walked into.', side: 'right', band: 'fluid' },
-          RC: { text: 'The right is watching Delaware LLCs outbid families in cash and recognizing that the property-rights framework it used to protect community is now being used to tell it to shut up about the loss.', side: 'right', band: 'coalition' },
-          RD: { text: 'The right is invoking "free market" to defend an arrangement where institutional capital faces none of the friction ordinary buyers face, scapegoating zoning to keep the rent-extraction architecture intact.', side: 'right', band: 'denominated' }
+          LG: { text: 'The left is naming a structural design problem — financialization of housing is a policy choice with policy remedies.', side: 'left', faith: 'good' },
+          LB: { text: 'The left treats every market participant as private equity, collapsing the distinction between landlords and hedge funds.', side: 'left', faith: 'bad' },
+          RG: { text: 'The right is correct that supply constraints are the foundational driver — building more is a necessary condition.', side: 'right', faith: 'good' },
+          RB: { text: 'The right invokes "free market" to defend an arrangement where institutional capital faces no friction ordinary buyers face.', side: 'right', faith: 'bad' }
         }
       },
 
@@ -940,12 +934,10 @@ const PrismDB = (() => {
           }
         },
         diatribe: {
-          LF: { text: 'The left is raising legitimate questions about strategic coherence — first-strike signaling without a trigger, coalition, or post-strike plan is denomination work, not strategy.', side: 'left', band: 'fluid' },
-          LC: { text: 'The left is right about 1953, the Shah, the JCPOA withdrawal — and is collapsing into a mode where naming the history substitutes for engaging the 84% enrichment in front of it.', side: 'left', band: 'coalition' },
-          LD: { text: 'The left is reading every escalation as the next Iraq, treating the nuclear threshold as a pretext for Hormuz oil control and any liberal-hawk position as the permission structure for the next war.', side: 'left', band: 'denominated' },
-          RF: { text: 'The right is correct that credible deterrence requires willingness to act — maximum pressure without a military backstop is a posture with no enforcement, and the question is legitimate.', side: 'right', band: 'fluid' },
-          RC: { text: 'The right knows Iran is not negotiating in good faith — and is watching an "America First" administration issue first-strike signals at a country with proxies in five regions and a chokehold on twenty percent of global oil.', side: 'right', band: 'coalition' },
-          RD: { text: 'The right is performing toughness for domestic consumption, treating any reluctance to escalate as appeasement and any question about endgame as weakness.', side: 'right', band: 'denominated' }
+          LG: { text: 'The left is raising legitimate questions about strategic coherence — signaling without strategy invites escalation.', side: 'left', faith: 'good' },
+          LB: { text: 'The left is using anti-war framing to avoid engaging with the real enrichment threshold — reflexive opposition as identity.', side: 'left', faith: 'bad' },
+          RG: { text: 'The right is correct that credible deterrence requires willingness to act — ambiguity in the face of 84% enrichment is its own signal.', side: 'right', faith: 'good' },
+          RB: { text: 'The right is performing toughness for domestic consumption — the statement damaged deterrence by revealing political rather than strategic motivation.', side: 'right', faith: 'bad' }
         }
       },
 
@@ -1047,12 +1039,10 @@ const PrismDB = (() => {
           }
         },
         diatribe: {
-          LF: { text: 'The left is naming a real policy gap — a stated red line with no enforcement is worse than no line at all, and the bombs landing in Rafah were American.', side: 'left', band: 'fluid' },
-          LC: { text: 'The left did everything inside the rules — primaried, organized, voted uncommitted by the three-quarter million — and the architecture absorbed it like it absorbs everything, and the lesson people are drawing is that the rules don\'t work.', side: 'left', band: 'coalition' },
-          LD: { text: 'The left is collapsing the entire history into a single frame of settler-colonial atrocity, treating any acknowledgement of complexity as complicity and any two-state position as management of the colonized.', side: 'left', band: 'denominated' },
-          RF: { text: 'The right is correct that credibility depends on consistency — publicly threatening an ally during a war and then walking it back damages every security commitment the United States makes.', side: 'right', band: 'fluid' },
-          RC: { text: 'The right knows the defense relationship with Israel runs through Congress and decades of appropriations no presidential interview can override — the question isn\'t why the red line failed, but why anyone thought it wouldn\'t.', side: 'right', band: 'coalition' },
-          RD: { text: 'The right is using alliance credibility as a shield against any scrutiny of the policy itself — turning protest into antisemitism, turning the policy question into bigotry, and letting the money keep flowing.', side: 'right', band: 'denominated' }
+          LG: { text: 'The left is naming a real policy gap — a stated red line with no enforcement mechanism is worse than no line at all.', side: 'left', faith: 'good' },
+          LB: { text: 'The left is collapsing the entire history into a single frame, making every position that acknowledges complexity into complicity.', side: 'left', faith: 'bad' },
+          RG: { text: 'The right is correct that credibility depends on consistency — drawing lines you won\'t enforce damages the alliance framework.', side: 'right', faith: 'good' },
+          RB: { text: 'The right is using alliance credibility as a shield against any scrutiny of the policy itself — loyalty as discourse terminator.', side: 'right', faith: 'bad' }
         }
       },
 
@@ -1154,12 +1144,10 @@ const PrismDB = (() => {
           }
         },
         diatribe: {
-          LF: { text: 'The left is distinguishing between industrial policy and tariffs — the CHIPS Act produced TSMC Arizona; the consumer tariffs are a regressive tax that funds nothing and builds nothing.', side: 'left', band: 'fluid' },
-          LC: { text: 'The left spent fifteen years defending the multilateral framework and is watching the framework\'s predictions miss while a tariff-plus-subsidy mess produces the reshoring the framework said it would deliver.', side: 'left', band: 'coalition' },
-          LD: { text: 'The left is reading the tariffs as American economic warfare on the Global South, treating reshoring as hegemony maintenance and arguing for cheap goods produced under conditions it would call exploitation if they happened here.', side: 'left', band: 'denominated' },
-          RF: { text: 'The right is correct that decades of offshoring created real distributional harm — comparative advantage was right about aggregate welfare and wrong about distribution, and the adjustment mechanisms never got built.', side: 'right', band: 'fluid' },
-          RC: { text: 'The right voted for the tariffs and would vote for them again — and is watching the skilled fab jobs go to imported Taiwanese engineers because nobody built the workforce pipeline that would have made reshoring reshore to American workers.', side: 'right', band: 'coalition' },
-          RD: { text: 'The right is wrapping a regressive consumption tax in nationalist language, claiming vindication for an outcome industrial policy produced and demanding the wall around the economy be built the same way the wall on the border is.', side: 'right', band: 'denominated' }
+          LG: { text: 'The left is distinguishing between industrial policy and tariffs — reshoring through targeted investment rather than blunt price distortion.', side: 'left', faith: 'good' },
+          LB: { text: 'The left is reflexively opposing tariffs because of who enacted them, even when the outcome matches their stated policy goals.', side: 'left', faith: 'bad' },
+          RG: { text: 'The right is correct that decades of offshoring created real distributional harm — the question of friction and cost-bearing is legitimate.', side: 'right', faith: 'good' },
+          RB: { text: 'The right is wrapping a regressive consumption tax in nationalist language, claiming vindication for an outcome industrial policy produced.', side: 'right', faith: 'bad' }
         }
       }
     ];

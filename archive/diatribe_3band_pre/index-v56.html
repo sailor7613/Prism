@@ -780,19 +780,15 @@ function updateDia(clientX, forcePct) {
   }
 
   // ── Diatribe flanking text ──
-  // Three bands: fluid → LF/RF · coalition → LC/RC · denominated → LD/RD
-  const bandSuffix = newBand === 'fluid' ? 'F' : newBand === 'coalition' ? 'C' : 'D';
-  const leftKey = 'L' + bandSuffix;
-  const rightKey = 'R' + bandSuffix;
+  // fluid + coalition bands → fluid descriptors; denominated band → denominated
+  const leftKey = newBand === 'denominated' ? 'LD' : 'LF';
+  const rightKey = newBand === 'denominated' ? 'RD' : 'RF';
   const leftResp = DIATRIBE_RESPONSES[leftKey];
   const rightResp = DIATRIBE_RESPONSES[rightKey];
 
   const leftEl = document.getElementById('diaTextLeft');
   const rightEl = document.getElementById('diaTextRight');
-  if (!leftResp || !rightResp) {
-    console.warn('[Diatribe] Missing schema keys', leftKey, rightKey, 'for event', PrismDB.getActiveEvent()?.id);
-    return;
-  }
+  if (!leftResp || !rightResp) return; // guard: DIATRIBE_RESPONSES schema mismatch (LF/RF/LD/RD vs LG/LB/RG/RB)
   leftEl.textContent = leftResp.text;
   rightEl.textContent = rightResp.text;
 

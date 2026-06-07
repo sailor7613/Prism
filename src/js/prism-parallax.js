@@ -9,7 +9,75 @@ const beamHeaderImg = document.getElementById('beamHeaderImg');
 const phone = document.getElementById('phone');
 const panelsEl = document.getElementById('panels');
 
-const HEADER_POSITIONS = [9, -101, -210]; // px offsets: Beam / Prism / Refraction
+// Pixel offsets for `beamHeaderImg.style.left` when each panel is active.
+// Calibrated empirically for mobile (390px phone × 620px image at 72px tall) to:
+//   Beam:       30.0% of image width centered in phone window
+//   Prism:      47.7% of image width centered in phone window  (HEADER_POSITIONS[1] = -101)
+//   Refraction: 65.3% of image width centered in phone window
+// On desktop we keep those same ratios but recompute against the larger image and
+// phone width — see recalcHeaderPositions() below.
+const HEADER_POSITIONS = [9, -101, -210];
+
+const PANEL_IMAGE_FRACTIONS = [0.300, 0.477, 0.653];
+const NAV_IMAGE_ASPECT = 2000 / 232; // prism_nav_full.png — width / height
+
+function recalcHeaderPositions() {
+  if (window.innerWidth >= 900) {
+    // Read the actual rendered header height (set by the desktop @media rule in CSS).
+    // Falls back to 220 if the element isn't sized yet during very early init.
+    const imgHeight = (beamHeader && beamHeader.offsetHeight) || 220;
+    const imgWidth = imgHeight * NAV_IMAGE_ASPECT;
+    const phoneWidth = (phone && phone.offsetWidth) || Math.min(window.innerWidth * 0.95, 1600);
+    for (let i = 0; i < 3; i++) {
+      HEADER_POSITIONS[i] = phoneWidth / 2 - PANEL_IMAGE_FRACTIONS[i] * imgWidth;
+    }
+  } else {
+    HEADER_POSITIONS[0] = 9;
+    HEADER_POSITIONS[1] = -101;
+    HEADER_POSITIONS[2] = -210;
+  }
+}
+recalcHeaderPositions();
+window.addEventListener('resize', () => {
+  recalcHeaderPositions();
+  if (beamHeaderImg) {
+    setHeaderPosition(HEADER_POSITIONS[currentPanel], false);
+  }
+  syncTriangleTracking();
+});
+
+// ── Triangle-tracking for the upper triptych tabs ──────
+// The prism triangle in the nav illustration is the canonical anchor of the
+// app's metaphor. Rather than evenly distributing the Diatribe / Parallax /
+// Comparison tabs at 1/6, 3/6, 5/6, we anchor them to wherever the triangle
+// actually lands on screen — Parallax sits directly under the triangle, with
+// Diatribe and Comparison in the regions to either side.
+const PRISM_TRIANGLE_FRACTION = 0.70; // triangle centerline at ~70% of image width
+function getTriangleViewportX() {
+  if (!beamHeaderImg) return null;
+  // Use the actual rendered image rect rather than computing from CSS — this
+  // self-corrects against any miscalibration of header height or image scale.
+  const rect = beamHeaderImg.getBoundingClientRect();
+  if (rect.width === 0) return null;
+  return rect.left + PRISM_TRIANGLE_FRACTION * rect.width;
+}
+function syncTriangleTracking() {
+  const nav = document.getElementById('parallaxNav');
+  if (!nav) return;
+  const x = getTriangleViewportX();
+  if (x === null) return;
+  const pct = (x / window.innerWidth) * 100;
+  // Clamp so the tabs never go off the edge of the nav
+  const clamped = Math.max(20, Math.min(80, pct));
+  nav.style.setProperty('--prism-triangle-x', `${clamped}%`);
+}
+if (beamHeaderImg && 'MutationObserver' in window) {
+  // Re-sync when the image's left position changes (panel swipe).
+  new MutationObserver(syncTriangleTracking).observe(beamHeaderImg, {
+    attributes: true, attributeFilter: ['style'],
+  });
+}
+syncTriangleTracking();
 
 // ── Parallax state ──
 let shadeOpen = false;
@@ -283,7 +351,10 @@ function submitParallaxInput() {
 }
 
 function headerOpenTop() {
-  return phone.clientHeight - 72;
+  // Header height is 72px on mobile, 220px on desktop (see @media rule in prism-styles.css).
+  // Reading from the element keeps this honest if the CSS changes.
+  const h = beamHeader ? beamHeader.offsetHeight : 72;
+  return phone.clientHeight - h;
 }
 
 function setHeaderPosition(px, animated) {

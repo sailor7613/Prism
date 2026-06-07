@@ -1788,9 +1788,6 @@ body {
 }
 .dia-section.good h4 { color: var(--green); }
 .dia-section.bad h4 { color: var(--red); }
-.dia-section.fluid h4 { color: var(--green); }
-.dia-section.coalition h4 { color: var(--gold); }
-.dia-section.denominated h4 { color: var(--red); }
 
 /* Form actions */
 .form-actions {
@@ -3779,7 +3776,7 @@ body {
   <div class="form-section">
     <div class="form-section-label">The Diatribe</div>
 
-    <div class="dia-section fluid">
+    <div class="dia-section good">
       <h4>LF — Left, Fluid</h4>
       <div class="field">
         <label for="diaLF">Statement</label>
@@ -3787,23 +3784,15 @@ body {
       </div>
     </div>
 
-    <div class="dia-section coalition">
-      <h4>LC — Left, Coalition</h4>
-      <div class="field">
-        <label for="diaLC">Statement</label>
-        <textarea id="diaLC" placeholder="The left is watching its own discourse..."></textarea>
-      </div>
-    </div>
-
-    <div class="dia-section denominated">
+    <div class="dia-section bad">
       <h4>LD — Left, Denominated</h4>
       <div class="field">
         <label for="diaLD">Statement</label>
-        <textarea id="diaLD" placeholder="The left is reading every... as..."></textarea>
+        <textarea id="diaLD" placeholder="The left is using this to..."></textarea>
       </div>
     </div>
 
-    <div class="dia-section fluid">
+    <div class="dia-section good">
       <h4>RF — Right, Fluid</h4>
       <div class="field">
         <label for="diaRF">Statement</label>
@@ -3811,19 +3800,11 @@ body {
       </div>
     </div>
 
-    <div class="dia-section coalition">
-      <h4>RC — Right, Coalition</h4>
-      <div class="field">
-        <label for="diaRC">Statement</label>
-        <textarea id="diaRC" placeholder="The right is watching its own people..."></textarea>
-      </div>
-    </div>
-
-    <div class="dia-section denominated">
+    <div class="dia-section bad">
       <h4>RD — Right, Denominated</h4>
       <div class="field">
         <label for="diaRD">Statement</label>
-        <textarea id="diaRD" placeholder="The right is performing... as..."></textarea>
+        <textarea id="diaRD" placeholder="The right is using this to..."></textarea>
       </div>
     </div>
   </div>
@@ -4126,14 +4107,6 @@ body {
     </select>
     <span id="refPlacedCount" style="font-family:'DM Mono',monospace; font-size:11px; color:var(--muted); margin-left:12px;"></span>
     <input type="password" id="refApiKey" placeholder="sk-ant-api03-..." oninput="syncApiKeys(this.value)" style="margin-left:auto; width:220px; font-family:'DM Mono',monospace; font-size:11px; padding:5px 10px; border:1px solid var(--border); border-radius:4px; background:var(--cream); color:var(--ink);">
-  </div>
-
-  <!-- ── Member scoring toolbar (Phase 6.1.5) ──────────────── -->
-  <div class="toolbar" id="refScoringToolbar" style="border-top:1px solid var(--border); padding-top:8px; margin-top:-4px;">
-    <span style="font-family:'DM Mono',monospace; font-size:10px; text-transform:uppercase; letter-spacing:0.08em; color:var(--muted);">Score members:</span>
-    <button class="btn small" id="refHeuristicBtn" onclick="scoreMembersHeuristic()" title="Place all 538 members by party + chamber heuristic. Provenance: HEURISTIC.">◇ Heuristic baseline (all)</button>
-    <button class="btn small" id="refAiScoreBtn" onclick="aiScoreSelectedMember()" title="Run AI Derive on the currently selected member for this event. Provenance: DERIVED. Overrides heuristic.">✦ AI-score selected</button>
-    <button class="btn small" id="refClearPosBtn" onclick="clearMemberPositions()" style="margin-left:auto; color:var(--red); border-color:var(--red);" title="Remove all member positions for this event.">✕ Clear positions</button>
   </div>
 
   <div class="ref-layout">
@@ -6896,8 +6869,8 @@ function editEvent(id) {
 
   checkPairing();
 
-  // Diatribe — three bands per side
-  ['LF', 'LC', 'LD', 'RF', 'RC', 'RD'].forEach(key => {
+  // Diatribe
+  ['LF', 'LD', 'RF', 'RD'].forEach(key => {
     document.getElementById(`dia${key}`).value = evt.diatribe?.[key]?.text || '';
   });
 
@@ -6918,7 +6891,7 @@ function hideForm() {
 function clearForm() {
   const fields = ['evtTitle', 'evtCategory', 'evtDate', 'evtPrompt', 'evtFraming', 'evtFramingKeywords', 'evtSource',
     'axXPos', 'axXNeg', 'axYPos', 'axYNeg',
-    'diaLF', 'diaLC', 'diaLD', 'diaRF', 'diaRC', 'diaRD'];
+    'diaLF', 'diaLD', 'diaRF', 'diaRD'];
   fields.forEach(id => { document.getElementById(id).value = ''; });
   document.getElementById('evtActive').checked = false;
   document.getElementById('evtPrevalentAxis').value = 'x';
@@ -7094,15 +7067,9 @@ function saveEvent() {
     eventData.responses[q] = quadResp;
   });
 
-  // Build diatribe — three bands per side
-  const diaSides = {
-    LF: { side: 'left',  band: 'fluid' },
-    LC: { side: 'left',  band: 'coalition' },
-    LD: { side: 'left',  band: 'denominated' },
-    RF: { side: 'right', band: 'fluid' },
-    RC: { side: 'right', band: 'coalition' },
-    RD: { side: 'right', band: 'denominated' }
-  };
+  // Build diatribe
+  const diaSides = { LF: { side: 'left', register: 'fluid' }, LD: { side: 'left', register: 'denominated' },
+                     RF: { side: 'right', register: 'fluid' }, RD: { side: 'right', register: 'denominated' } };
   Object.keys(diaSides).forEach(key => {
     eventData.diatribe[key] = {
       text: document.getElementById(`dia${key}`).value.trim(),
@@ -8244,13 +8211,11 @@ Selection criteria:
 RESPONSE-LEVEL KEYWORDS:
 For each band response, supply xWord and yWord — the single most load-bearing word on each axis from that response. (These are distinct from the event-level framingKeywords above.)
 
-DIATRIBE FIELDS (short 15-30 word descriptors, six entries — one per side per band):
-LF: Left-side fluid discourse pattern — the left at its most lucid framing
-LC: Left-side coalition discourse pattern — the left in transit, aware of its own denomination forming
-LD: Left-side denominated discourse pattern — the left fully consumed by its vehicle
-RF: Right-side fluid discourse pattern — the right at its most lucid framing
-RC: Right-side coalition discourse pattern — the right in transit, aware of its own denomination forming
-RD: Right-side denominated discourse pattern — the right fully consumed by its vehicle
+DIATRIBE FIELDS (short 15-25 word descriptors):
+LF: Left-side fluid discourse pattern for this event
+LD: Left-side denominated discourse pattern
+RF: Right-side fluid discourse pattern
+RD: Right-side denominated discourse pattern
 
 OUTPUT: Respond ONLY with valid JSON. No preamble, no explanation, no markdown fences.
 {
@@ -8281,7 +8246,7 @@ OUTPUT: Respond ONLY with valid JSON. No preamble, no explanation, no markdown f
     },
     "B": {...}, "C": {...}, "D": {...}
   },
-  "diatribe": { "LF": "...", "LC": "...", "LD": "...", "RF": "...", "RC": "...", "RD": "..." }
+  "diatribe": { "LF": "...", "LD": "...", "RF": "...", "RD": "..." }
 }`;
 
 // Store AI draft for metadata comparison
@@ -8521,7 +8486,7 @@ async function generateSuggestions() {
 
     // ── Apply diatribe ──
     const dia = draft.diatribe || {};
-    ['LF', 'LC', 'LD', 'RF', 'RC', 'RD'].forEach(k => {
+    ['LF', 'LD', 'RF', 'RD'].forEach(k => {
       const el = document.getElementById(`dia${k}`);
       if (el && dia[k]) el.value = dia[k];
     });
@@ -8955,265 +8920,6 @@ function deleteRefPositionDirect(bioguideId) {
   filterRefMembers();
   if (refState.selectedMember === bioguideId) {
     selectRefMember(bioguideId); // re-render to clear pin
-  }
-}
-
-// ════════════════════════════════════════════════════════════
-// Phase 6.1.5 — Member scoring pipeline
-// Hybrid approach: heuristic baseline for all, AI override per pick.
-// ════════════════════════════════════════════════════════════
-
-// Deterministic hash → [0,1) so same bioguideId always lands the
-// same place. Mulberry32-style scramble of the string.
-function _bgHash(bioguideId, salt) {
-  let h = 2166136261 ^ (salt | 0);
-  const s = String(bioguideId) + ':' + String(salt || 0);
-  for (let i = 0; i < s.length; i++) {
-    h ^= s.charCodeAt(i);
-    h = Math.imul(h, 16777619);
-  }
-  h = (h ^ (h >>> 13)) >>> 0;
-  return ((h >>> 0) % 100000) / 100000;
-}
-
-// Place one member by party + chamber, jittered by bioguideId.
-// Returns a position object ready for PrismDB.saveMemberPosition.
-function _heuristicPlace(member, eventId) {
-  const party = (member.party || '').toUpperCase();
-  const chamber = (member.chamber || '').toLowerCase();
-
-  // X axis: party split. D → left half, R → right half, I → near center.
-  // Spread within half keeps clusters dense without pinning to one point.
-  const jx = _bgHash(member.bioguideId, 1);  // 0–1
-  let cx;
-  if (party === 'D')      cx = 0.15 + jx * 0.30;   // 0.15–0.45
-  else if (party === 'R') cx = 0.55 + jx * 0.30;   // 0.55–0.85
-  else                    cx = 0.45 + jx * 0.10;   // 0.45–0.55
-
-  // Y axis: senators biased institutional (+Y → small y), house spread.
-  // Note: in our coordinate system y=0 is top (+Y/Institutional).
-  const jy = _bgHash(member.bioguideId, 2);  // 0–1
-  let cy;
-  if (chamber === 'senate') cy = 0.18 + jy * 0.30; // 0.18–0.48 (mostly upper / institutional)
-  else                       cy = 0.30 + jy * 0.55; // 0.30–0.85 (broader spread, drift populist)
-
-  return {
-    bioguideId: member.bioguideId,
-    eventId: eventId,
-    pin: { x: cx, y: cy },
-    z: 0,
-    diatribe: 35 + Math.round(_bgHash(member.bioguideId, 3) * 20), // 35–55, mild
-    confidence: 0.25,         // low — it's a baseline, not informed
-    method: 'heuristic_v1',
-    provenance: 'HEURISTIC',
-    sources: { votes: [], statements: [], legislation: [] },
-    keywords: { A: [], B: [], C: [], D: [] },
-    adminOverride: false
-  };
-}
-
-function scoreMembersHeuristic() {
-  if (!refState.selectedEvent) {
-    toast('Select an event first', true);
-    return;
-  }
-  const members = (typeof PrismDB !== 'undefined' && PrismDB.getMembers().length > 0)
-    ? PrismDB.getMembers()
-    : (refState.members || []);
-  if (!members.length) {
-    toast('No members loaded', true);
-    return;
-  }
-
-  // Don't clobber DERIVED or MANUAL positions — only fill where empty
-  // or where the existing position is itself HEURISTIC.
-  const existing = PrismDB.getMemberPositionsForEvent(refState.selectedEvent);
-  const protectedIds = new Set(
-    existing
-      .filter(p => p.provenance === 'DERIVED' || p.provenance === 'MANUAL' || p.adminOverride)
-      .map(p => p.bioguideId)
-  );
-
-  const btn = document.getElementById('refHeuristicBtn');
-  btn.disabled = true;
-  btn.textContent = '◇ Scoring…';
-
-  let placed = 0, skipped = 0;
-  const positions = [];
-  members.forEach(m => {
-    if (protectedIds.has(m.bioguideId)) { skipped++; return; }
-    positions.push(_heuristicPlace(m, refState.selectedEvent));
-    placed++;
-  });
-
-  PrismDB.saveMemberPositions(positions);
-
-  btn.disabled = false;
-  btn.textContent = '◇ Heuristic baseline (all)';
-
-  const skipNote = skipped ? ` (${skipped} kept: DERIVED/MANUAL)` : '';
-  toast(`Heuristic baseline placed ${placed} members${skipNote}`);
-
-  updateRefPlacedTable();
-  renderRefExistingPins();
-  filterRefMembers();
-}
-
-function clearMemberPositions() {
-  if (!refState.selectedEvent) {
-    toast('Select an event first', true);
-    return;
-  }
-  const positions = PrismDB.getMemberPositionsForEvent(refState.selectedEvent);
-  if (!positions.length) {
-    toast('No positions to clear');
-    return;
-  }
-  if (!confirm(`Clear all ${positions.length} member positions for this event?`)) return;
-
-  positions.forEach(p => PrismDB.deleteMemberPosition(p.bioguideId, refState.selectedEvent));
-  toast(`Cleared ${positions.length} positions`);
-
-  updateRefPlacedTable();
-  renderRefExistingPins();
-  filterRefMembers();
-}
-
-// ── AI scoring for a single member on the active event ──
-// Uses the same Claude API pattern as scoreStatement, but the prompt
-// is shaped for "score this member's likely position on this event"
-// rather than "score this statement."
-const MEMBER_DERIVE_SYSTEM_PROMPT = `You are the Prism dialectical encoding engine, scoring U.S. Congress members against a specific political event. You are estimating where a named legislator would land on the event's two-axis dialectical structure based on what is publicly known about their voting record, public statements, party position, regional constituency, and ideological history through your knowledge cutoff.
-
-You will receive: event title, framing, axis labels (X and Y), and member metadata (name, party, chamber, state, district if House). Score the member, not their party — when a member's record diverges from party orthodoxy on this issue, the score should reflect that divergence.
-
-OUTPUT FIELDS:
-
-x: −1.0 to +1.0 on the event's X axis as labeled. Score from the member's actual record and stated positions on this issue, not from party affiliation alone.
-
-y: −1.0 to +1.0 on the event's Y axis as labeled. Score from the mechanism preference the member operates through on this issue (institutional channels vs populist/anti-institutional energy, hawkish vs dovish, etc — read the event's Y axis labels).
-
-z: −1.0 to +1.0. Object Z = promise-delivery gap. Most members will score near 0 absent specific institutional accountability signal. Score negative when the member invokes institutional commitments their record contradicts, positive when they operate inside a domain with consistent delivery.
-
-diatribe: 0–100. Denomination level on this issue, calibrated against:
-0–20: Substantive engagement, capacity for surprise operative.
-20–35: Mild rhetorical performance, substance recoverable.
-35–55: Tribal coding present, object partially obscured.
-55–70: Significant denomination, multiple bad-faith patterns operative.
-70–85: Severe denomination, performance has displaced substance.
-85–100: Terminal — totalizing vehicle, object destroyed.
-Most members fall in 25–60 range. Use 70+ only for members with documented sustained denomination patterns on this specific issue.
-
-confidence: 0.0 to 1.0. How confident are you in this scoring given what you know about this member's public record on this issue? Low confidence (≤0.3) when relying mostly on party prior; high (≥0.7) when the member has a substantive public record on the event's specific topic.
-
-reasoning: One to three sentences. Cite the specific record, votes, or public statements driving the score. If you're inferring from party prior because the member doesn't have a public record on this topic, say so explicitly.
-
-SYMMETRY: Structurally equivalent positions must score within 5 Diatribe points regardless of party. The encoding detects its own bias.
-
-OUTPUT: Respond ONLY with valid JSON. No preamble, no markdown fences.
-{
-  "x": 0.45,
-  "y": -0.30,
-  "z": -0.10,
-  "diatribe": 42,
-  "confidence": 0.6,
-  "reasoning": "Concrete record-based justification, or explicit acknowledgement of party-prior inference."
-}`;
-
-async function aiScoreSelectedMember() {
-  if (!refState.selectedEvent) { toast('Select an event first', true); return; }
-  if (!refState.selectedMember) { toast('Select a member first', true); return; }
-
-  const apiKey = getApiKey();
-  if (!apiKey) { toast('Enter your Anthropic API key first', true); return; }
-
-  const evt = PrismDB.getEvent(refState.selectedEvent);
-  const member = refState.members.find(m => m.bioguideId === refState.selectedMember);
-  if (!evt || !member) { toast('Event or member missing', true); return; }
-
-  const btn = document.getElementById('refAiScoreBtn');
-  btn.disabled = true;
-  btn.textContent = '✦ Scoring…';
-
-  const contextLines = [];
-  contextLines.push(`Event: ${evt.title}`);
-  if (evt.framing) contextLines.push(`Framing: ${evt.framing}`);
-  if (evt.axes) {
-    contextLines.push(`X axis: ${evt.axes.x?.neg || 'Left'} ← → ${evt.axes.x?.pos || 'Right'}`);
-    contextLines.push(`Y axis: ${evt.axes.y?.neg || '−Y'} ← → ${evt.axes.y?.pos || '+Y'}`);
-  }
-  contextLines.push('');
-  contextLines.push(`Member: ${member.name}`);
-  contextLines.push(`Party: ${member.party}`);
-  contextLines.push(`Chamber: ${member.chamber}`);
-  if (member.state) contextLines.push(`State: ${member.state}`);
-  if (member.meta) contextLines.push(`Meta: ${member.meta}`);
-
-  try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': apiKey,
-        'anthropic-version': '2023-06-01',
-        'anthropic-dangerous-direct-browser-access': 'true'
-      },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 700,
-        system: MEMBER_DERIVE_SYSTEM_PROMPT,
-        messages: [{ role: 'user', content: contextLines.join('\n') }]
-      })
-    });
-
-    if (!res.ok) {
-      const err = await res.json().catch(() => ({}));
-      throw new Error(err?.error?.message || `HTTP ${res.status}`);
-    }
-
-    const data = await res.json();
-    const rawText = (data.content || []).map(b => b.type === 'text' ? b.text : '').join('').trim();
-    const jsonText = rawText.replace(/^```(?:json)?\n?/, '').replace(/\n?```$/, '').trim();
-    let score;
-    try { score = JSON.parse(jsonText); }
-    catch (e) {
-      throw new Error('JSON Parse error — Claude responded: ' + rawText.slice(0, 240));
-    }
-
-    // Map score → pin (0–1 normalized) and persist
-    const pinX = (Math.max(-1, Math.min(1, score.x ?? 0)) + 1) / 2;
-    const pinY = (1 - Math.max(-1, Math.min(1, score.y ?? 0))) / 2; // invert: +Y up
-    const pos = {
-      bioguideId: member.bioguideId,
-      eventId: refState.selectedEvent,
-      pin: { x: pinX, y: pinY },
-      z: Math.max(-1, Math.min(1, score.z ?? 0)),
-      diatribe: Math.max(0, Math.min(100, score.diatribe ?? 50)),
-      confidence: Math.max(0, Math.min(1, score.confidence ?? 0.5)),
-      method: 'derive_v1',
-      provenance: 'DERIVED',
-      sources: { votes: [], statements: [], legislation: [] },
-      keywords: { A: [], B: [], C: [], D: [] },
-      reasoning: score.reasoning || '',
-      adminOverride: false
-    };
-
-    PrismDB.saveMemberPosition(pos);
-    toast(`Scored ${member.name} (conf ${pos.confidence.toFixed(2)})`);
-
-    // Refresh UI
-    updateRefPlacedTable();
-    renderRefExistingPins();
-    filterRefMembers();
-    if (refState.selectedMember === member.bioguideId) {
-      selectRefMember(member.bioguideId); // reload sliders with new values
-    }
-  } catch (err) {
-    console.error('Member AI score error:', err);
-    toast('AI score failed: ' + (err.message || 'unknown error'), true);
-  } finally {
-    btn.disabled = false;
-    btn.textContent = '✦ AI-score selected';
   }
 }
 
@@ -11297,7 +11003,7 @@ function applyDraftFromChat(msgId) {
 
   // Diatribe
   const dia = draft.diatribe || {};
-  ['LF', 'LC', 'LD', 'RF', 'RC', 'RD'].forEach(k => {
+  ['LF', 'LD', 'RF', 'RD'].forEach(k => {
     const el = document.getElementById(`dia${k}`);
     if (el && dia[k]) el.value = dia[k];
   });

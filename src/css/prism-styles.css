@@ -308,6 +308,121 @@ html, body {
   opacity: 0;
   transition: opacity 0.6s ease;
 }
+/* ─── NAV REVEAL — first functional moment for a regular user ───
+   Sequence:
+     1. in        — wordmark fades up at center; nav illustration fades in below it
+     2. migrating — wordmark fades up & out; nav illustration eases into its resting position
+     3. done      — overlay fades to reveal the app underneath
+   Desktop resting: top of viewport, prism aligned ~80% from left.
+   Mobile resting:  nav settles toward the phone-shell beam-header position.
+*/
+#navReveal {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  pointer-events: none;
+  /* Background fades independently so the migrated nav can persist at top-right
+     while the app reveals underneath. */
+  background-color: #0e0e18;
+  transition: background-color 0.8s ease;
+}
+#navReveal[hidden] { display: none; }
+#navReveal.done { background-color: transparent; }
+
+.nv-wordmark {
+  position: fixed;
+  top: 42%;
+  left: 50%;
+  width: min(340px, 55vw);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.65s ease, transform 0.65s ease;
+  z-index: 9002;
+}
+.nv-wordmark img {
+  width: 100%;
+  display: block;
+  mix-blend-mode: screen;
+}
+#navReveal.in .nv-wordmark {
+  opacity: 1;
+  transform: translate(-50%, -60%);
+  transition-delay: 0.15s;
+}
+#navReveal.migrating .nv-wordmark {
+  opacity: 0;
+  transform: translate(-50%, -120%);
+  transition: opacity 0.55s ease, transform 0.65s ease;
+}
+
+.nv-illo {
+  position: fixed;
+  /* prism_nav_full.png is 2000×232 (aspect 8.62:1). The prism triangle's
+     centerline sits at 47.7% of image width — this is the empirically-correct
+     value that the existing mobile HEADER_POSITIONS[1] = −101 implies. (I
+     tried 0.62 based on a visual eyeball; the screenshot confirms that pushed
+     the prism left of center, the opposite of what we want.)
+     We anchor `left` so the prism lands at viewport horizontal center:
+       left = 50vw − 0.477 × width */
+
+  /* Entry state — image centered in viewport, modest scale */
+  width: 80vw;                       /* height auto ≈ 9.28vw */
+  left: calc(50vw - 0.477 * 80vw);   /* ≈ 11.84vw */
+  top: calc(50vh - 0.5 * 80vw / 8.62);
+  /* (image height = width / 8.62; subtract half-height to center vertically) */
+
+  opacity: 0;
+  z-index: 9001;
+  pointer-events: none;
+  transition:
+    top 1.2s cubic-bezier(0.4,0,0.2,1),
+    left 1.2s cubic-bezier(0.4,0,0.2,1),
+    width 1.2s cubic-bezier(0.4,0,0.2,1),
+    opacity 0.55s ease;
+}
+.nv-illo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  mix-blend-mode: screen;
+}
+
+#navReveal.in .nv-illo {
+  opacity: 1;
+  transition-delay: 0.35s;
+}
+
+/* Migration: image grows wider, slides to top of viewport. Prism stays at viewport center. */
+#navReveal.migrating .nv-illo {
+  width: 200vw;
+  left: calc(50vw - 0.477 * 200vw);  /* ≈ -45.4vw */
+  top: 0;
+  /* At 200vw wide with the prism at 47.7% of image, both natural endpoints sit well off-screen:
+     beam endpoint ~45vw off-screen left, refraction endpoint ~55vw off-screen right. */
+}
+
+/* After migration: the entry-reveal nav fades out so only the in-phone beam-header
+   remains — the app should never show two nav illustrations at once. The beam-header
+   takes over as the resting nav (mobile size today; will scale up with the phone
+   shell on desktop in the next pass). */
+#navReveal.done .nv-illo {
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+/* Mobile — same prism-centered logic, wider entry scale since the viewport itself is narrow. */
+@media (max-width: 899px) {
+  .nv-illo {
+    width: 110vw;
+    left: calc(50vw - 0.477 * 110vw);          /* ≈ -2.5vw */
+    top: calc(50vh - 0.5 * 110vw / 8.62);
+  }
+  #navReveal.migrating .nv-illo {
+    width: 200vw;
+    left: calc(50vw - 0.477 * 200vw);          /* ≈ -45.4vw */
+    top: 0;
+  }
+}
+
 .splash-wordmark-wrap {
   position: absolute;
   top: 8%;
@@ -529,6 +644,17 @@ html, body {
   box-shadow: 0 60px 120px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.04), inset 0 1px 0 rgba(255,255,255,0.06);
   z-index: 10;
 }
+/* Desktop: bigger phone, same interface. The phone-shell metaphor is preserved at
+   desktop scale — same visual style (rounded corners, dark frame, in-phone nav at top),
+   just a larger rectangle so the triptych content can spread horizontally inside it
+   without leaving the shell. */
+@media (min-width: 900px) {
+  .phone {
+    width: min(95vw, 1600px);
+    height: min(95vh, 1000px);
+    border-radius: 32px;
+  }
+}
 
 /* ── BEAM HEADER ─────────────────────────────────────── */
 .beam-header {
@@ -607,6 +733,24 @@ html, body {
   transition: left 0.55s cubic-bezier(0.4,0,0.2,1), filter 0.8s ease, transform 0.6s cubic-bezier(0.22,1,0.36,1);
 }
 
+/* Desktop scale-up — preserves the mobile image-to-phone-width ratio of 1.59
+   (image is 1.59× phone width). This keeps the prism in the same relative
+   position (≈85% across the phone shell) on any viewport size.
+     Mobile: phone 390 × image 620 → image/phone = 1.589
+     Header height as fraction of phone width: 72 / 390 = 0.1846
+   We use 0.1844 as the desktop ratio. The image's `left` offset is set
+   dynamically in JS (recalcHeaderPositions) using the same image fractions
+   as mobile, so the visual is consistent across sizes. */
+@media (min-width: 900px) {
+  .beam-header {
+    height: calc(0.1844 * min(95vw, 1600px));
+    overflow: visible;
+  }
+  .beam-logo-bar { height: calc(0.1844 * min(95vw, 1600px)); }
+  .beam-header-img { height: calc(0.1844 * min(95vw, 1600px)); }
+}
+
+
 /* ── PARALLAX OVERLAY ────────────────────────────────── */
 /* When parallax opens, push Beam content down out of view */
 .p1.parallax-push {
@@ -643,17 +787,27 @@ html, body {
   pointer-events: auto;
 }
 
+/* The Diatribe / Parallax / Comparison tabs track the prism triangle in the nav
+   illustration: Parallax sits directly under the triangle, with Diatribe and
+   Comparison anchored at the centers of the regions to its left and right.
+   --prism-triangle-x is the triangle's horizontal viewport position as a
+   percentage, set by syncTriangleTracking() in prism-parallax.js. Falls back
+   to 50% if the JS hasn't run yet. */
 .parallax-nav {
-  display: flex;
+  position: relative;
+  display: block;
   height: 40px;
   border-bottom: 1px solid rgba(245,240,232,0.08);
   flex-shrink: 0;
   background: var(--surface-overlay);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+  --prism-triangle-x: 50%;
 }
 .parallax-nav-btn {
-  flex: 1;
+  position: absolute;
+  top: 0;
+  height: 100%;
   background: none;
   border: none;
   font-family: 'DM Mono', monospace;
@@ -662,10 +816,15 @@ html, body {
   text-transform: uppercase;
   color: rgba(245,240,232,0.35);
   cursor: pointer;
-  transition: color 0.25s, border-bottom 0.25s;
+  transition: color 0.25s, border-bottom 0.25s, left 0.4s cubic-bezier(0.4,0,0.2,1);
   border-bottom: 2px solid transparent;
-  padding: 0;
+  padding: 0 14px;
+  transform: translateX(-50%);
+  white-space: nowrap;
 }
+.parallax-nav-btn[data-pp="0"] { left: calc(var(--prism-triangle-x) / 2); }
+.parallax-nav-btn[data-pp="1"] { left: var(--prism-triangle-x); }
+.parallax-nav-btn[data-pp="2"] { left: calc((100% + var(--prism-triangle-x)) / 2); }
 .parallax-nav-btn.active {
   color: var(--cream);
   border-bottom-color: var(--cream);
@@ -851,6 +1010,174 @@ html, body {
   background: rgba(245,240,232,0.12);
   border-color: rgba(245,240,232,0.45);
   color: var(--cream);
+}
+
+/* ─── Diatribe full-screen splash (gates entry into scoring) ─── */
+.dia-splash {
+  position: absolute;
+  inset: 0;
+  z-index: 14; /* above panels (z<=10) and parallax-z-bar */
+  background: #0e0d0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 36px 24px;
+  overflow-y: auto;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.55s ease;
+}
+.dia-splash.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.dia-splash.exiting {
+  opacity: 0;
+  transition: opacity 0.65s ease;
+  pointer-events: none;
+}
+.dia-splash-inner {
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  padding: 32px 8px;
+}
+/* The beam line — sweeps across the headline area on entry, our load-bearing
+   light-beam gesture. Sits behind the text via z-index, never blocks pointer. */
+.dia-splash-beam {
+  position: absolute;
+  left: -10%;
+  right: -10%;
+  top: 38%;
+  height: 1px;
+  background: linear-gradient(90deg,
+    rgba(245,240,232,0)    0%,
+    rgba(245,240,232,0.06) 25%,
+    rgba(245,240,232,0.55) 50%,
+    rgba(245,240,232,0.06) 75%,
+    rgba(245,240,232,0)    100%);
+  transform: scaleX(0);
+  transform-origin: center;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 0;
+}
+.dia-splash.open .dia-splash-beam {
+  animation: diaBeamSweep 1.3s cubic-bezier(0.22,1,0.36,1) 0.15s forwards;
+}
+@keyframes diaBeamSweep {
+  0%   { transform: scaleX(0);    opacity: 0; }
+  35%  { opacity: 1; }
+  100% { transform: scaleX(1);    opacity: 0.85; }
+}
+.dia-splash-tag,
+.dia-splash-headline,
+.dia-splash-framing,
+.dia-splash-advance {
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(8px);
+}
+.dia-splash.open .dia-splash-tag      { animation: diaSplashFade 0.55s ease 0.10s forwards; }
+.dia-splash.open .dia-splash-headline { animation: diaSplashFade 0.55s ease 0.28s forwards; }
+.dia-splash.open .dia-splash-framing  { animation: diaSplashFade 0.55s ease 0.46s forwards; }
+.dia-splash.open .dia-splash-advance  { animation: diaSplashFade 0.55s ease 0.66s forwards; }
+@keyframes diaSplashFade {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.dia-splash-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(245,240,232,0.55);
+  margin-bottom: 22px;
+}
+.dia-splash-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  line-height: 1.25;
+  color: var(--cream);
+  margin-bottom: 26px;
+}
+.dia-splash-framing {
+  font-family: 'Lora', serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(245,240,232,0.72);
+  margin: 0 auto 38px;
+  max-width: 440px;
+}
+.dia-splash-advance {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 32px;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--cream);
+  background: rgba(245,240,232,0.04);
+  border: 1px solid rgba(245,240,232,0.28);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, letter-spacing 0.2s;
+}
+.dia-splash-advance:hover {
+  background: rgba(245,240,232,0.10);
+  border-color: rgba(245,240,232,0.6);
+  letter-spacing: 0.28em;
+}
+.dia-splash-advance-chev {
+  font-size: 12px;
+  opacity: 0.75;
+  transform: translateY(1px);
+}
+
+/* ─── Diatribe keyword cloud (scoring state, top of panel) ─── */
+.dia-keyword-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  gap: 8px 14px;
+  margin: 2px 0 12px;
+  padding: 10px 8px;
+  cursor: pointer;
+  min-height: 30px;
+  border-bottom: 1px solid rgba(245,240,232,0.06);
+}
+.dia-keyword-cloud:empty {
+  display: none;
+}
+.dia-keyword-cloud .dia-kw {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 1.1;
+  text-shadow:
+    0 0 6px rgba(255,255,255,0.45),
+    0 0 14px rgba(255,255,255,0.22);
+  opacity: 0;
+  animation: diaKwLift 0.7s cubic-bezier(0.22,1,0.36,1) forwards;
+  white-space: nowrap;
+}
+@keyframes diaKwLift {
+  from { opacity: 0; transform: translateY(14px) scale(0.9); }
+  to   { opacity: 1; transform: translateY(0)    scale(1); }
+}
+/* Spectral colors — light split through a prism */
+.dia-kw.kw-c-red   { color: #d45555; }
+.dia-kw.kw-c-blue  { color: #5a82b8; }
+.dia-kw.kw-c-green { color: #5ea872; }
+.dia-kw.kw-c-gold  { color: #d4b550; }
+/* When the cloud is present, hide the long framing in the scoring panel
+   (the splash is the place to read framing; the cloud is the in-scoring referent) */
+.dia-event-context.has-cloud .dia-event-framing {
+  display: none;
 }
 
 /* Answer grid reveal animation */

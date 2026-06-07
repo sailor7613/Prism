@@ -780,19 +780,14 @@ function updateDia(clientX, forcePct) {
   }
 
   // ── Diatribe flanking text ──
-  // Three bands: fluid → LF/RF · coalition → LC/RC · denominated → LD/RD
-  const bandSuffix = newBand === 'fluid' ? 'F' : newBand === 'coalition' ? 'C' : 'D';
-  const leftKey = 'L' + bandSuffix;
-  const rightKey = 'R' + bandSuffix;
+  // fluid + coalition bands → fluid descriptors; denominated band → denominated
+  const leftKey = newBand === 'denominated' ? 'LD' : 'LF';
+  const rightKey = newBand === 'denominated' ? 'RD' : 'RF';
   const leftResp = DIATRIBE_RESPONSES[leftKey];
   const rightResp = DIATRIBE_RESPONSES[rightKey];
 
   const leftEl = document.getElementById('diaTextLeft');
   const rightEl = document.getElementById('diaTextRight');
-  if (!leftResp || !rightResp) {
-    console.warn('[Diatribe] Missing schema keys', leftKey, rightKey, 'for event', PrismDB.getActiveEvent()?.id);
-    return;
-  }
   leftEl.textContent = leftResp.text;
   rightEl.textContent = rightResp.text;
 
@@ -3157,53 +3152,27 @@ function syncGraphmapDots() {
     return;
   }
   graphmapInst.clearDots();
-  if (graphmapInst.clearMemberPins) graphmapInst.clearMemberPins();
   const evt = PrismDB.getActiveEvent();
   if (!evt) { console.log('[Graphmap] syncDots: no active event'); return; }
   const agg = PrismDB.getAggregateForEvent(evt.id);
   console.log('[Graphmap] syncDots: event', evt.id, 'aggregate count:', agg ? agg.length : 0);
-  if (agg && agg.length) {
-    agg.forEach((d, i) => {
-      const intensity = (d.intensity || 50) / 100; // 0–1
-      // Z displacement: alternating sign ensures visible above + below plane
-      // Intensity drives magnitude, index-based alternation ensures even split
-      const zSign = (i % 2 === 0) ? 1 : -1;
-      const spread = Math.sin(d.x * 127.1 + d.y * 311.7) * 0.5 + 0.5; // 0–1 positional variance
-      const zMag = 0.2 + intensity * 0.5 + spread * 0.3; // 0.2–1.0 range — always some depth
-      const normZ = zSign * zMag;
-      graphmapInst.addDot(d.x, d.y, d.quadrant, normZ, {
-        radius: 0.03 + intensity * 0.04,
-      });
-      if (i < 3) console.log('[Graphmap]  dot', i, ':', d.x.toFixed(2), d.y.toFixed(2), d.quadrant, 'z:', normZ.toFixed(2));
+  if (!agg || !agg.length) return;
+  agg.forEach((d, i) => {
+    const intensity = (d.intensity || 50) / 100; // 0–1
+    // Z displacement: alternating sign ensures visible above + below plane
+    // Intensity drives magnitude, index-based alternation ensures even split
+    const zSign = (i % 2 === 0) ? 1 : -1;
+    const spread = Math.sin(d.x * 127.1 + d.y * 311.7) * 0.5 + 0.5; // 0–1 positional variance
+    const zMag = 0.2 + intensity * 0.5 + spread * 0.3; // 0.2–1.0 range — always some depth
+    const normZ = zSign * zMag;
+    graphmapInst.addDot(d.x, d.y, d.quadrant, normZ, {
+      radius: 0.03 + intensity * 0.04,
     });
-    // Compute neighbor density for proximity effect
-    graphmapInst.computeProximity(0.55, densityMode);
-    console.log('[Graphmap] Synced', agg.length, 'aggregate dots for', evt.id);
-  }
-
-  // ── Phase 6.1.5 — member pins ──
-  // Render legislator positions alongside the user aggregate.
-  // Heuristic pins get a small constant z lift so they read as
-  // "tokens hovering above the plane"; AI-derived pins use their
-  // scored z to show the promise-delivery gap signal.
-  if (typeof PrismDB.getMemberAggregateForEvent === 'function' && graphmapInst.addMemberPin) {
-    const members = PrismDB.getMemberAggregateForEvent(evt.id);
-    if (members && members.length) {
-      members.forEach(m => {
-        const isHeuristic = m.method === 'heuristic_v1';
-        const renderZ = isHeuristic ? 0.08 : (m.z || 0);
-        graphmapInst.addMemberPin(m.x, m.y, m.party, {
-          normZ: renderZ,
-          bioguideId: m.bioguideId,
-          name: m.name,
-          chamber: m.chamber,
-          method: m.method,
-          confidence: m.confidence,
-        });
-      });
-      console.log('[Graphmap] Synced', members.length, 'member pins for', evt.id);
-    }
-  }
+    if (i < 3) console.log('[Graphmap]  dot', i, ':', d.x.toFixed(2), d.y.toFixed(2), d.quadrant, 'z:', normZ.toFixed(2));
+  });
+  // Compute neighbor density for proximity effect
+  graphmapInst.computeProximity(0.55, densityMode);
+  console.log('[Graphmap] Synced', agg.length, 'aggregate dots for', evt.id);
 }
 
 // ── Sync event axis/corner labels → graphmap factory labels ──
