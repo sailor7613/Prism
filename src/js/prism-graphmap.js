@@ -204,6 +204,26 @@ const PrismGraphmap = (function () {
     return { sprite, material: mat, texture: tex, canvas: cvs };
   }
 
+  // Ring sprite (additive, v2) — the Diatribe aperture-band halo. A canvas-
+  // stroked circle as a billboard sprite, so it always faces the camera.
+  function makeRingSprite(color) {
+    const css = (typeof color === 'number')
+      ? '#' + color.toString(16).padStart(6, '0')
+      : (color || 'rgba(245,240,232,0.9)');
+    const cvs = document.createElement('canvas');
+    cvs.width = 128; cvs.height = 128;
+    const ctx = cvs.getContext('2d');
+    ctx.strokeStyle = css;
+    ctx.lineWidth = 5;
+    ctx.beginPath();
+    ctx.arc(64, 64, 54, 0, Math.PI * 2);
+    ctx.stroke();
+    const tex = new THREE.CanvasTexture(cvs);
+    const mat = new THREE.SpriteMaterial({ map: tex, transparent: true, opacity: 0.85, depthWrite: false });
+    const sprite = new THREE.Sprite(mat);
+    return { sprite, material: mat, texture: tex };
+  }
+
   function buildLabels(group) {
     const labelsGroup = new THREE.Group();
 
@@ -426,7 +446,7 @@ const PrismGraphmap = (function () {
 
   // ── Pin mesh builder (per instance, called on setPin) ──
 
-  function rebuildPin(pinGroup, quadrant) {
+  function rebuildPin(pinGroup, quadrant, style) {
     // Dispose existing children
     while (pinGroup.children.length) {
       const child = pinGroup.children[0];
@@ -460,6 +480,44 @@ const PrismGraphmap = (function () {
     const halo = new THREE.Mesh(haloGeo, haloMat);
     halo.position.z = 0.005; // just above plane surface
     pinGroup.add(halo);
+
+    // ── Orb style (additive, v2): BONDI GLASS — the user pin as a translucent
+    // iMac-era candy shell, visibly lit from within. The only translucent
+    // specimen among the opaque crowd. ──
+    if (style === 'orb') {
+      halo.visible = false;   // the square halo plate reads boxy around glass
+      // the candy shell
+      const glassCol = col.clone();
+      glassCol.offsetHSL(0, 0.05, 0.18);                  // lifted toward candy
+      const shellMat = new THREE.MeshPhysicalMaterial({
+        color: glassCol,
+        transparent: true, opacity: 0.38,
+        roughness: 0.12, metalness: 0,
+        clearcoat: 1.0, clearcoatRoughness: 0.12,
+        side: THREE.DoubleSide,
+        depthWrite: false,
+      });
+      const shell = new THREE.Mesh(new THREE.SphereGeometry(0.095, 24, 18), shellMat);
+      pinGroup.add(shell);
+      // the light inside
+      const coreCol = col.clone();
+      coreCol.offsetHSL(0, 0.15, 0.10);
+      const coreMat = new THREE.MeshStandardMaterial({
+        color: coreCol, emissive: coreCol, emissiveIntensity: 1.4,
+        roughness: 0.4, metalness: 0,
+      });
+      const core = new THREE.Mesh(new THREE.SphereGeometry(0.045, 16, 12), coreMat);
+      pinGroup.add(core);
+      // soft bloom
+      const orbGlowMat = new THREE.SpriteMaterial({
+        color: baseColor, transparent: true, opacity: 0.3,
+        blending: THREE.AdditiveBlending, depthWrite: false,
+      });
+      const orbGlow = new THREE.Sprite(orbGlowMat);
+      orbGlow.scale.set(0.5, 0.5, 1);
+      pinGroup.add(orbGlow);
+      return { pin: shell, pinMat: shellMat, core, coreMat, glow: orbGlow, glowMat: orbGlowMat, halo, haloMat };
+    }
 
     // ── User pin — ConeGeometry (gallery-matched) ──
     // Cone default: tip at +Y. rotation.x = -PI/2 rotates tip to -Z (toward plane).
@@ -531,6 +589,50 @@ const PrismGraphmap = (function () {
     const canvas = rendererBundle.canvas;
     const lights = isExternal ? null : buildLighting(scene);
     const group = buildGraphGroup();
+
+    // ── Moody surface (additive, v2): the plane stays — dimmed so the velvet
+    // breathes through it — and the real "window" problem is solved upstream
+    // by the oversized render surface (the canvas is far larger than the
+    // visible graph, so nothing clips at a viewport edge). ──
+    if (config.moody) {
+      group.traverse(o => {
+        if (o.isMesh && o.material) {
+          if (o.material.vertexColors) {           // the quadrant-gradient plane
+            o.material.transparent = true;
+            o.material.opacity = 0.55;             // present, but the velvet breathes through
+            o.material.emissiveIntensity = 0.12;
+            o.material.needsUpdate = true;
+          } else if (o.geometry && o.geometry.type === 'PlaneGeometry' && o.material.opacity === 0.15) {
+            o.material.opacity = 0.10;             // quadrant shading overlays
+          }
+        } else if (o.isLine && o.material && o.material.transparent && o.material.opacity === 0.15) {
+          o.material.opacity = 0.12;               // border softened
+        }
+      });
+    }
+
+    // ── Spectrum axes (additive, v2): iridescent gradient axis lines laid
+    // over the plane axes — x: blue→cream→red, y: green→cream→gold. ──
+    if (config.spectrumAxes) {
+      const mkAxis = (pts, cols) => {
+        const geo = new THREE.BufferGeometry().setFromPoints(pts);
+        const arr = [];
+        cols.forEach(c => { const cc = new THREE.Color(c); arr.push(cc.r, cc.g, cc.b); });
+        geo.setAttribute('color', new THREE.BufferAttribute(new Float32Array(arr), 3));
+        return new THREE.Line(geo, new THREE.LineBasicMaterial({
+          vertexColors: true, transparent: true, opacity: 0.75,
+          blending: THREE.AdditiveBlending,
+        }));
+      };
+      group.add(mkAxis(
+        [new THREE.Vector3(-GH, 0, 0.006), new THREE.Vector3(0, 0, 0.006), new THREE.Vector3(GH, 0, 0.006)],
+        [0x6094dc, 0xfff6e2, 0xdc6060]
+      ));
+      group.add(mkAxis(
+        [new THREE.Vector3(0, -GH, 0.006), new THREE.Vector3(0, 0, 0.006), new THREE.Vector3(0, GH, 0.006)],
+        [0x60a880, 0xfff6e2, 0xc49c48]
+      ));
+    }
     const pinGroup = buildPinGroup();
 
     if (isExternal) {
@@ -572,7 +674,7 @@ const PrismGraphmap = (function () {
 
     // ── Hold-to-inspect state ──
     let holdTimer = null;
-    const HOLD_MS = 400;          // hold duration to trigger inspect
+    const HOLD_MS = config.holdMs || 400;   // hold duration to trigger inspect (configurable, v2)
     const HOLD_MOVE_TOLERANCE = 5; // px — movement beyond this cancels hold
     let holdStartX = 0;
     let holdStartY = 0;
@@ -590,9 +692,9 @@ const PrismGraphmap = (function () {
       sensitivity: 0.005,        // radians per pixel
       friction: 0.92,            // momentum decay per frame
       pitchClamp: Math.PI * 50 / 180, // ±50° elevation
-      zoom: 5.4,                 // camera Z distance — matches buildCamera default
-      zoomMin: 3.2,              // closest zoom (large graph)
-      zoomMax: 9.0,              // farthest zoom (small graph)
+      zoom: config.zoom || 5.4,          // camera Z distance — matches buildCamera default
+      zoomMin: config.zoomMin || 3.2,    // closest zoom (large graph)
+      zoomMax: config.zoomMax || 9.0,    // farthest zoom (small graph) — configurable (v2 overscan)
       zoomSensitivity: 0.003,    // scroll delta multiplier
       pinchDist: 0,              // last pinch distance for touch zoom
       focusX: 0,                 // graph-local X offset for orbit pivot (0 = center)
@@ -741,12 +843,24 @@ const PrismGraphmap = (function () {
         pinGroup.position.z = baseZ + bob;
 
         // Shimmer
-        const shimmer = 0.15 + Math.sin(pinT * 1.5) * 0.08;
-        if (pinMeshes.pinMat) {
-          pinMeshes.pinMat.emissiveIntensity = shimmer;
-        }
-        if (pinMeshes.glowMat) {
-          pinMeshes.glowMat.opacity = 0.06 + Math.sin(pinT * 0.8) * 0.04;
+        if (pinMeshes.core) {
+          // Orb style (v2): a breathing beacon — the glass pin pulses from
+          // within, clearly apart from the aggregate whisper-pulses.
+          pinMeshes.coreMat.emissiveIntensity = 1.1 + Math.sin(pinT * 1.6) * 0.5;
+          if (pinMeshes.glowMat) {
+            pinMeshes.glowMat.opacity = 0.22 + Math.sin(pinT * 1.2) * 0.14;
+            var gpulse = 0.46 + Math.sin(pinT * 1.2) * 0.08;
+            pinMeshes.glow.scale.set(gpulse, gpulse, 1);
+          }
+          if (pinRing) pinRing.material.opacity = 0.62 + Math.sin(pinT * 0.9) * 0.25;
+        } else {
+          const shimmer = 0.15 + Math.sin(pinT * 1.5) * 0.08;
+          if (pinMeshes.pinMat) {
+            pinMeshes.pinMat.emissiveIntensity = shimmer;
+          }
+          if (pinMeshes.glowMat) {
+            pinMeshes.glowMat.opacity = 0.06 + Math.sin(pinT * 0.8) * 0.04;
+          }
         }
 
         // Halo iridescent pulse
@@ -999,6 +1113,17 @@ const PrismGraphmap = (function () {
         }
       }
 
+      // Check member pins (Phase 6.1.5)
+      if (memberPins.length > 0) {
+        const pinMeshes = memberPins.map(p => p.mesh);
+        const pinHits = raycaster.intersectObjects(pinMeshes, true);
+        if (pinHits.length > 0) {
+          const hitMesh = pinHits[0].object;
+          const pinEntry = memberPins.find(p => p.mesh === hitMesh);
+          if (pinEntry) return { type: 'member', data: { ...pinEntry.data, instance } };
+        }
+      }
+
       return null;
     }
 
@@ -1147,7 +1272,13 @@ const PrismGraphmap = (function () {
         console.error('[PrismGraphmap] No container provided');
         return instance;
       }
-      containerEl.style.position = containerEl.style.position || 'relative';
+      // Only force `position:relative` when the container is actually static —
+      // `element.style.position` reads only inline style, so the old `|| 'relative'`
+      // fallback would silently override a stylesheet-set `position:absolute`
+      // (which is how the v2 `.gm3d-stage` `inset:-40%` sizing trick is built).
+      if (getComputedStyle(containerEl).position === 'static') {
+        containerEl.style.position = 'relative';
+      }
       canvas.style.cssText = 'position:absolute;inset:-12%;width:124%!important;height:124%!important;';
       containerEl.appendChild(canvas);
       mounted = true;
@@ -1243,7 +1374,9 @@ const PrismGraphmap = (function () {
 
     let zConnector = null; // line from plane surface to pin
 
-    function setPin(normX, normY, quadrant, normZ) {
+    let pinRing = null, pinRingColor = null;   // Diatribe aperture ring (v2, additive)
+
+    function setPin(normX, normY, quadrant, normZ, opts) {
       // Gate: if zInput disabled, clamp to plane surface
       if (!config.capabilities.zInput) normZ = 0;
 
@@ -1253,20 +1386,38 @@ const PrismGraphmap = (function () {
 
 
 
-      // Fast path: skip geometry rebuild if quadrant unchanged and pin exists
-      const needsRebuild = !pinMeshes || !pinData || pinData.quadrant !== quadrant;
+      // Fast path: skip geometry rebuild if quadrant/style unchanged and pin exists
+      const pinStyle = (opts && opts.style) || 'cone';
+      const needsRebuild = !pinMeshes || !pinData || pinData.quadrant !== quadrant || pinData.style !== pinStyle;
       if (needsRebuild) {
-        pinMeshes = rebuildPin(pinGroup, quadrant);
+        pinMeshes = rebuildPin(pinGroup, quadrant, pinStyle);
       }
 
       // For negative Z: flip cone so tip still points toward plane (+Z from below)
-      if (pinMeshes.pin) {
+      // (no-op for the orb style — spheres are rotation-invariant)
+      if (pinMeshes.pin && pinStyle !== 'orb') {
         pinMeshes.pin.rotation.x = (normZ && normZ < 0) ? Math.PI / 2 : -Math.PI / 2;
       }
 
       pinGroup.position.set(x, y, z || 0.02);
       pinGroup.visible = true;
-      pinData = { normX, normY, quadrant, normZ: normZ || 0 };
+      pinData = { normX, normY, quadrant, normZ: normZ || 0, style: pinStyle };
+
+      // Diatribe ring (v2, additive): aperture-band halo around the pin.
+      // Recreated only when the ring color actually changes (setPin is hot).
+      const ringCol = opts && opts.ring;
+      if (ringCol !== pinRingColor) {
+        if (pinRing) {
+          pinRing.material.dispose(); pinRing.texture.dispose();
+          pinGroup.remove(pinRing.sprite); pinRing = null;
+        }
+        if (ringCol) {
+          pinRing = makeRingSprite(ringCol);
+          pinRing.sprite.scale.set(0.34, 0.34, 1);
+          pinGroup.add(pinRing.sprite);
+        }
+        pinRingColor = ringCol || null;
+      }
 
       // Z connector line (plane surface → pin) — only when zRender enabled
       if (zConnector) {
@@ -1359,11 +1510,21 @@ const PrismGraphmap = (function () {
 
       const dotEntry = {
         mesh, connector, glow, glowMat,
+        ringSprite: null,     // Diatribe band ring (v2, additive)
         keywordSprites: [],   // { sprite, material, texture } — children of mesh
         pulseSpeed: 0,    // 0 = no pulse, set by computeProximity()
         pulsePhase: Math.random() * Math.PI * 2, // random offset so neighbors don't sync
         data: { normX, normY, quadrant, normZ: normZ || 0, label: opts.label || '', desc: opts.desc || '' },
       };
+
+      // Diatribe band ring (v2, additive) — billboard halo around the orb
+      if (opts.ring) {
+        const ring = makeRingSprite(opts.ring);
+        const rr = (opts.radius || 0.05) * 4;
+        ring.sprite.scale.set(rr, rr, 1);
+        mesh.add(ring.sprite);
+        dotEntry.ringSprite = ring;
+      }
 
       // ── Keyword sprites (orbit around the dot in 3D) ──
       if (opts.keywords && opts.keywords.length > 0) {
@@ -1412,6 +1573,11 @@ const PrismGraphmap = (function () {
           });
           d.keywordSprites.length = 0;
         }
+        if (d.ringSprite) {
+          d.ringSprite.material.dispose();
+          d.ringSprite.texture.dispose();
+          d.mesh.remove(d.ringSprite.sprite);
+        }
         if (d.glowMat) d.glowMat.dispose();
         if (d.mesh.geometry) d.mesh.geometry.dispose();
         if (d.mesh.material) d.mesh.material.dispose();
@@ -1424,6 +1590,138 @@ const PrismGraphmap = (function () {
       });
       dots.length = 0;
       return instance;
+    }
+
+    // ── Contrast line (additive API, v2) ─────────────────────
+    // A single bright line between two normalized points (each {x, y, z}
+    // with x/y in 0..1 pad space and z in -1..1). Used by the v2 contrast
+    // function to tether the user's pin to an inspected aggregate dot.
+    let contrastLineObj = null;
+    function setContrastLine(a, b, opts) {
+      opts = opts || {};
+      clearContrastLine();
+      const ax = (a.x - 0.5) * GRAPH_SIZE, ay = (0.5 - a.y) * GRAPH_SIZE, az = (a.z || 0) * Z_EXTENT * 0.8;
+      const bx = (b.x - 0.5) * GRAPH_SIZE, by = (0.5 - b.y) * GRAPH_SIZE, bz = (b.z || 0) * Z_EXTENT * 0.8;
+      const geo = new THREE.BufferGeometry().setFromPoints([
+        new THREE.Vector3(ax, ay, az),
+        new THREE.Vector3(bx, by, bz),
+      ]);
+      contrastLineObj = new THREE.Line(geo, new THREE.LineBasicMaterial({
+        color: opts.color != null ? opts.color : 0xfff6e2,
+        transparent: true,
+        opacity: opts.opacity != null ? opts.opacity : 0.8,
+        blending: THREE.AdditiveBlending,
+        depthWrite: false,
+      }));
+      group.add(contrastLineObj);
+      return instance;
+    }
+    function clearContrastLine() {
+      if (contrastLineObj) {
+        contrastLineObj.geometry.dispose();
+        contrastLineObj.material.dispose();
+        group.remove(contrastLineObj);
+        contrastLineObj = null;
+      }
+      return instance;
+    }
+
+    // ── Member Pin API (Phase 6.1.5) ──
+    // Distinct from aggregate dots: party color, larger sphere, thin
+    // vertical stem to the plane (reads as "pinned token" vs floating dot).
+    // Does NOT participate in computeProximity — members have their own
+    // visual logic (no pulse, no cluster shrink).
+    const PARTY_COLORS = {
+      D: 0x3a6fb8,   // brighter than B-quadrant blue
+      R: 0xd64a4a,   // brighter than A-quadrant red
+      I: 0xb8a878,   // warm grey-gold
+    };
+
+    const memberPins = [];   // { mesh, stem, data }
+    const memberPinsGroup = new THREE.Group();
+    group.add(memberPinsGroup);
+
+    function addMemberPin(normX, normY, party, opts) {
+      opts = opts || {};
+      const partyKey = (party || 'I').toUpperCase();
+      const color = PARTY_COLORS[partyKey] || PARTY_COLORS.I;
+
+      const normZ = (config.capabilities.zInput && opts.normZ != null) ? opts.normZ : 0;
+      const x = (normX - 0.5) * GRAPH_SIZE;
+      const y = (0.5 - normY) * GRAPH_SIZE;
+      const z = normZ * Z_EXTENT * 0.8;
+
+      // Sphere — slightly larger than aggregate dots, lower emissive so
+      // they read as "solid pinned tokens" rather than "glowing cloud."
+      const baseColor = new THREE.Color(color);
+      const radius = opts.radius || 0.07;
+      const mesh = new THREE.Mesh(
+        new THREE.SphereGeometry(radius, 16, 12),
+        new THREE.MeshStandardMaterial({
+          color: baseColor,
+          emissive: baseColor,
+          emissiveIntensity: 0.22,   // dimmer than aggregate dots (which use 0.4)
+          roughness: 0.45,
+          metalness: 0.15,
+        })
+      );
+      mesh.position.set(x, y, z);
+      mesh.userData = {
+        isMemberPin: true,
+        bioguideId: opts.bioguideId || null,
+        name: opts.name || '',
+        party: partyKey,
+        chamber: opts.chamber || '',
+        method: opts.method || '',
+        confidence: opts.confidence != null ? opts.confidence : null,
+        normX, normY, normZ,
+      };
+      memberPinsGroup.add(mesh);
+
+      // Stem — thin vertical line from plane up to the pin. Makes the
+      // pin read as planted in the surface rather than floating.
+      let stem = null;
+      if (config.capabilities.zRender) {
+        const stemGeo = new THREE.BufferGeometry().setFromPoints([
+          new THREE.Vector3(x, y, 0),
+          new THREE.Vector3(x, y, z),
+        ]);
+        stem = new THREE.Line(stemGeo,
+          new THREE.LineBasicMaterial({ color: baseColor, transparent: true, opacity: 0.55 })
+        );
+        memberPinsGroup.add(stem);
+      }
+
+      const entry = { mesh, stem, data: mesh.userData };
+      memberPins.push(entry);
+      return entry;
+    }
+
+    function clearMemberPins() {
+      memberPins.forEach(p => {
+        if (p.mesh.geometry) p.mesh.geometry.dispose();
+        if (p.mesh.material) p.mesh.material.dispose();
+        memberPinsGroup.remove(p.mesh);
+        if (p.stem) {
+          p.stem.geometry.dispose();
+          p.stem.material.dispose();
+          memberPinsGroup.remove(p.stem);
+        }
+      });
+      memberPins.length = 0;
+      return instance;
+    }
+
+    function setMemberPinsVisible(visible) {
+      memberPinsGroup.visible = !!visible;
+      return instance;
+    }
+
+    function getMemberPinAt(intersected) {
+      // Helper for hold-to-inspect integration. Caller passes a hit
+      // result; we return the member metadata if it's a pin.
+      if (!intersected || !intersected.userData) return null;
+      return intersected.userData.isMemberPin ? intersected.userData : null;
     }
 
     // ── Proximity computation: two modes ──
@@ -2275,6 +2573,16 @@ const PrismGraphmap = (function () {
       clearDots,
       getDots,
       computeProximity,
+
+      // Contrast line (v2 — tether between two normalized points)
+      setContrastLine,
+      clearContrastLine,
+
+      // Member pins (Phase 6.1.5)
+      addMemberPin,
+      clearMemberPins,
+      setMemberPinsVisible,
+      getMemberPinAt,
 
       // Orbit
       setOrbit,

@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prism v2 · introit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- Shared grammar -->
+<link rel="stylesheet" href="../src/css/prism-grammar.css">
+
+<style>
+/* ============================================================
+   Stage: INTROIT (splash / museum cold-open)
+   ------------------------------------------------------------
+   Two-bar opening. Velvet-black field. Specimens assemble out
+   of dark. Title fades up. Single-piano-note feeling. Invitation
+   to begin is quiet, lower-third, hairline.
+   ============================================================ */
+
+body {
+  overflow: hidden;
+  background: #000;
+  opacity: 0;
+  animation: introitWake 1.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
+}
+body.leaving {
+  animation: introitFade 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes introitWake { from { opacity: 0; } to { opacity: 1; } }
+@keyframes introitFade { from { opacity: 1; } to { opacity: 0; } }
+
+/* The room itself — velvet-black with the ambient blue undertone
+   characteristic of the prism atmosphere */
+.room {
+  position: fixed; inset: 0;
+  background: var(--bg);
+  z-index: 0;
+}
+
+/* Specimen field — pins assemble out of black in the upper-half-and-arc of the view */
+.specimen-field {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 62vh;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.specimen {
+  position: absolute;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  opacity: 0;
+  /* Use individual transform properties so assemble/breath/float don't conflict */
+  scale: 0.92;
+  translate: 0 0;
+  animation:
+    specimenAssemble 2.4s cubic-bezier(0.22, 0.61, 0.36, 1) forwards,
+    specimenBreath  4.2s ease-in-out infinite,
+    specimenFloat   9.0s ease-in-out infinite;
+}
+
+@keyframes specimenAssemble {
+  from { opacity: 0; filter: blur(8px); }
+  to   { opacity: 1; filter: blur(0); }
+}
+
+/* Sprite pulse — more pronounced than the caption breath. Glow expands and
+   the orb itself swells ~16% over the cycle so it reads as a live specimen
+   rather than a static dot. */
+@keyframes specimenBreath {
+  0%, 100% {
+    box-shadow: 0 0  5px var(--specimen-glow, rgba(96,148,220,0.55)),
+                0 0 16px var(--specimen-glow, rgba(96,148,220,0.20));
+    scale: 0.92;
+  }
+  50% {
+    box-shadow: 0 0 20px var(--specimen-glow, rgba(96,148,220,0.85)),
+                0 0 44px var(--specimen-glow, rgba(96,148,220,0.45));
+    scale: 1.08;
+  }
+}
+
+/* Drift — orbital pulls in slightly varied directions. JS staggers per-orb
+   animation-delay and randomizes duration so the field never moves in unison. */
+@keyframes specimenFloat {
+  0%, 100% { translate:  0px   0px; }
+  25%      { translate: -3px  -5px; }
+  50%      { translate:  4px   3px; }
+  75%      { translate:  2px  -4px; }
+}
+
+/* Specimen color variants — pulled from the Prism wordmark palette
+   (red P, orange r, yellow i-dot, blue s, green m) plus a cream-neutral */
+.specimen.s-left  {
+  background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.35), var(--side-left) 60%, rgba(40,80,140,1) 100%);
+  --specimen-glow: rgba(96,148,220,0.55);
+}
+.specimen.s-right {
+  background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.35), var(--side-right) 60%, rgba(140,40,40,1) 100%);
+  --specimen-glow: rgba(220,96,96,0.50);
+}
+.specimen.s-orange {
+  background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.35), rgba(232,148,72,1) 60%, rgba(150,80,30,1) 100%);
+  --specimen-glow: rgba(232,148,72,0.55);
+}
+.specimen.s-green {
+  background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.35), rgba(120,180,100,1) 60%, rgba(60,110,55,1) 100%);
+  --specimen-glow: rgba(120,180,100,0.55);
+}
+.specimen.s-yellow {
+  background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.55), rgba(232,200,96,1) 60%, rgba(150,120,40,1) 100%);
+  --specimen-glow: rgba(232,200,96,0.50);
+}
+.specimen.s-cream {
+  background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.55), rgba(220,210,180,0.85) 60%, rgba(150,130,90,0.95) 100%);
+  --specimen-glow: rgba(220,200,160,0.45);
+}
+
+/* Specimens at different sizes — large, mid, small */
+.specimen.sz-lg { width: 14px; height: 14px; }
+.specimen.sz-md { width: 10px; height: 10px; }
+.specimen.sz-sm { width:  7px; height:  7px; }
+
+/* ── AVATARS ──
+   Carried forward from v56 — small circular portraits of named figures
+   drifting around the title. Distinguished from the spectrum specimens
+   by being photographic and by carrying a softer (slower) halo. */
+.avatar {
+  position: absolute;
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid rgba(245, 240, 232, 0.20);
+  background: rgba(8, 14, 28, 0.55);
+  opacity: 0;
+  scale: 0.7;
+  translate: 0 0;
+  animation:
+    avatarArrive 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+    avatarBreath 6.5s ease-in-out infinite,
+    specimenFloat 11s ease-in-out infinite;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  .avatar { width: 38px; height: 38px; }
+}
+@media (max-width: 480px) {
+  .avatar { width: 32px; height: 32px; }
+}
+.avatar img {
+  display: block;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: saturate(0.95) brightness(0.96);
+}
+
+/* Default avatar — Paul. Larger, brighter halo, anchored at the prism tip
+   (where the beam refracts in the logo above). Reads as the primary
+   reference figure / "you-shaped" placeholder. */
+.avatar.default {
+  width: 64px; height: 64px;
+  border: 1px solid rgba(245, 240, 232, 0.35);
+  z-index: 3;
+  animation:
+    avatarArrive 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+    avatarDefaultBreath 5.5s ease-in-out infinite,
+    specimenFloat 13s ease-in-out infinite;
+}
+.avatar.default img {
+  filter: saturate(1.0) brightness(1.0);
+}
+@media (max-width: 768px) {
+  .avatar.default { width: 50px; height: 50px; }
+}
+@media (max-width: 480px) {
+  .avatar.default { width: 44px; height: 44px; }
+}
+
+@keyframes avatarArrive {
+  from { opacity: 0; scale: 0.7; filter: blur(4px); }
+  to   { opacity: 0.94; scale: 1; filter: blur(0); }
+}
+
+@keyframes avatarBreath {
+  0%, 100% { box-shadow: 0 0 12px rgba(64, 96, 180, 0.18), inset 0 0 8px rgba(8, 14, 28, 0.4); }
+  50%      { box-shadow: 0 0 26px rgba(96, 148, 220, 0.32), inset 0 0 6px rgba(8, 14, 28, 0.3); }
+}
+
+@keyframes avatarDefaultBreath {
+  0%, 100% { box-shadow: 0 0 18px rgba(96, 148, 220, 0.28), 0 0 4px rgba(245, 240, 232, 0.12), inset 0 0 8px rgba(8, 14, 28, 0.4); }
+  50%      { box-shadow: 0 0 36px rgba(120, 180, 232, 0.42), 0 0 8px rgba(245, 240, 232, 0.22), inset 0 0 6px rgba(8, 14, 28, 0.3); }
+}
+
+/* ── TITLE BLOCK ── */
+.title-block {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -42%);
+  text-align: center;
+  z-index: 2;
+}
+
+/* Prism refraction logo — hand-drawn beam + triangular prism + spectrum.
+   Sits above the wordmark like the wordmark is the refracted output. */
+.refraction-logo {
+  display: block;
+  margin: 0 auto 6px;
+  width: clamp(280px, 78vw, 640px);
+  height: auto;
+  opacity: 0;
+  mix-blend-mode: var(--art-blend);
+  filter: drop-shadow(0 0 24px rgba(64, 96, 180, 0.18));
+  animation: refractionSweep 2.4s cubic-bezier(0.22, 1, 0.36, 1) 1.0s forwards;
+}
+
+/* Wordmark — rainbow-painted "Prism" replaces the styled display text */
+.wordmark {
+  display: block;
+  margin: 0 auto;
+  width: clamp(200px, 52vw, 420px);
+  height: auto;
+  opacity: 0;
+  mix-blend-mode: var(--art-blend);
+  filter: drop-shadow(0 0 28px rgba(245, 240, 232, 0.08));
+  animation: titleUp 2.4s cubic-bezier(0.4, 0, 0.2, 1) 1.8s forwards;
+}
+
+@keyframes refractionSweep {
+  from {
+    opacity: 0;
+    transform: translateX(-22px) scale(0.96);
+    filter: drop-shadow(0 0 0 transparent) blur(6px);
+  }
+  to {
+    opacity: 0.92;
+    transform: translateX(0) scale(1);
+    filter: drop-shadow(0 0 24px rgba(64, 96, 180, 0.18)) blur(0);
+  }
+}
+
+.subtitle {
+  margin-top: 28px;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ink-mid);
+  opacity: 0;
+  animation: subtitleUp 2.0s ease-out 2.6s forwards;
+  padding: 0 12px;
+}
+
+.subtitle .em {
+  color: var(--ink);
+  font-style: italic;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0.06em;
+  font-family: var(--serif);
+  font-size: 13px;
+  display: block;
+  margin-top: 14px;
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  .subtitle { font-size: 10px; letter-spacing: 0.22em; }
+  .subtitle .em { font-size: 12px; }
+}
+@media (max-width: 480px) {
+  .subtitle { font-size: 9px; letter-spacing: 0.18em; }
+  .subtitle .em { font-size: 11px; line-height: 1.45; margin-top: 10px; }
+}
+
+@keyframes titleUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes subtitleUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── BEGIN AFFORDANCE ── */
+.begin-block {
+  position: fixed;
+  bottom: 11vh; left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 2;
+  opacity: 0;
+  animation: beginAppear 1.6s ease-out 4.0s forwards;
+}
+
+@keyframes beginAppear { to { opacity: 1; } }
+
+.begin-rule {
+  width: 1px;
+  height: 28px;
+  background: var(--rule);
+  margin: 0 auto 18px;
+}
+
+.begin-btn {
+  background: transparent;
+  border: 1px solid var(--rule);
+  color: var(--ink-mid);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  /* Touch-friendly tap zone — meets 44px minimum height */
+  padding: 14px 32px;
+  min-height: var(--touch-min);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: color 0.4s ease, border-color 0.4s ease, letter-spacing 0.6s ease;
+}
+.begin-btn:hover {
+  color: var(--ink);
+  border-color: rgba(48, 96, 192, 0.40);
+  letter-spacing: 0.32em;
+}
+
+.begin-hint {
+  margin-top: 14px;
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-low);
+}
+
+@media (max-width: 768px) {
+  .begin-block { bottom: 8vh; }
+  .begin-rule  { height: 22px; margin-bottom: 14px; }
+  .begin-btn   { padding: 14px 28px; letter-spacing: 0.22em; }
+}
+@media (max-width: 480px) {
+  .begin-block { bottom: 6vh; }
+  .begin-rule  { height: 18px; margin-bottom: 12px; }
+  .begin-btn   { font-size: 9px; padding: 14px 22px; letter-spacing: 0.20em; }
+  .begin-hint  { font-size: 7px; letter-spacing: 0.18em; padding: 0 16px; }
+}
+
+/* ── MARK / FOOTNOTE ── */
+.imprint {
+  position: fixed;
+  bottom: 18px; left: 28px;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-low);
+  opacity: 0;
+  animation: beginAppear 1.6s ease-out 4.4s forwards;
+  z-index: 3;
+}
+.imprint strong { color: var(--ink-mid); font-weight: 500; }
+
+.mode-mark {
+  position: fixed;
+  bottom: 18px; right: 28px;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-low);
+  opacity: 0;
+  animation: beginAppear 1.6s ease-out 4.4s forwards;
+  z-index: 3;
+}
+.mode-mark button {
+  background: transparent;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 4px 8px;
+  min-height: var(--touch-min);
+  min-width: var(--touch-min);
+}
+.mode-mark button:hover { color: var(--ink-mid); }
+
+@media (max-width: 480px) {
+  .imprint   { bottom: 14px; left: 14px; font-size: 8px; letter-spacing: 0.14em; }
+  .mode-mark { bottom: 14px; right: 14px; font-size: 8px; letter-spacing: 0.14em; }
+}
+</style>
+</head>
+<body class="dark">
+
+<div class="room"></div>
+
+<!-- Specimen field — JS distributes pins in a loose constellation -->
+<div class="specimen-field" id="specimenField"></div>
+
+<div class="title-block">
+  <img class="refraction-logo" src="../../Artwork/Prisms/Logo_1.png" alt="">
+  <img class="wordmark" src="../../Artwork/Font logos/Font_logo_1.png" alt="Prism">
+  <div class="subtitle">
+    western diametrica
+    <span class="em">a parallelogrammatic instrument for political denomination</span>
+  </div>
+</div>
+
+<div class="begin-block">
+  <div class="begin-rule"></div>
+  <button class="begin-btn" onclick="enter()">begin</button>
+  <div class="begin-hint">drag the diatribe · place the pin</div>
+</div>
+
+<div class="imprint"><strong>v2</strong> · introit</div>
+<div class="mode-mark"><button onclick="toggleMode()" id="modeBtn">light</button></div>
+
+<script>
+/* ============================================================
+   Introit · controller
+   ------------------------------------------------------------
+   Distributes specimen pins in a loose constellation above the
+   title block. Stagger their assembly delays + breath phases
+   so they fade in and pulse independently. Hands off to
+   index.html on begin.
+   ============================================================ */
+
+// ── Specimen distribution ────────────────────────────────────
+// Specimens placed in a loose upper-arc constellation. Each pin
+// has a randomized position within a fixed envelope so the field
+// reads as a curated arrangement, not a uniform grid.
+
+// Viewport classification — drives several layout adaptations below
+const isMobile = window.matchMedia('(max-width: 768px)').matches;
+const isSmall  = window.matchMedia('(max-width: 480px)').matches;
+
+// Specimen count adapts to viewport — fewer orbs on smaller screens
+const NUM_SPECIMENS = isSmall ? 16 : isMobile ? 22 : 26;
+// Side palette pulled from the wordmark — red/blue dominant (the political axis
+// colors), orange/green as accent, cream + yellow as the neutral / luminous middle.
+const sidePool = [
+  's-left',  's-left',  's-left',     // 3× blue
+  's-right', 's-right', 's-right',    // 3× red
+  's-orange', 's-orange',             // 2× orange
+  's-green', 's-green',               // 2× green
+  's-yellow',                         // 1× yellow (rare)
+  's-cream', 's-cream'                // 2× cream/neutral
+];
+const sizes = ['sz-lg', 'sz-md', 'sz-md', 'sz-sm', 'sz-sm'];
+
+const field = document.getElementById('specimenField');
+const placed = [];
+
+function rand(lo, hi) { return lo + Math.random() * (hi - lo); }
+
+// ── Layout — avatars first so orb placement can avoid them ──
+//
+// Avatars use {cx, cy} center coordinates. CSS positioning uses
+// left/top + transform: translate(-50%, -50%) so each avatar is
+// centered on its declared point. Distribution forms a deliberate
+// frame around the title block.
+//
+// Paul (default) sits at the spectrum exit zone — just right of the refraction
+// logo, in the upper third. He's the receiver of the refracted beam, the
+// "you-shaped" figure that the prism's output points at.
+let AVATARS = [
+  // Default — anchored at the spectrum exit (right of refraction logo)
+  { name: 'Paul',    cx: 84, cy: 28, default: true },
+
+  // Top row — above the title block, three across in a wide arc
+  { name: 'Buddy',   cx: 9,  cy: 14 },
+  { name: 'George',  cx: 25, cy: 6  },
+  { name: 'Peter',   cx: 65, cy: 8  },
+
+  // Left edge — upper mid + lower mid
+  { name: 'Charlie', cx: 5,  cy: 42 },
+  { name: 'Max',     cx: 7,  cy: 66 },
+
+  // Right edge — upper + lower (Paul handles upper-mid as default)
+  { name: 'Gary',    cx: 95, cy: 16 },
+  { name: 'Nick',    cx: 93, cy: 58 },
+
+  // Bottom row — above the begin button, clear of its horizontal extent
+  { name: 'Sally',   cx: 18, cy: 82 },
+  { name: 'Ted',     cx: 82, cy: 82 }
+];
+
+// ── Mobile avatar adaptations ──
+// On narrow viewports the 10-avatar frame can't survive edge crowding.
+// 768px keeps all 10 but pulls edge cx values inward (95 → 90, 5 → 10).
+// 480px reduces to the 5 most important: Paul + 4 corners.
+if (isSmall) {
+  AVATARS = AVATARS.filter(a =>
+    a.default ||
+    ['Buddy', 'Gary', 'Sally', 'Ted'].includes(a.name)
+  );
+}
+AVATARS.forEach(a => {
+  if (isMobile) {
+    if (a.cx > 88) a.cx = 88;
+    if (a.cx < 12) a.cx = 12;
+  }
+});
+
+// ── Avoidance zones ──
+// Each zone is an ellipse {cx, cy, rx, ry}. Orbs reject positions that fall
+// inside any zone OR within min-distance of another orb.
+//
+// Title zone split into two smaller zones (refraction logo + wordmark) instead
+// of one big ellipse — lets orbs breathe through the upper-mid corridor near
+// the prism while still keeping the wordmark and subtitle text clear.
+const zones = [
+  // Refraction logo zone — tighter than before, lets orbs come closer
+  { cx: 50, cy: 36, rx: 26, ry: 14 },
+  // Wordmark + subtitle zone — keeps letters readable
+  { cx: 50, cy: 66, rx: 30, ry: 16 },
+  // Begin block — rule + button + hint
+  { cx: 50, cy: 92, rx: 24, ry: 6 },
+];
+AVATARS.forEach(a => {
+  const r = a.default ? 8 : 5.2;
+  zones.push({ cx: a.cx, cy: a.cy, rx: r, ry: r });
+});
+
+// ── Spectrum trail — orbs that read as the prism's refracted output ──
+// Hand-placed along the beam trajectory: incoming beam (left) → prism (center)
+// → spectrum exit (right). Each color-matched to its position in the beam, so
+// the visual reads "the light is becoming specimens." Smaller than the random
+// constellation orbs, to feel like sparks rather than full specimens.
+let SPECTRUM_TRAIL = isMobile ? [
+  // Mobile — shorter trail since the refraction logo is narrower (78vw vs 56vw)
+  // and the beam path collapses horizontally
+  { cx: 22, cy: 32, side: 's-cream',  size: 'sz-sm' },
+  { cx: 70, cy: 32, side: 's-orange', size: 'sz-sm' },
+  { cx: 76, cy: 38, side: 's-right',  size: 'sz-sm' },
+  { cx: 72, cy: 44, side: 's-green',  size: 'sz-sm' },
+] : [
+  // Desktop — full beam trajectory with the wider logo
+  { cx: 18, cy: 34, side: 's-cream',  size: 'sz-sm' },
+  { cx: 26, cy: 36, side: 's-cream',  size: 'sz-sm' },
+  { cx: 35, cy: 38, side: 's-yellow', size: 'sz-sm' },
+  { cx: 64, cy: 32, side: 's-orange', size: 'sz-sm' },
+  { cx: 70, cy: 36, side: 's-right',  size: 'sz-sm' },
+  { cx: 76, cy: 42, side: 's-green',  size: 'sz-sm' },
+  { cx: 72, cy: 48, side: 's-left',   size: 'sz-sm' },
+];
+if (isSmall) SPECTRUM_TRAIL = [];
+
+// Position generator — zone-aware, min-distance enforced
+function nextPosition() {
+  for (let i = 0; i < 80; i++) {
+    const xPct = rand(3, 97);
+    const yPct = rand(3, 95);
+    // Reject if inside any zone
+    let inZone = false;
+    for (const z of zones) {
+      const dx = (xPct - z.cx) / z.rx;
+      const dy = (yPct - z.cy) / z.ry;
+      if (dx*dx + dy*dy < 1.0) { inZone = true; break; }
+    }
+    if (inZone) continue;
+    // Reject if too close to an already-placed orb
+    let tooClose = false;
+    for (const p of placed) {
+      const px = p.x - xPct, py = p.y - yPct;
+      if (px*px + py*py < 22) { tooClose = true; break; }
+    }
+    if (!tooClose) {
+      placed.push({ x: xPct, y: yPct });
+      return { x: xPct, y: yPct };
+    }
+  }
+  return { x: rand(3, 97), y: rand(3, 95) };
+}
+
+// Place the spectrum trail FIRST so random orbs avoid these positions
+SPECTRUM_TRAIL.forEach((t, i) => {
+  const el = document.createElement('div');
+  el.className = `specimen ${t.side} ${t.size}`;
+  el.style.left = `${t.cx}%`;
+  el.style.top  = `${t.cy}%`;
+  // Slightly slower / dimmer breath so the trail reads as a quieter layer
+  const breathDur = (4.4 + Math.random() * 1.2).toFixed(2);
+  const floatDur  = (8.0 + Math.random() * 4.0).toFixed(2);
+  el.style.animationDuration = `2.4s, ${breathDur}s, ${floatDur}s`;
+  // Stagger assembly along the beam trajectory — orbs appear sequentially L→R
+  // so the eye reads the path "beam enters → prism → spectrum exits"
+  el.style.animationDelay = `${1.0 + i * 0.18}s, ${(-Math.random() * 4).toFixed(2)}s, ${(-Math.random() * 8).toFixed(2)}s`;
+  field.appendChild(el);
+  placed.push({ x: t.cx, y: t.cy });
+});
+
+for (let i = 0; i < NUM_SPECIMENS; i++) {
+  const { x, y } = nextPosition();
+  const side = sidePool[Math.floor(Math.random() * sidePool.length)];
+  const size = sizes[Math.floor(Math.random() * sizes.length)];
+  const el = document.createElement('div');
+  el.className = `specimen ${side} ${size}`;
+  el.style.left = `${x}%`;
+  el.style.top  = `${y}%`;
+  // Randomize breath + float durations per-orb so the field never moves in unison
+  const breathDur = (3.6 + Math.random() * 1.6).toFixed(2);
+  const floatDur  = (7.0 + Math.random() * 5.0).toFixed(2);
+  el.style.animationDuration = `2.4s, ${breathDur}s, ${floatDur}s`;
+  el.style.animationDelay = `${0.6 + Math.random() * 1.6}s, ${(-Math.random() * 4).toFixed(2)}s, ${(-Math.random() * 8).toFixed(2)}s`;
+  field.appendChild(el);
+}
+
+// ── Render avatars (positions defined above in AVATARS) ──
+// Each avatar centered on its (cx, cy) via transform: translate(-50%, -50%).
+// The float animation modifies the translate property; both compose cleanly.
+AVATARS.forEach((a, i) => {
+  const el = document.createElement('div');
+  el.className = a.default ? 'avatar default' : 'avatar';
+  el.style.left = `${a.cx}%`;
+  el.style.top  = `${a.cy}%`;
+  el.style.transform = 'translate(-50%, -50%)';
+  // Default avatar lands first; supporting cast cascades after
+  const arriveDelay = a.default ? 1.8 : (2.2 + i * 0.14).toFixed(2);
+  const breathDelay = (-Math.random() * 6).toFixed(2);
+  const floatDelay  = (-Math.random() * 12).toFixed(2);
+  el.style.animationDelay = `${arriveDelay}s, ${breathDelay}s, ${floatDelay}s`;
+  el.innerHTML = `<img src="../../Artwork/Avatars/${a.name}.png" alt="">`;
+  field.appendChild(el);
+});
+
+// ── Begin handoff ────────────────────────────────────────────
+function enter() {
+  document.body.classList.add('leaving');
+  setTimeout(() => { window.location.href = 'index.html'; }, 720);
+}
+
+// Keyboard / pointer affordances — let the user enter on space / enter / click anywhere on the field
+window.addEventListener('keydown', e => {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault();
+    enter();
+  }
+});
+
+// ── Light/dark toggle ────────────────────────────────────────
+function toggleMode() {
+  const isLight = document.body.classList.toggle('light');
+  document.getElementById('modeBtn').textContent = isLight ? 'dark' : 'light';
+}
+window.toggleMode = toggleMode;
+window.enter = enter;
+</script>
+
+</body>
+</html>

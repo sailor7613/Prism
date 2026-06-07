@@ -1,0 +1,2300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prism v2 · diatribe instrument</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- Shared grammar (design system) -->
+<link rel="stylesheet" href="../src/css/prism-grammar.css">
+
+<style>
+/* ============================================================
+   Stage: DIATRIBE INSTRUMENT
+   ------------------------------------------------------------
+   Stage-specific layout + composition only. All material
+   grammar (caption tablets, keyword sprite, label lines,
+   thumb, ambient wash, type) lives in prism-grammar.css.
+   ============================================================ */
+
+body { font-size: 17px; overflow: hidden; }
+
+/* ── HEADER ── */
+header {
+  position: fixed; top: 0; left: 0; right: 0;
+  padding: 20px 28px;
+  display: flex; justify-content: space-between; align-items: baseline;
+  z-index: 10;
+}
+@media (max-width: 768px) { header { padding: 14px 18px; } }
+@media (max-width: 480px) { header { padding: 10px 14px; } }
+
+/* ── MAIN STAGE ── */
+main {
+  position: relative;
+  height: 100vh;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  padding: 80px var(--stage-pad-x) 60px;
+  z-index: 1;
+}
+@media (max-width: 768px) { main { padding-top: 60px; padding-bottom: 48px; } }
+@media (max-width: 480px) { main { padding-top: 52px; padding-bottom: 40px; } }
+
+/* Event framing — sits above the slider as contextual frame */
+.framing {
+  max-width: 720px;
+  text-align: center;
+  font-family: var(--serif);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink-mid);
+  margin-bottom: 72px;
+  font-style: italic;
+}
+.framing::before {
+  content: '';
+  display: block;
+  width: 32px; height: 1px;
+  background: var(--rule);
+  margin: 0 auto 18px;
+}
+@media (max-width: 768px) {
+  .framing { font-size: 14px; line-height: 1.55; margin-bottom: 36px; }
+}
+@media (max-width: 480px) {
+  .framing { font-size: 13px; margin-bottom: 24px; }
+}
+
+/* ── DIATRIBE STAGE ── */
+.stage {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  height: 260px;
+}
+
+/* Both DIATRIBE captions positioned absolutely; positionCaption() handles
+   left coord. Scoped to .stage so reused .prism-caption surfaces elsewhere
+   (e.g. the pin card) keep normal flow. */
+.stage .prism-caption {
+  position: absolute;
+  top: 0;
+}
+/* Fallback home shelves — if positionCaption() hasn't set an inline left yet
+   (first paint, or a stale-viewport branch), the two captions still land on
+   opposite sides instead of collapsing onto each other. */
+.stage .prism-caption.real  { left: 2%; }
+.stage .prism-caption.ghost { left: auto; right: 2%; }
+
+/* Mobile: stage becomes a flex column. DOM order (real → track-wrap → ghost)
+   defines the visual stack — slider sits between its captions, reading as
+   "you" → instrument → "doppelgänger" top to bottom. JS skips the desktop
+   home/rubber-band positioning, leaving CSS in charge of layout. */
+@media (max-width: 768px) {
+  .stage {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+    height: auto;
+    min-height: 460px;
+  }
+  .prism-caption.real,
+  .prism-caption.ghost {
+    position: static;
+    transform: none;
+    align-self: center;
+  }
+  /* NOTE: .track-wrap position overrides live in the SECOND mobile media
+     query below — they have to come AFTER the desktop .track-wrap rule
+     to win the cascade (same specificity, source order decides). */
+}
+
+/* ── SLIDER TRACK ── */
+.track-wrap {
+  position: absolute;
+  bottom: 28px;
+  left: 0; right: 0;
+  height: 80px;
+  user-select: none;
+}
+.track {
+  position: relative;
+  top: 32px;
+  height: 14px;
+  margin: 0 24px;
+  border-radius: 7px;
+  background: linear-gradient(to right,
+    rgba(212, 92, 92, 0.08) 0%,
+    rgba(212, 92, 92, 0.08) 17%,
+    rgba(196, 156, 72, 0.10) 17%,
+    rgba(196, 156, 72, 0.10) 33%,
+    rgba(96, 168, 128, 0.06) 33%,
+    rgba(96, 168, 128, 0.06) 67%,
+    rgba(196, 156, 72, 0.10) 67%,
+    rgba(196, 156, 72, 0.10) 83%,
+    rgba(212, 92, 92, 0.08) 83%,
+    rgba(212, 92, 92, 0.08) 100%
+  );
+  border: 1px solid var(--rule-soft);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  /* Touch hit-area extension via padding-equivalent on parent .track-wrap */
+}
+body.light .track {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.10);
+}
+@media (max-width: 768px) {
+  /* These overrides come AFTER the desktop .track-wrap rule so they win the
+     cascade — stage flex layout requires position: relative on track-wrap. */
+  .track-wrap {
+    position: relative;
+    bottom: auto;
+    left: auto; right: auto;
+    width: 100%;
+    height: 96px;
+  }
+  .track { height: 20px; margin: 0 16px; }
+}
+
+/* Readout — DM Mono confirmation strip below track */
+.readout {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  display: flex;
+  justify-content: center; align-items: center;
+  gap: 18px;
+  font-family: var(--mono);
+  font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink-low);
+}
+.readout .real-r  { color: var(--ink-mid); }
+.readout .ghost-r { color: var(--ink-low); font-style: italic; }
+.readout .sep     { color: var(--ink-low); }
+
+/* ── FOOTER ── */
+footer {
+  position: fixed;
+  bottom: 18px; left: 28px; right: 28px;
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-family: var(--mono);
+  font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink-low);
+  z-index: 10;
+}
+.event-id strong { color: var(--ink-mid); font-weight: 500; }
+.asym { text-align: right; }
+.asym .delta { color: var(--ink-mid); }
+@media (max-width: 768px) {
+  footer { bottom: 12px; left: 14px; right: 14px; font-size: 9px; letter-spacing: 0.10em; }
+}
+@media (max-width: 480px) {
+  footer { font-size: 8px; flex-direction: column; gap: 4px; align-items: center; text-align: center; }
+  .asym  { text-align: center; }
+  /* On the smallest screens, truncate event-id to keep one-line */
+  .event-id {
+    max-width: 100%;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+}
+
+/* Discovery cue */
+.cue {
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--mono);
+  font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--ink-low);
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  pointer-events: none;
+}
+.cue.show { opacity: 1; }
+
+/* ============================================================
+   Stage: EVENT ENTRY (the phase before the slider)
+   ------------------------------------------------------------
+   The editorial introit to a single event. Establishes the
+   event's dignity — category, title, framing prose, a cloud of
+   load-bearing terms — before the user picks up the instrument.
+   Reuses grammar material: ambient wash, develop keyframe,
+   keyword glow, breath. Stage-local layout + choreography only.
+   ============================================================ */
+
+.event-phase {
+  position: fixed; inset: 0;
+  z-index: 5;
+  display: flex; align-items: center; justify-content: center;
+  padding: 88px var(--stage-pad-x);
+  overflow-y: auto;
+  opacity: 1;
+  transition: opacity 0.9s ease, transform 1.1s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* Phase visibility — body carries phase-event | phase-diatribe | phase-answers | phase-graph */
+main, footer { transition: opacity 0.9s ease; }
+body.phase-event main,
+body.phase-answers main,
+body.phase-graph main,
+body.phase-event footer { opacity: 0; pointer-events: none; }
+body.phase-diatribe .event-phase,
+body.phase-answers .event-phase,
+body.phase-graph .event-phase {
+  opacity: 0;
+  transform: scale(1.04);
+  pointer-events: none;
+}
+
+.ev-inner {
+  max-width: 760px;
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center;
+}
+
+/* Museum caption tag */
+.ev-category {
+  font-family: var(--mono);
+  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--ink-mid);
+  margin-bottom: 26px;
+  opacity: 0;
+  animation: ev-rise 0.9s ease 0.15s forwards;
+}
+
+.ev-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(28px, 4.6vw, 50px);
+  line-height: 1.14;
+  letter-spacing: -0.008em;
+  color: var(--ink);
+  max-width: 18ch;
+  opacity: 0;
+  animation: ev-rise 1.0s ease 0.35s forwards;
+}
+
+/* Hairline rule glyph — breath-modulated via JS */
+.ev-rule {
+  width: 40px; height: 1px;
+  background: var(--rule);
+  margin: 30px auto;
+  opacity: 0;
+  animation: ev-rise 0.9s ease 0.7s forwards;
+}
+
+/* The editorial dignity piece — wall text. Develops in (blur → focus). */
+.ev-framing {
+  font-family: var(--serif);
+  font-size: clamp(16px, 1.9vw, 20px);
+  line-height: 1.7;
+  color: var(--ink);
+  max-width: 640px;
+  margin: 0 0 44px;
+  opacity: 0;
+}
+.ev-framing.develop {
+  animation: prism-caption-develop 1100ms cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+/* Cloud of load-bearing terms — floats, glows fluid-green, staggers in */
+.ev-keywords {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 10px 18px;
+  max-width: 600px;
+  margin-bottom: 52px;
+}
+.ev-kw {
+  font-family: var(--serif);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.005em;
+  color: var(--ink);
+  text-shadow: 0 0 6px rgba(120, 200, 160, 0.50), 0 0 14px rgba(120, 200, 160, 0.26);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.22, 0.61, 0.36, 1);
+  animation: ev-kw-float 9s ease-in-out infinite, ev-kw-glow 5.5s ease-in-out infinite;
+  cursor: default;
+}
+.ev-kw.in { opacity: 0.92; transform: translateY(0); }
+body.light .ev-kw {
+  text-shadow: 0 0 6px rgba(72, 152, 112, 0.32), 0 0 12px rgba(72, 152, 112, 0.18);
+}
+@keyframes ev-kw-float {
+  0%, 100% { translate: 0 0; }
+  50%      { translate: 0 -5px; }
+}
+@keyframes ev-kw-glow {
+  0%, 100% { filter: drop-shadow(0 0 0 transparent); }
+  50%      { filter: drop-shadow(0 0 6px rgba(120, 200, 160, 0.38)); }
+}
+
+/* Enter affordance — take a position */
+.ev-enter {
+  background: transparent;
+  border: 1px solid var(--rule);
+  color: var(--ink-mid);
+  font-family: var(--mono);
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  padding: 12px 26px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-flex; align-items: center; gap: 12px;
+  min-height: var(--touch-min);
+  opacity: 0;
+  animation: ev-enter-appear 1s ease 1.8s forwards;
+  transition: color 0.4s ease, border-color 0.4s ease, letter-spacing 0.4s ease;
+}
+.ev-enter:hover { color: var(--ink); border-color: rgba(48, 96, 192, 0.4); letter-spacing: 0.22em; }
+.ev-enter-glyph { transition: transform 0.4s ease; }
+.ev-enter:hover .ev-enter-glyph { transform: translateX(4px); }
+
+@keyframes ev-rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes ev-enter-appear { to { opacity: 1; } }
+
+@media (max-width: 768px) {
+  .event-phase { padding: 64px 20px; }
+  .ev-category { margin-bottom: 18px; font-size: 9px; letter-spacing: 0.18em; }
+  .ev-rule     { margin: 24px auto; }
+  .ev-framing  { font-size: 16px; margin-bottom: 34px; }
+  .ev-keywords { gap: 8px 14px; margin-bottom: 40px; }
+  .ev-kw       { font-size: 14px; }
+}
+@media (max-width: 480px) {
+  .event-phase { padding: 52px 16px; align-items: flex-start; }
+  .ev-title    { font-size: 26px; }
+  .ev-framing  { font-size: 14.5px; line-height: 1.6; margin-bottom: 28px; }
+  .ev-kw       { font-size: 13.5px; }
+  .ev-enter    { font-size: 10px; padding: 11px 20px; }
+}
+
+/* Honor reduced-motion for the entry choreography */
+@media (prefers-reduced-motion: reduce) {
+  .ev-category, .ev-title, .ev-rule, .ev-enter { animation-duration: 0.01ms; opacity: 1; }
+  .ev-framing.develop { animation: none; opacity: 1; }
+  .ev-kw { animation: none; }
+}
+
+/* ============================================================
+   Stage: ANSWER CARDS (the phase after the diatribe commit)
+   ------------------------------------------------------------
+   Four responses — one per quadrant — at the band the diatribe
+   aperture selected. The user reads the 2×2 and picks the
+   response that most aligns; selection is the seam into the
+   pin-commit stage. Cards scatter into their spatial quadrant
+   positions (graph preview). Band determines which of the three
+   pre-authored variants per quadrant renders. (Spec v06 §3.2.) */
+
+.answers-phase {
+  position: fixed; inset: 0;
+  z-index: 5;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 84px var(--stage-pad-x) 76px;
+  overflow-y: auto;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.9s ease;
+}
+body.phase-answers .answers-phase { opacity: 1; pointer-events: auto; }
+
+.answers-head { text-align: center; margin-bottom: 26px; max-width: 640px; }
+.answers-head .a-prompt {
+  font-family: var(--serif); font-style: italic;
+  font-size: clamp(15px, 1.8vw, 19px); line-height: 1.5;
+  color: var(--ink); margin: 0 auto 12px;
+}
+.answers-head .a-meta {
+  font-family: var(--mono);
+  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink-mid);
+}
+
+/* 2×2 quadrant grid:  TL=Left·Inst   TR=Right·Inst
+                       BL=Left·Grass  BR=Right·Grass */
+.answers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%; max-width: 880px;
+}
+
+.answer-card {
+  position: relative;
+  background: var(--bg-soft);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 18px 20px 20px;
+  cursor: pointer;
+  text-align: left;
+  opacity: 0;
+  transition: opacity 0.5s ease,
+              transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1),
+              border-color 0.5s ease, box-shadow 0.6s ease, background 0.5s ease;
+}
+/* scatter origin — each card drifts in from toward the centre */
+.answer-card.tl { transform: translate( 16px,  16px); }
+.answer-card.tr { transform: translate(-16px,  16px); }
+.answer-card.bl { transform: translate( 16px, -16px); }
+.answer-card.br { transform: translate(-16px, -16px); }
+.answer-card.in { opacity: 1; transform: translate(0, 0); }
+
+/* Four-quadrant accent colors — top row blue·red, bottom row green·orange */
+.answer-card { --accent: var(--rule); border-left: 2px solid var(--accent); }
+.answer-card[data-quad="A"] { --accent: rgba(96, 148, 220, 0.6); }  /* blue   */
+.answer-card[data-quad="B"] { --accent: rgba(220, 96, 96, 0.6); }   /* red    */
+.answer-card[data-quad="C"] { --accent: rgba(96, 168, 128, 0.6); }  /* green  */
+.answer-card[data-quad="D"] { --accent: rgba(196, 156, 72, 0.6); }  /* orange */
+
+.answer-card .ac-text {
+  font-family: var(--serif);
+  font-size: var(--type-caption-base);
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+.answer-card:hover { border-color: rgba(48, 96, 192, 0.4); }
+.answer-card.selected {
+  border-color: var(--ink-mid);
+  box-shadow: 0 0 30px var(--halo), inset 0 0 24px rgba(8, 16, 40, 0.22);
+  transform: translate(0, -3px);
+}
+body.phase-answers .answers-grid.has-selection .answer-card:not(.selected) { opacity: 0.4; }
+
+.answers-foot {
+  margin-top: 28px;
+  display: flex; align-items: center; gap: 22px;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.6s ease;
+}
+.answers-foot.show { opacity: 1; pointer-events: auto; }
+.a-back {
+  background: none; border: none; cursor: pointer;
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--ink-low);
+  transition: color 0.3s ease;
+}
+.a-back:hover { color: var(--ink-mid); }
+.a-note {
+  font-family: var(--mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--ink-low);
+}
+
+/* Commit CTA — shared look with .ev-enter, minus the entrance animation */
+.a-commit {
+  background: transparent;
+  border: 1px solid var(--rule);
+  color: var(--ink-mid);
+  font-family: var(--mono);
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  padding: 12px 26px; border-radius: 2px; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 12px;
+  min-height: var(--touch-min);
+  transition: color 0.4s ease, border-color 0.4s ease, letter-spacing 0.4s ease, opacity 0.4s ease;
+}
+.a-commit:hover { color: var(--ink); border-color: rgba(48, 96, 192, 0.4); letter-spacing: 0.22em; }
+.a-commit:hover .ev-enter-glyph { transform: translateX(4px); }
+.a-commit:disabled { opacity: 0.5; cursor: default; border-color: var(--rule-soft); letter-spacing: 0.18em; }
+
+/* Diatribe → answers commit affordance (fixed, appears after engagement) */
+.to-answers {
+  position: fixed; left: 50%; bottom: 60px;
+  transform: translateX(-50%) translateY(8px);
+  z-index: 8;
+  background: transparent;
+  border: 1px solid var(--rule);
+  color: var(--ink-mid);
+  font-family: var(--mono);
+  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  padding: 10px 22px; border-radius: 2px; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 10px;
+  min-height: var(--touch-min);
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.6s ease, transform 0.6s ease, color 0.3s ease, border-color 0.3s ease, letter-spacing 0.3s ease;
+}
+.to-answers.show { opacity: 1; pointer-events: auto; transform: translateX(-50%) translateY(0); }
+.to-answers:hover { color: var(--ink); border-color: rgba(48, 96, 192, 0.4); letter-spacing: 0.22em; }
+.to-answers:hover .ev-enter-glyph { transform: translateX(4px); }
+/* Only meaningful during the diatribe phase */
+body:not(.phase-diatribe) .to-answers { opacity: 0 !important; pointer-events: none !important; }
+
+@media (max-width: 768px) {
+  .answers-phase { padding: 64px 20px 64px; }
+  .answers-grid { gap: 14px; }
+  .answer-card { padding: 15px 16px 17px; }
+  .answers-foot { margin-top: 22px; gap: 16px; flex-wrap: wrap; justify-content: center; }
+}
+@media (max-width: 480px) {
+  .answers-phase { align-items: flex-start; }
+  .answers-grid { grid-template-columns: 1fr; }   /* single column; order A,B,C,D */
+  .to-answers { bottom: 76px; font-size: 9px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .answer-card { transition: opacity 0.01ms, border-color 0.3s ease, box-shadow 0.3s ease; }
+  .answer-card.tl, .answer-card.tr, .answer-card.bl, .answer-card.br,
+  .answer-card.in, .answer-card.selected { transform: none; }
+}
+
+/* ============================================================
+   Stage: GRAPHMAP (pin placement — the 2D pad + live 3D graph)
+   ------------------------------------------------------------
+   The user places their pin on a 2D quadrant pad; distance from
+   center is intensity; the axes migrate to expand the chosen
+   quadrant; corner labels slide center→edge and their axis-tagged
+   words scale with how hard the position loads each axis. The 3D
+   graphmap mirrors the pin with Z (from the diatribe) + depth. */
+
+.graph-phase {
+  position: fixed; inset: 0;
+  z-index: 5;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 74px var(--stage-pad-x) 64px;
+  overflow-y: auto;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.9s ease;
+}
+body.phase-graph .graph-phase { opacity: 1; pointer-events: auto; }
+
+.graph-head { text-align: center; margin-bottom: 30px; max-width: 600px; }
+.graph-head .g-prompt {
+  font-family: var(--serif); font-style: italic;
+  font-size: clamp(14px, 1.6vw, 17px); line-height: 1.5;
+  color: var(--ink-mid); margin: 0;
+}
+
+.graph-stage {
+  display: flex; align-items: center; justify-content: center;
+  gap: 30px; width: 100%; max-width: 1000px;
+}
+@media (max-width: 860px) { .graph-stage { flex-direction: column; gap: 22px; } }
+
+.graph-left { display: flex; flex-direction: column; gap: 16px; flex: none; perspective: 950px; perspective-origin: 50% 42%; }
+
+/* ── Z displacement slider (frustrated ↔ realized) ── */
+.z-slider { width: min(440px, 86vw); user-select: none; }
+.z-track {
+  position: relative; height: 14px; margin: 0 11px; border-radius: 7px;
+  background: linear-gradient(to right,
+    rgba(128, 116, 170, 0.24) 0%,
+    rgba(245, 240, 232, 0.05) 50%,
+    rgba(220, 190, 120, 0.26) 100%);
+  border: 1px solid var(--rule-soft);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+body.light .z-track { box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.10); }
+.z-mark {
+  position: absolute; left: 50%; top: -4px;
+  width: 1px; height: 22px; background: var(--ink-mid); opacity: 0.5; pointer-events: none;
+}
+.z-thumb {
+  position: absolute; top: 50%; left: 50%;
+  width: 20px; height: 20px; border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.5), var(--accent, var(--side-left)) 65%, rgba(10,18,38,0.9) 100%);
+  box-shadow: 0 0 14px var(--accent, rgba(96,148,220,0.5));
+  cursor: grab; z-index: 2;
+}
+.z-thumb::after {
+  content: ''; position: absolute; top: 50%; left: 50%;
+  width: 30px; height: 30px; transform: translate(-50%, -50%); border-radius: 50%;
+}
+@media (max-width: 768px), (pointer: coarse) { .z-thumb::after { width: var(--touch-min); height: var(--touch-min); } }
+.z-thumb.dragging { cursor: grabbing; }
+.z-poles {
+  display: flex; justify-content: space-between; align-items: center; margin-top: 8px;
+  font-family: var(--mono); font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--ink-low);
+}
+.z-poles .z-read { color: var(--ink-mid); }
+
+/* ── 2D placement pad ── */
+.graph-pad {
+  --ax: 50%; --ay: 50%;
+  --accent: var(--rule);
+  position: relative;
+  width: min(440px, 86vw);
+  aspect-ratio: 1 / 1;
+  flex: none;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: var(--bg-soft);
+  box-shadow: inset 0 0 44px rgba(8, 16, 40, 0.32);
+  cursor: crosshair;
+  overflow: hidden;
+  touch-action: none;
+  transform-style: preserve-3d;
+  transition: transform 0.25s ease, box-shadow 0.6s ease;
+}
+/* Turned into 3D as Z is pulled — let the pin escape the plane bounds, and
+   glass the surface so the pin reads through it even when it sits behind. */
+.graph-pad.tilted { overflow: visible; cursor: default; background: rgba(10, 18, 38, 0.12); }
+body.light .graph-pad.tilted { background: rgba(245, 240, 232, 0.18); }
+.pad-grid {
+  position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(245, 240, 232, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 240, 232, 0.05) 1px, transparent 1px);
+  background-size: 12.5% 12.5%;
+  transition: opacity 0.6s ease;
+}
+body.light .pad-grid {
+  background-image:
+    linear-gradient(rgba(20, 22, 30, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20, 22, 30, 0.06) 1px, transparent 1px);
+}
+
+/* Migrating crosshair axes — iridescent spectrum lines that read above the
+   grid via a glow + slow shimmer, and brighten while migrating. */
+.pad-axis-x {
+  position: absolute; left: 0; right: 0; top: var(--ay);
+  height: 1.5px; pointer-events: none; transform: translateY(-0.75px);
+  background: linear-gradient(to right,
+    rgba(96,148,220,0) 0%, rgba(96,148,220,0.6) 16%,
+    rgba(245,240,232,0.85) 50%, rgba(220,96,96,0.6) 84%, rgba(220,96,96,0) 100%);
+  background-size: 220% 100%;
+  box-shadow: 0 0 9px rgba(150,175,225,0.4);
+  animation: axis-shimmer-x 7s ease-in-out infinite;
+  transition: top 0.7s cubic-bezier(0.22, 0.61, 0.36, 1),
+              box-shadow 0.6s ease, filter 0.6s ease;
+}
+.pad-axis-y {
+  position: absolute; top: 0; bottom: 0; left: var(--ax);
+  width: 1.5px; pointer-events: none; transform: translateX(-0.75px);
+  background: linear-gradient(to bottom,
+    rgba(196,156,72,0) 0%, rgba(196,156,72,0.55) 16%,
+    rgba(245,240,232,0.85) 50%, rgba(96,168,128,0.55) 84%, rgba(96,168,128,0) 100%);
+  background-size: 100% 220%;
+  box-shadow: 0 0 9px rgba(196,170,110,0.35);
+  animation: axis-shimmer-y 8.5s ease-in-out infinite;
+  transition: left 0.7s cubic-bezier(0.22, 0.61, 0.36, 1),
+              box-shadow 0.6s ease, filter 0.6s ease;
+}
+@keyframes axis-shimmer-x { 0%,100% { background-position: 0% 0; } 50% { background-position: 100% 0; } }
+@keyframes axis-shimmer-y { 0%,100% { background-position: 0 0%; } 50% { background-position: 0 100%; } }
+/* Migration pulse — the lines flare brighter as they re-home */
+.graph-pad.migrating .pad-axis-x { box-shadow: 0 0 18px rgba(180,205,255,0.7); filter: brightness(1.45); }
+.graph-pad.migrating .pad-axis-y { box-shadow: 0 0 18px rgba(220,195,130,0.65); filter: brightness(1.45); }
+
+/* Quadrant shades — each fills its region of the crosshair; resize on migrate */
+.pad-shade {
+  position: absolute; pointer-events: none;
+  opacity: 0;
+  transition: width 0.7s cubic-bezier(0.22, 0.61, 0.36, 1),
+              height 0.7s cubic-bezier(0.22, 0.61, 0.36, 1),
+              opacity 0.7s ease;
+}
+.graph-pad.lit .pad-shade { opacity: 1; }
+.pad-shade.A { top: 0; left: 0;     background: radial-gradient(ellipse at top left,     rgba(96,148,220,0.18), transparent 72%); }
+.pad-shade.B { top: 0; right: 0;    background: radial-gradient(ellipse at top right,    rgba(220,96,96,0.18),  transparent 72%); }
+.pad-shade.C { bottom: 0; left: 0;  background: radial-gradient(ellipse at bottom left,  rgba(96,168,128,0.18), transparent 72%); }
+.pad-shade.D { bottom: 0; right: 0; background: radial-gradient(ellipse at bottom right, rgba(196,156,72,0.18), transparent 72%); }
+
+/* Corner labels — variant text as axis-tagged word spans; JS slides + scales */
+.pad-corner {
+  position: absolute; max-width: 46%; pointer-events: none;
+  font-family: var(--serif); line-height: 1.32;
+  color: var(--ink-low);
+  transition: top 0.5s ease, bottom 0.5s ease, left 0.5s ease, right 0.5s ease, opacity 0.5s ease;
+}
+.pad-corner.A { top: 22%; left: 18%;  text-align: left; }
+.pad-corner.B { top: 22%; right: 18%; text-align: right; }
+.pad-corner.C { bottom: 22%; left: 18%;  text-align: left; }
+.pad-corner.D { bottom: 22%; right: 18%; text-align: right; }
+.pad-corner.receding { opacity: 0.22; }
+.pad-corner.active-quad { color: var(--ink-mid); }
+.pad-corner .word {
+  font-size: 10px;
+  transition: font-size 0.22s ease, color 0.3s ease, opacity 0.3s ease, font-weight 0.2s ease;
+}
+.pad-corner.active-quad .word { color: var(--ink); }
+.pad-corner.A .word[data-axis="x"] { color: var(--side-left); }
+.pad-corner.C .word[data-axis="x"] { color: var(--side-left); }
+.pad-corner.B .word[data-axis="x"] { color: var(--side-right); }
+.pad-corner.D .word[data-axis="x"] { color: var(--side-right); }
+.pad-corner.A .word[data-axis="y"], .pad-corner.B .word[data-axis="y"] { color: var(--band-coalition); }
+.pad-corner.C .word[data-axis="y"], .pad-corner.D .word[data-axis="y"] { color: var(--band-fluid); }
+
+/* ── Aggregate layer — the other voices, precipitated after commit ── */
+.agg-layer {
+  position: absolute; inset: 0;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+/* Outer = position on plane + PERPENDICULAR Z protrusion (no rotation, so the
+   translateZ stays along the plane normal and the depth is real). */
+/* Wrapper carries position + PERPENDICULAR Z. It must stay opacity:1 and
+   filter-free, or it flattens its preserve-3d context (killing the depth). */
+.agg-dot {
+  position: absolute;
+  width: var(--dsize, 9px); height: var(--dsize, 9px);
+  transform: translate(-50%, -50%) translateZ(var(--dz, 0px));
+  transform-style: preserve-3d;
+  z-index: 2;
+  /* left/top animate migrate-with-axes; transform animates the Z settle */
+  transition: left 1.5s cubic-bezier(0.22, 0.61, 0.36, 1),
+              top  1.5s cubic-bezier(0.22, 0.61, 0.36, 1),
+              transform 1.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+/* Inner = the visible orb. Opacity lives HERE (a leaf), never on the wrapper.
+   Billboarded in place so it stays round as the plane turns. */
+.agg-orb {
+  position: absolute; inset: 0; border-radius: 50%;
+  transform: rotateY(calc(-1 * var(--tiltdeg, 0deg)));
+  /* layered shading reads as a lit sphere: specular highlight + shadow rim + body */
+  background:
+    radial-gradient(circle at 30% 26%, rgba(255,255,255,0.85), rgba(255,255,255,0) 34%),
+    radial-gradient(circle at 70% 78%, rgba(0,0,0,0.38), rgba(0,0,0,0) 60%),
+    radial-gradient(circle at 50% 48%, var(--accent), rgba(10,18,38,0.92) 100%);
+  box-shadow: 0 0 7px var(--accent);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.agg-dot.settled .agg-orb { opacity: 0.72; }
+.agg-orb::after {
+  content: ''; position: absolute; inset: -4px; border-radius: 50%;
+  border: 1px solid var(--ring, var(--accent)); opacity: 0.5;
+}
+@media (prefers-reduced-motion: reduce) { .agg-orb { transition: opacity 0.01ms; } }
+
+/* Clickable for the contrast function; selected gets a bright rim */
+.agg-dot { pointer-events: auto; cursor: pointer; }
+/* Generous invisible hit-area so the small orbs are easy to click */
+.agg-dot::before { content: ''; position: absolute; inset: -8px; border-radius: 50%; }
+.agg-dot.selected { z-index: 6; }
+.agg-dot.selected .agg-orb { box-shadow: 0 0 16px var(--accent), 0 0 5px rgba(255,255,255,0.9); }
+.agg-dot.selected .agg-orb::after { opacity: 0.95; inset: -6px; }
+
+/* Shimmering contrast connector (lies on the plane, turns with it) */
+.contrast-line {
+  position: absolute; height: 2px; transform-origin: left center;
+  pointer-events: none; z-index: 1; border-radius: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent) 22%, rgba(255,246,226,0.92) 50%, var(--accent) 78%, transparent);
+  background-size: 220% 100%;
+  animation: contrast-shimmer 1.5s linear infinite;
+  opacity: 0; transition: opacity 0.4s ease;
+}
+@keyframes contrast-shimmer { 0% { background-position: 120% 0; } 100% { background-position: -120% 0; } }
+
+/* Post-commit graphmap factory slot — same footprint as the pad, but
+   FRAMELESS: no border, no box, the transparent canvas floats on the velvet */
+.gm3d {
+  display: none;
+  width: min(440px, 86vw);
+  aspect-ratio: 1 / 1;
+  flex: none;
+  position: relative;
+  overflow: visible;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+.gm3d.live { display: block; }
+.gm3d.in { opacity: 1; }
+/* The oversized render surface: ~2.2× the slot in each direction, centered.
+   Transparent, so its true edge is far offscreen of the eye — no window. */
+.gm3d-stage {
+  position: absolute;
+  inset: -40%;
+  z-index: 0;
+}
+/* Interactive siblings stack above the oversized canvas so it never steals
+   their pointer events; the canvas still gets drags on the open velvet. */
+.graph-head, .graph-info, .z-slider, .graph-readout, .graph-dialect, .graph-foot {
+  position: relative;
+  z-index: 2;
+}
+
+/* Orbit (post-commit) + camera float cycle */
+.graph-pad.orbital { cursor: grab; }
+.graph-pad.orbital:active { cursor: grabbing; }
+.graph-pad.cam-float { animation: cam-float 3.2s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+@keyframes cam-float {
+  0%   { transform: rotateX(0deg)  rotateY(var(--z0, 0deg)); }
+  30%  { transform: rotateX(12deg) rotateY(-42deg); }
+  62%  { transform: rotateX(5deg)  rotateY(10deg); }
+  /* settle at an angle steep enough that the Z depth stays readable at rest */
+  100% { transform: rotateX(12deg) rotateY(30deg); }
+}
+
+/* On-plane anchor — stays on the (tilted) surface while the pin lifts off it */
+.pad-pin-shadow {
+  position: absolute; left: 50%; top: 50%;
+  width: 16px; height: 16px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid var(--accent, var(--rule));
+  opacity: 0;
+  transition: opacity 0.4s ease, left 0.05s linear, top 0.05s linear;
+  pointer-events: none; z-index: 3;
+}
+
+/* The pin — outer carries the PERPENDICULAR Z protrusion off the plane face;
+   inner (.pin-vis) billboards in place so the orb stays round as the plane turns. */
+.pad-pin {
+  position: absolute; left: 50%; top: 50%;
+  width: 22px; height: 22px;
+  transform: translate(-50%, -50%) translateZ(var(--pz, 0px));
+  transform-style: preserve-3d;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.18s ease;
+  z-index: 4;
+}
+.pad-pin.visible { opacity: 1; }
+.pin-vis {
+  position: absolute; inset: 0;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(-1 * var(--tiltdeg, 0deg)));
+}
+.pad-pin .pin-dot {
+  position: absolute; inset: 0; border-radius: 50%;
+  background:
+    radial-gradient(circle at 30% 26%, rgba(255,255,255,0.95), rgba(255,255,255,0) 30%),
+    radial-gradient(circle at 70% 78%, rgba(0,0,0,0.42), rgba(0,0,0,0) 58%),
+    radial-gradient(circle at 50% 48%, var(--accent), rgba(10,18,38,0.95) 100%);
+  box-shadow: 0 0 18px var(--accent);
+}
+.pad-pin .pin-ring {
+  position: absolute; inset: -9px; border-radius: 50%;
+  border: 1px solid var(--ring, var(--accent));
+  opacity: 0.55;
+}
+
+/* ── Context panel (full response text + future links) ── */
+.graph-info {
+  position: relative;
+  width: min(440px, 86vw);
+  aspect-ratio: 1 / 1;
+  flex: none;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: var(--bg-soft);
+  box-shadow: inset 0 0 30px rgba(8, 16, 40, 0.25);
+  padding: 24px 26px;
+  overflow-y: auto;
+  display: flex; flex-direction: column;
+}
+/* Comparison halves (mirror): you on top, the selected voice below */
+.cmp { display: flex; flex-direction: column; gap: 8px; flex: none; }
+.cmp-label {
+  font-family: var(--mono);
+  font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--ink-low);
+}
+.cmp-user[data-side="left"]  .cmp-label, .cmp-agg[data-side="left"]  .cmp-label { color: var(--side-left); }
+.cmp-user[data-side="right"] .cmp-label, .cmp-agg[data-side="right"] .cmp-label { color: var(--side-right); }
+.cmp-text {
+  font-family: var(--serif);
+  font-size: clamp(14px, 1.5vw, 16px);
+  line-height: 1.55;
+  color: var(--ink);
+}
+.cmp-nums {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em;
+  color: var(--ink-mid);
+}
+
+/* Line of symmetry — a horizontal rule carrying the xyz deltas, shimmering */
+.cmp-axis {
+  display: none;
+  align-items: center; justify-content: center;
+  margin: 16px 0; padding: 9px 0;
+  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+  position: relative;
+}
+.cmp-axis::before {
+  content: ''; position: absolute; left: 0; right: 0; top: 50%; height: 1px; transform: translateY(-0.5px);
+  background: linear-gradient(90deg, transparent, rgba(255,246,226,0.35) 50%, transparent);
+  background-size: 220% 100%;
+  animation: contrast-shimmer 2.4s linear infinite;
+}
+.cmp-delta {
+  position: relative; z-index: 1;
+  background: var(--bg-soft); padding: 0 12px;
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; color: var(--ink);
+}
+.cmp-delta .d-sep { display: inline-block; width: 14px; }
+
+/* Bottom (voice) half hidden until a voice is selected */
+.cmp-agg { display: none; }
+.graph-info.comparing .cmp-axis { display: flex; }
+.graph-info.comparing .cmp-agg { display: flex; }
+
+.graph-info .gi-future {
+  margin-top: auto; padding-top: 16px;
+  font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink-low);
+}
+/* per-band keyword glow, per half */
+.cmp[data-band="fluid"]       .keyword { --keyword-glow-near: rgba(120,200,160,0.70); --keyword-glow-far: rgba(120,200,160,0.32); }
+.cmp[data-band="coalition"]   .keyword { --keyword-glow-near: rgba(220,184,100,0.78); --keyword-glow-far: rgba(220,184,100,0.38); }
+.cmp[data-band="denominated"] .keyword { --keyword-glow-near: rgba(232,120,120,0.80); --keyword-glow-far: rgba(232,120,120,0.40); }
+@media (max-width: 860px) {
+  .graph-info { aspect-ratio: auto; width: min(440px, 92vw); min-height: 160px; }
+}
+
+/* Readout + dialect + foot */
+.graph-readout {
+  margin-top: 26px;
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink-mid);
+  display: flex; gap: 16px; align-items: center; flex-wrap: wrap; justify-content: center;
+}
+.graph-readout strong { color: var(--ink); font-weight: 500; }
+.graph-readout .sep { color: var(--ink-low); }
+
+.graph-dialect { position: relative; width: min(560px, 92vw); margin-top: 24px; }
+.graph-dialect textarea {
+  width: 100%; min-height: 52px; resize: none;
+  background: var(--bg-soft); border: 1px solid var(--rule); border-radius: 3px;
+  color: var(--ink); font-family: var(--serif); font-size: 14.5px; line-height: 1.5;
+  padding: 12px 14px 18px; transition: border-color 0.4s ease;
+}
+.graph-dialect textarea:focus { outline: none; border-color: rgba(48, 96, 192, 0.4); }
+.graph-dialect textarea::placeholder { color: var(--ink-low); font-style: italic; }
+.graph-charcount {
+  position: absolute; right: 10px; bottom: 8px;
+  font-family: var(--mono); font-size: 9px; letter-spacing: 0.08em; color: var(--ink-low); pointer-events: none;
+}
+
+.graph-foot { margin-top: 28px; display: flex; align-items: center; gap: 28px; flex-wrap: wrap; justify-content: center; }
+
+@media (max-width: 860px) {
+  .graph-phase { padding: 60px 18px 56px; }
+  .graph-foot { flex-wrap: wrap; justify-content: center; gap: 16px; }
+}
+@media (max-width: 480px) {
+  .graph-phase { justify-content: flex-start; }
+  .graph-pad { width: min(360px, 92vw); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .graph-phase { transition: opacity 0.01ms; }
+  .pad-axis-x, .pad-axis-y, .pad-shade, .pad-corner { transition: none; }
+}
+
+</style>
+</head>
+<body class="dark phase-event">
+
+<div id="ambient" class="prism-ambient"></div>
+
+<header>
+  <div class="prism-title" id="phaseLabel">prism · <strong>v2</strong> · event</div>
+  <button class="prism-toggle" onclick="toggleMode()">light</button>
+</header>
+
+<!-- ── EVENT ENTRY PHASE ──
+     The introit. Shown first; transitions to the diatribe stage when
+     the user takes a position. -->
+<section class="event-phase" id="eventPhase">
+  <div class="ev-inner">
+    <div class="ev-category" id="evCategory"></div>
+    <h1 class="ev-title" id="evTitle"></h1>
+    <div class="ev-rule" id="evRule"></div>
+    <p class="ev-framing" id="evFraming"></p>
+    <div class="ev-keywords" id="evKeywords" data-band="fluid"></div>
+    <button class="ev-enter" id="evEnter">
+      <span class="ev-enter-label">take a position</span>
+      <span class="ev-enter-glyph">&rarr;</span>
+    </button>
+  </div>
+</section>
+
+<main>
+  <div class="framing" id="framing">[event framing loads here]</div>
+
+  <div class="stage" id="stage">
+
+    <!-- SVG label lines layer -->
+    <svg class="prism-label-lines" id="labelLines" xmlns="http://www.w3.org/2000/svg">
+      <line id="lineReal"  stroke="rgba(96,148,220,0.42)" stroke-width="1" />
+      <line id="lineGhost" stroke="rgba(220,96,96,0.32)"  stroke-width="1" stroke-dasharray="2,3" />
+    </svg>
+
+    <!-- Caption tablets — DOM order matches mobile visual order:
+         real → track-wrap → ghost (slider between its captions).
+         Initial labels + body are blank — text materializes after first
+         slider engagement via the develop animation. -->
+    <div class="prism-caption real" id="captionReal" data-side="left" data-band="fluid">
+      <div class="caption-label">
+        <span class="side"></span>
+        <span class="band"></span>
+      </div>
+      <div class="caption-text" id="captionTextReal"></div>
+    </div>
+
+    <div class="track-wrap">
+      <div class="track" id="track">
+        <div class="prism-threshold" style="left: 17%"></div>
+        <div class="prism-threshold" style="left: 33%"></div>
+        <div class="prism-threshold center" style="left: 50%"></div>
+        <div class="prism-threshold" style="left: 67%"></div>
+        <div class="prism-threshold" style="left: 83%"></div>
+        <div class="prism-thumb"       id="thumbReal"  data-side="left"  style="left: 50%"></div>
+        <div class="prism-thumb ghost" id="thumbGhost" data-side="right" style="left: 50%"></div>
+      </div>
+      <div class="cue" id="cue">drag · find the band</div>
+      <div class="readout">
+        <span class="real-r"  id="readoutReal">center · neutral</span>
+        <span class="sep">/</span>
+        <span class="ghost-r" id="readoutGhost">center · mirrored</span>
+      </div>
+    </div>
+
+    <div class="prism-caption ghost" id="captionGhost" data-side="right" data-band="fluid">
+      <div class="caption-label">
+        <span class="side"></span>
+        <span class="band"></span>
+      </div>
+      <div class="caption-text" id="captionTextGhost"></div>
+    </div>
+
+  </div>
+</main>
+
+<!-- Diatribe → answers commit affordance (appears after first engagement) -->
+<button class="to-answers" id="toAnswers">
+  <span>see the four responses</span><span class="ev-enter-glyph">&rarr;</span>
+</button>
+
+<!-- ── ANSWER CARDS PHASE ──
+     Four quadrant responses at the committed band; user selects one.
+     The 2×2 mirrors the Prism graph layout (x: Left↔Right, y: Institutional↑/Grassroots↓). -->
+<section class="answers-phase" id="answersPhase">
+  <div class="answers-head">
+    <p class="a-prompt" id="aPrompt"></p>
+    <div class="a-meta" id="aBand">aperture · fluid</div>
+  </div>
+  <div class="answers-grid" id="answersGrid"></div>
+  <div class="answers-foot" id="answersFoot">
+    <button class="a-back" id="aBack">&larr; reconsider</button>
+    <button class="a-commit" id="aCommit"><span>place your pin</span><span class="ev-enter-glyph">&rarr;</span></button>
+    <span class="a-note" id="aNote"></span>
+  </div>
+</section>
+
+<!-- ── GRAPHMAP PHASE ──
+     Place your pin on the 2D pad; distance from center = intensity; axes
+     migrate to expand your quadrant; the 3D graph mirrors it with depth. -->
+<section class="graph-phase" id="graphPhase">
+  <div class="graph-head">
+    <p class="g-prompt" id="gPrompt"></p>
+  </div>
+
+  <div class="graph-stage">
+    <div class="graph-left">
+    <div class="graph-pad" id="graphPad">
+      <div class="pad-grid"></div>
+      <div class="pad-axis-x" id="padAxisX"></div>
+      <div class="pad-axis-y" id="padAxisY"></div>
+      <div class="pad-shade A" id="padShadeA"></div>
+      <div class="pad-shade B" id="padShadeB"></div>
+      <div class="pad-shade C" id="padShadeC"></div>
+      <div class="pad-shade D" id="padShadeD"></div>
+      <div class="pad-corner A" id="padCornerA"></div>
+      <div class="pad-corner B" id="padCornerB"></div>
+      <div class="pad-corner C" id="padCornerC"></div>
+      <div class="pad-corner D" id="padCornerD"></div>
+      <div class="agg-layer" id="aggLayer"></div>
+      <div class="pad-pin-shadow" id="padPinShadow"></div>
+      <div class="pad-pin" id="padPin">
+        <div class="pin-vis">
+          <div class="pin-dot"></div>
+          <div class="pin-ring"></div>
+        </div>
+      </div>
+    </div><!-- /graph-pad -->
+
+      <!-- Post-commit: the graphmap factory takes the pad's slot (Three.js).
+           The inner stage is a much larger transparent render surface, so the
+           scene never clips at a visible "window" edge. -->
+      <div class="gm3d" id="gm3d"><div class="gm3d-stage" id="gm3dStage"></div></div>
+
+      <!-- Z displacement — ethical/strategic tension: frustrated ↔ realized -->
+      <div class="z-slider" id="zSlider">
+        <div class="z-track" id="zTrack">
+          <div class="z-mark"></div>
+          <div class="z-thumb" id="zThumb"></div>
+        </div>
+        <div class="z-poles">
+          <span>frustrated</span>
+          <span class="z-read" id="zRead">z · +0.00 · neutral</span>
+          <span>realized</span>
+        </div>
+      </div>
+    </div><!-- /graph-left -->
+
+    <div class="graph-info" id="graphInfo">
+      <!-- your response (top half) -->
+      <div class="cmp cmp-user" id="cmpUser" data-side="left" data-band="fluid">
+        <div class="cmp-label" id="cmpUserLabel"></div>
+        <div class="cmp-text caption-text" id="cmpUserText"></div>
+        <div class="cmp-nums" id="cmpUserNums"></div>
+      </div>
+      <!-- line of symmetry — the deltas live on the axis between you and them -->
+      <div class="cmp-axis" id="cmpAxis"><span class="cmp-delta" id="cmpDelta"></span></div>
+      <!-- the selected voice (bottom half, mirrored) -->
+      <div class="cmp cmp-agg" id="cmpAgg" data-side="left" data-band="fluid">
+        <div class="cmp-nums" id="cmpAggNums"></div>
+        <div class="cmp-text caption-text" id="cmpAggText"></div>
+        <div class="cmp-label" id="cmpAggLabel"></div>
+      </div>
+      <div class="gi-future">parallelograms · legislation — coming</div>
+    </div>
+  </div>
+
+  <div class="graph-readout" id="graphReadout">
+    <span id="gCoords">x +0 · y +0</span>
+    <span class="sep">/</span>
+    <span>intensity · <strong id="gIntensity">0</strong></span>
+    <span class="sep">/</span>
+    <span id="gBand">fluid</span>
+  </div>
+
+  <div class="graph-dialect">
+    <textarea id="graphDialect" maxlength="180" rows="2" placeholder="add your words — optional (180 characters)"></textarea>
+    <span class="graph-charcount" id="graphCharcount">0/180</span>
+  </div>
+
+  <div class="graph-foot">
+    <button class="a-back" id="graphBack">&larr; reconsider</button>
+    <button class="a-commit" id="graphCommit"><span>commit your pin</span><span class="ev-enter-glyph">&rarr;</span></button>
+    <span class="a-note" id="graphNote"></span>
+  </div>
+</section>
+
+<footer>
+  <div class="event-id"><strong>evt_001</strong> · ICE killing of Alex Pretti / Second Amendment inversion</div>
+  <div class="asym" id="asym">asymmetry · <span class="delta" id="asymDelta">0</span></div>
+</footer>
+
+<!-- Data layer -->
+<script src="../src/js/prismdb.js"></script>
+<!-- Shared behavior layer -->
+<script src="../src/js/prism-effects.js"></script>
+<!-- The graphmap factory (Three.js) — post-commit the committed graph hands
+     off to this instrument: v56 pins, true 3D dots, full orbit. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<!-- cache-busting query: bump ?v= whenever the module changes (Safari caches hard) -->
+<script src="../src/js/prism-graphmap.js?v=3"></script>
+
+<script>
+/* ============================================================
+   v2 · diatribe instrument · controller
+   ============================================================ */
+
+const PE = window.PrismEffects;
+
+// Viewport classification — drives caption layout strategy
+// Live, not captured-once — so crossing the 768px boundary mid-session
+// (responsive dev tools, window resize) re-routes the caption layout
+// instead of stranding the JS in the wrong branch.
+const mqMobile = window.matchMedia('(max-width: 768px)');
+const isMobile = () => mqMobile.matches;
+
+// ---- Data ----
+const EVENT_ID = 'evt_001';
+PrismDB.seed();
+let ev = PrismDB.getEvent(EVENT_ID);
+
+// Stale-schema guard
+function diatribeIsFresh(d) {
+  if (!d) return false;
+  return ['LF','LC','LD','RF','RC','RD'].every(k =>
+    d[k] && typeof d[k].text === 'string' && d[k].text.length > 0
+  );
+}
+if (ev && !diatribeIsFresh(ev.diatribe)) {
+  console.warn('[v2] Stale/partial diatribe schema. Re-seeding.');
+  console.warn('     missing:', ['LF','LC','LD','RF','RC','RD'].filter(k => !ev.diatribe?.[k]?.text));
+  PrismDB.clear(); PrismDB.seed();
+  ev = PrismDB.getEvent(EVENT_ID);
+}
+if (!ev) console.error('[v2] Event not found:', EVENT_ID);
+
+const diatribe = ev?.diatribe || {};
+document.getElementById('framing').textContent = ev?.framing || '';
+
+// Local keyword augmentation — v2 starter ontology pulled from diatribe text.
+// Format: { eventId: { side: { band: [phrases] } } }. Migrate canonical to prismdb.js.
+const V2_KEYWORD_AUGMENT = {
+  evt_001: {
+    left: {
+      fluid:       ['institutional response', 'investigation', 'evidence', 'accountability', 'narrative', 'federal agent', 'legally armed', 'American citizen'],
+      coalition:   ['independent inquiry', 'abolish ICE', 'forty-eight hours', 'discourse', 'slipping'],
+      denominated: ['state fascism', 'collaboration', 'martyr vehicle', 'machine', 'prior framework', 'killing']
+    },
+    right: {
+      fluid:       ['principled', 'constitutional line', 'legal carrier', 'federal agents', '2A defense', 'context'],
+      coalition:   ['legal gun carrier', 'domestic terrorist', 'tribalism', 'costume', 'switching sides'],
+      denominated: ['law-and-order', 'loyalty', 'holstered weapon', 'domestic terrorism', 'sanctuary cities']
+    }
+  }
+};
+
+// Diatribe lookup
+function lookup(side, band) {
+  const key = side[0].toUpperCase() + PE.bandSuffix(band);
+  return diatribe[key]?.text || '';
+}
+function poolFor(side, band) {
+  return PE.getKeywordPool(ev, side, band, V2_KEYWORD_AUGMENT);
+}
+
+// ============================================================
+// EVENT ENTRY PHASE · controller
+// ------------------------------------------------------------
+// Populates the introit (category / title / framing / keyword
+// cloud), runs the entrance choreography, and hands off to the
+// diatribe stage when the user takes a position.
+// ============================================================
+
+const evCategoryEl = document.getElementById('evCategory');
+const evTitleEl    = document.getElementById('evTitle');
+const evFramingEl  = document.getElementById('evFraming');
+const evCloudEl    = document.getElementById('evKeywords');
+const evEnterBtn   = document.getElementById('evEnter');
+const evRule       = document.getElementById('evRule');
+const phaseLabel   = document.getElementById('phaseLabel');
+
+evCategoryEl.textContent = ev?.category || '';
+evTitleEl.textContent    = ev?.title    || '';
+evFramingEl.textContent  = ev?.framing  || '';
+
+// Framing keyword cloud. Prefer canonical event.framingKeywords; if absent,
+// derive from the event's own load-bearing vocabulary (union of both sides'
+// pools) so the cloud is sourced from real authored terms, never invented.
+function buildFramingCloud(event) {
+  let words = Array.isArray(event?.framingKeywords) ? event.framingKeywords.slice() : [];
+  if (words.length === 0) {
+    const left  = PE.getKeywordPool(event, 'left',  'coalition', V2_KEYWORD_AUGMENT);
+    const right = PE.getKeywordPool(event, 'right', 'coalition', V2_KEYWORD_AUGMENT);
+    const max = Math.max(left.length, right.length);
+    for (let i = 0; i < max; i++) {        // interleave → balanced across sides
+      if (left[i])  words.push(left[i]);
+      if (right[i]) words.push(right[i]);
+    }
+  }
+  const seen = new Set(); const out = [];
+  for (const w of words) {
+    const k = String(w).toLowerCase().trim();
+    if (!k || seen.has(k)) continue;
+    seen.add(k);
+    if (String(w).trim().split(/\s+/).length <= 3) out.push(String(w).trim());
+    if (out.length >= 9) break;
+  }
+  return out;
+}
+
+buildFramingCloud(ev).forEach((w, i) => {
+  const span = document.createElement('span');
+  span.className = 'ev-kw';
+  span.textContent = w;
+  span.style.transitionDelay = (i * 70) + 'ms';
+  // Desync the float + glow per word so the cloud reads alive, not synchronized
+  span.style.animationDelay = (-(Math.random() * 9)).toFixed(2) + 's, ' +
+                              (-(Math.random() * 5.5)).toFixed(2) + 's';
+  evCloudEl.appendChild(span);
+});
+
+// Entrance choreography: title/category/rule rise via CSS delays; framing
+// develops (blur → focus) once they've settled; cloud staggers in after.
+setTimeout(() => evFramingEl.classList.add('develop'), 750);
+setTimeout(() => evCloudEl.querySelectorAll('.ev-kw').forEach(s => s.classList.add('in')), 1650);
+
+// Hand off to the diatribe stage.
+let entered = false;
+function enterDiatribe() {
+  if (entered) return;
+  entered = true;
+  document.body.classList.remove('phase-event');
+  document.body.classList.add('phase-diatribe');
+  phaseLabel.innerHTML = 'prism · <strong>v2</strong> · diatribe';
+  // Start the discovery cue timer only now that the slider is live.
+  setTimeout(() => { if (!state.touched) cue.classList.add('show'); }, 1400);
+}
+evEnterBtn.addEventListener('click', enterDiatribe);
+window.addEventListener('keydown', e => {
+  if (document.body.classList.contains('phase-event') &&
+      (e.key === 'Enter' || e.key === ' ')) {
+    e.preventDefault();
+    enterDiatribe();
+  }
+});
+
+// ---- State ----
+const state = {
+  realScore: 0, ghostScore: 0,
+  ghostLocked: false,
+  realBand: 'fluid', ghostBand: 'fluid',
+  realSide: 'left',  ghostSide: 'right',
+  touched: false,
+};
+
+// ---- DOM refs ----
+const stage       = document.getElementById('stage');
+const track       = document.getElementById('track');
+const thumbReal   = document.getElementById('thumbReal');
+const thumbGhost  = document.getElementById('thumbGhost');
+const capReal     = document.getElementById('captionReal');
+const capGhost    = document.getElementById('captionGhost');
+const txtReal     = document.getElementById('captionTextReal');
+const txtGhost    = document.getElementById('captionTextGhost');
+const lineReal    = document.getElementById('lineReal');
+const lineGhost   = document.getElementById('lineGhost');
+const readoutReal = document.getElementById('readoutReal');
+const readoutGhost= document.getElementById('readoutGhost');
+const ambient     = document.getElementById('ambient');
+const cue         = document.getElementById('cue');
+const asymDelta   = document.getElementById('asymDelta');
+
+// ---- Apply state ----
+// Transition state per caption — drives which mode (materialize / refract /
+// reform) fires when content needs to change.
+let lastRealKey  = null;
+let lastGhostKey = null;
+let lastRealSide  = null;
+let lastGhostSide = null;
+let realMaterialized  = false;
+let ghostMaterialized = false;
+
+function applyState(initial = false) {
+  const realSide  = state.realScore  < 0 ? 'left'  : state.realScore  > 0 ? 'right' : state.realSide;
+  const ghostSide = state.ghostScore < 0 ? 'left'  : state.ghostScore > 0 ? 'right' : (realSide === 'left' ? 'right' : 'left');
+  state.realSide  = realSide;
+  state.ghostSide = ghostSide;
+
+  const realBand  = PE.bandFromScore(Math.abs(state.realScore));
+  const ghostBand = PE.bandFromScore(Math.abs(state.ghostScore));
+  state.realBand  = realBand;
+  state.ghostBand = ghostBand;
+
+  thumbReal.style.left  = PE.scoreToPct(state.realScore)  + '%';
+  thumbGhost.style.left = PE.scoreToPct(state.ghostScore) + '%';
+  thumbReal.setAttribute('data-side', realSide);
+  thumbGhost.setAttribute('data-side', ghostSide);
+
+  const realKey  = realSide  + ':' + realBand;
+  const ghostKey = ghostSide + ':' + ghostBand;
+
+  cue.classList.toggle('show', !state.touched);
+  // Once the user has engaged the slider, surface the commit affordance.
+  if (state.touched) toAnswersBtn.classList.add('show');
+
+  // Transition dispatch — three modes per caption:
+  //   1. Not yet materialized (first content) → materializeCaption (develop)
+  //   2. Side flipped since last update          → refractCaption (chromatic aberration)
+  //   3. Band changed within same side          → reformCaption (dim + swap)
+  //
+  // On initial (page load with state.touched=false), captions stay empty —
+  // they only populate after the user first engages the slider.
+
+  if (realKey !== lastRealKey && state.touched) {
+    const text = lookup(realSide, realBand);
+    const pool = poolFor(realSide, realBand);
+    const opts = { el: capReal, txtEl: txtReal, newText: text, newSide: realSide, newBand: realBand, pool };
+    if (!realMaterialized) {
+      PE.materializeCaption(opts);
+      realMaterialized = true;
+    } else if (lastRealSide && lastRealSide !== realSide) {
+      PE.refractCaption(opts);
+    } else {
+      PE.reformCaption(opts);
+    }
+    lastRealKey  = realKey;
+    lastRealSide = realSide;
+  }
+  if (ghostKey !== lastGhostKey && state.touched) {
+    const text = lookup(ghostSide, ghostBand);
+    const pool = poolFor(ghostSide, ghostBand);
+    const opts = { el: capGhost, txtEl: txtGhost, newText: text, newSide: ghostSide, newBand: ghostBand, pool };
+    if (!ghostMaterialized) {
+      PE.materializeCaption(opts);
+      ghostMaterialized = true;
+    } else if (lastGhostSide && lastGhostSide !== ghostSide) {
+      PE.refractCaption(opts);
+    } else {
+      PE.reformCaption(opts);
+    }
+    lastGhostKey  = ghostKey;
+    lastGhostSide = ghostSide;
+  }
+
+  if (isMobile()) {
+    // Mobile: CSS owns caption positioning (stacked vertically).
+    // JS only needs to update the label-line endpoints from the thumbs up/down
+    // to the appropriate caption.
+    updateLabelLineMobile(capReal,  state.realScore,  lineReal);
+    updateLabelLineMobile(capGhost, state.ghostScore, lineGhost);
+  } else {
+    PE.positionCaption({ el: capReal,  score: state.realScore,  stage, track, lineEl: lineReal,  side: realSide });
+    PE.positionCaption({ el: capGhost, score: state.ghostScore, stage, track, lineEl: lineGhost, side: ghostSide });
+  }
+
+  lineReal.setAttribute('stroke',  realSide  === 'left' ? 'rgba(96,148,220,0.42)' : 'rgba(220,96,96,0.42)');
+  lineGhost.setAttribute('stroke', ghostSide === 'left' ? 'rgba(96,148,220,0.32)' : 'rgba(220,96,96,0.32)');
+
+  readoutReal.textContent  = `${realSide}  ·  ${realBand}  ·  ${state.realScore >= 0 ? '+' : ''}${state.realScore}`;
+  readoutGhost.textContent = `${ghostSide}  ·  ${ghostBand}  ·  ${state.ghostScore >= 0 ? '+' : ''}${state.ghostScore}${state.ghostLocked ? ' · revised' : ' · mirrored'}`;
+
+  ambient.classList.remove('fluid', 'coalition', 'denominated');
+  ambient.classList.add(realBand);
+
+  const asym = Math.abs(state.realScore) - Math.abs(state.ghostScore);
+  asymDelta.textContent = (asym >= 0 ? '+' : '') + asym;
+
+  if (state.ghostLocked && initial !== true) {
+    console.log('[v2 · diatribe]', {
+      event: EVENT_ID,
+      realScore: state.realScore, ghostScore: state.ghostScore,
+      realBand, ghostBand,
+      asymmetry: asym,
+      ts: Date.now()
+    });
+  }
+}
+
+function mirrorGhost() {
+  if (!state.ghostLocked) state.ghostScore = -state.realScore;
+}
+
+// Mobile label-line update — captions are stacked vertically and centered,
+// so the line goes from the thumb (somewhere on the horizontal track) straight
+// up or down to the bottom-center of its caption tablet.
+function updateLabelLineMobile(captionEl, score, lineEl) {
+  const sr = stage.getBoundingClientRect();
+  const tr = track.getBoundingClientRect();
+  const cr = captionEl.getBoundingClientRect();
+
+  const thumbX_stage = (tr.left - sr.left) + (tr.width * PE.scoreToPct(score) / 100);
+  const thumbY_stage = (tr.top - sr.top) + tr.height / 2;
+  const capCenterX   = (cr.left - sr.left) + cr.width / 2;
+  // Real caption is at top of stage, so its line endpoint is its bottom edge.
+  // Ghost caption is anchored to bottom: 96px, line endpoint is its top edge.
+  const isReal = captionEl.classList.contains('real');
+  const capY_stage = isReal
+    ? (cr.top - sr.top) + cr.height
+    : (cr.top - sr.top);
+
+  lineEl.setAttribute('x1', thumbX_stage);
+  lineEl.setAttribute('y1', thumbY_stage - 11);
+  lineEl.setAttribute('x2', capCenterX);
+  lineEl.setAttribute('y2', capY_stage);
+}
+
+// ---- Drag handling ----
+let dragging = null;
+
+function startDrag(target, e) {
+  dragging = target;
+  state.touched = true;
+  (target === 'real' ? thumbReal : thumbGhost).classList.add('dragging');
+  if (target === 'ghost') {
+    state.ghostLocked = true;
+    capGhost.classList.add('locked');
+  }
+  moveDrag(e);
+  e.preventDefault();
+}
+function moveDrag(e) {
+  if (!dragging) return;
+  const x = (e.touches ? e.touches[0].clientX : e.clientX);
+  const r = track.getBoundingClientRect();
+  const pct = PE.clamp((x - r.left) / r.width, 0, 1) * 100;
+  const s = PE.pctToScore(pct);
+  if (dragging === 'real') {
+    state.realScore = s;
+    mirrorGhost();
+  } else {
+    state.ghostScore = s;
+  }
+  applyState();
+}
+function endDrag() {
+  if (!dragging) return;
+  (dragging === 'real' ? thumbReal : thumbGhost).classList.remove('dragging');
+  dragging = null;
+}
+
+thumbReal.addEventListener('mousedown',   e => startDrag('real',  e));
+thumbReal.addEventListener('touchstart',  e => startDrag('real',  e), { passive: false });
+thumbGhost.addEventListener('mousedown',  e => startDrag('ghost', e));
+thumbGhost.addEventListener('touchstart', e => startDrag('ghost', e), { passive: false });
+track.addEventListener('mousedown', e => {
+  if (e.target === thumbReal || e.target === thumbGhost) return;
+  startDrag('real', e);
+});
+window.addEventListener('mousemove',  moveDrag);
+window.addEventListener('touchmove',  moveDrag, { passive: false });
+window.addEventListener('mouseup',    endDrag);
+window.addEventListener('touchend',   endDrag);
+window.addEventListener('resize', () => applyState());
+mqMobile.addEventListener('change', () => applyState());   // re-layout on breakpoint cross
+
+// ---- Light/dark toggle ----
+function toggleMode() {
+  const isLight = document.body.classList.toggle('light');
+  document.querySelector('.prism-toggle').textContent = isLight ? 'dark' : 'light';
+}
+window.toggleMode = toggleMode;
+
+// ---- Breath loop ----
+function breathFrame(now) {
+  const { primary: b, slow: sb } = PE.breath(now);
+
+  const realCol  = state.realSide  === 'left' ? '96,148,220' : '220,96,96';
+  const ghostCol = state.ghostSide === 'left' ? '96,148,220' : '220,96,96';
+  thumbReal.style.boxShadow  = `0 0 ${14 + b * 10}px rgba(${realCol},  ${0.35 + b * 0.20})`;
+  thumbGhost.style.boxShadow = `0 0 ${10 + b * 6}px  rgba(${ghostCol}, ${0.18 + b * 0.10})`;
+
+  capReal.style.boxShadow  = `0 0 ${28 + b * 8}px rgba(32, 64, 160, ${0.08 + b * 0.04}), inset 0 0 24px rgba(8, 16, 40, 0.18)`;
+  capGhost.style.boxShadow = `0 0 ${22 + b * 6}px rgba(32, 64, 160, ${0.05 + b * 0.03}), inset 0 0 20px rgba(8, 16, 40, 0.14)`;
+
+  lineReal.style.opacity  = (0.55 + b * 0.25).toFixed(3);
+  lineGhost.style.opacity = (0.40 + b * 0.20).toFixed(3);
+
+  ambient.style.filter = `saturate(${(0.92 + sb * 0.18).toFixed(3)}) brightness(${(0.96 + sb * 0.08).toFixed(3)})`;
+
+  // Event-phase rule glyph — gentle emissive pulse on the introit hairline
+  if (evRule) evRule.style.boxShadow = `0 0 ${6 + b * 8}px rgba(96, 148, 220, ${(0.18 + b * 0.16).toFixed(3)})`;
+
+  requestAnimationFrame(breathFrame);
+}
+requestAnimationFrame(breathFrame);
+
+// ============================================================
+// ANSWER CARDS PHASE · controller
+// ------------------------------------------------------------
+// Four quadrant responses at the band the diatribe aperture
+// committed. The 2×2 mirrors the Prism graph; selecting a card
+// is the seam into the pin-commit stage. (Spec v06 §3.2.)
+// ============================================================
+
+const toAnswersBtn = document.getElementById('toAnswers');
+const answersGrid  = document.getElementById('answersGrid');
+const answersFoot  = document.getElementById('answersFoot');
+const aPrompt      = document.getElementById('aPrompt');
+const aBand        = document.getElementById('aBand');
+const aBackBtn     = document.getElementById('aBack');
+const aCommitBtn   = document.getElementById('aCommit');
+const aNote        = document.getElementById('aNote');
+
+// Quadrant → 2×2 spatial layout. A/B institutional (y+), C/D grassroots (y−);
+// A/C left (x−), B/D right (x+). DOM order A,B,C,D fills the grid TL,TR,BL,BR.
+const QUAD = [
+  { q: 'A', side: 'left',  row: 'pos', pos: 'tl' },
+  { q: 'B', side: 'right', row: 'pos', pos: 'tr' },
+  { q: 'C', side: 'left',  row: 'neg', pos: 'bl' },
+  { q: 'D', side: 'right', row: 'neg', pos: 'br' },
+];
+
+let committedBand = 'fluid';
+let selectedQuad  = null;
+
+// Resolve a quadrant's variant at a band, tolerant of the goodFaith/badFaith
+// schema drift (BAND_KEY_ALIASES maps fluid→[fluid,goodFaith] etc.).
+function variantAt(quad, band) {
+  const q = ev?.responses?.[quad];
+  if (!q) return null;
+  const keys = PE.BAND_KEY_ALIASES[band] || [band];
+  for (const k of keys) { if (q[k]) return q[k]; }
+  return null;
+}
+
+function variantPool(v) {
+  if (!v) return [];
+  const pool = [];
+  if (v.xWord) pool.push(v.xWord);
+  if (v.yWord) pool.push(v.yWord);
+  (v.words || []).forEach(w => {
+    const word = (typeof w === 'string') ? w : (w.t || w.word || '');
+    if (word) pool.push(word);
+  });
+  return pool;
+}
+
+function renderAnswers(band) {
+  selectedQuad = null;
+  answersGrid.classList.remove('has-selection');
+  answersFoot.classList.remove('show');
+  aCommitBtn.disabled = false;
+  aNote.textContent = '';
+  answersGrid.innerHTML = '';
+
+  QUAD.forEach(({ q, side, row, pos }) => {
+    const v = variantAt(q, band);
+    const card = document.createElement('div');
+    card.className = 'answer-card ' + pos;
+    card.setAttribute('data-side', side);
+    card.setAttribute('data-band', band);
+    card.setAttribute('data-quad', q);
+    // Axis labels (Left/Right · Institutional/Grassroots) dropped for now —
+    // ev.axes still carries them when we want to bring them back.
+    card.innerHTML =
+      '<div class="ac-text">' + (v ? PE.applyKeywords(v.text, variantPool(v)) : '—') + '</div>';
+    card.addEventListener('click', () => selectCard(q, card));
+    answersGrid.appendChild(card);
+  });
+
+  aPrompt.textContent = ev?.prompt || ev?.framing || '';
+  aBand.textContent = 'aperture · ' + band;
+}
+
+function selectCard(quad, card) {
+  selectedQuad = quad;
+  answersGrid.classList.add('has-selection');
+  answersGrid.querySelectorAll('.answer-card').forEach(c => c.classList.toggle('selected', c === card));
+  answersFoot.classList.add('show');
+  aCommitBtn.disabled = false;
+  aNote.textContent = '';
+}
+
+function enterAnswers() {
+  if (!state.touched) return;            // nothing to carry forward yet
+  committedBand = state.realBand;
+  renderAnswers(committedBand);
+  document.body.classList.remove('phase-diatribe');
+  document.body.classList.add('phase-answers');
+  phaseLabel.innerHTML = 'prism · <strong>v2</strong> · responses';
+  // Scatter the cards into their quadrant positions, staggered.
+  requestAnimationFrame(() => setTimeout(() => {
+    answersGrid.querySelectorAll('.answer-card').forEach((c, i) =>
+      setTimeout(() => c.classList.add('in'), i * 90));
+  }, 60));
+}
+
+function backToDiatribe() {
+  document.body.classList.remove('phase-answers');
+  document.body.classList.add('phase-diatribe');
+  phaseLabel.innerHTML = 'prism · <strong>v2</strong> · diatribe';
+}
+
+toAnswersBtn.addEventListener('click', enterAnswers);
+aBackBtn.addEventListener('click', backToDiatribe);
+aCommitBtn.addEventListener('click', enterGraph);   // answers → graphmap (pin placement)
+
+// ============================================================
+// GRAPHMAP PHASE · controller (2D pad + live 3D graph)
+// ------------------------------------------------------------
+// Pin placement. Distance from centre = intensity (owns the band
+// from here on). Axes migrate to expand the chosen quadrant;
+// corner labels slide centre→edge and their axis-tagged words
+// scale with how hard the pin loads each axis. The 3D graphmap
+// mirrors the pin with Z (from the diatribe). (Ports v56.)
+// ============================================================
+
+const graphPad     = document.getElementById('graphPad');
+const padPin       = document.getElementById('padPin');
+const padPinShadow = document.getElementById('padPinShadow');
+const padPinDot    = document.querySelector('#padPin .pin-dot');   // filter goes here, not on the 3D wrapper
+const aggLayer     = document.getElementById('aggLayer');
+const gm3dEl       = document.getElementById('gm3d');
+const gPromptEl    = document.getElementById('gPrompt');
+const gCoords      = document.getElementById('gCoords');
+const gIntensityEl = document.getElementById('gIntensity');
+const gBandEl      = document.getElementById('gBand');
+const graphDialect = document.getElementById('graphDialect');
+const graphCharEl  = document.getElementById('graphCharcount');
+const graphBackBtn = document.getElementById('graphBack');
+const graphCommitBtn = document.getElementById('graphCommit');
+const graphNote    = document.getElementById('graphNote');
+const padShades  = { A: document.getElementById('padShadeA'), B: document.getElementById('padShadeB'), C: document.getElementById('padShadeC'), D: document.getElementById('padShadeD') };
+const padCorners = { A: document.getElementById('padCornerA'), B: document.getElementById('padCornerB'), C: document.getElementById('padCornerC'), D: document.getElementById('padCornerD') };
+const graphInfo    = document.getElementById('graphInfo');
+const cmpUser      = document.getElementById('cmpUser');
+const cmpUserLabel = document.getElementById('cmpUserLabel');
+const cmpUserText  = document.getElementById('cmpUserText');
+const cmpUserNums  = document.getElementById('cmpUserNums');
+const cmpAgg       = document.getElementById('cmpAgg');
+const cmpAggLabel  = document.getElementById('cmpAggLabel');
+const cmpAggText   = document.getElementById('cmpAggText');
+const cmpAggNums   = document.getElementById('cmpAggNums');
+const cmpDelta     = document.getElementById('cmpDelta');
+const zTrack     = document.getElementById('zTrack');
+const zThumb     = document.getElementById('zThumb');
+const zReadEl    = document.getElementById('zRead');
+
+// Quadrant geometry (pad coords: x 0→1 left→right, y 0→1 top→bottom)
+const QUAD_POS  = { A: [0.25, 0.25], B: [0.75, 0.25], C: [0.25, 0.75], D: [0.75, 0.75] };
+// Focus migration — push the crosshair away from the chosen quadrant to expand it
+const AXIS_MAP  = { A: { ax: 72, ay: 72 }, B: { ax: 28, ay: 72 }, C: { ax: 72, ay: 28 }, D: { ax: 28, ay: 28 } };
+// Which axis pole each quadrant's x/y word loads
+const POLE      = { A: { x: 'x-', y: 'y+' }, B: { x: 'x+', y: 'y+' }, C: { x: 'x-', y: 'y-' }, D: { x: 'x+', y: 'y-' } };
+const QUAD_ACCENT = { A: 'rgba(96,148,220,0.78)', B: 'rgba(220,96,96,0.78)', C: 'rgba(96,168,128,0.80)', D: 'rgba(196,156,72,0.80)' };
+const BAND_RING = { fluid: 'rgba(96,168,128,0.7)', coalition: 'rgba(196,156,72,0.7)', denominated: 'rgba(212,92,92,0.7)' };
+// Graphmap factory: its A/B quadrant keys are mirrored from v2's (color/word placement)
+const GM_QUAD  = { A: 'B', B: 'A', C: 'C', D: 'D' };
+const QUAD_HEX = { A: 0x6094dc, B: 0xdc6060, C: 0x60a880, D: 0xc49c48 };
+
+let gm = null, gmActive = false;
+let pinX = 0.5, pinY = 0.5, graphQuad = null, graphBand = 'fluid';
+let graphIntensity = 0, graphZ = 0, focusQuad = null, migTimer = null, aggCommitted = false;
+let aggDots = [];
+let orbitYaw = 0, orbitPitch = 0, targetYaw = 0, targetPitch = 0, orbiting = false, orbitRAF = null, dragMoved = false, oSX = 0, oSY = 0, oY0 = 0, oP0 = 0;
+let contrastLine = null, userPinData = null;
+
+function quadAt(x, y) { return x < 0.5 ? (y < 0.5 ? 'A' : 'C') : (y < 0.5 ? 'B' : 'D'); }
+
+function padTokens(s) {
+  return (s || '').toLowerCase().split(/\s+/).map(w => w.replace(/[.,!?;:'"]/g, '')).filter(Boolean);
+}
+
+// Condensed corner label = the two axis-tagged terms (xWord · yWord) for the
+// quadrant's variant at the current band. They scale with axis loading.
+function buildPadCorner(quad, band) {
+  const v = variantAt(quad, band);
+  const el = padCorners[quad];
+  const pole = POLE[quad];
+  if (!v) { el.innerHTML = ''; return; }
+  el.innerHTML =
+    '<span class="word" data-weight="' + pole.x + '" data-axis="x">' + PE.escapeHtml(v.xWord || '') + '</span>' +
+    '<span class="word"> · </span>' +
+    '<span class="word" data-weight="' + pole.y + '" data-axis="y">' + PE.escapeHtml(v.yWord || '') + '</span>';
+}
+function buildAllCorners(band) { ['A', 'B', 'C', 'D'].forEach(q => buildPadCorner(q, band)); }
+
+function setShades(ax, ay) {
+  padShades.A.style.width = ax + '%';        padShades.A.style.height = ay + '%';
+  padShades.B.style.width = (100 - ax) + '%'; padShades.B.style.height = ay + '%';
+  padShades.C.style.width = ax + '%';        padShades.C.style.height = (100 - ay) + '%';
+  padShades.D.style.width = (100 - ax) + '%'; padShades.D.style.height = (100 - ay) + '%';
+}
+
+function enterFocusMode(quad) {
+  focusQuad = quad;
+  const m = AXIS_MAP[quad];
+  graphPad.style.setProperty('--ax', m.ax + '%');
+  graphPad.style.setProperty('--ay', m.ay + '%');
+  setShades(m.ax, m.ay);
+  ['A', 'B', 'C', 'D'].forEach(k => {
+    padCorners[k].classList.toggle('active-quad', k === quad);
+    padCorners[k].classList.toggle('receding', k !== quad);
+  });
+  // Flare the axes brighter while they re-home
+  graphPad.classList.add('migrating');
+  clearTimeout(migTimer);
+  migTimer = setTimeout(() => graphPad.classList.remove('migrating'), 900);
+}
+
+// Context panel — full response text of the current quadrant/band, keywords
+// carrying the sprite pulse. (Future: Parallelogram + legislation links.)
+function numsLine(x, y, z, intensity) {
+  return 'x ' + sgn(x) + ' · y ' + sgn(y) + ' · z ' + (z >= 0 ? '+' : '') + z.toFixed(2) + ' · int ' + intensity;
+}
+// The "you" half — current quadrant variant as the pin moves, then the
+// committed response after commit. Keyword-lit.
+function updateInfo() {
+  const v = variantAt(graphQuad, graphBand);
+  const meta = QUAD.find(x => x.q === graphQuad);
+  cmpUser.setAttribute('data-band', graphBand);
+  cmpUser.setAttribute('data-side', meta ? meta.side : 'left');
+  cmpUserLabel.textContent = 'you · ' + graphBand;
+  cmpUserText.innerHTML = v ? PE.applyKeywords(v.text, variantPool(v)) : '';
+  cmpUserNums.textContent = numsLine(Math.round((pinX - 0.5) * 200), Math.round((0.5 - pinY) * 200), graphZ, graphIntensity);
+}
+
+// ── Z displacement (ethical/strategic tension): −1 frustrated ↔ +1 realized ──
+function zPole(z) { return Math.abs(z) < 0.05 ? 'neutral' : (z > 0 ? 'realized' : 'frustrated'); }
+function padHalf() { return (graphPad.clientWidth || 440) / 2; }   // z in ratio to x/y extent
+
+function renderZ() {
+  const z = PE.clamp(graphZ, -1, 1);
+  const m = Math.abs(z);
+  zThumb.style.left = ((z + 1) / 2 * 100) + '%';
+  zReadEl.textContent = 'z · ' + (z >= 0 ? '+' : '') + z.toFixed(2) + ' · ' + zPole(z);
+  // Z protrusion scaled to the pad's half-extent — one z-unit ≈ one x/y-unit.
+  graphPad.style.setProperty('--pz', (z * padHalf()).toFixed(1) + 'px');
+  padPinShadow.style.opacity = Math.min(0.55, m * 0.7).toFixed(2);
+  // brightness cue on the inner orb only — a filter on the wrapper would flatten
+  // its 3D context and kill the billboard/protrusion.
+  padPinDot.style.filter = z < 0 ? 'brightness(' + (1 - m * 0.3).toFixed(2) + ')'
+                                 : 'brightness(' + (1 + m * 0.25).toFixed(2) + ')';
+  // Before commit, Z turns the plane (signed) to reveal depth. After commit,
+  // the Z slider stays live: in factory mode it re-pins at the new depth;
+  // in fallback mode orbit owns rotation and only the pin depth moves.
+  if (!aggCommitted) {
+    const angle = z * 52;
+    graphPad.style.setProperty('--tiltdeg', angle.toFixed(2) + 'deg');
+    graphPad.style.transform = 'rotateY(' + angle.toFixed(2) + 'deg)';
+    graphPad.classList.toggle('tilted', m > 0.02);
+  } else if (gmActive && gm) {
+    try { gm.setPin(pinX, pinY, GM_QUAD[graphQuad], graphZ, { ring: BAND_RING[committedBand], style: 'orb' }); } catch (e) {}
+  }
+}
+let zDragging = false;
+function zSet(cx) {
+  const r = zTrack.getBoundingClientRect();
+  if (!r.width) return;
+  graphZ = +(PE.clamp((cx - r.left) / r.width, 0, 1) * 2 - 1).toFixed(3);
+  renderZ();
+}
+function zDown(e) { zDragging = true; zThumb.classList.add('dragging'); const p = e.touches ? e.touches[0] : e; zSet(p.clientX); if (e.cancelable) e.preventDefault(); }
+function zMove(e) { if (!zDragging) return; const p = e.touches ? e.touches[0] : e; zSet(p.clientX); if (e.cancelable) e.preventDefault(); }
+function zUp() { zDragging = false; zThumb.classList.remove('dragging'); }
+zTrack.addEventListener('mousedown', zDown);
+zTrack.addEventListener('touchstart', zDown, { passive: false });
+window.addEventListener('mousemove', zMove);
+window.addEventListener('touchmove', zMove, { passive: false });
+window.addEventListener('mouseup', zUp);
+window.addEventListener('touchend', zUp);
+
+function cornerPos(edgeV, edgeH) {
+  padCorners.A.style.top = edgeV + '%';    padCorners.A.style.left = edgeH + '%';
+  padCorners.B.style.top = edgeV + '%';    padCorners.B.style.right = edgeH + '%';
+  padCorners.C.style.bottom = edgeV + '%'; padCorners.C.style.left = edgeH + '%';
+  padCorners.D.style.bottom = edgeV + '%'; padCorners.D.style.right = edgeH + '%';
+}
+
+// Axis words grow as the pin loads their pole (active quadrant only).
+function updateWordWeights() {
+  const xVal = (pinX - 0.5) * 2, yVal = (0.5 - pinY) * 2;
+  document.querySelectorAll('.pad-corner .word[data-weight]').forEach(span => {
+    const w = span.dataset.weight;
+    let rel = 0;
+    if (w === 'x+') rel = xVal; else if (w === 'x-') rel = -xVal;
+    else if (w === 'y+') rel = yVal; else if (w === 'y-') rel = -yVal;
+    const active = span.closest('.pad-corner').classList.contains('active-quad');
+    if (active) {
+      const mag = Math.max(0, rel);
+      span.style.fontSize = (10 + mag * 16) + 'px';
+      span.style.fontWeight = mag > 0.3 ? '600' : '500';
+    } else {
+      span.style.fontSize = '10px';
+      span.style.fontWeight = '';
+    }
+  });
+}
+
+function updateGraphReadout() {
+  const xRaw = Math.round((pinX - 0.5) * 200), yRaw = Math.round((0.5 - pinY) * 200);
+  gCoords.textContent = 'x ' + (xRaw >= 0 ? '+' : '') + xRaw + ' · y ' + (yRaw >= 0 ? '+' : '') + yRaw;
+  gIntensityEl.textContent = graphIntensity;
+  gBandEl.textContent = graphBand;
+}
+
+function placeAt(x, y) {
+  pinX = PE.clamp(x, 0.02, 0.98);
+  pinY = PE.clamp(y, 0.02, 0.98);
+  padPin.classList.add('visible');
+  padPin.style.left = (pinX * 100) + '%';
+  padPin.style.top = (pinY * 100) + '%';
+  padPinShadow.style.left = (pinX * 100) + '%';
+  padPinShadow.style.top = (pinY * 100) + '%';
+
+  let changed = false;
+  const newQ = quadAt(pinX, pinY);
+  if (newQ !== graphQuad) {
+    graphQuad = newQ;
+    padPin.style.setProperty('--accent', QUAD_ACCENT[newQ]);
+    padPinShadow.style.setProperty('--accent', QUAD_ACCENT[newQ]);
+    zThumb.style.setProperty('--accent', QUAD_ACCENT[newQ]);
+    enterFocusMode(newQ);
+    changed = true;
+  }
+
+  graphIntensity = Math.round(Math.max(Math.abs((pinX - 0.5) * 200), Math.abs((0.5 - pinY) * 200)));
+  const band = PE.bandFromScore(graphIntensity);
+  if (band !== graphBand) {
+    graphBand = band;
+    buildAllCorners(band);            // band displacement — variant words swap
+    ambient.classList.remove('fluid', 'coalition', 'denominated');
+    ambient.classList.add(band);
+    changed = true;
+  }
+
+  const t = Math.min(1, graphIntensity / 100);
+  cornerPos(5 + (1 - t) * 20, 3 + (1 - t) * 17);   // labels slide centre→edge
+  updateWordWeights();
+  updateGraphReadout();
+  if (changed) updateInfo();           // refresh the context panel on quad/band change
+}
+
+function enterGraph() {
+  if (!selectedQuad) return;
+  graphQuad = null;                  // force focus setup in placeAt
+  graphBand = committedBand;         // start at the aperture band; pin intensity owns it now
+  graphZ = 0;                        // neutral — the user places their own tension
+  gPromptEl.textContent = ev ? (ev.prompt || ev.framing || '') : '';
+  graphDialect.value = ''; updateGraphCharcount();
+  graphNote.textContent = ''; graphCommitBtn.disabled = false;
+  aggCommitted = false; aggDots = []; aggLayer.innerHTML = '';   // clear any prior aggregate (incl. contrast line)
+  contrastLine = null; userPinData = null;
+  graphInfo.classList.remove('comparing');
+  cmpAggText.innerHTML = ''; cmpAggNums.textContent = ''; cmpAggLabel.textContent = ''; cmpDelta.textContent = '';
+  graphPad.classList.remove('orbital', 'cam-float');
+  graphPad.style.overflow = ''; graphPad.style.display = '';
+  if (gm) { try { gm.clearDots(); gm.clearContrastLine(); gm.clearPin(); } catch (e) {} }
+  gmActive = false;
+  gm3dEl.classList.remove('live', 'in');
+  orbitYaw = 0; orbitPitch = 0; targetYaw = 0; targetPitch = 0;
+  if (orbitRAF) { cancelAnimationFrame(orbitRAF); orbitRAF = null; }
+
+  buildAllCorners(graphBand);
+  graphPad.classList.add('lit');
+  padPin.style.setProperty('--ring', BAND_RING[committedBand] || 'var(--accent)');
+  zThumb.style.setProperty('--accent', QUAD_ACCENT[selectedQuad]);
+  renderZ();
+
+  const p = QUAD_POS[selectedQuad];
+  placeAt(p[0], p[1]);               // initial pin at the chosen quadrant's centre
+
+  document.body.classList.remove('phase-answers');
+  document.body.classList.add('phase-graph');
+  phaseLabel.innerHTML = 'prism · <strong>v2</strong> · your pin';
+}
+
+function backFromGraph() {
+  document.body.classList.remove('phase-graph');
+  document.body.classList.add('phase-answers');
+  phaseLabel.innerHTML = 'prism · <strong>v2</strong> · responses';
+  ambient.classList.remove('fluid', 'coalition', 'denominated');
+  ambient.classList.add(committedBand);
+}
+
+// Synthetic "other voices" — clustered per quadrant, band follows intensity
+// (distance from centre), z spread. Stand-in until real aggregate data exists.
+function genAggregate(n) {
+  const dots = [];
+  const weight = { A: 0.30, B: 0.26, C: 0.18, D: 0.26 };   // mild asymmetry
+  ['A', 'B', 'C', 'D'].forEach(q => {
+    const c = QUAD_POS[q];
+    const count = Math.round(n * weight[q]);
+    for (let i = 0; i < count; i++) {
+      const gx = PE.clamp(c[0] + (Math.random() - Math.random()) * 0.22, 0.04, 0.96);
+      const gy = PE.clamp(c[1] + (Math.random() - Math.random()) * 0.22, 0.04, 0.96);
+      const intensity = Math.round(Math.max(Math.abs((gx - 0.5) * 200), Math.abs((0.5 - gy) * 200)));
+      // z biased away from zero so every voice shows some depth (not hugging the plane)
+      const z = (Math.random() < 0.5 ? -1 : 1) * (0.32 + Math.random() * 0.63);
+      dots.push({ x: gx, y: gy, quad: q, band: PE.bandFromScore(intensity), z: +z.toFixed(2) });
+    }
+  });
+  return dots;
+}
+
+// Map a true coordinate (0..1, axis centre at 0.5) into the skewed pad frame
+// where the crosshair sits at `a` — so dots land relative to the migrated axes.
+function skewMap(c, a) { return c <= 0.5 ? (2 * c * a) : (a + (2 * c - 1) * (1 - a)); }
+function layoutAgg(ax, ay) {
+  aggDots.forEach(d => { d.el.style.left = (skewMap(d.x, ax) * 100) + '%'; d.el.style.top = (skewMap(d.y, ay) * 100) + '%'; });
+}
+
+function precipitate() {
+  aggLayer.innerHTML = '';
+  aggDots = genAggregate(46);
+  // Place in the CURRENT skewed frame (the user's focus view), with the more
+  // displaced voices floated further off the plane (exaggerated Z).
+  const ax = (parseFloat(graphPad.style.getPropertyValue('--ax')) || 50) / 100;
+  const ay = (parseFloat(graphPad.style.getPropertyValue('--ay')) || 50) / 100;
+  const halfW = padHalf();
+  aggDots.forEach((dt, i) => {
+    const el = document.createElement('div');
+    el.className = 'agg-dot';
+    el.style.left = (skewMap(dt.x, ax) * 100) + '%';
+    el.style.top = (skewMap(dt.y, ay) * 100) + '%';
+    el.style.setProperty('--accent', QUAD_ACCENT[dt.quad]);
+    el.style.setProperty('--ring', BAND_RING[dt.band]);
+    el.style.setProperty('--dz', (dt.z * halfW).toFixed(1) + 'px');         // depth, constant (no sink)
+    el.style.setProperty('--dsize', (12 + dt.z * 4).toFixed(1) + 'px');     // size = depth cue (bigger, clickable)
+    const orb = document.createElement('i');
+    orb.className = 'agg-orb';
+    orb.style.transitionDelay = (i * 16) + 'ms';                            // staggered fade on the leaf
+    el.appendChild(orb);
+    dt.el = el;
+    aggLayer.appendChild(el);
+  });
+  requestAnimationFrame(() => aggDots.forEach(d => d.el.classList.add('settled')));
+  return aggDots.length;
+}
+
+// The commit reveal: hold the skewed frame a beat, then re-migrate the axes to
+// standard 50/50 (the pins migrate with them), settle the floated Z, run a
+// camera float cycle, and hand off to manual orbit.
+function commitReveal() {
+  setTimeout(() => {
+    graphPad.style.setProperty('--ax', '50%');
+    graphPad.style.setProperty('--ay', '50%');
+    setShades(50, 50);
+    ['A', 'B', 'C', 'D'].forEach(k => padCorners[k].classList.add('receding'));
+    layoutAgg(0.5, 0.5);                                  // pins migrate with the axes (x/y only; z stays)
+    graphPad.style.setProperty('--z0', (graphZ * 52).toFixed(2) + 'deg');
+    graphPad.classList.add('cam-float');
+    setTimeout(() => {
+      graphPad.classList.remove('cam-float');
+      // Rest at an angle steep enough that depth stays visible; orbit from here.
+      graphPad.style.setProperty('--tiltdeg', '30deg');
+      graphPad.style.transform = 'rotateX(12deg) rotateY(30deg)';
+      graphPad.classList.add('orbital');                 // manual orbit now live
+      orbitYaw = 30; orbitPitch = 12; targetYaw = 30; targetPitch = 12;
+    }, 3200);
+  }, 700);
+}
+
+// ── Manual orbit (post-commit) — eased toward a target for smooth motion ──
+function applyOrbit() {
+  graphPad.style.setProperty('--tiltdeg', orbitYaw.toFixed(2) + 'deg');  // keep pins billboard (yaw)
+  // pitch OUTSIDE yaw → turntable: vertical drag tilts the whole scene consistently
+  graphPad.style.transform = 'rotateX(' + orbitPitch.toFixed(2) + 'deg) rotateY(' + orbitYaw.toFixed(2) + 'deg)';
+}
+function orbitLoop() {
+  orbitYaw   += (targetYaw   - orbitYaw)   * 0.3;
+  orbitPitch += (targetPitch - orbitPitch) * 0.3;
+  applyOrbit();
+  if (orbiting || Math.abs(targetYaw - orbitYaw) > 0.04 || Math.abs(targetPitch - orbitPitch) > 0.04) {
+    orbitRAF = requestAnimationFrame(orbitLoop);
+  } else {
+    orbitYaw = targetYaw; orbitPitch = targetPitch; applyOrbit(); orbitRAF = null;
+  }
+}
+function ensureOrbitLoop() { if (!orbitRAF) orbitRAF = requestAnimationFrame(orbitLoop); }
+function orbitDown(e) {
+  if (!graphPad.classList.contains('orbital')) return;
+  orbiting = true; dragMoved = false;
+  const p = e.touches ? e.touches[0] : e;
+  oSX = p.clientX; oSY = p.clientY; oY0 = targetYaw; oP0 = targetPitch;
+  // note: no preventDefault here, so a click (no drag) still reaches an agg dot
+}
+function orbitMove(e) {
+  if (!orbiting) return;
+  const p = e.touches ? e.touches[0] : e;
+  if (Math.abs(p.clientX - oSX) + Math.abs(p.clientY - oSY) > 10) dragMoved = true;
+  // Clamped so the plane never swings to an unreadable edge-on sliver
+  targetYaw   = PE.clamp(oY0 + (p.clientX - oSX) * 0.28, -55, 55);
+  targetPitch = PE.clamp(oP0 - (p.clientY - oSY) * 0.22, -42, 42);
+  ensureOrbitLoop();
+  if (e.cancelable) e.preventDefault();
+}
+function orbitEnd() { orbiting = false; }
+graphPad.addEventListener('mousedown', orbitDown);
+graphPad.addEventListener('touchstart', orbitDown, { passive: false });
+window.addEventListener('mousemove', orbitMove);
+window.addEventListener('touchmove', orbitMove, { passive: false });
+window.addEventListener('mouseup', orbitEnd);
+window.addEventListener('touchend', orbitEnd);
+
+// ── Contrast: click an aggregate to compare it against the user's pin ──
+aggLayer.addEventListener('click', (e) => {
+  const el = e.target.closest('.agg-dot');
+  if (!el || dragMoved) return;
+  const dot = aggDots.find(d => d.el === el);
+  if (dot) showContrast(dot);
+});
+function sgn(n) { return (n >= 0 ? '+' : '') + n; }
+// True 3D connector — through the air between the two floating orbs, in the
+// pad's preserve-3d space (so it tracks both as the graph orbits).
+function drawContrastLine(dot) {
+  if (!contrastLine) { contrastLine = document.createElement('div'); contrastLine.className = 'contrast-line'; aggLayer.appendChild(contrastLine); }
+  const padW = graphPad.clientWidth || 440, halfW = padW / 2;
+  const x1 = pinX * padW, y1 = pinY * padW, z1 = (userPinData ? userPinData.z : 0) * halfW;
+  const x2 = dot.x * padW, y2 = dot.y * padW, z2 = dot.z * halfW;
+  const dx = x2 - x1, dy = y2 - y1, dz = z2 - z1;
+  const len = Math.hypot(dx, dy, dz) || 1;
+  // Orient the unit +X bar onto (dx,dy,dz): rotateY swings it in the XZ plane,
+  // rotateZ tilts it up/down by the Y component.
+  const ry = Math.atan2(-dz, dx) * 180 / Math.PI;
+  const rz = Math.asin(PE.clamp(dy / len, -1, 1)) * 180 / Math.PI;
+  contrastLine.style.left = '0'; contrastLine.style.top = '0';
+  contrastLine.style.width = len.toFixed(1) + 'px';
+  contrastLine.style.transform =
+    'translate3d(' + x1.toFixed(1) + 'px,' + y1.toFixed(1) + 'px,' + z1.toFixed(1) + 'px)' +
+    ' rotateY(' + ry.toFixed(2) + 'deg) rotateZ(' + rz.toFixed(2) + 'deg)';
+  contrastLine.style.setProperty('--accent', QUAD_ACCENT[dot.quad]);
+  contrastLine.style.opacity = '1';
+}
+function showContrast(dot) {
+  if (!userPinData) return;
+  aggDots.forEach(d => { if (d.el) d.el.classList.toggle('selected', d === dot); });
+  graphInfo.classList.add('comparing');
+
+  // you (committed) — top half
+  const uv = variantAt(userPinData.quad, userPinData.band);
+  const umeta = QUAD.find(x => x.q === userPinData.quad);
+  cmpUser.setAttribute('data-band', userPinData.band);
+  cmpUser.setAttribute('data-side', umeta ? umeta.side : 'left');
+  cmpUserLabel.textContent = 'you · ' + userPinData.band;
+  cmpUserText.innerHTML = uv ? PE.applyKeywords(uv.text, variantPool(uv)) : '';
+  cmpUserNums.textContent = numsLine(userPinData.x, userPinData.y, userPinData.z, userPinData.intensity);
+
+  // the voice — bottom half (mirrored)
+  const av = variantAt(dot.quad, dot.band);
+  const ameta = QUAD.find(x => x.q === dot.quad);
+  const ax = Math.round((dot.x - 0.5) * 200), ay = Math.round((0.5 - dot.y) * 200);
+  const ai = Math.round(Math.max(Math.abs(ax), Math.abs(ay)));
+  cmpAgg.setAttribute('data-band', dot.band);
+  cmpAgg.setAttribute('data-side', ameta ? ameta.side : 'left');
+  cmpAggNums.textContent = numsLine(ax, ay, dot.z, ai);
+  cmpAggText.innerHTML = av ? PE.applyKeywords(av.text, variantPool(av)) : '';
+  cmpAggLabel.textContent = 'a voice · ' + dot.band;
+
+  // line of symmetry — xyz deltas down the middle
+  cmpDelta.innerHTML = 'Δx ' + sgn(ax - userPinData.x) +
+    '<span class="d-sep"></span>Δy ' + sgn(ay - userPinData.y) +
+    '<span class="d-sep"></span>Δz ' + ((dot.z - userPinData.z) >= 0 ? '+' : '') + (dot.z - userPinData.z).toFixed(2);
+
+  // The tether: a true 3D line in the factory; the CSS line in fallback mode
+  if (gmActive && gm) {
+    try { gm.setContrastLine({ x: pinX, y: pinY, z: userPinData.z }, { x: dot.x, y: dot.y, z: dot.z }, { color: QUAD_HEX[dot.quad] }); } catch (e) {}
+  } else {
+    drawContrastLine(dot);
+  }
+}
+
+function commitGraph() {
+  if (!graphQuad || aggCommitted) return;
+  const meta = QUAD.find(x => x.q === graphQuad);
+  const record = {
+    event: EVENT_ID,
+    quadrant: graphQuad,
+    side: meta.side,
+    x: +((pinX - 0.5) * 2).toFixed(3),
+    y: +((0.5 - pinY) * 2).toFixed(3),
+    intensity: graphIntensity,
+    band: graphBand,
+    apertureBand: committedBand,
+    z: +graphZ.toFixed(3),
+    dialect: graphDialect.value.trim().slice(0, 180),
+    diatribeScore: state.realScore,
+    ts: Date.now(),
+  };
+  console.log('[v2 · pin commit]', record);
+  userPinData = { x: Math.round((pinX - 0.5) * 200), y: Math.round((0.5 - pinY) * 200), z: graphZ, intensity: graphIntensity, band: graphBand, quad: graphQuad };
+  aggCommitted = true;
+  graphCommitBtn.disabled = true;
+  if (mountGM()) {
+    // Hand the committed graph to the graphmap FACTORY — v56 pins, true 3D
+    // depth, full orbit (incl. around to −z). The CSS pad retires here.
+    try {
+      gmCommit();
+      graphNote.textContent = 'committed · 46 voices · drag to orbit · hold a voice to lock on · hold your pin to come home';
+    } catch (e) {
+      // Surface the failure ON the page — no more silent black holes.
+      console.error('[v2] gmCommit failed:', e);
+      graphPad.style.display = '';      // bring the pad back rather than show nothing
+      graphNote.textContent = 'graph error · ' + (e && e.message ? e.message : 'unknown') + ' · see console';
+    }
+  } else {
+    // Fallback (no WebGL): the CSS pad's precipitation + orbit
+    graphPad.style.overflow = 'visible';  // keep preserve-3d active (overflow:hidden flattens it)
+    const n = precipitate();
+    commitReveal();
+    graphNote.textContent = 'committed · ' + n + ' voices · drag to orbit · (css fallback — factory unavailable)';
+  }
+}
+
+// ── Graphmap factory hand-off (post-commit) ──
+function mountGM() {
+  if (gm) return true;
+  // NOTE: the module is a top-level `const` — it is a global *binding* but NOT
+  // a window property, so it must be detected via bare typeof, never window.X.
+  // (This exact mistake silently disabled the factory for several sessions.)
+  if (typeof PrismGraphmap === 'undefined' || typeof THREE === 'undefined') return false;
+  try {
+    gm3dEl.classList.add('live');   // ensure the container has size before mount
+    gm = PrismGraphmap.create({
+      mode: 'analytical',
+      capabilities: { orbit: true, zInput: true, zRender: true },
+      moody: true,          // subtler, darker plane — the velvet shows through
+      spectrumAxes: true,   // iridescent gradient axis lines
+      holdMs: 900,          // deliberate hold-to-lock (400 felt accidental, 2s sluggish)
+      zoom: 12, zoomMax: 14, // camera pulled back to compensate the oversized stage
+    });
+    gm.mount(document.getElementById('gm3dStage'));   // mount into the big surface
+    // hold-to-lock: a voice locks the contrast panel AND becomes the orbit
+    // focus (the camera circles the locked pin). Hold your own pin to
+    // re-center on yourself.
+    gm.onInspect(d => {
+      if (!d) return;
+      if (d.label !== undefined && d.label !== '' && aggDots[+d.label]) {
+        const dot = aggDots[+d.label];
+        showContrast(dot);
+        try { gm.setFocus(dot.x, dot.y); } catch (e) {}
+      } else if (d.normX != null) {
+        try { gm.setFocus(d.normX, d.normY); } catch (e) {}   // your pin → come home
+      }
+    });
+    return true;
+  } catch (e) {
+    console.warn('[v2] graphmap factory unavailable:', e && e.message);
+    gm3dEl.classList.remove('live');
+    gm = null;
+    return false;
+  }
+}
+
+function gmCommit() {
+  gmActive = true;
+  graphPad.style.display = 'none';        // factory takes the pad's slot
+  gm3dEl.classList.add('live');
+  requestAnimationFrame(() => gm3dEl.classList.add('in'));
+  try { gm.clearDots(); gm.clearContrastLine(); } catch (e) {}
+  try { gm.setBoundaryVisible(false); } catch (e) {}   // no pale Z-boundary wash — plane ≈ field
+  try { gm.setFocus(0.5, 0.5); } catch (e) {}          // start centered
+  // Flat / straight-on presentation first — the 3D nature is revealed by the
+  // spin after the voices have precipitated.
+  try { gm.setOrbit(0, 0); } catch (e) {}
+  gm.setPin(pinX, pinY, GM_QUAD[graphQuad], graphZ, { ring: BAND_RING[committedBand], style: 'orb' });
+  // corner labels = the committed band's axis terms, remapped to factory keys
+  const corners = {};
+  ['A', 'B', 'C', 'D'].forEach(q => {
+    const v = variantAt(q, graphBand);
+    if (v) corners[GM_QUAD[q]] = (v.xWord || '') + ' · ' + (v.yWord || '');
+  });
+  try { gm.setCornerLabels(corners); } catch (e) {}
+  // the voices precipitate — staggered into true 3D, each with its band ring
+  aggDots = genAggregate(46);
+  aggDots.forEach((d, i) => setTimeout(() => {
+    if (gmActive && gm) {
+      try { gm.addDot(d.x, d.y, GM_QUAD[d.quad], d.z, { label: String(i), ring: BAND_RING[d.band] }); }
+      catch (e) { if (i === 0) console.error('[v2] addDot failed:', e); }
+    }
+  }, 250 + i * 45));
+  // ...then the graph turns to reveal its depth
+  const revealAt = 250 + aggDots.length * 45 + 400;
+  setTimeout(() => { if (gmActive && gm) { try { gm.spinTo(26, 10, 1800); } catch (e) {} } }, revealAt);
+}
+
+function updateGraphCharcount() {
+  if (graphDialect.value.length > 180) graphDialect.value = graphDialect.value.slice(0, 180);
+  graphCharEl.textContent = graphDialect.value.length + '/180';
+}
+graphDialect.addEventListener('input', updateGraphCharcount);
+
+// Pad pointer interaction
+let padDragging = false;
+// While the pad is tilted into 3D (Z engaged), x/y placement is locked — bring
+// Z back toward 0 to lay it flat and reposition. Keeps the tilted-plane pointer
+// mapping from fighting the user.
+function padDown(e) { if (aggCommitted || graphPad.classList.contains('tilted')) return; padDragging = true; const p = e.touches ? e.touches[0] : e; placeAt2(p.clientX, p.clientY); if (e.cancelable) e.preventDefault(); }
+function padMove(e) { if (!padDragging) return; const p = e.touches ? e.touches[0] : e; placeAt2(p.clientX, p.clientY); if (e.cancelable) e.preventDefault(); }
+function padUp() { padDragging = false; }
+function placeAt2(cx, cy) {
+  const r = graphPad.getBoundingClientRect();
+  if (!r.width) return;
+  placeAt((cx - r.left) / r.width, (cy - r.top) / r.height);
+}
+graphPad.addEventListener('mousedown', padDown);
+graphPad.addEventListener('touchstart', padDown, { passive: false });
+window.addEventListener('mousemove', padMove);
+window.addEventListener('touchmove', padMove, { passive: false });
+window.addEventListener('mouseup', padUp);
+window.addEventListener('touchend', padUp);
+graphBackBtn.addEventListener('click', backFromGraph);
+graphCommitBtn.addEventListener('click', commitGraph);
+
+// ---- Boot ----
+// The page opens on the event entry phase; applyState primes the (hidden)
+// diatribe stage behind it. The discovery cue timer is started by
+// enterDiatribe(), not here, so it doesn't fire while the introit is up.
+applyState(true);
+</script>
+
+</body>
+</html>

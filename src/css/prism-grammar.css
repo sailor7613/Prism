@@ -1,0 +1,521 @@
+/* ============================================================
+   PRISM · GRAMMAR (shared design system)
+   ------------------------------------------------------------
+   Aesthetic: 90s ed-tech (Eyewitness / Voyager) through
+              contemporary computation. Specimen-on-velvet.
+              Georgia/Iowan Old Style for interpretation,
+              DM Mono for data.
+
+   This stylesheet defines TYPE, COLOR, MATERIAL, RHYTHM.
+   It does NOT define stage-specific layout. Each stage
+   (splash, diatribe, event entry, answer cards, etc.) owns
+   its own positioning, dimensions, and HTML structure, but
+   inherits this grammar for everything visual.
+
+   Consumed by: Prism/v2/*.html  (and progressively by v56)
+   ============================================================ */
+
+/* ── TOKENS ────────────────────────────────────────────────── */
+
+:root {
+  /* Dark default — velvet-black pushed bluer (more deep-night-sky than pure void) */
+  --bg:          rgb(10, 18, 38);
+  --bg-soft:     rgba(10, 18, 38, 0.97);
+  --ink:         #f5f0e8;
+  --ink-mid:     rgba(245, 240, 232, 0.55);
+  --ink-low:     rgba(245, 240, 232, 0.28);
+  --rule:        rgba(48, 96, 192, 0.18);
+  --rule-soft:   rgba(48, 96, 192, 0.10);
+  --halo:        rgba(32, 64, 160, 0.12);
+
+  /* mix-blend-mode for hand-painted PNG artwork (wordmark, prism logo) —
+     screens out the white background, leaves the inked strokes glowing */
+  --art-blend:   screen;
+
+  /* Side colors — inherited from graphmap PARTY_COLORS palette */
+  --side-left:   rgb(96, 148, 220);
+  --side-right:  rgb(220, 96, 96);
+
+  /* Band tints — fluid/coalition/denominated */
+  --band-fluid:        rgb(96, 168, 128);
+  --band-coalition:    rgb(196, 156, 72);
+  --band-denominated:  rgb(212, 92, 92);
+
+  /* Keyword shimmer highlight */
+  --keyword-shimmer:   rgba(255, 246, 226, 0.95);
+
+  /* Type */
+  --serif: 'Iowan Old Style', 'Palatino', 'Georgia', serif;
+  --mono:  'DM Mono', ui-monospace, monospace;
+
+  /* ── Responsive tokens ──
+     Breakpoints: ≤480 small mobile · ≤768 tablet/mobile · default desktop.
+     Touch-target minimum is 44px (Apple HIG / Material guidance).
+     Caption width adapts to viewport via clamp so the tablet always fits. */
+  --touch-min:         44px;
+  --caption-width:     clamp(280px, 92vw, 320px);
+  --stage-pad-x:       40px;
+  --type-display-base: 17px;
+  --type-body-base:    14.5px;
+  --type-caption-base: 14.5px;
+}
+
+/* Mobile / tablet — narrow viewports get touch-friendly sizing and tighter pads */
+@media (max-width: 768px) {
+  :root {
+    --stage-pad-x:        20px;
+    --type-display-base:  15.5px;
+    --type-body-base:     14px;
+    --type-caption-base:  13.5px;
+  }
+}
+@media (max-width: 480px) {
+  :root {
+    --stage-pad-x:        14px;
+    --type-display-base:  14.5px;
+    --type-body-base:     13.5px;
+    --type-caption-base:  13px;
+  }
+}
+
+body.light {
+  --bg:          rgb(245, 240, 232);
+  --bg-soft:     rgba(245, 240, 232, 0.97);
+  --ink:         rgb(20, 22, 30);
+  --ink-mid:     rgba(20, 22, 30, 0.55);
+  --ink-low:     rgba(20, 22, 30, 0.28);
+  --rule:        rgba(48, 96, 192, 0.20);
+  --rule-soft:   rgba(48, 96, 192, 0.10);
+  --halo:        rgba(32, 64, 160, 0.06);
+  --art-blend:   multiply;
+
+  --keyword-shimmer: rgba(72, 44, 16, 0.85);
+}
+
+/* ── PAGE BASELINE ─────────────────────────────────────────── */
+
+html, body {
+  margin: 0; padding: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.55;
+  transition: background 1.2s ease, color 0.8s ease;
+}
+
+* { box-sizing: border-box; }
+
+/* ── TYPOGRAPHIC ROLES ─────────────────────────────────────── */
+
+.prism-title {
+  font-family: var(--mono);
+  font-size: 11px; font-weight: 400;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink-mid);
+}
+.prism-title strong {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.prism-display {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -0.005em;
+  line-height: 1.15;
+  color: var(--ink);
+}
+
+.prism-mono {
+  font-family: var(--mono);
+  font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink-mid);
+}
+
+.prism-mono-low {
+  font-family: var(--mono);
+  font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--ink-low);
+}
+
+.prism-quiet {
+  color: var(--ink-mid);
+  font-style: italic;
+}
+
+/* ── INTERACTIVE PRIMITIVES ────────────────────────────────── */
+
+.prism-toggle {
+  background: transparent;
+  border: 1px solid var(--rule);
+  color: var(--ink-mid);
+  font-family: var(--mono);
+  font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+.prism-toggle:hover { color: var(--ink); border-color: rgba(48, 96, 192, 0.35); }
+
+/* ── AMBIENT BAND WASH ─────────────────────────────────────── */
+/* A fixed-position layer that picks up band hue (set by JS via
+   classList: fluid/coalition/denominated). Pervasive room-tint
+   that names the band even without looking at the slider.        */
+
+.prism-ambient {
+  position: fixed; inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.8;
+  transition: opacity 1.4s ease, background 1.6s ease;
+}
+.prism-ambient.fluid {
+  background:
+    radial-gradient(ellipse at center, rgba(96, 168, 128, 0.24) 0%, rgba(96, 168, 128, 0.10) 55%, rgba(96, 168, 128, 0.04) 100%);
+  opacity: 0.85;
+}
+.prism-ambient.coalition {
+  background:
+    radial-gradient(ellipse at center, rgba(196, 156, 72, 0.34) 0%, rgba(196, 156, 72, 0.14) 55%, rgba(196, 156, 72, 0.05) 100%);
+  opacity: 0.95;
+}
+.prism-ambient.denominated {
+  background:
+    radial-gradient(ellipse at center, rgba(212, 92, 92, 0.36) 0%, rgba(212, 92, 92, 0.15) 55%, rgba(212, 92, 92, 0.05) 100%);
+  opacity: 0.98;
+}
+body.light .prism-ambient.fluid {
+  background:
+    radial-gradient(ellipse at center, rgba(96, 168, 128, 0.18) 0%, rgba(96, 168, 128, 0.06) 55%, rgba(96, 168, 128, 0.02) 100%);
+}
+body.light .prism-ambient.coalition {
+  background:
+    radial-gradient(ellipse at center, rgba(196, 156, 72, 0.24) 0%, rgba(196, 156, 72, 0.08) 55%, rgba(196, 156, 72, 0.03) 100%);
+}
+body.light .prism-ambient.denominated {
+  background:
+    radial-gradient(ellipse at center, rgba(212, 92, 92, 0.24) 0%, rgba(212, 92, 92, 0.08) 55%, rgba(212, 92, 92, 0.03) 100%);
+}
+
+/* ── CAPTION TABLET ────────────────────────────────────────── */
+/* The Eyewitness specimen caption. Pairs with a label line.
+   Carries Georgia interpretive prose, with optional .ghost variant
+   for doppelgänger/secondary captions. Driven by data-side and
+   data-band attributes set by JS. */
+
+.prism-caption {
+  width: var(--caption-width);
+  padding: 14px 18px 16px;
+  background: var(--bg-soft);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  box-shadow: 0 0 30px var(--halo), inset 0 0 24px rgba(8, 16, 40, 0.18);
+  font-family: var(--serif);
+  font-size: var(--type-caption-base);
+  line-height: 1.5;
+  color: var(--ink);
+  transition: left 0.28s cubic-bezier(0.22, 0.61, 0.36, 1),
+              top 0.28s cubic-bezier(0.22, 0.61, 0.36, 1),
+              opacity 0.35s ease,
+              border-color 0.6s ease;
+  clip-path: inset(0 0 0 0);
+}
+.prism-caption.ghost {
+  opacity: 0.62;
+  background: rgba(8, 10, 18, 0.78);
+  border-style: dashed;
+  border-color: rgba(48, 96, 192, 0.18);
+  font-size: calc(var(--type-caption-base) - 1px);
+}
+body.light .prism-caption.ghost {
+  background: rgba(245, 240, 232, 0.78);
+}
+.prism-caption.ghost.locked {
+  opacity: 0.92;
+  border-style: solid;
+  border-color: var(--rule);
+  font-size: var(--type-caption-base);
+}
+.prism-caption.hidden { opacity: 0; pointer-events: none; }
+
+.prism-caption .caption-label {
+  font-family: var(--mono);
+  font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--ink-low);
+  margin-bottom: 8px;
+  display: flex; justify-content: space-between;
+}
+.prism-caption .caption-label .side { color: var(--ink-mid); }
+.prism-caption .caption-label .band { color: var(--ink-mid); }
+.prism-caption[data-side="left"]  .caption-label .side { color: var(--side-left); }
+.prism-caption[data-side="right"] .caption-label .side { color: var(--side-right); }
+
+.prism-caption .caption-text {
+  display: block;
+  transition: opacity 0.32s ease;
+}
+
+/* ── CAPTION TRANSITIONS ──
+   Three distinct transition modes, each carrying different conceptual weight:
+     · reforming        — band change within the same side (subtle dim+swap)
+     · materializing    — first text appearing after engagement (specimen develop)
+     · refracting       — side cross at center (chromatic aberration / prism split) */
+
+/* Reform — current dim+swap. Band change reads as gradient shift, not identity. */
+.prism-caption.reforming .caption-text { opacity: 0.15; }
+
+/* Develop — Eyewitness specimen materializing under microscope focus.
+   Text starts blurred + dim, sharpens into legibility. ~700ms. */
+.caption-text.materializing {
+  animation: prism-caption-develop 720ms cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+@keyframes prism-caption-develop {
+  0% {
+    filter: blur(8px);
+    opacity: 0.15;
+    letter-spacing: 0.04em;
+  }
+  60% {
+    filter: blur(2px);
+    opacity: 0.6;
+    letter-spacing: 0.012em;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+    letter-spacing: normal;
+  }
+}
+
+/* Refract — lens flare on side cross. A soft warm gradient sweeps across the
+   caption (left → right) via background-position on a ::after overlay. The
+   overlay uses mix-blend-mode: screen so it brightens the letters underneath
+   rather than overwriting them. Text content swaps when the flare hits the
+   center; the bright pass softens the swap moment. ~600ms.
+   Reads as optical-light-through-glass — Eyewitness microscope tilting to
+   catch sunlight, or a CD-ROM disc passing under a lamp. */
+.caption-text { position: relative; }
+
+.caption-text.refracting {
+  animation: prism-caption-refract-brighten 600ms cubic-bezier(0.45, 0, 0.55, 1);
+}
+.caption-text.refracting::after {
+  content: '';
+  position: absolute;
+  inset: -6px -16px;
+  pointer-events: none;
+  background: linear-gradient(
+    100deg,
+    transparent 12%,
+    rgba(255, 244, 220, 0.18) 32%,
+    rgba(255, 240, 210, 0.85) 50%,
+    rgba(255, 244, 220, 0.18) 68%,
+    transparent 88%
+  );
+  background-size: 220% 100%;
+  background-position: -120% 0;
+  background-repeat: no-repeat;
+  mix-blend-mode: screen;
+  filter: blur(2px);
+  opacity: 0;
+  animation: prism-caption-flare-sweep 600ms cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: 2;
+}
+
+@keyframes prism-caption-flare-sweep {
+  0% {
+    background-position: -120% 0;
+    opacity: 0;
+  }
+  18% { opacity: 1; }
+  50% {
+    background-position: 50% 0;
+  }
+  82% { opacity: 1; }
+  100% {
+    background-position: 220% 0;
+    opacity: 0;
+  }
+}
+
+@keyframes prism-caption-refract-brighten {
+  0%, 100% {
+    filter: brightness(1);
+  }
+  42%, 58% {
+    filter: brightness(1.18);
+  }
+}
+
+/* Light-mode lens flare — same warm streak, but reduced amplitude so it
+   doesn't blow out against the cream background */
+body.light .caption-text.refracting::after {
+  background: linear-gradient(
+    100deg,
+    transparent 12%,
+    rgba(255, 220, 168, 0.22) 32%,
+    rgba(255, 200, 130, 0.62) 50%,
+    rgba(255, 220, 168, 0.22) 68%,
+    transparent 88%
+  );
+  mix-blend-mode: multiply;
+}
+body.light .caption-text.refracting {
+  animation: prism-caption-refract-darken 600ms cubic-bezier(0.45, 0, 0.55, 1);
+}
+@keyframes prism-caption-refract-darken {
+  0%, 100% { filter: brightness(1); }
+  42%, 58% { filter: brightness(0.88) saturate(1.15); }
+}
+
+/* ── KEYWORD SPRITE GLOW ───────────────────────────────────── */
+/* Load-bearing words inside caption text carry the band's light
+   from within. Letters stay solid ink (legibility wins); the halo
+   pulses subtly to give the sense of light catching. Staggered
+   timing across siblings makes the row of keywords feel like a
+   slow wave of iridescence rather than synchronous blink.        */
+
+.caption-text .keyword,
+.prism-keyword {
+  font-weight: 500;
+  letter-spacing: 0.005em;
+  color: var(--ink);
+  text-shadow:
+    0 0 6px  var(--keyword-glow-near, rgba(96, 148, 220, 0.65)),
+    0 0 14px var(--keyword-glow-far,  rgba(96, 148, 220, 0.35));
+  animation: prism-keyword-shimmer 5.5s ease-in-out infinite;
+  transition: text-shadow 0.8s ease, color 0.6s ease;
+}
+
+@keyframes prism-keyword-shimmer {
+  0%, 100% {
+    filter: drop-shadow(0 0 0 transparent);
+    opacity: 0.92;
+  }
+  50% {
+    filter: drop-shadow(0 0 7px var(--keyword-glow-near, rgba(96, 148, 220, 0.45)));
+    opacity: 1;
+  }
+}
+
+.caption-text .keyword:nth-child(3n),
+.prism-keyword:nth-child(3n)   { animation-delay: -1.8s; }
+.caption-text .keyword:nth-child(3n+1),
+.prism-keyword:nth-child(3n+1) { animation-delay: -3.6s; }
+.caption-text .keyword:nth-child(3n+2),
+.prism-keyword:nth-child(3n+2) { animation-delay: -0.6s; }
+
+/* Per-band keyword glow color */
+.prism-caption[data-band="fluid"]       .caption-text .keyword,
+[data-band="fluid"] .prism-keyword {
+  --keyword-glow-near: rgba(120, 200, 160, 0.70);
+  --keyword-glow-far:  rgba(120, 200, 160, 0.32);
+}
+.prism-caption[data-band="coalition"]   .caption-text .keyword,
+[data-band="coalition"] .prism-keyword {
+  --keyword-glow-near: rgba(220, 184, 100, 0.78);
+  --keyword-glow-far:  rgba(220, 184, 100, 0.38);
+}
+.prism-caption[data-band="denominated"] .caption-text .keyword,
+[data-band="denominated"] .prism-keyword {
+  --keyword-glow-near: rgba(232, 120, 120, 0.80);
+  --keyword-glow-far:  rgba(232, 120, 120, 0.40);
+}
+body.light .prism-caption[data-band="fluid"]       .caption-text .keyword,
+body.light [data-band="fluid"] .prism-keyword       { --keyword-glow-near: rgba(72, 152, 112, 0.50); --keyword-glow-far: rgba(72, 152, 112, 0.22); }
+body.light .prism-caption[data-band="coalition"]   .caption-text .keyword,
+body.light [data-band="coalition"] .prism-keyword   { --keyword-glow-near: rgba(168, 132, 56, 0.55); --keyword-glow-far: rgba(168, 132, 56, 0.25); }
+body.light .prism-caption[data-band="denominated"] .caption-text .keyword,
+body.light [data-band="denominated"] .prism-keyword { --keyword-glow-near: rgba(184, 76, 76, 0.55);  --keyword-glow-far: rgba(184, 76, 76, 0.25); }
+
+/* ── LABEL LINES ───────────────────────────────────────────── */
+/* SVG hairlines connecting specimens to captions. Eyewitness diagram
+   logic. Each stage sets up its own SVG container with <line> children;
+   the JS positions endpoints; this stylesheet handles the visual. */
+
+.prism-label-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+.prism-label-lines line {
+  stroke-linecap: round;
+}
+
+/* ── THUMB (slider specimen) ───────────────────────────────── */
+/* Emissive sphere matching side color. Used by the diatribe slider
+   and any future intensity selector. */
+
+.prism-thumb {
+  position: absolute;
+  top: 50%;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  cursor: grab;
+  /* Real thumb sits above ghost so center clicks engage the real slider.
+     Without this z-index, document order makes ghost the click winner at
+     overlap zones and the slider becomes unusable. */
+  z-index: 4;
+  transition: background 0.6s ease, width 0.3s ease, height 0.3s ease;
+}
+.prism-thumb.ghost { z-index: 3; }
+
+/* Invisible hit-area extension. Modest (30px) on desktop so it doesn't
+   interfere with adjacent track clicks; expands to the full 44px touch
+   minimum on touch devices and narrow viewports. */
+.prism-thumb::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 30px; height: 30px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+@media (max-width: 768px), (pointer: coarse) {
+  .prism-thumb::after {
+    width: var(--touch-min);
+    height: var(--touch-min);
+  }
+}
+
+.prism-thumb.dragging { cursor: grabbing; }
+@media (max-width: 768px) {
+  .prism-thumb { width: 28px; height: 28px; }
+  .prism-thumb.ghost { width: 26px; height: 26px; }
+}
+.prism-thumb[data-side="left"] {
+  background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.35), var(--side-left) 60%, rgba(40,80,140,1) 100%);
+}
+.prism-thumb[data-side="right"] {
+  background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.35), var(--side-right) 60%, rgba(140,40,40,1) 100%);
+}
+.prism-thumb.ghost {
+  width: 20px; height: 20px;
+  border: 1px dashed rgba(245,240,232,0.35);
+}
+.prism-thumb.ghost[data-side="left"] {
+  background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.22), rgba(96,148,220,0.55) 60%, rgba(40,80,140,0.7) 100%);
+}
+.prism-thumb.ghost[data-side="right"] {
+  background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.22), rgba(220,96,96,0.55) 60%, rgba(140,40,40,0.7) 100%);
+}
+
+/* ── THRESHOLD MARKER ──────────────────────────────────────── */
+/* Hairline tick marks for any banded scale. */
+
+.prism-threshold {
+  position: absolute;
+  top: -4px;
+  width: 1px; height: 22px;
+  background: var(--ink-low);
+  opacity: 0.45;
+  pointer-events: none;
+}
+.prism-threshold.center { background: var(--ink-mid); opacity: 0.6; }
