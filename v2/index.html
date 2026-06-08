@@ -102,6 +102,9 @@ main {
     gap: 18px;
     height: auto;
     min-height: 460px;
+    /* reserve the fixed #toAnswers CTA's zone (bottom:60px + button height)
+       so it never sits on the ghost caption at narrow widths */
+    padding-bottom: 128px;
   }
   .prism-caption.real,
   .prism-caption.ghost {
@@ -535,6 +538,7 @@ body:not(.phase-diatribe) .to-answers { opacity: 0 !important; pointer-events: n
   .answers-phase { align-items: flex-start; }
   .answers-grid { grid-template-columns: 1fr; }   /* single column; order A,B,C,D */
   .to-answers { bottom: 76px; font-size: 9px; }
+  .stage { padding-bottom: 144px; }   /* CTA sits higher at ≤480 — keep clearing it */
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -579,7 +583,10 @@ body.phase-graph .graph-phase { opacity: 1; pointer-events: auto; }
 .graph-left { display: flex; flex-direction: column; gap: 16px; flex: none; perspective: 950px; perspective-origin: 50% 42%; }
 
 /* ── Z displacement slider (frustrated ↔ realized) ── */
-.z-slider { width: min(440px, 86vw); user-select: none; }
+/* position+z-index lift the slider above the pad's 3D context, so a pin
+   lifted hard toward the viewer (z·padHalf ≈ 250px+) slides BEHIND the
+   slider instead of sitting on top of its track and labels. */
+.z-slider { width: min(440px, 86vw); user-select: none; position: relative; z-index: 3; }
 .z-track {
   position: relative; height: 14px; margin: 0 11px; border-radius: 7px;
   background: linear-gradient(to right,
@@ -798,6 +805,12 @@ body.light .pad-grid {
 }
 .gm3d.live { display: block; }
 .gm3d.in { opacity: 1; }
+/* Soft handoff (the "soft transform"): during the commit crossfade the factory
+   OVERLAYS the pad exactly (same footprint, same slot), the pad fades out
+   beneath it, then retires from flow and the factory takes its place. */
+.graph-left { position: relative; }
+.gm3d.overlay { position: absolute; top: 0; left: 0; }
+.graph-pad.handing-off { opacity: 0 !important; pointer-events: none; transition: opacity 0.9s ease; }
 /* The oversized render surface: ~2.2× the slot in each direction, centered.
    Transparent, so its true edge is far offscreen of the eye — no window. */
 .gm3d-stage {
@@ -1741,6 +1754,8 @@ let graphIntensity = 0, graphZ = 0, focusQuad = null, migTimer = null, aggCommit
 let aggDots = [];
 let orbitYaw = 0, orbitPitch = 0, targetYaw = 0, targetPitch = 0, orbiting = false, orbitRAF = null, dragMoved = false, oSX = 0, oSY = 0, oY0 = 0, oP0 = 0;
 let contrastLine = null, userPinData = null;
+let contrastDot = null;          // the voice currently locked in the compare panel
+let zCamZone = 'above';          // which side of the plane the camera favors ('above' | 'below')
 
 function quadAt(x, y) { return x < 0.5 ? (y < 0.5 ? 'A' : 'C') : (y < 0.5 ? 'B' : 'D'); }
 
@@ -1822,12 +1837,57 @@ function renderZ() {
   // the Z slider stays live: in factory mode it re-pins at the new depth;
   // in fallback mode orbit owns rotation and only the pin depth moves.
   if (!aggCommitted) {
-    const angle = z * 52;
+    // Signed turn. Positive z: modest forward tilt — the realized pin rises
+    // toward the viewer. Negative z: the plane FLIPS past 90° so the viewer
+    // re-orients to its BACKSIDE — the frustrated pin ends up in front of
+    // the glass instead of buried behind it. The extra ~96° ramps in over
+    // the first ~0.35 of negative travel (smoothstepped), so the pane sweeps
+    // through edge-on like it's turning over, then settles ≈ −148° at z −1.
+    let angle;
+    if (z >= 0) {
+      angle = z * 52;
+    } else {
+      const t = Math.min(1, m / 0.35);
+      const flip = t * t * (3 - 2 * t);
+      angle = z * 52 - flip * 96;
+    }
     graphPad.style.setProperty('--tiltdeg', angle.toFixed(2) + 'deg');
     graphPad.style.transform = 'rotateY(' + angle.toFixed(2) + 'deg)';
     graphPad.classList.toggle('tilted', m > 0.02);
-  } else if (gmActive && gm) {
-    try { gm.setPin(pinX, pinY, GM_QUAD[graphQuad], graphZ, { ring: BAND_RING[committedBand], style: 'orb' }); } catch (e) {}
+    // keep the context panel's nums line honest as z moves (it previously
+    // refreshed only on quadrant/band change and went stale)
+    cmpUserNums.textContent = numsLine(Math.round((pinX - 0.5) * 200), Math.round((0.5 - pinY) * 200), z, graphIntensity);
+  } else {
+    if (gmActive && gm) {
+      try { gm.setPin(pinX, pinY, GM_QUAD[graphQuad], graphZ, { ring: BAND_RING[committedBand], style: 'orb' }); } catch (e) {}
+      // ── −z reveal: when the pin dives below the plane, the camera eases
+      // under it so the frustrated half-space rotates into view; it comes
+      // back up when the pin surfaces. Zone-based (not proportional) so it
+      // never fights the user's own orbit while they ride the slider.
+      const zone = z < -0.05 ? 'below' : 'above';
+      if (zone !== zCamZone) {
+        zCamZone = zone;
+        try { const o = gm.getOrbit(); gm.spinTo(o.yaw, zone === 'below' ? -45 : 10, 700); } catch (e) {}
+      }
+    }
+    // The committed record + compare panel follow the live z (Δz was going
+    // stale after post-commit slider moves). Cheap targeted updates — no
+    // full showContrast rebuild, so keyword sprites don't restart per frame.
+    if (userPinData) {
+      userPinData.z = graphZ;
+      cmpUserNums.textContent = numsLine(userPinData.x, userPinData.y, graphZ, userPinData.intensity);
+      if (contrastDot) {
+        const ax = Math.round((contrastDot.x - 0.5) * 200), ay = Math.round((0.5 - contrastDot.y) * 200);
+        cmpDelta.innerHTML = 'Δx ' + sgn(ax - userPinData.x) +
+          '<span class="d-sep"></span>Δy ' + sgn(ay - userPinData.y) +
+          '<span class="d-sep"></span>Δz ' + ((contrastDot.z - graphZ) >= 0 ? '+' : '') + (contrastDot.z - graphZ).toFixed(2);
+        if (gmActive && gm) {
+          try { gm.setContrastLine({ x: pinX, y: pinY, z: graphZ }, { x: contrastDot.x, y: contrastDot.y, z: contrastDot.z }, { color: QUAD_HEX[contrastDot.quad] }); } catch (e) {}
+        } else {
+          drawContrastLine(contrastDot);
+        }
+      }
+    }
   }
 }
 let zDragging = false;
@@ -1837,7 +1897,7 @@ function zSet(cx) {
   graphZ = +(PE.clamp((cx - r.left) / r.width, 0, 1) * 2 - 1).toFixed(3);
   renderZ();
 }
-function zDown(e) { zDragging = true; zThumb.classList.add('dragging'); const p = e.touches ? e.touches[0] : e; zSet(p.clientX); if (e.cancelable) e.preventDefault(); }
+function zDown(e) { zDragging = true; zThumb.classList.add('dragging'); const p = e.touches ? e.touches[0] : e; zSet(p.clientX); if (e.cancelable) e.preventDefault(); if (aggCommitted) noteGraphActivity(); }
 function zMove(e) { if (!zDragging) return; const p = e.touches ? e.touches[0] : e; zSet(p.clientX); if (e.cancelable) e.preventDefault(); }
 function zUp() { zDragging = false; zThumb.classList.remove('dragging'); }
 zTrack.addEventListener('mousedown', zDown);
@@ -1915,7 +1975,9 @@ function placeAt(x, y) {
   cornerPos(5 + (1 - t) * 20, 3 + (1 - t) * 17);   // labels slide centre→edge
   updateWordWeights();
   updateGraphReadout();
-  if (changed) updateInfo();           // refresh the context panel on quad/band change
+  if (changed) updateInfo();           // full panel rebuild on quad/band change
+  else cmpUserNums.textContent =       // …but the nums line stays live between rebuilds
+    numsLine(Math.round((pinX - 0.5) * 200), Math.round((0.5 - pinY) * 200), graphZ, graphIntensity);
 }
 
 function enterGraph() {
@@ -1927,11 +1989,14 @@ function enterGraph() {
   graphDialect.value = ''; updateGraphCharcount();
   graphNote.textContent = ''; graphCommitBtn.disabled = false;
   aggCommitted = false; aggDots = []; aggLayer.innerHTML = '';   // clear any prior aggregate (incl. contrast line)
-  contrastLine = null; userPinData = null;
+  contrastLine = null; userPinData = null; contrastDot = null; zCamZone = 'above';
+  clearTimeout(idleTimer); idleOrbiting = false;
+  if (gm) { try { gm.stopBeats(); gm.setAxisOffset(0.5, 0.5); } catch (e) {} }
   graphInfo.classList.remove('comparing');
   cmpAggText.innerHTML = ''; cmpAggNums.textContent = ''; cmpAggLabel.textContent = ''; cmpDelta.textContent = '';
-  graphPad.classList.remove('orbital', 'cam-float');
+  graphPad.classList.remove('orbital', 'cam-float', 'handing-off');
   graphPad.style.overflow = ''; graphPad.style.display = '';
+  gm3dEl.classList.remove('overlay');
   if (gm) { try { gm.clearDots(); gm.clearContrastLine(); gm.clearPin(); } catch (e) {} }
   gmActive = false;
   gm3dEl.classList.remove('live', 'in');
@@ -2111,6 +2176,7 @@ function drawContrastLine(dot) {
 }
 function showContrast(dot) {
   if (!userPinData) return;
+  contrastDot = dot;             // remembered so live z changes can re-derive Δz
   aggDots.forEach(d => { if (d.el) d.el.classList.toggle('selected', d === dot); });
   graphInfo.classList.add('comparing');
 
@@ -2231,16 +2297,44 @@ function mountGM() {
 
 function gmCommit() {
   gmActive = true;
-  graphPad.style.display = 'none';        // factory takes the pad's slot
-  gm3dEl.classList.add('live');
+  // ── Soft transform (pad → factory) ──
+  // The factory overlays the pad's exact footprint and crossfades in while
+  // the pad fades beneath it; the CSS pin dissolves INTO the Bondi orb at the
+  // same position. The factory opens at the pad's CURRENT attitude (same
+  // rotateY angle — including the −z backside flip), so nothing jumps.
+  gm3dEl.classList.add('live', 'overlay');
+  graphPad.classList.add('handing-off');
   requestAnimationFrame(() => gm3dEl.classList.add('in'));
+  setTimeout(() => {
+    if (!aggCommitted) return;            // reconsidered mid-fade — enterGraph already reset
+    graphPad.style.display = 'none';      // pad retires; factory takes its flow slot
+    gm3dEl.classList.remove('overlay');
+  }, 950);
   try { gm.clearDots(); gm.clearContrastLine(); } catch (e) {}
   try { gm.setBoundaryVisible(false); } catch (e) {}   // no pale Z-boundary wash — plane ≈ field
   try { gm.setFocus(0.5, 0.5); } catch (e) {}          // start centered
-  // Flat / straight-on presentation first — the 3D nature is revealed by the
-  // spin after the voices have precipitated.
-  try { gm.setOrbit(0, 0); } catch (e) {}
-  gm.setPin(pinX, pinY, GM_QUAD[graphQuad], graphZ, { ring: BAND_RING[committedBand], style: 'orb' });
+  // Open at the pad's current rotateY attitude (CSS rotateY and factory orbit
+  // yaw share an axis and sign), then the choreography spin takes over.
+  const zc = PE.clamp(graphZ, -1, 1), mc = Math.abs(zc);
+  let padAngle;
+  if (zc >= 0) padAngle = zc * 52;
+  else { const tt = Math.min(1, mc / 0.35); padAngle = zc * 52 - (tt * tt * (3 - 2 * tt)) * 96; }
+  try { gm.setOrbit(padAngle, 0); } catch (e) {}
+
+  // ── Commit choreography (Sailor's beat, June 6) ──
+  // 1. The pad's SKEWED AXES HOLD through the commit: the factory opens with
+  //    its spectrum crosshair at the pad's migrated --ax/--ay, and the pin
+  //    sits at its position in that skewed frame.
+  const axFrac = (parseFloat(graphPad.style.getPropertyValue('--ax')) || 50) / 100;
+  const ayFrac = (parseFloat(graphPad.style.getPropertyValue('--ay')) || 50) / 100;
+  try { gm.setAxisOffset(axFrac, ayFrac); } catch (e) {}
+  // The pin spawns at its PAD position (no display override) so the crossfade
+  // dissolves the flat CSS pin into the Bondi orb with zero jump. On the pad,
+  // the lens lives in the AXES — the pin's pad position is already its true
+  // coordinate — so during re-migration the world re-sorts around a held pin.
+  gm.setPin(pinX, pinY, GM_QUAD[graphQuad], graphZ, {
+    ring: BAND_RING[committedBand], style: 'orb',
+  });
   // corner labels = the committed band's axis terms, remapped to factory keys
   const corners = {};
   ['A', 'B', 'C', 'D'].forEach(q => {
@@ -2248,18 +2342,81 @@ function gmCommit() {
     if (v) corners[GM_QUAD[q]] = (v.xWord || '') + ' · ' + (v.yWord || '');
   });
   try { gm.setCornerLabels(corners); } catch (e) {}
-  // the voices precipitate — staggered into true 3D, each with its band ring
+
+  // 2. The voices MIGRATE INTO THE LOGARITHMIC SKEW — each lands in the
+  //    skewed frame, floated off the plane on a log curve of its own
+  //    displacement (the most displaced float furthest, compressing).
+  const logSkew = v => v === 0 ? 0 :
+    Math.sign(v) * Math.log1p(8 * Math.min(1, Math.abs(v) * 2.2)) / Math.log1p(8);
   aggDots = genAggregate(46);
   aggDots.forEach((d, i) => setTimeout(() => {
     if (gmActive && gm) {
-      try { gm.addDot(d.x, d.y, GM_QUAD[d.quad], d.z, { label: String(i), ring: BAND_RING[d.band] }); }
-      catch (e) { if (i === 0) console.error('[v2] addDot failed:', e); }
+      try {
+        gm.addDot(d.x, d.y, GM_QUAD[d.quad], d.z, {
+          label: String(i), ring: BAND_RING[d.band],
+          at: { x: skewMap(d.x, axFrac), y: skewMap(d.y, ayFrac), z: logSkew(d.z) },
+        });
+      } catch (e) { if (i === 0) console.error('[v2] addDot failed:', e); }
     }
   }, 250 + i * 45));
-  // ...then the graph turns to reveal its depth
-  const revealAt = 250 + aggDots.length * 45 + 400;
-  setTimeout(() => { if (gmActive && gm) { try { gm.spinTo(26, 10, 1800); } catch (e) {} } }, revealAt);
+
+  // 3. The camera turns while the voices arrive so the off-plane float reads
+  //    (a flat head-on view would hide it). Dips below the plane for a −z pin.
+  const arriveEnd = 250 + aggDots.length * 45;
+  setTimeout(() => {
+    if (gmActive && gm) {
+      zCamZone = graphZ < -0.05 ? 'below' : 'above';
+      try { gm.spinTo(26, zCamZone === 'below' ? -45 : 10, 1800); } catch (e) {}
+    }
+  }, Math.max(900, arriveEnd - 1200));
+
+  // 4. ...then the field — voices and the crosshair — RE-MIGRATES to the
+  //    un-skewed plane and settles around the held pin. Deliberately slow
+  //    (Sailor: 1500 read as rushed). No further automatic motion: the idle
+  //    orbit arms only after 15s without interaction.
+  setTimeout(() => {
+    if (gmActive && gm) { try { gm.migrateAll(2800, armIdleOrbit); } catch (e) { armIdleOrbit(); } }
+  }, arriveEnd + 650);
 }
+
+// ── Idle attract orbit ──
+// After 15s without interaction the committed graph drifts into a slow
+// continuous orbit (module beat engine). Any interaction — orbit drag,
+// z slider, hold-to-lock — cancels it and re-arms the 15s clock.
+let idleTimer = null, idleOrbiting = false;
+const IDLE_ORBIT_MS = 15000;
+function armIdleOrbit() {
+  clearTimeout(idleTimer);
+  if (!gmActive || !gm) return;
+  idleTimer = setTimeout(startIdleOrbit, IDLE_ORBIT_MS);
+}
+function startIdleOrbit() {
+  if (!gmActive || !gm) return;
+  idleOrbiting = true;
+  let y0 = 0;
+  try { y0 = gm.getOrbit().yaw; } catch (e) {}
+  try {
+    gm.playBeats([
+      { yaw: y0 + 90,  pitch: 14,  duration: 10000 },
+      { yaw: y0 + 180, pitch: -10, duration: 10000 },
+      { yaw: y0 + 270, pitch: 14,  duration: 10000 },
+      { yaw: y0 + 360, pitch: 10,  duration: 10000 },
+    ], {
+      onComplete: reason => {
+        idleOrbiting = false;
+        if (reason === 'complete') startIdleOrbit();   // still idle — keep drifting, re-based on current yaw
+        else armIdleOrbit();                            // user interrupted — re-arm the clock
+      },
+    });
+  } catch (e) { idleOrbiting = false; }
+}
+function noteGraphActivity() {
+  if (idleOrbiting && gm) { try { gm.stopBeats(); } catch (e) {} idleOrbiting = false; }
+  if (gmActive) armIdleOrbit();
+}
+gm3dEl.addEventListener('mousedown', noteGraphActivity, true);
+gm3dEl.addEventListener('touchstart', noteGraphActivity, true);
+gm3dEl.addEventListener('wheel', noteGraphActivity, true);
 
 function updateGraphCharcount() {
   if (graphDialect.value.length > 180) graphDialect.value = graphDialect.value.slice(0, 180);

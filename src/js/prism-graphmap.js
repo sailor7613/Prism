@@ -613,6 +613,9 @@ const PrismGraphmap = (function () {
 
     // ── Spectrum axes (additive, v2): iridescent gradient axis lines laid
     // over the plane axes — x: blue→cream→red, y: green→cream→gold. ──
+    // Refs kept so setAxisOffset() can slide the crosshair (v2 additive).
+    var spectrumAxisX = null, spectrumAxisY = null;
+    var axisOffset = { x: 0.5, y: 0.5 };   // normalized crosshair position (0.5 = center)
     if (config.spectrumAxes) {
       const mkAxis = (pts, cols) => {
         const geo = new THREE.BufferGeometry().setFromPoints(pts);
@@ -624,14 +627,29 @@ const PrismGraphmap = (function () {
           blending: THREE.AdditiveBlending,
         }));
       };
-      group.add(mkAxis(
+      spectrumAxisX = mkAxis(
         [new THREE.Vector3(-GH, 0, 0.006), new THREE.Vector3(0, 0, 0.006), new THREE.Vector3(GH, 0, 0.006)],
         [0x6094dc, 0xfff6e2, 0xdc6060]
-      ));
-      group.add(mkAxis(
+      );
+      spectrumAxisY = mkAxis(
         [new THREE.Vector3(0, -GH, 0.006), new THREE.Vector3(0, 0, 0.006), new THREE.Vector3(0, GH, 0.006)],
         [0x60a880, 0xfff6e2, 0xc49c48]
-      ));
+      );
+      group.add(spectrumAxisX);
+      group.add(spectrumAxisY);
+    }
+    // v2 additive: slide the spectrum crosshair to a normalized position —
+    // lets the committed graph open with the pad's migrated (skewed) axes
+    // and re-migrate to center via migrateAll(). No-op without spectrumAxes.
+    function applyAxisOffset() {
+      if (spectrumAxisX) spectrumAxisX.position.y = (0.5 - axisOffset.y) * GRAPH_SIZE;
+      if (spectrumAxisY) spectrumAxisY.position.x = (axisOffset.x - 0.5) * GRAPH_SIZE;
+    }
+    function setAxisOffset(nx, ny) {
+      axisOffset.x = (nx != null ? nx : 0.5);
+      axisOffset.y = (ny != null ? ny : 0.5);
+      applyAxisOffset();
+      return instance;
     }
     const pinGroup = buildPinGroup();
 
@@ -805,6 +823,9 @@ const PrismGraphmap = (function () {
       if (!mounted || !active) return;
       animId = requestAnimationFrame(animate);
       pinT += 0.016;
+
+      // ── v2 additive: field migration tween (dots/pin/axes → home) ──
+      if (migration) tickMigration(performance.now());
 
       // ── Beat engine (takes priority over momentum when active) ──
       if (beatState && !orbit.dragging) {
@@ -1399,9 +1420,21 @@ const PrismGraphmap = (function () {
         pinMeshes.pin.rotation.x = (normZ && normZ < 0) ? Math.PI / 2 : -Math.PI / 2;
       }
 
-      pinGroup.position.set(x, y, z || 0.02);
+      // v2 additive: opts.at = display override (normalized, z in normZ units).
+      // The pin SPAWNS there — e.g. its position in the pad's skewed frame —
+      // and migrateAll() later carries it home to its true coordinates.
+      // pinData.normZ tracks the DISPLAY z (the animate-loop bob reads it);
+      // homeNormZ remembers the true z for the migration target.
+      var px = x, py = y, pz = z;
+      var displayNormZ = normZ || 0;
+      if (opts && opts.at) {
+        if (opts.at.x != null) px = (opts.at.x - 0.5) * GRAPH_SIZE;
+        if (opts.at.y != null) py = (0.5 - opts.at.y) * GRAPH_SIZE;
+        if (opts.at.z != null) { displayNormZ = opts.at.z; pz = displayNormZ * Z_EXTENT * 0.8; }
+      }
+      pinGroup.position.set(px, py, pz || 0.02);
       pinGroup.visible = true;
-      pinData = { normX, normY, quadrant, normZ: normZ || 0, style: pinStyle };
+      pinData = { normX, normY, quadrant, normZ: displayNormZ, homeNormZ: normZ || 0, style: pinStyle };
 
       // Diatribe ring (v2, additive): aperture-band halo around the pin.
       // Recreated only when the ring color actually changes (setPin is hot).
@@ -1428,8 +1461,8 @@ const PrismGraphmap = (function () {
       if (config.capabilities.zRender && normZ && Math.abs(normZ) > 0.01) {
         const baseColor = PIN_COLORS[quadrant] || 0xb83a3a;
         const lineGeo = new THREE.BufferGeometry().setFromPoints([
-          new THREE.Vector3(x, y, 0),
-          new THREE.Vector3(x, y, z),
+          new THREE.Vector3(px, py, 0),
+          new THREE.Vector3(px, py, pz),
         ]);
         zConnector = new THREE.Line(lineGeo,
           new THREE.LineBasicMaterial({ color: baseColor, transparent: true, opacity: 0.3 })
@@ -1469,6 +1502,16 @@ const PrismGraphmap = (function () {
       const y = (0.5 - normY) * GRAPH_SIZE;
       const z = (normZ || 0) * Z_EXTENT * 0.8;
 
+      // v2 additive: opts.at = display override (normalized, z in normZ
+      // units). The dot SPAWNS there — e.g. in the skewed/log-floated frame —
+      // and migrateAll() later tweens it home to (x, y, z).
+      var atX = x, atY = y, atZ = z;
+      if (opts.at) {
+        if (opts.at.x != null) atX = (opts.at.x - 0.5) * GRAPH_SIZE;
+        if (opts.at.y != null) atY = (0.5 - opts.at.y) * GRAPH_SIZE;
+        if (opts.at.z != null) atZ = opts.at.z * Z_EXTENT * 0.8;
+      }
+
       // Sphere — deep base with emissive inner glow (Getty style)
       const brightCol = col.clone();
       brightCol.offsetHSL(0, 0.2, -0.05); // saturate but darken
@@ -1482,7 +1525,7 @@ const PrismGraphmap = (function () {
           metalness: 0.2,
         })
       );
-      mesh.position.set(x, y, z);
+      mesh.position.set(atX, atY, atZ);
       mesh.userData = { isGraphmapDot: true, label: opts.label || '', desc: opts.desc || '', quadrant, normX, normY, normZ: normZ || 0 };
       dotsGroup.add(mesh);
 
@@ -1499,8 +1542,8 @@ const PrismGraphmap = (function () {
       let connector = null;
       if (config.capabilities.zRender && normZ && Math.abs(normZ) > 0.01) {
         const lineGeo = new THREE.BufferGeometry().setFromPoints([
-          new THREE.Vector3(x, y, 0),
-          new THREE.Vector3(x, y, z),
+          new THREE.Vector3(atX, atY, 0),
+          new THREE.Vector3(atX, atY, atZ),
         ]);
         connector = new THREE.Line(lineGeo,
           new THREE.LineBasicMaterial({ color: baseColor, transparent: true, opacity: 0.15 })
@@ -1510,6 +1553,7 @@ const PrismGraphmap = (function () {
 
       const dotEntry = {
         mesh, connector, glow, glowMat,
+        homePos: new THREE.Vector3(x, y, z),   // true coordinates — migrateAll() target
         ringSprite: null,     // Diatribe band ring (v2, additive)
         keywordSprites: [],   // { sprite, material, texture } — children of mesh
         pulseSpeed: 0,    // 0 = no pulse, set by computeProximity()
@@ -1879,6 +1923,78 @@ const PrismGraphmap = (function () {
         if (cb) cb('stopped');
       }
       return instance;
+    }
+
+    // ── v2 additive: field migration — carry the whole committed field home ──
+    // Every dot (and the pin) tweens from its display/spawn position (opts.at)
+    // to its true coordinates while the spectrum crosshair eases back to
+    // center. This is the second half of the commit choreography: the skewed
+    // frame holds through the commit, then the graph re-migrates to the
+    // un-skewed plane. Smoothstepped; connectors track their dots per frame.
+    var migration = null;
+    function migrateAll(durationMs, onComplete) {
+      var items = [];
+      for (var mi = 0; mi < dots.length; mi++) {
+        var md = dots[mi];
+        if (md.homePos && !md.mesh.position.equals(md.homePos)) {
+          items.push({ type: 'dot', d: md, from: md.mesh.position.clone(), to: md.homePos.clone() });
+        }
+      }
+      if (pinData && pinGroup.visible) {
+        var hx = (pinData.normX - 0.5) * GRAPH_SIZE;
+        var hy = (0.5 - pinData.normY) * GRAPH_SIZE;
+        var toNormZ = (pinData.homeNormZ != null) ? pinData.homeNormZ : pinData.normZ;
+        items.push({
+          type: 'pin',
+          from: pinGroup.position.clone(),
+          toX: hx, toY: hy,
+          fromNormZ: pinData.normZ, toNormZ: toNormZ,
+        });
+      }
+      migration = {
+        start: performance.now(), dur: durationMs || 1400,
+        items: items,
+        axisFrom: { x: axisOffset.x, y: axisOffset.y },
+        onComplete: onComplete || null,
+      };
+      return instance;
+    }
+
+    function tickMigration(now) {
+      var t = Math.min(1, (now - migration.start) / migration.dur);
+      var e = t * t * (3 - 2 * t);   // smoothstep
+      for (var ti = 0; ti < migration.items.length; ti++) {
+        var it = migration.items[ti];
+        if (it.type === 'dot') {
+          it.d.mesh.position.lerpVectors(it.from, it.to, e);
+          if (it.d.connector) {
+            var p = it.d.mesh.position;
+            it.d.connector.geometry.setFromPoints([
+              new THREE.Vector3(p.x, p.y, 0),
+              new THREE.Vector3(p.x, p.y, p.z),
+            ]);
+          }
+        } else {  // pin: x/y here; z via pinData.normZ (the bob branch owns position.z)
+          pinGroup.position.x = it.from.x + (it.toX - it.from.x) * e;
+          pinGroup.position.y = it.from.y + (it.toY - it.from.y) * e;
+          pinData.normZ = it.fromNormZ + (it.toNormZ - it.fromNormZ) * e;
+          if (zConnector) {
+            zConnector.geometry.setFromPoints([
+              new THREE.Vector3(pinGroup.position.x, pinGroup.position.y, 0),
+              new THREE.Vector3(pinGroup.position.x, pinGroup.position.y, pinData.normZ * Z_EXTENT * 0.8),
+            ]);
+          }
+        }
+      }
+      // the crosshair eases home to center alongside the field
+      axisOffset.x = migration.axisFrom.x + (0.5 - migration.axisFrom.x) * e;
+      axisOffset.y = migration.axisFrom.y + (0.5 - migration.axisFrom.y) * e;
+      applyAxisOffset();
+      if (t >= 1) {
+        var mcb = migration.onComplete;
+        migration = null;
+        if (mcb) mcb();
+      }
     }
 
     function isPlaying() {
@@ -2600,6 +2716,10 @@ const PrismGraphmap = (function () {
       playBeats,
       stopBeats,
       isPlaying,
+
+      // v2 additive: skewed-frame commit choreography
+      setAxisOffset,
+      migrateAll,
 
       // Labels
       setAxisLabels,
