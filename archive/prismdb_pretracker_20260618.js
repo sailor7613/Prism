@@ -11,8 +11,7 @@ const PrismDB = (() => {
     snapshots: 'prism_parallax_snapshots',
     arcs:      'prism_arcs',
     members:   'prism_members',
-    memberPos: 'prism_member_positions',
-    followed:  'prism_followed'
+    memberPos: 'prism_member_positions'
   };
 
   function _get(key) {
@@ -161,53 +160,6 @@ const PrismDB = (() => {
   // ── User ────────────────────────────────────────────────
   function getUser() { return _get(KEYS.user); }
   function setUser(profile) { _set(KEYS.user, profile); }
-
-  // ── Followed legislators ──────────────────────────────────
-  // A flat list of bioguideIds the user has chosen to track. Order is
-  // preservation order (most-recent follow last). The "your delegation"
-  // section in the UI is derived separately from the delegation profile
-  // below, so this list is the user's *explicit* follows only.
-  function getFollowed() {
-    const v = _get(KEYS.followed);
-    return Array.isArray(v) ? v : [];
-  }
-  function isFollowing(bioguideId) {
-    return getFollowed().indexOf(bioguideId) !== -1;
-  }
-  function follow(bioguideId) {
-    if (!bioguideId) return getFollowed();
-    const list = getFollowed();
-    if (list.indexOf(bioguideId) === -1) { list.push(bioguideId); _set(KEYS.followed, list); }
-    return list;
-  }
-  function unfollow(bioguideId) {
-    const list = getFollowed().filter(id => id !== bioguideId);
-    _set(KEYS.followed, list);
-    return list;
-  }
-  function toggleFollow(bioguideId) {
-    return isFollowing(bioguideId) ? (unfollow(bioguideId), false) : (follow(bioguideId), true);
-  }
-
-  // ── User delegation (home state + House district) ─────────
-  // Stored on the user profile so it travels with identity. `state` is a USPS
-  // abbreviation (e.g. 'MD'); `district` is the House district number (or null
-  // for at-large / unknown). Used to surface the user's own senators + rep at
-  // the top of the tracker. Senators have district === null in the roster.
-  function getDelegation() {
-    const u = getUser() || {};
-    return u.delegation || { state: null, district: null, zip: null };
-  }
-  function setDelegation(d) {
-    const u = getUser() || {};
-    u.delegation = {
-      state: (d && d.state) ? String(d.state).toUpperCase().slice(0, 2) : null,
-      district: (d && d.district != null && d.district !== '') ? Number(d.district) : null,
-      zip: (d && d.zip != null && d.zip !== '') ? String(d.zip).replace(/[^0-9]/g, '').slice(0, 5) : null
-    };
-    setUser(u);
-    return u.delegation;
-  }
 
   // ── Parallax Snapshots ────────────────────────────────
   function getSnapshots() { return _get(KEYS.snapshots) || []; }
@@ -1367,8 +1319,6 @@ const PrismDB = (() => {
     getMemberAggregateForEvent,
     getState, setState,
     getUser, setUser,
-    getFollowed, isFollowing, follow, unfollow, toggleFollow,
-    getDelegation, setDelegation,
     clear, seed
   };
 })();

@@ -327,11 +327,10 @@ const PrismGraphmap = (function () {
       mesh.renderOrder = 2;
       bpGroup.add(mesh);
 
-      // Text label sprite — positioned at upper edge of boundary plane
-      var lbl = makeLabelSprite(labelText, 'rgba(245,240,232,0.35)', 18);
-      lbl.sprite.scale.set(1.6, 0.20, 1);
-      var labelYOffset = planeSize * 0.42;
-      lbl.sprite.position.set(0, labelYOffset, zPos + (zPos > 0 ? 0.05 : -0.05));
+      // Text label sprite — large, centred on the boundary plane
+      var lbl = makeLabelSprite(labelText, 'rgba(245,240,232,0.52)', 44);
+      lbl.sprite.scale.set(3.4, 0.42, 1);   // keep the canvas 8:1 aspect
+      lbl.sprite.position.set(0, 0, zPos + (zPos > 0 ? 0.05 : -0.05));
       lbl.sprite.renderOrder = 10;
       bpGroup.add(lbl.sprite);
 
@@ -367,8 +366,8 @@ const PrismGraphmap = (function () {
       };
     }
 
-    var positive = makeBoundary(zWorld, 'Winner');
-    var negative = makeBoundary(-zWorld, 'Loser');
+    var positive = makeBoundary(zWorld, 'realized');
+    var negative = makeBoundary(-zWorld, 'frustrated');
 
     group.add(bpGroup);
 
@@ -567,6 +566,73 @@ const PrismGraphmap = (function () {
   // INSTANCE FACTORY
   // ============================================================
 
+  // ── Ted Turner the Coyote — procedural, ported from the Dream Getty gallery.
+  // Module-scope so both the in-graph patrol and the guide portrait can use him. ──
+  function buildTedCoyote() {
+    const g = new THREE.Group();
+    function makeFurTex(topColor, bottomColor, grain) {
+      const c = document.createElement('canvas'); c.width = 64; c.height = 64;
+      const ctx = c.getContext('2d');
+      const grad = ctx.createLinearGradient(0, 0, 0, 64);
+      grad.addColorStop(0, topColor); grad.addColorStop(0.5, bottomColor); grad.addColorStop(1, topColor);
+      ctx.fillStyle = grad; ctx.fillRect(0, 0, 64, 64);
+      if (grain) {
+        const rng = (s) => { let v = s; return () => { v = (v * 9301 + 49297) % 233280; return v / 233280; }; };
+        const rand = rng(7);
+        for (let i = 0; i < 300; i++) { const nx = rand() * 64, ny = rand() * 64; const bright = rand() > 0.5; ctx.fillStyle = bright ? 'rgba(180,165,130,0.12)' : 'rgba(50,40,25,0.15)'; ctx.fillRect(nx, ny, 1 + rand() * 2, 1 + rand() * 2); }
+      }
+      const tex = new THREE.CanvasTexture(c); tex.wrapS = tex.wrapT = THREE.RepeatWrapping; return tex;
+    }
+    const bodyMat = new THREE.MeshStandardMaterial({ map: makeFurTex('#4a3a28', '#8a7a60', true), roughness: 0.88, metalness: 0 });
+    const darkFur = new THREE.MeshStandardMaterial({ color: 0x3a2a18, roughness: 0.92 });
+    const tawnyFur = new THREE.MeshStandardMaterial({ color: 0xa08050, roughness: 0.85 });
+    const lightFur = new THREE.MeshStandardMaterial({ color: 0xd0c0a0, roughness: 0.82 });
+    const body = new THREE.Mesh(new THREE.SphereGeometry(0.35, 12, 10), bodyMat); body.scale.set(0.65, 0.60, 1.5); body.position.set(0, 0.9, 0); g.add(body);
+    const chest = new THREE.Mesh(new THREE.SphereGeometry(0.20, 10, 8), lightFur); chest.scale.set(0.55, 0.65, 0.85); chest.position.set(0, 0.84, 0.38); g.add(chest);
+    const belly = new THREE.Mesh(new THREE.SphereGeometry(0.16, 8, 6), lightFur); belly.scale.set(0.45, 0.25, 1.1); belly.position.set(0, 0.70, 0.05); g.add(belly);
+    [-1, 1].forEach(side => { const sh = new THREE.Mesh(new THREE.SphereGeometry(0.10, 8, 6), bodyMat); sh.scale.set(0.7, 0.65, 1.0); sh.position.set(side * 0.14, 0.96, 0.22); g.add(sh); });
+    [-1, 1].forEach(side => { const h = new THREE.Mesh(new THREE.SphereGeometry(0.13, 8, 6), bodyMat); h.scale.set(0.65, 0.75, 0.9); h.position.set(side * 0.13, 0.86, -0.30); g.add(h); });
+    const neckGeo = new THREE.TubeGeometry(new THREE.CatmullRomCurve3([new THREE.Vector3(0, 0.98, 0.30), new THREE.Vector3(0, 1.06, 0.36), new THREE.Vector3(0, 1.14, 0.40)]), 6, 0.12, 8, false); g.add(new THREE.Mesh(neckGeo, tawnyFur));
+    const head = new THREE.Mesh(new THREE.SphereGeometry(0.17, 10, 8), tawnyFur); head.scale.set(0.82, 0.88, 1.05); head.position.set(0, 1.20, 0.46); g.add(head); g.userData.head = head;
+    [-1, 1].forEach(side => { const brow = new THREE.Mesh(new THREE.SphereGeometry(0.035, 6, 4), darkFur); brow.scale.set(2.0, 0.7, 0.9); brow.position.set(side * 0.065, 1.285, 0.56); g.add(brow); });
+    const forehead = new THREE.Mesh(new THREE.SphereGeometry(0.06, 6, 4), tawnyFur); forehead.scale.set(1.8, 0.6, 1.0); forehead.position.set(0, 1.30, 0.50); g.add(forehead);
+    const snout = new THREE.Mesh(new THREE.ConeGeometry(0.075, 0.30, 6), darkFur); snout.rotation.x = Math.PI / 2; snout.position.set(0, 1.16, 0.72); g.add(snout);
+    const bridge = new THREE.Mesh(new THREE.SphereGeometry(0.03, 6, 4), tawnyFur); bridge.scale.set(0.9, 0.5, 2.2); bridge.position.set(0, 1.20, 0.62); g.add(bridge);
+    const jaw = new THREE.Mesh(new THREE.SphereGeometry(0.04, 6, 4), lightFur); jaw.scale.set(0.6, 0.35, 1.3); jaw.position.set(0, 1.11, 0.62); g.add(jaw);
+    [-1, 1].forEach(side => { const patch = new THREE.Mesh(new THREE.SphereGeometry(0.035, 6, 4), lightFur); patch.scale.set(0.8, 0.7, 0.9); patch.position.set(side * 0.10, 1.17, 0.55); g.add(patch); });
+    const nose = new THREE.Mesh(new THREE.SphereGeometry(0.028, 6, 5), new THREE.MeshStandardMaterial({ color: 0x111111, roughness: 0.1, metalness: 0.15 })); nose.position.set(0, 1.17, 0.85); g.add(nose);
+    [-1, 1].forEach(side => { const ear = new THREE.Mesh(new THREE.ConeGeometry(0.06, 0.22, 6), darkFur); ear.position.set(side * 0.10, 1.46, 0.40); ear.rotation.z = side * -0.20; ear.rotation.x = -0.10; g.add(ear); const inner = new THREE.Mesh(new THREE.ConeGeometry(0.038, 0.16, 5), tawnyFur); inner.position.set(side * 0.10, 1.45, 0.42); inner.rotation.z = side * -0.20; inner.rotation.x = -0.10; g.add(inner); });
+    const eyeMat = new THREE.MeshStandardMaterial({ color: 0xd4a020, emissive: 0xd4a020, emissiveIntensity: 0.25, roughness: 0.15 });
+    [-1, 1].forEach(side => {
+      const socket = new THREE.Mesh(new THREE.SphereGeometry(0.030, 6, 4), darkFur); socket.position.set(side * 0.08, 1.24, 0.58); g.add(socket);
+      const eye = new THREE.Mesh(new THREE.SphereGeometry(0.026, 8, 6), eyeMat); eye.position.set(side * 0.08, 1.245, 0.605); g.add(eye);
+      const pupilGeo = new THREE.SphereGeometry(0.013, 6, 4); pupilGeo.scale(0.7, 1.0, 1.0);
+      const pupil = new THREE.Mesh(pupilGeo, new THREE.MeshStandardMaterial({ color: 0x050505 })); pupil.position.set(side * 0.08, 1.245, 0.625); g.add(pupil);
+      const catchLight = new THREE.Mesh(new THREE.SphereGeometry(0.006, 3, 2), new THREE.MeshBasicMaterial({ color: 0xffffff })); catchLight.position.set(side * 0.074, 1.255, 0.63); g.add(catchLight);
+    });
+    // Legs: hip group pivots at the HIP (top), a knee sub-group pivots at the
+    // joint — so the foot swings under a fixed hip and the knee can bend. Rest
+    // pose is identical to before; the pivots only matter when animated.
+    const HIP_Y = 0.70, KNEE_Y = 0.36;
+    const legs = [];
+    [{ x: 0.13, z: 0.28 }, { x: -0.13, z: 0.28 }, { x: 0.13, z: -0.30 }, { x: -0.13, z: -0.30 }].forEach(lp => {
+      const hip = new THREE.Group(); hip.position.set(lp.x, HIP_Y, lp.z);
+      const upper = new THREE.Mesh(new THREE.CylinderGeometry(0.042, 0.032, 0.48, 8), tawnyFur); upper.position.y = 0.46 - HIP_Y; hip.add(upper);
+      const joint = new THREE.Mesh(new THREE.SphereGeometry(0.025, 5, 3), tawnyFur); joint.position.y = KNEE_Y - HIP_Y; hip.add(joint);
+      const knee = new THREE.Group(); knee.position.y = KNEE_Y - HIP_Y;
+      const lower = new THREE.Mesh(new THREE.CylinderGeometry(0.028, 0.022, 0.38, 8), tawnyFur); lower.position.y = 0.18 - KNEE_Y; knee.add(lower);
+      const paw = new THREE.Mesh(new THREE.SphereGeometry(0.035, 6, 4), darkFur); paw.scale.set(0.75, 0.45, 1.15); paw.position.y = 0.02 - KNEE_Y; knee.add(paw);
+      hip.add(knee);
+      g.add(hip); legs.push({ hip: hip, knee: knee });
+    });
+    g.userData.legs = legs;
+    const tailCurve = new THREE.CatmullRomCurve3([new THREE.Vector3(0, 0.82, -0.42), new THREE.Vector3(0, 0.72, -0.62), new THREE.Vector3(0, 0.58, -0.78), new THREE.Vector3(0.02, 0.50, -0.92)]);
+    g.add(new THREE.Mesh(new THREE.TubeGeometry(tailCurve, 10, 0.06, 6, false), bodyMat));
+    g.add(new THREE.Mesh(new THREE.TubeGeometry(tailCurve, 8, 0.085, 5, false), new THREE.MeshStandardMaterial({ color: 0x5a4a32, roughness: 0.92, transparent: true, opacity: 0.45 })));
+    const tailTip = new THREE.Mesh(new THREE.SphereGeometry(0.065, 6, 5), darkFur); tailTip.scale.set(0.65, 0.65, 1.3); tailTip.position.set(0.02, 0.50, -0.92); g.add(tailTip);
+    return g;
+  }
+
   function createInstance(userConfig) {
     // ── Merge config ──
     const config = {
@@ -660,6 +726,115 @@ const PrismGraphmap = (function () {
     }
     group.add(pinGroup);
 
+    // ── Orbit artifacts (opt-in via config.artifacts) ──
+    // A few ghostly classical vessels drifting in the volume around the plane —
+    // depth cues that make the spatial dimension legible, and a nod to the Dream
+    // Getty. They live in `group` so they swing with the orbit (parallax), with a
+    // slow self-rotation + bob added in the animate loop.
+    const orbitArtifacts = [];
+    function vaseProfile(kind) {
+      const P = THREE.Vector2;
+      const a = kind === 'krater'
+        ? [[0.00,0.00],[0.13,0.00],[0.15,0.04],[0.10,0.10],[0.22,0.26],[0.30,0.46],[0.31,0.58],[0.26,0.68],[0.24,0.74],[0.30,0.80],[0.33,0.86]]
+        : kind === 'lekythos'
+        ? [[0.00,0.00],[0.09,0.00],[0.10,0.05],[0.13,0.18],[0.15,0.40],[0.15,0.60],[0.11,0.72],[0.06,0.80],[0.06,0.90],[0.09,0.96],[0.07,1.00]]
+        : [[0.00,0.00],[0.05,0.00],[0.06,0.04],[0.09,0.10],[0.18,0.30],[0.25,0.50],[0.27,0.61],[0.20,0.73],[0.12,0.82],[0.10,0.88],[0.14,0.95],[0.16,1.00]];
+      return a.map(p => new P(p[0], p[1]));
+    }
+    // Faceted marble — flatShading + low poly counts give the Y2K-software read.
+    function artifactMarble(op) {
+      return new THREE.MeshStandardMaterial({
+        color: new THREE.Color(0xe8e0cf), emissive: new THREE.Color(0x4a5066),
+        emissiveIntensity: 0.20, roughness: 0.9, metalness: 0.04,
+        transparent: true, opacity: op, depthWrite: false, flatShading: true,
+      });
+    }
+    // A stylized classical figure — armless draped body with hinted folds, a
+    // narrowed waist + chest, shoulders, neck, a slightly bowed head, all on a
+    // stepped pedestal. Low radial counts keep it faceted (Y2K), and the upper
+    // body carries a small contrapposto lean.
+    function buildStatueMesh() {
+      const g = new THREE.Group();
+      const P = THREE.Vector2;
+      const figure = new THREE.Group();
+      // robe → waist → chest → shoulders (folds via in/out radius steps)
+      const prof = [
+        [0.00,0.00],[0.30,0.00],[0.33,0.03],[0.28,0.07],
+        [0.32,0.15],[0.27,0.23],[0.30,0.32],[0.25,0.41],
+        [0.22,0.49],[0.19,0.55],[0.18,0.60],
+        [0.23,0.66],[0.25,0.71],[0.21,0.77],
+        [0.14,0.82],[0.17,0.85],[0.11,0.89]
+      ].map(p => new P(p[0], p[1]));
+      const body = new THREE.Mesh(new THREE.LatheGeometry(prof, 11), artifactMarble(0.34));
+      figure.add(body);
+      const neck = new THREE.Mesh(new THREE.CylinderGeometry(0.045, 0.07, 0.07, 8), artifactMarble(0.36));
+      neck.position.y = 0.92; figure.add(neck);
+      const head = new THREE.Mesh(new THREE.SphereGeometry(0.10, 10, 8), artifactMarble(0.38));
+      head.position.set(0, 1.02, 0.015); head.scale.set(0.82, 1.06, 0.9); head.rotation.x = -0.14; figure.add(head);
+      figure.rotation.z = 0.05;   // contrapposto lean
+      // stepped pedestal
+      const step1 = new THREE.Mesh(new THREE.CylinderGeometry(0.40, 0.45, 0.07, 12), artifactMarble(0.30));
+      step1.position.y = -0.05;
+      const step2 = new THREE.Mesh(new THREE.CylinderGeometry(0.33, 0.38, 0.05, 12), artifactMarble(0.30));
+      step2.position.y = 0.01;
+      [figure, step1, step2].forEach(c => { c.position.y -= 0.5; g.add(c); });
+      g.traverse(o => { if (o.isMesh) o.renderOrder = -1; });
+      return g;
+    }
+    function buildOrbitArtifacts() {
+      const kinds = ['amphora', 'krater', 'lekythos', 'amphora', 'krater'];
+      // Outside the plane (plane spans ±1.4) but INSIDE the camera frame, so they
+      // never cross the canvas edge and get clipped into a rectangular "window".
+      const specs = [
+        { a: 0.6, r: 3.3, z:  1.4, s: 0.85, tilt:  0.18 },
+        { a: 2.1, r: 4.1, z: -1.6, s: 1.05, tilt: -0.12 },
+        { a: 3.5, r: 2.9, z:  0.8, s: 0.70, tilt:  0.30 },
+        { a: 4.7, r: 4.4, z: -1.0, s: 1.00, tilt: -0.22 },
+        { a: 5.7, r: 3.6, z:  1.9, s: 0.85, tilt:  0.10 },
+      ];
+      specs.forEach((sp, i) => {
+        const geo = new THREE.LatheGeometry(vaseProfile(kinds[i % kinds.length]), 26);
+        geo.center();
+        const mat = new THREE.MeshStandardMaterial({
+          color: new THREE.Color(0xe8e0cf), emissive: new THREE.Color(0x4a5066),
+          emissiveIntensity: 0.22, roughness: 0.85, metalness: 0.05,
+          transparent: true, opacity: 0.30, depthWrite: false,
+        });
+        const mesh = new THREE.Mesh(geo, mat);
+        const y = Math.sin(sp.a) * sp.r * 0.5;
+        mesh.position.set(Math.cos(sp.a) * sp.r, y, sp.z);
+        mesh.scale.setScalar(sp.s);
+        mesh.rotation.z = sp.tilt;
+        mesh.renderOrder = -1;
+        group.add(mesh);
+        orbitArtifacts.push({ mesh: mesh, spin: (i % 2 ? 1 : -1) * (0.04 + i * 0.012), bobAmp: 0.04 + (i % 3) * 0.02, bobPhase: i * 1.3, baseY: y });
+      });
+      // A couple of classical figures — the gallery's statuary, kept in-frame.
+      const statueSpecs = [
+        { a: 1.3, r: 4.3, z: -0.8, s: 1.0, tilt:  0.05 },
+        { a: 4.2, r: 3.9, z:  1.3, s: 1.1, tilt: -0.06 },
+      ];
+      statueSpecs.forEach((sp, i) => {
+        const st = buildStatueMesh();
+        const y = Math.sin(sp.a) * sp.r * 0.5;
+        st.position.set(Math.cos(sp.a) * sp.r, y, sp.z);
+        st.scale.setScalar(sp.s);
+        st.rotation.z = sp.tilt;
+        group.add(st);
+        orbitArtifacts.push({ mesh: st, spin: (i % 2 ? 1 : -1) * 0.03, bobAmp: 0.05, bobPhase: i * 2.0 + 0.7, baseY: y });
+      });
+    }
+    if (config.artifacts) { try { buildOrbitArtifacts(); } catch (e) { console.warn('[PrismGraphmap] artifacts failed:', e && e.message); } }
+
+    // ── Ted Turner the Coyote (opt-in via config.ted) — ported from the Dream
+    // Getty gallery's buildCoyote(). Walks a slow circle around the plane's base. ──
+    let tedCoyote = null, tedClock = 0;
+    // buildTedCoyote() is defined at module scope (exposed as PrismGraphmap.buildCoyote).
+    if (config.ted) {
+      try { tedCoyote = buildTedCoyote(); tedCoyote.scale.setScalar(0.5); (scene || group).add(tedCoyote); }
+      catch (e) { console.warn('[PrismGraphmap] Ted failed:', e && e.message); }
+    }
+
     // ── Labels (billboard sprites, gallery-matched) ──
     const labels = buildLabels(group);
 
@@ -717,6 +892,8 @@ const PrismGraphmap = (function () {
       pinchDist: 0,              // last pinch distance for touch zoom
       focusX: 0,                 // graph-local X offset for orbit pivot (0 = center)
       focusY: 0,                 // graph-local Y offset for orbit pivot (0 = center)
+      panning: false,            // right-drag / shift-drag → translate instead of rotate
+      panSensitivity: 0.0016,    // graph-units per pixel (scaled by zoom distance)
     };
 
     // Morph rotation offset — composed with orbit in animation loop
@@ -855,6 +1032,33 @@ const PrismGraphmap = (function () {
 
       // ── Apply zoom ──
       camera.position.z = orbit.zoom;
+
+      // ── Orbit artifacts: slow self-rotation + gentle bob ──
+      for (let i = 0; i < orbitArtifacts.length; i++) {
+        const a = orbitArtifacts[i];
+        a.mesh.rotation.y += a.spin * 0.01;
+        a.mesh.position.y = a.baseY + Math.sin(pinT * 0.5 + a.bobPhase) * a.bobAmp;
+      }
+
+      // ── Ted the Coyote: trots a slow circle around the plane's base ──
+      if (tedCoyote) {
+        tedClock += 0.016;
+        const r = 2.9, ang = tedClock * 0.16, stride = tedClock * 8;
+        const bob = Math.abs(Math.sin(stride)) * 0.045;       // body rises/falls twice per stride
+        tedCoyote.position.set(Math.cos(ang) * r, -1.7 + bob, Math.sin(ang) * r);
+        tedCoyote.rotation.y = -ang;                          // face direction of travel (+z is his nose)
+        const legs = tedCoyote.userData.legs || [];
+        // Legs build order is [front+x, front−x, back+x, back−x]. Equal phases
+        // pair the diagonals — front-one-side with back-the-other (the trot).
+        const off = [0, Math.PI, Math.PI, 0];
+        for (let i = 0; i < legs.length; i++) {
+          const phi = stride + off[i];
+          if (legs[i].hip) legs[i].hip.rotation.x = Math.cos(phi) * 0.42;                    // fore/aft swing: forward at phi 0, back at phi π
+          if (legs[i].knee) legs[i].knee.rotation.x = -Math.max(0, -Math.sin(phi)) * 0.85;   // knee lifts on the RECOVERY half (foot swinging forward), plants on the push
+        }
+        const head = tedCoyote.userData.head;
+        if (head) head.rotation.x = Math.sin(stride) * 0.04;  // soft head bob
+      }
 
       // ── Pin hover animation ──
       if (pinGroup.visible && pinMeshes) {
@@ -1157,24 +1361,30 @@ const PrismGraphmap = (function () {
       holdStartX = cx;
       holdStartY = cy;
 
-      // Start hold-to-inspect timer (works for both pins and dots)
-      cancelHold();
-      holdTimer = setTimeout(() => {
-        holdTimer = null;
-        const hit = hitTest(holdStartX, holdStartY);
-        if (hit && onInspectCallback) {
-          onInspectCallback(hit.data);
-        }
-      }, HOLD_MS);
+      // Pan gesture: right-button OR shift+drag translates the plane through
+      // space (move) instead of rotating it. Plain left-drag still orbits.
+      const isPan = (e.button === 2) || e.shiftKey;
 
-      // Orbit drag
+      // Start hold-to-inspect timer (only on a plain press, never while panning)
+      cancelHold();
+      if (!isPan) {
+        holdTimer = setTimeout(() => {
+          holdTimer = null;
+          const hit = hitTest(holdStartX, holdStartY);
+          if (hit && onInspectCallback) {
+            onInspectCallback(hit.data);
+          }
+        }, HOLD_MS);
+      }
+
       if (!config.capabilities.orbit) return;
-      orbit.dragging = true;
+      orbit.dragging = !isPan;
+      orbit.panning = isPan;
       orbit.lastX = cx;
       orbit.lastY = cy;
       orbit.velocityX = 0;
       orbit.velocityY = 0;
-      canvas.style.cursor = 'grabbing';
+      canvas.style.cursor = isPan ? 'move' : 'grabbing';
     }
 
     function onPointerMove(e) {
@@ -1184,6 +1394,19 @@ const PrismGraphmap = (function () {
       if (holdTimer) {
         const dist = Math.hypot(cx - holdStartX, cy - holdStartY);
         if (dist > HOLD_MOVE_TOLERANCE) cancelHold();
+      }
+
+      // Pan — translate the focus so the plane follows the cursor. Scaled by
+      // zoom distance so the drag feels 1:1 at any depth, and clamped so the
+      // plane can't be lost off-screen.
+      if (orbit.panning) {
+        const dx = cx - orbit.lastX, dy = cy - orbit.lastY;
+        orbit.lastX = cx; orbit.lastY = cy;
+        const s = orbit.zoom * orbit.panSensitivity;
+        const lim = GRAPH_SIZE * 0.9;
+        orbit.focusX = Math.max(-lim, Math.min(lim, orbit.focusX - dx * s));
+        orbit.focusY = Math.max(-lim, Math.min(lim, orbit.focusY + dy * s));
+        return;
       }
 
       if (!orbit.dragging) return;
@@ -1203,6 +1426,7 @@ const PrismGraphmap = (function () {
     function onPointerUp() {
       cancelHold();
       orbit.dragging = false;
+      orbit.panning = false;
       canvas.style.cursor = config.capabilities.orbit ? 'grab' : 'default';
     }
 
@@ -1213,6 +1437,8 @@ const PrismGraphmap = (function () {
       orbit.zoom += e.deltaY * orbit.zoomSensitivity;
       orbit.zoom = Math.max(orbit.zoomMin, Math.min(orbit.zoomMax, orbit.zoom));
     }
+
+    function onContextMenu(e) { e.preventDefault(); }
 
     function onTouchStart(e) {
       e.preventDefault();
@@ -1256,6 +1482,8 @@ const PrismGraphmap = (function () {
       canvas.addEventListener('mousedown', onPointerDown);
       window.addEventListener('mousemove', onPointerMove);
       window.addEventListener('mouseup', onPointerUp);
+      // Right-drag pans, so suppress the browser context menu over the canvas.
+      canvas.addEventListener('contextmenu', onContextMenu);
       // Wheel zoom
       canvas.addEventListener('wheel', onWheel, { passive: false });
       // Touch (orbit + pinch zoom)
@@ -1269,6 +1497,7 @@ const PrismGraphmap = (function () {
       canvas.removeEventListener('mousedown', onPointerDown);
       window.removeEventListener('mousemove', onPointerMove);
       window.removeEventListener('mouseup', onPointerUp);
+      canvas.removeEventListener('contextmenu', onContextMenu);
       canvas.removeEventListener('wheel', onWheel);
       canvas.removeEventListener('touchstart', onTouchStart);
       canvas.removeEventListener('touchmove', onTouchMove);
@@ -1681,37 +1910,85 @@ const PrismGraphmap = (function () {
       I: 0xb8a878,   // warm grey-gold
     };
 
-    const memberPins = [];   // { mesh, stem, data }
+    const memberPins = [];   // { mesh, stem, data, shared }
     const memberPinsGroup = new THREE.Group();
     group.add(memberPinsGroup);
+
+    // ── Baseline "density field" resources ──
+    // The DW-NOMINATE baseline is ~500+ members with no event-specific signal.
+    // Rendering them as 500 equally-loud solid tokens drowns the graph. Instead
+    // they render as small, additive-blended, unlit motes that PILE UP into a
+    // glow wherever ideological mass concentrates — a density field, not a
+    // crowd of pins. Only DERIVED members read as discrete, lifted tokens.
+    //
+    // Geometry + per-party materials are SHARED across every baseline mote (one
+    // allocation total, not one-per-member — important at 500+ pins) and are
+    // intentionally NOT disposed by clearMemberPins, so rebuilds reuse them.
+    //
+    // SHAPE: legislators render as DIAMONDS (octahedra), not spheres — a
+    // faceted token that reads as distinct from the round aggregate "voice"
+    // dots. An octahedron's faces sit closer to center than a sphere of the
+    // same radius, so radii are bumped ~1.3× to keep visual weight.
+    const DIAMOND = 1.3;                 // radius compensation for octahedron footprint
+    const BASELINE_RADIUS = 0.04 * DIAMOND;
+    let _baselineGeo = null;
+    const _baselineMats = {};
+    function baselineGeo() {
+      if (!_baselineGeo) _baselineGeo = new THREE.OctahedronGeometry(BASELINE_RADIUS, 0);
+      return _baselineGeo;
+    }
+    function baselineMat(partyKey, color) {
+      if (!_baselineMats[partyKey]) {
+        _baselineMats[partyKey] = new THREE.MeshBasicMaterial({
+          color: new THREE.Color(color),
+          transparent: true,
+          opacity: 0.42,
+          blending: THREE.AdditiveBlending,
+          depthWrite: false,   // let motes accumulate instead of occluding
+        });
+      }
+      return _baselineMats[partyKey];
+    }
 
     function addMemberPin(normX, normY, party, opts) {
       opts = opts || {};
       const partyKey = (party || 'I').toUpperCase();
       const color = PARTY_COLORS[partyKey] || PARTY_COLORS.I;
+      const baseline = !!opts.baseline;
 
       const normZ = (config.capabilities.zInput && opts.normZ != null) ? opts.normZ : 0;
       const x = (normX - 0.5) * GRAPH_SIZE;
       const y = (0.5 - normY) * GRAPH_SIZE;
       const z = normZ * Z_EXTENT * 0.8;
 
-      // Sphere — slightly larger than aggregate dots, lower emissive so
-      // they read as "solid pinned tokens" rather than "glowing cloud."
-      const baseColor = new THREE.Color(color);
-      const radius = opts.radius || 0.07;
-      const mesh = new THREE.Mesh(
-        new THREE.SphereGeometry(radius, 16, 12),
-        new THREE.MeshStandardMaterial({
-          color: baseColor,
-          emissive: baseColor,
-          emissiveIntensity: 0.22,   // dimmer than aggregate dots (which use 0.4)
-          roughness: 0.45,
-          metalness: 0.15,
-        })
-      );
+      let mesh, shared = false;
+      if (baseline) {
+        // Faint density-field mote — shared low-poly geo + additive material.
+        mesh = new THREE.Mesh(baselineGeo(), baselineMat(partyKey, color));
+        shared = true;
+      } else {
+        // Discrete DERIVED token — solid, emissive, faceted DIAMOND. Hotter
+        // emissive so it pops against the faint baseline field, and flatShading
+        // so the octahedron's facets catch the light as distinct planes (that
+        // gem read is what separates a legislator from a round voice dot).
+        const baseColor = new THREE.Color(color);
+        const radius = (opts.radius || 0.07) * DIAMOND;
+        mesh = new THREE.Mesh(
+          new THREE.OctahedronGeometry(radius, 0),
+          new THREE.MeshStandardMaterial({
+            color: baseColor,
+            emissive: baseColor,
+            emissiveIntensity: 0.34,
+            roughness: 0.4,
+            metalness: 0.15,
+            flatShading: true,
+          })
+        );
+      }
       mesh.position.set(x, y, z);
       mesh.userData = {
         isMemberPin: true,
+        baseline,
         bioguideId: opts.bioguideId || null,
         name: opts.name || '',
         party: partyKey,
@@ -1722,29 +1999,50 @@ const PrismGraphmap = (function () {
       };
       memberPinsGroup.add(mesh);
 
-      // Stem — thin vertical line from plane up to the pin. Makes the
-      // pin read as planted in the surface rather than floating.
+      // Opt-in entrance: scale the token in (the caller can stagger via
+      // opts.entranceDelay). Self-contained rAF, independent of the orbit loop,
+      // and default-off so existing callers are unaffected.
+      if (opts.animateIn) {
+        const _baseScale = mesh.scale.x || 1;
+        mesh.scale.setScalar(0.0001);
+        const _dur = 440, _start = (typeof performance !== 'undefined' ? performance.now() : Date.now()) + (opts.entranceDelay || 0);
+        const _grow = function (now) {
+          const t = (now - _start) / _dur;
+          if (t < 0) { requestAnimationFrame(_grow); return; }
+          const e = t >= 1 ? 1 : 1 - Math.pow(1 - t, 3);
+          mesh.scale.setScalar(Math.max(0.0001, e * _baseScale));
+          if (t < 1) requestAnimationFrame(_grow);
+        };
+        requestAnimationFrame(_grow);
+      }
+
+      // Stem — thin vertical line from plane up to a lifted token. Baseline
+      // motes sit flat at z=0, so they get no stem (and we skip zero-length
+      // stems for any token that happens to land on the plane).
       let stem = null;
-      if (config.capabilities.zRender) {
+      if (!baseline && config.capabilities.zRender && z !== 0) {
         const stemGeo = new THREE.BufferGeometry().setFromPoints([
           new THREE.Vector3(x, y, 0),
           new THREE.Vector3(x, y, z),
         ]);
         stem = new THREE.Line(stemGeo,
-          new THREE.LineBasicMaterial({ color: baseColor, transparent: true, opacity: 0.55 })
+          new THREE.LineBasicMaterial({ color: new THREE.Color(color), transparent: true, opacity: 0.55 })
         );
         memberPinsGroup.add(stem);
       }
 
-      const entry = { mesh, stem, data: mesh.userData };
+      const entry = { mesh, stem, data: mesh.userData, shared };
       memberPins.push(entry);
       return entry;
     }
 
     function clearMemberPins() {
       memberPins.forEach(p => {
-        if (p.mesh.geometry) p.mesh.geometry.dispose();
-        if (p.mesh.material) p.mesh.material.dispose();
+        // Baseline motes share geometry/material — never dispose those here.
+        if (!p.shared) {
+          if (p.mesh.geometry) p.mesh.geometry.dispose();
+          if (p.mesh.material) p.mesh.material.dispose();
+        }
         memberPinsGroup.remove(p.mesh);
         if (p.stem) {
           p.stem.geometry.dispose();
@@ -1872,6 +2170,36 @@ const PrismGraphmap = (function () {
         const ease = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
         orbit.yaw = startYaw + (targetYaw - startYaw) * ease;
         orbit.pitch = startPitch + (targetPitch - startPitch) * ease;
+        if (t < 1 && mounted) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+      return instance;
+    }
+
+    // Recenter — smoothly return the camera to its home framing: plane centered
+    // (focus 0), a gentle resting angle, and the default zoom. The "I'm lost,
+    // take me back" control. Animates yaw along the shortest path.
+    function recenter(durationMs) {
+      if (beatState) beatState = null;
+      const duration = durationMs || 700;
+      const HOME_YAW = 26 * Math.PI / 180, HOME_PITCH = 12 * Math.PI / 180;
+      const HOME_ZOOM = config.zoom || 5.4;
+      const startYaw = orbit.yaw, startPitch = orbit.pitch;
+      const startFx = orbit.focusX, startFy = orbit.focusY, startZoom = orbit.zoom;
+      let dYaw = HOME_YAW - startYaw;
+      dYaw = Math.atan2(Math.sin(dYaw), Math.cos(dYaw));   // shortest path, [-π,π]
+      const targetYaw = startYaw + dYaw;
+      orbit.velocityX = 0; orbit.velocityY = 0;
+      orbit.dragging = false; orbit.panning = false;
+      const t0 = performance.now();
+      function tick(now) {
+        const t = Math.min((now - t0) / duration, 1);
+        const e = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        orbit.yaw = startYaw + (targetYaw - startYaw) * e;
+        orbit.pitch = startPitch + (HOME_PITCH - startPitch) * e;
+        orbit.focusX = startFx * (1 - e);
+        orbit.focusY = startFy * (1 - e);
+        orbit.zoom = startZoom + (HOME_ZOOM - startZoom) * e;
         if (t < 1 && mounted) requestAnimationFrame(tick);
       }
       requestAnimationFrame(tick);
@@ -2111,6 +2439,39 @@ const PrismGraphmap = (function () {
       return { sprite: sprite, material: mat, texture: tex };
     }
 
+    // Like makeWordSprite, but a flat textured quad that lies IN the plane (XY at
+    // z≈0) instead of a camera-facing billboard — so the keyword field reads as
+    // printed on the discourse surface and tilts with it on orbit. Weight drives
+    // world size (the on-plane substitute for the old float-height cue).
+    function makeWordPlane(text, color, fontSize, weight, mul) {
+      var cvs = document.createElement('canvas');
+      var ctx = cvs.getContext('2d');
+      var fs = fontSize || 32;
+      cvs.width = 1024;
+      cvs.height = 128;
+      ctx.font = 'bold italic ' + fs + 'px Georgia';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.shadowColor = 'rgba(255,255,255,0.8)';
+      ctx.shadowBlur = fs * 0.45;
+      ctx.shadowOffsetX = 0;
+      ctx.shadowOffsetY = 0;
+      ctx.strokeStyle = 'rgba(255,255,255,0.35)';
+      ctx.lineWidth = 3;
+      ctx.strokeText(text, 512, 64);
+      ctx.fillStyle = color || 'rgba(245,240,232,0.6)';
+      ctx.fillText(text, 512, 64);
+      var tex = new THREE.CanvasTexture(cvs);
+      var mat = new THREE.MeshBasicMaterial({ map: tex, transparent: true, depthTest: false, depthWrite: false, side: THREE.DoubleSide });
+      var wt = (typeof weight === 'number') ? weight : 0.5;
+      var scaleF = (0.8 + wt * 0.5) * ((typeof mul === 'number') ? mul : 1);
+      var w = Math.max(text.length * 0.18, 0.9) * scaleF;
+      var h = 0.28 * scaleF;
+      var geo = new THREE.PlaneGeometry(w, h);
+      var mesh = new THREE.Mesh(geo, mat);
+      return { sprite: mesh, material: mat, texture: tex };
+    }
+
     function setQuadrantWords(q, words) {
       // words: [{ text: string, weight: number (0-1) }]
       // Clear existing
@@ -2133,7 +2494,7 @@ const PrismGraphmap = (function () {
         var weight = typeof w.weight === 'number' ? w.weight : 0.5;
         // Font size: 28-56 based on weight
         var fs = Math.round(28 + weight * 28);
-        var wordSprite = makeWordSprite(w.text, color, fs);
+        var wordSprite = makeWordPlane(w.text, color, fs, weight);
 
         // Position: scatter within quadrant area with some structure
         // Higher weight words closer to center, lower weight toward edges
@@ -2144,8 +2505,8 @@ const PrismGraphmap = (function () {
         // Clamp to stay within graph bounds with margin
         px = Math.max(-GH + 0.2, Math.min(GH - 0.2, px));
         py = Math.max(-GH + 0.2, Math.min(GH - 0.2, py));
-        // Z: float above plane, heavier words higher
-        var pz = 0.22 + weight * 0.3;
+        // On the plane: words lie flat in the surface (weight drives size, not height)
+        var pz = 0.02;
 
         wordSprite.sprite.position.set(px, py, pz);
         wordSprite.sprite.renderOrder = 100; // always draw on top of plane
@@ -2158,6 +2519,80 @@ const PrismGraphmap = (function () {
           quadrant: q,
         };
         wg.add(wordSprite.sprite);
+      });
+
+      wg.visible = wordCloudVisible[q];
+      group.add(wg);
+      return instance;
+    }
+
+    // Lay a quadrant's FULL response sentence flat on the plane, word by word:
+    // keyword words bright + breathing, connective words dim + still. Replaces the
+    // scattered keyword cloud so the surface carries the actual statements.
+    function setQuadrantSentence(q, text, keywords) {
+      if (wordCloudGroups[q]) {
+        wordCloudGroups[q].children.slice().forEach(function (child) {
+          if (child.material) { if (child.material.map) child.material.map.dispose(); child.material.dispose(); }
+          if (child.geometry) child.geometry.dispose();
+          wordCloudGroups[q].remove(child);
+        });
+        group.remove(wordCloudGroups[q]);
+      }
+      var wg = new THREE.Group();
+      wordCloudGroups[q] = wg;
+      var center = QUAD_CENTERS[q];
+      var color = WORD_COLORS[q];
+      if (!text) { wg.visible = wordCloudVisible[q]; group.add(wg); return instance; }
+
+      // Keyword token set (split phrases into words, strip punctuation)
+      var clean = function (s) { return String(s).toLowerCase().replace(/[^a-z0-9'-]/g, ''); };
+      var kwSet = {};
+      (keywords || []).forEach(function (k) {
+        var t = (typeof k === 'string') ? k : (k && (k.t || k.word)) || '';
+        t.split(/\s+/).forEach(function (p) { var c = clean(p); if (c.length >= 3) kwSet[c] = true; });
+      });
+      var isKw = function (tok) {
+        var c = clean(tok);
+        return !!(kwSet[c] || kwSet[c.replace(/(s|es|ed|ing)$/, '')]);
+      };
+
+      // Tokenize + wrap into centered lines by cumulative world width
+      var MUL = 0.28;
+      var sf = function (kw) { return (0.8 + (kw ? 0.7 : 0.25) * 0.5) * MUL; };
+      var space = 0.05;
+      var wWidth = function (tok, kw) { return Math.max(tok.length * 0.18, 0.9) * sf(kw); };
+      var tokens = text.split(/\s+/).filter(Boolean).map(function (tok) {
+        var kw = isKw(tok); return { tok: tok, kw: kw, w: wWidth(tok, kw) };
+      });
+      var maxLineW = GH * 0.95;
+      var lines = [[]], lineW = 0;
+      tokens.forEach(function (o) {
+        if (lineW + o.w + space > maxLineW && lines[lines.length - 1].length) { lines.push([]); lineW = 0; }
+        lines[lines.length - 1].push(o); lineW += o.w + space;
+      });
+
+      var lineH = 0.16;
+      var startY = center.y + (lines.length - 1) * lineH / 2;
+      lines.forEach(function (line, li) {
+        var lw = line.reduce(function (s, o) { return s + o.w + space; }, -space);
+        var x = center.x - lw / 2;
+        var y = startY - li * lineH;
+        line.forEach(function (o) {
+          var fs = o.kw ? 46 : 34;
+          var col = o.kw ? color : 'rgba(208,203,194,0.55)';
+          var wp = makeWordPlane(o.tok, col, fs, o.kw ? 0.7 : 0.25, MUL);
+          var px = Math.max(-GH + 0.12, Math.min(GH - 0.12, x + o.w / 2));
+          var py = Math.max(-GH + 0.12, Math.min(GH - 0.12, y));
+          wp.sprite.position.set(px, py, 0.02);
+          wp.sprite.renderOrder = 100;
+          if (o.kw) {
+            wp.sprite.userData = { baseScaleX: wp.sprite.scale.x, baseScaleY: wp.sprite.scale.y, weight: 0.7, phase: (li * 5 + Math.random()) * 0.6, quadrant: q };
+          } else {
+            wp.material.opacity = 0.5;
+          }
+          wg.add(wp.sprite);
+          x += o.w + space;
+        });
       });
 
       wg.visible = wordCloudVisible[q];
@@ -2708,6 +3143,7 @@ const PrismGraphmap = (function () {
       setFocus,
       getFocus,
       spinTo,
+      recenter,
 
       // Morph rotation offset (composed with orbit)
       setMorphRotation(x, y) { morphOffset.x = x; morphOffset.y = y; },
@@ -2727,6 +3163,7 @@ const PrismGraphmap = (function () {
 
       // Word clouds (3D sprites per quadrant)
       setQuadrantWords,
+      setQuadrantSentence,
       showQuadrantWords,
       clearAllWords,
 
@@ -2811,6 +3248,9 @@ const PrismGraphmap = (function () {
   return {
     // Factory (new API)
     create: createInstance,
+
+    // Standalone Ted Turner the Coyote builder (for the guide portrait, etc.)
+    buildCoyote: buildTedCoyote,
 
     // Singleton shim (backward compat)
     mount(container) {

@@ -1998,50 +1998,6 @@ try {
   if (!existsIran) { const added = PrismDB.addEvent(IRAN_EVENT); if (added && PrismDB.setActive) PrismDB.setActive(added.id); }
 } catch (e) { console.warn('[v2] Iran event upsert failed:', e && e.message); }
 
-// ── Immigration-at-large event (Parameters/06_Events/evt_immigration_general_draft_v2.md).
-// Object = the dignity/security dialectic. X-prevalent (Dignity−/Security+), weak;
-// Y = institutional channel (State+/Market−). Same upsert pattern as Iran; set active
-// last so the bare URL opens on it. ──
-const IMMIGRATION_EVENT = {
-  title: 'Immigration (general)',
-  category: 'Domestic · Immigration · Borders',
-  framing: "Immigration is staged as open versus closed, but the country argues past itself because two goods are on the table — the dignity of the person who moves for a better life, and the security of the citizen who receives them. Both are real. The fight scrambles party because the security good is mostly spoken in a racial vehicle that discredits it, and the welcome good keeps forgetting the cause that produced the refugee and the consequence that follows them in.",
-  prompt: 'Two goods in tension — the dignity of the one who moves and the security of the one who receives.',
-  meta: { dialecticsRef: 'immigration_general_v2', status: 'draft', editHistory: [] },
-  date: '2026-06-27', active: true, prevalentAxis: 'x', antiValentBand: 'coalition',
-  axes: { x: { pos: 'Security', neg: 'Dignity' }, y: { pos: 'State', neg: 'Market' } },
-  responses: {
-    A: { xSide: 'left', source: '',
-      goodFaith: { text: "We made promises to the persecuted — asylum is a covenant, honor it.", xWord: 'refuge', yWord: 'covenant', words: [] },
-      coalition: { text: "No human is illegal — legalize them, protect them.", xWord: 'not illegal', yWord: 'legalize', words: [] },
-      badFaith:  { text: "The border itself is violence — any enforcement is cruelty.", xWord: 'border = violence', yWord: 'no enforcement', words: [] } },
-    B: { xSide: 'right', source: '',
-      goodFaith: { text: "A country has to decide who enters — that's self-government, not hatred.", xWord: 'govern', yWord: 'who enters', words: [] },
-      coalition: { text: "We've lost control of the border — enforce it, build the wall.", xWord: 'control', yWord: 'the wall', words: [] },
-      badFaith:  { text: "This is an invasion — a deliberate replacement of a people.", xWord: 'invasion', yWord: 'replacement', words: [] } },
-    C: { xSide: 'left', source: '',
-      goodFaith: { text: "Immigrants do the work and build the businesses — the economy needs them.", xWord: 'they build', yWord: 'economy needs', words: [] },
-      coalition: { text: "Let people move — strivers should get to chase a better life.", xWord: 'strivers', yWord: 'free movement', words: [] },
-      badFaith:  { text: "Borders are just protectionism with a flag — abolish them.", xWord: 'protectionism', yWord: 'abolish borders', words: [] } },
-    D: { xSide: 'right', source: '',
-      goodFaith: { text: "A real border lets us keep government small — secure the line, leave us alone.", xWord: 'strong border', yWord: 'small state', words: [] },
-      coalition: { text: "We can't be the world's welfare magnet — a country isn't a charity.", xWord: 'not a charity', yWord: 'welfare magnet', words: [] },
-      badFaith:  { text: "They come to take — a drain on the people who actually build.", xWord: 'drain', yWord: 'parasite', words: [] } },
-  },
-  diatribe: {
-    LF: { text: "People seeking a better life deserve dignity — welcome them well.", side: 'left', band: 'fluid' },
-    LC: { text: "No human is illegal — protect them.", side: 'left', band: 'coalition' },
-    LD: { text: "The border itself is violence; any enforcement is cruelty.", side: 'left', band: 'denominated' },
-    RF: { text: "A country has to be able to secure its border and govern who enters.", side: 'right', band: 'fluid' },
-    RC: { text: "We've lost control — enforce it.", side: 'right', band: 'coalition' },
-    RD: { text: "It's an invasion — they're replacing us.", side: 'right', band: 'denominated' },
-  },
-};
-try {
-  const existsImm = (PrismDB.getEvents() || []).find(e => e.meta && e.meta.dialecticsRef === 'immigration_general_v2');
-  if (!existsImm) { const added = PrismDB.addEvent(IMMIGRATION_EVENT); if (added && PrismDB.setActive) PrismDB.setActive(added.id); }
-} catch (e) { console.warn('[v2] Immigration event upsert failed:', e && e.message); }
-
 // Event selection: ?event=<id> in the URL wins (lets several events sit side by
 // side for testing), else the admin-marked active event, else evt_001.
 const EVENT_ID = (() => {

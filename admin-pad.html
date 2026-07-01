@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Prism Admin · iPad</title>
+<style>
+  :root{
+    --bg:#0a1226; --panel:#0f1830; --panel2:#141f3c; --ink:#f4f1ea; --ink-mid:rgba(244,241,234,.72);
+    --ink-low:rgba(244,241,234,.42); --rule:rgba(150,175,220,.22); --accent:#8fb0e6;
+    --green:#78c8a0; --gold:#dcb864; --red:#e07a7a;
+    --serif:Georgia,'Times New Roman',serif; --mono:ui-monospace,'SF Mono',Menlo,monospace;
+    --sys:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sys);-webkit-text-size-adjust:100%}
+  body{padding:0 0 120px}
+  .wrap{max-width:940px;margin:0 auto;padding:0 16px}
+  header{position:sticky;top:0;z-index:20;background:linear-gradient(180deg,rgba(10,18,38,.98),rgba(10,18,38,.9));
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:.5px solid var(--rule);padding:calc(env(safe-area-inset-top) + 12px) 0 12px}
+  .hrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .brand{font-family:var(--serif);font-size:22px;letter-spacing:.01em;margin-right:6px}
+  .brand small{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-low);display:block}
+  select,input,textarea,button{font-family:inherit;font-size:16px;color:var(--ink)}
+  select,input,textarea{background:var(--panel2);border:.5px solid var(--rule);border-radius:10px;padding:11px 12px;width:100%;outline:none}
+  textarea{resize:vertical;line-height:1.4;font-family:var(--serif)}
+  input:focus,textarea:focus,select:focus{border-color:var(--accent)}
+  .ev-select{min-width:190px;flex:1}
+  button{background:var(--panel2);border:.5px solid var(--rule);border-radius:999px;padding:10px 15px;cursor:pointer;white-space:nowrap;transition:.15s}
+  button:active{transform:scale(.97)}
+  button.primary{background:#22345c;border-color:rgba(150,180,230,.5);color:#fff}
+  button.ghost{background:transparent}
+  button.mini{padding:7px 11px;font-size:13px}
+  .pill{display:inline-flex;align-items:center;gap:6px}
+  h2{font-family:var(--serif);font-weight:600;font-size:17px;margin:26px 0 10px;padding-bottom:7px;border-bottom:.5px solid var(--rule)}
+  .field{margin:12px 0}
+  label{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-low);margin-bottom:6px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .seg{display:inline-flex;border:.5px solid var(--rule);border-radius:10px;overflow:hidden}
+  .seg button{border:0;border-radius:0;background:transparent;padding:9px 14px}
+  .seg button.on{background:#22345c;color:#fff}
+  /* quadrant grid */
+  .quads{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .quad{background:var(--panel);border:.5px solid var(--rule);border-radius:14px;padding:12px}
+  .quad h3{margin:0 0 4px;font-family:var(--serif);font-size:15px}
+  .quad .qcoord{font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-low);margin-bottom:8px}
+  .band{border-top:.5px solid var(--rule);padding-top:9px;margin-top:9px}
+  .band .bhead{display:flex;align-items:center;justify-content:space-between;margin-bottom:5px}
+  .btag{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:2px 7px;border-radius:999px}
+  .btag.fluid{color:var(--green);border:.5px solid rgba(120,200,160,.5)}
+  .btag.coalition{color:var(--gold);border:.5px solid rgba(220,184,100,.5)}
+  .btag.denominated{color:var(--red);border:.5px solid rgba(224,122,122,.5)}
+  .band textarea{font-size:15px;min-height:52px}
+  .cloud{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:6px}
+  .cloud input{font-family:var(--mono);font-size:13px;padding:8px 10px}
+  .sug{font-size:12px;padding:5px 10px}
+  /* diatribe */
+  .dia{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .diacol{background:var(--panel);border:.5px solid var(--rule);border-radius:14px;padding:12px}
+  /* preview */
+  #prev{width:100%;height:300px;display:block;background:#070b16;border-radius:14px;border:.5px solid var(--rule);touch-action:none}
+  .preview-hint{font-family:var(--mono);font-size:9px;color:var(--ink-low);text-align:center;margin-top:6px;letter-spacing:.1em;text-transform:uppercase}
+  /* footer actions */
+  .actions{position:fixed;left:0;right:0;bottom:0;z-index:30;background:linear-gradient(0deg,rgba(10,18,38,.99),rgba(10,18,38,.8));
+    border-top:.5px solid var(--rule);padding:12px 16px calc(env(safe-area-inset-bottom) + 12px);display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .status{font-family:var(--mono);font-size:11px;color:var(--ink-mid);text-align:center;min-height:1.2em;margin-top:6px;width:100%}
+  /* modal */
+  .modal{position:fixed;inset:0;z-index:50;background:rgba(4,8,18,.72);display:none;align-items:center;justify-content:center;padding:18px}
+  .modal.show{display:flex}
+  .sheet{background:var(--panel);border:.5px solid var(--rule);border-radius:16px;max-width:720px;width:100%;max-height:82vh;overflow:auto;padding:16px}
+  .sheet textarea{font-family:var(--mono);font-size:12px;min-height:280px;white-space:pre}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .spacer{flex:1}
+  details.settings{margin-top:8px}
+  details.settings summary{font-family:var(--mono);font-size:11px;color:var(--ink-low);cursor:pointer;letter-spacing:.1em;text-transform:uppercase}
+  .settings .grid2{margin-top:10px}
+  .hidden{display:none!important}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="hrow">
+      <div class="brand">Prism Admin<small>event authoring · iPad</small></div>
+      <select class="ev-select" id="evSelect" aria-label="Choose event"></select>
+      <button class="mini" id="btnLoad">Load</button>
+      <button class="mini" id="btnNew">＋ New</button>
+      <button class="mini ghost" id="btnDup">Duplicate</button>
+      <button class="mini ghost" id="btnDel">Delete</button>
+    </div>
+    <details class="settings">
+      <summary>AI autosuggest · settings</summary>
+      <div class="grid2">
+        <div class="field"><label>Anthropic API key (yours, stored on this device only)</label>
+          <input id="apiKey" type="password" placeholder="sk-ant-…" autocomplete="off" spellcheck="false"></div>
+        <div class="field"><label>Model</label>
+          <input id="model" type="text" value="claude-sonnet-4-20250514" spellcheck="false"></div>
+      </div>
+    </details>
+  </div>
+</header>
+
+<div class="wrap">
+  <h2>The event</h2>
+  <div class="grid2">
+    <div class="field"><label>Title</label><input id="f-title" placeholder="Immigration (general)"></div>
+    <div class="field"><label>Category</label><input id="f-category" placeholder="Domestic · Immigration · Borders"></div>
+  </div>
+  <div class="field"><label>Prompt (one line)</label><input id="f-prompt" placeholder="Two goods in tension — dignity and security."></div>
+  <div class="field"><label>Framing (the splash paragraph)</label><textarea id="f-framing" rows="4"></textarea></div>
+
+  <h2>Axes & prevalence</h2>
+  <div class="grid2">
+    <div class="field"><label>X − (left pole)</label><input id="ax-xneg" placeholder="Dignity"></div>
+    <div class="field"><label>X + (right pole)</label><input id="ax-xpos" placeholder="Security"></div>
+    <div class="field"><label>Y − (bottom pole)</label><input id="ax-yneg" placeholder="Market"></div>
+    <div class="field"><label>Y + (top pole)</label><input id="ax-ypos" placeholder="State"></div>
+  </div>
+  <div class="row">
+    <div class="field" style="margin:0"><label>Prevalent axis (the Diatribe spine)</label>
+      <div class="seg" id="seg-prev"><button data-v="x">X</button><button data-v="y">Y</button></div></div>
+    <div class="field" style="margin:0"><label>antiValent band</label>
+      <div class="seg" id="seg-aband"><button data-v="fluid">fluid</button><button data-v="coalition">coalition</button><button data-v="denominated">denominated</button></div></div>
+  </div>
+
+  <h2>The 12 · cloud → response <button class="mini sug ghost" id="sugAll">✦ suggest empty</button></h2>
+  <div class="quads" id="quads"></div>
+
+  <h2>The Diatribe · the radiating spine</h2>
+  <div class="dia" id="dia"></div>
+
+  <h2>Live preview <span style="font-family:var(--mono);font-size:10px;color:var(--ink-low)">· drag the ◆ pin</span></h2>
+  <canvas id="prev"></canvas>
+  <div class="preview-hint" id="prevHint"></div>
+</div>
+
+<div class="actions">
+  <button class="primary" id="btnSave">Save & Preview</button>
+  <a id="openPrism" href="v2/index.html"><button class="ghost">Open in Prism ↗</button></a>
+  <button id="btnExport">Export / Share to Claude</button>
+  <div class="status" id="status"></div>
+</div>
+
+<div class="modal" id="exportModal">
+  <div class="sheet">
+    <div class="row"><strong style="font-family:var(--serif)">Event object</strong><div class="spacer"></div>
+      <button class="mini" id="copyJson">Copy for Claude</button>
+      <button class="mini" id="dlJson">Download .json</button>
+      <button class="mini ghost" id="closeExport">Close</button></div>
+    <p style="font-family:var(--mono);font-size:11px;color:var(--ink-low)">Paste this back into the chat and I'll wire it into the app / commit it to the repo.</p>
+    <textarea id="exportText" readonly></textarea>
+  </div>
+</div>
+
+<script src="src/js/prismdb.js"></script>
+<script>
+/* ============ Prism Admin (iPad) ============ */
+const HAS_DB = (typeof PrismDB !== 'undefined');
+const $ = id => document.getElementById(id);
+const BANDS = [ {key:'goodFaith',tag:'fluid'}, {key:'coalition',tag:'coalition'}, {key:'badFaith',tag:'denominated'} ];
+// A/B/C/D quadrant geometry (matches the event schema + existing events)
+const QUADS = [
+  {id:'A', xsign:-1, ysign:+1, xSide:'left'},
+  {id:'B', xsign:+1, ysign:+1, xSide:'right'},
+  {id:'C', xsign:-1, ysign:-1, xSide:'left'},
+  {id:'D', xsign:+1, ysign:-1, xSide:'right'},
+];
+let currentId = null;           // null = new/unsaved
+let prevAxis = 'x', aBand = 'coalition';
+let pin = {x:0.5, y:0.5};       // draggable object marker (normalized)
+
+/* Worked-example seed — the published Immigration event (matches v2/index.html) */
+const SEED_EVENT = {
+  title:'Immigration (general)', category:'Domestic · Immigration · Borders',
+  framing:"Immigration is staged as open versus closed, but the country argues past itself because two goods are on the table — the dignity of the person who moves for a better life, and the security of the citizen who receives them. Both are real. The fight scrambles party because the security good is mostly spoken in a racial vehicle that discredits it, and the welcome good keeps forgetting the cause that produced the refugee and the consequence that follows them in.",
+  prompt:'Two goods in tension — the dignity of the one who moves and the security of the one who receives.',
+  meta:{ dialecticsRef:'immigration_general_v2', status:'draft', editHistory:[] },
+  date:'2026-06-27', active:true, prevalentAxis:'x', antiValentBand:'coalition',
+  axes:{ x:{pos:'Security',neg:'Dignity'}, y:{pos:'State',neg:'Market'} },
+  responses:{
+    A:{ xSide:'left', source:'',
+      goodFaith:{text:"We made promises to the persecuted — asylum is a covenant, honor it.",xWord:'refuge',yWord:'covenant',words:[]},
+      coalition:{text:"No human is illegal — legalize them, protect them.",xWord:'not illegal',yWord:'legalize',words:[]},
+      badFaith:{text:"The border itself is violence — any enforcement is cruelty.",xWord:'border = violence',yWord:'no enforcement',words:[]} },
+    B:{ xSide:'right', source:'',
+      goodFaith:{text:"A country has to decide who enters — that's self-government, not hatred.",xWord:'govern',yWord:'who enters',words:[]},
+      coalition:{text:"We've lost control of the border — enforce it, build the wall.",xWord:'control',yWord:'the wall',words:[]},
+      badFaith:{text:"This is an invasion — a deliberate replacement of a people.",xWord:'invasion',yWord:'replacement',words:[]} },
+    C:{ xSide:'left', source:'',
+      goodFaith:{text:"Immigrants do the work and build the businesses — the economy needs them.",xWord:'they build',yWord:'economy needs',words:[]},
+      coalition:{text:"Let people move — strivers should get to chase a better life.",xWord:'strivers',yWord:'free movement',words:[]},
+      badFaith:{text:"Borders are just protectionism with a flag — abolish them.",xWord:'protectionism',yWord:'abolish borders',words:[]} },
+    D:{ xSide:'right', source:'',
+      goodFaith:{text:"A real border lets us keep government small — secure the line, leave us alone.",xWord:'strong border',yWord:'small state',words:[]},
+      coalition:{text:"We can't be the world's welfare magnet — a country isn't a charity.",xWord:'not a charity',yWord:'welfare magnet',words:[]},
+      badFaith:{text:"They come to take — a drain on the people who actually build.",xWord:'drain',yWord:'parasite',words:[]} },
+  },
+  diatribe:{
+    LF:{text:"People seeking a better life deserve dignity — welcome them well.",side:'left',band:'fluid'},
+    LC:{text:"No human is illegal — protect them.",side:'left',band:'coalition'},
+    LD:{text:"The border itself is violence; any enforcement is cruelty.",side:'left',band:'denominated'},
+    RF:{text:"A country has to be able to secure its border and govern who enters.",side:'right',band:'fluid'},
+    RC:{text:"We've lost control — enforce it.",side:'right',band:'coalition'},
+    RD:{text:"It's an invasion — they're replacing us.",side:'right',band:'denominated'},
+  },
+};
+
+/* ---- build the 12 quadrant cards ---- */
+function buildQuads(){
+  const host = $('quads'); host.innerHTML='';
+  QUADS.forEach(q=>{
+    const card=document.createElement('div'); card.className='quad';
+    let bands='';
+    BANDS.forEach(b=>{
+      bands += `<div class="band">
+        <div class="bhead"><span class="btag ${b.tag}">${b.tag}</span>
+          <button class="mini sug ghost" data-sug="${q.id}:${b.key}">✦ suggest</button></div>
+        <textarea id="r-${q.id}-${b.key}-text" rows="2" placeholder="the response voice…"></textarea>
+        <div class="cloud">
+          <input id="r-${q.id}-${b.key}-x" placeholder="x-word (cloud)">
+          <input id="r-${q.id}-${b.key}-y" placeholder="y-word (cloud)">
+        </div></div>`;
+    });
+    card.innerHTML = `<h3 id="q-${q.id}-name">${q.id}</h3><div class="qcoord" id="q-${q.id}-coord"></div>${bands}`;
+    host.appendChild(card);
+  });
+  host.querySelectorAll('[data-sug]').forEach(btn=>btn.addEventListener('click',()=>{
+    const [qi,bk]=btn.dataset.sug.split(':'); aiSuggest(qi,bk,btn);
+  }));
+}
+/* ---- build the diatribe fields ---- */
+function buildDia(){
+  const host=$('dia'); host.innerHTML='';
+  [['left','− pole'],['right','+ pole']].forEach(([side,lbl])=>{
+    const col=document.createElement('div'); col.className='diacol';
+    let f='';
+    ['fluid','coalition','denominated'].forEach(band=>{
+      const code=(side==='left'?'L':'R')+band[0].toUpperCase();
+      f+=`<div class="field"><label><span class="btag ${band}" style="border:0;padding:0">${band}</span></label>
+          <input id="d-${code}" placeholder="${side} · ${band}"></div>`;
+    });
+    col.innerHTML=`<div class="qcoord" id="dia-${side}-lbl">${lbl}</div>${f}`;
+    host.appendChild(col);
+  });
+}
+/* ---- coordinate labels from axes ---- */
+function refreshLabels(){
+  const xn=$('ax-xneg').value||'X−', xp=$('ax-xpos').value||'X+', yn=$('ax-yneg').value||'Y−', yp=$('ax-ypos').value||'Y+';
+  QUADS.forEach(q=>{
+    const xt=q.xsign<0?xn:xp, yt=q.ysign<0?yn:yp;
+    $(`q-${q.id}-name`).textContent = `${q.id} · ${xt} · ${yt}`;
+    $(`q-${q.id}-coord`).textContent = `${q.xsign<0?'−':'+'}X / ${q.ysign<0?'−':'+'}Y · ${q.xSide}`;
+  });
+  const spine = prevAxis==='x' ? [xn,xp] : [yn,yp];
+  $('dia-left-lbl').textContent = spine[0]+' (−)';
+  $('dia-right-lbl').textContent = spine[1]+' (+)';
+  drawPreview();
+}
+/* ---- segmented controls ---- */
+function initSeg(id,val,cb){
+  const seg=$(id);
+  seg.querySelectorAll('button').forEach(b=>{
+    b.classList.toggle('on', b.dataset.v===val);
+    b.addEventListener('click',()=>{ seg.querySelectorAll('button').forEach(x=>x.classList.remove('on')); b.classList.add('on'); cb(b.dataset.v); });
+  });
+}
+
+/* ---- slug ---- */
+function slug(s){ return (s||'event').toLowerCase().replace(/[^a-z0-9]+/g,'_').replace(/^_|_$/g,'').slice(0,40)+'_v1'; }
+
+/* ---- collect the event object from the form ---- */
+function collect(){
+  const responses={};
+  QUADS.forEach(q=>{
+    const band={};
+    BANDS.forEach(b=>{
+      band[b.key]={ text:$(`r-${q.id}-${b.key}-text`).value.trim(),
+        xWord:$(`r-${q.id}-${b.key}-x`).value.trim(), yWord:$(`r-${q.id}-${b.key}-y`).value.trim(), words:[] };
+    });
+    responses[q.id]={ xSide:q.xSide, source:'', goodFaith:band.goodFaith, coalition:band.coalition, badFaith:band.badFaith };
+  });
+  const dia={};
+  [['LF','left','fluid'],['LC','left','coalition'],['LD','left','denominated'],
+   ['RF','right','fluid'],['RC','right','coalition'],['RD','right','denominated']].forEach(([c,side,band])=>{
+    dia[c]={ text:$(`d-${c}`).value.trim(), side, band };
+  });
+  const title=$('f-title').value.trim()||'Untitled event';
+  return {
+    title, category:$('f-category').value.trim(), framing:$('f-framing').value.trim(), prompt:$('f-prompt').value.trim(),
+    meta:{ dialecticsRef:slug(title), status:'draft', editHistory:[], objectX:+pin.x.toFixed(3), objectY:+pin.y.toFixed(3) },
+    date:new Date().toISOString().slice(0,10), active:true, prevalentAxis:prevAxis, antiValentBand:aBand,
+    axes:{ x:{pos:$('ax-xpos').value.trim(), neg:$('ax-xneg').value.trim()}, y:{pos:$('ax-ypos').value.trim(), neg:$('ax-yneg').value.trim()} },
+    responses, diatribe:dia
+  };
+}
+/* ---- populate the form from an event ---- */
+function populate(ev){
+  currentId = ev.id || null;
+  $('f-title').value=ev.title||''; $('f-category').value=ev.category||''; $('f-prompt').value=ev.prompt||''; $('f-framing').value=ev.framing||'';
+  const ax=ev.axes||{x:{},y:{}};
+  $('ax-xpos').value=ax.x&&ax.x.pos||''; $('ax-xneg').value=ax.x&&ax.x.neg||''; $('ax-ypos').value=ax.y&&ax.y.pos||''; $('ax-yneg').value=ax.y&&ax.y.neg||'';
+  prevAxis=ev.prevalentAxis||'x'; aBand=ev.antiValentBand||'coalition';
+  initSeg('seg-prev',prevAxis,v=>{prevAxis=v;refreshLabels();}); initSeg('seg-aband',aBand,v=>{aBand=v;});
+  const r=ev.responses||{};
+  QUADS.forEach(q=>{ const qr=r[q.id]||{}; BANDS.forEach(b=>{ const bd=qr[b.key]||{};
+    $(`r-${q.id}-${b.key}-text`).value=bd.text||''; $(`r-${q.id}-${b.key}-x`).value=bd.xWord||''; $(`r-${q.id}-${b.key}-y`).value=bd.yWord||''; }); });
+  const d=ev.diatribe||{}; ['LF','LC','LD','RF','RC','RD'].forEach(c=>{ $(`d-${c}`).value=(d[c]&&d[c].text)||''; });
+  if(ev.meta){ pin.x=ev.meta.objectX!=null?ev.meta.objectX:0.5; pin.y=ev.meta.objectY!=null?ev.meta.objectY:0.5; }
+  refreshLabels(); status(currentId?('Loaded '+currentId):'New event');
+}
+function blank(){
+  populate({ axes:{x:{neg:'Dignity',pos:'Security'},y:{neg:'Market',pos:'State'}}, prevalentAxis:'x', antiValentBand:'coalition',
+    responses:{}, diatribe:{} });
+  currentId=null; status('New event — fill it in');
+}
+
+/* ---- event dropdown ---- */
+function refreshDropdown(sel){
+  const s=$('evSelect'); s.innerHTML='';
+  const opt0=document.createElement('option'); opt0.value=''; opt0.textContent='— choose an event —'; s.appendChild(opt0);
+  if(HAS_DB){ (PrismDB.getEvents()||[]).forEach(e=>{ const o=document.createElement('option'); o.value=e.id; o.textContent=`${e.id} · ${e.title}`; s.appendChild(o); }); }
+  if(sel) s.value=sel;
+}
+
+/* ---- save / preview ---- */
+function save(){
+  if(!HAS_DB){ status('PrismDB not loaded — serve via Live Server (same origin as the app)'); return; }
+  const ev=collect();
+  try{
+    if(currentId){ PrismDB.updateEvent(currentId, ev); PrismDB.setActive(currentId); status('Updated '+currentId+' · set active'); }
+    else { const added=PrismDB.addEvent(ev); currentId=added.id; PrismDB.setActive(added.id); status('Saved '+added.id+' · set active'); }
+    refreshDropdown(currentId);
+  }catch(e){ status('Save failed: '+e.message); }
+}
+
+/* ---- export ---- */
+function openExport(){
+  const ev=collect();
+  const varName=(ev.meta.dialecticsRef.replace(/_v1$/,'').toUpperCase()||'EVENT')+'_EVENT';
+  const js='// paste into v2/index.html (upsert like IMMIGRATION_EVENT)\nconst '+varName+' = '+JSON.stringify(ev,null,2)+';';
+  $('exportText').value=js; $('exportModal').classList.add('show');
+}
+function copyJson(){ const t=$('exportText'); t.select(); try{ document.execCommand('copy'); }catch(e){}
+  if(navigator.clipboard) navigator.clipboard.writeText(t.value).catch(()=>{}); status('Copied — paste it into the chat'); }
+function dlJson(){ const ev=collect(); const blob=new Blob([JSON.stringify(ev,null,2)],{type:'application/json'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=ev.meta.dialecticsRef+'.json'; a.click(); status('Downloaded'); }
+
+/* ---- AI autosuggest ---- */
+async function aiSuggest(qid, bandKey, btn){
+  const key=$('apiKey').value.trim(); if(!key){ status('Add your Anthropic API key in settings first'); return; }
+  const q=QUADS.find(x=>x.id===qid); const bandName=BANDS.find(b=>b.key===bandKey).tag;
+  const ax=collect().axes; const xt=q.xsign<0?ax.x.neg:ax.x.pos, yt=q.ysign<0?ax.y.neg:ax.y.pos;
+  const framing=$('f-framing').value.trim();
+  const bandGloss={ fluid:'object present — the good itself, plainly held', coalition:'the good acquires a tribal carrier / vehicle',
+    denominated:'object replaced by identity — totalizing' }[bandName];
+  const prompt=`You are helping author a position for the Prism dialectical map. Denomination = object displacement: fluid holds the object, coalition carries it in a tribe, denominated replaces it with identity.
+EVENT FRAMING: ${framing||'(none given)'}
+QUADRANT ${qid}: ${xt} · ${yt}
+BAND: ${bandName} (${bandGloss})
+Write ONE authentic first-person-ish position voice for this exact cell, plus its compressed keyword cloud. Terse, charged, no hedging, not a strawman — the sincere voice of someone here.
+Return ONLY strict JSON: {"response":"one to two sentences","xWord":"1-2 words","yWord":"1-2 words"}`;
+  const prev=btn?btn.textContent:''; if(btn){btn.textContent='…';btn.disabled=true;} status('Asking Claude…');
+  try{
+    const res=await fetch('https://api.anthropic.com/v1/messages',{ method:'POST',
+      headers:{ 'content-type':'application/json','x-api-key':key,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true' },
+      body:JSON.stringify({ model:$('model').value.trim()||'claude-sonnet-4-20250514', max_tokens:400,
+        messages:[{role:'user',content:prompt}] }) });
+    if(!res.ok){ throw new Error('HTTP '+res.status+' '+(await res.text()).slice(0,120)); }
+    const data=await res.json(); let txt=(data.content&&data.content[0]&&data.content[0].text||'').trim();
+    const m=txt.match(/\{[\s\S]*\}/); if(!m) throw new Error('no JSON in reply');
+    const obj=JSON.parse(m[0]);
+    if(obj.response) $(`r-${qid}-${bandKey}-text`).value=obj.response;
+    if(obj.xWord) $(`r-${qid}-${bandKey}-x`).value=obj.xWord;
+    if(obj.yWord) $(`r-${qid}-${bandKey}-y`).value=obj.yWord;
+    drawPreview(); status('Filled '+qid+' · '+bandName);
+  }catch(e){ status('AI error: '+e.message); }
+  finally{ if(btn){btn.textContent=prev;btn.disabled=false;} }
+}
+async function aiSuggestEmpty(){
+  for(const q of QUADS){ for(const b of BANDS){ if(!$(`r-${q.id}-${b.key}-text`).value.trim()){ await aiSuggest(q.id,b.key,null); } } }
+  status('Filled empty cells');
+}
+
+/* ---- live preview (2×2 clouds + draggable object pin) ---- */
+const cv=$('prev'), pctx=cv.getContext('2d'); let PW,PH,PDPR;
+function fitPrev(){ PDPR=Math.min(2,window.devicePixelRatio||1); PW=cv.clientWidth; PH=cv.clientHeight;
+  cv.width=PW*PDPR; cv.height=PH*PDPR; pctx.setTransform(PDPR,0,0,PDPR,0,0); }
+function drawPreview(){
+  if(!PW) fitPrev(); const cx=PW/2, cy=PH/2, S=Math.min(PW,PH)*0.40;
+  pctx.clearRect(0,0,PW,PH);
+  const tints=[[111,154,224,-1,-1],[224,106,106,1,-1],[116,200,160,-1,1],[216,178,74,1,1]];
+  pctx.save(); pctx.translate(cx,cy);
+  tints.forEach(c=>{ const g=pctx.createRadialGradient(c[3]*S*.55,c[4]*S*.55,0,c[3]*S*.55,c[4]*S*.55,S*.95);
+    g.addColorStop(0,`rgba(${c[0]},${c[1]},${c[2]},.09)`); g.addColorStop(1,'rgba(0,0,0,0)'); pctx.fillStyle=g; pctx.fillRect(-S*1.2,-S*1.2,S*2.4,S*2.4); });
+  pctx.strokeStyle='rgba(180,198,230,.12)'; pctx.beginPath(); pctx.moveTo(-S*1.05,0); pctx.lineTo(S*1.05,0); pctx.moveTo(0,-S*1.05); pctx.lineTo(0,S*1.05); pctx.stroke();
+  pctx.font='9px ui-monospace,monospace'; pctx.fillStyle='rgba(244,241,234,.4)'; pctx.textAlign='center'; pctx.textBaseline='middle';
+  const ax={xn:$('ax-xneg').value||'X−',xp:$('ax-xpos').value||'X+',yn:$('ax-yneg').value||'Y−',yp:$('ax-ypos').value||'Y+'};
+  pctx.fillText(ax.yp.toUpperCase(),0,-S*1.14); pctx.fillText(ax.yn.toUpperCase(),0,S*1.14);
+  pctx.save(); pctx.translate(-S*1.16,0); pctx.rotate(-Math.PI/2); pctx.fillText(ax.xn.toUpperCase(),0,0); pctx.restore();
+  pctx.save(); pctx.translate(S*1.16,0); pctx.rotate(Math.PI/2); pctx.fillText(ax.xp.toUpperCase(),0,0); pctx.restore();
+  // clouds per quadrant
+  const bandCol={goodFaith:'120,200,160',coalition:'220,184,100',badFaith:'224,122,122'};
+  QUADS.forEach(q=>{ const nx=q.xsign*S*.5, ny=-q.ysign*S*.5;
+    BANDS.forEach((b,bi)=>{ const words=[$(`r-${q.id}-${b.key}-x`).value,$(`r-${q.id}-${b.key}-y`).value].filter(Boolean);
+      words.forEach((w,wi)=>{ const ang=(bi*2+wi)*1.1, rr=14+bi*13;
+        pctx.font='11px Georgia,serif'; pctx.fillStyle=`rgba(${bandCol[b.key]},.85)`;
+        pctx.fillText(w, nx+Math.cos(ang)*rr, ny+Math.sin(ang)*rr); }); }); });
+  // object pin
+  const px=(pin.x-0.5)*2*S, py=(pin.y-0.5)*2*S;
+  pctx.fillStyle='rgba(236,224,190,.95)'; pctx.strokeStyle='rgba(236,224,190,.5)';
+  pctx.beginPath(); pctx.moveTo(px,py-9);pctx.lineTo(px+9,py);pctx.lineTo(px,py+9);pctx.lineTo(px-9,py);pctx.closePath(); pctx.fill();
+  pctx.beginPath(); pctx.arc(px,py,18,0,6.2832); pctx.stroke();
+  pctx.restore();
+  $('prevHint').textContent = 'object pin at '+(pin.x*100|0)+'% , '+(pin.y*100|0)+'%';
+}
+// drag the pin (pencil/finger)
+let dragging=false;
+function ptToNorm(e){ const r=cv.getBoundingClientRect(); const t=e.touches?e.touches[0]:e;
+  const S=Math.min(PW,PH)*0.40; const x=(t.clientX-r.left-PW/2)/(2*S)+0.5, y=(t.clientY-r.top-PH/2)/(2*S)+0.5;
+  return {x:Math.max(0,Math.min(1,x)), y:Math.max(0,Math.min(1,y))}; }
+function down(e){ dragging=true; pin=ptToNorm(e); drawPreview(); e.preventDefault(); }
+function move(e){ if(!dragging)return; pin=ptToNorm(e); drawPreview(); e.preventDefault(); }
+function up(){ dragging=false; }
+cv.addEventListener('pointerdown',down); cv.addEventListener('pointermove',move); window.addEventListener('pointerup',up);
+
+/* ---- wire up ---- */
+function status(m){ $('status').textContent=m; }
+function init(){
+  buildQuads(); buildDia(); fitPrev();
+  initSeg('seg-prev','x',v=>{prevAxis=v;refreshLabels();}); initSeg('seg-aband','coalition',v=>{aBand=v;});
+  // live label + preview refresh
+  ['ax-xneg','ax-xpos','ax-yneg','ax-ypos'].forEach(id=>$(id).addEventListener('input',refreshLabels));
+  document.querySelectorAll('.quad input, .quad textarea').forEach(el=>el.addEventListener('input',drawPreview));
+  $('btnNew').addEventListener('click',blank);
+  $('btnLoad').addEventListener('click',()=>{ const id=$('evSelect').value; if(!id||!HAS_DB)return; const ev=PrismDB.getEvent(id); if(ev)populate(ev); });
+  $('evSelect').addEventListener('change',()=>{ const id=$('evSelect').value; if(!id||!HAS_DB)return; const ev=PrismDB.getEvent(id); if(ev)populate(ev); });
+  $('btnDup').addEventListener('click',()=>{ const ev=collect(); ev.title=(ev.title||'Event')+' (copy)'; currentId=null; ev.id=undefined; populate(ev); status('Duplicated — Save to create'); });
+  $('btnDel').addEventListener('click',()=>{ if(!currentId||!HAS_DB)return; if(!confirm('Delete '+currentId+'?'))return; PrismDB.deleteEvent(currentId); currentId=null; refreshDropdown(); blank(); status('Deleted'); });
+  $('btnSave').addEventListener('click',save);
+  $('btnExport').addEventListener('click',openExport);
+  $('sugAll').addEventListener('click',aiSuggestEmpty);
+  $('copyJson').addEventListener('click',copyJson); $('dlJson').addEventListener('click',dlJson);
+  $('closeExport').addEventListener('click',()=>$('exportModal').classList.remove('show'));
+  // persist API key/model locally
+  ['apiKey','model'].forEach(id=>{ const v=localStorage.getItem('prism.admin.'+id); if(v)$(id).value=v;
+    $(id).addEventListener('input',()=>localStorage.setItem('prism.admin.'+id,$(id).value)); });
+  window.addEventListener('resize',()=>{ fitPrev(); drawPreview(); });
+  refreshDropdown();
+  // Seed with the Immigration event as a worked example: load the stored copy if
+  // it exists (so Save updates it), otherwise load the embedded seed.
+  let existing = HAS_DB ? (PrismDB.getEvents()||[]).find(e=>e.meta && e.meta.dialecticsRef==='immigration_general_v2') : null;
+  if(existing){ populate(existing); refreshDropdown(existing.id); status('Loaded '+existing.id+' · Immigration (worked example)'); }
+  else { populate(JSON.parse(JSON.stringify(SEED_EVENT))); currentId=null; status('Loaded the Immigration event (worked example) — Save to store it'); }
+  if(!HAS_DB) status('Loaded Immigration example. Open via Live Server to save/preview with the app.');
+}
+init();
+</script>
+</body>
+</html>

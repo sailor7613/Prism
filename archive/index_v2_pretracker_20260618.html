@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Prism v2 · diatribe instrument</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,18 +22,15 @@
 
 body { font-size: 17px; overflow: hidden; }
 
-/* ── HEADER ──  a clean top bar that clears the notch / Dynamic Island.
-   The ribbon nav lives in its own band just below this (see ribbon CSS). */
+/* ── HEADER ── */
 header {
   position: fixed; top: 0; left: 0; right: 0;
-  height: calc(var(--safe-top, 0px) + var(--hdr-h, 44px));
-  padding: var(--safe-top, 0px) 18px 0;
-  display: flex; justify-content: center; align-items: center;
-  z-index: 50;
-  background: linear-gradient(180deg, rgba(7,12,26,0.96) 62%, rgba(7,12,26,0));
-  transition: opacity 0.6s ease;
+  padding: 20px 28px;
+  display: flex; justify-content: space-between; align-items: baseline;
+  z-index: 10;
 }
-@media (min-width: 900px) { header { padding-left: 28px; padding-right: 28px; } }
+@media (max-width: 768px) { header { padding: 14px 18px; } }
+@media (max-width: 480px) { header { padding: 10px 14px; } }
 
 /* ── MAIN STAGE ── */
 main {
@@ -41,10 +38,11 @@ main {
   height: 100vh;
   display: flex; flex-direction: column;
   justify-content: center; align-items: center;
-  padding: calc(var(--top-chrome) + 14px) var(--stage-pad-x) calc(56px + var(--safe-bottom));
+  padding: 80px var(--stage-pad-x) 60px;
   z-index: 1;
 }
-@media (max-width: 480px) { main { padding-bottom: calc(40px + var(--safe-bottom)); } }
+@media (max-width: 768px) { main { padding-top: 60px; padding-bottom: 48px; } }
+@media (max-width: 480px) { main { padding-top: 52px; padding-bottom: 40px; } }
 
 /* Event framing — sits above the slider as contextual frame */
 .framing {
@@ -235,8 +233,8 @@ footer {
 .event-phase {
   position: fixed; inset: 0;
   z-index: 5;
-  display: flex; align-items: safe center; justify-content: center;
-  padding: calc(var(--top-chrome) + 18px) var(--stage-pad-x) calc(40px + var(--safe-bottom));
+  display: flex; align-items: center; justify-content: center;
+  padding: 88px var(--stage-pad-x);
   overflow-y: auto;
   opacity: 1;
   transition: opacity 0.9s ease, transform 1.1s cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -403,7 +401,7 @@ body.light .ev-kw {
   position: fixed; inset: 0;
   z-index: 5;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
-  padding: calc(var(--top-chrome) + 16px) var(--stage-pad-x) calc(72px + var(--safe-bottom));
+  padding: 84px var(--stage-pad-x) 76px;
   overflow-y: auto;
   opacity: 0; pointer-events: none;
   transition: opacity 0.9s ease;
@@ -562,7 +560,7 @@ body:not(.phase-diatribe) .to-answers { opacity: 0 !important; pointer-events: n
   position: fixed; inset: 0;
   z-index: 5;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
-  padding: calc(var(--top-chrome) + 10px) var(--stage-pad-x) calc(60px + var(--safe-bottom));
+  padding: 74px var(--stage-pad-x) 64px;
   overflow-y: auto;
   opacity: 0; pointer-events: none;
   transition: opacity 0.9s ease;
@@ -987,77 +985,6 @@ body.light .event-picker { color: rgba(40,44,54,0.85); background: rgba(255,255,
   transition: left 0.5s cubic-bezier(0.4,0,0.2,1), right 0.5s cubic-bezier(0.4,0,0.2,1);
 }
 .graph-info.dock-left { right: auto; left: 24px; }
-
-/* ── Tracker — the panel's resting state: a list of followed legislators.
-   Replaced by the compare halves when a rep is locked (.graph-info.comparing). ── */
-.tracker { display: flex; flex-direction: column; gap: 10px; min-height: 0; flex: 1 1 auto; }
-.graph-info.comparing .tracker { display: none; }
-/* In resting state the "you" half is hidden — the tracker owns the panel. */
-.graph-info:not(.comparing) .cmp-user { display: none; }
-/* Follow-management now lives in the Refraction panel, so the in-graph card
-   only appears when a legislator is locked for comparison — no resting box
-   floating over the graph (and no scroll-vs-zoom conflict). */
-.graph-info:not(.comparing) { display: none; }
-.tracker-head { display: flex; align-items: baseline; justify-content: space-between; flex: none; }
-.tracker-title { font-family: var(--mono); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-low); }
-.tracker-count { font-family: var(--mono); font-size: 9px; letter-spacing: 0.10em; color: var(--ink-low); }
-.tracker-scroll { display: flex; flex-direction: column; gap: 14px; overflow-y: auto; overscroll-behavior: contain; min-height: 0; flex: 1 1 auto; }
-.trk-section-label { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-low); margin-bottom: 6px; }
-.trk-empty { font-family: var(--serif); font-size: 12px; color: var(--ink-low); font-style: italic; line-height: 1.4; }
-
-/* a single rep row */
-.trk-row { display: flex; align-items: center; gap: 9px; padding: 5px 4px; border-radius: 6px; cursor: pointer; transition: background 0.18s ease; }
-.trk-row:hover { background: rgba(255,255,255,0.05); }
-.trk-photo { width: 30px; height: 30px; border-radius: 50%; object-fit: cover; flex: none; background: rgba(255,255,255,0.06); border: 0.5px solid var(--rule); }
-.trk-body { display: flex; flex-direction: column; gap: 1px; min-width: 0; flex: 1 1 auto; }
-.trk-name { font-family: var(--serif); font-size: 13px; color: var(--ink); line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.trk-meta { font-family: var(--mono); font-size: 9px; letter-spacing: 0.06em; color: var(--ink-mid); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.trk-delta { font-family: var(--mono); font-size: 9px; letter-spacing: 0.04em; color: var(--ink-low); flex: none; text-align: right; white-space: nowrap; }
-/* party-tinted name + a small leading dot */
-.trk-meta.party-D, .trk-name.party-D { color: #6f9fe0; }
-.trk-meta.party-R, .trk-name.party-R { color: #e07a7a; }
-.trk-meta.party-I, .trk-name.party-I { color: #c9b98a; }
-.trk-unfollow { font-family: var(--mono); font-size: 15px; line-height: 1; color: var(--ink-low); background: none; border: none; cursor: pointer; padding: 0 2px; opacity: 0; transition: opacity 0.15s ease, color 0.15s ease; flex: none; }
-.trk-row:hover .trk-unfollow { opacity: 0.6; }
-.trk-unfollow:hover { opacity: 1; color: #e07a7a; }
-/* delegation rows carry a faint star after the name */
-.trk-row.is-delegation .trk-name::after { content: ' \2605'; color: var(--ink-low); font-size: 10px; }
-
-/* search / add */
-.tracker-add { position: relative; flex: none; }
-.tracker-search { width: 100%; box-sizing: border-box; font-family: var(--mono); font-size: 11px; letter-spacing: 0.04em; color: var(--ink); background: rgba(255,255,255,0.05); border: 0.5px solid var(--rule); border-radius: 6px; padding: 7px 9px; outline: none; }
-.tracker-search:focus { border-color: rgba(255,255,255,0.32); }
-.tracker-search::placeholder { color: var(--ink-low); }
-.tracker-results { position: absolute; bottom: calc(100% + 6px); left: 0; right: 0; max-height: 210px; overflow-y: auto; overscroll-behavior: contain; background: rgba(9,15,32,0.97); -webkit-backdrop-filter: blur(9px); backdrop-filter: blur(9px); border: 0.5px solid var(--rule); border-radius: 6px; box-shadow: 0 8px 24px rgba(0,0,0,0.42); z-index: 3; }
-.tracker-results[hidden] { display: none; }
-.tracker-results .trk-row { padding: 6px 8px; border-radius: 0; }
-.trk-noresult { font-family: var(--mono); font-size: 10px; color: var(--ink-low); padding: 8px; }
-
-/* set-district affordance + inline form */
-.trk-setdist { font-family: var(--mono); font-size: 10px; letter-spacing: 0.04em; color: var(--ink-mid); cursor: pointer; text-decoration: underline; text-underline-offset: 2px; background: none; border: none; padding: 0; }
-.trk-setdist:hover { color: var(--ink); }
-.trk-distform { display: none; gap: 6px; align-items: center; margin-top: 8px; flex-wrap: wrap; }
-.trk-distform.open { display: flex; }
-.trk-distform select, .trk-distform input { font-family: var(--mono); font-size: 10px; color: var(--ink); background: rgba(255,255,255,0.06); border: 0.5px solid var(--rule); border-radius: 5px; padding: 4px 6px; outline: none; }
-.trk-distform input { width: 58px; }
-.trk-distform .pf-dist { width: 50px; }
-.trk-distform .pf-zip { width: 64px; }
-.trk-distform button { font-family: var(--mono); font-size: 10px; letter-spacing: 0.04em; color: var(--ink); background: rgba(255,255,255,0.09); border: 0.5px solid var(--rule); border-radius: 5px; padding: 4px 9px; cursor: pointer; }
-.trk-distform button:hover { background: rgba(255,255,255,0.16); }
-
-/* brief shake when a row is tapped before a pin is committed (nothing to compare yet) */
-.tracker.nudge { animation: trk-nudge 0.32s ease; }
-@keyframes trk-nudge { 0%,100%{transform:translateX(0);} 25%{transform:translateX(-4px);} 75%{transform:translateX(4px);} }
-
-/* compare-mode header bar (back + follow toggle) */
-.cmp-bar { display: none; align-items: center; justify-content: space-between; margin-bottom: 6px; flex: none; }
-.graph-info.comparing .cmp-bar { display: flex; }
-.cmp-back, .cmp-follow { font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; color: var(--ink-mid); background: none; border: none; cursor: pointer; padding: 2px 0; }
-.cmp-back:hover, .cmp-follow:hover { color: var(--ink); }
-.cmp-follow { display: inline-flex; align-items: center; gap: 4px; }
-.cmp-follow[aria-pressed="true"] { color: var(--ink); }
-.cmp-follow[aria-pressed="true"] .cmp-follow-glyph { color: #e0b86a; }
-
 /* Comparison halves (mirror): you on top, the selected voice below */
 .cmp { display: flex; flex-direction: column; gap: 8px; flex: none; }
 .cmp-label {
@@ -1202,373 +1129,18 @@ body.light .event-picker { color: rgba(40,44,54,0.85); background: rgba(255,255,
   .pad-axis-x, .pad-axis-y, .pad-shade, .pad-corner { transition: none; }
 }
 
-/* ══════════════════════════════════════════════════════════════
-   DUAL TRIPTYCH — six-panel navigation shell (Spec §3)
-     Lower row (Action):   Beam · Prism · Refraction
-     Upper row (Parallax): Diatribe · Parallax · Comparison
-   The Prism (lower-center) is the live base app; the other five open
-   as full-viewport overlays. The 2×3 map navigates; the header pull
-   shifts focus to the upper row (Parallax Mode).
-   ══════════════════════════════════════════════════════════════ */
-
-/* ── The Prism ribbon — the single nav instrument (after v56, rebuilt).
-   The art reads left→right: a single beam, the prism triangle (~70%),
-   the refracted spectrum. Slide horizontally to move Beam ↔ Prism ↔
-   Refraction; pull down to raise each column's analytical companion
-   (Beam·Diatribe / Prism·Parallax / Refraction·Comparison). ── */
-:root {
-  --ribbon-h: 60px; --triangle-x: 70%;
-  --safe-top: env(safe-area-inset-top, 0px);
-  --safe-bottom: env(safe-area-inset-bottom, 0px);
-  --hdr-h: 44px;
-  /* everything the top chrome (notch + header bar + ribbon) occupies */
-  --top-chrome: calc(var(--safe-top) + var(--hdr-h) + var(--ribbon-h));
-}
-@media (min-width: 900px) { :root { --ribbon-h: 92px; --hdr-h: 52px; } }
-
-.prism-ribbon {
-  position: fixed; top: calc(var(--safe-top) + var(--hdr-h)); left: 0; right: 0; height: var(--ribbon-h); z-index: 45;
-  overflow: hidden; cursor: grab; touch-action: none; user-select: none;
-  background: linear-gradient(180deg, rgba(7,12,26,0.55), rgba(7,12,26,0));
-  transition: top 0.6s cubic-bezier(0.4,0,0.2,1), background 0.6s ease, opacity 0.6s ease;
-}
-.prism-ribbon:active { cursor: grabbing; }
-html.parallax-mode .prism-ribbon { top: calc(100% - var(--ribbon-h) - var(--safe-bottom)); background: linear-gradient(0deg, rgba(7,12,26,0.6), rgba(7,12,26,0)); }
-.prism-ribbon-img {
-  position: absolute; top: 50%; left: 0; height: 78%; width: auto; max-width: none;
-  transform: translateY(-50%); transform-origin: left center;
-  will-change: transform; pointer-events: none; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.42));
-  transition: transform 0.6s cubic-bezier(0.4,0,0.2,1);
-}
-
-.ribbon-zone { position: absolute; top: 0; bottom: 0; width: 33.333%; background: none; border: none; padding: 0; cursor: pointer; }
-.ribbon-zone[data-col="0"] { left: 0; } .ribbon-zone[data-col="1"] { left: 33.333%; } .ribbon-zone[data-col="2"] { left: 66.666%; }
-.ribbon-hint { position: absolute; left: 50%; bottom: 5px; transform: translateX(-50%); pointer-events: none;
-  font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-low); white-space: nowrap; }
-.ribbon-hint-name { color: var(--ink-mid); }
-html.parallax-mode .ribbon-hint { bottom: auto; top: 5px; }
-
-/* upper-row tabs, anchored under the prism triangle */
-.upper-tabs {
-  position: fixed; top: calc(var(--ribbon-h) + 6px); left: var(--triangle-x); transform: translateX(-50%);
-  z-index: 46; display: none; gap: 8px; padding: 5px 9px;
-  background: rgba(9,15,32,0.62); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
-  border: 0.5px solid var(--rule); border-radius: 8px;
-}
-/* in Parallax Mode the ribbon (with its triangle) sits at the BOTTOM, so the
-   tabs anchor just above it — under the triangle — clearing the panel header. */
-html.parallax-mode .upper-tabs { display: inline-flex; top: auto; bottom: calc(var(--ribbon-h) + var(--safe-bottom) + 8px); }
-.upper-tab { font-family: var(--mono); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--ink-low); background: none; border: none; cursor: pointer; padding: 3px 6px; transition: color 0.18s; }
-.upper-tab:hover { color: var(--ink-mid); }
-.upper-tab.active { color: var(--ink); }
-/* keep upper-panel content clear of the bottom tabs */
-.tri-panel[data-row="upper"] .tri-body { padding-bottom: 44px; }
-
-/* scrim behind an open space */
-.tri-scrim { position: fixed; inset: 0; z-index: 25; background: rgba(5,9,20,0.5);
-  opacity: 0; visibility: hidden; transition: opacity 0.45s ease, visibility 0s linear 0.45s; }
-.tri-scrim.show { opacity: 1; visibility: visible; transition: opacity 0.45s ease; }
-
-/* when a space covers the base, hide the base graph chrome so it doesn't
-   bleed through behind the ribbon / panel */
-body.tri-cover footer, body.tri-cover .graph-info, body.tri-cover .member-toggle,
-body.tri-cover .recenter-btn, body.tri-cover .derive-panel {
-  opacity: 0 !important; pointer-events: none !important; transition: opacity 0.3s ease;
-}
-
-/* ── Panels as spaces — directional slide, comfortable resize, depth ── */
-.tri-panel {
-  position: fixed; z-index: 30; display: flex; flex-direction: column;
-  top: 0; bottom: 0; left: 0; right: 0;
-  padding: calc(var(--top-chrome) + 14px) clamp(18px, 5vw, 56px) calc(40px + var(--safe-bottom));
-  /* translucent so the band-tinted ambient bleeds through (not a flat slab) */
-  background: linear-gradient(180deg, rgba(7,12,26,0.80), rgba(9,15,32,0.88));
-  -webkit-backdrop-filter: blur(22px); backdrop-filter: blur(22px);
-  overflow: hidden;
-  opacity: 0; visibility: hidden; pointer-events: none;
-  transition: transform 0.55s cubic-bezier(0.22,1,0.36,1), opacity 0.45s ease, visibility 0s linear 0.55s;
-  will-change: transform, opacity;
-}
-.tri-panel[data-panel="beam"]       { transform: translateX(-101%); }
-.tri-panel[data-panel="refraction"] { transform: translateX(101%); }
-.tri-panel[data-row="upper"]        { transform: translateY(-101%); top: 0; bottom: var(--ribbon-h); }
-.tri-panel.open { opacity: 1; visibility: visible; pointer-events: auto; transform: none;
-  transition: transform 0.55s cubic-bezier(0.22,1,0.36,1), opacity 0.45s ease; }
-/* a slow breathing glow behind the content — the semi-dynamic field, not a flat panel */
-.tri-panel::before {
-  content: ''; position: absolute; inset: -8%; pointer-events: none; z-index: 0;
-  background:
-    radial-gradient(ellipse 76% 52% at 50% 16%, rgba(74,110,182,0.20), rgba(74,110,182,0.05) 46%, transparent 72%),
-    radial-gradient(ellipse 56% 40% at 80% 86%, rgba(150,120,70,0.10), transparent 70%);
-  animation: tri-ambient 16s ease-in-out infinite alternate;
-}
-.tri-panel > * { position: relative; z-index: 1; }
-@keyframes tri-ambient {
-  0%   { opacity: 0.5;  transform: translateY(0) scale(1); }
-  100% { opacity: 1;    transform: translateY(-2%) scale(1.07); }
-}
-/* on wider screens panels migrate to a comfortable centred column */
-@media (min-width: 900px) {
-  .tri-panel[data-row="lower"] { left: 50%; right: auto; width: min(880px, 78vw); }
-  .tri-panel[data-panel="beam"]       { transform: translateX(-50%) translateX(-118%); }
-  .tri-panel[data-panel="refraction"] { transform: translateX(-50%) translateX(118%); }
-  .tri-panel[data-row="lower"].open   { transform: translateX(-50%); }
-  .tri-panel[data-row="upper"] { left: 50%; right: auto; width: min(1020px, 88vw); transform: translateX(-50%) translateY(-101%); }
-  .tri-panel[data-row="upper"].open   { transform: translateX(-50%); }
-}
-.tri-head { display: flex; align-items: flex-start; justify-content: space-between; flex: none; gap: 16px; }
-.tri-eyebrow { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-low); }
-.tri-title { font-family: var(--serif); font-size: clamp(22px, 3vw, 30px); color: var(--ink); margin: 3px 0 0; font-weight: 400; }
-.tri-sub { font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--ink-mid); margin: 8px 0 0; max-width: 62ch; line-height: 1.5; }
-.tri-close { font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; color: var(--ink-mid); background: none; border: 0.5px solid var(--rule); border-radius: 6px; padding: 5px 10px; cursor: pointer; flex: none; }
-.tri-close:hover { color: var(--ink); border-color: rgba(255,255,255,0.3); }
-.tri-rule { height: 1px; background: var(--rule); margin: 16px 0; flex: none; }
-.tri-body { flex: 1 1 auto; overflow-y: auto; overscroll-behavior: contain; min-height: 0; }
-.tri-next { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.04em; color: var(--ink-low); border: 0.5px dashed var(--rule); border-radius: 8px; padding: 12px 14px; line-height: 1.75; margin-top: 16px; }
-.tri-next b { color: var(--ink-mid); font-weight: 500; }
-
-/* Beam profile card (your identity — the Beam is your personal layer) */
-.beam-profile { margin-bottom: 18px; padding-bottom: 16px; border-bottom: 0.5px solid var(--rule); }
-.beam-profile-top { display: flex; align-items: center; gap: 12px; }
-.beam-avatar { width: 42px; height: 42px; border-radius: 50%; flex: none; display: flex; align-items: center; justify-content: center;
-  font-family: var(--serif); font-size: 18px; color: var(--ink); background: rgba(255,255,255,0.06); border: 0.5px solid var(--rule); }
-.beam-id { flex: 1 1 auto; min-width: 0; }
-.beam-displayname { font-family: var(--serif); font-size: 17px; color: var(--ink); line-height: 1.2; }
-.beam-displayname.placeholder { color: var(--ink-low); font-style: italic; }
-.beam-handle { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; color: var(--side-left); margin-top: 1px; }
-.beam-handle.placeholder { color: var(--ink-low); }
-.beam-edit { font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; color: var(--ink-mid); background: none;
-  border: 0.5px solid var(--rule); border-radius: 6px; padding: 5px 10px; cursor: pointer; flex: none; }
-.beam-edit:hover { color: var(--ink); border-color: rgba(255,255,255,0.3); }
-.beam-pform { display: none; gap: 8px; margin-top: 12px; flex-wrap: wrap; align-items: center; }
-.beam-pform.open { display: flex; }
-.beam-pform input { font-family: var(--mono); font-size: 12px; color: var(--ink); background: rgba(255,255,255,0.05);
-  border: 0.5px solid var(--rule); border-radius: 6px; padding: 7px 9px; outline: none; }
-.beam-pform input:focus { border-color: rgba(255,255,255,0.32); }
-.beam-pform input::placeholder { color: var(--ink-low); }
-.beam-pform .pf-handle { width: 130px; }
-.beam-pform button { font-family: var(--mono); font-size: 11px; color: var(--ink); background: rgba(255,255,255,0.09);
-  border: 0.5px solid var(--rule); border-radius: 6px; padding: 7px 12px; cursor: pointer; }
-.beam-pform button:hover { background: rgba(255,255,255,0.16); }
-
-/* Beam / Diatribe record rows */
-.beam-summary { font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; color: var(--ink-mid); margin-bottom: 12px; }
-.beam-row { display: grid; grid-template-columns: 1fr auto; gap: 3px 12px; align-items: baseline; padding: 11px 4px; border-bottom: 0.5px solid var(--rule); }
-.beam-ev { font-family: var(--serif); font-size: 15px; color: var(--ink); }
-.beam-when { font-family: var(--mono); font-size: 9px; color: var(--ink-low); text-align: right; white-space: nowrap; }
-.beam-pos { font-family: var(--mono); font-size: 10px; letter-spacing: 0.05em; color: var(--ink-mid); grid-column: 1 / -1; }
-.beam-band { text-transform: uppercase; }
-.beam-band[data-band="fluid"] { color: #78c8a0; }
-.beam-band[data-band="coalition"] { color: #dcb864; }
-.beam-band[data-band="denominated"] { color: #e07a7a; }
-.beam-empty { font-family: var(--serif); font-style: italic; color: var(--ink-low); line-height: 1.5; }
-.tri-statline { font-family: var(--mono); font-size: 11px; letter-spacing: 0.04em; color: var(--ink-mid); line-height: 1.9; }
-.tri-statline b { color: var(--ink); font-weight: 500; }
-
-/* ── Refraction — the SAME full-bleed stage as Prism, not a card. Transparent
-   so the shared ambient field shows through its own graphmap; reps are the only
-   different factor. ── */
-#panelRefraction { background: none; -webkit-backdrop-filter: none; backdrop-filter: none; padding: 0; overflow: visible; }
-#panelRefraction::before { display: none; }                 /* no card glow */
-#panelRefraction .tri-head { position: absolute; top: calc(var(--top-chrome) + 4px); left: 0; right: 0;
-  padding: 0 clamp(14px, 4vw, 40px); margin: 0; z-index: 6; pointer-events: none; }
-#panelRefraction .tri-head > div { display: none; }         /* hide eyebrow + big title */
-#panelRefraction .tri-sub, #panelRefraction .tri-rule { display: none; }
-#panelRefraction .tri-close { pointer-events: auto; margin-left: auto; }
-#panelRefraction .tri-body { position: absolute; inset: 0; padding: 0; overflow: visible; }
-
-.ref-stage { position: absolute; inset: 0; }
-.ref-map { position: absolute; inset: 0; border: none; border-radius: 0; background: none; overflow: hidden; }
-.ref-map canvas { display: block; }
-.ref-cap { position: absolute; top: calc(var(--top-chrome) + 10px); left: clamp(14px, 4vw, 40px); z-index: 5; pointer-events: none;
-  font-family: var(--mono); font-size: 10px; letter-spacing: 0.04em; color: var(--ink-mid); }
-/* event ↔ general mode toggle, top-centre of the stage */
-.ref-toggle { position: absolute; top: calc(var(--top-chrome) + 6px); left: 50%; transform: translateX(-50%); z-index: 6;
-  display: inline-flex; border: 0.5px solid var(--rule); border-radius: 7px; overflow: hidden;
-  background: rgba(9,15,32,0.5); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
-.ref-toggle button { font-family: var(--mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-low); background: none; border: none; padding: 6px 13px; cursor: pointer; }
-.ref-toggle button.on { color: var(--ink); background: rgba(255,255,255,0.10); }
-/* follow controls float minimally over the stage (no heavy box) */
-.ref-dock { position: absolute; top: calc(var(--top-chrome) + 44px); right: clamp(14px, 4vw, 40px); z-index: 5;
-  width: clamp(216px, 26%, 300px); max-height: calc(100% - var(--top-chrome) - 84px); overflow-y: auto; overscroll-behavior: contain;
-  display: flex; flex-direction: column; gap: 14px;
-  background: rgba(9,15,32,0.40); -webkit-backdrop-filter: blur(9px); backdrop-filter: blur(9px);
-  border: 0.5px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 12px 13px; }
-@media (max-width: 680px) {
-  .ref-dock { width: auto; left: clamp(14px,4vw,40px); top: auto; bottom: calc(16px + var(--safe-bottom)); max-height: 42%; }
-}
-
-/* full-bleed Refraction: hide the base graph + chrome so its own stage + the
-   shared ambient field are all you see */
-body.ref-mode main, body.ref-mode footer, body.ref-mode .graph-phase,
-body.ref-mode .answers-phase, body.ref-mode .event-phase { opacity: 0 !important; pointer-events: none; }
-
-/* Refraction info card — appears when a rep diamond (or row) is clicked.
-   Same order as the compare card: name+info, delta, text, chips. */
-.ref-info { position: absolute; top: calc(var(--top-chrome) + 44px); left: clamp(14px, 4vw, 40px); z-index: 7;
-  width: clamp(244px, 30%, 360px); max-height: calc(100% - var(--top-chrome) - 84px); overflow-y: auto; overscroll-behavior: contain;
-  background: rgba(9,15,32,0.62); -webkit-backdrop-filter: blur(11px); backdrop-filter: blur(11px);
-  border: 0.5px solid var(--rule); border-radius: 10px; padding: 16px 16px 14px; }
-.ref-info[hidden] { display: none; }
-.ref-info-close { position: absolute; top: 7px; right: 9px; background: none; border: none; color: var(--ink-low); font-size: 16px; line-height: 1; cursor: pointer; }
-.ref-info-close:hover { color: var(--ink); }
-.ref-info-name { font-family: var(--serif); font-size: 18px; color: var(--ink); line-height: 1.2; padding-right: 18px; }
-.ref-info-name.party-D { color: #6f9fe0; } .ref-info-name.party-R { color: #e07a7a; } .ref-info-name.party-I { color: #c9b98a; }
-.ref-info-meta { font-family: var(--mono); font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-mid); margin-top: 3px; }
-.ref-info-nums { font-family: var(--mono); font-size: 10px; letter-spacing: 0.04em; color: var(--ink-mid); margin-top: 8px; }
-.ref-info-delta { font-family: var(--mono); font-size: 10px; letter-spacing: 0.04em; color: var(--ink); margin: 10px 0; padding: 8px 0; border-top: 0.5px solid var(--rule); border-bottom: 0.5px solid var(--rule); }
-.ref-info-text { font-family: var(--serif); font-size: 14px; line-height: 1.5; color: var(--ink); margin-top: 10px; }
-.ref-info-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 13px; }
-.ref-info-chips .chip { font-family: var(--mono); font-size: 9px; letter-spacing: 0.04em; color: var(--ink-mid); border: 0.5px solid var(--rule); border-radius: 10px; padding: 3px 8px; }
-
-/* ── Parallax aggregate field + interpretive lens (§3.3) ── */
-.pax-controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 12px; }
-.pax-seg { display: inline-flex; border: 0.5px solid var(--rule); border-radius: 6px; overflow: hidden; }
-.pax-seg button { font-family: var(--mono); font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-low); background: none; border: none; padding: 5px 10px; cursor: pointer; }
-.pax-seg button.on { color: var(--ink); background: rgba(255,255,255,0.10); }
-.pax-bandchip { font-family: var(--mono); font-size: 9px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-low); background: rgba(255,255,255,0.04); border: 0.5px solid var(--rule); border-radius: 11px; padding: 4px 10px; cursor: pointer; }
-.pax-bandchip.on[data-band="fluid"]       { color: #78c8a0; border-color: rgba(120,200,160,0.5); }
-.pax-bandchip.on[data-band="coalition"]   { color: #dcb864; border-color: rgba(220,184,100,0.5); }
-.pax-bandchip.on[data-band="denominated"] { color: #e07a7a; border-color: rgba(224,122,122,0.5); }
-.pax-figure { width: 100%; max-width: 460px; margin: 4px auto 0; }
-.pax-svg { width: 100%; height: auto; display: block; border: 0.5px solid var(--rule); border-radius: 8px; background: rgba(6,11,24,0.5); }
-.pax-dot { transition: cx 0.6s cubic-bezier(0.22,1,0.36,1), cy 0.6s cubic-bezier(0.22,1,0.36,1), r 0.3s ease, opacity 0.3s ease; }
-.pax-svg.heat .pax-dot { mix-blend-mode: screen; }
-.pax-lens { margin-top: 16px; }
-.pax-lens-head { font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-low); margin-bottom: 8px; }
-.pax-lens-words { display: flex; flex-wrap: wrap; gap: 7px; }
-.lens-chip { font-family: var(--mono); font-size: 11px; letter-spacing: 0.03em; color: var(--ink-mid); background: rgba(255,255,255,0.05); border: 0.5px solid var(--rule); border-radius: 12px; padding: 5px 11px; cursor: pointer; transition: color 0.18s, background 0.18s, border-color 0.18s; }
-.lens-chip[data-state="genuine"] { color: #a7e0c2; border-color: rgba(120,200,160,0.6); background: rgba(120,200,160,0.12); }
-.lens-chip[data-state="bad"]     { color: #eaa6a6; border-color: rgba(224,122,122,0.6); background: rgba(224,122,122,0.12); }
-.pax-readout { font-family: var(--mono); font-size: 10px; letter-spacing: 0.04em; color: var(--ink-mid); margin-top: 12px; line-height: 1.6; }
-.pax-readout b { color: var(--ink); font-weight: 500; }
-.pax-you { color: var(--side-left); }
-
-/* ── Ted Turner the Coyote — the guide ── */
-.ted-guide { position: fixed; left: 16px; bottom: calc(18px + var(--safe-bottom)); z-index: 60;
-  display: flex; align-items: flex-end; gap: 10px; max-width: min(430px, 88vw);
-  opacity: 0; transform: translateY(10px); pointer-events: none;
-  transition: opacity 0.45s ease, transform 0.45s cubic-bezier(0.22,1,0.36,1); }
-.ted-guide.show { opacity: 1; transform: none; pointer-events: auto; }
-.ted-portrait { width: 58px; height: 58px; flex: none; border-radius: 13px; cursor: pointer;
-  filter: drop-shadow(0 3px 12px rgba(0,0,0,0.45)); transition: transform 0.2s ease; }
-.ted-portrait:hover { transform: translateY(-2px) rotate(-3deg); }
-/* live 3D coyote portrait (the real Ted) rendered in a small canvas */
-.ted-face { width: 66px; height: 66px; flex: none; align-self: flex-end; cursor: pointer;
-  filter: drop-shadow(0 3px 12px rgba(0,0,0,0.5)); }
-.ted-bubble { font-family: var(--serif); font-size: 14px; line-height: 1.5; color: var(--ink);
-  background: rgba(9,15,32,0.88); -webkit-backdrop-filter: blur(11px); backdrop-filter: blur(11px);
-  border: 0.5px solid var(--rule); border-radius: 13px; padding: 12px 15px; cursor: pointer; }
-.ted-bubble::after { content: 'tap to dismiss'; display: block; font-family: var(--mono); font-size: 8px;
-  letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-low); margin-top: 7px; }
-
-/* ── Ted's full-body stage: a quiet night plane under stars where his whole
-   body stands. Shown only on the splash + diatribe; on the graph he trots the
-   real plane, so the stage stays hidden there. ── */
-:root { --ted-stage-h: clamp(220px, 42vh, 400px); }
-/* Full-width strip along the bottom so Ted can walk clear across the screen.
-   Pointer-events stay off so the UI underneath keeps working. */
-#tedStage { position: fixed; left: 0; right: 0; bottom: 0; z-index: 58;
-  width: 100%; height: var(--ted-stage-h);
-  display: none; pointer-events: none; }
-body.phase-event #tedStage, body.phase-diatribe #tedStage { display: block; }
-#tedStageCanvas { width: 100%; height: 100%; display: block; }
-/* when sent away he trots off-screen in 3D; just hide his speech bubble */
-body.ted-away .ted-guide { opacity: 0 !important; pointer-events: none !important; }
-/* when the body-stage is up, suppress the tiny in-bubble face and float the
-   bubble just above Ted's head */
-body.phase-event .ted-face, body.phase-diatribe .ted-face { display: none; }
-body.phase-event .ted-guide, body.phase-diatribe .ted-guide {
-  left: 12px; bottom: calc(var(--ted-stage-h) - 30px); max-width: min(330px, 80vw); }
-
-/* ── Ted's two toggles — a small persistent dock. One sends him off-screen
-   (and calls him back); one turns on cursor-hover commentary. ── */
-.ted-dock { position: fixed; left: 10px; bottom: calc(8px + var(--safe-bottom)); z-index: 61;
-  display: none; gap: 7px; pointer-events: auto; }
-body.phase-event .ted-dock, body.phase-diatribe .ted-dock { display: flex; }
-.ted-toggle { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--ink-low); background: rgba(9,15,32,0.78); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
-  border: 0.5px solid var(--rule); border-radius: 999px; padding: 6px 11px; cursor: pointer;
-  display: inline-flex; align-items: center; gap: 6px; transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease; }
-.ted-toggle:hover { border-color: rgba(180,198,230,0.6); color: var(--ink-mid); }
-.ted-toggle .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ink-low); transition: background 0.2s ease, box-shadow 0.2s ease; }
-.ted-toggle.on { color: var(--ink); border-color: rgba(150,180,230,0.55); background: rgba(18,28,52,0.82); }
-.ted-toggle.on .dot { background: #8fb0e6; box-shadow: 0 0 7px rgba(143,176,230,0.8); }
-
-/* ── Page-wide space: deep field + two drifting star layers (parallax), behind
-   the whole UI. Calm/semi-dynamic. The band-tint #ambient layers over the top. ── */
-#spaceField { position: fixed; inset: 0; z-index: 0; pointer-events: none;
-  background:
-    radial-gradient(ellipse 120% 85% at 50% 14%, rgba(34,52,92,0.32), rgba(8,12,26,0) 60%),
-    radial-gradient(ellipse 95% 75% at 80% 96%, rgba(44,32,76,0.24), rgba(8,12,26,0) 58%),
-    linear-gradient(180deg, #060a16 0%, #070c1a 46%, #05070f 100%); }
-#spaceField::before, #spaceField::after { content: ''; position: absolute; inset: -25%; background-repeat: repeat; }
-#spaceField::before {   /* far stars — small, faint, slow */
-  background-image:
-    radial-gradient(1px 1px at 20px 30px, rgba(220,230,255,0.7), transparent),
-    radial-gradient(1px 1px at 80px 120px, rgba(200,215,250,0.6), transparent),
-    radial-gradient(1px 1px at 150px 60px, rgba(220,230,255,0.5), transparent),
-    radial-gradient(1px 1px at 110px 180px, rgba(190,205,245,0.6), transparent),
-    radial-gradient(1px 1px at 50px 160px, rgba(220,230,255,0.5), transparent);
-  background-size: 200px 200px; opacity: 0.5; animation: spaceDriftFar 150s linear infinite; }
-#spaceField::after {    /* near stars — slightly larger, brighter, faster + twinkle */
-  background-image:
-    radial-gradient(1.6px 1.6px at 40px 50px, rgba(255,250,235,0.9), transparent),
-    radial-gradient(1.5px 1.5px at 180px 140px, rgba(225,235,255,0.8), transparent),
-    radial-gradient(1.5px 1.5px at 250px 80px, rgba(255,245,225,0.7), transparent),
-    radial-gradient(1.4px 1.4px at 300px 220px, rgba(220,230,255,0.7), transparent);
-  background-size: 320px 320px; opacity: 0.6; animation: spaceDriftNear 95s linear infinite, spaceTwinkle 6.5s ease-in-out infinite alternate; }
-@keyframes spaceDriftFar  { to { transform: translate(-200px, -200px); } }
-@keyframes spaceDriftNear { to { transform: translate(-320px, -320px); } }
-@keyframes spaceTwinkle   { from { opacity: 0.42; } to { opacity: 0.7; } }
-@media (prefers-reduced-motion: reduce) { #spaceField::before, #spaceField::after { animation: none; } }
-
-/* Ted's contact shadow now lives in 3D (a soft blob that follows him as he
-   roams) — see TedStage. No fixed CSS shadow. */
-
-/* ── Entry splash: large Prism logo + wordmark, morphing into the nav ribbon ── */
-.ev-logo { width: clamp(190px, 54vw, 360px); margin: 0 auto 22px; cursor: pointer;
-  display: flex; flex-direction: column; align-items: center; gap: 10px;
-  transform-origin: center top;
-  transition: transform 0.72s cubic-bezier(0.22,1,0.36,1), opacity 0.6s ease; }
-.ev-logo-prism { width: 100%; height: auto; display: block; filter: drop-shadow(0 4px 18px rgba(0,0,0,0.5)); }
-.ev-logo-word { width: clamp(100px, 27vw, 176px); height: auto; display: block;
-  transition: opacity 0.45s ease, transform 0.5s ease; }
-.ev-logo:hover { opacity: 0.95; }
-/* artful morph: the big prism lifts + shrinks toward the nav band as the real
-   ribbon fades into place; the wordmark lifts away first. */
-.ev-logo.migrate { transform: translateY(-38vh) scale(0.3); opacity: 0; pointer-events: none; }
-.ev-logo.migrate .ev-logo-word { opacity: 0; transform: translateY(-14px); }
-
-/* the ribbon stays hidden until the logo migrates into place — but the header
-   (event picker) is available on the splash so you can switch events there */
-body:not(.nav-ready) .prism-ribbon { opacity: 0 !important; pointer-events: none; }
-
-/* diatribe surface label — shown on the diatribe stage only */
-.diatribe-eyebrow { font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
-  color: var(--ink-low); text-align: center; margin-bottom: 14px; }
-body:not(.phase-diatribe) .diatribe-eyebrow { display: none; }
-
 </style>
 </head>
 <body class="dark phase-event">
 
-<!-- Page-wide "space": a semi-dynamic starfield + deep field behind the ENTIRE
-     UI. Sits beneath the band-tint ambient; Ted and every panel float in it. -->
-<div id="spaceField" aria-hidden="true"></div>
 <div id="ambient" class="prism-ambient"></div>
 
 <header>
-  <!-- phaseLabel kept (JS writes phase text to it) but hidden — the ribbon
-       carries the Prism identity now. Top corners stay clear for the phone's
-       status bar (time left / signal right). -->
-  <div class="prism-title" id="phaseLabel" hidden>prism · <strong>v2</strong> · event</div>
+  <div class="prism-title" id="phaseLabel">prism · <strong>v2</strong> · event</div>
   <div class="header-right">
     <select class="event-picker" id="eventPicker" aria-label="Select event" title="Select event"></select>
+    <button class="prism-toggle" onclick="toggleMode()">light</button>
   </div>
-  <!-- Dark-only for now. On ship: drop the forced `dark` body class and let
-       prefers-color-scheme pick (system default). Light-mode CSS is retained. -->
 </header>
 
 <!-- ── EVENT ENTRY PHASE ──
@@ -1576,18 +1148,12 @@ body:not(.phase-diatribe) .diatribe-eyebrow { display: none; }
      the user takes a position. -->
 <section class="event-phase" id="eventPhase">
   <div class="ev-inner">
-    <!-- Splash: the large Prism logo + the Prism wordmark. On click-in the big
-         logo lifts and shrinks, morphing into the smaller nav ribbon up top. -->
-    <div class="ev-logo" id="evLogo" title="Begin">
-      <img class="ev-logo-prism" src="../../Artwork/Prisms/Logo_1.png" alt="">
-      <img class="ev-logo-word" src="../../Artwork/Font%20logos/Font_logo_1.png" alt="Prism">
-    </div>
     <div class="ev-category" id="evCategory"></div>
     <h1 class="ev-title" id="evTitle"></h1>
     <div class="ev-rule" id="evRule"></div>
     <p class="ev-framing" id="evFraming"></p>
-    <div class="ev-keywords" id="evKeywords" data-band="fluid" data-ted-hint="Those words are the weather of this whole thing — the cloud you're about to take a position inside."></div>
-    <button class="ev-enter" id="evEnter" data-ted-hint="When you've got a feel for it, hit this. It drops you into the Prism to set your aperture.">
+    <div class="ev-keywords" id="evKeywords" data-band="fluid"></div>
+    <button class="ev-enter" id="evEnter">
       <span class="ev-enter-label">take a position</span>
       <span class="ev-enter-glyph">&rarr;</span>
     </button>
@@ -1595,7 +1161,6 @@ body:not(.phase-diatribe) .diatribe-eyebrow { display: none; }
 </section>
 
 <main>
-  <div class="diatribe-eyebrow">the diatribe · upper-left · set your aperture</div>
   <div class="framing" id="framing">[event framing loads here]</div>
 
   <div class="stage" id="stage">
@@ -1610,7 +1175,7 @@ body:not(.phase-diatribe) .diatribe-eyebrow { display: none; }
          real → track-wrap → ghost (slider between its captions).
          Initial labels + body are blank — text materializes after first
          slider engagement via the develop animation. -->
-    <div class="prism-caption real" id="captionReal" data-side="left" data-band="fluid" data-ted-hint="That's your position, spelled out. It rewrites itself every time you move the slider.">
+    <div class="prism-caption real" id="captionReal" data-side="left" data-band="fluid">
       <div class="caption-label">
         <span class="side"></span>
         <span class="band"></span>
@@ -1619,14 +1184,14 @@ body:not(.phase-diatribe) .diatribe-eyebrow { display: none; }
     </div>
 
     <div class="track-wrap">
-      <div class="track" id="track" data-ted-hint="This rail is your aperture. Center means lukewarm; the harder you push out, the more this thing grabs you. The marks are the three thirds.">
+      <div class="track" id="track">
         <div class="prism-threshold" style="left: 17%"></div>
         <div class="prism-threshold" style="left: 33%"></div>
         <div class="prism-threshold center" style="left: 50%"></div>
         <div class="prism-threshold" style="left: 67%"></div>
         <div class="prism-threshold" style="left: 83%"></div>
-        <div class="prism-thumb"       id="thumbReal"  data-side="left"  style="left: 50%" data-ted-hint="That's your read — drag it to where you actually land."></div>
-        <div class="prism-thumb ghost" id="thumbGhost" data-side="right" style="left: 50%" data-ted-hint="That ghost is the mirror — the other side's read, flipped from yours. Watch how far apart you two sit."></div>
+        <div class="prism-thumb"       id="thumbReal"  data-side="left"  style="left: 50%"></div>
+        <div class="prism-thumb ghost" id="thumbGhost" data-side="right" style="left: 50%"></div>
       </div>
       <div class="cue" id="cue">drag · find the band</div>
       <div class="readout">
@@ -1636,7 +1201,7 @@ body:not(.phase-diatribe) .diatribe-eyebrow { display: none; }
       </div>
     </div>
 
-    <div class="prism-caption ghost" id="captionGhost" data-side="right" data-band="fluid" data-ted-hint="The opposing read, for contrast — the same question seen from the other chair.">
+    <div class="prism-caption ghost" id="captionGhost" data-side="right" data-band="fluid">
       <div class="caption-label">
         <span class="side"></span>
         <span class="band"></span>
@@ -1720,37 +1285,19 @@ body:not(.phase-diatribe) .diatribe-eyebrow { display: none; }
     </div><!-- /graph-left -->
 
     <div class="graph-info" id="graphInfo">
-      <!-- ── Tracker (resting state): followed legislators. Hidden while comparing. ── -->
-      <div class="tracker" id="tracker">
-        <div class="tracker-head">
-          <span class="tracker-title">tracking</span>
-          <span class="tracker-count" id="trackerCount"></span>
-        </div>
-        <div class="tracker-scroll" id="trackerScroll"></div>
-        <div class="tracker-add">
-          <div class="tracker-results" id="trackerResults" hidden></div>
-          <input class="tracker-search" id="trackerSearch" type="text" placeholder="+ find a representative" autocomplete="off" spellcheck="false" />
-        </div>
-      </div>
-
-      <!-- ── Compare-mode header: back to the list + follow toggle ── -->
-      <div class="cmp-bar" id="cmpBar">
-        <button class="cmp-back" id="cmpBack" type="button">&lsaquo; tracking</button>
-        <button class="cmp-follow" id="cmpFollow" type="button" aria-pressed="false"><span class="cmp-follow-glyph">&#9734;</span> <span class="cmp-follow-word">follow</span></button>
-      </div>
-
       <!-- your response (top half) -->
       <div class="cmp cmp-user" id="cmpUser" data-side="left" data-band="fluid">
         <div class="cmp-label" id="cmpUserLabel"></div>
         <div class="cmp-text caption-text" id="cmpUserText"></div>
         <div class="cmp-nums" id="cmpUserNums"></div>
       </div>
-      <!-- the legislator / voice: name+info first, then the delta, then the text -->
+      <!-- line of symmetry — the deltas live on the axis between you and them -->
+      <div class="cmp-axis" id="cmpAxis"><span class="cmp-delta" id="cmpDelta"></span></div>
+      <!-- the selected voice (bottom half, mirrored) -->
       <div class="cmp cmp-agg" id="cmpAgg" data-side="left" data-band="fluid">
-        <div class="cmp-label" id="cmpAggLabel"></div>
         <div class="cmp-nums" id="cmpAggNums"></div>
-        <div class="cmp-axis" id="cmpAxis"><span class="cmp-delta" id="cmpDelta"></span></div>
         <div class="cmp-text caption-text" id="cmpAggText"></div>
+        <div class="cmp-label" id="cmpAggLabel"></div>
       </div>
       <!-- condensed keyword / record cloud -->
       <div class="cmp-cloud" id="cmpCloud"></div>
@@ -1783,93 +1330,6 @@ body:not(.phase-diatribe) .diatribe-eyebrow { display: none; }
   <div class="asym" id="asym">asymmetry · <span class="delta" id="asymDelta">0</span></div>
 </footer>
 
-<!-- ══ DUAL TRIPTYCH — the Prism ribbon navigator (v2, after v56) ══ -->
-<div class="tri-scrim" id="triScrim"></div>
-
-<div class="prism-ribbon" id="prismRibbon" aria-label="Prism navigator — slide to move between panels, pull down for the analytical layer">
-  <img class="prism-ribbon-img" id="prismRibbonImg" src="../../Artwork/Prisms/prism_nav_full.png" alt="">
-  <button class="ribbon-zone" data-col="0" type="button" aria-label="Beam"></button>
-  <button class="ribbon-zone" data-col="1" type="button" aria-label="Prism"></button>
-  <button class="ribbon-zone" data-col="2" type="button" aria-label="Refraction"></button>
-  <div class="ribbon-hint"><span class="ribbon-hint-name" id="ribbonName">Prism</span></div>
-</div>
-
-<div class="upper-tabs" id="upperTabs">
-  <button class="upper-tab" data-col="0" type="button">Diatribe</button>
-  <button class="upper-tab" data-col="1" type="button">Parallax</button>
-  <button class="upper-tab" data-col="2" type="button">Comparison</button>
-</div>
-
-<!-- Lower-Left — The Beam (user record) -->
-<aside class="tri-panel" id="panelBeam" data-row="lower" data-panel="beam">
-  <div class="tri-head">
-    <div>
-      <div class="tri-eyebrow">lower left · action</div>
-      <h2 class="tri-title">The Beam</h2>
-    </div>
-    <button class="tri-close" type="button">close &times;</button>
-  </div>
-  <p class="tri-sub">Your longitudinal record — where you've stood across events, over time.</p>
-  <div class="tri-rule"></div>
-  <div class="tri-body" id="beamBody"></div>
-</aside>
-
-<!-- Lower-Right — The Refraction (followed reps) -->
-<aside class="tri-panel" id="panelRefraction" data-row="lower" data-panel="refraction">
-  <div class="tri-head">
-    <div>
-      <div class="tri-eyebrow">lower right · action</div>
-      <h2 class="tri-title">The Refraction</h2>
-    </div>
-    <button class="tri-close" type="button">close &times;</button>
-  </div>
-  <p class="tri-sub">The institutional layer — the representatives you follow, mapped on the same axes. Open one on the graph to compare against your pin.</p>
-  <div class="tri-rule"></div>
-  <div class="tri-body" id="refractionBody"></div>
-</aside>
-
-<!-- Upper-Left — The Diatribe -->
-<aside class="tri-panel" id="panelDiatribe" data-row="upper" data-panel="diatribe">
-  <div class="tri-head">
-    <div>
-      <div class="tri-eyebrow">upper left · parallax</div>
-      <h2 class="tri-title">The Diatribe</h2>
-    </div>
-    <button class="tri-close" type="button">close &times;</button>
-  </div>
-  <p class="tri-sub">How you've perceived the quality of discourse across events — the perceptual companion to the Beam.</p>
-  <div class="tri-rule"></div>
-  <div class="tri-body" id="diatribeBody"></div>
-</aside>
-
-<!-- Upper-Center — The Parallax -->
-<aside class="tri-panel" id="panelParallax" data-row="upper" data-panel="parallax">
-  <div class="tri-head">
-    <div>
-      <div class="tri-eyebrow">upper center · parallax</div>
-      <h2 class="tri-title">The Parallax</h2>
-    </div>
-    <button class="tri-close" type="button">close &times;</button>
-  </div>
-  <p class="tri-sub">The aggregate — the whole field's responses, seen through your interpretive lens. The data hasn't moved; the observer has.</p>
-  <div class="tri-rule"></div>
-  <div class="tri-body" id="parallaxBody"></div>
-</aside>
-
-<!-- Upper-Right — The Comparison Layer -->
-<aside class="tri-panel" id="panelComparison" data-row="upper" data-panel="comparison">
-  <div class="tri-head">
-    <div>
-      <div class="tri-eyebrow">upper right · parallax</div>
-      <h2 class="tri-title">The Comparison Layer</h2>
-    </div>
-    <button class="tri-close" type="button">close &times;</button>
-  </div>
-  <p class="tri-sub">You, measured against the institutional map — your pin versus the representatives you follow.</p>
-  <div class="tri-rule"></div>
-  <div class="tri-body" id="comparisonBody"></div>
-</aside>
-
 <!-- Institutional-layer (legislators) toggle — Phase 6.1.5. Kept a direct body
      child (NOT inside the graph) because .graph-left has `perspective`, which
      makes any transformed/perspective ancestor the containing block for
@@ -1898,30 +1358,6 @@ body:not(.phase-diatribe) .diatribe-eyebrow { display: none; }
   <input class="derive-key" id="deriveKey" type="password" placeholder="Anthropic API key (sk-ant-…)" autocomplete="off" spellcheck="false" />
   <button class="derive-run" id="deriveRun" type="button">Derive 18 notable members →</button>
   <div class="derive-log" id="deriveLog"></div>
-</div>
-
-<!-- Ted Turner the Coyote — the guide. Speaks at chosen moments; tap to dismiss. -->
-<div class="ted-guide" id="tedGuide">
-  <canvas class="ted-face" id="tedFace" width="128" height="128"></canvas>
-  <div class="ted-bubble" id="tedBubble"></div>
-</div>
-
-<!-- Ted's full-body stage — a night plane under stars (splash + diatribe only) -->
-<div id="tedStage" aria-hidden="true">
-  <canvas id="tedStageCanvas"></canvas>
-</div>
-
-<!-- Ted's two toggles: send him off / call him back, and cursor commentary -->
-<div class="ted-dock" id="tedDock">
-  <button class="ted-toggle" id="tedAwayToggle" type="button" aria-pressed="false" title="Send Ted off-screen / call him back">
-    <span class="dot"></span><span class="lbl">Ted's here</span>
-  </button>
-  <button class="ted-toggle" id="tedNarrateToggle" type="button" aria-pressed="false" title="Let Ted comment on whatever your cursor hovers">
-    <span class="dot"></span><span class="lbl">guide me</span>
-  </button>
-  <button class="ted-toggle" id="tedVoiceToggle" type="button" aria-pressed="false" title="Ted's retro synth voice">
-    <span class="dot"></span><span class="lbl">voice</span>
-  </button>
 </div>
 
 <!-- Data layer -->
@@ -1954,94 +1390,6 @@ const isMobile = () => mqMobile.matches;
 
 // ---- Data ----
 PrismDB.seed();
-
-// ── Iran-at-large event (drafted in Parameters/06_Events/evt_iran_general_draft_v2.md).
-// Upserted here so it surfaces in existing storage; addEvent assigns a fresh
-// numeric id, so we guard by a meta marker and make it the active default once. ──
-const IRAN_EVENT = {
-  title: 'The conflict with Iran (general)',
-  category: 'Foreign Policy · Iran · Nuclear',
-  framing: "For two decades the U.S.–Iran standoff has circled the same object — Iran's nuclear program — through sanctions, sabotage, a landmark deal and its collapse, and the recurring shadow of war. Two questions keep recurring: is Iran a threat, and is the answer confrontation or diplomacy?",
-  prompt: 'The decades-long U.S.–Iran standoff over the nuclear program — threat or not, confrontation or diplomacy.',
-  meta: { dialecticsRef: 'iran_general_v2', status: 'draft', editHistory: [] },
-  date: '2026-06-24', active: true, prevalentAxis: 'y', antiValentBand: 'coalition',
-  axes: { x: { pos: 'Threat', neg: 'Non-threat' }, y: { pos: 'Confrontation', neg: 'Diplomacy' } },
-  responses: {
-    A: { xSide: 'left', source: '',
-      goodFaith: { text: "The deal was working — verified, contained. We threw it away.", xWord: 'contained', yWord: 'deal', words: [] },
-      coalition: { text: "The economy is tanking and we're chasing Iran — fix it at home, now.", xWord: 'economy', yWord: 'now', words: [] },
-      badFaith:  { text: "Trump is endangering Israel, provoking Iran for a fight nobody needs.", xWord: 'provoking', yWord: 'Trump', words: [] } },
-    B: { xSide: 'right', source: '',
-      goodFaith: { text: "Iran is a threat we have to deal with — clear-eyed about it.", xWord: 'threat', yWord: 'deal with', words: [] },
-      coalition: { text: "They want a nuke and the clock is real — we have to act.", xWord: 'nuke', yWord: 'act', words: [] },
-      badFaith:  { text: '"Death to America" — they mean it. They\'re evil and must be destroyed.', xWord: 'evil', yWord: 'destroy', words: [] } },
-    C: { xSide: 'left', source: '',
-      goodFaith: { text: "Not another war — Iran isn't the threat they're selling.", xWord: 'not a threat', yWord: 'anti-war', words: [] },
-      coalition: { text: "The empire is out of control, manufacturing the next war.", xWord: 'manufactured', yWord: 'empire', words: [] },
-      badFaith:  { text: "Down with the empire — Iran's the one standing up to it.", xWord: 'pro-Iran', yWord: 'anti-empire', words: [] } },
-    D: { xSide: 'right', source: '',
-      goodFaith: { text: "Iran's real, but America comes first — not our fight.", xWord: 'real', yWord: 'America first', words: [] },
-      coalition: { text: "No more endless wars — we've bled enough for that region.", xWord: 'endless war', yWord: 'no more', words: [] },
-      badFaith:  { text: "We already lost — Iran won, and the empire's too spent to admit it.", xWord: 'Iran won', yWord: 'spent', words: [] } },
-  },
-  diatribe: {
-    LF: { text: "Doesn't seem like a serious problem.", side: 'left', band: 'fluid' },
-    LC: { text: "Diplomacy over military.", side: 'left', band: 'coalition' },
-    LD: { text: "Iran is a legitimate, revolutionary state.", side: 'left', band: 'denominated' },
-    RF: { text: "Iran is a problem.", side: 'right', band: 'fluid' },
-    RC: { text: "Iran wants nuclear weapons.", side: 'right', band: 'coalition' },
-    RD: { text: "Iran is evil.", side: 'right', band: 'denominated' },
-  },
-};
-try {
-  const existsIran = (PrismDB.getEvents() || []).find(e => e.meta && e.meta.dialecticsRef === 'iran_general_v2');
-  if (!existsIran) { const added = PrismDB.addEvent(IRAN_EVENT); if (added && PrismDB.setActive) PrismDB.setActive(added.id); }
-} catch (e) { console.warn('[v2] Iran event upsert failed:', e && e.message); }
-
-// ── Immigration-at-large event (Parameters/06_Events/evt_immigration_general_draft_v2.md).
-// Object = the dignity/security dialectic. X-prevalent (Dignity−/Security+), weak;
-// Y = institutional channel (State+/Market−). Same upsert pattern as Iran; set active
-// last so the bare URL opens on it. ──
-const IMMIGRATION_EVENT = {
-  title: 'Immigration (general)',
-  category: 'Domestic · Immigration · Borders',
-  framing: "Immigration is staged as open versus closed, but the country argues past itself because two goods are on the table — the dignity of the person who moves for a better life, and the security of the citizen who receives them. Both are real. The fight scrambles party because the security good is mostly spoken in a racial vehicle that discredits it, and the welcome good keeps forgetting the cause that produced the refugee and the consequence that follows them in.",
-  prompt: 'Two goods in tension — the dignity of the one who moves and the security of the one who receives.',
-  meta: { dialecticsRef: 'immigration_general_v2', status: 'draft', editHistory: [] },
-  date: '2026-06-27', active: true, prevalentAxis: 'x', antiValentBand: 'coalition',
-  axes: { x: { pos: 'Security', neg: 'Dignity' }, y: { pos: 'State', neg: 'Market' } },
-  responses: {
-    A: { xSide: 'left', source: '',
-      goodFaith: { text: "We made promises to the persecuted — asylum is a covenant, honor it.", xWord: 'refuge', yWord: 'covenant', words: [] },
-      coalition: { text: "No human is illegal — legalize them, protect them.", xWord: 'not illegal', yWord: 'legalize', words: [] },
-      badFaith:  { text: "The border itself is violence — any enforcement is cruelty.", xWord: 'border = violence', yWord: 'no enforcement', words: [] } },
-    B: { xSide: 'right', source: '',
-      goodFaith: { text: "A country has to decide who enters — that's self-government, not hatred.", xWord: 'govern', yWord: 'who enters', words: [] },
-      coalition: { text: "We've lost control of the border — enforce it, build the wall.", xWord: 'control', yWord: 'the wall', words: [] },
-      badFaith:  { text: "This is an invasion — a deliberate replacement of a people.", xWord: 'invasion', yWord: 'replacement', words: [] } },
-    C: { xSide: 'left', source: '',
-      goodFaith: { text: "Immigrants do the work and build the businesses — the economy needs them.", xWord: 'they build', yWord: 'economy needs', words: [] },
-      coalition: { text: "Let people move — strivers should get to chase a better life.", xWord: 'strivers', yWord: 'free movement', words: [] },
-      badFaith:  { text: "Borders are just protectionism with a flag — abolish them.", xWord: 'protectionism', yWord: 'abolish borders', words: [] } },
-    D: { xSide: 'right', source: '',
-      goodFaith: { text: "A real border lets us keep government small — secure the line, leave us alone.", xWord: 'strong border', yWord: 'small state', words: [] },
-      coalition: { text: "We can't be the world's welfare magnet — a country isn't a charity.", xWord: 'not a charity', yWord: 'welfare magnet', words: [] },
-      badFaith:  { text: "They come to take — a drain on the people who actually build.", xWord: 'drain', yWord: 'parasite', words: [] } },
-  },
-  diatribe: {
-    LF: { text: "People seeking a better life deserve dignity — welcome them well.", side: 'left', band: 'fluid' },
-    LC: { text: "No human is illegal — protect them.", side: 'left', band: 'coalition' },
-    LD: { text: "The border itself is violence; any enforcement is cruelty.", side: 'left', band: 'denominated' },
-    RF: { text: "A country has to be able to secure its border and govern who enters.", side: 'right', band: 'fluid' },
-    RC: { text: "We've lost control — enforce it.", side: 'right', band: 'coalition' },
-    RD: { text: "It's an invasion — they're replacing us.", side: 'right', band: 'denominated' },
-  },
-};
-try {
-  const existsImm = (PrismDB.getEvents() || []).find(e => e.meta && e.meta.dialecticsRef === 'immigration_general_v2');
-  if (!existsImm) { const added = PrismDB.addEvent(IMMIGRATION_EVENT); if (added && PrismDB.setActive) PrismDB.setActive(added.id); }
-} catch (e) { console.warn('[v2] Immigration event upsert failed:', e && e.message); }
-
 // Event selection: ?event=<id> in the URL wins (lets several events sit side by
 // side for testing), else the admin-marked active event, else evt_001.
 const EVENT_ID = (() => {
@@ -2195,27 +1543,13 @@ function enterDiatribe() {
   phaseLabel.innerHTML = 'prism · <strong>v2</strong> · diatribe';
   // Start the discovery cue timer only now that the slider is live.
   setTimeout(() => { if (!state.touched) cue.classList.add('show'); }, 1400);
-  setTimeout(() => { if (window.Ted) window.Ted.beat('diatribe', "This slider's the Diatribe — how charged the whole thing feels to you, not which side you're on. Slide it and the responses shift. Be honest; nobody's grading."); }, 2200);
 }
-// The migration: the Prism logo glides up into the nav band, the real ribbon +
-// header fade into place (nav-ready), and the screen transforms into the
-// diatribe stage. Triggered by the logo OR the "take a position" button.
-let migrating = false;
-function migrateToDiatribe() {
-  if (entered || migrating) return;
-  migrating = true;
-  const logo = document.getElementById('evLogo');
-  if (logo) logo.classList.add('migrate');
-  setTimeout(() => document.body.classList.add('nav-ready'), 360);  // ribbon fades in as the logo lifts
-  setTimeout(enterDiatribe, 720);                                   // morph completes, then reveal the diatribe surface
-}
-evEnterBtn.addEventListener('click', migrateToDiatribe);
-{ const logo = document.getElementById('evLogo'); if (logo) logo.addEventListener('click', migrateToDiatribe); }
+evEnterBtn.addEventListener('click', enterDiatribe);
 window.addEventListener('keydown', e => {
   if (document.body.classList.contains('phase-event') &&
       (e.key === 'Enter' || e.key === ' ')) {
     e.preventDefault();
-    migrateToDiatribe();
+    enterDiatribe();
   }
 });
 
@@ -2337,10 +1671,6 @@ function applyState(initial = false) {
   ambient.classList.remove('fluid', 'coalition', 'denominated');
   ambient.classList.add(realBand);
 
-  // Ted narrates the scale of thirds as you cross into a new band (and tints
-  // his night plane to match). Only once engaged, so he's quiet on load.
-  if (state.touched && window.Ted && window.Ted.onBand) window.Ted.onBand(realBand, realSide);
-
   const asym = Math.abs(state.realScore) - Math.abs(state.ghostScore);
   asymDelta.textContent = (asym >= 0 ? '+' : '') + asym;
 
@@ -2435,10 +1765,9 @@ mqMobile.addEventListener('change', () => applyState());   // re-layout on break
 // ---- Light/dark toggle ----
 function toggleMode() {
   const isLight = document.body.classList.toggle('light');
-  const t = document.querySelector('.prism-toggle');
-  if (t) t.textContent = isLight ? 'dark' : 'light';
+  document.querySelector('.prism-toggle').textContent = isLight ? 'dark' : 'light';
 }
-window.toggleMode = toggleMode;   // retained for the ship-time system-default theme hook
+window.toggleMode = toggleMode;
 
 // ---- Breath loop ----
 function breathFrame(now) {
@@ -3274,252 +2603,6 @@ function showContrastMember(d) {
     try { gm.setContrastLine({ x: pinX, y: pinY, z: userPinData.z }, { x: d.normX, y: d.normY, z: mz }, { color: PARTY_HEX[partyKey] || PARTY_HEX.I }); } catch (e) {}
   }
   try { gm.setFocus(d.normX, d.normY); } catch (e) {}
-  updateCmpFollow(d.bioguideId);   // sync the ★ follow toggle to this rep
-}
-
-// ───────────────────────────────────────────────────────────
-// Tracker — the right panel's resting state: a list of followed legislators.
-// Resting = your delegation (seeded from home district) on top, then everyone
-// else you follow. Tapping a row hands the rep to showContrastMember() — the
-// exact same lock + 3D-tether compare a diamond click triggers. A ★ toggle in
-// the compare header follows/unfollows; "‹ tracking" returns to the list.
-// Follows + delegation persist via PrismDB (prism_followed + user.delegation).
-// ───────────────────────────────────────────────────────────
-const trackerEl      = document.getElementById('tracker');
-const trackerScroll  = document.getElementById('trackerScroll');
-const trackerCount   = document.getElementById('trackerCount');
-const trackerSearch  = document.getElementById('trackerSearch');
-const trackerResults = document.getElementById('trackerResults');
-const cmpBar         = document.getElementById('cmpBar');
-const cmpBack        = document.getElementById('cmpBack');
-const cmpFollow      = document.getElementById('cmpFollow');
-let trackerWired = false;
-
-const US_STATES = ['AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV','WI','WY','DC'];
-
-function trkName(m) { return (typeof m.name === 'string') ? m.name : (m.name && m.name.full) || m.bioguideId; }
-function trkPartyKey(m) { return (m.party || 'I').toUpperCase(); }
-function trkPartyClass(m) { const k = trkPartyKey(m); return k === 'D' ? 'party-D' : k === 'R' ? 'party-R' : 'party-I'; }
-function trkChamberWord(m) { const c = (m.chamber || '').toLowerCase(); return c === 'senate' ? 'Senator' : c === 'house' ? 'Rep.' : (m.chamber || ''); }
-function trkMetaText(m) {
-  const seat = trkPartyKey(m) + '-' + (m.state || '') + (m.district != null ? '-' + m.district : '');
-  return [seat, trkChamberWord(m)].filter(Boolean).join(' · ');
-}
-
-// Build the member-pin-style `d` object that showContrastMember() expects from
-// a plain roster record, applying any event-specific DERIVED override exactly
-// as renderMemberPins() does — so a list tap and a diamond click are identical.
-function memberToD(m) {
-  const p = heuristicPlace(m);
-  let dp = null;
-  try { dp = PrismDB.getMemberPosition ? PrismDB.getMemberPosition(m.bioguideId, EVENT_ID) : null; } catch (e) {}
-  const useDerived = dp && dp.pin && (dp.provenance === 'DERIVED' || dp.provenance === 'MANUAL' || dp.adminOverride);
-  return {
-    bioguideId: m.bioguideId, name: trkName(m), party: m.party, chamber: m.chamber,
-    normX: useDerived ? dp.pin.x : p.x,
-    normY: useDerived ? dp.pin.y : p.y,
-    normZ: useDerived ? (typeof dp.z === 'number' ? dp.z : 0) : p.z,
-    isMemberPin: true
-  };
-}
-
-// Compact Δ-to-you read for a row. Post-commit: signed Δx vs your pin.
-// Pre-commit (no pin yet): the rep's own left/right lean.
-function trkDelta(d) {
-  const mx = Math.round((d.normX - 0.5) * 200);
-  if (!userPinData) return mx <= -4 ? '◄ left' : mx >= 4 ? 'right ►' : 'center';
-  const dx = mx - userPinData.x;
-  return 'Δx ' + (dx >= 0 ? '+' : '') + dx;
-}
-
-function trkPhoto(m) {
-  const img = document.createElement('img');
-  img.className = 'trk-photo'; img.alt = ''; img.loading = 'lazy';
-  if (m.photoUrl) img.src = m.photoUrl;
-  img.addEventListener('error', function () { this.style.visibility = 'hidden'; });
-  return img;
-}
-function trkBody(m) {
-  const body = document.createElement('div'); body.className = 'trk-body';
-  const name = document.createElement('div'); name.className = 'trk-name ' + trkPartyClass(m); name.textContent = trkName(m);
-  const meta = document.createElement('div'); meta.className = 'trk-meta'; meta.textContent = trkMetaText(m);
-  body.appendChild(name); body.appendChild(meta);
-  return body;
-}
-
-// A followed-rep row (in the list). delegation=true adds the ★ tag + sort group.
-function trkRow(m, delegation) {
-  const d = memberToD(m);
-  const row = document.createElement('div');
-  row.className = 'trk-row' + (delegation ? ' is-delegation' : '');
-  row.setAttribute('data-bio', m.bioguideId);
-  const delta = document.createElement('div'); delta.className = 'trk-delta'; delta.textContent = trkDelta(d);
-  const x = document.createElement('button');
-  x.className = 'trk-unfollow'; x.type = 'button'; x.setAttribute('aria-label', 'unfollow ' + trkName(m)); x.innerHTML = '&times;';
-  x.addEventListener('click', function (e) { e.stopPropagation(); PrismDB.unfollow(m.bioguideId); renderTracker(); if (window.PrismTriptych) window.PrismTriptych.refresh(); });
-  row.appendChild(trkPhoto(m)); row.appendChild(trkBody(m)); row.appendChild(delta); row.appendChild(x);
-  row.addEventListener('click', function () { lockMemberFromTracker(d); });
-  return row;
-}
-
-// A search-result row: clicking it follows the member.
-function trkResultRow(m) {
-  const row = document.createElement('div'); row.className = 'trk-row';
-  const tag = document.createElement('div'); tag.className = 'trk-delta';
-  tag.textContent = PrismDB.isFollowing(m.bioguideId) ? 'following' : '+ follow';
-  row.appendChild(trkPhoto(m)); row.appendChild(trkBody(m)); row.appendChild(tag);
-  row.addEventListener('click', function () {
-    PrismDB.follow(m.bioguideId);
-    trackerSearch.value = ''; trackerResults.hidden = true; trackerResults.innerHTML = '';
-    renderTracker(); if (window.PrismTriptych) window.PrismTriptych.refresh();
-  });
-  return row;
-}
-
-function trkSection(label) {
-  const sec = document.createElement('div'); sec.className = 'trk-section';
-  const lab = document.createElement('div'); lab.className = 'trk-section-label'; lab.textContent = label;
-  sec.appendChild(lab);
-  return sec;
-}
-
-// The "set your district" affordance + inline state/district form, shown when no
-// delegation members are present in the delegation section.
-function trkDistrictAffordance(del) {
-  const wrap = document.createElement('div');
-  const btn = document.createElement('button');
-  btn.className = 'trk-setdist'; btn.type = 'button';
-  const seat = del.state ? (del.state + (del.district != null ? '-' + del.district : '') + (del.zip ? ' · ' + del.zip : '')) : '';
-  btn.textContent = del.state ? ('edit district (' + seat + ')') : 'set your district';
-  const form = document.createElement('div'); form.className = 'trk-distform';
-  const sel = document.createElement('select');
-  const blank = document.createElement('option'); blank.value = ''; blank.textContent = 'state'; sel.appendChild(blank);
-  US_STATES.forEach(function (s) { const o = document.createElement('option'); o.value = s; o.textContent = s; if (s === del.state) o.selected = true; sel.appendChild(o); });
-  const dist = document.createElement('input'); dist.type = 'number'; dist.min = '1'; dist.placeholder = 'dist'; dist.className = 'pf-dist'; if (del.district != null) dist.value = del.district;
-  const zip = document.createElement('input'); zip.type = 'text'; zip.inputMode = 'numeric'; zip.maxLength = 5; zip.placeholder = 'zip'; zip.className = 'pf-zip'; if (del.zip) zip.value = del.zip;
-  const save = document.createElement('button'); save.type = 'button'; save.textContent = 'save';
-  form.appendChild(sel); form.appendChild(dist); form.appendChild(zip); form.appendChild(save);
-  btn.addEventListener('click', function () { form.classList.toggle('open'); });
-  save.addEventListener('click', function () {
-    if (!sel.value) { form.classList.remove('open'); return; }
-    applyDistrict(sel.value, dist.value, zip.value);
-    form.classList.remove('open');
-  });
-  wrap.appendChild(btn); wrap.appendChild(form);
-  return wrap;
-}
-
-// Persist the district and auto-follow the matching delegation (2 senators +
-// the House member for that state·district).
-async function applyDistrict(state, district, zip) {
-  PrismDB.setDelegation({ state: state, district: district, zip: zip });
-  const members = await ensureMembers();
-  const del = PrismDB.getDelegation();
-  (members || []).forEach(function (m) {
-    if (m.state === del.state && ((m.chamber || '').toLowerCase() === 'senate' || (del.district != null && m.district === del.district))) {
-      PrismDB.follow(m.bioguideId);
-    }
-  });
-  renderTracker(); if (window.PrismTriptych) window.PrismTriptych.refresh();
-}
-
-function isDelegationMember(m, del) {
-  return !!(del.state && m.state === del.state &&
-    ((m.chamber || '').toLowerCase() === 'senate' || (del.district != null && m.district === del.district)));
-}
-
-async function renderTracker() {
-  if (!trackerScroll) return;
-  const members = await ensureMembers();
-  const byBio = {}; (members || []).forEach(function (m) { byBio[m.bioguideId] = m; });
-  const followed = PrismDB.getFollowed();
-  const del = PrismDB.getDelegation();
-  const followedMembers = followed.map(function (id) { return byBio[id]; }).filter(Boolean);
-  const delMembers = followedMembers.filter(function (m) { return isDelegationMember(m, del); });
-  const otherMembers = followedMembers.filter(function (m) { return !isDelegationMember(m, del); });
-
-  trackerScroll.innerHTML = '';
-
-  const delSec = trkSection('your delegation');
-  if (delMembers.length) {
-    // senators first, then House
-    delMembers.sort(function (a, b) { return (a.chamber === 'senate' ? 0 : 1) - (b.chamber === 'senate' ? 0 : 1); });
-    delMembers.forEach(function (m) { delSec.appendChild(trkRow(m, true)); });
-  } else {
-    delSec.appendChild(trkDistrictAffordance(del));
-  }
-  trackerScroll.appendChild(delSec);
-
-  const folSec = trkSection('following · ' + otherMembers.length);
-  if (otherMembers.length) {
-    otherMembers.forEach(function (m) { folSec.appendChild(trkRow(m, false)); });
-  } else {
-    const e = document.createElement('div'); e.className = 'trk-empty';
-    e.textContent = 'Search below to follow any member — or tap a diamond on the graph.';
-    folSec.appendChild(e);
-  }
-  trackerScroll.appendChild(folSec);
-
-  if (trackerCount) trackerCount.textContent = followed.length ? (followed.length + ' followed') : '';
-}
-
-// Hand a roster rep to the existing compare path (lock + tether).
-function lockMemberFromTracker(d) {
-  if (!userPinData) {
-    // No committed pin yet → nothing to compare against. Nudge the input.
-    if (trackerEl) { trackerEl.classList.remove('nudge'); void trackerEl.offsetWidth; trackerEl.classList.add('nudge'); }
-    return;
-  }
-  showContrastMember(d);
-}
-
-function updateCmpFollow(bio) {
-  if (!cmpFollow) return;
-  const on = !!(bio && PrismDB.isFollowing(bio));
-  cmpFollow.setAttribute('aria-pressed', on ? 'true' : 'false');
-  const g = cmpFollow.querySelector('.cmp-follow-glyph'); if (g) g.innerHTML = on ? '&#9733;' : '&#9734;';   // ★ / ☆
-  const w = cmpFollow.querySelector('.cmp-follow-word'); if (w) w.textContent = on ? 'following' : 'follow';
-}
-
-function backToTracking() {
-  graphInfo.classList.remove('comparing', 'dock-left');
-  contrastMember = null; contrastDot = null;
-  if (gm) { try { gm.clearContrastLine(); } catch (e) {} }
-  renderTracker();
-}
-
-function initTracker() {
-  if (!trackerScroll) return;
-  if (!trackerWired) {
-    trackerWired = true;
-    if (cmpBack) cmpBack.addEventListener('click', backToTracking);
-    if (cmpFollow) cmpFollow.addEventListener('click', function () {
-      if (!contrastMember || !contrastMember.bioguideId) return;
-      PrismDB.toggleFollow(contrastMember.bioguideId);
-      updateCmpFollow(contrastMember.bioguideId);
-    });
-    if (trackerSearch) trackerSearch.addEventListener('input', function () {
-      const q = trackerSearch.value.trim().toLowerCase();
-      if (!q) { trackerResults.hidden = true; trackerResults.innerHTML = ''; return; }
-      const members = memberData || [];
-      const matches = members.filter(function (m) {
-        const nm = trkName(m).toLowerCase();
-        const st = (m.state || '').toLowerCase();
-        return nm.indexOf(q) !== -1 || st === q;
-      }).slice(0, 14);
-      trackerResults.innerHTML = '';
-      if (!matches.length) { const n = document.createElement('div'); n.className = 'trk-noresult'; n.textContent = 'no match'; trackerResults.appendChild(n); }
-      else matches.forEach(function (m) { trackerResults.appendChild(trkResultRow(m)); });
-      trackerResults.hidden = false;
-    });
-    // dismiss the results popover on outside click
-    document.addEventListener('click', function (e) {
-      if (!trackerResults || trackerResults.hidden) return;
-      const add = e.target.closest && e.target.closest('.tracker-add');
-      if (!add) { trackerResults.hidden = true; }
-    });
-  }
-  ensureMembers().then(function () { renderTracker(); });
 }
 
 function commitGraph() {
@@ -3540,21 +2623,6 @@ function commitGraph() {
     ts: Date.now(),
   };
   console.log('[v2 · pin commit]', record);
-  // Persist to PrismDB so the Beam (lower-left record) and the aggregate have
-  // real data. One record per commit; the Beam shows newest-first.
-  try {
-    PrismDB.saveResponse({
-      eventId: EVENT_ID,
-      finalQuadrant: graphQuad,
-      initialChoice: graphQuad,
-      pin: { x: pinX, y: pinY },
-      band: graphBand,
-      apertureBand: committedBand,
-      z: +graphZ.toFixed(3),
-      dialect: graphDialect.value.trim().slice(0, 180),
-      diatribeScore: state.realScore,
-    });
-  } catch (e) { console.warn('[v2] saveResponse failed:', e && e.message); }
   userPinData = { x: Math.round((pinX - 0.5) * 200), y: Math.round((0.5 - pinY) * 200), z: graphZ, intensity: graphIntensity, band: graphBand, quad: graphQuad };
   aggCommitted = true;
   graphCommitBtn.disabled = true;
@@ -3575,7 +2643,6 @@ function commitGraph() {
     graphPad.style.overflow = 'visible';  // keep preserve-3d active (overflow:hidden flattens it)
     const n = precipitate();
     commitReveal();
-    initTracker();   // populate the tracker even in the no-WebGL fallback
     graphNote.textContent = 'committed · ' + n + ' voices · drag to orbit · (css fallback — factory unavailable)';
   }
 }
@@ -3596,8 +2663,6 @@ function mountGM() {
       spectrumAxes: true,   // iridescent gradient axis lines
       holdMs: 900,          // deliberate hold-to-lock (400 felt accidental, 2s sluggish)
       zoom: 12, zoomMax: 14, // camera pulled back to compensate the oversized stage
-      artifacts: true,      // ghostly Dream-Getty vessels drifting in the volume (depth cues)
-      ted: true,            // Ted Turner the Coyote pads around the plane
     });
     gm.mount(document.getElementById('gm3dStage'));   // mount into the big surface
     // hold-to-lock: a voice locks the contrast panel AND becomes the orbit
@@ -3627,9 +2692,7 @@ function mountGM() {
 function gmCommit() {
   gmActive = true;
   revealMemberToggle();   // show the legislators control immediately (loading until pins build)
-  initTracker();          // populate the right-panel tracker (delegation + follows)
   { const rb = document.getElementById('recenterBtn'); if (rb) rb.hidden = false; }   // reveal recenter
-  setTimeout(() => { if (window.Ted) window.Ted.beat('graph', "You're on the plane now. Drag to orbit, scroll to zoom. Pull the ribbon down for the analytical layer, slide it sideways for the others. Mind the vases — gallery's a little haunted."); }, 1600);
   // Safety net: the member build is normally triggered by the migration's
   // completion callback (nice timing, coherent with the settled field). But
   // that runs in the rAF loop, which Chrome throttles when the tab is
@@ -3650,7 +2713,7 @@ function gmCommit() {
     gm3dEl.classList.remove('overlay');
   }, 950);
   try { gm.clearDots(); gm.clearContrastLine(); } catch (e) {}
-  try { gm.setBoundaryVisible(true); } catch (e) {}    // z-axis planes on — the realized/frustrated depth bounds
+  try { gm.setBoundaryVisible(false); } catch (e) {}   // no pale Z-boundary wash — plane ≈ field
   try { gm.setFocus(0.5, 0.5); } catch (e) {}          // start centered
   // Open at the pad's current rotateY attitude (CSS rotateY and factory orbit
   // yaw share an axis and sign), then the choreography spin takes over.
@@ -3804,9 +2867,10 @@ function setMemberToggleUI() {
 // fetching the roster so it's cached before the pins build. Decoupled from
 // renderMemberPins so the control is visible immediately, not 6s later.
 function revealMemberToggle() {
-  // Reps no longer render on the Prism graph, so the in-graph toggle stays
-  // hidden — we only warm the roster cache for the Refraction panel.
-  ensureMembers();
+  if (!memberToggle) return;
+  memberToggle.hidden = false;
+  setMemberToggleUI();
+  ensureMembers();   // warm the cache (fire and forget)
 }
 
 // Deterministic hash → [0,1). Same bioguideId+salt always returns the same
@@ -3900,10 +2964,6 @@ async function ensureMembers() {
 // migration callback, a safety timer, OR a toggle click without racing or
 // getting stuck in the loading state.
 async function renderMemberPins() {
-  // Representatives live in the Refraction panel now — the Prism graph stays the
-  // human aggregate only. (Kept as a no-op so existing call sites are harmless.)
-  return;
-  /* eslint-disable no-unreachable */
   if (!gm || memberPinsRendered || memberBuildInFlight) return;
   memberBuildInFlight = true;
   try {
@@ -3928,15 +2988,9 @@ async function renderMemberPins() {
     } catch (e) {}
 
     try { gm.clearMemberPins(); } catch (e) {}
-    // Drop the 548-strong DW-NOMINATE baseline field — it was the noise. Keep
-    // only the event-DERIVED members (the discernible, event-specific ones) and
-    // the reps the user follows, each as a discrete diamond.
-    const followedSet = new Set((PrismDB.getFollowed && PrismDB.getFollowed()) || []);
     let n = 0, nDerived = 0;
     members.forEach(m => {
       const dp = derivedByBio[m.bioguideId];
-      const isFollowed = followedSet.has(m.bioguideId);
-      if (!(dp && dp.pin) && !isFollowed) return;   // skip the baseline cloud
       let x, y, z = 0, method, confidence, derived = false;
       if (dp && dp.pin) {
         x = dp.pin.x; y = dp.pin.y; z = (typeof dp.z === 'number') ? dp.z : 0;
@@ -3944,18 +2998,20 @@ async function renderMemberPins() {
         derived = true; nDerived++;
       } else {
         const p = heuristicPlace(m); x = p.x; y = p.y; z = p.z; method = p.method; confidence = 0.25;
+        // Baseline z = sponsorship efficacy. The field gains real depth, but
+        // baseline motes stay stemless (factory only stems DERIVED tokens), so
+        // the density-field read is preserved — it just becomes a 3D cloud.
       }
       try {
         gm.addMemberPin(x, y, m.party, {
-          baseline: false,                  // discrete diamonds only — no faint baseline field
-          normZ: z,
-          radius: derived ? 0.095 : 0.085,
+          baseline: !derived,               // baseline → faint additive density mote; DERIVED → discrete token
+          normZ: z,                         // baseline z=0 (flat); DERIVED carries real depth → gets a stem
+          radius: derived ? 0.09 : 0.07,    // DERIVED pins read slightly larger / lifted (ignored for baseline)
           bioguideId: m.bioguideId,
           name: typeof m.name === 'string' ? m.name : ((m.name && m.name.full) || m.bioguideId),
           chamber: m.chamber,
           method: method,
           confidence: confidence,
-          animateIn: true, entranceDelay: n * 55,   // reps cascade in
         });
         n++;
       } catch (e) { if (n === 0) console.error('[v2] addMemberPin failed:', e); }
@@ -4269,885 +3325,6 @@ graphCommitBtn.addEventListener('click', commitGraph);
 // diatribe stage behind it. The discovery cue timer is started by
 // enterDiatribe(), not here, so it doesn't fire while the introit is up.
 applyState(true);
-
-// ══════════════════════════════════════════════════════════════
-// TED TURNER THE COYOTE — the guide. Scripted beats fired at chosen
-// moments (each shown once per session). Tap Ted or the bubble to dismiss.
-// ══════════════════════════════════════════════════════════════
-(function TedGuide() {
-  const el = document.getElementById('tedGuide');
-  const bubble = document.getElementById('tedBubble');
-  if (!el || !bubble) return;
-  const body = document.body;
-  const seen = {};
-  let hideTimer = null;
-  let away = false;       // walked off-screen (toggle 1)
-  let narrate = false;    // cursor-hover commentary (toggle 2)
-
-  function say(text) {
-    if (away) return;
-    bubble.textContent = text; el.classList.add('show');
-    if (voiceOn && typeof Voice !== 'undefined' && Voice.available) Voice.speak(text);
-    clearTimeout(hideTimer); hideTimer = setTimeout(hide, 15000);
-  }
-  function hide() {
-    el.classList.remove('show'); clearTimeout(hideTimer);
-    if (typeof Voice !== 'undefined' && Voice.available) Voice.stop();
-  }
-  el.addEventListener('click', hide);
-
-  window.Ted = {
-    beat: function (key, text) { if (seen[key]) return; seen[key] = true; say(text); },
-    say: say, hide: hide,
-    isAway: function () { return away; },
-    narrating: function () { return narrate; },
-  };
-
-  // ── The scale of thirds, in plain language. Fired from the diatribe slider
-  //    as the cursor crosses from one band into the next. ──
-  const BAND_LINES = {
-    fluid:       "Outer third — the easy stuff. You two disagree, sure, but you're still arguing about the same thing. Nobody's questioning the frame yet.",
-    coalition:   "Middle third — now it's teams. It's not just the issue anymore; pick this and you're picking a whole side, package deal.",
-    denominated: "Inner third — the deep end. You're not arguing about the thing now, you're arguing about what it even IS. That's identity doing the talking.",
-  };
-  let lastBand = null;
-
-  // Live cursor position (normalized 0..1), updated globally — Ted gaze-tracks it.
-  let cursorNX = 0.5, cursorNY = 0.5, cursorMovedAt = 0;
-
-  // ── Ted's retro synth voice (Web Speech). Picks the most robotic voice on
-  //    hand and drops the pitch for that Y2K text-to-speech feel. ──
-  let voiceOn = true;
-  const Voice = (function () {
-    const synth = window.speechSynthesis;
-    if (!synth) return { available: false, speak: function () {}, stop: function () {} };
-    let voices = [];
-    function load() { try { voices = synth.getVoices() || []; } catch (e) { voices = []; } }
-    load(); try { synth.onvoiceschanged = load; } catch (e) {}
-    function pick() {
-      const order = [/zarvox/i, /trinoids/i, /fred/i, /albert/i, /ralph/i, /junior/i, /cellos/i,
-                     /google uk english male/i, /microsoft (david|mark|george)/i];
-      for (let i = 0; i < order.length; i++) { const v = voices.find(function (x) { return order[i].test(x.name); }); if (v) return v; }
-      return voices.find(function (x) { return /^en/i.test(x.lang); }) || voices[0] || null;
-    }
-    return {
-      available: true,
-      speak: function (text) {
-        try {
-          synth.cancel();
-          const u = new SpeechSynthesisUtterance(text);
-          const v = pick(); if (v) u.voice = v;
-          u.pitch = 0.35; u.rate = 0.92; u.volume = 0.9;   // low + steady = vintage TTS
-          synth.speak(u);
-        } catch (e) {}
-      },
-      stop: function () { try { synth.cancel(); } catch (e) {} },
-    };
-  })();
-
-  // Ted's opening line — he walks in, then delivers this (aloud, if voice is on).
-  const INTRO_TEXT = "Ted Turner, coyote, your guide. I map where you actually stand — not just left or right. Set your aperture, find the line that fits, then drop your pin. Take a position when you are ready.";
-  let introDone = false;
-  function fireIntro() {
-    if (introDone || away) return;
-    if (!body.classList.contains('phase-event')) return;   // only greet on the splash
-    introDone = true;
-    window.Ted.beat('intro', INTRO_TEXT);
-  }
-
-  // ── Full-body Ted: walks in, greets you, then roams the screen, gaze-tracks
-  //    the cursor now and then, and otherwise just looks around. ──
-  const TedStage = (function () {
-    if (typeof THREE === 'undefined' || typeof PrismGraphmap === 'undefined' || !PrismGraphmap.buildCoyote) return null;
-    const canvas = document.getElementById('tedStageCanvas'); if (!canvas) return null;
-    let renderer;
-    try { renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true }); }
-    catch (e) { canvas.style.display = 'none'; return null; }
-    renderer.setPixelRatio(Math.min(1.5, window.devicePixelRatio || 1));   // big canvas — cap DPR
-
-    // Transparent canvas; the "space" is the page-wide starfield behind it.
-    const scene = new THREE.Scene();
-    const cam = new THREE.PerspectiveCamera(34, 2, 0.1, 100);
-    cam.position.set(0, 1.2, 6.0); cam.lookAt(0, 1.0, 0);
-    let xExtent = 6;   // half-width Ted can roam, recomputed from the frustum
-    function sizeCanvas() {
-      const w = canvas.clientWidth || window.innerWidth, h = canvas.clientHeight || 320;
-      renderer.setSize(w, h, false);
-      cam.aspect = w / h; cam.updateProjectionMatrix();
-      const halfH = Math.tan((cam.fov * Math.PI / 180) / 2) * cam.position.z;
-      xExtent = halfH * cam.aspect * 0.92;
-    }
-
-    // lighting (matches the in-bubble portrait palette) + band-tinted air
-    const keyL = new THREE.DirectionalLight(0xfff2e0, 1.15); keyL.position.set(2.0, 3.0, 2.4); scene.add(keyL);
-    const rimL = new THREE.DirectionalLight(0x90a8d0, 0.5); rimL.position.set(-2.2, 1.4, -1.6); scene.add(rimL);
-    scene.add(new THREE.AmbientLight(0x5a6aa0, 0.55));
-    const bandLight = new THREE.PointLight(0x60a880, 0.55, 14); bandLight.position.set(0, 2.2, 2.0); scene.add(bandLight);
-
-    const ted = PrismGraphmap.buildCoyote(); scene.add(ted);
-    const legs = ted.userData.legs || [], head = ted.userData.head;
-
-    // soft contact shadow that follows him along the ground
-    const shTex = (function () {
-      const c = document.createElement('canvas'); c.width = c.height = 64;
-      const x = c.getContext('2d'); const g = x.createRadialGradient(32, 32, 2, 32, 32, 30);
-      g.addColorStop(0, 'rgba(0,0,0,0.55)'); g.addColorStop(1, 'rgba(0,0,0,0)');
-      x.fillStyle = g; x.fillRect(0, 0, 64, 64); return new THREE.CanvasTexture(c);
-    })();
-    const shadow = new THREE.Mesh(new THREE.PlaneGeometry(1.7, 0.8),
-      new THREE.MeshBasicMaterial({ map: shTex, transparent: true, opacity: 0.5, depthWrite: false }));
-    shadow.rotation.x = -Math.PI / 2; shadow.position.y = 0.02; scene.add(shadow);
-
-    const BAND_COLOR = { fluid: 0x60a880, coalition: 0xc49c48, denominated: 0xd45c5c };
-    let bandTarget = new THREE.Color(0x60a880);
-    const REST = function () { return -xExtent * 0.30; };   // his usual hang-out spot (left of center)
-
-    // ── state machine ──  enter | idle | walk | away
-    let mode = 'enter', t = 0, walkClock = 0;
-    let posX = -8, targetX = -2, faceYaw = 0;
-    let nextAt = 0, tracking = false, trackUntil = 0, lookYaw = 0;
-
-    function approachAngle(cur, tgt, rate) {
-      let d = tgt - cur; while (d > Math.PI) d -= 2 * Math.PI; while (d < -Math.PI) d += 2 * Math.PI;
-      return cur + d * rate;
-    }
-
-    sizeCanvas();
-    posX = -xExtent * 1.4; targetX = REST();   // start fully off the left edge
-    window.addEventListener('resize', sizeCanvas);
-
-    (function loop() {
-      requestAnimationFrame(loop);
-      const stageEl = document.getElementById('tedStage');
-      if (!stageEl || getComputedStyle(stageEl).display === 'none') return;   // skip render when hidden
-      t += 0.016;
-      bandLight.color.lerp(bandTarget, 0.04);
-
-      // ── decide what he's up to ──
-      if (mode === 'enter') { targetX = REST(); }
-      else if (mode === 'away') { targetX = -xExtent * 1.5; }
-      else if (mode === 'idle' && t > nextAt) {
-        const roll = Math.random();
-        if (roll < 0.42) {                                   // stroll to the other side
-          targetX = (posX < 0 ? 1 : -1) * xExtent * (0.30 + Math.random() * 0.45);
-          mode = 'walk';
-        } else if (roll < 0.74) {                            // lock onto the cursor a moment
-          tracking = true; trackUntil = t + 4 + Math.random() * 3;
-        } else {                                             // just look around
-          tracking = false; lookYaw = (Math.random() * 2 - 1) * 0.7;
-        }
-        nextAt = t + 4 + Math.random() * 5;
-      }
-      if (tracking && t > trackUntil) tracking = false;
-
-      const moving = (mode === 'enter' || mode === 'walk' || mode === 'away') && Math.abs(targetX - posX) > 0.05;
-
-      // ── orientation ──
-      let dyaw;
-      if (moving) { dyaw = (targetX - posX) >= 0 ? Math.PI / 2 : -Math.PI / 2; }
-      else if (tracking) { const cwx = (cursorNX * 2 - 1) * xExtent; dyaw = Math.atan2(cwx - posX, 4); }
-      else { dyaw = lookYaw + Math.sin(t * 0.35) * 0.12; }
-      faceYaw = approachAngle(faceYaw, dyaw, moving ? 0.14 : 0.06);
-      ted.rotation.y = faceYaw;
-
-      // ── locomotion + legs ──
-      if (moving) {
-        const dir = Math.sign(targetX - posX);
-        posX += dir * 0.05; walkClock += 0.13;
-        const stride = walkClock, off = [0, Math.PI, Math.PI, 0];
-        ted.position.y = Math.abs(Math.sin(stride)) * 0.04;
-        for (let i = 0; i < legs.length; i++) {
-          const phi = stride + off[i];
-          if (legs[i].hip) legs[i].hip.rotation.x = Math.cos(phi) * 0.42;
-          if (legs[i].knee) legs[i].knee.rotation.x = -Math.max(0, -Math.sin(phi)) * 0.85;
-        }
-        if (head) head.rotation.x = Math.sin(stride) * 0.04;
-      } else {
-        // arrived — settle the gait, breathe, decide next phase
-        if (mode === 'enter') { mode = 'idle'; nextAt = t + 2.2; fireIntro(); }
-        else if (mode === 'walk') { mode = 'idle'; nextAt = t + 3 + Math.random() * 4; }
-        ted.position.y = Math.sin(t * 1.1) * 0.012;
-        for (let i = 0; i < legs.length; i++) {
-          if (legs[i].hip) legs[i].hip.rotation.x *= 0.8;
-          if (legs[i].knee) legs[i].knee.rotation.x *= 0.8;
-        }
-        if (head) head.rotation.x = tracking ? (cursorNY - 0.5) * 0.5 : Math.sin(t * 0.8) * 0.05;
-      }
-      ted.position.x = posX;
-
-      // shadow tracks him, fades when he's off-screen / away
-      shadow.position.x = posX;
-      const onScreen = Math.abs(posX) < xExtent * 1.05;
-      shadow.material.opacity += ((onScreen ? (moving ? 0.42 : 0.5) : 0) - shadow.material.opacity) * 0.1;
-      bandLight.intensity += (((mode === 'away') ? 0 : 0.55) - bandLight.intensity) * 0.05;
-
-      renderer.render(scene, cam);
-    })();
-
-    return {
-      setBand: function (b) { if (BAND_COLOR[b] != null) bandTarget = new THREE.Color(BAND_COLOR[b]); },
-      setAway: function (v) { mode = v ? 'away' : 'enter'; if (v) tracking = false; },
-    };
-  })();
-
-  // Band hook called by the diatribe slider (applyState). Always explains the
-  // thirds when you cross into a new band; also tints the night plane.
-  window.Ted.onBand = function (band, side) {
-    if (TedStage) TedStage.setBand(band);
-    if (away || band === lastBand) return;
-    lastBand = band;
-    if (BAND_LINES[band]) say(BAND_LINES[band]);
-  };
-
-  // If the 3D stage is unavailable (no WebGL), there's no walk-in to trigger
-  // the greeting — fall back to a timed intro so Ted still says hello.
-  if (!TedStage) setTimeout(fireIntro, 1400);
-
-  // ── Toggles, persisted across sessions ──
-  const awayBtn = document.getElementById('tedAwayToggle');
-  const narrateBtn = document.getElementById('tedNarrateToggle');
-  const voiceBtn = document.getElementById('tedVoiceToggle');
-
-  function setAway(v, persist) {
-    away = v;
-    body.classList.toggle('ted-away', away);
-    if (TedStage) TedStage.setAway(away);
-    if (awayBtn) {
-      awayBtn.classList.toggle('on', !away);                 // "on" = Ted present
-      awayBtn.setAttribute('aria-pressed', String(!away));
-      const lbl = awayBtn.querySelector('.lbl'); if (lbl) lbl.textContent = away ? 'call Ted' : "Ted's here";
-    }
-    if (away) hide();
-    if (persist) { try { localStorage.setItem('prism.ted.away', away ? '1' : '0'); } catch (e) {} }
-  }
-  function setNarrate(v, persist) {
-    narrate = v;
-    if (narrateBtn) {
-      narrateBtn.classList.toggle('on', narrate);
-      narrateBtn.setAttribute('aria-pressed', String(narrate));
-      const lbl = narrateBtn.querySelector('.lbl'); if (lbl) lbl.textContent = narrate ? 'guiding' : 'guide me';
-    }
-    if (persist) { try { localStorage.setItem('prism.ted.narrate', narrate ? '1' : '0'); } catch (e) {} }
-    if (persist && narrate && !away) say("Alright — point at things and I'll tell you what they're for.");
-  }
-  function setVoice(v, persist) {
-    voiceOn = v;
-    if (voiceBtn) {
-      voiceBtn.classList.toggle('on', voiceOn);
-      voiceBtn.setAttribute('aria-pressed', String(voiceOn));
-    }
-    if (!voiceOn && typeof Voice !== 'undefined' && Voice.available) Voice.stop();
-    if (!Voice.available && voiceBtn) voiceBtn.style.display = 'none';   // hide if unsupported
-    if (persist) { try { localStorage.setItem('prism.ted.voice', voiceOn ? '1' : '0'); } catch (e) {} }
-  }
-  if (awayBtn) awayBtn.addEventListener('click', function () { setAway(!away, true); });
-  if (narrateBtn) narrateBtn.addEventListener('click', function () { setNarrate(!narrate, true); });
-  if (voiceBtn) voiceBtn.addEventListener('click', function () { setVoice(!voiceOn, true); });
-
-  // ── Cursor: store position globally (Ted gaze-tracks it); and, when "guide
-  //    me" is on, speak the hovered asset's line with a cooldown so he doesn't
-  //    chatter. ──
-  let lastHint = null, hintCooldown = 0;
-  document.addEventListener('pointermove', function (e) {
-    cursorNX = e.clientX / Math.max(1, window.innerWidth);
-    cursorNY = e.clientY / Math.max(1, window.innerHeight);
-    cursorMovedAt = Date.now();
-    if (!narrate || away) return;
-    const target = e.target && e.target.closest ? e.target.closest('[data-ted-hint]') : null;
-    if (!target) return;
-    const hint = target.getAttribute('data-ted-hint'); if (!hint) return;
-    const now = Date.now();
-    if (now < hintCooldown) return;                 // global cooldown
-    lastHint = hint; hintCooldown = now + 3400;
-    say(hint);
-  }, { passive: true });
-
-  // Restore persisted prefs (TedStage is defined above, so setAway is safe).
-  try {
-    setVoice(localStorage.getItem('prism.ted.voice') !== '0', false);   // default ON
-    setNarrate(localStorage.getItem('prism.ted.narrate') === '1', false);
-    setAway(localStorage.getItem('prism.ted.away') === '1', false);
-  } catch (e) { setVoice(true, false); setNarrate(false, false); setAway(false, false); }
-
-  // Live 3D portrait of the real Ted in the bubble — kept for the graph phase,
-  // where the full-body stage is hidden (he trots the real plane there).
-  (function TedFace() {
-    if (typeof THREE === 'undefined' || typeof PrismGraphmap === 'undefined' || !PrismGraphmap.buildCoyote) return;
-    const canvas = document.getElementById('tedFace'); if (!canvas) return;
-    let renderer;
-    try { renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true }); } catch (e) { canvas.style.display = 'none'; return; }
-    renderer.setPixelRatio(Math.min(2, window.devicePixelRatio || 1));
-    renderer.setSize(128, 128, false);
-    const scene = new THREE.Scene();
-    const cam = new THREE.PerspectiveCamera(32, 1, 0.1, 100);
-    const ted = PrismGraphmap.buildCoyote(); scene.add(ted);
-    const key = new THREE.DirectionalLight(0xfff2e0, 1.25); key.position.set(1.6, 2.2, 2.6); scene.add(key);
-    const rim = new THREE.DirectionalLight(0x90a8d0, 0.55); rim.position.set(-1.8, 1, -1.2); scene.add(rim);
-    scene.add(new THREE.AmbientLight(0x6072a0, 0.55));
-    const target = new THREE.Vector3(0, 1.24, 0.58);   // his face
-    cam.position.set(0.72, 1.46, 2.0); cam.lookAt(target);
-    let t = 0;
-    (function loop() {
-      requestAnimationFrame(loop);
-      if (!el.classList.contains('show')) return;       // only render while Ted's speaking
-      if (canvas.offsetParent === null) return;          // skip when the small face is hidden (stage is up)
-      t += 0.016;
-      ted.rotation.y = Math.sin(t * 0.55) * 0.28;        // gentle glance
-      renderer.render(scene, cam);
-    })();
-  })();
-})();
-// ══════════════════════════════════════════════════════════════
-// DUAL TRIPTYCH — six-panel navigation shell (Spec §3)
-// Prism (lower-center) is the live base app; the other five open as
-// full-viewport overlays. The 2×3 map navigates; the header pull
-// shifts focus to the upper (Parallax) row. Reuses the tracker's
-// member helpers (memberToD / trkPhoto / trkDelta …) and PrismDB.
-// ══════════════════════════════════════════════════════════════
-(function () {
-  const panelEls = {
-    beam:       document.getElementById('panelBeam'),
-    refraction: document.getElementById('panelRefraction'),
-    diatribe:   document.getElementById('panelDiatribe'),
-    parallax:   document.getElementById('panelParallax'),
-    comparison: document.getElementById('panelComparison'),
-  };
-  const ribbon    = document.getElementById('prismRibbon');
-  const ribbonImg = document.getElementById('prismRibbonImg');
-  const ribbonNm  = document.getElementById('ribbonName');
-  const upperTabs = document.getElementById('upperTabs');
-  const scrim     = document.getElementById('triScrim');
-
-  // Which slice of the ribbon art centres per column; where the prism triangle
-  // sits (anchors the upper tabs). Tunable against the illustration in-browser.
-  const COL_FRAC = [0.20, 0.62, 0.86];   // beam line · prism triangle · spectrum
-  const TRIANGLE_FRAC = 0.70;
-  const RIBBON_ASPECT = 2000 / 232;
-  const LOWER  = ['beam', 'prism', 'refraction'];
-  const UPPER  = ['diatribe', 'parallax', 'comparison'];
-  const LABELS = { 0: ['Beam', 'Diatribe'], 1: ['Prism', 'Parallax'], 2: ['Refraction', 'Comparison'] };
-
-  let col = 1, shade = false, current = 'prism';
-  let dx0 = null, dy0 = null, dragMoved = false, intent = null;
-
-  function currentName() { return shade ? UPPER[col] : LOWER[col]; }
-
-  function positionRibbon(animated) {
-    const imgW = (ribbonImg.offsetHeight || (ribbon.clientHeight || 70) * 0.76) * RIBBON_ASPECT;
-    const vw = window.innerWidth;
-    const left = Math.round(vw * 0.5 - COL_FRAC[col] * imgW);
-    if (!animated) ribbonImg.style.transition = 'none';
-    ribbonImg.style.transform = 'translateY(-50%) translateX(' + left + 'px)';
-    if (!animated) { void ribbonImg.offsetWidth; ribbonImg.style.transition = ''; }
-    const triX = left + TRIANGLE_FRAC * imgW;
-    const pct = Math.max(18, Math.min(82, (triX / vw) * 100));
-    document.documentElement.style.setProperty('--triangle-x', pct + '%');
-  }
-
-  function updateChrome() {
-    if (ribbonNm) ribbonNm.textContent = LABELS[col][shade ? 1 : 0];
-    if (upperTabs) upperTabs.querySelectorAll('.upper-tab').forEach(t => t.classList.toggle('active', +t.dataset.col === col));
-  }
-
-  function applyNav(animated) {
-    document.documentElement.classList.toggle('parallax-mode', shade);
-    panelEls.beam.classList.toggle('open', col === 0 && !shade ? true : col === 0);
-    panelEls.refraction.classList.toggle('open', col === 2);
-    UPPER.forEach((n, i) => panelEls[n].classList.toggle('open', shade && col === i));
-    const covering = shade || col !== 1;
-    // Refraction is a full-bleed stage like Prism (no card): hide the base graph
-    // + scrim so the shared ambient field shows behind its own graphmap.
-    const refMode = (col === 2 && !shade);
-    document.body.classList.toggle('ref-mode', refMode);
-    scrim.classList.toggle('show', covering && !refMode);
-    document.body.classList.toggle('tri-cover', covering);   // hide base chrome behind a space
-    positionRibbon(animated);
-    updateChrome();
-    current = currentName();
-    try {
-      if (col === 0 && !shade) renderPanel('beam');
-      else if (col === 2 && !shade) renderPanel('refraction');
-      if (shade) renderPanel(UPPER[col]);
-    } catch (e) { console.warn('[triptych] render', e); }
-  }
-
-  function goCol(i, animated) { col = Math.max(0, Math.min(2, i)); applyNav(animated !== false); }
-  function setShade(on, animated) { shade = !!on; applyNav(animated !== false); }
-  function openPanel(name) {
-    if (name === 'prism') { col = 1; shade = false; }
-    else { const li = LOWER.indexOf(name), ui = UPPER.indexOf(name);
-           if (li >= 0) { col = li; shade = false; } else if (ui >= 0) { col = ui; shade = true; } }
-    applyNav(true);
-  }
-  function closePanel() { if (shade) shade = false; else col = 1; applyNav(true); }
-
-  // ribbon click-zones → jump column (ignored if the press was a drag)
-  ribbon.querySelectorAll('.ribbon-zone').forEach(z => z.addEventListener('click', e => {
-    e.stopPropagation(); if (dragMoved) return; goCol(+z.dataset.col, true);
-  }));
-  // upper tabs → set column + ensure shade
-  upperTabs.querySelectorAll('.upper-tab').forEach(t => t.addEventListener('click', () => { col = +t.dataset.col; shade = true; applyNav(true); }));
-  // close affordances
-  document.querySelectorAll('.tri-panel .tri-close').forEach(b => b.addEventListener('click', closePanel));
-  scrim.addEventListener('click', closePanel);
-  document.addEventListener('keydown', e => { if (e.key === 'Escape' && (shade || col !== 1)) closePanel(); });
-
-  // ribbon drag — horizontal shifts columns, vertical raises/lowers the shade
-  ribbon.addEventListener('pointerdown', e => { dx0 = e.clientX; dy0 = e.clientY; dragMoved = false; intent = null; try { ribbon.setPointerCapture(e.pointerId); } catch (_) {} });
-  ribbon.addEventListener('pointermove', e => {
-    if (dx0 == null) return;
-    const dx = e.clientX - dx0, dy = e.clientY - dy0;
-    if (intent === null && (Math.abs(dx) > 7 || Math.abs(dy) > 7)) { intent = Math.abs(dx) > Math.abs(dy) ? 'h' : 'v'; dragMoved = true; }
-    if (intent === 'h' && Math.abs(dx) > 46) { goCol(col + (dx < 0 ? 1 : -1), true); dx0 = null; }
-    else if (intent === 'v') { if (dy > 46 && !shade) { setShade(true); dx0 = null; } else if (dy < -46 && shade) { setShade(false); dx0 = null; } }
-  });
-  function endDrag() { dx0 = null; dy0 = null; setTimeout(() => { dragMoved = false; }, 30); }
-  ribbon.addEventListener('pointerup', endDrag);
-  ribbon.addEventListener('pointercancel', endDrag);
-
-  window.addEventListener('resize', () => positionRibbon(false));
-  applyNav(false);
-  if (ribbonImg && !ribbonImg.complete) ribbonImg.addEventListener('load', () => positionRibbon(false));
-
-  window.PrismTriptych = { open: openPanel, close: closePanel, go: goCol, refresh: function () { applyNav(false); } };
-
-  // ── helpers ──
-  function evTitleOf(id) { try { const e = PrismDB.getEvent(id); return (e && e.title) || id; } catch (_) { return id; } }
-  function fmtWhen(ts) {
-    if (!ts) return '';
-    const d = new Date(ts), diff = Date.now() - ts;
-    if (diff < 36e5) return Math.max(1, Math.round(diff / 6e4)) + 'm ago';
-    if (diff < 864e5) return Math.round(diff / 36e5) + 'h ago';
-    return d.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
-  }
-  function sgnN(n) { n = Math.round(n || 0); return (n >= 0 ? '+' : '') + n; }
-  function userResponses() { try { return PrismDB.getResponses().filter(r => !r.mock); } catch (_) { return []; } }
-  function followedMembers() {
-    try { return (PrismDB.getFollowed() || []).map(id => (memberData || []).find(m => m.bioguideId === id)).filter(Boolean); }
-    catch (_) { return []; }
-  }
-  function recordRow(title, when, posHTML) {
-    const row = document.createElement('div'); row.className = 'beam-row';
-    const a = document.createElement('div'); a.className = 'beam-ev'; a.textContent = title;
-    const b = document.createElement('div'); b.className = 'beam-when'; b.textContent = when;
-    const c = document.createElement('div'); c.className = 'beam-pos'; c.innerHTML = posHTML;
-    row.appendChild(a); row.appendChild(b); row.appendChild(c); return row;
-  }
-  function nextNote(html) { const n = document.createElement('div'); n.className = 'tri-next'; n.innerHTML = html; return n; }
-
-  function renderPanel(name) {
-    ({ beam: renderBeam, refraction: renderRefraction, diatribe: renderDiatribe,
-       parallax: renderParallax, comparison: renderComparison }[name] || function () {})();
-  }
-
-  // ── Profile (your identity — handles start with *) ──
-  function getProfile() { try { return PrismDB.getUser() || {}; } catch (_) { return {}; } }
-  function normHandle(s) {
-    s = (s || '').trim().replace(/^[*@\s]+/, '').replace(/[^A-Za-z0-9_]/g, '').toLowerCase();
-    return s ? ('*' + s.slice(0, 20)) : '';
-  }
-  function profileCard() {
-    const p = getProfile();
-    const card = document.createElement('div'); card.className = 'beam-profile';
-    const top = document.createElement('div'); top.className = 'beam-profile-top';
-    const av = document.createElement('div'); av.className = 'beam-avatar';
-    av.textContent = p.displayName ? p.displayName.trim().charAt(0).toUpperCase() : '◆';
-    const id = document.createElement('div'); id.className = 'beam-id';
-    const nm = document.createElement('div'); nm.className = 'beam-displayname' + (p.displayName ? '' : ' placeholder');
-    nm.textContent = p.displayName || 'Set up your profile';
-    const hd = document.createElement('div'); hd.className = 'beam-handle' + (p.handle ? '' : ' placeholder');
-    hd.textContent = p.handle || '*yourhandle';
-    id.appendChild(nm); id.appendChild(hd);
-    const edit = document.createElement('button'); edit.className = 'beam-edit'; edit.type = 'button';
-    edit.textContent = p.handle ? 'edit' : 'set up';
-    top.appendChild(av); top.appendChild(id); top.appendChild(edit);
-    const form = document.createElement('div'); form.className = 'beam-pform' + (p.handle ? '' : ' open');
-    const nameIn = document.createElement('input'); nameIn.type = 'text'; nameIn.placeholder = 'display name'; nameIn.maxLength = 40; if (p.displayName) nameIn.value = p.displayName;
-    const handleIn = document.createElement('input'); handleIn.type = 'text'; handleIn.className = 'pf-handle'; handleIn.placeholder = '*handle'; handleIn.maxLength = 24; if (p.handle) handleIn.value = p.handle;
-    const save = document.createElement('button'); save.type = 'button'; save.textContent = 'save';
-    handleIn.addEventListener('blur', () => { if (handleIn.value.trim()) handleIn.value = normHandle(handleIn.value); });
-    edit.addEventListener('click', () => form.classList.toggle('open'));
-    save.addEventListener('click', () => {
-      const prof = getProfile();
-      prof.displayName = nameIn.value.trim().slice(0, 40);
-      prof.handle = normHandle(handleIn.value);
-      try { PrismDB.setUser(prof); } catch (_) {}
-      renderBeam();
-    });
-    form.appendChild(nameIn); form.appendChild(handleIn); form.appendChild(save);
-    card.appendChild(top); card.appendChild(form);
-    return card;
-  }
-
-  // ── Lower-Left · The Beam (your record) ──
-  function renderBeam() {
-    const body = document.getElementById('beamBody'); if (!body) return;
-    body.innerHTML = '';
-    body.appendChild(profileCard());
-    const rs = userResponses().sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
-    if (!rs.length) { const e = document.createElement('div'); e.className = 'beam-empty'; e.textContent = 'No responses yet. Commit a pin on the Prism graph and it lands here — your positions over time.'; body.appendChild(e); return; }
-    const evN = new Set(rs.map(r => r.eventId)).size;
-    const sum = document.createElement('div'); sum.className = 'beam-summary';
-    sum.textContent = rs.length + ' response' + (rs.length > 1 ? 's' : '') + ' · ' + evN + ' event' + (evN > 1 ? 's' : '');
-    body.appendChild(sum);
-    rs.forEach(r => {
-      const band = r.band || r.apertureBand || '';
-      const c = r.coords || { x: 0, y: 0 };
-      body.appendChild(recordRow(evTitleOf(r.eventId), fmtWhen(r.timestamp),
-        'quad ' + (r.finalQuadrant || '–') + ' · <span class="beam-band" data-band="' + band + '">' + (band || '—') + '</span> · x ' + sgnN(c.x) + ' · y ' + sgnN(c.y) + ' · int ' + (r.intensity != null ? r.intensity : '–')));
-    });
-  }
-
-  // ── Upper-Left · The Diatribe (perception record) ──
-  function renderDiatribe() {
-    const body = document.getElementById('diatribeBody'); if (!body) return;
-    const rs = userResponses().sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
-    body.innerHTML = '';
-    if (rs.length) {
-      const sum = document.createElement('div'); sum.className = 'beam-summary';
-      sum.textContent = 'discourse-perception record · ' + rs.length + ' entr' + (rs.length > 1 ? 'ies' : 'y');
-      body.appendChild(sum);
-      rs.forEach(r => {
-        const dscore = (r.diatribeScore != null) ? Math.round(r.diatribeScore) : '–';
-        const dband = r.diatribeBand || r.apertureBand || '—';
-        body.appendChild(recordRow(evTitleOf(r.eventId), fmtWhen(r.timestamp),
-          'diatribe ' + dscore + ' · ' + dband + (r.diatribeSide ? ' · ' + r.diatribeSide : '')));
-      });
-    } else {
-      body.innerHTML = '<div class="beam-empty">No diatribe history yet — it accrues as you set the aperture and commit pins.</div>';
-    }
-    body.appendChild(nextNote('<b>Next:</b> the live three-step interaction — slider, ghost slider, opposition center-of-gravity — surfaced here as the perceptual instrument (Spec §6).'));
-  }
-
-  // ── Upper-Center · The Parallax (aggregate) ──
-  // ── Upper-Center · The Parallax (aggregate field + interpretive lens) ──
-  let paxView = 'scatter', paxBand = null;
-  const paxGenuine = new Set(), paxBad = new Set();
-  let paxField = null, paxFieldEv = null, paxSvg = null, paxBody = null;
-  const PAX_NS = 'http://www.w3.org/2000/svg';
-
-  function paxBandColor(b) { return b === 'fluid' ? 'rgba(120,200,160,0.85)' : b === 'coalition' ? 'rgba(220,184,100,0.85)' : 'rgba(224,122,122,0.85)'; }
-
-  // The aggregate field: the event's response clusters (EVENT_AGG, or the
-  // quadrant centres as a fallback) plus the user's own real pins, overlaid.
-  function buildPaxField() {
-    if (paxField && paxFieldEv === EVENT_ID) return paxField;
-    const field = [];
-    const spec = (typeof EVENT_AGG !== 'undefined' && EVENT_AGG[EVENT_ID]) ? EVENT_AGG[EVENT_ID] : null;
-    let idx = 0;
-    ['A', 'B', 'C', 'D'].forEach(q => {
-      const qs = spec && spec[q];
-      const center = (typeof QUAD_POS !== 'undefined' && QUAD_POS[q]) ? QUAD_POS[q] : [0.5, 0.5];
-      const cx = qs ? qs.cx : center[0], cy = qs ? qs.cy : center[1];
-      const spread = qs ? qs.spread : 0.16, w = qs ? qs.w : 0.25;
-      const count = Math.max(6, Math.round(w * 64));
-      for (let i = 0; i < count; i++) {
-        const x = Math.max(0.04, Math.min(0.96, cx + (_bgHash('pax' + idx, 11) - 0.5) * 2 * spread));
-        const y = Math.max(0.04, Math.min(0.96, cy + (_bgHash('pax' + idx, 12) - 0.5) * 2 * spread));
-        const inten = Math.round(Math.max(Math.abs(x - 0.5), Math.abs(y - 0.5)) * 200);
-        const band = (typeof PE !== 'undefined' && PE.bandFromScore) ? PE.bandFromScore(inten) : (inten > 66 ? 'denominated' : inten > 33 ? 'coalition' : 'fluid');
-        field.push({ id: 'pax' + idx, x: x, y: y, band: band, quad: q, you: false });
-        idx++;
-      }
-    });
-    try {
-      (PrismDB.getResponsesForEvent(EVENT_ID) || []).forEach((r, i) => {
-        if (!r.pin) return;
-        field.push({ id: 'you' + i, x: r.pin.x, y: r.pin.y, band: (r.band || r.apertureBand || 'fluid'), quad: r.finalQuadrant || 'A', you: true });
-      });
-    } catch (_) {}
-    paxField = field; paxFieldEv = EVENT_ID; return field;
-  }
-
-  function paxVocab() {
-    const words = [];
-    try { ['A', 'B', 'C', 'D'].forEach(q => (quadrantCloudWords(q, committedBand) || []).slice(0, 3).forEach(w => { const t = (typeof w === 'string') ? w : (w.text || w.t || w.word || ''); if (t) words.push(String(t).toLowerCase()); })); } catch (_) {}
-    ['institutional', 'populist', 'accountability', 'grievance', 'principle', 'tribal'].forEach(w => words.push(w));
-    return Array.from(new Set(words)).filter(Boolean).slice(0, 10);
-  }
-  function dotLoad(id, word) { return _bgHash(id + '~' + word, 23); }
-  function paxDisplace(d) {
-    let x = d.x, y = d.y;
-    paxGenuine.forEach(g => { const L = dotLoad(d.id, g); if (L > 0.5) { x += (0.5 - d.x) * (L - 0.5); y += (0.5 - d.y) * (L - 0.5); } });
-    paxBad.forEach(b => { const L = dotLoad(d.id, b); if (L > 0.5) { x += (d.x >= 0.5 ? 1 : -1) * (L - 0.5) * 0.9; y += (d.y >= 0.5 ? 1 : -1) * (L - 0.5) * 0.9; } });
-    return { x: Math.max(0.03, Math.min(0.97, x)), y: Math.max(0.03, Math.min(0.97, y)) };
-  }
-  function cyclePaxWord(w) {
-    if (paxGenuine.has(w)) { paxGenuine.delete(w); if (paxBad.size < 2) paxBad.add(w); }
-    else if (paxBad.has(w)) { paxBad.delete(w); }
-    else { if (paxGenuine.size < 2) paxGenuine.add(w); else if (paxBad.size < 2) paxBad.add(w); }
-  }
-  function paintPax() {
-    if (!paxSvg || !paxField) return;
-    paxSvg.classList.toggle('heat', paxView === 'heat');
-    paxSvg.querySelectorAll('.pax-dot').forEach((c, i) => {
-      const d = paxField[i]; if (!d) return;
-      const p = paxDisplace(d);
-      c.setAttribute('cx', (p.x * 100).toFixed(2));
-      c.setAttribute('cy', (p.y * 100).toFixed(2));
-      const vis = !paxBand || d.band === paxBand;
-      c.setAttribute('r', vis ? (d.you ? 2.1 : (paxView === 'heat' ? 3.4 : 1.5)) : 0);
-      c.setAttribute('opacity', vis ? (paxView === 'heat' ? 0.5 : 0.92) : 0);
-    });
-  }
-  function updatePaxChrome() {
-    if (!paxBody) return;
-    paxBody.querySelectorAll('.pax-seg button').forEach(b => b.classList.toggle('on', b.dataset.view === paxView));
-    paxBody.querySelectorAll('.pax-bandchip').forEach(b => b.classList.toggle('on', b.dataset.band === paxBand));
-    paxBody.querySelectorAll('.lens-chip').forEach(ch => { const w = ch.dataset.word; ch.dataset.state = paxGenuine.has(w) ? 'genuine' : (paxBad.has(w) ? 'bad' : ''); });
-    const ro = paxBody.querySelector('.pax-readout');
-    if (ro) { const youN = paxField.filter(d => d.you).length; ro.innerHTML = '<b>' + paxField.length + '</b> voices' + (youN ? ' · <span class="pax-you">' + youN + ' yours</span>' : '') + ' · lens: ' + paxGenuine.size + ' genuine, ' + paxBad.size + ' bad-faith'; }
-  }
-
-  function renderParallax() {
-    const body = document.getElementById('parallaxBody'); if (!body) return;
-    paxBody = body;
-    const field = buildPaxField(); paxField = field;
-    body.innerHTML = '';
-    // controls: scatter/heat + band filter
-    const controls = document.createElement('div'); controls.className = 'pax-controls';
-    const seg = document.createElement('div'); seg.className = 'pax-seg';
-    ['scatter', 'heat'].forEach(m => { const b = document.createElement('button'); b.textContent = m; b.dataset.view = m; if (paxView === m) b.classList.add('on'); b.addEventListener('click', () => { paxView = m; paintPax(); updatePaxChrome(); }); seg.appendChild(b); });
-    controls.appendChild(seg);
-    ['fluid', 'coalition', 'denominated'].forEach(bd => { const c = document.createElement('button'); c.className = 'pax-bandchip' + (paxBand === bd ? ' on' : ''); c.dataset.band = bd; c.textContent = bd; c.addEventListener('click', () => { paxBand = paxBand === bd ? null : bd; paintPax(); updatePaxChrome(); }); controls.appendChild(c); });
-    body.appendChild(controls);
-    // svg field
-    const fig = document.createElement('div'); fig.className = 'pax-figure';
-    const svg = document.createElementNS(PAX_NS, 'svg'); svg.setAttribute('viewBox', '0 0 100 100'); svg.setAttribute('class', 'pax-svg' + (paxView === 'heat' ? ' heat' : '')); paxSvg = svg;
-    const tints = { A: 'rgba(96,148,220,0.06)', B: 'rgba(220,96,96,0.06)', C: 'rgba(96,168,128,0.06)', D: 'rgba(196,156,72,0.06)' };
-    [['A', 0, 0], ['B', 50, 0], ['C', 0, 50], ['D', 50, 50]].forEach(t => { const r = document.createElementNS(PAX_NS, 'rect'); r.setAttribute('x', t[1]); r.setAttribute('y', t[2]); r.setAttribute('width', 50); r.setAttribute('height', 50); r.setAttribute('fill', tints[t[0]]); svg.appendChild(r); });
-    ['M50 0 L50 100', 'M0 50 L100 50'].forEach(dd => { const ln = document.createElementNS(PAX_NS, 'path'); ln.setAttribute('d', dd); ln.setAttribute('stroke', 'rgba(255,255,255,0.10)'); ln.setAttribute('stroke-width', '0.4'); ln.setAttribute('fill', 'none'); svg.appendChild(ln); });
-    field.forEach(d => { const c = document.createElementNS(PAX_NS, 'circle'); c.setAttribute('class', 'pax-dot'); c.setAttribute('fill', paxBandColor(d.band)); c.setAttribute('cx', (d.x * 100).toFixed(2)); c.setAttribute('cy', (d.y * 100).toFixed(2)); c.setAttribute('r', d.you ? 2.1 : 1.5); if (d.you) { c.setAttribute('stroke', 'rgba(245,240,232,0.9)'); c.setAttribute('stroke-width', '0.6'); } svg.appendChild(c); });
-    fig.appendChild(svg); body.appendChild(fig);
-    // the lens
-    const lens = document.createElement('div'); lens.className = 'pax-lens';
-    const lh = document.createElement('div'); lh.className = 'pax-lens-head'; lh.textContent = 'your lens — tap a word: genuine ×2, then bad-faith ×2'; lens.appendChild(lh);
-    const wbox = document.createElement('div'); wbox.className = 'pax-lens-words';
-    paxVocab().forEach(w => { const chip = document.createElement('button'); chip.className = 'lens-chip'; chip.textContent = w; chip.dataset.word = w; chip.dataset.state = paxGenuine.has(w) ? 'genuine' : (paxBad.has(w) ? 'bad' : ''); chip.addEventListener('click', () => { cyclePaxWord(w); paintPax(); updatePaxChrome(); }); wbox.appendChild(chip); });
-    lens.appendChild(wbox); body.appendChild(lens);
-    // readout + honest note
-    const ro = document.createElement('div'); ro.className = 'pax-readout'; body.appendChild(ro);
-    body.appendChild(nextNote('<b>Note:</b> the field blends the event\'s response clusters with your own pins. Per-word loadings are a deterministic stand-in until real tagged aggregate data exists — the lens geometry and interaction are the real deliverable.'));
-    updatePaxChrome();
-    requestAnimationFrame(paintPax);
-  }
-
-  // ── Upper-Right · The Comparison Layer ──
-  function renderComparison() {
-    const body = document.getElementById('comparisonBody'); if (!body) return;
-    body.innerHTML = '';
-    if (!userPinData) {
-      body.innerHTML = '<div class="beam-empty">Commit a pin on the Prism graph first — then this measures you against each representative you follow.</div>';
-      body.appendChild(nextNote('<b>Next:</b> deep compare — your position against a legislator\'s voting record or a bill\'s text on the shared axes (Spec §3.5).'));
-      return;
-    }
-    const sum = document.createElement('div'); sum.className = 'beam-summary';
-    sum.textContent = 'you · quad ' + userPinData.quad + ' · ' + userPinData.band + ' · x ' + sgnN(userPinData.x) + ' · y ' + sgnN(userPinData.y);
-    body.appendChild(sum);
-    Promise.resolve(ensureMembers()).then(function () {
-      const fm = followedMembers();
-      if (!fm.length) {
-        const e = document.createElement('div'); e.className = 'beam-empty'; e.textContent = 'Follow representatives in the Refraction panel to compare against them here.';
-        body.appendChild(e);
-      } else {
-        fm.forEach(function (m) {
-          const d = memberToD(m);
-          const mx = Math.round((d.normX - 0.5) * 200), my = Math.round((0.5 - d.normY) * 200);
-          body.appendChild(recordRow(trkName(m), trkMetaText(m), 'Δx ' + sgnN(mx - userPinData.x) + ' · Δy ' + sgnN(my - userPinData.y)));
-        });
-      }
-      body.appendChild(nextNote('<b>Next:</b> deep compare — your position against a legislator\'s voting record or a bill\'s text on the shared axes (Spec §3.5).'));
-    });
-  }
-
-  // ── Lower-Right · The Refraction (followed reps) ──
-  // A second graphmap instance, plotting representatives as member diamonds.
-  // Built once (the container persists across opens); pins refresh each open.
-  // refView: 'event' = your follows displaced for this event (derived where
-  // scored); 'general' = the whole roster by baseline ideology (the total field).
-  let refGM = null, refView = 'event';
-  function repPlace(m, general) {
-    if (general) { const p = heuristicPlace(m); return { normX: p.x, normY: p.y, normZ: p.z }; }
-    const d = memberToD(m); return { normX: d.normX, normY: d.normY, normZ: d.normZ };
-  }
-
-  // The Refraction info card — shown when a rep's diamond (or dock row) is
-  // clicked. Same order as the compare card: name+info, delta, text, chips.
-  function showRefInfo(d) {
-    if (!d || !d.bioguideId) return;
-    const card = document.getElementById('refInfo'); if (!card) return;
-    const m = (memberData || []).find(x => x.bioguideId === d.bioguideId) || {};
-    let dp = null; try { dp = PrismDB.getMemberPosition ? PrismDB.getMemberPosition(d.bioguideId, EVENT_ID) : null; } catch (_) {}
-    const derived = !!(dp && dp.pin && (dp.provenance === 'DERIVED' || dp.provenance === 'MANUAL' || dp.adminOverride));
-    const party = (d.party || m.party || 'I').toUpperCase();
-    const partyCls = party === 'D' ? 'party-D' : party === 'R' ? 'party-R' : 'party-I';
-    const name = (m && m.bioguideId) ? trkName(m) : (d.name || d.bioguideId);
-    const mx = Math.round((d.normX - 0.5) * 200), my = Math.round((0.5 - d.normY) * 200);
-    const mz = (typeof d.normZ === 'number') ? d.normZ : 0;
-    const mi = Math.round(Math.max(Math.abs(mx), Math.abs(my)));
-    const seat = [party, m.state, (d.chamber || m.chamber)].filter(Boolean).join(' · ');
-    let text;
-    if (derived) {
-      const dia = (dp.diatribe != null) ? (' · diatribe ' + Math.round(dp.diatribe)) : '';
-      const conf = (dp.confidence != null) ? (' · conf ' + Number(dp.confidence).toFixed(2)) : '';
-      text = (dp.reasoning || 'Event-specific derived position.') + ' (derived' + dia + conf + ')';
-    } else {
-      const dz = (typeof m.deliveryZ === 'number') ? m.deliveryZ : mz;
-      const nom = (typeof m.nominateD1 === 'number') ? ('DW-NOMINATE D1 ' + m.nominateD1.toFixed(2)) : 'ideology baseline';
-      const counts = (m.sponsorCount != null) ? (' (' + m.sponsorCount + ' sponsored · ' + (m.cosponsorCount || 0) + ' cosponsored)') : '';
-      text = nom + '. Sponsorship z ' + (dz >= 0 ? '+' : '') + dz.toFixed(2) + counts + '. No event-specific score yet.';
-    }
-    const chips = [party === 'D' ? 'Democrat' : party === 'R' ? 'Republican' : 'Independent'];
-    if (d.chamber || m.chamber) chips.push(d.chamber || m.chamber);
-    if (derived) { if (dp.diatribe != null) chips.push('diatribe ' + Math.round(dp.diatribe)); if (dp.confidence != null) chips.push('conf ' + Number(dp.confidence).toFixed(2)); chips.push('derived'); }
-    else { if (m.sponsorCount != null) chips.push(m.sponsorCount + ' sponsored'); if (m.cosponsorCount != null) chips.push(m.cosponsorCount + ' cosponsored'); }
-
-    card.innerHTML = '';
-    const close = document.createElement('button'); close.className = 'ref-info-close'; close.type = 'button'; close.setAttribute('aria-label', 'close'); close.innerHTML = '&times;';
-    close.addEventListener('click', function () { card.hidden = true; });
-    const nameEl = document.createElement('div'); nameEl.className = 'ref-info-name ' + partyCls; nameEl.textContent = name;
-    const metaEl = document.createElement('div'); metaEl.className = 'ref-info-meta'; metaEl.textContent = seat + ' · ' + (derived ? 'derived' : 'DW-NOMINATE');
-    const numsEl = document.createElement('div'); numsEl.className = 'ref-info-nums'; numsEl.textContent = 'x ' + sgnN(mx) + ' · y ' + sgnN(my) + ' · z ' + (mz >= 0 ? '+' : '') + mz.toFixed(2) + ' · int ' + mi;
-    card.appendChild(close); card.appendChild(nameEl); card.appendChild(metaEl); card.appendChild(numsEl);
-    if (userPinData) { const dEl = document.createElement('div'); dEl.className = 'ref-info-delta'; dEl.textContent = 'Δx ' + sgnN(mx - userPinData.x) + ' · Δy ' + sgnN(my - userPinData.y) + ' · Δz ' + ((mz - userPinData.z) >= 0 ? '+' : '') + (mz - userPinData.z).toFixed(2); card.appendChild(dEl); }
-    const textEl = document.createElement('div'); textEl.className = 'ref-info-text'; textEl.textContent = text; card.appendChild(textEl);
-    const chipsEl = document.createElement('div'); chipsEl.className = 'ref-info-chips'; chips.forEach(function (c) { const s = document.createElement('span'); s.className = 'chip'; s.textContent = String(c); chipsEl.appendChild(s); }); card.appendChild(chipsEl);
-    card.hidden = false;
-  }
-
-  // A dock row (in Refraction) — clicking it opens the info card in-place.
-  function refRow(m, delegation) {
-    const d = memberToD(m);
-    const row = document.createElement('div'); row.className = 'trk-row' + (delegation ? ' is-delegation' : '');
-    const delta = document.createElement('div'); delta.className = 'trk-delta'; delta.textContent = trkDelta(d);
-    const x = document.createElement('button'); x.className = 'trk-unfollow'; x.type = 'button'; x.setAttribute('aria-label', 'unfollow ' + trkName(m)); x.innerHTML = '&times;';
-    x.addEventListener('click', function (e) { e.stopPropagation(); PrismDB.unfollow(m.bioguideId); renderRefraction(); });
-    row.appendChild(trkPhoto(m)); row.appendChild(trkBody(m)); row.appendChild(delta); row.appendChild(x);
-    row.addEventListener('click', function () { showRefInfo(d); });
-    return row;
-  }
-
-  // Give the Refraction graph the SAME look as the committed Prism graph —
-  // plane styling, skewed spectrum axes, the event's corner terms + on-plane
-  // keyword field, and your committed pin for reference. The only difference is
-  // the factors plotted on it (representatives, not the aggregate voices).
-  function styleRefLikePrism(g) {
-    try { g.setBoundaryVisible(true); } catch (_) {}
-    try { g.setFocus(0.5, 0.5); } catch (_) {}
-    try {
-      const axFrac = (parseFloat(graphPad.style.getPropertyValue('--ax')) || 50) / 100;
-      const ayFrac = (parseFloat(graphPad.style.getPropertyValue('--ay')) || 50) / 100;
-      g.setAxisOffset(axFrac, ayFrac);
-    } catch (_) {}
-    try {
-      const corners = {};
-      ['A', 'B', 'C', 'D'].forEach(q => { const v = variantAt(q, graphBand); if (v) corners[GM_QUAD[q]] = (v.xWord || '') + ' · ' + (v.yWord || ''); });
-      g.setCornerLabels(corners);
-    } catch (_) {}
-    try { ['A', 'B', 'C', 'D'].forEach(q => { const words = quadrantCloudWords(q, graphBand); if (words && words.length) g.setQuadrantWords(GM_QUAD[q], words); }); } catch (_) {}
-    try { if (userPinData) g.setPin(pinX, pinY, GM_QUAD[graphQuad], graphZ, { ring: BAND_RING[committedBand], style: 'orb' }); } catch (_) {}
-  }
-  function renderRefraction() {
-    const body = document.getElementById('refractionBody'); if (!body) return;
-    Promise.resolve(ensureMembers()).then(function () {
-      let map = document.getElementById('refractionMap');
-      if (!map) {
-        body.innerHTML = '';
-        body.classList.add('ref-stage');     // full graph + side dock layout
-        map = document.createElement('div'); map.className = 'ref-map'; map.id = 'refractionMap';
-        const cap = document.createElement('div'); cap.className = 'ref-cap'; cap.id = 'refractionCap'; map.appendChild(cap);
-        const dock = document.createElement('div'); dock.className = 'ref-dock'; dock.id = 'refractionFollow';
-        const info = document.createElement('div'); info.className = 'ref-info'; info.id = 'refInfo'; info.hidden = true;
-        const toggle = document.createElement('div'); toggle.className = 'ref-toggle'; toggle.id = 'refToggle';
-        ['event', 'general'].forEach(function (v) { const b = document.createElement('button'); b.type = 'button'; b.dataset.view = v; b.textContent = v; b.addEventListener('click', function () { if (refView !== v) { refView = v; renderRefraction(); } }); toggle.appendChild(b); });
-        map.appendChild(toggle);
-        body.appendChild(map); body.appendChild(dock); body.appendChild(info);
-      }
-      const fm = followedMembers();
-      const general = (refView === 'general');
-      const cap = document.getElementById('refractionCap');
-      if (cap) cap.textContent = general
-        ? 'all reps · general ideology · drag to orbit · tap a diamond'
-        : (fm.length ? (fm.length + ' followed · this event · drag to orbit · tap a diamond') : 'Follow representatives — they plot here for this event.');
-      const toggleEl = document.getElementById('refToggle');
-      if (toggleEl) toggleEl.querySelectorAll('button').forEach(function (b) { b.classList.toggle('on', b.dataset.view === refView); });
-      // the graphmap — fills the stage, like the Prism graph
-      if (typeof PrismGraphmap !== 'undefined' && typeof THREE !== 'undefined') {
-        try {
-          if (!refGM) {
-            refGM = PrismGraphmap.create({ mode: 'analytical', capabilities: { orbit: true, zInput: true, zRender: true }, moody: true, spectrumAxes: true, holdMs: 900, zoom: 12, zoomMax: 14, artifacts: true });
-            refGM.mount(map);
-            refGM.onInspect(function (d) {
-              if (d && d.isMemberPin && d.bioguideId) showRefInfo(d);   // info card in-place, no panel switch
-            });
-          }
-          styleRefLikePrism(refGM);     // match the committed Prism graph's look
-          refGM.clearMemberPins();
-          const reps = general ? (memberData || []) : fm;
-          const followedSet = new Set((PrismDB.getFollowed && PrismDB.getFollowed()) || []);
-          reps.forEach(function (m, i) {
-            const isFollowed = followedSet.has(m.bioguideId);
-            const d = repPlace(m, general);
-            refGM.addMemberPin(d.normX, d.normY, m.party, {
-              baseline: general && !isFollowed,     // general: roster as faint motes, your follows as diamonds
-              normZ: d.normZ, radius: isFollowed ? 0.1 : 0.075,
-              bioguideId: m.bioguideId, name: trkName(m), chamber: m.chamber,
-              animateIn: !general, entranceDelay: i * 60,
-            });
-          });
-          // the panel slides in, so size the canvas once the layout has settled
-          requestAnimationFrame(function () { try { refGM.resize(); } catch (_) {} });
-          setTimeout(function () { try { refGM.resize(); } catch (_) {} }, 260);
-        } catch (e) { console.warn('[refraction graphmap]', e); map.innerHTML = '<div class="beam-empty">graphmap unavailable here.</div>'; }
-      }
-      // follow-management dock — delegation, who you follow (with unfollow), search-to-add
-      const dock = document.getElementById('refractionFollow');
-      if (dock) buildRefFollow(dock);
-    });
-  }
-
-  // Follow-management for the Refraction panel: delegation + following (unfollow)
-  // + search-to-add. Reuses the tracker's row/section builders.
-  function buildRefFollow(container) {
-    container.innerHTML = '';
-    const members = memberData || [];
-    const byBio = {}; members.forEach(m => byBio[m.bioguideId] = m);
-    const followed = (PrismDB.getFollowed && PrismDB.getFollowed()) || [];
-    const del = (PrismDB.getDelegation && PrismDB.getDelegation()) || { state: null, district: null };
-    const fmembers = followed.map(id => byBio[id]).filter(Boolean);
-    const delM = fmembers.filter(m => isDelegationMember(m, del));
-    const otherM = fmembers.filter(m => !isDelegationMember(m, del));
-    const delSec = trkSection('your delegation');
-    if (delM.length) { delM.sort((a, b) => (a.chamber === 'senate' ? 0 : 1) - (b.chamber === 'senate' ? 0 : 1)); delM.forEach(m => delSec.appendChild(refRow(m, true))); }
-    else delSec.appendChild(trkDistrictAffordance(del));
-    container.appendChild(delSec);
-    const folSec = trkSection('following · ' + otherM.length);
-    if (otherM.length) otherM.forEach(m => folSec.appendChild(refRow(m, false)));
-    else { const e = document.createElement('div'); e.className = 'trk-empty'; e.textContent = 'Search below to follow any member.'; folSec.appendChild(e); }
-    container.appendChild(folSec);
-    const add = document.createElement('div'); add.className = 'tracker-add';
-    const results = document.createElement('div'); results.className = 'tracker-results'; results.hidden = true;
-    const search = document.createElement('input'); search.className = 'tracker-search'; search.type = 'text'; search.placeholder = '+ find a representative'; search.autocomplete = 'off';
-    add.appendChild(results); add.appendChild(search); container.appendChild(add);
-    search.addEventListener('input', function () {
-      const q = search.value.trim().toLowerCase();
-      if (!q) { results.hidden = true; results.innerHTML = ''; return; }
-      const matches = members.filter(m => { const nm = trkName(m).toLowerCase(); const st = (m.state || '').toLowerCase(); return nm.indexOf(q) !== -1 || st === q; }).slice(0, 14);
-      results.innerHTML = '';
-      if (!matches.length) { const n = document.createElement('div'); n.className = 'trk-noresult'; n.textContent = 'no match'; results.appendChild(n); }
-      else matches.forEach(function (m) {
-        const r = document.createElement('div'); r.className = 'trk-row';
-        r.appendChild(trkPhoto(m)); r.appendChild(trkBody(m));
-        const tag = document.createElement('div'); tag.className = 'trk-delta'; tag.textContent = PrismDB.isFollowing(m.bioguideId) ? 'following' : '+ follow';
-        r.appendChild(tag);
-        r.addEventListener('click', function () { PrismDB.follow(m.bioguideId); search.value = ''; results.hidden = true; results.innerHTML = ''; renderRefraction(); });
-        results.appendChild(r);
-      });
-      results.hidden = false;
-    });
-  }
-
-})();
 </script>
 
 </body>

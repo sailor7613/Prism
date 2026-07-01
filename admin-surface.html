@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Prism">
+<meta name="theme-color" content="#0a1226">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="pwa/apple-touch-icon.png">
+<title>Prism Admin · Diatribe stage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<!-- the real Prism grammar: caption tablets, thumbs, thresholds, ambient, type -->
+<link rel="stylesheet" href="src/css/prism-grammar.css">
+<style>
+  :root{ --top-chrome: 8px; --safe-bottom: env(safe-area-inset-bottom, 0px); }
+  html,body{ margin:0; min-height:100%; overflow-x:hidden; }
+  body.dark{ }
+  /* ── copied verbatim-ish from v2/index.html diatribe stage ── */
+  main{ position:relative; min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
+    padding: calc(var(--top-chrome) + 58px) var(--stage-pad-x) calc(120px + var(--safe-bottom)); z-index:1; }
+  .framing{ max-width:720px; text-align:center; font-family:var(--serif); font-size:16px; line-height:1.65; color:var(--ink-mid);
+    margin-bottom:44px; font-style:italic; outline:none; }
+  .framing:empty::before{ content:attr(data-ph); color:var(--ink-low); font-style:italic; }
+  .framing::after{ content:''; display:block; width:32px; height:1px; background:var(--rule); margin:18px auto 0; }
+  /* stage as the app's mobile stacked layout (real → track → ghost) — clean on iPad */
+  .stage{ position:relative; width:100%; max-width:720px; display:flex; flex-direction:column; align-items:stretch; gap:20px; }
+  .prism-caption{ position:static; align-self:center; max-width:560px; width:100%; }
+  .caption-text{ min-height:1.5em; outline:none; }
+  .caption-text:empty::before{ content:attr(data-ph); color:var(--ink-low); font-style:italic; }
+  .caption-text.editing{ box-shadow:0 0 0 1px var(--rule); border-radius:8px; }
+  .track-wrap{ position:relative; width:100%; height:92px; user-select:none; }
+  .track{ position:relative; top:34px; height:20px; margin:0 16px; border-radius:10px;
+    background:linear-gradient(to right,
+      rgba(212,92,92,.10) 0%, rgba(212,92,92,.10) 17%, rgba(196,156,72,.12) 17%, rgba(196,156,72,.12) 33%,
+      rgba(96,168,128,.08) 33%, rgba(96,168,128,.08) 67%, rgba(196,156,72,.12) 67%, rgba(196,156,72,.12) 83%,
+      rgba(212,92,92,.10) 83%, rgba(212,92,92,.10) 100%);
+    border:1px solid var(--rule-soft); box-shadow:inset 0 1px 3px rgba(0,0,0,.25); cursor:pointer; touch-action:none; }
+  .readout{ position:absolute; bottom:0; left:0; right:0; display:flex; justify-content:center; align-items:center; gap:18px;
+    font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-low); }
+  .readout .real-r{ color:var(--ink-mid); } .readout .ghost-r{ color:var(--ink-low); font-style:italic; }
+  /* ── page-wide space background (matches v2) ── */
+  #spaceField{ position:fixed; inset:0; z-index:0; pointer-events:none;
+    background:
+      radial-gradient(ellipse 120% 85% at 50% 14%, rgba(34,52,92,.32), rgba(8,12,26,0) 60%),
+      radial-gradient(ellipse 95% 75% at 80% 96%, rgba(44,32,76,.24), rgba(8,12,26,0) 58%),
+      linear-gradient(180deg,#060a16 0%,#070c1a 46%,#05070f 100%); }
+  #spaceField::before,#spaceField::after{ content:''; position:absolute; inset:-25%; background-repeat:repeat; }
+  #spaceField::before{ background-image:
+      radial-gradient(1px 1px at 20px 30px, rgba(220,230,255,.7), transparent),
+      radial-gradient(1px 1px at 80px 120px, rgba(200,215,250,.6), transparent),
+      radial-gradient(1px 1px at 150px 60px, rgba(220,230,255,.5), transparent),
+      radial-gradient(1px 1px at 110px 180px, rgba(190,205,245,.6), transparent),
+      radial-gradient(1px 1px at 50px 160px, rgba(220,230,255,.5), transparent);
+    background-size:200px 200px; opacity:.5; animation:spaceDriftFar 150s linear infinite; }
+  #spaceField::after{ background-image:
+      radial-gradient(1.6px 1.6px at 40px 50px, rgba(255,250,235,.9), transparent),
+      radial-gradient(1.5px 1.5px at 180px 140px, rgba(225,235,255,.8), transparent),
+      radial-gradient(1.5px 1.5px at 250px 80px, rgba(255,245,225,.7), transparent),
+      radial-gradient(1.4px 1.4px at 300px 220px, rgba(220,230,255,.7), transparent);
+    background-size:320px 320px; opacity:.6; animation:spaceDriftNear 95s linear infinite, spaceTwinkle 6.5s ease-in-out infinite alternate; }
+  @keyframes spaceDriftFar{ to{ transform:translate(-200px,-200px); } }
+  @keyframes spaceDriftNear{ to{ transform:translate(-320px,-320px); } }
+  @keyframes spaceTwinkle{ from{opacity:.42;} to{opacity:.7;} }
+  @media (prefers-reduced-motion:reduce){ #spaceField::before,#spaceField::after{ animation:none; } }
+
+  /* ── authoring chrome — v2 grammar: hairline rules, mono micro-labels, pills ── */
+  .adminbar{ position:fixed; top:0; left:0; right:0; z-index:20; display:flex; gap:10px; align-items:center; flex-wrap:wrap;
+    padding: calc(env(safe-area-inset-top) + 10px) 16px 10px;
+    background:rgba(8,12,26,.72); -webkit-backdrop-filter:blur(11px); backdrop-filter:blur(11px); border-bottom:.5px solid var(--rule); }
+  .adminbar .ttl{ font-family:var(--mono); font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-low); }
+  .adminbar .title-in{ flex:1; min-width:160px; font-family:var(--serif); font-size:17px; color:var(--ink);
+    background:transparent; border:0; border-bottom:1px solid var(--rule); border-radius:0; padding:4px 2px; outline:none; }
+  .adminbar .title-in::placeholder{ color:var(--ink-low); font-style:italic; }
+  .adminbar .title-in:focus{ border-bottom-color:rgba(48,96,192,.5); }
+  .adminbar select{ font-family:var(--mono); font-size:11px; letter-spacing:.04em; color:rgba(236,240,248,.85);
+    background:rgba(20,26,40,.55); -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px);
+    border:1px solid rgba(150,168,200,.4); border-radius:999px; padding:5px 26px 5px 12px; cursor:pointer; max-width:230px;
+    -webkit-appearance:none; appearance:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath d='M2 3l3 3 3-3' stroke='%23b8c4dc' stroke-width='1.3' fill='none'/%3E%3C/svg%3E");
+    background-repeat:no-repeat; background-position:right 10px center; }
+  .adminbar select:hover{ border-color:rgba(180,198,230,.7); }
+  .adminbar select option{ color:#1a2030; }
+  /* v2 button treatment (from .ev-enter) */
+  .btn{ background:transparent; border:1px solid var(--rule); color:var(--ink-mid); font-family:var(--mono);
+    font-size:10px; letter-spacing:.18em; text-transform:uppercase; padding:9px 16px; border-radius:2px; cursor:pointer;
+    display:inline-flex; align-items:center; gap:8px; transition:color .35s ease,border-color .35s ease,letter-spacing .35s ease; }
+  .btn:hover{ color:var(--ink); border-color:rgba(48,96,192,.45); letter-spacing:.22em; }
+  .btn.primary{ color:var(--ink); border-color:rgba(48,96,192,.45); }
+  .adminbar details.aiset summary{ font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-low); cursor:pointer; list-style:none; }
+  .adminbar details.aiset input{ display:block; margin-top:6px; font-family:var(--mono); font-size:11px; color:var(--ink-mid);
+    background:rgba(255,255,255,.04); border:.5px solid var(--rule); border-radius:6px; padding:6px 8px; outline:none; }
+
+  .suggest-btn{ background:transparent; border:1px solid var(--rule); color:var(--ink-low); font-family:var(--mono);
+    font-size:9px; letter-spacing:.14em; text-transform:uppercase; padding:5px 11px; border-radius:2px; cursor:pointer; margin-top:9px;
+    transition:color .3s ease,border-color .3s ease; }
+  .suggest-btn:hover{ color:var(--ink-mid); border-color:rgba(48,96,192,.4); }
+
+  .cellmap{ position:fixed; left:0; right:0; bottom:calc(60px + var(--safe-bottom)); z-index:15; display:flex; gap:7px; justify-content:center; flex-wrap:wrap; padding:0 12px; }
+  .cellchip{ font-family:var(--mono); font-size:9px; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; border-radius:999px;
+    border:.5px solid var(--rule); color:var(--ink-low); background:rgba(8,12,26,.6); -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px); cursor:pointer; }
+  .cellchip.filled{ color:var(--ink-mid); border-color:rgba(150,168,200,.4); }
+  .cellchip.active{ color:var(--ink); border-color:rgba(48,96,192,.55); }
+
+  .actions{ position:fixed; left:0; right:0; bottom:0; z-index:20; display:flex; gap:12px; justify-content:center; align-items:center;
+    padding:11px 12px calc(env(safe-area-inset-bottom) + 11px);
+    background:rgba(8,12,26,.82); -webkit-backdrop-filter:blur(11px); backdrop-filter:blur(11px); border-top:.5px solid var(--rule); }
+  .actions a{ text-decoration:none; }
+  .status{ font-family:var(--mono); font-size:9px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-low); }
+
+  .modal{ position:fixed; inset:0; z-index:50; background:rgba(4,8,18,.72); display:none; align-items:center; justify-content:center; padding:18px; }
+  .modal.show{ display:flex; }
+  .sheet{ background:rgba(9,15,32,.92); -webkit-backdrop-filter:blur(11px); backdrop-filter:blur(11px);
+    border:.5px solid var(--rule); border-radius:13px; max-width:720px; width:100%; max-height:82vh; overflow:auto; padding:16px; }
+  .sheet textarea{ width:100%; font-family:var(--mono); font-size:12px; min-height:280px; white-space:pre; color:var(--ink-mid);
+    background:rgba(255,255,255,.03); border:.5px solid var(--rule); border-radius:8px; padding:10px; }
+</style>
+</head>
+<body class="dark">
+
+<div id="spaceField" aria-hidden="true"></div>
+<div id="ambient" class="prism-ambient fluid"></div>
+
+<div class="adminbar">
+  <span class="ttl">Prism Admin</span>
+  <input class="title-in" id="evTitle" placeholder="event title…">
+  <select id="evSelect" title="Load an event onto the surface"></select>
+  <button class="btn" id="btnLoadEx">Immigration example</button>
+  <details class="aiset"><summary>AI</summary>
+    <input id="apiKey" type="password" placeholder="sk-ant-… (stored on device)" autocomplete="off" spellcheck="false" style="min-width:180px">
+    <input id="model" type="text" value="claude-sonnet-4-20250514" spellcheck="false" style="min-width:150px">
+  </details>
+</div>
+
+<main>
+  <div class="framing" id="framing" contenteditable="true" data-ph="the event framing — the introit that sits above the slider…"></div>
+
+  <div class="stage" id="stage">
+    <!-- real caption (the side the thumb is on) -->
+    <div class="prism-caption real" id="capReal" data-side="left" data-band="fluid">
+      <div class="caption-label"><span class="side"></span> · <span class="band"></span></div>
+      <div class="caption-text" id="capTextReal" contenteditable="true" data-ph="type this voice…"></div>
+      <button class="suggest-btn" id="sugReal">✦ suggest this cell</button>
+    </div>
+
+    <div class="track-wrap">
+      <div class="track" id="track">
+        <div class="prism-threshold" style="left:17%"></div>
+        <div class="prism-threshold" style="left:33%"></div>
+        <div class="prism-threshold center" style="left:50%"></div>
+        <div class="prism-threshold" style="left:67%"></div>
+        <div class="prism-threshold" style="left:83%"></div>
+        <div class="prism-thumb" id="thumbReal" data-side="left" style="left:38%"></div>
+        <div class="prism-thumb ghost" id="thumbGhost" data-side="right" style="left:62%"></div>
+      </div>
+      <div class="readout"><span class="real-r" id="roReal"></span><span class="sep">/</span><span class="ghost-r" id="roGhost"></span></div>
+    </div>
+
+    <!-- ghost caption (the mirror — opposite side, same band) -->
+    <div class="prism-caption ghost" id="capGhost" data-side="right" data-band="fluid">
+      <div class="caption-label"><span class="side"></span> · <span class="band"></span></div>
+      <div class="caption-text" id="capTextGhost" contenteditable="true" data-ph="type the mirror voice…"></div>
+      <button class="suggest-btn" id="sugGhost">✦ suggest this cell</button>
+    </div>
+  </div>
+</main>
+
+<div class="cellmap" id="cellmap"></div>
+
+<div class="actions">
+  <button class="btn primary" id="btnSave">Save &amp; Preview</button>
+  <a href="v2/index.html"><button class="btn">Open in Prism ↗</button></a>
+  <button class="btn" id="btnExport">Export / Share</button>
+  <span class="status" id="status"></span>
+</div>
+
+<div class="modal" id="exportModal"><div class="sheet">
+  <div style="display:flex;gap:10px;align-items:center"><strong style="font-family:var(--serif)">Event object</strong>
+    <span style="flex:1"></span>
+    <button class="btn" id="copyJson">Copy for Claude</button>
+    <button class="btn" id="dlJson">Download</button>
+    <button class="btn" id="closeExport">Close</button></div>
+  <textarea id="exportText" readonly></textarea>
+</div></div>
+
+<script src="src/js/prismdb.js"></script>
+<script>
+/* ===== Prism Admin · author on the diatribe surface ===== */
+const HAS_DB = (typeof PrismDB !== 'undefined');
+const $ = id => document.getElementById(id);
+const BANDCODE = { fluid:'F', coalition:'C', denominated:'D' };
+const BANDS = ['fluid','coalition','denominated'];
+function cellId(side, band){ return (side==='left'?'L':'R') + BANDCODE[band]; }
+function bandFromScore(a){ a=Math.abs(a); return a<=33?'fluid':a<=66?'coalition':'denominated'; }
+
+let currentId = null;
+let model = { LF:'',LC:'',LD:'',RF:'',RC:'',RD:'' };
+let curReal='LF', curGhost='RF';
+let pct = 38;   // thumb position 0..100
+
+/* ---- embedded worked example (diatribe + framing) ---- */
+const SEED = {
+  title:'Immigration (general)', prevalentAxis:'x',
+  framing:"Immigration is staged as open versus closed, but the country argues past itself because two goods are on the table — the dignity of the person who moves for a better life, and the security of the citizen who receives them.",
+  spine:{ neg:'Dignity', pos:'Security' },
+  diatribe:{ LF:"People seeking a better life deserve dignity — welcome them well.",
+    LC:"No human is illegal — protect them.", LD:"The border itself is violence; any enforcement is cruelty.",
+    RF:"A country has to be able to secure its border and govern who enters.", RC:"We've lost control — enforce it.",
+    RD:"It's an invasion — they're replacing us." }
+};
+let spine = { neg:'—', pos:'—' };   // prevalent-axis pole labels (left/right)
+
+/* ---- slider / caption binding ---- */
+const track=$('track'), thumbR=$('thumbReal'), thumbG=$('thumbGhost');
+function scoreFromPct(p){ return Math.round(p*2-100); }
+function sideFromScore(s){ return s<0 ? 'left' : s>0 ? 'right' : 'left'; }
+
+function flush(){
+  model[curReal] = $('capTextReal').innerText.trim();
+  model[curGhost] = $('capTextGhost').innerText.trim();
+}
+function setThumb(p, doFlush){
+  if(doFlush) flush();
+  pct = Math.max(2, Math.min(98, p));
+  const score = scoreFromPct(pct), side = sideFromScore(score), band = bandFromScore(score);
+  const opp = side==='left'?'right':'left';
+  curReal = cellId(side, band); curGhost = cellId(opp, band);
+  thumbR.style.left = pct+'%'; thumbR.dataset.side=side;
+  thumbG.style.left = (100-pct)+'%'; thumbG.dataset.side=opp;
+  // captions
+  bind($('capReal'), $('capTextReal'), side, band, curReal, sideLabel(side));
+  bind($('capGhost'), $('capTextGhost'), opp, band, curGhost, sideLabel(opp)+' · mirror');
+  // readout + ambient + cellmap
+  $('roReal').textContent = sideLabel(side)+' · '+band;
+  $('roGhost').textContent = sideLabel(opp)+' · '+band+' · mirror';
+  const amb=$('ambient'); amb.className='prism-ambient '+band;
+  renderCellmap();
+}
+function sideLabel(side){ return side==='left' ? (spine.neg||'left') : (spine.pos||'right'); }
+function bind(capEl, txtEl, side, band, cell, label){
+  capEl.dataset.side=side; capEl.dataset.band=band;
+  capEl.querySelector('.side').textContent = label;
+  capEl.querySelector('.band').textContent = band;
+  txtEl.textContent = model[cell] || '';
+}
+$('capTextReal').addEventListener('input', ()=>{ model[curReal]=$('capTextReal').innerText.trim(); renderCellmap(); });
+$('capTextGhost').addEventListener('input', ()=>{ model[curGhost]=$('capTextGhost').innerText.trim(); renderCellmap(); });
+
+/* drag the thumb (pencil/touch/mouse) */
+let dragging=false;
+function pctFromEvent(e){ const r=track.getBoundingClientRect(); const t=e.touches?e.touches[0]:e;
+  return Math.max(0,Math.min(100, ((t.clientX - r.left)/r.width)*100)); }
+function dStart(e){ dragging=true; setThumb(pctFromEvent(e), true); e.preventDefault(); }
+function dMove(e){ if(!dragging) return; setThumb(pctFromEvent(e), true); e.preventDefault(); }
+function dEnd(){ dragging=false; }
+track.addEventListener('pointerdown', dStart); window.addEventListener('pointermove', dMove); window.addEventListener('pointerup', dEnd);
+
+/* ---- cell map (6 cells, tap to jump) ---- */
+function cellCenterPct(cell){
+  const side = cell[0]==='L'?'left':'right'; const band = cell[1]==='F'?'fluid':cell[1]==='C'?'coalition':'denominated';
+  const mid = band==='fluid'?16:band==='coalition'?49:83;         // |score| center of each band
+  const score = side==='left'? -mid : mid; return (score+100)/2;
+}
+function renderCellmap(){
+  const host=$('cellmap'); host.innerHTML='';
+  ['LF','LC','LD','RF','RC','RD'].forEach(c=>{
+    const side=c[0]==='L'?spine.neg:spine.pos, band=c[1]==='F'?'fluid':c[1]==='C'?'coalition':'denominated';
+    const chip=document.createElement('button'); chip.className='cellchip'+(model[c]?' filled':'')+(c===curReal?' active':'');
+    chip.textContent = (side||c[0])+'·'+band[0];
+    chip.onclick=()=>setThumb(cellCenterPct(c), true);
+    host.appendChild(chip);
+  });
+}
+
+/* ---- load / populate ---- */
+function setSpineFromEvent(ev){
+  const pa = ev.prevalentAxis || 'x';
+  const ax = ev.axes || {}; const a = pa==='x'?ax.x:ax.y;
+  spine = { neg:(a&&a.neg)||'left', pos:(a&&a.pos)||'right' };
+}
+function loadEvent(ev){
+  currentId = ev.id || null;
+  $('evTitle').value = ev.title||'';
+  $('framing').textContent = ev.framing||'';
+  setSpineFromEvent(ev);
+  const d = ev.diatribe||{}; ['LF','LC','LD','RF','RC','RD'].forEach(c=>{ model[c] = (d[c]&&d[c].text)||''; });
+  setThumb(pct, false);
+  status(currentId?('Loaded '+currentId):'Loaded onto the surface');
+}
+function loadSeed(){
+  currentId=null; $('evTitle').value=SEED.title; $('framing').textContent=SEED.framing; spine={neg:SEED.spine.neg,pos:SEED.spine.pos};
+  model = Object.assign({}, SEED.diatribe); setThumb(pct,false); status('Immigration example on the surface — edit freely');
+}
+function blank(){ currentId=null; $('evTitle').value=''; $('framing').textContent=''; spine={neg:'Dignity',pos:'Security'};
+  model={LF:'',LC:'',LD:'',RF:'',RC:'',RD:''}; setThumb(38,false); status('Blank diatribe — fill the slots'); }
+
+/* ---- dropdown ---- */
+function refreshDropdown(sel){
+  const s=$('evSelect'); s.innerHTML='<option value="">— load event —</option>';
+  if(HAS_DB) (PrismDB.getEvents()||[]).forEach(e=>{ const o=document.createElement('option'); o.value=e.id; o.textContent=e.id+' · '+e.title; s.appendChild(o); });
+  if(sel) s.value=sel;
+}
+
+/* ---- assemble event + save/export ---- */
+function assemble(){
+  flush();
+  const dia={};
+  [['LF','left','fluid'],['LC','left','coalition'],['LD','left','denominated'],
+   ['RF','right','fluid'],['RC','right','coalition'],['RD','right','denominated']].forEach(([c,side,band])=>{
+     dia[c]={ text:model[c]||'', side, band }; });
+  return { title:$('evTitle').value.trim()||'Untitled event', framing:$('framing').innerText.trim(),
+    diatribe:dia, prevalentAxis:'x' };
+}
+function save(){
+  if(!HAS_DB){ status('Open via Live Server to save (shares storage with the app)'); return; }
+  const patch=assemble();
+  try{
+    if(currentId){ PrismDB.updateEvent(currentId, patch); PrismDB.setActive(currentId); status('Updated '+currentId+' · active'); }
+    else { const ev=Object.assign({ category:'', prompt:'', meta:{status:'draft',editHistory:[]}, date:new Date().toISOString().slice(0,10),
+      active:true, antiValentBand:'coalition', axes:{x:{pos:spine.pos,neg:spine.neg},y:{pos:'',neg:''}}, responses:{} }, patch);
+      const added=PrismDB.addEvent(ev); currentId=added.id; PrismDB.setActive(added.id); status('Saved '+added.id+' · active'); refreshDropdown(added.id); }
+  }catch(e){ status('Save failed: '+e.message); }
+}
+function openExport(){ const ev=assemble(); $('exportText').value = JSON.stringify(ev,null,2); $('exportModal').classList.add('show'); }
+
+/* ---- AI suggest a cell ---- */
+async function suggestCell(which){
+  const key=$('apiKey').value.trim(); if(!key){ status('Add your API key (AI ▸ in the top bar)'); return; }
+  const cell = which==='real'?curReal:curGhost;
+  const side = cell[0]==='L'?spine.neg:spine.pos, band = cell[1]==='F'?'fluid':cell[1]==='C'?'coalition':'denominated';
+  const gloss={fluid:'object present — the good itself, plainly held',coalition:'the good acquires a tribal carrier',denominated:'object replaced by identity — totalizing'}[band];
+  const prompt=`Author one Diatribe voice for the Prism map. Denomination radiates out: fluid holds the object, coalition carries it in a tribe, denominated replaces it with identity.
+FRAMING: ${$('framing').innerText.trim()||'(none)'}
+SPINE POLE: ${side}
+BAND: ${band} (${gloss})
+Write ONE short, sincere, charged first-person-ish line for this exact cell — not a strawman. Return ONLY the sentence, no quotes.`;
+  status('Asking Claude…');
+  try{
+    const res=await fetch('https://api.anthropic.com/v1/messages',{ method:'POST',
+      headers:{'content-type':'application/json','x-api-key':key,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+      body:JSON.stringify({ model:$('model').value.trim()||'claude-sonnet-4-20250514', max_tokens:200, messages:[{role:'user',content:prompt}] }) });
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    const data=await res.json(); let txt=(data.content&&data.content[0]&&data.content[0].text||'').trim().replace(/^["']|["']$/g,'');
+    model[cell]=txt; (which==='real'?$('capTextReal'):$('capTextGhost')).textContent=txt; renderCellmap(); status('Filled '+cell);
+  }catch(e){ status('AI error: '+e.message); }
+}
+
+/* ---- wire ---- */
+function status(m){ $('status').textContent=m; }
+$('sugReal').onclick=()=>suggestCell('real'); $('sugGhost').onclick=()=>suggestCell('ghost');
+$('btnSave').onclick=save; $('btnExport').onclick=openExport; $('btnLoadEx').onclick=loadSeed;
+$('closeExport').onclick=()=>$('exportModal').classList.remove('show');
+$('copyJson').onclick=()=>{ const t=$('exportText'); t.select(); if(navigator.clipboard) navigator.clipboard.writeText(t.value).catch(()=>{}); try{document.execCommand('copy');}catch(e){} status('Copied — paste into the chat'); };
+$('dlJson').onclick=()=>{ const ev=assemble(); const b=new Blob([JSON.stringify(ev,null,2)],{type:'application/json'}); const a=document.createElement('a'); a.href=URL.createObjectURL(b); a.download=(ev.title||'event').replace(/\W+/g,'_')+'_diatribe.json'; a.click(); };
+$('evSelect').onchange=()=>{ const id=$('evSelect').value; if(id&&HAS_DB){ const ev=PrismDB.getEvent(id); if(ev) loadEvent(ev); } };
+['apiKey','model'].forEach(id=>{ const v=localStorage.getItem('prism.admin.'+id); if(v)$(id).value=v; $(id).addEventListener('input',()=>localStorage.setItem('prism.admin.'+id,$(id).value)); });
+
+refreshDropdown();
+blank();
+if(!HAS_DB) status('Serve via Live Server so it shares storage with Prism.');
+
+/* PWA: register the offline service worker (Add to Home Screen → installable app) */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(()=>{}));
+}
+</script>
+</body>
+</html>

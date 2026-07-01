@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#0a1226">
+<title>Prism</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="src/css/prism-grammar.css">
+<link rel="apple-touch-icon" href="pwa/apple-touch-icon.png">
+<style>
+  #spaceField{ position:fixed; inset:0; z-index:0; pointer-events:none;
+    background:radial-gradient(ellipse 120% 85% at 50% 14%, rgba(34,52,92,.32), rgba(8,12,26,0) 60%),
+      linear-gradient(180deg,#060a16 0%,#070c1a 46%,#05070f 100%); }
+  body{ min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; padding:40px 20px; position:relative; z-index:1; }
+  h1{ font-family:var(--serif); font-weight:400; font-size:34px; letter-spacing:.01em; margin:0 0 6px; color:var(--ink); }
+  .sub{ font-family:var(--mono); font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:var(--ink-low); margin-bottom:44px; }
+  .links{ display:flex; flex-direction:column; gap:16px; width:100%; max-width:340px; }
+  a.card{ display:block; text-decoration:none; padding:20px 22px; border:1px solid var(--rule); border-radius:4px;
+    background:rgba(20,26,40,.35); -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
+    transition:border-color .35s ease, transform .2s ease; }
+  a.card:hover{ border-color:rgba(48,96,192,.45); transform:translateY(-1px); }
+  a.card .t{ font-family:var(--serif); font-size:19px; color:var(--ink); }
+  a.card .d{ font-family:var(--mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-low); margin-top:6px; }
+</style>
+</head>
+<body class="dark">
+<div id="spaceField"></div>
+<h1>Prism</h1>
+<div class="sub">Western Diametrica</div>
+<div class="links">
+  <a class="card" href="v2/index.html"><div class="t">Open Prism →</div><div class="d">the diatribe instrument</div></a>
+  <a class="card" href="admin-surface.html"><div class="t">Admin →</div><div class="d">author events on the surface</div></a>
+</div>
+</body>
+</html>

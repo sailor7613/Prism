@@ -1463,70 +1463,6 @@ body.ref-mode .answers-phase, body.ref-mode .event-phase { opacity: 0 !important
 .ted-bubble::after { content: 'tap to dismiss'; display: block; font-family: var(--mono); font-size: 8px;
   letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-low); margin-top: 7px; }
 
-/* ── Ted's full-body stage: a quiet night plane under stars where his whole
-   body stands. Shown only on the splash + diatribe; on the graph he trots the
-   real plane, so the stage stays hidden there. ── */
-:root { --ted-stage-h: clamp(220px, 42vh, 400px); }
-/* Full-width strip along the bottom so Ted can walk clear across the screen.
-   Pointer-events stay off so the UI underneath keeps working. */
-#tedStage { position: fixed; left: 0; right: 0; bottom: 0; z-index: 58;
-  width: 100%; height: var(--ted-stage-h);
-  display: none; pointer-events: none; }
-body.phase-event #tedStage, body.phase-diatribe #tedStage { display: block; }
-#tedStageCanvas { width: 100%; height: 100%; display: block; }
-/* when sent away he trots off-screen in 3D; just hide his speech bubble */
-body.ted-away .ted-guide { opacity: 0 !important; pointer-events: none !important; }
-/* when the body-stage is up, suppress the tiny in-bubble face and float the
-   bubble just above Ted's head */
-body.phase-event .ted-face, body.phase-diatribe .ted-face { display: none; }
-body.phase-event .ted-guide, body.phase-diatribe .ted-guide {
-  left: 12px; bottom: calc(var(--ted-stage-h) - 30px); max-width: min(330px, 80vw); }
-
-/* ── Ted's two toggles — a small persistent dock. One sends him off-screen
-   (and calls him back); one turns on cursor-hover commentary. ── */
-.ted-dock { position: fixed; left: 10px; bottom: calc(8px + var(--safe-bottom)); z-index: 61;
-  display: none; gap: 7px; pointer-events: auto; }
-body.phase-event .ted-dock, body.phase-diatribe .ted-dock { display: flex; }
-.ted-toggle { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--ink-low); background: rgba(9,15,32,0.78); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
-  border: 0.5px solid var(--rule); border-radius: 999px; padding: 6px 11px; cursor: pointer;
-  display: inline-flex; align-items: center; gap: 6px; transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease; }
-.ted-toggle:hover { border-color: rgba(180,198,230,0.6); color: var(--ink-mid); }
-.ted-toggle .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ink-low); transition: background 0.2s ease, box-shadow 0.2s ease; }
-.ted-toggle.on { color: var(--ink); border-color: rgba(150,180,230,0.55); background: rgba(18,28,52,0.82); }
-.ted-toggle.on .dot { background: #8fb0e6; box-shadow: 0 0 7px rgba(143,176,230,0.8); }
-
-/* ── Page-wide space: deep field + two drifting star layers (parallax), behind
-   the whole UI. Calm/semi-dynamic. The band-tint #ambient layers over the top. ── */
-#spaceField { position: fixed; inset: 0; z-index: 0; pointer-events: none;
-  background:
-    radial-gradient(ellipse 120% 85% at 50% 14%, rgba(34,52,92,0.32), rgba(8,12,26,0) 60%),
-    radial-gradient(ellipse 95% 75% at 80% 96%, rgba(44,32,76,0.24), rgba(8,12,26,0) 58%),
-    linear-gradient(180deg, #060a16 0%, #070c1a 46%, #05070f 100%); }
-#spaceField::before, #spaceField::after { content: ''; position: absolute; inset: -25%; background-repeat: repeat; }
-#spaceField::before {   /* far stars — small, faint, slow */
-  background-image:
-    radial-gradient(1px 1px at 20px 30px, rgba(220,230,255,0.7), transparent),
-    radial-gradient(1px 1px at 80px 120px, rgba(200,215,250,0.6), transparent),
-    radial-gradient(1px 1px at 150px 60px, rgba(220,230,255,0.5), transparent),
-    radial-gradient(1px 1px at 110px 180px, rgba(190,205,245,0.6), transparent),
-    radial-gradient(1px 1px at 50px 160px, rgba(220,230,255,0.5), transparent);
-  background-size: 200px 200px; opacity: 0.5; animation: spaceDriftFar 150s linear infinite; }
-#spaceField::after {    /* near stars — slightly larger, brighter, faster + twinkle */
-  background-image:
-    radial-gradient(1.6px 1.6px at 40px 50px, rgba(255,250,235,0.9), transparent),
-    radial-gradient(1.5px 1.5px at 180px 140px, rgba(225,235,255,0.8), transparent),
-    radial-gradient(1.5px 1.5px at 250px 80px, rgba(255,245,225,0.7), transparent),
-    radial-gradient(1.4px 1.4px at 300px 220px, rgba(220,230,255,0.7), transparent);
-  background-size: 320px 320px; opacity: 0.6; animation: spaceDriftNear 95s linear infinite, spaceTwinkle 6.5s ease-in-out infinite alternate; }
-@keyframes spaceDriftFar  { to { transform: translate(-200px, -200px); } }
-@keyframes spaceDriftNear { to { transform: translate(-320px, -320px); } }
-@keyframes spaceTwinkle   { from { opacity: 0.42; } to { opacity: 0.7; } }
-@media (prefers-reduced-motion: reduce) { #spaceField::before, #spaceField::after { animation: none; } }
-
-/* Ted's contact shadow now lives in 3D (a soft blob that follows him as he
-   roams) — see TedStage. No fixed CSS shadow. */
-
 /* ── Entry splash: large Prism logo + wordmark, morphing into the nav ribbon ── */
 .ev-logo { width: clamp(190px, 54vw, 360px); margin: 0 auto 22px; cursor: pointer;
   display: flex; flex-direction: column; align-items: center; gap: 10px;
@@ -1554,9 +1490,6 @@ body:not(.phase-diatribe) .diatribe-eyebrow { display: none; }
 </head>
 <body class="dark phase-event">
 
-<!-- Page-wide "space": a semi-dynamic starfield + deep field behind the ENTIRE
-     UI. Sits beneath the band-tint ambient; Ted and every panel float in it. -->
-<div id="spaceField" aria-hidden="true"></div>
 <div id="ambient" class="prism-ambient"></div>
 
 <header>
@@ -1586,8 +1519,8 @@ body:not(.phase-diatribe) .diatribe-eyebrow { display: none; }
     <h1 class="ev-title" id="evTitle"></h1>
     <div class="ev-rule" id="evRule"></div>
     <p class="ev-framing" id="evFraming"></p>
-    <div class="ev-keywords" id="evKeywords" data-band="fluid" data-ted-hint="Those words are the weather of this whole thing — the cloud you're about to take a position inside."></div>
-    <button class="ev-enter" id="evEnter" data-ted-hint="When you've got a feel for it, hit this. It drops you into the Prism to set your aperture.">
+    <div class="ev-keywords" id="evKeywords" data-band="fluid"></div>
+    <button class="ev-enter" id="evEnter">
       <span class="ev-enter-label">take a position</span>
       <span class="ev-enter-glyph">&rarr;</span>
     </button>
@@ -1610,7 +1543,7 @@ body:not(.phase-diatribe) .diatribe-eyebrow { display: none; }
          real → track-wrap → ghost (slider between its captions).
          Initial labels + body are blank — text materializes after first
          slider engagement via the develop animation. -->
-    <div class="prism-caption real" id="captionReal" data-side="left" data-band="fluid" data-ted-hint="That's your position, spelled out. It rewrites itself every time you move the slider.">
+    <div class="prism-caption real" id="captionReal" data-side="left" data-band="fluid">
       <div class="caption-label">
         <span class="side"></span>
         <span class="band"></span>
@@ -1619,14 +1552,14 @@ body:not(.phase-diatribe) .diatribe-eyebrow { display: none; }
     </div>
 
     <div class="track-wrap">
-      <div class="track" id="track" data-ted-hint="This rail is your aperture. Center means lukewarm; the harder you push out, the more this thing grabs you. The marks are the three thirds.">
+      <div class="track" id="track">
         <div class="prism-threshold" style="left: 17%"></div>
         <div class="prism-threshold" style="left: 33%"></div>
         <div class="prism-threshold center" style="left: 50%"></div>
         <div class="prism-threshold" style="left: 67%"></div>
         <div class="prism-threshold" style="left: 83%"></div>
-        <div class="prism-thumb"       id="thumbReal"  data-side="left"  style="left: 50%" data-ted-hint="That's your read — drag it to where you actually land."></div>
-        <div class="prism-thumb ghost" id="thumbGhost" data-side="right" style="left: 50%" data-ted-hint="That ghost is the mirror — the other side's read, flipped from yours. Watch how far apart you two sit."></div>
+        <div class="prism-thumb"       id="thumbReal"  data-side="left"  style="left: 50%"></div>
+        <div class="prism-thumb ghost" id="thumbGhost" data-side="right" style="left: 50%"></div>
       </div>
       <div class="cue" id="cue">drag · find the band</div>
       <div class="readout">
@@ -1636,7 +1569,7 @@ body:not(.phase-diatribe) .diatribe-eyebrow { display: none; }
       </div>
     </div>
 
-    <div class="prism-caption ghost" id="captionGhost" data-side="right" data-band="fluid" data-ted-hint="The opposing read, for contrast — the same question seen from the other chair.">
+    <div class="prism-caption ghost" id="captionGhost" data-side="right" data-band="fluid">
       <div class="caption-label">
         <span class="side"></span>
         <span class="band"></span>
@@ -1906,24 +1839,6 @@ body:not(.phase-diatribe) .diatribe-eyebrow { display: none; }
   <div class="ted-bubble" id="tedBubble"></div>
 </div>
 
-<!-- Ted's full-body stage — a night plane under stars (splash + diatribe only) -->
-<div id="tedStage" aria-hidden="true">
-  <canvas id="tedStageCanvas"></canvas>
-</div>
-
-<!-- Ted's two toggles: send him off / call him back, and cursor commentary -->
-<div class="ted-dock" id="tedDock">
-  <button class="ted-toggle" id="tedAwayToggle" type="button" aria-pressed="false" title="Send Ted off-screen / call him back">
-    <span class="dot"></span><span class="lbl">Ted's here</span>
-  </button>
-  <button class="ted-toggle" id="tedNarrateToggle" type="button" aria-pressed="false" title="Let Ted comment on whatever your cursor hovers">
-    <span class="dot"></span><span class="lbl">guide me</span>
-  </button>
-  <button class="ted-toggle" id="tedVoiceToggle" type="button" aria-pressed="false" title="Ted's retro synth voice">
-    <span class="dot"></span><span class="lbl">voice</span>
-  </button>
-</div>
-
 <!-- Data layer -->
 <script src="../src/js/prismdb.js"></script>
 <!-- Congressional roster as a script (not fetch) so it loads on file:// too,
@@ -1997,50 +1912,6 @@ try {
   const existsIran = (PrismDB.getEvents() || []).find(e => e.meta && e.meta.dialecticsRef === 'iran_general_v2');
   if (!existsIran) { const added = PrismDB.addEvent(IRAN_EVENT); if (added && PrismDB.setActive) PrismDB.setActive(added.id); }
 } catch (e) { console.warn('[v2] Iran event upsert failed:', e && e.message); }
-
-// ── Immigration-at-large event (Parameters/06_Events/evt_immigration_general_draft_v2.md).
-// Object = the dignity/security dialectic. X-prevalent (Dignity−/Security+), weak;
-// Y = institutional channel (State+/Market−). Same upsert pattern as Iran; set active
-// last so the bare URL opens on it. ──
-const IMMIGRATION_EVENT = {
-  title: 'Immigration (general)',
-  category: 'Domestic · Immigration · Borders',
-  framing: "Immigration is staged as open versus closed, but the country argues past itself because two goods are on the table — the dignity of the person who moves for a better life, and the security of the citizen who receives them. Both are real. The fight scrambles party because the security good is mostly spoken in a racial vehicle that discredits it, and the welcome good keeps forgetting the cause that produced the refugee and the consequence that follows them in.",
-  prompt: 'Two goods in tension — the dignity of the one who moves and the security of the one who receives.',
-  meta: { dialecticsRef: 'immigration_general_v2', status: 'draft', editHistory: [] },
-  date: '2026-06-27', active: true, prevalentAxis: 'x', antiValentBand: 'coalition',
-  axes: { x: { pos: 'Security', neg: 'Dignity' }, y: { pos: 'State', neg: 'Market' } },
-  responses: {
-    A: { xSide: 'left', source: '',
-      goodFaith: { text: "We made promises to the persecuted — asylum is a covenant, honor it.", xWord: 'refuge', yWord: 'covenant', words: [] },
-      coalition: { text: "No human is illegal — legalize them, protect them.", xWord: 'not illegal', yWord: 'legalize', words: [] },
-      badFaith:  { text: "The border itself is violence — any enforcement is cruelty.", xWord: 'border = violence', yWord: 'no enforcement', words: [] } },
-    B: { xSide: 'right', source: '',
-      goodFaith: { text: "A country has to decide who enters — that's self-government, not hatred.", xWord: 'govern', yWord: 'who enters', words: [] },
-      coalition: { text: "We've lost control of the border — enforce it, build the wall.", xWord: 'control', yWord: 'the wall', words: [] },
-      badFaith:  { text: "This is an invasion — a deliberate replacement of a people.", xWord: 'invasion', yWord: 'replacement', words: [] } },
-    C: { xSide: 'left', source: '',
-      goodFaith: { text: "Immigrants do the work and build the businesses — the economy needs them.", xWord: 'they build', yWord: 'economy needs', words: [] },
-      coalition: { text: "Let people move — strivers should get to chase a better life.", xWord: 'strivers', yWord: 'free movement', words: [] },
-      badFaith:  { text: "Borders are just protectionism with a flag — abolish them.", xWord: 'protectionism', yWord: 'abolish borders', words: [] } },
-    D: { xSide: 'right', source: '',
-      goodFaith: { text: "A real border lets us keep government small — secure the line, leave us alone.", xWord: 'strong border', yWord: 'small state', words: [] },
-      coalition: { text: "We can't be the world's welfare magnet — a country isn't a charity.", xWord: 'not a charity', yWord: 'welfare magnet', words: [] },
-      badFaith:  { text: "They come to take — a drain on the people who actually build.", xWord: 'drain', yWord: 'parasite', words: [] } },
-  },
-  diatribe: {
-    LF: { text: "People seeking a better life deserve dignity — welcome them well.", side: 'left', band: 'fluid' },
-    LC: { text: "No human is illegal — protect them.", side: 'left', band: 'coalition' },
-    LD: { text: "The border itself is violence; any enforcement is cruelty.", side: 'left', band: 'denominated' },
-    RF: { text: "A country has to be able to secure its border and govern who enters.", side: 'right', band: 'fluid' },
-    RC: { text: "We've lost control — enforce it.", side: 'right', band: 'coalition' },
-    RD: { text: "It's an invasion — they're replacing us.", side: 'right', band: 'denominated' },
-  },
-};
-try {
-  const existsImm = (PrismDB.getEvents() || []).find(e => e.meta && e.meta.dialecticsRef === 'immigration_general_v2');
-  if (!existsImm) { const added = PrismDB.addEvent(IMMIGRATION_EVENT); if (added && PrismDB.setActive) PrismDB.setActive(added.id); }
-} catch (e) { console.warn('[v2] Immigration event upsert failed:', e && e.message); }
 
 // Event selection: ?event=<id> in the URL wins (lets several events sit side by
 // side for testing), else the admin-marked active event, else evt_001.
@@ -2336,10 +2207,6 @@ function applyState(initial = false) {
 
   ambient.classList.remove('fluid', 'coalition', 'denominated');
   ambient.classList.add(realBand);
-
-  // Ted narrates the scale of thirds as you cross into a new band (and tints
-  // his night plane to match). Only once engaged, so he's quiet on load.
-  if (state.touched && window.Ted && window.Ted.onBand) window.Ted.onBand(realBand, realSide);
 
   const asym = Math.abs(state.realScore) - Math.abs(state.ghostScore);
   asymDelta.textContent = (asym >= 0 ? '+' : '') + asym;
@@ -4278,299 +4145,23 @@ applyState(true);
   const el = document.getElementById('tedGuide');
   const bubble = document.getElementById('tedBubble');
   if (!el || !bubble) return;
-  const body = document.body;
   const seen = {};
   let hideTimer = null;
-  let away = false;       // walked off-screen (toggle 1)
-  let narrate = false;    // cursor-hover commentary (toggle 2)
-
-  function say(text) {
-    if (away) return;
-    bubble.textContent = text; el.classList.add('show');
-    if (voiceOn && typeof Voice !== 'undefined' && Voice.available) Voice.speak(text);
-    clearTimeout(hideTimer); hideTimer = setTimeout(hide, 15000);
-  }
-  function hide() {
-    el.classList.remove('show'); clearTimeout(hideTimer);
-    if (typeof Voice !== 'undefined' && Voice.available) Voice.stop();
-  }
+  function say(text) { bubble.textContent = text; el.classList.add('show'); clearTimeout(hideTimer); hideTimer = setTimeout(hide, 16000); }
+  function hide() { el.classList.remove('show'); clearTimeout(hideTimer); }
   el.addEventListener('click', hide);
-
   window.Ted = {
     beat: function (key, text) { if (seen[key]) return; seen[key] = true; say(text); },
     say: say, hide: hide,
-    isAway: function () { return away; },
-    narrating: function () { return narrate; },
   };
-
-  // ── The scale of thirds, in plain language. Fired from the diatribe slider
-  //    as the cursor crosses from one band into the next. ──
-  const BAND_LINES = {
-    fluid:       "Outer third — the easy stuff. You two disagree, sure, but you're still arguing about the same thing. Nobody's questioning the frame yet.",
-    coalition:   "Middle third — now it's teams. It's not just the issue anymore; pick this and you're picking a whole side, package deal.",
-    denominated: "Inner third — the deep end. You're not arguing about the thing now, you're arguing about what it even IS. That's identity doing the talking.",
-  };
-  let lastBand = null;
-
-  // Live cursor position (normalized 0..1), updated globally — Ted gaze-tracks it.
-  let cursorNX = 0.5, cursorNY = 0.5, cursorMovedAt = 0;
-
-  // ── Ted's retro synth voice (Web Speech). Picks the most robotic voice on
-  //    hand and drops the pitch for that Y2K text-to-speech feel. ──
-  let voiceOn = true;
-  const Voice = (function () {
-    const synth = window.speechSynthesis;
-    if (!synth) return { available: false, speak: function () {}, stop: function () {} };
-    let voices = [];
-    function load() { try { voices = synth.getVoices() || []; } catch (e) { voices = []; } }
-    load(); try { synth.onvoiceschanged = load; } catch (e) {}
-    function pick() {
-      const order = [/zarvox/i, /trinoids/i, /fred/i, /albert/i, /ralph/i, /junior/i, /cellos/i,
-                     /google uk english male/i, /microsoft (david|mark|george)/i];
-      for (let i = 0; i < order.length; i++) { const v = voices.find(function (x) { return order[i].test(x.name); }); if (v) return v; }
-      return voices.find(function (x) { return /^en/i.test(x.lang); }) || voices[0] || null;
+  // Intro on the splash (only if the user hasn't already entered).
+  setTimeout(function () {
+    if (document.body.classList.contains('phase-event')) {
+      window.Ted.beat('intro', "Ted here. This is the Prism — we map where you actually stand, not just left or right. Set your aperture, pick the line that fits, drop your pin. Take a position when you're ready.");
     }
-    return {
-      available: true,
-      speak: function (text) {
-        try {
-          synth.cancel();
-          const u = new SpeechSynthesisUtterance(text);
-          const v = pick(); if (v) u.voice = v;
-          u.pitch = 0.35; u.rate = 0.92; u.volume = 0.9;   // low + steady = vintage TTS
-          synth.speak(u);
-        } catch (e) {}
-      },
-      stop: function () { try { synth.cancel(); } catch (e) {} },
-    };
-  })();
+  }, 1400);
 
-  // Ted's opening line — he walks in, then delivers this (aloud, if voice is on).
-  const INTRO_TEXT = "Ted Turner, coyote, your guide. I map where you actually stand — not just left or right. Set your aperture, find the line that fits, then drop your pin. Take a position when you are ready.";
-  let introDone = false;
-  function fireIntro() {
-    if (introDone || away) return;
-    if (!body.classList.contains('phase-event')) return;   // only greet on the splash
-    introDone = true;
-    window.Ted.beat('intro', INTRO_TEXT);
-  }
-
-  // ── Full-body Ted: walks in, greets you, then roams the screen, gaze-tracks
-  //    the cursor now and then, and otherwise just looks around. ──
-  const TedStage = (function () {
-    if (typeof THREE === 'undefined' || typeof PrismGraphmap === 'undefined' || !PrismGraphmap.buildCoyote) return null;
-    const canvas = document.getElementById('tedStageCanvas'); if (!canvas) return null;
-    let renderer;
-    try { renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true }); }
-    catch (e) { canvas.style.display = 'none'; return null; }
-    renderer.setPixelRatio(Math.min(1.5, window.devicePixelRatio || 1));   // big canvas — cap DPR
-
-    // Transparent canvas; the "space" is the page-wide starfield behind it.
-    const scene = new THREE.Scene();
-    const cam = new THREE.PerspectiveCamera(34, 2, 0.1, 100);
-    cam.position.set(0, 1.2, 6.0); cam.lookAt(0, 1.0, 0);
-    let xExtent = 6;   // half-width Ted can roam, recomputed from the frustum
-    function sizeCanvas() {
-      const w = canvas.clientWidth || window.innerWidth, h = canvas.clientHeight || 320;
-      renderer.setSize(w, h, false);
-      cam.aspect = w / h; cam.updateProjectionMatrix();
-      const halfH = Math.tan((cam.fov * Math.PI / 180) / 2) * cam.position.z;
-      xExtent = halfH * cam.aspect * 0.92;
-    }
-
-    // lighting (matches the in-bubble portrait palette) + band-tinted air
-    const keyL = new THREE.DirectionalLight(0xfff2e0, 1.15); keyL.position.set(2.0, 3.0, 2.4); scene.add(keyL);
-    const rimL = new THREE.DirectionalLight(0x90a8d0, 0.5); rimL.position.set(-2.2, 1.4, -1.6); scene.add(rimL);
-    scene.add(new THREE.AmbientLight(0x5a6aa0, 0.55));
-    const bandLight = new THREE.PointLight(0x60a880, 0.55, 14); bandLight.position.set(0, 2.2, 2.0); scene.add(bandLight);
-
-    const ted = PrismGraphmap.buildCoyote(); scene.add(ted);
-    const legs = ted.userData.legs || [], head = ted.userData.head;
-
-    // soft contact shadow that follows him along the ground
-    const shTex = (function () {
-      const c = document.createElement('canvas'); c.width = c.height = 64;
-      const x = c.getContext('2d'); const g = x.createRadialGradient(32, 32, 2, 32, 32, 30);
-      g.addColorStop(0, 'rgba(0,0,0,0.55)'); g.addColorStop(1, 'rgba(0,0,0,0)');
-      x.fillStyle = g; x.fillRect(0, 0, 64, 64); return new THREE.CanvasTexture(c);
-    })();
-    const shadow = new THREE.Mesh(new THREE.PlaneGeometry(1.7, 0.8),
-      new THREE.MeshBasicMaterial({ map: shTex, transparent: true, opacity: 0.5, depthWrite: false }));
-    shadow.rotation.x = -Math.PI / 2; shadow.position.y = 0.02; scene.add(shadow);
-
-    const BAND_COLOR = { fluid: 0x60a880, coalition: 0xc49c48, denominated: 0xd45c5c };
-    let bandTarget = new THREE.Color(0x60a880);
-    const REST = function () { return -xExtent * 0.30; };   // his usual hang-out spot (left of center)
-
-    // ── state machine ──  enter | idle | walk | away
-    let mode = 'enter', t = 0, walkClock = 0;
-    let posX = -8, targetX = -2, faceYaw = 0;
-    let nextAt = 0, tracking = false, trackUntil = 0, lookYaw = 0;
-
-    function approachAngle(cur, tgt, rate) {
-      let d = tgt - cur; while (d > Math.PI) d -= 2 * Math.PI; while (d < -Math.PI) d += 2 * Math.PI;
-      return cur + d * rate;
-    }
-
-    sizeCanvas();
-    posX = -xExtent * 1.4; targetX = REST();   // start fully off the left edge
-    window.addEventListener('resize', sizeCanvas);
-
-    (function loop() {
-      requestAnimationFrame(loop);
-      const stageEl = document.getElementById('tedStage');
-      if (!stageEl || getComputedStyle(stageEl).display === 'none') return;   // skip render when hidden
-      t += 0.016;
-      bandLight.color.lerp(bandTarget, 0.04);
-
-      // ── decide what he's up to ──
-      if (mode === 'enter') { targetX = REST(); }
-      else if (mode === 'away') { targetX = -xExtent * 1.5; }
-      else if (mode === 'idle' && t > nextAt) {
-        const roll = Math.random();
-        if (roll < 0.42) {                                   // stroll to the other side
-          targetX = (posX < 0 ? 1 : -1) * xExtent * (0.30 + Math.random() * 0.45);
-          mode = 'walk';
-        } else if (roll < 0.74) {                            // lock onto the cursor a moment
-          tracking = true; trackUntil = t + 4 + Math.random() * 3;
-        } else {                                             // just look around
-          tracking = false; lookYaw = (Math.random() * 2 - 1) * 0.7;
-        }
-        nextAt = t + 4 + Math.random() * 5;
-      }
-      if (tracking && t > trackUntil) tracking = false;
-
-      const moving = (mode === 'enter' || mode === 'walk' || mode === 'away') && Math.abs(targetX - posX) > 0.05;
-
-      // ── orientation ──
-      let dyaw;
-      if (moving) { dyaw = (targetX - posX) >= 0 ? Math.PI / 2 : -Math.PI / 2; }
-      else if (tracking) { const cwx = (cursorNX * 2 - 1) * xExtent; dyaw = Math.atan2(cwx - posX, 4); }
-      else { dyaw = lookYaw + Math.sin(t * 0.35) * 0.12; }
-      faceYaw = approachAngle(faceYaw, dyaw, moving ? 0.14 : 0.06);
-      ted.rotation.y = faceYaw;
-
-      // ── locomotion + legs ──
-      if (moving) {
-        const dir = Math.sign(targetX - posX);
-        posX += dir * 0.05; walkClock += 0.13;
-        const stride = walkClock, off = [0, Math.PI, Math.PI, 0];
-        ted.position.y = Math.abs(Math.sin(stride)) * 0.04;
-        for (let i = 0; i < legs.length; i++) {
-          const phi = stride + off[i];
-          if (legs[i].hip) legs[i].hip.rotation.x = Math.cos(phi) * 0.42;
-          if (legs[i].knee) legs[i].knee.rotation.x = -Math.max(0, -Math.sin(phi)) * 0.85;
-        }
-        if (head) head.rotation.x = Math.sin(stride) * 0.04;
-      } else {
-        // arrived — settle the gait, breathe, decide next phase
-        if (mode === 'enter') { mode = 'idle'; nextAt = t + 2.2; fireIntro(); }
-        else if (mode === 'walk') { mode = 'idle'; nextAt = t + 3 + Math.random() * 4; }
-        ted.position.y = Math.sin(t * 1.1) * 0.012;
-        for (let i = 0; i < legs.length; i++) {
-          if (legs[i].hip) legs[i].hip.rotation.x *= 0.8;
-          if (legs[i].knee) legs[i].knee.rotation.x *= 0.8;
-        }
-        if (head) head.rotation.x = tracking ? (cursorNY - 0.5) * 0.5 : Math.sin(t * 0.8) * 0.05;
-      }
-      ted.position.x = posX;
-
-      // shadow tracks him, fades when he's off-screen / away
-      shadow.position.x = posX;
-      const onScreen = Math.abs(posX) < xExtent * 1.05;
-      shadow.material.opacity += ((onScreen ? (moving ? 0.42 : 0.5) : 0) - shadow.material.opacity) * 0.1;
-      bandLight.intensity += (((mode === 'away') ? 0 : 0.55) - bandLight.intensity) * 0.05;
-
-      renderer.render(scene, cam);
-    })();
-
-    return {
-      setBand: function (b) { if (BAND_COLOR[b] != null) bandTarget = new THREE.Color(BAND_COLOR[b]); },
-      setAway: function (v) { mode = v ? 'away' : 'enter'; if (v) tracking = false; },
-    };
-  })();
-
-  // Band hook called by the diatribe slider (applyState). Always explains the
-  // thirds when you cross into a new band; also tints the night plane.
-  window.Ted.onBand = function (band, side) {
-    if (TedStage) TedStage.setBand(band);
-    if (away || band === lastBand) return;
-    lastBand = band;
-    if (BAND_LINES[band]) say(BAND_LINES[band]);
-  };
-
-  // If the 3D stage is unavailable (no WebGL), there's no walk-in to trigger
-  // the greeting — fall back to a timed intro so Ted still says hello.
-  if (!TedStage) setTimeout(fireIntro, 1400);
-
-  // ── Toggles, persisted across sessions ──
-  const awayBtn = document.getElementById('tedAwayToggle');
-  const narrateBtn = document.getElementById('tedNarrateToggle');
-  const voiceBtn = document.getElementById('tedVoiceToggle');
-
-  function setAway(v, persist) {
-    away = v;
-    body.classList.toggle('ted-away', away);
-    if (TedStage) TedStage.setAway(away);
-    if (awayBtn) {
-      awayBtn.classList.toggle('on', !away);                 // "on" = Ted present
-      awayBtn.setAttribute('aria-pressed', String(!away));
-      const lbl = awayBtn.querySelector('.lbl'); if (lbl) lbl.textContent = away ? 'call Ted' : "Ted's here";
-    }
-    if (away) hide();
-    if (persist) { try { localStorage.setItem('prism.ted.away', away ? '1' : '0'); } catch (e) {} }
-  }
-  function setNarrate(v, persist) {
-    narrate = v;
-    if (narrateBtn) {
-      narrateBtn.classList.toggle('on', narrate);
-      narrateBtn.setAttribute('aria-pressed', String(narrate));
-      const lbl = narrateBtn.querySelector('.lbl'); if (lbl) lbl.textContent = narrate ? 'guiding' : 'guide me';
-    }
-    if (persist) { try { localStorage.setItem('prism.ted.narrate', narrate ? '1' : '0'); } catch (e) {} }
-    if (persist && narrate && !away) say("Alright — point at things and I'll tell you what they're for.");
-  }
-  function setVoice(v, persist) {
-    voiceOn = v;
-    if (voiceBtn) {
-      voiceBtn.classList.toggle('on', voiceOn);
-      voiceBtn.setAttribute('aria-pressed', String(voiceOn));
-    }
-    if (!voiceOn && typeof Voice !== 'undefined' && Voice.available) Voice.stop();
-    if (!Voice.available && voiceBtn) voiceBtn.style.display = 'none';   // hide if unsupported
-    if (persist) { try { localStorage.setItem('prism.ted.voice', voiceOn ? '1' : '0'); } catch (e) {} }
-  }
-  if (awayBtn) awayBtn.addEventListener('click', function () { setAway(!away, true); });
-  if (narrateBtn) narrateBtn.addEventListener('click', function () { setNarrate(!narrate, true); });
-  if (voiceBtn) voiceBtn.addEventListener('click', function () { setVoice(!voiceOn, true); });
-
-  // ── Cursor: store position globally (Ted gaze-tracks it); and, when "guide
-  //    me" is on, speak the hovered asset's line with a cooldown so he doesn't
-  //    chatter. ──
-  let lastHint = null, hintCooldown = 0;
-  document.addEventListener('pointermove', function (e) {
-    cursorNX = e.clientX / Math.max(1, window.innerWidth);
-    cursorNY = e.clientY / Math.max(1, window.innerHeight);
-    cursorMovedAt = Date.now();
-    if (!narrate || away) return;
-    const target = e.target && e.target.closest ? e.target.closest('[data-ted-hint]') : null;
-    if (!target) return;
-    const hint = target.getAttribute('data-ted-hint'); if (!hint) return;
-    const now = Date.now();
-    if (now < hintCooldown) return;                 // global cooldown
-    lastHint = hint; hintCooldown = now + 3400;
-    say(hint);
-  }, { passive: true });
-
-  // Restore persisted prefs (TedStage is defined above, so setAway is safe).
-  try {
-    setVoice(localStorage.getItem('prism.ted.voice') !== '0', false);   // default ON
-    setNarrate(localStorage.getItem('prism.ted.narrate') === '1', false);
-    setAway(localStorage.getItem('prism.ted.away') === '1', false);
-  } catch (e) { setVoice(true, false); setNarrate(false, false); setAway(false, false); }
-
-  // Live 3D portrait of the real Ted in the bubble — kept for the graph phase,
-  // where the full-body stage is hidden (he trots the real plane there).
+  // Live 3D portrait of the real Ted (the coyote) in the bubble.
   (function TedFace() {
     if (typeof THREE === 'undefined' || typeof PrismGraphmap === 'undefined' || !PrismGraphmap.buildCoyote) return;
     const canvas = document.getElementById('tedFace'); if (!canvas) return;
@@ -4590,7 +4181,6 @@ applyState(true);
     (function loop() {
       requestAnimationFrame(loop);
       if (!el.classList.contains('show')) return;       // only render while Ted's speaking
-      if (canvas.offsetParent === null) return;          // skip when the small face is hidden (stage is up)
       t += 0.016;
       ted.rotation.y = Math.sin(t * 0.55) * 0.28;        // gentle glance
       renderer.render(scene, cam);
