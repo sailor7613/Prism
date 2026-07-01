@@ -1579,8 +1579,8 @@ body:not(.phase-diatribe) .diatribe-eyebrow { display: none; }
     <!-- Splash: the large Prism logo + the Prism wordmark. On click-in the big
          logo lifts and shrinks, morphing into the smaller nav ribbon up top. -->
     <div class="ev-logo" id="evLogo" title="Begin">
-      <img class="ev-logo-prism" src="../../Artwork/Prisms/Logo_1.png" alt="">
-      <img class="ev-logo-word" src="../../Artwork/Font%20logos/Font_logo_1.png" alt="Prism">
+      <img class="ev-logo-prism" src="../src/img/Logo_1.png" alt="">
+      <img class="ev-logo-word" src="../src/img/Font_logo_1.png" alt="Prism">
     </div>
     <div class="ev-category" id="evCategory"></div>
     <h1 class="ev-title" id="evTitle"></h1>
@@ -1787,7 +1787,7 @@ body:not(.phase-diatribe) .diatribe-eyebrow { display: none; }
 <div class="tri-scrim" id="triScrim"></div>
 
 <div class="prism-ribbon" id="prismRibbon" aria-label="Prism navigator — slide to move between panels, pull down for the analytical layer">
-  <img class="prism-ribbon-img" id="prismRibbonImg" src="../../Artwork/Prisms/prism_nav_full.png" alt="">
+  <img class="prism-ribbon-img" id="prismRibbonImg" src="../src/img/prism_nav_full.png" alt="">
   <button class="ribbon-zone" data-col="0" type="button" aria-label="Beam"></button>
   <button class="ribbon-zone" data-col="1" type="button" aria-label="Prism"></button>
   <button class="ribbon-zone" data-col="2" type="button" aria-label="Refraction"></button>
@@ -1953,6 +1953,13 @@ const mqMobile = window.matchMedia('(max-width: 768px)');
 const isMobile = () => mqMobile.matches;
 
 // ---- Data ----
+// Remember the event the admin marked active BEFORE we seed / upsert the
+// curated showcase events below. Those events carry active:true, so adding
+// them would otherwise steal the active flag from an admin-authored draft
+// (the "setActive-last clobber"). We restore this after the upserts.
+const _priorActiveId = (() => {
+  try { const a = PrismDB.getActiveEvent && PrismDB.getActiveEvent(); return (a && a.id) || null; } catch (e) { return null; }
+})();
 PrismDB.seed();
 
 // ── Iran-at-large event (drafted in Parameters/06_Events/evt_iran_general_draft_v2.md).
@@ -2041,6 +2048,14 @@ try {
   const existsImm = (PrismDB.getEvents() || []).find(e => e.meta && e.meta.dialecticsRef === 'immigration_general_v2');
   if (!existsImm) { const added = PrismDB.addEvent(IMMIGRATION_EVENT); if (added && PrismDB.setActive) PrismDB.setActive(added.id); }
 } catch (e) { console.warn('[v2] Immigration event upsert failed:', e && e.message); }
+
+// Restore the admin's active choice if the curated upserts (above) stole it on
+// first run. On a truly fresh device _priorActiveId is null, so the Immigration
+// showcase stays the default; on a returning device it hands the flag back to
+// the admin-authored event. A ?event= override still wins in selection below.
+if (_priorActiveId && PrismDB.getEvent(_priorActiveId) && PrismDB.setActive) {
+  PrismDB.setActive(_priorActiveId);
+}
 
 // Event selection: ?event=<id> in the URL wins (lets several events sit side by
 // side for testing), else the admin-marked active event, else evt_001.

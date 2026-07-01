@@ -200,7 +200,7 @@
 
 <div class="actions">
   <button class="btn primary" id="btnSave">Save &amp; Preview</button>
-  <a href="v2/index.html"><button class="btn">Open in Prism ↗</button></a>
+  <button class="btn" id="btnOpen">Open in Prism ↗</button>
   <button class="btn" id="btnExport">Export / Share</button>
   <span class="status" id="status"></span>
 </div>
@@ -392,14 +392,28 @@ function axesObj(){ return prevAxis==='x'
   ? { x:{pos:spine.pos,neg:spine.neg}, y:{pos:'',neg:''} }
   : { x:{pos:'',neg:''}, y:{pos:spine.pos,neg:spine.neg} }; }
 function save(){
-  if(!HAS_DB){ status('Open via Live Server to save (shares storage with the app)'); return; }
+  if(!HAS_DB){ status('Open via Live Server to save (shares storage with the app)'); return null; }
   const patch=assemble();
   try{
     if(currentId){ PrismDB.updateEvent(currentId, Object.assign({}, patch, {axes:axesObj()})); PrismDB.setActive(currentId); status('Updated '+currentId+' · active'); }
     else { const ev=Object.assign({ category:'', prompt:'', meta:{status:'draft',editHistory:[]}, date:new Date().toISOString().slice(0,10),
       active:true, antiValentBand:'coalition', axes:axesObj(), responses:{} }, patch);
       const added=PrismDB.addEvent(ev); currentId=added.id; PrismDB.setActive(added.id); status('Saved '+added.id+' · active'); refreshDropdown(added.id); }
-  }catch(e){ status('Save failed: '+e.message); }
+    return currentId;
+  }catch(e){ status('Save failed: '+e.message); return null; }
+}
+/* Save the on-screen draft, then hand it to Prism by id so v2 opens on exactly
+   this event (the ?event= param wins v2's selection — no reliance on active). */
+function openInPrism(){
+  if(!HAS_DB){ status('Open via Live Server first — Prism shares its storage.'); return; }
+  const p=assemble();
+  const hasContent = (p.title && p.title!=='Untitled event')
+    || p.framing
+    || ['LF','LC','LD','RF','RC','RD'].some(c=>p.diatribe[c] && p.diatribe[c].text);
+  if(!hasContent){ status('Nothing to open yet — write a framing or a line, then Save first.'); return; }
+  const id=save();
+  if(!id) return;   // save() already reported why
+  location.href='v2/index.html?event='+encodeURIComponent(id);
 }
 function openExport(){ const ev=Object.assign(assemble(), {axes:axesObj()}); $('exportText').value = JSON.stringify(ev,null,2); $('exportModal').classList.add('show'); }
 
@@ -437,7 +451,7 @@ async function suggestCell(which){
 /* ---- wire ---- */
 function status(m){ $('status').textContent=m; }
 $('sugReal').onclick=()=>suggestCell('real'); $('sugGhost').onclick=()=>suggestCell('ghost');
-$('btnSave').onclick=save; $('btnExport').onclick=openExport; $('btnLoadEx').onclick=loadSeed;
+$('btnSave').onclick=save; $('btnOpen').onclick=openInPrism; $('btnExport').onclick=openExport; $('btnLoadEx').onclick=loadSeed;
 $('closeExport').onclick=()=>$('exportModal').classList.remove('show');
 $('copyJson').onclick=()=>{ const t=$('exportText'); t.select(); if(navigator.clipboard) navigator.clipboard.writeText(t.value).catch(()=>{}); try{document.execCommand('copy');}catch(e){} status('Copied — paste into the chat'); };
 $('dlJson').onclick=()=>{ const ev=Object.assign(assemble(),{axes:axesObj()}); const b=new Blob([JSON.stringify(ev,null,2)],{type:'application/json'}); const a=document.createElement('a'); a.href=URL.createObjectURL(b); a.download=(ev.title||'event').replace(/\W+/g,'_')+'_diatribe.json'; a.click(); };
