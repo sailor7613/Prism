@@ -149,10 +149,15 @@
   //   newBand  — 'fluid' | 'coalition' | 'denominated'
   //   pool     — keyword pool array (from getKeywordPool)
   //   onSwap   — optional callback fired the moment text content is replaced
+  // Optional axis-pole labels — when set (per event), the caption side reads the
+  // pole name (e.g. "Dignity" / "Security") instead of the raw "left"/"right".
+  let _poleLabels = null;
+  function setPoleLabels(m) { _poleLabels = (m && (m.left || m.right)) ? { left: m.left || 'left', right: m.right || 'right' } : null; }
+
   function _updateLabels(el, newSide, newBand) {
     const labelSide = el.querySelector('.caption-label .side');
     const labelBand = el.querySelector('.caption-label .band');
-    if (labelSide) labelSide.textContent = newSide;
+    if (labelSide) labelSide.textContent = (_poleLabels && _poleLabels[newSide]) || newSide;
     if (labelBand) labelBand.textContent = newBand;
   }
 
@@ -281,7 +286,7 @@
     // Animation
     breath,
     // Caption helpers
-    reformCaption, materializeCaption, refractCaption, positionCaption,
+    reformCaption, materializeCaption, refractCaption, positionCaption, setPoleLabels,
   };
 
 })(typeof window !== 'undefined' ? window : globalThis);

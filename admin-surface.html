@@ -138,6 +138,85 @@
     text-transform:uppercase; color:var(--ink); background:rgba(18,28,52,.96); -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
     border:.5px solid rgba(150,180,230,.55); border-radius:999px; padding:7px 12px; cursor:pointer; box-shadow:0 4px 14px rgba(0,0,0,.45); }
   #kwPill.show{ display:inline-flex; }
+
+  /* ── Edit Ted mode: ✱ badges on hoverable assets + the script drawer ── */
+  .ted-star{ position:absolute; top:6px; right:8px; z-index:12; width:22px; height:22px; border-radius:50%;
+    display:none; align-items:center; justify-content:center; cursor:pointer; font-size:12px; color:#0a1226;
+    background:var(--keyword-shimmer,#fff6e2); box-shadow:0 0 9px rgba(255,246,226,.6); }
+  body.ted-edit .ted-star{ display:inline-flex; }
+  body.ted-edit .prism-caption{ position:relative; }
+  body.ted-edit .kw{ cursor:pointer; }
+  body.ted-edit .kw::after{ content:'✱'; font-size:.7em; color:var(--keyword-shimmer,#fff6e2); vertical-align:super; margin-left:1px; }
+  .ted-overlay{ position:fixed; inset:0; z-index:59; background:rgba(4,8,18,.4); display:none; } .ted-overlay.show{ display:block; }
+  .ted-drawer{ position:fixed; top:0; right:0; bottom:0; width:min(420px,94vw); z-index:60; transform:translateX(102%);
+    transition:transform .3s cubic-bezier(.22,1,.36,1); background:rgba(9,15,32,.97); -webkit-backdrop-filter:blur(12px); backdrop-filter:blur(12px);
+    border-left:.5px solid var(--rule); display:flex; flex-direction:column; }
+  .ted-drawer.show{ transform:none; }
+  .ted-drawer .td-head{ padding:calc(env(safe-area-inset-top) + 14px) 14px 12px; border-bottom:.5px solid var(--rule); display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  .ted-drawer .td-head .t{ font-family:var(--serif); font-size:16px; margin-right:2px; }
+  .ted-drawer .td-body{ flex:1; overflow-y:auto; padding:12px 14px 24px; -webkit-overflow-scrolling:touch; }
+  .ted-drawer .td-foot{ padding:11px 14px calc(env(safe-area-inset-bottom) + 11px); border-top:.5px solid var(--rule); display:flex; align-items:center; gap:10px; }
+  .layerseg{ display:inline-flex; border:.5px solid var(--rule); border-radius:8px; overflow:hidden; }
+  .layerseg button{ border:0; border-radius:0; background:transparent; color:var(--ink-low); font-family:var(--mono); font-size:10px; letter-spacing:.08em; text-transform:uppercase; padding:6px 10px; cursor:pointer; }
+  .layerseg button.on{ background:#22345c; color:#fff; }
+  .td-group{ margin-top:16px; } .td-group h4{ font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-low); margin:0 0 8px; border-bottom:.5px solid var(--rule); padding-bottom:5px; }
+  .td-field{ margin-bottom:11px; } .td-field label{ display:block; font-family:var(--mono); font-size:9px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-mid); margin-bottom:4px; }
+  .td-field textarea{ width:100%; font-family:var(--serif); font-size:14px; line-height:1.42; color:var(--ink); background:rgba(255,255,255,.04); border:.5px solid var(--rule); border-radius:8px; padding:8px 10px; outline:none; resize:vertical; min-height:50px; }
+  .td-field textarea::placeholder{ color:var(--ink-low); font-style:italic; }
+  .td-field textarea:focus{ border-color:var(--accent); }
+  .td-field.overridden textarea{ border-color:rgba(150,180,230,.55); }
+  .td-field.flash textarea{ border-color:var(--accent); box-shadow:0 0 0 2px rgba(143,176,230,.3); }
+
+  /* ── Quadrants view: the 12 responses as orb pins on a 2×2 plane ── */
+  .viewseg{ display:inline-flex; border:.5px solid var(--rule); border-radius:8px; overflow:hidden; }
+  .viewseg button{ border:0; border-radius:0; background:transparent; color:var(--ink-low); font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; padding:7px 11px; cursor:pointer; }
+  .viewseg button.on{ background:#22345c; color:#fff; }
+  body.view-quad main, body.view-quad .cellmap, body.view-quad #kwPill{ display:none !important; }
+  #quadView{ display:none; position:relative; min-height:100vh; flex-direction:column; align-items:center; justify-content:center;
+    padding: calc(env(safe-area-inset-top) + 70px) 20px calc(96px + var(--safe-bottom)); z-index:1; }
+  body.view-quad #quadView{ display:flex; }
+  .quad-sub{ font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-low); margin-bottom:14px; text-align:center; }
+  .quad-plane{ position:relative; width:min(560px,88vw); aspect-ratio:1; border-radius:10px;
+    background:radial-gradient(ellipse at center, rgba(10,18,38,.35), rgba(10,18,38,0) 78%);
+    box-shadow:inset 0 0 60px rgba(8,12,26,.5); }
+  /* the factory plane's quadrant coloring: A blue · B red · C green · D gold */
+  .quad-plane .qp-tint{ position:absolute; inset:0; border-radius:10px; overflow:hidden;
+    background:
+      radial-gradient(ellipse at top left,     rgba(96,148,220,.20), transparent 62%),
+      radial-gradient(ellipse at top right,    rgba(220,96,96,.20),  transparent 62%),
+      radial-gradient(ellipse at bottom left,  rgba(96,168,128,.18), transparent 62%),
+      radial-gradient(ellipse at bottom right, rgba(196,156,72,.20), transparent 62%); }
+  .quad-plane .qp-axis{ position:absolute; background:rgba(180,198,230,.14); }
+  .qp-axis.h{ left:0; right:0; top:50%; height:1px; } .qp-axis.v{ top:0; bottom:0; left:50%; width:1px; }
+  .qp-pole{ position:absolute; font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-mid);
+    outline:none; cursor:text; padding:2px 5px; border-bottom:1px dashed transparent; white-space:nowrap; }
+  .qp-pole:focus{ border-bottom-color:var(--rule); color:var(--ink); } .qp-pole:empty::before{ content:'name pole'; color:var(--ink-low); }
+  .qp-pole.xneg{ left:-2%; top:50%; transform:translate(-100%,-50%); } .qp-pole.xpos{ right:-2%; top:50%; transform:translate(100%,-50%); }
+  .qp-pole.ypos{ top:-2%; left:50%; transform:translate(-50%,-100%); } .qp-pole.yneg{ bottom:-2%; left:50%; transform:translate(-50%,100%); }
+  .orb{ position:absolute; width:26px; height:26px; border-radius:50%; transform:translate(-50%,-50%); cursor:pointer;
+    border:1.5px solid rgba(255,255,255,.25); transition:transform .15s ease, box-shadow .2s ease; }
+  .orb:hover{ transform:translate(-50%,-50%) scale(1.18); }
+  .orb.filled{ border-color:transparent; }
+  .orb[data-band="fluid"]{ background:radial-gradient(circle at 35% 30%, rgba(180,235,205,.95), rgba(96,168,128,.55) 70%, rgba(96,168,128,.15)); box-shadow:0 0 10px rgba(96,168,128,.5); }
+  .orb[data-band="coalition"]{ background:radial-gradient(circle at 35% 30%, rgba(245,222,150,.95), rgba(196,156,72,.55) 70%, rgba(196,156,72,.15)); box-shadow:0 0 10px rgba(196,156,72,.5); }
+  .orb[data-band="denominated"]{ background:radial-gradient(circle at 35% 30%, rgba(240,170,170,.95), rgba(212,92,92,.55) 70%, rgba(212,92,92,.15)); box-shadow:0 0 10px rgba(212,92,92,.5); }
+  .orb:not(.filled){ background:rgba(20,26,40,.5); box-shadow:none; }
+  .orb-tip{ position:absolute; left:50%; top:-8px; transform:translate(-50%,-100%); font-family:var(--mono); font-size:8px; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--ink-low); white-space:nowrap; pointer-events:none; opacity:0; transition:opacity .2s; }
+  .orb:hover .orb-tip{ opacity:1; }
+  /* orb editor modal */
+  .orb-sheet .oe-head{ font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-low); margin-bottom:10px; }
+  .orb-sheet textarea{ width:100%; font-family:var(--serif); font-size:15px; line-height:1.4; color:var(--ink); background:rgba(255,255,255,.04); border:.5px solid var(--rule); border-radius:8px; padding:9px 11px; outline:none; resize:vertical; min-height:64px; }
+  .orb-sheet .oe-cloud{ display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:8px; }
+  .orb-sheet .oe-cloud input{ font-family:var(--mono); font-size:13px; color:var(--ink); background:rgba(255,255,255,.04); border:.5px solid var(--rule); border-radius:8px; padding:8px 10px; outline:none; }
+  .orb-sheet .oe-actions{ display:flex; gap:10px; align-items:center; margin-top:12px; }
+  .oe-source{ margin-top:8px; } .oe-source input{ width:100%; font-family:var(--mono); font-size:12px; color:var(--ink);
+    background:rgba(255,255,255,.04); border:.5px solid var(--rule); border-radius:8px; padding:8px 10px; outline:none; }
+  /* citation bank */
+  .cite-row{ display:grid; grid-template-columns:1fr 130px 28px; gap:8px; margin-bottom:8px; align-items:center; }
+  .cite-row input{ font-family:var(--mono); font-size:12px; color:var(--ink); background:rgba(255,255,255,.04); border:.5px solid var(--rule); border-radius:8px; padding:8px 10px; outline:none; }
+  .cite-row .del{ cursor:pointer; color:var(--ink-low); text-align:center; font-size:13px; }
+  .cite-row .del:hover{ color:var(--red); }
 </style>
 </head>
 <body class="dark">
@@ -151,9 +230,12 @@
   <select id="evSelect" title="Load an event onto the surface"></select>
   <button class="btn" id="btnLoadEx">Immigration example</button>
   <span class="prevseg" title="Which axis this spine is (prevalent)"><button id="prevX" class="on">X</button><button id="prevY">Y</button></span>
+  <button class="btn" id="tedBtn" title="Edit Ted's speech">🐺 Ted</button>
+  <span class="viewseg" id="viewSeg" title="Author the diatribe, or the 12 quadrant responses"><button data-v="dia" class="on">Diatribe</button><button data-v="quad">Quadrants</button></span>
+  <button class="btn" id="citeBtn" title="Citation bank — sources for this event">📎 Sources</button>
   <details class="aiset"><summary>AI</summary>
     <input id="apiKey" type="password" placeholder="sk-ant-… (stored on device)" autocomplete="off" spellcheck="false" style="min-width:180px">
-    <input id="model" type="text" value="claude-sonnet-4-20250514" spellcheck="false" style="min-width:150px">
+    <input id="model" type="text" value="claude-sonnet-4-6" spellcheck="false" style="min-width:150px">
   </details>
 </div>
 
@@ -194,14 +276,68 @@
   </div>
 </main>
 
+<section id="quadView">
+  <div class="quad-sub">the 12 · tap an orb to give it language · fluid near center → denominated at the rim</div>
+  <div class="quad-plane" id="quadPlane">
+    <div class="qp-tint" id="qpTint"></div>
+    <div class="qp-axis h"></div><div class="qp-axis v"></div>
+    <span class="qp-pole xneg" id="qpXneg" contenteditable="true" spellcheck="false"></span>
+    <span class="qp-pole xpos" id="qpXpos" contenteditable="true" spellcheck="false"></span>
+    <span class="qp-pole ypos" id="qpYpos" contenteditable="true" spellcheck="false"></span>
+    <span class="qp-pole yneg" id="qpYneg" contenteditable="true" spellcheck="false"></span>
+    <!-- 12 orbs injected here -->
+  </div>
+</section>
+
+<div class="modal" id="orbModal"><div class="sheet orb-sheet">
+  <div class="oe-head" id="oeHead"></div>
+  <textarea id="oeText" placeholder="the response voice for this coordinate subject…"></textarea>
+  <div class="oe-cloud"><input id="oeX" placeholder="x-word (cloud)"><input id="oeY" placeholder="y-word (cloud)"></div>
+  <div class="oe-source"><input id="oeSource" list="citeUrls" placeholder="source — where this voice lives (optional)"></div>
+  <datalist id="citeUrls"></datalist>
+  <div class="oe-actions">
+    <button class="btn" id="oeSuggest">✦ suggest</button>
+    <span style="flex:1"></span>
+    <button class="btn primary" id="oeSave">Done</button>
+    <button class="btn" id="oeClose">Close</button>
+    <span class="status" id="oeStatus"></span>
+  </div>
+</div></div>
+
+<div class="modal" id="citeModal"><div class="sheet">
+  <div style="display:flex;gap:10px;align-items:center"><strong style="font-family:var(--serif)">📎 Sources for this event</strong>
+    <span style="flex:1"></span>
+    <button class="btn" id="citeAdd">+ Add</button>
+    <button class="btn" id="citeClose">Close</button></div>
+  <p style="font-family:var(--mono);font-size:11px;color:var(--ink-low)">Drop links to the articles and posts that ground this object. Attach one to any voice via its editor's “source”.</p>
+  <div id="citeList"></div>
+</div></div>
+
 <button id="kwPill" type="button">★ keyword</button>
+
+<div class="ted-overlay" id="tedOverlay"></div>
+<aside class="ted-drawer" id="tedDrawer" aria-label="Ted's script">
+  <div class="td-head">
+    <span class="t">🐺 Ted's script</span>
+    <span class="layerseg" id="tedLayerSeg"><button data-l="global" class="on">Global</button><button data-l="event">This event</button></span>
+    <span style="flex:1"></span>
+    <button class="btn" id="tedClose">Close</button>
+  </div>
+  <div class="td-body" id="tedBody"></div>
+  <div class="td-foot">
+    <button class="btn" id="tedCopy">Copy Ted script</button>
+    <span class="status" id="tedStatus"></span>
+  </div>
+</aside>
 
 <div class="cellmap" id="cellmap"></div>
 
 <div class="actions">
-  <button class="btn primary" id="btnSave">Save &amp; Preview</button>
-  <button class="btn" id="btnOpen">Open in Prism ↗</button>
-  <button class="btn" id="btnExport">Export / Share</button>
+  <button class="btn" id="btnBack">← Diatribe</button>
+  <button class="btn" id="btnSave">Save</button>
+  <button class="btn primary" id="btnNext">Next · the 12 →</button>
+  <button class="btn primary" id="btnOpen">Open in Prism ↗</button>
+  <button class="btn" id="btnExport">Export</button>
   <span class="status" id="status"></span>
 </div>
 
@@ -358,16 +494,26 @@ function loadEvent(ev){
   const pa=ev.prevalentAxis||'x'; const ax=ev.axes||{}; const a=pa==='x'?ax.x:ax.y;
   spine={ neg:(a&&a.neg)||'left', pos:(a&&a.pos)||'right' }; setPrev(pa);
   const d=ev.diatribe||{}; ['LF','LC','LD','RF','RC','RD'].forEach(c=>{ const e=d[c]||{}; model[c]=markKeywords(e.text||'', e.keywords||[]); });
+  tedEvent = ev.ted ? JSON.parse(JSON.stringify(ev.ted)) : {};
+  const R=ev.responses||{}; responses={A:{},B:{},C:{},D:{}};
+  ['A','B','C','D'].forEach(q=>{ const rq=R[q]||{}; const cvt=o=>({ text:(o&&o.text)||'', xWord:(o&&o.xWord)||'', yWord:(o&&o.yWord)||'', source:(o&&o.source)||'' });
+    responses[q]={ fluid:cvt(rq.goodFaith), coalition:cvt(rq.coalition), denominated:cvt(rq.badFaith) }; });
+  const oa=(pa==='x')?(ax.y):(ax.x); otherPole={ neg:(oa&&oa.neg)||'', pos:(oa&&oa.pos)||'' };
+  citations = Array.isArray(ev.sources) ? ev.sources.map(s=>({url:(s&&s.url)||'',label:(s&&s.label)||''})) : [];
   setPoleFields(); setThumb(pct,false); status(currentId?('Loaded '+currentId):'Loaded onto the surface');
 }
 function loadSeed(){
   currentId=null; $('evTitle').value=SEED.title; $('framing').innerHTML=escHtml(SEED.framing); spine={neg:SEED.spine.neg,pos:SEED.spine.pos}; setPrev(SEED.prevalentAxis);
-  model={}; ['LF','LC','LD','RF','RC','RD'].forEach(c=>model[c]=escHtml(SEED.diatribe[c]||'')); setPoleFields(); setThumb(pct,false);
+  model={}; ['LF','LC','LD','RF','RC','RD'].forEach(c=>model[c]=escHtml(SEED.diatribe[c]||'')); tedEvent={};
+  responses={A:{},B:{},C:{},D:{}}; otherPole={neg:'Market',pos:'State'}; if(typeof citations!=='undefined') citations=[]; setPoleFields(); setThumb(pct,false);
   status('Immigration example — edit freely; ✦ on a filled box marks its keywords');
 }
 function blank(){
   currentId=null; $('evTitle').value=''; $('framing').innerHTML=''; spine={neg:'',pos:''}; setPrev('x');
-  model={LF:'',LC:'',LD:'',RF:'',RC:'',RD:''}; setPoleFields(); setThumb(38,false); status('Blank diatribe — tap the pole names to set your axis, then fill the slots');
+  model={LF:'',LC:'',LD:'',RF:'',RC:'',RD:''}; if(typeof tedEvent!=='undefined') tedEvent={};
+  if(typeof responses!=='undefined'){ responses={A:{},B:{},C:{},D:{}}; otherPole={neg:'',pos:''}; }
+  if(typeof citations!=='undefined') citations=[];
+  setPoleFields(); setThumb(38,false); status('Blank diatribe — tap the pole names to set your axis, then fill the slots');
 }
 
 /* ---- dropdown ---- */
@@ -385,14 +531,21 @@ function assemble(){
    ['RF','right','fluid'],['RC','right','coalition'],['RD','right','denominated']].forEach(([c,side,band])=>{
      dia[c]={ text:stripHtml(model[c]), side, band, keywords:kwsOf(model[c]) }; });
   const fh=$('framing').innerHTML;
-  return { title:$('evTitle').value.trim()||'Untitled event', framing:stripHtml(fh), framingKeywords:kwsOf(fh),
+  const ev={ title:$('evTitle').value.trim()||'Untitled event', framing:stripHtml(fh), framingKeywords:kwsOf(fh),
     diatribe:dia, prevalentAxis:prevAxis };
+  if(typeof tedEvent!=='undefined' && Object.keys(tedEvent).length) ev.ted=JSON.parse(JSON.stringify(tedEvent));
+  if(typeof responsesSchema==='function') ev.responses=responsesSchema();
+  if(typeof citations!=='undefined'){ const cites=citations.filter(c=>c&&c.url&&c.url.trim()).map(c=>({url:c.url.trim(),label:(c.label||'').trim()})); if(cites.length) ev.sources=cites; }
+  return ev;
 }
-function axesObj(){ return prevAxis==='x'
-  ? { x:{pos:spine.pos,neg:spine.neg}, y:{pos:'',neg:''} }
-  : { x:{pos:'',neg:''}, y:{pos:spine.pos,neg:spine.neg} }; }
+function axesObj(){
+  const sp={pos:spine.pos,neg:spine.neg};
+  const op=(typeof otherPole!=='undefined') ? {pos:otherPole.pos||'',neg:otherPole.neg||''} : {pos:'',neg:''};
+  return prevAxis==='x' ? { x:sp, y:op } : { x:op, y:sp };
+}
 function save(){
   if(!HAS_DB){ status('Open via Live Server to save (shares storage with the app)'); return null; }
+  try{ localStorage.setItem('prism.ted.global', JSON.stringify(tedGlobal)); }catch(_){}
   const patch=assemble();
   try{
     if(currentId){ PrismDB.updateEvent(currentId, Object.assign({}, patch, {axes:axesObj()})); PrismDB.setActive(currentId); status('Updated '+currentId+' · active'); }
@@ -421,7 +574,7 @@ function openExport(){ const ev=Object.assign(assemble(), {axes:axesObj()}); $('
 async function callClaude(key, prompt, maxTok){
   const res=await fetch('https://api.anthropic.com/v1/messages',{ method:'POST',
     headers:{'content-type':'application/json','x-api-key':key,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
-    body:JSON.stringify({ model:$('model').value.trim()||'claude-sonnet-4-20250514', max_tokens:maxTok||200, messages:[{role:'user',content:prompt}] }) });
+    body:JSON.stringify({ model:$('model').value.trim()||'claude-sonnet-4-6', max_tokens:maxTok||200, messages:[{role:'user',content:prompt}] }) });
   if(!res.ok) throw new Error('HTTP '+res.status);
   const data=await res.json(); return (data.content&&data.content[0]&&data.content[0].text||'').trim();
 }
@@ -458,8 +611,153 @@ $('dlJson').onclick=()=>{ const ev=Object.assign(assemble(),{axes:axesObj()}); c
 $('evSelect').onchange=()=>{ const id=$('evSelect').value; if(id&&HAS_DB){ const ev=PrismDB.getEvent(id); if(ev) loadEvent(ev); } };
 ['apiKey','model'].forEach(id=>{ const v=localStorage.getItem('prism.admin.'+id); if(v)$(id).value=v; $(id).addEventListener('input',()=>localStorage.setItem('prism.admin.'+id,$(id).value)); });
 
+/* ===== Quadrants view — the 12 as orb pins on the 2×2 plane ===== */
+const QBANDS=['fluid','coalition','denominated'];
+const QUAD_DEF=[{id:'A',sx:-1,sy:1,xSide:'left'},{id:'B',sx:1,sy:1,xSide:'right'},{id:'C',sx:-1,sy:-1,xSide:'left'},{id:'D',sx:1,sy:-1,xSide:'right'}];
+let responses={A:{},B:{},C:{},D:{}};   // responses[quad][band] = {text,xWord,yWord}
+let otherPole={neg:'',pos:''};         // the non-prevalent axis's poles
+let orbEditing=null;
+function xStore(){ return prevAxis==='x'?spine:otherPole; }
+function yStore(){ return prevAxis==='y'?spine:otherPole; }
+function resp(q,b){ responses[q]=responses[q]||{}; return responses[q][b]||{}; }
+function respFilled(q,b){ const r=resp(q,b); return !!(r.text&&r.text.trim()); }
+function responsesSchema(){ const out={}; QUAD_DEF.forEach(q=>{ const rq=responses[q.id]||{};
+  const mk=b=>{ const r=rq[b]||{}; return { text:(r.text||''), xWord:(r.xWord||''), yWord:(r.yWord||''), words:[], source:(r.source||'') }; };
+  out[q.id]={ xSide:q.xSide, source:'', goodFaith:mk('fluid'), coalition:mk('coalition'), badFaith:mk('denominated') }; });
+  return out; }
+function buildOrbs(){
+  const plane=$('quadPlane'); plane.querySelectorAll('.orb').forEach(o=>o.remove());
+  const R=[0.34,0.60,0.90];
+  QUAD_DEF.forEach(q=>{ QBANDS.forEach((band,bi)=>{
+    const orb=document.createElement('div'); orb.className='orb'+(respFilled(q.id,band)?' filled':''); orb.dataset.band=band; orb.dataset.quad=q.id;
+    const off=R[bi]*42; orb.style.left=(50+q.sx*off)+'%'; orb.style.top=(50-q.sy*off)+'%';
+    const tip=document.createElement('span'); tip.className='orb-tip'; tip.textContent=q.id+' · '+band; orb.appendChild(tip);
+    orb.onclick=()=>openOrb(q.id,band); plane.appendChild(orb);
+  }); });
+}
+function renderQuadPoles(){ $('qpXneg').textContent=xStore().neg||''; $('qpXpos').textContent=xStore().pos||''; $('qpYpos').textContent=yStore().pos||''; $('qpYneg').textContent=yStore().neg||''; }
+$('qpXneg').addEventListener('input',()=>{ xStore().neg=$('qpXneg').innerText.trim(); setPoleFields(); });
+$('qpXpos').addEventListener('input',()=>{ xStore().pos=$('qpXpos').innerText.trim(); setPoleFields(); });
+$('qpYpos').addEventListener('input',()=>{ yStore().pos=$('qpYpos').innerText.trim(); setPoleFields(); });
+$('qpYneg').addEventListener('input',()=>{ yStore().neg=$('qpYneg').innerText.trim(); setPoleFields(); });
+function openOrb(q,band){ orbEditing={quad:q,band:band}; const r=resp(q,band);
+  const xt=(q==='A'||q==='C')?xStore().neg:xStore().pos, yt=(q==='A'||q==='B')?yStore().pos:yStore().neg;
+  $('oeHead').textContent=q+' · '+(xt||'x')+' · '+(yt||'y')+' · '+band;
+  $('oeText').value=r.text||''; $('oeX').value=r.xWord||''; $('oeY').value=r.yWord||''; $('oeSource').value=r.source||''; $('oeStatus').textContent=''; syncCiteList();
+  $('orbModal').classList.add('show'); setTimeout(()=>$('oeText').focus(),50);
+}
+function commitOrb(){ if(!orbEditing) return; const q=orbEditing.quad,b=orbEditing.band; responses[q]=responses[q]||{};
+  responses[q][b]={ text:$('oeText').value.trim(), xWord:$('oeX').value.trim(), yWord:$('oeY').value.trim(), source:$('oeSource').value.trim() }; buildOrbs(); }
+$('oeSave').onclick=()=>{ commitOrb(); $('orbModal').classList.remove('show'); orbEditing=null; };
+$('oeClose').onclick=()=>{ $('orbModal').classList.remove('show'); orbEditing=null; };
+$('oeSuggest').onclick=async()=>{ if(!orbEditing) return; const key=$('apiKey').value.trim(); if(!key){ $('oeStatus').textContent='Add your API key (AI ▸ top bar)'; return; }
+  const q=orbEditing.quad,b=orbEditing.band; const xt=(q==='A'||q==='C')?xStore().neg:xStore().pos, yt=(q==='A'||q==='B')?yStore().pos:yStore().neg;
+  const gloss={fluid:'object present — plainly held',coalition:'a tribal carrier / vehicle',denominated:'object replaced by identity — totalizing'}[b];
+  const prompt=`Author one quadrant voice for the Prism map. This coordinate subject sits at ${xt||'x'} × ${yt||'y'}; band ${b} (${gloss}). Denomination radiates: fluid holds the object, coalition carries it in a tribe, denominated replaces it with identity.\nFRAMING: ${stripHtml($('framing').innerHTML)||'(none)'}\nWrite ONE short, sincere, charged line for this exact cell — not a strawman — plus its 1–2 word x and y cloud tokens. Return ONLY JSON: {"response":"...","xWord":"...","yWord":"..."}`;
+  $('oeStatus').textContent='Asking Claude…';
+  try{ const raw=await callClaude(key,prompt,300); const m=raw.match(/\{[\s\S]*\}/); const o=m?JSON.parse(m[0]):{};
+    if(o.response)$('oeText').value=o.response; if(o.xWord)$('oeX').value=o.xWord; if(o.yWord)$('oeY').value=o.yWord; $('oeStatus').textContent='filled'; }
+  catch(e){ $('oeStatus').textContent='AI error: '+e.message; } };
+function setView(v){
+  $('viewSeg').querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));
+  document.body.classList.toggle('view-quad', v==='quad');
+  const dia = v!=='quad';
+  $('btnBack').style.display = dia?'none':'';   // back only on the quadrants stage
+  $('btnNext').style.display = dia?'':'none';    // "next" only on the diatribe stage
+  $('btnOpen').style.display = dia?'none':'';     // preview only after the responses stage
+  if(v==='quad'){ renderQuadPoles(); buildOrbs(); }
+}
+$('viewSeg').querySelectorAll('button').forEach(b=>b.onclick=()=>setView(b.dataset.v));
+$('btnNext').onclick=()=>setView('quad');
+$('btnBack').onclick=()=>setView('dia');
+
+/* ===== Citation bank — per-event sources; attachable to any voice ===== */
+let citations=[];
+function syncCiteList(){ const dl=$('citeUrls'); if(!dl) return; dl.innerHTML=''; citations.forEach(c=>{ if(c.url){ const o=document.createElement('option'); o.value=c.url; o.textContent=c.label||''; dl.appendChild(o); } }); }
+function renderCites(){ const host=$('citeList'); host.innerHTML='';
+  citations.forEach((c,i)=>{ const row=document.createElement('div'); row.className='cite-row';
+    const u=document.createElement('input'); u.placeholder='https://…'; u.value=c.url||''; u.oninput=()=>{ citations[i].url=u.value; syncCiteList(); };
+    const l=document.createElement('input'); l.placeholder='label'; l.value=c.label||''; l.oninput=()=>{ citations[i].label=l.value; syncCiteList(); };
+    const d=document.createElement('span'); d.className='del'; d.textContent='✕'; d.onclick=()=>{ citations.splice(i,1); renderCites(); };
+    row.appendChild(u); row.appendChild(l); row.appendChild(d); host.appendChild(row); });
+  syncCiteList();
+}
+$('citeBtn').onclick=()=>{ if(!citations.length) citations.push({url:'',label:''}); renderCites(); $('citeModal').classList.add('show'); };
+$('citeAdd').onclick=()=>{ citations.push({url:'',label:''}); renderCites(); };
+$('citeClose').onclick=()=>$('citeModal').classList.remove('show');
+
+/* ===== Ted speech editor — built-in defaults → global script → per-event overrides ===== */
+const TED_DEFAULT = {
+  'beat.intro':"Ted Turner, coyote, your guide. I map where you actually stand — not just left or right. Set your aperture, find the line that fits, then drop your pin. Take a position when you are ready.",
+  'beat.diatribe':"This slider's the Diatribe — how charged the whole thing feels to you, not which side you're on. Slide it and the responses shift. Be honest; nobody's grading.",
+  'beat.graph':"You're on the plane now. Drag to orbit, scroll to zoom. Pull the ribbon down for the analytical layer, slide it sideways for the others. Mind the vases — gallery's a little haunted.",
+  'band.fluid':"Outer third — the easy stuff. You two disagree, sure, but you're still arguing about the same thing. Nobody's questioning the frame yet.",
+  'band.coalition':"Middle third — now it's teams. It's not just the issue anymore; pick this and you're picking a whole side, package deal.",
+  'band.denominated':"Inner third — the deep end. You're not arguing about the thing now, you're arguing about what it even IS. That's identity doing the talking.",
+  'hint.captionReal':"That's your position, spelled out. It rewrites itself every time you move the slider.",
+  'hint.captionGhost':"The opposing read, for contrast — the same question seen from the other chair.",
+  'hint.track':"This rail is your aperture. Center means lukewarm; the harder you push out, the more this thing grabs you. The marks are the three thirds.",
+  'hint.thumbReal':"That's your read — drag it to where you actually land.",
+  'hint.thumbGhost':"That ghost is the mirror — the other side's read, flipped from yours. Watch how far apart you two sit.",
+  'hint.evKeywords':"Those words are the weather of this whole thing — the cloud you're about to take a position inside.",
+  'hint.evEnter':"When you've got a feel for it, hit this. It drops you into the Prism to set your aperture.",
+};
+const TED_GROUPS = [
+  ['Beats', [['beat.intro','Intro greeting'],['beat.diatribe','First slider touch'],['beat.graph','On the plane (graph)']]],
+  ['The scale of thirds', [['band.fluid','Fluid · outer third'],['band.coalition','Coalition · middle third'],['band.denominated','Denominated · inner third']]],
+  ['Hover hints', [['hint.captionReal','Your voice box'],['hint.captionGhost','The mirror voice box'],['hint.track','The slider (aperture)'],['hint.thumbReal','Your thumb'],['hint.thumbGhost','The ghost thumb'],['hint.evKeywords','Keyword cloud (splash)'],['hint.evEnter','Take-a-position button (splash)']]],
+];
+let tedGlobal={}; try{ tedGlobal=JSON.parse(localStorage.getItem('prism.ted.global')||'{}')||{}; }catch(e){ tedGlobal={}; }
+let tedEvent={};            // per-event overrides (event.ted)
+let tedLayer='global';
+function tedBelow(key){ return tedGlobal[key]!=null?tedGlobal[key]:(TED_DEFAULT[key]||''); }
+function tedSet(key,val){
+  const store = tedLayer==='event'?tedEvent:tedGlobal;
+  const base  = tedLayer==='event'?tedBelow(key):(TED_DEFAULT[key]||'');
+  val=(val||'').trim();
+  if(!val || val===base) delete store[key]; else store[key]=val;
+}
+function currentKeywords(){ const set=new Set(); ['LF','LC','LD','RF','RC','RD'].forEach(c=>kwsOf(model[c]).forEach(k=>set.add(k))); kwsOf($('framing').innerHTML).forEach(k=>set.add(k)); return Array.from(set); }
+function renderTed(focusKey){
+  $('tedLayerSeg').querySelectorAll('button').forEach(b=>b.classList.toggle('on', b.dataset.l===tedLayer));
+  const body=$('tedBody'); body.innerHTML='';
+  const groups=TED_GROUPS.map(g=>[g[0], g[1].slice()]);
+  if(tedLayer==='event'){ const kws=currentKeywords(); if(kws.length) groups.push(["This event's keywords", kws.map(k=>['kw.'+k, '“'+k+'”'])]); }
+  groups.forEach(g=>{
+    const gd=document.createElement('div'); gd.className='td-group'; const h=document.createElement('h4'); h.textContent=g[0]; gd.appendChild(h);
+    g[1].forEach(it=>{ const key=it[0], label=it[1];
+      const val = tedLayer==='event'?(tedEvent[key]||''):(tedGlobal[key]||'');
+      const inherit = tedLayer==='event'?tedBelow(key):(TED_DEFAULT[key]||'');
+      const f=document.createElement('div'); f.className='td-field'+(val?' overridden':''); f.dataset.fkey=key;
+      const lab=document.createElement('label'); lab.textContent=label; f.appendChild(lab);
+      const ta=document.createElement('textarea'); ta.rows=2; ta.value=val; ta.placeholder=inherit||'(no default line)';
+      ta.addEventListener('input',()=>{ tedSet(key,ta.value); f.classList.toggle('overridden', !!ta.value.trim()); });
+      f.appendChild(ta); gd.appendChild(f);
+    });
+    body.appendChild(gd);
+  });
+  if(focusKey){ let f=null; body.querySelectorAll('.td-field').forEach(x=>{ if(x.dataset.fkey===focusKey) f=x; });
+    if(f){ f.classList.add('flash'); f.scrollIntoView({block:'center'}); const ta=f.querySelector('textarea'); if(ta) ta.focus(); setTimeout(()=>f.classList.remove('flash'),1200); } }
+}
+function openTed(focusKey){ document.body.classList.add('ted-edit'); $('tedDrawer').classList.add('show'); $('tedOverlay').classList.add('show'); renderTed(focusKey); }
+function closeTed(){ $('tedDrawer').classList.remove('show'); $('tedOverlay').classList.remove('show'); document.body.classList.remove('ted-edit'); }
+$('tedBtn').onclick=()=>openTed();
+$('tedClose').onclick=closeTed; $('tedOverlay').onclick=closeTed;
+$('tedLayerSeg').querySelectorAll('button').forEach(b=>b.onclick=()=>{ tedLayer=b.dataset.l; renderTed(); });
+$('tedCopy').onclick=()=>{ const payload=JSON.stringify({global:tedGlobal, event:tedEvent}, null, 2);
+  if(navigator.clipboard) navigator.clipboard.writeText(payload).catch(()=>{}); $('tedStatus').textContent='Copied — paste to Claude to bake in'; };
+/* ✱ badges on the surface assets */
+function addStar(host,key){ if(!host) return; const s=document.createElement('span'); s.className='ted-star'; s.textContent='✱'; s.dataset.fkey=key;
+  s.title="Edit Ted’s line for this"; s.onclick=(e)=>{ e.stopPropagation(); if(key.indexOf('kw.')===0) tedLayer='event'; openTed(key); }; host.appendChild(s); }
+addStar($('capReal'),'hint.captionReal'); addStar($('capGhost'),'hint.captionGhost'); addStar($('track'),'hint.track');
+/* clicking a marked keyword in Edit-Ted mode edits its per-event line */
+document.addEventListener('click',(e)=>{ if(!document.body.classList.contains('ted-edit')) return;
+  const kw=e.target&&e.target.closest?e.target.closest('.kw'):null; if(!kw) return; const t=(kw.textContent||'').trim(); if(!t) return;
+  tedLayer='event'; openTed('kw.'+t); });
+
 refreshDropdown();
 blank();
+setView('dia');   // start on the diatribe stage of the flow
 if(!HAS_DB) status('Serve via Live Server so it shares storage with Prism.');
 
 /* PWA: register the offline service worker (Add to Home Screen → installable app) */

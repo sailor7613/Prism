@@ -2088,6 +2088,17 @@ if (!ev) console.error('[v2] Event not found:', EVENT_ID);
 
 const diatribe = ev?.diatribe || {};
 document.getElementById('framing').textContent = ev?.framing || '';
+
+// Axis-pole language: the prevalent axis's poles read on the diatribe's sides
+// (e.g. "Dignity" / "Security") instead of raw left/right — matches what the
+// admin authored. Feeds both the caption labels (via PrismEffects) and readout.
+function poleLabel(side){
+  const ax = ev && ev.axes, pa = (ev && ev.prevalentAxis) || 'y';
+  const a = pa === 'x' ? (ax && ax.x) : (ax && ax.y);
+  if (!a) return side;
+  return side === 'left' ? (a.neg || side) : (a.pos || side);
+}
+if (PE && PE.setPoleLabels) PE.setPoleLabels({ left: poleLabel('left'), right: poleLabel('right') });
 // Footer event id/title follows the loaded event (was hardcoded to evt_001).
 { const eil = document.getElementById('eventIdLine'); if (eil && ev) eil.innerHTML = '<strong>' + (ev.id || EVENT_ID) + '</strong> · ' + (ev.title || ''); }
 
@@ -2346,8 +2357,8 @@ function applyState(initial = false) {
   lineReal.setAttribute('stroke',  realSide  === 'left' ? 'rgba(96,148,220,0.42)' : 'rgba(220,96,96,0.42)');
   lineGhost.setAttribute('stroke', ghostSide === 'left' ? 'rgba(96,148,220,0.32)' : 'rgba(220,96,96,0.32)');
 
-  readoutReal.textContent  = `${realSide}  ·  ${realBand}  ·  ${state.realScore >= 0 ? '+' : ''}${state.realScore}`;
-  readoutGhost.textContent = `${ghostSide}  ·  ${ghostBand}  ·  ${state.ghostScore >= 0 ? '+' : ''}${state.ghostScore}${state.ghostLocked ? ' · revised' : ' · mirrored'}`;
+  readoutReal.textContent  = `${poleLabel(realSide)}  ·  ${realBand}  ·  ${state.realScore >= 0 ? '+' : ''}${state.realScore}`;
+  readoutGhost.textContent = `${poleLabel(ghostSide)}  ·  ${ghostBand}  ·  ${state.ghostScore >= 0 ? '+' : ''}${state.ghostScore}${state.ghostLocked ? ' · revised' : ' · mirrored'}`;
 
   ambient.classList.remove('fluid', 'coalition', 'denominated');
   ambient.classList.add(realBand);
