@@ -3343,7 +3343,23 @@ body {
   <button class="btn" onclick="refreshList()">Refresh</button>
   <button class="btn" onclick="exportAllEvents()" title="Write every listed event to Parameters/06_Events/ (Event_Data_Schema_v1 §8)">⇪ Export All</button>
   <button class="btn small" onclick="linkExportFolder()" id="exportLinkBtn" title="Link the Parameters/06_Events/ folder for direct writes (falls back to downloads if unlinked)">⛓ Link 06_Events</button>
+  <button class="btn" onclick="openImportEvent()" title="Import an event JSON exported from the admin surface (iPad)">⇩ Import JSON</button>
   <span id="exportStatus" style="font-size:11px;color:var(--ink-light);align-self:center;"></span>
+</div>
+
+<!-- ── Import-event modal: closes the surface → desk loop (AirDropped JSON lands here) ── -->
+<div id="importModal" style="display:none; position:fixed; inset:0; z-index:60; background:rgba(0,0,0,.5); align-items:center; justify-content:center;">
+  <div style="background:var(--bg, #fff); color:var(--fg, #111); border:1px solid var(--border, #ccc); border-radius:10px; max-width:640px; width:92%; padding:18px;">
+    <h3 style="margin:0 0 6px; font-size:15px;">Import event JSON</h3>
+    <p style="margin:0 0 10px; font-size:12px; color:var(--muted, #777);">Paste the JSON exported from the admin surface, or choose the AirDropped <code>_diatribe.json</code> file. A fresh evt_### id is assigned on import.</p>
+    <input type="file" id="importFile" accept=".json,application/json" style="margin-bottom:8px; font-size:12px;">
+    <textarea id="importText" rows="10" spellcheck="false" placeholder='{"title":"…","framing":"…","diatribe":{…},"responses":{…}}'
+      style="width:100%; font-family:monospace; font-size:11px; border:1px solid var(--border, #ccc); border-radius:6px; padding:8px; box-sizing:border-box;"></textarea>
+    <div style="display:flex; gap:8px; justify-content:flex-end; margin-top:10px;">
+      <button class="btn small" onclick="closeImportEvent()">Cancel</button>
+      <button class="btn small primary" onclick="doImportEvent()">Import as draft</button>
+    </div>
+  </div>
 </div>
 
 <div id="eventList" class="event-list"></div>
@@ -11568,6 +11584,41 @@ function clearReviewDoc() {
 // Add padding to page body so drawer doesn't cover content
 document.body.style.paddingBottom = '50px';
 
+
+// ============================================================
+// EVENT IMPORT — closes the surface → desk loop
+// Accepts the admin-surface Export JSON (no id; canonical band keys since
+// 2026-07-02, legacy tolerated by all readers). Fresh evt_### assigned.
+// ============================================================
+
+function openImportEvent() {
+  document.getElementById('importText').value = '';
+  document.getElementById('importFile').value = '';
+  document.getElementById('importModal').style.display = 'flex';
+}
+function closeImportEvent() {
+  document.getElementById('importModal').style.display = 'none';
+}
+document.getElementById('importFile').addEventListener('change', function () {
+  const f = this.files && this.files[0];
+  if (!f) return;
+  f.text().then(t => { document.getElementById('importText').value = t; });
+});
+function doImportEvent() {
+  let obj;
+  try { obj = JSON.parse(document.getElementById('importText').value); }
+  catch (e) { toast('Not valid JSON: ' + e.message, true); return; }
+  if (!obj || typeof obj !== 'object' || Array.isArray(obj)) { toast('Expected a single event object', true); return; }
+  if (!obj.title && !obj.diatribe && !obj.responses) { toast('No event fields found (title / diatribe / responses)', true); return; }
+  delete obj.id;                      // fresh id from PrismDB — never trust a foreign one
+  obj.active = false;                 // imports never steal the active slot
+  obj.meta = Object.assign({ status: 'draft', editHistory: [] }, obj.meta || {}, { source: 'surface-import' });
+  if (!obj.date) obj.date = new Date().toISOString().split('T')[0];
+  const created = PrismDB.addEvent(obj);
+  closeImportEvent();
+  refreshList();
+  toast(`Imported: ${created.title || 'Untitled'} (${created.id}) — draft`);
+}
 
 // ============================================================
 // EVENT EXPORT WRITER — Event_Data_Schema_v1 §5 / §8
