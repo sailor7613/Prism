@@ -68,6 +68,18 @@
   @keyframes spaceTwinkle{ from{opacity:.42;} to{opacity:.7;} }
   @media (prefers-reduced-motion:reduce){ #spaceField::before,#spaceField::after{ animation:none; } }
 
+  /* ── daytime mode — paper sky; the stars stand down (grammar's body.light
+        vars carry ink/rule/shimmer; these handle the surface's own chrome) ── */
+  body.light #spaceField{ background:
+      radial-gradient(ellipse 120% 85% at 50% 14%, rgba(48,96,192,.07), rgba(245,240,232,0) 60%),
+      radial-gradient(ellipse 95% 75% at 80% 96%, rgba(160,120,40,.06), rgba(245,240,232,0) 58%),
+      linear-gradient(180deg,#faf6ec 0%,#f5f0e8 46%,#efe8d9 100%); }
+  body.light #spaceField::before, body.light #spaceField::after{ display:none; }
+  body.light .adminbar{ background:rgba(245,240,232,.78); }
+  body.light .kw{ text-shadow:0 0 6px rgba(120,84,24,.25), 0 0 1px rgba(72,44,16,.45); }
+  body.light .sheet textarea{ background:rgba(20,22,30,.04); }
+  body.light .ted-star{ color:#f5f0e8; box-shadow:0 0 8px rgba(72,44,16,.4); }
+
   /* ── authoring chrome — v2 grammar: hairline rules, mono micro-labels, pills ── */
   .adminbar{ position:fixed; top:0; left:0; right:0; z-index:20; display:flex; gap:10px; align-items:center; flex-wrap:wrap;
     padding: calc(env(safe-area-inset-top) + 10px) 16px 10px;
@@ -233,6 +245,7 @@
   <button class="btn" id="tedBtn" title="Edit Ted's speech">🐺 Ted</button>
   <span class="viewseg" id="viewSeg" title="Author the diatribe, or the 12 quadrant responses"><button data-v="dia" class="on">Diatribe</button><button data-v="quad">Quadrants</button></span>
   <button class="btn" id="citeBtn" title="Citation bank — sources for this event">📎 Sources</button>
+  <button class="btn" id="themeBtn" title="Day / night">◐</button>
   <details class="aiset"><summary>AI</summary>
     <input id="apiKey" type="password" placeholder="sk-ant-… (stored on device)" autocomplete="off" spellcheck="false" style="min-width:180px">
     <input id="model" type="text" value="claude-sonnet-5" spellcheck="false" style="min-width:150px">
@@ -625,6 +638,18 @@ $('evSelect').onchange=()=>{ const id=$('evSelect').value; if(id&&HAS_DB){ const
 // Migrate stored retired model strings (both 404 upstream as of 2026-07)
 (function(){ const RETIRED=['claude-sonnet-4-20250514','claude-sonnet-4-6'];
   if(RETIRED.includes(($('model').value||'').trim())){ $('model').value='claude-sonnet-5'; localStorage.setItem('prism.admin.model','claude-sonnet-5'); } })();
+
+/* ---- daytime mode — ◐ flips the sky; persisted per device ---- */
+function setTheme(t){
+  document.body.classList.toggle('light', t==='light');
+  document.body.classList.toggle('dark',  t!=='light');
+  try{ localStorage.setItem('prism.admin.theme', t); }catch(_){}
+  const m=document.querySelector('meta[name="theme-color"]');
+  if(m) m.setAttribute('content', t==='light' ? '#f5f0e8' : '#0a1226');   // PWA chrome follows
+}
+$('themeBtn').onclick=()=>setTheme(document.body.classList.contains('light')?'dark':'light');
+(function(){ let t=null; try{ t=localStorage.getItem('prism.admin.theme'); }catch(_){}
+  if(t==='light') setTheme('light'); })();
 
 /* ===== Quadrants view — the 12 as orb pins on the 2×2 plane ===== */
 const QBANDS=['fluid','coalition','denominated'];
