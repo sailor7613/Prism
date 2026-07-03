@@ -422,6 +422,32 @@ body.phase-answers .answers-phase { opacity: 1; pointer-events: auto; }
   color: var(--ink-mid);
 }
 
+/* ── Orb-select stage (the 3D plane replaces the flat 2×2) ── */
+.answers-stage {
+  /* Square, but capped by viewport height so the readout + commit button
+     below it stay on-screen (the phase centers its column). */
+  width: min(460px, 86vw, 48vh);
+  aspect-ratio: 1 / 1;
+  position: relative;
+  margin: 0 auto;
+}
+.answers-readout {
+  max-width: 620px; margin: 14px auto 0; text-align: center;
+  font-family: var(--serif); font-size: clamp(15px, 1.9vw, 20px); line-height: 1.55;
+  color: var(--ink); min-height: 2.6em;
+  opacity: 0; transition: opacity 0.4s ease;
+}
+.answers-readout.show { opacity: 1; }
+/* Sit above the graphmap canvas, which overflows its stage by 12% each side. */
+.answers-readout, .answers-foot, .answers-head { position: relative; z-index: 2; }
+.answers-readout .ar-tag {
+  display: block; font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--ink-low); margin-bottom: 8px;
+}
+/* When the orb stage is live, the flat grid is only a fallback — hide it. */
+body.orb-select .answers-grid { display: none; }
+.answers-grid:empty { display: none; }
+
 /* 2×2 quadrant grid:  TL=Left·Inst   TR=Right·Inst
                        BL=Left·Grass  BR=Right·Grass */
 .answers-grid {
@@ -1660,6 +1686,10 @@ body:not(.phase-diatribe) .diatribe-eyebrow { display: none; }
     <p class="a-prompt" id="aPrompt"></p>
     <div class="a-meta" id="aBand">aperture · fluid</div>
   </div>
+  <!-- Orb swap: the 12 coordinate subjects live as pins on the real 3D plane.
+       The flat 2×2 grid below is the no-WebGL fallback (renderAnswers). -->
+  <div class="answers-stage" id="answersStage"></div>
+  <div class="answers-readout" id="answersReadout"></div>
   <div class="answers-grid" id="answersGrid"></div>
   <div class="answers-foot" id="answersFoot">
     <button class="a-back" id="aBack">&larr; reconsider</button>
@@ -2506,6 +2536,16 @@ const aBand        = document.getElementById('aBand');
 const aBackBtn     = document.getElementById('aBack');
 const aCommitBtn   = document.getElementById('aCommit');
 const aNote        = document.getElementById('aNote');
+const answersStage = document.getElementById('answersStage');
+const answersReadout = document.getElementById('answersReadout');
+
+// Orb-select state (the 12 coordinate subjects as pins on the 3D plane).
+let agm = null;                 // answers-phase graphmap instance (separate from the graph-phase gm)
+let selectedBand = null;        // band chosen by which orb was picked (fluid|coalition|denominated)
+const BAND_LABEL = { fluid: 'fluid', coalition: 'coalition', denominated: 'denominated' };
+// Radius from centre per band, and (X,Y) sign per quadrant.
+const ORB_OFF = { fluid: 0.16, coalition: 0.29, denominated: 0.42 };
+const ORB_DIR = { A: [-1, 1], B: [1, 1], C: [-1, -1], D: [1, -1] };
 
 // Quadrant → 2×2 spatial layout. A/B institutional (y+), C/D grassroots (y−);
 // A/C left (x−), B/D right (x+). DOM order A,B,C,D fills the grid TL,TR,BL,BR.
@@ -2609,14 +2649,120 @@ function selectCard(quad, card) {
   aNote.textContent = '';
 }
 
+// ── Orb-select graphmap (answers phase) ───────────────────────────────────
+// A second factory instance whose only job is to present the 12 coordinate
+// subjects as pins on the real plane. Selection (hold an orb) sets the
+// quadrant + band, then "place your pin" hands off to the graph phase exactly
+// as the old card grid did.
+function mountAnswersGM() {
+  if (agm) return true;
+  if (typeof PrismGraphmap === 'undefined' || typeof THREE === 'undefined') return false;
+  try {
+    agm = PrismGraphmap.create({
+      mode: 'analytical',
+      capabilities: { orbit: true, zInput: false, zRender: false },
+      moody: true, spectrumAxes: true,
+      holdMs: 300,          // brisk — this is a selection surface, not a study
+      zoom: 12, zoomMax: 14,
+      artifacts: false, ted: false,
+    });
+    agm.mount(answersStage);
+    agm.onInspect(d => {
+      if (!d || typeof d.label !== 'string' || d.label.indexOf('cs:') !== 0) return;
+      const [, q, band] = d.label.split(':');
+      selectOrb(q, band);
+    });
+    return true;
+  } catch (e) {
+    console.warn('[v2] answers graphmap unavailable:', e && e.message);
+    agm = null;
+    return false;
+  }
+}
+
+function placeAnswerOrbs() {
+  if (!agm || !ev || !ev.responses) return;
+  try { agm.clearDots(); } catch (e) {}
+  try { agm.setBoundaryVisible(false); } catch (e) {}
+  try { agm.setFocus(0.5, 0.5); } catch (e) {}
+  // Corner labels = each quadrant's axis terms (so the plane reads as coordinates).
+  const corners = {};
+  ['A', 'B', 'C', 'D'].forEach(q => {
+    const v = variantAt(q, 'denominated') || variantAt(q, 'coalition') || variantAt(q, 'fluid');
+    if (v) corners[GM_QUAD[q]] = (v.xWord || '') + ' · ' + (v.yWord || '');
+  });
+  try { agm.setCornerLabels(corners); } catch (e) {}
+  ['A', 'B', 'C', 'D'].forEach(q => {
+    ['fluid', 'coalition', 'denominated'].forEach(band => {
+      const v = variantAt(q, band);
+      if (!v) return;                                   // skip unauthored coordinates
+      const o = ORB_OFF[band], d = ORB_DIR[q];
+      const nx = 0.5 + d[0] * o, ny = 0.5 - d[1] * o;   // +Y up → smaller normY
+      try {
+        agm.addDot(nx, ny, GM_QUAD[q], 0, {
+          label: 'cs:' + q + ':' + band,
+          ring: BAND_RING[band],
+          radius: 0.072,
+        });
+      } catch (e) { console.warn('[v2] answer orb', q, band, e && e.message); }
+    });
+  });
+}
+
+function selectOrb(quad, band) {
+  const v = variantAt(quad, band);
+  if (!v) return;
+  selectedQuad = quad;
+  selectedBand = band;
+  committedBand = band;                 // the graph phase opens at the chosen aperture
+  try { const d = ORB_DIR[quad], o = ORB_OFF[band];
+        agm.setFocus(0.5 + d[0] * o, 0.5 - d[1] * o); } catch (e) {}
+  answersReadout.innerHTML =
+    '<span class="ar-tag">' + poleTag(quad) + ' · ' + BAND_LABEL[band] + '</span>' +
+    PE.applyKeywords(v.text, variantPool(v));
+  answersReadout.classList.add('show');
+  answersFoot.classList.add('show');
+  aCommitBtn.disabled = false;
+  aNote.textContent = '';
+}
+
+// Short human tag for a quadrant, derived from the event's axes when present.
+function poleTag(quad) {
+  const q = QUAD.find(x => x.q === quad);
+  if (!q) return quad;
+  const xName = (ev && ev.axes && ev.axes.x)
+    ? (q.side === 'left' ? (ev.axes.x.neg || 'left') : (ev.axes.x.pos || 'right'))
+    : q.side;
+  const yName = (ev && ev.axes && ev.axes.y)
+    ? (q.row === 'pos' ? (ev.axes.y.pos || 'institutional') : (ev.axes.y.neg || 'grassroots'))
+    : (q.row === 'pos' ? 'institutional' : 'grassroots');
+  return xName + ' · ' + yName;
+}
+
 function enterAnswers() {
   if (!state.touched) return;            // nothing to carry forward yet
   committedBand = state.realBand;
-  renderAnswers(committedBand);
+  selectedQuad = null; selectedBand = null;
+  answersReadout.classList.remove('show'); answersReadout.innerHTML = '';
+  answersFoot.classList.remove('show');
+  aCommitBtn.disabled = true;
+
   document.body.classList.remove('phase-diatribe');
   document.body.classList.add('phase-answers');
   phaseLabel.innerHTML = 'prism · <strong>v2</strong> · responses';
-  // Scatter the cards into their quadrant positions, staggered.
+  aPrompt.textContent = ev?.prompt || ev?.framing || '';
+  aBand.textContent = 'hold an orb to read it · pick the response that aligns';
+
+  // Preferred path: the 12 coordinate subjects as orbs on the 3D plane.
+  if (mountAnswersGM()) {
+    document.body.classList.add('orb-select');
+    requestAnimationFrame(() => { placeAnswerOrbs(); });
+    return;
+  }
+
+  // Fallback (no WebGL): the flat 2×2 card grid.
+  document.body.classList.remove('orb-select');
+  renderAnswers(committedBand);
   requestAnimationFrame(() => setTimeout(() => {
     answersGrid.querySelectorAll('.answer-card').forEach((c, i) =>
       setTimeout(() => c.classList.add('in'), i * 90));
@@ -3650,6 +3796,24 @@ function mountGM() {
   }
 }
 
+// ── Orb swap (increment 1): the 12 coordinate subjects as orb pins on the
+// plane — quadrant sets the corner, band sets distance from center (fluid near
+// the middle → denominated at the rim). Clickable selection comes next. ──
+function placeCoordinateOrbs() {
+  if (!gm || !ev || !ev.responses) return;
+  const OFF = { fluid: 0.17, coalition: 0.30, denominated: 0.42 };   // radius from center
+  const DIR = { A: [-1, 1], B: [1, 1], C: [-1, -1], D: [1, -1] };    // (X, Y) signs
+  ['A', 'B', 'C', 'D'].forEach(q => {
+    ['fluid', 'coalition', 'denominated'].forEach(band => {
+      const o = OFF[band], d = DIR[q];
+      const nx = 0.5 + d[0] * o, ny = 0.5 - d[1] * o;   // +Y is up → smaller normY
+      try {
+        gm.addDot(nx, ny, GM_QUAD[q], 0, { label: 'cs:' + q + ':' + band, ring: BAND_RING[band] });
+      } catch (e) { console.warn('[v2] coordinate orb', q, band, e && e.message); }
+    });
+  });
+}
+
 function gmCommit() {
   gmActive = true;
   revealMemberToggle();   // show the legislators control immediately (loading until pins build)
@@ -4033,9 +4197,32 @@ if (memberToggle) memberToggle.addEventListener('click', toggleMemberPins);
 // in the dev panel and never stored. This is admin/dev tooling surfaced in v2
 // for testing — gated behind the #derive URL hash, not part of the user flow.
 // The prompt is ported verbatim from admin.html's MEMBER_DERIVE_SYSTEM_PROMPT.
+// ── Model string — keep in sync with admin.html's PRISM_MODEL ──
+const PRISM_MODEL = 'claude-sonnet-5';
+
+// ── Canonical Diatribe rubric — keep byte-identical with admin.html's copy ──
+// (single-sourcing lands with the prism-ai.js extraction; until then the shared
+// PRISM_DIATRIBE_RUBRIC_ID makes drift detectable in logged scores)
+const PRISM_DIATRIBE_RUBRIC_ID = 'PRISM_DIATRIBE_RUBRIC_v1_1';
+const PRISM_DIATRIBE_RUBRIC = `DIATRIBE — CANONICAL RUBRIC (${PRISM_DIATRIBE_RUBRIC_ID}):
+
+Diatribe (0–100) measures denomination: how far the political object has been displaced by tribal/identity content. Read it by watching the object, not the tone or volume:
+
+0–33 FLUID: the object is present and engaged. Capacity for surprise intact — the position could update on new evidence. Substantive even when forceful.
+34–66 COALITION (oscillation zone): the object is narrowing — substance still recoverable but increasingly tribally colored. In transit; recovery and denomination both possible.
+67–100 DENOMINATED: the object is gone, replaced by identity/vehicle content. Cannot be surprised. The thing being discussed has become a thing being belonged to.
+
+Denomination is sincere engagement with the wrong question — an orientation error, not bad faith and not low intelligence. A brilliant analyst can score 80; a mediocre one can score 15. Denomination exists in every quadrant: institutional positions denominate, populist positions hold fluid, and vice versa. Never derive Diatribe from quadrant position.
+
+PRIOR-FLOOR: if you are relying primarily on party or demographic prior rather than the subject's own record (confidence ≤ 0.4), report Diatribe in the 40–50 neutral range. Band-crossing denomination may never be inferred from group identity — only from the subject's own documented pattern.
+
+Calibration: most working politicians on live issues fall 25–60. Reserve 67+ for documented, sustained denomination patterns on the specific issue. SYMMETRY CONSTRAINT: structurally equivalent positions must score within 5 points regardless of party or side.`;
+
 const MEMBER_DERIVE_SYSTEM_PROMPT = `You are the Prism dialectical encoding engine, scoring U.S. Congress members against a specific political event. You are estimating where a named legislator would land on the event's two-axis dialectical structure based on what is publicly known about their voting record, public statements, party position, regional constituency, and ideological history through your knowledge cutoff.
 
 You will receive: event title, framing, axis labels (X and Y), and member metadata (name, party, chamber, state, district if House). Score the member, not their party — when a member's record diverges from party orthodoxy on this issue, the score should reflect that divergence.
+
+${PRISM_DIATRIBE_RUBRIC}
 
 OUTPUT FIELDS:
 
@@ -4045,20 +4232,11 @@ y: -1.0 to +1.0 on the event's Y axis as labeled. Score from the mechanism prefe
 
 z: -1.0 to +1.0. Object Z = promise-delivery gap. Most members will score near 0 absent specific institutional accountability signal. Score negative when the member invokes institutional commitments their record contradicts, positive when they operate inside a domain with consistent delivery.
 
-diatribe: 0-100. Denomination level on this issue, calibrated against:
-0-20: Substantive engagement, capacity for surprise operative.
-20-35: Mild rhetorical performance, substance recoverable.
-35-55: Tribal coding present, object partially obscured.
-55-70: Significant denomination, multiple bad-faith patterns operative.
-70-85: Severe denomination, performance has displaced substance.
-85-100: Terminal - totalizing vehicle, object destroyed.
-Most members fall in 25-60 range. Use 70+ only for members with documented sustained denomination patterns on this specific issue.
+diatribe: 0-100 per the canonical rubric above, applied to this member on this specific issue.
 
-confidence: 0.0 to 1.0. How confident are you in this scoring given what you know about this member's public record on this issue? Low confidence (<=0.3) when relying mostly on party prior; high (>=0.7) when the member has a substantive public record on the event's specific topic.
+confidence: 0.0 to 1.0. How confident are you in this scoring given what you know about this member's public record on this issue? Low confidence (<=0.3) when relying mostly on party prior; high (>=0.7) when the member has a substantive public record on the event's specific topic. If the event postdates your knowledge cutoff, cap confidence at 0.5 and say so in reasoning.
 
 reasoning: One to three sentences. Cite the specific record, votes, or public statements driving the score. If you're inferring from party prior because the member doesn't have a public record on this topic, say so explicitly.
-
-SYMMETRY: Structurally equivalent positions must score within 5 Diatribe points regardless of party. The encoding detects its own bias.
 
 OUTPUT: Respond ONLY with valid JSON. No preamble, no markdown fences.
 {
@@ -4145,24 +4323,37 @@ async function deriveScoreMember(member, eventContext, apiKey, opts) {
     'Party: ' + member.party, 'Chamber: ' + member.chamber];
   if (member.state) lines.push('State: ' + member.state);
   const data = await anthropicMessages({
-    model: 'claude-sonnet-4-20250514',
-    max_tokens: 700,
+    model: PRISM_MODEL,
+    // Adaptive thinking + low effort (the Sonnet-5 API shape; plain "enabled"
+    // is rejected — live 2026-07-02).
+    max_tokens: 2600,
+    thinking: { type: 'adaptive' },
+    output_config: { effort: 'low' },
     system: MEMBER_DERIVE_SYSTEM_PROMPT,
     messages: [{ role: 'user', content: lines.join('\n') }]
   }, apiKey, opts);
+  if (data.stop_reason === 'max_tokens') throw new Error('Response truncated (max_tokens)');
+  // Text blocks only (skips thinking blocks), then carve out the JSON object.
   const raw = (data.content || []).map(b => b.type === 'text' ? b.text : '').join('').trim();
-  const score = JSON.parse(raw.replace(/^```(?:json)?\n?/, '').replace(/\n?```$/, '').trim());
+  const score = JSON.parse(raw.slice(raw.indexOf('{'), raw.lastIndexOf('}') + 1));
   const clamp1 = v => Math.max(-1, Math.min(1, v == null ? 0 : v));
-  return {
+  const out = {
     bioguideId: member.bioguideId, eventId: EVENT_ID,
     pin: { x: (clamp1(score.x) + 1) / 2, y: (1 - clamp1(score.y)) / 2 },   // +Y up
     z: clamp1(score.z),
     diatribe: Math.max(0, Math.min(100, score.diatribe == null ? 50 : score.diatribe)),
     confidence: Math.max(0, Math.min(1, score.confidence == null ? 0.5 : score.confidence)),
-    method: 'derive_v1', provenance: 'DERIVED',
+    method: 'derive_v1', rubricId: PRISM_DIATRIBE_RUBRIC_ID, provenance: 'DERIVED',
     sources: { votes: [], statements: [], legislation: [] }, keywords: { A: [], B: [], C: [], D: [] },
     reasoning: score.reasoning || '', adminOverride: false
   };
+  // PRIOR-FLOOR enforcement (rubric v1_1) — inference-only scores may not
+  // carry band-crossing denomination (live catch 2026-07-02).
+  if (out.confidence <= 0.4) {
+    out.priorOnly = true;
+    out.diatribe = Math.max(40, Math.min(50, out.diatribe));
+  }
+  return out;
 }
 
 // Score the test set sequentially (gentle on rate limits), persist each DERIVED

@@ -405,7 +405,9 @@ function generateStats(bills) {
 
 // ── Write outputs ────────────────────────────────────────────────────
 async function writeBillOutputs(bills) {
-  const outputDir = config.outputDir || path.join(__dirname, 'output');
+  // config.OUTPUT_DIR → Prism/data/ (fixed 2026-07-02: was reading the
+  // nonexistent config.outputDir and silently writing to scripts/output/)
+  const outputDir = config.OUTPUT_DIR || path.join(__dirname, 'output');
   if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
   
   // Full dataset

@@ -3341,6 +3341,9 @@ body {
 <div class="toolbar">
   <button class="btn primary" onclick="showCreateForm()">+ New Event</button>
   <button class="btn" onclick="refreshList()">Refresh</button>
+  <button class="btn" onclick="exportAllEvents()" title="Write every listed event to Parameters/06_Events/ (Event_Data_Schema_v1 §8)">⇪ Export All</button>
+  <button class="btn small" onclick="linkExportFolder()" id="exportLinkBtn" title="Link the Parameters/06_Events/ folder for direct writes (falls back to downloads if unlinked)">⛓ Link 06_Events</button>
+  <span id="exportStatus" style="font-size:11px;color:var(--ink-light);align-self:center;"></span>
 </div>
 
 <div id="eventList" class="event-list"></div>
@@ -5116,7 +5119,7 @@ async function sendBrainstormMessage() {
         'anthropic-dangerous-direct-browser-access': 'true'
       },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
+        model: PRISM_MODEL,
         max_tokens: 4096,
         system: BRAINSTORM_SYSTEM_PROMPT,
         messages: apiMessages
@@ -5484,7 +5487,7 @@ async function sendAuthoringMessage() {
         'anthropic-dangerous-direct-browser-access': 'true'
       },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
+        model: PRISM_MODEL,
         max_tokens: 4096,
         system: systemPrompt,
         messages: apiMessages
@@ -5568,7 +5571,7 @@ The conversation about this event follows:`;
         'anthropic-dangerous-direct-browser-access': 'true'
       },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
+        model: PRISM_MODEL,
         max_tokens: 2048,
         system: SCORING_SYSTEM_PROMPT,
         messages: [{
@@ -6300,7 +6303,7 @@ async function sendEditorDeskMessage() {
         'anthropic-dangerous-direct-browser-access': 'true'
       },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
+        model: PRISM_MODEL,
         max_tokens: 4096,
         system: EDITORIAL_DESK_SYSTEM_PROMPT,
         messages: apiMessages
@@ -6456,7 +6459,7 @@ async function editorDerive() {
         'anthropic-dangerous-direct-browser-access': 'true'
       },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
+        model: PRISM_MODEL,
         max_tokens: 4096,
         system: DERIVE_SYSTEM_PROMPT,
         messages: [{ role: 'user', content: userContent }]
@@ -6819,6 +6822,7 @@ function refreshList() {
         <div class="event-actions">
           ${!evt.active ? `<button class="btn small" onclick="setActive('${evt.id}')">Set Active</button>` : ''}
           <button class="btn small" onclick="editEvent('${evt.id}')">Edit</button>
+          <button class="btn small" onclick="exportEvent('${evt.id}')" title="Export to Parameters/06_Events/ per Event_Data_Schema_v1">Export</button>
           <button class="btn small danger" onclick="confirmDelete('${evt.id}', '${escAttr(evt.title)}')">Delete</button>
         </div>
       </div>
@@ -7205,6 +7209,29 @@ function escAttr(str) {
 // STATEMENT SCORER
 // ============================================================
 
+// ── Canonical Diatribe rubric — single source for all scoring prompts ──
+// Consumed by SCORER_SYSTEM_PROMPT, MEMBER_DERIVE_SYSTEM_PROMPT, and
+// BILL_CURATE_SYSTEM_PROMPT (and duplicated verbatim in v2/index.html's
+// derive harness until the prism-ai.js extraction single-sources it).
+// Bands per Diatribe Derivation Protocol v2.1 §1.4.0 (33/66) read through the
+// June 2026 object-displacement canon (00_Architecture/Denomination_As_Object_
+// Displacement_v1.md). Version this ID when the rubric text changes, same
+// pattern as PRISM_SYSTEM_PROMPT_ID.
+const PRISM_DIATRIBE_RUBRIC_ID = 'PRISM_DIATRIBE_RUBRIC_v1_1';
+const PRISM_DIATRIBE_RUBRIC = `DIATRIBE — CANONICAL RUBRIC (${PRISM_DIATRIBE_RUBRIC_ID}):
+
+Diatribe (0–100) measures denomination: how far the political object has been displaced by tribal/identity content. Read it by watching the object, not the tone or volume:
+
+0–33 FLUID: the object is present and engaged. Capacity for surprise intact — the position could update on new evidence. Substantive even when forceful.
+34–66 COALITION (oscillation zone): the object is narrowing — substance still recoverable but increasingly tribally colored. In transit; recovery and denomination both possible.
+67–100 DENOMINATED: the object is gone, replaced by identity/vehicle content. Cannot be surprised. The thing being discussed has become a thing being belonged to.
+
+Denomination is sincere engagement with the wrong question — an orientation error, not bad faith and not low intelligence. A brilliant analyst can score 80; a mediocre one can score 15. Denomination exists in every quadrant: institutional positions denominate, populist positions hold fluid, and vice versa. Never derive Diatribe from quadrant position.
+
+PRIOR-FLOOR: if you are relying primarily on party or demographic prior rather than the subject's own record (confidence ≤ 0.4), report Diatribe in the 40–50 neutral range. Band-crossing denomination may never be inferred from group identity — only from the subject's own documented pattern.
+
+Calibration: most working politicians on live issues fall 25–60. Reserve 67+ for documented, sustained denomination patterns on the specific issue. SYMMETRY CONSTRAINT: structurally equivalent positions must score within 5 points regardless of party or side.`;
+
 const SCORER_SYSTEM_PROMPT = `You are the Prism dialectical scoring engine. You score external statements — tweets, pull quotes, article excerpts — using the full J encoding framework. Your scores are placed as reference markers on the Prism graph alongside user response pins.
 
 THE TWO AXES:
@@ -7215,15 +7242,9 @@ Score from the statement's actual economic and governance assumptions — not pa
 Y-axis (−1.0 to +1.0): Institutional (+Y) vs Populist/Anti-institutional (−Y) mechanism preference.
 Score from the mechanism the statement operates through or advocates. Credentialed authority, procedural legitimacy, expert consensus, legislative/judicial channels → +Y. Common-sense vernacular, follows-the-money skepticism, anti-establishment energy, direct democratic instinct → −Y.
 
-DIATRIBE SCORE (0–100): Measures denomination — the degree to which the capacity for good-faith deliberation has been degraded. Scored against calibrated benchmarks:
-0–20: Good faith floor. Substance present, capacity for surprise operative.
-20–35: Mild denomination. Some rhetorical performance but substance recoverable.
-35–55: Moderate denomination. Tribal coding present, object partially obscured.
-55–70: Significant denomination. Multiple patterns operative. Object heavily obscured.
-70–85: Severe denomination. Capacity for surprise largely lost. Substance displaced by vehicle.
-85–100: Terminal denomination. Object destroyed. Totalizing vehicle.
+${PRISM_DIATRIBE_RUBRIC}
 
-Calibration anchors: Rand Paul constitutional consistency = 10. McCain thumbs-down = 15. Romney ACA signing = 20. ACA Heritage adoption composite = 50. McConnell court-packing sequence = 75. Melania jacket / DeSantis flights = 85–90.
+Benchmark anchors (scored library entries): Rand Paul constitutional consistency = 10. McCain thumbs-down = 15. Romney ACA signing = 20. ACA Heritage adoption composite = 50. McConnell court-packing sequence = 75. Melania jacket / DeSantis flights = 85–90.
 
 CAPACITY FOR SURPRISE: Binary. Does this statement leave room for new evidence to change the position? A statement that is falsifiable and engages the object directly = true. A statement organized around unfalsifiable tribal narrative = false.
 
@@ -7234,7 +7255,7 @@ MODE (if Diatribe > 33):
 - "conspiratorial": Reclassification of disagreement as evidence of hidden enemy allegiance.
 - "none": Good faith, no operative denomination mode.
 
-PATTERNS (from the 26-pattern bad faith library — cite by number if operative):
+PATTERNS (from the denomination pattern library — cite by number if operative):
 #1 Pre-classification, #4 Definitional retreat, #5 Conspiratorial boundary enforcement, #8 Denial of real phenomena, #10 Definitional reclassification, #11 Coordinated authority performance, #12 Conspiratorial object destruction, #13 Systematic denial, #14 Paired theater delegation, #15 Compounding non-engagement, #16 Z-gap by architectural design, #17 Denomination catastrophe, #19 Democratic capture performance, #21 Procedural sabotage, #22 Retroactive nullification, #23 Performed insurgency, #24 Perceptual blindness, #25 Discursive substitution, #26 Forgetting as terminal denomination.
 
 ENTRY TYPE: Statements score as satellite/individual entries — single score, no second position. The score reflects the statement as made, not the speaker's full position.
@@ -7452,7 +7473,7 @@ async function scoreStatement() {
         'anthropic-dangerous-direct-browser-access': 'true'
       },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
+        model: PRISM_MODEL,
         max_tokens: 1000,
         system: SCORER_SYSTEM_PROMPT,
         messages: [{ role: 'user', content: userContent }]
@@ -8146,6 +8167,11 @@ function initAllTaggers() {
 // AI AUTO-SUGGEST
 // ============================================================
 
+// ── Model string — single source for every Anthropic call in this file ──
+// claude-sonnet-4-20250514 was retired upstream (discovered live 2026-07-02:
+// every call site 404'd). One constant so the next retirement is a one-line fix.
+const PRISM_MODEL = 'claude-sonnet-5';
+
 // Bump the suffix whenever PRISM_SYSTEM_PROMPT changes meaningfully, so
 // editorial-delta records (J_module10 §10.12) stay attributable to the prompt.
 const PRISM_SYSTEM_PROMPT_ID = 'PRISM_SYSTEM_PROMPT_v1';
@@ -8434,7 +8460,7 @@ async function generateSuggestions() {
         'anthropic-dangerous-direct-browser-access': 'true'
       },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
+        model: PRISM_MODEL,
         max_tokens: 4000,
         system: PRISM_SYSTEM_PROMPT,
         messages: [{ role: 'user', content: userPrompt }]
@@ -9085,7 +9111,9 @@ function clearMemberPositions() {
 // rather than "score this statement."
 const MEMBER_DERIVE_SYSTEM_PROMPT = `You are the Prism dialectical encoding engine, scoring U.S. Congress members against a specific political event. You are estimating where a named legislator would land on the event's two-axis dialectical structure based on what is publicly known about their voting record, public statements, party position, regional constituency, and ideological history through your knowledge cutoff.
 
-You will receive: event title, framing, axis labels (X and Y), and member metadata (name, party, chamber, state, district if House). Score the member, not their party — when a member's record diverges from party orthodoxy on this issue, the score should reflect that divergence.
+You will receive: event title, framing, axis labels (X and Y), member metadata (name, party, chamber, state, district if House), and — when available — the member's LEGISLATIVE RECORD: a delivery-Z baseline (sponsorship-derived legislative delivery, chamber-normalized), sponsorship tallies, and EVENT-RELEVANT BILLS from the live catalog. Score the member, not their party — when a member's record diverges from party orthodoxy on this issue, the score should reflect that divergence. Ground the score in the record wherever you actually know the member's relationship to it; the delivery-Z baseline is a direct input to your z estimate.
+
+${PRISM_DIATRIBE_RUBRIC}
 
 OUTPUT FIELDS:
 
@@ -9095,20 +9123,13 @@ y: −1.0 to +1.0 on the event's Y axis as labeled. Score from the mechanism pre
 
 z: −1.0 to +1.0. Object Z = promise-delivery gap. Most members will score near 0 absent specific institutional accountability signal. Score negative when the member invokes institutional commitments their record contradicts, positive when they operate inside a domain with consistent delivery.
 
-diatribe: 0–100. Denomination level on this issue, calibrated against:
-0–20: Substantive engagement, capacity for surprise operative.
-20–35: Mild rhetorical performance, substance recoverable.
-35–55: Tribal coding present, object partially obscured.
-55–70: Significant denomination, multiple bad-faith patterns operative.
-70–85: Severe denomination, performance has displaced substance.
-85–100: Terminal — totalizing vehicle, object destroyed.
-Most members fall in 25–60 range. Use 70+ only for members with documented sustained denomination patterns on this specific issue.
+diatribe: 0–100 per the canonical rubric above, applied to this member on this specific issue.
 
-confidence: 0.0 to 1.0. How confident are you in this scoring given what you know about this member's public record on this issue? Low confidence (≤0.3) when relying mostly on party prior; high (≥0.7) when the member has a substantive public record on the event's specific topic.
+confidence: 0.0 to 1.0. How confident are you in this scoring given what you know about this member's public record on this issue? Low confidence (≤0.3) when relying mostly on party prior; high (≥0.7) when the member has a substantive public record on the event's specific topic. If the event postdates your knowledge cutoff, cap confidence at 0.5 and say so in reasoning.
 
 reasoning: One to three sentences. Cite the specific record, votes, or public statements driving the score. If you're inferring from party prior because the member doesn't have a public record on this topic, say so explicitly.
 
-SYMMETRY: Structurally equivalent positions must score within 5 Diatribe points regardless of party. The encoding detects its own bias.
+sourceBills: array of bill ids taken ONLY from the provided EVENT-RELEVANT BILLS list, for bills where you actually know this member's vote, sponsorship, or public stance and it materially grounds the score. Empty array if none. NEVER cite a bill whose relationship to this member you cannot state — an honest empty array beats an invented citation.
 
 OUTPUT: Respond ONLY with valid JSON. No preamble, no markdown fences.
 {
@@ -9117,7 +9138,8 @@ OUTPUT: Respond ONLY with valid JSON. No preamble, no markdown fences.
   "z": -0.10,
   "diatribe": 42,
   "confidence": 0.6,
-  "reasoning": "Concrete record-based justification, or explicit acknowledgement of party-prior inference."
+  "reasoning": "Concrete record-based justification, or explicit acknowledgement of party-prior inference.",
+  "sourceBills": ["s-119-5"]
 }`;
 
 async function aiScoreSelectedMember() {
@@ -9149,6 +9171,28 @@ async function aiScoreSelectedMember() {
   if (member.state) contextLines.push(`State: ${member.state}`);
   if (member.meta) contextLines.push(`Meta: ${member.meta}`);
 
+  // ── Record grounding (build-list #2, 2026-07-02) ──
+  // deliveryZ + sponsorship tallies already live on the roster records
+  // (score-sponsorship-z.js pipeline); event-relevant bills come from the
+  // same filter the curate flow uses. Grounded-by-catalog is still ai_scored
+  // — the votes pipeline is the true vote_record tier — but the model now
+  // reasons against real legislative objects instead of pure priors.
+  const roster = PrismDB.getMember(member.bioguideId) || member;
+  const groundBills = filterBillCatalog(evt, '').slice(0, 12);
+  contextLines.push('');
+  contextLines.push('LEGISLATIVE RECORD:');
+  if (typeof roster.deliveryZ === 'number') {
+    contextLines.push(`Delivery-Z baseline: ${roster.deliveryZ >= 0 ? '+' : ''}${roster.deliveryZ.toFixed(2)} (sponsorship-derived delivery, chamber-normalized)`);
+  }
+  if (roster.sponsorCount != null) {
+    contextLines.push(`Sponsorship: ${roster.sponsorCount} sponsored (delivery rate ${typeof roster.sponsorEff === 'number' ? roster.sponsorEff.toFixed(2) : '—'}), ${roster.cosponsorCount ?? '—'} cosponsored (rate ${typeof roster.cosponsorEff === 'number' ? roster.cosponsorEff.toFixed(2) : '—'})`);
+  }
+  if (groundBills.length) {
+    contextLines.push('');
+    contextLines.push('EVENT-RELEVANT BILLS (live catalog; cite ids in sourceBills only where you know this member\'s actual relationship to the bill):');
+    groundBills.forEach(b => contextLines.push(`${b.id} | ${b.name} | ${b.meta}`));
+  }
+
   try {
     const res = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
@@ -9159,8 +9203,12 @@ async function aiScoreSelectedMember() {
         'anthropic-dangerous-direct-browser-access': 'true'
       },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 700,
+        model: PRISM_MODEL,
+        // Adaptive thinking + low effort (the Sonnet-5 API shape) — a single
+        // member score needs brief reasoning, not an essay (live 2026-07-02).
+        max_tokens: 2600,
+        thinking: { type: 'adaptive' },
+        output_config: { effort: 'low' },
         system: MEMBER_DERIVE_SYSTEM_PROMPT,
         messages: [{ role: 'user', content: contextLines.join('\n') }]
       })
@@ -9172,8 +9220,13 @@ async function aiScoreSelectedMember() {
     }
 
     const data = await res.json();
+    if (data.stop_reason === 'max_tokens') {
+      throw new Error('Response truncated (max_tokens) — retry or raise the budget');
+    }
+    // Take only text blocks (skips thinking blocks), then carve the JSON
+    // object out of any fences/prose the model wrapped around it.
     const rawText = (data.content || []).map(b => b.type === 'text' ? b.text : '').join('').trim();
-    const jsonText = rawText.replace(/^```(?:json)?\n?/, '').replace(/\n?```$/, '').trim();
+    const jsonText = rawText.slice(rawText.indexOf('{'), rawText.lastIndexOf('}') + 1);
     let score;
     try { score = JSON.parse(jsonText); }
     catch (e) {
@@ -9183,6 +9236,11 @@ async function aiScoreSelectedMember() {
     // Map score → pin (0–1 normalized) and persist
     const pinX = (Math.max(-1, Math.min(1, score.x ?? 0)) + 1) / 2;
     const pinY = (1 - Math.max(-1, Math.min(1, score.y ?? 0))) / 2; // invert: +Y up
+    // Validate citations against the bills actually offered — the model may
+    // only cite from the list it was shown (anti-hallucination gate).
+    const offeredIds = new Set(groundBills.map(b => b.id));
+    const sourceBills = (Array.isArray(score.sourceBills) ? score.sourceBills : [])
+      .filter(id => offeredIds.has(id));
     const pos = {
       bioguideId: member.bioguideId,
       eventId: refState.selectedEvent,
@@ -9190,13 +9248,29 @@ async function aiScoreSelectedMember() {
       z: Math.max(-1, Math.min(1, score.z ?? 0)),
       diatribe: Math.max(0, Math.min(100, score.diatribe ?? 50)),
       confidence: Math.max(0, Math.min(1, score.confidence ?? 0.5)),
-      method: 'derive_v1',
+      method: 'derive_v2',
+      rubricId: PRISM_DIATRIBE_RUBRIC_ID,
       provenance: 'DERIVED',
-      sources: { votes: [], statements: [], legislation: [] },
+      sources: { votes: [], statements: [], legislation: sourceBills },
+      grounding: {
+        deliveryZ: typeof roster.deliveryZ === 'number',
+        sponsorship: roster.sponsorCount != null,
+        billsOffered: groundBills.length,
+        billsCited: sourceBills.length
+      },
       keywords: { A: [], B: [], C: [], D: [] },
       reasoning: score.reasoning || '',
       adminOverride: false
     };
+
+    // PRIOR-FLOOR enforcement (rubric v1_1) — code-side backstop: an
+    // inference-only score may not carry band-crossing denomination even if
+    // the model ignores the rubric (live catch 2026-07-02: no-record freshman
+    // got dia 58 from district stereotype at conf 0.4).
+    if (pos.confidence <= 0.4) {
+      pos.priorOnly = true;
+      pos.diatribe = Math.max(40, Math.min(50, pos.diatribe));
+    }
 
     PrismDB.saveMemberPosition(pos);
     toast(`Scored ${member.name} (conf ${pos.confidence.toFixed(2)})`);
@@ -9574,18 +9648,18 @@ async function suggestBills() {
     if (evt.axes) {
       lines.push(`X-axis: ${evt.axes.x.neg} (−X) ← → ${evt.axes.x.pos} (+X)`);
       lines.push(`Y-axis: ${evt.axes.y.neg} (−Y) ← → ${evt.axes.y.pos} (+Y)`);
-      lines.push('Quadrants:');
-      lines.push(`  LF (Left-Fluid):  −X, +Y — collective + institutional, fluid positioning`);
-      lines.push(`  RF (Right-Fluid):  +X, +Y — market/liberty + institutional, fluid positioning`);
-      lines.push(`  LD (Left-Denominated):  −X, −Y — collective + populist, denomination risk`);
-      lines.push(`  RD (Right-Denominated): +X, −Y — market/liberty + populist, denomination risk`);
+      lines.push('Quadrants (plane positions — each carries both a fluid and a denominated subject; band is never a quadrant property):');
+      lines.push(`  A (upper-left):  −X, +Y — ${evt.axes.x.neg} + ${evt.axes.y.pos}`);
+      lines.push(`  B (upper-right): +X, +Y — ${evt.axes.x.pos} + ${evt.axes.y.pos}`);
+      lines.push(`  C (lower-left):  −X, −Y — ${evt.axes.x.neg} + ${evt.axes.y.neg}`);
+      lines.push(`  D (lower-right): +X, −Y — ${evt.axes.x.pos} + ${evt.axes.y.neg}`);
     }
     if (evt.tags) lines.push(`Tags: ${evt.tags.join(', ')}`);
     eventContext = '\nEVENT CONTEXT:\n' + lines.filter(Boolean).join('\n') + '\n';
   }
 
-  // Build compact bill catalog
-  const bills = (typeof LEGISLATION_DATA !== 'undefined') ? LEGISLATION_DATA : [];
+  // Build compact bill catalog — FILTERED to the event/query (rate-limit fit)
+  const bills = filterBillCatalog(evt, query);
   const catalog = bills.map(b => `${b.id}|${b.name}|${b.meta}`).join('\n');
 
   const userIntent = query
@@ -9653,7 +9727,7 @@ Order by relevance, most relevant first.`;
         'anthropic-dangerous-direct-browser-access': 'true'
       },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
+        model: PRISM_MODEL,
         max_tokens: 8192,
         messages: [{ role: 'user', content: prompt }]
       })
@@ -9757,16 +9831,17 @@ Y-axis (−1.0 to +1.0): Institutional vs Populist/Anti-institutional
 
 Each event may have custom axis labels that override these generic descriptions.
 
-THE FOUR QUADRANT SUBJECTS:
+THE FOUR QUADRANTS AND TWO BANDS:
 
-Each quadrant carries two coordinate subjects — fluid and denominated:
+Quadrants are positions on the X/Y plane (canonical mapping, Shared/Event_Data_Schema_v1.md §6):
 
-LF (Left-Fluid, −X/+Y): Institutional-left, engages complexity, holds tension
-RF (Right-Fluid, +X/+Y): Institutional-right, procedurally serious, market-literate
-LD (Left-Denominated, −X/−Y): Populist-left, structural critique hardened into fixed frame
-RD (Right-Denominated, +X/−Y): Populist-right, anti-establishment energy hardened into loyalty signal
+A (−X/+Y, upper-left) · B (+X/+Y, upper-right) · C (−X/−Y, lower-left) · D (+X/−Y, lower-right)
 
-A bill that activates the fluid subjects forces genuine engagement with the tension between axes. A bill that activates the denominated subjects collapses that tension into tribal loyalty.
+Fluid vs denominated is NOT a quadrant property — it is a band that exists at EVERY quadrant. Each quadrant carries two coordinate subjects: a fluid subject (engages the bill as it operatively is) and a denominated subject (engages the bill as its framing claims it to be). Institutional (+Y) positions denominate; populist (−Y) positions hold fluid; both happen constantly in every quadrant. Never equate +Y with fluid or −Y with denominated — the quadrant holds the stance, the band holds the denomination.
+
+A bill that activates fluid subjects forces genuine engagement with the tension between axes. A bill that activates denominated subjects collapses that tension into tribal loyalty — in whichever quadrant it lands.
+
+${PRISM_DIATRIBE_RUBRIC}
 
 OBJECT Z — THE PROMISE-DELIVERY GAP:
 
@@ -9780,9 +9855,9 @@ Object Z measures how effectively the bill achieves its OPERATIVE purpose (not i
 
 The gap between stated and operative purpose is NOT a Z signal — it is a DIATRIBE signal. A bill titled "Freedom Act" that efficiently expands surveillance has high Object Z (operative purpose well-served) AND high Diatribe (large gap between what is said and what is done).
 
-DIATRIBE SIGNAL:
+DIATRIBE SIGNAL (bill-level — a cousin, not the same measure):
 
-Diatribe measures the denomination intensity of the bill's framing:
+Subject-side Diatribe (the canonical rubric above) measures a PERSON's question-lock. Bill-level diatribe measures the denomination intensity of the BILL's framing — the magnitude of the stated→operative transform, the shadow's work on the object. Same family, different bearer; do not conflate them when reasoning:
 - Low: Bill does approximately what it says. Stated and operative purposes align.
 - Medium: Some rhetorical packaging, but the operative purpose is still legible.
 - High: Stated purpose actively obscures operative purpose. The name, framing, or political justification performs one thing while the mechanism delivers another.
@@ -9808,11 +9883,13 @@ QUADRANT TOPOLOGY DIVERSITY:
 
 Each bill activates a different subset of quadrants depending on WHERE its displacement field applies pressure. Do not default to one pattern. Aim for topology variety across your suggestions:
 
-- Cross-diagonal (LF/RD or RF/LD): Bill pressures opposite corners. Most common for culture-war or ideological litmus tests. You will gravitate here — resist oversampling it.
-- Same-side split (LF/LD or RF/RD): Bill fractures one X-axis side along the Y-axis. Institutional vs. populist within the left, or within the right. Economic bills that split business Republicans from populist Republicans are RF/RD. Labor bills that split progressive institutions from grassroots left are LF/LD.
-- Cross-aisle institutional (LF/RF): Bill pressures both institutional quadrants while populist positions are stable. Trade agreements, procedural reform, judicial appointments.
-- Cross-aisle populist (LD/RD): Bill pressures both populist quadrants while institutional positions are stable. Anti-establishment energy from both sides — surveillance bills, term limits, anti-lobbying.
+- Cross-diagonal (A/D or B/C): Bill pressures opposite corners. Most common for culture-war or ideological litmus tests. You will gravitate here — resist oversampling it.
+- Same-side split (A/C or B/D): Bill fractures one X-axis side along the Y-axis. Institutional vs. populist within the left, or within the right. Economic bills that split business Republicans from populist Republicans are B/D. Labor bills that split progressive institutions from grassroots left are A/C.
+- Cross-aisle institutional (A/B): Bill pressures both institutional quadrants while populist positions are stable. Trade agreements, procedural reform, judicial appointments.
+- Cross-aisle populist (C/D): Bill pressures both populist quadrants while institutional positions are stable. Anti-establishment energy from both sides — surveillance bills, term limits, anti-lobbying.
 - Three- or four-quadrant activation: Rare, but high-displacement bills can pressure three or even all four positions. Flag these explicitly.
+
+Where the dialectical action lives is often WITHIN a quadrant — the gap between its fluid and denominated subjects. Note that divergence in your reasoning (e.g. "B's fluid subject must acknowledge the surveillance expansion its denominated subject performs past"), but the quadrants field itself takes plane positions only.
 
 Before responding, audit your topology distribution. If more than 40% of your suggestions share the same quadrant pair, replace duplicates with bills that activate underrepresented topologies.
 
@@ -9850,7 +9927,7 @@ Include structured analysis fields on separate lines immediately after the reaso
   displacement: high | medium | low | baseline
   object-z: estimated score from −1.0 to +1.0
   diatribe: low | medium | high
-  quadrants: which subjects this bill most activates (LF, RF, LD, RD)
+  quadrants: which quadrants this bill's displacement field most pressures (A, B, C, D)
   keywords: 3–6 comma-separated framing keywords per the rules above
 
 Example (medium Diatribe — 1 frame keyword, operative substance):
@@ -9858,7 +9935,7 @@ Example (medium Diatribe — 1 frame keyword, operative substance):
   displacement: high
   object-z: +0.6
   diatribe: medium
-  quadrants: LF, RD
+  quadrants: A, D
   keywords: affordable housing investment, federal mandate, market vouchers, zoning preemption, median-income threshold
 
 Example (high Diatribe — frame and operative both load-bearing, gap legible):
@@ -9866,7 +9943,7 @@ Example (high Diatribe — frame and operative both load-bearing, gap legible):
   displacement: medium
   object-z: +0.5
   diatribe: high
-  quadrants: LF, RD
+  quadrants: A, D
   keywords: infrastructure protection, surveillance authority expansion, agency oversight reduction, third-party data access, absent sunset clause
 
 INTERACTION STYLE:
@@ -9942,6 +10019,37 @@ function exitBillCurate() {
   filterBills();
 }
 
+// ── Catalog pre-filter — keyword-match bills to the event + editor query ──
+// The full catalog (~880 bills ≈ 14k tokens) exceeds per-minute input limits
+// (hit live 2026-07-02). Filtering is also editorially correct: curation
+// starts from the event's own terms. Cap keeps first-message input ~5k tokens.
+// Tradeoff to revisit: literal matching can miss cross-topic bills (NDAA
+// riders, surveillance bills) — widen via the query box, or a relevance
+// pipeline later.
+function filterBillCatalog(evt, queryText, cap = 150) {
+  const all = (typeof LEGISLATION_DATA !== 'undefined') ? LEGISLATION_DATA : [];
+  const STOP = new Set(['the','and','for','with','that','this','from','are','was','were','has','have','been','its','their','they','them','into','over','under','between','both','because','would','could','should','about','after','before','more','most','other','some','such','than','then','when','where','which','while','also','not','but','all','any','can','may','will','one','two','act','bill','bills','law','general','united','states','american','america','national','federal']);
+  const tokenize = s => (s || '').toLowerCase().split(/[^a-z]+/).filter(w => w.length > 3 && !STOP.has(w));
+  // STRONG terms: literal/topical vocabulary — event title, editorial keyword
+  // cloud, and the editor's own query. NOT the framing prose: it's dialectical
+  // language ("vehicle", "fight") that false-matches statutory titles.
+  const strong = new Set(tokenize([evt?.title,
+    Array.isArray(evt?.framingKeywords) ? evt.framingKeywords.join(' ') : '',
+    queryText || ''].join(' ')));
+  // WEAK terms: axis pole labels — thematic, lower confidence.
+  const weak = new Set(tokenize([evt?.axes?.x?.pos, evt?.axes?.x?.neg, evt?.axes?.y?.pos, evt?.axes?.y?.neg].join(' ')));
+  if (!strong.size && !weak.size) return all.slice(0, cap);
+  const scored = all.map(b => {
+    const hay = ((b.name || '') + ' ' + (b.meta || '')).toLowerCase();
+    let score = 0;
+    strong.forEach(t => { if (hay.includes(t)) score += 3; });
+    weak.forEach(t => { if (hay.includes(t)) score += 1; });
+    return { b, score };
+  }).filter(s => s.score >= 3)   // require at least one strong hit
+    .sort((a, b) => b.score - a.score);
+  return scored.length ? scored.slice(0, cap).map(s => s.b) : all.slice(0, cap);
+}
+
 async function sendBillCurateMessage() {
   const apiKey = getApiKey();
   if (!apiKey) { toast('Enter your Anthropic API key first', true); return; }
@@ -9971,8 +10079,11 @@ async function sendBillCurateMessage() {
     if (evt.tags) contextLines.push(`Tags: ${evt.tags.join(', ')}`);
   }
 
-  // Build bill catalog summary
-  const bills = (typeof LEGISLATION_DATA !== 'undefined') ? LEGISLATION_DATA : [];
+  // Build bill catalog summary — FILTERED to event + query (rate-limit fit;
+  // see filterBillCatalog). The prompt notes it's a subset so the model asks
+  // rather than assumes exhaustiveness.
+  const allCount = (typeof LEGISLATION_DATA !== 'undefined') ? LEGISLATION_DATA.length : 0;
+  const bills = filterBillCatalog(evt, text);
   const catalog = bills.map(b => `${b.id}|${b.name}|${b.meta}`).join('\n');
 
   // Current shortlist state
@@ -9997,7 +10108,7 @@ async function sendBillCurateMessage() {
     // First message: include full context + catalog
     apiMessages.push({
       role: 'user',
-      content: `[Event context]\n${contextBlock}\n\nBILL CATALOG (${bills.length} bills, format: id|name|meta):\n${catalog}${shortlistContext}\n\n---\n\n${text}`
+      content: `[Event context]\n${contextBlock}\n\nBILL CATALOG (${bills.length} of ${allCount} bills — keyword-filtered to this event; if a bill class you'd expect is missing, say so and the editor can widen the search; format: id|name|meta):\n${catalog}${shortlistContext}\n\n---\n\n${text}`
     });
   } else {
     // Subsequent messages: include history + context refresh (no catalog — it's already in history)
@@ -10025,8 +10136,13 @@ async function sendBillCurateMessage() {
         'anthropic-dangerous-direct-browser-access': 'true'
       },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 4096,
+        model: PRISM_MODEL,
+        // Adaptive thinking + bounded effort (the Sonnet-5 API shape; plain
+        // "enabled" is rejected). Unbounded thinking consumed entire 10k
+        // budgets on this prompt with zero text out (live 2026-07-02).
+        max_tokens: 16000,
+        thinking: { type: 'adaptive' },
+        output_config: { effort: 'medium' },
         system: BILL_CURATE_SYSTEM_PROMPT,
         messages: apiMessages
       })
@@ -10039,6 +10155,9 @@ async function sendBillCurateMessage() {
 
     const data = await res.json();
     const reply = (data.content || []).map(b => b.type === 'text' ? b.text : '').join('').trim();
+    if (!reply) {
+      throw new Error(`Empty reply (stop_reason: ${data.stop_reason}) — likely thinking consumed max_tokens; retry`);
+    }
 
     // Update history
     billCurateHistory.push({ role: 'user', content: text });
@@ -10053,7 +10172,7 @@ async function sendBillCurateMessage() {
     //   displacement: high | medium | low | baseline
     //   object-z: float
     //   diatribe: low | medium | high
-    //   quadrants: LF, RF, LD, RD
+    //   quadrants: A, B, C, D (legacy LF/RF/LD/RD mapped on parse)
     const billRegex = /\[([a-z]+-\d{2,3}-\d+)\]/gi;
     const existingIds = new Set(billCurateCandidates.map(c => c.id));
     let match;
@@ -10098,7 +10217,15 @@ async function sendBillCurateMessage() {
             diatribe = replyLines[i].trim().match(/^diatribe:\s*(.+)/i)[1].trim().toLowerCase();
           } else if (/^quadrants:\s*(.+)/i.test(replyLines[i].trim())) {
             const qStr = replyLines[i].trim().match(/^quadrants:\s*(.+)/i)[1].trim();
-            quadrants = qStr.split(/[,\s]+/).map(q => q.trim().toUpperCase()).filter(q => ['LF','RF','LD','RD'].includes(q));
+            // Canonical: A/B/C/D plane positions. Legacy LF/RF/LD/RD codes
+            // (retired 2026-07 — they conflated Y-position with band) map to
+            // their plane positions for backward compatibility.
+            const LEGACY_QUAD_MAP = { LF: 'A', RF: 'B', LD: 'C', RD: 'D' };
+            quadrants = qStr.split(/[,\s]+/)
+              .map(q => q.trim().toUpperCase())
+              .map(q => LEGACY_QUAD_MAP[q] || q)
+              .filter(q => ['A','B','C','D'].includes(q));
+            quadrants = [...new Set(quadrants)];
             if (!quadrants.length) quadrants = null;
           } else if (/^keywords:\s*(.+)/i.test(replyLines[i].trim())) {
             const kwStr = replyLines[i].trim().match(/^keywords:\s*(.+)/i)[1].trim();
@@ -11117,7 +11244,7 @@ async function sendChatMessage() {
         'anthropic-dangerous-direct-browser-access': 'true'
       },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
+        model: PRISM_MODEL,
         max_tokens: 4096,
         system: CHAT_SYSTEM_PROMPT,
         messages: apiMessages
@@ -11443,6 +11570,340 @@ document.body.style.paddingBottom = '50px';
 
 
 // ============================================================
+// EVENT EXPORT WRITER — Event_Data_Schema_v1 §5 / §8
+// Writes evt_###_<slug>.md into Parameters/06_Events/.
+// localStorage is a cache; disk is canonical from first export.
+// Direct write via File System Access API (Chrome, file:// and
+// localhost are both secure contexts); download fallback otherwise.
+// Pure functions (EXPORT_PURE block) are DOM-free by design so they
+// can be unit-tested outside the browser.
+// ============================================================
+
+// ── EXPORT_PURE_BEGIN ──
+
+// Canonical band vocabulary + legacy aliases (schema §7)
+const EXPORT_BAND_ALIASES = {
+  fluid: 'fluid', coalition: 'coalition', denominated: 'denominated',
+  goodFaith: 'fluid', badFaith: 'denominated',
+  nominal: 'fluid', coalitional: 'coalition', conviction: 'denominated'
+};
+
+function normalizeBandName(name) {
+  return EXPORT_BAND_ALIASES[name] || name;
+}
+
+function slugifyEventTitle(title) {
+  return String(title || 'untitled')
+    .toLowerCase()
+    .replace(/[’'".,:;!?()\/\\]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .split('-').slice(0, 6).join('-')
+    .slice(0, 48)
+    .replace(/-+$/g, '') || 'untitled';
+}
+
+function normalizeBandObject(band) {
+  const b = band || {};
+  return {
+    cloud: Array.isArray(b.cloud) ? b.cloud : [],   // June canon; backfill editorially
+    text: b.text || '',
+    xWord: b.xWord || '',
+    yWord: b.yWord || '',
+    words: Array.isArray(b.words) ? b.words : []
+  };
+}
+
+// Deep-normalize an event into the schema-§1 shape.
+// Never mutates the input.
+function normalizeEventForExport(evt) {
+  const src = JSON.parse(JSON.stringify(evt || {}));
+  const out = {
+    id: src.id || '',
+    title: src.title || '',
+    category: src.category || '',
+    date: src.date || '',
+    active: !!src.active,
+    prompt: src.prompt || '',
+    framing: src.framing || '',
+    framingKeywords: Array.isArray(src.framingKeywords) ? src.framingKeywords : [],
+    prevalentAxis: src.prevalentAxis === 'y' ? 'y' : 'x',
+    antiValentBand: normalizeBandName(src.antiValentBand || ''),
+    antiValentRationale: src.antiValentRationale || null,
+    axes: {
+      x: { pos: src.axes?.x?.pos || 'Right', neg: src.axes?.x?.neg || 'Left' },
+      y: { pos: src.axes?.y?.pos || '', neg: src.axes?.y?.neg || '' }
+    },
+    responses: {},
+    diatribe: {}
+  };
+  if (src.axes?.z) out.axes.z = { pos: src.axes.z.pos || '', neg: src.axes.z.neg || '' };
+
+  // Responses: normalize legacy band keys (goodFaith→fluid, badFaith→denominated)
+  ['A', 'B', 'C', 'D'].forEach(q => {
+    const r = src.responses?.[q] || {};
+    const quad = { xSide: r.xSide || '', source: r.source || '' };
+    const bands = { fluid: null, coalition: null, denominated: null };
+    Object.keys(r).forEach(k => {
+      if (k === 'xSide' || k === 'source') return;
+      const canon = normalizeBandName(k);
+      if (canon === 'fluid' || canon === 'coalition' || canon === 'denominated') {
+        bands[canon] = r[k];
+      }
+    });
+    quad.fluid = normalizeBandObject(bands.fluid);
+    quad.coalition = normalizeBandObject(bands.coalition);
+    quad.denominated = normalizeBandObject(bands.denominated);
+    out.responses[q] = quad;
+  });
+
+  // Diatribe: six cells, band names normalized
+  ['LF', 'LC', 'LD', 'RF', 'RC', 'RD'].forEach(key => {
+    const c = src.diatribe?.[key] || {};
+    out.diatribe[key] = {
+      text: c.text || '',
+      side: c.side || (key[0] === 'L' ? 'left' : 'right'),
+      band: normalizeBandName(c.band || { F: 'fluid', C: 'coalition', D: 'denominated' }[key[1]])
+    };
+  });
+
+  if (Array.isArray(src.arcMemberships) && src.arcMemberships.length > 0) {
+    out.arcMemberships = src.arcMemberships;
+  }
+
+  out.meta = {
+    status: src.meta?.status || 'draft',
+    source: src.meta?.source || '',
+    dialecticsRef: src.meta?.dialecticsRef || null,
+    editHistory: Array.isArray(src.meta?.editHistory) ? src.meta.editHistory : [],
+    aiDeltas: Array.isArray(src.meta?.aiDeltas) ? src.meta.aiDeltas : []
+  };
+  return out;
+}
+
+// Render one band line: - **fluid** — `tok · tok` → "response."
+function renderBandLine(bandName, band) {
+  const cloud = (band.cloud || []).join(' · ');
+  const text = band.text || '';
+  if (cloud && text) return `- **${bandName}** — \`${cloud}\` → "${text}"`;
+  if (cloud) return `- **${bandName}** — \`${cloud}\``;
+  return `- **${bandName}** — "${text}"`;
+}
+
+// Canonical quadrant mapping (schema §6): A upper-left (−X,+Y) …
+const EXPORT_QUAD_META = {
+  A: { loc: 'upper-left',  x: 'neg', y: 'pos' },
+  B: { loc: 'upper-right', x: 'pos', y: 'pos' },
+  C: { loc: 'lower-left',  x: 'neg', y: 'neg' },
+  D: { loc: 'lower-right', x: 'pos', y: 'neg' }
+};
+
+// Build the on-disk markdown (schema §5). `evt` must already be normalized.
+function buildEventMarkdown(evt, exportVersion) {
+  const v = exportVersion || 1;
+  const L = [];
+  L.push(`# ${evt.id} — ${evt.title} · v${v}`);
+  L.push(`**${evt.prevalentAxis}-prevalent · ${evt.date || '—'} · Prism admin export**`);
+  L.push(`Exported ${new Date().toISOString().split('T')[0]} per \`Shared/Event_Data_Schema_v1.md\`. The \`## Data\` block is authoritative; prose is generated from it.`);
+  L.push('');
+  L.push('## Framing');
+  L.push(evt.framing || '_(none)_');
+  if (evt.prompt) { L.push(''); L.push(`**Prompt:** ${evt.prompt}`); }
+  L.push('');
+  L.push('## Axes');
+  L.push(`- **X+ ${evt.axes.x.pos}** · **X− ${evt.axes.x.neg}**`);
+  L.push(`- **Y+ ${evt.axes.y.pos}** · **Y− ${evt.axes.y.neg}**`);
+  if (evt.axes.z) L.push(`- **Z+ ${evt.axes.z.pos}** · **Z− ${evt.axes.z.neg}**`);
+  L.push(`- prevalentAxis: **${evt.prevalentAxis}** · antiValentBand: **${evt.antiValentBand || 'TBD'}**${evt.antiValentRationale ? ` — ${evt.antiValentRationale}` : ''}`);
+  L.push('');
+  L.push('## The 12 (cloud → prefigured response)');
+  L.push('');
+  ['A', 'B', 'C', 'D'].forEach(q => {
+    const m = EXPORT_QUAD_META[q];
+    const xLabel = evt.axes.x[m.x] || (m.x === 'pos' ? '+X' : '−X');
+    const yLabel = evt.axes.y[m.y] || (m.y === 'pos' ? '+Y' : '−Y');
+    const r = evt.responses[q];
+    L.push(`### ${q} — ${xLabel} · ${yLabel}  (${m.loc})`);
+    L.push(renderBandLine('fluid', r.fluid));
+    L.push(renderBandLine('coalition', r.coalition));
+    L.push(renderBandLine('denominated', r.denominated));
+    L.push('');
+  });
+  L.push('## The Diatribe');
+  L.push('Center → rim = fluid → coalition → denominated. Watch the object: present, narrowing, replaced.');
+  L.push('');
+  L.push('**Left (−), radiating out:**');
+  ['LF', 'LC', 'LD'].forEach(k => L.push(`- ${evt.diatribe[k].band} — "${evt.diatribe[k].text}"`));
+  L.push('');
+  L.push('**Right (+), radiating out:**');
+  ['RF', 'RC', 'RD'].forEach(k => L.push(`- ${evt.diatribe[k].band} — "${evt.diatribe[k].text}"`));
+  L.push('');
+  L.push('## Framing keywords (cloud)');
+  L.push(evt.framingKeywords.length ? evt.framingKeywords.join(' · ') : '_(none)_');
+  L.push('');
+  L.push('## Structural notes / Open questions');
+  L.push('_(editorial layer — add by hand; preserved fields live in the Data block)_');
+  L.push('');
+  L.push('## Data');
+  L.push('```json');
+  L.push(JSON.stringify(evt, null, 2));
+  L.push('```');
+  L.push('');
+  return L.join('\n');
+}
+
+function eventExportFilename(evt) {
+  return `${evt.id}_${slugifyEventTitle(evt.title)}.md`;
+}
+
+// ── EXPORT_PURE_END ──
+
+// ── Directory handle persistence (IndexedDB) ──
+const EXPORT_IDB = { db: 'prism_export', store: 'handles', key: 'events_dir' };
+
+function exportIdb() {
+  return new Promise((resolve, reject) => {
+    const req = indexedDB.open(EXPORT_IDB.db, 1);
+    req.onupgradeneeded = () => req.result.createObjectStore(EXPORT_IDB.store);
+    req.onsuccess = () => resolve(req.result);
+    req.onerror = () => reject(req.error);
+  });
+}
+
+async function exportIdbGet() {
+  const db = await exportIdb();
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction(EXPORT_IDB.store, 'readonly');
+    const req = tx.objectStore(EXPORT_IDB.store).get(EXPORT_IDB.key);
+    req.onsuccess = () => resolve(req.result || null);
+    req.onerror = () => reject(req.error);
+  });
+}
+
+async function exportIdbSet(handle) {
+  const db = await exportIdb();
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction(EXPORT_IDB.store, 'readwrite');
+    tx.objectStore(EXPORT_IDB.store).put(handle, EXPORT_IDB.key);
+    tx.oncomplete = () => resolve();
+    tx.onerror = () => reject(tx.error);
+  });
+}
+
+async function linkExportFolder() {
+  if (!('showDirectoryPicker' in window)) {
+    toast('File System Access API unavailable — exports will download instead', true);
+    return null;
+  }
+  try {
+    const handle = await window.showDirectoryPicker({ mode: 'readwrite' });
+    if (handle.name !== '06_Events') {
+      toast(`Linked "${handle.name}" — expected Parameters/06_Events (kept anyway)`, true);
+    }
+    await exportIdbSet(handle);
+    updateExportStatus(handle);
+    toast(`Export folder linked: ${handle.name}`);
+    return handle;
+  } catch (e) {
+    if (e.name !== 'AbortError') toast('Folder link failed: ' + e.message, true);
+    return null;
+  }
+}
+
+async function getExportDirHandle() {
+  try {
+    const handle = await exportIdbGet();
+    if (!handle) return null;
+    let perm = await handle.queryPermission({ mode: 'readwrite' });
+    if (perm !== 'granted') perm = await handle.requestPermission({ mode: 'readwrite' });
+    return perm === 'granted' ? handle : null;
+  } catch (e) {
+    return null;
+  }
+}
+
+async function updateExportStatus(handleMaybe) {
+  const el = document.getElementById('exportStatus');
+  if (!el) return;
+  const handle = handleMaybe || await exportIdbGet().catch(() => null);
+  el.textContent = handle
+    ? `→ ${handle.name}/ linked`
+    : ('showDirectoryPicker' in window ? '→ unlinked (downloads)' : '→ downloads only');
+}
+
+function downloadEventFile(filename, content) {
+  const blob = new Blob([content], { type: 'text/markdown' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+// Core write: returns 'disk' | 'download'
+async function writeEventFile(filename, content) {
+  const dir = await getExportDirHandle();
+  if (dir) {
+    const fh = await dir.getFileHandle(filename, { create: true });
+    const w = await fh.createWritable();
+    await w.write(content);
+    await w.close();
+    return 'disk';
+  }
+  downloadEventFile(filename, content);
+  return 'download';
+}
+
+async function exportEvent(id) {
+  const raw = PrismDB.getEvent(id);
+  if (!raw) { toast('Event not found', true); return; }
+  const evt = normalizeEventForExport(raw);
+  const exportVersion = (raw.meta?.exportVersion || 0) + 1;
+  const md = buildEventMarkdown(evt, exportVersion);
+  const filename = eventExportFilename(evt);
+  try {
+    const mode = await writeEventFile(filename, md);
+    // Record export lineage on the stored event (schema §8: disk is canonical)
+    const meta = Object.assign({}, raw.meta, {
+      exportVersion,
+      exportedAt: new Date().toISOString(),
+      exportFilename: filename
+    });
+    PrismDB.updateEvent(id, { meta });
+    toast(mode === 'disk' ? `Exported → 06_Events/${filename}` : `Downloaded ${filename} — move it to Parameters/06_Events/`);
+  } catch (e) {
+    toast('Export failed: ' + e.message, true);
+  }
+}
+
+async function exportAllEvents() {
+  // Same population as the visible list (arc-only events excluded)
+  const events = PrismDB.getEvents().filter(evt => {
+    const isArcOnly = (evt.arcMemberships && evt.arcMemberships.length > 0) ||
+                      evt.meta?.source === 'arc-inline' ||
+                      evt.meta?.source === 'brainstorm';
+    return !isArcOnly;
+  });
+  if (events.length === 0) { toast('No events to export', true); return; }
+  const dir = await getExportDirHandle();
+  if (!dir && 'showDirectoryPicker' in window) {
+    toast('Tip: ⛓ Link 06_Events first for direct writes — falling back to downloads', true);
+  }
+  let ok = 0;
+  for (const raw of events) {
+    try {
+      await exportEvent(raw.id);
+      ok++;
+    } catch (e) {
+      toast(`${raw.id} failed: ${e.message}`, true);
+    }
+  }
+  toast(`Export complete: ${ok}/${events.length} events`);
+}
+
+
+// ============================================================
 // INIT
 // ============================================================
 
@@ -11453,6 +11914,7 @@ refreshArcList();
 initAllTaggers();
 loadReviewLog();
 updateReviewBadge();
+updateExportStatus();
 
 // ============================================================
 // DARK MODE
@@ -11468,7 +11930,21 @@ function syncApiKeys(val) {
     const el = document.getElementById(id);
     if (el && el.value !== val) el.value = val;
   });
+  // Survive Live Server hot reloads: sessionStorage lives exactly as long as
+  // this tab and never leaves the machine. (Dies on tab close — deliberate.)
+  try { if (val) sessionStorage.setItem('prism_admin_key', val); } catch (_) {}
 }
+
+// Restore the key after a reload and keep sessionStorage in sync on input.
+(function restoreApiKey() {
+  let saved = null;
+  try { saved = sessionStorage.getItem('prism_admin_key'); } catch (_) {}
+  if (saved) syncApiKeys(saved);
+  ['aiApiKey', 'paraApiKey', 'refApiKey', 'billCurateApiKey'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('input', () => syncApiKeys(el.value.trim()));
+  });
+})();
 
 function toggleTheme() {
   const html = document.documentElement;

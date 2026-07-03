@@ -235,7 +235,7 @@
   <button class="btn" id="citeBtn" title="Citation bank — sources for this event">📎 Sources</button>
   <details class="aiset"><summary>AI</summary>
     <input id="apiKey" type="password" placeholder="sk-ant-… (stored on device)" autocomplete="off" spellcheck="false" style="min-width:180px">
-    <input id="model" type="text" value="claude-sonnet-4-6" spellcheck="false" style="min-width:150px">
+    <input id="model" type="text" value="claude-sonnet-5" spellcheck="false" style="min-width:150px">
   </details>
 </div>
 
@@ -497,7 +497,10 @@ function loadEvent(ev){
   tedEvent = ev.ted ? JSON.parse(JSON.stringify(ev.ted)) : {};
   const R=ev.responses||{}; responses={A:{},B:{},C:{},D:{}};
   ['A','B','C','D'].forEach(q=>{ const rq=R[q]||{}; const cvt=o=>({ text:(o&&o.text)||'', xWord:(o&&o.xWord)||'', yWord:(o&&o.yWord)||'', source:(o&&o.source)||'' });
-    responses[q]={ fluid:cvt(rq.goodFaith), coalition:cvt(rq.coalition), denominated:cvt(rq.badFaith) }; });
+    // canonical band keys first, legacy aliases second (schema §7) — events
+    // authored in admin.html write fluid/denominated; seed data writes
+    // goodFaith/badFaith. Reading only legacy broke new events (2026-07-02).
+    responses[q]={ fluid:cvt(rq.fluid||rq.goodFaith), coalition:cvt(rq.coalition), denominated:cvt(rq.denominated||rq.badFaith) }; });
   const oa=(pa==='x')?(ax.y):(ax.x); otherPole={ neg:(oa&&oa.neg)||'', pos:(oa&&oa.pos)||'' };
   citations = Array.isArray(ev.sources) ? ev.sources.map(s=>({url:(s&&s.url)||'',label:(s&&s.label)||''})) : [];
   setPoleFields(); setThumb(pct,false); status(currentId?('Loaded '+currentId):'Loaded onto the surface');
@@ -572,11 +575,20 @@ function openExport(){ const ev=Object.assign(assemble(), {axes:axesObj()}); $('
 
 /* ---- AI: ✦ writes an empty cell, or marks the keywords of a filled one ---- */
 async function callClaude(key, prompt, maxTok){
+  // Ported from admin.html live-test findings (2026-07-02): current models
+  // emit a thinking block before text — the old content[0].text read returned
+  // the wrong block, and tight max_tokens starved replies to empty. Adaptive
+  // thinking + low effort + a real floor + text-block-only extraction.
   const res=await fetch('https://api.anthropic.com/v1/messages',{ method:'POST',
     headers:{'content-type':'application/json','x-api-key':key,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
-    body:JSON.stringify({ model:$('model').value.trim()||'claude-sonnet-4-6', max_tokens:maxTok||200, messages:[{role:'user',content:prompt}] }) });
-  if(!res.ok) throw new Error('HTTP '+res.status);
-  const data=await res.json(); return (data.content&&data.content[0]&&data.content[0].text||'').trim();
+    body:JSON.stringify({ model:$('model').value.trim()||'claude-sonnet-5',
+      max_tokens:Math.max(maxTok||200, 1600),
+      thinking:{ type:'adaptive' }, output_config:{ effort:'low' },
+      messages:[{role:'user',content:prompt}] }) });
+  if(!res.ok){ const e=await res.json().catch(()=>({})); throw new Error((e&&e.error&&e.error.message)||('HTTP '+res.status)); }
+  const data=await res.json();
+  if(data.stop_reason==='max_tokens') throw new Error('truncated (max_tokens) — retry');
+  return (data.content||[]).map(b=>b.type==='text'?b.text:'').join('').trim();
 }
 async function suggestCell(which){
   const key=$('apiKey').value.trim(); if(!key){ status('Add your API key (open “AI” in the top bar)'); return; }
@@ -610,6 +622,9 @@ $('copyJson').onclick=()=>{ const t=$('exportText'); t.select(); if(navigator.cl
 $('dlJson').onclick=()=>{ const ev=Object.assign(assemble(),{axes:axesObj()}); const b=new Blob([JSON.stringify(ev,null,2)],{type:'application/json'}); const a=document.createElement('a'); a.href=URL.createObjectURL(b); a.download=(ev.title||'event').replace(/\W+/g,'_')+'_diatribe.json'; a.click(); };
 $('evSelect').onchange=()=>{ const id=$('evSelect').value; if(id&&HAS_DB){ const ev=PrismDB.getEvent(id); if(ev) loadEvent(ev); } };
 ['apiKey','model'].forEach(id=>{ const v=localStorage.getItem('prism.admin.'+id); if(v)$(id).value=v; $(id).addEventListener('input',()=>localStorage.setItem('prism.admin.'+id,$(id).value)); });
+// Migrate stored retired model strings (both 404 upstream as of 2026-07)
+(function(){ const RETIRED=['claude-sonnet-4-20250514','claude-sonnet-4-6'];
+  if(RETIRED.includes(($('model').value||'').trim())){ $('model').value='claude-sonnet-5'; localStorage.setItem('prism.admin.model','claude-sonnet-5'); } })();
 
 /* ===== Quadrants view — the 12 as orb pins on the 2×2 plane ===== */
 const QBANDS=['fluid','coalition','denominated'];
@@ -623,7 +638,9 @@ function resp(q,b){ responses[q]=responses[q]||{}; return responses[q][b]||{}; }
 function respFilled(q,b){ const r=resp(q,b); return !!(r.text&&r.text.trim()); }
 function responsesSchema(){ const out={}; QUAD_DEF.forEach(q=>{ const rq=responses[q.id]||{};
   const mk=b=>{ const r=rq[b]||{}; return { text:(r.text||''), xWord:(r.xWord||''), yWord:(r.yWord||''), words:[], source:(r.source||'') }; };
-  out[q.id]={ xSide:q.xSide, source:'', goodFaith:mk('fluid'), coalition:mk('coalition'), badFaith:mk('denominated') }; });
+  // Write CANONICAL band keys (Event_Data_Schema_v1 §7). Safe: v2 reads via
+  // BAND_KEY_ALIASES, admin.html reads canonical, v56 doesn't touch bands.
+  out[q.id]={ xSide:q.xSide, source:'', fluid:mk('fluid'), coalition:mk('coalition'), denominated:mk('denominated') }; });
   return out; }
 function buildOrbs(){
   const plane=$('quadPlane'); plane.querySelectorAll('.orb').forEach(o=>o.remove());
