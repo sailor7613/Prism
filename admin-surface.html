@@ -80,6 +80,17 @@
   body.light .sheet textarea{ background:rgba(20,22,30,.04); }
   body.light .ted-star{ color:#f5f0e8; box-shadow:0 0 8px rgba(72,44,16,.4); }
 
+  /* ── DreamGetty room backdrop (§3¾) — lazy, default off, pointer-events:none ── */
+  #dgRoom{ opacity:0; transition:opacity 1.4s ease; }
+  body.dg-on #dgRoom{ opacity:1; }
+  #dgBtn.on, #dgOrbitBtn.on{ color:var(--ink); border-color:rgba(196,156,72,.55); }
+  /* orbit mode — the flat stage steps aside; the room takes the pointer.
+     Modals (orb editor, sources) and both chrome bars stay on top. */
+  #dgOrbitBtn{ display:none; }
+  body.dg-on #dgOrbitBtn{ display:inline-flex; }
+  body.dg-orbit main, body.dg-orbit .cellmap, body.dg-orbit #kwPill{ display:none !important; }
+  body.dg-orbit #quadView{ display:none !important; }
+
   /* ── authoring chrome — v2 grammar: hairline rules, mono micro-labels, pills ── */
   .adminbar{ position:fixed; top:0; left:0; right:0; z-index:20; display:flex; gap:10px; align-items:center; flex-wrap:wrap;
     padding: calc(env(safe-area-inset-top) + 10px) 16px 10px;
@@ -246,6 +257,8 @@
   <span class="viewseg" id="viewSeg" title="Author the diatribe, or the 12 quadrant responses"><button data-v="dia" class="on">Diatribe</button><button data-v="quad">Quadrants</button></span>
   <button class="btn" id="citeBtn" title="Citation bank — sources for this event">📎 Sources</button>
   <button class="btn" id="themeBtn" title="Day / night">◐</button>
+  <button class="btn" id="dgBtn" title="DreamGetty room — loads on demand">🏛</button>
+  <button class="btn" id="dgOrbitBtn" title="Orbit the room — drag to circle, pinch to zoom, tap an orb to edit">🧭</button>
   <details class="aiset"><summary>AI</summary>
     <input id="apiKey" type="password" placeholder="sk-ant-… (stored on device)" autocomplete="off" spellcheck="false" style="min-width:180px">
     <input id="model" type="text" value="claude-sonnet-5" spellcheck="false" style="min-width:150px">
@@ -364,6 +377,7 @@
 </div></div>
 
 <script src="src/js/prismdb.js"></script>
+<script src="src/js/prism-ai.js"></script>
 <script>
 /* ===== Prism Admin · author on the diatribe surface ===== */
 const HAS_DB = (typeof PrismDB !== 'undefined');
@@ -426,6 +440,7 @@ function bind(capEl, txtEl, side, band, cell, label){
 }
 $('capTextReal').addEventListener('input', ()=>{ model[curReal]=$('capTextReal').innerHTML; renderCellmap(); });
 $('capTextGhost').addEventListener('input', ()=>{ model[curGhost]=$('capTextGhost').innerHTML; renderCellmap(); });
+$('framing').addEventListener('input', ()=>{ if(window.DGRoom && DGRoom.active) dgSync(); });
 
 /* ---- editable axis poles ---- */
 function updateLabels(){
@@ -436,7 +451,8 @@ function updateLabels(){
   $('roGhost').textContent = sideLabel(opp)+' · '+band+' · mirror';
   renderCellmap();
 }
-function setPoleFields(){ $('poleNeg').textContent=spine.neg; $('polePos').textContent=spine.pos; }
+function setPoleFields(){ $('poleNeg').textContent=spine.neg; $('polePos').textContent=spine.pos;
+  if(window.DGRoom && DGRoom.active) dgSync(); }
 $('poleNeg').addEventListener('input', ()=>{ spine.neg=$('poleNeg').innerText.trim()||'left'; updateLabels(); });
 $('polePos').addEventListener('input', ()=>{ spine.pos=$('polePos').innerText.trim()||'right'; updateLabels(); });
 
@@ -467,6 +483,7 @@ function renderCellmap(){
     const chip=document.createElement('button'); chip.className='cellchip'+(filled(c)?' filled':'')+(c===curReal?' active':'');
     chip.textContent=(side||c[0])+'·'+band[0]; chip.onclick=()=>setThumb(cellCenterPct(c),true); host.appendChild(chip);
   });
+  if(window.DGRoom && DGRoom.active) dgSync();   // the stage over the pedestal follows every edit
 }
 
 /* ---- keyword highlight tool (floating ★ pill on a selection) ---- */
@@ -588,20 +605,10 @@ function openExport(){ const ev=Object.assign(assemble(), {axes:axesObj()}); $('
 
 /* ---- AI: ✦ writes an empty cell, or marks the keywords of a filled one ---- */
 async function callClaude(key, prompt, maxTok){
-  // Ported from admin.html live-test findings (2026-07-02): current models
-  // emit a thinking block before text — the old content[0].text read returned
-  // the wrong block, and tight max_tokens starved replies to empty. Adaptive
-  // thinking + low effort + a real floor + text-block-only extraction.
-  const res=await fetch('https://api.anthropic.com/v1/messages',{ method:'POST',
-    headers:{'content-type':'application/json','x-api-key':key,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
-    body:JSON.stringify({ model:$('model').value.trim()||'claude-sonnet-5',
-      max_tokens:Math.max(maxTok||200, 1600),
-      thinking:{ type:'adaptive' }, output_config:{ effort:'low' },
-      messages:[{role:'user',content:prompt}] }) });
-  if(!res.ok){ const e=await res.json().catch(()=>({})); throw new Error((e&&e.error&&e.error.message)||('HTTP '+res.status)); }
-  const data=await res.json();
-  if(data.stop_reason==='max_tokens') throw new Error('truncated (max_tokens) — retry');
-  return (data.content||[]).map(b=>b.type==='text'?b.text:'').join('').trim();
+  // Delegates to the shared engine (src/js/prism-ai.js) — the 2026-07-02
+  // hardening (adaptive thinking, effort floor, text-block-only extraction,
+  // truncation guard) lives there now, single-sourced for all consumers.
+  return PrismAI.call(key, { model:$('model').value, prompt, maxTokens:maxTok, effort:'low' });
 }
 async function suggestCell(which){
   const key=$('apiKey').value.trim(); if(!key){ status('Add your API key (open “AI” in the top bar)'); return; }
@@ -635,9 +642,8 @@ $('copyJson').onclick=()=>{ const t=$('exportText'); t.select(); if(navigator.cl
 $('dlJson').onclick=()=>{ const ev=Object.assign(assemble(),{axes:axesObj()}); const b=new Blob([JSON.stringify(ev,null,2)],{type:'application/json'}); const a=document.createElement('a'); a.href=URL.createObjectURL(b); a.download=(ev.title||'event').replace(/\W+/g,'_')+'_diatribe.json'; a.click(); };
 $('evSelect').onchange=()=>{ const id=$('evSelect').value; if(id&&HAS_DB){ const ev=PrismDB.getEvent(id); if(ev) loadEvent(ev); } };
 ['apiKey','model'].forEach(id=>{ const v=localStorage.getItem('prism.admin.'+id); if(v)$(id).value=v; $(id).addEventListener('input',()=>localStorage.setItem('prism.admin.'+id,$(id).value)); });
-// Migrate stored retired model strings (both 404 upstream as of 2026-07)
-(function(){ const RETIRED=['claude-sonnet-4-20250514','claude-sonnet-4-6'];
-  if(RETIRED.includes(($('model').value||'').trim())){ $('model').value='claude-sonnet-5'; localStorage.setItem('prism.admin.model','claude-sonnet-5'); } })();
+// Migrate stored retired model strings (list lives in prism-ai.js)
+(function(){ if(PrismAI.RETIRED_MODELS.includes(($('model').value||'').trim())){ $('model').value=PrismAI.MODEL_DEFAULT; localStorage.setItem('prism.admin.model',PrismAI.MODEL_DEFAULT); } })();
 
 /* ---- daytime mode — ◐ flips the sky; persisted per device ---- */
 function setTheme(t){
@@ -650,6 +656,88 @@ function setTheme(t){
 $('themeBtn').onclick=()=>setTheme(document.body.classList.contains('light')?'dark':'light');
 (function(){ let t=null; try{ t=localStorage.getItem('prism.admin.theme'); }catch(_){}
   if(t==='light') setTheme('light'); })();
+
+/* ---- DreamGetty room backdrop (handoff §3¾) ----
+   The early room: ionic columns, the pedestal, Ted Turner, the vase that
+   falls and un-falls, the acacia through the wall — plus frames, an
+   elephant, and the AV cart. Constraints held: lazy-load only (Three.js
+   CDN + dg-room.js fetched on first toggle, never at boot), default OFF
+   every load, graceful fallback to the space field if anything 404s,
+   pointer-events:none so authoring stays flat. Not persisted — the ruling
+   says the default must remain the light space field. */
+let dgLoading=false;
+function dgScript(src){ return new Promise((res,rej)=>{ const s=document.createElement('script');
+  s.src=src; s.onload=res; s.onerror=()=>rej(new Error('could not load '+src)); document.head.appendChild(s); }); }
+async function dgToggle(){
+  if(dgLoading) return;
+  if(window.DGRoom && DGRoom.active && document.body.classList.contains('dg-on')){
+    dgOrbitSet(false);
+    document.body.classList.remove('dg-on'); $('dgBtn').classList.remove('on');
+    setTimeout(()=>{ if(window.DGRoom && DGRoom.active && !document.body.classList.contains('dg-on')) DGRoom.unmount(); }, 1500); // let the fade finish
+    status('Gallery dark — space field stands'); return;
+  }
+  if(window.DGRoom && DGRoom.active){ // tapped back on mid-fade — the timeout guard sees the class and stands down
+    document.body.classList.add('dg-on'); $('dgBtn').classList.add('on'); status('DreamGetty room — mind the vase'); return;
+  }
+  dgLoading=true; status('Raising the gallery…');
+  try{
+    if(typeof THREE==='undefined') await dgScript('https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js');
+    if(!window.DGRoom) await dgScript('dg-room.js');
+    // the factory — the quad stage IS a PrismGraphmap instance. Bare typeof,
+    // never window.X (top-level const is a global binding, not a property —
+    // that exact mistake once silently disabled the factory for sessions).
+    if(typeof PrismGraphmap==='undefined'){ try{ await dgScript('src/js/prism-graphmap.js'); }catch(_){ /* room still stands; quad stage degrades */ } }
+    DGRoom.mount();
+    DGRoom.onPick(dgPick);
+    document.body.classList.add('dg-on'); $('dgBtn').classList.add('on');
+    dgSync();
+    status('DreamGetty room — mind the vase; 🧭 to orbit');
+  }catch(e){
+    document.body.classList.remove('dg-on'); $('dgBtn').classList.remove('on');
+    if(window.DGRoom && DGRoom.active) DGRoom.unmount();
+    status('DG unavailable — space field stands ('+(e.message||'load failed')+')');
+  }
+  dgLoading=false;
+}
+$('dgBtn').onclick=dgToggle;
+
+/* ---- the stage over the pedestal: live sync + orbit + tap-to-edit ---- */
+function dgStageData(){
+  const cells={}; ['LF','LC','LD','RF','RC','RD'].forEach(c=>cells[c]={ text:stripHtml(model[c]), kws:kwsOf(model[c]) });
+  return {
+    view: document.body.classList.contains('view-quad') ? 'quad' : 'dia',
+    cur:{ real:curReal, ghost:curGhost },
+    prevAxis, pct, spine:{ neg:spine.neg, pos:spine.pos },
+    poles:{ xneg:xStore().neg, xpos:xStore().pos, ypos:yStore().pos, yneg:yStore().neg },
+    cells, framingKws:kwsOf($('framing').innerHTML),
+    responses,
+  };
+}
+let dgSyncT=null;
+function dgSync(){
+  if(!(window.DGRoom && DGRoom.active)) return;
+  clearTimeout(dgSyncT);
+  dgSyncT=setTimeout(()=>{ try{ DGRoom.syncStage(dgStageData()); }catch(_){} }, 160);
+}
+function dgOrbitSet(on){
+  document.body.classList.toggle('dg-orbit', on);
+  $('dgOrbitBtn').classList.toggle('on', on);
+  if(window.DGRoom && DGRoom.active) DGRoom.setOrbit(on);
+}
+$('dgOrbitBtn').onclick=()=>{
+  if(!(window.DGRoom && DGRoom.active)){ status('Raise the gallery first (🏛)'); return; }
+  const on=!document.body.classList.contains('dg-orbit');
+  dgOrbitSet(on);
+  if(on){ dgSync(); status('Orbit — drag to circle, pinch to zoom; tap an orb or tablet to edit'); }
+  else status('Flat authoring');
+};
+function dgPick(p){
+  if(p.type==='orb'){ openOrb(p.quad, p.band); }   // the DOM editor, floating over the room
+  else if(p.type==='cell'){                          // tablets route back to the flat stage — authoring input stays flat
+    dgOrbitSet(false); setView('dia'); setThumb(cellCenterPct(p.cell), true);
+    status('Editing '+p.cell+' — flat, as ruled');
+  }
+}
 
 /* ===== Quadrants view — the 12 as orb pins on the 2×2 plane ===== */
 const QBANDS=['fluid','coalition','denominated'];
@@ -676,6 +764,7 @@ function buildOrbs(){
     const tip=document.createElement('span'); tip.className='orb-tip'; tip.textContent=q.id+' · '+band; orb.appendChild(tip);
     orb.onclick=()=>openOrb(q.id,band); plane.appendChild(orb);
   }); });
+  if(window.DGRoom && DGRoom.active) dgSync();
 }
 function renderQuadPoles(){ $('qpXneg').textContent=xStore().neg||''; $('qpXpos').textContent=xStore().pos||''; $('qpYpos').textContent=yStore().pos||''; $('qpYneg').textContent=yStore().neg||''; }
 $('qpXneg').addEventListener('input',()=>{ xStore().neg=$('qpXneg').innerText.trim(); setPoleFields(); });
@@ -708,6 +797,7 @@ function setView(v){
   $('btnNext').style.display = dia?'':'none';    // "next" only on the diatribe stage
   $('btnOpen').style.display = dia?'none':'';     // preview only after the responses stage
   if(v==='quad'){ renderQuadPoles(); buildOrbs(); }
+  if(window.DGRoom && DGRoom.active) dgSync();
 }
 $('viewSeg').querySelectorAll('button').forEach(b=>b.onclick=()=>setView(b.dataset.v));
 $('btnNext').onclick=()=>setView('quad');

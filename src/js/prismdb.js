@@ -12,7 +12,8 @@ const PrismDB = (() => {
     arcs:      'prism_arcs',
     members:   'prism_members',
     memberPos: 'prism_member_positions',
-    followed:  'prism_followed'
+    followed:  'prism_followed',
+    billScores: 'prism_bill_scores'
   };
 
   function _get(key) {
@@ -550,6 +551,68 @@ const PrismDB = (() => {
         confidence: p.confidence
       };
     });
+  }
+
+  // ── Bill Scores (prism_bill_scores) ─────────────────────
+  // Promotion of curated bill readings out of evt.billAnalysis
+  // (Portal Ontology spec §4.1; heuristics handoff §3 #6 / §5.3).
+  // A Prism reading of a bill happens ON an event's axes, so scores
+  // key by bill+event — but the store makes every reading globally
+  // visible: a reading earned in one event is queryable from all,
+  // and survives without the event write.
+  //
+  // Schema: { id: 'bscore_<billId>_<eventId>', billId, eventId,
+  //   billName, displacement, objectZ, diatribe, quadrants,
+  //   framingKeywords, reason, rubricId, method, provenance,
+  //   confirmedAt, timestamp }
+  // Lineage fields are REQUIRED at save — a score without
+  // {rubricId, method, provenance} is refused (spec §2: lineage is
+  // architecture, not discipline).
+
+  function getBillScores() { return _get(KEYS.billScores) || []; }
+
+  function getBillScoresForBill(billId) {
+    return getBillScores().filter(s => s.billId === billId);
+  }
+
+  function getBillScoresForEvent(eventId) {
+    return getBillScores().filter(s => s.eventId === eventId);
+  }
+
+  function getBillScore(billId, eventId) {
+    return getBillScores().find(
+      s => s.billId === billId && s.eventId === eventId
+    ) || null;
+  }
+
+  function saveBillScore(score) {
+    if (!score || !score.billId || !score.eventId) {
+      console.warn('PrismDB.saveBillScore: billId + eventId required — refused.');
+      return null;
+    }
+    if (!score.rubricId || !score.method || !score.provenance) {
+      console.warn('PrismDB.saveBillScore: lineage {rubricId, method, provenance} required — refused.');
+      return null;
+    }
+    score.id = score.id || ('bscore_' + score.billId + '_' + score.eventId);
+    score.timestamp = score.timestamp || new Date().toISOString();
+
+    const all = getBillScores();
+    const idx = all.findIndex(s => s.id === score.id);
+    if (idx !== -1) {
+      all[idx] = score;
+    } else {
+      all.push(score);
+    }
+    _set(KEYS.billScores, all);
+    return score;
+  }
+
+  function deleteBillScore(billId, eventId) {
+    const id = 'bscore_' + billId + '_' + eventId;
+    const all = getBillScores().filter(s => s.id !== id);
+    _set(KEYS.billScores, all);
+    return true;
   }
 
   // ── Dev Utilities ───────────────────────────────────────
@@ -1365,6 +1428,8 @@ const PrismDB = (() => {
     getMemberPositionHistory, getMemberPosition,
     saveMemberPosition, saveMemberPositions, deleteMemberPosition,
     getMemberAggregateForEvent,
+    getBillScores, getBillScoresForBill, getBillScoresForEvent,
+    getBillScore, saveBillScore, deleteBillScore,
     getState, setState,
     getUser, setUser,
     getFollowed, isFollowing, follow, unfollow, toggleFollow,

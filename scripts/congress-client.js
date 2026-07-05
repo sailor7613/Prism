@@ -20,20 +20,29 @@ function sleep(ms) {
 }
 
 /**
- * Fetch a URL with retry on BOTH rate limits and transient network faults.
+ * Fetch a URL and parse its JSON body, retrying on BOTH rate limits and
+ * transient network faults.
  *
  * Congress.gov drops long-running connections ("other side closed",
  * UND_ERR_SOCKET, ECONNRESET, "terminated") — observed live 2026-07-02 when a
- * bills run died at offset 8000 with no partial output. Those surface as
- * thrown TypeErrors from fetch(), not as HTTP statuses, so they need their
- * own retry path with backoff. Server-side 5xx get the same treatment.
+ * bills run died at offset 8000 with no partial output, and again 2026-07-04
+ * at offset 6250 where the socket closed DURING the body read (headers had
+ * already arrived, so the old headers-only retry never fired). Those surface
+ * as thrown TypeErrors from fetch()/response.json(), not as HTTP statuses, so
+ * both the request AND the body read live inside the retry path with backoff.
+ * Server-side 5xx get the same treatment.
  */
-async function fetchWithRetry(url, label) {
+async function fetchJsonWithRetry(url, label) {
   const MAX_ATTEMPTS = 6;
   for (let attempt = 1; ; attempt++) {
     let response;
     try {
       response = await fetch(url);
+      // Body read MUST stay inside the try: Congress.gov also closes sockets
+      // mid-body ("TypeError: terminated" from Fetch.onAborted) — observed
+      // live 2026-07-04 at offset 6250, where the headers arrived fine and
+      // response.json() threw OUTSIDE the old retry loop, killing the run.
+      if (response.ok) return await response.json();
     } catch (err) {
       if (attempt >= MAX_ATTEMPTS) throw err;
       const waitMs = Math.min(60000, 2000 * Math.pow(2, attempt - 1));
@@ -41,7 +50,6 @@ async function fetchWithRetry(url, label) {
       await sleep(waitMs);
       continue;
     }
-    if (response.ok) return response;
     if (response.status === 429) {
       console.log('  ⏳ Rate limited — waiting 60s...');
       await sleep(config.RETRY_DELAY_MS);
@@ -53,7 +61,7 @@ async function fetchWithRetry(url, label) {
       await sleep(waitMs);
       continue;
     }
-    const text = await response.text();
+    const text = await response.text().catch(() => '(body unreadable)');
     throw new Error(`API ${response.status} on ${label}: ${text}`);
   }
 }
@@ -64,8 +72,7 @@ async function fetchWithRetry(url, label) {
  */
 async function fetchOne(endpoint) {
   const url = `${config.BASE_URL}${endpoint}?api_key=${config.API_KEY}&format=json`;
-  const response = await fetchWithRetry(url, endpoint);
-  return response.json();
+  return fetchJsonWithRetry(url, endpoint);
 }
 
 /**
@@ -84,8 +91,7 @@ async function fetchAll(endpoint, resultKey) {
     const url = `${config.BASE_URL}${endpoint}?api_key=${config.API_KEY}&limit=${config.PAGE_SIZE}&offset=${offset}&format=json`;
 
     console.log(`  Fetching offset ${offset}...`);
-    const response = await fetchWithRetry(url, `${endpoint} @${offset}`);
-    const data = await response.json();
+    const data = await fetchJsonWithRetry(url, `${endpoint} @${offset}`);
 
     if (totalCount === null) {
       totalCount = data.pagination?.count || '?';
@@ -107,4 +113,4 @@ async function fetchAll(endpoint, resultKey) {
   return allResults;
 }
 
-module.exports = { fetchOne, fetchAll };
+module.exports = { fetchOne, fetchAll, fetchJsonWithRetry };

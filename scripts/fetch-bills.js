@@ -1,12 +1,28 @@
 /**
  * fetch-bills.js — Legislation data bootstrap for Prism
  * 
- * Fetches notable bills from the 119th Congress (2025-2026) and enacted
- * laws from the 118th Congress (2023-2024) via the Congress.gov API.
- * 
+ * Fetches notable bills from BOTH the 119th Congress (2025-2026) and the
+ * 118th Congress (2023-2024) via the Congress.gov API.
+ *
  * "Notable" = passed at least one chamber, reported by committee,
  * became public law, or received a floor vote.
- * 
+ *
+ * 2026-07-03: the 118th filter widened from enacted-only to the full
+ * notable set. Enacted-only made the corpus survivor-biased — bills that
+ * moved and then DIED with the 118th (the frustrated field, the votes
+ * against, half the dialectic) simply didn't exist on disk, and the
+ * inspector's realized/frustrated Z had nothing to place on its negative
+ * rungs. Notable-but-dead 118th bills are the honest denominator.
+ *
+ * 2026-07-04: survivorship bias round 2 fixed. Both the notable filter
+ * and deriveStatus read only latestAction.text — but a bill that passed a
+ * chamber and then died in the other's committee ends on "Received in
+ * the Senate...", and a vetoed bill ends on the failed override. The
+ * candidate net now includes implied-passage phrasings, and TRUE status
+ * derives from the full /actions history per bill (primary path), with
+ * per-milestone dates persisted for the future record-derived z.
+ *
+
  * Imports the shared congress-client.js for pagination/rate-limiting.
  * Output: prism_legislation.json + legislation_data.js
  * 
@@ -57,9 +73,36 @@ const NOTABLE_ACTION_KEYWORDS = [
   'conference report',
   'presented to president',
   'vetoed',
+  // ── 2026-07-04 widening: actions that IMPLY prior passage ──────────
+  // Survivorship bias round 2: a bill that passed one chamber and then
+  // died in the other's committee has latestAction "Received in the
+  // Senate / referred to..." — no direct keyword above matched, so the
+  // deepest frustrated rungs (passed-chamber, passed-both, vetoed) were
+  // structurally empty. A vetoed bill's last action is usually the FAILED
+  // OVERRIDE, not "vetoed". These keywords are the CANDIDATE NET only;
+  // true status now derives from the full /actions history during
+  // enrichment (deriveStatusFromActions) — status as a function of the
+  // record, not a string match on its last line.
+  'received in the senate',          // → the bill passed the House
+  'received in the house',           // → the bill passed the Senate
+  'held at the desk',                // chamber-receipt variant
+  'placed on senate legislative calendar', // reported (S) / crossed over (HR)
+  'over the objections of the president',  // failed veto override (long form)
+  'over veto',                       // Senate's ACTUAL phrasing (probe, 2026-07-04)
+  'veto message',
+  'pocket veto',
 ];
+// NOTE (2026-07-04 probe finding): House-override vetoes end on a GENERIC
+// action ("Motion to reconsider laid on the table") — invisible to ANY
+// last-line keyword. Since vetoed bills are almost all joint resolutions
+// (CRA disapprovals), hjres/sjres skip this net entirely: all are enriched
+// and classified from their /actions history, then filtered by derived
+// status. The keyword net remains for hr/s only, where ~16k bills/congress
+// make full enrichment unaffordable — an economic guard, documented here.
 
-// For 118th Congress, we only want enacted laws — tighter filter
+// 118th Congress: same notable filter as the 119th (2026-07-03 — was
+// enacted-only, which erased the frustrated field; see header note).
+// ENACTED_KEYWORDS kept for reference / possible fast-path runs.
 const ENACTED_KEYWORDS = [
   'became public law',
   'signed by the president',
@@ -102,12 +145,16 @@ const TOPIC_MAP = {
   'Law': 'Law',
 };
 
-// ── Status derivation from latestAction text ─────────────────────────
-function deriveStatus(latestActionText) {
+// ── Status derivation from latestAction text (FALLBACK path) ─────────
+// Primary derivation is deriveStatusFromActions (full history). This
+// text-match path remains for bills whose /actions fetch fails, extended
+// 2026-07-04 with the implied-passage phrasings (billType disambiguates).
+function deriveStatus(latestActionText, billType) {
   if (!latestActionText) return 'introduced';
   const t = latestActionText.toLowerCase();
+  const houseOrigin = billType ? billType.startsWith('h') : true;
   if (t.includes('became public law') || t.includes('signed by the president')) return 'enacted';
-  if (t.includes('vetoed')) return 'vetoed';
+  if (t.includes('veto') || t.includes('over the objections of the president')) return 'vetoed';
   if (t.includes('presented to president')) return 'presented_to_president';
   if (t.includes('resolving differences') || t.includes('conference report')) return 'conference';
   if (t.includes('passed house') || t.includes('passed/agreed to in house')) {
@@ -115,9 +162,60 @@ function deriveStatus(latestActionText) {
     return 'passed_house';
   }
   if (t.includes('passed senate') || t.includes('passed/agreed to in senate')) return 'passed_senate';
+  // Implied passage: receipt by the OTHER chamber means this one passed it
+  if (t.includes('received in the senate')) return 'passed_house';
+  if (t.includes('received in the house')) return 'passed_senate';
+  if (t.includes('held at the desk')) return houseOrigin ? 'passed_house' : 'passed_senate';
+  if (t.includes('placed on senate legislative calendar')) return houseOrigin ? 'passed_house' : 'reported';
   if (t.includes('reported by') || t.includes('ordered to be reported')) return 'reported';
   if (t.includes('cloture') || t.includes('motion to proceed')) return 'floor_action';
   return 'committee';
+}
+
+// ── Status derivation from the FULL action history (primary path) ────
+// 2026-07-04: status = max milestone across every recorded action, not a
+// string match on the last one. Also emits per-milestone dates + the raw
+// action count — record functions for the future record-derived z
+// (heuristics handoff §3 #4).
+const STATUS_RANK = {
+  introduced: 0, committee: 1, reported: 2, floor_action: 3,
+  passed_house: 4, passed_senate: 4, passed_both: 5, conference: 6,
+  presented_to_president: 7, vetoed: 8, enacted: 9,
+};
+
+function deriveStatusFromActions(actions) {
+  if (!Array.isArray(actions) || actions.length === 0) return null;
+  let best = 'introduced';
+  let passedHouseDate = null;
+  let passedSenateDate = null;
+  const milestones = {};
+  const consider = (status, date) => {
+    if (!(status in milestones)) milestones[status] = date || null;
+    if ((STATUS_RANK[status] ?? 0) > (STATUS_RANK[best] ?? 0)) best = status;
+  };
+  for (const a of actions) {
+    const t = (a.text || '').toLowerCase();
+    const d = a.actionDate || null;
+    if (t.includes('became public law') || t.includes('signed by the president')) consider('enacted', d);
+    else if (t.includes('veto') || t.includes('over the objections of the president')) consider('vetoed', d);
+    else if (t.includes('presented to president')) consider('presented_to_president', d);
+    else if (t.includes('resolving differences') || t.includes('conference report')) consider('conference', d);
+    else if (t.includes('passed house') || t.includes('passed/agreed to in house')) {
+      passedHouseDate = passedHouseDate || d;
+      consider('passed_house', d);
+    }
+    else if (t.includes('passed senate') || t.includes('passed/agreed to in senate')) {
+      passedSenateDate = passedSenateDate || d;
+      consider('passed_senate', d);
+    }
+    else if (t.includes('cloture') || t.includes('motion to proceed')) consider('floor_action', d);
+    else if (t.includes('reported by') || t.includes('ordered to be reported')) consider('reported', d);
+  }
+  if (passedHouseDate && passedSenateDate) {
+    consider('passed_both', [passedHouseDate, passedSenateDate].sort()[1]);
+  }
+  if (best === 'introduced') return null;  // nothing recognized → caller falls back
+  return { status: best, milestones, actionCount: actions.length };
 }
 
 // ── Bill type display labels ─────────────────────────────────────────
@@ -173,28 +271,44 @@ async function fetchBillSubjects(congress, billType, billNumber) {
   return fetchOne(endpoint, 'subjects');
 }
 
+// ── Fetch full action history (paginated) ────────────────────────────
+async function fetchBillActions(congress, billType, billNumber) {
+  const endpoint = `/bill/${congress}/${billType}/${billNumber}/actions`;
+  return fetchAllPages(endpoint, 'actions');
+}
+
 // ── Main fetch orchestrator ──────────────────────────────────────────
 async function fetchBills() {
   console.log('\n═══ LEGISLATION BOOTSTRAP ═══\n');
   
   const allNotable = [];
   
+  // Joint resolutions bypass the keyword net (see NOTABLE_ACTION_KEYWORDS
+  // note): all are enriched, classified from /actions history, and
+  // filtered by derived status afterward. hr/s keep the net (volume).
+  const ENRICH_ALL_TYPES = new Set(['hjres', 'sjres']);
+
   // ── 119th Congress: all notable bills ──
   console.log('── 119th Congress (notable bills) ──');
   for (const type of BILL_TYPES) {
     const bills = await fetchBillList(119, type);
-    const notable = filterNotable(bills, NOTABLE_ACTION_KEYWORDS);
-    console.log(`    → ${notable.length} notable`);
-    notable.forEach(b => allNotable.push({ ...b, _congress: 119, _type: type }));
+    const candidates = ENRICH_ALL_TYPES.has(type)
+      ? bills
+      : filterNotable(bills, NOTABLE_ACTION_KEYWORDS);
+    console.log(`    → ${candidates.length} candidates${ENRICH_ALL_TYPES.has(type) ? ' (all — jres bypass)' : ' (keyword net)'}`);
+    candidates.forEach(b => allNotable.push({ ...b, _congress: 119, _type: type }));
   }
-  
-  // ── 118th Congress: enacted laws only ──
-  console.log('\n── 118th Congress (enacted laws) ──');
+
+  // ── 118th Congress: full notable set — enacted AND died-in-motion ──
+  // (the frustrated field; was enacted-only until 2026-07-03)
+  console.log('\n── 118th Congress (notable bills — incl. died-in-motion) ──');
   for (const type of BILL_TYPES) {
     const bills = await fetchBillList(118, type);
-    const enacted = filterNotable(bills, ENACTED_KEYWORDS);
-    console.log(`    → ${enacted.length} enacted`);
-    enacted.forEach(b => allNotable.push({ ...b, _congress: 118, _type: type }));
+    const candidates = ENRICH_ALL_TYPES.has(type)
+      ? bills
+      : filterNotable(bills, NOTABLE_ACTION_KEYWORDS);
+    console.log(`    → ${candidates.length} candidates${ENRICH_ALL_TYPES.has(type) ? ' (all — jres bypass)' : ' (keyword net)'}`);
+    candidates.forEach(b => allNotable.push({ ...b, _congress: 118, _type: type }));
   }
   
   console.log(`\n── Total notable bills to enrich: ${allNotable.length} ──\n`);
@@ -227,6 +341,15 @@ async function fetchBills() {
       subjects = await fetchBillSubjects(congress, billType, billNumber);
     } catch (err) {
       // Subjects endpoint can 404 for some bills — that's fine
+    }
+
+    // Fetch full action history — status derives from the record (2026-07-04)
+    let actionsDerived = null;
+    try {
+      const actions = await fetchBillActions(congress, billType, billNumber);
+      actionsDerived = deriveStatusFromActions(actions);
+    } catch (err) {
+      console.warn(`    ⚠ Actions fetch failed for ${billType}${billNumber}-${congress} — falling back to latestAction text`);
     }
     
     // Parse sponsor from detail
@@ -268,8 +391,11 @@ async function fetchBills() {
     // For now, we skip summaries to keep the pipeline fast.
     // Can be added as a follow-up enrichment pass.
     
-    // Build the Prism legislation record
-    const status = deriveStatus(bill.latestAction?.text);
+    // Build the Prism legislation record.
+    // Status: actions-history derivation is primary; latestAction text is
+    // the fallback. statusMethod records which path produced it (lineage).
+    const status = actionsDerived?.status || deriveStatus(bill.latestAction?.text, billType);
+    const statusMethod = actionsDerived?.status ? 'actions_history' : 'latest_action_text';
     const record = {
       billId: `${billType}-${congress}-${billNumber}`,
       congress,
@@ -284,6 +410,9 @@ async function fetchBills() {
       subjects: subjectTerms.slice(0, 20),  // Cap at 20 to keep size reasonable
       status,
       statusLabel: STATUS_LABELS[status] || status,
+      statusMethod,                                  // 'actions_history' | 'latest_action_text'
+      milestones: actionsDerived?.milestones || null, // per-milestone dates — record fn for future record-z
+      actionCount: actionsDerived?.actionCount ?? null,
       latestAction: {
         date: bill.latestAction?.actionDate || null,
         text: bill.latestAction?.text || null,
@@ -328,10 +457,19 @@ async function fetchBills() {
     seen.add(bill.billId);
     return true;
   });
-  
-  console.log(`\n── Enrichment complete: ${deduped.length} unique bills ──`);
-  
-  return deduped;
+
+  // ── Notable filter, applied to DERIVED status (2026-07-04) ──
+  // The jres bypass enriches everything; here the "notable" threshold is
+  // enforced on what the record says the bill reached (≥ reported), not
+  // on last-line phrasing. Applies uniformly — keyword-caught hr/s bills
+  // that derive below reported drop too (net false-positives).
+  const before = deduped.length;
+  const notable = deduped.filter(b => (STATUS_RANK[b.status] ?? 0) >= STATUS_RANK.reported);
+  console.log(`\n── Notable filter (derived status ≥ reported): ${before} → ${notable.length} (dropped ${before - notable.length}) ──`);
+
+  console.log(`── Enrichment complete: ${notable.length} unique bills ──`);
+
+  return notable;
 }
 
 // ── Convert bill type to Congress.gov URL slug ───────────────────────
@@ -385,20 +523,23 @@ function generateStats(bills) {
   const byCongress = {};
   const byTopic = {};
   const byType = {};
-  
+  const byStatusMethod = {};
+
   bills.forEach(b => {
     byStatus[b.status] = (byStatus[b.status] || 0) + 1;
     byCongress[b.congress] = (byCongress[b.congress] || 0) + 1;
     byTopic[b.topic || 'Unclassified'] = (byTopic[b.topic || 'Unclassified'] || 0) + 1;
     byType[b.type] = (byType[b.type] || 0) + 1;
+    byStatusMethod[b.statusMethod || 'unknown'] = (byStatusMethod[b.statusMethod || 'unknown'] || 0) + 1;
   });
-  
+
   return {
     total: bills.length,
     byStatus,
     byCongress,
     byTopic,
     byType,
+    byStatusMethod,
     fetchedAt: new Date().toISOString(),
   };
 }
@@ -430,6 +571,7 @@ async function writeBillOutputs(bills) {
   console.log(`  Total: ${stats.total}`);
   console.log(`  By congress:`, stats.byCongress);
   console.log(`  By status:`, stats.byStatus);
+  console.log(`  By status method:`, stats.byStatusMethod);
   console.log(`  By type:`, stats.byType);
 }
 

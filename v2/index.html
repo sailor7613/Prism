@@ -1956,6 +1956,7 @@ body:not(.phase-diatribe) .diatribe-eyebrow { display: none; }
 
 <!-- Data layer -->
 <script src="../src/js/prismdb.js"></script>
+<script src="../src/js/prism-ai.js"></script>
 <!-- Congressional roster as a script (not fetch) so it loads on file:// too,
      where Safari/Chrome block fetch() of local JSON. Sets window.PRISM_MEMBERS_DATA
      and seeds PrismDB. Regenerate from prism_members.json when the data changes. -->
@@ -4197,26 +4198,11 @@ if (memberToggle) memberToggle.addEventListener('click', toggleMemberPins);
 // in the dev panel and never stored. This is admin/dev tooling surfaced in v2
 // for testing — gated behind the #derive URL hash, not part of the user flow.
 // The prompt is ported verbatim from admin.html's MEMBER_DERIVE_SYSTEM_PROMPT.
-// ── Model string — keep in sync with admin.html's PRISM_MODEL ──
-const PRISM_MODEL = 'claude-sonnet-5';
-
-// ── Canonical Diatribe rubric — keep byte-identical with admin.html's copy ──
-// (single-sourcing lands with the prism-ai.js extraction; until then the shared
-// PRISM_DIATRIBE_RUBRIC_ID makes drift detectable in logged scores)
-const PRISM_DIATRIBE_RUBRIC_ID = 'PRISM_DIATRIBE_RUBRIC_v1_1';
-const PRISM_DIATRIBE_RUBRIC = `DIATRIBE — CANONICAL RUBRIC (${PRISM_DIATRIBE_RUBRIC_ID}):
-
-Diatribe (0–100) measures denomination: how far the political object has been displaced by tribal/identity content. Read it by watching the object, not the tone or volume:
-
-0–33 FLUID: the object is present and engaged. Capacity for surprise intact — the position could update on new evidence. Substantive even when forceful.
-34–66 COALITION (oscillation zone): the object is narrowing — substance still recoverable but increasingly tribally colored. In transit; recovery and denomination both possible.
-67–100 DENOMINATED: the object is gone, replaced by identity/vehicle content. Cannot be surprised. The thing being discussed has become a thing being belonged to.
-
-Denomination is sincere engagement with the wrong question — an orientation error, not bad faith and not low intelligence. A brilliant analyst can score 80; a mediocre one can score 15. Denomination exists in every quadrant: institutional positions denominate, populist positions hold fluid, and vice versa. Never derive Diatribe from quadrant position.
-
-PRIOR-FLOOR: if you are relying primarily on party or demographic prior rather than the subject's own record (confidence ≤ 0.4), report Diatribe in the 40–50 neutral range. Band-crossing denomination may never be inferred from group identity — only from the subject's own documented pattern.
-
-Calibration: most working politicians on live issues fall 25–60. Reserve 67+ for documented, sustained denomination patterns on the specific issue. SYMMETRY CONSTRAINT: structurally equivalent positions must score within 5 points regardless of party or side.`;
+// ── Model string + canonical Diatribe rubric — single-sourced from
+// ../src/js/prism-ai.js as of 2026-07-05 (the extraction this comment
+// used to promise). PRISM_DIATRIBE_RUBRIC / _ID arrive as globals from
+// that script; the "keep byte-identical" era is over.
+const PRISM_MODEL = PrismAI.MODEL_DEFAULT;
 
 const MEMBER_DERIVE_SYSTEM_PROMPT = `You are the Prism dialectical encoding engine, scoring U.S. Congress members against a specific political event. You are estimating where a named legislator would land on the event's two-axis dialectical structure based on what is publicly known about their voting record, public statements, party position, regional constituency, and ideological history through your knowledge cutoff.
 

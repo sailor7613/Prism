@@ -2,12 +2,13 @@
    Strategy: network-first for our own files (so updates appear automatically
    whenever the iPad is online), with a cached fallback so it still works offline.
    Cross-origin assets (fonts, CDN) are cache-first so they don't refetch. */
-const CACHE = 'prism-admin-v2';
+const CACHE = 'prism-admin-v3';
 const CORE = [
   './admin-surface.html',
   './index.html',
   './src/css/prism-grammar.css',
   './src/js/prismdb.js',
+  './src/js/prism-ai.js',
   './manifest.webmanifest',
   './pwa/icon-192.png',
   './pwa/icon-512.png',
