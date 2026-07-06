@@ -240,6 +240,51 @@
   .cite-row input{ font-family:var(--mono); font-size:12px; color:var(--ink); background:rgba(255,255,255,.04); border:.5px solid var(--rule); border-radius:8px; padding:8px 10px; outline:none; }
   .cite-row .del{ cursor:pointer; color:var(--ink-low); text-align:center; font-size:13px; }
   .cite-row .del:hover{ color:var(--red); }
+
+  /* ── Bill reading room (📜) — the portal's first §4 reading room:
+        chat + shortlist + Link in a drawer; the stage stays flat (§8) ── */
+  .br-overlay{ position:fixed; inset:0; z-index:59; background:rgba(4,8,18,.4); display:none; } .br-overlay.show{ display:block; }
+  .br-drawer{ position:fixed; top:0; right:0; bottom:0; width:min(560px,96vw); z-index:60; transform:translateX(102%);
+    transition:transform .3s cubic-bezier(.22,1,.36,1); background:rgba(9,15,32,.97); -webkit-backdrop-filter:blur(12px); backdrop-filter:blur(12px);
+    border-left:.5px solid var(--rule); display:flex; flex-direction:column; }
+  .br-drawer.show{ transform:none; }
+  .br-head{ padding:calc(env(safe-area-inset-top) + 14px) 14px 12px; border-bottom:.5px solid var(--rule); display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  .br-head .t{ font-family:var(--serif); font-size:16px; }
+  .br-head .ev{ font-family:var(--mono); font-size:9px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-low); }
+  .br-body{ flex:1; min-height:0; display:flex; flex-direction:column; }
+  .br-pane{ flex:1; min-height:0; display:flex; flex-direction:column; }
+  .br-msgs{ flex:1; overflow-y:auto; padding:14px; -webkit-overflow-scrolling:touch; }
+  .br-msg{ margin-bottom:16px; }
+  .br-msg .who{ font-family:var(--mono); font-size:9px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-low); margin-bottom:4px; }
+  .br-msg .txt{ font-family:var(--serif); font-size:14px; line-height:1.55; color:var(--ink-mid); white-space:pre-wrap; }
+  .br-msg.you .txt{ color:var(--ink); }
+  .br-msg .txt strong{ color:var(--ink); font-weight:600; }
+  .br-bill{ color:rgba(196,156,72,.95); cursor:pointer; font-family:var(--mono); font-size:12px; }
+  .br-input{ display:flex; gap:8px; padding:10px 14px; border-top:.5px solid var(--rule); align-items:flex-end; }
+  .br-input textarea{ flex:1; font-family:var(--serif); font-size:14px; line-height:1.4; color:var(--ink);
+    background:rgba(255,255,255,.04); border:.5px solid var(--rule); border-radius:8px; padding:9px 11px; outline:none; resize:none; min-height:44px; max-height:120px; }
+  .br-input textarea::placeholder{ color:var(--ink-low); font-style:italic; }
+  .br-list{ flex:1; overflow-y:auto; padding:14px; -webkit-overflow-scrolling:touch; }
+  .br-empty{ padding:24px 10px; text-align:center; font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-low); }
+  .br-card{ border:.5px solid var(--rule); border-radius:10px; padding:11px 13px; margin-bottom:10px; background:rgba(255,255,255,.02); }
+  .br-card.confirmed{ border-color:rgba(96,168,128,.5); }
+  .br-card.dismissed{ opacity:.45; }
+  .br-card .n{ font-family:var(--serif); font-size:14px; color:var(--ink); }
+  .br-card .m{ font-family:var(--mono); font-size:9px; letter-spacing:.08em; color:var(--ink-low); margin-top:2px; }
+  .br-card .r{ font-family:var(--serif); font-size:12.5px; font-style:italic; color:var(--ink-mid); margin-top:6px; line-height:1.45; }
+  .br-tags{ display:flex; flex-wrap:wrap; gap:5px; margin-top:8px; }
+  .br-tag{ font-family:var(--mono); font-size:8px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-mid);
+    border:.5px solid var(--rule); border-radius:999px; padding:3px 8px; }
+  .br-kws{ margin-top:6px; display:flex; flex-wrap:wrap; gap:4px 8px; }
+  .br-kw{ font-family:var(--serif); font-size:11px; font-style:italic; color:var(--keyword-shimmer,#fff6e2); opacity:.8; }
+  .br-acts{ margin-top:9px; display:flex; gap:8px; }
+  .br-acts button{ background:transparent; border:1px solid var(--rule); color:var(--ink-mid); font-family:var(--mono);
+    font-size:9px; letter-spacing:.12em; text-transform:uppercase; padding:7px 12px; border-radius:2px; cursor:pointer; }
+  .br-acts button:hover{ color:var(--ink); border-color:rgba(48,96,192,.45); }
+  .br-foot{ padding:11px 14px calc(env(safe-area-inset-bottom) + 11px); border-top:.5px solid var(--rule); display:flex; align-items:center; gap:10px; }
+  body.light .br-drawer{ background:rgba(245,240,232,.97); }
+  body.light .br-input textarea, body.light .br-card{ background:rgba(20,22,30,.04); }
+  body.light .br-kw{ color:#7a5418; }
 </style>
 </head>
 <body class="dark">
@@ -256,6 +301,7 @@
   <button class="btn" id="tedBtn" title="Edit Ted's speech">🐺 Ted</button>
   <span class="viewseg" id="viewSeg" title="Author the diatribe, or the 12 quadrant responses"><button data-v="dia" class="on">Diatribe</button><button data-v="quad">Quadrants</button></span>
   <button class="btn" id="citeBtn" title="Citation bank — sources for this event">📎 Sources</button>
+  <button class="btn" id="brBtn" title="Bill reading room — curate the bills this event links">📜 Bills</button>
   <button class="btn" id="themeBtn" title="Day / night">◐</button>
   <button class="btn" id="dgBtn" title="DreamGetty room — loads on demand">🏛</button>
   <button class="btn" id="dgOrbitBtn" title="Orbit the room — drag to circle, pinch to zoom, tap an orb to edit">🧭</button>
@@ -356,6 +402,34 @@
   </div>
 </aside>
 
+<div class="br-overlay" id="brOverlay"></div>
+<aside class="br-drawer" id="brDrawer" aria-label="Bill reading room">
+  <div class="br-head">
+    <span class="t">📜 Bills</span>
+    <span class="ev" id="brEvent"></span>
+    <span class="layerseg" id="brSeg"><button data-p="chat" class="on">Dialogue</button><button data-p="list" id="brSegList">Shortlist · 0</button></span>
+    <span style="flex:1"></span>
+    <button class="btn" id="brResetBtn" title="Start a fresh dialogue">↺</button>
+    <button class="btn" id="brClose">Close</button>
+  </div>
+  <div class="br-body">
+    <div class="br-pane" id="brChatPane">
+      <div class="br-msgs" id="brMsgs"></div>
+      <div class="br-input">
+        <textarea id="brText" rows="2" placeholder="Which bills should we look at…"></textarea>
+        <button class="btn primary" id="brSend">Send</button>
+      </div>
+    </div>
+    <div class="br-pane" id="brListPane" style="display:none">
+      <div class="br-list" id="brList"></div>
+    </div>
+  </div>
+  <div class="br-foot">
+    <button class="btn primary" id="brLink" disabled>Link confirmed bills</button>
+    <span class="status" id="brStatus"></span>
+  </div>
+</aside>
+
 <div class="cellmap" id="cellmap"></div>
 
 <div class="actions">
@@ -378,6 +452,7 @@
 
 <script src="src/js/prismdb.js"></script>
 <script src="src/js/prism-ai.js"></script>
+<script src="src/js/prism-curate.js"></script>
 <script>
 /* ===== Prism Admin · author on the diatribe surface ===== */
 const HAS_DB = (typeof PrismDB !== 'undefined');
@@ -886,6 +961,157 @@ addStar($('capReal'),'hint.captionReal'); addStar($('capGhost'),'hint.captionGho
 document.addEventListener('click',(e)=>{ if(!document.body.classList.contains('ted-edit')) return;
   const kw=e.target&&e.target.closest?e.target.closest('.kw'):null; if(!kw) return; const t=(kw.textContent||'').trim(); if(!t) return;
   tedLayer='event'; openTed('kw.'+t); });
+
+/* ===== Bill reading room (📜) — the portal's first §4 reading room =====
+   Engine: src/js/prism-curate.js (pure — this shell owns history,
+   candidates, and the DOM; spec §4.1). Entered from the drawer per §6;
+   the authoring stage stays untouched (§8). The ~500KB bill catalog
+   lazy-loads on first open — the DG rule: heavy assets never at boot. */
+let brHistory=[], brCandidates=[], brEventId=null, brBusy=false, brCatalogLoading=false;
+
+function brStatus(m){ $('brStatus').textContent=m; }
+function brCatalogCount(){ return (typeof LEGISLATION_DATA!=='undefined')?LEGISLATION_DATA.length:0; }
+function brPane(p){
+  $('brSeg').querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.p===p));
+  $('brChatPane').style.display = p==='chat'?'':'none';
+  $('brListPane').style.display = p==='list'?'':'none';
+  if(p==='chat'){ const m=$('brMsgs'); m.scrollTop=m.scrollHeight; }
+}
+$('brSeg').querySelectorAll('button').forEach(b=>b.onclick=()=>brPane(b.dataset.p));
+
+/* the event as the dialogue sees it — live surface state layered over the
+   DB copy, so an unsaved title/keyword edit still steers the catalog filter */
+function brEvt(){
+  const db=(currentId&&HAS_DB)?PrismDB.getEvent(currentId):null;
+  const live=assemble();
+  const evt=Object.assign({}, db||{}, { title:live.title, framingKeywords:live.framingKeywords, axes:axesObj() });
+  return (db || live.title!=='Untitled event' || live.framingKeywords.length) ? evt : null;
+}
+
+function brMsg(who, text, opts){
+  const d=document.createElement('div'); d.className='br-msg '+who;
+  let h=escHtml(text);
+  if(opts&&opts.rich){
+    h=h.replace(/\[([a-z]+-\d{2,3}-\d+)\]/gi,(m,id)=>{
+      const c=brCandidates.find(x=>x.id===id.toLowerCase());
+      return c?`<span class="br-bill" data-bill="${id.toLowerCase()}">[${id}]</span>`:m;
+    }).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
+  }
+  d.innerHTML=`<div class="who">${who==='you'?'You':'Claude'}</div><div class="txt">${h}</div>`;
+  if(opts&&opts.dim) d.style.opacity=.5;
+  $('brMsgs').appendChild(d); $('brMsgs').scrollTop=$('brMsgs').scrollHeight;
+  return d;
+}
+$('brMsgs').addEventListener('click',e=>{
+  const b=e.target.closest?e.target.closest('.br-bill'):null; if(!b) return;
+  brPane('list');
+  const card=document.getElementById('brCard_'+b.dataset.bill.replace(/[^a-z0-9]/gi,'_'));
+  if(card) card.scrollIntoView({behavior:'smooth',block:'center'});
+});
+
+function brReset(){
+  brHistory=[]; brCandidates=[]; brEventId=currentId;
+  const evt=(currentId&&HAS_DB)?PrismDB.getEvent(currentId):null;
+  $('brEvent').textContent = evt ? (evt.id||'') : 'unsaved';
+  /* pre-populate from the event's linked bills (desk behavior kept) */
+  if(evt&&(evt.linkedBills||[]).length&&typeof LEGISLATION_DATA!=='undefined'){
+    const linked=new Set(evt.linkedBills), a=evt.billAnalysis||{};
+    LEGISLATION_DATA.forEach(b=>{ if(linked.has(b.id)){ const s=a[b.id]||{};
+      brCandidates.push({ id:b.id, name:b.name, meta:b.meta||'', reason:s.reason||'Previously linked',
+        status:'confirmed', displacement:s.displacement||null, objectZ:s.objectZ??null,
+        diatribe:s.diatribe||null, quadrants:s.quadrants||null, framingKeywords:s.framingKeywords||null }); } });
+  }
+  $('brMsgs').innerHTML='';
+  brMsg('claude', evt
+    ? `Let's curate bills for “${evt.title}”. What political tensions does this event activate? I'll search the ${brCatalogCount()}-bill catalog for votes that reveal member positioning.`
+    : `No saved event on the surface yet — that's fine. Tell me the political terrain and I'll search the ${brCatalogCount()}-bill catalog. Save the event to enable linking.`);
+  brRenderList(); brStatus('');
+}
+
+function brRenderList(){
+  const host=$('brList');
+  const n=brCandidates.filter(c=>c.status==='confirmed').length;
+  $('brSegList').textContent='Shortlist · '+n;
+  $('brLink').disabled=!(currentId&&n);
+  $('brLink').textContent=currentId?'Link confirmed bills':'Save the event to link';
+  if(!brCandidates.length){ host.innerHTML='<div class="br-empty">Bills appear here as the dialogue suggests them.</div>'; return; }
+  const rank={confirmed:0,candidate:1,dismissed:2};
+  const sorted=[...brCandidates].sort((a,b)=>(rank[a.status]||1)-(rank[b.status]||1));
+  host.innerHTML=sorted.map(c=>{
+    const tags=[];
+    if(c.displacement) tags.push(`<span class="br-tag">${c.displacement==='baseline'?'◇ baseline':'◆ '+escHtml(c.displacement)}</span>`);
+    if(c.objectZ!==null&&c.objectZ!==undefined) tags.push(`<span class="br-tag">Z ${c.objectZ>0?'+':''}${c.objectZ.toFixed(1)}</span>`);
+    if(c.diatribe) tags.push(`<span class="br-tag">dia ${escHtml(c.diatribe)}</span>`);
+    (c.quadrants||[]).forEach(q=>tags.push(`<span class="br-tag">${q}</span>`));
+    const kws=(c.framingKeywords||[]).map(k=>`<span class="br-kw">${escHtml(k)}</span>`).join('');
+    let acts='';
+    if(c.status==='candidate') acts=`<button data-a="confirmed">✓ Confirm</button><button data-a="dismissed">✕ Dismiss</button>`;
+    else if(c.status==='confirmed') acts=`<button data-a="candidate">↩ Unconfirm</button><button data-a="dismissed">✕ Dismiss</button>`;
+    else acts=`<button data-a="candidate">↩ Restore</button>`;
+    return `<div class="br-card ${c.status}" id="brCard_${c.id.replace(/[^a-z0-9]/gi,'_')}" data-bill="${c.id}">
+      <div class="n">${escHtml(c.name)}</div><div class="m">${escHtml(c.meta)}</div>
+      <div class="r">${escHtml(c.reason)}</div>
+      ${tags.length?`<div class="br-tags">${tags.join('')}</div>`:''}
+      ${kws?`<div class="br-kws">${kws}</div>`:''}
+      <div class="br-acts">${acts}</div>
+    </div>`;
+  }).join('');
+}
+$('brList').addEventListener('click',e=>{
+  const btn=e.target.closest?e.target.closest('button[data-a]'):null; if(!btn) return;
+  const card=btn.closest('.br-card'); const c=brCandidates.find(x=>x.id===card.dataset.bill);
+  if(c){ c.status=btn.dataset.a; brRenderList(); }
+});
+
+async function brSendMsg(){
+  if(brBusy) return;
+  const key=$('apiKey').value.trim(); if(!key){ brStatus('Add your API key (AI ▸ top bar)'); return; }
+  const text=$('brText').value.trim(); if(!text) return;
+  $('brText').value='';
+  brMsg('you',text);
+  const typing=brMsg('claude','Thinking…',{dim:true});
+  brBusy=true; $('brSend').disabled=true;
+  try{
+    const {reply,newCandidates}=await PrismCurate.send({ apiKey:key, evt:brEvt(), text,
+      history:brHistory, candidates:brCandidates, model:$('model').value });
+    brHistory.push({role:'user',content:text},{role:'assistant',content:reply});
+    if(newCandidates.length) brCandidates.push(...newCandidates);
+    typing.remove();
+    brMsg('claude',reply,{rich:true});
+    brRenderList();
+    brStatus(brHistory.length/2+' exchange'+(brHistory.length>2?'s':''));
+  }catch(e){ typing.remove(); brMsg('claude','⚠ '+e.message); }
+  finally{ brBusy=false; $('brSend').disabled=false; }
+}
+$('brSend').onclick=brSendMsg;
+$('brText').addEventListener('keydown',e=>{ if(e.key==='Enter'&&!e.shiftKey){ e.preventDefault(); brSendMsg(); } });
+
+async function brOpen(){
+  $('brDrawer').classList.add('show'); $('brOverlay').classList.add('show');
+  if(typeof LEGISLATION_DATA==='undefined'){
+    if(brCatalogLoading) return;
+    brCatalogLoading=true; brStatus('Fetching the bill catalog…');
+    try{ await dgScript('data/legislation_data.js'); brStatus(''); }
+    catch(e){ brStatus('Catalog failed to load — close and reopen to retry'); brCatalogLoading=false; return; }
+    brCatalogLoading=false;
+  }
+  if(brEventId!==currentId || !$('brMsgs').childElementCount) brReset();
+  else brRenderList();
+}
+function brCloseDrawer(){ $('brDrawer').classList.remove('show'); $('brOverlay').classList.remove('show'); }
+$('brBtn').onclick=brOpen; $('brClose').onclick=brCloseDrawer; $('brOverlay').onclick=brCloseDrawer;
+$('brResetBtn').onclick=()=>{ brReset(); };
+
+/* THE write path — engine-owned: prism_bill_scores (canonical, lineage
+   enforced) + evt.billAnalysis + linkedBills (back-compat), spec §4.1 */
+$('brLink').onclick=()=>{
+  if(!currentId){ brStatus('Save the event first'); return; }
+  const r=PrismCurate.applyCuration(currentId,brCandidates);
+  if(r.error==='none_confirmed'){ brStatus('No bills confirmed'); return; }
+  if(r.error){ brStatus('Link failed: '+r.error); return; }
+  brStatus(r.newCount+' new · '+r.totalLinked+' linked · '+r.scored+' score(s) → store');
+  status('Linked '+r.totalLinked+' bill(s) to '+currentId);
+};
 
 refreshDropdown();
 blank();

@@ -4276,6 +4276,7 @@ body {
         <option value="Water">Water</option>
       </select>
       <span class="ref-bill-count" id="refBillCount"></span>
+      <button class="ref-filter-btn" id="refBillCerBtn" onclick="toggleCeremonialFold()" title="Ceremonial bills (postal/building namings, commemoratives — pattern_match_v1 record tag) fold away by default; linked bills always show." style="color:var(--muted); font-size:10px;"></button>
       <button class="ref-filter-btn" id="refBillCurateBtn" onclick="beginBillCurate()" style="margin-left:auto; color:var(--gold); border-color:var(--gold);">✦ Curate</button>
       <button class="ref-filter-btn" id="refBillSuggestBtn" onclick="suggestBills()" style="color:var(--gold); border-color:var(--gold);">✦ Suggest</button>
       <button class="ref-filter-btn" id="refBillClearBtn" onclick="clearBillSuggestions()" style="display:none; color:var(--muted); font-size:10px;">✕ Clear</button>
@@ -9353,6 +9354,17 @@ function filterBills() {
     );
   }
 
+  // Substance lens (2026-07-05): ceremonial bills (cer flag — record-tier
+  // pattern_match_v1 tag from scripts/ceremonial-classifier.js) fold away
+  // by default. A deliberate link outranks the lens: linked always shows.
+  const cerBtn = document.getElementById('refBillCerBtn');
+  const cerHere = parsed.filter(b => b.cer && !linked.has(b.id)).length;
+  if (!refState.showCeremonial) parsed = parsed.filter(b => !b.cer || linked.has(b.id));
+  if (cerBtn) {
+    cerBtn.style.display = cerHere ? '' : 'none';
+    cerBtn.textContent = refState.showCeremonial ? ('◫ hide ' + cerHere + ' ceremonial') : ('◫ ' + cerHere + ' ceremonial hidden');
+  }
+
   // Sort: linked first, suggested second, then alphabetical
   const suggestions = refState.billSuggestions || {};
   parsed.sort((a, b) => {
@@ -9428,6 +9440,11 @@ function clearBillSuggestions() {
   refState.billSuggestions = {};
   filterBills();
   toast('Suggestions cleared');
+}
+
+function toggleCeremonialFold() {
+  refState.showCeremonial = !refState.showCeremonial;
+  filterBills();
 }
 
 function billIdToUrl(id) {

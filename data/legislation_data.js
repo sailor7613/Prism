@@ -101,7 +101,8 @@ const LEGISLATION_DATA = [
   {
     "name": "To authorize the President to award the Medal of Honor to John W. Ripley for acts of valor during the Vietnam War, and for other purposes.",
     "meta": "H.R. 7211 · Enacted · Defense",
-    "id": "hr-119-7211"
+    "id": "hr-119-7211",
+    "cer": 1
   },
   {
     "name": "A bill to waive the 60-day notice requirement for the posthumous honorary promotion of Captain Cody Khork, United States Army.",
@@ -211,12 +212,14 @@ const LEGISLATION_DATA = [
   {
     "name": "A bill to designate the facility of the United States Postal Service located at 201 West Oklahoma Avenue in Guthrie, Oklahoma, as the \"Oscar J. Upham Post Office\".",
     "meta": "S. 2283 · Enacted · Government",
-    "id": "s-119-2283"
+    "id": "s-119-2283",
+    "cer": 1
   },
   {
     "name": "Miracle on Ice Congressional Gold Medal Act",
     "meta": "H.R. 452 · Enacted · Other",
-    "id": "hr-119-452"
+    "id": "hr-119-452",
+    "cer": 1
   },
   {
     "name": "Fairness for Servicemembers and their Families Act of 2025",
@@ -566,12 +569,14 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the facility of the United States Postal Service located at 80 1st Street in Kingsland, Arkansas, as the \"Kingsland 'Johnny Cash' Post Office\".",
     "meta": "H.R. 7180 · Enacted · Government",
-    "id": "hr-118-7180"
+    "id": "hr-118-7180",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 201 East Battles Road in Santa Maria, California, as the \"Larry Lavagnino Post Office Building\".",
     "meta": "H.R. 7158 · Enacted · Government",
-    "id": "hr-118-7158"
+    "id": "hr-118-7158",
+    "cer": 1
   },
   {
     "name": "VETS Safe Travel Act",
@@ -581,37 +586,44 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the facility of the United States Postal Service located at 29 Franklin Street in Petersburg, Virginia, as the \"John Mercer Langston Post Office Building\".",
     "meta": "H.R. 7385 · Enacted · Government",
-    "id": "hr-118-7385"
+    "id": "hr-118-7385",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 135 West Spring Street in Titusville, Pennsylvania, as the \"Edwin L. Drake Post Office Building\".",
     "meta": "H.R. 7417 · Enacted · Government",
-    "id": "hr-118-7417"
+    "id": "hr-118-7417",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 1285 Emancipation Highway in Fredericksburg, Virginia, as the \"Gladys P. Todd Post Office\".",
     "meta": "H.R. 7508 · Enacted · Government",
-    "id": "hr-118-7508"
+    "id": "hr-118-7508",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 203 East 6th Street in Lexington, Nebraska, as the ‘William E. and Elsie L. Barrett Post Office Building.",
     "meta": "H.R. 7507 · Enacted · Government",
-    "id": "hr-118-7507"
+    "id": "hr-118-7507",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 1087 Route 47 South in Rio Grande, New Jersey, as the \"Carlton H. Hand Post Office Building\".",
     "meta": "H.R. 7606 · Enacted · Government",
-    "id": "hr-118-7606"
+    "id": "hr-118-7606",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at Block 1025, Lots 18 & 19, Northeast Corner of US Route 9 South and Main Street in the Township of Middle, County of Cape May, New Jersey, as the \"George Henry White Post Office Building\".",
     "meta": "H.R. 7607 · Enacted · Government",
-    "id": "hr-118-7607"
+    "id": "hr-118-7607",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 306 Pickens Street in Marion, Alabama, as the \"Albert Turner, Sr. Post Office Building\".",
     "meta": "H.R. 7893 · Enacted · Government",
-    "id": "hr-118-7893"
+    "id": "hr-118-7893",
+    "cer": 1
   },
   {
     "name": "Klamath Basin Water Agreement Support Act of 2024",
@@ -626,17 +638,20 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the facility of the United States Postal Service located at 9317 Bolsa Avenue in Westminster, California, as the \"Little Saigon Vietnam War Veterans Memorial Post Office\".",
     "meta": "H.R. 8057 · Enacted · Government",
-    "id": "hr-118-8057"
+    "id": "hr-118-8057",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 401 Main Street in Brawley, California, as the \"Walter Francis Ulloa Memorial Post Office Building\".",
     "meta": "H.R. 8641 · Enacted · Government",
-    "id": "hr-118-8641"
+    "id": "hr-118-8641",
+    "cer": 1
   },
   {
     "name": "To rename the community-based outpatient clinic of the Department of Veterans Affairs in Cadillac, Michigan, as the \"Duane E. Dewey VA Clinic\".",
     "meta": "H.R. 8667 · Enacted · Defense",
-    "id": "hr-118-8667"
+    "id": "hr-118-8667",
+    "cer": 1
   },
   {
     "name": "To amend title 28, United States Code, to authorize holding court for the Central Division of Utah in Moab and Monticello.",
@@ -646,32 +661,38 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the facility of the United States Postal Service located at 20 West Main Street in Santaquin, Utah, as the \"SGT Bill Hooser Post Office Building\".",
     "meta": "H.R. 8717 · Enacted · Government",
-    "id": "hr-118-8717"
+    "id": "hr-118-8717",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 114 Center Street East in Roseau, Minnesota, as the \"Floyd B. Olson Post Office\".",
     "meta": "H.R. 8841 · Enacted · Government",
-    "id": "hr-118-8841"
+    "id": "hr-118-8841",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 609 Portsmouth Avenue in Greenland, New Hampshire, as the \"Chief Michael Maloney Post Office Building\".",
     "meta": "H.R. 8868 · Enacted · Government",
-    "id": "hr-118-8868"
+    "id": "hr-118-8868",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 82-6110 Mamalahoa Highway in Captain Cook, Hawaii, as the \"Army 1st Lt. John Kuulei Kauhaihao Post Office Building\".",
     "meta": "H.R. 8909 · Enacted · Government",
-    "id": "hr-118-8909"
+    "id": "hr-118-8909",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 151 Highway 74 South in Peachtree City, Georgia, as the \"SFC Shawn McCloskey Post Office\".",
     "meta": "H.R. 8919 · Enacted · Government",
-    "id": "hr-118-8919"
+    "id": "hr-118-8919",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 20 West White Street in Millstadt, Illinois, as the \"Corporal Matthew A. Wyatt Post Office\".",
     "meta": "H.R. 8976 · Enacted · Government",
-    "id": "hr-118-8976"
+    "id": "hr-118-8976",
+    "cer": 1
   },
   {
     "name": "Supporting America’s Children and Families Act",
@@ -686,17 +707,20 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the facility of the United States Postal Service located at 3913 Leland Avenue Northwest in Comstock Park, Michigan, as the \"Captain Miguel Justin Nava Post Office\".",
     "meta": "H.R. 9285 · Enacted · Government",
-    "id": "hr-118-9285"
+    "id": "hr-118-9285",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 675 Wolf Ledges Parkway in Akron, Ohio, as the \"Judge James R. Williams Post Office Building\".",
     "meta": "H.R. 9322 · Enacted · Government",
-    "id": "hr-118-9322"
+    "id": "hr-118-9322",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 108 North Main Street in Bucoda, Washington, as the \"Mayor Rob Gordon Post Office\".",
     "meta": "H.R. 9421 · Enacted · Government",
-    "id": "hr-118-9421"
+    "id": "hr-118-9421",
+    "cer": 1
   },
   {
     "name": "House Office of Legislative Counsel Modernization Act",
@@ -706,22 +730,26 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the facility of the United States Postal Service located at 340 South Loudon Avenue in Baltimore, Maryland, as the \"United States Representative Elijah E. Cummings Post Office Building\".",
     "meta": "H.R. 9544 · Enacted · Government",
-    "id": "hr-118-9544"
+    "id": "hr-118-9544",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 2777 Brentwood Road in Raleigh, North Carolina, as the \"Millie Dunn Veasey Post Office\".",
     "meta": "H.R. 9580 · Enacted · Government",
-    "id": "hr-118-9580"
+    "id": "hr-118-9580",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 125 South 1st Avenue in Hillsboro, Oregon, as the \"Elizabeth Furse Post Office Building\".",
     "meta": "H.R. 9549 · Enacted · Government",
-    "id": "hr-118-9549"
+    "id": "hr-118-9549",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 119 Main Street in Plains, Georgia, as the \"Jimmy and Rosalynn Carter Post Office\".",
     "meta": "H.R. 9600 · Enacted · Government",
-    "id": "hr-118-9600"
+    "id": "hr-118-9600",
+    "cer": 1
   },
   {
     "name": "Federal Register Modernization Act of 2024",
@@ -731,12 +759,14 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the facility of the United States Postal Service located at 119 North Anderson Street in Elwood, Indiana, as the \"Officer Noah Jacob Shahnavaz Post Office Building\".",
     "meta": "H.R. 9775 · Enacted · Government",
-    "id": "hr-118-9775"
+    "id": "hr-118-9775",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 802 North Tancahua Street in Corpus Christi, Texas, as the \"Captain Robert E. 'Bob' Batterson Post Office\".",
     "meta": "H.R. 10065 · Enacted · Government",
-    "id": "hr-118-10065"
+    "id": "hr-118-10065",
+    "cer": 1
   },
   {
     "name": "Keeping Military Families Together Act of 2024",
@@ -751,17 +781,20 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the facility of the United States Postal Service located at 2300 Sylvan Avenue in Modesto, California, as the \"Corporal Michael D. Anderson Jr. Post Office Building\".",
     "meta": "H.R. 1555 · Enacted · Government",
-    "id": "hr-118-1555"
+    "id": "hr-118-1555",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 207 East Fort Dade Avenue in Brooksville, Florida, as the \"Specialist Justin Dean Coleman Memorial Post Office Building\".",
     "meta": "H.R. 1823 · Enacted · Government",
-    "id": "hr-118-1823"
+    "id": "hr-118-1823",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 220 North Hatcher Avenue in Purcellville, Virginia, as the \"Secretary of State Madeleine Albright Post Office Building\".",
     "meta": "H.R. 3354 · Enacted · Government",
-    "id": "hr-118-3354"
+    "id": "hr-118-3354",
+    "cer": 1
   },
   {
     "name": "U.S. Congressman Sam Johnson Memorial VA Clinic Act",
@@ -776,47 +809,56 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the facility of the United States Postal Service located at 109 Live Oaks Boulevard in Casselberry, Florida, as the \"Colonel Joseph William Kittinger II Post Office Building\".",
     "meta": "H.R. 5867 · Enacted · Government",
-    "id": "hr-118-5867"
+    "id": "hr-118-5867",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 14280 South Military Trail in Delray Beach, Florida, as the \"Benjamin Berell Ferencz Post Office Building\".",
     "meta": "H.R. 6116 · Enacted · Government",
-    "id": "hr-118-6116"
+    "id": "hr-118-6116",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 379 North Oates Street in Dothan, Alabama, as the \"LaBruce 'Bruce' Tidwell Post Office Building\".",
     "meta": "H.R. 6162 · Enacted · Government",
-    "id": "hr-118-6162"
+    "id": "hr-118-6162",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 420 Highway 17 North in Surfside Beach, South Carolina, as the \"Nancy Yount Childs Post Office Building\".",
     "meta": "H.R. 6188 · Enacted · Government",
-    "id": "hr-118-6188"
+    "id": "hr-118-6188",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 1535 East Los Ebanos Boulevard in Brownsville, Texas, as the \"1st Lieutenant Andres Zermeno Post Office Building\".",
     "meta": "H.R. 6244 · Enacted · Government",
-    "id": "hr-118-6244"
+    "id": "hr-118-6244",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 9355 113th Street in Seminole, Florida, as the \"Army SSG Ryan Christian Knauss Memorial Post Office Building\".",
     "meta": "H.R. 6633 · Enacted · Government",
-    "id": "hr-118-6633"
+    "id": "hr-118-6633",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 501 Mercer Street Southwest in Wilson, North Carolina, as the \"Milton F. Fitch, Sr. Post Office Building\".",
     "meta": "H.R. 6750 · Enacted · Government",
-    "id": "hr-118-6750"
+    "id": "hr-118-6750",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 518 North Ridgewood Drive in Sebring, Florida, as the \"U.S. Army Air Corps Major Thomas B. McGuire Post Office Building\".",
     "meta": "H.R. 6810 · Enacted · Government",
-    "id": "hr-118-6810"
+    "id": "hr-118-6810",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 15 South Valdosta Road in Lakeland, Georgia, as the \"Nell Patten Roquemore Post Office\".",
     "meta": "H.R. 6983 · Enacted · Government",
-    "id": "hr-118-6983"
+    "id": "hr-118-6983",
+    "cer": 1
   },
   {
     "name": "Senator Elizabeth Dole 21st Century Veterans Healthcare and Benefits Improvement Act",
@@ -831,7 +873,8 @@ const LEGISLATION_DATA = [
   {
     "name": "Everett Alvarez, Jr. Congressional Gold Medal Act of 2023",
     "meta": "H.R. 1097 · Enacted · Defense",
-    "id": "hr-118-1097"
+    "id": "hr-118-1097",
+    "cer": 1
   },
   {
     "name": "To clarify jurisdiction with respect to certain Bureau of Reclamation pumped storage development, and for other purposes.",
@@ -906,7 +949,8 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the visitor and education center at Fort McHenry National Monument and Historic Shrine as the Paul S. Sarbanes Visitor and Education Center.",
     "meta": "H.R. 6826 · Enacted · Public Lands",
-    "id": "hr-118-6826"
+    "id": "hr-118-6826",
+    "cer": 1
   },
   {
     "name": "HEARTS Act of 2024",
@@ -1036,12 +1080,14 @@ const LEGISLATION_DATA = [
   {
     "name": "A bill to designate the facility of the United States Postal Service located at 1106 Main Street in Bastrop, Texas, as the \"Sergeant Major Billy D. Waugh Post Office\".",
     "meta": "S. 3946 · Enacted · Government",
-    "id": "s-118-3946"
+    "id": "s-118-3946",
+    "cer": 1
   },
   {
     "name": "A bill to designate the community-based outpatient clinic of the Department of Veterans Affairs in Lynchburg, Virginia, as the \"Private First Class Desmond T. Doss VA Clinic\".",
     "meta": "S. 3938 · Enacted · Defense",
-    "id": "s-118-3938"
+    "id": "s-118-3938",
+    "cer": 1
   },
   {
     "name": "Federal Judiciary Stabilization Act of 2024",
@@ -1051,7 +1097,8 @@ const LEGISLATION_DATA = [
   {
     "name": "A bill to designate the facility of the United States Postal Service located at 180 Steuart Street in San Francisco, California, as the \"Dianne Feinstein Post Office\".",
     "meta": "S. 4077 · Enacted · Government",
-    "id": "s-118-4077"
+    "id": "s-118-4077",
+    "cer": 1
   },
   {
     "name": "Think Differently Transportation Act",
@@ -1061,7 +1108,8 @@ const LEGISLATION_DATA = [
   {
     "name": "A bill to amend title 36, United States Code, to designate the bald eagle as the national bird.",
     "meta": "S. 4610 · Enacted · Other",
-    "id": "s-118-4610"
+    "id": "s-118-4610",
+    "cer": 1
   },
   {
     "name": "Financial Management Risk Reduction Act",
@@ -1071,7 +1119,8 @@ const LEGISLATION_DATA = [
   {
     "name": "A bill to designate the medical center of the Department of Veterans Affairs in Tulsa, Oklahoma, as the James Mountain Inhofe VA Medical Center.",
     "meta": "S. 5314 · Enacted · Defense",
-    "id": "s-118-5314"
+    "id": "s-118-5314",
+    "cer": 1
   },
   {
     "name": "NACIE Improvement Act",
@@ -1096,7 +1145,8 @@ const LEGISLATION_DATA = [
   {
     "name": "A bill to designate United States Route 20 in the States of Oregon, Idaho, Montana, Wyoming, Nebraska, Iowa, Illinois, Indiana, Ohio, Pennsylvania, New York, and Massachusetts as the \"National Medal of Honor Highway\", and for other purposes.",
     "meta": "S. 1478 · Enacted · Infrastructure",
-    "id": "s-118-1478"
+    "id": "s-118-1478",
+    "cer": 1
   },
   {
     "name": "Good Samaritan Remediation of Abandoned Hardrock Mines Act of 2024",
@@ -1136,12 +1186,14 @@ const LEGISLATION_DATA = [
   {
     "name": "Forgotten Heroes of the Holocaust Congressional Gold Medal Act",
     "meta": "S. 91 · Enacted · Foreign Policy",
-    "id": "s-118-91"
+    "id": "s-118-91",
+    "cer": 1
   },
   {
     "name": "Shirley Chisholm Congressional Gold Medal Act",
     "meta": "S. 4243 · Enacted · Government",
-    "id": "s-118-4243"
+    "id": "s-118-4243",
+    "cer": 1
   },
   {
     "name": "Coastal Habitat Conservation Act of 2023",
@@ -1171,7 +1223,8 @@ const LEGISLATION_DATA = [
   {
     "name": "FIFA World Cup 2026 Commemorative Coin Act",
     "meta": "H.R. 7438 · Enacted · Financial Regulation",
-    "id": "hr-118-7438"
+    "id": "hr-118-7438",
+    "cer": 1
   },
   {
     "name": "Commission to Study the Potential Transfer of the Weitzman National Museum of American Jewish History to the Smithsonian Institution Act",
@@ -1191,32 +1244,38 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the facility of the United States Postal Service located at 3500 West 6th Street, Suite 103 in Los Angeles, California, as the \"Dosan Ahn Chang Ho Post Office\".",
     "meta": "H.R. 599 · Enacted · Government",
-    "id": "hr-118-599"
+    "id": "hr-118-599",
+    "cer": 1
   },
   {
     "name": "Working Dog Commemorative Coin Act",
     "meta": "H.R. 807 · Enacted · Financial Regulation",
-    "id": "hr-118-807"
+    "id": "hr-118-807",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 50 East Derry Road in East Derry, New Hampshire, as the \"Chief Edward B. Garone Post Office\".",
     "meta": "H.R. 1098 · Enacted · Government",
-    "id": "hr-118-1098"
+    "id": "hr-118-1098",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 1663 East Date Place in San Bernardino, California, as the \"Dr. Margaret B. Hill Post Office Building\".",
     "meta": "H.R. 1060 · Enacted · Government",
-    "id": "hr-118-1060"
+    "id": "hr-118-1060",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 28081 Marguerite Parkway in Mission Viejo, California, as the \"Major Megan McClung Post Office Building\".",
     "meta": "H.R. 3608 · Enacted · Government",
-    "id": "hr-118-3608"
+    "id": "hr-118-3608",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 25 Dorchester Avenue, Room 1, in Boston, Massachusetts, as the \"Caroline Chang Post Office\".",
     "meta": "H.R. 3728 · Enacted · Government",
-    "id": "hr-118-3728"
+    "id": "hr-118-3728",
+    "cer": 1
   },
   {
     "name": "Restoring Benefits to Defrauded Veterans Act",
@@ -1231,7 +1290,8 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the facility of the United States Postal Service located at 1077 River Road, Suite 1, in Washington Crossing, Pennsylvania, as the \"Susan C. Barnhart Post Office\".",
     "meta": "H.R. 5476 · Enacted · Government",
-    "id": "hr-118-5476"
+    "id": "hr-118-5476",
+    "cer": 1
   },
   {
     "name": "Bolstering Ecosystems Against Coastal Harm Act",
@@ -1241,12 +1301,14 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the facility of the United States Postal Service located at 12804 Chillicothe Road in Chesterland, Ohio, as the \"Sgt. Wolfgang Kyle Weninger Post Office Building\".",
     "meta": "H.R. 5640 · Enacted · Government",
-    "id": "hr-118-5640"
+    "id": "hr-118-5640",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 220 Fremont Street in Kiel, Wisconsin, as the \"Trooper Trevor J. Casper Post Office Building\".",
     "meta": "H.R. 5712 · Enacted · Government",
-    "id": "hr-118-5712"
+    "id": "hr-118-5712",
+    "cer": 1
   },
   {
     "name": "BRIDGE for Workers Act",
@@ -1256,12 +1318,14 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the facility of the United States Postal Service located at 517 Seagaze Drive in Oceanside, California, as the \"Charlesetta Reece Allen Post Office Building\".",
     "meta": "H.R. 5985 · Enacted · Government",
-    "id": "hr-118-5985"
+    "id": "hr-118-5985",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 9925 Bustleton Avenue in Philadelphia, Pennsylvania, as the \"Sergeant Christopher David Fitzgerald Post Office Building\".",
     "meta": "H.R. 6073 · Enacted · Government",
-    "id": "hr-118-6073"
+    "id": "hr-118-6073",
+    "cer": 1
   },
   {
     "name": "Think Differently About Emergencies Act",
@@ -1276,17 +1340,20 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the facility of the United States Postal Service located at 603 West 3rd Street in Necedah, Wisconsin, as the \"Sergeant Kenneth E. Murphy Post Office Building\".",
     "meta": "H.R. 6651 · Enacted · Government",
-    "id": "hr-118-6651"
+    "id": "hr-118-6651",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 333 West Broadway in Anaheim, California, as the \"Dr. William I. 'Bill' Kott Post Office Building\".",
     "meta": "H.R. 7192 · Enacted · Government",
-    "id": "hr-118-7192"
+    "id": "hr-118-7192",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at S74w16860 Janesville Road, in Muskego, Wisconsin, as the \"Colonel Hans Christian Heg Post Office\".",
     "meta": "H.R. 7199 · Enacted · Government",
-    "id": "hr-118-7199"
+    "id": "hr-118-7199",
+    "cer": 1
   },
   {
     "name": "To name the Department of Veterans Affairs medical center in West Palm Beach, Florida, as the \"Thomas H. Corey VA Medical Center\".",
@@ -1296,7 +1363,8 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the facility of the United States Postal Service located at 103 Benedette Street in Rayville, Louisiana, as the \"Luke Letlow Post Office Building\".",
     "meta": "H.R. 7423 · Enacted · Government",
-    "id": "hr-118-7423"
+    "id": "hr-118-7423",
+    "cer": 1
   },
   {
     "name": "Veterans’ Compensation Cost-of-Living Adjustment Act of 2024",
@@ -1311,12 +1379,14 @@ const LEGISLATION_DATA = [
   {
     "name": "A bill to designate the facility of the United States Postal Service located at 320 South 2nd Avenue in Sioux Falls, South Dakota, as the \"Staff Sergeant Robb Lura Rolfing Post Office Building\".",
     "meta": "S. 2143 · Enacted · Government",
-    "id": "s-118-2143"
+    "id": "s-118-2143",
+    "cer": 1
   },
   {
     "name": "A bill to designate the facility of the United States Postal Service located at 112 Wyoming Street in Shoshoni, Wyoming, as the \"Dessie A. Bebout Post Office\".",
     "meta": "S. 2274 · Enacted · Government",
-    "id": "s-118-2274"
+    "id": "s-118-2274",
+    "cer": 1
   },
   {
     "name": "Mark Our Place Act",
@@ -1326,12 +1396,14 @@ const LEGISLATION_DATA = [
   {
     "name": "A bill to designate the facility of the United States Postal Service located at 410 Dakota Avenue South in Huron, South Dakota, as the \"First Lieutenant Thomas Michael Martin Post Office Building\".",
     "meta": "S. 3267 · Enacted · Government",
-    "id": "s-118-3267"
+    "id": "s-118-3267",
+    "cer": 1
   },
   {
     "name": "A bill to designate the facility of the United States Postal Service located at 1765 Camp Hill Bypass in Camp Hill, Pennsylvania, as the \"John Charles Traub Post Office\".",
     "meta": "S. 3419 · Enacted · Government",
-    "id": "s-118-3419"
+    "id": "s-118-3419",
+    "cer": 1
   },
   {
     "name": "Congenital Heart Futures Reauthorization Act of 2024",
@@ -1401,17 +1473,20 @@ const LEGISLATION_DATA = [
   {
     "name": "A bill to designate the facility of the United States Postal Service located at 155 South Main Street in Mount Clemens, Michigan, as the \"Lieutenant Colonel Alexander Jefferson Post Office\".",
     "meta": "S. 3640 · Enacted · Government",
-    "id": "s-118-3640"
+    "id": "s-118-3640",
+    "cer": 1
   },
   {
     "name": "A bill to designate the facility of the United States Postal Service located at 2075 West Stadium Boulevard in Ann Arbor, Michigan, as the \"Robert Hayden Post Office\".",
     "meta": "S. 3639 · Enacted · Government",
-    "id": "s-118-3639"
+    "id": "s-118-3639",
+    "cer": 1
   },
   {
     "name": "A bill to designate the facility of the United States Postal Service located at 90 McCamly Street South in Battle Creek, Michigan, as the \"Sojourner Truth Post Office\".",
     "meta": "S. 3851 · Enacted · Government",
-    "id": "s-118-3851"
+    "id": "s-118-3851",
+    "cer": 1
   },
   {
     "name": "DHS Joint Task Forces Reauthorization Act of 2024",
@@ -1446,12 +1521,14 @@ const LEGISLATION_DATA = [
   {
     "name": "Dustoff Crews of the Vietnam War Congressional Gold Medal Act",
     "meta": "S. 2825 · Enacted · Defense",
-    "id": "s-118-2825"
+    "id": "s-118-2825",
+    "cer": 1
   },
   {
     "name": "Billie Jean King Congressional Gold Medal Act",
     "meta": "S. 2861 · Enacted · Civil Rights",
-    "id": "s-118-2861"
+    "id": "s-118-2861",
+    "cer": 1
   },
   {
     "name": "Poison Control Centers Reauthorization Act of 2024",
@@ -1496,12 +1573,14 @@ const LEGISLATION_DATA = [
   {
     "name": "A bill to designate the outpatient clinic of the Department of Veterans Affairs in Wyandotte County, Kansas City, Kansas, as the \"Captain Elwin Shopteese VA Clinic\".",
     "meta": "S. 3249 · Enacted · Defense",
-    "id": "s-118-3249"
+    "id": "s-118-3249",
+    "cer": 1
   },
   {
     "name": "A bill to rename the community-based outpatient clinic of the Department of Veterans Affairs in Butte, Montana, as the \"Charlie Dowd VA Clinic\".",
     "meta": "S. 3285 · Enacted · Defense",
-    "id": "s-118-3285"
+    "id": "s-118-3285",
+    "cer": 1
   },
   {
     "name": "Victims' VOICES Act",
@@ -1561,7 +1640,8 @@ const LEGISLATION_DATA = [
   {
     "name": "To rename the Department of Veterans Affairs community-based outpatient clinic in Hinesville, Georgia, as the \"John Gibson, Dan James, William Sapp, and Frankie Smiley VA Clinic\".",
     "meta": "H.R. 593 · Enacted · Defense",
-    "id": "hr-118-593"
+    "id": "hr-118-593",
+    "cer": 1
   },
   {
     "name": "Prohibiting Russian Uranium Imports Act",
@@ -1576,37 +1656,44 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the facility of the United States Postal Service located at 24355 Creekside Road in Santa Clarita, California, as the \"William L. Reynolds Post Office Building\".",
     "meta": "H.R. 292 · Enacted · Government",
-    "id": "hr-118-292"
+    "id": "hr-118-292",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 3901 MacArthur Blvd., in New Orleans, Louisiana, as the \"Dr. Rudy Lombard Post Office\".",
     "meta": "H.R. 996 · Enacted · Government",
-    "id": "hr-118-996"
+    "id": "hr-118-996",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 616 East Main Street in St. Charles, Illinois, as the \"Veterans of the Vietnam War Memorial Post Office\".",
     "meta": "H.R. 2379 · Enacted · Government",
-    "id": "hr-118-2379"
+    "id": "hr-118-2379",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 2395 East Del Mar Boulevard in Laredo, Texas, as the \"Lance Corporal David Lee Espinoza, Lance Corporal Juan Rodrigo Rodriguez & Sergeant Roberto Arizola Jr. Post Office Building\".",
     "meta": "H.R. 2754 · Enacted · Government",
-    "id": "hr-118-2754"
+    "id": "hr-118-2754",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 101 South 8th Street in Lebanon, Pennsylvania, as the \"Lieutenant William D. Lebo Post Office Building\".",
     "meta": "H.R. 3865 · Enacted · Government",
-    "id": "hr-118-3865"
+    "id": "hr-118-3865",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 859 North State Road 21 in Melrose, Florida, as the \"Pamela Jane Rock Post Office Building\".",
     "meta": "H.R. 3947 · Enacted · Government",
-    "id": "hr-118-3947"
+    "id": "hr-118-3947",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 120 West Church Street in Mount Vernon, Georgia, as the \"Second Lieutenant Patrick Palmer Calhoun Post Office\".",
     "meta": "H.R. 3944 · Enacted · Government",
-    "id": "hr-118-3944"
+    "id": "hr-118-3944",
+    "cer": 1
   },
   {
     "name": "REPORT Act",
@@ -1646,7 +1733,8 @@ const LEGISLATION_DATA = [
   {
     "name": "A bill to designate the Federal building located at 985 Michigan Avenue in Detroit, Michigan, as the \"Rosa Parks Federal Building\", and for other purposes.",
     "meta": "S. 1278 · Enacted · Government",
-    "id": "s-118-1278"
+    "id": "s-118-1278",
+    "cer": 1
   },
   {
     "name": "END FENTANYL Act",
@@ -1791,7 +1879,8 @@ const LEGISLATION_DATA = [
   {
     "name": "A bill to designate the clinic of the Department of Veterans Affairs in Gallup, New Mexico, as the Hiroshi \"Hershey\" Miyamura VA Clinic.",
     "meta": "S. 475 · Enacted · Defense",
-    "id": "s-118-475"
+    "id": "s-118-475",
+    "cer": 1
   },
   {
     "name": "Continuing Appropriations Act, 2024 and Other Extensions Act",
@@ -1816,12 +1905,14 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the clinic of the Department of Veterans Affairs in Indian River, Michigan, as the \"Pfc. Justin T. Paton Department of Veterans Affairs Clinic\".",
     "meta": "H.R. 3672 · Enacted · Defense",
-    "id": "hr-118-3672"
+    "id": "hr-118-3672",
+    "cer": 1
   },
   {
     "name": "250th Anniversary of the United States Marine Corps Commemorative Coin Act",
     "meta": "H.R. 1096 · Enacted · Financial Regulation",
-    "id": "hr-118-1096"
+    "id": "hr-118-1096",
+    "cer": 1
   },
   {
     "name": "Providing Accountability Through Transparency Act of 2023",
@@ -2026,7 +2117,8 @@ const LEGISLATION_DATA = [
   {
     "name": "First Rhode Island Regiment Congressional Gold Medal Act",
     "meta": "S. 567 · Passed Senate · Defense",
-    "id": "s-119-567"
+    "id": "s-119-567",
+    "cer": 1
   },
   {
     "name": "Lieutenant Osvaldo Albarati Stopping Prison Contraband Act",
@@ -2206,7 +2298,8 @@ const LEGISLATION_DATA = [
   {
     "name": "North Platte Canteen Congressional Gold Medal Act",
     "meta": "S. 645 · Passed Senate · Defense",
-    "id": "s-119-645"
+    "id": "s-119-645",
+    "cer": 1
   },
   {
     "name": "Women and Lung Cancer Research and Preventive Services Act of 2025",
@@ -2311,7 +2404,8 @@ const LEGISLATION_DATA = [
   {
     "name": "25th Anniversary of 9/11 Commemorative Coin Act",
     "meta": "H.R. 1993 · Passed House · Financial Regulation",
-    "id": "hr-119-1993"
+    "id": "hr-119-1993",
+    "cer": 1
   },
   {
     "name": "Stopping Indoctrination and Protecting Kids Act",
@@ -2361,7 +2455,8 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the General George C. Marshall House, in the Commonwealth of Virginia, as an affiliated area of the National Park System, and for other purposes.",
     "meta": "H.R. 1352 · Passed House · Public Lands",
-    "id": "hr-119-1352"
+    "id": "hr-119-1352",
+    "cer": 1
   },
   {
     "name": "North Dakota Trust Lands Completion Act of 2026",
@@ -2421,12 +2516,14 @@ const LEGISLATION_DATA = [
   {
     "name": "A bill to designate the General George C. Marshall House in the Commonwealth of Virginia, as an affiliated area of the National Park System, and for other purposes.",
     "meta": "S. 603 · Passed Senate · Public Lands",
-    "id": "s-119-603"
+    "id": "s-119-603",
+    "cer": 1
   },
   {
     "name": "A bill to redesignate the National Historic Trails Interpretive Center in Casper, Wyoming, as the \"Barbara L. Cubin National Historic Trails Interpretive Center\".",
     "meta": "S. 790 · Passed Senate · Public Lands",
-    "id": "s-119-790"
+    "id": "s-119-790",
+    "cer": 1
   },
   {
     "name": "TREY'S Law",
@@ -2696,72 +2793,86 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the facility of the United States Postal Service located at 2407 State Route 71, Suite 1, in Spring Lake, New Jersey, as the \"James J. Howard Post Office\".",
     "meta": "H.R. 1431 · Passed House · Government",
-    "id": "hr-119-1431"
+    "id": "hr-119-1431",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 1200 William Street, Room 200, in Buffalo, New York, as the \"William J. Donovan Post Office Building\".",
     "meta": "H.R. 1706 · Passed House · Government",
-    "id": "hr-119-1706"
+    "id": "hr-119-1706",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 12208 North 19th Avenue in Phoenix, Arizona, as the \"Officer Zane T. Coolidge Post Office\".",
     "meta": "H.R. 3393 · Passed House · Government",
-    "id": "hr-119-3393"
+    "id": "hr-119-3393",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 1019 Avenue H in Fort Madison, Iowa, as the \"Martin L. Graber Post Office\".",
     "meta": "H.R. 4707 · Passed House · Government",
-    "id": "hr-119-4707"
+    "id": "hr-119-4707",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 890 East 152nd Street in Cleveland, Ohio, as the \"Technical Sergeant Alma Gladys Minter Post Office Building\".",
     "meta": "H.R. 4635 · Passed House · Government",
-    "id": "hr-119-4635"
+    "id": "hr-119-4635",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 46164 Westlake Drive in Sterling, Virginia, as the \"Firefighter Trevor Brown Post Office Building\".",
     "meta": "H.R. 5058 · Passed House · Government",
-    "id": "hr-119-5058"
+    "id": "hr-119-5058",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service at 1300 East Northwest Highway in Palatine, Illinois, as the \"Bernie Bluestein Post Office Building\".",
     "meta": "H.R. 5773 · Passed House · Government",
-    "id": "hr-119-5773"
+    "id": "hr-119-5773",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 306 South Main Street in Waupaca, Wisconsin, as the \"Master Sergeant Melvin O. Handrich Post Office Building\".",
     "meta": "H.R. 5831 · Passed House · Government",
-    "id": "hr-119-5831"
+    "id": "hr-119-5831",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 14855 South Van Dyke Road in Plainfield, Illinois, as the \"Staff Sergeant Jose Dueñez Jr. Post Office Building\".",
     "meta": "H.R. 6020 · Passed House · Government",
-    "id": "hr-119-6020"
+    "id": "hr-119-6020",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 13355 North Lon Adams Road in Marana, Arizona, as the \"Mayor Ed Honea Memorial Post Office\".",
     "meta": "H.R. 6247 · Passed House · Government",
-    "id": "hr-119-6247"
+    "id": "hr-119-6247",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 3570 Olney Laytonsville Road in Olney, Maryland, as the \"Edward L. Ramsey Olney Post Office Building\".",
     "meta": "H.R. 6310 · Passed House · Government",
-    "id": "hr-119-6310"
+    "id": "hr-119-6310",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 12109 New Kent Highway in New Kent, Virginia, as the \"Patricia Paige Post Office\".",
     "meta": "H.R. 6317 · Passed House · Government",
-    "id": "hr-119-6317"
+    "id": "hr-119-6317",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 417 West 7th Street in Columbia, Tennessee, as the \"Pharmacist's Mate First Class John Harlan Willis Post Office Building\".",
     "meta": "H.R. 6808 · Passed House · Government",
-    "id": "hr-119-6808"
+    "id": "hr-119-6808",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 825 Highway 198 in Beaumont, Mississippi, as the \"Jeremy Malone Post Office\".",
     "meta": "H.R. 6995 · Passed House · Government",
-    "id": "hr-119-6995"
+    "id": "hr-119-6995",
+    "cer": 1
   },
   {
     "name": "ALERT Act",
@@ -3611,7 +3722,8 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the facility of the United States Postal Service located at 80 Prospect Street in Avon, New York, as the \"Officer Anthony Mazurkiewicz Memorial Post Office Building\".",
     "meta": "H.R. 323 · Passed House · Government",
-    "id": "hr-119-323"
+    "id": "hr-119-323",
+    "cer": 1
   },
   {
     "name": "Studying NEPA’s Impact on Projects Act",
@@ -3626,22 +3738,26 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the facility of the United States Postal Service located at 298 Route 292 in Holmes, New York, as the \"Sheriff Adrian 'Butch' Anderson Post Office Building\".",
     "meta": "H.R. 1008 · Passed House · Government",
-    "id": "hr-119-1008"
+    "id": "hr-119-1008",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 86 Main Street in Haverstraw, New York, as the \"Paul Piperato Post Office Building\".",
     "meta": "H.R. 1009 · Passed House · Government",
-    "id": "hr-119-1009"
+    "id": "hr-119-1009",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 300 Macedonia Lane in Knoxville, Tennessee, as the \"Reverend Harold Middlebrook Post Office Building\".",
     "meta": "H.R. 1372 · Passed House · Government",
-    "id": "hr-119-1372"
+    "id": "hr-119-1372",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 521 Thorn Street in Sewickley, Pennsylvania, as the \"Mary Elizabeth 'Bettie' Cole Post Office Building\".",
     "meta": "H.R. 1461 · Passed House · Government",
-    "id": "hr-119-1461"
+    "id": "hr-119-1461",
+    "cer": 1
   },
   {
     "name": "Make SWAPs Efficient Act of 2025",
@@ -3651,12 +3767,14 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the facility of the United States Postal Service located at 840 Front Street in Casselton, North Dakota, as the \"Commander Delbert Austin Olson Post Office\".",
     "meta": "H.R. 1830 · Passed House · Government",
-    "id": "hr-119-1830"
+    "id": "hr-119-1830",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 130 South Patterson Avenue in Santa Barbara, California, as the \"Brigadier General Frederick R. Lopez Post Office Building\".",
     "meta": "H.R. 2175 · Passed House · Government",
-    "id": "hr-119-2175"
+    "id": "hr-119-2175",
+    "cer": 1
   },
   {
     "name": "Cormorant Relief Act of 2025",
@@ -3676,7 +3794,8 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the facility of the United States Postal Service located at 5225 Harrison Avenue in Rockford, Illinois, as the \"Jay P. Larson Post Office Building\".",
     "meta": "H.R. 2466 · Passed House · Government",
-    "id": "hr-119-2466"
+    "id": "hr-119-2466",
+    "cer": 1
   },
   {
     "name": "STARS Act",
@@ -5331,7 +5450,8 @@ const LEGISLATION_DATA = [
   {
     "name": "A bill to designate the General George C. Marshall House, in the Commonwealth of Virginia, as an affiliated area of the National Park System, and for other purposes.",
     "meta": "S. 3195 · Passed Senate · Public Lands",
-    "id": "s-118-3195"
+    "id": "s-118-3195",
+    "cer": 1
   },
   {
     "name": "SAFE Orbit Act",
@@ -5396,7 +5516,8 @@ const LEGISLATION_DATA = [
   {
     "name": "A bill to designate the facility of the United States Postal Service located at 840 Front Street in Casselton, North Dakota, as the \"Commander Delbert Austin Olson Post Office\".",
     "meta": "S. 4404 · Passed Senate · Government",
-    "id": "s-118-4404"
+    "id": "s-118-4404",
+    "cer": 1
   },
   {
     "name": "RESERVE Federal Land Act",
@@ -5406,7 +5527,8 @@ const LEGISLATION_DATA = [
   {
     "name": "A bill to designate the facility of the United States Postal Service located at 154 First Avenue East in Jerome, Idaho, as the \"Representative Maxine Bell Post Office\".",
     "meta": "S. 4634 · Passed Senate · Government",
-    "id": "s-118-4634"
+    "id": "s-118-4634",
+    "cer": 1
   },
   {
     "name": "Supporting Victims of Human Trafficking Act",
@@ -5416,7 +5538,8 @@ const LEGISLATION_DATA = [
   {
     "name": "A bill to designate the facility of the United States Postal Service located at 31143 State Highway 65 in Pengilly, Minnesota, as the \"First Lieutenant Richard Arne Koski Post Office\".",
     "meta": "S. 4803 · Passed Senate · Government",
-    "id": "s-118-4803"
+    "id": "s-118-4803",
+    "cer": 1
   },
   {
     "name": "Scarper Ridge Golden Gate National Recreation Area Boundary Adjustment Act of 2024",
@@ -5956,7 +6079,8 @@ const LEGISLATION_DATA = [
   {
     "name": "Roberto Clemente Commemorative Coin Act",
     "meta": "H.R. 6751 · Passed House · Financial Regulation",
-    "id": "hr-118-6751"
+    "id": "hr-118-6751",
+    "cer": 1
   },
   {
     "name": "Disabled Veterans Housing Support Act",
@@ -5966,7 +6090,8 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the facility of the United States Postal Service located at 300 Macedonia Lane in Knoxville, Tennessee, as the \"Reverend Harold Middlebrook Post Office Building\".",
     "meta": "H.R. 9360 · Passed House · Government",
-    "id": "hr-118-9360"
+    "id": "hr-118-9360",
+    "cer": 1
   },
   {
     "name": "Connected MOM Act",
@@ -6126,7 +6251,8 @@ const LEGISLATION_DATA = [
   {
     "name": "A bill to designate the facility of the United States Postal Service located at 100 North Taylor Lane in Patagonia, Arizona, as the \"Jim Kolbe Memorial Post Office\".",
     "meta": "S. 2546 · Passed Senate · Government",
-    "id": "s-118-2546"
+    "id": "s-118-2546",
+    "cer": 1
   },
   {
     "name": "BOLIVAR Act",
@@ -6211,12 +6337,14 @@ const LEGISLATION_DATA = [
   {
     "name": "A bill to designate the United States courthouse annex located at 310 South Main Street in London, Kentucky, as the \"Eugene E. Siler, Jr. United States Courthouse Annex\".",
     "meta": "S. 4293 · Passed Senate · Government",
-    "id": "s-118-4293"
+    "id": "s-118-4293",
+    "cer": 1
   },
   {
     "name": "A bill to designate the Federal building located at 50 United Nations Plaza in San Francisco, California, as the \"Senator Dianne Feinstein Federal Building,\" and for other purposes.",
     "meta": "S. 4489 · Passed Senate · Government",
-    "id": "s-118-4489"
+    "id": "s-118-4489",
+    "cer": 1
   },
   {
     "name": "A bill to amend the Don Young Coast Guard Authorization Act of 2022 to modify a provision relating to the acquisition of a Coast Guard icebreaker.",
@@ -6296,7 +6424,8 @@ const LEGISLATION_DATA = [
   {
     "name": "Hello Girls Congressional Gold Medal Act of 2024",
     "meta": "S. 815 · Passed Senate · Defense",
-    "id": "s-118-815"
+    "id": "s-118-815",
+    "cer": 1
   },
   {
     "name": "Mathematical and Statistical Modeling Education Act",
@@ -6806,7 +6935,8 @@ const LEGISLATION_DATA = [
   {
     "name": "Forgotten Heroes of the Holocaust Congressional Gold Medal Act",
     "meta": "H.R. 537 · Passed House · Foreign Policy",
-    "id": "hr-118-537"
+    "id": "hr-118-537",
+    "cer": 1
   },
   {
     "name": "WIPPES Act",
@@ -6856,12 +6986,14 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the facility of the United States Postal Service located at 6444 San Fernando Road in Glendale, California, as the \"Paul Ignatius Post Office\".",
     "meta": "H.R. 1687 · Passed House · Government",
-    "id": "hr-118-1687"
+    "id": "hr-118-1687",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 2119 Market Square in Christiansted, St. Croix, United States Virgin Islands, as the \"Lieutenant General Samuel E. Ebbesen Post Office\".",
     "meta": "H.R. 5034 · Passed House · Government",
-    "id": "hr-118-5034"
+    "id": "hr-118-5034",
+    "cer": 1
   },
   {
     "name": "CBDC Anti-Surveillance State Act",
@@ -6886,7 +7018,8 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the United States courthouse located at 350 W. 1st Street, Los Angeles, California, as the \"Felicitas and Gonzalo Mendez United States Courthouse\".",
     "meta": "H.R. 5754 · Passed House · Government",
-    "id": "hr-118-5754"
+    "id": "hr-118-5754",
+    "cer": 1
   },
   {
     "name": "Think Differently Transportation Act",
@@ -7126,12 +7259,14 @@ const LEGISLATION_DATA = [
   {
     "name": "A bill to designate the facility of the United States Postal Service located at 231 North Franklin Street in Greensburg, Indiana, as the \"Brigadier General John T. Wilder Post Office\".",
     "meta": "S. 2717 · Passed Senate · Government",
-    "id": "s-118-2717"
+    "id": "s-118-2717",
+    "cer": 1
   },
   {
     "name": "A bill to designate the facility of the United States Postal Service located at 5120 Derry Street in Harrisburg, Pennsylvania, as the \"Hettie Simmons Love Post Office Building\".",
     "meta": "S. 3357 · Passed Senate · Government",
-    "id": "s-118-3357"
+    "id": "s-118-3357",
+    "cer": 1
   },
   {
     "name": "Preventing Child Trafficking Act of 2024",
@@ -7361,7 +7496,8 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the Federal building and United States courthouse located at 600 East First Street in Rome, Georgia, as the \"Harold L. Murphy Federal Building and United States Courthouse\".",
     "meta": "H.R. 532 · Passed House · Government",
-    "id": "hr-118-532"
+    "id": "hr-118-532",
+    "cer": 1
   },
   {
     "name": "Save Our Seas 2.0 Amendments Act",
@@ -7456,12 +7592,14 @@ const LEGISLATION_DATA = [
   {
     "name": "A bill to designate the United States courthouse located at 500 West Pike Street in Clarksburg, West Virginia, as the \"Irene M. Keeley United States Courthouse\", and for other purposes.",
     "meta": "S. 3570 · Passed Senate · Government",
-    "id": "s-118-3570"
+    "id": "s-118-3570",
+    "cer": 1
   },
   {
     "name": "A bill to designate the Federal building located at 300 E. 3rd Street in North Platte, Nebraska, as the \"Virginia Smith Federal Building\", and for other purposes.",
     "meta": "S. 3577 · Passed Senate · Government",
-    "id": "s-118-3577"
+    "id": "s-118-3577",
+    "cer": 1
   },
   {
     "name": "Justice for Murder Victims Act",
@@ -8151,7 +8289,8 @@ const LEGISLATION_DATA = [
   {
     "name": "250th Anniversary of the United States Marine Corps Commemorative Coin Act",
     "meta": "S. 305 · Passed Senate · Financial Regulation",
-    "id": "s-118-305"
+    "id": "s-118-305",
+    "cer": 1
   },
   {
     "name": "A bill to designate the area between the intersections of 16th Street, Northwest and Fuller Street, Northwest and 16th Street, Northwest and Euclid Street, Northwest in Washington, District of Columbia, as \"Oswaldo Paya Way\".",
@@ -9246,7 +9385,8 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the facility of the United States Postal Service located at 5951 Riverdale Avenue in Bronx, New York, as the \"Eliot L. Engel Post Office\".",
     "meta": "H.R. 8669 · Reported · Government",
-    "id": "hr-119-8669"
+    "id": "hr-119-8669",
+    "cer": 1
   },
   {
     "name": "Surface Transportation Research and Development Act of 2026",
@@ -9601,27 +9741,32 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the facility of the United States Postal Service located at 3817 Marysville Boulevard in Sacramento, California, as the \"Grantland Johnson Post Office\".",
     "meta": "H.R. 2488 · Reported · Government",
-    "id": "hr-119-2488"
+    "id": "hr-119-2488",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 2200 South Salina Street in Syracuse, New York, as the \"Wallie Howard Jr. Post Office Building\".",
     "meta": "H.R. 6099 · Reported · Government",
-    "id": "hr-119-6099"
+    "id": "hr-119-6099",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 201 East Grant Avenue in Georgetown, Ohio, as the \"Ulysses S. Grant Post Office Building\".",
     "meta": "H.R. 7809 · Reported · Government",
-    "id": "hr-119-7809"
+    "id": "hr-119-7809",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 189 East Main Street in Xenia, Ohio, as the \"Gilman 'Gil' Whitney Post Office Building\".",
     "meta": "H.R. 8193 · Reported · Government",
-    "id": "hr-119-8193"
+    "id": "hr-119-8193",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 111 South Tremont Street in Tremonton, Utah, as the \"Sorensen-Estrada Post Office\".",
     "meta": "H.R. 8225 · Reported · Government",
-    "id": "hr-119-8225"
+    "id": "hr-119-8225",
+    "cer": 1
   },
   {
     "name": "National Quantum Initiative Reauthorization Act",
@@ -10821,7 +10966,8 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the facility of the United States Postal Service located at 10660 Page Avenue in Fairfax, Virginia, as the \"Congressman Gerald E. Connolly Post Office Building\".",
     "meta": "H.R. 6332 · Reported · Government",
-    "id": "hr-119-6332"
+    "id": "hr-119-6332",
+    "cer": 1
   },
   {
     "name": "Federal Relocation Payment Improvement Act",
@@ -10991,7 +11137,8 @@ const LEGISLATION_DATA = [
   {
     "name": "A bill to designate the Federal building located at 300 West Congress Street in Tucson, Arizona, as the \"Raul M. Grijalva Federal Building\".",
     "meta": "S. 2319 · Reported · Government",
-    "id": "s-119-2319"
+    "id": "s-119-2319",
+    "cer": 1
   },
   {
     "name": "Streamlining American Manufacturing Strategy Act",
@@ -11726,7 +11873,8 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the facility of the United States Postal Service located at 216 Cumberland Street in Rochester, New York, as the \"Minister Franklin Florence Memorial Post Office\".",
     "meta": "H.R. 397 · Reported · Government",
-    "id": "hr-119-397"
+    "id": "hr-119-397",
+    "cer": 1
   },
   {
     "name": "Business over Ballots Act",
@@ -12546,12 +12694,14 @@ const LEGISLATION_DATA = [
   {
     "name": "A bill to redesignate the Hulls Cove Visitor Center at Acadia National Park as the \"George J. Mitchell, Jr., Visitor Center\".",
     "meta": "S. 3474 · Reported · Public Lands",
-    "id": "s-118-3474"
+    "id": "s-118-3474",
+    "cer": 1
   },
   {
     "name": "A bill to designate the visitor and education center at Fort McHenry National Monument and Historic Shrine as the \"Paul S. Sarbanes Visitor and Education Center\".",
     "meta": "S. 3544 · Reported · Public Lands",
-    "id": "s-118-3544"
+    "id": "s-118-3544",
+    "cer": 1
   },
   {
     "name": "Atchafalaya National Heritage Area Boundary Modification Act",
@@ -12601,12 +12751,14 @@ const LEGISLATION_DATA = [
   {
     "name": "A bill to designate the visitor center for the First State National Historical Park to be located at the Sheriff's House in New Castle, Delaware, as the \"Thomas R. Carper Visitor Center\".",
     "meta": "S. 4218 · Reported · Public Lands",
-    "id": "s-118-4218"
+    "id": "s-118-4218",
+    "cer": 1
   },
   {
     "name": "A bill to redesignate the Cottonwood Visitor Center at Joshua Tree National Park as the \"Senator Dianne Feinstein Visitor Center\".",
     "meta": "S. 4228 · Reported · Public Lands",
-    "id": "s-118-4228"
+    "id": "s-118-4228",
+    "cer": 1
   },
   {
     "name": "Joshua Tree National Park Expansion Act of 2024",
@@ -12741,7 +12893,8 @@ const LEGISLATION_DATA = [
   {
     "name": "A bill to designate the facility of the United States Postal Service located at 340 South Loudon Avenue in Baltimore, Maryland, as the \"United States Representative Elijah E. Cummings Post Office Building\".",
     "meta": "S. 5019 · Reported · Government",
-    "id": "s-118-5019"
+    "id": "s-118-5019",
+    "cer": 1
   },
   {
     "name": "A joint resolution relating to the disapproval of the Presidential report with respect to the indebtedness of the Government of Ukraine.",
@@ -12991,17 +13144,20 @@ const LEGISLATION_DATA = [
   {
     "name": "To designate the facility of the United States Postal Service located at 90 McCamly Street South in Battle Creek, Michigan, as the \"Sojourner Truth Post Office\".",
     "meta": "H.R. 8405 · Reported · Government",
-    "id": "hr-118-8405"
+    "id": "hr-118-8405",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 840 Front Street in Casselton, North Dakota, as the \"Commander Delbert Austin Olson Post Office\".",
     "meta": "H.R. 8516 · Reported · Government",
-    "id": "hr-118-8516"
+    "id": "hr-118-8516",
+    "cer": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 31143 State Highway 65 in Pengilly, Minnesota, as the \"First Lieutenant Richard Arne Koski Post Office\".",
     "meta": "H.R. 9174 · Reported · Government",
-    "id": "hr-118-9174"
+    "id": "hr-118-9174",
+    "cer": 1
   },
   {
     "name": "Protecting Taxpayers’ Wallets Act",

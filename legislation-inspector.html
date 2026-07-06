@@ -102,6 +102,10 @@
 <main>
   <!-- ═══ BILLS ═══ -->
   <section id="tab-bills" class="on">
+    <div class="row">
+      <label class="knob" title="Fold ceremonial bills (postal/building namings, commemoratives — pattern_match_v1 tag on the record) so the contested field is what you see first. Nothing is deleted; curated bills always show.">
+        <input type="checkbox" id="bsubst" checked> substance lens <output id="bsubstV"></output></label>
+    </div>
     <div class="row" id="billStats"></div>
     <h3>Coverage — bills by topic (thinness reads as short bars)</h3>
     <div class="hist" id="topicHist"></div>
@@ -195,6 +199,7 @@
       <select id="gstatus"><option value="">all statuses</option></select>
       <label class="knob">dots <input type="range" id="gcap" min="100" max="900" step="100" value="300"><output id="gcapV">300</output></label>
       <label class="knob"><input type="checkbox" id="gbounds" checked> winner/loser planes</label>
+      <label class="knob" title="Ceremonial bills (record tag, pattern_match_v1) are folded from the field by default"><input type="checkbox" id="gcer"> include ceremonial</label>
     </div>
     <div class="row" id="graphStats"></div>
     <div style="display:flex; gap:14px; flex-wrap:wrap; align-items:flex-start">
@@ -269,33 +274,53 @@ const esc = s => String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'
 const fmt = (n, d) => (n == null || isNaN(n)) ? '—' : Number(n).toFixed(d == null ? 2 : d);
 
 // ═══ BILLS ═══
+// Substance lens (2026-07-05): ceremonial bills — tagged on the record by
+// scripts/ceremonial-classifier.js (pattern_match_v1) — fold out of the
+// overview and catalog by default. A lens, not an object: nothing deleted,
+// criteria are record facts, the fold count stays on screen. Curated bills
+// always show (a deliberate reading outranks the lens).
 let billCtl;
+function billPool() {
+  return $('bsubst').checked ? bills.filter(b => !b.ceremonial || scoredIds.has(b.billId)) : bills;
+}
+function renderBillOverview() {
+  const pool = billPool();
+  const folded = bills.length - pool.length;
+  $('bsubstV').textContent = $('bsubst').checked ? folded + ' ceremonial folded' : 'off — all ' + bills.length;
+  // stats
+  const enacted = pool.filter(b => b.status === 'enacted').length;
+  const c119 = pool.filter(b => b.congress === 119).length;
+  const linked = pool.filter(b => b.relEv > 0).length;
+  $('billStats').innerHTML = [
+    ['' + pool.length, $('bsubst').checked ? 'bills in lens' : 'bills on disk'], ['' + c119, '119th congress'],
+    ['' + enacted, 'enacted'], ['' + linked, 'linked to events'],
+    ['' + scoredIds.size, 'curated (billAnalysis)'],
+    ['' + folded, 'ceremonial folded'],
+  ].map(s => '<div class="stat"><b>' + s[0] + '</b><span>' + s[1] + '</span></div>').join('');
+  // topic histogram — thinness view
+  const tc = {};
+  pool.forEach(b => { const t = b.topic || '(none)'; tc[t] = (tc[t] || 0) + 1; });
+  const tops = Object.keys(tc).map(k => [k, tc[k]]).sort((a, b) => b[1] - a[1]);
+  const max = tops.length ? tops[0][1] : 1;
+  $('topicHist').innerHTML = tops.map(t =>
+    '<div>' + esc(t[0]) + '</div><div><div class="bar" style="width:' + Math.max(2, t[1] / max * 100) + '%"></div></div><div class="n">' + t[1] + '</div>'
+  ).join('');
+  return tops;
+}
 function initBills() {
   bills.forEach(b => {
     b.sponsorParty = (b.sponsor && b.sponsor.party) || '';
     b.actionDate = (b.latestAction && b.latestAction.date) || '';
     b.relEv = (b.relatedEventIds || []).length;
   });
-  // stats
-  const enacted = bills.filter(b => b.status === 'enacted').length;
-  const c119 = bills.filter(b => b.congress === 119).length;
-  const linked = bills.filter(b => b.relEv > 0).length;
-  $('billStats').innerHTML = [
-    ['' + bills.length, 'bills on disk'], ['' + c119, '119th congress'],
-    ['' + enacted, 'enacted'], ['' + linked, 'linked to events'],
-    ['' + scoredIds.size, 'curated (billAnalysis)'],
-  ].map(s => '<div class="stat"><b>' + s[0] + '</b><span>' + s[1] + '</span></div>').join('');
-  // topic histogram — thinness view
-  const tc = {};
-  bills.forEach(b => { const t = b.topic || '(none)'; tc[t] = (tc[t] || 0) + 1; });
-  const tops = Object.keys(tc).map(k => [k, tc[k]]).sort((a, b) => b[1] - a[1]);
-  const max = tops.length ? tops[0][1] : 1;
-  $('topicHist').innerHTML = tops.map(t =>
-    '<div>' + esc(t[0]) + '</div><div><div class="bar" style="width:' + Math.max(2, t[1] / max * 100) + '%"></div></div><div class="n">' + t[1] + '</div>'
-  ).join('');
-  // filters
+  renderBillOverview();
+  $('bsubst').addEventListener('input', () => { renderBillOverview(); billCtl.shown = 100; billCtl.render(); });
+  // filters — options from the FULL corpus so the lens never hides a filter
+  const tcAll = {};
+  bills.forEach(b => { const t = b.topic || '(none)'; tcAll[t] = (tcAll[t] || 0) + 1; });
   const topicSel = $('btopic');
-  tops.forEach(t => { const o = document.createElement('option'); o.value = o.textContent = t[0]; topicSel.appendChild(o); });
+  Object.keys(tcAll).map(k => [k, tcAll[k]]).sort((a, b) => b[1] - a[1])
+    .forEach(t => { const o = document.createElement('option'); o.value = o.textContent = t[0]; topicSel.appendChild(o); });
   const statuses = Array.from(new Set(bills.map(b => b.statusLabel).filter(Boolean))).sort();
   statuses.forEach(s => { const o = document.createElement('option'); o.value = o.textContent = s; $('bstatus').appendChild(o); });
 
@@ -307,12 +332,13 @@ function initBills() {
       '<td>' + (b.cosponsors == null ? '—' : b.cosponsors) + '</td>' +
       '<td>' + esc(b.topic || '') + '</td>' +
       '<td><span class="chip' + (b.status === 'enacted' ? ' enacted' : '') + '">' + esc(b.statusLabel || b.status || '') + '</span>' +
-        (scoredIds.has(b.billId) ? ' <span class="chip v1" style="border-color:rgba(143,176,230,.5);color:var(--accent)">curated</span>' : '') + '</td>' +
+        (scoredIds.has(b.billId) ? ' <span class="chip v1" style="border-color:rgba(143,176,230,.5);color:var(--accent)">curated</span>' : '') +
+        (b.ceremonial ? ' <span class="chip" title="' + esc(b.ceremonialMethod || '') + '">' + esc(b.ceremonialClass || 'ceremonial') + '</span>' : '') + '</td>' +
       '<td>' + esc(b.actionDate) + '</td>' +
       '<td>' + (b.relEv || '') + '</td></tr>';
   }, () => {
     const q = $('bq').value.trim().toLowerCase(), t = $('btopic').value, s = $('bstatus').value, c = $('bcongress').value;
-    return bills.filter(b =>
+    return billPool().filter(b =>
       (!q || (b.title + ' ' + b.billId + ' ' + ((b.sponsor && b.sponsor.name) || '')).toLowerCase().includes(q)) &&
       (!t || (b.topic || '(none)') === t) && (!s || b.statusLabel === s) && (!c || String(b.congress) === c));
   });
@@ -567,7 +593,7 @@ async function ensureGraph() {
     tc.forEach(t => { const o = document.createElement('option'); o.value = o.textContent = t; $('gtopic').appendChild(o); });
     Array.from(new Set(bills.map(b => b.statusLabel).filter(Boolean))).sort()
       .forEach(s => { const o = document.createElement('option'); o.value = o.textContent = s; $('gstatus').appendChild(o); });
-    ['gtopic', 'gcongress', 'gstatus', 'gcap', 'gbounds'].forEach(id => $(id).addEventListener('input', renderGraph));
+    ['gtopic', 'gcongress', 'gstatus', 'gcap', 'gbounds', 'gcer'].forEach(id => $(id).addEventListener('input', renderGraph));
     renderGraph();
   } catch (e) {
     $('graphStats').innerHTML = '<div class="warn">graph unavailable — ' + esc(e.message) + '</div>';
@@ -582,6 +608,10 @@ function renderGraph() {
   try { gmL.clearDots(); } catch (_) {}
   let pool = bills.filter(b =>
     (!t || (b.topic || '(none)') === t) && (!c || String(b.congress) === c) && (!s || b.statusLabel === s));
+  // substance lens on the field — curated bills always show
+  const preLens = pool.length;
+  if (!$('gcer').checked) pool = pool.filter(b => !b.ceremonial || scoredIds.has(b.billId));
+  const cerFolded = preLens - pool.length;
   let noJoin = 0, maxCo = 1;
   const plottable = [];
   pool.forEach(b => {
@@ -624,6 +654,7 @@ function renderGraph() {
     ['' + pool.length, 'bills in filter'], ['' + shown.length, 'plotted'],
     ['' + real, 'realized (enacted)'], ['' + frus, 'frustrated (died w/ 118th)'],
     ['' + noJoin, 'no NOMINATE join — not plotted'],
+    ['' + cerFolded, 'ceremonial folded'],
   ].map(x => '<div class="stat"><b>' + x[0] + '</b><span>' + x[1] + '</span></div>').join('');
 }
 // Record-z vs object-z: two independent measurements with lineage, allowed to
