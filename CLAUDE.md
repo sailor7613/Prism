@@ -122,6 +122,11 @@ Requires Node 18+ (uses built-in `fetch`). No npm dependencies.
     node run-all.js          # full pipeline: members + bills
     node fetch-members.js    # members + voteview NOMINATE only
     node fetch-bills.js      # bills only
+    node fetch-bills.js --terrain "Immigration"   # terrain fetch: every 119th bill
+                             # in a CRS policy area, no notable filter, provenance-
+                             # marked (terrain_fetch_v1 / tf:1). Or double-click
+                             # "Terrain Fetch.command". Surgical append — safe to
+                             # run anytime; index in data/policy_area_index.json.
 
 Pipeline writes into `../data/`. A full run takes a few minutes — `scripts/config.js` paces calls at `DELAY_MS=500` and waits `RETRY_DELAY_MS=60000` on 429.
 
