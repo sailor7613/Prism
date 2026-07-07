@@ -24,6 +24,27 @@ These are the development principles this project runs on. They're lifted verbat
 - **Admin before UI.** The admin portal produces the content the UI consumes.
 - **Mobile before desktop.** The phone is the constraint. Nail the constrained version before expanding.
 
+## Division of labor (Sailor's rule — read before responding)
+
+Sailor's input is conceptual: the modes of political economy, the grammar, the parameters, the sociology. Claude's job is to connect that vision to existing political science and to working code — not to re-litigate, reconcile, or elaborate the political science itself. Treat the political science as settled infrastructure: boring, complete, load-bearing, invisible.
+
+What this means in practice:
+
+- **The product goal is emotive rendering, not analytical completeness.** Prism renders arcane legislative data in a novel way that sparks intuitive understanding — revealing to users a deeper sense of their own politics that the disfunctional media landscape can't. Every design and ontology question should be answered with that goal in view (this is the catharsis principle's product face).
+- **Answer at the level of the vision first.** Lead with what a change means for the user experience and Sailor's goals. Keep implementation detail brief and behind the answer, not in front of it. Density is a failure mode: if a response reads like a spec, rewrite it.
+- **Stabilize the ontology in service of the goals, not for its own sake.** When ontological tightening is needed, frame it by what it protects in the product, then keep it short.
+
+## Direction: the surface replaces the desk (2026-07-06, supersedes the July 4 role-split)
+
+Sailor's decision, morning of July 6: **`admin.html` is being retired.** `admin-surface.html` is the instrument going forward and will grow to carry all needed admin functionality — the point is that functionality and ontology align, and the surface is where they do. This supersedes the "two instruments, do not grow the surface into a second desk" framing in `../Handoffs/Prism/Prism_Admin_Surface_Direction_Handoff.md`.
+
+Practically: new admin capability lands on the surface, not the desk. The desk keeps working during the migration (events CRUD, Export writer, refraction scoring still live there until ported) — but don't add new functionality to `admin.html`, and when touching a desk feature, prefer porting it to the surface over extending it in place.
+
+Two standing corrections (Sailor, 2026-07-06):
+
+- **Never refer to an event by a bill's name.** Older handoffs say "the Laken Riley curation" for the July 2 immigration-event session — do not repeat this shorthand. Events are conceived from Sailor's sociology and named by their concept; bills attach to events through curation, never the reverse. If a handoff names an event by a bill, treat that as the error it is.
+- **Event IDs are device-local, not stable.** PrismDB is per-browser localStorage, so `evt_010` on the iPad and `evt_010` on the desktop can be different events (and the same event can carry different IDs). Refer to events by title/concept across devices; use IDs only within a single device's store.
+
 ## Where context lives
 
 This repo (`Prism/`) is one project inside a larger workspace at `../`. When you need orientation beyond what's in this file, look here first:

@@ -303,6 +303,26 @@ async function main() {
   });
   fs.writeFileSync(path.join(DATA_DIR, 'prism_legislation.json'), JSON.stringify(bills, null, 2));
   console.log(`✓ prism_legislation.json stamped: ${bills.filter(b => b.rollCallCount).length} bills with roll calls`);
+
+  // UI catalog — same stamps, compact keys (rc = roll calls, mm = min margin),
+  // same parse-and-rewrite approach as tag-ceremonial.js. The catalog is what
+  // the browsing surfaces load; without this the record stays pipeline-only.
+  const jsPath = path.join(DATA_DIR, 'legislation_data.js');
+  const src = fs.readFileSync(jsPath, 'utf8');
+  const m = src.match(/^([\s\S]*?const LEGISLATION_DATA = )([\s\S]*?)(;\s*)$/);
+  if (m) {
+    const entries = JSON.parse(m[2]);
+    const stampById = {};
+    bills.forEach(b => { if (b.rollCallCount) stampById[b.billId] = b; });
+    let stamped = 0;
+    entries.forEach(e => {
+      const s = stampById[e.id];
+      if (s) { e.rc = s.rollCallCount; e.mm = +s.minMargin.toFixed(3); stamped++; }
+      else { delete e.rc; delete e.mm; }
+    });
+    fs.writeFileSync(jsPath, m[1] + JSON.stringify(entries, null, 2) + m[3]);
+    console.log(`✓ legislation_data.js stamped: ${stamped} entries with rc/mm`);
+  } else console.error('✗ could not parse legislation_data.js — UI catalog not stamped');
   if (fetched >= LIMIT) console.log(`\n(VOTES_LIMIT=${LIMIT} reached — re-run to continue from checkpoint)`);
   if (cp.misses.length) console.log(`⚠ ${cp.misses.length} parse/fetch misses recorded in checkpoint`);
 }

@@ -6,17 +6,23 @@ const LEGISLATION_DATA = [
   {
     "name": "Lulu’s Law",
     "meta": "S. 1003 · Enacted · Technology",
-    "id": "s-119-1003"
+    "id": "s-119-1003",
+    "rc": 1,
+    "mm": 0.971
   },
   {
     "name": "ARTIST Act",
     "meta": "S. 254 · Enacted · Native Americans",
-    "id": "s-119-254"
+    "id": "s-119-254",
+    "rc": 1,
+    "mm": 0.933
   },
   {
     "name": "Secure America Act",
     "meta": "S. 2 · Enacted · Immigration",
-    "id": "s-119-2"
+    "id": "s-119-2",
+    "rc": 8,
+    "mm": 0.005
   },
   {
     "name": "Gerald E. Connolly Esophageal Cancer Awareness Act of 2025",
@@ -26,7 +32,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Fiscal Year 2025 Veterans Affairs Major Medical Facility Authorization Act",
     "meta": "S. 2393 · Enacted · Defense",
-    "id": "s-119-2393"
+    "id": "s-119-2393",
+    "rc": 1,
+    "mm": 0.976
   },
   {
     "name": "A bill to amend chapters 83 and 84 of title 5, United States Code, to authorize an increase of the retirement age for members of the Capitol Police.",
@@ -61,27 +69,37 @@ const LEGISLATION_DATA = [
   {
     "name": "A bill to require the Federal Energy Regulatory Commission to extend the time period during which licensees are required to commence construction of certain hydropower projects.",
     "meta": "S. 1020 · Enacted · Energy",
-    "id": "s-119-1020"
+    "id": "s-119-1020",
+    "rc": 1,
+    "mm": 0.931
   },
   {
     "name": "Tribal Trust Land Homeownership Act of 2025",
     "meta": "S. 723 · Enacted · Native Americans",
-    "id": "s-119-723"
+    "id": "s-119-723",
+    "rc": 1,
+    "mm": 0.811
   },
   {
     "name": "Homeland Security and Further Additional Continuing Appropriations Act, 2026.",
     "meta": "H.R. 7147 · Enacted · Economy",
-    "id": "hr-119-7147"
+    "id": "hr-119-7147",
+    "rc": 8,
+    "mm": 0.03
   },
   {
     "name": "A bill to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978, and for other purposes.",
     "meta": "S. 4465 · Enacted · Defense",
-    "id": "s-119-4465"
+    "id": "s-119-4465",
+    "rc": 1,
+    "mm": 0.403
   },
   {
     "name": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN.",
     "meta": "H.J.Res. 140 · Enacted · Public Lands",
-    "id": "hjres-119-140"
+    "id": "hjres-119-140",
+    "rc": 4,
+    "mm": 0.01
   },
   {
     "name": "To amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978 through April 30, 2026, and for other purposes.",
@@ -96,7 +114,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Small Business Innovation and Economic Security Act",
     "meta": "S. 3971 · Enacted · Commerce",
-    "id": "s-119-3971"
+    "id": "s-119-3971",
+    "rc": 1,
+    "mm": 0.788
   },
   {
     "name": "To authorize the President to award the Medal of Honor to John W. Ripley for acts of valor during the Vietnam War, and for other purposes.",
@@ -117,7 +137,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Disapproving the action of the District of Columbia Council in approving the D.C. Income and Franchise Tax Conformity and Revision Temporary Amendment Act of 2025.",
     "meta": "H.J.Res. 142 · Enacted · Government",
-    "id": "hjres-119-142"
+    "id": "hjres-119-142",
+    "rc": 3,
+    "mm": 0.012
   },
   {
     "name": "Ending Improper Payments to Deceased People Act",
@@ -132,7 +154,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Consolidated Appropriations Act, 2026",
     "meta": "H.R. 7148 · Enacted · Economy",
-    "id": "hr-119-7148"
+    "id": "hr-119-7148",
+    "rc": 6,
+    "mm": 0.007
   },
   {
     "name": "Trafficking Survivors Relief Act",
@@ -142,7 +166,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Commerce, Justice, Science; Energy and Water Development; and Interior and Environment Appropriations Act, 2026",
     "meta": "H.R. 6938 · Enacted · Economy",
-    "id": "hr-119-6938"
+    "id": "hr-119-6938",
+    "rc": 6,
+    "mm": 0.691
   },
   {
     "name": "Disabled Veterans Housing Support Act",
@@ -167,7 +193,9 @@ const LEGISLATION_DATA = [
   {
     "name": "MAPWaters Act of 2025",
     "meta": "H.R. 187 · Enacted · Public Lands",
-    "id": "hr-119-187"
+    "id": "hr-119-187",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Alaska Native Vietnam Era Veterans Land Allotment Extension Act of 2025",
@@ -177,7 +205,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Disaster Related Extension of Deadlines Act",
     "meta": "H.R. 1491 · Enacted · Tax Policy",
-    "id": "hr-119-1491"
+    "id": "hr-119-1491",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Save Our Seas 2.0 Amendments Act",
@@ -187,7 +217,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Congressional Award Program Reauthorization Act",
     "meta": "S. 284 · Enacted · Government",
-    "id": "s-119-284"
+    "id": "s-119-284",
+    "rc": 1,
+    "mm": 0.888
   },
   {
     "name": "Great Lakes Fishery Research Reauthorization Act",
@@ -197,17 +229,23 @@ const LEGISLATION_DATA = [
   {
     "name": "Wounded Knee Massacre Memorial and Sacred Site Act",
     "meta": "H.R. 165 · Enacted · Native Americans",
-    "id": "hr-119-165"
+    "id": "hr-119-165",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Secure Rural Schools Reauthorization Act of 2025",
     "meta": "S. 356 · Enacted · Public Lands",
-    "id": "s-119-356"
+    "id": "s-119-356",
+    "rc": 1,
+    "mm": 0.975
   },
   {
     "name": "National Defense Authorization Act for Fiscal Year 2026",
     "meta": "S. 1071 · Enacted · Defense",
-    "id": "s-119-1071"
+    "id": "s-119-1071",
+    "rc": 5,
+    "mm": 0.016
   },
   {
     "name": "A bill to designate the facility of the United States Postal Service located at 201 West Oklahoma Avenue in Guthrie, Oklahoma, as the \"Oscar J. Upham Post Office\".",
@@ -244,32 +282,44 @@ const LEGISLATION_DATA = [
   {
     "name": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to \"Miles City Field Office Record of Decision and Approved Resource Management Plan Amendment\".",
     "meta": "H.J.Res. 104 · Enacted · Public Lands",
-    "id": "hjres-119-104"
+    "id": "hjres-119-104",
+    "rc": 3,
+    "mm": 0.007
   },
   {
     "name": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to \"North Dakota Field Office Record of Decision and Approved Resource Management Plan\".",
     "meta": "H.J.Res. 105 · Enacted · Public Lands",
-    "id": "hjres-119-105"
+    "id": "hjres-119-105",
+    "rc": 3,
+    "mm": 0.009
   },
   {
     "name": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to \"Central Yukon Record of Decision and Approved Resource Management Plan\".",
     "meta": "H.J.Res. 106 · Enacted · Public Lands",
-    "id": "hjres-119-106"
+    "id": "hjres-119-106",
+    "rc": 3,
+    "mm": 0.012
   },
   {
     "name": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to \"Buffalo Field Office Record of Decision and Approved Resource Management Plan Amendment\".",
     "meta": "H.J.Res. 130 · Enacted · Public Lands",
-    "id": "hjres-119-130"
+    "id": "hjres-119-130",
+    "rc": 2,
+    "mm": 0.005
   },
   {
     "name": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Coastal Plain Oil and Gas Leasing Program Record of Decision.",
     "meta": "H.J.Res. 131 · Enacted · Energy",
-    "id": "hjres-119-131"
+    "id": "hjres-119-131",
+    "rc": 2,
+    "mm": 0.019
   },
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to \"National Petroleum Reserve in Alaska Integrated Activity Plan Record of Decision\".",
     "meta": "S.J.Res. 80 · Enacted · Energy",
-    "id": "sjres-119-80"
+    "id": "sjres-119-80",
+    "rc": 3,
+    "mm": 0.016
   },
   {
     "name": "Taiwan Assurance Implementation Act",
@@ -284,12 +334,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Medal of Honor Act",
     "meta": "H.R. 695 · Enacted · Defense",
-    "id": "hr-119-695"
+    "id": "hr-119-695",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "SUPPORT for Patients and Communities Reauthorization Act of 2025",
     "meta": "H.R. 2483 · Enacted · Healthcare",
-    "id": "hr-119-2483"
+    "id": "hr-119-2483",
+    "rc": 2,
+    "mm": 0
   },
   {
     "name": "Internal Revenue Service Math and Taxpayer Help Act",
@@ -314,12 +368,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Epstein Files Transparency Act",
     "meta": "H.R. 4405 · Enacted · Criminal Justice",
-    "id": "hr-119-4405"
+    "id": "hr-119-4405",
+    "rc": 1,
+    "mm": 0.995
   },
   {
     "name": "Continuing Appropriations, Agriculture, Legislative Branch, Military Construction and Veterans Affairs, and Extensions Act, 2026",
     "meta": "H.R. 5371 · Enacted · Economy",
-    "id": "hr-119-5371"
+    "id": "hr-119-5371",
+    "rc": 21,
+    "mm": 0.012
   },
   {
     "name": "To name the Department of Veterans Affairs community-based outpatient clinic in Toms River, New Jersey, the Leonard G. 'Bud' Lomell, VA Clinic, and for other purposes.",
@@ -354,27 +412,37 @@ const LEGISLATION_DATA = [
   {
     "name": "Filing Relief for Natural Disasters Act",
     "meta": "H.R. 517 · Enacted · Tax Policy",
-    "id": "hr-119-517"
+    "id": "hr-119-517",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Rescissions Act of 2025",
     "meta": "H.R. 4 · Enacted · Economy",
-    "id": "hr-119-4"
+    "id": "hr-119-4",
+    "rc": 12,
+    "mm": 0
   },
   {
     "name": "Jocelyn Nungaray National Wildlife Refuge Act",
     "meta": "S. 1596 · Enacted · Public Lands",
-    "id": "s-119-1596"
+    "id": "s-119-1596",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "GENIUS Act",
     "meta": "S. 1582 · Enacted · Financial Regulation",
-    "id": "s-119-1582"
+    "id": "s-119-1582",
+    "rc": 7,
+    "mm": 0.01
   },
   {
     "name": "HALT Fentanyl Act",
     "meta": "S. 331 · Enacted · Criminal Justice",
-    "id": "s-119-331"
+    "id": "s-119-331",
+    "rc": 4,
+    "mm": 0.511
   },
   {
     "name": "Apex Area Technical Corrections Act",
@@ -384,12 +452,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Salem Maritime National Historical Park Redesignation and Boundary Study Act",
     "meta": "H.R. 2215 · Enacted · Public Lands",
-    "id": "hr-119-2215"
+    "id": "hr-119-2215",
+    "rc": 1,
+    "mm": 0.85
   },
   {
     "name": "Alaska Native Village Municipal Lands Restoration Act of 2025",
     "meta": "H.R. 43 · Enacted · Native Americans",
-    "id": "hr-119-43"
+    "id": "hr-119-43",
+    "rc": 1,
+    "mm": 0.995
   },
   {
     "name": "Alaska Native Settlement Trust Eligibility Act",
@@ -399,17 +471,23 @@ const LEGISLATION_DATA = [
   {
     "name": "An act to provide for reconciliation pursuant to title II of H. Con. Res. 14.",
     "meta": "H.R. 1 · Enacted · Economy",
-    "id": "hr-119-1"
+    "id": "hr-119-1",
+    "rc": 24,
+    "mm": 0
   },
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Office of the Comptroller of the Currency of the Department of the Treasury relating to the review of applications under the Bank Merger Act.",
     "meta": "S.J.Res. 13 · Enacted · Financial Regulation",
-    "id": "sjres-119-13"
+    "id": "sjres-119-13",
+    "rc": 3,
+    "mm": 0.03
   },
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"Review of Final Rule Reclassification of Major Sources as Area Sources Under Section 112 of the Clean Air Act\".",
     "meta": "S.J.Res. 31 · Enacted · Climate & Energy",
-    "id": "sjres-119-31"
+    "id": "sjres-119-31",
+    "rc": 3,
+    "mm": 0.009
   },
   {
     "name": "Aerial Firefighting Enhancement Act of 2025",
@@ -419,97 +497,135 @@ const LEGISLATION_DATA = [
   {
     "name": "Providing congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"California State Motor Vehicle and Engine and Nonroad Engine Pollution Control Standards; The 'Omnibus' Low NOX Regulation; Waiver of Preemption; Notice of Decision\".",
     "meta": "H.J.Res. 89 · Enacted · Climate & Energy",
-    "id": "hjres-119-89"
+    "id": "hjres-119-89",
+    "rc": 3,
+    "mm": 0.032
   },
   {
     "name": "Providing congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"California State Motor Vehicle and Engine Pollution Control Standards; Advanced Clean Cars II; Waiver of Preemption; Notice of Decision\".",
     "meta": "H.J.Res. 88 · Enacted · Climate & Energy",
-    "id": "hjres-119-88"
+    "id": "hjres-119-88",
+    "rc": 3,
+    "mm": 0.052
   },
   {
     "name": "Providing congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"California State Motor Vehicle and Engine Pollution Control Standards; Heavy-Duty Vehicle and Engine Emission Warranty and Maintenance Provisions; Advanced Clean Trucks; Zero Emission Airport Shuttle; Zero-Emission Power Train Certification; Waiver of Preemption; Notice of Decision\".",
     "meta": "H.J.Res. 87 · Enacted · Climate & Energy",
-    "id": "hjres-119-87"
+    "id": "hjres-119-87",
+    "rc": 3,
+    "mm": 0.052
   },
   {
     "name": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the National Park Service relating to \"Glen Canyon National Recreation Area: Motor Vehicles\".",
     "meta": "H.J.Res. 60 · Enacted · Public Lands",
-    "id": "hjres-119-60"
+    "id": "hjres-119-60",
+    "rc": 3,
+    "mm": 0.033
   },
   {
     "name": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"National Emission Standards for Hazardous Air Pollutants: Rubber Tire Manufacturing\".",
     "meta": "H.J.Res. 61 · Enacted · Climate & Energy",
-    "id": "hjres-119-61"
+    "id": "hjres-119-61",
+    "rc": 3,
+    "mm": 0.033
   },
   {
     "name": "TAKE IT DOWN Act",
     "meta": "S. 146 · Enacted · Technology",
-    "id": "s-119-146"
+    "id": "s-119-146",
+    "rc": 1,
+    "mm": 0.99
   },
   {
     "name": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Energy relating to \"Energy Conservation Program: Energy Conservation Standards for Consumer Gas-fired Instantaneous Water Heaters\".",
     "meta": "H.J.Res. 20 · Enacted · Energy",
-    "id": "hjres-119-20"
+    "id": "hjres-119-20",
+    "rc": 3,
+    "mm": 0.055
   },
   {
     "name": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Energy relating to \"Energy Conservation Program: Energy Conservation Standards for Walk-In Coolers and Walk-In Freezers\".",
     "meta": "H.J.Res. 24 · Enacted · Energy",
-    "id": "hjres-119-24"
+    "id": "hjres-119-24",
+    "rc": 3,
+    "mm": 0.052
   },
   {
     "name": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Energy relating to \"Energy Conservation Program for Appliance Standards: Certification Requirements, Labeling Requirements, and Enforcement Provisions for Certain Consumer Products and Commercial Equipment\".",
     "meta": "H.J.Res. 42 · Enacted · Energy",
-    "id": "hjres-119-42"
+    "id": "hjres-119-42",
+    "rc": 3,
+    "mm": 0.045
   },
   {
     "name": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Office of Energy Efficiency and Renewable Energy, Department of Energy relating to \"Energy Conservation Program: Energy Conservation Standards for Commercial Refrigerators, Freezers, and Refrigerator-Freezers\".",
     "meta": "H.J.Res. 75 · Enacted · Energy",
-    "id": "hjres-119-75"
+    "id": "hjres-119-75",
+    "rc": 3,
+    "mm": 0.052
   },
   {
     "name": "A joint resolution disapproving the rule submitted by the Bureau of Consumer Financial Protection relating to \"Overdraft Lending: Very Large Financial Institutions\".",
     "meta": "S.J.Res. 18 · Enacted · Financial Regulation",
-    "id": "sjres-119-18"
+    "id": "sjres-119-18",
+    "rc": 3,
+    "mm": 0.014
   },
   {
     "name": "A joint resolution disapproving the rule submitted by the Bureau of Consumer Financial Protection relating to \"Defining Larger Participants of a Market for General-Use Digital Consumer Payment Applications\".",
     "meta": "S.J.Res. 28 · Enacted · Financial Regulation",
-    "id": "sjres-119-28"
+    "id": "sjres-119-28",
+    "rc": 3,
+    "mm": 0.019
   },
   {
     "name": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Internal Revenue Service relating to \"Gross Proceeds Reporting by Brokers That Regularly Provide Services Effectuating Digital Asset Sales\".",
     "meta": "H.J.Res. 25 · Enacted · Tax Policy",
-    "id": "hjres-119-25"
+    "id": "hjres-119-25",
+    "rc": 3,
+    "mm": 0.377
   },
   {
     "name": "Full-Year Continuing Appropriations and Extensions Act, 2025",
     "meta": "H.R. 1968 · Enacted · Economy",
-    "id": "hr-119-1968"
+    "id": "hr-119-1968",
+    "rc": 4,
+    "mm": 0.007
   },
   {
     "name": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"Waste Emissions Charge for Petroleum and Natural Gas Systems: Procedures for Facilitating Compliance, Including Netting and Exemptions\".",
     "meta": "H.J.Res. 35 · Enacted · Climate & Energy",
-    "id": "hjres-119-35"
+    "id": "hjres-119-35",
+    "rc": 2,
+    "mm": 0.033
   },
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Ocean Energy Management relating to \"Protection of Marine Archaeological Resources\".",
     "meta": "S.J.Res. 11 · Enacted · Public Lands",
-    "id": "sjres-119-11"
+    "id": "sjres-119-11",
+    "rc": 3,
+    "mm": 0.045
   },
   {
     "name": "Laken Riley Act",
     "meta": "S. 5 · Enacted · Immigration",
-    "id": "s-119-5"
+    "id": "s-119-5",
+    "rc": 5,
+    "mm": 0.255
   },
   {
     "name": "D.C. Robert F. Kennedy Memorial Stadium Campus Revitalization Act",
     "meta": "H.R. 4984 · Enacted · Government",
-    "id": "hr-118-4984"
+    "id": "hr-118-4984",
+    "rc": 1,
+    "mm": 0.727
   },
   {
     "name": "Social Security Fairness Act of 2023",
     "meta": "H.R. 82 · Enacted · Social Policy",
-    "id": "hr-118-82"
+    "id": "hr-118-82",
+    "rc": 5,
+    "mm": 0.375
   },
   {
     "name": "Think Differently Database Act",
@@ -529,7 +645,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Gabriella Miller Kids First Research Act 2.0",
     "meta": "H.R. 3391 · Enacted · Healthcare",
-    "id": "hr-118-3391"
+    "id": "hr-118-3391",
+    "rc": 1,
+    "mm": 0.979
   },
   {
     "name": "FISHES Act",
@@ -639,7 +757,9 @@ const LEGISLATION_DATA = [
     "name": "To designate the facility of the United States Postal Service located at 9317 Bolsa Avenue in Westminster, California, as the \"Little Saigon Vietnam War Veterans Memorial Post Office\".",
     "meta": "H.R. 8057 · Enacted · Government",
     "id": "hr-118-8057",
-    "cer": 1
+    "cer": 1,
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 401 Main Street in Brawley, California, as the \"Walter Francis Ulloa Memorial Post Office Building\".",
@@ -697,7 +817,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Supporting America’s Children and Families Act",
     "meta": "H.R. 9076 · Enacted · Social Policy",
-    "id": "hr-118-9076"
+    "id": "hr-118-9076",
+    "rc": 1,
+    "mm": 0.952
   },
   {
     "name": "To name the Department of Veterans Affairs community-based outpatient clinic in Auburn, California, as the \"Louis A. Conter VA Clinic\".",
@@ -749,7 +871,9 @@ const LEGISLATION_DATA = [
     "name": "To designate the facility of the United States Postal Service located at 119 Main Street in Plains, Georgia, as the \"Jimmy and Rosalynn Carter Post Office\".",
     "meta": "H.R. 9600 · Enacted · Government",
     "id": "hr-118-9600",
-    "cer": 1
+    "cer": 1,
+    "rc": 1,
+    "mm": 0.924
   },
   {
     "name": "Federal Register Modernization Act of 2024",
@@ -776,7 +900,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Thomas R. Carper Water Resources Development Act of 2024",
     "meta": "S. 4367 · Enacted · Water",
-    "id": "s-118-4367"
+    "id": "s-118-4367",
+    "rc": 2,
+    "mm": 0.914
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 2300 Sylvan Avenue in Modesto, California, as the \"Corporal Michael D. Anderson Jr. Post Office Building\".",
@@ -794,7 +920,9 @@ const LEGISLATION_DATA = [
     "name": "To designate the facility of the United States Postal Service located at 220 North Hatcher Avenue in Purcellville, Virginia, as the \"Secretary of State Madeleine Albright Post Office Building\".",
     "meta": "H.R. 3354 · Enacted · Government",
     "id": "hr-118-3354",
-    "cer": 1
+    "cer": 1,
+    "rc": 1,
+    "mm": 0.86
   },
   {
     "name": "U.S. Congressman Sam Johnson Memorial VA Clinic Act",
@@ -858,17 +986,23 @@ const LEGISLATION_DATA = [
     "name": "To designate the facility of the United States Postal Service located at 15 South Valdosta Road in Lakeland, Georgia, as the \"Nell Patten Roquemore Post Office\".",
     "meta": "H.R. 6983 · Enacted · Government",
     "id": "hr-118-6983",
-    "cer": 1
+    "cer": 1,
+    "rc": 1,
+    "mm": 0.989
   },
   {
     "name": "Senator Elizabeth Dole 21st Century Veterans Healthcare and Benefits Improvement Act",
     "meta": "S. 141 · Enacted · Defense",
-    "id": "s-118-141"
+    "id": "s-118-141",
+    "rc": 1,
+    "mm": 0.939
   },
   {
     "name": "Native American Child Protection Act",
     "meta": "H.R. 663 · Enacted · Native Americans",
-    "id": "hr-118-663"
+    "id": "hr-118-663",
+    "rc": 1,
+    "mm": 0.844
   },
   {
     "name": "Everett Alvarez, Jr. Congressional Gold Medal Act of 2023",
@@ -879,12 +1013,16 @@ const LEGISLATION_DATA = [
   {
     "name": "To clarify jurisdiction with respect to certain Bureau of Reclamation pumped storage development, and for other purposes.",
     "meta": "H.R. 1607 · Enacted · Water",
-    "id": "hr-118-1607"
+    "id": "hr-118-1607",
+    "rc": 1,
+    "mm": 0.995
   },
   {
     "name": "Chesapeake and Ohio Canal National Historical Park Commission Extension Act",
     "meta": "H.R. 1727 · Enacted · Public Lands",
-    "id": "hr-118-1727"
+    "id": "hr-118-1727",
+    "rc": 1,
+    "mm": 0.991
   },
   {
     "name": "Mountain View Corridor Completion Act",
@@ -899,7 +1037,9 @@ const LEGISLATION_DATA = [
   {
     "name": "To extend the authority to collect Shasta-Trinity Marina fees through fiscal year 2029.",
     "meta": "H.R. 3324 · Enacted · Public Lands",
-    "id": "hr-118-3324"
+    "id": "hr-118-3324",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Employer Reporting Improvement Act",
@@ -929,7 +1069,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Servicemember Quality of Life Improvement and National Defense Authorization Act for Fiscal Year 2025",
     "meta": "H.R. 5009 · Enacted · Defense",
-    "id": "hr-118-5009"
+    "id": "hr-118-5009",
+    "rc": 3,
+    "mm": 0.335
   },
   {
     "name": "Eliminate Useless Reports Act of 2024",
@@ -965,7 +1107,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Emergency Medical Services for Children Reauthorization Act of 2024",
     "meta": "H.R. 6960 · Enacted · Healthcare",
-    "id": "hr-118-6960"
+    "id": "hr-118-6960",
+    "rc": 1,
+    "mm": 0.937
   },
   {
     "name": "To amend title 28, United States Code, to consolidate certain divisions in the Northern District of Alabama.",
@@ -975,7 +1119,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Autism CARES Act of 2024",
     "meta": "H.R. 7213 · Enacted · Healthcare",
-    "id": "hr-118-7213"
+    "id": "hr-118-7213",
+    "rc": 2,
+    "mm": 0.923
   },
   {
     "name": "Utah State Parks Adjustment Act",
@@ -995,7 +1141,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Lahaina National Heritage Area Study Act",
     "meta": "H.R. 8219 · Enacted · Public Lands",
-    "id": "hr-118-8219"
+    "id": "hr-118-8219",
+    "rc": 1,
+    "mm": 0.876
   },
   {
     "name": "Swanson and Hugh Butler Reservoirs Land Conveyances Act",
@@ -1005,7 +1153,9 @@ const LEGISLATION_DATA = [
   {
     "name": "DETECT Fentanyl and Xylazine Act of 2024",
     "meta": "H.R. 8663 · Enacted · Technology",
-    "id": "hr-118-8663"
+    "id": "hr-118-8663",
+    "rc": 1,
+    "mm": 0.995
   },
   {
     "name": "SHARE IT Act",
@@ -1025,12 +1175,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Federal Agency Performance Act of 2024",
     "meta": "S. 709 · Enacted · Government",
-    "id": "s-118-709"
+    "id": "s-118-709",
+    "rc": 1,
+    "mm": 0.97
   },
   {
     "name": "Beagle Brigade Act of 2023",
     "meta": "S. 759 · Enacted · Agriculture",
-    "id": "s-118-759"
+    "id": "s-118-759",
+    "rc": 1,
+    "mm": 0.9
   },
   {
     "name": "No CORRUPTION Act",
@@ -1045,7 +1199,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Stop Institutional Child Abuse Act",
     "meta": "S. 1351 · Enacted · Social Policy",
-    "id": "s-118-1351"
+    "id": "s-118-1351",
+    "rc": 1,
+    "mm": 0.837
   },
   {
     "name": "Working Dog Health and Welfare Act of 2023",
@@ -1060,17 +1216,23 @@ const LEGISLATION_DATA = [
   {
     "name": "Never Again Education Reauthorization Act of 2023",
     "meta": "S. 3448 · Enacted · Other",
-    "id": "s-118-3448"
+    "id": "s-118-3448",
+    "rc": 1,
+    "mm": 0.942
   },
   {
     "name": "America’s Conservation Enhancement Reauthorization Act of 2024",
     "meta": "S. 3791 · Enacted · Climate & Energy",
-    "id": "s-118-3791"
+    "id": "s-118-3791",
+    "rc": 1,
+    "mm": 0.891
   },
   {
     "name": "Jamul Indian Village Land Transfer Act",
     "meta": "S. 3857 · Enacted · Native Americans",
-    "id": "s-118-3857"
+    "id": "s-118-3857",
+    "rc": 1,
+    "mm": 0.818
   },
   {
     "name": "Transportation Security Screening Modernization Act of 2024",
@@ -1092,13 +1254,17 @@ const LEGISLATION_DATA = [
   {
     "name": "Federal Judiciary Stabilization Act of 2024",
     "meta": "S. 3998 · Enacted · Law",
-    "id": "s-118-3998"
+    "id": "s-118-3998",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "A bill to designate the facility of the United States Postal Service located at 180 Steuart Street in San Francisco, California, as the \"Dianne Feinstein Post Office\".",
     "meta": "S. 4077 · Enacted · Government",
     "id": "s-118-4077",
-    "cer": 1
+    "cer": 1,
+    "rc": 1,
+    "mm": 0.798
   },
   {
     "name": "Think Differently Transportation Act",
@@ -1130,7 +1296,9 @@ const LEGISLATION_DATA = [
   {
     "name": "American Relief Act, 2025",
     "meta": "H.R. 10545 · Enacted · Economy",
-    "id": "hr-118-10545"
+    "id": "hr-118-10545",
+    "rc": 2,
+    "mm": 0.771
   },
   {
     "name": "Pensacola and Perdido Bays Estuary of National Significance Act of 2024",
@@ -1161,7 +1329,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Improving Federal Building Security Act of 2024",
     "meta": "S. 3613 · Enacted · Government",
-    "id": "s-118-3613"
+    "id": "s-118-3613",
+    "rc": 1,
+    "mm": 0.971
   },
   {
     "name": "A bill to amend title 35, United States Code, to provide a good faith exception to the imposition of fines for false assertions and certifications, and for other purposes.",
@@ -1176,12 +1346,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Firefighter Cancer Registry Reauthorization Act of 2023",
     "meta": "H.R. 3821 · Enacted · Healthcare",
-    "id": "hr-118-3821"
+    "id": "hr-118-3821",
+    "rc": 1,
+    "mm": 0.967
   },
   {
     "name": "Federal Disaster Tax Relief Act of 2023",
     "meta": "H.R. 5863 · Enacted · Tax Policy",
-    "id": "hr-118-5863"
+    "id": "hr-118-5863",
+    "rc": 1,
+    "mm": 0.964
   },
   {
     "name": "Forgotten Heroes of the Holocaust Congressional Gold Medal Act",
@@ -1234,7 +1408,9 @@ const LEGISLATION_DATA = [
   {
     "name": "FAFSA Deadline Act",
     "meta": "H.R. 8932 · Enacted · Education",
-    "id": "hr-118-8932"
+    "id": "hr-118-8932",
+    "rc": 1,
+    "mm": 0.995
   },
   {
     "name": "No Stolen Trademarks Honored in America Act of 2023",
@@ -1364,7 +1540,9 @@ const LEGISLATION_DATA = [
     "name": "To designate the facility of the United States Postal Service located at 103 Benedette Street in Rayville, Louisiana, as the \"Luke Letlow Post Office Building\".",
     "meta": "H.R. 7423 · Enacted · Government",
     "id": "hr-118-7423",
-    "cer": 1
+    "cer": 1,
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Veterans’ Compensation Cost-of-Living Adjustment Act of 2024",
@@ -1413,7 +1591,9 @@ const LEGISLATION_DATA = [
   {
     "name": "COCOA Act of 2024",
     "meta": "H.R. 6513 · Enacted · Government",
-    "id": "hr-118-6513"
+    "id": "hr-118-6513",
+    "rc": 1,
+    "mm": 0.995
   },
   {
     "name": "Congressional Budget Office Data Access Act",
@@ -1423,12 +1603,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Building Chips in America Act of 2023",
     "meta": "S. 2228 · Enacted · Climate & Energy",
-    "id": "s-118-2228"
+    "id": "s-118-2228",
+    "rc": 1,
+    "mm": 0.346
   },
   {
     "name": "Enhanced Presidential Security Act of 2024",
     "meta": "H.R. 9106 · Enacted · Government",
-    "id": "hr-118-9106"
+    "id": "hr-118-9106",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "NAPA Reauthorization Act",
@@ -1501,12 +1685,16 @@ const LEGISLATION_DATA = [
   {
     "name": "United States Commission on International Religious Freedom Reauthorization Act of 2024",
     "meta": "S. 3764 · Enacted · Foreign Policy",
-    "id": "s-118-3764"
+    "id": "s-118-3764",
+    "rc": 1,
+    "mm": 0.896
   },
   {
     "name": "Continuing Appropriations and Extensions Act, 2025",
     "meta": "H.R. 9747 · Enacted · Economy",
-    "id": "hr-118-9747"
+    "id": "hr-118-9747",
+    "rc": 2,
+    "mm": 0.612
   },
   {
     "name": "SIREN Reauthorization Act",
@@ -1528,7 +1716,9 @@ const LEGISLATION_DATA = [
     "name": "Billie Jean King Congressional Gold Medal Act",
     "meta": "S. 2861 · Enacted · Civil Rights",
     "id": "s-118-2861",
-    "cer": 1
+    "cer": 1,
+    "rc": 1,
+    "mm": 0.559
   },
   {
     "name": "Poison Control Centers Reauthorization Act of 2024",
@@ -1548,7 +1738,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Preventing the Financing of Illegal Synthetic Drugs Act",
     "meta": "H.R. 1076 · Enacted · Government",
-    "id": "hr-118-1076"
+    "id": "hr-118-1076",
+    "rc": 1,
+    "mm": 0.99
   },
   {
     "name": "Starr–Camargo Bridge Expansion Act",
@@ -1558,12 +1750,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Debbie Smith Act of 2023",
     "meta": "H.R. 1105 · Enacted · Criminal Justice",
-    "id": "hr-118-1105"
+    "id": "hr-118-1105",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Improving Access to Our Courts Act",
     "meta": "S. 227 · Enacted · Law",
-    "id": "s-118-227"
+    "id": "s-118-227",
+    "rc": 1,
+    "mm": 0.985
   },
   {
     "name": "All-American Flag Act",
@@ -1574,7 +1770,9 @@ const LEGISLATION_DATA = [
     "name": "A bill to designate the outpatient clinic of the Department of Veterans Affairs in Wyandotte County, Kansas City, Kansas, as the \"Captain Elwin Shopteese VA Clinic\".",
     "meta": "S. 3249 · Enacted · Defense",
     "id": "s-118-3249",
-    "cer": 1
+    "cer": 1,
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "A bill to rename the community-based outpatient clinic of the Department of Veterans Affairs in Butte, Montana, as the \"Charlie Dowd VA Clinic\".",
@@ -1585,7 +1783,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Victims' VOICES Act",
     "meta": "S. 3706 · Enacted · Criminal Justice",
-    "id": "s-118-3706"
+    "id": "s-118-3706",
+    "rc": 1,
+    "mm": 0.99
   },
   {
     "name": "Foreign Extortion Prevention Technical Corrections Act",
@@ -1595,7 +1795,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Federal Prison Oversight Act",
     "meta": "H.R. 3019 · Enacted · Government",
-    "id": "hr-118-3019"
+    "id": "hr-118-3019",
+    "rc": 1,
+    "mm": 0.99
   },
   {
     "name": "Winnebago Land Transfer Act of 2023",
@@ -1605,43 +1807,59 @@ const LEGISLATION_DATA = [
   {
     "name": "Maternal and Child Health Stillbirth Prevention Act of 2024",
     "meta": "H.R. 4581 · Enacted · Healthcare",
-    "id": "hr-118-4581"
+    "id": "hr-118-4581",
+    "rc": 1,
+    "mm": 0.985
   },
   {
     "name": "Promoting a Resolution to the Tibet-China Dispute Act",
     "meta": "S. 138 · Enacted · Foreign Policy",
-    "id": "s-118-138"
+    "id": "s-118-138",
+    "rc": 1,
+    "mm": 0.875
   },
   {
     "name": "An act to authorize appropriations for the United States Fire Administration and firefighter assistance grant programs, to advance the benefits of nuclear energy, and for other purposes.",
     "meta": "S. 870 · Enacted · Energy",
-    "id": "s-118-870"
+    "id": "s-118-870",
+    "rc": 4,
+    "mm": 0.936
   },
   {
     "name": "Dr. Emmanuel Bilirakis and Honorable Jennifer Wexton National Plan to End Parkinson’s Act",
     "meta": "H.R. 2365 · Enacted · Healthcare",
-    "id": "hr-118-2365"
+    "id": "hr-118-2365",
+    "rc": 1,
+    "mm": 0.957
   },
   {
     "name": "Missing Children’s Assistance Reauthorization Act of 2023",
     "meta": "S. 2051 · Enacted · Criminal Justice",
-    "id": "s-118-2051"
+    "id": "s-118-2051",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Recruit and Retain Act",
     "meta": "S. 546 · Enacted · Criminal Justice",
-    "id": "s-118-546"
+    "id": "s-118-546",
+    "rc": 1,
+    "mm": 0.907
   },
   {
     "name": "FAA Reauthorization Act of 2024",
     "meta": "H.R. 3935 · Enacted · Infrastructure",
-    "id": "hr-118-3935"
+    "id": "hr-118-3935",
+    "rc": 33,
+    "mm": 0.007
   },
   {
     "name": "To rename the Department of Veterans Affairs community-based outpatient clinic in Hinesville, Georgia, as the \"John Gibson, Dan James, William Sapp, and Frankie Smiley VA Clinic\".",
     "meta": "H.R. 593 · Enacted · Defense",
     "id": "hr-118-593",
-    "cer": 1
+    "cer": 1,
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Prohibiting Russian Uranium Imports Act",
@@ -1651,7 +1869,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Airport and Airway Extension Act of 2024, Part II",
     "meta": "H.R. 8289 · Enacted · Infrastructure",
-    "id": "hr-118-8289"
+    "id": "hr-118-8289",
+    "rc": 1,
+    "mm": 0.883
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 24355 Creekside Road in Santa Clarita, California, as the \"William L. Reynolds Post Office Building\".",
@@ -1669,13 +1889,17 @@ const LEGISLATION_DATA = [
     "name": "To designate the facility of the United States Postal Service located at 616 East Main Street in St. Charles, Illinois, as the \"Veterans of the Vietnam War Memorial Post Office\".",
     "meta": "H.R. 2379 · Enacted · Government",
     "id": "hr-118-2379",
-    "cer": 1
+    "cer": 1,
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 2395 East Del Mar Boulevard in Laredo, Texas, as the \"Lance Corporal David Lee Espinoza, Lance Corporal Juan Rodrigo Rodriguez & Sergeant Roberto Arizola Jr. Post Office Building\".",
     "meta": "H.R. 2754 · Enacted · Government",
     "id": "hr-118-2754",
-    "cer": 1
+    "cer": 1,
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 101 South 8th Street in Lebanon, Pennsylvania, as the \"Lieutenant William D. Lebo Post Office Building\".",
@@ -1703,7 +1927,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Making emergency supplemental appropriations for the fiscal year ending September 30, 2024, and for other purposes.",
     "meta": "H.R. 815 · Enacted · Economy",
-    "id": "hr-118-815"
+    "id": "hr-118-815",
+    "rc": 14,
+    "mm": 0.01
   },
   {
     "name": "Migratory Birds of the Americas Conservation Enhancements Act of 2023",
@@ -1713,17 +1939,23 @@ const LEGISLATION_DATA = [
   {
     "name": "Reforming Intelligence and Securing America Act",
     "meta": "H.R. 7888 · Enacted · Defense",
-    "id": "hr-118-7888"
+    "id": "hr-118-7888",
+    "rc": 10,
+    "mm": 0
   },
   {
     "name": "Puyallup Tribe of Indians Land Into Trust Confirmation Act of 2023",
     "meta": "S. 382 · Enacted · Native Americans",
-    "id": "s-118-382"
+    "id": "s-118-382",
+    "rc": 1,
+    "mm": 0.928
   },
   {
     "name": "Further Consolidated Appropriations Act, 2024",
     "meta": "H.R. 2882 · Enacted · Economy",
-    "id": "hr-118-2882"
+    "id": "hr-118-2882",
+    "rc": 12,
+    "mm": 0.041
   },
   {
     "name": "I-27 Numbering Act of 2023",
@@ -1749,17 +1981,23 @@ const LEGISLATION_DATA = [
   {
     "name": "Consolidated Appropriations Act, 2024",
     "meta": "H.R. 4366 · Enacted · Economy",
-    "id": "hr-118-4366"
+    "id": "hr-118-4366",
+    "rc": 23,
+    "mm": 0.014
   },
   {
     "name": "Airport and Airway Extension Act of 2024",
     "meta": "H.R. 7454 · Enacted · Infrastructure",
-    "id": "hr-118-7454"
+    "id": "hr-118-7454",
+    "rc": 1,
+    "mm": 0.91
   },
   {
     "name": "Extension of Continuing Appropriations and Other Matters Act, 2024",
     "meta": "H.R. 7463 · Enacted · Economy",
-    "id": "hr-118-7463"
+    "id": "hr-118-7463",
+    "rc": 5,
+    "mm": 0.289
   },
   {
     "name": "Moving Americans Privacy Protection Act",
@@ -1769,7 +2007,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Overtime Pay for Protective Services Act of 2023",
     "meta": "S. 3427 · Enacted · Government",
-    "id": "s-118-3427"
+    "id": "s-118-3427",
+    "rc": 1,
+    "mm": 0.9
   },
   {
     "name": "A bill to ensure the security of office space rented by Senators, and for other purposes.",
@@ -1779,12 +2019,16 @@ const LEGISLATION_DATA = [
   {
     "name": "A bill to provide remote access to court proceedings for victims of the 1988 Bombing of Pan Am Flight 103 over Lockerbie, Scotland.",
     "meta": "S. 3250 · Enacted · Law",
-    "id": "s-118-3250"
+    "id": "s-118-3250",
+    "rc": 1,
+    "mm": 0.967
   },
   {
     "name": "Making further continuing appropriations for the fiscal year ending September 30, 2024, and for other purposes.",
     "meta": "H.R. 2872 · Enacted · Public Lands",
-    "id": "hr-118-2872"
+    "id": "hr-118-2872",
+    "rc": 4,
+    "mm": 0.488
   },
   {
     "name": "Grand Ronde Reservation Act Amendment of 2023",
@@ -1799,12 +2043,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Airport and Airway Extension Act of 2023, Part II",
     "meta": "H.R. 6503 · Enacted · Infrastructure",
-    "id": "hr-118-6503"
+    "id": "hr-118-6503",
+    "rc": 1,
+    "mm": 0.923
   },
   {
     "name": "National Defense Authorization Act for Fiscal Year 2024",
     "meta": "H.R. 2670 · Enacted · Defense",
-    "id": "hr-118-2670"
+    "id": "hr-118-2670",
+    "rc": 42,
+    "mm": 0
   },
   {
     "name": "Providing for the reappointment of Michael Govan as a citizen regent of the Board of Regents of the Smithsonian Institution.",
@@ -1824,7 +2072,9 @@ const LEGISLATION_DATA = [
   {
     "name": "TRANQ Research Act of 2023",
     "meta": "H.R. 1734 · Enacted · Technology",
-    "id": "hr-118-1734"
+    "id": "hr-118-1734",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "National Guard and Reservists Debt Relief Extension Act of 2023",
@@ -1834,7 +2084,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Duck Stamp Modernization Act of 2023",
     "meta": "S. 788 · Enacted · Public Lands",
-    "id": "s-118-788"
+    "id": "s-118-788",
+    "rc": 1,
+    "mm": 0.905
   },
   {
     "name": "A bill to amend the Federal Election Campaign Act of 1971 to extend the Administrative Fine Program for certain reporting violations.",
@@ -1849,7 +2101,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Further Continuing Appropriations and Other Extensions Act, 2024",
     "meta": "H.R. 6363 · Enacted · Economy",
-    "id": "hr-118-6363"
+    "id": "hr-118-6363",
+    "rc": 2,
+    "mm": 0.559
   },
   {
     "name": "Korean American VALOR Act",
@@ -1859,17 +2113,23 @@ const LEGISLATION_DATA = [
   {
     "name": "Wounded Warrior Access Act",
     "meta": "H.R. 1226 · Enacted · Defense",
-    "id": "hr-118-1226"
+    "id": "hr-118-1226",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Protecting Hunting Heritage and Education Act",
     "meta": "H.R. 5110 · Enacted · Education",
-    "id": "hr-118-5110"
+    "id": "hr-118-5110",
+    "rc": 1,
+    "mm": 0.995
   },
   {
     "name": "A bill to amend title 38, United States Code, to strengthen benefits for children of Vietnam veterans born with spina bifida, and for other purposes.",
     "meta": "S. 112 · Enacted · Defense",
-    "id": "s-118-112"
+    "id": "s-118-112",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "A bill to amend title 38, United States Code, to extend and modify certain authorities and requirements relating to the Department of Veterans Affairs, and for other purposes.",
@@ -1880,12 +2140,16 @@ const LEGISLATION_DATA = [
     "name": "A bill to designate the clinic of the Department of Veterans Affairs in Gallup, New Mexico, as the Hiroshi \"Hershey\" Miyamura VA Clinic.",
     "meta": "S. 475 · Enacted · Defense",
     "id": "s-118-475",
-    "cer": 1
+    "cer": 1,
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Continuing Appropriations Act, 2024 and Other Extensions Act",
     "meta": "H.R. 5860 · Enacted · Economy",
-    "id": "hr-118-5860"
+    "id": "hr-118-5860",
+    "rc": 2,
+    "mm": 0.573
   },
   {
     "name": "Securing the U.S. Organ Procurement and Transplantation Network Act",
@@ -1906,18 +2170,24 @@ const LEGISLATION_DATA = [
     "name": "To designate the clinic of the Department of Veterans Affairs in Indian River, Michigan, as the \"Pfc. Justin T. Paton Department of Veterans Affairs Clinic\".",
     "meta": "H.R. 3672 · Enacted · Defense",
     "id": "hr-118-3672",
-    "cer": 1
+    "cer": 1,
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "250th Anniversary of the United States Marine Corps Commemorative Coin Act",
     "meta": "H.R. 1096 · Enacted · Financial Regulation",
     "id": "hr-118-1096",
-    "cer": 1
+    "cer": 1,
+    "rc": 1,
+    "mm": 0.995
   },
   {
     "name": "Providing Accountability Through Transparency Act of 2023",
     "meta": "S. 111 · Enacted · Government",
-    "id": "s-118-111"
+    "id": "s-118-111",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Fiscal Year 2023 Veterans Affairs Major Medical Facility Authorization Act",
@@ -1937,107 +2207,149 @@ const LEGISLATION_DATA = [
   {
     "name": "NOTAM Improvement Act of 2023",
     "meta": "H.R. 346 · Enacted · Infrastructure",
-    "id": "hr-118-346"
+    "id": "hr-118-346",
+    "rc": 1,
+    "mm": 0.981
   },
   {
     "name": "Fiscal Responsibility Act of 2023",
     "meta": "H.R. 3746 · Enacted · Economy",
-    "id": "hr-118-3746"
+    "id": "hr-118-3746",
+    "rc": 2,
+    "mm": 0.273
   },
   {
     "name": "Relating to a national emergency declared by the President on March 13, 2020.",
     "meta": "H.J.Res. 7 · Enacted · Emergency Management",
-    "id": "hjres-118-7"
+    "id": "hjres-118-7",
+    "rc": 2,
+    "mm": 0.075
   },
   {
     "name": "COVID-19 Origin Act of 2023",
     "meta": "S. 619 · Enacted · Defense",
-    "id": "s-118-619"
+    "id": "s-118-619",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Disapproving the action of the District of Columbia Council in approving the Revised Criminal Code Act of 2022.",
     "meta": "H.J.Res. 26 · Enacted · Government",
-    "id": "hjres-118-26"
+    "id": "hjres-118-26",
+    "rc": 2,
+    "mm": 0.182
   },
   {
     "name": "JUDGES Act of 2024",
     "meta": "S. 4199 · Vetoed · Law",
-    "id": "s-118-4199"
+    "id": "s-118-4199",
+    "rc": 1,
+    "mm": 0.154
   },
   {
     "name": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Securities and Exchange Commission relating to \"Staff Accounting Bulletin No. 121\".",
     "meta": "H.J.Res. 109 · Vetoed · Financial Regulation",
-    "id": "hjres-118-109"
+    "id": "hjres-118-109",
+    "rc": 3,
+    "mm": 0.107
   },
   {
     "name": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the National Labor Relations Board relating to \"Standard for Determining Joint Employer Status\".",
     "meta": "H.J.Res. 98 · Vetoed · Labor",
-    "id": "hjres-118-98"
+    "id": "hjres-118-98",
+    "rc": 3,
+    "mm": 0.02
   },
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Federal Highway Administration relating to \"Waiver of Buy America Requirements for Electric Vehicle Chargers\".",
     "meta": "S.J.Res. 38 · Vetoed · Infrastructure",
-    "id": "sjres-118-38"
+    "id": "sjres-118-38",
+    "rc": 3,
+    "mm": 0.02
   },
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Consumer Financial Protection relating to \"Small Business Lending Under the Equal Credit Opportunity Act (Regulation B)\".",
     "meta": "S.J.Res. 32 · Vetoed · Financial Regulation",
-    "id": "sjres-118-32"
+    "id": "sjres-118-32",
+    "rc": 3,
+    "mm": 0.045
   },
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the United States Fish and Wildlife Service relating to \"Endangered and Threatened Wildlife and Plants; Lesser Prairie-Chicken; Threatened Status with Section 4(d) Rule for the Northern Distinct Population Segment and Endangered Status for the Southern Distinct Population Segment\".",
     "meta": "S.J.Res. 9 · Vetoed · Public Lands",
-    "id": "sjres-118-9"
+    "id": "sjres-118-9",
+    "rc": 3,
+    "mm": 0.011
   },
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the United States Fish and Wildlife Service relating to \"Endangered and Threatened Wildlife and Plants; Endangered Species Status for Northern Long-Eared Bat\".",
     "meta": "S.J.Res. 24 · Vetoed · Other",
-    "id": "sjres-118-24"
+    "id": "sjres-118-24",
+    "rc": 3,
+    "mm": 0.02
   },
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"Control of Air Pollution From New Motor Vehicles: Heavy-Duty Engine and Vehicle Standards\".",
     "meta": "S.J.Res. 11 · Vetoed · Climate & Energy",
-    "id": "sjres-118-11"
+    "id": "sjres-118-11",
+    "rc": 3,
+    "mm": 0
   },
   {
     "name": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Waivers and Modifications of Federal Student Loans\".",
     "meta": "H.J.Res. 45 · Vetoed · Education",
-    "id": "hjres-118-45"
+    "id": "hjres-118-45",
+    "rc": 4,
+    "mm": 0.035
   },
   {
     "name": "Disapproving the action of the District of Columbia Council in approving the Comprehensive Policing and Justice Reform Amendment Act of 2022.",
     "meta": "H.J.Res. 42 · Vetoed · Government",
-    "id": "hjres-118-42"
+    "id": "hjres-118-42",
+    "rc": 3,
+    "mm": 0.084
   },
   {
     "name": "Disapproving the rule submitted by the Department of Commerce relating to \"Procedures Covering Suspension of Liquidation, Duties and Estimated Duties in Accord With Presidential Proclamation 10414\".",
     "meta": "H.J.Res. 39 · Vetoed · Trade",
-    "id": "hjres-118-39"
+    "id": "hjres-118-39",
+    "rc": 3,
+    "mm": 0.021
   },
   {
     "name": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of the Army, Corps of Engineers, Department of Defense and the Environmental Protection Agency relating to \"Revised Definition of 'Waters of the United States'\".",
     "meta": "H.J.Res. 27 · Vetoed · Climate & Energy",
-    "id": "hjres-118-27"
+    "id": "hjres-118-27",
+    "rc": 3,
+    "mm": 0.068
   },
   {
     "name": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Labor relating to \"Prudence and Loyalty in Selecting Plan Investments and Exercising Shareholder Rights\".",
     "meta": "H.J.Res. 30 · Vetoed · Labor",
-    "id": "hjres-118-30"
+    "id": "hjres-118-30",
+    "rc": 3,
+    "mm": 0.029
   },
   {
     "name": "Emergency Conservation Program Improvement Act of 2025",
     "meta": "S. 629 · To President · Agriculture",
-    "id": "s-119-629"
+    "id": "s-119-629",
+    "rc": 1,
+    "mm": 0.902
   },
   {
     "name": "21st Century ROAD to Housing Act",
     "meta": "H.R. 6644 · To President · Housing",
-    "id": "hr-119-6644"
+    "id": "hr-119-6644",
+    "rc": 9,
+    "mm": 0.763
   },
   {
     "name": "Fallen Servicemembers Religious Heritage Restoration Act",
     "meta": "S. 1318 · Passed Both · Defense",
-    "id": "s-119-1318"
+    "id": "s-119-1318",
+    "rc": 2,
+    "mm": 0.051
   },
   {
     "name": "COVID Fraud Transparency Act of 2026",
@@ -2102,7 +2414,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Make the District of Columbia Safe and Beautiful Act of 2025",
     "meta": "H.R. 5103 · Passed House · Public Lands",
-    "id": "hr-119-5103"
+    "id": "hr-119-5103",
+    "rc": 2,
+    "mm": 0.017
   },
   {
     "name": "Cross-Boundary Wildfire Solutions Act",
@@ -2163,12 +2477,16 @@ const LEGISLATION_DATA = [
   {
     "name": "No Aid for Ghost Students Act of 2026",
     "meta": "H.R. 7892 · Passed House · Education",
-    "id": "hr-119-7892"
+    "id": "hr-119-7892",
+    "rc": 1,
+    "mm": 0.183
   },
   {
     "name": "Fraud Prevention and Accountability Act",
     "meta": "H.R. 8312 · Passed House · Government",
-    "id": "hr-119-8312"
+    "id": "hr-119-8312",
+    "rc": 1,
+    "mm": 0.14
   },
   {
     "name": "Taxpayer Funds Oversight and Accountability Act",
@@ -2183,7 +2501,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Stopping Fraudulent Payments Act",
     "meta": "H.R. 8464 · Passed House · Government",
-    "id": "hr-119-8464"
+    "id": "hr-119-8464",
+    "rc": 2,
+    "mm": 0.009
   },
   {
     "name": "Hydropower Licensing Transparency Act",
@@ -2203,12 +2523,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Wabeno Economic Development Act",
     "meta": "H.R. 3937 · Passed House · Public Lands",
-    "id": "hr-119-3937"
+    "id": "hr-119-3937",
+    "rc": 1,
+    "mm": 0.995
   },
   {
     "name": "Faster Labor Contracts Act",
     "meta": "H.R. 5408 · Passed House · Labor",
-    "id": "hr-119-5408"
+    "id": "hr-119-5408",
+    "rc": 1,
+    "mm": 0.087
   },
   {
     "name": "Bonuses for Cost-Cutters and Fraud Preventers Act of 2026",
@@ -2278,7 +2602,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Federal Fraud Prevention Workforce Training Act",
     "meta": "H.R. 8428 · Passed House · Government",
-    "id": "hr-119-8428"
+    "id": "hr-119-8428",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Pre-Payment Fraud Prevention and Treasury Data Access Act",
@@ -2288,7 +2614,9 @@ const LEGISLATION_DATA = [
   {
     "name": "TRUE Accountability Act",
     "meta": "H.R. 8466 · Passed House · Emergency Management",
-    "id": "hr-119-8466"
+    "id": "hr-119-8466",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Allied Defense Sales Act",
@@ -2309,27 +2637,37 @@ const LEGISLATION_DATA = [
   {
     "name": "Ukraine Support Act",
     "meta": "H.R. 2913 · Passed House · Foreign Policy",
-    "id": "hr-119-2913"
+    "id": "hr-119-2913",
+    "rc": 1,
+    "mm": 0.074
   },
   {
     "name": "Agriculture, Rural Development, Food and Drug Administration, and Related Agency Appropriations Act, 2027",
     "meta": "H.R. 8646 · Passed House · Economy",
-    "id": "hr-119-8646"
+    "id": "hr-119-8646",
+    "rc": 2,
+    "mm": 0.005
   },
   {
     "name": "Northwest Straits Marine Conservation Initiative Reauthorization Act of 2025",
     "meta": "H.R. 2860 · Passed House · Climate & Energy",
-    "id": "hr-119-2860"
+    "id": "hr-119-2860",
+    "rc": 1,
+    "mm": 0.768
   },
   {
     "name": "American Battlefield Protection Program Amendments Act of 2026",
     "meta": "H.R. 7618 · Passed House · Public Lands",
-    "id": "hr-119-7618"
+    "id": "hr-119-7618",
+    "rc": 1,
+    "mm": 0.938
   },
   {
     "name": "Stop Child Care Scams Act of 2026",
     "meta": "H.R. 7726 · Passed House · Social Policy",
-    "id": "hr-119-7726"
+    "id": "hr-119-7726",
+    "rc": 2,
+    "mm": 0.007
   },
   {
     "name": "Unrecognized Southeast Alaska Native Communities Recognition and Compensation Act",
@@ -2389,43 +2727,59 @@ const LEGISLATION_DATA = [
   {
     "name": "Veterans 2nd Amendment Protection Act",
     "meta": "H.R. 1041 · Passed House · Defense",
-    "id": "hr-119-1041"
+    "id": "hr-119-1041",
+    "rc": 2,
+    "mm": 0.005
   },
   {
     "name": "Sharri Briley and Eric Edmundson Veterans Benefits Expansion Act of 2026",
     "meta": "H.R. 6047 · Passed House · Defense",
-    "id": "hr-119-6047"
+    "id": "hr-119-6047",
+    "rc": 1,
+    "mm": 0.135
   },
   {
     "name": "Digital Asset Market Clarity Act",
     "meta": "H.R. 3633 · Passed House · Financial Regulation",
-    "id": "hr-119-3633"
+    "id": "hr-119-3633",
+    "rc": 1,
+    "mm": 0.374
   },
   {
     "name": "25th Anniversary of 9/11 Commemorative Coin Act",
     "meta": "H.R. 1993 · Passed House · Financial Regulation",
     "id": "hr-119-1993",
-    "cer": 1
+    "cer": 1,
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Stopping Indoctrination and Protecting Kids Act",
     "meta": "H.R. 2616 · Passed House · Education",
-    "id": "hr-119-2616"
+    "id": "hr-119-2616",
+    "rc": 2,
+    "mm": 0.002
   },
   {
     "name": "Keeping Deposits Local Act",
     "meta": "H.R. 3234 · Passed House · Financial Regulation",
-    "id": "hr-119-3234"
+    "id": "hr-119-3234",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "American Access to Banking Act",
     "meta": "H.R. 4544 · Passed House · Financial Regulation",
-    "id": "hr-119-4544"
+    "id": "hr-119-4544",
+    "rc": 1,
+    "mm": 0.98
   },
   {
     "name": "Community Bank Deposit Access Act of 2025",
     "meta": "H.R. 5317 · Passed House · Financial Regulation",
-    "id": "hr-119-5317"
+    "id": "hr-119-5317",
+    "rc": 1,
+    "mm": 0.922
   },
   {
     "name": "Stop Stealing our Chips Act",
@@ -2511,7 +2865,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Making appropriations for military construction, the Department of Veterans Affairs, and related agencies for the fiscal year ending September 30, 2027, and for other purposes.",
     "meta": "H.R. 8469 · Passed House · Economy",
-    "id": "hr-119-8469"
+    "id": "hr-119-8469",
+    "rc": 2,
+    "mm": 0.613
   },
   {
     "name": "A bill to designate the General George C. Marshall House in the Commonwealth of Virginia, as an affiliated area of the National Park System, and for other purposes.",
@@ -2533,32 +2889,44 @@ const LEGISLATION_DATA = [
   {
     "name": "Farm, Food, and National Security Act of 2026",
     "meta": "H.R. 7567 · Passed House · Agriculture",
-    "id": "hr-119-7567"
+    "id": "hr-119-7567",
+    "rc": 11,
+    "mm": 0.005
   },
   {
     "name": "Cashless Bail Reporting Act",
     "meta": "H.R. 5625 · Passed House · Criminal Justice",
-    "id": "hr-119-5625"
+    "id": "hr-119-5625",
+    "rc": 1,
+    "mm": 0.453
   },
   {
     "name": "Keeping Violent Offenders Off Our Streets Act of 2025",
     "meta": "H.R. 6260 · Passed House · Criminal Justice",
-    "id": "hr-119-6260"
+    "id": "hr-119-6260",
+    "rc": 2,
+    "mm": 0.007
   },
   {
     "name": "Monitor Accountability Act",
     "meta": "H.R. 8365 · Passed House · Law",
-    "id": "hr-119-8365"
+    "id": "hr-119-8365",
+    "rc": 2,
+    "mm": 0.007
   },
   {
     "name": "Nationwide Consumer and Fuel Retailer Choice Act of 2025",
     "meta": "H.R. 1346 · Passed House · Climate & Energy",
-    "id": "hr-119-1346"
+    "id": "hr-119-1346",
+    "rc": 2,
+    "mm": 0.036
   },
   {
     "name": "Save Our Shrimpers Act",
     "meta": "H.R. 2071 · Passed House · Trade",
-    "id": "hr-119-2071"
+    "id": "hr-119-2071",
+    "rc": 1,
+    "mm": 0.912
   },
   {
     "name": "NICS Data Reporting Act of 2026",
@@ -2568,7 +2936,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Combating Organized Retail Crime Act of 2025",
     "meta": "H.R. 2853 · Passed House · Criminal Justice",
-    "id": "hr-119-2853"
+    "id": "hr-119-2853",
+    "rc": 1,
+    "mm": 0.706
   },
   {
     "name": "Advancing the Mentor-Protégé Program for Small Financial Institutions Act",
@@ -2643,7 +3013,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Clergy Act",
     "meta": "H.R. 227 · Passed House · Social Policy",
-    "id": "hr-119-227"
+    "id": "hr-119-227",
+    "rc": 1,
+    "mm": 0.972
   },
   {
     "name": "Survivor Justice Tax Prevention Act",
@@ -2668,7 +3040,9 @@ const LEGISLATION_DATA = [
   {
     "name": "HEATS Act",
     "meta": "H.R. 5587 · Passed House · Energy",
-    "id": "hr-119-5587"
+    "id": "hr-119-5587",
+    "rc": 1,
+    "mm": 0.108
   },
   {
     "name": "New Opportunities for Business Ownership and Self-Sufficiency Act",
@@ -2693,7 +3067,9 @@ const LEGISLATION_DATA = [
   {
     "name": "IRS Whistleblower Program Improvement Act",
     "meta": "H.R. 7959 · Passed House · Tax Policy",
-    "id": "hr-119-7959"
+    "id": "hr-119-7959",
+    "rc": 1,
+    "mm": 0.944
   },
   {
     "name": "Taxpayer Experience Improvement Act",
@@ -2708,12 +3084,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Reliable Federal Infrastructure Act",
     "meta": "H.R. 4690 · Passed House · Energy",
-    "id": "hr-119-4690"
+    "id": "hr-119-4690",
+    "rc": 2,
+    "mm": 0.026
   },
   {
     "name": "FIRE Act",
     "meta": "H.R. 6387 · Passed House · Climate & Energy",
-    "id": "hr-119-6387"
+    "id": "hr-119-6387",
+    "rc": 2,
+    "mm": 0.019
   },
   {
     "name": "Women and Lung Cancer Research and Preventive Services Act of 2025",
@@ -2723,7 +3103,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Improving Care in Rural America Reauthorization Act of 2025",
     "meta": "H.R. 2493 · Passed House · Healthcare",
-    "id": "hr-119-2493"
+    "id": "hr-119-2493",
+    "rc": 1,
+    "mm": 0.98
   },
   {
     "name": "To amend the Public Health Service Act to reauthorize the telehealth network and telehealth resource centers grant programs.",
@@ -2733,7 +3115,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Kari's Law Reporting Act",
     "meta": "H.R. 5201 · Passed House · Technology",
-    "id": "hr-119-5201"
+    "id": "hr-119-5201",
+    "rc": 1,
+    "mm": 0.976
   },
   {
     "name": "CHILD Act of 2025",
@@ -2753,17 +3137,23 @@ const LEGISLATION_DATA = [
   {
     "name": "To require the Secretary of Homeland Security to designate Haiti for temporary protected status.",
     "meta": "H.R. 1689 · Passed House · Foreign Policy",
-    "id": "hr-119-1689"
+    "id": "hr-119-1689",
+    "rc": 1,
+    "mm": 0.047
   },
   {
     "name": "Expediting Federal Broadband Deployment Reviews Act",
     "meta": "H.R. 1681 · Passed House · Technology",
-    "id": "hr-119-1681"
+    "id": "hr-119-1681",
+    "rc": 1,
+    "mm": 0.954
   },
   {
     "name": "Emergency Reporting Act",
     "meta": "H.R. 5200 · Passed House · Technology",
-    "id": "hr-119-5200"
+    "id": "hr-119-5200",
+    "rc": 1,
+    "mm": 0.964
   },
   {
     "name": "Mystic Alerts Act",
@@ -2778,17 +3168,23 @@ const LEGISLATION_DATA = [
   {
     "name": "FENCES Act",
     "meta": "H.R. 6409 · Passed House · Climate & Energy",
-    "id": "hr-119-6409"
+    "id": "hr-119-6409",
+    "rc": 2,
+    "mm": 0.005
   },
   {
     "name": "RED Tape Act",
     "meta": "H.R. 6398 · Passed House · Climate & Energy",
-    "id": "hr-119-6398"
+    "id": "hr-119-6398",
+    "rc": 2,
+    "mm": 0.007
   },
   {
     "name": "Emergency Conservation Program Improvement Act of 2025",
     "meta": "H.R. 1011 · Passed House · Agriculture",
-    "id": "hr-119-1011"
+    "id": "hr-119-1011",
+    "rc": 1,
+    "mm": 0.951
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 2407 State Route 71, Suite 1, in Spring Lake, New Jersey, as the \"James J. Howard Post Office\".",
@@ -2877,7 +3273,9 @@ const LEGISLATION_DATA = [
   {
     "name": "ALERT Act",
     "meta": "H.R. 7613 · Passed House · Infrastructure",
-    "id": "hr-119-7613"
+    "id": "hr-119-7613",
+    "rc": 1,
+    "mm": 0.951
   },
   {
     "name": "Count the Crimes to Cut Act",
@@ -2887,12 +3285,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Defending American Property Abroad Act of 2026",
     "meta": "H.R. 7084 · Passed House · Infrastructure",
-    "id": "hr-119-7084"
+    "id": "hr-119-7084",
+    "rc": 1,
+    "mm": 0.202
   },
   {
     "name": "Pay Our Homeland Defenders Act",
     "meta": "H.R. 8029 · Passed House · Economy",
-    "id": "hr-119-8029"
+    "id": "hr-119-8029",
+    "rc": 2,
+    "mm": 0.012
   },
   {
     "name": "Hershel ‘Woody' Williams National Medal of Honor Monument Location Act",
@@ -2942,7 +3344,9 @@ const LEGISLATION_DATA = [
   {
     "name": "American Water Stewardship Act",
     "meta": "H.R. 6422 · Passed House · Climate & Energy",
-    "id": "hr-119-6422"
+    "id": "hr-119-6422",
+    "rc": 1,
+    "mm": 0.844
   },
   {
     "name": "Recreational Drone Empowerment Act",
@@ -3012,22 +3416,30 @@ const LEGISLATION_DATA = [
   {
     "name": "Protecting Access for Hunters and Anglers Act",
     "meta": "H.R. 556 · Passed House · Public Lands",
-    "id": "hr-119-556"
+    "id": "hr-119-556",
+    "rc": 2,
+    "mm": 0.007
   },
   {
     "name": "Deporting Fraudsters Act of 2026",
     "meta": "H.R. 1958 · Passed House · Immigration",
-    "id": "hr-119-1958"
+    "id": "hr-119-1958",
+    "rc": 1,
+    "mm": 0.108
   },
   {
     "name": "Federal Working Animal Protection Act",
     "meta": "H.R. 4638 · Passed House · Immigration",
-    "id": "hr-119-4638"
+    "id": "hr-119-4638",
+    "rc": 1,
+    "mm": 0.091
   },
   {
     "name": "MAWS Act of 2026",
     "meta": "H.R. 4294 · Passed House · Public Lands",
-    "id": "hr-119-4294"
+    "id": "hr-119-4294",
+    "rc": 1,
+    "mm": 0.658
   },
   {
     "name": "Post-Disaster Reforestation and Restoration Act",
@@ -3042,7 +3454,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Mining Regulatory Clarity Act",
     "meta": "H.R. 1366 · Passed House · Climate & Energy",
-    "id": "hr-119-1366"
+    "id": "hr-119-1366",
+    "rc": 2,
+    "mm": 0.019
   },
   {
     "name": "Enhanced Iran Sanctions Act of 2025",
@@ -3122,12 +3536,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Territorial Student Access to Higher Education Act",
     "meta": "H.R. 6472 · Passed House · Education",
-    "id": "hr-119-6472"
+    "id": "hr-119-6472",
+    "rc": 1,
+    "mm": 0.66
   },
   {
     "name": "Department of Homeland Security Appropriations Act, 2026",
     "meta": "H.R. 7744 · Passed House · Economy",
-    "id": "hr-119-7744"
+    "id": "hr-119-7744",
+    "rc": 2,
+    "mm": 0.012
   },
   {
     "name": "ACRES Act",
@@ -3212,17 +3630,23 @@ const LEGISLATION_DATA = [
   {
     "name": "Home Appliance Protection and Affordability Act",
     "meta": "H.R. 4626 · Passed House · Energy",
-    "id": "hr-119-4626"
+    "id": "hr-119-4626",
+    "rc": 2,
+    "mm": 0.027
   },
   {
     "name": "Homeowner Energy Freedom Act",
     "meta": "H.R. 4758 · Passed House · Energy",
-    "id": "hr-119-4758"
+    "id": "hr-119-4758",
+    "rc": 2,
+    "mm": 0.025
   },
   {
     "name": "Information Quality Assurance Act of 2025",
     "meta": "H.R. 6329 · Passed House · Government",
-    "id": "hr-119-6329"
+    "id": "hr-119-6329",
+    "rc": 1,
+    "mm": 0.994
   },
   {
     "name": "ACERO Act",
@@ -3232,7 +3656,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Law-Enforcement Innovate to De-Escalate Act",
     "meta": "H.R. 2189 · Passed House · Criminal Justice",
-    "id": "hr-119-2189"
+    "id": "hr-119-2189",
+    "rc": 1,
+    "mm": 0.115
   },
   {
     "name": "ASCEND Act",
@@ -3252,12 +3678,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Undersea Cable Protection Act of 2025",
     "meta": "H.R. 261 · Passed House · Public Lands",
-    "id": "hr-119-261"
+    "id": "hr-119-261",
+    "rc": 2,
+    "mm": 0.005
   },
   {
     "name": "Securing America’s Critical Minerals Supply Act",
     "meta": "H.R. 3617 · Passed House · Energy",
-    "id": "hr-119-3617"
+    "id": "hr-119-3617",
+    "rc": 2,
+    "mm": 0.002
   },
   {
     "name": "$2.50 for America’s 250th Act",
@@ -3267,12 +3697,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Relating to a national emergency by the President on February 1, 2025.",
     "meta": "H.J.Res. 72 · Passed House · Immigration",
-    "id": "hjres-119-72"
+    "id": "hjres-119-72",
+    "rc": 1,
+    "mm": 0.019
   },
   {
     "name": "PROTECT Taiwan Act",
     "meta": "H.R. 1531 · Passed House · Foreign Policy",
-    "id": "hr-119-1531"
+    "id": "hr-119-1531",
+    "rc": 1,
+    "mm": 0.99
   },
   {
     "name": "BRAVE Burma Act",
@@ -3297,17 +3731,23 @@ const LEGISLATION_DATA = [
   {
     "name": "Breaking the Gridlock Act",
     "meta": "H.R. 1834 · Passed House · Government",
-    "id": "hr-119-1834"
+    "id": "hr-119-1834",
+    "rc": 1,
+    "mm": 0.08
   },
   {
     "name": "AGOA Extension Act",
     "meta": "H.R. 6500 · Passed House · Trade",
-    "id": "hr-119-6500"
+    "id": "hr-119-6500",
+    "rc": 1,
+    "mm": 0.726
   },
   {
     "name": "Critical Mineral Dominance Act",
     "meta": "H.R. 4090 · Passed House · Energy",
-    "id": "hr-119-4090"
+    "id": "hr-119-4090",
+    "rc": 2,
+    "mm": 0.007
   },
   {
     "name": "To require the Secretary of Agriculture to convey the Pleasant Valley Ranger District Administrative Site to Gila County, Arizona.",
@@ -3327,7 +3767,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Veterans Readiness and Employment Improvement Act of 2025",
     "meta": "H.R. 980 · Passed House · Defense",
-    "id": "hr-119-980"
+    "id": "hr-119-980",
+    "rc": 1,
+    "mm": 0.99
   },
   {
     "name": "To amend title 36, United States Code, to move the place of incorporation and domicile of the National Woman's Relief Corps to Illinois, to move the principal office of such Corps to Murphysboro, Illinois, and for other purposes.",
@@ -3342,7 +3784,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Ernest Peltz Accrued Veterans Benefits Act",
     "meta": "H.R. 3123 · Passed House · Defense",
-    "id": "hr-119-3123"
+    "id": "hr-119-3123",
+    "rc": 1,
+    "mm": 0.995
   },
   {
     "name": "Veterans Law Judge Experience Act of 2025",
@@ -3357,7 +3801,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Protecting Prudent Investment of Retirement Savings Act",
     "meta": "H.R. 2988 · Passed House · Labor",
-    "id": "hr-119-2988"
+    "id": "hr-119-2988",
+    "rc": 3,
+    "mm": 0.01
   },
   {
     "name": "Northern Mariana Islands Small Business Access Act",
@@ -3367,12 +3813,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Main Street Parity Act",
     "meta": "H.R. 5763 · Passed House · Commerce",
-    "id": "hr-119-5763"
+    "id": "hr-119-5763",
+    "rc": 1,
+    "mm": 0.959
   },
   {
     "name": "AI for Main Street Act",
     "meta": "H.R. 5764 · Passed House · Commerce",
-    "id": "hr-119-5764"
+    "id": "hr-119-5764",
+    "rc": 1,
+    "mm": 0.932
   },
   {
     "name": "504 Program Risk Oversight Act",
@@ -3387,22 +3837,30 @@ const LEGISLATION_DATA = [
   {
     "name": "Pregnant Students’ Rights Act",
     "meta": "H.R. 6359 · Passed House · Education",
-    "id": "hr-119-6359"
+    "id": "hr-119-6359",
+    "rc": 2,
+    "mm": 0.007
   },
   {
     "name": "Supporting Pregnant and Parenting Women and Families Act",
     "meta": "H.R. 6945 · Passed House · Social Policy",
-    "id": "hr-119-6945"
+    "id": "hr-119-6945",
+    "rc": 2,
+    "mm": 0.009
   },
   {
     "name": "SHOWER Act",
     "meta": "H.R. 4593 · Passed House · Energy",
-    "id": "hr-119-4593"
+    "id": "hr-119-4593",
+    "rc": 2,
+    "mm": 0.014
   },
   {
     "name": "Financial Services and General Government and National Security, Department of State, and Related Programs Appropriations Act, 2026",
     "meta": "H.R. 7006 · Passed House · Economy",
-    "id": "hr-119-7006"
+    "id": "hr-119-7006",
+    "rc": 3,
+    "mm": 0.224
   },
   {
     "name": "Crime Victims Fund Stabilization Act of 2025",
@@ -3412,7 +3870,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Remote Access Security Act",
     "meta": "H.R. 2683 · Passed House · Trade",
-    "id": "hr-119-2683"
+    "id": "hr-119-2683",
+    "rc": 1,
+    "mm": 0.887
   },
   {
     "name": "Save Local Business Act",
@@ -3422,7 +3882,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Haiti Economic Lift Program Extension Act",
     "meta": "H.R. 6504 · Passed House · Trade",
-    "id": "hr-119-6504"
+    "id": "hr-119-6504",
+    "rc": 1,
+    "mm": 0.769
   },
   {
     "name": "Child Predators Accountability Act",
@@ -3442,7 +3904,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Affordable HOMES Act",
     "meta": "H.R. 5184 · Passed House · Energy",
-    "id": "hr-119-5184"
+    "id": "hr-119-5184",
+    "rc": 1,
+    "mm": 0.283
   },
   {
     "name": "National Earthquake Hazards Reduction Program Reauthorization Act of 2025",
@@ -3472,32 +3936,44 @@ const LEGISLATION_DATA = [
   {
     "name": "Do No Harm in Medicaid Act",
     "meta": "H.R. 498 · Passed House · Healthcare",
-    "id": "hr-119-498"
+    "id": "hr-119-498",
+    "rc": 2,
+    "mm": 0.019
   },
   {
     "name": "Pet and Livestock Protection Act",
     "meta": "H.R. 845 · Passed House · Climate & Energy",
-    "id": "hr-119-845"
+    "id": "hr-119-845",
+    "rc": 2,
+    "mm": 0.017
   },
   {
     "name": "Protect Children’s Innocence Act",
     "meta": "H.R. 3492 · Passed House · Criminal Justice",
-    "id": "hr-119-3492"
+    "id": "hr-119-3492",
+    "rc": 2,
+    "mm": 0.012
   },
   {
     "name": "Reliable Power Act",
     "meta": "H.R. 3616 · Passed House · Energy",
-    "id": "hr-119-3616"
+    "id": "hr-119-3616",
+    "rc": 1,
+    "mm": 0.051
   },
   {
     "name": "SPEED Act",
     "meta": "H.R. 4776 · Passed House · Climate & Energy",
-    "id": "hr-119-4776"
+    "id": "hr-119-4776",
+    "rc": 5,
+    "mm": 0.012
   },
   {
     "name": "Lower Health Care Premiums for All Americans Act",
     "meta": "H.R. 6703 · Passed House · Healthcare",
-    "id": "hr-119-6703"
+    "id": "hr-119-6703",
+    "rc": 2,
+    "mm": 0.012
   },
   {
     "name": "Caring for Veterans and Strengthening National Security Act",
@@ -3507,12 +3983,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Power Plant Reliability Act of 2025",
     "meta": "H.R. 3632 · Passed House · Energy",
-    "id": "hr-119-3632"
+    "id": "hr-119-3632",
+    "rc": 2,
+    "mm": 0.026
   },
   {
     "name": "Kayla Hamilton Act",
     "meta": "H.R. 4371 · Passed House · Criminal Justice",
-    "id": "hr-119-4371"
+    "id": "hr-119-4371",
+    "rc": 2,
+    "mm": 0.023
   },
   {
     "name": "FDA Modernization Act 3.0",
@@ -3587,7 +4067,9 @@ const LEGISLATION_DATA = [
   {
     "name": "To require the Secretary of Agriculture to convey a parcel of property of the Forest Service to Perry County, Arkansas, and for other purposes.",
     "meta": "H.R. 3187 · Passed House · Public Lands",
-    "id": "hr-119-3187"
+    "id": "hr-119-3187",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "ESTUARIES Act",
@@ -3627,32 +4109,44 @@ const LEGISLATION_DATA = [
   {
     "name": "Protect America's Workforce Act",
     "meta": "H.R. 2550 · Passed House · Labor",
-    "id": "hr-119-2550"
+    "id": "hr-119-2550",
+    "rc": 1,
+    "mm": 0.085
   },
   {
     "name": "Incentivizing New Ventures and Economic Strength Through Capital Formation Act of 2025",
     "meta": "H.R. 3383 · Passed House · Financial Regulation",
-    "id": "hr-119-3383"
+    "id": "hr-119-3383",
+    "rc": 4,
+    "mm": 0.002
   },
   {
     "name": "Electric Supply Chain Act",
     "meta": "H.R. 3638 · Passed House · Energy",
-    "id": "hr-119-3638"
+    "id": "hr-119-3638",
+    "rc": 1,
+    "mm": 0.254
   },
   {
     "name": "State Planning for Reliability and Affordability Act",
     "meta": "H.R. 3628 · Passed House · Energy",
-    "id": "hr-119-3628"
+    "id": "hr-119-3628",
+    "rc": 1,
+    "mm": 0.026
   },
   {
     "name": "Improving Interagency Coordination for Pipeline Reviews Act",
     "meta": "H.R. 3668 · Passed House · Energy",
-    "id": "hr-119-3668"
+    "id": "hr-119-3668",
+    "rc": 2,
+    "mm": 0.025
   },
   {
     "name": "PERMIT Act",
     "meta": "H.R. 3898 · Passed House · Climate & Energy",
-    "id": "hr-119-3898"
+    "id": "hr-119-3898",
+    "rc": 2,
+    "mm": 0.014
   },
   {
     "name": "Crow Tribe Water Rights Settlement Amendments Act of 2025",
@@ -3762,7 +4256,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Make SWAPs Efficient Act of 2025",
     "meta": "H.R. 1676 · Passed House · Public Lands",
-    "id": "hr-119-1676"
+    "id": "hr-119-1676",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 840 Front Street in Casselton, North Dakota, as the \"Commander Delbert Austin Olson Post Office\".",
@@ -3835,37 +4331,51 @@ const LEGISLATION_DATA = [
   {
     "name": "Unlocking our Domestic LNG Potential Act of 2025",
     "meta": "H.R. 1949 · Passed House · Energy",
-    "id": "hr-119-1949"
+    "id": "hr-119-1949",
+    "rc": 1,
+    "mm": 0.072
   },
   {
     "name": "Department of Defense Appropriations Act, 2026",
     "meta": "H.R. 4016 · Passed House · Economy",
-    "id": "hr-119-4016"
+    "id": "hr-119-4016",
+    "rc": 10,
+    "mm": 0.019
   },
   {
     "name": "Combating the Lies of Authoritarians in School Systems Act",
     "meta": "H.R. 1005 · Passed House · Education",
-    "id": "hr-119-1005"
+    "id": "hr-119-1005",
+    "rc": 1,
+    "mm": 0.158
   },
   {
     "name": "PROTECT Our Kids Act",
     "meta": "H.R. 1069 · Passed House · Education",
-    "id": "hr-119-1069"
+    "id": "hr-119-1069",
+    "rc": 1,
+    "mm": 0.202
   },
   {
     "name": "Transparency in Reporting of Adversarial Contributions to Education Act",
     "meta": "H.R. 1049 · Passed House · Education",
-    "id": "hr-119-1049"
+    "id": "hr-119-1049",
+    "rc": 1,
+    "mm": 0.196
   },
   {
     "name": "Small Business Regulatory Reduction Act of 2025",
     "meta": "H.R. 2965 · Passed House · Commerce",
-    "id": "hr-119-2965"
+    "id": "hr-119-2965",
+    "rc": 1,
+    "mm": 0.08
   },
   {
     "name": "DUMP Red Tape Act",
     "meta": "H.R. 4305 · Passed House · Commerce",
-    "id": "hr-119-4305"
+    "id": "hr-119-4305",
+    "rc": 1,
+    "mm": 0.296
   },
   {
     "name": "No Immigration Benefits for Hamas Terrorists Act of 2025",
@@ -3895,7 +4405,9 @@ const LEGISLATION_DATA = [
   {
     "name": "No New Burma Funds Act",
     "meta": "H.R. 4423 · Passed House · Foreign Policy",
-    "id": "hr-119-4423"
+    "id": "hr-119-4423",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Expanding WKSI Eligibility Act",
@@ -3935,7 +4447,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Social Security Child Protection Act of 2025",
     "meta": "H.R. 5348 · Passed House · Social Policy",
-    "id": "hr-119-5348"
+    "id": "hr-119-5348",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Improving Social Security’s Service to Victims of Identity Theft Act",
@@ -3955,7 +4469,9 @@ const LEGISLATION_DATA = [
   {
     "name": "REFINER Act",
     "meta": "H.R. 3109 · Passed House · Energy",
-    "id": "hr-119-3109"
+    "id": "hr-119-3109",
+    "rc": 1,
+    "mm": 0.133
   },
   {
     "name": "Courthouse Affordability and Space Efficiency Act of 2025",
@@ -3985,7 +4501,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Enhancing Stakeholder Support and Outreach for Preparedness Grants Act",
     "meta": "H.R. 4058 · Passed House · Emergency Management",
-    "id": "hr-119-4058"
+    "id": "hr-119-4058",
+    "rc": 1,
+    "mm": 0.788
   },
   {
     "name": "Combatting International Drug Trafficking and Human Smuggling Partnership Act of 2025",
@@ -4000,17 +4518,23 @@ const LEGISLATION_DATA = [
   {
     "name": "Common-Sense Law Enforcement and Accountability Now in DC Act of 2025",
     "meta": "H.R. 5107 · Passed House · Criminal Justice",
-    "id": "hr-119-5107"
+    "id": "hr-119-5107",
+    "rc": 1,
+    "mm": 0.102
   },
   {
     "name": "District of Columbia Cash Bail Reform Act of 2025",
     "meta": "H.R. 5214 · Passed House · Criminal Justice",
-    "id": "hr-119-5214"
+    "id": "hr-119-5214",
+    "rc": 1,
+    "mm": 0.139
   },
   {
     "name": "To repeal certain provisions relating to notification to Senate offices regarding legal process on disclosure of Senate data, and for other purposes.",
     "meta": "H.R. 6019 · Passed House · Government",
-    "id": "hr-119-6019"
+    "id": "hr-119-6019",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "STEWARD Act of 2025",
@@ -4040,7 +4564,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Department of Homeland Security Vehicular Terrorism Prevention and Mitigation Act of 2025",
     "meta": "H.R. 1608 · Passed House · Infrastructure",
-    "id": "hr-119-1608"
+    "id": "hr-119-1608",
+    "rc": 1,
+    "mm": 0.928
   },
   {
     "name": "DHS Intelligence Rotational Assignment Program and Law Enforcement Support Act",
@@ -4055,7 +4581,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Strengthening Cyber Resilience Against State-Sponsored Threats Act",
     "meta": "H.R. 2659 · Passed House · Technology",
-    "id": "hr-119-2659"
+    "id": "hr-119-2659",
+    "rc": 1,
+    "mm": 0.961
   },
   {
     "name": "PILLAR Act",
@@ -4070,7 +4598,9 @@ const LEGISLATION_DATA = [
   {
     "name": "National Defense Authorization Act for Fiscal Year 2026",
     "meta": "S. 2296 · Passed Senate · Defense",
-    "id": "s-119-2296"
+    "id": "s-119-2296",
+    "rc": 3,
+    "mm": 0.588
   },
   {
     "name": "NET Act",
@@ -4090,17 +4620,23 @@ const LEGISLATION_DATA = [
   {
     "name": "A joint resolution terminating the national emergency declared to impose duties on articles imported from Canada.",
     "meta": "S.J.Res. 77 · Passed Senate · Trade",
-    "id": "sjres-119-77"
+    "id": "sjres-119-77",
+    "rc": 1,
+    "mm": 0.042
   },
   {
     "name": "A joint resolution terminating the national emergency declared to impose duties on articles imported from Brazil.",
     "meta": "S.J.Res. 81 · Passed Senate · Trade",
-    "id": "sjres-119-81"
+    "id": "sjres-119-81",
+    "rc": 1,
+    "mm": 0.04
   },
   {
     "name": "A joint resolution terminating the national emergency declared to impose global tariffs.",
     "meta": "S.J.Res. 88 · Passed Senate · Trade",
-    "id": "sjres-119-88"
+    "id": "sjres-119-88",
+    "rc": 1,
+    "mm": 0.041
   },
   {
     "name": "Lake Winnibigoshish Land Exchange Act of 2025",
@@ -4155,22 +4691,30 @@ const LEGISLATION_DATA = [
   {
     "name": "Streamlining Procurement for Effective Execution and Delivery and National Defense Authorization Act for Fiscal Year 2026",
     "meta": "H.R. 3838 · Passed House · Defense",
-    "id": "hr-119-3838"
+    "id": "hr-119-3838",
+    "rc": 19,
+    "mm": 0.019
   },
   {
     "name": "GRID Power Act",
     "meta": "H.R. 1047 · Passed House · Energy",
-    "id": "hr-119-1047"
+    "id": "hr-119-1047",
+    "rc": 1,
+    "mm": 0.024
   },
   {
     "name": "National Coal Council Reestablishment Act",
     "meta": "H.R. 3015 · Passed House · Energy",
-    "id": "hr-119-3015"
+    "id": "hr-119-3015",
+    "rc": 1,
+    "mm": 0.019
   },
   {
     "name": "Promoting Cross-border Energy Infrastructure Act",
     "meta": "H.R. 3062 · Passed House · Energy",
-    "id": "hr-119-3062"
+    "id": "hr-119-3062",
+    "rc": 1,
+    "mm": 0.049
   },
   {
     "name": "Delivering Digitally to Our Veterans Act of 2025",
@@ -4180,27 +4724,37 @@ const LEGISLATION_DATA = [
   {
     "name": "District of Columbia Policing Protection Act of 2025",
     "meta": "H.R. 5143 · Passed House · Criminal Justice",
-    "id": "hr-119-5143"
+    "id": "hr-119-5143",
+    "rc": 1,
+    "mm": 0.148
   },
   {
     "name": "District of Columbia Judicial Nominations Reform Act of 2025",
     "meta": "H.R. 5125 · Passed House · Law",
-    "id": "hr-119-5125"
+    "id": "hr-119-5125",
+    "rc": 1,
+    "mm": 0.016
   },
   {
     "name": "Honoring Our Heroes Act of 2025",
     "meta": "H.R. 2721 · Passed House · Defense",
-    "id": "hr-119-2721"
+    "id": "hr-119-2721",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "D. C. Criminal Reforms to Immediately Make Everyone Safe Act of 2025",
     "meta": "H.R. 4922 · Passed House · Criminal Justice",
-    "id": "hr-119-4922"
+    "id": "hr-119-4922",
+    "rc": 1,
+    "mm": 0.146
   },
   {
     "name": "To lower the age at which a minor may be tried as an adult for certain criminal offenses in the District of Columbia to 14 years of age.",
     "meta": "H.R. 5140 · Passed House · Criminal Justice",
-    "id": "hr-119-5140"
+    "id": "hr-119-5140",
+    "rc": 1,
+    "mm": 0.051
   },
   {
     "name": "Protecting Veteran Access to Telemedicine Services Act of 2025",
@@ -4210,7 +4764,9 @@ const LEGISLATION_DATA = [
   {
     "name": "TICKET Act",
     "meta": "H.R. 1402 · Passed House · Commerce",
-    "id": "hr-119-1402"
+    "id": "hr-119-1402",
+    "rc": 1,
+    "mm": 0.929
   },
   {
     "name": "Women Veterans Cancer Care Coordination Act",
@@ -4230,7 +4786,9 @@ const LEGISLATION_DATA = [
   {
     "name": "TRAVEL Act of 2025",
     "meta": "H.R. 3400 · Passed House · Defense",
-    "id": "hr-119-3400"
+    "id": "hr-119-3400",
+    "rc": 1,
+    "mm": 0.893
   },
   {
     "name": "Water Resources Technical Assistance Review Act",
@@ -4270,7 +4828,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Stop Illegal Entry Act of 2025",
     "meta": "H.R. 3486 · Passed House · Immigration",
-    "id": "hr-119-3486"
+    "id": "hr-119-3486",
+    "rc": 1,
+    "mm": 0.069
   },
   {
     "name": "Harmful Algal Bloom and Hypoxia Research and Control Amendments Act of 2025",
@@ -4295,7 +4855,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Energy and Water Development and Related Agencies Appropriations Act, 2026",
     "meta": "H.R. 4553 · Passed House · Economy",
-    "id": "hr-119-4553"
+    "id": "hr-119-4553",
+    "rc": 13,
+    "mm": 0.002
   },
   {
     "name": "Mental Health in Aviation Act of 2025",
@@ -4310,7 +4872,9 @@ const LEGISLATION_DATA = [
   {
     "name": "SPACE Act of 2025",
     "meta": "H.R. 3424 · Passed House · Government",
-    "id": "hr-119-3424"
+    "id": "hr-119-3424",
+    "rc": 1,
+    "mm": 0.995
   },
   {
     "name": "Mid-Atlantic River Basin Commissions Review Act",
@@ -4320,7 +4884,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Personnel Oversight and Shift Tracking Act of 2025",
     "meta": "H.R. 3425 · Passed House · Government",
-    "id": "hr-119-3425"
+    "id": "hr-119-3425",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Facility for Runway Operations and Safe Transportation Act",
@@ -4335,7 +4901,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Stop Chinese Fentanyl Act of 2025",
     "meta": "H.R. 747 · Passed House · Foreign Policy",
-    "id": "hr-119-747"
+    "id": "hr-119-747",
+    "rc": 1,
+    "mm": 0.981
   },
   {
     "name": "Undersea Cable Control Act",
@@ -4365,7 +4933,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Made-in-America Defense Act",
     "meta": "H.R. 4216 · Passed House · Foreign Policy",
-    "id": "hr-119-4216"
+    "id": "hr-119-4216",
+    "rc": 1,
+    "mm": 0.904
   },
   {
     "name": "PARTNER Act",
@@ -4410,17 +4980,23 @@ const LEGISLATION_DATA = [
   {
     "name": "Enhancing Multi-Class Share Disclosures Act",
     "meta": "H.R. 3357 · Passed House · Financial Regulation",
-    "id": "hr-119-3357"
+    "id": "hr-119-3357",
+    "rc": 1,
+    "mm": 0.85
   },
   {
     "name": "Great Lakes Mass Marking Program Act of 2025",
     "meta": "H.R. 1917 · Passed House · Climate & Energy",
-    "id": "hr-119-1917"
+    "id": "hr-119-1917",
+    "rc": 1,
+    "mm": 0.727
   },
   {
     "name": "Coast Guard Authorization Act of 2025",
     "meta": "H.R. 4275 · Passed House · Infrastructure",
-    "id": "hr-119-4275"
+    "id": "hr-119-4275",
+    "rc": 1,
+    "mm": 0.942
   },
   {
     "name": "Law Enforcement Officer and Firefighter Recreation Pass Act",
@@ -4465,7 +5041,9 @@ const LEGISLATION_DATA = [
   {
     "name": "To direct the United States Postal Service to designate single, unique ZIP Codes for certain communities, and for other purposes.",
     "meta": "H.R. 3095 · Passed House · Government",
-    "id": "hr-119-3095"
+    "id": "hr-119-3095",
+    "rc": 1,
+    "mm": 0.393
   },
   {
     "name": "Equal Opportunity for All Investors Act of 2025",
@@ -4475,7 +5053,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Improving Access to Small Business Information Act",
     "meta": "H.R. 3351 · Passed House · Financial Regulation",
-    "id": "hr-119-3351"
+    "id": "hr-119-3351",
+    "rc": 1,
+    "mm": 0.94
   },
   {
     "name": "Greenlighting Growth Act",
@@ -4495,12 +5075,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Youth Poisoning Protection Act",
     "meta": "H.R. 1442 · Passed House · Commerce",
-    "id": "hr-119-1442"
+    "id": "hr-119-1442",
+    "rc": 1,
+    "mm": 0.8
   },
   {
     "name": "Communications Security Act",
     "meta": "H.R. 1717 · Passed House · Technology",
-    "id": "hr-119-1717"
+    "id": "hr-119-1717",
+    "rc": 1,
+    "mm": 0.84
   },
   {
     "name": "Sinkhole Mapping Act of 2025",
@@ -4525,7 +5109,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Understanding Cybersecurity of Mobile Networks Act",
     "meta": "H.R. 1709 · Passed House · Technology",
-    "id": "hr-119-1709"
+    "id": "hr-119-1709",
+    "rc": 1,
+    "mm": 0.946
   },
   {
     "name": "Bolts Ditch Act",
@@ -4545,7 +5131,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Consumer Safety Technology Act",
     "meta": "H.R. 1770 · Passed House · Commerce",
-    "id": "hr-119-1770"
+    "id": "hr-119-1770",
+    "rc": 1,
+    "mm": 0.806
   },
   {
     "name": "Open RAN Outreach Act",
@@ -4565,12 +5153,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Special Interest Alien Reporting Act of 2025",
     "meta": "H.R. 275 · Passed House · Immigration",
-    "id": "hr-119-275"
+    "id": "hr-119-275",
+    "rc": 1,
+    "mm": 0.119
   },
   {
     "name": "Jeremy and Angel Seay and Sergeant Brandon Mendoza Protect Our Communities from DUIs Act of 2025",
     "meta": "H.R. 875 · Passed House · Immigration",
-    "id": "hr-119-875"
+    "id": "hr-119-875",
+    "rc": 1,
+    "mm": 0.212
   },
   {
     "name": "Taiwan Non-Discrimination Act of 2025",
@@ -4620,7 +5212,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Sanction Sea Pirates Act of 2025",
     "meta": "H.R. 1998 · Passed House · Foreign Policy",
-    "id": "hr-119-1998"
+    "id": "hr-119-1998",
+    "rc": 1,
+    "mm": 0.931
   },
   {
     "name": "Access to Small Business Investor Capital Act",
@@ -4650,12 +5244,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Fair Investment Opportunities for Professional Experts Act",
     "meta": "H.R. 3394 · Passed House · Financial Regulation",
-    "id": "hr-119-3394"
+    "id": "hr-119-3394",
+    "rc": 1,
+    "mm": 0.941
   },
   {
     "name": "Promoting Opportunities for Non-Traditional Capital Formation Act",
     "meta": "H.R. 3422 · Passed House · Commerce",
-    "id": "hr-119-3422"
+    "id": "hr-119-3422",
+    "rc": 1,
+    "mm": 0.574
   },
   {
     "name": "Colorado River Basin System Conservation Extension Act",
@@ -4675,17 +5273,23 @@ const LEGISLATION_DATA = [
   {
     "name": "District of Columbia Federal Immigration Compliance Act of 2025",
     "meta": "H.R. 2056 · Passed House · Immigration",
-    "id": "hr-119-2056"
+    "id": "hr-119-2056",
+    "rc": 2,
+    "mm": 0.024
   },
   {
     "name": "To prohibit individuals who are not citizens of the United States from voting in elections in the District of Columbia and to repeal the Local Resident Voting Rights Amendment Act of 2022.",
     "meta": "H.R. 884 · Passed House · Government",
-    "id": "hr-119-884"
+    "id": "hr-119-884",
+    "rc": 1,
+    "mm": 0.285
   },
   {
     "name": "Protecting Our Nation’s Capital Emergency Act",
     "meta": "H.R. 2096 · Passed House · Criminal Justice",
-    "id": "hr-119-2096"
+    "id": "hr-119-2096",
+    "rc": 1,
+    "mm": 0.138
   },
   {
     "name": "DETERRENCE Act",
@@ -4720,7 +5324,9 @@ const LEGISLATION_DATA = [
   {
     "name": "American Cargo for American Ships Act",
     "meta": "H.R. 2035 · Passed House · Infrastructure",
-    "id": "hr-119-2035"
+    "id": "hr-119-2035",
+    "rc": 1,
+    "mm": 0.928
   },
   {
     "name": "To direct the Commandant of the Coast Guard to update the policy of the Coast Guard regarding the use of medication to treat drug overdose, and for other purposes.",
@@ -4735,17 +5341,23 @@ const LEGISLATION_DATA = [
   {
     "name": "American Entrepreneurs First Act of 2025",
     "meta": "H.R. 2966 · Passed House · Commerce",
-    "id": "hr-119-2966"
+    "id": "hr-119-2966",
+    "rc": 1,
+    "mm": 0.066
   },
   {
     "name": "Save SBA from Sanctuary Cities Act of 2025",
     "meta": "H.R. 2931 · Passed House · Commerce",
-    "id": "hr-119-2931"
+    "id": "hr-119-2931",
+    "rc": 2,
+    "mm": 0.019
   },
   {
     "name": "CEASE Act of 2025",
     "meta": "H.R. 2987 · Passed House · Commerce",
-    "id": "hr-119-2987"
+    "id": "hr-119-2987",
+    "rc": 2,
+    "mm": 0.027
   },
   {
     "name": "Transparency and Predictability in Small Business Opportunities Act",
@@ -4770,7 +5382,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Connecting Small Businesses with Career and Technical Education Graduates Act of 2025",
     "meta": "H.R. 1642 · Passed House · Commerce",
-    "id": "hr-119-1642"
+    "id": "hr-119-1642",
+    "rc": 1,
+    "mm": 0.975
   },
   {
     "name": "WOSB Accountability Act",
@@ -4780,7 +5394,9 @@ const LEGISLATION_DATA = [
   {
     "name": "7(a) Loan Agent Oversight Act",
     "meta": "H.R. 1804 · Passed House · Commerce",
-    "id": "hr-119-1804"
+    "id": "hr-119-1804",
+    "rc": 1,
+    "mm": 0.985
   },
   {
     "name": "Securing Semiconductor Supply Chains Act",
@@ -4800,7 +5416,9 @@ const LEGISLATION_DATA = [
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the National Highway Traffic Safety Administration relating to \"Federal Motor Vehicle Safety Standards; Fuel System Integrity of Hydrogen Vehicles; Compressed Hydrogen Storage System Integrity; Incorporation by Reference\".",
     "meta": "S.J.Res. 55 · Passed Senate · Infrastructure",
-    "id": "sjres-119-55"
+    "id": "sjres-119-55",
+    "rc": 12,
+    "mm": 0.052
   },
   {
     "name": "Strategic Ports Reporting Act",
@@ -4815,7 +5433,9 @@ const LEGISLATION_DATA = [
   {
     "name": "ANCHOR Act",
     "meta": "H.R. 1223 · Passed House · Technology",
-    "id": "hr-119-1223"
+    "id": "hr-119-1223",
+    "rc": 1,
+    "mm": 0.948
   },
   {
     "name": "CHIP IN for Veterans Act of 2025",
@@ -4830,12 +5450,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Strengthening the Quad Act",
     "meta": "H.R. 1263 · Passed House · Foreign Policy",
-    "id": "hr-119-1263"
+    "id": "hr-119-1263",
+    "rc": 1,
+    "mm": 0.735
   },
   {
     "name": "Simplifying Forms for Veterans Claims Act",
     "meta": "H.R. 1286 · Passed House · Defense",
-    "id": "hr-119-1286"
+    "id": "hr-119-1286",
+    "rc": 1,
+    "mm": 0.995
   },
   {
     "name": "Automotive Support Services to Improve Safe Transportation Act of 2025",
@@ -4860,17 +5484,23 @@ const LEGISLATION_DATA = [
   {
     "name": "Improving Law Enforcement Officer Safety and Wellness Through Data Act",
     "meta": "H.R. 2240 · Passed House · Criminal Justice",
-    "id": "hr-119-2240"
+    "id": "hr-119-2240",
+    "rc": 1,
+    "mm": 0.947
   },
   {
     "name": "Federal Law Enforcement Officer Service Weapon Purchase Act of 2025",
     "meta": "H.R. 2255 · Passed House · Criminal Justice",
-    "id": "hr-119-2255"
+    "id": "hr-119-2255",
+    "rc": 1,
+    "mm": 0.125
   },
   {
     "name": "LEOSA Reform Act",
     "meta": "H.R. 2243 · Passed House · Criminal Justice",
-    "id": "hr-119-2243"
+    "id": "hr-119-2243",
+    "rc": 1,
+    "mm": 0.085
   },
   {
     "name": "American Music Tourism Act of 2025",
@@ -4910,32 +5540,44 @@ const LEGISLATION_DATA = [
   {
     "name": "Gulf of America Act",
     "meta": "H.R. 276 · Passed House · Public Lands",
-    "id": "hr-119-276"
+    "id": "hr-119-276",
+    "rc": 2,
+    "mm": 0.012
   },
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Federal Communications Commission relating to \"Addressing the Homework Gap Through the E-Rate Program\".",
     "meta": "S.J.Res. 7 · Passed Senate · Technology",
-    "id": "sjres-119-7"
+    "id": "sjres-119-7",
+    "rc": 2,
+    "mm": 0.06
   },
   {
     "name": "DHS Restrictions on Confucius Institutes and Chinese Entities of Concern Act",
     "meta": "H.R. 881 · Passed House · Education",
-    "id": "hr-119-881"
+    "id": "hr-119-881",
+    "rc": 1,
+    "mm": 0.27
   },
   {
     "name": "Stop Forced Organ Harvesting Act of 2025",
     "meta": "H.R. 1503 · Passed House · Foreign Policy",
-    "id": "hr-119-1503"
+    "id": "hr-119-1503",
+    "rc": 1,
+    "mm": 0.995
   },
   {
     "name": "MEGOBARI Act",
     "meta": "H.R. 36 · Passed House · Foreign Policy",
-    "id": "hr-119-36"
+    "id": "hr-119-36",
+    "rc": 1,
+    "mm": 0.785
   },
   {
     "name": "ACES Act",
     "meta": "H.R. 530 · Passed House · Defense",
-    "id": "hr-119-530"
+    "id": "hr-119-530",
+    "rc": 1,
+    "mm": 0.974
   },
   {
     "name": "Economic Espionage Prevention Act",
@@ -4970,12 +5612,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the United States Fish and Wildlife Service relating to \"Endangered and Threatened Wildlife and Plants; Endangered Species Status for the San Francisco Bay-Delta Distinct Population Segment of the Longfin Smelt\".",
     "meta": "H.J.Res. 78 · Passed House · Other",
-    "id": "hjres-119-78"
+    "id": "hjres-119-78",
+    "rc": 1,
+    "mm": 0.051
   },
   {
     "name": "Informing Consumers about Smart Devices Act",
     "meta": "H.R. 859 · Passed House · Commerce",
-    "id": "hr-119-859"
+    "id": "hr-119-859",
+    "rc": 1,
+    "mm": 0.958
   },
   {
     "name": "American Music Tourism Act of 2025",
@@ -4995,7 +5641,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Setting Consumer Standards for Lithium-Ion Batteries Act",
     "meta": "H.R. 973 · Passed House · Commerce",
-    "id": "hr-119-973"
+    "id": "hr-119-973",
+    "rc": 1,
+    "mm": 0.794
   },
   {
     "name": "Hotel Fees Transparency Act of 2025",
@@ -5040,7 +5688,9 @@ const LEGISLATION_DATA = [
   {
     "name": "SAVE Act",
     "meta": "H.R. 22 · Passed House · Government",
-    "id": "hr-119-22"
+    "id": "hr-119-22",
+    "rc": 2,
+    "mm": 0.009
   },
   {
     "name": "VETT Act",
@@ -5050,17 +5700,23 @@ const LEGISLATION_DATA = [
   {
     "name": "Prioritizing Veterans’ Survivors Act",
     "meta": "H.R. 1228 · Passed House · Defense",
-    "id": "hr-119-1228"
+    "id": "hr-119-1228",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "NORRA of 2025",
     "meta": "H.R. 1526 · Passed House · Law",
-    "id": "hr-119-1526"
+    "id": "hr-119-1526",
+    "rc": 2,
+    "mm": 0.012
   },
   {
     "name": "Vietnam Veterans Liver Fluke Cancer Study Act",
     "meta": "H.R. 586 · Passed House · Defense",
-    "id": "hr-119-586"
+    "id": "hr-119-586",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Deliver for Veterans Act",
@@ -5070,17 +5726,23 @@ const LEGISLATION_DATA = [
   {
     "name": "Clear Communication for Veterans Claims Act",
     "meta": "H.R. 1039 · Passed House · Defense",
-    "id": "hr-119-1039"
+    "id": "hr-119-1039",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "A joint resolution terminating the national emergency declared to impose duties on articles imported from Canada.",
     "meta": "S.J.Res. 37 · Passed Senate · Trade",
-    "id": "sjres-119-37"
+    "id": "sjres-119-37",
+    "rc": 1,
+    "mm": 0.03
   },
   {
     "name": "National Taxpayer Advocate Enhancement Act of 2025",
     "meta": "H.R. 997 · Passed House · Tax Policy",
-    "id": "hr-119-997"
+    "id": "hr-119-997",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Electronic Filing and Payment Fairness Act",
@@ -5100,17 +5762,23 @@ const LEGISLATION_DATA = [
   {
     "name": "DETERRENT Act",
     "meta": "H.R. 1048 · Passed House · Education",
-    "id": "hr-119-1048"
+    "id": "hr-119-1048",
+    "rc": 5,
+    "mm": 0.036
   },
   {
     "name": "IMPACT Act",
     "meta": "H.R. 1534 · Passed House · Technology",
-    "id": "hr-119-1534"
+    "id": "hr-119-1534",
+    "rc": 1,
+    "mm": 0.655
   },
   {
     "name": "Cost-Share Accountability Act of 2025",
     "meta": "H.R. 359 · Passed House · Energy",
-    "id": "hr-119-359"
+    "id": "hr-119-359",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Mathematical and Statistical Modeling Education Act",
@@ -5130,7 +5798,9 @@ const LEGISLATION_DATA = [
   {
     "name": "DOE and USDA Interagency Research Act",
     "meta": "H.R. 1326 · Passed House · Agriculture",
-    "id": "hr-119-1326"
+    "id": "hr-119-1326",
+    "rc": 1,
+    "mm": 0.828
   },
   {
     "name": "United States Research Protection Act",
@@ -5155,7 +5825,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Pandemic Unemployment Fraud Enforcement Act",
     "meta": "H.R. 1156 · Passed House · Labor",
-    "id": "hr-119-1156"
+    "id": "hr-119-1156",
+    "rc": 1,
+    "mm": 0.398
   },
   {
     "name": "DHS Biodetection Improvement Act",
@@ -5170,12 +5842,16 @@ const LEGISLATION_DATA = [
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Internal Revenue Service relating to \"Gross Proceeds Reporting by Brokers That Regularly Provide Services Effectuating Digital Asset Sales\".",
     "meta": "S.J.Res. 3 · Passed Senate · Tax Policy",
-    "id": "sjres-119-3"
+    "id": "sjres-119-3",
+    "rc": 2,
+    "mm": 0.429
   },
   {
     "name": "Subterranean Border Defense Act",
     "meta": "H.R. 495 · Passed House · Immigration",
-    "id": "hr-119-495"
+    "id": "hr-119-495",
+    "rc": 1,
+    "mm": 0.995
   },
   {
     "name": "SHIELD Against CCP Act",
@@ -5185,7 +5861,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Research Security and Accountability in DHS Act",
     "meta": "H.R. 901 · Passed House · Technology",
-    "id": "hr-119-901"
+    "id": "hr-119-901",
+    "rc": 1,
+    "mm": 0.995
   },
   {
     "name": "TSA Commuting Fairness Act",
@@ -5195,7 +5873,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Emerging Innovative Border Technologies Act",
     "meta": "H.R. 993 · Passed House · Immigration",
-    "id": "hr-119-993"
+    "id": "hr-119-993",
+    "rc": 1,
+    "mm": 0.957
   },
   {
     "name": "Decoupling from Foreign Adversarial Battery Dependence Act",
@@ -5225,7 +5905,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Mail Traffic Deaths Reporting Act of 2025",
     "meta": "H.R. 758 · Passed House · Government",
-    "id": "hr-119-758"
+    "id": "hr-119-758",
+    "rc": 1,
+    "mm": 0.923
   },
   {
     "name": "Federal Contractor Cybersecurity Vulnerability Reduction Act of 2025",
@@ -5235,7 +5917,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Safe and Smart Federal Purchasing Act",
     "meta": "H.R. 856 · Passed House · Government",
-    "id": "hr-119-856"
+    "id": "hr-119-856",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "GOOD Act",
@@ -5255,17 +5939,23 @@ const LEGISLATION_DATA = [
   {
     "name": "DOE and SBA Research Act",
     "meta": "H.R. 788 · Passed House · Commerce",
-    "id": "hr-119-788"
+    "id": "hr-119-788",
+    "rc": 1,
+    "mm": 0.986
   },
   {
     "name": "Rural Small Business Resilience Act",
     "meta": "H.R. 804 · Passed House · Commerce",
-    "id": "hr-119-804"
+    "id": "hr-119-804",
+    "rc": 1,
+    "mm": 0.962
   },
   {
     "name": "Assisting Small Businesses Not Fraudsters Act",
     "meta": "H.R. 825 · Passed House · Commerce",
-    "id": "hr-119-825"
+    "id": "hr-119-825",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Investing in Main Street Act of 2025",
@@ -5275,7 +5965,9 @@ const LEGISLATION_DATA = [
   {
     "name": "SPUR Act",
     "meta": "H.R. 818 · Passed House · Commerce",
-    "id": "hr-119-818"
+    "id": "hr-119-818",
+    "rc": 1,
+    "mm": 0.878
   },
   {
     "name": "SERV Act",
@@ -5285,17 +5977,23 @@ const LEGISLATION_DATA = [
   {
     "name": "Small Business Advocacy Improvements Act of 2025",
     "meta": "H.R. 832 · Passed House · Commerce",
-    "id": "hr-119-832"
+    "id": "hr-119-832",
+    "rc": 1,
+    "mm": 0.927
   },
   {
     "name": "Midnight Rules Relief Act",
     "meta": "H.R. 77 · Passed House · Government",
-    "id": "hr-119-77"
+    "id": "hr-119-77",
+    "rc": 2,
+    "mm": 0.01
   },
   {
     "name": "Agent Raul Gonzalez Officer Safety Act",
     "meta": "H.R. 35 · Passed House · Criminal Justice",
-    "id": "hr-119-35"
+    "id": "hr-119-35",
+    "rc": 1,
+    "mm": 0.26
   },
   {
     "name": "LACA",
@@ -5310,12 +6008,16 @@ const LEGISLATION_DATA = [
   {
     "name": "China Exchange Rate Transparency Act of 2025",
     "meta": "H.R. 692 · Passed House · Foreign Policy",
-    "id": "hr-119-692"
+    "id": "hr-119-692",
+    "rc": 1,
+    "mm": 0.965
   },
   {
     "name": "Protect Small Businesses from Excessive Paperwork Act of 2025",
     "meta": "H.R. 736 · Passed House · Financial Regulation",
-    "id": "hr-119-736"
+    "id": "hr-119-736",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Credit Union Board Modernization Act",
@@ -5330,17 +6032,23 @@ const LEGISLATION_DATA = [
   {
     "name": "HALT Fentanyl Act",
     "meta": "H.R. 27 · Passed House · Criminal Justice",
-    "id": "hr-119-27"
+    "id": "hr-119-27",
+    "rc": 2,
+    "mm": 0.108
   },
   {
     "name": "Protecting American Energy Production Act",
     "meta": "H.R. 26 · Passed House · Energy",
-    "id": "hr-119-26"
+    "id": "hr-119-26",
+    "rc": 2,
+    "mm": 0.005
   },
   {
     "name": "Laken Riley Act",
     "meta": "H.R. 29 · Passed House · Immigration",
-    "id": "hr-119-29"
+    "id": "hr-119-29",
+    "rc": 1,
+    "mm": 0.248
   },
   {
     "name": "Emergency Wildfire Fighting Technology Act of 2025",
@@ -5355,7 +6063,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Nutria Eradication and Control Reauthorization Act of 2025",
     "meta": "H.R. 776 · Passed House · Other",
-    "id": "hr-119-776"
+    "id": "hr-119-776",
+    "rc": 1,
+    "mm": 0.731
   },
   {
     "name": "9/11 Memorial and Museum Act",
@@ -5365,17 +6075,23 @@ const LEGISLATION_DATA = [
   {
     "name": "Illegitimate Court Counteraction Act",
     "meta": "H.R. 23 · Passed House · Foreign Policy",
-    "id": "hr-119-23"
+    "id": "hr-119-23",
+    "rc": 2,
+    "mm": 0.091
   },
   {
     "name": "Born-Alive Abortion Survivors Protection Act",
     "meta": "H.R. 21 · Passed House · Criminal Justice",
-    "id": "hr-119-21"
+    "id": "hr-119-21",
+    "rc": 2,
+    "mm": 0.026
   },
   {
     "name": "Continued Rapid Ohia Death Response Act of 2025",
     "meta": "H.R. 375 · Passed House · Climate & Energy",
-    "id": "hr-119-375"
+    "id": "hr-119-375",
+    "rc": 1,
+    "mm": 0.705
   },
   {
     "name": "SHARKED Act of 2025",
@@ -5385,32 +6101,44 @@ const LEGISLATION_DATA = [
   {
     "name": "Preventing Violence Against Women by Illegal Aliens Act",
     "meta": "H.R. 30 · Passed House · Immigration",
-    "id": "hr-119-30"
+    "id": "hr-119-30",
+    "rc": 2,
+    "mm": 0.017
   },
   {
     "name": "Tennessee Valley Authority Salary Transparency Act",
     "meta": "H.R. 144 · Passed House · Government",
-    "id": "hr-119-144"
+    "id": "hr-119-144",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "POWER Act of 2025",
     "meta": "H.R. 164 · Passed House · Emergency Management",
-    "id": "hr-119-164"
+    "id": "hr-119-164",
+    "rc": 1,
+    "mm": 0.99
   },
   {
     "name": "To amend the Internal Revenue Code of 1986 to provide special rules for the taxation of certain residents of Taiwan with income from sources within the United States.",
     "meta": "H.R. 33 · Passed House · Tax Policy",
-    "id": "hr-119-33"
+    "id": "hr-119-33",
+    "rc": 1,
+    "mm": 0.995
   },
   {
     "name": "Protection of Women and Girls in Sports Act of 2025",
     "meta": "H.R. 28 · Passed House · Civil Rights",
-    "id": "hr-119-28"
+    "id": "hr-119-28",
+    "rc": 2,
+    "mm": 0.023
   },
   {
     "name": "Post-Disaster Assistance Online Accountability Act",
     "meta": "H.R. 153 · Passed House · Emergency Management",
-    "id": "hr-119-153"
+    "id": "hr-119-153",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Securities and Exchange Commission Real Estate Leasing Authority Revocation Act",
@@ -5420,12 +6148,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Amtrak Executive Bonus Disclosure Act",
     "meta": "H.R. 192 · Passed House · Infrastructure",
-    "id": "hr-119-192"
+    "id": "hr-119-192",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Federal Disaster Assistance Coordination Act",
     "meta": "H.R. 152 · Passed House · Emergency Management",
-    "id": "hr-119-152"
+    "id": "hr-119-152",
+    "rc": 1,
+    "mm": 0.976
   },
   {
     "name": "Wyoming Public Lands Initiative Act of 2023",
@@ -5694,12 +6426,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Midnight Rules Relief Act",
     "meta": "H.R. 115 · Passed House · Government",
-    "id": "hr-118-115"
+    "id": "hr-118-115",
+    "rc": 2,
+    "mm": 0.022
   },
   {
     "name": "Lumbee Fairness Act",
     "meta": "H.R. 1101 · Passed House · Native Americans",
-    "id": "hr-118-1101"
+    "id": "hr-118-1101",
+    "rc": 1,
+    "mm": 0.528
   },
   {
     "name": "Fire Department Repayment Act of 2023",
@@ -5819,7 +6555,9 @@ const LEGISLATION_DATA = [
   {
     "name": "DHS Cybersecurity On-the-Job Training Program Act",
     "meta": "H.R. 3208 · Passed House · Government",
-    "id": "hr-118-3208"
+    "id": "hr-118-3208",
+    "rc": 1,
+    "mm": 0.795
   },
   {
     "name": "Expediting Federal Broadband Deployment Reviews Act",
@@ -5959,7 +6697,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Increasing Baseline Updates Act",
     "meta": "H.R. 9716 · Passed House · Economy",
-    "id": "hr-118-9716"
+    "id": "hr-118-9716",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "PROTECT Our Children Reauthorization Act of 2024",
@@ -5974,7 +6714,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Liberty in Laundry Act",
     "meta": "H.R. 7673 · Passed House · Energy",
-    "id": "hr-118-7673"
+    "id": "hr-118-7673",
+    "rc": 1,
+    "mm": 0.036
   },
   {
     "name": "Amtrak Transparency and Accountability for Passengers and Taxpayers Act",
@@ -5984,7 +6726,9 @@ const LEGISLATION_DATA = [
   {
     "name": "SHIELD Against CCP Act",
     "meta": "H.R. 9668 · Passed House · Immigration",
-    "id": "hr-118-9668"
+    "id": "hr-118-9668",
+    "rc": 1,
+    "mm": 0.981
   },
   {
     "name": "DHS Cybersecurity Internship Program Act",
@@ -6044,32 +6788,44 @@ const LEGISLATION_DATA = [
   {
     "name": "Crucial Communism Teaching Act",
     "meta": "H.R. 5349 · Passed House · Education",
-    "id": "hr-118-5349"
+    "id": "hr-118-5349",
+    "rc": 1,
+    "mm": 0.681
   },
   {
     "name": "Prove It Act of 2024",
     "meta": "H.R. 7198 · Passed House · Government",
-    "id": "hr-118-7198"
+    "id": "hr-118-7198",
+    "rc": 3,
+    "mm": 0.012
   },
   {
     "name": "Information Quality Assurance Act",
     "meta": "H.R. 7219 · Passed House · Government",
-    "id": "hr-118-7219"
+    "id": "hr-118-7219",
+    "rc": 1,
+    "mm": 0.979
   },
   {
     "name": "Special District Grant Accessibility Act",
     "meta": "H.R. 7525 · Passed House · Government",
-    "id": "hr-118-7525"
+    "id": "hr-118-7525",
+    "rc": 1,
+    "mm": 0.858
   },
   {
     "name": "Office of National Drug Control Policy Reauthorization Act of 2024",
     "meta": "H.R. 9598 · Passed House · Criminal Justice",
-    "id": "hr-118-9598"
+    "id": "hr-118-9598",
+    "rc": 1,
+    "mm": 0.995
   },
   {
     "name": "Maurice D. Hinchey Hudson River Valley National Heritage Area Enhancement Act",
     "meta": "H.R. 390 · Passed House · Public Lands",
-    "id": "hr-118-390"
+    "id": "hr-118-390",
+    "rc": 1,
+    "mm": 0.919
   },
   {
     "name": "Strengthening Agency Management and Oversight of Software Assets Act",
@@ -6186,12 +6942,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Safe and Smart Federal Purchasing Act",
     "meta": "H.R. 5528 · Passed House · Government",
-    "id": "hr-118-5528"
+    "id": "hr-118-5528",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Stop Terror-Financing and Tax Penalties on American Hostages Act",
     "meta": "H.R. 9495 · Passed House · Tax Policy",
-    "id": "hr-118-9495"
+    "id": "hr-118-9495",
+    "rc": 2,
+    "mm": 0.087
   },
   {
     "name": "A bill to amend the Native American Tourism and Improving Visitor Experience Act to authorize grants to Indian tribes, tribal organizations, and Native Hawaiian organizations, and for other purposes.",
@@ -6221,12 +6981,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Fort San Gerónimo Preservation Act",
     "meta": "H.R. 359 · Passed House · Public Lands",
-    "id": "hr-118-359"
+    "id": "hr-118-359",
+    "rc": 1,
+    "mm": 0.875
   },
   {
     "name": "North Korean Human Rights Reauthorization Act of 2023",
     "meta": "H.R. 3012 · Passed House · Foreign Policy",
-    "id": "hr-118-3012"
+    "id": "hr-118-3012",
+    "rc": 1,
+    "mm": 0.801
   },
   {
     "name": "American Battlefield Protection Program Enhancement Act of 2023",
@@ -6241,12 +7005,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Coordinator for Afghan Relocation Efforts Authorization Act of 2024",
     "meta": "H.R. 8368 · Passed House · Foreign Policy",
-    "id": "hr-118-8368"
+    "id": "hr-118-8368",
+    "rc": 1,
+    "mm": 0.683
   },
   {
     "name": "CLEAN Act",
     "meta": "H.R. 1449 · Passed House · Energy",
-    "id": "hr-118-1449"
+    "id": "hr-118-1449",
+    "rc": 4,
+    "mm": 0.022
   },
   {
     "name": "A bill to designate the facility of the United States Postal Service located at 100 North Taylor Lane in Patagonia, Arizona, as the \"Jim Kolbe Memorial Post Office\".",
@@ -6262,7 +7030,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Vote by Mail Tracking Act",
     "meta": "H.R. 5658 · Passed House · Government",
-    "id": "hr-118-5658"
+    "id": "hr-118-5658",
+    "rc": 1,
+    "mm": 0.97
   },
   {
     "name": "VERY Act of 2024",
@@ -6272,17 +7042,23 @@ const LEGISLATION_DATA = [
   {
     "name": "Senator Elizabeth Dole 21st Century Veterans Healthcare and Benefits Improvement Act",
     "meta": "H.R. 8371 · Passed House · Defense",
-    "id": "hr-118-8371"
+    "id": "hr-118-8371",
+    "rc": 1,
+    "mm": 0.955
   },
   {
     "name": "HEATS Act",
     "meta": "H.R. 7409 · Passed House · Energy",
-    "id": "hr-118-7409"
+    "id": "hr-118-7409",
+    "rc": 2,
+    "mm": 0.02
   },
   {
     "name": "Critical Mineral Consistency Act of 2024",
     "meta": "H.R. 8446 · Passed House · Energy",
-    "id": "hr-118-8446"
+    "id": "hr-118-8446",
+    "rc": 2,
+    "mm": 0.017
   },
   {
     "name": "Servicemembers’ Credit Monitoring Enhancement Act",
@@ -6302,7 +7078,9 @@ const LEGISLATION_DATA = [
   {
     "name": "STOP CCP Act",
     "meta": "H.R. 3334 · Passed House · Foreign Policy",
-    "id": "hr-118-3334"
+    "id": "hr-118-3334",
+    "rc": 2,
+    "mm": 0.165
   },
   {
     "name": "DHS Biodetection Improvement Act",
@@ -6312,12 +7090,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Keeping Violent Offenders Off Our Streets Act",
     "meta": "H.R. 8205 · Passed House · Criminal Justice",
-    "id": "hr-118-8205"
+    "id": "hr-118-8205",
+    "rc": 2,
+    "mm": 0.014
   },
   {
     "name": "Fix Our Forests Act",
     "meta": "H.R. 8790 · Passed House · Public Lands",
-    "id": "hr-118-8790"
+    "id": "hr-118-8790",
+    "rc": 1,
+    "mm": 0.279
   },
   {
     "name": "Rural Broadband Protection Act of 2024",
@@ -6364,7 +7146,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Hong Kong Economic and Trade Office (HKETO) Certification Act",
     "meta": "H.R. 1103 · Passed House · Foreign Policy",
-    "id": "hr-118-1103"
+    "id": "hr-118-1103",
+    "rc": 1,
+    "mm": 0.986
   },
   {
     "name": "Lake Winnibigoshish Land Exchange Act of 2024",
@@ -6404,7 +7188,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Next Generation Pipelines Research and Development Act",
     "meta": "H.R. 7073 · Passed House · Energy",
-    "id": "hr-118-7073"
+    "id": "hr-118-7073",
+    "rc": 1,
+    "mm": 0.802
   },
   {
     "name": "Montgomery GI Bill Selected Reserves Tuition Fairness Act of 2024",
@@ -6480,7 +7266,9 @@ const LEGISLATION_DATA = [
   {
     "name": "NASA Reauthorization Act of 2024",
     "meta": "H.R. 8958 · Passed House · Technology",
-    "id": "hr-118-8958"
+    "id": "hr-118-8958",
+    "rc": 1,
+    "mm": 0.891
   },
   {
     "name": "PATHS Act",
@@ -6490,17 +7278,23 @@ const LEGISLATION_DATA = [
   {
     "name": "End Woke Higher Education Act",
     "meta": "H.R. 3724 · Passed House · Education",
-    "id": "hr-118-3724"
+    "id": "hr-118-3724",
+    "rc": 2,
+    "mm": 0.02
   },
   {
     "name": "Prioritizing Economic Growth Over Woke Policies Act",
     "meta": "H.R. 4790 · Passed House · Financial Regulation",
-    "id": "hr-118-4790"
+    "id": "hr-118-4790",
+    "rc": 2,
+    "mm": 0.012
   },
   {
     "name": "No Bailout for Sanctuary Cities Act",
     "meta": "H.R. 5717 · Passed House · Immigration",
-    "id": "hr-118-5717"
+    "id": "hr-118-5717",
+    "rc": 2,
+    "mm": 0.026
   },
   {
     "name": "End Tuberculosis Now Act of 2024",
@@ -6510,27 +7304,37 @@ const LEGISLATION_DATA = [
   {
     "name": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"Multi-Pollutant Emissions Standards for Model Years 2027 and Later Light-Duty and Medium-Duty Vehicles\".",
     "meta": "H.J.Res. 136 · Passed House · Climate & Energy",
-    "id": "hjres-118-136"
+    "id": "hjres-118-136",
+    "rc": 1,
+    "mm": 0.059
   },
   {
     "name": "FUTURE Networks Act",
     "meta": "H.R. 1513 · Passed House · Technology",
-    "id": "hr-118-1513"
+    "id": "hr-118-1513",
+    "rc": 1,
+    "mm": 0.894
   },
   {
     "name": "Anti-BDS Labeling Act",
     "meta": "H.R. 5179 · Passed House · Trade",
-    "id": "hr-118-5179"
+    "id": "hr-118-5179",
+    "rc": 1,
+    "mm": 0.1
   },
   {
     "name": "Protecting Americans’ Investments from Woke Policies Act",
     "meta": "H.R. 5339 · Passed House · Labor",
-    "id": "hr-118-5339"
+    "id": "hr-118-5339",
+    "rc": 2,
+    "mm": 0.017
   },
   {
     "name": "Violence Against Women by Illegal Aliens Act",
     "meta": "H.R. 7909 · Passed House · Immigration",
-    "id": "hr-118-7909"
+    "id": "hr-118-7909",
+    "rc": 1,
+    "mm": 0.255
   },
   {
     "name": "Intergovernmental Critical Minerals Task Force Act",
@@ -6640,7 +7444,9 @@ const LEGISLATION_DATA = [
   {
     "name": "No WHO Pandemic Preparedness Treaty Without Senate Approval Act",
     "meta": "H.R. 1425 · Passed House · Foreign Policy",
-    "id": "hr-118-1425"
+    "id": "hr-118-1425",
+    "rc": 3,
+    "mm": 0.031
   },
   {
     "name": "Foreign Adversary Communications Transparency Act",
@@ -6650,12 +7456,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Protect America’s Innovation and Economic Security from CCP Act of 2024",
     "meta": "H.R. 1398 · Passed House · Criminal Justice",
-    "id": "hr-118-1398"
+    "id": "hr-118-1398",
+    "rc": 2,
+    "mm": 0.026
   },
   {
     "name": "End Chinese Dominance of Electric Vehicles in America Act of 2024",
     "meta": "H.R. 7980 · Passed House · Tax Policy",
-    "id": "hr-118-7980"
+    "id": "hr-118-7980",
+    "rc": 2,
+    "mm": 0.037
   },
   {
     "name": "TRACE Act",
@@ -6665,32 +7475,44 @@ const LEGISLATION_DATA = [
   {
     "name": "DHS Restrictions on Confucius Institutes and Chinese Entities of Concern Act",
     "meta": "H.R. 1516 · Passed House · Education",
-    "id": "hr-118-1516"
+    "id": "hr-118-1516",
+    "rc": 3,
+    "mm": 0.039
   },
   {
     "name": "Military Construction, Veterans Affairs, and Related Agencies Appropriations Act, 2025",
     "meta": "H.R. 8580 · Passed House · Defense",
-    "id": "hr-118-8580"
+    "id": "hr-118-8580",
+    "rc": 10,
+    "mm": 0.015
   },
   {
     "name": "Department of State, Foreign Operations, and Related Programs Appropriations Act, 2025",
     "meta": "H.R. 8771 · Passed House · Economy",
-    "id": "hr-118-8771"
+    "id": "hr-118-8771",
+    "rc": 28,
+    "mm": 0.014
   },
   {
     "name": "Department of Defense Appropriations Act, 2025",
     "meta": "H.R. 8774 · Passed House · Defense",
-    "id": "hr-118-8774"
+    "id": "hr-118-8774",
+    "rc": 9,
+    "mm": 0.022
   },
   {
     "name": "Department of the Interior, Environment, and Related Agencies Appropriations Act, 2025",
     "meta": "H.R. 8998 · Passed House · Economy",
-    "id": "hr-118-8998"
+    "id": "hr-118-8998",
+    "rc": 16,
+    "mm": 0.007
   },
   {
     "name": "Protecting American Agriculture from Foreign Adversaries Act of 2024",
     "meta": "H.R. 9456 · Passed House · Trade",
-    "id": "hr-118-9456"
+    "id": "hr-118-9456",
+    "rc": 2,
+    "mm": 0.024
   },
   {
     "name": "Chinese Currency Accountability Act of 2023",
@@ -6705,7 +7527,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Countering the PRC Malign Influence Fund Authorization Act of 2023",
     "meta": "H.R. 1157 · Passed House · Foreign Policy",
-    "id": "hr-118-1157"
+    "id": "hr-118-1157",
+    "rc": 1,
+    "mm": 0.814
   },
   {
     "name": "Countering CCP Drones Act",
@@ -6785,12 +7609,16 @@ const LEGISLATION_DATA = [
   {
     "name": "BIOSECURE Act",
     "meta": "H.R. 8333 · Passed House · Healthcare",
-    "id": "hr-118-8333"
+    "id": "hr-118-8333",
+    "rc": 1,
+    "mm": 0.581
   },
   {
     "name": "Financial Innovation and Technology for the 21st Century Act",
     "meta": "H.R. 4763 · Passed House · Financial Regulation",
-    "id": "hr-118-4763"
+    "id": "hr-118-4763",
+    "rc": 4,
+    "mm": 0.012
   },
   {
     "name": "SMART Leasing Act",
@@ -6805,7 +7633,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Tax Relief for American Families and Workers Act of 2024",
     "meta": "H.R. 7024 · Passed House · Tax Policy",
-    "id": "hr-118-7024"
+    "id": "hr-118-7024",
+    "rc": 2,
+    "mm": 0.043
   },
   {
     "name": "National Fossil Act",
@@ -6840,17 +7670,23 @@ const LEGISLATION_DATA = [
   {
     "name": "SAVE Act",
     "meta": "H.R. 8281 · Passed House · Government",
-    "id": "hr-118-8281"
+    "id": "hr-118-8281",
+    "rc": 2,
+    "mm": 0.034
   },
   {
     "name": "Water Resources Development Act of 2024",
     "meta": "H.R. 8812 · Passed House · Water",
-    "id": "hr-118-8812"
+    "id": "hr-118-8812",
+    "rc": 1,
+    "mm": 0.93
   },
   {
     "name": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Nondiscrimination on the Basis of Sex in Education Programs or Activities Receiving Federal Financial Assistance\".",
     "meta": "H.J.Res. 165 · Passed House · Education",
-    "id": "hjres-118-165"
+    "id": "hjres-118-165",
+    "rc": 1,
+    "mm": 0.012
   },
   {
     "name": "Affordable Prescriptions for Patients Act of 2023",
@@ -6880,27 +7716,37 @@ const LEGISLATION_DATA = [
   {
     "name": "Refrigerator Freedom Act",
     "meta": "H.R. 7637 · Passed House · Energy",
-    "id": "hr-118-7637"
+    "id": "hr-118-7637",
+    "rc": 2,
+    "mm": 0.005
   },
   {
     "name": "Stop Unaffordable Dishwasher Standards Act",
     "meta": "H.R. 7700 · Passed House · Energy",
-    "id": "hr-118-7700"
+    "id": "hr-118-7700",
+    "rc": 2,
+    "mm": 0.02
   },
   {
     "name": "Alabama Underwater Forest National Marine Sanctuary and Protection Act",
     "meta": "H.R. 897 · Passed House · Climate & Energy",
-    "id": "hr-118-897"
+    "id": "hr-118-897",
+    "rc": 1,
+    "mm": 0.897
   },
   {
     "name": "Long Island Sound Restoration and Stewardship Reauthorization Act of 2023",
     "meta": "H.R. 5441 · Passed House · Climate & Energy",
-    "id": "hr-118-5441"
+    "id": "hr-118-5441",
+    "rc": 1,
+    "mm": 0.734
   },
   {
     "name": "American Cooperation with Our Neighbors Act",
     "meta": "H.R. 2789 · Passed House · Foreign Policy",
-    "id": "hr-118-2789"
+    "id": "hr-118-2789",
+    "rc": 1,
+    "mm": 0.902
   },
   {
     "name": "Falun Gong Protection Act",
@@ -6915,12 +7761,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Korean American Divided Families National Registry Act",
     "meta": "H.R. 7152 · Passed House · Foreign Policy",
-    "id": "hr-118-7152"
+    "id": "hr-118-7152",
+    "rc": 1,
+    "mm": 0.958
   },
   {
     "name": "Servicemember Quality of Life Improvement and National Defense Authorization Act for Fiscal Year 2025",
     "meta": "H.R. 8070 · Passed House · Defense",
-    "id": "hr-118-8070"
+    "id": "hr-118-8070",
+    "rc": 26,
+    "mm": 0
   },
   {
     "name": "Fort Belknap Indian Community Water Rights Settlement Act of 2024",
@@ -6941,12 +7791,16 @@ const LEGISLATION_DATA = [
   {
     "name": "WIPPES Act",
     "meta": "H.R. 2964 · Passed House · Commerce",
-    "id": "hr-118-2964"
+    "id": "hr-118-2964",
+    "rc": 1,
+    "mm": 0.725
   },
   {
     "name": "No Hidden FEES Act of 2023",
     "meta": "H.R. 6543 · Passed House · Commerce",
-    "id": "hr-118-6543"
+    "id": "hr-118-6543",
+    "rc": 1,
+    "mm": 0.878
   },
   {
     "name": "Rural Small Business Resilience Act",
@@ -6981,7 +7835,9 @@ const LEGISLATION_DATA = [
   {
     "name": "To prohibit individuals who are not citizens of the United States from voting in elections in the District of Columbia and to repeal the Local Resident Voting Rights Amendment Act of 2022",
     "meta": "H.R. 192 · Passed House · Government",
-    "id": "hr-118-192"
+    "id": "hr-118-192",
+    "rc": 2,
+    "mm": 0.042
   },
   {
     "name": "To designate the facility of the United States Postal Service located at 6444 San Fernando Road in Glendale, California, as the \"Paul Ignatius Post Office\".",
@@ -6998,7 +7854,9 @@ const LEGISLATION_DATA = [
   {
     "name": "CBDC Anti-Surveillance State Act",
     "meta": "H.R. 5403 · Passed House · Financial Regulation",
-    "id": "hr-118-5403"
+    "id": "hr-118-5403",
+    "rc": 4,
+    "mm": 0.033
   },
   {
     "name": "Plain Language in Contracting Act",
@@ -7029,67 +7887,93 @@ const LEGISLATION_DATA = [
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Energy relating to \"Energy Conservation Program: Energy Conservation Standards for Consumer Furnaces\".",
     "meta": "S.J.Res. 58 · Passed Senate · Energy",
-    "id": "sjres-118-58"
+    "id": "sjres-118-58",
+    "rc": 1,
+    "mm": 0.053
   },
   {
     "name": "Israel Security Assistance Support Act",
     "meta": "H.R. 8369 · Passed House · Foreign Policy",
-    "id": "hr-118-8369"
+    "id": "hr-118-8369",
+    "rc": 2,
+    "mm": 0.019
   },
   {
     "name": "LEOSA Reform Act of 2024",
     "meta": "H.R. 354 · Passed House · Criminal Justice",
-    "id": "hr-118-354"
+    "id": "hr-118-354",
+    "rc": 1,
+    "mm": 0.089
   },
   {
     "name": "Police Our Border Act",
     "meta": "H.R. 8146 · Passed House · Criminal Justice",
-    "id": "hr-118-8146"
+    "id": "hr-118-8146",
+    "rc": 2,
+    "mm": 0.039
   },
   {
     "name": "Setting Consumer Standards for Lithium-Ion Batteries Act",
     "meta": "H.R. 1797 · Passed House · Commerce",
-    "id": "hr-118-1797"
+    "id": "hr-118-1797",
+    "rc": 1,
+    "mm": 0.835
   },
   {
     "name": "TICKET Act",
     "meta": "H.R. 3950 · Passed House · Commerce",
-    "id": "hr-118-3950"
+    "id": "hr-118-3950",
+    "rc": 1,
+    "mm": 0.883
   },
   {
     "name": "Youth Poisoning Protection Act",
     "meta": "H.R. 4310 · Passed House · Commerce",
-    "id": "hr-118-4310"
+    "id": "hr-118-4310",
+    "rc": 1,
+    "mm": 0.839
   },
   {
     "name": "NTIA Reauthorization Act of 2024",
     "meta": "H.R. 4510 · Passed House · Technology",
-    "id": "hr-118-4510"
+    "id": "hr-118-4510",
+    "rc": 1,
+    "mm": 0.824
   },
   {
     "name": "Promoting Resilient Supply Chains Act of 2023",
     "meta": "H.R. 6571 · Passed House · Commerce",
-    "id": "hr-118-6571"
+    "id": "hr-118-6571",
+    "rc": 1,
+    "mm": 0.907
   },
   {
     "name": "Deploying American Blockchains Act of 2023",
     "meta": "H.R. 6572 · Passed House · Commerce",
-    "id": "hr-118-6572"
+    "id": "hr-118-6572",
+    "rc": 1,
+    "mm": 0.617
   },
   {
     "name": "Detain and Deport Illegal Aliens Who Assault Cops Act",
     "meta": "H.R. 7343 · Passed House · Immigration",
-    "id": "hr-118-7343"
+    "id": "hr-118-7343",
+    "rc": 1,
+    "mm": 0.283
   },
   {
     "name": "DC CRIMES Act of 2024",
     "meta": "H.R. 7530 · Passed House · Criminal Justice",
-    "id": "hr-118-7530"
+    "id": "hr-118-7530",
+    "rc": 1,
+    "mm": 0.108
   },
   {
     "name": "Improving Law Enforcement Officer Safety and Wellness Through Data Act",
     "meta": "H.R. 7581 · Passed House · Criminal Justice",
-    "id": "hr-118-7581"
+    "id": "hr-118-7581",
+    "rc": 1,
+    "mm": 0.732
   },
   {
     "name": "Consumer Safety Technology Act",
@@ -7109,12 +7993,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Coast Guard Authorization Act of 2024",
     "meta": "H.R. 7659 · Passed House · Infrastructure",
-    "id": "hr-118-7659"
+    "id": "hr-118-7659",
+    "rc": 1,
+    "mm": 0.918
   },
   {
     "name": "Equal Representation Act",
     "meta": "H.R. 7109 · Passed House · Government",
-    "id": "hr-118-7109"
+    "id": "hr-118-7109",
+    "rc": 2,
+    "mm": 0.01
   },
   {
     "name": "Diesel Emissions Reduction Act of 2023",
@@ -7124,12 +8012,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Mining Regulatory Clarity Act of 2024",
     "meta": "H.R. 2925 · Passed House · Energy",
-    "id": "hr-118-2925"
+    "id": "hr-118-2925",
+    "rc": 3,
+    "mm": 0.012
   },
   {
     "name": "National Construction Safety Team Enhancement Act of 2024",
     "meta": "H.R. 4143 · Passed House · Technology",
-    "id": "hr-118-4143"
+    "id": "hr-118-4143",
+    "rc": 1,
+    "mm": 0.794
   },
   {
     "name": "To authorize the Secretary of the Army to posthumously award the Distinguished Service Cross to William D. Owens for his valorous actions from June 6, 1944, to June 8, 1944, during World War II at La Fiere Bridge in Normandy, France, while serving with the 505th Parachute Infantry.",
@@ -7139,7 +8031,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Hands Off Our Home Appliances Act",
     "meta": "H.R. 6192 · Passed House · Energy",
-    "id": "hr-118-6192"
+    "id": "hr-118-6192",
+    "rc": 3,
+    "mm": 0.01
   },
   {
     "name": "Mail Traffic Deaths Reporting Act of 2024",
@@ -7149,67 +8043,93 @@ const LEGISLATION_DATA = [
   {
     "name": "Antisemitism Awareness Act of 2023",
     "meta": "H.R. 6090 · Passed House · Civil Rights",
-    "id": "hr-118-6090"
+    "id": "hr-118-6090",
+    "rc": 1,
+    "mm": 0.557
   },
   {
     "name": "Alaska’s Right to Produce Act of 2023",
     "meta": "H.R. 6285 · Passed House · Energy",
-    "id": "hr-118-6285"
+    "id": "hr-118-6285",
+    "rc": 2,
+    "mm": 0.024
   },
   {
     "name": "Extending Limits of U.S. Customs Waters Act",
     "meta": "H.R. 529 · Passed House · Trade",
-    "id": "hr-118-529"
+    "id": "hr-118-529",
+    "rc": 1,
+    "mm": 0.971
   },
   {
     "name": "Protecting Access for Hunters and Anglers Act of 2023",
     "meta": "H.R. 615 · Passed House · Public Lands",
-    "id": "hr-118-615"
+    "id": "hr-118-615",
+    "rc": 2,
+    "mm": 0.017
   },
   {
     "name": "Trust the Science Act",
     "meta": "H.R. 764 · Passed House · Other",
-    "id": "hr-118-764"
+    "id": "hr-118-764",
+    "rc": 2,
+    "mm": 0.01
   },
   {
     "name": "Student Veteran Benefit Restoration Act",
     "meta": "H.R. 1767 · Passed House · Defense",
-    "id": "hr-118-1767"
+    "id": "hr-118-1767",
+    "rc": 1,
+    "mm": 0.971
   },
   {
     "name": "Superior National Forest Restoration Act",
     "meta": "H.R. 3195 · Passed House · Public Lands",
-    "id": "hr-118-3195"
+    "id": "hr-118-3195",
+    "rc": 2,
+    "mm": 0.012
   },
   {
     "name": "WEST Act of 2024",
     "meta": "H.R. 3397 · Passed House · Public Lands",
-    "id": "hr-118-3397"
+    "id": "hr-118-3397",
+    "rc": 2,
+    "mm": 0.014
   },
   {
     "name": "Veterans Economic Opportunity and Transition Administration Act",
     "meta": "H.R. 3738 · Passed House · Defense",
-    "id": "hr-118-3738"
+    "id": "hr-118-3738",
+    "rc": 1,
+    "mm": 0.952
   },
   {
     "name": "Veteran Fraud Reimbursement Act",
     "meta": "H.R. 4016 · Passed House · Defense",
-    "id": "hr-118-4016"
+    "id": "hr-118-4016",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Carbon Sequestration Collaboration Act",
     "meta": "H.R. 4824 · Passed House · Climate & Energy",
-    "id": "hr-118-4824"
+    "id": "hr-118-4824",
+    "rc": 1,
+    "mm": 0.784
   },
   {
     "name": "Abandoned Well Remediation Research and Development Act",
     "meta": "H.R. 4877 · Passed House · Climate & Energy",
-    "id": "hr-118-4877"
+    "id": "hr-118-4877",
+    "rc": 1,
+    "mm": 0.632
   },
   {
     "name": "Weather Act Reauthorization Act of 2023",
     "meta": "H.R. 6093 · Passed House · Technology",
-    "id": "hr-118-6093"
+    "id": "hr-118-6093",
+    "rc": 1,
+    "mm": 0.908
   },
   {
     "name": "Strengthening Support for American Manufacturing Act",
@@ -7229,12 +8149,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Privacy Enhancing Technology Research Act",
     "meta": "H.R. 4755 · Passed House · Technology",
-    "id": "hr-118-4755"
+    "id": "hr-118-4755",
+    "rc": 1,
+    "mm": 0.815
   },
   {
     "name": "Fire Weather Development Act of 2024",
     "meta": "H.R. 4866 · Passed House · Technology",
-    "id": "hr-118-4866"
+    "id": "hr-118-4866",
+    "rc": 1,
+    "mm": 0.753
   },
   {
     "name": "Investing in All of America Act of 2023",
@@ -7281,57 +8205,79 @@ const LEGISLATION_DATA = [
   {
     "name": "Fourth Amendment Is Not For Sale Act",
     "meta": "H.R. 4639 · Passed House · Criminal Justice",
-    "id": "hr-118-4639"
+    "id": "hr-118-4639",
+    "rc": 2,
+    "mm": 0.048
   },
   {
     "name": "Iran Counterterrorism Act of 2023",
     "meta": "H.R. 6323 · Passed House · Foreign Policy",
-    "id": "hr-118-6323"
+    "id": "hr-118-6323",
+    "rc": 1,
+    "mm": 0.297
   },
   {
     "name": "Illicit Captagon Trafficking Suppression Act of 2023",
     "meta": "H.R. 4681 · Passed House · Foreign Policy",
-    "id": "hr-118-4681"
+    "id": "hr-118-4681",
+    "rc": 1,
+    "mm": 0.939
   },
   {
     "name": "No Paydays for Hostage-Takers Act",
     "meta": "H.R. 5826 · Passed House · Foreign Policy",
-    "id": "hr-118-5826"
+    "id": "hr-118-5826",
+    "rc": 1,
+    "mm": 0.84
   },
   {
     "name": "Strengthening Tools to Counter the Use of Human Shields Act",
     "meta": "H.R. 5917 · Passed House · Foreign Policy",
-    "id": "hr-118-5917"
+    "id": "hr-118-5917",
+    "rc": 1,
+    "mm": 0.981
   },
   {
     "name": "Iran Sanctions Accountability Act of 2023",
     "meta": "H.R. 6015 · Passed House · Foreign Policy",
-    "id": "hr-118-6015"
+    "id": "hr-118-6015",
+    "rc": 1,
+    "mm": 0.938
   },
   {
     "name": "Holding Iranian Leaders Accountable Act of 2023",
     "meta": "H.R. 6245 · Passed House · Foreign Policy",
-    "id": "hr-118-6245"
+    "id": "hr-118-6245",
+    "rc": 1,
+    "mm": 0.981
   },
   {
     "name": "No Technology for Terror Act",
     "meta": "H.R. 6603 · Passed House · Foreign Policy",
-    "id": "hr-118-6603"
+    "id": "hr-118-6603",
+    "rc": 1,
+    "mm": 0.911
   },
   {
     "name": "No U.S. Financing for Iran Act of 2023",
     "meta": "H.R. 5921 · Passed House · Trade",
-    "id": "hr-118-5921"
+    "id": "hr-118-5921",
+    "rc": 1,
+    "mm": 0.474
   },
   {
     "name": "Iran-China Energy Sanctions Act of 2023",
     "meta": "H.R. 5923 · Passed House · Foreign Policy",
-    "id": "hr-118-5923"
+    "id": "hr-118-5923",
+    "rc": 1,
+    "mm": 0.944
   },
   {
     "name": "To amend the Internal Revenue Code of 1986 to terminate the tax-exempt status of terrorist supporting organizations.",
     "meta": "H.R. 6408 · Passed House · Tax Policy",
-    "id": "hr-118-6408"
+    "id": "hr-118-6408",
+    "rc": 1,
+    "mm": 0.944
   },
   {
     "name": "Legacy Mine Cleanup Act of 2024",
@@ -7346,7 +8292,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Sea Turtle Rescue Assistance and Rehabilitation Act of 2023",
     "meta": "H.R. 2560 · Passed House · Other",
-    "id": "hr-118-2560"
+    "id": "hr-118-2560",
+    "rc": 1,
+    "mm": 0.604
   },
   {
     "name": "ROWATA Act",
@@ -7356,12 +8304,16 @@ const LEGISLATION_DATA = [
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Federal Highway Administration relating to \"National Performance Management Measures; Assessing Performance of the National Highway System, Greenhouse Gas Emissions Measure\".",
     "meta": "S.J.Res. 61 · Passed Senate · Infrastructure",
-    "id": "sjres-118-61"
+    "id": "sjres-118-61",
+    "rc": 1,
+    "mm": 0.06
   },
   {
     "name": "National Museum of Play Recognition Act",
     "meta": "H.R. 3250 · Passed House · Other",
-    "id": "hr-118-3250"
+    "id": "hr-118-3250",
+    "rc": 1,
+    "mm": 0.851
   },
   {
     "name": "To authorize leases of up to 99 years for land held in trust for federally recognized Indian Tribes.",
@@ -7391,7 +8343,9 @@ const LEGISLATION_DATA = [
   {
     "name": "A Stronger Workforce for America Act",
     "meta": "H.R. 6655 · Passed House · Labor",
-    "id": "hr-118-6655"
+    "id": "hr-118-6655",
+    "rc": 1,
+    "mm": 0.871
   },
   {
     "name": "A bill to extend the deadline to commence construction of certain hydroelectric projects on the Red River.",
@@ -7401,32 +8355,44 @@ const LEGISLATION_DATA = [
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Animal and Plant Health Inspection Service relating to \"Importation of Fresh Beef From Paraguay\".",
     "meta": "S.J.Res. 62 · Passed Senate · Agriculture",
-    "id": "sjres-118-62"
+    "id": "sjres-118-62",
+    "rc": 1,
+    "mm": 0.474
   },
   {
     "name": "Ocean Shipping Reform Implementation Act of 2023",
     "meta": "H.R. 1836 · Passed House · Infrastructure",
-    "id": "hr-118-1836"
+    "id": "hr-118-1836",
+    "rc": 1,
+    "mm": 0.885
   },
   {
     "name": "Creating Confidence in Clean Water Permitting Act",
     "meta": "H.R. 7023 · Passed House · Climate & Energy",
-    "id": "hr-118-7023"
+    "id": "hr-118-7023",
+    "rc": 3,
+    "mm": 0.019
   },
   {
     "name": "Protecting American Energy Production Act",
     "meta": "H.R. 1121 · Passed House · Energy",
-    "id": "hr-118-1121"
+    "id": "hr-118-1121",
+    "rc": 2,
+    "mm": 0.027
   },
   {
     "name": "Restoring American Energy Dominance Act",
     "meta": "H.R. 6009 · Passed House · Public Lands",
-    "id": "hr-118-6009"
+    "id": "hr-118-6009",
+    "rc": 2,
+    "mm": 0.017
   },
   {
     "name": "Protecting Americans’ Data from Foreign Adversaries Act of 2024",
     "meta": "H.R. 7520 · Passed House · Commerce",
-    "id": "hr-118-7520"
+    "id": "hr-118-7520",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Recognizing the Role of Direct Support Professionals Act",
@@ -7446,7 +8412,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Upholding the Dayton Peace Agreement Through Sanctions Act",
     "meta": "H.R. 4723 · Passed House · Foreign Policy",
-    "id": "hr-118-4723"
+    "id": "hr-118-4723",
+    "rc": 1,
+    "mm": 0.848
   },
   {
     "name": "Impact of Crime on Public Building Usage Act of 2023",
@@ -7486,12 +8454,16 @@ const LEGISLATION_DATA = [
   {
     "name": "USE IT Act of 2023",
     "meta": "H.R. 6276 · Passed House · Government",
-    "id": "hr-118-6276"
+    "id": "hr-118-6276",
+    "rc": 2,
+    "mm": 0.017
   },
   {
     "name": "Protecting Americans from Foreign Adversary Controlled Applications Act",
     "meta": "H.R. 7521 · Passed House · Technology",
-    "id": "hr-118-7521"
+    "id": "hr-118-7521",
+    "rc": 1,
+    "mm": 0.688
   },
   {
     "name": "To designate the Federal building and United States courthouse located at 600 East First Street in Rome, Georgia, as the \"Harold L. Murphy Federal Building and United States Courthouse\".",
@@ -7502,12 +8474,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Save Our Seas 2.0 Amendments Act",
     "meta": "H.R. 886 · Passed House · Climate & Energy",
-    "id": "hr-118-886"
+    "id": "hr-118-886",
+    "rc": 1,
+    "mm": 0.634
   },
   {
     "name": "E-BRIDGE Act",
     "meta": "H.R. 1752 · Passed House · Technology",
-    "id": "hr-118-1752"
+    "id": "hr-118-1752",
+    "rc": 1,
+    "mm": 0.899
   },
   {
     "name": "FASTA Reform Act of 2023",
@@ -7527,17 +8503,23 @@ const LEGISLATION_DATA = [
   {
     "name": "Expanding Access to Capital Act of 2023",
     "meta": "H.R. 2799 · Passed House · Financial Regulation",
-    "id": "hr-118-2799"
+    "id": "hr-118-2799",
+    "rc": 11,
+    "mm": 0.007
   },
   {
     "name": "Laken Riley Act",
     "meta": "H.R. 7511 · Passed House · Immigration",
-    "id": "hr-118-7511"
+    "id": "hr-118-7511",
+    "rc": 1,
+    "mm": 0.192
   },
   {
     "name": "Radiation Exposure Compensation Reauthorization Act",
     "meta": "S. 3853 · Passed Senate · Labor",
-    "id": "s-118-3853"
+    "id": "s-118-3853",
+    "rc": 1,
+    "mm": 0.394
   },
   {
     "name": "9–8–8 Lifeline Cybersecurity Responsibility Act",
@@ -7557,7 +8539,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Preventing Maternal Deaths Reauthorization Act of 2023",
     "meta": "H.R. 3838 · Passed House · Healthcare",
-    "id": "hr-118-3838"
+    "id": "hr-118-3838",
+    "rc": 1,
+    "mm": 0.939
   },
   {
     "name": "Medicaid Primary Care Improvement Act",
@@ -7577,7 +8561,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Native American Entrepreneurial Opportunity Act",
     "meta": "H.R. 7102 · Passed House · Native Americans",
-    "id": "hr-118-7102"
+    "id": "hr-118-7102",
+    "rc": 1,
+    "mm": 0.923
   },
   {
     "name": "The WOSB Integrity Act of 2024",
@@ -7624,7 +8610,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Atomic Energy Advancement Act",
     "meta": "H.R. 6544 · Passed House · Energy",
-    "id": "hr-118-6544"
+    "id": "hr-118-6544",
+    "rc": 1,
+    "mm": 0.82
   },
   {
     "name": "Encouraging Success Act",
@@ -7639,12 +8627,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Promoting a Resolution to the Tibet-China Dispute Act",
     "meta": "H.R. 533 · Passed House · Foreign Policy",
-    "id": "hr-118-533"
+    "id": "hr-118-533",
+    "rc": 1,
+    "mm": 0.867
   },
   {
     "name": "Uyghur Policy Act of 2023",
     "meta": "H.R. 2766 · Passed House · Foreign Policy",
-    "id": "hr-118-2766"
+    "id": "hr-118-2766",
+    "rc": 1,
+    "mm": 0.971
   },
   {
     "name": "IGO Anti-Boycott Act",
@@ -7654,7 +8646,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Assad Regime Anti-Normalization Act of 2023",
     "meta": "H.R. 3202 · Passed House · Foreign Policy",
-    "id": "hr-118-3202"
+    "id": "hr-118-3202",
+    "rc": 1,
+    "mm": 0.848
   },
   {
     "name": "No Dollars to Uyghur Forced Labor Act",
@@ -7664,12 +8658,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Strengthening the Quad Act",
     "meta": "H.R. 5375 · Passed House · Foreign Policy",
-    "id": "hr-118-5375"
+    "id": "hr-118-5375",
+    "rc": 1,
+    "mm": 0.813
   },
   {
     "name": "Frederick Douglass Trafficking Victims Prevention and Protection Reauthorization Act of 2023",
     "meta": "H.R. 5856 · Passed House · Criminal Justice",
-    "id": "hr-118-5856"
+    "id": "hr-118-5856",
+    "rc": 1,
+    "mm": 0.948
   },
   {
     "name": "Pilot Butte Power Plant Conveyance Act",
@@ -7679,7 +8677,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Enhancing Detection of Human Trafficking Act",
     "meta": "H.R. 443 · Passed House · Criminal Justice",
-    "id": "hr-118-443"
+    "id": "hr-118-443",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Supporting the Health of Aquatic systems through Research Knowledge and Enhanced Dialogue Act",
@@ -7689,17 +8689,23 @@ const LEGISLATION_DATA = [
   {
     "name": "Consequences for Social Security Fraud Act",
     "meta": "H.R. 6678 · Passed House · Immigration",
-    "id": "hr-118-6678"
+    "id": "hr-118-6678",
+    "rc": 2,
+    "mm": 0.256
   },
   {
     "name": "No Immigration Benefits for Hamas Terrorists Act",
     "meta": "H.R. 6679 · Passed House · Immigration",
-    "id": "hr-118-6679"
+    "id": "hr-118-6679",
+    "rc": 1,
+    "mm": 0.991
   },
   {
     "name": "Agent Raul Gonzalez Officer Safety Act",
     "meta": "H.R. 5585 · Passed House · Criminal Justice",
-    "id": "hr-118-5585"
+    "id": "hr-118-5585",
+    "rc": 2,
+    "mm": 0.054
   },
   {
     "name": "Train More Nurses Act",
@@ -7714,7 +8720,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Pregnant Students’ Rights Act",
     "meta": "H.R. 6914 · Passed House · Education",
-    "id": "hr-118-6914"
+    "id": "hr-118-6914",
+    "rc": 2,
+    "mm": 0.012
   },
   {
     "name": "Recruiting Families Using Data Act of 2023",
@@ -7734,12 +8742,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Supporting Pregnant and Parenting Women and Families Act",
     "meta": "H.R. 6918 · Passed House · Healthcare",
-    "id": "hr-118-6918"
+    "id": "hr-118-6918",
+    "rc": 2,
+    "mm": 0.014
   },
   {
     "name": "To amend the Homeland Security Act of 2002 relating to authority of U.S. Customs and Border Protection to consolidate, modify, or reorganize Customs revenue functions.",
     "meta": "H.R. 5862 · Passed House · Immigration",
-    "id": "hr-118-5862"
+    "id": "hr-118-5862",
+    "rc": 1,
+    "mm": 0.956
   },
   {
     "name": "Taiwan Non-Discrimination Act of 2023",
@@ -7754,12 +8766,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Stop Settlement Slush Funds Act of 2023",
     "meta": "H.R. 788 · Passed House · Law",
-    "id": "hr-118-788"
+    "id": "hr-118-788",
+    "rc": 2,
+    "mm": 0.034
   },
   {
     "name": "China Exchange Rate Transparency Act of 2023",
     "meta": "H.R. 839 · Passed House · Foreign Policy",
-    "id": "hr-118-839"
+    "id": "hr-118-839",
+    "rc": 1,
+    "mm": 0.995
   },
   {
     "name": "No Russian Agriculture Act",
@@ -7804,7 +8820,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Whole Milk for Healthy Kids Act of 2023",
     "meta": "H.R. 1147 · Passed House · Agriculture",
-    "id": "hr-118-1147"
+    "id": "hr-118-1147",
+    "rc": 1,
+    "mm": 0.538
   },
   {
     "name": "Securing Semiconductor Supply Chains Act of 2023",
@@ -7819,22 +8837,30 @@ const LEGISLATION_DATA = [
   {
     "name": "Ensuring Accountability in Agency Rulemaking Act",
     "meta": "H.R. 357 · Passed House · Government",
-    "id": "hr-118-357"
+    "id": "hr-118-357",
+    "rc": 2,
+    "mm": 0.012
   },
   {
     "name": "Support for Patients and Communities Reauthorization Act",
     "meta": "H.R. 4531 · Passed House · Healthcare",
-    "id": "hr-118-4531"
+    "id": "hr-118-4531",
+    "rc": 1,
+    "mm": 0.825
   },
   {
     "name": "Protect Small Business and Prevent Illicit Financial Activity Act",
     "meta": "H.R. 5119 · Passed House · Commerce",
-    "id": "hr-118-5119"
+    "id": "hr-118-5119",
+    "rc": 1,
+    "mm": 0.995
   },
   {
     "name": "Foreign Affiliates Sharing Pilot Program Extension Act",
     "meta": "H.R. 5524 · Passed House · Financial Regulation",
-    "id": "hr-118-5524"
+    "id": "hr-118-5524",
+    "rc": 1,
+    "mm": 0.868
   },
   {
     "name": "PREEMIE Reauthorization Act of 2023",
@@ -7844,37 +8870,51 @@ const LEGISLATION_DATA = [
   {
     "name": "Countering Weapons of Mass Destruction Extension Act of 2023",
     "meta": "H.R. 3224 · Passed House · Emergency Management",
-    "id": "hr-118-3224"
+    "id": "hr-118-3224",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Improving Income Driven Repayment for the William D. Ford Federal Direct Loan Program and the Federal Family Education Loan (FFEL) Program\".",
     "meta": "H.J.Res. 88 · Passed House · Education",
-    "id": "hjres-118-88"
+    "id": "hjres-118-88",
+    "rc": 1,
+    "mm": 0.053
   },
   {
     "name": "Choice in Automobile Retail Sales Act of 2023",
     "meta": "H.R. 4468 · Passed House · Climate & Energy",
-    "id": "hr-118-4468"
+    "id": "hr-118-4468",
+    "rc": 2,
+    "mm": 0.031
   },
   {
     "name": "DETERRENT Act",
     "meta": "H.R. 5933 · Passed House · Education",
-    "id": "hr-118-5933"
+    "id": "hr-118-5933",
+    "rc": 4,
+    "mm": 0.027
   },
   {
     "name": "Elizabeth Dole Home Care Act of 2023",
     "meta": "H.R. 542 · Passed House · Defense",
-    "id": "hr-118-542"
+    "id": "hr-118-542",
+    "rc": 1,
+    "mm": 0.976
   },
   {
     "name": "One Seat Ride Act",
     "meta": "H.R. 1547 · Passed House · Infrastructure",
-    "id": "hr-118-1547"
+    "id": "hr-118-1547",
+    "rc": 1,
+    "mm": 0.707
   },
   {
     "name": "Housing our Military Veterans Effectively Act of 2023",
     "meta": "H.R. 3848 · Passed House · Defense",
-    "id": "hr-118-3848"
+    "id": "hr-118-3848",
+    "rc": 1,
+    "mm": 0.952
   },
   {
     "name": "DOE and USDA Interagency Research Act",
@@ -7919,12 +8959,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Protecting our Communities from Failure to Secure the Border Act of 2023",
     "meta": "H.R. 5283 · Passed House · Immigration",
-    "id": "hr-118-5283"
+    "id": "hr-118-5283",
+    "rc": 2,
+    "mm": 0.04
   },
   {
     "name": "No Funds for Iranian Terrorism Act",
     "meta": "H.R. 5961 · Passed House · Foreign Policy",
-    "id": "hr-118-5961"
+    "id": "hr-118-5961",
+    "rc": 8,
+    "mm": 0.064
   },
   {
     "name": "SERV Act",
@@ -7984,7 +9028,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Israel Security Supplemental Appropriations Act, 2024",
     "meta": "H.R. 6126 · Passed House · Economy",
-    "id": "hr-118-6126"
+    "id": "hr-118-6126",
+    "rc": 2,
+    "mm": 0.03
   },
   {
     "name": "READ Act Reauthorization Act of 2023",
@@ -8004,17 +9050,23 @@ const LEGISLATION_DATA = [
   {
     "name": "SHIP Act",
     "meta": "H.R. 3774 · Passed House · Foreign Policy",
-    "id": "hr-118-3774"
+    "id": "hr-118-3774",
+    "rc": 1,
+    "mm": 0.664
   },
   {
     "name": "Department of the Interior, Environment, and Related Agencies Appropriations Act, 2024",
     "meta": "H.R. 4821 · Passed House · Economy",
-    "id": "hr-118-4821"
+    "id": "hr-118-4821",
+    "rc": 29,
+    "mm": 0.002
   },
   {
     "name": "Hamas and Other Palestinian Terrorist Groups International Financing Prevention Act",
     "meta": "H.R. 340 · Passed House · Foreign Policy",
-    "id": "hr-118-340"
+    "id": "hr-118-340",
+    "rc": 1,
+    "mm": 0.775
   },
   {
     "name": "ORBITS Act of 2023",
@@ -8034,12 +9086,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Legislative Branch Appropriations Act, 2024",
     "meta": "H.R. 4364 · Passed House · Government",
-    "id": "hr-118-4364"
+    "id": "hr-118-4364",
+    "rc": 2,
+    "mm": 0.02
   },
   {
     "name": "Energy and Water Development and Related Agencies Appropriations Act, 2024",
     "meta": "H.R. 4394 · Passed House · Economy",
-    "id": "hr-118-4394"
+    "id": "hr-118-4394",
+    "rc": 30,
+    "mm": 0.002
   },
   {
     "name": "Project Safe Childhood Act",
@@ -8059,27 +9115,37 @@ const LEGISLATION_DATA = [
   {
     "name": "Department of Defense Appropriations Act, 2024",
     "meta": "H.R. 4365 · Passed House · Defense",
-    "id": "hr-118-4365"
+    "id": "hr-118-4365",
+    "rc": 13,
+    "mm": 0.007
   },
   {
     "name": "Modernizing the Acquisition of Cybersecurity Experts Act of 2023",
     "meta": "H.R. 4502 · Passed House · Government",
-    "id": "hr-118-4502"
+    "id": "hr-118-4502",
+    "rc": 1,
+    "mm": 0.995
   },
   {
     "name": "Department of State, Foreign Operations, and Related Programs Appropriations Act, 2024",
     "meta": "H.R. 4665 · Passed House · Foreign Policy",
-    "id": "hr-118-4665"
+    "id": "hr-118-4665",
+    "rc": 39,
+    "mm": 0.007
   },
   {
     "name": "Ukraine Security Assistance and Oversight Supplemental Appropriations Act, 2024",
     "meta": "H.R. 5692 · Passed House · Defense",
-    "id": "hr-118-5692"
+    "id": "hr-118-5692",
+    "rc": 1,
+    "mm": 0.453
   },
   {
     "name": "Veterans Benefits Improvement Act of 2023",
     "meta": "H.R. 1530 · Passed House · Defense",
-    "id": "hr-118-1530"
+    "id": "hr-118-1530",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Wounded Knee Massacre Memorial and Sacred Site Act",
@@ -8094,7 +9160,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Isakson-Roe Education Oversight Expansion Act",
     "meta": "H.R. 3981 · Passed House · Defense",
-    "id": "hr-118-3981"
+    "id": "hr-118-3981",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Treating Tribes and Counties as Good Neighbors Act",
@@ -8104,17 +9172,23 @@ const LEGISLATION_DATA = [
   {
     "name": "Preserving Choice in Vehicle Purchases Act",
     "meta": "H.R. 1435 · Passed House · Climate & Energy",
-    "id": "hr-118-1435"
+    "id": "hr-118-1435",
+    "rc": 2,
+    "mm": 0.047
   },
   {
     "name": "ACRES Act",
     "meta": "H.R. 1567 · Passed House · Public Lands",
-    "id": "hr-118-1567"
+    "id": "hr-118-1567",
+    "rc": 1,
+    "mm": 0.98
   },
   {
     "name": "Fight CRIME Act",
     "meta": "H.R. 3152 · Passed House · Foreign Policy",
-    "id": "hr-118-3152"
+    "id": "hr-118-3152",
+    "rc": 1,
+    "mm": 0.961
   },
   {
     "name": "Emergency Wildfire Fighting Technology Act of 2023",
@@ -8189,12 +9263,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Protecting and Securing Chemical Facilities from Terrorist Attacks Act of 2023",
     "meta": "H.R. 4470 · Passed House · Emergency Management",
-    "id": "hr-118-4470"
+    "id": "hr-118-4470",
+    "rc": 1,
+    "mm": 0.995
   },
   {
     "name": "Schools Not Shelters Act",
     "meta": "H.R. 3941 · Passed House · Immigration",
-    "id": "hr-118-3941"
+    "id": "hr-118-3941",
+    "rc": 2,
+    "mm": 0.029
   },
   {
     "name": "Tribal Trust Land Homeownership Act of 2023",
@@ -8214,7 +9292,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Global Investment in American Jobs Act of 2023",
     "meta": "H.R. 813 · Passed House · Trade",
-    "id": "hr-118-813"
+    "id": "hr-118-813",
+    "rc": 1,
+    "mm": 0.892
   },
   {
     "name": "Department of Veterans Affairs Office of Inspector General Training Act of 2023",
@@ -8224,7 +9304,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Improving Access to Small Business Information Act",
     "meta": "H.R. 1548 · Passed House · Financial Regulation",
-    "id": "hr-118-1548"
+    "id": "hr-118-1548",
+    "rc": 1,
+    "mm": 0.946
   },
   {
     "name": "To amend the Investment Advisers Act of 1940 to codify certain Securities and Exchange Commission no-action letters that exclude brokers and dealers compensated for certain research services from the definition of investment adviser, and for other purposes.",
@@ -8234,7 +9316,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Middle Class Borrower Protection Act of 2023",
     "meta": "H.R. 3564 · Passed House · Financial Regulation",
-    "id": "hr-118-3564"
+    "id": "hr-118-3564",
+    "rc": 3,
+    "mm": 0.029
   },
   {
     "name": "Lobbying Disclosure Improvement Act",
@@ -8254,37 +9338,51 @@ const LEGISLATION_DATA = [
   {
     "name": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Alcohol, Tobacco, Firearms, and Explosives relating to \"Factoring Criteria for Firearms with Attached 'Stabilizing Braces'\".",
     "meta": "H.J.Res. 44 · Passed House · Criminal Justice",
-    "id": "hjres-118-44"
+    "id": "hjres-118-44",
+    "rc": 2,
+    "mm": 0.01
   },
   {
     "name": "Regulations from the Executive in Need of Scrutiny Act of 2023",
     "meta": "H.R. 277 · Passed House · Government",
-    "id": "hr-118-277"
+    "id": "hr-118-277",
+    "rc": 9,
+    "mm": 0.005
   },
   {
     "name": "Veteran Entrepreneurship Training Act of 2023",
     "meta": "H.R. 1606 · Passed House · Commerce",
-    "id": "hr-118-1606"
+    "id": "hr-118-1606",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Separation of Powers Restoration Act of 2023",
     "meta": "H.R. 288 · Passed House · Government",
-    "id": "hr-118-288"
+    "id": "hr-118-288",
+    "rc": 2,
+    "mm": 0.021
   },
   {
     "name": "Save Our Gas Stoves Act",
     "meta": "H.R. 1640 · Passed House · Energy",
-    "id": "hr-118-1640"
+    "id": "hr-118-1640",
+    "rc": 3,
+    "mm": 0.037
   },
   {
     "name": "Gas Stove Protection and Freedom Act",
     "meta": "H.R. 1615 · Passed House · Commerce",
-    "id": "hr-118-1615"
+    "id": "hr-118-1615",
+    "rc": 2,
+    "mm": 0.028
   },
   {
     "name": "Special Envoy for the Abraham Accords Act",
     "meta": "H.R. 3099 · Passed House · Foreign Policy",
-    "id": "hr-118-3099"
+    "id": "hr-118-3099",
+    "rc": 1,
+    "mm": 0.939
   },
   {
     "name": "250th Anniversary of the United States Marine Corps Commemorative Coin Act",
@@ -8325,12 +9423,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Encouraging Public Offerings Act of 2023",
     "meta": "H.R. 2793 · Passed House · Financial Regulation",
-    "id": "hr-118-2793"
+    "id": "hr-118-2793",
+    "rc": 1,
+    "mm": 0.935
   },
   {
     "name": "Middle Market IPO Cost Act",
     "meta": "H.R. 2812 · Passed House · Financial Regulation",
-    "id": "hr-118-2812"
+    "id": "hr-118-2812",
+    "rc": 1,
+    "mm": 0.95
   },
   {
     "name": "U.S. Hostage and Wrongful Detainee Day Act of 2023",
@@ -8340,82 +9442,114 @@ const LEGISLATION_DATA = [
   {
     "name": "Equal Opportunity for All Investors Act of 2023",
     "meta": "H.R. 2797 · Passed House · Financial Regulation",
-    "id": "hr-118-2797"
+    "id": "hr-118-2797",
+    "rc": 1,
+    "mm": 0.91
   },
   {
     "name": "Small Entity Update Act",
     "meta": "H.R. 2792 · Passed House · Financial Regulation",
-    "id": "hr-118-2792"
+    "id": "hr-118-2792",
+    "rc": 1,
+    "mm": 0.957
   },
   {
     "name": "Enhancing Multi-Class Share Disclosures Act",
     "meta": "H.R. 2795 · Passed House · Financial Regulation",
-    "id": "hr-118-2795"
+    "id": "hr-118-2795",
+    "rc": 1,
+    "mm": 0.841
   },
   {
     "name": "Promoting Opportunities for Non-Traditional Capital Formation Act",
     "meta": "H.R. 2796 · Passed House · Commerce",
-    "id": "hr-118-2796"
+    "id": "hr-118-2796",
+    "rc": 1,
+    "mm": 0.644
   },
   {
     "name": "HALT Fentanyl Act",
     "meta": "H.R. 467 · Passed House · Criminal Justice",
-    "id": "hr-118-467"
+    "id": "hr-118-467",
+    "rc": 2,
+    "mm": 0.102
   },
   {
     "name": "China Financial Threat Mitigation Act of 2023",
     "meta": "H.R. 1156 · Passed House · Financial Regulation",
-    "id": "hr-118-1156"
+    "id": "hr-118-1156",
+    "rc": 1,
+    "mm": 0.975
   },
   {
     "name": "VET–TEC Authorization Act of 2023",
     "meta": "H.R. 1669 · Passed House · Defense",
-    "id": "hr-118-1669"
+    "id": "hr-118-1669",
+    "rc": 1,
+    "mm": 0.957
   },
   {
     "name": "A joint resolution disapproving of the rule submitted by the Department of Homeland Security relating to \"Public Charge Ground of Inadmissibility\".",
     "meta": "S.J.Res. 18 · Passed Senate · Immigration",
-    "id": "sjres-118-18"
+    "id": "sjres-118-18",
+    "rc": 1,
+    "mm": 0.031
   },
   {
     "name": "POLICE Act of 2023",
     "meta": "H.R. 2494 · Passed House · Immigration",
-    "id": "hr-118-2494"
+    "id": "hr-118-2494",
+    "rc": 3,
+    "mm": 0.037
   },
   {
     "name": "Federal Law Enforcement Officer Service Weapon Purchase Act",
     "meta": "H.R. 3091 · Passed House · Criminal Justice",
-    "id": "hr-118-3091"
+    "id": "hr-118-3091",
+    "rc": 5,
+    "mm": 0.002
   },
   {
     "name": "NDO Fairness Act",
     "meta": "H.R. 3089 · Passed House · Criminal Justice",
-    "id": "hr-118-3089"
+    "id": "hr-118-3089",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the National Marine Fisheries Service relating to \"Endangered and Threatened Wildlife and Plants; Regulations for Listing Endangered and Threatened Species and Designating Critical Habitat\".",
     "meta": "S.J.Res. 23 · Passed Senate · Public Lands",
-    "id": "sjres-118-23"
+    "id": "sjres-118-23",
+    "rc": 1,
+    "mm": 0.02
   },
   {
     "name": "Coastal Communities Ocean Acidification Act of 2023",
     "meta": "H.R. 676 · Passed House · Public Lands",
-    "id": "hr-118-676"
+    "id": "hr-118-676",
+    "rc": 1,
+    "mm": 0.716
   },
   {
     "name": "Advanced Weather Model Computing Development Act",
     "meta": "H.R. 1715 · Passed House · Technology",
-    "id": "hr-118-1715"
+    "id": "hr-118-1715",
+    "rc": 1,
+    "mm": 0.754
   },
   {
     "name": "Precision Agriculture Satellite Connectivity Act",
     "meta": "H.R. 1339 · Passed House · Technology",
-    "id": "hr-118-1339"
+    "id": "hr-118-1339",
+    "rc": 1,
+    "mm": 0.948
   },
   {
     "name": "Advanced, Local Emergency Response Telecommunications Parity Act",
     "meta": "H.R. 1353 · Passed House · Technology",
-    "id": "hr-118-1353"
+    "id": "hr-118-1353",
+    "rc": 1,
+    "mm": 0.995
   },
   {
     "name": "Justice for Jana Elementary Act of 2023",
@@ -8435,17 +9569,23 @@ const LEGISLATION_DATA = [
   {
     "name": "Protection of Women and Girls in Sports Act of 2023",
     "meta": "H.R. 734 · Passed House · Civil Rights",
-    "id": "hr-118-734"
+    "id": "hr-118-734",
+    "rc": 3,
+    "mm": 0.026
   },
   {
     "name": "Countering Untrusted Telecommunications Abroad Act",
     "meta": "H.R. 1149 · Passed House · Foreign Policy",
-    "id": "hr-118-1149"
+    "id": "hr-118-1149",
+    "rc": 1,
+    "mm": 0.962
   },
   {
     "name": "USA Act",
     "meta": "H.R. 1151 · Passed House · Foreign Policy",
-    "id": "hr-118-1151"
+    "id": "hr-118-1151",
+    "rc": 1,
+    "mm": 0.971
   },
   {
     "name": "Administrative False Claims Act of 2023",
@@ -8455,12 +9595,16 @@ const LEGISLATION_DATA = [
   {
     "name": "A bill to repeal the authorizations for use of military force against Iraq.",
     "meta": "S. 316 · Passed Senate · Foreign Policy",
-    "id": "s-118-316"
+    "id": "s-118-316",
+    "rc": 10,
+    "mm": 0.021
   },
   {
     "name": "PRC Is Not a Developing Country Act",
     "meta": "H.R. 1107 · Passed House · Foreign Policy",
-    "id": "hr-118-1107"
+    "id": "hr-118-1107",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Undersea Cable Control Act",
@@ -8470,27 +9614,37 @@ const LEGISLATION_DATA = [
   {
     "name": "Stop Forced Organ Harvesting Act of 2023",
     "meta": "H.R. 1154 · Passed House · Foreign Policy",
-    "id": "hr-118-1154"
+    "id": "hr-118-1154",
+    "rc": 1,
+    "mm": 0.99
   },
   {
     "name": "Providing Appropriate Recognition and Treatment Needed to Enhance Relations with ASEAN Act",
     "meta": "H.R. 406 · Passed House · Foreign Policy",
-    "id": "hr-118-406"
+    "id": "hr-118-406",
+    "rc": 1,
+    "mm": 0.843
   },
   {
     "name": "Parents Bill of Rights Act",
     "meta": "H.R. 5 · Passed House · Education",
-    "id": "hr-118-5"
+    "id": "hr-118-5",
+    "rc": 12,
+    "mm": 0.012
   },
   {
     "name": "To direct the Secretary of State to submit to Congress a report on implementation of the advanced capabilities pillar of the trilateral security partnership between Australia, the United Kingdom, and the United States.",
     "meta": "H.R. 1093 · Passed House · Foreign Policy",
-    "id": "hr-118-1093"
+    "id": "hr-118-1093",
+    "rc": 1,
+    "mm": 0.98
   },
   {
     "name": "To amend the Taiwan Assurance Act of 2020 to require periodic reviews and updated reports relating to the Department of State's Taiwan Guidelines.",
     "meta": "H.R. 1159 · Passed House · Foreign Policy",
-    "id": "hr-118-1159"
+    "id": "hr-118-1159",
+    "rc": 1,
+    "mm": 0.966
   },
   {
     "name": "To amend title 38, United States Code, to ensure that the Secretary of Veterans Affairs repays members of the Armed Forces for certain contributions made by such members towards Post-9/11 Educational Assistance, and for other purposes.",
@@ -8500,7 +9654,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Protecting Speech from Government Interference Act",
     "meta": "H.R. 140 · Passed House · Government",
-    "id": "hr-118-140"
+    "id": "hr-118-140",
+    "rc": 4,
+    "mm": 0.028
   },
   {
     "name": "Moving Americans Privacy Protection Act",
@@ -8510,7 +9666,9 @@ const LEGISLATION_DATA = [
   {
     "name": "VA COST SAVINGS Enhancements Act",
     "meta": "H.R. 753 · Passed House · Defense",
-    "id": "hr-118-753"
+    "id": "hr-118-753",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Preventing Child Sex Abuse Act of 2023",
@@ -8520,7 +9678,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Understanding Cybersecurity of Mobile Networks Act",
     "meta": "H.R. 1123 · Passed House · Technology",
-    "id": "hr-118-1123"
+    "id": "hr-118-1123",
+    "rc": 1,
+    "mm": 0.894
   },
   {
     "name": "Fighting Post-Traumatic Stress Disorder Act of 2023",
@@ -8530,12 +9690,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Reduce Exacerbated Inflation Negatively Impacting the Nation Act",
     "meta": "H.R. 347 · Passed House · Economy",
-    "id": "hr-118-347"
+    "id": "hr-118-347",
+    "rc": 7,
+    "mm": 0.064
   },
   {
     "name": "Informing Consumers about Smart Devices Act",
     "meta": "H.R. 538 · Passed House · Commerce",
-    "id": "hr-118-538"
+    "id": "hr-118-538",
+    "rc": 1,
+    "mm": 0.943
   },
   {
     "name": "SECURE Notarization Act of 2023",
@@ -8545,17 +9709,23 @@ const LEGISLATION_DATA = [
   {
     "name": "To terminate the requirement imposed by the Director of the Centers for Disease Control and Prevention for proof of COVID-19 vaccination for foreign travelers, and for other purposes.",
     "meta": "H.R. 185 · Passed House · Healthcare",
-    "id": "hr-118-185"
+    "id": "hr-118-185",
+    "rc": 7,
+    "mm": 0.028
   },
   {
     "name": "Disapproving the action of the District of Columbia Council in approving the Local Resident Voting Rights Amendment Act of 2022.",
     "meta": "H.J.Res. 24 · Passed House · Government",
-    "id": "hjres-118-24"
+    "id": "hjres-118-24",
+    "rc": 1,
+    "mm": 0.232
   },
   {
     "name": "Energy Cybersecurity University Leadership Act of 2023",
     "meta": "H.R. 302 · Passed House · Energy",
-    "id": "hr-118-302"
+    "id": "hr-118-302",
+    "rc": 1,
+    "mm": 0.729
   },
   {
     "name": "Eastern Band of Cherokee Historic Lands Reacquisition Act",
@@ -8565,12 +9735,16 @@ const LEGISLATION_DATA = [
   {
     "name": "SHOW UP Act of 2023",
     "meta": "H.R. 139 · Passed House · Government",
-    "id": "hr-118-139"
+    "id": "hr-118-139",
+    "rc": 1,
+    "mm": 0.035
   },
   {
     "name": "Pandemic is Over Act",
     "meta": "H.R. 382 · Passed House · Healthcare",
-    "id": "hr-118-382"
+    "id": "hr-118-382",
+    "rc": 2,
+    "mm": 0.023
   },
   {
     "name": "Commercial Remote Sensing Amendment Act of 2023",
@@ -8590,7 +9764,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Financial Exploitation Prevention Act of 2023",
     "meta": "H.R. 500 · Passed House · Financial Regulation",
-    "id": "hr-118-500"
+    "id": "hr-118-500",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Credit Union Board Modernization Act",
@@ -8600,7 +9776,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Strategic Production Response Act",
     "meta": "H.R. 21 · Passed House · Energy",
-    "id": "hr-118-21"
+    "id": "hr-118-21",
+    "rc": 57,
+    "mm": 0.007
   },
   {
     "name": "Post-Disaster Assistance Online Accountability Act",
@@ -8610,7 +9788,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Settlement Agreement Information Database Act of 2023",
     "meta": "H.R. 300 · Passed House · Government",
-    "id": "hr-118-300"
+    "id": "hr-118-300",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Securities and Exchange Commission Real Estate Leasing Authority Revocation Act",
@@ -8620,7 +9800,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Investing in Main Street Act of 2023",
     "meta": "H.R. 400 · Passed House · Commerce",
-    "id": "hr-118-400"
+    "id": "hr-118-400",
+    "rc": 1,
+    "mm": 0.939
   },
   {
     "name": "Small Business Advocacy Improvements Act of 2023",
@@ -8635,22 +9817,30 @@ const LEGISLATION_DATA = [
   {
     "name": "Chance to Compete Act of 2023",
     "meta": "H.R. 159 · Passed House · Government",
-    "id": "hr-118-159"
+    "id": "hr-118-159",
+    "rc": 1,
+    "mm": 0.991
   },
   {
     "name": "Protecting America’s Strategic Petroleum Reserve from China Act",
     "meta": "H.R. 22 · Passed House · Energy",
-    "id": "hr-118-22"
+    "id": "hr-118-22",
+    "rc": 1,
+    "mm": 0.547
   },
   {
     "name": "Family and Small Business Taxpayer Protection Act",
     "meta": "H.R. 23 · Passed House · Tax Policy",
-    "id": "hr-118-23"
+    "id": "hr-118-23",
+    "rc": 2,
+    "mm": 0.026
   },
   {
     "name": "Born-Alive Abortion Survivors Protection Act",
     "meta": "H.R. 26 · Passed House · Criminal Justice",
-    "id": "hr-118-26"
+    "id": "hr-118-26",
+    "rc": 2,
+    "mm": 0.016
   },
   {
     "name": "Taxpayer Workforce Modernization Act",
@@ -8935,12 +10125,16 @@ const LEGISLATION_DATA = [
   {
     "name": "A joint resolution to direct the removal of United States Armed Forces from hostilities within or against the Islamic Republic of Iran that have not been authorized by Congress.",
     "meta": "S.J.Res. 185 · Floor Action · Foreign Policy",
-    "id": "sjres-119-185"
+    "id": "sjres-119-185",
+    "rc": 2,
+    "mm": 0.031
   },
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
     "meta": "S.J.Res. 196 · Floor Action · Education",
-    "id": "sjres-119-196"
+    "id": "sjres-119-196",
+    "rc": 1,
+    "mm": 0.072
   },
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Centers for Medicare & Medicaid Services of the Department of Health and Human Services relating to \"Medicare Program; Implementation of Prior Authorization for Select Services for the Wasteful and Inappropriate Services Reduction (WISeR) Model\".",
@@ -9125,7 +10319,9 @@ const LEGISLATION_DATA = [
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Executive Office for Immigration Review relating to \"Appellate Procedures for the Board of Immigration Appeals\".",
     "meta": "S.J.Res. 190 · Floor Action · Immigration",
-    "id": "sjres-119-190"
+    "id": "sjres-119-190",
+    "rc": 1,
+    "mm": 0.021
   },
   {
     "name": "USMMA Athletics Act of 2026",
@@ -9275,7 +10471,9 @@ const LEGISLATION_DATA = [
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"National Emission Standards for Hazardous Air Pollutants: Coal- and Oil-Fired Electric Utility Steam Generating Units: Final Repeal\".",
     "meta": "S.J.Res. 188 · Floor Action · Climate & Energy",
-    "id": "sjres-119-188"
+    "id": "sjres-119-188",
+    "rc": 1,
+    "mm": 0.071
   },
   {
     "name": "Foreign Robocall Elimination Act",
@@ -9636,12 +10834,16 @@ const LEGISLATION_DATA = [
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Consumer Financial Protection relating to withdrawal of the rule relating to \"Consumer Financial Protection Circular 2024-05: Improper Overdraft Opt-In Practices\".",
     "meta": "S.J.Res. 130 · Floor Action · Financial Regulation",
-    "id": "sjres-119-130"
+    "id": "sjres-119-130",
+    "rc": 1,
+    "mm": 0.06
   },
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Consumer Financial Protection relating to the withdrawal of the rule relating to \"Examinations for Risks to Active-Duty Servicemembers and Their Covered Dependents\".",
     "meta": "S.J.Res. 132 · Floor Action · Financial Regulation",
-    "id": "sjres-119-132"
+    "id": "sjres-119-132",
+    "rc": 1,
+    "mm": 0.04
   },
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Consumer Financial Protection relating to the withdrawal of the rule relating to \"Fair Credit Reporting; Background Screening\".",
@@ -9661,7 +10863,9 @@ const LEGISLATION_DATA = [
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by Bureau of Consumer Financial Protection relating to the withdrawal of the rule relating to \"Debt Collection Practices (Regulation F); Deceptive and Unfair Collection of Medical Debt\".",
     "meta": "S.J.Res. 141 · Floor Action · Financial Regulation",
-    "id": "sjres-119-141"
+    "id": "sjres-119-141",
+    "rc": 1,
+    "mm": 0
   },
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Consumer Financial Protection relating to the withdrawal of the rule relating to \"Consumer Financial Protection Circular 2024-04: Whistleblower Protections Under CFPA Section 1057\".",
@@ -9776,12 +10980,16 @@ const LEGISLATION_DATA = [
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by U.S. Citizenship and Immigration Services relating to \"Removal of the Automatic Extension of Employment Authorization Documents\".",
     "meta": "S.J.Res. 99 · Floor Action · Immigration",
-    "id": "sjres-119-99"
+    "id": "sjres-119-99",
+    "rc": 1,
+    "mm": 0.031
   },
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"Air Plan Disapproval; Colorado; Regional Haze Plan for the Second Implementation Period\".",
     "meta": "S.J.Res. 139 · Floor Action · Climate & Energy",
-    "id": "sjres-119-139"
+    "id": "sjres-119-139",
+    "rc": 1,
+    "mm": 0.061
   },
   {
     "name": "Protecting American Taxpayers Act",
@@ -10096,12 +11304,16 @@ const LEGISLATION_DATA = [
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Veterans Affairs relating to \"Reproductive Health Services\".",
     "meta": "S.J.Res. 103 · Floor Action · Defense",
-    "id": "sjres-119-103"
+    "id": "sjres-119-103",
+    "rc": 1,
+    "mm": 0.02
   },
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Internal Revenue Service relating to \"Beginning of Construction Requirements for Purposes of the Termination of Clean Electricity Production Credits and Clean Electricity Investment Credits for Applicable Wind and Solar Facilities\".",
     "meta": "S.J.Res. 107 · Floor Action · Tax Policy",
-    "id": "sjres-119-107"
+    "id": "sjres-119-107",
+    "rc": 1,
+    "mm": 0.06
   },
   {
     "name": "Health Care Cybersecurity and Resiliency Act of 2026",
@@ -10301,7 +11513,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Proposing an amendment to the Constitution of the United States requiring a balanced budget for the Federal Government.",
     "meta": "H.J.Res. 139 · Reported · Economy",
-    "id": "hjres-119-139"
+    "id": "hjres-119-139",
+    "rc": 1,
+    "mm": 0.01
   },
   {
     "name": "ERISA Litigation Reform Act",
@@ -10546,7 +11760,9 @@ const LEGISLATION_DATA = [
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Internal Revenue Service relating to \"Interim Guidance Simplifying Application of the Corporate Alternative Minimum Tax to Partnerships\".",
     "meta": "S.J.Res. 95 · Floor Action · Tax Policy",
-    "id": "sjres-119-95"
+    "id": "sjres-119-95",
+    "rc": 1,
+    "mm": 0.041
   },
   {
     "name": "Drone Espionage Act",
@@ -10691,7 +11907,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Pregnant Students’ Rights Act",
     "meta": "S. 3627 · Floor Action · Education",
-    "id": "s-119-3627"
+    "id": "s-119-3627",
+    "rc": 1,
+    "mm": 0.022
   },
   {
     "name": "SCAM Act",
@@ -10766,7 +11984,9 @@ const LEGISLATION_DATA = [
   {
     "name": "A joint resolution to direct the removal of United States Armed Forces from hostilities within or against Venezuela that have not been authorized by Congress.",
     "meta": "S.J.Res. 98 · Floor Action · Foreign Policy",
-    "id": "sjres-119-98"
+    "id": "sjres-119-98",
+    "rc": 2,
+    "mm": 0
   },
   {
     "name": "Renewed Hope Act",
@@ -10776,7 +11996,9 @@ const LEGISLATION_DATA = [
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Centers for Medicare & Medicaid Services relating to \"Patient Protection and Affordable Care Act; Marketplace Integrity and Affordability\".",
     "meta": "S.J.Res. 84 · Floor Action · Healthcare",
-    "id": "sjres-119-84"
+    "id": "sjres-119-84",
+    "rc": 1,
+    "mm": 0.051
   },
   {
     "name": "National Earthquake Hazards Reduction Program Reauthorization Act of 2025",
@@ -10801,7 +12023,9 @@ const LEGISLATION_DATA = [
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"Air Plan Approval; South Dakota; Regional Haze Plan for the Second Implementation Period\".",
     "meta": "S.J.Res. 86 · Floor Action · Climate & Energy",
-    "id": "sjres-119-86"
+    "id": "sjres-119-86",
+    "rc": 1,
+    "mm": 0.075
   },
   {
     "name": "State Actions For Employing Transportation Risk Assessments and Crossing Knowledge Strategies Act",
@@ -10816,7 +12040,9 @@ const LEGISLATION_DATA = [
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Office of the Secretary of the Department of Health and Human Services relating to \"Policy on Adhering to the Text of the Administrative Procedure Act\".",
     "meta": "S.J.Res. 82 · Floor Action · Government",
-    "id": "sjres-119-82"
+    "id": "sjres-119-82",
+    "rc": 2,
+    "mm": 0
   },
   {
     "name": "Whistleblower Protection Act of 2025",
@@ -10876,12 +12102,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Health Care Freedom for Patients Act of 2025",
     "meta": "S. 3386 · Floor Action · Healthcare",
-    "id": "s-119-3386"
+    "id": "s-119-3386",
+    "rc": 1,
+    "mm": 0.03
   },
   {
     "name": "Lower Health Care Costs Act",
     "meta": "S. 3385 · Floor Action · Tax Policy",
-    "id": "s-119-3385"
+    "id": "s-119-3385",
+    "rc": 1,
+    "mm": 0.03
   },
   {
     "name": "Joe Fiandra Access to Home Infusion Act of 2025",
@@ -10906,7 +12136,9 @@ const LEGISLATION_DATA = [
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to \"Coastal Plain Oil and Gas Leasing Program Record of Decision\".",
     "meta": "S.J.Res. 91 · Floor Action · Energy",
-    "id": "sjres-119-91"
+    "id": "sjres-119-91",
+    "rc": 1,
+    "mm": 0.021
   },
   {
     "name": "Houthi Human Rights Accountability Act",
@@ -10997,12 +12229,16 @@ const LEGISLATION_DATA = [
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to \"Buffalo Field Office Record of Decision and Approved Resource Management Plan Amendment\".",
     "meta": "S.J.Res. 89 · Floor Action · Public Lands",
-    "id": "sjres-119-89"
+    "id": "sjres-119-89",
+    "rc": 1,
+    "mm": 0.041
   },
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"Extension of Deadlines in Standards of Performance for New, Reconstructed, and Modified Sources and Emissions Guidelines for Existing Sources: Oil and Natural Gas Sector Climate Review Final Rule\".",
     "meta": "S.J.Res. 76 · Floor Action · Climate & Energy",
-    "id": "sjres-119-76"
+    "id": "sjres-119-76",
+    "rc": 1,
+    "mm": 0.052
   },
   {
     "name": "Interstate Transport Act of 2025",
@@ -11022,7 +12258,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Shutdown Fairness Act",
     "meta": "S. 3012 · Floor Action · Government",
-    "id": "s-119-3012"
+    "id": "s-119-3012",
+    "rc": 2,
+    "mm": 0.091
   },
   {
     "name": "Guidance Clarity Act of 2025",
@@ -11148,7 +12386,9 @@ const LEGISLATION_DATA = [
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the United States Fish and Wildlife Service relating to \"Record of Decision for the Barred Owl Management Strategy; Washington, Oregon, and California\".",
     "meta": "S.J.Res. 69 · Floor Action · Climate & Energy",
-    "id": "sjres-119-69"
+    "id": "sjres-119-69",
+    "rc": 1,
+    "mm": 0.485
   },
   {
     "name": "Miccosukee Reserved Area Amendments Act",
@@ -11268,7 +12508,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Continuing Appropriations and Extensions and Other Matters Act, 2026",
     "meta": "S. 2882 · Floor Action · Economy",
-    "id": "s-119-2882"
+    "id": "s-119-2882",
+    "rc": 7,
+    "mm": 0.022
   },
   {
     "name": "Extending Expired Cybersecurity Authorities Act",
@@ -11313,7 +12555,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Eliminate Shutdowns Act",
     "meta": "S. 2806 · Floor Action · Economy",
-    "id": "s-119-2806"
+    "id": "s-119-2806",
+    "rc": 1,
+    "mm": 0.245
   },
   {
     "name": "To provide for the public diplomacy authorities of the Department of State, and for other purposes.",
@@ -11383,7 +12627,9 @@ const LEGISLATION_DATA = [
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"Emissions Budget and Allowance Allocations for Indiana Under the Revised Cross-State Air Pollution Rule Update\".",
     "meta": "S.J.Res. 60 · Floor Action · Climate & Energy",
-    "id": "sjres-119-60"
+    "id": "sjres-119-60",
+    "rc": 1,
+    "mm": 0.041
   },
   {
     "name": "District of Columbia Electronic Transmittal of Legislation Act",
@@ -12119,12 +13365,16 @@ const LEGISLATION_DATA = [
   {
     "name": "Protection of Women and Girls in Sports Act of 2025",
     "meta": "S. 9 · Floor Action · Other",
-    "id": "s-119-9"
+    "id": "s-119-9",
+    "rc": 1,
+    "mm": 0.063
   },
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"Waste Emissions Charge for Petroleum and Natural Gas Systems: Procedures for Facilitating Compliance, Including Netting and Exemptions\".",
     "meta": "S.J.Res. 12 · Floor Action · Climate & Energy",
-    "id": "sjres-119-12"
+    "id": "sjres-119-12",
+    "rc": 1,
+    "mm": 0.051
   },
   {
     "name": "To amend the Federal Water Pollution Control Act with respect to San Francisco Bay restoration, and for other purposes.",
@@ -12159,7 +13409,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Born-Alive Abortion Survivors Protection Act",
     "meta": "S. 6 · Floor Action · Criminal Justice",
-    "id": "s-119-6"
+    "id": "s-119-6",
+    "rc": 1,
+    "mm": 0.051
   },
   {
     "name": "Ending Trading and Holdings In Congressional Stocks (ETHICS) Act",
@@ -12899,7 +14151,9 @@ const LEGISLATION_DATA = [
   {
     "name": "A joint resolution relating to the disapproval of the Presidential report with respect to the indebtedness of the Government of Ukraine.",
     "meta": "S.J.Res. 117 · Floor Action · Foreign Policy",
-    "id": "sjres-118-117"
+    "id": "sjres-118-117",
+    "rc": 1,
+    "mm": 0.245
   },
   {
     "name": "IDEA Act",
@@ -13217,7 +14471,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Right to IVF Act",
     "meta": "S. 4445 · Floor Action · Healthcare",
-    "id": "s-118-4445"
+    "id": "s-118-4445",
+    "rc": 2,
+    "mm": 0.011
   },
   {
     "name": "Traumatic Brain Injury Program Reauthorization Act of 2024",
@@ -13517,7 +14773,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Reproductive Freedom for Women Act",
     "meta": "S. 4554 · Floor Action · Healthcare",
-    "id": "s-118-4554"
+    "id": "s-118-4554",
+    "rc": 1,
+    "mm": 0.054
   },
   {
     "name": "Agriculture, Rural Development, Food and Drug Administration, and Related Agencies Appropriations Act, 2025",
@@ -13627,7 +14885,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Right to Contraception Act",
     "meta": "S. 4381 · Floor Action · Healthcare",
-    "id": "s-118-4381"
+    "id": "s-118-4381",
+    "rc": 1,
+    "mm": 0.133
   },
   {
     "name": "Allowing Greater Access to Safe and Effective Contraception Act",
@@ -13652,7 +14912,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Border Act of 2024",
     "meta": "S. 4361 · Floor Action · Immigration",
-    "id": "s-118-4361"
+    "id": "s-118-4361",
+    "rc": 1,
+    "mm": 0.075
   },
   {
     "name": "State Trade Expansion Program Modernization Act of 2024",
@@ -14317,7 +15579,9 @@ const LEGISLATION_DATA = [
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Improving Income Driven Repayment for the William D. Ford Federal Direct Loan Program and the Federal Family Education Loan (FFEL) Program\".",
     "meta": "S.J.Res. 43 · Floor Action · Education",
-    "id": "sjres-118-43"
+    "id": "sjres-118-43",
+    "rc": 1,
+    "mm": 0.01
   },
   {
     "name": "Bipartisan Primary Care and Health Workforce Act",
@@ -15057,17 +16321,23 @@ const LEGISLATION_DATA = [
   {
     "name": "A joint resolution removing the deadline for the ratification of the Equal Rights Amendment.",
     "meta": "S.J.Res. 4 · Floor Action · Civil Rights",
-    "id": "sjres-118-4"
+    "id": "sjres-118-4",
+    "rc": 1,
+    "mm": 0.041
   },
   {
     "name": "VA Medicinal Cannabis Research Act of 2023",
     "meta": "S. 326 · Floor Action · Defense",
-    "id": "s-118-326"
+    "id": "s-118-326",
+    "rc": 1,
+    "mm": 0.152
   },
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Veterans Affairs relating to \"Reproductive Health Services\".",
     "meta": "S.J.Res. 10 · Floor Action · Defense",
-    "id": "sjres-118-10"
+    "id": "sjres-118-10",
+    "rc": 1,
+    "mm": 0.03
   },
   {
     "name": "FORCE Act",

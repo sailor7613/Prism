@@ -126,6 +126,10 @@ The bill's own rhetorical framing enters the cloud in proportion to its Diatribe
 
 Lift keywords from the bill's mechanism (the kind of political force it generates — regulatory action, statutory architecture, enforcement authorization, executive delegation, judicial preemption, etc.), the discursive objects it activates (sovereignty, intervention, enforcement, regulation, democratic procedure, constitutional order, trade, immigration, war powers, and similar substantive concepts), and — where present — the stated/operative tension itself.
 
+CATALOG GROUNDING — HARD RULE (overrides everything below):
+
+Every [bill-id] you cite MUST be copied verbatim from the BILL CATALOG block provided in this conversation. Never construct, recall, or extrapolate an ID — not from memory of real legislation, not as a plausible reconstruction, not as a flagged hypothesis. The engine silently discards IDs that are not in the catalog, so an invented ID produces nothing except a misled editor. If the terrain the editor describes is not represented in the catalog you were given, say exactly that in your first reply — name the missing bill class in plain language and offer search terms the editor can use to widen the query or nominate bills into the corpus. A named gap is a finding; an invented ID is corruption.
+
 BILL SUGGESTION FORMAT:
 
 When suggesting bills, format each as:
@@ -196,7 +200,10 @@ INTERACTION STYLE:
     return { b, score };
   }).filter(s => s.score >= 3)   // require at least one strong hit
     .sort((a, b) => b.score - a.score);
-  return scored.length ? scored.slice(0, cap).map(s => s.b) : all.slice(0, cap);
+  // Empty means empty (2026-07-06): when the event's terms match nothing,
+  // say so — the old fallback handed the model 150 alphabetical bills as if
+  // they were the terrain, and it improvised from priors to fill the gap.
+  return scored.slice(0, cap).map(s => s.b);
 }
 
   // ── Build the API message list for one editor turn.
@@ -232,9 +239,12 @@ INTERACTION STYLE:
     const contextBlock = contextLines.join('\n');
     const apiMessages = [];
     if (!history || history.length === 0) {
+      const catalogBlock = bills.length
+        ? `BILL CATALOG (${bills.length} of ${all.length} bills — keyword-filtered to this event; if a bill class you'd expect is missing, say so and the editor can widen the search; format: id|name|meta):\n${catalog}`
+        : `BILL CATALOG: NO MATCHES — none of the ${all.length} bills in the corpus matched this event's terms. Say so plainly, name the bill class that ought to exist here, and offer search terms to widen the query or nominate into the corpus. Cite no bill IDs this turn.`;
       apiMessages.push({
         role: 'user',
-        content: `[Event context]\n${contextBlock}\n\nBILL CATALOG (${bills.length} of ${all.length} bills — keyword-filtered to this event; if a bill class you'd expect is missing, say so and the editor can widen the search; format: id|name|meta):\n${catalog}${shortlistContext}\n\n---\n\n${text}`
+        content: `[Event context]\n${contextBlock}\n\n${catalogBlock}${shortlistContext}\n\n---\n\n${text}`
       });
     } else {
       apiMessages.push(...history);

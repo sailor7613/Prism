@@ -282,15 +282,6 @@
     font-size:9px; letter-spacing:.12em; text-transform:uppercase; padding:7px 12px; border-radius:2px; cursor:pointer; }
   .br-acts button:hover{ color:var(--ink); border-color:rgba(48,96,192,.45); }
   .br-foot{ padding:11px 14px calc(env(safe-area-inset-bottom) + 11px); border-top:.5px solid var(--rule); display:flex; align-items:center; gap:10px; }
-  /* Catalog pane (substance lens tier 2 — the record ranks, the lens folds) */
-  .br-cat-bar{ display:flex; gap:8px; padding:12px 14px 0; align-items:center; }
-  .br-cat-bar input{ flex:1; background:rgba(255,255,255,.03); border:.5px solid var(--rule); border-radius:8px;
-    color:var(--ink); font-family:var(--serif); font-size:13px; padding:9px 12px; outline:none; }
-  .br-cat-bar input:focus{ border-color:rgba(48,96,192,.45); }
-  .br-cat-count{ font-family:var(--mono); font-size:9px; letter-spacing:.1em; text-transform:uppercase;
-    color:var(--ink-low); padding:8px 16px 0; }
-  .br-card .rec{ font-family:var(--mono); font-size:9px; letter-spacing:.08em; color:var(--ink-mid); margin-top:5px; }
-  body.light .br-cat-bar input{ background:rgba(20,22,30,.04); }
   body.light .br-drawer{ background:rgba(245,240,232,.97); }
   body.light .br-input textarea, body.light .br-card{ background:rgba(20,22,30,.04); }
   body.light .br-kw{ color:#7a5418; }
@@ -416,7 +407,7 @@
   <div class="br-head">
     <span class="t">📜 Bills</span>
     <span class="ev" id="brEvent"></span>
-    <span class="layerseg" id="brSeg"><button data-p="chat" class="on">Dialogue</button><button data-p="list" id="brSegList">Shortlist · 0</button><button data-p="cat">Catalog</button></span>
+    <span class="layerseg" id="brSeg"><button data-p="chat" class="on">Dialogue</button><button data-p="list" id="brSegList">Shortlist · 0</button></span>
     <span style="flex:1"></span>
     <button class="btn" id="brResetBtn" title="Start a fresh dialogue">↺</button>
     <button class="btn" id="brClose">Close</button>
@@ -431,14 +422,6 @@
     </div>
     <div class="br-pane" id="brListPane" style="display:none">
       <div class="br-list" id="brList"></div>
-    </div>
-    <div class="br-pane" id="brCatPane" style="display:none">
-      <div class="br-cat-bar">
-        <input type="search" id="brCatSearch" placeholder="Search the catalog…" autocomplete="off">
-        <button class="btn" id="brCatFold"></button>
-      </div>
-      <div class="br-cat-count" id="brCatCount"></div>
-      <div class="br-list" id="brCatList"></div>
     </div>
   </div>
   <div class="br-foot">
@@ -992,8 +975,6 @@ function brPane(p){
   $('brSeg').querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.p===p));
   $('brChatPane').style.display = p==='chat'?'':'none';
   $('brListPane').style.display = p==='list'?'':'none';
-  $('brCatPane').style.display = p==='cat'?'':'none';
-  if(p==='cat') brRenderCat();
   if(p==='chat'){ const m=$('brMsgs'); m.scrollTop=m.scrollHeight; }
 }
 $('brSeg').querySelectorAll('button').forEach(b=>b.onclick=()=>brPane(b.dataset.p));
@@ -1080,60 +1061,6 @@ $('brList').addEventListener('click',e=>{
   const btn=e.target.closest?e.target.closest('button[data-a]'):null; if(!btn) return;
   const card=btn.closest('.br-card'); const c=brCandidates.find(x=>x.id===card.dataset.bill);
   if(c){ c.status=btn.dataset.a; brRenderList(); }
-});
-
-/* ===== Catalog pane — substance lens tier 2 =====
-   The record ranks: bills that forced a roll call rise, tightest margins
-   first — consequence measured, never judged. The ceremonial fold (tier 1)
-   stays on by default with its count visible; linked bills outrank the
-   lens, same rule as everywhere. */
-let brCatFoldOn=true;
-function brCatMarginPct(mm){ const p=mm*100; return (p<1?p.toFixed(1):Math.round(p))+'%'; }
-function brRenderCat(){
-  if(typeof LEGISLATION_DATA==='undefined'){ $('brCatList').innerHTML='<div class="br-empty">Catalog not loaded yet.</div>'; return; }
-  const q=($('brCatSearch').value||'').trim().toLowerCase();
-  const evt=brEvt(); const linked=new Set((evt&&evt.linkedBills)||[]);
-  let rows=LEGISLATION_DATA;
-  if(q) rows=rows.filter(b=>(b.name+' '+(b.meta||'')).toLowerCase().includes(q));
-  const cerHere=rows.filter(b=>b.cer&&!linked.has(b.id)).length;
-  if(brCatFoldOn) rows=rows.filter(b=>!b.cer||linked.has(b.id));
-  $('brCatFold').textContent = brCatFoldOn ? ('◫ '+cerHere+' ceremonial hidden') : ('◫ hide '+cerHere+' ceremonial');
-  rows=[...rows].sort((a,b)=>{
-    const ar=a.rc||0, br2=b.rc||0;
-    if(!!ar!==!!br2) return br2?1:-1;              /* the record rises */
-    if(ar&&br2) return (a.mm-b.mm)||(br2-ar);       /* tightest margin first */
-    return a.name.localeCompare(b.name);
-  });
-  const total=rows.length, CAP=150;
-  $('brCatCount').textContent = total+' bill'+(total===1?'':'s')+' · ranked by the record'+(total>CAP?' · showing first '+CAP:'');
-  if(!total){ $('brCatList').innerHTML='<div class="br-empty">Nothing matches.</div>'; return; }
-  const inShort=new Set(brCandidates.map(c=>c.id));
-  $('brCatList').innerHTML=rows.slice(0,CAP).map(b=>{
-    const rec=b.rc?`<div class="rec">⊕ ${b.rc} roll call${b.rc>1?'s':''} · tightest margin ${brCatMarginPct(b.mm)}</div>`:'';
-    const chips=[];
-    if(!b.rc) chips.push('<span class="br-tag">no roll call</span>');
-    if(b.cer&&!brCatFoldOn) chips.push('<span class="br-tag">◫ ceremonial</span>');
-    if(linked.has(b.id)) chips.push('<span class="br-tag">linked</span>');
-    const act=inShort.has(b.id)?'<span class="br-tag">in shortlist</span>'
-      :`<button data-cat-a="shortlist">→ Shortlist</button>`;
-    return `<div class="br-card" data-bill="${b.id}">
-      <div class="n">${escHtml(b.name)}</div><div class="m">${escHtml(b.meta||'')}</div>
-      ${rec}
-      ${chips.length?`<div class="br-tags">${chips.join('')}</div>`:''}
-      <div class="br-acts">${act}</div>
-    </div>`;
-  }).join('');
-}
-$('brCatSearch').addEventListener('input',brRenderCat);
-$('brCatFold').onclick=()=>{ brCatFoldOn=!brCatFoldOn; brRenderCat(); };
-$('brCatList').addEventListener('click',e=>{
-  const btn=e.target.closest?e.target.closest('button[data-cat-a]'):null; if(!btn) return;
-  const card=btn.closest('.br-card'); const b=LEGISLATION_DATA.find(x=>x.id===card.dataset.bill); if(!b) return;
-  if(!brCandidates.some(c=>c.id===b.id)){
-    brCandidates.push({ id:b.id, name:b.name, meta:b.meta||'', reason:'Pulled from the catalog'+(b.rc?' — '+b.rc+' roll call'+(b.rc>1?'s':'')+', tightest margin '+brCatMarginPct(b.mm):''), status:'candidate' });
-    brRenderList(); brStatus(b.name+' → shortlist');
-  }
-  brRenderCat();
 });
 
 async function brSendMsg(){
