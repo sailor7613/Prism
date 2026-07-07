@@ -278,109 +278,6 @@ async function fetchBillActions(congress, billType, billNumber) {
   return fetchAllPages(endpoint, 'actions');
 }
 
-// ── Enrich one bill: detail + subjects + actions → Prism record ──────
-// Extracted 2026-07-06 from the fetchBills() enrichment loop so the
-// terrain fetch shares one enrichment lineage with the notable pipeline —
-// identical record shape, one code path. `listBill` is the raw list item
-// (may be a bare { number } stub in terrain mode; detail fills the gaps).
-async function enrichBillRecord(listBill, congress, billType, billNumber) {
-  // Fetch detail
-  let detail = null;
-  try {
-    detail = await fetchBillDetail(congress, billType, billNumber);
-  } catch (err) {
-    console.warn(`    ⚠ Detail fetch failed for ${billType}${billNumber}-${congress}: ${err.message}`);
-  }
-
-  // Fetch subjects
-  let subjects = null;
-  try {
-    subjects = await fetchBillSubjects(congress, billType, billNumber);
-  } catch (err) {
-    // Subjects endpoint can 404 for some bills — that's fine
-  }
-
-  // Fetch full action history — status derives from the record (2026-07-04)
-  let actionsDerived = null;
-  try {
-    const actions = await fetchBillActions(congress, billType, billNumber);
-    actionsDerived = deriveStatusFromActions(actions);
-  } catch (err) {
-    console.warn(`    ⚠ Actions fetch failed for ${billType}${billNumber}-${congress} — falling back to latestAction text`);
-  }
-
-  // Parse sponsor from detail
-  let sponsor = null;
-  if (detail?.sponsors && detail.sponsors.length > 0) {
-    const s = detail.sponsors[0];
-    sponsor = {
-      bioguideId: s.bioguideId || null,
-      name: s.fullName || s.firstName + ' ' + s.lastName || 'Unknown',
-      party: s.party || null,
-      state: s.state || null,
-    };
-  }
-
-  // Parse policy area + subjects
-  const policyArea = detail?.policyArea?.name || null;
-  const topic = policyArea ? (TOPIC_MAP[policyArea] || policyArea) : null;
-
-  const subjectTerms = [];
-  if (subjects?.legislativeSubjects) {
-    const items = subjects.legislativeSubjects;
-    // Can be array of items or nested
-    if (Array.isArray(items)) {
-      items.forEach(item => {
-        if (item.name) subjectTerms.push(item.name);
-      });
-    }
-  }
-
-  // Title handling — prefer short title, fall back to official
-  const title = detail?.title || listBill.title || 'Untitled';
-  const shortTitle = detail?.shortTitle || null;
-
-  // Cosponsor count
-  const cosponsors = detail?.cosponsors?.count ?? null;
-
-  // latestAction: the list item carries it in pipeline mode; the terrain
-  // path passes a stub, so the detail response is the fallback source.
-  const latest = listBill.latestAction || detail?.latestAction || null;
-
-  // Build the Prism legislation record.
-  // Status: actions-history derivation is primary; latestAction text is
-  // the fallback. statusMethod records which path produced it (lineage).
-  const status = actionsDerived?.status || deriveStatus(latest?.text, billType);
-  const statusMethod = actionsDerived?.status ? 'actions_history' : 'latest_action_text';
-  return {
-    billId: `${billType}-${congress}-${billNumber}`,
-    congress,
-    type: billType,
-    number: billNumber,
-    title: shortTitle || title,
-    titleFull: title,
-    sponsor,
-    cosponsors,
-    policyArea,
-    topic,
-    subjects: subjectTerms.slice(0, 20),  // Cap at 20 to keep size reasonable
-    status,
-    statusLabel: STATUS_LABELS[status] || status,
-    statusMethod,                                  // 'actions_history' | 'latest_action_text'
-    milestones: actionsDerived?.milestones || null, // per-milestone dates — record fn for future record-z
-    actionCount: actionsDerived?.actionCount ?? null,
-    latestAction: {
-      date: latest?.actionDate || null,
-      text: latest?.text || null,
-    },
-    originChamber: detail?.originChamber || (billType.startsWith('h') ? 'House' : 'Senate'),
-    introducedDate: detail?.introducedDate || null,
-    congressGovUrl: `https://www.congress.gov/bill/${congress}th-congress/${typeToUrlSlug(billType)}/${billNumber}`,
-    relatedEventIds: [],   // Populated by admin — maps bills to Prism events
-    lastUpdated: new Date().toISOString(),
-  };
-}
-
 // ── Main fetch orchestrator ──────────────────────────────────────────
 async function fetchBills() {
   console.log('\n═══ LEGISLATION BOOTSTRAP ═══\n');
@@ -421,15 +318,114 @@ async function fetchBills() {
   const enriched = [];
   let enrichCount = 0;
   
-  // (Summaries note, carried from the old inline loop: the detail level
-  // has a summaries URL, but that's another fetch per bill — skipped to
-  // keep the pipeline fast. Possible follow-up enrichment pass.)
   for (const bill of allNotable) {
     enrichCount++;
+    const congress = bill._congress;
+    const billType = bill._type;
+    const billNumber = bill.number;
+    
     if (enrichCount % 25 === 0 || enrichCount === 1) {
       console.log(`  Enriching ${enrichCount}/${allNotable.length}...`);
     }
-    enriched.push(await enrichBillRecord(bill, bill._congress, bill._type, bill.number));
+    
+    // Fetch detail
+    let detail = null;
+    try {
+      detail = await fetchBillDetail(congress, billType, billNumber);
+    } catch (err) {
+      console.warn(`    ⚠ Detail fetch failed for ${billType}${billNumber}-${congress}: ${err.message}`);
+    }
+    
+    // Fetch subjects
+    let subjects = null;
+    try {
+      subjects = await fetchBillSubjects(congress, billType, billNumber);
+    } catch (err) {
+      // Subjects endpoint can 404 for some bills — that's fine
+    }
+
+    // Fetch full action history — status derives from the record (2026-07-04)
+    let actionsDerived = null;
+    try {
+      const actions = await fetchBillActions(congress, billType, billNumber);
+      actionsDerived = deriveStatusFromActions(actions);
+    } catch (err) {
+      console.warn(`    ⚠ Actions fetch failed for ${billType}${billNumber}-${congress} — falling back to latestAction text`);
+    }
+    
+    // Parse sponsor from detail
+    let sponsor = null;
+    if (detail?.sponsors && detail.sponsors.length > 0) {
+      const s = detail.sponsors[0];
+      sponsor = {
+        bioguideId: s.bioguideId || null,
+        name: s.fullName || s.firstName + ' ' + s.lastName || 'Unknown',
+        party: s.party || null,
+        state: s.state || null,
+      };
+    }
+    
+    // Parse policy area + subjects
+    const policyArea = detail?.policyArea?.name || null;
+    const topic = policyArea ? (TOPIC_MAP[policyArea] || policyArea) : null;
+    
+    const subjectTerms = [];
+    if (subjects?.legislativeSubjects) {
+      const items = subjects.legislativeSubjects;
+      // Can be array of items or nested
+      if (Array.isArray(items)) {
+        items.forEach(item => {
+          if (item.name) subjectTerms.push(item.name);
+        });
+      }
+    }
+    
+    // Title handling — prefer short title, fall back to official
+    const title = detail?.title || bill.title || 'Untitled';
+    const shortTitle = detail?.shortTitle || null;
+    
+    // Cosponsor count
+    const cosponsors = detail?.cosponsors?.count ?? null;
+    
+    // Summary (from detail — first summary if present)
+    // The detail level has a summaries URL, but we'd need another fetch.
+    // For now, we skip summaries to keep the pipeline fast.
+    // Can be added as a follow-up enrichment pass.
+    
+    // Build the Prism legislation record.
+    // Status: actions-history derivation is primary; latestAction text is
+    // the fallback. statusMethod records which path produced it (lineage).
+    const status = actionsDerived?.status || deriveStatus(bill.latestAction?.text, billType);
+    const statusMethod = actionsDerived?.status ? 'actions_history' : 'latest_action_text';
+    const record = {
+      billId: `${billType}-${congress}-${billNumber}`,
+      congress,
+      type: billType,
+      number: billNumber,
+      title: shortTitle || title,
+      titleFull: title,
+      sponsor,
+      cosponsors,
+      policyArea,
+      topic,
+      subjects: subjectTerms.slice(0, 20),  // Cap at 20 to keep size reasonable
+      status,
+      statusLabel: STATUS_LABELS[status] || status,
+      statusMethod,                                  // 'actions_history' | 'latest_action_text'
+      milestones: actionsDerived?.milestones || null, // per-milestone dates — record fn for future record-z
+      actionCount: actionsDerived?.actionCount ?? null,
+      latestAction: {
+        date: bill.latestAction?.actionDate || null,
+        text: bill.latestAction?.text || null,
+      },
+      originChamber: detail?.originChamber || (billType.startsWith('h') ? 'House' : 'Senate'),
+      introducedDate: detail?.introducedDate || null,
+      congressGovUrl: `https://www.congress.gov/bill/${congress}th-congress/${typeToUrlSlug(billType)}/${billNumber}`,
+      relatedEventIds: [],   // Populated by admin — maps bills to Prism events
+      lastUpdated: new Date().toISOString(),
+    };
+    
+    enriched.push(record);
   }
   
   // ── Sort: enacted first, then by status weight, then by latest action date ──
@@ -488,38 +484,32 @@ function typeToUrlSlug(type) {
   return map[type] || type;
 }
 
-// ── Full record → compact catalog entry ──────────────────────────────
-// One mapper for both the full-pipeline write and the terrain append, so
-// the compact shape can't drift between paths. The compact/full key split
-// (rc/mm vs rollCallCount/minMargin, cer vs ceremonial, tf vs provenance)
-// is DELIBERATE — compact keys are size-paid per entry in a ~500KB file
-// the browser parses on load; recorded 2026-07-06, see terrain handoff.
-function compactEntry(bill) {
-  const typeLabel = TYPE_LABELS[bill.type] || bill.type.toUpperCase();
-  const num = `${typeLabel} ${bill.number}`;
-
-  // Build meta string: "H.R. 1234 · Enacted · Defense" or "S. 567 · Passed Senate · Healthcare"
-  const parts = [num];
-  if (bill.status === 'enacted') {
-    parts.push('Enacted');
-  } else {
-    parts.push(bill.statusLabel);
-  }
-  if (bill.topic) parts.push(bill.topic);
-
-  const entry = {
-    name: bill.title,
-    meta: parts.join(' · '),
-    id: bill.billId,
-  };
-  if (bill.ceremonial) entry.cer = 1;   // substance-lens fold flag (2026-07-05)
-  if ((bill.provenance || '').startsWith('terrain_fetch')) entry.tf = 1;   // terrain-fetched arrival (2026-07-06)
-  return entry;
-}
-
 // ── Generate legislation_data.js for onboarding UI ───────────────────
 function generateLegislationDataJS(bills) {
-  const entries = bills.map(compactEntry);
+  const entries = bills.map(bill => {
+    const typeLabel = TYPE_LABELS[bill.type] || bill.type.toUpperCase();
+    const num = `${typeLabel} ${bill.number}`;
+    const year = bill.introducedDate ? bill.introducedDate.slice(0, 4) : '';
+    const congress = bill.congress === 119 ? '119th' : '118th';
+    
+    // Build meta string: "H.R. 1234 · Enacted · Defense" or "S. 567 · Passed Senate · Healthcare"
+    const parts = [num];
+    if (bill.status === 'enacted') {
+      // For enacted, show PL number style if available, otherwise just "Enacted"
+      parts.push('Enacted');
+    } else {
+      parts.push(bill.statusLabel);
+    }
+    if (bill.topic) parts.push(bill.topic);
+    
+    const entry = {
+      name: bill.title,
+      meta: parts.join(' · '),
+      id: bill.billId,
+    };
+    if (bill.ceremonial) entry.cer = 1;   // substance-lens fold flag (2026-07-05)
+    return entry;
+  });
   
   const js = `// Auto-generated by fetch-bills.js — ${new Date().toISOString()}
 // ${entries.length} notable bills from 118th–119th Congress
@@ -537,7 +527,6 @@ function generateStats(bills) {
   const byTopic = {};
   const byType = {};
   const byStatusMethod = {};
-  const byProvenance = {};
 
   bills.forEach(b => {
     byStatus[b.status] = (byStatus[b.status] || 0) + 1;
@@ -545,7 +534,6 @@ function generateStats(bills) {
     byTopic[b.topic || 'Unclassified'] = (byTopic[b.topic || 'Unclassified'] || 0) + 1;
     byType[b.type] = (byType[b.type] || 0) + 1;
     byStatusMethod[b.statusMethod || 'unknown'] = (byStatusMethod[b.statusMethod || 'unknown'] || 0) + 1;
-    byProvenance[b.provenance || 'notable_pipeline'] = (byProvenance[b.provenance || 'notable_pipeline'] || 0) + 1;
   });
 
   return {
@@ -555,7 +543,6 @@ function generateStats(bills) {
     byTopic,
     byType,
     byStatusMethod,
-    byProvenance,
     fetchedAt: new Date().toISOString(),
   };
 }
@@ -566,27 +553,6 @@ async function writeBillOutputs(bills) {
   // nonexistent config.outputDir and silently writing to scripts/output/)
   const outputDir = config.OUTPUT_DIR || path.join(__dirname, 'output');
   if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
-
-  // Terrain carry-over (2026-07-06): fetchBills() rebuilds the NOTABLE
-  // corpus only — bills that arrived via --terrain would silently vanish
-  // on every full run without this. Records already re-caught by the
-  // notable net drop their terrain provenance (they're notable now, which
-  // is the honest description; terrain membership stays derivable from
-  // policyArea). Roll-call stamps (rc/mm) are fetch-votes.js's to restore.
-  const prevPath = path.join(outputDir, 'prism_legislation.json');
-  if (fs.existsSync(prevPath)) {
-    try {
-      const prev = JSON.parse(fs.readFileSync(prevPath, 'utf8'));
-      const have = new Set(bills.map(b => b.billId));
-      const carried = prev.filter(b => (b.provenance || '').startsWith('terrain_fetch') && !have.has(b.billId));
-      if (carried.length) {
-        bills.push(...carried);
-        console.log(`  ✓ carried ${carried.length} terrain-fetched bills across the rebuild`);
-      }
-    } catch (e) {
-      console.warn(`  ⚠ could not read previous catalog for terrain carry-over: ${e.message}`);
-    }
-  }
 
   // Ceremonial tag — record-tier, lineage-carrying pattern match
   // (scripts/ceremonial-classifier.js). Applied on every fetch so the
@@ -618,210 +584,16 @@ async function writeBillOutputs(bills) {
   console.log(`  By type:`, stats.byType);
 }
 
-// ═══ TERRAIN FETCH (2026-07-06) ══════════════════════════════════════
-// A Reading is sovereign over what it examines (CLAUDE.md standing
-// decision, 2026-07-06): given a CRS policy area ("Immigration"), fetch
-// EVERY bill in that terrain — roll calls or not, notable or not — and
-// merge them into the catalog provenance-marked. The notable-action
-// filter is deliberately absent here: a committee-dead bill arrives with
-// a thin record, which is honest and sometimes IS the finding. The
-// survey graph keeps excluding terrain-fetched bills (inspector-side);
-// the catalog pane and curate see them.
-//
-// Membership is decided by the record's own taxonomy — Sailor names the
-// terrain, the librarian-assigned policy area answers who's in it. The
-// framing keywords never touch the fetch boundary (interpretive functions
-// don't define record boundaries).
-//
-// The Congress.gov list endpoint carries no policyArea, so membership
-// costs one detail call per un-indexed bill. data/policy_area_index.json
-// is the persisted checkpoint that makes that a ONE-TIME cost: the first
-// run pays ~15–20k detail calls (hours, rate-limited, resumable — safe to
-// interrupt, it picks up where it left off); every later terrain, any
-// policy area, reads the index and only re-fetches bills whose updateDate
-// moved.
-
-const TERRAIN_PROVENANCE = 'terrain_fetch_v1';   // versioned — same rule as pattern_match_v1 / margin_scaled_v1
-const INDEX_VERSION = 'policy_area_index_v1';
-
-function policyAreaIndexPath() {
-  return path.join(config.OUTPUT_DIR, 'policy_area_index.json');
-}
-
-function loadPolicyAreaIndex() {
-  try {
-    const idx = JSON.parse(fs.readFileSync(policyAreaIndexPath(), 'utf8'));
-    if (idx && idx.version === INDEX_VERSION && idx.bills) return idx;
-    console.warn('  ⚠ policy_area_index.json has an unknown shape — rebuilding from scratch');
-  } catch (e) { /* first run — no index yet */ }
-  return { version: INDEX_VERSION, updatedAt: null, bills: {} };
-}
-
-function savePolicyAreaIndex(idx) {
-  idx.updatedAt = new Date().toISOString();
-  fs.writeFileSync(policyAreaIndexPath(), JSON.stringify(idx));  // compact on purpose — ~20k entries
-}
-
-// Index shape: bills["hr-119-3"] = { p: "Immigration"|null, u: "<updateDate>" }
-async function buildPolicyAreaIndex(congress) {
-  const idx = loadPolicyAreaIndex();
-  const queue = [];
-  console.log(`── Indexing policy areas · ${congress}th Congress ──`);
-  for (const type of BILL_TYPES) {
-    const bills = await fetchBillList(congress, type);
-    for (const b of bills) {
-      const id = `${type}-${congress}-${b.number}`;
-      const u = b.updateDate || null;
-      const known = idx.bills[id];
-      if (known && known.u === u) continue;               // unchanged since last index
-      if (b.policyArea && 'name' in b.policyArea) {       // free ride if the API ever adds it to list items
-        idx.bills[id] = { p: b.policyArea.name || null, u };
-        continue;
-      }
-      queue.push({ id, type, number: b.number, u });
-    }
-  }
-  console.log(`\n  Index: ${Object.keys(idx.bills).length} bills already indexed · ${queue.length} need a detail call`);
-  if (queue.length) {
-    const CHECKPOINT_EVERY = 200;
-    const t0 = Date.now();
-    for (let i = 0; i < queue.length; i++) {
-      const q = queue[i];
-      try {
-        const detail = await fetchBillDetail(congress, q.type, q.number);
-        idx.bills[q.id] = { p: detail?.policyArea?.name || null, u: q.u };
-      } catch (err) {
-        // not stored → retried automatically on the next run
-        console.warn(`    ⚠ detail failed for ${q.id} — will retry next run (${err.message})`);
-      }
-      if ((i + 1) % CHECKPOINT_EVERY === 0 || i === queue.length - 1) {
-        savePolicyAreaIndex(idx);
-        const perMin = (i + 1) / ((Date.now() - t0) / 60000);
-        const etaMin = Math.round((queue.length - i - 1) / Math.max(0.1, perMin));
-        console.log(`  indexed ${i + 1}/${queue.length} · ~${etaMin} min remaining · checkpoint saved`);
-      }
-    }
-  }
-  savePolicyAreaIndex(idx);
-  return idx;
-}
-
-// ── Surgical merge into the two catalog files ─────────────────────────
-// Append, never regenerate: existing compact entries carry rc/mm stamps
-// from fetch-votes.js (and cer flags) that a regeneration would erase.
-function appendToCatalogFiles(catalog, newRecords) {
-  const outputDir = config.OUTPUT_DIR;
-
-  // Full catalog
-  const fullPath = path.join(outputDir, 'prism_legislation.json');
-  const merged = catalog.concat(newRecords);
-  fs.writeFileSync(fullPath, JSON.stringify(merged, null, 2));
-  console.log(`  ✓ ${fullPath} (${merged.length} bills, +${newRecords.length})`);
-
-  // Compact catalog — parse the existing global, append, rewrite verbatim
-  const jsPath = path.join(outputDir, 'legislation_data.js');
-  const src = fs.readFileSync(jsPath, 'utf8');
-  const existing = new Function(`${src}\n;return LEGISLATION_DATA;`)();
-  const additions = newRecords.map(compactEntry);
-  const all = existing.concat(additions);
-  const tfCount = all.filter(e => e.tf).length;
-  const js = `// Auto-generated by fetch-bills.js — ${new Date().toISOString()}
-// ${all.length} bills from 118th–119th Congress (${tfCount} terrain-fetched · tf:1)
-// Drop-in replacement for LEGISLATION_DATA in index.html
-
-const LEGISLATION_DATA = ${JSON.stringify(all, null, 2)};
-`;
-  fs.writeFileSync(jsPath, js);
-  console.log(`  ✓ ${jsPath} (+${additions.length} entries, tf:1)`);
-
-  // Stats — regenerated from the merged catalog so counts stay honest
-  const stats = generateStats(merged);
-  fs.writeFileSync(path.join(outputDir, 'bill_fetch_stats.json'), JSON.stringify(stats, null, 2));
-  console.log('  ✓ bill_fetch_stats.json refreshed');
-}
-
-async function fetchTerrain(policyArea, congress) {
-  console.log(`\n═══ TERRAIN FETCH — "${policyArea}" · ${congress}th Congress ═══`);
-  console.log(`    provenance: ${TERRAIN_PROVENANCE} · notable-action filter: OFF (by design)\n`);
-
-  const catalogPath = path.join(config.OUTPUT_DIR, 'prism_legislation.json');
-  if (!fs.existsSync(catalogPath)) {
-    console.error('✗ prism_legislation.json not found — run the notable pipeline (run-all.js) first.');
-    process.exit(1);
-  }
-  const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
-  const inCatalog = new Set(catalog.map(b => b.billId));
-
-  const idx = await buildPolicyAreaIndex(congress);
-
-  // Membership: the record's own taxonomy decides.
-  const marker = `-${congress}-`;
-  const memberIds = Object.keys(idx.bills)
-    .filter(id => id.includes(marker) && idx.bills[id].p === policyArea);
-  if (!memberIds.length) {
-    const areas = [...new Set(Object.values(idx.bills).map(v => v.p).filter(Boolean))].sort();
-    console.error(`✗ No ${congress}th bills carry policyArea "${policyArea}" (labels are exact).`);
-    console.error(`  Known policy areas:\n    ${areas.join('\n    ')}`);
-    process.exit(1);
-  }
-  const newIds = memberIds.filter(id => !inCatalog.has(id));
-  console.log(`\n── Terrain "${policyArea}": ${memberIds.length} bills · ${memberIds.length - newIds.length} already in catalog · ${newIds.length} to enrich ──\n`);
-  if (!newIds.length) {
-    console.log('Nothing to add — the catalog already holds the whole terrain.');
-    return;
-  }
-
-  const newRecords = [];
-  let n = 0;
-  for (const id of newIds) {
-    n++;
-    if (n % 25 === 0 || n === 1) console.log(`  Enriching ${n}/${newIds.length}...`);
-    const [type, cg, number] = id.split('-');
-    const record = await enrichBillRecord({ number }, parseInt(cg, 10), type, number);
-    record.provenance = TERRAIN_PROVENANCE;   // how it arrived — membership itself lives on policyArea
-    ceremonial.apply(record);                 // same record-tier tag as every other arrival
-    newRecords.push(record);
-  }
-
-  appendToCatalogFiles(catalog, newRecords);
-  const thin = newRecords.filter(r => (STATUS_RANK[r.status] ?? 0) < STATUS_RANK.reported).length;
-  console.log(`\n✓ Terrain fetch complete: ${newRecords.length} bills joined the catalog, provenance-marked.`);
-  console.log(`  ${thin} arrived with thin records (below "reported") — honest, and sometimes the finding.`);
-  console.log('  Survey graph excludes them; catalog pane + curate see them. Hard-reload the browser (Cmd-Shift-R).');
-}
-
 // ── Export for run-all.js ────────────────────────────────────────────
-module.exports = { fetchBills, writeBillOutputs, fetchTerrain };
+module.exports = { fetchBills, writeBillOutputs };
 
 // ── Standalone execution ─────────────────────────────────────────────
-//   node fetch-bills.js                                → notable pipeline
-//   node fetch-bills.js --terrain "Immigration"        → terrain fetch (119th)
-//   node fetch-bills.js --terrain "Health" --congress 118
 if (require.main === module) {
-  const args = process.argv.slice(2);
-  const ti = args.indexOf('--terrain');
-  if (ti !== -1) {
-    const area = args[ti + 1];
-    if (!area || area.startsWith('--')) {
-      console.error('Usage: node fetch-bills.js --terrain "Immigration" [--congress 119]');
+  fetchBills()
+    .then(bills => writeBillOutputs(bills))
+    .then(() => console.log('\n✓ Bills fetch complete.\n'))
+    .catch(err => {
+      console.error('✗ Bills fetch failed:', err);
       process.exit(1);
-    }
-    const ci = args.indexOf('--congress');
-    const congress = ci !== -1 ? parseInt(args[ci + 1], 10) : config.CONGRESS_NUMBER;
-    fetchTerrain(area, congress)
-      .then(() => console.log('\n✓ Terrain fetch done.\n'))
-      .catch(err => {
-        console.error('✗ Terrain fetch failed:', err);
-        console.error('  (Progress is checkpointed — rerun the same command to resume.)');
-        process.exit(1);
-      });
-  } else {
-    fetchBills()
-      .then(bills => writeBillOutputs(bills))
-      .then(() => console.log('\n✓ Bills fetch complete.\n'))
-      .catch(err => {
-        console.error('✗ Bills fetch failed:', err);
-        process.exit(1);
-      });
-  }
+    });
 }

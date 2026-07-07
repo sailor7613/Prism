@@ -188,10 +188,7 @@
       &nbsp;Z — <b style="color:var(--ink)">realized / frustrated</b>: enacted +1 · vetoed −0.95 · to-president +0.85 ·
       conference +0.8 · passed-both +0.75 · passed-one-chamber +0.6 · floor +0.35 · reported +0.15, halved while the
       119th is still in motion; bills that died with the 118th go <i>negative</i>, deeper the further they got
-      (reported −0.4 · floor −0.6 · passed-chamber −0.85 · passed-both −1.0).
-      <b style="color:var(--ink)">Where the record carries roll calls</b> (rc/mm stamp), |z| scales by the tightest
-      margin — (1 + mm) / 2 — so a knife-edge bill sits halfway to the plane and a near-unanimous one keeps its rung
-      (<i>margin_scaled_v1</i>; the authored ladder is the fallback, not the source). The Z boundary planes are the factory's
+      (reported −0.4 · floor −0.6 · passed-chamber −0.85 · passed-both −1.0). The Z boundary planes are the factory's
       Winner / Loser bounds. Tap or hold a dot to inspect.
       <b style="color:var(--coalition)">Corpus note:</b> until the next `fetch-bills` run, the 118th on disk is
       enacted-only (survivor-biased — the ingest was widened 2026-07-03), so the frustrated half may be empty.
@@ -229,26 +226,13 @@ const RUBRIC_CURRENT = 'v1_1';   // bump alongside PRISM_DIATRIBE_RUBRIC_ID in a
 
 let bills = [], members = [], positions = [], events = [];
 const memById = {}, billById = {}, evById = {};
-let billScores = [];               // prism_bill_scores store (primary) + legacy evt.billAnalysis
+let billScores = [];               // flattened evt.billAnalysis across all events
 const scoredIds = new Set();
 function collectBillScores() {
   billScores = []; scoredIds.clear();
-  const seen = new Set();
-  // Primary: the PrismDB store — curate writes land here with lineage
-  // (Portal Ontology §4.1; first 12 rows linked 2026-07-06).
-  if (HAS_DB && PrismDB.getBillScores) {
-    PrismDB.getBillScores().forEach(s => {
-      const ev = evById[s.eventId];
-      billScores.push(Object.assign({ eventTitle: (ev && ev.title) || '' }, s));
-      scoredIds.add(s.billId);
-      seen.add(s.billId + '|' + s.eventId);
-    });
-  }
-  // Legacy: evt.billAnalysis, only where the store has no row for the pair.
   events.forEach(ev => {
     const an = ev.billAnalysis || {};
     Object.keys(an).forEach(billId => {
-      if (seen.has(billId + '|' + ev.id)) return;
       billScores.push(Object.assign({ billId, eventId: ev.id, eventTitle: ev.title || '' }, an[billId]));
       scoredIds.add(billId);
     });
@@ -310,7 +294,7 @@ function renderBillOverview() {
   $('billStats').innerHTML = [
     ['' + pool.length, $('bsubst').checked ? 'bills in lens' : 'bills on disk'], ['' + c119, '119th congress'],
     ['' + enacted, 'enacted'], ['' + linked, 'linked to events'],
-    ['' + scoredIds.size, 'curated (store + legacy)'],
+    ['' + scoredIds.size, 'curated (billAnalysis)'],
     ['' + folded, 'ceremonial folded'],
   ].map(s => '<div class="stat"><b>' + s[0] + '</b><span>' + s[1] + '</span></div>').join('');
   // topic histogram — thinness view
@@ -536,17 +520,7 @@ function runSymmetry() {
 //   X: sponsor NOMINATE D1 · Y: log coalition breadth · Z: realized/frustrated
 //   from status + whether the bill's congress has ended.
 let gmL = null, gmLoading = false;
-// Record-z derivation (heuristics §3 #4, implemented 2026-07-06).
-// How far it got = the ladder (observed progression; rungs are authored —
-// that's why it is now the FALLBACK, not the source). How contested =
-// tightest roll-call margin where the record is stamped: |z| scales by
-// (1 + minMargin) / 2 ∈ [0.5, 1], so a near-tie halves the magnitude and
-// near-unanimity keeps it. Sign (realized vs frustrated) stays from the
-// outcome — that part is observed either way. Derived at render; nothing
-// on disk or in any store is touched (§5.5: lineages stay independent).
-// Bump the version if the formula changes — same rule as pattern_match_v1.
-const RECORD_Z_DERIVATION = 'margin_scaled_v1';
-function billLadderZ(b) {
+function billZ(b) {
   if (b.status === 'enacted') return 1;
   if (b.status === 'vetoed') return -0.95;   // realized frustration, any congress
   const prog = {
@@ -557,12 +531,6 @@ function billLadderZ(b) {
   const p = prog == null ? 0.1 : prog;
   if (b.congress === 118) return -Math.min(1, p + 0.25);  // died with the 118th — frustrated, deeper the further it got
   return p * 0.5;                                          // 119th — in motion, provisionally realized
-}
-function billZ(b) {
-  const base = billLadderZ(b);
-  const mm = (b.rollCallCount && typeof b.minMargin === 'number') ? b.minMargin : null;
-  if (mm == null) return base;                             // no roll calls on record → ladder fallback
-  return base * (1 + Math.max(0, Math.min(1, mm))) / 2;
 }
 function loadScript(src) { return new Promise((res, rej) => { const s = document.createElement('script');
   s.src = src; s.onload = res; s.onerror = () => rej(new Error('could not load ' + src)); document.head.appendChild(s); }); }
@@ -638,13 +606,7 @@ function renderGraph() {
   const cap = parseInt($('gcap').value); $('gcapV').textContent = cap;
   try { gmL.setBoundaryVisible($('gbounds').checked); } catch (_) {}
   try { gmL.clearDots(); } catch (_) {}
-  // Terrain-fetched bills never enter the survey graph (2026-07-06): they
-  // arrived for a Reading, not through the notable net, so plotting them
-  // would put the corpus-wide survey on a boundary the record didn't draw.
-  // A mark, not a gate — the bills tab and catalog pane still show them.
-  let pool = bills.filter(b => !(b.provenance || '').startsWith('terrain_fetch'));
-  const terrainExcluded = bills.length - pool.length;
-  pool = pool.filter(b =>
+  let pool = bills.filter(b =>
     (!t || (b.topic || '(none)') === t) && (!c || String(b.congress) === c) && (!s || b.statusLabel === s));
   // substance lens on the field — curated bills always show
   const preLens = pool.length;
@@ -687,14 +649,12 @@ function renderGraph() {
     } catch (_) {}
   });
   renderDivergence();
-  // status, not z-threshold — margin scaling pulls contested enacted bills below 1
-  const frus = shown.filter(p => billZ(p.b) < 0).length, real = shown.filter(p => p.b.status === 'enacted').length;
+  const frus = shown.filter(p => billZ(p.b) < 0).length, real = shown.filter(p => billZ(p.b) >= 1).length;
   $('graphStats').innerHTML = [
     ['' + pool.length, 'bills in filter'], ['' + shown.length, 'plotted'],
     ['' + real, 'realized (enacted)'], ['' + frus, 'frustrated (died w/ 118th)'],
     ['' + noJoin, 'no NOMINATE join — not plotted'],
     ['' + cerFolded, 'ceremonial folded'],
-    ['' + terrainExcluded, 'terrain-fetched — excluded by design'],
   ].map(x => '<div class="stat"><b>' + x[0] + '</b><span>' + x[1] + '</span></div>').join('');
 }
 // Record-z vs object-z: two independent measurements with lineage, allowed to
@@ -704,13 +664,13 @@ function renderGraph() {
 function renderDivergence() {
   if (!HAS_DB) { $('divNote').textContent = 'PrismDB unreachable — curated scores live on events.'; return; }
   if (!billScores.length) {
-    $('divNote').innerHTML = 'No curated bill scores in PrismDB yet. Curate an event through the surface’s 📜 drawer and '
-      + '<b style="color:var(--ink)">confirm candidates</b> — the write lands in prism_bill_scores with lineage — and they’ll appear here with their divergence.';
+    $('divNote').innerHTML = 'No curated bill scores in PrismDB yet. Confirm candidates in the desk’s curate panel and hit '
+      + '<b style="color:var(--ink)">Link confirmed bills to event</b> — the write now records rubric lineage — and they’ll appear here with their divergence.';
     $('divTable').style.display = 'none'; return;
   }
   $('divTable').style.display = '';
   const evs = new Set(billScores.map(s => s.eventId));
-  $('divNote').textContent = billScores.length + ' curated score(s) across ' + evs.size + ' event(s), sorted by |divergence|. record-z: ' + RECORD_Z_DERIVATION + ' (ladder fallback where unstamped).';
+  $('divNote').textContent = billScores.length + ' curated score(s) across ' + evs.size + ' event(s), sorted by |divergence|.';
   const rows = billScores.map(s => {
     const b = billById[s.billId];
     const rz = b ? billZ(b) : null;
@@ -724,7 +684,7 @@ function renderDivergence() {
     '<td>' + (r.dv == null ? '—' : '<b>' + fmt(r.dv, 2) + '</b>' + (Math.abs(r.dv) > 0.6 ? ' <span class="chip flag">diverges</span>' : '')) + '</td>' +
     '<td>' + esc(r.s.displacement || '—') + '</td><td>' + esc(r.s.diatribe || '—') + '</td>' +
     '<td>' + esc(Array.isArray(r.s.quadrants) ? r.s.quadrants.join(', ') : (r.s.quadrants || '—')) + '</td>' +
-    '<td>' + (r.s.rubricId ? esc(r.s.rubricId) + (r.s.method ? ' <span style="color:var(--ink-low)">· ' + esc(r.s.method) + '</span>' : '') : '<span class="chip v1">no lineage</span>') + '</td></tr>'
+    '<td>' + (r.s.rubricId ? esc(r.s.rubricId) : '<span class="chip v1">no lineage</span>') + '</td></tr>'
   ).join('');
 }
 document.querySelector('nav button[data-t="graph"]').addEventListener('click', ensureGraph);
@@ -747,7 +707,7 @@ document.querySelector('nav button[data-t="graph"]').addEventListener('click', e
   if (HAS_DB) {
     events = (PrismDB.getEvents && PrismDB.getEvents()) || [];
     events.forEach(e => evById[e.id] = e);
-    collectBillScores();   // prism_bill_scores + legacy billAnalysis → curated chips, rings, divergence
+    collectBillScores();   // evt.billAnalysis → curated chips, rings, divergence
   }
   const fetched = bills.length ? (bills.map(b => b.lastUpdated).sort().pop() || '').slice(0, 10) : '?';
   $('loadline').textContent = bills.length + ' bills · ' + members.length + ' members · corpus refreshed ' + fetched +

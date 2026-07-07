@@ -36,14 +36,6 @@ const PrismDB = (() => {
   }
 
   // ── Events (write) ──────────────────────────────────────
-  // rid = the Reading's stable cross-device identity (sync layer
-  // matches on it; the repo file is named by it). Local ids stay
-  // sequential and device-local, per the standing CLAUDE.md note.
-  function mintRid() {
-    return 'rdg_' + Date.now().toString(36) +
-      Math.random().toString(36).slice(2, 6);
-  }
-
   function addEvent(eventObj) {
     const events = getEvents();
     // Generate ID
@@ -52,7 +44,6 @@ const PrismDB = (() => {
       return isNaN(n) ? max : Math.max(max, n);
     }, 0);
     eventObj.id = 'evt_' + String(maxNum + 1).padStart(3, '0');
-    if (!eventObj.rid) eventObj.rid = mintRid();
 
     // If this event is active, deactivate all others
     if (eventObj.active) {
@@ -62,20 +53,6 @@ const PrismDB = (() => {
     events.push(eventObj);
     _set(KEYS.events, events);
     return eventObj;
-  }
-
-  // Upsert a pulled Reading by rid. Never steals this device's
-  // active flag; preserves the local event id on update.
-  function importReading(reading) {
-    const events = getEvents();
-    const idx = events.findIndex(e => e.rid === reading.rid);
-    if (idx !== -1) {
-      const keep = { id: events[idx].id, active: events[idx].active };
-      events[idx] = { ...events[idx], ...reading, ...keep };
-      _set(KEYS.events, events);
-      return events[idx];
-    }
-    return addEvent({ ...reading, active: false });
   }
 
   function updateEvent(id, data) {
@@ -1439,7 +1416,6 @@ const PrismDB = (() => {
   return {
     getEvents, getEvent, getActiveEvent,
     addEvent, updateEvent, deleteEvent, setActive,
-    mintRid, importReading,
     getResponses, getResponsesForEvent, hasRespondedToEvent, saveResponse,
     getAggregateForEvent,
     getSnapshots, getSnapshotsForEvent, saveSnapshot,

@@ -40,6 +40,36 @@ Sailor's decision, morning of July 6: **`admin.html` is being retired.** `admin-
 
 Practically: new admin capability lands on the surface, not the desk. The desk keeps working during the migration (events CRUD, Export writer, refraction scoring still live there until ported) — but don't add new functionality to `admin.html`, and when touching a desk feature, prefer porting it to the surface over extending it in place.
 
+Two standing decisions (Sailor, 2026-07-06 evening):
+
+- **"Event" was carrying two things; the authored thing is a Reading.** The
+  *event* is the real-world happening — the political moment (e.g. the
+  birthright citizenship fight). The thing authored in Prism — plane, poles,
+  diatribe, framing keywords, linked bills — is Sailor's **Reading** of that
+  moment. This parallels the two-tier ontology exactly: the record's reading
+  vs. Sailor's Reading, neither derived from the other. Code identifiers and
+  stores (`prism_events`, `evt_*`) keep their names; this is a vocabulary
+  correction for conversation, handoffs, and docs. When an older handoff
+  says "event" for the authored thing, read it as Reading.
+- **The record does not gate what a Reading can touch.** A Reading is
+  sovereign — conceived from the sociology; the record is evidence brought
+  before it. Consequence for the nomination queue (heuristics §5.3): the
+  queue-and-triage apparatus is superseded by a simpler act — abstract the
+  Reading to its terrain (e.g. birthright citizenship → immigration) and
+  fetch every bill in that terrain, **roll calls or not**. A committee-dead
+  bill arrives with a thin record, which is honest and sometimes is the
+  finding. The notable-action filter stays for what it was built for (the
+  corpus-wide survey graph); it no longer decides what Readings see.
+  **Terrain boundary (decided same session): CRS policy area.** Sailor
+  chooses the terrain ("Immigration"); the record's own taxonomy decides
+  membership — nobody hand-picks bills into a terrain, keeping the fetch
+  honest-by-construction. Framing keywords stay interpretive: they seed
+  curate's dialogue within the terrain, never the fetch boundary. Terrain
+  bills join the catalog provenance-marked (terrain-fetched, no notable
+  action) so curate and the catalog pane see them while the survey graph
+  keeps excluding them. Fetched on demand per Reading, not as a standing
+  sweep.
+
 Two standing corrections (Sailor, 2026-07-06):
 
 - **Never refer to an event by a bill's name.** Older handoffs say "the Laken Riley curation" for the July 2 immigration-event session — do not repeat this shorthand. Events are conceived from Sailor's sociology and named by their concept; bills attach to events through curation, never the reverse. If a handoff names an event by a bill, treat that as the error it is.

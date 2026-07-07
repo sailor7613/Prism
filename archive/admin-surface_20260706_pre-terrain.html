@@ -318,9 +318,6 @@
     <input id="apiKey" type="password" placeholder="sk-ant-… (stored on device)" autocomplete="off" spellcheck="false" style="min-width:180px">
     <input id="model" type="text" value="claude-sonnet-5" spellcheck="false" style="min-width:150px">
   </details>
-  <details class="aiset"><summary>Sync</summary>
-    <input id="ghToken" type="password" placeholder="github token — repo-scoped (stored on device)" autocomplete="off" spellcheck="false" style="min-width:220px">
-  </details>
 </div>
 
 <main>
@@ -455,7 +452,7 @@
 <div class="actions">
   <button class="btn" id="btnBack">← Diatribe</button>
   <button class="btn" id="btnSave">Save</button>
-  <button class="btn" id="btnPublish" title="Save, then write this Reading to the repo — every device pulls it on load">Publish ⇡</button>
+  <button class="btn primary" id="btnNext">Next · the 12 →</button>
   <button class="btn primary" id="btnOpen">Open in Prism ↗</button>
   <button class="btn" id="btnExport">Export</button>
   <span class="status" id="status"></span>
@@ -471,7 +468,6 @@
 </div></div>
 
 <script src="src/js/prismdb.js"></script>
-<script src="src/js/prism-sync.js"></script>
 <script src="src/js/prism-ai.js"></script>
 <script src="src/js/prism-curate.js"></script>
 <script>
@@ -733,17 +729,11 @@ async function suggestCell(which){
 function status(m){ $('status').textContent=m; }
 $('sugReal').onclick=()=>suggestCell('real'); $('sugGhost').onclick=()=>suggestCell('ghost');
 $('btnSave').onclick=save; $('btnOpen').onclick=openInPrism; $('btnExport').onclick=openExport; $('btnLoadEx').onclick=loadSeed;
-$('btnPublish').onclick=async()=>{
-  const id=save(); if(!id) return;            // save() already reported why
-  status('Publishing…');
-  try{ const {rid}=await PrismSync.publish(id); status('Published · '+rid+' → repo'); }
-  catch(e){ status(e.message); }
-};
 $('closeExport').onclick=()=>$('exportModal').classList.remove('show');
 $('copyJson').onclick=()=>{ const t=$('exportText'); t.select(); if(navigator.clipboard) navigator.clipboard.writeText(t.value).catch(()=>{}); try{document.execCommand('copy');}catch(e){} status('Copied — paste into the chat'); };
 $('dlJson').onclick=()=>{ const ev=Object.assign(assemble(),{axes:axesObj()}); const b=new Blob([JSON.stringify(ev,null,2)],{type:'application/json'}); const a=document.createElement('a'); a.href=URL.createObjectURL(b); a.download=(ev.title||'event').replace(/\W+/g,'_')+'_diatribe.json'; a.click(); };
 $('evSelect').onchange=()=>{ const id=$('evSelect').value; if(id&&HAS_DB){ const ev=PrismDB.getEvent(id); if(ev) loadEvent(ev); } };
-['apiKey','model','ghToken'].forEach(id=>{ const v=localStorage.getItem('prism.admin.'+id); if(v)$(id).value=v; $(id).addEventListener('input',()=>localStorage.setItem('prism.admin.'+id,$(id).value)); });
+['apiKey','model'].forEach(id=>{ const v=localStorage.getItem('prism.admin.'+id); if(v)$(id).value=v; $(id).addEventListener('input',()=>localStorage.setItem('prism.admin.'+id,$(id).value)); });
 // Migrate stored retired model strings (list lives in prism-ai.js)
 (function(){ if(PrismAI.RETIRED_MODELS.includes(($('model').value||'').trim())){ $('model').value=PrismAI.MODEL_DEFAULT; localStorage.setItem('prism.admin.model',PrismAI.MODEL_DEFAULT); } })();
 
@@ -896,11 +886,13 @@ function setView(v){
   document.body.classList.toggle('view-quad', v==='quad');
   const dia = v!=='quad';
   $('btnBack').style.display = dia?'none':'';   // back only on the quadrants stage
+  $('btnNext').style.display = dia?'':'none';    // "next" only on the diatribe stage
   $('btnOpen').style.display = dia?'none':'';     // preview only after the responses stage
   if(v==='quad'){ renderQuadPoles(); buildOrbs(); }
   if(window.DGRoom && DGRoom.active) dgSync();
 }
 $('viewSeg').querySelectorAll('button').forEach(b=>b.onclick=()=>setView(b.dataset.v));
+$('btnNext').onclick=()=>setView('quad');
 $('btnBack').onclick=()=>setView('dia');
 
 /* ===== Citation bank — per-event sources; attachable to any voice ===== */
@@ -1120,7 +1112,6 @@ function brRenderCat(){
     const rec=b.rc?`<div class="rec">⊕ ${b.rc} roll call${b.rc>1?'s':''} · tightest margin ${brCatMarginPct(b.mm)}</div>`:'';
     const chips=[];
     if(!b.rc) chips.push('<span class="br-tag">no roll call</span>');
-    if(b.tf) chips.push('<span class="br-tag">⊚ terrain</span>');   /* terrain-fetched arrival — a mark, not a gate (2026-07-06) */
     if(b.cer&&!brCatFoldOn) chips.push('<span class="br-tag">◫ ceremonial</span>');
     if(linked.has(b.id)) chips.push('<span class="br-tag">linked</span>');
     const act=inShort.has(b.id)?'<span class="br-tag">in shortlist</span>'
@@ -1199,14 +1190,6 @@ refreshDropdown();
 blank();
 setView('dia');   // start on the diatribe stage of the flow
 if(!HAS_DB) status('Serve via Live Server so it shares storage with Prism.');
-
-/* Sync: pull published Readings from the repo on every load.
-   Quiet when nothing's new; never blocks the surface. */
-if(HAS_DB && typeof PrismSync!=='undefined'){
-  PrismSync.pull()
-    .then(r=>{ if(r.pulled){ refreshDropdown(currentId); status('Pulled '+r.pulled+' Reading'+(r.pulled>1?'s':'')+' from the repo'); } })
-    .catch(e=>status('Sync pull: '+e.message));
-}
 
 /* PWA: register the offline service worker (Add to Home Screen → installable app) */
 if ('serviceWorker' in navigator) {

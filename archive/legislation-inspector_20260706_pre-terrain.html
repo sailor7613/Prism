@@ -638,13 +638,7 @@ function renderGraph() {
   const cap = parseInt($('gcap').value); $('gcapV').textContent = cap;
   try { gmL.setBoundaryVisible($('gbounds').checked); } catch (_) {}
   try { gmL.clearDots(); } catch (_) {}
-  // Terrain-fetched bills never enter the survey graph (2026-07-06): they
-  // arrived for a Reading, not through the notable net, so plotting them
-  // would put the corpus-wide survey on a boundary the record didn't draw.
-  // A mark, not a gate — the bills tab and catalog pane still show them.
-  let pool = bills.filter(b => !(b.provenance || '').startsWith('terrain_fetch'));
-  const terrainExcluded = bills.length - pool.length;
-  pool = pool.filter(b =>
+  let pool = bills.filter(b =>
     (!t || (b.topic || '(none)') === t) && (!c || String(b.congress) === c) && (!s || b.statusLabel === s));
   // substance lens on the field — curated bills always show
   const preLens = pool.length;
@@ -694,7 +688,6 @@ function renderGraph() {
     ['' + real, 'realized (enacted)'], ['' + frus, 'frustrated (died w/ 118th)'],
     ['' + noJoin, 'no NOMINATE join — not plotted'],
     ['' + cerFolded, 'ceremonial folded'],
-    ['' + terrainExcluded, 'terrain-fetched — excluded by design'],
   ].map(x => '<div class="stat"><b>' + x[0] + '</b><span>' + x[1] + '</span></div>').join('');
 }
 // Record-z vs object-z: two independent measurements with lineage, allowed to
