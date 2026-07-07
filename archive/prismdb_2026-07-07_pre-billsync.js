@@ -638,65 +638,6 @@ const PrismDB = (() => {
     return true;
   }
 
-  // ── Bill readings <-> published Reading (sync transport) ──
-  // A published Reading carries its bill readings as portable rows:
-  // store rows minus the device-local keys (`id` embeds the local
-  // event id; `eventId` IS the local event id). Import rewrites them
-  // onto this device's event id. Per-row last-write-wins by
-  // `timestamp` — the same rule Readings use for `updatedAt`.
-  // Lineage stays mandatory: saveBillScore's refusal applies on
-  // import, so a row without {rubricId, method, provenance} never
-  // enters the store no matter where it came from.
-  const BSCORE_LOCAL_FIELDS = ['id', 'eventId'];
-
-  function exportBillReadings(eventId) {
-    return getBillScoresForEvent(eventId).map(s => {
-      const r = {};
-      Object.keys(s).forEach(k => {
-        if (!BSCORE_LOCAL_FIELDS.includes(k)) r[k] = s[k];
-      });
-      return r;
-    });
-  }
-
-  function importBillReadings(localEventId, billReadings) {
-    if (!localEventId || !Array.isArray(billReadings)) {
-      return { imported: 0, skipped: 0 };
-    }
-    let imported = 0, skipped = 0;
-    billReadings.forEach(r => {
-      if (!r || !r.billId) { skipped++; return; }
-      const cur = getBillScore(r.billId, localEventId);
-      if (cur && (cur.timestamp || '') >= (r.timestamp || '')) {
-        skipped++;                       // local row is as new or newer
-        return;
-      }
-      const row = Object.assign({}, r, { eventId: localEventId });
-      delete row.id;                     // recomputed from billId + local event id
-      if (saveBillScore(row)) imported++; else skipped++;
-    });
-    return { imported, skipped };
-  }
-
-  // One-time catch-up: walk legacy per-event `evt.billAnalysis` blobs
-  // and promote any rows the store doesn't already have (iPad-era
-  // curations that predate the store write). Store rows always win —
-  // this never overwrites. Run from the console: PrismDB.migrateBillAnalysis()
-  function migrateBillAnalysis() {
-    let promoted = 0;
-    getEvents().forEach(ev => {
-      const analysis = ev.billAnalysis || {};
-      Object.keys(analysis).forEach(billId => {
-        if (getBillScore(billId, ev.id)) return;
-        const saved = saveBillScore(
-          Object.assign({ billId: billId, eventId: ev.id }, analysis[billId])
-        );
-        if (saved) promoted++;
-      });
-    });
-    return promoted;
-  }
-
   // ── Dev Utilities ───────────────────────────────────────
   function clear() {
     Object.values(KEYS).forEach(k => localStorage.removeItem(k));
@@ -1513,7 +1454,6 @@ const PrismDB = (() => {
     getMemberAggregateForEvent,
     getBillScores, getBillScoresForBill, getBillScoresForEvent,
     getBillScore, saveBillScore, deleteBillScore,
-    exportBillReadings, importBillReadings, migrateBillAnalysis,
     getState, setState,
     getUser, setUser,
     getFollowed, isFollowing, follow, unfollow, toggleFollow,

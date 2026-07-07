@@ -16,9 +16,6 @@
 //
 // Device-local fields (id, active, syncedAt) never enter the
 // file; the file carries rid + updatedAt + schema instead.
-// The file also carries `billReadings` — the Reading's rows from
-// prism_bill_scores with device-local keys stripped (2026-07-07).
-// Pull detaches them and merges into the local store per-row.
 // ============================================================
 const PrismSync = (() => {
   const OWNER  = 'sailor7613';
@@ -58,17 +55,12 @@ const PrismSync = (() => {
   // The file is the Reading; the local event wraps it with
   // device-local bookkeeping. Strip that bookkeeping on the way
   // out, restore nothing on the way in (import decides).
-  // `billReadings` is transport, not event state: it rides the
-  // file, sourced fresh from prism_bill_scores at every publish,
-  // and is detached again on pull before the event upsert.
-  const LOCAL_FIELDS = ['id', 'active', 'syncedAt', 'billReadings'];
+  const LOCAL_FIELDS = ['id', 'active', 'syncedAt'];
   function toFile(ev) {
     const r = {};
     Object.keys(ev).forEach(k => { if (!LOCAL_FIELDS.includes(k)) r[k] = ev[k]; });
     r.schema = 'reading/v1';
     r.updatedAt = new Date().toISOString();
-    const bills = PrismDB.exportBillReadings(ev.id);
-    if (bills.length) r.billReadings = bills;
     return r;
   }
 
@@ -90,19 +82,11 @@ const PrismSync = (() => {
       let reading;
       try { reading = JSON.parse(b64decode(body.content)); } catch(e) { continue; }
       if (!reading.rid) reading.rid = rid;                       // filename is authoritative
-      // Detach bill readings before the event upsert — they live in
-      // the store, never on the event object.
-      const bills = Array.isArray(reading.billReadings) ? reading.billReadings : null;
-      if ('billReadings' in reading) delete reading.billReadings;
-      let local = PrismDB.getEvents().find(e => e.rid === reading.rid);
+      const local = PrismDB.getEvents().find(e => e.rid === reading.rid);
       if (!local || (reading.updatedAt || '') > (local.updatedAt || '')) {
-        local = PrismDB.importReading(reading);
+        PrismDB.importReading(reading);
         pulled++;
       }
-      // Bill rows merge per-row (LWW by timestamp) even when the
-      // event body itself wasn't newer — the file changed, so its
-      // bills may be.
-      if (bills && local) PrismDB.importBillReadings(local.id, bills);
       setSha(rid, f.sha);
     }
     return { pulled, checked: list.length };
