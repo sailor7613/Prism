@@ -33,6 +33,7 @@ What this means in practice:
 - **The product goal is emotive rendering, not analytical completeness.** Prism renders arcane legislative data in a novel way that sparks intuitive understanding — revealing to users a deeper sense of their own politics that the disfunctional media landscape can't. Every design and ontology question should be answered with that goal in view (this is the catharsis principle's product face).
 - **Answer at the level of the vision first.** Lead with what a change means for the user experience and Sailor's goals. Keep implementation detail brief and behind the answer, not in front of it. Density is a failure mode: if a response reads like a spec, rewrite it.
 - **Stabilize the ontology in service of the goals, not for its own sake.** When ontological tightening is needed, frame it by what it protects in the product, then keep it short.
+- **Decision routing (2026-07-07).** Only parameter-level questions come to Sailor — what a thing *is*, what a field should mean, what counts as equivalent. Numeric and mechanical calls (thresholds, tolerances, key names, storage shapes) are Claude's to make under the non-contrived rule — function of the record, visible parameters, logged lineage — and to record in the handoff, never to escalate. If a handoff carries an item as "Sailor's call," first check whether it's genuinely parameter-level; if not, decide it and log it.
 
 ## Direction: the surface replaces the desk (2026-07-06, supersedes the July 4 role-split)
 
