@@ -313,7 +313,7 @@
   <button class="btn" id="brBtn" title="Bill reading room — curate the bills this event links">📜 Bills</button>
   <button class="btn" id="themeBtn" title="Day / night">◐</button>
   <button class="btn" id="dgBtn" title="DreamGetty room — loads on demand">🏛</button>
-  <button class="btn" id="dgOrbitBtn" title="Pedestal ↔ flat — drop to the flat stage while the room stands">🧭</button>
+  <button class="btn" id="dgOrbitBtn" title="Orbit the room — drag to circle, pinch to zoom, tap an orb to edit">🧭</button>
   <details class="aiset"><summary>AI</summary>
     <input id="apiKey" type="password" placeholder="sk-ant-… (stored on device)" autocomplete="off" spellcheck="false" style="min-width:180px">
     <input id="model" type="text" value="claude-sonnet-5" spellcheck="false" style="min-width:150px">
@@ -385,16 +385,6 @@
     <button class="btn primary" id="oeSave">Done</button>
     <button class="btn" id="oeClose">Close</button>
     <span class="status" id="oeStatus"></span>
-  </div>
-</div></div>
-
-<div class="modal" id="cellModal"><div class="sheet orb-sheet">
-  <div class="oe-head" id="ceHead"></div>
-  <div class="caption-text" id="ceText" contenteditable="true" data-ph="type this voice…"
-       style="min-height:110px; outline:none; padding:6px 2px;"></div>
-  <div class="oe-actions">
-    <span style="flex:1"></span>
-    <button class="btn primary" id="ceDone">Done</button>
   </div>
 </div></div>
 
@@ -803,8 +793,7 @@ async function dgToggle(){
     DGRoom.onPick(dgPick);
     document.body.classList.add('dg-on'); $('dgBtn').classList.add('on');
     dgSync();
-    dgOrbitSet(true);   // the room opens ON the pedestal — the stage there is the working surface
-    status('On the pedestal — drag to circle, tap a tablet or orb to edit; 🧭 for flat');
+    status('DreamGetty room — mind the vase; 🧭 to orbit');
   }catch(e){
     document.body.classList.remove('dg-on'); $('dgBtn').classList.remove('on');
     if(window.DGRoom && DGRoom.active) DGRoom.unmount();
@@ -841,33 +830,16 @@ $('dgOrbitBtn').onclick=()=>{
   if(!(window.DGRoom && DGRoom.active)){ status('Raise the gallery first (🏛)'); return; }
   const on=!document.body.classList.contains('dg-orbit');
   dgOrbitSet(on);
-  if(on){ dgSync(); status('Back on the pedestal — tap a tablet or orb to edit'); }
-  else status('Flat authoring — the room stands behind; 🧭 to return to the pedestal');
+  if(on){ dgSync(); status('Orbit — drag to circle, pinch to zoom; tap an orb or tablet to edit'); }
+  else status('Flat authoring');
 };
 function dgPick(p){
   if(p.type==='orb'){ openOrb(p.quad, p.band); }   // the DOM editor, floating over the room
-  else if(p.type==='cell'){ openCell(p.cell); }     // edit the tablet where it lives — the pedestal follows live
+  else if(p.type==='cell'){                          // tablets route back to the flat stage — authoring input stays flat
+    dgOrbitSet(false); setView('dia'); setThumb(cellCenterPct(p.cell), true);
+    status('Editing '+p.cell+' — flat, as ruled');
+  }
 }
-
-/* ---- floating cell editor — a tablet edited on the pedestal, not by leaving it ---- */
-let cellEditing=null;
-function openCell(cell){
-  cellEditing=cell;
-  const side=cell[0]==='L'?'left':'right', band={F:'fluid',C:'coalition',D:'denominated'}[cell[1]];
-  $('ceHead').textContent=cell+' · '+(typeof sideLabel==='function'?sideLabel(side):side)+' · '+band;
-  $('ceText').innerHTML=model[cell]||'';
-  $('cellModal').classList.add('show');
-  setTimeout(()=>$('ceText').focus(),50);
-}
-$('ceText').addEventListener('input',()=>{
-  if(!cellEditing) return;
-  model[cellEditing]=$('ceText').innerHTML;
-  // keep the (hidden) flat captions honest if this cell is bound to one
-  if(cellEditing===curReal) $('capTextReal').innerHTML=model[cellEditing];
-  else if(cellEditing===curGhost) $('capTextGhost').innerHTML=model[cellEditing];
-  renderCellmap(); dgSync();   // the tablet on the pedestal follows every keystroke
-});
-$('ceDone').onclick=()=>{ $('cellModal').classList.remove('show'); cellEditing=null; };
 
 /* ===== Quadrants view — the 12 as orb pins on the 2×2 plane ===== */
 const QBANDS=['fluid','coalition','denominated'];
