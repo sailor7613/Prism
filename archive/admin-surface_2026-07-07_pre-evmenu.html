@@ -655,26 +655,10 @@ function blank(){
   setPoleFields(); setThumb(38,false); status('Blank diatribe — tap the pole names to set your axis, then fill the slots');
 }
 
-/* ---- dropdown ----
-   Titles first (evt_ ids are device-local noise — standing correction
-   2026-07-06), newest first, ✓ = published to the repo (rid in the sync sha
-   cache), ◇ N = curated bill readings in the store. */
+/* ---- dropdown ---- */
 function refreshDropdown(sel){
   const s=$('evSelect'); s.innerHTML='<option value="">— load event —</option>';
-  if(HAS_DB){
-    let shas={}; try{ shas=JSON.parse(localStorage.getItem('prism.sync.shas'))||{}; }catch(e){}
-    const evNum=e=>parseInt(String(e.id||'').replace('evt_',''),10)||0;
-    const evs=(PrismDB.getEvents()||[]).slice().sort((a,b)=>{
-      const ta=Date.parse(a.updatedAt||'')||0, tb=Date.parse(b.updatedAt||'')||0;
-      return (tb-ta)||(evNum(b)-evNum(a));
-    });
-    evs.forEach(e=>{
-      const o=document.createElement('option'); o.value=e.id;
-      let bills=0; try{ bills=(PrismDB.getBillScoresForEvent(e.id)||[]).length; }catch(err){}
-      o.textContent=(e.title||e.id)+((e.rid&&shas[e.rid])?' ✓':'')+(bills?' · ◇ '+bills:'');
-      s.appendChild(o);
-    });
-  }
+  if(HAS_DB) (PrismDB.getEvents()||[]).forEach(e=>{ const o=document.createElement('option'); o.value=e.id; o.textContent=e.id+' · '+e.title; s.appendChild(o); });
   if(sel) s.value=sel;
 }
 

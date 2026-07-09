@@ -431,10 +431,6 @@ body.phase-answers .answers-phase { opacity: 1; pointer-events: auto; }
   position: relative;
   margin: 0 auto;
 }
-/* Orb swap retired from the user flow (2026-07-07): with no orb graphmap
-   mounted, the stage must not reserve its square — it was pushing the four
-   response cards off the bottom of the phase. */
-body:not(.orb-select) .answers-stage { display: none; }
 .answers-readout {
   max-width: 620px; margin: 14px auto 0; text-align: center;
   font-family: var(--serif); font-size: clamp(15px, 1.9vw, 20px); line-height: 1.55;
@@ -859,16 +855,6 @@ body.light .pad-grid {
 .member-toggle[hidden] { display: none; }
 .member-toggle.is-loading { opacity: 0.5; cursor: progress; }
 .member-toggle.is-unavailable { opacity: 0.4; cursor: default; }
-/* Legislation (bill readings) toggle — stacks under the legislators toggle. */
-.bill-toggle { top: 108px; }
-/* Bill inspector (Sailor, 2026-07-07): your response → the delta read → the
-   bill's title and summary. Flex-order only — voice/legislator compares keep
-   the original label-nums-delta-text flow. */
-.graph-info.bill-inspect .cmp-agg { display: flex; flex-direction: column; }
-.graph-info.bill-inspect .cmp-agg .cmp-axis  { order: -1; }
-.graph-info.bill-inspect .cmp-agg .cmp-label { order: 0; }
-.graph-info.bill-inspect .cmp-agg .cmp-text  { order: 1; }
-.graph-info.bill-inspect .cmp-agg .cmp-nums  { order: 2; }
 /* Recenter control — mirrors the legislators toggle, top-LEFT. Post-commit. */
 .recenter-btn {
   position: fixed; top: 70px; left: 24px; z-index: 20;
@@ -1923,12 +1909,6 @@ body:not(.phase-diatribe) .diatribe-eyebrow { display: none; }
   <span class="member-toggle-glyph">&#9670;</span> legislators
 </button>
 
-<!-- Legislation layer (bill readings) toggle — Phase 6.1.4. Same body-child
-     placement rationale as the legislators toggle. Hidden until commit. -->
-<button class="member-toggle bill-toggle" id="billToggle" type="button" hidden>
-  <span class="member-toggle-glyph">&#9671;</span> legislation
-</button>
-
 <!-- Recenter the camera to its home framing. Direct body child (same reason as
      the legislators toggle). Hidden until commit. -->
 <button class="recenter-btn" id="recenterBtn" type="button" hidden title="Recenter the view">
@@ -1976,7 +1956,6 @@ body:not(.phase-diatribe) .diatribe-eyebrow { display: none; }
 
 <!-- Data layer -->
 <script src="../src/js/prismdb.js"></script>
-<script src="../src/js/prism-sync.js"></script>
 <script src="../src/js/prism-ai.js"></script>
 <!-- Congressional roster as a script (not fetch) so it loads on file:// too,
      where Safari/Chrome block fetch() of local JSON. Sets window.PRISM_MEMBERS_DATA
@@ -1988,7 +1967,7 @@ body:not(.phase-diatribe) .diatribe-eyebrow { display: none; }
      off to this instrument: v56 pins, true 3D dots, full orbit. -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <!-- cache-busting query: bump ?v= whenever the module changes (Safari caches hard) -->
-<script src="../src/js/prism-graphmap.js?v=6"></script>
+<script src="../src/js/prism-graphmap.js?v=3"></script>
 
 <script>
 /* ============================================================
@@ -2155,55 +2134,26 @@ if (PE && PE.setPoleLabels) PE.setPoleLabels({ left: poleLabel('left'), right: p
 { const eil = document.getElementById('eventIdLine'); if (eil && ev) eil.innerHTML = '<strong>' + (ev.id || EVENT_ID) + '</strong> · ' + (ev.title || ''); }
 
 // Header event picker — lists every event, navigates to ?event=<id> on change.
-// (Named, not an IIFE, so the sync pull below can refresh it when Readings land.)
-function wireEventPicker() {
+(function wireEventPicker() {
   const sel = document.getElementById('eventPicker');
   if (!sel || typeof PrismDB === 'undefined') return;
   try {
-    // Titles first (evt_ ids are device-local noise), newest first,
-    // ✓ = published to the repo, ◇ N = curated bill readings in the store.
-    let shas = {}; try { shas = JSON.parse(localStorage.getItem('prism.sync.shas')) || {}; } catch (e2) {}
-    const evNum = e => parseInt(String(e.id || '').replace('evt_', ''), 10) || 0;
-    const evs = (PrismDB.getEvents() || []).slice().sort((a, b) => {
-      const ta = Date.parse(a.updatedAt || '') || 0, tb = Date.parse(b.updatedAt || '') || 0;
-      return (tb - ta) || (evNum(b) - evNum(a));
-    });
+    const evs = PrismDB.getEvents() || [];
     sel.innerHTML = '';
     evs.forEach(e => {
       const o = document.createElement('option');
       o.value = e.id;
-      let bills = 0; try { bills = (PrismDB.getBillScoresForEvent(e.id) || []).length; } catch (e3) {}
-      o.textContent = (e.title || e.id).slice(0, 46) +
-        ((e.rid && shas[e.rid]) ? ' ✓' : '') + (bills ? ' · ◇ ' + bills : '');
+      o.textContent = e.id + ' · ' + (e.title || '').slice(0, 46);
       if (e.id === EVENT_ID) o.selected = true;
       sel.appendChild(o);
     });
-    sel.onchange = () => {                     // onchange (not addEventListener) so re-wiring after a pull stays idempotent
+    sel.addEventListener('change', () => {
       const u = new URL(location.href);
       u.searchParams.set('event', sel.value);
       location.href = u.toString();
-    };
+    });
   } catch (e) { console.warn('[v2] event picker wiring failed:', e && e.message); }
-}
-wireEventPicker();
-
-// Sync: pull published Readings from the repo on every load — the same quiet
-// contract as the admin surface. This is how a portal user RECEIVES content:
-// new Readings land in this device's store, their bill readings ride in and
-// re-key to the local event id (billsync), and the picker refreshes. Never
-// blocks the portal; failure is a console note, not a broken page.
-if (typeof PrismSync !== 'undefined' && typeof PrismDB !== 'undefined') {
-  try {
-    PrismSync.pull()
-      .then(r => {
-        if (r && r.pulled) {
-          console.log('[v2] sync: pulled ' + r.pulled + ' Reading(s) from the repo');
-          wireEventPicker();
-        }
-      })
-      .catch(e => console.warn('[v2] sync pull failed:', e && e.message));
-  } catch (e) { console.warn('[v2] sync unavailable:', e && e.message); }
-}
+})();
 
 // Local keyword augmentation — v2 starter ontology pulled from diatribe text.
 // Format: { eventId: { side: { band: [phrases] } } }. Migrate canonical to prismdb.js.
@@ -2802,14 +2752,16 @@ function enterAnswers() {
   document.body.classList.add('phase-answers');
   phaseLabel.innerHTML = 'prism · <strong>v2</strong> · responses';
   aPrompt.textContent = ev?.prompt || ev?.framing || '';
-  aBand.textContent = 'aperture · ' + (BAND_LABEL[committedBand] || committedBand) + ' — pick the response that aligns';
+  aBand.textContent = 'hold an orb to read it · pick the response that aligns';
 
-  // Orb swap (increment 1) RETIRED from the user flow — Sailor, 2026-07-07:
-  // the answers phase presents THE FOUR RESPONSES at the diatribe-chosen
-  // aperture; the diatribe slider owns the band, the cards own the quadrant,
-  // then commit → graphmap with the offset axes. The 12-orb selection plane
-  // (mountAnswersGM / placeAnswerOrbs / selectOrb) is kept dormant below in
-  // case a future increment revives it as its own surface.
+  // Preferred path: the 12 coordinate subjects as orbs on the 3D plane.
+  if (mountAnswersGM()) {
+    document.body.classList.add('orb-select');
+    requestAnimationFrame(() => { placeAnswerOrbs(); });
+    return;
+  }
+
+  // Fallback (no WebGL): the flat 2×2 card grid.
   document.body.classList.remove('orb-select');
   renderAnswers(committedBand);
   requestAnimationFrame(() => setTimeout(() => {
@@ -2854,7 +2806,6 @@ const graphBackBtn = document.getElementById('graphBack');
 const graphCommitBtn = document.getElementById('graphCommit');
 const graphNote    = document.getElementById('graphNote');
 const memberToggle = document.getElementById('memberToggle');
-const billToggle = document.getElementById('billToggle');
 const padShades  = { A: document.getElementById('padShadeA'), B: document.getElementById('padShadeB'), C: document.getElementById('padShadeC'), D: document.getElementById('padShadeD') };
 const padCorners = { A: document.getElementById('padCornerA'), B: document.getElementById('padCornerB'), C: document.getElementById('padCornerC'), D: document.getElementById('padCornerD') };
 const graphInfo    = document.getElementById('graphInfo');
@@ -3171,7 +3122,7 @@ function enterGraph() {
   contrastLine = null; userPinData = null; contrastDot = null; contrastMember = null; zCamZone = 'above';
   clearTimeout(idleTimer); idleOrbiting = false;
   if (gm) { try { gm.stopBeats(); gm.setAxisOffset(0.5, 0.5); } catch (e) {} }
-  graphInfo.classList.remove('comparing', 'dock-left', 'bill-inspect');
+  graphInfo.classList.remove('comparing', 'dock-left');
   cmpAggText.innerHTML = ''; cmpAggNums.textContent = ''; cmpAggLabel.textContent = ''; cmpDelta.textContent = '';
   if (cmpCloud) cmpCloud.innerHTML = '';
   graphPad.classList.remove('orbital', 'cam-float', 'handing-off');
@@ -3182,10 +3133,6 @@ function enterGraph() {
   // dangling toggle; it rebuilds (hidden) when the next commit settles.
   memberPinsRendered = false; memberPinsShown = true; memberBuildInFlight = false; memberLoadFailed = false;
   if (memberToggle) { memberToggle.hidden = true; memberToggle.classList.remove('is-off', 'is-unavailable'); }
-  // Reset the legislation layer the same way (clearDots above already removed
-  // the diamonds); it rebuilds when the next commit settles.
-  billDots = []; billRendered = false; billShown = true;
-  if (billToggle) { billToggle.hidden = true; billToggle.classList.remove('is-off', 'is-unavailable'); }
   gmActive = false;
   gm3dEl.classList.remove('live', 'in');
   orbitYaw = 0; orbitPitch = 0; targetYaw = 0; targetPitch = 0;
@@ -3380,7 +3327,6 @@ function showContrast(dot) {
   if (!userPinData) return;
   contrastDot = dot;             // remembered so live z changes can re-derive Δz
   aggDots.forEach(d => { if (d.el) d.el.classList.toggle('selected', d === dot); });
-  graphInfo.classList.remove('bill-inspect');
   graphInfo.classList.add('comparing');
 
   // you (committed) — top half
@@ -3431,7 +3377,6 @@ function showContrastMember(d) {
   contrastDot = null;            // not a voice — skip the voice live-z re-derive
   contrastMember = d;
   if (aggDots) aggDots.forEach(x => { if (x.el) x.el.classList.remove('selected'); });
-  graphInfo.classList.remove('bill-inspect');
   graphInfo.classList.add('comparing');
 
   // Full roster record + any event-specific DERIVED position.
@@ -3703,7 +3648,6 @@ function lockMemberFromTracker(d) {
 
 function updateCmpFollow(bio) {
   if (!cmpFollow) return;
-  cmpFollow.hidden = false;   // restore after a bill inspect (bills hide the ★)
   const on = !!(bio && PrismDB.isFollowing(bio));
   cmpFollow.setAttribute('aria-pressed', on ? 'true' : 'false');
   const g = cmpFollow.querySelector('.cmp-follow-glyph'); if (g) g.innerHTML = on ? '&#9733;' : '&#9734;';   // ★ / ☆
@@ -3711,7 +3655,7 @@ function updateCmpFollow(bio) {
 }
 
 function backToTracking() {
-  graphInfo.classList.remove('comparing', 'dock-left', 'bill-inspect');
+  graphInfo.classList.remove('comparing', 'dock-left');
   contrastMember = null; contrastDot = null;
   if (gm) { try { gm.clearContrastLine(); } catch (e) {} }
   renderTracker();
@@ -3834,9 +3778,7 @@ function mountGM() {
     // re-center on yourself.
     gm.onInspect(d => {
       if (!d) return;
-      if (d.isBill) {
-        showContrastBill(d);                                  // legislation → bill inspector
-      } else if (d.label !== undefined && d.label !== '' && aggDots[+d.label]) {
+      if (d.label !== undefined && d.label !== '' && aggDots[+d.label]) {
         const dot = aggDots[+d.label];
         showContrast(dot);
         try { gm.setFocus(dot.x, dot.y); } catch (e) {}
@@ -3876,7 +3818,6 @@ function placeCoordinateOrbs() {
 function gmCommit() {
   gmActive = true;
   revealMemberToggle();   // show the legislators control immediately (loading until pins build)
-  revealBillToggle();     // legislation control up front too — diamonds land when the field settles
   initTracker();          // populate the right-panel tracker (delegation + follows)
   { const rb = document.getElementById('recenterBtn'); if (rb) rb.hidden = false; }   // reveal recenter
   setTimeout(() => { if (window.Ted) window.Ted.beat('graph', "You're on the plane now. Drag to orbit, scroll to zoom. Pull the ribbon down for the analytical layer, slide it sideways for the others. Mind the vases — gallery's a little haunted."); }, 1600);
@@ -3977,7 +3918,7 @@ function gmCommit() {
       // When the field finishes re-migrating to the un-skewed plane, build the
       // congressional layer (hidden) so it's coherent with the settled axes,
       // then arm the idle orbit. The graph-foot toggle reveals it.
-      const done = () => { renderMemberPins(); renderBillDiamonds(); armIdleOrbit(); };
+      const done = () => { renderMemberPins(); armIdleOrbit(); };
       try { gm.migrateAll(2800, done); } catch (e) { done(); }
     }
   }, arriveEnd + 650);
@@ -4027,16 +3968,10 @@ gm3dEl.addEventListener('wheel', noteGraphActivity, true);
 // aggregate. Baseline placement ONLY: party drives X (D left / R right),
 // chamber drives Y (Senate biased institutional), jittered deterministically
 // by bioguideId so a member always lands in the same spot across reloads.
-// The institutional layer (Sailor, 2026-07-08): the user's FOLLOWED
-// legislators — delegation auto-follows on district set (applyDistrict), plus
-// anything starred in the tracker — render as party diamonds by default after
-// commit, alongside any event-DERIVED members. The profile is the lens: no
-// profile → empty layer → the tracker's district affordance is the invite.
-// Pins are a distinct factory group (party-colored, planted tokens); they do
-// not join the aggregate proximity cloud (no pulse, no cluster shrink).
-// Next (sequenced): votes pipeline → displacement composed of the Reading's
-// legislation as its own lineage (record_composed), divergence from DERIVED
-// left visible as the promise-delivery signal.
+// No event-specific scoring yet — that's the AI-Derive pass (deferred). Pins
+// are a distinct factory group (party-colored, planted tokens); they do not
+// join the aggregate proximity cloud (no pulse, no cluster shrink). Hidden by
+// default; the graph-foot toggle brings the institutional layer in.
 let memberData = null;
 let memberPinsShown = true;       // institutional layer on by default — it's the point of the phase
 let memberPinsRendered = false;
@@ -4059,11 +3994,9 @@ function setMemberToggleUI() {
 // Reveal the toggle the moment the graph commits (loading state), and start
 // fetching the roster so it's cached before the pins build. Decoupled from
 // renderMemberPins so the control is visible immediately, not 6s later.
-// (Un-benched 2026-07-08, Sailor: followed legislators are the DEFAULT
-// institutional layer on the graph — the profile is the lens. The July 5
-// "reps no longer render" suppression is superseded.)
 function revealMemberToggle() {
-  if (memberToggle) { memberToggle.hidden = false; setMemberToggleUI(); }
+  // Reps no longer render on the Prism graph, so the in-graph toggle stays
+  // hidden — we only warm the roster cache for the Refraction panel.
   ensureMembers();
 }
 
@@ -4158,9 +4091,10 @@ async function ensureMembers() {
 // migration callback, a safety timer, OR a toggle click without racing or
 // getting stuck in the loading state.
 async function renderMemberPins() {
-  // Un-benched 2026-07-08 (Sailor): followed legislators are the default
-  // institutional layer on the graph — supersedes the July 5 "reps live in
-  // the Refraction panel only" no-op that stood here.
+  // Representatives live in the Refraction panel now — the Prism graph stays the
+  // human aggregate only. (Kept as a no-op so existing call sites are harmless.)
+  return;
+  /* eslint-disable no-unreachable */
   if (!gm || memberPinsRendered || memberBuildInFlight) return;
   memberBuildInFlight = true;
   try {
@@ -4244,176 +4178,6 @@ function toggleMemberPins() {
   setMemberToggleUI();
 }
 if (memberToggle) memberToggle.addEventListener('click', toggleMemberPins);
-
-// ───────────────────────────────────────────────────────────
-// Phase 6.1.4 — the legislation layer: bill readings on the graphmap.
-// Reads the canonical store (prism_bill_scores — populated on any device by
-// publish/pull) for THIS Reading and plots each bill as a spinning diamond.
-// Placement is a function of the record: x/y = centroid of the quadrants the
-// bill's displacement field pressures (multi-quadrant bills land between
-// them), z = objectZ, deterministic per-bill jitter so co-quadrant bills
-// don't stack. Ring color escalates with the diatribe read (low → green,
-// medium → gold, high → red — same BAND_RING palette as the voices).
-// Hold-to-lock a diamond → the compare panel becomes the bill inspector.
-// ───────────────────────────────────────────────────────────
-let billDots = [];             // factory dotEntry refs for visibility toggling
-let billShown = true;          // legislation layer on by default — it's the point of the phase
-let billRendered = false;
-
-const BILL_RING = { low: BAND_RING.fluid, medium: BAND_RING.coalition, high: BAND_RING.denominated };
-
-function setBillToggleUI() {
-  if (!billToggle) return;
-  const none = billRendered && billDots.length === 0;
-  billToggle.classList.toggle('is-off', billRendered && !billShown);
-  billToggle.classList.toggle('is-unavailable', none);
-  const glyph = (billShown && !none) ? '&#9670;' : '&#9671;';
-  billToggle.innerHTML = '<span class="member-toggle-glyph">' + glyph + '</span> ' +
-    (none ? 'legislation · none yet' : 'legislation');
-}
-
-function revealBillToggle() {
-  if (billToggle) { billToggle.hidden = false; setBillToggleUI(); }
-}
-
-function renderBillDiamonds() {
-  if (!gm || !gmActive || billRendered) return;
-  billRendered = true;
-  let rows = [];
-  try { rows = (PrismDB.getBillScoresForEvent && PrismDB.getBillScoresForEvent(EVENT_ID)) || []; } catch (e) {}
-  const DIR = { A: [-1, 1], B: [1, 1], C: [-1, -1], D: [1, -1] };   // v2 semantic frame (same as coordinate orbs)
-  const QOFF = 0.27;                                                // quadrant center offset from plane center
-  // Bills sharing a centroid (same pressured-quadrant set) spread on a
-  // golden-angle spiral around it, ordered by billId — deterministic across
-  // devices, collision-free, and reads as the cluster it is.
-  const groups = {};
-  rows.forEach(b => {
-    const qs = (Array.isArray(b.quadrants) ? b.quadrants : []).filter(q => DIR[q]).sort();
-    (groups[qs.join('') || 'none'] = groups[qs.join('') || 'none'] || []).push(b);
-  });
-  Object.values(groups).forEach(g => g.sort((a, b2) => String(a.billId).localeCompare(String(b2.billId))));
-  const spiralIdx = {};
-  Object.entries(groups).forEach(([k, g]) => g.forEach((b, i) => { spiralIdx[b.id || b.billId] = { i, key: k }; }));
-  let n = 0;
-  rows.forEach(b => {
-    try {
-      const qs = (Array.isArray(b.quadrants) ? b.quadrants : []).filter(q => DIR[q]);
-      let nx = 0.5, ny = 0.5;
-      if (qs.length) {
-        nx = qs.reduce((s, q) => s + (0.5 + DIR[q][0] * QOFF), 0) / qs.length;
-        ny = qs.reduce((s, q) => s + (0.5 - DIR[q][1] * QOFF), 0) / qs.length;
-      }
-      const bid = String(b.billId || '');
-      const sp = spiralIdx[b.id || b.billId] || { i: 0, key: 'none' };
-      if (sp.i > 0) {
-        const r = 0.045 * Math.sqrt(sp.i);
-        const th = sp.i * 2.399963 + _bgHash(sp.key, 7) * 6.283;   // golden angle + per-group rotation
-        nx += r * Math.cos(th);
-        ny += r * Math.sin(th);
-      }
-      const bz = (typeof b.objectZ === 'number') ? b.objectZ : 0.15;  // unscored rows hover low but visible
-      const prim = qs[0] || 'A';
-      const entry = gm.addDot(nx, ny, GM_QUAD[prim], bz, {
-        shape: 'diamond',
-        radius: 0.05 + bz * 0.03,
-        ring: BILL_RING[(b.diatribe || '').toLowerCase()] || null,
-        label: b.billName || bid,
-        desc: b.reason || '',
-        // framingKeywords deliberately NOT rendered as orbiting sprites —
-        // 12 bills × 4 words fogged the whole field (Sailor, 2026-07-07).
-        // They live in the inspector panel as chips instead.
-        meta: {
-          isBill: true, billId: b.billId, billName: b.billName,
-          displacement: b.displacement, objectZ: b.objectZ, diatribe: b.diatribe,
-          quadrants: b.quadrants, reason: b.reason, semQuad: prim,
-          method: b.method, provenance: b.provenance, rubricId: b.rubricId,
-          framingKeywords: b.framingKeywords,
-        },
-      });
-      if (entry && entry.mesh) {
-        entry.mesh.visible = billShown;
-        if (entry.connector) entry.connector.visible = billShown;
-        billDots.push(entry);
-        n++;
-      }
-    } catch (e) { if (n === 0) console.error('[v2] bill diamond failed:', e); }
-  });
-  console.log('[v2] placed ' + n + ' bill readings for ' + EVENT_ID);
-  setBillToggleUI();
-}
-
-function toggleBillDiamonds() {
-  noteGraphActivity();
-  if (billRendered && billDots.length === 0) billRendered = false;   // 'none yet' → re-read the store (a pull may have landed rows)
-  if (!billRendered) { billShown = true; renderBillDiamonds(); return; }
-  billShown = !billShown;
-  billDots.forEach(entry => {
-    try {
-      entry.mesh.visible = billShown;
-      if (entry.connector) entry.connector.visible = billShown;
-    } catch (e) {}
-  });
-  setBillToggleUI();
-}
-if (billToggle) billToggle.addEventListener('click', toggleBillDiamonds);
-
-// ── Contrast: lock a BILL (legislation diamond) against the user's pin ──
-// The compare panel becomes the bill inspector: name, displacement field,
-// object-z, diatribe read, pressured quadrants, and the curate engine's
-// reasoning — lineage chips so provenance stays a visible mark.
-function showContrastBill(d) {
-  if (!userPinData || !d) return;
-  contrastDot = null; contrastMember = null;
-  if (aggDots) aggDots.forEach(x => { if (x.el) x.el.classList.remove('selected'); });
-  graphInfo.classList.add('comparing', 'bill-inspect');
-
-  // you (committed) — top half (identical to the voice/legislator compare)
-  const uv = variantAt(userPinData.quad, userPinData.band);
-  const umeta = QUAD.find(x => x.q === userPinData.quad);
-  cmpUser.setAttribute('data-band', userPinData.band);
-  cmpUser.setAttribute('data-side', umeta ? umeta.side : 'left');
-  cmpUserLabel.textContent = 'you · ' + userPinData.band;
-  cmpUserText.innerHTML = uv ? PE.applyKeywords(uv.text, variantPool(uv)) : '';
-  cmpUserNums.textContent = numsLine(userPinData.x, userPinData.y, userPinData.z, userPinData.intensity);
-
-  // the bill — bottom half
-  const bx = Math.round((d.normX - 0.5) * 200), by = Math.round((0.5 - d.normY) * 200);
-  const bz = (typeof d.normZ === 'number') ? d.normZ : 0;
-  const dia = (d.diatribe || '').toLowerCase();
-  const band = dia === 'low' ? 'fluid' : dia === 'high' ? 'denominated' : 'coalition';
-  cmpAgg.setAttribute('data-band', band);
-  cmpAgg.setAttribute('data-side', d.normX >= 0.5 ? 'right' : 'left');
-  cmpAggNums.textContent = numsLine(bx, by, bz, Math.round(Math.abs(bz) * 100));
-  cmpAggLabel.textContent = (d.billName || d.billId) + ' · bill reading';
-  // Title above (cmp-label), summary here — displacement/object-z live in the
-  // chips, not the prose. Curate reasons carry markdown bold; strip for display.
-  cmpAggText.textContent = String(d.reason || 'Curated bill reading for this event.').replace(/\*\*/g, '');
-
-  // condensed record cloud: structured fields + lineage as chips
-  const chips = [];
-  if (d.billId) chips.push(String(d.billId));
-  if (d.displacement) chips.push(d.displacement);
-  if (typeof d.objectZ === 'number') chips.push('z ' + (d.objectZ >= 0 ? '+' : '') + d.objectZ.toFixed(2));
-  if (d.diatribe) chips.push('diatribe ' + d.diatribe);
-  if (Array.isArray(d.quadrants) && d.quadrants.length) chips.push('pressures ' + d.quadrants.join('·'));
-  (Array.isArray(d.framingKeywords) ? d.framingKeywords : []).slice(0, 3).forEach(k => chips.push(k));
-  if (d.method) chips.push(d.method);
-  if (d.provenance) chips.push(d.provenance);
-  renderCmpCloud(chips);
-  dockPanelOpposite(d.normX);
-  if (cmpFollow) cmpFollow.hidden = true;   // ★ follow is a legislator affordance
-
-  // line of symmetry — Δ vs you
-  cmpDelta.innerHTML = 'Δx ' + sgn(bx - userPinData.x) +
-    '<span class="d-sep"></span>Δy ' + sgn(by - userPinData.y) +
-    '<span class="d-sep"></span>Δz ' + ((bz - userPinData.z) >= 0 ? '+' : '') + (bz - userPinData.z).toFixed(2);
-
-  // tether: your pin to the bill, colored by its primary pressured quadrant
-  if (gmActive && gm) {
-    try { gm.setContrastLine({ x: pinX, y: pinY, z: userPinData.z }, { x: d.normX, y: d.normY, z: bz }, { color: QUAD_HEX[d.semQuad] || QUAD_HEX.A }); } catch (e) {}
-  }
-  try { gm.setFocus(d.normX, d.normY); } catch (e) {}
-}
 
 // Recenter button → smooth camera return to home framing.
 (function wireRecenter() {

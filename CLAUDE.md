@@ -4,7 +4,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-Prism is a **static web app** (no build step, no bundler, no npm install for the app itself) that maps positions of U.S. Congress members. Two HTML entries at the repo root — `index-v56.html` (main app) and `admin.html` (admin / refraction panel) — load CSS + JS directly from `src/` and data from `data/`.
+Prism is a **static web app** (no build step, no bundler, no npm install for the app itself) that maps positions of U.S. Congress members. Entry points (corrected 2026-07-07 — earlier versions of this file misled a session into editing a retired entry):
+
+- **`v2/index.html`** — **the live user-facing app** (the portal, rebuilt July 5). This is where user-facing work lands.
+- `index.html` (repo root) — a small launcher page linking to the portal and admin.
+- `admin-surface.html` — the admin instrument (see Direction section below).
+- `admin.html` — the legacy admin desk, being retired.
+- `index-v56.html` — **retired 2026-07-07** to `archive/index-v56_2026-07-07_retired-superseded-by-v2.html`. It was the pre-rebuild portal. If any handoff or doc names it as the target for user-facing work, that reference is stale — the target is `v2/index.html`.
+
+All entries load CSS + JS directly from `src/` and data from `data/`.
 
 A separate Node-based **data pipeline** in `scripts/` fetches from the Congress.gov API and voteview.com and writes into `data/`. The pipeline and the app are decoupled: the pipeline produces files; the app reads them.
 
@@ -104,13 +112,13 @@ When biasing where to put effort, bias toward unblocking these. The roadmap has 
 
 ### Run the app
 
-The day-to-day workflow uses **VS Code's Live Server extension**: right-click `index-v56.html` in the file explorer and choose "Open with Live Server." Auto-reload on save makes the "test in browser after every change" principle frictionless.
+The day-to-day workflow uses **VS Code's Live Server extension**: right-click `v2/index.html` in the file explorer and choose "Open with Live Server." Auto-reload on save makes the "test in browser after every change" principle frictionless.
 
 For a non–VS Code fallback, serve the repo root with Python:
 
     python3 -m http.server 8000
-    # http://localhost:8000/index-v56.html
-    # http://localhost:8000/admin.html
+    # http://localhost:8000/v2/index.html
+    # http://localhost:8000/admin-surface.html
 
 Append `?dev` to the URL to skip the splash (adds `dev-skip` class on `<html>`).
 
@@ -137,9 +145,9 @@ No automated test runner. `test/graphmap-factory-test.html` is a manual harness 
 
 ## Architecture
 
-### Two entries, one data layer
+### Multiple entries, one data layer
 
-`index-v56.html` and `admin.html` are both standalone pages. They share state through **`PrismDB`** (`src/js/prismdb.js`), an IIFE module that wraps `localStorage` under keys like `prism_events`, `prism_members`, `prism_arcs`. Anything that needs to persist across page loads or be visible to both pages goes through PrismDB — do not write to `localStorage` directly from feature code.
+`v2/index.html`, `admin-surface.html`, and `admin.html` are standalone pages. They share state through **`PrismDB`** (`src/js/prismdb.js`), an IIFE module that wraps `localStorage` under keys like `prism_events`, `prism_members`, `prism_arcs`. Anything that needs to persist across page loads or be visible to multiple pages goes through PrismDB — do not write to `localStorage` directly from feature code.
 
 Both pages load the same two data scripts before any module JS:
 
@@ -155,7 +163,7 @@ These define globals (`POLITICIANS_DATA`, etc.) — that's the handoff from the 
 - **`prism-splash.js`** — Splash screen + onboarding + portal entry. Uses `requestAnimationFrame` for avatar animation.
 - **`prism-parallax.js`** — Parallax overlay, orbit engine, three-panel swipe (Beam / Prism / Refraction). Touches DOM by ID directly and shares header-position constants with the main page.
 
-Script-tag load order in `index-v56.html` matters: Three.js → graphmap → prismdb → splash → parallax. Don't reorder casually.
+Script-tag load order in `v2/index.html` matters: prismdb → prism-ai → data → prism-effects → Three.js (CDN) → graphmap (loaded with a `?v=N` cache-buster — bump N when graphmap changes). Don't reorder casually.
 
 ### Data pipeline (`scripts/`)
 
@@ -175,7 +183,7 @@ The pipeline does not delete old files. `prism_members.min.json` is a hand-minif
 ## Conventions specific to this repo
 
 - **Layout is by lifecycle, not by feature.** `src/` = hand-written, `data/` = generated, `scripts/` = generator, `archive/` = inactive. When adding a file, ask which lifecycle bucket it belongs in rather than which feature.
-- **Entry HTML files are large but mid-extraction, not monolithic by design.** `index-v56.html` (~3,650 lines / ~750KB) and `admin.html` (~10,800 lines / ~430KB) are page-level shells that have been actively getting smaller via the monolith split — `prism-styles.css`, `prism-splash.js`, and `prism-parallax.js` have already been extracted. Pending extractions: `prism-parallelogram.js`, `prism-morph.js`, `prism-core.js`, and an eventual admin extraction pass. When adding new logic, push it into `src/js/` rather than inline. When touching existing inline code, prefer extracting the relevant block over editing it in place if the scope feels right.
+- **Entry HTML files are large but mid-extraction, not monolithic by design.** `v2/index.html` (~280KB) and `admin.html` (~430KB, legacy) are page-level shells; shared logic has been moving into `src/js/` (`prism-ai.js`, `prism-curate.js`, `prism-effects.js`, `prism-graphmap.js` extracted). When adding new logic, push it into `src/js/` rather than inline. When touching existing inline code, prefer extracting the relevant block over editing it in place if the scope feels right.
 - **No transpilation.** Anything you write in `src/js/` runs in the browser as-is. Stick to syntax that current evergreen browsers support natively.
-- **Versioned entry filename** (`index-v56.html`): the version suffix is the convention here, not an artifact to clean up. If you fork the entry, bump the number rather than renaming in place.
+- **Versioning lives on the portal folder** (`v2/`), not in filenames anymore. The old versioned-filename convention (`index-v56.html`) ended when the portal was rebuilt into `v2/` — retired copies go to `archive/` with a dated, reasoned filename, never left at the repo root where a session might mistake them for live entries.
 - **AI autosuggest is the load-bearing admin pattern.** The Sonnet-backed autosuggest in `admin.html` (event creation, statement scoring, ✦ Suggest, ✦ Curate) is the working pattern this project leans on. Editorial deltas between AI proposals and final saved content are intended training data for the closed-form classifier — preserve this pattern and log the deltas when extending it. The system prompts (`PRISM_SYSTEM_PROMPT`, `BILL_CURATE_SYSTEM_PROMPT`) are canonical; don't fork them silently.

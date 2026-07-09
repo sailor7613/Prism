@@ -11,8 +11,10 @@ who consumes it.
 
 ```
 Prism/
-├── index-v56.html        Main app entry. Open this in a browser.
-├── admin.html            Admin / refraction entry.
+├── index.html            Launcher page (links to portal + admin).
+├── v2/index.html         Main app entry — the live portal.
+├── admin-surface.html    Admin instrument (current).
+├── admin.html            Legacy admin desk (being retired).
 ├── README.md             (this file)
 │
 ├── src/                  Source you write by hand.
@@ -38,14 +40,14 @@ Prism/
 
 ## How to view the app
 
-It's a static page. Open `index-v56.html` in a browser. Most modern
+It's a static page. Open `v2/index.html` in a browser. Most modern
 browsers will let you double-click the file. If anything fails to
 load due to CORS on `file://`, run a one-liner local server from
 the Prism root:
 
 ```
 python3 -m http.server 8000
-# then visit http://localhost:8000/index-v56.html
+# then visit http://localhost:8000/v2/index.html
 ```
 
 ## How to rebuild the data
@@ -92,5 +94,8 @@ HTML imports them.
   Superseded by `scripts/run-all.js` + `scripts/fetch-members.js`.
 - `prismdb_members_extension.js`, `refraction_member_browser.js` —
   patch-style notes from an earlier merge. Their content was
-  rolled into `src/js/prismdb.js` and `index-v56.html`. Kept here
-  as a paper trail, not loaded.
+  rolled into `src/js/prismdb.js` and the (since retired)
+  `index-v56.html`. Kept here as a paper trail, not loaded.
+- `index-v56_2026-07-07_retired-superseded-by-v2.html` — the
+  pre-rebuild portal, retired from the repo root 2026-07-07 so it
+  can't be mistaken for the live entry (`v2/index.html`).

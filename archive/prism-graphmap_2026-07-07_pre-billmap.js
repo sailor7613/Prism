@@ -782,37 +782,46 @@ const PrismGraphmap = (function () {
       return g;
     }
     function buildOrbitArtifacts() {
-      // Reworked 2026-07-07 (Sailor): the vases are SET on the gallery FLOOR —
-      // the horizontal ground plane Ted the Coyote walks (scene space, y = -1.7,
-      // ring in x/z). Upright, opaque marble, no bob, no drift: furniture, not
-      // ghosts. The pawn-like statues are retired for now (buildStatueMesh
-      // kept dormant for a future, better statuary pass).
-      const FLOOR_Y = -1.7;                            // Ted's floor
-      const kinds = ['amphora', 'krater', 'lekythos', 'amphora', 'krater', 'lekythos'];
-      // Even ring around the graph; slight radius/scale variation so it reads
-      // placed, not stamped. All inside the camera frame.
+      const kinds = ['amphora', 'krater', 'lekythos', 'amphora', 'krater'];
+      // Outside the plane (plane spans ±1.4) but INSIDE the camera frame, so they
+      // never cross the canvas edge and get clipped into a rectangular "window".
       const specs = [
-        { a: 0.35, r: 3.10, s: 0.80 },
-        { a: 1.40, r: 3.40, s: 1.00 },
-        { a: 2.45, r: 3.00, s: 0.70 },
-        { a: 3.50, r: 3.45, s: 0.95 },
-        { a: 4.55, r: 3.05, s: 0.85 },
-        { a: 5.60, r: 3.35, s: 0.75 },
+        { a: 0.6, r: 3.3, z:  1.4, s: 0.85, tilt:  0.18 },
+        { a: 2.1, r: 4.1, z: -1.6, s: 1.05, tilt: -0.12 },
+        { a: 3.5, r: 2.9, z:  0.8, s: 0.70, tilt:  0.30 },
+        { a: 4.7, r: 4.4, z: -1.0, s: 1.00, tilt: -0.22 },
+        { a: 5.7, r: 3.6, z:  1.9, s: 0.85, tilt:  0.10 },
       ];
       specs.forEach((sp, i) => {
         const geo = new THREE.LatheGeometry(vaseProfile(kinds[i % kinds.length]), 26);
         geo.center();
-        geo.computeBoundingBox();
-        const h = (geo.boundingBox.max.y - geo.boundingBox.min.y) * sp.s;
         const mat = new THREE.MeshStandardMaterial({
           color: new THREE.Color(0xe8e0cf), emissive: new THREE.Color(0x4a5066),
           emissiveIntensity: 0.22, roughness: 0.85, metalness: 0.05,
+          transparent: true, opacity: 0.30, depthWrite: false,
         });
         const mesh = new THREE.Mesh(geo, mat);
-        mesh.position.set(Math.cos(sp.a) * sp.r, FLOOR_Y + h / 2, Math.sin(sp.a) * sp.r);
+        const y = Math.sin(sp.a) * sp.r * 0.5;
+        mesh.position.set(Math.cos(sp.a) * sp.r, y, sp.z);
         mesh.scale.setScalar(sp.s);
-        (scene || group).add(mesh);
-        // Deliberately NOT pushed to orbitArtifacts — floor-set vases don't bob or spin.
+        mesh.rotation.z = sp.tilt;
+        mesh.renderOrder = -1;
+        group.add(mesh);
+        orbitArtifacts.push({ mesh: mesh, spin: (i % 2 ? 1 : -1) * (0.04 + i * 0.012), bobAmp: 0.04 + (i % 3) * 0.02, bobPhase: i * 1.3, baseY: y });
+      });
+      // A couple of classical figures — the gallery's statuary, kept in-frame.
+      const statueSpecs = [
+        { a: 1.3, r: 4.3, z: -0.8, s: 1.0, tilt:  0.05 },
+        { a: 4.2, r: 3.9, z:  1.3, s: 1.1, tilt: -0.06 },
+      ];
+      statueSpecs.forEach((sp, i) => {
+        const st = buildStatueMesh();
+        const y = Math.sin(sp.a) * sp.r * 0.5;
+        st.position.set(Math.cos(sp.a) * sp.r, y, sp.z);
+        st.scale.setScalar(sp.s);
+        st.rotation.z = sp.tilt;
+        group.add(st);
+        orbitArtifacts.push({ mesh: st, spin: (i % 2 ? 1 : -1) * 0.03, bobAmp: 0.05, bobPhase: i * 2.0 + 0.7, baseY: y });
       });
     }
     if (config.artifacts) { try { buildOrbitArtifacts(); } catch (e) { console.warn('[PrismGraphmap] artifacts failed:', e && e.message); } }
@@ -1089,7 +1098,6 @@ const PrismGraphmap = (function () {
       // ── Aggregate dot proximity pulse ──
       for (var di = 0; di < dots.length; di++) {
         var dot = dots[di];
-        if (dot.spin) dot.mesh.rotation.z = pinT * 0.4 + dot.pulsePhase;
         if (dot.pulseSpeed > 0 && dot.glowMat) {
           var pulse = Math.sin(pinT * dot.pulseSpeed + dot.pulsePhase);
           // Opacity scales with speed — pulse mode (fast) glows brighter, cluster mode (slow) whispers
@@ -1178,7 +1186,6 @@ const PrismGraphmap = (function () {
       // ── Aggregate dot proximity pulse ──
       for (var di = 0; di < dots.length; di++) {
         var dot = dots[di];
-        if (dot.spin) dot.mesh.rotation.z = pinT * 0.4 + dot.pulsePhase;
         if (dot.pulseSpeed > 0 && dot.glowMat) {
           var pulse = Math.sin(pinT * dot.pulseSpeed + dot.pulsePhase);
           var maxOpacity = Math.min(0.22, dot.pulseSpeed * 0.03);
@@ -1734,23 +1741,11 @@ const PrismGraphmap = (function () {
         if (opts.at.z != null) atZ = opts.at.z * Z_EXTENT * 0.8;
       }
 
-      // Sphere — deep base with emissive inner glow (Getty style).
-      // v2 additive: opts.shape — 'diamond' (octahedron) or 'cube' render
-      // non-sphere species (bill readings use diamonds); shaped dots spin
-      // slowly in the animate loop so facets catch light.
+      // Sphere — deep base with emissive inner glow (Getty style)
       const brightCol = col.clone();
       brightCol.offsetHSL(0, 0.2, -0.05); // saturate but darken
-      const dotR = opts.radius || 0.05;
-      let dotGeo;
-      if (opts.shape === 'diamond') {
-        dotGeo = new THREE.OctahedronGeometry(dotR * 1.4);
-      } else if (opts.shape === 'cube') {
-        dotGeo = new THREE.BoxGeometry(dotR * 1.7, dotR * 1.7, dotR * 1.7);
-      } else {
-        dotGeo = new THREE.SphereGeometry(dotR, 14, 10);
-      }
       const mesh = new THREE.Mesh(
-        dotGeo,
+        new THREE.SphereGeometry(opts.radius || 0.05, 14, 10),
         new THREE.MeshStandardMaterial({
           color: brightCol,
           emissive: brightCol,
@@ -1760,9 +1755,7 @@ const PrismGraphmap = (function () {
         })
       );
       mesh.position.set(atX, atY, atZ);
-      // v2 additive: opts.meta — caller fields (e.g. a bill reading's row)
-      // merged into the dot's data so onInspect() receives them intact.
-      mesh.userData = Object.assign({}, opts.meta || {}, { isGraphmapDot: true, label: opts.label || '', desc: opts.desc || '', quadrant, normX, normY, normZ: normZ || 0 });
+      mesh.userData = { isGraphmapDot: true, label: opts.label || '', desc: opts.desc || '', quadrant, normX, normY, normZ: normZ || 0 };
       dotsGroup.add(mesh);
 
       // Pulse glow sprite — starts invisible, activated by computeProximity()
@@ -1793,9 +1786,8 @@ const PrismGraphmap = (function () {
         ringSprite: null,     // Diatribe band ring (v2, additive)
         keywordSprites: [],   // { sprite, material, texture } — children of mesh
         pulseSpeed: 0,    // 0 = no pulse, set by computeProximity()
-        spin: !!opts.shape,  // shaped dots (diamond/cube) rotate slowly
         pulsePhase: Math.random() * Math.PI * 2, // random offset so neighbors don't sync
-        data: Object.assign({}, opts.meta || {}, { normX, normY, quadrant, normZ: normZ || 0, label: opts.label || '', desc: opts.desc || '' }),
+        data: { normX, normY, quadrant, normZ: normZ || 0, label: opts.label || '', desc: opts.desc || '' },
       };
 
       // Diatribe band ring (v2, additive) — billboard halo around the orb
