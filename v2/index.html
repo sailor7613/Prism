@@ -846,7 +846,11 @@ body.light .pad-grid {
    stage is taller than the viewport and scrolls, so anchoring it to the graph
    put it above the fold. Only shown post-commit (hidden attribute). */
 .member-toggle {
-  position: fixed; top: 70px; right: 24px; z-index: 20;
+  /* Anchored BELOW the top chrome (2026-07-09): fixed 70px sat inside the
+     ribbon's full-width touch band (.ribbon-zone, ribbon z 45 > toggle z 20),
+     which swallowed every click/tap — the §5 "toggle not working" bug.
+     --top-chrome keeps the button clear even when the ribbon grows. */
+  position: fixed; top: calc(var(--top-chrome) + 8px); right: 24px; z-index: 20;
   display: inline-flex; align-items: center; gap: 6px;
   padding: 5px 13px; border-radius: 999px; cursor: pointer;
   font: inherit; font-size: 12px; letter-spacing: 0.04em;
@@ -860,7 +864,7 @@ body.light .pad-grid {
 .member-toggle.is-loading { opacity: 0.5; cursor: progress; }
 .member-toggle.is-unavailable { opacity: 0.4; cursor: default; }
 /* Legislation (bill readings) toggle — stacks under the legislators toggle. */
-.bill-toggle { top: 108px; }
+.bill-toggle { top: calc(var(--top-chrome) + 46px); }
 /* Bill inspector (Sailor, 2026-07-07): your response → the delta read → the
    bill's title and summary. Flex-order only — voice/legislator compares keep
    the original label-nums-delta-text flow. */
