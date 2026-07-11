@@ -1595,72 +1595,194 @@ body:not(.nav-ready) .prism-ribbon { opacity: 0 !important; pointer-events: none
 body:not(.phase-diatribe) .diatribe-eyebrow { display: none; }
 
 /* ── DELTA TICKER (Specs/Prism_Delta_Ticker_Build_Spec_v1.md) ──
-   Y2K instrument chrome (boundary rule: no hand-drawn anything here).
-   Two rows, Bloomberg-style: YOUR READING (slower) over THE FIELD
-   (faster). Tiles are NUMBER-LED: big mono figure, whisper label.
-   Valence = the BAND palette (band recolor 2026-07; band ≠ quadrant —
-   quad-D gold never appears on a tile). Literals mirror BAND_RING /
-   prism-grammar.css --band-* tokens (v2 loads no stylesheet). */
+   CHROME: transcribed from Design's ticker-chrome-v2 drop (2026-07-11,
+   archived at Handoffs/Prism/Design_Brief/returned/ticker_chrome_v2/).
+   Sailor's picks: GLASS SLUG strip tiles · WIRE edge register.
+   Y2K instrument chrome (boundary rule §2.2 — no hand-drawn anything).
+   Valence = the BAND palette (band ≠ quadrant: no quad-D gold here);
+   literals mirror BAND_RING / prism-grammar.css --band-* tokens.
+   Dials (design's, hard-coded defaults — tweak then re-freeze):
+     --dt-bevel 0..1.5 bevel intensity · --dt-type 0.85..1.25 type scale */
+
+/* the strip — an instrument panel sitting proud of the stage */
 .delta-ticker {
+  --dt-bevel: 1;
+  --dt-type: 1;
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
   padding-bottom: var(--safe-bottom);
-  background: linear-gradient(0deg, rgba(7,12,26,0.96), rgba(7,12,26,0.88));
-  border-top: 0.5px solid var(--rule);
+  background: linear-gradient(180deg, rgba(15, 24, 50, 0.97), rgba(7, 12, 26, 0.98) 72%);
+  border-top: 1px solid rgba(2, 4, 12, 0.85);
+  /* machined top edge: dark cut + light land — the panel is a separate object */
+  box-shadow:
+    inset 0 1px 0 rgba(190, 210, 255, calc(0.16 * var(--dt-bevel))),
+    0 -1px 0 rgba(190, 210, 255, calc(0.05 * var(--dt-bevel)));
   font-family: var(--mono); user-select: none; -webkit-user-select: none;
 }
-/* the ticker owns the bottom band: the footer status line yields (event
-   title lives in the top picker; asymmetry is ambient chrome), and the
-   graph stage gains clearance so the commit row never sits under the strip */
-body.ticker-live footer { opacity: 0; pointer-events: none; }
-body.ticker-live .graph-phase { padding-bottom: calc(96px + var(--safe-bottom)); }
-.dt-row { position: relative; overflow: hidden; height: 34px; display: flex; align-items: center; }
-.dt-row + .dt-row { border-top: 0.5px dotted var(--rule); }
-.dt-rowtag { position: absolute; left: 0; top: 0; bottom: 0; z-index: 2; display: flex; align-items: center;
-  padding: 0 12px; font-size: 8px; letter-spacing: 0.24em; color: var(--ink-low); white-space: nowrap;
-  background: linear-gradient(90deg, rgba(7,12,26,0.94) 68%, rgba(7,12,26,0)); pointer-events: none; }
-.dt-track { display: inline-flex; align-items: center; padding-left: 120px; width: max-content;
+/* the stage's velvet exhales onto the panel — soft upward halo, no hard seam */
+.delta-ticker::before {
+  content: ''; position: absolute; left: 0; right: 0; top: -22px; height: 22px;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(7, 12, 26, 0) 0%, rgba(7, 12, 26, 0.55) 100%);
+}
+/* the ticker owns the bottom band: the footer folds into .dt-status (below),
+   and the graph stage gains clearance so the commit row never sits under it */
+body.ticker-live footer { display: none; }
+body.ticker-live .graph-phase { padding-bottom: calc(100px + var(--safe-bottom)); }
+/* graph hint text, restyled as instrument marginalia (design's .graph-hint
+   mapped to v2's real node, #graphNote / .a-note) */
+body.ticker-live #graphNote {
+  font-family: var(--mono); font-size: 8px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--ink-low); opacity: 0.8;
+}
+
+/* rows — YOUR READING (taller, slower) over THE FIELD */
+.dt-row { position: relative; overflow: hidden; height: 38px; display: flex; align-items: center; }
+.dt-row.dt-field { height: 30px; }
+/* row separator: a machined groove (dark cut + light land) */
+.dt-row + .dt-row {
+  border-top: 1px solid rgba(2, 4, 12, 0.7);
+  box-shadow: inset 0 1px 0 rgba(190, 210, 255, calc(0.09 * var(--dt-bevel)));
+}
+/* row tag: inset end-cap plate with a live LED — part of the panel casting */
+.dt-rowtag {
+  position: absolute; left: 0; top: 0; bottom: 0; z-index: 2;
+  display: flex; align-items: center; gap: 7px;
+  padding: 0 14px 0 12px;
+  font-size: 8px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--ink-mid);
+  white-space: nowrap; pointer-events: none;
+  background: linear-gradient(90deg, rgba(5, 9, 20, 0.98) 0%, rgba(5, 9, 20, 0.96) 72%, rgba(5, 9, 20, 0) 100%);
+  box-shadow:
+    inset 0 1px 2px rgba(0, 0, 0, calc(0.5 * var(--dt-bevel))),
+    inset -14px 0 14px -14px rgba(0, 0, 0, calc(0.6 * var(--dt-bevel)));
+}
+.dt-rowtag::before {
+  content: ''; width: 3px; height: 3px; border-radius: 50%;
+  background: rgb(96, 148, 220);                       /* live-feed LED */
+  box-shadow: 0 0 5px rgba(96, 148, 220, 0.8);
+}
+.dt-field .dt-rowtag::before {
+  background: var(--ink-low); box-shadow: none;        /* field row idles: no signal claim */
+}
+
+/* track / marquee — mechanics unchanged; each .dt-cycle carries a wide
+   trailing seam so the loop reads as ONE cycle coming around */
+.dt-track { display: inline-flex; align-items: center; padding-left: 132px; width: max-content;
   will-change: transform; animation: dt-marquee 60s linear infinite; }
-/* each marquee copy is a .dt-cycle with a wide trailing seam, so the loop
-   reads as ONE cycle coming around — not a jumble of repeated tiles */
-.dt-cycle { display: inline-flex; align-items: center; gap: 28px; padding-right: 110px; }
+.dt-cycle { display: inline-flex; align-items: center; gap: 10px; padding-right: 110px; }
 .dt-field .dt-track { animation-duration: 35s; }   /* THE FIELD scrolls faster — the §6 temporal beat */
 .delta-ticker:hover .dt-track, .delta-ticker.paused .dt-track { animation-play-state: paused; }
 @keyframes dt-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-.dt-tile { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 1px; flex: none;
-  background: none; border: none; padding: 2px 4px; margin: 0; cursor: pointer; color: var(--ink-mid);
-  font-family: var(--mono); line-height: 1.05; text-align: left; }
-div.dt-tile { cursor: default; }
-.dt-top { display: inline-flex; align-items: baseline; gap: 6px; }
-.dt-glyph { font-size: 12px; }
-.dt-fig { font-size: 14px; font-weight: 600; letter-spacing: 0.02em; white-space: nowrap; }
-.dt-label { font-size: 8px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-low); white-space: nowrap; }
+
+/* the tile — a discrete chip. Number-led: glyph · FIGURE / label */
+.dt-tile {
+  display: inline-flex; flex-direction: column; align-items: flex-start; gap: 2px; flex: none;
+  padding: 4px 10px 5px; margin: 0; border-radius: 2px;
+  border: 0.5px solid transparent;
+  cursor: pointer; color: var(--ink-mid);
+  font-family: var(--mono); line-height: 1.05; text-align: left;
+  background: none;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease, transform 0.1s ease;
+}
+.dt-top { display: inline-flex; align-items: baseline; gap: 7px; }
+.dt-glyph { font-size: calc(11px * var(--dt-type, 1)); opacity: 0.9; }
+.dt-fig {
+  font-size: calc(15px * var(--dt-type, 1)); font-weight: 500;
+  letter-spacing: 0.02em; white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.dt-label {
+  font-size: calc(8px * var(--dt-type, 1)); letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--ink-low); white-space: nowrap;
+}
+/* valence = band palette (glyph inherits figure color) */
 .dt-tile.val-toward   .dt-fig, .dt-tile.val-toward   .dt-glyph { color: rgb(84, 200, 138); }   /* --band-fluid */
 .dt-tile.val-apart    .dt-fig, .dt-tile.val-apart    .dt-glyph { color: rgb(232, 88, 88); }    /* --band-denominated */
 .dt-tile.val-middling .dt-fig, .dt-tile.val-middling .dt-glyph { color: rgb(232, 148, 72); }   /* --band-coalition */
 .dt-tile.val-field    .dt-fig { color: var(--ink-mid); }
-/* the ticker exists only on the committed Prism stage — the nav ribbon
-   owns the bottom in parallax mode, and other columns cover the stage */
+
+/* CHOSEN chip: GLASS SLUG — restrained early-2000s translucency.
+   Interactive tiles only; the non-interactive register stays engraved. */
+button.dt-tile {
+  background: linear-gradient(180deg, rgba(150, 168, 200, 0.10), rgba(150, 168, 200, 0.03) 55%);
+  border-color: rgba(150, 168, 200, calc(0.3 * var(--dt-bevel)));
+  -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, calc(0.12 * var(--dt-bevel)));
+}
+button.dt-tile:hover {
+  border-color: rgba(180, 198, 230, 0.55);
+  background: linear-gradient(180deg, rgba(150, 168, 200, 0.16), rgba(150, 168, 200, 0.05) 55%);
+}
+button.dt-tile:active {
+  background: rgba(8, 12, 26, 0.6);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+/* non-interactive register — field stat cells and the empty-ledger cell:
+   engraved, not chipped (div.dt-tile is exactly the non-button render path) */
+div.dt-tile {
+  cursor: default; background: none; border-color: transparent;
+  box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none;
+}
+
+/* folded footer — the .dt-status end-cap plate (spans both rows, right edge) */
+.dt-status {
+  position: absolute; right: 0; top: 0; bottom: var(--safe-bottom); z-index: 2;
+  display: flex; flex-direction: column; justify-content: center; gap: 4px;
+  padding: 0 12px 0 18px; pointer-events: none;
+  font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-low);
+  text-align: right; white-space: nowrap;
+  background: linear-gradient(270deg, rgba(5, 9, 20, 0.98) 0%, rgba(5, 9, 20, 0.96) 62%, rgba(5, 9, 20, 0) 100%);
+  box-shadow: inset 14px 0 14px -14px rgba(0, 0, 0, calc(0.6 * var(--dt-bevel)));
+}
+.dt-status span { display: block; }
+
+/* stage-visibility gates */
 body.tri-cover .delta-ticker, html.parallax-mode .delta-ticker,
 body.tri-cover .dt-edge, html.parallax-mode .dt-edge { display: none; }
 
-/* right-edge call (Sailor, spec §5.1): once per completed personal-row
-   cycle the tiles make one single-file vertical pass up the right edge —
-   the Kaleidoscope (the column to the RIGHT) pulling them home. Tap → col 2. */
-.dt-edge { position: fixed; top: var(--top-chrome); right: 0; bottom: 92px; width: 92px; z-index: 29;
+/* ── RIGHT-EDGE CALL — WIRE register (design v2 drop, CHOSEN):
+   full presence, simplified figure — glyph (+ z unit) over number,
+   no labels, no prose; the tile's valence band colors everything in
+   it — glyph, z, figure, and the wire itself. Still deliberately NOT
+   the instrument. Tap → the Kaleidoscope column. ── */
+.dt-edge { position: fixed; top: calc(var(--top-chrome) + 84px); right: 0; bottom: 100px; width: 96px; z-index: 29;
+  /* +84px: clear the ◆ legislators / ◇ legislation toggles — the edge is a
+     tap target (goCol 2) and must never sit over their hit areas */
   overflow: hidden; cursor: pointer; border: none; padding: 0;
-  background: linear-gradient(270deg, rgba(7,12,26,0.45), rgba(7,12,26,0)); }
-.dt-edge-col { position: absolute; right: 10px; top: 100%; display: flex; flex-direction: column; gap: 20px;
+  background: linear-gradient(270deg, rgba(7, 12, 26, 0.5), rgba(7, 12, 26, 0)); }
+/* a rising light seam along the very edge — the pull made visible */
+.dt-edge::after {
+  content: ''; position: absolute; top: 0; right: 0; bottom: 0; width: 1px;
+  background: linear-gradient(0deg, rgba(96, 148, 220, 0) 0%, rgba(96, 148, 220, 0.35) 55%, rgba(96, 148, 220, 0) 100%);
+}
+.dt-edge-col { position: absolute; right: 12px; top: 100%; display: flex; flex-direction: column; gap: 22px;
   align-items: flex-end; will-change: transform, top; }
 .dt-edge.run .dt-edge-col { animation: dt-rise 9s linear forwards; }
 /* top animates in CONTAINER units, translateY in the column's own —
-   composed, the column enters from below the strip and fully exits the
-   top regardless of either height */
+   composed, the column enters from below and fully exits the top */
 @keyframes dt-rise { from { top: 100%; transform: translateY(0); } to { top: 0; transform: translateY(-100%); } }
-.dt-edge .dt-tile { align-items: flex-end; text-align: right; transform: scale(0.92); transform-origin: right center; }
+.dt-edge .dt-tile { flex-direction: column; align-items: center; text-align: center; gap: 3px;
+  background: none; border: 1px solid rgba(48, 96, 192, 0.4); border-radius: 2px; box-shadow: none; }
+.dt-edge .dt-tile .dt-top { gap: 4px; }              /* glyph + z unit share the top line */
+.dt-edge .dt-tile .dt-label { display: none; }       /* simplified register: glyph + number only */
+.dt-edge .dt-tile.val-toward   { border-color: rgba(84, 200, 138, 0.45); }
+.dt-edge .dt-tile.val-apart    { border-color: rgba(232, 88, 88, 0.45); }
+.dt-edge .dt-tile.val-middling { border-color: rgba(232, 148, 72, 0.45); }
 
+/* ── REDUCED MOTION — a readout at rest, not a frozen marquee:
+   one copy, horizontal scroll with snap, fade-mask run-out ── */
 @media (prefers-reduced-motion: reduce) {
-  .dt-track { animation: none !important; }
-  .dt-row { overflow-x: auto; }
+  .dt-track { animation: none !important; padding-left: 108px; }
+  .dt-cycle { padding-right: 24px; }
+  .dt-cycle + .dt-cycle { display: none; }           /* one copy — it's a list now */
+  .dt-row { overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: thin;
+    scrollbar-color: rgba(48, 96, 192, 0.35) transparent;
+    -webkit-mask-image: linear-gradient(90deg, #000 0, #000 82%, transparent 99%);
+            mask-image: linear-gradient(90deg, #000 0, #000 82%, transparent 99%); }
+  .dt-row::-webkit-scrollbar { height: 3px; }
+  .dt-row::-webkit-scrollbar-thumb { background: rgba(48, 96, 192, 0.35); border-radius: 2px; }
+  .dt-tile { scroll-snap-align: start; }
+  .dt-rowtag { position: sticky; left: 0; flex: none; }  /* tag holds while the row scrolls */
+  .dt-status { display: none; }                      /* yields to the scroll run-out */
   .dt-edge { display: none !important; }
 }
 
@@ -2059,6 +2181,8 @@ body.tri-cover .dt-edge, html.parallax-mode .dt-edge { display: none; }
     <span class="dt-rowtag">the field</span>
     <div class="dt-track" id="dtFieldTrack"></div>
   </div>
+  <!-- folded footer (design v2): event id + asymmetry as an end-cap plate -->
+  <div class="dt-status" id="dtStatus" aria-hidden="true"></div>
 </div>
 <button class="dt-edge" id="dtEdge" type="button" hidden aria-label="Open the Kaleidoscope"></button>
 
@@ -4721,6 +4845,26 @@ function dtTileEl(t, interactive) {
   return el;
 }
 
+// Edge register tile (design v2, wire): simplified vertical stack — glyph
+// (+ z unit) on the top line, number below, no label. z-figures like
+// "z +0.84 apart" reduce to their numeric core; NAME and ratio figures
+// pass through. Adapted from the drop's reference dtEdgeTileEl.
+function dtEdgeTileEl(t) {
+  const el = document.createElement('div');
+  el.className = 'dt-tile val-' + (t.valence || 'field');
+  const top = document.createElement('span'); top.className = 'dt-top';
+  let fig = t.figure || '';
+  const hasZ = /^z\s/.test(fig);
+  if (t.glyph) { const g = document.createElement('span'); g.className = 'dt-glyph'; g.textContent = t.glyph; top.appendChild(g); }
+  if (hasZ) {
+    const u = document.createElement('span'); u.className = 'dt-glyph'; u.textContent = 'z'; top.appendChild(u);
+    fig = fig.replace(/^z\s+/, '').replace(/\s+apart$/, '');
+  }
+  const f = document.createElement('span'); f.className = 'dt-fig'; f.textContent = fig;
+  el.appendChild(top); el.appendChild(f);
+  return el;
+}
+
 // THE FIELD: until the first aggregate push lands, the lower row scrolls
 // placeholder terrain stats from live stores — the ribbon never looks dead.
 function dtFieldStats() {
@@ -4759,6 +4903,15 @@ function renderTicker() {
   if (entries.length) fill(dtPersonalTrack, entries, true);
   else fill(dtPersonalTrack, [{ figure: '—', label: 'no deltas yet · commit a reading' }], false);
   fill(dtFieldTrack, dtFieldStats(), false);
+  // folded footer (design v2): the end-cap plate carries what the footer did
+  const dtStatus = document.getElementById('dtStatus');
+  if (dtStatus) {
+    dtStatus.innerHTML = '';
+    const s1 = document.createElement('span'); s1.textContent = EVENT_ID;
+    const asymEl = document.getElementById('asymDelta');
+    const s2 = document.createElement('span'); s2.textContent = 'asym ' + ((asymEl && asymEl.textContent) || '0');
+    dtStatus.appendChild(s1); dtStatus.appendChild(s2);
+  }
   dtEl.hidden = false;
   document.body.classList.add('ticker-live');
   if (dtEdge) dtEdge.hidden = true;   // edge call arms itself per cycle
@@ -4846,7 +4999,11 @@ function dtRunEdgeCall() {
   clearTimeout(dtEdgeTimer);   // a re-trigger owns the strip — the old hide timer must not kill it
   dtEdge.innerHTML = '';
   const col = document.createElement('div'); col.className = 'dt-edge-col';
-  entries.slice(0, 8).forEach(t => col.appendChild(dtTileEl(t, false)));
+  // the simplified register carries numeric forms only (design v2) — NAME
+  // figures overflow the 96px strip and stay on the bottom ribbon instead
+  entries.filter(t => /\d/.test(t.figure || '')).slice(0, 8)
+         .forEach(t => col.appendChild(dtEdgeTileEl(t)));
+  if (!col.childNodes.length) return;
   dtEdge.appendChild(col);
   dtEdge.hidden = false;
   dtEdge.classList.remove('run'); void dtEdge.offsetWidth; dtEdge.classList.add('run');
