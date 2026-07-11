@@ -4040,7 +4040,7 @@ function mountGM() {
       spectrumAxes: true,   // iridescent gradient axis lines
       holdMs: 900,          // deliberate hold-to-lock (400 felt accidental, 2s sluggish)
       zoom: 12, zoomMax: 14, // camera pulled back to compensate the oversized stage
-      artifacts: true,      // ghostly Dream-Getty vessels drifting in the volume (depth cues)
+      artifacts: false,     // vases CUT 2026-07-11 (Sailor: didn't land right) — revisit as a later furniture/statuary pass
       ted: true,            // Ted Turner the Coyote pads around the plane
     });
     gm.mount(document.getElementById('gm3dStage'));   // mount into the big surface
@@ -4094,7 +4094,7 @@ function gmCommit() {
   revealBillToggle();     // legislation control up front too — diamonds land when the field settles
   initTracker();          // populate the right-panel tracker (delegation + follows)
   { const rb = document.getElementById('recenterBtn'); if (rb) rb.hidden = false; }   // reveal recenter
-  setTimeout(() => { if (window.Ted) window.Ted.beat('graph', "You're on the plane now. Drag to orbit, scroll to zoom. Pull the ribbon down for the analytical layer, slide it sideways for the others. Mind the vases — gallery's a little haunted."); }, 1600);
+  setTimeout(() => { if (window.Ted) window.Ted.beat('graph', "You're on the plane now. Drag to orbit, scroll to zoom. Pull the ribbon down for the analytical layer, slide it sideways for the others."); }, 1600);
   // Safety net: the member build is normally triggered by the migration's
   // completion callback (nice timing, coherent with the settled field). But
   // that runs in the rAF loop, which Chrome throttles when the tab is
