@@ -1309,15 +1309,18 @@ html.parallax-mode .upper-tabs { display: inline-flex; top: auto; bottom: calc(v
 /* keep upper-panel content clear of the bottom tabs */
 .tri-panel[data-row="upper"] .tri-body { padding-bottom: 44px; }
 
-/* scrim behind an open space */
-.tri-scrim { position: fixed; inset: 0; z-index: 25; background: rgba(5,9,20,0.5);
+/* scrim behind an open space — NOT a veil anymore (2026-07-11 cards-ditch:
+   the stage stays visible). It survives as the TOUCH BARRIER: a whisper of
+   dim that blocks orbit/zoom under an open panel ("look but don't touch",
+   Sailor's call) and keeps click-anywhere-to-close. */
+.tri-scrim { position: fixed; inset: 0; z-index: 25; background: rgba(5,9,20,0.12);
   opacity: 0; visibility: hidden; transition: opacity 0.45s ease, visibility 0s linear 0.45s; }
 .tri-scrim.show { opacity: 1; visibility: visible; transition: opacity 0.45s ease; }
 
-/* when a space covers the base, hide the base graph chrome so it doesn't
-   bleed through behind the ribbon / panel */
-body.tri-cover footer, body.tri-cover .graph-info, body.tri-cover .member-toggle,
-body.tri-cover .recenter-btn, body.tri-cover .derive-panel {
+/* with the cards ditched, only TEXT chrome hides behind an open panel (two
+   prose layers can't share a pane); instrument chrome — toggles, recenter,
+   tickers — stays visible on the live-but-locked stage */
+body.tri-cover footer, body.tri-cover .graph-info, body.tri-cover .derive-panel {
   opacity: 0 !important; pointer-events: none !important; transition: opacity 0.3s ease;
 }
 
@@ -1326,9 +1329,12 @@ body.tri-cover .recenter-btn, body.tri-cover .derive-panel {
   position: fixed; z-index: 30; display: flex; flex-direction: column;
   top: 0; bottom: 0; left: 0; right: 0;
   padding: calc(var(--top-chrome) + 14px) clamp(18px, 5vw, 56px) calc(40px + var(--safe-bottom));
-  /* translucent so the band-tinted ambient bleeds through (not a flat slab) */
-  background: linear-gradient(180deg, rgba(7,12,26,0.80), rgba(9,15,32,0.88));
-  -webkit-backdrop-filter: blur(22px); backdrop-filter: blur(22px);
+  /* FRAMELESS (2026-07-11 cards-ditch): the card backing is gone — a light
+     glass wash for legibility, the stage reads through. Blur dropped with it
+     (also cheaper on iPad Safari, the audition note). Chrome dressing is a
+     later Design round-trip; this is the functional split. */
+  background: linear-gradient(180deg, rgba(7,12,26,0.30), rgba(9,15,32,0.36));
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
   overflow: hidden;
   opacity: 0; visibility: hidden; pointer-events: none;
   transition: transform 0.55s cubic-bezier(0.22,1,0.36,1), opacity 0.45s ease, visibility 0s linear 0.55s;
@@ -1368,7 +1374,12 @@ body.tri-cover .recenter-btn, body.tri-cover .derive-panel {
 .tri-close { font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; color: var(--ink-mid); background: none; border: 0.5px solid var(--rule); border-radius: 6px; padding: 5px 10px; cursor: pointer; flex: none; }
 .tri-close:hover { color: var(--ink); border-color: rgba(255,255,255,0.3); }
 .tri-rule { height: 1px; background: var(--rule); margin: 16px 0; flex: none; }
-.tri-body { flex: 1 1 auto; overflow-y: auto; overscroll-behavior: contain; min-height: 0; }
+.tri-body { flex: 1 1 auto; overflow-y: auto; overscroll-behavior: contain; min-height: 0;
+  scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.18) transparent; }
+/* frameless panes can't carry the default solid rail (2026-07-11 cards-ditch) */
+.tri-body::-webkit-scrollbar { width: 5px; }
+.tri-body::-webkit-scrollbar-track { background: transparent; }
+.tri-body::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.18); border-radius: 3px; }
 .tri-next { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.04em; color: var(--ink-low); border: 0.5px dashed var(--rule); border-radius: 8px; padding: 12px 14px; line-height: 1.75; margin-top: 16px; }
 .tri-next b { color: var(--ink-mid); font-weight: 500; }
 
@@ -1466,28 +1477,57 @@ body.ref-mode .answers-phase, body.ref-mode .event-phase { opacity: 0 !important
 .ref-info-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 13px; }
 .ref-info-chips .chip { font-family: var(--mono); font-size: 9px; letter-spacing: 0.04em; color: var(--ink-mid); border: 0.5px solid var(--rule); border-radius: 10px; padding: 3px 8px; }
 
-/* ── Parallax aggregate field + interpretive lens (§3.3) ── */
-.pax-controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 12px; }
-.pax-seg { display: inline-flex; border: 0.5px solid var(--rule); border-radius: 6px; overflow: hidden; }
-.pax-seg button { font-family: var(--mono); font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-low); background: none; border: none; padding: 5px 10px; cursor: pointer; }
-.pax-seg button.on { color: var(--ink); background: rgba(255,255,255,0.10); }
-.pax-bandchip { font-family: var(--mono); font-size: 9px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-low); background: rgba(255,255,255,0.04); border: 0.5px solid var(--rule); border-radius: 11px; padding: 4px 10px; cursor: pointer; }
-.pax-bandchip.on[data-band="fluid"]       { color: #6fe0a8; border-color: rgba(108,224,168,0.55); }
-.pax-bandchip.on[data-band="coalition"]   { color: #f0a860; border-color: rgba(244,168,92,0.55); }
-.pax-bandchip.on[data-band="denominated"] { color: #f07474; border-color: rgba(244,112,112,0.55); }
-.pax-figure { width: 100%; max-width: 460px; margin: 4px auto 0; }
-.pax-svg { width: 100%; height: auto; display: block; border: 0.5px solid var(--rule); border-radius: 8px; background: rgba(6,11,24,0.5); }
-.pax-dot { transition: cx 0.6s cubic-bezier(0.22,1,0.36,1), cy 0.6s cubic-bezier(0.22,1,0.36,1), r 0.3s ease, opacity 0.3s ease; }
-.pax-svg.heat .pax-dot { mix-blend-mode: screen; }
-.pax-lens { margin-top: 16px; }
-.pax-lens-head { font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-low); margin-bottom: 8px; }
-.pax-lens-words { display: flex; flex-wrap: wrap; gap: 7px; }
-.lens-chip { font-family: var(--mono); font-size: 11px; letter-spacing: 0.03em; color: var(--ink-mid); background: rgba(255,255,255,0.05); border: 0.5px solid var(--rule); border-radius: 12px; padding: 5px 11px; cursor: pointer; transition: color 0.18s, background 0.18s, border-color 0.18s; }
-.lens-chip[data-state="genuine"] { color: #a7e0c2; border-color: rgba(120,200,160,0.6); background: rgba(120,200,160,0.12); }
-.lens-chip[data-state="bad"]     { color: #eaa6a6; border-color: rgba(224,122,122,0.6); background: rgba(224,122,122,0.12); }
-.pax-readout { font-family: var(--mono); font-size: 10px; letter-spacing: 0.04em; color: var(--ink-mid); margin-top: 12px; line-height: 1.6; }
-.pax-readout b { color: var(--ink); font-weight: 500; }
-.pax-you { color: var(--side-left); }
+/* ── PARALLAX VISOR (2026-07-11 direction: a MODE, not a panel) ──
+   The nav ribbon pulls down like an analog visor and seats bottom-center;
+   the aggregate superimposes on the SAME committed stage (presence tracks
+   drag progress — dots ride the factory addDot() return, keep-out holds).
+   The panel-as-card is dead: its display became this superimposition, its
+   figures the top Parallax ticker below. html.visor-mode = seated. */
+
+/* empty-field marginalia — the honest state until the aggregate push
+   pipeline delivers real data ("still precipitating", 07-08 §6 / 07-11 §1.3) */
+.visor-note { position: fixed; left: 50%; top: 40%; transform: translate(-50%, -50%); z-index: 28;
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--ink-low); text-align: center; line-height: 2;
+  opacity: 0; pointer-events: none; transition: opacity 0.15s linear; }
+
+/* ── PARALLAX TICKER — the aggregate register (mirrored choreography):
+   entering visor mode the delta ticker dips out the BOTTOM and this drops
+   in from the TOP. Same instrument-panel casting as the delta ticker,
+   flipped. Species preset awaits its own framing case study (chat-first);
+   until then it carries the honest empty-field register. ── */
+.parallax-ticker {
+  --dt-bevel: 1; --dt-type: 1;
+  position: fixed; left: 0; right: 0; top: calc(var(--safe-top) + var(--hdr-h)); z-index: 30;
+  background: linear-gradient(0deg, rgba(15, 24, 50, 0.97), rgba(7, 12, 26, 0.98) 72%);
+  border-bottom: 1px solid rgba(2, 4, 12, 0.85);
+  box-shadow:
+    inset 0 -1px 0 rgba(190, 210, 255, calc(0.16 * var(--dt-bevel))),
+    0 1px 0 rgba(190, 210, 255, calc(0.05 * var(--dt-bevel)));
+  font-family: var(--mono); user-select: none; -webkit-user-select: none;
+  transform: translateY(calc(-100% - var(--hdr-h) - var(--safe-top) - 24px));
+  transition: transform 0.55s cubic-bezier(0.22,1,0.36,1);
+}
+/* the velvet exhales downward off this one */
+.parallax-ticker::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: -22px; height: 22px;
+  pointer-events: none;
+  background: linear-gradient(0deg, rgba(7, 12, 26, 0) 0%, rgba(7, 12, 26, 0.55) 100%);
+}
+html.visor-mode .parallax-ticker { transform: translateY(0); }
+/* aggregate row idles until real data (no signal claim — like the field row) */
+.parallax-ticker .dt-rowtag::before { background: var(--ink-low); box-shadow: none; }
+.parallax-ticker .dt-track { animation: none; }   /* register, not marquee, until the species land */
+
+/* mirrored exit: the delta ticker dips out the bottom while the visor is down */
+.delta-ticker { transition: transform 0.55s cubic-bezier(0.22,1,0.36,1); }
+html.visor-mode .delta-ticker { transform: translateY(calc(100% + var(--safe-bottom) + 24px)); }
+html.visor-mode .dt-edge { opacity: 0; pointer-events: none; }
+.dt-edge { transition: opacity 0.4s ease; }
+
+/* institutional chrome stays live under the visor — recenter just clears the
+   dropped-in aggregate register (its top:70px would sit beneath the ticker) */
+html.visor-mode .recenter-btn { top: calc(var(--safe-top) + var(--hdr-h) + 46px); }
 
 /* ── Ted Turner the Coyote — the guide ── */
 .ted-guide { position: fixed; left: 16px; bottom: calc(18px + var(--safe-bottom)); z-index: 60;
@@ -1735,9 +1775,10 @@ div.dt-tile {
 }
 .dt-status span { display: block; }
 
-/* stage-visibility gates */
-body.tri-cover .delta-ticker, html.parallax-mode .delta-ticker,
-body.tri-cover .dt-edge, html.parallax-mode .dt-edge { display: none; }
+/* stage-visibility gates — RETIRED with the cards (2026-07-11): the stage
+   and its tickers stay visible under an open panel. Only the edge call
+   defers while covered (dtRunEdgeCall's tri-cover guard — a moving strip
+   under a reading pane would fight the text). Visor choreography above. */
 
 /* ── RIGHT-EDGE CALL — WIRE register (design v2 drop, CHOSEN):
    full presence, simplified figure — glyph (+ z unit) over number,
@@ -2082,19 +2123,11 @@ body.tri-cover .dt-edge, html.parallax-mode .dt-edge { display: none; }
   <div class="tri-body" id="diatribeBody"></div>
 </aside>
 
-<!-- Upper-Center — The Parallax -->
-<aside class="tri-panel" id="panelParallax" data-row="upper" data-panel="parallax">
-  <div class="tri-head">
-    <div>
-      <div class="tri-eyebrow">upper center · parallax</div>
-      <h2 class="tri-title">The Parallax</h2>
-    </div>
-    <button class="tri-close" type="button">close &times;</button>
-  </div>
-  <p class="tri-sub">The aggregate — the whole field's responses, seen through your interpretive lens. The data hasn't moved; the observer has.</p>
-  <div class="tri-rule"></div>
-  <div class="tri-body" id="parallaxBody"></div>
-</aside>
+<!-- Upper-Center — the Parallax panel-as-card is DEAD (2026-07-11 direction:
+     a mode, not a panel). Its display became the visor superimposition on the
+     stage; its figures the top Parallax ticker; its lens moves to the plane's
+     own word clouds (build step 3). The prediction record still needs a home
+     (likely Kaleidoscope-adjacent — open). -->
 
 <!-- Upper-Right — The Comparison Layer -->
 <aside class="tri-panel" id="panelComparison" data-row="upper" data-panel="comparison">
@@ -2185,6 +2218,20 @@ body.tri-cover .dt-edge, html.parallax-mode .dt-edge { display: none; }
   <div class="dt-status" id="dtStatus" aria-hidden="true"></div>
 </div>
 <button class="dt-edge" id="dtEdge" type="button" hidden aria-label="Open the Kaleidoscope"></button>
+
+<!-- Parallax ticker: the aggregate register. Drops in from the TOP when the
+     visor seats (mirrored choreography with the delta ticker). Species preset
+     awaits its own framing case study — honest empty register until then. -->
+<div class="parallax-ticker" id="parallaxTicker" aria-hidden="true">
+  <div class="dt-row">
+    <span class="dt-rowtag">the aggregate</span>
+    <div class="dt-track" id="ptTrack"></div>
+  </div>
+</div>
+
+<!-- Visor empty-field marginalia — shown (analog with the pull) when the visor
+     is drawn before any aggregate data exists. Truth, not a push. -->
+<div class="visor-note" id="visorNote">the aggregate<br>still precipitating</div>
 
 <!-- Data layer -->
 <script src="../src/js/prismdb.js"></script>
@@ -3380,6 +3427,7 @@ function enterGraph() {
   graphDialect.value = ''; updateGraphCharcount();
   graphNote.textContent = ''; graphCommitBtn.disabled = false;
   aggCommitted = false; aggDots = []; aggLayer.innerHTML = '';   // clear any prior aggregate (incl. contrast line)
+  try { visorReset(); } catch (e) {}                             // visor superimposition resets with the stage
   contrastLine = null; userPinData = null; contrastDot = null; contrastMember = null; zCamZone = 'above';
   clearTimeout(idleTimer); idleOrbiting = false;
   if (gm) { try { gm.stopBeats(); gm.setAxisOffset(0.5, 0.5); } catch (e) {} }
@@ -3466,6 +3514,9 @@ function layoutAgg(ax, ay) {
   aggDots.forEach(d => { d.el.style.left = (skewMap(d.x, ax) * 100) + '%'; d.el.style.top = (skewMap(d.y, ay) * 100) + '%'; });
 }
 
+// DORMANT (2026-07-11): the commit-time pour is retired everywhere — commit
+// return is institutional only. Kept in place for the CSS pad's possible
+// future visor equivalent; nothing calls this now.
 function precipitate() {
   aggLayer.innerHTML = '';
   aggDots = genAggregate(46);
@@ -4015,12 +4066,13 @@ function commitGraph() {
       graphNote.textContent = 'graph error · ' + (e && e.message ? e.message : 'unknown') + ' · see console';
     }
   } else {
-    // Fallback (no WebGL): the CSS pad's precipitation + orbit
+    // Fallback (no WebGL): the CSS pad's commit reveal + orbit. The synthetic
+    // precipitation is retired here too (07-11 visor ruling: commit return is
+    // institutional only) — the pad shows the held pin, not a poured crowd.
     graphPad.style.overflow = 'visible';  // keep preserve-3d active (overflow:hidden flattens it)
-    const n = precipitate();
     commitReveal();
     initTracker();   // populate the tracker even in the no-WebGL fallback
-    graphNote.textContent = 'committed · ' + n + ' voices · drag to orbit · (css fallback — factory unavailable)';
+    graphNote.textContent = 'committed · drag to orbit · (css fallback — factory unavailable)';
   }
 }
 
@@ -4052,6 +4104,7 @@ function mountGM() {
       if (d.isBill) {
         showContrastBill(d);                                  // legislation → bill inspector
       } else if (d.label !== undefined && d.label !== '' && aggDots[+d.label]) {
+        if (visorP < 0.05) return;   // visor up = the aggregate isn't there — no ghost hits
         const dot = aggDots[+d.label];
         showContrast(dot);
         try { gm.setFocus(dot.x, dot.y); } catch (e) {}
@@ -4156,46 +4209,117 @@ function gmCommit() {
     });
   } catch (e) { console.warn('[v2] quadrant word clouds failed:', e && e.message); }
 
-  // 2. The voices MIGRATE INTO THE LOGARITHMIC SKEW — each lands in the
-  //    skewed frame, floated off the plane on a log curve of its own
-  //    displacement (the most displaced float furthest, compressing).
-  const logSkew = v => v === 0 ? 0 :
-    Math.sign(v) * Math.log1p(8 * Math.min(1, Math.abs(v) * 2.2)) / Math.log1p(8);
-  aggDots = genAggregate(46);
-  aggDots.forEach((d, i) => setTimeout(() => {
-    if (gmActive && gm) {
-      try {
-        gm.addDot(d.x, d.y, GM_QUAD[d.quad], d.z, {
-          label: String(i), ring: BAND_RING[d.band],
-          at: { x: skewMap(d.x, axFrac), y: skewMap(d.y, ayFrac), z: logSkew(d.z) },
-        });
-      } catch (e) { if (i === 0) console.error('[v2] addDot failed:', e); }
-    }
-  }, 250 + i * 45));
+  // 2. NO aggregate pour. The genAggregate(46) synthetic pour is RETIRED
+  //    (2026-07-11 visor ruling, confirming 07-08 triptych §6): commit return
+  //    is the INSTITUTIONAL reading only. The aggregate now arrives solely
+  //    through the parallax visor — pull the ribbon down — and only when real
+  //    aggregate data exists (empty field is the honest state until the push
+  //    pipeline lands; ?dev pours the stand-in so the optics stay testable).
 
-  // 3. The camera turns while the voices arrive so the off-plane float reads
-  //    (a flat head-on view would hide it). Dips below the plane for a −z pin.
-  const arriveEnd = 250 + aggDots.length * 45;
+  // 3. The camera turns so the pin's off-plane float reads (a flat head-on
+  //    view would hide it). Dips below the plane for a −z pin.
   setTimeout(() => {
     if (gmActive && gm) {
       zCamZone = graphZ < -0.05 ? 'below' : 'above';
       try { gm.spinTo(26, zCamZone === 'below' ? -45 : 10, 1800); } catch (e) {}
     }
-  }, Math.max(900, arriveEnd - 1200));
+  }, 900);
 
-  // 4. ...then the field — voices and the crosshair — RE-MIGRATES to the
-  //    un-skewed plane and settles around the held pin. Deliberately slow
-  //    (Sailor: 1500 read as rushed). No further automatic motion: the idle
-  //    orbit arms only after 15s without interaction.
+  // 4. ...then the pin and the crosshair RE-MIGRATE to the un-skewed plane.
+  //    Deliberately slow (Sailor: 1500 read as rushed). No further automatic
+  //    motion: the idle orbit arms only after 15s without interaction.
   setTimeout(() => {
     if (gmActive && gm) {
-      // When the field finishes re-migrating to the un-skewed plane, build the
-      // congressional layer (hidden) so it's coherent with the settled axes,
-      // then arm the idle orbit. The graph-foot toggle reveals it.
+      // When the frame finishes re-migrating, build the congressional layer
+      // (hidden) so it's coherent with the settled axes, then arm the idle
+      // orbit. The graph-foot toggle reveals it.
       const done = () => { renderMemberPins(); renderBillDiamonds(); armIdleOrbit(); };
       try { gm.migrateAll(2800, done); } catch (e) { done(); }
     }
-  }, arriveEnd + 650);
+  }, 2300);
+}
+
+// ── PARALLAX VISOR ENGINE (2026-07-11: a mode, not a panel) ──
+// The ribbon pulls down like an analog visor over the untouched committed
+// stage; the aggregate superimposes on the SAME stage, presence tracking drag
+// progress. Dots ride the factory's addDot() PUBLIC RETURN (mesh + materials)
+// — prism-graphmap.js stays keep-out. The institutional layer never moves.
+let visorDots = [], visorPoured = false, visorP = 0, visorRAF = null;
+const visorNoteEl = document.getElementById('visorNote');
+
+// The aggregate source. The push pipeline (carried) is the REAL source; until
+// it lands there is no aggregate — the honest field is empty ("still
+// precipitating"). ?dev pours the synthetic stand-in for testing the optics.
+function visorField() {
+  if (document.documentElement.classList.contains('dev-skip')) return genAggregate(46);
+  return [];
+}
+
+function visorEnsurePoured() {
+  if (visorPoured || !gmActive || !gm) return;
+  const field = visorField();
+  aggDots = field;            // contrast contract: onInspect label → aggDots[i]
+  visorDots = [];
+  field.forEach((d, i) => {
+    try {
+      const en = gm.addDot(d.x, d.y, GM_QUAD[d.quad], d.z, { label: String(i), ring: BAND_RING[d.band] });
+      en._ringBase = en.ringSprite ? en.ringSprite.material.opacity : 0;
+      en._connBase = en.connector ? en.connector.material.opacity : 0;
+      en.mesh.material.transparent = true;
+      visorDots.push(en);
+    } catch (e) { if (i === 0) console.error('[v2 · visor] addDot failed:', e); }
+  });
+  visorPoured = true;
+  visorApply(visorP);   // spawn at the CURRENT pull — never a flash of full presence
+}
+
+// Presence 0..1 — the analog superimposition. Fades every material the
+// public return exposes; below the floor the meshes drop out entirely.
+function visorApply(p) {
+  visorP = Math.max(0, Math.min(1, p));
+  visorDots.forEach(en => {
+    en.mesh.visible = visorP > 0.02;
+    en.mesh.material.opacity = visorP;
+    if (en.ringSprite) en.ringSprite.material.opacity = en._ringBase * visorP;
+    if (en.connector)  en.connector.material.opacity  = en._connBase * visorP;
+  });
+  // empty field → the marginalia carries the presence instead of the dots
+  if (visorNoteEl) visorNoteEl.style.opacity = visorDots.length ? 0 : (visorP * 0.9).toFixed(3);
+}
+
+// Short tween for release snaps (drag itself drives visorApply directly)
+function visorTo(target, ms) {
+  if (visorRAF) cancelAnimationFrame(visorRAF);
+  const from = visorP, t0 = performance.now(), dur = ms || 300;
+  (function step(now) {
+    const t = Math.min(1, (now - t0) / dur), e = t * (2 - t);   // easeOut
+    visorApply(from + (target - from) * e);
+    if (t < 1) visorRAF = requestAnimationFrame(step); else visorRAF = null;
+  })(t0);
+}
+
+// Reset with the stage (reconsider path — gm.clearDots() already wiped meshes)
+function visorReset() {
+  if (visorRAF) { cancelAnimationFrame(visorRAF); visorRAF = null; }
+  visorDots = []; visorPoured = false; visorP = 0;
+  if (visorNoteEl) visorNoteEl.style.opacity = 0;
+}
+
+// The aggregate register (top ticker). Honest empty cell until the species
+// land via their own framing case study; with data, the count is the only
+// non-preemptive figure.
+function visorTickerRender() {
+  const tk = document.getElementById('ptTrack'); if (!tk) return;
+  tk.innerHTML = '';
+  const cell = document.createElement('div'); cell.className = 'dt-tile val-field';
+  const top = document.createElement('span'); top.className = 'dt-top';
+  const fig = document.createElement('span'); fig.className = 'dt-fig';
+  const lab = document.createElement('span'); lab.className = 'dt-label';
+  const n = visorDots.length;
+  fig.textContent = n ? (n + ' voices') : '—';
+  lab.textContent = n ? 'aggregate · synthetic stand-in (?dev)' : 'still precipitating';
+  top.appendChild(fig); cell.appendChild(top); cell.appendChild(lab);
+  tk.appendChild(cell);
 }
 
 // ── Idle attract orbit ──
@@ -5768,7 +5892,7 @@ applyState(true);
     beam:       document.getElementById('panelBeam'),
     refraction: document.getElementById('panelRefraction'),
     diatribe:   document.getElementById('panelDiatribe'),
-    parallax:   document.getElementById('panelParallax'),
+    // parallax: NO panel (2026-07-11 — a mode of the stage; see the visor engine)
     comparison: document.getElementById('panelComparison'),
   };
   const ribbon    = document.getElementById('prismRibbon');
@@ -5794,7 +5918,10 @@ applyState(true);
   function positionRibbon(animated) {
     const imgW = (ribbonImg.offsetHeight || (ribbon.clientHeight || 70) * 0.76) * RIBBON_ASPECT;
     const vw = window.innerWidth;
-    const left = Math.round(vw * 0.5 - COL_FRAC[col] * imgW);
+    // visor seated: the whole nav seats bottom-CENTER — the prism triangle
+    // itself centers (2026-07-11). Side-column shades keep their slice.
+    const frac = (shade && col === 1) ? TRIANGLE_FRAC : COL_FRAC[col];
+    const left = Math.round(vw * 0.5 - frac * imgW);
     if (!animated) ribbonImg.style.transition = 'none';
     ribbonImg.style.transform = 'translateY(-50%) translateX(' + left + 'px)';
     if (!animated) { void ribbonImg.offsetWidth; ribbonImg.style.transition = ''; }
@@ -5809,24 +5936,38 @@ applyState(true);
   }
 
   function applyNav(animated) {
+    // Parallax is a MODE of the stage (2026-07-11): shade at the center column
+    // seats the visor over the untouched committed scene — no panel, no scrim,
+    // no tri-cover. The superimposition is optical; the stage never re-renders.
+    const visor = shade && col === 1;
     document.documentElement.classList.toggle('parallax-mode', shade);
-    panelEls.beam.classList.toggle('open', col === 0 && !shade ? true : col === 0);
-    panelEls.refraction.classList.toggle('open', col === 2);
-    UPPER.forEach((n, i) => panelEls[n].classList.toggle('open', shade && col === i));
-    const covering = shade || col !== 1;
+    document.documentElement.classList.toggle('visor-mode', visor);
+    // one open pane per column, ever — with the cards ditched the panels are
+    // see-through, so a lower pane left open under an upper one would double
+    // its text straight through the glass (2026-07-11)
+    panelEls.beam.classList.toggle('open', col === 0 && !shade);
+    panelEls.refraction.classList.toggle('open', col === 2 && !shade);
+    UPPER.forEach((n, i) => { if (panelEls[n]) panelEls[n].classList.toggle('open', shade && col === i); });
+    const covering = col !== 1;          // the visor never covers — side panes only LOCK the stage now
     // Refraction is a full-bleed stage like Prism (no card): hide the base graph
     // + scrim so the shared ambient field shows behind its own graphmap.
     const refMode = (col === 2 && !shade);
     document.body.classList.toggle('ref-mode', refMode);
     scrim.classList.toggle('show', covering && !refMode);
-    document.body.classList.toggle('tri-cover', covering);   // hide base chrome behind a space
+    document.body.classList.toggle('tri-cover', covering);   // now hides TEXT chrome only (cards-ditch) + defers the edge call
     positionRibbon(animated);
     updateChrome();
     current = currentName();
+    // visor presence: pour lazily, then tween to the seat state (a live drag
+    // has already driven the analog partials — the release lands here)
+    try {
+      if (visor) { visorEnsurePoured(); visorTickerRender(); visorTo(1); }
+      else if (visorP > 0) visorTo(0);
+    } catch (e) { console.warn('[triptych] visor', e); }
     try {
       if (col === 0 && !shade) renderPanel('beam');
       else if (col === 2 && !shade) renderPanel('refraction');
-      if (shade) renderPanel(UPPER[col]);
+      if (shade && col !== 1) renderPanel(UPPER[col]);
     } catch (e) { console.warn('[triptych] render', e); }
   }
 
@@ -5851,16 +5992,56 @@ applyState(true);
   scrim.addEventListener('click', closePanel);
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && (shade || col !== 1)) closePanel(); });
 
-  // ribbon drag — horizontal shifts columns, vertical raises/lowers the shade
+  // ribbon drag — horizontal shifts columns. Vertical at the CENTER column is
+  // the ANALOG VISOR (2026-07-11, "like pulling down a VR glass"): the ribbon
+  // rides the finger 1:1 between its two seats and the aggregate's presence
+  // tracks the pull; release snaps to the nearer seat. Side columns keep the
+  // threshold shade. (Intent-lock removal = free-plane nav, next session.)
+  const VISOR_SNAP = 0.5;
+  let visorDrag = null;   // { topSeat, travel, from, p } while a col-1 vertical drag runs
+  function ribbonTopSeat() {
+    // mirror of the CSS seat: top = safe-top + hdr-h (the header's own height)
+    const h = document.querySelector('header');
+    return h ? h.getBoundingClientRect().height : 44;
+  }
+  function ribbonBottomSeat() {
+    const sb = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--safe-bottom')) || 0;
+    return window.innerHeight - ribbon.offsetHeight - sb;
+  }
   ribbon.addEventListener('pointerdown', e => { dx0 = e.clientX; dy0 = e.clientY; dragMoved = false; intent = null; try { ribbon.setPointerCapture(e.pointerId); } catch (_) {} });
   ribbon.addEventListener('pointermove', e => {
     if (dx0 == null) return;
     const dx = e.clientX - dx0, dy = e.clientY - dy0;
     if (intent === null && (Math.abs(dx) > 7 || Math.abs(dy) > 7)) { intent = Math.abs(dx) > Math.abs(dy) ? 'h' : 'v'; dragMoved = true; }
     if (intent === 'h' && Math.abs(dx) > 46) { goCol(col + (dx < 0 ? 1 : -1), true); dx0 = null; }
-    else if (intent === 'v') { if (dy > 46 && !shade) { setShade(true); dx0 = null; } else if (dy < -46 && shade) { setShade(false); dx0 = null; } }
+    else if (intent === 'v') {
+      if (col === 1) {
+        if (!visorDrag) {
+          const topSeat = ribbonTopSeat();
+          visorDrag = { topSeat, travel: Math.max(1, ribbonBottomSeat() - topSeat), from: shade ? 1 : 0, p: shade ? 1 : 0 };
+          try { visorEnsurePoured(); visorTickerRender(); } catch (_) {}
+          ribbon.style.transition = 'none';
+        }
+        const p = Math.max(0, Math.min(1, visorDrag.from + dy / visorDrag.travel));
+        visorDrag.p = p;
+        ribbon.style.top = (visorDrag.topSeat + p * visorDrag.travel) + 'px';
+        try { visorApply(p); } catch (_) {}
+      } else {
+        if (dy > 46 && !shade) { setShade(true); dx0 = null; }
+        else if (dy < -46 && shade) { setShade(false); dx0 = null; }
+      }
+    }
   });
-  function endDrag() { dx0 = null; dy0 = null; setTimeout(() => { dragMoved = false; }, 30); }
+  function endDrag() {
+    if (visorDrag) {
+      const seat = visorDrag.p >= VISOR_SNAP;
+      visorDrag = null;
+      ribbon.style.transition = '';   // restore the CSS transition first…
+      setShade(seat);                 // …so the class snap animates the seat
+      ribbon.style.top = '';          // release the analog inline position
+    }
+    dx0 = null; dy0 = null; setTimeout(() => { dragMoved = false; }, 30);
+  }
   ribbon.addEventListener('pointerup', endDrag);
   ribbon.addEventListener('pointercancel', endDrag);
 
@@ -5896,7 +6077,7 @@ applyState(true);
 
   function renderPanel(name) {
     ({ beam: renderBeam, refraction: renderRefraction, diatribe: renderDiatribe,
-       parallax: renderParallax, comparison: renderComparison }[name] || function () {})();
+       comparison: renderComparison }[name] || function () {})();
   }
 
   // ── Profile (your identity — handles start with *) ──
@@ -5978,118 +6159,12 @@ applyState(true);
     body.appendChild(nextNote('<b>Next:</b> the live three-step interaction — slider, ghost slider, opposition center-of-gravity — surfaced here as the perceptual instrument (Spec §6).'));
   }
 
-  // ── Upper-Center · The Parallax (aggregate) ──
-  // ── Upper-Center · The Parallax (aggregate field + interpretive lens) ──
-  let paxView = 'scatter', paxBand = null;
-  const paxGenuine = new Set(), paxBad = new Set();
-  let paxField = null, paxFieldEv = null, paxSvg = null, paxBody = null;
-  const PAX_NS = 'http://www.w3.org/2000/svg';
-
-  function paxBandColor(b) { return b === 'fluid' ? 'rgba(108,224,168,0.85)' : b === 'coalition' ? 'rgba(244,168,92,0.85)' : 'rgba(244,112,112,0.85)'; }
-
-  // The aggregate field: the event's response clusters (EVENT_AGG, or the
-  // quadrant centres as a fallback) plus the user's own real pins, overlaid.
-  function buildPaxField() {
-    if (paxField && paxFieldEv === EVENT_ID) return paxField;
-    const field = [];
-    const spec = (typeof EVENT_AGG !== 'undefined' && EVENT_AGG[EVENT_ID]) ? EVENT_AGG[EVENT_ID] : null;
-    let idx = 0;
-    ['A', 'B', 'C', 'D'].forEach(q => {
-      const qs = spec && spec[q];
-      const center = (typeof QUAD_POS !== 'undefined' && QUAD_POS[q]) ? QUAD_POS[q] : [0.5, 0.5];
-      const cx = qs ? qs.cx : center[0], cy = qs ? qs.cy : center[1];
-      const spread = qs ? qs.spread : 0.16, w = qs ? qs.w : 0.25;
-      const count = Math.max(6, Math.round(w * 64));
-      for (let i = 0; i < count; i++) {
-        const x = Math.max(0.04, Math.min(0.96, cx + (_bgHash('pax' + idx, 11) - 0.5) * 2 * spread));
-        const y = Math.max(0.04, Math.min(0.96, cy + (_bgHash('pax' + idx, 12) - 0.5) * 2 * spread));
-        const inten = Math.round(Math.max(Math.abs(x - 0.5), Math.abs(y - 0.5)) * 200);
-        const band = (typeof PE !== 'undefined' && PE.bandFromScore) ? PE.bandFromScore(inten) : (inten > 66 ? 'denominated' : inten > 33 ? 'coalition' : 'fluid');
-        field.push({ id: 'pax' + idx, x: x, y: y, band: band, quad: q, you: false });
-        idx++;
-      }
-    });
-    try {
-      (PrismDB.getResponsesForEvent(EVENT_ID) || []).forEach((r, i) => {
-        if (!r.pin) return;
-        field.push({ id: 'you' + i, x: r.pin.x, y: r.pin.y, band: (r.band || r.apertureBand || 'fluid'), quad: r.finalQuadrant || 'A', you: true });
-      });
-    } catch (_) {}
-    paxField = field; paxFieldEv = EVENT_ID; return field;
-  }
-
-  function paxVocab() {
-    const words = [];
-    try { ['A', 'B', 'C', 'D'].forEach(q => (quadrantCloudWords(q, committedBand) || []).slice(0, 3).forEach(w => { const t = (typeof w === 'string') ? w : (w.text || w.t || w.word || ''); if (t) words.push(String(t).toLowerCase()); })); } catch (_) {}
-    ['institutional', 'populist', 'accountability', 'grievance', 'principle', 'tribal'].forEach(w => words.push(w));
-    return Array.from(new Set(words)).filter(Boolean).slice(0, 10);
-  }
-  function dotLoad(id, word) { return _bgHash(id + '~' + word, 23); }
-  function paxDisplace(d) {
-    let x = d.x, y = d.y;
-    paxGenuine.forEach(g => { const L = dotLoad(d.id, g); if (L > 0.5) { x += (0.5 - d.x) * (L - 0.5); y += (0.5 - d.y) * (L - 0.5); } });
-    paxBad.forEach(b => { const L = dotLoad(d.id, b); if (L > 0.5) { x += (d.x >= 0.5 ? 1 : -1) * (L - 0.5) * 0.9; y += (d.y >= 0.5 ? 1 : -1) * (L - 0.5) * 0.9; } });
-    return { x: Math.max(0.03, Math.min(0.97, x)), y: Math.max(0.03, Math.min(0.97, y)) };
-  }
-  function cyclePaxWord(w) {
-    if (paxGenuine.has(w)) { paxGenuine.delete(w); if (paxBad.size < 2) paxBad.add(w); }
-    else if (paxBad.has(w)) { paxBad.delete(w); }
-    else { if (paxGenuine.size < 2) paxGenuine.add(w); else if (paxBad.size < 2) paxBad.add(w); }
-  }
-  function paintPax() {
-    if (!paxSvg || !paxField) return;
-    paxSvg.classList.toggle('heat', paxView === 'heat');
-    paxSvg.querySelectorAll('.pax-dot').forEach((c, i) => {
-      const d = paxField[i]; if (!d) return;
-      const p = paxDisplace(d);
-      c.setAttribute('cx', (p.x * 100).toFixed(2));
-      c.setAttribute('cy', (p.y * 100).toFixed(2));
-      const vis = !paxBand || d.band === paxBand;
-      c.setAttribute('r', vis ? (d.you ? 2.1 : (paxView === 'heat' ? 3.4 : 1.5)) : 0);
-      c.setAttribute('opacity', vis ? (paxView === 'heat' ? 0.5 : 0.92) : 0);
-    });
-  }
-  function updatePaxChrome() {
-    if (!paxBody) return;
-    paxBody.querySelectorAll('.pax-seg button').forEach(b => b.classList.toggle('on', b.dataset.view === paxView));
-    paxBody.querySelectorAll('.pax-bandchip').forEach(b => b.classList.toggle('on', b.dataset.band === paxBand));
-    paxBody.querySelectorAll('.lens-chip').forEach(ch => { const w = ch.dataset.word; ch.dataset.state = paxGenuine.has(w) ? 'genuine' : (paxBad.has(w) ? 'bad' : ''); });
-    const ro = paxBody.querySelector('.pax-readout');
-    if (ro) { const youN = paxField.filter(d => d.you).length; ro.innerHTML = '<b>' + paxField.length + '</b> voices' + (youN ? ' · <span class="pax-you">' + youN + ' yours</span>' : '') + ' · lens: ' + paxGenuine.size + ' genuine, ' + paxBad.size + ' bad-faith'; }
-  }
-
-  function renderParallax() {
-    const body = document.getElementById('parallaxBody'); if (!body) return;
-    paxBody = body;
-    const field = buildPaxField(); paxField = field;
-    body.innerHTML = '';
-    // controls: scatter/heat + band filter
-    const controls = document.createElement('div'); controls.className = 'pax-controls';
-    const seg = document.createElement('div'); seg.className = 'pax-seg';
-    ['scatter', 'heat'].forEach(m => { const b = document.createElement('button'); b.textContent = m; b.dataset.view = m; if (paxView === m) b.classList.add('on'); b.addEventListener('click', () => { paxView = m; paintPax(); updatePaxChrome(); }); seg.appendChild(b); });
-    controls.appendChild(seg);
-    ['fluid', 'coalition', 'denominated'].forEach(bd => { const c = document.createElement('button'); c.className = 'pax-bandchip' + (paxBand === bd ? ' on' : ''); c.dataset.band = bd; c.textContent = bd; c.addEventListener('click', () => { paxBand = paxBand === bd ? null : bd; paintPax(); updatePaxChrome(); }); controls.appendChild(c); });
-    body.appendChild(controls);
-    // svg field
-    const fig = document.createElement('div'); fig.className = 'pax-figure';
-    const svg = document.createElementNS(PAX_NS, 'svg'); svg.setAttribute('viewBox', '0 0 100 100'); svg.setAttribute('class', 'pax-svg' + (paxView === 'heat' ? ' heat' : '')); paxSvg = svg;
-    const tints = { A: 'rgba(96,148,220,0.06)', B: 'rgba(220,96,96,0.06)', C: 'rgba(96,168,128,0.06)', D: 'rgba(196,156,72,0.06)' };
-    [['A', 0, 0], ['B', 50, 0], ['C', 0, 50], ['D', 50, 50]].forEach(t => { const r = document.createElementNS(PAX_NS, 'rect'); r.setAttribute('x', t[1]); r.setAttribute('y', t[2]); r.setAttribute('width', 50); r.setAttribute('height', 50); r.setAttribute('fill', tints[t[0]]); svg.appendChild(r); });
-    ['M50 0 L50 100', 'M0 50 L100 50'].forEach(dd => { const ln = document.createElementNS(PAX_NS, 'path'); ln.setAttribute('d', dd); ln.setAttribute('stroke', 'rgba(255,255,255,0.10)'); ln.setAttribute('stroke-width', '0.4'); ln.setAttribute('fill', 'none'); svg.appendChild(ln); });
-    field.forEach(d => { const c = document.createElementNS(PAX_NS, 'circle'); c.setAttribute('class', 'pax-dot'); c.setAttribute('fill', paxBandColor(d.band)); c.setAttribute('cx', (d.x * 100).toFixed(2)); c.setAttribute('cy', (d.y * 100).toFixed(2)); c.setAttribute('r', d.you ? 2.1 : 1.5); if (d.you) { c.setAttribute('stroke', 'rgba(245,240,232,0.9)'); c.setAttribute('stroke-width', '0.6'); } svg.appendChild(c); });
-    fig.appendChild(svg); body.appendChild(fig);
-    // the lens
-    const lens = document.createElement('div'); lens.className = 'pax-lens';
-    const lh = document.createElement('div'); lh.className = 'pax-lens-head'; lh.textContent = 'your lens — tap a word: genuine ×2, then bad-faith ×2'; lens.appendChild(lh);
-    const wbox = document.createElement('div'); wbox.className = 'pax-lens-words';
-    paxVocab().forEach(w => { const chip = document.createElement('button'); chip.className = 'lens-chip'; chip.textContent = w; chip.dataset.word = w; chip.dataset.state = paxGenuine.has(w) ? 'genuine' : (paxBad.has(w) ? 'bad' : ''); chip.addEventListener('click', () => { cyclePaxWord(w); paintPax(); updatePaxChrome(); }); wbox.appendChild(chip); });
-    lens.appendChild(wbox); body.appendChild(lens);
-    // readout + honest note
-    const ro = document.createElement('div'); ro.className = 'pax-readout'; body.appendChild(ro);
-    body.appendChild(nextNote('<b>Note:</b> the field blends the event\'s response clusters with your own pins. Per-word loadings are a deterministic stand-in until real tagged aggregate data exists — the lens geometry and interaction are the real deliverable.'));
-    updatePaxChrome();
-    requestAnimationFrame(paintPax);
-  }
+  // ── Upper-Center · the Parallax panel-as-card is DEAD (2026-07-11) ──
+  // Its function distributed: display → the visor superimposition on the
+  // stage (see the visor engine above gmCommit); figures → the top Parallax
+  // ticker; lens → picked from the plane's own word clouds (build step 3).
+  // The word-displacement math it carried (dotLoad/paxDisplace) returns with
+  // the plane-picked lens; the prediction record still needs a home (open).
 
   // ── Upper-Right · The Comparison Layer ──
   function renderComparison() {
@@ -6234,7 +6309,7 @@ applyState(true);
       if (typeof PrismGraphmap !== 'undefined' && typeof THREE !== 'undefined') {
         try {
           if (!refGM) {
-            refGM = PrismGraphmap.create({ mode: 'analytical', capabilities: { orbit: true, zInput: true, zRender: true }, moody: true, spectrumAxes: true, holdMs: 900, zoom: 12, zoomMax: 14, artifacts: true });
+            refGM = PrismGraphmap.create({ mode: 'analytical', capabilities: { orbit: true, zInput: true, zRender: true }, moody: true, spectrumAxes: true, holdMs: 900, zoom: 12, zoomMax: 14, artifacts: false /* vases CUT 2026-07-11 (Sailor ruled: match the main stage) — furniture/statuary pass later */ });
             refGM.mount(map);
             refGM.onInspect(function (d) {
               if (d && d.isMemberPin && d.bioguideId) showRefInfo(d);   // info card in-place, no panel switch
