@@ -36,13 +36,37 @@
   --side-left:   rgb(96, 148, 220);
   --side-right:  rgb(220, 96, 96);
 
-  /* Band tints — fluid/coalition/denominated */
-  --band-fluid:        rgb(96, 168, 128);
-  --band-coalition:    rgb(196, 156, 72);
-  --band-denominated:  rgb(212, 92, 92);
+  /* Band tints — fluid/coalition/denominated
+     (2026-07 design rebase: re-tuned, coalition moved gold → orange.
+      Bands ≠ quadrants — quad D stays gold.) */
+  --band-fluid:        rgb(84, 200, 138);
+  --band-coalition:    rgb(232, 148, 72);
+  --band-denominated:  rgb(232, 88, 88);
+
+  /* Quadrants — A blue · B red · C green · D gold (UNCHANGED by the
+     band recolor; canonical opaque values, stages compose alphas) */
+  --quad-a: rgb(96, 148, 220);
+  --quad-b: rgb(220, 96, 96);
+  --quad-c: rgb(96, 168, 128);
+  --quad-d: rgb(196, 156, 72);
+
+  /* Party tints (tracker rows, rep names) */
+  --party-d: #6f9fe0;
+  --party-r: #e07a7a;
+  --party-i: #c9b98a;
 
   /* Keyword shimmer highlight */
   --keyword-shimmer:   rgba(255, 246, 226, 0.95);
+
+  /* Keyword glow — defaults + per-band tokens (band scopes below remap) */
+  --keyword-glow-near: rgba(96, 148, 220, 0.65);
+  --keyword-glow-far:  rgba(96, 148, 220, 0.35);
+  --kw-fluid-near:       rgba(108, 224, 168, 0.78);
+  --kw-fluid-far:        rgba(108, 224, 168, 0.36);
+  --kw-coalition-near:   rgba(244, 168, 92, 0.82);
+  --kw-coalition-far:    rgba(244, 168, 92, 0.40);
+  --kw-denominated-near: rgba(244, 112, 112, 0.85);
+  --kw-denominated-far:  rgba(244, 112, 112, 0.42);
 
   /* Type */
   --serif: 'Iowan Old Style', 'Palatino', 'Georgia', serif;
@@ -90,6 +114,12 @@ body.light {
   --art-blend:   multiply;
 
   --keyword-shimmer: rgba(72, 44, 16, 0.85);
+  --kw-fluid-near:       rgba(52, 168, 110, 0.55);
+  --kw-fluid-far:        rgba(52, 168, 110, 0.24);
+  --kw-coalition-near:   rgba(204, 116, 40, 0.60);
+  --kw-coalition-far:    rgba(204, 116, 40, 0.28);
+  --kw-denominated-near: rgba(200, 60, 60, 0.60);
+  --kw-denominated-far:  rgba(200, 60, 60, 0.28);
 }
 
 /* ── PAGE BASELINE ─────────────────────────────────────────── */
@@ -175,30 +205,30 @@ html, body {
 }
 .prism-ambient.fluid {
   background:
-    radial-gradient(ellipse at center, rgba(96, 168, 128, 0.24) 0%, rgba(96, 168, 128, 0.10) 55%, rgba(96, 168, 128, 0.04) 100%);
+    radial-gradient(ellipse at center, rgba(84, 200, 138, 0.28) 0%, rgba(84, 200, 138, 0.12) 55%, rgba(84, 200, 138, 0.05) 100%);
   opacity: 0.85;
 }
 .prism-ambient.coalition {
   background:
-    radial-gradient(ellipse at center, rgba(196, 156, 72, 0.34) 0%, rgba(196, 156, 72, 0.14) 55%, rgba(196, 156, 72, 0.05) 100%);
+    radial-gradient(ellipse at center, rgba(232, 148, 72, 0.38) 0%, rgba(232, 148, 72, 0.16) 55%, rgba(232, 148, 72, 0.06) 100%);
   opacity: 0.95;
 }
 .prism-ambient.denominated {
   background:
-    radial-gradient(ellipse at center, rgba(212, 92, 92, 0.36) 0%, rgba(212, 92, 92, 0.15) 55%, rgba(212, 92, 92, 0.05) 100%);
+    radial-gradient(ellipse at center, rgba(232, 88, 88, 0.40) 0%, rgba(232, 88, 88, 0.17) 55%, rgba(232, 88, 88, 0.06) 100%);
   opacity: 0.98;
 }
 body.light .prism-ambient.fluid {
   background:
-    radial-gradient(ellipse at center, rgba(96, 168, 128, 0.18) 0%, rgba(96, 168, 128, 0.06) 55%, rgba(96, 168, 128, 0.02) 100%);
+    radial-gradient(ellipse at center, rgba(84, 200, 138, 0.20) 0%, rgba(84, 200, 138, 0.07) 55%, rgba(84, 200, 138, 0.03) 100%);
 }
 body.light .prism-ambient.coalition {
   background:
-    radial-gradient(ellipse at center, rgba(196, 156, 72, 0.24) 0%, rgba(196, 156, 72, 0.08) 55%, rgba(196, 156, 72, 0.03) 100%);
+    radial-gradient(ellipse at center, rgba(232, 148, 72, 0.26) 0%, rgba(232, 148, 72, 0.09) 55%, rgba(232, 148, 72, 0.03) 100%);
 }
 body.light .prism-ambient.denominated {
   background:
-    radial-gradient(ellipse at center, rgba(212, 92, 92, 0.24) 0%, rgba(212, 92, 92, 0.08) 55%, rgba(212, 92, 92, 0.03) 100%);
+    radial-gradient(ellipse at center, rgba(232, 88, 88, 0.26) 0%, rgba(232, 88, 88, 0.09) 55%, rgba(232, 88, 88, 0.03) 100%);
 }
 
 /* ── CAPTION TABLET ────────────────────────────────────────── */
@@ -409,28 +439,24 @@ body.light .caption-text.refracting {
 .caption-text .keyword:nth-child(3n+2),
 .prism-keyword:nth-child(3n+2) { animation-delay: -0.6s; }
 
-/* Per-band keyword glow color */
+/* Per-band keyword glow color — values live in the --kw-* tokens
+   (:root dark, body.light light), so the light theme needs no
+   separate scoping rules here. */
 .prism-caption[data-band="fluid"]       .caption-text .keyword,
 [data-band="fluid"] .prism-keyword {
-  --keyword-glow-near: rgba(120, 200, 160, 0.70);
-  --keyword-glow-far:  rgba(120, 200, 160, 0.32);
+  --keyword-glow-near: var(--kw-fluid-near);
+  --keyword-glow-far:  var(--kw-fluid-far);
 }
 .prism-caption[data-band="coalition"]   .caption-text .keyword,
 [data-band="coalition"] .prism-keyword {
-  --keyword-glow-near: rgba(220, 184, 100, 0.78);
-  --keyword-glow-far:  rgba(220, 184, 100, 0.38);
+  --keyword-glow-near: var(--kw-coalition-near);
+  --keyword-glow-far:  var(--kw-coalition-far);
 }
 .prism-caption[data-band="denominated"] .caption-text .keyword,
 [data-band="denominated"] .prism-keyword {
-  --keyword-glow-near: rgba(232, 120, 120, 0.80);
-  --keyword-glow-far:  rgba(232, 120, 120, 0.40);
+  --keyword-glow-near: var(--kw-denominated-near);
+  --keyword-glow-far:  var(--kw-denominated-far);
 }
-body.light .prism-caption[data-band="fluid"]       .caption-text .keyword,
-body.light [data-band="fluid"] .prism-keyword       { --keyword-glow-near: rgba(72, 152, 112, 0.50); --keyword-glow-far: rgba(72, 152, 112, 0.22); }
-body.light .prism-caption[data-band="coalition"]   .caption-text .keyword,
-body.light [data-band="coalition"] .prism-keyword   { --keyword-glow-near: rgba(168, 132, 56, 0.55); --keyword-glow-far: rgba(168, 132, 56, 0.25); }
-body.light .prism-caption[data-band="denominated"] .caption-text .keyword,
-body.light [data-band="denominated"] .prism-keyword { --keyword-glow-near: rgba(184, 76, 76, 0.55);  --keyword-glow-far: rgba(184, 76, 76, 0.25); }
 
 /* ── LABEL LINES ───────────────────────────────────────────── */
 /* SVG hairlines connecting specimens to captions. Eyewitness diagram

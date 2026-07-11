@@ -134,16 +134,16 @@ main {
   margin: 0 24px;
   border-radius: 7px;
   background: linear-gradient(to right,
-    rgba(212, 92, 92, 0.08) 0%,
-    rgba(212, 92, 92, 0.08) 17%,
-    rgba(196, 156, 72, 0.10) 17%,
-    rgba(196, 156, 72, 0.10) 33%,
-    rgba(96, 168, 128, 0.06) 33%,
-    rgba(96, 168, 128, 0.06) 67%,
-    rgba(196, 156, 72, 0.10) 67%,
-    rgba(196, 156, 72, 0.10) 83%,
-    rgba(212, 92, 92, 0.08) 83%,
-    rgba(212, 92, 92, 0.08) 100%
+    rgba(232, 88, 88, 0.10) 0%,
+    rgba(232, 88, 88, 0.10) 17%,
+    rgba(232, 148, 72, 0.12) 17%,
+    rgba(232, 148, 72, 0.12) 33%,
+    rgba(84, 200, 138, 0.08) 33%,
+    rgba(84, 200, 138, 0.08) 67%,
+    rgba(232, 148, 72, 0.12) 67%,
+    rgba(232, 148, 72, 0.12) 83%,
+    rgba(232, 88, 88, 0.10) 83%,
+    rgba(232, 88, 88, 0.10) 100%
   );
   border: 1px solid var(--rule-soft);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.25);
@@ -320,7 +320,7 @@ body.phase-graph .event-phase {
   font-weight: 500;
   letter-spacing: 0.005em;
   color: var(--ink);
-  text-shadow: 0 0 6px rgba(120, 200, 160, 0.50), 0 0 14px rgba(120, 200, 160, 0.26);
+  text-shadow: 0 0 6px rgba(108, 224, 168, 0.55), 0 0 14px rgba(108, 224, 168, 0.28);
   opacity: 0;
   transform: translateY(8px);
   transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -329,7 +329,7 @@ body.phase-graph .event-phase {
 }
 .ev-kw.in { opacity: 0.92; transform: translateY(0); }
 body.light .ev-kw {
-  text-shadow: 0 0 6px rgba(72, 152, 112, 0.32), 0 0 12px rgba(72, 152, 112, 0.18);
+  text-shadow: 0 0 6px rgba(52, 168, 110, 0.32), 0 0 12px rgba(52, 168, 110, 0.18);
 }
 @keyframes ev-kw-float {
   0%, 100% { translate: 0 0; }
@@ -337,7 +337,7 @@ body.light .ev-kw {
 }
 @keyframes ev-kw-glow {
   0%, 100% { filter: drop-shadow(0 0 0 transparent); }
-  50%      { filter: drop-shadow(0 0 6px rgba(120, 200, 160, 0.38)); }
+  50%      { filter: drop-shadow(0 0 6px rgba(108, 224, 168, 0.42)); }
 }
 
 /* Enter affordance — take a position */
@@ -1172,9 +1172,9 @@ body.light .event-picker { color: rgba(40,44,54,0.85); background: rgba(255,255,
   }
 }
 /* per-band keyword glow, per half */
-.cmp[data-band="fluid"]       .keyword { --keyword-glow-near: rgba(120,200,160,0.70); --keyword-glow-far: rgba(120,200,160,0.32); }
-.cmp[data-band="coalition"]   .keyword { --keyword-glow-near: rgba(220,184,100,0.78); --keyword-glow-far: rgba(220,184,100,0.38); }
-.cmp[data-band="denominated"] .keyword { --keyword-glow-near: rgba(232,120,120,0.80); --keyword-glow-far: rgba(232,120,120,0.40); }
+.cmp[data-band="fluid"]       .keyword { --keyword-glow-near: var(--kw-fluid-near); --keyword-glow-far: var(--kw-fluid-far); }
+.cmp[data-band="coalition"]   .keyword { --keyword-glow-near: var(--kw-coalition-near); --keyword-glow-far: var(--kw-coalition-far); }
+.cmp[data-band="denominated"] .keyword { --keyword-glow-near: var(--kw-denominated-near); --keyword-glow-far: var(--kw-denominated-far); }
 
 /* Panel-scoped keyword breath. The shared grammar.css shimmer only nudges
    opacity/filter, so in this overlay the halo reads as static. Here we pulse
@@ -1403,9 +1403,9 @@ body.tri-cover .recenter-btn, body.tri-cover .derive-panel {
 .beam-when { font-family: var(--mono); font-size: 9px; color: var(--ink-low); text-align: right; white-space: nowrap; }
 .beam-pos { font-family: var(--mono); font-size: 10px; letter-spacing: 0.05em; color: var(--ink-mid); grid-column: 1 / -1; }
 .beam-band { text-transform: uppercase; }
-.beam-band[data-band="fluid"] { color: #78c8a0; }
-.beam-band[data-band="coalition"] { color: #dcb864; }
-.beam-band[data-band="denominated"] { color: #e07a7a; }
+.beam-band[data-band="fluid"] { color: #6fe0a8; }
+.beam-band[data-band="coalition"] { color: #f0a860; }
+.beam-band[data-band="denominated"] { color: #f07474; }
 .beam-empty { font-family: var(--serif); font-style: italic; color: var(--ink-low); line-height: 1.5; }
 .tri-statline { font-family: var(--mono); font-size: 11px; letter-spacing: 0.04em; color: var(--ink-mid); line-height: 1.9; }
 .tri-statline b { color: var(--ink); font-weight: 500; }
@@ -1472,9 +1472,9 @@ body.ref-mode .answers-phase, body.ref-mode .event-phase { opacity: 0 !important
 .pax-seg button { font-family: var(--mono); font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-low); background: none; border: none; padding: 5px 10px; cursor: pointer; }
 .pax-seg button.on { color: var(--ink); background: rgba(255,255,255,0.10); }
 .pax-bandchip { font-family: var(--mono); font-size: 9px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-low); background: rgba(255,255,255,0.04); border: 0.5px solid var(--rule); border-radius: 11px; padding: 4px 10px; cursor: pointer; }
-.pax-bandchip.on[data-band="fluid"]       { color: #78c8a0; border-color: rgba(120,200,160,0.5); }
-.pax-bandchip.on[data-band="coalition"]   { color: #dcb864; border-color: rgba(220,184,100,0.5); }
-.pax-bandchip.on[data-band="denominated"] { color: #e07a7a; border-color: rgba(224,122,122,0.5); }
+.pax-bandchip.on[data-band="fluid"]       { color: #6fe0a8; border-color: rgba(108,224,168,0.55); }
+.pax-bandchip.on[data-band="coalition"]   { color: #f0a860; border-color: rgba(244,168,92,0.55); }
+.pax-bandchip.on[data-band="denominated"] { color: #f07474; border-color: rgba(244,112,112,0.55); }
 .pax-figure { width: 100%; max-width: 460px; margin: 4px auto 0; }
 .pax-svg { width: 100%; height: auto; display: block; border: 0.5px solid var(--rule); border-radius: 8px; background: rgba(6,11,24,0.5); }
 .pax-dot { transition: cx 0.6s cubic-bezier(0.22,1,0.36,1), cy 0.6s cubic-bezier(0.22,1,0.36,1), r 0.3s ease, opacity 0.3s ease; }
@@ -2923,7 +2923,7 @@ const AXIS_MAP  = { A: { ax: 72, ay: 72 }, B: { ax: 28, ay: 72 }, C: { ax: 72, a
 // Which axis pole each quadrant's x/y word loads
 const POLE      = { A: { x: 'x-', y: 'y+' }, B: { x: 'x+', y: 'y+' }, C: { x: 'x-', y: 'y-' }, D: { x: 'x+', y: 'y-' } };
 const QUAD_ACCENT = { A: 'rgba(96,148,220,0.78)', B: 'rgba(220,96,96,0.78)', C: 'rgba(96,168,128,0.80)', D: 'rgba(196,156,72,0.80)' };
-const BAND_RING = { fluid: 'rgba(96,168,128,0.7)', coalition: 'rgba(196,156,72,0.7)', denominated: 'rgba(212,92,92,0.7)' };
+const BAND_RING = { fluid: 'rgba(84,200,138,0.7)', coalition: 'rgba(232,148,72,0.7)', denominated: 'rgba(232,88,88,0.7)' };  // band recolor 2026-07 (bands ≠ quads: QUAD_ACCENT untouched)
 // Graphmap factory: its A/B quadrant keys are mirrored from v2's (color/word placement)
 const GM_QUAD  = { A: 'B', B: 'A', C: 'C', D: 'D' };
 const QUAD_HEX = { A: 0x6094dc, B: 0xdc6060, C: 0x60a880, D: 0xc49c48 };
@@ -5269,7 +5269,7 @@ applyState(true);
   let paxField = null, paxFieldEv = null, paxSvg = null, paxBody = null;
   const PAX_NS = 'http://www.w3.org/2000/svg';
 
-  function paxBandColor(b) { return b === 'fluid' ? 'rgba(120,200,160,0.85)' : b === 'coalition' ? 'rgba(220,184,100,0.85)' : 'rgba(224,122,122,0.85)'; }
+  function paxBandColor(b) { return b === 'fluid' ? 'rgba(108,224,168,0.85)' : b === 'coalition' ? 'rgba(244,168,92,0.85)' : 'rgba(244,112,112,0.85)'; }
 
   // The aggregate field: the event's response clusters (EVENT_AGG, or the
   // quadrant centres as a fallback) plus the user's own real pins, overlaid.
