@@ -13,7 +13,8 @@ const PrismDB = (() => {
     members:   'prism_members',
     memberPos: 'prism_member_positions',
     followed:  'prism_followed',
-    billScores: 'prism_bill_scores'
+    billScores: 'prism_bill_scores',
+    ticker:    'prism_ticker_ledger'
   };
 
   function _get(key) {
@@ -636,6 +637,29 @@ const PrismDB = (() => {
     const all = getBillScores().filter(s => s.id !== id);
     _set(KEYS.billScores, all);
     return true;
+  }
+
+  // ── Delta ticker ledger (2026-07-10, build spec v1) ─────
+  // APPEND-ONLY. Deltas are computed once, at commit, and never
+  // recomputed — an entry's coordinates are frozen history (replay
+  // uses them verbatim; live positions would let drift corrupt the
+  // story the tile tells). Nothing captures on pull. Aggregate
+  // deltas append as new tiles when the push arrives.
+  function getTickerEntries(eventId) {
+    const all = _get(KEYS.ticker) || [];
+    return eventId ? all.filter(t => t.eventId === eventId) : all;
+  }
+
+  function appendTickerEntries(entries) {
+    if (!Array.isArray(entries) || !entries.length) return [];
+    const all = _get(KEYS.ticker) || [];
+    entries.forEach((t, i) => {
+      t.id = t.id || ('tick_' + Date.now() + '_' + all.length + '_' + i);
+      t.ts = t.ts || Date.now();
+      all.push(t);
+    });
+    _set(KEYS.ticker, all);
+    return entries;
   }
 
   // ── Bill readings <-> published Reading (sync transport) ──
@@ -1513,6 +1537,7 @@ const PrismDB = (() => {
     getMemberAggregateForEvent,
     getBillScores, getBillScoresForBill, getBillScoresForEvent,
     getBillScore, saveBillScore, deleteBillScore,
+    getTickerEntries, appendTickerEntries,
     exportBillReadings, importBillReadings, migrateBillAnalysis,
     getState, setState,
     getUser, setUser,

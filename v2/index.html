@@ -1594,6 +1594,76 @@ body:not(.nav-ready) .prism-ribbon { opacity: 0 !important; pointer-events: none
   color: var(--ink-low); text-align: center; margin-bottom: 14px; }
 body:not(.phase-diatribe) .diatribe-eyebrow { display: none; }
 
+/* ── DELTA TICKER (Specs/Prism_Delta_Ticker_Build_Spec_v1.md) ──
+   Y2K instrument chrome (boundary rule: no hand-drawn anything here).
+   Two rows, Bloomberg-style: YOUR READING (slower) over THE FIELD
+   (faster). Tiles are NUMBER-LED: big mono figure, whisper label.
+   Valence = the BAND palette (band recolor 2026-07; band ≠ quadrant —
+   quad-D gold never appears on a tile). Literals mirror BAND_RING /
+   prism-grammar.css --band-* tokens (v2 loads no stylesheet). */
+.delta-ticker {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+  padding-bottom: var(--safe-bottom);
+  background: linear-gradient(0deg, rgba(7,12,26,0.96), rgba(7,12,26,0.88));
+  border-top: 0.5px solid var(--rule);
+  font-family: var(--mono); user-select: none; -webkit-user-select: none;
+}
+/* the ticker owns the bottom band: the footer status line yields (event
+   title lives in the top picker; asymmetry is ambient chrome), and the
+   graph stage gains clearance so the commit row never sits under the strip */
+body.ticker-live footer { opacity: 0; pointer-events: none; }
+body.ticker-live .graph-phase { padding-bottom: calc(96px + var(--safe-bottom)); }
+.dt-row { position: relative; overflow: hidden; height: 34px; display: flex; align-items: center; }
+.dt-row + .dt-row { border-top: 0.5px dotted var(--rule); }
+.dt-rowtag { position: absolute; left: 0; top: 0; bottom: 0; z-index: 2; display: flex; align-items: center;
+  padding: 0 12px; font-size: 8px; letter-spacing: 0.24em; color: var(--ink-low); white-space: nowrap;
+  background: linear-gradient(90deg, rgba(7,12,26,0.94) 68%, rgba(7,12,26,0)); pointer-events: none; }
+.dt-track { display: inline-flex; align-items: center; padding-left: 120px; width: max-content;
+  will-change: transform; animation: dt-marquee 60s linear infinite; }
+/* each marquee copy is a .dt-cycle with a wide trailing seam, so the loop
+   reads as ONE cycle coming around — not a jumble of repeated tiles */
+.dt-cycle { display: inline-flex; align-items: center; gap: 28px; padding-right: 110px; }
+.dt-field .dt-track { animation-duration: 35s; }   /* THE FIELD scrolls faster — the §6 temporal beat */
+.delta-ticker:hover .dt-track, .delta-ticker.paused .dt-track { animation-play-state: paused; }
+@keyframes dt-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.dt-tile { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 1px; flex: none;
+  background: none; border: none; padding: 2px 4px; margin: 0; cursor: pointer; color: var(--ink-mid);
+  font-family: var(--mono); line-height: 1.05; text-align: left; }
+div.dt-tile { cursor: default; }
+.dt-top { display: inline-flex; align-items: baseline; gap: 6px; }
+.dt-glyph { font-size: 12px; }
+.dt-fig { font-size: 14px; font-weight: 600; letter-spacing: 0.02em; white-space: nowrap; }
+.dt-label { font-size: 8px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-low); white-space: nowrap; }
+.dt-tile.val-toward   .dt-fig, .dt-tile.val-toward   .dt-glyph { color: rgb(84, 200, 138); }   /* --band-fluid */
+.dt-tile.val-apart    .dt-fig, .dt-tile.val-apart    .dt-glyph { color: rgb(232, 88, 88); }    /* --band-denominated */
+.dt-tile.val-middling .dt-fig, .dt-tile.val-middling .dt-glyph { color: rgb(232, 148, 72); }   /* --band-coalition */
+.dt-tile.val-field    .dt-fig { color: var(--ink-mid); }
+/* the ticker exists only on the committed Prism stage — the nav ribbon
+   owns the bottom in parallax mode, and other columns cover the stage */
+body.tri-cover .delta-ticker, html.parallax-mode .delta-ticker,
+body.tri-cover .dt-edge, html.parallax-mode .dt-edge { display: none; }
+
+/* right-edge call (Sailor, spec §5.1): once per completed personal-row
+   cycle the tiles make one single-file vertical pass up the right edge —
+   the Kaleidoscope (the column to the RIGHT) pulling them home. Tap → col 2. */
+.dt-edge { position: fixed; top: var(--top-chrome); right: 0; bottom: 92px; width: 92px; z-index: 29;
+  overflow: hidden; cursor: pointer; border: none; padding: 0;
+  background: linear-gradient(270deg, rgba(7,12,26,0.45), rgba(7,12,26,0)); }
+.dt-edge-col { position: absolute; right: 10px; top: 100%; display: flex; flex-direction: column; gap: 20px;
+  align-items: flex-end; will-change: transform, top; }
+.dt-edge.run .dt-edge-col { animation: dt-rise 9s linear forwards; }
+/* top animates in CONTAINER units, translateY in the column's own —
+   composed, the column enters from below the strip and fully exits the
+   top regardless of either height */
+@keyframes dt-rise { from { top: 100%; transform: translateY(0); } to { top: 0; transform: translateY(-100%); } }
+.dt-edge .dt-tile { align-items: flex-end; text-align: right; transform: scale(0.92); transform-origin: right center; }
+
+@media (prefers-reduced-motion: reduce) {
+  .dt-track { animation: none !important; }
+  .dt-row { overflow-x: auto; }
+  .dt-edge { display: none !important; }
+}
+
 </style>
 </head>
 <body class="dark phase-event">
@@ -1977,6 +2047,20 @@ body:not(.phase-diatribe) .diatribe-eyebrow { display: none; }
     <span class="dot"></span><span class="lbl">voice</span>
   </button>
 </div>
+
+<!-- Delta ticker: two-row ribbon (hidden until the first commit captures
+     deltas) + the right-edge call column. Build spec v1. -->
+<div class="delta-ticker" id="deltaTicker" hidden>
+  <div class="dt-row dt-personal">
+    <span class="dt-rowtag">your reading</span>
+    <div class="dt-track" id="dtPersonalTrack"></div>
+  </div>
+  <div class="dt-row dt-field">
+    <span class="dt-rowtag">the field</span>
+    <div class="dt-track" id="dtFieldTrack"></div>
+  </div>
+</div>
+<button class="dt-edge" id="dtEdge" type="button" hidden aria-label="Open the Kaleidoscope"></button>
 
 <!-- Data layer -->
 <script src="../src/js/prismdb.js"></script>
@@ -3789,6 +3873,9 @@ function commitGraph() {
     });
   } catch (e) { console.warn('[v2] saveResponse failed:', e && e.message); }
   userPinData = { x: Math.round((pinX - 0.5) * 200), y: Math.round((0.5 - pinY) * 200), z: graphZ, intensity: graphIntensity, band: graphBand, quad: graphQuad };
+  // Delta ticker: capture at commit, once, append-only (build spec v1 §2).
+  // Nothing recomputes later; nothing captures on pull.
+  try { captureTickerDeltas(); } catch (e) { console.warn('[v2] ticker capture failed:', e && e.message); }
   aggCommitted = true;
   graphCommitBtn.disabled = true;
   if (mountGM()) {
@@ -4280,16 +4367,15 @@ function revealBillToggle() {
   if (billToggle) { billToggle.hidden = false; setBillToggleUI(); }
 }
 
-function renderBillDiamonds() {
-  if (!gm || !gmActive || billRendered) return;
-  billRendered = true;
-  let rows = [];
-  try { rows = (PrismDB.getBillScoresForEvent && PrismDB.getBillScoresForEvent(EVENT_ID)) || []; } catch (e) {}
+// Shared bill placement: x/y = centroid of the pressured quadrants in v2's
+// semantic frame; bills sharing a centroid (same pressured-quadrant set)
+// spread on a golden-angle spiral ordered by billId — deterministic across
+// devices, collision-free, and reads as the cluster it is.
+// Used by BOTH renderBillDiamonds and the ticker capture (build spec v1 §2)
+// so a tile's frozen coordinates land ON the rendered diamond at replay.
+function computeBillPlacements(rows) {
   const DIR = { A: [-1, 1], B: [1, 1], C: [-1, -1], D: [1, -1] };   // v2 semantic frame (same as coordinate orbs)
   const QOFF = 0.27;                                                // quadrant center offset from plane center
-  // Bills sharing a centroid (same pressured-quadrant set) spread on a
-  // golden-angle spiral around it, ordered by billId — deterministic across
-  // devices, collision-free, and reads as the cluster it is.
   const groups = {};
   rows.forEach(b => {
     const qs = (Array.isArray(b.quadrants) ? b.quadrants : []).filter(q => DIR[q]).sort();
@@ -4298,25 +4384,39 @@ function renderBillDiamonds() {
   Object.values(groups).forEach(g => g.sort((a, b2) => String(a.billId).localeCompare(String(b2.billId))));
   const spiralIdx = {};
   Object.entries(groups).forEach(([k, g]) => g.forEach((b, i) => { spiralIdx[b.id || b.billId] = { i, key: k }; }));
+  const out = {};
+  rows.forEach(b => {
+    const qs = (Array.isArray(b.quadrants) ? b.quadrants : []).filter(q => DIR[q]);
+    let nx = 0.5, ny = 0.5;
+    if (qs.length) {
+      nx = qs.reduce((s, q) => s + (0.5 + DIR[q][0] * QOFF), 0) / qs.length;
+      ny = qs.reduce((s, q) => s + (0.5 - DIR[q][1] * QOFF), 0) / qs.length;
+    }
+    const sp = spiralIdx[b.id || b.billId] || { i: 0, key: 'none' };
+    if (sp.i > 0) {
+      const r = 0.045 * Math.sqrt(sp.i);
+      const th = sp.i * 2.399963 + _bgHash(sp.key, 7) * 6.283;   // golden angle + per-group rotation
+      nx += r * Math.cos(th);
+      ny += r * Math.sin(th);
+    }
+    const bz = (typeof b.objectZ === 'number') ? b.objectZ : 0.15;  // unscored rows hover low but visible
+    out[b.id || b.billId] = { nx, ny, bz, prim: qs[0] || 'A', qs };
+  });
+  return out;
+}
+
+function renderBillDiamonds() {
+  if (!gm || !gmActive || billRendered) return;
+  billRendered = true;
+  let rows = [];
+  try { rows = (PrismDB.getBillScoresForEvent && PrismDB.getBillScoresForEvent(EVENT_ID)) || []; } catch (e) {}
+  const places = computeBillPlacements(rows);
   let n = 0;
   rows.forEach(b => {
     try {
-      const qs = (Array.isArray(b.quadrants) ? b.quadrants : []).filter(q => DIR[q]);
-      let nx = 0.5, ny = 0.5;
-      if (qs.length) {
-        nx = qs.reduce((s, q) => s + (0.5 + DIR[q][0] * QOFF), 0) / qs.length;
-        ny = qs.reduce((s, q) => s + (0.5 - DIR[q][1] * QOFF), 0) / qs.length;
-      }
+      const p = places[b.id || b.billId];
+      const nx = p.nx, ny = p.ny, bz = p.bz, prim = p.prim;
       const bid = String(b.billId || '');
-      const sp = spiralIdx[b.id || b.billId] || { i: 0, key: 'none' };
-      if (sp.i > 0) {
-        const r = 0.045 * Math.sqrt(sp.i);
-        const th = sp.i * 2.399963 + _bgHash(sp.key, 7) * 6.283;   // golden angle + per-group rotation
-        nx += r * Math.cos(th);
-        ny += r * Math.sin(th);
-      }
-      const bz = (typeof b.objectZ === 'number') ? b.objectZ : 0.15;  // unscored rows hover low but visible
-      const prim = qs[0] || 'A';
       const entry = gm.addDot(nx, ny, GM_QUAD[prim], bz, {
         shape: 'diamond',
         radius: 0.05 + bz * 0.03,
@@ -4337,6 +4437,7 @@ function renderBillDiamonds() {
       if (entry && entry.mesh) {
         entry.mesh.visible = billShown;
         if (entry.connector) entry.connector.visible = billShown;
+        entry._billId = b.billId;   // host-side tag — the ticker whisper finds subject orbs by billId
         billDots.push(entry);
         n++;
       }
@@ -4360,6 +4461,464 @@ function toggleBillDiamonds() {
   setBillToggleUI();
 }
 if (billToggle) billToggle.addEventListener('click', toggleBillDiamonds);
+
+// ═══════════════════════════════════════════════════════════════════
+// DELTA TICKER — Specs/Prism_Delta_Ticker_Build_Spec_v1.md
+// Encoded from Handoffs/Prism/Prism_Delta_Ticker_Framing_Case_Study.md.
+// Capture at commit → prism_ticker_ledger (append-only, PrismDB) →
+// two-row ribbon → tap replays the FROZEN delta on the graphmap via the
+// factory's public API only (setContrastLine / spinTo / getOrbit /
+// setFocus — prism-graphmap.js stays keep-out) → right-edge call →
+// idle whisper. Species shipping now: ⤫ ∿ ⟿ ≠. Slots for ⇋ ⑂ exist
+// but stay silent until follows exist (tracker pass).
+// ═══════════════════════════════════════════════════════════════════
+
+const TICKER_GLYPH = { crossing: '⤫', swap: '⇋', temperature: '∿', split: '⑂', drift: '⟿', saydo: '≠' };
+const TICKER_VALENCE_HEX = { toward: 0x54c88a, apart: 0xe85858, middling: 0xe89448 };   // band palette (band ≠ quadrant)
+const BAND_STEP = { fluid: 0, coalition: 1, denominated: 2 };
+const DIA_STEP  = { low: 0, medium: 1, high: 2 };
+
+// Band edges the app already draws (33/66) — the non-contrived rule.
+function dtBandEndpoints(step) { return step === 0 ? [0, 33] : step === 1 ? [33, 66] : [66, 100]; }
+
+// ⤫ threshold: opposite sides of a pole AND the crossing not contained in
+// the fluid band — at least one end |v| > 33. A −2→+3 wobble is fluid by
+// definition; the band name rations.
+function dtCrossesPole(a, b) { return (a < 0) !== (b < 0) && (Math.abs(a) > 33 || Math.abs(b) > 33); }
+
+// ── Capture: compute every tile ONCE, at commit, from frozen inputs ──
+function captureTickerDeltas() {
+  let rows = [];
+  try { rows = (PrismDB.getBillScoresForEvent && PrismDB.getBillScoresForEvent(EVENT_ID)) || []; } catch (e) {}
+  const places = computeBillPlacements(rows);
+  const ux = (pinX - 0.5) * 200, uy = (0.5 - pinY) * 200;
+  const userA = { x: pinX, y: pinY, z: graphZ, quad: graphQuad, band: graphBand, intensity: graphIntensity };
+  // ordering grammar: lead with the external; drift closes, never opens
+  const lead = [], mid = [], tail = [];
+
+  // ── ⤫ pole crossing (bills): the record's verdict + the named exception.
+  // Bills are CATEGORICAL objects — a bill presses the far flank when any of
+  // its pressured quadrants sits across the pole from the user (centroid
+  // signs would be corrupted by the spiral spread and by multi-quadrant sets
+  // centering to 0). The crossing escapes the fluid band via the user's end:
+  // |user axis| > 33. Verdict pole = the pole with the larger crossing count
+  // (ties → x). Geometry for replay still comes from the shared placement. ──
+  const DIRX = { A: -1, B: 1, C: -1, D: 1 }, DIRY = { A: 1, B: 1, C: -1, D: -1 };
+  const uxSign = ux < 0 ? -1 : 1, uySign = uy < 0 ? -1 : 1;
+  const xGate = Math.abs(ux) > 33, yGate = Math.abs(uy) > 33;
+  const perBill = [];
+  rows.forEach(b => {
+    const p = places[b.id || b.billId]; if (!p) return;
+    const qs = (Array.isArray(b.quadrants) ? b.quadrants : []).filter(q => DIRX[q]);
+    if (!qs.length) return;
+    const bx = (p.nx - 0.5) * 200, by = (0.5 - p.ny) * 200;
+    perBill.push({
+      b, p, bx, by,
+      farX: xGate && qs.some(q => DIRX[q] !== uxSign),
+      farY: yGate && qs.some(q => DIRY[q] !== uySign),
+      hasUserQuad: qs.indexOf(graphQuad) !== -1,
+      d2: (bx - ux) * (bx - ux) + (by - uy) * (by - uy),
+    });
+  });
+  const nX = perBill.filter(r => r.farX).length, nY = perBill.filter(r => r.farY).length;
+  // verdict pole: the Reading declares its own prevalent axis — use it when
+  // present (non-contrived: the record's boundary, not ours); otherwise the
+  // pole with the larger crossing count (ties → x). evt_011 is prevalentAxis
+  // 'x', which yields the demonstrated 11/12 B/D verdict + the Laken Riley
+  // exception rather than a 12/12 y-pole washout.
+  let pole = nX >= nY ? 'x' : 'y';
+  try {
+    const pa = (PrismDB.getEvent(EVENT_ID) || {}).prevalentAxis;
+    if (pa === 'x' || pa === 'y') pole = pa;
+  } catch (e) {}
+  const crossed = perBill.filter(r => (pole === 'x' ? r.farX : r.farY));
+  if (rows.length && crossed.length * 2 > rows.length) {
+    const flank = pole === 'x' ? (uxSign < 0 ? 'B/D' : 'A/C') : (uySign < 0 ? 'A/B' : 'C/D');
+    lead.push({
+      species: 'crossing', glyph: TICKER_GLYPH.crossing, valence: 'apart', pole,
+      figure: crossed.length + '/' + rows.length, label: 'press the ' + flank + ' flank',
+      subject: { kind: 'record' },
+      a: userA, b: null,
+      pairs: crossed.map(r => ({ x: r.p.nx, y: r.p.ny, z: r.p.bz, billId: r.b.billId })),
+      lineage: null,
+    });
+    // the exception that comes toward you — a bill pressing the user's OWN
+    // quadrant without pressing the far flank; nearest first. NAME-led.
+    const reached = perBill.filter(r => r.hasUserQuad && !(pole === 'x' ? r.farX : r.farY))
+                           .sort((m, n) => m.d2 - n.d2);
+    if (reached.length) {
+      const r = reached[0];
+      lead.push({
+        species: 'crossing', glyph: TICKER_GLYPH.crossing, valence: 'toward', pole,
+        figure: String(r.b.billName || r.b.billId).toUpperCase(), label: 'reaches your quadrant',
+        subject: { kind: 'bill', id: r.b.billId, name: r.b.billName },
+        a: userA, b: { x: r.p.nx, y: r.p.ny, z: r.p.bz },
+        lineage: { dx: Math.round(r.bx - ux), dy: Math.round(r.by - uy), dz: +(r.p.bz - graphZ).toFixed(2) },
+      });
+    }
+  }
+
+  // ── legislators (DERIVED/MANUAL only): ⤫ + ≠ per member, rationed to 2 ──
+  let mpos = [];
+  try {
+    mpos = (PrismDB.getMemberPositionsForEvent(EVENT_ID) || [])
+      .filter(p => p && p.pin && (p.provenance === 'DERIVED' || p.provenance === 'MANUAL' || p.adminOverride));
+  } catch (e) {}
+  const roster = {};
+  try { (PrismDB.getMembers() || []).forEach(m => { roster[m.bioguideId] = m; }); } catch (e) {}
+  const memTiles = [];
+  mpos.forEach(p => {
+    const mx = (p.pin.x - 0.5) * 200, my = (0.5 - p.pin.y) * 200;
+    const mz = (typeof p.z === 'number') ? p.z : 0;
+    const m = roster[p.bioguideId];
+    const nm = m ? String((typeof m.name === 'string') ? m.name : ((m.name && m.name.full) || p.bioguideId)) : String(p.bioguideId);
+    const surname = nm.split(' ').pop().toUpperCase();
+    const overX = dtCrossesPole(ux, mx), overY = dtCrossesPole(uy, my);
+    if (overX || overY) {
+      memTiles.push({
+        species: 'crossing', glyph: TICKER_GLYPH.crossing, valence: 'apart', pole: overX ? 'x' : 'y',
+        figure: surname, label: 'across the pole',
+        subject: { kind: 'member', id: p.bioguideId, name: nm },
+        a: userA, b: { x: p.pin.x, y: p.pin.y, z: mz },
+        lineage: { dx: Math.round(mx - ux), dy: Math.round(my - uy), dz: +(mz - graphZ).toFixed(2) },
+      });
+    } else if ((mz < 0) !== (graphZ < 0) && Math.abs(mz) > 0.05 && Math.abs(graphZ) > 0.05) {
+      // ≠ direction, not distance — z sign opposition, both past the dead-zone
+      memTiles.push({
+        species: 'saydo', glyph: TICKER_GLYPH.saydo, valence: 'apart', pole: null,
+        figure: surname, label: mz > 0 ? 'delivered · you ran frustrated' : 'frustrated · you ran delivered',
+        subject: { kind: 'member', id: p.bioguideId, name: nm },
+        a: userA, b: { x: p.pin.x, y: p.pin.y, z: mz },
+        lineage: { dx: Math.round(mx - ux), dy: Math.round(my - uy), dz: +(mz - graphZ).toFixed(2) },
+      });
+    }
+  });
+  memTiles.slice(0, 2).forEach(t => mid.push(t));   // thresholds ration; so does tile count
+
+  // ── ≠ say-vs-do (scored bills, aggregate): z sign opposition, both
+  // |z| > 0.05 (the camera dead-zone). Same-sign gaps never fire. ──
+  const scored = rows.filter(b => typeof b.objectZ === 'number');
+  if (scored.length) {
+    const meanZ = scored.reduce((s, b) => s + b.objectZ, 0) / scored.length;
+    if ((meanZ < 0) !== (graphZ < 0) && Math.abs(meanZ) > 0.05 && Math.abs(graphZ) > 0.05) {
+      const gap = Math.abs(meanZ - graphZ);
+      const mx = scored.reduce((s, b) => s + places[b.id || b.billId].nx, 0) / scored.length;
+      const my = scored.reduce((s, b) => s + places[b.id || b.billId].ny, 0) / scored.length;
+      mid.push({
+        species: 'saydo', glyph: TICKER_GLYPH.saydo, valence: 'apart', pole: null,
+        figure: 'z ' + (meanZ >= graphZ ? '+' : '−') + gap.toFixed(2) + ' apart',
+        label: meanZ > 0 ? 'delivered vs frustrated' : 'frustrated vs delivered',
+        subject: { kind: 'record' },
+        a: userA, b: { x: +mx.toFixed(4), y: +my.toFixed(4), z: +meanZ.toFixed(2) },
+        pairs: scored.map(b => { const p = places[b.id || b.billId]; return { x: p.nx, y: p.ny, z: p.bz, billId: b.billId }; }),
+        lineage: { dx: 0, dy: 0, dz: +(meanZ - graphZ).toFixed(2) },
+      });
+    }
+  }
+
+  // ── ∿ temperature: band labels differ by 2 steps; or by 1 step with raw
+  // gap ≥ 33 (one band width). Bills carry bands, not raws — the far edge
+  // of the bill's diatribe band stands in (spec §3, signed off 07-10).
+  // One tile per DIRECTION (hot / cool), never pooled: the evt_011 demo's
+  // 2/12 hot tile stays 2/12; the same rule also surfaces a cool tile for
+  // the low-band bills (gap 66) — flagged for Sailor, easy to gate. ──
+  const uStep = (BAND_STEP[graphBand] != null) ? BAND_STEP[graphBand] : 1;
+  const temp = { hot: { n: 0, twoStep: false, pairs: [] }, cool: { n: 0, twoStep: false, pairs: [] } };
+  rows.forEach(b => {
+    const bStep = DIA_STEP[String(b.diatribe || '').toLowerCase()];
+    if (bStep == null || bStep === uStep) return;
+    const dStep = Math.abs(bStep - uStep);
+    const ends = dtBandEndpoints(bStep);
+    const far = Math.abs(graphIntensity - ends[0]) > Math.abs(graphIntensity - ends[1]) ? ends[0] : ends[1];
+    if (dStep === 2 || Math.abs(graphIntensity - far) >= 33) {
+      const dir = bStep > uStep ? temp.hot : temp.cool;
+      dir.n++; if (dStep === 2) dir.twoStep = true;
+      const p = places[b.id || b.billId];
+      if (p) dir.pairs.push({ x: p.nx, y: p.ny, z: p.bz, billId: b.billId });
+    }
+  });
+  [['hot', temp.hot], ['cool', temp.cool]].forEach(([dir, d]) => {
+    if (!d.n) return;
+    mid.push({
+      species: 'temperature', glyph: TICKER_GLYPH.temperature, valence: d.twoStep ? 'apart' : 'middling', pole: null,
+      figure: d.n + '/' + rows.length,
+      label: 'read ' + dir + ' · you ran ' + graphBand,
+      subject: { kind: 'record' },
+      a: userA, b: null, pairs: d.pairs, lineage: null,
+    });
+  });
+
+  // ── ⟿ self-drift: categorical only, vs your last commit in the same CRS
+  // terrain (event.terrain, optional — silent until two commits share one).
+  // Quadrant change, band change, or z sign flip; magnitude creep is silent. ──
+  try {
+    const ev = PrismDB.getEvent(EVENT_ID);
+    if (ev && ev.terrain) {
+      const terrainEv = {};
+      PrismDB.getEvents().forEach(e2 => { if (e2.terrain === ev.terrain && e2.id !== EVENT_ID) terrainEv[e2.id] = e2; });
+      const prior = PrismDB.getResponses()
+        .filter(r => !r.mock && terrainEv[r.eventId])
+        .sort((r1, r2) => (r2.timestamp || 0) - (r1.timestamp || 0))[0];
+      if (prior && prior.pin) {
+        const pz = (typeof prior.z === 'number') ? prior.z : 0;
+        const quadMove = prior.finalQuadrant && prior.finalQuadrant !== graphQuad;
+        const bandMove = prior.band && prior.band !== graphBand;
+        const zFlip = (pz < 0) !== (graphZ < 0) && Math.abs(pz) > 0.05 && Math.abs(graphZ) > 0.05;
+        if (quadMove || bandMove || zFlip) {
+          // valence [Claude's call, spec §3]: toward = the new pin sits closer
+          // to this reading's bill centroid than the old one did
+          let valence = 'middling';
+          const pl = Object.values(places);
+          if (pl.length) {
+            const cx = pl.reduce((s, p) => s + p.nx, 0) / pl.length;
+            const cy = pl.reduce((s, p) => s + p.ny, 0) / pl.length;
+            const dNew = Math.hypot(pinX - cx, pinY - cy);
+            const dOld = Math.hypot(prior.pin.x - cx, prior.pin.y - cy);
+            valence = dNew < dOld ? 'toward' : 'apart';
+          }
+          tail.push({
+            species: 'drift', glyph: TICKER_GLYPH.drift, valence, pole: null,
+            figure: quadMove ? (prior.finalQuadrant + ' → ' + graphQuad)
+                  : bandMove ? (prior.band + ' → ' + graphBand)
+                  : ('z ' + (pz < 0 ? '−' : '+') + ' → ' + (graphZ < 0 ? '−' : '+')),
+            label: 'since ' + ((terrainEv[prior.eventId] && terrainEv[prior.eventId].title) || ev.terrain),
+            subject: { kind: 'self' },
+            a: userA, b: { x: prior.pin.x, y: prior.pin.y, z: pz },
+            lineage: { dx: Math.round(ux - ((prior.pin.x - 0.5) * 200)), dy: Math.round(uy - ((0.5 - prior.pin.y) * 200)), dz: +(graphZ - pz).toFixed(2) },
+          });
+        }
+      }
+    }
+  } catch (e) {}
+
+  const tiles = lead.concat(mid, tail);
+  if (tiles.length) {
+    const batch = Date.now();
+    tiles.forEach((t, i) => { t.eventId = EVENT_ID; t.row = 'personal'; t.batch = batch; t.seq = i; });
+    try { tiles.forEach(t => { t.rid = (PrismDB.getEvent(EVENT_ID) || {}).rid || null; }); } catch (e) {}
+    try { PrismDB.appendTickerEntries(tiles); } catch (e) { console.warn('[v2] ticker append failed:', e && e.message); }
+    console.log('[v2 · ticker] captured ' + tiles.length + ' tiles:', tiles.map(t => t.glyph + ' ' + t.figure).join(' · '));
+  }
+  renderTicker();   // ribbon shows even when only the field row has content
+}
+
+// ── Ribbon render ──
+const dtEl = document.getElementById('deltaTicker');
+const dtPersonalTrack = document.getElementById('dtPersonalTrack');
+const dtFieldTrack = document.getElementById('dtFieldTrack');
+const dtEdge = document.getElementById('dtEdge');
+
+function dtTileEl(t, interactive) {
+  const el = document.createElement(interactive ? 'button' : 'div');
+  if (interactive) el.type = 'button';
+  el.className = 'dt-tile val-' + (t.valence || 'field');
+  const top = document.createElement('span'); top.className = 'dt-top';
+  if (t.glyph) { const g = document.createElement('span'); g.className = 'dt-glyph'; g.textContent = t.glyph; top.appendChild(g); }
+  const f = document.createElement('span'); f.className = 'dt-fig'; f.textContent = t.figure || ''; top.appendChild(f);
+  const l = document.createElement('span'); l.className = 'dt-label'; l.textContent = t.label || '';
+  el.appendChild(top); el.appendChild(l);
+  if (interactive && t.species) el.addEventListener('click', () => replayTickerTile(t));
+  return el;
+}
+
+// THE FIELD: until the first aggregate push lands, the lower row scrolls
+// placeholder terrain stats from live stores — the ribbon never looks dead.
+function dtFieldStats() {
+  const s = [];
+  try { s.push({ figure: String((PrismDB.getBillScoresForEvent(EVENT_ID) || []).length), label: 'bills scored · this reading' }); } catch (e) {}
+  try { s.push({ figure: String(PrismDB.getResponses().filter(r => !r.mock).length), label: 'pins committed · this device' }); } catch (e) {}
+  try { s.push({ figure: String(PrismDB.getEvents().length), label: 'readings held' }); } catch (e) {}
+  try { s.push({ figure: String((PrismDB.getFollowed() || []).length), label: 'legislators followed' }); } catch (e) {}
+  try {
+    const d = (PrismDB.getMemberPositionsForEvent(EVENT_ID) || []).filter(p => p && p.pin).length;
+    s.push({ figure: String(d), label: 'derived placements' });
+  } catch (e) {}
+  return s.filter(x => x.figure !== '0' || x.label.indexOf('bills') === 0);
+}
+
+function dtOrderedEntries() {
+  let entries = [];
+  try { entries = PrismDB.getTickerEntries(EVENT_ID) || []; } catch (e) {}
+  // newest commit batch leads; within a batch, capture order IS the grammar
+  return entries.slice().sort((a, b) => ((b.batch || b.ts || 0) - (a.batch || a.ts || 0)) || ((a.seq || 0) - (b.seq || 0)));
+}
+
+function renderTicker() {
+  if (!dtEl || !dtPersonalTrack || !dtFieldTrack) return;
+  const entries = dtOrderedEntries();
+  const fill = (track, items, interactive) => {
+    track.innerHTML = '';
+    // two identical .dt-cycle copies so the −50% marquee loops seamlessly;
+    // each cycle carries its own trailing seam (CSS padding-right)
+    for (let copy = 0; copy < 2; copy++) {
+      const cyc = document.createElement('span'); cyc.className = 'dt-cycle';
+      items.forEach(t => cyc.appendChild(dtTileEl(t, interactive)));
+      track.appendChild(cyc);
+    }
+  };
+  if (entries.length) fill(dtPersonalTrack, entries, true);
+  else fill(dtPersonalTrack, [{ figure: '—', label: 'no deltas yet · commit a reading' }], false);
+  fill(dtFieldTrack, dtFieldStats(), false);
+  dtEl.hidden = false;
+  document.body.classList.add('ticker-live');
+  if (dtEdge) dtEdge.hidden = true;   // edge call arms itself per cycle
+}
+
+// ── Tap → Kaleidoscope replay (spec §6): the glyph's pattern made spatial.
+// One camera move + one drawn space per species, valence-colored, replayed
+// from the ledger's FROZEN coordinates — never live positions. ──
+let dtReplay = null;
+function cancelTickerReplay(restoreOrbit) {
+  if (!dtReplay) return;
+  const r = dtReplay; dtReplay = null;
+  (r.timers || []).forEach(clearTimeout);
+  try { gm.clearContrastLine(); } catch (e) {}
+  if (restoreOrbit && r.orbit) { try { gm.spinTo(r.orbit.yaw, r.orbit.pitch, 700); } catch (e) {} }
+}
+function dtFinishReplay(r) {
+  if (dtReplay !== r) return;
+  dtReplay = null;
+  try { gm.clearContrastLine(); } catch (e) {}
+  if (r.orbit) { try { gm.spinTo(r.orbit.yaw, r.orbit.pitch, 700); } catch (e) {} }
+}
+function replayTickerTile(t) {
+  if (!gm || !gmActive || !t) return;
+  cancelTickerReplay(false);
+  dtKillWhisper();
+  let orbit = null; try { orbit = gm.getOrbit(); } catch (e) {}
+  const r = { orbit, timers: [] }; dtReplay = r;
+  const later = (fn, ms) => r.timers.push(setTimeout(() => { if (dtReplay === r) fn(); }, ms));
+  const hex = TICKER_VALENCE_HEX[t.valence] || 0xfff6e2;
+  const a = t.a, b = t.b;
+  const line = (p, q, color, opacity) => { try { gm.setContrastLine(p, q, { color, opacity }); } catch (e) {} };
+
+  if (t.species === 'crossing') {
+    // the pole plane reads as sides: camera swings edge-on to the crossed pole
+    try { gm.spinTo(t.pole === 'y' ? 0 : 90, 8, 700); } catch (e) {}
+    const pairs = (t.pairs && t.pairs.length) ? t.pairs : (b ? [b] : []);
+    pairs.forEach((p, i) => later(() => line(a, p, hex, 0.85), 400 + i * 420));
+    later(() => dtFinishReplay(r), 400 + pairs.length * 420 + 1400);
+  } else if (t.species === 'saydo') {
+    // a vertical column spans the z-gap; camera dips below plane — the
+    // existing −z reveal move
+    try { const o = orbit || { yaw: 0 }; gm.spinTo(o.yaw, -45, 700); } catch (e) {}
+    if (b) later(() => line({ x: b.x, y: b.y, z: a.z }, b, hex, 0.9), 450);
+    later(() => dtFinishReplay(r), 3200);
+  } else if (t.species === 'temperature') {
+    // the space between the two intensities pulses outward: fluid → orange → red
+    const seq = [[0x54c88a, 0.45], [0xe89448, 0.65], [0xe85858, 0.9], [0xe89448, 0.65], [0x54c88a, 0.45]];
+    const tgt = b || (t.pairs && t.pairs[0]);
+    if (tgt) seq.forEach((s, i) => later(() => line(a, tgt, s[0], s[1]), 300 + i * 260));
+    later(() => dtFinishReplay(r), 300 + seq.length * 260 + 1200);
+  } else if (t.species === 'drift') {
+    // the path from previous pin to new pin traces in sequence
+    if (b) {
+      const steps = 6;
+      for (let i = 1; i <= steps; i++) {
+        const f = i / steps;
+        const q = { x: b.x + (a.x - b.x) * f, y: b.y + (a.y - b.y) * f, z: (b.z || 0) + ((a.z || 0) - (b.z || 0)) * f };
+        later(() => line(b, q, hex, 0.85), 250 + i * 180);
+      }
+      later(() => { try { gm.setFocus(a.x, a.y); } catch (e) {} }, 250 + steps * 180 + 200);
+    }
+    later(() => dtFinishReplay(r), 250 + 6 * 180 + 1600);
+  } else if (b) {
+    later(() => line(a, b, hex, 0.85), 300);
+    later(() => dtFinishReplay(r), 2400);
+  }
+}
+// any user input on the stage cancels the replay — the user owns the camera
+(function () {
+  const st = document.getElementById('gm3dStage');
+  if (st) st.addEventListener('pointerdown', () => cancelTickerReplay(false), { passive: true });
+})();
+
+// ── Right-edge call (spec §5.1, Sailor's direction): once per completed
+// personal-row cycle, the tiles make one single-file pass up the right
+// edge — the Kaleidoscope pulling them home. Tap → column 2. ──
+let dtEdgeTimer = null;
+function dtRunEdgeCall() {
+  if (!dtEdge || dtEl.hidden) return;
+  if (document.body.classList.contains('tri-cover')) return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const entries = dtOrderedEntries();
+  if (!entries.length) return;
+  clearTimeout(dtEdgeTimer);   // a re-trigger owns the strip — the old hide timer must not kill it
+  dtEdge.innerHTML = '';
+  const col = document.createElement('div'); col.className = 'dt-edge-col';
+  entries.slice(0, 8).forEach(t => col.appendChild(dtTileEl(t, false)));
+  dtEdge.appendChild(col);
+  dtEdge.hidden = false;
+  dtEdge.classList.remove('run'); void dtEdge.offsetWidth; dtEdge.classList.add('run');
+  dtEdgeTimer = setTimeout(() => { if (dtEdge) { dtEdge.hidden = true; dtEdge.classList.remove('run'); } }, 9600);
+}
+if (dtEdge) dtEdge.addEventListener('click', () => {
+  const z = document.querySelector('.ribbon-zone[data-col="2"]');
+  if (z) z.click();   // the call answered — over to the Kaleidoscope column
+});
+
+// ── Idle whisper (spec §7): tap-only while active; when a full ticker
+// cycle passes untouched, the LEAD tile faintly brightens its subject
+// orb(s). No camera move, no lines. Any interaction kills it. ──
+let dtWhisper = null, dtCycleClean = true;
+function dtKillWhisper() {
+  if (!dtWhisper) return;
+  const w = dtWhisper; dtWhisper = null;
+  if (w.raf) cancelAnimationFrame(w.raf);
+  w.targets.forEach(tg => {
+    try {
+      if (tg.origEmissive != null) tg.mat.emissiveIntensity = tg.origEmissive;
+      if (tg.origOpacity != null) { tg.mat.opacity = tg.origOpacity; tg.mat.transparent = tg.origTransparent; }
+    } catch (e) {}
+  });
+}
+function dtRunWhisper() {
+  if (dtWhisper || dtReplay || !gm || !gmActive) return;
+  const entries = dtOrderedEntries();
+  if (!entries.length) return;
+  const leadTile = entries[0];   // lead-tile-only inherits the ordering grammar for free
+  const ids = new Set();
+  if (leadTile.subject && leadTile.subject.kind === 'bill' && leadTile.subject.id) ids.add(leadTile.subject.id);
+  (leadTile.pairs || []).forEach(p => { if (p.billId) ids.add(p.billId); });
+  const targets = [];
+  billDots.forEach(en => {
+    if (!en || !en._billId || !ids.has(en._billId) || !en.mesh || !en.mesh.material) return;
+    const mat = en.mesh.material;
+    targets.push({
+      mat,
+      origEmissive: (typeof mat.emissiveIntensity === 'number') ? mat.emissiveIntensity : null,
+      origOpacity: (typeof mat.opacity === 'number') ? mat.opacity : null,
+      origTransparent: !!mat.transparent,
+    });
+  });
+  if (!targets.length) return;   // member/self subjects: no host-side refs yet — silent by design
+  const w = { targets, t0: performance.now(), raf: 0 }; dtWhisper = w;
+  const DUR = 6000;
+  (function tick(now) {
+    if (dtWhisper !== w) return;
+    const el = ((now || performance.now()) - w.t0) / DUR;
+    if (el >= 1) { dtKillWhisper(); return; }
+    const pulse = 0.5 + 0.5 * Math.sin(el * Math.PI * 6);     // three slow breaths
+    const fade = el < 0.85 ? 1 : (1 - el) / 0.15;             // fades as the tile exits
+    targets.forEach(tg => {
+      try {
+        if (tg.origEmissive != null) tg.mat.emissiveIntensity = tg.origEmissive + 0.9 * pulse * fade;
+        else if (tg.origOpacity != null) { tg.mat.transparent = true; tg.mat.opacity = Math.min(1, tg.origOpacity + 0.35 * pulse * fade); }
+      } catch (e) {}
+    });
+    w.raf = requestAnimationFrame(tick);
+  })(performance.now());
+}
+// interaction anywhere = the user is active: kill the whisper, dirty the cycle
+['pointerdown', 'wheel', 'keydown', 'touchstart'].forEach(evt =>
+  document.addEventListener(evt, () => { dtCycleClean = false; dtKillWhisper(); }, { passive: true }));
+// cycle boundary: the personal row's marquee iteration is the clock —
+// edge call fires each cycle; the whisper only after an untouched one
+if (dtPersonalTrack) dtPersonalTrack.addEventListener('animationiteration', () => {
+  dtRunEdgeCall();
+  if (dtCycleClean) dtRunWhisper();
+  dtCycleClean = true;
+});
 
 // ── Contrast: lock a BILL (legislation diamond) against the user's pin ──
 // The compare panel becomes the bill inspector: name, displacement field,
