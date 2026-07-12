@@ -236,7 +236,9 @@ footer {
   position: fixed; inset: 0;
   z-index: 5;
   display: flex; align-items: safe center; justify-content: center;
-  padding: calc(var(--top-chrome) + 18px) var(--stage-pad-x) calc(40px + var(--safe-bottom));
+  /* modest symmetric padding so each splash step CENTERS and fits one screen —
+     the old top-chrome offset (~162px) shoved the card's button below the fold */
+  padding: calc(var(--safe-top, 0px) + 14px) var(--stage-pad-x) calc(22px + var(--safe-bottom));
   overflow-y: auto;
   opacity: 1;
   transition: opacity 0.9s ease, transform 1.1s cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -244,6 +246,15 @@ footer {
 
 /* Phase visibility — body carries phase-event | phase-diatribe | phase-answers | phase-graph */
 main, footer { transition: opacity 0.9s ease; }
+
+/* FREE-ROAM guard (2026-07-11): the reading-flow surfaces belong to the
+   Diatribe cell. When the ribbon roams off that address mid-flow the surface
+   clears so the destination (Parallax visor, a side pane, etc.) never doubles
+   over the live reading text. Faster than the phase fade — this is a nav move,
+   not a phase change. State is untouched; returning to the seat restores it. */
+body.flow-nav-away main,
+body.flow-nav-away .to-answers,
+body.flow-nav-away .answers-phase { opacity: 0 !important; pointer-events: none !important; transition: opacity 0.32s ease; }
 body.phase-event main,
 body.phase-answers main,
 body.phase-graph main,
@@ -306,6 +317,31 @@ body.phase-graph .event-phase {
 .ev-framing.develop {
   animation: prism-caption-develop 1100ms cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
 }
+
+/* ── SPLASH STEPS (Sailor 2026-07-11): CARD → FRAMING beat ──
+   The prism (ev-logo) persists across BOTH steps and never resizes (object
+   permanence) — only the copy beneath it swaps. Each step is one screen; the
+   framing beat carries the editorial wall-text (read once, here — removed from
+   the Diatribe). */
+.ev-card, .ev-framing-beat { display: flex; flex-direction: column; align-items: center; width: 100%; }
+body.ev-step-card    .ev-framing-beat { display: none; }
+body.ev-step-framing .ev-card         { display: none; }
+body.ev-step-framing .ev-framing-beat { animation: ev-rise 0.7s ease forwards; }
+/* the card's begin button breathes in under the title */
+.ev-begin { margin-top: 6px; opacity: 0; animation: ev-rise 0.9s ease 0.6s forwards; }
+/* compact title header on the framing beat (the card's big title isn't shown here) */
+.ev-framing-title {
+  font-family: var(--serif); font-weight: 400;
+  font-size: clamp(18px, 2.4vw, 25px); line-height: 1.2;
+  color: var(--ink); max-width: 22ch; text-align: center;
+  margin: 2px 0 16px; opacity: 0; animation: ev-rise 0.7s ease 0.05s forwards;
+}
+/* framing beat sized so it never scrolls, even on short viewports */
+body.ev-step-framing .ev-logo { margin-bottom: 8px; }
+.ev-framing-title { margin: 2px 0 10px; }
+.ev-framing-beat .ev-framing { font-size: clamp(15px, 1.7vw, 18px); line-height: 1.5; max-width: 600px; margin: 0 0 16px; }
+.ev-framing-beat .ev-keywords { margin-bottom: 18px; }
+.ev-framing-beat .ev-rule { margin: 12px auto; }
 
 /* Cloud of load-bearing terms — floats, glows fluid-green, staggers in */
 .ev-keywords {
@@ -1261,7 +1297,7 @@ body.light .event-picker { color: rgba(40,44,54,0.85); background: rgba(255,255,
    Refraction; pull down to raise each column's analytical companion
    (Beam·Diatribe / Prism·Parallax / Refraction·Comparison). ── */
 :root {
-  --ribbon-h: 60px; --triangle-x: 70%;
+  --ribbon-h: 60px;
   --safe-top: env(safe-area-inset-top, 0px);
   --safe-bottom: env(safe-area-inset-bottom, 0px);
   --hdr-h: 44px;
@@ -1274,7 +1310,7 @@ body.light .event-picker { color: rgba(40,44,54,0.85); background: rgba(255,255,
   position: fixed; top: calc(var(--safe-top) + var(--hdr-h)); left: 0; right: 0; height: var(--ribbon-h); z-index: 45;
   overflow: hidden; cursor: grab; touch-action: none; user-select: none;
   background: linear-gradient(180deg, rgba(7,12,26,0.55), rgba(7,12,26,0));
-  transition: top 0.6s cubic-bezier(0.4,0,0.2,1), background 0.6s ease, opacity 0.6s ease;
+  transition: top 0.6s cubic-bezier(0.4,0,0.2,1), background 0.6s ease, opacity 0.2s ease;
 }
 .prism-ribbon:active { cursor: grabbing; }
 html.parallax-mode .prism-ribbon { top: calc(100% - var(--ribbon-h) - var(--safe-bottom)); background: linear-gradient(0deg, rgba(7,12,26,0.6), rgba(7,12,26,0)); }
@@ -1286,28 +1322,16 @@ html.parallax-mode .prism-ribbon { top: calc(100% - var(--ribbon-h) - var(--safe
 }
 
 .ribbon-zone { position: absolute; top: 0; bottom: 0; width: 33.333%; background: none; border: none; padding: 0; cursor: pointer; }
+.ribbon-zone:focus:not(:focus-visible) { outline: none; }   /* no tap-focus box on the instrument; keyboard focus keeps its ring */
 .ribbon-zone[data-col="0"] { left: 0; } .ribbon-zone[data-col="1"] { left: 33.333%; } .ribbon-zone[data-col="2"] { left: 66.666%; }
 .ribbon-hint { position: absolute; left: 50%; bottom: 5px; transform: translateX(-50%); pointer-events: none;
   font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-low); white-space: nowrap; }
 .ribbon-hint-name { color: var(--ink-mid); }
 html.parallax-mode .ribbon-hint { bottom: auto; top: 5px; }
 
-/* upper-row tabs, anchored under the prism triangle */
-.upper-tabs {
-  position: fixed; top: calc(var(--ribbon-h) + 6px); left: var(--triangle-x); transform: translateX(-50%);
-  z-index: 46; display: none; gap: 8px; padding: 5px 9px;
-  background: rgba(9,15,32,0.62); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
-  border: 0.5px solid var(--rule); border-radius: 8px;
-}
-/* in Parallax Mode the ribbon (with its triangle) sits at the BOTTOM, so the
-   tabs anchor just above it — under the triangle — clearing the panel header. */
-html.parallax-mode .upper-tabs { display: inline-flex; top: auto; bottom: calc(var(--ribbon-h) + var(--safe-bottom) + 8px); }
-.upper-tab { font-family: var(--mono); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--ink-low); background: none; border: none; cursor: pointer; padding: 3px 6px; transition: color 0.18s; }
-.upper-tab:hover { color: var(--ink-mid); }
-.upper-tab.active { color: var(--ink); }
-/* keep upper-panel content clear of the bottom tabs */
-.tri-panel[data-row="upper"] .tri-body { padding-bottom: 44px; }
+/* upper-row tabs RETIRED (Sailor, 2026-07-11): the ribbon is the single nav
+   instrument — its position IS the row/column indicator; a second labeled
+   switcher contradicted that. Row reached by shade pull / free-plane drag. */
 
 /* scrim behind an open space — NOT a veil anymore (2026-07-11 cards-ditch:
    the stage stays visible). It survives as the TOUCH BARRIER: a whisper of
@@ -1612,17 +1636,47 @@ body.phase-event .ted-dock, body.phase-diatribe .ted-dock { display: flex; }
    roams) — see TedStage. No fixed CSS shadow. */
 
 /* ── Entry splash: large Prism logo + wordmark, morphing into the nav ribbon ── */
-.ev-logo { width: clamp(190px, 54vw, 360px); margin: 0 auto 22px; cursor: pointer;
-  display: flex; flex-direction: column; align-items: center; gap: 10px;
-  transform-origin: center top;
+/* hero sized as a wide beam (the ribbon art, aspect ~8.6) — a knob: this is
+   the splash presence before it slides to its seat */
+.ev-logo { width: clamp(320px, 84vw, 760px); margin: 0 auto 26px; cursor: pointer;
+  display: flex; flex-direction: column; align-items: center; gap: 18px;
+  transform-origin: center center;
   transition: transform 0.72s cubic-bezier(0.22,1,0.36,1), opacity 0.6s ease; }
-.ev-logo-prism { width: 100%; height: auto; display: block; filter: drop-shadow(0 4px 18px rgba(0,0,0,0.5)); }
+.ev-logo-prism { width: 100%; height: auto; display: block; filter: drop-shadow(0 2px 12px rgba(0,0,0,0.5)); }
 .ev-logo-word { width: clamp(100px, 27vw, 176px); height: auto; display: block;
   transition: opacity 0.45s ease, transform 0.5s ease; }
 .ev-logo:hover { opacity: 0.95; }
-/* artful morph: the big prism lifts + shrinks toward the nav band as the real
-   ribbon fades into place; the wordmark lifts away first. */
-.ev-logo.migrate { transform: translateY(-38vh) scale(0.3); opacity: 0; pointer-events: none; }
+
+/* ── LIVE prism (Sailor 2026-07-11) ── the splash instrument BREATHES, LEANS
+   to the cursor, and is GRABBABLE, so it reads as a physical object before it
+   seats. The nudge rides the CONTAINER; the seat-morph transform rides the
+   prism IMAGE — they never fight. */
+.ev-live { cursor: grab; transform: translate(var(--nudge-x, 0px), var(--nudge-y, 0px));
+  transition: transform 0.55s cubic-bezier(0.34, 1.4, 0.64, 1), opacity 0.6s ease; }   /* springy return */
+.ev-live:active { cursor: grabbing; }
+.ev-live .ev-logo-prism { animation: ev-shimmer 5.6s ease-in-out infinite; will-change: filter; }
+.ev-logo.migrate .ev-logo-prism { animation: none; }   /* freeze the shimmer during the seat morph */
+@keyframes ev-shimmer {
+  0%, 100% { filter: drop-shadow(0 2px 12px rgba(0,0,0,0.5)) saturate(1) brightness(1); }
+  50%      { filter: drop-shadow(0 3px 17px rgba(90,130,205,0.28)) saturate(1.12) brightness(1.06); }
+}
+@media (prefers-reduced-motion: reduce) { .ev-live .ev-logo-prism { animation: none; } }
+/* OBJECT PERMANENCE morph (Sailor, 2026-07-11, rebuilt): the splash hero IS
+   the nav ribbon art — the SAME image. JS measures the seated ribbon image's
+   live rect and sets --morph-* so the hero travels TO it as a uniform scale +
+   centre translate (identical aspect → it overlays exactly). The hero stays
+   FULLY OPAQUE for the whole journey, then hands off to the (pixel-identical)
+   ribbon at arrival — the fade is invisible because the two are the same shape
+   in the same place. One object, ever. The wordmark lifts away first. */
+/* The transform rides the PRISM IMAGE itself (not the whole ev-logo div): the
+   div also holds the wordmark, so scaling about the div centre would displace
+   the prism. Scaling about the prism's OWN centre + translating its centre onto
+   the ribbon's centre lands it exactly (same artwork → exact overlay). */
+.ev-logo.migrate { opacity: 0; pointer-events: none;   /* opacity holds 1 through the whole 0.72s travel, then a quick fade under the already-solid ribbon */
+  transition: opacity 0.18s ease 0.72s; }
+.ev-logo.migrate .ev-logo-prism { transform-origin: center center;
+  transform: translate(var(--morph-x, 0px), var(--morph-y, 30vh)) scale(var(--morph-s, 0.85));
+  transition: transform 0.72s cubic-bezier(0.22,1,0.36,1); }
 .ev-logo.migrate .ev-logo-word { opacity: 0; transform: translateY(-14px); }
 
 /* the ribbon stays hidden until the logo migrates into place — but the header
@@ -1829,7 +1883,7 @@ div.dt-tile {
 
 </style>
 </head>
-<body class="dark phase-event">
+<body class="dark phase-event ev-step-card">
 
 <!-- Page-wide "space": a semi-dynamic starfield + deep field behind the ENTIRE
      UI. Sits beneath the band-tint ambient; Ted and every panel float in it. -->
@@ -1855,25 +1909,44 @@ div.dt-tile {
   <div class="ev-inner">
     <!-- Splash: the large Prism logo + the Prism wordmark. On click-in the big
          logo lifts and shrinks, morphing into the smaller nav ribbon up top. -->
-    <div class="ev-logo" id="evLogo" title="Begin">
-      <img class="ev-logo-prism" src="../src/img/Logo_1.png" alt="">
+    <!-- The live instrument — persists across the CARD and FRAMING steps, then
+         migrates to its seat when you take a position. OBJECT PERMANENCE
+         (Sailor 2026-07-11): the splash hero IS the nav ribbon art, same image
+         as the seated navigator, so it shrinks + slides into its seat with
+         zero shape change. Grabbable on the splash (see ev-live). -->
+    <div class="ev-logo ev-live" id="evLogo" title="Begin">
+      <img class="ev-logo-prism" src="../src/img/prism_nav_full.png" alt="">
       <img class="ev-logo-word" src="../src/img/Font_logo_1.png" alt="Prism">
     </div>
-    <div class="ev-category" id="evCategory"></div>
-    <h1 class="ev-title" id="evTitle"></h1>
-    <div class="ev-rule" id="evRule"></div>
-    <p class="ev-framing" id="evFraming"></p>
-    <div class="ev-keywords" id="evKeywords" data-band="fluid" data-ted-hint="Those words are the weather of this whole thing — the cloud you're about to take a position inside."></div>
-    <button class="ev-enter" id="evEnter" data-ted-hint="When you've got a feel for it, hit this. It drops you into the Prism to set your aperture.">
-      <span class="ev-enter-label">take a position</span>
-      <span class="ev-enter-glyph">&rarr;</span>
-    </button>
+
+    <!-- STEP 1 · CARD — a clean title card. No body text, never scrolls. -->
+    <div class="ev-card" id="evCard">
+      <div class="ev-category" id="evCategory"></div>
+      <h1 class="ev-title" id="evTitle"></h1>
+      <button class="ev-enter ev-begin" id="evBegin" data-ted-hint="This drops you into the framing — the wall text for what happened.">
+        <span class="ev-enter-label">read the framing</span>
+        <span class="ev-enter-glyph">&rarr;</span>
+      </button>
+    </div>
+
+    <!-- STEP 2 · FRAMING BEAT — the editorial wall text + terms, one screen. -->
+    <div class="ev-framing-beat" id="evFramingBeat">
+      <div class="ev-framing-title" id="evFramingTitle"></div>
+      <div class="ev-rule" id="evRule"></div>
+      <p class="ev-framing" id="evFraming"></p>
+      <div class="ev-keywords" id="evKeywords" data-band="fluid" data-ted-hint="Those words are the weather of this whole thing — the cloud you're about to take a position inside."></div>
+      <button class="ev-enter" id="evEnter" data-ted-hint="When you've got a feel for it, hit this. It drops you into the Prism to set your aperture.">
+        <span class="ev-enter-label">take a position</span>
+        <span class="ev-enter-glyph">&rarr;</span>
+      </button>
+    </div><!-- /.ev-framing-beat -->
   </div>
 </section>
 
 <main>
   <div class="diatribe-eyebrow">the diatribe · upper-left · set your aperture</div>
-  <div class="framing" id="framing">[event framing loads here]</div>
+  <!-- framing now lives ONLY in the splash Framing beat (Sailor 2026-07-11) -->
+  <div class="framing" id="framing" hidden>[event framing loads here]</div>
 
   <div class="stage" id="stage">
 
@@ -2075,11 +2148,7 @@ div.dt-tile {
   <div class="ribbon-hint"><span class="ribbon-hint-name" id="ribbonName">Prism</span></div>
 </div>
 
-<div class="upper-tabs" id="upperTabs">
-  <button class="upper-tab" data-col="0" type="button">Diatribe</button>
-  <button class="upper-tab" data-col="1" type="button">Parallax</button>
-  <button class="upper-tab" data-col="2" type="button">Comparison</button>
-</div>
+<!-- upper-row tabs retired 2026-07-11 — the ribbon is the single nav instrument -->
 
 <!-- Lower-Left — The Beam (user record) -->
 <aside class="tri-panel" id="panelBeam" data-row="lower" data-panel="beam">
@@ -2503,11 +2572,14 @@ const evTitleEl    = document.getElementById('evTitle');
 const evFramingEl  = document.getElementById('evFraming');
 const evCloudEl    = document.getElementById('evKeywords');
 const evEnterBtn   = document.getElementById('evEnter');
+const evBeginBtn   = document.getElementById('evBegin');
+const evFramingTitleEl = document.getElementById('evFramingTitle');
 const evRule       = document.getElementById('evRule');
 const phaseLabel   = document.getElementById('phaseLabel');
 
 evCategoryEl.textContent = ev?.category || '';
 evTitleEl.textContent    = ev?.title    || '';
+if (evFramingTitleEl) evFramingTitleEl.textContent = ev?.title || '';
 evFramingEl.textContent  = ev?.framing  || '';
 
 // Framing keyword cloud. Prefer canonical event.framingKeywords; if absent,
@@ -2546,10 +2618,25 @@ buildFramingCloud(ev).forEach((w, i) => {
   evCloudEl.appendChild(span);
 });
 
-// Entrance choreography: title/category/rule rise via CSS delays; framing
-// develops (blur → focus) once they've settled; cloud staggers in after.
-setTimeout(() => evFramingEl.classList.add('develop'), 750);
-setTimeout(() => evCloudEl.querySelectorAll('.ev-kw').forEach(s => s.classList.add('in')), 1650);
+// Splash steps (Sailor 2026-07-11): CARD → FRAMING beat → diatribe. The card
+// is a clean title card; the framing beat carries the wall-text (its develop +
+// keyword stagger fire only when the beat opens, so nothing loads off-screen).
+let splashStep = 'card';
+let framingRevealed = false;
+function revealFraming() {
+  if (framingRevealed) return; framingRevealed = true;
+  // develop (blur → focus) the wall text; stagger the keyword cloud in after
+  setTimeout(() => evFramingEl.classList.add('develop'), 260);
+  setTimeout(() => evCloudEl.querySelectorAll('.ev-kw').forEach(s => s.classList.add('in')), 620);
+  setTimeout(() => { if (window.Ted) window.Ted.beat('framing', "This is the framing — the wall text for what happened. Read it, feel the weather of it, then take a position."); }, 900);
+}
+function goFraming() {
+  if (splashStep !== 'card' || entered || migrating) return;
+  splashStep = 'framing';
+  document.body.classList.remove('ev-step-card');
+  document.body.classList.add('ev-step-framing');
+  revealFraming();
+}
 
 // Hand off to the diatribe stage.
 let entered = false;
@@ -2563,27 +2650,117 @@ function enterDiatribe() {
   setTimeout(() => { if (!state.touched) cue.classList.add('show'); }, 1400);
   setTimeout(() => { if (window.Ted) window.Ted.beat('diatribe', "This slider's the Diatribe — how charged the whole thing feels to you, not which side you're on. Slide it and the responses shift. Be honest; nobody's grading."); }, 2200);
 }
-// The migration: the Prism logo glides up into the nav band, the real ribbon +
-// header fade into place (nav-ready), and the screen transforms into the
-// diatribe stage. Triggered by the logo OR the "take a position" button.
+// The migration (RULED 2026-07-11, Sailor): the Prism logo descends into the
+// nav tool's DIATRIBE seat — the aperture is not distinct from the Diatribe;
+// slider + responses ARE the upper-left cell. The ribbon fades in already
+// seated (bottom, beam-slice registered → prism reads bottom-right), and the
+// screen transforms into the diatribe stage. Triggered by the logo OR the
+// "take a position" button.
 let migrating = false;
 function migrateToDiatribe() {
   if (entered || migrating) return;
   migrating = true;
   const logo = document.getElementById('evLogo');
+  const hero = logo ? (logo.querySelector('.ev-logo-prism') || logo) : null;
+  // zero any live-grab nudge INSTANTLY before measuring, so the container sits
+  // at identity and the morph can't drift as a nudge springs back
+  if (logo) { logo.style.setProperty('--nudge-x', '0px'); logo.style.setProperty('--nudge-y', '0px'); }
+  // The hero IS the ribbon art (same image). Seat the nav at the Diatribe
+  // address (still hidden), measure the seated ribbon IMAGE's live rect, and
+  // morph the hero onto it as a UNIFORM scale + centre translate. Identical
+  // aspect → the hero overlays the ribbon exactly, so the handoff at arrival
+  // is invisible: one object settling into its seat. No triangle math, no
+  // aspect mismatch — the two are the same picture.
+  try {
+    if (window.PrismTriptych && hero) {
+      const rib = document.getElementById('prismRibbon');
+      // seat the ribbon INSTANTLY at the Diatribe address (no top-slide) so it
+      // is fixed exactly where the hero must land, from the very first frame
+      if (rib) rib.style.transition = 'none';
+      PrismTriptych.address(0, true, false);
+      if (rib) { void rib.offsetWidth; rib.style.transition = ''; }
+      const R = PrismTriptych.seatImgRect ? PrismTriptych.seatImgRect(0, true) : null;
+      if (R) {
+        const P = hero.getBoundingClientRect();           // source (same artwork, same aspect)
+        const s = Math.max(0.05, R.h / Math.max(1, P.height));
+        const tx = (R.x + R.w / 2) - (P.left + P.width / 2);
+        const ty = (R.y + R.h / 2) - (P.top + P.height / 2);
+        logo.style.setProperty('--morph-x', tx.toFixed(1) + 'px');
+        logo.style.setProperty('--morph-y', ty.toFixed(1) + 'px');
+        logo.style.setProperty('--morph-s', s.toFixed(3));
+      }
+    }
+  } catch (_) {}
   if (logo) logo.classList.add('migrate');
-  setTimeout(() => document.body.classList.add('nav-ready'), 360);  // ribbon fades in as the logo lifts
-  setTimeout(enterDiatribe, 720);                                   // morph completes, then reveal the diatribe surface
+  // Choreography (real ms): hero rides FULLY OPAQUE for its entire 720ms travel.
+  // The identical ribbon is revealed solid underneath at 520ms (hidden by the
+  // opaque hero). The hero ARRIVES at 720ms exactly on the ribbon, then fades
+  // (0.72s delay in CSS) revealing the pixel-identical ribbon — invisible
+  // handoff. Only after that does enterDiatribe (900ms) flip the phase, whose
+  // event-phase exit-scale can no longer disturb the already-vanished hero.
+  setTimeout(() => document.body.classList.add('nav-ready'), 520);
+  setTimeout(enterDiatribe, 900);
 }
-evEnterBtn.addEventListener('click', migrateToDiatribe);
-{ const logo = document.getElementById('evLogo'); if (logo) logo.addEventListener('click', migrateToDiatribe); }
+// One advance control across the splash: CARD → FRAMING → diatribe. The prism
+// itself advances too (a clean click; a grab/nudge does not — see ev-live).
+let logoDragged = false;
+function advanceSplash() {
+  if (entered || migrating) return;
+  if (splashStep === 'card') goFraming();
+  else migrateToDiatribe();
+}
+if (evBeginBtn) evBeginBtn.addEventListener('click', e => { e.stopPropagation(); goFraming(); });
+evEnterBtn.addEventListener('click', e => { e.stopPropagation(); migrateToDiatribe(); });
+{ const logo = document.getElementById('evLogo'); if (logo) logo.addEventListener('click', () => { if (!logoDragged) advanceSplash(); }); }
 window.addEventListener('keydown', e => {
   if (document.body.classList.contains('phase-event') &&
       (e.key === 'Enter' || e.key === ' ')) {
     e.preventDefault();
-    migrateToDiatribe();
+    advanceSplash();
   }
 });
+
+// LIVE prism — the splash instrument leans toward the cursor and is grabbable
+// (rides the finger within a clamped range, springs back on release). A clean
+// click still advances (logoDragged gates the click handler above). The nudge
+// rides the container transform; the seat-morph rides the prism image.
+(function liveLogo() {
+  const logo = document.getElementById('evLogo');
+  const stage = document.getElementById('eventPhase');
+  if (!logo || !stage) return;
+  const GRAB = 46;
+  let grabbing = false, sx = 0, sy = 0;
+  const setNudge = (x, y) => { logo.style.setProperty('--nudge-x', x.toFixed(1) + 'px'); logo.style.setProperty('--nudge-y', y.toFixed(1) + 'px'); };
+  const live = () => document.body.classList.contains('phase-event') && !migrating && !entered;
+  // gentle lean toward the pointer while hovering the splash
+  stage.addEventListener('pointermove', e => {
+    if (grabbing || !live()) return;
+    const r = logo.getBoundingClientRect(), cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+    setNudge(Math.max(-11, Math.min(11, (e.clientX - cx) / 26)), Math.max(-9, Math.min(9, (e.clientY - cy) / 26)));
+  });
+  stage.addEventListener('pointerleave', () => { if (!grabbing) setNudge(0, 0); });
+  // grab: follow the finger 1:1 within the clamp, spring back on release
+  logo.addEventListener('pointerdown', e => {
+    if (!live()) return;
+    grabbing = true; logoDragged = false; sx = e.clientX; sy = e.clientY;
+    logo.style.transition = 'none'; try { logo.setPointerCapture(e.pointerId); } catch (_) {}
+  });
+  logo.addEventListener('pointermove', e => {
+    if (!grabbing) return;
+    const rawx = e.clientX - sx, rawy = e.clientY - sy;
+    if (Math.abs(rawx) > 5 || Math.abs(rawy) > 5) logoDragged = true;
+    setNudge(Math.max(-GRAB, Math.min(GRAB, rawx)), Math.max(-GRAB, Math.min(GRAB, rawy)));
+  });
+  function release() {
+    if (!grabbing) return;
+    grabbing = false;
+    logo.style.transition = '';   // restore the springy return…
+    setNudge(0, 0);               // …and let it spring home
+    setTimeout(() => { logoDragged = false; }, 60);
+  }
+  logo.addEventListener('pointerup', release);
+  logo.addEventListener('pointercancel', release);
+})();
 
 // ---- State ----
 const state = {
@@ -3463,6 +3640,9 @@ function enterGraph() {
   document.body.classList.remove('phase-answers');
   document.body.classList.add('phase-graph');
   phaseLabel.innerHTML = 'prism · <strong>v2</strong> · your pin';
+  // response submitted → the nav migrates, carrying the user out of the
+  // Diatribe and into the Prism panel (RULED 2026-07-11, Sailor)
+  try { if (window.PrismTriptych) PrismTriptych.address(1, false, true); } catch (_) {}
 }
 
 function backFromGraph() {
@@ -3471,6 +3651,8 @@ function backFromGraph() {
   phaseLabel.innerHTML = 'prism · <strong>v2</strong> · responses';
   ambient.classList.remove('fluid', 'coalition', 'denominated');
   ambient.classList.add(committedBand);
+  // back into the reading → the nav returns to its Diatribe seat
+  try { if (window.PrismTriptych) PrismTriptych.address(0, true, true); } catch (_) {}
 }
 
 // Synthetic "other voices" — clustered per quadrant, band follows intensity
@@ -4246,6 +4428,10 @@ function gmCommit() {
 // — prism-graphmap.js stays keep-out. The institutional layer never moves.
 let visorDots = [], visorPoured = false, visorP = 0, visorRAF = null;
 const visorNoteEl = document.getElementById('visorNote');
+// ?dev → dev-skip on <html>: the gate visorField() reads for the synthetic
+// stand-in (found dead in browser verification 2026-07-11 — the class was
+// checked but never set).
+try { if (new URLSearchParams(location.search).has('dev')) document.documentElement.classList.add('dev-skip'); } catch (_) {}
 
 // The aggregate source. The push pipeline (carried) is the REAL source; until
 // it lands there is no aggregate — the honest field is empty ("still
@@ -5898,7 +6084,7 @@ applyState(true);
   const ribbon    = document.getElementById('prismRibbon');
   const ribbonImg = document.getElementById('prismRibbonImg');
   const ribbonNm  = document.getElementById('ribbonName');
-  const upperTabs = document.getElementById('upperTabs');
+  // upperTabs retired 2026-07-11 — the ribbon is the single nav instrument
   const scrim     = document.getElementById('triScrim');
 
   // Which slice of the ribbon art centres per column; where the prism triangle
@@ -5913,9 +6099,36 @@ applyState(true);
   let col = 1, shade = false, current = 'prism';
   let dx0 = null, dy0 = null, dragMoved = false, intent = null;
 
+  // Reading-flow guard (RULED 2026-07-11, Sailor — ontological nav linking):
+  // the aperture is not distinct from the Diatribe — the slider + responses
+  // ARE the upper-left cell, so the nav sits at the Diatribe address for both
+  // phases. While the live reading is on screen the cell's surface IS the
+  // flow, so the record panel never opens over it; everything else (seat,
+  // slice, label, tabs) runs through the ONE position function below.
+  function flowLive() {
+    const c = document.body.classList;
+    return c.contains('phase-event') || c.contains('phase-diatribe') || c.contains('phase-answers');
+  }
+
   function currentName() { return shade ? UPPER[col] : LOWER[col]; }
 
+  // FREE-PLANE NAV (Sailor 2026-07-11: "feels sticky, like the code predicts
+  // where I'm going — I want real-life movement, the other panels already
+  // there"). During a drag the finger owns the ribbon 1:1 in BOTH axes (no
+  // intent-lock, no threshold jumps); the destination cell's surface is
+  // revealed LIVE as you cross into it (object permanence — it was already
+  // there), and release eases the ribbon to the nearest cell's exact seat.
+  let dragging = false;
+  // horizontal translateX of the ribbon image for a given cell (mirrors
+  // positionRibbon's slice math) — the analytic column seats to snap between
+  function imgLeftFor(c, sh) {
+    const imgW = (ribbonImg.offsetHeight || (ribbon.clientHeight || 70) * 0.76) * RIBBON_ASPECT;
+    const frac = (sh && c === 1) ? TRIANGLE_FRAC : COL_FRAC[c];
+    return Math.round(window.innerWidth * 0.5 - frac * imgW);
+  }
+
   function positionRibbon(animated) {
+    if (dragging) return;   // the finger owns the ribbon during a free-plane drag
     const imgW = (ribbonImg.offsetHeight || (ribbon.clientHeight || 70) * 0.76) * RIBBON_ASPECT;
     const vw = window.innerWidth;
     // visor seated: the whole nav seats bottom-CENTER — the prism triangle
@@ -5925,14 +6138,24 @@ applyState(true);
     if (!animated) ribbonImg.style.transition = 'none';
     ribbonImg.style.transform = 'translateY(-50%) translateX(' + left + 'px)';
     if (!animated) { void ribbonImg.offsetWidth; ribbonImg.style.transition = ''; }
-    const triX = left + TRIANGLE_FRAC * imgW;
-    const pct = Math.max(18, Math.min(82, (triX / vw) * 100));
-    document.documentElement.style.setProperty('--triangle-x', pct + '%');
+  }
+
+  // viewport point of the prism triangle at the ribbon's TARGET seat for the
+  // current col/shade — computed analytically, NOT from a live rect: the seat
+  // move is a CSS transition, so a rect read mid-flight gives yesterday's
+  // position. The morph must aim at where the ribbon will BE (object
+  // permanence — the logo lands ON the triangle).
+  function trianglePoint() {
+    const imgH = ribbonImg.offsetHeight || (ribbon.clientHeight || 70) * 0.76;
+    const imgW = imgH * RIBBON_ASPECT;
+    const frac = (shade && col === 1) ? TRIANGLE_FRAC : COL_FRAC[col];
+    const left = Math.round(window.innerWidth * 0.5 - frac * imgW);
+    const top  = shade ? ribbonBottomSeat() : ribbonTopSeat();
+    return { x: left + TRIANGLE_FRAC * imgW, y: top + (ribbon.offsetHeight || 92) / 2, h: imgH };
   }
 
   function updateChrome() {
     if (ribbonNm) ribbonNm.textContent = LABELS[col][shade ? 1 : 0];
-    if (upperTabs) upperTabs.querySelectorAll('.upper-tab').forEach(t => t.classList.toggle('active', +t.dataset.col === col));
   }
 
   function applyNav(animated) {
@@ -5942,13 +6165,22 @@ applyState(true);
     const visor = shade && col === 1;
     document.documentElement.classList.toggle('parallax-mode', shade);
     document.documentElement.classList.toggle('visor-mode', visor);
+    // FREE-ROAM during the reading flow (Sailor 2026-07-11: "let the user go
+    // wherever they want"): the ribbon may leave the Diatribe seat mid-read.
+    // But the reading surface is the Diatribe CELL — so it shows ONLY while the
+    // nav is AT that address. Wander off and it clears (state persists), so the
+    // destination cell never renders over the live reading flow. Come back and
+    // it returns. Position ≡ which surface is on screen.
+    document.body.classList.toggle('flow-nav-away', flowLive() && !(shade && col === 0));
     // one open pane per column, ever — with the cards ditched the panels are
     // see-through, so a lower pane left open under an upper one would double
     // its text straight through the glass (2026-07-11)
     panelEls.beam.classList.toggle('open', col === 0 && !shade);
     panelEls.refraction.classList.toggle('open', col === 2 && !shade);
-    UPPER.forEach((n, i) => { if (panelEls[n]) panelEls[n].classList.toggle('open', shade && col === i); });
-    const covering = col !== 1;          // the visor never covers — side panes only LOCK the stage now
+    UPPER.forEach((n, i) => { if (panelEls[n]) panelEls[n].classList.toggle('open', shade && col === i && !(n === 'diatribe' && flowLive())); });
+    // the visor never covers — side panes only LOCK the stage now; the flow's
+    // own Diatribe address covers nothing (the surface IS the cell)
+    const covering = col !== 1 && !(shade && col === 0 && flowLive());
     // Refraction is a full-bleed stage like Prism (no card): hide the base graph
     // + scrim so the shared ambient field shows behind its own graphmap.
     const refMode = (col === 2 && !shade);
@@ -5961,13 +6193,13 @@ applyState(true);
     // visor presence: pour lazily, then tween to the seat state (a live drag
     // has already driven the analog partials — the release lands here)
     try {
-      if (visor) { visorEnsurePoured(); visorTickerRender(); visorTo(1); }
-      else if (visorP > 0) visorTo(0);
+      if (visor) { visorEnsurePoured(); visorTickerRender(); if (!dragging) visorTo(1); }
+      else if (visorP > 0 && !dragging) visorTo(0);
     } catch (e) { console.warn('[triptych] visor', e); }
     try {
       if (col === 0 && !shade) renderPanel('beam');
       else if (col === 2 && !shade) renderPanel('refraction');
-      if (shade && col !== 1) renderPanel(UPPER[col]);
+      if (shade && col !== 1 && !(col === 0 && flowLive())) renderPanel(UPPER[col]);
     } catch (e) { console.warn('[triptych] render', e); }
   }
 
@@ -5979,26 +6211,29 @@ applyState(true);
            if (li >= 0) { col = li; shade = false; } else if (ui >= 0) { col = ui; shade = true; } }
     applyNav(true);
   }
-  function closePanel() { if (shade) shade = false; else col = 1; applyNav(true); }
+  function closePanel() {
+    // the live reading owns the address: closing any pane mid-flow returns
+    // the nav to the Diatribe seat, not to Prism/Beam (2026-07-11 ruling)
+    if (flowLive()) { col = 0; shade = true; }
+    else if (shade) shade = false; else col = 1;
+    applyNav(true);
+  }
 
   // ribbon click-zones → jump column (ignored if the press was a drag)
   ribbon.querySelectorAll('.ribbon-zone').forEach(z => z.addEventListener('click', e => {
     e.stopPropagation(); if (dragMoved) return; goCol(+z.dataset.col, true);
   }));
-  // upper tabs → set column + ensure shade
-  upperTabs.querySelectorAll('.upper-tab').forEach(t => t.addEventListener('click', () => { col = +t.dataset.col; shade = true; applyNav(true); }));
   // close affordances
   document.querySelectorAll('.tri-panel .tri-close').forEach(b => b.addEventListener('click', closePanel));
   scrim.addEventListener('click', closePanel);
-  document.addEventListener('keydown', e => { if (e.key === 'Escape' && (shade || col !== 1)) closePanel(); });
+  document.addEventListener('keydown', e => {
+    if (e.key !== 'Escape' || (!shade && col === 1)) return;
+    // the flow's Diatribe address isn't a panel to close — Escape only acts
+    // if an actual pane is open over the flow
+    if (flowLive() && shade && col === 0 && !document.querySelector('.tri-panel.open')) return;
+    closePanel();
+  });
 
-  // ribbon drag — horizontal shifts columns. Vertical at the CENTER column is
-  // the ANALOG VISOR (2026-07-11, "like pulling down a VR glass"): the ribbon
-  // rides the finger 1:1 between its two seats and the aggregate's presence
-  // tracks the pull; release snaps to the nearer seat. Side columns keep the
-  // threshold shade. (Intent-lock removal = free-plane nav, next session.)
-  const VISOR_SNAP = 0.5;
-  let visorDrag = null;   // { topSeat, travel, from, p } while a col-1 vertical drag runs
   function ribbonTopSeat() {
     // mirror of the CSS seat: top = safe-top + hdr-h (the header's own height)
     const h = document.querySelector('header');
@@ -6008,37 +6243,67 @@ applyState(true);
     const sb = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--safe-bottom')) || 0;
     return window.innerHeight - ribbon.offsetHeight - sb;
   }
-  ribbon.addEventListener('pointerdown', e => { dx0 = e.clientX; dy0 = e.clientY; dragMoved = false; intent = null; try { ribbon.setPointerCapture(e.pointerId); } catch (_) {} });
+
+  // ── FREE-PLANE DRAG ─────────────────────────────────────────────────────
+  // No intent-lock, no threshold jumps. The ribbon rides the finger 1:1 across
+  // BOTH axes at once (diagonal is fine). As the ribbon crosses into a cell,
+  // that cell's surface is shown immediately (panels are pre-warmed, so the
+  // content is already sitting there). Release eases to the nearest cell's
+  // exact seat. Row: top seat = lower row (Beam/Prism/Refraction); bottom seat
+  // = upper row (Diatribe/Parallax/Comparison — pull the instrument DOWN toward
+  // you). At the centre column the vertical pull also drives the visor presence
+  // analog (the aggregate glass tracks the finger).
+  let plane = null;   // { startLeft, startTop, topSeat, botSeat, leftMax, leftMin, lastC, lastS }
+  function nearestColFromLeft(left) {
+    let best = 0, bd = Infinity;
+    for (let c = 0; c < 3; c++) { const d = Math.abs(left - imgLeftFor(c, plane.rowShade)); if (d < bd) { bd = d; best = c; } }
+    return best;
+  }
+  ribbon.addEventListener('pointerdown', e => {
+    dx0 = e.clientX; dy0 = e.clientY; dragMoved = false;
+    const topSeat = ribbonTopSeat(), botSeat = ribbonBottomSeat();
+    plane = {
+      startLeft: imgLeftFor(col, shade), startTop: shade ? botSeat : topSeat,
+      topSeat: topSeat, botSeat: botSeat, travel: Math.max(1, botSeat - topSeat),
+      leftMax: imgLeftFor(0, shade), leftMin: imgLeftFor(2, shade),
+      rowShade: shade, lastC: col, lastS: shade
+    };
+    dragging = true;
+    ribbon.style.transition = 'none'; ribbonImg.style.transition = 'none';
+    try { ribbon.setPointerCapture(e.pointerId); } catch (_) {}
+  });
   ribbon.addEventListener('pointermove', e => {
-    if (dx0 == null) return;
+    if (!plane) return;
     const dx = e.clientX - dx0, dy = e.clientY - dy0;
-    if (intent === null && (Math.abs(dx) > 7 || Math.abs(dy) > 7)) { intent = Math.abs(dx) > Math.abs(dy) ? 'h' : 'v'; dragMoved = true; }
-    if (intent === 'h' && Math.abs(dx) > 46) { goCol(col + (dx < 0 ? 1 : -1), true); dx0 = null; }
-    else if (intent === 'v') {
-      if (col === 1) {
-        if (!visorDrag) {
-          const topSeat = ribbonTopSeat();
-          visorDrag = { topSeat, travel: Math.max(1, ribbonBottomSeat() - topSeat), from: shade ? 1 : 0, p: shade ? 1 : 0 };
-          try { visorEnsurePoured(); visorTickerRender(); } catch (_) {}
-          ribbon.style.transition = 'none';
-        }
-        const p = Math.max(0, Math.min(1, visorDrag.from + dy / visorDrag.travel));
-        visorDrag.p = p;
-        ribbon.style.top = (visorDrag.topSeat + p * visorDrag.travel) + 'px';
-        try { visorApply(p); } catch (_) {}
-      } else {
-        if (dy > 46 && !shade) { setShade(true); dx0 = null; }
-        else if (dy < -46 && shade) { setShade(false); dx0 = null; }
-      }
+    if (!dragMoved && (Math.abs(dx) > 4 || Math.abs(dy) > 4)) dragMoved = true;
+    // 1:1 follow, clamped to the plane's bounds
+    const left = Math.max(plane.leftMin, Math.min(plane.leftMax, plane.startLeft + dx));
+    const top  = Math.max(plane.topSeat, Math.min(plane.botSeat, plane.startTop + dy));
+    ribbonImg.style.transform = 'translateY(-50%) translateX(' + left + 'px)';
+    ribbon.style.top = top + 'px';
+    // which cell are we over right now?
+    const vFrac = (top - plane.topSeat) / plane.travel;     // 0 = lower row, 1 = upper row
+    const nShade = vFrac >= 0.5;
+    plane.rowShade = nShade;                                  // slice math follows the row
+    const nCol = nearestColFromLeft(left);
+    if (nCol !== plane.lastC || nShade !== plane.lastS) {
+      col = nCol; shade = nShade; plane.lastC = nCol; plane.lastS = nShade;
+      applyNav(false);                                        // reveal destination (positionRibbon & visor-snap are guarded off while dragging)
     }
+    // centre-column vertical drives the visor glass presence analog; leaving
+    // the centre clears it so it doesn't linger over a side cell
+    try {
+      if (nCol === 1) { visorEnsurePoured(); visorApply(Math.max(0, Math.min(1, vFrac))); }
+      else if (visorP > 0) visorApply(0);
+    } catch (_) {}
   });
   function endDrag() {
-    if (visorDrag) {
-      const seat = visorDrag.p >= VISOR_SNAP;
-      visorDrag = null;
-      ribbon.style.transition = '';   // restore the CSS transition first…
-      setShade(seat);                 // …so the class snap animates the seat
-      ribbon.style.top = '';          // release the analog inline position
+    if (plane) {
+      dragging = false;
+      plane = null;
+      ribbon.style.transition = ''; ribbonImg.style.transition = '';   // restore the ease…
+      ribbon.style.top = '';                                            // …release the inline row so CSS seats it
+      applyNav(true);                                                   // ease to the nearest cell's exact seat + settle the visor
     }
     dx0 = null; dy0 = null; setTimeout(() => { dragMoved = false; }, 30);
   }
@@ -6047,9 +6312,38 @@ applyState(true);
 
   window.addEventListener('resize', () => positionRibbon(false));
   applyNav(false);
+  // PRE-WARM every cell's surface once, so as the ribbon roams the destination
+  // content is ALREADY THERE (object permanence — no lazy pour on arrival).
+  // Rendered into closed/hidden panels, so nothing shows until you cross in.
+  try {
+    renderPanel('beam'); renderPanel('refraction');
+    if (panelEls.comparison) renderPanel('comparison');
+    if (panelEls.diatribe)  renderPanel('diatribe');
+    if (typeof visorEnsurePoured === 'function') { visorEnsurePoured(); visorTickerRender(); }
+  } catch (e) { console.warn('[triptych] prewarm', e); }
   if (ribbonImg && !ribbonImg.complete) ribbonImg.addEventListener('load', () => positionRibbon(false));
 
-  window.PrismTriptych = { open: openPanel, close: closePanel, go: goCol, refresh: function () { applyNav(false); } };
+  window.PrismTriptych = {
+    open: openPanel, close: closePanel, go: goCol,
+    // address(col, shade) — the reading flow's hook into the ONE position
+    // function: same seats, same slices, same labels as the panels. No drift.
+    address: function (c, sh, animated) { col = Math.max(0, Math.min(2, c)); shade = !!sh; applyNav(animated !== false); },
+    trianglePoint: trianglePoint,
+    // seatImgRect(col, shade) — the ribbon IMAGE's target rect at that address,
+    // computed analytically (NOT a live rect: the seat move is a CSS `top`
+    // transition, so a mid-flight read gives yesterday's position). Used by the
+    // splash→Diatribe morph to land the identical hero exactly on the ribbon.
+    seatImgRect: function (c, sh) {
+      const imgH = ribbonImg.offsetHeight || (ribbon.clientHeight || 70) * 0.78;
+      const imgW = imgH * RIBBON_ASPECT;
+      const frac = (sh && c === 1) ? TRIANGLE_FRAC : COL_FRAC[c];
+      const x = Math.round(window.innerWidth * 0.5 - frac * imgW);
+      const seatTop = sh ? ribbonBottomSeat() : ribbonTopSeat();
+      const y = seatTop + (ribbon.offsetHeight || 92) / 2 - imgH / 2;
+      return { x: x, y: y, w: imgW, h: imgH };
+    },
+    refresh: function () { applyNav(false); },
+  };
 
   // ── helpers ──
   function evTitleOf(id) { try { const e = PrismDB.getEvent(id); return (e && e.title) || id; } catch (_) { return id; } }
