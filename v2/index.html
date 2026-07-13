@@ -1150,6 +1150,15 @@ body.light .event-picker { color: rgba(40,44,54,0.85); background: rgba(255,255,
 .sp-graph { display: block; margin: 2px auto 0; }
 .sp-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
 .sp-chips .chip { font-family: var(--mono); font-size: 9px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-mid); border: 0.5px solid var(--rule); border-radius: 10px; padding: 3px 8px; }
+/* Alignment "stock" block */
+.sp-align-main { display: flex; align-items: baseline; gap: 10px; }
+.sp-align-val { font-family: var(--mono); font-size: 30px; line-height: 1; font-weight: 500; }
+.sp-align-frame { font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-low); }
+.sp-align-tick { font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; margin-left: auto; }
+.sp-spark { display: block; margin: 10px 0 2px; }
+.sp-align-sub { font-family: var(--mono); font-size: 11px; letter-spacing: 0.04em; color: var(--ink-mid); margin-top: 8px; display: flex; align-items: center; gap: 6px; }
+.sp-align-subval { font-weight: 500; }
+.sp-provisional { font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-low); border: 0.5px solid var(--rule); border-radius: 8px; padding: 1px 6px; margin-left: 4px; }
 @media (max-width: 640px) {
   .spectrum-profile { top: 12px; left: 12px; right: 12px; bottom: 12px; transform: none; width: auto; max-height: none; border-radius: 14px; }
 }
@@ -6559,6 +6568,98 @@ applyState(true);
       '<rect x="' + (cx - 5) + '" y="' + (cy - 5) + '" width="10" height="10" transform="rotate(45 ' + cx + ' ' + cy + ')" fill="' + partyHex(party) + '"/>' +
       '</svg>';
   }
+
+  // ── Alignment engine — the "dialectical stock" (2026-07-11, Sailor) ──
+  // A legislator's quote against a reference frame on a given event is a SIGNED
+  // index −100..+100: sign from which side of the event's decisive (prevalent)
+  // fault line they share with the reference; magnitude from prevalence-weighted
+  // closeness. All coords here are in the −100..+100 axis space (userPinData /
+  // response.coords units). Legislator pins convert (norm−0.5)*200.
+  //
+  // TUNING KNOBS (rule on feel with real data):
+  //   ALIGN_W_PREV / ALIGN_W_OTHER — how hard the prevalent axis carries it.
+  //   ALIGN_NEUTRAL — the per-axis distance at which agreement crosses 0 (below
+  //     → positive, above → negative; 2× → −1). Lower = stricter.
+  const ALIGN_W_PREV = 0.7, ALIGN_W_OTHER = 0.3, ALIGN_NEUTRAL = 100;
+  function alignPrevAxis(eventId) {
+    try { const pa = (PrismDB.getEvent(eventId) || {}).prevalentAxis; if (pa === 'x' || pa === 'y') return pa; } catch (_) {}
+    return null;   // unknown → equal weight, x treated as the sign axis
+  }
+  // per-axis signed agreement: +1 identical, 0 at ALIGN_NEUTRAL apart, −1 at 2×.
+  function axisAgree(u, m) { return Math.max(-1, Math.min(1, 1 - Math.abs(u - m) / ALIGN_NEUTRAL)); }
+  function alignmentIndex(mPos, refPos, eventId) {
+    if (!mPos || !refPos) return null;
+    const pa = alignPrevAxis(eventId);
+    const pk = pa || 'x', ok = pk === 'x' ? 'y' : 'x';
+    const wP = pa ? ALIGN_W_PREV : 0.5, wO = pa ? ALIGN_W_OTHER : 0.5;
+    const agr = wP * axisAgree(refPos[pk], mPos[pk]) + wO * axisAgree(refPos[ok], mPos[ok]);
+    return Math.round(Math.max(-100, Math.min(100, agr * 100)));
+  }
+  // A legislator's placement (−100..100) for a SPECIFIC event: derived override
+  // where it exists, else the (event-invariant) DW-NOMINATE / heuristic baseline.
+  function memberPosAtEvent(m, eventId) {
+    let dp = null; try { dp = PrismDB.getMemberPosition ? PrismDB.getMemberPosition(m.bioguideId, eventId) : null; } catch (_) {}
+    const useDerived = dp && dp.pin && (dp.provenance === 'DERIVED' || dp.provenance === 'MANUAL' || dp.adminOverride);
+    if (useDerived) return { x: (dp.pin.x - 0.5) * 200, y: (0.5 - dp.pin.y) * 200 };
+    const p = heuristicPlace(m); return { x: (p.x - 0.5) * 200, y: (0.5 - p.y) * 200 };
+  }
+  // YOUR position (−100..100) for an event: live pin for the current event, else
+  // the latest saved response's coords.
+  function userPosAtEvent(eventId) {
+    if (eventId === EVENT_ID && userPinData) return { x: userPinData.x, y: userPinData.y };
+    let rs = []; try { rs = (PrismDB.getResponsesForEvent ? PrismDB.getResponsesForEvent(eventId) : []).filter(r => !r.mock); } catch (_) {}
+    if (!rs.length) return null;
+    rs.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
+    const c = rs[0].coords; return c ? { x: c.x, y: c.y } : null;
+  }
+  // INTERIM PROXY aggregate (−100..100): centroid of the event's stored response
+  // dots. Provisional stand-in for the community field until the real push
+  // pipeline lands (see visorField / "the honest field is empty"). Swap here.
+  function aggPosAtEvent(eventId) {
+    let dots = []; try { dots = (PrismDB.getAggregateForEvent ? PrismDB.getAggregateForEvent(eventId) : []) || []; } catch (_) {}
+    let sx = 0, sy = 0, n = 0;
+    dots.forEach(function (d) { if (d && typeof d.x === 'number' && typeof d.y === 'number') { sx += (d.x - 0.5) * 200; sy += (0.5 - d.y) * 200; n++; } });
+    return n ? { x: sx / n, y: sy / n } : null;
+  }
+  // Events the user has responded to, oldest→newest (the time axis for a series).
+  function alignEventsChron() {
+    let evs = []; try { evs = (PrismDB.getEvents ? PrismDB.getEvents() : []) || []; } catch (_) {}
+    return evs.map(function (e) {
+      let rs = []; try { rs = (PrismDB.getResponsesForEvent ? PrismDB.getResponsesForEvent(e.id) : []).filter(r => !r.mock); } catch (_) {}
+      if (!rs.length) return null;
+      return { id: e.id, ts: Math.min.apply(null, rs.map(function (r) { return r.timestamp || 0; })) };
+    }).filter(Boolean).sort(function (a, b) { return a.ts - b.ts; });
+  }
+  // The per-event alignment series for a legislator against a frame ('you'|'agg'),
+  // plus the current value and the tick (Δ vs the previous event).
+  function alignSeries(m, frame) {
+    const evs = alignEventsChron(), series = [];
+    evs.forEach(function (e) {
+      const ref = frame === 'agg' ? aggPosAtEvent(e.id) : userPosAtEvent(e.id);
+      if (!ref) return;
+      const v = alignmentIndex(memberPosAtEvent(m, e.id), ref, e.id);
+      if (v != null) series.push({ eventId: e.id, value: v });
+    });
+    const cur = series.length ? series[series.length - 1].value : null;
+    const prev = series.length > 1 ? series[series.length - 2].value : null;
+    return { series: series, current: cur, prev: prev, tick: (cur != null && prev != null) ? (cur - prev) : null, provisional: frame === 'agg' };
+  }
+  function alignHex(v) { return v > 8 ? '#6fe0a8' : v < -8 ? '#e07474' : '#c9c9c9'; }
+  function alignTickGlyph(t) { return t == null ? '' : t > 0 ? '▲' : t < 0 ? '▼' : '▬'; }
+  function alignSparkline(series) {
+    if (!series || series.length < 2) return '';
+    const W = 128, H = 30, n = series.length;
+    const xs = function (i) { return Math.round(i / (n - 1) * (W - 4)) + 2; };
+    const ys = function (v) { return Math.round((H - 2) - ((v + 100) / 200) * (H - 4)) + 1; };
+    const pts = series.map(function (s, i) { return xs(i) + ',' + ys(s.value); }).join(' ');
+    const last = series[n - 1].value, col = alignHex(last), zeroY = ys(0);
+    return '<svg class="sp-spark" width="' + W + '" height="' + H + '" viewBox="0 0 ' + W + ' ' + H + '">' +
+      '<line x1="0" y1="' + zeroY + '" x2="' + W + '" y2="' + zeroY + '" stroke="rgba(255,255,255,0.14)" stroke-dasharray="2 2"/>' +
+      '<polyline points="' + pts + '" fill="none" stroke="' + col + '" stroke-width="1.5" stroke-linejoin="round"/>' +
+      '<circle cx="' + xs(n - 1) + '" cy="' + ys(last) + '" r="2.5" fill="' + col + '"/></svg>';
+  }
+  function fmtSigned(v) { return (v > 0 ? '+' : v < 0 ? '−' : '±') + Math.abs(v); }
+
   function showMemberProfile(m) {
     if (!m || !m.bioguideId) return;
     const els = ensureSpProfile(); const card = els.card;
@@ -6588,6 +6689,38 @@ applyState(true);
     syncFb();
     fb.addEventListener('click', function () { PrismDB.toggleFollow(m.bioguideId); syncFb(); try { renderRefraction(); } catch (_) {} if (window.PrismTriptych) { try { window.PrismTriptych.refresh(); } catch (_) {} } });
     card.appendChild(fb);
+
+    // ── Alignment "stock" — the headline metric: signed index + tick + sparkline
+    // vs YOU (real), and a provisional vs THE AGGREGATE reading beneath.
+    const you = alignSeries(m, 'you');
+    const align = document.createElement('div'); align.className = 'sp-section sp-align';
+    const alab = document.createElement('div'); alab.className = 'sp-section-label'; alab.textContent = 'alignment';
+    align.appendChild(alab);
+    if (you.current == null) {
+      const none = document.createElement('div'); none.className = 'sp-text'; none.textContent = 'Commit a pin on the Prism graph and this rates how they align with your record.';
+      align.appendChild(none);
+    } else {
+      const main = document.createElement('div'); main.className = 'sp-align-main';
+      const val = document.createElement('span'); val.className = 'sp-align-val'; val.textContent = fmtSigned(you.current); val.style.color = alignHex(you.current);
+      const frame = document.createElement('span'); frame.className = 'sp-align-frame'; frame.textContent = 'vs you';
+      const tick = document.createElement('span'); tick.className = 'sp-align-tick';
+      if (you.tick != null) { tick.textContent = alignTickGlyph(you.tick) + ' ' + Math.abs(you.tick); tick.style.color = you.tick > 0 ? '#6fe0a8' : you.tick < 0 ? '#e07474' : 'var(--ink-mid)'; }
+      main.appendChild(val); main.appendChild(frame); if (you.tick != null) main.appendChild(tick);
+      align.appendChild(main);
+      const spark = document.createElement('div'); spark.innerHTML = alignSparkline(you.series);
+      if (spark.firstChild) align.appendChild(spark.firstChild);
+      // provisional aggregate line
+      const agg = alignSeries(m, 'agg');
+      if (agg.current != null) {
+        const sub = document.createElement('div'); sub.className = 'sp-align-sub';
+        const av = document.createElement('span'); av.className = 'sp-align-subval'; av.textContent = fmtSigned(agg.current); av.style.color = alignHex(agg.current);
+        const af = document.createElement('span'); af.textContent = ' vs the aggregate';
+        const prov = document.createElement('span'); prov.className = 'sp-provisional'; prov.textContent = 'provisional';
+        sub.appendChild(av); sub.appendChild(af); sub.appendChild(prov);
+        align.appendChild(sub);
+      }
+    }
+    card.appendChild(align);
 
     const gsec = document.createElement('div'); gsec.className = 'sp-section';
     const glab = document.createElement('div'); glab.className = 'sp-section-label'; glab.textContent = 'on the plane' + (userPinData ? ' · ○ = your pin' : '');
