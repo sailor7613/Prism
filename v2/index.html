@@ -1850,6 +1850,22 @@ body.ticker-live #graphNote {
 .dt-tile.val-middling .dt-fig, .dt-tile.val-middling .dt-glyph { color: rgb(232, 148, 72); }   /* --band-coalition */
 .dt-tile.val-field    .dt-fig { color: var(--ink-mid); }
 
+/* ── ALIGNMENT WATCHLIST FEED (Sailor, 2026-07-13: "one instrument, the feed
+   follows the desk"). In the Spectrum/Refraction column the strip re-tags to
+   YOUR READING / THE AGGREGATE and scrolls the follows' alignment "stock"
+   quotes — big signed figure, tick riding it, the legislator as the whisper
+   label. Same chip, same grammar; only the tick span and the near-zero gray
+   (alignHex's neutral — NOT band orange: a flat quote isn't a coalition
+   claim) are new. */
+.dt-tick { font-size: calc(10px * var(--dt-type, 1)); letter-spacing: 0.04em; font-variant-numeric: tabular-nums; }
+.dt-tick.up   { color: rgb(84, 200, 138); }
+.dt-tick.down { color: rgb(232, 88, 88); }
+.dt-tick.flat { color: var(--ink-low); }
+.dt-tile.val-neutral .dt-fig, .dt-tile.val-neutral .dt-glyph { color: #c9c9c9; }
+/* the Spectrum's scrolling list gains clearance so its last rows can clear
+   the strip (mirror of the .graph-phase clearance above) */
+body.ticker-live #panelSpectrum .tri-body { padding-bottom: calc(100px + var(--safe-bottom)); }
+
 /* CHOSEN chip: GLASS SLUG — restrained early-2000s translucency.
    Interactive tiles only; the non-interactive register stays engraved. */
 button.dt-tile {
@@ -5283,6 +5299,75 @@ function renderTicker() {
   if (dtEdge) dtEdge.hidden = true;   // edge call arms itself per cycle
 }
 
+// ── ALIGNMENT WATCHLIST FEED — the strip's second desk (Sailor, 2026-07-13:
+// one instrument, the feed follows the column). The Prism column scrolls the
+// delta ledger above; the Spectrum/Refraction column swaps THIS feed in:
+// your follows' alignment "stock" quotes, rows YOUR READING / THE AGGREGATE
+// (2026-07-12 handoff §2.1 — the parked half of the dialectical stock).
+// The triptych IIFE owns the alignment engine + the follows, so it builds
+// the quote DATA and hands it here; this side only renders chips into the
+// existing shell. Restoring the delta feed re-runs renderTicker(), so the
+// ledger view is never stale.
+let dtAlignOn = false, dtPriorHidden = null;
+
+function dtAlignTileEl(t, onTap) {
+  // number-led per the tile grammar: big signed figure, tick riding it,
+  // legislator as the whisper label. GLASS SLUG (button) when tappable;
+  // quiet cells stay engraved (div).
+  const el = document.createElement(onTap ? 'button' : 'div');
+  if (onTap) el.type = 'button';
+  el.className = 'dt-tile val-' + (t.valence || 'field');
+  const top = document.createElement('span'); top.className = 'dt-top';
+  const f = document.createElement('span'); f.className = 'dt-fig'; f.textContent = t.figure || '';
+  top.appendChild(f);
+  if (t.tick) { const k = document.createElement('span'); k.className = 'dt-tick ' + (t.tickDir || 'flat'); k.textContent = t.tick; top.appendChild(k); }
+  const l = document.createElement('span'); l.className = 'dt-label'; l.textContent = t.label || '';
+  el.appendChild(top); el.appendChild(l);
+  if (onTap) el.addEventListener('click', function () { onTap(t); });
+  return el;
+}
+
+function dtAlignFill(track, tiles, onTap) {
+  track.innerHTML = '';
+  for (let copy = 0; copy < 2; copy++) {   // two cycles → seamless −50% marquee
+    const cyc = document.createElement('span'); cyc.className = 'dt-cycle';
+    tiles.forEach(t => cyc.appendChild(dtAlignTileEl(t, t.m ? onTap : null)));
+    track.appendChild(cyc);
+  }
+}
+
+function dtShowAlignFeed(youTiles, aggTiles, onTap, followedCount) {
+  if (!dtEl || !dtPersonalTrack || !dtFieldTrack) return;
+  if (!dtAlignOn) { dtAlignOn = true; dtPriorHidden = dtEl.hidden; }
+  const fTag = dtEl.querySelector('.dt-field .dt-rowtag');
+  if (fTag) fTag.textContent = 'the aggregate · provisional';   // proxy centroid until the push pipeline lands
+  dtAlignFill(dtPersonalTrack, youTiles, onTap);
+  dtAlignFill(dtFieldTrack, aggTiles.length ? aggTiles
+    : [{ figure: '—', label: 'the aggregate still precipitating' }], onTap);
+  const dtStatus = document.getElementById('dtStatus');
+  if (dtStatus) {
+    dtStatus.innerHTML = '';
+    const s1 = document.createElement('span'); s1.textContent = 'watchlist';
+    const s2 = document.createElement('span'); s2.textContent = (followedCount || 0) + ' followed';
+    dtStatus.appendChild(s1); dtStatus.appendChild(s2);
+  }
+  dtEl.hidden = false;
+  document.body.classList.add('ticker-live');
+  if (dtEdge) dtEdge.hidden = true;   // the edge call is Prism-desk chrome; never over the watchlist
+}
+
+function dtShowDeltaFeed() {
+  if (!dtAlignOn) return;
+  dtAlignOn = false;
+  const fTag = dtEl && dtEl.querySelector('.dt-field .dt-rowtag');
+  if (fTag) fTag.textContent = 'the field';
+  renderTicker();                       // rebuild tracks + status plate from the ledger
+  if (dtPriorHidden) {                  // strip wasn't live before the swap — restore
+    dtEl.hidden = true; document.body.classList.remove('ticker-live');
+  }
+  dtPriorHidden = null;
+}
+
 // ── Tap → Kaleidoscope replay (spec §6): the glyph's pattern made spatial.
 // One camera move + one drawn space per species, valence-colored, replayed
 // from the ledger's FROZEN coordinates — never live positions. ──
@@ -6260,6 +6345,13 @@ applyState(true);
       else if (col === 2 && !shade) renderPanel('refraction');
       if (shade && col !== 1 && !(col === 0 && flowLive())) renderPanel(UPPER[col]);
     } catch (e) { console.warn('[triptych] render', e); }
+    // The bottom strip follows the desk (Sailor, 2026-07-13): the Spectrum/
+    // Refraction column prices the alignment watchlist; every other address
+    // restores the delta ledger feed.
+    try {
+      if (col === 2) renderAlignFeed();
+      else if (typeof dtShowDeltaFeed === 'function') dtShowDeltaFeed();
+    } catch (e) { console.warn('[triptych] align feed', e); }
   }
 
   function goCol(i, animated) { col = Math.max(0, Math.min(2, i)); applyNav(animated !== false); }
@@ -6580,7 +6672,12 @@ applyState(true);
   //   ALIGN_W_PREV / ALIGN_W_OTHER — how hard the prevalent axis carries it.
   //   ALIGN_NEUTRAL — the per-axis distance at which agreement crosses 0 (below
   //     → positive, above → negative; 2× → −1). Lower = stricter.
-  const ALIGN_W_PREV = 0.7, ALIGN_W_OTHER = 0.3, ALIGN_NEUTRAL = 100;
+  // CALIBRATED 2026-07-13 (Sailor): 100 → 60. Full-roster sweep vs the real
+  // record (evt_010, pa=x, user −50/+50): at 100 the market read 86% green,
+  // median +43 — everyone's a buy. At 60 it's a balanced market: 49% green /
+  // 45% red, median +5; D follows hold (+52/+49), R follows price negative
+  // (−57/−62). Re-rule when more events are in the store.
+  const ALIGN_W_PREV = 0.7, ALIGN_W_OTHER = 0.3, ALIGN_NEUTRAL = 60;
   function alignPrevAxis(eventId) {
     try { const pa = (PrismDB.getEvent(eventId) || {}).prevalentAxis; if (pa === 'x' || pa === 'y') return pa; } catch (_) {}
     return null;   // unknown → equal weight, x treated as the sign axis
@@ -6659,6 +6756,45 @@ applyState(true);
       '<circle cx="' + xs(n - 1) + '" cy="' + ys(last) + '" r="2.5" fill="' + col + '"/></svg>';
   }
   function fmtSigned(v) { return (v > 0 ? '+' : v < 0 ? '−' : '±') + Math.abs(v); }
+
+  // ── Alignment watchlist feed (handoff §2.1 — the parked half, built
+  // 2026-07-13). One quote per follow: signed index vs the frame, tick vs
+  // the previous event, the legislator as the whisper. Rows sort by value
+  // desc — greens lead, reds trail, a leaderboard read. Tap → their profile
+  // card. The strip itself lives outside this IIFE (dtShowAlignFeed /
+  // dtShowDeltaFeed); applyNav swaps the feed as the ribbon crosses columns,
+  // and refresh() (follow toggles) re-prices it live.
+  function alignQuoteTile(m, frame) {
+    const s = alignSeries(m, frame);
+    if (s.current == null) return null;
+    return {
+      v: s.current,
+      figure: fmtSigned(s.current),
+      tick: s.tick != null ? (alignTickGlyph(s.tick) + (s.tick ? Math.abs(s.tick) : '')) : '',
+      tickDir: s.tick > 0 ? 'up' : s.tick < 0 ? 'down' : 'flat',
+      // valence thresholds mirror alignHex (±8); near-zero reads neutral
+      // gray, not band orange — a flat quote isn't a coalition claim
+      valence: s.current > 8 ? 'toward' : s.current < -8 ? 'apart' : 'neutral',
+      label: trkName(m) + ' · ' + [(m.party || 'I').toUpperCase(), m.state].filter(Boolean).join(' '),
+      m: m
+    };
+  }
+  function renderAlignFeed() {
+    if (typeof dtShowAlignFeed !== 'function') return;
+    Promise.resolve(ensureMembers()).then(function () {
+      if (col !== 2) return;                       // roamed away while the roster loaded
+      const fm = followedMembers();
+      const byV = function (a, b) { return b.v - a.v; };
+      const you = fm.map(function (m) { return alignQuoteTile(m, 'you'); }).filter(Boolean).sort(byV);
+      const agg = fm.map(function (m) { return alignQuoteTile(m, 'agg'); }).filter(Boolean).sort(byV);
+      // quiet cells keep the empty-ledger grammar: engraved, one line of truth
+      const quiet = !fm.length
+        ? [{ figure: '—', label: 'no follows yet · + follow in the spectrum' }]
+        : [{ figure: '—', label: 'commit a reading to price your follows' }];
+      dtShowAlignFeed(you.length ? you : quiet, agg,
+        function (t) { showMemberProfile(t.m); }, fm.length);
+    });
+  }
 
   function showMemberProfile(m) {
     if (!m || !m.bioguideId) return;
