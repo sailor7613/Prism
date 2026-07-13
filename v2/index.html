@@ -1113,6 +1113,47 @@ body.light .event-picker { color: rgba(40,44,54,0.85); background: rgba(255,255,
 .tracker-results .trk-row { padding: 6px 8px; border-radius: 0; }
 .trk-noresult { font-family: var(--mono); font-size: 10px; color: var(--ink-low); padding: 8px; }
 
+/* The Spectrum (upper-right discovery panel) — search opens DOWNWARD (the box
+   sits near the top), a scrollable roster below, and a follow pill per row. */
+.spectrum-add { margin-bottom: 12px; }
+.spectrum-add .tracker-results { bottom: auto; top: calc(100% + 6px); }
+.spectrum-browse { display: flex; flex-direction: column; }
+.spectrum-browse .trk-row { align-items: center; }
+.spectrum-follow { flex: none; font-family: var(--mono); font-size: 10px; letter-spacing: 0.04em; color: var(--ink-mid);
+  background: rgba(255,255,255,0.05); border: 0.5px solid var(--rule); border-radius: 999px; padding: 4px 10px; cursor: pointer; white-space: nowrap; transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease; }
+.spectrum-follow:hover { color: var(--ink); border-color: rgba(255,255,255,0.3); }
+.spectrum-follow.on { color: #6fe0a8; border-color: rgba(111,224,168,0.4); background: rgba(111,224,168,0.08); }
+
+/* Legislator profile — a floating card on desktop, near-fullscreen on mobile.
+   Anchored to <body> (position:fixed) so the ribbon/Ted can't occlude it. */
+.spectrum-profile-scrim { position: fixed; inset: 0; background: rgba(4,8,20,0.55); -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px); z-index: 60; }
+.spectrum-profile-scrim[hidden], .spectrum-profile[hidden] { display: none; }
+.spectrum-profile { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 61;
+  width: min(420px, calc(100vw - 48px)); max-height: min(88vh, 660px); overflow-y: auto; box-sizing: border-box;
+  background: rgba(9,15,32,0.98); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  border: 0.5px solid var(--rule); border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.55); padding: 20px 22px 22px; }
+.sp-close { position: absolute; top: 12px; right: 14px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; color: var(--ink-mid); background: none; border: none; cursor: pointer; }
+.sp-close:hover { color: var(--ink); }
+.sp-head { display: flex; align-items: center; gap: 14px; padding-right: 40px; }
+.sp-photo { width: 56px; height: 56px; border-radius: 50%; flex: none; object-fit: cover; background: rgba(255,255,255,0.06); }
+.sp-id { min-width: 0; }
+.sp-name { font-family: var(--serif); font-size: 20px; line-height: 1.15; }
+.sp-seat { font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; color: var(--ink-mid); margin-top: 3px; text-transform: uppercase; }
+.sp-followbtn { margin-top: 14px; width: 100%; font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; color: var(--ink); background: rgba(255,255,255,0.05); border: 0.5px solid var(--rule); border-radius: 8px; padding: 9px; cursor: pointer; transition: color .2s ease, border-color .2s ease, background .2s ease; }
+.sp-followbtn:hover { border-color: rgba(255,255,255,0.3); }
+.sp-followbtn.on { color: #6fe0a8; border-color: rgba(111,224,168,0.4); background: rgba(111,224,168,0.08); }
+.sp-section { margin-top: 18px; }
+.sp-section-label { font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-low); margin-bottom: 7px; }
+.sp-nums { font-family: var(--mono); font-size: 11px; letter-spacing: 0.04em; color: var(--ink-mid); line-height: 1.7; }
+.sp-nums b { color: var(--ink); font-weight: 500; }
+.sp-text { font-family: var(--serif); font-size: 13px; color: var(--ink-mid); line-height: 1.5; }
+.sp-graph { display: block; margin: 2px auto 0; }
+.sp-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+.sp-chips .chip { font-family: var(--mono); font-size: 9px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-mid); border: 0.5px solid var(--rule); border-radius: 10px; padding: 3px 8px; }
+@media (max-width: 640px) {
+  .spectrum-profile { top: 12px; left: 12px; right: 12px; bottom: 12px; transform: none; width: auto; max-height: none; border-radius: 14px; }
+}
+
 /* set-district affordance + inline form */
 .trk-setdist { font-family: var(--mono); font-size: 10px; letter-spacing: 0.04em; color: var(--ink-mid); cursor: pointer; text-decoration: underline; text-underline-offset: 2px; background: none; border: none; padding: 0; }
 .trk-setdist:hover { color: var(--ink); }
@@ -1433,6 +1474,12 @@ body.tri-cover footer, body.tri-cover .graph-info, body.tri-cover .derive-panel 
 
 /* Beam / Diatribe record rows */
 .beam-summary { font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; color: var(--ink-mid); margin-bottom: 12px; }
+/* Profile: the record is a demoted section beneath the identity block —
+   quieter type, a hairline separator, and a small eyebrow header. */
+.beam-record { margin-top: 6px; padding-top: 14px; border-top: 0.5px solid var(--rule); opacity: 0.82; }
+.beam-record-head { font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-low); margin-bottom: 10px; }
+.beam-record .beam-row { padding: 9px 4px; }
+.beam-record .beam-ev { font-size: 13px; color: var(--ink-mid); }
 .beam-row { display: grid; grid-template-columns: 1fr auto; gap: 3px 12px; align-items: baseline; padding: 11px 4px; border-bottom: 0.5px solid var(--rule); }
 .beam-ev { font-family: var(--serif); font-size: 15px; color: var(--ink); }
 .beam-when { font-family: var(--mono); font-size: 9px; color: var(--ink-low); text-align: right; white-space: nowrap; }
@@ -2150,16 +2197,16 @@ div.dt-tile {
 
 <!-- upper-row tabs retired 2026-07-11 — the ribbon is the single nav instrument -->
 
-<!-- Lower-Left — The Beam (user record) -->
+<!-- Lower-Left — Profile (your identity; longitudinal record beneath) -->
 <aside class="tri-panel" id="panelBeam" data-row="lower" data-panel="beam">
   <div class="tri-head">
     <div>
-      <div class="tri-eyebrow">lower left · action</div>
-      <h2 class="tri-title">The Beam</h2>
+      <div class="tri-eyebrow">lower left · you</div>
+      <h2 class="tri-title">Profile</h2>
     </div>
     <button class="tri-close" type="button">close &times;</button>
   </div>
-  <p class="tri-sub">Your longitudinal record — where you've stood across events, over time.</p>
+  <p class="tri-sub">Who you are on the Prism — your identity, with the record of where you've stood beneath it.</p>
   <div class="tri-rule"></div>
   <div class="tri-body" id="beamBody"></div>
 </aside>
@@ -2173,7 +2220,7 @@ div.dt-tile {
     </div>
     <button class="tri-close" type="button">close &times;</button>
   </div>
-  <p class="tri-sub">The institutional layer — the representatives you follow, mapped on the same axes. Open one on the graph to compare against your pin.</p>
+  <p class="tri-sub">The institutional layer — the representatives you follow (added from the Spectrum above), mapped on the same axes. Tap one to inspect it against your pin.</p>
   <div class="tri-rule"></div>
   <div class="tri-body" id="refractionBody"></div>
 </aside>
@@ -2198,18 +2245,18 @@ div.dt-tile {
      own word clouds (build step 3). The prediction record still needs a home
      (likely Kaleidoscope-adjacent — open). -->
 
-<!-- Upper-Right — The Comparison Layer -->
-<aside class="tri-panel" id="panelComparison" data-row="upper" data-panel="comparison">
+<!-- Upper-Right — The Spectrum (explore all legislators · discover · follow) -->
+<aside class="tri-panel" id="panelSpectrum" data-row="upper" data-panel="spectrum">
   <div class="tri-head">
     <div>
-      <div class="tri-eyebrow">upper right · parallax</div>
-      <h2 class="tri-title">The Comparison Layer</h2>
+      <div class="tri-eyebrow">upper right · discover</div>
+      <h2 class="tri-title">The Spectrum</h2>
     </div>
     <button class="tri-close" type="button">close &times;</button>
   </div>
-  <p class="tri-sub">You, measured against the institutional map — your pin versus the representatives you follow.</p>
+  <p class="tri-sub">The whole field — search any legislator, pull up whoever's in the news, and follow them. Your follows refract into the panel below.</p>
   <div class="tri-rule"></div>
-  <div class="tri-body" id="comparisonBody"></div>
+  <div class="tri-body" id="spectrumBody"></div>
 </aside>
 
 <!-- Institutional-layer (legislators) toggle — Phase 6.1.5. Kept a direct body
@@ -6079,7 +6126,7 @@ applyState(true);
     refraction: document.getElementById('panelRefraction'),
     diatribe:   document.getElementById('panelDiatribe'),
     // parallax: NO panel (2026-07-11 — a mode of the stage; see the visor engine)
-    comparison: document.getElementById('panelComparison'),
+    spectrum: document.getElementById('panelSpectrum'),
   };
   const ribbon    = document.getElementById('prismRibbon');
   const ribbonImg = document.getElementById('prismRibbonImg');
@@ -6093,8 +6140,8 @@ applyState(true);
   const TRIANGLE_FRAC = 0.70;
   const RIBBON_ASPECT = 2000 / 232;
   const LOWER  = ['beam', 'prism', 'refraction'];
-  const UPPER  = ['diatribe', 'parallax', 'comparison'];
-  const LABELS = { 0: ['Beam', 'Diatribe'], 1: ['Prism', 'Parallax'], 2: ['Refraction', 'Comparison'] };
+  const UPPER  = ['diatribe', 'parallax', 'spectrum'];
+  const LABELS = { 0: ['Profile', 'Diatribe'], 1: ['Prism', 'Parallax'], 2: ['Refraction', 'Spectrum'] };
 
   let col = 1, shade = false, current = 'prism';
   let dx0 = null, dy0 = null, dragMoved = false, intent = null;
@@ -6159,6 +6206,9 @@ applyState(true);
   }
 
   function applyNav(animated) {
+    // Roaming AWAY from the Spectrum dismisses any open legislator profile; an
+    // in-place refresh (e.g. following from the card) leaves it up.
+    try { if (!(col === 2 && shade)) hideMemberProfile(); } catch (_) {}
     // Parallax is a MODE of the stage (2026-07-11): shade at the center column
     // seats the visor over the untouched committed scene — no panel, no scrim,
     // no tri-cover. The superimposition is optical; the stage never re-renders.
@@ -6317,7 +6367,7 @@ applyState(true);
   // Rendered into closed/hidden panels, so nothing shows until you cross in.
   try {
     renderPanel('beam'); renderPanel('refraction');
-    if (panelEls.comparison) renderPanel('comparison');
+    if (panelEls.spectrum) renderPanel('spectrum');
     if (panelEls.diatribe)  renderPanel('diatribe');
     if (typeof visorEnsurePoured === 'function') { visorEnsurePoured(); visorTickerRender(); }
   } catch (e) { console.warn('[triptych] prewarm', e); }
@@ -6371,7 +6421,7 @@ applyState(true);
 
   function renderPanel(name) {
     ({ beam: renderBeam, refraction: renderRefraction, diatribe: renderDiatribe,
-       comparison: renderComparison }[name] || function () {})();
+       spectrum: renderSpectrum }[name] || function () {})();
   }
 
   // ── Profile (your identity — handles start with *) ──
@@ -6413,23 +6463,35 @@ applyState(true);
     return card;
   }
 
-  // ── Lower-Left · The Beam (your record) ──
+  // ── Lower-Left · Profile (your identity — the record is secondary) ──
+  // Identity leads (profileCard is the hero); the longitudinal pin-record is
+  // demoted to a quiet section beneath it (Sailor 2026-07-11: "more a profile,
+  // less a record"). Same data, reweighted hierarchy.
   function renderBeam() {
     const body = document.getElementById('beamBody'); if (!body) return;
     body.innerHTML = '';
     body.appendChild(profileCard());
     const rs = userResponses().sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
-    if (!rs.length) { const e = document.createElement('div'); e.className = 'beam-empty'; e.textContent = 'No responses yet. Commit a pin on the Prism graph and it lands here — your positions over time.'; body.appendChild(e); return; }
+    // The record lives in its own demoted block below the identity block.
+    const rec = document.createElement('div'); rec.className = 'beam-record';
+    if (!rs.length) {
+      const head = document.createElement('div'); head.className = 'beam-record-head';
+      head.textContent = 'record'; rec.appendChild(head);
+      const e = document.createElement('div'); e.className = 'beam-empty';
+      e.textContent = 'No positions yet. Commit a pin on the Prism graph and it lands here.';
+      rec.appendChild(e); body.appendChild(rec); return;
+    }
     const evN = new Set(rs.map(r => r.eventId)).size;
-    const sum = document.createElement('div'); sum.className = 'beam-summary';
-    sum.textContent = rs.length + ' response' + (rs.length > 1 ? 's' : '') + ' · ' + evN + ' event' + (evN > 1 ? 's' : '');
-    body.appendChild(sum);
+    const head = document.createElement('div'); head.className = 'beam-record-head';
+    head.textContent = 'record · ' + rs.length + ' response' + (rs.length > 1 ? 's' : '') + ' · ' + evN + ' event' + (evN > 1 ? 's' : '');
+    rec.appendChild(head);
     rs.forEach(r => {
       const band = r.band || r.apertureBand || '';
       const c = r.coords || { x: 0, y: 0 };
-      body.appendChild(recordRow(evTitleOf(r.eventId), fmtWhen(r.timestamp),
+      rec.appendChild(recordRow(evTitleOf(r.eventId), fmtWhen(r.timestamp),
         'quad ' + (r.finalQuadrant || '–') + ' · <span class="beam-band" data-band="' + band + '">' + (band || '—') + '</span> · x ' + sgnN(c.x) + ' · y ' + sgnN(c.y) + ' · int ' + (r.intensity != null ? r.intensity : '–')));
     });
+    body.appendChild(rec);
   }
 
   // ── Upper-Left · The Diatribe (perception record) ──
@@ -6460,31 +6522,186 @@ applyState(true);
   // The word-displacement math it carried (dotLoad/paxDisplace) returns with
   // the plane-picked lens; the prediction record still needs a home (open).
 
-  // ── Upper-Right · The Comparison Layer ──
-  function renderComparison() {
-    const body = document.getElementById('comparisonBody'); if (!body) return;
-    body.innerHTML = '';
-    if (!userPinData) {
-      body.innerHTML = '<div class="beam-empty">Commit a pin on the Prism graph first — then this measures you against each representative you follow.</div>';
-      body.appendChild(nextNote('<b>Next:</b> deep compare — your position against a legislator\'s voting record or a bill\'s text on the shared axes (Spec §3.5).'));
-      return;
+  // ── Legislator profile — a floating card (near-fullscreen on mobile) ──
+  // Anchored to <body> (position:fixed) so the ribbon/Ted can't occlude it.
+  // Replaces the old inline info card (2026-07-11, Sailor: "each legislator
+  // should have a sort of profile page"). Opened by tapping a Spectrum row.
+  let spProfileEls = null;
+  function ensureSpProfile() {
+    if (spProfileEls) return spProfileEls;
+    const scrim = document.createElement('div'); scrim.className = 'spectrum-profile-scrim'; scrim.hidden = true;
+    const card = document.createElement('div'); card.className = 'spectrum-profile'; card.hidden = true;
+    scrim.addEventListener('click', hideMemberProfile);
+    document.body.appendChild(scrim); document.body.appendChild(card);
+    spProfileEls = { scrim: scrim, card: card };
+    return spProfileEls;
+  }
+  function hideMemberProfile() {
+    if (!spProfileEls) return;
+    spProfileEls.scrim.hidden = true; spProfileEls.card.hidden = true; spProfileEls.card.innerHTML = '';
+  }
+  function partyHex(party) { return party === 'D' ? '#6fa8dc' : party === 'R' ? '#e07474' : '#e0b84c'; }
+  function miniGraphSVG(nx, ny, party) {
+    const W = 150, H = 150;
+    const cx = Math.round(nx * W), cy = Math.round(ny * H);
+    let pin = '';
+    if (userPinData) {
+      const ux = Math.round((userPinData.x / 200 + 0.5) * W);
+      const uy = Math.round((0.5 - userPinData.y / 200) * H);
+      pin = '<line x1="' + ux + '" y1="' + uy + '" x2="' + cx + '" y2="' + cy + '" stroke="rgba(255,255,255,0.28)" stroke-width="1" stroke-dasharray="2 2"/>' +
+            '<circle cx="' + ux + '" cy="' + uy + '" r="5" fill="none" stroke="rgba(255,255,255,0.75)" stroke-width="1.5"/>';
     }
-    const sum = document.createElement('div'); sum.className = 'beam-summary';
-    sum.textContent = 'you · quad ' + userPinData.quad + ' · ' + userPinData.band + ' · x ' + sgnN(userPinData.x) + ' · y ' + sgnN(userPinData.y);
-    body.appendChild(sum);
+    return '<svg class="sp-graph" width="' + W + '" height="' + H + '" viewBox="0 0 ' + W + ' ' + H + '">' +
+      '<rect x="0.5" y="0.5" width="' + (W - 1) + '" height="' + (H - 1) + '" fill="rgba(255,255,255,0.02)" stroke="var(--rule)"/>' +
+      '<line x1="' + (W / 2) + '" y1="0" x2="' + (W / 2) + '" y2="' + H + '" stroke="rgba(255,255,255,0.12)"/>' +
+      '<line x1="0" y1="' + (H / 2) + '" x2="' + W + '" y2="' + (H / 2) + '" stroke="rgba(255,255,255,0.12)"/>' +
+      pin +
+      '<rect x="' + (cx - 5) + '" y="' + (cy - 5) + '" width="10" height="10" transform="rotate(45 ' + cx + ' ' + cy + ')" fill="' + partyHex(party) + '"/>' +
+      '</svg>';
+  }
+  function showMemberProfile(m) {
+    if (!m || !m.bioguideId) return;
+    const els = ensureSpProfile(); const card = els.card;
+    const d = memberToD(m);
+    let dp = null; try { dp = PrismDB.getMemberPosition ? PrismDB.getMemberPosition(m.bioguideId, EVENT_ID) : null; } catch (_) {}
+    const derived = !!(dp && dp.pin && (dp.provenance === 'DERIVED' || dp.provenance === 'MANUAL' || dp.adminOverride));
+    const party = (m.party || 'I').toUpperCase();
+    const partyCls = party === 'D' ? 'party-D' : party === 'R' ? 'party-R' : 'party-I';
+    const partyWord = party === 'D' ? 'Democrat' : party === 'R' ? 'Republican' : 'Independent';
+    const mx = Math.round((d.normX - 0.5) * 200), my = Math.round((0.5 - d.normY) * 200);
+    const mz = (typeof d.normZ === 'number') ? d.normZ : 0;
+    const mi = Math.round(Math.max(Math.abs(mx), Math.abs(my)));
+    const seat = [party, m.state, trkChamberWord(m)].filter(Boolean).join(' · ');
+
+    card.innerHTML = '';
+    const close = document.createElement('button'); close.className = 'sp-close'; close.type = 'button'; close.innerHTML = 'close &times;'; close.addEventListener('click', hideMemberProfile); card.appendChild(close);
+
+    const head = document.createElement('div'); head.className = 'sp-head';
+    const ph = document.createElement('img'); ph.className = 'sp-photo'; ph.alt = ''; if (m.photoUrl) ph.src = m.photoUrl; ph.addEventListener('error', function () { this.style.visibility = 'hidden'; });
+    const idw = document.createElement('div'); idw.className = 'sp-id';
+    const nm = document.createElement('div'); nm.className = 'sp-name ' + partyCls; nm.textContent = trkName(m);
+    const st = document.createElement('div'); st.className = 'sp-seat'; st.textContent = seat;
+    idw.appendChild(nm); idw.appendChild(st); head.appendChild(ph); head.appendChild(idw); card.appendChild(head);
+
+    const fb = document.createElement('button'); fb.className = 'sp-followbtn'; fb.type = 'button';
+    function syncFb() { const on = PrismDB.isFollowing(m.bioguideId); fb.textContent = on ? '✓ following — tap to unfollow' : '+ follow'; fb.classList.toggle('on', on); }
+    syncFb();
+    fb.addEventListener('click', function () { PrismDB.toggleFollow(m.bioguideId); syncFb(); try { renderRefraction(); } catch (_) {} if (window.PrismTriptych) { try { window.PrismTriptych.refresh(); } catch (_) {} } });
+    card.appendChild(fb);
+
+    const gsec = document.createElement('div'); gsec.className = 'sp-section';
+    const glab = document.createElement('div'); glab.className = 'sp-section-label'; glab.textContent = 'on the plane' + (userPinData ? ' · ○ = your pin' : '');
+    const gwrap = document.createElement('div'); gwrap.innerHTML = miniGraphSVG(d.normX, d.normY, party);
+    gsec.appendChild(glab); if (gwrap.firstChild) gsec.appendChild(gwrap.firstChild); card.appendChild(gsec);
+
+    const psec = document.createElement('div'); psec.className = 'sp-section';
+    const plab = document.createElement('div'); plab.className = 'sp-section-label'; plab.textContent = 'placement';
+    const pnums = document.createElement('div'); pnums.className = 'sp-nums';
+    pnums.innerHTML = 'x <b>' + sgnN(mx) + '</b> · y <b>' + sgnN(my) + '</b> · z <b>' + (mz >= 0 ? '+' : '') + mz.toFixed(2) + '</b> · int <b>' + mi + '</b>';
+    psec.appendChild(plab); psec.appendChild(pnums);
+    if (userPinData) {
+      const dnums = document.createElement('div'); dnums.className = 'sp-nums';
+      dnums.innerHTML = 'vs you — Δx <b>' + sgnN(mx - userPinData.x) + '</b> · Δy <b>' + sgnN(my - userPinData.y) + '</b> · Δz <b>' + ((mz - userPinData.z) >= 0 ? '+' : '') + (mz - userPinData.z).toFixed(2) + '</b>';
+      psec.appendChild(dnums);
+    }
+    card.appendChild(psec);
+
+    const isec = document.createElement('div'); isec.className = 'sp-section';
+    const ilab = document.createElement('div'); ilab.className = 'sp-section-label'; ilab.textContent = derived ? 'event position · derived' : 'ideology';
+    const itext = document.createElement('div'); itext.className = 'sp-text';
+    if (derived) {
+      const dia = (dp.diatribe != null) ? (' · diatribe ' + Math.round(dp.diatribe)) : '';
+      const conf = (dp.confidence != null) ? (' · confidence ' + Number(dp.confidence).toFixed(2)) : '';
+      itext.textContent = (dp.reasoning || 'Event-specific derived position.') + dia + conf;
+    } else {
+      const nom = (typeof m.nominateD1 === 'number') ? ('DW-NOMINATE D1 ' + m.nominateD1.toFixed(2)) : 'ideology baseline';
+      const dz = (typeof m.deliveryZ === 'number') ? m.deliveryZ : mz;
+      itext.textContent = nom + '. Sponsorship z ' + (dz >= 0 ? '+' : '') + dz.toFixed(2) + '. No event-specific score yet.';
+    }
+    isec.appendChild(ilab); isec.appendChild(itext); card.appendChild(isec);
+
+    if (m.sponsorCount != null || m.cosponsorCount != null) {
+      const ssec = document.createElement('div'); ssec.className = 'sp-section';
+      const slab = document.createElement('div'); slab.className = 'sp-section-label'; slab.textContent = 'sponsorship';
+      const snums = document.createElement('div'); snums.className = 'sp-nums';
+      snums.innerHTML = '<b>' + (m.sponsorCount || 0) + '</b> sponsored · <b>' + (m.cosponsorCount || 0) + '</b> cosponsored';
+      ssec.appendChild(slab); ssec.appendChild(snums); card.appendChild(ssec);
+    }
+
+    const chips = document.createElement('div'); chips.className = 'sp-chips';
+    [partyWord, trkChamberWord(m), derived ? 'derived' : 'baseline'].filter(Boolean).forEach(function (c) { const s = document.createElement('span'); s.className = 'chip'; s.textContent = c; chips.appendChild(s); });
+    card.appendChild(chips);
+
+    els.scrim.hidden = false; card.hidden = false; card.scrollTop = 0;
+  }
+
+  // ── Upper-Right · The Spectrum (discover all legislators · follow) ──
+  // The discovery home (2026-07-11, Sailor): search the whole roster, pull up
+  // whoever's in the news, and follow them here. Follows feed the Refraction
+  // panel below (which is now the read-only view of your set). Comparison's old
+  // "you vs. your follows" job moved to the Kaleidoscope. Legislators only for
+  // now — legislation/topic follows are a later pass.
+  function renderSpectrum() {
+    const body = document.getElementById('spectrumBody'); if (!body) return;
+    body.innerHTML = '';
     Promise.resolve(ensureMembers()).then(function () {
-      const fm = followedMembers();
-      if (!fm.length) {
-        const e = document.createElement('div'); e.className = 'beam-empty'; e.textContent = 'Follow representatives in the Refraction panel to compare against them here.';
-        body.appendChild(e);
-      } else {
-        fm.forEach(function (m) {
-          const d = memberToD(m);
-          const mx = Math.round((d.normX - 0.5) * 200), my = Math.round((0.5 - d.normY) * 200);
-          body.appendChild(recordRow(trkName(m), trkMetaText(m), 'Δx ' + sgnN(mx - userPinData.x) + ' · Δy ' + sgnN(my - userPinData.y)));
+      const members = memberData || [];
+      if (!members.length) { body.innerHTML = '<div class="beam-empty">Roster unavailable — the legislator data hasn\'t loaded.</div>'; return; }
+
+      const followedCount = function () { return ((PrismDB.getFollowed && PrismDB.getFollowed()) || []).length; };
+      const sum = document.createElement('div'); sum.className = 'beam-summary';
+      function syncSum() { sum.textContent = members.length + ' legislators · ' + followedCount() + ' followed'; }
+      syncSum(); body.appendChild(sum);
+
+      // search — the whole roster, by name or state
+      const add = document.createElement('div'); add.className = 'tracker-add spectrum-add';
+      const search = document.createElement('input'); search.className = 'tracker-search'; search.type = 'text'; search.placeholder = '+ search any legislator (name or state)'; search.autocomplete = 'off';
+      const results = document.createElement('div'); results.className = 'tracker-results'; results.hidden = true;
+      add.appendChild(results); add.appendChild(search); body.appendChild(add);
+
+      // browse list — your follows first, then the rest of the field
+      const browse = document.createElement('div'); browse.className = 'spectrum-browse';
+      body.appendChild(browse);
+
+      function followTag(m) {
+        const tag = document.createElement('button'); tag.type = 'button'; tag.className = 'spectrum-follow';
+        function sync() { const on = PrismDB.isFollowing(m.bioguideId); tag.textContent = on ? '✓ following' : '+ follow'; tag.classList.toggle('on', on); }
+        sync();
+        tag.addEventListener('click', function (e) {
+          e.stopPropagation();
+          PrismDB.toggleFollow(m.bioguideId); sync(); syncSum();
+          try { renderRefraction(); } catch (_) {}            // Refraction below reflects the change
+          if (window.PrismTriptych) { try { window.PrismTriptych.refresh(); } catch (_) {} }
         });
+        return tag;
       }
-      body.appendChild(nextNote('<b>Next:</b> deep compare — your position against a legislator\'s voting record or a bill\'s text on the shared axes (Spec §3.5).'));
+      function memberRow(m) {
+        const row = document.createElement('div'); row.className = 'trk-row';
+        row.appendChild(trkPhoto(m)); row.appendChild(trkBody(m)); row.appendChild(followTag(m));
+        row.addEventListener('click', function () { showMemberProfile(m); });
+        return row;
+      }
+      function renderBrowse() {
+        browse.innerHTML = '';
+        const foll = new Set((PrismDB.getFollowed && PrismDB.getFollowed()) || []);
+        const sorted = members.slice().sort(function (a, b) { return trkName(a).localeCompare(trkName(b)); });
+        const following = sorted.filter(function (m) { return foll.has(m.bioguideId); });
+        const rest = sorted.filter(function (m) { return !foll.has(m.bioguideId); });
+        if (following.length) { const s = trkSection('following · ' + following.length); following.forEach(function (m) { s.appendChild(memberRow(m)); }); browse.appendChild(s); }
+        const s2 = trkSection('all legislators · ' + rest.length); rest.forEach(function (m) { s2.appendChild(memberRow(m)); }); browse.appendChild(s2);
+      }
+      renderBrowse();
+
+      search.addEventListener('input', function () {
+        const q = search.value.trim().toLowerCase();
+        if (!q) { results.hidden = true; results.innerHTML = ''; browse.style.display = ''; return; }
+        browse.style.display = 'none';
+        const matches = members.filter(function (m) { const nm = trkName(m).toLowerCase(); const st = (m.state || '').toLowerCase(); return nm.indexOf(q) !== -1 || st === q; }).slice(0, 30);
+        results.innerHTML = '';
+        if (!matches.length) { const n = document.createElement('div'); n.className = 'trk-noresult'; n.textContent = 'no match'; results.appendChild(n); }
+        else matches.forEach(function (m) { results.appendChild(memberRow(m)); });
+        results.hidden = false;
+      });
     });
   }
 
@@ -6499,11 +6716,13 @@ applyState(true);
     const d = memberToD(m); return { normX: d.normX, normY: d.normY, normZ: d.normZ };
   }
 
-  // The Refraction info card — shown when a rep's diamond (or dock row) is
-  // clicked. Same order as the compare card: name+info, delta, text, chips.
-  function showRefInfo(d) {
+  // The member info card — shown when a rep's diamond (or a dock/Spectrum row)
+  // is clicked. Same order as the compare card: name+info, delta, text, chips.
+  // cardEl lets callers target their own card (Refraction #refInfo by default;
+  // the Spectrum passes its own #spectrumInfo).
+  function showRefInfo(d, cardEl) {
     if (!d || !d.bioguideId) return;
-    const card = document.getElementById('refInfo'); if (!card) return;
+    const card = cardEl || document.getElementById('refInfo'); if (!card) return;
     const m = (memberData || []).find(x => x.bioguideId === d.bioguideId) || {};
     let dp = null; try { dp = PrismDB.getMemberPosition ? PrismDB.getMemberPosition(d.bioguideId, EVENT_ID) : null; } catch (_) {}
     const derived = !!(dp && dp.pin && (dp.provenance === 'DERIVED' || dp.provenance === 'MANUAL' || dp.adminOverride));
@@ -6586,19 +6805,16 @@ applyState(true);
         const cap = document.createElement('div'); cap.className = 'ref-cap'; cap.id = 'refractionCap'; map.appendChild(cap);
         const dock = document.createElement('div'); dock.className = 'ref-dock'; dock.id = 'refractionFollow';
         const info = document.createElement('div'); info.className = 'ref-info'; info.id = 'refInfo'; info.hidden = true;
-        const toggle = document.createElement('div'); toggle.className = 'ref-toggle'; toggle.id = 'refToggle';
-        ['event', 'general'].forEach(function (v) { const b = document.createElement('button'); b.type = 'button'; b.dataset.view = v; b.textContent = v; b.addEventListener('click', function () { if (refView !== v) { refView = v; renderRefraction(); } }); toggle.appendChild(b); });
-        map.appendChild(toggle);
+        // The general/all-roster toggle and search-to-add moved to the Spectrum
+        // (2026-07-11) — Refraction is now the read-only view of your follows.
         body.appendChild(map); body.appendChild(dock); body.appendChild(info);
       }
       const fm = followedMembers();
-      const general = (refView === 'general');
+      const general = false;                 // Refraction is followed-only now
       const cap = document.getElementById('refractionCap');
-      if (cap) cap.textContent = general
-        ? 'all reps · general ideology · drag to orbit · tap a diamond'
-        : (fm.length ? (fm.length + ' followed · this event · drag to orbit · tap a diamond') : 'Follow representatives — they plot here for this event.');
-      const toggleEl = document.getElementById('refToggle');
-      if (toggleEl) toggleEl.querySelectorAll('button').forEach(function (b) { b.classList.toggle('on', b.dataset.view === refView); });
+      if (cap) cap.textContent = fm.length
+        ? (fm.length + ' followed · this event · drag to orbit · tap a diamond')
+        : 'No follows yet — add legislators from the Spectrum above; they plot here.';
       // the graphmap — fills the stage, like the Prism graph
       if (typeof PrismGraphmap !== 'undefined' && typeof THREE !== 'undefined') {
         try {
@@ -6634,8 +6850,12 @@ applyState(true);
     });
   }
 
-  // Follow-management for the Refraction panel: delegation + following (unfollow)
-  // + search-to-add. Reuses the tracker's row/section builders.
+  // Refraction dock — the read-only view of your follows: delegation on top,
+  // then everyone else you follow (tap a row for the info card). Discovery,
+  // search, and following now live in the Spectrum (2026-07-11); this panel
+  // only reflects your set. The unfollow × stays as in-place management of a
+  // rep you already follow (not discovery). The district affordance stays so
+  // you can seed your delegation.
   function buildRefFollow(container) {
     container.innerHTML = '';
     const members = memberData || [];
@@ -6651,28 +6871,8 @@ applyState(true);
     container.appendChild(delSec);
     const folSec = trkSection('following · ' + otherM.length);
     if (otherM.length) otherM.forEach(m => folSec.appendChild(refRow(m, false)));
-    else { const e = document.createElement('div'); e.className = 'trk-empty'; e.textContent = 'Search below to follow any member.'; folSec.appendChild(e); }
+    else { const e = document.createElement('div'); e.className = 'trk-empty'; e.textContent = 'No follows yet — search and follow legislators from the Spectrum above.'; folSec.appendChild(e); }
     container.appendChild(folSec);
-    const add = document.createElement('div'); add.className = 'tracker-add';
-    const results = document.createElement('div'); results.className = 'tracker-results'; results.hidden = true;
-    const search = document.createElement('input'); search.className = 'tracker-search'; search.type = 'text'; search.placeholder = '+ find a representative'; search.autocomplete = 'off';
-    add.appendChild(results); add.appendChild(search); container.appendChild(add);
-    search.addEventListener('input', function () {
-      const q = search.value.trim().toLowerCase();
-      if (!q) { results.hidden = true; results.innerHTML = ''; return; }
-      const matches = members.filter(m => { const nm = trkName(m).toLowerCase(); const st = (m.state || '').toLowerCase(); return nm.indexOf(q) !== -1 || st === q; }).slice(0, 14);
-      results.innerHTML = '';
-      if (!matches.length) { const n = document.createElement('div'); n.className = 'trk-noresult'; n.textContent = 'no match'; results.appendChild(n); }
-      else matches.forEach(function (m) {
-        const r = document.createElement('div'); r.className = 'trk-row';
-        r.appendChild(trkPhoto(m)); r.appendChild(trkBody(m));
-        const tag = document.createElement('div'); tag.className = 'trk-delta'; tag.textContent = PrismDB.isFollowing(m.bioguideId) ? 'following' : '+ follow';
-        r.appendChild(tag);
-        r.addEventListener('click', function () { PrismDB.follow(m.bioguideId); search.value = ''; results.hidden = true; results.innerHTML = ''; renderRefraction(); });
-        results.appendChild(r);
-      });
-      results.hidden = false;
-    });
   }
 
 })();
