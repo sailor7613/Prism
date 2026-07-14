@@ -311,6 +311,7 @@
   <span class="viewseg" id="viewSeg" title="Author the diatribe, or the 12 quadrant responses"><button data-v="dia" class="on">Diatribe</button><button data-v="quad">Quadrants</button></span>
   <button class="btn" id="citeBtn" title="Citation bank — sources for this event">📎 Sources</button>
   <button class="btn" id="brBtn" title="Bill reading room — curate the bills this event links">📜 Bills</button>
+  <button class="btn" id="nrBtn" title="Newsroom — Event Engine candidates from the vote record">📡 Newsroom</button>
   <button class="btn" id="themeBtn" title="Day / night">◐</button>
   <button class="btn" id="dgBtn" title="DreamGetty room — loads on demand">🏛</button>
   <button class="btn" id="dgOrbitBtn" title="Pedestal ↔ flat — drop to the flat stage while the room stands">🧭</button>
@@ -457,6 +458,27 @@
   <div class="br-foot">
     <button class="btn primary" id="brLink" disabled>Link confirmed bills</button>
     <span class="status" id="brStatus"></span>
+  </div>
+</aside>
+
+<!-- ── Newsroom drawer (📡) — Event Engine candidates; sibling of the Bills room ── -->
+<div class="br-overlay" id="nrOverlay"></div>
+<aside class="br-drawer" id="nrDrawer" aria-label="Newsroom">
+  <div class="br-head">
+    <span class="t">📡 Newsroom</span>
+    <span class="ev" id="nrCounts"></span>
+    <span class="layerseg" id="nrSeg"><button data-f="triage" class="on">Triage</button><button data-f="all">All</button></span>
+    <span style="flex:1"></span>
+    <button class="btn" id="nrClose">Close</button>
+  </div>
+  <div class="br-body">
+    <div class="br-pane">
+      <div class="br-list" id="nrList"></div>
+    </div>
+  </div>
+  <div class="br-foot">
+    <button class="btn" id="nrRescan" title="Re-read data/candidates.js into the store (triage state survives)">↺ Rescan</button>
+    <span class="status" id="nrStatus"></span>
   </div>
 </aside>
 
@@ -639,12 +661,15 @@ function loadEvent(ev){
     responses[q]={ fluid:cvt(rq.fluid||rq.goodFaith), coalition:cvt(rq.coalition), denominated:cvt(rq.denominated||rq.badFaith) }; });
   const oa=(pa==='x')?(ax.y):(ax.x); otherPole={ neg:(oa&&oa.neg)||'', pos:(oa&&oa.pos)||'' };
   citations = Array.isArray(ev.sources) ? ev.sources.map(s=>({url:(s&&s.url)||'',label:(s&&s.label)||''})) : [];
+  if(typeof nrPendingPromote!=='undefined') nrPendingPromote=null;   // loading another event is never a promotion
   setPoleFields(); setThumb(pct,false); status(currentId?('Loaded '+currentId):'Loaded onto the surface');
 }
 function loadSeed(){
   currentId=null; $('evTitle').value=SEED.title; $('framing').innerHTML=escHtml(SEED.framing); spine={neg:SEED.spine.neg,pos:SEED.spine.pos}; setPrev(SEED.prevalentAxis);
   model={}; ['LF','LC','LD','RF','RC','RD'].forEach(c=>model[c]=escHtml(SEED.diatribe[c]||'')); tedEvent={};
-  responses={A:{},B:{},C:{},D:{}}; otherPole={neg:'Market',pos:'State'}; if(typeof citations!=='undefined') citations=[]; setPoleFields(); setThumb(pct,false);
+  responses={A:{},B:{},C:{},D:{}}; otherPole={neg:'Market',pos:'State'}; if(typeof citations!=='undefined') citations=[];
+  if(typeof nrPendingPromote!=='undefined') nrPendingPromote=null;
+  setPoleFields(); setThumb(pct,false);
   status('Immigration example — edit freely; ✦ on a filled box marks its keywords');
 }
 function blank(){
@@ -652,6 +677,7 @@ function blank(){
   model={LF:'',LC:'',LD:'',RF:'',RC:'',RD:''}; if(typeof tedEvent!=='undefined') tedEvent={};
   if(typeof responses!=='undefined'){ responses={A:{},B:{},C:{},D:{}}; otherPole={neg:'',pos:''}; }
   if(typeof citations!=='undefined') citations=[];
+  if(typeof nrPendingPromote!=='undefined') nrPendingPromote=null;   // fresh slate — no pending promotion
   setPoleFields(); setThumb(38,false); status('Blank diatribe — tap the pole names to set your axis, then fill the slots');
 }
 
@@ -707,6 +733,10 @@ function save(){
     else { const ev=Object.assign({ category:'', prompt:'', meta:{status:'draft',editHistory:[]}, date:new Date().toISOString().slice(0,10),
       active:true, antiValentBand:'coalition', axes:axesObj(), responses:{} }, patch);
       const added=PrismDB.addEvent(ev); currentId=added.id; PrismDB.setActive(added.id); status('Saved '+added.id+' · active'); refreshDropdown(added.id); }
+    // Event Engine: a successful save ratifies a pending promotion —
+    // stamp candidate → event lineage (survives rescans by design).
+    if(nrPendingPromote){ PrismDB.promoteCandidate(nrPendingPromote, currentId); nrPendingPromote=null;
+      try{ nrRender(); }catch(_){}}
     return currentId;
   }catch(e){ status('Save failed: '+e.message); return null; }
 }
@@ -1030,6 +1060,117 @@ addStar($('capReal'),'hint.captionReal'); addStar($('capGhost'),'hint.captionGho
 document.addEventListener('click',(e)=>{ if(!document.body.classList.contains('ted-edit')) return;
   const kw=e.target&&e.target.closest?e.target.closest('.kw'):null; if(!kw) return; const t=(kw.textContent||'').trim(); if(!t) return;
   tedLayer='event'; openTed('kw.'+t); });
+
+/* ===== Newsroom (📡) — Event Engine candidates (Build Spec v1 §3.2) =====
+   The surface newsroom: data/candidates.js (written by Scan News
+   Cycle.command on the desk) lazy-loads on first open — the DG rule,
+   heavy assets never at boot — and merges into PrismDB.prism_candidates
+   (importCandidates never clobbers triage state, so promoted/dismissed
+   survive every rescan). Sorted by fitness where scored (M2 fills it),
+   salience otherwise; below the ratified 0.4 floor cards grey but never
+   hide (§4 — rescueable). Promote loads the candidate ONTO the surface —
+   title, framing, congress.gov link into the citation bank; the spine
+   stays the author's until M2 proposes axes. The candidate is stamped
+   promoted → evt id only when save() actually succeeds. */
+const NR_FITNESS_FLOOR = 0.4;            // spec §4, ratified 2026-07-13
+let nrLoaded=false, nrShowAll=false, nrPendingPromote=null;
+
+function nrStatus(m){ $('nrStatus').textContent=m; }
+function nrKey(c){ return (c.fitness&&typeof c.fitness.score==='number')?c.fitness.score:((c.raw&&c.raw.salience)||0); }
+
+async function nrImport(bust){
+  try{ await dgScript('data/candidates.js'+(bust?('?v='+Date.now()):'')); }catch(_){}
+  nrLoaded=true;
+  if(Array.isArray(window.PRISM_CANDIDATES)){
+    const r=PrismDB.importCandidates(window.PRISM_CANDIDATES);
+    nrStatus(r.added+' new · '+r.updated+' refreshed');
+  } else nrStatus('no candidates.js — run Scan News Cycle.command on the desk');
+}
+
+function nrRender(){
+  const host=$('nrList'); host.innerHTML='';
+  const all=PrismDB.getCandidates();
+  const list=(nrShowAll?all:all.filter(c=>c.status==='new')).slice().sort((a,b)=>nrKey(b)-nrKey(a));
+  const n={new:0,promoted:0,dismissed:0}; all.forEach(c=>{ n[c.status]=(n[c.status]||0)+1; });
+  $('nrCounts').textContent = all.length ? (n.new+' triage · '+n.promoted+' promoted · '+n.dismissed+' dismissed') : '';
+  if(!list.length){
+    const d=document.createElement('div'); d.className='br-empty';
+    d.textContent = all.length ? 'triage clear — “all” shows the record'
+                               : 'no candidates — run Scan News Cycle.command, then ↺';
+    host.appendChild(d); return;
+  }
+  list.forEach(c=>{
+    const fit=(c.fitness&&typeof c.fitness.score==='number')?c.fitness.score:null;
+    const dim=(fit!=null&&fit<NR_FITNESS_FLOOR)||c.status==='dismissed';
+    const card=document.createElement('div');
+    card.className='br-card'+(c.status==='promoted'?' confirmed':'')+(dim?' dismissed':'');
+    const nm=document.createElement('div'); nm.className='n'; nm.textContent=c.title||c.cid; card.appendChild(nm);
+    const meta=document.createElement('div'); meta.className='m';
+    meta.textContent=(c.source||'')
+      +(fit!=null?(' · fit '+fit.toFixed(2)):(' · unscored · sal '+(((c.raw&&c.raw.salience)||0)).toFixed(2)))
+      +(c.status!=='new'?(' · '+c.status+(c.promotedEventId?(' → '+c.promotedEventId):'')):'');
+    card.appendChild(meta);
+    if(c.summary){ const r=document.createElement('div'); r.className='r'; r.style.whiteSpace='pre-wrap';
+      r.textContent=c.summary; card.appendChild(r); }
+    const tags=document.createElement('div'); tags.className='br-tags';
+    (c.bills||[]).forEach(b=>{ const t=document.createElement('span'); t.className='br-tag'; t.textContent=b; tags.appendChild(t); });
+    const mt=document.createElement('span'); mt.className='br-tag';
+    mt.textContent=((c.members||[]).length)+' members'; tags.appendChild(mt);
+    card.appendChild(tags);
+    const acts=document.createElement('div'); acts.className='br-acts';
+    if(c.status==='new'){
+      const p=document.createElement('button'); p.textContent='Promote'; p.onclick=()=>nrPromote(c.cid); acts.appendChild(p);
+      const x=document.createElement('button'); x.textContent='Dismiss';
+      x.onclick=()=>{ PrismDB.dismissCandidate(c.cid); nrRender(); }; acts.appendChild(x);
+    } else {
+      const rs=document.createElement('button'); rs.textContent='Restore';
+      rs.onclick=()=>{ const cc=PrismDB.getCandidate(c.cid);
+        if(cc){ cc.status='new'; delete cc.promotedEventId; PrismDB.saveCandidate(cc); nrRender(); } };
+      acts.appendChild(rs);
+    }
+    if(c.raw&&c.raw.congressGovUrl){
+      const a=document.createElement('button'); a.textContent='congress.gov ↗';
+      a.onclick=()=>window.open(c.raw.congressGovUrl,'_blank','noopener'); acts.appendChild(a);
+    }
+    card.appendChild(acts);
+    host.appendChild(card);
+  });
+}
+
+async function nrOpen(){
+  $('nrDrawer').classList.add('show'); $('nrOverlay').classList.add('show');
+  if(!nrLoaded){ nrStatus('loading candidates…'); await nrImport(false); }
+  nrRender();
+}
+function nrCloseFn(){ $('nrDrawer').classList.remove('show'); $('nrOverlay').classList.remove('show'); }
+
+/* Promote → the candidate lands on the surface itself */
+function nrPromote(cid){
+  const c=PrismDB.getCandidate(cid); if(!c) return;
+  blank();                                  // clears pending too — set after
+  $('evTitle').value=c.title||'';
+  $('framing').innerHTML=escHtml(c.framingDraft||c.summary||'');
+  if(c.prevalentAxisGuess) setPrev(c.prevalentAxisGuess);
+  if(c.suggestedAxes){
+    const sp=(prevAxis==='y')?c.suggestedAxes.y:c.suggestedAxes.x;
+    if(sp&&(sp.neg||sp.pos)){ spine={neg:sp.neg||'',pos:sp.pos||''}; }
+    const op=(prevAxis==='y')?c.suggestedAxes.x:c.suggestedAxes.y;
+    if(op&&(op.neg||op.pos)) otherPole={neg:op.neg||'',pos:op.pos||''};
+  }
+  if(c.raw&&c.raw.congressGovUrl) citations=[{url:c.raw.congressGovUrl,label:(c.bills&&c.bills[0])||'congress.gov'}];
+  setPoleFields(); setThumb(38,false);
+  nrPendingPromote=cid;
+  nrCloseFn();
+  status('Promoted from newsroom — author the dialectic, then Save / Publish');
+}
+
+$('nrBtn').onclick=nrOpen; $('nrClose').onclick=nrCloseFn; $('nrOverlay').onclick=nrCloseFn;
+$('nrRescan').onclick=async()=>{ nrStatus('rescanning…'); await nrImport(true); nrRender(); };
+$('nrSeg').querySelectorAll('button').forEach(b=>b.onclick=()=>{
+  nrShowAll=(b.dataset.f==='all');
+  $('nrSeg').querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));
+  nrRender();
+});
 
 /* ===== Bill reading room (📜) — the portal's first §4 reading room =====
    Engine: src/js/prism-curate.js (pure — this shell owns history,

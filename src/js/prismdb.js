@@ -14,7 +14,8 @@ const PrismDB = (() => {
     memberPos: 'prism_member_positions',
     followed:  'prism_followed',
     billScores: 'prism_bill_scores',
-    ticker:    'prism_ticker_ledger'
+    ticker:    'prism_ticker_ledger',
+    candidates: 'prism_candidates'
   };
 
   function _get(key) {
@@ -660,6 +661,87 @@ const PrismDB = (() => {
     });
     _set(KEYS.ticker, all);
     return entries;
+  }
+
+  // ── Event Engine candidates (Build Spec v1 §9, ratified 2026-07-13) ──
+  // Raw, pre-author candidate events from the sourcing layer. The admin
+  // newsroom's "scan" imports window.PRISM_CANDIDATES here, the triage
+  // board reads/writes status, Promote stamps promotedEventId. Local
+  // admin data — disposable per the wiped-store rules.
+  //
+  // Schema: { cid, source:'legislative'|'news'|'fused', ts, raw:{…},
+  //   title, summary, framingDraft, suggestedAxes:{x:{pos,neg},y:{pos,neg}},
+  //   prevalentAxisGuess:'x'|'y', members:[bioguideId…], bills:[billId…],
+  //   fitness:{score,reason}, status:'new'|'promoted'|'dismissed',
+  //   promotedEventId? }
+
+  function getCandidates() { return _get(KEYS.candidates) || []; }
+
+  function getCandidate(cid) {
+    return getCandidates().find(c => c.cid === cid) || null;
+  }
+
+  function saveCandidate(cand) {
+    if (!cand || !cand.cid) {
+      console.warn('PrismDB.saveCandidate: cid required — refused.');
+      return null;
+    }
+    cand.ts = cand.ts || Date.now();
+    cand.status = cand.status || 'new';
+    const all = getCandidates();
+    const idx = all.findIndex(c => c.cid === cand.cid);
+    if (idx !== -1) all[idx] = cand; else all.push(cand);
+    _set(KEYS.candidates, all);
+    return cand;
+  }
+
+  // Merge a sourced batch (window.PRISM_CANDIDATES) into the store.
+  // Upserts by cid but NEVER clobbers local triage state: an existing
+  // candidate keeps its status + promotedEventId; brand-new ones enter
+  // as 'new'. Returns { added, updated }.
+  function importCandidates(batch) {
+    if (!Array.isArray(batch)) return { added: 0, updated: 0 };
+    const all = getCandidates();
+    const byId = new Map(all.map((c, i) => [c.cid, i]));
+    let added = 0, updated = 0;
+    batch.forEach(c => {
+      if (!c || !c.cid) return;
+      const idx = byId.get(c.cid);
+      if (idx != null) {
+        const keep = {
+          status: all[idx].status,
+          promotedEventId: all[idx].promotedEventId
+        };
+        all[idx] = { ...all[idx], ...c, ...keep };
+        updated++;
+      } else {
+        all.push({ ...c, status: c.status || 'new', ts: c.ts || Date.now() });
+        byId.set(c.cid, all.length - 1);
+        added++;
+      }
+    });
+    _set(KEYS.candidates, all);
+    return { added, updated };
+  }
+
+  function dismissCandidate(cid) {
+    const c = getCandidate(cid);
+    if (!c) return null;
+    c.status = 'dismissed';
+    return saveCandidate(c);
+  }
+
+  function promoteCandidate(cid, eventId) {
+    const c = getCandidate(cid);
+    if (!c) return null;
+    c.status = 'promoted';
+    if (eventId) c.promotedEventId = eventId;
+    return saveCandidate(c);
+  }
+
+  function deleteCandidate(cid) {
+    _set(KEYS.candidates, getCandidates().filter(c => c.cid !== cid));
+    return true;
   }
 
   // ── Bill readings <-> published Reading (sync transport) ──
@@ -1538,6 +1620,8 @@ const PrismDB = (() => {
     getBillScores, getBillScoresForBill, getBillScoresForEvent,
     getBillScore, saveBillScore, deleteBillScore,
     getTickerEntries, appendTickerEntries,
+    getCandidates, getCandidate, saveCandidate, importCandidates,
+    dismissCandidate, promoteCandidate, deleteCandidate,
     exportBillReadings, importBillReadings, migrateBillAnalysis,
     getState, setState,
     getUser, setUser,
