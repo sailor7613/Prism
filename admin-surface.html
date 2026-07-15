@@ -21,7 +21,7 @@
   html,body{ margin:0; min-height:100%; overflow-x:hidden; }
   body.dark{ }
   /* ── copied verbatim-ish from v2/index.html diatribe stage ── */
-  main{ position:relative; min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
+  main{ position:relative; min-height:100vh; min-height:100dvh; display:flex; flex-direction:column; justify-content:center; align-items:center;
     padding: calc(var(--top-chrome) + 58px) var(--stage-pad-x) calc(120px + var(--safe-bottom)); z-index:1; }
   .framing{ max-width:720px; text-align:center; font-family:var(--serif); font-size:16px; line-height:1.65; color:var(--ink-mid);
     margin-bottom:44px; font-style:italic; outline:none; }
@@ -195,7 +195,7 @@
   .viewseg button{ border:0; border-radius:0; background:transparent; color:var(--ink-low); font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; padding:7px 11px; cursor:pointer; }
   .viewseg button.on{ background:#22345c; color:#fff; }
   body.view-quad main, body.view-quad .cellmap, body.view-quad #kwPill{ display:none !important; }
-  #quadView{ display:none; position:relative; min-height:100vh; flex-direction:column; align-items:center; justify-content:center;
+  #quadView{ display:none; position:relative; min-height:100vh; min-height:100dvh; flex-direction:column; align-items:center; justify-content:center;
     padding: calc(env(safe-area-inset-top) + 70px) 20px calc(96px + var(--safe-bottom)); z-index:1; }
   body.view-quad #quadView{ display:flex; }
   .quad-sub{ font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-low); margin-bottom:14px; text-align:center; }
@@ -294,6 +294,24 @@
   body.light .br-drawer{ background:rgba(245,240,232,.97); }
   body.light .br-input textarea, body.light .br-card{ background:rgba(20,22,30,.04); }
   body.light .br-kw{ color:#7a5418; }
+
+  /* ── mobile chrome — the toolbar folds behind the prism nav; the menu drops from it ──
+     Desktop is untouched: .pnav hides above 700px and every rule below is fenced. */
+  .pnav{ display:none; background:transparent; border:0; padding:2px 4px; cursor:pointer; align-items:center; }
+  .pnav img{ height:20px; width:auto; display:block; opacity:.85; transition:opacity .3s ease; }
+  .pnav:active img, body.navopen .pnav img{ opacity:1; }
+  @media (max-width:700px){
+    .pnav{ display:inline-flex; }
+    /* closed: only the prism nav + the event title ride the bar */
+    body:not(.navopen) .adminbar > *:not(.pnav):not(.title-in){ display:none !important; }
+    body:not(.navopen) .adminbar{ flex-wrap:nowrap; }
+    /* open: the menu drops down as a column; each item keeps its own display rules
+       (so 🧭 orbit still only appears when the room is up) */
+    body.navopen .adminbar{ flex-direction:column; align-items:stretch; max-height:85dvh; overflow-y:auto; }
+    body.navopen .adminbar .title-in{ min-width:0; }
+    /* the action bar may wrap to two rows on narrow screens — keep the cell chips clear of it */
+    .actions{ flex-wrap:wrap; }
+  }
 </style>
 </head>
 <body class="dark">
@@ -302,6 +320,7 @@
 <div id="ambient" class="prism-ambient fluid"></div>
 
 <div class="adminbar">
+  <button class="pnav" id="pnavBtn" title="Menu"><img src="src/img/prism_nav_full.png" alt="☰"></button>
   <span class="ttl">Prism Admin</span>
   <input class="title-in" id="evTitle" placeholder="event title…">
   <select id="evSelect" title="Load an event onto the surface"></select>
@@ -833,6 +852,15 @@ function setTheme(t){
 $('themeBtn').onclick=()=>setTheme(document.body.classList.contains('light')?'dark':'light');
 (function(){ let t=null; try{ t=localStorage.getItem('prism.admin.theme'); }catch(_){}
   if(t==='light') setTheme('light'); })();
+
+/* ---- mobile prism-nav: the toolbar drops from the nav art on phones ----
+   Toggle only ever matters under the 700px media query; harmless on desktop.
+   Tapping any menu button folds the bar back up (inputs & details stay open). */
+$('pnavBtn').onclick=(e)=>{ e.stopPropagation(); document.body.classList.toggle('navopen'); };
+document.querySelector('.adminbar').addEventListener('click',(e)=>{
+  if(document.body.classList.contains('navopen') && e.target.closest('button.btn, .viewseg button, .prevseg button'))
+    document.body.classList.remove('navopen');
+});
 
 /* ---- DreamGetty room backdrop (handoff §3¾) ----
    The early room: ionic columns, the pedestal, Ted Turner, the vase that
