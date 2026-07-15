@@ -478,6 +478,7 @@
   </div>
   <div class="br-foot">
     <button class="btn" id="nrRescan" title="Re-read data/candidates.js into the store (triage state survives)">↺ Rescan</button>
+    <button class="btn" id="nrScore" title="M2 pass — score unscored triage candidates: framing draft, axes, constitutive fitness (spec §4 as amended)">✦ Score</button>
     <span class="status" id="nrStatus"></span>
   </div>
 </aside>
@@ -492,6 +493,20 @@
   <button class="btn" id="btnExport">Export</button>
   <span class="status" id="status"></span>
 </div>
+
+<div class="modal" id="nrPosModal"><div class="sheet" style="max-width:520px">
+  <div style="display:flex;gap:10px;align-items:center"><strong style="font-family:var(--serif)">Write member positions?</strong>
+    <span style="flex:1"></span>
+    <button class="btn" id="nrPosSkip">Skip</button></div>
+  <div class="status" id="nrPosExplain" style="margin:8px 0 4px;white-space:normal;line-height:1.5"></div>
+  <select id="nrPosVote" style="width:100%;margin:6px 0"></select>
+  <div style="display:flex;gap:10px;align-items:center;margin-top:4px">
+    <span class="status" id="nrPosMap" style="white-space:normal"></span>
+    <span style="flex:1"></span>
+    <button class="btn" id="nrPosFlip">⇄ Flip</button>
+    <button class="btn" id="nrPosWrite">Write</button>
+  </div>
+</div></div>
 
 <div class="modal" id="exportModal"><div class="sheet">
   <div style="display:flex;gap:10px;align-items:center"><strong style="font-family:var(--serif)">Event object</strong>
@@ -735,8 +750,11 @@ function save(){
       const added=PrismDB.addEvent(ev); currentId=added.id; PrismDB.setActive(added.id); status('Saved '+added.id+' · active'); refreshDropdown(added.id); }
     // Event Engine: a successful save ratifies a pending promotion —
     // stamp candidate → event lineage (survives rescans by design).
-    if(nrPendingPromote){ PrismDB.promoteCandidate(nrPendingPromote, currentId); nrPendingPromote=null;
-      try{ nrRender(); }catch(_){}}
+    if(nrPendingPromote){ const pc=nrPendingPromote; PrismDB.promoteCandidate(pc, currentId); nrPendingPromote=null;
+      try{ nrRender(); }catch(_){}
+      // RULED 2026-07-13: offer the yea→pole member-position write now that
+      // authored axes exist (declared later in this script — hoisted).
+      try{ nrOfferPositions(pc, currentId); }catch(_){}}
     return currentId;
   }catch(e){ status('Save failed: '+e.message); return null; }
 }
@@ -1112,10 +1130,19 @@ function nrRender(){
     card.appendChild(meta);
     if(c.summary){ const r=document.createElement('div'); r.className='r'; r.style.whiteSpace='pre-wrap';
       r.textContent=c.summary; card.appendChild(r); }
+    if(c.fitness&&c.fitness.reason){ // M2 — the constitutive argument (spec §4 as amended)
+      const fr=document.createElement('div'); fr.className='r'; fr.style.whiteSpace='pre-wrap'; fr.style.opacity='.85';
+      fr.textContent='✦ '+c.fitness.reason+(c.suggestedAxes
+        ?('\nX: '+((c.suggestedAxes.x&&c.suggestedAxes.x.neg)||'—')+' ↔ '+((c.suggestedAxes.x&&c.suggestedAxes.x.pos)||'—')
+         +' · Y: '+((c.suggestedAxes.y&&c.suggestedAxes.y.neg)||'—')+' ↔ '+((c.suggestedAxes.y&&c.suggestedAxes.y.pos)||'—')
+         +(c.prevalentAxisGuess?(' · native binary: '+c.prevalentAxisGuess.toUpperCase()):'')):'');
+      card.appendChild(fr); }
     const tags=document.createElement('div'); tags.className='br-tags';
     (c.bills||[]).forEach(b=>{ const t=document.createElement('span'); t.className='br-tag'; t.textContent=b; tags.appendChild(t); });
-    const mt=document.createElement('span'); mt.className='br-tag';
-    mt.textContent=((c.members||[]).length)+' members'; tags.appendChild(mt);
+    if((c.members||[]).length){ const mt=document.createElement('span'); mt.className='br-tag';
+      mt.textContent=c.members.length+' members'; tags.appendChild(mt); }
+    if(c.source==='news'&&c.raw&&Array.isArray(c.raw.articles)){ const nt=document.createElement('span'); nt.className='br-tag';
+      nt.textContent=new Set(c.raw.articles.map(a=>a.domain)).size+' outlets · '+c.raw.articles.length+' articles'; tags.appendChild(nt); }
     card.appendChild(tags);
     const acts=document.createElement('div'); acts.className='br-acts';
     if(c.status==='new'){
@@ -1128,6 +1155,8 @@ function nrRender(){
         if(cc){ cc.status='new'; delete cc.promotedEventId; PrismDB.saveCandidate(cc); nrRender(); } };
       acts.appendChild(rs);
     }
+    const sc=document.createElement('button'); sc.textContent=c.fitness?'✦ Rescore':'✦ Score';
+    sc.title='M2 pass on this candidate only'; sc.onclick=()=>nrScoreCid(c.cid); acts.appendChild(sc);
     if(c.raw&&c.raw.congressGovUrl){
       const a=document.createElement('button'); a.textContent='congress.gov ↗';
       a.onclick=()=>window.open(c.raw.congressGovUrl,'_blank','noopener'); acts.appendChild(a);
@@ -1158,11 +1187,210 @@ function nrPromote(cid){
     if(op&&(op.neg||op.pos)) otherPole={neg:op.neg||'',pos:op.pos||''};
   }
   if(c.raw&&c.raw.congressGovUrl) citations=[{url:c.raw.congressGovUrl,label:(c.bills&&c.bills[0])||'congress.gov'}];
+  else if(c.source==='news'&&c.raw&&Array.isArray(c.raw.articles))   // top 3 articles → citation bank
+    citations=c.raw.articles.slice(0,3).map(a=>({url:a.url,label:a.domain||'article'}));
   setPoleFields(); setThumb(38,false);
   nrPendingPromote=cid;
   nrCloseFn();
   status('Promoted from newsroom — author the dialectic, then Save / Publish');
 }
+
+/* ===== M2 — the constitutive pass (spec §4 AS AMENDED 2026-07-13) =====
+   Fitness is constitutive, not diagnostic: events arrive 1D (the vote IS
+   the binary); the second axis is CONSTITUTED around it. The model
+   proposes the strongest secondary binary and defends non-degeneracy;
+   the degeneracy test is cross-cutting, checked against the real party
+   splits riding on the candidate. Low score = "every second axis is
+   contrived or redundant" — never "this event is 1D". Sailor rules. */
+const NR_M2_METHOD='m2_constitutive_v1';
+const NR_M2_SYSTEM=`You are the Prism Event Engine's M2 pass. Input: one candidate event — either LEGISLATIVE (a bill with recent roll-call votes, party splits attached) or NEWS (a story cluster: near-identical headlines across multiple outlets; no vote positions exist).
+
+The Prism reads every event through TWO axes. Axis one is usually the event's native binary (the vote itself: pass/block, fund/defund). The second axis is NOT a property to detect — most events arrive one-dimensional. It is CONSTITUTED: the secondary binary that crystallizes around the event (how-vs-whether, procedure-vs-substance, institutional-prerogative-vs-executive-power, etc.).
+
+Your job: propose the STRONGEST secondary binary constructible here, and score how good it is.
+
+DEGENERACY TEST (this is the whole game): a proposed second axis is degenerate if it does not CROSS-CUT the first — if everyone on one side of the vote would land on one pole of it, it is the same binary in costume. Check your proposal against the actual party splits provided — but read them correctly:
+- Roll-call splits are EVIDENCE, not the verdict. Party discipline suppresses defection on whipped votes, so a thin crossover does NOT refute a proposed axis. The axis is constituted in the broader field — the caucus if unwhipped, the public argument, the commentariat — not only in the chamber.
+- WHO defects matters more than how many. If the few defectors are exactly the members the axis predicts (e.g. libertarian-leaning Rs on war powers, labor-district Rs on labor law), that CONFIRMS the axis is live even at 2-4 defectors.
+- What observed splits CAN prove is redundancy: if the proposed axis merely restates the vote binary (or a procedural relabeling of it — "passage vs motion" is not a political tension), it is degenerate no matter how it is dressed.
+- Propose a SUBSTANTIVE secondary binary. Procedure-vs-substance only qualifies when members demonstrably split differently across the two.
+- NEWS candidates carry no vote positions: argue the cross-cut from the PUBLIC FIELD instead — would the proposed second axis divide each side's own coalition (its politicians, commentators, factions)? NAME who lands where. The native binary is usually the story's headline dispute; the same degeneracy standard applies.
+
+Return STRICT JSON only:
+{
+ "framingDraft": "2-3 neutral sentences naming the tension, not summarizing the procedure",
+ "suggestedAxes": {"x":{"pos":"...","neg":"..."},"y":{"pos":"...","neg":"..."}},   // pole labels, 1-4 words each
+ "prevalentAxisGuess": "x" | "y",          // which axis carries the NATIVE binary (the vote)
+ "fitness": {"score": 0.0-1.0, "reason": "names the proposed secondary binary and defends its non-degeneracy against the vote pattern — or says why every candidate collapses"},
+ "voteMap": {"voteId": "<id of the roll call that best expresses the native binary>", "yeaPole": "pos" | "neg"}   // LEGISLATIVE only — on the prevalent axis, which pole a YEA maps to; null for news
+}
+
+Calibration: 0.7+ = the secondary binary demonstrably cross-cuts, OR the defection pattern matches exactly what the axis predicts, OR it would self-evidently divide the broader field. 0.4-0.7 = a substantive axis that plausibly divides the field even though the whipped vote hides it. Below 0.4 = every candidate second axis is contrived, redundant with the vote binary, or merely procedural. Do NOT score low merely because the event is one-dimensional (trivially true of everything) and do NOT score low merely because a whipped roll call shows few defectors — score low only when no good second question EXISTS.`;
+
+function nrM2Prompt(c){
+  if(c.source==='news'){
+    const arts=(c.raw&&c.raw.articles)||[];
+    const L=['CANDIDATE '+c.cid+' (NEWS — story cluster, no vote positions)',
+      'Representative headline: '+(c.title||''),
+      'Outlets carrying it: '+new Set(arts.map(a=>a.domain)).size,
+      'Salience (source heat, NOT fitness): '+((c.raw&&c.raw.salience)!=null?c.raw.salience:'—'),'',
+      'HEADLINES (the public field — argue the cross-cut from here):'];
+    arts.forEach(a=>L.push((a.seendate||'').slice(0,10)+' '+a.domain+': '+a.title));
+    return L.join('\n');
+  }
+  const L=['CANDIDATE '+c.cid+' (LEGISLATIVE)','Title: '+(c.title||''),'Bill: '+((c.bills&&c.bills[0])||''),
+    'Implicated members: '+((c.members&&c.members.length)||0),
+    'Salience (source heat, NOT fitness): '+((c.raw&&c.raw.salience)!=null?c.raw.salience:'—'),'',
+    'ROLL CALLS (party splits are the cross-cut evidence):', c.summary||'(none)'];
+  (c.raw&&c.raw.votes||[]).forEach(v=>{ L.push('voteId '+v.voteId+' · '+v.chamber+' · '+v.date+' · '+v.question+' · '+v.result); });
+  return L.join('\n');
+}
+
+/* Tolerant parse — the model sometimes writes literal newlines inside
+   JSON string values (multi-sentence framings), which JSON.parse rejects.
+   Escape control chars inside strings only, structure untouched. */
+function nrParseJson(raw){
+  try{ return PrismAI.extractJson(raw); }
+  catch(e){
+    const s=raw.indexOf('{'), t=raw.lastIndexOf('}');
+    if(s<0||t<0) throw e;
+    let out='', inStr=false, esc=false;
+    for(const ch of raw.slice(s,t+1)){
+      if(esc){ out+=ch; esc=false; continue; }
+      if(ch==='\\'){ out+=ch; esc=true; continue; }
+      if(ch==='"'){ inStr=!inStr; out+=ch; continue; }
+      if(inStr&&ch==='\n'){ out+='\\n'; continue; }
+      if(inStr&&ch==='\r'){ continue; }
+      if(inStr&&ch==='\t'){ out+='\\t'; continue; }
+      out+=ch;
+    }
+    return JSON.parse(out);
+  }
+}
+
+async function nrScoreOne(c,key){
+  let j=null;
+  for(let a=0;;a++){                                   // one resample: malformed
+    try{                                               // JSON / empty reply heal
+      const raw=await PrismAI.call(key,{ model:$('model').value, system:NR_M2_SYSTEM,
+        prompt:nrM2Prompt(c), maxTokens:2600, effort:'low' });
+      j=nrParseJson(raw); break;
+    }catch(e){ if(a>=1||/429|529/.test(e.message)) throw e;   // rate limits bubble
+      await new Promise(r=>setTimeout(r,1200)); }
+  }
+  const ax=j.suggestedAxes||{}; const shape=a=>({pos:String((a&&a.pos)||''),neg:String((a&&a.neg)||'')});
+  c.framingDraft=String(j.framingDraft||'')||c.framingDraft;
+  c.suggestedAxes={x:shape(ax.x),y:shape(ax.y)};
+  c.prevalentAxisGuess=(j.prevalentAxisGuess==='y')?'y':'x';
+  const f=j.fitness||{};
+  c.fitness={ score:Math.max(0,Math.min(1,+f.score||0)), reason:String(f.reason||''), method:NR_M2_METHOD, ts:new Date().toISOString() };
+  const votes=(c.raw&&c.raw.votes)||[];
+  if(votes.length){
+    const ids=new Set(votes.map(v=>v.voteId));
+    const vm=j.voteMap||{};
+    c.voteMap={ voteId:ids.has(vm.voteId)?vm.voteId:votes[0].voteId,
+      yeaPole:(vm.yeaPole==='neg')?'neg':'pos' };
+  } else c.voteMap=null;                      // news — nothing to map
+  PrismDB.saveCandidate(c);
+}
+
+let nrScoring=false;
+async function nrScoreCid(cid){
+  if(nrScoring) return;
+  const key=$('apiKey').value.trim(); if(!key){ nrStatus('Add your API key (AI ▸ top bar)'); return; }
+  const c=PrismDB.getCandidate(cid); if(!c) return;
+  nrScoring=true; nrStatus('✦ scoring '+(c.title||cid).slice(0,48)+'…');
+  try{ await nrScoreOne(c,key); nrStatus('✦ fit '+c.fitness.score.toFixed(2)+' — '+c.fitness.reason.slice(0,80)); }
+  catch(e){ nrStatus('✦ failed: '+e.message); }
+  nrScoring=false; nrRender();
+}
+
+async function nrScoreAll(){
+  if(nrScoring) return;
+  const key=$('apiKey').value.trim(); if(!key){ nrStatus('Add your API key (AI ▸ top bar)'); return; }
+  const pool=PrismDB.getCandidates().filter(c=>c.status==='new'&&!(c.fitness&&typeof c.fitness.score==='number'))
+    .sort((a,b)=>nrKey(b)-nrKey(a));
+  if(!pool.length){ nrStatus('nothing unscored in triage'); return; }
+  nrScoring=true; let ok=0,fail=0;
+  const GAP=13000;   // org limit discovered live 2026-07-13: 5 req/min on
+                     // sonnet-5 — pace the loop UNDER it, don't fight it
+  for(let i=0;i<pool.length;i++){
+    const c=pool[i]; let done=false;
+    for(let att=0; att<3 && !done; att++){
+      nrStatus('✦ '+(i+1)+'/'+pool.length+(att?(' · retry '+att):'')+' — '+(c.title||c.cid).slice(0,40)+'… (paced to rate limit)');
+      try{ await nrScoreOne(c,key); ok++; done=true; }
+      catch(e){
+        if(att<2) await new Promise(r=>setTimeout(r,/429|529/.test(e.message)?25000:3000));
+        else { fail++; console.warn('M2 fail',c.cid,e.message); }
+      }
+    }
+    nrRender();                                                    // fitness sort tightens live
+    if(i<pool.length-1) await new Promise(r=>setTimeout(r,GAP));
+  }
+  nrScoring=false; nrStatus('✦ pass done — '+ok+' scored'+(fail?(' · '+fail+' failed (console)'):''));
+  nrRender();
+}
+$('nrScore').onclick=nrScoreAll;
+
+/* ===== Save-time member-position write (yea→pole, RULED 2026-07-13) =====
+   Votes don't map onto axes until the axes exist — so the write happens
+   AFTER authoring, at save, with Sailor confirming the one fact the data
+   can't supply: which pole YEA maps to (M2's voteMap seeds the default).
+   Prevalent-axis coordinate from the vote; cross-axis 0.5, flagged
+   unrefined for the derive engine to ground later. Members already
+   placed for the event (MANUAL/DERIVED) are never clobbered. */
+let nrPos=null;
+function nrPosPoles(){ // labels for the saved event's prevalent axis
+  const ev=PrismDB.getEvent(nrPos.eventId)||{}; const axis=ev.prevalentAxis||'x';
+  const a=(ev.axes&&ev.axes[axis])||{}; return {axis, pos:a.pos||('+'+axis.toUpperCase()), neg:a.neg||('−'+axis.toUpperCase())};
+}
+function nrPosPaint(){
+  const v=nrPos.votes[nrPos.idx]; const p=nrPosPoles();
+  const yeaLab=nrPos.yeaPole==='pos'?p.pos:p.neg, nayLab=nrPos.yeaPole==='pos'?p.neg:p.pos;
+  const nY=((v.positions&&v.positions.yea)||[]).length, nN=((v.positions&&v.positions.nay)||[]).length;
+  $('nrPosMap').textContent='yea → “'+yeaLab+'” · nay → “'+nayLab+'” · '+(nY+nN)+' members · cross-axis 0.5 (unrefined)';
+}
+function nrOfferPositions(cid,eventId){
+  const c=PrismDB.getCandidate(cid); if(!c) return;
+  const votes=((c.raw&&c.raw.votes)||[]).filter(v=>v.positions&&((v.positions.yea&&v.positions.yea.length)||(v.positions.nay&&v.positions.nay.length)));
+  if(!votes.length) return;
+  let idx=votes.findIndex(v=>/passage|agreeing to the resolution|pass\b/i.test(v.question||''));
+  if(idx<0) idx=0;                                   // newest-first fallback
+  nrPos={cid,eventId,votes,idx,yeaPole:(c.voteMap&&c.voteMap.yeaPole)||'pos'};
+  if(c.voteMap&&c.voteMap.voteId){ const i=votes.findIndex(v=>v.voteId===c.voteMap.voteId); if(i>=0) nrPos.idx=i; }
+  const sel=$('nrPosVote'); sel.innerHTML='';
+  votes.forEach((v,i)=>{ const o=document.createElement('option'); o.value=i;
+    o.textContent=v.date+' '+v.chamber+' · '+(v.question||'')+' ('+v.totals.yea+'-'+v.totals.nay+')'; sel.appendChild(o); });
+  sel.value=nrPos.idx;
+  $('nrPosExplain').textContent='Saved '+eventId+' from a promoted roll call. Write real per-event placements for the implicated members on the prevalent axis? (The sparklines articulate; skip is always safe.)';
+  nrPosPaint(); $('nrPosModal').classList.add('show');
+}
+$('nrPosVote').onchange=()=>{ nrPos.idx=+$('nrPosVote').value; nrPosPaint(); };
+$('nrPosFlip').onclick=()=>{ nrPos.yeaPole=(nrPos.yeaPole==='pos')?'neg':'pos'; nrPosPaint(); };
+$('nrPosSkip').onclick=()=>{ $('nrPosModal').classList.remove('show'); nrPos=null; };
+$('nrPosWrite').onclick=()=>{
+  if(!nrPos) return;
+  const v=nrPos.votes[nrPos.idx]; const p=nrPosPoles();
+  const have=new Set(PrismDB.getMemberPositionsForEvent(nrPos.eventId).map(x=>x.bioguideId)); // never clobber
+  const coord=pole=>pole==='pos'?0.85:0.15;
+  const pinFor=pole=>{ const c=coord(pole);
+    return p.axis==='x' ? {x:c,y:0.5} : {x:0.5,y:1-c}; };        // pin.y small = +Y (house convention)
+  const batch=[]; let skipped=0;
+  [['yea',nrPos.yeaPole],['nay',nrPos.yeaPole==='pos'?'neg':'pos']].forEach(([side,pole])=>{
+    ((v.positions&&v.positions[side])||[]).forEach(bid=>{
+      if(have.has(bid)){ skipped++; return; }
+      batch.push({ bioguideId:bid, eventId:nrPos.eventId, pin:pinFor(pole),
+        confidence:0.7, method:'vote_record', provenance:'VOTE',
+        voteId:v.voteId, crossAxisUnrefined:true });
+      // NO quadrant, deliberately: at cross-axis 0.5 a quadrant claim is
+      // pure artifact. Consumers grey/dash these — honest until the
+      // derive engine grounds the second coordinate.
+    });
+  });
+  if(batch.length) PrismDB.saveMemberPositions(batch);
+  status(batch.length+' member positions written from '+v.voteId+(skipped?(' · '+skipped+' kept (already placed)'):''));
+  $('nrPosModal').classList.remove('show'); nrPos=null;
+};
 
 $('nrBtn').onclick=nrOpen; $('nrClose').onclick=nrCloseFn; $('nrOverlay').onclick=nrCloseFn;
 $('nrRescan').onclick=async()=>{ nrStatus('rescanning…'); await nrImport(true); nrRender(); };

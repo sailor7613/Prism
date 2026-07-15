@@ -9980,7 +9980,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
     "meta": "H.R. 3106 · Reported · Emergency Management",
-    "id": "hr-119-3106"
+    "id": "hr-119-3106",
+    "rc": 1,
+    "mm": 0.966
   },
   {
     "name": "USCP Empowerment Act of 2025",
@@ -10040,7 +10042,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Improving Travel for American Families Act",
     "meta": "H.R. 8897 · Reported · Infrastructure",
-    "id": "hr-119-8897"
+    "id": "hr-119-8897",
+    "rc": 1,
+    "mm": 0.941
   },
   {
     "name": "Homeland Security Capabilities Preservation Reporting Act of 2026",

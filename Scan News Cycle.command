@@ -20,14 +20,19 @@ if ! command -v node >/dev/null 2>&1; then
   exit 1
 fi
 
-echo "Step 1/2 · sweeping recent roll-call votes (resumable; Ctrl-C safe)…"
+echo "Step 1/3 · sweeping recent roll-call votes (resumable; Ctrl-C safe)…"
 node scripts/fetch-votes.js || { echo; echo "✗ Vote sweep failed (see the error above)."; read -r -p "Press Enter to close."; exit 1; }
 
 echo
-echo "Step 2/2 · shaping the candidate pool → data/candidates.js…"
+echo "Step 2/3 · shaping legislative candidates → data/candidates.js…"
 node scripts/fetch-activity.js || { echo; echo "✗ Candidate shaping failed (see the error above)."; read -r -p "Press Enter to close."; exit 1; }
 
 echo
-echo "✓ Done. Open admin.html and hit 'Scan the news cycle' to triage."
+echo "Step 3/3 · GDELT news sweep (keyless) → merging news candidates…"
+# News is additive — a GDELT hiccup shouldn't kill the legislative refresh.
+node scripts/fetch-news.js || { echo; echo "⚠ News sweep failed (see above) — continuing with legislative candidates only."; }
+
+echo
+echo "✓ Done. Open the admin surface and tap 📡 to triage."
 echo
 read -r -p "Press Enter to close."

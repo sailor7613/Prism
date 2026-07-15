@@ -672,8 +672,13 @@ const PrismDB = (() => {
   // Schema: { cid, source:'legislative'|'news'|'fused', ts, raw:{…},
   //   title, summary, framingDraft, suggestedAxes:{x:{pos,neg},y:{pos,neg}},
   //   prevalentAxisGuess:'x'|'y', members:[bioguideId…], bills:[billId…],
-  //   fitness:{score,reason}, status:'new'|'promoted'|'dismissed',
-  //   promotedEventId? }
+  //   fitness:{score,reason,method,ts}, status:'new'|'promoted'|'dismissed',
+  //   promotedEventId?,
+  //   voteMap?:{voteId,yeaPole:'pos'|'neg'} }   // M2 proposal: which pole a
+  //     YEA maps to on the prevalent axis — seeds the save-time member-
+  //     position write (RULED 2026-07-13). Fitness is CONSTITUTIVE per
+  //     spec §4 as amended: quality of the best secondary binary, not a
+  //     two-dimensionality diagnosis.
 
   function getCandidates() { return _get(KEYS.candidates) || []; }
 
@@ -712,6 +717,12 @@ const PrismDB = (() => {
           status: all[idx].status,
           promotedEventId: all[idx].promotedEventId
         };
+        // M2 fills these locally; the scanner ships them null — a rescan
+        // must never let an incoming null clobber a local score/draft.
+        ['fitness', 'framingDraft', 'suggestedAxes', 'prevalentAxisGuess',
+         'voteMap'].forEach(k => {
+          if (c[k] == null && all[idx][k] != null) keep[k] = all[idx][k];
+        });
         all[idx] = { ...all[idx], ...c, ...keep };
         updated++;
       } else {
