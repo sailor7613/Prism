@@ -10119,7 +10119,9 @@ const LEGISLATION_DATA = [
   {
     "name": "An original bill to authorize appropriations for fiscal year 2027 for military activities of the Department of Defense, for military construction, and for defense activities of the Department of Energy, to prescribe military personnel strengths for such fiscal year, and for other purposes.",
     "meta": "S. 4784 · Floor Action · Defense",
-    "id": "s-119-4784"
+    "id": "s-119-4784",
+    "rc": 1,
+    "mm": 0.042
   },
   {
     "name": "DNII Act of 2026",
