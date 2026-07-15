@@ -479,6 +479,7 @@
   <div class="br-foot">
     <button class="btn" id="nrRescan" title="Re-read data/candidates.js into the store (triage state survives)">↺ Rescan</button>
     <button class="btn" id="nrScore" title="M2 pass — score unscored triage candidates: framing draft, axes, constitutive fitness (spec §4 as amended)">✦ Score</button>
+    <button class="btn" id="nrSync" title="Middle stratum ⇄ repo: pull data/candidate_scores.json, merge (newest wins per candidate), push this device's scores + triage back. Same token as Publish.">⇡ Sync scores</button>
     <span class="status" id="nrStatus"></span>
   </div>
 </aside>
@@ -1101,9 +1102,52 @@ async function nrImport(bust){
   nrLoaded=true;
   if(Array.isArray(window.PRISM_CANDIDATES)){
     const r=PrismDB.importCandidates(window.PRISM_CANDIDATES);
-    nrStatus(r.added+' new · '+r.updated+' refreshed');
+    // the committed middle stratum rides in on every open — phone triage
+    // reaches the desk without a gesture (persistence §1.5)
+    let s='';
+    try{ const m=await nrPullScores(); if(m&&m.applied) s=' · '+m.applied+' scores pulled'; }
+    catch(_){ /* offline / rate-limited — candidates.js bake already covers us */ }
+    nrStatus(r.added+' new · '+r.updated+' refreshed'+s);
   } else nrStatus('no candidates.js — run Scan News Cycle.command on the desk');
 }
+
+/* ===== Middle-stratum sync (persistence §1.5, RULED 2026-07-15) =====
+   data/candidate_scores.json = the committed record of scored-but-
+   unpromoted + triage state. Pull is keyless (public repo); push rides
+   the same token as Publish. LWW per candidate by mts — PrismDB owns
+   the merge semantics; this block is just transport + gesture. */
+const NR_SCORES_PATH='data/candidate_scores.json';
+let nrScoresSha=null;
+
+async function nrPullScores(){
+  const f=await PrismSync.getFile(NR_SCORES_PATH);
+  if(!f){ nrScoresSha=null; return { applied:0 }; }
+  nrScoresSha=f.sha;
+  if(!f.json||f.json.schema!=='candidate_scores/v1'||!f.json.records) return { applied:0 };
+  const m=PrismDB.mergeCandidateScores(f.json.records);
+  if(m.applied) nrRender();
+  return m;
+}
+
+let nrSyncing=false;
+async function nrSyncScores(quiet){
+  if(nrSyncing) return; nrSyncing=true;
+  try{
+    if(!quiet) nrStatus('⇡ pulling scores…');
+    let pulled={applied:0};
+    try{ pulled=await nrPullScores(); }catch(e){ if(!quiet) nrStatus('⇡ pull failed: '+e.message); }
+    const records=PrismDB.exportCandidateScores();
+    if(!Object.keys(records).length&&!nrScoresSha){ if(!quiet) nrStatus('nothing scored or triaged yet — nothing to push'); return; }
+    if(!PrismSync.token()){ if(!quiet) nrStatus((pulled.applied?pulled.applied+' pulled · ':'')+'no GitHub token — pull-only (add one under Sync to push)'); return; }
+    if(!quiet) nrStatus('⇡ pushing '+Object.keys(records).length+' records…');
+    const file={ schema:'candidate_scores/v1', updated:new Date().toISOString(), records };
+    nrScoresSha=await PrismSync.putFile(NR_SCORES_PATH, file,
+      'Newsroom: middle stratum ('+Object.keys(records).length+' candidates)', nrScoresSha);
+    nrStatus('⇡ synced — '+(pulled.applied||0)+' pulled · '+Object.keys(records).length+' pushed');
+  }catch(e){ nrStatus('⇡ sync failed: '+e.message); }
+  finally{ nrSyncing=false; }
+}
+$('nrSync').onclick=()=>nrSyncScores(false);
 
 function nrRender(){
   const host=$('nrList'); host.innerHTML='';
@@ -1329,6 +1373,9 @@ async function nrScoreAll(){
   }
   nrScoring=false; nrStatus('✦ pass done — '+ok+' scored'+(fail?(' · '+fail+' failed (console)'):''));
   nrRender();
+  // a whole pass is one natural commit of the middle stratum — push it
+  // without a second gesture when the token is on this device
+  if(ok&&PrismSync.token()) nrSyncScores(true);
 }
 $('nrScore').onclick=nrScoreAll;
 

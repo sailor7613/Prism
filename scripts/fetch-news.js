@@ -41,6 +41,7 @@
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
+const { loadScores, bakeScores } = require('./candidate-scores');
 
 const DATA_DIR = path.join(__dirname, '..', 'data');
 const OUT = path.join(DATA_DIR, 'candidates.js');
@@ -233,6 +234,12 @@ async function main() {
   // merge: keep legislative (and any non-news) candidates, replace news
   const existing = readExisting().candidates;
   const keptExisting = existing.filter(c => c.source !== 'news');
+
+  // Re-merge the committed middle stratum onto the fresh news entries
+  // (legislative entries were baked by fetch-activity.js, which runs first).
+  const baked = bakeScores(news, loadScores());
+  if (baked) console.log(`  ${baked} news candidates re-merged from data/candidate_scores.json`);
+
   const merged = [...keptExisting, ...news];
 
   const header =

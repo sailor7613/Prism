@@ -36,6 +36,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { loadScores, bakeScores } = require('./candidate-scores');
 
 const DATA_DIR = path.join(__dirname, '..', 'data');
 const OUT = path.join(DATA_DIR, 'candidates.js');
@@ -124,6 +125,11 @@ function main() {
   candidates.sort((a, b) => b.raw.salience - a.raw.salience);
   const kept = candidates.slice(0, MAX);
   console.log(`${candidates.length} candidates shaped, keeping top ${kept.length} by salience`);
+
+  // Re-merge the committed middle stratum (persistence §1.5) — a scan
+  // must never clobber scores; a fresh device recovers them from here.
+  const baked = bakeScores(kept, loadScores());
+  if (baked) console.log(`  ${baked} candidates re-merged from data/candidate_scores.json`);
   kept.slice(0, 8).forEach(c => console.log(
     `  ${c.raw.salience.toFixed(2)} ${c.bills[0]} — ${c.title.slice(0, 72)}`));
 

@@ -163,5 +163,48 @@ const PrismSync = (() => {
     return { rid: ev.rid };
   }
 
-  return { pull, publish, token, TOKEN_KEY };
+  // ── Generic repo-file transport (2026-07-15) ──────────────
+  // The Readings dir was the first tenant of repo-as-database; the
+  // committed middle stratum (data/candidate_scores.json) is the second.
+  // These are the raw verbs: GET/PUT one JSON file by repo-relative path.
+  // GET is keyless on the public repo; PUT needs the same token Publish
+  // uses. Callers carry the sha between get and put (conflict signal).
+  const FILE_API = `https://api.github.com/repos/${OWNER}/${REPO}/contents/`;
+
+  // → { json, sha } | null (404 = file doesn't exist yet — fine)
+  async function getFile(relPath) {
+    const res = await fetch(`${FILE_API}${relPath}?ref=${BRANCH}&t=${Date.now()}`,
+      { headers: headers() });
+    if (res.status === 404) return null;
+    if (!res.ok) throw new Error('GitHub read failed (' + res.status + ')');
+    const body = await res.json();
+    let json = null;
+    try { json = JSON.parse(b64decode(body.content)); } catch (e) { /* caller decides */ }
+    return { json, sha: body.sha };
+  }
+
+  // → new sha. Pass the sha from getFile to update; omit to create.
+  async function putFile(relPath, obj, message, sha) {
+    if (!token()) throw new Error('No GitHub token — add one under Sync in the top bar');
+    const put = await fetch(`${FILE_API}${relPath}`, {
+      method: 'PUT',
+      headers: headers(true),
+      body: JSON.stringify({
+        message: message || ('Update ' + relPath),
+        branch: BRANCH,
+        content: b64encode(JSON.stringify(obj, null, 2)),
+        ...(sha ? { sha } : {})
+      })
+    });
+    if (!put.ok) {
+      const msg = put.status === 401 ? 'token rejected' :
+                  put.status === 403 ? 'token lacks access to the repo' :
+                  put.status === 409 || put.status === 422 ? 'repo changed mid-push — pull, then push again' :
+                  'HTTP ' + put.status;
+      throw new Error('Push failed: ' + msg);
+    }
+    return (await put.json()).content.sha;
+  }
+
+  return { pull, publish, token, TOKEN_KEY, getFile, putFile };
 })();

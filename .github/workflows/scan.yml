@@ -1,0 +1,72 @@
+# ── Event Engine · M4 cadence (Build Spec v1 §6a / §8 M4) ──────────────
+# The scheduled scan: sweep roll calls → shape legislative candidates →
+# GDELT news sweep → commit the refreshed pool. Every device sees fresh
+# candidates after each run — the portal is ambient, the desk can sleep.
+#
+# KEYLESS by design: clerk.house.gov + senate.gov XML and GDELT need no
+# secrets; the Congress.gov key is NOT used by this pipeline.
+#
+# The votes checkpoint (data/votes_checkpoint.json, gitignored) persists
+# between runs via actions/cache — the first run does one full sweep
+# (~30 min), every run after is incremental. If the cache is ever evicted
+# the sweep self-heals by running full once more.
+#
+# The middle stratum (data/candidate_scores.json, pushed by the admin
+# surface's ⇡ Sync scores) is READ here — the fetchers bake it into
+# candidates.js — never written. Scans cannot clobber scores.
+
+name: scan
+
+on:
+  schedule:
+    - cron: '23 */3 * * *'   # every 3h (UTC), offset to dodge the top-of-hour crush
+  workflow_dispatch: {}       # manual trigger from the Actions tab
+
+concurrency:
+  group: scan
+  cancel-in-progress: false   # never kill a sweep mid-checkpoint
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180      # roomy for the first (full) sweep
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # restore the newest checkpoint; save this run's under a fresh key
+      - uses: actions/cache@v4
+        with:
+          path: data/votes_checkpoint.json
+          key: votes-checkpoint-${{ github.run_id }}
+          restore-keys: |
+            votes-checkpoint-
+
+      - name: Sweep roll-call votes (resumable)
+        run: node scripts/fetch-votes.js
+
+      - name: Shape legislative candidates
+        run: node scripts/fetch-activity.js
+
+      - name: GDELT news sweep (non-fatal — a hiccup can't kill the refresh)
+        run: node scripts/fetch-news.js || echo "news sweep failed — legislative refresh stands"
+
+      - name: Commit the refreshed pool
+        run: |
+          git config user.name  "prism-scan"
+          git config user.email "prism-scan@users.noreply.github.com"
+          git add data/candidates.js data/prism_votes.json data/prism_legislation.json data/legislation_data.js
+          if git diff --cached --quiet; then
+            echo "nothing changed — no commit"
+          else
+            git commit -m "scan: scheduled candidate refresh"
+            git pull --rebase --autostash origin main
+            git push origin main
+          fi

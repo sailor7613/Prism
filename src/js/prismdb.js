@@ -674,11 +674,14 @@ const PrismDB = (() => {
   //   prevalentAxisGuess:'x'|'y', members:[bioguideId…], bills:[billId…],
   //   fitness:{score,reason,method,ts}, status:'new'|'promoted'|'dismissed',
   //   promotedEventId?,
-  //   voteMap?:{voteId,yeaPole:'pos'|'neg'} }   // M2 proposal: which pole a
+  //   voteMap?:{voteId,yeaPole:'pos'|'neg'},    // M2 proposal: which pole a
   //     YEA maps to on the prevalent axis — seeds the save-time member-
   //     position write (RULED 2026-07-13). Fitness is CONSTITUTIVE per
   //     spec §4 as amended: quality of the best secondary binary, not a
   //     two-dimensionality diagnosis.
+  //   mts?: ms }  // last LOCAL mutation — the LWW key the committed middle
+  //     stratum (data/candidate_scores.json) syncs on (RULED 2026-07-15).
+  //     Stamped by saveCandidate; baked back in by the fetchers at scan.
 
   function getCandidates() { return _get(KEYS.candidates) || []; }
 
@@ -693,6 +696,10 @@ const PrismDB = (() => {
     }
     cand.ts = cand.ts || Date.now();
     cand.status = cand.status || 'new';
+    // mts = last local mutation. Every local change (score, dismiss,
+    // promote, restore) funnels through here; it is the LWW key the
+    // committed middle stratum (candidate_scores.json) syncs on.
+    cand.mts = Date.now();
     const all = getCandidates();
     const idx = all.findIndex(c => c.cid === cand.cid);
     if (idx !== -1) all[idx] = cand; else all.push(cand);
@@ -723,6 +730,17 @@ const PrismDB = (() => {
          'voteMap'].forEach(k => {
           if (c[k] == null && all[idx][k] != null) keep[k] = all[idx][k];
         });
+        // Scanned candidates may arrive with BAKED M2 fields (the fetchers
+        // re-merge data/candidate_scores.json — persistence §1.5). Baked
+        // records carry mts; if the local copy is NEWER (scored/triaged
+        // since that bake was pushed), the local stratum wins wholesale.
+        if (c.mts != null && (all[idx].mts || 0) > c.mts) {
+          ['fitness', 'framingDraft', 'suggestedAxes', 'prevalentAxisGuess',
+           'voteMap'].forEach(k => {
+            if (all[idx][k] != null) keep[k] = all[idx][k];
+          });
+          keep.mts = all[idx].mts;
+        }
         all[idx] = { ...all[idx], ...c, ...keep };
         updated++;
       } else {
@@ -753,6 +771,56 @@ const PrismDB = (() => {
   function deleteCandidate(cid) {
     _set(KEYS.candidates, getCandidates().filter(c => c.cid !== cid));
     return true;
+  }
+
+  // ── The middle stratum: scored-but-unpromoted + triage state ──
+  // (Persistence RULED 2026-07-15, Curation Desk direction handoff §1.5.)
+  // data/candidate_scores.json is the committed record; these two are its
+  // store-side faces. LWW per cid by `mts` (stamped in saveCandidate).
+  // promotedEventId travels as PROVENANCE ONLY — evt ids are device-local,
+  // so merge never applies it; status is what crosses devices.
+  const SCORE_FIELDS = ['fitness', 'framingDraft', 'suggestedAxes',
+                        'prevalentAxisGuess', 'voteMap'];
+
+  // Records for every candidate that carries any M2 field or has left
+  // 'new' — i.e. the stratum worth committing. Shape: { cid: record }.
+  function exportCandidateScores() {
+    const records = {};
+    getCandidates().forEach(c => {
+      const scored = SCORE_FIELDS.some(k => c[k] != null);
+      if (!scored && c.status === 'new') return;
+      const r = { mts: c.mts || c.ts || Date.now(), status: c.status,
+                  title: c.title || null };
+      SCORE_FIELDS.forEach(k => { if (c[k] != null) r[k] = c[k]; });
+      if (c.promotedEventId) r.promotedEventId = c.promotedEventId; // provenance
+      records[c.cid] = r;
+    });
+    return records;
+  }
+
+  // Merge pulled records into the store. Applies M2 fields + status when
+  // the record is newer than the local copy; never touches candidates the
+  // store doesn't hold (a record may outlive its candidate — that's the
+  // editorial history, not an error). Returns { applied, skipped }.
+  function mergeCandidateScores(records) {
+    if (!records || typeof records !== 'object') return { applied: 0, skipped: 0 };
+    const all = getCandidates();
+    let applied = 0, skipped = 0;
+    all.forEach(c => {
+      const r = records[c.cid];
+      if (!r) return;
+      if ((r.mts || 0) <= (c.mts || 0)) { skipped++; return; }
+      SCORE_FIELDS.forEach(k => { if (r[k] != null) c[k] = r[k]; });
+      if (r.status === 'new' || r.status === 'promoted' || r.status === 'dismissed') {
+        // never regress a locally-promoted candidate to 'promoted' minus id
+        if (!(c.status === 'promoted' && r.status === 'promoted')) c.status = r.status;
+        if (c.status !== 'promoted') delete c.promotedEventId;
+      }
+      c.mts = r.mts;
+      applied++;
+    });
+    if (applied) _set(KEYS.candidates, all);
+    return { applied, skipped };
   }
 
   // ── Bill readings <-> published Reading (sync transport) ──
@@ -1632,6 +1700,7 @@ const PrismDB = (() => {
     getBillScore, saveBillScore, deleteBillScore,
     getTickerEntries, appendTickerEntries,
     getCandidates, getCandidate, saveCandidate, importCandidates,
+    exportCandidateScores, mergeCandidateScores,
     dismissCandidate, promoteCandidate, deleteCandidate,
     exportBillReadings, importBillReadings, migrateBillAnalysis,
     getState, setState,
