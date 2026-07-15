@@ -1,6 +1,6 @@
 {
   "schema": "candidate_scores/v1",
-  "updated": "2026-07-15T20:43:35.749Z",
+  "updated": "2026-07-15T21:01:10.617Z",
   "records": {
     "cand_leg_s-119-2": {
       "mts": 1784044297585,
@@ -1316,6 +1316,29 @@
         "y": {
           "pos": "private tragedy",
           "neg": "political consequence"
+        }
+      },
+      "prevalentAxisGuess": "x"
+    },
+    "cand_news_block-iran-senate": {
+      "mts": 1784149213646,
+      "status": "new",
+      "title": "Senate Democrats block $1 trillion defense bill in protest over Iran war",
+      "fitness": {
+        "score": 0.65,
+        "reason": "The vote-blocking binary (advance/block) is native. The war-powers axis cross-cuts because it does not track cleanly with 'block=Dem, advance=GOP': libertarian-leaning Republicans (Paul, Massie-style figures) and restrainer voices historically side with war-powers constraints alongside Democratic doves, while hawkish Democrats (Fetterman-type, defense-district members) favor advancing the bill and executive flexibility despite party pressure to block. Since this is a news cluster with no roll call, the axis must be argued from the public field: pundits like Tucker Carlson-aligned commentators and antiwar.com's coverage frame this as a restraint-vs-latitude fight cutting across party lines, not simply a Democratic protest. That keeps it substantive rather than a relabeling of block/advance, though the headline framing (all outlets naming 'Democrats block') pulls toward treating it as purely partisan, capping the score below 0.7.",
+        "method": "m2_constitutive_v1",
+        "ts": "2026-07-15T21:00:13.646Z"
+      },
+      "framingDraft": "The headline binary is whether the NDAA advances or stays blocked. But underneath, the real tension is whether Iran war powers should be resolved through executive latitude or congressional constraint — a question that splits both parties' own factions rather than just pitting Democrats against Republicans.",
+      "suggestedAxes": {
+        "x": {
+          "pos": "Advance NDAA",
+          "neg": "Block NDAA"
+        },
+        "y": {
+          "pos": "Executive war latitude",
+          "neg": "Congressional war powers constraint"
         }
       },
       "prevalentAxisGuess": "x"
