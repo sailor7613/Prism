@@ -1,11 +1,11 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-07-15T20:50:11.197Z · 40 legislative + 13 news (GDELT, 3d)
+// 2026-07-15T22:26:46.485Z · 40 legislative + 13 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1784148589038,
+    "ts": 1784154374794,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
@@ -259,7 +259,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1784148589038,
+    "ts": 1784154374794,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
@@ -2014,9 +2014,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Secure America Act (8 roll calls)",
     "summary": "2026-06-09 house: On Motion to Commit — Failed (211-215; D 211-0 · R 0-214 · I 0-1)\n2026-06-09 house: On Passage — Passed (214-212; D 0-211 · R 214-0 · I 0-1)\n2026-06-05 senate: On the Motion — Motion Rejected (48-51; D 44-0 · R 2-51 · I 2-0)\n2026-06-05 senate: On Passage of the Bill — Bill Passed (52-47; D 0-44 · R 52-1 · I 0-2)\n2026-06-04 senate: On the Motion — Motion Rejected (46-52; D 43-0 · R 1-52 · I 2-0)\n2026-06-04 senate: On the Motion — Motion Rejected (47-50; D 44-0 · R 1-50 · I 2-0)\n2026-06-04 senate: On the Motion — Motion Rejected (49-50; D 44-0 · R 3-50 · I 2-0)\n2026-06-03 senate: On the Motion to Proceed — Motion to Proceed Agreed to (53-46; D 0-44 · R 53-0 · I 0-2)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "Secure America Act splits almost perfectly along party lines on passage, but the small, consistent Republican defections (1-3 senators across every motion) suggest a civil-liberties-vs-security-enforcement tension distinct from the partisan headcount. This latent axis pits expansive federal enforcement/surveillance authority against constitutional/privacy limits on state power.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Passage",
+        "neg": "Blocked"
+      },
+      "y": {
+        "pos": "Enforcement authority",
+        "neg": "Civil liberties limits"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000370",
       "A000371",
@@ -2545,13 +2554,23 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "s-119-2"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.45,
+      "reason": "The secondary binary (security enforcement power vs. civil-liberties constraint) is substantive and plausible given the bill's likely content (immigration/security enforcement measures typically named 'Secure America Act'), but the roll calls show near-total party-line discipline with only 1-3 GOP defectors across all votes and zero Democratic crossover. This is consistent with a whipped vote suppressing the axis's visibility, but the defection pattern is too thin and non-specific (no clear libertarian-R signature is discernible from names) to confirm the axis is live rather than contrived. It plausibly exists in the broader commentariat debate but the evidence here is weak confirmation rather than strong.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:23:11.070Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "h-119-2026-214",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297585
   },
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1784148589038,
+    "ts": 1784154374794,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
@@ -2833,9 +2852,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "A joint resolution to direct the removal of United States Armed Forces from hostilities within or against the Islamic Republic of Iran that have not been authorized by Congress. (2 roll calls)",
     "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (47-50; D 43-1 · R 2-49 · I 2-0)\n2026-05-19 senate: On the Motion to Discharge — Motion to Discharge Agreed to (50-47; D 44-1 · R 4-46 · I 2-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "This resolution pits congressional war-powers authority against executive discretion in the use of military force against Iran. Beyond the yea/nay on withdrawal itself, the vote crystallizes a fight over whether Congress should reassert institutional prerogative even absent a substantive policy consensus on Iran strategy.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Force withdrawal",
+        "neg": "Continue engagement"
+      },
+      "y": {
+        "pos": "Congressional war-powers assertion",
+        "neg": "Executive deference"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000382",
       "B001230",
@@ -2939,17 +2967,301 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "sjres-119-185"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.65,
+      "reason": "The war-powers/executive-deference axis cross-cuts party lines: the 2-4 Republican defectors (Paul-type libertarians on war powers) are exactly the members this axis predicts, while the vast majority of Republicans who oppose the resolution do so on institutional-deference grounds rather than substantive support for Iran policy. Democrats are near-unanimous but for reasons that blend both anti-war substance and pro-Congress prerogative, so the axis is not merely redundant with the vote — it explains why a handful of Rs break and predicts likely divisions in unwhipped commentary (libertarian right vs. hawkish right) that the roll call itself suppresses.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:21:31.058Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "s-119-2-192",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297586
+  },
+  {
+    "cid": "cand_leg_sjres-119-196",
+    "source": "legislative",
+    "ts": 1784154374794,
+    "raw": {
+      "method": "legislative_rollcall_v1",
+      "billId": "sjres-119-196",
+      "salience": 0.762,
+      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
+      "votes": [
+        {
+          "voteId": "s-119-2-190",
+          "chamber": "senate",
+          "date": "June 24, 2026,  09:16 PM",
+          "question": "On the Motion to Proceed",
+          "result": "Motion to Proceed Rejected",
+          "margin": -0.072,
+          "totals": {
+            "yea": 45,
+            "nay": 52,
+            "present": 0,
+            "notVoting": 3
+          },
+          "party": {
+            "D": {
+              "yea": 43,
+              "nay": 0
+            },
+            "R": {
+              "yea": 0,
+              "nay": 52
+            },
+            "I": {
+              "yea": 2,
+              "nay": 0
+            }
+          },
+          "positions": {
+            "yea": [
+              "A000382",
+              "B001230",
+              "B001277",
+              "B001303",
+              "B001288",
+              "C000127",
+              "C001088",
+              "C001113",
+              "D000622",
+              "D000563",
+              "F000479",
+              "G000574",
+              "G000555",
+              "H001076",
+              "H001046",
+              "H000273",
+              "H001042",
+              "K000384",
+              "K000377",
+              "K000394",
+              "K000383",
+              "K000367",
+              "M000133",
+              "M001176",
+              "M001169",
+              "M001111",
+              "O000174",
+              "P000145",
+              "P000595",
+              "R000122",
+              "R000608",
+              "S000033",
+              "S001194",
+              "S001150",
+              "S000148",
+              "S001208",
+              "S001203",
+              "V000128",
+              "W000805",
+              "W000790",
+              "W000817",
+              "W000800",
+              "W000802",
+              "W000779"
+            ],
+            "nay": [
+              "B001299",
+              "B001261",
+              "B001243",
+              "B001236",
+              "B001319",
+              "B001305",
+              "C001047",
+              "C001075",
+              "C001035",
+              "C001056",
+              "C001095",
+              "C001096",
+              "C000880",
+              "C001098",
+              "C001114",
+              "D000618",
+              "E000295",
+              "F000463",
+              "G000359",
+              "G000386",
+              "H000601",
+              "H001089",
+              "H001061",
+              "H001104",
+              "H001079",
+              "J000293",
+              "J000312",
+              "K000393",
+              "L000575",
+              "L000577",
+              "L000571",
+              "M001198",
+              "M001243",
+              "M001244",
+              "M000934",
+              "M001242",
+              "M001153",
+              "P000603",
+              "R000618",
+              "R000584",
+              "R000605",
+              "S001227",
+              "S001217",
+              "S001184",
+              "S001232",
+              "S001198",
+              "T000250",
+              "T000476",
+              "T000278",
+              "W000437",
+              "Y000064"
+            ],
+            "present": [],
+            "notVoting": [
+              "B001267",
+              "M000355",
+              "S001181"
+            ]
+          }
+        }
+      ]
+    },
+    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
+    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
+    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Disapprove rule",
+        "neg": "Uphold rule"
+      },
+      "y": {
+        "pos": "Executive overreach",
+        "neg": "Agency discretion legitimate"
+      }
+    },
+    "prevalentAxisGuess": "x",
+    "members": [
+      "A000382",
+      "B001230",
+      "B001277",
+      "B001303",
+      "B001288",
+      "C000127",
+      "C001088",
+      "C001113",
+      "D000622",
+      "D000563",
+      "F000479",
+      "G000574",
+      "G000555",
+      "H001076",
+      "H001046",
+      "H000273",
+      "H001042",
+      "K000384",
+      "K000377",
+      "K000394",
+      "K000383",
+      "K000367",
+      "M000133",
+      "M001176",
+      "M001169",
+      "M001111",
+      "O000174",
+      "P000145",
+      "P000595",
+      "R000122",
+      "R000608",
+      "S000033",
+      "S001194",
+      "S001150",
+      "S000148",
+      "S001208",
+      "S001203",
+      "V000128",
+      "W000805",
+      "W000790",
+      "W000817",
+      "W000800",
+      "W000802",
+      "W000779",
+      "B001299",
+      "B001261",
+      "B001243",
+      "B001236",
+      "B001319",
+      "B001305",
+      "C001047",
+      "C001075",
+      "C001035",
+      "C001056",
+      "C001095",
+      "C001096",
+      "C000880",
+      "C001098",
+      "C001114",
+      "D000618",
+      "E000295",
+      "F000463",
+      "G000359",
+      "G000386",
+      "H000601",
+      "H001089",
+      "H001061",
+      "H001104",
+      "H001079",
+      "J000293",
+      "J000312",
+      "K000393",
+      "L000575",
+      "L000577",
+      "L000571",
+      "M001198",
+      "M001243",
+      "M001244",
+      "M000934",
+      "M001242",
+      "M001153",
+      "P000603",
+      "R000618",
+      "R000584",
+      "R000605",
+      "S001227",
+      "S001217",
+      "S001184",
+      "S001232",
+      "S001198",
+      "T000250",
+      "T000476",
+      "T000278",
+      "W000437",
+      "Y000064"
+    ],
+    "bills": [
+      "sjres-119-196"
+    ],
+    "fitness": {
+      "score": 0.3,
+      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:28:30.038Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "s-119-2-190",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297586
   },
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1784148589038,
+    "ts": 1784154374794,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.762,
+      "salience": 0.761,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -3892,9 +4204,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Stopping Fraudulent Payments Act (2 roll calls)",
     "summary": "2026-06-10 house: On Motion to Recommit — Failed (209-213; D 209-0 · R 0-212 · I 0-1)\n2026-06-10 house: On Passage — Passed (218-200; D 6-200 · R 211-0 · I 1-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "The bill nominally targets fraudulent payments, but the fight is over whether new anti-fraud verification mechanisms function as a fraud-prevention tool or as a de facto benefit-access barrier. This tension pits administrative-integrity concerns against access/due-process concerns for beneficiaries.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Passage",
+        "neg": "Rejection"
+      },
+      "y": {
+        "pos": "Fraud Prevention Priority",
+        "neg": "Access Protection Priority"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000370",
       "A000371",
@@ -4322,268 +4643,23 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "hr-119-8464"
     ],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_leg_sjres-119-196",
-    "source": "legislative",
-    "ts": 1784148589038,
-    "raw": {
-      "method": "legislative_rollcall_v1",
-      "billId": "sjres-119-196",
-      "salience": 0.762,
-      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
-      "votes": [
-        {
-          "voteId": "s-119-2-190",
-          "chamber": "senate",
-          "date": "June 24, 2026,  09:16 PM",
-          "question": "On the Motion to Proceed",
-          "result": "Motion to Proceed Rejected",
-          "margin": -0.072,
-          "totals": {
-            "yea": 45,
-            "nay": 52,
-            "present": 0,
-            "notVoting": 3
-          },
-          "party": {
-            "D": {
-              "yea": 43,
-              "nay": 0
-            },
-            "R": {
-              "yea": 0,
-              "nay": 52
-            },
-            "I": {
-              "yea": 2,
-              "nay": 0
-            }
-          },
-          "positions": {
-            "yea": [
-              "A000382",
-              "B001230",
-              "B001277",
-              "B001303",
-              "B001288",
-              "C000127",
-              "C001088",
-              "C001113",
-              "D000622",
-              "D000563",
-              "F000479",
-              "G000574",
-              "G000555",
-              "H001076",
-              "H001046",
-              "H000273",
-              "H001042",
-              "K000384",
-              "K000377",
-              "K000394",
-              "K000383",
-              "K000367",
-              "M000133",
-              "M001176",
-              "M001169",
-              "M001111",
-              "O000174",
-              "P000145",
-              "P000595",
-              "R000122",
-              "R000608",
-              "S000033",
-              "S001194",
-              "S001150",
-              "S000148",
-              "S001208",
-              "S001203",
-              "V000128",
-              "W000805",
-              "W000790",
-              "W000817",
-              "W000800",
-              "W000802",
-              "W000779"
-            ],
-            "nay": [
-              "B001299",
-              "B001261",
-              "B001243",
-              "B001236",
-              "B001319",
-              "B001305",
-              "C001047",
-              "C001075",
-              "C001035",
-              "C001056",
-              "C001095",
-              "C001096",
-              "C000880",
-              "C001098",
-              "C001114",
-              "D000618",
-              "E000295",
-              "F000463",
-              "G000359",
-              "G000386",
-              "H000601",
-              "H001089",
-              "H001061",
-              "H001104",
-              "H001079",
-              "J000293",
-              "J000312",
-              "K000393",
-              "L000575",
-              "L000577",
-              "L000571",
-              "M001198",
-              "M001243",
-              "M001244",
-              "M000934",
-              "M001242",
-              "M001153",
-              "P000603",
-              "R000618",
-              "R000584",
-              "R000605",
-              "S001227",
-              "S001217",
-              "S001184",
-              "S001232",
-              "S001198",
-              "T000250",
-              "T000476",
-              "T000278",
-              "W000437",
-              "Y000064"
-            ],
-            "present": [],
-            "notVoting": [
-              "B001267",
-              "M000355",
-              "S001181"
-            ]
-          }
-        }
-      ]
+    "fitness": {
+      "score": 0.35,
+      "reason": "The proposed access-vs-integrity axis is plausible in the abstract but the roll calls show near-perfect party-line splits on both passage and the recomit motion (D 209-0 / R 0-212, then D 6-200 / R 211-0), with only 6 Democratic defectors and no Republican defectors at all. There's no visible substantive fault line independent of party — the recommit motion, which typically signals a substantive amendment fight, shows the identical partisan alignment as passage, suggesting the 'secondary' axis is just the primary partisan binary restated. Without evidence of libertarian-leaning R defectors or civil-liberties-minded D crossover beyond the thin 6, this collapses into redundancy with the vote itself.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:22:55.096Z"
     },
-    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
-    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [
-      "A000382",
-      "B001230",
-      "B001277",
-      "B001303",
-      "B001288",
-      "C000127",
-      "C001088",
-      "C001113",
-      "D000622",
-      "D000563",
-      "F000479",
-      "G000574",
-      "G000555",
-      "H001076",
-      "H001046",
-      "H000273",
-      "H001042",
-      "K000384",
-      "K000377",
-      "K000394",
-      "K000383",
-      "K000367",
-      "M000133",
-      "M001176",
-      "M001169",
-      "M001111",
-      "O000174",
-      "P000145",
-      "P000595",
-      "R000122",
-      "R000608",
-      "S000033",
-      "S001194",
-      "S001150",
-      "S000148",
-      "S001208",
-      "S001203",
-      "V000128",
-      "W000805",
-      "W000790",
-      "W000817",
-      "W000800",
-      "W000802",
-      "W000779",
-      "B001299",
-      "B001261",
-      "B001243",
-      "B001236",
-      "B001319",
-      "B001305",
-      "C001047",
-      "C001075",
-      "C001035",
-      "C001056",
-      "C001095",
-      "C001096",
-      "C000880",
-      "C001098",
-      "C001114",
-      "D000618",
-      "E000295",
-      "F000463",
-      "G000359",
-      "G000386",
-      "H000601",
-      "H001089",
-      "H001061",
-      "H001104",
-      "H001079",
-      "J000293",
-      "J000312",
-      "K000393",
-      "L000575",
-      "L000577",
-      "L000571",
-      "M001198",
-      "M001243",
-      "M001244",
-      "M000934",
-      "M001242",
-      "M001153",
-      "P000603",
-      "R000618",
-      "R000584",
-      "R000605",
-      "S001227",
-      "S001217",
-      "S001184",
-      "S001232",
-      "S001198",
-      "T000250",
-      "T000476",
-      "T000278",
-      "W000437",
-      "Y000064"
-    ],
-    "bills": [
-      "sjres-119-196"
-    ],
-    "fitness": null,
-    "status": "new"
+    "status": "new",
+    "voteMap": {
+      "voteId": "h-119-2026-220",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297586
   },
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1784148589038,
+    "ts": 1784154374794,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
@@ -4729,9 +4805,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Executive Office for Immigration Review relating to \"Appellate Procedures for the Board of Immigration Appeals\".",
     "summary": "2026-06-16 senate: On the Motion to Proceed — Motion to Proceed Rejected (46-48; D 43-0 · R 2-48 · I 1-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "Beyond a straight party clash over deference to the executive agency's rule, this vote also implicates a tension between congressional oversight of adjudicative procedure and deference to administrative expertise in immigration appeals. The near-unanimous party split suggests the CRA mechanism itself is being treated as a partisan tool rather than a genuinely cross-cutting institutional question.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Disapprove rule",
+        "neg": "Uphold rule"
+      },
+      "y": {
+        "pos": "Congressional oversight prerogative",
+        "neg": "Agency procedural expertise"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000382",
       "B001230",
@@ -4829,17 +4914,27 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "sjres-119-190"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.25,
+      "reason": "The proposed institutional-prerogative axis is the natural secondary candidate for CRA disapproval resolutions, but here the vote (D 43-0, R 2-48) shows almost perfect party-line alignment with only 2 R defectors and no visible ideological logic (not the libertarian/proceduralist R's one would expect if this were genuinely about oversight-vs-deference). This pattern indicates the secondary axis collapses into the same partisan binary as the vote itself rather than cross-cutting it — a case where no substantive second axis is actually live in this instance, despite the CRA mechanism's general potential to support one.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:28:46.317Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "s-119-2-173",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297586
   },
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1784148589037,
+    "ts": 1784154374794,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.737,
+      "salience": 0.736,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -5780,9 +5875,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Agriculture, Rural Development, Food and Drug Administration, and Related Agency Appropriations Act, 2027 (2 roll calls)",
     "summary": "2026-06-04 house: On Motion to Recommit — Failed (210-212; D 210-0 · R 0-211 · I 0-1)\n2026-06-04 house: On Passage — Passed (213-210; D 4-205 · R 208-5 · I 1-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "Beyond the up-or-down funding vote, this bill carries a recurring rider fight over policy provisions attached to agriculture appropriations — abortion/FDA drug approval restrictions, SNAP work requirements, and biotech regulation. The passage split (208R-5, 4D-205) shows near-total party discipline, but the small crossovers on both sides suggest a substantive question of how far appropriations riders should reach into regulatory and social policy, distinct from the simple fund/defund choice.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Pass Funding",
+        "neg": "Block Funding"
+      },
+      "y": {
+        "pos": "Rider-Laden Policy Riders",
+        "neg": "Clean Appropriations"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000370",
       "A000371",
@@ -6212,13 +6316,23 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "hr-119-8646"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.45,
+      "reason": "The rider-vs-clean-appropriations axis is a real recurring tension in ag appropriations fights (moderate Rs from farm districts sometimes balk at social riders; moderate Ds sometimes cross for farm-state funding), and it plausibly cross-cuts the party line in the broader unwhipped debate even though this whipped floor vote shows near-total discipline (208-5/4-205). The MTR failing on a pure party-line 210-212 vote is procedural theater and doesn't help distinguish the axis. Without visibility into which specific riders drove the 5 R defections and 4 D crossovers, I can't confirm the axis is 'live' with certainty — it's plausible but not demonstrated by the evidence given, capping this below 0.7.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:29:03.605Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "h-119-2026-205",
+      "yeaPole": "neg"
+    },
+    "mts": 1784044297585
   },
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1784148589037,
+    "ts": 1784154374793,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
@@ -7163,9 +7277,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Stop Child Care Scams Act of 2026 (2 roll calls)",
     "summary": "2026-06-03 house: On Motion to Recommit — Failed (210-213; D 210-0 · R 0-212 · I 0-1)\n2026-06-03 house: On Passage — Passed (217-207; D 4-207 · R 212-0 · I 1-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "The bill targets fraud in child care subsidy programs, but the underlying fight is over whether tightening anti-fraud verification burdens legitimate low-income families seeking care. This pits a fraud-prevention/program-integrity frame against an access/administrative-burden frame.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Passage",
+        "neg": "Block"
+      },
+      "y": {
+        "pos": "Program Integrity",
+        "neg": "Access Protection"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000370",
       "A000371",
@@ -7595,13 +7718,23 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "hr-119-7726"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.35,
+      "reason": "The MTR and passage votes are near-perfect party-line mirrors (D 210-0/4-207 vs R 0-212/212-0), suggesting the integrity-vs-access framing was fully absorbed into partisan discipline rather than cross-cutting it. Without visible defectors matching an access-minded R or integrity-minded D profile, this axis collapses into a relabeling of the vote itself given the evidence at hand — though it remains the most substantive candidate available.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:29:18.879Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "h-119-2026-198",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297585
   },
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1784148589036,
+    "ts": 1784154374792,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
@@ -8214,9 +8347,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Fallen Servicemembers Religious Heritage Restoration Act (2 roll calls)",
     "summary": "2026-06-05 senate: On the Motion to Proceed — Motion to Proceed Rejected (47-52; D 1-43 · R 46-7 · I 0-2)\n2026-04-29 house: On Passage — Passed (235-191; D 42-169 · R 192-22 · I 1-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "The bill authorizes religious symbols (e.g. crosses, Stars of David) on federal veterans' cemetery headstones/markers, framed as honoring fallen servicemembers. The underlying tension is not just partisan support but whether religious symbolism on state-maintained memorials constitutes government endorsement of religion versus a neutral accommodation of soldiers' personal faith.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Pass",
+        "neg": "Block"
+      },
+      "y": {
+        "pos": "Accommodation of faith",
+        "neg": "Church-state separation concern"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "B001299",
       "B001261",
@@ -8745,13 +8887,23 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "s-119-1318"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.55,
+      "reason": "The secondary axis (religious accommodation vs. establishment-clause caution) is substantive and plausibly cross-cuts party lines in the broader field — some Democrats support veteran commemoration traditions regardless of religious symbolism, and some libertarian/secular-leaning Republicans hold separationist qualms even on patriotic bills. The House vote shows meaningful crossover (42 D yea, 22 R nay) consistent with this axis rather than pure party discipline, suggesting the religious-accommodation question is live independent of the pass/block binary. It falls short of top marks because the whipped Senate procedural vote mostly restates party lines, and the axis could be seen as partially redundant with general religiosity-in-public-life politics rather than a fully independent institutional question.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:38:34.103Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "h-119-2026-142",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297584
   },
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1784148589038,
+    "ts": 1784154374794,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
@@ -9229,9 +9381,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Faster Labor Contracts Act",
     "summary": "2026-06-09 house: On Passage — Passed (230-193; D 210-0 · R 20-192 · I 0-1)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "The bill accelerates the timeline for first-contract negotiations after union certification, forcing a binding schedule where none existed before. Beyond the fund/pass binary, the real fight is over whether government should impose deadlines and mediation on private bargaining outcomes, versus leaving negotiation pace to the parties themselves. That tension pits pro-labor institutionalists against free-market/employer-autonomy advocates, cutting across the near-party-line vote in ways that reflect deeper priors about state intervention in labor markets.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Passage",
+        "neg": "Rejection"
+      },
+      "y": {
+        "pos": "State-Mandated Bargaining Timeline",
+        "neg": "Employer-Union Negotiated Autonomy"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000370",
       "A000371",
@@ -9660,13 +9821,23 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "hr-119-5408"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.45,
+      "reason": "The secondary binary (mandated timelines vs. negotiated autonomy) is substantive and reflects a real ideological fault line about state intervention in private contracting, distinct from mere passage/rejection framing. However, the 20 GOP defectors are not clearly identifiable as libertarian-leaning members defecting on principle (data doesn't specify), so confirmation is weak; the axis is plausible but not demonstrated by the defection pattern, and near-perfect Democratic unity limits cross-cutting evidence within the vote itself. It plausibly divides the broader labor-policy commentariat and business lobby more than the chamber shows.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:23:02.811Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "h-119-2026-216",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297585
   },
   {
     "cid": "cand_leg_hr-119-1041",
     "source": "legislative",
-    "ts": 1784148589037,
+    "ts": 1784154374793,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1041",
@@ -10611,9 +10782,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Veterans 2nd Amendment Protection Act (2 roll calls)",
     "summary": "2026-05-21 house: On Motion to Recommit — Failed (208-210; D 208-0 · R 0-209 · I 0-1)\n2026-05-21 house: On Passage — Passed (216-201; D 7-200 · R 208-1 · I 1-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "The bill restores gun rights to veterans deemed mentally incompetent by the VA unless a judge affirmatively finds them dangerous. The vote binary is gun-rights expansion vs. restriction, but a second tension concerns how much deference is owed to clinical/administrative judgment about mental fitness versus individual rights restoration.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Restore gun rights",
+        "neg": "Maintain restriction"
+      },
+      "y": {
+        "pos": "Individual rights trust",
+        "neg": "Administrative/clinical deference"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000370",
       "A000371",
@@ -11038,13 +11218,23 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "hr-119-1041"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.35,
+      "reason": "The proposed secondary axis (trust in clinical/administrative determinations vs. individual rights restoration) is substantively plausible in the broader gun-policy debate, but the roll calls show near-total party-line alignment on both votes (MTR 208-0/0-209; passage 7-200/208-1), with defectors not clearly matching a due-process-vs-rights-trust logic but rather ordinary partisan gun politics. Without evidence the axis cross-cuts independent of party, it risks collapsing into a relabeling of the same gun-rights binary.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:29:51.341Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "h-119-2026-190",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297585
   },
   {
     "cid": "cand_leg_hr-119-2616",
     "source": "legislative",
-    "ts": 1784148589037,
+    "ts": 1784154374793,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2616",
@@ -11989,9 +12179,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Stopping Indoctrination and Protecting Kids Act (2 roll calls)",
     "summary": "2026-05-20 house: On Motion to Recommit — Failed (207-208; D 207-0 · R 0-207 · I 0-1)\n2026-05-20 house: On Passage — Passed (217-198; D 8-198 · R 208-0 · I 1-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "Beyond the party-line fight over restricting gender/race curricula, the bill raises a question of who should control classroom content — parents and local school boards, or federal/state education authorities and professional educators. The 8 Democratic defectors on passage suggest a cross-cutting local-control-vs-professional-autonomy tension distinct from the pure culture-war vote.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Restrict curriculum",
+        "neg": "Preserve curriculum"
+      },
+      "y": {
+        "pos": "Parental/local control",
+        "neg": "Professional/institutional autonomy"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000370",
       "A000371",
@@ -12413,13 +12612,23 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "hr-119-2616"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.35,
+      "reason": "The parental-control-vs-educator-autonomy framing is the standard rhetorical packaging of this exact bill type, not a distinct axis — proponents and opponents map almost perfectly onto the restrict/preserve split. The 8 Democratic defectors are likely swing-district members responding to local political pressure, not evidence of a genuine local-control constituency splitting from national Democrats on principle. No candidate secondary binary here escapes redundancy with the substantive culture-war vote itself; procedure-vs-substance is inapplicable since MTR was also perfectly party-line.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:29:58.543Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "h-119-2026-184",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297585
   },
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1784148589037,
+    "ts": 1784154374794,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
@@ -12897,9 +13106,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Ukraine Support Act",
     "summary": "2026-06-04 house: On Passage — Passed (226-195; D 207-1 · R 18-194 · I 1-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "The vote nominally asks whether to continue funding Ukraine's war effort. But beneath that lies a deeper question about America's role abroad: whether continued military aid reflects durable strategic commitment to containing Russia, or whether it is an open-ended entanglement that should be curtailed in favor of restraint and domestic priorities.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Fund Ukraine",
+        "neg": "Block Ukraine funding"
+      },
+      "y": {
+        "pos": "Internationalist commitment",
+        "neg": "Restraint/non-interventionism"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000370",
       "A000371",
@@ -13326,17 +13544,27 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "hr-119-2913"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.62,
+      "reason": "The internationalism-vs-restraint axis cross-cuts party lines rather than restating them: the 18 House Republicans voting yea are disproportionately defense-hawk internationalists, while the lone Democratic defector likely reflects a progressive anti-interventionist strain distinct from GOP restraint politics. This is not the same binary as the vote — many Republicans who oppose funding do so from isolationist/restraint instincts, while some Democrats who support it do so from liberal internationalist commitments, not partisan loyalty alone. The axis is suppressed by whip discipline within each party but is demonstrably live in the broader foreign-policy debate (realist/restrainer vs liberal-internationalist coalitions cutting across both parties). It falls short of top marks because the roll call itself offers only a handful of defectors as direct evidence, requiring reliance on the broader commentariat/caucus debate to fully validate the cross-cut.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:30:08.542Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "h-119-2026-207",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297585
   },
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1784148589038,
+    "ts": 1784154374794,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.668,
+      "salience": 0.667,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -13478,9 +13706,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"National Emission Standards for Hazardous Air Pollutants: Coal- and Oil-Fired Electric Utility Steam Generating Units: Final Repeal\".",
     "summary": "2026-06-03 senate: On the Motion to Proceed — Motion to Proceed Rejected (46-53; D 44-0 · R 0-53 · I 2-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "On its face this is a party-line vote on rescinding an EPA power-plant emissions rule under the CRA. But a secondary tension exists between deference to executive agency rulemaking authority and assertion of congressional prerogative to override regulatory action, a tension that in unwhipped settings tracks institutionalist vs. deregulatory instincts rather than pure environmental policy.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Disapprove rule",
+        "neg": "Uphold rule"
+      },
+      "y": {
+        "pos": "Congressional override",
+        "neg": "Agency deference"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000382",
       "B001230",
@@ -13583,13 +13820,23 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "sjres-119-188"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.25,
+      "reason": "The CRA disapproval mechanism is itself the vote's substance — 'congressional override vs agency deference' is just a redescription of pass/block, not a cross-cutting tension. The 46-53 split is perfectly party-line with zero defectors, and there's no evidence any Republican framed this as institutional prerogative versus a Democrat framing it as executive deference; both sides argue purely on environmental/economic merits. No plausible second axis here escapes redundancy with the underlying pro-regulation/anti-regulation binary.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:38:53.284Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "s-119-2-135",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297586
   },
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1784148589038,
+    "ts": 1784154374794,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
@@ -14068,9 +14315,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Fraud Prevention and Accountability Act",
     "summary": "2026-06-10 house: On Passage — Passed (240-181; D 28-181 · R 211-0 · I 1-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "Beyond whether the bill passes lies a dispute over what kind of 'fraud prevention' it enacts: aggressive new verification and enforcement mechanisms versus concern these tools chill legitimate access or expand executive/administrative discretion. The vote binary is partisan, but the underlying question of means (surveillance/verification burden vs. access protection) is a distinct axis from mere support/opposition.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Passage",
+        "neg": "Blocked"
+      },
+      "y": {
+        "pos": "Verification/Enforcement Expansion",
+        "neg": "Access/Burden Protection"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000055",
       "A000379",
@@ -14497,13 +14753,23 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "hr-119-8312"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.35,
+      "reason": "The proposed enforcement-vs-access-burden axis is substantively real in fraud-prevention debates generally, but the roll call (211-0 R, 28-181 D) shows no defection pattern that would let us distinguish it from the raw party-line vote — no libertarian-R or moderate-D crossover predicted by the secondary axis actually appears. Without evidence the axis is live in this instance (rather than merely plausible in the abstract), it risks being a relabeling of partisan valence rather than a cross-cutting tension.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:39:21.096Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "h-119-2026-218",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297585
   },
   {
     "cid": "cand_leg_hr-119-7567",
     "source": "legislative",
-    "ts": 1784148589036,
+    "ts": 1784154374792,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7567",
@@ -19699,9 +19965,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Farm, Food, and National Security Act of 2026 (11 roll calls)",
     "summary": "2026-04-30 house: On Agreeing to the Amendment — Failed (210-216; D 37-176 · R 172-40 · I 1-0)\n2026-04-30 house: On Agreeing to the Amendment — Agreed to (384-35; D 196-12 · R 187-23 · I 1-0)\n2026-04-30 house: On Agreeing to the Amendment — Agreed to (416-8; D 206-7 · R 209-1 · I 1-0)\n2026-04-30 house: On Agreeing to the Amendment — Failed (69-355; D 2-210 · R 67-144 · I 0-1)\n2026-04-30 house: On Agreeing to the Amendment — Agreed to (280-142; D 207-6 · R 73-135 · I 0-1)\n2026-04-30 house: On Agreeing to the Amendment — Failed (187-239; D 3-210 · R 184-28 · I 0-1)\n2026-04-30 house: On Agreeing to the Amendment, as Modified — Agreed to (233-194; D 213-0 · R 19-194 · I 1-0)\n2026-04-30 house: On Agreeing to the Amendment — Failed (186-238; D 29-183 · R 156-55 · I 1-0)\n2026-04-30 house: On Agreeing to the Amendment — Agreed to (215-213; D 8-205 · R 206-8 · I 1-0)\n2026-04-30 house: On Motion to Recommit — Failed (211-214; D 211-0 · R 0-213 · I 0-1)\n2026-04-30 house: On Passage — Passed (224-200; D 14-197 · R 209-3 · I 1-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "The farm bill's final passage split along party lines, but the amendment sequence reveals a deeper fight over whether food assistance (SNAP) spending should be preserved or cut to offset farm subsidies. This is a distributive tension between rural/agribusiness constituencies and urban/anti-hunger constituencies that cuts across the party-line passage vote.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Passage",
+        "neg": "Rejection"
+      },
+      "y": {
+        "pos": "Protect Nutrition Spending",
+        "neg": "Cut Nutrition for Farm Subsidies"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000055",
       "A000379",
@@ -20135,17 +20410,27 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "hr-119-7567"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.55,
+      "reason": "The nutrition-vs-subsidy axis is substantive and plausibly cross-cuts: several amendment votes (145, 148, 150, 152) show large Democratic defections toward yea alongside narrow Republican margins, suggesting intra-party splits on SNAP/subsidy tradeoffs that don't map cleanly to the final passage line. However the core passage and recommit votes remain almost perfectly party-line, meaning the axis is submerged rather than fully live in the roll call — it exists in the amendment fights but collapses into party discipline at the moment of final passage, capping the score.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:40:01.337Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "h-119-2026-154",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297584
   },
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1784148589038,
+    "ts": 1784154374794,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.646,
+      "salience": 0.645,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -20620,9 +20905,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "No Aid for Ghost Students Act of 2026",
     "summary": "2026-06-10 house: On Passage — Passed (249-172; D 36-172 · R 212-0 · I 1-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "The bill tightens verification requirements to block federal aid from flowing to fraudulently enrolled 'ghost students.' Beneath the anti-fraud vote lies a real question about who bears the burden of proof and compliance cost—the federal government tightening oversight, or shifting verification burdens onto colleges and low-income students who may be wrongly flagged.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Fund/Restrict Aid",
+        "neg": "Block/Restrict Aid"
+      },
+      "y": {
+        "pos": "Centralized Federal Verification",
+        "neg": "Institutional/Student Discretion"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000055",
       "A000379",
@@ -21049,13 +21343,23 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "hr-119-7892"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.45,
+      "reason": "The secondary axis—who bears verification burden (federal enforcement apparatus vs. institutional/student-level discretion)—is substantive and plausible in the broader policy field (higher-ed administrators, civil rights groups, and fiscal hawks argue this exactly), but the roll call itself gives thin evidence: near-unanimous R support and 36 D defectors is consistent with ordinary anti-fraud consensus rather than a clean cross-cut on the verification-burden question. Without visible defection patterns tied specifically to due-process/access concerns (e.g., CBC or Hispanic Caucus members breaking differently than fiscal moderates), the axis is plausible but underconfirmed by the vote.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:40:26.726Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "h-119-2026-217",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297585
   },
   {
     "cid": "cand_leg_hr-119-6260",
     "source": "legislative",
-    "ts": 1784148589036,
+    "ts": 1784154374792,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6260",
@@ -22000,9 +22304,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Keeping Violent Offenders Off Our Streets Act of 2025 (2 roll calls)",
     "summary": "2026-05-14 house: On Motion to Recommit — Failed (210-213; D 210-0 · R 0-212 · I 0-1)\n2026-05-14 house: On Passage — Passed (243-179; D 32-178 · R 210-1 · I 1-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "Beyond whether to pass tougher pretrial detention/offender provisions, the bill raises a second question: how much discretion should be preserved for judges and localities versus mandated uniform federal criteria. That tension divided Democrats (32 defected to yea) far more than it divided Republicans (near-unanimous), suggesting a live cross-cutting fault line on criminal-justice federalism/discretion rather than a simple party-line redo.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Pass",
+        "neg": "Block"
+      },
+      "y": {
+        "pos": "Mandated uniform criteria",
+        "neg": "Local/judicial discretion"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000370",
       "A000371",
@@ -22432,13 +22745,23 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "hr-119-6260"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.55,
+      "reason": "The passage vote shows 32 Democrats crossing to yea while Republicans stayed near-unanimous — asymmetric defection consistent with a discretion-vs-uniformity axis (moderate/swing-district Democrats favoring tougher uniform standards against their caucus's traditional discretion-preserving stance), rather than a mirror of the vote itself. The recomit motion, being purely partisan-symmetric (210-0/0-212), doesn't independently confirm it, so the axis rests on the passage-vote defection pattern alone — plausible but not proven by broader public debate evidence provided here.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:30:31.431Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "h-119-2026-169",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297585
   },
   {
     "cid": "cand_leg_hr-119-8365",
     "source": "legislative",
-    "ts": 1784148589037,
+    "ts": 1784154374793,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8365",
@@ -23383,9 +23706,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Monitor Accountability Act (2 roll calls)",
     "summary": "2026-05-14 house: On Motion to Recommit — Failed (210-213; D 210-0 · R 0-213 · I 0-0)\n2026-05-14 house: On Passage — Passed (219-204; D 5-204 · R 213-0 · I 1-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "The Monitor Accountability Act pits proponents of expanded oversight/monitoring authority against those wary of regulatory or enforcement overreach. Beyond the pass/fail vote, the substantive question is whether the bill's monitoring mechanism targets institutional actors (e.g., agencies, corporations) or extends to individual-level surveillance, which cross-cuts standard party lines on civil-liberties grounds.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Pass",
+        "neg": "Block"
+      },
+      "y": {
+        "pos": "Institutional Accountability",
+        "neg": "Individual Privacy Concern"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000370",
       "A000371",
@@ -23815,13 +24147,23 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "hr-119-8365"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.35,
+      "reason": "The near-perfect party-line splits on both the MTR (210-0 D vs 0-213 R) and passage (5-204 D vs 213-0 R) show almost no crossover, and the 5 Democratic defectors are not obviously the civil-liberties or privacy-hawk faction one would predict if an institutional-vs-individual monitoring axis were live — they look more like moderate/swing-district defectors following the general partisan tide. Without more bill-text detail on whose conduct is monitored, the proposed secondary axis is speculative and risks merely relabeling the party-line vote as an oversight-philosophy question rather than demonstrating a genuine cross-cutting tension in the broader field.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:40:47.663Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "h-119-2026-173",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297585
   },
   {
     "cid": "cand_leg_hr-119-1346",
     "source": "legislative",
-    "ts": 1784148589036,
+    "ts": 1784154374792,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1346",
@@ -24766,9 +25108,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Nationwide Consumer and Fuel Retailer Choice Act of 2025 (2 roll calls)",
     "summary": "2026-05-13 house: On Motion to Recommit — Failed (112-309; D 78-129 · R 34-179 · I 0-1)\n2026-05-13 house: On Passage — Passed (218-203; D 95-113 · R 122-90 · I 1-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "The bill preempts state fuel-standard and vehicle-choice rules (e.g. EV mandates) with a uniform federal standard. Beyond fund-vs-block, this raises whether federal preemption of state regulatory authority is itself desirable, cross-cutting normal industry-vs-environment lines with federalism instincts.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Federal Preemption",
+        "neg": "State Autonomy"
+      },
+      "y": {
+        "pos": "Fuel Retailer Choice",
+        "neg": "State Fuel Mandates"
+      }
+    },
+    "prevalentAxisGuess": "y",
     "members": [
       "A000381",
       "B001318",
@@ -25196,17 +25547,27 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "hr-119-1346"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.45,
+      "reason": "The native binary is fund/protect fuel retailer choice vs preserve state mandates (e.g. California EV rules). The secondary axis—federal preemption vs state regulatory autonomy—plausibly cross-cuts: some R defectors (34 on recommit, 90 against passage) may include federalism-minded members uneasy with federal override of state authority, while some D crossover (95 for passage, 78 against recommit) could reflect industry-district or moderate deregulatory sympathies. However, the roll call is heavily whipped along party lines, so the axis is more asserted than demonstrated in this data; its strength rests on broader commentary where preemption-vs-states-rights debates are genuinely live independent of the fuel-choice question.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:30:42.553Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "h-119-2026-164",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297584
   },
   {
     "cid": "cand_leg_sjres-119-141",
     "source": "legislative",
-    "ts": 1784148589038,
+    "ts": 1784154374794,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-141",
-      "salience": 0.607,
+      "salience": 0.606,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/141",
       "votes": [
         {
@@ -25347,9 +25708,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by Bureau of Consumer Financial Protection relating to the withdrawal of the rule relating to \"Debt Collection Practices (Regulation F); Deceptive and Unfair Collection of Medical Debt\".",
     "summary": "2026-05-13 senate: On the Motion to Proceed — Motion to Proceed Rejected (50-50; D 45-0 · R 3-50 · I 2-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "Beyond the party-line fight over reviving CFPB medical-debt collection limits, the vote implicates how far Congress should reach into agency rulemaking discretion via the CRA versus deferring to consumer-protection substance itself. The 3 Republican defectors suggest a cross-cutting sensitivity to constituent medical-debt burdens rather than pure institutional-power calculus.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Disapprove Rule",
+        "neg": "Preserve Rule"
+      },
+      "y": {
+        "pos": "Consumer Debt Protection",
+        "neg": "Regulatory Restraint/Industry Deference"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000382",
       "B001230",
@@ -25453,17 +25823,27 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "sjres-119-141"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.45,
+      "reason": "The secondary axis (consumer-protection substance vs. deregulatory/industry-deference posture) is substantive, not procedural, but the roll call is heavily whipped (near-total party-line 45-0/3-50), so most of the evidence for cross-cutting is inferential rather than demonstrated. The 3 GOP defectors are consistent with the axis (likely moderates from districts with high medical-debt burden), which supports non-degeneracy, but the thinness of defection and lack of visible Democratic dissent limits confidence that this axis is truly live across the broader field rather than a restatement of party position on financial regulation generally.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:41:08.299Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "s-119-2-122",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297586
   },
   {
     "cid": "cand_leg_sjres-119-132",
     "source": "legislative",
-    "ts": 1784148589038,
+    "ts": 1784154374794,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-132",
-      "salience": 0.589,
+      "salience": 0.588,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/132",
       "votes": [
         {
@@ -25604,9 +25984,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Consumer Financial Protection relating to the withdrawal of the rule relating to \"Examinations for Risks to Active-Duty Servicemembers and Their Covered Dependents\".",
     "summary": "2026-05-13 senate: On the Motion to Proceed — Motion to Proceed Rejected (48-52; D 45-0 · R 1-52 · I 2-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "Beyond the CRA disapproval's yea/nay lies a question of institutional posture: whether Congress should use the CRA mechanism to reverse an agency's own deregulatory withdrawal (re-imposing scrutiny), versus deferring to agency discretion over examination priorities. This pits an oversight/consumer-protection instinct against an anti-regulatory-burden/agency-deference instinct, cross-cutting the party line only among libertarian-leaning members who resist expanding CFPB examination authority even via CRA.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Proceed to Disapproval",
+        "neg": "Block Disapproval"
+      },
+      "y": {
+        "pos": "Restore Servicemember Scrutiny",
+        "neg": "Preserve Agency Deference"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000382",
       "B001230",
@@ -25710,13 +26099,23 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "sjres-119-132"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.35,
+      "reason": "The near-unanimous 1-52 R vote against proceeding, with essentially no crossover, suggests this was whipped as a pure party-line CRA fight rather than one where an institutional-prerogative/agency-deference axis genuinely split members differently. Without visible libertarian or military-district defectors on the R side splitting from the anti-regulation bloc, the secondary axis I propose is plausible in the broader commentariat but unconfirmed by the roll call — it risks being a relabeling of the same partisan regulatory fight rather than a truly cross-cutting tension.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:41:28.472Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "s-119-2-121",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297586
   },
   {
     "cid": "cand_leg_sjres-119-130",
     "source": "legislative",
-    "ts": 1784148589038,
+    "ts": 1784154374794,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-130",
@@ -25861,9 +26260,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Consumer Financial Protection relating to withdrawal of the rule relating to \"Consumer Financial Protection Circular 2024-05: Improper Overdraft Opt-In Practices\".",
     "summary": "2026-05-13 senate: On the Motion to Proceed — Motion to Proceed Rejected (47-53; D 45-0 · R 0-53 · I 2-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "This CRA resolution targets a withdrawal of a bureau rule on overdraft opt-in practices, making the substantive question whether banks should retain latitude on overdraft fee practices or face restored consumer-protection constraints. Beneath the pure party-line procedural vote lies a live financial-regulation tension: consumer-protection versus industry-flexibility.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Disapprove withdrawal",
+        "neg": "Uphold withdrawal"
+      },
+      "y": {
+        "pos": "Consumer protection primacy",
+        "neg": "Bank flexibility primacy"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000382",
       "B001230",
@@ -25967,13 +26375,23 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "sjres-119-130"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.35,
+      "reason": "The proposed consumer-protection-vs-bank-flexibility axis is substantively real in the broader CFPB policy debate, but here the roll call shows perfect party-line unity (D 45-0, R 0-53) with zero defection even among libertarian-leaning or moderate members who might be expected to break on financial-regulation questions. With no cross-cutting evidence and a purely whipped, uniform split, the secondary axis cannot be distinguished from the vote binary itself on this record — it collapses into partisan identity rather than demonstrating independent life in the field.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:30:54.916Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "s-119-2-123",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297586
   },
   {
     "cid": "cand_leg_hr-119-6047",
     "source": "legislative",
-    "ts": 1784148589037,
+    "ts": 1784154374793,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6047",
@@ -26451,9 +26869,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Sharri Briley and Eric Edmundson Veterans Benefits Expansion Act of 2026",
     "summary": "2026-05-21 house: On Passage — Passed (235-179; D 30-176 · R 204-3 · I 1-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "The vote nominally concerns expanding veterans benefits, but the lopsided D split suggests a deeper argument over how the expansion is financed and targeted rather than whether veterans deserve more support. The near-unanimous R support against a sharply divided D caucus points to a fight over offsets, eligibility scope, or means-testing structure buried beneath the up-or-down vote.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Pass",
+        "neg": "Block"
+      },
+      "y": {
+        "pos": "Universal/unconditional expansion",
+        "neg": "Targeted/means-tested expansion"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000055",
       "A000379",
@@ -26873,13 +27300,23 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "hr-119-6047"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.35,
+      "reason": "The 30-176 D split is dramatic, but without visible amendment or offset roll calls to anchor a fiscal-targeting axis, this is speculative reconstruction rather than evidence-grounded. The D fracture likely reflects intra-party disagreement over cost/pay-fors or scope (e.g., toxic-exposure vs. broader eligibility), which is plausible and substantive, but I lack the specific policy detail (offsets, means-testing provisions) to confirm the axis rather than merely gesture at 'why did Democrats split.' Score reflects a real candidate axis without confirming text-level evidence.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:42:13.527Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "h-119-2026-191",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297585
   },
   {
     "cid": "cand_leg_hr-119-6387",
     "source": "legislative",
-    "ts": 1784148589035,
+    "ts": 1784154374791,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6387",
@@ -27824,9 +28261,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "FIRE Act (2 roll calls)",
     "summary": "2026-04-22 house: On Motion to Recommit — Failed (206-214; D 206-0 · R 0-213 · I 0-1)\n2026-04-22 house: On Passage — Passed (220-198; D 8-197 · R 211-1 · I 1-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "The FIRE Act's passage vote pits broad partisan lines against a small bloc of cross-pressured Democrats who broke to support it. This 8-member defection suggests a substantive tension beneath the party-line motion to recommit, likely concerning how the bill's mechanism affects specific constituencies (e.g., federal workforce, local enforcement, or district-level economic interests) rather than pure ideological alignment.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Pass",
+        "neg": "Block"
+      },
+      "y": {
+        "pos": "Institutional/enforcement expansion",
+        "neg": "Local/individual discretion"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000370",
       "A000371",
@@ -28252,13 +28698,23 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "hr-119-6387"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.45,
+      "reason": "The passage vote shows near-total party discipline (D 8-197, R 211-1), which is classic whipped-vote suppression, not proof of a one-dimensional issue. The 8 Democratic defectors and 1 Republican defector are the live evidence: they likely reflect a substantive institutional-prerogative-vs-executive-power or centralization-vs-local-control tension embedded in the bill's mechanism, since defection patterns in enforcement/regulatory bills often track district-level enforcement interests rather than pure party ideology. However, without bill text detail on what FIRE Act's substantive lever actually is, this axis remains a plausible but underspecified secondary binary — strong enough to not be redundant with the vote, but not confirmed by explicit qualitative reasoning about the defectors' incentives.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:43:01.555Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "h-119-2026-136",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297584
   },
   {
     "cid": "cand_leg_hr-119-4690",
     "source": "legislative",
-    "ts": 1784148589035,
+    "ts": 1784154374791,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4690",
@@ -29203,9 +29659,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Reliable Federal Infrastructure Act (2 roll calls)",
     "summary": "2026-04-22 house: On Motion to Recommit — Failed (203-214; D 203-1 · R 0-212 · I 0-1)\n2026-04-22 house: On Passage — Passed (215-202; D 5-201 · R 209-1 · I 1-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "Beyond whether to pass this infrastructure bill, the debate crystallizes around how federal infrastructure dollars should be allocated and controlled: through formula-based, locally-directed spending versus centralized federal discretion and permitting authority. This is a live tension in infrastructure politics independent of the up-or-down vote.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Pass",
+        "neg": "Block"
+      },
+      "y": {
+        "pos": "Local control/formula funds",
+        "neg": "Federal discretion/permitting authority"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000370",
       "A000371",
@@ -29631,17 +30096,27 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "hr-119-4690"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.35,
+      "reason": "The near-unanimous, near-perfect party-line split (D 5-201, R 209-1 on passage; mirrored on recomit) shows an almost fully whipped, single-dimensional vote with essentially no defectors whose profile could confirm a cross-cutting allocation-control axis. Without visible defection patterns (e.g., rural-district Democrats or appropriator Republicans breaking predictably), the local-control-vs-federal-discretion binary is plausible in the abstract infrastructure policy debate but is not evidenced here — it risks being a plausible-sounding restatement of generic partisan conflict rather than a demonstrated live secondary axis in this specific event.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:43:21.415Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "h-119-2026-134",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297584
   },
   {
     "cid": "cand_leg_sjres-119-99",
     "source": "legislative",
-    "ts": 1784148589038,
+    "ts": 1784154374794,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-99",
-      "salience": 0.531,
+      "salience": 0.53,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/99",
       "votes": [
         {
@@ -29783,9 +30258,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by U.S. Citizenship and Immigration Services relating to \"Removal of the Automatic Extension of Employment Authorization Documents\".",
     "summary": "2026-04-29 senate: On the Motion to Proceed — Motion to Proceed Rejected (47-50; D 44-0 · R 1-50 · I 2-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "Beyond the yes/no on disapproving the EAD auto-extension rule, the vote implicates a tension between protecting employer/business continuity interests and prioritizing immigration-enforcement/vetting rigor. This axis asks whether the rule is judged primarily on administrative-burden-to-employers grounds or on immigration-control grounds, which need not track party lines perfectly.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Disapprove rule",
+        "neg": "Uphold rule"
+      },
+      "y": {
+        "pos": "Employer continuity priority",
+        "neg": "Enforcement rigor priority"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "B001230",
       "B001267",
@@ -29886,17 +30370,27 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "sjres-119-99"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.35,
+      "reason": "The near-total party-line split (D 44-0, R 1-50) on a motion to proceed suggests this was a purely whipped procedural vote with almost no crossover, and the single GOP defector doesn't map cleanly onto a business-vs-enforcement predictor (could be idiosyncratic or state-specific). Without evidence of a genuine intra-party fault line (e.g., business-district Republicans breaking for disapproval, or immigration-hawk Democrats breaking against), the employer-vs-enforcement axis is plausible in theory but unconfirmed by the only data given — it risks being a plausible-sounding axis invented post hoc rather than one demonstrably live in the field. Score reflects a substantive candidate axis that could matter in broader debate but lacks confirming defection evidence here.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:31:20.159Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "s-119-2-111",
+      "yeaPole": "neg"
+    },
+    "mts": 1784044297586
   },
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1784148589038,
+    "ts": 1784154374794,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.527,
+      "salience": 0.526,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -30776,9 +31270,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "21st Century ROAD to Housing Act (4 roll calls)",
     "summary": "2026-06-23 house: On Motion to Suspend the Rules and Concur in Senate Adt to House Adt to Senate Adt — Passed (358-32; D 191-0 · R 166-32 · I 1-0)\n2026-06-22 senate: On the Motion — Motion Agreed to (85-5; D 41-0 · R 42-5 · I 2-0)\n2026-06-18 senate: On the Cloture Motion — Cloture Motion Agreed to (84-8; D 39-0 · R 43-8 · I 2-0)\n2026-06-16 senate: On the Motion to Proceed — Motion to Proceed Agreed to (87-8; D 43-0 · R 43-8 · I 1-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "The bill overwhelmingly passed as a housing-finance/regulatory reform package, with all Democratic defection absent and a small consistent bloc of Republicans opposing across every stage. This suggests a live tension between federal housing-market intervention (subsidy, GSE reform, deregulatory relief) and a harder-line skepticism of federal housing policy as such — a substantive axis distinct from mere passage.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Pass",
+        "neg": "Block"
+      },
+      "y": {
+        "pos": "Federal housing intervention",
+        "neg": "Market/local autonomy"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000370",
       "A000055",
@@ -31270,13 +31773,23 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "hr-119-6644"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.45,
+      "reason": "The consistent 5-8 Senate Republican defectors across cloture, motion to proceed, and final passage — while all Democrats and the bulk of Republicans stayed unified — suggests a small ideological bloc resisting federal housing-market intervention on principle (likely fiscal/limited-government conservatives), cross-cutting the near-unanimous bipartisan support. This is plausible but thin: the same handful of defectors recur at every stage, which could reflect a genuine substantive axis (federal role in housing markets) or could just be a stable anti-omnibus faction with no distinct policy content. Absent public commentary distinguishing their objections, the axis is defensible but not strongly confirmed.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:44:00.395Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "s-119-2-182",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297586
   },
   {
     "cid": "cand_leg_sjres-119-139",
     "source": "legislative",
-    "ts": 1784148589038,
+    "ts": 1784154374794,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-139",
@@ -31422,9 +31935,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"Air Plan Disapproval; Colorado; Regional Haze Plan for the Second Implementation Period\".",
     "summary": "2026-04-29 senate: On the Motion to Proceed — Motion to Proceed Rejected (46-52; D 44-0 · R 0-52 · I 2-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "This CRA disapproval nominally asks whether to void EPA's Colorado regional haze rule, but the underlying tension is between federal air-quality uniformity and state-level implementation discretion. That question of who should set the pace and stringency of haze-reduction rules cross-cuts party lines less cleanly than partisan-environmental framing suggests, given Colorado's own state agency drafted the plan.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Disapprove rule",
+        "neg": "Uphold rule"
+      },
+      "y": {
+        "pos": "State primacy",
+        "neg": "Federal uniformity"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "B001230",
       "B001267",
@@ -31526,13 +32048,23 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "sjres-119-139"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.25,
+      "reason": "The party split is a clean 44-0/0-52 wall with no defectors, which is exactly what a pure federal-overreach-vs-environmental-regulation vote produces; there's no evidence any Republican broke toward state-primacy-favors-EPA-plan or any Democrat broke toward federal-uniformity-trumps-state-plan. The state-primacy axis is plausible in the abstract (Colorado wrote its own plan, so 'federal vs state' should cross-cut), but with zero defection matching predicted dissenters (no libertarian-leaning R defending state authority, no red-state D breaking on this), the axis collapses into decoration on the same partisan binary rather than a demonstrated cross-cut.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:45:07.509Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "s-119-2-110",
+      "yeaPole": "neg"
+    },
+    "mts": 1784044297586
   },
   {
     "cid": "cand_leg_hr-119-5587",
     "source": "legislative",
-    "ts": 1784148589035,
+    "ts": 1784154374791,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5587",
@@ -32009,9 +32541,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "HEATS Act",
     "summary": "2026-04-23 house: On Passage — Passed (231-186; D 22-186 · R 208-0 · I 1-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "The HEATS Act's passage vote pits nominal fund/defund partisanship against a deeper question of how energy transition costs and regulatory burdens should be allocated between federal mandates and local/state or industry discretion. Beneath the near-party-line tally lies a live tension over centralized standard-setting versus deference to regional energy mix realities.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Federal mandate",
+        "neg": "Local discretion"
+      },
+      "y": {
+        "pos": "Pass",
+        "neg": "Block"
+      }
+    },
+    "prevalentAxisGuess": "y",
     "members": [
       "A000055",
       "A000379",
@@ -32434,13 +32975,23 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "hr-119-5587"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.35,
+      "reason": "The near-unanimous 208-0 R and 186-22 D split shows almost no crosscutting evidence within this roll call; the 22 D defectors are likely fossil-fuel/energy-district Democrats, which weakly supports a centralization-vs-local-discretion axis, but without more votes or public argument data this remains speculative and largely redundant with the party-line fund/defund binary. Score reflects plausible but unconfirmed substantive axis.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:31:43.060Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "h-119-2026-137",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297584
   },
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1784148589038,
+    "ts": 1784154374794,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
@@ -32918,9 +33469,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Improving Travel for American Families Act",
     "summary": "2026-07-13 house: On Motion to Suspend the Rules and Pass, as Amended — Passed (398-12; D 201-2 · R 196-10 · I 1-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "The bill passed near-unanimously as a consumer-protection travel measure. The live secondary tension is whether this represents genuine deregulatory relief for airlines/travel industry versus expanded consumer-protection mandates — a business-burden-vs-consumer-shield axis rather than a partisan one.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "pass",
+        "neg": "block"
+      },
+      "y": {
+        "pos": "consumer protection",
+        "neg": "industry flexibility"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000370",
       "A000055",
@@ -33336,13 +33896,23 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "hr-119-8897"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.25,
+      "reason": "With 398-12 passage and minimal, scattered defection (10 R, 2 D) under suspension (requiring 2/3, typically noncontroversial bills), there's no visible ideological patterning to a consumer-vs-industry axis — defectors aren't identifiable as consistent free-market or consumer-advocate blocs. Absent evidence the broader field (industry lobbies vs. consumer groups) is actually contesting this bill, the secondary axis is speculative rather than demonstrably live; it risks being a plausible-sounding but contrived binary rather than one cross-cutting the vote in practice.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T16:01:31.979Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "h-119-2026-235",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297586
   },
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1784148589038,
+    "ts": 1784154374794,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
@@ -33820,9 +34390,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Weatherizing Infrastructure in the North and Terrorism Emergency Readiness Act of 2025",
     "summary": "2026-07-13 house: On Motion to Suspend the Rules and Pass — Passed (400-7; D 201-0 · R 198-7 · I 1-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "The bill bundles winterization infrastructure funding with terrorism emergency readiness provisions, passing near-unanimously under suspension. The near-unanimity masks a latent tension between domestic infrastructure spending priorities and homeland-security/counterterrorism prerogatives, which could pull differently on appropriators versus security-committee members.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Pass",
+        "neg": "Block"
+      },
+      "y": {
+        "pos": "Infrastructure-priority framing",
+        "neg": "Security-priority framing"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000370",
       "A000055",
@@ -34235,13 +34814,23 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "hr-119-3106"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.25,
+      "reason": "The vote (400-7, suspension) is a near-consensus grab-bag bill with no evident ideological cross-cut; the 7 GOP defectors are not identifiable as a coherent security-vs-infrastructure faction from the data given, and the 'infrastructure vs security emphasis' axis is speculative dressing rather than a demonstrable field split — no commentariat or factional debate is evidenced pulling members apart on which half of the bill matters more. This looks like a genuinely low-dimensional consensus bill; no strong secondary binary is constructible from the evidence.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T16:03:25.206Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "h-119-2026-234",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297586
   },
   {
     "cid": "cand_leg_hr-119-5625",
     "source": "legislative",
-    "ts": 1784148589037,
+    "ts": 1784154374793,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5625",
@@ -34719,9 +35308,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Cashless Bail Reporting Act",
     "summary": "2026-05-14 house: On Passage — Passed (308-116; D 96-114 · R 211-2 · I 1-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "The bill formally mandates cashless-bail data reporting, but the underlying tension is whether the federal government should use funding/reporting levers to pressure state and local criminal-justice policy, versus deferring to local jurisdictions' own bail reforms. The lopsided Republican support and split Democratic vote suggest a federalism/local-control fault line beneath the nominal transparency measure.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Mandate Reporting",
+        "neg": "Oppose Mandate"
+      },
+      "y": {
+        "pos": "Federal Oversight",
+        "neg": "Local Autonomy"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000055",
       "A000371",
@@ -35151,13 +35749,23 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "hr-119-5625"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.55,
+      "reason": "The native binary is pass/block on the reporting mandate. The secondary axis—federal oversight of local bail policy vs. local prerogative—cross-cuts because the Democratic split (96-114) is not simple party discipline but reflects a real divide between D members from jurisdictions defending cashless-bail experiments (local-autonomy pole) and those wary of appearing soft-on-crime or supportive of transparency (oversight pole). Republican near-unanimity (211-2) reflects law-and-order consensus rather than a federalism position, so the axis is constituted mainly in the Democratic caucus and the broader criminal-justice-reform commentariat rather than erased by the roll call. It's not fully self-evident since GOP unity could also be read as pure substantive agreement rather than crosscutting, capping the score below 0.7.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:46:32.911Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "h-119-2026-171",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297585
   },
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1784148589038,
+    "ts": 1784154374794,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
@@ -35636,9 +36244,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Emergency Conservation Program Improvement Act of 2025",
     "summary": "2026-06-23 house: On Motion to Suspend the Rules and Pass — Passed (368-19; D 189-0 · R 178-19 · I 1-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "The bill passed near-unanimously under suspension, suggesting broad consensus on conservation program mechanics. Any residual tension likely concerns how much administrative flexibility USDA gets versus fixed statutory formulas, a split that cross-cuts party lines among agriculture-district members.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Pass",
+        "neg": "Block"
+      },
+      "y": {
+        "pos": "Agency discretion",
+        "neg": "Fixed formula mandates"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000370",
       "A000055",
@@ -36031,13 +36648,23 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "s-119-629"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.35,
+      "reason": "The 19 R defectors are likely fiscal-conservative/anti-spending members objecting to program expansion itself, not to a discretion-vs-formula question — meaning the strongest available secondary axis isn't clearly evidenced in the roll call. Without visible defector alignment confirming a discretion/formula split, this axis is plausible but speculative, not demonstrated. Suspension passage with near-unanimity gives little evidence to distinguish a genuine cross-cutting axis from a contrived one; it likely collapses toward spending-hawk-vs-not, which correlates with the vote itself.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:46:51.695Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "h-119-2026-223",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297586
   },
   {
     "cid": "cand_leg_hr-119-8469",
     "source": "legislative",
-    "ts": 1784148589037,
+    "ts": 1784154374793,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8469",
@@ -36987,9 +37614,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Making appropriations for military construction, the Department of Veterans Affairs, and related agencies for the fiscal year ending September 30, 2027, and for other purposes. (2 roll calls)",
     "summary": "2026-05-15 house: On Agreeing to the Amendment — Failed (80-333; D 0-205 · R 80-127 · I 0-1)\n2026-05-15 house: On Passage — Passed (400-15; D 189-15 · R 210-0 · I 1-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "The MilCon-VA appropriations bill passed near-unanimously, but an amendment vote split Republicans nearly in half while Democrats stayed unified against it. This suggests a live intra-Republican tension over spending levels or riders that doesn't map onto the final passage vote.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Pass funding",
+        "neg": "Block funding"
+      },
+      "y": {
+        "pos": "Fiscal restraint / riders",
+        "neg": "Institutional comity / clean funding"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000379",
       "A000375",
@@ -37414,17 +38050,27 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "hr-119-8469"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.55,
+      "reason": "The amendment vote (80 R yea, 127 R nay, 0 D yea) shows a genuine intra-GOP cross-cut between spending hawks/rider proponents and appropriators favoring a clean bipartisan bill, while Democrats bloc-opposed the amendment. This is not redundant with passage (400-15 near-unanimous) since the amendment axis divides Republicans internally rather than tracking the pass/fail split. It plausibly reflects a real fiscal-restraint-vs-institutional-comity tension in the broader GOP caucus, though we lack the amendment's substantive content to confirm it isn't a narrower procedural gambit.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:47:11.424Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "h-119-2026-175",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297585
   },
   {
     "cid": "cand_leg_s-119-4465",
     "source": "legislative",
-    "ts": 1784148589036,
+    "ts": 1784154374792,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4465",
-      "salience": 0.365,
+      "salience": 0.364,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4465",
       "votes": [
         {
@@ -37898,9 +38544,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "A bill to amend the FISA Amendments Act of 2008 to extend the authorities of title VII of the Foreign Intelligence Surveillance Act of 1978, and for other purposes.",
     "summary": "2026-04-30 house: On Motion to Suspend the Rules and Pass — Passed (261-111; D 94-85 · R 166-26 · I 1-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "The vote nominally reauthorizes FISA Section 702 surveillance authorities, but the real fault line is between those who trust executive/intelligence-agency discretion over foreign-intelligence collection and those who demand civil-liberties safeguards against incidental domestic surveillance of Americans. This tension splits both caucuses internally rather than tracking party lines.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Reauthorize",
+        "neg": "Block/Sunset"
+      },
+      "y": {
+        "pos": "Executive Surveillance Discretion",
+        "neg": "Civil Liberties Safeguards"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000055",
       "A000371",
@@ -38278,13 +38933,23 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "s-119-4465"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.75,
+      "reason": "The security-vs-privacy axis is a well-established cross-cutting tension on FISA reauthorizations: libertarian-leaning Republicans (Massie, Davidson types) and progressive/privacy Democrats (Jayapal, Lofgren wing) have historically opposed reauthorization or demanded warrant requirements, while establishment members of both parties favor the authorities. Here both R (26 no) and D (85 no) show large minority blocs voting against passage — far too large and bipartisan to be pure party discipline, consistent with civil-liberties defectors crossing from both sides rather than a party-line vote. This confirms the axis is live in the broader debate even though the topline vote is nominally the same binary; the defection pattern is diagnostic of the security/privacy split, not merely relabeled procedure.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:47:32.110Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "h-119-2026-155",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297584
   },
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1784148589037,
+    "ts": 1784154374793,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
@@ -38762,9 +39427,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Northwest Straits Marine Conservation Initiative Reauthorization Act of 2025",
     "summary": "2026-06-03 house: On Motion to Suspend the Rules and Pass, as Amended — Passed (374-49; D 211-0 · R 162-49 · I 1-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "The vote nominally concerns reauthorizing a regional marine conservation program, but the 49 Republican defectors likely reflect a deeper split over federal environmental spending and local/regional resource management versus national conservation mandates. This tension between centralized environmental authority and local/regional autonomy over resource use cross-cuts the near-unanimous passage vote.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Pass",
+        "neg": "Block"
+      },
+      "y": {
+        "pos": "Local resource control",
+        "neg": "Federal conservation mandate"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000370",
       "A000055",
@@ -39193,13 +39867,23 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "hr-119-2860"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.45,
+      "reason": "The secondary axis (federal conservation authority vs. local/regional control over marine resources) plausibly explains the 49 GOP defectors, who likely represent fishing/resource-dependent districts wary of federal environmental restrictions, while the bulk of the GOP caucus joined Democrats in support. This is a substantive policy tension distinct from the pass/block binary, though the near-unanimous suspension vote (374-49) limits visibility into how deeply it divides the broader field, since suspension votes suppress overt floor debate on such tensions.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:32:07.352Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "h-119-2026-196",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297585
   },
   {
     "cid": "cand_leg_hr-119-2853",
     "source": "legislative",
-    "ts": 1784148589036,
+    "ts": 1784154374792,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2853",
@@ -39676,9 +40360,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Combating Organized Retail Crime Act of 2025",
     "summary": "2026-05-12 house: On Motion to Suspend the Rules and Pass, as Amended — Passed (348-60; D 144-59 · R 203-1 · I 1-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "Beyond whether to crack down on organized retail crime, the bill raises how enforcement power should be allocated — new federal/DHS-coordinated authority and data-sharing versus reliance on state and local retail-crime enforcement and existing civil liberties safeguards. This tension does not track the near-unanimous passage vote.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Pass crackdown",
+        "neg": "Block crackdown"
+      },
+      "y": {
+        "pos": "Federal enforcement expansion",
+        "neg": "State/local & civil-liberties limits"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000370",
       "A000055",
@@ -40092,13 +40785,23 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "hr-119-2853"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.45,
+      "reason": "The federal-power-vs-local/civil-liberties axis is substantive and plausibly divides the broader field (privacy hawks and federalism-minded members on both sides), but the near-unanimous 348-60 suspension vote offers little direct evidence of this cross-cut — the 59 D and 1 R defectors don't clearly map onto a federalism/civil-liberties pattern from the data given, so confidence is moderate rather than confirmed.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:47:51.188Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "h-119-2026-157",
+      "yeaPole": "pos"
+    },
+    "mts": 1783985767840
   },
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1784148589037,
+    "ts": 1784154374793,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
@@ -40576,9 +41279,18 @@ window.PRISM_CANDIDATES = [
     },
     "title": "ARTIST Act",
     "summary": "2026-06-03 house: On Motion to Suspend the Rules and Pass — Passed (404-14; D 207-0 · R 196-14 · I 1-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "The ARTIST Act's near-unanimous passage masks a live tension over how AI-generated content and creative labor should be governed: through expanded intellectual-property/likeness protections versus market-driven innovation incentives. This divide doesn't track party lines but rather industry alignment and libertarian-vs-regulatory instincts within both caucuses.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Pass",
+        "neg": "Block"
+      },
+      "y": {
+        "pos": "Rights-holder protection",
+        "neg": "Innovation deregulation"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [
       "A000370",
       "A000055",
@@ -41002,13 +41714,23 @@ window.PRISM_CANDIDATES = [
     "bills": [
       "s-119-254"
     ],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.35,
+      "reason": "The suspension vote (404-14) is overwhelmingly whipped-consensus, and the 14 GOP defectors don't clearly map onto a rights-vs-innovation axis from the data given — no visible defector pattern (e.g. tech-district Rs vs traditional-industry Rs) is confirmed. The secondary binary is substantively plausible (creative-labor protection vs AI/tech deregulation) and would likely divide the broader commentariat and industry lobbies, but without evidence of who the 14 defectors are, I can't confirm it cross-cuts rather than being incidental noise. This keeps the score moderate rather than high.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:32:18.173Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "h-119-2026-193",
+      "yeaPole": "pos"
+    },
+    "mts": 1783985767841
   },
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1784148589037,
+    "ts": 1784154374793,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
@@ -41917,12 +42639,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_block-iran-senate",
     "source": "news",
-    "ts": 1784148611188,
+    "ts": 1784154406474,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.876,
+      "salience": 0.866,
       "articles": [
         {
           "title": "Senate Democrats block $1 trillion defense bill in protest over Iran war",
@@ -42000,23 +42722,38 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Senate Democrats block $1 trillion defense bill in protest over Iran war",
     "summary": "2026-07-15 pilotonline.com: Senate Democrats block $1 trillion defense bill in protest over Iran war\n2026-07-15 news.antiwar.com: Senate Democrats Block Advancement of $1 . 1 Trillion NDAA Over Iran War\n2026-07-15 mcall.com: Senate Democrats block $1 trillion defense bill in protest over Iran war\n2026-07-15 abcnews.com: Senate Democrats block $1 trillion defense bill in protest over Iran war\n2026-07-15 dailypress.com: Senate Democrats block $1 trillion defense bill in protest over Iran war\n2026-07-15 reporterherald.com: Senate Democrats block $1 trillion defense bill in protest over Iran war",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "The headline binary is whether the NDAA advances or stays blocked. But underneath, the real tension is whether Iran war powers should be resolved through executive latitude or congressional constraint — a question that splits both parties' own factions rather than just pitting Democrats against Republicans.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Advance NDAA",
+        "neg": "Block NDAA"
+      },
+      "y": {
+        "pos": "Executive war latitude",
+        "neg": "Congressional war powers constraint"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [],
     "bills": [],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.65,
+      "reason": "The vote-blocking binary (advance/block) is native. The war-powers axis cross-cuts because it does not track cleanly with 'block=Dem, advance=GOP': libertarian-leaning Republicans (Paul, Massie-style figures) and restrainer voices historically side with war-powers constraints alongside Democratic doves, while hawkish Democrats (Fetterman-type, defense-district members) favor advancing the bill and executive flexibility despite party pressure to block. Since this is a news cluster with no roll call, the axis must be argued from the public field: pundits like Tucker Carlson-aligned commentators and antiwar.com's coverage frame this as a restraint-vs-latitude fight cutting across party lines, not simply a Democratic protest. That keeps it substantive rather than a relabeling of block/advance, though the headline framing (all outlets naming 'Democrats block') pulls toward treating it as purely partisan, capping the score below 0.7.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-15T21:00:13.646Z"
+    },
+    "status": "new",
+    "mts": 1784149213646
   },
   {
     "cid": "cand_news_appearance-before-congress",
     "source": "news",
-    "ts": 1784148611187,
+    "ts": 1784154406473,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.87,
+      "salience": 0.86,
       "articles": [
         {
           "title": "The Latest : Justices testify about Supreme Court security in rare appearance before Congress",
@@ -42094,23 +42831,38 @@ window.PRISM_CANDIDATES = [
     },
     "title": "The Latest : Supreme Court justices set to testify in rare appearance before Congress",
     "summary": "2026-07-15 rockymounttelegram.com: The Latest : Justices testify about Supreme Court security in rare appearance before Congress\n2026-07-14 idahostatejournal.com: The Latest : Justices testify about Supreme Court security in rare appearance before Congress\n2026-07-14 messenger-inquirer.com: The Latest : Justices testify about Supreme Court security in rare appearance before Congress\n2026-07-14 union-bulletin.com: The Latest : Justices testify about Supreme Court security in rare appearance before Congress\n2026-07-14 us.cnn.com: Justices Kagan and Barrett demand more Supreme Court security funding in rare appearance before Congress\n2026-07-14 idahostatejournal.com: The Latest : Supreme Court justices set to testify in rare appearance before Congress",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "The story's surface question is whether Congress should increase Supreme Court security funding. Beneath that lies a separate tension over judicial independence: whether justices appearing before Congress at all — even for budgetary matters — normalizes legislative-branch scrutiny of the Court, versus being a narrow administrative formality that implies no such encroachment.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "increase funding",
+        "neg": "hold funding"
+      },
+      "y": {
+        "pos": "testimony normalizes oversight",
+        "neg": "testimony is narrow formality"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [],
     "bills": [],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.55,
+      "reason": "The native binary (fund vs. not) is barely contested — security funding for judges is broadly popular across parties. The live tension is institutional: commentators and members from both coalitions split on whether justices testifying before Congress, even on funding, sets a precedent for legislative leverage over the judiciary. Court-deference conservatives (e.g., those wary of any perceived congressional intrusion on judicial independence) would resist the appearance itself, while institutionalist Democrats and Republicans alike who favor oversight mechanisms would welcome it as routine accountability. This does not track the funding vote cleanly, since supporters of the funding could still object to the *appearance* as precedent, and opponents of new oversight norms could still support the money. It cross-cuts rather than restates the surface story, though it remains somewhat speculative absent explicit reactions in the headlines themselves, which limits certainty.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T16:00:00.019Z"
+    },
+    "status": "new",
+    "mts": 1784044312491
   },
   {
     "cid": "cand_news_court-funding-justices",
     "source": "news",
-    "ts": 1784148611188,
+    "ts": 1784154406474,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.87,
+      "salience": 0.86,
       "articles": [
         {
           "title": "Supreme Court justices emphasize need for security funding",
@@ -42199,12 +42951,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_alleges-broke-calls",
     "source": "news",
-    "ts": 1784148611189,
+    "ts": 1784154406475,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.815,
+      "salience": 0.805,
       "articles": [
         {
           "title": "Wyden alleges RFK Jr broke law in calls urging Libertarians to quit",
@@ -42275,12 +43027,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_appearance-court-justice",
     "source": "news",
-    "ts": 1784148611187,
+    "ts": 1784154406473,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.763,
+      "salience": 0.753,
       "articles": [
         {
           "title": "Supreme Court Justice rare appearance on security threats",
@@ -42345,12 +43097,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_capitol-court-funding",
     "source": "news",
-    "ts": 1784148611189,
+    "ts": 1784154406475,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.753,
+      "salience": 0.743,
       "articles": [
         {
           "title": "Supreme Court justices seek security funding in first Capitol Hill testimony in 7 years",
@@ -42403,12 +43155,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_about-age-death",
     "source": "news",
-    "ts": 1784148611189,
+    "ts": 1784154406475,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.737,
+      "salience": 0.727,
       "articles": [
         {
           "title": "Graham sudden death renews questions about lawmaker health , age in Washington",
@@ -42486,6 +43238,73 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Graham sudden death renews questions about lawmaker health , age in Washington",
     "summary": "2026-07-14 wjla.com: Graham sudden death renews questions about lawmaker health , age in Washington\n2026-07-14 kfdm.com: Graham sudden death renews questions about lawmaker health , age in Washington\n2026-07-14 cbs2iowa.com: Graham sudden death renews questions about lawmaker health , age in Washington\n2026-07-14 wchstv.com: Graham sudden death renews questions about lawmaker health , age in Washington\n2026-07-14 wset.com: Graham sudden death renews questions about lawmaker health , age in Washington\n2026-07-14 abc6onyourside.com: Graham sudden death renews questions about lawmaker health , age in Washington",
+    "framingDraft": "A senator's sudden death has reopened debate over aging leadership in Congress. The native dispute is whether age/health should trigger institutional limits (mandatory checks, cognitive tests, age caps) versus being treated as a private, voter-decided matter. A cross-cutting question is whether the fix is structural — term/age limits, disclosure mandates — or cultural, resting on individual lawmakers' and parties' voluntary succession planning.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "impose limits",
+        "neg": "leave to voters"
+      },
+      "y": {
+        "pos": "structural reform",
+        "neg": "individual responsibility"
+      }
+    },
+    "prevalentAxisGuess": "x",
+    "members": [],
+    "bills": [],
+    "fitness": {
+      "score": 0.55,
+      "reason": "The native binary (should age/health be regulated vs. left to electoral choice) is likely to split within both parties: younger reform-minded members of both parties (e.g. Democrats like Ro Khanna, Republicans like Matt Gaetz) have called for age limits or cognitive testing, while senior incumbents and institutionalists in both caucuses (Pelosi-era Democrats, McConnell-aligned Republicans) resist any formal rule as ageist or unconstitutional. The structural-vs-individual axis further cross-cuts by separating those who want binding rules from those who prefer party gatekeeping or voluntary retirement norms — a distinction that doesn't track partisan lines at all, since both parties have aging leadership crises. This makes it a plausible non-degenerate secondary axis, though its strength rests on inference from commentary patterns rather than observed votes, since no roll call exists here.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T15:59:03.656Z"
+    },
+    "status": "new",
+    "mts": 1784044312486
+  },
+  {
+    "cid": "cand_news_annual-bill-block",
+    "source": "news",
+    "ts": 1784154406475,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.718,
+      "articles": [
+        {
+          "title": "Democrats block $1 trillion annual defense bill : Here what they say",
+          "url": "https://www.ktvu.com/news/democrats-block-1-trillion-annual-defense-bill-heres-what-say",
+          "domain": "ktvu.com",
+          "seendate": "2026-07-15T21:15:00Z"
+        },
+        {
+          "title": "Democrats block $1 trillion annual defense bill : Here what they say",
+          "url": "https://www.fox5atlanta.com/news/democrats-block-1-trillion-annual-defense-bill-heres-what-say",
+          "domain": "fox5atlanta.com",
+          "seendate": "2026-07-15T21:00:00Z"
+        },
+        {
+          "title": "Democrats block $1 trillion annual defense bill : Here what they say",
+          "url": "https://www.fox29.com/news/democrats-block-1-trillion-annual-defense-bill-heres-what-say",
+          "domain": "fox29.com",
+          "seendate": "2026-07-15T20:30:00Z"
+        },
+        {
+          "title": "Democrats block $1 trillion annual defense bill : Here what they say",
+          "url": "https://www.fox13news.com/news/democrats-block-1-trillion-annual-defense-bill-heres-what-say",
+          "domain": "fox13news.com",
+          "seendate": "2026-07-15T20:00:00Z"
+        },
+        {
+          "title": "Democrats block $1 trillion annual defense bill : Here what they say",
+          "url": "https://www.fox6now.com/news/democrats-block-1-trillion-annual-defense-bill-heres-what-say",
+          "domain": "fox6now.com",
+          "seendate": "2026-07-15T19:15:00Z"
+        }
+      ]
+    },
+    "title": "Democrats block $1 trillion annual defense bill : Here what they say",
+    "summary": "2026-07-15 ktvu.com: Democrats block $1 trillion annual defense bill : Here what they say\n2026-07-15 fox5atlanta.com: Democrats block $1 trillion annual defense bill : Here what they say\n2026-07-15 fox29.com: Democrats block $1 trillion annual defense bill : Here what they say\n2026-07-15 fox13news.com: Democrats block $1 trillion annual defense bill : Here what they say\n2026-07-15 fox6now.com: Democrats block $1 trillion annual defense bill : Here what they say",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -42497,12 +43316,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_aid-elections-farm",
     "source": "news",
-    "ts": 1784148611189,
+    "ts": 1784154406475,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.706,
+      "salience": 0.696,
       "articles": [
         {
           "title": "House Republicans unveil a $95 billion plan for the Iran war , farm aid and elections - Las Vegas Sun News",
@@ -42549,12 +43368,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_bill-daylight-house",
     "source": "news",
-    "ts": 1784148611189,
+    "ts": 1784154406475,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.543,
+      "salience": 0.533,
       "articles": [
         {
           "title": "House passes bill to make daylight saving time permanent",
@@ -42595,12 +43414,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_assistance-commission-election",
     "source": "news",
-    "ts": 1784148611187,
+    "ts": 1784154406473,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.496,
+      "salience": 0.486,
       "articles": [
         {
           "title": "Trump removes remaining Election Assistance Commission members , raising oversight fears",
@@ -42630,75 +43449,38 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Trump removes remaining Election Assistance Commission members , raising oversight fears",
     "summary": "2026-07-14 ktxs.com: Trump removes remaining Election Assistance Commission members , raising oversight fears\n2026-07-14 kval.com: Trump removes remaining Election Assistance Commission members , raising oversight fears\n2026-07-14 foxrochester.com: Trump removes remaining Election Assistance Commission members , raising oversight fears\n2026-07-14 foxreno.com: Trump removes remaining Election Assistance Commission members , raising oversight fears",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_dies-graham-illness",
-    "source": "news",
-    "ts": 1784148611189,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.309,
-      "articles": [
-        {
-          "title": "Lindsey Graham dies after unexpected illness , his office says",
-          "url": "https://www.kiro7.com/news/national/us-senator-lindsey/6SGA3QHR5A7JPB6NXIHKQQ4UIM/",
-          "domain": "kiro7.com",
-          "seendate": "2026-07-13T02:15:00Z"
-        },
-        {
-          "title": "Sen . Lindsey Graham , a close Trump ally and foreign policy hawk , dies after a brief illness",
-          "url": "https://www.krgv.com/news/sen-lindsey-graham-a-close-trump-ally-and-foreign-policy-hawk-dies-after-a-brief-illness/",
-          "domain": "krgv.com",
-          "seendate": "2026-07-12T22:00:00Z"
-        },
-        {
-          "title": "Sen . Lindsey Graham dies after a brief illness",
-          "url": "https://www.boston.com/news/politics/2026/07/12/us-sen-lindsey-graham-has-died-after-a-brief-and-unexpected-illness-his-office-says/",
-          "domain": "boston.com",
-          "seendate": "2026-07-12T21:30:00Z"
-        },
-        {
-          "title": "Sen . Lindsey Graham , a close Trump ally and foreign policy hawk , dies after brief illness",
-          "url": "https://www.wlox.com/2026/07/12/sen-lindsey-graham-dies-after-brief-unexpected-illness-his-office-says/",
-          "domain": "wlox.com",
-          "seendate": "2026-07-12T21:30:00Z"
-        },
-        {
-          "title": "Sen . Lindsey Graham dies after brief and unexpected illness , his office says",
-          "url": "https://www.kcrg.com/2026/07/12/sen-lindsey-graham-dies-after-brief-unexpected-illness-his-office-says/",
-          "domain": "kcrg.com",
-          "seendate": "2026-07-12T21:00:00Z"
-        }
-      ]
+    "framingDraft": "The story's surface dispute is whether removing the EAC's remaining commissioners is a lawful exercise of presidential removal power or an improper gutting of election oversight. A second, cross-cutting question is whether independent agency commissioners should be insulated from presidential control at all, regardless of who currently occupies the White House.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "removal justified",
+        "neg": "removal improper"
+      },
+      "y": {
+        "pos": "unitary executive control",
+        "neg": "independent agency insulation"
+      }
     },
-    "title": "Sen . Lindsey Graham dies after brief and unexpected illness , his office says",
-    "summary": "2026-07-13 kiro7.com: Lindsey Graham dies after unexpected illness , his office says\n2026-07-12 krgv.com: Sen . Lindsey Graham , a close Trump ally and foreign policy hawk , dies after a brief illness\n2026-07-12 boston.com: Sen . Lindsey Graham dies after a brief illness\n2026-07-12 wlox.com: Sen . Lindsey Graham , a close Trump ally and foreign policy hawk , dies after brief illness\n2026-07-12 kcrg.com: Sen . Lindsey Graham dies after brief and unexpected illness , his office says",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "prevalentAxisGuess": "x",
     "members": [],
     "bills": [],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.55,
+      "reason": "The native binary is whether this particular removal was legitimate or an oversight scandal. The secondary axis—unitary executive theory vs. independent-agency insulation—cross-cuts because it doesn't track only partisan defense of Trump: many conservative legal figures (e.g. unitary executive scholars, Federalist Society voices) and libertarian-leaning commentators support broad removal power on principle even when uneasy about election-administration implications, while some Democrats and institutionalists who normally favor strong agency independence (Humphrey's Executor defenders) would object regardless of who's president. Election-law specific figures (e.g. former EAC commissioners, good-government groups like Issue One) may split from party lines based on institutional-design concerns rather than partisan loyalty. This is not merely procedure-vs-substance dressed up, since the constitutional removal-power question is a genuinely separate jurisprudential fight from the object-level 'was this good for election oversight' fight. Score capped below 0.7 because with only 3 outlets and no explicit commentary captured, the cross-cutting is inferred from the broader legal/political field rather than directly evidenced in this cluster.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T16:00:43.409Z"
+    },
+    "status": "new",
+    "mts": 1784044312485
   },
   {
     "cid": "cand_news_alliance-allies-buddies",
     "source": "news",
-    "ts": 1784148611187,
+    "ts": 1784154406473,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.272,
+      "salience": 0.262,
       "articles": [
         {
           "title": "Graham and Trump unlikely alliance : From opponents to key allies and golf buddies",
@@ -42722,23 +43504,38 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Graham and Trump unlikely alliance : From opponents to key allies and golf buddies",
     "summary": "2026-07-13 us.cnn.com: Graham and Trump unlikely alliance : From opponents to key allies and golf buddies\n2026-07-13 edition.cnn.com: Graham and Trump unlikely alliance : From opponents to key allies and golf buddies\n2026-07-13 cnn.com: Graham and Trump unlikely alliance : From opponents to key allies and golf buddies",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "The story's native binary is whether Graham's alliance with Trump reflects genuine conviction or pure political survival. A secondary tension concerns what the alliance is actually for: hawkish foreign-policy leverage versus personal/domestic loyalty-building, which splits commentators and Republicans differently than the sincerity question does.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "principled conversion",
+        "neg": "opportunist capitulation"
+      },
+      "y": {
+        "pos": "foreign-policy hawkishness",
+        "neg": "personal loyalty politics"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [],
     "bills": [],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.45,
+      "reason": "The native binary (sincere ally vs. sycophant) is the headline's obvious frame. The secondary axis—whether the alliance is instrumentalized for hawkish foreign policy goals (Ukraine aid, Iran, defense hawks like Graham's traditional allies) versus purely personal/domestic loyalty display (golf, access, MAGA base courting)—cross-cuts because hawkish commentators (e.g. Bolton-aligned voices) could praise the alliance's substance while distrusting Trump's sincerity, whereas MAGA loyalists praise the personal bond regardless of foreign-policy content. Never-Trump hawks and pro-Trump doves would split oppositely on axis y than on axis x. It's a plausible but not fully evidenced cross-cut given the thin headline cluster.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T16:02:47.190Z"
+    },
+    "status": "new",
+    "mts": 1784044312485
   },
   {
     "cid": "cand_news_aorta-died-examiner",
     "source": "news",
-    "ts": 1784148611188,
+    "ts": 1784154406474,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.216,
+      "salience": 0.206,
       "articles": [
         {
           "title": "Senator Lindsey Graham likely died after aorta rupture , medical examiner says",
@@ -42762,12 +43559,27 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Sen . Lindsey Graham likely died after aorta rupture , medical examiner says",
     "summary": "2026-07-13 courthousenews.com: Senator Lindsey Graham likely died after aorta rupture , medical examiner says\n2026-07-13 whdh.com: Sen . Lindsey Graham likely died after aorta rupture , medical examiner says - Boston News , Weather , Sports\n2026-07-12 wmbfnews.com: Sen . Lindsey Graham likely died after aorta rupture , medical examiner says",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
+    "framingDraft": "This is a factual medical-examiner report on a senator's death, not a contested political event. Any secondary tension would have to be manufactured rather than found in the public field, since there is no visible dispute about the cause of death or its implications.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "death confirmed",
+        "neg": "cause disputed"
+      },
+      "y": {
+        "pos": "private tragedy",
+        "neg": "political consequence"
+      }
+    },
+    "prevalentAxisGuess": "x",
     "members": [],
     "bills": [],
-    "fitness": null,
-    "status": "new"
+    "fitness": {
+      "score": 0.15,
+      "reason": "No genuine secondary binary exists here: the story is a single factual report with no vote, no coalition, and no public argument to cross-cut. A 'political succession' framing could be imagined, but nothing in the four identical headlines suggests any faction is contesting cause, meaning, or consequence — it's pure stenography of a medical finding. Any proposed axis is contrived rather than constituted in the field.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T16:03:05.581Z"
+    },
+    "status": "new",
+    "mts": 1784044312485
   }
 ];
