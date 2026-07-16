@@ -820,10 +820,30 @@ const PrismDB = (() => {
     return records;
   }
 
+  // Draft tier: a riding draft upserts by rid, LWW by updatedAt.
+  // A locally-PUBLISHED copy (syncedAt) always outranks a draft —
+  // a stale park draft must never clobber the published Reading.
+  // Lineage relinks to THIS device's event id (evt ids are local).
+  function _applyDraft(c, r) {
+    if (!r.draftReading || !r.draftReading.rid) return;
+    const d = r.draftReading;
+    const local = getEvents().find(e => e.rid === d.rid);
+    if (!local) {
+      const ev = importReading({ ...d, active: false });
+      if (ev && c.status === 'promoted') c.promotedEventId = ev.id;
+    } else if (!local.syncedAt && (d.updatedAt || '') > (local.updatedAt || '')) {
+      const ev = importReading({ ...d });
+      if (ev && c.status === 'promoted') c.promotedEventId = ev.id;
+    } else if (c.status === 'promoted') {
+      c.promotedEventId = local.id;
+    }
+  }
+
   // Merge pulled records into the store. Applies M2 fields + status when
   // the record is newer than the local copy; never touches candidates the
   // store doesn't hold (a record may outlive its candidate — that's the
-  // editorial history, not an error). Returns { applied, skipped }.
+  // editorial history, not an error) — EXCEPT a record carrying a draft,
+  // which resurrects its candidate (see below). Returns { applied, skipped }.
   function mergeCandidateScores(records) {
     if (!records || typeof records !== 'object') return { applied: 0, skipped: 0 };
     const all = getCandidates();
@@ -838,24 +858,30 @@ const PrismDB = (() => {
         if (!(c.status === 'promoted' && r.status === 'promoted')) c.status = r.status;
         if (c.status !== 'promoted') delete c.promotedEventId;
       }
-      // Draft tier: a riding draft upserts by rid, LWW by updatedAt.
-      // A locally-PUBLISHED copy (syncedAt) always outranks a draft —
-      // a stale park draft must never clobber the published Reading.
-      // Lineage relinks to THIS device's event id (evt ids are local).
-      if (r.draftReading && r.draftReading.rid) {
-        const d = r.draftReading;
-        const local = getEvents().find(e => e.rid === d.rid);
-        if (!local) {
-          const ev = importReading({ ...d, active: false });
-          if (ev && c.status === 'promoted') c.promotedEventId = ev.id;
-        } else if (!local.syncedAt && (d.updatedAt || '') > (local.updatedAt || '')) {
-          const ev = importReading({ ...d });
-          if (ev && c.status === 'promoted') c.promotedEventId = ev.id;
-        } else if (c.status === 'promoted') {
-          c.promotedEventId = local.id;
-        }
-      }
+      _applyDraft(c, r);
       c.mts = r.mts;
+      applied++;
+    });
+    // Resurrection (2026-07-16, closes the aged-out-candidate gap): a
+    // record that arrives CARRYING A DRAFT regenerates its candidate —
+    // "records outlive candidates" completes itself. Without this, a
+    // park draft whose story aged out of the scan window could never
+    // land on a second device (live bite: Iran/NDAA — the desk never
+    // held the candidate, so the merge skipped the record wholesale).
+    // Scored-only strays still stay records-without-candidates.
+    Object.keys(records).forEach(cid => {
+      const r = records[cid];
+      if (!r || !r.draftReading || !r.draftReading.rid) return;
+      if (all.some(c => c.cid === cid)) return;   // held locally — handled above
+      const c = { cid,
+                  source: cid.indexOf('cand_leg_') === 0 ? 'legislation' : 'news',
+                  title: r.title || r.draftReading.title || cid,
+                  status: r.status || 'promoted',
+                  ts: r.mts || Date.now(), resurrected: true };
+      SCORE_FIELDS.forEach(k => { if (r[k] != null) c[k] = r[k]; });
+      _applyDraft(c, r);
+      c.mts = r.mts || Date.now();
+      all.push(c);
       applied++;
     });
     if (applied) _set(KEYS.candidates, all);

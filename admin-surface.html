@@ -1163,7 +1163,9 @@ async function nrPullScores(){
   if(!f.json||f.json.schema!=='candidate_scores/v1'||!f.json.records) return { applied:0 };
   nrPulledRecords=f.json.records;
   const m=PrismDB.mergeCandidateScores(f.json.records);
-  if(m.applied) nrRender();
+  // a merge can materialize a draft Reading (draft tier) — refresh the
+  // event dropdown too, or the draft is invisible until a page reload
+  if(m.applied){ nrRender(); try{ refreshDropdown(currentId); }catch(_){} }
   return m;
 }
 
