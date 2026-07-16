@@ -76,6 +76,15 @@
       linear-gradient(180deg,#faf6ec 0%,#f5f0e8 46%,#efe8d9 100%); }
   body.light #spaceField::before, body.light #spaceField::after{ display:none; }
   body.light .adminbar{ background:rgba(245,240,232,.78); }
+  /* daylight legibility (2026-07-16): these fixed surfaces kept their night
+     backgrounds while the ink vars flipped dark — dark ink on dark chrome.
+     The iPad's bottom bar was the loudest case. Paper backgrounds to match. */
+  body.light .actions{ background:rgba(245,240,232,.85); }
+  body.light .cellchip{ background:rgba(245,240,232,.7); }
+  body.light .sheet{ background:rgba(247,242,234,.95); }
+  body.light #kwPill{ background:rgba(247,242,234,.97); border-color:rgba(72,88,120,.5); box-shadow:0 4px 14px rgba(72,44,16,.25); }
+  body.light .ted-drawer, body.light .br-drawer{ background:rgba(247,242,234,.97); }
+  body.light .ted-overlay, body.light .br-overlay{ background:rgba(72,60,40,.25); }
   body.light .kw{ text-shadow:0 0 6px rgba(120,84,24,.25), 0 0 1px rgba(72,44,16,.45); }
   body.light .sheet textarea{ background:rgba(20,22,30,.04); }
   body.light .ted-star{ color:#f5f0e8; box-shadow:0 0 8px rgba(72,44,16,.4); }
@@ -108,6 +117,34 @@
     background-repeat:no-repeat; background-position:right 10px center; }
   .adminbar select:hover{ border-color:rgba(180,198,230,.7); }
   .adminbar select option{ color:#1a2030; }
+  /* ── custom load-event menu (native to the grammar, not the OS — 2026-07-16).
+        The select stays in the DOM as the value carrier; #evMenuBtn wears its
+        old pill clothes and #evMenu draws the open list. ── */
+  #evSelect{ display:none; }
+  #evMenuBtn{ font-family:var(--mono); font-size:11px; letter-spacing:.04em; color:rgba(236,240,248,.85);
+    background:rgba(20,26,40,.55); -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px);
+    border:1px solid rgba(150,168,200,.4); border-radius:999px; padding:5px 26px 5px 12px; cursor:pointer;
+    max-width:230px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; text-align:left;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath d='M2 3l3 3 3-3' stroke='%23b8c4dc' stroke-width='1.3' fill='none'/%3E%3C/svg%3E");
+    background-repeat:no-repeat; background-position:right 10px center; }
+  #evMenuBtn:hover{ border-color:rgba(180,198,230,.7); }
+  body.light #evMenuBtn{ color:var(--ink); background-color:rgba(20,22,30,.05); border-color:rgba(72,88,120,.35); }
+  #evMenu{ position:fixed; z-index:60; display:none; flex-direction:column; min-width:300px; max-width:480px;
+    max-height:min(62dvh,560px); overflow-y:auto; overscroll-behavior:contain; padding:6px;
+    background:rgba(9,15,32,.97); border:.5px solid var(--rule); border-radius:13px;
+    -webkit-backdrop-filter:blur(11px); backdrop-filter:blur(11px); box-shadow:0 12px 40px rgba(0,0,0,.5); }
+  #evMenu.show{ display:flex; }
+  #evMenu .evm-head{ font-family:var(--mono); font-size:9px; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--ink-low); padding:10px 12px 4px; }
+  #evMenu .evm-row{ text-align:left; background:transparent; border:0; border-radius:8px; padding:8px 12px;
+    cursor:pointer; display:block; width:100%; }
+  #evMenu .evm-row:hover{ background:rgba(48,96,192,.14); }
+  #evMenu .evm-row.on{ background:rgba(48,96,192,.22); }
+  #evMenu .evm-t{ font-family:var(--serif); font-size:14px; color:var(--ink); line-height:1.35; }
+  #evMenu .evm-m{ font-family:var(--mono); font-size:9px; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--ink-low); margin-top:3px; }
+  #evMenu .evm-empty{ font-family:var(--serif); font-style:italic; color:var(--ink-low); padding:12px; }
+  body.light #evMenu{ background:rgba(245,240,232,.97); box-shadow:0 12px 40px rgba(72,44,16,.2); }
   /* v2 button treatment (from .ev-enter) */
   .btn{ background:transparent; border:1px solid var(--rule); color:var(--ink-mid); font-family:var(--mono);
     font-size:10px; letter-spacing:.18em; text-transform:uppercase; padding:9px 16px; border-radius:2px; cursor:pointer;
@@ -198,10 +235,15 @@
   .viewseg button{ border:0; border-radius:0; background:transparent; color:var(--ink-low); font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; padding:7px 11px; cursor:pointer; }
   .viewseg button.on{ background:#22345c; color:#fff; }
   body.view-quad main, body.view-quad .cellmap, body.view-quad #kwPill{ display:none !important; }
+  /* both paddings ride the measured chrome (2026-07-16): the adminbar wraps
+     to 2-3 rows on tablet and the quad actions bar carries two extra buttons —
+     static 70px/96px put the pole labels under the fixed bars */
   #quadView{ display:none; position:relative; min-height:100vh; min-height:100dvh; flex-direction:column; align-items:center; justify-content:center;
-    padding: calc(env(safe-area-inset-top) + 70px) 20px calc(96px + var(--safe-bottom)); z-index:1; }
+    padding: calc(var(--top-chrome) + 62px) 20px calc(var(--dock-h, calc(96px + var(--safe-bottom))) + 40px); z-index:1; }
   body.view-quad #quadView{ display:flex; }
-  .quad-sub{ font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-low); margin-bottom:14px; text-align:center; }
+  /* 36px clears the Y+ pole label, which translates -100% above the plane
+     into what was the caption's lap (2026-07-16 iPad audit) */
+  .quad-sub{ font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-low); margin-bottom:36px; text-align:center; }
   .quad-plane{ position:relative; width:min(560px,88vw); aspect-ratio:1; border-radius:10px;
     background:radial-gradient(ellipse at center, rgba(10,18,38,.35), rgba(10,18,38,0) 78%);
     box-shadow:inset 0 0 60px rgba(8,12,26,.5); }
@@ -319,7 +361,8 @@
     .actions{ flex-wrap:wrap; }
     /* open nav: every row stretches — the load-event select was the one
        holdout (230px cap truncated draft titles; 2026-07-15 mobile audit) */
-    body.navopen .adminbar select{ max-width:none; width:100%; }
+    body.navopen .adminbar select, body.navopen .adminbar #evMenuBtn{ max-width:none; width:100%; }
+    #evMenu{ left:12px !important; right:12px; min-width:0; max-width:none; }
     /* AI / Sync details rode the column as bare text lines — give them the
        same bordered-row treatment as the .btn rows */
     body.navopen .adminbar details.aiset{ border:1px solid var(--rule); border-radius:2px; padding:10px 16px; }
@@ -751,18 +794,69 @@ function refreshDropdown(sel){
     const isPub=e=>!!(e.syncedAt||(e.rid&&shas[e.rid]));
     const gD=document.createElement('optgroup'); gD.label='Drafts';
     const gP=document.createElement('optgroup'); gP.label='Published';
+    evMenuList=[];
     evs.forEach(e=>{
       const o=document.createElement('option'); o.value=e.id;
       let bills=0; try{ bills=(PrismDB.getBillScoresForEvent(e.id)||[]).length; }catch(err){}
       const w=when(e), pub=isPub(e);
       o.textContent=(e.title||e.id)+(w?' · '+w:'')+(pub?' ✓':'')+(bills?' · ◇ '+bills:'');
       (pub?gP:gD).appendChild(o);
+      evMenuList.push({ id:e.id, title:e.title||e.id, pub,
+        meta:[w, pub?'✓ published':'draft', bills?('◇ '+bills+' bills'):''].filter(Boolean).join(' · ') });
     });
     if(gD.children.length) s.appendChild(gD);
     if(gP.children.length) s.appendChild(gP);
   }
   if(sel) s.value=sel;
+  evMenuSyncLabel();
 }
+
+/* ---- the menu itself — the app draws the open list, not the OS ---- */
+let evMenuList=[];
+function evMenuSyncLabel(){
+  const b=$('evMenuBtn'); if(!b) return;
+  const cur=evMenuList.find(x=>x.id===$('evSelect').value);
+  b.textContent=cur?cur.title:'— load event —';
+}
+function evMenuRender(){
+  const m=$('evMenu'); m.innerHTML='';
+  const curId=$('evSelect').value;
+  const section=(label,items)=>{
+    if(!items.length) return;
+    const h=document.createElement('div'); h.className='evm-head'; h.textContent=label; m.appendChild(h);
+    items.forEach(x=>{
+      const r=document.createElement('button'); r.className='evm-row'+(x.id===curId?' on':'');
+      const t=document.createElement('div'); t.className='evm-t'; t.textContent=x.title;
+      const mm=document.createElement('div'); mm.className='evm-m'; mm.textContent=x.meta;
+      r.appendChild(t); r.appendChild(mm);
+      r.onclick=()=>{ const s=$('evSelect'); s.value=x.id; try{ s.onchange(); }catch(_){}
+        evMenuSyncLabel(); evMenuClose(); };
+      m.appendChild(r);
+    });
+  };
+  section('Drafts', evMenuList.filter(x=>!x.pub));
+  section('Published', evMenuList.filter(x=>x.pub));
+  if(!evMenuList.length){ const d=document.createElement('div'); d.className='evm-empty';
+    d.textContent='nothing on this device yet — promote from the newsroom, or pull'; m.appendChild(d); }
+}
+function evMenuOpen(){
+  const m=$('evMenu'), b=$('evMenuBtn'); evMenuRender();
+  const r=b.getBoundingClientRect();
+  m.style.top=Math.round(r.bottom+6)+'px';
+  m.style.left=Math.max(12, Math.min(Math.round(r.left), innerWidth-492))+'px';
+  m.classList.add('show');
+}
+function evMenuClose(){ $('evMenu').classList.remove('show'); }
+(function(){
+  const s=$('evSelect');
+  const b=document.createElement('button'); b.id='evMenuBtn'; b.type='button'; b.title=s.title;
+  b.textContent='— load event —';
+  s.parentNode.insertBefore(b, s.nextSibling);
+  const m=document.createElement('div'); m.id='evMenu'; document.body.appendChild(m);
+  b.onclick=(e)=>{ e.stopPropagation(); m.classList.contains('show')?evMenuClose():evMenuOpen(); };
+  document.addEventListener('click',(e)=>{ if(m.classList.contains('show')&&!m.contains(e.target)&&e.target!==b) evMenuClose(); });
+  document.addEventListener('keydown',(e)=>{ if(e.key==='Escape') evMenuClose(); });
+})();
 
 /* ---- assemble + save/export ---- */
 function assemble(){
@@ -800,15 +894,19 @@ function save(){
     // Draft tier (2026-07-15): editing a promoted candidate's unpublished
     // Reading is a stratum mutation — bump the owner candidate's mts so
     // the next ⇡ Sync scores carries the fresh draft. saveCandidate stamps.
+    let stratumTouched=false;
     try{ const owner=PrismDB.getCandidates().find(c=>c.status==='promoted'&&c.promotedEventId===currentId);
-      if(owner) PrismDB.saveCandidate(owner); }catch(_){}
+      if(owner){ PrismDB.saveCandidate(owner); stratumTouched=true; } }catch(_){}
     // Event Engine: a successful save ratifies a pending promotion —
     // stamp candidate → event lineage (survives rescans by design).
-    if(nrPendingPromote){ const pc=nrPendingPromote; PrismDB.promoteCandidate(pc, currentId); nrPendingPromote=null;
+    if(nrPendingPromote){ const pc=nrPendingPromote; PrismDB.promoteCandidate(pc, currentId); nrPendingPromote=null; stratumTouched=true;
       try{ nrRender(); }catch(_){}
       // RULED 2026-07-13: offer the yea→pole member-position write now that
       // authored axes exist (declared later in this script — hoisted).
       try{ nrOfferPositions(pc, currentId); }catch(_){}}
+    // Auto-carry: the fresh draft/promotion rides to the stratum without
+    // the ⇡ gesture (2026-07-16 — the iPad roundtrip gap).
+    if(stratumTouched){ try{ nrQueuePush(); }catch(_){} }
     return currentId;
   }catch(e){ status('Save failed: '+e.message); return null; }
 }
@@ -1219,6 +1317,23 @@ async function nrSyncScores(quiet){
 }
 $('nrSync').onclick=()=>nrSyncScores(false);
 
+/* Auto-carry (2026-07-16): every stratum mutation queues a quiet push — a
+   draft authored on one device reaches the others without the ⇡ gesture.
+   (The SCOTUS security-funding draft sat on the phone all morning; the iPad
+   had nothing to pull — promote/save/dismiss never pushed, only a full ✦
+   pass did.) Debounced 2.5s; token-gated (pull-only devices no-op);
+   nrSyncScores pulls first, so strangers are preserved and LWW holds. A
+   hiding tab flushes immediately — mobile PWAs get backgrounded mid-debounce. */
+let nrPushTimer=null;
+function nrQueuePush(){
+  try{ if(!PrismSync.token()) return; }catch(_){ return; }
+  clearTimeout(nrPushTimer);
+  nrPushTimer=setTimeout(()=>{ nrPushTimer=null; nrSyncScores(true); }, 2500);
+}
+document.addEventListener('visibilitychange',()=>{
+  if(document.visibilityState==='hidden'&&nrPushTimer){
+    clearTimeout(nrPushTimer); nrPushTimer=null; nrSyncScores(true); } });
+
 function nrRender(){
   const host=$('nrList'); host.innerHTML='';
   const all=PrismDB.getCandidates();
@@ -1262,11 +1377,11 @@ function nrRender(){
     if(c.status==='new'){
       const p=document.createElement('button'); p.textContent='Promote'; p.onclick=()=>nrPromote(c.cid); acts.appendChild(p);
       const x=document.createElement('button'); x.textContent='Dismiss';
-      x.onclick=()=>{ PrismDB.dismissCandidate(c.cid); nrRender(); }; acts.appendChild(x);
+      x.onclick=()=>{ PrismDB.dismissCandidate(c.cid); nrRender(); nrQueuePush(); }; acts.appendChild(x);
     } else {
       const rs=document.createElement('button'); rs.textContent='Restore';
       rs.onclick=()=>{ const cc=PrismDB.getCandidate(c.cid);
-        if(cc){ cc.status='new'; delete cc.promotedEventId; PrismDB.saveCandidate(cc); nrRender(); } };
+        if(cc){ cc.status='new'; delete cc.promotedEventId; PrismDB.saveCandidate(cc); nrRender(); nrQueuePush(); } };
       acts.appendChild(rs);
     }
     const sc=document.createElement('button'); sc.textContent=c.fitness?'✦ Rescore':'✦ Score';
@@ -1304,7 +1419,8 @@ function nrPromote(cid){
       PrismDB.promoteCandidate(cid, orphan.id);
       try{ nrRender(); }catch(_){}
       nrCloseFn();
-      status('Linked existing draft '+orphan.id+' — ⇡ Sync scores to carry it');
+      nrQueuePush();
+      status('Linked existing draft '+orphan.id+' — carrying to the stratum');
       return;
     }
   }catch(_){}
@@ -1432,7 +1548,7 @@ async function nrScoreCid(cid){
   const key=$('apiKey').value.trim(); if(!key){ nrStatus('Add your API key (AI ▸ top bar)'); return; }
   const c=PrismDB.getCandidate(cid); if(!c) return;
   nrScoring=true; nrStatus('✦ scoring '+(c.title||cid).slice(0,48)+'…');
-  try{ await nrScoreOne(c,key); nrStatus('✦ fit '+c.fitness.score.toFixed(2)+' — '+c.fitness.reason.slice(0,80)); }
+  try{ await nrScoreOne(c,key); nrStatus('✦ fit '+c.fitness.score.toFixed(2)+' — '+c.fitness.reason.slice(0,80)); nrQueuePush(); }
   catch(e){ nrStatus('✦ failed: '+e.message); }
   nrScoring=false; nrRender();
 }
@@ -1752,12 +1868,18 @@ setView('dia');   // start on the diatribe stage of the flow
    measured height instead of a static 60px/120px (2026-07-15 mobile audit:
    chips landed on Save/Publish at 390px, last cell hid behind the rail). */
 (function(){
-  const a=document.querySelector('.actions'), c=$('cellmap'), root=document.documentElement;
+  const a=document.querySelector('.actions'), c=$('cellmap'), bar=document.querySelector('.adminbar'), root=document.documentElement;
   if(!a) return;
   const size=()=>{ const ah=a.offsetHeight||60, ch=c?c.offsetHeight:0;
     root.style.setProperty('--actions-h', ah+'px');
-    root.style.setProperty('--dock-h', (ah+ch+14)+'px'); };
-  if(typeof ResizeObserver!=='undefined'){ const ro=new ResizeObserver(size); ro.observe(a); if(c) ro.observe(c); }
+    root.style.setProperty('--dock-h', (ah+ch+14)+'px');
+    // top chrome: the fixed adminbar wraps to 2-3 rows on tablet — content
+    // padded for one row slid underneath it. Baseline single-row bar ≈54px
+    // keeps --top-chrome at its designed 8px; only the wrap grows it. The
+    // open mobile nav is intentionally tall — skip it (closed height rules).
+    if(bar && !document.body.classList.contains('navopen'))
+      root.style.setProperty('--top-chrome', Math.max(8, bar.offsetHeight-46)+'px'); };
+  if(typeof ResizeObserver!=='undefined'){ const ro=new ResizeObserver(size); ro.observe(a); if(c) ro.observe(c); if(bar) ro.observe(bar); }
   else window.addEventListener('resize', size);
   size();
 })();
