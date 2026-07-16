@@ -10145,7 +10145,9 @@ const LEGISLATION_DATA = [
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Centers for Medicare & Medicaid Services of the Department of Health and Human Services relating to \"Medicare Program; Implementation of Prior Authorization for Select Services for the Wasteful and Inappropriate Services Reduction (WISeR) Model\".",
     "meta": "S.J.Res. 198 · Reported",
-    "id": "sjres-119-198"
+    "id": "sjres-119-198",
+    "rc": 1,
+    "mm": 0.042
   },
   {
     "name": "Cameras in the Courtroom Act",
