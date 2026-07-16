@@ -764,10 +764,19 @@ function save(){
   try{ localStorage.setItem('prism.ted.global', JSON.stringify(tedGlobal)); }catch(_){}
   const patch=assemble();
   try{
-    if(currentId){ PrismDB.updateEvent(currentId, Object.assign({}, patch, {axes:axesObj()})); PrismDB.setActive(currentId); status('Updated '+currentId+' · active'); }
+    // updatedAt stamps on every save (2026-07-15): it's the draft tier's
+    // LWW key, and pull already compares on it — a newer local draft now
+    // correctly outranks an older repo copy instead of being clobbered.
+    const stamp=new Date().toISOString();
+    if(currentId){ PrismDB.updateEvent(currentId, Object.assign({}, patch, {axes:axesObj(), updatedAt:stamp})); PrismDB.setActive(currentId); status('Updated '+currentId+' · active'); }
     else { const ev=Object.assign({ category:'', prompt:'', meta:{status:'draft',editHistory:[]}, date:new Date().toISOString().slice(0,10),
-      active:true, antiValentBand:'coalition', axes:axesObj(), responses:{} }, patch);
+      active:true, antiValentBand:'coalition', axes:axesObj(), responses:{}, updatedAt:stamp }, patch);
       const added=PrismDB.addEvent(ev); currentId=added.id; PrismDB.setActive(added.id); status('Saved '+added.id+' · active'); refreshDropdown(added.id); }
+    // Draft tier (2026-07-15): editing a promoted candidate's unpublished
+    // Reading is a stratum mutation — bump the owner candidate's mts so
+    // the next ⇡ Sync scores carries the fresh draft. saveCandidate stamps.
+    try{ const owner=PrismDB.getCandidates().find(c=>c.status==='promoted'&&c.promotedEventId===currentId);
+      if(owner) PrismDB.saveCandidate(owner); }catch(_){}
     // Event Engine: a successful save ratifies a pending promotion —
     // stamp candidate → event lineage (survives rescans by design).
     if(nrPendingPromote){ const pc=nrPendingPromote; PrismDB.promoteCandidate(pc, currentId); nrPendingPromote=null;

@@ -782,6 +782,26 @@ const PrismDB = (() => {
   const SCORE_FIELDS = ['fitness', 'framingDraft', 'suggestedAxes',
                         'prevalentAxisGuess', 'voteMap'];
 
+  // ── Draft tier (2026-07-15, closes the "drafts don't travel" gap) ──
+  // An UNPUBLISHED Reading born from a promoted candidate rides its
+  // stratum record as `draftReading`, so a park draft reaches the desk.
+  // Once published (syncedAt set), the Reading travels its own pipe
+  // (data/readings/) and the draft stops riding. Shape = the Reading
+  // file (device-local fields stripped, rid is the identity); LWW by
+  // updatedAt on merge. Scratch drafts with no candidate lineage still
+  // don't travel — the stratum is keyed by cid.
+  const DRAFT_LOCAL_FIELDS = ['id', 'active', 'syncedAt'];
+  function _draftFor(c) {
+    if (c.status !== 'promoted' || !c.promotedEventId) return null;
+    const ev = getEvent(c.promotedEventId);
+    if (!ev || ev.syncedAt) return null;       // published — its own pipe now
+    const d = {};
+    Object.keys(ev).forEach(k => { if (!DRAFT_LOCAL_FIELDS.includes(k)) d[k] = ev[k]; });
+    d.schema = 'reading/v1';
+    d.updatedAt = ev.updatedAt || new Date(c.mts || Date.now()).toISOString();
+    return d;
+  }
+
   // Records for every candidate that carries any M2 field or has left
   // 'new' — i.e. the stratum worth committing. Shape: { cid: record }.
   function exportCandidateScores() {
@@ -793,6 +813,8 @@ const PrismDB = (() => {
                   title: c.title || null };
       SCORE_FIELDS.forEach(k => { if (c[k] != null) r[k] = c[k]; });
       if (c.promotedEventId) r.promotedEventId = c.promotedEventId; // provenance
+      const d = _draftFor(c);
+      if (d) r.draftReading = d;               // draft tier — see above
       records[c.cid] = r;
     });
     return records;
@@ -815,6 +837,23 @@ const PrismDB = (() => {
         // never regress a locally-promoted candidate to 'promoted' minus id
         if (!(c.status === 'promoted' && r.status === 'promoted')) c.status = r.status;
         if (c.status !== 'promoted') delete c.promotedEventId;
+      }
+      // Draft tier: a riding draft upserts by rid, LWW by updatedAt.
+      // A locally-PUBLISHED copy (syncedAt) always outranks a draft —
+      // a stale park draft must never clobber the published Reading.
+      // Lineage relinks to THIS device's event id (evt ids are local).
+      if (r.draftReading && r.draftReading.rid) {
+        const d = r.draftReading;
+        const local = getEvents().find(e => e.rid === d.rid);
+        if (!local) {
+          const ev = importReading({ ...d, active: false });
+          if (ev && c.status === 'promoted') c.promotedEventId = ev.id;
+        } else if (!local.syncedAt && (d.updatedAt || '') > (local.updatedAt || '')) {
+          const ev = importReading({ ...d });
+          if (ev && c.status === 'promoted') c.promotedEventId = ev.id;
+        } else if (c.status === 'promoted') {
+          c.promotedEventId = local.id;
+        }
       }
       c.mts = r.mts;
       applied++;
