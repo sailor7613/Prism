@@ -22,7 +22,7 @@
   body.dark{ }
   /* ── copied verbatim-ish from v2/index.html diatribe stage ── */
   main{ position:relative; min-height:100vh; min-height:100dvh; display:flex; flex-direction:column; justify-content:center; align-items:center;
-    padding: calc(var(--top-chrome) + 58px) var(--stage-pad-x) calc(120px + var(--safe-bottom)); z-index:1; }
+    padding: calc(var(--top-chrome) + 58px) var(--stage-pad-x) calc(var(--dock-h, calc(120px + var(--safe-bottom))) + 26px); z-index:1; }
   .framing{ max-width:720px; text-align:center; font-family:var(--serif); font-size:16px; line-height:1.65; color:var(--ink-mid);
     margin-bottom:44px; font-style:italic; outline:none; }
   .framing:empty::before{ content:attr(data-ph); color:var(--ink-low); font-style:italic; }
@@ -123,7 +123,10 @@
     transition:color .3s ease,border-color .3s ease; }
   .suggest-btn:hover{ color:var(--ink-mid); border-color:rgba(48,96,192,.4); }
 
-  .cellmap{ position:fixed; left:0; right:0; bottom:calc(60px + var(--safe-bottom)); z-index:15; display:flex; gap:7px; justify-content:center; flex-wrap:wrap; padding:0 12px; }
+  /* rides --actions-h (measured by the dock observer) — the actions bar wraps
+     taller on narrow screens and a static 60px put the chips on the buttons
+     (2026-07-15 mobile audit) */
+  .cellmap{ position:fixed; left:0; right:0; bottom:calc(var(--actions-h, calc(60px + var(--safe-bottom))) + 6px); z-index:15; display:flex; gap:7px; justify-content:center; flex-wrap:wrap; padding:0 12px; }
   .cellchip{ font-family:var(--mono); font-size:9px; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; border-radius:999px;
     border:.5px solid var(--rule); color:var(--ink-low); background:rgba(8,12,26,.6); -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px); cursor:pointer; }
   .cellchip.filled{ color:var(--ink-mid); border-color:rgba(150,168,200,.4); }
@@ -307,10 +310,19 @@
     body:not(.navopen) .adminbar{ flex-wrap:nowrap; }
     /* open: the menu drops down as a column; each item keeps its own display rules
        (so 🧭 orbit still only appears when the room is up) */
-    body.navopen .adminbar{ flex-direction:column; align-items:stretch; max-height:85dvh; overflow-y:auto; }
+    /* nowrap is load-bearing: the bar keeps desktop's flex-wrap:wrap, and a
+       wrapping COLUMN pushes overflow items into a phantom second column
+       off-screen instead of scrolling (2026-07-15 mobile audit) */
+    body.navopen .adminbar{ flex-direction:column; flex-wrap:nowrap; align-items:stretch; max-height:85dvh; overflow-y:auto; }
     body.navopen .adminbar .title-in{ min-width:0; }
     /* the action bar may wrap to two rows on narrow screens — keep the cell chips clear of it */
     .actions{ flex-wrap:wrap; }
+    /* open nav: every row stretches — the load-event select was the one
+       holdout (230px cap truncated draft titles; 2026-07-15 mobile audit) */
+    body.navopen .adminbar select{ max-width:none; width:100%; }
+    /* AI / Sync details rode the column as bare text lines — give them the
+       same bordered-row treatment as the .btn rows */
+    body.navopen .adminbar details.aiset{ border:1px solid var(--rule); border-radius:2px; padding:10px 16px; }
   }
 </style>
 </head>
@@ -718,8 +730,11 @@ function blank(){
 
 /* ---- dropdown ----
    Titles first (evt_ ids are device-local noise — standing correction
-   2026-07-06), newest first, ✓ = published to the repo (rid in the sync sha
-   cache), ◇ N = curated bill readings in the store. */
+   2026-07-06), newest first, grouped Drafts / Published (native optgroups —
+   the OS picker renders the headers; 2026-07-15 mobile session). Published =
+   syncedAt or rid in the sync sha cache; ✓ kept on the option so the closed
+   pill still reads. ◇ N = curated bill readings in the store. Each option
+   carries its updatedAt as "Mon D · h:mma". */
 function refreshDropdown(sel){
   const s=$('evSelect'); s.innerHTML='<option value="">— load event —</option>';
   if(HAS_DB){
@@ -729,12 +744,22 @@ function refreshDropdown(sel){
       const ta=Date.parse(a.updatedAt||'')||0, tb=Date.parse(b.updatedAt||'')||0;
       return (tb-ta)||(evNum(b)-evNum(a));
     });
+    const when=e=>{ const t=Date.parse(e.updatedAt||''); if(!t) return '';
+      const d=new Date(t); const sameYear=d.getFullYear()===new Date().getFullYear();
+      let h=d.getHours(); const m=String(d.getMinutes()).padStart(2,'0'), ap=h>=12?'p':'a'; h=h%12||12;
+      return d.toLocaleString('en-US',{month:'short'})+' '+d.getDate()+(sameYear?'':' '+d.getFullYear())+' · '+h+':'+m+ap; };
+    const isPub=e=>!!(e.syncedAt||(e.rid&&shas[e.rid]));
+    const gD=document.createElement('optgroup'); gD.label='Drafts';
+    const gP=document.createElement('optgroup'); gP.label='Published';
     evs.forEach(e=>{
       const o=document.createElement('option'); o.value=e.id;
       let bills=0; try{ bills=(PrismDB.getBillScoresForEvent(e.id)||[]).length; }catch(err){}
-      o.textContent=(e.title||e.id)+((e.rid&&shas[e.rid])?' ✓':'')+(bills?' · ◇ '+bills:'');
-      s.appendChild(o);
+      const w=when(e), pub=isPub(e);
+      o.textContent=(e.title||e.id)+(w?' · '+w:'')+(pub?' ✓':'')+(bills?' · ◇ '+bills:'');
+      (pub?gP:gD).appendChild(o);
     });
+    if(gD.children.length) s.appendChild(gD);
+    if(gP.children.length) s.appendChild(gP);
   }
   if(sel) s.value=sel;
 }
@@ -1721,6 +1746,21 @@ $('brLink').onclick=()=>{
 refreshDropdown();
 blank();
 setView('dia');   // start on the diatribe stage of the flow
+
+/* Dock observer — the fixed actions bar wraps taller on narrow screens; the
+   chip rail (--actions-h) and the stage's bottom padding (--dock-h) track its
+   measured height instead of a static 60px/120px (2026-07-15 mobile audit:
+   chips landed on Save/Publish at 390px, last cell hid behind the rail). */
+(function(){
+  const a=document.querySelector('.actions'), c=$('cellmap'), root=document.documentElement;
+  if(!a) return;
+  const size=()=>{ const ah=a.offsetHeight||60, ch=c?c.offsetHeight:0;
+    root.style.setProperty('--actions-h', ah+'px');
+    root.style.setProperty('--dock-h', (ah+ch+14)+'px'); };
+  if(typeof ResizeObserver!=='undefined'){ const ro=new ResizeObserver(size); ro.observe(a); if(c) ro.observe(c); }
+  else window.addEventListener('resize', size);
+  size();
+})();
 if(!HAS_DB) status('Serve via Live Server so it shares storage with Prism.');
 
 /* Sync: pull published Readings from the repo on every load.
