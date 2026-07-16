@@ -1,6 +1,6 @@
 {
   "schema": "candidate_scores/v1",
-  "updated": "2026-07-16T05:03:59.698Z",
+  "updated": "2026-07-16T05:09:23.597Z",
   "records": {
     "cand_leg_s-119-2": {
       "mts": 1784044297585,
@@ -1344,6 +1344,183 @@
         "y": {
           "pos": "private tragedy",
           "neg": "political consequence"
+        }
+      },
+      "prevalentAxisGuess": "x"
+    },
+    "cand_leg_hjres-119-140": {
+      "mts": 1784044297586,
+      "status": "new",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Bureau of Land Management relating to Public Land Order No. 7917 for Withdrawal of Federal Lands; Cook, Lake, and Saint Louis Counties, MN. (3 roll calls)",
+      "fitness": {
+        "score": 0.45,
+        "reason": "The conservation-vs-development axis is substantive and matches known Boundary Waters politics (Great Lakes/environmental caucus vs mining-district interests), but the roll call is almost perfectly party-line (R 50-2 vs D 0-45), so on this whipped vote the two axes nearly collapse into one. The 2 GOP defectors are plausibly moderates from conservation-sensitive states, which is consistent with the axis being live in the broader field even though suppressed here, but without more identity confirmation this stays mid-tier rather than high-confidence.",
+        "method": "m2_constitutive_v1",
+        "ts": "2026-07-14T04:42:32.882Z"
+      },
+      "framingDraft": "This CRA disapproval pits mineral/mining development interests against a 20-year withdrawal protecting the Boundary Waters watershed from sulfide-ore mining. Beyond the party-line pass/block vote, the deeper tension is whether federal land withdrawals for conservation should override local/state economic development claims tied to mining jobs.",
+      "suggestedAxes": {
+        "x": {
+          "pos": "Disapprove withdrawal",
+          "neg": "Uphold withdrawal"
+        },
+        "y": {
+          "pos": "Conservation/watershed protection",
+          "neg": "Mining/resource development"
+        }
+      },
+      "prevalentAxisGuess": "x",
+      "voteMap": {
+        "voteId": "s-119-2-84",
+        "yeaPole": "pos"
+      }
+    },
+    "cand_leg_hr-119-6409": {
+      "mts": 1784044297583,
+      "status": "new",
+      "title": "FENCES Act (2 roll calls)",
+      "fitness": {
+        "score": 0.3,
+        "reason": "The proposed secondary axis (federal land-use authority vs local/property deference) is plausible in the abstract but the roll calls give no evidence it cross-cuts: passage was 213-1 R and 6-207 D, and the MTR was pure party-line (213-0 D, 0-214 R) with zero crossover in either direction. No defector pattern exists to confirm the axis is live in the broader field; without at least a predictable handful of defectors (e.g., border-district Ds or property-rights Rs breaking ranks), this collapses into a relabeling of the same enforcement-vs-restriction binary.",
+        "method": "m2_constitutive_v1",
+        "ts": "2026-07-14T04:44:27.572Z"
+      },
+      "framingDraft": "The FENCES Act's passage vote pits border-security enforcement priorities against concerns about land-use, environmental, or property-rights impacts of physical barrier construction. The near-party-line split masks a smaller substantive question about how enforcement infrastructure is sited and executed versus whether it should exist at all.",
+      "suggestedAxes": {
+        "x": {
+          "pos": "Build Barriers",
+          "neg": "Reject Barriers"
+        },
+        "y": {
+          "pos": "Federal Land Authority",
+          "neg": "Local/Property Deference"
+        }
+      },
+      "prevalentAxisGuess": "x",
+      "voteMap": {
+        "voteId": "h-119-2026-116",
+        "yeaPole": "pos"
+      }
+    },
+    "cand_leg_hr-119-6398": {
+      "mts": 1784044297584,
+      "status": "new",
+      "title": "RED Tape Act (2 roll calls)",
+      "fitness": {
+        "score": 0.35,
+        "reason": "The near-total party-line split (D 7-204, R 214-1 on passage) offers almost no evidence of cross-cutting; the 7 Democratic yeas and 1 Republican nay are too few and not clearly tied to an institutional-prerogative logic distinct from general deregulatory sympathy. The MTR vote is pure party-line with zero defection, suggesting procedure here is just a relabeling of the substantive vote. While a Congress-vs-executive-power axis is theoretically constitutable for regulatory reform bills, this instance shows no confirming defector pattern (e.g., no visible libertarian-vs-institutionalist R split, no populist-vs-establishment D split), so it remains a plausible but unconfirmed secondary binary rather than a demonstrated one.",
+        "method": "m2_constitutive_v1",
+        "ts": "2026-07-14T04:44:47.640Z"
+      },
+      "framingDraft": "The RED Tape Act nominally pits deregulation against regulatory oversight, but its real fault line concerns how much discretion executive agencies retain versus how much Congress/courts should constrain rulemaking. This is a fight over institutional power allocation, not just a pro/anti-regulation vote.",
+      "suggestedAxes": {
+        "x": {
+          "pos": "Deregulatory",
+          "neg": "Pro-regulation"
+        },
+        "y": {
+          "pos": "Congressional/judicial constraint",
+          "neg": "Executive agency discretion"
+        }
+      },
+      "prevalentAxisGuess": "x",
+      "voteMap": {
+        "voteId": "h-119-2026-118",
+        "yeaPole": "pos"
+      }
+    },
+    "cand_leg_hr-119-1689": {
+      "mts": 1784044297584,
+      "status": "new",
+      "title": "To require the Secretary of Homeland Security to designate Haiti for temporary protected status.",
+      "fitness": {
+        "score": 0.55,
+        "reason": "The secondary axis — congressional override of DHS discretion vs. deference to executive/agency judgment on humanitarian designations — is substantive and not merely procedural, since it maps onto a genuine institutional-prerogative debate rather than restating the pass/fail binary. The ten GOP defectors plausibly come from Haitian-diaspora districts (FL, NY) rather than being random, which is consistent with the axis being live in the broader field even though the vote was heavily whipped. It doesn't reach higher because the roll call alone can't establish how much of the GOP's opposition was about discretion-in-principle versus simple opposition to Haiti-specific relief.",
+        "method": "m2_constitutive_v1",
+        "ts": "2026-07-14T04:46:03.828Z"
+      },
+      "framingDraft": "The vote nominally decides whether Haiti receives Temporary Protected Status, but it also crystallizes a debate over the proper locus of humanitarian-immigration authority: should such designations follow executive/agency discretion under existing statutory criteria, or should Congress assert itself to override or preempt that discretion for a specific national-origin group? The ten Republican defectors are notable as members with large Haitian-American constituencies or humanitarian-caucus ties, suggesting the axis is live beyond the whip count.",
+      "suggestedAxes": {
+        "x": {
+          "pos": "Grant TPS",
+          "neg": "Deny TPS"
+        },
+        "y": {
+          "pos": "Congressional mandate",
+          "neg": "Executive discretion"
+        }
+      },
+      "prevalentAxisGuess": "x",
+      "voteMap": {
+        "voteId": "h-119-2026-120",
+        "yeaPole": "pos"
+      }
+    },
+    "cand_news_graham-illness-lindsey": {
+      "mts": 1784044312491,
+      "status": "new",
+      "title": "Sen . Lindsey Graham dies after brief and unexpected illness , his office says",
+      "fitness": {
+        "score": 0.15,
+        "reason": "There is no native binary to speak of — this is a factual death report with unanimous framing across outlets, none contesting facts or offering competing valence. Any 'legacy hawk vs critic' or 'succession vs mourning' axis is contrived post-hoc; nothing in the field (obituary coverage, bipartisan condolences) actually splits along it. This is a one-dimensional event where no substantive second question exists yet.",
+        "method": "m2_constitutive_v1",
+        "ts": "2026-07-14T15:59:30.258Z"
+      },
+      "framingDraft": "This is a death announcement, not a policy dispute — the only live question is how Graham's legacy and South Carolina's vacant seat get framed, not whether he died. There is no native political binary here; any secondary axis is speculative and imposed on a non-adversarial event.",
+      "suggestedAxes": {
+        "x": {
+          "pos": "legacy tribute",
+          "neg": "legacy scrutiny"
+        },
+        "y": {
+          "pos": "succession politics",
+          "neg": "personal mourning"
+        }
+      },
+      "prevalentAxisGuess": "y"
+    },
+    "cand_news_age-confidant-dies": {
+      "mts": 1784044312491,
+      "status": "new",
+      "title": "Lindsey Graham , influential GOP senator and Trump confidant , dies at age 71",
+      "fitness": {
+        "score": 0.35,
+        "reason": "The native binary here is barely a binary at all — it's a factual report, not a dispute. The proposed secondary axis (legacy framing: principled hawk/institutionalist vs. Trump-era loyalist) does plausibly cross-cut: figures like Mitt Romney or Liz Cheney-aligned commentators would praise Graham's traditional hawkishness while distancing from his Trump alignment, while pro-Trump commentators (Bannon-world) would praise the loyalty and downplay the hawkishness — so it splits within conservative commentary rather than merely restating a for/against split. But because there is no actual contested action (no vote, no policy choice), the secondary axis is speculative and not yet crystallized in the field; obituary coverage this fresh is still mostly eulogistic rather than argumentative, so the tension is latent rather than demonstrably live.",
+        "method": "m2_constitutive_v1",
+        "ts": "2026-07-14T16:00:20.757Z"
+      },
+      "framingDraft": "The story reports a death, but its downstream political question is contested: how to characterize Graham's legacy, and what happens next to his Senate seat and South Carolina's political balance. These are separable disputes layered atop a single factual event.",
+      "suggestedAxes": {
+        "x": {
+          "pos": "reported",
+          "neg": "disputed"
+        },
+        "y": {
+          "pos": "legacy as hawkish institutionalist",
+          "neg": "legacy as Trump loyalist/opportunist"
+        }
+      },
+      "prevalentAxisGuess": "x"
+    },
+    "cand_news_becomes-bill-housing": {
+      "mts": 1784044312491,
+      "status": "new",
+      "title": "Housing bill championed by Hill becomes law without Trump signature | The Arkansas Democrat - Gazette",
+      "fitness": {
+        "score": 0.35,
+        "reason": "The 'why no signature' question is a plausible secondary binary, but it's thin: with no vote positions and only local Arkansas coverage focused on Hill's championing role, there's little evidence the public field is actually split on interpreting Trump's non-signature. Commentators across both pro- and anti-bill camps would likely converge on reading it as either strategic distancing or tacit approval based on their prior stance on the bill itself, making the two axes correlate rather than cross-cut. No named factions demonstrably diverge from their housing-policy position on this second question — it risks being a redundant gloss on the same underlying binary (Trump-aligned vs. not) rather than a truly separate tension.",
+        "method": "m2_constitutive_v1",
+        "ts": "2026-07-14T16:01:11.353Z"
+      },
+      "framingDraft": "A housing bill has become law without Trump's signature, raising a native question of support versus opposition for the policy itself. But a second tension lurks in how the bill became law — through presidential inaction rather than endorsement — which invites a separate argument about what that silence signals.",
+      "suggestedAxes": {
+        "x": {
+          "pos": "support housing bill",
+          "neg": "oppose housing bill"
+        },
+        "y": {
+          "pos": "silence as tacit approval",
+          "neg": "silence as protest/distancing"
         }
       },
       "prevalentAxisGuess": "x"
