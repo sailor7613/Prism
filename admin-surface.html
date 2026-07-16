@@ -1154,13 +1154,14 @@ async function nrImport(bust){
    the same token as Publish. LWW per candidate by mts — PrismDB owns
    the merge semantics; this block is just transport + gesture. */
 const NR_SCORES_PATH='data/candidate_scores.json';
-let nrScoresSha=null;
+let nrScoresSha=null, nrPulledRecords=null;   // last pulled file records — push preserves strangers
 
 async function nrPullScores(){
   const f=await PrismSync.getFile(NR_SCORES_PATH);
-  if(!f){ nrScoresSha=null; return { applied:0 }; }
+  if(!f){ nrScoresSha=null; nrPulledRecords=null; return { applied:0 }; }
   nrScoresSha=f.sha;
   if(!f.json||f.json.schema!=='candidate_scores/v1'||!f.json.records) return { applied:0 };
+  nrPulledRecords=f.json.records;
   const m=PrismDB.mergeCandidateScores(f.json.records);
   if(m.applied) nrRender();
   return m;
@@ -1173,7 +1174,12 @@ async function nrSyncScores(quiet){
     if(!quiet) nrStatus('⇡ pulling scores…');
     let pulled={applied:0};
     try{ pulled=await nrPullScores(); }catch(e){ if(!quiet) nrStatus('⇡ pull failed: '+e.message); }
-    const records=PrismDB.exportCandidateScores();
+    // Push preserves strangers (2026-07-15, fixed after it bit live: the
+    // phone's push dropped 7 desk records it never held, 51→44): the file
+    // is pulled-records overlaid with this device's export, so "records
+    // outlive candidates" holds in-FILE, not just in-store. Local always
+    // wins per cid — pull already applied anything newer.
+    const records=Object.assign({}, nrPulledRecords||{}, PrismDB.exportCandidateScores());
     if(!Object.keys(records).length&&!nrScoresSha){ if(!quiet) nrStatus('nothing scored or triaged yet — nothing to push'); return; }
     if(!PrismSync.token()){ if(!quiet) nrStatus((pulled.applied?pulled.applied+' pulled · ':'')+'no GitHub token — pull-only (add one under Sync to push)'); return; }
     if(!quiet) nrStatus('⇡ pushing '+Object.keys(records).length+' records…');
@@ -1257,6 +1263,24 @@ function nrCloseFn(){ $('nrDrawer').classList.remove('show'); $('nrOverlay').cla
 /* Promote → the candidate lands on the surface itself */
 function nrPromote(cid){
   const c=PrismDB.getCandidate(cid); if(!c) return;
+  // Relink gesture (2026-07-15, the park-draft rescue): a promote that was
+  // regressed by a pre-mts merge leaves its draft Reading orphaned on the
+  // device. If an orphan matches (exact title, or it's the only orphan),
+  // offer to LINK it instead of blanking into a duplicate. Cancel falls
+  // through to the normal fresh promote.
+  try{
+    const linked=new Set(PrismDB.getCandidates().map(x=>x.promotedEventId).filter(Boolean));
+    const orphans=PrismDB.getEvents().filter(e=>!e.syncedAt&&(e.meta||{}).status==='draft'&&!linked.has(e.id));
+    const orphan=orphans.find(e=>(e.title||'').trim().toLowerCase()===(c.title||'').trim().toLowerCase())
+      ||(orphans.length===1?orphans[0]:null);
+    if(orphan&&confirm('A draft Reading “'+(orphan.title||orphan.id)+'” already exists on this device.\n\nLink it to this candidate instead of starting a fresh one?')){
+      PrismDB.promoteCandidate(cid, orphan.id);
+      try{ nrRender(); }catch(_){}
+      nrCloseFn();
+      status('Linked existing draft '+orphan.id+' — ⇡ Sync scores to carry it');
+      return;
+    }
+  }catch(_){}
   blank();                                  // clears pending too — set after
   $('evTitle').value=c.title||'';
   $('framing').innerHTML=escHtml(c.framingDraft||c.summary||'');
