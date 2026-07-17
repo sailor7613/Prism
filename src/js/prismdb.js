@@ -910,7 +910,7 @@ const PrismDB = (() => {
       if (!hasDraft && !hasStory) return;
       if (all.some(c => c.cid === cid)) return;   // held locally — handled above
       const c = { cid,
-                  source: cid.indexOf('cand_leg_') === 0 ? 'legislation' : 'news',
+                  source: cid.indexOf('cand_leg_') === 0 ? 'legislative' : 'news',
                   title: r.title || (hasDraft && r.draftReading.title) || cid,
                   status: r.status || 'promoted',
                   ts: r.mts || Date.now(), resurrected: true };

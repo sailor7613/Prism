@@ -1401,7 +1401,7 @@ function nrRender(){
     const fit=(c.fitness&&typeof c.fitness.score==='number')?c.fitness.score:null;
     // held never dims — the hold is deliberate; grey-not-hide stays for the rest
     const dim=(fit!=null&&fit<NR_FITNESS_FLOOR&&c.status!=='held')||c.status==='dismissed';
-    const src=(c.source==='legislation')?'legislation':'news';
+    const src=(c.source==='legislative')?'legislation':'news';
     const card=document.createElement('div');
     card.className='br-card src-'+src+(c.status==='promoted'?' confirmed':'')
       +(c.status==='held'?' held':'')+(dim?' dismissed':'');
