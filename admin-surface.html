@@ -416,7 +416,6 @@
   <span class="ttl">Prism Admin</span>
   <input class="title-in" id="evTitle" placeholder="event title…">
   <select id="evSelect" title="Load an event onto the surface"></select>
-  <button class="btn" id="btnLoadEx">Immigration example</button>
   <span class="prevseg" title="Which axis this spine is (prevalent)"><button id="prevX" class="on">X</button><button id="prevY">Y</button></span>
   <button class="btn" id="tedBtn" title="Edit Ted's speech">🐺 Ted</button>
   <span class="viewseg" id="viewSeg" title="Author the diatribe, or the 12 quadrant responses"><button data-v="dia" class="on">Diatribe</button><button data-v="quad">Quadrants</button></span>
@@ -995,7 +994,7 @@ async function suggestCell(which){
 /* ---- wire ---- */
 function status(m){ $('status').textContent=m; }
 $('sugReal').onclick=()=>suggestCell('real'); $('sugGhost').onclick=()=>suggestCell('ghost');
-$('btnSave').onclick=save; $('btnOpen').onclick=openInPrism; $('btnExport').onclick=openExport; $('btnLoadEx').onclick=loadSeed;
+$('btnSave').onclick=save; $('btnOpen').onclick=openInPrism; $('btnExport').onclick=openExport;
 $('btnPublish').onclick=async()=>{
   const id=save(); if(!id) return;            // save() already reported why
   status('Publishing…');
@@ -1401,7 +1400,7 @@ function nrRender(){
     const fit=(c.fitness&&typeof c.fitness.score==='number')?c.fitness.score:null;
     // held never dims — the hold is deliberate; grey-not-hide stays for the rest
     const dim=(fit!=null&&fit<NR_FITNESS_FLOOR&&c.status!=='held')||c.status==='dismissed';
-    const src=(c.source==='legislative')?'legislation':'news';
+    const src=(c.source==='legislation')?'legislation':'news';
     const card=document.createElement('div');
     card.className='br-card src-'+src+(c.status==='promoted'?' confirmed':'')
       +(c.status==='held'?' held':'')+(dim?' dismissed':'');
