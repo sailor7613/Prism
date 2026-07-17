@@ -319,6 +319,22 @@
   .br-card{ border:.5px solid var(--rule); border-radius:10px; padding:11px 13px; margin-bottom:10px; background:rgba(255,255,255,.02); }
   .br-card.confirmed{ border-color:rgba(96,168,128,.5); }
   .br-card.dismissed{ opacity:.45; }
+  /* ── newsroom story accents (2026-07-17, Sailor's ruling) — lift the big
+     points, don't carnival the cards. Source rides the left edge + the
+     source word (legislation = the bill gold the reading room already
+     speaks; news = wire blue). Held = shimmer star treatment, the
+     deliberate "don't lose this" mark. Fresh = arrived since this device
+     last looked. Only nrRender applies these; bills cards untouched. ── */
+  .br-card.src-legislation{ border-left:2px solid rgba(196,156,72,.55); }
+  .br-card.src-news{ border-left:2px solid rgba(96,148,220,.5); }
+  .nr-src.src-legislation{ color:rgba(196,156,72,.9); }
+  .nr-src.src-news{ color:rgba(126,168,225,.9); }
+  .br-card.held{ border-color:rgba(255,246,226,.42); background:rgba(255,246,226,.03); }
+  .nr-star{ color:var(--keyword-shimmer,#fff6e2); text-shadow:0 0 6px rgba(255,246,226,.4); margin-right:4px; }
+  .nr-fresh{ color:var(--keyword-shimmer,#fff6e2); text-shadow:0 0 6px rgba(255,246,226,.35); }
+  body.light .nr-src.src-news{ color:rgba(48,96,192,.85); }
+  body.light .nr-src.src-legislation{ color:#7a5418; }
+  body.light .nr-star, body.light .nr-fresh{ color:#7a5418; text-shadow:none; }
   .br-card .n{ font-family:var(--serif); font-size:14px; color:var(--ink); }
   .br-card .m{ font-family:var(--mono); font-size:9px; letter-spacing:.08em; color:var(--ink-low); margin-top:2px; }
   .br-card .r{ font-family:var(--serif); font-size:12.5px; font-style:italic; color:var(--ink-mid); margin-top:6px; line-height:1.45; }
@@ -327,7 +343,7 @@
     border:.5px solid var(--rule); border-radius:999px; padding:3px 8px; }
   .br-kws{ margin-top:6px; display:flex; flex-wrap:wrap; gap:4px 8px; }
   .br-kw{ font-family:var(--serif); font-size:11px; font-style:italic; color:var(--keyword-shimmer,#fff6e2); opacity:.8; }
-  .br-acts{ margin-top:9px; display:flex; gap:8px; }
+  .br-acts{ margin-top:9px; display:flex; gap:8px; flex-wrap:wrap; }
   .br-acts button{ background:transparent; border:1px solid var(--rule); color:var(--ink-mid); font-family:var(--mono);
     font-size:9px; letter-spacing:.12em; text-transform:uppercase; padding:7px 12px; border-radius:2px; cursor:pointer; }
   .br-acts button:hover{ color:var(--ink); border-color:rgba(48,96,192,.45); }
@@ -1261,7 +1277,11 @@ document.addEventListener('click',(e)=>{ if(!document.body.classList.contains('t
   const kw=e.target&&e.target.closest?e.target.closest('.kw'):null; if(!kw) return; const t=(kw.textContent||'').trim(); if(!t) return;
   tedLayer='event'; openTed('kw.'+t); });
 
-/* ===== Newsroom (📡) — Event Engine candidates (Build Spec v1 §3.2) =====
+/* ===== Newsroom (📡) — stories (Event Engine candidates, Build Spec v1 §3.2) =====
+   Vocabulary RULED 2026-07-17: the newsroom's unit is a STORY — the wire's
+   report of an event awaiting judgment. The event is the happening in the
+   world; promoting a story births a Reading. Code keeps candidates/cand_*,
+   exactly as prism_events kept its name when Reading was ruled.
    The surface newsroom: data/candidates.js (written by Scan News
    Cycle.command on the desk) lazy-loads on first open — the DG rule,
    heavy assets never at boot — and merges into PrismDB.prism_candidates
@@ -1274,6 +1294,10 @@ document.addEventListener('click',(e)=>{ if(!document.body.classList.contains('t
    promoted → evt id only when save() actually succeeds. */
 const NR_FITNESS_FLOOR = 0.4;            // spec §4, ratified 2026-07-13
 let nrLoaded=false, nrShowAll=false, nrPendingPromote=null;
+// Stories that arrived since this device last looked (session-scoped:
+// cids the latest import added that the store didn't hold). "Stories"
+// is the ruled vocabulary (2026-07-17) — code keeps candidates/cand_*.
+const nrFresh=new Set();
 
 function nrStatus(m){ $('nrStatus').textContent=m; }
 function nrKey(c){ return (c.fitness&&typeof c.fitness.score==='number')?c.fitness.score:((c.raw&&c.raw.salience)||0); }
@@ -1282,13 +1306,15 @@ async function nrImport(bust){
   try{ await dgScript('data/candidates.js'+(bust?('?v='+Date.now()):'')); }catch(_){}
   nrLoaded=true;
   if(Array.isArray(window.PRISM_CANDIDATES)){
+    const before=new Set(PrismDB.getCandidates().map(c=>c.cid));
     const r=PrismDB.importCandidates(window.PRISM_CANDIDATES);
+    window.PRISM_CANDIDATES.forEach(c=>{ if(c&&c.cid&&!before.has(c.cid)) nrFresh.add(c.cid); });
     // the committed middle stratum rides in on every open — phone triage
     // reaches the desk without a gesture (persistence §1.5)
     let s='';
     try{ const m=await nrPullScores(); if(m&&m.applied) s=' · '+m.applied+' scores pulled'; }
     catch(_){ /* offline / rate-limited — candidates.js bake already covers us */ }
-    nrStatus(r.added+' new · '+r.updated+' refreshed'+s);
+    nrStatus(r.added+' new '+(r.added===1?'story':'stories')+' · '+r.updated+' refreshed'+s);
   } else nrStatus('no candidates.js — run Scan News Cycle.command on the desk');
 }
 
@@ -1358,25 +1384,37 @@ document.addEventListener('visibilitychange',()=>{
 function nrRender(){
   const host=$('nrList'); host.innerHTML='';
   const all=PrismDB.getCandidates();
-  const list=(nrShowAll?all:all.filter(c=>c.status==='new')).slice().sort((a,b)=>nrKey(b)-nrKey(a));
-  const n={new:0,promoted:0,dismissed:0}; all.forEach(c=>{ n[c.status]=(n[c.status]||0)+1; });
-  $('nrCounts').textContent = all.length ? (n.new+' triage · '+n.promoted+' promoted · '+n.dismissed+' dismissed') : '';
+  // Triage shows new + held; held pins above the scan churn (2026-07-17 —
+  // the hold is the "don't lose this" gesture), then fitness/salience.
+  const list=(nrShowAll?all:all.filter(c=>c.status==='new'||c.status==='held')).slice()
+    .sort((a,b)=>((b.status==='held')-(a.status==='held')) || (nrKey(b)-nrKey(a)));
+  const n={new:0,held:0,promoted:0,dismissed:0}; all.forEach(c=>{ n[c.status]=(n[c.status]||0)+1; });
+  $('nrCounts').textContent = all.length ? (n.new+' triage'+(n.held?(' · '+n.held+' held'):'')
+    +' · '+n.promoted+' promoted · '+n.dismissed+' dismissed') : '';
   if(!list.length){
     const d=document.createElement('div'); d.className='br-empty';
     d.textContent = all.length ? 'triage clear — “all” shows the record'
-                               : 'no candidates — run Scan News Cycle.command, then ↺';
+                               : 'no stories — run Scan News Cycle.command, then ↺';
     host.appendChild(d); return;
   }
   list.forEach(c=>{
     const fit=(c.fitness&&typeof c.fitness.score==='number')?c.fitness.score:null;
-    const dim=(fit!=null&&fit<NR_FITNESS_FLOOR)||c.status==='dismissed';
+    // held never dims — the hold is deliberate; grey-not-hide stays for the rest
+    const dim=(fit!=null&&fit<NR_FITNESS_FLOOR&&c.status!=='held')||c.status==='dismissed';
+    const src=(c.source==='legislation')?'legislation':'news';
     const card=document.createElement('div');
-    card.className='br-card'+(c.status==='promoted'?' confirmed':'')+(dim?' dismissed':'');
-    const nm=document.createElement('div'); nm.className='n'; nm.textContent=c.title||c.cid; card.appendChild(nm);
+    card.className='br-card src-'+src+(c.status==='promoted'?' confirmed':'')
+      +(c.status==='held'?' held':'')+(dim?' dismissed':'');
+    const nm=document.createElement('div'); nm.className='n';
+    if(c.status==='held'){ const st=document.createElement('span'); st.className='nr-star'; st.textContent='★'; nm.appendChild(st); }
+    nm.appendChild(document.createTextNode(c.title||c.cid)); card.appendChild(nm);
     const meta=document.createElement('div'); meta.className='m';
-    meta.textContent=(c.source||'')
-      +(fit!=null?(' · fit '+fit.toFixed(2)):(' · unscored · sal '+(((c.raw&&c.raw.salience)||0)).toFixed(2)))
+    const sw=document.createElement('span'); sw.className='nr-src src-'+src; sw.textContent=c.source||src; meta.appendChild(sw);
+    const rest=document.createElement('span');
+    rest.textContent=(fit!=null?(' · fit '+fit.toFixed(2)):(' · unscored · sal '+(((c.raw&&c.raw.salience)||0)).toFixed(2)))
       +(c.status!=='new'?(' · '+c.status+(c.promotedEventId?(' → '+c.promotedEventId):'')):'');
+    meta.appendChild(rest);
+    if(nrFresh.has(c.cid)){ const f=document.createElement('span'); f.className='nr-fresh'; f.textContent=' · ✷ fresh'; meta.appendChild(f); }
     card.appendChild(meta);
     if(c.summary){ const r=document.createElement('div'); r.className='r'; r.style.whiteSpace='pre-wrap';
       r.textContent=c.summary; card.appendChild(r); }
@@ -1395,8 +1433,18 @@ function nrRender(){
       nt.textContent=new Set(c.raw.articles.map(a=>a.domain)).size+' outlets · '+c.raw.articles.length+' articles'; tags.appendChild(nt); }
     card.appendChild(tags);
     const acts=document.createElement('div'); acts.className='br-acts';
-    if(c.status==='new'){
+    if(c.status==='new'||c.status==='held'){
       const p=document.createElement('button'); p.textContent='Promote'; p.onclick=()=>nrPromote(c.cid); acts.appendChild(p);
+      if(c.status==='new'){
+        const h=document.createElement('button'); h.textContent='★ Hold';
+        h.title='Keep this story above the churn — it syncs to every device and survives aging out of the scan window';
+        h.onclick=()=>{ PrismDB.holdCandidate(c.cid); nrRender(); nrQueuePush(); }; acts.appendChild(h);
+      } else {
+        const rl=document.createElement('button'); rl.textContent='Release';
+        rl.title='Back to ordinary triage — the story rejoins the churn';
+        rl.onclick=()=>{ const cc=PrismDB.getCandidate(c.cid);
+          if(cc){ cc.status='new'; PrismDB.saveCandidate(cc); nrRender(); nrQueuePush(); } }; acts.appendChild(rl);
+      }
       const x=document.createElement('button'); x.textContent='Dismiss';
       x.onclick=()=>{ PrismDB.dismissCandidate(c.cid); nrRender(); nrQueuePush(); }; acts.appendChild(x);
     } else {
@@ -1418,7 +1466,7 @@ function nrRender(){
 
 async function nrOpen(){
   $('nrDrawer').classList.add('show'); $('nrOverlay').classList.add('show');
-  if(!nrLoaded){ nrStatus('loading candidates…'); await nrImport(false); }
+  if(!nrLoaded){ nrStatus('loading stories…'); await nrImport(false); }
   nrRender();
 }
 function nrCloseFn(){ $('nrDrawer').classList.remove('show'); $('nrOverlay').classList.remove('show'); }
@@ -1577,7 +1625,8 @@ async function nrScoreCid(cid){
 async function nrScoreAll(){
   if(nrScoring) return;
   const key=$('apiKey').value.trim(); if(!key){ nrStatus('Add your API key (AI ▸ top bar)'); return; }
-  const pool=PrismDB.getCandidates().filter(c=>c.status==='new'&&!(c.fitness&&typeof c.fitness.score==='number'))
+  const pool=PrismDB.getCandidates()
+    .filter(c=>(c.status==='new'||c.status==='held')&&!(c.fitness&&typeof c.fitness.score==='number'))
     .sort((a,b)=>nrKey(b)-nrKey(a));
   if(!pool.length){ nrStatus('nothing unscored in triage'); return; }
   nrScoring=true; let ok=0,fail=0;

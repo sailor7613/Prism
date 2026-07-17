@@ -760,6 +760,19 @@ const PrismDB = (() => {
     return saveCandidate(c);
   }
 
+  // Hold (2026-07-17, Sailor's ruling): the third triage verdict —
+  // "this story matters, not authoring yet." A held story pins above
+  // the scan churn, commits to the middle stratum (any status ≠ 'new'
+  // exports), and rides a snapshot so it outlives the scan window on
+  // every device. ("Stories" is the ruled vocabulary for newsroom
+  // items — code keeps candidates/cand_*, as prism_events kept its name.)
+  function holdCandidate(cid) {
+    const c = getCandidate(cid);
+    if (!c) return null;
+    c.status = 'held';
+    return saveCandidate(c);
+  }
+
   function promoteCandidate(cid, eventId) {
     const c = getCandidate(cid);
     if (!c) return null;
@@ -802,6 +815,21 @@ const PrismDB = (() => {
     return d;
   }
 
+  // ── Hold tier snapshot (2026-07-17) — a held record carries the story
+  // whole, so a hold survives aging out of the scan window and lands on
+  // devices that never imported the candidate. Same "records outlive
+  // candidates" completion the draft tier got on 07-16, but invoked
+  // deliberately from triage rather than as a side effect of drafting.
+  const STORY_FIELDS = ['title', 'source', 'summary', 'bills', 'members'];
+  function _storyFor(c) {
+    const s = {};
+    STORY_FIELDS.forEach(k => { if (c[k] != null) s[k] = c[k]; });
+    if (c.raw) s.raw = { salience: c.raw.salience,
+                         congressGovUrl: c.raw.congressGovUrl,
+                         articles: (c.raw.articles || []).slice(0, 6) };
+    return s;
+  }
+
   // Records for every candidate that carries any M2 field or has left
   // 'new' — i.e. the stratum worth committing. Shape: { cid: record }.
   function exportCandidateScores() {
@@ -815,6 +843,7 @@ const PrismDB = (() => {
       if (c.promotedEventId) r.promotedEventId = c.promotedEventId; // provenance
       const d = _draftFor(c);
       if (d) r.draftReading = d;               // draft tier — see above
+      if (c.status === 'held') r.story = _storyFor(c);  // hold tier — see above
       records[c.cid] = r;
     });
     return records;
@@ -853,7 +882,8 @@ const PrismDB = (() => {
       if (!r) return;
       if ((r.mts || 0) <= (c.mts || 0)) { skipped++; return; }
       SCORE_FIELDS.forEach(k => { if (r[k] != null) c[k] = r[k]; });
-      if (r.status === 'new' || r.status === 'promoted' || r.status === 'dismissed') {
+      if (r.status === 'new' || r.status === 'held' ||
+          r.status === 'promoted' || r.status === 'dismissed') {
         // never regress a locally-promoted candidate to 'promoted' minus id
         if (!(c.status === 'promoted' && r.status === 'promoted')) c.status = r.status;
         if (c.status !== 'promoted') delete c.promotedEventId;
@@ -869,15 +899,22 @@ const PrismDB = (() => {
     // land on a second device (live bite: Iran/NDAA — the desk never
     // held the candidate, so the merge skipped the record wholesale).
     // Scored-only strays still stay records-without-candidates.
+    // Hold tier (2026-07-17): a held record carrying its story snapshot
+    // resurrects the same way a draft does — a phone hold materializes
+    // on the desk even after the story ages out of the scan window.
     Object.keys(records).forEach(cid => {
       const r = records[cid];
-      if (!r || !r.draftReading || !r.draftReading.rid) return;
+      if (!r) return;
+      const hasDraft = r.draftReading && r.draftReading.rid;
+      const hasStory = r.status === 'held' && r.story;
+      if (!hasDraft && !hasStory) return;
       if (all.some(c => c.cid === cid)) return;   // held locally — handled above
       const c = { cid,
                   source: cid.indexOf('cand_leg_') === 0 ? 'legislation' : 'news',
-                  title: r.title || r.draftReading.title || cid,
+                  title: r.title || (hasDraft && r.draftReading.title) || cid,
                   status: r.status || 'promoted',
                   ts: r.mts || Date.now(), resurrected: true };
+      if (hasStory) Object.assign(c, r.story);
       SCORE_FIELDS.forEach(k => { if (r[k] != null) c[k] = r[k]; });
       _applyDraft(c, r);
       c.mts = r.mts || Date.now();
@@ -1766,7 +1803,7 @@ const PrismDB = (() => {
     getTickerEntries, appendTickerEntries,
     getCandidates, getCandidate, saveCandidate, importCandidates,
     exportCandidateScores, mergeCandidateScores,
-    dismissCandidate, promoteCandidate, deleteCandidate,
+    dismissCandidate, holdCandidate, promoteCandidate, deleteCandidate,
     exportBillReadings, importBillReadings, migrateBillAnalysis,
     getState, setState,
     getUser, setUser,
