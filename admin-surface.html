@@ -163,14 +163,19 @@
   /* rides --actions-h (measured by the dock observer) — the actions bar wraps
      taller on narrow screens and a static 60px put the chips on the buttons
      (2026-07-15 mobile audit) */
-  .cellmap{ position:fixed; left:0; right:0; bottom:calc(var(--actions-h, calc(60px + var(--safe-bottom))) + 6px); z-index:15; display:flex; gap:7px; justify-content:center; flex-wrap:wrap; padding:0 12px; }
+  .cellmap{ position:fixed; left:0; right:0; bottom:calc(var(--actions-h, calc(60px + var(--safe-bottom))) + 6px); z-index:15; display:flex; gap:7px; justify-content:center; flex-wrap:wrap; padding:0 12px;
+    transform:translateY(var(--vv-push, 0px)); }
   .cellchip{ font-family:var(--mono); font-size:9px; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; border-radius:999px;
     border:.5px solid var(--rule); color:var(--ink-low); background:rgba(8,12,26,.6); -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px); cursor:pointer; }
   .cellchip.filled{ color:var(--ink-mid); border-color:rgba(150,168,200,.4); }
   .cellchip.active{ color:var(--ink); border-color:rgba(48,96,192,.55); }
 
+  /* --vv-push: measured visual-viewport slack (dock observer) — 0 everywhere
+     except when the phone's layout viewport goes stale and the fixed bar
+     would float above the true bottom edge (2026-07-17 phone audit) */
   .actions{ position:fixed; left:0; right:0; bottom:0; z-index:20; display:flex; gap:12px; justify-content:center; align-items:center;
     padding:11px 12px calc(env(safe-area-inset-bottom) + 11px);
+    transform:translateY(var(--vv-push, 0px));
     background:rgba(8,12,26,.82); -webkit-backdrop-filter:blur(11px); backdrop-filter:blur(11px); border-top:.5px solid var(--rule); }
   .actions a{ text-decoration:none; }
   .status{ font-family:var(--mono); font-size:9px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-low); }
@@ -359,6 +364,22 @@
     body.navopen .adminbar .title-in{ min-width:0; }
     /* the action bar may wrap to two rows on narrow screens — keep the cell chips clear of it */
     .actions{ flex-wrap:wrap; }
+    /* phone real-estate audit (2026-07-17): the wrapped status row + safe-area
+       + 11px stacked ~70px of slack under the buttons — the bar's content
+       floated well off the bottom edge. Compact the chrome; the dock observer
+       re-measures whatever height results, so --actions-h/--dock-h stay true. */
+    .actions{ gap:7px 8px; padding:8px 10px max(var(--safe-bottom), 8px); }
+    .actions .btn{ padding:7px 11px; letter-spacing:.14em; }
+    .actions .status{ flex-basis:100%; text-align:center; }
+    .actions .status:empty{ display:none; }
+    /* x-axis determinations read vertically along the plane's sides — laid
+       horizontally at 88vw they amputated to 2-3 letters off both screen
+       edges (2026-07-17 phone audit). Left pole reads bottom-up, right pole
+       top-down, both hugging the plane like proper axis labels. */
+    .qp-pole.xneg, .qp-pole.xpos{ writing-mode:vertical-rl; font-size:10px; padding:5px 2px;
+      max-height:96%; overflow:hidden; text-overflow:ellipsis; }
+    .qp-pole.xneg{ left:-2px; transform:translate(-100%,-50%) rotate(180deg); }
+    .qp-pole.xpos{ right:-2px; transform:translate(100%,-50%); }
     /* open nav: every row stretches — the load-event select was the one
        holdout (230px cap truncated draft titles; 2026-07-15 mobile audit) */
     body.navopen .adminbar select, body.navopen .adminbar #evMenuBtn{ max-width:none; width:100%; }
@@ -1882,6 +1903,16 @@ setView('dia');   // start on the diatribe stage of the flow
   if(typeof ResizeObserver!=='undefined'){ const ro=new ResizeObserver(size); ro.observe(a); if(c) ro.observe(c); if(bar) ro.observe(bar); }
   else window.addEventListener('resize', size);
   size();
+  /* Visual-viewport pin (2026-07-17 phone audit): on the phone PWA the layout
+     viewport can go stale (keyboard dismissal, chrome collapse) and the fixed
+     bar floats above the true bottom edge. Measure the visual viewport and
+     push the bar (and the chip rail riding it) down to the real edge —
+     fixed bars are measured, not assumed. Clamped at 0: never lifts the bar
+     (keyboard-open shrink stays current behavior); 0 on healthy viewports. */
+  const vv=window.visualViewport;
+  if(vv){ const pin=()=>{ const gap=Math.max(0, Math.round(vv.offsetTop+vv.height-window.innerHeight));
+      root.style.setProperty('--vv-push', gap+'px'); };
+    vv.addEventListener('resize',pin); vv.addEventListener('scroll',pin); pin(); }
 })();
 if(!HAS_DB) status('Serve via Live Server so it shares storage with Prism.');
 
