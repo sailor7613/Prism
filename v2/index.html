@@ -1364,6 +1364,16 @@ body.light .event-picker { color: rgba(40,44,54,0.85); background: rgba(255,255,
 }
 .prism-ribbon:active { cursor: grabbing; }
 html.parallax-mode .prism-ribbon { top: calc(100% - var(--ribbon-h) - var(--safe-bottom)); background: linear-gradient(0deg, rgba(7,12,26,0.6), rgba(7,12,26,0)); }
+/* Bottom-band contract (2026-07-18, phone report: text clustering around
+   the seated nav). When the ribbon seats BOTTOM — any shade address, which
+   includes the whole reading flow at the Diatribe cell — the bottom band
+   belongs to the ribbon. The footer meta yields (the event is already
+   named in the top chrome; footer was already hidden in phase-event /
+   tri-cover / ticker-live, bottom-seat just never got its rule), and
+   Ted's dock lifts to sit just above the art instead of on it. */
+html.parallax-mode footer { opacity: 0; pointer-events: none; }
+html.parallax-mode .ted-dock {
+  bottom: calc(var(--ribbon-h) + var(--safe-bottom) + 10px); }
 /* The art wrapper is the moved element (2026-07-18 — beam/spectrum always
    span the screen): the drag/seat transforms land HERE, and the two tiled
    extension strips ride along for free. Strips are palindromic slices of
@@ -6292,14 +6302,21 @@ applyState(true);
     r7:   { src: '../src/img/nav/ribbon-7.png',   beam: 0.22, seat: 0.52, fx: 0.52, fan: 0.82 }, // near-symmetric, compact fan
     r8:   { src: '../src/img/nav/ribbon-8.png',   beam: 0.30, seat: 0.66, fx: 0.66, fan: 0.88 }, // long beam, wide down-fan
   };
-  // Beam/spectrum span the screen (Sailor 2026-07-18): phase-aligned
-  // palindromic slices of each painting's own open edges continue it past
-  // both container edges. extGeo = [L,R] junction fractions (% of art
-  // width) from the strip generator; null = that edge is compositionally
-  // CLOSED (the painting finishes it) and is never extended. full's fan
-  // tip curls shut — beam-only.
-  const EXT_GEO = { full:[7.55,null], r1:[7.47,94.49], r2:[7.52,93.85], r3:[11.27,94.09],
-                    r4:[7.48,93.85], r5:[7.5,94.46], r6:[7.5,94.46], r7:[7.5,94.46], r8:[7.5,94.46] };
+  // Beam-side extension only (RULED 2026-07-18, live phone verdict): the
+  // beam's parallel lines continue perfectly as phase-aligned palindromic
+  // tiles of the painting's own edge. The FAN side is retired from tiling —
+  // a diverging fan flattened to parallel bands when tiled, and the angle
+  // must remain. Angle-true fan continuations are commissioned from Claude
+  // Design (see the Design project's handoff/nav-fan-extension-brief);
+  // when that art lands, restore each variant's R fraction below.
+  // Generator R values, kept for that day: full:closed, r1:94.49,
+  // r2:93.85, r3:94.09, r4:93.85, r5–r8:94.46.
+  // extGeo = [L,R] junction fractions (% of art width); null = never
+  // extend this edge (closed composition, or awaiting Design art).
+  const EXT_GEO = { full:[7.55,null], r1:[7.47,null], r2:[7.52,null], r3:[11.27,null],
+                    r4:[7.48,null], r5:[null,94.46], r6:[7.5,null], r7:[7.5,null], r8:[7.5,null] };
+  // r5 is the MIRRORED painting — fan on the LEFT (retired side), beam on
+  // the RIGHT (its extension stays live).
   Object.keys(RIBBON_VARIANTS).forEach(k => {
     RIBBON_VARIANTS[k].ext = '../src/img/nav/ext-' + k + '-';
     RIBBON_VARIANTS[k].extGeo = EXT_GEO[k] || [null, null];
