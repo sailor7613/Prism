@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-07-18T13:54:28.579Z · 40 legislative + 6 news (GDELT, 3d)
+// 2026-07-18T16:15:31.938Z · 40 legislative + 6 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1784382855722,
+    "ts": 1784391315118,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.86,
+      "salience": 0.859,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,7 +259,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1784382855722,
+    "ts": 1784391315118,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
@@ -514,11 +514,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1784382855721,
+    "ts": 1784391315118,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.822,
+      "salience": 0.821,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -2825,7 +2825,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1784382855722,
+    "ts": 1784391315118,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
@@ -3236,283 +3236,9 @@ window.PRISM_CANDIDATES = [
     "mts": 1784044297586
   },
   {
-    "cid": "cand_leg_sjres-119-196",
-    "source": "legislative",
-    "ts": 1784382855722,
-    "raw": {
-      "method": "legislative_rollcall_v1",
-      "billId": "sjres-119-196",
-      "salience": 0.75,
-      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
-      "votes": [
-        {
-          "voteId": "s-119-2-190",
-          "chamber": "senate",
-          "date": "June 24, 2026,  09:16 PM",
-          "question": "On the Motion to Proceed",
-          "result": "Motion to Proceed Rejected",
-          "margin": -0.072,
-          "totals": {
-            "yea": 45,
-            "nay": 52,
-            "present": 0,
-            "notVoting": 3
-          },
-          "party": {
-            "D": {
-              "yea": 43,
-              "nay": 0
-            },
-            "R": {
-              "yea": 0,
-              "nay": 52
-            },
-            "I": {
-              "yea": 2,
-              "nay": 0
-            }
-          },
-          "positions": {
-            "yea": [
-              "A000382",
-              "B001230",
-              "B001277",
-              "B001303",
-              "B001288",
-              "C000127",
-              "C001088",
-              "C001113",
-              "D000622",
-              "D000563",
-              "F000479",
-              "G000574",
-              "G000555",
-              "H001076",
-              "H001046",
-              "H000273",
-              "H001042",
-              "K000384",
-              "K000377",
-              "K000394",
-              "K000383",
-              "K000367",
-              "M000133",
-              "M001176",
-              "M001169",
-              "M001111",
-              "O000174",
-              "P000145",
-              "P000595",
-              "R000122",
-              "R000608",
-              "S000033",
-              "S001194",
-              "S001150",
-              "S000148",
-              "S001208",
-              "S001203",
-              "V000128",
-              "W000805",
-              "W000790",
-              "W000817",
-              "W000800",
-              "W000802",
-              "W000779"
-            ],
-            "nay": [
-              "B001299",
-              "B001261",
-              "B001243",
-              "B001236",
-              "B001319",
-              "B001305",
-              "C001047",
-              "C001075",
-              "C001035",
-              "C001056",
-              "C001095",
-              "C001096",
-              "C000880",
-              "C001098",
-              "C001114",
-              "D000618",
-              "E000295",
-              "F000463",
-              "G000359",
-              "G000386",
-              "H000601",
-              "H001089",
-              "H001061",
-              "H001104",
-              "H001079",
-              "J000293",
-              "J000312",
-              "K000393",
-              "L000575",
-              "L000577",
-              "L000571",
-              "M001198",
-              "M001243",
-              "M001244",
-              "M000934",
-              "M001242",
-              "M001153",
-              "P000603",
-              "R000618",
-              "R000584",
-              "R000605",
-              "S001227",
-              "S001217",
-              "S001184",
-              "S001232",
-              "S001198",
-              "T000250",
-              "T000476",
-              "T000278",
-              "W000437",
-              "Y000064"
-            ],
-            "present": [],
-            "notVoting": [
-              "B001267",
-              "M000355",
-              "S001181"
-            ]
-          }
-        }
-      ]
-    },
-    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
-    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
-    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
-    "suggestedAxes": {
-      "x": {
-        "pos": "Disapprove rule",
-        "neg": "Uphold rule"
-      },
-      "y": {
-        "pos": "Executive overreach",
-        "neg": "Agency discretion legitimate"
-      }
-    },
-    "prevalentAxisGuess": "x",
-    "members": [
-      "A000382",
-      "B001230",
-      "B001277",
-      "B001303",
-      "B001288",
-      "C000127",
-      "C001088",
-      "C001113",
-      "D000622",
-      "D000563",
-      "F000479",
-      "G000574",
-      "G000555",
-      "H001076",
-      "H001046",
-      "H000273",
-      "H001042",
-      "K000384",
-      "K000377",
-      "K000394",
-      "K000383",
-      "K000367",
-      "M000133",
-      "M001176",
-      "M001169",
-      "M001111",
-      "O000174",
-      "P000145",
-      "P000595",
-      "R000122",
-      "R000608",
-      "S000033",
-      "S001194",
-      "S001150",
-      "S000148",
-      "S001208",
-      "S001203",
-      "V000128",
-      "W000805",
-      "W000790",
-      "W000817",
-      "W000800",
-      "W000802",
-      "W000779",
-      "B001299",
-      "B001261",
-      "B001243",
-      "B001236",
-      "B001319",
-      "B001305",
-      "C001047",
-      "C001075",
-      "C001035",
-      "C001056",
-      "C001095",
-      "C001096",
-      "C000880",
-      "C001098",
-      "C001114",
-      "D000618",
-      "E000295",
-      "F000463",
-      "G000359",
-      "G000386",
-      "H000601",
-      "H001089",
-      "H001061",
-      "H001104",
-      "H001079",
-      "J000293",
-      "J000312",
-      "K000393",
-      "L000575",
-      "L000577",
-      "L000571",
-      "M001198",
-      "M001243",
-      "M001244",
-      "M000934",
-      "M001242",
-      "M001153",
-      "P000603",
-      "R000618",
-      "R000584",
-      "R000605",
-      "S001227",
-      "S001217",
-      "S001184",
-      "S001232",
-      "S001198",
-      "T000250",
-      "T000476",
-      "T000278",
-      "W000437",
-      "Y000064"
-    ],
-    "bills": [
-      "sjres-119-196"
-    ],
-    "fitness": {
-      "score": 0.3,
-      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
-      "method": "m2_constitutive_v1",
-      "ts": "2026-07-14T04:28:30.038Z"
-    },
-    "status": "new",
-    "voteMap": {
-      "voteId": "s-119-2-190",
-      "yeaPole": "pos"
-    },
-    "mts": 1784044297586
-  },
-  {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1784382855722,
+    "ts": 1784391315118,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
@@ -4912,9 +4638,283 @@ window.PRISM_CANDIDATES = [
     "mts": 1784044297586
   },
   {
+    "cid": "cand_leg_sjres-119-196",
+    "source": "legislative",
+    "ts": 1784391315118,
+    "raw": {
+      "method": "legislative_rollcall_v1",
+      "billId": "sjres-119-196",
+      "salience": 0.749,
+      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
+      "votes": [
+        {
+          "voteId": "s-119-2-190",
+          "chamber": "senate",
+          "date": "June 24, 2026,  09:16 PM",
+          "question": "On the Motion to Proceed",
+          "result": "Motion to Proceed Rejected",
+          "margin": -0.072,
+          "totals": {
+            "yea": 45,
+            "nay": 52,
+            "present": 0,
+            "notVoting": 3
+          },
+          "party": {
+            "D": {
+              "yea": 43,
+              "nay": 0
+            },
+            "R": {
+              "yea": 0,
+              "nay": 52
+            },
+            "I": {
+              "yea": 2,
+              "nay": 0
+            }
+          },
+          "positions": {
+            "yea": [
+              "A000382",
+              "B001230",
+              "B001277",
+              "B001303",
+              "B001288",
+              "C000127",
+              "C001088",
+              "C001113",
+              "D000622",
+              "D000563",
+              "F000479",
+              "G000574",
+              "G000555",
+              "H001076",
+              "H001046",
+              "H000273",
+              "H001042",
+              "K000384",
+              "K000377",
+              "K000394",
+              "K000383",
+              "K000367",
+              "M000133",
+              "M001176",
+              "M001169",
+              "M001111",
+              "O000174",
+              "P000145",
+              "P000595",
+              "R000122",
+              "R000608",
+              "S000033",
+              "S001194",
+              "S001150",
+              "S000148",
+              "S001208",
+              "S001203",
+              "V000128",
+              "W000805",
+              "W000790",
+              "W000817",
+              "W000800",
+              "W000802",
+              "W000779"
+            ],
+            "nay": [
+              "B001299",
+              "B001261",
+              "B001243",
+              "B001236",
+              "B001319",
+              "B001305",
+              "C001047",
+              "C001075",
+              "C001035",
+              "C001056",
+              "C001095",
+              "C001096",
+              "C000880",
+              "C001098",
+              "C001114",
+              "D000618",
+              "E000295",
+              "F000463",
+              "G000359",
+              "G000386",
+              "H000601",
+              "H001089",
+              "H001061",
+              "H001104",
+              "H001079",
+              "J000293",
+              "J000312",
+              "K000393",
+              "L000575",
+              "L000577",
+              "L000571",
+              "M001198",
+              "M001243",
+              "M001244",
+              "M000934",
+              "M001242",
+              "M001153",
+              "P000603",
+              "R000618",
+              "R000584",
+              "R000605",
+              "S001227",
+              "S001217",
+              "S001184",
+              "S001232",
+              "S001198",
+              "T000250",
+              "T000476",
+              "T000278",
+              "W000437",
+              "Y000064"
+            ],
+            "present": [],
+            "notVoting": [
+              "B001267",
+              "M000355",
+              "S001181"
+            ]
+          }
+        }
+      ]
+    },
+    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
+    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
+    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Disapprove rule",
+        "neg": "Uphold rule"
+      },
+      "y": {
+        "pos": "Executive overreach",
+        "neg": "Agency discretion legitimate"
+      }
+    },
+    "prevalentAxisGuess": "x",
+    "members": [
+      "A000382",
+      "B001230",
+      "B001277",
+      "B001303",
+      "B001288",
+      "C000127",
+      "C001088",
+      "C001113",
+      "D000622",
+      "D000563",
+      "F000479",
+      "G000574",
+      "G000555",
+      "H001076",
+      "H001046",
+      "H000273",
+      "H001042",
+      "K000384",
+      "K000377",
+      "K000394",
+      "K000383",
+      "K000367",
+      "M000133",
+      "M001176",
+      "M001169",
+      "M001111",
+      "O000174",
+      "P000145",
+      "P000595",
+      "R000122",
+      "R000608",
+      "S000033",
+      "S001194",
+      "S001150",
+      "S000148",
+      "S001208",
+      "S001203",
+      "V000128",
+      "W000805",
+      "W000790",
+      "W000817",
+      "W000800",
+      "W000802",
+      "W000779",
+      "B001299",
+      "B001261",
+      "B001243",
+      "B001236",
+      "B001319",
+      "B001305",
+      "C001047",
+      "C001075",
+      "C001035",
+      "C001056",
+      "C001095",
+      "C001096",
+      "C000880",
+      "C001098",
+      "C001114",
+      "D000618",
+      "E000295",
+      "F000463",
+      "G000359",
+      "G000386",
+      "H000601",
+      "H001089",
+      "H001061",
+      "H001104",
+      "H001079",
+      "J000293",
+      "J000312",
+      "K000393",
+      "L000575",
+      "L000577",
+      "L000571",
+      "M001198",
+      "M001243",
+      "M001244",
+      "M000934",
+      "M001242",
+      "M001153",
+      "P000603",
+      "R000618",
+      "R000584",
+      "R000605",
+      "S001227",
+      "S001217",
+      "S001184",
+      "S001232",
+      "S001198",
+      "T000250",
+      "T000476",
+      "T000278",
+      "W000437",
+      "Y000064"
+    ],
+    "bills": [
+      "sjres-119-196"
+    ],
+    "fitness": {
+      "score": 0.3,
+      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:28:30.038Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "s-119-2-190",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297586
+  },
+  {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1784382855722,
+    "ts": 1784391315118,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
@@ -5185,11 +5185,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1784382855721,
+    "ts": 1784391315118,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.725,
+      "salience": 0.724,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6587,7 +6587,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1784382855721,
+    "ts": 1784391315118,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
@@ -7989,7 +7989,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1784382855719,
+    "ts": 1784391315116,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
@@ -9158,7 +9158,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1784382855721,
+    "ts": 1784391315118,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
@@ -10092,7 +10092,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1041",
     "source": "legislative",
-    "ts": 1784382855721,
+    "ts": 1784391315117,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1041",
@@ -11489,7 +11489,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2616",
     "source": "legislative",
-    "ts": 1784382855721,
+    "ts": 1784391315117,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2616",
@@ -12883,7 +12883,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1784382855721,
+    "ts": 1784391315118,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
@@ -13815,11 +13815,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1784382855722,
+    "ts": 1784391315118,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.656,
+      "salience": 0.655,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -14091,7 +14091,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1784382855722,
+    "ts": 1784391315118,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
@@ -15024,7 +15024,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7567",
     "source": "legislative",
-    "ts": 1784382855720,
+    "ts": 1784391315116,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7567",
@@ -20681,11 +20681,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1784382855721,
+    "ts": 1784391315118,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.634,
+      "salience": 0.633,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -21614,7 +21614,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6260",
     "source": "legislative",
-    "ts": 1784382855720,
+    "ts": 1784391315117,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6260",
@@ -23016,7 +23016,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8365",
     "source": "legislative",
-    "ts": 1784382855720,
+    "ts": 1784391315117,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8365",
@@ -24418,11 +24418,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1346",
     "source": "legislative",
-    "ts": 1784382855720,
+    "ts": 1784391315117,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1346",
-      "salience": 0.613,
+      "salience": 0.612,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1346",
       "votes": [
         {
@@ -25818,11 +25818,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-141",
     "source": "legislative",
-    "ts": 1784382855722,
+    "ts": 1784391315118,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-141",
-      "salience": 0.595,
+      "salience": 0.594,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/141",
       "votes": [
         {
@@ -26094,11 +26094,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-132",
     "source": "legislative",
-    "ts": 1784382855722,
+    "ts": 1784391315118,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-132",
-      "salience": 0.577,
+      "salience": 0.576,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/132",
       "votes": [
         {
@@ -26370,11 +26370,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-130",
     "source": "legislative",
-    "ts": 1784382855722,
+    "ts": 1784391315118,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-130",
-      "salience": 0.568,
+      "salience": 0.567,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/130",
       "votes": [
         {
@@ -26646,7 +26646,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6047",
     "source": "legislative",
-    "ts": 1784382855721,
+    "ts": 1784391315117,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6047",
@@ -27571,7 +27571,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6387",
     "source": "legislative",
-    "ts": 1784382855719,
+    "ts": 1784391315116,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6387",
@@ -28969,7 +28969,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4690",
     "source": "legislative",
-    "ts": 1784382855719,
+    "ts": 1784391315115,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4690",
@@ -30367,11 +30367,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-99",
     "source": "legislative",
-    "ts": 1784382855722,
+    "ts": 1784391315118,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-99",
-      "salience": 0.519,
+      "salience": 0.518,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/99",
       "votes": [
         {
@@ -30641,11 +30641,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1784382855722,
+    "ts": 1784391315118,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.515,
+      "salience": 0.514,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -32044,7 +32044,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-139",
     "source": "legislative",
-    "ts": 1784382855722,
+    "ts": 1784391315118,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-139",
@@ -32319,7 +32319,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5587",
     "source": "legislative",
-    "ts": 1784382855719,
+    "ts": 1784391315116,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5587",
@@ -33246,7 +33246,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1784382855722,
+    "ts": 1784391315118,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
@@ -34167,7 +34167,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1784382855722,
+    "ts": 1784391315118,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
@@ -35085,7 +35085,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5625",
     "source": "legislative",
-    "ts": 1784382855720,
+    "ts": 1784391315117,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5625",
@@ -36020,11 +36020,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1784382855722,
+    "ts": 1784391315118,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.368,
+      "salience": 0.367,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -36919,7 +36919,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8469",
     "source": "legislative",
-    "ts": 1784382855720,
+    "ts": 1784391315117,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8469",
@@ -38321,7 +38321,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4465",
     "source": "legislative",
-    "ts": 1784382855720,
+    "ts": 1784391315116,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4465",
@@ -39204,7 +39204,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1784382855721,
+    "ts": 1784391315118,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
@@ -40138,7 +40138,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2853",
     "source": "legislative",
-    "ts": 1784382855720,
+    "ts": 1784391315116,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2853",
@@ -41056,7 +41056,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1784382855721,
+    "ts": 1784391315118,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
@@ -41985,12 +41985,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_delivers-election-president",
     "source": "news",
-    "ts": 1784382868568,
+    "ts": 1784391331929,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.805,
+      "salience": 0.791,
       "articles": [
         {
           "title": "President Trump Delivers Primetime Speech On Election Security",
@@ -42079,12 +42079,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_clock-court-down",
     "source": "news",
-    "ts": 1784382868565,
+    "ts": 1784391331926,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.74,
+      "salience": 0.725,
       "articles": [
         {
           "title": "Trump races clock to rebuild tariff wall knocked down by Supreme Court",
@@ -42108,6 +42108,12 @@ window.PRISM_CANDIDATES = [
           "title": "Trump races clock to rebuild tariff wall knocked down by Supreme Court",
           "url": "https://www.courant.com/2026/07/16/trump-tariff-revenue/",
           "domain": "courant.com",
+          "seendate": "2026-07-16T19:00:00Z"
+        },
+        {
+          "title": "Trump races clock to rebuild tariff wall knocked down by Supreme Court",
+          "url": "https://www.thenewsherald.com/2026/07/16/trump-tariff-revenue/",
+          "domain": "thenewsherald.com",
           "seendate": "2026-07-16T19:00:00Z"
         },
         {
@@ -42149,7 +42155,7 @@ window.PRISM_CANDIDATES = [
       ]
     },
     "title": "Trump races clock to rebuild tariff wall knocked down by Supreme Court",
-    "summary": "2026-07-16 orlandosentinel.com: Trump races clock to rebuild tariff wall knocked down by Supreme Court\n2026-07-16 dailylocal.com: Trump races clock to rebuild tariff wall knocked down by Supreme Court\n2026-07-16 lowellsun.com: Trump races clock to rebuild tariff wall knocked down by Supreme Court\n2026-07-16 courant.com: Trump races clock to rebuild tariff wall knocked down by Supreme Court\n2026-07-16 ocregister.com: Trump races clock to rebuild tariff wall knocked down by Supreme Court\n2026-07-16 sun-sentinel.com: Trump races clock to rebuild tariff wall knocked down by Supreme Court",
+    "summary": "2026-07-16 orlandosentinel.com: Trump races clock to rebuild tariff wall knocked down by Supreme Court\n2026-07-16 dailylocal.com: Trump races clock to rebuild tariff wall knocked down by Supreme Court\n2026-07-16 lowellsun.com: Trump races clock to rebuild tariff wall knocked down by Supreme Court\n2026-07-16 courant.com: Trump races clock to rebuild tariff wall knocked down by Supreme Court\n2026-07-16 thenewsherald.com: Trump races clock to rebuild tariff wall knocked down by Supreme Court\n2026-07-16 ocregister.com: Trump races clock to rebuild tariff wall knocked down by Supreme Court",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -42161,12 +42167,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_95b-defense-election",
     "source": "news",
-    "ts": 1784382868565,
+    "ts": 1784391331926,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.602,
+      "salience": 0.587,
       "articles": [
         {
           "title": "Johnson unveils $95B plan for defense spending , election overhaul",
@@ -42249,12 +42255,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_annual-bill-block",
     "source": "news",
-    "ts": 1784382868565,
+    "ts": 1784391331926,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.525,
+      "salience": 0.51,
       "articles": [
         {
           "title": "Democrats block $1 trillion annual defense bill : Here what they say",
@@ -42317,14 +42323,60 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_aid-elections-farm",
+    "cid": "cand_news_address-ahead-big",
     "source": "news",
-    "ts": 1784382868565,
+    "ts": 1784391331926,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.509,
+      "salience": 0.436,
+      "articles": [
+        {
+          "title": "Trump teases  really big new ahead of Thursday night address",
+          "url": "https://www.foxla.com/news/trump-teases-really-big-news-ahead-thursday-night-address",
+          "domain": "foxla.com",
+          "seendate": "2026-07-17T02:45:00Z"
+        },
+        {
+          "title": "Trump teases  really big new ahead of Thursday night address",
+          "url": "https://www.fox29.com/news/trump-teases-really-big-news-ahead-thursday-night-address",
+          "domain": "fox29.com",
+          "seendate": "2026-07-16T15:15:00Z"
+        },
+        {
+          "title": "Trump teases  really big new ahead of Thursday night address",
+          "url": "https://www.fox6now.com/news/trump-teases-really-big-news-ahead-thursday-night-address",
+          "domain": "fox6now.com",
+          "seendate": "2026-07-16T14:15:00Z"
+        },
+        {
+          "title": "Trump teases  really big new ahead of Thursday night address",
+          "url": "https://www.fox5ny.com/news/trump-teases-really-big-news-ahead-thursday-night-address",
+          "domain": "fox5ny.com",
+          "seendate": "2026-07-16T13:45:00Z"
+        }
+      ]
+    },
+    "title": "Trump teases  really big new ahead of Thursday night address",
+    "summary": "2026-07-17 foxla.com: Trump teases  really big new ahead of Thursday night address\n2026-07-16 fox29.com: Trump teases  really big new ahead of Thursday night address\n2026-07-16 fox6now.com: Trump teases  really big new ahead of Thursday night address\n2026-07-16 fox5ny.com: Trump teases  really big new ahead of Thursday night address",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_aid-elections-farm",
+    "source": "news",
+    "ts": 1784391331926,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.384,
       "articles": [
         {
           "title": "House Republicans unveil a $95 billion plan for the Iran war , farm aid and elections",
@@ -42355,69 +42407,11 @@ window.PRISM_CANDIDATES = [
           "url": "https://www.clickondetroit.com/news/politics/2026/07/15/house-republicans-unveil-95-billion-plan-for-the-iran-war-farm-aid-and-elections/",
           "domain": "clickondetroit.com",
           "seendate": "2026-07-15T17:00:00Z"
-        },
-        {
-          "title": "House Republicans unveil a $95 billion plan for the Iran war , farm aid and elections",
-          "url": "https://www.ksat.com/news/politics/2026/07/15/house-republicans-unveil-95-billion-plan-for-the-iran-war-farm-aid-and-elections/",
-          "domain": "ksat.com",
-          "seendate": "2026-07-15T16:15:00Z"
-        },
-        {
-          "title": "House Republicans unveil a $95 billion plan for the Iran war , farm aid and elections",
-          "url": "https://www.wsls.com/news/politics/2026/07/15/house-republicans-unveil-95-billion-plan-for-the-iran-war-farm-aid-and-elections/",
-          "domain": "wsls.com",
-          "seendate": "2026-07-15T16:15:00Z"
         }
       ]
     },
     "title": "House Republicans unveil a $95 billion plan for the Iran war , farm aid and elections",
-    "summary": "2026-07-16 santafenewmexican.com: House Republicans unveil a $95 billion plan for the Iran war , farm aid and elections\n2026-07-15 yahoo.com: House Republicans unveil a $95 billion plan for the Iran war , farm aid and elections\n2026-07-15 lasvegassun.com: House Republicans unveil a $95 billion plan for the Iran war , farm aid and elections - Las Vegas Sun News\n2026-07-15 capitalgazette.com: House Republicans unveil $95B plan for Iran war , farm aid , elections\n2026-07-15 clickondetroit.com: House Republicans unveil a $95 billion plan for the Iran war , farm aid and elections\n2026-07-15 ksat.com: House Republicans unveil a $95 billion plan for the Iran war , farm aid and elections",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_address-ahead-big",
-    "source": "news",
-    "ts": 1784382868565,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.45,
-      "articles": [
-        {
-          "title": "Trump teases  really big new ahead of Thursday night address",
-          "url": "https://www.foxla.com/news/trump-teases-really-big-news-ahead-thursday-night-address",
-          "domain": "foxla.com",
-          "seendate": "2026-07-17T02:45:00Z"
-        },
-        {
-          "title": "Trump teases  really big new ahead of Thursday night address",
-          "url": "https://www.fox29.com/news/trump-teases-really-big-news-ahead-thursday-night-address",
-          "domain": "fox29.com",
-          "seendate": "2026-07-16T15:15:00Z"
-        },
-        {
-          "title": "Trump teases  really big new ahead of Thursday night address",
-          "url": "https://www.fox6now.com/news/trump-teases-really-big-news-ahead-thursday-night-address",
-          "domain": "fox6now.com",
-          "seendate": "2026-07-16T14:15:00Z"
-        },
-        {
-          "title": "Trump teases  really big new ahead of Thursday night address",
-          "url": "https://www.fox5ny.com/news/trump-teases-really-big-news-ahead-thursday-night-address",
-          "domain": "fox5ny.com",
-          "seendate": "2026-07-16T13:45:00Z"
-        }
-      ]
-    },
-    "title": "Trump teases  really big new ahead of Thursday night address",
-    "summary": "2026-07-17 foxla.com: Trump teases  really big new ahead of Thursday night address\n2026-07-16 fox29.com: Trump teases  really big new ahead of Thursday night address\n2026-07-16 fox6now.com: Trump teases  really big new ahead of Thursday night address\n2026-07-16 fox5ny.com: Trump teases  really big new ahead of Thursday night address",
+    "summary": "2026-07-16 santafenewmexican.com: House Republicans unveil a $95 billion plan for the Iran war , farm aid and elections\n2026-07-15 yahoo.com: House Republicans unveil a $95 billion plan for the Iran war , farm aid and elections\n2026-07-15 lasvegassun.com: House Republicans unveil a $95 billion plan for the Iran war , farm aid and elections - Las Vegas Sun News\n2026-07-15 capitalgazette.com: House Republicans unveil $95B plan for Iran war , farm aid , elections\n2026-07-15 clickondetroit.com: House Republicans unveil a $95 billion plan for the Iran war , farm aid and elections",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
