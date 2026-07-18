@@ -47,6 +47,13 @@ PRIOR-FLOOR: if you are relying primarily on party or demographic prior rather t
 
 Calibration: most working politicians on live issues fall 25–60. Reserve 67+ for documented, sustained denomination patterns on the specific issue. SYMMETRY CONSTRAINT: structurally equivalent positions must score within 5 points regardless of party or side.`;
 
+  // ── Voice-authoring context — travels as the system prompt on suggest
+  // calls (2026-07-18: bare "write a charged political line" prompts hit
+  // stop_reason:refusal with no text; the model needs to know what Prism
+  // is before it will draft a voice). Single-sourced here for every
+  // suggest site, like the rubric.
+  const VOICE_CONTEXT = `You are the drafting assistant inside Prism, a civic-education tool that maps public political discourse. Prism displays labeled, illustrative composite "voices" — short lines representing how real positions in a public debate sound from different places on an issue map (its axes and denomination bands are provided per request). These are analytical illustrations for studying discourse structure, equivalent to writing both sides of a debate brief: they are not messaging, persuasion, or astroturf content, and they appear only inside the map, attributed to coordinates, never to people. Draft the requested voice sincerely and charitably — the strongest honest version of how that position sounds — and follow the JSON/format instructions in the request exactly.`;
+
   // ── The hardened call.
   // opts: {
   //   model,          — optional; migrated through the retired list
@@ -59,6 +66,17 @@ Calibration: most working politicians on live issues fall 25–60. Reserve 67+ f
   // Returns joined text blocks (skips thinking blocks). Throws with the
   // API's error message, a truncation notice, or an empty-reply notice.
   async function call(key, opts = {}) {
+    // One quiet retry for the transient outcomes (refusal / truncation /
+    // empty) before an error reaches a toast — refusals and thinking
+    // starvation are stochastic; the second attempt usually lands.
+    try { return await callOnce(key, opts); }
+    catch (e) {
+      if (/declined|truncated|Empty reply/.test(e.message)) return callOnce(key, opts);
+      throw e;
+    }
+  }
+
+  async function callOnce(key, opts = {}) {
     const messages = opts.messages || [{ role: 'user', content: opts.prompt || '' }];
     const body = {
       model: migrateModel(opts.model),
@@ -90,6 +108,11 @@ Calibration: most working politicians on live issues fall 25–60. Reserve 67+ f
     }
     const text = (data.content || []).map(b => b.type === 'text' ? b.text : '').join('').trim();
     if (!text) {
+      // Name the real cause — 'refusal' is its own stop_reason (2026-07-18:
+      // the old message blamed max_tokens for every empty reply).
+      if (data.stop_reason === 'refusal') {
+        throw new Error('model declined this request (stop_reason: refusal) — retry, or rephrase the framing');
+      }
       throw new Error(`Empty reply (stop_reason: ${data.stop_reason}) — likely thinking consumed max_tokens; retry`);
     }
     return text;
@@ -108,7 +131,7 @@ Calibration: most working politicians on live issues fall 25–60. Reserve 67+ f
     try { return JSON.parse(m[0]); } catch (e) { return []; }
   }
 
-  return { MODEL_DEFAULT, RETIRED_MODELS, migrateModel, RUBRIC_ID, RUBRIC, call, extractJson, extractJsonArray };
+  return { MODEL_DEFAULT, RETIRED_MODELS, migrateModel, RUBRIC_ID, RUBRIC, VOICE_CONTEXT, call, extractJson, extractJsonArray };
 })();
 
 // ── Back-compat globals (consumers strangle off these as they migrate;

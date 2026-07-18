@@ -984,7 +984,7 @@ async function callClaude(key, prompt, maxTok){
   // Delegates to the shared engine (src/js/prism-ai.js) — the 2026-07-02
   // hardening (adaptive thinking, effort floor, text-block-only extraction,
   // truncation guard) lives there now, single-sourced for all consumers.
-  return PrismAI.call(key, { model:$('model').value, prompt, maxTokens:maxTok, effort:'low' });
+  return PrismAI.call(key, { model:$('model').value, prompt, maxTokens:maxTok, effort:'low', system:PrismAI.VOICE_CONTEXT });
 }
 async function suggestCell(which){
   const key=$('apiKey').value.trim(); if(!key){ status('Add your API key (open “AI” in the top bar)'); return; }
