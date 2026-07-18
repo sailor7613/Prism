@@ -70,11 +70,29 @@
 
   /* ── daytime mode — paper sky; the stars stand down (grammar's body.light
         vars carry ink/rule/shimmer; these handle the surface's own chrome) ── */
+  /* daylight sky (2026-07-18 ruling: past the paper vibes) — same three-layer
+     machine as night, re-costumed: day wash (zenith blue -> cream horizon, sun
+     glow top-left mirroring night's nebula), far layer = drifting haze bands,
+     near layer = warm sunlit motes glinting on the old twinkle cadence. The
+     base drift animations and reduced-motion guard carry over untouched. */
   body.light #spaceField{ background:
-      radial-gradient(ellipse 120% 85% at 50% 14%, rgba(48,96,192,.07), rgba(245,240,232,0) 60%),
-      radial-gradient(ellipse 95% 75% at 80% 96%, rgba(160,120,40,.06), rgba(245,240,232,0) 58%),
-      linear-gradient(180deg,#faf6ec 0%,#f5f0e8 46%,#efe8d9 100%); }
-  body.light #spaceField::before, body.light #spaceField::after{ display:none; }
+      radial-gradient(ellipse 120% 85% at 22% 8%, rgba(255,222,150,.30), rgba(230,238,246,0) 55%),
+      radial-gradient(ellipse 95% 75% at 80% 96%, rgba(48,96,192,.10), rgba(245,240,232,0) 58%),
+      linear-gradient(180deg,#c9def4 0%,#e2ecf4 46%,#f2ead8 100%); }
+  body.light #spaceField::before{ background-image:
+      radial-gradient(90px 14px at 60px 80px, rgba(255,255,255,.30), transparent),
+      radial-gradient(120px 16px at 220px 190px, rgba(255,255,255,.22), transparent),
+      radial-gradient(70px 10px at 150px 20px, rgba(255,250,238,.26), transparent);
+    background-size:300px 260px; opacity:.6; }
+  body.light #spaceField::after{ background-image:
+      radial-gradient(2px 2px at 40px 50px, rgba(255,252,240,.95), rgba(196,156,72,.20) 45%, transparent),
+      radial-gradient(1.6px 1.6px at 180px 140px, rgba(255,250,235,.85), rgba(196,156,72,.16) 45%, transparent),
+      radial-gradient(1.8px 1.8px at 250px 80px, rgba(255,246,226,.9), rgba(196,156,72,.18) 45%, transparent),
+      radial-gradient(1.4px 1.4px at 300px 220px, rgba(255,250,235,.8), transparent),
+      radial-gradient(1.4px 1.4px at 110px 260px, rgba(255,250,235,.75), transparent);
+    background-size:320px 320px; opacity:.55;
+    animation:spaceDriftNear 95s linear infinite, dayGlint 6.5s ease-in-out infinite alternate; }
+  @keyframes dayGlint{ from{opacity:.35;} to{opacity:.62;} }
   body.light .adminbar{ background:rgba(245,240,232,.78); }
   /* daylight legibility (2026-07-16): these fixed surfaces kept their night
      backgrounds while the ink vars flipped dark — dark ink on dark chrome.
@@ -1960,7 +1978,15 @@ setView('dia');   // start on the diatribe stage of the flow
   const vv=window.visualViewport;
   if(vv){ const pin=()=>{ const gap=Math.max(0, Math.round(vv.offsetTop+vv.height-window.innerHeight));
       root.style.setProperty('--vv-push', gap+'px'); };
-    vv.addEventListener('resize',pin); vv.addEventListener('scroll',pin); pin(); }
+    vv.addEventListener('resize',pin); vv.addEventListener('scroll',pin);
+    /* iOS PWA can resume/rotate into a stale layout viewport without firing a
+       visualViewport event (2026-07-18 phone report: bar still floating in the
+       installed app) — re-pin on the window-level signals too. */
+    window.addEventListener('resize',pin);
+    window.addEventListener('orientationchange',()=>setTimeout(pin,60));
+    window.addEventListener('pageshow',pin);
+    document.addEventListener('visibilitychange',()=>{ if(document.visibilityState==='visible') requestAnimationFrame(pin); });
+    pin(); }
 })();
 if(!HAS_DB) status('Serve via Live Server so it shares storage with Prism.');
 

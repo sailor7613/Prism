@@ -106,8 +106,11 @@ body.light {
   --bg:          rgb(245, 240, 232);
   --bg-soft:     rgba(245, 240, 232, 0.97);
   --ink:         rgb(20, 22, 30);
-  --ink-mid:     rgba(20, 22, 30, 0.55);
-  --ink-low:     rgba(20, 22, 30, 0.28);
+  /* 2026-07-18 daylight legibility bump: the .55/.28 alphas were tuned for
+     the hand-drawn-paper era and read as washed-out grey — raised so the
+     secondary text pops in sunlight. Night tokens untouched. */
+  --ink-mid:     rgba(20, 22, 30, 0.72);
+  --ink-low:     rgba(20, 22, 30, 0.45);
   --rule:        rgba(48, 96, 192, 0.20);
   --rule-soft:   rgba(48, 96, 192, 0.10);
   --halo:        rgba(32, 64, 160, 0.06);
