@@ -70,29 +70,30 @@
 
   /* ── daytime mode — paper sky; the stars stand down (grammar's body.light
         vars carry ink/rule/shimmer; these handle the surface's own chrome) ── */
-  /* daylight sky (2026-07-18 ruling: past the paper vibes) — same three-layer
-     machine as night, re-costumed: day wash (zenith blue -> cream horizon, sun
-     glow top-left mirroring night's nebula), far layer = drifting haze bands,
-     near layer = warm sunlit motes glinting on the old twinkle cadence. The
-     base drift animations and reduced-motion guard carry over untouched. */
+  /* daylight sky (2026-07-18 second ruling: gentle cumulus — variant B of the
+     side-by-side; motes retired, Sailor never saw them). Same three-layer
+     machine as night, re-costumed: softer day wash (zenith #d7e6f3 -> cream
+     horizon, gentler sun glow top-left), both star layers become soft cumulus
+     puffs drifting SIDEWAYS on their own keyframes (clouds don't move
+     diagonally; tiles are seam-matched to their translates). Reduced-motion
+     guard carries over untouched. Tunables: puff alphas (.36–.60), tile sizes
+     (680×440 / 560×420), drift periods (210s / 130s), zenith #d7e6f3. */
   body.light #spaceField{ background:
-      radial-gradient(ellipse 120% 85% at 22% 8%, rgba(255,222,150,.30), rgba(230,238,246,0) 55%),
-      radial-gradient(ellipse 95% 75% at 80% 96%, rgba(48,96,192,.10), rgba(245,240,232,0) 58%),
-      linear-gradient(180deg,#c9def4 0%,#e2ecf4 46%,#f2ead8 100%); }
+      radial-gradient(ellipse 120% 85% at 22% 8%, rgba(255,228,170,.22), rgba(230,238,246,0) 55%),
+      linear-gradient(180deg,#d7e6f3 0%,#e8f0f5 52%,#f4eedd 100%); }
   body.light #spaceField::before{ background-image:
-      radial-gradient(90px 14px at 60px 80px, rgba(255,255,255,.30), transparent),
-      radial-gradient(120px 16px at 220px 190px, rgba(255,255,255,.22), transparent),
-      radial-gradient(70px 10px at 150px 20px, rgba(255,250,238,.26), transparent);
-    background-size:300px 260px; opacity:.6; }
+      radial-gradient(ellipse 190px 60px at 170px 110px, rgba(255,255,255,.50), rgba(255,255,255,.24) 48%, transparent 74%),
+      radial-gradient(ellipse 130px 44px at 260px 96px, rgba(255,255,255,.42), rgba(255,255,255,.18) 50%, transparent 76%),
+      radial-gradient(ellipse 220px 66px at 470px 290px, rgba(255,255,255,.44), rgba(255,255,255,.20) 48%, transparent 74%),
+      radial-gradient(ellipse 150px 48px at 560px 270px, rgba(255,255,255,.36), transparent 72%);
+    background-size:680px 440px; opacity:.75; animation:dayCloudFar 210s linear infinite; }
   body.light #spaceField::after{ background-image:
-      radial-gradient(2px 2px at 40px 50px, rgba(255,252,240,.95), rgba(196,156,72,.20) 45%, transparent),
-      radial-gradient(1.6px 1.6px at 180px 140px, rgba(255,250,235,.85), rgba(196,156,72,.16) 45%, transparent),
-      radial-gradient(1.8px 1.8px at 250px 80px, rgba(255,246,226,.9), rgba(196,156,72,.18) 45%, transparent),
-      radial-gradient(1.4px 1.4px at 300px 220px, rgba(255,250,235,.8), transparent),
-      radial-gradient(1.4px 1.4px at 110px 260px, rgba(255,250,235,.75), transparent);
-    background-size:320px 320px; opacity:.55;
-    animation:spaceDriftNear 95s linear infinite, dayGlint 6.5s ease-in-out infinite alternate; }
-  @keyframes dayGlint{ from{opacity:.35;} to{opacity:.62;} }
+      radial-gradient(ellipse 150px 46px at 120px 330px, rgba(255,255,255,.60), rgba(255,255,255,.28) 46%, transparent 72%),
+      radial-gradient(ellipse 100px 34px at 200px 315px, rgba(255,255,255,.48), transparent 74%),
+      radial-gradient(ellipse 170px 50px at 420px 90px, rgba(255,255,255,.55), rgba(255,255,255,.26) 46%, transparent 72%);
+    background-size:560px 420px; opacity:.65; animation:dayCloudNear 130s linear infinite; }
+  @keyframes dayCloudFar{ to{ transform:translate(-680px,0); } }
+  @keyframes dayCloudNear{ to{ transform:translate(-560px,0); } }
   body.light .adminbar{ background:rgba(245,240,232,.78); }
   /* daylight legibility (2026-07-16): these fixed surfaces kept their night
      backgrounds while the ink vars flipped dark — dark ink on dark chrome.
@@ -1396,7 +1397,24 @@ function nrQueuePush(){
 }
 document.addEventListener('visibilitychange',()=>{
   if(document.visibilityState==='hidden'&&nrPushTimer){
-    clearTimeout(nrPushTimer); nrPushTimer=null; nrSyncScores(true); } });
+    clearTimeout(nrPushTimer); nrPushTimer=null; nrSyncScores(true); }
+  // Resume re-pull (2026-07-18 §7): a tab coming back to life with the
+  // newsroom open sees the other devices' triage without a reopen gesture.
+  if(document.visibilityState==='visible'&&$('nrDrawer').classList.contains('show')) nrRepull();
+});
+
+/* Re-pull on reopen/resume (2026-07-18 §7): pull was first-open-per-load
+   only — a device left open all day never saw the desk's later triage.
+   Keyless read (public repo); quiet on failure — the candidates.js bake
+   already covers offline. nrPullScores renders + refreshes the dropdown
+   itself when anything applies. */
+let nrRepulling=false;
+async function nrRepull(){
+  if(nrRepulling||!nrLoaded) return; nrRepulling=true;
+  try{ const m=await nrPullScores(); if(m&&m.applied) nrStatus(m.applied+' score'+(m.applied===1?'':'s')+' pulled'); }
+  catch(_){ /* offline / rate-limited — quiet */ }
+  finally{ nrRepulling=false; }
+}
 
 function nrRender(){
   const host=$('nrList'); host.innerHTML='';
@@ -1484,6 +1502,7 @@ function nrRender(){
 async function nrOpen(){
   $('nrDrawer').classList.add('show'); $('nrOverlay').classList.add('show');
   if(!nrLoaded){ nrStatus('loading stories…'); await nrImport(false); }
+  else nrRepull();   // every reopen re-pulls, not just the first (2026-07-18 §7)
   nrRender();
 }
 function nrCloseFn(){ $('nrDrawer').classList.remove('show'); $('nrOverlay').classList.remove('show'); }

@@ -1364,12 +1364,29 @@ body.light .event-picker { color: rgba(40,44,54,0.85); background: rgba(255,255,
 }
 .prism-ribbon:active { cursor: grabbing; }
 html.parallax-mode .prism-ribbon { top: calc(100% - var(--ribbon-h) - var(--safe-bottom)); background: linear-gradient(0deg, rgba(7,12,26,0.6), rgba(7,12,26,0)); }
-.prism-ribbon-img {
-  position: absolute; top: 50%; left: 0; height: 78%; width: auto; max-width: none;
+/* The art wrapper is the moved element (2026-07-18 — beam/spectrum always
+   span the screen): the drag/seat transforms land HERE, and the two tiled
+   extension strips ride along for free. Strips are palindromic slices of
+   each painting's own edge (ext-*-{L,R}.png, generated from the art —
+   the artist's pixels, tiled, never redrawn), tucked 2% under the ragged
+   ends so the junction hides in the crayon. */
+.ribbon-art {
+  position: absolute; top: 50%; left: 0; height: 78%;
   transform: translateY(-50%); transform-origin: left center;
-  will-change: transform; pointer-events: none; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.42));
+  will-change: transform; pointer-events: none;
   transition: transform 0.6s cubic-bezier(0.4,0,0.2,1);
 }
+.prism-ribbon-img {
+  position: relative; z-index: 1; display: block; height: 100%; width: auto; max-width: none;
+  pointer-events: none; filter: drop-shadow(0 2px 10px rgba(0,0,0,0.42));
+}
+.ribbon-ext {
+  position: absolute; top: 0; height: 100%; width: 6000px;
+  background-repeat: repeat-x; background-size: auto 100%; pointer-events: none;
+  filter: drop-shadow(0 2px 10px rgba(0,0,0,0.42));
+}
+#ribbonExtL { right: 98%; background-position: right center; }
+#ribbonExtR { left: 98%; background-position: left center; }
 
 .ribbon-zone { position: absolute; top: 0; bottom: 0; width: 33.333%; background: none; border: none; padding: 0; cursor: pointer; }
 .ribbon-zone:focus:not(:focus-visible) { outline: none; }   /* no tap-focus box on the instrument; keyboard focus keeps its ring */
@@ -2213,7 +2230,11 @@ div.dt-tile {
 <div class="tri-scrim" id="triScrim"></div>
 
 <div class="prism-ribbon" id="prismRibbon" aria-label="Prism navigator — slide to move between panels, pull down for the analytical layer">
-  <img class="prism-ribbon-img" id="prismRibbonImg" src="../src/img/prism_nav_full.png" alt="">
+  <div class="ribbon-art" id="prismRibbonArt">
+    <div class="ribbon-ext" id="ribbonExtL" aria-hidden="true"></div>
+    <img class="prism-ribbon-img" id="prismRibbonImg" src="../src/img/prism_nav_full.png" alt="">
+    <div class="ribbon-ext" id="ribbonExtR" aria-hidden="true"></div>
+  </div>
   <button class="ribbon-zone" data-col="0" type="button" aria-label="Beam"></button>
   <button class="ribbon-zone" data-col="1" type="button" aria-label="Prism"></button>
   <button class="ribbon-zone" data-col="2" type="button" aria-label="Refraction"></button>
@@ -6224,15 +6245,84 @@ applyState(true);
   };
   const ribbon    = document.getElementById('prismRibbon');
   const ribbonImg = document.getElementById('prismRibbonImg');
+  const ribbonArt = document.getElementById('prismRibbonArt');
+  const ribbonExtL = document.getElementById('ribbonExtL');
+  const ribbonExtR = document.getElementById('ribbonExtR');
   const ribbonNm  = document.getElementById('ribbonName');
   // upperTabs retired 2026-07-11 — the ribbon is the single nav instrument
   const scrim     = document.getElementById('triScrim');
 
-  // Which slice of the ribbon art centres per column; where the prism triangle
-  // sits (anchors the upper tabs). Tunable against the illustration in-browser.
-  const COL_FRAC = [0.20, 0.62, 0.86];   // beam line · prism triangle · spectrum
-  const TRIANGLE_FRAC = 0.70;
-  const RIBBON_ASPECT = 2000 / 232;
+  // ── Ribbon variants (Claude Design PrismNav, integrated 2026-07-18) ──
+  // Five hand-drawn ribbons + the original full art. Per-drawing anchors:
+  // fx = the prism triangle's fraction across THAT artwork (from the Design
+  // component's VARIANTS table — fixed paintings, never redrawn); beam/fan =
+  // the outer column seats, SEEDED from each drawing's description and
+  // tunable against the illustration in-browser (setRibbonVariant below re-
+  // seats live). seat = the col-1 slice centre (full art keeps its authored
+  // .62/.70 split; new ribbons seat the triangle itself). Aspect is measured
+  // from the loaded image — no more hardcoded 2000/232 — so art swaps are
+  // safe. A missing variant file falls back to the full art (the five PNGs
+  // arrive from the Design project by hand; until then every variant is
+  // inert).
+  const RIBBON_VARIANTS = {
+    // r0 in the Design set is BYTE-IDENTICAL to prism_nav_full.png (md5-
+    // verified 2026-07-18) — 'full' IS variant 0, keeping its field-tuned
+    // anchors (Design's fx .51 for it was wrong; .70 is the tuned truth).
+    // fx for r1–r4 = Design's numbers, eyeball-confirmed against the art;
+    // r5–r8 are new drawings beyond the Design table, anchors measured
+    // 2026-07-18. r5 is a MIRRORED composition — spectrum fans in from the
+    // LEFT, beams exit right — so its beam/fan seats swap sides (seats are
+    // seats, not an ordering; the ribbon glides the other way, by design).
+    // All nine: transparent backgrounds, alpha-verified.
+    full: { src: '../src/img/prism_nav_full.png', beam: 0.20, seat: 0.62, fx: 0.70, fan: 0.86 }, // = ribbon-0, clean production
+    r1:   { src: '../src/img/nav/ribbon-1.png',   beam: 0.25, seat: 0.63, fx: 0.63, fan: 0.85 }, // steep refraction fan
+    r2:   { src: '../src/img/nav/ribbon-2.png',   beam: 0.22, seat: 0.64, fx: 0.64, fan: 0.85 }, // long beam left, wide fan right
+    r3:   { src: '../src/img/nav/ribbon-3.png',   beam: 0.25, seat: 0.60, fx: 0.60, fan: 0.82 }, // single-beam, green flare
+    r4:   { src: '../src/img/nav/ribbon-4.png',   beam: 0.25, seat: 0.63, fx: 0.63, fan: 0.85 }, // full spectrum both sides
+    r5:   { src: '../src/img/nav/ribbon-5.png',   beam: 0.72, seat: 0.42, fx: 0.42, fan: 0.15 }, // MIRRORED — fan left, beams right
+    r6:   { src: '../src/img/nav/ribbon-6.png',   beam: 0.25, seat: 0.58, fx: 0.58, fan: 0.85 }, // twin beams in, fan to far corner
+    r7:   { src: '../src/img/nav/ribbon-7.png',   beam: 0.22, seat: 0.52, fx: 0.52, fan: 0.82 }, // near-symmetric, compact fan
+    r8:   { src: '../src/img/nav/ribbon-8.png',   beam: 0.30, seat: 0.66, fx: 0.66, fan: 0.88 }, // long beam, wide down-fan
+  };
+  Object.keys(RIBBON_VARIANTS).forEach(k => { RIBBON_VARIANTS[k].ext = '../src/img/nav/ext-' + k + '-'; });
+  RIBBON_VARIANTS.r0 = RIBBON_VARIANTS.full;   // alias — same painting, no dupe on disk
+  // Beam/spectrum span the screen at all times (Sailor 2026-07-18): tiled
+  // palindromic slices of each painting's own edges continue it past both
+  // container edges. Missing strip files simply leave the ends bare.
+  function applyRibbonExt() {
+    ribbonExtL.style.backgroundImage = 'url(' + RV.ext + 'L.png)';
+    ribbonExtR.style.backgroundImage = 'url(' + RV.ext + 'R.png)';
+  }
+  const RIBBON_KEY = 'prism.ribbonVariant';
+  let RV = RIBBON_VARIANTS[(function(){ try { return localStorage.getItem(RIBBON_KEY); } catch(_) { return null; } })()] || RIBBON_VARIANTS.full;
+  let COL_FRAC = [RV.beam, RV.seat, RV.fan];   // beam line · prism seat · spectrum
+  let TRIANGLE_FRAC = RV.fx;
+  let RIBBON_ASPECT = 2000 / 232;              // replaced by the real ratio on load
+  ribbonImg.addEventListener('load', () => {
+    if (ribbonImg.naturalWidth && ribbonImg.naturalHeight) {
+      RIBBON_ASPECT = ribbonImg.naturalWidth / ribbonImg.naturalHeight;
+      positionRibbon(false);
+    }
+  });
+  ribbonImg.addEventListener('error', () => {   // variant art not on disk yet → full art
+    if (RV !== RIBBON_VARIANTS.full) setRibbonVariant('full');
+  });
+  // Console/tuning hook — setRibbonVariant('r2') swaps art + anchors live and
+  // persists per device; setRibbonVariant('r2',{beam:.12,fan:.9}) nudges seats
+  // (persists the nudge onto the table for this session only — ship keepers
+  // back into RIBBON_VARIANTS above).
+  window.setRibbonVariant = function(key, tweaks) {
+    const v = RIBBON_VARIANTS[key]; if (!v) return Object.keys(RIBBON_VARIANTS);
+    if (tweaks) Object.assign(v, tweaks);
+    RV = v; COL_FRAC = [v.beam, v.seat, v.fan]; TRIANGLE_FRAC = v.fx;
+    try { localStorage.setItem(RIBBON_KEY, key); } catch(_) {}
+    applyRibbonExt();
+    if (ribbonImg.getAttribute('src') !== v.src) ribbonImg.src = v.src;
+    else positionRibbon(true);
+    return key;
+  };
+  if (RV !== RIBBON_VARIANTS.full) ribbonImg.src = RV.src;
+  applyRibbonExt();
   const LOWER  = ['beam', 'prism', 'refraction'];
   const UPPER  = ['diatribe', 'parallax', 'spectrum'];
   const LABELS = { 0: ['Profile', 'Diatribe'], 1: ['Prism', 'Parallax'], 2: ['Refraction', 'Spectrum'] };
@@ -6276,9 +6366,9 @@ applyState(true);
     // itself centers (2026-07-11). Side-column shades keep their slice.
     const frac = (shade && col === 1) ? TRIANGLE_FRAC : COL_FRAC[col];
     const left = Math.round(vw * 0.5 - frac * imgW);
-    if (!animated) ribbonImg.style.transition = 'none';
-    ribbonImg.style.transform = 'translateY(-50%) translateX(' + left + 'px)';
-    if (!animated) { void ribbonImg.offsetWidth; ribbonImg.style.transition = ''; }
+    if (!animated) ribbonArt.style.transition = 'none';
+    ribbonArt.style.transform = 'translateY(-50%) translateX(' + left + 'px)';
+    if (!animated) { void ribbonArt.offsetWidth; ribbonArt.style.transition = ''; }
   }
 
   // viewport point of the prism triangle at the ribbon's TARGET seat for the
@@ -6420,7 +6510,7 @@ applyState(true);
       rowShade: shade, lastC: col, lastS: shade
     };
     dragging = true;
-    ribbon.style.transition = 'none'; ribbonImg.style.transition = 'none';
+    ribbon.style.transition = 'none'; ribbonArt.style.transition = 'none';
     try { ribbon.setPointerCapture(e.pointerId); } catch (_) {}
   });
   ribbon.addEventListener('pointermove', e => {
@@ -6430,7 +6520,7 @@ applyState(true);
     // 1:1 follow, clamped to the plane's bounds
     const left = Math.max(plane.leftMin, Math.min(plane.leftMax, plane.startLeft + dx));
     const top  = Math.max(plane.topSeat, Math.min(plane.botSeat, plane.startTop + dy));
-    ribbonImg.style.transform = 'translateY(-50%) translateX(' + left + 'px)';
+    ribbonArt.style.transform = 'translateY(-50%) translateX(' + left + 'px)';
     ribbon.style.top = top + 'px';
     // which cell are we over right now?
     const vFrac = (top - plane.topSeat) / plane.travel;     // 0 = lower row, 1 = upper row
@@ -6452,7 +6542,7 @@ applyState(true);
     if (plane) {
       dragging = false;
       plane = null;
-      ribbon.style.transition = ''; ribbonImg.style.transition = '';   // restore the ease…
+      ribbon.style.transition = ''; ribbonArt.style.transition = '';   // restore the ease…
       ribbon.style.top = '';                                            // …release the inline row so CSS seats it
       applyNav(true);                                                   // ease to the nearest cell's exact seat + settle the visor
     }
