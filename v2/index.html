@@ -1385,8 +1385,16 @@ html.parallax-mode .prism-ribbon { top: calc(100% - var(--ribbon-h) - var(--safe
   background-repeat: repeat-x; background-size: auto 100%; pointer-events: none;
   filter: drop-shadow(0 2px 10px rgba(0,0,0,0.42));
 }
-#ribbonExtL { right: 98%; background-position: right center; }
-#ribbonExtR { left: 98%; background-position: left center; }
+/* Junction rule (2026-07-18, after the phone's "renders kind of weird"):
+   no masks, no fades — the tile is PHASE-ALIGNED instead. Each strip is
+   built so its slice-phase edge lands exactly over the art pixels it was
+   cut from (per-variant extGeo percentages, set inline by
+   applyRibbonExt), making the junction pixel-continuous by construction.
+   Closed compositional ends are never extended — a painting that finishes
+   its own edge (full's curling fan tip) keeps it; only open edges
+   continue. */
+#ribbonExtL { right: 92%; background-position: right center; }
+#ribbonExtR { left: 94%; background-position: left center; }
 
 .ribbon-zone { position: absolute; top: 0; bottom: 0; width: 33.333%; background: none; border: none; padding: 0; cursor: pointer; }
 .ribbon-zone:focus:not(:focus-visible) { outline: none; }   /* no tap-focus box on the instrument; keyboard focus keeps its ring */
@@ -6284,14 +6292,31 @@ applyState(true);
     r7:   { src: '../src/img/nav/ribbon-7.png',   beam: 0.22, seat: 0.52, fx: 0.52, fan: 0.82 }, // near-symmetric, compact fan
     r8:   { src: '../src/img/nav/ribbon-8.png',   beam: 0.30, seat: 0.66, fx: 0.66, fan: 0.88 }, // long beam, wide down-fan
   };
-  Object.keys(RIBBON_VARIANTS).forEach(k => { RIBBON_VARIANTS[k].ext = '../src/img/nav/ext-' + k + '-'; });
+  // Beam/spectrum span the screen (Sailor 2026-07-18): phase-aligned
+  // palindromic slices of each painting's own open edges continue it past
+  // both container edges. extGeo = [L,R] junction fractions (% of art
+  // width) from the strip generator; null = that edge is compositionally
+  // CLOSED (the painting finishes it) and is never extended. full's fan
+  // tip curls shut — beam-only.
+  const EXT_GEO = { full:[7.55,null], r1:[7.47,94.49], r2:[7.52,93.85], r3:[11.27,94.09],
+                    r4:[7.48,93.85], r5:[7.5,94.46], r6:[7.5,94.46], r7:[7.5,94.46], r8:[7.5,94.46] };
+  Object.keys(RIBBON_VARIANTS).forEach(k => {
+    RIBBON_VARIANTS[k].ext = '../src/img/nav/ext-' + k + '-';
+    RIBBON_VARIANTS[k].extGeo = EXT_GEO[k] || [null, null];
+  });
   RIBBON_VARIANTS.r0 = RIBBON_VARIANTS.full;   // alias — same painting, no dupe on disk
-  // Beam/spectrum span the screen at all times (Sailor 2026-07-18): tiled
-  // palindromic slices of each painting's own edges continue it past both
-  // container edges. Missing strip files simply leave the ends bare.
   function applyRibbonExt() {
-    ribbonExtL.style.backgroundImage = 'url(' + RV.ext + 'L.png)';
-    ribbonExtR.style.backgroundImage = 'url(' + RV.ext + 'R.png)';
+    const g = RV.extGeo || [null, null];
+    if (g[0] != null) {
+      ribbonExtL.style.display = '';
+      ribbonExtL.style.right = (100 - g[0]) + '%';
+      ribbonExtL.style.backgroundImage = 'url(' + RV.ext + 'L.png)';
+    } else ribbonExtL.style.display = 'none';
+    if (g[1] != null) {
+      ribbonExtR.style.display = '';
+      ribbonExtR.style.left = g[1] + '%';
+      ribbonExtR.style.backgroundImage = 'url(' + RV.ext + 'R.png)';
+    } else ribbonExtR.style.display = 'none';
   }
   const RIBBON_KEY = 'prism.ribbonVariant';
   let RV = RIBBON_VARIANTS[(function(){ try { return localStorage.getItem(RIBBON_KEY); } catch(_) { return null; } })()] || RIBBON_VARIANTS.full;
