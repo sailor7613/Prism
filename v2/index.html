@@ -1405,6 +1405,15 @@ html.parallax-mode .ted-dock {
    continue. */
 #ribbonExtL { right: 92%; background-position: right center; }
 #ribbonExtR { left: 94%; background-position: left center; }
+/* Fan-side extension plates (Design 07-18): 2×-artwork drawn continuations
+   that butt on at the painting's cut line — angle-true, easing to
+   asymptote. Positioned per-variant by applyRibbonExt (PLATE_GEO.at);
+   no-repeat, the plate simply ends where its drawing ends. */
+.ribbon-plate { position: absolute; top: 0; height: 100%; width: 6000px;
+  background-repeat: no-repeat; background-size: auto 100%; pointer-events: none;
+  filter: drop-shadow(0 2px 10px rgba(0,0,0,0.42)); display: none; }
+#ribbonPlateR { background-position: left center; }
+#ribbonPlateL { background-position: right center; }
 
 .ribbon-zone { position: absolute; top: 0; bottom: 0; width: 33.333%; background: none; border: none; padding: 0; cursor: pointer; }
 .ribbon-zone:focus:not(:focus-visible) { outline: none; }   /* no tap-focus box on the instrument; keyboard focus keeps its ring */
@@ -2250,6 +2259,8 @@ div.dt-tile {
 <div class="prism-ribbon" id="prismRibbon" aria-label="Prism navigator — slide to move between panels, pull down for the analytical layer">
   <div class="ribbon-art" id="prismRibbonArt">
     <div class="ribbon-ext" id="ribbonExtL" aria-hidden="true"></div>
+    <div class="ribbon-plate" id="ribbonPlateL" aria-hidden="true"></div>
+    <div class="ribbon-plate" id="ribbonPlateR" aria-hidden="true"></div>
     <img class="prism-ribbon-img" id="prismRibbonImg" src="../src/img/prism_nav_full.png" alt="">
     <div class="ribbon-ext" id="ribbonExtR" aria-hidden="true"></div>
   </div>
@@ -6266,6 +6277,8 @@ applyState(true);
   const ribbonArt = document.getElementById('prismRibbonArt');
   const ribbonExtL = document.getElementById('ribbonExtL');
   const ribbonExtR = document.getElementById('ribbonExtR');
+  const ribbonPlateL = document.getElementById('ribbonPlateL');
+  const ribbonPlateR = document.getElementById('ribbonPlateR');
   const ribbonNm  = document.getElementById('ribbonName');
   // upperTabs retired 2026-07-11 — the ribbon is the single nav instrument
   const scrim     = document.getElementById('triScrim');
@@ -6301,25 +6314,40 @@ applyState(true);
     r6:   { src: '../src/img/nav/ribbon-6.png',   beam: 0.25, seat: 0.58, fx: 0.58, fan: 0.85 }, // twin beams in, fan to far corner
     r7:   { src: '../src/img/nav/ribbon-7.png',   beam: 0.22, seat: 0.52, fx: 0.52, fan: 0.82 }, // near-symmetric, compact fan
     r8:   { src: '../src/img/nav/ribbon-8.png',   beam: 0.30, seat: 0.66, fx: 0.66, fan: 0.88 }, // long beam, wide down-fan
+    r9:   { src: '../src/img/nav/ribbon-9.png',   beam: 0.15, seat: 0.372, fx: 0.372, fan: 0.75 }, // bold white prism, asterisk core — fx is Design's authored number (composed from element plates)
   };
-  // Beam-side extension only (RULED 2026-07-18, live phone verdict): the
-  // beam's parallel lines continue perfectly as phase-aligned palindromic
-  // tiles of the painting's own edge. The FAN side is retired from tiling —
-  // a diverging fan flattened to parallel bands when tiled, and the angle
-  // must remain. Angle-true fan continuations are commissioned from Claude
-  // Design (see the Design project's handoff/nav-fan-extension-brief);
-  // when that art lands, restore each variant's R fraction below.
-  // Generator R values, kept for that day: full:closed, r1:94.49,
-  // r2:93.85, r3:94.09, r4:93.85, r5–r8:94.46.
-  // extGeo = [L,R] junction fractions (% of art width); null = never
-  // extend this edge (closed composition, or awaiting Design art).
+  // Extension system, two mechanisms (2026-07-18):
+  // BEAM sides — parallel lines tile honestly: phase-aligned palindromic
+  // slices of the painting's own edge (EXT_GEO fractions, % of art width).
+  // FAN sides — Design delivered angle-true extension PLATES against the
+  // fan-extension brief: each is 2 artwork-widths of drawn continuation
+  // that butts on at the painting's cut line, every line leaving at its
+  // measured angle then easing toward its asymptote (PLATE_GEO.at = the
+  // cut line as % of art width; the plate layer is positioned there and
+  // rides the wrapper like everything else). full keeps its closed fan
+  // tip — no plate, beam-only. r9 (new painting, Design 07-18) awaits its
+  // plate: fan bare past the art until then. Coverage cap: a plate spans
+  // 2×artwork beyond the cut — beyond ~3.4 artwork-widths of viewport from
+  // the art's left edge (ultrawide edge case) the fan ends; revisit with a
+  // far-field tile of the plate's eased edge if it ever bites.
   const EXT_GEO = { full:[7.55,null], r1:[7.47,null], r2:[7.52,null], r3:[11.27,null],
-                    r4:[7.48,null], r5:[null,94.46], r6:[7.5,null], r7:[7.5,null], r8:[7.5,null] };
-  // r5 is the MIRRORED painting — fan on the LEFT (retired side), beam on
-  // the RIGHT (its extension stays live).
+                    r4:[7.48,null], r5:[null,94.46], r6:[7.5,null], r7:[7.5,null], r8:[7.5,null],
+                    r9:[7.48,null] };
+  // r5 is MIRRORED — fan LEFT (plate side), beam RIGHT (tile side).
+  const PLATE_GEO = {                                    // cutPx/srcW from fanext-geo.json
+    r1:{ file:'ribbon-1-fanext.png', at:99.51, side:'R' },
+    r2:{ file:'ribbon-2-fanext.png', at:99.30, side:'R' },
+    r3:{ file:'ribbon-3-fanext.png', at:99.55, side:'R' },
+    r4:{ file:'ribbon-4-fanext.png', at:99.30, side:'R' },
+    r5:{ file:'ribbon-5-fanext.png', at:0.46,  side:'L' },
+    r6:{ file:'ribbon-6-fanext.png', at:99.50, side:'R' },
+    r7:{ file:'ribbon-7-fanext.png', at:99.50, side:'R' },
+    r8:{ file:'ribbon-8-fanext.png', at:99.50, side:'R' },
+  };
   Object.keys(RIBBON_VARIANTS).forEach(k => {
     RIBBON_VARIANTS[k].ext = '../src/img/nav/ext-' + k + '-';
     RIBBON_VARIANTS[k].extGeo = EXT_GEO[k] || [null, null];
+    RIBBON_VARIANTS[k].plate = PLATE_GEO[k] || null;
   });
   RIBBON_VARIANTS.r0 = RIBBON_VARIANTS.full;   // alias — same painting, no dupe on disk
   function applyRibbonExt() {
@@ -6334,6 +6362,18 @@ applyState(true);
       ribbonExtR.style.left = g[1] + '%';
       ribbonExtR.style.backgroundImage = 'url(' + RV.ext + 'R.png)';
     } else ribbonExtR.style.display = 'none';
+    const p = RV.plate;
+    if (p && p.side === 'R') {
+      ribbonPlateR.style.display = '';
+      ribbonPlateR.style.left = p.at + '%';
+      ribbonPlateR.style.backgroundImage = 'url(../src/img/nav/' + p.file + ')';
+      ribbonPlateL.style.display = 'none';
+    } else if (p && p.side === 'L') {
+      ribbonPlateL.style.display = '';
+      ribbonPlateL.style.right = (100 - p.at) + '%';
+      ribbonPlateL.style.backgroundImage = 'url(../src/img/nav/' + p.file + ')';
+      ribbonPlateR.style.display = 'none';
+    } else { ribbonPlateL.style.display = 'none'; ribbonPlateR.style.display = 'none'; }
   }
   const RIBBON_KEY = 'prism.ribbonVariant';
   let RV = RIBBON_VARIANTS[(function(){ try { return localStorage.getItem(RIBBON_KEY); } catch(_) { return null; } })()] || RIBBON_VARIANTS.full;
