@@ -1,11 +1,11 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-07-20T16:48:45.477Z · 40 legislative + 7 news (GDELT, 3d)
+// 2026-07-20T20:00:53.263Z · 40 legislative + 8 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1784566107580,
+    "ts": 1784577632223,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
@@ -259,11 +259,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1784566107580,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.842,
+      "salience": 0.841,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -532,7 +532,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1784566107579,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1784566107580,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.797,
+      "salience": 0.796,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3254,13 +3254,287 @@ window.PRISM_CANDIDATES = [
     "mts": 1784044297586
   },
   {
+    "cid": "cand_leg_sjres-119-196",
+    "source": "legislative",
+    "ts": 1784577632222,
+    "raw": {
+      "method": "legislative_rollcall_v1",
+      "billId": "sjres-119-196",
+      "salience": 0.74,
+      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
+      "votes": [
+        {
+          "voteId": "s-119-2-190",
+          "chamber": "senate",
+          "date": "June 24, 2026,  09:16 PM",
+          "question": "On the Motion to Proceed",
+          "result": "Motion to Proceed Rejected",
+          "margin": -0.072,
+          "totals": {
+            "yea": 45,
+            "nay": 52,
+            "present": 0,
+            "notVoting": 3
+          },
+          "party": {
+            "D": {
+              "yea": 43,
+              "nay": 0
+            },
+            "R": {
+              "yea": 0,
+              "nay": 52
+            },
+            "I": {
+              "yea": 2,
+              "nay": 0
+            }
+          },
+          "positions": {
+            "yea": [
+              "A000382",
+              "B001230",
+              "B001277",
+              "B001303",
+              "B001288",
+              "C000127",
+              "C001088",
+              "C001113",
+              "D000622",
+              "D000563",
+              "F000479",
+              "G000574",
+              "G000555",
+              "H001076",
+              "H001046",
+              "H000273",
+              "H001042",
+              "K000384",
+              "K000377",
+              "K000394",
+              "K000383",
+              "K000367",
+              "M000133",
+              "M001176",
+              "M001169",
+              "M001111",
+              "O000174",
+              "P000145",
+              "P000595",
+              "R000122",
+              "R000608",
+              "S000033",
+              "S001194",
+              "S001150",
+              "S000148",
+              "S001208",
+              "S001203",
+              "V000128",
+              "W000805",
+              "W000790",
+              "W000817",
+              "W000800",
+              "W000802",
+              "W000779"
+            ],
+            "nay": [
+              "B001299",
+              "B001261",
+              "B001243",
+              "B001236",
+              "B001319",
+              "B001305",
+              "C001047",
+              "C001075",
+              "C001035",
+              "C001056",
+              "C001095",
+              "C001096",
+              "C000880",
+              "C001098",
+              "C001114",
+              "D000618",
+              "E000295",
+              "F000463",
+              "G000359",
+              "G000386",
+              "H000601",
+              "H001089",
+              "H001061",
+              "H001104",
+              "H001079",
+              "J000293",
+              "J000312",
+              "K000393",
+              "L000575",
+              "L000577",
+              "L000571",
+              "M001198",
+              "M001243",
+              "M001244",
+              "M000934",
+              "M001242",
+              "M001153",
+              "P000603",
+              "R000618",
+              "R000584",
+              "R000605",
+              "S001227",
+              "S001217",
+              "S001184",
+              "S001232",
+              "S001198",
+              "T000250",
+              "T000476",
+              "T000278",
+              "W000437",
+              "Y000064"
+            ],
+            "present": [],
+            "notVoting": [
+              "B001267",
+              "M000355",
+              "S001181"
+            ]
+          }
+        }
+      ]
+    },
+    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
+    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
+    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Disapprove rule",
+        "neg": "Uphold rule"
+      },
+      "y": {
+        "pos": "Executive overreach",
+        "neg": "Agency discretion legitimate"
+      }
+    },
+    "prevalentAxisGuess": "x",
+    "members": [
+      "A000382",
+      "B001230",
+      "B001277",
+      "B001303",
+      "B001288",
+      "C000127",
+      "C001088",
+      "C001113",
+      "D000622",
+      "D000563",
+      "F000479",
+      "G000574",
+      "G000555",
+      "H001076",
+      "H001046",
+      "H000273",
+      "H001042",
+      "K000384",
+      "K000377",
+      "K000394",
+      "K000383",
+      "K000367",
+      "M000133",
+      "M001176",
+      "M001169",
+      "M001111",
+      "O000174",
+      "P000145",
+      "P000595",
+      "R000122",
+      "R000608",
+      "S000033",
+      "S001194",
+      "S001150",
+      "S000148",
+      "S001208",
+      "S001203",
+      "V000128",
+      "W000805",
+      "W000790",
+      "W000817",
+      "W000800",
+      "W000802",
+      "W000779",
+      "B001299",
+      "B001261",
+      "B001243",
+      "B001236",
+      "B001319",
+      "B001305",
+      "C001047",
+      "C001075",
+      "C001035",
+      "C001056",
+      "C001095",
+      "C001096",
+      "C000880",
+      "C001098",
+      "C001114",
+      "D000618",
+      "E000295",
+      "F000463",
+      "G000359",
+      "G000386",
+      "H000601",
+      "H001089",
+      "H001061",
+      "H001104",
+      "H001079",
+      "J000293",
+      "J000312",
+      "K000393",
+      "L000575",
+      "L000577",
+      "L000571",
+      "M001198",
+      "M001243",
+      "M001244",
+      "M000934",
+      "M001242",
+      "M001153",
+      "P000603",
+      "R000618",
+      "R000584",
+      "R000605",
+      "S001227",
+      "S001217",
+      "S001184",
+      "S001232",
+      "S001198",
+      "T000250",
+      "T000476",
+      "T000278",
+      "W000437",
+      "Y000064"
+    ],
+    "bills": [
+      "sjres-119-196"
+    ],
+    "fitness": {
+      "score": 0.3,
+      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:28:30.038Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "s-119-2-190",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297586
+  },
+  {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1784566107580,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.74,
+      "salience": 0.739,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4656,287 +4930,13 @@ window.PRISM_CANDIDATES = [
     "mts": 1784044297586
   },
   {
-    "cid": "cand_leg_sjres-119-196",
-    "source": "legislative",
-    "ts": 1784566107580,
-    "raw": {
-      "method": "legislative_rollcall_v1",
-      "billId": "sjres-119-196",
-      "salience": 0.74,
-      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
-      "votes": [
-        {
-          "voteId": "s-119-2-190",
-          "chamber": "senate",
-          "date": "June 24, 2026,  09:16 PM",
-          "question": "On the Motion to Proceed",
-          "result": "Motion to Proceed Rejected",
-          "margin": -0.072,
-          "totals": {
-            "yea": 45,
-            "nay": 52,
-            "present": 0,
-            "notVoting": 3
-          },
-          "party": {
-            "D": {
-              "yea": 43,
-              "nay": 0
-            },
-            "R": {
-              "yea": 0,
-              "nay": 52
-            },
-            "I": {
-              "yea": 2,
-              "nay": 0
-            }
-          },
-          "positions": {
-            "yea": [
-              "A000382",
-              "B001230",
-              "B001277",
-              "B001303",
-              "B001288",
-              "C000127",
-              "C001088",
-              "C001113",
-              "D000622",
-              "D000563",
-              "F000479",
-              "G000574",
-              "G000555",
-              "H001076",
-              "H001046",
-              "H000273",
-              "H001042",
-              "K000384",
-              "K000377",
-              "K000394",
-              "K000383",
-              "K000367",
-              "M000133",
-              "M001176",
-              "M001169",
-              "M001111",
-              "O000174",
-              "P000145",
-              "P000595",
-              "R000122",
-              "R000608",
-              "S000033",
-              "S001194",
-              "S001150",
-              "S000148",
-              "S001208",
-              "S001203",
-              "V000128",
-              "W000805",
-              "W000790",
-              "W000817",
-              "W000800",
-              "W000802",
-              "W000779"
-            ],
-            "nay": [
-              "B001299",
-              "B001261",
-              "B001243",
-              "B001236",
-              "B001319",
-              "B001305",
-              "C001047",
-              "C001075",
-              "C001035",
-              "C001056",
-              "C001095",
-              "C001096",
-              "C000880",
-              "C001098",
-              "C001114",
-              "D000618",
-              "E000295",
-              "F000463",
-              "G000359",
-              "G000386",
-              "H000601",
-              "H001089",
-              "H001061",
-              "H001104",
-              "H001079",
-              "J000293",
-              "J000312",
-              "K000393",
-              "L000575",
-              "L000577",
-              "L000571",
-              "M001198",
-              "M001243",
-              "M001244",
-              "M000934",
-              "M001242",
-              "M001153",
-              "P000603",
-              "R000618",
-              "R000584",
-              "R000605",
-              "S001227",
-              "S001217",
-              "S001184",
-              "S001232",
-              "S001198",
-              "T000250",
-              "T000476",
-              "T000278",
-              "W000437",
-              "Y000064"
-            ],
-            "present": [],
-            "notVoting": [
-              "B001267",
-              "M000355",
-              "S001181"
-            ]
-          }
-        }
-      ]
-    },
-    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
-    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
-    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
-    "suggestedAxes": {
-      "x": {
-        "pos": "Disapprove rule",
-        "neg": "Uphold rule"
-      },
-      "y": {
-        "pos": "Executive overreach",
-        "neg": "Agency discretion legitimate"
-      }
-    },
-    "prevalentAxisGuess": "x",
-    "members": [
-      "A000382",
-      "B001230",
-      "B001277",
-      "B001303",
-      "B001288",
-      "C000127",
-      "C001088",
-      "C001113",
-      "D000622",
-      "D000563",
-      "F000479",
-      "G000574",
-      "G000555",
-      "H001076",
-      "H001046",
-      "H000273",
-      "H001042",
-      "K000384",
-      "K000377",
-      "K000394",
-      "K000383",
-      "K000367",
-      "M000133",
-      "M001176",
-      "M001169",
-      "M001111",
-      "O000174",
-      "P000145",
-      "P000595",
-      "R000122",
-      "R000608",
-      "S000033",
-      "S001194",
-      "S001150",
-      "S000148",
-      "S001208",
-      "S001203",
-      "V000128",
-      "W000805",
-      "W000790",
-      "W000817",
-      "W000800",
-      "W000802",
-      "W000779",
-      "B001299",
-      "B001261",
-      "B001243",
-      "B001236",
-      "B001319",
-      "B001305",
-      "C001047",
-      "C001075",
-      "C001035",
-      "C001056",
-      "C001095",
-      "C001096",
-      "C000880",
-      "C001098",
-      "C001114",
-      "D000618",
-      "E000295",
-      "F000463",
-      "G000359",
-      "G000386",
-      "H000601",
-      "H001089",
-      "H001061",
-      "H001104",
-      "H001079",
-      "J000293",
-      "J000312",
-      "K000393",
-      "L000575",
-      "L000577",
-      "L000571",
-      "M001198",
-      "M001243",
-      "M001244",
-      "M000934",
-      "M001242",
-      "M001153",
-      "P000603",
-      "R000618",
-      "R000584",
-      "R000605",
-      "S001227",
-      "S001217",
-      "S001184",
-      "S001232",
-      "S001198",
-      "T000250",
-      "T000476",
-      "T000278",
-      "W000437",
-      "Y000064"
-    ],
-    "bills": [
-      "sjres-119-196"
-    ],
-    "fitness": {
-      "score": 0.3,
-      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
-      "method": "m2_constitutive_v1",
-      "ts": "2026-07-14T04:28:30.038Z"
-    },
-    "status": "new",
-    "voteMap": {
-      "voteId": "s-119-2-190",
-      "yeaPole": "pos"
-    },
-    "mts": 1784044297586
-  },
-  {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1784566107580,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.726,
+      "salience": 0.725,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5203,7 +5203,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1784566107579,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
@@ -6605,11 +6605,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1784566107579,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.71,
+      "salience": 0.709,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -8007,11 +8007,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1784566107578,
+    "ts": 1784577632220,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.7,
+      "salience": 0.699,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -9176,11 +9176,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1784566107580,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.663,
+      "salience": 0.662,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -10110,11 +10110,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1041",
     "source": "legislative",
-    "ts": 1784566107579,
+    "ts": 1784577632221,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1041",
-      "salience": 0.653,
+      "salience": 0.652,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1041",
       "votes": [
         {
@@ -11507,11 +11507,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2616",
     "source": "legislative",
-    "ts": 1784566107579,
+    "ts": 1784577632221,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2616",
-      "salience": 0.65,
+      "salience": 0.649,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2616",
       "votes": [
         {
@@ -12901,11 +12901,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1784566107579,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
-      "salience": 0.647,
+      "salience": 0.646,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2913",
       "votes": [
         {
@@ -13833,7 +13833,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1784566107580,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
@@ -14109,11 +14109,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1784566107580,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
-      "salience": 0.644,
+      "salience": 0.643,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8312",
       "votes": [
         {
@@ -15042,11 +15042,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7567",
     "source": "legislative",
-    "ts": 1784566107578,
+    "ts": 1784577632220,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7567",
-      "salience": 0.635,
+      "salience": 0.634,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7567",
       "votes": [
         {
@@ -20699,7 +20699,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1784566107580,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
@@ -21632,11 +21632,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6260",
     "source": "legislative",
-    "ts": 1784566107579,
+    "ts": 1784577632221,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6260",
-      "salience": 0.621,
+      "salience": 0.62,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6260",
       "votes": [
         {
@@ -23034,11 +23034,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8365",
     "source": "legislative",
-    "ts": 1784566107579,
+    "ts": 1784577632221,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8365",
-      "salience": 0.621,
+      "salience": 0.62,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8365",
       "votes": [
         {
@@ -24436,7 +24436,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1346",
     "source": "legislative",
-    "ts": 1784566107578,
+    "ts": 1784577632221,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1346",
@@ -25836,7 +25836,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-141",
     "source": "legislative",
-    "ts": 1784566107580,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-141",
@@ -26112,7 +26112,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-132",
     "source": "legislative",
-    "ts": 1784566107580,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-132",
@@ -26388,7 +26388,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-130",
     "source": "legislative",
-    "ts": 1784566107580,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-130",
@@ -26664,11 +26664,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6047",
     "source": "legislative",
-    "ts": 1784566107579,
+    "ts": 1784577632221,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6047",
-      "salience": 0.557,
+      "salience": 0.556,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6047",
       "votes": [
         {
@@ -27589,11 +27589,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6387",
     "source": "legislative",
-    "ts": 1784566107577,
+    "ts": 1784577632220,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6387",
-      "salience": 0.518,
+      "salience": 0.517,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6387",
       "votes": [
         {
@@ -28987,11 +28987,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4690",
     "source": "legislative",
-    "ts": 1784566107577,
+    "ts": 1784577632219,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4690",
-      "salience": 0.515,
+      "salience": 0.514,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4690",
       "votes": [
         {
@@ -30385,7 +30385,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-99",
     "source": "legislative",
-    "ts": 1784566107580,
+    "ts": 1784577632223,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-99",
@@ -30659,7 +30659,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1784566107580,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
@@ -32062,11 +32062,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-139",
     "source": "legislative",
-    "ts": 1784566107580,
+    "ts": 1784577632223,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-139",
-      "salience": 0.496,
+      "salience": 0.495,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/139",
       "votes": [
         {
@@ -32337,11 +32337,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5587",
     "source": "legislative",
-    "ts": 1784566107577,
+    "ts": 1784577632220,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5587",
-      "salience": 0.445,
+      "salience": 0.444,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5587",
       "votes": [
         {
@@ -33264,11 +33264,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1784566107580,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.43,
+      "salience": 0.429,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -34185,11 +34185,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1784566107580,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.419,
+      "salience": 0.418,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -35103,11 +35103,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5625",
     "source": "legislative",
-    "ts": 1784566107579,
+    "ts": 1784577632221,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5625",
-      "salience": 0.383,
+      "salience": 0.382,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5625",
       "votes": [
         {
@@ -36038,7 +36038,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1784566107580,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
@@ -36937,11 +36937,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8469",
     "source": "legislative",
-    "ts": 1784566107579,
+    "ts": 1784577632221,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8469",
-      "salience": 0.353,
+      "salience": 0.352,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8469",
       "votes": [
         {
@@ -38339,11 +38339,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4465",
     "source": "legislative",
-    "ts": 1784566107578,
+    "ts": 1784577632221,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4465",
-      "salience": 0.343,
+      "salience": 0.342,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4465",
       "votes": [
         {
@@ -39222,11 +39222,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1784566107579,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.33,
+      "salience": 0.329,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -40156,11 +40156,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2853",
     "source": "legislative",
-    "ts": 1784566107578,
+    "ts": 1784577632221,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2853",
-      "salience": 0.26,
+      "salience": 0.259,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2853",
       "votes": [
         {
@@ -41074,11 +41074,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1784566107579,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
-      "salience": 0.256,
+      "salience": 0.255,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/254",
       "votes": [
         {
@@ -42003,12 +42003,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_150-baby-born",
     "source": "news",
-    "ts": 1784566125467,
+    "ts": 1784577653249,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.989,
+      "salience": 0.969,
       "articles": [
         {
           "title": "JD and Usha Vance welcome a baby boy , the first child born to a sitting VP in more than 150 years",
@@ -42107,14 +42107,92 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_begins-draft-history",
+    "cid": "cand_news_attacks-campaign-ossoff",
     "source": "news",
-    "ts": 1784566125466,
+    "ts": 1784577653250,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.75,
+      "salience": 0.876,
+      "articles": [
+        {
+          "title": "Ossoff fuels Senate reelection campaign with attacks on Trump",
+          "url": "https://www.wrdw.com/2026/07/20/ossoff-fuels-senate-reelection-campaign-with-attacks-trump/",
+          "domain": "wrdw.com",
+          "seendate": "2026-07-20T17:45:00Z",
+          "image": "https://gray-wrdw-prod.gtv-cdn.com/resizer/v2/VCDK6V7NDZHFRDE7NHZK3BPIJQ.jpg?auth=57e0821af4d93c8268d998be6b585437dd4a9c456b68da1917ca744cd0ac2221&smart=true"
+        },
+        {
+          "title": "Sen . Ossoff fuels reelection campaign with attacks on Trump | News , Sports , Jobs",
+          "url": "https://www.mauinews.com/wire/?category=5186&ID=396412",
+          "domain": "mauinews.com",
+          "seendate": "2026-07-20T08:30:00Z",
+          "image": "https://s3.amazonaws.com/ogden_images/www.mauinews.com/images/2018/02/20104449/fb.jpg"
+        },
+        {
+          "title": "Sen . Ossoff fuels reelection campaign with attacks on Trump",
+          "url": "https://www.pilotonline.com/2026/07/18/ossoff-reelection-campaign-attacks-trump/",
+          "domain": "pilotonline.com",
+          "seendate": "2026-07-18T22:00:00Z",
+          "image": "https://www.pilotonline.com/wp-content/uploads/2026/07/Senate_DNI_Clayton_7_86_-1.jpg"
+        },
+        {
+          "title": "Sen . Ossoff fuels reelection campaign with attacks on Trump",
+          "url": "https://www.bangordailynews.com/2026/07/18/nation/sen-ossoff-fuels-reelection-campaign-with-attacks-on-trump/",
+          "domain": "bangordailynews.com",
+          "seendate": "2026-07-18T17:15:00Z",
+          "image": "https://i0.wp.com/bdn-data.s3.amazonaws.com/uploads/2026/07/preview-1068.jpg?fit=1024%2C682&ssl=1"
+        },
+        {
+          "title": "Georgia Sen . Jon Ossoff attacks Trump amid reelection campaign",
+          "url": "https://www.chicagotribune.com/2026/07/18/georgia-jon-ossoff-reelection-campaign/",
+          "domain": "chicagotribune.com",
+          "seendate": "2026-07-18T16:45:00Z",
+          "image": "https://www.chicagotribune.com/wp-content/uploads/2026/07/Senate_DNI_Clayton_7_86_-1.jpg"
+        },
+        {
+          "title": "Sen . Ossoff fuels reelection campaign with attacks on Trump",
+          "url": "https://www.clickondetroit.com/news/politics/2026/07/18/sen-ossoff-fuels-reelection-campaign-with-attacks-on-trump/",
+          "domain": "clickondetroit.com",
+          "seendate": "2026-07-18T16:00:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/SYDNIUNHIVESHAWK655HFMGT3E.jpg?_a=DATAg1kSZAA0"
+        },
+        {
+          "title": "Sen . Ossoff fuels reelection campaign with attacks on Trump",
+          "url": "https://www.click2houston.com/news/politics/2026/07/18/sen-ossoff-fuels-reelection-campaign-with-attacks-on-trump/",
+          "domain": "click2houston.com",
+          "seendate": "2026-07-18T16:00:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/SYDNIUNHIVESHAWK655HFMGT3E.jpg?_a=DATAg1kSZAA0"
+        },
+        {
+          "title": "Sen . Ossoff fuels reelection campaign with attacks on Trump",
+          "url": "https://www.news4jax.com/news/politics/2026/07/18/sen-ossoff-fuels-reelection-campaign-with-attacks-on-trump/",
+          "domain": "news4jax.com",
+          "seendate": "2026-07-18T15:30:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/SYDNIUNHIVESHAWK655HFMGT3E.jpg?_a=DATAg1kSZAA0"
+        }
+      ]
+    },
+    "title": "Sen . Ossoff fuels reelection campaign with attacks on Trump",
+    "summary": "2026-07-20 wrdw.com: Ossoff fuels Senate reelection campaign with attacks on Trump\n2026-07-20 mauinews.com: Sen . Ossoff fuels reelection campaign with attacks on Trump | News , Sports , Jobs\n2026-07-18 pilotonline.com: Sen . Ossoff fuels reelection campaign with attacks on Trump\n2026-07-18 bangordailynews.com: Sen . Ossoff fuels reelection campaign with attacks on Trump\n2026-07-18 chicagotribune.com: Georgia Sen . Jon Ossoff attacks Trump amid reelection campaign\n2026-07-18 clickondetroit.com: Sen . Ossoff fuels reelection campaign with attacks on Trump",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_begins-draft-history",
+    "source": "news",
+    "ts": 1784577653248,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.785,
       "articles": [
         {
           "title": "Today in History : July 20 , World War I draft lottery begins",
@@ -42122,6 +42200,13 @@ window.PRISM_CANDIDATES = [
           "domain": "citizensvoice.com",
           "seendate": "2026-07-20T12:00:00Z",
           "image": "https://www.citizensvoice.com/wp-content/uploads/2026/07/AP171029122.jpg"
+        },
+        {
+          "title": "Today in History : July 20 , World War I draft lottery begins",
+          "url": "https://www.standardspeaker.com/2026/07/20/today-in-history-july-20-world-war-i-draft-lottery-begins/",
+          "domain": "standardspeaker.com",
+          "seendate": "2026-07-20T12:00:00Z",
+          "image": "https://www.standardspeaker.com/wp-content/uploads/2026/07/AP171029122.jpg"
         },
         {
           "title": "Today in History : July 20 , World War I draft lottery begins",
@@ -42161,71 +42246,7 @@ window.PRISM_CANDIDATES = [
       ]
     },
     "title": "Today in History : July 20 , World War I draft lottery begins",
-    "summary": "2026-07-20 citizensvoice.com: Today in History : July 20 , World War I draft lottery begins\n2026-07-20 thetimes-tribune.com: Today in History : July 20 , World War I draft lottery begins\n2026-07-20 record-bee.com: Today in History : July 20 , World War I draft lottery begins\n2026-07-20 eptrail.com: Today in History : July 20 , World War I draft lottery begins\n2026-07-20 advocate-news.com: Today in History : July 20 , World War I draft lottery begins\n2026-07-20 bostonherald.com: Today in History : July 20 , World War I draft lottery begins",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_attacks-campaign-ossoff",
-    "source": "news",
-    "ts": 1784566125468,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.728,
-      "articles": [
-        {
-          "title": "Sen . Ossoff fuels reelection campaign with attacks on Trump | News , Sports , Jobs",
-          "url": "https://www.mauinews.com/wire/?category=5186&ID=396412",
-          "domain": "mauinews.com",
-          "seendate": "2026-07-20T08:30:00Z",
-          "image": "https://s3.amazonaws.com/ogden_images/www.mauinews.com/images/2018/02/20104449/fb.jpg"
-        },
-        {
-          "title": "Sen . Ossoff fuels reelection campaign with attacks on Trump",
-          "url": "https://www.pilotonline.com/2026/07/18/ossoff-reelection-campaign-attacks-trump/",
-          "domain": "pilotonline.com",
-          "seendate": "2026-07-18T22:00:00Z",
-          "image": "https://www.pilotonline.com/wp-content/uploads/2026/07/Senate_DNI_Clayton_7_86_-1.jpg"
-        },
-        {
-          "title": "Georgia Sen . Jon Ossoff attacks Trump amid reelection campaign",
-          "url": "https://www.chicagotribune.com/2026/07/18/georgia-jon-ossoff-reelection-campaign/",
-          "domain": "chicagotribune.com",
-          "seendate": "2026-07-18T16:45:00Z",
-          "image": "https://www.chicagotribune.com/wp-content/uploads/2026/07/Senate_DNI_Clayton_7_86_-1.jpg"
-        },
-        {
-          "title": "Sen . Ossoff fuels reelection campaign with attacks on Trump",
-          "url": "https://www.clickondetroit.com/news/politics/2026/07/18/sen-ossoff-fuels-reelection-campaign-with-attacks-on-trump/",
-          "domain": "clickondetroit.com",
-          "seendate": "2026-07-18T16:00:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/SYDNIUNHIVESHAWK655HFMGT3E.jpg?_a=DATAg1kSZAA0"
-        },
-        {
-          "title": "Sen . Ossoff fuels reelection campaign with attacks on Trump",
-          "url": "https://www.click2houston.com/news/politics/2026/07/18/sen-ossoff-fuels-reelection-campaign-with-attacks-on-trump/",
-          "domain": "click2houston.com",
-          "seendate": "2026-07-18T16:00:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/SYDNIUNHIVESHAWK655HFMGT3E.jpg?_a=DATAg1kSZAA0"
-        },
-        {
-          "title": "Sen . Ossoff fuels reelection campaign with attacks on Trump",
-          "url": "https://www.news4jax.com/news/politics/2026/07/18/sen-ossoff-fuels-reelection-campaign-with-attacks-on-trump/",
-          "domain": "news4jax.com",
-          "seendate": "2026-07-18T15:30:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/SYDNIUNHIVESHAWK655HFMGT3E.jpg?_a=DATAg1kSZAA0"
-        }
-      ]
-    },
-    "title": "Sen . Ossoff fuels reelection campaign with attacks on Trump",
-    "summary": "2026-07-20 mauinews.com: Sen . Ossoff fuels reelection campaign with attacks on Trump | News , Sports , Jobs\n2026-07-18 pilotonline.com: Sen . Ossoff fuels reelection campaign with attacks on Trump\n2026-07-18 chicagotribune.com: Georgia Sen . Jon Ossoff attacks Trump amid reelection campaign\n2026-07-18 clickondetroit.com: Sen . Ossoff fuels reelection campaign with attacks on Trump\n2026-07-18 click2houston.com: Sen . Ossoff fuels reelection campaign with attacks on Trump\n2026-07-18 news4jax.com: Sen . Ossoff fuels reelection campaign with attacks on Trump",
+    "summary": "2026-07-20 citizensvoice.com: Today in History : July 20 , World War I draft lottery begins\n2026-07-20 standardspeaker.com: Today in History : July 20 , World War I draft lottery begins\n2026-07-20 thetimes-tribune.com: Today in History : July 20 , World War I draft lottery begins\n2026-07-20 record-bee.com: Today in History : July 20 , World War I draft lottery begins\n2026-07-20 eptrail.com: Today in History : July 20 , World War I draft lottery begins\n2026-07-20 advocate-news.com: Today in History : July 20 , World War I draft lottery begins",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -42237,12 +42258,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_darline-full-graham",
     "source": "news",
-    "ts": 1784566125468,
+    "ts": 1784577653250,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.678,
+      "salience": 0.658,
       "articles": [
         {
           "title": "Trump urges Darline Graham to run for full Senate term as funeral scheduled for Lindsey Graham",
@@ -42343,12 +42364,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_child-fourth-usha",
     "source": "news",
-    "ts": 1784566125467,
+    "ts": 1784577653249,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.666,
+      "salience": 0.646,
       "articles": [
         {
           "title": "Fourth child born to JD and Usha Vance",
@@ -42391,14 +42412,57 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_analyst-documents-election",
+    "cid": "cand_news_baby-boy-usha",
     "source": "news",
-    "ts": 1784566125467,
+    "ts": 1784577653249,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.611,
+      "salience": 0.596,
+      "articles": [
+        {
+          "title": "Vice President JD Vance and his wife , Usha , welcome a baby boy",
+          "url": "https://www.abc15.com/politics/jd-and-usha-vance-welcome-a-baby-boy-the-first-child-born-to-a-sitting-vp-in-more-than-150-years",
+          "domain": "abc15.com",
+          "seendate": "2026-07-20T17:00:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/96/8b/778c71f3449e82a013b174b3542d/ap26171734694783.jpg"
+        },
+        {
+          "title": "Vice President JD Vance and his wife , Usha , welcome a baby boy",
+          "url": "https://www.wcpo.com/politics/jd-and-usha-vance-welcome-a-baby-boy-the-first-child-born-to-a-sitting-vp-in-more-than-150-years",
+          "domain": "wcpo.com",
+          "seendate": "2026-07-20T16:15:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/96/8b/778c71f3449e82a013b174b3542d/ap26171734694783.jpg"
+        },
+        {
+          "title": "JD and Usha Vance welcome a baby boy",
+          "url": "https://www.chicagotribune.com/2026/07/19/vance-baby-born/",
+          "domain": "chicagotribune.com",
+          "seendate": "2026-07-20T02:00:00Z",
+          "image": "https://www.chicagotribune.com/wp-content/uploads/2026/07/Vance_Baby_72483-1.jpg"
+        }
+      ]
+    },
+    "title": "Vice President JD Vance and his wife , Usha , welcome a baby boy",
+    "summary": "2026-07-20 abc15.com: Vice President JD Vance and his wife , Usha , welcome a baby boy\n2026-07-20 wcpo.com: Vice President JD Vance and his wife , Usha , welcome a baby boy\n2026-07-20 chicagotribune.com: JD and Usha Vance welcome a baby boy",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_analyst-documents-election",
+    "source": "news",
+    "ts": 1784577653249,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.591,
       "articles": [
         {
           "title": "Legal analyst weighs potential investigations after Trump releases election documents",
@@ -42434,61 +42498,40 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_calls-democratic-impeachment",
+    "cid": "cand_news_change-devices-federal",
     "source": "news",
-    "ts": 1784566125468,
+    "ts": 1784577653250,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.339,
+      "salience": 0.432,
       "articles": [
         {
-          "title": "Democratic senator calls for Trump impeachment after primetime speech",
-          "url": "https://wcti12.com/news/nation-world/democratic-senator-ed-markey-calls-for-president-trumps-impeachment-after-primetime-speech-elections",
-          "domain": "wcti12.com",
-          "seendate": "2026-07-17T18:15:00Z",
-          "image": "https://wcti12.com/resources/media2/16x9/7714/1320/0x247/90/4481df2e-c0c4-4089-918a-c830662f1079-GettyImages2256158598.jpg"
+          "title": "TikTok Permitted On Federal Devices After Ownership Change",
+          "url": "https://wmmbam.iheart.com/content/2026-07-19-tiktok-permitted-on-federal-devices-after-ownership-change/",
+          "domain": "wmmbam.iheart.com",
+          "seendate": "2026-07-19T14:45:00Z",
+          "image": "https://i.iheart.com/v3/re/new_assets/60e49fd4373101e067347ab9?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "Democratic senator calls for Trump impeachment after primetime speech",
-          "url": "https://ktul.com/news/nation-world/democratic-senator-ed-markey-calls-for-president-trumps-impeachment-after-primetime-speech-elections",
-          "domain": "ktul.com",
-          "seendate": "2026-07-17T17:30:00Z",
-          "image": "https://ktul.com/resources/media2/16x9/7714/1320/0x247/90/4481df2e-c0c4-4089-918a-c830662f1079-GettyImages2256158598.jpg"
+          "title": "TikTok Permitted On Federal Devices After Ownership Change",
+          "url": "https://wsfcam.iheart.com/content/2026-07-19-tiktok-permitted-on-federal-devices-after-ownership-change/",
+          "domain": "wsfcam.iheart.com",
+          "seendate": "2026-07-19T14:45:00Z",
+          "image": "https://i.iheart.com/v3/re/new_assets/60e49fd4373101e067347ab9?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "Democratic senator calls for Trump impeachment after primetime speech",
-          "url": "https://komonews.com/news/nation-world/democratic-senator-ed-markey-calls-for-president-trumps-impeachment-after-primetime-speech-elections",
-          "domain": "komonews.com",
-          "seendate": "2026-07-17T17:15:00Z",
-          "image": "https://komonews.com/resources/media2/16x9/7714/1320/0x247/90/4481df2e-c0c4-4089-918a-c830662f1079-GettyImages2256158598.jpg"
-        },
-        {
-          "title": "Democratic senator calls for Trump impeachment after primetime speech",
-          "url": "https://katu.com/news/nation-world/democratic-senator-ed-markey-calls-for-president-trumps-impeachment-after-primetime-speech-elections",
-          "domain": "katu.com",
-          "seendate": "2026-07-17T17:15:00Z",
-          "image": "https://katu.com/resources/media2/16x9/7714/1320/0x247/90/4481df2e-c0c4-4089-918a-c830662f1079-GettyImages2256158598.jpg"
-        },
-        {
-          "title": "Democratic senator calls for Trump impeachment after primetime speech",
-          "url": "https://wwmt.com/news/nation-world/democratic-senator-ed-markey-calls-for-president-trumps-impeachment-after-primetime-speech-elections",
-          "domain": "wwmt.com",
-          "seendate": "2026-07-17T17:15:00Z",
-          "image": "https://wwmt.com/resources/media2/16x9/7714/1320/0x247/90/4481df2e-c0c4-4089-918a-c830662f1079-GettyImages2256158598.jpg"
-        },
-        {
-          "title": "Democratic senator calls for Trump impeachment after primetime speech",
-          "url": "https://turnto10.com/news/nation-world/democratic-senator-ed-markey-calls-for-president-trumps-impeachment-after-primetime-speech-elections",
-          "domain": "turnto10.com",
-          "seendate": "2026-07-17T17:00:00Z",
-          "image": "https://turnto10.com/resources/media2/16x9/7714/1320/0x247/90/4481df2e-c0c4-4089-918a-c830662f1079-GettyImages2256158598.jpg"
+          "title": "TikTok Permitted On Federal Devices After Ownership Change",
+          "url": "https://newsradio710.iheart.com/content/2026-07-19-tiktok-permitted-on-federal-devices-after-ownership-change/",
+          "domain": "newsradio710.iheart.com",
+          "seendate": "2026-07-19T14:45:00Z",
+          "image": "https://i.iheart.com/v3/re/new_assets/60e49fd4373101e067347ab9?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         }
       ]
     },
-    "title": "Democratic senator calls for Trump impeachment after primetime speech",
-    "summary": "2026-07-17 wcti12.com: Democratic senator calls for Trump impeachment after primetime speech\n2026-07-17 ktul.com: Democratic senator calls for Trump impeachment after primetime speech\n2026-07-17 komonews.com: Democratic senator calls for Trump impeachment after primetime speech\n2026-07-17 katu.com: Democratic senator calls for Trump impeachment after primetime speech\n2026-07-17 wwmt.com: Democratic senator calls for Trump impeachment after primetime speech\n2026-07-17 turnto10.com: Democratic senator calls for Trump impeachment after primetime speech",
+    "title": "TikTok Permitted On Federal Devices After Ownership Change",
+    "summary": "2026-07-19 wmmbam.iheart.com: TikTok Permitted On Federal Devices After Ownership Change\n2026-07-19 wsfcam.iheart.com: TikTok Permitted On Federal Devices After Ownership Change\n2026-07-19 newsradio710.iheart.com: TikTok Permitted On Federal Devices After Ownership Change",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
