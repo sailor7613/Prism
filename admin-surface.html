@@ -399,14 +399,21 @@
     color:var(--ink-low); margin-top:12px; }
   body.light .cite-pic{ background:rgba(20,22,30,.04); }
   body.light .cite-pic .k{ color:#7a5418; text-shadow:none; }
-  /* Placement chip (2026-07-19): tap cycles a held photo through the Z-ceiling
-     roles — introit (none) → +Z realized → −Z frustrated. The washes on the
-     Reading's boundary planes; one photo per ceiling. */
-  .cite-pic .pl{ position:absolute; left:3px; top:3px; font-family:var(--mono); font-size:8px;
+  /* Placement chips (2026-07-19, direct-assign — replaces the cycle): the
+     cycle transited +Z realized on the way to −Z frustrated, stealing the
+     realized ceiling from another photo in passing. Two chips now assign
+     each Z-ceiling directly; the lit chip taps off (back to introit). One
+     photo per ceiling still holds. */
+  .cite-pic .pl{ position:absolute; left:3px; top:3px; display:flex; gap:3px; flex-wrap:wrap; max-width:calc(100% - 26px); }
+  .cite-pic .pl span{ font-family:var(--mono); font-size:8px; white-space:nowrap;
     letter-spacing:.05em; padding:1px 5px 2px; border-radius:2px; cursor:pointer;
     background:rgba(0,0,0,.55); color:var(--ink-low); border:1px solid transparent; }
-  .cite-pic .pl.on{ color:#fff6e2; border-color:rgba(255,246,226,.4); }
-  body.light .cite-pic .pl{ background:rgba(255,255,255,.7); }
+  .cite-pic .pl span.on{ color:#fff6e2; border-color:rgba(255,246,226,.4); }
+  body.light .cite-pic .pl span{ background:rgba(255,255,255,.7); }
+  /* light theme: the lit chip's cream ink vanished on the white pill (carried
+     from the single-chip palette; caught live 2026-07-19) — dark amber, like
+     the light-theme ✓ */
+  body.light .cite-pic .pl span.on{ color:#7a5418; border-color:rgba(122,84,24,.45); }
 
   /* ── mobile chrome — the toolbar folds behind the prism nav; the menu drops from it ──
      Desktop is untouched: .pnav hides above 700px and every rule below is fenced. */
@@ -1291,24 +1298,37 @@ function renderPhotos(){
     im.onerror=()=>{ const ix=images.indexOf(p); if(ix>=0){ images.splice(ix,1); renderPhotos(); } };   // dead URL — the wire moves on
     cell.appendChild(im);
     const k=document.createElement('span'); k.className='k'; k.textContent=p.keep?'✓':''; cell.appendChild(k);
-    /* Placement chip (Photo Z-Probe grammar, ruled 2026-07-19): a held photo
-       cycles introit → +Z realized → −Z frustrated → introit. Assigning a
-       ceiling steals it from whichever photo held it (one wash per pole) and
-       holds the photo (a wash must be kept). Which image carries which pole
-       is an authored reading — the probe's ⇄ proved the choice matters.
-       Placed-MOMENT pins (place.pin) are authored in the quad view's own
-       session; this chip leaves any existing pin placement alone. */
+    /* Placement chips (Photo Z-Probe grammar, ruled 2026-07-19; direct-assign
+       2026-07-19 evening — replaces the cycle, whose transit through +Z stole
+       the realized ceiling in passing and made authoring order matter).
+       Two chips, one per Z-ceiling: tap to assign that ceiling directly —
+       stealing it from whichever photo held it (one wash per pole) and
+       holding the photo (a wash must be kept); tap the lit chip to unassign
+       (back to introit). Which image carries which pole is an authored
+       reading — the probe's ⇄ proved the choice matters. Placed-MOMENT pins
+       (place.pin) are authored in the quad view's own session; the chips
+       leave any existing pin placement alone. */
     const role=p.place&&p.place.role;
-    const pl=document.createElement('span'); pl.className='pl'+(role?' on':'');
-    pl.textContent = role==='realized'?'+Z realized' : role==='frustrated'?'−Z frustrated' : (p.place&&p.place.pin?'⌖ placed':'introit');
-    pl.title='tap to cycle: introit → +Z realized → −Z frustrated';
-    pl.onclick=(e)=>{ e.stopPropagation();
-      if(p.place&&p.place.pin) return;                       // pin moments keep their placement
-      const next = !role ? 'realized' : role==='realized' ? 'frustrated' : null;
-      if(next){ images.forEach(q=>{ if(q!==p&&q.place&&q.place.role===next) delete q.place; });   // one wash per ceiling
-        p.place={role:next}; p.keep=true; }
-      else delete p.place;
-      renderPhotos(); };
+    const pl=document.createElement('span'); pl.className='pl';
+    if(p.place&&p.place.pin){
+      const m=document.createElement('span'); m.className='on'; m.textContent='⌖ placed';
+      m.title='pin-placed moment — authored in the quad view; the role chips leave it alone';
+      pl.appendChild(m);
+    }else{
+      [['realized','+Z','realized'],['frustrated','−Z','frustrated']].forEach(([r,glyph,word])=>{
+        const c=document.createElement('span');
+        if(role===r) c.className='on';
+        c.textContent = role===r ? glyph+' '+word : glyph;
+        c.title = role===r ? 'tap to unassign — back to introit'
+                           : 'assign the '+glyph+' ceiling ('+word+') directly';
+        c.onclick=(e)=>{ e.stopPropagation();
+          if(role===r) delete p.place;
+          else{ images.forEach(q=>{ if(q!==p&&q.place&&q.place.role===r) delete q.place; });   // one wash per ceiling
+                p.place={role:r}; p.keep=true; }
+          renderPhotos(); };
+        pl.appendChild(c);
+      });
+    }
     cell.appendChild(pl);
     if(p.credit){ const c=document.createElement('div'); c.className='c'; c.textContent=p.credit; cell.appendChild(c); }
     cell.onclick=()=>{ p.keep=!p.keep; if(!p.keep) delete p.place; renderPhotos(); };   // a dropped photo is unplaced

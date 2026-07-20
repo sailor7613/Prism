@@ -1,0 +1,2145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Prism">
+<meta name="theme-color" content="#0a1226">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="pwa/apple-touch-icon.png">
+<title>Prism Admin · Diatribe stage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<!-- the real Prism grammar: caption tablets, thumbs, thresholds, ambient, type -->
+<link rel="stylesheet" href="src/css/prism-grammar.css">
+<style>
+  :root{ --top-chrome: 8px; --safe-bottom: env(safe-area-inset-bottom, 0px); }
+  html,body{ margin:0; min-height:100%; overflow-x:hidden; }
+  body.dark{ }
+  /* ── copied verbatim-ish from v2/index.html diatribe stage ── */
+  main{ position:relative; min-height:100vh; min-height:100dvh; display:flex; flex-direction:column; justify-content:center; align-items:center;
+    padding: calc(var(--top-chrome) + 58px) var(--stage-pad-x) calc(var(--dock-h, calc(120px + var(--safe-bottom))) + 26px); z-index:1; }
+  .framing{ max-width:720px; text-align:center; font-family:var(--serif); font-size:16px; line-height:1.65; color:var(--ink-mid);
+    margin-bottom:44px; font-style:italic; outline:none; }
+  .framing:empty::before{ content:attr(data-ph); color:var(--ink-low); font-style:italic; }
+  .framing::after{ content:''; display:block; width:32px; height:1px; background:var(--rule); margin:18px auto 0; }
+  /* stage as the app's mobile stacked layout (real → track → ghost) — clean on iPad */
+  .stage{ position:relative; width:100%; max-width:720px; display:flex; flex-direction:column; align-items:stretch; gap:20px; }
+  .prism-caption{ position:static; align-self:center; max-width:560px; width:100%; }
+  .caption-text{ min-height:1.5em; outline:none; }
+  .caption-text:empty::before{ content:attr(data-ph); color:var(--ink-low); font-style:italic; }
+  .caption-text.editing{ box-shadow:0 0 0 1px var(--rule); border-radius:8px; }
+  .track-wrap{ position:relative; width:100%; height:92px; user-select:none; }
+  .track{ position:relative; top:34px; height:20px; margin:0 16px; border-radius:10px;
+    background:linear-gradient(to right,
+      rgba(212,92,92,.10) 0%, rgba(212,92,92,.10) 17%, rgba(196,156,72,.12) 17%, rgba(196,156,72,.12) 33%,
+      rgba(96,168,128,.08) 33%, rgba(96,168,128,.08) 67%, rgba(196,156,72,.12) 67%, rgba(196,156,72,.12) 83%,
+      rgba(212,92,92,.10) 83%, rgba(212,92,92,.10) 100%);
+    border:1px solid var(--rule-soft); box-shadow:inset 0 1px 3px rgba(0,0,0,.25); cursor:pointer; touch-action:none; }
+  .readout{ position:absolute; bottom:0; left:0; right:0; display:flex; justify-content:center; align-items:center; gap:18px;
+    font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-low); }
+  .readout .real-r{ color:var(--ink-mid); } .readout .ghost-r{ color:var(--ink-low); font-style:italic; }
+  /* ── page-wide space background (matches v2) ── */
+  #spaceField{ position:fixed; inset:0; z-index:0; pointer-events:none;
+    background:
+      radial-gradient(ellipse 120% 85% at 50% 14%, rgba(34,52,92,.32), rgba(8,12,26,0) 60%),
+      radial-gradient(ellipse 95% 75% at 80% 96%, rgba(44,32,76,.24), rgba(8,12,26,0) 58%),
+      linear-gradient(180deg,#060a16 0%,#070c1a 46%,#05070f 100%); }
+  #spaceField::before,#spaceField::after{ content:''; position:absolute; inset:-25%; background-repeat:repeat; }
+  #spaceField::before{ background-image:
+      radial-gradient(1px 1px at 20px 30px, rgba(220,230,255,.7), transparent),
+      radial-gradient(1px 1px at 80px 120px, rgba(200,215,250,.6), transparent),
+      radial-gradient(1px 1px at 150px 60px, rgba(220,230,255,.5), transparent),
+      radial-gradient(1px 1px at 110px 180px, rgba(190,205,245,.6), transparent),
+      radial-gradient(1px 1px at 50px 160px, rgba(220,230,255,.5), transparent);
+    background-size:200px 200px; opacity:.5; animation:spaceDriftFar 150s linear infinite; }
+  #spaceField::after{ background-image:
+      radial-gradient(1.6px 1.6px at 40px 50px, rgba(255,250,235,.9), transparent),
+      radial-gradient(1.5px 1.5px at 180px 140px, rgba(225,235,255,.8), transparent),
+      radial-gradient(1.5px 1.5px at 250px 80px, rgba(255,245,225,.7), transparent),
+      radial-gradient(1.4px 1.4px at 300px 220px, rgba(220,230,255,.7), transparent);
+    background-size:320px 320px; opacity:.6; animation:spaceDriftNear 95s linear infinite, spaceTwinkle 6.5s ease-in-out infinite alternate; }
+  @keyframes spaceDriftFar{ to{ transform:translate(-200px,-200px); } }
+  @keyframes spaceDriftNear{ to{ transform:translate(-320px,-320px); } }
+  @keyframes spaceTwinkle{ from{opacity:.42;} to{opacity:.7;} }
+  @media (prefers-reduced-motion:reduce){ #spaceField::before,#spaceField::after{ animation:none; } }
+
+  /* ── daytime mode — paper sky; the stars stand down (grammar's body.light
+        vars carry ink/rule/shimmer; these handle the surface's own chrome) ── */
+  /* daylight sky (2026-07-18 second ruling: gentle cumulus — variant B of the
+     side-by-side; motes retired, Sailor never saw them). Same three-layer
+     machine as night, re-costumed: softer day wash (zenith #d7e6f3 -> cream
+     horizon, gentler sun glow top-left), both star layers become soft cumulus
+     puffs drifting SIDEWAYS on their own keyframes (clouds don't move
+     diagonally; tiles are seam-matched to their translates). Reduced-motion
+     guard carries over untouched. Tunables: puff alphas (.36–.60), tile sizes
+     (680×440 / 560×420), drift periods (210s / 130s), zenith #d7e6f3. */
+  body.light #spaceField{ background:
+      radial-gradient(ellipse 120% 85% at 22% 8%, rgba(255,228,170,.22), rgba(230,238,246,0) 55%),
+      linear-gradient(180deg,#d7e6f3 0%,#e8f0f5 52%,#f4eedd 100%); }
+  body.light #spaceField::before{ background-image:
+      radial-gradient(ellipse 190px 60px at 170px 110px, rgba(255,255,255,.50), rgba(255,255,255,.24) 48%, transparent 74%),
+      radial-gradient(ellipse 130px 44px at 260px 96px, rgba(255,255,255,.42), rgba(255,255,255,.18) 50%, transparent 76%),
+      radial-gradient(ellipse 220px 66px at 470px 290px, rgba(255,255,255,.44), rgba(255,255,255,.20) 48%, transparent 74%),
+      radial-gradient(ellipse 150px 48px at 560px 270px, rgba(255,255,255,.36), transparent 72%);
+    background-size:680px 440px; opacity:.75; animation:dayCloudFar 210s linear infinite; }
+  body.light #spaceField::after{ background-image:
+      radial-gradient(ellipse 150px 46px at 120px 330px, rgba(255,255,255,.60), rgba(255,255,255,.28) 46%, transparent 72%),
+      radial-gradient(ellipse 100px 34px at 200px 315px, rgba(255,255,255,.48), transparent 74%),
+      radial-gradient(ellipse 170px 50px at 420px 90px, rgba(255,255,255,.55), rgba(255,255,255,.26) 46%, transparent 72%);
+    background-size:560px 420px; opacity:.65; animation:dayCloudNear 130s linear infinite; }
+  @keyframes dayCloudFar{ to{ transform:translate(-680px,0); } }
+  @keyframes dayCloudNear{ to{ transform:translate(-560px,0); } }
+  body.light .adminbar{ background:rgba(245,240,232,.78); }
+  /* daylight legibility (2026-07-16): these fixed surfaces kept their night
+     backgrounds while the ink vars flipped dark — dark ink on dark chrome.
+     The iPad's bottom bar was the loudest case. Paper backgrounds to match. */
+  body.light .actions{ background:rgba(245,240,232,.85); }
+  body.light .cellchip{ background:rgba(245,240,232,.7); }
+  body.light .sheet{ background:rgba(247,242,234,.95); }
+  body.light #kwPill{ background:rgba(247,242,234,.97); border-color:rgba(72,88,120,.5); box-shadow:0 4px 14px rgba(72,44,16,.25); }
+  body.light .ted-drawer, body.light .br-drawer{ background:rgba(247,242,234,.97); }
+  body.light .ted-overlay, body.light .br-overlay{ background:rgba(72,60,40,.25); }
+  body.light .kw{ text-shadow:0 0 6px rgba(120,84,24,.25), 0 0 1px rgba(72,44,16,.45); }
+  body.light .sheet textarea{ background:rgba(20,22,30,.04); }
+  body.light .ted-star{ color:#f5f0e8; box-shadow:0 0 8px rgba(72,44,16,.4); }
+
+  /* ── DreamGetty room backdrop (§3¾) — lazy, default off, pointer-events:none ── */
+  #dgRoom{ opacity:0; transition:opacity 1.4s ease; }
+  body.dg-on #dgRoom{ opacity:1; }
+  #dgBtn.on, #dgOrbitBtn.on{ color:var(--ink); border-color:rgba(196,156,72,.55); }
+  /* orbit mode — the flat stage steps aside; the room takes the pointer.
+     Modals (orb editor, sources) and both chrome bars stay on top. */
+  #dgOrbitBtn{ display:none; }
+  body.dg-on #dgOrbitBtn{ display:inline-flex; }
+  body.dg-orbit main, body.dg-orbit .cellmap, body.dg-orbit #kwPill{ display:none !important; }
+  body.dg-orbit #quadView{ display:none !important; }
+
+  /* ── authoring chrome — v2 grammar: hairline rules, mono micro-labels, pills ── */
+  .adminbar{ position:fixed; top:0; left:0; right:0; z-index:20; display:flex; gap:10px; align-items:center; flex-wrap:wrap;
+    padding: calc(env(safe-area-inset-top) + 10px) 16px 10px;
+    background:rgba(8,12,26,.72); -webkit-backdrop-filter:blur(11px); backdrop-filter:blur(11px); border-bottom:.5px solid var(--rule); }
+  .adminbar .ttl{ font-family:var(--mono); font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-low); }
+  .adminbar .title-in{ flex:1; min-width:160px; font-family:var(--serif); font-size:17px; color:var(--ink);
+    background:transparent; border:0; border-bottom:1px solid var(--rule); border-radius:0; padding:4px 2px; outline:none; }
+  .adminbar .title-in::placeholder{ color:var(--ink-low); font-style:italic; }
+  .adminbar .title-in:focus{ border-bottom-color:rgba(48,96,192,.5); }
+  .adminbar select{ font-family:var(--mono); font-size:11px; letter-spacing:.04em; color:rgba(236,240,248,.85);
+    background:rgba(20,26,40,.55); -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px);
+    border:1px solid rgba(150,168,200,.4); border-radius:999px; padding:5px 26px 5px 12px; cursor:pointer; max-width:230px;
+    -webkit-appearance:none; appearance:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath d='M2 3l3 3 3-3' stroke='%23b8c4dc' stroke-width='1.3' fill='none'/%3E%3C/svg%3E");
+    background-repeat:no-repeat; background-position:right 10px center; }
+  .adminbar select:hover{ border-color:rgba(180,198,230,.7); }
+  .adminbar select option{ color:#1a2030; }
+  /* ── custom load-event menu (native to the grammar, not the OS — 2026-07-16).
+        The select stays in the DOM as the value carrier; #evMenuBtn wears its
+        old pill clothes and #evMenu draws the open list. ── */
+  #evSelect{ display:none; }
+  #evMenuBtn{ font-family:var(--mono); font-size:11px; letter-spacing:.04em; color:rgba(236,240,248,.85);
+    background:rgba(20,26,40,.55); -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px);
+    border:1px solid rgba(150,168,200,.4); border-radius:999px; padding:5px 26px 5px 12px; cursor:pointer;
+    max-width:230px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; text-align:left;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath d='M2 3l3 3 3-3' stroke='%23b8c4dc' stroke-width='1.3' fill='none'/%3E%3C/svg%3E");
+    background-repeat:no-repeat; background-position:right 10px center; }
+  #evMenuBtn:hover{ border-color:rgba(180,198,230,.7); }
+  body.light #evMenuBtn{ color:var(--ink); background-color:rgba(20,22,30,.05); border-color:rgba(72,88,120,.35); }
+  #evMenu{ position:fixed; z-index:60; display:none; flex-direction:column; min-width:300px; max-width:480px;
+    max-height:min(62dvh,560px); overflow-y:auto; overscroll-behavior:contain; padding:6px;
+    background:rgba(9,15,32,.97); border:.5px solid var(--rule); border-radius:13px;
+    -webkit-backdrop-filter:blur(11px); backdrop-filter:blur(11px); box-shadow:0 12px 40px rgba(0,0,0,.5); }
+  #evMenu.show{ display:flex; }
+  #evMenu .evm-head{ font-family:var(--mono); font-size:9px; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--ink-low); padding:10px 12px 4px; }
+  #evMenu .evm-row{ text-align:left; background:transparent; border:0; border-radius:8px; padding:8px 12px;
+    cursor:pointer; display:block; width:100%; }
+  #evMenu .evm-row:hover{ background:rgba(48,96,192,.14); }
+  #evMenu .evm-row.on{ background:rgba(48,96,192,.22); }
+  #evMenu .evm-t{ font-family:var(--serif); font-size:14px; color:var(--ink); line-height:1.35; }
+  #evMenu .evm-m{ font-family:var(--mono); font-size:9px; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--ink-low); margin-top:3px; }
+  #evMenu .evm-empty{ font-family:var(--serif); font-style:italic; color:var(--ink-low); padding:12px; }
+  body.light #evMenu{ background:rgba(245,240,232,.97); box-shadow:0 12px 40px rgba(72,44,16,.2); }
+  /* v2 button treatment (from .ev-enter) */
+  .btn{ background:transparent; border:1px solid var(--rule); color:var(--ink-mid); font-family:var(--mono);
+    font-size:10px; letter-spacing:.18em; text-transform:uppercase; padding:9px 16px; border-radius:2px; cursor:pointer;
+    display:inline-flex; align-items:center; gap:8px; transition:color .35s ease,border-color .35s ease,letter-spacing .35s ease; }
+  .btn:hover{ color:var(--ink); border-color:rgba(48,96,192,.45); letter-spacing:.22em; }
+  .btn.primary{ color:var(--ink); border-color:rgba(48,96,192,.45); }
+  .adminbar details.aiset summary{ font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-low); cursor:pointer; list-style:none; }
+  .adminbar details.aiset input{ display:block; margin-top:6px; font-family:var(--mono); font-size:11px; color:var(--ink-mid);
+    background:rgba(255,255,255,.04); border:.5px solid var(--rule); border-radius:6px; padding:6px 8px; outline:none; }
+
+  .suggest-btn{ background:transparent; border:1px solid var(--rule); color:var(--ink-low); font-family:var(--mono);
+    font-size:9px; letter-spacing:.14em; text-transform:uppercase; padding:5px 11px; border-radius:2px; cursor:pointer; margin-top:9px;
+    transition:color .3s ease,border-color .3s ease; }
+  .suggest-btn:hover{ color:var(--ink-mid); border-color:rgba(48,96,192,.4); }
+
+  /* rides --actions-h (measured by the dock observer) — the actions bar wraps
+     taller on narrow screens and a static 60px put the chips on the buttons
+     (2026-07-15 mobile audit) */
+  .cellmap{ position:fixed; left:0; right:0; bottom:calc(var(--actions-h, calc(60px + var(--safe-bottom))) + 6px); z-index:15; display:flex; gap:7px; justify-content:center; flex-wrap:wrap; padding:0 12px;
+    transform:translateY(var(--vv-push, 0px)); }
+  .cellchip{ font-family:var(--mono); font-size:9px; letter-spacing:.12em; text-transform:uppercase; padding:5px 11px; border-radius:999px;
+    border:.5px solid var(--rule); color:var(--ink-low); background:rgba(8,12,26,.6); -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px); cursor:pointer; }
+  .cellchip.filled{ color:var(--ink-mid); border-color:rgba(150,168,200,.4); }
+  .cellchip.active{ color:var(--ink); border-color:rgba(48,96,192,.55); }
+
+  /* --vv-push: measured visual-viewport slack (dock observer) — 0 everywhere
+     except when the phone's layout viewport goes stale and the fixed bar
+     would float above the true bottom edge (2026-07-17 phone audit) */
+  .actions{ position:fixed; left:0; right:0; bottom:0; z-index:20; display:flex; gap:12px; justify-content:center; align-items:center;
+    padding:11px 12px calc(env(safe-area-inset-bottom) + 11px);
+    transform:translateY(var(--vv-push, 0px));
+    background:rgba(8,12,26,.82); -webkit-backdrop-filter:blur(11px); backdrop-filter:blur(11px); border-top:.5px solid var(--rule); }
+  .actions a{ text-decoration:none; }
+  .status{ font-family:var(--mono); font-size:9px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-low); }
+
+  .modal{ position:fixed; inset:0; z-index:50; background:rgba(4,8,18,.72); display:none; align-items:center; justify-content:center; padding:18px; }
+  .modal.show{ display:flex; }
+  .sheet{ background:rgba(9,15,32,.92); -webkit-backdrop-filter:blur(11px); backdrop-filter:blur(11px);
+    border:.5px solid var(--rule); border-radius:13px; max-width:720px; width:100%; max-height:82vh; overflow:auto; padding:16px; }
+  .sheet textarea{ width:100%; font-family:var(--mono); font-size:12px; min-height:280px; white-space:pre; color:var(--ink-mid);
+    background:rgba(255,255,255,.03); border:.5px solid var(--rule); border-radius:8px; padding:10px; }
+
+  /* keyword highlight — the charged tokens (the cloud) inside a voice or the framing */
+  .kw{ color:var(--keyword-shimmer, #fff6e2); text-shadow:0 0 7px rgba(255,246,226,.45), 0 0 2px rgba(255,246,226,.6); border-radius:2px; }
+  /* editable axis poles flanking the slider */
+  .poles{ position:absolute; top:2px; left:16px; right:16px; display:flex; justify-content:space-between; align-items:baseline; pointer-events:none; }
+  .pole{ pointer-events:auto; font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-mid);
+    outline:none; min-width:44px; cursor:text; padding:2px 4px; border-bottom:1px dashed transparent; }
+  .pole:focus{ border-bottom-color:var(--rule); color:var(--ink); }
+  .pole.neg{ text-align:left; } .pole.pos{ text-align:right; }
+  .pole:empty::before{ content:'name pole'; color:var(--ink-low); }
+  /* prevalent-axis marker */
+  .prevseg{ display:inline-flex; border:.5px solid var(--rule); border-radius:8px; overflow:hidden; }
+  .prevseg button{ border:0; border-radius:0; background:transparent; color:var(--ink-low); font-family:var(--mono);
+    font-size:11px; letter-spacing:.1em; text-transform:uppercase; padding:7px 11px; cursor:pointer; }
+  .prevseg button.on{ background:#22345c; color:#fff; }
+  /* floating keyword pill — appears above a text selection */
+  #kwPill{ position:fixed; z-index:40; display:none; align-items:center; gap:6px; font-family:var(--mono); font-size:10px; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--ink); background:rgba(18,28,52,.96); -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
+    border:.5px solid rgba(150,180,230,.55); border-radius:999px; padding:7px 12px; cursor:pointer; box-shadow:0 4px 14px rgba(0,0,0,.45); }
+  #kwPill.show{ display:inline-flex; }
+
+  /* ── Edit Ted mode: ✱ badges on hoverable assets + the script drawer ── */
+  .ted-star{ position:absolute; top:6px; right:8px; z-index:12; width:22px; height:22px; border-radius:50%;
+    display:none; align-items:center; justify-content:center; cursor:pointer; font-size:12px; color:#0a1226;
+    background:var(--keyword-shimmer,#fff6e2); box-shadow:0 0 9px rgba(255,246,226,.6); }
+  body.ted-edit .ted-star{ display:inline-flex; }
+  body.ted-edit .prism-caption{ position:relative; }
+  body.ted-edit .kw{ cursor:pointer; }
+  body.ted-edit .kw::after{ content:'✱'; font-size:.7em; color:var(--keyword-shimmer,#fff6e2); vertical-align:super; margin-left:1px; }
+  .ted-overlay{ position:fixed; inset:0; z-index:59; background:rgba(4,8,18,.4); display:none; } .ted-overlay.show{ display:block; }
+  .ted-drawer{ position:fixed; top:0; right:0; bottom:0; width:min(420px,94vw); z-index:60; transform:translateX(102%);
+    transition:transform .3s cubic-bezier(.22,1,.36,1); background:rgba(9,15,32,.97); -webkit-backdrop-filter:blur(12px); backdrop-filter:blur(12px);
+    border-left:.5px solid var(--rule); display:flex; flex-direction:column; }
+  .ted-drawer.show{ transform:none; }
+  .ted-drawer .td-head{ padding:calc(env(safe-area-inset-top) + 14px) 14px 12px; border-bottom:.5px solid var(--rule); display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  .ted-drawer .td-head .t{ font-family:var(--serif); font-size:16px; margin-right:2px; }
+  .ted-drawer .td-body{ flex:1; overflow-y:auto; padding:12px 14px 24px; -webkit-overflow-scrolling:touch; }
+  .ted-drawer .td-foot{ padding:11px 14px calc(env(safe-area-inset-bottom) + 11px); border-top:.5px solid var(--rule); display:flex; align-items:center; gap:10px; }
+  .layerseg{ display:inline-flex; border:.5px solid var(--rule); border-radius:8px; overflow:hidden; }
+  .layerseg button{ border:0; border-radius:0; background:transparent; color:var(--ink-low); font-family:var(--mono); font-size:10px; letter-spacing:.08em; text-transform:uppercase; padding:6px 10px; cursor:pointer; }
+  .layerseg button.on{ background:#22345c; color:#fff; }
+  .td-group{ margin-top:16px; } .td-group h4{ font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-low); margin:0 0 8px; border-bottom:.5px solid var(--rule); padding-bottom:5px; }
+  .td-field{ margin-bottom:11px; } .td-field label{ display:block; font-family:var(--mono); font-size:9px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-mid); margin-bottom:4px; }
+  .td-field textarea{ width:100%; font-family:var(--serif); font-size:14px; line-height:1.42; color:var(--ink); background:rgba(255,255,255,.04); border:.5px solid var(--rule); border-radius:8px; padding:8px 10px; outline:none; resize:vertical; min-height:50px; }
+  .td-field textarea::placeholder{ color:var(--ink-low); font-style:italic; }
+  .td-field textarea:focus{ border-color:var(--accent); }
+  .td-field.overridden textarea{ border-color:rgba(150,180,230,.55); }
+  .td-field.flash textarea{ border-color:var(--accent); box-shadow:0 0 0 2px rgba(143,176,230,.3); }
+
+  /* ── Quadrants view: the 12 responses as orb pins on a 2×2 plane ── */
+  .viewseg{ display:inline-flex; border:.5px solid var(--rule); border-radius:8px; overflow:hidden; }
+  .viewseg button{ border:0; border-radius:0; background:transparent; color:var(--ink-low); font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; padding:7px 11px; cursor:pointer; }
+  .viewseg button.on{ background:#22345c; color:#fff; }
+  body.view-quad main, body.view-quad .cellmap, body.view-quad #kwPill{ display:none !important; }
+  /* both paddings ride the measured chrome (2026-07-16): the adminbar wraps
+     to 2-3 rows on tablet and the quad actions bar carries two extra buttons —
+     static 70px/96px put the pole labels under the fixed bars */
+  #quadView{ display:none; position:relative; min-height:100vh; min-height:100dvh; flex-direction:column; align-items:center; justify-content:center;
+    padding: calc(var(--top-chrome) + 62px) 20px calc(var(--dock-h, calc(96px + var(--safe-bottom))) + 40px); z-index:1; }
+  body.view-quad #quadView{ display:flex; }
+  /* 36px clears the Y+ pole label, which translates -100% above the plane
+     into what was the caption's lap (2026-07-16 iPad audit) */
+  .quad-sub{ font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-low); margin-bottom:36px; text-align:center; }
+  .quad-plane{ position:relative; width:min(560px,88vw); aspect-ratio:1; border-radius:10px;
+    background:radial-gradient(ellipse at center, rgba(10,18,38,.35), rgba(10,18,38,0) 78%);
+    box-shadow:inset 0 0 60px rgba(8,12,26,.5); }
+  /* the factory plane's quadrant coloring: A blue · B red · C green · D gold */
+  .quad-plane .qp-tint{ position:absolute; inset:0; border-radius:10px; overflow:hidden;
+    background:
+      radial-gradient(ellipse at top left,     rgba(96,148,220,.20), transparent 62%),
+      radial-gradient(ellipse at top right,    rgba(220,96,96,.20),  transparent 62%),
+      radial-gradient(ellipse at bottom left,  rgba(96,168,128,.18), transparent 62%),
+      radial-gradient(ellipse at bottom right, rgba(196,156,72,.20), transparent 62%); }
+  .quad-plane .qp-axis{ position:absolute; background:rgba(180,198,230,.14); }
+  .qp-axis.h{ left:0; right:0; top:50%; height:1px; } .qp-axis.v{ top:0; bottom:0; left:50%; width:1px; }
+  .qp-pole{ position:absolute; font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-mid);
+    outline:none; cursor:text; padding:2px 5px; border-bottom:1px dashed transparent; white-space:nowrap; }
+  .qp-pole:focus{ border-bottom-color:var(--rule); color:var(--ink); } .qp-pole:empty::before{ content:'name pole'; color:var(--ink-low); }
+  .qp-pole.xneg{ left:-2%; top:50%; transform:translate(-100%,-50%); } .qp-pole.xpos{ right:-2%; top:50%; transform:translate(100%,-50%); }
+  .qp-pole.ypos{ top:-2%; left:50%; transform:translate(-50%,-100%); } .qp-pole.yneg{ bottom:-2%; left:50%; transform:translate(-50%,100%); }
+  .orb{ position:absolute; width:26px; height:26px; border-radius:50%; transform:translate(-50%,-50%); cursor:pointer;
+    border:1.5px solid rgba(255,255,255,.25); transition:transform .15s ease, box-shadow .2s ease; }
+  .orb:hover{ transform:translate(-50%,-50%) scale(1.18); }
+  .orb.filled{ border-color:transparent; }
+  .orb[data-band="fluid"]{ background:radial-gradient(circle at 35% 30%, rgba(180,235,205,.95), rgba(96,168,128,.55) 70%, rgba(96,168,128,.15)); box-shadow:0 0 10px rgba(96,168,128,.5); }
+  .orb[data-band="coalition"]{ background:radial-gradient(circle at 35% 30%, rgba(245,222,150,.95), rgba(196,156,72,.55) 70%, rgba(196,156,72,.15)); box-shadow:0 0 10px rgba(196,156,72,.5); }
+  .orb[data-band="denominated"]{ background:radial-gradient(circle at 35% 30%, rgba(240,170,170,.95), rgba(212,92,92,.55) 70%, rgba(212,92,92,.15)); box-shadow:0 0 10px rgba(212,92,92,.5); }
+  .orb:not(.filled){ background:rgba(20,26,40,.5); box-shadow:none; }
+  .orb-tip{ position:absolute; left:50%; top:-8px; transform:translate(-50%,-100%); font-family:var(--mono); font-size:8px; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--ink-low); white-space:nowrap; pointer-events:none; opacity:0; transition:opacity .2s; }
+  .orb:hover .orb-tip{ opacity:1; }
+  /* orb editor modal */
+  .orb-sheet .oe-head{ font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-low); margin-bottom:10px; }
+  .orb-sheet textarea{ width:100%; font-family:var(--serif); font-size:15px; line-height:1.4; color:var(--ink); background:rgba(255,255,255,.04); border:.5px solid var(--rule); border-radius:8px; padding:9px 11px; outline:none; resize:vertical; min-height:64px; }
+  .orb-sheet .oe-cloud{ display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:8px; }
+  .orb-sheet .oe-cloud input{ font-family:var(--mono); font-size:13px; color:var(--ink); background:rgba(255,255,255,.04); border:.5px solid var(--rule); border-radius:8px; padding:8px 10px; outline:none; }
+  .orb-sheet .oe-actions{ display:flex; gap:10px; align-items:center; margin-top:12px; }
+  .oe-source{ margin-top:8px; } .oe-source input{ width:100%; font-family:var(--mono); font-size:12px; color:var(--ink);
+    background:rgba(255,255,255,.04); border:.5px solid var(--rule); border-radius:8px; padding:8px 10px; outline:none; }
+  /* citation bank */
+  .cite-row{ display:grid; grid-template-columns:1fr 130px 28px; gap:8px; margin-bottom:8px; align-items:center; }
+  .cite-row input{ font-family:var(--mono); font-size:12px; color:var(--ink); background:rgba(255,255,255,.04); border:.5px solid var(--rule); border-radius:8px; padding:8px 10px; outline:none; }
+  .cite-row .del{ cursor:pointer; color:var(--ink-low); text-align:center; font-size:13px; }
+  .cite-row .del:hover{ color:var(--red); }
+
+  /* ── Bill reading room (📜) — the portal's first §4 reading room:
+        chat + shortlist + Link in a drawer; the stage stays flat (§8) ── */
+  .br-overlay{ position:fixed; inset:0; z-index:59; background:rgba(4,8,18,.4); display:none; } .br-overlay.show{ display:block; }
+  .br-drawer{ position:fixed; top:0; right:0; bottom:0; width:min(560px,96vw); z-index:60; transform:translateX(102%);
+    transition:transform .3s cubic-bezier(.22,1,.36,1); background:rgba(9,15,32,.97); -webkit-backdrop-filter:blur(12px); backdrop-filter:blur(12px);
+    border-left:.5px solid var(--rule); display:flex; flex-direction:column; }
+  .br-drawer.show{ transform:none; }
+  .br-head{ padding:calc(env(safe-area-inset-top) + 14px) 14px 12px; border-bottom:.5px solid var(--rule); display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  .br-head .t{ font-family:var(--serif); font-size:16px; }
+  .br-head .ev{ font-family:var(--mono); font-size:9px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-low); }
+  .br-body{ flex:1; min-height:0; display:flex; flex-direction:column; }
+  .br-pane{ flex:1; min-height:0; display:flex; flex-direction:column; }
+  .br-msgs{ flex:1; overflow-y:auto; padding:14px; -webkit-overflow-scrolling:touch; }
+  .br-msg{ margin-bottom:16px; }
+  .br-msg .who{ font-family:var(--mono); font-size:9px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-low); margin-bottom:4px; }
+  .br-msg .txt{ font-family:var(--serif); font-size:14px; line-height:1.55; color:var(--ink-mid); white-space:pre-wrap; }
+  .br-msg.you .txt{ color:var(--ink); }
+  .br-msg .txt strong{ color:var(--ink); font-weight:600; }
+  .br-bill{ color:rgba(196,156,72,.95); cursor:pointer; font-family:var(--mono); font-size:12px; }
+  .br-input{ display:flex; gap:8px; padding:10px 14px; border-top:.5px solid var(--rule); align-items:flex-end; }
+  .br-input textarea{ flex:1; font-family:var(--serif); font-size:14px; line-height:1.4; color:var(--ink);
+    background:rgba(255,255,255,.04); border:.5px solid var(--rule); border-radius:8px; padding:9px 11px; outline:none; resize:none; min-height:44px; max-height:120px; }
+  .br-input textarea::placeholder{ color:var(--ink-low); font-style:italic; }
+  .br-list{ flex:1; overflow-y:auto; padding:14px; -webkit-overflow-scrolling:touch; }
+  .br-empty{ padding:24px 10px; text-align:center; font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-low); }
+  .br-card{ border:.5px solid var(--rule); border-radius:10px; padding:11px 13px; margin-bottom:10px; background:rgba(255,255,255,.02); }
+  .br-card.confirmed{ border-color:rgba(96,168,128,.5); }
+  .br-card.dismissed{ opacity:.45; }
+  /* ── newsroom story accents (2026-07-17, Sailor's ruling) — lift the big
+     points, don't carnival the cards. Source rides the left edge + the
+     source word (legislation = the bill gold the reading room already
+     speaks; news = wire blue). Held = shimmer star treatment, the
+     deliberate "don't lose this" mark. Fresh = arrived since this device
+     last looked. Only nrRender applies these; bills cards untouched. ── */
+  .br-card.src-legislation{ border-left:2px solid rgba(196,156,72,.55); }
+  .br-card.src-news{ border-left:2px solid rgba(96,148,220,.5); }
+  .nr-src.src-legislation{ color:rgba(196,156,72,.9); }
+  .nr-src.src-news{ color:rgba(126,168,225,.9); }
+  .br-card.held{ border-color:rgba(255,246,226,.42); background:rgba(255,246,226,.03); }
+  .nr-star{ color:var(--keyword-shimmer,#fff6e2); text-shadow:0 0 6px rgba(255,246,226,.4); margin-right:4px; }
+  .nr-fresh{ color:var(--keyword-shimmer,#fff6e2); text-shadow:0 0 6px rgba(255,246,226,.35); }
+  body.light .nr-src.src-news{ color:rgba(48,96,192,.85); }
+  body.light .nr-src.src-legislation{ color:#7a5418; }
+  body.light .nr-star, body.light .nr-fresh{ color:#7a5418; text-shadow:none; }
+  .br-card .n{ font-family:var(--serif); font-size:14px; color:var(--ink); }
+  .br-card .m{ font-family:var(--mono); font-size:9px; letter-spacing:.08em; color:var(--ink-low); margin-top:2px; }
+  .br-card .r{ font-family:var(--serif); font-size:12.5px; font-style:italic; color:var(--ink-mid); margin-top:6px; line-height:1.45; }
+  .br-tags{ display:flex; flex-wrap:wrap; gap:5px; margin-top:8px; }
+  .br-tag{ font-family:var(--mono); font-size:8px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-mid);
+    border:.5px solid var(--rule); border-radius:999px; padding:3px 8px; }
+  .br-kws{ margin-top:6px; display:flex; flex-wrap:wrap; gap:4px 8px; }
+  .br-kw{ font-family:var(--serif); font-size:11px; font-style:italic; color:var(--keyword-shimmer,#fff6e2); opacity:.8; }
+  .br-acts{ margin-top:9px; display:flex; gap:8px; flex-wrap:wrap; }
+  .br-acts button{ background:transparent; border:1px solid var(--rule); color:var(--ink-mid); font-family:var(--mono);
+    font-size:9px; letter-spacing:.12em; text-transform:uppercase; padding:7px 12px; border-radius:2px; cursor:pointer; }
+  .br-acts button:hover{ color:var(--ink); border-color:rgba(48,96,192,.45); }
+  .br-foot{ padding:11px 14px calc(env(safe-area-inset-bottom) + 11px); border-top:.5px solid var(--rule); display:flex; align-items:center; gap:10px; }
+  /* Catalog pane (substance lens tier 2 — the record ranks, the lens folds) */
+  .br-cat-bar{ display:flex; gap:8px; padding:12px 14px 0; align-items:center; }
+  .br-cat-bar input{ flex:1; background:rgba(255,255,255,.03); border:.5px solid var(--rule); border-radius:8px;
+    color:var(--ink); font-family:var(--serif); font-size:13px; padding:9px 12px; outline:none; }
+  .br-cat-bar input:focus{ border-color:rgba(48,96,192,.45); }
+  .br-cat-count{ font-family:var(--mono); font-size:9px; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--ink-low); padding:8px 16px 0; }
+  .br-card .rec{ font-family:var(--mono); font-size:9px; letter-spacing:.08em; color:var(--ink-mid); margin-top:5px; }
+  body.light .br-cat-bar input{ background:rgba(20,22,30,.04); }
+  body.light .br-drawer{ background:rgba(245,240,232,.97); }
+  body.light .br-input textarea, body.light .br-card{ background:rgba(20,22,30,.04); }
+  body.light .br-kw{ color:#7a5418; }
+
+  /* ── newsroom photos (2026-07-19) — the wire's pictures ride the story
+     card as a quiet strip (URLs only, lazy-loaded, broken ones remove
+     themselves); the promote lift carries the picked few into 📎. ── */
+  .nr-pics{ display:flex; gap:6px; margin-top:8px; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .nr-pics img{ height:52px; width:auto; max-width:94px; object-fit:cover; border-radius:2px;
+    border:.5px solid var(--rule); opacity:.88; flex:0 0 auto; }
+  .cite-pics{ display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+  .cite-pic{ position:relative; cursor:pointer; border:1px solid var(--rule); border-radius:2px; padding:2px;
+    background:rgba(255,255,255,.02); }
+  .cite-pic img{ height:70px; width:auto; max-width:126px; object-fit:cover; display:block; border-radius:1px; }
+  .cite-pic.off{ opacity:.32; }
+  .cite-pic .k{ position:absolute; top:3px; right:5px; font-family:var(--mono); font-size:11px;
+    color:var(--keyword-shimmer,#fff6e2); text-shadow:0 0 5px rgba(0,0,0,.7); }
+  .cite-pic .c{ font-family:var(--mono); font-size:8px; letter-spacing:.06em; color:var(--ink-low);
+    padding:3px 2px 1px; max-width:126px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .cite-pics-head{ font-family:var(--mono); font-size:9px; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--ink-low); margin-top:12px; }
+  body.light .cite-pic{ background:rgba(20,22,30,.04); }
+  body.light .cite-pic .k{ color:#7a5418; text-shadow:none; }
+  /* Placement chip (2026-07-19): tap cycles a held photo through the Z-ceiling
+     roles — introit (none) → +Z realized → −Z frustrated. The washes on the
+     Reading's boundary planes; one photo per ceiling. */
+  .cite-pic .pl{ position:absolute; left:3px; top:3px; font-family:var(--mono); font-size:8px;
+    letter-spacing:.05em; padding:1px 5px 2px; border-radius:2px; cursor:pointer;
+    background:rgba(0,0,0,.55); color:var(--ink-low); border:1px solid transparent; }
+  .cite-pic .pl.on{ color:#fff6e2; border-color:rgba(255,246,226,.4); }
+  body.light .cite-pic .pl{ background:rgba(255,255,255,.7); }
+
+  /* ── mobile chrome — the toolbar folds behind the prism nav; the menu drops from it ──
+     Desktop is untouched: .pnav hides above 700px and every rule below is fenced. */
+  .pnav{ display:none; background:transparent; border:0; padding:2px 4px; cursor:pointer; align-items:center; }
+  .pnav img{ height:20px; width:auto; display:block; opacity:.85; transition:opacity .3s ease; }
+  .pnav:active img, body.navopen .pnav img{ opacity:1; }
+  @media (max-width:700px){
+    .pnav{ display:inline-flex; }
+    /* closed: only the prism nav + the event title ride the bar */
+    body:not(.navopen) .adminbar > *:not(.pnav):not(.title-in){ display:none !important; }
+    body:not(.navopen) .adminbar{ flex-wrap:nowrap; }
+    /* open: the menu drops down as a column; each item keeps its own display rules
+       (so 🧭 orbit still only appears when the room is up) */
+    /* nowrap is load-bearing: the bar keeps desktop's flex-wrap:wrap, and a
+       wrapping COLUMN pushes overflow items into a phantom second column
+       off-screen instead of scrolling (2026-07-15 mobile audit) */
+    body.navopen .adminbar{ flex-direction:column; flex-wrap:nowrap; align-items:stretch; max-height:85dvh; overflow-y:auto; }
+    body.navopen .adminbar .title-in{ min-width:0; }
+    /* the action bar may wrap to two rows on narrow screens — keep the cell chips clear of it */
+    .actions{ flex-wrap:wrap; }
+    /* phone real-estate audit (2026-07-17): the wrapped status row + safe-area
+       + 11px stacked ~70px of slack under the buttons — the bar's content
+       floated well off the bottom edge. Compact the chrome; the dock observer
+       re-measures whatever height results, so --actions-h/--dock-h stay true. */
+    .actions{ gap:7px 8px; padding:8px 10px max(var(--safe-bottom), 8px); }
+    .actions .btn{ padding:7px 11px; letter-spacing:.14em; }
+    .actions .status{ flex-basis:100%; text-align:center; }
+    .actions .status:empty{ display:none; }
+    /* x-axis determinations read vertically along the plane's sides — laid
+       horizontally at 88vw they amputated to 2-3 letters off both screen
+       edges (2026-07-17 phone audit). Left pole reads bottom-up, right pole
+       top-down, both hugging the plane like proper axis labels. */
+    .qp-pole.xneg, .qp-pole.xpos{ writing-mode:vertical-rl; font-size:10px; padding:5px 2px;
+      max-height:96%; overflow:hidden; text-overflow:ellipsis; }
+    .qp-pole.xneg{ left:-2px; transform:translate(-100%,-50%) rotate(180deg); }
+    .qp-pole.xpos{ right:-2px; transform:translate(100%,-50%); }
+    /* open nav: every row stretches — the load-event select was the one
+       holdout (230px cap truncated draft titles; 2026-07-15 mobile audit) */
+    body.navopen .adminbar select, body.navopen .adminbar #evMenuBtn{ max-width:none; width:100%; }
+    #evMenu{ left:12px !important; right:12px; min-width:0; max-width:none; }
+    /* AI / Sync details rode the column as bare text lines — give them the
+       same bordered-row treatment as the .btn rows */
+    body.navopen .adminbar details.aiset{ border:1px solid var(--rule); border-radius:2px; padding:10px 16px; }
+  }
+</style>
+</head>
+<body class="dark">
+
+<div id="spaceField" aria-hidden="true"></div>
+<div id="ambient" class="prism-ambient fluid"></div>
+
+<div class="adminbar">
+  <button class="pnav" id="pnavBtn" title="Menu"><img src="src/img/prism_nav_full.png" alt="☰"></button>
+  <span class="ttl">Prism Admin</span>
+  <input class="title-in" id="evTitle" placeholder="event title…">
+  <select id="evSelect" title="Load an event onto the surface"></select>
+  <span class="prevseg" title="Which axis this spine is (prevalent)"><button id="prevX" class="on">X</button><button id="prevY">Y</button></span>
+  <button class="btn" id="tedBtn" title="Edit Ted's speech">🐺 Ted</button>
+  <span class="viewseg" id="viewSeg" title="Author the diatribe, or the 12 quadrant responses"><button data-v="dia" class="on">Diatribe</button><button data-v="quad">Quadrants</button></span>
+  <button class="btn" id="citeBtn" title="Citation bank — sources for this event">📎 Sources</button>
+  <button class="btn" id="brBtn" title="Bill reading room — curate the bills this event links">📜 Bills</button>
+  <button class="btn" id="nrBtn" title="Newsroom — Event Engine candidates from the vote record">📡 Newsroom</button>
+  <button class="btn" id="themeBtn" title="Day / night">◐</button>
+  <button class="btn" id="dgBtn" title="DreamGetty room — loads on demand">🏛</button>
+  <button class="btn" id="dgOrbitBtn" title="Pedestal ↔ flat — drop to the flat stage while the room stands">🧭</button>
+  <details class="aiset"><summary>AI</summary>
+    <input id="apiKey" type="password" placeholder="sk-ant-… (stored on device)" autocomplete="off" spellcheck="false" style="min-width:180px">
+    <input id="model" type="text" value="claude-sonnet-5" spellcheck="false" style="min-width:150px">
+  </details>
+  <details class="aiset"><summary>Sync</summary>
+    <input id="ghToken" type="password" placeholder="github token — repo-scoped (stored on device)" autocomplete="off" spellcheck="false" style="min-width:220px">
+  </details>
+</div>
+
+<main>
+  <div class="framing" id="framing" contenteditable="true" data-ph="the event framing — the introit that sits above the slider…"></div>
+
+  <div class="stage" id="stage">
+    <!-- real caption (the side the thumb is on) -->
+    <div class="prism-caption real" id="capReal" data-side="left" data-band="fluid">
+      <div class="caption-label"><span class="side"></span> · <span class="band"></span></div>
+      <div class="caption-text" id="capTextReal" contenteditable="true" data-ph="type this voice…"></div>
+      <button class="suggest-btn" id="sugReal">✦ suggest this cell</button>
+    </div>
+
+    <div class="track-wrap">
+      <div class="poles">
+        <span class="pole neg" id="poleNeg" contenteditable="true" spellcheck="false" title="left pole — tap to rename"></span>
+        <span class="pole pos" id="polePos" contenteditable="true" spellcheck="false" title="right pole — tap to rename"></span>
+      </div>
+      <div class="track" id="track">
+        <div class="prism-threshold" style="left:17%"></div>
+        <div class="prism-threshold" style="left:33%"></div>
+        <div class="prism-threshold center" style="left:50%"></div>
+        <div class="prism-threshold" style="left:67%"></div>
+        <div class="prism-threshold" style="left:83%"></div>
+        <div class="prism-thumb" id="thumbReal" data-side="left" style="left:38%"></div>
+        <div class="prism-thumb ghost" id="thumbGhost" data-side="right" style="left:62%"></div>
+      </div>
+      <div class="readout"><span class="real-r" id="roReal"></span><span class="sep">/</span><span class="ghost-r" id="roGhost"></span></div>
+    </div>
+
+    <!-- ghost caption (the mirror — opposite side, same band) -->
+    <div class="prism-caption ghost" id="capGhost" data-side="right" data-band="fluid">
+      <div class="caption-label"><span class="side"></span> · <span class="band"></span></div>
+      <div class="caption-text" id="capTextGhost" contenteditable="true" data-ph="type the mirror voice…"></div>
+      <button class="suggest-btn" id="sugGhost">✦ suggest this cell</button>
+    </div>
+  </div>
+</main>
+
+<section id="quadView">
+  <div class="quad-sub">the 12 · tap an orb to give it language · fluid near center → denominated at the rim</div>
+  <div class="quad-plane" id="quadPlane">
+    <div class="qp-tint" id="qpTint"></div>
+    <div class="qp-axis h"></div><div class="qp-axis v"></div>
+    <span class="qp-pole xneg" id="qpXneg" contenteditable="true" spellcheck="false"></span>
+    <span class="qp-pole xpos" id="qpXpos" contenteditable="true" spellcheck="false"></span>
+    <span class="qp-pole ypos" id="qpYpos" contenteditable="true" spellcheck="false"></span>
+    <span class="qp-pole yneg" id="qpYneg" contenteditable="true" spellcheck="false"></span>
+    <!-- 12 orbs injected here -->
+  </div>
+</section>
+
+<div class="modal" id="orbModal"><div class="sheet orb-sheet">
+  <div class="oe-head" id="oeHead"></div>
+  <textarea id="oeText" placeholder="the response voice for this coordinate subject…"></textarea>
+  <div class="oe-cloud"><input id="oeX" placeholder="x-word (cloud)"><input id="oeY" placeholder="y-word (cloud)"></div>
+  <div class="oe-source"><input id="oeSource" list="citeUrls" placeholder="source — where this voice lives (optional)"></div>
+  <datalist id="citeUrls"></datalist>
+  <div class="oe-actions">
+    <button class="btn" id="oeSuggest">✦ suggest</button>
+    <span style="flex:1"></span>
+    <button class="btn primary" id="oeSave">Done</button>
+    <button class="btn" id="oeClose">Close</button>
+    <span class="status" id="oeStatus"></span>
+  </div>
+</div></div>
+
+<div class="modal" id="cellModal"><div class="sheet orb-sheet">
+  <div class="oe-head" id="ceHead"></div>
+  <div class="caption-text" id="ceText" contenteditable="true" data-ph="type this voice…"
+       style="min-height:110px; outline:none; padding:6px 2px;"></div>
+  <div class="oe-actions">
+    <span style="flex:1"></span>
+    <button class="btn primary" id="ceDone">Done</button>
+  </div>
+</div></div>
+
+<div class="modal" id="citeModal"><div class="sheet">
+  <div style="display:flex;gap:10px;align-items:center"><strong style="font-family:var(--serif)">📎 Sources for this event</strong>
+    <span style="flex:1"></span>
+    <button class="btn" id="citeAdd">+ Add</button>
+    <button class="btn" id="citeClose">Close</button></div>
+  <p style="font-family:var(--mono);font-size:11px;color:var(--ink-low)">Drop links to the articles and posts that ground this object. Attach one to any voice via its editor's “source”. Photos the wire delivered ride below — tap to keep or drop; kept ones save on the Reading.</p>
+  <div id="citeList"></div>
+  <div id="citePhotos"></div>
+</div></div>
+
+<button id="kwPill" type="button">★ keyword</button>
+
+<div class="ted-overlay" id="tedOverlay"></div>
+<aside class="ted-drawer" id="tedDrawer" aria-label="Ted's script">
+  <div class="td-head">
+    <span class="t">🐺 Ted's script</span>
+    <span class="layerseg" id="tedLayerSeg"><button data-l="global" class="on">Global</button><button data-l="event">This event</button></span>
+    <span style="flex:1"></span>
+    <button class="btn" id="tedClose">Close</button>
+  </div>
+  <div class="td-body" id="tedBody"></div>
+  <div class="td-foot">
+    <button class="btn" id="tedCopy">Copy Ted script</button>
+    <span class="status" id="tedStatus"></span>
+  </div>
+</aside>
+
+<div class="br-overlay" id="brOverlay"></div>
+<aside class="br-drawer" id="brDrawer" aria-label="Bill reading room">
+  <div class="br-head">
+    <span class="t">📜 Bills</span>
+    <span class="ev" id="brEvent"></span>
+    <span class="layerseg" id="brSeg"><button data-p="chat" class="on">Dialogue</button><button data-p="list" id="brSegList">Shortlist · 0</button><button data-p="cat">Catalog</button></span>
+    <span style="flex:1"></span>
+    <button class="btn" id="brResetBtn" title="Start a fresh dialogue">↺</button>
+    <button class="btn" id="brClose">Close</button>
+  </div>
+  <div class="br-body">
+    <div class="br-pane" id="brChatPane">
+      <div class="br-msgs" id="brMsgs"></div>
+      <div class="br-input">
+        <textarea id="brText" rows="2" placeholder="Which bills should we look at…"></textarea>
+        <button class="btn primary" id="brSend">Send</button>
+      </div>
+    </div>
+    <div class="br-pane" id="brListPane" style="display:none">
+      <div class="br-list" id="brList"></div>
+    </div>
+    <div class="br-pane" id="brCatPane" style="display:none">
+      <div class="br-cat-bar">
+        <input type="search" id="brCatSearch" placeholder="Search the catalog…" autocomplete="off">
+        <button class="btn" id="brCatFold"></button>
+      </div>
+      <div class="br-cat-count" id="brCatCount"></div>
+      <div class="br-list" id="brCatList"></div>
+    </div>
+  </div>
+  <div class="br-foot">
+    <button class="btn primary" id="brLink" disabled>Link confirmed bills</button>
+    <span class="status" id="brStatus"></span>
+  </div>
+</aside>
+
+<!-- ── Newsroom drawer (📡) — Event Engine candidates; sibling of the Bills room ── -->
+<div class="br-overlay" id="nrOverlay"></div>
+<aside class="br-drawer" id="nrDrawer" aria-label="Newsroom">
+  <div class="br-head">
+    <span class="t">📡 Newsroom</span>
+    <span class="ev" id="nrCounts"></span>
+    <span class="layerseg" id="nrSeg"><button data-f="triage" class="on">Triage</button><button data-f="all">All</button></span>
+    <span style="flex:1"></span>
+    <button class="btn" id="nrClose">Close</button>
+  </div>
+  <div class="br-body">
+    <div class="br-pane">
+      <div class="br-list" id="nrList"></div>
+    </div>
+  </div>
+  <div class="br-foot">
+    <button class="btn" id="nrRescan" title="Re-read data/candidates.js into the store (triage state survives)">↺ Rescan</button>
+    <button class="btn" id="nrScore" title="M2 pass — score unscored triage candidates: framing draft, axes, constitutive fitness (spec §4 as amended)">✦ Score</button>
+    <button class="btn" id="nrSync" title="Middle stratum ⇄ repo: pull data/candidate_scores.json, merge (newest wins per candidate), push this device's scores + triage back. Same token as Publish.">⇡ Sync scores</button>
+    <span class="status" id="nrStatus"></span>
+  </div>
+</aside>
+
+<div class="cellmap" id="cellmap"></div>
+
+<div class="actions">
+  <button class="btn" id="btnBack">← Diatribe</button>
+  <button class="btn" id="btnSave">Save</button>
+  <button class="btn" id="btnPublish" title="Save, then write this Reading to the repo — every device pulls it on load">Publish ⇡</button>
+  <button class="btn primary" id="btnOpen">Open in Prism ↗</button>
+  <button class="btn" id="btnExport">Export</button>
+  <span class="status" id="status"></span>
+</div>
+
+<div class="modal" id="nrPosModal"><div class="sheet" style="max-width:520px">
+  <div style="display:flex;gap:10px;align-items:center"><strong style="font-family:var(--serif)">Write member positions?</strong>
+    <span style="flex:1"></span>
+    <button class="btn" id="nrPosSkip">Skip</button></div>
+  <div class="status" id="nrPosExplain" style="margin:8px 0 4px;white-space:normal;line-height:1.5"></div>
+  <select id="nrPosVote" style="width:100%;margin:6px 0"></select>
+  <div style="display:flex;gap:10px;align-items:center;margin-top:4px">
+    <span class="status" id="nrPosMap" style="white-space:normal"></span>
+    <span style="flex:1"></span>
+    <button class="btn" id="nrPosFlip">⇄ Flip</button>
+    <button class="btn" id="nrPosWrite">Write</button>
+  </div>
+</div></div>
+
+<div class="modal" id="exportModal"><div class="sheet">
+  <div style="display:flex;gap:10px;align-items:center"><strong style="font-family:var(--serif)">Event object</strong>
+    <span style="flex:1"></span>
+    <button class="btn" id="copyJson">Copy for Claude</button>
+    <button class="btn" id="dlJson">Download</button>
+    <button class="btn" id="closeExport">Close</button></div>
+  <textarea id="exportText" readonly></textarea>
+</div></div>
+
+<script src="src/js/prismdb.js"></script>
+<script src="src/js/prism-sync.js"></script>
+<script src="src/js/prism-ai.js"></script>
+<script src="src/js/prism-curate.js"></script>
+<script>
+/* ===== Prism Admin · author on the diatribe surface ===== */
+const HAS_DB = (typeof PrismDB !== 'undefined');
+const $ = id => document.getElementById(id);
+const BANDCODE = { fluid:'F', coalition:'C', denominated:'D' };
+function cellId(side, band){ return (side==='left'?'L':'R') + BANDCODE[band]; }
+function bandFromScore(a){ a=Math.abs(a); return a<=33?'fluid':a<=66?'coalition':'denominated'; }
+function bandFromCode(c){ return c==='F'?'fluid':c==='C'?'coalition':'denominated'; }
+
+/* model stores HTML per cell so keyword <span class="kw"> marks persist */
+let currentId=null, prevAxis='x';
+let model = { LF:'',LC:'',LD:'',RF:'',RC:'',RD:'' };
+let curReal='LF', curGhost='RF';
+let pct = 38;
+let spine = { neg:'Dignity', pos:'Security' };
+
+const SEED = {
+  title:'Immigration (general)', prevalentAxis:'x',
+  framing:"Immigration is staged as open versus closed, but the country argues past itself because two goods are on the table — the dignity of the person who moves for a better life, and the security of the citizen who receives them.",
+  spine:{ neg:'Dignity', pos:'Security' },
+  diatribe:{ LF:"People seeking a better life deserve dignity — welcome them well.",
+    LC:"No human is illegal — protect them.", LD:"The border itself is violence; any enforcement is cruelty.",
+    RF:"A country has to be able to secure its border and govern who enters.", RC:"We've lost control — enforce it.",
+    RD:"It's an invasion — they're replacing us." }
+};
+
+/* ---- helpers ---- */
+function stripHtml(h){ const d=document.createElement('div'); d.innerHTML=h||''; return (d.textContent||'').trim(); }
+function kwsOf(h){ const d=document.createElement('div'); d.innerHTML=h||''; return Array.from(d.querySelectorAll('.kw')).map(e=>(e.textContent||'').trim()).filter(Boolean); }
+function escHtml(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function escReg(s){ return String(s).replace(/[.*+?^${}()|[\]\\]/g,'\\$&'); }
+function markKeywords(text, kws){ let h=escHtml(text); (kws||[]).forEach(k=>{ if(k){ const re=new RegExp('('+escReg(escHtml(k))+')','i'); h=h.replace(re,'<span class="kw">$1</span>'); } }); return h; }
+
+/* ---- slider / caption binding ---- */
+const track=$('track'), thumbR=$('thumbReal'), thumbG=$('thumbGhost');
+function scoreFromPct(p){ return Math.round(p*2-100); }
+function sideFromScore(s){ return s<0 ? 'left' : s>0 ? 'right' : 'left'; }
+function sideLabel(side){ return side==='left' ? (spine.neg||'left') : (spine.pos||'right'); }
+/* The slider's value IS a signed integer on the prevalent axis — left is
+   ALWAYS −, right is ALWAYS + (RULED 2026-07-19). It shows in the readout,
+   persists on the Reading as diatribeScore, and restores on load. */
+function sgnScore(s){ return (s>0?'+':'')+s; }
+
+function flush(){ model[curReal]=$('capTextReal').innerHTML; model[curGhost]=$('capTextGhost').innerHTML; }
+function setThumb(p, doFlush){
+  if(doFlush) flush();
+  pct = Math.max(2, Math.min(98, p));
+  const score=scoreFromPct(pct), side=sideFromScore(score), band=bandFromScore(score), opp=side==='left'?'right':'left';
+  curReal = cellId(side, band); curGhost = cellId(opp, band);
+  thumbR.style.left = pct+'%'; thumbR.dataset.side=side;
+  thumbG.style.left = (100-pct)+'%'; thumbG.dataset.side=opp;
+  bind($('capReal'), $('capTextReal'), side, band, curReal, sideLabel(side));
+  bind($('capGhost'), $('capTextGhost'), opp, band, curGhost, sideLabel(opp)+' · mirror');
+  $('roReal').textContent = sideLabel(side)+' · '+band+' · '+sgnScore(score);
+  $('roGhost').textContent = sideLabel(opp)+' · '+band+' · '+sgnScore(-score)+' · mirror';
+  $('ambient').className = 'prism-ambient '+band;
+  renderCellmap();
+}
+function bind(capEl, txtEl, side, band, cell, label){
+  capEl.dataset.side=side; capEl.dataset.band=band;
+  capEl.querySelector('.side').textContent = label;
+  capEl.querySelector('.band').textContent = band;
+  txtEl.innerHTML = model[cell] || '';
+}
+$('capTextReal').addEventListener('input', ()=>{ model[curReal]=$('capTextReal').innerHTML; renderCellmap(); });
+$('capTextGhost').addEventListener('input', ()=>{ model[curGhost]=$('capTextGhost').innerHTML; renderCellmap(); });
+$('framing').addEventListener('input', ()=>{ if(window.DGRoom && DGRoom.active) dgSync(); });
+
+/* ---- editable axis poles ---- */
+function updateLabels(){
+  const score=scoreFromPct(pct), side=sideFromScore(score), opp=side==='left'?'right':'left', band=bandFromScore(score);
+  $('capReal').querySelector('.side').textContent = sideLabel(side);
+  $('capGhost').querySelector('.side').textContent = sideLabel(opp)+' · mirror';
+  $('roReal').textContent = sideLabel(side)+' · '+band+' · '+sgnScore(score);
+  $('roGhost').textContent = sideLabel(opp)+' · '+band+' · '+sgnScore(-score)+' · mirror';
+  renderCellmap();
+}
+function setPoleFields(){ $('poleNeg').textContent=spine.neg; $('polePos').textContent=spine.pos;
+  if(window.DGRoom && DGRoom.active) dgSync(); }
+$('poleNeg').addEventListener('input', ()=>{ spine.neg=$('poleNeg').innerText.trim()||'left'; updateLabels(); });
+$('polePos').addEventListener('input', ()=>{ spine.pos=$('polePos').innerText.trim()||'right'; updateLabels(); });
+
+/* ---- prevalent-axis marker ---- */
+function setPrev(v){ prevAxis=v; $('prevX').classList.toggle('on',v==='x'); $('prevY').classList.toggle('on',v==='y'); }
+$('prevX').onclick=()=>setPrev('x'); $('prevY').onclick=()=>setPrev('y');
+
+/* ---- drag the thumb ---- */
+let dragging=false;
+function pctFromEvent(e){ const r=track.getBoundingClientRect(); const t=e.touches?e.touches[0]:e;
+  return Math.max(0,Math.min(100, ((t.clientX - r.left)/r.width)*100)); }
+function dStart(e){ dragging=true; setThumb(pctFromEvent(e), true); e.preventDefault(); }
+function dMove(e){ if(!dragging) return; setThumb(pctFromEvent(e), true); e.preventDefault(); }
+function dEnd(){ dragging=false; }
+track.addEventListener('pointerdown', dStart); window.addEventListener('pointermove', dMove); window.addEventListener('pointerup', dEnd);
+
+/* ---- cell map ---- */
+function cellCenterPct(cell){
+  const side=cell[0]==='L'?'left':'right', band=bandFromCode(cell[1]);
+  const mid = band==='fluid'?16:band==='coalition'?49:83;
+  const score = side==='left'? -mid : mid; return (score+100)/2;
+}
+function filled(c){ return stripHtml(model[c])!==''; }
+function renderCellmap(){
+  const host=$('cellmap'); host.innerHTML='';
+  ['LF','LC','LD','RF','RC','RD'].forEach(c=>{
+    const side=c[0]==='L'?spine.neg:spine.pos, band=bandFromCode(c[1]);
+    const chip=document.createElement('button'); chip.className='cellchip'+(filled(c)?' filled':'')+(c===curReal?' active':'');
+    chip.textContent=(side||c[0])+'·'+band[0]; chip.onclick=()=>setThumb(cellCenterPct(c),true); host.appendChild(chip);
+  });
+  if(window.DGRoom && DGRoom.active) dgSync();   // the stage over the pedestal follows every edit
+}
+
+/* ---- keyword highlight tool (floating ★ pill on a selection) ---- */
+let lastRange=null, lastBox=null;
+function editableOf(node){ while(node && node!==document.body){ if(node.nodeType===1 && (node.id==='framing'||node.classList.contains('caption-text'))) return node; node=node.parentNode; } return null; }
+document.addEventListener('selectionchange', ()=>{
+  const sel=window.getSelection();
+  if(!sel || sel.rangeCount===0 || sel.isCollapsed){ hidePill(); return; }
+  const r=sel.getRangeAt(0); const box=editableOf(r.commonAncestorContainer);
+  if(!box){ hidePill(); return; }
+  lastRange=r.cloneRange(); lastBox=box;
+  const rc=r.getBoundingClientRect(); const p=$('kwPill'); p.classList.add('show');
+  p.style.left=Math.max(8, Math.min(window.innerWidth-100, rc.left+rc.width/2-46))+'px';
+  p.style.top=Math.max(56, rc.top-42)+'px';
+});
+function hidePill(){ $('kwPill').classList.remove('show'); }
+$('kwPill').addEventListener('pointerdown', e=>e.preventDefault());   // keep the selection alive
+$('kwPill').addEventListener('click', e=>{ e.preventDefault(); toggleKw(); });
+function toggleKw(){
+  if(!lastRange||!lastBox) return;
+  const sel=window.getSelection(); sel.removeAllRanges(); sel.addRange(lastRange);
+  let node=lastRange.commonAncestorContainer, kwEl=null;
+  while(node && node!==lastBox){ if(node.nodeType===1 && node.classList && node.classList.contains('kw')){ kwEl=node; break; } node=node.parentNode; }
+  if(kwEl){ const par=kwEl.parentNode; while(kwEl.firstChild) par.insertBefore(kwEl.firstChild,kwEl); par.removeChild(kwEl); par.normalize(); }
+  else { const span=document.createElement('span'); span.className='kw';
+    try{ lastRange.surroundContents(span); }catch(_){ const f=lastRange.extractContents(); span.appendChild(f); lastRange.insertNode(span); } }
+  syncBox(lastBox); hidePill(); window.getSelection().removeAllRanges();
+}
+function syncBox(box){
+  if(box.id==='capTextReal') model[curReal]=box.innerHTML;
+  else if(box.id==='capTextGhost') model[curGhost]=box.innerHTML;
+  renderCellmap();
+}
+
+/* ---- load / populate ---- */
+function loadEvent(ev){
+  currentId=ev.id||null; $('evTitle').value=ev.title||''; $('framing').innerHTML=markKeywords(ev.framing||'', ev.framingKeywords||[]);
+  const pa=ev.prevalentAxis||'x'; const ax=ev.axes||{}; const a=pa==='x'?ax.x:ax.y;
+  spine={ neg:(a&&a.neg)||'left', pos:(a&&a.pos)||'right' }; setPrev(pa);
+  const d=ev.diatribe||{}; ['LF','LC','LD','RF','RC','RD'].forEach(c=>{ const e=d[c]||{}; model[c]=markKeywords(e.text||'', e.keywords||[]); });
+  tedEvent = ev.ted ? JSON.parse(JSON.stringify(ev.ted)) : {};
+  const R=ev.responses||{}; responses={A:{},B:{},C:{},D:{}};
+  ['A','B','C','D'].forEach(q=>{ const rq=R[q]||{}; const cvt=o=>({ text:(o&&o.text)||'', xWord:(o&&o.xWord)||'', yWord:(o&&o.yWord)||'', source:(o&&o.source)||'' });
+    // canonical band keys first, legacy aliases second (schema §7) — events
+    // authored in admin.html write fluid/denominated; seed data writes
+    // goodFaith/badFaith. Reading only legacy broke new events (2026-07-02).
+    responses[q]={ fluid:cvt(rq.fluid||rq.goodFaith), coalition:cvt(rq.coalition), denominated:cvt(rq.denominated||rq.badFaith) }; });
+  const oa=(pa==='x')?(ax.y):(ax.x); otherPole={ neg:(oa&&oa.neg)||'', pos:(oa&&oa.pos)||'' };
+  citations = Array.isArray(ev.sources) ? ev.sources.map(s=>({url:(s&&s.url)||'',label:(s&&s.label)||''})) : [];
+  images = Array.isArray(ev.images)
+    ? ev.images.filter(p=>p&&p.url).map(p=>{ const o={url:p.url,credit:p.credit||'',articleUrl:p.articleUrl||'',keep:true};
+        if(p.place) o.place=JSON.parse(JSON.stringify(p.place));   // placement rides (2026-07-19)
+        if(p.baked) o.baked=p.baked;                               // publish-baked repo copy rides too
+        return o; })
+    : [];
+  if(typeof nrPendingPromote!=='undefined') nrPendingPromote=null;   // loading another event is never a promotion
+  // The slider holds its integer (2026-07-19): restore the authored signed
+  // score; Readings from before the field keep the surface's current thumb.
+  if(typeof ev.diatribeScore==='number' && isFinite(ev.diatribeScore))
+    pct=(Math.max(-96,Math.min(96,Math.round(ev.diatribeScore)))+100)/2;
+  setPoleFields(); setThumb(pct,false); status(currentId?('Loaded '+currentId):'Loaded onto the surface');
+}
+function loadSeed(){
+  currentId=null; $('evTitle').value=SEED.title; $('framing').innerHTML=escHtml(SEED.framing); spine={neg:SEED.spine.neg,pos:SEED.spine.pos}; setPrev(SEED.prevalentAxis);
+  model={}; ['LF','LC','LD','RF','RC','RD'].forEach(c=>model[c]=escHtml(SEED.diatribe[c]||'')); tedEvent={};
+  responses={A:{},B:{},C:{},D:{}}; otherPole={neg:'Market',pos:'State'}; if(typeof citations!=='undefined') citations=[];
+  if(typeof images!=='undefined') images=[];
+  if(typeof nrPendingPromote!=='undefined') nrPendingPromote=null;
+  setPoleFields(); setThumb(pct,false);
+  status('Immigration example — edit freely; ✦ on a filled box marks its keywords');
+}
+function blank(){
+  currentId=null; $('evTitle').value=''; $('framing').innerHTML=''; spine={neg:'',pos:''}; setPrev('x');
+  model={LF:'',LC:'',LD:'',RF:'',RC:'',RD:''}; if(typeof tedEvent!=='undefined') tedEvent={};
+  if(typeof responses!=='undefined'){ responses={A:{},B:{},C:{},D:{}}; otherPole={neg:'',pos:''}; }
+  if(typeof citations!=='undefined') citations=[];
+  if(typeof images!=='undefined') images=[];
+  if(typeof nrPendingPromote!=='undefined') nrPendingPromote=null;   // fresh slate — no pending promotion
+  setPoleFields(); setThumb(38,false); status('Blank diatribe — tap the pole names to set your axis, then fill the slots');
+}
+
+/* ---- dropdown ----
+   Titles first (evt_ ids are device-local noise — standing correction
+   2026-07-06), newest first, grouped Drafts / Published (native optgroups —
+   the OS picker renders the headers; 2026-07-15 mobile session). Published =
+   syncedAt or rid in the sync sha cache; ✓ kept on the option so the closed
+   pill still reads. ◇ N = curated bill readings in the store. Each option
+   carries its updatedAt as "Mon D · h:mma". */
+function refreshDropdown(sel){
+  const s=$('evSelect'); s.innerHTML='<option value="">— load event —</option>';
+  if(HAS_DB){
+    let shas={}; try{ shas=JSON.parse(localStorage.getItem('prism.sync.shas'))||{}; }catch(e){}
+    const evNum=e=>parseInt(String(e.id||'').replace('evt_',''),10)||0;
+    const evs=(PrismDB.getEvents()||[]).slice().sort((a,b)=>{
+      const ta=Date.parse(a.updatedAt||'')||0, tb=Date.parse(b.updatedAt||'')||0;
+      return (tb-ta)||(evNum(b)-evNum(a));
+    });
+    const when=e=>{ const t=Date.parse(e.updatedAt||''); if(!t) return '';
+      const d=new Date(t); const sameYear=d.getFullYear()===new Date().getFullYear();
+      let h=d.getHours(); const m=String(d.getMinutes()).padStart(2,'0'), ap=h>=12?'p':'a'; h=h%12||12;
+      return d.toLocaleString('en-US',{month:'short'})+' '+d.getDate()+(sameYear?'':' '+d.getFullYear())+' · '+h+':'+m+ap; };
+    const isPub=e=>!!(e.syncedAt||(e.rid&&shas[e.rid]));
+    const gD=document.createElement('optgroup'); gD.label='Drafts';
+    const gP=document.createElement('optgroup'); gP.label='Published';
+    evMenuList=[];
+    evs.forEach(e=>{
+      const o=document.createElement('option'); o.value=e.id;
+      let bills=0; try{ bills=(PrismDB.getBillScoresForEvent(e.id)||[]).length; }catch(err){}
+      const w=when(e), pub=isPub(e);
+      o.textContent=(e.title||e.id)+(w?' · '+w:'')+(pub?' ✓':'')+(bills?' · ◇ '+bills:'');
+      (pub?gP:gD).appendChild(o);
+      evMenuList.push({ id:e.id, title:e.title||e.id, pub,
+        meta:[w, pub?'✓ published':'draft', bills?('◇ '+bills+' bills'):''].filter(Boolean).join(' · ') });
+    });
+    if(gD.children.length) s.appendChild(gD);
+    if(gP.children.length) s.appendChild(gP);
+  }
+  if(sel) s.value=sel;
+  evMenuSyncLabel();
+}
+
+/* ---- the menu itself — the app draws the open list, not the OS ---- */
+let evMenuList=[];
+function evMenuSyncLabel(){
+  const b=$('evMenuBtn'); if(!b) return;
+  const cur=evMenuList.find(x=>x.id===$('evSelect').value);
+  b.textContent=cur?cur.title:'— load event —';
+}
+function evMenuRender(){
+  const m=$('evMenu'); m.innerHTML='';
+  const curId=$('evSelect').value;
+  const section=(label,items)=>{
+    if(!items.length) return;
+    const h=document.createElement('div'); h.className='evm-head'; h.textContent=label; m.appendChild(h);
+    items.forEach(x=>{
+      const r=document.createElement('button'); r.className='evm-row'+(x.id===curId?' on':'');
+      const t=document.createElement('div'); t.className='evm-t'; t.textContent=x.title;
+      const mm=document.createElement('div'); mm.className='evm-m'; mm.textContent=x.meta;
+      r.appendChild(t); r.appendChild(mm);
+      r.onclick=()=>{ const s=$('evSelect'); s.value=x.id; try{ s.onchange(); }catch(_){}
+        evMenuSyncLabel(); evMenuClose(); };
+      m.appendChild(r);
+    });
+  };
+  section('Drafts', evMenuList.filter(x=>!x.pub));
+  section('Published', evMenuList.filter(x=>x.pub));
+  if(!evMenuList.length){ const d=document.createElement('div'); d.className='evm-empty';
+    d.textContent='nothing on this device yet — promote from the newsroom, or pull'; m.appendChild(d); }
+}
+function evMenuOpen(){
+  const m=$('evMenu'), b=$('evMenuBtn'); evMenuRender();
+  const r=b.getBoundingClientRect();
+  m.style.top=Math.round(r.bottom+6)+'px';
+  m.style.left=Math.max(12, Math.min(Math.round(r.left), innerWidth-492))+'px';
+  m.classList.add('show');
+}
+function evMenuClose(){ $('evMenu').classList.remove('show'); }
+(function(){
+  const s=$('evSelect');
+  const b=document.createElement('button'); b.id='evMenuBtn'; b.type='button'; b.title=s.title;
+  b.textContent='— load event —';
+  s.parentNode.insertBefore(b, s.nextSibling);
+  const m=document.createElement('div'); m.id='evMenu'; document.body.appendChild(m);
+  b.onclick=(e)=>{ e.stopPropagation(); m.classList.contains('show')?evMenuClose():evMenuOpen(); };
+  document.addEventListener('click',(e)=>{ if(m.classList.contains('show')&&!m.contains(e.target)&&e.target!==b) evMenuClose(); });
+  document.addEventListener('keydown',(e)=>{ if(e.key==='Escape') evMenuClose(); });
+})();
+
+/* ---- assemble + save/export ---- */
+function assemble(){
+  flush();
+  const dia={};
+  [['LF','left','fluid'],['LC','left','coalition'],['LD','left','denominated'],
+   ['RF','right','fluid'],['RC','right','coalition'],['RD','right','denominated']].forEach(([c,side,band])=>{
+     dia[c]={ text:stripHtml(model[c]), side, band, keywords:kwsOf(model[c]) }; });
+  const fh=$('framing').innerHTML;
+  const ev={ title:$('evTitle').value.trim()||'Untitled event', framing:stripHtml(fh), framingKeywords:kwsOf(fh),
+    diatribe:dia, prevalentAxis:prevAxis,
+    // The authored aperture holds (2026-07-19): a signed integer on the
+    // prevalent axis, left = −, right = +. Rides publish via toFile.
+    diatribeScore:scoreFromPct(pct) };
+  if(typeof tedEvent!=='undefined' && Object.keys(tedEvent).length) ev.ted=JSON.parse(JSON.stringify(tedEvent));
+  if(typeof responsesSchema==='function') ev.responses=responsesSchema();
+  if(typeof citations!=='undefined'){ const cites=citations.filter(c=>c&&c.url&&c.url.trim()).map(c=>({url:c.url.trim(),label:(c.label||'').trim()})); if(cites.length) ev.sources=cites; }
+  // Photos (2026-07-19): kept ones only; ALWAYS set (empty clears — see note
+  // at `images`). URLs + credit + any placement (boundary role or pin) ride
+  // the Reading; nothing is fetched here — Publish bakes (prism-sync.js).
+  if(typeof images!=='undefined')
+    ev.images=images.filter(p=>p&&p.keep&&p.url).map(p=>{ const o={url:p.url,credit:p.credit||'',articleUrl:p.articleUrl||''};
+      if(p.place) o.place=p.place; if(p.baked) o.baked=p.baked; return o; });
+  return ev;
+}
+function axesObj(){
+  const sp={pos:spine.pos,neg:spine.neg};
+  const op=(typeof otherPole!=='undefined') ? {pos:otherPole.pos||'',neg:otherPole.neg||''} : {pos:'',neg:''};
+  return prevAxis==='x' ? { x:sp, y:op } : { x:op, y:sp };
+}
+function save(){
+  if(!HAS_DB){ status('Open via Live Server to save (shares storage with the app)'); return null; }
+  try{ localStorage.setItem('prism.ted.global', JSON.stringify(tedGlobal)); }catch(_){}
+  const patch=assemble();
+  try{
+    // updatedAt stamps on every save (2026-07-15): it's the draft tier's
+    // LWW key, and pull already compares on it — a newer local draft now
+    // correctly outranks an older repo copy instead of being clobbered.
+    const stamp=new Date().toISOString();
+    if(currentId){ PrismDB.updateEvent(currentId, Object.assign({}, patch, {axes:axesObj(), updatedAt:stamp})); PrismDB.setActive(currentId); status('Updated '+currentId+' · active'); }
+    else { const ev=Object.assign({ category:'', prompt:'', meta:{status:'draft',editHistory:[]}, date:new Date().toISOString().slice(0,10),
+      active:true, antiValentBand:'coalition', axes:axesObj(), responses:{}, updatedAt:stamp }, patch);
+      const added=PrismDB.addEvent(ev); currentId=added.id; PrismDB.setActive(added.id); status('Saved '+added.id+' · active'); refreshDropdown(added.id); }
+    // Draft tier (2026-07-15): editing a promoted candidate's unpublished
+    // Reading is a stratum mutation — bump the owner candidate's mts so
+    // the next ⇡ Sync scores carries the fresh draft. saveCandidate stamps.
+    let stratumTouched=false;
+    try{ const owner=PrismDB.getCandidates().find(c=>c.status==='promoted'&&c.promotedEventId===currentId);
+      if(owner){ PrismDB.saveCandidate(owner); stratumTouched=true; } }catch(_){}
+    // Event Engine: a successful save ratifies a pending promotion —
+    // stamp candidate → event lineage (survives rescans by design).
+    if(nrPendingPromote){ const pc=nrPendingPromote; PrismDB.promoteCandidate(pc, currentId); nrPendingPromote=null; stratumTouched=true;
+      try{ nrRender(); }catch(_){}
+      // RULED 2026-07-13: offer the yea→pole member-position write now that
+      // authored axes exist (declared later in this script — hoisted).
+      try{ nrOfferPositions(pc, currentId); }catch(_){}}
+    // Auto-carry: the fresh draft/promotion rides to the stratum without
+    // the ⇡ gesture (2026-07-16 — the iPad roundtrip gap).
+    if(stratumTouched){ try{ nrQueuePush(); }catch(_){} }
+    return currentId;
+  }catch(e){ status('Save failed: '+e.message); return null; }
+}
+/* Save the on-screen draft, then hand it to Prism by id so v2 opens on exactly
+   this event (the ?event= param wins v2's selection — no reliance on active). */
+function openInPrism(){
+  if(!HAS_DB){ status('Open via Live Server first — Prism shares its storage.'); return; }
+  const p=assemble();
+  const hasContent = (p.title && p.title!=='Untitled event')
+    || p.framing
+    || ['LF','LC','LD','RF','RC','RD'].some(c=>p.diatribe[c] && p.diatribe[c].text);
+  if(!hasContent){ status('Nothing to open yet — write a framing or a line, then Save first.'); return; }
+  const id=save();
+  if(!id) return;   // save() already reported why
+  location.href='v2/index.html?event='+encodeURIComponent(id);
+}
+function openExport(){ const ev=Object.assign(assemble(), {axes:axesObj()}); $('exportText').value = JSON.stringify(ev,null,2); $('exportModal').classList.add('show'); }
+
+/* ---- AI: ✦ writes an empty cell, or marks the keywords of a filled one ---- */
+async function callClaude(key, prompt, maxTok){
+  // Delegates to the shared engine (src/js/prism-ai.js) — the 2026-07-02
+  // hardening (adaptive thinking, effort floor, text-block-only extraction,
+  // truncation guard) lives there now, single-sourced for all consumers.
+  return PrismAI.call(key, { model:$('model').value, prompt, maxTokens:maxTok, effort:'low', system:PrismAI.VOICE_CONTEXT });
+}
+async function suggestCell(which){
+  const key=$('apiKey').value.trim(); if(!key){ status('Add your API key (open “AI” in the top bar)'); return; }
+  const box = which==='real'?$('capTextReal'):$('capTextGhost');
+  const cell = which==='real'?curReal:curGhost;
+  const existing = stripHtml(box.innerHTML);
+  const side = cell[0]==='L'?spine.neg:spine.pos, band = bandFromCode(cell[1]);
+  if(existing){    // filled → mark keywords
+    status('Marking keywords in '+cell+'…');
+    const prompt=`From this Diatribe voice, pick the 1–3 most charged, load-bearing keywords — the compressed "cloud" that prefigures the line. Each must appear verbatim in the line. Return ONLY a JSON array of short strings.\nLINE: ${existing}`;
+    try{ const raw=await callClaude(key,prompt,120); const m=raw.match(/\[[\s\S]*\]/); const arr=m?JSON.parse(m[0]):[];
+      box.innerHTML=markKeywords(existing, arr); model[cell]=box.innerHTML; renderCellmap(); status('Marked '+arr.length+' keyword(s) in '+cell);
+    }catch(e){ status('AI error: '+e.message); }
+    return;
+  }
+  // empty → write the voice
+  const gloss={fluid:'object present — the good itself, plainly held',coalition:'the good acquires a tribal carrier',denominated:'object replaced by identity — totalizing'}[band];
+  const prompt=`Author one Diatribe voice for the Prism map. Denomination radiates out: fluid holds the object, coalition carries it in a tribe, denominated replaces it with identity.\nFRAMING: ${stripHtml($('framing').innerHTML)||'(none)'}\nSPINE POLE: ${side}\nBAND: ${band} (${gloss})\nWrite ONE short, sincere, charged first-person-ish line for this exact cell — not a strawman. Return ONLY the sentence, no quotes.`;
+  status('Writing '+cell+'…');
+  try{ let txt=(await callClaude(key,prompt,200)).replace(/^["']|["']$/g,'');
+    box.innerHTML=escHtml(txt); model[cell]=box.innerHTML; renderCellmap(); status('Wrote '+cell+' — tap ✦ again to mark its keywords');
+  }catch(e){ status('AI error: '+e.message); }
+}
+
+/* ---- wire ---- */
+function status(m){ $('status').textContent=m; }
+$('sugReal').onclick=()=>suggestCell('real'); $('sugGhost').onclick=()=>suggestCell('ghost');
+$('btnSave').onclick=save; $('btnOpen').onclick=openInPrism; $('btnExport').onclick=openExport;
+$('btnPublish').onclick=async()=>{
+  const id=save(); if(!id) return;            // save() already reported why
+  status('Publishing…');
+  try{ const {rid,bake}=await PrismSync.publish(id);
+    // Bake report (2026-07-19): how many kept photos landed in the repo vs
+    // stayed hotlinked behind a CORS wall (graceful decay, never blocking).
+    const b=bake&&(bake.baked||bake.hotlinked)?(' · '+bake.baked+' baked'+(bake.hotlinked?', '+bake.hotlinked+' hotlinked':'')):'';
+    status('Published · '+rid+' → repo'+b); }
+  catch(e){ status(e.message); }
+};
+$('closeExport').onclick=()=>$('exportModal').classList.remove('show');
+$('copyJson').onclick=()=>{ const t=$('exportText'); t.select(); if(navigator.clipboard) navigator.clipboard.writeText(t.value).catch(()=>{}); try{document.execCommand('copy');}catch(e){} status('Copied — paste into the chat'); };
+$('dlJson').onclick=()=>{ const ev=Object.assign(assemble(),{axes:axesObj()}); const b=new Blob([JSON.stringify(ev,null,2)],{type:'application/json'}); const a=document.createElement('a'); a.href=URL.createObjectURL(b); a.download=(ev.title||'event').replace(/\W+/g,'_')+'_diatribe.json'; a.click(); };
+$('evSelect').onchange=()=>{ const id=$('evSelect').value; if(id&&HAS_DB){ const ev=PrismDB.getEvent(id); if(ev) loadEvent(ev); } };
+['apiKey','model','ghToken'].forEach(id=>{ const v=localStorage.getItem('prism.admin.'+id); if(v)$(id).value=v; $(id).addEventListener('input',()=>localStorage.setItem('prism.admin.'+id,$(id).value)); });
+// Migrate stored retired model strings (list lives in prism-ai.js)
+(function(){ if(PrismAI.RETIRED_MODELS.includes(($('model').value||'').trim())){ $('model').value=PrismAI.MODEL_DEFAULT; localStorage.setItem('prism.admin.model',PrismAI.MODEL_DEFAULT); } })();
+
+/* ---- daytime mode — ◐ flips the sky; persisted per device ---- */
+function setTheme(t){
+  document.body.classList.toggle('light', t==='light');
+  document.body.classList.toggle('dark',  t!=='light');
+  try{ localStorage.setItem('prism.admin.theme', t); }catch(_){}
+  const m=document.querySelector('meta[name="theme-color"]');
+  if(m) m.setAttribute('content', t==='light' ? '#f5f0e8' : '#0a1226');   // PWA chrome follows
+}
+$('themeBtn').onclick=()=>setTheme(document.body.classList.contains('light')?'dark':'light');
+(function(){ let t=null; try{ t=localStorage.getItem('prism.admin.theme'); }catch(_){}
+  if(t==='light') setTheme('light'); })();
+
+/* ---- mobile prism-nav: the toolbar drops from the nav art on phones ----
+   Toggle only ever matters under the 700px media query; harmless on desktop.
+   Tapping any menu button folds the bar back up (inputs & details stay open). */
+$('pnavBtn').onclick=(e)=>{ e.stopPropagation(); document.body.classList.toggle('navopen'); };
+document.querySelector('.adminbar').addEventListener('click',(e)=>{
+  if(document.body.classList.contains('navopen') && e.target.closest('button.btn, .viewseg button, .prevseg button'))
+    document.body.classList.remove('navopen');
+});
+
+/* ---- DreamGetty room backdrop (handoff §3¾) ----
+   The early room: ionic columns, the pedestal, Ted Turner, the vase that
+   falls and un-falls, the acacia through the wall — plus frames, an
+   elephant, and the AV cart. Constraints held: lazy-load only (Three.js
+   CDN + dg-room.js fetched on first toggle, never at boot), default OFF
+   every load, graceful fallback to the space field if anything 404s,
+   pointer-events:none so authoring stays flat. Not persisted — the ruling
+   says the default must remain the light space field. */
+let dgLoading=false;
+function dgScript(src){ return new Promise((res,rej)=>{ const s=document.createElement('script');
+  s.src=src; s.onload=res; s.onerror=()=>rej(new Error('could not load '+src)); document.head.appendChild(s); }); }
+async function dgToggle(){
+  if(dgLoading) return;
+  if(window.DGRoom && DGRoom.active && document.body.classList.contains('dg-on')){
+    dgOrbitSet(false);
+    document.body.classList.remove('dg-on'); $('dgBtn').classList.remove('on');
+    setTimeout(()=>{ if(window.DGRoom && DGRoom.active && !document.body.classList.contains('dg-on')) DGRoom.unmount(); }, 1500); // let the fade finish
+    status('Gallery dark — space field stands'); return;
+  }
+  if(window.DGRoom && DGRoom.active){ // tapped back on mid-fade — the timeout guard sees the class and stands down
+    document.body.classList.add('dg-on'); $('dgBtn').classList.add('on'); status('DreamGetty room — mind the vase'); return;
+  }
+  dgLoading=true; status('Raising the gallery…');
+  try{
+    if(typeof THREE==='undefined') await dgScript('https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js');
+    if(!window.DGRoom) await dgScript('dg-room.js');
+    // the factory — the quad stage IS a PrismGraphmap instance. Bare typeof,
+    // never window.X (top-level const is a global binding, not a property —
+    // that exact mistake once silently disabled the factory for sessions).
+    if(typeof PrismGraphmap==='undefined'){ try{ await dgScript('src/js/prism-graphmap.js'); }catch(_){ /* room still stands; quad stage degrades */ } }
+    DGRoom.mount();
+    DGRoom.onPick(dgPick);
+    document.body.classList.add('dg-on'); $('dgBtn').classList.add('on');
+    dgSync();
+    dgOrbitSet(true);   // the room opens ON the pedestal — the stage there is the working surface
+    status('On the pedestal — drag to circle, tap a tablet or orb to edit; 🧭 for flat');
+  }catch(e){
+    document.body.classList.remove('dg-on'); $('dgBtn').classList.remove('on');
+    if(window.DGRoom && DGRoom.active) DGRoom.unmount();
+    status('DG unavailable — space field stands ('+(e.message||'load failed')+')');
+  }
+  dgLoading=false;
+}
+$('dgBtn').onclick=dgToggle;
+
+/* ---- the stage over the pedestal: live sync + orbit + tap-to-edit ---- */
+function dgStageData(){
+  const cells={}; ['LF','LC','LD','RF','RC','RD'].forEach(c=>cells[c]={ text:stripHtml(model[c]), kws:kwsOf(model[c]) });
+  return {
+    view: document.body.classList.contains('view-quad') ? 'quad' : 'dia',
+    cur:{ real:curReal, ghost:curGhost },
+    prevAxis, pct, spine:{ neg:spine.neg, pos:spine.pos },
+    poles:{ xneg:xStore().neg, xpos:xStore().pos, ypos:yStore().pos, yneg:yStore().neg },
+    cells, framingKws:kwsOf($('framing').innerHTML),
+    responses,
+  };
+}
+let dgSyncT=null;
+function dgSync(){
+  if(!(window.DGRoom && DGRoom.active)) return;
+  clearTimeout(dgSyncT);
+  dgSyncT=setTimeout(()=>{ try{ DGRoom.syncStage(dgStageData()); }catch(_){} }, 160);
+}
+function dgOrbitSet(on){
+  document.body.classList.toggle('dg-orbit', on);
+  $('dgOrbitBtn').classList.toggle('on', on);
+  if(window.DGRoom && DGRoom.active) DGRoom.setOrbit(on);
+}
+$('dgOrbitBtn').onclick=()=>{
+  if(!(window.DGRoom && DGRoom.active)){ status('Raise the gallery first (🏛)'); return; }
+  const on=!document.body.classList.contains('dg-orbit');
+  dgOrbitSet(on);
+  if(on){ dgSync(); status('Back on the pedestal — tap a tablet or orb to edit'); }
+  else status('Flat authoring — the room stands behind; 🧭 to return to the pedestal');
+};
+function dgPick(p){
+  if(p.type==='orb'){ openOrb(p.quad, p.band); }   // the DOM editor, floating over the room
+  else if(p.type==='cell'){ openCell(p.cell); }     // edit the tablet where it lives — the pedestal follows live
+}
+
+/* ---- floating cell editor — a tablet edited on the pedestal, not by leaving it ---- */
+let cellEditing=null;
+function openCell(cell){
+  cellEditing=cell;
+  const side=cell[0]==='L'?'left':'right', band={F:'fluid',C:'coalition',D:'denominated'}[cell[1]];
+  $('ceHead').textContent=cell+' · '+(typeof sideLabel==='function'?sideLabel(side):side)+' · '+band;
+  $('ceText').innerHTML=model[cell]||'';
+  $('cellModal').classList.add('show');
+  setTimeout(()=>$('ceText').focus(),50);
+}
+$('ceText').addEventListener('input',()=>{
+  if(!cellEditing) return;
+  model[cellEditing]=$('ceText').innerHTML;
+  // keep the (hidden) flat captions honest if this cell is bound to one
+  if(cellEditing===curReal) $('capTextReal').innerHTML=model[cellEditing];
+  else if(cellEditing===curGhost) $('capTextGhost').innerHTML=model[cellEditing];
+  renderCellmap(); dgSync();   // the tablet on the pedestal follows every keystroke
+});
+$('ceDone').onclick=()=>{ $('cellModal').classList.remove('show'); cellEditing=null; };
+
+/* ===== Quadrants view — the 12 as orb pins on the 2×2 plane ===== */
+const QBANDS=['fluid','coalition','denominated'];
+const QUAD_DEF=[{id:'A',sx:-1,sy:1,xSide:'left'},{id:'B',sx:1,sy:1,xSide:'right'},{id:'C',sx:-1,sy:-1,xSide:'left'},{id:'D',sx:1,sy:-1,xSide:'right'}];
+let responses={A:{},B:{},C:{},D:{}};   // responses[quad][band] = {text,xWord,yWord}
+let otherPole={neg:'',pos:''};         // the non-prevalent axis's poles
+let orbEditing=null;
+function xStore(){ return prevAxis==='x'?spine:otherPole; }
+function yStore(){ return prevAxis==='y'?spine:otherPole; }
+function resp(q,b){ responses[q]=responses[q]||{}; return responses[q][b]||{}; }
+function respFilled(q,b){ const r=resp(q,b); return !!(r.text&&r.text.trim()); }
+function responsesSchema(){ const out={}; QUAD_DEF.forEach(q=>{ const rq=responses[q.id]||{};
+  const mk=b=>{ const r=rq[b]||{}; return { text:(r.text||''), xWord:(r.xWord||''), yWord:(r.yWord||''), words:[], source:(r.source||'') }; };
+  // Write CANONICAL band keys (Event_Data_Schema_v1 §7). Safe: v2 reads via
+  // BAND_KEY_ALIASES, admin.html reads canonical, v56 doesn't touch bands.
+  out[q.id]={ xSide:q.xSide, source:'', fluid:mk('fluid'), coalition:mk('coalition'), denominated:mk('denominated') }; });
+  return out; }
+function buildOrbs(){
+  const plane=$('quadPlane'); plane.querySelectorAll('.orb').forEach(o=>o.remove());
+  const R=[0.34,0.60,0.90];
+  QUAD_DEF.forEach(q=>{ QBANDS.forEach((band,bi)=>{
+    const orb=document.createElement('div'); orb.className='orb'+(respFilled(q.id,band)?' filled':''); orb.dataset.band=band; orb.dataset.quad=q.id;
+    const off=R[bi]*42; orb.style.left=(50+q.sx*off)+'%'; orb.style.top=(50-q.sy*off)+'%';
+    const tip=document.createElement('span'); tip.className='orb-tip'; tip.textContent=q.id+' · '+band; orb.appendChild(tip);
+    orb.onclick=()=>openOrb(q.id,band); plane.appendChild(orb);
+  }); });
+  if(window.DGRoom && DGRoom.active) dgSync();
+}
+function renderQuadPoles(){ $('qpXneg').textContent=xStore().neg||''; $('qpXpos').textContent=xStore().pos||''; $('qpYpos').textContent=yStore().pos||''; $('qpYneg').textContent=yStore().neg||''; }
+$('qpXneg').addEventListener('input',()=>{ xStore().neg=$('qpXneg').innerText.trim(); setPoleFields(); });
+$('qpXpos').addEventListener('input',()=>{ xStore().pos=$('qpXpos').innerText.trim(); setPoleFields(); });
+$('qpYpos').addEventListener('input',()=>{ yStore().pos=$('qpYpos').innerText.trim(); setPoleFields(); });
+$('qpYneg').addEventListener('input',()=>{ yStore().neg=$('qpYneg').innerText.trim(); setPoleFields(); });
+function openOrb(q,band){ orbEditing={quad:q,band:band}; const r=resp(q,band);
+  const xt=(q==='A'||q==='C')?xStore().neg:xStore().pos, yt=(q==='A'||q==='B')?yStore().pos:yStore().neg;
+  $('oeHead').textContent=q+' · '+(xt||'x')+' · '+(yt||'y')+' · '+band;
+  $('oeText').value=r.text||''; $('oeX').value=r.xWord||''; $('oeY').value=r.yWord||''; $('oeSource').value=r.source||''; $('oeStatus').textContent=''; syncCiteList();
+  $('orbModal').classList.add('show'); setTimeout(()=>$('oeText').focus(),50);
+}
+function commitOrb(){ if(!orbEditing) return; const q=orbEditing.quad,b=orbEditing.band; responses[q]=responses[q]||{};
+  responses[q][b]={ text:$('oeText').value.trim(), xWord:$('oeX').value.trim(), yWord:$('oeY').value.trim(), source:$('oeSource').value.trim() }; buildOrbs(); }
+$('oeSave').onclick=()=>{ commitOrb(); $('orbModal').classList.remove('show'); orbEditing=null; };
+$('oeClose').onclick=()=>{ $('orbModal').classList.remove('show'); orbEditing=null; };
+$('oeSuggest').onclick=async()=>{ if(!orbEditing) return; const key=$('apiKey').value.trim(); if(!key){ $('oeStatus').textContent='Add your API key (AI ▸ top bar)'; return; }
+  const q=orbEditing.quad,b=orbEditing.band; const xt=(q==='A'||q==='C')?xStore().neg:xStore().pos, yt=(q==='A'||q==='B')?yStore().pos:yStore().neg;
+  const gloss={fluid:'object present — plainly held',coalition:'a tribal carrier / vehicle',denominated:'object replaced by identity — totalizing'}[b];
+  const prompt=`Author one quadrant voice for the Prism map. This coordinate subject sits at ${xt||'x'} × ${yt||'y'}; band ${b} (${gloss}). Denomination radiates: fluid holds the object, coalition carries it in a tribe, denominated replaces it with identity.\nFRAMING: ${stripHtml($('framing').innerHTML)||'(none)'}\nWrite ONE short, sincere, charged line for this exact cell — not a strawman — plus its 1–2 word x and y cloud tokens. Return ONLY JSON: {"response":"...","xWord":"...","yWord":"..."}`;
+  $('oeStatus').textContent='Asking Claude…';
+  try{ const raw=await callClaude(key,prompt,300); const m=raw.match(/\{[\s\S]*\}/); const o=m?JSON.parse(m[0]):{};
+    if(o.response)$('oeText').value=o.response; if(o.xWord)$('oeX').value=o.xWord; if(o.yWord)$('oeY').value=o.yWord; $('oeStatus').textContent='filled'; }
+  catch(e){ $('oeStatus').textContent='AI error: '+e.message; } };
+function setView(v){
+  $('viewSeg').querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));
+  document.body.classList.toggle('view-quad', v==='quad');
+  const dia = v!=='quad';
+  $('btnBack').style.display = dia?'none':'';   // back only on the quadrants stage
+  $('btnOpen').style.display = dia?'none':'';     // preview only after the responses stage
+  if(v==='quad'){ renderQuadPoles(); buildOrbs(); }
+  if(window.DGRoom && DGRoom.active) dgSync();
+}
+$('viewSeg').querySelectorAll('button').forEach(b=>b.onclick=()=>setView(b.dataset.v));
+$('btnBack').onclick=()=>setView('dia');
+
+/* ===== Citation bank — per-event sources; attachable to any voice ===== */
+let citations=[];
+/* Photos (2026-07-19): the wire's pictures, lifted at promote. Working
+   entries are {url, credit, articleUrl, keep}; only kept ones save to
+   ev.images (URLs + credit, nothing fetched). ev.images always writes —
+   dropping every photo must clear the saved set, unlike the sources
+   precedent (set-if-length) which can never empty itself. */
+let images=[];
+function renderPhotos(){
+  const host=$('citePhotos'); if(!host) return; host.innerHTML='';
+  if(!images.length) return;
+  const h=document.createElement('div'); h.className='cite-pics-head';
+  h.textContent='photos · '+images.filter(i=>i.keep).length+' of '+images.length+' held';
+  host.appendChild(h);
+  const grid=document.createElement('div'); grid.className='cite-pics';
+  images.forEach((p,i)=>{
+    const cell=document.createElement('div'); cell.className='cite-pic'+(p.keep?'':' off');
+    cell.title=(p.keep?'held — tap to drop':'dropped — tap to hold')+(p.credit?(' · '+p.credit):'');
+    const im=document.createElement('img'); im.loading='lazy'; im.src=p.url; im.alt=p.credit||'';
+    im.onerror=()=>{ const ix=images.indexOf(p); if(ix>=0){ images.splice(ix,1); renderPhotos(); } };   // dead URL — the wire moves on
+    cell.appendChild(im);
+    const k=document.createElement('span'); k.className='k'; k.textContent=p.keep?'✓':''; cell.appendChild(k);
+    /* Placement chip (Photo Z-Probe grammar, ruled 2026-07-19): a held photo
+       cycles introit → +Z realized → −Z frustrated → introit. Assigning a
+       ceiling steals it from whichever photo held it (one wash per pole) and
+       holds the photo (a wash must be kept). Which image carries which pole
+       is an authored reading — the probe's ⇄ proved the choice matters.
+       Placed-MOMENT pins (place.pin) are authored in the quad view's own
+       session; this chip leaves any existing pin placement alone. */
+    const role=p.place&&p.place.role;
+    const pl=document.createElement('span'); pl.className='pl'+(role?' on':'');
+    pl.textContent = role==='realized'?'+Z realized' : role==='frustrated'?'−Z frustrated' : (p.place&&p.place.pin?'⌖ placed':'introit');
+    pl.title='tap to cycle: introit → +Z realized → −Z frustrated';
+    pl.onclick=(e)=>{ e.stopPropagation();
+      if(p.place&&p.place.pin) return;                       // pin moments keep their placement
+      const next = !role ? 'realized' : role==='realized' ? 'frustrated' : null;
+      if(next){ images.forEach(q=>{ if(q!==p&&q.place&&q.place.role===next) delete q.place; });   // one wash per ceiling
+        p.place={role:next}; p.keep=true; }
+      else delete p.place;
+      renderPhotos(); };
+    cell.appendChild(pl);
+    if(p.credit){ const c=document.createElement('div'); c.className='c'; c.textContent=p.credit; cell.appendChild(c); }
+    cell.onclick=()=>{ p.keep=!p.keep; if(!p.keep) delete p.place; renderPhotos(); };   // a dropped photo is unplaced
+    grid.appendChild(cell);
+  });
+  host.appendChild(grid);
+}
+function syncCiteList(){ const dl=$('citeUrls'); if(!dl) return; dl.innerHTML=''; citations.forEach(c=>{ if(c.url){ const o=document.createElement('option'); o.value=c.url; o.textContent=c.label||''; dl.appendChild(o); } }); }
+function renderCites(){ const host=$('citeList'); host.innerHTML='';
+  citations.forEach((c,i)=>{ const row=document.createElement('div'); row.className='cite-row';
+    const u=document.createElement('input'); u.placeholder='https://…'; u.value=c.url||''; u.oninput=()=>{ citations[i].url=u.value; syncCiteList(); };
+    const l=document.createElement('input'); l.placeholder='label'; l.value=c.label||''; l.oninput=()=>{ citations[i].label=l.value; syncCiteList(); };
+    const d=document.createElement('span'); d.className='del'; d.textContent='✕'; d.onclick=()=>{ citations.splice(i,1); renderCites(); };
+    row.appendChild(u); row.appendChild(l); row.appendChild(d); host.appendChild(row); });
+  syncCiteList();
+}
+$('citeBtn').onclick=()=>{ if(!citations.length) citations.push({url:'',label:''}); renderCites(); renderPhotos(); $('citeModal').classList.add('show'); };
+$('citeAdd').onclick=()=>{ citations.push({url:'',label:''}); renderCites(); };
+$('citeClose').onclick=()=>$('citeModal').classList.remove('show');
+
+/* ===== Ted speech editor — built-in defaults → global script → per-event overrides ===== */
+const TED_DEFAULT = {
+  'beat.intro':"Ted Turner, coyote, your guide. I map where you actually stand — not just left or right. Set your aperture, find the line that fits, then drop your pin. Take a position when you are ready.",
+  'beat.diatribe':"This slider's the Diatribe — how charged the whole thing feels to you, not which side you're on. Slide it and the responses shift. Be honest; nobody's grading.",
+  'beat.graph':"You're on the plane now. Drag to orbit, scroll to zoom. Pull the ribbon down for the analytical layer, slide it sideways for the others. Mind the vases — gallery's a little haunted.",
+  'band.fluid':"Outer third — the easy stuff. You two disagree, sure, but you're still arguing about the same thing. Nobody's questioning the frame yet.",
+  'band.coalition':"Middle third — now it's teams. It's not just the issue anymore; pick this and you're picking a whole side, package deal.",
+  'band.denominated':"Inner third — the deep end. You're not arguing about the thing now, you're arguing about what it even IS. That's identity doing the talking.",
+  'hint.captionReal':"That's your position, spelled out. It rewrites itself every time you move the slider.",
+  'hint.captionGhost':"The opposing read, for contrast — the same question seen from the other chair.",
+  'hint.track':"This rail is your aperture. Center means lukewarm; the harder you push out, the more this thing grabs you. The marks are the three thirds.",
+  'hint.thumbReal':"That's your read — drag it to where you actually land.",
+  'hint.thumbGhost':"That ghost is the mirror — the other side's read, flipped from yours. Watch how far apart you two sit.",
+  'hint.evKeywords':"Those words are the weather of this whole thing — the cloud you're about to take a position inside.",
+  'hint.evEnter':"When you've got a feel for it, hit this. It drops you into the Prism to set your aperture.",
+};
+const TED_GROUPS = [
+  ['Beats', [['beat.intro','Intro greeting'],['beat.diatribe','First slider touch'],['beat.graph','On the plane (graph)']]],
+  ['The scale of thirds', [['band.fluid','Fluid · outer third'],['band.coalition','Coalition · middle third'],['band.denominated','Denominated · inner third']]],
+  ['Hover hints', [['hint.captionReal','Your voice box'],['hint.captionGhost','The mirror voice box'],['hint.track','The slider (aperture)'],['hint.thumbReal','Your thumb'],['hint.thumbGhost','The ghost thumb'],['hint.evKeywords','Keyword cloud (splash)'],['hint.evEnter','Take-a-position button (splash)']]],
+];
+let tedGlobal={}; try{ tedGlobal=JSON.parse(localStorage.getItem('prism.ted.global')||'{}')||{}; }catch(e){ tedGlobal={}; }
+let tedEvent={};            // per-event overrides (event.ted)
+let tedLayer='global';
+function tedBelow(key){ return tedGlobal[key]!=null?tedGlobal[key]:(TED_DEFAULT[key]||''); }
+function tedSet(key,val){
+  const store = tedLayer==='event'?tedEvent:tedGlobal;
+  const base  = tedLayer==='event'?tedBelow(key):(TED_DEFAULT[key]||'');
+  val=(val||'').trim();
+  if(!val || val===base) delete store[key]; else store[key]=val;
+}
+function currentKeywords(){ const set=new Set(); ['LF','LC','LD','RF','RC','RD'].forEach(c=>kwsOf(model[c]).forEach(k=>set.add(k))); kwsOf($('framing').innerHTML).forEach(k=>set.add(k)); return Array.from(set); }
+function renderTed(focusKey){
+  $('tedLayerSeg').querySelectorAll('button').forEach(b=>b.classList.toggle('on', b.dataset.l===tedLayer));
+  const body=$('tedBody'); body.innerHTML='';
+  const groups=TED_GROUPS.map(g=>[g[0], g[1].slice()]);
+  if(tedLayer==='event'){ const kws=currentKeywords(); if(kws.length) groups.push(["This event's keywords", kws.map(k=>['kw.'+k, '“'+k+'”'])]); }
+  groups.forEach(g=>{
+    const gd=document.createElement('div'); gd.className='td-group'; const h=document.createElement('h4'); h.textContent=g[0]; gd.appendChild(h);
+    g[1].forEach(it=>{ const key=it[0], label=it[1];
+      const val = tedLayer==='event'?(tedEvent[key]||''):(tedGlobal[key]||'');
+      const inherit = tedLayer==='event'?tedBelow(key):(TED_DEFAULT[key]||'');
+      const f=document.createElement('div'); f.className='td-field'+(val?' overridden':''); f.dataset.fkey=key;
+      const lab=document.createElement('label'); lab.textContent=label; f.appendChild(lab);
+      const ta=document.createElement('textarea'); ta.rows=2; ta.value=val; ta.placeholder=inherit||'(no default line)';
+      ta.addEventListener('input',()=>{ tedSet(key,ta.value); f.classList.toggle('overridden', !!ta.value.trim()); });
+      f.appendChild(ta); gd.appendChild(f);
+    });
+    body.appendChild(gd);
+  });
+  if(focusKey){ let f=null; body.querySelectorAll('.td-field').forEach(x=>{ if(x.dataset.fkey===focusKey) f=x; });
+    if(f){ f.classList.add('flash'); f.scrollIntoView({block:'center'}); const ta=f.querySelector('textarea'); if(ta) ta.focus(); setTimeout(()=>f.classList.remove('flash'),1200); } }
+}
+function openTed(focusKey){ document.body.classList.add('ted-edit'); $('tedDrawer').classList.add('show'); $('tedOverlay').classList.add('show'); renderTed(focusKey); }
+function closeTed(){ $('tedDrawer').classList.remove('show'); $('tedOverlay').classList.remove('show'); document.body.classList.remove('ted-edit'); }
+$('tedBtn').onclick=()=>openTed();
+$('tedClose').onclick=closeTed; $('tedOverlay').onclick=closeTed;
+$('tedLayerSeg').querySelectorAll('button').forEach(b=>b.onclick=()=>{ tedLayer=b.dataset.l; renderTed(); });
+$('tedCopy').onclick=()=>{ const payload=JSON.stringify({global:tedGlobal, event:tedEvent}, null, 2);
+  if(navigator.clipboard) navigator.clipboard.writeText(payload).catch(()=>{}); $('tedStatus').textContent='Copied — paste to Claude to bake in'; };
+/* ✱ badges on the surface assets */
+function addStar(host,key){ if(!host) return; const s=document.createElement('span'); s.className='ted-star'; s.textContent='✱'; s.dataset.fkey=key;
+  s.title="Edit Ted’s line for this"; s.onclick=(e)=>{ e.stopPropagation(); if(key.indexOf('kw.')===0) tedLayer='event'; openTed(key); }; host.appendChild(s); }
+addStar($('capReal'),'hint.captionReal'); addStar($('capGhost'),'hint.captionGhost'); addStar($('track'),'hint.track');
+/* clicking a marked keyword in Edit-Ted mode edits its per-event line */
+document.addEventListener('click',(e)=>{ if(!document.body.classList.contains('ted-edit')) return;
+  const kw=e.target&&e.target.closest?e.target.closest('.kw'):null; if(!kw) return; const t=(kw.textContent||'').trim(); if(!t) return;
+  tedLayer='event'; openTed('kw.'+t); });
+
+/* ===== Newsroom (📡) — stories (Event Engine candidates, Build Spec v1 §3.2) =====
+   Vocabulary RULED 2026-07-17: the newsroom's unit is a STORY — the wire's
+   report of an event awaiting judgment. The event is the happening in the
+   world; promoting a story births a Reading. Code keeps candidates/cand_*,
+   exactly as prism_events kept its name when Reading was ruled.
+   The surface newsroom: data/candidates.js (written by Scan News
+   Cycle.command on the desk) lazy-loads on first open — the DG rule,
+   heavy assets never at boot — and merges into PrismDB.prism_candidates
+   (importCandidates never clobbers triage state, so promoted/dismissed
+   survive every rescan). Sorted by fitness where scored (M2 fills it),
+   salience otherwise; below the ratified 0.4 floor cards grey but never
+   hide (§4 — rescueable). Promote loads the candidate ONTO the surface —
+   title, framing, congress.gov link into the citation bank; the spine
+   stays the author's until M2 proposes axes. The candidate is stamped
+   promoted → evt id only when save() actually succeeds. */
+const NR_FITNESS_FLOOR = 0.4;            // spec §4, ratified 2026-07-13
+let nrLoaded=false, nrShowAll=false, nrPendingPromote=null;
+// Stories that arrived since this device last looked (session-scoped:
+// cids the latest import added that the store didn't hold). "Stories"
+// is the ruled vocabulary (2026-07-17) — code keeps candidates/cand_*.
+const nrFresh=new Set();
+
+function nrStatus(m){ $('nrStatus').textContent=m; }
+function nrKey(c){ return (c.fitness&&typeof c.fitness.score==='number')?c.fitness.score:((c.raw&&c.raw.salience)||0); }
+
+async function nrImport(bust){
+  try{ await dgScript('data/candidates.js'+(bust?('?v='+Date.now()):'')); }catch(_){}
+  nrLoaded=true;
+  if(Array.isArray(window.PRISM_CANDIDATES)){
+    const before=new Set(PrismDB.getCandidates().map(c=>c.cid));
+    const r=PrismDB.importCandidates(window.PRISM_CANDIDATES);
+    window.PRISM_CANDIDATES.forEach(c=>{ if(c&&c.cid&&!before.has(c.cid)) nrFresh.add(c.cid); });
+    // the committed middle stratum rides in on every open — phone triage
+    // reaches the desk without a gesture (persistence §1.5)
+    let s='';
+    try{ const m=await nrPullScores(); if(m&&m.applied) s=' · '+m.applied+' scores pulled'; }
+    catch(_){ /* offline / rate-limited — candidates.js bake already covers us */ }
+    nrStatus(r.added+' new '+(r.added===1?'story':'stories')+' · '+r.updated+' refreshed'+s);
+  } else nrStatus('no candidates.js — run Scan News Cycle.command on the desk');
+}
+
+/* ===== Middle-stratum sync (persistence §1.5, RULED 2026-07-15) =====
+   data/candidate_scores.json = the committed record of scored-but-
+   unpromoted + triage state. Pull is keyless (public repo); push rides
+   the same token as Publish. LWW per candidate by mts — PrismDB owns
+   the merge semantics; this block is just transport + gesture. */
+const NR_SCORES_PATH='data/candidate_scores.json';
+let nrScoresSha=null, nrPulledRecords=null;   // last pulled file records — push preserves strangers
+
+async function nrPullScores(){
+  const f=await PrismSync.getFile(NR_SCORES_PATH);
+  if(!f){ nrScoresSha=null; nrPulledRecords=null; return { applied:0 }; }
+  nrScoresSha=f.sha;
+  if(!f.json||f.json.schema!=='candidate_scores/v1'||!f.json.records) return { applied:0 };
+  nrPulledRecords=f.json.records;
+  const m=PrismDB.mergeCandidateScores(f.json.records);
+  // a merge can materialize a draft Reading (draft tier) — refresh the
+  // event dropdown too, or the draft is invisible until a page reload
+  if(m.applied){ nrRender(); try{ refreshDropdown(currentId); }catch(_){} }
+  return m;
+}
+
+let nrSyncing=false;
+async function nrSyncScores(quiet){
+  if(nrSyncing) return; nrSyncing=true;
+  try{
+    if(!quiet) nrStatus('⇡ pulling scores…');
+    let pulled={applied:0};
+    try{ pulled=await nrPullScores(); }catch(e){ if(!quiet) nrStatus('⇡ pull failed: '+e.message); }
+    // Push preserves strangers (2026-07-15, fixed after it bit live: the
+    // phone's push dropped 7 desk records it never held, 51→44): the file
+    // is pulled-records overlaid with this device's export, so "records
+    // outlive candidates" holds in-FILE, not just in-store. Local always
+    // wins per cid — pull already applied anything newer.
+    const records=Object.assign({}, nrPulledRecords||{}, PrismDB.exportCandidateScores());
+    if(!Object.keys(records).length&&!nrScoresSha){ if(!quiet) nrStatus('nothing scored or triaged yet — nothing to push'); return; }
+    if(!PrismSync.token()){ if(!quiet) nrStatus((pulled.applied?pulled.applied+' pulled · ':'')+'no GitHub token — pull-only (add one under Sync to push)'); return; }
+    if(!quiet) nrStatus('⇡ pushing '+Object.keys(records).length+' records…');
+    const file={ schema:'candidate_scores/v1', updated:new Date().toISOString(), records };
+    nrScoresSha=await PrismSync.putFile(NR_SCORES_PATH, file,
+      'Newsroom: middle stratum ('+Object.keys(records).length+' candidates)', nrScoresSha);
+    nrStatus('⇡ synced — '+(pulled.applied||0)+' pulled · '+Object.keys(records).length+' pushed');
+  }catch(e){ nrStatus('⇡ sync failed: '+e.message); }
+  finally{ nrSyncing=false; }
+}
+$('nrSync').onclick=()=>nrSyncScores(false);
+
+/* Auto-carry (2026-07-16): every stratum mutation queues a quiet push — a
+   draft authored on one device reaches the others without the ⇡ gesture.
+   (The SCOTUS security-funding draft sat on the phone all morning; the iPad
+   had nothing to pull — promote/save/dismiss never pushed, only a full ✦
+   pass did.) Debounced 2.5s; token-gated (pull-only devices no-op);
+   nrSyncScores pulls first, so strangers are preserved and LWW holds. A
+   hiding tab flushes immediately — mobile PWAs get backgrounded mid-debounce. */
+let nrPushTimer=null;
+function nrQueuePush(){
+  try{ if(!PrismSync.token()) return; }catch(_){ return; }
+  clearTimeout(nrPushTimer);
+  nrPushTimer=setTimeout(()=>{ nrPushTimer=null; nrSyncScores(true); }, 2500);
+}
+document.addEventListener('visibilitychange',()=>{
+  if(document.visibilityState==='hidden'&&nrPushTimer){
+    clearTimeout(nrPushTimer); nrPushTimer=null; nrSyncScores(true); }
+  // Resume re-pull (2026-07-18 §7): a tab coming back to life with the
+  // newsroom open sees the other devices' triage without a reopen gesture.
+  if(document.visibilityState==='visible'&&$('nrDrawer').classList.contains('show')) nrRepull();
+});
+
+/* Re-pull on reopen/resume (2026-07-18 §7): pull was first-open-per-load
+   only — a device left open all day never saw the desk's later triage.
+   Keyless read (public repo); quiet on failure — the candidates.js bake
+   already covers offline. nrPullScores renders + refreshes the dropdown
+   itself when anything applies. */
+let nrRepulling=false;
+async function nrRepull(){
+  if(nrRepulling||!nrLoaded) return; nrRepulling=true;
+  try{ const m=await nrPullScores(); if(m&&m.applied) nrStatus(m.applied+' score'+(m.applied===1?'':'s')+' pulled'); }
+  catch(_){ /* offline / rate-limited — quiet */ }
+  finally{ nrRepulling=false; }
+}
+
+function nrRender(){
+  const host=$('nrList'); host.innerHTML='';
+  const all=PrismDB.getCandidates();
+  // Triage shows new + held; held pins above the scan churn (2026-07-17 —
+  // the hold is the "don't lose this" gesture), then fitness/salience.
+  const list=(nrShowAll?all:all.filter(c=>c.status==='new'||c.status==='held')).slice()
+    .sort((a,b)=>((b.status==='held')-(a.status==='held')) || (nrKey(b)-nrKey(a)));
+  const n={new:0,held:0,promoted:0,dismissed:0}; all.forEach(c=>{ n[c.status]=(n[c.status]||0)+1; });
+  $('nrCounts').textContent = all.length ? (n.new+' triage'+(n.held?(' · '+n.held+' held'):'')
+    +' · '+n.promoted+' promoted · '+n.dismissed+' dismissed') : '';
+  if(!list.length){
+    const d=document.createElement('div'); d.className='br-empty';
+    d.textContent = all.length ? 'triage clear — “all” shows the record'
+                               : 'no stories — run Scan News Cycle.command, then ↺';
+    host.appendChild(d); return;
+  }
+  list.forEach(c=>{
+    const fit=(c.fitness&&typeof c.fitness.score==='number')?c.fitness.score:null;
+    // held never dims — the hold is deliberate; grey-not-hide stays for the rest
+    const dim=(fit!=null&&fit<NR_FITNESS_FLOOR&&c.status!=='held')||c.status==='dismissed';
+    const src=(c.source==='legislative')?'legislation':'news';
+    const card=document.createElement('div');
+    card.className='br-card src-'+src+(c.status==='promoted'?' confirmed':'')
+      +(c.status==='held'?' held':'')+(dim?' dismissed':'');
+    const nm=document.createElement('div'); nm.className='n';
+    if(c.status==='held'){ const st=document.createElement('span'); st.className='nr-star'; st.textContent='★'; nm.appendChild(st); }
+    nm.appendChild(document.createTextNode(c.title||c.cid)); card.appendChild(nm);
+    const meta=document.createElement('div'); meta.className='m';
+    const sw=document.createElement('span'); sw.className='nr-src src-'+src; sw.textContent=c.source||src; meta.appendChild(sw);
+    const rest=document.createElement('span');
+    rest.textContent=(fit!=null?(' · fit '+fit.toFixed(2)):(' · unscored · sal '+(((c.raw&&c.raw.salience)||0)).toFixed(2)))
+      +(c.status!=='new'?(' · '+c.status+(c.promotedEventId?(' → '+c.promotedEventId):'')):'');
+    meta.appendChild(rest);
+    if(nrFresh.has(c.cid)){ const f=document.createElement('span'); f.className='nr-fresh'; f.textContent=' · ✷ fresh'; meta.appendChild(f); }
+    card.appendChild(meta);
+    if(c.summary){ const r=document.createElement('div'); r.className='r'; r.style.whiteSpace='pre-wrap';
+      r.textContent=c.summary; card.appendChild(r); }
+    if(c.fitness&&c.fitness.reason){ // M2 — the constitutive argument (spec §4 as amended)
+      const fr=document.createElement('div'); fr.className='r'; fr.style.whiteSpace='pre-wrap'; fr.style.opacity='.85';
+      fr.textContent='✦ '+c.fitness.reason+(c.suggestedAxes
+        ?('\nX: '+((c.suggestedAxes.x&&c.suggestedAxes.x.neg)||'—')+' ↔ '+((c.suggestedAxes.x&&c.suggestedAxes.x.pos)||'—')
+         +' · Y: '+((c.suggestedAxes.y&&c.suggestedAxes.y.neg)||'—')+' ↔ '+((c.suggestedAxes.y&&c.suggestedAxes.y.pos)||'—')
+         +(c.prevalentAxisGuess?(' · native binary: '+c.prevalentAxisGuess.toUpperCase()):'')):'');
+      card.appendChild(fr); }
+    const tags=document.createElement('div'); tags.className='br-tags';
+    (c.bills||[]).forEach(b=>{ const t=document.createElement('span'); t.className='br-tag'; t.textContent=b; tags.appendChild(t); });
+    if((c.members||[]).length){ const mt=document.createElement('span'); mt.className='br-tag';
+      mt.textContent=c.members.length+' members'; tags.appendChild(mt); }
+    if(c.source==='news'&&c.raw&&Array.isArray(c.raw.articles)){ const nt=document.createElement('span'); nt.className='br-tag';
+      nt.textContent=new Set(c.raw.articles.map(a=>a.domain)).size+' outlets · '+c.raw.articles.length+' articles'; tags.appendChild(nt); }
+    card.appendChild(tags);
+    // the wire's pictures (2026-07-19) — quiet strip, lazy, self-pruning on
+    // dead URLs; pre-socialimage candidates simply have none and show none
+    if(c.source==='news'&&c.raw&&Array.isArray(c.raw.articles)){
+      const pics=c.raw.articles.filter(a=>a&&a.image);
+      if(pics.length){ const strip=document.createElement('div'); strip.className='nr-pics';
+        pics.slice(0,4).forEach(a=>{ const im=document.createElement('img'); im.loading='lazy';
+          im.src=a.image; im.alt=a.domain||''; im.title=a.domain||''; im.onerror=()=>im.remove();
+          strip.appendChild(im); });
+        card.appendChild(strip); }
+    }
+    const acts=document.createElement('div'); acts.className='br-acts';
+    if(c.status==='new'||c.status==='held'){
+      const p=document.createElement('button'); p.textContent='Promote'; p.onclick=()=>nrPromote(c.cid); acts.appendChild(p);
+      if(c.status==='new'){
+        const h=document.createElement('button'); h.textContent='★ Hold';
+        h.title='Keep this story above the churn — it syncs to every device and survives aging out of the scan window';
+        h.onclick=()=>{ PrismDB.holdCandidate(c.cid); nrRender(); nrQueuePush(); }; acts.appendChild(h);
+      } else {
+        const rl=document.createElement('button'); rl.textContent='Release';
+        rl.title='Back to ordinary triage — the story rejoins the churn';
+        rl.onclick=()=>{ const cc=PrismDB.getCandidate(c.cid);
+          if(cc){ cc.status='new'; PrismDB.saveCandidate(cc); nrRender(); nrQueuePush(); } }; acts.appendChild(rl);
+      }
+      const x=document.createElement('button'); x.textContent='Dismiss';
+      x.onclick=()=>{ PrismDB.dismissCandidate(c.cid); nrRender(); nrQueuePush(); }; acts.appendChild(x);
+    } else {
+      const rs=document.createElement('button'); rs.textContent='Restore';
+      rs.onclick=()=>{ const cc=PrismDB.getCandidate(c.cid);
+        if(cc){ cc.status='new'; delete cc.promotedEventId; PrismDB.saveCandidate(cc); nrRender(); nrQueuePush(); } };
+      acts.appendChild(rs);
+    }
+    const sc=document.createElement('button'); sc.textContent=c.fitness?'✦ Rescore':'✦ Score';
+    sc.title='M2 pass on this candidate only'; sc.onclick=()=>nrScoreCid(c.cid); acts.appendChild(sc);
+    if(c.raw&&c.raw.congressGovUrl){
+      const a=document.createElement('button'); a.textContent='congress.gov ↗';
+      a.onclick=()=>window.open(c.raw.congressGovUrl,'_blank','noopener'); acts.appendChild(a);
+    }
+    card.appendChild(acts);
+    host.appendChild(card);
+  });
+}
+
+async function nrOpen(){
+  $('nrDrawer').classList.add('show'); $('nrOverlay').classList.add('show');
+  if(!nrLoaded){ nrStatus('loading stories…'); await nrImport(false); }
+  else nrRepull();   // every reopen re-pulls, not just the first (2026-07-18 §7)
+  nrRender();
+}
+function nrCloseFn(){ $('nrDrawer').classList.remove('show'); $('nrOverlay').classList.remove('show'); }
+
+/* Promote → the candidate lands on the surface itself */
+function nrPromote(cid){
+  const c=PrismDB.getCandidate(cid); if(!c) return;
+  // Relink gesture (2026-07-15, the park-draft rescue): a promote that was
+  // regressed by a pre-mts merge leaves its draft Reading orphaned on the
+  // device. If an orphan matches (exact title, or it's the only orphan),
+  // offer to LINK it instead of blanking into a duplicate. Cancel falls
+  // through to the normal fresh promote.
+  try{
+    const linked=new Set(PrismDB.getCandidates().map(x=>x.promotedEventId).filter(Boolean));
+    const orphans=PrismDB.getEvents().filter(e=>!e.syncedAt&&(e.meta||{}).status==='draft'&&!linked.has(e.id));
+    const orphan=orphans.find(e=>(e.title||'').trim().toLowerCase()===(c.title||'').trim().toLowerCase())
+      ||(orphans.length===1?orphans[0]:null);
+    if(orphan&&confirm('A draft Reading “'+(orphan.title||orphan.id)+'” already exists on this device.\n\nLink it to this candidate instead of starting a fresh one?')){
+      PrismDB.promoteCandidate(cid, orphan.id);
+      try{ nrRender(); }catch(_){}
+      nrCloseFn();
+      nrQueuePush();
+      status('Linked existing draft '+orphan.id+' — carrying to the stratum');
+      return;
+    }
+  }catch(_){}
+  blank();                                  // clears pending too — set after
+  $('evTitle').value=c.title||'';
+  $('framing').innerHTML=escHtml(c.framingDraft||c.summary||'');
+  if(c.prevalentAxisGuess) setPrev(c.prevalentAxisGuess);
+  if(c.suggestedAxes){
+    const sp=(prevAxis==='y')?c.suggestedAxes.y:c.suggestedAxes.x;
+    if(sp&&(sp.neg||sp.pos)){ spine={neg:sp.neg||'',pos:sp.pos||''}; }
+    const op=(prevAxis==='y')?c.suggestedAxes.x:c.suggestedAxes.y;
+    if(op&&(op.neg||op.pos)) otherPole={neg:op.neg||'',pos:op.pos||''};
+  }
+  if(c.raw&&c.raw.congressGovUrl) citations=[{url:c.raw.congressGovUrl,label:(c.bills&&c.bills[0])||'congress.gov'}];
+  else if(c.source==='news'&&c.raw&&Array.isArray(c.raw.articles))   // top 3 articles → citation bank
+    citations=c.raw.articles.slice(0,3).map(a=>({url:a.url,label:a.domain||'article'}));
+  // Photo lift (2026-07-19): up to 6 of the cluster's pictures ride onto the
+  // surface, the top 3 held by default — auto-carry, same spirit as the
+  // citation seed. Pick/drop lives in 📎; only kept ones save.
+  if(c.source==='news'&&c.raw&&Array.isArray(c.raw.articles))
+    images=c.raw.articles.filter(a=>a&&a.image).slice(0,6)
+      .map((a,i)=>({url:a.image,credit:a.domain||'',articleUrl:a.url||'',keep:i<3}));
+  setPoleFields(); setThumb(38,false);
+  nrPendingPromote=cid;
+  nrCloseFn();
+  status('Promoted from newsroom — '+(images.length?images.filter(p=>p.keep).length+' photo(s) held in 📎 · ':'')+'author the dialectic, then Save / Publish');
+}
+
+/* ===== M2 — the constitutive pass (spec §4 AS AMENDED 2026-07-13) =====
+   Fitness is constitutive, not diagnostic: events arrive 1D (the vote IS
+   the binary); the second axis is CONSTITUTED around it. The model
+   proposes the strongest secondary binary and defends non-degeneracy;
+   the degeneracy test is cross-cutting, checked against the real party
+   splits riding on the candidate. Low score = "every second axis is
+   contrived or redundant" — never "this event is 1D". Sailor rules. */
+const NR_M2_METHOD='m2_constitutive_v1';
+const NR_M2_SYSTEM=`You are the Prism Event Engine's M2 pass. Input: one candidate event — either LEGISLATIVE (a bill with recent roll-call votes, party splits attached) or NEWS (a story cluster: near-identical headlines across multiple outlets; no vote positions exist).
+
+The Prism reads every event through TWO axes. Axis one is usually the event's native binary (the vote itself: pass/block, fund/defund). The second axis is NOT a property to detect — most events arrive one-dimensional. It is CONSTITUTED: the secondary binary that crystallizes around the event (how-vs-whether, procedure-vs-substance, institutional-prerogative-vs-executive-power, etc.).
+
+Your job: propose the STRONGEST secondary binary constructible here, and score how good it is.
+
+DEGENERACY TEST (this is the whole game): a proposed second axis is degenerate if it does not CROSS-CUT the first — if everyone on one side of the vote would land on one pole of it, it is the same binary in costume. Check your proposal against the actual party splits provided — but read them correctly:
+- Roll-call splits are EVIDENCE, not the verdict. Party discipline suppresses defection on whipped votes, so a thin crossover does NOT refute a proposed axis. The axis is constituted in the broader field — the caucus if unwhipped, the public argument, the commentariat — not only in the chamber.
+- WHO defects matters more than how many. If the few defectors are exactly the members the axis predicts (e.g. libertarian-leaning Rs on war powers, labor-district Rs on labor law), that CONFIRMS the axis is live even at 2-4 defectors.
+- What observed splits CAN prove is redundancy: if the proposed axis merely restates the vote binary (or a procedural relabeling of it — "passage vs motion" is not a political tension), it is degenerate no matter how it is dressed.
+- Propose a SUBSTANTIVE secondary binary. Procedure-vs-substance only qualifies when members demonstrably split differently across the two.
+- NEWS candidates carry no vote positions: argue the cross-cut from the PUBLIC FIELD instead — would the proposed second axis divide each side's own coalition (its politicians, commentators, factions)? NAME who lands where. The native binary is usually the story's headline dispute; the same degeneracy standard applies.
+
+Return STRICT JSON only:
+{
+ "framingDraft": "2-3 neutral sentences naming the tension, not summarizing the procedure",
+ "suggestedAxes": {"x":{"pos":"...","neg":"..."},"y":{"pos":"...","neg":"..."}},   // pole labels, 1-4 words each
+ "prevalentAxisGuess": "x" | "y",          // which axis carries the NATIVE binary (the vote)
+ "fitness": {"score": 0.0-1.0, "reason": "names the proposed secondary binary and defends its non-degeneracy against the vote pattern — or says why every candidate collapses"},
+ "voteMap": {"voteId": "<id of the roll call that best expresses the native binary>", "yeaPole": "pos" | "neg"}   // LEGISLATIVE only — on the prevalent axis, which pole a YEA maps to; null for news
+}
+
+Calibration: 0.7+ = the secondary binary demonstrably cross-cuts, OR the defection pattern matches exactly what the axis predicts, OR it would self-evidently divide the broader field. 0.4-0.7 = a substantive axis that plausibly divides the field even though the whipped vote hides it. Below 0.4 = every candidate second axis is contrived, redundant with the vote binary, or merely procedural. Do NOT score low merely because the event is one-dimensional (trivially true of everything) and do NOT score low merely because a whipped roll call shows few defectors — score low only when no good second question EXISTS.`;
+
+function nrM2Prompt(c){
+  if(c.source==='news'){
+    const arts=(c.raw&&c.raw.articles)||[];
+    const L=['CANDIDATE '+c.cid+' (NEWS — story cluster, no vote positions)',
+      'Representative headline: '+(c.title||''),
+      'Outlets carrying it: '+new Set(arts.map(a=>a.domain)).size,
+      'Salience (source heat, NOT fitness): '+((c.raw&&c.raw.salience)!=null?c.raw.salience:'—'),'',
+      'HEADLINES (the public field — argue the cross-cut from here):'];
+    arts.forEach(a=>L.push((a.seendate||'').slice(0,10)+' '+a.domain+': '+a.title));
+    return L.join('\n');
+  }
+  const L=['CANDIDATE '+c.cid+' (LEGISLATIVE)','Title: '+(c.title||''),'Bill: '+((c.bills&&c.bills[0])||''),
+    'Implicated members: '+((c.members&&c.members.length)||0),
+    'Salience (source heat, NOT fitness): '+((c.raw&&c.raw.salience)!=null?c.raw.salience:'—'),'',
+    'ROLL CALLS (party splits are the cross-cut evidence):', c.summary||'(none)'];
+  (c.raw&&c.raw.votes||[]).forEach(v=>{ L.push('voteId '+v.voteId+' · '+v.chamber+' · '+v.date+' · '+v.question+' · '+v.result); });
+  return L.join('\n');
+}
+
+/* Tolerant parse — the model sometimes writes literal newlines inside
+   JSON string values (multi-sentence framings), which JSON.parse rejects.
+   Escape control chars inside strings only, structure untouched. */
+function nrParseJson(raw){
+  try{ return PrismAI.extractJson(raw); }
+  catch(e){
+    const s=raw.indexOf('{'), t=raw.lastIndexOf('}');
+    if(s<0||t<0) throw e;
+    let out='', inStr=false, esc=false;
+    for(const ch of raw.slice(s,t+1)){
+      if(esc){ out+=ch; esc=false; continue; }
+      if(ch==='\\'){ out+=ch; esc=true; continue; }
+      if(ch==='"'){ inStr=!inStr; out+=ch; continue; }
+      if(inStr&&ch==='\n'){ out+='\\n'; continue; }
+      if(inStr&&ch==='\r'){ continue; }
+      if(inStr&&ch==='\t'){ out+='\\t'; continue; }
+      out+=ch;
+    }
+    return JSON.parse(out);
+  }
+}
+
+async function nrScoreOne(c,key){
+  let j=null;
+  for(let a=0;;a++){                                   // one resample: malformed
+    try{                                               // JSON / empty reply heal
+      const raw=await PrismAI.call(key,{ model:$('model').value, system:NR_M2_SYSTEM,
+        prompt:nrM2Prompt(c), maxTokens:2600, effort:'low' });
+      j=nrParseJson(raw); break;
+    }catch(e){ if(a>=1||/429|529/.test(e.message)) throw e;   // rate limits bubble
+      await new Promise(r=>setTimeout(r,1200)); }
+  }
+  const ax=j.suggestedAxes||{}; const shape=a=>({pos:String((a&&a.pos)||''),neg:String((a&&a.neg)||'')});
+  c.framingDraft=String(j.framingDraft||'')||c.framingDraft;
+  c.suggestedAxes={x:shape(ax.x),y:shape(ax.y)};
+  c.prevalentAxisGuess=(j.prevalentAxisGuess==='y')?'y':'x';
+  const f=j.fitness||{};
+  c.fitness={ score:Math.max(0,Math.min(1,+f.score||0)), reason:String(f.reason||''), method:NR_M2_METHOD, ts:new Date().toISOString() };
+  const votes=(c.raw&&c.raw.votes)||[];
+  if(votes.length){
+    const ids=new Set(votes.map(v=>v.voteId));
+    const vm=j.voteMap||{};
+    c.voteMap={ voteId:ids.has(vm.voteId)?vm.voteId:votes[0].voteId,
+      yeaPole:(vm.yeaPole==='neg')?'neg':'pos' };
+  } else c.voteMap=null;                      // news — nothing to map
+  PrismDB.saveCandidate(c);
+}
+
+let nrScoring=false;
+async function nrScoreCid(cid){
+  if(nrScoring) return;
+  const key=$('apiKey').value.trim(); if(!key){ nrStatus('Add your API key (AI ▸ top bar)'); return; }
+  const c=PrismDB.getCandidate(cid); if(!c) return;
+  nrScoring=true; nrStatus('✦ scoring '+(c.title||cid).slice(0,48)+'…');
+  try{ await nrScoreOne(c,key); nrStatus('✦ fit '+c.fitness.score.toFixed(2)+' — '+c.fitness.reason.slice(0,80)); nrQueuePush(); }
+  catch(e){ nrStatus('✦ failed: '+e.message); }
+  nrScoring=false; nrRender();
+}
+
+async function nrScoreAll(){
+  if(nrScoring) return;
+  const key=$('apiKey').value.trim(); if(!key){ nrStatus('Add your API key (AI ▸ top bar)'); return; }
+  const pool=PrismDB.getCandidates()
+    .filter(c=>(c.status==='new'||c.status==='held')&&!(c.fitness&&typeof c.fitness.score==='number'))
+    .sort((a,b)=>nrKey(b)-nrKey(a));
+  if(!pool.length){ nrStatus('nothing unscored in triage'); return; }
+  nrScoring=true; let ok=0,fail=0;
+  const GAP=13000;   // org limit discovered live 2026-07-13: 5 req/min on
+                     // sonnet-5 — pace the loop UNDER it, don't fight it
+  for(let i=0;i<pool.length;i++){
+    const c=pool[i]; let done=false;
+    for(let att=0; att<3 && !done; att++){
+      nrStatus('✦ '+(i+1)+'/'+pool.length+(att?(' · retry '+att):'')+' — '+(c.title||c.cid).slice(0,40)+'… (paced to rate limit)');
+      try{ await nrScoreOne(c,key); ok++; done=true; }
+      catch(e){
+        if(att<2) await new Promise(r=>setTimeout(r,/429|529/.test(e.message)?25000:3000));
+        else { fail++; console.warn('M2 fail',c.cid,e.message); }
+      }
+    }
+    nrRender();                                                    // fitness sort tightens live
+    if(i<pool.length-1) await new Promise(r=>setTimeout(r,GAP));
+  }
+  nrScoring=false; nrStatus('✦ pass done — '+ok+' scored'+(fail?(' · '+fail+' failed (console)'):''));
+  nrRender();
+  // a whole pass is one natural commit of the middle stratum — push it
+  // without a second gesture when the token is on this device
+  if(ok&&PrismSync.token()) nrSyncScores(true);
+}
+$('nrScore').onclick=nrScoreAll;
+
+/* ===== Save-time member-position write (yea→pole, RULED 2026-07-13) =====
+   Votes don't map onto axes until the axes exist — so the write happens
+   AFTER authoring, at save, with Sailor confirming the one fact the data
+   can't supply: which pole YEA maps to (M2's voteMap seeds the default).
+   Prevalent-axis coordinate from the vote; cross-axis 0.5, flagged
+   unrefined for the derive engine to ground later. Members already
+   placed for the event (MANUAL/DERIVED) are never clobbered. */
+let nrPos=null;
+function nrPosPoles(){ // labels for the saved event's prevalent axis
+  const ev=PrismDB.getEvent(nrPos.eventId)||{}; const axis=ev.prevalentAxis||'x';
+  const a=(ev.axes&&ev.axes[axis])||{}; return {axis, pos:a.pos||('+'+axis.toUpperCase()), neg:a.neg||('−'+axis.toUpperCase())};
+}
+function nrPosPaint(){
+  const v=nrPos.votes[nrPos.idx]; const p=nrPosPoles();
+  const yeaLab=nrPos.yeaPole==='pos'?p.pos:p.neg, nayLab=nrPos.yeaPole==='pos'?p.neg:p.pos;
+  const nY=((v.positions&&v.positions.yea)||[]).length, nN=((v.positions&&v.positions.nay)||[]).length;
+  $('nrPosMap').textContent='yea → “'+yeaLab+'” · nay → “'+nayLab+'” · '+(nY+nN)+' members · cross-axis 0.5 (unrefined)';
+}
+function nrOfferPositions(cid,eventId){
+  const c=PrismDB.getCandidate(cid); if(!c) return;
+  const votes=((c.raw&&c.raw.votes)||[]).filter(v=>v.positions&&((v.positions.yea&&v.positions.yea.length)||(v.positions.nay&&v.positions.nay.length)));
+  if(!votes.length) return;
+  let idx=votes.findIndex(v=>/passage|agreeing to the resolution|pass\b/i.test(v.question||''));
+  if(idx<0) idx=0;                                   // newest-first fallback
+  nrPos={cid,eventId,votes,idx,yeaPole:(c.voteMap&&c.voteMap.yeaPole)||'pos'};
+  if(c.voteMap&&c.voteMap.voteId){ const i=votes.findIndex(v=>v.voteId===c.voteMap.voteId); if(i>=0) nrPos.idx=i; }
+  const sel=$('nrPosVote'); sel.innerHTML='';
+  votes.forEach((v,i)=>{ const o=document.createElement('option'); o.value=i;
+    o.textContent=v.date+' '+v.chamber+' · '+(v.question||'')+' ('+v.totals.yea+'-'+v.totals.nay+')'; sel.appendChild(o); });
+  sel.value=nrPos.idx;
+  $('nrPosExplain').textContent='Saved '+eventId+' from a promoted roll call. Write real per-event placements for the implicated members on the prevalent axis? (The sparklines articulate; skip is always safe.)';
+  nrPosPaint(); $('nrPosModal').classList.add('show');
+}
+$('nrPosVote').onchange=()=>{ nrPos.idx=+$('nrPosVote').value; nrPosPaint(); };
+$('nrPosFlip').onclick=()=>{ nrPos.yeaPole=(nrPos.yeaPole==='pos')?'neg':'pos'; nrPosPaint(); };
+$('nrPosSkip').onclick=()=>{ $('nrPosModal').classList.remove('show'); nrPos=null; };
+$('nrPosWrite').onclick=()=>{
+  if(!nrPos) return;
+  const v=nrPos.votes[nrPos.idx]; const p=nrPosPoles();
+  const have=new Set(PrismDB.getMemberPositionsForEvent(nrPos.eventId).map(x=>x.bioguideId)); // never clobber
+  const coord=pole=>pole==='pos'?0.85:0.15;
+  const pinFor=pole=>{ const c=coord(pole);
+    return p.axis==='x' ? {x:c,y:0.5} : {x:0.5,y:1-c}; };        // pin.y small = +Y (house convention)
+  const batch=[]; let skipped=0;
+  [['yea',nrPos.yeaPole],['nay',nrPos.yeaPole==='pos'?'neg':'pos']].forEach(([side,pole])=>{
+    ((v.positions&&v.positions[side])||[]).forEach(bid=>{
+      if(have.has(bid)){ skipped++; return; }
+      batch.push({ bioguideId:bid, eventId:nrPos.eventId, pin:pinFor(pole),
+        confidence:0.7, method:'vote_record', provenance:'VOTE',
+        voteId:v.voteId, crossAxisUnrefined:true });
+      // NO quadrant, deliberately: at cross-axis 0.5 a quadrant claim is
+      // pure artifact. Consumers grey/dash these — honest until the
+      // derive engine grounds the second coordinate.
+    });
+  });
+  if(batch.length) PrismDB.saveMemberPositions(batch);
+  status(batch.length+' member positions written from '+v.voteId+(skipped?(' · '+skipped+' kept (already placed)'):''));
+  $('nrPosModal').classList.remove('show'); nrPos=null;
+};
+
+$('nrBtn').onclick=nrOpen; $('nrClose').onclick=nrCloseFn; $('nrOverlay').onclick=nrCloseFn;
+$('nrRescan').onclick=async()=>{ nrStatus('rescanning…'); await nrImport(true); nrRender(); };
+$('nrSeg').querySelectorAll('button').forEach(b=>b.onclick=()=>{
+  nrShowAll=(b.dataset.f==='all');
+  $('nrSeg').querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));
+  nrRender();
+});
+
+/* ===== Bill reading room (📜) — the portal's first §4 reading room =====
+   Engine: src/js/prism-curate.js (pure — this shell owns history,
+   candidates, and the DOM; spec §4.1). Entered from the drawer per §6;
+   the authoring stage stays untouched (§8). The ~500KB bill catalog
+   lazy-loads on first open — the DG rule: heavy assets never at boot. */
+let brHistory=[], brCandidates=[], brEventId=null, brBusy=false, brCatalogLoading=false;
+
+function brStatus(m){ $('brStatus').textContent=m; }
+function brCatalogCount(){ return (typeof LEGISLATION_DATA!=='undefined')?LEGISLATION_DATA.length:0; }
+function brPane(p){
+  $('brSeg').querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.p===p));
+  $('brChatPane').style.display = p==='chat'?'':'none';
+  $('brListPane').style.display = p==='list'?'':'none';
+  $('brCatPane').style.display = p==='cat'?'':'none';
+  if(p==='cat') brRenderCat();
+  if(p==='chat'){ const m=$('brMsgs'); m.scrollTop=m.scrollHeight; }
+}
+$('brSeg').querySelectorAll('button').forEach(b=>b.onclick=()=>brPane(b.dataset.p));
+
+/* the event as the dialogue sees it — live surface state layered over the
+   DB copy, so an unsaved title/keyword edit still steers the catalog filter */
+function brEvt(){
+  const db=(currentId&&HAS_DB)?PrismDB.getEvent(currentId):null;
+  const live=assemble();
+  const evt=Object.assign({}, db||{}, { title:live.title, framingKeywords:live.framingKeywords, axes:axesObj() });
+  return (db || live.title!=='Untitled event' || live.framingKeywords.length) ? evt : null;
+}
+
+function brMsg(who, text, opts){
+  const d=document.createElement('div'); d.className='br-msg '+who;
+  let h=escHtml(text);
+  if(opts&&opts.rich){
+    h=h.replace(/\[([a-z]+-\d{2,3}-\d+)\]/gi,(m,id)=>{
+      const c=brCandidates.find(x=>x.id===id.toLowerCase());
+      return c?`<span class="br-bill" data-bill="${id.toLowerCase()}">[${id}]</span>`:m;
+    }).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
+  }
+  d.innerHTML=`<div class="who">${who==='you'?'You':'Claude'}</div><div class="txt">${h}</div>`;
+  if(opts&&opts.dim) d.style.opacity=.5;
+  $('brMsgs').appendChild(d); $('brMsgs').scrollTop=$('brMsgs').scrollHeight;
+  return d;
+}
+$('brMsgs').addEventListener('click',e=>{
+  const b=e.target.closest?e.target.closest('.br-bill'):null; if(!b) return;
+  brPane('list');
+  const card=document.getElementById('brCard_'+b.dataset.bill.replace(/[^a-z0-9]/gi,'_'));
+  if(card) card.scrollIntoView({behavior:'smooth',block:'center'});
+});
+
+function brReset(){
+  brHistory=[]; brCandidates=[]; brEventId=currentId;
+  const evt=(currentId&&HAS_DB)?PrismDB.getEvent(currentId):null;
+  $('brEvent').textContent = evt ? (evt.id||'') : 'unsaved';
+  /* pre-populate from the event's linked bills (desk behavior kept) */
+  if(evt&&(evt.linkedBills||[]).length&&typeof LEGISLATION_DATA!=='undefined'){
+    const linked=new Set(evt.linkedBills), a=evt.billAnalysis||{};
+    LEGISLATION_DATA.forEach(b=>{ if(linked.has(b.id)){ const s=a[b.id]||{};
+      brCandidates.push({ id:b.id, name:b.name, meta:b.meta||'', reason:s.reason||'Previously linked',
+        status:'confirmed', displacement:s.displacement||null, objectZ:s.objectZ??null,
+        diatribe:s.diatribe||null, quadrants:s.quadrants||null, framingKeywords:s.framingKeywords||null }); } });
+  }
+  $('brMsgs').innerHTML='';
+  brMsg('claude', evt
+    ? `Let's curate bills for “${evt.title}”. What political tensions does this event activate? I'll search the ${brCatalogCount()}-bill catalog for votes that reveal member positioning.`
+    : `No saved event on the surface yet — that's fine. Tell me the political terrain and I'll search the ${brCatalogCount()}-bill catalog. Save the event to enable linking.`);
+  brRenderList(); brStatus('');
+}
+
+function brRenderList(){
+  const host=$('brList');
+  const n=brCandidates.filter(c=>c.status==='confirmed').length;
+  $('brSegList').textContent='Shortlist · '+n;
+  $('brLink').disabled=!(currentId&&n);
+  $('brLink').textContent=currentId?'Link confirmed bills':'Save the event to link';
+  if(!brCandidates.length){ host.innerHTML='<div class="br-empty">Bills appear here as the dialogue suggests them.</div>'; return; }
+  const rank={confirmed:0,candidate:1,dismissed:2};
+  const sorted=[...brCandidates].sort((a,b)=>(rank[a.status]||1)-(rank[b.status]||1));
+  host.innerHTML=sorted.map(c=>{
+    const tags=[];
+    if(c.displacement) tags.push(`<span class="br-tag">${c.displacement==='baseline'?'◇ baseline':'◆ '+escHtml(c.displacement)}</span>`);
+    if(c.objectZ!==null&&c.objectZ!==undefined) tags.push(`<span class="br-tag">Z ${c.objectZ>0?'+':''}${c.objectZ.toFixed(1)}</span>`);
+    if(c.diatribe) tags.push(`<span class="br-tag">dia ${escHtml(c.diatribe)}</span>`);
+    (c.quadrants||[]).forEach(q=>tags.push(`<span class="br-tag">${q}</span>`));
+    const kws=(c.framingKeywords||[]).map(k=>`<span class="br-kw">${escHtml(k)}</span>`).join('');
+    let acts='';
+    if(c.status==='candidate') acts=`<button data-a="confirmed">✓ Confirm</button><button data-a="dismissed">✕ Dismiss</button>`;
+    else if(c.status==='confirmed') acts=`<button data-a="candidate">↩ Unconfirm</button><button data-a="dismissed">✕ Dismiss</button>`;
+    else acts=`<button data-a="candidate">↩ Restore</button>`;
+    return `<div class="br-card ${c.status}" id="brCard_${c.id.replace(/[^a-z0-9]/gi,'_')}" data-bill="${c.id}">
+      <div class="n">${escHtml(c.name)}</div><div class="m">${escHtml(c.meta)}</div>
+      <div class="r">${escHtml(c.reason)}</div>
+      ${tags.length?`<div class="br-tags">${tags.join('')}</div>`:''}
+      ${kws?`<div class="br-kws">${kws}</div>`:''}
+      <div class="br-acts">${acts}</div>
+    </div>`;
+  }).join('');
+}
+$('brList').addEventListener('click',e=>{
+  const btn=e.target.closest?e.target.closest('button[data-a]'):null; if(!btn) return;
+  const card=btn.closest('.br-card'); const c=brCandidates.find(x=>x.id===card.dataset.bill);
+  if(c){ c.status=btn.dataset.a; brRenderList(); }
+});
+
+/* ===== Catalog pane — substance lens tier 2 =====
+   The record ranks: bills that forced a roll call rise, tightest margins
+   first — consequence measured, never judged. The ceremonial fold (tier 1)
+   stays on by default with its count visible; linked bills outrank the
+   lens, same rule as everywhere. */
+let brCatFoldOn=true;
+function brCatMarginPct(mm){ const p=mm*100; return (p<1?p.toFixed(1):Math.round(p))+'%'; }
+function brRenderCat(){
+  if(typeof LEGISLATION_DATA==='undefined'){ $('brCatList').innerHTML='<div class="br-empty">Catalog not loaded yet.</div>'; return; }
+  const q=($('brCatSearch').value||'').trim().toLowerCase();
+  const evt=brEvt(); const linked=new Set((evt&&evt.linkedBills)||[]);
+  let rows=LEGISLATION_DATA;
+  if(q) rows=rows.filter(b=>(b.name+' '+(b.meta||'')).toLowerCase().includes(q));
+  const cerHere=rows.filter(b=>b.cer&&!linked.has(b.id)).length;
+  if(brCatFoldOn) rows=rows.filter(b=>!b.cer||linked.has(b.id));
+  $('brCatFold').textContent = brCatFoldOn ? ('◫ '+cerHere+' ceremonial hidden') : ('◫ hide '+cerHere+' ceremonial');
+  rows=[...rows].sort((a,b)=>{
+    const ar=a.rc||0, br2=b.rc||0;
+    if(!!ar!==!!br2) return br2?1:-1;              /* the record rises */
+    if(ar&&br2) return (a.mm-b.mm)||(br2-ar);       /* tightest margin first */
+    return a.name.localeCompare(b.name);
+  });
+  const total=rows.length, CAP=150;
+  $('brCatCount').textContent = total+' bill'+(total===1?'':'s')+' · ranked by the record'+(total>CAP?' · showing first '+CAP:'');
+  if(!total){ $('brCatList').innerHTML='<div class="br-empty">Nothing matches.</div>'; return; }
+  const inShort=new Set(brCandidates.map(c=>c.id));
+  $('brCatList').innerHTML=rows.slice(0,CAP).map(b=>{
+    const rec=b.rc?`<div class="rec">⊕ ${b.rc} roll call${b.rc>1?'s':''} · tightest margin ${brCatMarginPct(b.mm)}</div>`:'';
+    const chips=[];
+    if(!b.rc) chips.push('<span class="br-tag">no roll call</span>');
+    if(b.tf) chips.push('<span class="br-tag">⊚ terrain</span>');   /* terrain-fetched arrival — a mark, not a gate (2026-07-06) */
+    if(b.cer&&!brCatFoldOn) chips.push('<span class="br-tag">◫ ceremonial</span>');
+    if(linked.has(b.id)) chips.push('<span class="br-tag">linked</span>');
+    const act=inShort.has(b.id)?'<span class="br-tag">in shortlist</span>'
+      :`<button data-cat-a="shortlist">→ Shortlist</button>`;
+    return `<div class="br-card" data-bill="${b.id}">
+      <div class="n">${escHtml(b.name)}</div><div class="m">${escHtml(b.meta||'')}</div>
+      ${rec}
+      ${chips.length?`<div class="br-tags">${chips.join('')}</div>`:''}
+      <div class="br-acts">${act}</div>
+    </div>`;
+  }).join('');
+}
+$('brCatSearch').addEventListener('input',brRenderCat);
+$('brCatFold').onclick=()=>{ brCatFoldOn=!brCatFoldOn; brRenderCat(); };
+$('brCatList').addEventListener('click',e=>{
+  const btn=e.target.closest?e.target.closest('button[data-cat-a]'):null; if(!btn) return;
+  const card=btn.closest('.br-card'); const b=LEGISLATION_DATA.find(x=>x.id===card.dataset.bill); if(!b) return;
+  if(!brCandidates.some(c=>c.id===b.id)){
+    brCandidates.push({ id:b.id, name:b.name, meta:b.meta||'', reason:'Pulled from the catalog'+(b.rc?' — '+b.rc+' roll call'+(b.rc>1?'s':'')+', tightest margin '+brCatMarginPct(b.mm):''), status:'candidate' });
+    brRenderList(); brStatus(b.name+' → shortlist');
+  }
+  brRenderCat();
+});
+
+async function brSendMsg(){
+  if(brBusy) return;
+  const key=$('apiKey').value.trim(); if(!key){ brStatus('Add your API key (AI ▸ top bar)'); return; }
+  const text=$('brText').value.trim(); if(!text) return;
+  $('brText').value='';
+  brMsg('you',text);
+  const typing=brMsg('claude','Thinking…',{dim:true});
+  brBusy=true; $('brSend').disabled=true;
+  try{
+    const {reply,newCandidates}=await PrismCurate.send({ apiKey:key, evt:brEvt(), text,
+      history:brHistory, candidates:brCandidates, model:$('model').value });
+    brHistory.push({role:'user',content:text},{role:'assistant',content:reply});
+    if(newCandidates.length) brCandidates.push(...newCandidates);
+    typing.remove();
+    brMsg('claude',reply,{rich:true});
+    brRenderList();
+    brStatus(brHistory.length/2+' exchange'+(brHistory.length>2?'s':''));
+  }catch(e){ typing.remove(); brMsg('claude','⚠ '+e.message); }
+  finally{ brBusy=false; $('brSend').disabled=false; }
+}
+$('brSend').onclick=brSendMsg;
+$('brText').addEventListener('keydown',e=>{ if(e.key==='Enter'&&!e.shiftKey){ e.preventDefault(); brSendMsg(); } });
+
+async function brOpen(){
+  $('brDrawer').classList.add('show'); $('brOverlay').classList.add('show');
+  if(typeof LEGISLATION_DATA==='undefined'){
+    if(brCatalogLoading) return;
+    brCatalogLoading=true; brStatus('Fetching the bill catalog…');
+    try{ await dgScript('data/legislation_data.js'); brStatus(''); }
+    catch(e){ brStatus('Catalog failed to load — close and reopen to retry'); brCatalogLoading=false; return; }
+    brCatalogLoading=false;
+  }
+  if(brEventId!==currentId || !$('brMsgs').childElementCount) brReset();
+  else brRenderList();
+}
+function brCloseDrawer(){ $('brDrawer').classList.remove('show'); $('brOverlay').classList.remove('show'); }
+$('brBtn').onclick=brOpen; $('brClose').onclick=brCloseDrawer; $('brOverlay').onclick=brCloseDrawer;
+$('brResetBtn').onclick=()=>{ brReset(); };
+
+/* THE write path — engine-owned: prism_bill_scores (canonical, lineage
+   enforced) + evt.billAnalysis + linkedBills (back-compat), spec §4.1 */
+$('brLink').onclick=()=>{
+  if(!currentId){ brStatus('Save the event first'); return; }
+  const r=PrismCurate.applyCuration(currentId,brCandidates);
+  if(r.error==='none_confirmed'){ brStatus('No bills confirmed'); return; }
+  if(r.error){ brStatus('Link failed: '+r.error); return; }
+  brStatus(r.newCount+' new · '+r.totalLinked+' linked · '+r.scored+' score(s) → store');
+  status('Linked '+r.totalLinked+' bill(s) to '+currentId);
+};
+
+refreshDropdown();
+blank();
+setView('dia');   // start on the diatribe stage of the flow
+
+/* Dock observer — the fixed actions bar wraps taller on narrow screens; the
+   chip rail (--actions-h) and the stage's bottom padding (--dock-h) track its
+   measured height instead of a static 60px/120px (2026-07-15 mobile audit:
+   chips landed on Save/Publish at 390px, last cell hid behind the rail). */
+(function(){
+  const a=document.querySelector('.actions'), c=$('cellmap'), bar=document.querySelector('.adminbar'), root=document.documentElement;
+  if(!a) return;
+  const size=()=>{ const ah=a.offsetHeight||60, ch=c?c.offsetHeight:0;
+    root.style.setProperty('--actions-h', ah+'px');
+    root.style.setProperty('--dock-h', (ah+ch+14)+'px');
+    // top chrome: the fixed adminbar wraps to 2-3 rows on tablet — content
+    // padded for one row slid underneath it. Baseline single-row bar ≈54px
+    // keeps --top-chrome at its designed 8px; only the wrap grows it. The
+    // open mobile nav is intentionally tall — skip it (closed height rules).
+    if(bar && !document.body.classList.contains('navopen'))
+      root.style.setProperty('--top-chrome', Math.max(8, bar.offsetHeight-46)+'px'); };
+  if(typeof ResizeObserver!=='undefined'){ const ro=new ResizeObserver(size); ro.observe(a); if(c) ro.observe(c); if(bar) ro.observe(bar); }
+  else window.addEventListener('resize', size);
+  size();
+  /* Visual-viewport pin (2026-07-17 phone audit): on the phone PWA the layout
+     viewport can go stale (keyboard dismissal, chrome collapse) and the fixed
+     bar floats above the true bottom edge. Measure the visual viewport and
+     push the bar (and the chip rail riding it) down to the real edge —
+     fixed bars are measured, not assumed. Clamped at 0: never lifts the bar
+     (keyboard-open shrink stays current behavior); 0 on healthy viewports. */
+  const vv=window.visualViewport;
+  if(vv){ const pin=()=>{ const gap=Math.max(0, Math.round(vv.offsetTop+vv.height-window.innerHeight));
+      root.style.setProperty('--vv-push', gap+'px'); };
+    vv.addEventListener('resize',pin); vv.addEventListener('scroll',pin);
+    /* iOS PWA can resume/rotate into a stale layout viewport without firing a
+       visualViewport event (2026-07-18 phone report: bar still floating in the
+       installed app) — re-pin on the window-level signals too. */
+    window.addEventListener('resize',pin);
+    window.addEventListener('orientationchange',()=>setTimeout(pin,60));
+    window.addEventListener('pageshow',pin);
+    document.addEventListener('visibilitychange',()=>{ if(document.visibilityState==='visible') requestAnimationFrame(pin); });
+    pin(); }
+})();
+if(!HAS_DB) status('Serve via Live Server so it shares storage with Prism.');
+
+/* Sync: pull published Readings from the repo on every load.
+   Quiet when nothing's new; never blocks the surface. */
+if(HAS_DB && typeof PrismSync!=='undefined'){
+  PrismSync.pull()
+    .then(r=>{ if(r.pulled){ refreshDropdown(currentId); status('Pulled '+r.pulled+' Reading'+(r.pulled>1?'s':'')+' from the repo'); } })
+    .catch(e=>status('Sync pull: '+e.message));
+}
+
+/* PWA: register the offline service worker (Add to Home Screen → installable app) */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(()=>{}));
+}
+</script>
+</body>
+</html>

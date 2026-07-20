@@ -1423,6 +1423,24 @@ html.parallax-mode .ted-dock {
 .ribbon-hint-name { color: var(--ink-mid); }
 html.parallax-mode .ribbon-hint { bottom: auto; top: 5px; }
 
+/* ── ELASTIC NAV ART (desktop >=900px, 2026-07-19 v2 — Sailor's paintings).
+   INSIDE the existing band: same seats, same drag, same zones, same hint.
+   The band's art becomes three of Sailor's plates — input beam stretched
+   from the left edge, the prism pinned to the active column, the fan
+   stretched to the right edge (drawn-to-stretch plates; the ten ribbon
+   paintings keep the never-stretch ruling). Phone (<900px) untouched. */
+:root { --nav-elastic-ease: cubic-bezier(0.3, 1.3, 0.35, 1); }
+.elastic-nav { display: none; }
+@media (min-width: 900px) {
+  .ribbon-art { display: none; }
+  .elastic-nav { display: block; position: absolute; inset: 0; pointer-events: none; }
+  .elastic-plate { position: absolute; max-width: none; object-fit: fill; pointer-events: none;
+    mix-blend-mode: var(--art-blend); filter: drop-shadow(0 2px 10px rgba(0,0,0,0.42)); }
+  #elBeam { left: 0; transition: width 0.85s var(--nav-elastic-ease); }
+  #elFan  { transition: left 0.85s var(--nav-elastic-ease), width 0.85s var(--nav-elastic-ease); }
+  #elPrism { transition: left 0.85s var(--nav-elastic-ease); }
+}
+
 /* upper-row tabs RETIRED (Sailor, 2026-07-11): the ribbon is the single nav
    instrument — its position IS the row/column indicator; a second labeled
    switcher contradicted that. Row reached by shade pull / free-plane drag. */
@@ -2312,6 +2330,12 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
   <button class="ribbon-zone" data-col="1" type="button" aria-label="Prism"></button>
   <button class="ribbon-zone" data-col="2" type="button" aria-label="Refraction"></button>
   <div class="ribbon-hint"><span class="ribbon-hint-name" id="ribbonName">Prism</span></div>
+  <!-- ELASTIC NAV ART (desktop >=900px): beam · prism · fan, Sailor's hand -->
+  <div class="elastic-nav" id="elasticNav" aria-hidden="true">
+    <img class="elastic-plate" id="elBeam" src="../src/img/nav/elastic-beam.png" alt="">
+    <img class="elastic-plate" id="elFan" src="../src/img/nav/elastic-fan.png" alt="">
+    <img class="elastic-plate" id="elPrism" src="../src/img/nav/elastic-prism.png" alt="">
+  </div>
 </div>
 
 <!-- upper-row tabs retired 2026-07-11 — the ribbon is the single nav instrument -->
@@ -6585,6 +6609,29 @@ applyState(true);
   // upperTabs retired 2026-07-11 — the ribbon is the single nav instrument
   const scrim     = document.getElementById('triScrim');
 
+  // ── ELASTIC NAV ART (desktop >=900px — Sailor's plates, 2026-07-19 v2) ──
+  // Geometry measured off the paintings' alpha (this session): prism crop
+  // 1210x1538 (aspect .787), slant edges at y=.30 of crop: L .298 / R .612;
+  // beam right-end centerline .291 of its 72px crop; fan apex y .294 of its
+  // 1074px crop, natural aspect 3.814. Anchors 30/50/70% per column.
+  const elasticMQ = window.matchMedia('(min-width: 900px)');
+  const elNav = document.getElementById('elasticNav');
+  const elBeam = document.getElementById('elBeam'), elFan = document.getElementById('elFan');
+  const elPrism = document.getElementById('elPrism');
+  const EL_ANCHORS = [30, 50, 70];
+  function isElastic() { return !!(elNav && elasticMQ.matches); }
+  function elGeom() {
+    const navH = ribbon.offsetHeight || 92;
+    const prismH = navH * 0.78;              // same fill as the old art's 78%
+    const prismW = prismH * 0.787;
+    const prismTop = (navH - prismH) / 2;
+    const beamY = prismTop + 0.30 * prismH;  // the beam crosses at .30 of the prism
+    const tuck = 0.06 * prismW;              // ends hide under the crayon
+    return { navH: navH, prismH: prismH, prismW: prismW, prismTop: prismTop, beamY: beamY,
+             entryOff: 0.202 * prismW - tuck, exitOff: 0.112 * prismW - tuck,
+             fanH: prismH * 0.72, beamH: Math.max(6, prismH * 0.075) };
+  }
+
   // ── Ribbon variants (Claude Design PrismNav, integrated 2026-07-18) ──
   // Five hand-drawn ribbons + the original full art. Per-drawing anchors:
   // fx = the prism triangle's fraction across THAT artwork (from the Design
@@ -6747,6 +6794,7 @@ applyState(true);
   }
 
   function positionRibbon(animated) {
+    if (isElastic()) { positionElastic(dragging ? true : animated); return; }
     if (dragging) return;   // the finger owns the ribbon during a free-plane drag
     const imgW = (ribbonImg.offsetHeight || (ribbon.clientHeight || 70) * 0.76) * RIBBON_ASPECT;
     const vw = window.innerWidth;
@@ -6759,12 +6807,40 @@ applyState(true);
     if (!animated) { void ribbonArt.offsetWidth; ribbonArt.style.transition = ''; }
   }
 
+  // Seat the prism at the active column; the beam and fan plates stretch to
+  // the screen edges (drawn-to-stretch plates — the fan never compresses
+  // below its natural aspect, it only stretches when the run exceeds it).
+  function positionElastic(animated) {
+    if (!elNav) return;
+    const g = elGeom(), vw = window.innerWidth, a = EL_ANCHORS[col];
+    const els = [elBeam, elFan, elPrism];
+    if (!animated) els.forEach(el => { el.style.transition = 'none'; });
+    elPrism.style.left = 'calc(' + a + '% - ' + (g.prismW / 2).toFixed(1) + 'px)';
+    elPrism.style.top = g.prismTop.toFixed(1) + 'px';
+    elPrism.style.width = g.prismW.toFixed(1) + 'px';
+    elPrism.style.height = g.prismH.toFixed(1) + 'px';
+    elBeam.style.top = (g.beamY - 0.291 * g.beamH).toFixed(1) + 'px';
+    elBeam.style.height = g.beamH.toFixed(1) + 'px';
+    elBeam.style.width = 'calc(' + a + '% - ' + g.entryOff.toFixed(1) + 'px)';
+    elFan.style.left = 'calc(' + a + '% + ' + g.exitOff.toFixed(1) + 'px)';
+    elFan.style.top = (g.beamY - 0.294 * g.fanH).toFixed(1) + 'px';
+    elFan.style.height = g.fanH.toFixed(1) + 'px';
+    const run = vw - (a / 100 * vw + g.exitOff);
+    elFan.style.width = Math.max(run, g.fanH * 3.814).toFixed(1) + 'px';
+    if (!animated) { void elNav.offsetWidth; els.forEach(el => { el.style.transition = ''; }); }
+  }
+
   // viewport point of the prism triangle at the ribbon's TARGET seat for the
   // current col/shade — computed analytically, NOT from a live rect: the seat
   // move is a CSS transition, so a rect read mid-flight gives yesterday's
   // position. The morph must aim at where the ribbon will BE (object
   // permanence — the logo lands ON the triangle).
   function trianglePoint() {
+    if (isElastic()) {
+      const g = elGeom();
+      const top = shade ? ribbonBottomSeat() : ribbonTopSeat();
+      return { x: window.innerWidth * EL_ANCHORS[col] / 100, y: top + g.beamY, h: g.prismH };
+    }
     const imgH = ribbonImg.offsetHeight || (ribbon.clientHeight || 70) * 0.76;
     const imgW = imgH * RIBBON_ASPECT;
     const frac = (shade && col === 1) ? TRIANGLE_FRAC : COL_FRAC[col];
@@ -6852,6 +6928,8 @@ applyState(true);
   ribbon.querySelectorAll('.ribbon-zone').forEach(z => z.addEventListener('click', e => {
     e.stopPropagation(); if (dragMoved) return; goCol(+z.dataset.col, true);
   }));
+  try { elasticMQ.addEventListener('change', () => applyNav(false)); }
+  catch (_) { try { elasticMQ.addListener(() => applyNav(false)); } catch (_) {} }
   // close affordances
   document.querySelectorAll('.tri-panel .tri-close').forEach(b => b.addEventListener('click', closePanel));
   scrim.addEventListener('click', closePanel);
@@ -6963,6 +7041,14 @@ applyState(true);
     // transition, so a mid-flight read gives yesterday's position). Used by the
     // splash→Diatribe morph to land the identical hero exactly on the ribbon.
     seatImgRect: function (c, sh) {
+      if (isElastic()) {
+        // the morph lands the hero on the elastic prism at that address
+        const g = elGeom();
+        const cc = Math.max(0, Math.min(2, c));
+        const seatTop = sh ? ribbonBottomSeat() : ribbonTopSeat();
+        return { x: window.innerWidth * EL_ANCHORS[cc] / 100 - g.prismW / 2,
+                 y: seatTop + g.prismTop, w: g.prismW, h: g.prismH };
+      }
       const imgH = ribbonImg.offsetHeight || (ribbon.clientHeight || 70) * 0.78;
       const imgW = imgH * RIBBON_ASPECT;
       const frac = (sh && c === 1) ? TRIANGLE_FRAC : COL_FRAC[c];
