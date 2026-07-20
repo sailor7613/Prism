@@ -175,13 +175,8 @@ function shapeCandidates(articles, now) {
     const salience = +(0.55 * volume + 0.45 * recency).toFixed(3);
 
     arts.sort((a, b) => (Date.parse(isoDate(b.seendate) || 0) || 0) - (Date.parse(isoDate(a.seendate) || 0) || 0));
-    // socialimage rides through (2026-07-19): GDELT already sends each
-    // article's og:image URL — the newsroom's photo strip and the promote
-    // photo-lift consume it. null (not '') when absent, so consumers can
-    // filter honestly; nothing is fetched or stored here, URLs only.
     const kept = arts.slice(0, 12).map(a => ({
-      title: a.title, url: a.url, domain: a.domain, seendate: isoDate(a.seendate),
-      image: a.socialimage || null
+      title: a.title, url: a.url, domain: a.domain, seendate: isoDate(a.seendate)
     }));
 
     return {

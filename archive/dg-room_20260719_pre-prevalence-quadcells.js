@@ -1006,14 +1006,7 @@
               add(v.xWord, 0.55); add(v.yWord, 0.55);
               (v.words || []).forEach(w2 => add(typeof w2 === 'string' ? w2 : (w2 && (w2.t || w2.word)), 0.5));
             });
-            // Diatribe cells ride the PREVALENT axis (2026-07-19): the slider's
-            // left is the − pole, right is +. On a y-prevalent Reading the left
-            // (−) cells feed the −Y quadrants C/D and the right (+) cells feed
-            // A/B; the old unconditional x-side split put left material on −X
-            // even when the spine was vertical — the NDAA left-reads-as-+ flip.
-            const sideCells = (data.prevAxis === 'y')
-              ? ((q === 'C' || q === 'D') ? ['LF', 'LC', 'LD'] : ['RF', 'RC', 'RD'])
-              : ((q === 'A' || q === 'C') ? ['LF', 'LC', 'LD'] : ['RF', 'RC', 'RD']);
+            const sideCells = (q === 'A' || q === 'C') ? ['LF', 'LC', 'LD'] : ['RF', 'RC', 'RD'];
             sideCells.forEach(c => {
               const cd = (data.cells || {})[c];
               if (cd && cd.kws) cd.kws.forEach(k => add(k, 0.34));

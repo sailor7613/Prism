@@ -399,14 +399,6 @@
     color:var(--ink-low); margin-top:12px; }
   body.light .cite-pic{ background:rgba(20,22,30,.04); }
   body.light .cite-pic .k{ color:#7a5418; text-shadow:none; }
-  /* Placement chip (2026-07-19): tap cycles a held photo through the Z-ceiling
-     roles — introit (none) → +Z realized → −Z frustrated. The washes on the
-     Reading's boundary planes; one photo per ceiling. */
-  .cite-pic .pl{ position:absolute; left:3px; top:3px; font-family:var(--mono); font-size:8px;
-    letter-spacing:.05em; padding:1px 5px 2px; border-radius:2px; cursor:pointer;
-    background:rgba(0,0,0,.55); color:var(--ink-low); border:1px solid transparent; }
-  .cite-pic .pl.on{ color:#fff6e2; border-color:rgba(255,246,226,.4); }
-  body.light .cite-pic .pl{ background:rgba(255,255,255,.7); }
 
   /* ── mobile chrome — the toolbar folds behind the prism nav; the menu drops from it ──
      Desktop is untouched: .pnav hides above 700px and every rule below is fenced. */
@@ -840,10 +832,7 @@ function loadEvent(ev){
   const oa=(pa==='x')?(ax.y):(ax.x); otherPole={ neg:(oa&&oa.neg)||'', pos:(oa&&oa.pos)||'' };
   citations = Array.isArray(ev.sources) ? ev.sources.map(s=>({url:(s&&s.url)||'',label:(s&&s.label)||''})) : [];
   images = Array.isArray(ev.images)
-    ? ev.images.filter(p=>p&&p.url).map(p=>{ const o={url:p.url,credit:p.credit||'',articleUrl:p.articleUrl||'',keep:true};
-        if(p.place) o.place=JSON.parse(JSON.stringify(p.place));   // placement rides (2026-07-19)
-        if(p.baked) o.baked=p.baked;                               // publish-baked repo copy rides too
-        return o; })
+    ? ev.images.filter(p=>p&&p.url).map(p=>({url:p.url,credit:p.credit||'',articleUrl:p.articleUrl||'',keep:true}))
     : [];
   if(typeof nrPendingPromote!=='undefined') nrPendingPromote=null;   // loading another event is never a promotion
   // The slider holds its integer (2026-07-19): restore the authored signed
@@ -975,11 +964,9 @@ function assemble(){
   if(typeof responsesSchema==='function') ev.responses=responsesSchema();
   if(typeof citations!=='undefined'){ const cites=citations.filter(c=>c&&c.url&&c.url.trim()).map(c=>({url:c.url.trim(),label:(c.label||'').trim()})); if(cites.length) ev.sources=cites; }
   // Photos (2026-07-19): kept ones only; ALWAYS set (empty clears — see note
-  // at `images`). URLs + credit + any placement (boundary role or pin) ride
-  // the Reading; nothing is fetched here — Publish bakes (prism-sync.js).
+  // at `images`). URLs + credit ride the Reading; nothing is fetched.
   if(typeof images!=='undefined')
-    ev.images=images.filter(p=>p&&p.keep&&p.url).map(p=>{ const o={url:p.url,credit:p.credit||'',articleUrl:p.articleUrl||''};
-      if(p.place) o.place=p.place; if(p.baked) o.baked=p.baked; return o; });
+    ev.images=images.filter(p=>p&&p.keep&&p.url).map(p=>({url:p.url,credit:p.credit||'',articleUrl:p.articleUrl||''}));
   return ev;
 }
 function axesObj(){
@@ -1071,11 +1058,7 @@ $('btnSave').onclick=save; $('btnOpen').onclick=openInPrism; $('btnExport').oncl
 $('btnPublish').onclick=async()=>{
   const id=save(); if(!id) return;            // save() already reported why
   status('Publishing…');
-  try{ const {rid,bake}=await PrismSync.publish(id);
-    // Bake report (2026-07-19): how many kept photos landed in the repo vs
-    // stayed hotlinked behind a CORS wall (graceful decay, never blocking).
-    const b=bake&&(bake.baked||bake.hotlinked)?(' · '+bake.baked+' baked'+(bake.hotlinked?', '+bake.hotlinked+' hotlinked':'')):'';
-    status('Published · '+rid+' → repo'+b); }
+  try{ const {rid}=await PrismSync.publish(id); status('Published · '+rid+' → repo'); }
   catch(e){ status(e.message); }
 };
 $('closeExport').onclick=()=>$('exportModal').classList.remove('show');
@@ -1291,27 +1274,8 @@ function renderPhotos(){
     im.onerror=()=>{ const ix=images.indexOf(p); if(ix>=0){ images.splice(ix,1); renderPhotos(); } };   // dead URL — the wire moves on
     cell.appendChild(im);
     const k=document.createElement('span'); k.className='k'; k.textContent=p.keep?'✓':''; cell.appendChild(k);
-    /* Placement chip (Photo Z-Probe grammar, ruled 2026-07-19): a held photo
-       cycles introit → +Z realized → −Z frustrated → introit. Assigning a
-       ceiling steals it from whichever photo held it (one wash per pole) and
-       holds the photo (a wash must be kept). Which image carries which pole
-       is an authored reading — the probe's ⇄ proved the choice matters.
-       Placed-MOMENT pins (place.pin) are authored in the quad view's own
-       session; this chip leaves any existing pin placement alone. */
-    const role=p.place&&p.place.role;
-    const pl=document.createElement('span'); pl.className='pl'+(role?' on':'');
-    pl.textContent = role==='realized'?'+Z realized' : role==='frustrated'?'−Z frustrated' : (p.place&&p.place.pin?'⌖ placed':'introit');
-    pl.title='tap to cycle: introit → +Z realized → −Z frustrated';
-    pl.onclick=(e)=>{ e.stopPropagation();
-      if(p.place&&p.place.pin) return;                       // pin moments keep their placement
-      const next = !role ? 'realized' : role==='realized' ? 'frustrated' : null;
-      if(next){ images.forEach(q=>{ if(q!==p&&q.place&&q.place.role===next) delete q.place; });   // one wash per ceiling
-        p.place={role:next}; p.keep=true; }
-      else delete p.place;
-      renderPhotos(); };
-    cell.appendChild(pl);
     if(p.credit){ const c=document.createElement('div'); c.className='c'; c.textContent=p.credit; cell.appendChild(c); }
-    cell.onclick=()=>{ p.keep=!p.keep; if(!p.keep) delete p.place; renderPhotos(); };   // a dropped photo is unplaced
+    cell.onclick=()=>{ p.keep=!p.keep; renderPhotos(); };
     grid.appendChild(cell);
   });
   host.appendChild(grid);

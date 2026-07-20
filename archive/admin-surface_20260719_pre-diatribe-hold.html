@@ -380,34 +380,6 @@
   body.light .br-input textarea, body.light .br-card{ background:rgba(20,22,30,.04); }
   body.light .br-kw{ color:#7a5418; }
 
-  /* ── newsroom photos (2026-07-19) — the wire's pictures ride the story
-     card as a quiet strip (URLs only, lazy-loaded, broken ones remove
-     themselves); the promote lift carries the picked few into 📎. ── */
-  .nr-pics{ display:flex; gap:6px; margin-top:8px; overflow-x:auto; -webkit-overflow-scrolling:touch; }
-  .nr-pics img{ height:52px; width:auto; max-width:94px; object-fit:cover; border-radius:2px;
-    border:.5px solid var(--rule); opacity:.88; flex:0 0 auto; }
-  .cite-pics{ display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
-  .cite-pic{ position:relative; cursor:pointer; border:1px solid var(--rule); border-radius:2px; padding:2px;
-    background:rgba(255,255,255,.02); }
-  .cite-pic img{ height:70px; width:auto; max-width:126px; object-fit:cover; display:block; border-radius:1px; }
-  .cite-pic.off{ opacity:.32; }
-  .cite-pic .k{ position:absolute; top:3px; right:5px; font-family:var(--mono); font-size:11px;
-    color:var(--keyword-shimmer,#fff6e2); text-shadow:0 0 5px rgba(0,0,0,.7); }
-  .cite-pic .c{ font-family:var(--mono); font-size:8px; letter-spacing:.06em; color:var(--ink-low);
-    padding:3px 2px 1px; max-width:126px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-  .cite-pics-head{ font-family:var(--mono); font-size:9px; letter-spacing:.12em; text-transform:uppercase;
-    color:var(--ink-low); margin-top:12px; }
-  body.light .cite-pic{ background:rgba(20,22,30,.04); }
-  body.light .cite-pic .k{ color:#7a5418; text-shadow:none; }
-  /* Placement chip (2026-07-19): tap cycles a held photo through the Z-ceiling
-     roles — introit (none) → +Z realized → −Z frustrated. The washes on the
-     Reading's boundary planes; one photo per ceiling. */
-  .cite-pic .pl{ position:absolute; left:3px; top:3px; font-family:var(--mono); font-size:8px;
-    letter-spacing:.05em; padding:1px 5px 2px; border-radius:2px; cursor:pointer;
-    background:rgba(0,0,0,.55); color:var(--ink-low); border:1px solid transparent; }
-  .cite-pic .pl.on{ color:#fff6e2; border-color:rgba(255,246,226,.4); }
-  body.light .cite-pic .pl{ background:rgba(255,255,255,.7); }
-
   /* ── mobile chrome — the toolbar folds behind the prism nav; the menu drops from it ──
      Desktop is untouched: .pnav hides above 700px and every rule below is fenced. */
   .pnav{ display:none; background:transparent; border:0; padding:2px 4px; cursor:pointer; align-items:center; }
@@ -561,9 +533,8 @@
     <span style="flex:1"></span>
     <button class="btn" id="citeAdd">+ Add</button>
     <button class="btn" id="citeClose">Close</button></div>
-  <p style="font-family:var(--mono);font-size:11px;color:var(--ink-low)">Drop links to the articles and posts that ground this object. Attach one to any voice via its editor's “source”. Photos the wire delivered ride below — tap to keep or drop; kept ones save on the Reading.</p>
+  <p style="font-family:var(--mono);font-size:11px;color:var(--ink-low)">Drop links to the articles and posts that ground this object. Attach one to any voice via its editor's “source”.</p>
   <div id="citeList"></div>
-  <div id="citePhotos"></div>
 </div></div>
 
 <button id="kwPill" type="button">★ keyword</button>
@@ -718,10 +689,6 @@ const track=$('track'), thumbR=$('thumbReal'), thumbG=$('thumbGhost');
 function scoreFromPct(p){ return Math.round(p*2-100); }
 function sideFromScore(s){ return s<0 ? 'left' : s>0 ? 'right' : 'left'; }
 function sideLabel(side){ return side==='left' ? (spine.neg||'left') : (spine.pos||'right'); }
-/* The slider's value IS a signed integer on the prevalent axis — left is
-   ALWAYS −, right is ALWAYS + (RULED 2026-07-19). It shows in the readout,
-   persists on the Reading as diatribeScore, and restores on load. */
-function sgnScore(s){ return (s>0?'+':'')+s; }
 
 function flush(){ model[curReal]=$('capTextReal').innerHTML; model[curGhost]=$('capTextGhost').innerHTML; }
 function setThumb(p, doFlush){
@@ -733,8 +700,8 @@ function setThumb(p, doFlush){
   thumbG.style.left = (100-pct)+'%'; thumbG.dataset.side=opp;
   bind($('capReal'), $('capTextReal'), side, band, curReal, sideLabel(side));
   bind($('capGhost'), $('capTextGhost'), opp, band, curGhost, sideLabel(opp)+' · mirror');
-  $('roReal').textContent = sideLabel(side)+' · '+band+' · '+sgnScore(score);
-  $('roGhost').textContent = sideLabel(opp)+' · '+band+' · '+sgnScore(-score)+' · mirror';
+  $('roReal').textContent = sideLabel(side)+' · '+band;
+  $('roGhost').textContent = sideLabel(opp)+' · '+band+' · mirror';
   $('ambient').className = 'prism-ambient '+band;
   renderCellmap();
 }
@@ -753,8 +720,8 @@ function updateLabels(){
   const score=scoreFromPct(pct), side=sideFromScore(score), opp=side==='left'?'right':'left', band=bandFromScore(score);
   $('capReal').querySelector('.side').textContent = sideLabel(side);
   $('capGhost').querySelector('.side').textContent = sideLabel(opp)+' · mirror';
-  $('roReal').textContent = sideLabel(side)+' · '+band+' · '+sgnScore(score);
-  $('roGhost').textContent = sideLabel(opp)+' · '+band+' · '+sgnScore(-score)+' · mirror';
+  $('roReal').textContent = sideLabel(side)+' · '+band;
+  $('roGhost').textContent = sideLabel(opp)+' · '+band+' · mirror';
   renderCellmap();
 }
 function setPoleFields(){ $('poleNeg').textContent=spine.neg; $('polePos').textContent=spine.pos;
@@ -839,24 +806,13 @@ function loadEvent(ev){
     responses[q]={ fluid:cvt(rq.fluid||rq.goodFaith), coalition:cvt(rq.coalition), denominated:cvt(rq.denominated||rq.badFaith) }; });
   const oa=(pa==='x')?(ax.y):(ax.x); otherPole={ neg:(oa&&oa.neg)||'', pos:(oa&&oa.pos)||'' };
   citations = Array.isArray(ev.sources) ? ev.sources.map(s=>({url:(s&&s.url)||'',label:(s&&s.label)||''})) : [];
-  images = Array.isArray(ev.images)
-    ? ev.images.filter(p=>p&&p.url).map(p=>{ const o={url:p.url,credit:p.credit||'',articleUrl:p.articleUrl||'',keep:true};
-        if(p.place) o.place=JSON.parse(JSON.stringify(p.place));   // placement rides (2026-07-19)
-        if(p.baked) o.baked=p.baked;                               // publish-baked repo copy rides too
-        return o; })
-    : [];
   if(typeof nrPendingPromote!=='undefined') nrPendingPromote=null;   // loading another event is never a promotion
-  // The slider holds its integer (2026-07-19): restore the authored signed
-  // score; Readings from before the field keep the surface's current thumb.
-  if(typeof ev.diatribeScore==='number' && isFinite(ev.diatribeScore))
-    pct=(Math.max(-96,Math.min(96,Math.round(ev.diatribeScore)))+100)/2;
   setPoleFields(); setThumb(pct,false); status(currentId?('Loaded '+currentId):'Loaded onto the surface');
 }
 function loadSeed(){
   currentId=null; $('evTitle').value=SEED.title; $('framing').innerHTML=escHtml(SEED.framing); spine={neg:SEED.spine.neg,pos:SEED.spine.pos}; setPrev(SEED.prevalentAxis);
   model={}; ['LF','LC','LD','RF','RC','RD'].forEach(c=>model[c]=escHtml(SEED.diatribe[c]||'')); tedEvent={};
   responses={A:{},B:{},C:{},D:{}}; otherPole={neg:'Market',pos:'State'}; if(typeof citations!=='undefined') citations=[];
-  if(typeof images!=='undefined') images=[];
   if(typeof nrPendingPromote!=='undefined') nrPendingPromote=null;
   setPoleFields(); setThumb(pct,false);
   status('Immigration example — edit freely; ✦ on a filled box marks its keywords');
@@ -866,7 +822,6 @@ function blank(){
   model={LF:'',LC:'',LD:'',RF:'',RC:'',RD:''}; if(typeof tedEvent!=='undefined') tedEvent={};
   if(typeof responses!=='undefined'){ responses={A:{},B:{},C:{},D:{}}; otherPole={neg:'',pos:''}; }
   if(typeof citations!=='undefined') citations=[];
-  if(typeof images!=='undefined') images=[];
   if(typeof nrPendingPromote!=='undefined') nrPendingPromote=null;   // fresh slate — no pending promotion
   setPoleFields(); setThumb(38,false); status('Blank diatribe — tap the pole names to set your axis, then fill the slots');
 }
@@ -967,19 +922,10 @@ function assemble(){
      dia[c]={ text:stripHtml(model[c]), side, band, keywords:kwsOf(model[c]) }; });
   const fh=$('framing').innerHTML;
   const ev={ title:$('evTitle').value.trim()||'Untitled event', framing:stripHtml(fh), framingKeywords:kwsOf(fh),
-    diatribe:dia, prevalentAxis:prevAxis,
-    // The authored aperture holds (2026-07-19): a signed integer on the
-    // prevalent axis, left = −, right = +. Rides publish via toFile.
-    diatribeScore:scoreFromPct(pct) };
+    diatribe:dia, prevalentAxis:prevAxis };
   if(typeof tedEvent!=='undefined' && Object.keys(tedEvent).length) ev.ted=JSON.parse(JSON.stringify(tedEvent));
   if(typeof responsesSchema==='function') ev.responses=responsesSchema();
   if(typeof citations!=='undefined'){ const cites=citations.filter(c=>c&&c.url&&c.url.trim()).map(c=>({url:c.url.trim(),label:(c.label||'').trim()})); if(cites.length) ev.sources=cites; }
-  // Photos (2026-07-19): kept ones only; ALWAYS set (empty clears — see note
-  // at `images`). URLs + credit + any placement (boundary role or pin) ride
-  // the Reading; nothing is fetched here — Publish bakes (prism-sync.js).
-  if(typeof images!=='undefined')
-    ev.images=images.filter(p=>p&&p.keep&&p.url).map(p=>{ const o={url:p.url,credit:p.credit||'',articleUrl:p.articleUrl||''};
-      if(p.place) o.place=p.place; if(p.baked) o.baked=p.baked; return o; });
   return ev;
 }
 function axesObj(){
@@ -1071,11 +1017,7 @@ $('btnSave').onclick=save; $('btnOpen').onclick=openInPrism; $('btnExport').oncl
 $('btnPublish').onclick=async()=>{
   const id=save(); if(!id) return;            // save() already reported why
   status('Publishing…');
-  try{ const {rid,bake}=await PrismSync.publish(id);
-    // Bake report (2026-07-19): how many kept photos landed in the repo vs
-    // stayed hotlinked behind a CORS wall (graceful decay, never blocking).
-    const b=bake&&(bake.baked||bake.hotlinked)?(' · '+bake.baked+' baked'+(bake.hotlinked?', '+bake.hotlinked+' hotlinked':'')):'';
-    status('Published · '+rid+' → repo'+b); }
+  try{ const {rid}=await PrismSync.publish(id); status('Published · '+rid+' → repo'); }
   catch(e){ status(e.message); }
 };
 $('closeExport').onclick=()=>$('exportModal').classList.remove('show');
@@ -1271,51 +1213,6 @@ $('btnBack').onclick=()=>setView('dia');
 
 /* ===== Citation bank — per-event sources; attachable to any voice ===== */
 let citations=[];
-/* Photos (2026-07-19): the wire's pictures, lifted at promote. Working
-   entries are {url, credit, articleUrl, keep}; only kept ones save to
-   ev.images (URLs + credit, nothing fetched). ev.images always writes —
-   dropping every photo must clear the saved set, unlike the sources
-   precedent (set-if-length) which can never empty itself. */
-let images=[];
-function renderPhotos(){
-  const host=$('citePhotos'); if(!host) return; host.innerHTML='';
-  if(!images.length) return;
-  const h=document.createElement('div'); h.className='cite-pics-head';
-  h.textContent='photos · '+images.filter(i=>i.keep).length+' of '+images.length+' held';
-  host.appendChild(h);
-  const grid=document.createElement('div'); grid.className='cite-pics';
-  images.forEach((p,i)=>{
-    const cell=document.createElement('div'); cell.className='cite-pic'+(p.keep?'':' off');
-    cell.title=(p.keep?'held — tap to drop':'dropped — tap to hold')+(p.credit?(' · '+p.credit):'');
-    const im=document.createElement('img'); im.loading='lazy'; im.src=p.url; im.alt=p.credit||'';
-    im.onerror=()=>{ const ix=images.indexOf(p); if(ix>=0){ images.splice(ix,1); renderPhotos(); } };   // dead URL — the wire moves on
-    cell.appendChild(im);
-    const k=document.createElement('span'); k.className='k'; k.textContent=p.keep?'✓':''; cell.appendChild(k);
-    /* Placement chip (Photo Z-Probe grammar, ruled 2026-07-19): a held photo
-       cycles introit → +Z realized → −Z frustrated → introit. Assigning a
-       ceiling steals it from whichever photo held it (one wash per pole) and
-       holds the photo (a wash must be kept). Which image carries which pole
-       is an authored reading — the probe's ⇄ proved the choice matters.
-       Placed-MOMENT pins (place.pin) are authored in the quad view's own
-       session; this chip leaves any existing pin placement alone. */
-    const role=p.place&&p.place.role;
-    const pl=document.createElement('span'); pl.className='pl'+(role?' on':'');
-    pl.textContent = role==='realized'?'+Z realized' : role==='frustrated'?'−Z frustrated' : (p.place&&p.place.pin?'⌖ placed':'introit');
-    pl.title='tap to cycle: introit → +Z realized → −Z frustrated';
-    pl.onclick=(e)=>{ e.stopPropagation();
-      if(p.place&&p.place.pin) return;                       // pin moments keep their placement
-      const next = !role ? 'realized' : role==='realized' ? 'frustrated' : null;
-      if(next){ images.forEach(q=>{ if(q!==p&&q.place&&q.place.role===next) delete q.place; });   // one wash per ceiling
-        p.place={role:next}; p.keep=true; }
-      else delete p.place;
-      renderPhotos(); };
-    cell.appendChild(pl);
-    if(p.credit){ const c=document.createElement('div'); c.className='c'; c.textContent=p.credit; cell.appendChild(c); }
-    cell.onclick=()=>{ p.keep=!p.keep; if(!p.keep) delete p.place; renderPhotos(); };   // a dropped photo is unplaced
-    grid.appendChild(cell);
-  });
-  host.appendChild(grid);
-}
 function syncCiteList(){ const dl=$('citeUrls'); if(!dl) return; dl.innerHTML=''; citations.forEach(c=>{ if(c.url){ const o=document.createElement('option'); o.value=c.url; o.textContent=c.label||''; dl.appendChild(o); } }); }
 function renderCites(){ const host=$('citeList'); host.innerHTML='';
   citations.forEach((c,i)=>{ const row=document.createElement('div'); row.className='cite-row';
@@ -1325,7 +1222,7 @@ function renderCites(){ const host=$('citeList'); host.innerHTML='';
     row.appendChild(u); row.appendChild(l); row.appendChild(d); host.appendChild(row); });
   syncCiteList();
 }
-$('citeBtn').onclick=()=>{ if(!citations.length) citations.push({url:'',label:''}); renderCites(); renderPhotos(); $('citeModal').classList.add('show'); };
+$('citeBtn').onclick=()=>{ if(!citations.length) citations.push({url:'',label:''}); renderCites(); $('citeModal').classList.add('show'); };
 $('citeAdd').onclick=()=>{ citations.push({url:'',label:''}); renderCites(); };
 $('citeClose').onclick=()=>$('citeModal').classList.remove('show');
 
@@ -1570,16 +1467,6 @@ function nrRender(){
     if(c.source==='news'&&c.raw&&Array.isArray(c.raw.articles)){ const nt=document.createElement('span'); nt.className='br-tag';
       nt.textContent=new Set(c.raw.articles.map(a=>a.domain)).size+' outlets · '+c.raw.articles.length+' articles'; tags.appendChild(nt); }
     card.appendChild(tags);
-    // the wire's pictures (2026-07-19) — quiet strip, lazy, self-pruning on
-    // dead URLs; pre-socialimage candidates simply have none and show none
-    if(c.source==='news'&&c.raw&&Array.isArray(c.raw.articles)){
-      const pics=c.raw.articles.filter(a=>a&&a.image);
-      if(pics.length){ const strip=document.createElement('div'); strip.className='nr-pics';
-        pics.slice(0,4).forEach(a=>{ const im=document.createElement('img'); im.loading='lazy';
-          im.src=a.image; im.alt=a.domain||''; im.title=a.domain||''; im.onerror=()=>im.remove();
-          strip.appendChild(im); });
-        card.appendChild(strip); }
-    }
     const acts=document.createElement('div'); acts.className='br-acts';
     if(c.status==='new'||c.status==='held'){
       const p=document.createElement('button'); p.textContent='Promote'; p.onclick=()=>nrPromote(c.cid); acts.appendChild(p);
@@ -1655,16 +1542,10 @@ function nrPromote(cid){
   if(c.raw&&c.raw.congressGovUrl) citations=[{url:c.raw.congressGovUrl,label:(c.bills&&c.bills[0])||'congress.gov'}];
   else if(c.source==='news'&&c.raw&&Array.isArray(c.raw.articles))   // top 3 articles → citation bank
     citations=c.raw.articles.slice(0,3).map(a=>({url:a.url,label:a.domain||'article'}));
-  // Photo lift (2026-07-19): up to 6 of the cluster's pictures ride onto the
-  // surface, the top 3 held by default — auto-carry, same spirit as the
-  // citation seed. Pick/drop lives in 📎; only kept ones save.
-  if(c.source==='news'&&c.raw&&Array.isArray(c.raw.articles))
-    images=c.raw.articles.filter(a=>a&&a.image).slice(0,6)
-      .map((a,i)=>({url:a.image,credit:a.domain||'',articleUrl:a.url||'',keep:i<3}));
   setPoleFields(); setThumb(38,false);
   nrPendingPromote=cid;
   nrCloseFn();
-  status('Promoted from newsroom — '+(images.length?images.filter(p=>p.keep).length+' photo(s) held in 📎 · ':'')+'author the dialectic, then Save / Publish');
+  status('Promoted from newsroom — author the dialectic, then Save / Publish');
 }
 
 /* ===== M2 — the constitutive pass (spec §4 AS AMENDED 2026-07-13) =====

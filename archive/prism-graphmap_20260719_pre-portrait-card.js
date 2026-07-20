@@ -1098,9 +1098,7 @@ const PrismGraphmap = (function () {
           var s = 0.15 + 0.05 * (0.5 + 0.5 * pulse);
           dot.glow.scale.set(s, s, 1);
         }
-        breathePortrait(dot, pinT);   // portrait cards breathe (ruled 2026-07-19)
       }
-      for (var mpi = 0; mpi < memberPins.length; mpi++) breathePortrait(memberPins[mpi], pinT);
 
       // ── Word cloud pulse — logarithmic breathe based on nearby dot density ──
       var wt = pinT;
@@ -1188,9 +1186,7 @@ const PrismGraphmap = (function () {
           var s = 0.15 + 0.05 * (0.5 + 0.5 * pulse);
           dot.glow.scale.set(s, s, 1);
         }
-        breathePortrait(dot, pinT);   // portrait cards breathe (ruled 2026-07-19)
       }
-      for (var mpu = 0; mpu < memberPins.length; mpu++) breathePortrait(memberPins[mpu], pinT);
 
       // ── Word cloud pulse ──
       var wt = pinT;
@@ -1717,86 +1713,6 @@ const PrismGraphmap = (function () {
     const dotsGroup = new THREE.Group();
     group.add(dotsGroup);
 
-    // ── Portrait card (Photo Z-Probe grammar, ruled 2026-07-19) ──
-    // The pin's photograph takes the GLOW-SPRITE FORM: a camera-flat
-    // billboard riding the orb — translucent WITH the orb (the light glows
-    // through the face from behind), never hidden by it. Encoded from
-    // test/photo-z-probe.html v8:
-    //   · camera-flat always (THREE.Sprite, never an in-plane plate)
-    //   · draws over the orb (depthTest:false, renderOrder 30)
-    //   · tight to the orb — card ≈ 1.9× the orb's diameter (the same ratio
-    //     the original 0.18 glow held over the 0.10 dots)
-    //   · color-matched wash + border in the pin's own color
-    //   · no hover zoom, no bezel glow — the photograph ITSELF breathes
-    //     (see breathePortrait in the animate loops)
-    // A portrait that fails to load renders NO card — the pin stays a plain
-    // token (an empty tinted square would read as a broken face; the probe's
-    // placeholder was a composition aid, not a production register).
-    function makePortraitTexture(img, colorHex) {
-      var s = 128, cvs = document.createElement('canvas');
-      cvs.width = s; cvs.height = s;
-      var ctx = cvs.getContext('2d');
-      var c = new THREE.Color(colorHex);
-      var rgb = Math.round(c.r * 255) + ',' + Math.round(c.g * 255) + ',' + Math.round(c.b * 255);
-      var sc = Math.max(s / img.width, s / img.height);
-      var dw = img.width * sc, dh = img.height * sc;
-      ctx.drawImage(img, (s - dw) / 2, (s - dh) / 2, dw, dh);
-      ctx.fillStyle = 'rgba(' + rgb + ',0.28)';        // the color-match wash
-      ctx.fillRect(0, 0, s, s);
-      ctx.strokeStyle = 'rgba(' + rgb + ',0.9)';
-      ctx.lineWidth = 3;
-      ctx.strokeRect(1.5, 1.5, s - 3, s - 3);
-      var tex = new THREE.CanvasTexture(cvs);
-      tex.encoding = THREE.sRGBEncoding;
-      return tex;
-    }
-
-    // Async-load a portrait onto an entry (dot or member pin). The sprite is
-    // a CHILD of the token mesh at its origin, so migration/entrance animation
-    // carry the card for free. cardScale is world units (≈ orbDiameter × 1.9).
-    function attachPortrait(entry, mesh, url, colorHex, cardScale) {
-      var img = new Image();
-      img.crossOrigin = 'anonymous';
-      img.onload = function () {
-        var mat = new THREE.SpriteMaterial({
-          map: makePortraitTexture(img, colorHex),
-          transparent: true, opacity: 0.62,
-          depthWrite: false, depthTest: false,   // over the orb — translucent WITH, not hidden BY
-        });
-        var sp = new THREE.Sprite(mat);
-        sp.scale.set(cardScale, cardScale, 1);
-        sp.renderOrder = 30;
-        mesh.add(sp);
-        entry.portraitSprite = sp;
-        entry.portraitMat = mat;
-        entry.portraitHot = false;               // host sets true under attention (inspect/hover)
-      };
-      img.onerror = function () { /* no card — the pin stays a plain token */ };
-      img.src = url;
-    }
-
-    // The breath (ruled over the bezel-glow, 2026-07-19): the card's own
-    // translucency oscillates gently at idle and deepens toward full presence
-    // under attention. No scale change — attention answers with the pulse,
-    // not a jump.
-    function breathePortrait(entry, t) {
-      if (!entry || !entry.portraitMat) return;
-      var hot = !!entry.portraitHot;
-      entry.portraitMat.opacity = (hot ? 0.84 : 0.62) +
-        (hot ? 0.10 : 0.07) * Math.sin(t * 2.4 + (entry.pulsePhase || 0));
-    }
-
-    function disposePortrait(entry) {
-      if (!entry || !entry.portraitSprite) return;
-      if (entry.portraitMat) {
-        if (entry.portraitMat.map) entry.portraitMat.map.dispose();
-        entry.portraitMat.dispose();
-      }
-      if (entry.portraitSprite.parent) entry.portraitSprite.parent.remove(entry.portraitSprite);
-      entry.portraitSprite = null;
-      entry.portraitMat = null;
-    }
-
     function addDot(normX, normY, quadrant, normZ, opts) {
       opts = opts || {};
       // Gate: if zInput disabled, clamp to plane surface
@@ -1824,10 +1740,7 @@ const PrismGraphmap = (function () {
       // slowly in the animate loop so facets catch light.
       const brightCol = col.clone();
       brightCol.offsetHSL(0, 0.2, -0.05); // saturate but darken
-      // Slim-orb rule (ruled 2026-07-19): a portrait-carrying dot defaults to
-      // radius 0.034 vs the standard 0.05 — the face is the presence, the orb
-      // is the light behind it. An explicit opts.radius still wins.
-      const dotR = opts.radius || (opts.portrait ? 0.034 : 0.05);
+      const dotR = opts.radius || 0.05;
       let dotGeo;
       if (opts.shape === 'diamond') {
         dotGeo = new THREE.OctahedronGeometry(dotR * 1.4);
@@ -1926,14 +1839,6 @@ const PrismGraphmap = (function () {
         }
       }
 
-      // ── Portrait card (opts.portrait = url; ruled 2026-07-19) ──
-      // Separate sprite over the orb; the additive glow + proximity-pulse
-      // machinery underneath stays untouched, exactly as the probe composed
-      // it. Card ≈ 1.9× the orb's diameter (0.13 against the 0.034 slim orb).
-      if (opts.portrait) {
-        attachPortrait(dotEntry, mesh, opts.portrait, opts.color || baseColor, dotR * 3.8);
-      }
-
       dots.push(dotEntry);
       return dotEntry;
     }
@@ -1954,7 +1859,6 @@ const PrismGraphmap = (function () {
           d.ringSprite.texture.dispose();
           d.mesh.remove(d.ringSprite.sprite);
         }
-        disposePortrait(d);
         if (d.glowMat) d.glowMat.dispose();
         if (d.mesh.geometry) d.mesh.geometry.dispose();
         if (d.mesh.material) d.mesh.material.dispose();
@@ -2075,11 +1979,8 @@ const PrismGraphmap = (function () {
         // emissive so it pops against the faint baseline field, and flatShading
         // so the octahedron's facets catch the light as distinct planes (that
         // gem read is what separates a legislator from a round voice dot).
-        // Slim rule (ruled 2026-07-19): a portrait-carrying pin's diamond
-        // shrinks to ~0.68× — same ratio as the 0.034/0.05 slim orb — so the
-        // face is the presence and the diamond is the light behind it.
         const baseColor = new THREE.Color(color);
-        const radius = (opts.radius || 0.07) * (opts.portrait ? 0.68 : 1) * DIAMOND;
+        const radius = (opts.radius || 0.07) * DIAMOND;
         mesh = new THREE.Mesh(
           new THREE.OctahedronGeometry(radius, 0),
           new THREE.MeshStandardMaterial({
@@ -2138,22 +2039,13 @@ const PrismGraphmap = (function () {
         memberPinsGroup.add(stem);
       }
 
-      const entry = { mesh, stem, data: mesh.userData, shared,
-        pulsePhase: Math.random() * Math.PI * 2 };   // desync the portrait breath
-      // ── Portrait card (opts.portrait = url; ruled 2026-07-19) ──
-      // Never on baseline motes (shared material, crowd scene — 538 faces is
-      // rationing's whole point). Card ≈ 1.9× the slim token's footprint.
-      if (opts.portrait && !baseline) {
-        const slimR = (opts.radius || 0.07) * 0.68;
-        attachPortrait(entry, mesh, opts.portrait, color, slimR * 3.8);
-      }
+      const entry = { mesh, stem, data: mesh.userData, shared };
       memberPins.push(entry);
       return entry;
     }
 
     function clearMemberPins() {
       memberPins.forEach(p => {
-        disposePortrait(p);
         // Baseline motes share geometry/material — never dispose those here.
         if (!p.shared) {
           if (p.mesh.geometry) p.mesh.geometry.dispose();

@@ -108,77 +108,9 @@ const PrismSync = (() => {
     return { pulled, checked: list.length };
   }
 
-  // ── Bake-at-publish (ruled 2026-07-19; load-bearing per the Photo
-  // Z-Probe session — two of six event photos never cleared their outlets'
-  // CORS walls live, and og:image URLs rot) ─────────────────
-  // Once photographs are structural on the graph (boundary washes, placed
-  // moments, the introit), Publish fetches each kept image and commits it
-  // into the repo beside the reading JSON (data/readings/images/<rid>/…).
-  // The entry gains `baked` = repo-relative path; consumers prefer it and
-  // fall back to the hotlink. An image the browser can't fetch (CORS wall,
-  // rot) simply stays hotlinked — graceful decay, publish never blocks.
-  // Filenames are a hash of the source URL, so re-publishing skips images
-  // already in the repo instead of duplicating them.
-  const IMG_DIR = 'data/readings/images';
-
-  function urlHash(u) {
-    let h = 5381;
-    for (let i = 0; i < u.length; i++) h = ((h << 5) + h + u.charCodeAt(i)) >>> 0;
-    return h.toString(16);
-  }
-  function extFromType(t) {
-    t = (t || '').toLowerCase();
-    if (t.includes('png')) return 'png';
-    if (t.includes('webp')) return 'webp';
-    if (t.includes('gif')) return 'gif';
-    if (t.includes('avif')) return 'avif';
-    return 'jpg';
-  }
-  function b64bytes(buf) {
-    const bytes = new Uint8Array(buf);
-    let bin = '';
-    for (let i = 0; i < bytes.length; i += 8192) bin += String.fromCharCode.apply(null, bytes.subarray(i, i + 8192));
-    return btoa(bin);
-  }
-
-  // Mutates ev.images in place (adds `baked`). Returns { baked, hotlinked, changed }.
-  async function bakeImages(ev) {
-    const out = { baked: 0, hotlinked: 0, changed: false };
-    if (!Array.isArray(ev.images) || !ev.images.length) return out;
-    for (const p of ev.images) {
-      if (!p || !p.url) continue;
-      if (p.baked) { out.baked++; continue; }               // already in the repo
-      try {
-        const res = await fetch(p.url, { mode: 'cors' });
-        if (!res.ok) throw new Error('http ' + res.status);
-        const type = res.headers.get('content-type') || '';
-        if (type && !type.toLowerCase().startsWith('image/')) throw new Error('not an image');
-        const buf = await res.arrayBuffer();
-        if (!buf.byteLength) throw new Error('empty body');
-        const rel = IMG_DIR + '/' + ev.rid + '/' + urlHash(p.url) + '.' + extFromType(type);
-        const put = await fetch(`${FILE_API}${rel}`, {
-          method: 'PUT',
-          headers: headers(true),
-          body: JSON.stringify({
-            message: 'Bake image for ' + ev.rid,
-            branch: BRANCH,
-            content: b64bytes(buf),
-          })
-        });
-        // 422 without sha = the file already exists (same URL hash → same
-        // source) — that's success, not conflict.
-        if (!put.ok && put.status !== 422) throw new Error('put ' + put.status);
-        p.baked = rel; out.baked++; out.changed = true;
-      } catch (e) {
-        out.hotlinked++;                                    // CORS wall or rot — hotlink, graceful decay
-      }
-    }
-    return out;
-  }
-
   // ── Publish ───────────────────────────────────────────────
   // Publishes one local event (by local id) as its Reading file.
-  // Returns { rid, bake } or throws with a readable message.
+  // Returns { rid } or throws with a readable message.
   async function publish(localId) {
     if (!token()) throw new Error('No GitHub token — add one under Sync in the top bar');
     let ev = PrismDB.getEvent(localId);
@@ -186,13 +118,6 @@ const PrismSync = (() => {
     if (!ev.rid) {
       ev = PrismDB.updateEvent(localId, { rid: PrismDB.mintRid() });
     }
-    // Bake kept images into the repo BEFORE assembling the file, so the
-    // published Reading carries its `baked` paths to every device.
-    let bake = null;
-    try {
-      bake = await bakeImages(ev);
-      if (bake.changed) ev = PrismDB.updateEvent(localId, { images: ev.images });
-    } catch (e) { bake = null; }   // baking never blocks a publish
     const file = toFile(ev);
     const path = `${API}/${ev.rid}.json`;
 
@@ -235,7 +160,7 @@ const PrismSync = (() => {
     const out = await put.json();
     setSha(ev.rid, out.content.sha);
     PrismDB.updateEvent(localId, { updatedAt: file.updatedAt, syncedAt: file.updatedAt });
-    return { rid: ev.rid, bake };
+    return { rid: ev.rid };
   }
 
   // ── Generic repo-file transport (2026-07-15) ──────────────

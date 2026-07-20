@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prism — Photo Z-Plane Probe (NDAA case study)</title>
+<!-- ═══════════════════════════════════════════════════════════════════
+     CASE-STUDY PROBE · 2026-07-19 · validate before encoding
+     Question under rule: do photographs land on the Z planes and as
+     ghosted moments within quadrants — does Z finally become felt?
+     Material: the real NDAA event (Senate Democrats block the $1T
+     defense bill over the Iran war, 2026-07-14). Reading axes: y
+     prevalent, +Y ADVANCE NDAA / −Y BLOCK NDAA, x LEFT/RIGHT.
+     Photos are hotlinked og:images from the wire. If one never loads,
+     its outlet blocks cross-origin use — which is itself the argument
+     for baking kept images into the repo at Publish. A framed
+     placeholder stands in so composition can still be judged.
+     Nothing here touches live code — the probe rides the factory's
+     public API (+ its exposed group/camera internals for the sprites).
+     ═══════════════════════════════════════════════════════════════ -->
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#0c0b09; color:#f5f0e8; font-family:'Georgia',serif;
+    min-height:100vh; display:flex; flex-direction:column; align-items:center; padding:1.6rem 1rem; }
+  h1 { font-size:1.25rem; font-weight:400; letter-spacing:.08em; opacity:.7; }
+  .subtitle { font-size:.8rem; opacity:.4; margin:.4rem 0 1.2rem; text-align:center; max-width:640px; line-height:1.5; }
+  .stage { width:100%; max-width:720px; }
+  .graph-container { width:100%; aspect-ratio:1; position:relative;
+    border:1px solid rgba(245,240,232,.06); border-radius:4px; overflow:hidden; }
+  .controls { margin-top:.75rem; display:flex; gap:.5rem; align-items:center; flex-wrap:wrap; }
+  button { background:rgba(245,240,232,.06); border:1px solid rgba(245,240,232,.12); color:#f5f0e8;
+    padding:.35rem .75rem; border-radius:3px; font-family:inherit; font-size:.75rem; cursor:pointer; }
+  button:hover { background:rgba(245,240,232,.12); }
+  button.on { background:rgba(201,64,64,.18); border-color:rgba(201,64,64,.35); }
+  .ghost-ctl { display:flex; align-items:center; gap:.4rem; font-size:.7rem; opacity:.6; margin-left:auto; }
+  .hint { font-size:.7rem; opacity:.3; margin-top:.5rem; font-style:italic; line-height:1.5; }
+  .caption { position:fixed; bottom:1.6rem; left:50%; transform:translateX(-50%) translateY(16px);
+    background:rgba(245,240,232,.08); border:1px solid rgba(245,240,232,.15); backdrop-filter:blur(12px);
+    padding:.7rem 1.3rem; border-radius:6px; font-size:.8rem; opacity:0; transition:opacity .3s,transform .3s;
+    pointer-events:none; text-align:center; max-width:420px; }
+  .caption.visible { opacity:1; transform:translateX(-50%) translateY(0); }
+  .caption .c-meta { opacity:.45; font-size:.65rem; font-family:monospace; letter-spacing:.06em; margin-top:.25rem; }
+</style>
+</head>
+<body>
+
+<h1>Photo Z-Plane Probe</h1>
+<p class="subtitle">NDAA · y-prevalent · +Y advance / −Y block · Z realized ↔ frustrated.
+Drag to orbit. Hover or tap a moment to resolve it. Rule on feel, not on chrome.</p>
+
+<div class="stage">
+  <div class="graph-container" id="container"></div>
+  <div class="controls">
+    <button id="btnMoments" class="on">moments on plane</button>
+    <button id="btnBounds" class="on">Z-plane photos</button>
+    <button id="btnSwapZ">⇄ swap Z reading</button>
+    <button id="btnSpin">spin 180°</button>
+    <button id="btnReset">reset</button>
+    <div class="ghost-ctl">ghost <input type="range" id="ghostAlpha" min="10" max="70" value="30"> α</div>
+  </div>
+  <div class="hint">The two washes at ±Z are the boundary planes the factory already carries — the realized and
+  frustrated ceilings of the event. The framed sprites are the new thing under rule: the wire's moments, ghosted,
+  each footed to its position on the plane. A photo that stays grey never cleared its outlet's CORS wall —
+  the bake-at-publish argument, demonstrated live.</div>
+</div>
+
+<div class="caption" id="caption"><div id="capText"></div><div class="c-meta" id="capMeta"></div></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="../src/js/prism-graphmap.js"></script>
+<script>
+const GRAPH_SIZE = 2.8, Z_EXTENT = 2.2;                 // mirror the factory's constants
+const W = (nx,ny,nz)=>({ x:(nx-0.5)*GRAPH_SIZE, y:(0.5-ny)*GRAPH_SIZE, z:(nz||0)*Z_EXTENT*0.8 });
+
+/* ── The material: real photographs of the actual happening ──
+   norm coords: nx,ny in 0..1 (ny 0 = top = +Y = ADVANCE), nz −1..+1.
+   Placements are hand-set editorial choices FOR THE PROBE — the point
+   is whether placed moments read, not whether these placements are
+   the right Reading. */
+/* No photo appears twice (ruled 2026-07-19): the boundary washes and the
+   placed moments draw from disjoint sets. */
+const MOMENTS = [
+  { url:'https://assets3.cbsnewsstatic.com/hub/i/r/2026/07/14/893015cd-dd39-45b2-88b7-63cc17c8e11a/thumbnail/1200x630/a3ced90ac19b1c94ef073c1cf1ba6857/gettyimages-2282986646-1.jpg',
+    credit:'cbsnews.com · Getty', cap:'The floor on the day of the vote',
+    nx:0.68, ny:0.26, nz:0.15 },                          // right · advance, near plane
+  { url:'https://gray-wafb-prod.gtv-cdn.com/resizer/v2/662W2SQ22RCUJCL4ZPRELIWE5E.jpg?auth=400717e0d99170268127188fdeb47e97b1c54c2e772269ed58cc78f70cfd430a&width=1200&height=600&smart=true',
+    credit:'wafb.com · AP', cap:'The advance that did not come',
+    nx:0.42, ny:0.30, nz:-0.45 },                         // advance side, frustrated depth
+  { url:'https://d3i6fh83elv35t.cloudfront.net/static/2026/07/2026-06-23T210036Z_387269564_RC2UZLALRATB_RTRMADP_3_USA-CONGRESS-1024x683.jpg',
+    credit:'pbs.org · Reuters', cap:'The Capitol — the institution holding the question',
+    nx:0.62, ny:0.68, nz:-0.20 },                         // right · block, shallow frustration
+];
+
+/* Boundary-plane photos: the event's two Z ceilings — their own images,
+   never shared with the moments. Default reading — the block REALIZED
+   (it happened), the advance FRUSTRATED. ⇄ swaps. */
+const Z_READING = {
+  realized:   { photo:'https://www.aljazeera.com/wp-content/uploads/2026/07/reuters_6a55817c-1783988605.jpg?resize=770%2C513&quality=80',
+                text:'realized — the block holds' },
+  frustrated: { photo:'https://news.antiwar.com/wp-content/uploads/2026/07/Senate-chamber5.jpg',
+                text:'frustrated — the war chest waits' },
+};
+
+const inst = PrismGraphmap.create({
+  container: document.getElementById('container'),
+  mode: 'analytical',
+  capabilities: { orbit:true, zInput:true, zRender:true },
+  moody: true, spectrumAxes: true,
+});
+inst.setAxisLabels({ xNeg:'LEFT', xPos:'RIGHT', yPos:'ADVANCE NDAA', yNeg:'BLOCK NDAA' });
+
+let zSwapped = false;
+function applyBoundaries(on){
+  if(!on){ inst.clearBoundaryPhotos(); inst.setBoundaryVisible(false); return; }
+  const pos = zSwapped ? Z_READING.frustrated : Z_READING.realized;
+  const neg = zSwapped ? Z_READING.realized   : Z_READING.frustrated;
+  inst.setBoundaryVisible(true);
+  inst.setBoundaryContent({
+    positive: { text: pos.text, photo: pos.photo, photoAlpha: 0.20 },
+    negative: { text: neg.text, photo: neg.photo, photoAlpha: 0.20 },
+  });
+}
+
+/* ── Ghosted moment sprites — framed, footed, resolving on attention ── */
+const momentGroup = new THREE.Group();
+inst.group.add(momentGroup);
+const sprites = [];
+
+function frameTexture(img, credit){
+  // Composite: photo, slight desaturate toward the cream palette, thin
+  // frame, credit strip. All on canvas so the ghost reads as an object,
+  // not a raw image dropped in space.
+  const cw = 512, ch = 360, cvs = document.createElement('canvas');
+  cvs.width = cw; cvs.height = ch;
+  const ctx = cvs.getContext('2d');
+  ctx.fillStyle = 'rgba(12,11,9,0.92)'; ctx.fillRect(0,0,cw,ch);
+  if (img){
+    const iw = img.width, ih = img.height, s = Math.max((cw-16)/iw,(ch-52)/ih);
+    const dw = iw*s, dh = ih*s;
+    ctx.save(); ctx.beginPath(); ctx.rect(8,8,cw-16,ch-52); ctx.clip();
+    ctx.drawImage(img,(cw-dw)/2, 8+((ch-60)-dh)/2 + 0, dw, dh);
+    ctx.fillStyle = 'rgba(233,224,205,0.13)'; ctx.fillRect(8,8,cw-16,ch-52);   // cream wash — gallery, not billboard
+    ctx.restore();
+  } else {
+    ctx.fillStyle = 'rgba(245,240,232,0.06)'; ctx.fillRect(8,8,cw-16,ch-52);
+    ctx.fillStyle = 'rgba(245,240,232,0.35)'; ctx.font='24px Georgia'; ctx.textAlign='center';
+    ctx.fillText('photo unreachable (CORS)', cw/2, ch/2 - 18);
+  }
+  ctx.strokeStyle = 'rgba(245,240,232,0.5)'; ctx.lineWidth = 2; ctx.strokeRect(8,8,cw-16,ch-52);
+  ctx.fillStyle = 'rgba(245,240,232,0.55)'; ctx.font = '19px monospace'; ctx.textAlign = 'center';
+  ctx.fillText(credit, cw/2, ch-18);
+  const tex = new THREE.CanvasTexture(cvs);
+  tex.encoding = THREE.sRGBEncoding;
+  return tex;
+}
+
+function addMoment(m){
+  const p = W(m.nx, m.ny, m.nz);
+  const build = (img)=>{
+    const mat = new THREE.SpriteMaterial({ map: frameTexture(img, m.credit), transparent:true,
+      opacity: baseAlpha(), depthWrite:false });
+    const sp = new THREE.Sprite(mat);
+    sp.scale.set(0.62, 0.435, 1);
+    sp.position.set(p.x, p.y, p.z);
+    sp.userData.moment = m;
+    momentGroup.add(sp);
+    // the foot — a hairline from the moment to its (x,y) on the plane,
+    // so the photograph belongs to a position, not to the air
+    const lineMat = new THREE.LineBasicMaterial({ color:0xf5f0e8, transparent:true, opacity:0.16 });
+    const geo = new THREE.BufferGeometry().setFromPoints(
+      [new THREE.Vector3(p.x,p.y,p.z), new THREE.Vector3(p.x,p.y,0)]);
+    momentGroup.add(new THREE.Line(geo, lineMat));
+    const footGeo = new THREE.CircleGeometry(0.022, 12);
+    const foot = new THREE.Mesh(footGeo, new THREE.MeshBasicMaterial({ color:0xf5f0e8, transparent:true, opacity:0.3 }));
+    foot.position.set(p.x,p.y,0.002);
+    momentGroup.add(foot);
+    sprites.push(sp);
+  };
+  const img = new Image();
+  img.crossOrigin = 'anonymous';
+  img.onload  = ()=>build(img);
+  img.onerror = ()=>build(null);          // CORS wall → framed placeholder; the probe still composes
+  img.src = m.url;
+}
+MOMENTS.forEach(addMoment);
+
+/* ── Member portrait pin (Sailor's probe question, 2026-07-19): a square
+   portrait tile riding the member's pin orb. Schumer, the block's face.
+   Placement mirrors VOTE provenance honestly: prevalent-axis coordinate
+   from the vote (nay → BLOCK), cross-axis 0.5 unrefined. Portrait from
+   the unitedstates project (GitHub Pages — CORS-open), bioguide S000148. */
+let memberHalo=null;
+const MEMBER = {
+  name:'Sen. Chuck Schumer', meta:'D-NY · nay → BLOCK NDAA · VOTE provenance · cross-axis unrefined',
+  img:'https://unitedstates.github.io/images/congress/225x275/S000148.jpg',
+  nx:0.5, ny:0.82, nz:0,
+};
+(function addMemberPin(){
+  // THE PORTRAIT TAKES THE GLOW-SPRITE FORM (Sailor, 2026-07-19): every
+  // graphmap dot already carries a 0.18 square Sprite — billboard, so
+  // always flat to the camera wherever the orbit is; translucent and
+  // color-matched, intersecting the orb. The Y2K edtech artifact. The
+  // member's portrait becomes that sprite: the photograph as the pin's
+  // holo-card, the candy orb glowing through its center.
+  const p = W(MEMBER.nx, MEMBER.ny, MEMBER.nz);
+  // slimmer orb for a portrait-carrying pin — the face is the presence,
+  // the orb is the light behind it
+  inst.addDot(MEMBER.nx, MEMBER.ny, 'C', 0, { label: MEMBER.name, radius: 0.034 });
+  const QUAD_TINT='rgba(74,140,90,';           // C · libLeft green, matched to the orb
+  const build=(img)=>{
+    const s=128, cvs=document.createElement('canvas'); cvs.width=s; cvs.height=s;
+    const ctx=cvs.getContext('2d');
+    if(img){
+      const sc=Math.max(s/img.width,s/img.height), dw=img.width*sc, dh=img.height*sc;
+      ctx.drawImage(img,(s-dw)/2,(s-dh)/2,dw,dh);
+      ctx.fillStyle=QUAD_TINT+'0.28)'; ctx.fillRect(0,0,s,s);   // the color-match wash
+    } else { ctx.fillStyle=QUAD_TINT+'0.45)'; ctx.fillRect(0,0,s,s); }
+    ctx.strokeStyle=QUAD_TINT+'0.9)'; ctx.lineWidth=3; ctx.strokeRect(1.5,1.5,s-3,s-3);
+    const tex=new THREE.CanvasTexture(cvs); tex.encoding=THREE.sRGBEncoding;
+    // depthTest OFF + high renderOrder: the card draws OVER the orb, exactly
+    // as the old glow did (additive, depthWrite:false) — and at 0.66 alpha
+    // the orb reads THROUGH the face from behind. Translucent WITH, not
+    // hidden BY.
+    const halo=new THREE.Sprite(new THREE.SpriteMaterial({
+      map:tex, transparent:true, opacity:0.66, depthWrite:false, depthTest:false }));
+    halo.scale.set(0.13,0.13,1);   // tight to the orb — same ~1.8× ratio the
+                                   // original 0.18 glow held over the 0.10 dots
+    halo.position.set(p.x, p.y, p.z);          // dead-centre on the orb
+    halo.renderOrder=30;
+    halo.userData.moment={ cap:MEMBER.name, credit:MEMBER.meta, nx:MEMBER.nx, ny:MEMBER.ny, nz:MEMBER.nz };
+    halo.userData.baseAlpha=0.66;              // translucent WITH the orb — the holo-card reading
+    halo.userData.noScale=true;                // RULED: no scroll-over zoom on the card —
+                                               // attention answers with the pulse, not a jump
+    momentGroup.add(halo); sprites.push(halo);
+    memberHalo=halo;
+  };
+  const img=new Image(); img.crossOrigin='anonymous';
+  img.onload=()=>build(img); img.onerror=()=>build(null);
+  img.src=MEMBER.img;
+})();
+
+function baseAlpha(){ return (+document.getElementById('ghostAlpha').value)/100; }
+
+/* attention: raycast hover/tap → resolve one moment to near-full presence */
+const ray = new THREE.Raycaster(), ptr = new THREE.Vector2();
+let focused = null;
+function pick(ev){
+  const r = inst.canvas.getBoundingClientRect();
+  const cx = (ev.touches?ev.touches[0]:ev).clientX, cy = (ev.touches?ev.touches[0]:ev).clientY;
+  ptr.x = ((cx-r.left)/r.width)*2-1; ptr.y = -((cy-r.top)/r.height)*2+1;
+  ray.setFromCamera(ptr, inst.camera);
+  const hit = ray.intersectObjects(sprites, false)[0];
+  setFocus(hit ? hit.object : null);
+}
+function unfocusRestore(sp){
+  const u = sp.userData;
+  sp.material.opacity = (u.baseAlpha != null) ? u.baseAlpha : baseAlpha();
+  sp.scale.copy(u.baseScale);
+}
+function setFocus(sp){
+  if (focused === sp) return;
+  if (focused) unfocusRestore(focused);
+  focused = sp;
+  const cap = document.getElementById('caption');
+  if (sp){
+    if (!sp.userData.baseScale) sp.userData.baseScale = sp.scale.clone();
+    if (!sp.userData.noScale){ sp.material.opacity = 0.94; sp.scale.multiplyScalar(1.38); }
+    const m = sp.userData.moment, wp = m;
+    document.getElementById('capText').textContent = m.cap;
+    document.getElementById('capMeta').textContent =
+      m.credit + '  ·  x ' + Math.round((m.nx-0.5)*200) + ' · y ' + Math.round((0.5-m.ny)*200) +
+      ' · z ' + (m.nz>=0?'+':'') + m.nz.toFixed(2);
+    cap.classList.add('visible');
+  } else cap.classList.remove('visible');
+}
+inst.canvas.addEventListener('pointermove', pick);
+inst.canvas.addEventListener('pointerdown', pick);
+
+/* ── controls ── */
+const $ = id=>document.getElementById(id);
+let momentsOn = true, boundsOn = true;
+$('btnMoments').onclick = ()=>{ momentsOn=!momentsOn; momentGroup.visible=momentsOn; $('btnMoments').classList.toggle('on',momentsOn); };
+$('btnBounds').onclick  = ()=>{ boundsOn=!boundsOn; applyBoundaries(boundsOn); $('btnBounds').classList.toggle('on',boundsOn); };
+$('btnSwapZ').onclick   = ()=>{ zSwapped=!zSwapped; if(boundsOn) applyBoundaries(true); };
+$('btnSpin').onclick    = ()=>{ const c=inst.getOrbit(); inst.spinTo(c.yaw+180, c.pitch, 1200); };
+$('btnReset').onclick   = ()=>inst.spinTo(0, 0, 600);
+$('ghostAlpha').addEventListener('input', ()=>{ sprites.forEach(s=>{
+  if(s!==focused && s.userData.baseAlpha==null) s.material.opacity=baseAlpha(); }); });
+
+/* the pulse — THE PHOTO ITSELF breathes (ruled over the bezel-glow,
+   2026-07-19): the card's own translucency oscillates gently at idle
+   and deepens toward full presence under attention. No added geometry. */
+let pulseT=0;
+(function pulse(){
+  requestAnimationFrame(pulse);
+  if(!memberHalo) return;
+  pulseT+=0.016;
+  const hot=(focused===memberHalo);
+  memberHalo.material.opacity=(hot?0.84:0.62)+(hot?0.10:0.07)*Math.sin(pulseT*2.4);
+})();
+
+applyBoundaries(true);
+inst.spinTo(24, 12, 1400);   // open slightly off-axis so depth reads immediately
+</script>
+
+</body>
+</html>

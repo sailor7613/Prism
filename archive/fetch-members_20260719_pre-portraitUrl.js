@@ -234,19 +234,6 @@ async function fetchMembers() {
       photoUrl: bioguideId
         ? `https://bioguide.congress.gov/bioguide/photo/${bioguideId.charAt(0)}/${bioguideId}.jpg`
         : null,
-      // Portrait for the graphmap's canvas-composited portrait card (ruled
-      // 2026-07-19). Distinct from photoUrl on purpose: bioguide.congress.gov
-      // serves no CORS headers, which is fine for a DOM <img> (the tracker
-      // rows) but taints a canvas — the card's tint/wash compositing needs a
-      // CORS-open source. The unitedstates project archive is bioguide-keyed,
-      // GitHub-Pages-hosted (CORS-open), no key. Portraits there can be
-      // decades old, which still works emotively — a dated official portrait
-      // is itself a read (Sailor, probe session). The app derives this same
-      // URL from bioguideId when the field is absent (pre-regeneration data),
-      // so a pipeline rerun is an upgrade, not a dependency.
-      portraitUrl: bioguideId
-        ? `https://unitedstates.github.io/images/congress/225x275/${bioguideId}.jpg`
-        : null,
       positions: [],
       lastUpdated: new Date().toISOString(),
     };

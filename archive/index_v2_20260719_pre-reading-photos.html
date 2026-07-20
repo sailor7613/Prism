@@ -1997,43 +1997,6 @@ div.dt-tile {
   .dt-edge { display: none !important; }
 }
 
-/* ── Reading photographs — introit (reruled 2026-07-19, evening session) ──
-   Sailor: no frame, no attribution. The photographs sit BARE in the page —
-   a two-up strip with a hairline seam, faint cream wash so they hold the
-   page's light instead of punching a hole in the night sky. Provenance is
-   deliberately not displayed here: it rides the Reading's data (📎 grid,
-   articleUrl, alt text) and surfaces on attention in the graph registers.
-   THE BEAT'S ONE-SCREEN CONTRACT HOLDS: when photographs are present
-   (body.ev-has-photos) the nav instrument compacts and the column tightens
-   so instrument, title, photos, wall text, keywords and the button all fit
-   without scroll — the instrument never leaves the top. Events without
-   photos keep today's rhythm exactly (rules scoped to ev-has-photos). */
-body.ev-step-framing.ev-has-photos .ev-logo { width: clamp(180px, 46vw, 380px); margin-bottom: 2px; }
-body.ev-has-photos .ev-framing-title { margin: 0 0 8px; }
-body.ev-has-photos .ev-framing-beat .ev-rule { margin: 6px auto; }
-body.ev-has-photos .ev-framing-beat .ev-framing { margin: 0 0 10px; }
-body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px 12px; }
-.ev-photos { display: flex; gap: 2px; width: 100%; max-width: 600px; margin: 2px 0 12px; }
-.ev-photos:empty { display: none; }
-.ev-photo { position: relative; width: 50%; aspect-ratio: 16 / 10; overflow: hidden;
-  opacity: 0; transform: translateY(6px); transition: opacity .9s ease, transform .9s ease; }
-.ev-photo:only-child { width: 100%; aspect-ratio: 21 / 9; }   /* a lone photograph runs the column as a cinematic strip */
-.ev-photo.in { opacity: 0.92; transform: none; }
-.ev-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.ev-photo .ev-photo-wash { position: absolute; inset: 0;
-  background: rgba(233,224,205,0.10); pointer-events: none; }
-
-/* Placed-moment caption — the probe's resolve-on-attention tablet. */
-.moment-caption { position: fixed; bottom: 72px; left: 50%; z-index: 44;
-  transform: translateX(-50%) translateY(14px);
-  background: rgba(12,11,9,0.72); border: 1px solid rgba(245,240,232,0.15);
-  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-  padding: 8px 18px; border-radius: 6px; text-align: center; max-width: 380px;
-  opacity: 0; transition: opacity .3s, transform .3s; pointer-events: none; }
-.moment-caption.visible { opacity: 1; transform: translateX(-50%) translateY(0); }
-.moment-caption .mc-text { font-size: 13px; color: rgba(245,240,232,0.9); }
-.moment-caption .mc-meta { font: 10px/1.4 ui-monospace, Menlo, monospace;
-  letter-spacing: .06em; color: rgba(245,240,232,0.45); margin-top: 3px; }
 </style>
 </head>
 <body class="dark phase-event ev-step-card">
@@ -2086,13 +2049,6 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
     <div class="ev-framing-beat" id="evFramingBeat">
       <div class="ev-framing-title" id="evFramingTitle"></div>
       <div class="ev-rule" id="evRule"></div>
-      <!-- The introit photographs (reruled 2026-07-19 evening): a small set —
-           as few as 2 — of the Reading's UNPLACED kept images, evoking the
-           event's subjects. The face of the event at the door — bare, no
-           frame, no attribution (provenance rides the data and the graph's
-           attention captions). Placed images (washes, moments) live on the
-           graph. -->
-      <div class="ev-photos" id="evPhotos" aria-hidden="true"></div>
       <p class="ev-framing" id="evFraming"></p>
       <div class="ev-keywords" id="evKeywords" data-band="fluid" data-ted-hint="Those words are the weather of this whole thing — the cloud you're about to take a position inside."></div>
       <button class="ev-enter" id="evEnter" data-ted-hint="When you've got a feel for it, hit this. It drops you into the Prism to set your aperture.">
@@ -2468,13 +2424,6 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
      is drawn before any aggregate data exists. Truth, not a push. -->
 <div class="visor-note" id="visorNote">the aggregate<br>still precipitating</div>
 
-<!-- Placed-moment caption (Photo Z-Probe grammar, 2026-07-19): hover/tap a
-     framed moment on the graph → provenance + signed coordinates. -->
-<div class="moment-caption" id="momentCaption" aria-hidden="true">
-  <div class="mc-text"></div>
-  <div class="mc-meta"></div>
-</div>
-
 <!-- Data layer -->
 <script src="../src/js/prismdb.js"></script>
 <script src="../src/js/prism-sync.js"></script>
@@ -2489,7 +2438,7 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
      off to this instrument: v56 pins, true 3D dots, full orbit. -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <!-- cache-busting query: bump ?v= whenever the module changes (Safari caches hard) -->
-<script src="../src/js/prism-graphmap.js?v=7"></script>
+<script src="../src/js/prism-graphmap.js?v=6"></script>
 
 <script>
 /* ============================================================
@@ -2791,41 +2740,6 @@ buildFramingCloud(ev).forEach((w, i) => {
   evCloudEl.appendChild(span);
 });
 
-// ── Introit photographs (reruled 2026-07-19, evening session) ──
-// A small set — capped at 2 — of the Reading's UNPLACED kept images (the
-// newsroom photo lift's ev.images): the face of the event at the door.
-// BARE (Sailor's ruling): no frame, no attribution — the credit rides the
-// alt text and the Reading's data, never the surface. body.ev-has-photos
-// compacts the beat so the one-screen contract (and the always-visible nav
-// instrument) holds. Held to "lift the big points, don't carnival the
-// cards": the title card stays clean; the photographs sit on the framing
-// beat, above the wall text. Dead URLs self-remove (the wire moves on) —
-// and if every photograph dies, the compact class lifts so the beat
-// breathes at its no-photo rhythm. Baked repo copies are preferred when
-// Publish has fetched them.
-function buildIntroitPhotos(event) {
-  const host = document.getElementById('evPhotos');
-  if (!host || !event || !Array.isArray(event.images)) return;
-  const unplaced = event.images.filter(p => p && p.url && !p.place).slice(0, 2);
-  if (!unplaced.length) return;
-  document.body.classList.add('ev-has-photos');
-  unplaced.forEach(p => {
-    const fig = document.createElement('div');
-    fig.className = 'ev-photo';
-    const img = document.createElement('img');
-    img.loading = 'lazy'; img.alt = p.credit || '';   // provenance in the alt, not on the surface
-    img.onerror = () => {
-      fig.remove();
-      if (!host.children.length) document.body.classList.remove('ev-has-photos');
-    };
-    img.src = (typeof readingImgSrc === 'function') ? readingImgSrc(p) : p.url;
-    fig.appendChild(img);
-    const wash = document.createElement('div'); wash.className = 'ev-photo-wash'; fig.appendChild(wash);
-    host.appendChild(fig);
-  });
-}
-buildIntroitPhotos(ev);
-
 // Splash steps (Sailor 2026-07-11): CARD → FRAMING beat → diatribe. The card
 // is a clean title card; the framing beat carries the wall-text (its develop +
 // keyword stagger fire only when the beat opens, so nothing loads off-screen).
@@ -2833,10 +2747,6 @@ let splashStep = 'card';
 let framingRevealed = false;
 function revealFraming() {
   if (framingRevealed) return; framingRevealed = true;
-  // the introit photographs develop first — the face of the event at the door
-  document.querySelectorAll('#evPhotos .ev-photo').forEach((f, i) => {
-    setTimeout(() => f.classList.add('in'), 180 + i * 240);
-  });
   // develop (blur → focus) the wall text; stagger the keyword cloud in after
   setTimeout(() => evFramingEl.classList.add('develop'), 260);
   setTimeout(() => evCloudEl.querySelectorAll('.ev-kw').forEach(s => s.classList.add('in')), 620);
@@ -3827,11 +3737,9 @@ function enterGraph() {
   graphPad.style.overflow = ''; graphPad.style.display = '';
   gm3dEl.classList.remove('overlay');
   if (gm) { try { gm.clearDots(); gm.clearContrastLine(); gm.clearPin(); gm.clearMemberPins(); } catch (e) {} }
-  try { clearReadingMoments(); } catch (e) {}   // placed moments die with the stage
   // Reset the institutional layer so a reconsider doesn't leave stale pins or a
   // dangling toggle; it rebuilds (hidden) when the next commit settles.
   memberPinsRendered = false; memberPinsShown = true; memberBuildInFlight = false; memberLoadFailed = false;
-  memberPinEntries = {};   // portrait-card refs die with their pins
   if (memberToggle) { memberToggle.hidden = true; memberToggle.classList.remove('is-off', 'is-unavailable'); }
   // Reset the legislation layer the same way (clearDots above already removed
   // the diamonds); it rebuilds when the next commit settles.
@@ -4038,7 +3946,6 @@ function drawContrastLine(dot) {
 function showContrast(dot) {
   if (!userPinData) return;
   contrastDot = dot;             // remembered so live z changes can re-derive Δz
-  try { setPortraitAttention(null); } catch (e) {}   // a voice lock releases any hot card
   aggDots.forEach(d => { if (d.el) d.el.classList.toggle('selected', d === dot); });
   graphInfo.classList.remove('bill-inspect');
   graphInfo.classList.add('comparing');
@@ -4090,7 +3997,6 @@ function showContrastMember(d) {
   if (!userPinData || !d) return;
   contrastDot = null;            // not a voice — skip the voice live-z re-derive
   contrastMember = d;
-  try { setPortraitAttention(d.bioguideId); } catch (e) {}   // the card deepens toward presence
   if (aggDots) aggDots.forEach(x => { if (x.el) x.el.classList.remove('selected'); });
   graphInfo.classList.remove('bill-inspect');
   graphInfo.classList.add('comparing');
@@ -4374,7 +4280,6 @@ function updateCmpFollow(bio) {
 function backToTracking() {
   graphInfo.classList.remove('comparing', 'dock-left', 'bill-inspect');
   contrastMember = null; contrastDot = null;
-  try { setPortraitAttention(null); } catch (e) {}
   if (gm) { try { gm.clearContrastLine(); } catch (e) {} }
   renderTracker();
 }
@@ -4540,182 +4445,6 @@ function placeCoordinateOrbs() {
   });
 }
 
-// ═══════════════════════════════════════════════════════════════════
-// READING PHOTOGRAPHS on the graph — Photo Z-Probe grammar, ruled
-// 2026-07-19 (encoded from test/photo-z-probe.html v8; see
-// Prism_Photo_Z_Probe_Grammar_Ruled_Handoff.md).
-//
-// ev.images entries (the newsroom photo lift's kept set) may carry a
-// placement, authored on the admin surface:
-//   place: { role:'realized'|'frustrated', label? }  → boundary WASH on that
-//     Z ceiling (~0.20 alpha + editorial label). realized = +Z, frustrated =
-//     −Z per the app's zPole() convention; which PHOTO carries which pole is
-//     itself an authored reading (the probe's ⇄ proved the choice matters).
-//   place: { pin:{x,y,z} }  → a placed MOMENT: the wire's photograph as a
-//     framed, ghosted sprite footed by a hairline to its (x,y) on the plane —
-//     a moment belongs to a position, not to the air. x,y normalized 0..1,
-//     z −1..+1 (the factory's addDot frame).
-// Unplaced images remain introit material. One pool, several roles; a single
-// place field keeps the sets disjoint by construction (ruled: no photo
-// appears in two roles).
-// ═══════════════════════════════════════════════════════════════════
-
-// Baked-at-publish resolver: Publish fetches kept images into the repo
-// (data/readings/images/…) because og:image URLs rot and CORS walls are
-// real — two of six probe photos never cleared their outlets. Prefer the
-// baked copy (repo-relative → one level up from v2/); hotlink is the
-// graceful-decay fallback.
-function readingImgSrc(p) {
-  if (p && p.baked) return '../' + p.baked;
-  return (p && p.url) || '';
-}
-
-function applyReadingWashes() {
-  if (!gm || !ev || !Array.isArray(ev.images)) return;
-  const cfg = {};
-  ev.images.forEach(p => {
-    const role = p && p.place && p.place.role;
-    if (role !== 'realized' && role !== 'frustrated') return;
-    const side = (role === 'realized') ? 'positive' : 'negative';
-    if (cfg[side]) return;                        // one wash per ceiling — first wins
-    cfg[side] = { text: (p.place.label || role), photo: readingImgSrc(p), photoAlpha: 0.20 };
-  });
-  if (cfg.positive || cfg.negative) { try { gm.setBoundaryContent(cfg); } catch (e) {} }
-}
-
-// ── Placed moments: framed, footed, resolving on attention ──
-let momentGroup = null, momentSprites = [], momentFocused = null;
-
-// Composite: photo, cream wash toward the palette, thin frame, credit strip —
-// all on canvas so the ghost reads as an OBJECT (gallery), not a raw image
-// dropped in space. Ported from the probe's frameTexture (v8).
-function momentFrameTexture(img, credit) {
-  const cw = 512, ch = 360, cvs = document.createElement('canvas');
-  cvs.width = cw; cvs.height = ch;
-  const ctx = cvs.getContext('2d');
-  ctx.fillStyle = 'rgba(12,11,9,0.92)'; ctx.fillRect(0, 0, cw, ch);
-  if (img) {
-    const iw = img.width, ih = img.height, s = Math.max((cw - 16) / iw, (ch - 52) / ih);
-    const dw = iw * s, dh = ih * s;
-    ctx.save(); ctx.beginPath(); ctx.rect(8, 8, cw - 16, ch - 52); ctx.clip();
-    ctx.drawImage(img, (cw - dw) / 2, 8 + ((ch - 60) - dh) / 2, dw, dh);
-    ctx.fillStyle = 'rgba(233,224,205,0.13)'; ctx.fillRect(8, 8, cw - 16, ch - 52);   // cream wash — gallery, not billboard
-    ctx.restore();
-  } else {
-    ctx.fillStyle = 'rgba(245,240,232,0.06)'; ctx.fillRect(8, 8, cw - 16, ch - 52);
-    ctx.fillStyle = 'rgba(245,240,232,0.35)'; ctx.font = '24px Georgia'; ctx.textAlign = 'center';
-    ctx.fillText('photo unreachable', cw / 2, ch / 2 - 18);
-  }
-  ctx.strokeStyle = 'rgba(245,240,232,0.5)'; ctx.lineWidth = 2; ctx.strokeRect(8, 8, cw - 16, ch - 52);
-  ctx.fillStyle = 'rgba(245,240,232,0.55)'; ctx.font = '19px monospace'; ctx.textAlign = 'center';
-  ctx.fillText(credit || '', cw / 2, ch - 18);
-  const tex = new THREE.CanvasTexture(cvs);
-  tex.encoding = THREE.sRGBEncoding;
-  return tex;
-}
-
-const MOMENT_GHOST_ALPHA = 0.30;   // resting translucency (the probe's ruled default)
-
-function renderReadingMoments() {
-  if (!gm || !ev || !Array.isArray(ev.images) || typeof THREE === 'undefined') return;
-  clearReadingMoments();
-  const placed = ev.images.filter(p => p && p.place && p.place.pin);
-  if (!placed.length) return;
-  momentGroup = new THREE.Group();
-  gm.group.add(momentGroup);
-  const GS = gm.GRAPH_SIZE, ZE = gm.Z_EXTENT;
-  placed.forEach(p => {
-    const pin = p.place.pin;
-    const wx = ((pin.x || 0) - 0.5) * GS, wy = (0.5 - (pin.y || 0)) * GS, wz = (pin.z || 0) * ZE * 0.8;
-    const build = (img) => {
-      if (!momentGroup) return;   // cleared while the image loaded
-      const mat = new THREE.SpriteMaterial({
-        map: momentFrameTexture(img, p.credit), transparent: true,
-        opacity: MOMENT_GHOST_ALPHA, depthWrite: false,
-      });
-      const sp = new THREE.Sprite(mat);
-      sp.scale.set(0.62, 0.435, 1);
-      sp.position.set(wx, wy, wz);
-      sp.userData.moment = p;
-      momentGroup.add(sp);
-      // the foot — a hairline from the moment to its (x,y) on the plane
-      const lineMat = new THREE.LineBasicMaterial({ color: 0xf5f0e8, transparent: true, opacity: 0.16 });
-      const geo = new THREE.BufferGeometry().setFromPoints(
-        [new THREE.Vector3(wx, wy, wz), new THREE.Vector3(wx, wy, 0)]);
-      momentGroup.add(new THREE.Line(geo, lineMat));
-      const foot = new THREE.Mesh(new THREE.CircleGeometry(0.022, 12),
-        new THREE.MeshBasicMaterial({ color: 0xf5f0e8, transparent: true, opacity: 0.3 }));
-      foot.position.set(wx, wy, 0.002);
-      momentGroup.add(foot);
-      momentSprites.push(sp);
-    };
-    const img = new Image();
-    img.crossOrigin = 'anonymous';
-    img.onload = () => build(img);
-    img.onerror = () => build(null);   // CORS wall → framed placeholder; the composition still reads
-    img.src = readingImgSrc(p);
-  });
-  wireMomentAttention();
-}
-
-function clearReadingMoments() {
-  if (momentGroup) {
-    momentGroup.children.slice().forEach(ch => {
-      if (ch.material) { if (ch.material.map) ch.material.map.dispose(); ch.material.dispose(); }
-      if (ch.geometry) ch.geometry.dispose();
-    });
-    if (momentGroup.parent) momentGroup.parent.remove(momentGroup);
-  }
-  momentGroup = null; momentSprites = []; momentFocused = null;
-  const cap = document.getElementById('momentCaption');
-  if (cap) cap.classList.remove('visible');
-}
-
-// Attention: raycast hover/tap on the graph canvas → resolve ONE moment to
-// near-full presence + provenance caption with signed coordinates. Additive
-// listeners on gm.canvas; the factory's own hold-to-inspect is untouched.
-let momentAttentionWired = false;
-function wireMomentAttention() {
-  if (momentAttentionWired || !gm || !gm.canvas) return;
-  momentAttentionWired = true;
-  const ray = new THREE.Raycaster(), ptr = new THREE.Vector2();
-  const pick = (ev2) => {
-    if (!momentSprites.length) return;
-    const r = gm.canvas.getBoundingClientRect();
-    const t = ev2.touches ? ev2.touches[0] : ev2;
-    ptr.x = ((t.clientX - r.left) / r.width) * 2 - 1;
-    ptr.y = -((t.clientY - r.top) / r.height) * 2 + 1;
-    ray.setFromCamera(ptr, gm.camera);
-    const hit = ray.intersectObjects(momentSprites, false)[0];
-    setMomentFocus(hit ? hit.object : null);
-  };
-  gm.canvas.addEventListener('pointermove', pick);
-  gm.canvas.addEventListener('pointerdown', pick);
-}
-
-function setMomentFocus(sp) {
-  if (momentFocused === sp) return;
-  if (momentFocused) {
-    momentFocused.material.opacity = MOMENT_GHOST_ALPHA;
-    if (momentFocused.userData.baseScale) momentFocused.scale.copy(momentFocused.userData.baseScale);
-  }
-  momentFocused = sp;
-  const cap = document.getElementById('momentCaption');
-  if (sp) {
-    if (!sp.userData.baseScale) sp.userData.baseScale = sp.scale.clone();
-    sp.material.opacity = 0.94;
-    sp.scale.copy(sp.userData.baseScale); sp.scale.multiplyScalar(1.38);
-    const m = sp.userData.moment, pin = m.place.pin;
-    if (cap) {
-      cap.querySelector('.mc-text').textContent = m.credit || 'placed moment';
-      cap.querySelector('.mc-meta').textContent =
-        'x ' + Math.round(((pin.x || 0) - 0.5) * 200) + ' · y ' + Math.round((0.5 - (pin.y || 0)) * 200) +
-        ' · z ' + ((pin.z || 0) >= 0 ? '+' : '') + (pin.z || 0).toFixed(2);
-      cap.classList.add('visible');
-    }
-  } else if (cap) cap.classList.remove('visible');
-}
-
 function gmCommit() {
   gmActive = true;
   revealMemberToggle();   // show the legislators control immediately (loading until pins build)
@@ -4744,8 +4473,6 @@ function gmCommit() {
   }, 950);
   try { gm.clearDots(); gm.clearContrastLine(); } catch (e) {}
   try { gm.setBoundaryVisible(true); } catch (e) {}    // z-axis planes on — the realized/frustrated depth bounds
-  applyReadingWashes();                                // the Reading's authored Z-ceiling photographs (2026-07-19)
-  renderReadingMoments();                              // placed moments, footed to their positions
   try { gm.setFocus(0.5, 0.5); } catch (e) {}          // start centered
   // Open at the pad's current rotateY attitude (CSS rotateY and factory orbit
   // yaw share an axis and sign), then the choreography spin takes over.
@@ -4960,31 +4687,6 @@ gm3dEl.addEventListener('wheel', noteGraphActivity, true);
 let memberData = null;
 let memberPinsShown = true;       // institutional layer on by default — it's the point of the phase
 let memberPinsRendered = false;
-// Portrait cards (Photo Z-Probe grammar, ruled 2026-07-19): every pin this
-// layer renders already satisfies the rationing rule — DERIVED/MANUAL
-// placements or follows, never the heuristic roster (538 faces = crowd
-// scene) — so each gets the member's portrait as the pin's holo-card.
-// Entries are kept by bioguideId so attention (hold-to-lock in the compare
-// panel) can deepen the card's breath: idle 0.62±0.07 → hot 0.84±0.10.
-let memberPinEntries = {};        // bioguideId → factory entry (portraitHot lives there)
-// CORS-open portrait source; same URL fetch-members.js now writes as
-// portraitUrl — derived here so pre-regeneration rosters work today.
-// (photoUrl — bioguide.congress.gov — stays DOM-only: no CORS headers,
-// would taint the card's canvas compositing.)
-function memberPortraitUrl(m) {
-  if (m && m.portraitUrl) return m.portraitUrl;
-  return (m && m.bioguideId)
-    ? 'https://unitedstates.github.io/images/congress/225x275/' + m.bioguideId + '.jpg'
-    : null;
-}
-// Attention: exactly one card hot at a time; null clears all. The card holds
-// still — no zoom, no jump — the photograph itself answers with the pulse.
-function setPortraitAttention(bioguideId) {
-  Object.keys(memberPinEntries).forEach(function (id) {
-    const en = memberPinEntries[id];
-    if (en) en.portraitHot = (bioguideId != null && id === bioguideId);
-  });
-}
 let memberBuildInFlight = false;  // re-entrancy guard for renderMemberPins
 let memberLoadFailed = false;     // roster genuinely unavailable → stop the spinner
 
@@ -5130,7 +4832,6 @@ async function renderMemberPins() {
     } catch (e) {}
 
     try { gm.clearMemberPins(); } catch (e) {}
-    memberPinEntries = {};
     // Drop the 548-strong DW-NOMINATE baseline field — it was the noise. Keep
     // only the event-DERIVED members (the discernible, event-specific ones) and
     // the reps the user follows, each as a discrete diamond.
@@ -5149,11 +4850,10 @@ async function renderMemberPins() {
         const p = heuristicPlace(m); x = p.x; y = p.y; z = p.z; method = p.method; confidence = 0.25;
       }
       try {
-        const entry = gm.addMemberPin(x, y, m.party, {
+        gm.addMemberPin(x, y, m.party, {
           baseline: false,                  // discrete diamonds only — no faint baseline field
           normZ: z,
-          radius: derived ? 0.095 : 0.085,  // factory slims to 0.68× when the portrait lands
-          portrait: memberPortraitUrl(m),   // the pin's holo-card (ruled 2026-07-19)
+          radius: derived ? 0.095 : 0.085,
           bioguideId: m.bioguideId,
           name: typeof m.name === 'string' ? m.name : ((m.name && m.name.full) || m.bioguideId),
           chamber: m.chamber,
@@ -5161,7 +4861,6 @@ async function renderMemberPins() {
           confidence: confidence,
           animateIn: true, entranceDelay: n * 55,   // reps cascade in
         });
-        if (entry) memberPinEntries[m.bioguideId] = entry;
         n++;
       } catch (e) { if (n === 0) console.error('[v2] addMemberPin failed:', e); }
     });
@@ -5886,7 +5585,6 @@ if (dtPersonalTrack) dtPersonalTrack.addEventListener('animationiteration', () =
 function showContrastBill(d) {
   if (!userPinData || !d) return;
   contrastDot = null; contrastMember = null;
-  try { setPortraitAttention(null); } catch (e) {}   // a bill lock releases any hot card
   if (aggDots) aggDots.forEach(x => { if (x.el) x.el.classList.remove('selected'); });
   graphInfo.classList.add('comparing', 'bill-inspect');
 
