@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-07-20T04:12:26.181Z · 40 legislative + 7 news (GDELT, 3d)
+// 2026-07-20T20:00:53.263Z · 40 legislative + 8 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1784520690169,
+    "ts": 1784577632223,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.853,
+      "salience": 0.85,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,11 +259,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1784520690169,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.844,
+      "salience": 0.841,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1784520690169,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.815,
+      "salience": 0.812,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1784520690169,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.799,
+      "salience": 0.796,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3256,11 +3256,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1784520690169,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
-      "salience": 0.743,
+      "salience": 0.74,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
       "votes": [
         {
@@ -3530,11 +3530,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1784520690169,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.742,
+      "salience": 0.739,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4932,11 +4932,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1784520690169,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.728,
+      "salience": 0.725,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5203,11 +5203,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1784520690168,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.718,
+      "salience": 0.715,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6605,11 +6605,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1784520690168,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.712,
+      "salience": 0.709,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -8007,11 +8007,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1784520690167,
+    "ts": 1784577632220,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.702,
+      "salience": 0.699,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -9176,11 +9176,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1784520690169,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.665,
+      "salience": 0.662,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -10110,11 +10110,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1041",
     "source": "legislative",
-    "ts": 1784520690168,
+    "ts": 1784577632221,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1041",
-      "salience": 0.655,
+      "salience": 0.652,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1041",
       "votes": [
         {
@@ -11507,11 +11507,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2616",
     "source": "legislative",
-    "ts": 1784520690168,
+    "ts": 1784577632221,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2616",
-      "salience": 0.652,
+      "salience": 0.649,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2616",
       "votes": [
         {
@@ -12901,11 +12901,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1784520690168,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
-      "salience": 0.649,
+      "salience": 0.646,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2913",
       "votes": [
         {
@@ -13833,11 +13833,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1784520690169,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.649,
+      "salience": 0.646,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -14109,11 +14109,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1784520690169,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
-      "salience": 0.646,
+      "salience": 0.643,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8312",
       "votes": [
         {
@@ -15042,11 +15042,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7567",
     "source": "legislative",
-    "ts": 1784520690167,
+    "ts": 1784577632220,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7567",
-      "salience": 0.637,
+      "salience": 0.634,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7567",
       "votes": [
         {
@@ -20699,11 +20699,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1784520690169,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.627,
+      "salience": 0.624,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -21632,11 +21632,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6260",
     "source": "legislative",
-    "ts": 1784520690168,
+    "ts": 1784577632221,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6260",
-      "salience": 0.623,
+      "salience": 0.62,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6260",
       "votes": [
         {
@@ -23034,11 +23034,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8365",
     "source": "legislative",
-    "ts": 1784520690168,
+    "ts": 1784577632221,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8365",
-      "salience": 0.623,
+      "salience": 0.62,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8365",
       "votes": [
         {
@@ -24436,11 +24436,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1346",
     "source": "legislative",
-    "ts": 1784520690168,
+    "ts": 1784577632221,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1346",
-      "salience": 0.606,
+      "salience": 0.603,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1346",
       "votes": [
         {
@@ -25836,11 +25836,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-141",
     "source": "legislative",
-    "ts": 1784520690169,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-141",
-      "salience": 0.588,
+      "salience": 0.585,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/141",
       "votes": [
         {
@@ -26112,11 +26112,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-132",
     "source": "legislative",
-    "ts": 1784520690169,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-132",
-      "salience": 0.569,
+      "salience": 0.567,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/132",
       "votes": [
         {
@@ -26388,11 +26388,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-130",
     "source": "legislative",
-    "ts": 1784520690169,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-130",
-      "salience": 0.561,
+      "salience": 0.558,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/130",
       "votes": [
         {
@@ -26664,11 +26664,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6047",
     "source": "legislative",
-    "ts": 1784520690168,
+    "ts": 1784577632221,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6047",
-      "salience": 0.559,
+      "salience": 0.556,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6047",
       "votes": [
         {
@@ -27589,11 +27589,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6387",
     "source": "legislative",
-    "ts": 1784520690166,
+    "ts": 1784577632220,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6387",
-      "salience": 0.52,
+      "salience": 0.517,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6387",
       "votes": [
         {
@@ -28987,11 +28987,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4690",
     "source": "legislative",
-    "ts": 1784520690166,
+    "ts": 1784577632219,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4690",
-      "salience": 0.517,
+      "salience": 0.514,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4690",
       "votes": [
         {
@@ -30385,11 +30385,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-99",
     "source": "legislative",
-    "ts": 1784520690169,
+    "ts": 1784577632223,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-99",
-      "salience": 0.512,
+      "salience": 0.509,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/99",
       "votes": [
         {
@@ -30659,11 +30659,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1784520690169,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.508,
+      "salience": 0.505,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -32062,11 +32062,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-139",
     "source": "legislative",
-    "ts": 1784520690169,
+    "ts": 1784577632223,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-139",
-      "salience": 0.498,
+      "salience": 0.495,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/139",
       "votes": [
         {
@@ -32337,11 +32337,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5587",
     "source": "legislative",
-    "ts": 1784520690167,
+    "ts": 1784577632220,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5587",
-      "salience": 0.447,
+      "salience": 0.444,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5587",
       "votes": [
         {
@@ -33264,11 +33264,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1784520690169,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.432,
+      "salience": 0.429,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -34185,11 +34185,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1784520690169,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.421,
+      "salience": 0.418,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -35103,11 +35103,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5625",
     "source": "legislative",
-    "ts": 1784520690168,
+    "ts": 1784577632221,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5625",
-      "salience": 0.385,
+      "salience": 0.382,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5625",
       "votes": [
         {
@@ -36038,11 +36038,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1784520690169,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.361,
+      "salience": 0.358,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -36937,11 +36937,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8469",
     "source": "legislative",
-    "ts": 1784520690168,
+    "ts": 1784577632221,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8469",
-      "salience": 0.355,
+      "salience": 0.352,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8469",
       "votes": [
         {
@@ -38339,11 +38339,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4465",
     "source": "legislative",
-    "ts": 1784520690167,
+    "ts": 1784577632221,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4465",
-      "salience": 0.345,
+      "salience": 0.342,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4465",
       "votes": [
         {
@@ -39222,11 +39222,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1784520690168,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.332,
+      "salience": 0.329,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -40156,11 +40156,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2853",
     "source": "legislative",
-    "ts": 1784520690167,
+    "ts": 1784577632221,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2853",
-      "salience": 0.262,
+      "salience": 0.259,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2853",
       "votes": [
         {
@@ -41074,11 +41074,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1784520690168,
+    "ts": 1784577632222,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
-      "salience": 0.258,
+      "salience": 0.255,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/254",
       "votes": [
         {
@@ -42003,59 +42003,250 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_150-baby-born",
     "source": "news",
-    "ts": 1784520746171,
+    "ts": 1784577653249,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.824,
+      "salience": 0.969,
       "articles": [
+        {
+          "title": "JD and Usha Vance welcome a baby boy , the first child born to a sitting VP in more than 150 years",
+          "url": "https://www.pbs.org/newshour/politics/jd-and-usha-vance-welcome-a-baby-boy-the-first-child-born-to-a-sitting-vp-in-more-than-150-years",
+          "domain": "pbs.org",
+          "seendate": "2026-07-20T15:00:00Z",
+          "image": "https://d3i6fh83elv35t.cloudfront.net/static/2026/07/2026-03-18T151749Z_1738891138_RC237KAN73CH_RTRMADP_3_USA-VANCE-2-1024x683.jpg"
+        },
+        {
+          "title": "JD and Usha Vance welcome a baby boy , the first child born to a sitting VP in more than 150 years",
+          "url": "https://www.cleveland19.com/2026/07/19/jd-usha-vance-welcome-baby-boy-first-child-born-sitting-vp-more-than-150-years/",
+          "domain": "cleveland19.com",
+          "seendate": "2026-07-20T14:15:00Z",
+          "image": "https://gray-woio-prod.gtv-cdn.com/resizer/v2/4AA6PYGZA5DG5NEGM7J3HGDMHQ.jpg?auth=6603c9bae2c2cdfbdad86e82bf3b629e811c70362740e200af193ad19ca571b8&smart=true"
+        },
+        {
+          "title": "JD and Usha Vance welcome a baby boy , the first child born to a sitting VP in more than 150 years",
+          "url": "https://www.wpxi.com/news/local/jd-usha-vance-welcome-baby-boy-first-child-born-sitting-vp-more-than-150-years/ZH65YAYKBJFU7GKXCTELUATO6U/",
+          "domain": "wpxi.com",
+          "seendate": "2026-07-20T06:00:00Z",
+          "image": "https://cmg-cmg-tv-10080-prod.cdn.arcpublishing.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-1.images.arcpublishing.com%2Fcmg%2FFGTA5KHMDFAI5N7KOGEFZS26PY.jpg?auth=7601067b92bc1673b5cffe11ed008162a9f8dfaa0f55b4c10f434ba2d8904258&smart=true"
+        },
+        {
+          "title": "JD and Usha Vance welcome a baby boy , the first child born to a sitting VP in more than 150 years",
+          "url": "https://www.fox19.com/2026/07/19/jd-usha-vance-welcome-baby-boy-first-child-born-sitting-vp-more-than-150-years/",
+          "domain": "fox19.com",
+          "seendate": "2026-07-20T06:00:00Z",
+          "image": "https://gray-wxix-prod.gtv-cdn.com/resizer/v2/4AA6PYGZA5DG5NEGM7J3HGDMHQ.jpg?auth=6603c9bae2c2cdfbdad86e82bf3b629e811c70362740e200af193ad19ca571b8&smart=true"
+        },
+        {
+          "title": "JD and Usha Vance welcome a baby boy , first child born to a sitting VP in more than 150 years",
+          "url": "https://www.adn.com/nation-world/2026/07/19/jd-and-usha-vance-welcome-a-baby-boy-first-child-born-to-a-sitting-vp-in-more-than-150-years/",
+          "domain": "adn.com",
+          "seendate": "2026-07-20T05:30:00Z",
+          "image": "https://www.adn.com/resizer/v2/P7D4YCCRHVOO7CBLDAJ2WPUDXE.jpg?smart=true&auth=ef0cc9c7987c98d300eaf0f2de34fb58581dc2ab5af7cc9656ee8731a0bb046b"
+        },
+        {
+          "title": "Vice President JD and Second Lady Usha Vance welcome baby boy , first child born to sitting US VP in more than 150 years",
+          "url": "https://abc7news.com/post/jd-usha-vance-welcome-baby-boy-first-child-born-sitting-us-vice-president-more-150-years/19540199/",
+          "domain": "abc7news.com",
+          "seendate": "2026-07-20T04:30:00Z",
+          "image": "https://cdn.abcotvs.com/dip/images/19540220_AP26148132327737.jpg"
+        },
         {
           "title": "JD and Usha Vance welcome a baby boy , the first child born to a sitting VP in more than 150 years",
           "url": "https://www.kob.com/ap-top-news/jd-and-usha-vance-welcome-a-baby-boy-the-first-child-born-to-a-sitting-vp-in-more-than-150-years/",
           "domain": "kob.com",
-          "seendate": "2026-07-20T02:30:00Z"
+          "seendate": "2026-07-20T02:30:00Z",
+          "image": "https://www.kob.com/wp-content/uploads/apimg/2026/07/Vance_Baby_72483.jpg"
         },
         {
           "title": "JD and Usha Vance welcome a baby boy , the first child born to a sitting VP in more than 150 years",
           "url": "https://www.channel3000.com/news/jd-and-usha-vance-welcome-a-baby-boy-the-first-child-born-to-a-sitting/article_8139b36d-e51d-5eaa-9dbe-d16b495432ff.html",
           "domain": "channel3000.com",
-          "seendate": "2026-07-20T02:30:00Z"
+          "seendate": "2026-07-20T02:30:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/channel3000.com/content/tncms/assets/v3/editorial/b/ca/bca70845-757c-4ec3-b726-9e6c79eda46a/6a5d54a33d496.image.jpg?crop=1024%2C538%2C0%2C72"
         },
         {
           "title": "JD and Usha Vance welcome a baby boy , the first child born to a sitting VP in more than 150 years",
           "url": "https://www.wral.com/news/ap/b488e-jd-and-usha-vance-welcome-a-baby-boy-the-first-child-born-to-a-sitting-vp-in-more-than-150-years/",
           "domain": "wral.com",
-          "seendate": "2026-07-20T02:00:00Z"
+          "seendate": "2026-07-20T02:00:00Z",
+          "image": "https://images.wral.com/20e8a77e-9075-5872-838f-8524a5c1a46c"
         },
         {
           "title": "JD and Usha Vance welcome a baby boy , the first child born to a sitting VP in more than 150 years - Las Vegas Sun News",
           "url": "https://lasvegassun.com/news/2026/jul/19/jd-and-usha-vance-welcome-a-baby-boy-the-first-chi/",
           "domain": "lasvegassun.com",
-          "seendate": "2026-07-20T02:00:00Z"
+          "seendate": "2026-07-20T02:00:00Z",
+          "image": null
         },
         {
           "title": "JD and Usha Vance welcome a baby boy , the first child born to a sitting VP in more than 150 years",
           "url": "https://www.news-gazette.com/news/nation-world/jd-and-usha-vance-welcome-a-baby-boy-the-first-child-born-to-a-sitting/article_b65e82e7-80ed-5655-b84f-fe5b1c974cbc.html",
           "domain": "news-gazette.com",
-          "seendate": "2026-07-20T01:30:00Z"
+          "seendate": "2026-07-20T01:30:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/news-gazette.com/content/tncms/custom/image/3d3bfbd4-3cf5-11ec-9461-574a9d514a20.jpg"
         },
         {
           "title": "Vice President JD and Second Lady Usha Vance welcome baby boy , first child born to sitting US VP in more than 150 years",
           "url": "https://abc7chicago.com/post/jd-usha-vance-welcome-baby-boy-first-child-born-sitting-us-vice-president-more-150-years/19540199/",
           "domain": "abc7chicago.com",
-          "seendate": "2026-07-19T23:30:00Z"
-        },
-        {
-          "title": "JD and Usha Vance welcome a baby boy , the first child born to a sitting VP in more than 150 years",
-          "url": "https://www.wlwt.com/article/jd-and-usha-vance-welcome-a-baby-boy/73180830",
-          "domain": "wlwt.com",
-          "seendate": "2026-07-19T23:00:00Z"
+          "seendate": "2026-07-19T23:30:00Z",
+          "image": "https://cdn.abcotvs.com/dip/images/19540220_AP26148132327737.jpg"
         }
       ]
     },
-    "title": "JD and Usha Vance welcome a baby boy , the first child born to a sitting VP in more than 150 years",
-    "summary": "2026-07-20 kob.com: JD and Usha Vance welcome a baby boy , the first child born to a sitting VP in more than 150 years\n2026-07-20 channel3000.com: JD and Usha Vance welcome a baby boy , the first child born to a sitting VP in more than 150 years\n2026-07-20 wral.com: JD and Usha Vance welcome a baby boy , the first child born to a sitting VP in more than 150 years\n2026-07-20 lasvegassun.com: JD and Usha Vance welcome a baby boy , the first child born to a sitting VP in more than 150 years - Las Vegas Sun News\n2026-07-20 news-gazette.com: JD and Usha Vance welcome a baby boy , the first child born to a sitting VP in more than 150 years\n2026-07-19 abc7chicago.com: Vice President JD and Second Lady Usha Vance welcome baby boy , first child born to sitting US VP in more than 150 years",
+    "title": "JD and Usha Vance welcome a baby boy , first child born to a sitting VP in more than 150 years",
+    "summary": "2026-07-20 pbs.org: JD and Usha Vance welcome a baby boy , the first child born to a sitting VP in more than 150 years\n2026-07-20 cleveland19.com: JD and Usha Vance welcome a baby boy , the first child born to a sitting VP in more than 150 years\n2026-07-20 wpxi.com: JD and Usha Vance welcome a baby boy , the first child born to a sitting VP in more than 150 years\n2026-07-20 fox19.com: JD and Usha Vance welcome a baby boy , the first child born to a sitting VP in more than 150 years\n2026-07-20 adn.com: JD and Usha Vance welcome a baby boy , first child born to a sitting VP in more than 150 years\n2026-07-20 abc7news.com: Vice President JD and Second Lady Usha Vance welcome baby boy , first child born to sitting US VP in more than 150 years",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_attacks-campaign-ossoff",
+    "source": "news",
+    "ts": 1784577653250,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.876,
+      "articles": [
+        {
+          "title": "Ossoff fuels Senate reelection campaign with attacks on Trump",
+          "url": "https://www.wrdw.com/2026/07/20/ossoff-fuels-senate-reelection-campaign-with-attacks-trump/",
+          "domain": "wrdw.com",
+          "seendate": "2026-07-20T17:45:00Z",
+          "image": "https://gray-wrdw-prod.gtv-cdn.com/resizer/v2/VCDK6V7NDZHFRDE7NHZK3BPIJQ.jpg?auth=57e0821af4d93c8268d998be6b585437dd4a9c456b68da1917ca744cd0ac2221&smart=true"
+        },
+        {
+          "title": "Sen . Ossoff fuels reelection campaign with attacks on Trump | News , Sports , Jobs",
+          "url": "https://www.mauinews.com/wire/?category=5186&ID=396412",
+          "domain": "mauinews.com",
+          "seendate": "2026-07-20T08:30:00Z",
+          "image": "https://s3.amazonaws.com/ogden_images/www.mauinews.com/images/2018/02/20104449/fb.jpg"
+        },
+        {
+          "title": "Sen . Ossoff fuels reelection campaign with attacks on Trump",
+          "url": "https://www.pilotonline.com/2026/07/18/ossoff-reelection-campaign-attacks-trump/",
+          "domain": "pilotonline.com",
+          "seendate": "2026-07-18T22:00:00Z",
+          "image": "https://www.pilotonline.com/wp-content/uploads/2026/07/Senate_DNI_Clayton_7_86_-1.jpg"
+        },
+        {
+          "title": "Sen . Ossoff fuels reelection campaign with attacks on Trump",
+          "url": "https://www.bangordailynews.com/2026/07/18/nation/sen-ossoff-fuels-reelection-campaign-with-attacks-on-trump/",
+          "domain": "bangordailynews.com",
+          "seendate": "2026-07-18T17:15:00Z",
+          "image": "https://i0.wp.com/bdn-data.s3.amazonaws.com/uploads/2026/07/preview-1068.jpg?fit=1024%2C682&ssl=1"
+        },
+        {
+          "title": "Georgia Sen . Jon Ossoff attacks Trump amid reelection campaign",
+          "url": "https://www.chicagotribune.com/2026/07/18/georgia-jon-ossoff-reelection-campaign/",
+          "domain": "chicagotribune.com",
+          "seendate": "2026-07-18T16:45:00Z",
+          "image": "https://www.chicagotribune.com/wp-content/uploads/2026/07/Senate_DNI_Clayton_7_86_-1.jpg"
+        },
+        {
+          "title": "Sen . Ossoff fuels reelection campaign with attacks on Trump",
+          "url": "https://www.clickondetroit.com/news/politics/2026/07/18/sen-ossoff-fuels-reelection-campaign-with-attacks-on-trump/",
+          "domain": "clickondetroit.com",
+          "seendate": "2026-07-18T16:00:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/SYDNIUNHIVESHAWK655HFMGT3E.jpg?_a=DATAg1kSZAA0"
+        },
+        {
+          "title": "Sen . Ossoff fuels reelection campaign with attacks on Trump",
+          "url": "https://www.click2houston.com/news/politics/2026/07/18/sen-ossoff-fuels-reelection-campaign-with-attacks-on-trump/",
+          "domain": "click2houston.com",
+          "seendate": "2026-07-18T16:00:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/SYDNIUNHIVESHAWK655HFMGT3E.jpg?_a=DATAg1kSZAA0"
+        },
+        {
+          "title": "Sen . Ossoff fuels reelection campaign with attacks on Trump",
+          "url": "https://www.news4jax.com/news/politics/2026/07/18/sen-ossoff-fuels-reelection-campaign-with-attacks-on-trump/",
+          "domain": "news4jax.com",
+          "seendate": "2026-07-18T15:30:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/SYDNIUNHIVESHAWK655HFMGT3E.jpg?_a=DATAg1kSZAA0"
+        }
+      ]
+    },
+    "title": "Sen . Ossoff fuels reelection campaign with attacks on Trump",
+    "summary": "2026-07-20 wrdw.com: Ossoff fuels Senate reelection campaign with attacks on Trump\n2026-07-20 mauinews.com: Sen . Ossoff fuels reelection campaign with attacks on Trump | News , Sports , Jobs\n2026-07-18 pilotonline.com: Sen . Ossoff fuels reelection campaign with attacks on Trump\n2026-07-18 bangordailynews.com: Sen . Ossoff fuels reelection campaign with attacks on Trump\n2026-07-18 chicagotribune.com: Georgia Sen . Jon Ossoff attacks Trump amid reelection campaign\n2026-07-18 clickondetroit.com: Sen . Ossoff fuels reelection campaign with attacks on Trump",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_begins-draft-history",
+    "source": "news",
+    "ts": 1784577653248,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.785,
+      "articles": [
+        {
+          "title": "Today in History : July 20 , World War I draft lottery begins",
+          "url": "https://www.citizensvoice.com/2026/07/20/today-in-history-july-20-world-war-i-draft-lottery-begins/",
+          "domain": "citizensvoice.com",
+          "seendate": "2026-07-20T12:00:00Z",
+          "image": "https://www.citizensvoice.com/wp-content/uploads/2026/07/AP171029122.jpg"
+        },
+        {
+          "title": "Today in History : July 20 , World War I draft lottery begins",
+          "url": "https://www.standardspeaker.com/2026/07/20/today-in-history-july-20-world-war-i-draft-lottery-begins/",
+          "domain": "standardspeaker.com",
+          "seendate": "2026-07-20T12:00:00Z",
+          "image": "https://www.standardspeaker.com/wp-content/uploads/2026/07/AP171029122.jpg"
+        },
+        {
+          "title": "Today in History : July 20 , World War I draft lottery begins",
+          "url": "https://www.thetimes-tribune.com/2026/07/20/today-in-history-july-20-world-war-i-draft-lottery-begins/",
+          "domain": "thetimes-tribune.com",
+          "seendate": "2026-07-20T11:00:00Z",
+          "image": "https://www.thetimes-tribune.com/wp-content/uploads/2026/07/AP171029122.jpg"
+        },
+        {
+          "title": "Today in History : July 20 , World War I draft lottery begins",
+          "url": "https://www.record-bee.com/2026/07/20/today-in-history-july-20-world-war-i-draft-lottery-begins/",
+          "domain": "record-bee.com",
+          "seendate": "2026-07-20T10:30:00Z",
+          "image": "https://www.record-bee.com/wp-content/uploads/2026/07/AP171029122.jpg"
+        },
+        {
+          "title": "Today in History : July 20 , World War I draft lottery begins",
+          "url": "https://www.eptrail.com/2026/07/20/today-in-history-july-20-world-war-i-draft-lottery-begins/",
+          "domain": "eptrail.com",
+          "seendate": "2026-07-20T09:30:00Z",
+          "image": "https://www.eptrail.com/wp-content/uploads/2026/07/AP171029122.jpg"
+        },
+        {
+          "title": "Today in History : July 20 , World War I draft lottery begins",
+          "url": "https://www.advocate-news.com/2026/07/20/today-in-history-july-20-world-war-i-draft-lottery-begins/",
+          "domain": "advocate-news.com",
+          "seendate": "2026-07-20T09:00:00Z",
+          "image": "https://www.advocate-news.com/wp-content/uploads/2026/07/AP171029122.jpg"
+        },
+        {
+          "title": "Today in History : July 20 , World War I draft lottery begins",
+          "url": "https://www.bostonherald.com/2026/07/20/today-in-history-july-20-world-war-i-draft-lottery-begins/",
+          "domain": "bostonherald.com",
+          "seendate": "2026-07-20T08:30:00Z",
+          "image": "https://www.bostonherald.com/wp-content/uploads/2026/07/AP171029122.jpg"
+        }
+      ]
+    },
+    "title": "Today in History : July 20 , World War I draft lottery begins",
+    "summary": "2026-07-20 citizensvoice.com: Today in History : July 20 , World War I draft lottery begins\n2026-07-20 standardspeaker.com: Today in History : July 20 , World War I draft lottery begins\n2026-07-20 thetimes-tribune.com: Today in History : July 20 , World War I draft lottery begins\n2026-07-20 record-bee.com: Today in History : July 20 , World War I draft lottery begins\n2026-07-20 eptrail.com: Today in History : July 20 , World War I draft lottery begins\n2026-07-20 advocate-news.com: Today in History : July 20 , World War I draft lottery begins",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -42067,84 +42258,96 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_darline-full-graham",
     "source": "news",
-    "ts": 1784520746171,
+    "ts": 1784577653250,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.757,
+      "salience": 0.658,
       "articles": [
         {
           "title": "Trump urges Darline Graham to run for full Senate term as funeral scheduled for Lindsey Graham",
           "url": "https://www.timesfreepress.com/news/2026/jul/18/trump-urges-darline-graham-to-run-for-full-senate-term-as-funeral-scheduled-for-lindsey-graham/",
           "domain": "timesfreepress.com",
-          "seendate": "2026-07-18T13:15:00Z"
+          "seendate": "2026-07-18T13:15:00Z",
+          "image": "https://wehco.media.clients.ellingtoncms.com/img/photos/2026/07/18/AP26195713667916_t1200.jpg?57a0c2296240c280e9492005c3cad63e7cbe80f4"
         },
         {
           "title": "Trump urges Darline Graham to run for full Senate term",
           "url": "https://www.wistv.com/2026/07/17/trump-urges-darline-graham-run-full-senate-term-funeral-scheduled-lindsey-graham/",
           "domain": "wistv.com",
-          "seendate": "2026-07-18T00:15:00Z"
+          "seendate": "2026-07-18T00:15:00Z",
+          "image": "https://gray-wistv-prod.gtv-cdn.com/resizer/v2/45MVRKDHLBAT5GLQUSUY2J44HA.jpg?auth=9947b810a5287dacce0b92803f09917fe0a7e9d6863e1bb62efa3146ff00a4e7&smart=true"
         },
         {
           "title": "Trump urges Darline Graham to run for full Senate term as funeral scheduled for Lindsey Graham - Boston News , Weather , Sports",
           "url": "https://whdh.com/news/trump-urges-darline-graham-to-run-for-full-senate-term-as-funeral-scheduled-for-lindsey-graham/",
           "domain": "whdh.com",
-          "seendate": "2026-07-18T00:15:00Z"
+          "seendate": "2026-07-18T00:15:00Z",
+          "image": null
         },
         {
           "title": "Trump urges Darline Graham to run for full Senate term",
           "url": "https://www.kcci.com/article/trump-urges-darline-graham-run-full-senate-term/73172753",
           "domain": "kcci.com",
-          "seendate": "2026-07-18T00:15:00Z"
+          "seendate": "2026-07-18T00:15:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/06e552c0-aa82-421d-94df-38a20e07bbf9.jpg?crop=1.00xw:0.846xh;0,0.0986xh"
         },
         {
           "title": "Trump urges Darline Graham to run for full Senate term",
           "url": "https://www.wmbfnews.com/2026/07/17/trump-urges-darline-graham-run-full-senate-term-funeral-scheduled-lindsey-graham-2/",
           "domain": "wmbfnews.com",
-          "seendate": "2026-07-17T23:15:00Z"
+          "seendate": "2026-07-17T23:15:00Z",
+          "image": "https://gray-wmbf-prod.gtv-cdn.com/resizer/v2/45MVRKDHLBAT5GLQUSUY2J44HA.jpg?auth=9947b810a5287dacce0b92803f09917fe0a7e9d6863e1bb62efa3146ff00a4e7&smart=true"
         },
         {
           "title": "Trump urges Darline Graham to run for full Senate term",
           "url": "https://www.wrdw.com/2026/07/17/trump-urges-darline-graham-run-full-senate-term-funeral-scheduled-lindsey-graham/",
           "domain": "wrdw.com",
-          "seendate": "2026-07-17T23:15:00Z"
+          "seendate": "2026-07-17T23:15:00Z",
+          "image": "https://gray-wrdw-prod.gtv-cdn.com/resizer/v2/45MVRKDHLBAT5GLQUSUY2J44HA.jpg?auth=9947b810a5287dacce0b92803f09917fe0a7e9d6863e1bb62efa3146ff00a4e7&smart=true"
+        },
+        {
+          "title": "Trump urges Darline Graham to run for full Senate term",
+          "url": "https://www.wmtw.com/article/trump-urges-darline-graham-run-full-senate-term/73172753",
+          "domain": "wmtw.com",
+          "seendate": "2026-07-17T23:15:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/06e552c0-aa82-421d-94df-38a20e07bbf9.jpg?crop=1.00xw:0.846xh;0,0.0986xh"
         },
         {
           "title": "Trump urges Darline Graham to run for full Senate term as funeral scheduled for Lindsey Graham",
           "url": "https://www.azfamily.com/2026/07/17/trump-urges-darline-graham-run-full-senate-term-funeral-scheduled-lindsey-graham/",
           "domain": "azfamily.com",
-          "seendate": "2026-07-17T21:15:00Z"
+          "seendate": "2026-07-17T21:15:00Z",
+          "image": "https://gray-kpho-prod.gtv-cdn.com/resizer/v2/45MVRKDHLBAT5GLQUSUY2J44HA.jpg?auth=9947b810a5287dacce0b92803f09917fe0a7e9d6863e1bb62efa3146ff00a4e7&smart=true"
         },
         {
           "title": "Trump urges Darline Graham to run for full Senate term as funeral scheduled for Lindsey Graham",
           "url": "https://www.ksat.com/news/politics/2026/07/17/darline-graham-weighs-running-for-full-senate-term-as-funeral-scheduled-for-lindsey-graham/",
           "domain": "ksat.com",
-          "seendate": "2026-07-17T21:15:00Z"
+          "seendate": "2026-07-17T21:15:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/MLBHDNIRJVGDXDXD2FTXQET734.jpg?_a=DATAg1kSZAA0"
         },
         {
           "title": "Trump urges Darline Graham to run for full Senate term as funeral scheduled for Lindsey Graham",
           "url": "https://www.durangoherald.com/articles/associated-press/darline-graham-weighs-running-for-full-senate-term-as-funeral-scheduled-for-lindsey-graham/",
           "domain": "durangoherald.com",
-          "seendate": "2026-07-17T21:15:00Z"
+          "seendate": "2026-07-17T21:15:00Z",
+          "image": "https://www.durangoherald.com/wp-content/uploads/2026/07/b50a61f3-cbd9-559d-88de-f7596d3494f0.jpg"
         },
         {
           "title": "Darline Graham weighs running for full Senate term as funeral scheduled for Lindsey Graham",
           "url": "https://www.foxcarolina.com/2026/07/17/darline-graham-weighs-running-full-senate-term-funeral-scheduled-lindsey-graham/",
           "domain": "foxcarolina.com",
-          "seendate": "2026-07-17T21:00:00Z"
+          "seendate": "2026-07-17T21:00:00Z",
+          "image": "https://gray-whns-prod.gtv-cdn.com/resizer/v2/G2VFQESS5JDJPNGRBJ3JA5VROY.png?auth=0398657c9a6aa24d54fbba937f31613e245ffae9b837c5abb670d3a620bedc7d&smart=true"
         },
         {
           "title": "Trump urges Darline Graham to run for full Senate term as funeral scheduled for Lindsey Graham",
           "url": "https://www.wbtv.com/2026/07/17/trump-urges-darline-graham-run-full-senate-term-funeral-scheduled-lindsey-graham/",
           "domain": "wbtv.com",
-          "seendate": "2026-07-17T20:45:00Z"
-        },
-        {
-          "title": "Trump urges Darline Graham to run for full Senate term",
-          "url": "https://www.wtae.com/article/trump-urges-darline-graham-run-full-senate-term/73172753",
-          "domain": "wtae.com",
-          "seendate": "2026-07-17T20:45:00Z"
+          "seendate": "2026-07-17T20:45:00Z",
+          "image": "https://gray-wbtv-prod.gtv-cdn.com/resizer/v2/45MVRKDHLBAT5GLQUSUY2J44HA.jpg?auth=9947b810a5287dacce0b92803f09917fe0a7e9d6863e1bb62efa3146ff00a4e7&smart=true"
         }
       ]
     },
@@ -42161,35 +42364,45 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_child-fourth-usha",
     "source": "news",
-    "ts": 1784520746171,
+    "ts": 1784577653249,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.604,
+      "salience": 0.646,
       "articles": [
+        {
+          "title": "Fourth child born to JD and Usha Vance",
+          "url": "https://www.eastbaytimes.com/2026/07/20/jd-and-usha-vance-baby/",
+          "domain": "eastbaytimes.com",
+          "seendate": "2026-07-20T16:15:00Z",
+          "image": "https://www.eastbaytimes.com/wp-content/uploads/2026/07/Vance_Baby_72483-1-1.jpg"
+        },
         {
           "title": "JD Vance welcomes fourth child with Usha Vance",
           "url": "https://www.wbaltv.com/article/jd-vance-usha-vance-fourth-child-baby-alec-neel/73180813",
           "domain": "wbaltv.com",
-          "seendate": "2026-07-20T02:30:00Z"
+          "seendate": "2026-07-20T02:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/60c47c9f-6a43-4620-acc8-6858266b0049.jpg?crop=1.00xw:0.846xh;0,0.0793xh"
         },
         {
           "title": "JD Vance welcomes fourth child with Usha Vance",
           "url": "https://www.wgal.com/article/jd-vance-usha-vance-fourth-child-baby-alec-neel/73180813",
           "domain": "wgal.com",
-          "seendate": "2026-07-20T01:30:00Z"
+          "seendate": "2026-07-20T01:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/60c47c9f-6a43-4620-acc8-6858266b0049.jpg?crop=1.00xw:0.846xh;0,0.0793xh"
         },
         {
           "title": "JD Vance welcomes fourth child with Usha Vance",
           "url": "https://www.wlwt.com/article/jd-vance-usha-vance-fourth-child-baby-alec-neel/73180813",
           "domain": "wlwt.com",
-          "seendate": "2026-07-19T23:00:00Z"
+          "seendate": "2026-07-19T23:00:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/8cff5d99-8717-46ee-bffd-65cc86f02b26.jpg"
         }
       ]
     },
     "title": "JD Vance welcomes fourth child with Usha Vance",
-    "summary": "2026-07-20 wbaltv.com: JD Vance welcomes fourth child with Usha Vance\n2026-07-20 wgal.com: JD Vance welcomes fourth child with Usha Vance\n2026-07-19 wlwt.com: JD Vance welcomes fourth child with Usha Vance",
+    "summary": "2026-07-20 eastbaytimes.com: Fourth child born to JD and Usha Vance\n2026-07-20 wbaltv.com: JD Vance welcomes fourth child with Usha Vance\n2026-07-20 wgal.com: JD Vance welcomes fourth child with Usha Vance\n2026-07-19 wlwt.com: JD Vance welcomes fourth child with Usha Vance",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -42199,242 +42412,126 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_delivers-election-president",
+    "cid": "cand_news_baby-boy-usha",
     "source": "news",
-    "ts": 1784520746171,
+    "ts": 1784577653249,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.566,
+      "salience": 0.596,
       "articles": [
         {
-          "title": "President Trump Delivers Primetime Speech On Election Security",
-          "url": "https://wham1180.iheart.com/content/2026-07-16-president-trump-delivers-primetime-speech-on-election-security/",
-          "domain": "wham1180.iheart.com",
-          "seendate": "2026-07-17T06:45:00Z"
+          "title": "Vice President JD Vance and his wife , Usha , welcome a baby boy",
+          "url": "https://www.abc15.com/politics/jd-and-usha-vance-welcome-a-baby-boy-the-first-child-born-to-a-sitting-vp-in-more-than-150-years",
+          "domain": "abc15.com",
+          "seendate": "2026-07-20T17:00:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/96/8b/778c71f3449e82a013b174b3542d/ap26171734694783.jpg"
         },
         {
-          "title": "President Trump Delivers Primetime Speech On Election Security",
-          "url": "https://twincitiesnewstalk.iheart.com/content/2026-07-16-president-trump-delivers-primetime-speech-on-election-security/",
-          "domain": "twincitiesnewstalk.iheart.com",
-          "seendate": "2026-07-17T06:45:00Z"
-        },
-        {
-          "title": "President Trump Delivers Primetime Speech On Election Security",
-          "url": "https://newsradio1470.iheart.com/content/2026-07-16-president-trump-delivers-primetime-speech-on-election-security/",
-          "domain": "newsradio1470.iheart.com",
-          "seendate": "2026-07-17T06:45:00Z"
-        },
-        {
-          "title": "President Trump Delivers Primetime Speech On Election Security",
-          "url": "https://powertalk967.iheart.com/content/2026-07-16-president-trump-delivers-primetime-speech-on-election-security/",
-          "domain": "powertalk967.iheart.com",
-          "seendate": "2026-07-17T06:30:00Z"
-        },
-        {
-          "title": "President Trump Delivers Primetime Speech On Election Security",
-          "url": "https://koacolorado.iheart.com/content/2026-07-16-president-trump-delivers-primetime-speech-on-election-security/",
-          "domain": "koacolorado.iheart.com",
-          "seendate": "2026-07-17T06:30:00Z"
-        },
-        {
-          "title": "President Trump Delivers Primetime Speech On Election Security",
-          "url": "https://talk1200boston.iheart.com/content/2026-07-16-president-trump-delivers-primetime-speech-on-election-security/",
-          "domain": "talk1200boston.iheart.com",
-          "seendate": "2026-07-17T06:30:00Z"
-        },
-        {
-          "title": "President Trump Delivers Primetime Speech On Election Security",
-          "url": "https://kfab.iheart.com/content/2026-07-16-president-trump-delivers-primetime-speech-on-election-security/",
-          "domain": "kfab.iheart.com",
-          "seendate": "2026-07-17T06:15:00Z"
-        },
-        {
-          "title": "President Trump Delivers Primetime Speech On Election Security",
-          "url": "https://whp580.iheart.com/content/2026-07-16-president-trump-delivers-primetime-speech-on-election-security/",
-          "domain": "whp580.iheart.com",
-          "seendate": "2026-07-17T06:15:00Z"
-        },
-        {
-          "title": "President Trump Delivers Primetime Speech On Election Security",
-          "url": "https://klvi.iheart.com/content/2026-07-16-president-trump-delivers-primetime-speech-on-election-security/",
-          "domain": "klvi.iheart.com",
-          "seendate": "2026-07-17T06:15:00Z"
-        },
-        {
-          "title": "President Trump Delivers Primetime Speech On Election Security",
-          "url": "https://wtag.iheart.com/content/2026-07-16-president-trump-delivers-primetime-speech-on-election-security/",
-          "domain": "wtag.iheart.com",
-          "seendate": "2026-07-17T06:15:00Z"
-        },
-        {
-          "title": "President Trump Delivers Primetime Speech On Election Security",
-          "url": "https://wvoc.iheart.com/content/2026-07-16-president-trump-delivers-primetime-speech-on-election-security/",
-          "domain": "wvoc.iheart.com",
-          "seendate": "2026-07-17T06:15:00Z"
-        },
-        {
-          "title": "President Trump Delivers Primetime Speech On Election Security",
-          "url": "https://710wor.iheart.com/content/2026-07-16-president-trump-delivers-primetime-speech-on-election-security/",
-          "domain": "710wor.iheart.com",
-          "seendate": "2026-07-17T06:15:00Z"
-        }
-      ]
-    },
-    "title": "President Trump Delivers Primetime Speech On Election Security",
-    "summary": "2026-07-17 wham1180.iheart.com: President Trump Delivers Primetime Speech On Election Security\n2026-07-17 twincitiesnewstalk.iheart.com: President Trump Delivers Primetime Speech On Election Security\n2026-07-17 newsradio1470.iheart.com: President Trump Delivers Primetime Speech On Election Security\n2026-07-17 powertalk967.iheart.com: President Trump Delivers Primetime Speech On Election Security\n2026-07-17 koacolorado.iheart.com: President Trump Delivers Primetime Speech On Election Security\n2026-07-17 talk1200boston.iheart.com: President Trump Delivers Primetime Speech On Election Security",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "held",
-    "mts": 1784513458764
-  },
-  {
-    "cid": "cand_news_calls-democratic-impeachment",
-    "source": "news",
-    "ts": 1784520746172,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.418,
-      "articles": [
-        {
-          "title": "Democratic senator calls for Trump impeachment after primetime speech",
-          "url": "https://wcti12.com/news/nation-world/democratic-senator-ed-markey-calls-for-president-trumps-impeachment-after-primetime-speech-elections",
-          "domain": "wcti12.com",
-          "seendate": "2026-07-17T18:15:00Z"
-        },
-        {
-          "title": "Democratic senator calls for Trump impeachment after primetime speech",
-          "url": "https://komonews.com/news/nation-world/democratic-senator-ed-markey-calls-for-president-trumps-impeachment-after-primetime-speech-elections",
-          "domain": "komonews.com",
-          "seendate": "2026-07-17T17:15:00Z"
-        },
-        {
-          "title": "Democratic senator calls for Trump impeachment after primetime speech",
-          "url": "https://katu.com/news/nation-world/democratic-senator-ed-markey-calls-for-president-trumps-impeachment-after-primetime-speech-elections",
-          "domain": "katu.com",
-          "seendate": "2026-07-17T17:15:00Z"
-        },
-        {
-          "title": "Democratic senator calls for Trump impeachment after primetime speech",
-          "url": "https://wwmt.com/news/nation-world/democratic-senator-ed-markey-calls-for-president-trumps-impeachment-after-primetime-speech-elections",
-          "domain": "wwmt.com",
-          "seendate": "2026-07-17T17:15:00Z"
-        },
-        {
-          "title": "Democratic senator calls for Trump impeachment after primetime speech",
-          "url": "https://turnto10.com/news/nation-world/democratic-senator-ed-markey-calls-for-president-trumps-impeachment-after-primetime-speech-elections",
-          "domain": "turnto10.com",
-          "seendate": "2026-07-17T17:00:00Z"
-        },
-        {
-          "title": "Democratic senator calls for Trump impeachment after primetime speech",
-          "url": "https://kfdm.com/news/nation-world/democratic-senator-ed-markey-calls-for-president-trumps-impeachment-after-primetime-speech-elections",
-          "domain": "kfdm.com",
-          "seendate": "2026-07-17T16:45:00Z"
-        }
-      ]
-    },
-    "title": "Democratic senator calls for Trump impeachment after primetime speech",
-    "summary": "2026-07-17 wcti12.com: Democratic senator calls for Trump impeachment after primetime speech\n2026-07-17 komonews.com: Democratic senator calls for Trump impeachment after primetime speech\n2026-07-17 katu.com: Democratic senator calls for Trump impeachment after primetime speech\n2026-07-17 wwmt.com: Democratic senator calls for Trump impeachment after primetime speech\n2026-07-17 turnto10.com: Democratic senator calls for Trump impeachment after primetime speech\n2026-07-17 kfdm.com: Democratic senator calls for Trump impeachment after primetime speech",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_doesnt-evidence-illegal",
-    "source": "news",
-    "ts": 1784520746172,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.236,
-      "articles": [
-        {
-          "title": "In primetime speech , Trump doesnt provide evidence for illegal voting",
-          "url": "https://knpr.org/npr/2026-07-16/in-primetime-speech-trump-doesnt-provide-evidence-for-illegal-voting",
-          "domain": "knpr.org",
-          "seendate": "2026-07-17T06:45:00Z"
-        },
-        {
-          "title": "In primetime speech , Trump doesnt provide evidence for illegal voting",
-          "url": "https://www.nhpr.org/politics/2026-07-16/in-primetime-speech-trump-doesnt-provide-evidence-for-illegal-voting",
-          "domain": "nhpr.org",
-          "seendate": "2026-07-17T05:30:00Z"
-        },
-        {
-          "title": "In primetime speech , Trump doesnt provide evidence for illegal voting",
-          "url": "https://www.ideastream.org/npr-news/2026-07-16/in-primetime-speech-trump-doesnt-provide-evidence-for-illegal-voting",
-          "domain": "ideastream.org",
-          "seendate": "2026-07-17T05:15:00Z"
-        },
-        {
-          "title": "In primetime speech , Trump doesnt provide evidence for illegal voting",
-          "url": "https://www.kalw.org/npr-news/2026-07-16/in-primetime-speech-trump-doesnt-provide-evidence-for-illegal-voting",
-          "domain": "kalw.org",
-          "seendate": "2026-07-17T05:15:00Z"
-        }
-      ]
-    },
-    "title": "In primetime speech , Trump doesnt provide evidence for illegal voting",
-    "summary": "2026-07-17 knpr.org: In primetime speech , Trump doesnt provide evidence for illegal voting\n2026-07-17 nhpr.org: In primetime speech , Trump doesnt provide evidence for illegal voting\n2026-07-17 ideastream.org: In primetime speech , Trump doesnt provide evidence for illegal voting\n2026-07-17 kalw.org: In primetime speech , Trump doesnt provide evidence for illegal voting",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_broad-claims-documents",
-    "source": "news",
-    "ts": 1784520746172,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.233,
-      "articles": [
-        {
-          "title": "Trump claims new documents show broad vulnerabilities in US election security",
-          "url": "https://www.wcpo.com/politics/the-president/live-coverage-president-donald-trump-addresses-the-nation",
+          "title": "Vice President JD Vance and his wife , Usha , welcome a baby boy",
+          "url": "https://www.wcpo.com/politics/jd-and-usha-vance-welcome-a-baby-boy-the-first-child-born-to-a-sitting-vp-in-more-than-150-years",
           "domain": "wcpo.com",
-          "seendate": "2026-07-17T06:15:00Z"
+          "seendate": "2026-07-20T16:15:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/96/8b/778c71f3449e82a013b174b3542d/ap26171734694783.jpg"
         },
         {
-          "title": "Trump claims new documents show broad vulnerabilities in US election security",
-          "url": "https://www.fox13now.com/politics/the-president/live-coverage-president-donald-trump-addresses-the-nation",
-          "domain": "fox13now.com",
-          "seendate": "2026-07-17T04:30:00Z"
-        },
-        {
-          "title": "Trump claims new documents show broad vulnerabilities in US election security",
-          "url": "https://www.wxyz.com/politics/the-president/live-coverage-president-donald-trump-addresses-the-nation",
-          "domain": "wxyz.com",
-          "seendate": "2026-07-17T04:30:00Z"
-        },
-        {
-          "title": "Trump claims new documents show broad vulnerabilities in US election security",
-          "url": "https://www.10news.com/politics/the-president/live-coverage-president-donald-trump-addresses-the-nation",
-          "domain": "10news.com",
-          "seendate": "2026-07-17T04:30:00Z"
+          "title": "JD and Usha Vance welcome a baby boy",
+          "url": "https://www.chicagotribune.com/2026/07/19/vance-baby-born/",
+          "domain": "chicagotribune.com",
+          "seendate": "2026-07-20T02:00:00Z",
+          "image": "https://www.chicagotribune.com/wp-content/uploads/2026/07/Vance_Baby_72483-1.jpg"
         }
       ]
     },
-    "title": "Trump claims new documents show broad vulnerabilities in US election security",
-    "summary": "2026-07-17 wcpo.com: Trump claims new documents show broad vulnerabilities in US election security\n2026-07-17 fox13now.com: Trump claims new documents show broad vulnerabilities in US election security\n2026-07-17 wxyz.com: Trump claims new documents show broad vulnerabilities in US election security\n2026-07-17 10news.com: Trump claims new documents show broad vulnerabilities in US election security",
+    "title": "Vice President JD Vance and his wife , Usha , welcome a baby boy",
+    "summary": "2026-07-20 abc15.com: Vice President JD Vance and his wife , Usha , welcome a baby boy\n2026-07-20 wcpo.com: Vice President JD Vance and his wife , Usha , welcome a baby boy\n2026-07-20 chicagotribune.com: JD and Usha Vance welcome a baby boy",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_analyst-documents-election",
+    "source": "news",
+    "ts": 1784577653249,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.591,
+      "articles": [
+        {
+          "title": "Legal analyst weighs potential investigations after Trump releases election documents",
+          "url": "https://katu.com/news/nation-world/legal-analyst-weighs-potential-investigations-after-trump-releases-election-documents-mehek-cooke-fbi-cia-dni-china-russia-department-of-justice-trump-administration-save-act-voter-data-government-supreme-court",
+          "domain": "katu.com",
+          "seendate": "2026-07-20T16:15:00Z",
+          "image": "https://katu.com/resources/media2/16x9/4964/1320/0x259/90/821da48c-4a36-4049-949c-3ef81702c13d-GettyImages22857856131.jpg"
+        },
+        {
+          "title": "Legal analyst weighs potential investigations after Trump releases election documents",
+          "url": "https://komonews.com/news/nation-world/legal-analyst-weighs-potential-investigations-after-trump-releases-election-documents-mehek-cooke-fbi-cia-dni-china-russia-department-of-justice-trump-administration-save-act-voter-data-government-supreme-court",
+          "domain": "komonews.com",
+          "seendate": "2026-07-20T15:45:00Z",
+          "image": "https://komonews.com/resources/media2/16x9/4964/1320/0x259/90/821da48c-4a36-4049-949c-3ef81702c13d-GettyImages22857856131.jpg"
+        },
+        {
+          "title": "Legal analyst weighs potential investigations after Trump releases election documents",
+          "url": "https://upnorthlive.com/news/nation-world/legal-analyst-weighs-potential-investigations-after-trump-releases-election-documents-mehek-cooke-fbi-cia-dni-china-russia-department-of-justice-trump-administration-save-act-voter-data-government-supreme-court",
+          "domain": "upnorthlive.com",
+          "seendate": "2026-07-20T15:45:00Z",
+          "image": "https://upnorthlive.com/resources/media2/16x9/4964/1320/0x259/90/821da48c-4a36-4049-949c-3ef81702c13d-GettyImages22857856131.jpg"
+        }
+      ]
+    },
+    "title": "Legal analyst weighs potential investigations after Trump releases election documents",
+    "summary": "2026-07-20 katu.com: Legal analyst weighs potential investigations after Trump releases election documents\n2026-07-20 komonews.com: Legal analyst weighs potential investigations after Trump releases election documents\n2026-07-20 upnorthlive.com: Legal analyst weighs potential investigations after Trump releases election documents",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_change-devices-federal",
+    "source": "news",
+    "ts": 1784577653250,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.432,
+      "articles": [
+        {
+          "title": "TikTok Permitted On Federal Devices After Ownership Change",
+          "url": "https://wmmbam.iheart.com/content/2026-07-19-tiktok-permitted-on-federal-devices-after-ownership-change/",
+          "domain": "wmmbam.iheart.com",
+          "seendate": "2026-07-19T14:45:00Z",
+          "image": "https://i.iheart.com/v3/re/new_assets/60e49fd4373101e067347ab9?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "TikTok Permitted On Federal Devices After Ownership Change",
+          "url": "https://wsfcam.iheart.com/content/2026-07-19-tiktok-permitted-on-federal-devices-after-ownership-change/",
+          "domain": "wsfcam.iheart.com",
+          "seendate": "2026-07-19T14:45:00Z",
+          "image": "https://i.iheart.com/v3/re/new_assets/60e49fd4373101e067347ab9?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "TikTok Permitted On Federal Devices After Ownership Change",
+          "url": "https://newsradio710.iheart.com/content/2026-07-19-tiktok-permitted-on-federal-devices-after-ownership-change/",
+          "domain": "newsradio710.iheart.com",
+          "seendate": "2026-07-19T14:45:00Z",
+          "image": "https://i.iheart.com/v3/re/new_assets/60e49fd4373101e067347ab9?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        }
+      ]
+    },
+    "title": "TikTok Permitted On Federal Devices After Ownership Change",
+    "summary": "2026-07-19 wmmbam.iheart.com: TikTok Permitted On Federal Devices After Ownership Change\n2026-07-19 wsfcam.iheart.com: TikTok Permitted On Federal Devices After Ownership Change\n2026-07-19 newsradio710.iheart.com: TikTok Permitted On Federal Devices After Ownership Change",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
