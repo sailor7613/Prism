@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-07-21T03:52:26.437Z · 40 legislative + 8 news (GDELT, 3d)
+// 2026-07-21T09:06:48.187Z · 40 legislative + 7 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1784605931149,
+    "ts": 1784624772331,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.848,
+      "salience": 0.847,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,7 +259,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1784605931148,
+    "ts": 1784624772331,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1784605931148,
+    "ts": 1784624772331,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.81,
+      "salience": 0.809,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1784605931148,
+    "ts": 1784624772331,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.795,
+      "salience": 0.794,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3256,11 +3256,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1784605931148,
+    "ts": 1784624772331,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.738,
+      "salience": 0.737,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4658,11 +4658,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1784605931148,
+    "ts": 1784624772331,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
-      "salience": 0.738,
+      "salience": 0.737,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
       "votes": [
         {
@@ -4932,11 +4932,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1784605931148,
+    "ts": 1784624772331,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.724,
+      "salience": 0.723,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5203,11 +5203,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1784605931148,
+    "ts": 1784624772331,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.713,
+      "salience": 0.712,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6605,11 +6605,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1784605931148,
+    "ts": 1784624772331,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.708,
+      "salience": 0.707,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -8007,11 +8007,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1784605931146,
+    "ts": 1784624772329,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.698,
+      "salience": 0.697,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -9176,11 +9176,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1784605931148,
+    "ts": 1784624772331,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.661,
+      "salience": 0.66,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -10110,11 +10110,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1041",
     "source": "legislative",
-    "ts": 1784605931147,
+    "ts": 1784624772330,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1041",
-      "salience": 0.651,
+      "salience": 0.65,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1041",
       "votes": [
         {
@@ -11507,11 +11507,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2616",
     "source": "legislative",
-    "ts": 1784605931147,
+    "ts": 1784624772330,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2616",
-      "salience": 0.648,
+      "salience": 0.647,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2616",
       "votes": [
         {
@@ -12901,11 +12901,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1784605931148,
+    "ts": 1784624772331,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
-      "salience": 0.645,
+      "salience": 0.644,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2913",
       "votes": [
         {
@@ -13833,11 +13833,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1784605931148,
+    "ts": 1784624772331,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.644,
+      "salience": 0.643,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -14109,11 +14109,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1784605931148,
+    "ts": 1784624772331,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
-      "salience": 0.642,
+      "salience": 0.641,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8312",
       "votes": [
         {
@@ -15042,11 +15042,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7567",
     "source": "legislative",
-    "ts": 1784605931146,
+    "ts": 1784624772329,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7567",
-      "salience": 0.633,
+      "salience": 0.632,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7567",
       "votes": [
         {
@@ -20699,11 +20699,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1784605931148,
+    "ts": 1784624772331,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.622,
+      "salience": 0.621,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -21632,11 +21632,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6260",
     "source": "legislative",
-    "ts": 1784605931147,
+    "ts": 1784624772330,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6260",
-      "salience": 0.619,
+      "salience": 0.618,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6260",
       "votes": [
         {
@@ -23034,11 +23034,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8365",
     "source": "legislative",
-    "ts": 1784605931147,
+    "ts": 1784624772330,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8365",
-      "salience": 0.619,
+      "salience": 0.618,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8365",
       "votes": [
         {
@@ -24436,11 +24436,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1346",
     "source": "legislative",
-    "ts": 1784605931147,
+    "ts": 1784624772330,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1346",
-      "salience": 0.601,
+      "salience": 0.6,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1346",
       "votes": [
         {
@@ -25836,11 +25836,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-141",
     "source": "legislative",
-    "ts": 1784605931148,
+    "ts": 1784624772331,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-141",
-      "salience": 0.583,
+      "salience": 0.582,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/141",
       "votes": [
         {
@@ -26112,11 +26112,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-132",
     "source": "legislative",
-    "ts": 1784605931148,
+    "ts": 1784624772331,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-132",
-      "salience": 0.565,
+      "salience": 0.564,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/132",
       "votes": [
         {
@@ -26388,11 +26388,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-130",
     "source": "legislative",
-    "ts": 1784605931148,
+    "ts": 1784624772331,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-130",
-      "salience": 0.556,
+      "salience": 0.555,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/130",
       "votes": [
         {
@@ -26664,11 +26664,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6047",
     "source": "legislative",
-    "ts": 1784605931148,
+    "ts": 1784624772330,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6047",
-      "salience": 0.555,
+      "salience": 0.554,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6047",
       "votes": [
         {
@@ -27589,11 +27589,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-99",
     "source": "legislative",
-    "ts": 1784605931148,
+    "ts": 1784624772331,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-99",
-      "salience": 0.507,
+      "salience": 0.506,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/99",
       "votes": [
         {
@@ -27863,11 +27863,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1784605931148,
+    "ts": 1784624772331,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.503,
+      "salience": 0.502,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -29266,11 +29266,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-139",
     "source": "legislative",
-    "ts": 1784605931148,
+    "ts": 1784624772331,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-139",
-      "salience": 0.494,
+      "salience": 0.493,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/139",
       "votes": [
         {
@@ -29541,11 +29541,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1784605931149,
+    "ts": 1784624772332,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.446,
+      "salience": 0.445,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -30434,11 +30434,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5587",
     "source": "legislative",
-    "ts": 1784605931145,
+    "ts": 1784624772328,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5587",
-      "salience": 0.443,
+      "salience": 0.442,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5587",
       "votes": [
         {
@@ -31361,11 +31361,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1784605931149,
+    "ts": 1784624772332,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.432,
+      "salience": 0.431,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -32249,11 +32249,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1784605931148,
+    "ts": 1784624772331,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.428,
+      "salience": 0.427,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -33170,11 +33170,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1784605931148,
+    "ts": 1784624772331,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.417,
+      "salience": 0.416,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -34088,11 +34088,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5625",
     "source": "legislative",
-    "ts": 1784605931147,
+    "ts": 1784624772330,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5625",
-      "salience": 0.381,
+      "salience": 0.38,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5625",
       "votes": [
         {
@@ -35023,11 +35023,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1784605931148,
+    "ts": 1784624772331,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.356,
+      "salience": 0.355,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -35922,11 +35922,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8469",
     "source": "legislative",
-    "ts": 1784605931147,
+    "ts": 1784624772330,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8469",
-      "salience": 0.351,
+      "salience": 0.35,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8469",
       "votes": [
         {
@@ -37324,11 +37324,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4465",
     "source": "legislative",
-    "ts": 1784605931147,
+    "ts": 1784624772329,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4465",
-      "salience": 0.341,
+      "salience": 0.34,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4465",
       "votes": [
         {
@@ -38207,11 +38207,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1784605931148,
+    "ts": 1784624772331,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.328,
+      "salience": 0.327,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -39141,11 +39141,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2853",
     "source": "legislative",
-    "ts": 1784605931147,
+    "ts": 1784624772330,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2853",
-      "salience": 0.258,
+      "salience": 0.257,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2853",
       "votes": [
         {
@@ -40059,11 +40059,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1784605931148,
+    "ts": 1784624772330,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
-      "salience": 0.254,
+      "salience": 0.253,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/254",
       "votes": [
         {
@@ -40988,47 +40988,60 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_canadian-goods-trump",
     "source": "news",
-    "ts": 1784605946428,
+    "ts": 1784624808178,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.998,
+      "salience": 0.971,
       "articles": [
+        {
+          "title": "Trump orders new 50 % tariff on many Canadian goods",
+          "url": "https://www.digitaljournal.com/article/trump-orders-new-50-tariff-on-many-canadian-goods/",
+          "domain": "digitaljournal.com",
+          "seendate": "2026-07-21T04:30:00Z",
+          "image": "https://www.digitaljournal.com/wp-content/uploads/2025/04/14d7f9e07d14b20f422d08ffbe7e79ff4f2ff23c.jpg",
+          "imageBaked": "data/news/images/cand_news_canadian-goods-trump/2d0a1084.jpg"
+        },
         {
           "title": "Trump imposes 50 % tariff on Canadian goods , citing disputes over autos , alcohol",
           "url": "https://www.turnto23.com/politics/economy/trump-imposes-50-tariff-on-canadian-goods-citing-disputes-over-autos-alcohol",
           "domain": "turnto23.com",
           "seendate": "2026-07-21T03:30:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/e7/ef/7bb1f79d46b091dc196e939ad1a6/ap26197547210310.jpg"
+          "image": "https://ewscripps.brightspotcdn.com/e7/ef/7bb1f79d46b091dc196e939ad1a6/ap26197547210310.jpg",
+          "imageBaked": "data/news/images/cand_news_canadian-goods-trump/70f42443.jpg"
         },
         {
           "title": "Trump imposes 50 % tariff on Canadian goods , citing disputes over autos , alcohol",
           "url": "https://www.abc15.com/politics/economy/trump-imposes-50-tariff-on-canadian-goods-citing-disputes-over-autos-alcohol",
           "domain": "abc15.com",
           "seendate": "2026-07-21T02:45:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/e7/ef/7bb1f79d46b091dc196e939ad1a6/ap26197547210310.jpg"
+          "image": "https://ewscripps.brightspotcdn.com/e7/ef/7bb1f79d46b091dc196e939ad1a6/ap26197547210310.jpg",
+          "imageBaked": "data/news/images/cand_news_canadian-goods-trump/70f42443.jpg"
         },
         {
           "title": "Trump imposes 50 % tariffs on Canadian goods",
           "url": "https://www.boston.com/news/politics/2026/07/20/trump-imposes-50-tariffs-on-canadian-goods-citing-disputes-over-autos-alcohol-and-cheese/",
           "domain": "boston.com",
           "seendate": "2026-07-21T01:30:00Z",
-          "image": "https://bdc2020.o0bc.com/wp-content/uploads/2026/07/Trump_Tariffs_1_31_-6a5e91bd174e5-768x432.jpg"
+          "image": "https://bdc2020.o0bc.com/wp-content/uploads/2026/07/Trump_Tariffs_1_31_-6a5e91bd174e5-768x432.jpg",
+          "imageBaked": "data/news/images/cand_news_canadian-goods-trump/504a338d.jpg"
         },
         {
           "title": "Trump imposes 50 % tariffs on some Candadian goods",
           "url": "https://katu.com/news/nation-world/trump-imposes-50-tariffs-on-some-candadian-goods-canada-local-business-automobile-alcohol-dairy-money-percentage-politics-national-international-neighbor",
           "domain": "katu.com",
           "seendate": "2026-07-21T01:30:00Z",
-          "image": "https://katu.com/resources/media2/16x9/6000/1320/0x313/90/7efb7173-1965-4845-8d24-63b63cd2beb5-GettyImages22081846122.jpg"
+          "image": "https://katu.com/resources/media2/16x9/6000/1320/0x313/90/7efb7173-1965-4845-8d24-63b63cd2beb5-GettyImages22081846122.jpg",
+          "imageBaked": "data/news/images/cand_news_canadian-goods-trump/f5b1bd57.jpg"
         },
         {
           "title": "Trump imposes 50 % tariffs on Canadian goods , citing disputes over autos , alcohol and cheese",
           "url": "https://wtop.com/world/2026/07/trump-imposes-50-tariff-on-canadian-goods-citing-disputes-over-autos-alcohol-and-cheese/",
           "domain": "wtop.com",
           "seendate": "2026-07-21T01:30:00Z",
-          "image": "https://wtop.com/wp-content/uploads/2026/07/Trump_Tariffs_1_31_-scaled.jpg"
+          "image": "https://wtop.com/wp-content/uploads/2026/07/Trump_Tariffs_1_31_-scaled.jpg",
+          "imageBaked": "data/news/images/cand_news_canadian-goods-trump/2e6d3c4a.jpg"
         },
         {
           "title": "Trump imposes 50 % tariffs on Canadian goods , citing disputes – NBC Los Angeles",
@@ -41071,35 +41084,29 @@ window.PRISM_CANDIDATES = [
           "domain": "nbcwashington.com",
           "seendate": "2026-07-21T00:30:00Z",
           "image": "https://media.nbcwashington.com/2026/07/NEW-CANADA-TARIFFS.jpg?quality=85&strip=all"
-        },
-        {
-          "title": "Trump imposes 50 % tariffs on Canadian goods , citing disputes over autos , alcohol and cheese - Boston News , Weather , Sports",
-          "url": "https://whdh.com/news/trump-imposes-50-tariffs-on-canadian-goods-citing-disputes-over-autos-alcohol-and-cheese/",
-          "domain": "whdh.com",
-          "seendate": "2026-07-20T23:30:00Z",
-          "image": null
         }
       ]
     },
     "title": "Trump imposes 50 % tariffs on Canadian goods , citing disputes over autos , alcohol and cheese",
-    "summary": "2026-07-21 turnto23.com: Trump imposes 50 % tariff on Canadian goods , citing disputes over autos , alcohol\n2026-07-21 abc15.com: Trump imposes 50 % tariff on Canadian goods , citing disputes over autos , alcohol\n2026-07-21 boston.com: Trump imposes 50 % tariffs on Canadian goods\n2026-07-21 katu.com: Trump imposes 50 % tariffs on some Candadian goods\n2026-07-21 wtop.com: Trump imposes 50 % tariffs on Canadian goods , citing disputes over autos , alcohol and cheese\n2026-07-21 nbclosangeles.com: Trump imposes 50 % tariffs on Canadian goods , citing disputes – NBC Los Angeles",
+    "summary": "2026-07-21 digitaljournal.com: Trump orders new 50 % tariff on many Canadian goods\n2026-07-21 turnto23.com: Trump imposes 50 % tariff on Canadian goods , citing disputes over autos , alcohol\n2026-07-21 abc15.com: Trump imposes 50 % tariff on Canadian goods , citing disputes over autos , alcohol\n2026-07-21 boston.com: Trump imposes 50 % tariffs on Canadian goods\n2026-07-21 katu.com: Trump imposes 50 % tariffs on some Candadian goods\n2026-07-21 wtop.com: Trump imposes 50 % tariffs on Canadian goods , citing disputes over autos , alcohol and cheese",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
     "members": [],
     "bills": [],
     "fitness": null,
-    "status": "new"
+    "status": "held",
+    "mts": 1784612091529
   },
   {
     "cid": "cand_news_150-baby-born",
     "source": "news",
-    "ts": 1784605946427,
+    "ts": 1784624808177,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.92,
+      "salience": 0.887,
       "articles": [
         {
           "title": "JD and Usha Vance welcome a baby boy , the first child born to a sitting VP in more than 150 years",
@@ -41200,12 +41207,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_alaska-beer-fights",
     "source": "news",
-    "ts": 1784605946428,
+    "ts": 1784624808178,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.715,
+      "salience": 0.682,
       "articles": [
         {
           "title": "Alaska pilot fights plane seizure over 6 - pack of beer",
@@ -41255,78 +41262,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_attacks-campaign-ossoff",
-    "source": "news",
-    "ts": 1784605946428,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.659,
-      "articles": [
-        {
-          "title": "Sen . Ossoff fuels reelection campaign with attacks on Trump | News , Sports , Jobs",
-          "url": "https://www.mauinews.com/wire/?category=5186&ID=396412",
-          "domain": "mauinews.com",
-          "seendate": "2026-07-20T08:30:00Z",
-          "image": "https://s3.amazonaws.com/ogden_images/www.mauinews.com/images/2018/02/20104449/fb.jpg"
-        },
-        {
-          "title": "Sen . Ossoff fuels reelection campaign with attacks on Trump",
-          "url": "https://www.pilotonline.com/2026/07/18/ossoff-reelection-campaign-attacks-trump/",
-          "domain": "pilotonline.com",
-          "seendate": "2026-07-18T22:00:00Z",
-          "image": "https://www.pilotonline.com/wp-content/uploads/2026/07/Senate_DNI_Clayton_7_86_-1.jpg"
-        },
-        {
-          "title": "Georgia Sen . Jon Ossoff attacks Trump amid reelection campaign",
-          "url": "https://www.chicagotribune.com/2026/07/18/georgia-jon-ossoff-reelection-campaign/",
-          "domain": "chicagotribune.com",
-          "seendate": "2026-07-18T16:45:00Z",
-          "image": "https://www.chicagotribune.com/wp-content/uploads/2026/07/Senate_DNI_Clayton_7_86_-1.jpg"
-        },
-        {
-          "title": "Sen . Ossoff fuels reelection campaign with attacks on Trump",
-          "url": "https://www.clickondetroit.com/news/politics/2026/07/18/sen-ossoff-fuels-reelection-campaign-with-attacks-on-trump/",
-          "domain": "clickondetroit.com",
-          "seendate": "2026-07-18T16:00:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/SYDNIUNHIVESHAWK655HFMGT3E.jpg?_a=DATAg1kSZAA0"
-        },
-        {
-          "title": "Sen . Ossoff fuels reelection campaign with attacks on Trump",
-          "url": "https://www.click2houston.com/news/politics/2026/07/18/sen-ossoff-fuels-reelection-campaign-with-attacks-on-trump/",
-          "domain": "click2houston.com",
-          "seendate": "2026-07-18T16:00:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/SYDNIUNHIVESHAWK655HFMGT3E.jpg?_a=DATAg1kSZAA0"
-        },
-        {
-          "title": "Sen . Ossoff fuels reelection campaign with attacks on Trump",
-          "url": "https://www.news4jax.com/news/politics/2026/07/18/sen-ossoff-fuels-reelection-campaign-with-attacks-on-trump/",
-          "domain": "news4jax.com",
-          "seendate": "2026-07-18T15:30:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/SYDNIUNHIVESHAWK655HFMGT3E.jpg?_a=DATAg1kSZAA0"
-        }
-      ]
-    },
-    "title": "Sen . Ossoff fuels reelection campaign with attacks on Trump",
-    "summary": "2026-07-20 mauinews.com: Sen . Ossoff fuels reelection campaign with attacks on Trump | News , Sports , Jobs\n2026-07-18 pilotonline.com: Sen . Ossoff fuels reelection campaign with attacks on Trump\n2026-07-18 chicagotribune.com: Georgia Sen . Jon Ossoff attacks Trump amid reelection campaign\n2026-07-18 clickondetroit.com: Sen . Ossoff fuels reelection campaign with attacks on Trump\n2026-07-18 click2houston.com: Sen . Ossoff fuels reelection campaign with attacks on Trump\n2026-07-18 news4jax.com: Sen . Ossoff fuels reelection campaign with attacks on Trump",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_child-fourth-usha",
     "source": "news",
-    "ts": 1784605946428,
+    "ts": 1784624808177,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.597,
+      "salience": 0.565,
       "articles": [
         {
           "title": "Fourth child born to JD and Usha Vance",
@@ -41371,12 +41314,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_baby-boy-usha",
     "source": "news",
-    "ts": 1784605946427,
+    "ts": 1784624808177,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.547,
+      "salience": 0.514,
       "articles": [
         {
           "title": "Vice President JD Vance and his wife , Usha , welcome a baby boy",
@@ -41414,12 +41357,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_analyst-documents-election",
     "source": "news",
-    "ts": 1784605946428,
+    "ts": 1784624808178,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.542,
+      "salience": 0.51,
       "articles": [
         {
           "title": "Legal analyst weighs potential investigations after Trump releases election documents",
@@ -41457,12 +41400,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_begins-draft-history",
     "source": "news",
-    "ts": 1784605946427,
+    "ts": 1784624808176,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.516,
+      "salience": 0.483,
       "articles": [
         {
           "title": "Today in History : July 20 , World War I draft lottery begins",
