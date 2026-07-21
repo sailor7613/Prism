@@ -7,3 +7,7 @@ scripts/secrets.local.js
 *.local.key
 data/votes_checkpoint.json
 data/news_debug.txt
+
+# Device-bridge deletion workaround — sessions can move but not delete;
+# trash this folder by hand whenever, git never sees it.
+_to_delete/

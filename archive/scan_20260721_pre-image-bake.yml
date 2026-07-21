@@ -13,10 +13,7 @@
 #
 # The middle stratum (data/candidate_scores.json, pushed by the admin
 # surface's ⇡ Sync scores) is READ here — the fetchers bake it into
-# candidates.js — never written. Scans cannot clobber scores. The image
-# bake honors the same rule: SKIP_SCORES=1 bakes photograph FILES into
-# the repo but leaves candidate_scores.json byte-identical — the stamp
-# lands on the next local bake, offline, from the files this run baked.
+# candidates.js — never written. Scans cannot clobber scores.
 
 name: scan
 
@@ -61,19 +58,11 @@ jobs:
       - name: GDELT news sweep (non-fatal — a hiccup can't kill the refresh)
         run: node scripts/fetch-news.js || echo "news sweep failed — legislative refresh stands"
 
-      - name: Bake held photographs (non-fatal — GitHub's runner has no CORS wall either)
-        run: SKIP_SCORES=1 node scripts/bake-images.js || echo "image bake failed — photos stay hotlinked, nothing lost"
-
       - name: Commit the refreshed pool
         run: |
           git config user.name  "prism-scan"
           git config user.email "prism-scan@users.noreply.github.com"
           git add data/candidates.js data/prism_votes.json data/prism_legislation.json data/legislation_data.js
-          # image trees + rescued readings JSON (-A stages prune deletions);
-          # guarded — the news tree may not exist until the first held photo
-          for p in data/readings data/news/images data/readings/images; do
-            [ -e "$p" ] && git add -A "$p" || true
-          done
           if git diff --cached --quiet; then
             echo "nothing changed — no commit"
           else

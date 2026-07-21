@@ -30,37 +30,18 @@
  *     `dismissed` candidates are NEVER baked — a full scan is 15
  *     clusters × 12 articles of churn the repo doesn't want.
  *
- *  2b. STRATUM STORY BAKE (2026-07-21) — a held record's story snapshot
- *     (candidate_scores.json → records[cid].story.raw.articles) is the
- *     durable copy that outlives the scan window; its photographs must
- *     be durable too. Any held/promoted record carrying a story bakes
- *     the same lift pool to the same data/news/images/<cid>/ dir (same
- *     urlhash — a cid still in candidates.js shares files, zero extra
- *     fetches) and the story's article entries gain `imageBaked`, so
- *     resurrection on a fresh device arrives baked. The scores file is
- *     rewritten additively — imageBaked only, mts untouched, LWW
- *     undisturbed. SKIP_SCORES=1 bakes the files but leaves the scores
- *     file byte-identical: the scheduled Action runs with it set, per
- *     the standing rule that scans never write the middle stratum —
- *     the next local run stamps from the already-baked files, offline.
- *
- *  PRUNE — a data/news/images/<cid>/ dir is deleted only when its cid
- *  is held nowhere — neither candidates.js (held/promoted) nor a
- *  stratum story record — UNLESS a file in it is referenced by a
- *  Reading's baked path (a published Reading may point into the news
- *  tree via the promote-lift carry). Reading images
+ *  PRUNE — a data/news/images/<cid>/ dir whose candidate has rotated
+ *  out (or fallen back to new/dismissed) is deleted, UNLESS any file in
+ *  it is referenced by a Reading's baked path (a published Reading may
+ *  point into the news tree via the promote-lift carry). Reading images
  *  (data/readings/images/) are never pruned — Readings are sovereign.
- *  (The stratum guard is new 2026-07-21: before it, a held story that
- *  aged out of the scan window had its baked photographs pruned — the
- *  hold was durable but its pictures weren't.)
  *
  * Failures decay gracefully, per the publish-never-blocks precedent:
  * an image that won't fetch stays hotlinked and is reported, exit 0.
  *
  * Usage:
- *   node scripts/bake-images.js               # all sweeps + prune
- *   DRY=1 node scripts/bake-images.js         # report only, write nothing
- *   SKIP_SCORES=1 node scripts/bake-images.js # never write candidate_scores.json
+ *   node scripts/bake-images.js            # both sweeps + prune
+ *   DRY=1 node scripts/bake-images.js      # report only, write nothing
  */
 
 const fs = require('fs');
@@ -77,7 +58,6 @@ const CANDIDATES_FILE = path.join(DATA_DIR, 'candidates.js');
 const SCORES_FILE = path.join(DATA_DIR, 'candidate_scores.json');
 
 const DRY = !!process.env.DRY;
-const SKIP_SCORES = !!process.env.SKIP_SCORES;   // Action: files yes, stratum write never
 const TIMEOUT_MS = parseInt(process.env.TIMEOUT_MS || '15000', 10);
 const MAX_BYTES = parseInt(process.env.MAX_BYTES || String(10 * 1024 * 1024), 10);
 const LIFT_POOL = 6;   // must match the surface's promote lift slice(0,6)
@@ -204,47 +184,17 @@ function freshStatus(c, scores) {
   return (r && r.status != null) ? r.status : c.status;
 }
 
-// The whole scores file (schema/updated/records), or null. Kept whole so
-// the stratum sweep can rewrite it without touching anything but the
-// article entries it stamped.
-function readScoresFile() {
-  try {
-    const src = fs.readFileSync(SCORES_FILE, 'utf8');
-    const j = JSON.parse(src);
-    if (j && j.schema === 'candidate_scores/v1' && j.records)
-      return { json: j, hadNl: /\n$/.test(src) };
-  } catch (_) { /* stratum not pushed yet — candidates.js status stands */ }
-  return null;
-}
-
-// bake one lift pool (articles with an image, first LIFT_POOL) into the
-// news tree for `cid`, stamping `imageBaked`. Shared by sweep 2 and 2b —
-// same hash, same dir, so the two sources never duplicate a fetch.
-async function bakePool(cid, articles, bakedByCid, report, label) {
-  let changed = false;
-  const pool = articles.filter(a => a && a.image).slice(0, LIFT_POOL);
-  for (const a of pool) {
-    if (a.imageBaked && fs.existsSync(path.join(ROOT, a.imageBaked))) {
-      (bakedByCid[cid] = bakedByCid[cid] || new Set()).add(a.imageBaked);
-      report.already++; continue;
-    }
-    try {
-      a.imageBaked = await bake(a.image, NEWS_IMG_DIR + '/' + cid);
-      (bakedByCid[cid] = bakedByCid[cid] || new Set()).add(a.imageBaked);
-      changed = true;
-      report.baked.push(`${cid}${label || ''} ← ${a.image}`);
-    } catch (e) {
-      report.hotlinked.push(`${cid}${label || ''} · ${a.image} (${e.message})`);
-    }
-  }
-  return changed;
-}
-
-async function sweepCandidates(scores, report) {
+async function sweepCandidates(report) {
   let parsed;
   try { parsed = readCandidates(); }
   catch (e) { report.errors.push('candidates.js: ' + e.message); return { bakedByCid: {} }; }
   if (!parsed) return { bakedByCid: {} };
+
+  let scores = null;
+  try {
+    const j = JSON.parse(fs.readFileSync(SCORES_FILE, 'utf8'));
+    if (j && j.schema === 'candidate_scores/v1' && j.records) scores = j.records;
+  } catch (_) { /* stratum not pushed yet — candidates.js status stands */ }
 
   const bakedByCid = {};   // cid → Set of live repo-relative baked paths
   let changed = false;
@@ -252,41 +202,31 @@ async function sweepCandidates(scores, report) {
     if (c.source !== 'news' || !c.raw || !Array.isArray(c.raw.articles)) continue;
     const status = freshStatus(c, scores);
     if (status !== 'held' && status !== 'promoted') continue;
-    if (await bakePool(c.cid, c.raw.articles, bakedByCid, report)) changed = true;
+    const pool = c.raw.articles.filter(a => a && a.image).slice(0, LIFT_POOL);
+    for (const a of pool) {
+      if (a.imageBaked && fs.existsSync(path.join(ROOT, a.imageBaked))) {
+        (bakedByCid[c.cid] = bakedByCid[c.cid] || new Set()).add(a.imageBaked);
+        report.already++; continue;
+      }
+      try {
+        a.imageBaked = await bake(a.image, NEWS_IMG_DIR + '/' + c.cid);
+        (bakedByCid[c.cid] = bakedByCid[c.cid] || new Set()).add(a.imageBaked);
+        changed = true;
+        report.baked.push(`${c.cid} ← ${a.image}`);
+      } catch (e) {
+        report.hotlinked.push(`${c.cid} · ${a.image} (${e.message})`);
+      }
+    }
   }
   if (changed && !DRY) {
     fs.writeFileSync(CANDIDATES_FILE,
       parsed.header + JSON.stringify(parsed.candidates, null, 2) + parsed.tail);
     report.rewritten.push('data/candidates.js');
   }
-  return { bakedByCid, candidates: parsed.candidates };
+  return { bakedByCid, candidates: parsed.candidates, scores };
 }
 
-// ── sweep 2b: stratum story bake (held stories outlive the scan window;
-// their photographs bake from the snapshot the hold carries) ──────────
-async function sweepStratum(scoresFile, bakedByCid, report) {
-  if (!scoresFile) return;
-  const records = scoresFile.json.records;
-  let changed = false;
-  for (const cid of Object.keys(records)) {
-    const r = records[cid];
-    if (!r || (r.status !== 'held' && r.status !== 'promoted')) continue;
-    const arts = r.story && r.story.raw && Array.isArray(r.story.raw.articles)
-      ? r.story.raw.articles : null;
-    if (!arts) continue;
-    if (await bakePool(cid, arts, bakedByCid, report, ' (stratum)')) changed = true;
-  }
-  if (changed && !DRY && !SKIP_SCORES) {
-    fs.writeFileSync(SCORES_FILE,
-      JSON.stringify(scoresFile.json, null, 2) + (scoresFile.hadNl ? '\n' : ''));
-    report.rewritten.push('data/candidate_scores.json');
-  } else if (changed && SKIP_SCORES) {
-    report.notes.push('stratum stamp withheld (SKIP_SCORES) — files are in; the next local bake stamps offline');
-  }
-}
-
-// ── prune (news tree only; reading-referenced files are kept; the live
-// set spans BOTH sweeps — a stratum-held cid's dir survives rotation) ──
+// ── prune (news tree only; reading-referenced files are kept) ─────────
 function readingReferencedPaths() {
   const refs = new Set();
   if (!fs.existsSync(READINGS_DIR)) return refs;
@@ -321,12 +261,10 @@ function prune(sweep, report) {
 // ── main ──────────────────────────────────────────────────────────────
 async function main() {
   console.log(`Image bake${DRY ? ' (DRY RUN — nothing written)' : ''} · working tree: ${ROOT}`);
-  const report = { baked: [], hotlinked: [], already: 0, rewritten: [], pruned: [], kept: [], errors: [], notes: [] };
+  const report = { baked: [], hotlinked: [], already: 0, rewritten: [], pruned: [], kept: [], errors: [] };
 
   await sweepReadings(report);
-  const scoresFile = readScoresFile();
-  const sweep = await sweepCandidates(scoresFile && scoresFile.json.records, report);
-  await sweepStratum(scoresFile, sweep.bakedByCid, report);
+  const sweep = await sweepCandidates(report);
   prune(sweep, report);
 
   console.log(`\n  baked ${report.baked.length} · already in repo ${report.already} · hotlinked (decay) ${report.hotlinked.length} · pruned ${report.pruned.length}`);
@@ -335,7 +273,6 @@ async function main() {
   report.kept.forEach(l => console.log('  ○ kept ' + l));
   report.pruned.forEach(l => console.log('  ✕ pruned ' + l));
   report.rewritten.forEach(l => console.log('  ↻ rewrote ' + l));
-  report.notes.forEach(l => console.log('  · ' + l));
   report.errors.forEach(l => console.log('  ✗ ' + l));
   if (!report.baked.length && !report.hotlinked.length && !report.pruned.length && !report.errors.length)
     console.log('  nothing to do — every held photograph is already in the repo.');

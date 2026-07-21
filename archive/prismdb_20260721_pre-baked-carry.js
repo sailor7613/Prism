@@ -880,26 +880,6 @@ const PrismDB = (() => {
     all.forEach(c => {
       const r = records[c.cid];
       if (!r) return;
-      // Baked-path carry (2026-07-21, pipeline bake): `imageBaked` is
-      // DERIVED — url-hashed by the bake, identical from any writer —
-      // so it rides OUTSIDE LWW. The pipeline stamps the stratum story;
-      // the holding device's own mts equals the record's, so without
-      // this the stamp would never enter its store — and its next push
-      // (export overlays pulled records) would erase it from the file.
-      // Additive only: never overwrites a present imageBaked.
-      const sArts = r.story && r.story.raw && Array.isArray(r.story.raw.articles)
-        ? r.story.raw.articles : null;
-      if (sArts && c.raw && Array.isArray(c.raw.articles)) {
-        const bakedByImg = {};
-        sArts.forEach(a => { if (a && a.image && a.imageBaked) bakedByImg[a.image] = a.imageBaked; });
-        let stamped = false;
-        c.raw.articles.forEach(a => {
-          if (a && a.image && !a.imageBaked && bakedByImg[a.image]) {
-            a.imageBaked = bakedByImg[a.image]; stamped = true;
-          }
-        });
-        if (stamped) applied++;   // triggers the persist below even when LWW skips
-      }
       if ((r.mts || 0) <= (c.mts || 0)) { skipped++; return; }
       SCORE_FIELDS.forEach(k => { if (r[k] != null) c[k] = r[k]; });
       if (r.status === 'new' || r.status === 'held' ||
