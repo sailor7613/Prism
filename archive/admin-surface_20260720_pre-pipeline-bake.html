@@ -1294,9 +1294,8 @@ function renderPhotos(){
   images.forEach((p,i)=>{
     const cell=document.createElement('div'); cell.className='cite-pic'+(p.keep?'':' off');
     cell.title=(p.keep?'held — tap to drop':'dropped — tap to hold')+(p.credit?(' · '+p.credit):'');
-    const im=document.createElement('img'); im.loading='lazy'; im.src=p.baked||p.url; im.alt=p.credit||'';
-    im.onerror=()=>{ if(p.baked&&im.src!==p.url){ im.src=p.url; return; }   // baked copy not local yet — try the wire
-      const ix=images.indexOf(p); if(ix>=0){ images.splice(ix,1); renderPhotos(); } };   // dead URL — the wire moves on
+    const im=document.createElement('img'); im.loading='lazy'; im.src=p.url; im.alt=p.credit||'';
+    im.onerror=()=>{ const ix=images.indexOf(p); if(ix>=0){ images.splice(ix,1); renderPhotos(); } };   // dead URL — the wire moves on
     cell.appendChild(im);
     const k=document.createElement('span'); k.className='k'; k.textContent=p.keep?'✓':''; cell.appendChild(k);
     /* Placement chips (Photo Z-Probe grammar, ruled 2026-07-19; direct-assign
@@ -1597,10 +1596,7 @@ function nrRender(){
       const pics=c.raw.articles.filter(a=>a&&a.image);
       if(pics.length){ const strip=document.createElement('div'); strip.className='nr-pics';
         pics.slice(0,4).forEach(a=>{ const im=document.createElement('img'); im.loading='lazy';
-          // prefer the pipeline-baked repo copy (bake-images.js, 2026-07-20);
-          // if the baked path 404s (not yet pulled/deployed) fall back to the wire once
-          im.src=a.imageBaked||a.image; im.alt=a.domain||''; im.title=a.domain||'';
-          im.onerror=()=>{ if(a.imageBaked&&im.src!==a.image){ im.src=a.image; return; } im.remove(); };
+          im.src=a.image; im.alt=a.domain||''; im.title=a.domain||''; im.onerror=()=>im.remove();
           strip.appendChild(im); });
         card.appendChild(strip); }
     }
@@ -1684,9 +1680,7 @@ function nrPromote(cid){
   // citation seed. Pick/drop lives in 📎; only kept ones save.
   if(c.source==='news'&&c.raw&&Array.isArray(c.raw.articles))
     images=c.raw.articles.filter(a=>a&&a.image).slice(0,6)
-      .map((a,i)=>{ const o={url:a.image,credit:a.domain||'',articleUrl:a.url||'',keep:i<3};
-        if(a.imageBaked) o.baked=a.imageBaked;   // pipeline bake carries onto the Reading — born durable
-        return o; });
+      .map((a,i)=>({url:a.image,credit:a.domain||'',articleUrl:a.url||'',keep:i<3}));
   setPoleFields(); setThumb(38,false);
   nrPendingPromote=cid;
   nrCloseFn();

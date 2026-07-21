@@ -20,23 +20,17 @@ if ! command -v node >/dev/null 2>&1; then
   exit 1
 fi
 
-echo "Step 1/4 · sweeping recent roll-call votes (resumable; Ctrl-C safe)…"
+echo "Step 1/3 · sweeping recent roll-call votes (resumable; Ctrl-C safe)…"
 node scripts/fetch-votes.js || { echo; echo "✗ Vote sweep failed (see the error above)."; read -r -p "Press Enter to close."; exit 1; }
 
 echo
-echo "Step 2/4 · shaping legislative candidates → data/candidates.js…"
+echo "Step 2/3 · shaping legislative candidates → data/candidates.js…"
 node scripts/fetch-activity.js || { echo; echo "✗ Candidate shaping failed (see the error above)."; read -r -p "Press Enter to close."; exit 1; }
 
 echo
-echo "Step 3/4 · GDELT news sweep (keyless) → merging news candidates…"
+echo "Step 3/3 · GDELT news sweep (keyless) → merging news candidates…"
 # News is additive — a GDELT hiccup shouldn't kill the legislative refresh.
 node scripts/fetch-news.js || { echo; echo "⚠ News sweep failed (see above) — continuing with legislative candidates only."; }
-
-echo
-echo "Step 4/4 · baking held photographs into the repo (Node has no CORS wall)…"
-# Bake is additive too — held/promoted stories' images and published Readings'
-# unbaked images land in the working tree; the commit rides GitHub Desktop.
-node scripts/bake-images.js || { echo; echo "⚠ Image bake failed (see above) — photos stay hotlinked, nothing lost."; }
 
 echo
 echo "✓ Done. Open the admin surface and tap 📡 to triage."
