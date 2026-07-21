@@ -11789,7 +11789,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Value Over Cost Act of 2025",
     "meta": "H.R. 1118 · Reported · Government",
-    "id": "hr-119-1118"
+    "id": "hr-119-1118",
+    "rc": 1,
+    "mm": 0.995
   },
   {
     "name": "Facilitating DIGITAL Applications Act",
