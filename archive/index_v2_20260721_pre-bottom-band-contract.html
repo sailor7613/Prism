@@ -1364,35 +1364,16 @@ body.light .event-picker { color: rgba(40,44,54,0.85); background: rgba(255,255,
 }
 .prism-ribbon:active { cursor: grabbing; }
 html.parallax-mode .prism-ribbon { top: calc(100% - var(--ribbon-h) - var(--safe-bottom)); background: linear-gradient(0deg, rgba(7,12,26,0.6), rgba(7,12,26,0)); }
-/* Bottom-band contract (v1 2026-07-18 · v2 2026-07-21, RULED by Sailor).
-   The bottom of a phone screen belongs to exactly ONE system at a time:
-   - MID-FLOW (uncommitted reading, Prism column): the FLOW owns it. The
-     advance/commit affordance is sacred — the ticker yields (never renders
-     pre-commit; reconsider re-hides it, see backFromGraph), and the
-     flow-advance chrome rides ABOVE the seated art + Ted's dock
-     (.to-answers rule below).
-   - COMMITTED REST: the TICKER owns it. The ribbon is EVICTED from its
-     bottom seat (re-seats top), Ted's dock lifts above the strip, the
-     footer meta lives in the strip's end-cap plate (renderTicker), and
-     the dead commit button retires (#graphCommit:disabled).
-   - Ribbon-bottom without ticker (v1, unchanged): footer yields, dock
-     lifts just above the art.
-   Fixed bars are measured, not assumed: --ticker-h and --ted-dock-h come
-   from bandMeasure() in the outer script. */
+/* Bottom-band contract (2026-07-18, phone report: text clustering around
+   the seated nav). When the ribbon seats BOTTOM — any shade address, which
+   includes the whole reading flow at the Diatribe cell — the bottom band
+   belongs to the ribbon. The footer meta yields (the event is already
+   named in the top chrome; footer was already hidden in phase-event /
+   tri-cover / ticker-live, bottom-seat just never got its rule), and
+   Ted's dock lifts to sit just above the art instead of on it. */
 html.parallax-mode footer { opacity: 0; pointer-events: none; }
 html.parallax-mode .ted-dock {
   bottom: calc(var(--ribbon-h) + var(--safe-bottom) + 10px); }
-/* ticker-live evicts the ribbon from the bottom seat — instrument over art
-   never happens; the strip meets the stage directly (RULED 2026-07-21) */
-html.parallax-mode body.ticker-live .prism-ribbon {
-  top: calc(var(--safe-top) + var(--hdr-h));
-  background: linear-gradient(180deg, rgba(7,12,26,0.55), rgba(7,12,26,0));
-}
-/* mid-flow at the Diatribe cell the band stacks art → dock → advance:
-   the flow-advance chrome was never in the v1 contract; now it is */
-html.parallax-mode body.phase-diatribe .to-answers {
-  bottom: calc(var(--ribbon-h) + var(--ted-dock-h, 38px) + var(--safe-bottom) + 24px);
-}
 /* The art wrapper is the moved element (2026-07-18 — beam/spectrum always
    span the screen): the drag/seat transforms land HERE, and the two tiled
    extension strips ride along for free. Strips are palindromic slices of
@@ -1856,18 +1837,9 @@ body:not(.phase-diatribe) .diatribe-eyebrow { display: none; }
   background: linear-gradient(180deg, rgba(7, 12, 26, 0) 0%, rgba(7, 12, 26, 0.55) 100%);
 }
 /* the ticker owns the bottom band: the footer folds into .dt-status (below),
-   and the graph stage gains clearance so the commit row never sits under it.
-   Clearance is MEASURED (--ticker-h, bandMeasure) — the 100px fallback only
-   covers the beat before first measure. */
+   and the graph stage gains clearance so the commit row never sits under it */
 body.ticker-live footer { display: none; }
-body.ticker-live .graph-phase { padding-bottom: calc(var(--ticker-h, 100px) + 24px + var(--safe-bottom)); }
-/* committed rest: the spent commit button retires under the strip's watch —
-   RECONSIDER stays (re-entry hands the band back to the flow) */
-body.ticker-live #graphCommit:disabled { display: none; }
-/* Ted's dock lifts above the strip whenever the strip is live — supersedes
-   the v1 above-the-art lift (this rule is later; equal specificity wins) */
-body.ticker-live .ted-dock {
-  bottom: calc(var(--ticker-h, 78px) + var(--safe-bottom) + 10px); }
+body.ticker-live .graph-phase { padding-bottom: calc(100px + var(--safe-bottom)); }
 /* graph hint text, restyled as instrument marginalia (design's .graph-hint
    mapped to v2's real node, #graphNote / .a-note) */
 body.ticker-live #graphNote {
@@ -1954,7 +1926,7 @@ body.ticker-live #graphNote {
 .dt-tile.val-neutral .dt-fig, .dt-tile.val-neutral .dt-glyph { color: #c9c9c9; }
 /* the Spectrum's scrolling list gains clearance so its last rows can clear
    the strip (mirror of the .graph-phase clearance above) */
-body.ticker-live #panelSpectrum .tri-body { padding-bottom: calc(var(--ticker-h, 100px) + 24px + var(--safe-bottom)); }
+body.ticker-live #panelSpectrum .tri-body { padding-bottom: calc(100px + var(--safe-bottom)); }
 
 /* CHOSEN chip: GLASS SLUG — restrained early-2000s translucency.
    Interactive tiles only; the non-interactive register stays engraved. */
@@ -3917,15 +3889,6 @@ function backFromGraph() {
   phaseLabel.innerHTML = 'prism · <strong>v2</strong> · responses';
   ambient.classList.remove('fluid', 'coalition', 'denominated');
   ambient.classList.add(committedBand);
-  // Bottom-band contract (RULED 2026-07-21): reconsider hands the band
-  // back to the FLOW — the strip yields until the next commit. (Roam to
-  // col 2 still shows the watchlist; dtShowDeltaFeed's dtPriorHidden
-  // restore keeps this hidden state honest on return.)
-  try {
-    const t = document.getElementById('deltaTicker');
-    if (t) t.hidden = true;
-    document.body.classList.remove('ticker-live');
-  } catch (_) {}
   // back into the reading → the nav returns to its Diatribe seat
   try { if (window.PrismTriptych) PrismTriptych.address(0, true, true); } catch (_) {}
 }
@@ -5626,18 +5589,6 @@ const dtPersonalTrack = document.getElementById('dtPersonalTrack');
 const dtFieldTrack = document.getElementById('dtFieldTrack');
 const dtEdge = document.getElementById('dtEdge');
 
-// Bottom-band contract: fixed bars are measured, not assumed. --ticker-h
-// (strip clearance for dock lift + stage padding) and --ted-dock-h (the
-// advance chrome's shelf at the Diatribe cell) come from the real boxes.
-function bandMeasure() {
-  const rt = document.documentElement.style;
-  if (dtEl && !dtEl.hidden && dtEl.offsetHeight) rt.setProperty('--ticker-h', dtEl.offsetHeight + 'px');
-  const td = document.querySelector('.ted-dock');
-  if (td && td.offsetHeight) rt.setProperty('--ted-dock-h', td.offsetHeight + 'px');
-}
-window.addEventListener('resize', bandMeasure);
-requestAnimationFrame(bandMeasure);
-
 function dtTileEl(t, interactive) {
   const el = document.createElement(interactive ? 'button' : 'div');
   if (interactive) el.type = 'button';
@@ -5720,7 +5671,6 @@ function renderTicker() {
   }
   dtEl.hidden = false;
   document.body.classList.add('ticker-live');
-  requestAnimationFrame(bandMeasure);   // strip is fresh — measure the real box
   if (dtEdge) dtEdge.hidden = true;   // edge call arms itself per cycle
 }
 
@@ -5778,7 +5728,6 @@ function dtShowAlignFeed(youTiles, aggTiles, onTap, followedCount) {
   }
   dtEl.hidden = false;
   document.body.classList.add('ticker-live');
-  requestAnimationFrame(bandMeasure);
   if (dtEdge) dtEdge.hidden = true;   // the edge call is Prism-desk chrome; never over the watchlist
 }
 
