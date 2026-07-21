@@ -9960,7 +9960,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Putting Patients First by Strengthening Provider Accountability in FECA Act",
     "meta": "H.R. 8823 · Reported · Government",
-    "id": "hr-119-8823"
+    "id": "hr-119-8823",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "Student Protection and University Accountability Act",
@@ -10516,7 +10518,9 @@ const LEGISLATION_DATA = [
   {
     "name": "EARLY Act Reauthorization of 2025",
     "meta": "H.R. 4541 · Reported · Healthcare",
-    "id": "hr-119-4541"
+    "id": "hr-119-4541",
+    "rc": 1,
+    "mm": 0.97
   },
   {
     "name": "NIH IMPROVE Act",
