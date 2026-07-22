@@ -1749,47 +1749,6 @@ body.phase-event .ted-dock, body.phase-diatribe .ted-dock { display: flex; }
     radial-gradient(ellipse 95% 75% at 80% 96%, rgba(44,32,76,0.24), rgba(8,12,26,0) 58%),
     linear-gradient(180deg, #060a16 0%, #070c1a 46%, #05070f 100%); }
 #spaceField::before, #spaceField::after { content: ''; position: absolute; inset: -25%; background-repeat: repeat; }
-/* ── The glow leaves the sky; the color match joins the stars (Sailor,
-   2026-07-21): in the dark the band-tinted #ambient wash is retired — it
-   flattened the night's contrast behind the diatribe and the four
-   responses. The slider's color match now lives IN the sky instead: a
-   sparse third star layer per band (below), crossfaded by the same band
-   state that used to drive the wash. Daylight keeps its gentle tint
-   (no stars to flatten); the admin surface keeps its wash (grammar
-   untouched — .prism-ambient is shared; this is a v2 page ruling). */
-body:not(.light) #ambient.fluid,
-body:not(.light) #ambient.coalition,
-body:not(.light) #ambient.denominated { background: none; }
-/* band stars — the accent constellation. Three pre-painted layers, one per
-   band, crossfaded by class like the wash used to be; slightly larger than
-   the near stars, sparser, their own drift period so they read as a distinct
-   population. Opacity breathes with |score| from breathFrame (--sky-band-o). */
-#skyBand { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
-body.light #skyBand { display: none; }
-#skyBand span { position: absolute; inset: -25%; background-repeat: repeat;
-  background-size: 260px 260px; opacity: 0;
-  transition: opacity 1.6s ease;
-  animation: spaceDriftBand 120s linear infinite, spaceTwinkle 7.5s ease-in-out infinite alternate; }
-#skyBand .sb-fluid { background-image:
-  radial-gradient(1.8px 1.8px at 34px 84px,  rgba(84,200,138,0.85), transparent),
-  radial-gradient(1.4px 1.4px at 148px 26px, rgba(84,200,138,0.60), transparent),
-  radial-gradient(1.6px 1.6px at 214px 168px,rgba(130,220,170,0.70), transparent),
-  radial-gradient(1.3px 1.3px at 92px 216px, rgba(84,200,138,0.55), transparent); }
-#skyBand .sb-coalition { background-image:
-  radial-gradient(1.8px 1.8px at 60px 40px,  rgba(232,148,72,0.85), transparent),
-  radial-gradient(1.4px 1.4px at 190px 120px,rgba(232,148,72,0.60), transparent),
-  radial-gradient(1.6px 1.6px at 110px 200px,rgba(244,176,110,0.70), transparent),
-  radial-gradient(1.3px 1.3px at 240px 232px,rgba(232,148,72,0.55), transparent); }
-#skyBand .sb-denominated { background-image:
-  radial-gradient(1.8px 1.8px at 84px 140px, rgba(232,88,88,0.85), transparent),
-  radial-gradient(1.4px 1.4px at 210px 60px, rgba(232,88,88,0.60), transparent),
-  radial-gradient(1.6px 1.6px at 30px 232px, rgba(246,120,120,0.70), transparent),
-  radial-gradient(1.3px 1.3px at 160px 190px,rgba(232,88,88,0.55), transparent); }
-#skyBand.fluid .sb-fluid,
-#skyBand.coalition .sb-coalition,
-#skyBand.denominated .sb-denominated { opacity: var(--sky-band-o, 0.55); }
-@keyframes spaceDriftBand { to { transform: translate(-260px, -260px); } }
-@media (prefers-reduced-motion: reduce) { #skyBand span { animation: none; } }
 #spaceField::before {   /* far stars — small, faint, slow */
   background-image:
     radial-gradient(1px 1px at 20px 30px, rgba(220,230,255,0.7), transparent),
@@ -2128,7 +2087,6 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
 <!-- Page-wide "space": a semi-dynamic starfield + deep field behind the ENTIRE
      UI. Sits beneath the band-tint ambient; Ted and every panel float in it. -->
 <div id="spaceField" aria-hidden="true"></div>
-<div id="skyBand" aria-hidden="true"><span class="sb-fluid"></span><span class="sb-coalition"></span><span class="sb-denominated"></span></div>
 <div id="ambient" class="prism-ambient"></div>
 
 <header>
@@ -3091,14 +3049,6 @@ const lineGhost   = document.getElementById('lineGhost');
 const readoutReal = document.getElementById('readoutReal');
 const readoutGhost= document.getElementById('readoutGhost');
 const ambient     = document.getElementById('ambient');
-const skyBand     = document.getElementById('skyBand');
-// The color match plays in the stars now (2026-07-21) — the sky's accent
-// constellation follows the same band state that used to drive the wash.
-function setSkyBand(band) {
-  if (!skyBand) return;
-  skyBand.classList.remove('fluid', 'coalition', 'denominated');
-  if (band) skyBand.classList.add(band);
-}
 const cue         = document.getElementById('cue');
 const asymDelta   = document.getElementById('asymDelta');
 
@@ -3193,7 +3143,6 @@ function applyState(initial = false) {
 
   ambient.classList.remove('fluid', 'coalition', 'denominated');
   ambient.classList.add(realBand);
-  setSkyBand(realBand);
 
   // Ted narrates the scale of thirds as you cross into a new band (and tints
   // his night plane to match). Only once engaged, so he's quiet on load.
@@ -3314,11 +3263,6 @@ function breathFrame(now) {
   lineGhost.style.opacity = (0.40 + b * 0.20).toFixed(3);
 
   ambient.style.filter = `saturate(${(0.92 + sb * 0.18).toFixed(3)}) brightness(${(0.96 + sb * 0.08).toFixed(3)})`;
-  // the accent constellation breathes where the wash used to: deeper into a
-  // band (|score|) = slightly brighter band stars, riding the slow breath
-  const depth = Math.min(1, Math.abs(state.realScore || 0) / 100);
-  document.documentElement.style.setProperty('--sky-band-o',
-    (0.38 + depth * 0.24 + sb * 0.10).toFixed(3));
 
   // Event-phase rule glyph — gentle emissive pulse on the introit hairline
   if (evRule) evRule.style.boxShadow = `0 0 ${6 + b * 8}px rgba(96, 148, 220, ${(0.18 + b * 0.16).toFixed(3)})`;
@@ -3903,7 +3847,6 @@ function placeAt(x, y) {
     buildAllCorners(band);            // band displacement — variant words swap
     ambient.classList.remove('fluid', 'coalition', 'denominated');
     ambient.classList.add(band);
-    setSkyBand(band);
     changed = true;
   }
 
@@ -3974,7 +3917,6 @@ function backFromGraph() {
   phaseLabel.innerHTML = 'prism · <strong>v2</strong> · responses';
   ambient.classList.remove('fluid', 'coalition', 'denominated');
   ambient.classList.add(committedBand);
-  setSkyBand(committedBand);
   // Bottom-band contract (RULED 2026-07-21): reconsider hands the band
   // back to the FLOW — the strip yields until the next commit. (Roam to
   // col 2 still shows the watchlist; dtShowDeltaFeed's dtPriorHidden
