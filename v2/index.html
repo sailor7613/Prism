@@ -1766,29 +1766,33 @@ body:not(.light) #ambient.denominated { background: none; }
    population. Opacity breathes with |score| from breathFrame (--sky-band-o). */
 #skyBand { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
 body.light #skyBand { display: none; }
+/* twinkle rides BRIGHTNESS here, never opacity — a CSS animation owns any
+   property it animates, so an opacity twinkle silently overrode the band
+   crossfade (found live 2026-07-22: all three colors stuck on at ~.88) */
 #skyBand span { position: absolute; inset: -25%; background-repeat: repeat;
   background-size: 260px 260px; opacity: 0;
   transition: opacity 1.6s ease;
-  animation: spaceDriftBand 120s linear infinite, spaceTwinkle 7.5s ease-in-out infinite alternate; }
+  animation: spaceDriftBand 120s linear infinite, bandTwinkle 7.5s ease-in-out infinite alternate; }
 #skyBand .sb-fluid { background-image:
-  radial-gradient(1.8px 1.8px at 34px 84px,  rgba(84,200,138,0.85), transparent),
-  radial-gradient(1.4px 1.4px at 148px 26px, rgba(84,200,138,0.60), transparent),
-  radial-gradient(1.6px 1.6px at 214px 168px,rgba(130,220,170,0.70), transparent),
-  radial-gradient(1.3px 1.3px at 92px 216px, rgba(84,200,138,0.55), transparent); }
+  radial-gradient(2.1px 2.1px at 34px 84px,  rgba(84,200,138,0.85), transparent),
+  radial-gradient(1.7px 1.7px at 148px 26px, rgba(84,200,138,0.60), transparent),
+  radial-gradient(1.9px 1.9px at 214px 168px,rgba(130,220,170,0.70), transparent),
+  radial-gradient(1.6px 1.6px at 92px 216px, rgba(84,200,138,0.55), transparent); }
 #skyBand .sb-coalition { background-image:
-  radial-gradient(1.8px 1.8px at 60px 40px,  rgba(232,148,72,0.85), transparent),
-  radial-gradient(1.4px 1.4px at 190px 120px,rgba(232,148,72,0.60), transparent),
-  radial-gradient(1.6px 1.6px at 110px 200px,rgba(244,176,110,0.70), transparent),
-  radial-gradient(1.3px 1.3px at 240px 232px,rgba(232,148,72,0.55), transparent); }
+  radial-gradient(2.1px 2.1px at 60px 40px,  rgba(232,148,72,0.85), transparent),
+  radial-gradient(1.7px 1.7px at 190px 120px,rgba(232,148,72,0.60), transparent),
+  radial-gradient(1.9px 1.9px at 110px 200px,rgba(244,176,110,0.70), transparent),
+  radial-gradient(1.6px 1.6px at 240px 232px,rgba(232,148,72,0.55), transparent); }
 #skyBand .sb-denominated { background-image:
-  radial-gradient(1.8px 1.8px at 84px 140px, rgba(232,88,88,0.85), transparent),
-  radial-gradient(1.4px 1.4px at 210px 60px, rgba(232,88,88,0.60), transparent),
-  radial-gradient(1.6px 1.6px at 30px 232px, rgba(246,120,120,0.70), transparent),
-  radial-gradient(1.3px 1.3px at 160px 190px,rgba(232,88,88,0.55), transparent); }
+  radial-gradient(2.1px 2.1px at 84px 140px, rgba(232,88,88,0.85), transparent),
+  radial-gradient(1.7px 1.7px at 210px 60px, rgba(232,88,88,0.60), transparent),
+  radial-gradient(1.9px 1.9px at 30px 232px, rgba(246,120,120,0.70), transparent),
+  radial-gradient(1.6px 1.6px at 160px 190px,rgba(232,88,88,0.55), transparent); }
 #skyBand.fluid .sb-fluid,
 #skyBand.coalition .sb-coalition,
 #skyBand.denominated .sb-denominated { opacity: var(--sky-band-o, 0.55); }
 @keyframes spaceDriftBand { to { transform: translate(-260px, -260px); } }
+@keyframes bandTwinkle { from { filter: brightness(0.85); } to { filter: brightness(1.35); } }
 @media (prefers-reduced-motion: reduce) { #skyBand span { animation: none; } }
 /* ── The moon (2026-07-21, Sailor: DreamGetty's moon, synced to the real
    phase). Machinery first: the phase is COMPUTED — lunar age from the
@@ -1815,24 +1819,38 @@ body.light #skyMoon { display: none; }
    pleasant blue (kept by ruling); the stars stop asking its permission. */
 #starPierce { position: fixed; inset: 0; z-index: 2; pointer-events: none;
   mix-blend-mode: screen; }
+/* twinkle rides BRIGHTNESS (see #skyBand note — an opacity twinkle
+   overrides the crossfade). Each pierced star = a hot core + a soft
+   halo (paired gradients): the pop is SIZE and GLOW, not opacity. */
 #starPierce span { position: absolute; inset: -25%; background-repeat: repeat;
-  animation: spaceDriftPierce 170s linear infinite, spaceTwinkle 5.5s ease-in-out infinite alternate; }
+  animation: spaceDriftPierce 170s linear infinite, bandTwinkle 5.5s ease-in-out infinite alternate; }
 #starPierce .sp-white { background-image:
-  radial-gradient(2.2px 2.2px at 70px 110px,  rgba(255, 252, 240, 0.95), transparent),
-  radial-gradient(1.8px 1.8px at 250px 40px,  rgba(230, 240, 255, 0.85), transparent),
-  radial-gradient(1.6px 1.6px at 160px 260px, rgba(255, 248, 232, 0.75), transparent);
+  radial-gradient(3px 3px at 70px 110px,     rgba(255, 252, 240, 1),    transparent),
+  radial-gradient(11px 11px at 70px 110px,   rgba(240, 244, 255, 0.30), transparent),
+  radial-gradient(2.6px 2.6px at 250px 40px, rgba(230, 240, 255, 0.95), transparent),
+  radial-gradient(9px 9px at 250px 40px,     rgba(230, 240, 255, 0.24), transparent),
+  radial-gradient(2.2px 2.2px at 160px 260px, rgba(255, 248, 232, 0.9), transparent),
+  radial-gradient(8px 8px at 160px 260px,    rgba(255, 248, 232, 0.2),  transparent),
+  radial-gradient(2.4px 2.4px at 320px 300px, rgba(235, 242, 255, 0.9), transparent),
+  radial-gradient(8px 8px at 320px 300px,    rgba(235, 242, 255, 0.22), transparent);
   background-size: 340px 340px; }
 #starPierce .sp-band { background-size: 340px 340px; opacity: 0;
   transition: opacity 1.6s ease; }
 #starPierce.fluid .sp-band { opacity: var(--sky-band-o, 0.55); background-image:
-  radial-gradient(2px 2px at 120px 200px, rgba(84, 200, 138, 0.9), transparent),
-  radial-gradient(1.7px 1.7px at 300px 150px, rgba(130, 220, 170, 0.7), transparent); }
+  radial-gradient(2.8px 2.8px at 120px 200px, rgba(84, 200, 138, 1), transparent),
+  radial-gradient(10px 10px at 120px 200px,  rgba(84, 200, 138, 0.28), transparent),
+  radial-gradient(2.3px 2.3px at 300px 150px, rgba(130, 220, 170, 0.85), transparent),
+  radial-gradient(8px 8px at 300px 150px,    rgba(130, 220, 170, 0.2), transparent); }
 #starPierce.coalition .sp-band { opacity: var(--sky-band-o, 0.55); background-image:
-  radial-gradient(2px 2px at 120px 200px, rgba(232, 148, 72, 0.9), transparent),
-  radial-gradient(1.7px 1.7px at 300px 150px, rgba(244, 176, 110, 0.7), transparent); }
+  radial-gradient(2.8px 2.8px at 120px 200px, rgba(232, 148, 72, 1), transparent),
+  radial-gradient(10px 10px at 120px 200px,  rgba(232, 148, 72, 0.28), transparent),
+  radial-gradient(2.3px 2.3px at 300px 150px, rgba(244, 176, 110, 0.85), transparent),
+  radial-gradient(8px 8px at 300px 150px,    rgba(244, 176, 110, 0.2), transparent); }
 #starPierce.denominated .sp-band { opacity: var(--sky-band-o, 0.55); background-image:
-  radial-gradient(2px 2px at 120px 200px, rgba(232, 88, 88, 0.9), transparent),
-  radial-gradient(1.7px 1.7px at 300px 150px, rgba(246, 120, 120, 0.7), transparent); }
+  radial-gradient(2.8px 2.8px at 120px 200px, rgba(232, 88, 88, 1), transparent),
+  radial-gradient(10px 10px at 120px 200px,  rgba(232, 88, 88, 0.28), transparent),
+  radial-gradient(2.3px 2.3px at 300px 150px, rgba(246, 120, 120, 0.85), transparent),
+  radial-gradient(8px 8px at 300px 150px,    rgba(246, 120, 120, 0.2), transparent); }
 @keyframes spaceDriftPierce { to { transform: translate(-340px, -340px); } }
 body.light #starPierce { display: none; }
 @media (prefers-reduced-motion: reduce) { #starPierce span { animation: none; } }
@@ -5837,26 +5855,26 @@ requestAnimationFrame(bandMeasure);
     ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2);
     ctx.fillStyle = 'white'; ctx.fill();
     ctx.globalCompositeOperation = 'source-over';
+    // Phase shadow — REBUILT 2026-07-22. The gallery's destination-out
+    // construction punched transparency through the TEXTURE (never seen
+    // there: DreamGetty forces full and skips this branch entirely).
+    // Here the dark limb is an OVERLAY: the complement of the verified
+    // two-arc lit path (same math as the interim SVG moon, all eight
+    // quarters eyeballed), filled at 0.86 so a ghost of the surface
+    // survives in shadow — earthshine, not a black hole.
     if (Math.abs(phase - 0.5) > 0.02) {
-      ctx.save();
-      ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.clip();
+      const th = 2 * Math.PI * phase;
       const waxing = phase < 0.5;
-      const illumFraction = waxing ? phase * 2 : (1 - phase) * 2;
-      ctx.fillStyle = 'rgba(5,5,8,0.92)';
-      ctx.fillRect(0, 0, size, size);
-      ctx.globalCompositeOperation = 'destination-out';
-      ctx.beginPath();
-      if (waxing) {
-        ctx.arc(cx, cy, r - 1, -Math.PI / 2, Math.PI / 2, false);
-        const termX = r * (2 * illumFraction - 1);
-        ctx.ellipse(cx, cy, Math.abs(termX) + 1, r - 1, 0, Math.PI / 2, -Math.PI / 2, termX > 0 ? false : true);
-      } else {
-        ctx.arc(cx, cy, r - 1, Math.PI / 2, -Math.PI / 2, false);
-        const termX = r * (2 * illumFraction - 1);
-        ctx.ellipse(cx, cy, Math.abs(termX) + 1, r - 1, 0, -Math.PI / 2, Math.PI / 2, termX > 0 ? false : true);
-      }
-      ctx.fill();
-      ctx.globalCompositeOperation = 'source-over';
+      const rr = r - 0.5;
+      const rx = Math.max(0.6, Math.abs(rr * Math.cos(th)));
+      const litSweep = waxing ? 1 : 0;
+      const termSweep = (Math.cos(th) > 0) ? (waxing ? 0 : 1) : (waxing ? 1 : 0);
+      const dark = new Path2D(
+        `M0,${-rr} A${rr},${rr} 0 1 ${1 - litSweep} 0,${rr} ` +
+        `A${rx.toFixed(2)},${rr} 0 1 ${termSweep} 0,${-rr} Z`);
+      ctx.save(); ctx.translate(cx, cy);
+      ctx.fillStyle = 'rgba(7,9,16,0.86)';
+      ctx.fill(dark);
       ctx.restore();
     }
     const edgeGrad = ctx.createRadialGradient(cx, cy, r * 0.88, cx, cy, r - 1);
