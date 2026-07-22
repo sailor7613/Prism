@@ -1790,6 +1790,19 @@ body.light #skyBand { display: none; }
 #skyBand.denominated .sb-denominated { opacity: var(--sky-band-o, 0.55); }
 @keyframes spaceDriftBand { to { transform: translate(-260px, -260px); } }
 @media (prefers-reduced-motion: reduce) { #skyBand span { animation: none; } }
+/* ── The moon (2026-07-21, Sailor: DreamGetty's moon, synced to the real
+   phase). Machinery first: the phase is COMPUTED — lunar age from the
+   2000-01-06 18:14Z new-moon epoch mod the synodic month, terminator
+   drawn as the classic two-arc path — so the sky always shows tonight's
+   actual moon. The look is a placeholder disc until the Getty moon's art
+   is lifted (gallery file is iCloud-offloaded — pending a Finder tap);
+   the phase mask will ride whatever art lands here. */
+#skyMoon { position: fixed; top: calc(var(--top-chrome, 60px) + 26px); right: 7%;
+  width: 44px; height: 44px; z-index: 0; pointer-events: none; opacity: 0.9;
+  filter: drop-shadow(0 0 14px rgba(214, 224, 245, 0.28)); }
+#skyMoon svg { display: block; width: 100%; height: 100%; }
+body.light #skyMoon { display: none; }
+@media (max-width: 640px) { #skyMoon { width: 36px; height: 36px; right: 9%; } }
 #spaceField::before {   /* far stars — small, faint, slow */
   background-image:
     radial-gradient(1px 1px at 20px 30px, rgba(220,230,255,0.7), transparent),
@@ -1797,17 +1810,17 @@ body.light #skyBand { display: none; }
     radial-gradient(1px 1px at 150px 60px, rgba(220,230,255,0.5), transparent),
     radial-gradient(1px 1px at 110px 180px, rgba(190,205,245,0.6), transparent),
     radial-gradient(1px 1px at 50px 160px, rgba(220,230,255,0.5), transparent);
-  background-size: 200px 200px; opacity: 0.5; animation: spaceDriftFar 150s linear infinite; }
+  background-size: 200px 200px; opacity: 0.68; animation: spaceDriftFar 150s linear infinite; }   /* .5 → .68 (2026-07-21, Sailor: "make the stars pop") */
 #spaceField::after {    /* near stars — slightly larger, brighter, faster + twinkle */
   background-image:
     radial-gradient(1.6px 1.6px at 40px 50px, rgba(255,250,235,0.9), transparent),
     radial-gradient(1.5px 1.5px at 180px 140px, rgba(225,235,255,0.8), transparent),
     radial-gradient(1.5px 1.5px at 250px 80px, rgba(255,245,225,0.7), transparent),
     radial-gradient(1.4px 1.4px at 300px 220px, rgba(220,230,255,0.7), transparent);
-  background-size: 320px 320px; opacity: 0.6; animation: spaceDriftNear 95s linear infinite, spaceTwinkle 6.5s ease-in-out infinite alternate; }
+  background-size: 320px 320px; opacity: 0.8; animation: spaceDriftNear 95s linear infinite, spaceTwinkle 6.5s ease-in-out infinite alternate; }   /* .6 → .8 */
 @keyframes spaceDriftFar  { to { transform: translate(-200px, -200px); } }
 @keyframes spaceDriftNear { to { transform: translate(-320px, -320px); } }
-@keyframes spaceTwinkle   { from { opacity: 0.42; } to { opacity: 0.7; } }
+@keyframes spaceTwinkle   { from { opacity: 0.55; } to { opacity: 0.88; } }   /* brighter swing — the pop */
 @media (prefers-reduced-motion: reduce) { #spaceField::before, #spaceField::after { animation: none; } }
 
 /* Ted's contact shadow now lives in 3D (a soft blob that follows him as he
@@ -2129,6 +2142,7 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
      UI. Sits beneath the band-tint ambient; Ted and every panel float in it. -->
 <div id="spaceField" aria-hidden="true"></div>
 <div id="skyBand" aria-hidden="true"><span class="sb-fluid"></span><span class="sb-coalition"></span><span class="sb-denominated"></span></div>
+<div id="skyMoon" aria-hidden="true"></div>
 <div id="ambient" class="prism-ambient"></div>
 
 <header>
@@ -5695,6 +5709,37 @@ function bandMeasure() {
 }
 window.addEventListener('resize', bandMeasure);
 requestAnimationFrame(bandMeasure);
+
+// ── The moon, synced to the real phase (2026-07-21) ──
+// Lunar age from the 2000-01-06 18:14Z new-moon epoch, mod the synodic
+// month. The lit shape is the classic two-arc path: outer edge on the lit
+// side, terminator ellipse back — waxing lights the right limb (northern-
+// hemisphere view). Recomputed on load; window.setMoonAge(days) forces a
+// phase for eyeballing all quarters.
+(function skyMoonInit() {
+  const el = document.getElementById('skyMoon');
+  if (!el) return;
+  const SYNODIC = 29.530588853, EPOCH = Date.UTC(2000, 0, 6, 18, 14);
+  function draw(age) {
+    const r = 20, θ = 2 * Math.PI * age / SYNODIC;
+    const waxing = age < SYNODIC / 2;
+    const rx = Math.max(0.4, Math.abs(r * Math.cos(θ)));
+    const litSweep = waxing ? 1 : 0;
+    const termSweep = (Math.cos(θ) > 0) ? (waxing ? 0 : 1) : (waxing ? 1 : 0);
+    const lit = `M0,${-r} A${r},${r} 0 1 ${litSweep} 0,${r} A${rx.toFixed(2)},${r} 0 1 ${termSweep} 0,${-r} Z`;
+    el.innerHTML =
+      `<svg viewBox="-24 -24 48 48" xmlns="http://www.w3.org/2000/svg">` +
+      `<circle r="${r}" fill="rgba(150,164,196,0.13)"/>` +               // earthshine disc
+      `<path d="${lit}" fill="rgba(226,232,246,0.92)"/>` +               // the lit limb
+      `<circle r="${r}" fill="none" stroke="rgba(214,224,245,0.18)" stroke-width="0.6"/>` +
+      `</svg>`;
+  }
+  function realAge() {
+    return ((Date.now() - EPOCH) / 86400000) % SYNODIC;
+  }
+  draw(realAge());
+  window.setMoonAge = draw;   // dev hook — audition any phase from the console
+})();
 
 function dtTileEl(t, interactive) {
   const el = document.createElement(interactive ? 'button' : 'div');

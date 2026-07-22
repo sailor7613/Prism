@@ -307,18 +307,9 @@ function prune(sweep, report) {
     const dirAbs = path.join(newsAbs, cid);
     if (!fs.statSync(dirAbs).isDirectory()) continue;
     const live = sweep.bakedByCid[cid] || new Set();
-    // Hysteresis (2026-07-22, live bite: cand_news_canadian-goods-trump's
-    // 2d0a1084.jpg flapped add/delete across three scans): the in-window
-    // pool and the stratum snapshot carry the same story's photographs at
-    // DIFFERENT CDN urls (cluster membership shifts between scans; the
-    // snapshot is frozen at hold time), so per-file pruning orphans
-    // whichever variant the current sweep didn't claim — one binary
-    // add/delete commit pair per rotation cycle. While the story is held
-    // ANYWHERE, its dir is kept whole; per-file pruning applies only once
-    // the hold is gone entirely.
-    if (live.size) continue;
     for (const file of fs.readdirSync(dirAbs)) {
       const rel = NEWS_IMG_DIR + '/' + cid + '/' + file;
+      if (live.has(rel)) continue;                       // current pool
       if (refs.has(rel)) { report.kept.push(rel + ' (reading-referenced)'); continue; }
       if (!DRY) fs.unlinkSync(path.join(dirAbs, file));
       report.pruned.push(rel);

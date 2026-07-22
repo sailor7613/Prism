@@ -131,9 +131,14 @@ server.listen(0, '127.0.0.1', async () => {
     console.log('4. prune');
     fs.mkdirSync(D('data/news/images/cand_news_dead'), { recursive: true });
     fs.writeFileSync(D('data/news/images/cand_news_dead/aaaa.jpg'), PNG);
+    // hysteresis: an unclaimed variant in a STILL-HELD dir survives (the
+    // in-window pool and the frozen snapshot hash the same photo differently)
+    fs.writeFileSync(D('data/news/images/cand_news_alpha/0rphan.jpg'), PNG);
     await runBake();
     ok(!fs.existsSync(D('data/news/images/cand_news_dead')), 'unheld dir pruned');
     ok(fs.existsSync(D('data/news/images/cand_news_alpha')), 'stratum-held dir still kept');
+    ok(fs.existsSync(D('data/news/images/cand_news_alpha/0rphan.jpg')),
+      'unclaimed variant in a held dir survives (prune hysteresis)');
 
     // ── 5. SKIP_SCORES — files yes, stratum write never ──
     console.log('5. SKIP_SCORES (the Action\'s standing rule)');
