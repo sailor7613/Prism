@@ -1798,11 +1798,44 @@ body.light #skyBand { display: none; }
    is lifted (gallery file is iCloud-offloaded — pending a Finder tap);
    the phase mask will ride whatever art lands here. */
 #skyMoon { position: fixed; top: calc(var(--top-chrome, 60px) + 26px); right: 7%;
-  width: 44px; height: 44px; z-index: 0; pointer-events: none; opacity: 0.9;
-  filter: drop-shadow(0 0 14px rgba(214, 224, 245, 0.28)); }
-#skyMoon svg { display: block; width: 100%; height: 100%; }
+  width: 64px; height: 64px; z-index: 2; pointer-events: none; opacity: 0.96;
+  filter: drop-shadow(0 0 20px rgba(214, 224, 245, 0.38)); }
+#skyMoon canvas, #skyMoon svg { display: block; width: 100%; height: 100%; }
 body.light #skyMoon { display: none; }
-@media (max-width: 640px) { #skyMoon { width: 36px; height: 36px; right: 9%; } }
+@media (max-width: 640px) { #skyMoon { width: 46px; height: 46px; right: 9%; } }
+/* ── THE PIERCE (2026-07-22, Sailor's ruling — the z-buffer glitch as an
+   aesthetic): in old 3D engines geometry sometimes printed THROUGH a wall
+   it was spatially behind — depth test lost, light won. DreamGetty hit
+   the same wall with the animals (depthTest:false / renderOrder — drawn
+   on top while spatially behind); this is the CSS port of that move. A
+   sparse population of the BRIGHTEST stars renders above the stage veil
+   (z2 — over main's translucent surfaces, under the intro card at z5 and
+   all fixed chrome) in screen blend, so they read as light punching
+   through the wall while the sky stays behind it. The veil keeps its
+   pleasant blue (kept by ruling); the stars stop asking its permission. */
+#starPierce { position: fixed; inset: 0; z-index: 2; pointer-events: none;
+  mix-blend-mode: screen; }
+#starPierce span { position: absolute; inset: -25%; background-repeat: repeat;
+  animation: spaceDriftPierce 170s linear infinite, spaceTwinkle 5.5s ease-in-out infinite alternate; }
+#starPierce .sp-white { background-image:
+  radial-gradient(2.2px 2.2px at 70px 110px,  rgba(255, 252, 240, 0.95), transparent),
+  radial-gradient(1.8px 1.8px at 250px 40px,  rgba(230, 240, 255, 0.85), transparent),
+  radial-gradient(1.6px 1.6px at 160px 260px, rgba(255, 248, 232, 0.75), transparent);
+  background-size: 340px 340px; }
+#starPierce .sp-band { background-size: 340px 340px; opacity: 0;
+  transition: opacity 1.6s ease; }
+#starPierce.fluid .sp-band { opacity: var(--sky-band-o, 0.55); background-image:
+  radial-gradient(2px 2px at 120px 200px, rgba(84, 200, 138, 0.9), transparent),
+  radial-gradient(1.7px 1.7px at 300px 150px, rgba(130, 220, 170, 0.7), transparent); }
+#starPierce.coalition .sp-band { opacity: var(--sky-band-o, 0.55); background-image:
+  radial-gradient(2px 2px at 120px 200px, rgba(232, 148, 72, 0.9), transparent),
+  radial-gradient(1.7px 1.7px at 300px 150px, rgba(244, 176, 110, 0.7), transparent); }
+#starPierce.denominated .sp-band { opacity: var(--sky-band-o, 0.55); background-image:
+  radial-gradient(2px 2px at 120px 200px, rgba(232, 88, 88, 0.9), transparent),
+  radial-gradient(1.7px 1.7px at 300px 150px, rgba(246, 120, 120, 0.7), transparent); }
+@keyframes spaceDriftPierce { to { transform: translate(-340px, -340px); } }
+body.light #starPierce { display: none; }
+@media (prefers-reduced-motion: reduce) { #starPierce span { animation: none; } }
 #spaceField::before {   /* far stars — small, faint, slow */
   background-image:
     radial-gradient(1px 1px at 20px 30px, rgba(220,230,255,0.7), transparent),
@@ -2143,6 +2176,7 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
 <div id="spaceField" aria-hidden="true"></div>
 <div id="skyBand" aria-hidden="true"><span class="sb-fluid"></span><span class="sb-coalition"></span><span class="sb-denominated"></span></div>
 <div id="skyMoon" aria-hidden="true"></div>
+<div id="starPierce" aria-hidden="true"><span class="sp-white"></span><span class="sp-band"></span></div>
 <div id="ambient" class="prism-ambient"></div>
 
 <header>
@@ -3112,6 +3146,11 @@ function setSkyBand(band) {
   if (!skyBand) return;
   skyBand.classList.remove('fluid', 'coalition', 'denominated');
   if (band) skyBand.classList.add(band);
+  const pierce = document.getElementById('starPierce');   // the glitch tier rides the same state
+  if (pierce) {
+    pierce.classList.remove('fluid', 'coalition', 'denominated');
+    if (band) pierce.classList.add(band);
+  }
 }
 const cue         = document.getElementById('cue');
 const asymDelta   = document.getElementById('asymDelta');
@@ -5710,35 +5749,132 @@ function bandMeasure() {
 window.addEventListener('resize', bandMeasure);
 requestAnimationFrame(bandMeasure);
 
-// ── The moon, synced to the real phase (2026-07-21) ──
-// Lunar age from the 2000-01-06 18:14Z new-moon epoch, mod the synodic
-// month. The lit shape is the classic two-arc path: outer edge on the lit
-// side, terminator ellipse back — waxing lights the right limb (northern-
-// hemisphere view). Recomputed on load; window.setMoonAge(days) forces a
-// phase for eyeballing all quarters.
+// ── The Getty moon, synced to the real phase (2026-07-21/22) ──
+// The moon is DreamGetty's — createMoonTexture ported verbatim from
+// prism-gallery-v6.html (limb-darkened sphere, maria, 90 seeded craters,
+// ray craters, surface noise, phase shadow, atmosphere edge), drawn to a
+// 2D canvas instead of a THREE texture. DreamGetty forces full
+// (lunarPhase 0.5); here the phase is REAL — getLunarPhase, also from
+// the gallery. window.setMoonAge(days) auditions any phase.
 (function skyMoonInit() {
   const el = document.getElementById('skyMoon');
   if (!el) return;
-  const SYNODIC = 29.530588853, EPOCH = Date.UTC(2000, 0, 6, 18, 14);
-  function draw(age) {
-    const r = 20, θ = 2 * Math.PI * age / SYNODIC;
-    const waxing = age < SYNODIC / 2;
-    const rx = Math.max(0.4, Math.abs(r * Math.cos(θ)));
-    const litSweep = waxing ? 1 : 0;
-    const termSweep = (Math.cos(θ) > 0) ? (waxing ? 0 : 1) : (waxing ? 1 : 0);
-    const lit = `M0,${-r} A${r},${r} 0 1 ${litSweep} 0,${r} A${rx.toFixed(2)},${r} 0 1 ${termSweep} 0,${-r} Z`;
-    el.innerHTML =
-      `<svg viewBox="-24 -24 48 48" xmlns="http://www.w3.org/2000/svg">` +
-      `<circle r="${r}" fill="rgba(150,164,196,0.13)"/>` +               // earthshine disc
-      `<path d="${lit}" fill="rgba(226,232,246,0.92)"/>` +               // the lit limb
-      `<circle r="${r}" fill="none" stroke="rgba(214,224,245,0.18)" stroke-width="0.6"/>` +
-      `</svg>`;
+  const SYNODIC = 29.53058770576;
+  function getLunarPhase() {   // DreamGetty's, verbatim
+    const now = new Date();
+    const knownNew = new Date(2000, 0, 6, 18, 14, 0);
+    const daysSince = (now - knownNew) / (1000 * 60 * 60 * 24);
+    const phase = ((daysSince % SYNODIC) / SYNODIC);
+    return phase < 0 ? phase + 1 : phase;
   }
-  function realAge() {
-    return ((Date.now() - EPOCH) / 86400000) % SYNODIC;
+  function drawMoon(size, phase) {
+    const c = document.createElement('canvas');
+    c.width = size; c.height = size;
+    const ctx = c.getContext('2d');
+    ctx.clearRect(0, 0, size, size);
+    const cx = size / 2, cy = size / 2, r = size / 2 - 4;
+    const baseGrad = ctx.createRadialGradient(cx * 0.92, cy * 0.88, r * 0.05, cx, cy, r);
+    baseGrad.addColorStop(0, '#e4e8f8'); baseGrad.addColorStop(0.25, '#d4d8ea');
+    baseGrad.addColorStop(0.55, '#bcc0d0'); baseGrad.addColorStop(0.8, '#8088a0');
+    baseGrad.addColorStop(0.95, '#404860'); baseGrad.addColorStop(1, '#141828');
+    ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2);
+    ctx.fillStyle = baseGrad; ctx.fill();
+    [
+      { x: 0.38, y: 0.32, rx: 0.18, ry: 0.12, rot: -0.3, color: 'rgba(70,78,98,0.45)' },
+      { x: 0.55, y: 0.42, rx: 0.12, ry: 0.15, rot: 0.1, color: 'rgba(66,74,94,0.4)' },
+      { x: 0.48, y: 0.55, rx: 0.14, ry: 0.10, rot: 0.2, color: 'rgba(62,70,90,0.35)' },
+      { x: 0.35, y: 0.50, rx: 0.08, ry: 0.06, rot: -0.1, color: 'rgba(68,76,96,0.3)' },
+      { x: 0.60, y: 0.30, rx: 0.06, ry: 0.08, rot: 0.4, color: 'rgba(64,72,92,0.35)' },
+      { x: 0.42, y: 0.65, rx: 0.10, ry: 0.07, rot: -0.2, color: 'rgba(66,74,94,0.28)' },
+      { x: 0.30, y: 0.42, rx: 0.07, ry: 0.09, rot: 0.15, color: 'rgba(62,70,88,0.3)' },
+    ].forEach(m => {
+      ctx.save();
+      ctx.translate(cx + (m.x - 0.5) * r * 2, cy + (m.y - 0.5) * r * 2);
+      ctx.rotate(m.rot);
+      ctx.beginPath();
+      ctx.ellipse(0, 0, m.rx * r * 2, m.ry * r * 2, 0, 0, Math.PI * 2);
+      ctx.fillStyle = m.color; ctx.fill();
+      ctx.restore();
+    });
+    const rng = (seed) => { let s = seed; return () => { s = (s * 9301 + 49297) % 233280; return s / 233280; }; };
+    const rand = rng(42);
+    for (let i = 0; i < 90; i++) {
+      const angle = rand() * Math.PI * 2;
+      const dist = rand() * r * 0.88;
+      const crx = cx + Math.cos(angle) * dist;
+      const cry = cy + Math.sin(angle) * dist;
+      const cr = 1 + rand() * (size * 0.022);
+      const dx = crx - cx, dy = cry - cy;
+      if (Math.sqrt(dx * dx + dy * dy) + cr > r - 4) continue;
+      ctx.beginPath(); ctx.arc(crx, cry, cr, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(70,68,62,${0.12 + rand() * 0.18})`; ctx.fill();
+      ctx.beginPath(); ctx.arc(crx - cr * 0.25, cry - cr * 0.25, cr * 1.1, 0, Math.PI * 2);
+      ctx.strokeStyle = `rgba(220,218,212,${0.08 + rand() * 0.12})`;
+      ctx.lineWidth = 0.5 + rand() * 0.8; ctx.stroke();
+    }
+    [{ x: 0.42, y: 0.75, cr: size * 0.018, rays: 8 }, { x: 0.55, y: 0.25, cr: size * 0.014, rays: 6 }].forEach(rc => {
+      const rcx = cx + (rc.x - 0.5) * r * 2, rcy = cy + (rc.y - 0.5) * r * 2;
+      for (let j = 0; j < rc.rays; j++) {
+        const a = (j / rc.rays) * Math.PI * 2 + 0.3;
+        const len = rc.cr * (3 + rand() * 4);
+        ctx.beginPath(); ctx.moveTo(rcx, rcy);
+        ctx.lineTo(rcx + Math.cos(a) * len, rcy + Math.sin(a) * len);
+        ctx.strokeStyle = `rgba(210,208,200,${0.06 + rand() * 0.05})`;
+        ctx.lineWidth = 1 + rand() * 1.2; ctx.stroke();
+      }
+      ctx.beginPath(); ctx.arc(rcx, rcy, rc.cr, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(230,228,220,0.35)'; ctx.fill();
+    });
+    for (let i = 0; i < 4000; i++) {
+      const nx = rand() * size, ny = rand() * size;
+      const ndx = nx - cx, ndy = ny - cy;
+      if (Math.sqrt(ndx * ndx + ndy * ndy) > r - 2) continue;
+      const v = rand() > 0.5 ? 190 : 100;
+      ctx.fillStyle = `rgba(${v},${v - 3},${v - 8},${0.015 + rand() * 0.03})`;
+      ctx.fillRect(nx, ny, 1 + rand() * 1.5, 1 + rand() * 1.5);
+    }
+    ctx.globalCompositeOperation = 'destination-in';
+    ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2);
+    ctx.fillStyle = 'white'; ctx.fill();
+    ctx.globalCompositeOperation = 'source-over';
+    if (Math.abs(phase - 0.5) > 0.02) {
+      ctx.save();
+      ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.clip();
+      const waxing = phase < 0.5;
+      const illumFraction = waxing ? phase * 2 : (1 - phase) * 2;
+      ctx.fillStyle = 'rgba(5,5,8,0.92)';
+      ctx.fillRect(0, 0, size, size);
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.beginPath();
+      if (waxing) {
+        ctx.arc(cx, cy, r - 1, -Math.PI / 2, Math.PI / 2, false);
+        const termX = r * (2 * illumFraction - 1);
+        ctx.ellipse(cx, cy, Math.abs(termX) + 1, r - 1, 0, Math.PI / 2, -Math.PI / 2, termX > 0 ? false : true);
+      } else {
+        ctx.arc(cx, cy, r - 1, Math.PI / 2, -Math.PI / 2, false);
+        const termX = r * (2 * illumFraction - 1);
+        ctx.ellipse(cx, cy, Math.abs(termX) + 1, r - 1, 0, -Math.PI / 2, Math.PI / 2, termX > 0 ? false : true);
+      }
+      ctx.fill();
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.restore();
+    }
+    const edgeGrad = ctx.createRadialGradient(cx, cy, r * 0.88, cx, cy, r - 1);
+    edgeGrad.addColorStop(0, 'rgba(190,200,225,0)');
+    edgeGrad.addColorStop(0.6, 'rgba(190,200,225,0.06)');
+    edgeGrad.addColorStop(1, 'rgba(170,185,218,0.18)');
+    ctx.beginPath(); ctx.arc(cx, cy, r - 1, 0, Math.PI * 2);
+    ctx.fillStyle = edgeGrad; ctx.fill();
+    return c;
   }
-  draw(realAge());
-  window.setMoonAge = draw;   // dev hook — audition any phase from the console
+  function mount(phase) {
+    el.innerHTML = '';
+    const c = drawMoon(192, phase);
+    c.style.width = '100%'; c.style.height = '100%';
+    el.appendChild(c);
+  }
+  mount(getLunarPhase());
+  window.setMoonAge = days => mount((days % SYNODIC) / SYNODIC);   // dev hook
 })();
 
 function dtTileEl(t, interactive) {
