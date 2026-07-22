@@ -190,6 +190,10 @@ footer {
   font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--ink-low);
   z-index: 10;
+  /* meta is a whisper, never a wall (2026-07-22 audit: at desktop the
+     footer's fixed band sat OVER commit your pin / reconsider and ate
+     the click — a bottom-band contract violation found by hit-test) */
+  pointer-events: none;
 }
 .event-id strong { color: var(--ink-mid); font-weight: 500; }
 .asym { text-align: right; }
@@ -4658,6 +4662,15 @@ function commitGraph() {
   try { captureTickerDeltas(); } catch (e) { console.warn('[v2] ticker capture failed:', e && e.message); }
   aggCommitted = true;
   graphCommitBtn.disabled = true;
+  // Bottom-band contract, audit follow-up (2026-07-22): at desktop heights
+  // the centered graph layout can rest RECONSIDER under the arriving strip
+  // (the measured clearance only helps once the stage is scrolled). The
+  // moment the ticker takes the band, settle the stage so the foot rests
+  // above it — the affordance is never born buried.
+  try {
+    const gp = document.querySelector('.graph-phase');
+    if (gp) setTimeout(() => { gp.scrollTo({ top: gp.scrollHeight, behavior: 'smooth' }); }, 350);
+  } catch (_) {}
   if (mountGM()) {
     // Hand the committed graph to the graphmap FACTORY — v56 pins, true 3D
     // depth, full orbit (incl. around to −z). The CSS pad retires here.
