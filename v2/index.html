@@ -1897,6 +1897,10 @@ body.light #starPierce { display: none; }
   transform-origin: center center;
   transition: transform 0.72s cubic-bezier(0.22,1,0.36,1), opacity 0.6s ease; }
 .ev-logo-prism { width: 100%; height: auto; display: block; filter: drop-shadow(0 2px 12px rgba(0,0,0,0.5)); }
+/* elastic desktop: the hero is the elastic PRISM plate (portrait ~0.79),
+   not a wide ribbon — the logo block narrows so the triangle stands at a
+   hero height instead of stretching wall-to-wall */
+.ev-logo.prismform { width: clamp(180px, 24vw, 260px); }
 .ev-logo-word { width: clamp(100px, 27vw, 176px); height: auto; display: block;
   transition: opacity 0.45s ease, transform 0.5s ease; }
 .ev-logo:hover { opacity: 0.95; }
@@ -7074,10 +7078,32 @@ applyState(true);
     applyRibbonExt();
     if (ribbonImg.getAttribute('src') !== v.src) ribbonImg.src = v.src;
     else positionRibbon(true);
+    try { syncSplashHero(); } catch (_) {}   // the introit hero rides the variant
     return key;
   };
   if (RV !== RIBBON_VARIANTS.full) ribbonImg.src = RV.src;
   applyRibbonExt();
+  // Introit hero follows the NAV TOOL (Sailor, 2026-07-22): the splash prism
+  // is the same object you navigate with — on the elastic desktop that's the
+  // elastic prism plate (which is ALSO the morph's landing rect, so splash →
+  // seat is one picture again); on the phone it's the active ribbon painting
+  // (r9 by default — the old hardcoded full-painting src predated the r9
+  // ruling and morphed onto a different picture).
+  function syncSplashHero() {
+    const hero = document.querySelector('.ev-logo-prism');
+    const logo = document.getElementById('evLogo');
+    if (!hero) return;
+    if (isElastic()) {
+      const want = '../src/img/nav/elastic-prism.png';
+      if (hero.getAttribute('src') !== want) hero.src = want;
+      if (logo) logo.classList.add('prismform');
+    } else {
+      if (hero.getAttribute('src') !== ribbonImg.getAttribute('src')) hero.src = ribbonImg.getAttribute('src');
+      if (logo) logo.classList.remove('prismform');
+    }
+  }
+  syncSplashHero();
+  try { elasticMQ.addEventListener('change', syncSplashHero); } catch (_) {}
   const LOWER  = ['beam', 'prism', 'refraction'];
   const UPPER  = ['diatribe', 'parallax', 'spectrum'];
   const LABELS = { 0: ['Profile', 'Diatribe'], 1: ['Prism', 'Parallax'], 2: ['Refraction', 'Spectrum'] };
