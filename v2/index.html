@@ -22,6 +22,15 @@
 
 body { font-size: 17px; overflow: hidden; }
 
+/* iOS long-press interception (Sailor's phone walk, 2026-07-22): a hold on
+   the instrument must charge the ring — never summon the system's Copy /
+   Look Up bar or the image share sheet. The instrument is not selectable
+   text; the writing surfaces opt back in below. */
+html { -webkit-touch-callout: none; }
+body { -webkit-user-select: none; user-select: none; }
+input, textarea, select, [contenteditable="true"] { -webkit-user-select: text; user-select: text; }
+img { -webkit-user-drag: none; }
+
 /* ── HEADER ──  a clean top bar that clears the notch / Dynamic Island.
    The ribbon nav lives in its own band just below this (see ribbon CSS). */
 header {
@@ -1323,7 +1332,10 @@ body.light .event-picker { color: rgba(40,44,54,0.85); background: rgba(255,255,
 .graph-foot { margin-top: 28px; display: flex; align-items: center; gap: 28px; flex-wrap: wrap; justify-content: center; }
 
 @media (max-width: 860px) {
-  .graph-phase { padding: 60px 18px 56px; }
+  /* clear the whole top chrome (notch + header + seated ribbon) — the flat
+     60px let the framing sentence tangle with the painting (Sailor's phone
+     walk, 2026-07-22) */
+  .graph-phase { padding: calc(var(--top-chrome) + 10px) 18px 56px; }
   .graph-foot { flex-wrap: wrap; justify-content: center; gap: 16px; }
 }
 @media (max-width: 480px) {
@@ -1791,7 +1803,12 @@ body.phase-event .ted-guide, body.phase-diatribe .ted-guide {
    (and calls him back); one turns on cursor-hover commentary. ── */
 .ted-dock { position: fixed; left: 10px; bottom: calc(8px + var(--safe-bottom)); z-index: 61;
   display: none; gap: 7px; pointer-events: auto; }
-body.phase-event .ted-dock, body.phase-diatribe .ted-dock { display: flex; }
+/* Dock RELOCATED into the hold-to-summon menu (Sailor, 2026-07-22 phone
+   walk) — the chips never render; the buttons stay in the DOM as the menu
+   rows' state machinery (aria-pressed is the single source of truth).
+   --ted-dock-h pinned to 0 so the band contract stops reserving chip room. */
+.ted-dock { display: none !important; }
+:root { --ted-dock-h: 0px; }
 .ted-toggle { font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.1em; text-transform: uppercase;
   color: var(--ink-low); background: rgba(9,15,32,0.78); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
   border: 0.5px solid var(--rule); border-radius: 999px; padding: 6px 11px; cursor: pointer;
@@ -2686,6 +2703,9 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
 </div>
 <div class="nav-summon" id="navSummon" hidden role="menu" aria-label="Prism tool menu">
   <button class="ns-item" type="button" data-act="ted" role="menuitem">ted<span class="ns-state" id="nsTedState"></span></button>
+  <button class="ns-item" type="button" data-act="guide" role="menuitem">guide me<span class="ns-state" id="nsGuideState"></span></button>
+  <button class="ns-item" type="button" data-act="voice" role="menuitem">ted's voice<span class="ns-state" id="nsVoiceState"></span></button>
+  <div class="ns-sep"></div>
   <button class="ns-item" type="button" data-act="theme" role="menuitem">daylight<span class="ns-state" id="nsThemeState"></span></button>
   <button class="ns-item" type="button" data-act="members" role="menuitem"><span id="nsMemGlyph">&#9670;</span>&nbsp;legislators<span class="ns-state" id="nsMemState"></span></button>
   <button class="ns-item" type="button" data-act="bills" role="menuitem"><span id="nsBillGlyph">&#9671;</span>&nbsp;legislation<span class="ns-state" id="nsBillState"></span></button>
@@ -6704,6 +6724,23 @@ applyState(true);
     narrating: function () { return narrate; },
   };
 
+  // Audit finding 1 (fixed 2026-07-22): a hint bubble's lifecycle ends with
+  // its stage. Any phase flip dismisses it, so the DIATRIBE hint can never
+  // linger over the answers nav or eat the commit tap. (The faded state
+  // already loses pointer-events by construction: .ted-guide without .show
+  // is pointer-events: none.)
+  (function () {
+    const PHASES = ['phase-event', 'phase-diatribe', 'phase-answers', 'phase-graph'];
+    const sigOf = () => PHASES.filter(c => body.classList.contains(c)).join(' ');
+    let sig = sigOf();
+    try {
+      new MutationObserver(() => {
+        const now = sigOf();
+        if (now !== sig) { sig = now; hide(); }
+      }).observe(body, { attributes: true, attributeFilter: ['class'] });
+    } catch (_) {}
+  })();
+
   // ── The scale of thirds, in plain language. Fired from the diatribe slider
   //    as the cursor crosses from one band into the next. ──
   const BAND_LINES = {
@@ -7474,9 +7511,11 @@ applyState(true);
   const holdRing = document.getElementById('navHoldRing');
   const holdArc  = holdRing ? holdRing.querySelector('.nhr-arc') : null;
   const summonEl = document.getElementById('navSummon');
-  let hold = null;                 // { x0, y0, t0, raf }
+  const heroLogo = document.getElementById('evLogo');
+  let hold = null;                 // { x0, y0, t0, raf, src: 'ribbon'|'hero', pt }
   let summonOpen = false;
-  let swallowClick = false;        // the click after a summon must not column-jump
+  let swallowClick = false;        // ribbon: the click after a summon must not column-jump
+  let swallowHeroClick = false;    // hero: the click after a summon must not ADVANCE the flow
 
   // viewport centre + radius of the SEATED prism — the hold target
   function prismPoint() {
@@ -7487,12 +7526,22 @@ applyState(true);
     const p = trianglePoint();     // analytic seat — at rest this IS the triangle
     return { x: p.x, y: p.y, r: Math.max(26, p.h * 0.52) };
   }
-  function overPrism(e) {
-    const p = prismPoint();
+  // the hold target on the INTROIT HERO (Sailor, 2026-07-22 phone walk —
+  // supersedes the seated-only lean: the menu is reachable from the introit
+  // too). Same object logic as the seated tool: on the elastic desktop the
+  // hero is the prism plate (whole image); on phone it is the active ribbon
+  // painting, so the hold target is its fx point region.
+  function heroPoint() {
+    const hero = (heroLogo && heroLogo.querySelector('.ev-logo-prism')) || heroLogo;
+    const r = hero.getBoundingClientRect();
+    if (isElastic()) return { x: r.left + r.width / 2, y: r.top + r.height / 2, r: Math.max(r.width, r.height) / 2 + 6 };
+    return { x: r.left + TRIANGLE_FRAC * r.width, y: r.top + r.height / 2, r: Math.max(26, r.height * 0.55) };
+  }
+  function overPoint(e, p) {
     return Math.hypot(e.clientX - p.x, e.clientY - p.y) <= p.r + 8;
   }
-  function ringSeat() {
-    const p = prismPoint(), R = p.r + 6, d = R * 2;
+  function ringSeat(p) {
+    const R = p.r + 6, d = R * 2;
     holdRing.style.left = (p.x - R) + 'px'; holdRing.style.top = (p.y - R) + 'px';
     holdRing.style.width = d + 'px'; holdRing.style.height = d + 'px';
   }
@@ -7501,13 +7550,17 @@ applyState(true);
     const p = Math.min(1, (now - hold.t0) / NAV_HOLD_MS);
     holdArc.style.strokeDashoffset = (NHR_C * (1 - p)).toFixed(1);
     if (p >= 1) {
-      hold = null;
+      const done = hold; hold = null;
       holdRing.classList.remove('charging');
       holdRing.classList.add('bloom');                 // the ring becomes the menu
-      swallowClick = true;                             // the release must not zone-jump
       try { if (navigator.vibrate) navigator.vibrate(10); } catch (_) {}
-      endDrag();                                       // release the ribbon cleanly (it never moved)
-      openSummon();
+      if (done.src === 'ribbon') {
+        swallowClick = true;                           // the release must not zone-jump
+        endDrag();                                     // release the ribbon cleanly (it never moved)
+      } else {
+        swallowHeroClick = true;                       // the release must not advance the introit
+      }
+      openSummon(done.pt);
     } else hold.raf = requestAnimationFrame(holdFrame);
   }
   function holdCancel(evaporate) {
@@ -7517,22 +7570,24 @@ applyState(true);
     if (evaporate) {                                   // early release — the dissolve
       holdRing.classList.add('evaporate');
       setTimeout(() => holdRing.classList.remove('evaporate'), 320);
-    }                                                  // movement — instant yield to the drag
+    }                                                  // movement — instant yield to the drag/grab
+  }
+  function startHold(e, src, pt) {
+    if (summonOpen || !e.isPrimary || (e.button !== undefined && e.button !== 0)) return;
+    if (!overPoint(e, pt)) return;
+    holdRing.classList.remove('evaporate', 'bloom');
+    holdArc.style.strokeDashoffset = NHR_C;
+    ringSeat(pt);
+    holdRing.classList.add('charging');
+    hold = { x0: e.clientX, y0: e.clientY, t0: performance.now(), raf: 0, src: src, pt: pt };
+    hold.raf = requestAnimationFrame(holdFrame);
+  }
+  function holdMove(e) {
+    if (hold && Math.hypot(e.clientX - hold.x0, e.clientY - hold.y0) > NAV_HOLD_TOL) holdCancel(false);
   }
   if (holdRing && holdArc && summonEl) {
-    ribbon.addEventListener('pointerdown', e => {
-      if (summonOpen || !e.isPrimary || (e.button !== undefined && e.button !== 0)) return;
-      if (!overPrism(e)) return;
-      holdRing.classList.remove('evaporate', 'bloom');
-      holdArc.style.strokeDashoffset = NHR_C;
-      ringSeat();
-      holdRing.classList.add('charging');
-      hold = { x0: e.clientX, y0: e.clientY, t0: performance.now(), raf: 0 };
-      hold.raf = requestAnimationFrame(holdFrame);
-    });
-    ribbon.addEventListener('pointermove', e => {
-      if (hold && Math.hypot(e.clientX - hold.x0, e.clientY - hold.y0) > NAV_HOLD_TOL) holdCancel(false);
-    });
+    ribbon.addEventListener('pointerdown', e => startHold(e, 'ribbon', prismPoint()));
+    ribbon.addEventListener('pointermove', holdMove);
     ribbon.addEventListener('pointerup', () => {
       holdCancel(true);
       if (swallowClick) setTimeout(() => { swallowClick = false; }, 100);   // click (if any) lands first; never leave a stale swallow
@@ -7542,6 +7597,27 @@ applyState(true);
     ribbon.addEventListener('click', e => {
       if (swallowClick) { e.stopPropagation(); e.preventDefault(); swallowClick = false; }
     }, true);
+    // no system context menu on the instrument (iOS long-press / desktop
+    // right-click both land here) — the hold owns the long press
+    ribbon.addEventListener('contextmenu', e => e.preventDefault());
+    if (heroLogo) {
+      heroLogo.addEventListener('pointerdown', e => {
+        if (!document.body.classList.contains('phase-event')) return;   // introit only
+        startHold(e, 'hero', heroPoint());
+      });
+      heroLogo.addEventListener('pointermove', holdMove);
+      heroLogo.addEventListener('pointerup', () => {
+        holdCancel(true);
+        if (swallowHeroClick) setTimeout(() => { swallowHeroClick = false; }, 100);
+      });
+      heroLogo.addEventListener('pointercancel', () => { holdCancel(true); swallowHeroClick = false; });
+      // capture-phase: a summoning hold's release is not a "clean click" —
+      // it must never advance the splash
+      heroLogo.addEventListener('click', e => {
+        if (swallowHeroClick) { e.stopPropagation(); e.preventDefault(); swallowHeroClick = false; }
+      }, true);
+      heroLogo.addEventListener('contextmenu', e => e.preventDefault());
+    }
   }
 
   // ── the menu itself ──
@@ -7554,9 +7630,16 @@ applyState(true);
   function refreshSummon() {
     const $ = id => document.getElementById(id);
     const row = act => summonEl.querySelector('[data-act="' + act + '"]');
-    const ted = $('tedAwayToggle');
-    if (ted) { row('ted').disabled = false; $('nsTedState').textContent = ted.getAttribute('aria-pressed') === 'true' ? 'here' : 'away'; }   // pressed = present (setAway inverts)
-    else row('ted').disabled = true;
+    // the dock's three toggles, relocated (2026-07-22) — aria-pressed is the
+    // source of truth: ted pressed = PRESENT (setAway inverts); guide/voice
+    // pressed = on
+    [['ted', 'tedAwayToggle', 'nsTedState', ['here', 'away']],
+     ['guide', 'tedNarrateToggle', 'nsGuideState', ['on', 'off']],
+     ['voice', 'tedVoiceToggle', 'nsVoiceState', ['on', 'off']]].forEach(t => {
+      const btn = $(t[1]), r = row(t[0]);
+      if (btn) { r.disabled = false; $(t[2]).textContent = btn.getAttribute('aria-pressed') === 'true' ? t[3][0] : t[3][1]; }
+      else r.disabled = true;
+    });
     $('nsThemeState').textContent = document.body.classList.contains('light') ? 'on' : 'off';
     [['members', 'memberToggle', 'nsMemGlyph', 'nsMemState', '.member-toggle-glyph'],
      ['bills', 'billToggle', 'nsBillGlyph', 'nsBillState', '.member-toggle-glyph']].forEach(cfg => {
@@ -7576,9 +7659,9 @@ applyState(true);
     const cur = currentRibbonKey();
     wrap.querySelectorAll('.ns-rv').forEach(b => b.classList.toggle('on', b.dataset.rv === cur));
   }
-  function openSummon() {
+  function openSummon(p) {
     refreshSummon();
-    const p = prismPoint();
+    if (!p) p = prismPoint();
     summonEl.hidden = false;
     const below = p.y < window.innerHeight / 2;        // top seat blooms down; bottom seat blooms up
     summonEl.classList.toggle('above', !below);
@@ -7611,6 +7694,8 @@ applyState(true);
     if (!b || b.disabled) return;
     const act = b.dataset.act, $ = id => document.getElementById(id);
     if (act === 'ted') { const t = $('tedAwayToggle'); if (t) t.click(); }
+    else if (act === 'guide') { const t = $('tedNarrateToggle'); if (t) t.click(); }
+    else if (act === 'voice') { const t = $('tedVoiceToggle'); if (t) t.click(); }
     else if (act === 'theme') { if (window.toggleMode) window.toggleMode(); }
     else if (act === 'members') { const t = $('memberToggle'); if (t && !t.hidden) t.click(); }
     else if (act === 'bills') { const t = $('billToggle'); if (t && !t.hidden) t.click(); }
