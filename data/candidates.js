@@ -1,11 +1,11 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-07-23T19:52:22.779Z · 40 legislative + 8 news (GDELT, 3d)
+// 2026-07-23T22:29:06.737Z · 40 legislative + 8 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1784836291966,
+    "ts": 1784845699430,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
@@ -259,11 +259,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1784836291966,
+    "ts": 1784845699430,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.828,
+      "salience": 0.827,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1784836291965,
+    "ts": 1784845699430,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.799,
+      "salience": 0.798,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1784836291966,
+    "ts": 1784845699430,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.783,
+      "salience": 0.782,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3256,7 +3256,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1784836291965,
+    "ts": 1784845699430,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
@@ -4658,7 +4658,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1784836291966,
+    "ts": 1784845699430,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
@@ -4932,7 +4932,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1784836291966,
+    "ts": 1784845699430,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
@@ -5203,7 +5203,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1784836291965,
+    "ts": 1784845699429,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
@@ -6605,11 +6605,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1784836291965,
+    "ts": 1784845699429,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.696,
+      "salience": 0.695,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -8007,11 +8007,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1784836291964,
+    "ts": 1784845699427,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.686,
+      "salience": 0.685,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -9176,7 +9176,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1784836291965,
+    "ts": 1784845699430,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
@@ -10110,7 +10110,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1041",
     "source": "legislative",
-    "ts": 1784836291965,
+    "ts": 1784845699429,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1041",
@@ -11507,11 +11507,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2616",
     "source": "legislative",
-    "ts": 1784836291965,
+    "ts": 1784845699429,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2616",
-      "salience": 0.636,
+      "salience": 0.635,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2616",
       "votes": [
         {
@@ -12901,11 +12901,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1784836291965,
+    "ts": 1784845699430,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
-      "salience": 0.633,
+      "salience": 0.632,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2913",
       "votes": [
         {
@@ -13833,7 +13833,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1784836291966,
+    "ts": 1784845699430,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
@@ -14109,11 +14109,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1784836291965,
+    "ts": 1784845699430,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
-      "salience": 0.63,
+      "salience": 0.629,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8312",
       "votes": [
         {
@@ -15042,11 +15042,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7567",
     "source": "legislative",
-    "ts": 1784836291964,
+    "ts": 1784845699428,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7567",
-      "salience": 0.621,
+      "salience": 0.62,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7567",
       "votes": [
         {
@@ -20699,7 +20699,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1784836291965,
+    "ts": 1784845699430,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
@@ -21632,7 +21632,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6260",
     "source": "legislative",
-    "ts": 1784836291964,
+    "ts": 1784845699428,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6260",
@@ -23034,7 +23034,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8365",
     "source": "legislative",
-    "ts": 1784836291965,
+    "ts": 1784845699428,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8365",
@@ -24436,11 +24436,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1346",
     "source": "legislative",
-    "ts": 1784836291964,
+    "ts": 1784845699428,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1346",
-      "salience": 0.59,
+      "salience": 0.589,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1346",
       "votes": [
         {
@@ -25836,7 +25836,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-141",
     "source": "legislative",
-    "ts": 1784836291966,
+    "ts": 1784845699430,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-141",
@@ -26112,7 +26112,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-132",
     "source": "legislative",
-    "ts": 1784836291966,
+    "ts": 1784845699430,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-132",
@@ -26388,11 +26388,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-130",
     "source": "legislative",
-    "ts": 1784836291966,
+    "ts": 1784845699430,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-130",
-      "salience": 0.545,
+      "salience": 0.544,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/130",
       "votes": [
         {
@@ -26664,7 +26664,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6047",
     "source": "legislative",
-    "ts": 1784836291965,
+    "ts": 1784845699429,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6047",
@@ -27589,7 +27589,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-99",
     "source": "legislative",
-    "ts": 1784836291966,
+    "ts": 1784845699430,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-99",
@@ -27863,7 +27863,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1784836291966,
+    "ts": 1784845699430,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
@@ -29266,11 +29266,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-139",
     "source": "legislative",
-    "ts": 1784836291966,
+    "ts": 1784845699430,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-139",
-      "salience": 0.482,
+      "salience": 0.481,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/139",
       "votes": [
         {
@@ -29541,7 +29541,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1784836291966,
+    "ts": 1784845699430,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
@@ -30434,7 +30434,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1784836291966,
+    "ts": 1784845699430,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
@@ -31349,7 +31349,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1784836291966,
+    "ts": 1784845699430,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
@@ -32237,11 +32237,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1784836291966,
+    "ts": 1784845699430,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.416,
+      "salience": 0.415,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -33158,11 +33158,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1784836291966,
+    "ts": 1784845699430,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.405,
+      "salience": 0.404,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -34076,11 +34076,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5625",
     "source": "legislative",
-    "ts": 1784836291964,
+    "ts": 1784845699428,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5625",
-      "salience": 0.369,
+      "salience": 0.368,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5625",
       "votes": [
         {
@@ -35011,11 +35011,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1784836291966,
+    "ts": 1784845699430,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.345,
+      "salience": 0.344,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -35910,11 +35910,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8469",
     "source": "legislative",
-    "ts": 1784836291965,
+    "ts": 1784845699429,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8469",
-      "salience": 0.339,
+      "salience": 0.338,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8469",
       "votes": [
         {
@@ -37312,7 +37312,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4465",
     "source": "legislative",
-    "ts": 1784836291964,
+    "ts": 1784845699428,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4465",
@@ -38195,7 +38195,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1784836291965,
+    "ts": 1784845699429,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
@@ -39129,7 +39129,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2853",
     "source": "legislative",
-    "ts": 1784836291964,
+    "ts": 1784845699428,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2853",
@@ -40047,11 +40047,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1784836291965,
+    "ts": 1784845699429,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
-      "salience": 0.242,
+      "salience": 0.241,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/254",
       "votes": [
         {
@@ -40976,101 +40976,101 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_admin-blocked-ending",
     "source": "news",
-    "ts": 1784836342770,
+    "ts": 1784845746728,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.998,
+      "salience": 0.991,
       "articles": [
         {
-          "title": "Trump Admin Temporarily Blocked From Ending Haitian TPS",
-          "url": "https://powertalk1360.iheart.com/content/2026-07-23-trump-admin-temporarily-blocked-from-ending-haitians-tps/",
-          "domain": "powertalk1360.iheart.com",
-          "seendate": "2026-07-23T19:30:00Z",
+          "title": "Trump Admin Temporarily Blocked From Ending Haitian TPS | NewsTalk WMEQ",
+          "url": "https://wmeq.iheart.com/content/2026-07-23-trump-admin-temporarily-blocked-from-ending-haitians-tps/",
+          "domain": "wmeq.iheart.com",
+          "seendate": "2026-07-23T21:00:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a623d0316b6f2aaa0a81a82?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
           "title": "Trump Admin Temporarily Blocked From Ending Haitian TPS",
-          "url": "https://wtag.iheart.com/content/2026-07-23-trump-admin-temporarily-blocked-from-ending-haitians-tps/",
-          "domain": "wtag.iheart.com",
-          "seendate": "2026-07-23T19:00:00Z",
+          "url": "https://newstalk1230.iheart.com/content/2026-07-23-trump-admin-temporarily-blocked-from-ending-haitians-tps/",
+          "domain": "newstalk1230.iheart.com",
+          "seendate": "2026-07-23T21:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a623d0316b6f2aaa0a81a82?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Trump Admin Temporarily Blocked From Ending Haitian TPS | News Radio 920 AM & 104 . 7 FM",
+          "url": "https://newsradiori.iheart.com/content/2026-07-23-trump-admin-temporarily-blocked-from-ending-haitians-tps/",
+          "domain": "newsradiori.iheart.com",
+          "seendate": "2026-07-23T21:00:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a623d0316b6f2aaa0a81a82?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
           "title": "Trump Admin Temporarily Blocked From Ending Haitian TPS",
-          "url": "https://whoradio.iheart.com/content/2026-07-23-trump-admin-temporarily-blocked-from-ending-haitians-tps/",
-          "domain": "whoradio.iheart.com",
-          "seendate": "2026-07-23T19:00:00Z",
+          "url": "https://590kqnt.iheart.com/content/2026-07-23-trump-admin-temporarily-blocked-from-ending-haitians-tps/",
+          "domain": "590kqnt.iheart.com",
+          "seendate": "2026-07-23T20:45:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a623d0316b6f2aaa0a81a82?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
           "title": "Trump Admin Temporarily Blocked From Ending Haitian TPS",
-          "url": "https://wflaorlando.iheart.com/content/2026-07-23-trump-admin-temporarily-blocked-from-ending-haitians-tps/",
-          "domain": "wflaorlando.iheart.com",
-          "seendate": "2026-07-23T19:00:00Z",
+          "url": "https://talkradio1059.iheart.com/content/2026-07-23-trump-admin-temporarily-blocked-from-ending-haitians-tps/",
+          "domain": "talkradio1059.iheart.com",
+          "seendate": "2026-07-23T20:45:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a623d0316b6f2aaa0a81a82?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
           "title": "Trump Admin Temporarily Blocked From Ending Haitian TPS",
-          "url": "https://650keni.iheart.com/content/2026-07-23-trump-admin-temporarily-blocked-from-ending-haitians-tps/",
-          "domain": "650keni.iheart.com",
-          "seendate": "2026-07-23T18:45:00Z",
+          "url": "https://twincitiesnewstalk.iheart.com/content/2026-07-23-trump-admin-temporarily-blocked-from-ending-haitians-tps/",
+          "domain": "twincitiesnewstalk.iheart.com",
+          "seendate": "2026-07-23T20:30:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a623d0316b6f2aaa0a81a82?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
           "title": "Trump Admin Temporarily Blocked From Ending Haitian TPS",
-          "url": "https://710wor.iheart.com/content/2026-07-23-trump-admin-temporarily-blocked-from-ending-haitians-tps/",
-          "domain": "710wor.iheart.com",
-          "seendate": "2026-07-23T18:45:00Z",
+          "url": "https://wjno.iheart.com/content/2026-07-23-trump-admin-temporarily-blocked-from-ending-haitians-tps/",
+          "domain": "wjno.iheart.com",
+          "seendate": "2026-07-23T20:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a623d0316b6f2aaa0a81a82?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Trump Admin Temporarily Blocked From Ending Haitian TPS | NewsRadio WKCY",
+          "url": "https://newsradiowkcy.iheart.com/content/2026-07-23-trump-admin-temporarily-blocked-from-ending-haitians-tps/",
+          "domain": "newsradiowkcy.iheart.com",
+          "seendate": "2026-07-23T20:30:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a623d0316b6f2aaa0a81a82?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
           "title": "Trump Admin Temporarily Blocked From Ending Haitian TPS",
-          "url": "https://koacolorado.iheart.com/content/2026-07-23-trump-admin-temporarily-blocked-from-ending-haitians-tps/",
-          "domain": "koacolorado.iheart.com",
-          "seendate": "2026-07-23T18:15:00Z",
+          "url": "https://wwnc.iheart.com/content/2026-07-23-trump-admin-temporarily-blocked-from-ending-haitians-tps/",
+          "domain": "wwnc.iheart.com",
+          "seendate": "2026-07-23T20:30:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a623d0316b6f2aaa0a81a82?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
           "title": "Trump Admin Temporarily Blocked From Ending Haitian TPS",
-          "url": "https://kprcradio.iheart.com/content/2026-07-23-trump-admin-temporarily-blocked-from-ending-haitians-tps/",
-          "domain": "kprcradio.iheart.com",
-          "seendate": "2026-07-23T18:15:00Z",
+          "url": "https://wvoc.iheart.com/content/2026-07-23-trump-admin-temporarily-blocked-from-ending-haitians-tps/",
+          "domain": "wvoc.iheart.com",
+          "seendate": "2026-07-23T20:15:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a623d0316b6f2aaa0a81a82?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
           "title": "Trump Admin Temporarily Blocked From Ending Haitian TPS",
-          "url": "https://ktsmradio.iheart.com/content/2026-07-23-trump-admin-temporarily-blocked-from-ending-haitians-tps/",
-          "domain": "ktsmradio.iheart.com",
-          "seendate": "2026-07-23T18:15:00Z",
+          "url": "https://600wrec.iheart.com/content/2026-07-23-trump-admin-temporarily-blocked-from-ending-haitians-tps/",
+          "domain": "600wrec.iheart.com",
+          "seendate": "2026-07-23T20:00:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a623d0316b6f2aaa0a81a82?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
           "title": "Trump Admin Temporarily Blocked From Ending Haitian TPS",
-          "url": "https://newsradio1049.iheart.com/content/2026-07-23-trump-admin-temporarily-blocked-from-ending-haitians-tps/",
-          "domain": "newsradio1049.iheart.com",
-          "seendate": "2026-07-23T18:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a623d0316b6f2aaa0a81a82?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Trump Admin Temporarily Blocked From Ending Haitian TPS",
-          "url": "https://powertalk967.iheart.com/content/2026-07-23-trump-admin-temporarily-blocked-from-ending-haitians-tps/",
-          "domain": "powertalk967.iheart.com",
-          "seendate": "2026-07-23T18:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a623d0316b6f2aaa0a81a82?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Trump Admin Temporarily Blocked From Ending Haitian TPS",
-          "url": "https://wbex.iheart.com/content/2026-07-23-trump-admin-temporarily-blocked-from-ending-haitians-tps/",
-          "domain": "wbex.iheart.com",
-          "seendate": "2026-07-23T17:30:00Z",
+          "url": "https://1440wgig.iheart.com/content/2026-07-23-trump-admin-temporarily-blocked-from-ending-haitians-tps/",
+          "domain": "1440wgig.iheart.com",
+          "seendate": "2026-07-23T20:00:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a623d0316b6f2aaa0a81a82?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         }
       ]
     },
     "title": "Trump Admin Temporarily Blocked From Ending Haitian TPS",
-    "summary": "2026-07-23 powertalk1360.iheart.com: Trump Admin Temporarily Blocked From Ending Haitian TPS\n2026-07-23 wtag.iheart.com: Trump Admin Temporarily Blocked From Ending Haitian TPS\n2026-07-23 whoradio.iheart.com: Trump Admin Temporarily Blocked From Ending Haitian TPS\n2026-07-23 wflaorlando.iheart.com: Trump Admin Temporarily Blocked From Ending Haitian TPS\n2026-07-23 650keni.iheart.com: Trump Admin Temporarily Blocked From Ending Haitian TPS\n2026-07-23 710wor.iheart.com: Trump Admin Temporarily Blocked From Ending Haitian TPS",
+    "summary": "2026-07-23 wmeq.iheart.com: Trump Admin Temporarily Blocked From Ending Haitian TPS | NewsTalk WMEQ\n2026-07-23 newstalk1230.iheart.com: Trump Admin Temporarily Blocked From Ending Haitian TPS\n2026-07-23 newsradiori.iheart.com: Trump Admin Temporarily Blocked From Ending Haitian TPS | News Radio 920 AM & 104 . 7 FM\n2026-07-23 590kqnt.iheart.com: Trump Admin Temporarily Blocked From Ending Haitian TPS\n2026-07-23 talkradio1059.iheart.com: Trump Admin Temporarily Blocked From Ending Haitian TPS\n2026-07-23 twincitiesnewstalk.iheart.com: Trump Admin Temporarily Blocked From Ending Haitian TPS",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -41082,12 +41082,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_department-house-renaming",
     "source": "news",
-    "ts": 1784836342770,
+    "ts": 1784845746728,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.912,
+      "salience": 0.895,
       "articles": [
         {
           "title": "House votes for Department of War renaming as part of an annual defense bill",
@@ -41188,12 +41188,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_adopts-billion-gop",
     "source": "news",
-    "ts": 1784836342771,
+    "ts": 1784845746728,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.896,
+      "salience": 0.88,
       "articles": [
         {
           "title": "House GOP adopts $95 billion spending package",
@@ -41280,12 +41280,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_brazilian-canadian-goods",
     "source": "news",
-    "ts": 1784836342771,
+    "ts": 1784845746728,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.89,
+      "salience": 0.874,
       "articles": [
         {
           "title": "Trump revives tariff policy with new import taxes on Canadian , Brazilian goods",
@@ -41386,12 +41386,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_democrats-despite-failures",
     "source": "news",
-    "ts": 1784836342770,
+    "ts": 1784845746727,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.871,
+      "salience": 0.855,
       "articles": [
         {
           "title": "Democrats try new war powers resolution despite past failures",
@@ -41399,27 +41399,6 @@ window.PRISM_CANDIDATES = [
           "domain": "wpde.com",
           "seendate": "2026-07-22T23:15:00Z",
           "image": "https://wpde.com/resources/media2/16x9/5697/1320/0x1/90/5f76548d-7077-4e6d-aacb-e262247c35b5-GettyImages2287088396.jpg"
-        },
-        {
-          "title": "Democrats try new war powers resolution despite past failures",
-          "url": "https://local21news.com/news/nation-world/senate-democrats-try-new-iran-war-powers-resolution-despite-past-failures-congress-president-trump-white-house",
-          "domain": "local21news.com",
-          "seendate": "2026-07-22T23:15:00Z",
-          "image": "https://local21news.com/resources/media2/16x9/5697/1320/0x1/90/5f76548d-7077-4e6d-aacb-e262247c35b5-GettyImages2287088396.jpg"
-        },
-        {
-          "title": "Democrats try new war powers resolution despite past failures",
-          "url": "https://fox4beaumont.com/news/nation-world/senate-democrats-try-new-iran-war-powers-resolution-despite-past-failures-congress-president-trump-white-house",
-          "domain": "fox4beaumont.com",
-          "seendate": "2026-07-22T23:15:00Z",
-          "image": "https://fox4beaumont.com/resources/media2/16x9/5697/1320/0x1/90/5f76548d-7077-4e6d-aacb-e262247c35b5-GettyImages2287088396.jpg"
-        },
-        {
-          "title": "Democrats try new war powers resolution despite past failures",
-          "url": "https://myfox28columbus.com/news/nation-world/senate-democrats-try-new-iran-war-powers-resolution-despite-past-failures-congress-president-trump-white-house",
-          "domain": "myfox28columbus.com",
-          "seendate": "2026-07-22T23:15:00Z",
-          "image": "https://myfox28columbus.com/resources/media2/16x9/5697/1320/0x1/90/5f76548d-7077-4e6d-aacb-e262247c35b5-GettyImages2287088396.jpg"
         },
         {
           "title": "Democrats try new war powers resolution despite past failures",
@@ -41476,11 +41455,32 @@ window.PRISM_CANDIDATES = [
           "domain": "kfdm.com",
           "seendate": "2026-07-22T22:30:00Z",
           "image": "https://kfdm.com/resources/media2/16x9/5697/1320/0x1/90/5f76548d-7077-4e6d-aacb-e262247c35b5-GettyImages2287088396.jpg"
+        },
+        {
+          "title": "Democrats try new war powers resolution despite past failures",
+          "url": "https://foxbaltimore.com/station/share/senate-democrats-try-new-iran-war-powers-resolution-despite-past-failures-congress-president-trump-white-house",
+          "domain": "foxbaltimore.com",
+          "seendate": "2026-07-22T22:30:00Z",
+          "image": "https://foxbaltimore.com/resources/media2/16x9/5697/1320/0x1/90/5f76548d-7077-4e6d-aacb-e262247c35b5-GettyImages2287088396.jpg"
+        },
+        {
+          "title": "Democrats try new war powers resolution despite past failures",
+          "url": "https://foxsanantonio.com/news/nation-world/senate-democrats-try-new-iran-war-powers-resolution-despite-past-failures-congress-president-trump-white-house",
+          "domain": "foxsanantonio.com",
+          "seendate": "2026-07-22T22:30:00Z",
+          "image": "https://foxsanantonio.com/resources/media2/16x9/5697/1320/0x1/90/5f76548d-7077-4e6d-aacb-e262247c35b5-GettyImages2287088396.jpg"
+        },
+        {
+          "title": "Democrats try new war powers resolution despite past failures",
+          "url": "https://wcti12.com/news/nation-world/senate-democrats-try-new-iran-war-powers-resolution-despite-past-failures-congress-president-trump-white-house",
+          "domain": "wcti12.com",
+          "seendate": "2026-07-22T22:15:00Z",
+          "image": "https://wcti12.com/resources/media2/16x9/5697/1320/0x1/90/5f76548d-7077-4e6d-aacb-e262247c35b5-GettyImages2287088396.jpg"
         }
       ]
     },
     "title": "Democrats try new war powers resolution despite past failures",
-    "summary": "2026-07-22 wpde.com: Democrats try new war powers resolution despite past failures\n2026-07-22 local21news.com: Democrats try new war powers resolution despite past failures\n2026-07-22 fox4beaumont.com: Democrats try new war powers resolution despite past failures\n2026-07-22 myfox28columbus.com: Democrats try new war powers resolution despite past failures\n2026-07-22 13wham.com: Democrats try new war powers resolution despite past failures\n2026-07-22 fox11online.com: Democrats try new war powers resolution despite past failures",
+    "summary": "2026-07-22 wpde.com: Democrats try new war powers resolution despite past failures\n2026-07-22 13wham.com: Democrats try new war powers resolution despite past failures\n2026-07-22 fox11online.com: Democrats try new war powers resolution despite past failures\n2026-07-22 fox17.com: Democrats try new war powers resolution despite past failures\n2026-07-22 wgxa.tv: Democrats try new war powers resolution despite past failures\n2026-07-22 wtov9.com: Democrats try new war powers resolution despite past failures",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -41492,12 +41492,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_cleo-fields-louisiana",
     "source": "news",
-    "ts": 1784836342769,
+    "ts": 1784845746726,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.805,
+      "salience": 0.789,
       "articles": [
         {
           "title": "Louisiana Rep . Cleo Fields wont seek re - election",
@@ -41598,12 +41598,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_bashing-confirmed-house",
     "source": "news",
-    "ts": 1784836342769,
+    "ts": 1784845746726,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.514,
+      "salience": 0.497,
       "articles": [
         {
           "title": "White House lawyer confirmed to judgeship after bashing Republican senators",
@@ -41662,12 +41662,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_bill-congressional-house",
     "source": "news",
-    "ts": 1784836342770,
+    "ts": 1784845746728,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.386,
+      "salience": 0.37,
       "articles": [
         {
           "title": "House prepares vote on bill restricting congressional stock trading",
