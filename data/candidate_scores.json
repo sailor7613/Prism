@@ -1,6 +1,6 @@
 {
   "schema": "candidate_scores/v1",
-  "updated": "2026-07-21T05:34:54.603Z",
+  "updated": "2026-07-23T05:18:29.455Z",
   "records": {
     "cand_leg_s-119-2": {
       "mts": 1784044297585,
@@ -1662,6 +1662,33 @@
             }
           ]
         }
+      }
+    },
+    "cand_leg_hr-119-8800": {
+      "mts": 1784783906392,
+      "status": "new",
+      "title": "National Defense Authorization Act for Fiscal Year 2027",
+      "fitness": {
+        "score": 0.35,
+        "reason": "The passage vote (216-212, near party-line R209-7/D6-205) is a whipped, must-pass authorization vote where defection carries high political cost, so thin crossover doesn't itself refute a secondary axis. But the proposed posture axis (hawkish expansion vs. restraint) doesn't clearly predict the 7 GOP defectors or 6 Dem crossovers without member-level data — 'implicated members: 0' means we can't verify who defected against type. Absent evidence the defectors were libertarian/restraint-leaning Republicans or hawkish Blue Dogs, this remains a plausible but underdetermined secondary binary rather than a demonstrated cross-cut. It's substantive and non-degenerate in principle (restraint-vs-expansion genuinely splits both caucuses in commentary and think-tank debate), but without name-level confirmation here it can't score higher.",
+        "method": "m2_constitutive_v1",
+        "ts": "2026-07-23T05:18:26.392Z"
+      },
+      "framingDraft": "The NDAA vote nominally asks whether to authorize defense spending, but the deeper fault line concerns what kind of military posture the funding entrenches — expansive forward power projection versus restraint and homeland/burden-sharing focus. This tension cross-cuts the party-line passage vote because both parties contain internal factions on grand strategy that don't map cleanly onto the yea/nay tally.",
+      "suggestedAxes": {
+        "x": {
+          "pos": "Authorize",
+          "neg": "Block"
+        },
+        "y": {
+          "pos": "Expansive posture",
+          "neg": "Restraint/burden-sharing"
+        }
+      },
+      "prevalentAxisGuess": "x",
+      "voteMap": {
+        "voteId": "h-119-2026-278",
+        "yeaPole": "pos"
       }
     }
   }
