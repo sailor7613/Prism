@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-07-23T11:23:07.751Z · 40 legislative + 9 news (GDELT, 3d)
+// 2026-07-23T14:38:37.936Z · 40 legislative + 8 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1784805747831,
+    "ts": 1784817482709,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.838,
+      "salience": 0.837,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,7 +259,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1784805747830,
+    "ts": 1784817482709,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1784805747830,
+    "ts": 1784817482708,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.8,
+      "salience": 0.799,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -2843,7 +2843,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1784805747830,
+    "ts": 1784817482709,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
@@ -3256,11 +3256,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1784805747830,
+    "ts": 1784817482709,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.728,
+      "salience": 0.727,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4658,11 +4658,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1784805747830,
+    "ts": 1784817482709,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
-      "salience": 0.728,
+      "salience": 0.727,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
       "votes": [
         {
@@ -4932,11 +4932,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1784805747830,
+    "ts": 1784817482709,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.714,
+      "salience": 0.713,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5203,11 +5203,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1784805747830,
+    "ts": 1784817482708,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.703,
+      "salience": 0.702,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6605,11 +6605,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1784805747830,
+    "ts": 1784817482708,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.698,
+      "salience": 0.697,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -8007,11 +8007,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1784805747828,
+    "ts": 1784817482706,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.688,
+      "salience": 0.687,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -9176,11 +9176,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1784805747830,
+    "ts": 1784817482709,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.651,
+      "salience": 0.65,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -10110,11 +10110,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1041",
     "source": "legislative",
-    "ts": 1784805747830,
+    "ts": 1784817482708,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1041",
-      "salience": 0.641,
+      "salience": 0.64,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1041",
       "votes": [
         {
@@ -11507,11 +11507,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2616",
     "source": "legislative",
-    "ts": 1784805747829,
+    "ts": 1784817482708,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2616",
-      "salience": 0.638,
+      "salience": 0.637,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2616",
       "votes": [
         {
@@ -12901,7 +12901,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1784805747830,
+    "ts": 1784817482708,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
@@ -13833,11 +13833,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1784805747831,
+    "ts": 1784817482709,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.634,
+      "salience": 0.633,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -14109,7 +14109,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1784805747830,
+    "ts": 1784817482709,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
@@ -15042,7 +15042,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7567",
     "source": "legislative",
-    "ts": 1784805747828,
+    "ts": 1784817482706,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7567",
@@ -20699,11 +20699,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1784805747830,
+    "ts": 1784817482709,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.612,
+      "salience": 0.611,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -21632,11 +21632,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6260",
     "source": "legislative",
-    "ts": 1784805747829,
+    "ts": 1784817482707,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6260",
-      "salience": 0.609,
+      "salience": 0.608,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6260",
       "votes": [
         {
@@ -23034,11 +23034,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8365",
     "source": "legislative",
-    "ts": 1784805747829,
+    "ts": 1784817482707,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8365",
-      "salience": 0.609,
+      "salience": 0.608,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8365",
       "votes": [
         {
@@ -24436,7 +24436,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1346",
     "source": "legislative",
-    "ts": 1784805747829,
+    "ts": 1784817482707,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1346",
@@ -25836,11 +25836,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-141",
     "source": "legislative",
-    "ts": 1784805747831,
+    "ts": 1784817482709,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-141",
-      "salience": 0.573,
+      "salience": 0.572,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/141",
       "votes": [
         {
@@ -26112,11 +26112,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-132",
     "source": "legislative",
-    "ts": 1784805747831,
+    "ts": 1784817482709,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-132",
-      "salience": 0.555,
+      "salience": 0.554,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/132",
       "votes": [
         {
@@ -26388,11 +26388,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-130",
     "source": "legislative",
-    "ts": 1784805747831,
+    "ts": 1784817482709,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-130",
-      "salience": 0.546,
+      "salience": 0.545,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/130",
       "votes": [
         {
@@ -26664,11 +26664,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6047",
     "source": "legislative",
-    "ts": 1784805747830,
+    "ts": 1784817482708,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6047",
-      "salience": 0.545,
+      "salience": 0.544,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6047",
       "votes": [
         {
@@ -27589,11 +27589,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-99",
     "source": "legislative",
-    "ts": 1784805747831,
+    "ts": 1784817482709,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-99",
-      "salience": 0.497,
+      "salience": 0.496,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/99",
       "votes": [
         {
@@ -27863,11 +27863,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1784805747830,
+    "ts": 1784817482709,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.493,
+      "salience": 0.492,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -29266,7 +29266,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-139",
     "source": "legislative",
-    "ts": 1784805747831,
+    "ts": 1784817482709,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-139",
@@ -29541,11 +29541,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1784805747831,
+    "ts": 1784817482709,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.436,
+      "salience": 0.435,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -30434,11 +30434,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1784805747831,
+    "ts": 1784817482709,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.429,
+      "salience": 0.428,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -31349,11 +31349,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1784805747831,
+    "ts": 1784817482709,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.422,
+      "salience": 0.421,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -32237,7 +32237,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1784805747830,
+    "ts": 1784817482709,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
@@ -33158,7 +33158,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1784805747830,
+    "ts": 1784817482709,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
@@ -34076,7 +34076,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5625",
     "source": "legislative",
-    "ts": 1784805747829,
+    "ts": 1784817482707,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5625",
@@ -35011,7 +35011,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1784805747830,
+    "ts": 1784817482709,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
@@ -35910,7 +35910,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8469",
     "source": "legislative",
-    "ts": 1784805747829,
+    "ts": 1784817482707,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8469",
@@ -37312,11 +37312,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4465",
     "source": "legislative",
-    "ts": 1784805747828,
+    "ts": 1784817482707,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4465",
-      "salience": 0.331,
+      "salience": 0.33,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4465",
       "votes": [
         {
@@ -38195,11 +38195,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1784805747830,
+    "ts": 1784817482708,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.318,
+      "salience": 0.317,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -39129,11 +39129,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2853",
     "source": "legislative",
-    "ts": 1784805747829,
+    "ts": 1784817482707,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2853",
-      "salience": 0.248,
+      "salience": 0.247,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2853",
       "votes": [
         {
@@ -40047,7 +40047,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1784805747830,
+    "ts": 1784817482708,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
@@ -40976,12 +40976,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_department-house-renaming",
     "source": "news",
-    "ts": 1784805787742,
+    "ts": 1784817517925,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.965,
+      "salience": 0.944,
       "articles": [
         {
           "title": "House votes for Department of War renaming as part of an annual defense bill",
@@ -41082,12 +41082,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_adopts-billion-gop",
     "source": "news",
-    "ts": 1784805787742,
+    "ts": 1784817517926,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.949,
+      "salience": 0.929,
       "articles": [
         {
           "title": "House GOP adopts $95 billion spending package",
@@ -41181,12 +41181,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_brazilian-canadian-goods",
     "source": "news",
-    "ts": 1784805787742,
+    "ts": 1784817517926,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.943,
+      "salience": 0.923,
       "articles": [
         {
           "title": "Trump revives tariff policy with new import taxes on Canadian , Brazilian goods",
@@ -41287,12 +41287,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_democrats-despite-failures",
     "source": "news",
-    "ts": 1784805787742,
+    "ts": 1784817517925,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.924,
+      "salience": 0.904,
       "articles": [
         {
           "title": "Democrats try new war powers resolution despite past failures",
@@ -41393,12 +41393,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_cleo-fields-louisiana",
     "source": "news",
-    "ts": 1784805787741,
+    "ts": 1784817517924,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.859,
+      "salience": 0.838,
       "articles": [
         {
           "title": "Louisiana Rep . Cleo Fields wont seek re - election",
@@ -41499,12 +41499,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_bashing-confirmed-house",
     "source": "news",
-    "ts": 1784805787741,
+    "ts": 1784817517924,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.567,
+      "salience": 0.546,
       "articles": [
         {
           "title": "White House lawyer confirmed to judgeship after bashing Republican senators",
@@ -41561,57 +41561,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_advance-billion-budget",
-    "source": "news",
-    "ts": 1784805787743,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.53,
-      "articles": [
-        {
-          "title": "Mike Johnson to advance $95 billion budget for Iran war and GOP goals",
-          "url": "https://www.pilotonline.com/2026/07/22/mike-johnson-budget-iran-war-trump-priorities-reconciliation/",
-          "domain": "pilotonline.com",
-          "seendate": "2026-07-22T21:45:00Z",
-          "image": "https://www.pilotonline.com/wp-content/uploads/2026/07/Congress_Budget_85_13-1.jpg"
-        },
-        {
-          "title": "Mike Johnson to advance $95 billion budget for Iran war and GOP goals",
-          "url": "https://www.bostonherald.com/2026/07/22/mike-johnson-budget-iran-war-trump-priorities-reconciliation/",
-          "domain": "bostonherald.com",
-          "seendate": "2026-07-22T21:30:00Z",
-          "image": "https://www.bostonherald.com/wp-content/uploads/2026/07/Congress_Budget_85_13-1.jpg"
-        },
-        {
-          "title": "Mike Johnson to advance $95 billion budget for Iran war and GOP goals",
-          "url": "https://www.orlandosentinel.com/2026/07/22/mike-johnson-budget-iran-war-trump-priorities-reconciliation/",
-          "domain": "orlandosentinel.com",
-          "seendate": "2026-07-22T19:45:00Z",
-          "image": "https://www.orlandosentinel.com/wp-content/uploads/2026/07/Congress_Budget_85_13-1.jpg"
-        }
-      ]
-    },
-    "title": "Mike Johnson to advance $95 billion budget for Iran war and GOP goals",
-    "summary": "2026-07-22 pilotonline.com: Mike Johnson to advance $95 billion budget for Iran war and GOP goals\n2026-07-22 bostonherald.com: Mike Johnson to advance $95 billion budget for Iran war and GOP goals\n2026-07-22 orlandosentinel.com: Mike Johnson to advance $95 billion budget for Iran war and GOP goals",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_budget-funding-gop",
     "source": "news",
-    "ts": 1784805787743,
+    "ts": 1784817517926,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.457,
+      "salience": 0.436,
       "articles": [
         {
           "title": "GOP races to pass stopgap funding , budget reconciliation 3 . 0",
@@ -41656,12 +41613,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_bill-congressional-house",
     "source": "news",
-    "ts": 1784805787742,
+    "ts": 1784817517925,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.439,
+      "salience": 0.419,
       "articles": [
         {
           "title": "House prepares vote on bill restricting congressional stock trading",
