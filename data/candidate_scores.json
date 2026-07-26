@@ -1,6 +1,6 @@
 {
   "schema": "candidate_scores/v1",
-  "updated": "2026-07-21T05:34:54.603Z",
+  "updated": "2026-07-25T06:03:27.097Z",
   "records": {
     "cand_leg_s-119-2": {
       "mts": 1784044297585,
@@ -30,7 +30,7 @@
       }
     },
     "cand_leg_sjres-119-185": {
-      "mts": 1784044297586,
+      "mts": 1784784262612,
       "status": "new",
       "title": "A joint resolution to direct the removal of United States Armed Forces from hostilities within or against the Islamic Republic of Iran that have not been authorized by Congress. (2 roll calls)",
       "fitness": {
@@ -300,7 +300,7 @@
       }
     },
     "cand_leg_hr-119-2913": {
-      "mts": 1784044297585,
+      "mts": 1784784269351,
       "status": "new",
       "title": "Ukraine Support Act",
       "fitness": {
@@ -1050,7 +1050,7 @@
         }
       },
       "prevalentAxisGuess": "x",
-      "promotedEventId": "evt_004",
+      "promotedEventId": "evt_011",
       "draftReading": {
         "category": "",
         "prompt": "",
@@ -1662,6 +1662,209 @@
             }
           ]
         }
+      }
+    },
+    "cand_leg_hr-119-8800": {
+      "mts": 1784959403933,
+      "status": "promoted",
+      "title": "National Defense Authorization Act for Fiscal Year 2027",
+      "fitness": {
+        "score": 0.35,
+        "reason": "The passage vote (216-212, near party-line R209-7/D6-205) is a whipped, must-pass authorization vote where defection carries high political cost, so thin crossover doesn't itself refute a secondary axis. But the proposed posture axis (hawkish expansion vs. restraint) doesn't clearly predict the 7 GOP defectors or 6 Dem crossovers without member-level data — 'implicated members: 0' means we can't verify who defected against type. Absent evidence the defectors were libertarian/restraint-leaning Republicans or hawkish Blue Dogs, this remains a plausible but underdetermined secondary binary rather than a demonstrated cross-cut. It's substantive and non-degenerate in principle (restraint-vs-expansion genuinely splits both caucuses in commentary and think-tank debate), but without name-level confirmation here it can't score higher.",
+        "method": "m2_constitutive_v1",
+        "ts": "2026-07-23T05:18:26.392Z"
+      },
+      "framingDraft": "The NDAA vote nominally asks whether to authorize defense spending, but the deeper fault line concerns what kind of military posture the funding entrenches — expansive forward power projection versus restraint and homeland/burden-sharing focus. This tension cross-cuts the party-line passage vote because both parties contain internal factions on grand strategy that don't map cleanly onto the yea/nay tally.",
+      "suggestedAxes": {
+        "x": {
+          "pos": "Authorize",
+          "neg": "Block"
+        },
+        "y": {
+          "pos": "Expansive posture",
+          "neg": "Restraint/burden-sharing"
+        }
+      },
+      "prevalentAxisGuess": "x",
+      "voteMap": {
+        "voteId": "h-119-2026-278",
+        "yeaPole": "pos"
+      },
+      "promotedEventId": "evt_012",
+      "draftReading": {
+        "category": "Foreign Policy · Defense · NDAA",
+        "prompt": "House passes the FY2027 NDAA 216-212. The opposition is a coalition: 204 Democrats plus 7 restraint Republicans.",
+        "meta": {
+          "status": "draft",
+          "editHistory": []
+        },
+        "date": "2026-07-24",
+        "antiValentBand": "coalition",
+        "axes": {
+          "x": {
+            "pos": "Authorize",
+            "neg": "Block"
+          },
+          "y": {
+            "pos": "Expansive posture",
+            "neg": "RESTRAINT STRATEGY"
+          }
+        },
+        "responses": {
+          "A": {
+            "xSide": "left",
+            "source": "",
+            "fluid": {
+              "text": "",
+              "xWord": "",
+              "yWord": "",
+              "words": [],
+              "source": ""
+            },
+            "coalition": {
+              "text": "",
+              "xWord": "",
+              "yWord": "",
+              "words": [],
+              "source": ""
+            },
+            "denominated": {
+              "text": "",
+              "xWord": "",
+              "yWord": "",
+              "words": [],
+              "source": ""
+            }
+          },
+          "B": {
+            "xSide": "right",
+            "source": "",
+            "fluid": {
+              "text": "Authorize it, and authorize it fully — a superpower that hedges on its own reach isn't being prudent, it's inviting the exact crises that cost far more than the bill in front of us.",
+              "xWord": "authorize",
+              "yWord": "expansive",
+              "words": [],
+              "source": ""
+            },
+            "coalition": {
+              "text": "",
+              "xWord": "",
+              "yWord": "",
+              "words": [],
+              "source": ""
+            },
+            "denominated": {
+              "text": "",
+              "xWord": "",
+              "yWord": "",
+              "words": [],
+              "source": ""
+            }
+          },
+          "C": {
+            "xSide": "left",
+            "source": "",
+            "fluid": {
+              "text": "",
+              "xWord": "",
+              "yWord": "",
+              "words": [],
+              "source": ""
+            },
+            "coalition": {
+              "text": "",
+              "xWord": "",
+              "yWord": "",
+              "words": [],
+              "source": ""
+            },
+            "denominated": {
+              "text": "",
+              "xWord": "",
+              "yWord": "",
+              "words": [],
+              "source": ""
+            }
+          },
+          "D": {
+            "xSide": "right",
+            "source": "",
+            "fluid": {
+              "text": "",
+              "xWord": "",
+              "yWord": "",
+              "words": [],
+              "source": ""
+            },
+            "coalition": {
+              "text": "",
+              "xWord": "",
+              "yWord": "",
+              "words": [],
+              "source": ""
+            },
+            "denominated": {
+              "text": "",
+              "xWord": "",
+              "yWord": "",
+              "words": [],
+              "source": ""
+            }
+          }
+        },
+        "updatedAt": "2026-07-25T06:03:23.907Z",
+        "title": "National Defense Authorization Act for Fiscal Year 2027",
+        "framing": "The NDAA vote on H.R. 8800 nominally asks whether to authorize defense spending, but the deeper fault line concerns what kind of military posture the funding entrenches — expansive forward power projection versus restraint and homeland/burden-sharing focus. This tension cross-cuts the party-line passage vote because both parties contain internal factions on grand strategy that don't map cleanly onto the yea/nay tally.",
+        "framingKeywords": [],
+        "diatribe": {
+          "LF": {
+            "text": "A yes funds a strategy, not just a budget. Don't sign it blind — name the commitments first.",
+            "side": "left",
+            "band": "fluid",
+            "keywords": []
+          },
+          "LC": {
+            "text": "Leadership trades objections to the NDAA for superficial provisions every year. It's time to debate the substance of the military's posture and strategy before signing another massive defense bill.",
+            "side": "left",
+            "band": "coalition",
+            "keywords": []
+          },
+          "LD": {
+            "text": "The military's posture has been reckless for years, and it has never once had to answer for it. No on all defense spending.",
+            "side": "left",
+            "band": "denominated",
+            "keywords": []
+          },
+          "RF": {
+            "text": "Voting no doesn't pause the deployments, only the funding. What happens in the gap?",
+            "side": "right",
+            "band": "fluid",
+            "keywords": []
+          },
+          "RC": {
+            "text": "A vote against funding the military doesn't help the situation. Pass the NDAA and we can debate military posture and strategy later.",
+            "side": "right",
+            "band": "coalition",
+            "keywords": []
+          },
+          "RD": {
+            "text": "Our military is engaged in multiple dynamic conflicts. Now isn't the time to debate strategy with woke leftists.",
+            "side": "right",
+            "band": "denominated",
+            "keywords": []
+          }
+        },
+        "prevalentAxis": "x",
+        "diatribeScore": -13,
+        "sources": [
+          {
+            "url": "https://www.congress.gov/bill/119th-congress/house-bill/8800",
+            "label": "hr-119-8800"
+          }
+        ],
+        "images": [],
+        "rid": "rdg_mrzfjcdizsds",
+        "schema": "reading/v1"
       }
     }
   }
