@@ -19939,8 +19939,6 @@ const LEGISLATION_DATA = [
   {
     "name": "National Defense Authorization Act for Fiscal Year 2027",
     "meta": "H.R. 8800 · Passed House · Defense",
-    "id": "hr-119-8800",
-    "rc": 1,
-    "mm": 0.009
+    "id": "hr-119-8800"
   }
 ];
