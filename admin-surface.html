@@ -265,6 +265,54 @@
   #quadView{ display:none; position:relative; min-height:100vh; min-height:100dvh; flex-direction:column; align-items:center; justify-content:center;
     padding: calc(var(--top-chrome) + 62px) 20px calc(var(--dock-h, calc(96px + var(--safe-bottom))) + 40px); z-index:1; }
   body.view-quad #quadView{ display:flex; }
+
+  /* ── Editorial Desk — the whole reading seen at once; Publish lives here
+        (Editorial_Desk_Direction_Handoff §1–§4). Two columns per slot —
+        Sailor's and Sonnet's stay SEPARATE stored objects until an explicit
+        per-slot resolution; the desk never trades independence away. ── */
+  body.view-desk main, body.view-desk .cellmap, body.view-desk #kwPill{ display:none !important; }
+  body.dg-orbit #deskView{ display:none !important; }
+  #deskView{ display:none; position:relative; z-index:1; max-width:880px; margin:0 auto;
+    padding: calc(var(--top-chrome) + 66px) 18px calc(var(--dock-h, calc(96px + var(--safe-bottom))) + 40px); }
+  body.view-desk #deskView{ display:block; }
+  #deskFraming{ max-width:720px; margin:0 auto; text-align:center; font-family:var(--serif); font-size:16px;
+    line-height:1.65; color:var(--ink-mid); font-style:italic; }
+  #deskFraming:empty::before{ content:'(no framing yet — the introit is part of the whole reading)'; color:var(--ink-low); }
+  #deskFraming::after{ content:''; display:block; width:32px; height:1px; background:var(--rule); margin:18px auto 0; }
+  .desk-bar{ display:flex; gap:10px; align-items:center; justify-content:center; flex-wrap:wrap; margin:16px 0 8px; }
+  .desk-tally{ font-family:var(--mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-low); }
+  .desk-group{ font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-low);
+    margin:28px 0 10px; border-bottom:.5px solid var(--rule); padding-bottom:6px; }
+  .desk-slot{ border:.5px solid var(--rule); border-radius:10px; background:rgba(9,15,32,.55); margin-bottom:12px; padding:10px 12px; }
+  .desk-slot.resolved{ border-color:rgba(96,168,128,.45); }
+  .ds-head{ display:flex; gap:8px; align-items:baseline; font-family:var(--mono); font-size:10px; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--ink-mid); margin-bottom:8px; }
+  .ds-head .f{ color:var(--ink-low); text-transform:none; letter-spacing:0; margin-left:auto; }
+  .ds-cols{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .ds-col{ border:.5px solid var(--rule); border-radius:8px; padding:8px 10px; font-family:var(--serif); font-size:14px;
+    line-height:1.45; color:var(--ink); background:rgba(255,255,255,.03); min-height:44px; }
+  .ds-col .lbl{ display:block; font-family:var(--mono); font-size:9px; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--ink-low); margin-bottom:5px; }
+  .ds-col.chosen{ border-color:rgba(96,168,128,.6); }
+  .ds-col.empty{ color:var(--ink-low); font-style:italic; }
+  .ds-col .cloud{ display:block; margin-top:5px; font-family:var(--mono); font-size:10px; color:var(--ink-low); }
+  .ds-res{ display:flex; gap:8px; align-items:center; margin-top:9px; flex-wrap:wrap; }
+  .ds-res button{ border:.5px solid var(--rule); border-radius:999px; background:transparent; color:var(--ink-low);
+    font-family:var(--mono); font-size:9px; letter-spacing:.12em; text-transform:uppercase; padding:5px 12px; cursor:pointer; }
+  .ds-res button.on{ background:#22345c; color:#fff; border-color:transparent; }
+  .ds-res button:disabled{ opacity:.35; cursor:default; }
+  .ds-merge{ margin-top:8px; }
+  .ds-merge textarea{ width:100%; font-family:var(--serif); font-size:14px; line-height:1.45; color:var(--ink);
+    background:rgba(255,255,255,.04); border:.5px solid var(--rule); border-radius:8px; padding:9px 11px; outline:none;
+    min-height:96px; white-space:pre-wrap; overflow-wrap:anywhere; resize:vertical; }
+  .ds-merge .oe-cloud{ display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:8px; }
+  .ds-merge .oe-cloud input{ font-family:var(--mono); font-size:13px; color:var(--ink); background:rgba(255,255,255,.04);
+    border:.5px solid var(--rule); border-radius:8px; padding:8px 10px; outline:none; }
+  .ds-merge .row{ display:flex; gap:10px; align-items:center; margin-top:8px; }
+  .desk-note{ font-family:var(--mono); font-size:10px; color:var(--ink-low); text-align:center; margin:10px 0 0; letter-spacing:.08em; }
+  body.light .desk-slot{ background:rgba(245,240,232,.6); }
+  body.light .ds-col, body.light .ds-merge textarea, body.light .ds-merge .oe-cloud input{ background:rgba(20,22,30,.04); }
+  @media (max-width:700px){ .ds-cols{ grid-template-columns:1fr; } }
   /* 36px clears the Y+ pole label, which translates -100% above the plane
      into what was the caption's lap (2026-07-16 iPad audit) */
   .quad-sub{ font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-low); margin-bottom:36px; text-align:center; }
@@ -298,7 +346,7 @@
   .orb:hover .orb-tip{ opacity:1; }
   /* orb editor modal */
   .orb-sheet .oe-head{ font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-low); margin-bottom:10px; }
-  .orb-sheet textarea{ width:100%; font-family:var(--serif); font-size:15px; line-height:1.4; color:var(--ink); background:rgba(255,255,255,.04); border:.5px solid var(--rule); border-radius:8px; padding:9px 11px; outline:none; resize:vertical; min-height:64px; }
+  .orb-sheet textarea{ width:100%; font-family:var(--serif); font-size:15px; line-height:1.4; color:var(--ink); background:rgba(255,255,255,.04); border:.5px solid var(--rule); border-radius:8px; padding:9px 11px; outline:none; resize:vertical; white-space:pre-wrap; overflow-wrap:anywhere; min-height:112px; }
   .orb-sheet .oe-cloud{ display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:8px; }
   .orb-sheet .oe-cloud input{ font-family:var(--mono); font-size:13px; color:var(--ink); background:rgba(255,255,255,.04); border:.5px solid var(--rule); border-radius:8px; padding:8px 10px; outline:none; }
   .orb-sheet .oe-actions{ display:flex; gap:10px; align-items:center; margin-top:12px; }
@@ -472,7 +520,7 @@
   <select id="evSelect" title="Load an event onto the surface"></select>
   <span class="prevseg" title="Which axis this spine is (prevalent)"><button id="prevX" class="on">X</button><button id="prevY">Y</button></span>
   <button class="btn" id="tedBtn" title="Edit Ted's speech">🐺 Ted</button>
-  <span class="viewseg" id="viewSeg" title="Author the diatribe, or the 12 quadrant responses"><button data-v="dia" class="on">Diatribe</button><button data-v="quad">Quadrants</button></span>
+  <span class="viewseg" id="viewSeg" title="Author the diatribe, the 12 quadrant responses — then finish the whole reading at the desk"><button data-v="dia" class="on">Diatribe</button><button data-v="quad">Quadrants</button><button data-v="desk">Desk</button></span>
   <button class="btn" id="citeBtn" title="Citation bank — sources for this event">📎 Sources</button>
   <button class="btn" id="brBtn" title="Bill reading room — curate the bills this event links">📜 Bills</button>
   <button class="btn" id="nrBtn" title="Newsroom — Event Engine candidates from the vote record">📡 Newsroom</button>
@@ -536,6 +584,22 @@
     <span class="qp-pole yneg" id="qpYneg" contenteditable="true" spellcheck="false"></span>
     <!-- 12 orbs injected here -->
   </div>
+</section>
+
+<!-- ── Editorial Desk — curation decides what enters; editorial decides what
+     leaves. The whole reading at once: framing, 6 diatribe cells, 12 orbs,
+     Publish at the end. Sonnet fires all 18 blind to Sailor's text (never to
+     the event); three outcomes per slot: MINE / SONNET / MERGED. ── -->
+<section id="deskView">
+  <div class="quad-sub">editorial desk · the reading entire · choose, merge, or rework each slot — publish when it reads whole</div>
+  <div id="deskFraming"></div>
+  <div class="desk-bar">
+    <button class="btn" id="deskFireBtn" title="Sonnet drafts all 18 slots independently — blind to your text, not to the event">✦ Fire all 18</button>
+    <button class="btn" id="deskExportBtn" title="This run's editorial deltas, in the calibration log's schema — the desk is the log's missing emitter">Export deltas</button>
+    <span class="desk-tally" id="deskTally"></span>
+  </div>
+  <div id="deskSlots"></div>
+  <div class="desk-note" id="deskNote"></div>
 </section>
 
 <div class="modal" id="orbModal"><div class="sheet orb-sheet">
@@ -698,6 +762,11 @@ function bandFromCode(c){ return c==='F'?'fluid':c==='C'?'coalition':'denominate
 
 /* model stores HTML per cell so keyword <span class="kw"> marks persist */
 let currentId=null, prevAxis='x';
+/* Stale-tab guard state (2026-07-26, Editorial Desk §4 "never silently
+   overwrite" — a stale tab's whole-object LWW save ate 12 drafted orbs):
+   loadedUpdatedAt remembers the store stamp THIS tab loaded; save() refuses
+   to clobber a newer one without an explicit second press. */
+let loadedUpdatedAt=null, saveForceArm=null, pubArm=false;
 let model = { LF:'',LC:'',LD:'',RF:'',RC:'',RD:'' };
 let curReal='LF', curGhost='RF';
 let pct = 38;
@@ -857,6 +926,10 @@ function loadEvent(ev){
   // score; Readings from before the field keep the surface's current thumb.
   if(typeof ev.diatribeScore==='number' && isFinite(ev.diatribeScore))
     pct=(Math.max(-96,Math.min(96,Math.round(ev.diatribeScore)))+100)/2;
+  loadedUpdatedAt=ev.updatedAt||null;
+  // the desk record follows the Reading; each event's run is its own object
+  desk=currentId?deskLoad(currentId):null; deskMergeKey=null;
+  if(document.body.classList.contains('view-desk')) renderDesk();
   setPoleFields(); setThumb(pct,false); status(currentId?('Loaded '+currentId):'Loaded onto the surface');
 }
 function loadSeed(){
@@ -865,6 +938,7 @@ function loadSeed(){
   responses={A:{},B:{},C:{},D:{}}; otherPole={neg:'Market',pos:'State'}; if(typeof citations!=='undefined') citations=[];
   if(typeof images!=='undefined') images=[];
   if(typeof nrPendingPromote!=='undefined') nrPendingPromote=null;
+  loadedUpdatedAt=null; desk=null; deskMergeKey=null;
   setPoleFields(); setThumb(pct,false);
   status('Immigration example — edit freely; ✦ on a filled box marks its keywords');
 }
@@ -875,6 +949,7 @@ function blank(){
   if(typeof citations!=='undefined') citations=[];
   if(typeof images!=='undefined') images=[];
   if(typeof nrPendingPromote!=='undefined') nrPendingPromote=null;   // fresh slate — no pending promotion
+  loadedUpdatedAt=null; desk=null; deskMergeKey=null;
   setPoleFields(); setThumb(38,false); status('Blank diatribe — tap the pole names to set your axis, then fill the slots');
 }
 
@@ -999,6 +1074,18 @@ function save(){
   try{ localStorage.setItem('prism.ted.global', JSON.stringify(tedGlobal)); }catch(_){}
   const patch=assemble();
   try{
+    // Stale-tab guard (2026-07-26, Editorial Desk §4): whole-object LWW once
+    // ate 12 drafted orbs when an old tab flushed over a newer save. If the
+    // store's copy is newer than what THIS tab loaded, refuse once — a second
+    // Save within 8s overwrites deliberately.
+    if(currentId){
+      const stored=PrismDB.getEvent(currentId);
+      if(stored && stored.updatedAt && stored.updatedAt>(loadedUpdatedAt||'') && saveForceArm!==currentId){
+        saveForceArm=currentId; setTimeout(()=>{ saveForceArm=null; },8000);
+        status('⚠ Store has a NEWER '+currentId+' ('+String(stored.updatedAt).slice(0,19)+' vs this tab '+(loadedUpdatedAt?String(loadedUpdatedAt).slice(0,19):'unstamped')+') — Save again within 8s to overwrite, or reload the event');
+        return null; }
+      saveForceArm=null;
+    }
     // updatedAt stamps on every save (2026-07-15): it's the draft tier's
     // LWW key, and pull already compares on it — a newer local draft now
     // correctly outranks an older repo copy instead of being clobbered.
@@ -1007,6 +1094,7 @@ function save(){
     else { const ev=Object.assign({ category:'', prompt:'', meta:{status:'draft',editHistory:[]}, date:new Date().toISOString().slice(0,10),
       active:true, antiValentBand:'coalition', axes:axesObj(), responses:{}, updatedAt:stamp }, patch);
       const added=PrismDB.addEvent(ev); currentId=added.id; PrismDB.setActive(added.id); status('Saved '+added.id+' · active'); refreshDropdown(added.id); }
+    loadedUpdatedAt=stamp;   // this tab now owns the newest copy
     // Draft tier (2026-07-15): editing a promoted candidate's unpublished
     // Reading is a stratum mutation — bump the owner candidate's mts so
     // the next ⇡ Sync scores carries the fresh draft. saveCandidate stamps.
@@ -1042,7 +1130,28 @@ function openInPrism(){
 function openExport(){ const ev=Object.assign(assemble(), {axes:axesObj()}); $('exportText').value = JSON.stringify(ev,null,2); $('exportModal').classList.add('show'); }
 
 /* ---- AI: ✦ writes an empty cell, or marks the keywords of a filled one ---- */
-async function callClaude(key, prompt, maxTok){
+/* (2026-07-26: a stray `async` token lived here — left over from splitting
+   `async function callClaude` when the voice rules were inserted between the
+   keyword and the function. It threw `ReferenceError: async is not defined`
+   at load and killed every wire below it. callClaude returns a promise
+   without the keyword; the token is gone.) */
+/* -- Authoring voice rules: synthesized from
+   Parameters/06_Events/AutoSuggest_Calibration_Log.md (Run 001, D1-D8) plus the
+   2026-07-25 no-first-person-plural ruling, which SUPERSEDES the June exemplars
+   where they conflict. Bump the ID whenever this text changes meaningfully, so
+   authoring deltas stay attributable to the prompt. -- */
+const PRISM_VOICE_RULES_ID = 'PRISM_VOICE_RULES_v2';
+const PRISM_VOICE_RULES = `
+VOICE RULES - all of them apply:
+1. NO FIRST-PERSON PLURAL. Never "we", "us", "our", "ours", "lets us" or any construction that presumes a group the speaker already belongs to and speaks for. Write from one person: use "I", or name the group in the third person - "the people I came in with", "my party leadership", "the ones cheering loudest". This supersedes any earlier example that used "we" or "my side".
+2. THE COALITION BAND IS NOT A MILDER DENOMINATED. It holds the object AND registers the denomination forming on the speaker own side - ambivalent, in transit, self-aware. Do that in the singular, per rule 1: the speaker NOTICES their own side, never speaks AS it. Never write the three bands as a plain intensity ramp.
+3. VOICE IT, DO NOT DESCRIBE IT. Every response is a person speaking their position, not an analyst describing the quadrant. Banned openings: "The X process appears...", "This response reflects...", "The mechanism follows...".
+4. GOOD FAITH IN EVERY QUADRANT, especially the one furthest from your own sympathies. No apology, no conceding the opposing premise before speaking, no self-distancing. A good-faith voice leads with its own reasons, never with a disclaimer about its own side.
+5. USE THIS EVENT LIVE VEHICLE for the side being written - the argument actually load-bearing for this event, not the generic one for that side.
+6. Vehicles ("martyrdom", "grift", "hegemony") belong inside denominated responses, never in axis labels.
+7. xWord / yWord: one clean content token each - no punctuation, no stop-words.
+`;
+function callClaude(key, prompt, maxTok){
   // Delegates to the shared engine (src/js/prism-ai.js) — the 2026-07-02
   // hardening (adaptive thinking, effort floor, text-block-only extraction,
   // truncation guard) lives there now, single-sourced for all consumers.
@@ -1063,8 +1172,7 @@ async function suggestCell(which){
     return;
   }
   // empty → write the voice
-  const gloss={fluid:'object present — the good itself, plainly held',coalition:'the good acquires a tribal carrier',denominated:'object replaced by identity — totalizing'}[band];
-  const prompt=`Author one Diatribe voice for the Prism map. Denomination radiates out: fluid holds the object, coalition carries it in a tribe, denominated replaces it with identity.\nFRAMING: ${stripHtml($('framing').innerHTML)||'(none)'}\nSPINE POLE: ${side}\nBAND: ${band} (${gloss})\nWrite ONE short, sincere, charged first-person-ish line for this exact cell — not a strawman. Return ONLY the sentence, no quotes.`;
+  const prompt=cellPromptFor(cell);
   status('Writing '+cell+'…');
   try{ let txt=(await callClaude(key,prompt,200)).replace(/^["']|["']$/g,'');
     box.innerHTML=escHtml(txt); model[cell]=box.innerHTML; renderCellmap(); status('Wrote '+cell+' — tap ✦ again to mark its keywords');
@@ -1076,6 +1184,14 @@ function status(m){ $('status').textContent=m; }
 $('sugReal').onclick=()=>suggestCell('real'); $('sugGhost').onclick=()=>suggestCell('ghost');
 $('btnSave').onclick=save; $('btnOpen').onclick=openInPrism; $('btnExport').onclick=openExport;
 $('btnPublish').onclick=async()=>{
+  // Desk gate (Editorial Desk §2.5): publish is per-READING and belongs to
+  // the desk. Unresolved desk slots get one warning; publishing anyway is
+  // the author's call. The agent never presses this button — Sailor does.
+  if(typeof desk!=='undefined' && desk && currentId && desk.eventId===currentId){
+    const un=DESK_SLOTS.filter(s=>!desk.resolutions[s.key]).length;
+    if(un>0 && !pubArm){ pubArm=true; setTimeout(()=>{ pubArm=false; },8000);
+      status(un+' desk slot(s) unresolved — Publish again within 8s to publish anyway'); return; } }
+  pubArm=false;
   const id=save(); if(!id) return;            // save() already reported why
   status('Publishing…');
   try{ const {rid,bake}=await PrismSync.publish(id);
@@ -1256,10 +1372,27 @@ function commitOrb(){ if(!orbEditing) return; const q=orbEditing.quad,b=orbEditi
   responses[q][b]={ text:$('oeText').value.trim(), xWord:$('oeX').value.trim(), yWord:$('oeY').value.trim(), source:$('oeSource').value.trim() }; buildOrbs(); }
 $('oeSave').onclick=()=>{ commitOrb(); $('orbModal').classList.remove('show'); orbEditing=null; };
 $('oeClose').onclick=()=>{ $('orbModal').classList.remove('show'); orbEditing=null; };
-$('oeSuggest').onclick=async()=>{ if(!orbEditing) return; const key=$('apiKey').value.trim(); if(!key){ $('oeStatus').textContent='Add your API key (AI ▸ top bar)'; return; }
-  const q=orbEditing.quad,b=orbEditing.band; const xt=(q==='A'||q==='C')?xStore().neg:xStore().pos, yt=(q==='A'||q==='B')?yStore().pos:yStore().neg;
+/* The blind prompt builders — ONE source for the modal ✦ suggests and the
+   desk's independent full-fire. They read framing / axes / poles / band and
+   PRISM_VOICE_RULES only; neither ever sees Sailor's drafted text. That is
+   the desk's instrument (Editorial_Desk_Direction_Handoff §3) — do not add
+   the author's text here, ever. A conditioned (warm) pass, if ever wanted,
+   is a SECOND pass, never this one doing double duty. */
+function cellPromptFor(cell){
+  const side=cell[0]==='L'?spine.neg:spine.pos, band=bandFromCode(cell[1]);
+  const gloss={fluid:'object present — the good itself, plainly held',coalition:'the good acquires a tribal carrier',denominated:'object replaced by identity — totalizing'}[band];
+  return `Author one Diatribe voice for the Prism map. Denomination radiates out: fluid holds the object, coalition carries it in a tribe, denominated replaces it with identity.\nFRAMING: ${stripHtml($('framing').innerHTML)||'(none)'}\nSPINE POLE: ${side}\nBAND: ${band} (${gloss})\n${PRISM_VOICE_RULES}\nWrite ONE short, sincere, charged first-person-singular line for this exact cell — not a strawman. Return ONLY the sentence, no quotes.`;
+}
+function orbPromptFor(q,b){
+  const xt=(q==='A'||q==='C')?xStore().neg:xStore().pos, yt=(q==='A'||q==='B')?yStore().pos:yStore().neg;
   const gloss={fluid:'object present — plainly held',coalition:'a tribal carrier / vehicle',denominated:'object replaced by identity — totalizing'}[b];
-  const prompt=`Author one quadrant voice for the Prism map. This coordinate subject sits at ${xt||'x'} × ${yt||'y'}; band ${b} (${gloss}). Denomination radiates: fluid holds the object, coalition carries it in a tribe, denominated replaces it with identity.\nFRAMING: ${stripHtml($('framing').innerHTML)||'(none)'}\nWrite ONE short, sincere, charged line for this exact cell — not a strawman — plus its 1–2 word x and y cloud tokens. Return ONLY JSON: {"response":"...","xWord":"...","yWord":"..."}`;
+  const xs=xStore(), ys=yStore();
+  const xOpp=(xt===xs.neg)?(xs.pos||'the opposite'):(xs.neg||'the opposite');
+  const yOpp=(yt===ys.neg)?(ys.pos||'the opposite'):(ys.neg||'the opposite');
+  return `Author one quadrant voice for the Prism map.\n\nTHIS VOICE HOLDS TWO COMMITMENTS AT ONCE AND MUST EXPRESS BOTH:\n  \u2022 ${xs.neg||'x-neg'} \u2194 ${xs.pos||'x-pos'} \u2014 this voice is ${xt||'x'}, NOT ${xOpp}\n  \u2022 ${ys.neg||'y-neg'} \u2194 ${ys.pos||'y-pos'} \u2014 this voice is ${yt||'y'}, NOT ${yOpp}\nThe prevalent axis of this reading is the ${prevAxis==='x'?'first':'second'} one, so the line must land unmistakably on ${prevAxis==='x'?(xt||'x'):(yt||'y')}.\nThese two commitments may pull against each other. That tension IS the subject: hold both, resolve neither. A line that ends up arguing for ${xOpp} is wrong however well written.\n\nBand ${b} (${gloss}). Denomination radiates: fluid holds the object, coalition carries it in a tribe, denominated replaces it with identity.\nFRAMING: ${stripHtml($('framing').innerHTML)||'(none)'}\n${PRISM_VOICE_RULES}\nWrite ONE short, sincere, charged line for this exact cell \u2014 not a strawman \u2014 plus its 1\u20132 word x and y cloud tokens. Return ONLY JSON: {"response":"...","xWord":"...","yWord":"..."}`;
+}
+$('oeSuggest').onclick=async()=>{ if(!orbEditing) return; const key=$('apiKey').value.trim(); if(!key){ $('oeStatus').textContent='Add your API key (AI ▸ top bar)'; return; }
+  const prompt=orbPromptFor(orbEditing.quad, orbEditing.band);
   $('oeStatus').textContent='Asking Claude…';
   try{ const raw=await callClaude(key,prompt,300); const m=raw.match(/\{[\s\S]*\}/); const o=m?JSON.parse(m[0]):{};
     if(o.response)$('oeText').value=o.response; if(o.xWord)$('oeX').value=o.xWord; if(o.yWord)$('oeY').value=o.yWord; $('oeStatus').textContent='filled'; }
@@ -1267,14 +1400,281 @@ $('oeSuggest').onclick=async()=>{ if(!orbEditing) return; const key=$('apiKey').
 function setView(v){
   $('viewSeg').querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));
   document.body.classList.toggle('view-quad', v==='quad');
-  const dia = v!=='quad';
-  $('btnBack').style.display = dia?'none':'';   // back only on the quadrants stage
+  document.body.classList.toggle('view-desk', v==='desk');
+  const dia = v==='dia';
+  $('btnBack').style.display = dia?'none':'';   // back walks the flow: desk → quad → dia
+  $('btnBack').textContent = v==='desk' ? '← Quadrants' : '← Diatribe';
   $('btnOpen').style.display = dia?'none':'';     // preview only after the responses stage
+  // Publish lives at the desk and ONLY at the desk (Editorial Desk §1):
+  // "done drafting" and "ready to publish" stop being two meanings of one
+  // place. The diatribe and quadrants stages are now defined DRAFT surfaces.
+  $('btnPublish').style.display = v==='desk'?'':'none';
   if(v==='quad'){ renderQuadPoles(); buildOrbs(); }
+  if(v==='desk'){ deskEnter(); }
   if(window.DGRoom && DGRoom.active) dgSync();
 }
 $('viewSeg').querySelectorAll('button').forEach(b=>b.onclick=()=>setView(b.dataset.v));
-$('btnBack').onclick=()=>setView('dia');
+$('btnBack').onclick=()=>setView(document.body.classList.contains('view-desk')?'quad':'dia');
+
+/* ===== Editorial Desk — the whole reading at once (2026-07-26 build 1) =====
+   Direction: Prism_Editorial_Desk_Direction_Handoff.md. Build 1 merges the
+   handoff's §6 steps 1+2 (ruled 2026-07-26): whole-reading view, Publish
+   relocated here, blind independent full-fire, three-outcome capture with
+   win tally. Deferred to build 2: ‡ inline notes (sentinel ruled ‡, not * —
+   markdown collision), per-slot dialogue (clone the Bills room WITH a
+   persistence fix — brHistory is in-memory only), defect-class tagging UI.
+
+   Storage: localStorage `prism_desk_v1` — one record per event, SEPARATE
+   from prism_events on purpose (§4 "never silently overwrite": Sailor's and
+   Sonnet's columns are separate stored objects until an explicit per-slot
+   resolution; a stale-tab event save can never clobber the Sonnet column).
+   Deltas are captured in the calibration log's schema — the desk is
+   AutoSuggest_Calibration_Log.md's missing emitter. defect_class /
+   fix_principle ride empty until the notes build fills them.
+
+   Doctrine held: readings are sovereign — authored, not detected. Sonnet-wins
+   is load-bearing (choosing its better line is an authorial act), and the
+   agent never presses Publish. */
+/* PrismDB owns the desk store (2026-07-26 ruling, same session as build 1):
+   every store name and accessor lives in ONE file shared by every surface —
+   a store invisible to prismdb.js is the same class of drift that stranded
+   the June calibration in the admin.html fork for six weeks. And the desk
+   record will not stay single-consumer: the closed form is a function of the
+   accumulated deltas (§5), so whatever reads them later reads via PrismDB.
+   The direct-localStorage path below is a FALLBACK for version skew only
+   (old prismdb.js + new surface) — same key, so the two paths never diverge. */
+const DESK_LS='prism_desk_v1';
+const DESK_SLOTS=(()=>{ const s=[];
+  ['LF','LC','LD','RF','RC','RD'].forEach(c=>s.push({key:'dia.'+c, kind:'cell', cell:c}));
+  QUAD_DEF.forEach(q=>QBANDS.forEach(b=>s.push({key:'resp.'+q.id+'.'+b, kind:'orb', quad:q.id, band:b})));
+  return s; })();
+let desk=null, deskFiring=false, deskMergeKey=null, deskFireArm=false;
+function deskAllRecords(){ try{ return JSON.parse(localStorage.getItem(DESK_LS))||{}; }catch(_){ return {}; } }
+function deskLoad(id){
+  if(HAS_DB && PrismDB.getDesk) return PrismDB.getDesk(id);
+  return deskAllRecords()[id]||null; }
+function deskSave(rec){ if(!rec||!rec.eventId) return;
+  if(HAS_DB && PrismDB.saveDesk){
+    try{ const w=PrismDB.saveDesk(rec);
+      if(w!==rec && w && w.updatedAt && rec.updatedAt && w.updatedAt>rec.updatedAt)
+        deskNote('⚠ Another tab holds a NEWER desk run for '+rec.eventId+' — this tab did not overwrite it. Reload the event to adopt it.');
+    }catch(e){ deskNote('Desk save failed: '+e.message); }
+    return; }
+  rec.updatedAt=new Date().toISOString();
+  const all=deskAllRecords(); all[rec.eventId]=rec;
+  try{ localStorage.setItem(DESK_LS, JSON.stringify(all)); }
+  catch(e){ deskNote('Desk save failed: '+e.message); } }
+function slotField(s){ return s.kind==='cell' ? 'diatribe.'+s.cell+'.text' : 'responses.'+s.quad+'.'+s.band+'.text'; }
+function deskSlotLabel(s){
+  if(s.kind==='cell'){ const side=s.cell[0]==='L'?(spine.neg||'left'):(spine.pos||'right');
+    return s.cell+' · '+side+' · '+bandFromCode(s.cell[1]); }
+  const q=s.quad, xt=(q==='A'||q==='C')?xStore().neg:xStore().pos, yt=(q==='A'||q==='B')?yStore().pos:yStore().neg;
+  return q+' · '+(xt||'x')+' × '+(yt||'y')+' · '+s.band; }
+function syncCellDom(cell){
+  if(cell===curReal)$('capTextReal').innerHTML=model[cell];
+  else if(cell===curGhost)$('capTextGhost').innerHTML=model[cell];
+  renderCellmap(); }
+function slotWriteOrb(s,text,x,y){ const q=s.quad,b=s.band; responses[q]=responses[q]||{};
+  const prev=responses[q][b]||{};
+  responses[q][b]={ text:text||'', xWord:x||'', yWord:y||'', source:prev.source||'' };
+  try{ buildOrbs(); }catch(_){ } }
+function deskMineOf(s){ // Sailor's column: the fire-time snapshot once fired, live text before
+  if(desk && desk.mineSnapshot && desk.mineSnapshot[s.key]){
+    const sn=desk.mineSnapshot[s.key];
+    return s.kind==='cell' ? { text:stripHtml(sn.html||'') } : { text:(sn.text||'').trim(), x:sn.xWord||'', y:sn.yWord||'' }; }
+  if(s.kind==='cell') return { text:stripHtml(model[s.cell]||'') };
+  const r=resp(s.quad,s.band); return { text:(r.text||'').trim(), x:r.xWord||'', y:r.yWord||'' }; }
+function deskNote(m){ const el=$('deskNote'); if(el) el.textContent=m||''; }
+function deskEnter(){ flush(); desk=currentId?deskLoad(currentId):null; deskMergeKey=null; renderDesk(); }
+
+function deskTallyData(){ const c={mine:0,sonnet:0,merged:0,un:0,total:0};
+  if(!desk) return c;
+  DESK_SLOTS.forEach(s=>{ const snap=desk.mineSnapshot[s.key]||{};
+    const mine=s.kind==='cell'?stripHtml(snap.html||''):((snap.text||'').trim());
+    const sd=desk.sonnetDrafts[s.key];
+    if(!(mine && sd && sd.text)) return;            // win tally = both-drafted slots only
+    c.total++;
+    const r=desk.resolutions[s.key]; if(!r){ c.un++; return; }
+    c[r.outcome]=(c[r.outcome]||0)+1; });
+  return c; }
+function updateDeskTally(){ const el=$('deskTally'); if(!el) return;
+  if(!desk){ el.textContent='no desk run yet for this reading'; return; }
+  const resolved=DESK_SLOTS.filter(s=>desk.resolutions[s.key]).length, c=deskTallyData();
+  el.textContent=resolved+'/18 resolved · compared '+c.total+' — mine '+c.mine+' · sonnet '+c.sonnet+' · merged '+c.merged; }
+
+function deskCol(lbl, data, chosen){
+  const col=document.createElement('div'); col.className='ds-col'+((data&&data.text)?'':' empty')+(chosen?' chosen':'');
+  const l=document.createElement('span'); l.className='lbl'; l.textContent=lbl; col.appendChild(l);
+  if(data && data.err){ col.appendChild(document.createTextNode('fire failed — '+data.err)); return col; }
+  col.appendChild(document.createTextNode((data&&data.text)||'—'));
+  if(data && (data.x||data.y)){ const cl=document.createElement('span'); cl.className='cloud';
+    cl.textContent='☁ '+[data.x,data.y].filter(Boolean).join(' · '); col.appendChild(cl); }
+  return col; }
+function deskCard(s){
+  const card=document.createElement('div'); card.className='desk-slot'; card.dataset.key=s.key;
+  const res=(desk&&desk.resolutions[s.key])||null; if(res) card.classList.add('resolved');
+  const head=document.createElement('div'); head.className='ds-head';
+  const t=document.createElement('span'); t.textContent=deskSlotLabel(s); head.appendChild(t);
+  const f=document.createElement('span'); f.className='f'; f.textContent=slotField(s); head.appendChild(f);
+  card.appendChild(head);
+  const mine=deskMineOf(s), sd=(desk&&desk.sonnetDrafts[s.key])||null;
+  const cols=document.createElement('div'); cols.className='ds-cols';
+  cols.appendChild(deskCol('sailor', mine, res&&res.outcome==='mine'));
+  cols.appendChild(deskCol('sonnet — independent', sd?{text:(sd.text||'').trim(),x:sd.xWord,y:sd.yWord,err:sd.error}:null, res&&res.outcome==='sonnet'));
+  card.appendChild(cols);
+  const row=document.createElement('div'); row.className='ds-res';
+  const canRes=!!(desk && sd && !sd.error && !deskFiring);
+  const mk=(o,lbl,dis,title)=>{ const b=document.createElement('button'); b.textContent=lbl;
+    if(res&&res.outcome===o) b.classList.add('on');
+    b.disabled=!!dis; if(title) b.title=title;
+    b.onclick=()=>deskChoose(s,o); return b; };
+  row.appendChild(mk('mine','Mine', !canRes||!mine.text, !mine.text?'no draft of yours in this slot':'keep your line'));
+  row.appendChild(mk('sonnet','Sonnet', !canRes||!(sd&&sd.text), 'take the independent draft — choosing it is an authorial act'));
+  row.appendChild(mk('merged','Merged', !canRes, 'rework — merged is recorded as merged, never as a false MINE'));
+  if(res){ const st=document.createElement('span'); st.className='desk-tally'; st.textContent='· '+res.outcome; row.appendChild(st); }
+  card.appendChild(row);
+  if(deskMergeKey===s.key) card.appendChild(deskMergeEditor(s, mine, sd));
+  return card; }
+function deskMergeEditor(s, mine, sd){
+  const wrap=document.createElement('div'); wrap.className='ds-merge';
+  const ta=document.createElement('textarea'); ta.id='dsMergeText';
+  const cur=s.kind==='cell'?stripHtml(model[s.cell]||''):((resp(s.quad,s.band).text||'').trim());
+  ta.value=cur || mine.text || (sd&&sd.text) || '';
+  wrap.appendChild(ta);
+  let xi=null, yi=null;
+  if(s.kind==='orb'){ const cl=document.createElement('div'); cl.className='oe-cloud';
+    xi=document.createElement('input'); xi.placeholder='x-word (cloud)'; xi.value=(resp(s.quad,s.band).xWord)||mine.x||(sd&&sd.xWord)||'';
+    yi=document.createElement('input'); yi.placeholder='y-word (cloud)'; yi.value=(resp(s.quad,s.band).yWord)||mine.y||(sd&&sd.yWord)||'';
+    cl.appendChild(xi); cl.appendChild(yi); wrap.appendChild(cl); }
+  const row=document.createElement('div'); row.className='row';
+  const done=document.createElement('button'); done.className='btn primary'; done.textContent='Done';
+  done.onclick=()=>deskResolve(s,'merged', ta.value.trim(), xi?xi.value.trim():undefined, yi?yi.value.trim():undefined);
+  const cancel=document.createElement('button'); cancel.className='btn'; cancel.textContent='Cancel';
+  cancel.onclick=()=>{ deskMergeKey=null; renderDesk(); };
+  row.appendChild(done); row.appendChild(cancel); wrap.appendChild(row);
+  setTimeout(()=>ta.focus(),50);
+  return wrap; }
+
+function renderDeskSlot(s){ const host=$('deskSlots'); if(!host) return;
+  const cur=host.querySelector('[data-key="'+s.key+'"]');
+  if(cur) cur.replaceWith(deskCard(s)); }
+function renderDesk(){
+  const host=$('deskSlots'); if(!host) return;
+  $('deskFraming').innerHTML=$('framing').innerHTML;
+  host.innerHTML='';
+  const g1=document.createElement('div'); g1.className='desk-group';
+  g1.textContent='diatribe · the six · '+(spine.neg||'left')+' ↔ '+(spine.pos||'right');
+  host.appendChild(g1);
+  DESK_SLOTS.filter(s=>s.kind==='cell').forEach(s=>host.appendChild(deskCard(s)));
+  const g2=document.createElement('div'); g2.className='desk-group';
+  g2.textContent='quadrants · the twelve · '+(xStore().neg||'x−')+' ↔ '+(xStore().pos||'x+')+' × '+(yStore().neg||'y−')+' ↔ '+(yStore().pos||'y+');
+  host.appendChild(g2);
+  DESK_SLOTS.filter(s=>s.kind==='orb').forEach(s=>host.appendChild(deskCard(s)));
+  // fire button state
+  const fb=$('deskFireBtn');
+  if(!currentId){ fb.disabled=true; fb.textContent='✦ Fire all 18';
+    deskNote('Load or save a Reading first — the desk binds to a saved event.'); }
+  else if(deskFiring){ fb.disabled=true; }
+  else if(!desk){ fb.disabled=false; fb.textContent='✦ Fire all 18';
+    deskNote('Sonnet will draft every slot blind to your text — the held-out comparison, at last.'); }
+  else{ fb.disabled=false;
+    const failed=DESK_SLOTS.filter(s=>{ const d=desk.sonnetDrafts[s.key]; return !d||d.error||!d.text; }).length;
+    if(failed>0){ fb.textContent='✦ Retry '+failed+' failed'; deskNote(''); }
+    else{ fb.textContent='↺ Re-fire (resets this run)';
+      const un=DESK_SLOTS.filter(s=>!desk.resolutions[s.key]).length;
+      deskNote(un===0?'The reading reads whole — Publish is yours to press.':''); } }
+  updateDeskTally(); }
+
+function deskChoose(s,outcome){
+  if(!desk){ deskNote('Fire first — there is nothing to compare yet.'); return; }
+  if(outcome==='merged'){ deskMergeKey=(deskMergeKey===s.key)?null:s.key; renderDesk(); return; }
+  deskResolve(s,outcome); }
+function deskResolve(s,outcome,mergedText,mx,my){
+  const sd=desk.sonnetDrafts[s.key]||{}, snap=desk.mineSnapshot[s.key]||{};
+  let corrected='';
+  if(outcome==='mine'){
+    if(s.kind==='cell'){ model[s.cell]=snap.html||''; syncCellDom(s.cell); corrected=stripHtml(snap.html||''); }
+    else{ slotWriteOrb(s, snap.text||'', snap.xWord||'', snap.yWord||''); corrected=(snap.text||'').trim(); } }
+  else if(outcome==='sonnet'){
+    if(s.kind==='cell'){ model[s.cell]=escHtml((sd.text||'').trim()); syncCellDom(s.cell); }
+    else slotWriteOrb(s, (sd.text||'').trim(), sd.xWord||'', sd.yWord||'');
+    corrected=(sd.text||'').trim(); }
+  else{ // merged — recorded as merged even though text is just text (§4)
+    if(s.kind==='cell'){ model[s.cell]=escHtml(mergedText||''); syncCellDom(s.cell); }
+    else slotWriteOrb(s, mergedText||'', mx, my);
+    corrected=mergedText||''; }
+  desk.resolutions[s.key]={ outcome, ts:new Date().toISOString() };
+  // one delta per slot, calibration-log schema; latest resolution wins
+  desk.deltas[s.key]={ ts:new Date().toISOString(), event_id:currentId, field:slotField(s), outcome,
+    autosuggest:(sd.text||'').trim(), corrected,
+    prompt_id:desk.promptId||PRISM_VOICE_RULES_ID, model:desk.model||$('model').value,
+    defect_class:'', fix_principle:'' };
+  deskMergeKey=null; deskSave(desk); renderDesk();
+  status('Resolved '+slotField(s)+' → '+outcome.toUpperCase()+' — Save / Publish when the reading reads whole'); }
+
+async function deskFireRun(slots){
+  const key=$('apiKey').value.trim();
+  deskFiring=true; renderDesk();
+  let done=0, fail=0; const jobs=slots.slice();
+  const worker=async()=>{ while(jobs.length){ const s=jobs.shift();
+    try{
+      if(s.kind==='cell'){ const txt=(await callClaude(key, cellPromptFor(s.cell), 200)).replace(/^["']|["']$/g,'').trim();
+        desk.sonnetDrafts[s.key]={ text:txt, ts:new Date().toISOString() }; }
+      else{ const raw=await callClaude(key, orbPromptFor(s.quad,s.band), 300);
+        const m=raw.match(/\{[\s\S]*\}/); const o=m?JSON.parse(m[0]):{};
+        desk.sonnetDrafts[s.key]={ text:(o.response||'').trim(), xWord:o.xWord||'', yWord:o.yWord||'', ts:new Date().toISOString() }; }
+      if(!desk.sonnetDrafts[s.key].text) desk.sonnetDrafts[s.key].error='empty reply';
+    }catch(e){ desk.sonnetDrafts[s.key]={ text:'', error:e.message, ts:new Date().toISOString() }; }
+    if(desk.sonnetDrafts[s.key].error) fail++;
+    done++; deskSave(desk);                       // each slot lands as it returns — a dying tab loses nothing
+    renderDeskSlot(s);
+    deskNote('Firing — '+done+'/'+slots.length+(fail?(' · '+fail+' failed'):'')); } };
+  await Promise.all([worker(),worker(),worker()]);
+  deskFiring=false; renderDesk();
+  deskNote((done-fail)+' of '+slots.length+' slots drafted'+(fail?(' · '+fail+' failed — ✦ retries just those'):'')+' — resolve slot by slot.'); }
+async function deskFireClick(){
+  if(deskFiring) return;
+  const key=$('apiKey').value.trim(); if(!key){ deskNote('Add your API key (AI ▸ top bar)'); return; }
+  if(!currentId){ deskNote('Save the event first — the desk binds to a saved Reading.'); return; }
+  flush();
+  if(desk){
+    const failed=DESK_SLOTS.filter(s=>{ const d=desk.sonnetDrafts[s.key]; return !d||d.error||!d.text; });
+    if(failed.length){ await deskFireRun(failed); return; }   // retry keeps snapshot + resolutions
+    if(!deskFireArm){ deskFireArm=true; setTimeout(()=>{ deskFireArm=false; },8000);
+      deskNote('Re-fire resets this run — Sonnet column, resolutions and deltas. Tap again within 8s to confirm.'); return; }
+    deskFireArm=false; }
+  // fresh run: snapshot Sailor's column FIRST — MINE must always be restorable
+  desk={ eventId:currentId, promptId:PRISM_VOICE_RULES_ID, model:$('model').value,
+    firedAt:new Date().toISOString(), sonnetDrafts:{}, mineSnapshot:{}, resolutions:{}, deltas:{} };
+  DESK_SLOTS.forEach(s=>{
+    desk.mineSnapshot[s.key]= s.kind==='cell'
+      ? { html:model[s.cell]||'' }
+      : (function(){ const r=resp(s.quad,s.band); return { text:r.text||'', xWord:r.xWord||'', yWord:r.yWord||'' }; })(); });
+  deskSave(desk);
+  await deskFireRun(DESK_SLOTS); }
+$('deskFireBtn').onclick=deskFireClick;
+
+function deskExport(){
+  if(!desk){ status('No desk run to export'); return; }
+  const c=deskTallyData(), L=[];
+  L.push('## Desk run — '+(currentId||'?')+' · fired '+String(desk.firedAt||'').slice(0,10)+' · prompt '+(desk.promptId||'?')+' · model '+(desk.model||'?'));
+  L.push('');
+  L.push('Surface: `admin-surface.html` Editorial Desk (blind independent full-fire).');
+  L.push('Win tally over '+c.total+' both-drafted slot(s): mine '+c.mine+' · sonnet '+c.sonnet+' · merged '+c.merged+(c.un?(' · unresolved '+c.un):''));
+  L.push('');
+  let n=0;
+  DESK_SLOTS.forEach(s=>{ const d=desk.deltas[s.key]; if(!d) return; n++;
+    L.push('### `'+d.field+'` — '+String(d.outcome||'').toUpperCase());
+    L.push('- autosuggest: '+JSON.stringify(d.autosuggest||''));
+    L.push('- corrected: '+JSON.stringify(d.corrected||''));
+    L.push('- defect_class: '+(d.defect_class||'(unset — build 2 tags these)'));
+    L.push('- prompt: '+d.prompt_id+' · model: '+d.model+' · reviewer: Sailor · ts: '+d.ts);
+    L.push(''); });
+  if(!n) L.push('_No resolutions yet — nothing to log._');
+  $('exportText').value=L.join('\n');
+  $('exportModal').classList.add('show');
+  status('Desk deltas rendered — paste into AutoSuggest_Calibration_Log.md'); }
+$('deskExportBtn').onclick=deskExport;
 
 /* ===== Citation bank — per-event sources; attachable to any voice ===== */
 let citations=[];

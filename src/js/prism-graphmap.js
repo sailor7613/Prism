@@ -3313,6 +3313,20 @@ const PrismGraphmap = (function () {
         return instance;
       },
 
+      // Ted visibility (2026-07-26): the host's away toggle now reaches the
+      // factory coyote — body.ted-away CSS can never touch a scene child, so
+      // Ted kept trotting the plane for users who had sent him away (Sailor's
+      // phone screencap, parallax stage). setTed(true) lazily builds him if
+      // the instance was created with ted:false while he was away.
+      setTed(v) {
+        if (v && !tedCoyote) {
+          try { tedCoyote = buildTedCoyote(); tedCoyote.scale.setScalar(0.5); (scene || group).add(tedCoyote); }
+          catch (e) { return instance; }
+        }
+        if (tedCoyote) tedCoyote.visible = !!v;
+        return instance;
+      },
+
       // Internals (exposed for downstream consumers — orbit engine, etc.)
       scene,
       camera,

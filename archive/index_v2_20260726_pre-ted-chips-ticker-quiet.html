@@ -914,13 +914,6 @@ body.light .pad-grid {
 .member-toggle.is-unavailable { opacity: 0.4; cursor: default; }
 /* Legislation (bill readings) toggle — stacks under the legislators toggle. */
 .bill-toggle { top: calc(var(--top-chrome) + 46px); }
-/* RELOCATED into the nav-tool menu (2026-07-26 — finishing the 07-21 ruling
-   the way Ted's dock finished on 07-22): the floating chips no longer render;
-   they also sat over the moon top-right (Sailor's screencap). The buttons
-   stay in the DOM as state machinery — the menu rows proxy their clicks, and
-   the `hidden` attribute still gates the menu's "graph only" disabled state.
-   revealMemberToggle()/revealBillToggle() keep flipping `hidden` untouched. */
-.member-toggle { display: none !important; }
 /* Bill inspector (Sailor, 2026-07-07): your response → the delta read → the
    bill's title and summary. Flex-order only — voice/legislator compares keep
    the original label-nums-delta-text flow. */
@@ -2184,18 +2177,6 @@ div.dt-tile {
   box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none;
 }
 
-/* PHONE QUIET PASS (2026-07-26, Sailor's screencap: rowtag plates + end-cap
-   squeezed the 390px strip into a slit of colliding text). ≤480px the chrome
-   steps back: rowtags collapse to their LEDs (the rows stay tellable apart —
-   height, speed, and the live LED vs the idle one), the end-cap thins, and
-   the tracks reclaim the width. The end-cap itself STAYS — its home is ruled
-   (bottom-band contract §4) — it just whispers. */
-@media (max-width: 480px) {
-  .dt-rowtag { font-size: 0; letter-spacing: 0; padding: 0 7px 0 9px; gap: 0; }
-  .dt-track { padding-left: 30px; }
-  .dt-status { font-size: 7px; letter-spacing: 0.12em; padding: 0 8px 0 14px; gap: 2px; }
-}
-
 /* folded footer — the .dt-status end-cap plate (spans both rows, right edge) */
 .dt-status {
   position: absolute; right: 0; top: 0; bottom: var(--safe-bottom); z-index: 2;
@@ -2786,7 +2767,7 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
      off to this instrument: v56 pins, true 3D dots, full orbit. -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <!-- cache-busting query: bump ?v= whenever the module changes (Safari caches hard) -->
-<script src="../src/js/prism-graphmap.js?v=8"></script>
+<script src="../src/js/prism-graphmap.js?v=7"></script>
 
 <script>
 /* ============================================================
@@ -4828,11 +4809,7 @@ function mountGM() {
       holdMs: 900,          // deliberate hold-to-lock (400 felt accidental, 2s sluggish)
       zoom: 12, zoomMax: 14, // camera pulled back to compensate the oversized stage
       artifacts: false,     // vases CUT 2026-07-11 (Sailor: didn't land right) — revisit as a later furniture/statuary pass
-      // Ted follows the away toggle (2026-07-26): `ted: true` was
-      // unconditional, so the factory coyote trotted the plane for users who
-      // had sent Ted away — the away state only ever reached the DOM guide.
-      // setAway also calls gm.setTed live once the graph is mounted.
-      ted: (function () { try { return localStorage.getItem('prism.ted.away') !== '1'; } catch (e) { return true; } })(),
+      ted: true,            // Ted Turner the Coyote pads around the plane
     });
     gm.mount(document.getElementById('gm3dStage'));   // mount into the big surface
     // hold-to-lock: a voice locks the contrast panel AND becomes the orbit
@@ -6973,9 +6950,6 @@ applyState(true);
     away = v;
     body.classList.toggle('ted-away', away);
     if (TedStage) TedStage.setAway(away);
-    // the graph-phase coyote follows too (2026-07-26) — he lives inside the
-    // factory scene, where body.ted-away CSS can't reach
-    try { if (typeof gm !== 'undefined' && gm && gm.setTed) gm.setTed(!away); } catch (e) {}
     if (awayBtn) {
       awayBtn.classList.toggle('on', !away);                 // "on" = Ted present
       awayBtn.setAttribute('aria-pressed', String(!away));

@@ -15,7 +15,11 @@ const PrismDB = (() => {
     followed:  'prism_followed',
     billScores: 'prism_bill_scores',
     ticker:    'prism_ticker_ledger',
-    candidates: 'prism_candidates'
+    candidates: 'prism_candidates',
+    // Editorial Desk runs (2026-07-26). Key name kept from build 1's inline
+    // store in admin-surface.html, so any run recorded before this store
+    // moved into PrismDB carries over unchanged.
+    desk:      'prism_desk_v1'
   };
 
   function _get(key) {
@@ -1005,9 +1009,37 @@ const PrismDB = (() => {
   }
 
   // ── Dev Utilities ───────────────────────────────────────
+  // ── Editorial Desk runs (2026-07-26) ────────────────────
+  // One record per event: Sailor's fire-time snapshot, Sonnet's independent
+  // column, per-slot resolutions, and calibration-schema deltas. Deliberately
+  // a SEPARATE store from prism_events (Editorial Desk handoff §4 — "never
+  // silently overwrite"): an event save can never clobber a desk run, and
+  // the two columns stay separate stored objects until an explicit per-slot
+  // resolution. The accumulated deltas are the record the closed form is
+  // meant to grow out of (§5) — future readers go through these accessors.
+  function getDesks() { return _get(KEYS.desk) || {}; }
+  function getDesk(eventId) { return getDesks()[eventId] || null; }
+  function saveDesk(rec) {
+    if (!rec || !rec.eventId) return null;
+    const all = getDesks();
+    // LWW per record on updatedAt — a stale tab never wins silently.
+    // Refusal returns the stored (newer) record; the caller compares
+    // identity to detect it and warns instead of overwriting.
+    const cur = all[rec.eventId];
+    if (cur && cur.updatedAt && rec.updatedAt && cur.updatedAt > rec.updatedAt) return cur;
+    rec.updatedAt = new Date().toISOString();
+    all[rec.eventId] = rec;
+    _set(KEYS.desk, all);
+    return rec;
+  }
+  function deleteDesk(eventId) {
+    const all = getDesks();
+    if (all[eventId]) { delete all[eventId]; _set(KEYS.desk, all); }
+  }
+
   function clear() {
     Object.values(KEYS).forEach(k => localStorage.removeItem(k));
-    console.log('PrismDB cleared (including arcs, members, positions).');
+    console.log('PrismDB cleared (including arcs, members, positions, desk runs).');
   }
 
   // ── Seed ────────────────────────────────────────────────
@@ -1825,6 +1857,7 @@ const PrismDB = (() => {
     exportCandidateScores, mergeCandidateScores,
     dismissCandidate, holdCandidate, promoteCandidate, deleteCandidate,
     exportBillReadings, importBillReadings, migrateBillAnalysis,
+    getDesks, getDesk, saveDesk, deleteDesk,
     getState, setState,
     getUser, setUser,
     getFollowed, isFollowing, follow, unfollow, toggleFollow,
