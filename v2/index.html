@@ -1345,6 +1345,61 @@ body.light .event-picker { color: rgba(40,44,54,0.85); background: rgba(255,255,
   .graph-phase { padding: calc(var(--top-chrome) + 10px) 18px 56px; }
   .graph-foot { flex-wrap: wrap; justify-content: center; gap: 16px; }
 }
+
+/* ── COMMITTED REST, PHONE (RULED 2026-07-26, Sailor's design pass) ──
+   The graphmap owns the stage for pinch/zoom/framing; the instruments dock
+   above the full-width strip. Bottom-up: ticker · z-slider row with the
+   ✎ words pill (the dialect box collapses to the pill — dialect is read at
+   commit, so this is pure chrome) · readout line. RECONSIDER is GONE on the
+   phone — the way back is the left-edge swipe (.back-edge → backFromGraph);
+   desktop keeps its button. The greyed instruction marginalia (#graphNote)
+   rides .graph-foot out. Offsets ride the MEASURED --ticker-h (bandMeasure),
+   per the standing caution — never static offsets against fixed chrome. */
+.words-pill {
+  display: none; position: fixed; right: 12px; z-index: 31;
+  bottom: calc(var(--ticker-h, 78px) + var(--safe-bottom) + 12px);
+  width: 40px; height: 40px; border-radius: 50%;
+  align-items: center; justify-content: center;
+  font-size: 16px; color: var(--ink-mid);
+  background: rgba(20, 26, 40, 0.72); border: 1px solid rgba(150, 168, 200, 0.45);
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+  cursor: pointer; padding: 0;
+}
+.words-pill.has-words { color: #f0dca2; border-color: rgba(196, 156, 72, 0.65); }
+body.words-open .words-pill { color: var(--ink); border-color: rgba(180, 198, 230, 0.85); }
+.back-edge {
+  display: none; position: fixed; left: 0; z-index: 29;
+  top: calc(var(--top-chrome) + 64px);
+  bottom: calc(var(--ticker-h, 78px) + var(--safe-bottom) + 130px);
+  width: 18px; border: 0; padding: 0; cursor: pointer;
+  background: linear-gradient(90deg, rgba(96, 148, 220, 0.12), rgba(96, 148, 220, 0));
+}
+.back-edge::before {
+  content: '\2039'; position: absolute; top: 50%; left: 4px; transform: translateY(-50%);
+  font-size: 18px; color: var(--ink-low); opacity: 0.75;
+}
+@media (max-width: 860px) {
+  body.ticker-live .graph-foot { display: none; }   /* commit already retired; reconsider → edge swipe; #graphNote rides out */
+  body.ticker-live .graph-dialect {
+    position: fixed; left: 12px; right: 12px; width: auto; margin: 0;
+    bottom: calc(var(--ticker-h, 78px) + var(--safe-bottom) + 116px); z-index: 31;
+    display: none;
+  }
+  body.words-open.ticker-live .graph-dialect { display: block; }
+  body.ticker-live .graph-readout {
+    position: fixed; left: 0; right: 0; margin: 0; text-align: center;
+    bottom: calc(var(--ticker-h, 78px) + var(--safe-bottom) + 78px); z-index: 31;
+  }
+  body.ticker-live .z-slider {
+    position: fixed; left: 14px; right: 62px; width: auto; margin: 0;
+    bottom: calc(var(--ticker-h, 78px) + var(--safe-bottom) + 16px); z-index: 31;
+  }
+  body.ticker-live .words-pill { display: inline-flex; }
+  body.ticker-live .back-edge { display: block; }
+  /* the graphmap takes the reclaimed stage */
+  body.ticker-live .gm3d { width: min(96vw, 520px); }
+  body.ticker-live .graph-phase { padding-bottom: calc(var(--ticker-h, 78px) + var(--safe-bottom) + 132px); }
+}
 @media (max-width: 480px) {
   .graph-phase { justify-content: flex-start; }
   .graph-pad { width: min(360px, 92vw); }
@@ -2196,7 +2251,12 @@ div.dt-tile {
   .dt-status { font-size: 7px; letter-spacing: 0.12em; padding: 0 8px 0 14px; gap: 2px; }
 }
 
-/* folded footer — the .dt-status end-cap plate (spans both rows, right edge) */
+/* folded footer — the .dt-status end-cap plate (spans both rows, right edge)
+   RETIRED 2026-07-26 (Sailor, phone design pass): the strip runs clean edge
+   to edge — no EVT/ASYM end-cap at any width. SUPERSEDES the bottom-band
+   contract §4 ruling that made the end-cap the footer meta's permanent home.
+   The element and its JS writes stay (harmless state machinery). */
+.dt-status { display: none !important; }
 .dt-status {
   position: absolute; right: 0; top: 0; bottom: var(--safe-bottom); z-index: 2;
   display: flex; flex-direction: column; justify-content: center; gap: 4px;
@@ -2734,6 +2794,12 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
   <div class="ns-label">ribbon</div>
   <div class="ns-ribbons" id="nsRibbons"></div>
 </div>
+
+<!-- Phone committed-rest instruments (RULED 2026-07-26): the ✎ words pill
+     (the dialect box collapsed) and the left-edge way back (replaces
+     RECONSIDER on phone). Both display:none until phone + ticker-live. -->
+<button class="words-pill" id="wordsPill" type="button" aria-label="add your words">&#9998;</button>
+<button class="back-edge" id="backEdge" type="button" aria-label="reconsider — back into the reading"></button>
 
 <!-- Delta ticker: two-row ribbon (hidden until the first commit captures
      deltas) + the right-edge call column. Build spec v1. -->
@@ -6706,6 +6772,48 @@ window.addEventListener('touchmove', padMove, { passive: false });
 window.addEventListener('mouseup', padUp);
 window.addEventListener('touchend', padUp);
 graphBackBtn.addEventListener('click', backFromGraph);
+
+// ── Phone committed-rest instruments (RULED 2026-07-26) ──
+// ✎ words pill: toggles the collapsed dialect box. The box's behavior is
+// unchanged — dialect is read at commit — this is chrome only. The pill
+// glows faintly gold when words exist, so collapsed ≠ forgotten.
+(function () {
+  const pill = document.getElementById('wordsPill');
+  const box = document.getElementById('graphDialect');
+  if (!pill || !box) return;
+  function paint() { pill.classList.toggle('has-words', !!box.value.trim()); }
+  pill.addEventListener('click', function () {
+    const open = document.body.classList.toggle('words-open');
+    if (open) setTimeout(function () { box.focus(); }, 60);
+  });
+  box.addEventListener('input', paint);
+  paint();
+})();
+// Left-edge swipe back (replaces RECONSIDER on the phone): a right-swipe
+// from the left 24px on the committed stage re-enters the flow via the
+// same backFromGraph the button used — strip leaves, band returns to the
+// flow, pins/responses editable, re-commit brings the strip back. The seam
+// itself also answers a plain tap. Vertical intent (>56px) yields to scroll.
+(function () {
+  const seam = document.getElementById('backEdge');
+  if (!seam) return;
+  seam.addEventListener('click', function () {
+    if (document.body.classList.contains('ticker-live')) { try { backFromGraph(); } catch (e) {} }
+  });
+  let sx = 0, sy = 0, armed = false;
+  document.addEventListener('pointerdown', function (e) {
+    armed = false;
+    if (!document.body.classList.contains('ticker-live')) return;
+    if (e.clientX > 24) return;
+    sx = e.clientX; sy = e.clientY; armed = true;
+  }, true);
+  document.addEventListener('pointermove', function (e) {
+    if (!armed) return;
+    if (Math.abs(e.clientY - sy) > 56) { armed = false; return; }
+    if (e.clientX - sx > 64) { armed = false; try { backFromGraph(); } catch (err) {} }
+  }, true);
+  document.addEventListener('pointerup', function () { armed = false; }, true);
+})();
 graphCommitBtn.addEventListener('click', commitGraph);
 
 // ---- Boot ----

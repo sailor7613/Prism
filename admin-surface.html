@@ -275,10 +275,10 @@
   #deskView{ display:none; position:relative; z-index:1; max-width:880px; margin:0 auto;
     padding: calc(var(--top-chrome) + 66px) 18px calc(var(--dock-h, calc(96px + var(--safe-bottom))) + 40px); }
   body.view-desk #deskView{ display:block; }
-  #deskFraming{ max-width:720px; margin:0 auto; text-align:center; font-family:var(--serif); font-size:16px;
+  #deskFraming, #proofFraming{ max-width:720px; margin:0 auto; text-align:center; font-family:var(--serif); font-size:16px;
     line-height:1.65; color:var(--ink-mid); font-style:italic; }
-  #deskFraming:empty::before{ content:'(no framing yet — the introit is part of the whole reading)'; color:var(--ink-low); }
-  #deskFraming::after{ content:''; display:block; width:32px; height:1px; background:var(--rule); margin:18px auto 0; }
+  #deskFraming:empty::before, #proofFraming:empty::before{ content:'(no framing yet — the introit is part of the whole reading)'; color:var(--ink-low); }
+  #deskFraming::after, #proofFraming::after{ content:''; display:block; width:32px; height:1px; background:var(--rule); margin:18px auto 0; }
   .desk-bar{ display:flex; gap:10px; align-items:center; justify-content:center; flex-wrap:wrap; margin:16px 0 8px; }
   .desk-tally{ font-family:var(--mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-low); }
   .desk-group{ font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-low);
@@ -313,6 +313,57 @@
   body.light .desk-slot{ background:rgba(245,240,232,.6); }
   body.light .ds-col, body.light .ds-merge textarea, body.light .ds-merge .oe-cloud input{ background:rgba(20,22,30,.04); }
   @media (max-width:700px){ .ds-cols{ grid-template-columns:1fr; } }
+
+  /* ── Desk MODE — build 2 (2026-07-27, Editorial Desk → Mode handoff §3):
+        the desk dissolves into the drafting grammar. body.desk-mode turns
+        each caption and each orb's modal into its own editorial round; the
+        plane is the progress tracker (resolved glows; unresolved doesn't).
+        The classic desk page (#deskView) stays functional as the build-1
+        fallback until evt_012 publishes through the new form, then retires
+        into the galley proof. ── */
+  .dm-round{ margin-top:10px; border-top:.5px dashed var(--rule); padding-top:9px; text-align:left; }
+  .dm-round .desk-note{ text-align:left; margin:0; }
+  .cellchip.dres{ border-color:rgba(96,168,128,.7); box-shadow:0 0 8px rgba(96,168,128,.45); }
+  .orb.dres{ outline:2px solid rgba(96,168,128,.65); outline-offset:2px; }
+
+  /* ── ✦ Sonnet draft box (2026-07-27, Sailor ruled on first contact):
+        ✦ NEVER writes into the author's field. Empty slot → the blind draft
+        lands in a box beneath (adopting it is an authorial act); drafted
+        slot → the WARM second pass (founding §3: "a second pass, never the
+        blind one doing double duty") assesses the line — fitness + notes.
+        FINAL is the author's per-slot done; it rides the Reading, gold. ── */
+  .sd-box{ margin-top:8px; border:.5px dashed var(--rule); border-radius:8px; padding:8px 10px; text-align:left; }
+  .sd-box .lbl{ display:block; font-family:var(--mono); font-size:9px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-low); margin-bottom:5px; }
+  .sd-box .fit{ font-family:var(--mono); font-size:11px; letter-spacing:.08em; color:var(--ink); }
+  .sd-box .vd{ font-family:var(--serif); font-size:13.5px; line-height:1.45; color:var(--ink-mid); font-style:italic; margin-top:4px; }
+  .sd-box ul{ margin:6px 0 0; padding-left:16px; }
+  .sd-box li{ font-family:var(--serif); font-size:13px; line-height:1.45; color:var(--ink-mid); margin-bottom:3px; }
+  .sd-box .dr{ font-family:var(--serif); font-size:14px; line-height:1.45; color:var(--ink); }
+  .sd-box .cloud{ display:block; margin-top:4px; font-family:var(--mono); font-size:10px; color:var(--ink-low); }
+  .sd-box .row{ display:flex; gap:8px; margin-top:8px; align-items:center; flex-wrap:wrap; }
+  .sd-box .row button{ border:.5px solid var(--rule); border-radius:999px; background:transparent; color:var(--ink-low);
+    font-family:var(--mono); font-size:9px; letter-spacing:.12em; text-transform:uppercase; padding:5px 12px; cursor:pointer; }
+  .suggest-btn.fin-on, .btn.fin-on{ border-color:rgba(196,156,72,.65); color:#e8d29a; }
+  .cellchip.fin{ border-color:rgba(196,156,72,.75); }
+  .orb.fin::after{ content:''; position:absolute; inset:-6px; border-radius:50%; border:1.5px dotted rgba(196,156,72,.75); }
+
+  /* ── Galley proof — the reading seen whole, once, before it leaves
+        (§3 RULED): framing + the 18 resolved lines, nothing editable,
+        Publish at its END. The founding diagnosis (evt_012's framing/axis
+        mismatch was invisible because nothing displayed the reading entire)
+        stays answered here. Never auto-publish; the agent never presses it. ── */
+  body.view-proof main, body.view-proof .cellmap, body.view-proof #kwPill{ display:none !important; }
+  #proofView{ display:none; position:relative; z-index:1; max-width:760px; margin:0 auto;
+    padding: calc(var(--top-chrome) + 66px) 18px calc(var(--dock-h, calc(96px + var(--safe-bottom))) + 40px); }
+  body.view-proof #proofView{ display:block; }
+  .proof-line{ display:flex; flex-direction:column; gap:3px; padding:10px 2px; border-bottom:.5px dotted var(--rule); }
+  .proof-line .lbl{ display:flex; gap:8px; align-items:baseline; font-family:var(--mono); font-size:9px;
+    letter-spacing:.12em; text-transform:uppercase; color:var(--ink-low); }
+  .proof-line .lbl .oc{ margin-left:auto; text-transform:none; letter-spacing:.06em; }
+  .proof-line .txt{ font-family:var(--serif); font-size:15px; line-height:1.5; color:var(--ink); }
+  .proof-line .txt.empty{ color:var(--ink-low); font-style:italic; }
+  .proof-line .cloud{ font-family:var(--mono); font-size:10px; color:var(--ink-low); }
+  .proof-end{ display:flex; gap:10px; justify-content:center; align-items:center; margin:30px 0 8px; }
   /* 36px clears the Y+ pole label, which translates -100% above the plane
      into what was the caption's lap (2026-07-16 iPad audit) */
   .quad-sub{ font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-low); margin-bottom:36px; text-align:center; }
@@ -520,7 +571,7 @@
   <select id="evSelect" title="Load an event onto the surface"></select>
   <span class="prevseg" title="Which axis this spine is (prevalent)"><button id="prevX" class="on">X</button><button id="prevY">Y</button></span>
   <button class="btn" id="tedBtn" title="Edit Ted's speech">🐺 Ted</button>
-  <span class="viewseg" id="viewSeg" title="Author the diatribe, the 12 quadrant responses — then finish the whole reading at the desk"><button data-v="dia" class="on">Diatribe</button><button data-v="quad">Quadrants</button><button data-v="desk">Desk</button></span>
+  <span class="viewseg" id="viewSeg" title="Author the diatribe and the 12 quadrant responses — Desk toggles the editorial round over both surfaces; publish through the galley proof"><button data-v="dia" class="on">Diatribe</button><button data-v="quad">Quadrants</button><button data-v="desk">Desk</button></span>
   <button class="btn" id="citeBtn" title="Citation bank — sources for this event">📎 Sources</button>
   <button class="btn" id="brBtn" title="Bill reading room — curate the bills this event links">📜 Bills</button>
   <button class="btn" id="nrBtn" title="Newsroom — Event Engine candidates from the vote record">📡 Newsroom</button>
@@ -544,7 +595,8 @@
     <div class="prism-caption real" id="capReal" data-side="left" data-band="fluid">
       <div class="caption-label"><span class="side"></span> · <span class="band"></span></div>
       <div class="caption-text" id="capTextReal" contenteditable="true" data-ph="type this voice…"></div>
-      <button class="suggest-btn" id="sugReal">✦ suggest this cell</button>
+      <button class="suggest-btn" id="sugReal" title="Empty slot: Sonnet drafts blind into a box beneath — adopting is yours. Drafted slot: the warm second pass assesses your line; it never rewrites it.">✦ sonnet draft</button>
+      <button class="suggest-btn" id="finReal" title="Mark this line FINAL — your per-slot done; rides the Reading on Save">✓ final</button>
     </div>
 
     <div class="track-wrap">
@@ -568,7 +620,8 @@
     <div class="prism-caption ghost" id="capGhost" data-side="right" data-band="fluid">
       <div class="caption-label"><span class="side"></span> · <span class="band"></span></div>
       <div class="caption-text" id="capTextGhost" contenteditable="true" data-ph="type the mirror voice…"></div>
-      <button class="suggest-btn" id="sugGhost">✦ suggest this cell</button>
+      <button class="suggest-btn" id="sugGhost" title="Empty slot: Sonnet drafts blind into a box beneath — adopting is yours. Drafted slot: the warm second pass assesses your line; it never rewrites it.">✦ sonnet draft</button>
+      <button class="suggest-btn" id="finGhost" title="Mark this line FINAL — your per-slot done; rides the Reading on Save">✓ final</button>
     </div>
   </div>
 </main>
@@ -602,6 +655,21 @@
   <div class="desk-note" id="deskNote"></div>
 </section>
 
+<!-- ── Galley proof (build 2, §3 RULED) — the whole-reading view survives as
+     a read-only page: framing + the 18 resolved lines, nothing editable, and
+     the Publish button sits at its END. Reached from the desk-mode Publish
+     button; the reading is read whole, once, before it leaves. ── -->
+<section id="proofView">
+  <div class="quad-sub">galley proof · the reading entire, read-only · publish sits at the end</div>
+  <div id="proofFraming"></div>
+  <div id="proofBody"></div>
+  <div class="desk-note" id="proofNote"></div>
+  <div class="proof-end">
+    <button class="btn" id="proofDeltas" title="This run's editorial deltas, in the calibration log's schema — the desk is the log's missing emitter">Export deltas</button>
+    <button class="btn primary" id="proofPublish" title="Save, then write this Reading to the repo — every device pulls it on load. Yours to press, never the agent's.">Publish ⇡</button>
+  </div>
+</section>
+
 <div class="modal" id="orbModal"><div class="sheet orb-sheet">
   <div class="oe-head" id="oeHead"></div>
   <textarea id="oeText" placeholder="the response voice for this coordinate subject…"></textarea>
@@ -609,7 +677,8 @@
   <div class="oe-source"><input id="oeSource" list="citeUrls" placeholder="source — where this voice lives (optional)"></div>
   <datalist id="citeUrls"></datalist>
   <div class="oe-actions">
-    <button class="btn" id="oeSuggest">✦ suggest</button>
+    <button class="btn" id="oeSuggest" title="Empty slot: Sonnet drafts blind into a box beneath — adopting is yours. Drafted slot: the warm second pass assesses your line; it never rewrites it.">✦ sonnet draft</button>
+    <button class="btn" id="oeFinal" title="Commit and mark this response FINAL — your per-slot done; rides the Reading on Save">✓ final</button>
     <span style="flex:1"></span>
     <button class="btn primary" id="oeSave">Done</button>
     <button class="btn" id="oeClose">Close</button>
@@ -718,6 +787,9 @@
 <div class="actions">
   <button class="btn" id="btnBack">← Diatribe</button>
   <button class="btn" id="btnSave">Save</button>
+  <button class="btn" id="dmFire" style="display:none" title="Sonnet drafts all 18 slots independently — blind to your text, not to the event">✦ Fire all 18</button>
+  <span class="desk-tally" id="dmTally" style="display:none"></span>
+  <button class="btn" id="dmClassic" style="display:none" title="The build-1 desk page — fallback until evt_012 publishes through the new form; it retires into the galley proof">▤</button>
   <button class="btn" id="btnPublish" title="Save, then write this Reading to the repo — every device pulls it on load">Publish ⇡</button>
   <button class="btn primary" id="btnOpen">Open in Prism ↗</button>
   <button class="btn" id="btnExport">Export</button>
@@ -813,6 +885,10 @@ function setThumb(p, doFlush){
   $('roGhost').textContent = sideLabel(opp)+' · '+band+' · '+sgnScore(-score)+' · mirror';
   $('ambient').className = 'prism-ambient '+band;
   renderCellmap();
+  // desk mode: the thumb walk changes which cells are on stage — their
+  // rounds follow the captions (chips glow is already renderCellmap's job)
+  if(document.body.classList.contains('desk-mode')) dmRenderCaptions();
+  sdSync();   // ✦ boxes + FINAL button state follow the cells on stage
 }
 function bind(capEl, txtEl, side, band, cell, label){
   capEl.dataset.side=side; capEl.dataset.band=band;
@@ -863,6 +939,9 @@ function renderCellmap(){
   ['LF','LC','LD','RF','RC','RD'].forEach(c=>{
     const side=c[0]==='L'?spine.neg:spine.pos, band=bandFromCode(c[1]);
     const chip=document.createElement('button'); chip.className='cellchip'+(filled(c)?' filled':'')+(c===curReal?' active':'');
+    // desk mode: the plane is the progress tracker — resolved glows (§3.4)
+    if(document.body.classList.contains('desk-mode') && typeof desk!=='undefined' && desk && desk.resolutions['dia.'+c]) chip.classList.add('dres');
+    if(typeof cellFinal!=='undefined' && cellFinal[c]) chip.classList.add('fin');   // FINAL wears gold (2026-07-27)
     chip.textContent=(side||c[0])+'·'+band[0]; chip.onclick=()=>setThumb(cellCenterPct(c),true); host.appendChild(chip);
   });
   if(window.DGRoom && DGRoom.active) dgSync();   // the stage over the pedestal follows every edit
@@ -905,10 +984,11 @@ function loadEvent(ev){
   currentId=ev.id||null; $('evTitle').value=ev.title||''; $('framing').innerHTML=markKeywords(ev.framing||'', ev.framingKeywords||[]);
   const pa=ev.prevalentAxis||'x'; const ax=ev.axes||{}; const a=pa==='x'?ax.x:ax.y;
   spine={ neg:(a&&a.neg)||'left', pos:(a&&a.pos)||'right' }; setPrev(pa);
-  const d=ev.diatribe||{}; ['LF','LC','LD','RF','RC','RD'].forEach(c=>{ const e=d[c]||{}; model[c]=markKeywords(e.text||'', e.keywords||[]); });
+  const d=ev.diatribe||{}; cellFinal={}; sdBox={};
+  ['LF','LC','LD','RF','RC','RD'].forEach(c=>{ const e=d[c]||{}; model[c]=markKeywords(e.text||'', e.keywords||[]); if(e.final) cellFinal[c]=true; });
   tedEvent = ev.ted ? JSON.parse(JSON.stringify(ev.ted)) : {};
   const R=ev.responses||{}; responses={A:{},B:{},C:{},D:{}};
-  ['A','B','C','D'].forEach(q=>{ const rq=R[q]||{}; const cvt=o=>({ text:(o&&o.text)||'', xWord:(o&&o.xWord)||'', yWord:(o&&o.yWord)||'', source:(o&&o.source)||'' });
+  ['A','B','C','D'].forEach(q=>{ const rq=R[q]||{}; const cvt=o=>{ const r={ text:(o&&o.text)||'', xWord:(o&&o.xWord)||'', yWord:(o&&o.yWord)||'', source:(o&&o.source)||'' }; if(o&&o.final) r.final=true; return r; };
     // canonical band keys first, legacy aliases second (schema §7) — events
     // authored in admin.html write fluid/denominated; seed data writes
     // goodFaith/badFaith. Reading only legacy broke new events (2026-07-02).
@@ -928,8 +1008,9 @@ function loadEvent(ev){
     pct=(Math.max(-96,Math.min(96,Math.round(ev.diatribeScore)))+100)/2;
   loadedUpdatedAt=ev.updatedAt||null;
   // the desk record follows the Reading; each event's run is its own object
-  desk=currentId?deskLoad(currentId):null; deskMergeKey=null;
-  if(document.body.classList.contains('view-desk')) renderDesk();
+  desk=currentId?deskLoad(currentId):null; deskMergeKey=null; dmMergeArm=null;
+  if(document.body.classList.contains('view-desk')||document.body.classList.contains('desk-mode')) renderDesk();
+  if(document.body.classList.contains('view-proof')) renderProof();
   setPoleFields(); setThumb(pct,false); status(currentId?('Loaded '+currentId):'Loaded onto the surface');
 }
 function loadSeed(){
@@ -938,7 +1019,8 @@ function loadSeed(){
   responses={A:{},B:{},C:{},D:{}}; otherPole={neg:'Market',pos:'State'}; if(typeof citations!=='undefined') citations=[];
   if(typeof images!=='undefined') images=[];
   if(typeof nrPendingPromote!=='undefined') nrPendingPromote=null;
-  loadedUpdatedAt=null; desk=null; deskMergeKey=null;
+  loadedUpdatedAt=null; desk=null; deskMergeKey=null; dmMergeArm=null; cellFinal={}; sdBox={};
+  if(document.body.classList.contains('view-desk')||document.body.classList.contains('desk-mode')) renderDesk();
   setPoleFields(); setThumb(pct,false);
   status('Immigration example — edit freely; ✦ on a filled box marks its keywords');
 }
@@ -949,7 +1031,8 @@ function blank(){
   if(typeof citations!=='undefined') citations=[];
   if(typeof images!=='undefined') images=[];
   if(typeof nrPendingPromote!=='undefined') nrPendingPromote=null;   // fresh slate — no pending promotion
-  loadedUpdatedAt=null; desk=null; deskMergeKey=null;
+  loadedUpdatedAt=null; desk=null; deskMergeKey=null; dmMergeArm=null; cellFinal={}; sdBox={};
+  if(document.body.classList.contains('view-desk')||document.body.classList.contains('desk-mode')) renderDesk();
   setPoleFields(); setThumb(38,false); status('Blank diatribe — tap the pole names to set your axis, then fill the slots');
 }
 
@@ -1046,7 +1129,8 @@ function assemble(){
   const dia={};
   [['LF','left','fluid'],['LC','left','coalition'],['LD','left','denominated'],
    ['RF','right','fluid'],['RC','right','coalition'],['RD','right','denominated']].forEach(([c,side,band])=>{
-     dia[c]={ text:stripHtml(model[c]), side, band, keywords:kwsOf(model[c]) }; });
+     dia[c]={ text:stripHtml(model[c]), side, band, keywords:kwsOf(model[c]) };
+     if(typeof cellFinal!=='undefined' && cellFinal[c]) dia[c].final=true; });   // FINAL rides the Reading (2026-07-27)
   const fh=$('framing').innerHTML;
   const ev={ title:$('evTitle').value.trim()||'Untitled event', framing:stripHtml(fh), framingKeywords:kwsOf(fh),
     diatribe:dia, prevalentAxis:prevAxis,
@@ -1157,49 +1241,181 @@ function callClaude(key, prompt, maxTok){
   // truncation guard) lives there now, single-sourced for all consumers.
   return PrismAI.call(key, { model:$('model').value, prompt, maxTokens:maxTok, effort:'low', system:PrismAI.VOICE_CONTEXT });
 }
-async function suggestCell(which){
-  const key=$('apiKey').value.trim(); if(!key){ status('Add your API key (open “AI” in the top bar)'); return; }
-  const box = which==='real'?$('capTextReal'):$('capTextGhost');
-  const cell = which==='real'?curReal:curGhost;
-  const existing = stripHtml(box.innerHTML);
-  const side = cell[0]==='L'?spine.neg:spine.pos, band = bandFromCode(cell[1]);
-  if(existing){    // filled → mark keywords
-    status('Marking keywords in '+cell+'…');
-    const prompt=`From this Diatribe voice, pick the 1–3 most charged, load-bearing keywords — the compressed "cloud" that prefigures the line. Each must appear verbatim in the line. Return ONLY a JSON array of short strings.\nLINE: ${existing}`;
-    try{ const raw=await callClaude(key,prompt,120); const m=raw.match(/\[[\s\S]*\]/); const arr=m?JSON.parse(m[0]):[];
-      box.innerHTML=markKeywords(existing, arr); model[cell]=box.innerHTML; renderCellmap(); status('Marked '+arr.length+' keyword(s) in '+cell);
-    }catch(e){ status('AI error: '+e.message); }
-    return;
+/* ===== ✦ Sonnet draft + WARM assessment (2026-07-27, Sailor ruled on
+   first contact with desk mode — the old ✦ replaced the author's field;
+   it never does again) =====
+   Empty slot → the BLIND builder (cellPromptFor/orbPromptFor, untouched)
+   drafts into a box beneath; ADOPT writes it into the slot — an explicit
+   authorial act. Drafted slot → the WARM second pass, which founding §3
+   sanctions exactly as "a second pass, never the blind one doing double
+   duty": it reads the author's line and assesses its fit against the
+   slot's parameters and the voice rules — fitness 1–5 (mechanical scale,
+   Claude's call under decision routing) + editorial notes. It NEVER
+   rewrites the line and NEVER feeds the desk fire, which stays blind.
+   Assessments are session-ephemeral (not saved on the Reading).
+   FINAL is the author's per-slot done: rides the Reading as
+   diatribe[c].final / responses[q][b].final; chips and orbs wear gold. */
+var cellFinal={}, sdBox={};   // sdBox: slotKey → {kind:'draft'|'assess'|'busy'|'err', …}
+function sdKeyCell(c){ return 'dia.'+c; }
+function sdKeyOrb(q,b){ return 'resp.'+q+'.'+b; }
+function cellAssessPromptFor(cell, text){
+  const side=cell[0]==='L'?spine.neg:spine.pos, band=bandFromCode(cell[1]);
+  const gloss={fluid:'object present — the good itself, plainly held',coalition:'the good acquires a tribal carrier',denominated:'object replaced by identity — totalizing'}[band];
+  return `You are the WARM editorial second pass for the Prism map. You READ the author's drafted line and assess it. You never rewrite it and you never draft your own.\nSLOT: diatribe cell · spine pole ${side||'?'} · band ${band} (${gloss})\nFRAMING: ${stripHtml($('framing').innerHTML)||'(none)'}\n${PRISM_VOICE_RULES}\nAUTHOR'S LINE: ${JSON.stringify(text)}\nAssess the line's fitness for THIS exact slot: band register (the right denomination distance?), pole fidelity, voiced-not-described, good faith, live vehicle for this event. Return ONLY JSON: {"fitness": <integer 1-5>, "verdict": "<one short editorial sentence>", "notes": ["<up to 4 short notes, each naming the rule or parameter it leans on>"]}`;
+}
+function orbAssessPromptFor(q,b,cur){
+  const xt=(q==='A'||q==='C')?xStore().neg:xStore().pos, yt=(q==='A'||q==='B')?yStore().pos:yStore().neg;
+  const gloss={fluid:'object present — plainly held',coalition:'a tribal carrier / vehicle',denominated:'object replaced by identity — totalizing'}[b];
+  const xs=xStore(), ys=yStore();
+  const xOpp=(xt===xs.neg)?(xs.pos||'the opposite'):(xs.neg||'the opposite');
+  const yOpp=(yt===ys.neg)?(ys.pos||'the opposite'):(ys.neg||'the opposite');
+  return `You are the WARM editorial second pass for the Prism map. You READ the author's drafted quadrant voice and assess it. You never rewrite it and you never draft your own.\nSLOT: quadrant ${q} · this voice is ${xt||'x'} (NOT ${xOpp}) AND ${yt||'y'} (NOT ${yOpp}) · band ${b} (${gloss}) · prevalent axis lands on ${prevAxis==='x'?(xt||'x'):(yt||'y')}\nFRAMING: ${stripHtml($('framing').innerHTML)||'(none)'}\n${PRISM_VOICE_RULES}\nAUTHOR'S LINE: ${JSON.stringify(cur.text)}\nCLOUD TOKENS: x=${JSON.stringify(cur.x)} · y=${JSON.stringify(cur.y)}\nAssess fitness for THIS exact slot: both commitments held (tension resolved nowhere), prevalent-axis landing, band register, voiced-not-described, good faith, live vehicle — and whether the cloud tokens are clean content tokens. Return ONLY JSON: {"fitness": <integer 1-5>, "verdict": "<one short editorial sentence>", "notes": ["<up to 4 short notes, each naming the rule or parameter it leans on>"]}`;
+}
+function sdRenderBox(host, key, ctx, before){
+  if(!host) return;
+  const old=host.querySelector('.sd-box'); if(old) old.remove();
+  const e=sdBox[key]; if(!e) return;
+  const box=document.createElement('div'); box.className='sd-box'; box.dataset.key=key;
+  const l=document.createElement('span'); l.className='lbl';
+  l.textContent = e.kind==='assess' ? 'sonnet — editorial notes · warm pass · your line untouched'
+    : e.kind==='draft' ? 'sonnet — independent draft · blind · adopting is yours'
+    : 'sonnet';
+  box.appendChild(l);
+  if(e.kind==='busy'||e.kind==='err'){
+    const d=document.createElement('div'); d.className='vd'; d.textContent=e.msg; box.appendChild(d);
+    if(e.kind==='err'){ const row=document.createElement('div'); row.className='row';
+      const x=document.createElement('button'); x.textContent='dismiss'; x.onclick=()=>{ delete sdBox[key]; sdSync(); };
+      row.appendChild(x); box.appendChild(row); } }
+  else if(e.kind==='assess'){
+    const f=document.createElement('div'); f.className='fit'; f.textContent='fitness '+e.fitness+'/5'; box.appendChild(f);
+    if(e.verdict){ const v=document.createElement('div'); v.className='vd'; v.textContent=e.verdict; box.appendChild(v); }
+    if(e.notes&&e.notes.length){ const ul=document.createElement('ul');
+      e.notes.slice(0,4).forEach(n=>{ const li=document.createElement('li'); li.textContent=n; ul.appendChild(li); });
+      box.appendChild(ul); }
+    const row=document.createElement('div'); row.className='row';
+    if(ctx==='cell'){ const kw=document.createElement('button'); kw.textContent='★ mark keywords';
+      kw.title='the old ✦-on-filled pass — marks the line\'s charged tokens in place';
+      kw.onclick=()=>sdMarkKeywords(key); row.appendChild(kw); }
+    const x=document.createElement('button'); x.textContent='dismiss'; x.onclick=()=>{ delete sdBox[key]; sdSync(); };
+    row.appendChild(x); box.appendChild(row); }
+  else if(e.kind==='draft'){
+    const d=document.createElement('div'); d.className='dr'; d.textContent=e.text; box.appendChild(d);
+    if(e.x||e.y){ const c=document.createElement('span'); c.className='cloud'; c.textContent='☁ '+[e.x,e.y].filter(Boolean).join(' · '); box.appendChild(c); }
+    const row=document.createElement('div'); row.className='row';
+    const a=document.createElement('button'); a.textContent='adopt'; a.title='write it into the slot — an authorial act';
+    a.onclick=()=>sdAdopt(key,ctx); row.appendChild(a);
+    const x=document.createElement('button'); x.textContent='dismiss'; x.onclick=()=>{ delete sdBox[key]; sdSync(); };
+    row.appendChild(x); box.appendChild(row); }
+  host.insertBefore(box, before||null);
+}
+function sdSync(){
+  sdRenderBox($('capReal'), sdKeyCell(curReal), 'cell');
+  sdRenderBox($('capGhost'), sdKeyCell(curGhost), 'cell');
+  const fr=$('finReal'); if(fr) fr.classList.toggle('fin-on', !!cellFinal[curReal]);
+  const fg=$('finGhost'); if(fg) fg.classList.toggle('fin-on', !!cellFinal[curGhost]);
+  if(orbEditing && $('orbModal').classList.contains('show')){
+    const sheet=document.querySelector('#orbModal .orb-sheet');
+    sdRenderBox(sheet, sdKeyOrb(orbEditing.quad,orbEditing.band), 'orb', sheet.querySelector('.oe-actions'));
+    const of=$('oeFinal'); if(of) of.classList.toggle('fin-on', !!resp(orbEditing.quad,orbEditing.band).final);
   }
-  // empty → write the voice
-  const prompt=cellPromptFor(cell);
-  status('Writing '+cell+'…');
-  try{ let txt=(await callClaude(key,prompt,200)).replace(/^["']|["']$/g,'');
-    box.innerHTML=escHtml(txt); model[cell]=box.innerHTML; renderCellmap(); status('Wrote '+cell+' — tap ✦ again to mark its keywords');
+}
+async function sdFireCell(which){
+  const key=$('apiKey').value.trim(); if(!key){ status('Add your API key (open “AI” in the top bar)'); return; }
+  const cell = which==='real'?curReal:curGhost, k=sdKeyCell(cell);
+  flush();
+  const existing=stripHtml(model[cell]||'');
+  sdBox[k]={kind:'busy', msg: existing?'assessing your line against the slot…':'drafting blind…'}; sdSync();
+  try{
+    if(existing){
+      const raw=await callClaude(key, cellAssessPromptFor(cell, existing), 400);
+      const m=raw.match(/\{[\s\S]*\}/); const o=m?JSON.parse(m[0]):{};
+      sdBox[k]={kind:'assess', fitness:Math.max(1,Math.min(5,parseInt(o.fitness,10)||0))||'?', verdict:o.verdict||'', notes:Array.isArray(o.notes)?o.notes:[]};
+      status('Assessed '+cell+' — your line is untouched'); }
+    else{
+      const txt=(await callClaude(key, cellPromptFor(cell), 200)).replace(/^["']|["']$/g,'').trim();
+      sdBox[k]={kind:'draft', text:txt};
+      status('Sonnet drafted '+cell+' blind — adopt is yours'); }
+  }catch(e){ sdBox[k]={kind:'err', msg:'AI error: '+e.message}; }
+  sdSync();
+}
+async function sdFireOrb(){
+  if(!orbEditing) return;
+  const key=$('apiKey').value.trim(); if(!key){ $('oeStatus').textContent='Add your API key (AI ▸ top bar)'; return; }
+  const q=orbEditing.quad, b=orbEditing.band, k=sdKeyOrb(q,b);
+  const cur={ text:$('oeText').value.trim(), x:$('oeX').value.trim(), y:$('oeY').value.trim() };
+  sdBox[k]={kind:'busy', msg: cur.text?'assessing your line against the slot…':'drafting blind…'}; sdSync();
+  try{
+    if(cur.text){
+      const raw=await callClaude(key, orbAssessPromptFor(q,b,cur), 400);
+      const m=raw.match(/\{[\s\S]*\}/); const o=m?JSON.parse(m[0]):{};
+      sdBox[k]={kind:'assess', fitness:Math.max(1,Math.min(5,parseInt(o.fitness,10)||0))||'?', verdict:o.verdict||'', notes:Array.isArray(o.notes)?o.notes:[]};
+      $('oeStatus').textContent='assessed — your line is untouched'; }
+    else{
+      const raw=await callClaude(key, orbPromptFor(q,b), 300);
+      const m=raw.match(/\{[\s\S]*\}/); const o=m?JSON.parse(m[0]):{};
+      sdBox[k]={kind:'draft', text:(o.response||'').trim(), x:o.xWord||'', y:o.yWord||''};
+      $('oeStatus').textContent='Sonnet drafted blind — adopt is yours'; }
+  }catch(e){ sdBox[k]={kind:'err', msg:'AI error: '+e.message}; }
+  sdSync();
+}
+function sdAdopt(k,ctx){
+  const e=sdBox[k]; if(!e||e.kind!=='draft') return;
+  if(ctx==='cell'){ const cell=k.slice(4);
+    model[cell]=escHtml(e.text); syncCellDom(cell);
+    status('Adopted Sonnet\'s draft into '+cell+' — an authorial act'); }
+  else{ $('oeText').value=e.text; if(e.x)$('oeX').value=e.x; if(e.y)$('oeY').value=e.y;
+    $('oeStatus').textContent='adopted — Done commits it'; }
+  delete sdBox[k]; sdSync();
+}
+async function sdMarkKeywords(k){
+  const key=$('apiKey').value.trim(); if(!key){ status('Add your API key (open “AI” in the top bar)'); return; }
+  const cell=k.slice(4); flush();
+  const existing=stripHtml(model[cell]||''); if(!existing) return;
+  status('Marking keywords in '+cell+'…');
+  const prompt=`From this Diatribe voice, pick the 1–3 most charged, load-bearing keywords — the compressed "cloud" that prefigures the line. Each must appear verbatim in the line. Return ONLY a JSON array of short strings.\nLINE: ${existing}`;
+  try{ const raw=await callClaude(key,prompt,120); const m=raw.match(/\[[\s\S]*\]/); const arr=m?JSON.parse(m[0]):[];
+    model[cell]=markKeywords(existing, arr); syncCellDom(cell); status('Marked '+arr.length+' keyword(s) in '+cell);
   }catch(e){ status('AI error: '+e.message); }
+}
+function sdToggleFinalCell(which){
+  const cell=which==='real'?curReal:curGhost; flush();
+  if(!stripHtml(model[cell]||'')){ status('Nothing to mark final in '+cell+' yet'); return; }
+  cellFinal[cell]=!cellFinal[cell]; if(!cellFinal[cell]) delete cellFinal[cell];
+  renderCellmap(); sdSync();
+  status(cell+(cellFinal[cell]?' marked FINAL — Save carries it':' back to draft'));
 }
 
 /* ---- wire ---- */
 function status(m){ $('status').textContent=m; }
-$('sugReal').onclick=()=>suggestCell('real'); $('sugGhost').onclick=()=>suggestCell('ghost');
+$('sugReal').onclick=()=>sdFireCell('real'); $('sugGhost').onclick=()=>sdFireCell('ghost');
+$('finReal').onclick=()=>sdToggleFinalCell('real'); $('finGhost').onclick=()=>sdToggleFinalCell('ghost');
 $('btnSave').onclick=save; $('btnOpen').onclick=openInPrism; $('btnExport').onclick=openExport;
-$('btnPublish').onclick=async()=>{
+/* The actual press (build 1's flow, unchanged) — reached from the classic
+   desk page's Publish and from the galley proof's end button. In desk MODE
+   the actions-bar Publish opens the proof instead (setView wiring below):
+   the reading is read whole, once, before it leaves. */
+async function publishNow(){
+  const say=m=>{ status(m); if(curView==='proof'){ const el=$('proofNote'); if(el) el.textContent=m; } };
   // Desk gate (Editorial Desk §2.5): publish is per-READING and belongs to
   // the desk. Unresolved desk slots get one warning; publishing anyway is
   // the author's call. The agent never presses this button — Sailor does.
   if(typeof desk!=='undefined' && desk && currentId && desk.eventId===currentId){
     const un=DESK_SLOTS.filter(s=>!desk.resolutions[s.key]).length;
     if(un>0 && !pubArm){ pubArm=true; setTimeout(()=>{ pubArm=false; },8000);
-      status(un+' desk slot(s) unresolved — Publish again within 8s to publish anyway'); return; } }
+      say(un+' desk slot(s) unresolved — Publish again within 8s to publish anyway'); return; } }
   pubArm=false;
   const id=save(); if(!id) return;            // save() already reported why
-  status('Publishing…');
+  say('Publishing…');
   try{ const {rid,bake}=await PrismSync.publish(id);
     // Bake report (2026-07-19): how many kept photos landed in the repo vs
     // stayed hotlinked behind a CORS wall (graceful decay, never blocking).
     const b=bake&&(bake.baked||bake.hotlinked)?(' · '+bake.baked+' baked'+(bake.hotlinked?', '+bake.hotlinked+' hotlinked':'')):'';
-    status('Published · '+rid+' → repo'+b); }
-  catch(e){ status(e.message); }
+    say('Published · '+rid+' → repo'+b); }
+  catch(e){ say(e.message); }
+}
+$('btnPublish').onclick=()=>{
+  if(deskMode && curView!=='desk'){ proofReturn=curView; flush(); setView('proof'); return; }
+  publishNow();
 };
 $('closeExport').onclick=()=>$('exportModal').classList.remove('show');
 $('copyJson').onclick=()=>{ const t=$('exportText'); t.select(); if(navigator.clipboard) navigator.clipboard.writeText(t.value).catch(()=>{}); try{document.execCommand('copy');}catch(e){} status('Copied — paste into the chat'); };
@@ -1341,7 +1557,8 @@ function yStore(){ return prevAxis==='y'?spine:otherPole; }
 function resp(q,b){ responses[q]=responses[q]||{}; return responses[q][b]||{}; }
 function respFilled(q,b){ const r=resp(q,b); return !!(r.text&&r.text.trim()); }
 function responsesSchema(){ const out={}; QUAD_DEF.forEach(q=>{ const rq=responses[q.id]||{};
-  const mk=b=>{ const r=rq[b]||{}; return { text:(r.text||''), xWord:(r.xWord||''), yWord:(r.yWord||''), words:[], source:(r.source||'') }; };
+  const mk=b=>{ const r=rq[b]||{}; const o={ text:(r.text||''), xWord:(r.xWord||''), yWord:(r.yWord||''), words:[], source:(r.source||'') };
+    if(r.final) o.final=true; return o; };   // FINAL rides the Reading (2026-07-27); written only when true
   // Write CANONICAL band keys (Event_Data_Schema_v1 §7). Safe: v2 reads via
   // BAND_KEY_ALIASES, admin.html reads canonical, v56 doesn't touch bands.
   out[q.id]={ xSide:q.xSide, source:'', fluid:mk('fluid'), coalition:mk('coalition'), denominated:mk('denominated') }; });
@@ -1351,6 +1568,9 @@ function buildOrbs(){
   const R=[0.34,0.60,0.90];
   QUAD_DEF.forEach(q=>{ QBANDS.forEach((band,bi)=>{
     const orb=document.createElement('div'); orb.className='orb'+(respFilled(q.id,band)?' filled':''); orb.dataset.band=band; orb.dataset.quad=q.id;
+    // desk mode: the plane is the progress tracker — resolved glows (§3.4)
+    if(document.body.classList.contains('desk-mode') && desk && desk.resolutions['resp.'+q.id+'.'+band]) orb.classList.add('dres');
+    if(resp(q.id,band).final) orb.classList.add('fin');   // FINAL wears gold (2026-07-27)
     const off=R[bi]*42; orb.style.left=(50+q.sx*off)+'%'; orb.style.top=(50-q.sy*off)+'%';
     const tip=document.createElement('span'); tip.className='orb-tip'; tip.textContent=q.id+' · '+band; orb.appendChild(tip);
     orb.onclick=()=>openOrb(q.id,band); plane.appendChild(orb);
@@ -1367,11 +1587,16 @@ function openOrb(q,band){ orbEditing={quad:q,band:band}; const r=resp(q,band);
   $('oeHead').textContent=q+' · '+(xt||'x')+' · '+(yt||'y')+' · '+band;
   $('oeText').value=r.text||''; $('oeX').value=r.xWord||''; $('oeY').value=r.yWord||''; $('oeSource').value=r.source||''; $('oeStatus').textContent=''; syncCiteList();
   $('orbModal').classList.add('show'); setTimeout(()=>$('oeText').focus(),50);
+  dmDecorateModal();   // desk mode: the modal IS this slot's editorial round (§3.3)
+  sdSync();            // ✦ box + FINAL state follow the opened slot
 }
 function commitOrb(){ if(!orbEditing) return; const q=orbEditing.quad,b=orbEditing.band; responses[q]=responses[q]||{};
-  responses[q][b]={ text:$('oeText').value.trim(), xWord:$('oeX').value.trim(), yWord:$('oeY').value.trim(), source:$('oeSource').value.trim() }; buildOrbs(); }
-$('oeSave').onclick=()=>{ commitOrb(); $('orbModal').classList.remove('show'); orbEditing=null; };
-$('oeClose').onclick=()=>{ $('orbModal').classList.remove('show'); orbEditing=null; };
+  const prev=responses[q][b]||{};
+  responses[q][b]={ text:$('oeText').value.trim(), xWord:$('oeX').value.trim(), yWord:$('oeY').value.trim(), source:$('oeSource').value.trim() };
+  if(prev.final) responses[q][b].final=true;   // FINAL survives a commit (2026-07-27)
+  buildOrbs(); }
+$('oeSave').onclick=()=>{ commitOrb(); $('orbModal').classList.remove('show'); orbEditing=null; dmMergeArm=null; };
+$('oeClose').onclick=()=>{ $('orbModal').classList.remove('show'); orbEditing=null; dmMergeArm=null; };
 /* The blind prompt builders — ONE source for the modal ✦ suggests and the
    desk's independent full-fire. They read framing / axes / poles / band and
    PRISM_VOICE_RULES only; neither ever sees Sailor's drafted text. That is
@@ -1391,30 +1616,65 @@ function orbPromptFor(q,b){
   const yOpp=(yt===ys.neg)?(ys.pos||'the opposite'):(ys.neg||'the opposite');
   return `Author one quadrant voice for the Prism map.\n\nTHIS VOICE HOLDS TWO COMMITMENTS AT ONCE AND MUST EXPRESS BOTH:\n  \u2022 ${xs.neg||'x-neg'} \u2194 ${xs.pos||'x-pos'} \u2014 this voice is ${xt||'x'}, NOT ${xOpp}\n  \u2022 ${ys.neg||'y-neg'} \u2194 ${ys.pos||'y-pos'} \u2014 this voice is ${yt||'y'}, NOT ${yOpp}\nThe prevalent axis of this reading is the ${prevAxis==='x'?'first':'second'} one, so the line must land unmistakably on ${prevAxis==='x'?(xt||'x'):(yt||'y')}.\nThese two commitments may pull against each other. That tension IS the subject: hold both, resolve neither. A line that ends up arguing for ${xOpp} is wrong however well written.\n\nBand ${b} (${gloss}). Denomination radiates: fluid holds the object, coalition carries it in a tribe, denominated replaces it with identity.\nFRAMING: ${stripHtml($('framing').innerHTML)||'(none)'}\n${PRISM_VOICE_RULES}\nWrite ONE short, sincere, charged line for this exact cell \u2014 not a strawman \u2014 plus its 1\u20132 word x and y cloud tokens. Return ONLY JSON: {"response":"...","xWord":"...","yWord":"..."}`;
 }
-$('oeSuggest').onclick=async()=>{ if(!orbEditing) return; const key=$('apiKey').value.trim(); if(!key){ $('oeStatus').textContent='Add your API key (AI ▸ top bar)'; return; }
-  const prompt=orbPromptFor(orbEditing.quad, orbEditing.band);
-  $('oeStatus').textContent='Asking Claude…';
-  try{ const raw=await callClaude(key,prompt,300); const m=raw.match(/\{[\s\S]*\}/); const o=m?JSON.parse(m[0]):{};
-    if(o.response)$('oeText').value=o.response; if(o.xWord)$('oeX').value=o.xWord; if(o.yWord)$('oeY').value=o.yWord; $('oeStatus').textContent='filled'; }
-  catch(e){ $('oeStatus').textContent='AI error: '+e.message; } };
+/* 2026-07-27: the old handler here wrote Sonnet's draft straight into the
+   fields — it clobbered Sailor's drafted line on first live contact and is
+   retired. ✦ now goes through sdFireOrb: box beneath, never the fields. */
+$('oeSuggest').onclick=sdFireOrb;
+$('oeFinal').onclick=()=>{
+  if(!orbEditing) return; const q=orbEditing.quad, b=orbEditing.band;
+  if(!$('oeText').value.trim()){ $('oeStatus').textContent='nothing to mark final yet'; return; }
+  commitOrb();
+  responses[q][b].final=!responses[q][b].final; if(!responses[q][b].final) delete responses[q][b].final;
+  buildOrbs(); sdSync();
+  $('oeStatus').textContent=responses[q][b].final?'final — Save carries it':'back to draft';
+};
+/* Desk as MODE (build 2, 2026-07-27 — Editorial Desk → Mode handoff §3):
+   the viewseg stays Diatribe · Quadrants · Desk, but Desk stops being a
+   place and becomes a STATE over the draft surfaces. The dia/quad segs keep
+   choosing the surface; the Desk seg toggles body.desk-mode over it. 'desk'
+   as a VIEW is the classic build-1 page, reachable via ▤ until evt_012
+   publishes through the new form — then it retires into the galley proof. */
 function setView(v){
-  $('viewSeg').querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));
+  curView=v;
+  const modeUI = deskMode && (v==='dia'||v==='quad');
+  $('viewSeg').querySelectorAll('button').forEach(b=>
+    b.classList.toggle('on', b.dataset.v===v || (b.dataset.v==='desk' && (deskMode||v==='desk'))));
   document.body.classList.toggle('view-quad', v==='quad');
   document.body.classList.toggle('view-desk', v==='desk');
+  document.body.classList.toggle('view-proof', v==='proof');
+  document.body.classList.toggle('desk-mode', modeUI);
   const dia = v==='dia';
-  $('btnBack').style.display = dia?'none':'';   // back walks the flow: desk → quad → dia
-  $('btnBack').textContent = v==='desk' ? '← Quadrants' : '← Diatribe';
-  $('btnOpen').style.display = dia?'none':'';     // preview only after the responses stage
-  // Publish lives at the desk and ONLY at the desk (Editorial Desk §1):
-  // "done drafting" and "ready to publish" stop being two meanings of one
-  // place. The diatribe and quadrants stages are now defined DRAFT surfaces.
-  $('btnPublish').style.display = v==='desk'?'':'none';
+  $('btnBack').style.display = dia?'none':'';   // back walks the flow: proof → surface · desk → quad → dia
+  $('btnBack').textContent = v==='proof' ? '← back to the reading' : v==='desk' ? '← Quadrants' : '← Diatribe';
+  $('btnOpen').style.display = (dia||v==='proof')?'none':'';     // preview only after the responses stage
+  // Publish lives in desk contexts only (Editorial Desk §1). In desk MODE the
+  // button OPENS the galley proof — the real press sits at the proof's end
+  // (§3 RULED: the reading is read whole, once, before it leaves). The
+  // classic desk page keeps the direct build-1 press as the fallback.
+  $('btnPublish').style.display = (v==='desk'||modeUI)?'':'none';
+  $('dmFire').style.display = modeUI?'':'none';
+  $('dmTally').style.display = modeUI?'':'none';
+  $('dmClassic').style.display = modeUI?'':'none';
   if(v==='quad'){ renderQuadPoles(); buildOrbs(); }
   if(v==='desk'){ deskEnter(); }
+  if(v==='proof'){ renderProof(); }
+  dmSyncDecor();
   if(window.DGRoom && DGRoom.active) dgSync();
 }
-$('viewSeg').querySelectorAll('button').forEach(b=>b.onclick=()=>setView(b.dataset.v));
-$('btnBack').onclick=()=>setView(document.body.classList.contains('view-desk')?'quad':'dia');
+$('viewSeg').querySelectorAll('button').forEach(b=>b.onclick=()=>{
+  if(b.dataset.v==='desk'){ dmToggle(); return; }
+  setView(b.dataset.v);
+});
+function dmToggle(){
+  if(curView==='desk'){ deskMode=true; setView('quad'); return; }   // classic page → the mode, over the plane
+  deskMode=!deskMode; dmMergeArm=null;
+  if(deskMode){ flush(); desk=currentId?deskLoad(currentId):null; deskMergeKey=null; renderDesk(); }
+  setView(curView==='proof'?'dia':curView);
+}
+$('btnBack').onclick=()=>{
+  if(curView==='proof'){ setView(proofReturn||'dia'); return; }
+  setView(curView==='desk'?'quad':'dia');
+};
 
 /* ===== Editorial Desk — the whole reading at once (2026-07-26 build 1) =====
    Direction: Prism_Editorial_Desk_Direction_Handoff.md. Build 1 merges the
@@ -1477,6 +1737,7 @@ function syncCellDom(cell){
 function slotWriteOrb(s,text,x,y){ const q=s.quad,b=s.band; responses[q]=responses[q]||{};
   const prev=responses[q][b]||{};
   responses[q][b]={ text:text||'', xWord:x||'', yWord:y||'', source:prev.source||'' };
+  if(prev.final) responses[q][b].final=true;   // FINAL survives a desk resolution (2026-07-27)
   try{ buildOrbs(); }catch(_){ } }
 function deskMineOf(s){ // Sailor's column: the fire-time snapshot once fired, live text before
   if(desk && desk.mineSnapshot && desk.mineSnapshot[s.key]){
@@ -1484,7 +1745,10 @@ function deskMineOf(s){ // Sailor's column: the fire-time snapshot once fired, l
     return s.kind==='cell' ? { text:stripHtml(sn.html||'') } : { text:(sn.text||'').trim(), x:sn.xWord||'', y:sn.yWord||'' }; }
   if(s.kind==='cell') return { text:stripHtml(model[s.cell]||'') };
   const r=resp(s.quad,s.band); return { text:(r.text||'').trim(), x:r.xWord||'', y:r.yWord||'' }; }
-function deskNote(m){ const el=$('deskNote'); if(el) el.textContent=m||''; }
+function deskNote(m){ const el=$('deskNote'); if(el) el.textContent=m||'';
+  // desk MODE mirror: the classic page's note strip is hidden while the desk
+  // rides the surfaces, so guidance and fire progress speak through #status
+  if(m && document.body.classList.contains('desk-mode')) status(m); }
 function deskEnter(){ flush(); desk=currentId?deskLoad(currentId):null; deskMergeKey=null; renderDesk(); }
 
 function deskTallyData(){ const c={mine:0,sonnet:0,merged:0,un:0,total:0};
@@ -1497,10 +1761,13 @@ function deskTallyData(){ const c={mine:0,sonnet:0,merged:0,un:0,total:0};
     const r=desk.resolutions[s.key]; if(!r){ c.un++; return; }
     c[r.outcome]=(c[r.outcome]||0)+1; });
   return c; }
-function updateDeskTally(){ const el=$('deskTally'); if(!el) return;
-  if(!desk){ el.textContent='no desk run yet for this reading'; return; }
-  const resolved=DESK_SLOTS.filter(s=>desk.resolutions[s.key]).length, c=deskTallyData();
-  el.textContent=resolved+'/18 resolved · compared '+c.total+' — mine '+c.mine+' · sonnet '+c.sonnet+' · merged '+c.merged; }
+function updateDeskTally(){
+  let t='no desk run yet for this reading';
+  if(desk){ const resolved=DESK_SLOTS.filter(s=>desk.resolutions[s.key]).length, c=deskTallyData();
+    t=resolved+'/18 resolved · compared '+c.total+' — mine '+c.mine+' · sonnet '+c.sonnet+' · merged '+c.merged; }
+  const el=$('deskTally'); if(el) el.textContent=t;
+  const dm=$('dmTally'); if(dm) dm.textContent=t;   // the tally rides the actions bar in desk mode (§3.5)
+}
 
 function deskCol(lbl, data, chosen){
   const col=document.createElement('div'); col.className='ds-col'+((data&&data.text)?'':' empty')+(chosen?' chosen':'');
@@ -1557,7 +1824,8 @@ function deskMergeEditor(s, mine, sd){
 
 function renderDeskSlot(s){ const host=$('deskSlots'); if(!host) return;
   const cur=host.querySelector('[data-key="'+s.key+'"]');
-  if(cur) cur.replaceWith(deskCard(s)); }
+  if(cur) cur.replaceWith(deskCard(s));
+  dmSyncDecor(); }   // each landing also refreshes the in-place rounds + glow
 function renderDesk(){
   const host=$('deskSlots'); if(!host) return;
   $('deskFraming').innerHTML=$('framing').innerHTML;
@@ -1570,20 +1838,25 @@ function renderDesk(){
   g2.textContent='quadrants · the twelve · '+(xStore().neg||'x−')+' ↔ '+(xStore().pos||'x+')+' × '+(yStore().neg||'y−')+' ↔ '+(yStore().pos||'y+');
   host.appendChild(g2);
   DESK_SLOTS.filter(s=>s.kind==='orb').forEach(s=>host.appendChild(deskCard(s)));
-  // fire button state
-  const fb=$('deskFireBtn');
-  if(!currentId){ fb.disabled=true; fb.textContent='✦ Fire all 18';
-    deskNote('Load or save a Reading first — the desk binds to a saved event.'); }
-  else if(deskFiring){ fb.disabled=true; }
-  else if(!desk){ fb.disabled=false; fb.textContent='✦ Fire all 18';
-    deskNote('Sonnet will draft every slot blind to your text — the held-out comparison, at last.'); }
-  else{ fb.disabled=false;
-    const failed=DESK_SLOTS.filter(s=>{ const d=desk.sonnetDrafts[s.key]; return !d||d.error||!d.text; }).length;
-    if(failed>0){ fb.textContent='✦ Retry '+failed+' failed'; deskNote(''); }
-    else{ fb.textContent='↺ Re-fire (resets this run)';
-      const un=DESK_SLOTS.filter(s=>!desk.resolutions[s.key]).length;
-      deskNote(un===0?'The reading reads whole — Publish is yours to press.':''); } }
-  updateDeskTally(); }
+  deskFireStateApply();
+  updateDeskTally();
+  dmSyncDecor(); }
+/* One fire-state computation for BOTH fire buttons — the classic page's and
+   the actions bar's (desk mode). Entering the mode "offers the blind
+   full-fire" (§3.2) through this same state: fresh event → ✦ Fire all 18. */
+function deskFireStateApply(){
+  let st;
+  if(!currentId) st={dis:true,label:'✦ Fire all 18',note:'Load or save a Reading first — the desk binds to a saved event.'};
+  else if(deskFiring) st={dis:true,label:null,note:null};   // progress notes come from the fire loop
+  else if(!desk) st={dis:false,label:'✦ Fire all 18',note:'Sonnet will draft every slot blind to your text — the held-out comparison, at last.'};
+  else{ const failed=DESK_SLOTS.filter(s=>{ const d=desk.sonnetDrafts[s.key]; return !d||d.error||!d.text; }).length;
+    if(failed>0) st={dis:false,label:'✦ Retry '+failed+' failed',note:''};
+    else{ const un=DESK_SLOTS.filter(s=>!desk.resolutions[s.key]).length;
+      st={dis:false,label:'↺ Re-fire (resets this run)',note:un===0?'The reading reads whole — Publish is yours to press.':''}; } }
+  [$('deskFireBtn'),$('dmFire')].forEach(b=>{ if(!b) return;
+    b.disabled=st.dis; if(st.label!==null) b.textContent=st.label; });
+  if(st.note!==null) deskNote(st.note);
+}
 
 function deskChoose(s,outcome){
   if(!desk){ deskNote('Fire first — there is nothing to compare yet.'); return; }
@@ -1675,6 +1948,149 @@ function deskExport(){
   $('exportModal').classList.add('show');
   status('Desk deltas rendered — paste into AutoSuggest_Calibration_Log.md'); }
 $('deskExportBtn').onclick=deskExport;
+
+/* ===== Desk MODE — build 2 (2026-07-27, Editorial Desk → Mode §3) =====
+   The desk dissolves into the drafting grammar itself: each cell and orb
+   becomes its own editorial round, in place, on the surface where it was
+   drafted. Mechanics are build 1's, unchanged — blind fire via the same
+   deskFireClick, per-slot landing into the same prism_desk_v1 record,
+   three-outcome capture via the same deskResolve, deltas in the calibration
+   log's schema. Independence holds verbatim (founding §3): the rounds render
+   Sonnet's column; they never feed Sailor's text into a prompt.
+   Unchanged deferrals: ‡ inline notes, per-slot dialogue, defect tagging. */
+let curView='dia', deskMode=false, proofReturn='dia', dmMergeArm=null;
+function dmSlotOfCell(cell){ return DESK_SLOTS.find(s=>s.kind==='cell'&&s.cell===cell)||null; }
+function dmSlotOfOrb(q,b){ return DESK_SLOTS.find(s=>s.kind==='orb'&&s.quad===q&&s.band===b)||null; }
+
+/* The three-outcome row, shared by caption rounds and the orb modal round.
+   MERGED is two-step in place: arm → rework the line where it lives → ✓
+   record. Recorded as merged, never as a false MINE (founding §4). */
+function dmResRow(s, ctx){
+  const res=(desk&&desk.resolutions[s.key])||null, sd=(desk&&desk.sonnetDrafts[s.key])||null;
+  const mine=deskMineOf(s);
+  const row=document.createElement('div'); row.className='ds-res';
+  const canRes=!!(desk && sd && !sd.error && sd.text && !deskFiring);
+  const mk=(o,lbl,dis,title)=>{ const b=document.createElement('button'); b.textContent=lbl;
+    if(res&&res.outcome===o) b.classList.add('on');
+    b.disabled=!!dis; if(title) b.title=title;
+    b.onclick=()=>dmChoose(s,o,ctx); return b; };
+  row.appendChild(mk('mine','Mine', !canRes||!mine.text, !mine.text?'no draft of yours in this slot':'keep your line (restores the fire-time snapshot)'));
+  row.appendChild(mk('sonnet','Sonnet', !canRes, 'take the independent draft — choosing it is an authorial act'));
+  const armed=dmMergeArm===s.key;
+  row.appendChild(mk('merged', armed?'✓ record merged':'Merged', !canRes, armed?'record the reworked line as MERGED':'rework the line in place, then record'));
+  if(res){ const st=document.createElement('span'); st.className='desk-tally'; st.textContent='· '+res.outcome; row.appendChild(st); }
+  return row;
+}
+function dmChoose(s,o,ctx){
+  if(!desk){ deskNote('Fire first — there is nothing to compare yet.'); return; }
+  if(o==='merged'){
+    if(dmMergeArm!==s.key){ dmMergeArm=s.key;
+      deskNote('Rework the line in place, then ✓ record merged — merged is recorded as merged, never as a false MINE.');
+      dmSyncDecor(); return; }
+    dmMergeArm=null;
+    if(s.kind==='cell'){ flush(); deskResolve(s,'merged', stripHtml(model[s.cell]||'')); }
+    else if(ctx==='modal'){ deskResolve(s,'merged', $('oeText').value.trim(), $('oeX').value.trim(), $('oeY').value.trim()); dmModalFields(s); }
+    else{ const r=resp(s.quad,s.band); deskResolve(s,'merged',(r.text||'').trim(), r.xWord||'', r.yWord||''); }
+    return;
+  }
+  dmMergeArm=null;
+  deskResolve(s,o);                       // writes the winning text back to the surface, as in build 1
+  if(ctx==='modal') dmModalFields(s);     // the open round shows what the slot now holds
+}
+function dmModalFields(s){ const r=resp(s.quad,s.band);
+  $('oeText').value=r.text||''; $('oeX').value=r.xWord||''; $('oeY').value=r.yWord||''; }
+
+/* The round body: build 1's two columns, verbatim semantics — SAILOR is the
+   fire-time snapshot (what MINE restores), SONNET — INDEPENDENT beside it. */
+function dmRoundInto(box,s,ctx){
+  if(!desk){ const n=document.createElement('div'); n.className='desk-note';
+    n.textContent='desk mode · ✦ fire to open this round'; box.appendChild(n); return; }
+  const res=(desk.resolutions[s.key])||null, sd=(desk.sonnetDrafts[s.key])||null;
+  const mine=deskMineOf(s);
+  const cols=document.createElement('div'); cols.className='ds-cols';
+  cols.appendChild(deskCol('sailor', mine, res&&res.outcome==='mine'));
+  cols.appendChild(deskCol('sonnet — independent', sd?{text:(sd.text||'').trim(),x:sd.xWord,y:sd.yWord,err:sd.error}:null, res&&res.outcome==='sonnet'));
+  box.appendChild(cols);
+  box.appendChild(dmResRow(s,ctx));
+}
+function dmDecorateCaption(capEl, cell){
+  if(!capEl) return;
+  const old=capEl.querySelector('.dm-round'); if(old) old.remove();
+  if(!document.body.classList.contains('desk-mode')) return;
+  const s=dmSlotOfCell(cell); if(!s) return;
+  const box=document.createElement('div'); box.className='dm-round'; box.dataset.key=s.key;
+  dmRoundInto(box,s,'cell');
+  capEl.appendChild(box);
+}
+function dmRenderCaptions(){
+  dmDecorateCaption($('capReal'), curReal);
+  dmDecorateCaption($('capGhost'), curGhost);
+}
+function dmDecorateModal(){
+  const sheet=document.querySelector('#orbModal .orb-sheet'); if(!sheet) return;
+  const old=sheet.querySelector('.dm-round'); if(old) old.remove();
+  if(!document.body.classList.contains('desk-mode') || !orbEditing) return;
+  const s=dmSlotOfOrb(orbEditing.quad, orbEditing.band); if(!s) return;
+  const box=document.createElement('div'); box.className='dm-round'; box.dataset.key=s.key;
+  dmRoundInto(box,s,'modal');
+  sheet.insertBefore(box, sheet.querySelector('.oe-actions'));
+}
+/* One decor pass: render the rounds when the mode is on, strip them when it
+   is off. Called by setView, renderDesk (so every deskResolve/fire landing
+   refreshes in place) and renderDeskSlot. */
+function dmSyncDecor(){
+  if(!document.body.classList.contains('desk-mode')){
+    document.querySelectorAll('.dm-round').forEach(n=>n.remove());
+    return; }
+  dmRenderCaptions();
+  renderCellmap();
+  if(curView==='quad') buildOrbs();
+  if(orbEditing && $('orbModal').classList.contains('show')) dmDecorateModal();
+}
+$('dmFire').onclick=deskFireClick;
+$('dmClassic').onclick=()=>setView('desk');
+
+/* ===== Galley proof (§3 RULED) — the reading seen whole, once, before it
+   leaves. Read-only: framing + the 18 lines as the draft fields now hold
+   them (resolutions have already written the winning text back). Publish
+   sits at its END — never auto-pressed, never the agent's. ===== */
+function proofLine(lbl, txt, cloud, oc){
+  const row=document.createElement('div'); row.className='proof-line';
+  const l=document.createElement('div'); l.className='lbl';
+  const t=document.createElement('span'); t.textContent=lbl; l.appendChild(t);
+  if(oc){ const o=document.createElement('span'); o.className='oc'; o.textContent=oc; l.appendChild(o); }
+  row.appendChild(l);
+  const b=document.createElement('div'); b.className='txt'+(txt?'':' empty');
+  b.textContent=txt||'— empty —'; row.appendChild(b);
+  if(cloud){ const c=document.createElement('div'); c.className='cloud'; c.textContent='☁ '+cloud; row.appendChild(c); }
+  return row;
+}
+function renderProof(){
+  flush();
+  $('proofFraming').innerHTML=$('framing').innerHTML;
+  const host=$('proofBody'); if(!host) return; host.innerHTML='';
+  const hasRun=!!(desk && currentId && desk.eventId===currentId);
+  const un=hasRun?DESK_SLOTS.filter(s=>!desk.resolutions[s.key]).length:0;
+  const g1=document.createElement('div'); g1.className='desk-group';
+  g1.textContent='diatribe · the six · '+(spine.neg||'left')+' ↔ '+(spine.pos||'right');
+  host.appendChild(g1);
+  DESK_SLOTS.filter(s=>s.kind==='cell').forEach(s=>{
+    const res=hasRun?desk.resolutions[s.key]:null;
+    host.appendChild(proofLine(deskSlotLabel(s), stripHtml(model[s.cell]||''), '', res?res.outcome:(hasRun?'unresolved':''))); });
+  const g2=document.createElement('div'); g2.className='desk-group';
+  g2.textContent='quadrants · the twelve · '+(xStore().neg||'x−')+' ↔ '+(xStore().pos||'x+')+' × '+(yStore().neg||'y−')+' ↔ '+(yStore().pos||'y+');
+  host.appendChild(g2);
+  DESK_SLOTS.filter(s=>s.kind==='orb').forEach(s=>{
+    const r=resp(s.quad,s.band), res=hasRun?desk.resolutions[s.key]:null;
+    host.appendChild(proofLine(deskSlotLabel(s), (r.text||'').trim(),
+      [r.xWord,r.yWord].filter(Boolean).join(' · '), res?res.outcome:(hasRun?'unresolved':''))); });
+  $('proofNote').textContent = !hasRun
+    ? 'No desk run for this reading — the proof shows the draft as it stands.'
+    : un>0 ? un+' slot(s) unresolved — the proof shows the reading as it stands.'
+    : 'The reading reads whole — Publish is yours to press.';
+}
+$('proofPublish').onclick=()=>publishNow();
+$('proofDeltas').onclick=deskExport;
 
 /* ===== Citation bank — per-event sources; attachable to any voice ===== */
 let citations=[];
