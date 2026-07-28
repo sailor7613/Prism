@@ -1,11 +1,11 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-07-28T19:56:55.977Z · 40 legislative + 11 news (GDELT, 3d)
+// 2026-07-28T22:29:27.893Z · 40 legislative + 13 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1785268604334,
+    "ts": 1785277754480,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
@@ -259,7 +259,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1785268604333,
+    "ts": 1785277754480,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
@@ -532,7 +532,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1785268604333,
+    "ts": 1785277754480,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
@@ -2843,7 +2843,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1785268604333,
+    "ts": 1785277754480,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
@@ -3254,13 +3254,287 @@ window.PRISM_CANDIDATES = [
     "mts": 1784784262612
   },
   {
+    "cid": "cand_leg_sjres-119-196",
+    "source": "legislative",
+    "ts": 1785277754480,
+    "raw": {
+      "method": "legislative_rollcall_v1",
+      "billId": "sjres-119-196",
+      "salience": 0.704,
+      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
+      "votes": [
+        {
+          "voteId": "s-119-2-190",
+          "chamber": "senate",
+          "date": "June 24, 2026,  09:16 PM",
+          "question": "On the Motion to Proceed",
+          "result": "Motion to Proceed Rejected",
+          "margin": -0.072,
+          "totals": {
+            "yea": 45,
+            "nay": 52,
+            "present": 0,
+            "notVoting": 3
+          },
+          "party": {
+            "D": {
+              "yea": 43,
+              "nay": 0
+            },
+            "R": {
+              "yea": 0,
+              "nay": 52
+            },
+            "I": {
+              "yea": 2,
+              "nay": 0
+            }
+          },
+          "positions": {
+            "yea": [
+              "A000382",
+              "B001230",
+              "B001277",
+              "B001303",
+              "B001288",
+              "C000127",
+              "C001088",
+              "C001113",
+              "D000622",
+              "D000563",
+              "F000479",
+              "G000574",
+              "G000555",
+              "H001076",
+              "H001046",
+              "H000273",
+              "H001042",
+              "K000384",
+              "K000377",
+              "K000394",
+              "K000383",
+              "K000367",
+              "M000133",
+              "M001176",
+              "M001169",
+              "M001111",
+              "O000174",
+              "P000145",
+              "P000595",
+              "R000122",
+              "R000608",
+              "S000033",
+              "S001194",
+              "S001150",
+              "S000148",
+              "S001208",
+              "S001203",
+              "V000128",
+              "W000805",
+              "W000790",
+              "W000817",
+              "W000800",
+              "W000802",
+              "W000779"
+            ],
+            "nay": [
+              "B001299",
+              "B001261",
+              "B001243",
+              "B001236",
+              "B001319",
+              "B001305",
+              "C001047",
+              "C001075",
+              "C001035",
+              "C001056",
+              "C001095",
+              "C001096",
+              "C000880",
+              "C001098",
+              "C001114",
+              "D000618",
+              "E000295",
+              "F000463",
+              "G000359",
+              "G000386",
+              "H000601",
+              "H001089",
+              "H001061",
+              "H001104",
+              "H001079",
+              "J000293",
+              "J000312",
+              "K000393",
+              "L000575",
+              "L000577",
+              "L000571",
+              "M001198",
+              "M001243",
+              "M001244",
+              "M000934",
+              "M001242",
+              "M001153",
+              "P000603",
+              "R000618",
+              "R000584",
+              "R000605",
+              "S001227",
+              "S001217",
+              "S001184",
+              "S001232",
+              "S001198",
+              "T000250",
+              "T000476",
+              "T000278",
+              "W000437",
+              "Y000064"
+            ],
+            "present": [],
+            "notVoting": [
+              "B001267",
+              "M000355",
+              "S001181"
+            ]
+          }
+        }
+      ]
+    },
+    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
+    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
+    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Disapprove rule",
+        "neg": "Uphold rule"
+      },
+      "y": {
+        "pos": "Executive overreach",
+        "neg": "Agency discretion legitimate"
+      }
+    },
+    "prevalentAxisGuess": "x",
+    "members": [
+      "A000382",
+      "B001230",
+      "B001277",
+      "B001303",
+      "B001288",
+      "C000127",
+      "C001088",
+      "C001113",
+      "D000622",
+      "D000563",
+      "F000479",
+      "G000574",
+      "G000555",
+      "H001076",
+      "H001046",
+      "H000273",
+      "H001042",
+      "K000384",
+      "K000377",
+      "K000394",
+      "K000383",
+      "K000367",
+      "M000133",
+      "M001176",
+      "M001169",
+      "M001111",
+      "O000174",
+      "P000145",
+      "P000595",
+      "R000122",
+      "R000608",
+      "S000033",
+      "S001194",
+      "S001150",
+      "S000148",
+      "S001208",
+      "S001203",
+      "V000128",
+      "W000805",
+      "W000790",
+      "W000817",
+      "W000800",
+      "W000802",
+      "W000779",
+      "B001299",
+      "B001261",
+      "B001243",
+      "B001236",
+      "B001319",
+      "B001305",
+      "C001047",
+      "C001075",
+      "C001035",
+      "C001056",
+      "C001095",
+      "C001096",
+      "C000880",
+      "C001098",
+      "C001114",
+      "D000618",
+      "E000295",
+      "F000463",
+      "G000359",
+      "G000386",
+      "H000601",
+      "H001089",
+      "H001061",
+      "H001104",
+      "H001079",
+      "J000293",
+      "J000312",
+      "K000393",
+      "L000575",
+      "L000577",
+      "L000571",
+      "M001198",
+      "M001243",
+      "M001244",
+      "M000934",
+      "M001242",
+      "M001153",
+      "P000603",
+      "R000618",
+      "R000584",
+      "R000605",
+      "S001227",
+      "S001217",
+      "S001184",
+      "S001232",
+      "S001198",
+      "T000250",
+      "T000476",
+      "T000278",
+      "W000437",
+      "Y000064"
+    ],
+    "bills": [
+      "sjres-119-196"
+    ],
+    "fitness": {
+      "score": 0.3,
+      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:28:30.038Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "s-119-2-190",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297586
+  },
+  {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1785268604333,
+    "ts": 1785277754480,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.704,
+      "salience": 0.703,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4656,287 +4930,13 @@ window.PRISM_CANDIDATES = [
     "mts": 1784044297586
   },
   {
-    "cid": "cand_leg_sjres-119-196",
-    "source": "legislative",
-    "ts": 1785268604333,
-    "raw": {
-      "method": "legislative_rollcall_v1",
-      "billId": "sjres-119-196",
-      "salience": 0.704,
-      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
-      "votes": [
-        {
-          "voteId": "s-119-2-190",
-          "chamber": "senate",
-          "date": "June 24, 2026,  09:16 PM",
-          "question": "On the Motion to Proceed",
-          "result": "Motion to Proceed Rejected",
-          "margin": -0.072,
-          "totals": {
-            "yea": 45,
-            "nay": 52,
-            "present": 0,
-            "notVoting": 3
-          },
-          "party": {
-            "D": {
-              "yea": 43,
-              "nay": 0
-            },
-            "R": {
-              "yea": 0,
-              "nay": 52
-            },
-            "I": {
-              "yea": 2,
-              "nay": 0
-            }
-          },
-          "positions": {
-            "yea": [
-              "A000382",
-              "B001230",
-              "B001277",
-              "B001303",
-              "B001288",
-              "C000127",
-              "C001088",
-              "C001113",
-              "D000622",
-              "D000563",
-              "F000479",
-              "G000574",
-              "G000555",
-              "H001076",
-              "H001046",
-              "H000273",
-              "H001042",
-              "K000384",
-              "K000377",
-              "K000394",
-              "K000383",
-              "K000367",
-              "M000133",
-              "M001176",
-              "M001169",
-              "M001111",
-              "O000174",
-              "P000145",
-              "P000595",
-              "R000122",
-              "R000608",
-              "S000033",
-              "S001194",
-              "S001150",
-              "S000148",
-              "S001208",
-              "S001203",
-              "V000128",
-              "W000805",
-              "W000790",
-              "W000817",
-              "W000800",
-              "W000802",
-              "W000779"
-            ],
-            "nay": [
-              "B001299",
-              "B001261",
-              "B001243",
-              "B001236",
-              "B001319",
-              "B001305",
-              "C001047",
-              "C001075",
-              "C001035",
-              "C001056",
-              "C001095",
-              "C001096",
-              "C000880",
-              "C001098",
-              "C001114",
-              "D000618",
-              "E000295",
-              "F000463",
-              "G000359",
-              "G000386",
-              "H000601",
-              "H001089",
-              "H001061",
-              "H001104",
-              "H001079",
-              "J000293",
-              "J000312",
-              "K000393",
-              "L000575",
-              "L000577",
-              "L000571",
-              "M001198",
-              "M001243",
-              "M001244",
-              "M000934",
-              "M001242",
-              "M001153",
-              "P000603",
-              "R000618",
-              "R000584",
-              "R000605",
-              "S001227",
-              "S001217",
-              "S001184",
-              "S001232",
-              "S001198",
-              "T000250",
-              "T000476",
-              "T000278",
-              "W000437",
-              "Y000064"
-            ],
-            "present": [],
-            "notVoting": [
-              "B001267",
-              "M000355",
-              "S001181"
-            ]
-          }
-        }
-      ]
-    },
-    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
-    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
-    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
-    "suggestedAxes": {
-      "x": {
-        "pos": "Disapprove rule",
-        "neg": "Uphold rule"
-      },
-      "y": {
-        "pos": "Executive overreach",
-        "neg": "Agency discretion legitimate"
-      }
-    },
-    "prevalentAxisGuess": "x",
-    "members": [
-      "A000382",
-      "B001230",
-      "B001277",
-      "B001303",
-      "B001288",
-      "C000127",
-      "C001088",
-      "C001113",
-      "D000622",
-      "D000563",
-      "F000479",
-      "G000574",
-      "G000555",
-      "H001076",
-      "H001046",
-      "H000273",
-      "H001042",
-      "K000384",
-      "K000377",
-      "K000394",
-      "K000383",
-      "K000367",
-      "M000133",
-      "M001176",
-      "M001169",
-      "M001111",
-      "O000174",
-      "P000145",
-      "P000595",
-      "R000122",
-      "R000608",
-      "S000033",
-      "S001194",
-      "S001150",
-      "S000148",
-      "S001208",
-      "S001203",
-      "V000128",
-      "W000805",
-      "W000790",
-      "W000817",
-      "W000800",
-      "W000802",
-      "W000779",
-      "B001299",
-      "B001261",
-      "B001243",
-      "B001236",
-      "B001319",
-      "B001305",
-      "C001047",
-      "C001075",
-      "C001035",
-      "C001056",
-      "C001095",
-      "C001096",
-      "C000880",
-      "C001098",
-      "C001114",
-      "D000618",
-      "E000295",
-      "F000463",
-      "G000359",
-      "G000386",
-      "H000601",
-      "H001089",
-      "H001061",
-      "H001104",
-      "H001079",
-      "J000293",
-      "J000312",
-      "K000393",
-      "L000575",
-      "L000577",
-      "L000571",
-      "M001198",
-      "M001243",
-      "M001244",
-      "M000934",
-      "M001242",
-      "M001153",
-      "P000603",
-      "R000618",
-      "R000584",
-      "R000605",
-      "S001227",
-      "S001217",
-      "S001184",
-      "S001232",
-      "S001198",
-      "T000250",
-      "T000476",
-      "T000278",
-      "W000437",
-      "Y000064"
-    ],
-    "bills": [
-      "sjres-119-196"
-    ],
-    "fitness": {
-      "score": 0.3,
-      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
-      "method": "m2_constitutive_v1",
-      "ts": "2026-07-14T04:28:30.038Z"
-    },
-    "status": "new",
-    "voteMap": {
-      "voteId": "s-119-2-190",
-      "yeaPole": "pos"
-    },
-    "mts": 1784044297586
-  },
-  {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1785268604333,
+    "ts": 1785277754480,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.69,
+      "salience": 0.689,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5203,7 +5203,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1785268604333,
+    "ts": 1785277754480,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
@@ -6605,11 +6605,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1785268604333,
+    "ts": 1785277754479,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.674,
+      "salience": 0.673,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -8007,11 +8007,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1785268604333,
+    "ts": 1785277754480,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.627,
+      "salience": 0.626,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -8941,7 +8941,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1785268604333,
+    "ts": 1785277754480,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
@@ -9217,11 +9217,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1041",
     "source": "legislative",
-    "ts": 1785268604332,
+    "ts": 1785277754479,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1041",
-      "salience": 0.617,
+      "salience": 0.616,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1041",
       "votes": [
         {
@@ -10614,11 +10614,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2616",
     "source": "legislative",
-    "ts": 1785268604332,
+    "ts": 1785277754479,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2616",
-      "salience": 0.614,
+      "salience": 0.613,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2616",
       "votes": [
         {
@@ -12008,11 +12008,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1785268604333,
+    "ts": 1785277754480,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
-      "salience": 0.611,
+      "salience": 0.61,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2913",
       "votes": [
         {
@@ -12940,7 +12940,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1785268604333,
+    "ts": 1785277754480,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
@@ -13216,7 +13216,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1785268604333,
+    "ts": 1785277754480,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
@@ -14149,11 +14149,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7567",
     "source": "legislative",
-    "ts": 1785268604331,
+    "ts": 1785277754478,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7567",
-      "salience": 0.599,
+      "salience": 0.598,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7567",
       "votes": [
         {
@@ -19806,7 +19806,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1785268604333,
+    "ts": 1785277754480,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
@@ -20739,11 +20739,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6260",
     "source": "legislative",
-    "ts": 1785268604332,
+    "ts": 1785277754479,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6260",
-      "salience": 0.585,
+      "salience": 0.584,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6260",
       "votes": [
         {
@@ -22141,11 +22141,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8365",
     "source": "legislative",
-    "ts": 1785268604332,
+    "ts": 1785277754479,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8365",
-      "salience": 0.585,
+      "salience": 0.584,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8365",
       "votes": [
         {
@@ -23543,7 +23543,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1346",
     "source": "legislative",
-    "ts": 1785268604331,
+    "ts": 1785277754478,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1346",
@@ -24943,7 +24943,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-141",
     "source": "legislative",
-    "ts": 1785268604334,
+    "ts": 1785277754480,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-141",
@@ -25219,7 +25219,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-132",
     "source": "legislative",
-    "ts": 1785268604334,
+    "ts": 1785277754480,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-132",
@@ -25495,7 +25495,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-130",
     "source": "legislative",
-    "ts": 1785268604333,
+    "ts": 1785277754480,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-130",
@@ -25771,11 +25771,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6047",
     "source": "legislative",
-    "ts": 1785268604332,
+    "ts": 1785277754479,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6047",
-      "salience": 0.521,
+      "salience": 0.52,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6047",
       "votes": [
         {
@@ -26696,7 +26696,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1785268604333,
+    "ts": 1785277754480,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
@@ -28099,11 +28099,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1785268604334,
+    "ts": 1785277754480,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.412,
+      "salience": 0.411,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -28992,11 +28992,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1785268604334,
+    "ts": 1785277754480,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.405,
+      "salience": 0.404,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -29907,7 +29907,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1785268604334,
+    "ts": 1785277754480,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
@@ -30795,11 +30795,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1785268604333,
+    "ts": 1785277754480,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.394,
+      "salience": 0.393,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -31716,7 +31716,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1785268604333,
+    "ts": 1785277754480,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
@@ -32634,11 +32634,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5625",
     "source": "legislative",
-    "ts": 1785268604332,
+    "ts": 1785277754479,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5625",
-      "salience": 0.347,
+      "salience": 0.346,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5625",
       "votes": [
         {
@@ -33569,7 +33569,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1785268604333,
+    "ts": 1785277754480,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
@@ -34468,11 +34468,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8469",
     "source": "legislative",
-    "ts": 1785268604332,
+    "ts": 1785277754479,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8469",
-      "salience": 0.317,
+      "salience": 0.316,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8469",
       "votes": [
         {
@@ -35870,11 +35870,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4465",
     "source": "legislative",
-    "ts": 1785268604331,
+    "ts": 1785277754478,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4465",
-      "salience": 0.307,
+      "salience": 0.306,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4465",
       "votes": [
         {
@@ -36753,11 +36753,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1785268604333,
+    "ts": 1785277754479,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.294,
+      "salience": 0.293,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -37687,11 +37687,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2853",
     "source": "legislative",
-    "ts": 1785268604331,
+    "ts": 1785277754478,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2853",
-      "salience": 0.224,
+      "salience": 0.223,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2853",
       "votes": [
         {
@@ -38605,11 +38605,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1785268604333,
+    "ts": 1785277754479,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
-      "salience": 0.22,
+      "salience": 0.219,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/254",
       "votes": [
         {
@@ -39534,7 +39534,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1785268604332,
+    "ts": 1785277754479,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
@@ -40443,11 +40443,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1785268604333,
+    "ts": 1785277754480,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
-      "salience": 0.212,
+      "salience": 0.211,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8466",
       "votes": [
         {
@@ -41316,14 +41316,120 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_against-campaign-collins",
+    "cid": "cand_news_american-eulogized-graham",
     "source": "news",
-    "ts": 1785268615967,
+    "ts": 1785277767883,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.983,
+      "salience": 0.997,
+      "articles": [
+        {
+          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
+          "url": "https://www.wtoc.com/2026/07/28/lindsey-graham-eulogized-an-american-original-services-drawing-world-leaders-washington/",
+          "domain": "wtoc.com",
+          "seendate": "2026-07-28T22:00:00Z",
+          "image": "https://gray-wtoc-prod.gtv-cdn.com/resizer/v2/KG7CQSMSGZDV3AMG7ZNHVVQPCA.jpg?auth=3a83c56a25131eb464f74594e78f2d957f1005ae1f042aa69fad76f0c5fe6623&smart=true"
+        },
+        {
+          "title": "Lindsey Graham eulogized as an  American original  with global reach",
+          "url": "https://www.wdrb.com/news/national/lindsey-graham-eulogized-as-an-american-original-with-global-reach/article_990406ff-d073-5175-bcea-a50c6a751f8f.html",
+          "domain": "wdrb.com",
+          "seendate": "2026-07-28T21:45:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/wdrb.com/content/tncms/assets/v3/editorial/7/ba/7bae90a2-62aa-4884-a2e1-773b7578f93c/6a537dd3efe7a.image.jpg?crop=1762%2C925%2C0%2C125"
+        },
+        {
+          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
+          "url": "https://www.wcbi.com/lindsey-graham-eulogized-as-an-american-original-at-services-drawing-world-leaders-in-washington/",
+          "domain": "wcbi.com",
+          "seendate": "2026-07-28T20:30:00Z",
+          "image": "https://www.wcbi.com/content/uploads/2026/07/n/l/mgn-1280x960-60728p00-aqfrh.jpg"
+        },
+        {
+          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
+          "url": "https://www.whsv.com/2026/07/28/world-leaders-descend-washington-nation-says-goodbye-sen-lindsey-graham/",
+          "domain": "whsv.com",
+          "seendate": "2026-07-28T20:15:00Z",
+          "image": "https://gray-whsv-prod.gtv-cdn.com/resizer/v2/KG7CQSMSGZDV3AMG7ZNHVVQPCA.jpg?auth=3a83c56a25131eb464f74594e78f2d957f1005ae1f042aa69fad76f0c5fe6623&smart=true"
+        },
+        {
+          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
+          "url": "https://www.kmvt.com/2026/07/28/world-leaders-descend-washington-nation-says-goodbye-sen-lindsey-graham/",
+          "domain": "kmvt.com",
+          "seendate": "2026-07-28T20:15:00Z",
+          "image": "https://gray-kmvt-prod.gtv-cdn.com/resizer/v2/KG7CQSMSGZDV3AMG7ZNHVVQPCA.jpg?auth=3a83c56a25131eb464f74594e78f2d957f1005ae1f042aa69fad76f0c5fe6623&smart=true"
+        },
+        {
+          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
+          "url": "https://www.wthitv.com:443/2026/07/28/world-leaders-descend-washington-nation-says-goodbye-sen-lindsey-graham/",
+          "domain": "wthitv.com",
+          "seendate": "2026-07-28T20:00:00Z",
+          "image": "https://gray-wthi-prod.gtv-cdn.com/resizer/v2/KG7CQSMSGZDV3AMG7ZNHVVQPCA.jpg?auth=3a83c56a25131eb464f74594e78f2d957f1005ae1f042aa69fad76f0c5fe6623&smart=true"
+        },
+        {
+          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington - WSVN 7News | Miami News , Weather , Sports",
+          "url": "https://wsvn.com/news/politics/lindsey-graham-eulogized-as-an-american-original-at-services-drawing-world-leaders-in-washington/",
+          "domain": "wsvn.com",
+          "seendate": "2026-07-28T19:45:00Z",
+          "image": null
+        },
+        {
+          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington - Boston News , Weather , Sports",
+          "url": "https://whdh.com/news/lindsey-graham-eulogized-as-an-american-original-at-services-drawing-world-leaders-in-washington/",
+          "domain": "whdh.com",
+          "seendate": "2026-07-28T19:30:00Z",
+          "image": null
+        },
+        {
+          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
+          "url": "https://www.yakimaherald.com/news/nation_and_world/nation/lindsey-graham-eulogized-as-an-american-original-at-services-drawing-world-leaders-in-washington/article_6ef1545b-f0dc-5aa6-b370-eee052f656ec.html",
+          "domain": "yakimaherald.com",
+          "seendate": "2026-07-28T19:30:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/yakimaherald.com/content/tncms/assets/v3/editorial/c/de/cde8faa3-d0a5-5b51-9c14-b8180c06db8a/6a6840158b97c.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
+        {
+          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
+          "url": "http://www.dailyadvance.com/news/national/lindsey-graham-eulogized-as-an-american-original-at-services-drawing-world-leaders-in-washington/article_2a7ab98d-4bd5-5069-ba06-3ff1153ae154.html",
+          "domain": "dailyadvance.com",
+          "seendate": "2026-07-28T19:30:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/dailyadvance.com/content/tncms/assets/v3/editorial/2/f0/2f0d12e4-5d5e-5a5d-adae-93b6631e4e14/6a682b65bf628.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
+        {
+          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
+          "url": "https://www.news8000.com/news/politics/national-politics/lindsey-graham-eulogized-as-an-american-original-at-services-drawing-world-leaders-in-washington/article_2195c0bc-8580-5f90-bf17-88b8cbf34e1b.html",
+          "domain": "news8000.com",
+          "seendate": "2026-07-28T19:30:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/news8000.com/content/tncms/assets/v3/editorial/2/3e/23eeeb8f-4706-462d-8ae4-67345b18e60c/6a68f3cdbd0a7.image.jpg?crop=1758%2C923%2C0%2C127"
+        },
+        {
+          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
+          "url": "https://www.wistv.com/2026/07/28/lindsey-graham-eulogized-an-american-original-services-drawing-world-leaders-washington/",
+          "domain": "wistv.com",
+          "seendate": "2026-07-28T19:15:00Z",
+          "image": "https://gray-wistv-prod.gtv-cdn.com/resizer/v2/KG7CQSMSGZDV3AMG7ZNHVVQPCA.jpg?auth=3a83c56a25131eb464f74594e78f2d957f1005ae1f042aa69fad76f0c5fe6623&smart=true"
+        }
+      ]
+    },
+    "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
+    "summary": "2026-07-28 wtoc.com: Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington\n2026-07-28 wdrb.com: Lindsey Graham eulogized as an  American original  with global reach\n2026-07-28 wcbi.com: Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington\n2026-07-28 whsv.com: Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington\n2026-07-28 kmvt.com: Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington\n2026-07-28 wthitv.com: Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_against-campaign-collins",
+    "source": "news",
+    "ts": 1785277767884,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.967,
       "articles": [
         {
           "title": "Democrats reset campaign against Collins with new nominee",
@@ -41422,75 +41528,160 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_american-eulogized-graham",
+    "cid": "cand_news_ballot-block-court",
     "source": "news",
-    "ts": 1785268615966,
+    "ts": 1785277767884,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.887,
+      "salience": 0.933,
       "articles": [
         {
-          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington - Boston News , Weather , Sports",
-          "url": "https://whdh.com/news/lindsey-graham-eulogized-as-an-american-original-at-services-drawing-world-leaders-in-washington/",
-          "domain": "whdh.com",
-          "seendate": "2026-07-28T19:30:00Z",
-          "image": null
+          "title": "Court panel declines to block Trump mail ballot order , but its status for midterms remains unclear",
+          "url": "https://www.news4jax.com/news/politics/2026/07/28/court-panel-declines-to-block-trumps-mail-ballot-order-but-its-status-for-midterms-remains-unclear/",
+          "domain": "news4jax.com",
+          "seendate": "2026-07-28T20:30:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/NSMHPNCP7NDRRCPQG3W2NGLW6Q.jpg?_a=DATAg1kSZAA0"
         },
         {
-          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
-          "url": "https://www.yakimaherald.com/news/nation_and_world/nation/lindsey-graham-eulogized-as-an-american-original-at-services-drawing-world-leaders-in-washington/article_6ef1545b-f0dc-5aa6-b370-eee052f656ec.html",
-          "domain": "yakimaherald.com",
-          "seendate": "2026-07-28T19:30:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/yakimaherald.com/content/tncms/assets/v3/editorial/c/de/cde8faa3-d0a5-5b51-9c14-b8180c06db8a/6a6840158b97c.image.jpg?crop=1763%2C926%2C0%2C124"
+          "title": "Court declines to block Trump mail ballot order , but midterms unclear",
+          "url": "https://www.pilotonline.com/2026/07/28/election-2026-trump-mail-ballots/",
+          "domain": "pilotonline.com",
+          "seendate": "2026-07-28T20:15:00Z",
+          "image": "https://www.pilotonline.com/wp-content/uploads/2026/07/Election_2_26_Postal_Service_35786-1.jpg"
         },
         {
-          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
-          "url": "http://www.dailyadvance.com/news/national/lindsey-graham-eulogized-as-an-american-original-at-services-drawing-world-leaders-in-washington/article_2a7ab98d-4bd5-5069-ba06-3ff1153ae154.html",
-          "domain": "dailyadvance.com",
-          "seendate": "2026-07-28T19:30:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/dailyadvance.com/content/tncms/assets/v3/editorial/2/f0/2f0d12e4-5d5e-5a5d-adae-93b6631e4e14/6a682b65bf628.image.jpg?crop=1763%2C926%2C0%2C124"
+          "title": "Court declines to block Trump mail ballot order , but midterms unclear",
+          "url": "https://www.dailynews.com/2026/07/28/election-2026-trump-mail-ballots/",
+          "domain": "dailynews.com",
+          "seendate": "2026-07-28T20:00:00Z",
+          "image": "https://www.dailynews.com/wp-content/uploads/2026/07/Election_2_26_Postal_Service_35786-1.jpg"
         },
         {
-          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
-          "url": "https://www.news8000.com/news/politics/national-politics/lindsey-graham-eulogized-as-an-american-original-at-services-drawing-world-leaders-in-washington/article_2195c0bc-8580-5f90-bf17-88b8cbf34e1b.html",
-          "domain": "news8000.com",
-          "seendate": "2026-07-28T19:30:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/news8000.com/content/tncms/assets/v3/editorial/2/3e/23eeeb8f-4706-462d-8ae4-67345b18e60c/6a68f3cdbd0a7.image.jpg?crop=1758%2C923%2C0%2C127"
+          "title": "Court declines to block Trump mail ballot order , but midterms unclear",
+          "url": "https://www.sun-sentinel.com/2026/07/28/election-2026-trump-mail-ballots/",
+          "domain": "sun-sentinel.com",
+          "seendate": "2026-07-28T19:45:00Z",
+          "image": "https://www.sun-sentinel.com/wp-content/uploads/2026/07/Election_2_26_Postal_Service_35786-1.jpg"
         },
         {
-          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
-          "url": "https://www.wistv.com/2026/07/28/lindsey-graham-eulogized-an-american-original-services-drawing-world-leaders-washington/",
-          "domain": "wistv.com",
+          "title": "Court declines to block Trump mail ballot order , but midterms unclear",
+          "url": "https://www.bostonherald.com/2026/07/28/election-2026-trump-mail-ballots/",
+          "domain": "bostonherald.com",
+          "seendate": "2026-07-28T19:45:00Z",
+          "image": "https://www.bostonherald.com/wp-content/uploads/2026/07/Election_2_26_Postal_Service_35786-1.jpg"
+        },
+        {
+          "title": "Court declines to block Trump mail ballot order , but midterms unclear",
+          "url": "https://www.citizensvoice.com/2026/07/28/election-2026-trump-mail-ballots/",
+          "domain": "citizensvoice.com",
+          "seendate": "2026-07-28T19:45:00Z",
+          "image": "https://www.citizensvoice.com/wp-content/uploads/2026/07/Election_2_26_Postal_Service_35786-1.jpg"
+        },
+        {
+          "title": "Court declines to block Trump mail ballot order , but midterms unclear",
+          "url": "https://www.timescall.com/2026/07/28/election-2026-trump-mail-ballots/",
+          "domain": "timescall.com",
+          "seendate": "2026-07-28T19:30:00Z",
+          "image": "https://www.timescall.com/wp-content/uploads/2026/07/Election_2_26_Postal_Service_35786-1.jpg"
+        },
+        {
+          "title": "Court panel declines to block Trump mail ballot order , but its status for midterms remains unclear",
+          "url": "https://www.yahoo.com/news/politics/articles/court-panel-declines-block-trumps-183747156.html",
+          "domain": "yahoo.com",
           "seendate": "2026-07-28T19:15:00Z",
-          "image": "https://gray-wistv-prod.gtv-cdn.com/resizer/v2/KG7CQSMSGZDV3AMG7ZNHVVQPCA.jpg?auth=3a83c56a25131eb464f74594e78f2d957f1005ae1f042aa69fad76f0c5fe6623&smart=true"
+          "image": "https://s.yimg.com/lo/mysterio/api/c67db269de9c5fb043008adcb7d00bb36ec531b5006d89f46788e6c1e1932c04/lightyear_networkapi/resizefill_w1200;quality_80;format_webp/https:%2F%2Fmedia.zenfs.com%2Fen%2Fap.org%2Fd161c2d2eca545b8c2bc66d8ff6d0d90"
         },
         {
-          "title": "Lindsey Graham eulogized as an  American original  at services in DC",
-          "url": "https://www.sandiegouniontribune.com/2026/07/28/lindsey-graham-funeral/",
+          "title": "Court declines to block Trump mail ballot order , but midterms unclear",
+          "url": "https://www.sandiegouniontribune.com/2026/07/28/election-2026-trump-mail-ballots/",
           "domain": "sandiegouniontribune.com",
-          "seendate": "2026-07-28T19:00:00Z",
-          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/07/AP26209633019021.jpg"
-        },
-        {
-          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
-          "url": "https://www.latimes.com/world-nation/story/2026-07-28/lindsey-graham-eulogized-as-american-original-at-services-drawing-world-leaders-in-washington",
-          "domain": "latimes.com",
-          "seendate": "2026-07-28T17:15:00Z",
-          "image": "https://california-times-brightspot.s3.amazonaws.com/a1/9b/41eb9e7046778931f3674037e658/d2eae7388a744c83b4ef2e3361f584e9.jpg"
-        },
-        {
-          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
-          "url": "https://www.wral.com/news/ap/5bdc4-lindsey-grahams-funeral-to-draw-trump-remarks-and-world-leaders-in-washington/",
-          "domain": "wral.com",
-          "seendate": "2026-07-28T17:00:00Z",
-          "image": "https://images.wral.com/0a104130-3a2e-5591-92c2-5e8e9934a795"
+          "seendate": "2026-07-28T19:15:00Z",
+          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/07/Election_2_26_Postal_Service_35786-1.jpg"
         }
       ]
     },
-    "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
-    "summary": "2026-07-28 whdh.com: Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington - Boston News , Weather , Sports\n2026-07-28 yakimaherald.com: Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington\n2026-07-28 dailyadvance.com: Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington\n2026-07-28 news8000.com: Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington\n2026-07-28 wistv.com: Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington\n2026-07-28 sandiegouniontribune.com: Lindsey Graham eulogized as an  American original  at services in DC",
+    "title": "Court declines to block Trump mail ballot order , but midterms unclear",
+    "summary": "2026-07-28 news4jax.com: Court panel declines to block Trump mail ballot order , but its status for midterms remains unclear\n2026-07-28 pilotonline.com: Court declines to block Trump mail ballot order , but midterms unclear\n2026-07-28 dailynews.com: Court declines to block Trump mail ballot order , but midterms unclear\n2026-07-28 sun-sentinel.com: Court declines to block Trump mail ballot order , but midterms unclear\n2026-07-28 bostonherald.com: Court declines to block Trump mail ballot order , but midterms unclear\n2026-07-28 citizensvoice.com: Court declines to block Trump mail ballot order , but midterms unclear",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_day-graham-lindsey",
+    "source": "news",
+    "ts": 1785277767884,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.881,
+      "articles": [
+        {
+          "title": "In a day of tributes , Lindsey Graham is remembered as a tireless Washington mainstay",
+          "url": "https://www.wrkf.org/npr-news/2026-07-28/in-a-day-of-tributes-lindsey-graham-is-remembered-as-a-tireless-washington-mainstay",
+          "domain": "wrkf.org",
+          "seendate": "2026-07-28T21:00:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/22/79/6c20b6fb4664a72fbe6f19fdbc54/gettyimages-2287364231.jpg"
+        },
+        {
+          "title": "In a day of tributes , Lindsey Graham is remembered as a tireless Washington mainstay",
+          "url": "https://www.wvik.org/npr-top-stories/2026-07-28/in-a-day-of-tributes-lindsey-graham-is-remembered-as-a-tireless-washington-mainstay",
+          "domain": "wvik.org",
+          "seendate": "2026-07-28T21:00:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/22/79/6c20b6fb4664a72fbe6f19fdbc54/gettyimages-2287364231.jpg"
+        },
+        {
+          "title": "In a day of tributes , Lindsey Graham is remembered as a tireless Washington mainstay",
+          "url": "https://www.kjzz.org/npr-top-stories/2026-07-28/in-a-day-of-tributes-lindsey-graham-is-remembered-as-a-tireless-washington-mainstay",
+          "domain": "kjzz.org",
+          "seendate": "2026-07-28T21:00:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/22/79/6c20b6fb4664a72fbe6f19fdbc54/gettyimages-2287364231.jpg"
+        },
+        {
+          "title": "In a day of tributes , Lindsey Graham is remembered as a tireless Washington mainstay",
+          "url": "https://www.wgcu.org/2026-07-28/in-a-day-of-tributes-lindsey-graham-is-remembered-as-a-tireless-washington-mainstay",
+          "domain": "wgcu.org",
+          "seendate": "2026-07-28T20:30:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/22/79/6c20b6fb4664a72fbe6f19fdbc54/gettyimages-2287364231.jpg"
+        },
+        {
+          "title": "In a day of tributes , Lindsey Graham is remembered as a tireless Washington mainstay",
+          "url": "https://www.tspr.org/npr-news/2026-07-28/in-a-day-of-tributes-lindsey-graham-is-remembered-as-a-tireless-washington-mainstay",
+          "domain": "tspr.org",
+          "seendate": "2026-07-28T20:30:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/22/79/6c20b6fb4664a72fbe6f19fdbc54/gettyimages-2287364231.jpg"
+        },
+        {
+          "title": "In a day of tributes , Lindsey Graham is remembered as a tireless Washington mainstay",
+          "url": "https://www.wkyufm.org/news/2026-07-28/in-a-day-of-tributes-lindsey-graham-is-remembered-as-a-tireless-washington-mainstay",
+          "domain": "wkyufm.org",
+          "seendate": "2026-07-28T20:30:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/22/79/6c20b6fb4664a72fbe6f19fdbc54/gettyimages-2287364231.jpg"
+        },
+        {
+          "title": "In a day of tributes , Lindsey Graham is remembered as a tireless Washington mainstay",
+          "url": "https://www.wemu.org/npr-national-news/2026-07-28/in-a-day-of-tributes-lindsey-graham-is-remembered-as-a-tireless-washington-mainstay",
+          "domain": "wemu.org",
+          "seendate": "2026-07-28T20:30:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/22/79/6c20b6fb4664a72fbe6f19fdbc54/gettyimages-2287364231.jpg"
+        },
+        {
+          "title": "In a day of tributes , Lindsey Graham is remembered as a tireless Washington mainstay",
+          "url": "https://www.kacu.org/2026-07-28/in-a-day-of-tributes-lindsey-graham-is-remembered-as-a-tireless-washington-mainstay",
+          "domain": "kacu.org",
+          "seendate": "2026-07-28T20:30:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/22/79/6c20b6fb4664a72fbe6f19fdbc54/gettyimages-2287364231.jpg"
+        }
+      ]
+    },
+    "title": "In a day of tributes , Lindsey Graham is remembered as a tireless Washington mainstay",
+    "summary": "2026-07-28 wrkf.org: In a day of tributes , Lindsey Graham is remembered as a tireless Washington mainstay\n2026-07-28 wvik.org: In a day of tributes , Lindsey Graham is remembered as a tireless Washington mainstay\n2026-07-28 kjzz.org: In a day of tributes , Lindsey Graham is remembered as a tireless Washington mainstay\n2026-07-28 wgcu.org: In a day of tributes , Lindsey Graham is remembered as a tireless Washington mainstay\n2026-07-28 tspr.org: In a day of tributes , Lindsey Graham is remembered as a tireless Washington mainstay\n2026-07-28 wkyufm.org: In a day of tributes , Lindsey Graham is remembered as a tireless Washington mainstay",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -41502,12 +41693,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_admin-allow-before",
     "source": "news",
-    "ts": 1785268615966,
+    "ts": 1785277767883,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.883,
+      "salience": 0.867,
       "articles": [
         {
           "title": "Trump admin urges SCOTUS to allow order targeting mail - in voting before midterms",
@@ -41608,12 +41799,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_defend-economic-policies",
     "source": "news",
-    "ts": 1785268615967,
+    "ts": 1785277767884,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.86,
+      "salience": 0.844,
       "articles": [
         {
           "title": "Trump to defend his economic policies in Michigan , where new Canadian tariffs may sting",
@@ -41712,92 +41903,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_clears-court-end",
-    "source": "news",
-    "ts": 1785268615968,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.789,
-      "articles": [
-        {
-          "title": "Supreme Court clears way to end TPS protections for Haitians , other immigrants",
-          "url": "https://www.wptv.com/politics/immigration/supreme-court-clears-way-to-end-tps-program-protections-for-haitians-and-other-immigrants",
-          "domain": "wptv.com",
-          "seendate": "2026-07-28T03:45:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/90/80/ee66295f42099249d98bcb773409/ap26138777046488.jpg"
-        },
-        {
-          "title": "Supreme Court clears way to end TPS protections for Haitians , other immigrants",
-          "url": "https://www.wxyz.com/politics/immigration/supreme-court-clears-way-to-end-tps-program-protections-for-haitians-and-other-immigrants",
-          "domain": "wxyz.com",
-          "seendate": "2026-07-28T03:15:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/90/80/ee66295f42099249d98bcb773409/ap26138777046488.jpg"
-        },
-        {
-          "title": "Supreme Court clears way to end TPS protections for Haitians , other immigrants",
-          "url": "https://www.wtvr.com/politics/immigration/supreme-court-clears-way-to-end-tps-program-protections-for-haitians-and-other-immigrants",
-          "domain": "wtvr.com",
-          "seendate": "2026-07-28T02:45:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/90/80/ee66295f42099249d98bcb773409/ap26138777046488.jpg"
-        },
-        {
-          "title": "Supreme Court clears way to end TPS protections for Haitians , other immigrants",
-          "url": "https://www.fox13now.com/politics/immigration/supreme-court-clears-way-to-end-tps-program-protections-for-haitians-and-other-immigrants",
-          "domain": "fox13now.com",
-          "seendate": "2026-07-28T02:00:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/90/80/ee66295f42099249d98bcb773409/ap26138777046488.jpg"
-        },
-        {
-          "title": "Supreme Court clears way to end TPS protections for Haitians , other immigrants",
-          "url": "https://www.kshb.com/politics/immigration/supreme-court-clears-way-to-end-tps-program-protections-for-haitians-and-other-immigrants",
-          "domain": "kshb.com",
-          "seendate": "2026-07-28T01:45:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/90/80/ee66295f42099249d98bcb773409/ap26138777046488.jpg"
-        },
-        {
-          "title": "Supreme Court clears way to end TPS protections for Haitians , other immigrants",
-          "url": "https://www.abc15.com/politics/immigration/supreme-court-clears-way-to-end-tps-program-protections-for-haitians-and-other-immigrants",
-          "domain": "abc15.com",
-          "seendate": "2026-07-28T01:30:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/90/80/ee66295f42099249d98bcb773409/ap26138777046488.jpg"
-        },
-        {
-          "title": "Supreme Court clears way to end TPS protections for Haitians , other immigrants",
-          "url": "https://www.wkbw.com/politics/immigration/supreme-court-clears-way-to-end-tps-program-protections-for-haitians-and-other-immigrants",
-          "domain": "wkbw.com",
-          "seendate": "2026-07-28T01:00:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/90/80/ee66295f42099249d98bcb773409/ap26138777046488.jpg"
-        },
-        {
-          "title": "Supreme Court clears way to end TPS protections for Haitians , other immigrants",
-          "url": "https://www.wcpo.com/politics/immigration/supreme-court-clears-way-to-end-tps-program-protections-for-haitians-and-other-immigrants",
-          "domain": "wcpo.com",
-          "seendate": "2026-07-28T00:30:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/90/80/ee66295f42099249d98bcb773409/ap26138777046488.jpg"
-        }
-      ]
-    },
-    "title": "Supreme Court clears way to end TPS protections for Haitians , other immigrants",
-    "summary": "2026-07-28 wptv.com: Supreme Court clears way to end TPS protections for Haitians , other immigrants\n2026-07-28 wxyz.com: Supreme Court clears way to end TPS protections for Haitians , other immigrants\n2026-07-28 wtvr.com: Supreme Court clears way to end TPS protections for Haitians , other immigrants\n2026-07-28 fox13now.com: Supreme Court clears way to end TPS protections for Haitians , other immigrants\n2026-07-28 kshb.com: Supreme Court clears way to end TPS protections for Haitians , other immigrants\n2026-07-28 abc15.com: Supreme Court clears way to end TPS protections for Haitians , other immigrants",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_asks-court-mail",
     "source": "news",
-    "ts": 1785268615966,
+    "ts": 1785277767883,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.718,
+      "salience": 0.702,
       "articles": [
         {
           "title": "Trump Asks Supreme Court to Allow Restrictions on Mail - In Ballots Before Midterms",
@@ -41833,18 +41946,11 @@ window.PRISM_CANDIDATES = [
           "domain": "hngn.com",
           "seendate": "2026-07-27T22:45:00Z",
           "image": "https://d.hngn.com/en/full/304087/file-us-supreme-court-building-exterior.jpg"
-        },
-        {
-          "title": "Trump administration asks Supreme Court to allow mail - in ballot restrictions",
-          "url": "https://www.yahoo.com/news/politics/articles/trump-administration-asks-supreme-court-193854839.html",
-          "domain": "yahoo.com",
-          "seendate": "2026-07-27T20:15:00Z",
-          "image": "https://s.yimg.com/lo/mysterio/api/2f610af520db4ba4fe0d9a7635b7eaf939ea66a125f381ed002f1b7af2c88da0/lightyear_networkapi/resizefill_w800_h533;quality_80;format_webp/https:%2F%2Fmedia.zenfs.com%2Fen%2Freuters.com%2F115427cda42a2eaf3d52c97b7ac272df"
         }
       ]
     },
     "title": "Trump administration asks Supreme Court to allow new limits on mail ballots",
-    "summary": "2026-07-28 yahoo.com: Trump Asks Supreme Court to Allow Restrictions on Mail - In Ballots Before Midterms\n2026-07-28 newsone.com: Trump Admin Asks Supreme Court To Rule On Mail - In Ballots EO\n2026-07-28 theoaklandpress.com: Trump administration asks Supreme Court to allow new limits on mail ballots\n2026-07-28 macombdaily.com: Trump administration asks Supreme Court to allow new limits on mail ballots\n2026-07-27 hngn.com: Trump Administration Asks Supreme Court To Allow Mail - In Voting Order Before Midterms\n2026-07-27 yahoo.com: Trump administration asks Supreme Court to allow mail - in ballot restrictions",
+    "summary": "2026-07-28 yahoo.com: Trump Asks Supreme Court to Allow Restrictions on Mail - In Ballots Before Midterms\n2026-07-28 newsone.com: Trump Admin Asks Supreme Court To Rule On Mail - In Ballots EO\n2026-07-28 theoaklandpress.com: Trump administration asks Supreme Court to allow new limits on mail ballots\n2026-07-28 macombdaily.com: Trump administration asks Supreme Court to allow new limits on mail ballots\n2026-07-27 hngn.com: Trump Administration Asks Supreme Court To Allow Mail - In Voting Order Before Midterms",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -41856,12 +41962,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_court-haitians-ice",
     "source": "news",
-    "ts": 1785268615968,
+    "ts": 1785277767884,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.71,
+      "salience": 0.639,
       "articles": [
         {
           "title": "ICE prepares major operation targeting Haitians losing TPS after Supreme Court ruling",
@@ -41900,13 +42006,6 @@ window.PRISM_CANDIDATES = [
         },
         {
           "title": "ICE prepares major operation targeting Haitians losing TPS after Supreme Court ruling",
-          "url": "https://www.fox7austin.com/news/ice-prepares-major-operation-targeting-haitians-losing-tps-after-supreme-court-ruling",
-          "domain": "fox7austin.com",
-          "seendate": "2026-07-27T17:00:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/07/1280/720/ice-agent-american-flag-haitian-tps-enforcement-ohio-springfield.jpg?ve=1&tl=1"
-        },
-        {
-          "title": "ICE prepares major operation targeting Haitians losing TPS after Supreme Court ruling",
           "url": "https://www.fox2detroit.com/news/ice-prepares-major-operation-targeting-haitians-losing-tps-after-supreme-court-ruling",
           "domain": "fox2detroit.com",
           "seendate": "2026-07-27T16:15:00Z",
@@ -41915,7 +42014,7 @@ window.PRISM_CANDIDATES = [
       ]
     },
     "title": "ICE prepares major operation targeting Haitians losing TPS after Supreme Court ruling",
-    "summary": "2026-07-28 foxla.com: ICE prepares major operation targeting Haitians losing TPS after Supreme Court ruling\n2026-07-27 fox4news.com: ICE prepares major operation targeting Haitians losing TPS after Supreme Court ruling\n2026-07-27 fox5dc.com: ICE prepares major operation targeting Haitians losing TPS after Supreme Court ruling\n2026-07-27 fox26houston.com: ICE prepares major operation targeting Haitians losing TPS after Supreme Court ruling\n2026-07-27 ktvu.com: ICE prepares major operation targeting Haitians losing TPS after Supreme Court ruling\n2026-07-27 fox7austin.com: ICE prepares major operation targeting Haitians losing TPS after Supreme Court ruling",
+    "summary": "2026-07-28 foxla.com: ICE prepares major operation targeting Haitians losing TPS after Supreme Court ruling\n2026-07-27 fox4news.com: ICE prepares major operation targeting Haitians losing TPS after Supreme Court ruling\n2026-07-27 fox5dc.com: ICE prepares major operation targeting Haitians losing TPS after Supreme Court ruling\n2026-07-27 fox26houston.com: ICE prepares major operation targeting Haitians losing TPS after Supreme Court ruling\n2026-07-27 ktvu.com: ICE prepares major operation targeting Haitians losing TPS after Supreme Court ruling\n2026-07-27 fox2detroit.com: ICE prepares major operation targeting Haitians losing TPS after Supreme Court ruling",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -41925,40 +42024,83 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_ballot-block-court",
+    "cid": "cand_news_funeral-graham-honor",
     "source": "news",
-    "ts": 1785268615968,
+    "ts": 1785277767883,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.612,
+      "salience": 0.603,
       "articles": [
         {
-          "title": "Court declines to block Trump mail ballot order , but midterms unclear",
-          "url": "https://www.timescall.com/2026/07/28/election-2026-trump-mail-ballots/",
-          "domain": "timescall.com",
-          "seendate": "2026-07-28T19:30:00Z",
-          "image": "https://www.timescall.com/wp-content/uploads/2026/07/Election_2_26_Postal_Service_35786-1.jpg"
+          "title": "Lindsey Graham funeral : Trump , world leaders honor late senator – NBC 6 South Florida",
+          "url": "https://www.nbcmiami.com/news/national-international/lindsey-graham-funeral-trump-world-leaders-washington/3839300/",
+          "domain": "nbcmiami.com",
+          "seendate": "2026-07-28T20:30:00Z",
+          "image": "https://media.nbcmiami.com/2026/07/LINDSEY-GRAHAM-CEREMONY.jpg?quality=85&strip=all"
         },
         {
-          "title": "Court panel declines to block Trump mail ballot order , but its status for midterms remains unclear",
-          "url": "https://www.yahoo.com/news/politics/articles/court-panel-declines-block-trumps-183747156.html",
-          "domain": "yahoo.com",
-          "seendate": "2026-07-28T19:15:00Z",
-          "image": "https://s.yimg.com/lo/mysterio/api/c67db269de9c5fb043008adcb7d00bb36ec531b5006d89f46788e6c1e1932c04/lightyear_networkapi/resizefill_w1200;quality_80;format_webp/https:%2F%2Fmedia.zenfs.com%2Fen%2Fap.org%2Fd161c2d2eca545b8c2bc66d8ff6d0d90"
+          "title": "Lindsey Graham funeral : Trump , world leaders honor late senator – NBC4 Washington",
+          "url": "https://www.nbcwashington.com/news/national-international/lindsey-graham-funeral-trump-world-leaders-washington/4135076/",
+          "domain": "nbcwashington.com",
+          "seendate": "2026-07-28T18:45:00Z",
+          "image": "https://media.nbcwashington.com/2026/07/AP26209505030012.jpg?quality=85&strip=all"
         },
         {
-          "title": "Court declines to block Trump mail ballot order , but midterms unclear",
-          "url": "https://www.sandiegouniontribune.com/2026/07/28/election-2026-trump-mail-ballots/",
-          "domain": "sandiegouniontribune.com",
-          "seendate": "2026-07-28T19:15:00Z",
-          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/07/Election_2_26_Postal_Service_35786-1.jpg"
+          "title": "Lindsey Graham funeral : Trump , world leaders honor late senator – NBC 5 Dallas - Fort Worth",
+          "url": "https://www.nbcdfw.com/news/national-international/lindsey-graham-funeral-trump-world-leaders-washington/4055005/",
+          "domain": "nbcdfw.com",
+          "seendate": "2026-07-28T18:30:00Z",
+          "image": "https://media.nbcdfw.com/2026/07/AP26209505030012.jpg?quality=85&strip=all"
         }
       ]
     },
-    "title": "Court declines to block Trump mail ballot order , but midterms unclear",
-    "summary": "2026-07-28 timescall.com: Court declines to block Trump mail ballot order , but midterms unclear\n2026-07-28 yahoo.com: Court panel declines to block Trump mail ballot order , but its status for midterms remains unclear\n2026-07-28 sandiegouniontribune.com: Court declines to block Trump mail ballot order , but midterms unclear",
+    "title": "Lindsey Graham funeral : Trump , world leaders honor late senator – NBC 6 South Florida",
+    "summary": "2026-07-28 nbcmiami.com: Lindsey Graham funeral : Trump , world leaders honor late senator – NBC 6 South Florida\n2026-07-28 nbcwashington.com: Lindsey Graham funeral : Trump , world leaders honor late senator – NBC4 Washington\n2026-07-28 nbcdfw.com: Lindsey Graham funeral : Trump , world leaders honor late senator – NBC 5 Dallas - Fort Worth",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_american-constant-eulogizes",
+    "source": "news",
+    "ts": 1785277767884,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.598,
+      "articles": [
+        {
+          "title": "The Latest : Trump eulogizes Lindsey Graham , says he was a  constant fixture of American politics  ",
+          "url": "http://www.thegazette.com/news/national/the-latest-trump-eulogizes-lindsey-graham-says-he-was-a-constant-fixture-of-american-politics/article_ffe592a5-c34a-5929-aceb-bfb650ceb971.html",
+          "domain": "thegazette.com",
+          "seendate": "2026-07-28T19:45:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/thegazette.com/content/tncms/assets/v3/editorial/8/89/8890732a-2513-5ff2-9ad1-0caa469fe14e/6a683b3d73b76.image.jpg?crop=4441%2C2332%2C0%2C314"
+        },
+        {
+          "title": "The Latest : Trump eulogizes Lindsey Graham , says he was a  constant fixture of American politics  ",
+          "url": "https://www.local10.com/news/2026/07/28/the-latest-trump-eulogizes-lindsey-graham-says-he-was-a-constant-fixture-of-american-politics/",
+          "domain": "local10.com",
+          "seendate": "2026-07-28T19:30:00Z",
+          "image": "https://www.local10.com/resizer/v2/4TNNN2CVWLHCZXFYDIUZIMJD2E.jpg?auth=30c927a758b82d11ae8da36399e4ca35982eadda1b12be81ee79cdaf7fdd7ea6"
+        },
+        {
+          "title": "The Latest : Trump eulogizes Lindsey Graham , says he was a  constant fixture of American politics  ",
+          "url": "http://www.dailyadvance.com/news/national/the-latest-trump-eulogizes-lindsey-graham-says-he-was-a-constant-fixture-of-american-politics/article_e449521c-8296-572b-bff9-6d3db9d62bd2.html",
+          "domain": "dailyadvance.com",
+          "seendate": "2026-07-28T19:30:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/dailyadvance.com/content/tncms/assets/v3/editorial/d/81/d81b2206-80df-5ec0-a28e-a0132f5af908/6a683ec920da2.image.jpg?crop=1763%2C926%2C0%2C124"
+        }
+      ]
+    },
+    "title": "The Latest : Trump eulogizes Lindsey Graham , says he was a  constant fixture of American politics  ",
+    "summary": "2026-07-28 thegazette.com: The Latest : Trump eulogizes Lindsey Graham , says he was a  constant fixture of American politics  \n2026-07-28 local10.com: The Latest : Trump eulogizes Lindsey Graham , says he was a  constant fixture of American politics  \n2026-07-28 dailyadvance.com: The Latest : Trump eulogizes Lindsey Graham , says he was a  constant fixture of American politics  ",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -41970,12 +42112,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_100-days-democratic",
     "source": "news",
-    "ts": 1785268615968,
+    "ts": 1785277767884,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.553,
+      "salience": 0.538,
       "articles": [
         {
           "title": "House Democratic leader Hakeem Jeffries kicks off 100 days till midterms with affordability agenda",
@@ -42027,12 +42169,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_asks-court-curtail",
     "source": "news",
-    "ts": 1785268615968,
+    "ts": 1785277767884,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.492,
+      "salience": 0.476,
       "articles": [
         {
           "title": "Trump asks Supreme Court to let him curtail mail voting",
@@ -42070,12 +42212,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_battle-democratic-generations",
     "source": "news",
-    "ts": 1785268615968,
+    "ts": 1785277767884,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.372,
+      "salience": 0.356,
       "articles": [
         {
           "title": "Massachusetts Democratic Senate primary sets up a battle of generations",
