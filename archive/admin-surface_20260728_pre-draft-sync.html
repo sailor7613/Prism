@@ -777,7 +777,7 @@
   <div class="br-foot">
     <button class="btn" id="nrRescan" title="Re-read data/candidates.js into the store (triage state survives)">↺ Rescan</button>
     <button class="btn" id="nrScore" title="M2 pass — score unscored triage candidates: framing draft, axes, constitutive fitness (spec §4 as amended)">✦ Score</button>
-    <button class="btn" id="nrSync" title="Full sync ⇄ repo: pull + push the middle stratum (candidate_scores.json), then sweep every unpublished draft and desk run into data/readings/drafts/ and desk/ (newest wins per rid). Same token as Publish.">⇡ Sync</button>
+    <button class="btn" id="nrSync" title="Middle stratum ⇄ repo: pull data/candidate_scores.json, merge (newest wins per candidate), push this device's scores + triage back. Same token as Publish.">⇡ Sync scores</button>
     <span class="status" id="nrStatus"></span>
   </div>
 </aside>
@@ -1195,11 +1195,6 @@ function save(){
     // Auto-carry: the fresh draft/promotion rides to the stratum without
     // the ⇡ gesture (2026-07-16 — the iPad roundtrip gap).
     if(stratumTouched){ try{ nrQueuePush(); }catch(_){} }
-    // Draft sync spine (2026-07-28, §3.1): EVERY save carries its draft —
-    // not only promoted candidates. Debounced quiet push in PrismSync;
-    // token-gated (pull-only origins no-op); published Readings ride
-    // their own pipe; pre-rid readings wait for the canonical backfill.
-    if(currentId && typeof PrismSync!=='undefined'){ try{ PrismSync.queueDraftPush(currentId); }catch(_){} }
     return currentId;
   }catch(e){ status('Save failed: '+e.message); return null; }
 }
@@ -1723,9 +1718,6 @@ function deskSave(rec){ if(!rec||!rec.eventId) return;
     try{ const w=PrismDB.saveDesk(rec);
       if(w!==rec && w && w.updatedAt && rec.updatedAt && w.updatedAt>rec.updatedAt)
         deskNote('⚠ Another tab holds a NEWER desk run for '+rec.eventId+' — this tab did not overwrite it. Reload the event to adopt it.');
-      // Desk tier auto-carry (2026-07-28, §3.5 — desk records converge):
-      // every desk save queues a quiet per-rid push, same debounce as drafts.
-      else if(typeof PrismSync!=='undefined'){ try{ PrismSync.queueDeskPush(rec.eventId); }catch(_){} }
     }catch(e){ deskNote('Desk save failed: '+e.message); }
     return; }
   rec.updatedAt=new Date().toISOString();
@@ -2324,16 +2316,7 @@ async function nrSyncScores(quiet){
     const file={ schema:'candidate_scores/v1', updated:new Date().toISOString(), records };
     nrScoresSha=await PrismSync.putFile(NR_SCORES_PATH, file,
       'Newsroom: middle stratum ('+Object.keys(records).length+' candidates)', nrScoresSha);
-    // Full sync (2026-07-28, §3.1): the ⇡ gesture also sweeps every
-    // unpublished draft + desk run into their repo tiers — this is the
-    // first-run sweep that seeds data/readings/drafts/ and desk/, and
-    // the catch-all for anything the auto-carry missed.
-    let sweep='';
-    try{ const d=await PrismSync.pushAllDrafts(); const k=await PrismSync.pushAllDesk();
-      if(d.pushed||k.pushed) sweep=' · '+d.pushed+' draft'+(d.pushed===1?'':'s')+(k.pushed?' · '+k.pushed+' desk':'');
-      if(d.refused||k.refused) sweep+=' · '+((d.refused||0)+(k.refused||0))+' refused (repo newer — reload)';
-    }catch(_){}
-    nrStatus('⇡ synced — '+(pulled.applied||0)+' pulled · '+Object.keys(records).length+' pushed'+sweep);
+    nrStatus('⇡ synced — '+(pulled.applied||0)+' pulled · '+Object.keys(records).length+' pushed');
   }catch(e){ nrStatus('⇡ sync failed: '+e.message); }
   finally{ nrSyncing=false; }
 }
@@ -2987,24 +2970,11 @@ setView('dia');   // start on the diatribe stage of the flow
 })();
 if(!HAS_DB) status('Serve via Live Server so it shares storage with Prism.');
 
-/* Sync: pull ALL tiers from the repo on every load — published, drafts,
-   desk runs (2026-07-28, §3.2: pull on load, everywhere). Quiet when
-   nothing's new; never blocks the surface. Token honesty (§3.6): a
-   tokenless origin says so plainly instead of failing quietly later. */
+/* Sync: pull published Readings from the repo on every load.
+   Quiet when nothing's new; never blocks the surface. */
 if(HAS_DB && typeof PrismSync!=='undefined'){
-  try{ PrismSync.onNotice(status); }catch(_){}
   PrismSync.pull()
-    .then(r=>{
-      const bits=[];
-      if(r.pulled) bits.push(r.pulled+' published');
-      if(r.draftsPulled) bits.push(r.draftsPulled+' draft'+(r.draftsPulled>1?'s':''));
-      if(r.deskPulled) bits.push(r.deskPulled+' desk run'+(r.deskPulled>1?'s':''));
-      const noTok=!PrismSync.token() ? ' · no GitHub token on this origin — pulls only (add one under Sync to push)' : '';
-      if(bits.length){ refreshDropdown(currentId); status('Pulled '+bits.join(' · ')+' from the repo'+noTok); }
-      else if(noTok) status('Sync: nothing new'+noTok);
-      if(r.draftsError) status('Draft pull: '+r.draftsError);
-      if(r.deskError) status('Desk pull: '+r.deskError);
-    })
+    .then(r=>{ if(r.pulled){ refreshDropdown(currentId); status('Pulled '+r.pulled+' Reading'+(r.pulled>1?'s':'')+' from the repo'); } })
     .catch(e=>status('Sync pull: '+e.message));
 }
 

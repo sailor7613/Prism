@@ -1037,6 +1037,49 @@ const PrismDB = (() => {
     if (all[eventId]) { delete all[eventId]; _set(KEYS.desk, all); }
   }
 
+  // Sync-side upsert (2026-07-28, draft sync spine §3.5 — desk records
+  // converge). Unlike saveDesk this PRESERVES the incoming updatedAt:
+  // re-stamping an imported record would make every origin's copy
+  // "newest" and the tier could never converge. Same LWW, same refusal:
+  // a local record as new or newer stays put (returns null).
+  function importDeskRecord(eventId, rec) {
+    if (!eventId || !rec) return null;
+    const all = getDesks();
+    const cur = all[eventId];
+    if (cur && (cur.updatedAt || '') >= (rec.updatedAt || '')) return null;
+    all[eventId] = Object.assign({}, rec, { eventId: eventId });
+    _set(KEYS.desk, all);
+    return all[eventId];
+  }
+
+  // ── rid backfill (2026-07-28, draft sync spine §3.4 — one-time) ──
+  // Pre-rid-era readings merge by title, which is exactly the fragility
+  // the rid exists to end. Mint them a rid ONCE, on the canonical
+  // desktop origin only (running this on two origins would fork
+  // identities — the sync then propagates the canonical minting).
+  // Mechanical call, logged lineage: PrismDB.backfillRids() in the
+  // console on http://127.0.0.1:5500; pass true to override the guard.
+  function backfillRids(force) {
+    const CANON = '127.0.0.1:5500';
+    if (!force && typeof location !== 'undefined' && location.host !== CANON) {
+      console.warn('PrismDB.backfillRids: refused — this is ' + (location.host || 'an unknown origin') +
+        ', not the canonical ' + CANON + '. Run it there (or pass true to force, knowing why).');
+      return { minted: 0, refused: true };
+    }
+    const events = getEvents();
+    let minted = 0;
+    events.forEach(ev => {
+      if (ev.rid) return;
+      ev.rid = mintRid();
+      ev.ridLineage = 'backfilled ' + new Date().toISOString() + ' on ' +
+        (typeof location !== 'undefined' ? location.host : 'unknown');
+      console.log('PrismDB.backfillRids: ' + ev.id + ' “' + (ev.title || 'untitled') + '” → ' + ev.rid);
+      minted++;
+    });
+    if (minted) _set(KEYS.events, events);
+    return { minted: minted };
+  }
+
   function clear() {
     Object.values(KEYS).forEach(k => localStorage.removeItem(k));
     console.log('PrismDB cleared (including arcs, members, positions, desk runs).');
@@ -1857,7 +1900,8 @@ const PrismDB = (() => {
     exportCandidateScores, mergeCandidateScores,
     dismissCandidate, holdCandidate, promoteCandidate, deleteCandidate,
     exportBillReadings, importBillReadings, migrateBillAnalysis,
-    getDesks, getDesk, saveDesk, deleteDesk,
+    getDesks, getDesk, saveDesk, deleteDesk, importDeskRecord,
+    backfillRids,
     getState, setState,
     getUser, setUser,
     getFollowed, isFollowing, follow, unfollow, toggleFollow,
