@@ -115,6 +115,30 @@ const PrismSync = (() => {
     return !!(ev && (ev.syncedAt || (ev.rid && shas()[ev.rid])));
   }
 
+  // Era bridge (2026-07-28, found live on the iPad's first pull after
+  // the desktop sweep): rid propagation can't reach a local copy that
+  // PREDATES rids — matching by rid alone lands the pulled Reading
+  // beside it as a duplicate. Fall back to exact title match, ONLY
+  // onto a local copy with NO rid, and adopt the incoming rid onto it
+  // (logged lineage) — the same title fallback the 07-27 consolidation
+  // used by hand, automated for the one era that needs it. An existing
+  // rid is never overridden: two rid'd readings sharing a title are
+  // genuinely two readings. This branch goes quiet forever once every
+  // device's store is post-backfill.
+  function findLocal(reading) {
+    const events = PrismDB.getEvents();
+    let local = events.find(e => e.rid === reading.rid);
+    if (local) return local;
+    const t = (reading.title || '').trim();
+    if (!t) return null;
+    local = events.find(e => !e.rid && (e.title || '').trim() === t);
+    if (local) {
+      local = PrismDB.updateEvent(local.id, { rid: reading.rid,
+        ridLineage: 'adopted from sync ' + new Date().toISOString() });
+    }
+    return local;
+  }
+
   // ── Pull (published tier) ─────────────────────────────────
   // Returns { pulled: n, checked: n } or throws with a readable message.
   async function pullPublished() {
@@ -137,7 +161,7 @@ const PrismSync = (() => {
       // the store, never on the event object.
       const bills = Array.isArray(reading.billReadings) ? reading.billReadings : null;
       if ('billReadings' in reading) delete reading.billReadings;
-      let local = PrismDB.getEvents().find(e => e.rid === reading.rid);
+      let local = findLocal(reading);
       if (!local || (reading.updatedAt || '') > (local.updatedAt || '')) {
         local = PrismDB.importReading(reading);
         pulled++;
@@ -174,7 +198,7 @@ const PrismSync = (() => {
       if (!reading.rid) reading.rid = rid;                       // filename is authoritative
       const bills = Array.isArray(reading.billReadings) ? reading.billReadings : null;
       if ('billReadings' in reading) delete reading.billReadings;
-      let local = PrismDB.getEvents().find(e => e.rid === reading.rid);
+      let local = findLocal(reading);
       if (local && local.syncedAt) { setShaIn(DRAFT_SHAS_KEY, rid, f.sha); continue; }
       if (!local || (reading.updatedAt || '') > (local.updatedAt || '')) {
         local = PrismDB.importReading(reading);
