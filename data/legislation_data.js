@@ -3030,7 +3030,9 @@ const LEGISLATION_DATA = [
   {
     "name": "SEED Act",
     "meta": "H.R. 5334 · Passed House · Tax Policy",
-    "id": "hr-119-5334"
+    "id": "hr-119-5334",
+    "rc": 1,
+    "mm": 0.755
   },
   {
     "name": "Doug LaMalfa Federal Disaster Tax Relief Certainty Act",
