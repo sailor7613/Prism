@@ -1,6 +1,6 @@
 {
   "schema": "candidate_scores/v1",
-  "updated": "2026-07-29T21:18:34.238Z",
+  "updated": "2026-07-29T22:22:20.363Z",
   "records": {
     "cand_leg_s-119-2": {
       "mts": 1784044297585,
@@ -1050,7 +1050,7 @@
         }
       },
       "prevalentAxisGuess": "x",
-      "promotedEventId": "evt_003",
+      "promotedEventId": "evt_007",
       "draftReading": {
         "category": "",
         "prompt": "",
@@ -1070,6 +1070,65 @@
             "neg": "BLOCK NDAA"
           }
         },
+        "title": "Senate Democrats block $1 trillion defense bill in protest over Iran war",
+        "framing": "The headline binary is whether the NDAA advances or stays blocked. But underneath, the real tension is whether Iran war powers should be resolved through executive latitude or congressional constraint — a question that splits both parties' own factions rather than just pitting Democrats against Republicans.",
+        "framingKeywords": [],
+        "diatribe": {
+          "LF": {
+            "text": "Move the defense bill forward because the troops need funding and the Iran question deserves its own debate, not a hostage situation.",
+            "side": "left",
+            "band": "fluid",
+            "keywords": []
+          },
+          "LC": {
+            "text": "We in a very dynamic conflict with Iran, we can’t hold up and NDAA as a way of assessing our current war strategy.",
+            "side": "left",
+            "band": "coalition",
+            "keywords": []
+          },
+          "LD": {
+            "text": "There can be no debate over the Iran war or this NDAA. The Trump administration needs every tool in the war chest, now.",
+            "side": "left",
+            "band": "denominated",
+            "keywords": []
+          },
+          "RF": {
+            "text": "The Trump administration has been very active, militarily. It’s time for some clarity of scope re Iran before we sign another blank check to the pentagon.",
+            "side": "right",
+            "band": "fluid",
+            "keywords": []
+          },
+          "RC": {
+            "text": "Congress has a constitutional mandate to regulate war powers.",
+            "side": "right",
+            "band": "coalition",
+            "keywords": []
+          },
+          "RD": {
+            "text": "America is being lead into another war by the Israel lobby and entrenched institutional interests.",
+            "side": "right",
+            "band": "denominated",
+            "keywords": []
+          }
+        },
+        "prevalentAxis": "y",
+        "sources": [
+          {
+            "url": "https://www.pilotonline.com/2026/07/14/senate-defense-bill/",
+            "label": "pilotonline.com"
+          },
+          {
+            "url": "https://news.antiwar.com/2026/07/14/senate-democrats-block-advancement-of-1-1-trillion-ndaa-over-iran-war/",
+            "label": "news.antiwar.com"
+          },
+          {
+            "url": "https://www.mcall.com/2026/07/14/senate-defense-bill/",
+            "label": "mcall.com"
+          }
+        ],
+        "rid": "rdg_mrmmvye0oiod",
+        "schema": "reading/v1",
+        "updatedAt": "2026-07-18T17:58:00.517Z",
         "responses": {
           "A": {
             "xSide": "left",
@@ -1171,66 +1230,7 @@
               "source": ""
             }
           }
-        },
-        "title": "Senate Democrats block $1 trillion defense bill in protest over Iran war",
-        "framing": "The headline binary is whether the NDAA advances or stays blocked. But underneath, the real tension is whether Iran war powers should be resolved through executive latitude or congressional constraint — a question that splits both parties' own factions rather than just pitting Democrats against Republicans.",
-        "framingKeywords": [],
-        "diatribe": {
-          "LF": {
-            "text": "Move the defense bill forward because the troops need funding and the Iran question deserves its own debate, not a hostage situation.",
-            "side": "left",
-            "band": "fluid",
-            "keywords": []
-          },
-          "LC": {
-            "text": "We in a very dynamic conflict with Iran, we can’t hold up and NDAA as a way of assessing our current war strategy.",
-            "side": "left",
-            "band": "coalition",
-            "keywords": []
-          },
-          "LD": {
-            "text": "There can be no debate over the Iran war or this NDAA. The Trump administration needs every tool in the war chest, now.",
-            "side": "left",
-            "band": "denominated",
-            "keywords": []
-          },
-          "RF": {
-            "text": "The Trump administration has been very active, militarily. It’s time for some clarity of scope re Iran before we sign another blank check to the pentagon.",
-            "side": "right",
-            "band": "fluid",
-            "keywords": []
-          },
-          "RC": {
-            "text": "Congress has a constitutional mandate to regulate war powers.",
-            "side": "right",
-            "band": "coalition",
-            "keywords": []
-          },
-          "RD": {
-            "text": "America is being lead into another war by the Israel lobby and entrenched institutional interests.",
-            "side": "right",
-            "band": "denominated",
-            "keywords": []
-          }
-        },
-        "prevalentAxis": "y",
-        "sources": [
-          {
-            "url": "https://www.pilotonline.com/2026/07/14/senate-defense-bill/",
-            "label": "pilotonline.com"
-          },
-          {
-            "url": "https://news.antiwar.com/2026/07/14/senate-democrats-block-advancement-of-1-1-trillion-ndaa-over-iran-war/",
-            "label": "news.antiwar.com"
-          },
-          {
-            "url": "https://www.mcall.com/2026/07/14/senate-defense-bill/",
-            "label": "mcall.com"
-          }
-        ],
-        "rid": "rdg_mrmmvye0oiod",
-        "updatedAt": "2026-07-18T17:58:00.517Z",
-        "schema": "reading/v1"
+        }
       }
     },
     "cand_news_appearance-before-congress": {
@@ -1774,7 +1774,7 @@
       }
     },
     "cand_leg_hr-119-8800": {
-      "mts": 1785214827098,
+      "mts": 1785363738694,
       "status": "promoted",
       "title": "National Defense Authorization Act for Fiscal Year 2027",
       "fitness": {
@@ -1799,7 +1799,7 @@
         "voteId": "h-119-2026-278",
         "yeaPole": "pos"
       },
-      "promotedEventId": "evt_004",
+      "promotedEventId": "evt_010",
       "draftReading": {
         "category": "Foreign Policy · Defense · NDAA",
         "prompt": "House passes the FY2027 NDAA 216-212. The opposition is a coalition: 204 Democrats plus 7 restraint Republicans.",
@@ -1811,12 +1811,12 @@
         "antiValentBand": "coalition",
         "axes": {
           "x": {
-            "pos": "Authorize",
-            "neg": "Block"
-          },
-          "y": {
             "pos": "Expansive posture",
             "neg": "RESTRAINT STRATEGY"
+          },
+          "y": {
+            "pos": "Authorize",
+            "neg": "Block"
           }
         },
         "responses": {
@@ -1849,21 +1849,21 @@
             "xSide": "right",
             "source": "",
             "fluid": {
-              "text": "Authorize it, and authorize it fully — a superpower that hedges on its own reach isn't being prudent, it's inviting the exact crises that cost far more than the bill in front of us.",
+              "text": "The military is good, our soldiers are heros. Of course we should pass this funding bill",
               "xWord": "authorize",
               "yWord": "expansive",
               "words": [],
               "source": ""
             },
             "coalition": {
-              "text": "",
+              "text": "We’re in multiple active dynamic engagements. There may be some fraud and waste to debate, but now is not necessarily the time.",
               "xWord": "",
               "yWord": "",
               "words": [],
               "source": ""
             },
             "denominated": {
-              "text": "",
+              "text": "Anybody talking about holding out funding for the military is either a jihadi or a communist.",
               "xWord": "",
               "yWord": "",
               "words": [],
@@ -1881,7 +1881,7 @@
               "source": ""
             },
             "coalition": {
-              "text": "",
+              "text": "Every year anti war voices are asked to trade serious debate for minor political concessions. Now is the time for serious debate",
               "xWord": "",
               "yWord": "",
               "words": [],
@@ -1921,7 +1921,7 @@
             }
           }
         },
-        "updatedAt": "2026-07-28T05:00:27.092Z",
+        "updatedAt": "2026-07-29T22:22:18.686Z",
         "title": "National Defense Authorization Act for Fiscal Year 2027",
         "framing": "The NDAA vote on H.R. 8800 nominally asks whether to authorize defense spending, but the deeper fault line concerns what kind of military posture the funding entrenches — expansive forward power projection versus restraint and homeland/burden-sharing focus. This tension cross-cuts the party-line passage vote because both parties contain internal factions on grand strategy that don't map cleanly onto the yea/nay tally.",
         "framingKeywords": [],
@@ -1963,8 +1963,8 @@
             "keywords": []
           }
         },
-        "prevalentAxis": "x",
-        "diatribeScore": -13,
+        "prevalentAxis": "y",
+        "diatribeScore": 77,
         "sources": [
           {
             "url": "https://www.congress.gov/bill/119th-congress/house-bill/8800",
