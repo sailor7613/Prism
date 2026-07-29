@@ -1,11 +1,11 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-07-29T16:42:47.823Z · 40 legislative + 13 news (GDELT, 3d)
+// 2026-07-29T19:50:09.566Z · 40 legislative + 14 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1785343337233,
+    "ts": 1785354576014,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
@@ -259,11 +259,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1785343337233,
+    "ts": 1785354576014,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.802,
+      "salience": 0.801,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -532,7 +532,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1785343337232,
+    "ts": 1785354576013,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1785343337233,
+    "ts": 1785354576014,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.757,
+      "salience": 0.756,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3256,7 +3256,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1785343337233,
+    "ts": 1785354576014,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
@@ -4658,7 +4658,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1785343337233,
+    "ts": 1785354576014,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
@@ -4932,11 +4932,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1785343337233,
+    "ts": 1785354576014,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.686,
+      "salience": 0.685,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5203,7 +5203,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1785343337232,
+    "ts": 1785354576013,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
@@ -6605,11 +6605,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1785343337232,
+    "ts": 1785354576013,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.67,
+      "salience": 0.669,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -8007,11 +8007,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1785343337232,
+    "ts": 1785354576014,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.623,
+      "salience": 0.622,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -8941,7 +8941,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1785343337233,
+    "ts": 1785354576014,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
@@ -9217,11 +9217,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1041",
     "source": "legislative",
-    "ts": 1785343337232,
+    "ts": 1785354576013,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1041",
-      "salience": 0.613,
+      "salience": 0.612,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1041",
       "votes": [
         {
@@ -10614,11 +10614,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2616",
     "source": "legislative",
-    "ts": 1785343337232,
+    "ts": 1785354576013,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2616",
-      "salience": 0.61,
+      "salience": 0.609,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2616",
       "votes": [
         {
@@ -12008,11 +12008,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1785343337232,
+    "ts": 1785354576013,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
-      "salience": 0.607,
+      "salience": 0.606,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2913",
       "votes": [
         {
@@ -12940,7 +12940,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1785343337233,
+    "ts": 1785354576014,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
@@ -13216,11 +13216,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1785343337233,
+    "ts": 1785354576014,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
-      "salience": 0.604,
+      "salience": 0.603,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8312",
       "votes": [
         {
@@ -14149,7 +14149,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1785343337233,
+    "ts": 1785354576014,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
@@ -15082,11 +15082,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6260",
     "source": "legislative",
-    "ts": 1785343337231,
+    "ts": 1785354576012,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6260",
-      "salience": 0.581,
+      "salience": 0.58,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6260",
       "votes": [
         {
@@ -16484,11 +16484,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8365",
     "source": "legislative",
-    "ts": 1785343337231,
+    "ts": 1785354576012,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8365",
-      "salience": 0.581,
+      "salience": 0.58,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8365",
       "votes": [
         {
@@ -17886,7 +17886,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1346",
     "source": "legislative",
-    "ts": 1785343337231,
+    "ts": 1785354576012,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1346",
@@ -19286,7 +19286,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-141",
     "source": "legislative",
-    "ts": 1785343337233,
+    "ts": 1785354576014,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-141",
@@ -19562,11 +19562,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1785343337233,
+    "ts": 1785354576014,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.544,
+      "salience": 0.543,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -19818,7 +19818,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-132",
     "source": "legislative",
-    "ts": 1785343337233,
+    "ts": 1785354576014,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-132",
@@ -20094,7 +20094,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-130",
     "source": "legislative",
-    "ts": 1785343337233,
+    "ts": 1785354576014,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-130",
@@ -20370,11 +20370,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6047",
     "source": "legislative",
-    "ts": 1785343337232,
+    "ts": 1785354576013,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6047",
-      "salience": 0.517,
+      "salience": 0.516,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6047",
       "votes": [
         {
@@ -21295,7 +21295,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1785343337233,
+    "ts": 1785354576014,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
@@ -22698,11 +22698,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1785343337233,
+    "ts": 1785354576014,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.408,
+      "salience": 0.407,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -23591,7 +23591,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1785343337233,
+    "ts": 1785354576014,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
@@ -24506,7 +24506,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1785343337233,
+    "ts": 1785354576014,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
@@ -25394,11 +25394,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1785343337233,
+    "ts": 1785354576014,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.39,
+      "salience": 0.389,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -26315,11 +26315,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1785343337233,
+    "ts": 1785354576014,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.379,
+      "salience": 0.378,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -27233,11 +27233,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5625",
     "source": "legislative",
-    "ts": 1785343337231,
+    "ts": 1785354576012,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5625",
-      "salience": 0.343,
+      "salience": 0.342,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5625",
       "votes": [
         {
@@ -28168,11 +28168,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1785343337233,
+    "ts": 1785354576014,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.319,
+      "salience": 0.318,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -29067,11 +29067,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8469",
     "source": "legislative",
-    "ts": 1785343337231,
+    "ts": 1785354576013,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8469",
-      "salience": 0.313,
+      "salience": 0.312,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8469",
       "votes": [
         {
@@ -30469,11 +30469,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1785343337232,
+    "ts": 1785354576013,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.29,
+      "salience": 0.289,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -31403,11 +31403,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2853",
     "source": "legislative",
-    "ts": 1785343337231,
+    "ts": 1785354576012,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2853",
-      "salience": 0.22,
+      "salience": 0.219,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2853",
       "votes": [
         {
@@ -32321,11 +32321,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1785343337232,
+    "ts": 1785354576013,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
-      "salience": 0.216,
+      "salience": 0.215,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/254",
       "votes": [
         {
@@ -33250,7 +33250,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1785343337232,
+    "ts": 1785354576013,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
@@ -34159,11 +34159,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1785343337232,
+    "ts": 1785354576013,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
-      "salience": 0.208,
+      "salience": 0.207,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8466",
       "votes": [
         {
@@ -35034,11 +35034,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1785343337232,
+    "ts": 1785354576013,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
-      "salience": 0.208,
+      "salience": 0.207,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8428",
       "votes": [
         {
@@ -35918,12 +35918,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_birthright-citizenship-court",
     "source": "news",
-    "ts": 1785343367813,
+    "ts": 1785354609560,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.996,
+      "salience": 0.976,
       "articles": [
         {
           "title": "Deadline passes for Supreme Court to reconsider birthright citizenship",
@@ -36022,106 +36022,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_american-drawing-eulogized",
-    "source": "news",
-    "ts": 1785343367814,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.899,
-      "articles": [
-        {
-          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
-          "url": "https://www.kbtx.com/2026/07/28/world-leaders-descend-washington-nation-says-goodbye-sen-lindsey-graham/",
-          "domain": "kbtx.com",
-          "seendate": "2026-07-29T00:30:00Z",
-          "image": "https://gray-kbtx-prod.gtv-cdn.com/resizer/v2/KG7CQSMSGZDV3AMG7ZNHVVQPCA.jpg?auth=3a83c56a25131eb464f74594e78f2d957f1005ae1f042aa69fad76f0c5fe6623&smart=true"
-        },
-        {
-          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
-          "url": "https://www.wtoc.com/2026/07/28/lindsey-graham-eulogized-an-american-original-services-drawing-world-leaders-washington/",
-          "domain": "wtoc.com",
-          "seendate": "2026-07-28T22:00:00Z",
-          "image": "https://gray-wtoc-prod.gtv-cdn.com/resizer/v2/KG7CQSMSGZDV3AMG7ZNHVVQPCA.jpg?auth=3a83c56a25131eb464f74594e78f2d957f1005ae1f042aa69fad76f0c5fe6623&smart=true"
-        },
-        {
-          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
-          "url": "https://www.wcbi.com/lindsey-graham-eulogized-as-an-american-original-at-services-drawing-world-leaders-in-washington/",
-          "domain": "wcbi.com",
-          "seendate": "2026-07-28T20:30:00Z",
-          "image": "https://www.wcbi.com/content/uploads/2026/07/n/l/mgn-1280x960-60728p00-aqfrh.jpg"
-        },
-        {
-          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
-          "url": "https://www.whsv.com/2026/07/28/world-leaders-descend-washington-nation-says-goodbye-sen-lindsey-graham/",
-          "domain": "whsv.com",
-          "seendate": "2026-07-28T20:15:00Z",
-          "image": "https://gray-whsv-prod.gtv-cdn.com/resizer/v2/KG7CQSMSGZDV3AMG7ZNHVVQPCA.jpg?auth=3a83c56a25131eb464f74594e78f2d957f1005ae1f042aa69fad76f0c5fe6623&smart=true"
-        },
-        {
-          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington - WSVN 7News | Miami News , Weather , Sports",
-          "url": "https://wsvn.com/news/politics/lindsey-graham-eulogized-as-an-american-original-at-services-drawing-world-leaders-in-washington/",
-          "domain": "wsvn.com",
-          "seendate": "2026-07-28T19:45:00Z",
-          "image": null
-        },
-        {
-          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington - Boston News , Weather , Sports",
-          "url": "https://whdh.com/news/lindsey-graham-eulogized-as-an-american-original-at-services-drawing-world-leaders-in-washington/",
-          "domain": "whdh.com",
-          "seendate": "2026-07-28T19:30:00Z",
-          "image": null
-        },
-        {
-          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
-          "url": "https://www.yakimaherald.com/news/nation_and_world/nation/lindsey-graham-eulogized-as-an-american-original-at-services-drawing-world-leaders-in-washington/article_6ef1545b-f0dc-5aa6-b370-eee052f656ec.html",
-          "domain": "yakimaherald.com",
-          "seendate": "2026-07-28T19:30:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/yakimaherald.com/content/tncms/assets/v3/editorial/c/de/cde8faa3-d0a5-5b51-9c14-b8180c06db8a/6a6840158b97c.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
-          "url": "http://www.dailyadvance.com/news/national/lindsey-graham-eulogized-as-an-american-original-at-services-drawing-world-leaders-in-washington/article_2a7ab98d-4bd5-5069-ba06-3ff1153ae154.html",
-          "domain": "dailyadvance.com",
-          "seendate": "2026-07-28T19:30:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/dailyadvance.com/content/tncms/assets/v3/editorial/2/f0/2f0d12e4-5d5e-5a5d-adae-93b6631e4e14/6a682b65bf628.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
-          "url": "https://www.wistv.com/2026/07/28/lindsey-graham-eulogized-an-american-original-services-drawing-world-leaders-washington/",
-          "domain": "wistv.com",
-          "seendate": "2026-07-28T19:15:00Z",
-          "image": "https://gray-wistv-prod.gtv-cdn.com/resizer/v2/KG7CQSMSGZDV3AMG7ZNHVVQPCA.jpg?auth=3a83c56a25131eb464f74594e78f2d957f1005ae1f042aa69fad76f0c5fe6623&smart=true"
-        },
-        {
-          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
-          "url": "https://www.wral.com/news/ap/5bdc4-lindsey-grahams-funeral-to-draw-trump-remarks-and-world-leaders-in-washington/",
-          "domain": "wral.com",
-          "seendate": "2026-07-28T17:00:00Z",
-          "image": "https://images.wral.com/0a104130-3a2e-5591-92c2-5e8e9934a795"
-        }
-      ]
-    },
-    "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
-    "summary": "2026-07-29 kbtx.com: Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington\n2026-07-28 wtoc.com: Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington\n2026-07-28 wcbi.com: Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington\n2026-07-28 whsv.com: Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington\n2026-07-28 wsvn.com: Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington - WSVN 7News | Miami News , Weather , Sports\n2026-07-28 whdh.com: Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington - Boston News , Weather , Sports",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_against-campaign-collins",
     "source": "news",
-    "ts": 1785343367815,
+    "ts": 1785354609561,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.853,
+      "salience": 0.834,
       "articles": [
         {
           "title": "Democrats reset campaign against Collins with new nominee",
@@ -36220,14 +36128,99 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_ballot-block-court",
+    "cid": "cand_news_american-drawing-eulogized",
     "source": "news",
-    "ts": 1785343367815,
+    "ts": 1785354609560,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.819,
+      "salience": 0.809,
+      "articles": [
+        {
+          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
+          "url": "https://www.wtoc.com/2026/07/28/lindsey-graham-eulogized-an-american-original-services-drawing-world-leaders-washington/",
+          "domain": "wtoc.com",
+          "seendate": "2026-07-28T22:00:00Z",
+          "image": "https://gray-wtoc-prod.gtv-cdn.com/resizer/v2/KG7CQSMSGZDV3AMG7ZNHVVQPCA.jpg?auth=3a83c56a25131eb464f74594e78f2d957f1005ae1f042aa69fad76f0c5fe6623&smart=true"
+        },
+        {
+          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
+          "url": "https://www.wcbi.com/lindsey-graham-eulogized-as-an-american-original-at-services-drawing-world-leaders-in-washington/",
+          "domain": "wcbi.com",
+          "seendate": "2026-07-28T20:30:00Z",
+          "image": "https://www.wcbi.com/content/uploads/2026/07/n/l/mgn-1280x960-60728p00-aqfrh.jpg"
+        },
+        {
+          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
+          "url": "https://www.whsv.com/2026/07/28/world-leaders-descend-washington-nation-says-goodbye-sen-lindsey-graham/",
+          "domain": "whsv.com",
+          "seendate": "2026-07-28T20:15:00Z",
+          "image": "https://gray-whsv-prod.gtv-cdn.com/resizer/v2/KG7CQSMSGZDV3AMG7ZNHVVQPCA.jpg?auth=3a83c56a25131eb464f74594e78f2d957f1005ae1f042aa69fad76f0c5fe6623&smart=true"
+        },
+        {
+          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington - WSVN 7News | Miami News , Weather , Sports",
+          "url": "https://wsvn.com/news/politics/lindsey-graham-eulogized-as-an-american-original-at-services-drawing-world-leaders-in-washington/",
+          "domain": "wsvn.com",
+          "seendate": "2026-07-28T19:45:00Z",
+          "image": null
+        },
+        {
+          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington - Boston News , Weather , Sports",
+          "url": "https://whdh.com/news/lindsey-graham-eulogized-as-an-american-original-at-services-drawing-world-leaders-in-washington/",
+          "domain": "whdh.com",
+          "seendate": "2026-07-28T19:30:00Z",
+          "image": null
+        },
+        {
+          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
+          "url": "https://www.yakimaherald.com/news/nation_and_world/nation/lindsey-graham-eulogized-as-an-american-original-at-services-drawing-world-leaders-in-washington/article_6ef1545b-f0dc-5aa6-b370-eee052f656ec.html",
+          "domain": "yakimaherald.com",
+          "seendate": "2026-07-28T19:30:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/yakimaherald.com/content/tncms/assets/v3/editorial/c/de/cde8faa3-d0a5-5b51-9c14-b8180c06db8a/6a6840158b97c.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
+        {
+          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
+          "url": "http://www.dailyadvance.com/news/national/lindsey-graham-eulogized-as-an-american-original-at-services-drawing-world-leaders-in-washington/article_2a7ab98d-4bd5-5069-ba06-3ff1153ae154.html",
+          "domain": "dailyadvance.com",
+          "seendate": "2026-07-28T19:30:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/dailyadvance.com/content/tncms/assets/v3/editorial/2/f0/2f0d12e4-5d5e-5a5d-adae-93b6631e4e14/6a682b65bf628.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
+        {
+          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
+          "url": "https://www.wistv.com/2026/07/28/lindsey-graham-eulogized-an-american-original-services-drawing-world-leaders-washington/",
+          "domain": "wistv.com",
+          "seendate": "2026-07-28T19:15:00Z",
+          "image": "https://gray-wistv-prod.gtv-cdn.com/resizer/v2/KG7CQSMSGZDV3AMG7ZNHVVQPCA.jpg?auth=3a83c56a25131eb464f74594e78f2d957f1005ae1f042aa69fad76f0c5fe6623&smart=true"
+        },
+        {
+          "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
+          "url": "https://www.wral.com/news/ap/5bdc4-lindsey-grahams-funeral-to-draw-trump-remarks-and-world-leaders-in-washington/",
+          "domain": "wral.com",
+          "seendate": "2026-07-28T17:00:00Z",
+          "image": "https://images.wral.com/0a104130-3a2e-5591-92c2-5e8e9934a795"
+        }
+      ]
+    },
+    "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
+    "summary": "2026-07-28 wtoc.com: Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington\n2026-07-28 wcbi.com: Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington\n2026-07-28 whsv.com: Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington\n2026-07-28 wsvn.com: Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington - WSVN 7News | Miami News , Weather , Sports\n2026-07-28 whdh.com: Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington - Boston News , Weather , Sports\n2026-07-28 yakimaherald.com: Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_ballot-block-court",
+    "source": "news",
+    "ts": 1785354609561,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.744,
       "articles": [
         {
           "title": "Court panel declines to block Trump mail ballot order , but its status for midterms remains unclear",
@@ -36272,13 +36265,6 @@ window.PRISM_CANDIDATES = [
           "image": "https://www.citizensvoice.com/wp-content/uploads/2026/07/Election_2_26_Postal_Service_35786-1.jpg"
         },
         {
-          "title": "Court declines to block Trump mail ballot order , but midterms unclear",
-          "url": "https://www.timescall.com/2026/07/28/election-2026-trump-mail-ballots/",
-          "domain": "timescall.com",
-          "seendate": "2026-07-28T19:30:00Z",
-          "image": "https://www.timescall.com/wp-content/uploads/2026/07/Election_2_26_Postal_Service_35786-1.jpg"
-        },
-        {
           "title": "Court panel declines to block Trump mail ballot order , but its status for midterms remains unclear",
           "url": "https://www.yahoo.com/news/politics/articles/court-panel-declines-block-trumps-183747156.html",
           "domain": "yahoo.com",
@@ -36305,14 +36291,71 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_defend-economic-policies",
+    "cid": "cand_news_expires-haitian-immigrants",
     "source": "news",
-    "ts": 1785343367814,
+    "ts": 1785354609561,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.73,
+      "salience": 0.712,
+      "articles": [
+        {
+          "title": "TPS expires for Haitian and Syrian immigrants",
+          "url": "https://www.wbaltv.com/article/temporary-protected-status-haiti-syria-expires/73296779",
+          "domain": "wbaltv.com",
+          "seendate": "2026-07-29T17:45:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/286e7ff8-9982-44e2-9d84-223b59314c36.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0743xh"
+        },
+        {
+          "title": "TPS expires for Haitian and Syrian immigrants",
+          "url": "https://www.kcra.com/article/temporary-protected-status-haiti-syria-expires/73296779",
+          "domain": "kcra.com",
+          "seendate": "2026-07-29T17:45:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/286e7ff8-9982-44e2-9d84-223b59314c36.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0743xh"
+        },
+        {
+          "title": "TPS expires for Haitian and Syrian immigrants",
+          "url": "https://www.wmtw.com/article/temporary-protected-status-haiti-syria-expires/73296779",
+          "domain": "wmtw.com",
+          "seendate": "2026-07-29T17:45:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/286e7ff8-9982-44e2-9d84-223b59314c36.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0743xh"
+        },
+        {
+          "title": "TPS expires for Haitian and Syrian immigrants",
+          "url": "https://www.wesh.com/article/temporary-protected-status-haiti-syria-expires/73296779",
+          "domain": "wesh.com",
+          "seendate": "2026-07-29T17:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/286e7ff8-9982-44e2-9d84-223b59314c36.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0743xh"
+        },
+        {
+          "title": "TPS expires for Haitian and Syrian immigrants",
+          "url": "https://www.kcci.com/article/temporary-protected-status-haiti-syria-expires/73296779",
+          "domain": "kcci.com",
+          "seendate": "2026-07-29T17:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/286e7ff8-9982-44e2-9d84-223b59314c36.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0743xh"
+        }
+      ]
+    },
+    "title": "TPS expires for Haitian and Syrian immigrants",
+    "summary": "2026-07-29 wbaltv.com: TPS expires for Haitian and Syrian immigrants\n2026-07-29 kcra.com: TPS expires for Haitian and Syrian immigrants\n2026-07-29 wmtw.com: TPS expires for Haitian and Syrian immigrants\n2026-07-29 wesh.com: TPS expires for Haitian and Syrian immigrants\n2026-07-29 kcci.com: TPS expires for Haitian and Syrian immigrants",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_defend-economic-policies",
+    "source": "news",
+    "ts": 1785354609560,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.71,
       "articles": [
         {
           "title": "Trump to defend his economic policies in Michigan , where new Canadian tariffs may sting",
@@ -36357,13 +36400,6 @@ window.PRISM_CANDIDATES = [
           "image": "https://kubrick.htvapps.com/htv-prod/images/13af23a8-927d-4ea8-8dbf-5e28e0820e7a.jpg"
         },
         {
-          "title": "Trump is set to defend his economic policies in Michigan , where new Canadian tariffs may sting",
-          "url": "https://www.durangoherald.com/articles/associated-press/trump-is-set-to-defend-his-economic-policies-in-michigan-where-new-canadian-tariffs-may-sting/",
-          "domain": "durangoherald.com",
-          "seendate": "2026-07-27T19:00:00Z",
-          "image": "https://www.durangoherald.com/wp-content/uploads/2026/07/7de61b40-25a2-5138-85a3-c9bcacadad33.jpg"
-        },
-        {
           "title": "Trump to defend his economic policies in Michigan , where new Canadian tariffs may sting",
           "url": "https://www.kcra.com/article/trump-tariffs-economy-manufacturing-michigan-visit/73274688",
           "domain": "kcra.com",
@@ -36397,6 +36433,13 @@ window.PRISM_CANDIDATES = [
           "domain": "newsday.com",
           "seendate": "2026-07-27T16:15:00Z",
           "image": "https://cdn.newsday.com/ace/c:ZDhkMTlmNzktMmJhZi00:MWMzMjVlZDktYjQxZS00/landscape/1280"
+        },
+        {
+          "title": "Donald Trump today : President set to defend economic policies in Michigan , where new Canadian tariffs may sting",
+          "url": "https://abc7chicago.com/post/donald-trump-today-president-set-defend-economic-policies-michigan-where-new-canadian-tariffs-may-sting/19584822/",
+          "domain": "abc7chicago.com",
+          "seendate": "2026-07-27T16:15:00Z",
+          "image": "https://cdn.abcotvs.com/dip/images/19584836_AP-trump-hat-img.jpg"
         }
       ]
     },
@@ -36413,12 +36456,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_clayton-confirms-director",
     "source": "news",
-    "ts": 1785343367815,
+    "ts": 1785354609561,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.675,
+      "salience": 0.656,
       "articles": [
         {
           "title": "Senate confirms Jay Clayton as new director of intelligence",
@@ -36470,12 +36513,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_advances-bill-russia",
     "source": "news",
-    "ts": 1785343367815,
+    "ts": 1785354609561,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.649,
+      "salience": 0.629,
       "articles": [
         {
           "title": "Senate advances Russia sanctions bill as Zelenskyy watches",
@@ -36527,12 +36570,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_admin-allow-before",
     "source": "news",
-    "ts": 1785343367813,
+    "ts": 1785354609560,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.628,
+      "salience": 0.608,
       "articles": [
         {
           "title": "Trump admin urges SCOTUS to allow order targeting mail - in voting before midterms",
@@ -36603,40 +36646,40 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_american-eulogized-global",
+    "cid": "cand_news_democrats-house-iran",
     "source": "news",
-    "ts": 1785343367815,
+    "ts": 1785354609559,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.528,
+      "salience": 0.597,
       "articles": [
         {
-          "title": "Lindsey Graham eulogized as an  American original  with global reach",
-          "url": "https://santamariatimes.com/ap/washington/lindsey-graham-eulogized-as-an-american-original-with-global-reach/article_ebbdde42-f682-59b1-a085-de30953dad43.html",
-          "domain": "santamariatimes.com",
-          "seendate": "2026-07-29T02:45:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/santamariatimes.com/content/tncms/custom/image/b9c888ca-59a2-11eb-a31f-0b4d74fa96dc.jpg"
+          "title": "Trump critic Massie joins Democrats in unprecedented bid to sue White House over Iran war",
+          "url": "https://www.sott.net/article/507649-Trump-critic-Massie-joins-Democrats-in-unprecedented-bid-to-sue-White-House-over-Iran-war",
+          "domain": "sott.net",
+          "seendate": "2026-07-29T17:00:00Z",
+          "image": "https://www.sott.net/image/s37/747790/full/trump_massie_split.jpg"
         },
         {
-          "title": "Lindsey Graham eulogized as an  American original  with global reach",
-          "url": "http://www.goskagit.com/news/politics/lindsey-graham-eulogized-as-an-american-original-with-global-reach/article_0c73be68-5811-535e-a627-b9fa2d20e6de.html",
-          "domain": "goskagit.com",
-          "seendate": "2026-07-29T02:15:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/goskagit.com/content/tncms/assets/v3/editorial/7/6c/76cdae83-edd6-57fa-86f3-00c094773b35/6a67d6925fc97.image.jpg?crop=1763%2C926%2C0%2C124"
+          "title": "Massie Joins Democrats In Bid To Sue White House Over Iran War",
+          "url": "https://www.zerohedge.com/political/massie-joins-democrats-bid-sue-white-house-over-iran-war",
+          "domain": "zerohedge.com",
+          "seendate": "2026-07-28T17:45:00Z",
+          "image": "https://assets.zerohedge.com/s3fs-public/styles/16_9_max_700/public/2026-07/trumpmssie.jpg?itok=M81ZsHOo"
         },
         {
-          "title": "Lindsey Graham eulogized as an  American original  with global reach",
-          "url": "https://www.wdrb.com/news/national/lindsey-graham-eulogized-as-an-american-original-with-global-reach/article_990406ff-d073-5175-bcea-a50c6a751f8f.html",
-          "domain": "wdrb.com",
-          "seendate": "2026-07-28T21:45:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/wdrb.com/content/tncms/assets/v3/editorial/7/ba/7bae90a2-62aa-4884-a2e1-773b7578f93c/6a537dd3efe7a.image.jpg?crop=1762%2C925%2C0%2C125"
+          "title": "Rep . Massie Joins Democrats in Attempt To Sue White House Over Iran War",
+          "url": "https://news.antiwar.com/2026/07/27/rep-massie-joins-democrats-in-attempt-to-sue-white-house-over-iran-war/",
+          "domain": "news.antiwar.com",
+          "seendate": "2026-07-27T19:45:00Z",
+          "image": "https://news.antiwar.com/wp-content/uploads/2026/07/Massie-Congress-scaled.jpg"
         }
       ]
     },
-    "title": "Lindsey Graham eulogized as an  American original  with global reach",
-    "summary": "2026-07-29 santamariatimes.com: Lindsey Graham eulogized as an  American original  with global reach\n2026-07-29 goskagit.com: Lindsey Graham eulogized as an  American original  with global reach\n2026-07-28 wdrb.com: Lindsey Graham eulogized as an  American original  with global reach",
+    "title": "Massie Joins Democrats In Bid To Sue White House Over Iran War",
+    "summary": "2026-07-29 sott.net: Trump critic Massie joins Democrats in unprecedented bid to sue White House over Iran war\n2026-07-28 zerohedge.com: Massie Joins Democrats In Bid To Sue White House Over Iran War\n2026-07-27 news.antiwar.com: Rep . Massie Joins Democrats in Attempt To Sue White House Over Iran War",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -36648,12 +36691,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_asks-court-mail",
     "source": "news",
-    "ts": 1785343367814,
+    "ts": 1785354609560,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.526,
+      "salience": 0.507,
       "articles": [
         {
           "title": "Trump Admin Asks Supreme Court To Rule On Mail - In Ballots EO",
@@ -36698,12 +36741,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_day-graham-lindsey",
     "source": "news",
-    "ts": 1785343367814,
+    "ts": 1785354609560,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.518,
+      "salience": 0.499,
       "articles": [
         {
           "title": "In a day of tributes , Lindsey Graham is remembered as a tireless Washington mainstay",
@@ -36741,12 +36784,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_funeral-graham-honor",
     "source": "news",
-    "ts": 1785343367813,
+    "ts": 1785354609560,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.489,
+      "salience": 0.469,
       "articles": [
         {
           "title": "Lindsey Graham funeral : Trump , world leaders honor late senator – NBC 6 South Florida",
@@ -36784,12 +36827,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_asks-court-curtail",
     "source": "news",
-    "ts": 1785343367815,
+    "ts": 1785354609561,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.362,
+      "salience": 0.343,
       "articles": [
         {
           "title": "Trump asks Supreme Court to let him curtail mail voting",
