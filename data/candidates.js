@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-07-29T03:46:29.721Z · 40 legislative + 15 news (GDELT, 3d)
+// 2026-07-29T09:18:38.702Z · 40 legislative + 15 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1785296775209,
+    "ts": 1785316666592,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.813,
+      "salience": 0.812,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,11 +259,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1785296775209,
+    "ts": 1785316666592,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.804,
+      "salience": 0.803,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1785296775208,
+    "ts": 1785316666591,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.775,
+      "salience": 0.774,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1785296775209,
+    "ts": 1785316666592,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.759,
+      "salience": 0.758,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3256,11 +3256,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1785296775209,
+    "ts": 1785316666592,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
-      "salience": 0.703,
+      "salience": 0.702,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
       "votes": [
         {
@@ -3530,11 +3530,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1785296775209,
+    "ts": 1785316666592,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.702,
+      "salience": 0.701,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4932,11 +4932,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1785296775209,
+    "ts": 1785316666592,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.688,
+      "salience": 0.687,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5203,11 +5203,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1785296775208,
+    "ts": 1785316666591,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.678,
+      "salience": 0.677,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6605,11 +6605,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1785296775208,
+    "ts": 1785316666591,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.672,
+      "salience": 0.671,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -8007,11 +8007,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1785296775208,
+    "ts": 1785316666592,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.625,
+      "salience": 0.624,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -8941,11 +8941,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1785296775209,
+    "ts": 1785316666592,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.625,
+      "salience": 0.624,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -9217,11 +9217,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1041",
     "source": "legislative",
-    "ts": 1785296775208,
+    "ts": 1785316666591,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1041",
-      "salience": 0.615,
+      "salience": 0.614,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1041",
       "votes": [
         {
@@ -10614,11 +10614,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2616",
     "source": "legislative",
-    "ts": 1785296775208,
+    "ts": 1785316666591,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2616",
-      "salience": 0.612,
+      "salience": 0.611,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2616",
       "votes": [
         {
@@ -12008,11 +12008,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1785296775208,
+    "ts": 1785316666591,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
-      "salience": 0.609,
+      "salience": 0.608,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2913",
       "votes": [
         {
@@ -12940,11 +12940,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1785296775209,
+    "ts": 1785316666592,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.609,
+      "salience": 0.608,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -13216,11 +13216,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1785296775209,
+    "ts": 1785316666592,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
-      "salience": 0.606,
+      "salience": 0.605,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8312",
       "votes": [
         {
@@ -14149,11 +14149,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1785296775208,
+    "ts": 1785316666592,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.587,
+      "salience": 0.586,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -15082,11 +15082,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6260",
     "source": "legislative",
-    "ts": 1785296775207,
+    "ts": 1785316666590,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6260",
-      "salience": 0.583,
+      "salience": 0.582,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6260",
       "votes": [
         {
@@ -16484,11 +16484,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8365",
     "source": "legislative",
-    "ts": 1785296775207,
+    "ts": 1785316666590,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8365",
-      "salience": 0.583,
+      "salience": 0.582,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8365",
       "votes": [
         {
@@ -17886,11 +17886,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1346",
     "source": "legislative",
-    "ts": 1785296775207,
+    "ts": 1785316666590,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1346",
-      "salience": 0.566,
+      "salience": 0.565,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1346",
       "votes": [
         {
@@ -19286,11 +19286,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-141",
     "source": "legislative",
-    "ts": 1785296775209,
+    "ts": 1785316666592,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-141",
-      "salience": 0.548,
+      "salience": 0.547,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/141",
       "votes": [
         {
@@ -19562,11 +19562,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1785296775209,
+    "ts": 1785316666592,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.546,
+      "salience": 0.545,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -19818,11 +19818,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-132",
     "source": "legislative",
-    "ts": 1785296775209,
+    "ts": 1785316666592,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-132",
-      "salience": 0.53,
+      "salience": 0.529,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/132",
       "votes": [
         {
@@ -20094,11 +20094,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-130",
     "source": "legislative",
-    "ts": 1785296775209,
+    "ts": 1785316666592,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-130",
-      "salience": 0.521,
+      "salience": 0.52,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/130",
       "votes": [
         {
@@ -20370,11 +20370,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6047",
     "source": "legislative",
-    "ts": 1785296775208,
+    "ts": 1785316666591,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6047",
-      "salience": 0.519,
+      "salience": 0.518,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6047",
       "votes": [
         {
@@ -21295,11 +21295,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1785296775209,
+    "ts": 1785316666592,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.468,
+      "salience": 0.467,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -22698,11 +22698,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1785296775209,
+    "ts": 1785316666592,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.41,
+      "salience": 0.409,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -23591,11 +23591,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1785296775209,
+    "ts": 1785316666592,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.403,
+      "salience": 0.402,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -24506,11 +24506,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1785296775209,
+    "ts": 1785316666592,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.397,
+      "salience": 0.396,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -25394,11 +25394,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1785296775209,
+    "ts": 1785316666592,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.392,
+      "salience": 0.391,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -26315,11 +26315,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1785296775209,
+    "ts": 1785316666592,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.381,
+      "salience": 0.38,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -27233,11 +27233,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5625",
     "source": "legislative",
-    "ts": 1785296775207,
+    "ts": 1785316666590,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5625",
-      "salience": 0.345,
+      "salience": 0.344,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5625",
       "votes": [
         {
@@ -28168,11 +28168,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1785296775209,
+    "ts": 1785316666592,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.321,
+      "salience": 0.32,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -29067,11 +29067,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8469",
     "source": "legislative",
-    "ts": 1785296775207,
+    "ts": 1785316666590,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8469",
-      "salience": 0.315,
+      "salience": 0.314,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8469",
       "votes": [
         {
@@ -30469,11 +30469,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1785296775208,
+    "ts": 1785316666591,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.292,
+      "salience": 0.291,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -31403,11 +31403,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2853",
     "source": "legislative",
-    "ts": 1785296775207,
+    "ts": 1785316666590,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2853",
-      "salience": 0.222,
+      "salience": 0.221,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2853",
       "votes": [
         {
@@ -32321,11 +32321,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1785296775208,
+    "ts": 1785316666591,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
-      "salience": 0.218,
+      "salience": 0.217,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/254",
       "votes": [
         {
@@ -33250,11 +33250,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1785296775208,
+    "ts": 1785316666591,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
-      "salience": 0.216,
+      "salience": 0.215,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7618",
       "votes": [
         {
@@ -34159,11 +34159,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1785296775208,
+    "ts": 1785316666591,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
-      "salience": 0.21,
+      "salience": 0.209,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8466",
       "votes": [
         {
@@ -35034,11 +35034,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1785296775208,
+    "ts": 1785316666591,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
-      "salience": 0.21,
+      "salience": 0.209,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8428",
       "votes": [
         {
@@ -35918,12 +35918,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_american-drawing-eulogized",
     "source": "news",
-    "ts": 1785296789714,
+    "ts": 1785316718692,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.98,
+      "salience": 0.945,
       "articles": [
         {
           "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
@@ -36010,12 +36010,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_against-campaign-collins",
     "source": "news",
-    "ts": 1785296789715,
+    "ts": 1785316718693,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.934,
+      "salience": 0.9,
       "articles": [
         {
           "title": "Democrats reset campaign against Collins with new nominee",
@@ -36116,12 +36116,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballot-block-court",
     "source": "news",
-    "ts": 1785296789715,
+    "ts": 1785316718693,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.9,
+      "salience": 0.865,
       "articles": [
         {
           "title": "Court panel declines to block Trump mail ballot order , but its status for midterms remains unclear",
@@ -36201,12 +36201,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_admin-allow-before",
     "source": "news",
-    "ts": 1785296789714,
+    "ts": 1785316718692,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.834,
+      "salience": 0.8,
       "articles": [
         {
           "title": "Trump admin urges SCOTUS to allow order targeting mail - in voting before midterms",
@@ -36307,12 +36307,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_defend-economic-policies",
     "source": "news",
-    "ts": 1785296789715,
+    "ts": 1785316718692,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.811,
+      "salience": 0.776,
       "articles": [
         {
           "title": "Trump to defend his economic policies in Michigan , where new Canadian tariffs may sting",
@@ -36411,15 +36411,79 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_advances-bill-russia",
+    "cid": "cand_news_clayton-confirms-director",
     "source": "news",
-    "ts": 1785296789715,
+    "ts": 1785316718693,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.662,
+      "salience": 0.721,
       "articles": [
+        {
+          "title": "Senate confirms Jay Clayton as new director of intelligence",
+          "url": "https://www.nbcdfw.com/news/national-international/senate-confirms-jay-clayton-as-new-director-of-intelligence/4055421/",
+          "domain": "nbcdfw.com",
+          "seendate": "2026-07-29T08:45:00Z",
+          "image": "https://media.nbcdfw.com/2026/07/AP26196595597735.jpg?quality=85&strip=all"
+        },
+        {
+          "title": "Senate confirms Jay Clayton as new director of intelligence",
+          "url": "https://www.nbcphiladelphia.com/news/national-international/senate-confirms-jay-clayton-as-new-director-of-intelligence/4440318/",
+          "domain": "nbcphiladelphia.com",
+          "seendate": "2026-07-29T07:15:00Z",
+          "image": "https://media.nbcphiladelphia.com/2026/07/AP26196595597735.jpg?quality=85&strip=all"
+        },
+        {
+          "title": "Senate confirms Jay Clayton as new director of intelligence",
+          "url": "https://www.nbcchicago.com/news/national-international/senate-confirms-jay-clayton-as-new-director-of-intelligence/3967682/",
+          "domain": "nbcchicago.com",
+          "seendate": "2026-07-29T04:45:00Z",
+          "image": "https://media.nbcchicago.com/2026/07/AP26196595597735.jpg?quality=85&strip=all"
+        },
+        {
+          "title": "Senate confirms Jay Clayton as new director of intelligence",
+          "url": "https://www.nbcconnecticut.com/news/national-international/senate-confirms-jay-clayton-as-new-director-of-intelligence/3759552/",
+          "domain": "nbcconnecticut.com",
+          "seendate": "2026-07-29T04:30:00Z",
+          "image": "https://media.nbcconnecticut.com/2026/07/AP26196595597735.jpg?quality=85&strip=all"
+        },
+        {
+          "title": "Senate confirms Clayton as new director of intelligence",
+          "url": "https://www.nbcnews.com/politics/national-security/senate-confirms-clayton-new-director-intelligence-rcna589654",
+          "domain": "nbcnews.com",
+          "seendate": "2026-07-29T02:00:00Z",
+          "image": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2026-07/260728-jay-clayton-vl-121p-986e82.jpg"
+        }
+      ]
+    },
+    "title": "Senate confirms Jay Clayton as new director of intelligence",
+    "summary": "2026-07-29 nbcdfw.com: Senate confirms Jay Clayton as new director of intelligence\n2026-07-29 nbcphiladelphia.com: Senate confirms Jay Clayton as new director of intelligence\n2026-07-29 nbcchicago.com: Senate confirms Jay Clayton as new director of intelligence\n2026-07-29 nbcconnecticut.com: Senate confirms Jay Clayton as new director of intelligence\n2026-07-29 nbcnews.com: Senate confirms Clayton as new director of intelligence",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_advances-bill-russia",
+    "source": "news",
+    "ts": 1785316718693,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.695,
+      "articles": [
+        {
+          "title": "Senate advances Russia sanctions bill as Zelenskyy watches",
+          "url": "https://www.wdsu.com/article/senate-russian-sanctions-bill-zelenskyy-capitol-vote/73289889",
+          "domain": "wdsu.com",
+          "seendate": "2026-07-29T04:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/0e4b0032-e711-4073-81ea-cbfc613b0161.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0839xh"
+        },
         {
           "title": "Senate advances Russia sanctions bill as Zelenskyy watches",
           "url": "https://www.wyff4.com/article/senate-russian-sanctions-bill-zelenskyy-capitol-vote/73289889",
@@ -36451,7 +36515,7 @@ window.PRISM_CANDIDATES = [
       ]
     },
     "title": "Senate advances Russia sanctions bill as Zelenskyy watches",
-    "summary": "2026-07-29 wyff4.com: Senate advances Russia sanctions bill as Zelenskyy watches\n2026-07-29 koat.com: Senate advances Russia sanctions bill as Zelenskyy watches\n2026-07-29 kmbc.com: Senate advances Russia sanctions bill as Zelenskyy watches\n2026-07-29 wgal.com: Senate advances Russia sanctions bill as Zelenskyy watches",
+    "summary": "2026-07-29 wdsu.com: Senate advances Russia sanctions bill as Zelenskyy watches\n2026-07-29 wyff4.com: Senate advances Russia sanctions bill as Zelenskyy watches\n2026-07-29 koat.com: Senate advances Russia sanctions bill as Zelenskyy watches\n2026-07-29 kmbc.com: Senate advances Russia sanctions bill as Zelenskyy watches\n2026-07-29 wgal.com: Senate advances Russia sanctions bill as Zelenskyy watches",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -36463,12 +36527,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ask-birthright-citizenship",
     "source": "news",
-    "ts": 1785296789715,
+    "ts": 1785316718693,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.66,
+      "salience": 0.626,
       "articles": [
         {
           "title": "Deadline passes for Trump to ask Supreme Court to reconsider birthright citizenship ruling",
@@ -36513,12 +36577,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_american-eulogized-global",
     "source": "news",
-    "ts": 1785296789715,
+    "ts": 1785316718693,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.609,
+      "salience": 0.574,
       "articles": [
         {
           "title": "Lindsey Graham eulogized as an  American original  with global reach",
@@ -36556,12 +36620,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_asks-court-mail",
     "source": "news",
-    "ts": 1785296789715,
+    "ts": 1785316718692,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.607,
+      "salience": 0.573,
       "articles": [
         {
           "title": "Trump Admin Asks Supreme Court To Rule On Mail - In Ballots EO",
@@ -36606,12 +36670,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_day-graham-lindsey",
     "source": "news",
-    "ts": 1785296789714,
+    "ts": 1785316718692,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.599,
+      "salience": 0.565,
       "articles": [
         {
           "title": "In a day of tributes , Lindsey Graham is remembered as a tireless Washington mainstay",
@@ -36649,12 +36713,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_funeral-graham-honor",
     "source": "news",
-    "ts": 1785296789714,
+    "ts": 1785316718691,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.57,
+      "salience": 0.535,
       "articles": [
         {
           "title": "Lindsey Graham funeral : Trump , world leaders honor late senator – NBC 6 South Florida",
@@ -36690,57 +36754,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_american-constant-eulogizes",
-    "source": "news",
-    "ts": 1785296789715,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.565,
-      "articles": [
-        {
-          "title": "The Latest : Trump eulogizes Lindsey Graham , says he was a  constant fixture of American politics  ",
-          "url": "http://www.thegazette.com/news/national/the-latest-trump-eulogizes-lindsey-graham-says-he-was-a-constant-fixture-of-american-politics/article_ffe592a5-c34a-5929-aceb-bfb650ceb971.html",
-          "domain": "thegazette.com",
-          "seendate": "2026-07-28T19:45:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/thegazette.com/content/tncms/assets/v3/editorial/8/89/8890732a-2513-5ff2-9ad1-0caa469fe14e/6a683b3d73b76.image.jpg?crop=4441%2C2332%2C0%2C314"
-        },
-        {
-          "title": "The Latest : Trump eulogizes Lindsey Graham , says he was a  constant fixture of American politics  ",
-          "url": "https://www.local10.com/news/2026/07/28/the-latest-trump-eulogizes-lindsey-graham-says-he-was-a-constant-fixture-of-american-politics/",
-          "domain": "local10.com",
-          "seendate": "2026-07-28T19:30:00Z",
-          "image": "https://www.local10.com/resizer/v2/4TNNN2CVWLHCZXFYDIUZIMJD2E.jpg?auth=30c927a758b82d11ae8da36399e4ca35982eadda1b12be81ee79cdaf7fdd7ea6"
-        },
-        {
-          "title": "The Latest : Trump eulogizes Lindsey Graham , says he was a  constant fixture of American politics  ",
-          "url": "http://www.dailyadvance.com/news/national/the-latest-trump-eulogizes-lindsey-graham-says-he-was-a-constant-fixture-of-american-politics/article_e449521c-8296-572b-bff9-6d3db9d62bd2.html",
-          "domain": "dailyadvance.com",
-          "seendate": "2026-07-28T19:30:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/dailyadvance.com/content/tncms/assets/v3/editorial/d/81/d81b2206-80df-5ec0-a28e-a0132f5af908/6a683ec920da2.image.jpg?crop=1763%2C926%2C0%2C124"
-        }
-      ]
-    },
-    "title": "The Latest : Trump eulogizes Lindsey Graham , says he was a  constant fixture of American politics  ",
-    "summary": "2026-07-28 thegazette.com: The Latest : Trump eulogizes Lindsey Graham , says he was a  constant fixture of American politics  \n2026-07-28 local10.com: The Latest : Trump eulogizes Lindsey Graham , says he was a  constant fixture of American politics  \n2026-07-28 dailyadvance.com: The Latest : Trump eulogizes Lindsey Graham , says he was a  constant fixture of American politics  ",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_100-days-democratic",
     "source": "news",
-    "ts": 1785296789715,
+    "ts": 1785316718693,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.505,
+      "salience": 0.47,
       "articles": [
         {
           "title": "House Democratic leader Hakeem Jeffries kicks off 100 days till midterms with affordability agenda",
@@ -36792,12 +36813,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_asks-court-curtail",
     "source": "news",
-    "ts": 1785296789715,
+    "ts": 1785316718693,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.443,
+      "salience": 0.408,
       "articles": [
         {
           "title": "Trump asks Supreme Court to let him curtail mail voting",
@@ -36833,40 +36854,40 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_court-haitians-ice",
+    "cid": "cand_news_battle-democratic-generations",
     "source": "news",
-    "ts": 1785296789715,
+    "ts": 1785316718693,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.418,
+      "salience": 0.288,
       "articles": [
         {
-          "title": "ICE prepares major operation targeting Haitians losing TPS after Supreme Court ruling",
-          "url": "https://www.fox4news.com/news/ice-prepares-major-operation-targeting-haitians-losing-tps-after-supreme-court-ruling",
-          "domain": "fox4news.com",
-          "seendate": "2026-07-27T20:15:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/07/1280/720/ice-agent-american-flag-haitian-tps-enforcement-ohio-springfield.jpg?ve=1&tl=1"
+          "title": "Massachusetts Democratic Senate primary sets up a battle of generations",
+          "url": "https://edition.cnn.com/2026/07/26/politics/massachusetts-democratic-senate-primary-moulton-markey",
+          "domain": "edition.cnn.com",
+          "seendate": "2026-07-27T05:00:00Z",
+          "image": "https://media.cnn.com/api/v1/images/stellar/prod/c-sipausa-60376455.jpg?c=16x9&q=w_800,c_fill"
         },
         {
-          "title": "ICE prepares major operation targeting Haitians losing TPS after Supreme Court ruling",
-          "url": "https://www.ktvu.com/news/ice-prepares-major-operation-targeting-haitians-losing-tps-after-supreme-court-ruling",
-          "domain": "ktvu.com",
-          "seendate": "2026-07-27T17:15:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/07/1280/720/ice-agent-american-flag-haitian-tps-enforcement-ohio-springfield.jpg?ve=1&tl=1"
+          "title": "Massachusetts Democratic Senate primary sets up a battle of generations",
+          "url": "https://www.cnn.com/2026/07/26/politics/massachusetts-democratic-senate-primary-moulton-markey",
+          "domain": "cnn.com",
+          "seendate": "2026-07-26T12:00:00Z",
+          "image": "https://media.cnn.com/api/v1/images/stellar/prod/c-sipausa-60376455.jpg?c=16x9&q=w_800,c_fill"
         },
         {
-          "title": "ICE prepares major operation targeting Haitians losing TPS after Supreme Court ruling",
-          "url": "https://www.fox2detroit.com/news/ice-prepares-major-operation-targeting-haitians-losing-tps-after-supreme-court-ruling",
-          "domain": "fox2detroit.com",
-          "seendate": "2026-07-27T16:15:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/07/1280/720/ice-agent-american-flag-haitian-tps-enforcement-ohio-springfield.jpg?ve=1&tl=1"
+          "title": "Massachusetts Democratic Senate primary sets up a battle of generations",
+          "url": "https://us.cnn.com/2026/07/26/politics/massachusetts-democratic-senate-primary-moulton-markey",
+          "domain": "us.cnn.com",
+          "seendate": "2026-07-26T11:30:00Z",
+          "image": "https://media.cnn.com/api/v1/images/stellar/prod/c-sipausa-60376455.jpg?c=16x9&q=w_800,c_fill"
         }
       ]
     },
-    "title": "ICE prepares major operation targeting Haitians losing TPS after Supreme Court ruling",
-    "summary": "2026-07-27 fox4news.com: ICE prepares major operation targeting Haitians losing TPS after Supreme Court ruling\n2026-07-27 ktvu.com: ICE prepares major operation targeting Haitians losing TPS after Supreme Court ruling\n2026-07-27 fox2detroit.com: ICE prepares major operation targeting Haitians losing TPS after Supreme Court ruling",
+    "title": "Massachusetts Democratic Senate primary sets up a battle of generations",
+    "summary": "2026-07-27 edition.cnn.com: Massachusetts Democratic Senate primary sets up a battle of generations\n2026-07-26 cnn.com: Massachusetts Democratic Senate primary sets up a battle of generations\n2026-07-26 us.cnn.com: Massachusetts Democratic Senate primary sets up a battle of generations",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
