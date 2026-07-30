@@ -2,7 +2,7 @@
    Strategy: network-first for our own files (so updates appear automatically
    whenever the iPad is online), with a cached fallback so it still works offline.
    Cross-origin assets (fonts, CDN) are cache-first so they don't refetch. */
-const CACHE = 'prism-admin-v25';
+const CACHE = 'prism-admin-v26';
 const CORE = [
   './admin-surface.html',
   './index.html',
@@ -34,7 +34,11 @@ self.addEventListener('activate', (e) => {
 self.addEventListener('fetch', (e) => {
   const req = e.request;
   if (req.method !== 'GET') return;
-  const sameOrigin = new URL(req.url).origin === self.location.origin;
+  const url = new URL(req.url);
+  const sameOrigin = url.origin === self.location.origin;
+  // Live APIs are never cached (2026-07-30): cache-first on the GDELT wire
+  // would freeze a repeated ⌕ scan on its first answer forever.
+  if (url.hostname === 'api.gdeltproject.org') return;
 
   if (sameOrigin) {
     // network-first: always try for the freshest copy, fall back to cache offline

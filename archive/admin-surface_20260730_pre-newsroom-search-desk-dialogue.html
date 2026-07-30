@@ -323,22 +323,6 @@
         into the galley proof. ── */
   .dm-round{ margin-top:10px; border-top:.5px dashed var(--rule); padding-top:9px; text-align:left; }
   .dm-round .desk-note{ text-align:left; margin:0; }
-  /* ── per-slot dialogue (2026-07-30) — the Bills-room shape, persistence
-     fixed: the exchange lives ON the prism_desk_v1 record (brHistory's
-     evaporate-on-close flaw closed) and rides the desk sync tier ── */
-  .dm-chat-toggle{ border:.5px solid var(--rule); border-radius:999px; background:transparent; color:var(--ink-low);
-    font-family:var(--mono); font-size:10px; letter-spacing:.08em; padding:4px 12px; cursor:pointer; }
-  .dm-chat-toggle:hover{ color:var(--ink); }
-  .dm-chat-wrap{ margin-top:8px; }
-  .dm-chat-wrap>.row, .dm-chat .row{ display:flex; gap:8px; align-items:center; }
-  .dm-chat{ margin-top:8px; border:.5px dashed var(--rule); border-radius:8px; padding:8px 10px; }
-  .dm-chat .msgs{ max-height:240px; overflow-y:auto; -webkit-overflow-scrolling:touch; }
-  .dm-chat .br-msg{ margin-bottom:10px; }
-  .dm-chat .inp{ display:flex; gap:8px; align-items:flex-end; margin-top:6px; }
-  .dm-chat .inp textarea{ flex:1; font-family:var(--serif); font-size:13.5px; line-height:1.4; color:var(--ink);
-    background:rgba(255,255,255,.04); border:.5px solid var(--rule); border-radius:8px; padding:7px 9px; outline:none; resize:none; }
-  .dm-chat .row{ margin-top:6px; }
-  body.light .dm-chat .inp textarea{ background:rgba(20,22,30,.04); }
   .cellchip.dres{ border-color:rgba(96,168,128,.7); box-shadow:0 0 8px rgba(96,168,128,.45); }
   .orb.dres{ outline:2px solid rgba(96,168,128,.65); outline-offset:2px; }
 
@@ -786,15 +770,6 @@
     <button class="btn" id="nrClose">Close</button>
   </div>
   <div class="br-body">
-    <!-- Search + wire scan (2026-07-30, feed reframe §2/§4: the aperture is
-         driven by Sailor's curiosity). Typing filters the WHOLE stored
-         record — every status; nothing is ever deleted, so it is findable
-         here. ⌕ Scan asks the wire itself (GDELT, keyless, browser-side)
-         for the topic and imports what it finds, provenance-marked. -->
-    <div class="br-cat-bar">
-      <input type="search" id="nrSearch" placeholder="Search stories — or scan the wire for a topic…" autocomplete="off">
-      <button class="btn" id="nrWireScan" title="Ask the wire itself: query GDELT for this topic (7-day window), cluster the coverage into stories, and land them in the record — provenance-marked, triage untouched">⌕ Scan wire</button>
-    </div>
     <div class="br-pane">
       <div class="br-list" id="nrList"></div>
     </div>
@@ -1711,8 +1686,8 @@ $('btnBack').onclick=()=>{
    handoff's §6 steps 1+2 (ruled 2026-07-26): whole-reading view, Publish
    relocated here, blind independent full-fire, three-outcome capture with
    win tally. Deferred to build 2: ‡ inline notes (sentinel ruled ‡, not * —
-   markdown collision), defect-class tagging UI. Per-slot dialogue LANDED
-   2026-07-30 (desk mode's rounds — persisted on the desk record).
+   markdown collision), per-slot dialogue (clone the Bills room WITH a
+   persistence fix — brHistory is in-memory only), defect-class tagging UI.
 
    Storage: localStorage `prism_desk_v1` — one record per event, SEPARATE
    from prism_events on purpose (§4 "never silently overwrite": Sailor's and
@@ -1949,10 +1924,9 @@ async function deskFireClick(){
     if(!deskFireArm){ deskFireArm=true; setTimeout(()=>{ deskFireArm=false; },8000);
       deskNote('Re-fire resets this run — Sonnet column, resolutions and deltas. Tap again within 8s to confirm.'); return; }
     deskFireArm=false; }
-  // fresh run: snapshot Sailor's column FIRST — MINE must always be restorable.
-  // dialogues reset with the run — the exchange was about the previous columns.
+  // fresh run: snapshot Sailor's column FIRST — MINE must always be restorable
   desk={ eventId:currentId, promptId:PRISM_VOICE_RULES_ID, model:$('model').value,
-    firedAt:new Date().toISOString(), sonnetDrafts:{}, mineSnapshot:{}, resolutions:{}, deltas:{}, dialogues:{} };
+    firedAt:new Date().toISOString(), sonnetDrafts:{}, mineSnapshot:{}, resolutions:{}, deltas:{} };
   DESK_SLOTS.forEach(s=>{
     desk.mineSnapshot[s.key]= s.kind==='cell'
       ? { html:model[s.cell]||'' }
@@ -1971,12 +1945,10 @@ function deskExport(){
   L.push('');
   let n=0;
   DESK_SLOTS.forEach(s=>{ const d=desk.deltas[s.key]; if(!d) return; n++;
-    const dg=(desk.dialogues&&desk.dialogues[s.key])||[];
     L.push('### `'+d.field+'` — '+String(d.outcome||'').toUpperCase());
     L.push('- autosuggest: '+JSON.stringify(d.autosuggest||''));
     L.push('- corrected: '+JSON.stringify(d.corrected||''));
     L.push('- defect_class: '+(d.defect_class||'(unset — build 2 tags these)'));
-    if(dg.length) L.push('- dialogue: '+Math.ceil(dg.length/2)+' exchange(s) on the desk record ('+DESK_DIALOGUE_PROMPT_ID+')');
     L.push('- prompt: '+d.prompt_id+' · model: '+d.model+' · reviewer: Sailor · ts: '+d.ts);
     L.push(''); });
   if(!n) L.push('_No resolutions yet — nothing to log._');
@@ -1993,10 +1965,8 @@ $('deskExportBtn').onclick=deskExport;
    three-outcome capture via the same deskResolve, deltas in the calibration
    log's schema. Independence holds verbatim (founding §3): the rounds render
    Sonnet's column; they never feed Sailor's text into a prompt.
-   Remaining deferrals: ‡ inline notes, defect tagging (per-slot dialogue
-   landed 2026-07-30 — see dmChatSection below). */
+   Unchanged deferrals: ‡ inline notes, per-slot dialogue, defect tagging. */
 let curView='dia', deskMode=false, proofReturn='dia', dmMergeArm=null;
-let dmChatOpen=null, dmChatBusy=null; const dmChatDraft={}, dmChatErr={};
 function dmSlotOfCell(cell){ return DESK_SLOTS.find(s=>s.kind==='cell'&&s.cell===cell)||null; }
 function dmSlotOfOrb(q,b){ return DESK_SLOTS.find(s=>s.kind==='orb'&&s.quad===q&&s.band===b)||null; }
 
@@ -2038,123 +2008,6 @@ function dmChoose(s,o,ctx){
 function dmModalFields(s){ const r=resp(s.quad,s.band);
   $('oeText').value=r.text||''; $('oeX').value=r.xWord||''; $('oeY').value=r.yWord||''; }
 
-/* ===== Per-slot dialogue (2026-07-30) — the last build-2 deferral lands =====
-   The Bills-room shape, cloned WITH the ruled persistence fix: the exchange
-   lives in desk.dialogues[slotKey] on the prism_desk_v1 record — it survives
-   close/reload and CONVERGES across devices on the desk sync tier, exactly
-   as brHistory never did. This is the WARM pass the founding handoff §3
-   sanctions (Sailor ruled it warm again 2026-07-30): it reads BOTH columns —
-   the fire-time snapshot and the independent draft — because the exchange is
-   about the fired comparison. The blind fire record itself is never touched:
-   the dialogue writes nothing into sonnetDrafts, resolves nothing, and never
-   publishes; a proposed line enters the reading only by the author's hand
-   (the Merged rework). Mechanical calls, logged: a re-fire resets dialogues
-   with the run (the exchange was about the previous columns); a failed send
-   returns the message to the draft box (the record keeps only real
-   exchanges); the classic build-1 page does not grow the dialogue — it is
-   retiring into the galley proof. */
-const DESK_DIALOGUE_PROMPT_ID='DESK_DIALOGUE_v1';
-function dmDialogueSystem(s){
-  const sd=(desk&&desk.sonnetDrafts[s.key])||null, mine=deskMineOf(s);
-  const res=(desk&&desk.resolutions[s.key])||null;
-  const cur=s.kind==='cell'?stripHtml(model[s.cell]||''):((resp(s.quad,s.band).text||'').trim());
-  const cloud=s.kind==='orb'
-    ? '\nCLOUD TOKENS — author: x='+JSON.stringify(mine.x||'')+' y='+JSON.stringify(mine.y||'')
-      +' · your draft: x='+JSON.stringify((sd&&sd.xWord)||'')+' y='+JSON.stringify((sd&&sd.yWord)||'')
-    : '';
-  return 'You are Sonnet at the Prism Editorial Desk — the WARM per-slot editorial exchange. '
-    +'The blind independent full-fire has already happened and its record stands; this dialogue is the '
-    +'sanctioned second pass (cold then warm, never one pass doing double duty). You are discussing ONE '
-    +'slot of the reading with its author.\n\n'
-    +'SLOT: '+deskSlotLabel(s)+' (field '+slotField(s)+')\n'
-    +'FRAMING: '+(stripHtml($('framing').innerHTML)||'(none)')+'\n'
-    +PRISM_VOICE_RULES+'\n'
-    +'THE FIRED COMPARISON (the record — it stays as it is):\n'
-    +'AUTHOR\'S LINE (fire-time snapshot): '+(mine.text?JSON.stringify(mine.text):'(the author had not drafted this slot)')+'\n'
-    +'YOUR INDEPENDENT DRAFT (blind): '+((sd&&sd.text)?JSON.stringify(sd.text):(sd&&sd.error?'(fire failed — '+sd.error+')':'(none)'))
-    +cloud+'\n'
-    +'SLOT NOW HOLDS: '+(cur?JSON.stringify(cur):'(empty)')+' · resolution: '+(res?res.outcome.toUpperCase():'unresolved')+'\n\n'
-    +'Ground rules:\n'
-    +'- Discuss, assess, argue — and name the rule or parameter you lean on (band register, pole fidelity, '
-    +'voiced-not-described, good faith, live vehicle).\n'
-    +'- Propose a reworded line only when asked. Any line you propose enters the reading only by the author\'s '
-    +'own hand — you never resolve a slot and you never publish.\n'
-    +'- Answer briefly: editorial marginalia, not essays.';
-}
-async function dmChatSend(s){
-  if(dmChatBusy) return;
-  if(!desk){ deskNote('Fire first — the exchange is about the fired comparison.'); return; }
-  const key=$('apiKey').value.trim(); if(!key){ deskNote('Add your API key (AI ▸ top bar)'); return; }
-  const text=(dmChatDraft[s.key]||'').trim(); if(!text) return;
-  desk.dialogues=desk.dialogues||{};
-  const dlg=desk.dialogues[s.key]=desk.dialogues[s.key]||[];
-  dlg.push({ role:'user', content:text, ts:new Date().toISOString() });
-  delete dmChatDraft[s.key]; delete dmChatErr[s.key];
-  deskSave(desk);                       // the ask is part of the record too
-  dmChatBusy=s.key; dmSyncDecor();
-  try{
-    // fold consecutive same-role turns (a tab dying mid-call can leave two
-    // user turns in a row; the API refuses them)
-    const msgs=[]; dlg.forEach(m=>{ const last=msgs[msgs.length-1];
-      if(last&&last.role===m.role) last.content+='\n\n'+m.content;
-      else msgs.push({role:m.role,content:m.content}); });
-    const reply=await PrismAI.call(key,{ model:$('model').value,
-      system:dmDialogueSystem(s),
-      messages:msgs,
-      maxTokens:700, effort:'low' });
-    dlg.push({ role:'assistant', content:reply.trim(), ts:new Date().toISOString() });
-    deskSave(desk);
-  }catch(e){
-    // keep the record honest — only real exchanges persist; the message
-    // returns to the draft box so retry is one tap
-    dlg.pop(); if(!dlg.length) delete desk.dialogues[s.key];
-    deskSave(desk);
-    dmChatDraft[s.key]=text; dmChatErr[s.key]='AI error: '+e.message;
-  }finally{ dmChatBusy=null; dmSyncDecor(); }
-}
-function dmChatSection(s){
-  const wrap=document.createElement('div'); wrap.className='dm-chat-wrap';
-  const dlg=(desk.dialogues&&desk.dialogues[s.key])||[];
-  const row=document.createElement('div'); row.className='row';
-  const t=document.createElement('button'); t.className='dm-chat-toggle';
-  t.textContent=(dmChatOpen===s.key?'✎ close dialogue':'✎ dialogue')+(dlg.length?(' · '+Math.ceil(dlg.length/2)):'');
-  t.title='warm per-slot exchange with Sonnet — persisted on the desk record, rides the sync; the blind fire record stays untouched';
-  t.onclick=()=>{ dmChatOpen=(dmChatOpen===s.key)?null:s.key; dmSyncDecor(); };
-  row.appendChild(t); wrap.appendChild(row);
-  if(dmChatOpen!==s.key) return wrap;
-  const chat=document.createElement('div'); chat.className='dm-chat';
-  const msgs=document.createElement('div'); msgs.className='msgs';
-  if(!dlg.length&&dmChatBusy!==s.key&&!dmChatErr[s.key]){
-    const n=document.createElement('div'); n.className='desk-note';
-    n.textContent='argue the line — the exchange rides the desk record'; msgs.appendChild(n); }
-  const addMsg=(who,txt,dim)=>{ const d=document.createElement('div');
-    d.className='br-msg'+(who==='Sailor'?' you':''); if(dim) d.style.opacity=.5;
-    const w=document.createElement('div'); w.className='who'; w.textContent=who; d.appendChild(w);
-    const x=document.createElement('div'); x.className='txt'; x.textContent=txt; d.appendChild(x);
-    msgs.appendChild(d); };
-  dlg.forEach(m=>addMsg(m.role==='user'?'Sailor':'Sonnet', m.content));
-  if(dmChatBusy===s.key) addMsg('Sonnet','Thinking…',true);
-  if(dmChatErr[s.key]) addMsg('⚠',dmChatErr[s.key]);
-  chat.appendChild(msgs);
-  const inp=document.createElement('div'); inp.className='inp';
-  const ta=document.createElement('textarea'); ta.rows=2; ta.placeholder='argue the line…';
-  ta.value=dmChatDraft[s.key]||'';
-  ta.addEventListener('input',()=>{ dmChatDraft[s.key]=ta.value; });
-  ta.addEventListener('keydown',e=>{ if(e.key==='Enter'&&!e.shiftKey){ e.preventDefault(); dmChatSend(s); } });
-  const send=document.createElement('button'); send.className='btn primary'; send.textContent='Send';
-  send.disabled=(dmChatBusy===s.key); send.onclick=()=>dmChatSend(s);
-  inp.appendChild(ta); inp.appendChild(send); chat.appendChild(inp);
-  if(dlg.length){
-    const foot=document.createElement('div'); foot.className='row';
-    const clr=document.createElement('button'); clr.className='dm-chat-toggle'; clr.textContent='↺ clear this exchange';
-    clr.onclick=()=>{ if(confirm('Clear this slot’s dialogue? The exchange leaves the desk record.')){
-      delete desk.dialogues[s.key]; deskSave(desk); dmSyncDecor(); } };
-    foot.appendChild(clr); chat.appendChild(foot); }
-  wrap.appendChild(chat);
-  setTimeout(()=>{ msgs.scrollTop=msgs.scrollHeight; },0);
-  return wrap;
-}
-
 /* The round body: build 1's two columns, verbatim semantics — SAILOR is the
    fire-time snapshot (what MINE restores), SONNET — INDEPENDENT beside it. */
 function dmRoundInto(box,s,ctx){
@@ -2167,7 +2020,6 @@ function dmRoundInto(box,s,ctx){
   cols.appendChild(deskCol('sonnet — independent', sd?{text:(sd.text||'').trim(),x:sd.xWord,y:sd.yWord,err:sd.error}:null, res&&res.outcome==='sonnet'));
   box.appendChild(cols);
   box.appendChild(dmResRow(s,ctx));
-  box.appendChild(dmChatSection(s));   // the warm per-slot exchange (2026-07-30)
 }
 function dmDecorateCaption(capEl, cell){
   if(!capEl) return;
@@ -2407,7 +2259,7 @@ document.addEventListener('click',(e)=>{ if(!document.body.classList.contains('t
    stays the author's until M2 proposes axes. The candidate is stamped
    promoted → evt id only when save() actually succeeds. */
 const NR_FITNESS_FLOOR = 0.4;            // spec §4, ratified 2026-07-13
-let nrLoaded=false, nrShowAll=false, nrPendingPromote=null, nrQuery='', nrScanning=false;
+let nrLoaded=false, nrShowAll=false, nrPendingPromote=null;
 // Stories that arrived since this device last looked (session-scoped:
 // cids the latest import added that the store didn't hold). "Stories"
 // is the ruled vocabulary (2026-07-17) — code keeps candidates/cand_*.
@@ -2521,154 +2373,19 @@ async function nrRepull(){
   finally{ nrRepulling=false; }
 }
 
-/* ===== ⌕ Wire scan — the research aperture's search face (2026-07-30) =====
-   Sailor asks the wire for a topic the ambient scan never surfaced ("covid
-   senate hearings") and the newsroom fetches it on demand: browser-side
-   GDELT DOC 2.0 (keyless, same API the pipeline uses), the SAME clustering
-   and cid function as scripts/fetch-news.js — so a later desk scan of the
-   same story upserts onto one thread, and triage state survives (the store
-   is upsert-only). Provenance rides the record: method
-   gdelt_docapi_aperture_v1 + the query that fetched it — non-contrived
-   rule, visible lineage. This is feed-reframe §2 (agent as research
-   aperture, driven by Sailor's curiosity, never gating).
-   Mechanical calls (decision routing, logged in the handoff):
-   · 7d window — a directed ask reaches past the ambient 3d churn;
-   · 2-outlet cluster floor (ambient scan keeps 3) — a directed ask accepts
-     thinner coverage;
-   · if nothing clusters at 2, the largest clusters land anyway (capped 3)
-     — a thin record is honest and sometimes IS the finding (2026-07-06).
-   MIRROR NOTE: tokenizer/jaccard/cluster/cid are copies of fetch-news.js —
-   change them there, change them here, or story threads fork. */
-const NR_APERTURE_METHOD='gdelt_docapi_aperture_v1';
-const NR_SCAN_STOP=new Set(('a an and are as at be but by for from has have in is it its of on or '+
-  'that the this to was were will with after amid over under new says said').split(' '));
-function nrScanTokens(title){
-  return new Set((title||'').toLowerCase().replace(/[^a-z0-9 ]+/g,' ').split(/\s+/)
-    .filter(w=>w.length>2&&!NR_SCAN_STOP.has(w)));
-}
-function nrScanJaccard(a,b){
-  let inter=0; for(const t of a) if(b.has(t)) inter++;
-  const uni=a.size+b.size-inter; return uni?inter/uni:0;
-}
-function nrScanCluster(articles){
-  const toks=articles.map(a=>nrScanTokens(a.title));
-  const parent=articles.map((_,i)=>i);
-  const find=i=>parent[i]===i?i:(parent[i]=find(parent[i]));
-  for(let i=0;i<articles.length;i++)
-    for(let j=i+1;j<articles.length;j++)
-      if(nrScanJaccard(toks[i],toks[j])>=0.5) parent[find(i)]=find(j);
-  const groups=new Map();
-  articles.forEach((a,i)=>{ const r=find(i); if(!groups.has(r)) groups.set(r,[]); groups.get(r).push(i); });
-  return [...groups.values()].map(idxs=>({idxs, toks:idxs.map(i=>toks[i])}));
-}
-function nrScanIso(seendate){
-  const m=/^(\d{4})(\d{2})(\d{2})T?(\d{2})?(\d{2})?(\d{2})?/.exec(seendate||'');
-  if(!m) return null;
-  return m[1]+'-'+m[2]+'-'+m[3]+'T'+(m[4]||'00')+':'+(m[5]||'00')+':'+(m[6]||'00')+'Z';
-}
-function nrShapeScan(articles,query,now){
-  const seen=new Set();
-  articles=articles.filter(a=>{ if(!a.title||!a.url) return false;
-    if(seen.has(a.url)) return false; seen.add(a.url); return true; });
-  const spanMs=7*864e5;
-  const shaped=nrScanCluster(articles).map(({idxs,toks})=>{
-    const arts=idxs.map(i=>articles[i]);
-    const domains=new Set(arts.map(a=>a.domain));
-    let best=0,bestScore=-1;
-    toks.forEach((t,i)=>{ const s=toks.reduce((acc,u)=>acc+nrScanJaccard(t,u),0);
-      if(s>bestScore){ bestScore=s; best=i; } });
-    const title=arts[best].title;
-    const counts={};
-    toks.forEach(t=>t.forEach(w=>counts[w]=(counts[w]||0)+1));
-    const key=Object.entries(counts).sort((a,b)=>b[1]-a[1]||(a[0]<b[0]?-1:1))
-      .slice(0,3).map(e=>e[0]).sort().join('-');
-    if(!key) return null;
-    const times=arts.map(a=>Date.parse(nrScanIso(a.seendate)||0)).filter(t=>!isNaN(t));
-    const newest=times.length?Math.max(...times):now;
-    const recency=Math.max(0,1-(now-newest)/spanMs);
-    const volume=Math.min(1,domains.size/10);
-    const salience=+(0.55*volume+0.45*recency).toFixed(3);
-    arts.sort((a,b)=>(Date.parse(nrScanIso(b.seendate)||0)||0)-(Date.parse(nrScanIso(a.seendate)||0)||0));
-    const kept=arts.slice(0,12).map(a=>({ title:a.title,url:a.url,domain:a.domain,
-      seendate:nrScanIso(a.seendate), image:a.socialimage||null }));
-    return {
-      cid:'cand_news_'+key, source:'news', ts:Date.now(),
-      raw:{ method:NR_APERTURE_METHOD, query, timespan:'7d', salience, articles:kept },
-      title,
-      summary:kept.slice(0,6).map(a=>(a.seendate||'').slice(0,10)+' '+a.domain+': '+a.title).join('\n'),
-      framingDraft:null, suggestedAxes:null, prevalentAxisGuess:null,
-      members:[], bills:[], fitness:null, status:'new',
-      _outlets:domains.size, _arts:arts.length
-    };
-  }).filter(Boolean);
-  // 2-outlet floor, with the thin-record fallback (both logged above)
-  let out=shaped.filter(c=>c._outlets>=2);
-  if(!out.length) out=shaped.sort((a,b)=>b._arts-a._arts).slice(0,3);
-  out.forEach(c=>{ delete c._outlets; delete c._arts; });
-  return out.sort((a,b)=>b.raw.salience-a.raw.salience).slice(0,8);
-}
-async function nrWireScan(){
-  const q=($('nrSearch').value||'').trim();
-  if(!q){ nrStatus('type a topic first — the scan asks the wire for it'); return; }
-  if(nrScanning) return;
-  nrScanning=true; $('nrWireScan').disabled=true;
-  nrStatus('⌕ asking the wire for “'+q+'”…');
-  try{
-    const url='https://api.gdeltproject.org/api/v2/doc/doc?query='+encodeURIComponent(q)
-      +'&mode=ArtList&maxrecords=250&timespan=7d&format=json';
-    const res=await fetch(url);
-    if(!res.ok) throw new Error('GDELT '+res.status);
-    const body=(await res.text()).trim();
-    let data=null;
-    try{ data=JSON.parse(body); }
-    catch(_){ throw new Error(body?body.slice(0,140):'empty reply — GDELT throttles bursts; wait a few seconds and retry'); }
-    let arts=Array.isArray(data.articles)?data.articles:[];
-    const wireTotal=arts.length;
-    arts=arts.filter(a=>(a.language||'')==='English'&&(a.sourcecountry||'')==='United States');
-    if(!arts.length){
-      nrStatus('⌕ the wire has '+(wireTotal?wireTotal+' articles, none US/English':'nothing')+' for “'+q+'” (7d)'); return; }
-    const made=nrShapeScan(arts,q,Date.now());
-    if(!made.length){ nrStatus('⌕ '+arts.length+' articles but no story cohered — try different words'); return; }
-    const before=new Set(PrismDB.getCandidates().map(c=>c.cid));
-    const r=PrismDB.importCandidates(made);
-    made.forEach(c=>{ if(!before.has(c.cid)) nrFresh.add(c.cid); });
-    nrStatus('⌕ '+made.length+(made.length===1?' story':' stories')+' from '+arts.length+' articles — '
-      +r.added+' new · '+r.updated+' refreshed');
-    nrRender(); nrQueuePush();
-  }catch(e){
-    // CORS/offline fail honestly — and name the desk fallback that always works
-    nrStatus('⌕ scan failed: '+e.message+' — desk fallback: QUERY=\''+q.replace(/'/g,'')+'\' node scripts/fetch-news.js');
-  }finally{ nrScanning=false; $('nrWireScan').disabled=false; }
-}
-
-/* Search filter (2026-07-30): a query reaches the WHOLE record — every
-   status, both segs. Ruled ground: nothing is ever deleted from the store
-   (feed reframe §3), so everything is findable here. Every query word must
-   land somewhere on the story — title, summary, bills, the M2 argument,
-   the articles themselves, or the scan query that fetched it. */
-function nrMatch(c,q){
-  const hay=[c.title,c.summary,c.cid,(c.bills||[]).join(' '),
-    (c.fitness&&c.fitness.reason)||'',(c.raw&&c.raw.query)||'',
-    ...(c.raw&&Array.isArray(c.raw.articles)?c.raw.articles.map(a=>(a.title||'')+' '+(a.domain||'')):[])
-  ].join(' ').toLowerCase();
-  return q.split(/\s+/).every(w=>hay.includes(w));
-}
 function nrRender(){
   const host=$('nrList'); host.innerHTML='';
   const all=PrismDB.getCandidates();
   // Triage shows new + held; held pins above the scan churn (2026-07-17 —
   // the hold is the "don't lose this" gesture), then fitness/salience.
-  const list=(nrQuery?all.filter(c=>nrMatch(c,nrQuery))
-      :(nrShowAll?all:all.filter(c=>c.status==='new'||c.status==='held'))).slice()
+  const list=(nrShowAll?all:all.filter(c=>c.status==='new'||c.status==='held')).slice()
     .sort((a,b)=>((b.status==='held')-(a.status==='held')) || (nrKey(b)-nrKey(a)));
   const n={new:0,held:0,promoted:0,dismissed:0}; all.forEach(c=>{ n[c.status]=(n[c.status]||0)+1; });
-  $('nrCounts').textContent = nrQuery ? (list.length+' match'+(list.length===1?'':'es')+' · whole record')
-    : all.length ? (n.new+' triage'+(n.held?(' · '+n.held+' held'):'')
+  $('nrCounts').textContent = all.length ? (n.new+' triage'+(n.held?(' · '+n.held+' held'):'')
     +' · '+n.promoted+' promoted · '+n.dismissed+' dismissed') : '';
   if(!list.length){
     const d=document.createElement('div'); d.className='br-empty';
-    d.textContent = nrQuery ? 'nothing in the record matches — ⌕ Scan wire asks the wire itself'
-                  : all.length ? 'triage clear — “all” shows the record'
+    d.textContent = all.length ? 'triage clear — “all” shows the record'
                                : 'no stories — run Scan News Cycle.command, then ↺';
     host.appendChild(d); return;
   }
@@ -2706,8 +2423,6 @@ function nrRender(){
       mt.textContent=c.members.length+' members'; tags.appendChild(mt); }
     if(c.source==='news'&&c.raw&&Array.isArray(c.raw.articles)){ const nt=document.createElement('span'); nt.className='br-tag';
       nt.textContent=new Set(c.raw.articles.map(a=>a.domain)).size+' outlets · '+c.raw.articles.length+' articles'; tags.appendChild(nt); }
-    if(c.raw&&c.raw.method===NR_APERTURE_METHOD){ const at=document.createElement('span'); at.className='br-tag';
-      at.textContent='⌕ scanned'; at.title='landed by a wire scan — query: '+(c.raw.query||''); tags.appendChild(at); }
     card.appendChild(tags);
     // the wire's pictures (2026-07-19) — quiet strip, lazy, self-pruning on
     // dead URLs; pre-socialimage candidates simply have none and show none
@@ -3014,8 +2729,6 @@ $('nrPosWrite').onclick=()=>{
 
 $('nrBtn').onclick=nrOpen; $('nrClose').onclick=nrCloseFn; $('nrOverlay').onclick=nrCloseFn;
 $('nrRescan').onclick=async()=>{ nrStatus('rescanning…'); await nrImport(true); nrRender(); };
-$('nrSearch').addEventListener('input',()=>{ nrQuery=($('nrSearch').value||'').trim().toLowerCase(); nrRender(); });
-$('nrWireScan').onclick=nrWireScan;
 $('nrSeg').querySelectorAll('button').forEach(b=>b.onclick=()=>{
   nrShowAll=(b.dataset.f==='all');
   $('nrSeg').querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));
