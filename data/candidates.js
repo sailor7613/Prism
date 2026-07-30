@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-07-29T22:26:34.923Z · 40 legislative + 14 news (GDELT, 3d)
+// 2026-07-30T03:39:30.074Z · 40 legislative + 14 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1785363942512,
+    "ts": 1785382715799,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.809,
+      "salience": 0.808,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,7 +259,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1785363942512,
+    "ts": 1785382715799,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1785363942512,
+    "ts": 1785382715799,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.771,
+      "salience": 0.77,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1785363942512,
+    "ts": 1785382715799,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.756,
+      "salience": 0.755,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3256,11 +3256,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1785363942512,
+    "ts": 1785382715799,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.699,
+      "salience": 0.698,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4658,11 +4658,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1785363942512,
+    "ts": 1785382715799,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
-      "salience": 0.699,
+      "salience": 0.698,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
       "votes": [
         {
@@ -4932,11 +4932,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1785363942512,
+    "ts": 1785382715799,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.685,
+      "salience": 0.684,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5203,11 +5203,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1785363942511,
+    "ts": 1785382715799,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.674,
+      "salience": 0.673,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6605,11 +6605,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1785363942511,
+    "ts": 1785382715798,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.669,
+      "salience": 0.668,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -8007,11 +8007,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1785363942512,
+    "ts": 1785382715799,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.622,
+      "salience": 0.621,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -8941,11 +8941,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1785363942512,
+    "ts": 1785382715799,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.621,
+      "salience": 0.62,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -9217,11 +9217,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1041",
     "source": "legislative",
-    "ts": 1785363942511,
+    "ts": 1785382715798,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1041",
-      "salience": 0.612,
+      "salience": 0.611,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1041",
       "votes": [
         {
@@ -10614,11 +10614,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2616",
     "source": "legislative",
-    "ts": 1785363942511,
+    "ts": 1785382715798,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2616",
-      "salience": 0.609,
+      "salience": 0.608,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2616",
       "votes": [
         {
@@ -12008,11 +12008,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1785363942511,
+    "ts": 1785382715799,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
-      "salience": 0.606,
+      "salience": 0.605,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2913",
       "votes": [
         {
@@ -12940,11 +12940,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1785363942512,
+    "ts": 1785382715799,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.605,
+      "salience": 0.604,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -13216,11 +13216,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1785363942512,
+    "ts": 1785382715799,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
-      "salience": 0.603,
+      "salience": 0.602,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8312",
       "votes": [
         {
@@ -14147,13 +14147,404 @@ window.PRISM_CANDIDATES = [
     "mts": 1784044297585
   },
   {
+    "cid": "cand_leg_hr-119-5334",
+    "source": "legislative",
+    "ts": 1785382715800,
+    "raw": {
+      "method": "legislative_rollcall_v1",
+      "billId": "hr-119-5334",
+      "salience": 0.586,
+      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
+      "votes": [
+        {
+          "voteId": "s-119-2-213",
+          "chamber": "senate",
+          "date": "July 29, 2026,  05:58 PM",
+          "question": "On the Motion to Proceed",
+          "result": "Motion to Proceed Agreed to",
+          "margin": 0.75,
+          "totals": {
+            "yea": 84,
+            "nay": 12,
+            "present": 0,
+            "notVoting": 4
+          },
+          "party": {
+            "D": {
+              "yea": 33,
+              "nay": 10
+            },
+            "R": {
+              "yea": 50,
+              "nay": 1
+            },
+            "I": {
+              "yea": 1,
+              "nay": 1
+            }
+          },
+          "positions": {
+            "yea": [
+              "A000382",
+              "B001230",
+              "B001299",
+              "B001261",
+              "B001267",
+              "B001243",
+              "B001277",
+              "B001288",
+              "B001236",
+              "B001319",
+              "B001305",
+              "C000127",
+              "C001047",
+              "C001075",
+              "C001035",
+              "C001088",
+              "C001056",
+              "C001113",
+              "C001095",
+              "C001096",
+              "C000880",
+              "C001098",
+              "C001114",
+              "D000618",
+              "D000622",
+              "D000563",
+              "E000295",
+              "F000479",
+              "F000463",
+              "G000555",
+              "G000386",
+              "H000601",
+              "H001089",
+              "H001046",
+              "H000273",
+              "H001061",
+              "H001104",
+              "H001079",
+              "J000293",
+              "J000312",
+              "K000384",
+              "K000377",
+              "K000393",
+              "K000383",
+              "K000367",
+              "L000575",
+              "L000577",
+              "L000571",
+              "M001198",
+              "M001243",
+              "M001176",
+              "M001244",
+              "M000934",
+              "M001242",
+              "M001153",
+              "M001169",
+              "M001111",
+              "P000595",
+              "R000122",
+              "R000618",
+              "R000584",
+              "R000608",
+              "R000605",
+              "S001194",
+              "S001150",
+              "S001227",
+              "S000148",
+              "S001217",
+              "S001184",
+              "S001181",
+              "S001232",
+              "S001208",
+              "S001203",
+              "S001198",
+              "T000250",
+              "T000476",
+              "T000278",
+              "V000128",
+              "W000805",
+              "W000790",
+              "W000437",
+              "Y000064"
+            ],
+            "nay": [
+              "B001303",
+              "H001076",
+              "H001042",
+              "K000394",
+              "M000133",
+              "O000174",
+              "P000145",
+              "P000603",
+              "S000033",
+              "W000817",
+              "W000800",
+              "W000779"
+            ],
+            "present": [],
+            "notVoting": [
+              "G000574",
+              "G000359",
+              "M000355",
+              "W000802"
+            ]
+          }
+        },
+        {
+          "voteId": "s-119-2-212",
+          "chamber": "senate",
+          "date": "July 28, 2026,  07:14 PM",
+          "question": "On Cloture on the Motion to Proceed",
+          "result": "Cloture on the Motion to Proceed Agreed to",
+          "margin": 0.755,
+          "totals": {
+            "yea": 86,
+            "nay": 12,
+            "present": 0,
+            "notVoting": 2
+          },
+          "party": {
+            "D": {
+              "yea": 35,
+              "nay": 10
+            },
+            "R": {
+              "yea": 50,
+              "nay": 1
+            },
+            "I": {
+              "yea": 1,
+              "nay": 1
+            }
+          },
+          "positions": {
+            "yea": [
+              "A000382",
+              "B001230",
+              "B001299",
+              "B001261",
+              "B001267",
+              "B001243",
+              "B001277",
+              "B001288",
+              "B001236",
+              "B001319",
+              "B001305",
+              "C000127",
+              "C001047",
+              "C001075",
+              "C001035",
+              "C001088",
+              "C001056",
+              "C001113",
+              "C001095",
+              "C001096",
+              "C000880",
+              "C001098",
+              "C001114",
+              "D000618",
+              "D000622",
+              "D000563",
+              "E000295",
+              "F000479",
+              "F000463",
+              "G000574",
+              "G000555",
+              "G000386",
+              "H000601",
+              "H001089",
+              "H001046",
+              "H000273",
+              "H001061",
+              "H001104",
+              "H001079",
+              "J000293",
+              "J000312",
+              "K000384",
+              "K000377",
+              "K000393",
+              "K000383",
+              "K000367",
+              "L000575",
+              "L000577",
+              "L000571",
+              "M001198",
+              "M001243",
+              "M001176",
+              "M001244",
+              "M000934",
+              "M001242",
+              "M001153",
+              "M001169",
+              "M001111",
+              "P000595",
+              "R000122",
+              "R000618",
+              "R000584",
+              "R000608",
+              "R000605",
+              "S001194",
+              "S001150",
+              "S001227",
+              "S000148",
+              "S001217",
+              "S001184",
+              "S001181",
+              "S001232",
+              "S001208",
+              "S001203",
+              "S001198",
+              "T000250",
+              "T000476",
+              "T000278",
+              "V000128",
+              "W000805",
+              "W000790",
+              "W000802",
+              "W000437",
+              "Y000064"
+            ],
+            "nay": [
+              "B001303",
+              "H001076",
+              "H001042",
+              "K000394",
+              "M000133",
+              "O000174",
+              "P000145",
+              "P000603",
+              "S000033",
+              "W000817",
+              "W000800",
+              "W000779"
+            ],
+            "present": [],
+            "notVoting": [
+              "G000359",
+              "M000355"
+            ]
+          }
+        }
+      ]
+    },
+    "title": "SEED Act (2 roll calls)",
+    "summary": "2026-07-29 senate: On the Motion to Proceed — Motion to Proceed Agreed to (84-12; D 33-10 · R 50-1 · I 1-1)\n2026-07-28 senate: On Cloture on the Motion to Proceed — Cloture on the Motion to Proceed Agreed to (86-12; D 35-10 · R 50-1 · I 1-1)",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [
+      "A000382",
+      "B001230",
+      "B001299",
+      "B001261",
+      "B001267",
+      "B001243",
+      "B001277",
+      "B001288",
+      "B001236",
+      "B001319",
+      "B001305",
+      "C000127",
+      "C001047",
+      "C001075",
+      "C001035",
+      "C001088",
+      "C001056",
+      "C001113",
+      "C001095",
+      "C001096",
+      "C000880",
+      "C001098",
+      "C001114",
+      "D000618",
+      "D000622",
+      "D000563",
+      "E000295",
+      "F000479",
+      "F000463",
+      "G000555",
+      "G000386",
+      "H000601",
+      "H001089",
+      "H001046",
+      "H000273",
+      "H001061",
+      "H001104",
+      "H001079",
+      "J000293",
+      "J000312",
+      "K000384",
+      "K000377",
+      "K000393",
+      "K000383",
+      "K000367",
+      "L000575",
+      "L000577",
+      "L000571",
+      "M001198",
+      "M001243",
+      "M001176",
+      "M001244",
+      "M000934",
+      "M001242",
+      "M001153",
+      "M001169",
+      "M001111",
+      "P000595",
+      "R000122",
+      "R000618",
+      "R000584",
+      "R000608",
+      "R000605",
+      "S001194",
+      "S001150",
+      "S001227",
+      "S000148",
+      "S001217",
+      "S001184",
+      "S001181",
+      "S001232",
+      "S001208",
+      "S001203",
+      "S001198",
+      "T000250",
+      "T000476",
+      "T000278",
+      "V000128",
+      "W000805",
+      "W000790",
+      "W000437",
+      "Y000064",
+      "B001303",
+      "H001076",
+      "H001042",
+      "K000394",
+      "M000133",
+      "O000174",
+      "P000145",
+      "P000603",
+      "S000033",
+      "W000817",
+      "W000800",
+      "W000779",
+      "G000574",
+      "W000802"
+    ],
+    "bills": [
+      "hr-119-5334"
+    ],
+    "fitness": null,
+    "status": "new"
+  },
+  {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1785363942512,
+    "ts": 1785382715799,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.583,
+      "salience": 0.582,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -15082,11 +15473,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6260",
     "source": "legislative",
-    "ts": 1785363942510,
+    "ts": 1785382715797,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6260",
-      "salience": 0.58,
+      "salience": 0.579,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6260",
       "votes": [
         {
@@ -16484,11 +16875,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8365",
     "source": "legislative",
-    "ts": 1785363942510,
+    "ts": 1785382715797,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8365",
-      "salience": 0.58,
+      "salience": 0.579,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8365",
       "votes": [
         {
@@ -17886,11 +18277,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1346",
     "source": "legislative",
-    "ts": 1785363942510,
+    "ts": 1785382715797,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1346",
-      "salience": 0.562,
+      "salience": 0.561,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1346",
       "votes": [
         {
@@ -19286,11 +19677,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-141",
     "source": "legislative",
-    "ts": 1785363942512,
+    "ts": 1785382715799,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-141",
-      "salience": 0.544,
+      "salience": 0.543,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/141",
       "votes": [
         {
@@ -19560,269 +19951,13 @@ window.PRISM_CANDIDATES = [
     "mts": 1784044297586
   },
   {
-    "cid": "cand_leg_hr-119-5334",
-    "source": "legislative",
-    "ts": 1785363942513,
-    "raw": {
-      "method": "legislative_rollcall_v1",
-      "billId": "hr-119-5334",
-      "salience": 0.543,
-      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
-      "votes": [
-        {
-          "voteId": "s-119-2-212",
-          "chamber": "senate",
-          "date": "July 28, 2026,  07:14 PM",
-          "question": "On Cloture on the Motion to Proceed",
-          "result": "Cloture on the Motion to Proceed Agreed to",
-          "margin": 0.755,
-          "totals": {
-            "yea": 86,
-            "nay": 12,
-            "present": 0,
-            "notVoting": 2
-          },
-          "party": {
-            "D": {
-              "yea": 35,
-              "nay": 10
-            },
-            "R": {
-              "yea": 50,
-              "nay": 1
-            },
-            "I": {
-              "yea": 1,
-              "nay": 1
-            }
-          },
-          "positions": {
-            "yea": [
-              "A000382",
-              "B001230",
-              "B001299",
-              "B001261",
-              "B001267",
-              "B001243",
-              "B001277",
-              "B001288",
-              "B001236",
-              "B001319",
-              "B001305",
-              "C000127",
-              "C001047",
-              "C001075",
-              "C001035",
-              "C001088",
-              "C001056",
-              "C001113",
-              "C001095",
-              "C001096",
-              "C000880",
-              "C001098",
-              "C001114",
-              "D000618",
-              "D000622",
-              "D000563",
-              "E000295",
-              "F000479",
-              "F000463",
-              "G000574",
-              "G000555",
-              "G000386",
-              "H000601",
-              "H001089",
-              "H001046",
-              "H000273",
-              "H001061",
-              "H001104",
-              "H001079",
-              "J000293",
-              "J000312",
-              "K000384",
-              "K000377",
-              "K000393",
-              "K000383",
-              "K000367",
-              "L000575",
-              "L000577",
-              "L000571",
-              "M001198",
-              "M001243",
-              "M001176",
-              "M001244",
-              "M000934",
-              "M001242",
-              "M001153",
-              "M001169",
-              "M001111",
-              "P000595",
-              "R000122",
-              "R000618",
-              "R000584",
-              "R000608",
-              "R000605",
-              "S001194",
-              "S001150",
-              "S001227",
-              "S000148",
-              "S001217",
-              "S001184",
-              "S001181",
-              "S001232",
-              "S001208",
-              "S001203",
-              "S001198",
-              "T000250",
-              "T000476",
-              "T000278",
-              "V000128",
-              "W000805",
-              "W000790",
-              "W000802",
-              "W000437",
-              "Y000064"
-            ],
-            "nay": [
-              "B001303",
-              "H001076",
-              "H001042",
-              "K000394",
-              "M000133",
-              "O000174",
-              "P000145",
-              "P000603",
-              "S000033",
-              "W000817",
-              "W000800",
-              "W000779"
-            ],
-            "present": [],
-            "notVoting": [
-              "G000359",
-              "M000355"
-            ]
-          }
-        }
-      ]
-    },
-    "title": "SEED Act",
-    "summary": "2026-07-28 senate: On Cloture on the Motion to Proceed — Cloture on the Motion to Proceed Agreed to (86-12; D 35-10 · R 50-1 · I 1-1)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [
-      "A000382",
-      "B001230",
-      "B001299",
-      "B001261",
-      "B001267",
-      "B001243",
-      "B001277",
-      "B001288",
-      "B001236",
-      "B001319",
-      "B001305",
-      "C000127",
-      "C001047",
-      "C001075",
-      "C001035",
-      "C001088",
-      "C001056",
-      "C001113",
-      "C001095",
-      "C001096",
-      "C000880",
-      "C001098",
-      "C001114",
-      "D000618",
-      "D000622",
-      "D000563",
-      "E000295",
-      "F000479",
-      "F000463",
-      "G000574",
-      "G000555",
-      "G000386",
-      "H000601",
-      "H001089",
-      "H001046",
-      "H000273",
-      "H001061",
-      "H001104",
-      "H001079",
-      "J000293",
-      "J000312",
-      "K000384",
-      "K000377",
-      "K000393",
-      "K000383",
-      "K000367",
-      "L000575",
-      "L000577",
-      "L000571",
-      "M001198",
-      "M001243",
-      "M001176",
-      "M001244",
-      "M000934",
-      "M001242",
-      "M001153",
-      "M001169",
-      "M001111",
-      "P000595",
-      "R000122",
-      "R000618",
-      "R000584",
-      "R000608",
-      "R000605",
-      "S001194",
-      "S001150",
-      "S001227",
-      "S000148",
-      "S001217",
-      "S001184",
-      "S001181",
-      "S001232",
-      "S001208",
-      "S001203",
-      "S001198",
-      "T000250",
-      "T000476",
-      "T000278",
-      "V000128",
-      "W000805",
-      "W000790",
-      "W000802",
-      "W000437",
-      "Y000064",
-      "B001303",
-      "H001076",
-      "H001042",
-      "K000394",
-      "M000133",
-      "O000174",
-      "P000145",
-      "P000603",
-      "S000033",
-      "W000817",
-      "W000800",
-      "W000779"
-    ],
-    "bills": [
-      "hr-119-5334"
-    ],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_leg_sjres-119-132",
     "source": "legislative",
-    "ts": 1785363942512,
+    "ts": 1785382715799,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-132",
-      "salience": 0.526,
+      "salience": 0.525,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/132",
       "votes": [
         {
@@ -20094,11 +20229,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-130",
     "source": "legislative",
-    "ts": 1785363942512,
+    "ts": 1785382715799,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-130",
-      "salience": 0.517,
+      "salience": 0.516,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/130",
       "votes": [
         {
@@ -20370,11 +20505,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6047",
     "source": "legislative",
-    "ts": 1785363942511,
+    "ts": 1785382715798,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6047",
-      "salience": 0.516,
+      "salience": 0.515,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6047",
       "votes": [
         {
@@ -21295,11 +21430,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1785363942512,
+    "ts": 1785382715799,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.464,
+      "salience": 0.463,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -22698,11 +22833,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1785363942512,
+    "ts": 1785382715799,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.407,
+      "salience": 0.406,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -23591,11 +23726,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1785363942513,
+    "ts": 1785382715800,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.4,
+      "salience": 0.399,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -24506,11 +24641,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1785363942513,
+    "ts": 1785382715799,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.393,
+      "salience": 0.392,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -25394,11 +25529,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1785363942512,
+    "ts": 1785382715799,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.389,
+      "salience": 0.388,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -26315,11 +26450,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1785363942512,
+    "ts": 1785382715799,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.378,
+      "salience": 0.377,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -27233,11 +27368,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5625",
     "source": "legislative",
-    "ts": 1785363942510,
+    "ts": 1785382715797,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5625",
-      "salience": 0.342,
+      "salience": 0.341,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5625",
       "votes": [
         {
@@ -28168,11 +28303,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1785363942512,
+    "ts": 1785382715799,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.317,
+      "salience": 0.316,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -29067,11 +29202,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8469",
     "source": "legislative",
-    "ts": 1785363942510,
+    "ts": 1785382715797,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8469",
-      "salience": 0.312,
+      "salience": 0.311,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8469",
       "votes": [
         {
@@ -30469,11 +30604,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1785363942511,
+    "ts": 1785382715798,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.289,
+      "salience": 0.288,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -31403,11 +31538,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2853",
     "source": "legislative",
-    "ts": 1785363942510,
+    "ts": 1785382715797,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2853",
-      "salience": 0.219,
+      "salience": 0.218,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2853",
       "votes": [
         {
@@ -32321,11 +32456,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1785363942511,
+    "ts": 1785382715798,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
-      "salience": 0.215,
+      "salience": 0.214,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/254",
       "votes": [
         {
@@ -33250,11 +33385,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1785363942511,
+    "ts": 1785382715798,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
-      "salience": 0.212,
+      "salience": 0.211,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7618",
       "votes": [
         {
@@ -34159,11 +34294,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1785363942511,
+    "ts": 1785382715799,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
-      "salience": 0.207,
+      "salience": 0.206,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8466",
       "votes": [
         {
@@ -35034,11 +35169,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1785363942511,
+    "ts": 1785382715799,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
-      "salience": 0.207,
+      "salience": 0.206,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8428",
       "votes": [
         {
@@ -35916,62 +36051,134 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_birthright-citizenship-court",
+    "cid": "cand_news_congress-ever-faces",
     "source": "news",
-    "ts": 1785363994912,
+    "ts": 1785382770066,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.96,
+      "salience": 0.996,
+      "articles": [
+        {
+          "title": "Oldest Congress ever faces fresh scrutiny over their health",
+          "url": "https://komonews.com/news/connect-to-congress/oldest-congress-ever-faces-fresh-scrutiny-over-their-health-mitch-mcconnell-transparency-health-problems-age-limits-term-limits",
+          "domain": "komonews.com",
+          "seendate": "2026-07-30T03:00:00Z",
+          "image": "https://komonews.com/resources/media2/16x9/5873/1320/0x306/90/a47a5fda-d5d5-4ae2-88dc-d5209f6e2a97-GettyImages2264831373.jpg"
+        },
+        {
+          "title": "Oldest Congress ever faces fresh scrutiny over their health",
+          "url": "https://foxbaltimore.com/news/nation-world/oldest-congress-ever-faces-fresh-scrutiny-over-their-health-mitch-mcconnell-transparency-health-problems-age-limits-term-limits",
+          "domain": "foxbaltimore.com",
+          "seendate": "2026-07-30T02:15:00Z",
+          "image": "https://foxbaltimore.com/resources/media2/16x9/5873/1320/0x306/90/a47a5fda-d5d5-4ae2-88dc-d5209f6e2a97-GettyImages2264831373.jpg"
+        },
+        {
+          "title": "Oldest Congress ever faces fresh scrutiny over their health",
+          "url": "https://wwmt.com/news/connect-to-congress/oldest-congress-ever-faces-fresh-scrutiny-over-their-health-mitch-mcconnell-transparency-health-problems-age-limits-term-limits",
+          "domain": "wwmt.com",
+          "seendate": "2026-07-30T02:00:00Z",
+          "image": "https://wwmt.com/resources/media2/16x9/5873/1320/0x306/90/a47a5fda-d5d5-4ae2-88dc-d5209f6e2a97-GettyImages2264831373.jpg"
+        },
+        {
+          "title": "Oldest Congress ever faces fresh scrutiny over their health",
+          "url": "https://katu.com/news/connect-to-congress/oldest-congress-ever-faces-fresh-scrutiny-over-their-health-mitch-mcconnell-transparency-health-problems-age-limits-term-limits",
+          "domain": "katu.com",
+          "seendate": "2026-07-30T01:45:00Z",
+          "image": "https://katu.com/resources/media2/16x9/5873/1320/0x306/90/a47a5fda-d5d5-4ae2-88dc-d5209f6e2a97-GettyImages2264831373.jpg"
+        },
+        {
+          "title": "Oldest Congress ever faces fresh scrutiny over their health",
+          "url": "https://wjla.com/news/connect-to-congress/oldest-congress-ever-faces-fresh-scrutiny-over-their-health-mitch-mcconnell-transparency-health-problems-age-limits-term-limits",
+          "domain": "wjla.com",
+          "seendate": "2026-07-30T01:30:00Z",
+          "image": "https://wjla.com/resources/media2/16x9/5873/1320/0x306/90/a47a5fda-d5d5-4ae2-88dc-d5209f6e2a97-GettyImages2264831373.jpg"
+        },
+        {
+          "title": "Oldest Congress ever faces fresh scrutiny over their health",
+          "url": "https://13wham.com/news/connect-to-congress/oldest-congress-ever-faces-fresh-scrutiny-over-their-health-mitch-mcconnell-transparency-health-problems-age-limits-term-limits",
+          "domain": "13wham.com",
+          "seendate": "2026-07-30T01:30:00Z",
+          "image": "https://13wham.com/resources/media2/16x9/5873/1320/0x306/90/a47a5fda-d5d5-4ae2-88dc-d5209f6e2a97-GettyImages2264831373.jpg"
+        },
+        {
+          "title": "Oldest Congress ever faces fresh scrutiny over their health",
+          "url": "https://wlos.com/news/nation-world/oldest-congress-ever-faces-fresh-scrutiny-over-their-health-mitch-mcconnell-transparency-health-problems-age-limits-term-limits",
+          "domain": "wlos.com",
+          "seendate": "2026-07-30T01:00:00Z",
+          "image": "https://wlos.com/resources/media2/16x9/5873/1320/0x306/90/a47a5fda-d5d5-4ae2-88dc-d5209f6e2a97-GettyImages2264831373.jpg"
+        },
+        {
+          "title": "Oldest Congress ever faces fresh scrutiny over their health",
+          "url": "https://katv.com/news/connect-to-congress/oldest-congress-ever-faces-fresh-scrutiny-over-their-health-mitch-mcconnell-transparency-health-problems-age-limits-term-limits",
+          "domain": "katv.com",
+          "seendate": "2026-07-30T00:45:00Z",
+          "image": "https://katv.com/resources/media2/16x9/5873/1320/0x306/90/a47a5fda-d5d5-4ae2-88dc-d5209f6e2a97-GettyImages2264831373.jpg"
+        },
+        {
+          "title": "Oldest Congress ever faces fresh scrutiny over their health",
+          "url": "https://cbs12.com/news/connect-to-congress/oldest-congress-ever-faces-fresh-scrutiny-over-their-health-mitch-mcconnell-transparency-health-problems-age-limits-term-limits",
+          "domain": "cbs12.com",
+          "seendate": "2026-07-30T00:30:00Z",
+          "image": "https://cbs12.com/resources/media2/16x9/5873/1320/0x306/90/a47a5fda-d5d5-4ae2-88dc-d5209f6e2a97-GettyImages2264831373.jpg"
+        },
+        {
+          "title": "Oldest Congress ever faces fresh scrutiny over their health",
+          "url": "https://turnto10.com/news/nation-world/oldest-congress-ever-faces-fresh-scrutiny-over-their-health-mitch-mcconnell-transparency-health-problems-age-limits-term-limits",
+          "domain": "turnto10.com",
+          "seendate": "2026-07-30T00:00:00Z",
+          "image": "https://turnto10.com/resources/media2/16x9/5873/1320/0x306/90/a47a5fda-d5d5-4ae2-88dc-d5209f6e2a97-GettyImages2264831373.jpg"
+        },
+        {
+          "title": "Oldest Congress ever faces fresh scrutiny over their health",
+          "url": "https://wcti12.com/news/connect-to-congress/oldest-congress-ever-faces-fresh-scrutiny-over-their-health-mitch-mcconnell-transparency-health-problems-age-limits-term-limits",
+          "domain": "wcti12.com",
+          "seendate": "2026-07-29T23:45:00Z",
+          "image": "https://wcti12.com/resources/media2/16x9/5873/1320/0x306/90/a47a5fda-d5d5-4ae2-88dc-d5209f6e2a97-GettyImages2264831373.jpg"
+        },
+        {
+          "title": "Oldest Congress ever faces fresh scrutiny over their health",
+          "url": "https://abc6onyourside.com/news/nation-world/oldest-congress-ever-faces-fresh-scrutiny-over-their-health-mitch-mcconnell-transparency-health-problems-age-limits-term-limits",
+          "domain": "abc6onyourside.com",
+          "seendate": "2026-07-29T23:45:00Z",
+          "image": "https://abc6onyourside.com/resources/media2/16x9/5873/1320/0x306/90/a47a5fda-d5d5-4ae2-88dc-d5209f6e2a97-GettyImages2264831373.jpg"
+        }
+      ]
+    },
+    "title": "Oldest Congress ever faces fresh scrutiny over their health",
+    "summary": "2026-07-30 komonews.com: Oldest Congress ever faces fresh scrutiny over their health\n2026-07-30 foxbaltimore.com: Oldest Congress ever faces fresh scrutiny over their health\n2026-07-30 wwmt.com: Oldest Congress ever faces fresh scrutiny over their health\n2026-07-30 katu.com: Oldest Congress ever faces fresh scrutiny over their health\n2026-07-30 wjla.com: Oldest Congress ever faces fresh scrutiny over their health\n2026-07-30 13wham.com: Oldest Congress ever faces fresh scrutiny over their health",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_birthright-citizenship-deadline",
+    "source": "news",
+    "ts": 1785382770064,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.817,
       "articles": [
         {
           "title": "Deadline passes for Supreme Court to reconsider birthright citizenship",
           "url": "https://www.courant.com/2026/07/29/deadline-passes-trump-supreme-court-birthright-citizenship-ruling/",
           "domain": "courant.com",
           "seendate": "2026-07-29T16:00:00Z",
-          "image": "https://www.courant.com/wp-content/uploads/2026/07/Supreme_Court_Immigration_95944_779240.jpg",
-          "imageBaked": "data/news/images/cand_news_birthright-citizenship-court/68f0c4b4.jpg"
+          "image": "https://www.courant.com/wp-content/uploads/2026/07/Supreme_Court_Immigration_95944_779240.jpg"
         },
         {
           "title": "Donald Trump Misses Supreme Court Deadline on Birthright Citizenship",
           "url": "https://www.newsweek.com/donald-trump-misses-supreme-court-deadline-birthright-citizenship-12258919",
           "domain": "newsweek.com",
           "seendate": "2026-07-29T15:00:00Z",
-          "image": "https://assets.newsweek.com/wp-content/uploads/2026/07/GettyImages-2287240062.jpg?&crop=1",
-          "imageBaked": "data/news/images/cand_news_birthright-citizenship-court/a09d2291.jpg"
-        },
-        {
-          "title": "Window closes for Trump administration to ask Supreme Court to reconsider birthright citizenship decision",
-          "url": "https://www.fox4news.com/news/window-closes-trump-administration-ask-supreme-court-reconsider-birthright-citizenship-decision",
-          "domain": "fox4news.com",
-          "seendate": "2026-07-29T15:00:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/07/1280/720/gettyimages-2268820481.jpg?ve=1&tl=1",
-          "imageBaked": "data/news/images/cand_news_birthright-citizenship-court/cf084650.jpg"
-        },
-        {
-          "title": "Deadline passes for Supreme Court to reconsider birthright citizenship",
-          "url": "https://www.timescall.com/2026/07/29/deadline-passes-trump-supreme-court-birthright-citizenship-ruling/",
-          "domain": "timescall.com",
-          "seendate": "2026-07-29T14:00:00Z",
-          "image": "https://www.timescall.com/wp-content/uploads/2026/07/Supreme_Court_Immigration_95944_779240.jpg",
-          "imageBaked": "data/news/images/cand_news_birthright-citizenship-court/369eeef6.jpg"
-        },
-        {
-          "title": "Window closes for Trump administration to ask Supreme Court to reconsider birthright citizenship decision",
-          "url": "https://www.fox29.com/news/window-closes-trump-administration-ask-supreme-court-reconsider-birthright-citizenship-decision",
-          "domain": "fox29.com",
-          "seendate": "2026-07-29T14:00:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/07/1280/720/gettyimages-2268820481.jpg?ve=1&tl=1",
-          "imageBaked": "data/news/images/cand_news_birthright-citizenship-court/cf084650.jpg"
-        },
-        {
-          "title": "Window closes for Trump administration to ask Supreme Court to reconsider birthright citizenship decision",
-          "url": "https://www.fox5ny.com/news/window-closes-trump-administration-ask-supreme-court-reconsider-birthright-citizenship-decision",
-          "domain": "fox5ny.com",
-          "seendate": "2026-07-29T13:30:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/07/1280/720/gettyimages-2268820481.jpg?ve=1&tl=1",
-          "imageBaked": "data/news/images/cand_news_birthright-citizenship-court/cf084650.jpg"
+          "image": "https://assets.newsweek.com/wp-content/uploads/2026/07/GettyImages-2287240062.jpg?&crop=1"
         },
         {
           "title": "Trump Embarrassed as Deadline Passes in Key Birthright Citizenship Supreme Court SCOTUS Case",
@@ -36018,79 +36225,7 @@ window.PRISM_CANDIDATES = [
       ]
     },
     "title": "Deadline passes for Trump to ask Supreme Court to reconsider birthright citizenship ruling",
-    "summary": "2026-07-29 courant.com: Deadline passes for Supreme Court to reconsider birthright citizenship\n2026-07-29 newsweek.com: Donald Trump Misses Supreme Court Deadline on Birthright Citizenship\n2026-07-29 fox4news.com: Window closes for Trump administration to ask Supreme Court to reconsider birthright citizenship decision\n2026-07-29 timescall.com: Deadline passes for Supreme Court to reconsider birthright citizenship\n2026-07-29 fox29.com: Window closes for Trump administration to ask Supreme Court to reconsider birthright citizenship decision\n2026-07-29 fox5ny.com: Window closes for Trump administration to ask Supreme Court to reconsider birthright citizenship decision",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "held",
-    "mts": 1785359911176
-  },
-  {
-    "cid": "cand_news_expires-haitian-immigrants",
-    "source": "news",
-    "ts": 1785363994914,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.826,
-      "articles": [
-        {
-          "title": "TPS expires for Haitian and Syrian immigrants",
-          "url": "https://www.koat.com/article/temporary-protected-status-haiti-syria-expires/73296779",
-          "domain": "koat.com",
-          "seendate": "2026-07-29T21:00:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/286e7ff8-9982-44e2-9d84-223b59314c36.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0743xh"
-        },
-        {
-          "title": "TPS expires for Haitian and Syrian immigrants",
-          "url": "https://www.wlwt.com/article/temporary-protected-status-haiti-syria-expires/73296779",
-          "domain": "wlwt.com",
-          "seendate": "2026-07-29T20:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/286e7ff8-9982-44e2-9d84-223b59314c36.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0743xh"
-        },
-        {
-          "title": "TPS expires for Haitian and Syrian immigrants",
-          "url": "https://www.wbaltv.com/article/temporary-protected-status-haiti-syria-expires/73296779",
-          "domain": "wbaltv.com",
-          "seendate": "2026-07-29T17:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/286e7ff8-9982-44e2-9d84-223b59314c36.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0743xh"
-        },
-        {
-          "title": "TPS expires for Haitian and Syrian immigrants",
-          "url": "https://www.kcra.com/article/temporary-protected-status-haiti-syria-expires/73296779",
-          "domain": "kcra.com",
-          "seendate": "2026-07-29T17:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/286e7ff8-9982-44e2-9d84-223b59314c36.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0743xh"
-        },
-        {
-          "title": "TPS expires for Haitian and Syrian immigrants",
-          "url": "https://www.wmtw.com/article/temporary-protected-status-haiti-syria-expires/73296779",
-          "domain": "wmtw.com",
-          "seendate": "2026-07-29T17:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/286e7ff8-9982-44e2-9d84-223b59314c36.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0743xh"
-        },
-        {
-          "title": "TPS expires for Haitian and Syrian immigrants",
-          "url": "https://www.wesh.com/article/temporary-protected-status-haiti-syria-expires/73296779",
-          "domain": "wesh.com",
-          "seendate": "2026-07-29T17:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/286e7ff8-9982-44e2-9d84-223b59314c36.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0743xh"
-        },
-        {
-          "title": "TPS expires for Haitian and Syrian immigrants",
-          "url": "https://www.kcci.com/article/temporary-protected-status-haiti-syria-expires/73296779",
-          "domain": "kcci.com",
-          "seendate": "2026-07-29T17:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/286e7ff8-9982-44e2-9d84-223b59314c36.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0743xh"
-        }
-      ]
-    },
-    "title": "TPS expires for Haitian and Syrian immigrants",
-    "summary": "2026-07-29 koat.com: TPS expires for Haitian and Syrian immigrants\n2026-07-29 wlwt.com: TPS expires for Haitian and Syrian immigrants\n2026-07-29 wbaltv.com: TPS expires for Haitian and Syrian immigrants\n2026-07-29 kcra.com: TPS expires for Haitian and Syrian immigrants\n2026-07-29 wmtw.com: TPS expires for Haitian and Syrian immigrants\n2026-07-29 wesh.com: TPS expires for Haitian and Syrian immigrants",
+    "summary": "2026-07-29 courant.com: Deadline passes for Supreme Court to reconsider birthright citizenship\n2026-07-29 newsweek.com: Donald Trump Misses Supreme Court Deadline on Birthright Citizenship\n2026-07-29 thedailybeast.com: Trump Embarrassed as Deadline Passes in Key Birthright Citizenship Supreme Court SCOTUS Case\n2026-07-29 chicagotribune.com: Deadline passes for SCOTUS to reconsider birthright citizenship\n2026-07-29 wsls.com: Deadline passes for Trump to ask Supreme Court to reconsider birthright citizenship ruling\n2026-07-29 clickorlando.com: Deadline passes for Trump to ask Supreme Court to reconsider birthright citizenship ruling",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -36102,12 +36237,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_against-campaign-collins",
     "source": "news",
-    "ts": 1785363994914,
+    "ts": 1785382770066,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.818,
+      "salience": 0.785,
       "articles": [
         {
           "title": "Democrats reset campaign against Collins with new nominee",
@@ -36136,13 +36271,6 @@ window.PRISM_CANDIDATES = [
           "domain": "turnto10.com",
           "seendate": "2026-07-28T15:30:00Z",
           "image": "https://turnto10.com/resources/media2/16x9/3000/1320/0x157/90/25609115-de37-4080-8b26-aff4a0bc8400-GettyImages2285454328.jpg"
-        },
-        {
-          "title": "Democrats reset campaign against Collins with new nominee",
-          "url": "https://bakersfieldnow.com/news/nation-world/democrats-reset-campaign-against-collins-with-new-nominee-troy-jackson-susan-collins-midterm-elections-maine-senate-graham-platner",
-          "domain": "bakersfieldnow.com",
-          "seendate": "2026-07-28T15:30:00Z",
-          "image": "https://bakersfieldnow.com/resources/media2/16x9/3000/1320/0x157/90/25609115-de37-4080-8b26-aff4a0bc8400-GettyImages2285454328.jpg"
         },
         {
           "title": "Democrats reset campaign against Collins with new nominee",
@@ -36192,11 +36320,82 @@ window.PRISM_CANDIDATES = [
           "domain": "wsbt.com",
           "seendate": "2026-07-28T14:00:00Z",
           "image": "https://wsbt.com/resources/media2/16x9/3000/1320/0x157/90/25609115-de37-4080-8b26-aff4a0bc8400-GettyImages2285454328.jpg"
+        },
+        {
+          "title": "Democrats reset campaign against Collins with new nominee",
+          "url": "https://ktul.com/news/connect-to-congress/democrats-reset-campaign-against-collins-with-new-nominee-troy-jackson-susan-collins-midterm-elections-maine-senate-graham-platner",
+          "domain": "ktul.com",
+          "seendate": "2026-07-28T14:00:00Z",
+          "image": "https://ktul.com/resources/media2/16x9/3000/1320/0x157/90/25609115-de37-4080-8b26-aff4a0bc8400-GettyImages2285454328.jpg"
         }
       ]
     },
     "title": "Democrats reset campaign against Collins with new nominee",
-    "summary": "2026-07-28 kfdm.com: Democrats reset campaign against Collins with new nominee\n2026-07-28 katu.com: Democrats reset campaign against Collins with new nominee\n2026-07-28 wjla.com: Democrats reset campaign against Collins with new nominee\n2026-07-28 turnto10.com: Democrats reset campaign against Collins with new nominee\n2026-07-28 bakersfieldnow.com: Democrats reset campaign against Collins with new nominee\n2026-07-28 wcti12.com: Democrats reset campaign against Collins with new nominee",
+    "summary": "2026-07-28 kfdm.com: Democrats reset campaign against Collins with new nominee\n2026-07-28 katu.com: Democrats reset campaign against Collins with new nominee\n2026-07-28 wjla.com: Democrats reset campaign against Collins with new nominee\n2026-07-28 turnto10.com: Democrats reset campaign against Collins with new nominee\n2026-07-28 wcti12.com: Democrats reset campaign against Collins with new nominee\n2026-07-28 abc6onyourside.com: Democrats reset campaign against Collins with new nominee",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_expires-haitian-immigrants",
+    "source": "news",
+    "ts": 1785382770066,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.738,
+      "articles": [
+        {
+          "title": "TPS expires for Haitian and Syrian immigrants",
+          "url": "https://www.koat.com/article/temporary-protected-status-haiti-syria-expires/73296779",
+          "domain": "koat.com",
+          "seendate": "2026-07-29T21:00:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/286e7ff8-9982-44e2-9d84-223b59314c36.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0743xh"
+        },
+        {
+          "title": "TPS expires for Haitian and Syrian immigrants",
+          "url": "https://www.wlwt.com/article/temporary-protected-status-haiti-syria-expires/73296779",
+          "domain": "wlwt.com",
+          "seendate": "2026-07-29T20:45:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/286e7ff8-9982-44e2-9d84-223b59314c36.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0743xh"
+        },
+        {
+          "title": "TPS expires for Haitian and Syrian immigrants",
+          "url": "https://www.wbaltv.com/article/temporary-protected-status-haiti-syria-expires/73296779",
+          "domain": "wbaltv.com",
+          "seendate": "2026-07-29T17:45:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/286e7ff8-9982-44e2-9d84-223b59314c36.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0743xh"
+        },
+        {
+          "title": "TPS expires for Haitian and Syrian immigrants",
+          "url": "https://www.kcra.com/article/temporary-protected-status-haiti-syria-expires/73296779",
+          "domain": "kcra.com",
+          "seendate": "2026-07-29T17:45:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/286e7ff8-9982-44e2-9d84-223b59314c36.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0743xh"
+        },
+        {
+          "title": "TPS expires for Haitian and Syrian immigrants",
+          "url": "https://www.wesh.com/article/temporary-protected-status-haiti-syria-expires/73296779",
+          "domain": "wesh.com",
+          "seendate": "2026-07-29T17:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/286e7ff8-9982-44e2-9d84-223b59314c36.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0743xh"
+        },
+        {
+          "title": "TPS expires for Haitian and Syrian immigrants",
+          "url": "https://www.kcci.com/article/temporary-protected-status-haiti-syria-expires/73296779",
+          "domain": "kcci.com",
+          "seendate": "2026-07-29T17:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/286e7ff8-9982-44e2-9d84-223b59314c36.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0743xh"
+        }
+      ]
+    },
+    "title": "TPS expires for Haitian and Syrian immigrants",
+    "summary": "2026-07-29 koat.com: TPS expires for Haitian and Syrian immigrants\n2026-07-29 wlwt.com: TPS expires for Haitian and Syrian immigrants\n2026-07-29 wbaltv.com: TPS expires for Haitian and Syrian immigrants\n2026-07-29 kcra.com: TPS expires for Haitian and Syrian immigrants\n2026-07-29 wesh.com: TPS expires for Haitian and Syrian immigrants\n2026-07-29 kcci.com: TPS expires for Haitian and Syrian immigrants",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -36208,12 +36407,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_american-drawing-eulogized",
     "source": "news",
-    "ts": 1785363994912,
+    "ts": 1785382770065,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.737,
+      "salience": 0.705,
       "articles": [
         {
           "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
@@ -36284,92 +36483,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_ballot-block-court",
-    "source": "news",
-    "ts": 1785363994914,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.728,
-      "articles": [
-        {
-          "title": "Court panel declines to block Trump mail ballot order , but its status for midterms remains unclear",
-          "url": "https://www.news4jax.com/news/politics/2026/07/28/court-panel-declines-to-block-trumps-mail-ballot-order-but-its-status-for-midterms-remains-unclear/",
-          "domain": "news4jax.com",
-          "seendate": "2026-07-28T20:30:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/NSMHPNCP7NDRRCPQG3W2NGLW6Q.jpg?_a=DATAg1kSZAA0"
-        },
-        {
-          "title": "Court declines to block Trump mail ballot order , but midterms unclear",
-          "url": "https://www.pilotonline.com/2026/07/28/election-2026-trump-mail-ballots/",
-          "domain": "pilotonline.com",
-          "seendate": "2026-07-28T20:15:00Z",
-          "image": "https://www.pilotonline.com/wp-content/uploads/2026/07/Election_2_26_Postal_Service_35786-1.jpg"
-        },
-        {
-          "title": "Court declines to block Trump mail ballot order , but midterms unclear",
-          "url": "https://www.dailynews.com/2026/07/28/election-2026-trump-mail-ballots/",
-          "domain": "dailynews.com",
-          "seendate": "2026-07-28T20:00:00Z",
-          "image": "https://www.dailynews.com/wp-content/uploads/2026/07/Election_2_26_Postal_Service_35786-1.jpg"
-        },
-        {
-          "title": "Court declines to block Trump mail ballot order , but midterms unclear",
-          "url": "https://www.sun-sentinel.com/2026/07/28/election-2026-trump-mail-ballots/",
-          "domain": "sun-sentinel.com",
-          "seendate": "2026-07-28T19:45:00Z",
-          "image": "https://www.sun-sentinel.com/wp-content/uploads/2026/07/Election_2_26_Postal_Service_35786-1.jpg"
-        },
-        {
-          "title": "Court declines to block Trump mail ballot order , but midterms unclear",
-          "url": "https://www.bostonherald.com/2026/07/28/election-2026-trump-mail-ballots/",
-          "domain": "bostonherald.com",
-          "seendate": "2026-07-28T19:45:00Z",
-          "image": "https://www.bostonherald.com/wp-content/uploads/2026/07/Election_2_26_Postal_Service_35786-1.jpg"
-        },
-        {
-          "title": "Court declines to block Trump mail ballot order , but midterms unclear",
-          "url": "https://www.citizensvoice.com/2026/07/28/election-2026-trump-mail-ballots/",
-          "domain": "citizensvoice.com",
-          "seendate": "2026-07-28T19:45:00Z",
-          "image": "https://www.citizensvoice.com/wp-content/uploads/2026/07/Election_2_26_Postal_Service_35786-1.jpg"
-        },
-        {
-          "title": "Court panel declines to block Trump mail ballot order , but its status for midterms remains unclear",
-          "url": "https://www.yahoo.com/news/politics/articles/court-panel-declines-block-trumps-183747156.html",
-          "domain": "yahoo.com",
-          "seendate": "2026-07-28T19:15:00Z",
-          "image": "https://s.yimg.com/lo/mysterio/api/c67db269de9c5fb043008adcb7d00bb36ec531b5006d89f46788e6c1e1932c04/lightyear_networkapi/resizefill_w1200;quality_80;format_webp/https:%2F%2Fmedia.zenfs.com%2Fen%2Fap.org%2Fd161c2d2eca545b8c2bc66d8ff6d0d90"
-        },
-        {
-          "title": "Court declines to block Trump mail ballot order , but midterms unclear",
-          "url": "https://www.sandiegouniontribune.com/2026/07/28/election-2026-trump-mail-ballots/",
-          "domain": "sandiegouniontribune.com",
-          "seendate": "2026-07-28T19:15:00Z",
-          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/07/Election_2_26_Postal_Service_35786-1.jpg"
-        }
-      ]
-    },
-    "title": "Court declines to block Trump mail ballot order , but midterms unclear",
-    "summary": "2026-07-28 news4jax.com: Court panel declines to block Trump mail ballot order , but its status for midterms remains unclear\n2026-07-28 pilotonline.com: Court declines to block Trump mail ballot order , but midterms unclear\n2026-07-28 dailynews.com: Court declines to block Trump mail ballot order , but midterms unclear\n2026-07-28 sun-sentinel.com: Court declines to block Trump mail ballot order , but midterms unclear\n2026-07-28 bostonherald.com: Court declines to block Trump mail ballot order , but midterms unclear\n2026-07-28 citizensvoice.com: Court declines to block Trump mail ballot order , but midterms unclear",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_defend-economic-policies",
     "source": "news",
-    "ts": 1785363994913,
+    "ts": 1785382770065,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.694,
+      "salience": 0.662,
       "articles": [
         {
           "title": "Trump to defend his economic policies in Michigan , where new Canadian tariffs may sting",
@@ -36470,12 +36591,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_clayton-confirms-director",
     "source": "news",
-    "ts": 1785363994914,
+    "ts": 1785382770066,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.639,
+      "salience": 0.607,
       "articles": [
         {
           "title": "Senate confirms Jay Clayton as new director of intelligence",
@@ -36525,54 +36646,61 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_advances-bill-russia",
+    "cid": "cand_news_ballot-block-court",
     "source": "news",
-    "ts": 1785363994914,
+    "ts": 1785382770066,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.613,
+      "salience": 0.585,
       "articles": [
         {
-          "title": "Senate advances Russia sanctions bill as Zelenskyy watches",
-          "url": "https://www.wdsu.com/article/senate-russian-sanctions-bill-zelenskyy-capitol-vote/73289889",
-          "domain": "wdsu.com",
-          "seendate": "2026-07-29T04:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/0e4b0032-e711-4073-81ea-cbfc613b0161.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0839xh"
+          "title": "Court panel declines to block Trump mail ballot order , but its status for midterms remains unclear",
+          "url": "https://www.news4jax.com/news/politics/2026/07/28/court-panel-declines-to-block-trumps-mail-ballot-order-but-its-status-for-midterms-remains-unclear/",
+          "domain": "news4jax.com",
+          "seendate": "2026-07-28T20:30:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/NSMHPNCP7NDRRCPQG3W2NGLW6Q.jpg?_a=DATAg1kSZAA0"
         },
         {
-          "title": "Senate advances Russia sanctions bill as Zelenskyy watches",
-          "url": "https://www.wyff4.com/article/senate-russian-sanctions-bill-zelenskyy-capitol-vote/73289889",
-          "domain": "wyff4.com",
-          "seendate": "2026-07-29T02:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/0e4b0032-e711-4073-81ea-cbfc613b0161.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0839xh"
+          "title": "Court declines to block Trump mail ballot order , but midterms unclear",
+          "url": "https://www.pilotonline.com/2026/07/28/election-2026-trump-mail-ballots/",
+          "domain": "pilotonline.com",
+          "seendate": "2026-07-28T20:15:00Z",
+          "image": "https://www.pilotonline.com/wp-content/uploads/2026/07/Election_2_26_Postal_Service_35786-1.jpg"
         },
         {
-          "title": "Senate advances Russia sanctions bill as Zelenskyy watches",
-          "url": "https://www.koat.com/article/senate-russian-sanctions-bill-zelenskyy-capitol-vote/73289889",
-          "domain": "koat.com",
-          "seendate": "2026-07-29T02:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/0e4b0032-e711-4073-81ea-cbfc613b0161.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0839xh"
+          "title": "Court declines to block Trump mail ballot order , but midterms unclear",
+          "url": "https://www.sun-sentinel.com/2026/07/28/election-2026-trump-mail-ballots/",
+          "domain": "sun-sentinel.com",
+          "seendate": "2026-07-28T19:45:00Z",
+          "image": "https://www.sun-sentinel.com/wp-content/uploads/2026/07/Election_2_26_Postal_Service_35786-1.jpg"
         },
         {
-          "title": "Senate advances Russia sanctions bill as Zelenskyy watches",
-          "url": "https://www.kmbc.com/article/senate-russian-sanctions-bill-zelenskyy-capitol-vote/73289889",
-          "domain": "kmbc.com",
-          "seendate": "2026-07-29T02:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/0e4b0032-e711-4073-81ea-cbfc613b0161.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0839xh"
+          "title": "Court declines to block Trump mail ballot order , but midterms unclear",
+          "url": "https://www.bostonherald.com/2026/07/28/election-2026-trump-mail-ballots/",
+          "domain": "bostonherald.com",
+          "seendate": "2026-07-28T19:45:00Z",
+          "image": "https://www.bostonherald.com/wp-content/uploads/2026/07/Election_2_26_Postal_Service_35786-1.jpg"
         },
         {
-          "title": "Senate advances Russia sanctions bill as Zelenskyy watches",
-          "url": "https://www.wgal.com/article/senate-russian-sanctions-bill-zelenskyy-capitol-vote/73289889",
-          "domain": "wgal.com",
-          "seendate": "2026-07-29T02:15:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/0e4b0032-e711-4073-81ea-cbfc613b0161.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0839xh"
+          "title": "Court panel declines to block Trump mail ballot order , but its status for midterms remains unclear",
+          "url": "https://www.yahoo.com/news/politics/articles/court-panel-declines-block-trumps-183747156.html",
+          "domain": "yahoo.com",
+          "seendate": "2026-07-28T19:15:00Z",
+          "image": "https://s.yimg.com/lo/mysterio/api/c67db269de9c5fb043008adcb7d00bb36ec531b5006d89f46788e6c1e1932c04/lightyear_networkapi/resizefill_w1200;quality_80;format_webp/https:%2F%2Fmedia.zenfs.com%2Fen%2Fap.org%2Fd161c2d2eca545b8c2bc66d8ff6d0d90"
+        },
+        {
+          "title": "Court declines to block Trump mail ballot order , but midterms unclear",
+          "url": "https://www.sandiegouniontribune.com/2026/07/28/election-2026-trump-mail-ballots/",
+          "domain": "sandiegouniontribune.com",
+          "seendate": "2026-07-28T19:15:00Z",
+          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/07/Election_2_26_Postal_Service_35786-1.jpg"
         }
       ]
     },
-    "title": "Senate advances Russia sanctions bill as Zelenskyy watches",
-    "summary": "2026-07-29 wdsu.com: Senate advances Russia sanctions bill as Zelenskyy watches\n2026-07-29 wyff4.com: Senate advances Russia sanctions bill as Zelenskyy watches\n2026-07-29 koat.com: Senate advances Russia sanctions bill as Zelenskyy watches\n2026-07-29 kmbc.com: Senate advances Russia sanctions bill as Zelenskyy watches\n2026-07-29 wgal.com: Senate advances Russia sanctions bill as Zelenskyy watches",
+    "title": "Court declines to block Trump mail ballot order , but midterms unclear",
+    "summary": "2026-07-28 news4jax.com: Court panel declines to block Trump mail ballot order , but its status for midterms remains unclear\n2026-07-28 pilotonline.com: Court declines to block Trump mail ballot order , but midterms unclear\n2026-07-28 sun-sentinel.com: Court declines to block Trump mail ballot order , but midterms unclear\n2026-07-28 bostonherald.com: Court declines to block Trump mail ballot order , but midterms unclear\n2026-07-28 yahoo.com: Court panel declines to block Trump mail ballot order , but its status for midterms remains unclear\n2026-07-28 sandiegouniontribune.com: Court declines to block Trump mail ballot order , but midterms unclear",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -36584,12 +36712,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_admin-allow-before",
     "source": "news",
-    "ts": 1785363994912,
+    "ts": 1785382770065,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.592,
+      "salience": 0.559,
       "articles": [
         {
           "title": "Trump admin urges SCOTUS to allow order targeting mail - in voting before midterms",
@@ -36662,12 +36790,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_democrats-house-iran",
     "source": "news",
-    "ts": 1785363994912,
+    "ts": 1785382770064,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.581,
+      "salience": 0.548,
       "articles": [
         {
           "title": "Trump critic Massie joins Democrats in unprecedented bid to sue White House over Iran war",
@@ -36703,47 +36831,47 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_asks-court-mail",
+    "cid": "cand_news_advances-bill-russia",
     "source": "news",
-    "ts": 1785363994913,
+    "ts": 1785382770066,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.491,
+      "salience": 0.513,
       "articles": [
         {
-          "title": "Trump Admin Asks Supreme Court To Rule On Mail - In Ballots EO",
-          "url": "https://newsone.com/6867517/trump-admin-supreme-court-mail-in-ballots/",
-          "domain": "newsone.com",
-          "seendate": "2026-07-28T17:45:00Z",
-          "image": "https://newsone.com/wp-content/uploads/sites/22/2026/07/17852575708171.jpg?quality=80&strip=all&crop=0,0,100,683px"
+          "title": "Senate advances Russia sanctions bill as Zelenskyy watches",
+          "url": "https://www.wyff4.com/article/senate-russian-sanctions-bill-zelenskyy-capitol-vote/73289889",
+          "domain": "wyff4.com",
+          "seendate": "2026-07-29T02:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/0e4b0032-e711-4073-81ea-cbfc613b0161.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0839xh"
         },
         {
-          "title": "Trump administration asks Supreme Court to allow new limits on mail ballots",
-          "url": "https://www.theoaklandpress.com/2026/07/27/trump-administration-asks-supreme-court-to-allow-new-limits-on-mail-ballots/",
-          "domain": "theoaklandpress.com",
-          "seendate": "2026-07-28T03:00:00Z",
-          "image": "https://www.theoaklandpress.com/wp-content/uploads/2026/06/Supreme_Court_273_5_d12ca8.jpg"
+          "title": "Senate advances Russia sanctions bill as Zelenskyy watches",
+          "url": "https://www.koat.com/article/senate-russian-sanctions-bill-zelenskyy-capitol-vote/73289889",
+          "domain": "koat.com",
+          "seendate": "2026-07-29T02:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/0e4b0032-e711-4073-81ea-cbfc613b0161.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0839xh"
         },
         {
-          "title": "Trump administration asks Supreme Court to allow new limits on mail ballots",
-          "url": "https://www.macombdaily.com/2026/07/27/trump-administration-asks-supreme-court-to-allow-new-limits-on-mail-ballots/",
-          "domain": "macombdaily.com",
-          "seendate": "2026-07-28T00:30:00Z",
-          "image": "https://www.macombdaily.com/wp-content/uploads/2026/07/Supreme_Court_273_5_d12ca8.jpg"
+          "title": "Senate advances Russia sanctions bill as Zelenskyy watches",
+          "url": "https://www.kmbc.com/article/senate-russian-sanctions-bill-zelenskyy-capitol-vote/73289889",
+          "domain": "kmbc.com",
+          "seendate": "2026-07-29T02:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/0e4b0032-e711-4073-81ea-cbfc613b0161.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0839xh"
         },
         {
-          "title": "Trump Administration Asks Supreme Court To Allow Mail - In Voting Order Before Midterms",
-          "url": "https://www.hngn.com/articles/272391/20260727/trump-administration-asks-supreme-court-allow-mail-voting-order-before-midterms.htm",
-          "domain": "hngn.com",
-          "seendate": "2026-07-27T22:45:00Z",
-          "image": "https://d.hngn.com/en/full/304087/file-us-supreme-court-building-exterior.jpg"
+          "title": "Senate advances Russia sanctions bill as Zelenskyy watches",
+          "url": "https://www.wgal.com/article/senate-russian-sanctions-bill-zelenskyy-capitol-vote/73289889",
+          "domain": "wgal.com",
+          "seendate": "2026-07-29T02:15:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/0e4b0032-e711-4073-81ea-cbfc613b0161.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0839xh"
         }
       ]
     },
-    "title": "Trump administration asks Supreme Court to allow new limits on mail ballots",
-    "summary": "2026-07-28 newsone.com: Trump Admin Asks Supreme Court To Rule On Mail - In Ballots EO\n2026-07-28 theoaklandpress.com: Trump administration asks Supreme Court to allow new limits on mail ballots\n2026-07-28 macombdaily.com: Trump administration asks Supreme Court to allow new limits on mail ballots\n2026-07-27 hngn.com: Trump Administration Asks Supreme Court To Allow Mail - In Voting Order Before Midterms",
+    "title": "Senate advances Russia sanctions bill as Zelenskyy watches",
+    "summary": "2026-07-29 wyff4.com: Senate advances Russia sanctions bill as Zelenskyy watches\n2026-07-29 koat.com: Senate advances Russia sanctions bill as Zelenskyy watches\n2026-07-29 kmbc.com: Senate advances Russia sanctions bill as Zelenskyy watches\n2026-07-29 wgal.com: Senate advances Russia sanctions bill as Zelenskyy watches",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -36755,12 +36883,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_day-graham-lindsey",
     "source": "news",
-    "ts": 1785363994913,
+    "ts": 1785382770065,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.483,
+      "salience": 0.45,
       "articles": [
         {
           "title": "In a day of tributes , Lindsey Graham is remembered as a tireless Washington mainstay",
@@ -36798,12 +36926,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_funeral-graham-honor",
     "source": "news",
-    "ts": 1785363994912,
+    "ts": 1785382770064,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.453,
+      "salience": 0.42,
       "articles": [
         {
           "title": "Lindsey Graham funeral : Trump , world leaders honor late senator – NBC 6 South Florida",
@@ -36841,12 +36969,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_asks-court-curtail",
     "source": "news",
-    "ts": 1785363994914,
+    "ts": 1785382770066,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.326,
+      "salience": 0.294,
       "articles": [
         {
           "title": "Trump asks Supreme Court to let him curtail mail voting",
