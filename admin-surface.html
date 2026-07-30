@@ -2053,7 +2053,13 @@ function dmModalFields(s){ const r=resp(s.quad,s.band);
    returns the message to the draft box (the record keeps only real
    exchanges); the classic build-1 page does not grow the dialogue — it is
    retiring into the galley proof. */
-const DESK_DIALOGUE_PROMPT_ID='DESK_DIALOGUE_v1';
+/* v2 (2026-07-30, found in the live walk): v1 labelled the columns
+   "AUTHOR'S LINE" and "YOUR INDEPENDENT DRAFT" — "your" addressed Sonnet,
+   but Sonnet reused the pronoun when replying TO Sailor, so the reply read
+   "yours holds the object more plainly" about its OWN draft while calling
+   Sailor's line "the author's". The labels inverted exactly where they are
+   read. v2 names the owners explicitly and rules the pronouns. */
+const DESK_DIALOGUE_PROMPT_ID='DESK_DIALOGUE_v2';
 function dmDialogueSystem(s){
   const sd=(desk&&desk.sonnetDrafts[s.key])||null, mine=deskMineOf(s);
   const res=(desk&&desk.resolutions[s.key])||null;
@@ -2070,11 +2076,16 @@ function dmDialogueSystem(s){
     +'FRAMING: '+(stripHtml($('framing').innerHTML)||'(none)')+'\n'
     +PRISM_VOICE_RULES+'\n'
     +'THE FIRED COMPARISON (the record — it stays as it is):\n'
-    +'AUTHOR\'S LINE (fire-time snapshot): '+(mine.text?JSON.stringify(mine.text):'(the author had not drafted this slot)')+'\n'
-    +'YOUR INDEPENDENT DRAFT (blind): '+((sd&&sd.text)?JSON.stringify(sd.text):(sd&&sd.error?'(fire failed — '+sd.error+')':'(none)'))
+    +'THE AUTHOR\'S LINE — written by the person you are talking to (fire-time snapshot): '
+    +(mine.text?JSON.stringify(mine.text):'(the author had not drafted this slot)')+'\n'
+    +'YOUR OWN BLIND DRAFT — written by you, without seeing the author\'s line: '
+    +((sd&&sd.text)?JSON.stringify(sd.text):(sd&&sd.error?'(fire failed — '+sd.error+')':'(none)'))
     +cloud+'\n'
     +'SLOT NOW HOLDS: '+(cur?JSON.stringify(cur):'(empty)')+' · resolution: '+(res?res.outcome.toUpperCase():'unresolved')+'\n\n'
     +'Ground rules:\n'
+    +'- PRONOUNS, STRICTLY: the author\'s line is "your line" / "yours"; your own blind draft is "my draft" '
+    +'/ "mine". Never call your own draft "yours" and never call the author\'s line "the author\'s" — the '
+    +'author reads these replies, and inverted labels make the assessment say the opposite of what you mean.\n'
     +'- Discuss, assess, argue — and name the rule or parameter you lean on (band register, pole fidelity, '
     +'voiced-not-described, good faith, live vehicle).\n'
     +'- Propose a reworded line only when asked. Any line you propose enters the reading only by the author\'s '
