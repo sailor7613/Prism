@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-07-31T03:57:06.548Z · 40 legislative + 11 news (GDELT, 3d)
+// 2026-07-31T09:21:38.270Z · 40 legislative + 11 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1785470212378,
+    "ts": 1785489661369,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.804,
+      "salience": 0.803,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,11 +259,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1785470212378,
+    "ts": 1785489661369,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.795,
+      "salience": 0.794,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1785470212377,
+    "ts": 1785489661368,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.766,
+      "salience": 0.765,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1785470212378,
+    "ts": 1785489661369,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.75,
+      "salience": 0.749,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3256,11 +3256,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1785470212378,
+    "ts": 1785489661369,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.694,
+      "salience": 0.693,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4658,11 +4658,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1785470212378,
+    "ts": 1785489661369,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
-      "salience": 0.694,
+      "salience": 0.693,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
       "votes": [
         {
@@ -4932,11 +4932,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1785470212378,
+    "ts": 1785489661369,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.679,
+      "salience": 0.678,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5203,11 +5203,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1785470212377,
+    "ts": 1785489661368,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.669,
+      "salience": 0.668,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6605,11 +6605,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1785470212377,
+    "ts": 1785489661368,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.663,
+      "salience": 0.662,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -8007,11 +8007,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1785470212377,
+    "ts": 1785489661368,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.617,
+      "salience": 0.616,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -8941,11 +8941,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1785470212378,
+    "ts": 1785489661369,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.616,
+      "salience": 0.615,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -9217,11 +9217,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1041",
     "source": "legislative",
-    "ts": 1785470212377,
+    "ts": 1785489661368,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1041",
-      "salience": 0.606,
+      "salience": 0.605,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1041",
       "votes": [
         {
@@ -10614,11 +10614,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2616",
     "source": "legislative",
-    "ts": 1785470212377,
+    "ts": 1785489661368,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2616",
-      "salience": 0.603,
+      "salience": 0.602,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2616",
       "votes": [
         {
@@ -12008,11 +12008,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1785470212377,
+    "ts": 1785489661368,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
-      "salience": 0.6,
+      "salience": 0.599,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2913",
       "votes": [
         {
@@ -12940,11 +12940,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1785470212378,
+    "ts": 1785489661369,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.6,
+      "salience": 0.599,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -13216,11 +13216,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1785470212378,
+    "ts": 1785489661369,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
-      "salience": 0.597,
+      "salience": 0.596,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8312",
       "votes": [
         {
@@ -14149,11 +14149,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1785470212378,
+    "ts": 1785489661369,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.581,
+      "salience": 0.58,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -14540,11 +14540,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1785470212378,
+    "ts": 1785489661369,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.578,
+      "salience": 0.577,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -15473,11 +15473,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6260",
     "source": "legislative",
-    "ts": 1785470212376,
+    "ts": 1785489661366,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6260",
-      "salience": 0.574,
+      "salience": 0.573,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6260",
       "votes": [
         {
@@ -16875,11 +16875,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8365",
     "source": "legislative",
-    "ts": 1785470212376,
+    "ts": 1785489661367,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8365",
-      "salience": 0.574,
+      "salience": 0.573,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8365",
       "votes": [
         {
@@ -18277,11 +18277,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1346",
     "source": "legislative",
-    "ts": 1785470212376,
+    "ts": 1785489661366,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1346",
-      "salience": 0.557,
+      "salience": 0.556,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1346",
       "votes": [
         {
@@ -19677,11 +19677,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-141",
     "source": "legislative",
-    "ts": 1785470212378,
+    "ts": 1785489661369,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-141",
-      "salience": 0.539,
+      "salience": 0.538,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/141",
       "votes": [
         {
@@ -19953,11 +19953,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-132",
     "source": "legislative",
-    "ts": 1785470212378,
+    "ts": 1785489661369,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-132",
-      "salience": 0.521,
+      "salience": 0.52,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/132",
       "votes": [
         {
@@ -20229,11 +20229,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-130",
     "source": "legislative",
-    "ts": 1785470212378,
+    "ts": 1785489661369,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-130",
-      "salience": 0.512,
+      "salience": 0.511,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/130",
       "votes": [
         {
@@ -20505,11 +20505,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6047",
     "source": "legislative",
-    "ts": 1785470212377,
+    "ts": 1785489661368,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6047",
-      "salience": 0.51,
+      "salience": 0.509,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6047",
       "votes": [
         {
@@ -21430,11 +21430,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1785470212378,
+    "ts": 1785489661369,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.459,
+      "salience": 0.458,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -22833,11 +22833,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1785470212378,
+    "ts": 1785489661369,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.401,
+      "salience": 0.4,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -23726,11 +23726,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1785470212378,
+    "ts": 1785489661369,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.395,
+      "salience": 0.394,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -24641,11 +24641,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1785470212378,
+    "ts": 1785489661369,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.388,
+      "salience": 0.387,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -25529,11 +25529,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1785470212378,
+    "ts": 1785489661369,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.383,
+      "salience": 0.382,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -26450,11 +26450,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1785470212378,
+    "ts": 1785489661369,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.372,
+      "salience": 0.371,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -27368,11 +27368,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5625",
     "source": "legislative",
-    "ts": 1785470212376,
+    "ts": 1785489661367,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5625",
-      "salience": 0.336,
+      "salience": 0.335,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5625",
       "votes": [
         {
@@ -28303,11 +28303,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1785470212378,
+    "ts": 1785489661369,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.312,
+      "salience": 0.311,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -29202,11 +29202,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8469",
     "source": "legislative",
-    "ts": 1785470212376,
+    "ts": 1785489661367,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8469",
-      "salience": 0.306,
+      "salience": 0.305,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8469",
       "votes": [
         {
@@ -30604,11 +30604,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1785470212377,
+    "ts": 1785489661368,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.283,
+      "salience": 0.282,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -31538,11 +31538,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2853",
     "source": "legislative",
-    "ts": 1785470212375,
+    "ts": 1785489661366,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2853",
-      "salience": 0.214,
+      "salience": 0.213,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2853",
       "votes": [
         {
@@ -32456,11 +32456,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1785470212377,
+    "ts": 1785489661368,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
-      "salience": 0.209,
+      "salience": 0.208,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/254",
       "votes": [
         {
@@ -33385,11 +33385,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1785470212377,
+    "ts": 1785489661368,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
-      "salience": 0.207,
+      "salience": 0.206,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7618",
       "votes": [
         {
@@ -34294,11 +34294,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1785470212377,
+    "ts": 1785489661368,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
-      "salience": 0.201,
+      "salience": 0.2,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8466",
       "votes": [
         {
@@ -35169,11 +35169,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1785470212377,
+    "ts": 1785489661368,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
-      "salience": 0.201,
+      "salience": 0.2,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8428",
       "votes": [
         {
@@ -36053,12 +36053,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_fauci-fight-fuels",
     "source": "news",
-    "ts": 1785470226539,
+    "ts": 1785489698260,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.975,
+      "salience": 0.941,
       "articles": [
         {
           "title": "Fauci silence in Senate hearing fuels new political fight",
@@ -36159,12 +36159,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_congress-ever-faces",
     "source": "news",
-    "ts": 1785470226539,
+    "ts": 1785489698261,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.844,
+      "salience": 0.81,
       "articles": [
         {
           "title": "Oldest Congress ever faces fresh scrutiny over their health",
@@ -36263,49 +36263,62 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_birthright-citizenship-deadline",
+    "cid": "cand_news_birthright-citizenship-court",
     "source": "news",
-    "ts": 1785470226538,
+    "ts": 1785489698259,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.72,
+      "salience": 0.741,
       "articles": [
         {
           "title": "Deadline passes for Supreme Court to reconsider birthright citizenship",
           "url": "https://www.courant.com/2026/07/29/deadline-passes-trump-supreme-court-birthright-citizenship-ruling/",
           "domain": "courant.com",
           "seendate": "2026-07-29T16:00:00Z",
-          "image": "https://www.courant.com/wp-content/uploads/2026/07/Supreme_Court_Immigration_95944_779240.jpg"
+          "image": "https://www.courant.com/wp-content/uploads/2026/07/Supreme_Court_Immigration_95944_779240.jpg",
+          "imageBaked": "data/news/images/cand_news_birthright-citizenship-court/68f0c4b4.jpg"
         },
         {
           "title": "Donald Trump Misses Supreme Court Deadline on Birthright Citizenship",
           "url": "https://www.newsweek.com/donald-trump-misses-supreme-court-deadline-birthright-citizenship-12258919",
           "domain": "newsweek.com",
           "seendate": "2026-07-29T15:00:00Z",
-          "image": "https://assets.newsweek.com/wp-content/uploads/2026/07/GettyImages-2287240062.jpg?&crop=1"
+          "image": "https://assets.newsweek.com/wp-content/uploads/2026/07/GettyImages-2287240062.jpg?&crop=1",
+          "imageBaked": "data/news/images/cand_news_birthright-citizenship-court/a09d2291.jpg"
+        },
+        {
+          "title": "Window closes for Trump administration to ask Supreme Court to reconsider birthright citizenship decision",
+          "url": "https://www.fox4news.com/news/window-closes-trump-administration-ask-supreme-court-reconsider-birthright-citizenship-decision",
+          "domain": "fox4news.com",
+          "seendate": "2026-07-29T15:00:00Z",
+          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/07/1280/720/gettyimages-2268820481.jpg?ve=1&tl=1",
+          "imageBaked": "data/news/images/cand_news_birthright-citizenship-court/cf084650.jpg"
         },
         {
           "title": "Deadline passes for Supreme Court to reconsider birthright citizenship",
           "url": "https://www.timescall.com/2026/07/29/deadline-passes-trump-supreme-court-birthright-citizenship-ruling/",
           "domain": "timescall.com",
           "seendate": "2026-07-29T14:00:00Z",
-          "image": "https://www.timescall.com/wp-content/uploads/2026/07/Supreme_Court_Immigration_95944_779240.jpg"
+          "image": "https://www.timescall.com/wp-content/uploads/2026/07/Supreme_Court_Immigration_95944_779240.jpg",
+          "imageBaked": "data/news/images/cand_news_birthright-citizenship-court/369eeef6.jpg"
         },
         {
           "title": "Trump Embarrassed as Deadline Passes in Key Birthright Citizenship Supreme Court SCOTUS Case",
           "url": "https://www.thedailybeast.com/trump-embarrassed-as-deadline-passes-in-key-birthright-citizenship-supreme-court-scotus-case/",
           "domain": "thedailybeast.com",
           "seendate": "2026-07-29T09:45:00Z",
-          "image": "https://www.thedailybeast.com/resizer/v2/5PTWVBE4YZFAZISBDB2XHLUWZI.jpg?smart=true&auth=c2d9813d817c89104b52f7c9b327fffc2b58515bd3b62d44064ad8dd65250d55"
+          "image": "https://www.thedailybeast.com/resizer/v2/5PTWVBE4YZFAZISBDB2XHLUWZI.jpg?smart=true&auth=c2d9813d817c89104b52f7c9b327fffc2b58515bd3b62d44064ad8dd65250d55",
+          "imageBaked": "data/news/images/cand_news_birthright-citizenship-court/85594dc3.jpg"
         },
         {
           "title": "Deadline passes for SCOTUS to reconsider birthright citizenship",
           "url": "https://www.chicagotribune.com/2026/07/28/deadline-trump-supreme-court-birthright-citizenship/",
           "domain": "chicagotribune.com",
           "seendate": "2026-07-29T02:15:00Z",
-          "image": "https://www.chicagotribune.com/wp-content/uploads/2026/07/Supreme_Court_Immigration_95944_779240.jpg"
+          "image": "https://www.chicagotribune.com/wp-content/uploads/2026/07/Supreme_Court_Immigration_95944_779240.jpg",
+          "imageBaked": "data/news/images/cand_news_birthright-citizenship-court/7f2a65bf.jpg"
         },
         {
           "title": "Deadline passes for Trump to ask Supreme Court to reconsider birthright citizenship ruling",
@@ -36338,24 +36351,25 @@ window.PRISM_CANDIDATES = [
       ]
     },
     "title": "Deadline passes for Trump to ask Supreme Court to reconsider birthright citizenship ruling",
-    "summary": "2026-07-29 courant.com: Deadline passes for Supreme Court to reconsider birthright citizenship\n2026-07-29 newsweek.com: Donald Trump Misses Supreme Court Deadline on Birthright Citizenship\n2026-07-29 timescall.com: Deadline passes for Supreme Court to reconsider birthright citizenship\n2026-07-29 thedailybeast.com: Trump Embarrassed as Deadline Passes in Key Birthright Citizenship Supreme Court SCOTUS Case\n2026-07-29 chicagotribune.com: Deadline passes for SCOTUS to reconsider birthright citizenship\n2026-07-29 wsls.com: Deadline passes for Trump to ask Supreme Court to reconsider birthright citizenship ruling",
+    "summary": "2026-07-29 courant.com: Deadline passes for Supreme Court to reconsider birthright citizenship\n2026-07-29 newsweek.com: Donald Trump Misses Supreme Court Deadline on Birthright Citizenship\n2026-07-29 fox4news.com: Window closes for Trump administration to ask Supreme Court to reconsider birthright citizenship decision\n2026-07-29 timescall.com: Deadline passes for Supreme Court to reconsider birthright citizenship\n2026-07-29 thedailybeast.com: Trump Embarrassed as Deadline Passes in Key Birthright Citizenship Supreme Court SCOTUS Case\n2026-07-29 chicagotribune.com: Deadline passes for SCOTUS to reconsider birthright citizenship",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
     "members": [],
     "bills": [],
     "fitness": null,
-    "status": "new"
+    "status": "held",
+    "mts": 1785359911176
   },
   {
     "cid": "cand_news_against-campaign-collins",
     "source": "news",
-    "ts": 1785470226539,
+    "ts": 1785489698261,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.633,
+      "salience": 0.599,
       "articles": [
         {
           "title": "Democrats reset campaign against Collins with new nominee",
@@ -36456,12 +36470,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_expires-haitian-immigrants",
     "source": "news",
-    "ts": 1785470226539,
+    "ts": 1785489698261,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.587,
+      "salience": 0.553,
       "articles": [
         {
           "title": "TPS expires for Haitian and Syrian immigrants",
@@ -36520,12 +36534,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_american-drawing-eulogized",
     "source": "news",
-    "ts": 1785470226538,
+    "ts": 1785489698260,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.553,
+      "salience": 0.519,
       "articles": [
         {
           "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
@@ -36598,12 +36612,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballot-block-court",
     "source": "news",
-    "ts": 1785470226540,
+    "ts": 1785489698261,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.543,
+      "salience": 0.51,
       "articles": [
         {
           "title": "Court panel declines to block Trump mail ballot order , but its status for midterms remains unclear",
@@ -36676,12 +36690,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_clayton-confirms-director",
     "source": "news",
-    "ts": 1785470226540,
+    "ts": 1785489698261,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.455,
+      "salience": 0.421,
       "articles": [
         {
           "title": "Senate confirms Jay Clayton as new director of intelligence",
@@ -36733,12 +36747,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_advances-bill-russia",
     "source": "news",
-    "ts": 1785470226540,
+    "ts": 1785489698261,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.361,
+      "salience": 0.327,
       "articles": [
         {
           "title": "Senate advances Russia sanctions bill as Zelenskyy watches",
@@ -36783,12 +36797,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_day-graham-lindsey",
     "source": "news",
-    "ts": 1785470226538,
+    "ts": 1785489698260,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.298,
+      "salience": 0.264,
       "articles": [
         {
           "title": "In a day of tributes , Lindsey Graham is remembered as a tireless Washington mainstay",
@@ -36826,12 +36840,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_funeral-graham-honor",
     "source": "news",
-    "ts": 1785470226538,
+    "ts": 1785489698260,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.268,
+      "salience": 0.235,
       "articles": [
         {
           "title": "Lindsey Graham funeral : Trump , world leaders honor late senator – NBC 6 South Florida",
