@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-07-30T22:32:05.101Z · 40 legislative + 12 news (GDELT, 3d)
+// 2026-07-31T03:57:06.548Z · 40 legislative + 11 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1785450671641,
+    "ts": 1785470212378,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.805,
+      "salience": 0.804,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,11 +259,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1785450671641,
+    "ts": 1785470212378,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.796,
+      "salience": 0.795,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1785450671641,
+    "ts": 1785470212377,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.767,
+      "salience": 0.766,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1785450671641,
+    "ts": 1785470212378,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.751,
+      "salience": 0.75,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3256,11 +3256,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1785450671641,
+    "ts": 1785470212378,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.695,
+      "salience": 0.694,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4658,11 +4658,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1785450671641,
+    "ts": 1785470212378,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
-      "salience": 0.695,
+      "salience": 0.694,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
       "votes": [
         {
@@ -4932,11 +4932,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1785450671641,
+    "ts": 1785470212378,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.68,
+      "salience": 0.679,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5203,11 +5203,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1785450671641,
+    "ts": 1785470212377,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.67,
+      "salience": 0.669,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6605,11 +6605,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1785450671641,
+    "ts": 1785470212377,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.664,
+      "salience": 0.663,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -8007,11 +8007,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1785450671641,
+    "ts": 1785470212377,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.618,
+      "salience": 0.617,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -8941,11 +8941,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1785450671641,
+    "ts": 1785470212378,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.617,
+      "salience": 0.616,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -9217,11 +9217,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1041",
     "source": "legislative",
-    "ts": 1785450671640,
+    "ts": 1785470212377,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1041",
-      "salience": 0.607,
+      "salience": 0.606,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1041",
       "votes": [
         {
@@ -10614,11 +10614,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2616",
     "source": "legislative",
-    "ts": 1785450671640,
+    "ts": 1785470212377,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2616",
-      "salience": 0.604,
+      "salience": 0.603,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2616",
       "votes": [
         {
@@ -12008,11 +12008,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1785450671641,
+    "ts": 1785470212377,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
-      "salience": 0.601,
+      "salience": 0.6,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2913",
       "votes": [
         {
@@ -12940,11 +12940,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1785450671641,
+    "ts": 1785470212378,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.601,
+      "salience": 0.6,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -13216,11 +13216,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1785450671641,
+    "ts": 1785470212378,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
-      "salience": 0.598,
+      "salience": 0.597,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8312",
       "votes": [
         {
@@ -14149,11 +14149,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1785450671642,
+    "ts": 1785470212378,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.582,
+      "salience": 0.581,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -14540,11 +14540,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1785450671641,
+    "ts": 1785470212378,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.579,
+      "salience": 0.578,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -15473,11 +15473,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6260",
     "source": "legislative",
-    "ts": 1785450671640,
+    "ts": 1785470212376,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6260",
-      "salience": 0.575,
+      "salience": 0.574,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6260",
       "votes": [
         {
@@ -16875,11 +16875,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8365",
     "source": "legislative",
-    "ts": 1785450671640,
+    "ts": 1785470212376,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8365",
-      "salience": 0.575,
+      "salience": 0.574,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8365",
       "votes": [
         {
@@ -18277,11 +18277,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1346",
     "source": "legislative",
-    "ts": 1785450671640,
+    "ts": 1785470212376,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1346",
-      "salience": 0.558,
+      "salience": 0.557,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1346",
       "votes": [
         {
@@ -19677,11 +19677,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-141",
     "source": "legislative",
-    "ts": 1785450671641,
+    "ts": 1785470212378,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-141",
-      "salience": 0.54,
+      "salience": 0.539,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/141",
       "votes": [
         {
@@ -19953,11 +19953,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-132",
     "source": "legislative",
-    "ts": 1785450671641,
+    "ts": 1785470212378,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-132",
-      "salience": 0.522,
+      "salience": 0.521,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/132",
       "votes": [
         {
@@ -20229,11 +20229,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-130",
     "source": "legislative",
-    "ts": 1785450671641,
+    "ts": 1785470212378,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-130",
-      "salience": 0.513,
+      "salience": 0.512,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/130",
       "votes": [
         {
@@ -20505,11 +20505,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6047",
     "source": "legislative",
-    "ts": 1785450671640,
+    "ts": 1785470212377,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6047",
-      "salience": 0.511,
+      "salience": 0.51,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6047",
       "votes": [
         {
@@ -21430,11 +21430,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1785450671641,
+    "ts": 1785470212378,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.46,
+      "salience": 0.459,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -22833,11 +22833,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1785450671641,
+    "ts": 1785470212378,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.402,
+      "salience": 0.401,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -23726,11 +23726,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1785450671642,
+    "ts": 1785470212378,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.396,
+      "salience": 0.395,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -24641,11 +24641,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1785450671641,
+    "ts": 1785470212378,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.389,
+      "salience": 0.388,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -25529,11 +25529,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1785450671641,
+    "ts": 1785470212378,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.384,
+      "salience": 0.383,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -26450,11 +26450,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1785450671641,
+    "ts": 1785470212378,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.373,
+      "salience": 0.372,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -27368,11 +27368,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5625",
     "source": "legislative",
-    "ts": 1785450671640,
+    "ts": 1785470212376,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5625",
-      "salience": 0.337,
+      "salience": 0.336,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5625",
       "votes": [
         {
@@ -28303,11 +28303,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1785450671641,
+    "ts": 1785470212378,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.313,
+      "salience": 0.312,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -29202,11 +29202,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8469",
     "source": "legislative",
-    "ts": 1785450671640,
+    "ts": 1785470212376,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8469",
-      "salience": 0.307,
+      "salience": 0.306,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8469",
       "votes": [
         {
@@ -30604,11 +30604,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1785450671641,
+    "ts": 1785470212377,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.284,
+      "salience": 0.283,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -31538,11 +31538,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2853",
     "source": "legislative",
-    "ts": 1785450671640,
+    "ts": 1785470212375,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2853",
-      "salience": 0.215,
+      "salience": 0.214,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2853",
       "votes": [
         {
@@ -32456,11 +32456,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1785450671641,
+    "ts": 1785470212377,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
-      "salience": 0.21,
+      "salience": 0.209,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/254",
       "votes": [
         {
@@ -33385,11 +33385,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1785450671640,
+    "ts": 1785470212377,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
-      "salience": 0.208,
+      "salience": 0.207,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7618",
       "votes": [
         {
@@ -34294,11 +34294,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1785450671641,
+    "ts": 1785470212377,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
-      "salience": 0.202,
+      "salience": 0.201,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8466",
       "votes": [
         {
@@ -35169,11 +35169,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1785450671641,
+    "ts": 1785470212377,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
-      "salience": 0.202,
+      "salience": 0.201,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8428",
       "votes": [
         {
@@ -36051,14 +36051,120 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_congress-ever-faces",
+    "cid": "cand_news_fauci-fight-fuels",
     "source": "news",
-    "ts": 1785450725094,
+    "ts": 1785470226539,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.878,
+      "salience": 0.975,
+      "articles": [
+        {
+          "title": "Fauci silence in Senate hearing fuels new political fight",
+          "url": "https://abc6onyourside.com/news/nation-world/faucis-silence-in-senate-hearing-fuels-new-political-fight-republican-lawmakers-white-house-nih-virus",
+          "domain": "abc6onyourside.com",
+          "seendate": "2026-07-31T00:00:00Z",
+          "image": "https://abc6onyourside.com/resources/media2/16x9/5530/1320/0x288/90/f836e3d3-981d-4a79-8585-c953a45b7b03-GettyImages2288139302.jpg"
+        },
+        {
+          "title": "Fauci silence in Senate hearing fuels new political fight",
+          "url": "https://ktul.com/news/nation-world/faucis-silence-in-senate-hearing-fuels-new-political-fight-republican-lawmakers-white-house-nih-virus",
+          "domain": "ktul.com",
+          "seendate": "2026-07-30T23:45:00Z",
+          "image": "https://ktul.com/resources/media2/16x9/5530/1320/0x288/90/f836e3d3-981d-4a79-8585-c953a45b7b03-GettyImages2288139302.jpg"
+        },
+        {
+          "title": "Fauci silence in Senate hearing fuels new political fight",
+          "url": "https://wset.com/news/nation-world/faucis-silence-in-senate-hearing-fuels-new-political-fight-republican-lawmakers-white-house-nih-virus",
+          "domain": "wset.com",
+          "seendate": "2026-07-30T23:30:00Z",
+          "image": "https://wset.com/resources/media2/16x9/5530/1320/0x288/90/f836e3d3-981d-4a79-8585-c953a45b7b03-GettyImages2288139302.jpg"
+        },
+        {
+          "title": "Fauci silence in Senate hearing fuels new political fight",
+          "url": "https://turnto10.com/news/nation-world/faucis-silence-in-senate-hearing-fuels-new-political-fight-republican-lawmakers-white-house-nih-virus",
+          "domain": "turnto10.com",
+          "seendate": "2026-07-30T23:30:00Z",
+          "image": "https://turnto10.com/resources/media2/16x9/5530/1320/0x288/90/f836e3d3-981d-4a79-8585-c953a45b7b03-GettyImages2288139302.jpg"
+        },
+        {
+          "title": "Fauci silence in Senate hearing fuels new political fight",
+          "url": "https://cbs12.com/news/nation-world/faucis-silence-in-senate-hearing-fuels-new-political-fight-republican-lawmakers-white-house-nih-virus",
+          "domain": "cbs12.com",
+          "seendate": "2026-07-30T23:30:00Z",
+          "image": "https://cbs12.com/resources/media2/16x9/5530/1320/0x288/90/f836e3d3-981d-4a79-8585-c953a45b7b03-GettyImages2288139302.jpg"
+        },
+        {
+          "title": "Fauci silence in Senate hearing fuels new political fight",
+          "url": "https://wcti12.com/news/nation-world/faucis-silence-in-senate-hearing-fuels-new-political-fight-republican-lawmakers-white-house-nih-virus",
+          "domain": "wcti12.com",
+          "seendate": "2026-07-30T23:00:00Z",
+          "image": "https://wcti12.com/resources/media2/16x9/5530/1320/0x288/90/f836e3d3-981d-4a79-8585-c953a45b7b03-GettyImages2288139302.jpg"
+        },
+        {
+          "title": "Fauci silence in Senate hearing fuels new political fight",
+          "url": "https://wcyb.com/news/nation-world/faucis-silence-in-senate-hearing-fuels-new-political-fight-republican-lawmakers-white-house-nih-virus",
+          "domain": "wcyb.com",
+          "seendate": "2026-07-30T23:00:00Z",
+          "image": "https://wcyb.com/resources/media2/16x9/5530/1320/0x288/90/f836e3d3-981d-4a79-8585-c953a45b7b03-GettyImages2288139302.jpg"
+        },
+        {
+          "title": "Fauci silence in Senate hearing fuels new political fight",
+          "url": "https://wsbt.com/news/nation-world/faucis-silence-in-senate-hearing-fuels-new-political-fight-republican-lawmakers-white-house-nih-virus",
+          "domain": "wsbt.com",
+          "seendate": "2026-07-30T23:00:00Z",
+          "image": "https://wsbt.com/resources/media2/16x9/5530/1320/0x288/90/f836e3d3-981d-4a79-8585-c953a45b7b03-GettyImages2288139302.jpg"
+        },
+        {
+          "title": "Fauci silence in Senate hearing fuels new political fight",
+          "url": "https://news3lv.com/news/nation-world/faucis-silence-in-senate-hearing-fuels-new-political-fight-republican-lawmakers-white-house-nih-virus",
+          "domain": "news3lv.com",
+          "seendate": "2026-07-30T22:45:00Z",
+          "image": "https://news3lv.com/resources/media2/16x9/5530/1320/0x288/90/f836e3d3-981d-4a79-8585-c953a45b7b03-GettyImages2288139302.jpg"
+        },
+        {
+          "title": "Fauci silence in Senate hearing fuels new political fight",
+          "url": "https://komonews.com/news/nation-world/faucis-silence-in-senate-hearing-fuels-new-political-fight-republican-lawmakers-white-house-nih-virus",
+          "domain": "komonews.com",
+          "seendate": "2026-07-30T22:30:00Z",
+          "image": "https://komonews.com/resources/media2/16x9/5530/1320/0x288/90/f836e3d3-981d-4a79-8585-c953a45b7b03-GettyImages2288139302.jpg"
+        },
+        {
+          "title": "Fauci silence in Senate hearing fuels new political fight",
+          "url": "https://wpde.com/news/nation-world/faucis-silence-in-senate-hearing-fuels-new-political-fight-republican-lawmakers-white-house-nih-virus",
+          "domain": "wpde.com",
+          "seendate": "2026-07-30T22:30:00Z",
+          "image": "https://wpde.com/resources/media2/16x9/5530/1320/0x288/90/f836e3d3-981d-4a79-8585-c953a45b7b03-GettyImages2288139302.jpg"
+        },
+        {
+          "title": "Fauci silence in Senate hearing fuels new political fight",
+          "url": "https://nbcmontana.com/news/nation-world/faucis-silence-in-senate-hearing-fuels-new-political-fight-republican-lawmakers-white-house-nih-virus",
+          "domain": "nbcmontana.com",
+          "seendate": "2026-07-30T22:15:00Z",
+          "image": "https://nbcmontana.com/resources/media2/16x9/5530/1320/0x288/90/f836e3d3-981d-4a79-8585-c953a45b7b03-GettyImages2288139302.jpg"
+        }
+      ]
+    },
+    "title": "Fauci silence in Senate hearing fuels new political fight",
+    "summary": "2026-07-31 abc6onyourside.com: Fauci silence in Senate hearing fuels new political fight\n2026-07-30 ktul.com: Fauci silence in Senate hearing fuels new political fight\n2026-07-30 wset.com: Fauci silence in Senate hearing fuels new political fight\n2026-07-30 turnto10.com: Fauci silence in Senate hearing fuels new political fight\n2026-07-30 cbs12.com: Fauci silence in Senate hearing fuels new political fight\n2026-07-30 wcti12.com: Fauci silence in Senate hearing fuels new political fight",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_congress-ever-faces",
+    "source": "news",
+    "ts": 1785470226539,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.844,
       "articles": [
         {
           "title": "Oldest Congress ever faces fresh scrutiny over their health",
@@ -36159,12 +36265,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_birthright-citizenship-deadline",
     "source": "news",
-    "ts": 1785450725094,
+    "ts": 1785470226538,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.754,
+      "salience": 0.72,
       "articles": [
         {
           "title": "Deadline passes for Supreme Court to reconsider birthright citizenship",
@@ -36244,12 +36350,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_against-campaign-collins",
     "source": "news",
-    "ts": 1785450725094,
+    "ts": 1785470226539,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.667,
+      "salience": 0.633,
       "articles": [
         {
           "title": "Democrats reset campaign against Collins with new nominee",
@@ -36348,64 +36454,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_fauci-fight-fuels",
-    "source": "news",
-    "ts": 1785450725094,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.665,
-      "articles": [
-        {
-          "title": "Fauci silence in Senate hearing fuels new political fight",
-          "url": "https://upnorthlive.com/news/nation-world/faucis-silence-in-senate-hearing-fuels-new-political-fight-republican-lawmakers-white-house-nih-virus",
-          "domain": "upnorthlive.com",
-          "seendate": "2026-07-30T21:45:00Z",
-          "image": "https://upnorthlive.com/resources/media2/16x9/5530/1320/0x288/90/f836e3d3-981d-4a79-8585-c953a45b7b03-GettyImages2288139302.jpg"
-        },
-        {
-          "title": "Fauci silence in Senate hearing fuels new political fight",
-          "url": "https://kval.com/news/nation-world/faucis-silence-in-senate-hearing-fuels-new-political-fight-republican-lawmakers-white-house-nih-virus",
-          "domain": "kval.com",
-          "seendate": "2026-07-30T21:45:00Z",
-          "image": "https://kval.com/resources/media2/16x9/5530/1320/0x288/90/f836e3d3-981d-4a79-8585-c953a45b7b03-GettyImages2288139302.jpg"
-        },
-        {
-          "title": "Fauci silence in Senate hearing fuels new political fight",
-          "url": "https://cnycentral.com/news/nation-world/faucis-silence-in-senate-hearing-fuels-new-political-fight-republican-lawmakers-white-house-nih-virus",
-          "domain": "cnycentral.com",
-          "seendate": "2026-07-30T21:30:00Z",
-          "image": "https://cnycentral.com/resources/media2/16x9/5530/1320/0x288/90/f836e3d3-981d-4a79-8585-c953a45b7b03-GettyImages2288139302.jpg"
-        },
-        {
-          "title": "Fauci silence in Senate hearing fuels new political fight",
-          "url": "https://katu.com/news/nation-world/faucis-silence-in-senate-hearing-fuels-new-political-fight-republican-lawmakers-white-house-nih-virus",
-          "domain": "katu.com",
-          "seendate": "2026-07-30T21:00:00Z",
-          "image": "https://katu.com/resources/media2/16x9/5530/1320/0x288/90/f836e3d3-981d-4a79-8585-c953a45b7b03-GettyImages2288139302.jpg"
-        }
-      ]
-    },
-    "title": "Fauci silence in Senate hearing fuels new political fight",
-    "summary": "2026-07-30 upnorthlive.com: Fauci silence in Senate hearing fuels new political fight\n2026-07-30 kval.com: Fauci silence in Senate hearing fuels new political fight\n2026-07-30 cnycentral.com: Fauci silence in Senate hearing fuels new political fight\n2026-07-30 katu.com: Fauci silence in Senate hearing fuels new political fight",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_expires-haitian-immigrants",
     "source": "news",
-    "ts": 1785450725094,
+    "ts": 1785470226539,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.62,
+      "salience": 0.587,
       "articles": [
         {
           "title": "TPS expires for Haitian and Syrian immigrants",
@@ -36464,12 +36520,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_american-drawing-eulogized",
     "source": "news",
-    "ts": 1785450725094,
+    "ts": 1785470226538,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.587,
+      "salience": 0.553,
       "articles": [
         {
           "title": "Lindsey Graham eulogized as an  American original  at services drawing world leaders in Washington",
@@ -36542,12 +36598,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballot-block-court",
     "source": "news",
-    "ts": 1785450725095,
+    "ts": 1785470226540,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.577,
+      "salience": 0.543,
       "articles": [
         {
           "title": "Court panel declines to block Trump mail ballot order , but its status for midterms remains unclear",
@@ -36620,12 +36676,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_clayton-confirms-director",
     "source": "news",
-    "ts": 1785450725094,
+    "ts": 1785470226540,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.489,
+      "salience": 0.455,
       "articles": [
         {
           "title": "Senate confirms Jay Clayton as new director of intelligence",
@@ -36677,12 +36733,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_advances-bill-russia",
     "source": "news",
-    "ts": 1785450725094,
+    "ts": 1785470226540,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.395,
+      "salience": 0.361,
       "articles": [
         {
           "title": "Senate advances Russia sanctions bill as Zelenskyy watches",
@@ -36725,64 +36781,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_asks-court-mail",
-    "source": "news",
-    "ts": 1785450725094,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.34,
-      "articles": [
-        {
-          "title": "Trump Admin Asks Supreme Court To Rule On Mail - In Ballots EO",
-          "url": "https://newsone.com/6867517/trump-admin-supreme-court-mail-in-ballots/",
-          "domain": "newsone.com",
-          "seendate": "2026-07-28T17:45:00Z",
-          "image": "https://newsone.com/wp-content/uploads/sites/22/2026/07/17852575708171.jpg?quality=80&strip=all&crop=0,0,100,683px"
-        },
-        {
-          "title": "Trump administration asks Supreme Court to allow new limits on mail ballots",
-          "url": "https://www.theoaklandpress.com/2026/07/27/trump-administration-asks-supreme-court-to-allow-new-limits-on-mail-ballots/",
-          "domain": "theoaklandpress.com",
-          "seendate": "2026-07-28T03:00:00Z",
-          "image": "https://www.theoaklandpress.com/wp-content/uploads/2026/06/Supreme_Court_273_5_d12ca8.jpg"
-        },
-        {
-          "title": "Trump administration asks Supreme Court to allow new limits on mail ballots",
-          "url": "https://www.macombdaily.com/2026/07/27/trump-administration-asks-supreme-court-to-allow-new-limits-on-mail-ballots/",
-          "domain": "macombdaily.com",
-          "seendate": "2026-07-28T00:30:00Z",
-          "image": "https://www.macombdaily.com/wp-content/uploads/2026/07/Supreme_Court_273_5_d12ca8.jpg"
-        },
-        {
-          "title": "Trump Administration Asks Supreme Court To Allow Mail - In Voting Order Before Midterms",
-          "url": "https://www.hngn.com/articles/272391/20260727/trump-administration-asks-supreme-court-allow-mail-voting-order-before-midterms.htm",
-          "domain": "hngn.com",
-          "seendate": "2026-07-27T22:45:00Z",
-          "image": "https://d.hngn.com/en/full/304087/file-us-supreme-court-building-exterior.jpg"
-        }
-      ]
-    },
-    "title": "Trump administration asks Supreme Court to allow new limits on mail ballots",
-    "summary": "2026-07-28 newsone.com: Trump Admin Asks Supreme Court To Rule On Mail - In Ballots EO\n2026-07-28 theoaklandpress.com: Trump administration asks Supreme Court to allow new limits on mail ballots\n2026-07-28 macombdaily.com: Trump administration asks Supreme Court to allow new limits on mail ballots\n2026-07-27 hngn.com: Trump Administration Asks Supreme Court To Allow Mail - In Voting Order Before Midterms",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_day-graham-lindsey",
     "source": "news",
-    "ts": 1785450725094,
+    "ts": 1785470226538,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.332,
+      "salience": 0.298,
       "articles": [
         {
           "title": "In a day of tributes , Lindsey Graham is remembered as a tireless Washington mainstay",
@@ -36820,12 +36826,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_funeral-graham-honor",
     "source": "news",
-    "ts": 1785450725094,
+    "ts": 1785470226538,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.302,
+      "salience": 0.268,
       "articles": [
         {
           "title": "Lindsey Graham funeral : Trump , world leaders honor late senator – NBC 6 South Florida",
