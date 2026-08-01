@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-01T16:26:55.085Z · 40 legislative + 8 news (GDELT, 3d)
+// 2026-08-01T19:40:03.988Z · 40 legislative + 8 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1785601586396,
+    "ts": 1785613159889,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.797,
+      "salience": 0.796,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,7 +259,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1785601586396,
+    "ts": 1785613159889,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
@@ -532,7 +532,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1785601586395,
+    "ts": 1785613159888,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
@@ -2843,7 +2843,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1785601586396,
+    "ts": 1785613159889,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
@@ -3254,13 +3254,287 @@ window.PRISM_CANDIDATES = [
     "mts": 1784784262612
   },
   {
+    "cid": "cand_leg_sjres-119-196",
+    "source": "legislative",
+    "ts": 1785613159889,
+    "raw": {
+      "method": "legislative_rollcall_v1",
+      "billId": "sjres-119-196",
+      "salience": 0.687,
+      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
+      "votes": [
+        {
+          "voteId": "s-119-2-190",
+          "chamber": "senate",
+          "date": "June 24, 2026,  09:16 PM",
+          "question": "On the Motion to Proceed",
+          "result": "Motion to Proceed Rejected",
+          "margin": -0.072,
+          "totals": {
+            "yea": 45,
+            "nay": 52,
+            "present": 0,
+            "notVoting": 3
+          },
+          "party": {
+            "D": {
+              "yea": 43,
+              "nay": 0
+            },
+            "R": {
+              "yea": 0,
+              "nay": 52
+            },
+            "I": {
+              "yea": 2,
+              "nay": 0
+            }
+          },
+          "positions": {
+            "yea": [
+              "A000382",
+              "B001230",
+              "B001277",
+              "B001303",
+              "B001288",
+              "C000127",
+              "C001088",
+              "C001113",
+              "D000622",
+              "D000563",
+              "F000479",
+              "G000574",
+              "G000555",
+              "H001076",
+              "H001046",
+              "H000273",
+              "H001042",
+              "K000384",
+              "K000377",
+              "K000394",
+              "K000383",
+              "K000367",
+              "M000133",
+              "M001176",
+              "M001169",
+              "M001111",
+              "O000174",
+              "P000145",
+              "P000595",
+              "R000122",
+              "R000608",
+              "S000033",
+              "S001194",
+              "S001150",
+              "S000148",
+              "S001208",
+              "S001203",
+              "V000128",
+              "W000805",
+              "W000790",
+              "W000817",
+              "W000800",
+              "W000802",
+              "W000779"
+            ],
+            "nay": [
+              "B001299",
+              "B001261",
+              "B001243",
+              "B001236",
+              "B001319",
+              "B001305",
+              "C001047",
+              "C001075",
+              "C001035",
+              "C001056",
+              "C001095",
+              "C001096",
+              "C000880",
+              "C001098",
+              "C001114",
+              "D000618",
+              "E000295",
+              "F000463",
+              "G000359",
+              "G000386",
+              "H000601",
+              "H001089",
+              "H001061",
+              "H001104",
+              "H001079",
+              "J000293",
+              "J000312",
+              "K000393",
+              "L000575",
+              "L000577",
+              "L000571",
+              "M001198",
+              "M001243",
+              "M001244",
+              "M000934",
+              "M001242",
+              "M001153",
+              "P000603",
+              "R000618",
+              "R000584",
+              "R000605",
+              "S001227",
+              "S001217",
+              "S001184",
+              "S001232",
+              "S001198",
+              "T000250",
+              "T000476",
+              "T000278",
+              "W000437",
+              "Y000064"
+            ],
+            "present": [],
+            "notVoting": [
+              "B001267",
+              "M000355",
+              "S001181"
+            ]
+          }
+        }
+      ]
+    },
+    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
+    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
+    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Disapprove rule",
+        "neg": "Uphold rule"
+      },
+      "y": {
+        "pos": "Executive overreach",
+        "neg": "Agency discretion legitimate"
+      }
+    },
+    "prevalentAxisGuess": "x",
+    "members": [
+      "A000382",
+      "B001230",
+      "B001277",
+      "B001303",
+      "B001288",
+      "C000127",
+      "C001088",
+      "C001113",
+      "D000622",
+      "D000563",
+      "F000479",
+      "G000574",
+      "G000555",
+      "H001076",
+      "H001046",
+      "H000273",
+      "H001042",
+      "K000384",
+      "K000377",
+      "K000394",
+      "K000383",
+      "K000367",
+      "M000133",
+      "M001176",
+      "M001169",
+      "M001111",
+      "O000174",
+      "P000145",
+      "P000595",
+      "R000122",
+      "R000608",
+      "S000033",
+      "S001194",
+      "S001150",
+      "S000148",
+      "S001208",
+      "S001203",
+      "V000128",
+      "W000805",
+      "W000790",
+      "W000817",
+      "W000800",
+      "W000802",
+      "W000779",
+      "B001299",
+      "B001261",
+      "B001243",
+      "B001236",
+      "B001319",
+      "B001305",
+      "C001047",
+      "C001075",
+      "C001035",
+      "C001056",
+      "C001095",
+      "C001096",
+      "C000880",
+      "C001098",
+      "C001114",
+      "D000618",
+      "E000295",
+      "F000463",
+      "G000359",
+      "G000386",
+      "H000601",
+      "H001089",
+      "H001061",
+      "H001104",
+      "H001079",
+      "J000293",
+      "J000312",
+      "K000393",
+      "L000575",
+      "L000577",
+      "L000571",
+      "M001198",
+      "M001243",
+      "M001244",
+      "M000934",
+      "M001242",
+      "M001153",
+      "P000603",
+      "R000618",
+      "R000584",
+      "R000605",
+      "S001227",
+      "S001217",
+      "S001184",
+      "S001232",
+      "S001198",
+      "T000250",
+      "T000476",
+      "T000278",
+      "W000437",
+      "Y000064"
+    ],
+    "bills": [
+      "sjres-119-196"
+    ],
+    "fitness": {
+      "score": 0.3,
+      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:28:30.038Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "s-119-2-190",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297586
+  },
+  {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1785601586396,
+    "ts": 1785613159889,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.687,
+      "salience": 0.686,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4656,287 +4930,13 @@ window.PRISM_CANDIDATES = [
     "mts": 1784044297586
   },
   {
-    "cid": "cand_leg_sjres-119-196",
-    "source": "legislative",
-    "ts": 1785601586396,
-    "raw": {
-      "method": "legislative_rollcall_v1",
-      "billId": "sjres-119-196",
-      "salience": 0.687,
-      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
-      "votes": [
-        {
-          "voteId": "s-119-2-190",
-          "chamber": "senate",
-          "date": "June 24, 2026,  09:16 PM",
-          "question": "On the Motion to Proceed",
-          "result": "Motion to Proceed Rejected",
-          "margin": -0.072,
-          "totals": {
-            "yea": 45,
-            "nay": 52,
-            "present": 0,
-            "notVoting": 3
-          },
-          "party": {
-            "D": {
-              "yea": 43,
-              "nay": 0
-            },
-            "R": {
-              "yea": 0,
-              "nay": 52
-            },
-            "I": {
-              "yea": 2,
-              "nay": 0
-            }
-          },
-          "positions": {
-            "yea": [
-              "A000382",
-              "B001230",
-              "B001277",
-              "B001303",
-              "B001288",
-              "C000127",
-              "C001088",
-              "C001113",
-              "D000622",
-              "D000563",
-              "F000479",
-              "G000574",
-              "G000555",
-              "H001076",
-              "H001046",
-              "H000273",
-              "H001042",
-              "K000384",
-              "K000377",
-              "K000394",
-              "K000383",
-              "K000367",
-              "M000133",
-              "M001176",
-              "M001169",
-              "M001111",
-              "O000174",
-              "P000145",
-              "P000595",
-              "R000122",
-              "R000608",
-              "S000033",
-              "S001194",
-              "S001150",
-              "S000148",
-              "S001208",
-              "S001203",
-              "V000128",
-              "W000805",
-              "W000790",
-              "W000817",
-              "W000800",
-              "W000802",
-              "W000779"
-            ],
-            "nay": [
-              "B001299",
-              "B001261",
-              "B001243",
-              "B001236",
-              "B001319",
-              "B001305",
-              "C001047",
-              "C001075",
-              "C001035",
-              "C001056",
-              "C001095",
-              "C001096",
-              "C000880",
-              "C001098",
-              "C001114",
-              "D000618",
-              "E000295",
-              "F000463",
-              "G000359",
-              "G000386",
-              "H000601",
-              "H001089",
-              "H001061",
-              "H001104",
-              "H001079",
-              "J000293",
-              "J000312",
-              "K000393",
-              "L000575",
-              "L000577",
-              "L000571",
-              "M001198",
-              "M001243",
-              "M001244",
-              "M000934",
-              "M001242",
-              "M001153",
-              "P000603",
-              "R000618",
-              "R000584",
-              "R000605",
-              "S001227",
-              "S001217",
-              "S001184",
-              "S001232",
-              "S001198",
-              "T000250",
-              "T000476",
-              "T000278",
-              "W000437",
-              "Y000064"
-            ],
-            "present": [],
-            "notVoting": [
-              "B001267",
-              "M000355",
-              "S001181"
-            ]
-          }
-        }
-      ]
-    },
-    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
-    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
-    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
-    "suggestedAxes": {
-      "x": {
-        "pos": "Disapprove rule",
-        "neg": "Uphold rule"
-      },
-      "y": {
-        "pos": "Executive overreach",
-        "neg": "Agency discretion legitimate"
-      }
-    },
-    "prevalentAxisGuess": "x",
-    "members": [
-      "A000382",
-      "B001230",
-      "B001277",
-      "B001303",
-      "B001288",
-      "C000127",
-      "C001088",
-      "C001113",
-      "D000622",
-      "D000563",
-      "F000479",
-      "G000574",
-      "G000555",
-      "H001076",
-      "H001046",
-      "H000273",
-      "H001042",
-      "K000384",
-      "K000377",
-      "K000394",
-      "K000383",
-      "K000367",
-      "M000133",
-      "M001176",
-      "M001169",
-      "M001111",
-      "O000174",
-      "P000145",
-      "P000595",
-      "R000122",
-      "R000608",
-      "S000033",
-      "S001194",
-      "S001150",
-      "S000148",
-      "S001208",
-      "S001203",
-      "V000128",
-      "W000805",
-      "W000790",
-      "W000817",
-      "W000800",
-      "W000802",
-      "W000779",
-      "B001299",
-      "B001261",
-      "B001243",
-      "B001236",
-      "B001319",
-      "B001305",
-      "C001047",
-      "C001075",
-      "C001035",
-      "C001056",
-      "C001095",
-      "C001096",
-      "C000880",
-      "C001098",
-      "C001114",
-      "D000618",
-      "E000295",
-      "F000463",
-      "G000359",
-      "G000386",
-      "H000601",
-      "H001089",
-      "H001061",
-      "H001104",
-      "H001079",
-      "J000293",
-      "J000312",
-      "K000393",
-      "L000575",
-      "L000577",
-      "L000571",
-      "M001198",
-      "M001243",
-      "M001244",
-      "M000934",
-      "M001242",
-      "M001153",
-      "P000603",
-      "R000618",
-      "R000584",
-      "R000605",
-      "S001227",
-      "S001217",
-      "S001184",
-      "S001232",
-      "S001198",
-      "T000250",
-      "T000476",
-      "T000278",
-      "W000437",
-      "Y000064"
-    ],
-    "bills": [
-      "sjres-119-196"
-    ],
-    "fitness": {
-      "score": 0.3,
-      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
-      "method": "m2_constitutive_v1",
-      "ts": "2026-07-14T04:28:30.038Z"
-    },
-    "status": "new",
-    "voteMap": {
-      "voteId": "s-119-2-190",
-      "yeaPole": "pos"
-    },
-    "mts": 1784044297586
-  },
-  {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1785601586396,
+    "ts": 1785613159889,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.673,
+      "salience": 0.672,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5203,11 +5203,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1785601586395,
+    "ts": 1785613159888,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.662,
+      "salience": 0.661,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6605,11 +6605,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1785601586395,
+    "ts": 1785613159888,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.657,
+      "salience": 0.656,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -8007,11 +8007,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1785601586395,
+    "ts": 1785613159889,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.61,
+      "salience": 0.609,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -8941,11 +8941,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1785601586396,
+    "ts": 1785613159889,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.609,
+      "salience": 0.608,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -9217,11 +9217,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1041",
     "source": "legislative",
-    "ts": 1785601586395,
+    "ts": 1785613159888,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1041",
-      "salience": 0.6,
+      "salience": 0.599,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1041",
       "votes": [
         {
@@ -10614,11 +10614,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2616",
     "source": "legislative",
-    "ts": 1785601586395,
+    "ts": 1785613159888,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2616",
-      "salience": 0.597,
+      "salience": 0.596,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2616",
       "votes": [
         {
@@ -12008,7 +12008,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1785601586395,
+    "ts": 1785613159888,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
@@ -12940,11 +12940,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1785601586396,
+    "ts": 1785613159889,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.593,
+      "salience": 0.592,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -13216,7 +13216,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1785601586396,
+    "ts": 1785613159889,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
@@ -14149,7 +14149,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1785601586396,
+    "ts": 1785613159889,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
@@ -14540,11 +14540,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1785601586396,
+    "ts": 1785613159889,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.571,
+      "salience": 0.57,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -15473,11 +15473,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6260",
     "source": "legislative",
-    "ts": 1785601586394,
+    "ts": 1785613159887,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6260",
-      "salience": 0.568,
+      "salience": 0.567,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6260",
       "votes": [
         {
@@ -16875,11 +16875,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8365",
     "source": "legislative",
-    "ts": 1785601586394,
+    "ts": 1785613159887,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8365",
-      "salience": 0.568,
+      "salience": 0.567,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8365",
       "votes": [
         {
@@ -18277,7 +18277,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1346",
     "source": "legislative",
-    "ts": 1785601586394,
+    "ts": 1785613159887,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1346",
@@ -19677,11 +19677,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-141",
     "source": "legislative",
-    "ts": 1785601586396,
+    "ts": 1785613159889,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-141",
-      "salience": 0.532,
+      "salience": 0.531,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/141",
       "votes": [
         {
@@ -19953,11 +19953,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-132",
     "source": "legislative",
-    "ts": 1785601586396,
+    "ts": 1785613159889,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-132",
-      "salience": 0.514,
+      "salience": 0.513,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/132",
       "votes": [
         {
@@ -20229,7 +20229,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-130",
     "source": "legislative",
-    "ts": 1785601586396,
+    "ts": 1785613159889,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-130",
@@ -20505,11 +20505,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6047",
     "source": "legislative",
-    "ts": 1785601586395,
+    "ts": 1785613159888,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6047",
-      "salience": 0.504,
+      "salience": 0.503,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6047",
       "votes": [
         {
@@ -21430,11 +21430,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1785601586396,
+    "ts": 1785613159889,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.452,
+      "salience": 0.451,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -22833,11 +22833,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1785601586396,
+    "ts": 1785613159889,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.395,
+      "salience": 0.394,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -23726,11 +23726,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1785601586396,
+    "ts": 1785613159889,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.388,
+      "salience": 0.387,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -24641,7 +24641,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1785601586396,
+    "ts": 1785613159889,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
@@ -25529,11 +25529,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1785601586396,
+    "ts": 1785613159889,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.377,
+      "salience": 0.376,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -26450,7 +26450,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1785601586396,
+    "ts": 1785613159889,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
@@ -27368,7 +27368,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5625",
     "source": "legislative",
-    "ts": 1785601586394,
+    "ts": 1785613159887,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5625",
@@ -28303,7 +28303,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1785601586396,
+    "ts": 1785613159889,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
@@ -29202,7 +29202,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8469",
     "source": "legislative",
-    "ts": 1785601586394,
+    "ts": 1785613159887,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8469",
@@ -30604,11 +30604,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1785601586395,
+    "ts": 1785613159888,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.277,
+      "salience": 0.276,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -31538,11 +31538,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2853",
     "source": "legislative",
-    "ts": 1785601586394,
+    "ts": 1785613159887,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2853",
-      "salience": 0.207,
+      "salience": 0.206,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2853",
       "votes": [
         {
@@ -32456,7 +32456,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1785601586395,
+    "ts": 1785613159888,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
@@ -33385,7 +33385,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1785601586395,
+    "ts": 1785613159888,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
@@ -34294,7 +34294,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1785601586395,
+    "ts": 1785613159888,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
@@ -35169,7 +35169,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1785601586395,
+    "ts": 1785613159888,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
@@ -36051,14 +36051,99 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_fauci-fight-fuels",
+    "cid": "cand_news_ahead-attorney-fund",
     "source": "news",
-    "ts": 1785601615075,
+    "ts": 1785613203980,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.749,
+      "salience": 0.941,
+      "articles": [
+        {
+          "title": "Trump threat to push ahead on settlement fund injects new uncertainty into attorney general talks – Capital Gazette",
+          "url": "https://www.capitalgazette.com/2026/08/01/trumps-threat-to-push-ahead-on-settlement-fund-injects-new-uncertainty-into-attorney-general-talks/",
+          "domain": "capitalgazette.com",
+          "seendate": "2026-08-01T19:00:00Z",
+          "image": "https://www.capitalgazette.com/wp-content/uploads/2026/08/Trump_145_5-1.jpg"
+        },
+        {
+          "title": "Trump threat to push ahead on settlement fund injects new uncertainty into attorney general talks",
+          "url": "https://www.durangoherald.com/articles/associated-press/trumps-threat-to-push-ahead-on-settlement-fund-injects-new-uncertainty-into-attorney-general-talk/",
+          "domain": "durangoherald.com",
+          "seendate": "2026-08-01T17:30:00Z",
+          "image": "https://www.durangoherald.com/wp-content/uploads/2026/08/ebd99011-d464-5f28-ba17-c5e9e8135806.jpg"
+        },
+        {
+          "title": "Trump threat to push ahead on settlement fund injects new uncertainty into attorney general talks – Sun Sentinel",
+          "url": "https://www.sun-sentinel.com/2026/08/01/trumps-threat-to-push-ahead-on-settlement-fund-injects-new-uncertainty-into-attorney-general-talks/",
+          "domain": "sun-sentinel.com",
+          "seendate": "2026-08-01T16:15:00Z",
+          "image": "https://www.sun-sentinel.com/wp-content/uploads/2026/08/Trump_145_5-1.jpg"
+        },
+        {
+          "title": "Trump threat to push ahead on settlement fund injects new uncertainty into attorney general talks – The Virginian - Pilot",
+          "url": "https://www.pilotonline.com/2026/08/01/trumps-threat-settlement-fund-attorney-general/",
+          "domain": "pilotonline.com",
+          "seendate": "2026-08-01T16:15:00Z",
+          "image": "https://www.pilotonline.com/wp-content/uploads/2026/08/Trump_145_5-1.jpg"
+        },
+        {
+          "title": "Trump threat to push ahead on settlement fund injects new uncertainty into attorney general talks",
+          "url": "https://www.click2houston.com/news/politics/2026/08/01/trumps-threat-to-push-ahead-on-settlement-fund-injects-new-uncertainty-into-attorney-general-talks/",
+          "domain": "click2houston.com",
+          "seendate": "2026-08-01T15:30:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/RRVMNCUOPNAFFP7K7XLAJ53ETI.jpg?_a=DATAg1kSZAA0"
+        },
+        {
+          "title": "Trump threat to push ahead on settlement fund injects new uncertainty into attorney general talks",
+          "url": "https://www.news4jax.com/news/politics/2026/08/01/trumps-threat-to-push-ahead-on-settlement-fund-injects-new-uncertainty-into-attorney-general-talks/",
+          "domain": "news4jax.com",
+          "seendate": "2026-08-01T15:00:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/RRVMNCUOPNAFFP7K7XLAJ53ETI.jpg?_a=DATAg1kSZAA0"
+        },
+        {
+          "title": "Trump threat to push ahead on settlement fund injects new uncertainty into attorney general talks – Daily Press",
+          "url": "https://www.dailypress.com/2026/08/01/trumps-threat-settlement-fund-attorney-general/",
+          "domain": "dailypress.com",
+          "seendate": "2026-08-01T14:45:00Z",
+          "image": "https://www.dailypress.com/wp-content/uploads/2026/08/Trump_145_5-1-1.jpg"
+        },
+        {
+          "title": "Trump threat to push ahead on settlement fund injects new uncertainty into attorney general talks",
+          "url": "https://www.wsls.com/news/politics/2026/08/01/trumps-threat-to-push-ahead-on-settlement-fund-injects-new-uncertainty-into-attorney-general-talks/",
+          "domain": "wsls.com",
+          "seendate": "2026-08-01T14:30:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/RRVMNCUOPNAFFP7K7XLAJ53ETI.jpg?_a=DATAg1kSZAA0"
+        },
+        {
+          "title": "Trump threat to push ahead on settlement fund injects new uncertainty into attorney general talks - Las Vegas Sun News",
+          "url": "https://lasvegassun.com/news/2026/aug/01/trumps-threat-to-push-ahead-on-settlement-fund-inj/",
+          "domain": "lasvegassun.com",
+          "seendate": "2026-08-01T14:15:00Z",
+          "image": null
+        }
+      ]
+    },
+    "title": "Trump threat to push ahead on settlement fund injects new uncertainty into attorney general talks",
+    "summary": "2026-08-01 capitalgazette.com: Trump threat to push ahead on settlement fund injects new uncertainty into attorney general talks – Capital Gazette\n2026-08-01 durangoherald.com: Trump threat to push ahead on settlement fund injects new uncertainty into attorney general talks\n2026-08-01 sun-sentinel.com: Trump threat to push ahead on settlement fund injects new uncertainty into attorney general talks – Sun Sentinel\n2026-08-01 pilotonline.com: Trump threat to push ahead on settlement fund injects new uncertainty into attorney general talks – The Virginian - Pilot\n2026-08-01 click2houston.com: Trump threat to push ahead on settlement fund injects new uncertainty into attorney general talks\n2026-08-01 news4jax.com: Trump threat to push ahead on settlement fund injects new uncertainty into attorney general talks",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_fauci-fight-fuels",
+    "source": "news",
+    "ts": 1785613203979,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.729,
       "articles": [
         {
           "title": "Fauci silence in Senate hearing fuels new political fight",
@@ -36159,12 +36244,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ask-authorities-court",
     "source": "news",
-    "ts": 1785601615076,
+    "ts": 1785613203980,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.728,
+      "salience": 0.708,
       "articles": [
         {
           "title": "Palestinian authorities ask Supreme Court to halt $656M judgment pending appeal",
@@ -36256,71 +36341,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_ahead-attorney-fund",
-    "source": "news",
-    "ts": 1785601615076,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.719,
-      "articles": [
-        {
-          "title": "Trump threat to push ahead on settlement fund injects new uncertainty into attorney general talks",
-          "url": "https://www.click2houston.com/news/politics/2026/08/01/trumps-threat-to-push-ahead-on-settlement-fund-injects-new-uncertainty-into-attorney-general-talks/",
-          "domain": "click2houston.com",
-          "seendate": "2026-08-01T15:30:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/RRVMNCUOPNAFFP7K7XLAJ53ETI.jpg?_a=DATAg1kSZAA0"
-        },
-        {
-          "title": "Trump threat to push ahead on settlement fund injects new uncertainty into attorney general talks",
-          "url": "https://www.news4jax.com/news/politics/2026/08/01/trumps-threat-to-push-ahead-on-settlement-fund-injects-new-uncertainty-into-attorney-general-talks/",
-          "domain": "news4jax.com",
-          "seendate": "2026-08-01T15:00:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/RRVMNCUOPNAFFP7K7XLAJ53ETI.jpg?_a=DATAg1kSZAA0"
-        },
-        {
-          "title": "Trump threat to push ahead on settlement fund injects new uncertainty into attorney general talks – Daily Press",
-          "url": "https://www.dailypress.com/2026/08/01/trumps-threat-settlement-fund-attorney-general/",
-          "domain": "dailypress.com",
-          "seendate": "2026-08-01T14:45:00Z",
-          "image": "https://www.dailypress.com/wp-content/uploads/2026/08/Trump_145_5-1-1.jpg"
-        },
-        {
-          "title": "Trump threat to push ahead on settlement fund injects new uncertainty into attorney general talks",
-          "url": "https://www.wsls.com/news/politics/2026/08/01/trumps-threat-to-push-ahead-on-settlement-fund-injects-new-uncertainty-into-attorney-general-talks/",
-          "domain": "wsls.com",
-          "seendate": "2026-08-01T14:30:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/RRVMNCUOPNAFFP7K7XLAJ53ETI.jpg?_a=DATAg1kSZAA0"
-        },
-        {
-          "title": "Trump threat to push ahead on settlement fund injects new uncertainty into attorney general talks - Las Vegas Sun News",
-          "url": "https://lasvegassun.com/news/2026/aug/01/trumps-threat-to-push-ahead-on-settlement-fund-inj/",
-          "domain": "lasvegassun.com",
-          "seendate": "2026-08-01T14:15:00Z",
-          "image": null
-        }
-      ]
-    },
-    "title": "Trump threat to push ahead on settlement fund injects new uncertainty into attorney general talks",
-    "summary": "2026-08-01 click2houston.com: Trump threat to push ahead on settlement fund injects new uncertainty into attorney general talks\n2026-08-01 news4jax.com: Trump threat to push ahead on settlement fund injects new uncertainty into attorney general talks\n2026-08-01 dailypress.com: Trump threat to push ahead on settlement fund injects new uncertainty into attorney general talks – Daily Press\n2026-08-01 wsls.com: Trump threat to push ahead on settlement fund injects new uncertainty into attorney general talks\n2026-08-01 lasvegassun.com: Trump threat to push ahead on settlement fund injects new uncertainty into attorney general talks - Las Vegas Sun News",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_alan-amendment-caution",
     "source": "news",
-    "ts": 1785601615076,
+    "ts": 1785613203980,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.625,
+      "salience": 0.605,
       "articles": [
         {
           "title": "Alan Dershowitz says Fauci Fifth Amendment refusals signal legal caution , not guilt",
@@ -36421,12 +36449,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_congress-ever-faces",
     "source": "news",
-    "ts": 1785601615076,
+    "ts": 1785613203979,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.616,
+      "salience": 0.596,
       "articles": [
         {
           "title": "Oldest Congress ever faces fresh scrutiny over their health",
@@ -36525,92 +36553,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_expires-haitian-immigrants",
-    "source": "news",
-    "ts": 1785601615076,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.468,
-      "articles": [
-        {
-          "title": "TPS expires for Haitian and Syrian immigrants",
-          "url": "https://www.koat.com/article/temporary-protected-status-haiti-syria-expires/73296779",
-          "domain": "koat.com",
-          "seendate": "2026-07-29T21:00:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/286e7ff8-9982-44e2-9d84-223b59314c36.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0743xh"
-        },
-        {
-          "title": "TPS expires for Haitian and Syrian immigrants",
-          "url": "https://www.wlwt.com/article/temporary-protected-status-haiti-syria-expires/73296779",
-          "domain": "wlwt.com",
-          "seendate": "2026-07-29T20:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/286e7ff8-9982-44e2-9d84-223b59314c36.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0743xh"
-        },
-        {
-          "title": "TPS expires for Haitian and Syrian immigrants",
-          "url": "https://www.koco.com/article/temporary-protected-status-haiti-syria-expires/73296779",
-          "domain": "koco.com",
-          "seendate": "2026-07-29T20:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/286e7ff8-9982-44e2-9d84-223b59314c36.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0743xh"
-        },
-        {
-          "title": "TPS expires for Haitian and Syrian immigrants",
-          "url": "https://www.wbaltv.com/article/temporary-protected-status-haiti-syria-expires/73296779",
-          "domain": "wbaltv.com",
-          "seendate": "2026-07-29T17:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/286e7ff8-9982-44e2-9d84-223b59314c36.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0743xh"
-        },
-        {
-          "title": "TPS expires for Haitian and Syrian immigrants",
-          "url": "https://www.kcra.com/article/temporary-protected-status-haiti-syria-expires/73296779",
-          "domain": "kcra.com",
-          "seendate": "2026-07-29T17:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/286e7ff8-9982-44e2-9d84-223b59314c36.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0743xh"
-        },
-        {
-          "title": "TPS expires for Haitian and Syrian immigrants",
-          "url": "https://www.wmtw.com/article/temporary-protected-status-haiti-syria-expires/73296779",
-          "domain": "wmtw.com",
-          "seendate": "2026-07-29T17:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/286e7ff8-9982-44e2-9d84-223b59314c36.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0743xh"
-        },
-        {
-          "title": "TPS expires for Haitian and Syrian immigrants",
-          "url": "https://www.wesh.com/article/temporary-protected-status-haiti-syria-expires/73296779",
-          "domain": "wesh.com",
-          "seendate": "2026-07-29T17:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/286e7ff8-9982-44e2-9d84-223b59314c36.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0743xh"
-        },
-        {
-          "title": "TPS expires for Haitian and Syrian immigrants",
-          "url": "https://www.kcci.com/article/temporary-protected-status-haiti-syria-expires/73296779",
-          "domain": "kcci.com",
-          "seendate": "2026-07-29T17:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/286e7ff8-9982-44e2-9d84-223b59314c36.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0743xh"
-        }
-      ]
-    },
-    "title": "TPS expires for Haitian and Syrian immigrants",
-    "summary": "2026-07-29 koat.com: TPS expires for Haitian and Syrian immigrants\n2026-07-29 wlwt.com: TPS expires for Haitian and Syrian immigrants\n2026-07-29 koco.com: TPS expires for Haitian and Syrian immigrants\n2026-07-29 wbaltv.com: TPS expires for Haitian and Syrian immigrants\n2026-07-29 kcra.com: TPS expires for Haitian and Syrian immigrants\n2026-07-29 wmtw.com: TPS expires for Haitian and Syrian immigrants",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_brian-commentator-conservative",
     "source": "news",
-    "ts": 1785601615076,
+    "ts": 1785613203980,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.306,
+      "salience": 0.396,
       "articles": [
         {
           "title": "Former Rep . Marjorie Taylor Greene marries conservative commentator Brian Glenn",
@@ -36632,11 +36582,25 @@ window.PRISM_CANDIDATES = [
           "domain": "fox17online.com",
           "seendate": "2026-07-30T14:00:00Z",
           "image": "https://ewscripps.brightspotcdn.com/41/1c/276fe0be4cf480b6d9e2af80a1cc/ap24070638946593.jpg"
+        },
+        {
+          "title": "Former Rep . Marjorie Taylor Greene marries conservative commentator Brian Glenn",
+          "url": "https://www.turnto23.com/us-news/former-rep-marjorie-taylor-greene-marries-conservative-commentator-brian-glenn",
+          "domain": "turnto23.com",
+          "seendate": "2026-07-30T13:45:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/41/1c/276fe0be4cf480b6d9e2af80a1cc/ap24070638946593.jpg"
+        },
+        {
+          "title": "Former Rep . Marjorie Taylor Greene marries conservative commentator Brian Glenn",
+          "url": "https://www.ksby.com/us-news/former-rep-marjorie-taylor-greene-marries-conservative-commentator-brian-glenn",
+          "domain": "ksby.com",
+          "seendate": "2026-07-30T13:45:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/41/1c/276fe0be4cf480b6d9e2af80a1cc/ap24070638946593.jpg"
         }
       ]
     },
     "title": "Former Rep . Marjorie Taylor Greene marries conservative commentator Brian Glenn",
-    "summary": "2026-07-30 wtvr.com: Former Rep . Marjorie Taylor Greene marries conservative commentator Brian Glenn\n2026-07-30 wtkr.com: Former Rep . Marjorie Taylor Greene marries conservative commentator Brian Glenn\n2026-07-30 fox17online.com: Former Rep . Marjorie Taylor Greene marries conservative commentator Brian Glenn",
+    "summary": "2026-07-30 wtvr.com: Former Rep . Marjorie Taylor Greene marries conservative commentator Brian Glenn\n2026-07-30 wtkr.com: Former Rep . Marjorie Taylor Greene marries conservative commentator Brian Glenn\n2026-07-30 fox17online.com: Former Rep . Marjorie Taylor Greene marries conservative commentator Brian Glenn\n2026-07-30 turnto23.com: Former Rep . Marjorie Taylor Greene marries conservative commentator Brian Glenn\n2026-07-30 ksby.com: Former Rep . Marjorie Taylor Greene marries conservative commentator Brian Glenn",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -36648,12 +36612,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_fauci-florida-hearing",
     "source": "news",
-    "ts": 1785601615077,
+    "ts": 1785613203980,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.306,
+      "salience": 0.286,
       "articles": [
         {
           "title": "Florida to investigate Fauci after Senate hearing",
@@ -36680,6 +36644,49 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Florida to investigate Fauci after Senate hearing",
     "summary": "2026-07-30 sanantoniopost.com: Florida to investigate Fauci after Senate hearing\n2026-07-30 floridastatesman.com: Florida to investigate Fauci after Senate hearing\n2026-07-30 bignewsnetwork.com: Florida to investigate Fauci after Senate hearing",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_expires-haitian-immigrants",
+    "source": "news",
+    "ts": 1785613203979,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.173,
+      "articles": [
+        {
+          "title": "TPS expires for Haitian and Syrian immigrants",
+          "url": "https://www.koat.com/article/temporary-protected-status-haiti-syria-expires/73296779",
+          "domain": "koat.com",
+          "seendate": "2026-07-29T21:00:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/286e7ff8-9982-44e2-9d84-223b59314c36.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0743xh"
+        },
+        {
+          "title": "TPS expires for Haitian and Syrian immigrants",
+          "url": "https://www.wlwt.com/article/temporary-protected-status-haiti-syria-expires/73296779",
+          "domain": "wlwt.com",
+          "seendate": "2026-07-29T20:45:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/286e7ff8-9982-44e2-9d84-223b59314c36.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0743xh"
+        },
+        {
+          "title": "TPS expires for Haitian and Syrian immigrants",
+          "url": "https://www.koco.com/article/temporary-protected-status-haiti-syria-expires/73296779",
+          "domain": "koco.com",
+          "seendate": "2026-07-29T20:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/286e7ff8-9982-44e2-9d84-223b59314c36.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0743xh"
+        }
+      ]
+    },
+    "title": "TPS expires for Haitian and Syrian immigrants",
+    "summary": "2026-07-29 koat.com: TPS expires for Haitian and Syrian immigrants\n2026-07-29 wlwt.com: TPS expires for Haitian and Syrian immigrants\n2026-07-29 koco.com: TPS expires for Haitian and Syrian immigrants",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
