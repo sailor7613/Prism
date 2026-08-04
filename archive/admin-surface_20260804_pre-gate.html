@@ -594,10 +594,12 @@
   <button class="btn" id="themeBtn" title="Day / night">◐</button>
   <button class="btn" id="dgBtn" title="DreamGetty room — loads on demand">🏛</button>
   <button class="btn" id="dgOrbitBtn" title="Pedestal ↔ flat — drop to the flat stage while the room stands">🧭</button>
-  <details class="aiset"><summary>Keys</summary>
-    <input id="deskKey" type="password" placeholder="desk key — unlocks publish + AI (stored on device)" autocomplete="off" spellcheck="false" style="min-width:220px">
+  <details class="aiset"><summary>AI</summary>
+    <input id="apiKey" type="password" placeholder="sk-ant-… (stored on device)" autocomplete="off" spellcheck="false" style="min-width:180px">
     <input id="model" type="text" value="claude-sonnet-5" spellcheck="false" style="min-width:150px">
-    <span id="deskKeyState" style="font-size:10px;opacity:.6"></span>
+  </details>
+  <details class="aiset"><summary>Sync</summary>
+    <input id="ghToken" type="password" placeholder="github token — repo-scoped (stored on device)" autocomplete="off" spellcheck="false" style="min-width:220px">
   </details>
 </div>
 
@@ -1348,7 +1350,7 @@ function sdSync(){
   }
 }
 async function sdFireCell(which){
-  const key=$('deskKey').value.trim(); if(!key){ status('Add your desk key (open “Keys” in the top bar)'); return; }
+  const key=$('apiKey').value.trim(); if(!key){ status('Add your API key (open “AI” in the top bar)'); return; }
   const cell = which==='real'?curReal:curGhost, k=sdKeyCell(cell);
   flush();
   const existing=stripHtml(model[cell]||'');
@@ -1368,7 +1370,7 @@ async function sdFireCell(which){
 }
 async function sdFireOrb(){
   if(!orbEditing) return;
-  const key=$('deskKey').value.trim(); if(!key){ $('oeStatus').textContent='Add your desk key (Keys ▸ top bar)'; return; }
+  const key=$('apiKey').value.trim(); if(!key){ $('oeStatus').textContent='Add your API key (AI ▸ top bar)'; return; }
   const q=orbEditing.quad, b=orbEditing.band, k=sdKeyOrb(q,b);
   const cur={ text:$('oeText').value.trim(), x:$('oeX').value.trim(), y:$('oeY').value.trim() };
   sdBox[k]={kind:'busy', msg: cur.text?'assessing your line against the slot…':'drafting blind…'}; sdSync();
@@ -1396,7 +1398,7 @@ function sdAdopt(k,ctx){
   delete sdBox[k]; sdSync();
 }
 async function sdMarkKeywords(k){
-  const key=$('deskKey').value.trim(); if(!key){ status('Add your desk key (open “Keys” in the top bar)'); return; }
+  const key=$('apiKey').value.trim(); if(!key){ status('Add your API key (open “AI” in the top bar)'); return; }
   const cell=k.slice(4); flush();
   const existing=stripHtml(model[cell]||''); if(!existing) return;
   status('Marking keywords in '+cell+'…');
@@ -1449,16 +1451,7 @@ $('closeExport').onclick=()=>$('exportModal').classList.remove('show');
 $('copyJson').onclick=()=>{ const t=$('exportText'); t.select(); if(navigator.clipboard) navigator.clipboard.writeText(t.value).catch(()=>{}); try{document.execCommand('copy');}catch(e){} status('Copied — paste into the chat'); };
 $('dlJson').onclick=()=>{ const ev=Object.assign(assemble(),{axes:axesObj()}); const b=new Blob([JSON.stringify(ev,null,2)],{type:'application/json'}); const a=document.createElement('a'); a.href=URL.createObjectURL(b); a.download=(ev.title||'event').replace(/\W+/g,'_')+'_diatribe.json'; a.click(); };
 $('evSelect').onchange=()=>{ const id=$('evSelect').value; if(id&&HAS_DB){ const ev=PrismDB.getEvent(id); if(ev) loadEvent(ev); } };
-['deskKey','model'].forEach(id=>{ const v=localStorage.getItem('prism.admin.'+id); if(v)$(id).value=v; $(id).addEventListener('input',()=>localStorage.setItem('prism.admin.'+id,$(id).value)); });
-// The desk key is checked at the door, not at the first publish (villa
-// door_test's lesson): a typo answers here, immediately, instead of
-// surfacing days later as a mysterious refusal. Legacy ghToken/apiKey
-// are scrubbed by prism-sync.js on load — scrub, never migrate.
-async function checkDeskKey(){ const el=$('deskKeyState'); if(!el) return; if(!PrismSync.deskKey()){ el.textContent=''; return; }
-  el.textContent='…'; const r=await PrismSync.verifyKey();
-  el.textContent = r.ok ? '✓ the desk knows you' : (r.reason==='unreachable' ? '⚠ gate unreachable' : '✗ key refused'); }
-$('deskKey').addEventListener('change', checkDeskKey);
-checkDeskKey();
+['apiKey','model','ghToken'].forEach(id=>{ const v=localStorage.getItem('prism.admin.'+id); if(v)$(id).value=v; $(id).addEventListener('input',()=>localStorage.setItem('prism.admin.'+id,$(id).value)); });
 // Migrate stored retired model strings (list lives in prism-ai.js)
 (function(){ if(PrismAI.RETIRED_MODELS.includes(($('model').value||'').trim())){ $('model').value=PrismAI.MODEL_DEFAULT; localStorage.setItem('prism.admin.model',PrismAI.MODEL_DEFAULT); } })();
 
@@ -1926,7 +1919,7 @@ function deskResolve(s,outcome,mergedText,mx,my){
   status('Resolved '+slotField(s)+' → '+outcome.toUpperCase()+' — Save / Publish when the reading reads whole'); }
 
 async function deskFireRun(slots){
-  const key=$('deskKey').value.trim();
+  const key=$('apiKey').value.trim();
   deskFiring=true; renderDesk();
   let done=0, fail=0; const jobs=slots.slice();
   const worker=async()=>{ while(jobs.length){ const s=jobs.shift();
@@ -1947,7 +1940,7 @@ async function deskFireRun(slots){
   deskNote((done-fail)+' of '+slots.length+' slots drafted'+(fail?(' · '+fail+' failed — ✦ retries just those'):'')+' — resolve slot by slot.'); }
 async function deskFireClick(){
   if(deskFiring) return;
-  const key=$('deskKey').value.trim(); if(!key){ deskNote('Add your desk key (Keys ▸ top bar)'); return; }
+  const key=$('apiKey').value.trim(); if(!key){ deskNote('Add your API key (AI ▸ top bar)'); return; }
   if(!currentId){ deskNote('Save the event first — the desk binds to a saved Reading.'); return; }
   flush();
   if(desk){
@@ -2102,7 +2095,7 @@ function dmDialogueSystem(s){
 async function dmChatSend(s){
   if(dmChatBusy) return;
   if(!desk){ deskNote('Fire first — the exchange is about the fired comparison.'); return; }
-  const key=$('deskKey').value.trim(); if(!key){ deskNote('Add your desk key (Keys ▸ top bar)'); return; }
+  const key=$('apiKey').value.trim(); if(!key){ deskNote('Add your API key (AI ▸ top bar)'); return; }
   const text=(dmChatDraft[s.key]||'').trim(); if(!text) return;
   desk.dialogues=desk.dialogues||{};
   const dlg=desk.dialogues[s.key]=desk.dialogues[s.key]||[];
@@ -2485,7 +2478,7 @@ async function nrSyncScores(quiet){
     // wins per cid — pull already applied anything newer.
     const records=Object.assign({}, nrPulledRecords||{}, PrismDB.exportCandidateScores());
     if(!Object.keys(records).length&&!nrScoresSha){ if(!quiet) nrStatus('nothing scored or triaged yet — nothing to push'); return; }
-    if(!PrismSync.deskKey()){ if(!quiet) nrStatus((pulled.applied?pulled.applied+' pulled · ':'')+'no desk key — pull-only (add one under Keys to push)'); return; }
+    if(!PrismSync.token()){ if(!quiet) nrStatus((pulled.applied?pulled.applied+' pulled · ':'')+'no GitHub token — pull-only (add one under Sync to push)'); return; }
     if(!quiet) nrStatus('⇡ pushing '+Object.keys(records).length+' records…');
     const file={ schema:'candidate_scores/v1', updated:new Date().toISOString(), records };
     nrScoresSha=await PrismSync.putFile(NR_SCORES_PATH, file,
@@ -2514,7 +2507,7 @@ $('nrSync').onclick=()=>nrSyncScores(false);
    hiding tab flushes immediately — mobile PWAs get backgrounded mid-debounce. */
 let nrPushTimer=null;
 function nrQueuePush(){
-  try{ if(!PrismSync.deskKey()) return; }catch(_){ return; }
+  try{ if(!PrismSync.token()) return; }catch(_){ return; }
   clearTimeout(nrPushTimer);
   nrPushTimer=setTimeout(()=>{ nrPushTimer=null; nrSyncScores(true); }, 2500);
 }
@@ -2931,7 +2924,7 @@ async function nrScoreOne(c,key){
 let nrScoring=false;
 async function nrScoreCid(cid){
   if(nrScoring) return;
-  const key=$('deskKey').value.trim(); if(!key){ nrStatus('Add your desk key (Keys ▸ top bar)'); return; }
+  const key=$('apiKey').value.trim(); if(!key){ nrStatus('Add your API key (AI ▸ top bar)'); return; }
   const c=PrismDB.getCandidate(cid); if(!c) return;
   nrScoring=true; nrStatus('✦ scoring '+(c.title||cid).slice(0,48)+'…');
   try{ await nrScoreOne(c,key); nrStatus('✦ fit '+c.fitness.score.toFixed(2)+' — '+c.fitness.reason.slice(0,80)); nrQueuePush(); }
@@ -2941,7 +2934,7 @@ async function nrScoreCid(cid){
 
 async function nrScoreAll(){
   if(nrScoring) return;
-  const key=$('deskKey').value.trim(); if(!key){ nrStatus('Add your desk key (Keys ▸ top bar)'); return; }
+  const key=$('apiKey').value.trim(); if(!key){ nrStatus('Add your API key (AI ▸ top bar)'); return; }
   const pool=PrismDB.getCandidates()
     .filter(c=>(c.status==='new'||c.status==='held')&&!(c.fitness&&typeof c.fitness.score==='number'))
     .sort((a,b)=>nrKey(b)-nrKey(a));
@@ -2966,7 +2959,7 @@ async function nrScoreAll(){
   nrRender();
   // a whole pass is one natural commit of the middle stratum — push it
   // without a second gesture when the token is on this device
-  if(ok&&PrismSync.deskKey()) nrSyncScores(true);
+  if(ok&&PrismSync.token()) nrSyncScores(true);
 }
 $('nrScore').onclick=nrScoreAll;
 
@@ -3200,7 +3193,7 @@ $('brCatList').addEventListener('click',e=>{
 
 async function brSendMsg(){
   if(brBusy) return;
-  const key=$('deskKey').value.trim(); if(!key){ brStatus('Add your desk key (Keys ▸ top bar)'); return; }
+  const key=$('apiKey').value.trim(); if(!key){ brStatus('Add your API key (AI ▸ top bar)'); return; }
   const text=$('brText').value.trim(); if(!text) return;
   $('brText').value='';
   brMsg('you',text);
@@ -3304,7 +3297,7 @@ if(HAS_DB && typeof PrismSync!=='undefined'){
       if(r.pulled) bits.push(r.pulled+' published');
       if(r.draftsPulled) bits.push(r.draftsPulled+' draft'+(r.draftsPulled>1?'s':''));
       if(r.deskPulled) bits.push(r.deskPulled+' desk run'+(r.deskPulled>1?'s':''));
-      const noTok=!PrismSync.deskKey() ? ' · no desk key on this origin — pulls only (add one under Keys to push)' : '';
+      const noTok=!PrismSync.token() ? ' · no GitHub token on this origin — pulls only (add one under Sync to push)' : '';
       if(bits.length){ refreshDropdown(currentId); status('Pulled '+bits.join(' · ')+' from the repo'+noTok); }
       else if(noTok) status('Sync: nothing new'+noTok);
       if(r.draftsError) status('Draft pull: '+r.draftsError);

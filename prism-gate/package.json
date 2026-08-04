@@ -1,0 +1,15 @@
+{
+  "name": "prism-gate",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "The editorial desk's locked drawer — holds the GitHub token and the Anthropic key so no browser ever has to.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "node test/gate.test.mjs && node test/client.test.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^4"
+  }
+}

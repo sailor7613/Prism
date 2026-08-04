@@ -1,0 +1,15 @@
+name = "prism-gate"
+main = "src/index.js"
+compatibility_date = "2026-08-04"
+
+# NO SECRETS IN THIS FILE. Ever. This file gets committed; secrets do not.
+# GITHUB_TOKEN, ANTHROPIC_KEY and DESK_KEY are set with `wrangler secret put`,
+# which stores them on Cloudflare's side and never writes them to disk.
+#
+# Optional rate limiter. Create the namespace with
+#   npx wrangler kv namespace create RATE
+# then paste the id it prints below and uncomment both lines.
+# Without this the gate still works; it just has no ceilings.
+# [[kv_namespaces]]
+# binding = "RATE"
+# id = "paste-the-id-wrangler-prints-here"

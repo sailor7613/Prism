@@ -10,13 +10,9 @@
 //         (public repo: no token needed), import anything new
 //         or newer than the local copy (matched by rid,
 //         last-write-wins by updatedAt).
-// Publish — POST the file through prism-gate (the desk's locked
-//         drawer, a Cloudflare Worker). The Worker holds the
-//         GitHub token; the browser holds only a desk key that
-//         can file under data/ and nowhere else. Until 2026-08-04
-//         a fine-grained PAT lived in localStorage on this shared
-//         public origin — the same disease villa-gate cured for
-//         the Dream Getty, cured here the same way.
+// Publish — PUT the current Reading's file via the contents API
+//         using a fine-grained personal access token scoped to
+//         this repo, stored per device in localStorage.
 //
 // Device-local fields (id, active, syncedAt) never enter the
 // file; the file carries rid + updatedAt + schema instead.
@@ -24,55 +20,16 @@
 // prism_bill_scores with device-local keys stripped (2026-07-07).
 // Pull detaches them and merges into the local store per-row.
 // ============================================================
-// ── THE GATE ── paste the deployed Worker URL here (runbook: prism-gate/README.md §5)
-window.PRISM_GATE = window.PRISM_GATE || 'https://prism-gate.shanecorwin.workers.dev';
-
 const PrismSync = (() => {
   const OWNER  = 'sailor7613';
   const REPO   = 'Prism';
   const BRANCH = 'main';
   const DIR    = 'data/readings';
   const API    = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${DIR}`;
-  const KEY_STORE = 'prism.admin.deskKey';
+  const TOKEN_KEY = 'prism.admin.ghToken';
   const SHAS_KEY  = 'prism.sync.shas';   // rid -> last imported/published blob sha
 
-  function deskKey() { return (localStorage.getItem(KEY_STORE) || '').trim(); }
-
-  // Scrub, never migrate (villa-gate's gate_client_test precedent): a legacy
-  // credential found in localStorage on this shared public origin is a
-  // liability, not a convenience. The PAT it removes should also be REVOKED
-  // on GitHub — scrubbing one browser does not un-mint a token.
-  try {
-    localStorage.removeItem('prism.admin.ghToken');
-    localStorage.removeItem('prism.admin.apiKey');
-  } catch (e) {}
-
-  // One POST to the drawer. Returns { ok, status, json } — callers map
-  // statuses to their own messages so the conflict flows read unchanged.
-  async function gateFile(payload) {
-    const res = await fetch(window.PRISM_GATE + '/file', {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ code: deskKey(), ...payload }),
-    });
-    let json = null;
-    try { json = await res.json(); } catch (e) {}
-    return { ok: res.ok, status: res.status, json };
-  }
-
-  // Is the saved desk key still good? Checked when the key is saved rather
-  // than at the first publish — a typo caught at the door, not mid-deadline.
-  async function verifyKey() {
-    if (!deskKey()) return { ok: false, reason: 'empty' };
-    try {
-      const res = await fetch(window.PRISM_GATE + '/verify', {
-        method: 'POST',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ code: deskKey() }),
-      });
-      return { ok: res.ok, status: res.status };
-    } catch (e) { return { ok: false, reason: 'unreachable' }; }
-  }
+  function token()  { return (localStorage.getItem(TOKEN_KEY) || '').trim(); }
   function shas()   { try { return JSON.parse(localStorage.getItem(SHAS_KEY)) || {}; } catch(e){ return {}; } }
   function setSha(rid, sha) { const s = shas(); s[rid] = sha; localStorage.setItem(SHAS_KEY, JSON.stringify(s)); }
 
@@ -98,10 +55,9 @@ const PrismSync = (() => {
   function onNotice(fn) { _notify = fn; }
   function notice(m) { try { if (_notify) _notify(m); else console.warn('PrismSync: ' + m); } catch(e){} }
 
-  // Reads are keyless on the public repo — no credential ever rides a
-  // request from this file anymore. Writes go through the gate above.
   function headers(json) {
     const h = { 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' };
+    if (token()) h['Authorization'] = 'Bearer ' + token();
     if (json) h['Content-Type'] = 'application/json';
     return h;
   }
@@ -259,7 +215,7 @@ const PrismSync = (() => {
   // silently overwrites: if the repo copy is NEWER than this device's,
   // the push declines and says so — the next pull applies it instead.
   async function pushDraft(localId) {
-    if (!deskKey()) throw new Error('No desk key on this origin — pulls only');
+    if (!token()) throw new Error('No GitHub token on this origin — pulls only');
     const ev = PrismDB.getEvent(localId);
     if (!ev) throw new Error('Nothing to push — save first');
     // NO minting here (§3.4): pre-rid readings exist on several origins;
@@ -284,7 +240,7 @@ const PrismSync = (() => {
   // the first-run sweep. Refusals count, never throw.
   async function pushAllDrafts() {
     const out = { pushed: 0, refused: 0, skipped: 0, failed: 0 };
-    if (!deskKey()) return out;
+    if (!token()) return out;
     for (const ev of PrismDB.getEvents()) {
       if (isPublished(ev)) { out.skipped++; continue; }
       try {
@@ -301,12 +257,15 @@ const PrismSync = (() => {
   // to propagate, or a locally-pruned dup resurrects on the next pull).
   // Callers confirm; this just does it. Quiet 404 = already gone.
   async function deleteDraft(rid) {
-    if (!deskKey()) throw new Error('No desk key on this origin — pulls only');
+    if (!token()) throw new Error('No GitHub token on this origin — pulls only');
     const rel = `${DRAFTS_DIR}/${rid}.json`;
     const cur = await getFile(rel);
     if (!cur) { setShaIn(DRAFT_SHAS_KEY, rid, null); return { rid, gone: true }; }
-    const res = await gateFile({ op: 'del', path: rel, sha: cur.sha, message: 'Remove draft ' + rid });
-    if (res.status === 404) { setShaIn(DRAFT_SHAS_KEY, rid, null); return { rid, gone: true }; }
+    const res = await fetch(`${FILE_API}${rel}`, {
+      method: 'DELETE',
+      headers: headers(true),
+      body: JSON.stringify({ message: 'Remove draft ' + rid, branch: BRANCH, sha: cur.sha })
+    });
     if (!res.ok) throw new Error('Draft delete failed (HTTP ' + res.status + ')');
     setShaIn(DRAFT_SHAS_KEY, rid, null);
     return { rid, deleted: true };
@@ -360,13 +319,17 @@ const PrismSync = (() => {
         const buf = await res.arrayBuffer();
         if (!buf.byteLength) throw new Error('empty body');
         const rel = IMG_DIR + '/' + ev.rid + '/' + urlHash(p.url) + '.' + extFromType(type);
-        const put = await gateFile({
-          op: 'put', path: rel,
-          content: b64bytes(buf),
-          message: 'Bake image for ' + ev.rid,
+        const put = await fetch(`${FILE_API}${rel}`, {
+          method: 'PUT',
+          headers: headers(true),
+          body: JSON.stringify({
+            message: 'Bake image for ' + ev.rid,
+            branch: BRANCH,
+            content: b64bytes(buf),
+          })
         });
         // 422 without sha = the file already exists (same URL hash → same
-        // source) — that's success, not conflict. The gate passes it through.
+        // source) — that's success, not conflict.
         if (!put.ok && put.status !== 422) throw new Error('put ' + put.status);
         p.baked = rel; out.baked++; out.changed = true;
       } catch (e) {
@@ -380,7 +343,7 @@ const PrismSync = (() => {
   // Publishes one local event (by local id) as its Reading file.
   // Returns { rid, bake } or throws with a readable message.
   async function publish(localId) {
-    if (!deskKey()) throw new Error('No desk key — add one under Keys in the top bar');
+    if (!token()) throw new Error('No GitHub token — add one under Sync in the top bar');
     let ev = PrismDB.getEvent(localId);
     if (!ev) throw new Error('Nothing to publish — save first');
     if (!ev.rid) {
@@ -415,21 +378,25 @@ const PrismSync = (() => {
       }
     }
 
-    const put = await gateFile({
-      op: 'put', path: `${DIR}/${ev.rid}.json`,
-      content: b64encode(JSON.stringify(file, null, 2)),
-      message: 'Reading: ' + (ev.title || ev.rid),
-      ...(sha ? { sha } : {})
+    const put = await fetch(path, {
+      method: 'PUT',
+      headers: headers(true),
+      body: JSON.stringify({
+        message: 'Reading: ' + (ev.title || ev.rid),
+        branch: BRANCH,
+        content: b64encode(JSON.stringify(file, null, 2)),
+        ...(sha ? { sha } : {})
+      })
     });
     if (!put.ok) {
-      const msg = put.status === 401 ? 'desk key rejected — re-enter it under Keys' :
-                  put.status === 403 ? 'the desk refused that path' :
+      const msg = put.status === 401 ? 'token rejected' :
+                  put.status === 403 ? 'token lacks access to the repo' :
                   put.status === 409 || put.status === 422 ? 'repo changed mid-publish — pull, then publish again' :
-                  put.status === 429 ? 'the desk has stopped answering for a while' :
                   'HTTP ' + put.status;
       throw new Error('Publish failed: ' + msg);
     }
-    setSha(ev.rid, put.json.sha);
+    const out = await put.json();
+    setSha(ev.rid, out.content.sha);
     PrismDB.updateEvent(localId, { updatedAt: file.updatedAt, syncedAt: file.updatedAt });
     // The Reading has left the draft tier (§3.1: candidate lineage
     // stays, the drafts file stops carrying it) — remove its draft
@@ -461,22 +428,25 @@ const PrismSync = (() => {
 
   // → new sha. Pass the sha from getFile to update; omit to create.
   async function putFile(relPath, obj, message, sha) {
-    if (!deskKey()) throw new Error('No desk key — add one under Keys in the top bar');
-    const put = await gateFile({
-      op: 'put', path: relPath,
-      content: b64encode(JSON.stringify(obj, null, 2)),
-      message: message || ('Update ' + relPath),
-      ...(sha ? { sha } : {})
+    if (!token()) throw new Error('No GitHub token — add one under Sync in the top bar');
+    const put = await fetch(`${FILE_API}${relPath}`, {
+      method: 'PUT',
+      headers: headers(true),
+      body: JSON.stringify({
+        message: message || ('Update ' + relPath),
+        branch: BRANCH,
+        content: b64encode(JSON.stringify(obj, null, 2)),
+        ...(sha ? { sha } : {})
+      })
     });
     if (!put.ok) {
-      const msg = put.status === 401 ? 'desk key rejected — re-enter it under Keys' :
-                  put.status === 403 ? 'the desk refused that path' :
+      const msg = put.status === 401 ? 'token rejected' :
+                  put.status === 403 ? 'token lacks access to the repo' :
                   put.status === 409 || put.status === 422 ? 'repo changed mid-push — pull, then push again' :
-                  put.status === 429 ? 'the desk has stopped answering for a while' :
                   'HTTP ' + put.status;
       throw new Error('Push failed: ' + msg);
     }
-    return put.json.sha;
+    return (await put.json()).content.sha;
   }
 
   // ── Desk tier (§3.5 — RULED convergent this session) ──────
@@ -514,7 +484,7 @@ const PrismSync = (() => {
   }
 
   async function pushDesk(eventId) {
-    if (!deskKey()) throw new Error('No desk key on this origin — pulls only');
+    if (!token()) throw new Error('No GitHub token on this origin — pulls only');
     const rec = PrismDB.getDesk ? PrismDB.getDesk(eventId) : null;
     if (!rec) return { skipped: 'no desk run' };
     const ev = PrismDB.getEvent(eventId);
@@ -536,7 +506,7 @@ const PrismSync = (() => {
 
   async function pushAllDesk() {
     const out = { pushed: 0, refused: 0, skipped: 0, failed: 0 };
-    if (!deskKey() || !PrismDB.getDesks) return out;
+    if (!token() || !PrismDB.getDesks) return out;
     for (const eventId of Object.keys(PrismDB.getDesks())) {
       try {
         const r = await pushDesk(eventId);
@@ -578,7 +548,7 @@ const PrismSync = (() => {
   }
   function _queue(kind, localId) {
     if (!localId) return;
-    try { if (!deskKey()) return; } catch (e) { return; }
+    try { if (!token()) return; } catch (e) { return; }
     _q[kind].add(localId);
     clearTimeout(_qTimer);
     _qTimer = setTimeout(flushQueues, 2500);
@@ -591,7 +561,7 @@ const PrismSync = (() => {
     });
   }
 
-  return { pull, publish, deskKey, verifyKey, KEY_STORE, getFile, putFile,
+  return { pull, publish, token, TOKEN_KEY, getFile, putFile,
            pushDraft, pushAllDrafts, deleteDraft, queueDraftPush,
            pushDesk, pushAllDesk, queueDeskPush, flushQueues, onNotice };
 })();

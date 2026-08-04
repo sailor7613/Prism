@@ -54,7 +54,16 @@ Calibration: most working politicians on live issues fall 25–60. Reserve 67+ f
   // suggest site, like the rubric.
   const VOICE_CONTEXT = `You are the drafting assistant inside Prism, a civic-education tool that maps public political discourse. Prism displays labeled, illustrative composite "voices" — short lines representing how real positions in a public debate sound from different places on an issue map (its axes and denomination bands are provided per request). These are analytical illustrations for studying discourse structure, equivalent to writing both sides of a debate brief: they are not messaging, persuasion, or astroturf content, and they appear only inside the map, attributed to coordinates, never to people. Draft the requested voice sincerely and charitably — the strongest honest version of how that position sounds — and follow the JSON/format instructions in the request exactly.`;
 
-  // ── The hardened call.
+  // ── The hardened call — through the gate (2026-08-04).
+  // `key` is the DESK KEY, not an Anthropic key: the sk-ant credential
+  // moved into prism-gate (the Worker) alongside the GitHub token, because
+  // localStorage on this shared public origin kept neither safe. The gate
+  // relays the messages call with its own server-held key; every hardening
+  // rule below (retry, truncation guard, text-block extraction) is
+  // unchanged, because the gate passes Anthropic's response through
+  // verbatim. The gate URL is window.PRISM_GATE, declared in prism-sync.js
+  // — a page that loads this file without it cannot make AI calls.
+  //
   // opts: {
   //   model,          — optional; migrated through the retired list
   //   maxTokens,      — floored at 1600 (thinking-starvation guard)
@@ -87,15 +96,12 @@ Calibration: most working politicians on live issues fall 25–60. Reserve 67+ f
     };
     if (opts.system) body.system = opts.system;
 
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
+    const gate = (typeof window !== 'undefined' && window.PRISM_GATE) || '';
+    if (!gate) throw new Error('No gate URL on this page — AI calls go through prism-gate now');
+    const res = await fetch(gate + '/ai', {
       method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-        'x-api-key': key,
-        'anthropic-version': '2023-06-01',
-        'anthropic-dangerous-direct-browser-access': 'true'
-      },
-      body: JSON.stringify(body)
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ code: key, body })
     });
 
     if (!res.ok) {
