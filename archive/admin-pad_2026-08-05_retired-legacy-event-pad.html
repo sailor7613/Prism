@@ -1,3 +1,9 @@
+<!-- RETIRED 2026-08-05 - credential-debt session.
+     No longer a live surface. This page carried the pre-gate pattern: an
+     Anthropic key pasted into the browser and posted straight to
+     api.anthropic.com. Prism's AI now goes through prism-gate (/ai) with a
+     desk key that can only relay; the sk-ant key lives in Cloudflare secrets.
+     Reference only. Do NOT paste a live key into this page. -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -442,9 +448,15 @@ function init(){
   $('sugAll').addEventListener('click',aiSuggestEmpty);
   $('copyJson').addEventListener('click',copyJson); $('dlJson').addEventListener('click',dlJson);
   $('closeExport').addEventListener('click',()=>$('exportModal').classList.remove('show'));
-  // persist API key/model locally
-  ['apiKey','model'].forEach(id=>{ const v=localStorage.getItem('prism.admin.'+id); if(v)$(id).value=v;
+  // RETIRED 2026-08-05 — the API key is NO LONGER persisted. This page used to
+  // write the sk-ant key to localStorage['prism.admin.apiKey'] on every
+  // keystroke, on an origin shared by every sailor7613.github.io project. The
+  // new client (prism-sync.js) SCRUBS that key on load; this line put it back,
+  // so the scrub was a loop rather than a cure. Model still persists — it is
+  // not a credential. See Handoffs/Prism, the Credential Debt session.
+  ['model'].forEach(id=>{ const v=localStorage.getItem('prism.admin.'+id); if(v)$(id).value=v;
     $(id).addEventListener('input',()=>localStorage.setItem('prism.admin.'+id,$(id).value)); });
+  try { localStorage.removeItem('prism.admin.apiKey'); } catch(e) {}
   window.addEventListener('resize',()=>{ fitPrev(); drawPreview(); });
   refreshDropdown();
   // Seed with the Immigration event as a worked example: load the stored copy if

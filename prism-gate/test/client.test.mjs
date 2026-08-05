@@ -4,7 +4,7 @@
 // scrubbed, never migrated; (2) no request from either file ever carries an
 // Authorization or x-api-key header; (3) every write and every AI call goes
 // through the gate, and reads stay keyless on the public repo.
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import vm from 'node:vm';
 
 const SYNC_SRC = readFileSync(new URL('../../src/js/prism-sync.js', import.meta.url), 'utf8');
@@ -132,6 +132,39 @@ function makeWorld(seed = {}) {
   ok(ghTokenLines.every(l => l.includes('removeItem')),
     'ghToken survives in prism-sync.js code only inside the scrub (removeItem)');
   ok(!/Bearer/.test(SYNC_SRC.replace(/\/\/[^\n]*/g, '')), 'no Bearer header construction left in prism-sync.js');
+}
+
+// ═══ the served tree — the 2026-08-05 credential-debt sweep ═══
+// admin.html and admin-pad.html were retired to archive/ and v2/index.html's
+// derive panel was routed through the gate. These assertions exist so the
+// served tree cannot quietly regrow a direct Anthropic call: the failure they
+// guard against is a page that asks a human to paste an sk-ant key into a
+// public shared origin, which is the exact disease the gate was built to cure.
+{
+  const ROOT = new URL('../../', import.meta.url);           // the Prism repo root
+  const served = ['v2/index.html', 'index.html', 'admin-surface.html', 'legislation-inspector.html'];
+  for (const rel of served) {
+    let src = '';
+    try { src = readFileSync(new URL(rel, ROOT), 'utf8'); } catch (e) { continue; }
+    const code = src.replace(/<!--[\s\S]*?-->/g, '').replace(/^\s*\/\/[^\n]*$/gm, '');
+    ok(!/api\.anthropic\.com/.test(code), `${rel} makes no direct Anthropic call`);
+    ok(!/anthropic-dangerous-direct-browser-access/.test(code), `${rel} has no browser-access escape hatch`);
+    ok(!/['"]x-api-key['"]/.test(code), `${rel} sends no x-api-key header`);
+  }
+  // the re-infection vector: nothing served may WRITE a credential to the
+  // shared origin's localStorage. prism-sync scrubs prism.admin.apiKey on load;
+  // admin-pad.html used to write it back on every keystroke, so the scrub was a
+  // loop rather than a cure.
+  for (const rel of served) {
+    let src = '';
+    try { src = readFileSync(new URL(rel, ROOT), 'utf8'); } catch (e) { continue; }
+    const writes = src.split('\n').filter(l => /setItem\([^)]*(apiKey|ghToken|sk-ant)/.test(l));
+    ok(writes.length === 0, `${rel} never persists a credential to localStorage`);
+  }
+  // the retired pages really did leave the served root
+  for (const gone of ['admin.html', 'admin-pad.html']) {
+    ok(!existsSync(new URL(gone, ROOT)), `${gone} is no longer at the served root`);
+  }
 }
 
 console.log(`\n${passed + failed} assertions — ${passed} passed, ${failed} failed`);

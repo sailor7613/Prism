@@ -2732,17 +2732,16 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
 </button>
 
 <!-- AI-Derive dev panel (Phase 6.1.5). Gated behind the #derive URL hash so it
-     stays out of the normal user flow. The DESK KEY is entered here and never
-     stored; it relays through prism-gate, which holds the Anthropic credential
-     server-side. No sk-ant key ever reaches this page (2026-08-05). Scores a notable test set against the event and writes
+     stays out of the normal user flow. The API key is the user's own, entered
+     here, never stored. Scores a notable test set against the event and writes
      DERIVED positions that override the DW-NOMINATE baseline. -->
 <div class="derive-panel" id="derivePanel" hidden>
   <div class="derive-head">
     <strong>AI-Derive · evt_001 test set</strong>
     <button class="derive-close" id="deriveClose" type="button" aria-label="close">&times;</button>
   </div>
-  <p class="derive-note">Event-specific scoring for ~18 notable members. Uses your desk key (not stored) — relayed through prism-gate. Commit a pin first so the graph is live.</p>
-  <input class="derive-key" id="deriveKey" type="password" placeholder="Desk key" autocomplete="off" spellcheck="false" />
+  <p class="derive-note">Event-specific scoring for ~18 notable members. Uses your own Anthropic API key (not stored). Commit a pin first so the graph is live.</p>
+  <input class="derive-key" id="deriveKey" type="password" placeholder="Anthropic API key (sk-ant-…)" autocomplete="off" spellcheck="false" />
   <button class="derive-run" id="deriveRun" type="button">Derive 18 notable members →</button>
   <div class="derive-log" id="deriveLog"></div>
 </div>
@@ -6575,23 +6574,21 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 // Non-retryable errors (401 bad key, 400 bad request) throw immediately.
 // `onRetry({ status, attempt, maxRetries, waitMs, message })` lets the caller
 // surface "rate limited, retrying in Ns" to the progress log.
-async function anthropicMessages(body, deskKey, opts) {
+async function anthropicMessages(body, apiKey, opts) {
   opts = opts || {};
   const maxRetries = opts.maxRetries != null ? opts.maxRetries : 5;
   const onRetry = opts.onRetry || (() => {});
   let attempt = 0;
   while (true) {
-    // 2026-08-05 — through prism-gate, never straight to Anthropic. `deskKey`
-    // is the desk key, not an sk-ant key: it can only relay a messages call
-    // through the Worker, which holds the real credential in Cloudflare
-    // secrets. The gate returns the Anthropic response VERBATIM, so the
-    // retry/backoff and text-block extraction below are unchanged.
-    const gate = (typeof window !== 'undefined' && window.PRISM_GATE) || '';
-    if (!gate) throw new Error('No gate URL on this page - AI calls go through prism-gate now');
-    const res = await fetch(gate + '/ai', {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ code: deskKey, body })
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify(body)
     });
     if (res.ok) return res.json();
     let msg;
@@ -6613,7 +6610,7 @@ async function anthropicMessages(body, deskKey, opts) {
 
 // One member → DERIVED position object (mirrors admin aiScoreSelectedMember's
 // score→pin mapping exactly, incl. the +Y-up inversion).
-async function deriveScoreMember(member, eventContext, deskKey, opts) {
+async function deriveScoreMember(member, eventContext, apiKey, opts) {
   const lines = [eventContext, '',
     'Member: ' + (typeof member.name === 'string' ? member.name : member.bioguideId),
     'Party: ' + member.party, 'Chamber: ' + member.chamber];
@@ -6627,7 +6624,7 @@ async function deriveScoreMember(member, eventContext, deskKey, opts) {
     output_config: { effort: 'low' },
     system: MEMBER_DERIVE_SYSTEM_PROMPT,
     messages: [{ role: 'user', content: lines.join('\n') }]
-  }, deskKey, opts);
+  }, apiKey, opts);
   if (data.stop_reason === 'max_tokens') throw new Error('Response truncated (max_tokens)');
   // Text blocks only (skips thinking blocks), then carve out the JSON object.
   const raw = (data.content || []).map(b => b.type === 'text' ? b.text : '').join('').trim();
@@ -6654,9 +6651,9 @@ async function deriveScoreMember(member, eventContext, deskKey, opts) {
 
 // Score the test set sequentially (gentle on rate limits), persist each DERIVED
 // position, then re-render so the overrides appear over the baseline.
-async function runMemberDeriveTestSet(deskKey, opts) {
+async function runMemberDeriveTestSet(apiKey, opts) {
   opts = opts || {};
-  if (!deskKey) throw new Error('Desk key required');
+  if (!apiKey) throw new Error('API key required');
   const members = await ensureMembers();
   const byBio = {}; members.forEach(m => { byBio[m.bioguideId] = m; });
   const ids = opts.bioguideIds || DERIVE_TEST_SET;
@@ -6678,7 +6675,7 @@ async function runMemberDeriveTestSet(deskKey, opts) {
       ' in ' + (info.waitMs / 1000).toFixed(1) + 's', i + 1, ids.length);
     try {
       log('scoring ' + nm + '…', i + 1, ids.length);
-      const pos = await deriveScoreMember(m, ctx, deskKey, { maxRetries, onRetry });
+      const pos = await deriveScoreMember(m, ctx, apiKey, { maxRetries, onRetry });
       PrismDB.saveMemberPosition(pos);
       ok++;
       log(nm + ' → x' + pos.pin.x.toFixed(2) + ' y' + pos.pin.y.toFixed(2) + ' z' + pos.z.toFixed(2) + ' · conf ' + pos.confidence.toFixed(2), i + 1, ids.length);
@@ -6692,16 +6689,15 @@ async function runMemberDeriveTestSet(deskKey, opts) {
 }
 window.runMemberDeriveTestSet = runMemberDeriveTestSet;   // also callable from the console
 
-// Dev panel wiring (#derive). The user pastes a DESK KEY here; it is never
-// persisted, and it goes only to prism-gate /ai, which holds the real
-// Anthropic credential in Cloudflare secrets.
+// Dev panel wiring (#derive). The user pastes their OWN key here; it is never
+// persisted or sent anywhere except the Anthropic API call above.
 //
 // LOCAL DEV CONVENIENCE: if a gitignored `derive.key.local.js` exists next to
 // this file (it sets `window.__PRISM_DERIVE_KEY__`), the panel prefills from it
 // so you don't retype the key every session. That file is in .gitignore
-// (*.key.local.js) and MUST NEVER be committed or deployed. Since 2026-08-05 it
-// holds a DESK KEY, not a billing-attached sk-ant key — a leaked desk key can
-// only relay AI and file JSON/images under data/, never touch a served page. For the beta, scoring is PRECOMPUTED in admin and shipped static, so no
+// (*.key.local.js) and MUST NEVER be committed or deployed — it holds a
+// billing-attached key in the web root, which is fine on localhost and nowhere
+// else. For the beta, scoring is PRECOMPUTED in admin and shipped static, so no
 // key ever reaches a tester's browser. Copy derive.key.local.example.js to set up.
 (function wireDerivePanel() {
   const panel = document.getElementById('derivePanel');
@@ -6736,7 +6732,7 @@ window.runMemberDeriveTestSet = runMemberDeriveTestSet;   // also callable from 
   if (closeEl) closeEl.addEventListener('click', hide);
   if (runEl) runEl.addEventListener('click', async () => {
     const key = (keyEl.value || '').trim();
-    if (!key) { logEl.textContent = 'Paste your desk key first.'; return; }
+    if (!key) { logEl.textContent = 'Paste your Anthropic API key first.'; return; }
     if (!gm || !gmActive) { logEl.textContent = 'Commit a pin first so the graph is live.'; return; }
     runEl.disabled = true; runEl.textContent = 'Deriving…'; logEl.textContent = '';
     const line = (msg, i, total) => {

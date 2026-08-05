@@ -6,10 +6,24 @@ compatibility_date = "2026-08-04"
 # GITHUB_TOKEN, ANTHROPIC_KEY and DESK_KEY are set with `wrangler secret put`,
 # which stores them on Cloudflare's side and never writes them to disk.
 #
-# Optional rate limiter. Create the namespace with
-#   npx wrangler kv namespace create RATE
-# then paste the id it prints below and uncomment both lines.
-# Without this the gate still works; it just has no ceilings.
-# [[kv_namespaces]]
-# binding = "RATE"
-# id = "paste-the-id-wrangler-prints-here"
+# Rate limiter — ARMED 2026-08-05. Without this binding the gate still works,
+# but the ceilings in src/index.js are dead letters: no 12-wrong-keys/hour guess
+# limit, no 2,000 file ops/day, no 500 AI relays/day. That last one is what
+# stands between a stuck retry loop and the Anthropic bill, so it matters most
+# on the day the key is rotated.
+#
+# Namespace `prism-rate`, created 2026-08-05 through the Cloudflare dashboard.
+# The CLI route (`wrangler kv namespace create RATE`) failed with Cloudflare
+# auth error 10000: wrangler's stored credentials can publish a Worker and set
+# a secret, but cannot create KV storage. The dashboard is the route the
+# predecessor's §7.4 named anyway.
+#
+# This id is NOT a secret — it names a bucket, and reaching it still requires
+# account credentials. It is safe in a public repo, unlike everything else this
+# gate touches.
+#
+# KV is a speed bump, never a boundary: a KV that throws on every call cannot
+# break the lock (proven in test/gate.test.mjs).
+[[kv_namespaces]]
+binding = "RATE"
+id = "2bf7b6654c3a420aa63b52a3a71c9d17"
