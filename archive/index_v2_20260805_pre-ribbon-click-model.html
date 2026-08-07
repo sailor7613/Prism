@@ -896,11 +896,9 @@ body.light .pad-grid {
    put it above the fold. Only shown post-commit (hidden attribute). */
 .member-toggle {
   /* Anchored BELOW the top chrome (2026-07-09): fixed 70px sat inside the
-     ribbon's full-width touch band (ribbon z 45 > toggle z 20), which
-     swallowed every click/tap — the §5 "toggle not working" bug.
-     --top-chrome keeps the button clear even when the ribbon grows.
-     Still true after 2026-08-05: the .ribbon-zone children left hit-testing,
-     but #prismRibbon itself is the band and now reads taps directly. */
+     ribbon's full-width touch band (.ribbon-zone, ribbon z 45 > toggle z 20),
+     which swallowed every click/tap — the §5 "toggle not working" bug.
+     --top-chrome keeps the button clear even when the ribbon grows. */
   position: fixed; top: calc(var(--top-chrome) + 8px); right: 24px; z-index: 20;
   display: inline-flex; align-items: center; gap: 6px;
   padding: 5px 13px; border-radius: 999px; cursor: pointer;
@@ -1514,13 +1512,7 @@ html.parallax-mode body.phase-diatribe .to-answers {
 #ribbonPlateR { background-position: left center; }
 #ribbonPlateL { background-position: right center; }
 
-/* KEYBOARD/AT ONLY as of 2026-08-05 — pointer-events: none. These were never
-   reachable by a real tap anyway (the free-plane drag captures the pointer, so
-   the derived click retargets to #prismRibbon and these listeners never fired);
-   taking them out of hit-testing makes that honest and hands the tap to the
-   ribbon's own position-reading click. They stay in the DOM because they are
-   the only keyboard and screen-reader path to a column. */
-.ribbon-zone { position: absolute; top: 0; bottom: 0; width: 33.333%; background: none; border: none; padding: 0; cursor: pointer; pointer-events: none; }
+.ribbon-zone { position: absolute; top: 0; bottom: 0; width: 33.333%; background: none; border: none; padding: 0; cursor: pointer; }
 .ribbon-zone:focus:not(:focus-visible) { outline: none; }   /* no tap-focus box on the instrument; keyboard focus keeps its ring */
 .ribbon-zone[data-col="0"] { left: 0; } .ribbon-zone[data-col="1"] { left: 33.333%; } .ribbon-zone[data-col="2"] { left: 66.666%; }
 .ribbon-hint { position: absolute; left: 50%; bottom: 5px; transform: translateX(-50%); pointer-events: none;
@@ -2642,9 +2634,6 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
     <img class="prism-ribbon-img" id="prismRibbonImg" src="../src/img/prism_nav_full.png" alt="">
     <div class="ribbon-ext" id="ribbonExtR" aria-hidden="true"></div>
   </div>
-  <!-- keyboard/AT column access only (2026-08-05) — pointer-events: none.
-       Physical taps are read off the ribbon's own click position; see
-       colFromTapX. -->
   <button class="ribbon-zone" data-col="0" type="button" aria-label="Beam"></button>
   <button class="ribbon-zone" data-col="1" type="button" aria-label="Prism"></button>
   <button class="ribbon-zone" data-col="2" type="button" aria-label="Refraction"></button>
@@ -7547,61 +7536,7 @@ applyState(true);
     applyNav(true);
   }
 
-  // ── A TAP IS A ZERO-LENGTH DRAG (2026-08-05) ────────────────────────────
-  // The three .ribbon-zone buttons could never receive a physical tap: the
-  // free-plane drag calls setPointerCapture on pointerdown, so the derived
-  // click retargets to #prismRibbon and the zones' own listeners are
-  // unreachable. Pre-existing, verified identical on the pristine pre-nav-menu
-  // build — programmatic .click() worked, which is why every scripted pass
-  // saw green.
-  //
-  // The fix is not three repaired hit targets. Discrete tap zones bolted onto
-  // a continuous instrument is the seam that made the bug possible; the ribbon
-  // reads its OWN click position instead. One handler, one model — the tap
-  // asks the same question the drag asks on release, of a press that never
-  // travelled. The zones survive as keyboard/AT affordances only (their click
-  // listeners still fire for Enter/Space and for the dtEdge hand-off, and they
-  // stopPropagation so they never double-fire through the ribbon).
-  function colFromTapX(x) {
-    if (isElastic()) {
-      // desktop: the prism is PINNED at EL_ANCHORS[col]% of the viewport and
-      // the plates stretch to meet it — so the question is simply which anchor
-      // the finger landed nearest.
-      let best = 0, bd = Infinity;
-      for (let c = 0; c < 3; c++) {
-        const d = Math.abs(x - window.innerWidth * EL_ANCHORS[c] / 100);
-        if (d < bd) { bd = d; best = c; }
-      }
-      return best;
-    }
-    // phone: the painting is a filmstrip running behind a window. Tap a
-    // landmark and the ribbon brings it to its seat — nearest COL_FRAC in
-    // IMAGE space, which is nearestColFromLeft's question asked of the finger
-    // instead of the plate. (Note this is deliberately NOT "tap left → go
-    // left": on the strip, Beam lives at the painting's left edge, so the
-    // beam line reads to the RIGHT of centre while Beam is seated. The tap
-    // follows the art, exactly as the drag does.)
-    const imgH = ribbonImg.offsetHeight || (ribbon.clientHeight || 70) * 0.76;
-    const imgW = imgH * RIBBON_ASPECT;
-    if (!(imgW > 0)) return null;
-    const f = (x - imgLeftFor(col, shade)) / imgW;
-    let best = 0, bd = Infinity;
-    for (let c = 0; c < 3; c++) {
-      const frac = (shade && c === 1) ? TRIANGLE_FRAC : COL_FRAC[c];
-      const d = Math.abs(f - frac);
-      if (d < bd) { bd = d; best = c; }
-    }
-    return best;
-  }
-  ribbon.addEventListener('click', e => {
-    if (swallowClick) return;   // a hold summoned the menu; that release is not a tap
-    if (dragMoved) return;      // the press travelled — it was a drag
-    const c = colFromTapX(e.clientX);
-    if (c !== null) goCol(c, true);
-  });
-  // zones: keyboard (Enter/Space) and programmatic (dtEdge) activation only.
-  // stopPropagation keeps a keyboard click from also reaching the ribbon
-  // handler above, where a synthetic clientX of 0 would pick the wrong column.
+  // ribbon click-zones → jump column (ignored if the press was a drag)
   ribbon.querySelectorAll('.ribbon-zone').forEach(z => z.addEventListener('click', e => {
     e.stopPropagation(); if (dragMoved) return; goCol(+z.dataset.col, true);
   }));
@@ -7796,13 +7731,9 @@ applyState(true);
       if (swallowClick) setTimeout(() => { swallowClick = false; }, 100);   // click (if any) lands first; never leave a stale swallow
     });
     ribbon.addEventListener('pointercancel', () => { holdCancel(true); swallowClick = false; });
-    // capture-phase swallow: kills the summoning release's default before any
-    // descendant sees it. It must NOT clear swallowClick — the ribbon's own
-    // bubble-phase tap handler reads the same flag, and at the target both
-    // phases run, so whichever fires first would otherwise disarm the other.
-    // One owner for the reset: the pointerup timeout below.
+    // capture-phase swallow: stops the .ribbon-zone target listener before it fires
     ribbon.addEventListener('click', e => {
-      if (swallowClick) { e.stopPropagation(); e.preventDefault(); }
+      if (swallowClick) { e.stopPropagation(); e.preventDefault(); swallowClick = false; }
     }, true);
     // no system context menu on the instrument (iOS long-press / desktop
     // right-click both land here) — the hold owns the long press
