@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-06T14:41:48.073Z · 40 legislative + 8 news (GDELT, 3d)
+// 2026-08-07T00:21:06.371Z · 40 legislative + 7 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1786027256553,
+    "ts": 1786062011033,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.775,
+      "salience": 0.773,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,11 +259,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1786027256553,
+    "ts": 1786062011033,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.766,
+      "salience": 0.765,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1786027256553,
+    "ts": 1786062011032,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.737,
+      "salience": 0.735,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1786027256553,
+    "ts": 1786062011033,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.721,
+      "salience": 0.72,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3256,11 +3256,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1786027256553,
+    "ts": 1786062011032,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.665,
+      "salience": 0.663,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4658,11 +4658,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1786027256553,
+    "ts": 1786062011033,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
-      "salience": 0.665,
+      "salience": 0.663,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
       "votes": [
         {
@@ -4932,11 +4932,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1786027256553,
+    "ts": 1786062011033,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.651,
+      "salience": 0.649,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5203,11 +5203,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1786027256552,
+    "ts": 1786062011032,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.64,
+      "salience": 0.638,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6605,11 +6605,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1786027256552,
+    "ts": 1786062011032,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.635,
+      "salience": 0.633,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -8007,11 +8007,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1786027256553,
+    "ts": 1786062011032,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.588,
+      "salience": 0.586,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -8941,11 +8941,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1786027256553,
+    "ts": 1786062011033,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.587,
+      "salience": 0.585,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -9217,11 +9217,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1041",
     "source": "legislative",
-    "ts": 1786027256552,
+    "ts": 1786062011031,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1041",
-      "salience": 0.578,
+      "salience": 0.576,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1041",
       "votes": [
         {
@@ -10614,11 +10614,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2616",
     "source": "legislative",
-    "ts": 1786027256552,
+    "ts": 1786062011031,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2616",
-      "salience": 0.575,
+      "salience": 0.573,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2616",
       "votes": [
         {
@@ -12008,11 +12008,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1786027256552,
+    "ts": 1786062011032,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
-      "salience": 0.571,
+      "salience": 0.57,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2913",
       "votes": [
         {
@@ -12940,11 +12940,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1786027256553,
+    "ts": 1786062011033,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.571,
+      "salience": 0.569,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -13216,11 +13216,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1786027256553,
+    "ts": 1786062011032,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
-      "salience": 0.568,
+      "salience": 0.567,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8312",
       "votes": [
         {
@@ -14149,11 +14149,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1786027256553,
+    "ts": 1786062011033,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.553,
+      "salience": 0.551,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -14540,11 +14540,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1786027256553,
+    "ts": 1786062011032,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.549,
+      "salience": 0.547,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -15473,11 +15473,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6260",
     "source": "legislative",
-    "ts": 1786027256551,
+    "ts": 1786062011030,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6260",
-      "salience": 0.546,
+      "salience": 0.544,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6260",
       "votes": [
         {
@@ -16875,11 +16875,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8365",
     "source": "legislative",
-    "ts": 1786027256551,
+    "ts": 1786062011031,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8365",
-      "salience": 0.546,
+      "salience": 0.544,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8365",
       "votes": [
         {
@@ -18277,11 +18277,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1346",
     "source": "legislative",
-    "ts": 1786027256551,
+    "ts": 1786062011030,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1346",
-      "salience": 0.528,
+      "salience": 0.527,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1346",
       "votes": [
         {
@@ -19677,11 +19677,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-141",
     "source": "legislative",
-    "ts": 1786027256553,
+    "ts": 1786062011033,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-141",
-      "salience": 0.51,
+      "salience": 0.508,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/141",
       "votes": [
         {
@@ -19953,11 +19953,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-132",
     "source": "legislative",
-    "ts": 1786027256553,
+    "ts": 1786062011033,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-132",
-      "salience": 0.492,
+      "salience": 0.49,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/132",
       "votes": [
         {
@@ -20229,11 +20229,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-130",
     "source": "legislative",
-    "ts": 1786027256553,
+    "ts": 1786062011033,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-130",
-      "salience": 0.483,
+      "salience": 0.481,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/130",
       "votes": [
         {
@@ -20505,11 +20505,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6047",
     "source": "legislative",
-    "ts": 1786027256552,
+    "ts": 1786062011032,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6047",
-      "salience": 0.482,
+      "salience": 0.48,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6047",
       "votes": [
         {
@@ -21430,11 +21430,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1786027256553,
+    "ts": 1786062011033,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.463,
+      "salience": 0.462,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -21681,11 +21681,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1786027256553,
+    "ts": 1786062011032,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.43,
+      "salience": 0.428,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -23084,11 +23084,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1786027256553,
+    "ts": 1786062011033,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.373,
+      "salience": 0.371,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -23977,11 +23977,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1786027256553,
+    "ts": 1786062011033,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.366,
+      "salience": 0.364,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -24892,11 +24892,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1786027256553,
+    "ts": 1786062011033,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.359,
+      "salience": 0.357,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -25780,11 +25780,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1786027256553,
+    "ts": 1786062011033,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.355,
+      "salience": 0.353,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -26701,11 +26701,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1786027256553,
+    "ts": 1786062011032,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.343,
+      "salience": 0.342,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -27619,11 +27619,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5625",
     "source": "legislative",
-    "ts": 1786027256551,
+    "ts": 1786062011030,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5625",
-      "salience": 0.308,
+      "salience": 0.306,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5625",
       "votes": [
         {
@@ -28554,11 +28554,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1786027256553,
+    "ts": 1786062011032,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.283,
+      "salience": 0.282,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -29453,11 +29453,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8469",
     "source": "legislative",
-    "ts": 1786027256551,
+    "ts": 1786062011031,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8469",
-      "salience": 0.278,
+      "salience": 0.276,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8469",
       "votes": [
         {
@@ -30855,11 +30855,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1786027256552,
+    "ts": 1786062011032,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.255,
+      "salience": 0.253,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -31789,11 +31789,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2853",
     "source": "legislative",
-    "ts": 1786027256551,
+    "ts": 1786062011030,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2853",
-      "salience": 0.185,
+      "salience": 0.183,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2853",
       "votes": [
         {
@@ -32707,11 +32707,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1786027256552,
+    "ts": 1786062011032,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
-      "salience": 0.18,
+      "salience": 0.179,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/254",
       "votes": [
         {
@@ -33636,11 +33636,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1786027256552,
+    "ts": 1786062011032,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
-      "salience": 0.178,
+      "salience": 0.176,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7618",
       "votes": [
         {
@@ -34545,11 +34545,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1786027256552,
+    "ts": 1786062011032,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
-      "salience": 0.173,
+      "salience": 0.171,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8466",
       "votes": [
         {
@@ -35418,103 +35418,273 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_committee-contempt-fauci",
+    "cid": "cand_news_birthright-citizenship-orders",
     "source": "news",
-    "ts": 1786027308063,
+    "ts": 1786062066362,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.997,
+      "salience": 0.998,
+      "articles": [
+        {
+          "title": "Trump signs executive orders targeting birthright citizenship",
+          "url": "https://www.10news.com/politics/immigration/trump-signs-executive-orders-targeting-birthright-citizenship",
+          "domain": "10news.com",
+          "seendate": "2026-08-07T00:00:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/ea/54/2891e24149638f307b64a5d0a420/ap26218737252631.jpg"
+        },
+        {
+          "title": "Trump signs executive orders targeting birthright citizenship",
+          "url": "https://www.kshb.com/politics/immigration/trump-signs-executive-orders-targeting-birthright-citizenship",
+          "domain": "kshb.com",
+          "seendate": "2026-08-06T23:45:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/ea/54/2891e24149638f307b64a5d0a420/ap26218737252631.jpg"
+        },
+        {
+          "title": "Trump signs executive orders targeting birthright citizenship ,  birth tourism  ",
+          "url": "https://www.kcci.com/article/trump-executive-orders-birthright-citizenship/73369822",
+          "domain": "kcci.com",
+          "seendate": "2026-08-06T23:45:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/47b8ffb1-1dff-487d-95f1-74ce33180892.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.154xh"
+        },
+        {
+          "title": "Trump signs orders to limit US birthright citizenship",
+          "url": "https://tucson.com/news/nation-world/government-politics/article_8060e71f-e584-5b16-bbf1-30e3503ac7a1.html",
+          "domain": "tucson.com",
+          "seendate": "2026-08-06T23:30:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/tucson.com/content/tncms/assets/v3/editorial/8/06/8060e71f-e584-5b16-bbf1-30e3503ac7a1/6a74f685ec61c.preview.jpg?crop=1762%2C992%2C0%2C141"
+        },
+        {
+          "title": "Trump signs executive orders targeting birthright citizenship ,  birth tourism  ",
+          "url": "https://www.wmur.com/article/trump-executive-orders-birthright-citizenship/73369822",
+          "domain": "wmur.com",
+          "seendate": "2026-08-06T23:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/47b8ffb1-1dff-487d-95f1-74ce33180892.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.154xh"
+        },
+        {
+          "title": "Trump signs executive orders targeting birthright citizenship ,  birth tourism  ",
+          "url": "https://www.kmbc.com/article/trump-executive-orders-birthright-citizenship/73369822",
+          "domain": "kmbc.com",
+          "seendate": "2026-08-06T23:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/47b8ffb1-1dff-487d-95f1-74ce33180892.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.154xh"
+        },
+        {
+          "title": "Trump signs executive orders targeting birthright citizenship",
+          "url": "https://www.katc.com/politics/immigration/trump-signs-executive-orders-targeting-birthright-citizenship",
+          "domain": "katc.com",
+          "seendate": "2026-08-06T23:00:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/ea/54/2891e24149638f307b64a5d0a420/ap26218737252631.jpg"
+        },
+        {
+          "title": "Trump signs executive orders targeting birthright citizenship",
+          "url": "https://www.wkbw.com/politics/immigration/trump-signs-executive-orders-targeting-birthright-citizenship",
+          "domain": "wkbw.com",
+          "seendate": "2026-08-06T22:15:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/ea/54/2891e24149638f307b64a5d0a420/ap26218737252631.jpg"
+        },
+        {
+          "title": "Trump signs executive orders targeting birthright citizenship",
+          "url": "https://www.kristv.com/politics/immigration/trump-signs-executive-orders-targeting-birthright-citizenship",
+          "domain": "kristv.com",
+          "seendate": "2026-08-06T22:15:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/ea/54/2891e24149638f307b64a5d0a420/ap26218737252631.jpg"
+        },
+        {
+          "title": "Trump signs executive orders targeting birthright citizenship ,  birth tourism  ",
+          "url": "https://www.wxii12.com/article/trump-executive-orders-birthright-citizenship/73369822",
+          "domain": "wxii12.com",
+          "seendate": "2026-08-06T21:15:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/47b8ffb1-1dff-487d-95f1-74ce33180892.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.154xh"
+        }
+      ]
+    },
+    "title": "Trump signs executive orders targeting birthright citizenship",
+    "summary": "2026-08-07 10news.com: Trump signs executive orders targeting birthright citizenship\n2026-08-06 kshb.com: Trump signs executive orders targeting birthright citizenship\n2026-08-06 kcci.com: Trump signs executive orders targeting birthright citizenship ,  birth tourism  \n2026-08-06 tucson.com: Trump signs orders to limit US birthright citizenship\n2026-08-06 wmur.com: Trump signs executive orders targeting birthright citizenship ,  birth tourism  \n2026-08-06 kmbc.com: Trump signs executive orders targeting birthright citizenship ,  birth tourism  ",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_committee-contempt-fauci",
+    "source": "news",
+    "ts": 1786062066362,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.963,
       "articles": [
         {
           "title": "Senate Committee Holds Dr . Fauci in Contempt of Congress",
-          "url": "https://us1035.iheart.com/content/2026-08-06-senate-committee-holds-dr-fauci-in-contempt-of-congress/",
-          "domain": "us1035.iheart.com",
-          "seendate": "2026-08-06T14:15:00Z",
+          "url": "https://991wqik.iheart.com/content/2026-08-06-senate-committee-holds-dr-fauci-in-contempt-of-congress/",
+          "domain": "991wqik.iheart.com",
+          "seendate": "2026-08-06T18:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a748bb50afdb96050e3bfb5?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Senate Committee Holds Dr . Fauci in Contempt of Congress | NewsRadio WIOD",
+          "url": "https://wiod.iheart.com/featured/florida-news/content/2026-08-06-senate-committee-holds-dr-fauci-in-contempt-of-congress/",
+          "domain": "wiod.iheart.com",
+          "seendate": "2026-08-06T18:30:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a748bb50afdb96050e3bfb5?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
           "title": "Senate Committee Holds Dr . Fauci in Contempt of Congress",
-          "url": "https://sunny985.iheart.com/content/2026-08-06-senate-committee-holds-dr-fauci-in-contempt-of-congress/",
-          "domain": "sunny985.iheart.com",
-          "seendate": "2026-08-06T14:15:00Z",
+          "url": "https://925wpap.iheart.com/content/2026-08-06-senate-committee-holds-dr-fauci-in-contempt-of-congress/",
+          "domain": "925wpap.iheart.com",
+          "seendate": "2026-08-06T18:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a748bb50afdb96050e3bfb5?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Senate Committee Holds Dr . Fauci in Contempt of Congress",
+          "url": "https://gatorrocks.iheart.com/content/2026-08-06-senate-committee-holds-dr-fauci-in-contempt-of-congress/",
+          "domain": "gatorrocks.iheart.com",
+          "seendate": "2026-08-06T18:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a748bb50afdb96050e3bfb5?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Senate Committee Holds Dr . Fauci in Contempt of Congress",
+          "url": "https://1230thegambler.iheart.com/content/2026-08-06-senate-committee-holds-dr-fauci-in-contempt-of-congress/",
+          "domain": "1230thegambler.iheart.com",
+          "seendate": "2026-08-06T17:30:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a748bb50afdb96050e3bfb5?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
           "title": "Senate Committee Holds Fauci In Contempt",
-          "url": "https://1440wgig.iheart.com/content/2026-08-06-senate-committee-holds-fauci-in-contempt/",
-          "domain": "1440wgig.iheart.com",
-          "seendate": "2026-08-06T14:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a748f5e1003898ad1166609?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Senate Committee Holds Fauci In Contempt | Newsradio WOOD 1300 and 106 . 9 FM",
-          "url": "https://woodradio.iheart.com/content/2026-08-06-senate-committee-holds-fauci-in-contempt/",
-          "domain": "woodradio.iheart.com",
-          "seendate": "2026-08-06T14:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a748f5e1003898ad1166609?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Senate Committee Holds Fauci In Contempt | NewsTalk 1240 WSFC",
-          "url": "https://wsfcam.iheart.com/content/2026-08-06-senate-committee-holds-fauci-in-contempt/",
-          "domain": "wsfcam.iheart.com",
-          "seendate": "2026-08-06T14:15:00Z",
+          "url": "https://veropatriot.iheart.com/content/2026-08-06-senate-committee-holds-fauci-in-contempt/",
+          "domain": "veropatriot.iheart.com",
+          "seendate": "2026-08-06T17:30:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a748f5e1003898ad1166609?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
           "title": "Senate Committee Holds Fauci In Contempt",
-          "url": "https://720thevoice.iheart.com/content/2026-08-06-senate-committee-holds-fauci-in-contempt/",
-          "domain": "720thevoice.iheart.com",
-          "seendate": "2026-08-06T14:15:00Z",
+          "url": "https://mywdia.iheart.com/content/2026-08-06-senate-committee-holds-fauci-in-contempt/",
+          "domain": "mywdia.iheart.com",
+          "seendate": "2026-08-06T17:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a748f5e1003898ad1166609?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Senate Committee Holds Fauci In Contempt",
+          "url": "https://powertalk967.iheart.com/content/2026-08-06-senate-committee-holds-fauci-in-contempt/",
+          "domain": "powertalk967.iheart.com",
+          "seendate": "2026-08-06T17:15:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a748f5e1003898ad1166609?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
           "title": "Senate Committee Holds Fauci In Contempt | Talk Radio 105 . 9",
-          "url": "https://knrs.iheart.com/content/2026-08-06-senate-committee-holds-fauci-in-contempt/",
-          "domain": "knrs.iheart.com",
-          "seendate": "2026-08-06T14:15:00Z",
+          "url": "https://talkradio1059.iheart.com/content/2026-08-06-senate-committee-holds-fauci-in-contempt/",
+          "domain": "talkradio1059.iheart.com",
+          "seendate": "2026-08-06T17:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a748f5e1003898ad1166609?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Senate Committee Holds Fauci In Contempt | NewsRadio 790 WAEB",
+          "url": "https://790waeb.iheart.com/content/2026-08-06-senate-committee-holds-fauci-in-contempt/",
+          "domain": "790waeb.iheart.com",
+          "seendate": "2026-08-06T17:15:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a748f5e1003898ad1166609?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
           "title": "Senate Committee Holds Fauci In Contempt",
-          "url": "https://wtkg.iheart.com/content/2026-08-06-senate-committee-holds-fauci-in-contempt/",
-          "domain": "wtkg.iheart.com",
-          "seendate": "2026-08-06T14:15:00Z",
+          "url": "https://wrko.iheart.com/content/2026-08-06-senate-committee-holds-fauci-in-contempt/",
+          "domain": "wrko.iheart.com",
+          "seendate": "2026-08-06T17:15:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a748f5e1003898ad1166609?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "Senate Committee Holds Dr . Fauci in Contempt of Congress | BIG 105 . 9",
-          "url": "https://big1059.iheart.com/featured/florida-news/content/2026-08-06-senate-committee-holds-dr-fauci-in-contempt-of-congress/",
-          "domain": "big1059.iheart.com",
-          "seendate": "2026-08-06T14:00:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a748bb50afdb96050e3bfb5?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Senate Committee Holds Dr . Fauci in Contempt of Congress",
-          "url": "https://933flz.iheart.com/content/2026-08-06-senate-committee-holds-dr-fauci-in-contempt-of-congress/",
-          "domain": "933flz.iheart.com",
-          "seendate": "2026-08-06T14:00:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a748bb50afdb96050e3bfb5?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Senate Committee Holds Dr . Fauci in Contempt of Congress | Kiss 95 . 1",
-          "url": "https://mykiss951.iheart.com/featured/florida-news/content/2026-08-06-senate-committee-holds-dr-fauci-in-contempt-of-congress/",
-          "domain": "mykiss951.iheart.com",
-          "seendate": "2026-08-06T14:00:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a748bb50afdb96050e3bfb5?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Senate Committee Holds Dr . Fauci in Contempt of Congress",
-          "url": "https://945rocks.iheart.com/content/2026-08-06-senate-committee-holds-dr-fauci-in-contempt-of-congress/",
-          "domain": "945rocks.iheart.com",
-          "seendate": "2026-08-06T14:00:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a748bb50afdb96050e3bfb5?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "Senate Committee Holds Fauci In Contempt | Newsradio 95 WXTK",
+          "url": "https://95wxtk.iheart.com/content/2026-08-06-senate-committee-holds-fauci-in-contempt/",
+          "domain": "95wxtk.iheart.com",
+          "seendate": "2026-08-06T17:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a748f5e1003898ad1166609?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         }
       ]
     },
     "title": "Senate Committee Votes On Fauci Contempt Thursday",
-    "summary": "2026-08-06 us1035.iheart.com: Senate Committee Holds Dr . Fauci in Contempt of Congress\n2026-08-06 sunny985.iheart.com: Senate Committee Holds Dr . Fauci in Contempt of Congress\n2026-08-06 1440wgig.iheart.com: Senate Committee Holds Fauci In Contempt\n2026-08-06 woodradio.iheart.com: Senate Committee Holds Fauci In Contempt | Newsradio WOOD 1300 and 106 . 9 FM\n2026-08-06 wsfcam.iheart.com: Senate Committee Holds Fauci In Contempt | NewsTalk 1240 WSFC\n2026-08-06 720thevoice.iheart.com: Senate Committee Holds Fauci In Contempt",
+    "summary": "2026-08-06 991wqik.iheart.com: Senate Committee Holds Dr . Fauci in Contempt of Congress\n2026-08-06 wiod.iheart.com: Senate Committee Holds Dr . Fauci in Contempt of Congress | NewsRadio WIOD\n2026-08-06 925wpap.iheart.com: Senate Committee Holds Dr . Fauci in Contempt of Congress\n2026-08-06 gatorrocks.iheart.com: Senate Committee Holds Dr . Fauci in Contempt of Congress\n2026-08-06 1230thegambler.iheart.com: Senate Committee Holds Dr . Fauci in Contempt of Congress\n2026-08-06 veropatriot.iheart.com: Senate Committee Holds Fauci In Contempt",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_answer-committee-contempt",
+    "source": "news",
+    "ts": 1786062066363,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.863,
+      "articles": [
+        {
+          "title": "The Latest : Senate committee votes to hold Fauci in contempt over refusal to answer questions",
+          "url": "http://www.thegazette.com/news/national/the-latest-senate-committee-votes-to-hold-fauci-in-contempt-over-refusal-to-answer-questions/article_cdc37568-2b3a-5d54-ae5d-136d8a96fdf9.html",
+          "domain": "thegazette.com",
+          "seendate": "2026-08-06T20:00:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/thegazette.com/content/tncms/assets/v3/editorial/1/dd/1dd72305-a2a5-56a1-91c2-9e8e9ff94607/6a747c29b3580.image.jpg?crop=6000%2C3150%2C0%2C425"
+        },
+        {
+          "title": "The Latest : Senate committee votes to hold Fauci in contempt over refusal to answer questions",
+          "url": "https://www.wral.com/news/ap/e1bf4-the-latest-senate-panel-will-vote-on-holding-fauci-in-contempt-for-refusing-to-answer-questions/",
+          "domain": "wral.com",
+          "seendate": "2026-08-06T18:15:00Z",
+          "image": "https://images.wral.com/76486156-ae59-5469-bccb-c9e32f1c55dd"
+        },
+        {
+          "title": "The Latest : Senate committee votes to hold Fauci in contempt over refusal to answer questions",
+          "url": "https://www.wboc.com/news/national/the-latest-senate-committee-votes-to-hold-fauci-in-contempt-over-refusal-to-answer-questions/article_85c776d6-2175-5533-89c0-5d870969110d.html",
+          "domain": "wboc.com",
+          "seendate": "2026-08-06T18:00:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/wboc.com/content/tncms/assets/v3/editorial/6/fa/6fa16a7a-1287-53da-965a-58b1904a9064/6a74c64edbc27.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
+        {
+          "title": "The Latest : Senate committee votes to hold Fauci in contempt over refusal to answer questions",
+          "url": "https://www.news4jax.com/news/politics/2026/08/06/the-latest-senate-panel-will-vote-on-holding-fauci-in-contempt-for-refusing-to-answer-questions/",
+          "domain": "news4jax.com",
+          "seendate": "2026-08-06T16:30:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/CMFTG4OIBFDH3CYEHWBR5MYYIA.jpg?_a=DATAg1kSZAA0"
+        },
+        {
+          "title": "The Latest : Senate committee votes to hold Fauci in contempt over refusal to answer questions",
+          "url": "https://www.local10.com/news/2026/08/06/the-latest-senate-committee-votes-to-hold-fauci-in-contempt-over-refusal-to-answer-questions/",
+          "domain": "local10.com",
+          "seendate": "2026-08-06T16:15:00Z",
+          "image": "https://www.local10.com/resizer/v2/65DFHDOESPJ5OFAHSCLWEQLY3A.jpg?auth=aaf9a9022a62972a1a2a12dbcbb207037e8ed97e29cff454dbd109cc4fbf1d16"
+        },
+        {
+          "title": "The Latest : Senate committee votes to hold Fauci in contempt over refusal to answer questions",
+          "url": "http://www.idahostatejournal.com/news/national/the-latest-senate-committee-votes-to-hold-fauci-in-contempt-over-refusal-to-answer-questions/article_d11a4b2e-dfe4-526c-80da-4acfbe3114d9.html",
+          "domain": "idahostatejournal.com",
+          "seendate": "2026-08-06T15:15:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/idahostatejournal.com/content/tncms/assets/v3/editorial/9/e8/9e847f7a-affa-5a26-9785-aed3db688fff/6a741cd96db10.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
+        {
+          "title": "The Latest : Senate committee votes to hold Fauci in contempt over refusal to answer questions",
+          "url": "https://www.clickondetroit.com/news/politics/2026/08/06/the-latest-senate-panel-will-vote-on-holding-fauci-in-contempt-for-refusing-to-answer-questions/",
+          "domain": "clickondetroit.com",
+          "seendate": "2026-08-06T15:15:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/CMFTG4OIBFDH3CYEHWBR5MYYIA.jpg?_a=DATAg1kSZAA0"
+        },
+        {
+          "title": "The Latest : Senate committee votes to hold Fauci in contempt over refusal to answer questions",
+          "url": "https://www.durangoherald.com/articles/associated-press/the-latest-senate-panel-will-vote-on-holding-fauci-in-contempt-for-refusing-to-answer-questions/",
+          "domain": "durangoherald.com",
+          "seendate": "2026-08-06T15:15:00Z",
+          "image": "https://www.durangoherald.com/wp-content/uploads/2026/08/64d0dc4a-348c-52ac-946e-5273708a4b3f.jpg"
+        }
+      ]
+    },
+    "title": "The Latest : Senate committee votes to hold Fauci in contempt over refusal to answer questions",
+    "summary": "2026-08-06 thegazette.com: The Latest : Senate committee votes to hold Fauci in contempt over refusal to answer questions\n2026-08-06 wral.com: The Latest : Senate committee votes to hold Fauci in contempt over refusal to answer questions\n2026-08-06 wboc.com: The Latest : Senate committee votes to hold Fauci in contempt over refusal to answer questions\n2026-08-06 news4jax.com: The Latest : Senate committee votes to hold Fauci in contempt over refusal to answer questions\n2026-08-06 local10.com: The Latest : Senate committee votes to hold Fauci in contempt over refusal to answer questions\n2026-08-06 idahostatejournal.com: The Latest : Senate committee votes to hold Fauci in contempt over refusal to answer questions",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -35526,12 +35696,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_states-sue-tariffs",
     "source": "news",
-    "ts": 1786027308061,
+    "ts": 1786062066358,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.714,
+      "salience": 0.544,
       "articles": [
         {
           "title": "25 states sue Trump administration over new tariffs – NBC Los Angeles",
@@ -35588,34 +35758,6 @@ window.PRISM_CANDIDATES = [
           "domain": "fox5atlanta.com",
           "seendate": "2026-08-04T00:30:00Z",
           "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/08/1280/720/gettyimages-2207587884-trump-tariff.jpg?ve=1&tl=1"
-        },
-        {
-          "title": "25 states sue to stop Trump administration latest tariffs",
-          "url": "https://www.fox10phoenix.com/news/25-states-sue-stop-trump-administrations-latest-tariffs",
-          "domain": "fox10phoenix.com",
-          "seendate": "2026-08-04T00:15:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/08/1280/720/gettyimages-2207587884-trump-tariff.jpg?ve=1&tl=1"
-        },
-        {
-          "title": "25 states sue to stop Trump administration latest tariffs",
-          "url": "https://www.fox5dc.com/news/25-states-sue-stop-trump-administrations-latest-tariffs",
-          "domain": "fox5dc.com",
-          "seendate": "2026-08-03T23:45:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/08/1280/720/gettyimages-2207587884-trump-tariff.jpg?ve=1&tl=1"
-        },
-        {
-          "title": "25 states sue over Trump administration latest tariffs , citing Supreme Court ruling",
-          "url": "https://www.dailypress.com/2026/08/03/tariffs-forced-labor-lawsuits/",
-          "domain": "dailypress.com",
-          "seendate": "2026-08-03T23:30:00Z",
-          "image": "https://www.dailypress.com/wp-content/uploads/2026/07/Trump_Tariffs_1_31__86e60d-1.jpg"
-        },
-        {
-          "title": "25 states sue over Trump administration latest tariffs , citing Supreme Court ruling",
-          "url": "https://www.whsv.com/2026/08/03/25-states-sue-over-trump-administrations-latest-tariffs-citing-supreme-court-ruling/",
-          "domain": "whsv.com",
-          "seendate": "2026-08-03T23:15:00Z",
-          "image": "https://gray-whsv-prod.gtv-cdn.com/resizer/v2/4RQR5QJBCZG25PINXESZX3254E.jpg?auth=7e4a0d6dfb1cd7cb8ae731589ee3d81ee61cb83a9522ebbe4effdcd195b480df&smart=true"
         }
       ]
     },
@@ -35630,128 +35772,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_acting-against-blanche",
-    "source": "news",
-    "ts": 1786027308065,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.685,
-      "articles": [
-        {
-          "title": "Fetterman reaffirms vote against acting AG Blanche confirmation",
-          "url": "https://komonews.com/news/nation-world/senator-john-fetterman-reaffirms-vote-against-acting-ag-attorney-general-todd-blanches-confirmation-doj-justice-department-president-trump",
-          "domain": "komonews.com",
-          "seendate": "2026-08-05T23:30:00Z",
-          "image": "https://komonews.com/resources/media2/16x9/6000/1320/0x1/90/dddd7ec4-02f5-42ce-b1e8-30388b9f10ed-GettyImages22881609401.jpg"
-        },
-        {
-          "title": "Fetterman reaffirms vote against acting AG Blanche confirmation",
-          "url": "https://13wham.com/news/nation-world/senator-john-fetterman-reaffirms-vote-against-acting-ag-attorney-general-todd-blanches-confirmation-doj-justice-department-president-trump",
-          "domain": "13wham.com",
-          "seendate": "2026-08-05T21:30:00Z",
-          "image": "https://13wham.com/resources/media2/16x9/6000/1320/0x1/90/dddd7ec4-02f5-42ce-b1e8-30388b9f10ed-GettyImages22881609401.jpg"
-        },
-        {
-          "title": "Fetterman reaffirms vote against acting AG Blanche confirmation",
-          "url": "https://wsbt.com/news/nation-world/senator-john-fetterman-reaffirms-vote-against-acting-ag-attorney-general-todd-blanches-confirmation-doj-justice-department-president-trump",
-          "domain": "wsbt.com",
-          "seendate": "2026-08-05T21:30:00Z",
-          "image": "https://wsbt.com/resources/media2/16x9/6000/1320/0x1/90/dddd7ec4-02f5-42ce-b1e8-30388b9f10ed-GettyImages22881609401.jpg"
-        },
-        {
-          "title": "Fetterman reaffirms vote against acting AG Blanche confirmation",
-          "url": "https://news3lv.com/news/nation-world/senator-john-fetterman-reaffirms-vote-against-acting-ag-attorney-general-todd-blanches-confirmation-doj-justice-department-president-trump",
-          "domain": "news3lv.com",
-          "seendate": "2026-08-05T21:30:00Z",
-          "image": "https://news3lv.com/resources/media2/16x9/6000/1320/0x1/90/dddd7ec4-02f5-42ce-b1e8-30388b9f10ed-GettyImages22881609401.jpg"
-        },
-        {
-          "title": "Fetterman reaffirms vote against acting AG Blanche confirmation",
-          "url": "https://wjla.com/news/nation-world/senator-john-fetterman-reaffirms-vote-against-acting-ag-attorney-general-todd-blanches-confirmation-doj-justice-department-president-trump",
-          "domain": "wjla.com",
-          "seendate": "2026-08-05T21:00:00Z",
-          "image": "https://wjla.com/resources/media2/16x9/6000/1320/0x1/90/dddd7ec4-02f5-42ce-b1e8-30388b9f10ed-GettyImages22881609401.jpg"
-        },
-        {
-          "title": "Fetterman reaffirms vote against acting AG Blanche confirmation",
-          "url": "https://fox23.com/news/nation-world/senator-john-fetterman-reaffirms-vote-against-acting-ag-attorney-general-todd-blanches-confirmation-doj-justice-department-president-trump",
-          "domain": "fox23.com",
-          "seendate": "2026-08-05T20:45:00Z",
-          "image": "https://fox23.com/resources/media2/16x9/6000/1320/0x1/90/dddd7ec4-02f5-42ce-b1e8-30388b9f10ed-GettyImages22881609401.jpg"
-        }
-      ]
-    },
-    "title": "Fetterman reaffirms vote against acting AG Blanche confirmation",
-    "summary": "2026-08-05 komonews.com: Fetterman reaffirms vote against acting AG Blanche confirmation\n2026-08-05 13wham.com: Fetterman reaffirms vote against acting AG Blanche confirmation\n2026-08-05 wsbt.com: Fetterman reaffirms vote against acting AG Blanche confirmation\n2026-08-05 news3lv.com: Fetterman reaffirms vote against acting AG Blanche confirmation\n2026-08-05 wjla.com: Fetterman reaffirms vote against acting AG Blanche confirmation\n2026-08-05 fox23.com: Fetterman reaffirms vote against acting AG Blanche confirmation",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_answer-contempt-covid",
-    "source": "news",
-    "ts": 1786027308065,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.666,
-      "articles": [
-        {
-          "title": "Dr . Fauci held in contempt for refusing to answer COVID questions",
-          "url": "https://www.kcci.com/article/senate-vote-fauci-contempt-covid/73364597",
-          "domain": "kcci.com",
-          "seendate": "2026-08-06T14:00:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/9eff49d1-ba90-4cb2-bddd-cf1d423b63d7.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.113xh"
-        },
-        {
-          "title": "Dr . Fauci held in contempt for refusing to answer COVID questions",
-          "url": "https://www.kmbc.com/article/senate-vote-fauci-contempt-covid/73364597",
-          "domain": "kmbc.com",
-          "seendate": "2026-08-06T14:00:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/9eff49d1-ba90-4cb2-bddd-cf1d423b63d7.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.113xh"
-        },
-        {
-          "title": "Dr . Fauci held in contempt for refusing to answer COVID questions",
-          "url": "https://www.wmur.com/article/senate-vote-fauci-contempt-covid/73364597",
-          "domain": "wmur.com",
-          "seendate": "2026-08-06T13:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/9eff49d1-ba90-4cb2-bddd-cf1d423b63d7.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.113xh"
-        },
-        {
-          "title": "Dr . Fauci held in contempt for refusing to answer COVID questions",
-          "url": "https://www.wmtw.com/article/senate-vote-fauci-contempt-covid/73364597",
-          "domain": "wmtw.com",
-          "seendate": "2026-08-06T13:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/9eff49d1-ba90-4cb2-bddd-cf1d423b63d7.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.113xh"
-        }
-      ]
-    },
-    "title": "Dr . Fauci held in contempt for refusing to answer COVID questions",
-    "summary": "2026-08-06 kcci.com: Dr . Fauci held in contempt for refusing to answer COVID questions\n2026-08-06 kmbc.com: Dr . Fauci held in contempt for refusing to answer COVID questions\n2026-08-06 wmur.com: Dr . Fauci held in contempt for refusing to answer COVID questions\n2026-08-06 wmtw.com: Dr . Fauci held in contempt for refusing to answer COVID questions",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_avert-deal-election",
     "source": "news",
-    "ts": 1786027308064,
+    "ts": 1786062066362,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.614,
+      "salience": 0.499,
       "articles": [
         {
           "title": "Senate Leaders Reach Deal To Avert Pre - Election Government Shutdown",
@@ -35815,27 +35843,6 @@ window.PRISM_CANDIDATES = [
           "domain": "moose106.iheart.com",
           "seendate": "2026-08-04T00:30:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/672aee8a05e76e608814ac84?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Senate Leaders Reach Deal To Avert Pre - Election Government Shutdown",
-          "url": "https://newsradio1170.iheart.com/content/2026-08-03-senate-leaders-reach-deal-to-avert-pre-election-government-shutdown/",
-          "domain": "newsradio1170.iheart.com",
-          "seendate": "2026-08-04T00:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/672aee8a05e76e608814ac84?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Senate Leaders Reach Deal To Avert Pre - Election Government Shutdown | Newsradio WOOD 1300 and 106 . 9 FM",
-          "url": "https://woodradio.iheart.com/content/2026-08-03-senate-leaders-reach-deal-to-avert-pre-election-government-shutdown/",
-          "domain": "woodradio.iheart.com",
-          "seendate": "2026-08-04T00:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/672aee8a05e76e608814ac84?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Senate Leaders Reach Deal To Avert Pre - Election Government Shutdown",
-          "url": "https://720thevoice.iheart.com/content/2026-08-03-senate-leaders-reach-deal-to-avert-pre-election-government-shutdown/",
-          "domain": "720thevoice.iheart.com",
-          "seendate": "2026-08-04T00:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/672aee8a05e76e608814ac84?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         }
       ]
     },
@@ -35852,12 +35859,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_administration-anti-congress",
     "source": "news",
-    "ts": 1786027308064,
+    "ts": 1786062066363,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.556,
+      "salience": 0.496,
       "articles": [
         {
           "title": "Trump administration presses Congress to expand anti - fraud efforts targeting Medicare",
@@ -35902,12 +35909,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_calling-his-old",
     "source": "news",
-    "ts": 1786027308061,
+    "ts": 1786062066358,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.496,
+      "salience": 0.326,
       "articles": [
         {
           "title": "25 states sue over Trump new tariffs , calling them  pretext  to replace his old ones",
@@ -35943,82 +35950,11 @@ window.PRISM_CANDIDATES = [
           "domain": "wsls.com",
           "seendate": "2026-08-04T00:30:00Z",
           "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/ZILWSQPMNFESJCHW6S72VT7SKE.jpg?_a=DATAg1kSZAA0"
-        },
-        {
-          "title": "25 states sue over Trump new tariffs , calling them  pretext  to replace his old ones",
-          "url": "https://abcnews.com/Business/wireStory/25-states-sue-trumps-new-tariffs-calling-pretext-135336323",
-          "domain": "abcnews.com",
-          "seendate": "2026-08-03T23:45:00Z",
-          "image": "https://i.abcnewsfe.com/a/a66f76f7-98b1-4197-8f73-d562dfe077c1/wirestory_120895adbee7ae06157cd5f4bf5c7583_16x9.jpg"
-        },
-        {
-          "title": "25 states sue over Trump new tariffs , calling them  pretext  to replace his old ones",
-          "url": "https://www.news4jax.com/business/2026/08/03/25-states-sue-over-trump-administrations-latest-tariffs-citing-supreme-court-ruling/",
-          "domain": "news4jax.com",
-          "seendate": "2026-08-03T23:15:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/ZILWSQPMNFESJCHW6S72VT7SKE.jpg?_a=DATAg1kSZAA0"
         }
       ]
     },
     "title": "25 states sue over Trump new tariffs , calling them  pretext  to replace his old ones",
-    "summary": "2026-08-04 nbcnews.com: 25 states sue over Trump new tariffs , calling them  pretext  to replace his old ones\n2026-08-04 whec.com: 25 states sue over Trump new tariffs , calling them  pretext  to replace his old ones\n2026-08-04 kob.com: 25 states sue over Trump new tariffs , calling them  pretext  to replace his old ones\n2026-08-04 click2houston.com: 25 states sue over Trump new tariffs , calling them  pretext  to replace his old ones\n2026-08-04 wsls.com: 25 states sue over Trump new tariffs , calling them  pretext  to replace his old ones\n2026-08-03 abcnews.com: 25 states sue over Trump new tariffs , calling them  pretext  to replace his old ones",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_avoid-campaign-deal",
-    "source": "news",
-    "ts": 1786027308065,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.36,
-      "articles": [
-        {
-          "title": "Senate leaders reach funding deal to avoid shutdown in campaign season",
-          "url": "https://www.dailybreeze.com/2026/08/03/senate-funding-deal-campaign-season/",
-          "domain": "dailybreeze.com",
-          "seendate": "2026-08-04T04:15:00Z",
-          "image": "https://www.dailybreeze.com/wp-content/uploads/2026/08/Congress_51151.jpg"
-        },
-        {
-          "title": "Senate leaders reach funding deal to avoid shutdown during campaign season",
-          "url": "https://www.thetimesnews.com/senate-leaders-reach-funding-deal-to-avoid-shutdown-during-campaign-season/article_d818ab65-5bbe-52c5-9efe-5c3c745d141d.html",
-          "domain": "thetimesnews.com",
-          "seendate": "2026-08-04T00:00:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/thetimesnews.com/content/tncms/custom/image/95f3a09e-983c-11ed-8535-4784d3c189d2.png"
-        },
-        {
-          "title": "Senate leaders reach funding deal to avoid shutdown in campaign season",
-          "url": "https://www.dailynews.com/2026/08/03/senate-funding-deal-campaign-season/",
-          "domain": "dailynews.com",
-          "seendate": "2026-08-03T17:00:00Z",
-          "image": "https://www.dailynews.com/wp-content/uploads/2026/08/Congress_51151.jpg"
-        },
-        {
-          "title": "Senate leaders reach funding deal to avoid shutdown in campaign season",
-          "url": "https://www.pasadenastarnews.com/2026/08/03/senate-funding-deal-campaign-season/",
-          "domain": "pasadenastarnews.com",
-          "seendate": "2026-08-03T16:15:00Z",
-          "image": "https://www.pasadenastarnews.com/wp-content/uploads/2026/08/Congress_51151.jpg"
-        },
-        {
-          "title": "Senate leaders reach funding deal to avoid shutdown in campaign season",
-          "url": "https://www.pilotonline.com/2026/08/03/senate-funding-deal-campaign-season/",
-          "domain": "pilotonline.com",
-          "seendate": "2026-08-03T15:45:00Z",
-          "image": "https://www.pilotonline.com/wp-content/uploads/2026/08/Congress_51151.jpg"
-        }
-      ]
-    },
-    "title": "Senate leaders reach funding deal to avoid shutdown in campaign season",
-    "summary": "2026-08-04 dailybreeze.com: Senate leaders reach funding deal to avoid shutdown in campaign season\n2026-08-04 thetimesnews.com: Senate leaders reach funding deal to avoid shutdown during campaign season\n2026-08-03 dailynews.com: Senate leaders reach funding deal to avoid shutdown in campaign season\n2026-08-03 pasadenastarnews.com: Senate leaders reach funding deal to avoid shutdown in campaign season\n2026-08-03 pilotonline.com: Senate leaders reach funding deal to avoid shutdown in campaign season",
+    "summary": "2026-08-04 nbcnews.com: 25 states sue over Trump new tariffs , calling them  pretext  to replace his old ones\n2026-08-04 whec.com: 25 states sue over Trump new tariffs , calling them  pretext  to replace his old ones\n2026-08-04 kob.com: 25 states sue over Trump new tariffs , calling them  pretext  to replace his old ones\n2026-08-04 click2houston.com: 25 states sue over Trump new tariffs , calling them  pretext  to replace his old ones\n2026-08-04 wsls.com: 25 states sue over Trump new tariffs , calling them  pretext  to replace his old ones",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
