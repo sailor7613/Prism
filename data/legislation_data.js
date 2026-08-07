@@ -3031,7 +3031,7 @@ const LEGISLATION_DATA = [
     "name": "SEED Act",
     "meta": "H.R. 5334 · Passed House · Tax Policy",
     "id": "hr-119-5334",
-    "rc": 2,
+    "rc": 3,
     "mm": 0.75
   },
   {
