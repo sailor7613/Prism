@@ -3741,7 +3741,7 @@ const LEGISLATION_DATA = [
     "name": "AGOA Extension Act",
     "meta": "H.R. 6500 · Passed House · Trade",
     "id": "hr-119-6500",
-    "rc": 2,
+    "rc": 3,
     "mm": 0.726
   },
   {
