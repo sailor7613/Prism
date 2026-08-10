@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-10T05:00:16.779Z · 40 legislative + 6 news (GDELT, 3d)
+// 2026-08-10T08:10:39.860Z · 40 legislative + 6 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1786337980248,
+    "ts": 1786349418843,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.759,
+      "salience": 0.758,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,7 +259,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1786337980248,
+    "ts": 1786349418843,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
@@ -532,7 +532,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1786337980248,
+    "ts": 1786349418843,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
@@ -2843,7 +2843,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1786337980248,
+    "ts": 1786349418843,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
@@ -3254,13 +3254,287 @@ window.PRISM_CANDIDATES = [
     "mts": 1784784262612
   },
   {
+    "cid": "cand_leg_sjres-119-196",
+    "source": "legislative",
+    "ts": 1786349418843,
+    "raw": {
+      "method": "legislative_rollcall_v1",
+      "billId": "sjres-119-196",
+      "salience": 0.649,
+      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
+      "votes": [
+        {
+          "voteId": "s-119-2-190",
+          "chamber": "senate",
+          "date": "June 24, 2026,  09:16 PM",
+          "question": "On the Motion to Proceed",
+          "result": "Motion to Proceed Rejected",
+          "margin": -0.072,
+          "totals": {
+            "yea": 45,
+            "nay": 52,
+            "present": 0,
+            "notVoting": 3
+          },
+          "party": {
+            "D": {
+              "yea": 43,
+              "nay": 0
+            },
+            "R": {
+              "yea": 0,
+              "nay": 52
+            },
+            "I": {
+              "yea": 2,
+              "nay": 0
+            }
+          },
+          "positions": {
+            "yea": [
+              "A000382",
+              "B001230",
+              "B001277",
+              "B001303",
+              "B001288",
+              "C000127",
+              "C001088",
+              "C001113",
+              "D000622",
+              "D000563",
+              "F000479",
+              "G000574",
+              "G000555",
+              "H001076",
+              "H001046",
+              "H000273",
+              "H001042",
+              "K000384",
+              "K000377",
+              "K000394",
+              "K000383",
+              "K000367",
+              "M000133",
+              "M001176",
+              "M001169",
+              "M001111",
+              "O000174",
+              "P000145",
+              "P000595",
+              "R000122",
+              "R000608",
+              "S000033",
+              "S001194",
+              "S001150",
+              "S000148",
+              "S001208",
+              "S001203",
+              "V000128",
+              "W000805",
+              "W000790",
+              "W000817",
+              "W000800",
+              "W000802",
+              "W000779"
+            ],
+            "nay": [
+              "B001299",
+              "B001261",
+              "B001243",
+              "B001236",
+              "B001319",
+              "B001305",
+              "C001047",
+              "C001075",
+              "C001035",
+              "C001056",
+              "C001095",
+              "C001096",
+              "C000880",
+              "C001098",
+              "C001114",
+              "D000618",
+              "E000295",
+              "F000463",
+              "G000359",
+              "G000386",
+              "H000601",
+              "H001089",
+              "H001061",
+              "H001104",
+              "H001079",
+              "J000293",
+              "J000312",
+              "K000393",
+              "L000575",
+              "L000577",
+              "L000571",
+              "M001198",
+              "M001243",
+              "M001244",
+              "M000934",
+              "M001242",
+              "M001153",
+              "P000603",
+              "R000618",
+              "R000584",
+              "R000605",
+              "S001227",
+              "S001217",
+              "S001184",
+              "S001232",
+              "S001198",
+              "T000250",
+              "T000476",
+              "T000278",
+              "W000437",
+              "Y000064"
+            ],
+            "present": [],
+            "notVoting": [
+              "B001267",
+              "M000355",
+              "S001181"
+            ]
+          }
+        }
+      ]
+    },
+    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
+    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
+    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Disapprove rule",
+        "neg": "Uphold rule"
+      },
+      "y": {
+        "pos": "Executive overreach",
+        "neg": "Agency discretion legitimate"
+      }
+    },
+    "prevalentAxisGuess": "x",
+    "members": [
+      "A000382",
+      "B001230",
+      "B001277",
+      "B001303",
+      "B001288",
+      "C000127",
+      "C001088",
+      "C001113",
+      "D000622",
+      "D000563",
+      "F000479",
+      "G000574",
+      "G000555",
+      "H001076",
+      "H001046",
+      "H000273",
+      "H001042",
+      "K000384",
+      "K000377",
+      "K000394",
+      "K000383",
+      "K000367",
+      "M000133",
+      "M001176",
+      "M001169",
+      "M001111",
+      "O000174",
+      "P000145",
+      "P000595",
+      "R000122",
+      "R000608",
+      "S000033",
+      "S001194",
+      "S001150",
+      "S000148",
+      "S001208",
+      "S001203",
+      "V000128",
+      "W000805",
+      "W000790",
+      "W000817",
+      "W000800",
+      "W000802",
+      "W000779",
+      "B001299",
+      "B001261",
+      "B001243",
+      "B001236",
+      "B001319",
+      "B001305",
+      "C001047",
+      "C001075",
+      "C001035",
+      "C001056",
+      "C001095",
+      "C001096",
+      "C000880",
+      "C001098",
+      "C001114",
+      "D000618",
+      "E000295",
+      "F000463",
+      "G000359",
+      "G000386",
+      "H000601",
+      "H001089",
+      "H001061",
+      "H001104",
+      "H001079",
+      "J000293",
+      "J000312",
+      "K000393",
+      "L000575",
+      "L000577",
+      "L000571",
+      "M001198",
+      "M001243",
+      "M001244",
+      "M000934",
+      "M001242",
+      "M001153",
+      "P000603",
+      "R000618",
+      "R000584",
+      "R000605",
+      "S001227",
+      "S001217",
+      "S001184",
+      "S001232",
+      "S001198",
+      "T000250",
+      "T000476",
+      "T000278",
+      "W000437",
+      "Y000064"
+    ],
+    "bills": [
+      "sjres-119-196"
+    ],
+    "fitness": {
+      "score": 0.3,
+      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:28:30.038Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "s-119-2-190",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297586
+  },
+  {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1786337980248,
+    "ts": 1786349418843,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.649,
+      "salience": 0.648,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4656,287 +4930,13 @@ window.PRISM_CANDIDATES = [
     "mts": 1784044297586
   },
   {
-    "cid": "cand_leg_sjres-119-196",
-    "source": "legislative",
-    "ts": 1786337980248,
-    "raw": {
-      "method": "legislative_rollcall_v1",
-      "billId": "sjres-119-196",
-      "salience": 0.649,
-      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
-      "votes": [
-        {
-          "voteId": "s-119-2-190",
-          "chamber": "senate",
-          "date": "June 24, 2026,  09:16 PM",
-          "question": "On the Motion to Proceed",
-          "result": "Motion to Proceed Rejected",
-          "margin": -0.072,
-          "totals": {
-            "yea": 45,
-            "nay": 52,
-            "present": 0,
-            "notVoting": 3
-          },
-          "party": {
-            "D": {
-              "yea": 43,
-              "nay": 0
-            },
-            "R": {
-              "yea": 0,
-              "nay": 52
-            },
-            "I": {
-              "yea": 2,
-              "nay": 0
-            }
-          },
-          "positions": {
-            "yea": [
-              "A000382",
-              "B001230",
-              "B001277",
-              "B001303",
-              "B001288",
-              "C000127",
-              "C001088",
-              "C001113",
-              "D000622",
-              "D000563",
-              "F000479",
-              "G000574",
-              "G000555",
-              "H001076",
-              "H001046",
-              "H000273",
-              "H001042",
-              "K000384",
-              "K000377",
-              "K000394",
-              "K000383",
-              "K000367",
-              "M000133",
-              "M001176",
-              "M001169",
-              "M001111",
-              "O000174",
-              "P000145",
-              "P000595",
-              "R000122",
-              "R000608",
-              "S000033",
-              "S001194",
-              "S001150",
-              "S000148",
-              "S001208",
-              "S001203",
-              "V000128",
-              "W000805",
-              "W000790",
-              "W000817",
-              "W000800",
-              "W000802",
-              "W000779"
-            ],
-            "nay": [
-              "B001299",
-              "B001261",
-              "B001243",
-              "B001236",
-              "B001319",
-              "B001305",
-              "C001047",
-              "C001075",
-              "C001035",
-              "C001056",
-              "C001095",
-              "C001096",
-              "C000880",
-              "C001098",
-              "C001114",
-              "D000618",
-              "E000295",
-              "F000463",
-              "G000359",
-              "G000386",
-              "H000601",
-              "H001089",
-              "H001061",
-              "H001104",
-              "H001079",
-              "J000293",
-              "J000312",
-              "K000393",
-              "L000575",
-              "L000577",
-              "L000571",
-              "M001198",
-              "M001243",
-              "M001244",
-              "M000934",
-              "M001242",
-              "M001153",
-              "P000603",
-              "R000618",
-              "R000584",
-              "R000605",
-              "S001227",
-              "S001217",
-              "S001184",
-              "S001232",
-              "S001198",
-              "T000250",
-              "T000476",
-              "T000278",
-              "W000437",
-              "Y000064"
-            ],
-            "present": [],
-            "notVoting": [
-              "B001267",
-              "M000355",
-              "S001181"
-            ]
-          }
-        }
-      ]
-    },
-    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
-    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
-    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
-    "suggestedAxes": {
-      "x": {
-        "pos": "Disapprove rule",
-        "neg": "Uphold rule"
-      },
-      "y": {
-        "pos": "Executive overreach",
-        "neg": "Agency discretion legitimate"
-      }
-    },
-    "prevalentAxisGuess": "x",
-    "members": [
-      "A000382",
-      "B001230",
-      "B001277",
-      "B001303",
-      "B001288",
-      "C000127",
-      "C001088",
-      "C001113",
-      "D000622",
-      "D000563",
-      "F000479",
-      "G000574",
-      "G000555",
-      "H001076",
-      "H001046",
-      "H000273",
-      "H001042",
-      "K000384",
-      "K000377",
-      "K000394",
-      "K000383",
-      "K000367",
-      "M000133",
-      "M001176",
-      "M001169",
-      "M001111",
-      "O000174",
-      "P000145",
-      "P000595",
-      "R000122",
-      "R000608",
-      "S000033",
-      "S001194",
-      "S001150",
-      "S000148",
-      "S001208",
-      "S001203",
-      "V000128",
-      "W000805",
-      "W000790",
-      "W000817",
-      "W000800",
-      "W000802",
-      "W000779",
-      "B001299",
-      "B001261",
-      "B001243",
-      "B001236",
-      "B001319",
-      "B001305",
-      "C001047",
-      "C001075",
-      "C001035",
-      "C001056",
-      "C001095",
-      "C001096",
-      "C000880",
-      "C001098",
-      "C001114",
-      "D000618",
-      "E000295",
-      "F000463",
-      "G000359",
-      "G000386",
-      "H000601",
-      "H001089",
-      "H001061",
-      "H001104",
-      "H001079",
-      "J000293",
-      "J000312",
-      "K000393",
-      "L000575",
-      "L000577",
-      "L000571",
-      "M001198",
-      "M001243",
-      "M001244",
-      "M000934",
-      "M001242",
-      "M001153",
-      "P000603",
-      "R000618",
-      "R000584",
-      "R000605",
-      "S001227",
-      "S001217",
-      "S001184",
-      "S001232",
-      "S001198",
-      "T000250",
-      "T000476",
-      "T000278",
-      "W000437",
-      "Y000064"
-    ],
-    "bills": [
-      "sjres-119-196"
-    ],
-    "fitness": {
-      "score": 0.3,
-      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
-      "method": "m2_constitutive_v1",
-      "ts": "2026-07-14T04:28:30.038Z"
-    },
-    "status": "new",
-    "voteMap": {
-      "voteId": "s-119-2-190",
-      "yeaPole": "pos"
-    },
-    "mts": 1784044297586
-  },
-  {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1786337980248,
+    "ts": 1786349418843,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.635,
+      "salience": 0.634,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5203,11 +5203,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1786337980248,
+    "ts": 1786349418843,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.624,
+      "salience": 0.623,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6605,11 +6605,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1786337980248,
+    "ts": 1786349418843,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.619,
+      "salience": 0.618,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -8007,7 +8007,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1786337980249,
+    "ts": 1786349418844,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
@@ -8534,11 +8534,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1786337980248,
+    "ts": 1786349418843,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.572,
+      "salience": 0.571,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -9468,7 +9468,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1786337980248,
+    "ts": 1786349418843,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
@@ -9744,11 +9744,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1041",
     "source": "legislative",
-    "ts": 1786337980247,
+    "ts": 1786349418842,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1041",
-      "salience": 0.562,
+      "salience": 0.561,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1041",
       "votes": [
         {
@@ -11141,11 +11141,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2616",
     "source": "legislative",
-    "ts": 1786337980247,
+    "ts": 1786349418842,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2616",
-      "salience": 0.559,
+      "salience": 0.558,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2616",
       "votes": [
         {
@@ -12535,7 +12535,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1786337980248,
+    "ts": 1786349418843,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
@@ -13467,11 +13467,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1786337980248,
+    "ts": 1786349418843,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.555,
+      "salience": 0.554,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -13743,7 +13743,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1786337980248,
+    "ts": 1786349418843,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
@@ -14676,7 +14676,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1786337980248,
+    "ts": 1786349418843,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
@@ -15609,11 +15609,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6260",
     "source": "legislative",
-    "ts": 1786337980247,
+    "ts": 1786349418842,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6260",
-      "salience": 0.53,
+      "salience": 0.529,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6260",
       "votes": [
         {
@@ -17011,11 +17011,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8365",
     "source": "legislative",
-    "ts": 1786337980247,
+    "ts": 1786349418842,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8365",
-      "salience": 0.53,
+      "salience": 0.529,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8365",
       "votes": [
         {
@@ -18413,7 +18413,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1786337980249,
+    "ts": 1786349418844,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
@@ -18805,7 +18805,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1346",
     "source": "legislative",
-    "ts": 1786337980246,
+    "ts": 1786349418841,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1346",
@@ -20205,7 +20205,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-141",
     "source": "legislative",
-    "ts": 1786337980248,
+    "ts": 1786349418843,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-141",
@@ -20481,11 +20481,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-132",
     "source": "legislative",
-    "ts": 1786337980248,
+    "ts": 1786349418843,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-132",
-      "salience": 0.476,
+      "salience": 0.475,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/132",
       "votes": [
         {
@@ -20757,7 +20757,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-130",
     "source": "legislative",
-    "ts": 1786337980248,
+    "ts": 1786349418843,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-130",
@@ -21033,11 +21033,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6047",
     "source": "legislative",
-    "ts": 1786337980247,
+    "ts": 1786349418842,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6047",
-      "salience": 0.466,
+      "salience": 0.465,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6047",
       "votes": [
         {
@@ -21958,11 +21958,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1786337980248,
+    "ts": 1786349418843,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.414,
+      "salience": 0.413,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -23361,11 +23361,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1786337980248,
+    "ts": 1786349418844,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.357,
+      "salience": 0.356,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -24254,11 +24254,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1786337980249,
+    "ts": 1786349418844,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.35,
+      "salience": 0.349,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -25169,7 +25169,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1786337980248,
+    "ts": 1786349418844,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
@@ -26057,11 +26057,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1786337980248,
+    "ts": 1786349418843,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.339,
+      "salience": 0.338,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -26978,7 +26978,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1786337980248,
+    "ts": 1786349418843,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
@@ -27896,11 +27896,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5625",
     "source": "legislative",
-    "ts": 1786337980247,
+    "ts": 1786349418842,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5625",
-      "salience": 0.292,
+      "salience": 0.291,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5625",
       "votes": [
         {
@@ -28831,7 +28831,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1786337980248,
+    "ts": 1786349418843,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
@@ -29730,11 +29730,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8469",
     "source": "legislative",
-    "ts": 1786337980247,
+    "ts": 1786349418842,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8469",
-      "salience": 0.262,
+      "salience": 0.261,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8469",
       "votes": [
         {
@@ -31132,11 +31132,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1786337980247,
+    "ts": 1786349418843,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.239,
+      "salience": 0.238,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -32066,11 +32066,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1786337980247,
+    "ts": 1786349418842,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
-      "salience": 0.165,
+      "salience": 0.164,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/254",
       "votes": [
         {
@@ -32995,7 +32995,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1786337980247,
+    "ts": 1786349418842,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
@@ -33904,11 +33904,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1786337980248,
+    "ts": 1786349418843,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
-      "salience": 0.157,
+      "salience": 0.156,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8466",
       "votes": [
         {
@@ -34779,11 +34779,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1786337980248,
+    "ts": 1786349418843,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
-      "salience": 0.157,
+      "salience": 0.156,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8428",
       "votes": [
         {
@@ -35663,101 +35663,101 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_counsel-scharf-trump",
     "source": "news",
-    "ts": 1786338016769,
+    "ts": 1786349439851,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.995,
+      "salience": 0.997,
       "articles": [
         {
-          "title": "Trump announces Will Scharf as new White House counsel",
-          "url": "https://www.upi.com/Top_News/US/2026/08/09/Trump-names-Will-Scharf-White-House-counsel/9791786326947/",
-          "domain": "upi.com",
-          "seendate": "2026-08-10T04:15:00Z",
-          "image": "https://cdnph.upi.com/sv/ph/og/upi/9791786326947/2026/1/3f83fcb516eeb1e106204e5f78632bb3/v1.5/Trump-announces-Will-Scharf-as-new-White-House-counsel.jpg"
+          "title": "President Trump announces Will Scharf as new White House counsel – NBC Bay Area",
+          "url": "https://www.nbcbayarea.com/news/national-international/trump-will-scharf-new-white-house-counsel/4125913/",
+          "domain": "nbcbayarea.com",
+          "seendate": "2026-08-10T07:45:00Z",
+          "image": "https://media.nbcbayarea.com/2026/08/AP26221856820082.jpg?quality=85&strip=all&crop=0px%2C184px%2C4710px%2C2649px"
         },
         {
-          "title": "Trump Names Scharf New WH Counsel | Talk 650 KSTE",
-          "url": "https://kste.iheart.com/content/2026-08-10-trump-names-scharf-new-wh-counsel/",
-          "domain": "kste.iheart.com",
-          "seendate": "2026-08-10T04:15:00Z",
+          "title": "Trump Names Scharf New WH Counsel",
+          "url": "https://wiba.iheart.com/content/2026-08-10-trump-names-scharf-new-wh-counsel/",
+          "domain": "wiba.iheart.com",
+          "seendate": "2026-08-10T06:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a79247bc977079c89a4fb0a?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Trump Names Scharf New WH Counsel | News Radio 101 . 9 Big WAAX",
+          "url": "https://1019bigwaax.iheart.com/content/2026-08-10-trump-names-scharf-new-wh-counsel/",
+          "domain": "1019bigwaax.iheart.com",
+          "seendate": "2026-08-10T06:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a79247bc977079c89a4fb0a?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Trump Names Scharf New WH Counsel | News Radio 540",
+          "url": "https://newsradio540.iheart.com/content/2026-08-10-trump-names-scharf-new-wh-counsel/",
+          "domain": "newsradio540.iheart.com",
+          "seendate": "2026-08-10T06:00:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a79247bc977079c89a4fb0a?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
           "title": "Trump Names Scharf New WH Counsel",
-          "url": "https://knst.iheart.com/content/2026-08-10-trump-names-scharf-new-wh-counsel/",
-          "domain": "knst.iheart.com",
-          "seendate": "2026-08-10T04:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a79247bc977079c89a4fb0a?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Trump announces Will Scharf as new White House counsel",
-          "url": "https://www.yahoo.com/news/politics/articles/trump-announces-scharf-white-house-031839193.html",
-          "domain": "yahoo.com",
-          "seendate": "2026-08-10T04:00:00Z",
-          "image": "https://s.yimg.com/lo/mysterio/api/8f5bbbd9c18ccfdaa2aba831ef436cd8bacc2a523358f58902be97bbe86d7e0f/lightyear_networkapi/resizefill_w800_h534%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Funited_press_international_articles_356%2F7b5ca5dad2375b8b6b0e65fafc238ca9"
-        },
-        {
-          "title": "Trump Names Scharf New WH Counsel | Hallelujah 95 . 5",
-          "url": "https://hallelujah955.iheart.com/content/2026-08-10-trump-names-scharf-new-wh-counsel/",
-          "domain": "hallelujah955.iheart.com",
-          "seendate": "2026-08-10T04:00:00Z",
+          "url": "https://wtag.iheart.com/content/2026-08-10-trump-names-scharf-new-wh-counsel/",
+          "domain": "wtag.iheart.com",
+          "seendate": "2026-08-10T06:00:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a79247bc977079c89a4fb0a?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
           "title": "Trump Names Scharf New WH Counsel | Talk Radio 105 . 9",
-          "url": "https://knrs.iheart.com/content/2026-08-10-trump-names-scharf-new-wh-counsel/",
-          "domain": "knrs.iheart.com",
-          "seendate": "2026-08-10T04:00:00Z",
+          "url": "https://talkradio1059.iheart.com/content/2026-08-10-trump-names-scharf-new-wh-counsel/",
+          "domain": "talkradio1059.iheart.com",
+          "seendate": "2026-08-10T05:45:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a79247bc977079c89a4fb0a?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "Trump Names Scharf New WH Counsel | Newsradio WFLA Orlando",
-          "url": "https://wflaorlando.iheart.com/content/2026-08-10-trump-names-scharf-new-wh-counsel/",
-          "domain": "wflaorlando.iheart.com",
-          "seendate": "2026-08-10T04:00:00Z",
+          "title": "Trump Names Scharf New WH Counsel | Talk Radio 1190",
+          "url": "https://1190talkradio.iheart.com/content/2026-08-10-trump-names-scharf-new-wh-counsel/",
+          "domain": "1190talkradio.iheart.com",
+          "seendate": "2026-08-10T05:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a79247bc977079c89a4fb0a?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Trump Names Scharf New WH Counsel | NewsTalk 1240 WSFC",
+          "url": "https://wsfcam.iheart.com/content/2026-08-10-trump-names-scharf-new-wh-counsel/",
+          "domain": "wsfcam.iheart.com",
+          "seendate": "2026-08-10T05:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a79247bc977079c89a4fb0a?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Trump Names Scharf New WH Counsel | News Radio 690 KTSM",
+          "url": "https://ktsmradio.iheart.com/content/2026-08-10-trump-names-scharf-new-wh-counsel/",
+          "domain": "ktsmradio.iheart.com",
+          "seendate": "2026-08-10T05:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a79247bc977079c89a4fb0a?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Trump Names Scharf New WH Counsel | News Radio 103 . 1 and 810 WGY",
+          "url": "https://wgy.iheart.com/content/2026-08-10-trump-names-scharf-new-wh-counsel/",
+          "domain": "wgy.iheart.com",
+          "seendate": "2026-08-10T05:30:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a79247bc977079c89a4fb0a?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
           "title": "Trump Names Scharf New WH Counsel",
-          "url": "https://wjdx.iheart.com/content/2026-08-10-trump-names-scharf-new-wh-counsel/",
-          "domain": "wjdx.iheart.com",
-          "seendate": "2026-08-10T04:00:00Z",
+          "url": "https://khow.iheart.com/content/2026-08-10-trump-names-scharf-new-wh-counsel/",
+          "domain": "khow.iheart.com",
+          "seendate": "2026-08-10T05:00:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a79247bc977079c89a4fb0a?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "Trump Names Scharf New WH Counsel",
-          "url": "https://wsyr.iheart.com/content/2026-08-10-trump-names-scharf-new-wh-counsel/",
-          "domain": "wsyr.iheart.com",
-          "seendate": "2026-08-10T04:00:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a79247bc977079c89a4fb0a?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Trump announces staff secretary Will Scharf will be his new White House counsel",
-          "url": "https://www.ksat.com/news/politics/2026/08/09/trump-announces-staff-secretary-will-scharf-will-be-his-new-white-house-counsel/",
-          "domain": "ksat.com",
-          "seendate": "2026-08-10T03:30:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/QT7GBZRMWNCD3DUWFVFWH664E4.jpg?_a=DATAg1kSZAA0"
-        },
-        {
-          "title": "Trump names Will Scharf as White House counsel",
-          "url": "https://www.wmtw.com/article/president-trump-announces-staff-secretary-will-scharf-will-be-his-new-white-house-counsel/73386433",
-          "domain": "wmtw.com",
-          "seendate": "2026-08-10T03:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/2964086d-3052-49de-8724-aba21d54405a.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.144xh"
-        },
-        {
-          "title": "Trump Names Scharf New WH Counsel",
-          "url": "https://590kqnt.iheart.com/content/2026-08-10-trump-names-scharf-new-wh-counsel/",
-          "domain": "590kqnt.iheart.com",
-          "seendate": "2026-08-10T03:30:00Z",
+          "title": "Trump Names Scharf New WH Counsel | 106 . 1 FM TALK",
+          "url": "https://1061fmtalk.iheart.com/content/2026-08-10-trump-names-scharf-new-wh-counsel/",
+          "domain": "1061fmtalk.iheart.com",
+          "seendate": "2026-08-10T05:00:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a79247bc977079c89a4fb0a?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         }
       ]
     },
     "title": "Trump Names Scharf New WH Counsel",
-    "summary": "2026-08-10 upi.com: Trump announces Will Scharf as new White House counsel\n2026-08-10 kste.iheart.com: Trump Names Scharf New WH Counsel | Talk 650 KSTE\n2026-08-10 knst.iheart.com: Trump Names Scharf New WH Counsel\n2026-08-10 yahoo.com: Trump announces Will Scharf as new White House counsel\n2026-08-10 hallelujah955.iheart.com: Trump Names Scharf New WH Counsel | Hallelujah 95 . 5\n2026-08-10 knrs.iheart.com: Trump Names Scharf New WH Counsel | Talk Radio 105 . 9",
+    "summary": "2026-08-10 nbcbayarea.com: President Trump announces Will Scharf as new White House counsel – NBC Bay Area\n2026-08-10 wiba.iheart.com: Trump Names Scharf New WH Counsel\n2026-08-10 1019bigwaax.iheart.com: Trump Names Scharf New WH Counsel | News Radio 101 . 9 Big WAAX\n2026-08-10 newsradio540.iheart.com: Trump Names Scharf New WH Counsel | News Radio 540\n2026-08-10 wtag.iheart.com: Trump Names Scharf New WH Counsel\n2026-08-10 talkradio1059.iheart.com: Trump Names Scharf New WH Counsel | Talk Radio 105 . 9",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -35769,12 +35769,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_appeals-ballroom-court",
     "source": "news",
-    "ts": 1786338016770,
+    "ts": 1786349439852,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.898,
+      "salience": 0.879,
       "articles": [
         {
           "title": "White House ballroom must be approved by Congress , court rules",
@@ -35826,13 +35826,6 @@ window.PRISM_CANDIDATES = [
           "image": "https://bloximages.newyork1.vip.townnews.com/santafenewmexican.com/content/tncms/assets/v3/editorial/7/0c/70c4ff7b-95d2-57f6-b335-1367d46868f7/6a765e939b950.image.jpg?crop=1763%2C926%2C0%2C125"
         },
         {
-          "title": "White House ballroom requires congressional approval , appeals court rules",
-          "url": "https://www.wallpaper.com/architecture/public-buildings/white-house-ballroom-court-ruling",
-          "domain": "wallpaper.com",
-          "seendate": "2026-08-08T01:00:00Z",
-          "image": "https://cdn.mos.cms.futurecdn.net/JMyZiYhgAD5dTa88PiSrWK-1024-80.jpg"
-        },
-        {
           "title": "Appeals court rules Trump cant build White House ballroom without congressional approval",
           "url": "https://lancasteronline.com/news/national/appeals-court-rules-trump-cant-build-white-house-ballroom-without-congressional-approval/article_463e5e81-5146-5144-a2d0-53cf7d1aead6.html",
           "domain": "lancasteronline.com",
@@ -35859,6 +35852,13 @@ window.PRISM_CANDIDATES = [
           "domain": "archinect.com",
           "seendate": "2026-08-07T23:15:00Z",
           "image": "https://archinect.gumlet.io/uploads/ce/ceb1657ce2589304a1671f3be0582439.png?fit=crop&auto=compress&format=&enlarge=true&crop=faces"
+        },
+        {
+          "title": "White House ballroom : Court says Trump needs Congres approval , halts construction",
+          "url": "https://www.fox7austin.com/news/white-house-ballroom-court-says-trump-needs-congress-approval-halts-construction",
+          "domain": "fox7austin.com",
+          "seendate": "2026-08-07T23:15:00Z",
+          "image": "https://images.foxtv.com/static.fox5dc.com/www.fox5dc.com/content/uploads/2025/10/1280/720/white-house-state-ballroom-interior-view-looking-south-up-copy.jpg?ve=1&tl=1"
         }
       ]
     },
@@ -35875,12 +35875,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballroom-makes-matter",
     "source": "news",
-    "ts": 1786338016770,
+    "ts": 1786349439852,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.661,
+      "salience": 0.641,
       "articles": [
         {
           "title": "White House ballroom news : What makes Donald Trump ballroom a matter of national security ? ",
@@ -35932,12 +35932,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_blanche-cassidy-confirmation",
     "source": "news",
-    "ts": 1786338016767,
+    "ts": 1786349439849,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.398,
+      "salience": 0.379,
       "articles": [
         {
           "title": "The Latest : GOP Sen . Cassidy says he supports Blanche , likely paving way for AG confirmation",
@@ -35989,12 +35989,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_common-contentious-democrat",
     "source": "news",
-    "ts": 1786338016770,
+    "ts": 1786349439852,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.361,
+      "salience": 0.341,
       "articles": [
         {
           "title": "Trump , Michigan Democrat El - Sayed reach unlikely common ground on contentious Senate tool",
@@ -36046,12 +36046,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_brief-edt-news",
     "source": "news",
-    "ts": 1786338016770,
+    "ts": 1786349439852,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.343,
+      "salience": 0.323,
       "articles": [
         {
           "title": "AP News Summary at 2 : 45 a . m . EDT",
