@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-12T16:14:56.060Z · 39 legislative + 9 news (GDELT, 3d)
+// 2026-08-12T19:32:32.431Z · 39 legislative + 7 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1786551245708,
+    "ts": 1786563088064,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.748,
+      "salience": 0.747,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,7 +259,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1786551245708,
+    "ts": 1786563088064,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
@@ -532,7 +532,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1786551245707,
+    "ts": 1786563088063,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
@@ -2843,7 +2843,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1786551245708,
+    "ts": 1786563088064,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
@@ -3254,13 +3254,287 @@ window.PRISM_CANDIDATES = [
     "mts": 1784784262612
   },
   {
+    "cid": "cand_leg_sjres-119-196",
+    "source": "legislative",
+    "ts": 1786563088064,
+    "raw": {
+      "method": "legislative_rollcall_v1",
+      "billId": "sjres-119-196",
+      "salience": 0.638,
+      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
+      "votes": [
+        {
+          "voteId": "s-119-2-190",
+          "chamber": "senate",
+          "date": "June 24, 2026,  09:16 PM",
+          "question": "On the Motion to Proceed",
+          "result": "Motion to Proceed Rejected",
+          "margin": -0.072,
+          "totals": {
+            "yea": 45,
+            "nay": 52,
+            "present": 0,
+            "notVoting": 3
+          },
+          "party": {
+            "D": {
+              "yea": 43,
+              "nay": 0
+            },
+            "R": {
+              "yea": 0,
+              "nay": 52
+            },
+            "I": {
+              "yea": 2,
+              "nay": 0
+            }
+          },
+          "positions": {
+            "yea": [
+              "A000382",
+              "B001230",
+              "B001277",
+              "B001303",
+              "B001288",
+              "C000127",
+              "C001088",
+              "C001113",
+              "D000622",
+              "D000563",
+              "F000479",
+              "G000574",
+              "G000555",
+              "H001076",
+              "H001046",
+              "H000273",
+              "H001042",
+              "K000384",
+              "K000377",
+              "K000394",
+              "K000383",
+              "K000367",
+              "M000133",
+              "M001176",
+              "M001169",
+              "M001111",
+              "O000174",
+              "P000145",
+              "P000595",
+              "R000122",
+              "R000608",
+              "S000033",
+              "S001194",
+              "S001150",
+              "S000148",
+              "S001208",
+              "S001203",
+              "V000128",
+              "W000805",
+              "W000790",
+              "W000817",
+              "W000800",
+              "W000802",
+              "W000779"
+            ],
+            "nay": [
+              "B001299",
+              "B001261",
+              "B001243",
+              "B001236",
+              "B001319",
+              "B001305",
+              "C001047",
+              "C001075",
+              "C001035",
+              "C001056",
+              "C001095",
+              "C001096",
+              "C000880",
+              "C001098",
+              "C001114",
+              "D000618",
+              "E000295",
+              "F000463",
+              "G000359",
+              "G000386",
+              "H000601",
+              "H001089",
+              "H001061",
+              "H001104",
+              "H001079",
+              "J000293",
+              "J000312",
+              "K000393",
+              "L000575",
+              "L000577",
+              "L000571",
+              "M001198",
+              "M001243",
+              "M001244",
+              "M000934",
+              "M001242",
+              "M001153",
+              "P000603",
+              "R000618",
+              "R000584",
+              "R000605",
+              "S001227",
+              "S001217",
+              "S001184",
+              "S001232",
+              "S001198",
+              "T000250",
+              "T000476",
+              "T000278",
+              "W000437",
+              "Y000064"
+            ],
+            "present": [],
+            "notVoting": [
+              "B001267",
+              "M000355",
+              "S001181"
+            ]
+          }
+        }
+      ]
+    },
+    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
+    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
+    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Disapprove rule",
+        "neg": "Uphold rule"
+      },
+      "y": {
+        "pos": "Executive overreach",
+        "neg": "Agency discretion legitimate"
+      }
+    },
+    "prevalentAxisGuess": "x",
+    "members": [
+      "A000382",
+      "B001230",
+      "B001277",
+      "B001303",
+      "B001288",
+      "C000127",
+      "C001088",
+      "C001113",
+      "D000622",
+      "D000563",
+      "F000479",
+      "G000574",
+      "G000555",
+      "H001076",
+      "H001046",
+      "H000273",
+      "H001042",
+      "K000384",
+      "K000377",
+      "K000394",
+      "K000383",
+      "K000367",
+      "M000133",
+      "M001176",
+      "M001169",
+      "M001111",
+      "O000174",
+      "P000145",
+      "P000595",
+      "R000122",
+      "R000608",
+      "S000033",
+      "S001194",
+      "S001150",
+      "S000148",
+      "S001208",
+      "S001203",
+      "V000128",
+      "W000805",
+      "W000790",
+      "W000817",
+      "W000800",
+      "W000802",
+      "W000779",
+      "B001299",
+      "B001261",
+      "B001243",
+      "B001236",
+      "B001319",
+      "B001305",
+      "C001047",
+      "C001075",
+      "C001035",
+      "C001056",
+      "C001095",
+      "C001096",
+      "C000880",
+      "C001098",
+      "C001114",
+      "D000618",
+      "E000295",
+      "F000463",
+      "G000359",
+      "G000386",
+      "H000601",
+      "H001089",
+      "H001061",
+      "H001104",
+      "H001079",
+      "J000293",
+      "J000312",
+      "K000393",
+      "L000575",
+      "L000577",
+      "L000571",
+      "M001198",
+      "M001243",
+      "M001244",
+      "M000934",
+      "M001242",
+      "M001153",
+      "P000603",
+      "R000618",
+      "R000584",
+      "R000605",
+      "S001227",
+      "S001217",
+      "S001184",
+      "S001232",
+      "S001198",
+      "T000250",
+      "T000476",
+      "T000278",
+      "W000437",
+      "Y000064"
+    ],
+    "bills": [
+      "sjres-119-196"
+    ],
+    "fitness": {
+      "score": 0.3,
+      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:28:30.038Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "s-119-2-190",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297586
+  },
+  {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1786551245707,
+    "ts": 1786563088063,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.638,
+      "salience": 0.637,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4656,287 +4930,13 @@ window.PRISM_CANDIDATES = [
     "mts": 1784044297586
   },
   {
-    "cid": "cand_leg_sjres-119-196",
-    "source": "legislative",
-    "ts": 1786551245708,
-    "raw": {
-      "method": "legislative_rollcall_v1",
-      "billId": "sjres-119-196",
-      "salience": 0.638,
-      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
-      "votes": [
-        {
-          "voteId": "s-119-2-190",
-          "chamber": "senate",
-          "date": "June 24, 2026,  09:16 PM",
-          "question": "On the Motion to Proceed",
-          "result": "Motion to Proceed Rejected",
-          "margin": -0.072,
-          "totals": {
-            "yea": 45,
-            "nay": 52,
-            "present": 0,
-            "notVoting": 3
-          },
-          "party": {
-            "D": {
-              "yea": 43,
-              "nay": 0
-            },
-            "R": {
-              "yea": 0,
-              "nay": 52
-            },
-            "I": {
-              "yea": 2,
-              "nay": 0
-            }
-          },
-          "positions": {
-            "yea": [
-              "A000382",
-              "B001230",
-              "B001277",
-              "B001303",
-              "B001288",
-              "C000127",
-              "C001088",
-              "C001113",
-              "D000622",
-              "D000563",
-              "F000479",
-              "G000574",
-              "G000555",
-              "H001076",
-              "H001046",
-              "H000273",
-              "H001042",
-              "K000384",
-              "K000377",
-              "K000394",
-              "K000383",
-              "K000367",
-              "M000133",
-              "M001176",
-              "M001169",
-              "M001111",
-              "O000174",
-              "P000145",
-              "P000595",
-              "R000122",
-              "R000608",
-              "S000033",
-              "S001194",
-              "S001150",
-              "S000148",
-              "S001208",
-              "S001203",
-              "V000128",
-              "W000805",
-              "W000790",
-              "W000817",
-              "W000800",
-              "W000802",
-              "W000779"
-            ],
-            "nay": [
-              "B001299",
-              "B001261",
-              "B001243",
-              "B001236",
-              "B001319",
-              "B001305",
-              "C001047",
-              "C001075",
-              "C001035",
-              "C001056",
-              "C001095",
-              "C001096",
-              "C000880",
-              "C001098",
-              "C001114",
-              "D000618",
-              "E000295",
-              "F000463",
-              "G000359",
-              "G000386",
-              "H000601",
-              "H001089",
-              "H001061",
-              "H001104",
-              "H001079",
-              "J000293",
-              "J000312",
-              "K000393",
-              "L000575",
-              "L000577",
-              "L000571",
-              "M001198",
-              "M001243",
-              "M001244",
-              "M000934",
-              "M001242",
-              "M001153",
-              "P000603",
-              "R000618",
-              "R000584",
-              "R000605",
-              "S001227",
-              "S001217",
-              "S001184",
-              "S001232",
-              "S001198",
-              "T000250",
-              "T000476",
-              "T000278",
-              "W000437",
-              "Y000064"
-            ],
-            "present": [],
-            "notVoting": [
-              "B001267",
-              "M000355",
-              "S001181"
-            ]
-          }
-        }
-      ]
-    },
-    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
-    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
-    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
-    "suggestedAxes": {
-      "x": {
-        "pos": "Disapprove rule",
-        "neg": "Uphold rule"
-      },
-      "y": {
-        "pos": "Executive overreach",
-        "neg": "Agency discretion legitimate"
-      }
-    },
-    "prevalentAxisGuess": "x",
-    "members": [
-      "A000382",
-      "B001230",
-      "B001277",
-      "B001303",
-      "B001288",
-      "C000127",
-      "C001088",
-      "C001113",
-      "D000622",
-      "D000563",
-      "F000479",
-      "G000574",
-      "G000555",
-      "H001076",
-      "H001046",
-      "H000273",
-      "H001042",
-      "K000384",
-      "K000377",
-      "K000394",
-      "K000383",
-      "K000367",
-      "M000133",
-      "M001176",
-      "M001169",
-      "M001111",
-      "O000174",
-      "P000145",
-      "P000595",
-      "R000122",
-      "R000608",
-      "S000033",
-      "S001194",
-      "S001150",
-      "S000148",
-      "S001208",
-      "S001203",
-      "V000128",
-      "W000805",
-      "W000790",
-      "W000817",
-      "W000800",
-      "W000802",
-      "W000779",
-      "B001299",
-      "B001261",
-      "B001243",
-      "B001236",
-      "B001319",
-      "B001305",
-      "C001047",
-      "C001075",
-      "C001035",
-      "C001056",
-      "C001095",
-      "C001096",
-      "C000880",
-      "C001098",
-      "C001114",
-      "D000618",
-      "E000295",
-      "F000463",
-      "G000359",
-      "G000386",
-      "H000601",
-      "H001089",
-      "H001061",
-      "H001104",
-      "H001079",
-      "J000293",
-      "J000312",
-      "K000393",
-      "L000575",
-      "L000577",
-      "L000571",
-      "M001198",
-      "M001243",
-      "M001244",
-      "M000934",
-      "M001242",
-      "M001153",
-      "P000603",
-      "R000618",
-      "R000584",
-      "R000605",
-      "S001227",
-      "S001217",
-      "S001184",
-      "S001232",
-      "S001198",
-      "T000250",
-      "T000476",
-      "T000278",
-      "W000437",
-      "Y000064"
-    ],
-    "bills": [
-      "sjres-119-196"
-    ],
-    "fitness": {
-      "score": 0.3,
-      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
-      "method": "m2_constitutive_v1",
-      "ts": "2026-07-14T04:28:30.038Z"
-    },
-    "status": "new",
-    "voteMap": {
-      "voteId": "s-119-2-190",
-      "yeaPole": "pos"
-    },
-    "mts": 1784044297586
-  },
-  {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1786551245708,
+    "ts": 1786563088064,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.624,
+      "salience": 0.623,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5203,11 +5203,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1786551245707,
+    "ts": 1786563088063,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.613,
+      "salience": 0.612,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6605,11 +6605,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1786551245707,
+    "ts": 1786563088063,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.608,
+      "salience": 0.607,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -8007,7 +8007,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1786551245708,
+    "ts": 1786563088064,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
@@ -8534,11 +8534,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1786551245707,
+    "ts": 1786563088063,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.561,
+      "salience": 0.56,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -9468,7 +9468,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1786551245708,
+    "ts": 1786563088064,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
@@ -9744,11 +9744,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1041",
     "source": "legislative",
-    "ts": 1786551245707,
+    "ts": 1786563088062,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1041",
-      "salience": 0.551,
+      "salience": 0.55,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1041",
       "votes": [
         {
@@ -11141,11 +11141,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2616",
     "source": "legislative",
-    "ts": 1786551245706,
+    "ts": 1786563088062,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2616",
-      "salience": 0.548,
+      "salience": 0.547,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2616",
       "votes": [
         {
@@ -12535,11 +12535,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1786551245707,
+    "ts": 1786563088063,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
-      "salience": 0.545,
+      "salience": 0.544,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2913",
       "votes": [
         {
@@ -13467,11 +13467,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1786551245708,
+    "ts": 1786563088064,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.544,
+      "salience": 0.543,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -13743,7 +13743,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1786551245707,
+    "ts": 1786563088063,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
@@ -14676,7 +14676,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1786551245707,
+    "ts": 1786563088063,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
@@ -15609,7 +15609,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1786551245708,
+    "ts": 1786563088064,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
@@ -16001,11 +16001,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6047",
     "source": "legislative",
-    "ts": 1786551245707,
+    "ts": 1786563088062,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6047",
-      "salience": 0.455,
+      "salience": 0.454,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6047",
       "votes": [
         {
@@ -16926,11 +16926,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1786551245708,
+    "ts": 1786563088063,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.403,
+      "salience": 0.402,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -18329,11 +18329,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1786551245708,
+    "ts": 1786563088064,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.346,
+      "salience": 0.345,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -19222,11 +19222,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1786551245708,
+    "ts": 1786563088064,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.339,
+      "salience": 0.338,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -20137,7 +20137,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1786551245708,
+    "ts": 1786563088064,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
@@ -21025,11 +21025,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1786551245708,
+    "ts": 1786563088064,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.328,
+      "salience": 0.327,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -21946,7 +21946,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1786551245708,
+    "ts": 1786563088064,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
@@ -22864,7 +22864,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1786551245708,
+    "ts": 1786563088063,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
@@ -23763,11 +23763,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8469",
     "source": "legislative",
-    "ts": 1786551245706,
+    "ts": 1786563088061,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8469",
-      "salience": 0.251,
+      "salience": 0.25,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8469",
       "votes": [
         {
@@ -25165,11 +25165,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1786551245707,
+    "ts": 1786563088063,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.228,
+      "salience": 0.227,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -26099,11 +26099,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1786551245707,
+    "ts": 1786563088063,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
-      "salience": 0.154,
+      "salience": 0.153,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/254",
       "votes": [
         {
@@ -27028,7 +27028,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1786551245707,
+    "ts": 1786563088062,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
@@ -27937,11 +27937,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1786551245707,
+    "ts": 1786563088063,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
-      "salience": 0.146,
+      "salience": 0.145,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8466",
       "votes": [
         {
@@ -28812,11 +28812,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1786551245707,
+    "ts": 1786563088063,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
-      "salience": 0.146,
+      "salience": 0.145,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8428",
       "votes": [
         {
@@ -29696,7 +29696,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5317",
     "source": "legislative",
-    "ts": 1786551245706,
+    "ts": 1786563088062,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5317",
@@ -30597,7 +30597,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1003",
     "source": "legislative",
-    "ts": 1786551245706,
+    "ts": 1786563088062,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1003",
@@ -31496,11 +31496,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2393",
     "source": "legislative",
-    "ts": 1786551245706,
+    "ts": 1786563088062,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2393",
-      "salience": 0.072,
+      "salience": 0.071,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2393",
       "votes": [
         {
@@ -32398,7 +32398,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4544",
     "source": "legislative",
-    "ts": 1786551245706,
+    "ts": 1786563088062,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4544",
@@ -33299,7 +33299,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3234",
     "source": "legislative",
-    "ts": 1786551245706,
+    "ts": 1786563088062,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3234",
@@ -34195,7 +34195,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1993",
     "source": "legislative",
-    "ts": 1786551245706,
+    "ts": 1786563088062,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1993",
@@ -35101,12 +35101,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_administration-again-bars",
     "source": "news",
-    "ts": 1786551296052,
+    "ts": 1786563152423,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.991,
+      "salience": 0.97,
       "articles": [
         {
           "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
@@ -35207,12 +35207,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_abortion-access-bill",
     "source": "news",
-    "ts": 1786551296052,
+    "ts": 1786563152423,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.809,
+      "salience": 0.789,
       "articles": [
         {
           "title": "Bill Signed Expanding Abortion Access In Massachusetts",
@@ -35311,14 +35311,142 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_counsel-scharf-trump",
+    "cid": "cand_news_act-america-emergency",
     "source": "news",
-    "ts": 1786551296051,
+    "ts": 1786563152422,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.775,
+      "salience": 0.767,
+      "articles": [
+        {
+          "title": "Trump leaves open emergency option for new voting rules as SAVE America Act stalls",
+          "url": "https://upnorthlive.com/news/nation-world/root-urges-trump-declare-national-emergency-impose-voting-rules-congress-stalls-save-america-act",
+          "domain": "upnorthlive.com",
+          "seendate": "2026-08-12T17:30:00Z",
+          "image": "https://upnorthlive.com/resources/media2/16x9/6473/1320/0x144/90/6ba250db-a962-478b-8d0c-d5fc300b3e1d-GettyImages2182503639.jpg"
+        },
+        {
+          "title": "Trump leaves open emergency option for new voting rules as SAVE America Act stalls",
+          "url": "https://cbs12.com/news/nation-world/root-urges-trump-declare-national-emergency-impose-voting-rules-congress-stalls-save-america-act",
+          "domain": "cbs12.com",
+          "seendate": "2026-08-12T17:15:00Z",
+          "image": "https://cbs12.com/resources/media2/16x9/6473/1320/0x144/90/6ba250db-a962-478b-8d0c-d5fc300b3e1d-GettyImages2182503639.jpg"
+        },
+        {
+          "title": "Trump leaves open emergency option for new voting rules as SAVE America Act stalls",
+          "url": "https://fox11online.com/news/nation-world/root-urges-trump-declare-national-emergency-impose-voting-rules-congress-stalls-save-america-act",
+          "domain": "fox11online.com",
+          "seendate": "2026-08-12T17:15:00Z",
+          "image": "https://fox11online.com/resources/media2/16x9/6473/1320/0x144/90/6ba250db-a962-478b-8d0c-d5fc300b3e1d-GettyImages2182503639.jpg"
+        },
+        {
+          "title": "Trump leaves open emergency option for new voting rules as SAVE America Act stalls",
+          "url": "https://wgme.com/news/nation-world/root-urges-trump-declare-national-emergency-impose-voting-rules-congress-stalls-save-america-act",
+          "domain": "wgme.com",
+          "seendate": "2026-08-12T17:15:00Z",
+          "image": "https://wgme.com/resources/media2/16x9/6473/1320/0x144/90/6ba250db-a962-478b-8d0c-d5fc300b3e1d-GettyImages2182503639.jpg"
+        },
+        {
+          "title": "Trump leaves open emergency option for new voting rules as SAVE America Act stalls",
+          "url": "https://myfox28columbus.com/news/nation-world/root-urges-trump-declare-national-emergency-impose-voting-rules-congress-stalls-save-america-act",
+          "domain": "myfox28columbus.com",
+          "seendate": "2026-08-12T17:15:00Z",
+          "image": "https://myfox28columbus.com/resources/media2/16x9/6473/1320/0x144/90/6ba250db-a962-478b-8d0c-d5fc300b3e1d-GettyImages2182503639.jpg"
+        },
+        {
+          "title": "Trump leaves open emergency option for new voting rules as SAVE America Act stalls",
+          "url": "https://wjactv.com/news/nation-world/root-urges-trump-declare-national-emergency-impose-voting-rules-congress-stalls-save-america-act",
+          "domain": "wjactv.com",
+          "seendate": "2026-08-12T17:00:00Z",
+          "image": "https://wjactv.com/resources/media2/16x9/6473/1320/0x144/90/6ba250db-a962-478b-8d0c-d5fc300b3e1d-GettyImages2182503639.jpg"
+        }
+      ]
+    },
+    "title": "Trump leaves open emergency option for new voting rules as SAVE America Act stalls",
+    "summary": "2026-08-12 upnorthlive.com: Trump leaves open emergency option for new voting rules as SAVE America Act stalls\n2026-08-12 cbs12.com: Trump leaves open emergency option for new voting rules as SAVE America Act stalls\n2026-08-12 fox11online.com: Trump leaves open emergency option for new voting rules as SAVE America Act stalls\n2026-08-12 wgme.com: Trump leaves open emergency option for new voting rules as SAVE America Act stalls\n2026-08-12 myfox28columbus.com: Trump leaves open emergency option for new voting rules as SAVE America Act stalls\n2026-08-12 wjactv.com: Trump leaves open emergency option for new voting rules as SAVE America Act stalls",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_again-blocks-executive",
+    "source": "news",
+    "ts": 1786563152423,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.764,
+      "articles": [
+        {
+          "title": "Judge blocks Trump mail - in voting executive order again",
+          "url": "https://www.fox7austin.com/news/udge-blocks-trumps-mail-in-voting-executive-order-again",
+          "domain": "fox7austin.com",
+          "seendate": "2026-08-12T17:00:00Z",
+          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/08/1280/720/gettyimages-2278797921-mail-in.jpg?ve=1&tl=1"
+        },
+        {
+          "title": "Judge blocks Trump mail - in voting executive order again",
+          "url": "https://www.fox26houston.com/news/udge-blocks-trumps-mail-in-voting-executive-order-again",
+          "domain": "fox26houston.com",
+          "seendate": "2026-08-12T04:00:00Z",
+          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/08/1280/720/gettyimages-2278797921-mail-in.jpg?ve=1&tl=1"
+        },
+        {
+          "title": "Judge blocks Trump mail - in voting executive order again",
+          "url": "https://www.fox2detroit.com/news/udge-blocks-trumps-mail-in-voting-executive-order-again",
+          "domain": "fox2detroit.com",
+          "seendate": "2026-08-12T03:30:00Z",
+          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/08/1280/720/gettyimages-2278797921-mail-in.jpg?ve=1&tl=1"
+        },
+        {
+          "title": "Judge blocks Trump mail - in voting executive order again",
+          "url": "https://www.fox32chicago.com/news/udge-blocks-trumps-mail-in-voting-executive-order-again",
+          "domain": "fox32chicago.com",
+          "seendate": "2026-08-12T03:30:00Z",
+          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/08/1280/720/gettyimages-2278797921-mail-in.jpg?ve=1&tl=1"
+        },
+        {
+          "title": "Judge blocks Trump mail - in voting executive order again",
+          "url": "https://www.fox5atlanta.com/news/udge-blocks-trumps-mail-in-voting-executive-order-again",
+          "domain": "fox5atlanta.com",
+          "seendate": "2026-08-12T03:00:00Z",
+          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/08/1280/720/gettyimages-2278797921-mail-in.jpg?ve=1&tl=1"
+        },
+        {
+          "title": "Judge blocks Trump mail - in voting executive order again",
+          "url": "https://www.fox13news.com/news/udge-blocks-trumps-mail-in-voting-executive-order-again",
+          "domain": "fox13news.com",
+          "seendate": "2026-08-12T01:45:00Z",
+          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/08/1280/720/gettyimages-2278797921-mail-in.jpg?ve=1&tl=1"
+        }
+      ]
+    },
+    "title": "Judge blocks Trump mail - in voting executive order again",
+    "summary": "2026-08-12 fox7austin.com: Judge blocks Trump mail - in voting executive order again\n2026-08-12 fox26houston.com: Judge blocks Trump mail - in voting executive order again\n2026-08-12 fox2detroit.com: Judge blocks Trump mail - in voting executive order again\n2026-08-12 fox32chicago.com: Judge blocks Trump mail - in voting executive order again\n2026-08-12 fox5atlanta.com: Judge blocks Trump mail - in voting executive order again\n2026-08-12 fox13news.com: Judge blocks Trump mail - in voting executive order again",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_counsel-scharf-trump",
+    "source": "news",
+    "ts": 1786563152422,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.754,
       "articles": [
         {
           "title": "Trump taps staff secretary Will Scharf to be next White House counsel",
@@ -35419,12 +35547,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_against-donald-executive",
     "source": "news",
-    "ts": 1786551296052,
+    "ts": 1786563152423,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.705,
+      "salience": 0.684,
       "articles": [
         {
           "title": "Judge rules against Donald Trump mail voting executive order – NBC New York",
@@ -35481,128 +35609,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_again-blocks-executive",
-    "source": "news",
-    "ts": 1786551296052,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.648,
-      "articles": [
-        {
-          "title": "Judge blocks Trump mail - in voting executive order again",
-          "url": "https://www.fox26houston.com/news/udge-blocks-trumps-mail-in-voting-executive-order-again",
-          "domain": "fox26houston.com",
-          "seendate": "2026-08-12T04:00:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/08/1280/720/gettyimages-2278797921-mail-in.jpg?ve=1&tl=1"
-        },
-        {
-          "title": "Judge blocks Trump mail - in voting executive order again",
-          "url": "https://www.fox2detroit.com/news/udge-blocks-trumps-mail-in-voting-executive-order-again",
-          "domain": "fox2detroit.com",
-          "seendate": "2026-08-12T03:30:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/08/1280/720/gettyimages-2278797921-mail-in.jpg?ve=1&tl=1"
-        },
-        {
-          "title": "Judge blocks Trump mail - in voting executive order again",
-          "url": "https://www.fox32chicago.com/news/udge-blocks-trumps-mail-in-voting-executive-order-again",
-          "domain": "fox32chicago.com",
-          "seendate": "2026-08-12T03:30:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/08/1280/720/gettyimages-2278797921-mail-in.jpg?ve=1&tl=1"
-        },
-        {
-          "title": "Judge blocks Trump mail - in voting executive order again",
-          "url": "https://www.fox5atlanta.com/news/udge-blocks-trumps-mail-in-voting-executive-order-again",
-          "domain": "fox5atlanta.com",
-          "seendate": "2026-08-12T03:00:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/08/1280/720/gettyimages-2278797921-mail-in.jpg?ve=1&tl=1"
-        },
-        {
-          "title": "Judge blocks Trump mail - in voting executive order again",
-          "url": "https://www.fox13news.com/news/udge-blocks-trumps-mail-in-voting-executive-order-again",
-          "domain": "fox13news.com",
-          "seendate": "2026-08-12T01:45:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/08/1280/720/gettyimages-2278797921-mail-in.jpg?ve=1&tl=1"
-        }
-      ]
-    },
-    "title": "Judge blocks Trump mail - in voting executive order again",
-    "summary": "2026-08-12 fox26houston.com: Judge blocks Trump mail - in voting executive order again\n2026-08-12 fox2detroit.com: Judge blocks Trump mail - in voting executive order again\n2026-08-12 fox32chicago.com: Judge blocks Trump mail - in voting executive order again\n2026-08-12 fox5atlanta.com: Judge blocks Trump mail - in voting executive order again\n2026-08-12 fox13news.com: Judge blocks Trump mail - in voting executive order again",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_aclu-birthright-children",
-    "source": "news",
-    "ts": 1786551296053,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.648,
-      "articles": [
-        {
-          "title": "ACLU wants a judge to guard children from Trump birthright citizenship orders",
-          "url": "https://www.wtkr.com/politics/immigration/aclu-wants-a-judge-to-protect-newborn-children-from-trumps-new-birthright-citizenship-orders",
-          "domain": "wtkr.com",
-          "seendate": "2026-08-12T04:00:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/be/86/9385e8c9482485d080b338bc42b8/ap25135713044160.jpg"
-        },
-        {
-          "title": "ACLU wants a judge to guard children from Trump birthright citizenship orders",
-          "url": "https://www.10news.com/politics/immigration/aclu-wants-a-judge-to-protect-newborn-children-from-trumps-new-birthright-citizenship-orders",
-          "domain": "10news.com",
-          "seendate": "2026-08-12T02:45:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/be/86/9385e8c9482485d080b338bc42b8/ap25135713044160.jpg"
-        },
-        {
-          "title": "ACLU wants a judge to guard children from Trump birthright citizenship orders",
-          "url": "https://www.katc.com/politics/immigration/aclu-wants-a-judge-to-protect-newborn-children-from-trumps-new-birthright-citizenship-orders",
-          "domain": "katc.com",
-          "seendate": "2026-08-12T02:30:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/be/86/9385e8c9482485d080b338bc42b8/ap25135713044160.jpg"
-        },
-        {
-          "title": "ACLU wants a judge to guard children from Trump birthright citizenship orders",
-          "url": "https://www.wptv.com/politics/immigration/aclu-wants-a-judge-to-protect-newborn-children-from-trumps-new-birthright-citizenship-orders",
-          "domain": "wptv.com",
-          "seendate": "2026-08-12T02:15:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/be/86/9385e8c9482485d080b338bc42b8/ap25135713044160.jpg"
-        },
-        {
-          "title": "ACLU wants a judge to guard children from Trump birthright citizenship orders",
-          "url": "https://www.fox17online.com/politics/immigration/aclu-wants-a-judge-to-protect-newborn-children-from-trumps-new-birthright-citizenship-orders",
-          "domain": "fox17online.com",
-          "seendate": "2026-08-12T00:15:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/be/86/9385e8c9482485d080b338bc42b8/ap25135713044160.jpg"
-        }
-      ]
-    },
-    "title": "ACLU wants a judge to guard children from Trump birthright citizenship orders",
-    "summary": "2026-08-12 wtkr.com: ACLU wants a judge to guard children from Trump birthright citizenship orders\n2026-08-12 10news.com: ACLU wants a judge to guard children from Trump birthright citizenship orders\n2026-08-12 katc.com: ACLU wants a judge to guard children from Trump birthright citizenship orders\n2026-08-12 wptv.com: ACLU wants a judge to guard children from Trump birthright citizenship orders\n2026-08-12 fox17online.com: ACLU wants a judge to guard children from Trump birthright citizenship orders",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_congress-could-democrats",
     "source": "news",
-    "ts": 1786551296052,
+    "ts": 1786563152423,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.531,
+      "salience": 0.51,
       "articles": [
         {
           "title": "Trump executive privilege memo could hamper Democrats if they win Congress",
@@ -35629,92 +35643,6 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Trump executive privilege memo could hamper Democrats if they win Congress",
     "summary": "2026-08-12 channel3000.com: Trump executive privilege memo could hamper Democrats if they win Congress\n2026-08-11 us.cnn.com: Trump executive privilege memo could hamper Democrats if they win Congress\n2026-08-11 cnn.com: Trump executive privilege memo could hamper Democrats if they win Congress",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_ballroom-court-decide",
-    "source": "news",
-    "ts": 1786551296052,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.187,
-      "articles": [
-        {
-          "title": "Supreme Court may decide future of new White House ballroom",
-          "url": "https://greatbendpost.com/posts/99a2e392-4bc5-4bb1-97e9-1abd6ef7472a",
-          "domain": "greatbendpost.com",
-          "seendate": "2026-08-09T19:45:00Z",
-          "image": "https://media.eaglewebservices.com/public/2026/8/1786155809433.png"
-        },
-        {
-          "title": "Supreme Court may decide future of new White House ballroom",
-          "url": "https://hayspost.com/posts/99a2e392-4bc5-4bb1-97e9-1abd6ef7472a",
-          "domain": "hayspost.com",
-          "seendate": "2026-08-09T19:45:00Z",
-          "image": "https://media.eaglewebservices.com/public/2026/8/1786155809433.png"
-        },
-        {
-          "title": "Supreme Court may decide future of new White House ballroom",
-          "url": "https://littleapplepost.com/posts/99a2e392-4bc5-4bb1-97e9-1abd6ef7472a",
-          "domain": "littleapplepost.com",
-          "seendate": "2026-08-09T17:15:00Z",
-          "image": "https://media.eaglewebservices.com/public/2026/8/1786155809433.png"
-        }
-      ]
-    },
-    "title": "Supreme Court may decide future of new White House ballroom",
-    "summary": "2026-08-09 greatbendpost.com: Supreme Court may decide future of new White House ballroom\n2026-08-09 hayspost.com: Supreme Court may decide future of new White House ballroom\n2026-08-09 littleapplepost.com: Supreme Court may decide future of new White House ballroom",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_ballroom-donald-house",
-    "source": "news",
-    "ts": 1786551296051,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.181,
-      "articles": [
-        {
-          "title": "White House ballroom news : What makes Donald Trump ballroom a matter of national security ? ",
-          "url": "https://abc7news.com/post/white-house-ballroom-news-what-makes-donald-trumps-matter-national-security/19652126/",
-          "domain": "abc7news.com",
-          "seendate": "2026-08-09T18:45:00Z",
-          "image": "https://cdn.abcotvs.com/dip/images/19652127_080926-wls-n1-trump-ballroom-mini-sat-pkg.jpg"
-        },
-        {
-          "title": "White House ballroom news : What makes Donald Trump ballroom a matter of national security ? ",
-          "url": "https://abc11.com/post/white-house-ballroom-news-what-makes-donald-trumps-matter-national-security/19652126/",
-          "domain": "abc11.com",
-          "seendate": "2026-08-09T18:00:00Z",
-          "image": "https://cdn.abcotvs.com/dip/images/19652127_080926-wls-n1-trump-ballroom-mini-sat-pkg.jpg"
-        },
-        {
-          "title": "White House ballroom news : What makes Donald Trump ballroom a matter of national security ? ",
-          "url": "https://abc7chicago.com/post/white-house-ballroom-news-what-makes-donald-trumps-matter-national-security/19652126/",
-          "domain": "abc7chicago.com",
-          "seendate": "2026-08-09T17:00:00Z",
-          "image": "https://cdn.abcotvs.com/dip/images/19652127_080926-wls-n1-trump-ballroom-mini-sat-pkg.jpg"
-        }
-      ]
-    },
-    "title": "White House ballroom news : What makes Donald Trump ballroom a matter of national security ? ",
-    "summary": "2026-08-09 abc7news.com: White House ballroom news : What makes Donald Trump ballroom a matter of national security ? \n2026-08-09 abc11.com: White House ballroom news : What makes Donald Trump ballroom a matter of national security ? \n2026-08-09 abc7chicago.com: White House ballroom news : What makes Donald Trump ballroom a matter of national security ? ",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
