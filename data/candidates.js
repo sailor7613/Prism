@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-13T10:33:18.002Z · 38 legislative + 10 news (GDELT, 3d)
+// 2026-08-13T13:53:30.280Z · 38 legislative + 10 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1786617138586,
+    "ts": 1786629195550,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.745,
+      "salience": 0.744,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,11 +259,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1786617138586,
+    "ts": 1786629195550,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.736,
+      "salience": 0.735,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1786617138585,
+    "ts": 1786629195549,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.707,
+      "salience": 0.706,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1786617138586,
+    "ts": 1786629195550,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.691,
+      "salience": 0.69,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3256,11 +3256,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1786617138585,
+    "ts": 1786629195550,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.635,
+      "salience": 0.634,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4658,11 +4658,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1786617138586,
+    "ts": 1786629195550,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
-      "salience": 0.635,
+      "salience": 0.634,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
       "votes": [
         {
@@ -4932,7 +4932,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1786617138586,
+    "ts": 1786629195550,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
@@ -5203,11 +5203,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1786617138585,
+    "ts": 1786629195549,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.61,
+      "salience": 0.609,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6605,7 +6605,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1786617138585,
+    "ts": 1786629195549,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
@@ -8007,11 +8007,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1786617138586,
+    "ts": 1786629195551,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.599,
+      "salience": 0.598,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -8534,11 +8534,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1786617138585,
+    "ts": 1786629195550,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.558,
+      "salience": 0.557,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -9468,11 +9468,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1786617138586,
+    "ts": 1786629195550,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.557,
+      "salience": 0.556,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -9744,7 +9744,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1041",
     "source": "legislative",
-    "ts": 1786617138584,
+    "ts": 1786629195548,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1041",
@@ -11141,7 +11141,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2616",
     "source": "legislative",
-    "ts": 1786617138584,
+    "ts": 1786629195548,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2616",
@@ -12535,7 +12535,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1786617138585,
+    "ts": 1786629195549,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
@@ -13467,11 +13467,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1786617138586,
+    "ts": 1786629195550,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.541,
+      "salience": 0.54,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -13743,11 +13743,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1786617138585,
+    "ts": 1786629195550,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
-      "salience": 0.538,
+      "salience": 0.537,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8312",
       "votes": [
         {
@@ -14676,11 +14676,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1786617138585,
+    "ts": 1786629195550,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.519,
+      "salience": 0.518,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -15609,11 +15609,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1786617138586,
+    "ts": 1786629195551,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.508,
+      "salience": 0.507,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -16001,7 +16001,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6047",
     "source": "legislative",
-    "ts": 1786617138584,
+    "ts": 1786629195548,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6047",
@@ -16926,11 +16926,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1786617138586,
+    "ts": 1786629195550,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.4,
+      "salience": 0.399,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -18329,7 +18329,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1786617138586,
+    "ts": 1786629195550,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
@@ -19222,11 +19222,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1786617138586,
+    "ts": 1786629195551,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.336,
+      "salience": 0.335,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -20137,11 +20137,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1786617138586,
+    "ts": 1786629195551,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.329,
+      "salience": 0.328,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -21025,7 +21025,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1786617138586,
+    "ts": 1786629195550,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
@@ -21946,11 +21946,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1786617138586,
+    "ts": 1786629195550,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.313,
+      "salience": 0.312,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -22864,11 +22864,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1786617138585,
+    "ts": 1786629195550,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.253,
+      "salience": 0.252,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -23763,7 +23763,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1786617138585,
+    "ts": 1786629195549,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
@@ -24697,7 +24697,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1786617138585,
+    "ts": 1786629195549,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
@@ -25626,11 +25626,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1786617138585,
+    "ts": 1786629195549,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
-      "salience": 0.148,
+      "salience": 0.147,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7618",
       "votes": [
         {
@@ -26535,7 +26535,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1786617138585,
+    "ts": 1786629195549,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
@@ -27410,7 +27410,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1786617138585,
+    "ts": 1786629195549,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
@@ -28294,11 +28294,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5317",
     "source": "legislative",
-    "ts": 1786617138584,
+    "ts": 1786629195548,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5317",
-      "salience": 0.093,
+      "salience": 0.092,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5317",
       "votes": [
         {
@@ -29195,11 +29195,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1003",
     "source": "legislative",
-    "ts": 1786617138584,
+    "ts": 1786629195548,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1003",
-      "salience": 0.071,
+      "salience": 0.07,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1003",
       "votes": [
         {
@@ -30094,11 +30094,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2393",
     "source": "legislative",
-    "ts": 1786617138584,
+    "ts": 1786629195548,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2393",
-      "salience": 0.069,
+      "salience": 0.068,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2393",
       "votes": [
         {
@@ -30996,11 +30996,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4544",
     "source": "legislative",
-    "ts": 1786617138584,
+    "ts": 1786629195548,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4544",
-      "salience": 0.067,
+      "salience": 0.066,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4544",
       "votes": [
         {
@@ -31897,11 +31897,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3234",
     "source": "legislative",
-    "ts": 1786617138584,
+    "ts": 1786629195547,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3234",
-      "salience": 0.058,
+      "salience": 0.057,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3234",
       "votes": [
         {
@@ -32793,11 +32793,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1993",
     "source": "legislative",
-    "ts": 1786617138584,
+    "ts": 1786629195548,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1993",
-      "salience": 0.058,
+      "salience": 0.057,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1993",
       "votes": [
         {
@@ -33699,12 +33699,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_administration-again-bars",
     "source": "news",
-    "ts": 1786617197992,
+    "ts": 1786629210270,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.984,
+      "salience": 0.963,
       "articles": [
         {
           "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
@@ -33805,12 +33805,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_check-does-executive",
     "source": "news",
-    "ts": 1786617197993,
+    "ts": 1786629210271,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.976,
+      "salience": 0.955,
       "articles": [
         {
           "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
@@ -33911,12 +33911,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_abortion-access-bill",
     "source": "news",
-    "ts": 1786617197994,
+    "ts": 1786629210272,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.695,
+      "salience": 0.674,
       "articles": [
         {
           "title": "Bill Signed Expanding Abortion Access In Massachusetts",
@@ -34017,12 +34017,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_act-america-emergency",
     "source": "news",
-    "ts": 1786617197992,
+    "ts": 1786629210270,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.673,
+      "salience": 0.653,
       "articles": [
         {
           "title": "Trump leaves open emergency option for new voting rules as SAVE America Act stalls",
@@ -34081,12 +34081,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_again-blocks-executive",
     "source": "news",
-    "ts": 1786617197994,
+    "ts": 1786629210272,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.67,
+      "salience": 0.649,
       "articles": [
         {
           "title": "Judge blocks Trump mail - in voting executive order again",
@@ -34145,12 +34145,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_aclu-birthright-children",
     "source": "news",
-    "ts": 1786617197994,
+    "ts": 1786629210272,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.644,
+      "salience": 0.623,
       "articles": [
         {
           "title": "ACLU wants a judge to guard children from Trump birthright citizenship orders",
@@ -34216,12 +34216,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_against-donald-executive",
     "source": "news",
-    "ts": 1786617197993,
+    "ts": 1786629210272,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.591,
+      "salience": 0.57,
       "articles": [
         {
           "title": "Judge rules against Donald Trump mail voting executive order – NBC New York",
@@ -34280,12 +34280,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_400-appeals-ballroom",
     "source": "news",
-    "ts": 1786617197994,
+    "ts": 1786629210272,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.523,
+      "salience": 0.503,
       "articles": [
         {
           "title": "Appeals Court Halts Construction of Trump $400 Million Ballroom | WDAS",
@@ -34342,14 +34342,57 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_counsel-house-scharf",
+    "cid": "cand_news_congress-could-democrats",
     "source": "news",
-    "ts": 1786617197991,
+    "ts": 1786629210272,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.441,
+      "salience": 0.395,
+      "articles": [
+        {
+          "title": "Trump executive privilege memo could hamper Democrats if they win Congress",
+          "url": "https://www.channel3000.com/news/national-and-world-news/trump-executive-privilege-memo-could-hamper-democrats-if-they-win-congress/article_ab8aea47-c7ba-5da4-8fb5-9fd5f9852f93.html",
+          "domain": "channel3000.com",
+          "seendate": "2026-08-12T02:45:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/channel3000.com/content/tncms/assets/v3/editorial/4/cf/4cf55e02-e550-593b-9fb3-41c3e76c6f0b/6a7b59407f39b.image.jpg?crop=1760%2C924%2C0%2C126"
+        },
+        {
+          "title": "Trump executive privilege memo could hamper Democrats if they win Congress",
+          "url": "https://us.cnn.com/2026/08/11/politics/trump-justice-department-presidential-advisers-executive-privilege",
+          "domain": "us.cnn.com",
+          "seendate": "2026-08-11T20:30:00Z",
+          "image": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2286138499.jpg?c=16x9&q=w_800,c_fill"
+        },
+        {
+          "title": "Trump executive privilege memo could hamper Democrats if they win Congress",
+          "url": "https://www.cnn.com/2026/08/11/politics/trump-justice-department-presidential-advisers-executive-privilege",
+          "domain": "cnn.com",
+          "seendate": "2026-08-11T19:30:00Z",
+          "image": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2286138499.jpg?c=16x9&q=w_800,c_fill"
+        }
+      ]
+    },
+    "title": "Trump executive privilege memo could hamper Democrats if they win Congress",
+    "summary": "2026-08-12 channel3000.com: Trump executive privilege memo could hamper Democrats if they win Congress\n2026-08-11 us.cnn.com: Trump executive privilege memo could hamper Democrats if they win Congress\n2026-08-11 cnn.com: Trump executive privilege memo could hamper Democrats if they win Congress",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_counsel-house-scharf",
+    "source": "news",
+    "ts": 1786629210270,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.365,
       "articles": [
         {
           "title": "Trump taps staff secretary Will Scharf to be next White House counsel",
@@ -34385,61 +34428,11 @@ window.PRISM_CANDIDATES = [
           "domain": "greeleytribune.com",
           "seendate": "2026-08-10T14:00:00Z",
           "image": "https://www.greeleytribune.com/wp-content/uploads/2026/08/Trump_White_House_Counsel_2_82.jpg"
-        },
-        {
-          "title": "Trump says staff secretary Will Scharf will be new White House counsel",
-          "url": "https://www.reporterherald.com/2026/08/10/trump-will-scharf-white-house-counsel/",
-          "domain": "reporterherald.com",
-          "seendate": "2026-08-10T13:00:00Z",
-          "image": "https://www.reporterherald.com/wp-content/uploads/2026/08/Trump_White_House_Counsel_2_82.jpg"
         }
       ]
     },
     "title": "Trump says staff secretary Will Scharf will be new White House counsel",
-    "summary": "2026-08-11 wcbi.com: Trump taps staff secretary Will Scharf to be next White House counsel\n2026-08-10 breitbart.com: Will Scharf to Take Over as White House Counsel\n2026-08-10 orlandosentinel.com: Trump says staff secretary Will Scharf will be new White House counsel\n2026-08-10 bostonherald.com: Trump says staff secretary Will Scharf will be new White House counsel\n2026-08-10 greeleytribune.com: Trump says staff secretary Will Scharf will be new White House counsel\n2026-08-10 reporterherald.com: Trump says staff secretary Will Scharf will be new White House counsel",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_congress-could-democrats",
-    "source": "news",
-    "ts": 1786617197994,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.416,
-      "articles": [
-        {
-          "title": "Trump executive privilege memo could hamper Democrats if they win Congress",
-          "url": "https://www.channel3000.com/news/national-and-world-news/trump-executive-privilege-memo-could-hamper-democrats-if-they-win-congress/article_ab8aea47-c7ba-5da4-8fb5-9fd5f9852f93.html",
-          "domain": "channel3000.com",
-          "seendate": "2026-08-12T02:45:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/channel3000.com/content/tncms/assets/v3/editorial/4/cf/4cf55e02-e550-593b-9fb3-41c3e76c6f0b/6a7b59407f39b.image.jpg?crop=1760%2C924%2C0%2C126"
-        },
-        {
-          "title": "Trump executive privilege memo could hamper Democrats if they win Congress",
-          "url": "https://us.cnn.com/2026/08/11/politics/trump-justice-department-presidential-advisers-executive-privilege",
-          "domain": "us.cnn.com",
-          "seendate": "2026-08-11T20:30:00Z",
-          "image": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2286138499.jpg?c=16x9&q=w_800,c_fill"
-        },
-        {
-          "title": "Trump executive privilege memo could hamper Democrats if they win Congress",
-          "url": "https://www.cnn.com/2026/08/11/politics/trump-justice-department-presidential-advisers-executive-privilege",
-          "domain": "cnn.com",
-          "seendate": "2026-08-11T19:30:00Z",
-          "image": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2286138499.jpg?c=16x9&q=w_800,c_fill"
-        }
-      ]
-    },
-    "title": "Trump executive privilege memo could hamper Democrats if they win Congress",
-    "summary": "2026-08-12 channel3000.com: Trump executive privilege memo could hamper Democrats if they win Congress\n2026-08-11 us.cnn.com: Trump executive privilege memo could hamper Democrats if they win Congress\n2026-08-11 cnn.com: Trump executive privilege memo could hamper Democrats if they win Congress",
+    "summary": "2026-08-11 wcbi.com: Trump taps staff secretary Will Scharf to be next White House counsel\n2026-08-10 breitbart.com: Will Scharf to Take Over as White House Counsel\n2026-08-10 orlandosentinel.com: Trump says staff secretary Will Scharf will be new White House counsel\n2026-08-10 bostonherald.com: Trump says staff secretary Will Scharf will be new White House counsel\n2026-08-10 greeleytribune.com: Trump says staff secretary Will Scharf will be new White House counsel",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
