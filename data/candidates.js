@@ -1,11 +1,11 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-13T07:58:46.299Z · 38 legislative + 11 news (GDELT, 3d)
+// 2026-08-13T10:33:18.002Z · 38 legislative + 10 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1786607908857,
+    "ts": 1786617138586,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
@@ -259,11 +259,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1786607908857,
+    "ts": 1786617138586,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.737,
+      "salience": 0.736,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -532,7 +532,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1786607908856,
+    "ts": 1786617138585,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1786607908857,
+    "ts": 1786617138586,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.692,
+      "salience": 0.691,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3256,7 +3256,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1786607908857,
+    "ts": 1786617138585,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
@@ -4658,7 +4658,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1786607908857,
+    "ts": 1786617138586,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
@@ -4932,11 +4932,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1786607908857,
+    "ts": 1786617138586,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.621,
+      "salience": 0.62,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5203,7 +5203,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1786607908856,
+    "ts": 1786617138585,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
@@ -6605,11 +6605,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1786607908856,
+    "ts": 1786617138585,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.605,
+      "salience": 0.604,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -8007,7 +8007,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1786607908857,
+    "ts": 1786617138586,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
@@ -8534,7 +8534,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1786607908856,
+    "ts": 1786617138585,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
@@ -9468,7 +9468,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1786607908857,
+    "ts": 1786617138586,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
@@ -9744,11 +9744,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1041",
     "source": "legislative",
-    "ts": 1786607908856,
+    "ts": 1786617138584,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1041",
-      "salience": 0.548,
+      "salience": 0.547,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1041",
       "votes": [
         {
@@ -11141,11 +11141,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2616",
     "source": "legislative",
-    "ts": 1786607908855,
+    "ts": 1786617138584,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2616",
-      "salience": 0.545,
+      "salience": 0.544,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2616",
       "votes": [
         {
@@ -12535,11 +12535,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1786607908856,
+    "ts": 1786617138585,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
-      "salience": 0.542,
+      "salience": 0.541,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2913",
       "votes": [
         {
@@ -13467,7 +13467,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1786607908857,
+    "ts": 1786617138586,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
@@ -13743,11 +13743,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1786607908857,
+    "ts": 1786617138585,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
-      "salience": 0.539,
+      "salience": 0.538,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8312",
       "votes": [
         {
@@ -14676,7 +14676,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1786607908856,
+    "ts": 1786617138585,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
@@ -15609,7 +15609,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1786607908857,
+    "ts": 1786617138586,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
@@ -16001,11 +16001,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6047",
     "source": "legislative",
-    "ts": 1786607908856,
+    "ts": 1786617138584,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6047",
-      "salience": 0.452,
+      "salience": 0.451,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6047",
       "votes": [
         {
@@ -16926,7 +16926,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1786607908857,
+    "ts": 1786617138586,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
@@ -18329,11 +18329,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1786607908857,
+    "ts": 1786617138586,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.343,
+      "salience": 0.342,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -19222,7 +19222,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1786607908857,
+    "ts": 1786617138586,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
@@ -20137,7 +20137,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1786607908857,
+    "ts": 1786617138586,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
@@ -21025,11 +21025,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1786607908857,
+    "ts": 1786617138586,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.325,
+      "salience": 0.324,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -21946,11 +21946,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1786607908857,
+    "ts": 1786617138586,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.314,
+      "salience": 0.313,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -22864,7 +22864,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1786607908857,
+    "ts": 1786617138585,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
@@ -23763,11 +23763,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1786607908856,
+    "ts": 1786617138585,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.225,
+      "salience": 0.224,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -24697,11 +24697,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1786607908856,
+    "ts": 1786617138585,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
-      "salience": 0.151,
+      "salience": 0.15,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/254",
       "votes": [
         {
@@ -25626,7 +25626,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1786607908856,
+    "ts": 1786617138585,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
@@ -26535,11 +26535,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1786607908856,
+    "ts": 1786617138585,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
-      "salience": 0.143,
+      "salience": 0.142,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8466",
       "votes": [
         {
@@ -27410,11 +27410,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1786607908856,
+    "ts": 1786617138585,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
-      "salience": 0.143,
+      "salience": 0.142,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8428",
       "votes": [
         {
@@ -28294,7 +28294,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5317",
     "source": "legislative",
-    "ts": 1786607908855,
+    "ts": 1786617138584,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5317",
@@ -29195,7 +29195,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1003",
     "source": "legislative",
-    "ts": 1786607908855,
+    "ts": 1786617138584,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1003",
@@ -30094,7 +30094,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2393",
     "source": "legislative",
-    "ts": 1786607908855,
+    "ts": 1786617138584,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2393",
@@ -30996,7 +30996,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4544",
     "source": "legislative",
-    "ts": 1786607908855,
+    "ts": 1786617138584,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4544",
@@ -31897,7 +31897,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3234",
     "source": "legislative",
-    "ts": 1786607908855,
+    "ts": 1786617138584,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3234",
@@ -32793,7 +32793,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1993",
     "source": "legislative",
-    "ts": 1786607908855,
+    "ts": 1786617138584,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1993",
@@ -33697,14 +33697,120 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_check-does-executive",
+    "cid": "cand_news_administration-again-bars",
     "source": "news",
-    "ts": 1786607926290,
+    "ts": 1786617197992,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.992,
+      "salience": 0.984,
+      "articles": [
+        {
+          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
+          "url": "https://www.paradisepost.com/2026/08/11/mail-voting-limit-eo/",
+          "domain": "paradisepost.com",
+          "seendate": "2026-08-13T08:00:00Z",
+          "image": "https://www.paradisepost.com/wp-content/uploads/2026/08/Election_2_26_Vermont_83146.jpg"
+        },
+        {
+          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
+          "url": "https://www.wsmv.com/2026/08/11/federal-judge-again-bars-trumps-mail-ballot-order-heres-why/",
+          "domain": "wsmv.com",
+          "seendate": "2026-08-12T14:45:00Z",
+          "image": "https://gray-wsmv-prod.gtv-cdn.com/resizer/v2/F3E2TSBF4NDJXIB64HBMILZGEI.jpg?auth=5f02533f9ebe05316d0e88942ffc8abc7326a1a19907b333ff188fa0216efd4e&smart=true"
+        },
+        {
+          "title": "Judge again bars Trump administration from implementing orde ... ",
+          "url": "https://www.semissourian.com/world/judge-again-bars-trump-administration-from-implementing-order-that-sought-to-limit-mail-voting-381fbbe6",
+          "domain": "semissourian.com",
+          "seendate": "2026-08-12T04:00:00Z",
+          "image": "https://public-assets-prod.pubgen.ai/brand_a7b06a8b-02b9-4920-9426-9b9be1d4e410/asset_9c28a9b6-bebd-5c1a-bf07-678cc9a8e297.jpg"
+        },
+        {
+          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
+          "url": "http://www.idahostatejournal.com/news/national/judge-again-bars-trump-administration-from-implementing-order-that-sought-to-limit-mail-voting/article_79a1b23b-0d45-5186-b0e0-a00242f1d4ba.html",
+          "domain": "idahostatejournal.com",
+          "seendate": "2026-08-12T02:30:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/idahostatejournal.com/content/tncms/assets/v3/editorial/d/7b/d7b6ece2-8a53-592f-8227-2667488ea964/6a7b9d0a457c6.image.jpg?crop=1760%2C924%2C0%2C126"
+        },
+        {
+          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
+          "url": "https://www.idahostatejournal.com/news/national/judge-again-bars-trump-administration-from-implementing-order-that-sought-to-limit-mail-voting/article_79a1b23b-0d45-5186-b0e0-a00242f1d4ba.html",
+          "domain": "idahostatejournal.com",
+          "seendate": "2026-08-12T02:30:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/idahostatejournal.com/content/tncms/assets/v3/editorial/d/7b/d7b6ece2-8a53-592f-8227-2667488ea964/6a7b9d0a457c6.image.jpg?crop=1760%2C924%2C0%2C126"
+        },
+        {
+          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
+          "url": "https://www.news8000.com/news/politics/national-politics/judge-again-bars-trump-administration-from-implementing-order-that-sought-to-limit-mail-voting/article_f51e73b5-b550-5f5b-a32e-b7ceeadcd62e.html",
+          "domain": "news8000.com",
+          "seendate": "2026-08-12T02:15:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/news8000.com/content/tncms/assets/v3/editorial/5/96/59667bef-8070-5f26-aea0-b8bee869b58f/6a7095b551143.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
+        {
+          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
+          "url": "https://www.troyrecord.com/2026/08/11/mail-voting-limit-eo/",
+          "domain": "troyrecord.com",
+          "seendate": "2026-08-12T01:30:00Z",
+          "image": "https://www.troyrecord.com/wp-content/uploads/2026/08/Election_2_26_Vermont_83146.jpg"
+        },
+        {
+          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
+          "url": "https://www.republicanherald.com/2026/08/11/mail-voting-limit-eo/",
+          "domain": "republicanherald.com",
+          "seendate": "2026-08-12T01:30:00Z",
+          "image": "https://www.republicanherald.com/wp-content/uploads/2026/08/Election_2_26_Vermont_83146.jpg"
+        },
+        {
+          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
+          "url": "https://www.canoncitydailyrecord.com/2026/08/11/mail-voting-limit-eo/",
+          "domain": "canoncitydailyrecord.com",
+          "seendate": "2026-08-12T01:30:00Z",
+          "image": "https://www.canoncitydailyrecord.com/wp-content/uploads/2026/08/Election_2_26_Vermont_83146.jpg"
+        },
+        {
+          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
+          "url": "https://www.wandtv.com/news/national/judge-again-bars-trump-administration-from-implementing-order-that-sought-to-limit-mail-voting/article_81981bd1-b4ef-5d99-95c8-f59089797086.html",
+          "domain": "wandtv.com",
+          "seendate": "2026-08-12T00:30:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/wandtv.com/content/tncms/assets/v3/editorial/1/19/119d8323-1a88-444c-9930-c54c9b712f6e/6986a42d373be.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
+        {
+          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
+          "url": "https://www.wral.com/news/ap/159c1-judge-again-bars-trump-administration-from-implementing-order-that-sought-to-limit-mail-voting/",
+          "domain": "wral.com",
+          "seendate": "2026-08-12T00:15:00Z",
+          "image": "https://images.wral.com/ee2a60a8-8f1d-5b3a-a5f3-3377fedf9526"
+        },
+        {
+          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
+          "url": "https://www.courant.com/2026/08/11/mail-voting-limit-eo/",
+          "domain": "courant.com",
+          "seendate": "2026-08-12T00:15:00Z",
+          "image": "https://www.courant.com/wp-content/uploads/2026/08/Election_2_26_Vermont_83146.jpg"
+        }
+      ]
+    },
+    "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
+    "summary": "2026-08-13 paradisepost.com: Judge again bars Trump administration from implementing order that sought to limit mail voting\n2026-08-12 wsmv.com: Judge again bars Trump administration from implementing order that sought to limit mail voting\n2026-08-12 semissourian.com: Judge again bars Trump administration from implementing orde ... \n2026-08-12 idahostatejournal.com: Judge again bars Trump administration from implementing order that sought to limit mail voting\n2026-08-12 idahostatejournal.com: Judge again bars Trump administration from implementing order that sought to limit mail voting\n2026-08-12 news8000.com: Judge again bars Trump administration from implementing order that sought to limit mail voting",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_check-does-executive",
+    "source": "news",
+    "ts": 1786617197993,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.976,
       "articles": [
         {
           "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
@@ -33803,120 +33909,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_administration-again-bars",
-    "source": "news",
-    "ts": 1786607926289,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.892,
-      "articles": [
-        {
-          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
-          "url": "https://www.wsmv.com/2026/08/11/federal-judge-again-bars-trumps-mail-ballot-order-heres-why/",
-          "domain": "wsmv.com",
-          "seendate": "2026-08-12T14:45:00Z",
-          "image": "https://gray-wsmv-prod.gtv-cdn.com/resizer/v2/F3E2TSBF4NDJXIB64HBMILZGEI.jpg?auth=5f02533f9ebe05316d0e88942ffc8abc7326a1a19907b333ff188fa0216efd4e&smart=true"
-        },
-        {
-          "title": "Judge again bars Trump administration from implementing orde ... ",
-          "url": "https://www.semissourian.com/world/judge-again-bars-trump-administration-from-implementing-order-that-sought-to-limit-mail-voting-381fbbe6",
-          "domain": "semissourian.com",
-          "seendate": "2026-08-12T04:00:00Z",
-          "image": "https://public-assets-prod.pubgen.ai/brand_a7b06a8b-02b9-4920-9426-9b9be1d4e410/asset_9c28a9b6-bebd-5c1a-bf07-678cc9a8e297.jpg"
-        },
-        {
-          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
-          "url": "http://www.idahostatejournal.com/news/national/judge-again-bars-trump-administration-from-implementing-order-that-sought-to-limit-mail-voting/article_79a1b23b-0d45-5186-b0e0-a00242f1d4ba.html",
-          "domain": "idahostatejournal.com",
-          "seendate": "2026-08-12T02:30:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/idahostatejournal.com/content/tncms/assets/v3/editorial/d/7b/d7b6ece2-8a53-592f-8227-2667488ea964/6a7b9d0a457c6.image.jpg?crop=1760%2C924%2C0%2C126"
-        },
-        {
-          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
-          "url": "https://www.idahostatejournal.com/news/national/judge-again-bars-trump-administration-from-implementing-order-that-sought-to-limit-mail-voting/article_79a1b23b-0d45-5186-b0e0-a00242f1d4ba.html",
-          "domain": "idahostatejournal.com",
-          "seendate": "2026-08-12T02:30:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/idahostatejournal.com/content/tncms/assets/v3/editorial/d/7b/d7b6ece2-8a53-592f-8227-2667488ea964/6a7b9d0a457c6.image.jpg?crop=1760%2C924%2C0%2C126"
-        },
-        {
-          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
-          "url": "https://www.news8000.com/news/politics/national-politics/judge-again-bars-trump-administration-from-implementing-order-that-sought-to-limit-mail-voting/article_f51e73b5-b550-5f5b-a32e-b7ceeadcd62e.html",
-          "domain": "news8000.com",
-          "seendate": "2026-08-12T02:15:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/news8000.com/content/tncms/assets/v3/editorial/5/96/59667bef-8070-5f26-aea0-b8bee869b58f/6a7095b551143.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
-          "url": "https://www.troyrecord.com/2026/08/11/mail-voting-limit-eo/",
-          "domain": "troyrecord.com",
-          "seendate": "2026-08-12T01:30:00Z",
-          "image": "https://www.troyrecord.com/wp-content/uploads/2026/08/Election_2_26_Vermont_83146.jpg"
-        },
-        {
-          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
-          "url": "https://www.republicanherald.com/2026/08/11/mail-voting-limit-eo/",
-          "domain": "republicanherald.com",
-          "seendate": "2026-08-12T01:30:00Z",
-          "image": "https://www.republicanherald.com/wp-content/uploads/2026/08/Election_2_26_Vermont_83146.jpg"
-        },
-        {
-          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
-          "url": "https://www.canoncitydailyrecord.com/2026/08/11/mail-voting-limit-eo/",
-          "domain": "canoncitydailyrecord.com",
-          "seendate": "2026-08-12T01:30:00Z",
-          "image": "https://www.canoncitydailyrecord.com/wp-content/uploads/2026/08/Election_2_26_Vermont_83146.jpg"
-        },
-        {
-          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
-          "url": "https://www.wandtv.com/news/national/judge-again-bars-trump-administration-from-implementing-order-that-sought-to-limit-mail-voting/article_81981bd1-b4ef-5d99-95c8-f59089797086.html",
-          "domain": "wandtv.com",
-          "seendate": "2026-08-12T00:30:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/wandtv.com/content/tncms/assets/v3/editorial/1/19/119d8323-1a88-444c-9930-c54c9b712f6e/6986a42d373be.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
-          "url": "https://www.wral.com/news/ap/159c1-judge-again-bars-trump-administration-from-implementing-order-that-sought-to-limit-mail-voting/",
-          "domain": "wral.com",
-          "seendate": "2026-08-12T00:15:00Z",
-          "image": "https://images.wral.com/ee2a60a8-8f1d-5b3a-a5f3-3377fedf9526"
-        },
-        {
-          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
-          "url": "https://www.courant.com/2026/08/11/mail-voting-limit-eo/",
-          "domain": "courant.com",
-          "seendate": "2026-08-12T00:15:00Z",
-          "image": "https://www.courant.com/wp-content/uploads/2026/08/Election_2_26_Vermont_83146.jpg"
-        },
-        {
-          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
-          "url": "https://www.dailypress.com/2026/08/11/mail-voting-limit-eo/",
-          "domain": "dailypress.com",
-          "seendate": "2026-08-12T00:15:00Z",
-          "image": "https://www.dailypress.com/wp-content/uploads/2026/08/Election_2_26_Vermont_83146.jpg"
-        }
-      ]
-    },
-    "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
-    "summary": "2026-08-12 wsmv.com: Judge again bars Trump administration from implementing order that sought to limit mail voting\n2026-08-12 semissourian.com: Judge again bars Trump administration from implementing orde ... \n2026-08-12 idahostatejournal.com: Judge again bars Trump administration from implementing order that sought to limit mail voting\n2026-08-12 idahostatejournal.com: Judge again bars Trump administration from implementing order that sought to limit mail voting\n2026-08-12 news8000.com: Judge again bars Trump administration from implementing order that sought to limit mail voting\n2026-08-12 troyrecord.com: Judge again bars Trump administration from implementing order that sought to limit mail voting",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_abortion-access-bill",
     "source": "news",
-    "ts": 1786607926291,
+    "ts": 1786617197994,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.711,
+      "salience": 0.695,
       "articles": [
         {
           "title": "Bill Signed Expanding Abortion Access In Massachusetts",
@@ -34017,12 +34017,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_act-america-emergency",
     "source": "news",
-    "ts": 1786607926289,
+    "ts": 1786617197992,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.69,
+      "salience": 0.673,
       "articles": [
         {
           "title": "Trump leaves open emergency option for new voting rules as SAVE America Act stalls",
@@ -34081,12 +34081,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_again-blocks-executive",
     "source": "news",
-    "ts": 1786607926291,
+    "ts": 1786617197994,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.686,
+      "salience": 0.67,
       "articles": [
         {
           "title": "Judge blocks Trump mail - in voting executive order again",
@@ -34145,12 +34145,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_aclu-birthright-children",
     "source": "news",
-    "ts": 1786607926291,
+    "ts": 1786617197994,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.66,
+      "salience": 0.644,
       "articles": [
         {
           "title": "ACLU wants a judge to guard children from Trump birthright citizenship orders",
@@ -34216,12 +34216,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_against-donald-executive",
     "source": "news",
-    "ts": 1786607926290,
+    "ts": 1786617197993,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.607,
+      "salience": 0.591,
       "articles": [
         {
           "title": "Judge rules against Donald Trump mail voting executive order – NBC New York",
@@ -34280,12 +34280,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_400-appeals-ballroom",
     "source": "news",
-    "ts": 1786607926291,
+    "ts": 1786617197994,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.54,
+      "salience": 0.523,
       "articles": [
         {
           "title": "Appeals Court Halts Construction of Trump $400 Million Ballroom | WDAS",
@@ -34344,12 +34344,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_counsel-house-scharf",
     "source": "news",
-    "ts": 1786607926289,
+    "ts": 1786617197991,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.457,
+      "salience": 0.441,
       "articles": [
         {
           "title": "Trump taps staff secretary Will Scharf to be next White House counsel",
@@ -34408,12 +34408,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_congress-could-democrats",
     "source": "news",
-    "ts": 1786607926291,
+    "ts": 1786617197994,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.432,
+      "salience": 0.416,
       "articles": [
         {
           "title": "Trump executive privilege memo could hamper Democrats if they win Congress",
@@ -34440,49 +34440,6 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Trump executive privilege memo could hamper Democrats if they win Congress",
     "summary": "2026-08-12 channel3000.com: Trump executive privilege memo could hamper Democrats if they win Congress\n2026-08-11 us.cnn.com: Trump executive privilege memo could hamper Democrats if they win Congress\n2026-08-11 cnn.com: Trump executive privilege memo could hamper Democrats if they win Congress",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_announces-counsel-house",
-    "source": "news",
-    "ts": 1786607926289,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.176,
-      "articles": [
-        {
-          "title": "President Trump announces Will Scharf as new White House counsel – NBC4 Washington",
-          "url": "https://www.nbcwashington.com/news/national-international/trump-will-scharf-new-white-house-counsel/4140267/",
-          "domain": "nbcwashington.com",
-          "seendate": "2026-08-10T09:45:00Z",
-          "image": "https://media.nbcwashington.com/2026/08/AP26221856820082.jpg?quality=85&strip=all&crop=0px%2C184px%2C4710px%2C2649px"
-        },
-        {
-          "title": "President Trump announces Will Scharf as new White House counsel – NBC New York",
-          "url": "https://www.nbcnewyork.com/news/national-international/trump-will-scharf-new-white-house-counsel/6535121/",
-          "domain": "nbcnewyork.com",
-          "seendate": "2026-08-10T09:30:00Z",
-          "image": "https://media.nbcnewyork.com/2026/08/AP26221856820082.jpg?quality=85&strip=all&crop=0px%2C184px%2C4710px%2C2649px"
-        },
-        {
-          "title": "President Trump announces Will Scharf as new White House counsel – NBC Chicago",
-          "url": "https://www.nbcchicago.com/news/national-international/trump-will-scharf-new-white-house-counsel/3972966/",
-          "domain": "nbcchicago.com",
-          "seendate": "2026-08-10T09:30:00Z",
-          "image": "https://media.nbcchicago.com/2026/08/AP26221856820082.jpg?quality=85&strip=all&crop=0px%2C184px%2C4710px%2C2649px"
-        }
-      ]
-    },
-    "title": "President Trump announces Will Scharf as new White House counsel – NBC New York",
-    "summary": "2026-08-10 nbcwashington.com: President Trump announces Will Scharf as new White House counsel – NBC4 Washington\n2026-08-10 nbcnewyork.com: President Trump announces Will Scharf as new White House counsel – NBC New York\n2026-08-10 nbcchicago.com: President Trump announces Will Scharf as new White House counsel – NBC Chicago",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
