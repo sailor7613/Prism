@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-14T13:50:13.668Z · 38 legislative + 9 news (GDELT, 3d)
+// 2026-08-14T16:09:39.355Z · 38 legislative + 10 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1786715373492,
+    "ts": 1786723764190,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.74,
+      "salience": 0.739,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,7 +259,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1786715373492,
+    "ts": 1786723764189,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1786715373491,
+    "ts": 1786723764189,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.702,
+      "salience": 0.701,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -2843,7 +2843,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1786715373492,
+    "ts": 1786723764189,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
@@ -3256,11 +3256,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1786715373491,
+    "ts": 1786723764189,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.63,
+      "salience": 0.629,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4658,11 +4658,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1786715373492,
+    "ts": 1786723764189,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
-      "salience": 0.63,
+      "salience": 0.629,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
       "votes": [
         {
@@ -4932,7 +4932,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1786715373492,
+    "ts": 1786723764189,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
@@ -5203,11 +5203,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1786715373491,
+    "ts": 1786723764189,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.605,
+      "salience": 0.604,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6605,7 +6605,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1786715373491,
+    "ts": 1786723764189,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
@@ -8007,11 +8007,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1786715373492,
+    "ts": 1786723764190,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.594,
+      "salience": 0.593,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -8534,7 +8534,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1786715373491,
+    "ts": 1786723764189,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
@@ -9468,11 +9468,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1786715373492,
+    "ts": 1786723764190,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.552,
+      "salience": 0.551,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -9744,7 +9744,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1041",
     "source": "legislative",
-    "ts": 1786715373491,
+    "ts": 1786723764188,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1041",
@@ -11141,7 +11141,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2616",
     "source": "legislative",
-    "ts": 1786715373491,
+    "ts": 1786723764188,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2616",
@@ -12535,7 +12535,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1786715373491,
+    "ts": 1786723764189,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
@@ -13467,11 +13467,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1786715373492,
+    "ts": 1786723764190,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.536,
+      "salience": 0.535,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -13743,7 +13743,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1786715373491,
+    "ts": 1786723764189,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
@@ -14676,11 +14676,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1786715373491,
+    "ts": 1786723764189,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.514,
+      "salience": 0.513,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -15609,11 +15609,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1786715373492,
+    "ts": 1786723764190,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.503,
+      "salience": 0.502,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -16001,7 +16001,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6047",
     "source": "legislative",
-    "ts": 1786715373491,
+    "ts": 1786723764188,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6047",
@@ -16926,11 +16926,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1786715373492,
+    "ts": 1786723764189,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.395,
+      "salience": 0.394,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -18329,7 +18329,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1786715373492,
+    "ts": 1786723764190,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
@@ -19222,11 +19222,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1786715373492,
+    "ts": 1786723764190,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.331,
+      "salience": 0.33,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -20137,11 +20137,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1786715373492,
+    "ts": 1786723764190,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.324,
+      "salience": 0.323,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -21025,7 +21025,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1786715373492,
+    "ts": 1786723764189,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
@@ -21946,7 +21946,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1786715373492,
+    "ts": 1786723764189,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
@@ -22864,11 +22864,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1786715373492,
+    "ts": 1786723764189,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.248,
+      "salience": 0.247,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -23763,7 +23763,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1786715373491,
+    "ts": 1786723764188,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
@@ -24697,7 +24697,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1786715373491,
+    "ts": 1786723764188,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
@@ -25626,11 +25626,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1786715373491,
+    "ts": 1786723764188,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
-      "salience": 0.143,
+      "salience": 0.142,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7618",
       "votes": [
         {
@@ -26535,7 +26535,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1786715373491,
+    "ts": 1786723764189,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
@@ -27410,7 +27410,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1786715373491,
+    "ts": 1786723764189,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
@@ -28294,11 +28294,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5317",
     "source": "legislative",
-    "ts": 1786715373490,
+    "ts": 1786723764188,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5317",
-      "salience": 0.088,
+      "salience": 0.087,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5317",
       "votes": [
         {
@@ -29195,11 +29195,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1003",
     "source": "legislative",
-    "ts": 1786715373490,
+    "ts": 1786723764188,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1003",
-      "salience": 0.066,
+      "salience": 0.065,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1003",
       "votes": [
         {
@@ -30094,11 +30094,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2393",
     "source": "legislative",
-    "ts": 1786715373490,
+    "ts": 1786723764188,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2393",
-      "salience": 0.064,
+      "salience": 0.063,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2393",
       "votes": [
         {
@@ -30996,11 +30996,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4544",
     "source": "legislative",
-    "ts": 1786715373490,
+    "ts": 1786723764187,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4544",
-      "salience": 0.062,
+      "salience": 0.061,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4544",
       "votes": [
         {
@@ -31897,11 +31897,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3234",
     "source": "legislative",
-    "ts": 1786715373490,
+    "ts": 1786723764187,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3234",
-      "salience": 0.053,
+      "salience": 0.052,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3234",
       "votes": [
         {
@@ -32793,11 +32793,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1993",
     "source": "legislative",
-    "ts": 1786715373490,
+    "ts": 1786723764188,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1993",
-      "salience": 0.053,
+      "salience": 0.052,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1993",
       "votes": [
         {
@@ -33697,96 +33697,181 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_19b-26b-countries",
+    "cid": "cand_news_ballroom-court-supreme",
     "source": "news",
-    "ts": 1786715413661,
+    "ts": 1786723779345,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.96,
+      "salience": 0.996,
       "articles": [
         {
-          "title": "Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
-          "url": "https://www.kcra.com/article/trump-white-house-losing-revenue-dodge-tariffs/73425919",
-          "domain": "kcra.com",
-          "seendate": "2026-08-14T07:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/2c6aa349-4d8a-4ddd-b3fc-ca993978c369.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
+          "title": "Trump asks Supreme Court to intervene in White House ballroom dispute",
+          "url": "https://fox17.com/news/nation-world/trump-asks-supreme-court-to-intervene-in-white-house-ballroom-dispute",
+          "domain": "fox17.com",
+          "seendate": "2026-08-14T15:30:00Z",
+          "image": "https://fox17.com/resources/media2/16x9/8192/1320/0x428/90/df7a5360-59df-4cd3-b95b-22d75f52a8c1-AP26217654784670.jpg"
         },
         {
-          "title": "Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
-          "url": "https://www.kmbc.com/article/trump-white-house-losing-revenue-dodge-tariffs/73425919",
-          "domain": "kmbc.com",
-          "seendate": "2026-08-14T07:00:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/2c6aa349-4d8a-4ddd-b3fc-ca993978c369.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
+          "title": "Trump asks Supreme Court to let White House resume ballroom construction during appeal",
+          "url": "https://nypost.com/2026/08/14/us-news/trump-asks-supreme-court-to-let-white-house-resume-ballroom-construction-during-appeal/",
+          "domain": "nypost.com",
+          "seendate": "2026-08-14T15:30:00Z",
+          "image": "https://nypost.com/wp-content/uploads/sites/2/2026/08/crop-40339050.jpg?quality=75&strip=all"
         },
         {
-          "title": "Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
-          "url": "https://www.wmtw.com/article/trump-white-house-losing-revenue-dodge-tariffs/73425919",
-          "domain": "wmtw.com",
-          "seendate": "2026-08-14T07:00:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/2c6aa349-4d8a-4ddd-b3fc-ca993978c369.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
-        },
-        {
-          "title": "Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
-          "url": "https://www.wxii12.com/article/trump-white-house-losing-revenue-dodge-tariffs/73425919",
+          "title": "Trump asks Supreme Court to intervene in fight over White House ballroom",
+          "url": "https://www.wxii12.com/article/donald-trump-white-house-ballroom-supreme-court/73435502",
           "domain": "wxii12.com",
-          "seendate": "2026-08-14T06:00:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/2c6aa349-4d8a-4ddd-b3fc-ca993978c369.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
+          "seendate": "2026-08-14T15:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/d22b3d46-0080-466d-b871-52619a7590bc.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.153xh"
         },
         {
-          "title": "Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
-          "url": "https://www.wesh.com/article/trump-white-house-losing-revenue-dodge-tariffs/73425919",
+          "title": "Trump asks Supreme Court to intervene in fight over White House ballroom",
+          "url": "https://www.wesh.com/article/donald-trump-white-house-ballroom-supreme-court/73435502",
           "domain": "wesh.com",
-          "seendate": "2026-08-14T05:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/2c6aa349-4d8a-4ddd-b3fc-ca993978c369.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
+          "seendate": "2026-08-14T15:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/d22b3d46-0080-466d-b871-52619a7590bc.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.153xh"
         },
         {
-          "title": "Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
-          "url": "https://www.wdsu.com/article/trump-white-house-losing-revenue-dodge-tariffs/73425919",
-          "domain": "wdsu.com",
-          "seendate": "2026-08-14T05:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/2c6aa349-4d8a-4ddd-b3fc-ca993978c369.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
+          "title": "Trump asks Supreme Court to let White House resume ballroom construction during appeal - Las Vegas Sun News",
+          "url": "https://lasvegassun.com/news/2026/aug/14/trump-asks-supreme-court-to-let-white-house-resume/",
+          "domain": "lasvegassun.com",
+          "seendate": "2026-08-14T15:30:00Z",
+          "image": null
         },
         {
-          "title": "Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
-          "url": "https://www.wgal.com/article/trump-white-house-losing-revenue-dodge-tariffs/73425919",
-          "domain": "wgal.com",
-          "seendate": "2026-08-14T05:15:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/2c6aa349-4d8a-4ddd-b3fc-ca993978c369.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
+          "title": "Trump asks Supreme Court to let White House ballroom construction continue during appeal - Las Vegas Sun News",
+          "url": "https://lasvegassun.com/news/2026/aug/14/trump-asks-supreme-court-to-let-white-house-ballro/",
+          "domain": "lasvegassun.com",
+          "seendate": "2026-08-14T15:30:00Z",
+          "image": "https://media.lasvegassun.com/media/img/photos/2026/04/02/Trump_26089054460707_t1200.jpg?a58a258a4dac404905303588401680fdf3ee23e4"
         },
         {
-          "title": "Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
-          "url": "https://www.wbaltv.com/article/trump-white-house-losing-revenue-dodge-tariffs/73425919",
-          "domain": "wbaltv.com",
-          "seendate": "2026-08-14T05:00:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/2c6aa349-4d8a-4ddd-b3fc-ca993978c369.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
+          "title": "Trump asks Supreme Court to OK White House ballroom construction",
+          "url": "https://www.cnbc.com/2026/08/14/trump-ballroom-supreme-court-white-house.html",
+          "domain": "cnbc.com",
+          "seendate": "2026-08-14T15:30:00Z",
+          "image": "https://image.cnbcfm.com/api/v1/image/108349742-1786714330366-gettyimages-2289313258-ah803417.jpeg?v=1786714379"
         },
         {
-          "title": "Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
-          "url": "https://www.wcvb.com/article/trump-white-house-losing-revenue-dodge-tariffs/73425919",
-          "domain": "wcvb.com",
-          "seendate": "2026-08-14T04:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/2c6aa349-4d8a-4ddd-b3fc-ca993978c369.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
+          "title": "Trump asks Supreme Court to intervene in White House ballroom dispute",
+          "url": "https://fox23maine.com/news/nation-world/trump-asks-supreme-court-to-intervene-in-white-house-ballroom-dispute",
+          "domain": "fox23maine.com",
+          "seendate": "2026-08-14T15:30:00Z",
+          "image": "https://fox23maine.com/resources/media2/16x9/8192/1320/0x428/90/df7a5360-59df-4cd3-b95b-22d75f52a8c1-AP26217654784670.jpg"
         },
         {
-          "title": "Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
-          "url": "https://www.wlwt.com/article/trump-white-house-losing-revenue-dodge-tariffs/73425919",
-          "domain": "wlwt.com",
-          "seendate": "2026-08-14T04:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/2c6aa349-4d8a-4ddd-b3fc-ca993978c369.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
+          "title": "Trump asks Supreme Court to let White House resume ballroom construction",
+          "url": "https://www.canoncitydailyrecord.com/2026/08/14/trump-supreme-court-white-house-ballroom-construction/",
+          "domain": "canoncitydailyrecord.com",
+          "seendate": "2026-08-14T15:30:00Z",
+          "image": "https://www.canoncitydailyrecord.com/wp-content/uploads/2026/08/AP26217653890614_4ba830.jpg"
         },
         {
-          "title": "Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
-          "url": "https://www.kcci.com/article/trump-white-house-losing-revenue-dodge-tariffs/73425919",
-          "domain": "kcci.com",
-          "seendate": "2026-08-14T04:15:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/2c6aa349-4d8a-4ddd-b3fc-ca993978c369.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
+          "title": "Trump asks Supreme Court about White House ballroom construction – NBC 7 San Diego",
+          "url": "https://www.nbcsandiego.com/news/national-international/donald-trump-asks-supreme-court-allow-white-house-ballroom-construction/4061219/",
+          "domain": "nbcsandiego.com",
+          "seendate": "2026-08-14T15:30:00Z",
+          "image": "https://media.nbcsandiego.com/2026/08/Construction-Continues-On-East-Side-Of-White-House-2246106310-Getty.jpg?quality=85&strip=all&crop=0px%2C371px%2C5000px%2C2813px"
+        },
+        {
+          "title": "Trump asks Supreme Court to let White House ballroom construction continue during appeal",
+          "url": "https://www.ksat.com/news/politics/2026/08/14/trump-asks-supreme-court-to-let-white-house-resume-ballroom-construction-work-during-appeal/",
+          "domain": "ksat.com",
+          "seendate": "2026-08-14T15:15:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/HEFNV5FLFNCJVEQD4BUGXEA2UU.jpg?_a=DATAg1kSZAA0"
+        },
+        {
+          "title": "Trump asks Supreme Court to let White House resume ballroom construction work during appeal",
+          "url": "https://www.fox21online.com/news/us-world/trump-asks-supreme-court-to-let-white-house-resume-ballroom-construction-work-during-appeal/article_2bdfea8d-559d-5012-aefe-e218ff6f70c0.html",
+          "domain": "fox21online.com",
+          "seendate": "2026-08-14T15:15:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/fox21online.com/content/tncms/custom/image/4f2040be-d6aa-4b9f-9a7b-87c8d2f67f6d.jpg"
         }
       ]
     },
-    "title": "Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
-    "summary": "2026-08-14 kcra.com: Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs\n2026-08-14 kmbc.com: Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs\n2026-08-14 wmtw.com: Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs\n2026-08-14 wxii12.com: Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs\n2026-08-14 wesh.com: Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs\n2026-08-14 wdsu.com: Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
+    "title": "Trump asks Supreme Court to OK White House ballroom construction",
+    "summary": "2026-08-14 fox17.com: Trump asks Supreme Court to intervene in White House ballroom dispute\n2026-08-14 nypost.com: Trump asks Supreme Court to let White House resume ballroom construction during appeal\n2026-08-14 wxii12.com: Trump asks Supreme Court to intervene in fight over White House ballroom\n2026-08-14 wesh.com: Trump asks Supreme Court to intervene in fight over White House ballroom\n2026-08-14 lasvegassun.com: Trump asks Supreme Court to let White House resume ballroom construction during appeal - Las Vegas Sun News\n2026-08-14 lasvegassun.com: Trump asks Supreme Court to let White House ballroom construction continue during appeal - Las Vegas Sun News",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_ballroom-goes-project",
+    "source": "news",
+    "ts": 1786723779346,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.887,
+      "articles": [
+        {
+          "title": "Trump Goes To SCOTUS Over Ballroom Project | NewsRadio 800 WVHU",
+          "url": "https://800wvhu.iheart.com/content/2026-08-14-trump-goes-to-scotus-over-ballroom-project/",
+          "domain": "800wvhu.iheart.com",
+          "seendate": "2026-08-14T15:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a7f28f47052bdb7eb7411be?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Trump Goes To SCOTUS Over Ballroom Project",
+          "url": "https://945wpti.iheart.com/content/2026-08-14-trump-goes-to-scotus-over-ballroom-project/",
+          "domain": "945wpti.iheart.com",
+          "seendate": "2026-08-14T15:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a7f28f47052bdb7eb7411be?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Trump Goes To SCOTUS Over Ballroom Project | NewsRadio 1170 WWVA",
+          "url": "https://newsradio1170.iheart.com/content/2026-08-14-trump-goes-to-scotus-over-ballroom-project/",
+          "domain": "newsradio1170.iheart.com",
+          "seendate": "2026-08-14T15:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a7f28f47052bdb7eb7411be?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Trump Goes To SCOTUS Over Ballroom Project",
+          "url": "https://kfbk.iheart.com/content/2026-08-14-trump-goes-to-scotus-over-ballroom-project/",
+          "domain": "kfbk.iheart.com",
+          "seendate": "2026-08-14T15:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a7f28f47052bdb7eb7411be?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Trump Goes To SCOTUS Over Ballroom Project",
+          "url": "https://powertalk967.iheart.com/content/2026-08-14-trump-goes-to-scotus-over-ballroom-project/",
+          "domain": "powertalk967.iheart.com",
+          "seendate": "2026-08-14T15:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a7f28f47052bdb7eb7411be?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Trump Goes To SCOTUS Over Ballroom Project | NewsRadio 600 WMT",
+          "url": "https://600wmtradio.iheart.com/content/2026-08-14-trump-goes-to-scotus-over-ballroom-project/",
+          "domain": "600wmtradio.iheart.com",
+          "seendate": "2026-08-14T15:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a7f28f47052bdb7eb7411be?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Trump Goes To SCOTUS Over Ballroom Project",
+          "url": "https://590kqnt.iheart.com/content/2026-08-14-trump-goes-to-scotus-over-ballroom-project/",
+          "domain": "590kqnt.iheart.com",
+          "seendate": "2026-08-14T15:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a7f28f47052bdb7eb7411be?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Trump Goes To SCOTUS Over Ballroom Project | NewsRadio 98 . 3 WMAN",
+          "url": "https://wmanfm.iheart.com/content/2026-08-14-trump-goes-to-scotus-over-ballroom-project/",
+          "domain": "wmanfm.iheart.com",
+          "seendate": "2026-08-14T15:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a7f28f47052bdb7eb7411be?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        }
+      ]
+    },
+    "title": "Trump Goes To SCOTUS Over Ballroom Project",
+    "summary": "2026-08-14 800wvhu.iheart.com: Trump Goes To SCOTUS Over Ballroom Project | NewsRadio 800 WVHU\n2026-08-14 945wpti.iheart.com: Trump Goes To SCOTUS Over Ballroom Project\n2026-08-14 newsradio1170.iheart.com: Trump Goes To SCOTUS Over Ballroom Project | NewsRadio 1170 WWVA\n2026-08-14 kfbk.iheart.com: Trump Goes To SCOTUS Over Ballroom Project\n2026-08-14 powertalk967.iheart.com: Trump Goes To SCOTUS Over Ballroom Project\n2026-08-14 600wmtradio.iheart.com: Trump Goes To SCOTUS Over Ballroom Project | NewsRadio 600 WMT",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -33798,12 +33883,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_administration-again-bars",
     "source": "news",
-    "ts": 1786715413660,
+    "ts": 1786723779346,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.814,
+      "salience": 0.799,
       "articles": [
         {
           "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
@@ -33902,14 +33987,191 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_ankle-detention-get",
+    "cid": "cand_news_check-does-executive",
     "source": "news",
-    "ts": 1786715413661,
+    "ts": 1786723779346,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.814,
+      "salience": 0.791,
+      "articles": [
+        {
+          "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
+          "url": "https://katu.com/news/nation-world/fact-check-team-executive-orders-explained-how-much-power-does-a-president-really-have-white-house-authority-archives-congress",
+          "domain": "katu.com",
+          "seendate": "2026-08-13T06:45:00Z",
+          "image": "https://katu.com/resources/media2/16x9/6000/1320/0x1/90/469104d1-723d-4cbe-a1fa-4272aa3d7ede-GettyImages2289908024.jpg"
+        },
+        {
+          "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
+          "url": "https://abc6onyourside.com/news/nation-world/fact-check-team-executive-orders-explained-how-much-power-does-a-president-really-have-white-house-authority-archives-congress",
+          "domain": "abc6onyourside.com",
+          "seendate": "2026-08-13T06:15:00Z",
+          "image": "https://abc6onyourside.com/resources/media2/16x9/6000/1320/0x1/90/469104d1-723d-4cbe-a1fa-4272aa3d7ede-GettyImages2289908024.jpg"
+        },
+        {
+          "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
+          "url": "https://13wham.com/news/nation-world/fact-check-team-executive-orders-explained-how-much-power-does-a-president-really-have-white-house-authority-archives-congress",
+          "domain": "13wham.com",
+          "seendate": "2026-08-13T05:30:00Z",
+          "image": "https://13wham.com/resources/media2/16x9/6000/1320/0x1/90/469104d1-723d-4cbe-a1fa-4272aa3d7ede-GettyImages2289908024.jpg"
+        },
+        {
+          "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
+          "url": "https://wcyb.com/news/nation-world/fact-check-team-executive-orders-explained-how-much-power-does-a-president-really-have-white-house-authority-archives-congress",
+          "domain": "wcyb.com",
+          "seendate": "2026-08-13T05:30:00Z",
+          "image": "https://wcyb.com/resources/media2/16x9/6000/1320/0x1/90/469104d1-723d-4cbe-a1fa-4272aa3d7ede-GettyImages2289908024.jpg"
+        },
+        {
+          "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
+          "url": "https://fox17.com/news/nation-world/fact-check-team-executive-orders-explained-how-much-power-does-a-president-really-have-white-house-authority-archives-congress",
+          "domain": "fox17.com",
+          "seendate": "2026-08-13T05:15:00Z",
+          "image": "https://fox17.com/resources/media2/16x9/6000/1320/0x1/90/469104d1-723d-4cbe-a1fa-4272aa3d7ede-GettyImages2289908024.jpg"
+        },
+        {
+          "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
+          "url": "https://komonews.com/news/nation-world/fact-check-team-executive-orders-explained-how-much-power-does-a-president-really-have-white-house-authority-archives-congress",
+          "domain": "komonews.com",
+          "seendate": "2026-08-13T05:00:00Z",
+          "image": "https://komonews.com/resources/media2/16x9/6000/1320/0x1/90/469104d1-723d-4cbe-a1fa-4272aa3d7ede-GettyImages2289908024.jpg"
+        },
+        {
+          "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
+          "url": "https://wlos.com/news/nation-world/fact-check-team-executive-orders-explained-how-much-power-does-a-president-really-have-white-house-authority-archives-congress",
+          "domain": "wlos.com",
+          "seendate": "2026-08-13T05:00:00Z",
+          "image": "https://wlos.com/resources/media2/16x9/6000/1320/0x1/90/469104d1-723d-4cbe-a1fa-4272aa3d7ede-GettyImages2289908024.jpg"
+        },
+        {
+          "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
+          "url": "https://wtov9.com/news/nation-world/fact-check-team-executive-orders-explained-how-much-power-does-a-president-really-have-white-house-authority-archives-congress",
+          "domain": "wtov9.com",
+          "seendate": "2026-08-13T05:00:00Z",
+          "image": "https://wtov9.com/resources/media2/16x9/6000/1320/0x1/90/469104d1-723d-4cbe-a1fa-4272aa3d7ede-GettyImages2289908024.jpg"
+        },
+        {
+          "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
+          "url": "https://wcti12.com/news/nation-world/fact-check-team-executive-orders-explained-how-much-power-does-a-president-really-have-white-house-authority-archives-congress",
+          "domain": "wcti12.com",
+          "seendate": "2026-08-13T04:45:00Z",
+          "image": "https://wcti12.com/resources/media2/16x9/6000/1320/0x1/90/469104d1-723d-4cbe-a1fa-4272aa3d7ede-GettyImages2289908024.jpg"
+        },
+        {
+          "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
+          "url": "https://turnto10.com/news/nation-world/fact-check-team-executive-orders-explained-how-much-power-does-a-president-really-have-white-house-authority-archives-congress",
+          "domain": "turnto10.com",
+          "seendate": "2026-08-13T04:45:00Z",
+          "image": "https://turnto10.com/resources/media2/16x9/6000/1320/0x1/90/469104d1-723d-4cbe-a1fa-4272aa3d7ede-GettyImages2289908024.jpg"
+        },
+        {
+          "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
+          "url": "https://katv.com/news/nation-world/fact-check-team-executive-orders-explained-how-much-power-does-a-president-really-have-white-house-authority-archives-congress",
+          "domain": "katv.com",
+          "seendate": "2026-08-13T04:30:00Z",
+          "image": "https://katv.com/resources/media2/16x9/6000/1320/0x1/90/469104d1-723d-4cbe-a1fa-4272aa3d7ede-GettyImages2289908024.jpg"
+        },
+        {
+          "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
+          "url": "https://wsbt.com/news/nation-world/fact-check-team-executive-orders-explained-how-much-power-does-a-president-really-have-white-house-authority-archives-congress",
+          "domain": "wsbt.com",
+          "seendate": "2026-08-13T04:15:00Z",
+          "image": "https://wsbt.com/resources/media2/16x9/6000/1320/0x1/90/469104d1-723d-4cbe-a1fa-4272aa3d7ede-GettyImages2289908024.jpg"
+        }
+      ]
+    },
+    "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
+    "summary": "2026-08-13 katu.com: Fact Check Team : Executive orders explained . How much power does a president really have ? \n2026-08-13 abc6onyourside.com: Fact Check Team : Executive orders explained . How much power does a president really have ? \n2026-08-13 13wham.com: Fact Check Team : Executive orders explained . How much power does a president really have ? \n2026-08-13 wcyb.com: Fact Check Team : Executive orders explained . How much power does a president really have ? \n2026-08-13 fox17.com: Fact Check Team : Executive orders explained . How much power does a president really have ? \n2026-08-13 komonews.com: Fact Check Team : Executive orders explained . How much power does a president really have ? ",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_19b-26b-countries",
+    "source": "news",
+    "ts": 1786723779347,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.781,
+      "articles": [
+        {
+          "title": "Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
+          "url": "https://www.kcra.com/article/trump-white-house-losing-revenue-dodge-tariffs/73425919",
+          "domain": "kcra.com",
+          "seendate": "2026-08-14T07:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/2c6aa349-4d8a-4ddd-b3fc-ca993978c369.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
+        },
+        {
+          "title": "Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
+          "url": "https://www.wxii12.com/article/trump-white-house-losing-revenue-dodge-tariffs/73425919",
+          "domain": "wxii12.com",
+          "seendate": "2026-08-14T06:00:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/2c6aa349-4d8a-4ddd-b3fc-ca993978c369.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
+        },
+        {
+          "title": "Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
+          "url": "https://www.wesh.com/article/trump-white-house-losing-revenue-dodge-tariffs/73425919",
+          "domain": "wesh.com",
+          "seendate": "2026-08-14T05:45:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/2c6aa349-4d8a-4ddd-b3fc-ca993978c369.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
+        },
+        {
+          "title": "Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
+          "url": "https://www.wgal.com/article/trump-white-house-losing-revenue-dodge-tariffs/73425919",
+          "domain": "wgal.com",
+          "seendate": "2026-08-14T05:15:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/2c6aa349-4d8a-4ddd-b3fc-ca993978c369.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
+        },
+        {
+          "title": "Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
+          "url": "https://www.wbaltv.com/article/trump-white-house-losing-revenue-dodge-tariffs/73425919",
+          "domain": "wbaltv.com",
+          "seendate": "2026-08-14T05:00:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/2c6aa349-4d8a-4ddd-b3fc-ca993978c369.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
+        },
+        {
+          "title": "Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
+          "url": "https://www.wcvb.com/article/trump-white-house-losing-revenue-dodge-tariffs/73425919",
+          "domain": "wcvb.com",
+          "seendate": "2026-08-14T04:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/2c6aa349-4d8a-4ddd-b3fc-ca993978c369.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
+        },
+        {
+          "title": "Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
+          "url": "https://www.kcci.com/article/trump-white-house-losing-revenue-dodge-tariffs/73425919",
+          "domain": "kcci.com",
+          "seendate": "2026-08-14T04:15:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/2c6aa349-4d8a-4ddd-b3fc-ca993978c369.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
+        }
+      ]
+    },
+    "title": "Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
+    "summary": "2026-08-14 kcra.com: Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs\n2026-08-14 wxii12.com: Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs\n2026-08-14 wesh.com: Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs\n2026-08-14 wgal.com: Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs\n2026-08-14 wbaltv.com: Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs\n2026-08-14 wcvb.com: Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_ankle-detention-get",
+    "source": "news",
+    "ts": 1786723779347,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.745,
       "articles": [
         {
           "title": "Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
@@ -33948,13 +34210,6 @@ window.PRISM_CANDIDATES = [
         },
         {
           "title": "Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
-          "url": "https://www.nbcdfw.com/news/national-international/haitians-ohio-lost-protected-status-ankle-monitors-instead-ice-detention/4062346/",
-          "domain": "nbcdfw.com",
-          "seendate": "2026-08-13T23:45:00Z",
-          "image": "https://media.nbcdfw.com/2026/08/AP26214646522617-e1786660808718.jpg?quality=85&strip=all"
-        },
-        {
-          "title": "Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
           "url": "https://www.nbclosangeles.com/news/national-international/haitians-ohio-lost-protected-status-ankle-monitors-instead-ice-detention/3929255/",
           "domain": "nbclosangeles.com",
           "seendate": "2026-08-13T23:30:00Z",
@@ -33970,113 +34225,7 @@ window.PRISM_CANDIDATES = [
       ]
     },
     "title": "Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
-    "summary": "2026-08-14 nbcphiladelphia.com: Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention\n2026-08-14 nbcchicago.com: Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention\n2026-08-14 nbcconnecticut.com: Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention\n2026-08-14 nbcsandiego.com: Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention\n2026-08-14 nbcbayarea.com: Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention\n2026-08-13 nbcdfw.com: Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_check-does-executive",
-    "source": "news",
-    "ts": 1786715413661,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.806,
-      "articles": [
-        {
-          "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
-          "url": "https://katu.com/news/nation-world/fact-check-team-executive-orders-explained-how-much-power-does-a-president-really-have-white-house-authority-archives-congress",
-          "domain": "katu.com",
-          "seendate": "2026-08-13T06:45:00Z",
-          "image": "https://katu.com/resources/media2/16x9/6000/1320/0x1/90/469104d1-723d-4cbe-a1fa-4272aa3d7ede-GettyImages2289908024.jpg"
-        },
-        {
-          "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
-          "url": "https://abc6onyourside.com/news/nation-world/fact-check-team-executive-orders-explained-how-much-power-does-a-president-really-have-white-house-authority-archives-congress",
-          "domain": "abc6onyourside.com",
-          "seendate": "2026-08-13T06:15:00Z",
-          "image": "https://abc6onyourside.com/resources/media2/16x9/6000/1320/0x1/90/469104d1-723d-4cbe-a1fa-4272aa3d7ede-GettyImages2289908024.jpg"
-        },
-        {
-          "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
-          "url": "https://kpic.com/news/nation-world/fact-check-team-executive-orders-explained-how-much-power-does-a-president-really-have-white-house-authority-archives-congress",
-          "domain": "kpic.com",
-          "seendate": "2026-08-13T06:15:00Z",
-          "image": "https://kpic.com/resources/media2/16x9/6000/1320/0x1/90/469104d1-723d-4cbe-a1fa-4272aa3d7ede-GettyImages2289908024.jpg"
-        },
-        {
-          "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
-          "url": "https://wjactv.com/news/nation-world/fact-check-team-executive-orders-explained-how-much-power-does-a-president-really-have-white-house-authority-archives-congress",
-          "domain": "wjactv.com",
-          "seendate": "2026-08-13T05:45:00Z",
-          "image": "https://wjactv.com/resources/media2/16x9/6000/1320/0x1/90/469104d1-723d-4cbe-a1fa-4272aa3d7ede-GettyImages2289908024.jpg"
-        },
-        {
-          "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
-          "url": "https://13wham.com/news/nation-world/fact-check-team-executive-orders-explained-how-much-power-does-a-president-really-have-white-house-authority-archives-congress",
-          "domain": "13wham.com",
-          "seendate": "2026-08-13T05:30:00Z",
-          "image": "https://13wham.com/resources/media2/16x9/6000/1320/0x1/90/469104d1-723d-4cbe-a1fa-4272aa3d7ede-GettyImages2289908024.jpg"
-        },
-        {
-          "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
-          "url": "https://wcyb.com/news/nation-world/fact-check-team-executive-orders-explained-how-much-power-does-a-president-really-have-white-house-authority-archives-congress",
-          "domain": "wcyb.com",
-          "seendate": "2026-08-13T05:30:00Z",
-          "image": "https://wcyb.com/resources/media2/16x9/6000/1320/0x1/90/469104d1-723d-4cbe-a1fa-4272aa3d7ede-GettyImages2289908024.jpg"
-        },
-        {
-          "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
-          "url": "https://fox56.com/news/nation-world/fact-check-team-executive-orders-explained-how-much-power-does-a-president-really-have-white-house-authority-archives-congress",
-          "domain": "fox56.com",
-          "seendate": "2026-08-13T05:30:00Z",
-          "image": "https://fox56.com/resources/media2/16x9/6000/1320/0x1/90/469104d1-723d-4cbe-a1fa-4272aa3d7ede-GettyImages2289908024.jpg"
-        },
-        {
-          "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
-          "url": "https://wchstv.com/news/nation-world/fact-check-team-executive-orders-explained-how-much-power-does-a-president-really-have-white-house-authority-archives-congress",
-          "domain": "wchstv.com",
-          "seendate": "2026-08-13T05:30:00Z",
-          "image": "https://wchstv.com/resources/media2/16x9/6000/1320/0x1/90/469104d1-723d-4cbe-a1fa-4272aa3d7ede-GettyImages2289908024.jpg"
-        },
-        {
-          "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
-          "url": "https://fox17.com/news/nation-world/fact-check-team-executive-orders-explained-how-much-power-does-a-president-really-have-white-house-authority-archives-congress",
-          "domain": "fox17.com",
-          "seendate": "2026-08-13T05:15:00Z",
-          "image": "https://fox17.com/resources/media2/16x9/6000/1320/0x1/90/469104d1-723d-4cbe-a1fa-4272aa3d7ede-GettyImages2289908024.jpg"
-        },
-        {
-          "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
-          "url": "https://nebraska.tv/news/nation-world/fact-check-team-executive-orders-explained-how-much-power-does-a-president-really-have-white-house-authority-archives-congress",
-          "domain": "nebraska.tv",
-          "seendate": "2026-08-13T05:15:00Z",
-          "image": "https://nebraska.tv/resources/media2/16x9/6000/1320/0x1/90/469104d1-723d-4cbe-a1fa-4272aa3d7ede-GettyImages2289908024.jpg"
-        },
-        {
-          "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
-          "url": "https://komonews.com/news/nation-world/fact-check-team-executive-orders-explained-how-much-power-does-a-president-really-have-white-house-authority-archives-congress",
-          "domain": "komonews.com",
-          "seendate": "2026-08-13T05:00:00Z",
-          "image": "https://komonews.com/resources/media2/16x9/6000/1320/0x1/90/469104d1-723d-4cbe-a1fa-4272aa3d7ede-GettyImages2289908024.jpg"
-        },
-        {
-          "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
-          "url": "https://wlos.com/news/nation-world/fact-check-team-executive-orders-explained-how-much-power-does-a-president-really-have-white-house-authority-archives-congress",
-          "domain": "wlos.com",
-          "seendate": "2026-08-13T05:00:00Z",
-          "image": "https://wlos.com/resources/media2/16x9/6000/1320/0x1/90/469104d1-723d-4cbe-a1fa-4272aa3d7ede-GettyImages2289908024.jpg"
-        }
-      ]
-    },
-    "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
-    "summary": "2026-08-13 katu.com: Fact Check Team : Executive orders explained . How much power does a president really have ? \n2026-08-13 abc6onyourside.com: Fact Check Team : Executive orders explained . How much power does a president really have ? \n2026-08-13 kpic.com: Fact Check Team : Executive orders explained . How much power does a president really have ? \n2026-08-13 wjactv.com: Fact Check Team : Executive orders explained . How much power does a president really have ? \n2026-08-13 13wham.com: Fact Check Team : Executive orders explained . How much power does a president really have ? \n2026-08-13 wcyb.com: Fact Check Team : Executive orders explained . How much power does a president really have ? ",
+    "summary": "2026-08-14 nbcphiladelphia.com: Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention\n2026-08-14 nbcchicago.com: Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention\n2026-08-14 nbcconnecticut.com: Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention\n2026-08-14 nbcsandiego.com: Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention\n2026-08-14 nbcbayarea.com: Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention\n2026-08-13 nbclosangeles.com: Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -34088,12 +34237,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_act-america-emergency",
     "source": "news",
-    "ts": 1786715413660,
+    "ts": 1786723779346,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.503,
+      "salience": 0.488,
       "articles": [
         {
           "title": "Trump leaves open emergency option for new voting rules as SAVE America Act stalls",
@@ -34152,12 +34301,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_again-blocks-executive",
     "source": "news",
-    "ts": 1786715413661,
+    "ts": 1786723779347,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.5,
+      "salience": 0.485,
       "articles": [
         {
           "title": "Judge blocks Trump mail - in voting executive order again",
@@ -34216,12 +34365,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_against-donald-executive",
     "source": "news",
-    "ts": 1786715413661,
+    "ts": 1786723779347,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.42,
+      "salience": 0.406,
       "articles": [
         {
           "title": "Judge rules against Donald Trump mail voting executive order – NBC New York",
@@ -34278,78 +34427,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_aclu-birthright-children",
-    "source": "news",
-    "ts": 1786715413661,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.419,
-      "articles": [
-        {
-          "title": "ACLU wants a judge to guard children from Trump birthright citizenship orders",
-          "url": "https://www.wtkr.com/politics/immigration/aclu-wants-a-judge-to-protect-newborn-children-from-trumps-new-birthright-citizenship-orders",
-          "domain": "wtkr.com",
-          "seendate": "2026-08-12T04:00:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/be/86/9385e8c9482485d080b338bc42b8/ap25135713044160.jpg"
-        },
-        {
-          "title": "ACLU wants a judge to guard children from Trump birthright citizenship orders",
-          "url": "https://www.10news.com/politics/immigration/aclu-wants-a-judge-to-protect-newborn-children-from-trumps-new-birthright-citizenship-orders",
-          "domain": "10news.com",
-          "seendate": "2026-08-12T02:45:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/be/86/9385e8c9482485d080b338bc42b8/ap25135713044160.jpg"
-        },
-        {
-          "title": "ACLU wants a judge to guard children from Trump birthright citizenship orders",
-          "url": "https://www.katc.com/politics/immigration/aclu-wants-a-judge-to-protect-newborn-children-from-trumps-new-birthright-citizenship-orders",
-          "domain": "katc.com",
-          "seendate": "2026-08-12T02:30:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/be/86/9385e8c9482485d080b338bc42b8/ap25135713044160.jpg"
-        },
-        {
-          "title": "ACLU wants a judge to guard children from Trump birthright citizenship orders",
-          "url": "https://www.wptv.com/politics/immigration/aclu-wants-a-judge-to-protect-newborn-children-from-trumps-new-birthright-citizenship-orders",
-          "domain": "wptv.com",
-          "seendate": "2026-08-12T02:15:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/be/86/9385e8c9482485d080b338bc42b8/ap25135713044160.jpg"
-        },
-        {
-          "title": "ACLU wants a judge to guard children from Trump birthright citizenship orders",
-          "url": "https://www.turnto23.com/politics/immigration/aclu-wants-a-judge-to-protect-newborn-children-from-trumps-new-birthright-citizenship-orders",
-          "domain": "turnto23.com",
-          "seendate": "2026-08-12T01:15:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/be/86/9385e8c9482485d080b338bc42b8/ap25135713044160.jpg"
-        },
-        {
-          "title": "ACLU wants a judge to guard children from Trump birthright citizenship orders",
-          "url": "https://www.fox17online.com/politics/immigration/aclu-wants-a-judge-to-protect-newborn-children-from-trumps-new-birthright-citizenship-orders",
-          "domain": "fox17online.com",
-          "seendate": "2026-08-12T00:15:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/be/86/9385e8c9482485d080b338bc42b8/ap25135713044160.jpg"
-        }
-      ]
-    },
-    "title": "ACLU wants a judge to guard children from Trump birthright citizenship orders",
-    "summary": "2026-08-12 wtkr.com: ACLU wants a judge to guard children from Trump birthright citizenship orders\n2026-08-12 10news.com: ACLU wants a judge to guard children from Trump birthright citizenship orders\n2026-08-12 katc.com: ACLU wants a judge to guard children from Trump birthright citizenship orders\n2026-08-12 wptv.com: ACLU wants a judge to guard children from Trump birthright citizenship orders\n2026-08-12 turnto23.com: ACLU wants a judge to guard children from Trump birthright citizenship orders\n2026-08-12 fox17online.com: ACLU wants a judge to guard children from Trump birthright citizenship orders",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_congress-could-democrats",
     "source": "news",
-    "ts": 1786715413661,
+    "ts": 1786723779347,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.246,
+      "salience": 0.231,
       "articles": [
         {
           "title": "Trump executive privilege memo could hamper Democrats if they win Congress",
