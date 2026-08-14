@@ -1,11 +1,11 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-14T10:29:03.477Z · 38 legislative + 9 news (GDELT, 3d)
+// 2026-08-14T13:50:13.668Z · 38 legislative + 9 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1786703323587,
+    "ts": 1786715373492,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
@@ -259,11 +259,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1786703323587,
+    "ts": 1786715373492,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.732,
+      "salience": 0.731,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -532,7 +532,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1786703323586,
+    "ts": 1786715373491,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1786703323587,
+    "ts": 1786715373492,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.687,
+      "salience": 0.686,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3256,7 +3256,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1786703323586,
+    "ts": 1786715373491,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
@@ -4658,7 +4658,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1786703323587,
+    "ts": 1786715373492,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
@@ -4932,11 +4932,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1786703323587,
+    "ts": 1786715373492,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.616,
+      "salience": 0.615,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5203,7 +5203,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1786703323586,
+    "ts": 1786715373491,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
@@ -6605,11 +6605,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1786703323586,
+    "ts": 1786715373491,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.6,
+      "salience": 0.599,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -8007,7 +8007,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1786703323587,
+    "ts": 1786715373492,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
@@ -8534,11 +8534,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1786703323586,
+    "ts": 1786715373491,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.553,
+      "salience": 0.552,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -9468,7 +9468,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1786703323587,
+    "ts": 1786715373492,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
@@ -9744,11 +9744,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1041",
     "source": "legislative",
-    "ts": 1786703323585,
+    "ts": 1786715373491,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1041",
-      "salience": 0.543,
+      "salience": 0.542,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1041",
       "votes": [
         {
@@ -11141,11 +11141,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2616",
     "source": "legislative",
-    "ts": 1786703323585,
+    "ts": 1786715373491,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2616",
-      "salience": 0.54,
+      "salience": 0.539,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2616",
       "votes": [
         {
@@ -12535,11 +12535,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1786703323586,
+    "ts": 1786715373491,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
-      "salience": 0.537,
+      "salience": 0.536,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2913",
       "votes": [
         {
@@ -13467,7 +13467,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1786703323587,
+    "ts": 1786715373492,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
@@ -13743,11 +13743,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1786703323586,
+    "ts": 1786715373491,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
-      "salience": 0.534,
+      "salience": 0.533,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8312",
       "votes": [
         {
@@ -14676,7 +14676,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1786703323586,
+    "ts": 1786715373491,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
@@ -15609,7 +15609,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1786703323587,
+    "ts": 1786715373492,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
@@ -16001,11 +16001,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6047",
     "source": "legislative",
-    "ts": 1786703323585,
+    "ts": 1786715373491,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6047",
-      "salience": 0.447,
+      "salience": 0.446,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6047",
       "votes": [
         {
@@ -16926,7 +16926,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1786703323586,
+    "ts": 1786715373492,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
@@ -18329,11 +18329,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1786703323587,
+    "ts": 1786715373492,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.338,
+      "salience": 0.337,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -19222,7 +19222,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1786703323587,
+    "ts": 1786715373492,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
@@ -20137,7 +20137,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1786703323587,
+    "ts": 1786715373492,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
@@ -21025,11 +21025,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1786703323587,
+    "ts": 1786715373492,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.32,
+      "salience": 0.319,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -21946,11 +21946,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1786703323587,
+    "ts": 1786715373492,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.309,
+      "salience": 0.308,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -22864,11 +22864,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1786703323586,
+    "ts": 1786715373492,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.249,
+      "salience": 0.248,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -23763,11 +23763,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1786703323586,
+    "ts": 1786715373491,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.22,
+      "salience": 0.219,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -24697,11 +24697,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1786703323586,
+    "ts": 1786715373491,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
-      "salience": 0.146,
+      "salience": 0.145,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/254",
       "votes": [
         {
@@ -25626,7 +25626,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1786703323585,
+    "ts": 1786715373491,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
@@ -26535,11 +26535,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1786703323586,
+    "ts": 1786715373491,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
-      "salience": 0.138,
+      "salience": 0.137,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8466",
       "votes": [
         {
@@ -27410,11 +27410,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1786703323586,
+    "ts": 1786715373491,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
-      "salience": 0.138,
+      "salience": 0.137,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8428",
       "votes": [
         {
@@ -28294,7 +28294,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5317",
     "source": "legislative",
-    "ts": 1786703323585,
+    "ts": 1786715373490,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5317",
@@ -29195,7 +29195,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1003",
     "source": "legislative",
-    "ts": 1786703323585,
+    "ts": 1786715373490,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1003",
@@ -30094,7 +30094,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2393",
     "source": "legislative",
-    "ts": 1786703323585,
+    "ts": 1786715373490,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2393",
@@ -30996,7 +30996,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4544",
     "source": "legislative",
-    "ts": 1786703323585,
+    "ts": 1786715373490,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4544",
@@ -31897,7 +31897,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3234",
     "source": "legislative",
-    "ts": 1786703323584,
+    "ts": 1786715373490,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3234",
@@ -32793,7 +32793,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1993",
     "source": "legislative",
-    "ts": 1786703323585,
+    "ts": 1786715373490,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1993",
@@ -33699,12 +33699,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_19b-26b-countries",
     "source": "news",
-    "ts": 1786703343469,
+    "ts": 1786715413661,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.981,
+      "salience": 0.96,
       "articles": [
         {
           "title": "Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
@@ -33796,92 +33796,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_ankle-detention-get",
-    "source": "news",
-    "ts": 1786703343469,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.835,
-      "articles": [
-        {
-          "title": "Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
-          "url": "https://www.nbcphiladelphia.com/news/national-international/haitians-ohio-lost-protected-status-ankle-monitors-instead-ice-detention/4447934/",
-          "domain": "nbcphiladelphia.com",
-          "seendate": "2026-08-14T01:45:00Z",
-          "image": "https://media.nbcphiladelphia.com/2026/08/AP26214646522617-e1786660808718.jpg?quality=85&strip=all"
-        },
-        {
-          "title": "Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
-          "url": "https://www.nbcchicago.com/news/national-international/haitians-ohio-lost-protected-status-ankle-monitors-instead-ice-detention/3975129/",
-          "domain": "nbcchicago.com",
-          "seendate": "2026-08-14T01:30:00Z",
-          "image": "https://media.nbcchicago.com/2026/08/AP26214646522617-e1786660808718.jpg?quality=85&strip=all"
-        },
-        {
-          "title": "Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
-          "url": "https://www.nbcconnecticut.com/news/national-international/haitians-ohio-lost-protected-status-ankle-monitors-instead-ice-detention/3764986/",
-          "domain": "nbcconnecticut.com",
-          "seendate": "2026-08-14T01:00:00Z",
-          "image": "https://media.nbcconnecticut.com/2026/08/AP26214646522617-e1786660808718.jpg?quality=85&strip=all"
-        },
-        {
-          "title": "Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
-          "url": "https://www.nbcsandiego.com/news/national-international/haitians-ohio-lost-protected-status-ankle-monitors-instead-ice-detention/4060922/",
-          "domain": "nbcsandiego.com",
-          "seendate": "2026-08-14T00:45:00Z",
-          "image": "https://media.nbcsandiego.com/2026/08/AP26214646522617-e1786660808718.jpg?quality=85&strip=all"
-        },
-        {
-          "title": "Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
-          "url": "https://www.nbcbayarea.com/news/national-international/haitians-ohio-lost-protected-status-ankle-monitors-instead-ice-detention/4127859/",
-          "domain": "nbcbayarea.com",
-          "seendate": "2026-08-14T00:15:00Z",
-          "image": "https://media.nbcbayarea.com/2026/08/AP26214646522617-e1786660808718.jpg?quality=85&strip=all"
-        },
-        {
-          "title": "Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
-          "url": "https://www.nbcdfw.com/news/national-international/haitians-ohio-lost-protected-status-ankle-monitors-instead-ice-detention/4062346/",
-          "domain": "nbcdfw.com",
-          "seendate": "2026-08-13T23:45:00Z",
-          "image": "https://media.nbcdfw.com/2026/08/AP26214646522617-e1786660808718.jpg?quality=85&strip=all"
-        },
-        {
-          "title": "Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
-          "url": "https://www.nbclosangeles.com/news/national-international/haitians-ohio-lost-protected-status-ankle-monitors-instead-ice-detention/3929255/",
-          "domain": "nbclosangeles.com",
-          "seendate": "2026-08-13T23:30:00Z",
-          "image": "https://media.nbclosangeles.com/2026/08/AP26214646522617-e1786660808718.jpg?quality=85&strip=all"
-        },
-        {
-          "title": "Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
-          "url": "https://www.nbcnews.com/politics/immigration/haitians-ohio-lost-protected-status-get-ankle-monitors-instead-ice-det-rcna591989",
-          "domain": "nbcnews.com",
-          "seendate": "2026-08-13T20:15:00Z",
-          "image": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2026-08/260811-ankle-monitor-ohio-tps-ch-1615-4ab6ed.jpg"
-        }
-      ]
-    },
-    "title": "Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
-    "summary": "2026-08-14 nbcphiladelphia.com: Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention\n2026-08-14 nbcchicago.com: Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention\n2026-08-14 nbcconnecticut.com: Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention\n2026-08-14 nbcsandiego.com: Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention\n2026-08-14 nbcbayarea.com: Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention\n2026-08-13 nbcdfw.com: Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_administration-again-bars",
     "source": "news",
-    "ts": 1786703343467,
+    "ts": 1786715413660,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.834,
+      "salience": 0.814,
       "articles": [
         {
           "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
@@ -33980,14 +33902,92 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_check-does-executive",
+    "cid": "cand_news_ankle-detention-get",
     "source": "news",
-    "ts": 1786703343468,
+    "ts": 1786715413661,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.827,
+      "salience": 0.814,
+      "articles": [
+        {
+          "title": "Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
+          "url": "https://www.nbcphiladelphia.com/news/national-international/haitians-ohio-lost-protected-status-ankle-monitors-instead-ice-detention/4447934/",
+          "domain": "nbcphiladelphia.com",
+          "seendate": "2026-08-14T01:45:00Z",
+          "image": "https://media.nbcphiladelphia.com/2026/08/AP26214646522617-e1786660808718.jpg?quality=85&strip=all"
+        },
+        {
+          "title": "Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
+          "url": "https://www.nbcchicago.com/news/national-international/haitians-ohio-lost-protected-status-ankle-monitors-instead-ice-detention/3975129/",
+          "domain": "nbcchicago.com",
+          "seendate": "2026-08-14T01:30:00Z",
+          "image": "https://media.nbcchicago.com/2026/08/AP26214646522617-e1786660808718.jpg?quality=85&strip=all"
+        },
+        {
+          "title": "Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
+          "url": "https://www.nbcconnecticut.com/news/national-international/haitians-ohio-lost-protected-status-ankle-monitors-instead-ice-detention/3764986/",
+          "domain": "nbcconnecticut.com",
+          "seendate": "2026-08-14T01:00:00Z",
+          "image": "https://media.nbcconnecticut.com/2026/08/AP26214646522617-e1786660808718.jpg?quality=85&strip=all"
+        },
+        {
+          "title": "Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
+          "url": "https://www.nbcsandiego.com/news/national-international/haitians-ohio-lost-protected-status-ankle-monitors-instead-ice-detention/4060922/",
+          "domain": "nbcsandiego.com",
+          "seendate": "2026-08-14T00:45:00Z",
+          "image": "https://media.nbcsandiego.com/2026/08/AP26214646522617-e1786660808718.jpg?quality=85&strip=all"
+        },
+        {
+          "title": "Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
+          "url": "https://www.nbcbayarea.com/news/national-international/haitians-ohio-lost-protected-status-ankle-monitors-instead-ice-detention/4127859/",
+          "domain": "nbcbayarea.com",
+          "seendate": "2026-08-14T00:15:00Z",
+          "image": "https://media.nbcbayarea.com/2026/08/AP26214646522617-e1786660808718.jpg?quality=85&strip=all"
+        },
+        {
+          "title": "Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
+          "url": "https://www.nbcdfw.com/news/national-international/haitians-ohio-lost-protected-status-ankle-monitors-instead-ice-detention/4062346/",
+          "domain": "nbcdfw.com",
+          "seendate": "2026-08-13T23:45:00Z",
+          "image": "https://media.nbcdfw.com/2026/08/AP26214646522617-e1786660808718.jpg?quality=85&strip=all"
+        },
+        {
+          "title": "Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
+          "url": "https://www.nbclosangeles.com/news/national-international/haitians-ohio-lost-protected-status-ankle-monitors-instead-ice-detention/3929255/",
+          "domain": "nbclosangeles.com",
+          "seendate": "2026-08-13T23:30:00Z",
+          "image": "https://media.nbclosangeles.com/2026/08/AP26214646522617-e1786660808718.jpg?quality=85&strip=all"
+        },
+        {
+          "title": "Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
+          "url": "https://www.nbcnews.com/politics/immigration/haitians-ohio-lost-protected-status-get-ankle-monitors-instead-ice-det-rcna591989",
+          "domain": "nbcnews.com",
+          "seendate": "2026-08-13T20:15:00Z",
+          "image": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2026-08/260811-ankle-monitor-ohio-tps-ch-1615-4ab6ed.jpg"
+        }
+      ]
+    },
+    "title": "Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
+    "summary": "2026-08-14 nbcphiladelphia.com: Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention\n2026-08-14 nbcchicago.com: Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention\n2026-08-14 nbcconnecticut.com: Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention\n2026-08-14 nbcsandiego.com: Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention\n2026-08-14 nbcbayarea.com: Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention\n2026-08-13 nbcdfw.com: Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_check-does-executive",
+    "source": "news",
+    "ts": 1786715413661,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.806,
       "articles": [
         {
           "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
@@ -34088,12 +34088,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_act-america-emergency",
     "source": "news",
-    "ts": 1786703343466,
+    "ts": 1786715413660,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.524,
+      "salience": 0.503,
       "articles": [
         {
           "title": "Trump leaves open emergency option for new voting rules as SAVE America Act stalls",
@@ -34152,12 +34152,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_again-blocks-executive",
     "source": "news",
-    "ts": 1786703343469,
+    "ts": 1786715413661,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.521,
+      "salience": 0.5,
       "articles": [
         {
           "title": "Judge blocks Trump mail - in voting executive order again",
@@ -34214,85 +34214,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_aclu-birthright-children",
-    "source": "news",
-    "ts": 1786703343469,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.494,
-      "articles": [
-        {
-          "title": "ACLU wants a judge to guard children from Trump birthright citizenship orders",
-          "url": "https://www.wtkr.com/politics/immigration/aclu-wants-a-judge-to-protect-newborn-children-from-trumps-new-birthright-citizenship-orders",
-          "domain": "wtkr.com",
-          "seendate": "2026-08-12T04:00:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/be/86/9385e8c9482485d080b338bc42b8/ap25135713044160.jpg"
-        },
-        {
-          "title": "ACLU wants a judge to guard children from Trump birthright citizenship orders",
-          "url": "https://www.10news.com/politics/immigration/aclu-wants-a-judge-to-protect-newborn-children-from-trumps-new-birthright-citizenship-orders",
-          "domain": "10news.com",
-          "seendate": "2026-08-12T02:45:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/be/86/9385e8c9482485d080b338bc42b8/ap25135713044160.jpg"
-        },
-        {
-          "title": "ACLU wants a judge to guard children from Trump birthright citizenship orders",
-          "url": "https://www.katc.com/politics/immigration/aclu-wants-a-judge-to-protect-newborn-children-from-trumps-new-birthright-citizenship-orders",
-          "domain": "katc.com",
-          "seendate": "2026-08-12T02:30:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/be/86/9385e8c9482485d080b338bc42b8/ap25135713044160.jpg"
-        },
-        {
-          "title": "ACLU wants a judge to guard children from Trump birthright citizenship orders",
-          "url": "https://www.kristv.com/politics/immigration/aclu-wants-a-judge-to-protect-newborn-children-from-trumps-new-birthright-citizenship-orders",
-          "domain": "kristv.com",
-          "seendate": "2026-08-12T02:30:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/be/86/9385e8c9482485d080b338bc42b8/ap25135713044160.jpg"
-        },
-        {
-          "title": "ACLU wants a judge to guard children from Trump birthright citizenship orders",
-          "url": "https://www.wptv.com/politics/immigration/aclu-wants-a-judge-to-protect-newborn-children-from-trumps-new-birthright-citizenship-orders",
-          "domain": "wptv.com",
-          "seendate": "2026-08-12T02:15:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/be/86/9385e8c9482485d080b338bc42b8/ap25135713044160.jpg"
-        },
-        {
-          "title": "ACLU wants a judge to guard children from Trump birthright citizenship orders",
-          "url": "https://www.turnto23.com/politics/immigration/aclu-wants-a-judge-to-protect-newborn-children-from-trumps-new-birthright-citizenship-orders",
-          "domain": "turnto23.com",
-          "seendate": "2026-08-12T01:15:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/be/86/9385e8c9482485d080b338bc42b8/ap25135713044160.jpg"
-        },
-        {
-          "title": "ACLU wants a judge to guard children from Trump birthright citizenship orders",
-          "url": "https://www.fox17online.com/politics/immigration/aclu-wants-a-judge-to-protect-newborn-children-from-trumps-new-birthright-citizenship-orders",
-          "domain": "fox17online.com",
-          "seendate": "2026-08-12T00:15:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/be/86/9385e8c9482485d080b338bc42b8/ap25135713044160.jpg"
-        }
-      ]
-    },
-    "title": "ACLU wants a judge to guard children from Trump birthright citizenship orders",
-    "summary": "2026-08-12 wtkr.com: ACLU wants a judge to guard children from Trump birthright citizenship orders\n2026-08-12 10news.com: ACLU wants a judge to guard children from Trump birthright citizenship orders\n2026-08-12 katc.com: ACLU wants a judge to guard children from Trump birthright citizenship orders\n2026-08-12 kristv.com: ACLU wants a judge to guard children from Trump birthright citizenship orders\n2026-08-12 wptv.com: ACLU wants a judge to guard children from Trump birthright citizenship orders\n2026-08-12 turnto23.com: ACLU wants a judge to guard children from Trump birthright citizenship orders",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_against-donald-executive",
     "source": "news",
-    "ts": 1786703343468,
+    "ts": 1786715413661,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.441,
+      "salience": 0.42,
       "articles": [
         {
           "title": "Judge rules against Donald Trump mail voting executive order – NBC New York",
@@ -34349,14 +34278,78 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_congress-could-democrats",
+    "cid": "cand_news_aclu-birthright-children",
     "source": "news",
-    "ts": 1786703343469,
+    "ts": 1786715413661,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.267,
+      "salience": 0.419,
+      "articles": [
+        {
+          "title": "ACLU wants a judge to guard children from Trump birthright citizenship orders",
+          "url": "https://www.wtkr.com/politics/immigration/aclu-wants-a-judge-to-protect-newborn-children-from-trumps-new-birthright-citizenship-orders",
+          "domain": "wtkr.com",
+          "seendate": "2026-08-12T04:00:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/be/86/9385e8c9482485d080b338bc42b8/ap25135713044160.jpg"
+        },
+        {
+          "title": "ACLU wants a judge to guard children from Trump birthright citizenship orders",
+          "url": "https://www.10news.com/politics/immigration/aclu-wants-a-judge-to-protect-newborn-children-from-trumps-new-birthright-citizenship-orders",
+          "domain": "10news.com",
+          "seendate": "2026-08-12T02:45:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/be/86/9385e8c9482485d080b338bc42b8/ap25135713044160.jpg"
+        },
+        {
+          "title": "ACLU wants a judge to guard children from Trump birthright citizenship orders",
+          "url": "https://www.katc.com/politics/immigration/aclu-wants-a-judge-to-protect-newborn-children-from-trumps-new-birthright-citizenship-orders",
+          "domain": "katc.com",
+          "seendate": "2026-08-12T02:30:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/be/86/9385e8c9482485d080b338bc42b8/ap25135713044160.jpg"
+        },
+        {
+          "title": "ACLU wants a judge to guard children from Trump birthright citizenship orders",
+          "url": "https://www.wptv.com/politics/immigration/aclu-wants-a-judge-to-protect-newborn-children-from-trumps-new-birthright-citizenship-orders",
+          "domain": "wptv.com",
+          "seendate": "2026-08-12T02:15:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/be/86/9385e8c9482485d080b338bc42b8/ap25135713044160.jpg"
+        },
+        {
+          "title": "ACLU wants a judge to guard children from Trump birthright citizenship orders",
+          "url": "https://www.turnto23.com/politics/immigration/aclu-wants-a-judge-to-protect-newborn-children-from-trumps-new-birthright-citizenship-orders",
+          "domain": "turnto23.com",
+          "seendate": "2026-08-12T01:15:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/be/86/9385e8c9482485d080b338bc42b8/ap25135713044160.jpg"
+        },
+        {
+          "title": "ACLU wants a judge to guard children from Trump birthright citizenship orders",
+          "url": "https://www.fox17online.com/politics/immigration/aclu-wants-a-judge-to-protect-newborn-children-from-trumps-new-birthright-citizenship-orders",
+          "domain": "fox17online.com",
+          "seendate": "2026-08-12T00:15:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/be/86/9385e8c9482485d080b338bc42b8/ap25135713044160.jpg"
+        }
+      ]
+    },
+    "title": "ACLU wants a judge to guard children from Trump birthright citizenship orders",
+    "summary": "2026-08-12 wtkr.com: ACLU wants a judge to guard children from Trump birthright citizenship orders\n2026-08-12 10news.com: ACLU wants a judge to guard children from Trump birthright citizenship orders\n2026-08-12 katc.com: ACLU wants a judge to guard children from Trump birthright citizenship orders\n2026-08-12 wptv.com: ACLU wants a judge to guard children from Trump birthright citizenship orders\n2026-08-12 turnto23.com: ACLU wants a judge to guard children from Trump birthright citizenship orders\n2026-08-12 fox17online.com: ACLU wants a judge to guard children from Trump birthright citizenship orders",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_congress-could-democrats",
+    "source": "news",
+    "ts": 1786715413661,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.246,
       "articles": [
         {
           "title": "Trump executive privilege memo could hamper Democrats if they win Congress",
