@@ -1,11 +1,11 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-14T16:09:39.355Z · 38 legislative + 10 news (GDELT, 3d)
+// 2026-08-14T19:24:24.771Z · 38 legislative + 6 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1786723764190,
+    "ts": 1786735415967,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
@@ -259,11 +259,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1786723764189,
+    "ts": 1786735415967,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.731,
+      "salience": 0.73,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -532,7 +532,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1786723764189,
+    "ts": 1786735415966,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1786723764189,
+    "ts": 1786735415967,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.686,
+      "salience": 0.685,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3254,13 +3254,287 @@ window.PRISM_CANDIDATES = [
     "mts": 1784784262612
   },
   {
+    "cid": "cand_leg_sjres-119-196",
+    "source": "legislative",
+    "ts": 1786735415967,
+    "raw": {
+      "method": "legislative_rollcall_v1",
+      "billId": "sjres-119-196",
+      "salience": 0.629,
+      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
+      "votes": [
+        {
+          "voteId": "s-119-2-190",
+          "chamber": "senate",
+          "date": "June 24, 2026,  09:16 PM",
+          "question": "On the Motion to Proceed",
+          "result": "Motion to Proceed Rejected",
+          "margin": -0.072,
+          "totals": {
+            "yea": 45,
+            "nay": 52,
+            "present": 0,
+            "notVoting": 3
+          },
+          "party": {
+            "D": {
+              "yea": 43,
+              "nay": 0
+            },
+            "R": {
+              "yea": 0,
+              "nay": 52
+            },
+            "I": {
+              "yea": 2,
+              "nay": 0
+            }
+          },
+          "positions": {
+            "yea": [
+              "A000382",
+              "B001230",
+              "B001277",
+              "B001303",
+              "B001288",
+              "C000127",
+              "C001088",
+              "C001113",
+              "D000622",
+              "D000563",
+              "F000479",
+              "G000574",
+              "G000555",
+              "H001076",
+              "H001046",
+              "H000273",
+              "H001042",
+              "K000384",
+              "K000377",
+              "K000394",
+              "K000383",
+              "K000367",
+              "M000133",
+              "M001176",
+              "M001169",
+              "M001111",
+              "O000174",
+              "P000145",
+              "P000595",
+              "R000122",
+              "R000608",
+              "S000033",
+              "S001194",
+              "S001150",
+              "S000148",
+              "S001208",
+              "S001203",
+              "V000128",
+              "W000805",
+              "W000790",
+              "W000817",
+              "W000800",
+              "W000802",
+              "W000779"
+            ],
+            "nay": [
+              "B001299",
+              "B001261",
+              "B001243",
+              "B001236",
+              "B001319",
+              "B001305",
+              "C001047",
+              "C001075",
+              "C001035",
+              "C001056",
+              "C001095",
+              "C001096",
+              "C000880",
+              "C001098",
+              "C001114",
+              "D000618",
+              "E000295",
+              "F000463",
+              "G000359",
+              "G000386",
+              "H000601",
+              "H001089",
+              "H001061",
+              "H001104",
+              "H001079",
+              "J000293",
+              "J000312",
+              "K000393",
+              "L000575",
+              "L000577",
+              "L000571",
+              "M001198",
+              "M001243",
+              "M001244",
+              "M000934",
+              "M001242",
+              "M001153",
+              "P000603",
+              "R000618",
+              "R000584",
+              "R000605",
+              "S001227",
+              "S001217",
+              "S001184",
+              "S001232",
+              "S001198",
+              "T000250",
+              "T000476",
+              "T000278",
+              "W000437",
+              "Y000064"
+            ],
+            "present": [],
+            "notVoting": [
+              "B001267",
+              "M000355",
+              "S001181"
+            ]
+          }
+        }
+      ]
+    },
+    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
+    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
+    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Disapprove rule",
+        "neg": "Uphold rule"
+      },
+      "y": {
+        "pos": "Executive overreach",
+        "neg": "Agency discretion legitimate"
+      }
+    },
+    "prevalentAxisGuess": "x",
+    "members": [
+      "A000382",
+      "B001230",
+      "B001277",
+      "B001303",
+      "B001288",
+      "C000127",
+      "C001088",
+      "C001113",
+      "D000622",
+      "D000563",
+      "F000479",
+      "G000574",
+      "G000555",
+      "H001076",
+      "H001046",
+      "H000273",
+      "H001042",
+      "K000384",
+      "K000377",
+      "K000394",
+      "K000383",
+      "K000367",
+      "M000133",
+      "M001176",
+      "M001169",
+      "M001111",
+      "O000174",
+      "P000145",
+      "P000595",
+      "R000122",
+      "R000608",
+      "S000033",
+      "S001194",
+      "S001150",
+      "S000148",
+      "S001208",
+      "S001203",
+      "V000128",
+      "W000805",
+      "W000790",
+      "W000817",
+      "W000800",
+      "W000802",
+      "W000779",
+      "B001299",
+      "B001261",
+      "B001243",
+      "B001236",
+      "B001319",
+      "B001305",
+      "C001047",
+      "C001075",
+      "C001035",
+      "C001056",
+      "C001095",
+      "C001096",
+      "C000880",
+      "C001098",
+      "C001114",
+      "D000618",
+      "E000295",
+      "F000463",
+      "G000359",
+      "G000386",
+      "H000601",
+      "H001089",
+      "H001061",
+      "H001104",
+      "H001079",
+      "J000293",
+      "J000312",
+      "K000393",
+      "L000575",
+      "L000577",
+      "L000571",
+      "M001198",
+      "M001243",
+      "M001244",
+      "M000934",
+      "M001242",
+      "M001153",
+      "P000603",
+      "R000618",
+      "R000584",
+      "R000605",
+      "S001227",
+      "S001217",
+      "S001184",
+      "S001232",
+      "S001198",
+      "T000250",
+      "T000476",
+      "T000278",
+      "W000437",
+      "Y000064"
+    ],
+    "bills": [
+      "sjres-119-196"
+    ],
+    "fitness": {
+      "score": 0.3,
+      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:28:30.038Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "s-119-2-190",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297586
+  },
+  {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1786723764189,
+    "ts": 1786735415966,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.629,
+      "salience": 0.628,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4656,287 +4930,13 @@ window.PRISM_CANDIDATES = [
     "mts": 1784044297586
   },
   {
-    "cid": "cand_leg_sjres-119-196",
-    "source": "legislative",
-    "ts": 1786723764189,
-    "raw": {
-      "method": "legislative_rollcall_v1",
-      "billId": "sjres-119-196",
-      "salience": 0.629,
-      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
-      "votes": [
-        {
-          "voteId": "s-119-2-190",
-          "chamber": "senate",
-          "date": "June 24, 2026,  09:16 PM",
-          "question": "On the Motion to Proceed",
-          "result": "Motion to Proceed Rejected",
-          "margin": -0.072,
-          "totals": {
-            "yea": 45,
-            "nay": 52,
-            "present": 0,
-            "notVoting": 3
-          },
-          "party": {
-            "D": {
-              "yea": 43,
-              "nay": 0
-            },
-            "R": {
-              "yea": 0,
-              "nay": 52
-            },
-            "I": {
-              "yea": 2,
-              "nay": 0
-            }
-          },
-          "positions": {
-            "yea": [
-              "A000382",
-              "B001230",
-              "B001277",
-              "B001303",
-              "B001288",
-              "C000127",
-              "C001088",
-              "C001113",
-              "D000622",
-              "D000563",
-              "F000479",
-              "G000574",
-              "G000555",
-              "H001076",
-              "H001046",
-              "H000273",
-              "H001042",
-              "K000384",
-              "K000377",
-              "K000394",
-              "K000383",
-              "K000367",
-              "M000133",
-              "M001176",
-              "M001169",
-              "M001111",
-              "O000174",
-              "P000145",
-              "P000595",
-              "R000122",
-              "R000608",
-              "S000033",
-              "S001194",
-              "S001150",
-              "S000148",
-              "S001208",
-              "S001203",
-              "V000128",
-              "W000805",
-              "W000790",
-              "W000817",
-              "W000800",
-              "W000802",
-              "W000779"
-            ],
-            "nay": [
-              "B001299",
-              "B001261",
-              "B001243",
-              "B001236",
-              "B001319",
-              "B001305",
-              "C001047",
-              "C001075",
-              "C001035",
-              "C001056",
-              "C001095",
-              "C001096",
-              "C000880",
-              "C001098",
-              "C001114",
-              "D000618",
-              "E000295",
-              "F000463",
-              "G000359",
-              "G000386",
-              "H000601",
-              "H001089",
-              "H001061",
-              "H001104",
-              "H001079",
-              "J000293",
-              "J000312",
-              "K000393",
-              "L000575",
-              "L000577",
-              "L000571",
-              "M001198",
-              "M001243",
-              "M001244",
-              "M000934",
-              "M001242",
-              "M001153",
-              "P000603",
-              "R000618",
-              "R000584",
-              "R000605",
-              "S001227",
-              "S001217",
-              "S001184",
-              "S001232",
-              "S001198",
-              "T000250",
-              "T000476",
-              "T000278",
-              "W000437",
-              "Y000064"
-            ],
-            "present": [],
-            "notVoting": [
-              "B001267",
-              "M000355",
-              "S001181"
-            ]
-          }
-        }
-      ]
-    },
-    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
-    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
-    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
-    "suggestedAxes": {
-      "x": {
-        "pos": "Disapprove rule",
-        "neg": "Uphold rule"
-      },
-      "y": {
-        "pos": "Executive overreach",
-        "neg": "Agency discretion legitimate"
-      }
-    },
-    "prevalentAxisGuess": "x",
-    "members": [
-      "A000382",
-      "B001230",
-      "B001277",
-      "B001303",
-      "B001288",
-      "C000127",
-      "C001088",
-      "C001113",
-      "D000622",
-      "D000563",
-      "F000479",
-      "G000574",
-      "G000555",
-      "H001076",
-      "H001046",
-      "H000273",
-      "H001042",
-      "K000384",
-      "K000377",
-      "K000394",
-      "K000383",
-      "K000367",
-      "M000133",
-      "M001176",
-      "M001169",
-      "M001111",
-      "O000174",
-      "P000145",
-      "P000595",
-      "R000122",
-      "R000608",
-      "S000033",
-      "S001194",
-      "S001150",
-      "S000148",
-      "S001208",
-      "S001203",
-      "V000128",
-      "W000805",
-      "W000790",
-      "W000817",
-      "W000800",
-      "W000802",
-      "W000779",
-      "B001299",
-      "B001261",
-      "B001243",
-      "B001236",
-      "B001319",
-      "B001305",
-      "C001047",
-      "C001075",
-      "C001035",
-      "C001056",
-      "C001095",
-      "C001096",
-      "C000880",
-      "C001098",
-      "C001114",
-      "D000618",
-      "E000295",
-      "F000463",
-      "G000359",
-      "G000386",
-      "H000601",
-      "H001089",
-      "H001061",
-      "H001104",
-      "H001079",
-      "J000293",
-      "J000312",
-      "K000393",
-      "L000575",
-      "L000577",
-      "L000571",
-      "M001198",
-      "M001243",
-      "M001244",
-      "M000934",
-      "M001242",
-      "M001153",
-      "P000603",
-      "R000618",
-      "R000584",
-      "R000605",
-      "S001227",
-      "S001217",
-      "S001184",
-      "S001232",
-      "S001198",
-      "T000250",
-      "T000476",
-      "T000278",
-      "W000437",
-      "Y000064"
-    ],
-    "bills": [
-      "sjres-119-196"
-    ],
-    "fitness": {
-      "score": 0.3,
-      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
-      "method": "m2_constitutive_v1",
-      "ts": "2026-07-14T04:28:30.038Z"
-    },
-    "status": "new",
-    "voteMap": {
-      "voteId": "s-119-2-190",
-      "yeaPole": "pos"
-    },
-    "mts": 1784044297586
-  },
-  {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1786723764189,
+    "ts": 1786735415967,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.615,
+      "salience": 0.614,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5203,7 +5203,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1786723764189,
+    "ts": 1786735415966,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
@@ -6605,11 +6605,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1786723764189,
+    "ts": 1786735415966,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.599,
+      "salience": 0.598,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -8007,7 +8007,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1786723764190,
+    "ts": 1786735415967,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
@@ -8534,11 +8534,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1786723764189,
+    "ts": 1786735415966,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.552,
+      "salience": 0.551,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -9468,7 +9468,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1786723764190,
+    "ts": 1786735415967,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
@@ -9744,11 +9744,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1041",
     "source": "legislative",
-    "ts": 1786723764188,
+    "ts": 1786735415965,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1041",
-      "salience": 0.542,
+      "salience": 0.541,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1041",
       "votes": [
         {
@@ -11141,11 +11141,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2616",
     "source": "legislative",
-    "ts": 1786723764188,
+    "ts": 1786735415965,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2616",
-      "salience": 0.539,
+      "salience": 0.538,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2616",
       "votes": [
         {
@@ -12535,11 +12535,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1786723764189,
+    "ts": 1786735415966,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
-      "salience": 0.536,
+      "salience": 0.535,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2913",
       "votes": [
         {
@@ -13467,7 +13467,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1786723764190,
+    "ts": 1786735415967,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
@@ -13743,11 +13743,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1786723764189,
+    "ts": 1786735415966,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
-      "salience": 0.533,
+      "salience": 0.532,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8312",
       "votes": [
         {
@@ -14676,7 +14676,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1786723764189,
+    "ts": 1786735415966,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
@@ -15609,7 +15609,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1786723764190,
+    "ts": 1786735415967,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
@@ -16001,11 +16001,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6047",
     "source": "legislative",
-    "ts": 1786723764188,
+    "ts": 1786735415965,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6047",
-      "salience": 0.446,
+      "salience": 0.445,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6047",
       "votes": [
         {
@@ -16926,7 +16926,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1786723764189,
+    "ts": 1786735415967,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
@@ -18329,11 +18329,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1786723764190,
+    "ts": 1786735415967,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.337,
+      "salience": 0.336,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -19222,11 +19222,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1786723764190,
+    "ts": 1786735415967,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.33,
+      "salience": 0.329,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -20137,7 +20137,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1786723764190,
+    "ts": 1786735415967,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
@@ -21025,11 +21025,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1786723764189,
+    "ts": 1786735415967,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.319,
+      "salience": 0.318,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -21946,11 +21946,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1786723764189,
+    "ts": 1786735415967,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.308,
+      "salience": 0.307,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -22864,7 +22864,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1786723764189,
+    "ts": 1786735415967,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
@@ -23763,11 +23763,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1786723764188,
+    "ts": 1786735415966,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.219,
+      "salience": 0.218,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -24697,11 +24697,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1786723764188,
+    "ts": 1786735415966,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
-      "salience": 0.145,
+      "salience": 0.144,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/254",
       "votes": [
         {
@@ -25626,7 +25626,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1786723764188,
+    "ts": 1786735415966,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
@@ -26535,11 +26535,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1786723764189,
+    "ts": 1786735415966,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
-      "salience": 0.137,
+      "salience": 0.136,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8466",
       "votes": [
         {
@@ -27410,11 +27410,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1786723764189,
+    "ts": 1786735415966,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
-      "salience": 0.137,
+      "salience": 0.136,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8428",
       "votes": [
         {
@@ -28294,7 +28294,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5317",
     "source": "legislative",
-    "ts": 1786723764188,
+    "ts": 1786735415965,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5317",
@@ -29195,7 +29195,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1003",
     "source": "legislative",
-    "ts": 1786723764188,
+    "ts": 1786735415965,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1003",
@@ -30094,11 +30094,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2393",
     "source": "legislative",
-    "ts": 1786723764188,
+    "ts": 1786735415965,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2393",
-      "salience": 0.063,
+      "salience": 0.062,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2393",
       "votes": [
         {
@@ -30996,7 +30996,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4544",
     "source": "legislative",
-    "ts": 1786723764187,
+    "ts": 1786735415965,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4544",
@@ -31897,7 +31897,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3234",
     "source": "legislative",
-    "ts": 1786723764187,
+    "ts": 1786735415965,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3234",
@@ -32793,7 +32793,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1993",
     "source": "legislative",
-    "ts": 1786723764188,
+    "ts": 1786735415965,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1993",
@@ -33699,101 +33699,101 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballroom-court-supreme",
     "source": "news",
-    "ts": 1786723779345,
+    "ts": 1786735464761,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.996,
+      "salience": 0.997,
       "articles": [
         {
-          "title": "Trump asks Supreme Court to intervene in White House ballroom dispute",
-          "url": "https://fox17.com/news/nation-world/trump-asks-supreme-court-to-intervene-in-white-house-ballroom-dispute",
-          "domain": "fox17.com",
-          "seendate": "2026-08-14T15:30:00Z",
-          "image": "https://fox17.com/resources/media2/16x9/8192/1320/0x428/90/df7a5360-59df-4cd3-b95b-22d75f52a8c1-AP26217654784670.jpg"
-        },
-        {
-          "title": "Trump asks Supreme Court to let White House resume ballroom construction during appeal",
-          "url": "https://nypost.com/2026/08/14/us-news/trump-asks-supreme-court-to-let-white-house-resume-ballroom-construction-during-appeal/",
-          "domain": "nypost.com",
-          "seendate": "2026-08-14T15:30:00Z",
-          "image": "https://nypost.com/wp-content/uploads/sites/2/2026/08/crop-40339050.jpg?quality=75&strip=all"
-        },
-        {
-          "title": "Trump asks Supreme Court to intervene in fight over White House ballroom",
-          "url": "https://www.wxii12.com/article/donald-trump-white-house-ballroom-supreme-court/73435502",
-          "domain": "wxii12.com",
-          "seendate": "2026-08-14T15:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/d22b3d46-0080-466d-b871-52619a7590bc.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.153xh"
-        },
-        {
-          "title": "Trump asks Supreme Court to intervene in fight over White House ballroom",
-          "url": "https://www.wesh.com/article/donald-trump-white-house-ballroom-supreme-court/73435502",
-          "domain": "wesh.com",
-          "seendate": "2026-08-14T15:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/d22b3d46-0080-466d-b871-52619a7590bc.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.153xh"
-        },
-        {
-          "title": "Trump asks Supreme Court to let White House resume ballroom construction during appeal - Las Vegas Sun News",
-          "url": "https://lasvegassun.com/news/2026/aug/14/trump-asks-supreme-court-to-let-white-house-resume/",
-          "domain": "lasvegassun.com",
-          "seendate": "2026-08-14T15:30:00Z",
+          "title": "Trump appeals to Supreme Court to allow White House ballroom construction to continue",
+          "url": "https://kjlhradio.com/trump-appeals-to-supreme-court-to-allow-white-house-ballroom-construction-to-continue/",
+          "domain": "kjlhradio.com",
+          "seendate": "2026-08-14T19:00:00Z",
           "image": null
         },
         {
-          "title": "Trump asks Supreme Court to let White House ballroom construction continue during appeal - Las Vegas Sun News",
-          "url": "https://lasvegassun.com/news/2026/aug/14/trump-asks-supreme-court-to-let-white-house-ballro/",
-          "domain": "lasvegassun.com",
-          "seendate": "2026-08-14T15:30:00Z",
-          "image": "https://media.lasvegassun.com/media/img/photos/2026/04/02/Trump_26089054460707_t1200.jpg?a58a258a4dac404905303588401680fdf3ee23e4"
-        },
-        {
-          "title": "Trump asks Supreme Court to OK White House ballroom construction",
-          "url": "https://www.cnbc.com/2026/08/14/trump-ballroom-supreme-court-white-house.html",
-          "domain": "cnbc.com",
-          "seendate": "2026-08-14T15:30:00Z",
-          "image": "https://image.cnbcfm.com/api/v1/image/108349742-1786714330366-gettyimages-2289313258-ah803417.jpeg?v=1786714379"
+          "title": "Trump appeals to Supreme Court to allow White House ballroom construction to continue",
+          "url": "https://midutahradio.com/news/national-news/trump-appeals-to-supreme-court-to-allow-white-house-ballroom-construction-to-continue/",
+          "domain": "midutahradio.com",
+          "seendate": "2026-08-14T19:00:00Z",
+          "image": "https://midutahradio.com/wp-content/uploads/2026/08/Getty_Whitehouseconstruction_081426.jpg"
         },
         {
           "title": "Trump asks Supreme Court to intervene in White House ballroom dispute",
-          "url": "https://fox23maine.com/news/nation-world/trump-asks-supreme-court-to-intervene-in-white-house-ballroom-dispute",
-          "domain": "fox23maine.com",
-          "seendate": "2026-08-14T15:30:00Z",
-          "image": "https://fox23maine.com/resources/media2/16x9/8192/1320/0x428/90/df7a5360-59df-4cd3-b95b-22d75f52a8c1-AP26217654784670.jpg"
+          "url": "https://myfox28columbus.com/news/nation-world/trump-asks-supreme-court-to-intervene-in-white-house-ballroom-dispute",
+          "domain": "myfox28columbus.com",
+          "seendate": "2026-08-14T19:00:00Z",
+          "image": "https://myfox28columbus.com/resources/media2/16x9/8192/1320/0x428/90/df7a5360-59df-4cd3-b95b-22d75f52a8c1-AP26217654784670.jpg"
         },
         {
-          "title": "Trump asks Supreme Court to let White House resume ballroom construction",
-          "url": "https://www.canoncitydailyrecord.com/2026/08/14/trump-supreme-court-white-house-ballroom-construction/",
-          "domain": "canoncitydailyrecord.com",
-          "seendate": "2026-08-14T15:30:00Z",
-          "image": "https://www.canoncitydailyrecord.com/wp-content/uploads/2026/08/AP26217653890614_4ba830.jpg"
+          "title": "Trump asks Supreme Court to intervene in White House ballroom dispute",
+          "url": "https://abcnews4.com/news/nation-world/trump-asks-supreme-court-to-intervene-in-white-house-ballroom-dispute",
+          "domain": "abcnews4.com",
+          "seendate": "2026-08-14T19:00:00Z",
+          "image": "https://abcnews4.com/resources/media2/16x9/8192/1320/0x428/90/df7a5360-59df-4cd3-b95b-22d75f52a8c1-AP26217654784670.jpg"
         },
         {
-          "title": "Trump asks Supreme Court about White House ballroom construction – NBC 7 San Diego",
-          "url": "https://www.nbcsandiego.com/news/national-international/donald-trump-asks-supreme-court-allow-white-house-ballroom-construction/4061219/",
-          "domain": "nbcsandiego.com",
-          "seendate": "2026-08-14T15:30:00Z",
-          "image": "https://media.nbcsandiego.com/2026/08/Construction-Continues-On-East-Side-Of-White-House-2246106310-Getty.jpg?quality=85&strip=all&crop=0px%2C371px%2C5000px%2C2813px"
+          "title": "Trump asks Supreme Court to intervene in White House ballroom dispute",
+          "url": "https://wset.com/news/nation-world/trump-asks-supreme-court-to-intervene-in-white-house-ballroom-dispute",
+          "domain": "wset.com",
+          "seendate": "2026-08-14T18:45:00Z",
+          "image": "https://wset.com/resources/media2/16x9/8192/1320/0x428/90/df7a5360-59df-4cd3-b95b-22d75f52a8c1-AP26217654784670.jpg"
         },
         {
-          "title": "Trump asks Supreme Court to let White House ballroom construction continue during appeal",
-          "url": "https://www.ksat.com/news/politics/2026/08/14/trump-asks-supreme-court-to-let-white-house-resume-ballroom-construction-work-during-appeal/",
-          "domain": "ksat.com",
-          "seendate": "2026-08-14T15:15:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/HEFNV5FLFNCJVEQD4BUGXEA2UU.jpg?_a=DATAg1kSZAA0"
+          "title": "Trump asks Supreme Court to intervene in White House ballroom dispute",
+          "url": "https://katv.com/news/nation-world/trump-asks-supreme-court-to-intervene-in-white-house-ballroom-dispute",
+          "domain": "katv.com",
+          "seendate": "2026-08-14T18:45:00Z",
+          "image": "https://katv.com/resources/media2/16x9/8192/1320/0x428/90/df7a5360-59df-4cd3-b95b-22d75f52a8c1-AP26217654784670.jpg"
         },
         {
-          "title": "Trump asks Supreme Court to let White House resume ballroom construction work during appeal",
-          "url": "https://www.fox21online.com/news/us-world/trump-asks-supreme-court-to-let-white-house-resume-ballroom-construction-work-during-appeal/article_2bdfea8d-559d-5012-aefe-e218ff6f70c0.html",
-          "domain": "fox21online.com",
-          "seendate": "2026-08-14T15:15:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/fox21online.com/content/tncms/custom/image/4f2040be-d6aa-4b9f-9a7b-87c8d2f67f6d.jpg"
+          "title": "Trump asks Supreme Court to intervene in fight over White House ballroom",
+          "url": "https://www.wcvb.com/article/donald-trump-white-house-ballroom-supreme-court/73435502",
+          "domain": "wcvb.com",
+          "seendate": "2026-08-14T18:45:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/d22b3d46-0080-466d-b871-52619a7590bc.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.153xh"
+        },
+        {
+          "title": "Trump asks Supreme Court to let White House ballroom construction continue during appeal - Boston News , Weather , Sports",
+          "url": "https://whdh.com/news/trump-asks-supreme-court-to-let-white-house-ballroom-construction-continue-during-appeal/",
+          "domain": "whdh.com",
+          "seendate": "2026-08-14T18:45:00Z",
+          "image": null
+        },
+        {
+          "title": "Trump asks Supreme Court to intervene in White House ballroom dispute",
+          "url": "https://abc7amarillo.com/news/nation-world/trump-asks-supreme-court-to-intervene-in-white-house-ballroom-dispute",
+          "domain": "abc7amarillo.com",
+          "seendate": "2026-08-14T18:45:00Z",
+          "image": "https://abc7amarillo.com/resources/media2/16x9/8192/1320/0x428/90/df7a5360-59df-4cd3-b95b-22d75f52a8c1-AP26217654784670.jpg"
+        },
+        {
+          "title": "Trump asks Supreme Court to intervene in White House ballroom dispute",
+          "url": "https://wach.com/news/nation-world/trump-asks-supreme-court-to-intervene-in-white-house-ballroom-dispute",
+          "domain": "wach.com",
+          "seendate": "2026-08-14T18:45:00Z",
+          "image": "https://wach.com/resources/media2/16x9/8192/1320/0x428/90/df7a5360-59df-4cd3-b95b-22d75f52a8c1-AP26217654784670.jpg"
+        },
+        {
+          "title": "Trump asks Supreme Court to let him build ballroom , citing national security needs and architectural values",
+          "url": "https://www.kimt.com/news/trump-asks-supreme-court-to-let-him-build-ballroom-citing-national-security-needs-and-architectural/article_b836dc27-a6c7-5fde-8db1-b7282b9ae3f6.html",
+          "domain": "kimt.com",
+          "seendate": "2026-08-14T18:45:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/kimt.com/content/tncms/assets/v3/editorial/b/6c/b6c8d08e-7246-59d8-a924-76284d692c7e/6a7f4dda6ff68.image.jpg?crop=1763%2C926%2C0%2C125"
+        },
+        {
+          "title": "Trump administration asks Supreme Court to allow ballroom construction",
+          "url": "https://www.10news.com/politics/the-president/trump-administration-asks-supreme-court-to-allow-ballroom-construction",
+          "domain": "10news.com",
+          "seendate": "2026-08-14T18:30:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/19/8f/9f20e8104302ab43b75f261f4434/ap26217654920197-1.jpg"
         }
       ]
     },
-    "title": "Trump asks Supreme Court to OK White House ballroom construction",
-    "summary": "2026-08-14 fox17.com: Trump asks Supreme Court to intervene in White House ballroom dispute\n2026-08-14 nypost.com: Trump asks Supreme Court to let White House resume ballroom construction during appeal\n2026-08-14 wxii12.com: Trump asks Supreme Court to intervene in fight over White House ballroom\n2026-08-14 wesh.com: Trump asks Supreme Court to intervene in fight over White House ballroom\n2026-08-14 lasvegassun.com: Trump asks Supreme Court to let White House resume ballroom construction during appeal - Las Vegas Sun News\n2026-08-14 lasvegassun.com: Trump asks Supreme Court to let White House ballroom construction continue during appeal - Las Vegas Sun News",
+    "title": "Trump asks Supreme Court to intervene in White House ballroom dispute",
+    "summary": "2026-08-14 kjlhradio.com: Trump appeals to Supreme Court to allow White House ballroom construction to continue\n2026-08-14 midutahradio.com: Trump appeals to Supreme Court to allow White House ballroom construction to continue\n2026-08-14 myfox28columbus.com: Trump asks Supreme Court to intervene in White House ballroom dispute\n2026-08-14 abcnews4.com: Trump asks Supreme Court to intervene in White House ballroom dispute\n2026-08-14 wset.com: Trump asks Supreme Court to intervene in White House ballroom dispute\n2026-08-14 katv.com: Trump asks Supreme Court to intervene in White House ballroom dispute",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -33805,179 +33805,101 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballroom-goes-project",
     "source": "news",
-    "ts": 1786723779346,
+    "ts": 1786735464762,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.887,
+      "salience": 0.994,
       "articles": [
         {
-          "title": "Trump Goes To SCOTUS Over Ballroom Project | NewsRadio 800 WVHU",
-          "url": "https://800wvhu.iheart.com/content/2026-08-14-trump-goes-to-scotus-over-ballroom-project/",
-          "domain": "800wvhu.iheart.com",
-          "seendate": "2026-08-14T15:45:00Z",
+          "title": "Trump Goes To SCOTUS Over Ballroom Project | News Radio 103 . 1 and 810 WGY",
+          "url": "https://wgy.iheart.com/content/2026-08-14-trump-goes-to-scotus-over-ballroom-project/",
+          "domain": "wgy.iheart.com",
+          "seendate": "2026-08-14T18:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a7f28f47052bdb7eb7411be?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Trump Goes To SCOTUS Over Ballroom Project | News Radio 94 . 3 WSC",
+          "url": "https://943wsc.iheart.com/content/2026-08-14-trump-goes-to-scotus-over-ballroom-project/",
+          "domain": "943wsc.iheart.com",
+          "seendate": "2026-08-14T18:00:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a7f28f47052bdb7eb7411be?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
           "title": "Trump Goes To SCOTUS Over Ballroom Project",
-          "url": "https://945wpti.iheart.com/content/2026-08-14-trump-goes-to-scotus-over-ballroom-project/",
-          "domain": "945wpti.iheart.com",
-          "seendate": "2026-08-14T15:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a7f28f47052bdb7eb7411be?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Trump Goes To SCOTUS Over Ballroom Project | NewsRadio 1170 WWVA",
-          "url": "https://newsradio1170.iheart.com/content/2026-08-14-trump-goes-to-scotus-over-ballroom-project/",
-          "domain": "newsradio1170.iheart.com",
-          "seendate": "2026-08-14T15:30:00Z",
+          "url": "https://wvoc.iheart.com/content/2026-08-14-trump-goes-to-scotus-over-ballroom-project/",
+          "domain": "wvoc.iheart.com",
+          "seendate": "2026-08-14T18:00:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a7f28f47052bdb7eb7411be?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
           "title": "Trump Goes To SCOTUS Over Ballroom Project",
-          "url": "https://kfbk.iheart.com/content/2026-08-14-trump-goes-to-scotus-over-ballroom-project/",
-          "domain": "kfbk.iheart.com",
-          "seendate": "2026-08-14T15:30:00Z",
+          "url": "https://kprcradio.iheart.com/content/2026-08-14-trump-goes-to-scotus-over-ballroom-project/",
+          "domain": "kprcradio.iheart.com",
+          "seendate": "2026-08-14T18:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a7f28f47052bdb7eb7411be?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Trump Goes To SCOTUS Over Ballroom Project | NewsTalk 1240 WSFC",
+          "url": "https://wsfcam.iheart.com/content/2026-08-14-trump-goes-to-scotus-over-ballroom-project/",
+          "domain": "wsfcam.iheart.com",
+          "seendate": "2026-08-14T17:45:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a7f28f47052bdb7eb7411be?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
           "title": "Trump Goes To SCOTUS Over Ballroom Project",
-          "url": "https://powertalk967.iheart.com/content/2026-08-14-trump-goes-to-scotus-over-ballroom-project/",
-          "domain": "powertalk967.iheart.com",
-          "seendate": "2026-08-14T15:30:00Z",
+          "url": "https://newstalk1230.iheart.com/content/2026-08-14-trump-goes-to-scotus-over-ballroom-project/",
+          "domain": "newstalk1230.iheart.com",
+          "seendate": "2026-08-14T17:45:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a7f28f47052bdb7eb7411be?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "Trump Goes To SCOTUS Over Ballroom Project | NewsRadio 600 WMT",
-          "url": "https://600wmtradio.iheart.com/content/2026-08-14-trump-goes-to-scotus-over-ballroom-project/",
-          "domain": "600wmtradio.iheart.com",
-          "seendate": "2026-08-14T15:15:00Z",
+          "title": "Trump Goes To SCOTUS Over Ballroom Project | NewsRadio 1370 AM & 92 . 9 FM WSPD",
+          "url": "https://wspd.iheart.com/content/2026-08-14-trump-goes-to-scotus-over-ballroom-project/",
+          "domain": "wspd.iheart.com",
+          "seendate": "2026-08-14T17:45:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a7f28f47052bdb7eb7411be?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
           "title": "Trump Goes To SCOTUS Over Ballroom Project",
-          "url": "https://590kqnt.iheart.com/content/2026-08-14-trump-goes-to-scotus-over-ballroom-project/",
-          "domain": "590kqnt.iheart.com",
-          "seendate": "2026-08-14T15:15:00Z",
+          "url": "https://wjdx.iheart.com/content/2026-08-14-trump-goes-to-scotus-over-ballroom-project/",
+          "domain": "wjdx.iheart.com",
+          "seendate": "2026-08-14T17:45:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a7f28f47052bdb7eb7411be?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "Trump Goes To SCOTUS Over Ballroom Project | NewsRadio 98 . 3 WMAN",
-          "url": "https://wmanfm.iheart.com/content/2026-08-14-trump-goes-to-scotus-over-ballroom-project/",
-          "domain": "wmanfm.iheart.com",
-          "seendate": "2026-08-14T15:15:00Z",
+          "title": "Trump Goes To SCOTUS Over Ballroom Project",
+          "url": "https://720thevoice.iheart.com/content/2026-08-14-trump-goes-to-scotus-over-ballroom-project/",
+          "domain": "720thevoice.iheart.com",
+          "seendate": "2026-08-14T17:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a7f28f47052bdb7eb7411be?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Trump Goes To SCOTUS Over Ballroom Project",
+          "url": "https://wjno.iheart.com/content/2026-08-14-trump-goes-to-scotus-over-ballroom-project/",
+          "domain": "wjno.iheart.com",
+          "seendate": "2026-08-14T17:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a7f28f47052bdb7eb7411be?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Trump Goes To SCOTUS Over Ballroom Project | NewsRadio 1000 KTOK",
+          "url": "https://ktok.iheart.com/content/2026-08-14-trump-goes-to-scotus-over-ballroom-project/",
+          "domain": "ktok.iheart.com",
+          "seendate": "2026-08-14T17:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a7f28f47052bdb7eb7411be?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Trump Goes To SCOTUS Over Ballroom Project",
+          "url": "https://knst.iheart.com/content/2026-08-14-trump-goes-to-scotus-over-ballroom-project/",
+          "domain": "knst.iheart.com",
+          "seendate": "2026-08-14T17:45:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a7f28f47052bdb7eb7411be?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         }
       ]
     },
     "title": "Trump Goes To SCOTUS Over Ballroom Project",
-    "summary": "2026-08-14 800wvhu.iheart.com: Trump Goes To SCOTUS Over Ballroom Project | NewsRadio 800 WVHU\n2026-08-14 945wpti.iheart.com: Trump Goes To SCOTUS Over Ballroom Project\n2026-08-14 newsradio1170.iheart.com: Trump Goes To SCOTUS Over Ballroom Project | NewsRadio 1170 WWVA\n2026-08-14 kfbk.iheart.com: Trump Goes To SCOTUS Over Ballroom Project\n2026-08-14 powertalk967.iheart.com: Trump Goes To SCOTUS Over Ballroom Project\n2026-08-14 600wmtradio.iheart.com: Trump Goes To SCOTUS Over Ballroom Project | NewsRadio 600 WMT",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_administration-again-bars",
-    "source": "news",
-    "ts": 1786723779346,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.799,
-      "articles": [
-        {
-          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
-          "url": "https://www.paradisepost.com/2026/08/11/mail-voting-limit-eo/",
-          "domain": "paradisepost.com",
-          "seendate": "2026-08-13T08:00:00Z",
-          "image": "https://www.paradisepost.com/wp-content/uploads/2026/08/Election_2_26_Vermont_83146.jpg"
-        },
-        {
-          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
-          "url": "https://www.wsmv.com/2026/08/11/federal-judge-again-bars-trumps-mail-ballot-order-heres-why/",
-          "domain": "wsmv.com",
-          "seendate": "2026-08-12T14:45:00Z",
-          "image": "https://gray-wsmv-prod.gtv-cdn.com/resizer/v2/F3E2TSBF4NDJXIB64HBMILZGEI.jpg?auth=5f02533f9ebe05316d0e88942ffc8abc7326a1a19907b333ff188fa0216efd4e&smart=true"
-        },
-        {
-          "title": "Judge again bars Trump administration from implementing orde ... ",
-          "url": "https://www.semissourian.com/world/judge-again-bars-trump-administration-from-implementing-order-that-sought-to-limit-mail-voting-381fbbe6",
-          "domain": "semissourian.com",
-          "seendate": "2026-08-12T04:00:00Z",
-          "image": "https://public-assets-prod.pubgen.ai/brand_a7b06a8b-02b9-4920-9426-9b9be1d4e410/asset_9c28a9b6-bebd-5c1a-bf07-678cc9a8e297.jpg"
-        },
-        {
-          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
-          "url": "http://www.idahostatejournal.com/news/national/judge-again-bars-trump-administration-from-implementing-order-that-sought-to-limit-mail-voting/article_79a1b23b-0d45-5186-b0e0-a00242f1d4ba.html",
-          "domain": "idahostatejournal.com",
-          "seendate": "2026-08-12T02:30:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/idahostatejournal.com/content/tncms/assets/v3/editorial/d/7b/d7b6ece2-8a53-592f-8227-2667488ea964/6a7b9d0a457c6.image.jpg?crop=1760%2C924%2C0%2C126"
-        },
-        {
-          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
-          "url": "https://www.idahostatejournal.com/news/national/judge-again-bars-trump-administration-from-implementing-order-that-sought-to-limit-mail-voting/article_79a1b23b-0d45-5186-b0e0-a00242f1d4ba.html",
-          "domain": "idahostatejournal.com",
-          "seendate": "2026-08-12T02:30:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/idahostatejournal.com/content/tncms/assets/v3/editorial/d/7b/d7b6ece2-8a53-592f-8227-2667488ea964/6a7b9d0a457c6.image.jpg?crop=1760%2C924%2C0%2C126"
-        },
-        {
-          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
-          "url": "https://www.news8000.com/news/politics/national-politics/judge-again-bars-trump-administration-from-implementing-order-that-sought-to-limit-mail-voting/article_f51e73b5-b550-5f5b-a32e-b7ceeadcd62e.html",
-          "domain": "news8000.com",
-          "seendate": "2026-08-12T02:15:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/news8000.com/content/tncms/assets/v3/editorial/5/96/59667bef-8070-5f26-aea0-b8bee869b58f/6a7095b551143.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
-          "url": "https://www.troyrecord.com/2026/08/11/mail-voting-limit-eo/",
-          "domain": "troyrecord.com",
-          "seendate": "2026-08-12T01:30:00Z",
-          "image": "https://www.troyrecord.com/wp-content/uploads/2026/08/Election_2_26_Vermont_83146.jpg"
-        },
-        {
-          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
-          "url": "https://www.republicanherald.com/2026/08/11/mail-voting-limit-eo/",
-          "domain": "republicanherald.com",
-          "seendate": "2026-08-12T01:30:00Z",
-          "image": "https://www.republicanherald.com/wp-content/uploads/2026/08/Election_2_26_Vermont_83146.jpg"
-        },
-        {
-          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
-          "url": "https://www.canoncitydailyrecord.com/2026/08/11/mail-voting-limit-eo/",
-          "domain": "canoncitydailyrecord.com",
-          "seendate": "2026-08-12T01:30:00Z",
-          "image": "https://www.canoncitydailyrecord.com/wp-content/uploads/2026/08/Election_2_26_Vermont_83146.jpg"
-        },
-        {
-          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
-          "url": "https://www.wandtv.com/news/national/judge-again-bars-trump-administration-from-implementing-order-that-sought-to-limit-mail-voting/article_81981bd1-b4ef-5d99-95c8-f59089797086.html",
-          "domain": "wandtv.com",
-          "seendate": "2026-08-12T00:30:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/wandtv.com/content/tncms/assets/v3/editorial/1/19/119d8323-1a88-444c-9930-c54c9b712f6e/6986a42d373be.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
-          "url": "https://www.wral.com/news/ap/159c1-judge-again-bars-trump-administration-from-implementing-order-that-sought-to-limit-mail-voting/",
-          "domain": "wral.com",
-          "seendate": "2026-08-12T00:15:00Z",
-          "image": "https://images.wral.com/ee2a60a8-8f1d-5b3a-a5f3-3377fedf9526"
-        },
-        {
-          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
-          "url": "https://www.courant.com/2026/08/11/mail-voting-limit-eo/",
-          "domain": "courant.com",
-          "seendate": "2026-08-12T00:15:00Z",
-          "image": "https://www.courant.com/wp-content/uploads/2026/08/Election_2_26_Vermont_83146.jpg"
-        }
-      ]
-    },
-    "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
-    "summary": "2026-08-13 paradisepost.com: Judge again bars Trump administration from implementing order that sought to limit mail voting\n2026-08-12 wsmv.com: Judge again bars Trump administration from implementing order that sought to limit mail voting\n2026-08-12 semissourian.com: Judge again bars Trump administration from implementing orde ... \n2026-08-12 idahostatejournal.com: Judge again bars Trump administration from implementing order that sought to limit mail voting\n2026-08-12 idahostatejournal.com: Judge again bars Trump administration from implementing order that sought to limit mail voting\n2026-08-12 news8000.com: Judge again bars Trump administration from implementing order that sought to limit mail voting",
+    "summary": "2026-08-14 wgy.iheart.com: Trump Goes To SCOTUS Over Ballroom Project | News Radio 103 . 1 and 810 WGY\n2026-08-14 943wsc.iheart.com: Trump Goes To SCOTUS Over Ballroom Project | News Radio 94 . 3 WSC\n2026-08-14 wvoc.iheart.com: Trump Goes To SCOTUS Over Ballroom Project\n2026-08-14 kprcradio.iheart.com: Trump Goes To SCOTUS Over Ballroom Project\n2026-08-14 wsfcam.iheart.com: Trump Goes To SCOTUS Over Ballroom Project | NewsTalk 1240 WSFC\n2026-08-14 newstalk1230.iheart.com: Trump Goes To SCOTUS Over Ballroom Project",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -33989,12 +33911,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_check-does-executive",
     "source": "news",
-    "ts": 1786723779346,
+    "ts": 1786735464763,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.791,
+      "salience": 0.771,
       "articles": [
         {
           "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
@@ -34047,13 +33969,6 @@ window.PRISM_CANDIDATES = [
         },
         {
           "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
-          "url": "https://wtov9.com/news/nation-world/fact-check-team-executive-orders-explained-how-much-power-does-a-president-really-have-white-house-authority-archives-congress",
-          "domain": "wtov9.com",
-          "seendate": "2026-08-13T05:00:00Z",
-          "image": "https://wtov9.com/resources/media2/16x9/6000/1320/0x1/90/469104d1-723d-4cbe-a1fa-4272aa3d7ede-GettyImages2289908024.jpg"
-        },
-        {
-          "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
           "url": "https://wcti12.com/news/nation-world/fact-check-team-executive-orders-explained-how-much-power-does-a-president-really-have-white-house-authority-archives-congress",
           "domain": "wcti12.com",
           "seendate": "2026-08-13T04:45:00Z",
@@ -34079,6 +33994,13 @@ window.PRISM_CANDIDATES = [
           "domain": "wsbt.com",
           "seendate": "2026-08-13T04:15:00Z",
           "image": "https://wsbt.com/resources/media2/16x9/6000/1320/0x1/90/469104d1-723d-4cbe-a1fa-4272aa3d7ede-GettyImages2289908024.jpg"
+        },
+        {
+          "title": "Fact Check Team : Executive orders explained . How much power does a president really have ? ",
+          "url": "https://cnycentral.com/news/nation-world/fact-check-team-executive-orders-explained-how-much-power-does-a-president-really-have-white-house-authority-archives-congress",
+          "domain": "cnycentral.com",
+          "seendate": "2026-08-13T04:15:00Z",
+          "image": "https://cnycentral.com/resources/media2/16x9/6000/1320/0x1/90/469104d1-723d-4cbe-a1fa-4272aa3d7ede-GettyImages2289908024.jpg"
         }
       ]
     },
@@ -34093,156 +34015,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_19b-26b-countries",
-    "source": "news",
-    "ts": 1786723779347,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.781,
-      "articles": [
-        {
-          "title": "Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
-          "url": "https://www.kcra.com/article/trump-white-house-losing-revenue-dodge-tariffs/73425919",
-          "domain": "kcra.com",
-          "seendate": "2026-08-14T07:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/2c6aa349-4d8a-4ddd-b3fc-ca993978c369.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
-        },
-        {
-          "title": "Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
-          "url": "https://www.wxii12.com/article/trump-white-house-losing-revenue-dodge-tariffs/73425919",
-          "domain": "wxii12.com",
-          "seendate": "2026-08-14T06:00:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/2c6aa349-4d8a-4ddd-b3fc-ca993978c369.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
-        },
-        {
-          "title": "Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
-          "url": "https://www.wesh.com/article/trump-white-house-losing-revenue-dodge-tariffs/73425919",
-          "domain": "wesh.com",
-          "seendate": "2026-08-14T05:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/2c6aa349-4d8a-4ddd-b3fc-ca993978c369.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
-        },
-        {
-          "title": "Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
-          "url": "https://www.wgal.com/article/trump-white-house-losing-revenue-dodge-tariffs/73425919",
-          "domain": "wgal.com",
-          "seendate": "2026-08-14T05:15:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/2c6aa349-4d8a-4ddd-b3fc-ca993978c369.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
-        },
-        {
-          "title": "Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
-          "url": "https://www.wbaltv.com/article/trump-white-house-losing-revenue-dodge-tariffs/73425919",
-          "domain": "wbaltv.com",
-          "seendate": "2026-08-14T05:00:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/2c6aa349-4d8a-4ddd-b3fc-ca993978c369.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
-        },
-        {
-          "title": "Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
-          "url": "https://www.wcvb.com/article/trump-white-house-losing-revenue-dodge-tariffs/73425919",
-          "domain": "wcvb.com",
-          "seendate": "2026-08-14T04:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/2c6aa349-4d8a-4ddd-b3fc-ca993978c369.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
-        },
-        {
-          "title": "Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
-          "url": "https://www.kcci.com/article/trump-white-house-losing-revenue-dodge-tariffs/73425919",
-          "domain": "kcci.com",
-          "seendate": "2026-08-14T04:15:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/2c6aa349-4d8a-4ddd-b3fc-ca993978c369.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
-        }
-      ]
-    },
-    "title": "Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
-    "summary": "2026-08-14 kcra.com: Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs\n2026-08-14 wxii12.com: Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs\n2026-08-14 wesh.com: Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs\n2026-08-14 wgal.com: Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs\n2026-08-14 wbaltv.com: Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs\n2026-08-14 wcvb.com: Trump White House says it losing $19B - $26B a year in revenue as countries dodge tariffs",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_ankle-detention-get",
-    "source": "news",
-    "ts": 1786723779347,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.745,
-      "articles": [
-        {
-          "title": "Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
-          "url": "https://www.nbcphiladelphia.com/news/national-international/haitians-ohio-lost-protected-status-ankle-monitors-instead-ice-detention/4447934/",
-          "domain": "nbcphiladelphia.com",
-          "seendate": "2026-08-14T01:45:00Z",
-          "image": "https://media.nbcphiladelphia.com/2026/08/AP26214646522617-e1786660808718.jpg?quality=85&strip=all"
-        },
-        {
-          "title": "Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
-          "url": "https://www.nbcchicago.com/news/national-international/haitians-ohio-lost-protected-status-ankle-monitors-instead-ice-detention/3975129/",
-          "domain": "nbcchicago.com",
-          "seendate": "2026-08-14T01:30:00Z",
-          "image": "https://media.nbcchicago.com/2026/08/AP26214646522617-e1786660808718.jpg?quality=85&strip=all"
-        },
-        {
-          "title": "Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
-          "url": "https://www.nbcconnecticut.com/news/national-international/haitians-ohio-lost-protected-status-ankle-monitors-instead-ice-detention/3764986/",
-          "domain": "nbcconnecticut.com",
-          "seendate": "2026-08-14T01:00:00Z",
-          "image": "https://media.nbcconnecticut.com/2026/08/AP26214646522617-e1786660808718.jpg?quality=85&strip=all"
-        },
-        {
-          "title": "Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
-          "url": "https://www.nbcsandiego.com/news/national-international/haitians-ohio-lost-protected-status-ankle-monitors-instead-ice-detention/4060922/",
-          "domain": "nbcsandiego.com",
-          "seendate": "2026-08-14T00:45:00Z",
-          "image": "https://media.nbcsandiego.com/2026/08/AP26214646522617-e1786660808718.jpg?quality=85&strip=all"
-        },
-        {
-          "title": "Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
-          "url": "https://www.nbcbayarea.com/news/national-international/haitians-ohio-lost-protected-status-ankle-monitors-instead-ice-detention/4127859/",
-          "domain": "nbcbayarea.com",
-          "seendate": "2026-08-14T00:15:00Z",
-          "image": "https://media.nbcbayarea.com/2026/08/AP26214646522617-e1786660808718.jpg?quality=85&strip=all"
-        },
-        {
-          "title": "Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
-          "url": "https://www.nbclosangeles.com/news/national-international/haitians-ohio-lost-protected-status-ankle-monitors-instead-ice-detention/3929255/",
-          "domain": "nbclosangeles.com",
-          "seendate": "2026-08-13T23:30:00Z",
-          "image": "https://media.nbclosangeles.com/2026/08/AP26214646522617-e1786660808718.jpg?quality=85&strip=all"
-        },
-        {
-          "title": "Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
-          "url": "https://www.nbcnews.com/politics/immigration/haitians-ohio-lost-protected-status-get-ankle-monitors-instead-ice-det-rcna591989",
-          "domain": "nbcnews.com",
-          "seendate": "2026-08-13T20:15:00Z",
-          "image": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2026-08/260811-ankle-monitor-ohio-tps-ch-1615-4ab6ed.jpg"
-        }
-      ]
-    },
-    "title": "Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
-    "summary": "2026-08-14 nbcphiladelphia.com: Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention\n2026-08-14 nbcchicago.com: Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention\n2026-08-14 nbcconnecticut.com: Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention\n2026-08-14 nbcsandiego.com: Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention\n2026-08-14 nbcbayarea.com: Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention\n2026-08-13 nbclosangeles.com: Haitians in Ohio who lost protected status get ankle monitors instead of ICE detention",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_act-america-emergency",
     "source": "news",
-    "ts": 1786723779346,
+    "ts": 1786735464763,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.488,
+      "salience": 0.468,
       "articles": [
         {
           "title": "Trump leaves open emergency option for new voting rules as SAVE America Act stalls",
@@ -34299,61 +34079,61 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_again-blocks-executive",
+    "cid": "cand_news_administration-again-bars",
     "source": "news",
-    "ts": 1786723779347,
+    "ts": 1786735464763,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.485,
+      "salience": 0.451,
       "articles": [
         {
-          "title": "Judge blocks Trump mail - in voting executive order again",
-          "url": "https://www.fox7austin.com/news/udge-blocks-trumps-mail-in-voting-executive-order-again",
-          "domain": "fox7austin.com",
-          "seendate": "2026-08-12T17:00:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/08/1280/720/gettyimages-2278797921-mail-in.jpg?ve=1&tl=1"
+          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
+          "url": "https://www.wsmv.com/2026/08/11/federal-judge-again-bars-trumps-mail-ballot-order-heres-why/",
+          "domain": "wsmv.com",
+          "seendate": "2026-08-12T14:45:00Z",
+          "image": "https://gray-wsmv-prod.gtv-cdn.com/resizer/v2/F3E2TSBF4NDJXIB64HBMILZGEI.jpg?auth=5f02533f9ebe05316d0e88942ffc8abc7326a1a19907b333ff188fa0216efd4e&smart=true"
         },
         {
-          "title": "Judge blocks Trump mail - in voting executive order again",
-          "url": "https://www.fox26houston.com/news/udge-blocks-trumps-mail-in-voting-executive-order-again",
-          "domain": "fox26houston.com",
-          "seendate": "2026-08-12T04:00:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/08/1280/720/gettyimages-2278797921-mail-in.jpg?ve=1&tl=1"
+          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
+          "url": "https://www.wandtv.com/news/national/judge-again-bars-trump-administration-from-implementing-order-that-sought-to-limit-mail-voting/article_81981bd1-b4ef-5d99-95c8-f59089797086.html",
+          "domain": "wandtv.com",
+          "seendate": "2026-08-12T00:30:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/wandtv.com/content/tncms/assets/v3/editorial/1/19/119d8323-1a88-444c-9930-c54c9b712f6e/6986a42d373be.image.jpg?crop=1763%2C926%2C0%2C124"
         },
         {
-          "title": "Judge blocks Trump mail - in voting executive order again",
-          "url": "https://www.fox2detroit.com/news/udge-blocks-trumps-mail-in-voting-executive-order-again",
-          "domain": "fox2detroit.com",
-          "seendate": "2026-08-12T03:30:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/08/1280/720/gettyimages-2278797921-mail-in.jpg?ve=1&tl=1"
+          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
+          "url": "https://www.wral.com/news/ap/159c1-judge-again-bars-trump-administration-from-implementing-order-that-sought-to-limit-mail-voting/",
+          "domain": "wral.com",
+          "seendate": "2026-08-12T00:15:00Z",
+          "image": "https://images.wral.com/ee2a60a8-8f1d-5b3a-a5f3-3377fedf9526"
         },
         {
-          "title": "Judge blocks Trump mail - in voting executive order again",
-          "url": "https://www.fox32chicago.com/news/udge-blocks-trumps-mail-in-voting-executive-order-again",
-          "domain": "fox32chicago.com",
-          "seendate": "2026-08-12T03:30:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/08/1280/720/gettyimages-2278797921-mail-in.jpg?ve=1&tl=1"
+          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
+          "url": "https://www.courant.com/2026/08/11/mail-voting-limit-eo/",
+          "domain": "courant.com",
+          "seendate": "2026-08-12T00:15:00Z",
+          "image": "https://www.courant.com/wp-content/uploads/2026/08/Election_2_26_Vermont_83146.jpg"
         },
         {
-          "title": "Judge blocks Trump mail - in voting executive order again",
-          "url": "https://www.fox5atlanta.com/news/udge-blocks-trumps-mail-in-voting-executive-order-again",
-          "domain": "fox5atlanta.com",
-          "seendate": "2026-08-12T03:00:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/08/1280/720/gettyimages-2278797921-mail-in.jpg?ve=1&tl=1"
+          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
+          "url": "https://www.dailypress.com/2026/08/11/mail-voting-limit-eo/",
+          "domain": "dailypress.com",
+          "seendate": "2026-08-12T00:15:00Z",
+          "image": "https://www.dailypress.com/wp-content/uploads/2026/08/Election_2_26_Vermont_83146.jpg"
         },
         {
-          "title": "Judge blocks Trump mail - in voting executive order again",
-          "url": "https://www.fox13news.com/news/udge-blocks-trumps-mail-in-voting-executive-order-again",
-          "domain": "fox13news.com",
-          "seendate": "2026-08-12T01:45:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/08/1280/720/gettyimages-2278797921-mail-in.jpg?ve=1&tl=1"
+          "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
+          "url": "https://www.wcax.com/2026/08/11/federal-judge-again-bars-trumps-mail-ballot-order-heres-why/",
+          "domain": "wcax.com",
+          "seendate": "2026-08-12T00:15:00Z",
+          "image": "https://gray-wcax-prod.gtv-cdn.com/resizer/v2/F3E2TSBF4NDJXIB64HBMILZGEI.jpg?auth=5f02533f9ebe05316d0e88942ffc8abc7326a1a19907b333ff188fa0216efd4e&smart=true"
         }
       ]
     },
-    "title": "Judge blocks Trump mail - in voting executive order again",
-    "summary": "2026-08-12 fox7austin.com: Judge blocks Trump mail - in voting executive order again\n2026-08-12 fox26houston.com: Judge blocks Trump mail - in voting executive order again\n2026-08-12 fox2detroit.com: Judge blocks Trump mail - in voting executive order again\n2026-08-12 fox32chicago.com: Judge blocks Trump mail - in voting executive order again\n2026-08-12 fox5atlanta.com: Judge blocks Trump mail - in voting executive order again\n2026-08-12 fox13news.com: Judge blocks Trump mail - in voting executive order again",
+    "title": "Judge again bars Trump administration from implementing order that sought to limit mail voting",
+    "summary": "2026-08-12 wsmv.com: Judge again bars Trump administration from implementing order that sought to limit mail voting\n2026-08-12 wandtv.com: Judge again bars Trump administration from implementing order that sought to limit mail voting\n2026-08-12 wral.com: Judge again bars Trump administration from implementing order that sought to limit mail voting\n2026-08-12 courant.com: Judge again bars Trump administration from implementing order that sought to limit mail voting\n2026-08-12 dailypress.com: Judge again bars Trump administration from implementing order that sought to limit mail voting\n2026-08-12 wcax.com: Judge again bars Trump administration from implementing order that sought to limit mail voting",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -34365,12 +34145,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_against-donald-executive",
     "source": "news",
-    "ts": 1786723779347,
+    "ts": 1786735464763,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.406,
+      "salience": 0.385,
       "articles": [
         {
           "title": "Judge rules against Donald Trump mail voting executive order – NBC New York",
@@ -34418,49 +34198,6 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Judge rules against Donald Trump mail voting executive order – NBC New York",
     "summary": "2026-08-12 nbcnewyork.com: Judge rules against Donald Trump mail voting executive order – NBC New York\n2026-08-12 nbcwashington.com: Judge rules against Donald Trump mail voting executive order – NBC4 Washington\n2026-08-12 nbcchicago.com: Judge rules against Donald Trump mail voting executive order – NBC Chicago\n2026-08-12 nbcconnecticut.com: Judge rules against Donald Trump mail voting executive order – NBC Connecticut\n2026-08-12 nbcphiladelphia.com: Judge rules against Donald Trump mail voting executive order – NBC10 Philadelphia\n2026-08-12 nbcbayarea.com: Judge rules against Donald Trump mail voting executive order – NBC Bay Area",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_congress-could-democrats",
-    "source": "news",
-    "ts": 1786723779347,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.231,
-      "articles": [
-        {
-          "title": "Trump executive privilege memo could hamper Democrats if they win Congress",
-          "url": "https://www.channel3000.com/news/national-and-world-news/trump-executive-privilege-memo-could-hamper-democrats-if-they-win-congress/article_ab8aea47-c7ba-5da4-8fb5-9fd5f9852f93.html",
-          "domain": "channel3000.com",
-          "seendate": "2026-08-12T02:45:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/channel3000.com/content/tncms/assets/v3/editorial/4/cf/4cf55e02-e550-593b-9fb3-41c3e76c6f0b/6a7b59407f39b.image.jpg?crop=1760%2C924%2C0%2C126"
-        },
-        {
-          "title": "Trump executive privilege memo could hamper Democrats if they win Congress",
-          "url": "https://us.cnn.com/2026/08/11/politics/trump-justice-department-presidential-advisers-executive-privilege",
-          "domain": "us.cnn.com",
-          "seendate": "2026-08-11T20:30:00Z",
-          "image": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2286138499.jpg?c=16x9&q=w_800,c_fill"
-        },
-        {
-          "title": "Trump executive privilege memo could hamper Democrats if they win Congress",
-          "url": "https://www.cnn.com/2026/08/11/politics/trump-justice-department-presidential-advisers-executive-privilege",
-          "domain": "cnn.com",
-          "seendate": "2026-08-11T19:30:00Z",
-          "image": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2286138499.jpg?c=16x9&q=w_800,c_fill"
-        }
-      ]
-    },
-    "title": "Trump executive privilege memo could hamper Democrats if they win Congress",
-    "summary": "2026-08-12 channel3000.com: Trump executive privilege memo could hamper Democrats if they win Congress\n2026-08-11 us.cnn.com: Trump executive privilege memo could hamper Democrats if they win Congress\n2026-08-11 cnn.com: Trump executive privilege memo could hamper Democrats if they win Congress",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
