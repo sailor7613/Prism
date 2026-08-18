@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-18T19:03:13.958Z · 31 legislative + 5 news (GDELT, 3d)
+// 2026-08-18T21:43:35.500Z · 31 legislative + 8 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1787079775499,
+    "ts": 1787089358863,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.721,
+      "salience": 0.72,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,7 +259,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1787079775499,
+    "ts": 1787089358863,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
@@ -532,7 +532,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1787079775498,
+    "ts": 1787089358862,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1787079775499,
+    "ts": 1787089358863,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.63,
+      "salience": 0.629,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3116,13 +3116,287 @@ window.PRISM_CANDIDATES = [
     "mts": 1784784262612
   },
   {
+    "cid": "cand_leg_sjres-119-196",
+    "source": "legislative",
+    "ts": 1787089358863,
+    "raw": {
+      "method": "legislative_rollcall_v1",
+      "billId": "sjres-119-196",
+      "salience": 0.611,
+      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
+      "votes": [
+        {
+          "voteId": "s-119-2-190",
+          "chamber": "senate",
+          "date": "June 24, 2026,  09:16 PM",
+          "question": "On the Motion to Proceed",
+          "result": "Motion to Proceed Rejected",
+          "margin": -0.072,
+          "totals": {
+            "yea": 45,
+            "nay": 52,
+            "present": 0,
+            "notVoting": 3
+          },
+          "party": {
+            "D": {
+              "yea": 43,
+              "nay": 0
+            },
+            "R": {
+              "yea": 0,
+              "nay": 52
+            },
+            "I": {
+              "yea": 2,
+              "nay": 0
+            }
+          },
+          "positions": {
+            "yea": [
+              "A000382",
+              "B001230",
+              "B001277",
+              "B001303",
+              "B001288",
+              "C000127",
+              "C001088",
+              "C001113",
+              "D000622",
+              "D000563",
+              "F000479",
+              "G000574",
+              "G000555",
+              "H001076",
+              "H001046",
+              "H000273",
+              "H001042",
+              "K000384",
+              "K000377",
+              "K000394",
+              "K000383",
+              "K000367",
+              "M000133",
+              "M001176",
+              "M001169",
+              "M001111",
+              "O000174",
+              "P000145",
+              "P000595",
+              "R000122",
+              "R000608",
+              "S000033",
+              "S001194",
+              "S001150",
+              "S000148",
+              "S001208",
+              "S001203",
+              "V000128",
+              "W000805",
+              "W000790",
+              "W000817",
+              "W000800",
+              "W000802",
+              "W000779"
+            ],
+            "nay": [
+              "B001299",
+              "B001261",
+              "B001243",
+              "B001236",
+              "B001319",
+              "B001305",
+              "C001047",
+              "C001075",
+              "C001035",
+              "C001056",
+              "C001095",
+              "C001096",
+              "C000880",
+              "C001098",
+              "C001114",
+              "D000618",
+              "E000295",
+              "F000463",
+              "G000359",
+              "G000386",
+              "H000601",
+              "H001089",
+              "H001061",
+              "H001104",
+              "H001079",
+              "J000293",
+              "J000312",
+              "K000393",
+              "L000575",
+              "L000577",
+              "L000571",
+              "M001198",
+              "M001243",
+              "M001244",
+              "M000934",
+              "M001242",
+              "M001153",
+              "P000603",
+              "R000618",
+              "R000584",
+              "R000605",
+              "S001227",
+              "S001217",
+              "S001184",
+              "S001232",
+              "S001198",
+              "T000250",
+              "T000476",
+              "T000278",
+              "W000437",
+              "Y000064"
+            ],
+            "present": [],
+            "notVoting": [
+              "B001267",
+              "M000355",
+              "S001181"
+            ]
+          }
+        }
+      ]
+    },
+    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
+    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
+    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Disapprove rule",
+        "neg": "Uphold rule"
+      },
+      "y": {
+        "pos": "Executive overreach",
+        "neg": "Agency discretion legitimate"
+      }
+    },
+    "prevalentAxisGuess": "x",
+    "members": [
+      "A000382",
+      "B001230",
+      "B001277",
+      "B001303",
+      "B001288",
+      "C000127",
+      "C001088",
+      "C001113",
+      "D000622",
+      "D000563",
+      "F000479",
+      "G000574",
+      "G000555",
+      "H001076",
+      "H001046",
+      "H000273",
+      "H001042",
+      "K000384",
+      "K000377",
+      "K000394",
+      "K000383",
+      "K000367",
+      "M000133",
+      "M001176",
+      "M001169",
+      "M001111",
+      "O000174",
+      "P000145",
+      "P000595",
+      "R000122",
+      "R000608",
+      "S000033",
+      "S001194",
+      "S001150",
+      "S000148",
+      "S001208",
+      "S001203",
+      "V000128",
+      "W000805",
+      "W000790",
+      "W000817",
+      "W000800",
+      "W000802",
+      "W000779",
+      "B001299",
+      "B001261",
+      "B001243",
+      "B001236",
+      "B001319",
+      "B001305",
+      "C001047",
+      "C001075",
+      "C001035",
+      "C001056",
+      "C001095",
+      "C001096",
+      "C000880",
+      "C001098",
+      "C001114",
+      "D000618",
+      "E000295",
+      "F000463",
+      "G000359",
+      "G000386",
+      "H000601",
+      "H001089",
+      "H001061",
+      "H001104",
+      "H001079",
+      "J000293",
+      "J000312",
+      "K000393",
+      "L000575",
+      "L000577",
+      "L000571",
+      "M001198",
+      "M001243",
+      "M001244",
+      "M000934",
+      "M001242",
+      "M001153",
+      "P000603",
+      "R000618",
+      "R000584",
+      "R000605",
+      "S001227",
+      "S001217",
+      "S001184",
+      "S001232",
+      "S001198",
+      "T000250",
+      "T000476",
+      "T000278",
+      "W000437",
+      "Y000064"
+    ],
+    "bills": [
+      "sjres-119-196"
+    ],
+    "fitness": {
+      "score": 0.3,
+      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:28:30.038Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "s-119-2-190",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297586
+  },
+  {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1787079775499,
+    "ts": 1787089358862,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.611,
+      "salience": 0.61,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4518,287 +4792,13 @@ window.PRISM_CANDIDATES = [
     "mts": 1784044297586
   },
   {
-    "cid": "cand_leg_sjres-119-196",
-    "source": "legislative",
-    "ts": 1787079775499,
-    "raw": {
-      "method": "legislative_rollcall_v1",
-      "billId": "sjres-119-196",
-      "salience": 0.611,
-      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
-      "votes": [
-        {
-          "voteId": "s-119-2-190",
-          "chamber": "senate",
-          "date": "June 24, 2026,  09:16 PM",
-          "question": "On the Motion to Proceed",
-          "result": "Motion to Proceed Rejected",
-          "margin": -0.072,
-          "totals": {
-            "yea": 45,
-            "nay": 52,
-            "present": 0,
-            "notVoting": 3
-          },
-          "party": {
-            "D": {
-              "yea": 43,
-              "nay": 0
-            },
-            "R": {
-              "yea": 0,
-              "nay": 52
-            },
-            "I": {
-              "yea": 2,
-              "nay": 0
-            }
-          },
-          "positions": {
-            "yea": [
-              "A000382",
-              "B001230",
-              "B001277",
-              "B001303",
-              "B001288",
-              "C000127",
-              "C001088",
-              "C001113",
-              "D000622",
-              "D000563",
-              "F000479",
-              "G000574",
-              "G000555",
-              "H001076",
-              "H001046",
-              "H000273",
-              "H001042",
-              "K000384",
-              "K000377",
-              "K000394",
-              "K000383",
-              "K000367",
-              "M000133",
-              "M001176",
-              "M001169",
-              "M001111",
-              "O000174",
-              "P000145",
-              "P000595",
-              "R000122",
-              "R000608",
-              "S000033",
-              "S001194",
-              "S001150",
-              "S000148",
-              "S001208",
-              "S001203",
-              "V000128",
-              "W000805",
-              "W000790",
-              "W000817",
-              "W000800",
-              "W000802",
-              "W000779"
-            ],
-            "nay": [
-              "B001299",
-              "B001261",
-              "B001243",
-              "B001236",
-              "B001319",
-              "B001305",
-              "C001047",
-              "C001075",
-              "C001035",
-              "C001056",
-              "C001095",
-              "C001096",
-              "C000880",
-              "C001098",
-              "C001114",
-              "D000618",
-              "E000295",
-              "F000463",
-              "G000359",
-              "G000386",
-              "H000601",
-              "H001089",
-              "H001061",
-              "H001104",
-              "H001079",
-              "J000293",
-              "J000312",
-              "K000393",
-              "L000575",
-              "L000577",
-              "L000571",
-              "M001198",
-              "M001243",
-              "M001244",
-              "M000934",
-              "M001242",
-              "M001153",
-              "P000603",
-              "R000618",
-              "R000584",
-              "R000605",
-              "S001227",
-              "S001217",
-              "S001184",
-              "S001232",
-              "S001198",
-              "T000250",
-              "T000476",
-              "T000278",
-              "W000437",
-              "Y000064"
-            ],
-            "present": [],
-            "notVoting": [
-              "B001267",
-              "M000355",
-              "S001181"
-            ]
-          }
-        }
-      ]
-    },
-    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
-    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
-    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
-    "suggestedAxes": {
-      "x": {
-        "pos": "Disapprove rule",
-        "neg": "Uphold rule"
-      },
-      "y": {
-        "pos": "Executive overreach",
-        "neg": "Agency discretion legitimate"
-      }
-    },
-    "prevalentAxisGuess": "x",
-    "members": [
-      "A000382",
-      "B001230",
-      "B001277",
-      "B001303",
-      "B001288",
-      "C000127",
-      "C001088",
-      "C001113",
-      "D000622",
-      "D000563",
-      "F000479",
-      "G000574",
-      "G000555",
-      "H001076",
-      "H001046",
-      "H000273",
-      "H001042",
-      "K000384",
-      "K000377",
-      "K000394",
-      "K000383",
-      "K000367",
-      "M000133",
-      "M001176",
-      "M001169",
-      "M001111",
-      "O000174",
-      "P000145",
-      "P000595",
-      "R000122",
-      "R000608",
-      "S000033",
-      "S001194",
-      "S001150",
-      "S000148",
-      "S001208",
-      "S001203",
-      "V000128",
-      "W000805",
-      "W000790",
-      "W000817",
-      "W000800",
-      "W000802",
-      "W000779",
-      "B001299",
-      "B001261",
-      "B001243",
-      "B001236",
-      "B001319",
-      "B001305",
-      "C001047",
-      "C001075",
-      "C001035",
-      "C001056",
-      "C001095",
-      "C001096",
-      "C000880",
-      "C001098",
-      "C001114",
-      "D000618",
-      "E000295",
-      "F000463",
-      "G000359",
-      "G000386",
-      "H000601",
-      "H001089",
-      "H001061",
-      "H001104",
-      "H001079",
-      "J000293",
-      "J000312",
-      "K000393",
-      "L000575",
-      "L000577",
-      "L000571",
-      "M001198",
-      "M001243",
-      "M001244",
-      "M000934",
-      "M001242",
-      "M001153",
-      "P000603",
-      "R000618",
-      "R000584",
-      "R000605",
-      "S001227",
-      "S001217",
-      "S001184",
-      "S001232",
-      "S001198",
-      "T000250",
-      "T000476",
-      "T000278",
-      "W000437",
-      "Y000064"
-    ],
-    "bills": [
-      "sjres-119-196"
-    ],
-    "fitness": {
-      "score": 0.3,
-      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
-      "method": "m2_constitutive_v1",
-      "ts": "2026-07-14T04:28:30.038Z"
-    },
-    "status": "new",
-    "voteMap": {
-      "voteId": "s-119-2-190",
-      "yeaPole": "pos"
-    },
-    "mts": 1784044297586
-  },
-  {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1787079775499,
+    "ts": 1787089358863,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.597,
+      "salience": 0.596,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5065,11 +5065,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1787079775498,
+    "ts": 1787089358862,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.586,
+      "salience": 0.585,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6467,11 +6467,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1787079775498,
+    "ts": 1787089358861,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.581,
+      "salience": 0.58,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -7869,11 +7869,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1787079775499,
+    "ts": 1787089358863,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.575,
+      "salience": 0.574,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -8396,11 +8396,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1787079775499,
+    "ts": 1787089358862,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.534,
+      "salience": 0.533,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -9330,7 +9330,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1787079775499,
+    "ts": 1787089358863,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
@@ -9606,11 +9606,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1041",
     "source": "legislative",
-    "ts": 1787079775497,
+    "ts": 1787089358861,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1041",
-      "salience": 0.524,
+      "salience": 0.523,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1041",
       "votes": [
         {
@@ -11003,7 +11003,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1787079775498,
+    "ts": 1787089358862,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
@@ -11935,11 +11935,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1787079775499,
+    "ts": 1787089358863,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.517,
+      "salience": 0.516,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -12211,7 +12211,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1787079775499,
+    "ts": 1787089358862,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
@@ -13144,11 +13144,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1787079775499,
+    "ts": 1787089358862,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.495,
+      "salience": 0.494,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -14077,11 +14077,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1787079775499,
+    "ts": 1787089358863,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.484,
+      "salience": 0.483,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -14469,11 +14469,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6047",
     "source": "legislative",
-    "ts": 1787079775497,
+    "ts": 1787089358861,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6047",
-      "salience": 0.428,
+      "salience": 0.427,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6047",
       "votes": [
         {
@@ -15394,11 +15394,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1787079775499,
+    "ts": 1787089358862,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.376,
+      "salience": 0.375,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -16797,11 +16797,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1787079775499,
+    "ts": 1787089358863,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.319,
+      "salience": 0.318,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -17690,11 +17690,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1787079775499,
+    "ts": 1787089358863,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.312,
+      "salience": 0.311,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -18605,7 +18605,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1787079775499,
+    "ts": 1787089358863,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
@@ -19493,11 +19493,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1787079775499,
+    "ts": 1787089358863,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.301,
+      "salience": 0.3,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -20414,7 +20414,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1787079775499,
+    "ts": 1787089358863,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
@@ -21332,7 +21332,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1787079775499,
+    "ts": 1787089358862,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
@@ -22231,11 +22231,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1787079775498,
+    "ts": 1787089358861,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.201,
+      "salience": 0.2,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -23165,7 +23165,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1787079775498,
+    "ts": 1787089358861,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
@@ -24094,7 +24094,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1787079775498,
+    "ts": 1787089358861,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
@@ -25003,7 +25003,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1787079775498,
+    "ts": 1787089358862,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
@@ -25878,7 +25878,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1787079775498,
+    "ts": 1787089358862,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
@@ -26762,13 +26762,55 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballroom-court-house",
     "source": "news",
-    "ts": 1787079793948,
+    "ts": 1787089415491,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.94,
+      "salience": 0.997,
       "articles": [
+        {
+          "title": "Preservation group urges Supreme Court to suspend Trump White House ballroom project",
+          "url": "https://www.ksat.com/news/national/2026/08/18/preservation-group-urges-supreme-court-to-suspend-trumps-white-house-ballroom-project/",
+          "domain": "ksat.com",
+          "seendate": "2026-08-18T21:15:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/CNYTDIUUTBCOPNOWUD4LZJGVKA.jpg?_a=DATAg1kSZAA0"
+        },
+        {
+          "title": "Group urges Supreme Court to suspend Trump White House ballroom",
+          "url": "https://www.pilotonline.com/2026/08/18/preservation-group-supreme-court-trump-white-house-ballroom/",
+          "domain": "pilotonline.com",
+          "seendate": "2026-08-18T21:15:00Z",
+          "image": "https://www.pilotonline.com/wp-content/uploads/2026/08/Trump_White_House_Ballroom_91128-1.jpg"
+        },
+        {
+          "title": "Group urges Supreme Court to suspend Trump White House ballroom",
+          "url": "https://www.courant.com/2026/08/18/preservation-group-supreme-court-trump-white-house-ballroom/",
+          "domain": "courant.com",
+          "seendate": "2026-08-18T21:00:00Z",
+          "image": "https://www.courant.com/wp-content/uploads/2026/08/Trump_White_House_Ballroom_91128-1.jpg"
+        },
+        {
+          "title": "Preservation group urges Supreme Court to suspend Trump White House ballroom project",
+          "url": "https://www.clickondetroit.com/news/national/2026/08/18/preservation-group-urges-supreme-court-to-suspend-trumps-white-house-ballroom-project/",
+          "domain": "clickondetroit.com",
+          "seendate": "2026-08-18T20:15:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/CNYTDIUUTBCOPNOWUD4LZJGVKA.jpg?_a=DATAg1kSZAA0"
+        },
+        {
+          "title": "Group urges Supreme Court to suspend Trump White House ballroom",
+          "url": "https://www.dailypress.com/2026/08/18/preservation-group-supreme-court-trump-white-house-ballroom/",
+          "domain": "dailypress.com",
+          "seendate": "2026-08-18T20:00:00Z",
+          "image": "https://www.dailypress.com/wp-content/uploads/2026/08/Trump_White_House_Ballroom_91128-1.jpg"
+        },
+        {
+          "title": "Group urges Supreme Court to suspend Trump White House ballroom",
+          "url": "https://www.sandiegouniontribune.com/2026/08/18/preservation-group-supreme-court-trump-white-house-ballroom/",
+          "domain": "sandiegouniontribune.com",
+          "seendate": "2026-08-18T18:45:00Z",
+          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/08/Trump_White_House_Ballroom_91128-1.jpg"
+        },
         {
           "title": "Group urges Supreme Court to suspend Trump White House ballroom",
           "url": "https://www.bostonherald.com/2026/08/18/preservation-group-supreme-court-trump-white-house-ballroom/",
@@ -26810,32 +26852,11 @@ window.PRISM_CANDIDATES = [
           "domain": "yahoo.com",
           "seendate": "2026-08-18T17:30:00Z",
           "image": "https://s.yimg.com/lo/mysterio/api/c9394f9ddc9902f684dcff5b9dc01e3d6512524cac3908def5b5d24de4d478e4/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fap.org%2F2865b7cc4abda824944dd0b83973151b.jpg"
-        },
-        {
-          "title": "Preservation group urges Supreme Court to suspend Trump White House ballroom project",
-          "url": "https://www.local10.com/news/national/2026/08/18/preservation-group-urges-supreme-court-to-suspend-trumps-white-house-ballroom-project/",
-          "domain": "local10.com",
-          "seendate": "2026-08-18T17:30:00Z",
-          "image": "https://www.local10.com/resizer/v2/C5KP6V2W2HHIRH6U7GOAUMVXFM.jpg?auth=ed8cb20e540c543416e5914bcaff0fac6e9a2fc469f6d3c6b164402e96edf69e"
-        },
-        {
-          "title": "Historic preservation group urges Supreme Court to halt Trump White House ballroom",
-          "url": "https://www.wokv.com/news/national/preservation-group/5GDQON4ARM6JTKWPDFNWWM4KWQ/",
-          "domain": "wokv.com",
-          "seendate": "2026-08-18T17:30:00Z",
-          "image": "https://cmg-cmg-rd-20056-prod.cdn.arcpublishing.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-1.images.arcpublishing.com%2Fcmg%2FKVSZOQ2RWY73HA3YS6MXDQHH6A.jpg?auth=d40e9c9b8ad251e066be00bc48dd930af26b00c93cfbe715493375859d1f1b2e&smart=true"
-        },
-        {
-          "title": "Trump asks Supreme Court to intervene in White House ballroom dispute",
-          "url": "https://wjla.com/news/instagram/trump-asks-supreme-court-to-intervene-in-white-house-ballroom-dispute",
-          "domain": "wjla.com",
-          "seendate": "2026-08-18T04:15:00Z",
-          "image": "https://wjla.com/resources/media2/16x9/8192/1320/0x428/90/df7a5360-59df-4cd3-b95b-22d75f52a8c1-AP26217654784670.jpg"
         }
       ]
     },
-    "title": "Preservation group urges Supreme Court to suspend Trump White House ballroom project",
-    "summary": "2026-08-18 bostonherald.com: Group urges Supreme Court to suspend Trump White House ballroom\n2026-08-18 troyrecord.com: Group urges Supreme Court to suspend Trump White House ballroom\n2026-08-18 fortmorgantimes.com: Group urges Supreme Court to suspend Trump White House ballroom\n2026-08-18 news4jax.com: Preservation group urges Supreme Court to suspend Trump White House ballroom project\n2026-08-18 clickorlando.com: Preservation group urges Supreme Court to suspend Trump White House ballroom project\n2026-08-18 yahoo.com: Preservation group urges Supreme Court to suspend Trump White House ballroom project",
+    "title": "Group urges Supreme Court to suspend Trump White House ballroom",
+    "summary": "2026-08-18 ksat.com: Preservation group urges Supreme Court to suspend Trump White House ballroom project\n2026-08-18 pilotonline.com: Group urges Supreme Court to suspend Trump White House ballroom\n2026-08-18 courant.com: Group urges Supreme Court to suspend Trump White House ballroom\n2026-08-18 clickondetroit.com: Preservation group urges Supreme Court to suspend Trump White House ballroom project\n2026-08-18 dailypress.com: Group urges Supreme Court to suspend Trump White House ballroom\n2026-08-18 sandiegouniontribune.com: Group urges Supreme Court to suspend Trump White House ballroom",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -26847,12 +26868,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballroom-barbs-court",
     "source": "news",
-    "ts": 1787079793950,
+    "ts": 1787089415492,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.881,
+      "salience": 0.864,
       "articles": [
         {
           "title": "Trump , Ossoff Trade Barbs Amid White House Ballroom Court Fight",
@@ -26951,14 +26972,214 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_asked-commandments-court",
+    "cid": "cand_news_asks-ballroom-block",
     "source": "news",
-    "ts": 1787079793951,
+    "ts": 1787089415493,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.579,
+      "salience": 0.777,
+      "articles": [
+        {
+          "title": "Preservation group asks Supreme Court to keep block in place on White House ballroom",
+          "url": "https://foxsanantonio.com/news/nation-world/preservation-group-asks-supreme-court-to-keep-block-in-place-on-white-house-ballroom-president-trump-solicitor-general-appeals-court-injunction-congress-doj",
+          "domain": "foxsanantonio.com",
+          "seendate": "2026-08-18T21:15:00Z",
+          "image": "https://foxsanantonio.com/resources/media2/16x9/8192/1320/0x831/90/df7a5360-59df-4cd3-b95b-22d75f52a8c1-AP26217654784670.jpg"
+        },
+        {
+          "title": "Preservation group asks Supreme Court to keep block in place on White House ballroom",
+          "url": "https://katu.com/news/nation-world/preservation-group-asks-supreme-court-to-keep-block-in-place-on-white-house-ballroom-president-trump-solicitor-general-appeals-court-injunction-congress-doj",
+          "domain": "katu.com",
+          "seendate": "2026-08-18T21:00:00Z",
+          "image": "https://katu.com/resources/media2/16x9/8192/1320/0x831/90/df7a5360-59df-4cd3-b95b-22d75f52a8c1-AP26217654784670.jpg"
+        },
+        {
+          "title": "Preservation group asks Supreme Court to keep block in place on White House ballroom",
+          "url": "https://news3lv.com/news/nation-world/preservation-group-asks-supreme-court-to-keep-block-in-place-on-white-house-ballroom-president-trump-solicitor-general-appeals-court-injunction-congress-doj",
+          "domain": "news3lv.com",
+          "seendate": "2026-08-18T21:00:00Z",
+          "image": "https://news3lv.com/resources/media2/16x9/8192/1320/0x831/90/df7a5360-59df-4cd3-b95b-22d75f52a8c1-AP26217654784670.jpg"
+        },
+        {
+          "title": "Preservation group asks Supreme Court to keep block in place on White House ballroom",
+          "url": "https://nbcmontana.com/news/nation-world/preservation-group-asks-supreme-court-to-keep-block-in-place-on-white-house-ballroom-president-trump-solicitor-general-appeals-court-injunction-congress-doj",
+          "domain": "nbcmontana.com",
+          "seendate": "2026-08-18T21:00:00Z",
+          "image": "https://nbcmontana.com/resources/media2/16x9/8192/1320/0x831/90/df7a5360-59df-4cd3-b95b-22d75f52a8c1-AP26217654784670.jpg"
+        },
+        {
+          "title": "Preservation group asks Supreme Court to keep block in place on White House ballroom",
+          "url": "https://cbs2iowa.com/news/nation-world/preservation-group-asks-supreme-court-to-keep-block-in-place-on-white-house-ballroom-president-trump-solicitor-general-appeals-court-injunction-congress-doj",
+          "domain": "cbs2iowa.com",
+          "seendate": "2026-08-18T21:00:00Z",
+          "image": "https://cbs2iowa.com/resources/media2/16x9/8192/1320/0x831/90/df7a5360-59df-4cd3-b95b-22d75f52a8c1-AP26217654784670.jpg"
+        },
+        {
+          "title": "Preservation group asks Supreme Court to keep block in place on White House ballroom",
+          "url": "https://wgme.com/news/nation-world/preservation-group-asks-supreme-court-to-keep-block-in-place-on-white-house-ballroom-president-trump-solicitor-general-appeals-court-injunction-congress-doj",
+          "domain": "wgme.com",
+          "seendate": "2026-08-18T21:00:00Z",
+          "image": "https://wgme.com/resources/media2/16x9/8192/1320/0x831/90/df7a5360-59df-4cd3-b95b-22d75f52a8c1-AP26217654784670.jpg"
+        }
+      ]
+    },
+    "title": "Preservation group asks Supreme Court to keep block in place on White House ballroom",
+    "summary": "2026-08-18 foxsanantonio.com: Preservation group asks Supreme Court to keep block in place on White House ballroom\n2026-08-18 katu.com: Preservation group asks Supreme Court to keep block in place on White House ballroom\n2026-08-18 news3lv.com: Preservation group asks Supreme Court to keep block in place on White House ballroom\n2026-08-18 nbcmontana.com: Preservation group asks Supreme Court to keep block in place on White House ballroom\n2026-08-18 cbs2iowa.com: Preservation group asks Supreme Court to keep block in place on White House ballroom\n2026-08-18 wgme.com: Preservation group asks Supreme Court to keep block in place on White House ballroom",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_ballot-calling-casts",
+    "source": "news",
+    "ts": 1787089415493,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.653,
+      "articles": [
+        {
+          "title": "Trump casts Florida ballot by mail after calling for limits on mail voting",
+          "url": "https://www.turnto23.com/politics/america-votes/trump-casts-florida-ballot-by-mail-after-calling-for-limits-on-mail-voting",
+          "domain": "turnto23.com",
+          "seendate": "2026-08-18T19:00:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/ca/6f/5817cd4b4a4b9eb32de9fcbc089c/ap26229672541427.jpg"
+        },
+        {
+          "title": "Trump casts Florida ballot by mail after calling for limits on mail voting",
+          "url": "https://www.10news.com/politics/america-votes/trump-casts-florida-ballot-by-mail-after-calling-for-limits-on-mail-voting",
+          "domain": "10news.com",
+          "seendate": "2026-08-18T18:45:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/ca/6f/5817cd4b4a4b9eb32de9fcbc089c/ap26229672541427.jpg"
+        },
+        {
+          "title": "Trump casts Florida ballot by mail after calling for limits on mail voting",
+          "url": "https://www.kristv.com/politics/america-votes/trump-casts-florida-ballot-by-mail-after-calling-for-limits-on-mail-voting",
+          "domain": "kristv.com",
+          "seendate": "2026-08-18T15:45:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/ca/6f/5817cd4b4a4b9eb32de9fcbc089c/ap26229672541427.jpg"
+        },
+        {
+          "title": "Trump casts Florida ballot by mail after calling for limits on mail voting",
+          "url": "https://www.ksby.com/politics/america-votes/trump-casts-florida-ballot-by-mail-after-calling-for-limits-on-mail-voting",
+          "domain": "ksby.com",
+          "seendate": "2026-08-18T15:00:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/ca/6f/5817cd4b4a4b9eb32de9fcbc089c/ap26229672541427.jpg"
+        }
+      ]
+    },
+    "title": "Trump casts Florida ballot by mail after calling for limits on mail voting",
+    "summary": "2026-08-18 turnto23.com: Trump casts Florida ballot by mail after calling for limits on mail voting\n2026-08-18 10news.com: Trump casts Florida ballot by mail after calling for limits on mail voting\n2026-08-18 kristv.com: Trump casts Florida ballot by mail after calling for limits on mail voting\n2026-08-18 ksby.com: Trump casts Florida ballot by mail after calling for limits on mail voting",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_ballot-cast-claims",
+    "source": "news",
+    "ts": 1787089415492,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.612,
+      "articles": [
+        {
+          "title": "Trump cast mail ballot in Florida primary after spreading false fraud claims",
+          "url": "https://www.kcra.com/article/trump-mail-ballot-florida-primary/73467125",
+          "domain": "kcra.com",
+          "seendate": "2026-08-18T21:15:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/e2a1e092-d0ef-4354-8e80-ca524f13631f.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
+        },
+        {
+          "title": "Trump cast mail ballot in Florida primary after spreading false fraud claims",
+          "url": "https://www.kmbc.com/article/trump-mail-ballot-florida-primary/73467125",
+          "domain": "kmbc.com",
+          "seendate": "2026-08-18T21:15:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/e2a1e092-d0ef-4354-8e80-ca524f13631f.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
+        },
+        {
+          "title": "Trump cast mail ballot in Florida primary after spreading false fraud claims",
+          "url": "https://www.wmur.com/article/trump-mail-ballot-florida-primary/73467125",
+          "domain": "wmur.com",
+          "seendate": "2026-08-18T21:00:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/e2a1e092-d0ef-4354-8e80-ca524f13631f.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
+        }
+      ]
+    },
+    "title": "Trump cast mail ballot in Florida primary after spreading false fraud claims",
+    "summary": "2026-08-18 kcra.com: Trump cast mail ballot in Florida primary after spreading false fraud claims\n2026-08-18 kmbc.com: Trump cast mail ballot in Florida primary after spreading false fraud claims\n2026-08-18 wmur.com: Trump cast mail ballot in Florida primary after spreading false fraud claims",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_ballroom-defends-donor",
+    "source": "news",
+    "ts": 1787089415493,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.598,
+      "articles": [
+        {
+          "title": "Trump defends White House ballroom , pledges donor list",
+          "url": "https://www.wcax.com/2026/08/18/trump-says-people-who-oppose-white-house-ballroom-are-very-disloyal-our-country/",
+          "domain": "wcax.com",
+          "seendate": "2026-08-18T19:00:00Z",
+          "image": "https://gray-wcax-prod.gtv-cdn.com/resizer/v2/I77MNDGNTFA2HK4EEK4TH55JEM.png?auth=9c4f3dfd1485bbb7c051016e5829ec549fef762f29fbb161ba810d9f44fc11f9&smart=true"
+        },
+        {
+          "title": "Trump defends White House ballroom , pledges donor list",
+          "url": "https://www.walb.com/2026/08/18/trump-says-people-who-oppose-white-house-ballroom-are-very-disloyal-our-country/",
+          "domain": "walb.com",
+          "seendate": "2026-08-18T17:15:00Z",
+          "image": "https://gray-walb-prod.gtv-cdn.com/resizer/v2/I77MNDGNTFA2HK4EEK4TH55JEM.png?auth=9c4f3dfd1485bbb7c051016e5829ec549fef762f29fbb161ba810d9f44fc11f9&smart=true"
+        },
+        {
+          "title": "Trump defends White House ballroom , pledges donor list",
+          "url": "https://www.fox8live.com/2026/08/18/trump-says-people-who-oppose-white-house-ballroom-are-very-disloyal-our-country/",
+          "domain": "fox8live.com",
+          "seendate": "2026-08-18T17:15:00Z",
+          "image": "https://gray-wvue-prod.gtv-cdn.com/resizer/v2/I77MNDGNTFA2HK4EEK4TH55JEM.png?auth=9c4f3dfd1485bbb7c051016e5829ec549fef762f29fbb161ba810d9f44fc11f9&smart=true"
+        }
+      ]
+    },
+    "title": "Trump defends White House ballroom , pledges donor list",
+    "summary": "2026-08-18 wcax.com: Trump defends White House ballroom , pledges donor list\n2026-08-18 walb.com: Trump defends White House ballroom , pledges donor list\n2026-08-18 fox8live.com: Trump defends White House ballroom , pledges donor list",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_asked-commandments-court",
+    "source": "news",
+    "ts": 1787089415493,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.562,
       "articles": [
         {
           "title": "Supreme Court asked to review Texas Ten Commandments law – NBC 5 Dallas - Fort Worth",
@@ -27003,12 +27224,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_blanche-court-doj",
     "source": "news",
-    "ts": 1787079793951,
+    "ts": 1787089415493,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.539,
+      "salience": 0.523,
       "articles": [
         {
           "title": "AG Todd Blanche : DOJ may take state voter roll fight to Supreme Court – NBC 6 South Florida",
@@ -27063,49 +27284,6 @@ window.PRISM_CANDIDATES = [
     },
     "title": "AG Todd Blanche : DOJ may take state voter roll fight to Supreme Court – NBC New York",
     "summary": "2026-08-16 nbcmiami.com: AG Todd Blanche : DOJ may take state voter roll fight to Supreme Court – NBC 6 South Florida\n2026-08-16 nbcbayarea.com: AG Todd Blanche : DOJ may take state voter roll fight to Supreme Court – NBC Bay Area\n2026-08-16 nbcwashington.com: AG Todd Blanche : DOJ may take state voter roll fight to Supreme Court – NBC4 Washington\n2026-08-16 nbcnewyork.com: AG Todd Blanche : DOJ may take state voter roll fight to Supreme Court – NBC New York\n2026-08-16 nbcnews.com: Attorney General Todd Blanche says the DOJ may take state voter roll fight to Supreme Court\n2026-08-16 nbclosangeles.com: AG Todd Blanche : DOJ may take state voter roll fight to Supreme Court – NBC Los Angeles",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_blanche-independence-pledge",
-    "source": "news",
-    "ts": 1787079793951,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.354,
-      "articles": [
-        {
-          "title": "Todd Blanche refuses to pledge DOJ independence on Meet the Press",
-          "url": "https://www.foxnews.com/media/todd-blanche-rejects-nbc-anchors-doj-independence-pledge-says-trump-would-never-cross-legal-line",
-          "domain": "foxnews.com",
-          "seendate": "2026-08-17T01:15:00Z",
-          "image": "https://static.foxnews.com/foxnews.com/content/uploads/2026/08/Acting-AG-Todd-Blanche-Committee-Confirmation.jpg"
-        },
-        {
-          "title": "Blanche declines to pledge independence from the White House",
-          "url": "https://edition.cnn.com/2026/08/16/politics/todd-blanche-trump-administration",
-          "domain": "edition.cnn.com",
-          "seendate": "2026-08-17T01:00:00Z",
-          "image": "https://media.cnn.com/api/v1/images/stellar/prod/2026-08-12t171420z-861902632-rc25xmacoj44-rtrmadp-3-usa-justice-marriage.jpg?c=16x9&q=w_800,c_fill"
-        },
-        {
-          "title": "Blanche refuses to pledge DOJ independence from White House",
-          "url": "https://www.yahoo.com/news/politics/articles/blanche-refuses-pledge-doj-independence-000633119.html",
-          "domain": "yahoo.com",
-          "seendate": "2026-08-17T00:45:00Z",
-          "image": "https://s.yimg.com/lo/mysterio/api/f4adde2d5a7d7fddec9d72c80923addf896c1442a5a2ce6602c5df4df60a4b79/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fdetroit_news_articles_230%2F62f6a6570b5d25dd1ef38d5bb6675607.jpg"
-        }
-      ]
-    },
-    "title": "Blanche refuses to pledge DOJ independence from White House",
-    "summary": "2026-08-17 foxnews.com: Todd Blanche refuses to pledge DOJ independence on Meet the Press\n2026-08-17 edition.cnn.com: Blanche declines to pledge independence from the White House\n2026-08-17 yahoo.com: Blanche refuses to pledge DOJ independence from White House",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
