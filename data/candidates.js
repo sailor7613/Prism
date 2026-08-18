@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-18T04:03:21.426Z · 31 legislative + 7 news (GDELT, 3d)
+// 2026-08-18T07:11:18.468Z · 31 legislative + 7 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1787025763471,
+    "ts": 1787037018641,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.724,
+      "salience": 0.723,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,11 +259,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1787025763471,
+    "ts": 1787037018641,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.715,
+      "salience": 0.714,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1787025763471,
+    "ts": 1787037018640,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.686,
+      "salience": 0.685,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1787025763471,
+    "ts": 1787037018641,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.633,
+      "salience": 0.632,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3118,11 +3118,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1787025763471,
+    "ts": 1787037018641,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.614,
+      "salience": 0.613,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4520,11 +4520,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1787025763471,
+    "ts": 1787037018641,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
-      "salience": 0.614,
+      "salience": 0.613,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
       "votes": [
         {
@@ -4794,7 +4794,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1787025763471,
+    "ts": 1787037018641,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
@@ -5065,11 +5065,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1787025763470,
+    "ts": 1787037018640,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.589,
+      "salience": 0.588,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6467,7 +6467,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1787025763470,
+    "ts": 1787037018640,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
@@ -7869,11 +7869,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1787025763471,
+    "ts": 1787037018641,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.578,
+      "salience": 0.577,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -8396,7 +8396,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1787025763471,
+    "ts": 1787037018640,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
@@ -9330,11 +9330,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1787025763471,
+    "ts": 1787037018641,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.536,
+      "salience": 0.535,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -9606,7 +9606,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1041",
     "source": "legislative",
-    "ts": 1787025763469,
+    "ts": 1787037018640,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1041",
@@ -11003,7 +11003,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1787025763470,
+    "ts": 1787037018640,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
@@ -11935,11 +11935,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1787025763471,
+    "ts": 1787037018641,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.52,
+      "salience": 0.519,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -12211,7 +12211,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1787025763471,
+    "ts": 1787037018640,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
@@ -13144,11 +13144,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1787025763471,
+    "ts": 1787037018640,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.498,
+      "salience": 0.497,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -14077,11 +14077,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1787025763471,
+    "ts": 1787037018641,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.487,
+      "salience": 0.486,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -14469,7 +14469,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6047",
     "source": "legislative",
-    "ts": 1787025763470,
+    "ts": 1787037018640,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6047",
@@ -15394,11 +15394,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1787025763471,
+    "ts": 1787037018641,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.379,
+      "salience": 0.378,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -16797,7 +16797,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1787025763471,
+    "ts": 1787037018641,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
@@ -17690,11 +17690,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1787025763471,
+    "ts": 1787037018641,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.315,
+      "salience": 0.314,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -18605,11 +18605,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1787025763471,
+    "ts": 1787037018641,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.308,
+      "salience": 0.307,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -19493,7 +19493,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1787025763471,
+    "ts": 1787037018641,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
@@ -20414,11 +20414,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1787025763471,
+    "ts": 1787037018641,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.292,
+      "salience": 0.291,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -21332,11 +21332,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1787025763471,
+    "ts": 1787037018641,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.232,
+      "salience": 0.231,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -22231,7 +22231,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1787025763470,
+    "ts": 1787037018640,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
@@ -23165,7 +23165,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1787025763470,
+    "ts": 1787037018640,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
@@ -24094,11 +24094,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1787025763470,
+    "ts": 1787037018640,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
-      "salience": 0.127,
+      "salience": 0.126,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7618",
       "votes": [
         {
@@ -25003,7 +25003,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1787025763470,
+    "ts": 1787037018640,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
@@ -25878,7 +25878,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1787025763470,
+    "ts": 1787037018640,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
@@ -26762,12 +26762,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballroom-barbs-court",
     "source": "news",
-    "ts": 1787025801419,
+    "ts": 1787037078463,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.975,
+      "salience": 0.955,
       "articles": [
         {
           "title": "Trump , Ossoff Trade Barbs Amid White House Ballroom Court Fight",
@@ -26866,14 +26866,64 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_blanche-court-doj",
+    "cid": "cand_news_asked-commandments-court",
     "source": "news",
-    "ts": 1787025801419,
+    "ts": 1787037078464,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.633,
+      "salience": 0.653,
+      "articles": [
+        {
+          "title": "Supreme Court asked to review Texas Ten Commandments law – NBC 5 Dallas - Fort Worth",
+          "url": "https://www.nbcdfw.com/news/politics/supreme-court-review-texas-law-ten-commandments-public-schools-requirement/4063910/",
+          "domain": "nbcdfw.com",
+          "seendate": "2026-08-18T04:30:00Z",
+          "image": "https://media.nbcdfw.com/2026/08/AP26229674670152.jpg?quality=85&strip=all"
+        },
+        {
+          "title": "Supreme Court asked to review Texas law requiring the Ten Commandments in public schools",
+          "url": "https://www.ksat.com/news/texas/2026/08/17/supreme-court-asked-to-review-texas-law-requiring-the-ten-commandments-in-public-schools/",
+          "domain": "ksat.com",
+          "seendate": "2026-08-18T02:30:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/YF7QJKTTMFCWPOV63VNEZTLWNI.jpg?_a=DATAg1kSZAA0"
+        },
+        {
+          "title": "Supreme Court asked to review Texas law requiring the Ten Commandments in public schools",
+          "url": "https://www.dailypress.com/2026/08/17/ten-commandments-schools/",
+          "domain": "dailypress.com",
+          "seendate": "2026-08-18T00:30:00Z",
+          "image": "https://www.dailypress.com/wp-content/uploads/2026/08/Ten_Commandments_Schools_7_152.jpg"
+        },
+        {
+          "title": "Supreme Court asked to review Texas law requiring the Ten Commandments in public schools",
+          "url": "https://www.wral.com/news/ap/facb4-supreme-court-asked-to-review-texas-law-requiring-the-ten-commandments-in-public-schools/",
+          "domain": "wral.com",
+          "seendate": "2026-08-18T00:15:00Z",
+          "image": "https://images.wral.com/5d6f7611-5d51-5ebe-889c-587a93a2d6ad"
+        }
+      ]
+    },
+    "title": "Supreme Court asked to review Texas law requiring the Ten Commandments in public schools",
+    "summary": "2026-08-18 nbcdfw.com: Supreme Court asked to review Texas Ten Commandments law – NBC 5 Dallas - Fort Worth\n2026-08-18 ksat.com: Supreme Court asked to review Texas law requiring the Ten Commandments in public schools\n2026-08-18 dailypress.com: Supreme Court asked to review Texas law requiring the Ten Commandments in public schools\n2026-08-18 wral.com: Supreme Court asked to review Texas law requiring the Ten Commandments in public schools",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_blanche-court-doj",
+    "source": "news",
+    "ts": 1787037078463,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.614,
       "articles": [
         {
           "title": "AG Todd Blanche : DOJ may take state voter roll fight to Supreme Court – NBC 6 South Florida",
@@ -26937,57 +26987,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_asked-commandments-court",
-    "source": "news",
-    "ts": 1787025801419,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.605,
-      "articles": [
-        {
-          "title": "Supreme Court asked to review Texas law requiring the Ten Commandments in public schools",
-          "url": "https://www.ksat.com/news/texas/2026/08/17/supreme-court-asked-to-review-texas-law-requiring-the-ten-commandments-in-public-schools/",
-          "domain": "ksat.com",
-          "seendate": "2026-08-18T02:30:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/YF7QJKTTMFCWPOV63VNEZTLWNI.jpg?_a=DATAg1kSZAA0"
-        },
-        {
-          "title": "Supreme Court asked to review Texas law requiring the Ten Commandments in public schools",
-          "url": "https://www.dailypress.com/2026/08/17/ten-commandments-schools/",
-          "domain": "dailypress.com",
-          "seendate": "2026-08-18T00:30:00Z",
-          "image": "https://www.dailypress.com/wp-content/uploads/2026/08/Ten_Commandments_Schools_7_152.jpg"
-        },
-        {
-          "title": "Supreme Court asked to review Texas law requiring the Ten Commandments in public schools",
-          "url": "https://www.wral.com/news/ap/facb4-supreme-court-asked-to-review-texas-law-requiring-the-ten-commandments-in-public-schools/",
-          "domain": "wral.com",
-          "seendate": "2026-08-18T00:15:00Z",
-          "image": "https://images.wral.com/5d6f7611-5d51-5ebe-889c-587a93a2d6ad"
-        }
-      ]
-    },
-    "title": "Supreme Court asked to review Texas law requiring the Ten Commandments in public schools",
-    "summary": "2026-08-18 ksat.com: Supreme Court asked to review Texas law requiring the Ten Commandments in public schools\n2026-08-18 dailypress.com: Supreme Court asked to review Texas law requiring the Ten Commandments in public schools\n2026-08-18 wral.com: Supreme Court asked to review Texas law requiring the Ten Commandments in public schools",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_before-change-does",
     "source": "news",
-    "ts": 1787025801419,
+    "ts": 1787037078463,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.59,
+      "salience": 0.57,
       "articles": [
         {
           "title": "Does Trump still have time to change voting rules before midterm elections ? ",
@@ -27067,12 +27074,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_blanche-independence-pledge",
     "source": "news",
-    "ts": 1787025801419,
+    "ts": 1787037078463,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.447,
+      "salience": 0.428,
       "articles": [
         {
           "title": "Todd Blanche refuses to pledge DOJ independence on Meet the Press",
@@ -27110,12 +27117,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_bad-failure-math",
     "source": "news",
-    "ts": 1787025801420,
+    "ts": 1787037078464,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.402,
+      "salience": 0.382,
       "articles": [
         {
           "title": "Susan Shelley : Obamacare failure proves socialists are bad at math – Pasadena Star News",
@@ -27174,12 +27181,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_campaign-congress-despite",
     "source": "news",
-    "ts": 1787025801419,
+    "ts": 1787037078463,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.224,
+      "salience": 0.204,
       "articles": [
         {
           "title": "Inside the Trump campaign plan to keep Congress despite tough odds",
