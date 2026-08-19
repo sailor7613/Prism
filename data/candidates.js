@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-19T07:12:04.813Z · 29 legislative + 11 news (GDELT, 3d)
+// 2026-08-19T09:54:18.252Z · 29 legislative + 11 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1787123462199,
+    "ts": 1787133213354,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.719,
+      "salience": 0.718,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,11 +259,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1787123462199,
+    "ts": 1787133213354,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.71,
+      "salience": 0.709,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1787123462198,
+    "ts": 1787133213353,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.681,
+      "salience": 0.68,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -2843,7 +2843,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1787123462199,
+    "ts": 1787133213354,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
@@ -3118,11 +3118,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1787123462199,
+    "ts": 1787133213353,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.609,
+      "salience": 0.608,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4520,11 +4520,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1787123462199,
+    "ts": 1787133213354,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
-      "salience": 0.609,
+      "salience": 0.608,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
       "votes": [
         {
@@ -4794,7 +4794,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1787123462199,
+    "ts": 1787133213354,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
@@ -5065,11 +5065,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1787123462198,
+    "ts": 1787133213352,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.584,
+      "salience": 0.583,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6467,7 +6467,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1787123462198,
+    "ts": 1787133213352,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
@@ -7869,11 +7869,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1787123462199,
+    "ts": 1787133213354,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.573,
+      "salience": 0.572,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -8396,7 +8396,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1787123462198,
+    "ts": 1787133213353,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
@@ -9330,11 +9330,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1787123462199,
+    "ts": 1787133213354,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.531,
+      "salience": 0.53,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -9606,7 +9606,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1787123462198,
+    "ts": 1787133213353,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
@@ -10538,11 +10538,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1787123462199,
+    "ts": 1787133213354,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.515,
+      "salience": 0.514,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -10814,7 +10814,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1787123462199,
+    "ts": 1787133213353,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
@@ -11747,11 +11747,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1787123462198,
+    "ts": 1787133213353,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.493,
+      "salience": 0.492,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -12680,11 +12680,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1787123462199,
+    "ts": 1787133213354,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.482,
+      "salience": 0.481,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -13072,11 +13072,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1787123462199,
+    "ts": 1787133213354,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.374,
+      "salience": 0.373,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -14475,7 +14475,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1787123462199,
+    "ts": 1787133213354,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
@@ -15368,11 +15368,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1787123462199,
+    "ts": 1787133213354,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.31,
+      "salience": 0.309,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -16283,11 +16283,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1787123462199,
+    "ts": 1787133213354,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.303,
+      "salience": 0.302,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -17171,7 +17171,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1787123462199,
+    "ts": 1787133213354,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
@@ -18092,7 +18092,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1787123462199,
+    "ts": 1787133213354,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
@@ -19010,11 +19010,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1787123462199,
+    "ts": 1787133213353,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.227,
+      "salience": 0.226,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -19909,7 +19909,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1787123462198,
+    "ts": 1787133213352,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
@@ -20843,7 +20843,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1787123462198,
+    "ts": 1787133213352,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
@@ -21772,11 +21772,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1787123462197,
+    "ts": 1787133213352,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
-      "salience": 0.122,
+      "salience": 0.121,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7618",
       "votes": [
         {
@@ -22681,7 +22681,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1787123462198,
+    "ts": 1787133213353,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
@@ -23556,7 +23556,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1787123462198,
+    "ts": 1787133213353,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
@@ -24438,89 +24438,96 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_canada-effect-midnight",
+    "cid": "cand_news_admin-battle-court",
     "source": "news",
-    "ts": 1787123524807,
+    "ts": 1787133258246,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.978,
+      "salience": 0.944,
       "articles": [
         {
-          "title": "New tariffs on Canada slated to take effect after midnight",
-          "url": "https://www.koco.com/article/new-tariffs-canada-slated-to-take-effect-after-midnight/73468590",
-          "domain": "koco.com",
-          "seendate": "2026-08-19T03:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod-media.s3.amazonaws.com/images/flags-1597422742.jpg?crop=1xw%3A0.866234221598878xh%3Bcenter%2Ctop"
+          "title": "Trump Admin Wins Court Battle To End Ethiopian Deportation Protections",
+          "url": "https://whnz.iheart.com/content/2026-08-18-trump-admin-wins-court-battle-to-end-ethiopian-deportation-protections/",
+          "domain": "whnz.iheart.com",
+          "seendate": "2026-08-19T01:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6813aaef0650b7facb269100?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "New tariffs on Canada slated to take effect after midnight",
-          "url": "https://www.wbaltv.com/article/new-tariffs-canada-slated-to-take-effect-after-midnight/73468590",
-          "domain": "wbaltv.com",
-          "seendate": "2026-08-19T03:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod-media.s3.amazonaws.com/images/flags-1597422742.jpg?crop=1xw%3A0.866234221598878xh%3Bcenter%2Ctop"
+          "title": "Trump Admin Wins Court Battle To End Ethiopian Deportation Protections",
+          "url": "https://945wpti.iheart.com/content/2026-08-18-trump-admin-wins-court-battle-to-end-ethiopian-deportation-protections/",
+          "domain": "945wpti.iheart.com",
+          "seendate": "2026-08-18T23:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6813aaef0650b7facb269100?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "New tariffs on Canada slated to take effect after midnight",
-          "url": "https://www.wesh.com/article/new-tariffs-canada-slated-to-take-effect-after-midnight/73468590",
-          "domain": "wesh.com",
-          "seendate": "2026-08-19T02:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod-media.s3.amazonaws.com/images/flags-1597422742.jpg?crop=1xw%3A0.866234221598878xh%3Bcenter%2Ctop"
+          "title": "Trump Admin Wins Court Battle To End Ethiopian Deportation Protections",
+          "url": "https://woai.iheart.com/content/2026-08-18-trump-admin-wins-court-battle-to-end-ethiopian-deportation-protections/",
+          "domain": "woai.iheart.com",
+          "seendate": "2026-08-18T23:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6813aaef0650b7facb269100?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "New tariffs on Canada slated to take effect after midnight",
-          "url": "https://www.wlwt.com/article/new-tariffs-canada-slated-to-take-effect-after-midnight/73468590",
-          "domain": "wlwt.com",
-          "seendate": "2026-08-19T02:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod-media.s3.amazonaws.com/images/flags-1597422742.jpg?crop=1xw%3A0.866234221598878xh%3Bcenter%2Ctop"
+          "title": "Trump Admin Wins Court Battle To End Ethiopian Deportation Protections | Newstalk 1400 , 104 . 5 , and 105 . 9 WJMX",
+          "url": "https://newstalk1400online.iheart.com/content/2026-08-18-trump-admin-wins-court-battle-to-end-ethiopian-deportation-protections/",
+          "domain": "newstalk1400online.iheart.com",
+          "seendate": "2026-08-18T23:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6813aaef0650b7facb269100?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "New tariffs on Canada slated to take effect after midnight",
-          "url": "https://www.koat.com/article/new-tariffs-canada-slated-to-take-effect-after-midnight/73468590",
-          "domain": "koat.com",
-          "seendate": "2026-08-19T02:15:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod-media.s3.amazonaws.com/images/flags-1597422742.jpg?crop=1xw%3A0.866234221598878xh%3Bcenter%2Ctop"
+          "title": "Trump Admin Wins Court Battle To End Ethiopian Deportation Protections",
+          "url": "https://600wrec.iheart.com/content/2026-08-18-trump-admin-wins-court-battle-to-end-ethiopian-deportation-protections/",
+          "domain": "600wrec.iheart.com",
+          "seendate": "2026-08-18T23:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6813aaef0650b7facb269100?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "New tariffs on Canada slated to take effect after midnight",
-          "url": "https://www.kcra.com/article/new-tariffs-canada-slated-to-take-effect-after-midnight/73468590",
-          "domain": "kcra.com",
-          "seendate": "2026-08-19T02:15:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod-media.s3.amazonaws.com/images/flags-1597422742.jpg?crop=1xw%3A0.866234221598878xh%3Bcenter%2Ctop"
+          "title": "Trump Admin Wins Court Battle To End Ethiopian Deportation Protections",
+          "url": "https://kfiam640.iheart.com/content/2026-08-18-trump-admin-wins-court-battle-to-end-ethiopian-deportation-protections/",
+          "domain": "kfiam640.iheart.com",
+          "seendate": "2026-08-18T23:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6813aaef0650b7facb269100?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "New tariffs on Canada slated to take effect after midnight",
-          "url": "https://www.wcvb.com/article/new-tariffs-canada-slated-to-take-effect-after-midnight/73468590",
-          "domain": "wcvb.com",
-          "seendate": "2026-08-19T01:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod-media.s3.amazonaws.com/images/flags-1597422742.jpg?crop=1xw%3A0.866234221598878xh%3Bcenter%2Ctop"
+          "title": "Trump Admin Wins Court Battle To End Ethiopian Deportation Protections",
+          "url": "https://koacolorado.iheart.com/content/2026-08-18-trump-admin-wins-court-battle-to-end-ethiopian-deportation-protections/",
+          "domain": "koacolorado.iheart.com",
+          "seendate": "2026-08-18T23:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6813aaef0650b7facb269100?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "New tariffs on Canada slated to take effect after midnight",
-          "url": "https://www.wmur.com/article/new-tariffs-canada-slated-to-take-effect-after-midnight/73468590",
-          "domain": "wmur.com",
-          "seendate": "2026-08-19T01:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod-media.s3.amazonaws.com/images/flags-1597422742.jpg?crop=1xw%3A0.866234221598878xh%3Bcenter%2Ctop"
+          "title": "Trump Admin Wins Court Battle To End Ethiopian Deportation Protections",
+          "url": "https://kste.iheart.com/content/2026-08-18-trump-admin-wins-court-battle-to-end-ethiopian-deportation-protections/",
+          "domain": "kste.iheart.com",
+          "seendate": "2026-08-18T23:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6813aaef0650b7facb269100?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "New tariffs on Canada slated to take effect after midnight",
-          "url": "https://www.kmbc.com/article/new-tariffs-canada-slated-to-take-effect-after-midnight/73468590",
-          "domain": "kmbc.com",
-          "seendate": "2026-08-19T01:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod-media.s3.amazonaws.com/images/flags-1597422742.jpg?crop=1xw%3A0.866234221598878xh%3Bcenter%2Ctop"
+          "title": "Trump Admin Wins Court Battle To End Ethiopian Deportation Protections",
+          "url": "https://talk1200boston.iheart.com/content/2026-08-18-trump-admin-wins-court-battle-to-end-ethiopian-deportation-protections/",
+          "domain": "talk1200boston.iheart.com",
+          "seendate": "2026-08-18T23:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6813aaef0650b7facb269100?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "New tariffs on Canada slated to take effect after midnight",
-          "url": "https://www.wyff4.com/article/new-tariffs-canada-slated-to-take-effect-after-midnight/73468590",
-          "domain": "wyff4.com",
-          "seendate": "2026-08-19T01:15:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod-media.s3.amazonaws.com/images/flags-1597422742.jpg?crop=1xw%3A0.866234221598878xh%3Bcenter%2Ctop"
+          "title": "Trump Admin Wins Court Battle To End Ethiopian Deportation Protections",
+          "url": "https://590kqnt.iheart.com/content/2026-08-18-trump-admin-wins-court-battle-to-end-ethiopian-deportation-protections/",
+          "domain": "590kqnt.iheart.com",
+          "seendate": "2026-08-18T23:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6813aaef0650b7facb269100?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Trump Admin Wins Court Battle To End Ethiopian Deportation Protections",
+          "url": "https://realradio.iheart.com/content/2026-08-18-trump-admin-wins-court-battle-to-end-ethiopian-deportation-protections/",
+          "domain": "realradio.iheart.com",
+          "seendate": "2026-08-18T23:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6813aaef0650b7facb269100?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         }
       ]
     },
-    "title": "New tariffs on Canada slated to take effect after midnight",
-    "summary": "2026-08-19 koco.com: New tariffs on Canada slated to take effect after midnight\n2026-08-19 wbaltv.com: New tariffs on Canada slated to take effect after midnight\n2026-08-19 wesh.com: New tariffs on Canada slated to take effect after midnight\n2026-08-19 wlwt.com: New tariffs on Canada slated to take effect after midnight\n2026-08-19 koat.com: New tariffs on Canada slated to take effect after midnight\n2026-08-19 kcra.com: New tariffs on Canada slated to take effect after midnight",
+    "title": "Trump Admin Wins Court Battle To End Ethiopian Deportation Protections",
+    "summary": "2026-08-19 whnz.iheart.com: Trump Admin Wins Court Battle To End Ethiopian Deportation Protections\n2026-08-18 945wpti.iheart.com: Trump Admin Wins Court Battle To End Ethiopian Deportation Protections\n2026-08-18 woai.iheart.com: Trump Admin Wins Court Battle To End Ethiopian Deportation Protections\n2026-08-18 newstalk1400online.iheart.com: Trump Admin Wins Court Battle To End Ethiopian Deportation Protections | Newstalk 1400 , 104 . 5 , and 105 . 9 WJMX\n2026-08-18 600wrec.iheart.com: Trump Admin Wins Court Battle To End Ethiopian Deportation Protections\n2026-08-18 kfiam640.iheart.com: Trump Admin Wins Court Battle To End Ethiopian Deportation Protections",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -24532,12 +24539,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballot-cast-claims",
     "source": "news",
-    "ts": 1787123524806,
+    "ts": 1787133258245,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.958,
+      "salience": 0.941,
       "articles": [
         {
           "title": "Trump cast mail ballot in Florida primary after spreading false fraud claims",
@@ -24638,12 +24645,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballroom-court-house",
     "source": "news",
-    "ts": 1787123524804,
+    "ts": 1787133258243,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.947,
+      "salience": 0.93,
       "articles": [
         {
           "title": "Preservation group urges Supreme Court to suspend Trump White House ballroom project",
@@ -24742,82 +24749,82 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_admin-battle-court",
+    "cid": "cand_news_canada-effect-midnight",
     "source": "news",
-    "ts": 1787123524807,
+    "ts": 1787133258245,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.897,
+      "salience": 0.905,
       "articles": [
         {
-          "title": "Trump Admin Wins Court Battle To End Ethiopian Deportation Protections",
-          "url": "https://945wpti.iheart.com/content/2026-08-18-trump-admin-wins-court-battle-to-end-ethiopian-deportation-protections/",
-          "domain": "945wpti.iheart.com",
-          "seendate": "2026-08-18T23:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6813aaef0650b7facb269100?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "New tariffs on Canada slated to take effect after midnight",
+          "url": "https://www.wbaltv.com/article/new-tariffs-canada-slated-to-take-effect-after-midnight/73468590",
+          "domain": "wbaltv.com",
+          "seendate": "2026-08-19T03:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod-media.s3.amazonaws.com/images/flags-1597422742.jpg?crop=1xw%3A0.866234221598878xh%3Bcenter%2Ctop"
         },
         {
-          "title": "Trump Admin Wins Court Battle To End Ethiopian Deportation Protections",
-          "url": "https://woai.iheart.com/content/2026-08-18-trump-admin-wins-court-battle-to-end-ethiopian-deportation-protections/",
-          "domain": "woai.iheart.com",
-          "seendate": "2026-08-18T23:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6813aaef0650b7facb269100?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "New tariffs on Canada slated to take effect after midnight",
+          "url": "https://www.wesh.com/article/new-tariffs-canada-slated-to-take-effect-after-midnight/73468590",
+          "domain": "wesh.com",
+          "seendate": "2026-08-19T02:45:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod-media.s3.amazonaws.com/images/flags-1597422742.jpg?crop=1xw%3A0.866234221598878xh%3Bcenter%2Ctop"
         },
         {
-          "title": "Trump Admin Wins Court Battle To End Ethiopian Deportation Protections | Newstalk 1400 , 104 . 5 , and 105 . 9 WJMX",
-          "url": "https://newstalk1400online.iheart.com/content/2026-08-18-trump-admin-wins-court-battle-to-end-ethiopian-deportation-protections/",
-          "domain": "newstalk1400online.iheart.com",
-          "seendate": "2026-08-18T23:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6813aaef0650b7facb269100?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "New tariffs on Canada slated to take effect after midnight",
+          "url": "https://www.wlwt.com/article/new-tariffs-canada-slated-to-take-effect-after-midnight/73468590",
+          "domain": "wlwt.com",
+          "seendate": "2026-08-19T02:45:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod-media.s3.amazonaws.com/images/flags-1597422742.jpg?crop=1xw%3A0.866234221598878xh%3Bcenter%2Ctop"
         },
         {
-          "title": "Trump Admin Wins Court Battle To End Ethiopian Deportation Protections",
-          "url": "https://600wrec.iheart.com/content/2026-08-18-trump-admin-wins-court-battle-to-end-ethiopian-deportation-protections/",
-          "domain": "600wrec.iheart.com",
-          "seendate": "2026-08-18T23:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6813aaef0650b7facb269100?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "New tariffs on Canada slated to take effect after midnight",
+          "url": "https://www.koat.com/article/new-tariffs-canada-slated-to-take-effect-after-midnight/73468590",
+          "domain": "koat.com",
+          "seendate": "2026-08-19T02:15:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod-media.s3.amazonaws.com/images/flags-1597422742.jpg?crop=1xw%3A0.866234221598878xh%3Bcenter%2Ctop"
         },
         {
-          "title": "Trump Admin Wins Court Battle To End Ethiopian Deportation Protections",
-          "url": "https://koacolorado.iheart.com/content/2026-08-18-trump-admin-wins-court-battle-to-end-ethiopian-deportation-protections/",
-          "domain": "koacolorado.iheart.com",
-          "seendate": "2026-08-18T23:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6813aaef0650b7facb269100?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "New tariffs on Canada slated to take effect after midnight",
+          "url": "https://www.kcra.com/article/new-tariffs-canada-slated-to-take-effect-after-midnight/73468590",
+          "domain": "kcra.com",
+          "seendate": "2026-08-19T02:15:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod-media.s3.amazonaws.com/images/flags-1597422742.jpg?crop=1xw%3A0.866234221598878xh%3Bcenter%2Ctop"
         },
         {
-          "title": "Trump Admin Wins Court Battle To End Ethiopian Deportation Protections",
-          "url": "https://kste.iheart.com/content/2026-08-18-trump-admin-wins-court-battle-to-end-ethiopian-deportation-protections/",
-          "domain": "kste.iheart.com",
-          "seendate": "2026-08-18T23:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6813aaef0650b7facb269100?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "New tariffs on Canada slated to take effect after midnight",
+          "url": "https://www.wcvb.com/article/new-tariffs-canada-slated-to-take-effect-after-midnight/73468590",
+          "domain": "wcvb.com",
+          "seendate": "2026-08-19T01:45:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod-media.s3.amazonaws.com/images/flags-1597422742.jpg?crop=1xw%3A0.866234221598878xh%3Bcenter%2Ctop"
         },
         {
-          "title": "Trump Admin Wins Court Battle To End Ethiopian Deportation Protections",
-          "url": "https://talk1200boston.iheart.com/content/2026-08-18-trump-admin-wins-court-battle-to-end-ethiopian-deportation-protections/",
-          "domain": "talk1200boston.iheart.com",
-          "seendate": "2026-08-18T23:00:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6813aaef0650b7facb269100?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "New tariffs on Canada slated to take effect after midnight",
+          "url": "https://www.wmur.com/article/new-tariffs-canada-slated-to-take-effect-after-midnight/73468590",
+          "domain": "wmur.com",
+          "seendate": "2026-08-19T01:45:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod-media.s3.amazonaws.com/images/flags-1597422742.jpg?crop=1xw%3A0.866234221598878xh%3Bcenter%2Ctop"
         },
         {
-          "title": "Trump Admin Wins Court Battle To End Ethiopian Deportation Protections",
-          "url": "https://590kqnt.iheart.com/content/2026-08-18-trump-admin-wins-court-battle-to-end-ethiopian-deportation-protections/",
-          "domain": "590kqnt.iheart.com",
-          "seendate": "2026-08-18T23:00:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6813aaef0650b7facb269100?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "New tariffs on Canada slated to take effect after midnight",
+          "url": "https://www.kmbc.com/article/new-tariffs-canada-slated-to-take-effect-after-midnight/73468590",
+          "domain": "kmbc.com",
+          "seendate": "2026-08-19T01:45:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod-media.s3.amazonaws.com/images/flags-1597422742.jpg?crop=1xw%3A0.866234221598878xh%3Bcenter%2Ctop"
         },
         {
-          "title": "Trump Admin Wins Court Battle To End Ethiopian Deportation Protections",
-          "url": "https://realradio.iheart.com/content/2026-08-18-trump-admin-wins-court-battle-to-end-ethiopian-deportation-protections/",
-          "domain": "realradio.iheart.com",
-          "seendate": "2026-08-18T23:00:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6813aaef0650b7facb269100?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "New tariffs on Canada slated to take effect after midnight",
+          "url": "https://www.wyff4.com/article/new-tariffs-canada-slated-to-take-effect-after-midnight/73468590",
+          "domain": "wyff4.com",
+          "seendate": "2026-08-19T01:15:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod-media.s3.amazonaws.com/images/flags-1597422742.jpg?crop=1xw%3A0.866234221598878xh%3Bcenter%2Ctop"
         }
       ]
     },
-    "title": "Trump Admin Wins Court Battle To End Ethiopian Deportation Protections",
-    "summary": "2026-08-18 945wpti.iheart.com: Trump Admin Wins Court Battle To End Ethiopian Deportation Protections\n2026-08-18 woai.iheart.com: Trump Admin Wins Court Battle To End Ethiopian Deportation Protections\n2026-08-18 newstalk1400online.iheart.com: Trump Admin Wins Court Battle To End Ethiopian Deportation Protections | Newstalk 1400 , 104 . 5 , and 105 . 9 WJMX\n2026-08-18 600wrec.iheart.com: Trump Admin Wins Court Battle To End Ethiopian Deportation Protections\n2026-08-18 koacolorado.iheart.com: Trump Admin Wins Court Battle To End Ethiopian Deportation Protections\n2026-08-18 kste.iheart.com: Trump Admin Wins Court Battle To End Ethiopian Deportation Protections",
+    "title": "New tariffs on Canada slated to take effect after midnight",
+    "summary": "2026-08-19 wbaltv.com: New tariffs on Canada slated to take effect after midnight\n2026-08-19 wesh.com: New tariffs on Canada slated to take effect after midnight\n2026-08-19 wlwt.com: New tariffs on Canada slated to take effect after midnight\n2026-08-19 koat.com: New tariffs on Canada slated to take effect after midnight\n2026-08-19 kcra.com: New tariffs on Canada slated to take effect after midnight\n2026-08-19 wcvb.com: New tariffs on Canada slated to take effect after midnight",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -24829,12 +24836,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_asks-ballroom-block",
     "source": "news",
-    "ts": 1787123524806,
+    "ts": 1787133258245,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.829,
+      "salience": 0.812,
       "articles": [
         {
           "title": "Preservation group asks Supreme Court to keep block in place on White House ballroom",
@@ -24907,12 +24914,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballroom-barbs-court",
     "source": "news",
-    "ts": 1787123524806,
+    "ts": 1787133258245,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.805,
+      "salience": 0.788,
       "articles": [
         {
           "title": "Trump , Ossoff Trade Barbs Amid White House Ballroom Court Fight",
@@ -25013,12 +25020,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_accompli-ballroom-court",
     "source": "news",
-    "ts": 1787123524806,
+    "ts": 1787133258245,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.677,
+      "salience": 0.66,
       "articles": [
         {
           "title": "Trump making ballroom  fait accompli , foes tell Supreme Court – The Morning Call",
@@ -25070,12 +25077,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_again-ballot-casts",
     "source": "news",
-    "ts": 1787123524806,
+    "ts": 1787133258245,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.634,
+      "salience": 0.617,
       "articles": [
         {
           "title": "Trump casts mail ballot again in Florida despite efforts to restrict mail voting",
@@ -25120,12 +25127,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_2026-ballots-cooper",
     "source": "news",
-    "ts": 1787123524807,
+    "ts": 1787133258245,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.589,
+      "salience": 0.572,
       "articles": [
         {
           "title": "Election 2026 : Just 2 weeks from ballots going out , Cooper lead growing",
@@ -25163,12 +25170,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballroom-defends-donor",
     "source": "news",
-    "ts": 1787123524806,
+    "ts": 1787133258245,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.539,
+      "salience": 0.522,
       "articles": [
         {
           "title": "Trump defends White House ballroom , pledges donor list",
@@ -25206,12 +25213,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_blanche-court-doj",
     "source": "news",
-    "ts": 1787123524807,
+    "ts": 1787133258245,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.408,
+      "salience": 0.392,
       "articles": [
         {
           "title": "AG Todd Blanche : DOJ may take state voter roll fight to Supreme Court – NBC 6 South Florida",
