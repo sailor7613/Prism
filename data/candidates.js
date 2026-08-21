@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-21T07:13:13.664Z · 29 legislative + 13 news (GDELT, 3d)
+// 2026-08-21T09:56:34.973Z · 29 legislative + 14 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1787296371479,
+    "ts": 1787306153886,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.71,
+      "salience": 0.709,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,7 +259,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1787296371479,
+    "ts": 1787306153886,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1787296371479,
+    "ts": 1787306153885,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.672,
+      "salience": 0.671,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1787296371479,
+    "ts": 1787306153886,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.619,
+      "salience": 0.618,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3118,11 +3118,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1787296371479,
+    "ts": 1787306153886,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.6,
+      "salience": 0.599,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4520,11 +4520,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1787296371479,
+    "ts": 1787306153886,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
-      "salience": 0.6,
+      "salience": 0.599,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
       "votes": [
         {
@@ -4794,11 +4794,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1787296371479,
+    "ts": 1787306153886,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.586,
+      "salience": 0.585,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5065,11 +5065,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1787296371478,
+    "ts": 1787306153885,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.575,
+      "salience": 0.574,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6467,7 +6467,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1787296371478,
+    "ts": 1787306153885,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
@@ -7869,11 +7869,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1787296371480,
+    "ts": 1787306153886,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.564,
+      "salience": 0.563,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -8396,11 +8396,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1787296371479,
+    "ts": 1787306153885,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.523,
+      "salience": 0.522,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -9330,11 +9330,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1787296371479,
+    "ts": 1787306153886,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.522,
+      "salience": 0.521,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -9606,7 +9606,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1787296371478,
+    "ts": 1787306153885,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
@@ -10538,11 +10538,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1787296371479,
+    "ts": 1787306153886,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.506,
+      "salience": 0.505,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -10814,7 +10814,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1787296371479,
+    "ts": 1787306153885,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
@@ -11747,11 +11747,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1787296371479,
+    "ts": 1787306153885,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.484,
+      "salience": 0.483,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -12680,11 +12680,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1787296371480,
+    "ts": 1787306153886,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.473,
+      "salience": 0.472,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -13072,11 +13072,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1787296371479,
+    "ts": 1787306153886,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.365,
+      "salience": 0.364,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -14475,7 +14475,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1787296371479,
+    "ts": 1787306153886,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
@@ -15368,11 +15368,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1787296371480,
+    "ts": 1787306153886,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.301,
+      "salience": 0.3,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -16283,11 +16283,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1787296371480,
+    "ts": 1787306153886,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.294,
+      "salience": 0.293,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -17171,7 +17171,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1787296371479,
+    "ts": 1787306153886,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
@@ -18092,7 +18092,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1787296371479,
+    "ts": 1787306153886,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
@@ -19010,7 +19010,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1787296371479,
+    "ts": 1787306153886,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
@@ -19909,7 +19909,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1787296371478,
+    "ts": 1787306153885,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
@@ -20843,7 +20843,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1787296371478,
+    "ts": 1787306153884,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
@@ -21772,11 +21772,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1787296371478,
+    "ts": 1787306153884,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
-      "salience": 0.113,
+      "salience": 0.112,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7618",
       "votes": [
         {
@@ -22681,7 +22681,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1787296371478,
+    "ts": 1787306153885,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
@@ -23556,7 +23556,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1787296371478,
+    "ts": 1787306153885,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
@@ -24440,12 +24440,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_construction-house-issues",
     "source": "news",
-    "ts": 1787296393656,
+    "ts": 1787306194966,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.786,
+      "salience": 0.769,
       "articles": [
         {
           "title": "Trump Updates On White House Construction Amid Legal Issues",
@@ -24546,12 +24546,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_canada-effect-midnight",
     "source": "news",
-    "ts": 1787296393657,
+    "ts": 1787306194967,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.717,
+      "salience": 0.7,
       "articles": [
         {
           "title": "New tariffs on Canada slated to take effect after midnight",
@@ -24645,12 +24645,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballot-cast-claims",
     "source": "news",
-    "ts": 1787296393656,
+    "ts": 1787306194966,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.658,
+      "salience": 0.641,
       "articles": [
         {
           "title": "Trump cast mail ballot in Florida primary after spreading false fraud claims",
@@ -24751,12 +24751,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballroom-court-group",
     "source": "news",
-    "ts": 1787296393656,
+    "ts": 1787306194966,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.647,
+      "salience": 0.63,
       "articles": [
         {
           "title": "Preservation group urges Supreme Court to suspend Trump White House ballroom project",
@@ -24857,12 +24857,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_debt-record-shattering",
     "source": "news",
-    "ts": 1787296393657,
+    "ts": 1787306194967,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.643,
+      "salience": 0.626,
       "articles": [
         {
           "title": "The U . S . debt tops a record - shattering $40 trillion . Yes , with a T",
@@ -24928,12 +24928,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballroom-center-details",
     "source": "news",
-    "ts": 1787296393656,
+    "ts": 1787306194966,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.578,
+      "salience": 0.561,
       "articles": [
         {
           "title": "New details of plans for the Kennedy Center and White House ballroom include columns carved in Italy , plaza named for Trump",
@@ -24971,12 +24971,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_asks-ballroom-block",
     "source": "news",
-    "ts": 1787296393657,
+    "ts": 1787306194966,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.529,
+      "salience": 0.512,
       "articles": [
         {
           "title": "Preservation group asks Supreme Court to keep block in place on White House ballroom",
@@ -25049,12 +25049,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_fda-heidi-house",
     "source": "news",
-    "ts": 1787296393657,
+    "ts": 1787306194966,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.42,
+      "salience": 0.403,
       "articles": [
         {
           "title": "The Latest : Trump picks top White House aide Dr . Heidi Overton to lead FDA",
@@ -25092,12 +25092,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_fda-heidi-lead",
     "source": "news",
-    "ts": 1787296393657,
+    "ts": 1787306194967,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.389,
+      "salience": 0.372,
       "articles": [
         {
           "title": "Trump nominates Heidi Overton to lead the FDA",
@@ -25135,12 +25135,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_accompli-ballroom-court",
     "source": "news",
-    "ts": 1787296393656,
+    "ts": 1787306194965,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.377,
+      "salience": 0.36,
       "articles": [
         {
           "title": "Trump making ballroom  fait accompli , foes tell Supreme Court – The Morning Call",
@@ -25192,12 +25192,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_again-ballot-casts",
     "source": "news",
-    "ts": 1787296393657,
+    "ts": 1787306194967,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.334,
+      "salience": 0.317,
       "articles": [
         {
           "title": "Trump casts mail ballot again in Florida despite efforts to restrict mail voting",
@@ -25242,12 +25242,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_2026-ballots-cooper",
     "source": "news",
-    "ts": 1787296393657,
+    "ts": 1787306194967,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.289,
+      "salience": 0.272,
       "articles": [
         {
           "title": "Election 2026 : Just 2 weeks from ballots going out , Cooper lead growing",
@@ -25283,14 +25283,57 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_ballroom-defends-donor",
+    "cid": "cand_news_admin-battle-court",
     "source": "news",
-    "ts": 1787296393656,
+    "ts": 1787306194967,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.239,
+      "salience": 0.248,
+      "articles": [
+        {
+          "title": "Trump Admin Wins Court Battle To End Ethiopian Deportation Protections",
+          "url": "https://koacolorado.iheart.com/content/2026-08-18-trump-admin-wins-court-battle-to-end-ethiopian-deportation-protections/",
+          "domain": "koacolorado.iheart.com",
+          "seendate": "2026-08-18T23:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6813aaef0650b7facb269100?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Trump Admin Wins Court Battle To End Ethiopian Deportation Protections",
+          "url": "https://kste.iheart.com/content/2026-08-18-trump-admin-wins-court-battle-to-end-ethiopian-deportation-protections/",
+          "domain": "kste.iheart.com",
+          "seendate": "2026-08-18T23:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6813aaef0650b7facb269100?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Trump Admin Wins Court Battle To End Ethiopian Deportation Protections",
+          "url": "https://talk1200boston.iheart.com/content/2026-08-18-trump-admin-wins-court-battle-to-end-ethiopian-deportation-protections/",
+          "domain": "talk1200boston.iheart.com",
+          "seendate": "2026-08-18T23:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6813aaef0650b7facb269100?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        }
+      ]
+    },
+    "title": "Trump Admin Wins Court Battle To End Ethiopian Deportation Protections",
+    "summary": "2026-08-18 koacolorado.iheart.com: Trump Admin Wins Court Battle To End Ethiopian Deportation Protections\n2026-08-18 kste.iheart.com: Trump Admin Wins Court Battle To End Ethiopian Deportation Protections\n2026-08-18 talk1200boston.iheart.com: Trump Admin Wins Court Battle To End Ethiopian Deportation Protections",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_ballroom-defends-donor",
+    "source": "news",
+    "ts": 1787306194966,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.222,
       "articles": [
         {
           "title": "Trump defends White House ballroom , pledges donor list",
