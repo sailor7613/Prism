@@ -1,11 +1,11 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-22T01:55:10.968Z · 29 legislative + 4 news (GDELT, 3d)
+// 2026-08-22T04:01:40.547Z · 29 legislative + 4 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1787363665162,
+    "ts": 1787371233324,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
@@ -259,11 +259,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1787363665161,
+    "ts": 1787371233323,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.698,
+      "salience": 0.697,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1787363665161,
+    "ts": 1787371233323,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.669,
+      "salience": 0.668,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -2843,7 +2843,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1787363665161,
+    "ts": 1787371233324,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
@@ -3118,7 +3118,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1787363665161,
+    "ts": 1787371233323,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
@@ -4520,7 +4520,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1787363665161,
+    "ts": 1787371233324,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
@@ -4794,7 +4794,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1787363665161,
+    "ts": 1787371233324,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
@@ -5065,7 +5065,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1787363665160,
+    "ts": 1787371233322,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
@@ -6467,7 +6467,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1787363665160,
+    "ts": 1787371233322,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
@@ -7869,7 +7869,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1787363665162,
+    "ts": 1787371233324,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
@@ -8396,7 +8396,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1787363665161,
+    "ts": 1787371233323,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
@@ -9330,7 +9330,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1787363665161,
+    "ts": 1787371233324,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
@@ -9606,11 +9606,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1787363665160,
+    "ts": 1787371233322,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
-      "salience": 0.503,
+      "salience": 0.502,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2913",
       "votes": [
         {
@@ -10538,7 +10538,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1787363665162,
+    "ts": 1787371233324,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
@@ -10814,11 +10814,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1787363665161,
+    "ts": 1787371233323,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
-      "salience": 0.5,
+      "salience": 0.499,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8312",
       "votes": [
         {
@@ -11747,7 +11747,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1787363665161,
+    "ts": 1787371233323,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
@@ -12680,7 +12680,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1787363665162,
+    "ts": 1787371233324,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
@@ -13072,7 +13072,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1787363665161,
+    "ts": 1787371233323,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
@@ -14475,7 +14475,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1787363665162,
+    "ts": 1787371233324,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
@@ -15368,7 +15368,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1787363665162,
+    "ts": 1787371233324,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
@@ -16283,7 +16283,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1787363665162,
+    "ts": 1787371233324,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
@@ -17171,7 +17171,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1787363665161,
+    "ts": 1787371233323,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
@@ -18092,11 +18092,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1787363665161,
+    "ts": 1787371233323,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.275,
+      "salience": 0.274,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -19010,11 +19010,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1787363665161,
+    "ts": 1787371233323,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.215,
+      "salience": 0.214,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -19909,7 +19909,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1787363665160,
+    "ts": 1787371233322,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
@@ -20843,11 +20843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1787363665160,
+    "ts": 1787371233322,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
-      "salience": 0.112,
+      "salience": 0.111,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/254",
       "votes": [
         {
@@ -21772,7 +21772,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1787363665160,
+    "ts": 1787371233322,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
@@ -22681,11 +22681,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1787363665160,
+    "ts": 1787371233323,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
-      "salience": 0.104,
+      "salience": 0.103,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8466",
       "votes": [
         {
@@ -23556,11 +23556,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1787363665161,
+    "ts": 1787371233323,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
-      "salience": 0.104,
+      "salience": 0.103,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8428",
       "votes": [
         {
@@ -24438,14 +24438,120 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_ballroom-chief-clears",
+    "cid": "cand_news_ballroom-court-supreme",
     "source": "news",
-    "ts": 1787363710952,
+    "ts": 1787371300539,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.991,
+      "salience": 0.995,
+      "articles": [
+        {
+          "title": "Supreme Court chief justice allows work on Trump $400M White House ballroom to continue for now | US and World News",
+          "url": "https://www.wfmz.com/news/us/supreme-courts-chief-justice-allows-work-on-trump-s-400m-white-house-ballroom-to-continue/article_a7a9ce63-9218-5f61-87e4-51976e84703d.html",
+          "domain": "wfmz.com",
+          "seendate": "2026-08-22T03:15:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/wfmz.com/content/tncms/assets/v3/editorial/9/2f/92fcff60-bc54-54b7-ae28-bf43664a7af2/6a75f16d00c30.image.jpg?crop=1763%2C926%2C0%2C125"
+        },
+        {
+          "title": "Supreme Court chief justice allows work on Trump $400M White House ballroom to continue for now",
+          "url": "https://www.boston.com/news/national-news/2026/08/21/supreme-courts-chief-justice-allows-work-on-trumps-400m-white-house-ballroom-to-continue-for-now/",
+          "domain": "boston.com",
+          "seendate": "2026-08-22T02:30:00Z",
+          "image": "https://bdc2020.o0bc.com/wp-content/uploads/2026/08/AP26217654784670-6a88e01a38cf1-768x432.jpg"
+        },
+        {
+          "title": "Supreme Court allows Trump ballroom construction to continue for now",
+          "url": "https://www.tpr.org/news/2026-08-21/supreme-court-allows-trumps-ballroom-construction-to-continue-for-now",
+          "domain": "tpr.org",
+          "seendate": "2026-08-22T00:30:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/03/39/baf95df7468a886395b307e66136/gettyimages-2242668198.jpg"
+        },
+        {
+          "title": "Supreme Court allows Trump ballroom construction to continue for now",
+          "url": "https://www.houstonpublicmedia.org/npr/2026/08/21/nx-s1-5935417/supreme-court-allows-trumps-ballroom-construction-to-continue-for-now/",
+          "domain": "houstonpublicmedia.org",
+          "seendate": "2026-08-22T00:00:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/03/39/baf95df7468a886395b307e66136/gettyimages-2242668198.jpg"
+        },
+        {
+          "title": "Supreme Court allows Trump ballroom construction to continue for now",
+          "url": "https://www.southcarolinapublicradio.org/news/2026-08-21/supreme-court-allows-trumps-ballroom-construction-to-continue-for-now",
+          "domain": "southcarolinapublicradio.org",
+          "seendate": "2026-08-22T00:00:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/03/39/baf95df7468a886395b307e66136/gettyimages-2242668198.jpg"
+        },
+        {
+          "title": "Supreme Court allows Trump ballroom construction to continue for now",
+          "url": "https://www.wxpr.org/2026-08-21/supreme-court-allows-trumps-ballroom-construction-to-continue-for-now",
+          "domain": "wxpr.org",
+          "seendate": "2026-08-22T00:00:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/03/39/baf95df7468a886395b307e66136/gettyimages-2242668198.jpg"
+        },
+        {
+          "title": "Supreme Court allows Trump ballroom construction to continue for now",
+          "url": "https://www.wcsufm.org/latest-from-npr/2026-08-21/supreme-court-allows-trumps-ballroom-construction-to-continue-for-now",
+          "domain": "wcsufm.org",
+          "seendate": "2026-08-22T00:00:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/03/39/baf95df7468a886395b307e66136/gettyimages-2242668198.jpg"
+        },
+        {
+          "title": "Supreme Court Lets White House Ballroom Project Move Forward For Now",
+          "url": "https://wlac.iheart.com/content/2026-08-21-supreme-court-lets-white-house-ballroom-project-move-forward-for-now/",
+          "domain": "wlac.iheart.com",
+          "seendate": "2026-08-21T23:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a8899778b781055d9f2e811?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Supreme Court Lets White House Ballroom Project Move Forward For Now | News Radio 1410 AM & 100 . 9 FM",
+          "url": "https://newsradio1410.iheart.com/content/2026-08-21-supreme-court-lets-white-house-ballroom-project-move-forward-for-now/",
+          "domain": "newsradio1410.iheart.com",
+          "seendate": "2026-08-21T23:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a8899778b781055d9f2e811?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Supreme Court Lets White House Ballroom Project Move Forward For Now",
+          "url": "https://knst.iheart.com/content/2026-08-21-supreme-court-lets-white-house-ballroom-project-move-forward-for-now/",
+          "domain": "knst.iheart.com",
+          "seendate": "2026-08-21T23:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a8899778b781055d9f2e811?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Supreme Court Lets White House Ballroom Project Move Forward For Now | Talk Radio 105 . 9",
+          "url": "https://knrs.iheart.com/content/2026-08-21-supreme-court-lets-white-house-ballroom-project-move-forward-for-now/",
+          "domain": "knrs.iheart.com",
+          "seendate": "2026-08-21T23:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a8899778b781055d9f2e811?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Supreme Court Lets White House Ballroom Project Move Forward For Now",
+          "url": "https://570wkbn.iheart.com/content/2026-08-21-supreme-court-lets-white-house-ballroom-project-move-forward-for-now/",
+          "domain": "570wkbn.iheart.com",
+          "seendate": "2026-08-21T23:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a8899778b781055d9f2e811?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        }
+      ]
+    },
+    "title": "Supreme Court Lets White House Ballroom Project Move Forward For Now",
+    "summary": "2026-08-22 wfmz.com: Supreme Court chief justice allows work on Trump $400M White House ballroom to continue for now | US and World News\n2026-08-22 boston.com: Supreme Court chief justice allows work on Trump $400M White House ballroom to continue for now\n2026-08-22 tpr.org: Supreme Court allows Trump ballroom construction to continue for now\n2026-08-22 houstonpublicmedia.org: Supreme Court allows Trump ballroom construction to continue for now\n2026-08-22 southcarolinapublicradio.org: Supreme Court allows Trump ballroom construction to continue for now\n2026-08-22 wxpr.org: Supreme Court allows Trump ballroom construction to continue for now",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_ballroom-chief-clears",
+    "source": "news",
+    "ts": 1787371300531,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.978,
       "articles": [
         {
           "title": "Chief justice temporarily clears way for White House ballroom construction",
@@ -24544,120 +24650,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_ballroom-court-supreme",
-    "source": "news",
-    "ts": 1787363710959,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.991,
-      "articles": [
-        {
-          "title": "Supreme Court allows Trump ballroom construction to continue for now",
-          "url": "https://www.tpr.org/news/2026-08-21/supreme-court-allows-trumps-ballroom-construction-to-continue-for-now",
-          "domain": "tpr.org",
-          "seendate": "2026-08-22T00:30:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/03/39/baf95df7468a886395b307e66136/gettyimages-2242668198.jpg"
-        },
-        {
-          "title": "Supreme Court allows Trump ballroom construction to continue for now",
-          "url": "https://www.houstonpublicmedia.org/npr/2026/08/21/nx-s1-5935417/supreme-court-allows-trumps-ballroom-construction-to-continue-for-now/",
-          "domain": "houstonpublicmedia.org",
-          "seendate": "2026-08-22T00:00:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/03/39/baf95df7468a886395b307e66136/gettyimages-2242668198.jpg"
-        },
-        {
-          "title": "Supreme Court allows Trump ballroom construction to continue for now",
-          "url": "https://www.southcarolinapublicradio.org/news/2026-08-21/supreme-court-allows-trumps-ballroom-construction-to-continue-for-now",
-          "domain": "southcarolinapublicradio.org",
-          "seendate": "2026-08-22T00:00:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/03/39/baf95df7468a886395b307e66136/gettyimages-2242668198.jpg"
-        },
-        {
-          "title": "Supreme Court allows Trump ballroom construction to continue for now",
-          "url": "https://www.wxpr.org/2026-08-21/supreme-court-allows-trumps-ballroom-construction-to-continue-for-now",
-          "domain": "wxpr.org",
-          "seendate": "2026-08-22T00:00:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/03/39/baf95df7468a886395b307e66136/gettyimages-2242668198.jpg"
-        },
-        {
-          "title": "Supreme Court allows Trump ballroom construction to continue for now",
-          "url": "https://www.wcsufm.org/latest-from-npr/2026-08-21/supreme-court-allows-trumps-ballroom-construction-to-continue-for-now",
-          "domain": "wcsufm.org",
-          "seendate": "2026-08-22T00:00:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/03/39/baf95df7468a886395b307e66136/gettyimages-2242668198.jpg"
-        },
-        {
-          "title": "Supreme Court Lets White House Ballroom Project Move Forward For Now",
-          "url": "https://wlac.iheart.com/content/2026-08-21-supreme-court-lets-white-house-ballroom-project-move-forward-for-now/",
-          "domain": "wlac.iheart.com",
-          "seendate": "2026-08-21T23:45:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a8899778b781055d9f2e811?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Supreme Court Lets White House Ballroom Project Move Forward For Now | News Radio 1410 AM & 100 . 9 FM",
-          "url": "https://newsradio1410.iheart.com/content/2026-08-21-supreme-court-lets-white-house-ballroom-project-move-forward-for-now/",
-          "domain": "newsradio1410.iheart.com",
-          "seendate": "2026-08-21T23:45:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a8899778b781055d9f2e811?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Supreme Court Lets White House Ballroom Project Move Forward For Now",
-          "url": "https://knst.iheart.com/content/2026-08-21-supreme-court-lets-white-house-ballroom-project-move-forward-for-now/",
-          "domain": "knst.iheart.com",
-          "seendate": "2026-08-21T23:45:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a8899778b781055d9f2e811?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Supreme Court Lets White House Ballroom Project Move Forward For Now | Talk Radio 105 . 9",
-          "url": "https://knrs.iheart.com/content/2026-08-21-supreme-court-lets-white-house-ballroom-project-move-forward-for-now/",
-          "domain": "knrs.iheart.com",
-          "seendate": "2026-08-21T23:45:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a8899778b781055d9f2e811?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Supreme Court Lets White House Ballroom Project Move Forward For Now",
-          "url": "https://570wkbn.iheart.com/content/2026-08-21-supreme-court-lets-white-house-ballroom-project-move-forward-for-now/",
-          "domain": "570wkbn.iheart.com",
-          "seendate": "2026-08-21T23:45:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a8899778b781055d9f2e811?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Supreme Court allows Trump ballroom construction to continue for now",
-          "url": "https://www.kvpr.org/npr-news/2026-08-21/supreme-court-allows-trumps-ballroom-construction-to-continue-for-now",
-          "domain": "kvpr.org",
-          "seendate": "2026-08-21T23:45:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/03/39/baf95df7468a886395b307e66136/gettyimages-2242668198.jpg"
-        },
-        {
-          "title": "Supreme Court allows Trump ballroom construction to continue for now",
-          "url": "https://www.wbaa.org/npr-news/2026-08-21/supreme-court-allows-trumps-ballroom-construction-to-continue-for-now",
-          "domain": "wbaa.org",
-          "seendate": "2026-08-21T23:45:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/03/39/baf95df7468a886395b307e66136/gettyimages-2242668198.jpg"
-        }
-      ]
-    },
-    "title": "Supreme Court Lets White House Ballroom Project Move Forward For Now",
-    "summary": "2026-08-22 tpr.org: Supreme Court allows Trump ballroom construction to continue for now\n2026-08-22 houstonpublicmedia.org: Supreme Court allows Trump ballroom construction to continue for now\n2026-08-22 southcarolinapublicradio.org: Supreme Court allows Trump ballroom construction to continue for now\n2026-08-22 wxpr.org: Supreme Court allows Trump ballroom construction to continue for now\n2026-08-22 wcsufm.org: Supreme Court allows Trump ballroom construction to continue for now\n2026-08-21 wlac.iheart.com: Supreme Court Lets White House Ballroom Project Move Forward For Now",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_construction-house-issues",
     "source": "news",
-    "ts": 1787363710960,
+    "ts": 1787371300539,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.669,
+      "salience": 0.656,
       "articles": [
         {
           "title": "Trump Updates On White House Construction Amid Legal Issues",
@@ -24758,12 +24758,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_400m-allows-ballroom",
     "source": "news",
-    "ts": 1787363710960,
+    "ts": 1787371300539,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.586,
+      "salience": 0.573,
       "articles": [
         {
           "title": "John Roberts allows work on Trump $400M ballroom to continue for now",
