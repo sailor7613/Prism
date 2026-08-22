@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-22T15:41:20.811Z · 29 legislative + 4 news (GDELT, 3d)
+// 2026-08-22T18:54:03.279Z · 29 legislative + 4 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1787413240759,
+    "ts": 1787424791937,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.704,
+      "salience": 0.703,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,11 +259,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1787413240759,
+    "ts": 1787424791937,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.695,
+      "salience": 0.694,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1787413240759,
+    "ts": 1787424791936,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.666,
+      "salience": 0.665,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1787413240759,
+    "ts": 1787424791937,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.613,
+      "salience": 0.612,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3118,11 +3118,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1787413240759,
+    "ts": 1787424791937,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.594,
+      "salience": 0.593,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4520,11 +4520,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1787413240759,
+    "ts": 1787424791937,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
-      "salience": 0.594,
+      "salience": 0.593,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
       "votes": [
         {
@@ -4794,11 +4794,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1787413240759,
+    "ts": 1787424791937,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.58,
+      "salience": 0.579,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5065,11 +5065,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1787413240758,
+    "ts": 1787424791936,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.569,
+      "salience": 0.568,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6467,7 +6467,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1787413240758,
+    "ts": 1787424791936,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
@@ -7869,11 +7869,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1787413240760,
+    "ts": 1787424791937,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.558,
+      "salience": 0.557,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -8396,11 +8396,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1787413240759,
+    "ts": 1787424791936,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.517,
+      "salience": 0.516,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -9330,11 +9330,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1787413240759,
+    "ts": 1787424791937,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.516,
+      "salience": 0.515,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -9606,7 +9606,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1787413240758,
+    "ts": 1787424791936,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
@@ -10538,11 +10538,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1787413240759,
+    "ts": 1787424791937,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.5,
+      "salience": 0.499,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -10814,7 +10814,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1787413240759,
+    "ts": 1787424791937,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
@@ -11747,11 +11747,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1787413240759,
+    "ts": 1787424791937,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.478,
+      "salience": 0.477,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -12680,11 +12680,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1787413240760,
+    "ts": 1787424791937,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.467,
+      "salience": 0.466,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -13072,11 +13072,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1787413240759,
+    "ts": 1787424791937,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.359,
+      "salience": 0.358,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -14475,7 +14475,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1787413240759,
+    "ts": 1787424791937,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
@@ -15368,11 +15368,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1787413240760,
+    "ts": 1787424791937,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.295,
+      "salience": 0.294,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -16283,11 +16283,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1787413240759,
+    "ts": 1787424791937,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.288,
+      "salience": 0.287,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -17171,7 +17171,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1787413240759,
+    "ts": 1787424791937,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
@@ -18092,7 +18092,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1787413240759,
+    "ts": 1787424791937,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
@@ -19010,11 +19010,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1787413240759,
+    "ts": 1787424791937,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.212,
+      "salience": 0.211,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -19909,7 +19909,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1787413240758,
+    "ts": 1787424791936,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
@@ -20843,7 +20843,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1787413240758,
+    "ts": 1787424791936,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
@@ -21772,11 +21772,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1787413240758,
+    "ts": 1787424791936,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
-      "salience": 0.107,
+      "salience": 0.106,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7618",
       "votes": [
         {
@@ -22681,7 +22681,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1787413240758,
+    "ts": 1787424791936,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
@@ -23556,7 +23556,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1787413240758,
+    "ts": 1787424791936,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
@@ -24438,14 +24438,120 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_ballroom-court-supreme",
+    "cid": "cand_news_ballroom-chief-clears",
     "source": "news",
-    "ts": 1787413280805,
+    "ts": 1787424843269,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.929,
+      "salience": 0.994,
+      "articles": [
+        {
+          "title": "Chief justice temporarily clears way for White House ballroom construction",
+          "url": "https://ktvl.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
+          "domain": "ktvl.com",
+          "seendate": "2026-08-22T18:00:00Z",
+          "image": null
+        },
+        {
+          "title": "Chief justice temporarily clears way for White House ballroom construction",
+          "url": "https://cbs4local.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
+          "domain": "cbs4local.com",
+          "seendate": "2026-08-22T00:30:00Z",
+          "image": null
+        },
+        {
+          "title": "Chief justice temporarily clears way for White House ballroom construction",
+          "url": "https://kfoxtv.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
+          "domain": "kfoxtv.com",
+          "seendate": "2026-08-22T00:15:00Z",
+          "image": null
+        },
+        {
+          "title": "Chief justice temporarily clears way for White House ballroom construction",
+          "url": "https://wlos.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
+          "domain": "wlos.com",
+          "seendate": "2026-08-22T00:00:00Z",
+          "image": null
+        },
+        {
+          "title": "Chief justice temporarily clears way for White House ballroom construction",
+          "url": "https://fox11online.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
+          "domain": "fox11online.com",
+          "seendate": "2026-08-22T00:00:00Z",
+          "image": null
+        },
+        {
+          "title": "Chief justice temporarily clears way for White House ballroom construction",
+          "url": "https://ktxs.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
+          "domain": "ktxs.com",
+          "seendate": "2026-08-22T00:00:00Z",
+          "image": null
+        },
+        {
+          "title": "Chief justice temporarily clears way for White House ballroom construction",
+          "url": "https://mynews4.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
+          "domain": "mynews4.com",
+          "seendate": "2026-08-22T00:00:00Z",
+          "image": null
+        },
+        {
+          "title": "Chief justice temporarily clears way for White House ballroom construction",
+          "url": "https://abc3340.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
+          "domain": "abc3340.com",
+          "seendate": "2026-08-22T00:00:00Z",
+          "image": null
+        },
+        {
+          "title": "Chief justice temporarily clears way for White House ballroom construction",
+          "url": "https://komonews.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
+          "domain": "komonews.com",
+          "seendate": "2026-08-21T23:45:00Z",
+          "image": null
+        },
+        {
+          "title": "Chief justice temporarily clears way for White House ballroom construction",
+          "url": "https://cnycentral.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
+          "domain": "cnycentral.com",
+          "seendate": "2026-08-21T23:45:00Z",
+          "image": null
+        },
+        {
+          "title": "Chief justice temporarily clears way for White House ballroom construction",
+          "url": "https://fox23maine.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
+          "domain": "fox23maine.com",
+          "seendate": "2026-08-21T23:45:00Z",
+          "image": null
+        },
+        {
+          "title": "Chief justice temporarily clears way for White House ballroom construction",
+          "url": "https://cbs2iowa.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
+          "domain": "cbs2iowa.com",
+          "seendate": "2026-08-21T23:45:00Z",
+          "image": null
+        }
+      ]
+    },
+    "title": "Chief justice temporarily clears way for White House ballroom construction",
+    "summary": "2026-08-22 ktvl.com: Chief justice temporarily clears way for White House ballroom construction\n2026-08-22 cbs4local.com: Chief justice temporarily clears way for White House ballroom construction\n2026-08-22 kfoxtv.com: Chief justice temporarily clears way for White House ballroom construction\n2026-08-22 wlos.com: Chief justice temporarily clears way for White House ballroom construction\n2026-08-22 fox11online.com: Chief justice temporarily clears way for White House ballroom construction\n2026-08-22 ktxs.com: Chief justice temporarily clears way for White House ballroom construction",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_ballroom-court-supreme",
+    "source": "news",
+    "ts": 1787424843274,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.908,
       "articles": [
         {
           "title": "Supreme Court weighs whether Trump can continue building White House ballroom",
@@ -24544,226 +24650,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_ballroom-chief-clears",
-    "source": "news",
-    "ts": 1787413280800,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.905,
-      "articles": [
-        {
-          "title": "Chief justice temporarily clears way for White House ballroom construction",
-          "url": "https://cbs4local.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
-          "domain": "cbs4local.com",
-          "seendate": "2026-08-22T00:30:00Z",
-          "image": null
-        },
-        {
-          "title": "Chief justice temporarily clears way for White House ballroom construction",
-          "url": "https://kfoxtv.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
-          "domain": "kfoxtv.com",
-          "seendate": "2026-08-22T00:15:00Z",
-          "image": null
-        },
-        {
-          "title": "Chief justice temporarily clears way for White House ballroom construction",
-          "url": "https://wlos.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
-          "domain": "wlos.com",
-          "seendate": "2026-08-22T00:00:00Z",
-          "image": null
-        },
-        {
-          "title": "Chief justice temporarily clears way for White House ballroom construction",
-          "url": "https://fox11online.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
-          "domain": "fox11online.com",
-          "seendate": "2026-08-22T00:00:00Z",
-          "image": null
-        },
-        {
-          "title": "Chief justice temporarily clears way for White House ballroom construction",
-          "url": "https://ktxs.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
-          "domain": "ktxs.com",
-          "seendate": "2026-08-22T00:00:00Z",
-          "image": null
-        },
-        {
-          "title": "Chief justice temporarily clears way for White House ballroom construction",
-          "url": "https://mynews4.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
-          "domain": "mynews4.com",
-          "seendate": "2026-08-22T00:00:00Z",
-          "image": null
-        },
-        {
-          "title": "Chief justice temporarily clears way for White House ballroom construction",
-          "url": "https://abc3340.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
-          "domain": "abc3340.com",
-          "seendate": "2026-08-22T00:00:00Z",
-          "image": null
-        },
-        {
-          "title": "Chief justice temporarily clears way for White House ballroom construction",
-          "url": "https://komonews.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
-          "domain": "komonews.com",
-          "seendate": "2026-08-21T23:45:00Z",
-          "image": null
-        },
-        {
-          "title": "Chief justice temporarily clears way for White House ballroom construction",
-          "url": "https://cnycentral.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
-          "domain": "cnycentral.com",
-          "seendate": "2026-08-21T23:45:00Z",
-          "image": null
-        },
-        {
-          "title": "Chief justice temporarily clears way for White House ballroom construction",
-          "url": "https://fox23maine.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
-          "domain": "fox23maine.com",
-          "seendate": "2026-08-21T23:45:00Z",
-          "image": null
-        },
-        {
-          "title": "Chief justice temporarily clears way for White House ballroom construction",
-          "url": "https://cbs2iowa.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
-          "domain": "cbs2iowa.com",
-          "seendate": "2026-08-21T23:45:00Z",
-          "image": null
-        },
-        {
-          "title": "Chief justice temporarily clears way for White House ballroom construction",
-          "url": "https://turnto10.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
-          "domain": "turnto10.com",
-          "seendate": "2026-08-21T23:30:00Z",
-          "image": null
-        }
-      ]
-    },
-    "title": "Chief justice temporarily clears way for White House ballroom construction",
-    "summary": "2026-08-22 cbs4local.com: Chief justice temporarily clears way for White House ballroom construction\n2026-08-22 kfoxtv.com: Chief justice temporarily clears way for White House ballroom construction\n2026-08-22 wlos.com: Chief justice temporarily clears way for White House ballroom construction\n2026-08-22 fox11online.com: Chief justice temporarily clears way for White House ballroom construction\n2026-08-22 ktxs.com: Chief justice temporarily clears way for White House ballroom construction\n2026-08-22 mynews4.com: Chief justice temporarily clears way for White House ballroom construction",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_construction-house-issues",
-    "source": "news",
-    "ts": 1787413280805,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.583,
-      "articles": [
-        {
-          "title": "Trump Updates On White House Construction Amid Legal Issues",
-          "url": "https://kfyi.iheart.com/content/2026-08-19-trump-updates-on-white-house-construction-amid-legal-issues/",
-          "domain": "kfyi.iheart.com",
-          "seendate": "2026-08-19T21:00:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a85d1bec977079c89a4fbc9?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Trump Updates On White House Construction Amid Legal Issues",
-          "url": "https://1190talkradio.iheart.com/content/2026-08-19-trump-updates-on-white-house-construction-amid-legal-issues/",
-          "domain": "1190talkradio.iheart.com",
-          "seendate": "2026-08-19T20:45:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a85d1bec977079c89a4fbc9?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Trump Updates On White House Construction Amid Legal Issues",
-          "url": "https://kfbk.iheart.com/content/2026-08-19-trump-updates-on-white-house-construction-amid-legal-issues/",
-          "domain": "kfbk.iheart.com",
-          "seendate": "2026-08-19T19:00:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a85d1bec977079c89a4fbc9?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Trump Updates On White House Construction Amid Legal Issues",
-          "url": "https://hallelujah955.iheart.com/content/2026-08-19-trump-updates-on-white-house-construction-amid-legal-issues/",
-          "domain": "hallelujah955.iheart.com",
-          "seendate": "2026-08-19T18:00:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a85d1bec977079c89a4fbc9?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Trump Updates On White House Construction Amid Legal Issues",
-          "url": "https://600wrec.iheart.com/content/2026-08-19-trump-updates-on-white-house-construction-amid-legal-issues/",
-          "domain": "600wrec.iheart.com",
-          "seendate": "2026-08-19T18:00:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a85d1bec977079c89a4fbc9?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Trump Updates On White House Construction Amid Legal Issues",
-          "url": "https://koacolorado.iheart.com/content/2026-08-19-trump-updates-on-white-house-construction-amid-legal-issues/",
-          "domain": "koacolorado.iheart.com",
-          "seendate": "2026-08-19T18:00:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a85d1bec977079c89a4fbc9?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Trump Updates On White House Construction Amid Legal Issues",
-          "url": "https://veropatriot.iheart.com/content/2026-08-19-trump-updates-on-white-house-construction-amid-legal-issues/",
-          "domain": "veropatriot.iheart.com",
-          "seendate": "2026-08-19T17:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a85d1bec977079c89a4fbc9?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Trump Updates On White House Construction Amid Legal Issues",
-          "url": "https://whoradio.iheart.com/content/2026-08-19-trump-updates-on-white-house-construction-amid-legal-issues/",
-          "domain": "whoradio.iheart.com",
-          "seendate": "2026-08-19T17:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a85d1bec977079c89a4fbc9?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Trump Updates On White House Construction Amid Legal Issues",
-          "url": "https://wjdx.iheart.com/content/2026-08-19-trump-updates-on-white-house-construction-amid-legal-issues/",
-          "domain": "wjdx.iheart.com",
-          "seendate": "2026-08-19T17:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a85d1bec977079c89a4fbc9?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Trump Updates On White House Construction Amid Legal Issues",
-          "url": "https://kprcradio.iheart.com/content/2026-08-19-trump-updates-on-white-house-construction-amid-legal-issues/",
-          "domain": "kprcradio.iheart.com",
-          "seendate": "2026-08-19T17:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a85d1bec977079c89a4fbc9?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Trump Updates On White House Construction Amid Legal Issues",
-          "url": "https://wsfcam.iheart.com/content/2026-08-19-trump-updates-on-white-house-construction-amid-legal-issues/",
-          "domain": "wsfcam.iheart.com",
-          "seendate": "2026-08-19T17:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a85d1bec977079c89a4fbc9?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Trump Updates On White House Construction Amid Legal Issues",
-          "url": "https://wlap.iheart.com/content/2026-08-19-trump-updates-on-white-house-construction-amid-legal-issues/",
-          "domain": "wlap.iheart.com",
-          "seendate": "2026-08-19T17:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a85d1bec977079c89a4fbc9?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        }
-      ]
-    },
-    "title": "Trump Updates On White House Construction Amid Legal Issues",
-    "summary": "2026-08-19 kfyi.iheart.com: Trump Updates On White House Construction Amid Legal Issues\n2026-08-19 1190talkradio.iheart.com: Trump Updates On White House Construction Amid Legal Issues\n2026-08-19 kfbk.iheart.com: Trump Updates On White House Construction Amid Legal Issues\n2026-08-19 hallelujah955.iheart.com: Trump Updates On White House Construction Amid Legal Issues\n2026-08-19 600wrec.iheart.com: Trump Updates On White House Construction Amid Legal Issues\n2026-08-19 koacolorado.iheart.com: Trump Updates On White House Construction Amid Legal Issues",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_400m-allows-ballroom",
     "source": "news",
-    "ts": 1787413280806,
+    "ts": 1787424843274,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.5,
+      "salience": 0.48,
       "articles": [
         {
           "title": "John Roberts allows work on Trump $400M ballroom to continue for now",
@@ -24790,6 +24684,49 @@ window.PRISM_CANDIDATES = [
     },
     "title": "John Roberts allows work on Trump $400M ballroom to continue for now",
     "summary": "2026-08-21 bostonherald.com: John Roberts allows work on Trump $400M ballroom to continue for now\n2026-08-21 sun-sentinel.com: John Roberts allows work on Trump $400M ballroom to continue for now\n2026-08-21 courant.com: John Roberts allows work on Trump $400M ballroom to continue for now",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_construction-house-issues",
+    "source": "news",
+    "ts": 1787424843274,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.178,
+      "articles": [
+        {
+          "title": "Trump Updates On White House Construction Amid Legal Issues",
+          "url": "https://kfyi.iheart.com/content/2026-08-19-trump-updates-on-white-house-construction-amid-legal-issues/",
+          "domain": "kfyi.iheart.com",
+          "seendate": "2026-08-19T21:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a85d1bec977079c89a4fbc9?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Trump Updates On White House Construction Amid Legal Issues",
+          "url": "https://1190talkradio.iheart.com/content/2026-08-19-trump-updates-on-white-house-construction-amid-legal-issues/",
+          "domain": "1190talkradio.iheart.com",
+          "seendate": "2026-08-19T20:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a85d1bec977079c89a4fbc9?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Trump Updates On White House Construction Amid Legal Issues",
+          "url": "https://kfbk.iheart.com/content/2026-08-19-trump-updates-on-white-house-construction-amid-legal-issues/",
+          "domain": "kfbk.iheart.com",
+          "seendate": "2026-08-19T19:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a85d1bec977079c89a4fbc9?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        }
+      ]
+    },
+    "title": "Trump Updates On White House Construction Amid Legal Issues",
+    "summary": "2026-08-19 kfyi.iheart.com: Trump Updates On White House Construction Amid Legal Issues\n2026-08-19 1190talkradio.iheart.com: Trump Updates On White House Construction Amid Legal Issues\n2026-08-19 kfbk.iheart.com: Trump Updates On White House Construction Amid Legal Issues",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
