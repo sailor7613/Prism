@@ -1,11 +1,11 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-24T13:26:13.181Z · 29 legislative + 3 news (GDELT, 3d)
+// 2026-08-24T16:00:23.372Z · 29 legislative + 3 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1787577958579,
+    "ts": 1787587202902,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
@@ -259,11 +259,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1787577958578,
+    "ts": 1787587202902,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.687,
+      "salience": 0.686,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -532,7 +532,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1787577958578,
+    "ts": 1787587202901,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
@@ -2843,7 +2843,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1787577958578,
+    "ts": 1787587202902,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
@@ -3118,7 +3118,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1787577958578,
+    "ts": 1787587202901,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
@@ -4520,7 +4520,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1787577958578,
+    "ts": 1787587202902,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
@@ -4794,7 +4794,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1787577958578,
+    "ts": 1787587202902,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
@@ -5065,7 +5065,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1787577958577,
+    "ts": 1787587202901,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
@@ -6467,11 +6467,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1787577958577,
+    "ts": 1787587202901,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.555,
+      "salience": 0.554,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -7869,7 +7869,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1787577958579,
+    "ts": 1787587202902,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
@@ -8396,7 +8396,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1787577958578,
+    "ts": 1787587202901,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
@@ -9330,7 +9330,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1787577958578,
+    "ts": 1787587202902,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
@@ -9606,11 +9606,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1787577958577,
+    "ts": 1787587202901,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
-      "salience": 0.492,
+      "salience": 0.491,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2913",
       "votes": [
         {
@@ -10538,7 +10538,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1787577958578,
+    "ts": 1787587202902,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
@@ -10814,11 +10814,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1787577958578,
+    "ts": 1787587202901,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
-      "salience": 0.489,
+      "salience": 0.488,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8312",
       "votes": [
         {
@@ -11747,7 +11747,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1787577958578,
+    "ts": 1787587202901,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
@@ -12680,7 +12680,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1787577958579,
+    "ts": 1787587202902,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
@@ -13072,7 +13072,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1787577958578,
+    "ts": 1787587202902,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
@@ -14475,11 +14475,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1787577958579,
+    "ts": 1787587202902,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.293,
+      "salience": 0.292,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -15368,7 +15368,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1787577958579,
+    "ts": 1787587202902,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
@@ -16283,7 +16283,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1787577958579,
+    "ts": 1787587202902,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
@@ -17171,11 +17171,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1787577958578,
+    "ts": 1787587202902,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.275,
+      "salience": 0.274,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -18092,11 +18092,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1787577958578,
+    "ts": 1787587202902,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.264,
+      "salience": 0.263,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -19010,11 +19010,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1787577958578,
+    "ts": 1787587202901,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.204,
+      "salience": 0.203,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -19909,11 +19909,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1787577958577,
+    "ts": 1787587202900,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.175,
+      "salience": 0.174,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -20843,11 +20843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1787577958577,
+    "ts": 1787587202900,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
-      "salience": 0.101,
+      "salience": 0.1,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/254",
       "votes": [
         {
@@ -21772,7 +21772,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1787577958577,
+    "ts": 1787587202900,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
@@ -22681,11 +22681,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1787577958577,
+    "ts": 1787587202901,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
-      "salience": 0.093,
+      "salience": 0.092,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8466",
       "votes": [
         {
@@ -23556,11 +23556,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1787577958577,
+    "ts": 1787587202901,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
-      "salience": 0.093,
+      "salience": 0.092,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8428",
       "votes": [
         {
@@ -24440,12 +24440,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballroom-court-supreme",
     "source": "news",
-    "ts": 1787577973173,
+    "ts": 1787587223365,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.761,
+      "salience": 0.745,
       "articles": [
         {
           "title": "Supreme Court allows Trump White House ballroom construction to continue for now",
@@ -24546,12 +24546,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballroom-chief-clears",
     "source": "news",
-    "ts": 1787577973166,
+    "ts": 1787587223359,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.729,
+      "salience": 0.712,
       "articles": [
         {
           "title": "Chief justice temporarily clears way for White House ballroom construction",
@@ -24652,12 +24652,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_400m-allows-ballroom",
     "source": "news",
-    "ts": 1787577973173,
+    "ts": 1787587223365,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.214,
+      "salience": 0.198,
       "articles": [
         {
           "title": "John Roberts allows work on Trump $400M ballroom to continue for now",
