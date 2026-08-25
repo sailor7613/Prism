@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-24T21:49:35.634Z · 29 legislative + 6 news (GDELT, 3d)
+// 2026-08-25T01:56:31.017Z · 29 legislative + 8 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1787608123887,
+    "ts": 1787622977187,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.694,
+      "salience": 0.693,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,11 +259,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1787608123887,
+    "ts": 1787622977186,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.685,
+      "salience": 0.684,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1787608123886,
+    "ts": 1787622977186,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.656,
+      "salience": 0.655,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1787608123887,
+    "ts": 1787622977186,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.603,
+      "salience": 0.602,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3118,11 +3118,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1787608123887,
+    "ts": 1787622977186,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.584,
+      "salience": 0.583,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4520,11 +4520,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1787608123887,
+    "ts": 1787622977186,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
-      "salience": 0.584,
+      "salience": 0.583,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
       "votes": [
         {
@@ -4794,11 +4794,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1787608123887,
+    "ts": 1787622977186,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.57,
+      "salience": 0.569,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5065,11 +5065,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1787608123886,
+    "ts": 1787622977185,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.559,
+      "salience": 0.558,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6467,7 +6467,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1787608123886,
+    "ts": 1787622977185,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
@@ -7869,11 +7869,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1787608123887,
+    "ts": 1787622977187,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.548,
+      "salience": 0.547,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -8396,11 +8396,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1787608123887,
+    "ts": 1787622977186,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.507,
+      "salience": 0.506,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -9330,11 +9330,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1787608123887,
+    "ts": 1787622977187,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.506,
+      "salience": 0.505,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -9606,11 +9606,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1787608123886,
+    "ts": 1787622977185,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
-      "salience": 0.49,
+      "salience": 0.489,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2913",
       "votes": [
         {
@@ -10538,11 +10538,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1787608123887,
+    "ts": 1787622977187,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.49,
+      "salience": 0.489,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -10814,11 +10814,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1787608123887,
+    "ts": 1787622977186,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
-      "salience": 0.487,
+      "salience": 0.486,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8312",
       "votes": [
         {
@@ -11747,11 +11747,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1787608123887,
+    "ts": 1787622977186,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.468,
+      "salience": 0.467,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -12680,11 +12680,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1787608123887,
+    "ts": 1787622977187,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.457,
+      "salience": 0.456,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -13072,11 +13072,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1787608123887,
+    "ts": 1787622977186,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.349,
+      "salience": 0.348,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -14475,7 +14475,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1787608123887,
+    "ts": 1787622977187,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
@@ -15368,11 +15368,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1787608123887,
+    "ts": 1787622977187,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.285,
+      "salience": 0.284,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -16283,11 +16283,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1787608123887,
+    "ts": 1787622977187,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.278,
+      "salience": 0.277,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -17171,7 +17171,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1787608123887,
+    "ts": 1787622977186,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
@@ -18092,11 +18092,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1787608123887,
+    "ts": 1787622977186,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.262,
+      "salience": 0.261,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -19010,11 +19010,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1787608123887,
+    "ts": 1787622977186,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.202,
+      "salience": 0.201,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -19909,7 +19909,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1787608123886,
+    "ts": 1787622977185,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
@@ -20843,11 +20843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1787608123886,
+    "ts": 1787622977185,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
-      "salience": 0.099,
+      "salience": 0.098,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/254",
       "votes": [
         {
@@ -21772,11 +21772,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1787608123885,
+    "ts": 1787622977185,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
-      "salience": 0.097,
+      "salience": 0.096,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7618",
       "votes": [
         {
@@ -22681,11 +22681,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1787608123886,
+    "ts": 1787622977185,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
-      "salience": 0.091,
+      "salience": 0.09,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8466",
       "votes": [
         {
@@ -23556,11 +23556,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1787608123886,
+    "ts": 1787622977186,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
-      "salience": 0.091,
+      "salience": 0.09,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8428",
       "votes": [
         {
@@ -24440,12 +24440,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_democratic-jared-jeffries",
     "source": "news",
-    "ts": 1787608175627,
+    "ts": 1787622991010,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.97,
+      "salience": 0.944,
       "articles": [
         {
           "title": "Jared Kushner meets with Democratic leader Hakeem Jeffries",
@@ -24467,6 +24467,20 @@ window.PRISM_CANDIDATES = [
           "domain": "nydailynews.com",
           "seendate": "2026-08-24T16:30:00Z",
           "image": "https://www.nydailynews.com/wp-content/uploads/2026/08/Mideast_Wars_Gaza_75268_1424c8-1.jpg"
+        },
+        {
+          "title": "Jared Kushner meets with Democratic leader Hakeem Jeffries",
+          "url": "https://www.journal-advocate.com/2026/08/24/jared-kushner-hakeem-jeffries-meeting/",
+          "domain": "journal-advocate.com",
+          "seendate": "2026-08-24T16:30:00Z",
+          "image": "https://www.journal-advocate.com/wp-content/uploads/2026/08/Mideast_Wars_Gaza_75268_1424c8-1.jpg"
+        },
+        {
+          "title": "Jared Kushner meets with Democratic leader Hakeem Jeffries",
+          "url": "https://www.reporterherald.com/2026/08/24/jared-kushner-hakeem-jeffries-meeting/",
+          "domain": "reporterherald.com",
+          "seendate": "2026-08-24T16:15:00Z",
+          "image": "https://www.reporterherald.com/wp-content/uploads/2026/08/Mideast_Wars_Gaza_75268_1424c8-1.jpg"
         },
         {
           "title": "Jared Kushner meets with Democratic leader Hakeem Jeffries",
@@ -24498,6 +24512,13 @@ window.PRISM_CANDIDATES = [
         },
         {
           "title": "Jared Kushner meets with Democratic leader Hakeem Jeffries",
+          "url": "https://www.greeleytribune.com/2026/08/24/jared-kushner-hakeem-jeffries-meeting/",
+          "domain": "greeleytribune.com",
+          "seendate": "2026-08-24T14:45:00Z",
+          "image": "https://www.greeleytribune.com/wp-content/uploads/2026/08/Mideast_Wars_Gaza_75268_1424c8-1.jpg"
+        },
+        {
+          "title": "Jared Kushner meets with Democratic leader Hakeem Jeffries",
           "url": "https://www.dailylocal.com/2026/08/24/jared-kushner-hakeem-jeffries-meeting/",
           "domain": "dailylocal.com",
           "seendate": "2026-08-24T13:30:00Z",
@@ -24505,36 +24526,15 @@ window.PRISM_CANDIDATES = [
         },
         {
           "title": "Jared Kushner meets with Democratic leader Hakeem Jeffries",
-          "url": "https://www.baltimoresun.com/2026/08/24/jared-kushner-hakeem-jeffries-meeting/",
-          "domain": "baltimoresun.com",
-          "seendate": "2026-08-24T13:00:00Z",
-          "image": "https://www.baltimoresun.com/wp-content/uploads/2026/08/Mideast_Wars_Gaza_75268_1424c8-1.jpg"
-        },
-        {
-          "title": "Jared Kushner Meets With Democratic Leader Jeffries With House Control At Stake In November",
-          "url": "https://www.theyeshivaworld.com/news/general/2589013/jared-kushner-meets-with-democratic-leader-jeffries-with-house-control-at-stake-in-november.html",
-          "domain": "theyeshivaworld.com",
-          "seendate": "2026-08-24T03:30:00Z",
-          "image": "https://www.theyeshivaworld.com/wp-content/uploads/2026/08/AP26207750315131.jpg"
-        },
-        {
-          "title": "Jared Kushner meets with Democratic leader Jeffries with House control at stake in November",
-          "url": "https://www.journalgazette.net/news/national-politics/jared-kushner-meets-with-democratic-leader-jeffries-with-house-control-at-stake-in-november/article_16dc738b-ac82-5823-b2e9-ee942a4da158.html",
-          "domain": "journalgazette.net",
-          "seendate": "2026-08-24T03:30:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/journalgazette.net/content/tncms/assets/v3/editorial/f/fd/ffde792c-33f9-5f0d-8f80-e5d7059d3ce3/6a7fb1f7baa02.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "Jared Kushner meets with Democratic leader Jeffries with House control at stake in November",
-          "url": "https://www.wsls.com/news/politics/2026/08/23/jared-kushner-meets-with-democratic-leader-jeffries-with-house-control-at-stake-in-november/",
-          "domain": "wsls.com",
-          "seendate": "2026-08-23T23:00:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/EF2DQ27ZFJBSDFRZ2KUKIQPUDM.jpg?_a=DATAg1kSZAA0"
+          "url": "https://www.advocate-news.com/2026/08/24/jared-kushner-hakeem-jeffries-meeting/",
+          "domain": "advocate-news.com",
+          "seendate": "2026-08-24T13:30:00Z",
+          "image": "https://www.advocate-news.com/wp-content/uploads/2026/08/Mideast_Wars_Gaza_75268_1424c8-1.jpg"
         }
       ]
     },
     "title": "Jared Kushner meets with Democratic leader Hakeem Jeffries",
-    "summary": "2026-08-24 dailynews.com: Jared Kushner meets with Democratic leader Hakeem Jeffries\n2026-08-24 orlandosentinel.com: Jared Kushner meets with Democratic leader Hakeem Jeffries\n2026-08-24 nydailynews.com: Jared Kushner meets with Democratic leader Hakeem Jeffries\n2026-08-24 denverpost.com: Jared Kushner meets with Democratic leader Hakeem Jeffries\n2026-08-24 pasadenastarnews.com: Jared Kushner meets with Democratic leader Hakeem Jeffries\n2026-08-24 sun-sentinel.com: Jared Kushner meets with Democratic leader Hakeem Jeffries",
+    "summary": "2026-08-24 dailynews.com: Jared Kushner meets with Democratic leader Hakeem Jeffries\n2026-08-24 orlandosentinel.com: Jared Kushner meets with Democratic leader Hakeem Jeffries\n2026-08-24 nydailynews.com: Jared Kushner meets with Democratic leader Hakeem Jeffries\n2026-08-24 journal-advocate.com: Jared Kushner meets with Democratic leader Hakeem Jeffries\n2026-08-24 reporterherald.com: Jared Kushner meets with Democratic leader Hakeem Jeffries\n2026-08-24 denverpost.com: Jared Kushner meets with Democratic leader Hakeem Jeffries",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -24544,14 +24544,120 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_ballroom-court-supreme",
+    "cid": "cand_news_hold-jeffries-kushner",
     "source": "news",
-    "ts": 1787608175627,
+    "ts": 1787622991011,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.709,
+      "salience": 0.908,
+      "articles": [
+        {
+          "title": "Jeffries , Kushner Hold Private Meeting In NYC",
+          "url": "https://wrko.iheart.com/content/2026-08-24-jeffries-kushner-hold-private-meeting-in-nyc/",
+          "domain": "wrko.iheart.com",
+          "seendate": "2026-08-24T11:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a8be38ce255b8421dd9b1d3?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Jeffries , Kushner Hold Private Meeting In NYC",
+          "url": "https://hallelujah955.iheart.com/content/2026-08-24-jeffries-kushner-hold-private-meeting-in-nyc/",
+          "domain": "hallelujah955.iheart.com",
+          "seendate": "2026-08-24T11:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a8be38ce255b8421dd9b1d3?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Jeffries , Kushner Hold Private Meeting In NYC",
+          "url": "https://600wrec.iheart.com/content/2026-08-24-jeffries-kushner-hold-private-meeting-in-nyc/",
+          "domain": "600wrec.iheart.com",
+          "seendate": "2026-08-24T11:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a8be38ce255b8421dd9b1d3?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Jeffries , Kushner Hold Private Meeting In NYC",
+          "url": "https://kprcradio.iheart.com/content/2026-08-24-jeffries-kushner-hold-private-meeting-in-nyc/",
+          "domain": "kprcradio.iheart.com",
+          "seendate": "2026-08-24T10:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a8be38ce255b8421dd9b1d3?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Jeffries , Kushner Hold Private Meeting In NYC | NewsRadio 1370 AM & 92 . 9 FM WSPD",
+          "url": "https://wspd.iheart.com/content/2026-08-24-jeffries-kushner-hold-private-meeting-in-nyc/",
+          "domain": "wspd.iheart.com",
+          "seendate": "2026-08-24T10:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a8be38ce255b8421dd9b1d3?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Jeffries , Kushner Hold Private Meeting In NYC",
+          "url": "https://1061fmtalk.iheart.com/content/2026-08-24-jeffries-kushner-hold-private-meeting-in-nyc/",
+          "domain": "1061fmtalk.iheart.com",
+          "seendate": "2026-08-24T10:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a8be38ce255b8421dd9b1d3?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Jeffries , Kushner Hold Private Meeting In NYC",
+          "url": "https://khow.iheart.com/content/2026-08-24-jeffries-kushner-hold-private-meeting-in-nyc/",
+          "domain": "khow.iheart.com",
+          "seendate": "2026-08-24T10:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a8be38ce255b8421dd9b1d3?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Jeffries , Kushner Hold Private Meeting In NYC | News Talk 550 KFYI",
+          "url": "https://kfyi.iheart.com/content/2026-08-24-jeffries-kushner-hold-private-meeting-in-nyc/",
+          "domain": "kfyi.iheart.com",
+          "seendate": "2026-08-24T10:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a8be38ce255b8421dd9b1d3?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Jeffries , Kushner Hold Private Meeting In NYC",
+          "url": "https://wjno.iheart.com/content/2026-08-24-jeffries-kushner-hold-private-meeting-in-nyc/",
+          "domain": "wjno.iheart.com",
+          "seendate": "2026-08-24T10:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a8be38ce255b8421dd9b1d3?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Jeffries , Kushner Hold Private Meeting In NYC",
+          "url": "https://talkradio1059.iheart.com/content/2026-08-24-jeffries-kushner-hold-private-meeting-in-nyc/",
+          "domain": "talkradio1059.iheart.com",
+          "seendate": "2026-08-24T10:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a8be38ce255b8421dd9b1d3?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Jeffries , Kushner Hold Private Meeting In NYC | Sports Radio 800 KXIC",
+          "url": "https://kxic.iheart.com/content/2026-08-24-jeffries-kushner-hold-private-meeting-in-nyc/",
+          "domain": "kxic.iheart.com",
+          "seendate": "2026-08-24T10:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a8be38ce255b8421dd9b1d3?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Jeffries , Kushner Hold Private Meeting In NYC",
+          "url": "https://wiba.iheart.com/content/2026-08-24-jeffries-kushner-hold-private-meeting-in-nyc/",
+          "domain": "wiba.iheart.com",
+          "seendate": "2026-08-24T09:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a8be38ce255b8421dd9b1d3?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        }
+      ]
+    },
+    "title": "Jeffries , Kushner Hold Private Meeting In NYC",
+    "summary": "2026-08-24 wrko.iheart.com: Jeffries , Kushner Hold Private Meeting In NYC\n2026-08-24 hallelujah955.iheart.com: Jeffries , Kushner Hold Private Meeting In NYC\n2026-08-24 600wrec.iheart.com: Jeffries , Kushner Hold Private Meeting In NYC\n2026-08-24 kprcradio.iheart.com: Jeffries , Kushner Hold Private Meeting In NYC\n2026-08-24 wspd.iheart.com: Jeffries , Kushner Hold Private Meeting In NYC | NewsRadio 1370 AM & 92 . 9 FM WSPD\n2026-08-24 1061fmtalk.iheart.com: Jeffries , Kushner Hold Private Meeting In NYC",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_ballroom-continue-court",
+    "source": "news",
+    "ts": 1787622991009,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.683,
       "articles": [
         {
           "title": "Supreme Court allows Trump White House ballroom construction to continue for now",
@@ -24624,129 +24730,23 @@ window.PRISM_CANDIDATES = [
           "image": "https://d3i6fh83elv35t.cloudfront.net/static/2026/08/2026-08-14T031051Z_642460615_RC2VXMA6QAHJ_RTRMADP_3_USA-TRUMP-1024x683.jpg"
         },
         {
+          "title": "Xinhua News | U . S . Supreme Court temporarily allows White House ballroom construction to continue",
+          "url": "http://www.bignewsnetwork.com/news/279257522/xinhua-news-us-supreme-court-temporarily-allows-white-house-ballroom-construction-to-continue",
+          "domain": "bignewsnetwork.com",
+          "seendate": "2026-08-22T04:15:00Z",
+          "image": null
+        },
+        {
           "title": "Supreme Court chief justice allows work on Trump $400M White House ballroom to continue for now | US and World News",
           "url": "https://www.wfmz.com/news/us/supreme-courts-chief-justice-allows-work-on-trump-s-400m-white-house-ballroom-to-continue/article_a7a9ce63-9218-5f61-87e4-51976e84703d.html",
           "domain": "wfmz.com",
           "seendate": "2026-08-22T03:15:00Z",
           "image": "https://bloximages.newyork1.vip.townnews.com/wfmz.com/content/tncms/assets/v3/editorial/9/2f/92fcff60-bc54-54b7-ae28-bf43664a7af2/6a75f16d00c30.image.jpg?crop=1763%2C926%2C0%2C125"
-        },
-        {
-          "title": "Supreme Court chief justice allows work on Trump $400M White House ballroom to continue for now",
-          "url": "https://www.boston.com/news/national-news/2026/08/21/supreme-courts-chief-justice-allows-work-on-trumps-400m-white-house-ballroom-to-continue-for-now/",
-          "domain": "boston.com",
-          "seendate": "2026-08-22T02:30:00Z",
-          "image": "https://bdc2020.o0bc.com/wp-content/uploads/2026/08/AP26217654784670-6a88e01a38cf1-768x432.jpg"
         }
       ]
     },
-    "title": "Supreme Court allows Trump White House ballroom construction to continue for now",
+    "title": "Supreme Court chief justice allows work on Trump $400M White House ballroom to continue for now",
     "summary": "2026-08-22 yahoo.com: Supreme Court allows Trump White House ballroom construction to continue for now\n2026-08-22 npr.org: Trump ballroom construction can continue for now , Supreme Court says\n2026-08-22 wccbcharlotte.com: Supreme Court chief justice allows work on Trump $400M White House ballroom to continue for now\n2026-08-22 onenewspage.com: Supreme Court Allows Trump White House Ballroom Work to Continue One News Page\n2026-08-22 euronews.com: White House ballroom will cost nearly $400m as Supreme Court allows work to continue\n2026-08-22 wbkb11.com: Supreme Court lets White House ballroom work continue",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_ballroom-chief-clears",
-    "source": "news",
-    "ts": 1787608175625,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.676,
-      "articles": [
-        {
-          "title": "Chief justice temporarily clears way for White House ballroom construction",
-          "url": "https://ktvl.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
-          "domain": "ktvl.com",
-          "seendate": "2026-08-22T18:00:00Z",
-          "image": null
-        },
-        {
-          "title": "Chief justice temporarily clears way for White House ballroom construction",
-          "url": "https://cbs4local.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
-          "domain": "cbs4local.com",
-          "seendate": "2026-08-22T00:30:00Z",
-          "image": null
-        },
-        {
-          "title": "Chief justice temporarily clears way for White House ballroom construction",
-          "url": "https://kfoxtv.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
-          "domain": "kfoxtv.com",
-          "seendate": "2026-08-22T00:15:00Z",
-          "image": null
-        },
-        {
-          "title": "Chief justice temporarily clears way for White House ballroom construction",
-          "url": "https://wlos.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
-          "domain": "wlos.com",
-          "seendate": "2026-08-22T00:00:00Z",
-          "image": null
-        },
-        {
-          "title": "Chief justice temporarily clears way for White House ballroom construction",
-          "url": "https://fox11online.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
-          "domain": "fox11online.com",
-          "seendate": "2026-08-22T00:00:00Z",
-          "image": null
-        },
-        {
-          "title": "Chief justice temporarily clears way for White House ballroom construction",
-          "url": "https://ktxs.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
-          "domain": "ktxs.com",
-          "seendate": "2026-08-22T00:00:00Z",
-          "image": null
-        },
-        {
-          "title": "Chief justice temporarily clears way for White House ballroom construction",
-          "url": "https://mynews4.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
-          "domain": "mynews4.com",
-          "seendate": "2026-08-22T00:00:00Z",
-          "image": null
-        },
-        {
-          "title": "Chief justice temporarily clears way for White House ballroom construction",
-          "url": "https://abc3340.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
-          "domain": "abc3340.com",
-          "seendate": "2026-08-22T00:00:00Z",
-          "image": null
-        },
-        {
-          "title": "Chief justice temporarily clears way for White House ballroom construction",
-          "url": "https://komonews.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
-          "domain": "komonews.com",
-          "seendate": "2026-08-21T23:45:00Z",
-          "image": null
-        },
-        {
-          "title": "Chief justice temporarily clears way for White House ballroom construction",
-          "url": "https://cnycentral.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
-          "domain": "cnycentral.com",
-          "seendate": "2026-08-21T23:45:00Z",
-          "image": null
-        },
-        {
-          "title": "Chief justice temporarily clears way for White House ballroom construction",
-          "url": "https://fox23maine.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
-          "domain": "fox23maine.com",
-          "seendate": "2026-08-21T23:45:00Z",
-          "image": null
-        },
-        {
-          "title": "Chief justice temporarily clears way for White House ballroom construction",
-          "url": "https://cbs2iowa.com/news/nation-world/chief-justice-temporarily-clears-way-for-white-house-ballroom-construction",
-          "domain": "cbs2iowa.com",
-          "seendate": "2026-08-21T23:45:00Z",
-          "image": null
-        }
-      ]
-    },
-    "title": "Chief justice temporarily clears way for White House ballroom construction",
-    "summary": "2026-08-22 ktvl.com: Chief justice temporarily clears way for White House ballroom construction\n2026-08-22 cbs4local.com: Chief justice temporarily clears way for White House ballroom construction\n2026-08-22 kfoxtv.com: Chief justice temporarily clears way for White House ballroom construction\n2026-08-22 wlos.com: Chief justice temporarily clears way for White House ballroom construction\n2026-08-22 fox11online.com: Chief justice temporarily clears way for White House ballroom construction\n2026-08-22 ktxs.com: Chief justice temporarily clears way for White House ballroom construction",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -24758,12 +24758,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_first-garden-house",
     "source": "news",
-    "ts": 1787608175628,
+    "ts": 1787622991010,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.668,
+      "salience": 0.643,
       "articles": [
         {
           "title": "Inside Trump remake of the White House Rose Garden . First a stone patio , then statues – Orlando Sentinel",
@@ -24830,6 +24830,13 @@ window.PRISM_CANDIDATES = [
         },
         {
           "title": "Inside Trump remake of the White House Rose Garden . First a stone patio , then statues",
+          "url": "https://www.durangoherald.com/articles/associated-press/inside-trumps-remake-of-the-white-house-rose-garden-first-a-stone-patio-then-statues/",
+          "domain": "durangoherald.com",
+          "seendate": "2026-08-22T13:15:00Z",
+          "image": "https://www.durangoherald.com/wp-content/uploads/2026/08/47053480-3b7f-5ea0-983b-befc7730a256.jpg"
+        },
+        {
+          "title": "Inside Trump remake of the White House Rose Garden . First a stone patio , then statues",
           "url": "https://www.clickondetroit.com/news/politics/2026/08/22/inside-trumps-remake-of-the-white-house-rose-garden-first-a-stone-patio-then-statues/",
           "domain": "clickondetroit.com",
           "seendate": "2026-08-22T12:45:00Z",
@@ -24848,14 +24855,107 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_attorney-can-foes",
+    "cid": "cand_news_cheap-china-flooding",
     "source": "news",
-    "ts": 1787608175627,
+    "ts": 1787622991010,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.66,
+      "salience": 0.6,
+      "articles": [
+        {
+          "title": "Trump moves toward levying new tariff on China for flooding market with cheap goods , AP sources say",
+          "url": "https://www.clickondetroit.com/business/2026/08/24/trump-moves-toward-levying-new-tariff-on-china-for-flooding-market-with-cheap-goods-ap-sources-say/",
+          "domain": "clickondetroit.com",
+          "seendate": "2026-08-24T23:30:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/VQLCOWLYNZC2ZIFRREEOSZNB4Y.jpg?_a=DATAg1kSZAA0"
+        },
+        {
+          "title": "Trump moves toward levying new tariff on China for flooding market with cheap goods , AP sources say",
+          "url": "https://www.wsls.com/business/2026/08/24/trump-moves-toward-levying-new-tariff-on-china-for-flooding-market-with-cheap-goods-ap-sources-say/",
+          "domain": "wsls.com",
+          "seendate": "2026-08-24T23:00:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/VQLCOWLYNZC2ZIFRREEOSZNB4Y.jpg?_a=DATAg1kSZAA0"
+        },
+        {
+          "title": "Trump moves toward levying new tariff on China for flooding market with cheap goods , AP sources say",
+          "url": "https://www.clickorlando.com/business/2026/08/24/trump-moves-toward-levying-new-tariff-on-china-for-flooding-market-with-cheap-goods-ap-sources-say/",
+          "domain": "clickorlando.com",
+          "seendate": "2026-08-24T22:15:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/VQLCOWLYNZC2ZIFRREEOSZNB4Y.jpg?_a=DATAg1kSZAA0"
+        }
+      ]
+    },
+    "title": "Trump moves toward levying new tariff on China for flooding market with cheap goods , AP sources say",
+    "summary": "2026-08-24 clickondetroit.com: Trump moves toward levying new tariff on China for flooding market with cheap goods , AP sources say\n2026-08-24 wsls.com: Trump moves toward levying new tariff on China for flooding market with cheap goods , AP sources say\n2026-08-24 clickorlando.com: Trump moves toward levying new tariff on China for flooding market with cheap goods , AP sources say",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_alleged-believed-boat",
+    "source": "news",
+    "ts": 1787622991010,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.586,
+      "articles": [
+        {
+          "title": "US launches deadly strike on alleged drug boat , believed to be the first in 2 months",
+          "url": "https://www.wmur.com/article/us-pacific-boat-strike-thought-first-in-two-months/73507328",
+          "domain": "wmur.com",
+          "seendate": "2026-08-24T12:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/34c86fde-ebdc-4f64-857c-e90e43bae58b.png?crop=1.00xw%3A0.994xh%3B0%2C0"
+        },
+        {
+          "title": "US launches deadly strike on alleged drug boat , believed to be the first in two months",
+          "url": "https://us.cnn.com/2026/08/24/politics/us-military-strike-alleged-drug-boat-intl-hnk",
+          "domain": "us.cnn.com",
+          "seendate": "2026-08-24T12:00:00Z",
+          "image": "https://media.cnn.com/api/v1/images/stellar/prod/56352997-01157726-generated-thumbnail.jpg?c=16x9&q=w_800,c_fill"
+        },
+        {
+          "title": "US launches deadly strike on alleged drug boat , believed to be the first in 2 months",
+          "url": "https://www.wbaltv.com/article/us-pacific-boat-strike-thought-first-in-two-months/73507328",
+          "domain": "wbaltv.com",
+          "seendate": "2026-08-24T10:45:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/34c86fde-ebdc-4f64-857c-e90e43bae58b.png?crop=1.00xw%3A0.994xh%3B0%2C0"
+        },
+        {
+          "title": "US launches deadly strike on alleged drug boat , believed to be the first in 2 months",
+          "url": "https://www.wesh.com/article/us-pacific-boat-strike-thought-first-in-two-months/73507328",
+          "domain": "wesh.com",
+          "seendate": "2026-08-24T10:45:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/34c86fde-ebdc-4f64-857c-e90e43bae58b.png?crop=1.00xw%3A0.994xh%3B0%2C0"
+        }
+      ]
+    },
+    "title": "US launches deadly strike on alleged drug boat , believed to be the first in 2 months",
+    "summary": "2026-08-24 wmur.com: US launches deadly strike on alleged drug boat , believed to be the first in 2 months\n2026-08-24 us.cnn.com: US launches deadly strike on alleged drug boat , believed to be the first in two months\n2026-08-24 wbaltv.com: US launches deadly strike on alleged drug boat , believed to be the first in 2 months\n2026-08-24 wesh.com: US launches deadly strike on alleged drug boat , believed to be the first in 2 months",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_attorney-can-foes",
+    "source": "news",
+    "ts": 1787622991010,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.58,
       "articles": [
         {
           "title": "Trump US attorney pick can no longer investigate one of his top foes",
@@ -24919,20 +25019,6 @@ window.PRISM_CANDIDATES = [
           "domain": "kcci.com",
           "seendate": "2026-08-22T12:15:00Z",
           "image": "https://kubrick.htvapps.com/htv-prod/images/362a5317-0e0f-4cf5-ac56-23b1b62dce0c.jpg?crop=1.00xw%3A0.849xh%3B0%2C0.144xh"
-        },
-        {
-          "title": "Trump US attorney pick can no longer investigate one of the president top foes , court rules",
-          "url": "https://www.yahoo.com/news/politics/articles/trump-us-attorney-pick-no-180248863.html",
-          "domain": "yahoo.com",
-          "seendate": "2026-08-21T22:45:00Z",
-          "image": "https://s.yimg.com/lo/mysterio/api/b198bb242d9b926bd7c89e008f25167a51d1c27065b6a98541fa838f6752bc43/lightyear_networkapi/resizefill_w960_h540%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fcnn_articles_875%2F28d456bb260ca06d28c3773e2e90a1a1.jpg"
-        },
-        {
-          "title": "Trump US attorney pick can no longer investigate one of the president top foes , court rules",
-          "url": "https://www.cnn.com/2026/08/21/politics/trump-pick-us-attorney-new-york-no-longer-investigate-president-top-foe-letitia-james",
-          "domain": "cnn.com",
-          "seendate": "2026-08-21T22:45:00Z",
-          "image": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2291334786.jpg?c=16x9&q=w_800,c_fill"
         }
       ]
     },
@@ -24949,12 +25035,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_carolinians-darline-gop",
     "source": "news",
-    "ts": 1787608175627,
+    "ts": 1787622991010,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.233,
+      "salience": 0.208,
       "articles": [
         {
           "title": "Trump urges South Carolinians to make Sen . Darline Graham the GOP nominee for US Senate",
