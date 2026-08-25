@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-25T13:18:57.536Z · 29 legislative + 9 news (GDELT, 3d)
+// 2026-08-25T16:04:43.116Z · 29 legislative + 7 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1787663894518,
+    "ts": 1787673863038,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.691,
+      "salience": 0.69,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,7 +259,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1787663894518,
+    "ts": 1787673863038,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
@@ -532,7 +532,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1787663894517,
+    "ts": 1787673863037,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1787663894518,
+    "ts": 1787673863038,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.6,
+      "salience": 0.599,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3116,13 +3116,287 @@ window.PRISM_CANDIDATES = [
     "mts": 1784784262612
   },
   {
+    "cid": "cand_leg_sjres-119-196",
+    "source": "legislative",
+    "ts": 1787673863038,
+    "raw": {
+      "method": "legislative_rollcall_v1",
+      "billId": "sjres-119-196",
+      "salience": 0.581,
+      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
+      "votes": [
+        {
+          "voteId": "s-119-2-190",
+          "chamber": "senate",
+          "date": "June 24, 2026,  09:16 PM",
+          "question": "On the Motion to Proceed",
+          "result": "Motion to Proceed Rejected",
+          "margin": -0.072,
+          "totals": {
+            "yea": 45,
+            "nay": 52,
+            "present": 0,
+            "notVoting": 3
+          },
+          "party": {
+            "D": {
+              "yea": 43,
+              "nay": 0
+            },
+            "R": {
+              "yea": 0,
+              "nay": 52
+            },
+            "I": {
+              "yea": 2,
+              "nay": 0
+            }
+          },
+          "positions": {
+            "yea": [
+              "A000382",
+              "B001230",
+              "B001277",
+              "B001303",
+              "B001288",
+              "C000127",
+              "C001088",
+              "C001113",
+              "D000622",
+              "D000563",
+              "F000479",
+              "G000574",
+              "G000555",
+              "H001076",
+              "H001046",
+              "H000273",
+              "H001042",
+              "K000384",
+              "K000377",
+              "K000394",
+              "K000383",
+              "K000367",
+              "M000133",
+              "M001176",
+              "M001169",
+              "M001111",
+              "O000174",
+              "P000145",
+              "P000595",
+              "R000122",
+              "R000608",
+              "S000033",
+              "S001194",
+              "S001150",
+              "S000148",
+              "S001208",
+              "S001203",
+              "V000128",
+              "W000805",
+              "W000790",
+              "W000817",
+              "W000800",
+              "W000802",
+              "W000779"
+            ],
+            "nay": [
+              "B001299",
+              "B001261",
+              "B001243",
+              "B001236",
+              "B001319",
+              "B001305",
+              "C001047",
+              "C001075",
+              "C001035",
+              "C001056",
+              "C001095",
+              "C001096",
+              "C000880",
+              "C001098",
+              "C001114",
+              "D000618",
+              "E000295",
+              "F000463",
+              "G000359",
+              "G000386",
+              "H000601",
+              "H001089",
+              "H001061",
+              "H001104",
+              "H001079",
+              "J000293",
+              "J000312",
+              "K000393",
+              "L000575",
+              "L000577",
+              "L000571",
+              "M001198",
+              "M001243",
+              "M001244",
+              "M000934",
+              "M001242",
+              "M001153",
+              "P000603",
+              "R000618",
+              "R000584",
+              "R000605",
+              "S001227",
+              "S001217",
+              "S001184",
+              "S001232",
+              "S001198",
+              "T000250",
+              "T000476",
+              "T000278",
+              "W000437",
+              "Y000064"
+            ],
+            "present": [],
+            "notVoting": [
+              "B001267",
+              "M000355",
+              "S001181"
+            ]
+          }
+        }
+      ]
+    },
+    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
+    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
+    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Disapprove rule",
+        "neg": "Uphold rule"
+      },
+      "y": {
+        "pos": "Executive overreach",
+        "neg": "Agency discretion legitimate"
+      }
+    },
+    "prevalentAxisGuess": "x",
+    "members": [
+      "A000382",
+      "B001230",
+      "B001277",
+      "B001303",
+      "B001288",
+      "C000127",
+      "C001088",
+      "C001113",
+      "D000622",
+      "D000563",
+      "F000479",
+      "G000574",
+      "G000555",
+      "H001076",
+      "H001046",
+      "H000273",
+      "H001042",
+      "K000384",
+      "K000377",
+      "K000394",
+      "K000383",
+      "K000367",
+      "M000133",
+      "M001176",
+      "M001169",
+      "M001111",
+      "O000174",
+      "P000145",
+      "P000595",
+      "R000122",
+      "R000608",
+      "S000033",
+      "S001194",
+      "S001150",
+      "S000148",
+      "S001208",
+      "S001203",
+      "V000128",
+      "W000805",
+      "W000790",
+      "W000817",
+      "W000800",
+      "W000802",
+      "W000779",
+      "B001299",
+      "B001261",
+      "B001243",
+      "B001236",
+      "B001319",
+      "B001305",
+      "C001047",
+      "C001075",
+      "C001035",
+      "C001056",
+      "C001095",
+      "C001096",
+      "C000880",
+      "C001098",
+      "C001114",
+      "D000618",
+      "E000295",
+      "F000463",
+      "G000359",
+      "G000386",
+      "H000601",
+      "H001089",
+      "H001061",
+      "H001104",
+      "H001079",
+      "J000293",
+      "J000312",
+      "K000393",
+      "L000575",
+      "L000577",
+      "L000571",
+      "M001198",
+      "M001243",
+      "M001244",
+      "M000934",
+      "M001242",
+      "M001153",
+      "P000603",
+      "R000618",
+      "R000584",
+      "R000605",
+      "S001227",
+      "S001217",
+      "S001184",
+      "S001232",
+      "S001198",
+      "T000250",
+      "T000476",
+      "T000278",
+      "W000437",
+      "Y000064"
+    ],
+    "bills": [
+      "sjres-119-196"
+    ],
+    "fitness": {
+      "score": 0.3,
+      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:28:30.038Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "s-119-2-190",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297586
+  },
+  {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1787663894518,
+    "ts": 1787673863038,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.581,
+      "salience": 0.58,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4518,287 +4792,13 @@ window.PRISM_CANDIDATES = [
     "mts": 1784044297586
   },
   {
-    "cid": "cand_leg_sjres-119-196",
-    "source": "legislative",
-    "ts": 1787663894518,
-    "raw": {
-      "method": "legislative_rollcall_v1",
-      "billId": "sjres-119-196",
-      "salience": 0.581,
-      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
-      "votes": [
-        {
-          "voteId": "s-119-2-190",
-          "chamber": "senate",
-          "date": "June 24, 2026,  09:16 PM",
-          "question": "On the Motion to Proceed",
-          "result": "Motion to Proceed Rejected",
-          "margin": -0.072,
-          "totals": {
-            "yea": 45,
-            "nay": 52,
-            "present": 0,
-            "notVoting": 3
-          },
-          "party": {
-            "D": {
-              "yea": 43,
-              "nay": 0
-            },
-            "R": {
-              "yea": 0,
-              "nay": 52
-            },
-            "I": {
-              "yea": 2,
-              "nay": 0
-            }
-          },
-          "positions": {
-            "yea": [
-              "A000382",
-              "B001230",
-              "B001277",
-              "B001303",
-              "B001288",
-              "C000127",
-              "C001088",
-              "C001113",
-              "D000622",
-              "D000563",
-              "F000479",
-              "G000574",
-              "G000555",
-              "H001076",
-              "H001046",
-              "H000273",
-              "H001042",
-              "K000384",
-              "K000377",
-              "K000394",
-              "K000383",
-              "K000367",
-              "M000133",
-              "M001176",
-              "M001169",
-              "M001111",
-              "O000174",
-              "P000145",
-              "P000595",
-              "R000122",
-              "R000608",
-              "S000033",
-              "S001194",
-              "S001150",
-              "S000148",
-              "S001208",
-              "S001203",
-              "V000128",
-              "W000805",
-              "W000790",
-              "W000817",
-              "W000800",
-              "W000802",
-              "W000779"
-            ],
-            "nay": [
-              "B001299",
-              "B001261",
-              "B001243",
-              "B001236",
-              "B001319",
-              "B001305",
-              "C001047",
-              "C001075",
-              "C001035",
-              "C001056",
-              "C001095",
-              "C001096",
-              "C000880",
-              "C001098",
-              "C001114",
-              "D000618",
-              "E000295",
-              "F000463",
-              "G000359",
-              "G000386",
-              "H000601",
-              "H001089",
-              "H001061",
-              "H001104",
-              "H001079",
-              "J000293",
-              "J000312",
-              "K000393",
-              "L000575",
-              "L000577",
-              "L000571",
-              "M001198",
-              "M001243",
-              "M001244",
-              "M000934",
-              "M001242",
-              "M001153",
-              "P000603",
-              "R000618",
-              "R000584",
-              "R000605",
-              "S001227",
-              "S001217",
-              "S001184",
-              "S001232",
-              "S001198",
-              "T000250",
-              "T000476",
-              "T000278",
-              "W000437",
-              "Y000064"
-            ],
-            "present": [],
-            "notVoting": [
-              "B001267",
-              "M000355",
-              "S001181"
-            ]
-          }
-        }
-      ]
-    },
-    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
-    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
-    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
-    "suggestedAxes": {
-      "x": {
-        "pos": "Disapprove rule",
-        "neg": "Uphold rule"
-      },
-      "y": {
-        "pos": "Executive overreach",
-        "neg": "Agency discretion legitimate"
-      }
-    },
-    "prevalentAxisGuess": "x",
-    "members": [
-      "A000382",
-      "B001230",
-      "B001277",
-      "B001303",
-      "B001288",
-      "C000127",
-      "C001088",
-      "C001113",
-      "D000622",
-      "D000563",
-      "F000479",
-      "G000574",
-      "G000555",
-      "H001076",
-      "H001046",
-      "H000273",
-      "H001042",
-      "K000384",
-      "K000377",
-      "K000394",
-      "K000383",
-      "K000367",
-      "M000133",
-      "M001176",
-      "M001169",
-      "M001111",
-      "O000174",
-      "P000145",
-      "P000595",
-      "R000122",
-      "R000608",
-      "S000033",
-      "S001194",
-      "S001150",
-      "S000148",
-      "S001208",
-      "S001203",
-      "V000128",
-      "W000805",
-      "W000790",
-      "W000817",
-      "W000800",
-      "W000802",
-      "W000779",
-      "B001299",
-      "B001261",
-      "B001243",
-      "B001236",
-      "B001319",
-      "B001305",
-      "C001047",
-      "C001075",
-      "C001035",
-      "C001056",
-      "C001095",
-      "C001096",
-      "C000880",
-      "C001098",
-      "C001114",
-      "D000618",
-      "E000295",
-      "F000463",
-      "G000359",
-      "G000386",
-      "H000601",
-      "H001089",
-      "H001061",
-      "H001104",
-      "H001079",
-      "J000293",
-      "J000312",
-      "K000393",
-      "L000575",
-      "L000577",
-      "L000571",
-      "M001198",
-      "M001243",
-      "M001244",
-      "M000934",
-      "M001242",
-      "M001153",
-      "P000603",
-      "R000618",
-      "R000584",
-      "R000605",
-      "S001227",
-      "S001217",
-      "S001184",
-      "S001232",
-      "S001198",
-      "T000250",
-      "T000476",
-      "T000278",
-      "W000437",
-      "Y000064"
-    ],
-    "bills": [
-      "sjres-119-196"
-    ],
-    "fitness": {
-      "score": 0.3,
-      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
-      "method": "m2_constitutive_v1",
-      "ts": "2026-07-14T04:28:30.038Z"
-    },
-    "status": "new",
-    "voteMap": {
-      "voteId": "s-119-2-190",
-      "yeaPole": "pos"
-    },
-    "mts": 1784044297586
-  },
-  {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1787663894518,
+    "ts": 1787673863038,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.567,
+      "salience": 0.566,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5065,11 +5065,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1787663894517,
+    "ts": 1787673863037,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.556,
+      "salience": 0.555,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6467,7 +6467,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1787663894517,
+    "ts": 1787673863037,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
@@ -7869,11 +7869,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1787663894518,
+    "ts": 1787673863038,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.545,
+      "salience": 0.544,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -8396,11 +8396,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1787663894518,
+    "ts": 1787673863037,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.504,
+      "salience": 0.503,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -9330,11 +9330,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1787663894518,
+    "ts": 1787673863038,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.503,
+      "salience": 0.502,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -9606,7 +9606,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1787663894517,
+    "ts": 1787673863037,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
@@ -10538,11 +10538,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1787663894518,
+    "ts": 1787673863038,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.487,
+      "salience": 0.486,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -10814,7 +10814,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1787663894518,
+    "ts": 1787673863038,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
@@ -11747,11 +11747,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1787663894518,
+    "ts": 1787673863038,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.465,
+      "salience": 0.464,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -12680,11 +12680,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1787663894518,
+    "ts": 1787673863038,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.454,
+      "salience": 0.453,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -13072,11 +13072,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1787663894518,
+    "ts": 1787673863038,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.346,
+      "salience": 0.345,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -14475,11 +14475,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1787663894518,
+    "ts": 1787673863038,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.289,
+      "salience": 0.288,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -15368,11 +15368,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1787663894518,
+    "ts": 1787673863038,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.282,
+      "salience": 0.281,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -16283,7 +16283,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1787663894518,
+    "ts": 1787673863038,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
@@ -17171,7 +17171,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1787663894518,
+    "ts": 1787673863038,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
@@ -18092,7 +18092,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1787663894518,
+    "ts": 1787673863038,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
@@ -19010,7 +19010,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1787663894518,
+    "ts": 1787673863038,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
@@ -19909,11 +19909,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1787663894517,
+    "ts": 1787673863037,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.171,
+      "salience": 0.17,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -20843,7 +20843,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1787663894517,
+    "ts": 1787673863037,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
@@ -21772,7 +21772,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1787663894516,
+    "ts": 1787673863037,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
@@ -22681,7 +22681,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1787663894517,
+    "ts": 1787673863037,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
@@ -23556,7 +23556,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1787663894517,
+    "ts": 1787673863037,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
@@ -24440,12 +24440,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_democratic-jared-jeffries",
     "source": "news",
-    "ts": 1787663937528,
+    "ts": 1787673883110,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.873,
+      "salience": 0.856,
       "articles": [
         {
           "title": "Jared Kushner meets with Democratic leader Hakeem Jeffries",
@@ -24546,12 +24546,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_hold-jeffries-kushner",
     "source": "news",
-    "ts": 1787663937530,
+    "ts": 1787673883111,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.837,
+      "salience": 0.82,
       "articles": [
         {
           "title": "Jeffries , Kushner Hold Private Meeting In NYC",
@@ -24652,12 +24652,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_administration-court-mail",
     "source": "news",
-    "ts": 1787663937528,
+    "ts": 1787673883110,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.704,
+      "salience": 0.687,
       "articles": [
         {
           "title": "Supreme Court sides with Trump administration on mail voting restrictions",
@@ -24709,12 +24709,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_advance-clears-court",
     "source": "news",
-    "ts": 1787663937528,
+    "ts": 1787673883110,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.659,
+      "salience": 0.642,
       "articles": [
         {
           "title": "Supreme Court clears the way for Trump mail voting order in advance of midterms",
@@ -24766,12 +24766,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_cheap-china-flooding",
     "source": "news",
-    "ts": 1787663937529,
+    "ts": 1787673883111,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.529,
+      "salience": 0.511,
       "articles": [
         {
           "title": "Trump moves toward levying new tariff on China for flooding market with cheap goods , AP sources say",
@@ -24807,99 +24807,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_first-garden-house",
-    "source": "news",
-    "ts": 1787663937529,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.516,
-      "articles": [
-        {
-          "title": "Inside Trump remake of the White House Rose Garden . First a stone patio , then statues – Orlando Sentinel",
-          "url": "https://www.orlandosentinel.com/2026/08/22/inside-trumps-remake-of-the-white-house-rose-garden-first-a-stone-patio-then-statues/",
-          "domain": "orlandosentinel.com",
-          "seendate": "2026-08-22T16:45:00Z",
-          "image": "https://www.orlandosentinel.com/wp-content/uploads/2026/08/Trump_Rose_Garden_Statues_67271-1.jpg"
-        },
-        {
-          "title": "Inside Trump remake of the White House Rose Garden . First a stone patio , then statues",
-          "url": "https://www.aol.com/articles/inside-trumps-remake-white-house-120631000.html",
-          "domain": "aol.com",
-          "seendate": "2026-08-22T16:30:00Z",
-          "image": "https://hermes.media.static.aol.com/media/2026/08/22/eeb1305a-451d-3156-ba5f-d9b06999efce/596802b4-206a-4003-aa81-a1585d26a36c.jpg"
-        },
-        {
-          "title": "Inside Trump remake of the White House Rose Garden . First a stone patio , then statues",
-          "url": "https://www.local10.com/news/national/2026/08/22/inside-trumps-remake-of-the-white-house-rose-garden-first-a-stone-patio-then-statues/",
-          "domain": "local10.com",
-          "seendate": "2026-08-22T16:30:00Z",
-          "image": "https://www.local10.com/resizer/v2/6QRCO75LVDZHOKNV4XI233QVVU.jpg?auth=27e3c666ee58e4d396a92098f7688a18f92dee8bb0376be82821b7cce768c9bc"
-        },
-        {
-          "title": "Inside Trump remake of the White House Rose Garden . First a stone patio , then statues - Las Vegas Sun News",
-          "url": "https://lasvegassun.com/news/2026/aug/22/inside-trumps-remake-of-the-white-house-rose-garde/",
-          "domain": "lasvegassun.com",
-          "seendate": "2026-08-22T16:15:00Z",
-          "image": null
-        },
-        {
-          "title": "Inside Trump remake of the White House Rose Garden . First a stone patio , then statues",
-          "url": "https://www.news4jax.com/news/politics/2026/08/22/inside-trumps-remake-of-the-white-house-rose-garden-first-a-stone-patio-then-statues/",
-          "domain": "news4jax.com",
-          "seendate": "2026-08-22T16:00:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/L2WGTL5H6RDMLAEHKXCOLNWJ4M.jpg?_a=DATAg1kSZAA0"
-        },
-        {
-          "title": "Inside Trump remake of the White House Rose Garden . First a stone patio , then statues",
-          "url": "https://www.yahoo.com/news/politics/articles/inside-trumps-remake-white-house-120631118.html",
-          "domain": "yahoo.com",
-          "seendate": "2026-08-22T14:30:00Z",
-          "image": "https://s.yimg.com/lo/mysterio/api/1ea71828f51adf22e4e71988820a429ab88e89b6c731c9a5cedd47611e65cb79/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fap.org%2F818d7ed1f50cb4cd4bf016cd862e7d84.jpg"
-        },
-        {
-          "title": "Inside Trump remake of the White House Rose Garden . First a stone patio , then statues",
-          "url": "https://www.wsls.com/news/politics/2026/08/22/inside-trumps-remake-of-the-white-house-rose-garden-first-a-stone-patio-then-statues/",
-          "domain": "wsls.com",
-          "seendate": "2026-08-22T14:15:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/L2WGTL5H6RDMLAEHKXCOLNWJ4M.jpg?_a=DATAg1kSZAA0"
-        },
-        {
-          "title": "Inside Trump remake of the White House Rose Garden . First a stone patio , then statues",
-          "url": "https://www.wfmz.com/news/us/inside-trumps-remake-of-the-white-house-rose-garden-first-a-stone-patio-then-statues/article_98d04507-bb1d-5c13-a2b8-b27db793f6b9.html",
-          "domain": "wfmz.com",
-          "seendate": "2026-08-22T14:00:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/wfmz.com/content/tncms/assets/v3/editorial/c/d2/cd2f4a44-8273-52e1-8cce-76baee0fcdad/6a899143b048a.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "Inside Trump remake of the White House Rose Garden . First a stone patio , then statues",
-          "url": "https://www.bangordailynews.com/2026/08/22/nation/inside-trumps-remake-of-the-white-house-rose-garden-first-a-stone-patio-then-statues/",
-          "domain": "bangordailynews.com",
-          "seendate": "2026-08-22T13:45:00Z",
-          "image": "https://i0.wp.com/bdn-data.s3.amazonaws.com/uploads/2026/08/preview-1192.jpg?fit=1024%2C682&ssl=1"
-        }
-      ]
-    },
-    "title": "Inside Trump remake of the White House Rose Garden . First a stone patio , then statues",
-    "summary": "2026-08-22 orlandosentinel.com: Inside Trump remake of the White House Rose Garden . First a stone patio , then statues – Orlando Sentinel\n2026-08-22 aol.com: Inside Trump remake of the White House Rose Garden . First a stone patio , then statues\n2026-08-22 local10.com: Inside Trump remake of the White House Rose Garden . First a stone patio , then statues\n2026-08-22 lasvegassun.com: Inside Trump remake of the White House Rose Garden . First a stone patio , then statues - Las Vegas Sun News\n2026-08-22 news4jax.com: Inside Trump remake of the White House Rose Garden . First a stone patio , then statues\n2026-08-22 yahoo.com: Inside Trump remake of the White House Rose Garden . First a stone patio , then statues",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_alleged-believed-boat",
     "source": "news",
-    "ts": 1787663937529,
+    "ts": 1787673883111,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.515,
+      "salience": 0.498,
       "articles": [
         {
           "title": "US launches deadly strike on alleged drug boat , believed to be the first in 2 months",
@@ -24942,118 +24857,47 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_attorney-can-foes",
+    "cid": "cand_news_first-garden-house",
     "source": "news",
-    "ts": 1787663937529,
+    "ts": 1787673883110,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.399,
+      "salience": 0.224,
       "articles": [
         {
-          "title": "Trump US attorney pick can no longer investigate one of his top foes",
-          "url": "https://www.wcvb.com/article/trump-us-attorney-pick-investigate-president-foe-letitia-james/73500706",
-          "domain": "wcvb.com",
-          "seendate": "2026-08-22T15:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/362a5317-0e0f-4cf5-ac56-23b1b62dce0c.jpg?crop=1.00xw%3A0.849xh%3B0%2C0.144xh"
+          "title": "Inside Trump remake of the White House Rose Garden . First a stone patio , then statues – Orlando Sentinel",
+          "url": "https://www.orlandosentinel.com/2026/08/22/inside-trumps-remake-of-the-white-house-rose-garden-first-a-stone-patio-then-statues/",
+          "domain": "orlandosentinel.com",
+          "seendate": "2026-08-22T16:45:00Z",
+          "image": "https://www.orlandosentinel.com/wp-content/uploads/2026/08/Trump_Rose_Garden_Statues_67271-1.jpg"
         },
         {
-          "title": "Trump US attorney pick can no longer investigate one of his top foes",
-          "url": "https://www.koco.com/article/trump-us-attorney-pick-investigate-president-foe-letitia-james/73500706",
-          "domain": "koco.com",
-          "seendate": "2026-08-22T14:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/362a5317-0e0f-4cf5-ac56-23b1b62dce0c.jpg?crop=1.00xw%3A0.849xh%3B0%2C0.144xh"
+          "title": "Inside Trump remake of the White House Rose Garden . First a stone patio , then statues",
+          "url": "https://www.aol.com/articles/inside-trumps-remake-white-house-120631000.html",
+          "domain": "aol.com",
+          "seendate": "2026-08-22T16:30:00Z",
+          "image": "https://hermes.media.static.aol.com/media/2026/08/22/eeb1305a-451d-3156-ba5f-d9b06999efce/596802b4-206a-4003-aa81-a1585d26a36c.jpg"
         },
         {
-          "title": "Trump US attorney pick can no longer investigate one of his top foes",
-          "url": "https://www.wmur.com/article/trump-us-attorney-pick-investigate-president-foe-letitia-james/73500706",
-          "domain": "wmur.com",
-          "seendate": "2026-08-22T14:15:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/362a5317-0e0f-4cf5-ac56-23b1b62dce0c.jpg?crop=1.00xw%3A0.849xh%3B0%2C0.144xh"
+          "title": "Inside Trump remake of the White House Rose Garden . First a stone patio , then statues",
+          "url": "https://www.local10.com/news/national/2026/08/22/inside-trumps-remake-of-the-white-house-rose-garden-first-a-stone-patio-then-statues/",
+          "domain": "local10.com",
+          "seendate": "2026-08-22T16:30:00Z",
+          "image": "https://www.local10.com/resizer/v2/6QRCO75LVDZHOKNV4XI233QVVU.jpg?auth=27e3c666ee58e4d396a92098f7688a18f92dee8bb0376be82821b7cce768c9bc"
         },
         {
-          "title": "Trump US attorney pick can no longer investigate one of his top foes",
-          "url": "https://www.kmbc.com/article/trump-us-attorney-pick-investigate-president-foe-letitia-james/73500706",
-          "domain": "kmbc.com",
-          "seendate": "2026-08-22T14:15:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/362a5317-0e0f-4cf5-ac56-23b1b62dce0c.jpg?crop=1.00xw%3A0.849xh%3B0%2C0.144xh"
-        },
-        {
-          "title": "Trump US attorney pick can no longer investigate one of his top foes",
-          "url": "https://www.wdsu.com/article/trump-us-attorney-pick-investigate-president-foe-letitia-james/73500706",
-          "domain": "wdsu.com",
-          "seendate": "2026-08-22T14:15:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/362a5317-0e0f-4cf5-ac56-23b1b62dce0c.jpg?crop=1.00xw%3A0.849xh%3B0%2C0.144xh"
-        },
-        {
-          "title": "Trump US attorney pick can no longer investigate one of his top foes",
-          "url": "https://www.wxii12.com/article/trump-us-attorney-pick-investigate-president-foe-letitia-james/73500706",
-          "domain": "wxii12.com",
-          "seendate": "2026-08-22T14:00:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/362a5317-0e0f-4cf5-ac56-23b1b62dce0c.jpg?crop=1.00xw%3A0.849xh%3B0%2C0.144xh"
-        },
-        {
-          "title": "Trump US attorney pick can no longer investigate one of his top foes",
-          "url": "https://www.wgal.com/article/trump-us-attorney-pick-investigate-president-foe-letitia-james/73500706",
-          "domain": "wgal.com",
-          "seendate": "2026-08-22T13:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/362a5317-0e0f-4cf5-ac56-23b1b62dce0c.jpg?crop=1.00xw%3A0.849xh%3B0%2C0.144xh"
-        }
-      ]
-    },
-    "title": "Trump US attorney pick can no longer investigate one of his top foes",
-    "summary": "2026-08-22 wcvb.com: Trump US attorney pick can no longer investigate one of his top foes\n2026-08-22 koco.com: Trump US attorney pick can no longer investigate one of his top foes\n2026-08-22 wmur.com: Trump US attorney pick can no longer investigate one of his top foes\n2026-08-22 kmbc.com: Trump US attorney pick can no longer investigate one of his top foes\n2026-08-22 wdsu.com: Trump US attorney pick can no longer investigate one of his top foes\n2026-08-22 wxii12.com: Trump US attorney pick can no longer investigate one of his top foes",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_ballroom-continue-court",
-    "source": "news",
-    "ts": 1787663937527,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.282,
-      "articles": [
-        {
-          "title": "Supreme Court allows Trump White House ballroom construction to continue for now",
-          "url": "https://www.yahoo.com/news/politics/articles/supreme-court-allows-trump-white-191122961.html",
-          "domain": "yahoo.com",
-          "seendate": "2026-08-22T23:15:00Z",
-          "image": "https://s.yimg.com/lo/mysterio/api/bdfda6072c1ab9c88b5441737809922e9b436100007f8cd9aa66cb7e7d61e4f5/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Ffox_news_text_979%2F475265e768193ed0301433caca639cff.jpg"
-        },
-        {
-          "title": "Trump ballroom construction can continue for now , Supreme Court says",
-          "url": "https://www.npr.org/2026/08/21/nx-s1-5936211/trumps-ballroom-construction-can-continue-for-now-supreme-court-says",
-          "domain": "npr.org",
-          "seendate": "2026-08-22T17:30:00Z",
-          "image": "https://media.npr.org/include/images/facebook-default-wide-s1400-c85.jpg"
-        },
-        {
-          "title": "Supreme Court chief justice allows work on Trump $400M White House ballroom to continue for now",
-          "url": "https://www.wccbcharlotte.com/2026/08/22/supreme-courts-chief-justice-allows-work-on-trumps-400m-white-house-ballroom-to-continue-for-now/",
-          "domain": "wccbcharlotte.com",
-          "seendate": "2026-08-22T15:15:00Z",
-          "image": "https://wpcdn.us-east-1.vip.tn-cloud.net/www.wccbcharlotte.com/content/uploads/2026/08/r/e/ap26217654784670-scaled.jpg"
-        },
-        {
-          "title": "Supreme Court Allows Trump White House Ballroom Work to Continue One News Page",
-          "url": "https://www.onenewspage.com/story/trumps-ballroom-construction-can-continue-for-now-supreme-court-says-f92ca68c/",
-          "domain": "onenewspage.com",
-          "seendate": "2026-08-22T13:45:00Z",
+          "title": "Inside Trump remake of the White House Rose Garden . First a stone patio , then statues - Las Vegas Sun News",
+          "url": "https://lasvegassun.com/news/2026/aug/22/inside-trumps-remake-of-the-white-house-rose-garde/",
+          "domain": "lasvegassun.com",
+          "seendate": "2026-08-22T16:15:00Z",
           "image": null
         }
       ]
     },
-    "title": "Supreme Court allows Trump White House ballroom construction to continue for now",
-    "summary": "2026-08-22 yahoo.com: Supreme Court allows Trump White House ballroom construction to continue for now\n2026-08-22 npr.org: Trump ballroom construction can continue for now , Supreme Court says\n2026-08-22 wccbcharlotte.com: Supreme Court chief justice allows work on Trump $400M White House ballroom to continue for now\n2026-08-22 onenewspage.com: Supreme Court Allows Trump White House Ballroom Work to Continue One News Page",
+    "title": "Inside Trump remake of the White House Rose Garden . First a stone patio , then statues",
+    "summary": "2026-08-22 orlandosentinel.com: Inside Trump remake of the White House Rose Garden . First a stone patio , then statues – Orlando Sentinel\n2026-08-22 aol.com: Inside Trump remake of the White House Rose Garden . First a stone patio , then statues\n2026-08-22 local10.com: Inside Trump remake of the White House Rose Garden . First a stone patio , then statues\n2026-08-22 lasvegassun.com: Inside Trump remake of the White House Rose Garden . First a stone patio , then statues - Las Vegas Sun News",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
