@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-25T19:05:06.252Z · 29 legislative + 7 news (GDELT, 3d)
+// 2026-08-25T21:49:02.459Z · 29 legislative + 7 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1787684679261,
+    "ts": 1787694517124,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.69,
+      "salience": 0.689,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,7 +259,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1787684679261,
+    "ts": 1787694517124,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1787684679260,
+    "ts": 1787694517123,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.652,
+      "salience": 0.651,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1787684679261,
+    "ts": 1787694517124,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.599,
+      "salience": 0.598,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3118,11 +3118,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1787684679261,
+    "ts": 1787694517124,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.58,
+      "salience": 0.579,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4520,11 +4520,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1787684679261,
+    "ts": 1787694517124,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
-      "salience": 0.58,
+      "salience": 0.579,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
       "votes": [
         {
@@ -4794,11 +4794,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1787684679261,
+    "ts": 1787694517124,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.566,
+      "salience": 0.565,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5065,11 +5065,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1787684679260,
+    "ts": 1787694517123,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.555,
+      "salience": 0.554,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6467,7 +6467,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1787684679260,
+    "ts": 1787694517123,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
@@ -7869,11 +7869,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1787684679261,
+    "ts": 1787694517124,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.544,
+      "salience": 0.543,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -8396,11 +8396,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1787684679261,
+    "ts": 1787694517124,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.503,
+      "salience": 0.502,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -9330,11 +9330,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1787684679261,
+    "ts": 1787694517124,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.502,
+      "salience": 0.501,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -9606,7 +9606,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1787684679260,
+    "ts": 1787694517123,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
@@ -10538,11 +10538,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1787684679261,
+    "ts": 1787694517124,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.486,
+      "salience": 0.485,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -10814,7 +10814,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1787684679261,
+    "ts": 1787694517124,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
@@ -11747,11 +11747,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1787684679261,
+    "ts": 1787694517124,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.464,
+      "salience": 0.463,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -12680,11 +12680,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1787684679261,
+    "ts": 1787694517124,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.453,
+      "salience": 0.452,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -13072,11 +13072,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1787684679261,
+    "ts": 1787694517124,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.345,
+      "salience": 0.344,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -14475,7 +14475,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1787684679261,
+    "ts": 1787694517124,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
@@ -15368,11 +15368,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1787684679261,
+    "ts": 1787694517124,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.281,
+      "salience": 0.28,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -16283,11 +16283,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1787684679261,
+    "ts": 1787694517124,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.274,
+      "salience": 0.273,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -17171,7 +17171,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1787684679261,
+    "ts": 1787694517124,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
@@ -18092,7 +18092,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1787684679261,
+    "ts": 1787694517124,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
@@ -19010,7 +19010,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1787684679261,
+    "ts": 1787694517124,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
@@ -19909,7 +19909,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1787684679260,
+    "ts": 1787694517123,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
@@ -20843,7 +20843,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1787684679260,
+    "ts": 1787694517123,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
@@ -21772,11 +21772,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1787684679259,
+    "ts": 1787694517122,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
-      "salience": 0.093,
+      "salience": 0.092,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7618",
       "votes": [
         {
@@ -22681,7 +22681,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1787684679260,
+    "ts": 1787694517123,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
@@ -23556,7 +23556,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1787684679260,
+    "ts": 1787694517123,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
@@ -24438,14 +24438,85 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_democratic-jared-jeffries",
+    "cid": "cand_news_administration-court-mail",
     "source": "news",
-    "ts": 1787684706245,
+    "ts": 1787694542450,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.837,
+      "salience": 0.825,
+      "articles": [
+        {
+          "title": "Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms",
+          "url": "https://www.union-bulletin.com/news/national/supreme-court-sides-with-trump-administration-on-mail-voting-restrictions-ahead-of-midterms/article_85f39ec5-d8b1-5ed1-9fd5-3909ef8feee2.html",
+          "domain": "union-bulletin.com",
+          "seendate": "2026-08-25T20:15:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/union-bulletin.com/content/tncms/assets/v3/editorial/5/1d/51d5ae27-4e9b-542d-a797-9b20c149fac7/6a84ec002723b.image.jpg?crop=1763%2C926%2C0%2C125"
+        },
+        {
+          "title": "Supreme Court Sides With Trump Administration on Mail Voting Restrictions Ahead of Midterms",
+          "url": "https://www.statecollege.com/articles/elections/supreme-court-sides-with-trump-administration-on-mail-voting-restrictions-ahead-of-midterms/",
+          "domain": "statecollege.com",
+          "seendate": "2026-08-25T19:00:00Z",
+          "image": "https://www.statecollege.com/wp-content/uploads/2024/09/mail-ballot-AP-scaled.jpg"
+        },
+        {
+          "title": "Supreme Court sides with Trump administration on mail voting restrictions",
+          "url": "https://www.ironmountaindailynews.com/news/local-news/2026/08/supreme-court-sides-with-trump-administration-on-mail-voting-restrictions/",
+          "domain": "ironmountaindailynews.com",
+          "seendate": "2026-08-25T10:00:00Z",
+          "image": "https://ogden_images.s3.amazonaws.com/www.ironmountaindailynews.com/images/2026/08/24200222/AP-Mail-In-Ballots-Sorted.jpg"
+        },
+        {
+          "title": "Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms",
+          "url": "https://www.wdrb.com/news/national/supreme-court-sides-with-trump-administration-on-mail-voting-restrictions-ahead-of-midterms/article_aee869e2-e31c-5719-913a-216daa8aa683.html",
+          "domain": "wdrb.com",
+          "seendate": "2026-08-25T07:30:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/wdrb.com/content/tncms/assets/v3/editorial/c/16/c166fa1c-6401-11eb-ac4e-575f90555e83/6017110ab5c71.image.jpg?crop=1000%2C525%2C0%2C70"
+        },
+        {
+          "title": "Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms",
+          "url": "https://www.santafenewmexican.com/news/supreme-court-sides-with-trump-administration-on-mail-voting-restrictions-ahead-of-midterms/article_0a6a70c1-d9d8-5ca7-8532-51265239c932.html",
+          "domain": "santafenewmexican.com",
+          "seendate": "2026-08-25T07:00:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/santafenewmexican.com/content/tncms/assets/v3/editorial/1/05/1054139e-1d94-5e2d-bb47-b83e7f145371/6a8cd4179c984.image.jpg?crop=1763%2C926%2C0%2C125"
+        },
+        {
+          "title": "US Supreme Court Sides with Trump Administration in Attack on Mail - In Voting",
+          "url": "https://www.thestranger.com/news/us-supreme-court-sides-with-trump-administration-in-attack-on-mail-in-voting/",
+          "domain": "thestranger.com",
+          "seendate": "2026-08-25T02:45:00Z",
+          "image": "https://www.thestranger.com/wp-content/uploads/2026/08/dropbox-nathalie-graham-1-scaled-1-1.webp"
+        },
+        {
+          "title": "Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms - Las Vegas Sun News",
+          "url": "https://lasvegassun.com/news/2026/aug/24/supreme-court-sides-with-trump-administration-on-m/",
+          "domain": "lasvegassun.com",
+          "seendate": "2026-08-25T01:45:00Z",
+          "image": null
+        }
+      ]
+    },
+    "title": "Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms",
+    "summary": "2026-08-25 union-bulletin.com: Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms\n2026-08-25 statecollege.com: Supreme Court Sides With Trump Administration on Mail Voting Restrictions Ahead of Midterms\n2026-08-25 ironmountaindailynews.com: Supreme Court sides with Trump administration on mail voting restrictions\n2026-08-25 wdrb.com: Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms\n2026-08-25 santafenewmexican.com: Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms\n2026-08-25 thestranger.com: US Supreme Court Sides with Trump Administration in Attack on Mail - In Voting",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_democratic-jared-jeffries",
+    "source": "news",
+    "ts": 1787694542451,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.82,
       "articles": [
         {
           "title": "Jared Kushner meets with Democratic leader Hakeem Jeffries",
@@ -24546,12 +24617,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_hold-jeffries-kushner",
     "source": "news",
-    "ts": 1787684706246,
+    "ts": 1787694542452,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.801,
+      "salience": 0.784,
       "articles": [
         {
           "title": "Jeffries , Kushner Hold Private Meeting In NYC",
@@ -24650,71 +24721,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_administration-court-mail",
-    "source": "news",
-    "ts": 1787684706244,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.668,
-      "articles": [
-        {
-          "title": "Supreme Court sides with Trump administration on mail voting restrictions",
-          "url": "https://www.ironmountaindailynews.com/news/local-news/2026/08/supreme-court-sides-with-trump-administration-on-mail-voting-restrictions/",
-          "domain": "ironmountaindailynews.com",
-          "seendate": "2026-08-25T10:00:00Z",
-          "image": "https://ogden_images.s3.amazonaws.com/www.ironmountaindailynews.com/images/2026/08/24200222/AP-Mail-In-Ballots-Sorted.jpg"
-        },
-        {
-          "title": "Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms",
-          "url": "https://www.wdrb.com/news/national/supreme-court-sides-with-trump-administration-on-mail-voting-restrictions-ahead-of-midterms/article_aee869e2-e31c-5719-913a-216daa8aa683.html",
-          "domain": "wdrb.com",
-          "seendate": "2026-08-25T07:30:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/wdrb.com/content/tncms/assets/v3/editorial/c/16/c166fa1c-6401-11eb-ac4e-575f90555e83/6017110ab5c71.image.jpg?crop=1000%2C525%2C0%2C70"
-        },
-        {
-          "title": "Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms",
-          "url": "https://www.santafenewmexican.com/news/supreme-court-sides-with-trump-administration-on-mail-voting-restrictions-ahead-of-midterms/article_0a6a70c1-d9d8-5ca7-8532-51265239c932.html",
-          "domain": "santafenewmexican.com",
-          "seendate": "2026-08-25T07:00:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/santafenewmexican.com/content/tncms/assets/v3/editorial/1/05/1054139e-1d94-5e2d-bb47-b83e7f145371/6a8cd4179c984.image.jpg?crop=1763%2C926%2C0%2C125"
-        },
-        {
-          "title": "US Supreme Court Sides with Trump Administration in Attack on Mail - In Voting",
-          "url": "https://www.thestranger.com/news/us-supreme-court-sides-with-trump-administration-in-attack-on-mail-in-voting/",
-          "domain": "thestranger.com",
-          "seendate": "2026-08-25T02:45:00Z",
-          "image": "https://www.thestranger.com/wp-content/uploads/2026/08/dropbox-nathalie-graham-1-scaled-1-1.webp"
-        },
-        {
-          "title": "Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms - Las Vegas Sun News",
-          "url": "https://lasvegassun.com/news/2026/aug/24/supreme-court-sides-with-trump-administration-on-m/",
-          "domain": "lasvegassun.com",
-          "seendate": "2026-08-25T01:45:00Z",
-          "image": null
-        }
-      ]
-    },
-    "title": "Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms",
-    "summary": "2026-08-25 ironmountaindailynews.com: Supreme Court sides with Trump administration on mail voting restrictions\n2026-08-25 wdrb.com: Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms\n2026-08-25 santafenewmexican.com: Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms\n2026-08-25 thestranger.com: US Supreme Court Sides with Trump Administration in Attack on Mail - In Voting\n2026-08-25 lasvegassun.com: Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms - Las Vegas Sun News",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_advance-clears-court",
     "source": "news",
-    "ts": 1787684706245,
+    "ts": 1787694542451,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.623,
+      "salience": 0.606,
       "articles": [
         {
           "title": "Supreme Court clears the way for Trump mail voting order in advance of midterms",
@@ -24766,12 +24780,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_allows-court-implement",
     "source": "news",
-    "ts": 1787684706245,
+    "ts": 1787694542451,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.604,
+      "salience": 0.586,
       "articles": [
         {
           "title": "Supreme Court allows Trump to implement parts of order restricting mail voting",
@@ -24809,12 +24823,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_cheap-china-flooding",
     "source": "news",
-    "ts": 1787684706245,
+    "ts": 1787694542451,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.493,
+      "salience": 0.476,
       "articles": [
         {
           "title": "Trump moves toward levying new tariff on China for flooding market with cheap goods , AP sources say",
@@ -24852,12 +24866,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_alleged-believed-boat",
     "source": "news",
-    "ts": 1787684706245,
+    "ts": 1787694542451,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.479,
+      "salience": 0.462,
       "articles": [
         {
           "title": "US launches deadly strike on alleged drug boat , believed to be the first in 2 months",
