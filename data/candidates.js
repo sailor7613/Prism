@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-25T21:49:02.459Z · 29 legislative + 7 news (GDELT, 3d)
+// 2026-08-26T02:05:43.558Z · 29 legislative + 6 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1787694517124,
+    "ts": 1787709775208,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.689,
+      "salience": 0.688,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,11 +259,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1787694517124,
+    "ts": 1787709775208,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.681,
+      "salience": 0.68,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -532,7 +532,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1787694517123,
+    "ts": 1787709775207,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1787694517124,
+    "ts": 1787709775208,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.598,
+      "salience": 0.597,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3116,13 +3116,287 @@ window.PRISM_CANDIDATES = [
     "mts": 1784784262612
   },
   {
+    "cid": "cand_leg_sjres-119-196",
+    "source": "legislative",
+    "ts": 1787709775208,
+    "raw": {
+      "method": "legislative_rollcall_v1",
+      "billId": "sjres-119-196",
+      "salience": 0.579,
+      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
+      "votes": [
+        {
+          "voteId": "s-119-2-190",
+          "chamber": "senate",
+          "date": "June 24, 2026,  09:16 PM",
+          "question": "On the Motion to Proceed",
+          "result": "Motion to Proceed Rejected",
+          "margin": -0.072,
+          "totals": {
+            "yea": 45,
+            "nay": 52,
+            "present": 0,
+            "notVoting": 3
+          },
+          "party": {
+            "D": {
+              "yea": 43,
+              "nay": 0
+            },
+            "R": {
+              "yea": 0,
+              "nay": 52
+            },
+            "I": {
+              "yea": 2,
+              "nay": 0
+            }
+          },
+          "positions": {
+            "yea": [
+              "A000382",
+              "B001230",
+              "B001277",
+              "B001303",
+              "B001288",
+              "C000127",
+              "C001088",
+              "C001113",
+              "D000622",
+              "D000563",
+              "F000479",
+              "G000574",
+              "G000555",
+              "H001076",
+              "H001046",
+              "H000273",
+              "H001042",
+              "K000384",
+              "K000377",
+              "K000394",
+              "K000383",
+              "K000367",
+              "M000133",
+              "M001176",
+              "M001169",
+              "M001111",
+              "O000174",
+              "P000145",
+              "P000595",
+              "R000122",
+              "R000608",
+              "S000033",
+              "S001194",
+              "S001150",
+              "S000148",
+              "S001208",
+              "S001203",
+              "V000128",
+              "W000805",
+              "W000790",
+              "W000817",
+              "W000800",
+              "W000802",
+              "W000779"
+            ],
+            "nay": [
+              "B001299",
+              "B001261",
+              "B001243",
+              "B001236",
+              "B001319",
+              "B001305",
+              "C001047",
+              "C001075",
+              "C001035",
+              "C001056",
+              "C001095",
+              "C001096",
+              "C000880",
+              "C001098",
+              "C001114",
+              "D000618",
+              "E000295",
+              "F000463",
+              "G000359",
+              "G000386",
+              "H000601",
+              "H001089",
+              "H001061",
+              "H001104",
+              "H001079",
+              "J000293",
+              "J000312",
+              "K000393",
+              "L000575",
+              "L000577",
+              "L000571",
+              "M001198",
+              "M001243",
+              "M001244",
+              "M000934",
+              "M001242",
+              "M001153",
+              "P000603",
+              "R000618",
+              "R000584",
+              "R000605",
+              "S001227",
+              "S001217",
+              "S001184",
+              "S001232",
+              "S001198",
+              "T000250",
+              "T000476",
+              "T000278",
+              "W000437",
+              "Y000064"
+            ],
+            "present": [],
+            "notVoting": [
+              "B001267",
+              "M000355",
+              "S001181"
+            ]
+          }
+        }
+      ]
+    },
+    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
+    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
+    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Disapprove rule",
+        "neg": "Uphold rule"
+      },
+      "y": {
+        "pos": "Executive overreach",
+        "neg": "Agency discretion legitimate"
+      }
+    },
+    "prevalentAxisGuess": "x",
+    "members": [
+      "A000382",
+      "B001230",
+      "B001277",
+      "B001303",
+      "B001288",
+      "C000127",
+      "C001088",
+      "C001113",
+      "D000622",
+      "D000563",
+      "F000479",
+      "G000574",
+      "G000555",
+      "H001076",
+      "H001046",
+      "H000273",
+      "H001042",
+      "K000384",
+      "K000377",
+      "K000394",
+      "K000383",
+      "K000367",
+      "M000133",
+      "M001176",
+      "M001169",
+      "M001111",
+      "O000174",
+      "P000145",
+      "P000595",
+      "R000122",
+      "R000608",
+      "S000033",
+      "S001194",
+      "S001150",
+      "S000148",
+      "S001208",
+      "S001203",
+      "V000128",
+      "W000805",
+      "W000790",
+      "W000817",
+      "W000800",
+      "W000802",
+      "W000779",
+      "B001299",
+      "B001261",
+      "B001243",
+      "B001236",
+      "B001319",
+      "B001305",
+      "C001047",
+      "C001075",
+      "C001035",
+      "C001056",
+      "C001095",
+      "C001096",
+      "C000880",
+      "C001098",
+      "C001114",
+      "D000618",
+      "E000295",
+      "F000463",
+      "G000359",
+      "G000386",
+      "H000601",
+      "H001089",
+      "H001061",
+      "H001104",
+      "H001079",
+      "J000293",
+      "J000312",
+      "K000393",
+      "L000575",
+      "L000577",
+      "L000571",
+      "M001198",
+      "M001243",
+      "M001244",
+      "M000934",
+      "M001242",
+      "M001153",
+      "P000603",
+      "R000618",
+      "R000584",
+      "R000605",
+      "S001227",
+      "S001217",
+      "S001184",
+      "S001232",
+      "S001198",
+      "T000250",
+      "T000476",
+      "T000278",
+      "W000437",
+      "Y000064"
+    ],
+    "bills": [
+      "sjres-119-196"
+    ],
+    "fitness": {
+      "score": 0.3,
+      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:28:30.038Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "s-119-2-190",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297586
+  },
+  {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1787694517124,
+    "ts": 1787709775207,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.579,
+      "salience": 0.578,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4518,287 +4792,13 @@ window.PRISM_CANDIDATES = [
     "mts": 1784044297586
   },
   {
-    "cid": "cand_leg_sjres-119-196",
-    "source": "legislative",
-    "ts": 1787694517124,
-    "raw": {
-      "method": "legislative_rollcall_v1",
-      "billId": "sjres-119-196",
-      "salience": 0.579,
-      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
-      "votes": [
-        {
-          "voteId": "s-119-2-190",
-          "chamber": "senate",
-          "date": "June 24, 2026,  09:16 PM",
-          "question": "On the Motion to Proceed",
-          "result": "Motion to Proceed Rejected",
-          "margin": -0.072,
-          "totals": {
-            "yea": 45,
-            "nay": 52,
-            "present": 0,
-            "notVoting": 3
-          },
-          "party": {
-            "D": {
-              "yea": 43,
-              "nay": 0
-            },
-            "R": {
-              "yea": 0,
-              "nay": 52
-            },
-            "I": {
-              "yea": 2,
-              "nay": 0
-            }
-          },
-          "positions": {
-            "yea": [
-              "A000382",
-              "B001230",
-              "B001277",
-              "B001303",
-              "B001288",
-              "C000127",
-              "C001088",
-              "C001113",
-              "D000622",
-              "D000563",
-              "F000479",
-              "G000574",
-              "G000555",
-              "H001076",
-              "H001046",
-              "H000273",
-              "H001042",
-              "K000384",
-              "K000377",
-              "K000394",
-              "K000383",
-              "K000367",
-              "M000133",
-              "M001176",
-              "M001169",
-              "M001111",
-              "O000174",
-              "P000145",
-              "P000595",
-              "R000122",
-              "R000608",
-              "S000033",
-              "S001194",
-              "S001150",
-              "S000148",
-              "S001208",
-              "S001203",
-              "V000128",
-              "W000805",
-              "W000790",
-              "W000817",
-              "W000800",
-              "W000802",
-              "W000779"
-            ],
-            "nay": [
-              "B001299",
-              "B001261",
-              "B001243",
-              "B001236",
-              "B001319",
-              "B001305",
-              "C001047",
-              "C001075",
-              "C001035",
-              "C001056",
-              "C001095",
-              "C001096",
-              "C000880",
-              "C001098",
-              "C001114",
-              "D000618",
-              "E000295",
-              "F000463",
-              "G000359",
-              "G000386",
-              "H000601",
-              "H001089",
-              "H001061",
-              "H001104",
-              "H001079",
-              "J000293",
-              "J000312",
-              "K000393",
-              "L000575",
-              "L000577",
-              "L000571",
-              "M001198",
-              "M001243",
-              "M001244",
-              "M000934",
-              "M001242",
-              "M001153",
-              "P000603",
-              "R000618",
-              "R000584",
-              "R000605",
-              "S001227",
-              "S001217",
-              "S001184",
-              "S001232",
-              "S001198",
-              "T000250",
-              "T000476",
-              "T000278",
-              "W000437",
-              "Y000064"
-            ],
-            "present": [],
-            "notVoting": [
-              "B001267",
-              "M000355",
-              "S001181"
-            ]
-          }
-        }
-      ]
-    },
-    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
-    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
-    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
-    "suggestedAxes": {
-      "x": {
-        "pos": "Disapprove rule",
-        "neg": "Uphold rule"
-      },
-      "y": {
-        "pos": "Executive overreach",
-        "neg": "Agency discretion legitimate"
-      }
-    },
-    "prevalentAxisGuess": "x",
-    "members": [
-      "A000382",
-      "B001230",
-      "B001277",
-      "B001303",
-      "B001288",
-      "C000127",
-      "C001088",
-      "C001113",
-      "D000622",
-      "D000563",
-      "F000479",
-      "G000574",
-      "G000555",
-      "H001076",
-      "H001046",
-      "H000273",
-      "H001042",
-      "K000384",
-      "K000377",
-      "K000394",
-      "K000383",
-      "K000367",
-      "M000133",
-      "M001176",
-      "M001169",
-      "M001111",
-      "O000174",
-      "P000145",
-      "P000595",
-      "R000122",
-      "R000608",
-      "S000033",
-      "S001194",
-      "S001150",
-      "S000148",
-      "S001208",
-      "S001203",
-      "V000128",
-      "W000805",
-      "W000790",
-      "W000817",
-      "W000800",
-      "W000802",
-      "W000779",
-      "B001299",
-      "B001261",
-      "B001243",
-      "B001236",
-      "B001319",
-      "B001305",
-      "C001047",
-      "C001075",
-      "C001035",
-      "C001056",
-      "C001095",
-      "C001096",
-      "C000880",
-      "C001098",
-      "C001114",
-      "D000618",
-      "E000295",
-      "F000463",
-      "G000359",
-      "G000386",
-      "H000601",
-      "H001089",
-      "H001061",
-      "H001104",
-      "H001079",
-      "J000293",
-      "J000312",
-      "K000393",
-      "L000575",
-      "L000577",
-      "L000571",
-      "M001198",
-      "M001243",
-      "M001244",
-      "M000934",
-      "M001242",
-      "M001153",
-      "P000603",
-      "R000618",
-      "R000584",
-      "R000605",
-      "S001227",
-      "S001217",
-      "S001184",
-      "S001232",
-      "S001198",
-      "T000250",
-      "T000476",
-      "T000278",
-      "W000437",
-      "Y000064"
-    ],
-    "bills": [
-      "sjres-119-196"
-    ],
-    "fitness": {
-      "score": 0.3,
-      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
-      "method": "m2_constitutive_v1",
-      "ts": "2026-07-14T04:28:30.038Z"
-    },
-    "status": "new",
-    "voteMap": {
-      "voteId": "s-119-2-190",
-      "yeaPole": "pos"
-    },
-    "mts": 1784044297586
-  },
-  {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1787694517124,
+    "ts": 1787709775208,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.565,
+      "salience": 0.564,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5065,11 +5065,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1787694517123,
+    "ts": 1787709775207,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.554,
+      "salience": 0.553,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6467,11 +6467,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1787694517123,
+    "ts": 1787709775207,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.549,
+      "salience": 0.548,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -7869,7 +7869,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1787694517124,
+    "ts": 1787709775208,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
@@ -8396,11 +8396,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1787694517124,
+    "ts": 1787709775207,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.502,
+      "salience": 0.501,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -9330,7 +9330,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1787694517124,
+    "ts": 1787709775208,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
@@ -9606,11 +9606,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1787694517123,
+    "ts": 1787709775207,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
-      "salience": 0.486,
+      "salience": 0.485,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2913",
       "votes": [
         {
@@ -10538,11 +10538,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1787694517124,
+    "ts": 1787709775208,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.485,
+      "salience": 0.484,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -10814,11 +10814,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1787694517124,
+    "ts": 1787709775207,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
-      "salience": 0.483,
+      "salience": 0.482,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8312",
       "votes": [
         {
@@ -11747,7 +11747,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1787694517124,
+    "ts": 1787709775207,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
@@ -12680,7 +12680,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1787694517124,
+    "ts": 1787709775208,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
@@ -13072,11 +13072,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1787694517124,
+    "ts": 1787709775208,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.344,
+      "salience": 0.343,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -14475,11 +14475,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1787694517124,
+    "ts": 1787709775208,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.287,
+      "salience": 0.286,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -15368,11 +15368,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1787694517124,
+    "ts": 1787709775208,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.28,
+      "salience": 0.279,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -16283,7 +16283,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1787694517124,
+    "ts": 1787709775208,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
@@ -17171,11 +17171,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1787694517124,
+    "ts": 1787709775208,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.269,
+      "salience": 0.268,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -18092,11 +18092,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1787694517124,
+    "ts": 1787709775208,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.258,
+      "salience": 0.257,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -19010,11 +19010,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1787694517124,
+    "ts": 1787709775208,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.198,
+      "salience": 0.197,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -19909,11 +19909,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1787694517123,
+    "ts": 1787709775207,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.169,
+      "salience": 0.168,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -20843,11 +20843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1787694517123,
+    "ts": 1787709775206,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
-      "salience": 0.095,
+      "salience": 0.094,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/254",
       "votes": [
         {
@@ -21772,7 +21772,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1787694517122,
+    "ts": 1787709775206,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
@@ -22681,11 +22681,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1787694517123,
+    "ts": 1787709775207,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
-      "salience": 0.087,
+      "salience": 0.086,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8466",
       "votes": [
         {
@@ -23556,11 +23556,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1787694517123,
+    "ts": 1787709775207,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
-      "salience": 0.087,
+      "salience": 0.086,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8428",
       "votes": [
         {
@@ -24438,15 +24438,29 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_administration-court-mail",
+    "cid": "cand_news_court-mail-supreme",
     "source": "news",
-    "ts": 1787694542450,
+    "ts": 1787709943552,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.825,
+      "salience": 0.99,
       "articles": [
+        {
+          "title": "Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms",
+          "url": "https://www.miamitimesonline.com/news/world_national/supreme-court-sides-with-trump-administration-on-mail-voting-restrictions-ahead-of-midterms/article_7b7a0f7b-c4a5-4269-a247-905e9b1706bb.html",
+          "domain": "miamitimesonline.com",
+          "seendate": "2026-08-26T00:30:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/miamitimesonline.com/content/tncms/assets/v3/editorial/b/54/b548e7c6-3e34-402b-b912-0e3b3708f09c/6a699a06774e1.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
+        {
+          "title": "Supreme Court clears way for Trump to restrict mail - in voting ahead of midterms",
+          "url": "https://www.ksla.com/2026/08/24/supreme-court-clears-way-trump-mail-voting-order-advance-midterms/",
+          "domain": "ksla.com",
+          "seendate": "2026-08-25T23:15:00Z",
+          "image": "https://gray-ksla-prod.gtv-cdn.com/resizer/v2/W5ZCGQUHLJEYLHKPNWMMN6P2BQ.jpg?auth=aec109fb648ae07b5e692f16b088ed239ee6b3320d8bb6047d760ed75c2e6777&smart=true"
+        },
         {
           "title": "Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms",
           "url": "https://www.union-bulletin.com/news/national/supreme-court-sides-with-trump-administration-on-mail-voting-restrictions-ahead-of-midterms/article_85f39ec5-d8b1-5ed1-9fd5-3909ef8feee2.html",
@@ -24483,6 +24497,13 @@ window.PRISM_CANDIDATES = [
           "image": "https://bloximages.newyork1.vip.townnews.com/santafenewmexican.com/content/tncms/assets/v3/editorial/1/05/1054139e-1d94-5e2d-bb47-b83e7f145371/6a8cd4179c984.image.jpg?crop=1763%2C926%2C0%2C125"
         },
         {
+          "title": "Supreme Court clears the way for Trump mail voting order in advance of midterms",
+          "url": "https://www.dailynews.com/2026/08/24/supreme-court-trump-mail-voting/",
+          "domain": "dailynews.com",
+          "seendate": "2026-08-25T02:45:00Z",
+          "image": "https://www.dailynews.com/wp-content/uploads/2026/08/AP26230767195568.jpg"
+        },
+        {
           "title": "US Supreme Court Sides with Trump Administration in Attack on Mail - In Voting",
           "url": "https://www.thestranger.com/news/us-supreme-court-sides-with-trump-administration-in-attack-on-mail-in-voting/",
           "domain": "thestranger.com",
@@ -24495,11 +24516,25 @@ window.PRISM_CANDIDATES = [
           "domain": "lasvegassun.com",
           "seendate": "2026-08-25T01:45:00Z",
           "image": null
+        },
+        {
+          "title": "Supreme Court clears the way for Trump mail voting order in advance of midterms",
+          "url": "https://www.presstelegram.com/2026/08/24/supreme-court-trump-mail-voting/",
+          "domain": "presstelegram.com",
+          "seendate": "2026-08-25T01:45:00Z",
+          "image": "https://www.presstelegram.com/wp-content/uploads/2026/08/AP26230767195568.jpg"
+        },
+        {
+          "title": "Supreme Court clears the way for Trump mail voting order in advance of midterms",
+          "url": "https://www.denverpost.com/2026/08/24/supreme-court-trump-mail-voting/",
+          "domain": "denverpost.com",
+          "seendate": "2026-08-25T01:45:00Z",
+          "image": "https://www.denverpost.com/wp-content/uploads/2026/08/AP26230767195568.jpg"
         }
       ]
     },
     "title": "Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms",
-    "summary": "2026-08-25 union-bulletin.com: Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms\n2026-08-25 statecollege.com: Supreme Court Sides With Trump Administration on Mail Voting Restrictions Ahead of Midterms\n2026-08-25 ironmountaindailynews.com: Supreme Court sides with Trump administration on mail voting restrictions\n2026-08-25 wdrb.com: Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms\n2026-08-25 santafenewmexican.com: Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms\n2026-08-25 thestranger.com: US Supreme Court Sides with Trump Administration in Attack on Mail - In Voting",
+    "summary": "2026-08-26 miamitimesonline.com: Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms\n2026-08-25 ksla.com: Supreme Court clears way for Trump to restrict mail - in voting ahead of midterms\n2026-08-25 union-bulletin.com: Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms\n2026-08-25 statecollege.com: Supreme Court Sides With Trump Administration on Mail Voting Restrictions Ahead of Midterms\n2026-08-25 ironmountaindailynews.com: Supreme Court sides with Trump administration on mail voting restrictions\n2026-08-25 wdrb.com: Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -24511,12 +24546,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_democratic-jared-jeffries",
     "source": "news",
-    "ts": 1787694542451,
+    "ts": 1787709943552,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.82,
+      "salience": 0.793,
       "articles": [
         {
           "title": "Jared Kushner meets with Democratic leader Hakeem Jeffries",
@@ -24617,12 +24652,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_hold-jeffries-kushner",
     "source": "news",
-    "ts": 1787694542452,
+    "ts": 1787709943552,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.784,
+      "salience": 0.757,
       "articles": [
         {
           "title": "Jeffries , Kushner Hold Private Meeting In NYC",
@@ -24668,44 +24703,44 @@ window.PRISM_CANDIDATES = [
         },
         {
           "title": "Jeffries , Kushner Hold Private Meeting In NYC",
-          "url": "https://khow.iheart.com/content/2026-08-24-jeffries-kushner-hold-private-meeting-in-nyc/",
-          "domain": "khow.iheart.com",
-          "seendate": "2026-08-24T10:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a8be38ce255b8421dd9b1d3?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Jeffries , Kushner Hold Private Meeting In NYC | News Talk 550 KFYI",
-          "url": "https://kfyi.iheart.com/content/2026-08-24-jeffries-kushner-hold-private-meeting-in-nyc/",
-          "domain": "kfyi.iheart.com",
-          "seendate": "2026-08-24T10:15:00Z",
+          "url": "https://wgiram.iheart.com/content/2026-08-24-jeffries-kushner-hold-private-meeting-in-nyc/",
+          "domain": "wgiram.iheart.com",
+          "seendate": "2026-08-24T09:15:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a8be38ce255b8421dd9b1d3?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
           "title": "Jeffries , Kushner Hold Private Meeting In NYC",
-          "url": "https://wjno.iheart.com/content/2026-08-24-jeffries-kushner-hold-private-meeting-in-nyc/",
-          "domain": "wjno.iheart.com",
-          "seendate": "2026-08-24T10:15:00Z",
+          "url": "https://newsradio967.iheart.com/content/2026-08-24-jeffries-kushner-hold-private-meeting-in-nyc/",
+          "domain": "newsradio967.iheart.com",
+          "seendate": "2026-08-24T09:00:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a8be38ce255b8421dd9b1d3?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
           "title": "Jeffries , Kushner Hold Private Meeting In NYC",
-          "url": "https://talkradio1059.iheart.com/content/2026-08-24-jeffries-kushner-hold-private-meeting-in-nyc/",
-          "domain": "talkradio1059.iheart.com",
-          "seendate": "2026-08-24T10:15:00Z",
+          "url": "https://knst.iheart.com/content/2026-08-24-jeffries-kushner-hold-private-meeting-in-nyc/",
+          "domain": "knst.iheart.com",
+          "seendate": "2026-08-24T09:00:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a8be38ce255b8421dd9b1d3?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "Jeffries , Kushner Hold Private Meeting In NYC | Sports Radio 800 KXIC",
-          "url": "https://kxic.iheart.com/content/2026-08-24-jeffries-kushner-hold-private-meeting-in-nyc/",
-          "domain": "kxic.iheart.com",
-          "seendate": "2026-08-24T10:15:00Z",
+          "title": "Jeffries , Kushner Hold Private Meeting In NYC | News Radio 920 AM & 104 . 7 FM",
+          "url": "https://newsradiori.iheart.com/content/2026-08-24-jeffries-kushner-hold-private-meeting-in-nyc/",
+          "domain": "newsradiori.iheart.com",
+          "seendate": "2026-08-24T08:00:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a8be38ce255b8421dd9b1d3?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
           "title": "Jeffries , Kushner Hold Private Meeting In NYC",
-          "url": "https://wiba.iheart.com/content/2026-08-24-jeffries-kushner-hold-private-meeting-in-nyc/",
-          "domain": "wiba.iheart.com",
-          "seendate": "2026-08-24T09:30:00Z",
+          "url": "https://1150wima.iheart.com/content/2026-08-24-jeffries-kushner-hold-private-meeting-in-nyc/",
+          "domain": "1150wima.iheart.com",
+          "seendate": "2026-08-24T08:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6a8be38ce255b8421dd9b1d3?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Jeffries , Kushner Hold Private Meeting In NYC",
+          "url": "https://55krc.iheart.com/content/2026-08-24-jeffries-kushner-hold-private-meeting-in-nyc/",
+          "domain": "55krc.iheart.com",
+          "seendate": "2026-08-24T08:00:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6a8be38ce255b8421dd9b1d3?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         }
       ]
@@ -24721,71 +24756,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_advance-clears-court",
-    "source": "news",
-    "ts": 1787694542451,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.606,
-      "articles": [
-        {
-          "title": "Supreme Court clears the way for Trump mail voting order in advance of midterms",
-          "url": "https://www.dailynews.com/2026/08/24/supreme-court-trump-mail-voting/",
-          "domain": "dailynews.com",
-          "seendate": "2026-08-25T02:45:00Z",
-          "image": "https://www.dailynews.com/wp-content/uploads/2026/08/AP26230767195568.jpg"
-        },
-        {
-          "title": "Supreme Court clears the way for Trump mail voting order in advance of midterms",
-          "url": "https://www.presstelegram.com/2026/08/24/supreme-court-trump-mail-voting/",
-          "domain": "presstelegram.com",
-          "seendate": "2026-08-25T01:45:00Z",
-          "image": "https://www.presstelegram.com/wp-content/uploads/2026/08/AP26230767195568.jpg"
-        },
-        {
-          "title": "Supreme Court clears the way for Trump mail voting order in advance of midterms",
-          "url": "https://www.denverpost.com/2026/08/24/supreme-court-trump-mail-voting/",
-          "domain": "denverpost.com",
-          "seendate": "2026-08-25T01:45:00Z",
-          "image": "https://www.denverpost.com/wp-content/uploads/2026/08/AP26230767195568.jpg"
-        },
-        {
-          "title": "Supreme Court clears the way for Trump mail voting order in advance of midterms",
-          "url": "https://www.sbsun.com/2026/08/24/supreme-court-trump-mail-voting/",
-          "domain": "sbsun.com",
-          "seendate": "2026-08-25T01:15:00Z",
-          "image": "https://www.sbsun.com/wp-content/uploads/2026/08/AP26230767195568.jpg"
-        },
-        {
-          "title": "Supreme Court clears the way for Trump mail voting order in advance of midterms",
-          "url": "https://www.dailykos.com/stories/2026/8/24/800088822/news/supreme-court-clears-the-way-for-trump-mail-voting-order-in-advance-of-midterms/",
-          "domain": "dailykos.com",
-          "seendate": "2026-08-24T21:45:00Z",
-          "image": "https://www.dailykos.com/wp-content/uploads/sites/2/2026/08/AP26230767195568.jpg"
-        }
-      ]
-    },
-    "title": "Supreme Court clears the way for Trump mail voting order in advance of midterms",
-    "summary": "2026-08-25 dailynews.com: Supreme Court clears the way for Trump mail voting order in advance of midterms\n2026-08-25 presstelegram.com: Supreme Court clears the way for Trump mail voting order in advance of midterms\n2026-08-25 denverpost.com: Supreme Court clears the way for Trump mail voting order in advance of midterms\n2026-08-25 sbsun.com: Supreme Court clears the way for Trump mail voting order in advance of midterms\n2026-08-24 dailykos.com: Supreme Court clears the way for Trump mail voting order in advance of midterms",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_allows-court-implement",
     "source": "news",
-    "ts": 1787694542451,
+    "ts": 1787709943552,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.586,
+      "salience": 0.56,
       "articles": [
         {
           "title": "Supreme Court allows Trump to implement parts of order restricting mail voting",
@@ -24823,12 +24801,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_cheap-china-flooding",
     "source": "news",
-    "ts": 1787694542451,
+    "ts": 1787709943552,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.476,
+      "salience": 0.449,
       "articles": [
         {
           "title": "Trump moves toward levying new tariff on China for flooding market with cheap goods , AP sources say",
@@ -24866,12 +24844,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_alleged-believed-boat",
     "source": "news",
-    "ts": 1787694542451,
+    "ts": 1787709943552,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.462,
+      "salience": 0.435,
       "articles": [
         {
           "title": "US launches deadly strike on alleged drug boat , believed to be the first in 2 months",
