@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-26T20:15:40.617Z · 29 legislative + 7 news (GDELT, 3d)
+// 2026-08-27T00:55:47.842Z · 29 legislative + 8 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1787775287347,
+    "ts": 1787791959625,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.685,
+      "salience": 0.684,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,7 +259,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1787775287347,
+    "ts": 1787791959625,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1787775287346,
+    "ts": 1787791959624,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.647,
+      "salience": 0.646,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1787775287347,
+    "ts": 1787791959625,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.594,
+      "salience": 0.593,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3118,11 +3118,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1787775287347,
+    "ts": 1787791959624,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.575,
+      "salience": 0.574,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4520,11 +4520,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1787775287347,
+    "ts": 1787791959625,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
-      "salience": 0.575,
+      "salience": 0.574,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
       "votes": [
         {
@@ -4794,11 +4794,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1787775287347,
+    "ts": 1787791959625,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.561,
+      "salience": 0.56,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5065,11 +5065,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1787775287346,
+    "ts": 1787791959623,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.55,
+      "salience": 0.549,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6467,11 +6467,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1787775287346,
+    "ts": 1787791959623,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.545,
+      "salience": 0.544,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -7869,11 +7869,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1787775287347,
+    "ts": 1787791959625,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.539,
+      "salience": 0.538,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -8396,11 +8396,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1787775287347,
+    "ts": 1787791959624,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.498,
+      "salience": 0.497,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -9330,11 +9330,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1787775287347,
+    "ts": 1787791959625,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.497,
+      "salience": 0.496,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -9606,11 +9606,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1787775287346,
+    "ts": 1787791959624,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
-      "salience": 0.482,
+      "salience": 0.481,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2913",
       "votes": [
         {
@@ -10538,11 +10538,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1787775287347,
+    "ts": 1787791959625,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.481,
+      "salience": 0.48,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -10814,11 +10814,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1787775287347,
+    "ts": 1787791959624,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
-      "salience": 0.479,
+      "salience": 0.478,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8312",
       "votes": [
         {
@@ -11747,11 +11747,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1787775287347,
+    "ts": 1787791959624,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.459,
+      "salience": 0.458,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -12680,11 +12680,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1787775287347,
+    "ts": 1787791959625,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.448,
+      "salience": 0.447,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -13072,11 +13072,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1787775287347,
+    "ts": 1787791959625,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.34,
+      "salience": 0.339,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -14475,11 +14475,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1787775287347,
+    "ts": 1787791959625,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.283,
+      "salience": 0.282,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -15368,11 +15368,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1787775287347,
+    "ts": 1787791959625,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.276,
+      "salience": 0.275,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -16283,11 +16283,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1787775287347,
+    "ts": 1787791959625,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.269,
+      "salience": 0.268,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -17171,11 +17171,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1787775287347,
+    "ts": 1787791959625,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.265,
+      "salience": 0.264,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -18092,7 +18092,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1787775287347,
+    "ts": 1787791959625,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
@@ -19010,7 +19010,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1787775287347,
+    "ts": 1787791959624,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
@@ -19909,11 +19909,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1787775287346,
+    "ts": 1787791959623,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.165,
+      "salience": 0.164,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -20843,11 +20843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1787775287346,
+    "ts": 1787791959623,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
-      "salience": 0.091,
+      "salience": 0.09,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/254",
       "votes": [
         {
@@ -21772,11 +21772,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1787775287345,
+    "ts": 1787791959623,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
-      "salience": 0.088,
+      "salience": 0.087,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7618",
       "votes": [
         {
@@ -22681,11 +22681,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1787775287346,
+    "ts": 1787791959624,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
-      "salience": 0.083,
+      "salience": 0.082,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8466",
       "votes": [
         {
@@ -23556,11 +23556,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1787775287346,
+    "ts": 1787791959624,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
-      "salience": 0.083,
+      "salience": 0.082,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8428",
       "votes": [
         {
@@ -24438,15 +24438,128 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_court-mail-supreme",
+    "cid": "cand_news_blow-campaigning-data",
     "source": "news",
-    "ts": 1787775340608,
+    "ts": 1787792147835,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.92,
+      "salience": 0.996,
       "articles": [
+        {
+          "title": "New inflation data delivers blow to Republicans campaigning on economic strength",
+          "url": "https://wjla.com/news/nation-world/new-inflation-data-delivers-blow-to-republicans-campaigning-on-economic-strength-cpi-president-donald-trump",
+          "domain": "wjla.com",
+          "seendate": "2026-08-27T00:15:00Z",
+          "image": "https://wjla.com/resources/media2/16x9/6000/1320/0x313/90/e0685e00-50f4-4fa2-a38f-34b5ff2d2ade-GettyImages2291006892.jpg"
+        },
+        {
+          "title": "New inflation data delivers blow to Republicans campaigning on economic strength",
+          "url": "https://komonews.com/news/nation-world/new-inflation-data-delivers-blow-to-republicans-campaigning-on-economic-strength-cpi-president-donald-trump",
+          "domain": "komonews.com",
+          "seendate": "2026-08-27T00:00:00Z",
+          "image": "https://komonews.com/resources/media2/16x9/6000/1320/0x313/90/e0685e00-50f4-4fa2-a38f-34b5ff2d2ade-GettyImages2291006892.jpg"
+        },
+        {
+          "title": "New inflation data delivers blow to Republicans campaigning on economic strength",
+          "url": "https://wset.com/news/nation-world/new-inflation-data-delivers-blow-to-republicans-campaigning-on-economic-strength-cpi-president-donald-trump",
+          "domain": "wset.com",
+          "seendate": "2026-08-27T00:00:00Z",
+          "image": "https://wset.com/resources/media2/16x9/6000/1320/0x313/90/e0685e00-50f4-4fa2-a38f-34b5ff2d2ade-GettyImages2291006892.jpg"
+        },
+        {
+          "title": "New inflation data delivers blow to Republicans campaigning on economic strength",
+          "url": "https://kval.com/news/nation-world/new-inflation-data-delivers-blow-to-republicans-campaigning-on-economic-strength-cpi-president-donald-trump",
+          "domain": "kval.com",
+          "seendate": "2026-08-27T00:00:00Z",
+          "image": "https://kval.com/resources/media2/16x9/6000/1320/0x313/90/e0685e00-50f4-4fa2-a38f-34b5ff2d2ade-GettyImages2291006892.jpg"
+        },
+        {
+          "title": "New inflation data delivers blow to Republicans campaigning on economic strength",
+          "url": "https://katv.com/news/nation-world/new-inflation-data-delivers-blow-to-republicans-campaigning-on-economic-strength-cpi-president-donald-trump",
+          "domain": "katv.com",
+          "seendate": "2026-08-26T23:30:00Z",
+          "image": "https://katv.com/resources/media2/16x9/6000/1320/0x313/90/e0685e00-50f4-4fa2-a38f-34b5ff2d2ade-GettyImages2291006892.jpg"
+        },
+        {
+          "title": "New inflation data delivers blow to Republicans campaigning on economic strength",
+          "url": "https://wlos.com/news/nation-world/new-inflation-data-delivers-blow-to-republicans-campaigning-on-economic-strength-cpi-president-donald-trump",
+          "domain": "wlos.com",
+          "seendate": "2026-08-26T23:15:00Z",
+          "image": "https://wlos.com/resources/media2/16x9/6000/1320/0x313/90/e0685e00-50f4-4fa2-a38f-34b5ff2d2ade-GettyImages2291006892.jpg"
+        },
+        {
+          "title": "New inflation data delivers blow to Republicans campaigning on economic strength",
+          "url": "https://wwmt.com/news/nation-world/new-inflation-data-delivers-blow-to-republicans-campaigning-on-economic-strength-cpi-president-donald-trump",
+          "domain": "wwmt.com",
+          "seendate": "2026-08-26T23:15:00Z",
+          "image": "https://wwmt.com/resources/media2/16x9/6000/1320/0x313/90/e0685e00-50f4-4fa2-a38f-34b5ff2d2ade-GettyImages2291006892.jpg"
+        },
+        {
+          "title": "New inflation data delivers blow to Republicans campaigning on economic strength",
+          "url": "https://fox23.com/news/nation-world/new-inflation-data-delivers-blow-to-republicans-campaigning-on-economic-strength-cpi-president-donald-trump",
+          "domain": "fox23.com",
+          "seendate": "2026-08-26T23:15:00Z",
+          "image": "https://fox23.com/resources/media2/16x9/6000/1320/0x313/90/e0685e00-50f4-4fa2-a38f-34b5ff2d2ade-GettyImages2291006892.jpg"
+        },
+        {
+          "title": "New inflation data delivers blow to Republicans campaigning on economic strength",
+          "url": "https://fox17.com/news/nation-world/new-inflation-data-delivers-blow-to-republicans-campaigning-on-economic-strength-cpi-president-donald-trump",
+          "domain": "fox17.com",
+          "seendate": "2026-08-26T23:15:00Z",
+          "image": "https://fox17.com/resources/media2/16x9/6000/1320/0x313/90/e0685e00-50f4-4fa2-a38f-34b5ff2d2ade-GettyImages2291006892.jpg"
+        },
+        {
+          "title": "New inflation data delivers blow to Republicans campaigning on economic strength",
+          "url": "https://bakersfieldnow.com/news/nation-world/new-inflation-data-delivers-blow-to-republicans-campaigning-on-economic-strength-cpi-president-donald-trump",
+          "domain": "bakersfieldnow.com",
+          "seendate": "2026-08-26T23:15:00Z",
+          "image": "https://bakersfieldnow.com/resources/media2/16x9/6000/1320/0x313/90/e0685e00-50f4-4fa2-a38f-34b5ff2d2ade-GettyImages2291006892.jpg"
+        },
+        {
+          "title": "New inflation data delivers blow to Republicans campaigning on economic strength",
+          "url": "https://ktul.com/news/nation-world/new-inflation-data-delivers-blow-to-republicans-campaigning-on-economic-strength-cpi-president-donald-trump",
+          "domain": "ktul.com",
+          "seendate": "2026-08-26T22:45:00Z",
+          "image": "https://ktul.com/resources/media2/16x9/6000/1320/0x313/90/e0685e00-50f4-4fa2-a38f-34b5ff2d2ade-GettyImages2291006892.jpg"
+        },
+        {
+          "title": "New inflation data delivers blow to Republicans campaigning on economic strength",
+          "url": "https://katu.com/news/nation-world/new-inflation-data-delivers-blow-to-republicans-campaigning-on-economic-strength-cpi-president-donald-trump",
+          "domain": "katu.com",
+          "seendate": "2026-08-26T22:30:00Z",
+          "image": "https://katu.com/resources/media2/16x9/6000/1320/0x313/90/e0685e00-50f4-4fa2-a38f-34b5ff2d2ade-GettyImages2291006892.jpg"
+        }
+      ]
+    },
+    "title": "New inflation data delivers blow to Republicans campaigning on economic strength",
+    "summary": "2026-08-27 wjla.com: New inflation data delivers blow to Republicans campaigning on economic strength\n2026-08-27 komonews.com: New inflation data delivers blow to Republicans campaigning on economic strength\n2026-08-27 wset.com: New inflation data delivers blow to Republicans campaigning on economic strength\n2026-08-27 kval.com: New inflation data delivers blow to Republicans campaigning on economic strength\n2026-08-26 katv.com: New inflation data delivers blow to Republicans campaigning on economic strength\n2026-08-26 wlos.com: New inflation data delivers blow to Republicans campaigning on economic strength",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_court-mail-supreme",
+    "source": "news",
+    "ts": 1787792147834,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.991,
+      "articles": [
+        {
+          "title": "Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms",
+          "url": "https://americanpress.com/2026/08/25/supreme-court-sides-with-trump-administration-on-mail-voting-restrictions-ahead-of-midterms/",
+          "domain": "americanpress.com",
+          "seendate": "2026-08-26T23:30:00Z",
+          "image": "https://americanpress.com/wp-content/uploads/sites/65/2022/01/Supreme-Court.jpg"
+        },
         {
           "title": "Supreme Court clears the way for Trump mail voting order in advance of midterms",
           "url": "https://www.paradisepost.com/2026/08/24/supreme-court-trump-mail-voting/",
@@ -24523,18 +24636,11 @@ window.PRISM_CANDIDATES = [
           "domain": "presstelegram.com",
           "seendate": "2026-08-25T01:45:00Z",
           "image": "https://www.presstelegram.com/wp-content/uploads/2026/08/AP26230767195568.jpg"
-        },
-        {
-          "title": "Supreme Court clears the way for Trump mail voting order in advance of midterms",
-          "url": "https://www.denverpost.com/2026/08/24/supreme-court-trump-mail-voting/",
-          "domain": "denverpost.com",
-          "seendate": "2026-08-25T01:45:00Z",
-          "image": "https://www.denverpost.com/wp-content/uploads/2026/08/AP26230767195568.jpg"
         }
       ]
     },
     "title": "Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms",
-    "summary": "2026-08-26 paradisepost.com: Supreme Court clears the way for Trump mail voting order in advance of midterms\n2026-08-26 miamitimesonline.com: Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms\n2026-08-25 ksla.com: Supreme Court clears way for Trump to restrict mail - in voting ahead of midterms\n2026-08-25 union-bulletin.com: Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms\n2026-08-25 statecollege.com: Supreme Court Sides With Trump Administration on Mail Voting Restrictions Ahead of Midterms\n2026-08-25 ironmountaindailynews.com: Supreme Court sides with Trump administration on mail voting restrictions",
+    "summary": "2026-08-26 americanpress.com: Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms\n2026-08-26 paradisepost.com: Supreme Court clears the way for Trump mail voting order in advance of midterms\n2026-08-26 miamitimesonline.com: Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms\n2026-08-25 ksla.com: Supreme Court clears way for Trump to restrict mail - in voting ahead of midterms\n2026-08-25 union-bulletin.com: Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms\n2026-08-25 statecollege.com: Supreme Court Sides With Trump Administration on Mail Voting Restrictions Ahead of Midterms",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -24546,13 +24652,20 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_block-file-lawsuit",
     "source": "news",
-    "ts": 1787775340609,
+    "ts": 1787792147835,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.764,
+      "salience": 0.804,
       "articles": [
+        {
+          "title": "Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms",
+          "url": "https://abc30.com/story/democratic-states-file-new-lawsuit-seeking-block-trumps-order-limiting-mail-voting-midterms/19739342/",
+          "domain": "abc30.com",
+          "seendate": "2026-08-26T20:00:00Z",
+          "image": "https://cdn.abcotvs.com/dip/images/19739404_082626-ap-usps-mail-voting-img.png"
+        },
         {
           "title": "Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms",
           "url": "https://abc7ny.com/story/democratic-states-file-new-lawsuit-seeking-block-trumps-order-limiting-mail-voting-midterms/19739342/",
@@ -24598,7 +24711,171 @@ window.PRISM_CANDIDATES = [
       ]
     },
     "title": "Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms",
-    "summary": "2026-08-26 abc7ny.com: Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms\n2026-08-26 abc13.com: Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms\n2026-08-26 wgbh.org: Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms\n2026-08-26 thegazette.com: Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms | National news coverage\n2026-08-26 sandiegouniontribune.com: States file lawsuit seeking to block Trump order limiting mail voting\n2026-08-26 courant.com: States file lawsuit seeking to block Trump order limiting mail voting",
+    "summary": "2026-08-26 abc30.com: Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms\n2026-08-26 abc7ny.com: Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms\n2026-08-26 abc13.com: Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms\n2026-08-26 wgbh.org: Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms\n2026-08-26 thegazette.com: Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms | National news coverage\n2026-08-26 sandiegouniontribune.com: States file lawsuit seeking to block Trump order limiting mail voting",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_before-challenge-file",
+    "source": "news",
+    "ts": 1787792147834,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.716,
+      "articles": [
+        {
+          "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
+          "url": "https://www.wdio.com/ap-top-news/ap-top-news-us-headlines-ap-top-news/judge-removes-one-hurdle-for-trump-mail-voting-order-as-states-file-new-challenge-before-midterms/",
+          "domain": "wdio.com",
+          "seendate": "2026-08-26T23:30:00Z",
+          "image": "https://www.wdio.com/wp-content/uploads/apimg/2026/08/Supreme_Court_Trump_Elections_24836.jpg"
+        },
+        {
+          "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
+          "url": "https://www.ksat.com/news/politics/2026/08/26/democratic-states-file-new-lawsuit-seeking-to-block-trumps-order-limiting-mail-voting-in-midterms/",
+          "domain": "ksat.com",
+          "seendate": "2026-08-26T19:15:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/67NGIDDMIFBCBGQWAAUOIQE7AI.jpg?_a=DATAg1kSZAA0"
+        },
+        {
+          "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
+          "url": "https://www.nvdaily.com/associated_press_national/judge-removes-one-hurdle-for-trump-mail-voting-order-as-states-file-new-challenge-before/article_180c2890-1eab-5395-8a92-273e1ac97c5c.html",
+          "domain": "nvdaily.com",
+          "seendate": "2026-08-26T19:15:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/nvdaily.com/content/tncms/assets/v3/editorial/5/7c/57c4292e-22f4-55dd-835a-365e1f05c1dc/6a8dcebd879cb.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
+        {
+          "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
+          "url": "http://www.idahopress.com/ap_news/us/judge-removes-one-hurdle-for-trump-mail-voting-order-as-states-file-new-challenge-before/article_b77bc8a9-a419-5337-a7f0-a7fadf7d3c49.html",
+          "domain": "idahopress.com",
+          "seendate": "2026-08-26T19:00:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/idahopress.com/content/tncms/assets/v3/editorial/9/51/9515bcdd-aedd-5472-9cec-9aa32610d00b/6a84d0085f716.image.jpg?crop=1763%2C926%2C0%2C125"
+        },
+        {
+          "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
+          "url": "https://www.news4jax.com/news/politics/2026/08/26/democratic-states-file-new-lawsuit-seeking-to-block-trumps-order-limiting-mail-voting-in-midterms/",
+          "domain": "news4jax.com",
+          "seendate": "2026-08-26T18:30:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/67NGIDDMIFBCBGQWAAUOIQE7AI.jpg?_a=DATAg1kSZAA0"
+        }
+      ]
+    },
+    "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
+    "summary": "2026-08-26 wdio.com: Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms\n2026-08-26 ksat.com: Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms\n2026-08-26 nvdaily.com: Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms\n2026-08-26 idahopress.com: Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms\n2026-08-26 news4jax.com: Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_federal-judge-legal",
+    "source": "news",
+    "ts": 1787792147834,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.702,
+      "articles": [
+        {
+          "title": "Boston federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely",
+          "url": "https://www.wbur.org/news/2026/08/26/boston-judge-mail-voting-obstical-scotus",
+          "domain": "wbur.org",
+          "seendate": "2026-08-26T21:15:00Z",
+          "image": "https://media.wbur.org/wp/2026/08/Election_2026_Florida_26230766602771-1000x666.jpg"
+        },
+        {
+          "title": "Federal judge removes major legal obstacle to Trump mail voting order",
+          "url": "https://www.mcall.com/2026/08/26/trump-mail-voting-lawsuit/",
+          "domain": "mcall.com",
+          "seendate": "2026-08-26T21:00:00Z",
+          "image": "https://www.mcall.com/wp-content/uploads/2026/08/AP26230767195568_28f17e.jpg"
+        },
+        {
+          "title": "Federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely",
+          "url": "https://www.wsls.com/news/politics/2026/08/26/democratic-states-file-new-lawsuit-seeking-to-block-trumps-order-limiting-mail-voting-in-midterms/",
+          "domain": "wsls.com",
+          "seendate": "2026-08-26T17:30:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/67NGIDDMIFBCBGQWAAUOIQE7AI.jpg?_a=DATAg1kSZAA0"
+        },
+        {
+          "title": "Federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely",
+          "url": "https://www.durangoherald.com/articles/associated-press/democratic-states-file-new-lawsuit-seeking-to-block-trumps-order-limiting-mail-voting-in-midterms/",
+          "domain": "durangoherald.com",
+          "seendate": "2026-08-26T17:15:00Z",
+          "image": "https://imengine.public.prod.dur.navigacloud.com/?uuid=F22244DF-89F9-5DFB-99B2-5E08E31EFB54&function=cover&type=preview&source=false"
+        },
+        {
+          "title": "Federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely",
+          "url": "http://www.dailyadvance.com/news/national/federal-judge-removes-major-legal-obstacle-to-trump-mail-voting-order-with-more-challenges-likely/article_8958c29b-fa5d-56ec-ac14-18d3afee2d23.html",
+          "domain": "dailyadvance.com",
+          "seendate": "2026-08-26T17:15:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/dailyadvance.com/content/tncms/assets/v3/editorial/1/af/1af4edb1-922d-5871-bb36-4eb043d36576/6a84ecb9729b9.image.jpg?crop=1763%2C926%2C0%2C125"
+        }
+      ]
+    },
+    "title": "Federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely",
+    "summary": "2026-08-26 wbur.org: Boston federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely\n2026-08-26 mcall.com: Federal judge removes major legal obstacle to Trump mail voting order\n2026-08-26 wsls.com: Federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely\n2026-08-26 durangoherald.com: Federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely\n2026-08-26 dailyadvance.com: Federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_bannon-case-contempt",
+    "source": "news",
+    "ts": 1787792147834,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.664,
+      "articles": [
+        {
+          "title": "Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case",
+          "url": "https://www.kxl.com/judge-for-now-refuses-to-dismiss-steve-bannons-conviction-in-contempt-of-congress-case/",
+          "domain": "kxl.com",
+          "seendate": "2026-08-27T00:00:00Z",
+          "image": "https://mapi.associatedpress.com/v2/items/92bef51edc8d41338c2ea7e788f584d8.0/preview/preview.jpg?nfe=true&wm=false&app=MPK&tag=tag%3Dact%7E%3Arss%21orgId%7E66880%21iid%7E92bef51edc8d41338c2ea7e788f584d8%21qt%7E1mW9cj_GWdR&icb=1787785058"
+        },
+        {
+          "title": "Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case",
+          "url": "https://www.clickorlando.com/news/politics/2026/08/26/judge-for-now-refuses-to-dismiss-steve-bannons-conviction-in-contempt-of-congress-case/",
+          "domain": "clickorlando.com",
+          "seendate": "2026-08-26T23:30:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/GGCV5NXSBBGJJEM2LG4CAZUEWY.jpg?_a=DATAg1kSZAA0"
+        },
+        {
+          "title": "Judge refuses to dismiss Steve Bannon contempt conviction case",
+          "url": "https://www.wokv.com/news/politics/judge-now-refuses/64VJ6BZASM3HBHSSKPBFFZRYEQ/",
+          "domain": "wokv.com",
+          "seendate": "2026-08-26T23:30:00Z",
+          "image": "https://cmg-cmg-rd-20056-prod.cdn.arcpublishing.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-1.images.arcpublishing.com%2Fcmg%2F2H35UHIKFI3EBM4IDBZND26OEY.jpg?auth=ed3a5a5ba0cecb51d381455232ef067eeb9f51b55c7c078e23c768cc0f1d115f&smart=true"
+        },
+        {
+          "title": "Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case",
+          "url": "https://www.wsls.com/news/politics/2026/08/26/judge-for-now-refuses-to-dismiss-steve-bannons-conviction-in-contempt-of-congress-case/",
+          "domain": "wsls.com",
+          "seendate": "2026-08-26T22:30:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/GGCV5NXSBBGJJEM2LG4CAZUEWY.jpg?_a=DATAg1kSZAA0"
+        }
+      ]
+    },
+    "title": "Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case",
+    "summary": "2026-08-27 kxl.com: Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case\n2026-08-26 clickorlando.com: Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case\n2026-08-26 wokv.com: Judge refuses to dismiss Steve Bannon contempt conviction case\n2026-08-26 wsls.com: Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -24610,12 +24887,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_democratic-jared-jeffries",
     "source": "news",
-    "ts": 1787775340608,
+    "ts": 1787792147835,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.68,
+      "salience": 0.65,
       "articles": [
         {
           "title": "Jared Kushner meets with Democratic leader Hakeem Jeffries",
@@ -24714,107 +24991,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_before-challenge-file",
-    "source": "news",
-    "ts": 1787775340608,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.664,
-      "articles": [
-        {
-          "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
-          "url": "https://www.ksat.com/news/politics/2026/08/26/democratic-states-file-new-lawsuit-seeking-to-block-trumps-order-limiting-mail-voting-in-midterms/",
-          "domain": "ksat.com",
-          "seendate": "2026-08-26T19:15:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/67NGIDDMIFBCBGQWAAUOIQE7AI.jpg?_a=DATAg1kSZAA0"
-        },
-        {
-          "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
-          "url": "https://www.nvdaily.com/associated_press_national/judge-removes-one-hurdle-for-trump-mail-voting-order-as-states-file-new-challenge-before/article_180c2890-1eab-5395-8a92-273e1ac97c5c.html",
-          "domain": "nvdaily.com",
-          "seendate": "2026-08-26T19:15:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/nvdaily.com/content/tncms/assets/v3/editorial/5/7c/57c4292e-22f4-55dd-835a-365e1f05c1dc/6a8dcebd879cb.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
-          "url": "http://www.idahopress.com/ap_news/us/judge-removes-one-hurdle-for-trump-mail-voting-order-as-states-file-new-challenge-before/article_b77bc8a9-a419-5337-a7f0-a7fadf7d3c49.html",
-          "domain": "idahopress.com",
-          "seendate": "2026-08-26T19:00:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/idahopress.com/content/tncms/assets/v3/editorial/9/51/9515bcdd-aedd-5472-9cec-9aa32610d00b/6a84d0085f716.image.jpg?crop=1763%2C926%2C0%2C125"
-        },
-        {
-          "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
-          "url": "https://www.news4jax.com/news/politics/2026/08/26/democratic-states-file-new-lawsuit-seeking-to-block-trumps-order-limiting-mail-voting-in-midterms/",
-          "domain": "news4jax.com",
-          "seendate": "2026-08-26T18:30:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/67NGIDDMIFBCBGQWAAUOIQE7AI.jpg?_a=DATAg1kSZAA0"
-        }
-      ]
-    },
-    "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
-    "summary": "2026-08-26 ksat.com: Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms\n2026-08-26 nvdaily.com: Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms\n2026-08-26 idahopress.com: Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms\n2026-08-26 news4jax.com: Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_challenges-federal-judge",
-    "source": "news",
-    "ts": 1787775340609,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.598,
-      "articles": [
-        {
-          "title": "Federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely",
-          "url": "https://www.wsls.com/news/politics/2026/08/26/democratic-states-file-new-lawsuit-seeking-to-block-trumps-order-limiting-mail-voting-in-midterms/",
-          "domain": "wsls.com",
-          "seendate": "2026-08-26T17:30:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/67NGIDDMIFBCBGQWAAUOIQE7AI.jpg?_a=DATAg1kSZAA0"
-        },
-        {
-          "title": "Federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely",
-          "url": "https://www.durangoherald.com/articles/associated-press/democratic-states-file-new-lawsuit-seeking-to-block-trumps-order-limiting-mail-voting-in-midterms/",
-          "domain": "durangoherald.com",
-          "seendate": "2026-08-26T17:15:00Z",
-          "image": "https://imengine.public.prod.dur.navigacloud.com/?uuid=F22244DF-89F9-5DFB-99B2-5E08E31EFB54&function=cover&type=preview&source=false"
-        },
-        {
-          "title": "Federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely",
-          "url": "http://www.dailyadvance.com/news/national/federal-judge-removes-major-legal-obstacle-to-trump-mail-voting-order-with-more-challenges-likely/article_8958c29b-fa5d-56ec-ac14-18d3afee2d23.html",
-          "domain": "dailyadvance.com",
-          "seendate": "2026-08-26T17:15:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/dailyadvance.com/content/tncms/assets/v3/editorial/1/af/1af4edb1-922d-5871-bb36-4eb043d36576/6a84ecb9729b9.image.jpg?crop=1763%2C926%2C0%2C125"
-        }
-      ]
-    },
-    "title": "Federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely",
-    "summary": "2026-08-26 wsls.com: Federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely\n2026-08-26 durangoherald.com: Federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely\n2026-08-26 dailyadvance.com: Federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_cheap-china-flooding",
     "source": "news",
-    "ts": 1787775340609,
+    "ts": 1787792147835,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.335,
+      "salience": 0.306,
       "articles": [
         {
           "title": "Trump moves toward levying new tariff on China for flooding market with cheap goods , AP sources say",
@@ -24841,56 +25025,6 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Trump moves toward levying new tariff on China for flooding market with cheap goods , AP sources say",
     "summary": "2026-08-24 clickondetroit.com: Trump moves toward levying new tariff on China for flooding market with cheap goods , AP sources say\n2026-08-24 wsls.com: Trump moves toward levying new tariff on China for flooding market with cheap goods , AP sources say\n2026-08-24 clickorlando.com: Trump moves toward levying new tariff on China for flooding market with cheap goods , AP sources say",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_alleged-believed-boat",
-    "source": "news",
-    "ts": 1787775340609,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.321,
-      "articles": [
-        {
-          "title": "US launches deadly strike on alleged drug boat , believed to be the first in 2 months",
-          "url": "https://www.wmur.com/article/us-pacific-boat-strike-thought-first-in-two-months/73507328",
-          "domain": "wmur.com",
-          "seendate": "2026-08-24T12:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/34c86fde-ebdc-4f64-857c-e90e43bae58b.png?crop=1.00xw%3A0.994xh%3B0%2C0"
-        },
-        {
-          "title": "US launches deadly strike on alleged drug boat , believed to be the first in two months",
-          "url": "https://us.cnn.com/2026/08/24/politics/us-military-strike-alleged-drug-boat-intl-hnk",
-          "domain": "us.cnn.com",
-          "seendate": "2026-08-24T12:00:00Z",
-          "image": "https://media.cnn.com/api/v1/images/stellar/prod/56352997-01157726-generated-thumbnail.jpg?c=16x9&q=w_800,c_fill"
-        },
-        {
-          "title": "US launches deadly strike on alleged drug boat , believed to be the first in 2 months",
-          "url": "https://www.wbaltv.com/article/us-pacific-boat-strike-thought-first-in-two-months/73507328",
-          "domain": "wbaltv.com",
-          "seendate": "2026-08-24T10:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/34c86fde-ebdc-4f64-857c-e90e43bae58b.png?crop=1.00xw%3A0.994xh%3B0%2C0"
-        },
-        {
-          "title": "US launches deadly strike on alleged drug boat , believed to be the first in 2 months",
-          "url": "https://www.wesh.com/article/us-pacific-boat-strike-thought-first-in-two-months/73507328",
-          "domain": "wesh.com",
-          "seendate": "2026-08-24T10:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/34c86fde-ebdc-4f64-857c-e90e43bae58b.png?crop=1.00xw%3A0.994xh%3B0%2C0"
-        }
-      ]
-    },
-    "title": "US launches deadly strike on alleged drug boat , believed to be the first in 2 months",
-    "summary": "2026-08-24 wmur.com: US launches deadly strike on alleged drug boat , believed to be the first in 2 months\n2026-08-24 us.cnn.com: US launches deadly strike on alleged drug boat , believed to be the first in two months\n2026-08-24 wbaltv.com: US launches deadly strike on alleged drug boat , believed to be the first in 2 months\n2026-08-24 wesh.com: US launches deadly strike on alleged drug boat , believed to be the first in 2 months",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
