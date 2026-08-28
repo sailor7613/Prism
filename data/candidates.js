@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-28T00:27:43.119Z · 29 legislative + 10 news (GDELT, 3d)
+// 2026-08-28T15:30:59.425Z · 29 legislative + 14 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1787876842014,
+    "ts": 1787931001006,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.68,
+      "salience": 0.677,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,11 +259,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1787876842014,
+    "ts": 1787931001006,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.671,
+      "salience": 0.668,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1787876842013,
+    "ts": 1787931001006,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.642,
+      "salience": 0.639,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1787876842014,
+    "ts": 1787931001006,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.589,
+      "salience": 0.586,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3118,11 +3118,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1787876842014,
+    "ts": 1787931001006,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.57,
+      "salience": 0.567,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4520,11 +4520,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1787876842014,
+    "ts": 1787931001006,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
-      "salience": 0.57,
+      "salience": 0.567,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
       "votes": [
         {
@@ -4794,11 +4794,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1787876842014,
+    "ts": 1787931001006,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.556,
+      "salience": 0.553,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5065,11 +5065,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1787876842013,
+    "ts": 1787931001005,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.545,
+      "salience": 0.542,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6467,11 +6467,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1787876842013,
+    "ts": 1787931001005,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.54,
+      "salience": 0.537,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -7869,11 +7869,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1787876842014,
+    "ts": 1787931001006,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.534,
+      "salience": 0.531,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -8396,11 +8396,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1787876842013,
+    "ts": 1787931001006,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.493,
+      "salience": 0.49,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -9330,11 +9330,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1787876842014,
+    "ts": 1787931001006,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.492,
+      "salience": 0.489,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -9606,11 +9606,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1787876842013,
+    "ts": 1787931001005,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
-      "salience": 0.476,
+      "salience": 0.474,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2913",
       "votes": [
         {
@@ -10538,11 +10538,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1787876842014,
+    "ts": 1787931001006,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.476,
+      "salience": 0.473,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -10814,11 +10814,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1787876842014,
+    "ts": 1787931001006,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
-      "salience": 0.473,
+      "salience": 0.471,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8312",
       "votes": [
         {
@@ -11747,11 +11747,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1787876842013,
+    "ts": 1787931001006,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.454,
+      "salience": 0.451,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -12680,11 +12680,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1787876842014,
+    "ts": 1787931001007,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.443,
+      "salience": 0.44,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -13072,11 +13072,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1787876842014,
+    "ts": 1787931001006,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.335,
+      "salience": 0.332,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -14475,11 +14475,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1787876842014,
+    "ts": 1787931001006,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.278,
+      "salience": 0.275,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -15368,11 +15368,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1787876842014,
+    "ts": 1787931001006,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.271,
+      "salience": 0.268,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -16283,11 +16283,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1787876842014,
+    "ts": 1787931001006,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.264,
+      "salience": 0.261,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -17171,11 +17171,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1787876842014,
+    "ts": 1787931001006,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.26,
+      "salience": 0.257,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -18092,11 +18092,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1787876842014,
+    "ts": 1787931001006,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.248,
+      "salience": 0.245,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -19010,11 +19010,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1787876842014,
+    "ts": 1787931001006,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.188,
+      "salience": 0.185,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -19909,11 +19909,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1787876842013,
+    "ts": 1787931001005,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.16,
+      "salience": 0.157,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -20843,11 +20843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1787876842013,
+    "ts": 1787931001005,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
-      "salience": 0.085,
+      "salience": 0.083,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/254",
       "votes": [
         {
@@ -21772,11 +21772,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1787876842012,
+    "ts": 1787931001005,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
-      "salience": 0.083,
+      "salience": 0.08,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7618",
       "votes": [
         {
@@ -22681,11 +22681,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1787876842013,
+    "ts": 1787931001005,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
-      "salience": 0.077,
+      "salience": 0.075,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8466",
       "votes": [
         {
@@ -23556,11 +23556,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1787876842013,
+    "ts": 1787931001005,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
-      "salience": 0.077,
+      "salience": 0.075,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8428",
       "votes": [
         {
@@ -24438,14 +24438,120 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_bannon-contempt-conviction",
+    "cid": "cand_news_again-ballot-blocks",
     "source": "news",
-    "ts": 1787876863111,
+    "ts": 1787931059418,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.988,
+      "salience": 0.975,
+      "articles": [
+        {
+          "title": "Judge again blocks Trump mail ballot executive order in ruling",
+          "url": "https://www.baltimoresun.com/2026/08/28/judge-blocks-trump-mail-ballot-executive-order/",
+          "domain": "baltimoresun.com",
+          "seendate": "2026-08-28T11:30:00Z",
+          "image": "https://www.baltimoresun.com/wp-content/uploads/2026/08/Election_2_26_Florida__2771_711654.jpg"
+        },
+        {
+          "title": "Judge again blocks Trump mail ballot executive order",
+          "url": "https://www.cnbc.com/2026/08/28/judge-again-blocks-trump-mail-ballot-executive-order.html",
+          "domain": "cnbc.com",
+          "seendate": "2026-08-28T11:15:00Z",
+          "image": "https://image.cnbcfm.com/api/v1/image/108035462-1726599850257-gettyimages-2171843766-sept-17-voting-asj011.jpeg?v=1726600019"
+        },
+        {
+          "title": "Judge again blocks Trump mail ballot executive order in ruling",
+          "url": "https://www.whec.com/top-news/judge-again-blocks-trump-mail-ballot-executive-order-in-ruling-likely-to-be-appealed/",
+          "domain": "whec.com",
+          "seendate": "2026-08-28T11:15:00Z",
+          "image": "https://www.whec.com/wp-content/uploads/2026/08/Mail-in-ballots-file-photo.png"
+        },
+        {
+          "title": "Judge again blocks Trump mail ballot executive order in ruling that likely to be swiftly appealed | National",
+          "url": "http://www.idahostatejournal.com/news/national/judge-again-blocks-trump-mail-ballot-executive-order-in-ruling-that-s-likely-to-be/article_cfe81468-643f-5b75-861f-eedc0285f9c7.html",
+          "domain": "idahostatejournal.com",
+          "seendate": "2026-08-28T07:30:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/idahostatejournal.com/content/tncms/assets/v3/editorial/d/ff/dffef3df-9e29-5ee4-aa75-12e2d1826f2c/6a84d0853a1cc.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
+        {
+          "title": "Judge again blocks Trump mail ballot executive order in ruling that likely to be swiftly appealed",
+          "url": "https://www.latimes.com/world-nation/story/2026-08-27/judge-again-blocks-trump-mail-ballot-executive-order-in-ruling-thats-likely-to-be-swiftly-appealed",
+          "domain": "latimes.com",
+          "seendate": "2026-08-28T06:00:00Z",
+          "image": "https://california-times-brightspot.s3.amazonaws.com/ae/8b/94af0448463886904d7398278ab8/cea7a79b66b34367b13139f56a4318dd.jpg"
+        },
+        {
+          "title": "Judge again blocks Trump mail ballot executive order in ruling that likely to be swiftly appealed",
+          "url": "https://abcnews.com/Politics/wireStory/judge-blocks-trump-mail-ballot-executive-order-ruling-136019938",
+          "domain": "abcnews.com",
+          "seendate": "2026-08-28T06:00:00Z",
+          "image": "https://i.abcnewsfe.com/a/ed42ddc0-5176-4a0a-91bc-a9a55ba3f1e4/wirestory_15cf1ec7dcdb8211bf6b624b75a7f4ab_16x9.jpg"
+        },
+        {
+          "title": "Judge again blocks Trump mail ballot executive order in ruling that likely to be swiftly appealed",
+          "url": "https://www.clickorlando.com/news/politics/2026/08/28/judge-again-blocks-trump-mail-ballot-executive-order-in-ruling-thats-likely-to-be-swiftly-appealed/",
+          "domain": "clickorlando.com",
+          "seendate": "2026-08-28T05:30:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/45X4GGIP3FFBZCBE3DGCXFJRAE.jpg?_a=DATAg1kSZAA0"
+        },
+        {
+          "title": "Federal judge again blocks Trump mail ballot executive order",
+          "url": "https://www.actionnewsjax.com/news/politics/judge-again-blocks/SMGM2DDVBA7ARFVPNIUJ7SZDXE/",
+          "domain": "actionnewsjax.com",
+          "seendate": "2026-08-28T05:30:00Z",
+          "image": "https://cmg-cmg-tv-10050-prod.cdn.arcpublishing.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-1.images.arcpublishing.com%2Fcmg%2FE3XDJMH2LY2TJPBYPTASS5PXKE.jpg?auth=bbe4629e4875b1becf688e356d5b80d9c9511d8a064555a615ad8b47eaf8f23b&smart=true"
+        },
+        {
+          "title": "Judge again blocks Trump mail ballot executive order in ruling that likely to be swiftly appealed",
+          "url": "https://www.ksl.com:443/article/51617168/judge-again-blocks-trump-mail-ballot-executive-order-in-ruling-thats-likely-to-be-swiftly-appealed",
+          "domain": "ksl.com",
+          "seendate": "2026-08-28T04:30:00Z",
+          "image": "https://img.ksl.com/slc/3199/319966/31996684.jpg?filter=kslv2/responsive_story_lg"
+        },
+        {
+          "title": "Judge again blocks Trump mail ballot executive order in ruling that likely to be swiftly appealed",
+          "url": "https://www.ky3.com/2026/08/28/judge-again-blocks-trump-mail-ballot-executive-order-ruling-thats-likely-be-swiftly-appealed/",
+          "domain": "ky3.com",
+          "seendate": "2026-08-28T04:30:00Z",
+          "image": "https://gray-ky3-prod.gtv-cdn.com/resizer/v2/7OPN7GV6WBGGPEH7OYTYNISHDE.jpg?auth=8b85768101c4b9275f0b90bab66cb5f0fe9e3135d1645cfe9108a880f164e368&smart=true"
+        },
+        {
+          "title": "Judge again blocks Trump mail ballot executive order in ruling that likely to be swiftly appealed",
+          "url": "https://www.clickondetroit.com/news/politics/2026/08/28/judge-again-blocks-trump-mail-ballot-executive-order-in-ruling-thats-likely-to-be-swiftly-appealed/",
+          "domain": "clickondetroit.com",
+          "seendate": "2026-08-28T02:45:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/45X4GGIP3FFBZCBE3DGCXFJRAE.jpg?_a=DATAg1kSZAA0"
+        },
+        {
+          "title": "Federal judge again blocks Trump mail ballot executive order - WSB - TV Channel 2",
+          "url": "https://www.wsbtv.com/news/politics/judge-again-blocks/SMGM2DDVBA7ARFVPNIUJ7SZDXE/",
+          "domain": "wsbtv.com",
+          "seendate": "2026-08-28T02:45:00Z",
+          "image": "https://cmg-cmg-tv-10010-prod.cdn.arcpublishing.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-1.images.arcpublishing.com%2Fcmg%2FE3XDJMH2LY2TJPBYPTASS5PXKE.jpg?auth=bbe4629e4875b1becf688e356d5b80d9c9511d8a064555a615ad8b47eaf8f23b&smart=true"
+        }
+      ]
+    },
+    "title": "Judge again blocks Trump mail ballot executive order in ruling that likely to be swiftly appealed",
+    "summary": "2026-08-28 baltimoresun.com: Judge again blocks Trump mail ballot executive order in ruling\n2026-08-28 cnbc.com: Judge again blocks Trump mail ballot executive order\n2026-08-28 whec.com: Judge again blocks Trump mail ballot executive order in ruling\n2026-08-28 idahostatejournal.com: Judge again blocks Trump mail ballot executive order in ruling that likely to be swiftly appealed | National\n2026-08-28 latimes.com: Judge again blocks Trump mail ballot executive order in ruling that likely to be swiftly appealed\n2026-08-28 abcnews.com: Judge again blocks Trump mail ballot executive order in ruling that likely to be swiftly appealed",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_bannon-contempt-conviction",
+    "source": "news",
+    "ts": 1787931059416,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.894,
       "articles": [
         {
           "title": "Judge declines to dismiss Steve Bannon criminal contempt conviction – Connect FM | Local News Radio",
@@ -24532,12 +24638,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_direct-helped-next",
     "source": "news",
-    "ts": 1787876863112,
+    "ts": 1787931059418,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.988,
+      "salience": 0.894,
       "articles": [
         {
           "title": "Zelenskyy Direct Plea Helped Unlock Russia Sanctions In The Senate . What Next Is Uncertain – The Yeshiva World",
@@ -24631,12 +24737,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_cook-fed-fire",
     "source": "news",
-    "ts": 1787876863112,
+    "ts": 1787931059417,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.874,
+      "salience": 0.78,
       "articles": [
         {
           "title": "Fed governor Lisa Cook slams Trump renewed threat to fire her",
@@ -24737,12 +24843,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_blow-campaigning-data",
     "source": "news",
-    "ts": 1787876863113,
+    "ts": 1787931059418,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.86,
+      "salience": 0.766,
       "articles": [
         {
           "title": "New inflation data delivers blow to Republicans campaigning on economic strength",
@@ -24841,96 +24947,61 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_court-mail-supreme",
+    "cid": "cand_news_act-archivists-defend",
     "source": "news",
-    "ts": 1787876863111,
+    "ts": 1787931059418,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.844,
+      "salience": 0.73,
       "articles": [
         {
-          "title": "Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms",
-          "url": "https://americanpress.com/2026/08/25/supreme-court-sides-with-trump-administration-on-mail-voting-restrictions-ahead-of-midterms/",
-          "domain": "americanpress.com",
-          "seendate": "2026-08-26T23:30:00Z",
-          "image": "https://americanpress.com/wp-content/uploads/sites/65/2022/01/Supreme-Court.jpg"
+          "title": "Former archivists defend Presidential Records Act",
+          "url": "https://www.kcci.com/article/former-archivists-trump-presidential-records-act-court/73537931",
+          "domain": "kcci.com",
+          "seendate": "2026-08-28T07:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/a9b07228-b811-45fc-8436-cec0f5059fcd.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0240xh"
         },
         {
-          "title": "Supreme Court clears the way for Trump mail voting order in advance of midterms",
-          "url": "https://www.paradisepost.com/2026/08/24/supreme-court-trump-mail-voting/",
-          "domain": "paradisepost.com",
-          "seendate": "2026-08-26T07:30:00Z",
-          "image": "https://www.paradisepost.com/wp-content/uploads/2026/08/AP26230767195568.jpg"
+          "title": "Former archivists defend Presidential Records Act",
+          "url": "https://www.wmur.com/article/former-archivists-trump-presidential-records-act-court/73537931",
+          "domain": "wmur.com",
+          "seendate": "2026-08-28T05:15:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/a9b07228-b811-45fc-8436-cec0f5059fcd.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0240xh"
         },
         {
-          "title": "Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms",
-          "url": "https://www.miamitimesonline.com/news/world_national/supreme-court-sides-with-trump-administration-on-mail-voting-restrictions-ahead-of-midterms/article_7b7a0f7b-c4a5-4269-a247-905e9b1706bb.html",
-          "domain": "miamitimesonline.com",
-          "seendate": "2026-08-26T00:30:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/miamitimesonline.com/content/tncms/assets/v3/editorial/b/54/b548e7c6-3e34-402b-b912-0e3b3708f09c/6a699a06774e1.image.jpg?crop=1763%2C926%2C0%2C124"
+          "title": "Former archivists defend Presidential Records Act",
+          "url": "https://www.wtae.com/article/former-archivists-trump-presidential-records-act-court/73537931",
+          "domain": "wtae.com",
+          "seendate": "2026-08-28T05:15:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/a9b07228-b811-45fc-8436-cec0f5059fcd.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0240xh"
         },
         {
-          "title": "Supreme Court clears way for Trump to restrict mail - in voting ahead of midterms",
-          "url": "https://www.ksla.com/2026/08/24/supreme-court-clears-way-trump-mail-voting-order-advance-midterms/",
-          "domain": "ksla.com",
-          "seendate": "2026-08-25T23:15:00Z",
-          "image": "https://gray-ksla-prod.gtv-cdn.com/resizer/v2/W5ZCGQUHLJEYLHKPNWMMN6P2BQ.jpg?auth=aec109fb648ae07b5e692f16b088ed239ee6b3320d8bb6047d760ed75c2e6777&smart=true"
+          "title": "Former archivists defend Presidential Records Act",
+          "url": "https://www.kmbc.com/article/former-archivists-trump-presidential-records-act-court/73537931",
+          "domain": "kmbc.com",
+          "seendate": "2026-08-28T04:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/a9b07228-b811-45fc-8436-cec0f5059fcd.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0240xh"
         },
         {
-          "title": "Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms",
-          "url": "https://www.union-bulletin.com/news/national/supreme-court-sides-with-trump-administration-on-mail-voting-restrictions-ahead-of-midterms/article_85f39ec5-d8b1-5ed1-9fd5-3909ef8feee2.html",
-          "domain": "union-bulletin.com",
-          "seendate": "2026-08-25T20:15:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/union-bulletin.com/content/tncms/assets/v3/editorial/5/1d/51d5ae27-4e9b-542d-a797-9b20c149fac7/6a84ec002723b.image.jpg?crop=1763%2C926%2C0%2C125"
+          "title": "Former archivists defend Presidential Records Act",
+          "url": "https://www.wcvb.com/article/former-archivists-trump-presidential-records-act-court/73537931",
+          "domain": "wcvb.com",
+          "seendate": "2026-08-28T02:45:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/a9b07228-b811-45fc-8436-cec0f5059fcd.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0240xh"
         },
         {
-          "title": "Supreme Court sides with Trump administration on mail voting restrictions",
-          "url": "https://www.ironmountaindailynews.com/news/local-news/2026/08/supreme-court-sides-with-trump-administration-on-mail-voting-restrictions/",
-          "domain": "ironmountaindailynews.com",
-          "seendate": "2026-08-25T10:00:00Z",
-          "image": "https://ogden_images.s3.amazonaws.com/www.ironmountaindailynews.com/images/2026/08/24200222/AP-Mail-In-Ballots-Sorted.jpg"
-        },
-        {
-          "title": "Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms",
-          "url": "https://www.wdrb.com/news/national/supreme-court-sides-with-trump-administration-on-mail-voting-restrictions-ahead-of-midterms/article_aee869e2-e31c-5719-913a-216daa8aa683.html",
-          "domain": "wdrb.com",
-          "seendate": "2026-08-25T07:30:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/wdrb.com/content/tncms/assets/v3/editorial/c/16/c166fa1c-6401-11eb-ac4e-575f90555e83/6017110ab5c71.image.jpg?crop=1000%2C525%2C0%2C70"
-        },
-        {
-          "title": "Supreme Court clears the way for Trump mail voting order in advance of midterms",
-          "url": "https://www.dailynews.com/2026/08/24/supreme-court-trump-mail-voting/",
-          "domain": "dailynews.com",
-          "seendate": "2026-08-25T02:45:00Z",
-          "image": "https://www.dailynews.com/wp-content/uploads/2026/08/AP26230767195568.jpg"
-        },
-        {
-          "title": "Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms - Las Vegas Sun News",
-          "url": "https://lasvegassun.com/news/2026/aug/24/supreme-court-sides-with-trump-administration-on-m/",
-          "domain": "lasvegassun.com",
-          "seendate": "2026-08-25T01:45:00Z",
-          "image": null
-        },
-        {
-          "title": "Supreme Court clears the way for Trump mail voting order in advance of midterms",
-          "url": "https://www.presstelegram.com/2026/08/24/supreme-court-trump-mail-voting/",
-          "domain": "presstelegram.com",
-          "seendate": "2026-08-25T01:45:00Z",
-          "image": "https://www.presstelegram.com/wp-content/uploads/2026/08/AP26230767195568.jpg"
-        },
-        {
-          "title": "Supreme Court clears the way for Trump mail voting order in advance of midterms",
-          "url": "https://www.denverpost.com/2026/08/24/supreme-court-trump-mail-voting/",
-          "domain": "denverpost.com",
-          "seendate": "2026-08-25T01:45:00Z",
-          "image": "https://www.denverpost.com/wp-content/uploads/2026/08/AP26230767195568.jpg"
+          "title": "Former archivists defend Presidential Records Act",
+          "url": "https://www.wdsu.com/article/former-archivists-trump-presidential-records-act-court/73537931",
+          "domain": "wdsu.com",
+          "seendate": "2026-08-28T02:45:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/a9b07228-b811-45fc-8436-cec0f5059fcd.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0240xh"
         }
       ]
     },
-    "title": "Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms",
-    "summary": "2026-08-26 americanpress.com: Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms\n2026-08-26 paradisepost.com: Supreme Court clears the way for Trump mail voting order in advance of midterms\n2026-08-26 miamitimesonline.com: Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms\n2026-08-25 ksla.com: Supreme Court clears way for Trump to restrict mail - in voting ahead of midterms\n2026-08-25 union-bulletin.com: Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms\n2026-08-25 ironmountaindailynews.com: Supreme Court sides with Trump administration on mail voting restrictions",
+    "title": "Former archivists defend Presidential Records Act",
+    "summary": "2026-08-28 kcci.com: Former archivists defend Presidential Records Act\n2026-08-28 wmur.com: Former archivists defend Presidential Records Act\n2026-08-28 wtae.com: Former archivists defend Presidential Records Act\n2026-08-28 kmbc.com: Former archivists defend Presidential Records Act\n2026-08-28 wcvb.com: Former archivists defend Presidential Records Act\n2026-08-28 wdsu.com: Former archivists defend Presidential Records Act",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -24942,12 +25013,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_before-challenge-file",
     "source": "news",
-    "ts": 1787876863111,
+    "ts": 1787931059417,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.793,
+      "salience": 0.699,
       "articles": [
         {
           "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
@@ -25020,12 +25091,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_block-limiting-mail",
     "source": "news",
-    "ts": 1787876863112,
+    "ts": 1787931059418,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.759,
+      "salience": 0.665,
       "articles": [
         {
           "title": "Oregon , Washington join suit seeking to block Trump order limiting mail voting",
@@ -25098,13 +25169,20 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_arrive-challenges-court",
     "source": "news",
-    "ts": 1787876863112,
+    "ts": 1787931059417,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.606,
+      "salience": 0.637,
       "articles": [
+        {
+          "title": "New challenges to Trump mail - in voting order arrive after Supreme Court ruling",
+          "url": "https://www.newstribune.com/news/2026/aug/28/new-challenges-to-trump-mail-in-voting-order/",
+          "domain": "newstribune.com",
+          "seendate": "2026-08-28T10:15:00Z",
+          "image": "https://faughnmedia.media.clients.ellingtoncms.com/imports/nt/img/2026/08/28/217527924_california-ballot-drop-box_t1200.jpg?57a0c2296240c280e9492005c3cad63e7cbe80f4"
+        },
         {
           "title": "New challenges to Trump mail - in voting order arrive after US Supreme Court ruling",
           "url": "https://www.thenewsguard.com/news_free/new-challenges-to-trump-mail-in-voting-order-arrive-after-us-supreme-court-ruling/article_78776110-e2eb-42df-a3ff-d2118f07bd9d.html",
@@ -25129,7 +25207,100 @@ window.PRISM_CANDIDATES = [
       ]
     },
     "title": "New challenges to Trump mail - in voting order arrive after US Supreme Court ruling",
-    "summary": "2026-08-27 thenewsguard.com: New challenges to Trump mail - in voting order arrive after US Supreme Court ruling\n2026-08-27 bendbulletin.com: New challenges to Trump mail - in voting order arrive after US Supreme Court ruling\n2026-08-27 eastoregonian.com: New challenges to Trump mail - in voting order arrive after US Supreme Court ruling",
+    "summary": "2026-08-28 newstribune.com: New challenges to Trump mail - in voting order arrive after Supreme Court ruling\n2026-08-27 thenewsguard.com: New challenges to Trump mail - in voting order arrive after US Supreme Court ruling\n2026-08-27 bendbulletin.com: New challenges to Trump mail - in voting order arrive after US Supreme Court ruling\n2026-08-27 eastoregonian.com: New challenges to Trump mail - in voting order arrive after US Supreme Court ruling",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_ahead-civil-elections",
+    "source": "news",
+    "ts": 1787931059418,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.618,
+      "articles": [
+        {
+          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
+          "url": "https://www.clickondetroit.com/news/politics/2026/08/28/civil-rights-groups-make-urgent-plea-for-voting-rights-in-dc-ahead-of-midterm-elections/",
+          "domain": "clickondetroit.com",
+          "seendate": "2026-08-28T07:15:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/B64RLSDMYBDQ3K7JVHQLYCHRAY.jpg?_a=DATAg1kSZAA0"
+        },
+        {
+          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections - Las Vegas Sun News",
+          "url": "https://lasvegassun.com/news/2026/aug/27/civil-rights-groups-make-urgent-plea-for-voting-ri/",
+          "domain": "lasvegassun.com",
+          "seendate": "2026-08-28T05:45:00Z",
+          "image": null
+        },
+        {
+          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
+          "url": "https://www.clickorlando.com/news/politics/2026/08/28/civil-rights-groups-make-urgent-plea-for-voting-rights-in-dc-ahead-of-midterm-elections/",
+          "domain": "clickorlando.com",
+          "seendate": "2026-08-28T05:30:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/B64RLSDMYBDQ3K7JVHQLYCHRAY.jpg?_a=DATAg1kSZAA0"
+        },
+        {
+          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
+          "url": "https://www.erienewsnow.com/news/politics/civil-rights-groups-make-urgent-plea-for-voting-rights-in-dc-ahead-of-midterm-elections/article_4eea7e4b-664c-5314-901b-00c36d79d507.html",
+          "domain": "erienewsnow.com",
+          "seendate": "2026-08-28T04:30:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/erienewsnow.com/content/tncms/custom/image/b278f54b-830b-4f05-9350-cb090f41a0d4.png"
+        }
+      ]
+    },
+    "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
+    "summary": "2026-08-28 clickondetroit.com: Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections\n2026-08-28 lasvegassun.com: Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections - Las Vegas Sun News\n2026-08-28 clickorlando.com: Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections\n2026-08-28 erienewsnow.com: Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_cruz-podcast-president",
+    "source": "news",
+    "ts": 1787931059418,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.535,
+      "articles": [
+        {
+          "title": "Ted Cruz says on podcast it  no secret that I want to be president  ",
+          "url": "https://www.kwtx.com/2026/08/27/ted-cruz-says-podcast-its-no-secret-that-i-want-be-president/",
+          "domain": "kwtx.com",
+          "seendate": "2026-08-28T02:45:00Z",
+          "image": "https://gray-kwtx-prod.gtv-cdn.com/resizer/v2/W7PIYSTJOFGFRAM4ZQOD4YUH3Y.jpg?auth=7bf73e83ec7d0c48569bf787e9cb8c99683732d2f19494cd366cb7fddd2acddb&smart=true"
+        },
+        {
+          "title": "Ted Cruz says on podcast it  no secret that I want to be president  ",
+          "url": "https://www.ksat.com/news/texas/2026/08/26/ted-cruz-says-on-podcast-its-no-secret-that-i-want-to-be-president/",
+          "domain": "ksat.com",
+          "seendate": "2026-08-26T23:15:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/A33VHIOZ2FBVXPR72QOHHILZDA.jpg?_a=DATAg1kSZAA0"
+        },
+        {
+          "title": "Ted Cruz says on podcast it  no secret that I want to be president  ",
+          "url": "https://www.yahoo.com/news/politics/articles/ted-cruz-says-podcast-no-193338764.html",
+          "domain": "yahoo.com",
+          "seendate": "2026-08-26T20:00:00Z",
+          "image": "https://s.yimg.com/lo/mysterio/api/b108313ccf11b6bcc08ebafa9d73d00fe75f11c84d08b7d89a9915ac29a6d1a6/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fmysa_hearst_708%2Ff94af3d3d42e7c6a1959d83f6bae8bd1.jpg"
+        }
+      ]
+    },
+    "title": "Ted Cruz says on podcast it  no secret that I want to be president  ",
+    "summary": "2026-08-28 kwtx.com: Ted Cruz says on podcast it  no secret that I want to be president  \n2026-08-26 ksat.com: Ted Cruz says on podcast it  no secret that I want to be president  \n2026-08-26 yahoo.com: Ted Cruz says on podcast it  no secret that I want to be president  ",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -25141,12 +25312,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballot-envelope-faces",
     "source": "news",
-    "ts": 1787876863113,
+    "ts": 1787931059418,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.598,
+      "salience": 0.504,
       "articles": [
         {
           "title": "  Pushing the envelope : Trump mail ballot rule faces new lawsuit with midterms looming",
@@ -25182,14 +25353,71 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_federal-judge-legal",
+    "cid": "cand_news_court-mail-midterms",
     "source": "news",
-    "ts": 1787876863111,
+    "ts": 1787931059417,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.555,
+      "salience": 0.475,
+      "articles": [
+        {
+          "title": "Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms",
+          "url": "https://americanpress.com/2026/08/25/supreme-court-sides-with-trump-administration-on-mail-voting-restrictions-ahead-of-midterms/",
+          "domain": "americanpress.com",
+          "seendate": "2026-08-26T23:30:00Z",
+          "image": "https://americanpress.com/wp-content/uploads/sites/65/2022/01/Supreme-Court.jpg"
+        },
+        {
+          "title": "Supreme Court clears the way for Trump mail voting order in advance of midterms",
+          "url": "https://www.paradisepost.com/2026/08/24/supreme-court-trump-mail-voting/",
+          "domain": "paradisepost.com",
+          "seendate": "2026-08-26T07:30:00Z",
+          "image": "https://www.paradisepost.com/wp-content/uploads/2026/08/AP26230767195568.jpg"
+        },
+        {
+          "title": "Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms",
+          "url": "https://www.miamitimesonline.com/news/world_national/supreme-court-sides-with-trump-administration-on-mail-voting-restrictions-ahead-of-midterms/article_7b7a0f7b-c4a5-4269-a247-905e9b1706bb.html",
+          "domain": "miamitimesonline.com",
+          "seendate": "2026-08-26T00:30:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/miamitimesonline.com/content/tncms/assets/v3/editorial/b/54/b548e7c6-3e34-402b-b912-0e3b3708f09c/6a699a06774e1.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
+        {
+          "title": "Supreme Court clears way for Trump to restrict mail - in voting ahead of midterms",
+          "url": "https://www.ksla.com/2026/08/24/supreme-court-clears-way-trump-mail-voting-order-advance-midterms/",
+          "domain": "ksla.com",
+          "seendate": "2026-08-25T23:15:00Z",
+          "image": "https://gray-ksla-prod.gtv-cdn.com/resizer/v2/W5ZCGQUHLJEYLHKPNWMMN6P2BQ.jpg?auth=aec109fb648ae07b5e692f16b088ed239ee6b3320d8bb6047d760ed75c2e6777&smart=true"
+        },
+        {
+          "title": "Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms",
+          "url": "https://www.union-bulletin.com/news/national/supreme-court-sides-with-trump-administration-on-mail-voting-restrictions-ahead-of-midterms/article_85f39ec5-d8b1-5ed1-9fd5-3909ef8feee2.html",
+          "domain": "union-bulletin.com",
+          "seendate": "2026-08-25T20:15:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/union-bulletin.com/content/tncms/assets/v3/editorial/5/1d/51d5ae27-4e9b-542d-a797-9b20c149fac7/6a84ec002723b.image.jpg?crop=1763%2C926%2C0%2C125"
+        }
+      ]
+    },
+    "title": "Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms",
+    "summary": "2026-08-26 americanpress.com: Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms\n2026-08-26 paradisepost.com: Supreme Court clears the way for Trump mail voting order in advance of midterms\n2026-08-26 miamitimesonline.com: Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms\n2026-08-25 ksla.com: Supreme Court clears way for Trump to restrict mail - in voting ahead of midterms\n2026-08-25 union-bulletin.com: Supreme Court sides with Trump administration on mail voting restrictions ahead of midterms",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_federal-judge-legal",
+    "source": "news",
+    "ts": 1787931059417,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.461,
       "articles": [
         {
           "title": "Boston federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely",
