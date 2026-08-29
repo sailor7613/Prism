@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-29T10:15:00.258Z · 29 legislative + 14 news (GDELT, 3d)
+// 2026-08-29T16:49:58.395Z · 29 legislative + 15 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1787998451510,
+    "ts": 1788022063653,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.674,
+      "salience": 0.672,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,11 +259,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1787998451509,
+    "ts": 1788022063653,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.665,
+      "salience": 0.664,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1787998451509,
+    "ts": 1788022063652,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.636,
+      "salience": 0.635,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1787998451509,
+    "ts": 1788022063653,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.582,
+      "salience": 0.581,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3118,11 +3118,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1787998451509,
+    "ts": 1788022063653,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
-      "salience": 0.564,
+      "salience": 0.563,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
       "votes": [
         {
@@ -3392,11 +3392,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1787998451509,
+    "ts": 1788022063652,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.563,
+      "salience": 0.562,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4794,11 +4794,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1787998451509,
+    "ts": 1788022063653,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.549,
+      "salience": 0.548,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5065,11 +5065,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1787998451508,
+    "ts": 1788022063651,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.539,
+      "salience": 0.537,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6467,11 +6467,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1787998451508,
+    "ts": 1788022063651,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.533,
+      "salience": 0.532,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -7869,11 +7869,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1787998451510,
+    "ts": 1788022063653,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.528,
+      "salience": 0.526,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -8396,11 +8396,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1787998451509,
+    "ts": 1788022063652,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.486,
+      "salience": 0.485,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -9330,11 +9330,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1787998451509,
+    "ts": 1788022063653,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.486,
+      "salience": 0.485,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -9606,11 +9606,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1787998451508,
+    "ts": 1788022063652,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
-      "salience": 0.47,
+      "salience": 0.469,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2913",
       "votes": [
         {
@@ -10538,11 +10538,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1787998451509,
+    "ts": 1788022063653,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.47,
+      "salience": 0.468,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -10814,11 +10814,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1787998451509,
+    "ts": 1788022063652,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
-      "salience": 0.467,
+      "salience": 0.466,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8312",
       "votes": [
         {
@@ -11747,11 +11747,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1787998451509,
+    "ts": 1788022063652,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.448,
+      "salience": 0.446,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -12680,11 +12680,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1787998451510,
+    "ts": 1788022063653,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.437,
+      "salience": 0.435,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -13072,11 +13072,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1787998451509,
+    "ts": 1788022063653,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.329,
+      "salience": 0.327,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -14475,11 +14475,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1787998451510,
+    "ts": 1788022063653,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.271,
+      "salience": 0.27,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -15368,11 +15368,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1787998451510,
+    "ts": 1788022063653,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.265,
+      "salience": 0.263,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -16283,11 +16283,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1787998451510,
+    "ts": 1788022063653,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.258,
+      "salience": 0.257,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -17171,11 +17171,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1787998451509,
+    "ts": 1788022063653,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.253,
+      "salience": 0.252,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -18092,11 +18092,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1787998451509,
+    "ts": 1788022063653,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.242,
+      "salience": 0.241,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -19010,11 +19010,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1787998451509,
+    "ts": 1788022063652,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.182,
+      "salience": 0.181,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -19909,11 +19909,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1787998451508,
+    "ts": 1788022063651,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.153,
+      "salience": 0.152,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -20843,11 +20843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1787998451508,
+    "ts": 1788022063651,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
-      "salience": 0.079,
+      "salience": 0.078,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/254",
       "votes": [
         {
@@ -21772,11 +21772,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1787998451508,
+    "ts": 1788022063651,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
-      "salience": 0.077,
+      "salience": 0.076,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7618",
       "votes": [
         {
@@ -22681,11 +22681,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1787998451509,
+    "ts": 1788022063652,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
-      "salience": 0.071,
+      "salience": 0.07,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8466",
       "votes": [
         {
@@ -23556,11 +23556,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1787998451509,
+    "ts": 1788022063652,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
-      "salience": 0.071,
+      "salience": 0.07,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8428",
       "votes": [
         {
@@ -24440,12 +24440,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_appeals-blocking-latest",
     "source": "news",
-    "ts": 1787998500250,
+    "ts": 1788022198387,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.975,
+      "salience": 0.934,
       "articles": [
         {
           "title": "Trump admin appeals latest ruling blocking his mail voting executive order",
@@ -24481,6 +24481,13 @@ window.PRISM_CANDIDATES = [
           "domain": "santamariatimes.com",
           "seendate": "2026-08-29T03:30:00Z",
           "image": "https://bloximages.chicago2.vip.townnews.com/santamariatimes.com/content/tncms/assets/v3/editorial/6/ab/6abe5d46-b620-41f1-8a7e-449f68339cda/6a9211fb5e88f.image.jpg?crop=1024%2C538%2C0%2C72"
+        },
+        {
+          "title": "Trump administration appeals latest ruling blocking his mail voting order from taking effect",
+          "url": "https://www.union-bulletin.com/news/national/trump-administration-appeals-latest-ruling-blocking-his-mail-voting-order-from-taking-effect/article_a7c27c45-4019-56b0-96ef-a3d5d1991ec6.html",
+          "domain": "union-bulletin.com",
+          "seendate": "2026-08-29T03:15:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/union-bulletin.com/content/tncms/assets/v3/editorial/2/a2/2a2d0d16-2313-5d5b-83a5-ca77fff82b7c/6a8d9cfb9a7d4.image.jpg?crop=1763%2C926%2C0%2C124"
         },
         {
           "title": "Trump admin . appeals latest ruling blocking mail voting order – NBC Chicago",
@@ -24523,18 +24530,11 @@ window.PRISM_CANDIDATES = [
           "domain": "goskagit.com",
           "seendate": "2026-08-28T23:45:00Z",
           "image": "https://bloximages.chicago2.vip.townnews.com/goskagit.com/content/tncms/assets/v3/editorial/4/e7/4e77ff72-5232-590e-8ec0-42a01077e9fe/6a84cfa4d915e.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "Trump administration appeals latest ruling blocking mail - in voting executive order from taking effect",
-          "url": "https://abc7ny.com/post/judge-temporarily-blocks-president-donald-trump-mail-voting-executive-order/19752447/",
-          "domain": "abc7ny.com",
-          "seendate": "2026-08-28T22:00:00Z",
-          "image": "https://cdn.abcotvs.com/dip/images/19753599_082826-wls-trump-mail-vote-latest-4pvo-vid.jpg"
         }
       ]
     },
     "title": "Trump administration appeals latest ruling blocking his mail voting order from taking effect",
-    "summary": "2026-08-29 kuer.org: Trump admin appeals latest ruling blocking his mail voting executive order\n2026-08-29 wfmj.com: Trump administration appeals latest ruling blocking his mail voting order from taking effect\n2026-08-29 nbcsandiego.com: Trump admin . appeals latest ruling blocking mail voting order – NBC 7 San Diego\n2026-08-29 nbcwashington.com: Trump admin . appeals latest ruling blocking mail voting order – NBC4 Washington\n2026-08-29 santamariatimes.com: Trump administration appeals latest ruling blocking his mail voting order from taking effect\n2026-08-29 nbcchicago.com: Trump admin . appeals latest ruling blocking mail voting order – NBC Chicago",
+    "summary": "2026-08-29 kuer.org: Trump admin appeals latest ruling blocking his mail voting executive order\n2026-08-29 wfmj.com: Trump administration appeals latest ruling blocking his mail voting order from taking effect\n2026-08-29 nbcsandiego.com: Trump admin . appeals latest ruling blocking mail voting order – NBC 7 San Diego\n2026-08-29 nbcwashington.com: Trump admin . appeals latest ruling blocking mail voting order – NBC4 Washington\n2026-08-29 santamariatimes.com: Trump administration appeals latest ruling blocking his mail voting order from taking effect\n2026-08-29 union-bulletin.com: Trump administration appeals latest ruling blocking his mail voting order from taking effect",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -24546,12 +24546,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_blocks-executive-judge",
     "source": "news",
-    "ts": 1787998500251,
+    "ts": 1788022198388,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.903,
+      "salience": 0.862,
       "articles": [
         {
           "title": "Judge again blocks Trump mail ballot executive order in ruling that likely to be swiftly appealed",
@@ -24652,12 +24652,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_bannon-contempt-conviction",
     "source": "news",
-    "ts": 1787998500250,
+    "ts": 1788022198387,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.777,
+      "salience": 0.735,
       "articles": [
         {
           "title": "Judge declines to dismiss Steve Bannon criminal contempt conviction – Connect FM | Local News Radio",
@@ -24744,12 +24744,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_direct-helped-next",
     "source": "news",
-    "ts": 1787998500251,
+    "ts": 1788022198388,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.777,
+      "salience": 0.735,
       "articles": [
         {
           "title": "Zelenskyy Direct Plea Helped Unlock Russia Sanctions In The Senate . What Next Is Uncertain – The Yeshiva World",
@@ -24843,12 +24843,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ahead-civil-elections",
     "source": "news",
-    "ts": 1787998500251,
+    "ts": 1788022198388,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.732,
+      "salience": 0.69,
       "articles": [
         {
           "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
@@ -24907,12 +24907,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_cook-fed-fire",
     "source": "news",
-    "ts": 1787998500251,
+    "ts": 1788022198388,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.662,
+      "salience": 0.621,
       "articles": [
         {
           "title": "Fed governor Lisa Cook slams Trump renewed threat to fire her",
@@ -25013,12 +25013,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_blow-campaigning-data",
     "source": "news",
-    "ts": 1787998500252,
+    "ts": 1788022198389,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.648,
+      "salience": 0.607,
       "articles": [
         {
           "title": "New inflation data delivers blow to Republicans campaigning on economic strength",
@@ -25119,12 +25119,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_act-archivists-defend",
     "source": "news",
-    "ts": 1787998500251,
+    "ts": 1788022198388,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.613,
+      "salience": 0.572,
       "articles": [
         {
           "title": "Former archivists defend Presidential Records Act",
@@ -25183,12 +25183,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_arrive-challenges-court",
     "source": "news",
-    "ts": 1787998500250,
+    "ts": 1788022198388,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.609,
+      "salience": 0.568,
       "articles": [
         {
           "title": "New challenges to Trump mail - in voting order arrive after Supreme Court ruling",
@@ -25240,12 +25240,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_before-challenge-file",
     "source": "news",
-    "ts": 1787998500250,
+    "ts": 1788022198387,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.582,
+      "salience": 0.541,
       "articles": [
         {
           "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
@@ -25318,12 +25318,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_comply-judge-lack",
     "source": "news",
-    "ts": 1787998500251,
+    "ts": 1788022198388,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.567,
+      "salience": 0.526,
       "articles": [
         {
           "title": "Judge says states lack time to comply with Trump new mail voting rules",
@@ -25366,92 +25366,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_block-limiting-mail",
-    "source": "news",
-    "ts": 1787998500251,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.548,
-      "articles": [
-        {
-          "title": "Oregon , Washington join suit seeking to block Trump order limiting mail voting",
-          "url": "https://katu.com/news/politics/oregon-washington-join-suit-seeking-to-block-trumps-order-limiting-mail-voting-politics-midterms-democrats-republicans-lawsuit",
-          "domain": "katu.com",
-          "seendate": "2026-08-27T03:30:00Z",
-          "image": "https://katu.com/resources/media2/16x9/1024/1320/0x53/90/2166720e-f32b-4007-84ba-1eb866eed88f-AP26230766602771.jpg"
-        },
-        {
-          "title": "Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms",
-          "url": "https://abc30.com/story/democratic-states-file-new-lawsuit-seeking-block-trumps-order-limiting-mail-voting-midterms/19739342/",
-          "domain": "abc30.com",
-          "seendate": "2026-08-26T20:00:00Z",
-          "image": "https://cdn.abcotvs.com/dip/images/19739404_082626-ap-usps-mail-voting-img.png"
-        },
-        {
-          "title": "Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms",
-          "url": "https://abc7ny.com/story/democratic-states-file-new-lawsuit-seeking-block-trumps-order-limiting-mail-voting-midterms/19739342/",
-          "domain": "abc7ny.com",
-          "seendate": "2026-08-26T17:45:00Z",
-          "image": "https://cdn.abcotvs.com/dip/images/19739404_082626-ap-usps-mail-voting-img.png"
-        },
-        {
-          "title": "Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms",
-          "url": "https://abc13.com/story/democratic-states-file-new-lawsuit-seeking-block-trumps-order-limiting-mail-voting-midterms/19739342/",
-          "domain": "abc13.com",
-          "seendate": "2026-08-26T17:15:00Z",
-          "image": "https://cdn.abcotvs.com/dip/images/19739404_082626-ap-usps-mail-voting-img.png"
-        },
-        {
-          "title": "Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms",
-          "url": "https://www.wgbh.org/news/politics/2026-08-26/democratic-states-file-new-lawsuit-seeking-to-block-trumps-order-limiting-mail-voting-in-midterms",
-          "domain": "wgbh.org",
-          "seendate": "2026-08-26T17:15:00Z",
-          "image": "https://k1-prod-gbh.s3.us-east-2.amazonaws.com/brightspot/ac/80/1bfa21504ed5848516ac19e3a359/260826-ap-voting-lawsuit.jpeg"
-        },
-        {
-          "title": "Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms | National news coverage",
-          "url": "http://www.thegazette.com/news/national/democratic-states-file-new-lawsuit-seeking-to-block-trump-s-order-limiting-mail-voting-in/article_dc092e45-6e69-559f-b175-de7fe69c0d50.html",
-          "domain": "thegazette.com",
-          "seendate": "2026-08-26T16:30:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/thegazette.com/content/tncms/assets/v3/editorial/a/c4/ac4598e4-c937-5054-8a5c-ec87230b98ab/6a8f0073b004c.image.jpg?crop=5120%2C2688%2C0%2C362"
-        },
-        {
-          "title": "States file lawsuit seeking to block Trump order limiting mail voting",
-          "url": "https://www.sandiegouniontribune.com/2026/08/26/trump-mail-voting-lawsuit/",
-          "domain": "sandiegouniontribune.com",
-          "seendate": "2026-08-26T16:15:00Z",
-          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/08/AP26230767195568_28f17e.jpg"
-        },
-        {
-          "title": "States file lawsuit seeking to block Trump order limiting mail voting",
-          "url": "https://www.courant.com/2026/08/26/trump-mail-voting-lawsuit/",
-          "domain": "courant.com",
-          "seendate": "2026-08-26T16:15:00Z",
-          "image": "https://www.courant.com/wp-content/uploads/2026/08/AP26230767195568_28f17e.jpg"
-        }
-      ]
-    },
-    "title": "Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms",
-    "summary": "2026-08-27 katu.com: Oregon , Washington join suit seeking to block Trump order limiting mail voting\n2026-08-26 abc30.com: Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms\n2026-08-26 abc7ny.com: Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms\n2026-08-26 abc13.com: Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms\n2026-08-26 wgbh.org: Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms\n2026-08-26 thegazette.com: Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms | National news coverage",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_cruz-podcast-president",
     "source": "news",
-    "ts": 1787998500251,
+    "ts": 1788022198388,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.418,
+      "salience": 0.377,
       "articles": [
         {
           "title": "Ted Cruz says on podcast it  no secret that I want to be president  ",
@@ -25487,14 +25409,57 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_federal-judge-legal",
+    "cid": "cand_news_ballot-envelope-faces",
     "source": "news",
-    "ts": 1787998500250,
+    "ts": 1788022198389,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.344,
+      "salience": 0.346,
+      "articles": [
+        {
+          "title": "  Pushing the envelope : Trump mail ballot rule faces new lawsuit with midterms looming",
+          "url": "https://fox11online.com/news/nation-world/pushing-the-envelope-trumps-mail-ballot-rule-faces-new-lawsuit-with-midterms-looming",
+          "domain": "fox11online.com",
+          "seendate": "2026-08-27T21:45:00Z",
+          "image": "https://fox11online.com/resources/media2/16x9/5616/1320/0x293/90/8b19120b-c18c-4121-b82e-2efae2491d81-GettyImages2291733692.jpg"
+        },
+        {
+          "title": "  Pushing the envelope : Trump mail ballot rule faces new lawsuit with midterms looming",
+          "url": "https://wpde.com/news/nation-world/pushing-the-envelope-trumps-mail-ballot-rule-faces-new-lawsuit-with-midterms-looming",
+          "domain": "wpde.com",
+          "seendate": "2026-08-27T21:15:00Z",
+          "image": "https://wpde.com/resources/media2/16x9/5616/1320/0x293/90/8b19120b-c18c-4121-b82e-2efae2491d81-GettyImages2291733692.jpg"
+        },
+        {
+          "title": "  Pushing the envelope : Trump mail ballot rule faces new lawsuit with midterms looming",
+          "url": "https://upnorthlive.com/news/nation-world/pushing-the-envelope-trumps-mail-ballot-rule-faces-new-lawsuit-with-midterms-looming",
+          "domain": "upnorthlive.com",
+          "seendate": "2026-08-27T21:00:00Z",
+          "image": "https://upnorthlive.com/resources/media2/16x9/5616/1320/0x293/90/8b19120b-c18c-4121-b82e-2efae2491d81-GettyImages2291733692.jpg"
+        }
+      ]
+    },
+    "title": "  Pushing the envelope : Trump mail ballot rule faces new lawsuit with midterms looming",
+    "summary": "2026-08-27 fox11online.com:   Pushing the envelope : Trump mail ballot rule faces new lawsuit with midterms looming\n2026-08-27 wpde.com:   Pushing the envelope : Trump mail ballot rule faces new lawsuit with midterms looming\n2026-08-27 upnorthlive.com:   Pushing the envelope : Trump mail ballot rule faces new lawsuit with midterms looming",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_federal-judge-legal",
+    "source": "news",
+    "ts": 1788022198388,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.303,
       "articles": [
         {
           "title": "Boston federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely",
@@ -25535,6 +25500,56 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely",
     "summary": "2026-08-26 wbur.org: Boston federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely\n2026-08-26 mcall.com: Federal judge removes major legal obstacle to Trump mail voting order\n2026-08-26 wsls.com: Federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely\n2026-08-26 durangoherald.com: Federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely\n2026-08-26 dailyadvance.com: Federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_block-democratic-file",
+    "source": "news",
+    "ts": 1788022198388,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.24,
+      "articles": [
+        {
+          "title": "Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms",
+          "url": "https://abc30.com/story/democratic-states-file-new-lawsuit-seeking-block-trumps-order-limiting-mail-voting-midterms/19739342/",
+          "domain": "abc30.com",
+          "seendate": "2026-08-26T20:00:00Z",
+          "image": "https://cdn.abcotvs.com/dip/images/19739404_082626-ap-usps-mail-voting-img.png"
+        },
+        {
+          "title": "Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms",
+          "url": "https://abc7ny.com/story/democratic-states-file-new-lawsuit-seeking-block-trumps-order-limiting-mail-voting-midterms/19739342/",
+          "domain": "abc7ny.com",
+          "seendate": "2026-08-26T17:45:00Z",
+          "image": "https://cdn.abcotvs.com/dip/images/19739404_082626-ap-usps-mail-voting-img.png"
+        },
+        {
+          "title": "Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms",
+          "url": "https://abc13.com/story/democratic-states-file-new-lawsuit-seeking-block-trumps-order-limiting-mail-voting-midterms/19739342/",
+          "domain": "abc13.com",
+          "seendate": "2026-08-26T17:15:00Z",
+          "image": "https://cdn.abcotvs.com/dip/images/19739404_082626-ap-usps-mail-voting-img.png"
+        },
+        {
+          "title": "Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms",
+          "url": "https://www.wgbh.org/news/politics/2026-08-26/democratic-states-file-new-lawsuit-seeking-to-block-trumps-order-limiting-mail-voting-in-midterms",
+          "domain": "wgbh.org",
+          "seendate": "2026-08-26T17:15:00Z",
+          "image": "https://k1-prod-gbh.s3.us-east-2.amazonaws.com/brightspot/ac/80/1bfa21504ed5848516ac19e3a359/260826-ap-voting-lawsuit.jpeg"
+        }
+      ]
+    },
+    "title": "Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms",
+    "summary": "2026-08-26 abc30.com: Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms\n2026-08-26 abc7ny.com: Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms\n2026-08-26 abc13.com: Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms\n2026-08-26 wgbh.org: Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
