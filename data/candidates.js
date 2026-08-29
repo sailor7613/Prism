@@ -1,11 +1,11 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-29T16:49:58.395Z · 29 legislative + 15 news (GDELT, 3d)
+// 2026-08-29T21:03:29.510Z · 29 legislative + 13 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1788022063653,
+    "ts": 1788037217638,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
@@ -259,11 +259,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1788022063653,
+    "ts": 1788037217638,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.664,
+      "salience": 0.663,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1788022063652,
+    "ts": 1788037217637,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.635,
+      "salience": 0.634,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1788022063653,
+    "ts": 1788037217638,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.581,
+      "salience": 0.58,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3116,283 +3116,9 @@ window.PRISM_CANDIDATES = [
     "mts": 1784784262612
   },
   {
-    "cid": "cand_leg_sjres-119-196",
-    "source": "legislative",
-    "ts": 1788022063653,
-    "raw": {
-      "method": "legislative_rollcall_v1",
-      "billId": "sjres-119-196",
-      "salience": 0.563,
-      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
-      "votes": [
-        {
-          "voteId": "s-119-2-190",
-          "chamber": "senate",
-          "date": "June 24, 2026,  09:16 PM",
-          "question": "On the Motion to Proceed",
-          "result": "Motion to Proceed Rejected",
-          "margin": -0.072,
-          "totals": {
-            "yea": 45,
-            "nay": 52,
-            "present": 0,
-            "notVoting": 3
-          },
-          "party": {
-            "D": {
-              "yea": 43,
-              "nay": 0
-            },
-            "R": {
-              "yea": 0,
-              "nay": 52
-            },
-            "I": {
-              "yea": 2,
-              "nay": 0
-            }
-          },
-          "positions": {
-            "yea": [
-              "A000382",
-              "B001230",
-              "B001277",
-              "B001303",
-              "B001288",
-              "C000127",
-              "C001088",
-              "C001113",
-              "D000622",
-              "D000563",
-              "F000479",
-              "G000574",
-              "G000555",
-              "H001076",
-              "H001046",
-              "H000273",
-              "H001042",
-              "K000384",
-              "K000377",
-              "K000394",
-              "K000383",
-              "K000367",
-              "M000133",
-              "M001176",
-              "M001169",
-              "M001111",
-              "O000174",
-              "P000145",
-              "P000595",
-              "R000122",
-              "R000608",
-              "S000033",
-              "S001194",
-              "S001150",
-              "S000148",
-              "S001208",
-              "S001203",
-              "V000128",
-              "W000805",
-              "W000790",
-              "W000817",
-              "W000800",
-              "W000802",
-              "W000779"
-            ],
-            "nay": [
-              "B001299",
-              "B001261",
-              "B001243",
-              "B001236",
-              "B001319",
-              "B001305",
-              "C001047",
-              "C001075",
-              "C001035",
-              "C001056",
-              "C001095",
-              "C001096",
-              "C000880",
-              "C001098",
-              "C001114",
-              "D000618",
-              "E000295",
-              "F000463",
-              "G000359",
-              "G000386",
-              "H000601",
-              "H001089",
-              "H001061",
-              "H001104",
-              "H001079",
-              "J000293",
-              "J000312",
-              "K000393",
-              "L000575",
-              "L000577",
-              "L000571",
-              "M001198",
-              "M001243",
-              "M001244",
-              "M000934",
-              "M001242",
-              "M001153",
-              "P000603",
-              "R000618",
-              "R000584",
-              "R000605",
-              "S001227",
-              "S001217",
-              "S001184",
-              "S001232",
-              "S001198",
-              "T000250",
-              "T000476",
-              "T000278",
-              "W000437",
-              "Y000064"
-            ],
-            "present": [],
-            "notVoting": [
-              "B001267",
-              "M000355",
-              "S001181"
-            ]
-          }
-        }
-      ]
-    },
-    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
-    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
-    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
-    "suggestedAxes": {
-      "x": {
-        "pos": "Disapprove rule",
-        "neg": "Uphold rule"
-      },
-      "y": {
-        "pos": "Executive overreach",
-        "neg": "Agency discretion legitimate"
-      }
-    },
-    "prevalentAxisGuess": "x",
-    "members": [
-      "A000382",
-      "B001230",
-      "B001277",
-      "B001303",
-      "B001288",
-      "C000127",
-      "C001088",
-      "C001113",
-      "D000622",
-      "D000563",
-      "F000479",
-      "G000574",
-      "G000555",
-      "H001076",
-      "H001046",
-      "H000273",
-      "H001042",
-      "K000384",
-      "K000377",
-      "K000394",
-      "K000383",
-      "K000367",
-      "M000133",
-      "M001176",
-      "M001169",
-      "M001111",
-      "O000174",
-      "P000145",
-      "P000595",
-      "R000122",
-      "R000608",
-      "S000033",
-      "S001194",
-      "S001150",
-      "S000148",
-      "S001208",
-      "S001203",
-      "V000128",
-      "W000805",
-      "W000790",
-      "W000817",
-      "W000800",
-      "W000802",
-      "W000779",
-      "B001299",
-      "B001261",
-      "B001243",
-      "B001236",
-      "B001319",
-      "B001305",
-      "C001047",
-      "C001075",
-      "C001035",
-      "C001056",
-      "C001095",
-      "C001096",
-      "C000880",
-      "C001098",
-      "C001114",
-      "D000618",
-      "E000295",
-      "F000463",
-      "G000359",
-      "G000386",
-      "H000601",
-      "H001089",
-      "H001061",
-      "H001104",
-      "H001079",
-      "J000293",
-      "J000312",
-      "K000393",
-      "L000575",
-      "L000577",
-      "L000571",
-      "M001198",
-      "M001243",
-      "M001244",
-      "M000934",
-      "M001242",
-      "M001153",
-      "P000603",
-      "R000618",
-      "R000584",
-      "R000605",
-      "S001227",
-      "S001217",
-      "S001184",
-      "S001232",
-      "S001198",
-      "T000250",
-      "T000476",
-      "T000278",
-      "W000437",
-      "Y000064"
-    ],
-    "bills": [
-      "sjres-119-196"
-    ],
-    "fitness": {
-      "score": 0.3,
-      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
-      "method": "m2_constitutive_v1",
-      "ts": "2026-07-14T04:28:30.038Z"
-    },
-    "status": "new",
-    "voteMap": {
-      "voteId": "s-119-2-190",
-      "yeaPole": "pos"
-    },
-    "mts": 1784044297586
-  },
-  {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1788022063652,
+    "ts": 1788037217637,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
@@ -4792,13 +4518,287 @@ window.PRISM_CANDIDATES = [
     "mts": 1784044297586
   },
   {
+    "cid": "cand_leg_sjres-119-196",
+    "source": "legislative",
+    "ts": 1788037217638,
+    "raw": {
+      "method": "legislative_rollcall_v1",
+      "billId": "sjres-119-196",
+      "salience": 0.562,
+      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
+      "votes": [
+        {
+          "voteId": "s-119-2-190",
+          "chamber": "senate",
+          "date": "June 24, 2026,  09:16 PM",
+          "question": "On the Motion to Proceed",
+          "result": "Motion to Proceed Rejected",
+          "margin": -0.072,
+          "totals": {
+            "yea": 45,
+            "nay": 52,
+            "present": 0,
+            "notVoting": 3
+          },
+          "party": {
+            "D": {
+              "yea": 43,
+              "nay": 0
+            },
+            "R": {
+              "yea": 0,
+              "nay": 52
+            },
+            "I": {
+              "yea": 2,
+              "nay": 0
+            }
+          },
+          "positions": {
+            "yea": [
+              "A000382",
+              "B001230",
+              "B001277",
+              "B001303",
+              "B001288",
+              "C000127",
+              "C001088",
+              "C001113",
+              "D000622",
+              "D000563",
+              "F000479",
+              "G000574",
+              "G000555",
+              "H001076",
+              "H001046",
+              "H000273",
+              "H001042",
+              "K000384",
+              "K000377",
+              "K000394",
+              "K000383",
+              "K000367",
+              "M000133",
+              "M001176",
+              "M001169",
+              "M001111",
+              "O000174",
+              "P000145",
+              "P000595",
+              "R000122",
+              "R000608",
+              "S000033",
+              "S001194",
+              "S001150",
+              "S000148",
+              "S001208",
+              "S001203",
+              "V000128",
+              "W000805",
+              "W000790",
+              "W000817",
+              "W000800",
+              "W000802",
+              "W000779"
+            ],
+            "nay": [
+              "B001299",
+              "B001261",
+              "B001243",
+              "B001236",
+              "B001319",
+              "B001305",
+              "C001047",
+              "C001075",
+              "C001035",
+              "C001056",
+              "C001095",
+              "C001096",
+              "C000880",
+              "C001098",
+              "C001114",
+              "D000618",
+              "E000295",
+              "F000463",
+              "G000359",
+              "G000386",
+              "H000601",
+              "H001089",
+              "H001061",
+              "H001104",
+              "H001079",
+              "J000293",
+              "J000312",
+              "K000393",
+              "L000575",
+              "L000577",
+              "L000571",
+              "M001198",
+              "M001243",
+              "M001244",
+              "M000934",
+              "M001242",
+              "M001153",
+              "P000603",
+              "R000618",
+              "R000584",
+              "R000605",
+              "S001227",
+              "S001217",
+              "S001184",
+              "S001232",
+              "S001198",
+              "T000250",
+              "T000476",
+              "T000278",
+              "W000437",
+              "Y000064"
+            ],
+            "present": [],
+            "notVoting": [
+              "B001267",
+              "M000355",
+              "S001181"
+            ]
+          }
+        }
+      ]
+    },
+    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
+    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
+    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Disapprove rule",
+        "neg": "Uphold rule"
+      },
+      "y": {
+        "pos": "Executive overreach",
+        "neg": "Agency discretion legitimate"
+      }
+    },
+    "prevalentAxisGuess": "x",
+    "members": [
+      "A000382",
+      "B001230",
+      "B001277",
+      "B001303",
+      "B001288",
+      "C000127",
+      "C001088",
+      "C001113",
+      "D000622",
+      "D000563",
+      "F000479",
+      "G000574",
+      "G000555",
+      "H001076",
+      "H001046",
+      "H000273",
+      "H001042",
+      "K000384",
+      "K000377",
+      "K000394",
+      "K000383",
+      "K000367",
+      "M000133",
+      "M001176",
+      "M001169",
+      "M001111",
+      "O000174",
+      "P000145",
+      "P000595",
+      "R000122",
+      "R000608",
+      "S000033",
+      "S001194",
+      "S001150",
+      "S000148",
+      "S001208",
+      "S001203",
+      "V000128",
+      "W000805",
+      "W000790",
+      "W000817",
+      "W000800",
+      "W000802",
+      "W000779",
+      "B001299",
+      "B001261",
+      "B001243",
+      "B001236",
+      "B001319",
+      "B001305",
+      "C001047",
+      "C001075",
+      "C001035",
+      "C001056",
+      "C001095",
+      "C001096",
+      "C000880",
+      "C001098",
+      "C001114",
+      "D000618",
+      "E000295",
+      "F000463",
+      "G000359",
+      "G000386",
+      "H000601",
+      "H001089",
+      "H001061",
+      "H001104",
+      "H001079",
+      "J000293",
+      "J000312",
+      "K000393",
+      "L000575",
+      "L000577",
+      "L000571",
+      "M001198",
+      "M001243",
+      "M001244",
+      "M000934",
+      "M001242",
+      "M001153",
+      "P000603",
+      "R000618",
+      "R000584",
+      "R000605",
+      "S001227",
+      "S001217",
+      "S001184",
+      "S001232",
+      "S001198",
+      "T000250",
+      "T000476",
+      "T000278",
+      "W000437",
+      "Y000064"
+    ],
+    "bills": [
+      "sjres-119-196"
+    ],
+    "fitness": {
+      "score": 0.3,
+      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:28:30.038Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "s-119-2-190",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297586
+  },
+  {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1788022063653,
+    "ts": 1788037217638,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.548,
+      "salience": 0.547,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5065,7 +5065,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1788022063651,
+    "ts": 1788037217637,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
@@ -6467,11 +6467,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1788022063651,
+    "ts": 1788037217637,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.532,
+      "salience": 0.531,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -7869,7 +7869,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1788022063653,
+    "ts": 1788037217638,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
@@ -8396,11 +8396,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1788022063652,
+    "ts": 1788037217637,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.485,
+      "salience": 0.484,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -9330,11 +9330,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1788022063653,
+    "ts": 1788037217638,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.485,
+      "salience": 0.484,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -9606,11 +9606,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1788022063652,
+    "ts": 1788037217637,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
-      "salience": 0.469,
+      "salience": 0.468,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2913",
       "votes": [
         {
@@ -10538,7 +10538,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1788022063653,
+    "ts": 1788037217638,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
@@ -10814,11 +10814,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1788022063652,
+    "ts": 1788037217637,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
-      "salience": 0.466,
+      "salience": 0.465,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8312",
       "votes": [
         {
@@ -11747,7 +11747,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1788022063652,
+    "ts": 1788037217637,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
@@ -12680,7 +12680,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1788022063653,
+    "ts": 1788037217638,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
@@ -13072,7 +13072,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1788022063653,
+    "ts": 1788037217637,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
@@ -14475,11 +14475,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1788022063653,
+    "ts": 1788037217638,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.27,
+      "salience": 0.269,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -15368,7 +15368,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1788022063653,
+    "ts": 1788037217638,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
@@ -16283,11 +16283,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1788022063653,
+    "ts": 1788037217638,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.257,
+      "salience": 0.256,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -17171,11 +17171,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1788022063653,
+    "ts": 1788037217637,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.252,
+      "salience": 0.251,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -18092,11 +18092,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1788022063653,
+    "ts": 1788037217637,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.241,
+      "salience": 0.24,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -19010,11 +19010,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1788022063652,
+    "ts": 1788037217637,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.181,
+      "salience": 0.18,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -19909,11 +19909,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1788022063651,
+    "ts": 1788037217636,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.152,
+      "salience": 0.151,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -20843,11 +20843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1788022063651,
+    "ts": 1788037217636,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
-      "salience": 0.078,
+      "salience": 0.077,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/254",
       "votes": [
         {
@@ -21772,11 +21772,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1788022063651,
+    "ts": 1788037217636,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
-      "salience": 0.076,
+      "salience": 0.075,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7618",
       "votes": [
         {
@@ -22681,11 +22681,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1788022063652,
+    "ts": 1788037217637,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
-      "salience": 0.07,
+      "salience": 0.069,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8466",
       "votes": [
         {
@@ -23556,11 +23556,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1788022063652,
+    "ts": 1788037217637,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
-      "salience": 0.07,
+      "salience": 0.069,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8428",
       "votes": [
         {
@@ -24440,12 +24440,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_appeals-blocking-latest",
     "source": "news",
-    "ts": 1788022198387,
+    "ts": 1788037409503,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.934,
+      "salience": 0.907,
       "articles": [
         {
           "title": "Trump admin appeals latest ruling blocking his mail voting executive order",
@@ -24546,12 +24546,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_blocks-executive-judge",
     "source": "news",
-    "ts": 1788022198388,
+    "ts": 1788037409504,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.862,
+      "salience": 0.836,
       "articles": [
         {
           "title": "Judge again blocks Trump mail ballot executive order in ruling that likely to be swiftly appealed",
@@ -24650,14 +24650,170 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_bannon-contempt-conviction",
+    "cid": "cand_news_ahead-civil-elections",
     "source": "news",
-    "ts": 1788022198387,
+    "ts": 1788037409504,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.735,
+      "salience": 0.774,
+      "articles": [
+        {
+          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
+          "url": "https://www.wral.com/news/ap/a78df-civil-rights-groups-make-urgent-plea-for-voting-rights-in-dc-ahead-of-midterm-elections/",
+          "domain": "wral.com",
+          "seendate": "2026-08-29T02:30:00Z",
+          "image": "https://images.wral.com/6c6dc4cb-fd89-55bc-af3c-8caff179559e"
+        },
+        {
+          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections - WSVN 7News | Miami News , Weather , Sports",
+          "url": "https://wsvn.com/news/politics/civil-rights-groups-make-urgent-plea-for-voting-rights-in-dc-ahead-of-midterm-elections/",
+          "domain": "wsvn.com",
+          "seendate": "2026-08-29T02:15:00Z",
+          "image": null
+        },
+        {
+          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
+          "url": "https://www.news-gazette.com/news/nation-world/civil-rights-groups-make-urgent-plea-for-voting-rights-in-dc-ahead-of-midterm-elections/article_15ffb7e5-ec03-5281-b4be-a9f33ac3d125.html",
+          "domain": "news-gazette.com",
+          "seendate": "2026-08-28T18:30:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/news-gazette.com/content/tncms/custom/image/3d3bfbd4-3cf5-11ec-9461-574a9d514a20.jpg"
+        },
+        {
+          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
+          "url": "https://www.ksat.com/news/politics/2026/08/28/civil-rights-groups-make-urgent-plea-for-voting-rights-in-dc-ahead-of-midterm-elections/",
+          "domain": "ksat.com",
+          "seendate": "2026-08-28T17:45:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/ZVY6HBQT2RGALLERG5IY5M4BDE.jpg?_a=DATAg1kSZAA0"
+        },
+        {
+          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
+          "url": "https://www.clickondetroit.com/news/politics/2026/08/28/civil-rights-groups-make-urgent-plea-for-voting-rights-in-dc-ahead-of-midterm-elections/",
+          "domain": "clickondetroit.com",
+          "seendate": "2026-08-28T07:15:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/B64RLSDMYBDQ3K7JVHQLYCHRAY.jpg?_a=DATAg1kSZAA0"
+        },
+        {
+          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections - Las Vegas Sun News",
+          "url": "https://lasvegassun.com/news/2026/aug/27/civil-rights-groups-make-urgent-plea-for-voting-ri/",
+          "domain": "lasvegassun.com",
+          "seendate": "2026-08-28T05:45:00Z",
+          "image": null
+        },
+        {
+          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
+          "url": "https://www.clickorlando.com/news/politics/2026/08/28/civil-rights-groups-make-urgent-plea-for-voting-rights-in-dc-ahead-of-midterm-elections/",
+          "domain": "clickorlando.com",
+          "seendate": "2026-08-28T05:30:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/B64RLSDMYBDQ3K7JVHQLYCHRAY.jpg?_a=DATAg1kSZAA0"
+        },
+        {
+          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
+          "url": "https://www.erienewsnow.com/news/politics/civil-rights-groups-make-urgent-plea-for-voting-rights-in-dc-ahead-of-midterm-elections/article_4eea7e4b-664c-5314-901b-00c36d79d507.html",
+          "domain": "erienewsnow.com",
+          "seendate": "2026-08-28T04:30:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/erienewsnow.com/content/tncms/custom/image/b278f54b-830b-4f05-9350-cb090f41a0d4.png"
+        }
+      ]
+    },
+    "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
+    "summary": "2026-08-29 wral.com: Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections\n2026-08-29 wsvn.com: Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections - WSVN 7News | Miami News , Weather , Sports\n2026-08-28 news-gazette.com: Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections\n2026-08-28 ksat.com: Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections\n2026-08-28 clickondetroit.com: Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections\n2026-08-28 lasvegassun.com: Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections - Las Vegas Sun News",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_congress-democrats-election",
+    "source": "news",
+    "ts": 1788037409503,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.71,
+      "articles": [
+        {
+          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
+          "url": "https://www.ideastream.org/npr-news/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
+          "domain": "ideastream.org",
+          "seendate": "2026-08-28T16:15:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
+          "url": "https://www.kjzz.org/npr-top-stories/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
+          "domain": "kjzz.org",
+          "seendate": "2026-08-28T15:45:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
+          "url": "https://www.kzyx.org/npr-news/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
+          "domain": "kzyx.org",
+          "seendate": "2026-08-28T15:45:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
+          "url": "https://wysu.org/npr-national-news/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
+          "domain": "wysu.org",
+          "seendate": "2026-08-28T15:45:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
+          "url": "https://www.upr.org/npr-news/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
+          "domain": "upr.org",
+          "seendate": "2026-08-28T15:45:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
+          "url": "https://www.aspenpublicradio.org/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
+          "domain": "aspenpublicradio.org",
+          "seendate": "2026-08-28T13:30:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
+          "url": "https://www.kasu.org/politics/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
+          "domain": "kasu.org",
+          "seendate": "2026-08-28T13:30:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
+          "url": "https://www.wcsufm.org/latest-from-npr/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
+          "domain": "wcsufm.org",
+          "seendate": "2026-08-28T13:30:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        }
+      ]
+    },
+    "title": "How Democrats in Congress are preparing for Trump midterm election interference",
+    "summary": "2026-08-28 ideastream.org: How Democrats in Congress are preparing for Trump midterm election interference\n2026-08-28 kjzz.org: How Democrats in Congress are preparing for Trump midterm election interference\n2026-08-28 kzyx.org: How Democrats in Congress are preparing for Trump midterm election interference\n2026-08-28 wysu.org: How Democrats in Congress are preparing for Trump midterm election interference\n2026-08-28 upr.org: How Democrats in Congress are preparing for Trump midterm election interference\n2026-08-28 aspenpublicradio.org: How Democrats in Congress are preparing for Trump midterm election interference",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_bannon-contempt-conviction",
+    "source": "news",
+    "ts": 1788037409502,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.709,
       "articles": [
         {
           "title": "Judge declines to dismiss Steve Bannon criminal contempt conviction – Connect FM | Local News Radio",
@@ -24744,12 +24900,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_direct-helped-next",
     "source": "news",
-    "ts": 1788022198388,
+    "ts": 1788037409503,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.735,
+      "salience": 0.709,
       "articles": [
         {
           "title": "Zelenskyy Direct Plea Helped Unlock Russia Sanctions In The Senate . What Next Is Uncertain – The Yeshiva World",
@@ -24841,78 +24997,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_ahead-civil-elections",
-    "source": "news",
-    "ts": 1788022198388,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.69,
-      "articles": [
-        {
-          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
-          "url": "https://www.wral.com/news/ap/a78df-civil-rights-groups-make-urgent-plea-for-voting-rights-in-dc-ahead-of-midterm-elections/",
-          "domain": "wral.com",
-          "seendate": "2026-08-29T02:30:00Z",
-          "image": "https://images.wral.com/6c6dc4cb-fd89-55bc-af3c-8caff179559e"
-        },
-        {
-          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections - WSVN 7News | Miami News , Weather , Sports",
-          "url": "https://wsvn.com/news/politics/civil-rights-groups-make-urgent-plea-for-voting-rights-in-dc-ahead-of-midterm-elections/",
-          "domain": "wsvn.com",
-          "seendate": "2026-08-29T02:15:00Z",
-          "image": null
-        },
-        {
-          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
-          "url": "https://www.clickondetroit.com/news/politics/2026/08/28/civil-rights-groups-make-urgent-plea-for-voting-rights-in-dc-ahead-of-midterm-elections/",
-          "domain": "clickondetroit.com",
-          "seendate": "2026-08-28T07:15:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/B64RLSDMYBDQ3K7JVHQLYCHRAY.jpg?_a=DATAg1kSZAA0"
-        },
-        {
-          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections - Las Vegas Sun News",
-          "url": "https://lasvegassun.com/news/2026/aug/27/civil-rights-groups-make-urgent-plea-for-voting-ri/",
-          "domain": "lasvegassun.com",
-          "seendate": "2026-08-28T05:45:00Z",
-          "image": null
-        },
-        {
-          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
-          "url": "https://www.clickorlando.com/news/politics/2026/08/28/civil-rights-groups-make-urgent-plea-for-voting-rights-in-dc-ahead-of-midterm-elections/",
-          "domain": "clickorlando.com",
-          "seendate": "2026-08-28T05:30:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/B64RLSDMYBDQ3K7JVHQLYCHRAY.jpg?_a=DATAg1kSZAA0"
-        },
-        {
-          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
-          "url": "https://www.erienewsnow.com/news/politics/civil-rights-groups-make-urgent-plea-for-voting-rights-in-dc-ahead-of-midterm-elections/article_4eea7e4b-664c-5314-901b-00c36d79d507.html",
-          "domain": "erienewsnow.com",
-          "seendate": "2026-08-28T04:30:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/erienewsnow.com/content/tncms/custom/image/b278f54b-830b-4f05-9350-cb090f41a0d4.png"
-        }
-      ]
-    },
-    "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
-    "summary": "2026-08-29 wral.com: Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections\n2026-08-29 wsvn.com: Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections - WSVN 7News | Miami News , Weather , Sports\n2026-08-28 clickondetroit.com: Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections\n2026-08-28 lasvegassun.com: Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections - Las Vegas Sun News\n2026-08-28 clickorlando.com: Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections\n2026-08-28 erienewsnow.com: Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_cook-fed-fire",
     "source": "news",
-    "ts": 1788022198388,
+    "ts": 1788037409503,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.621,
+      "salience": 0.595,
       "articles": [
         {
           "title": "Fed governor Lisa Cook slams Trump renewed threat to fire her",
@@ -25013,12 +25105,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_blow-campaigning-data",
     "source": "news",
-    "ts": 1788022198389,
+    "ts": 1788037409504,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.607,
+      "salience": 0.581,
       "articles": [
         {
           "title": "New inflation data delivers blow to Republicans campaigning on economic strength",
@@ -25119,12 +25211,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_act-archivists-defend",
     "source": "news",
-    "ts": 1788022198388,
+    "ts": 1788037409504,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.572,
+      "salience": 0.545,
       "articles": [
         {
           "title": "Former archivists defend Presidential Records Act",
@@ -25183,12 +25275,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_arrive-challenges-court",
     "source": "news",
-    "ts": 1788022198388,
+    "ts": 1788037409503,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.568,
+      "salience": 0.542,
       "articles": [
         {
           "title": "New challenges to Trump mail - in voting order arrive after Supreme Court ruling",
@@ -25238,92 +25330,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_before-challenge-file",
-    "source": "news",
-    "ts": 1788022198387,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.541,
-      "articles": [
-        {
-          "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
-          "url": "https://www.texarkanagazette.com/news/2026/aug/26/judge-removes-one-hurdle-for-trump-mail-voting/",
-          "domain": "texarkanagazette.com",
-          "seendate": "2026-08-27T09:00:00Z",
-          "image": "https://wehco.media.clients.ellingtoncms.com/imports/adg/img/2026/08/26/213525096_213525096-3857c0eb0b9c413b9a02a0531c321521_t1200.jpg?57a0c2296240c280e9492005c3cad63e7cbe80f4"
-        },
-        {
-          "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
-          "url": "https://www.santafenewmexican.com/ap/national/judge-removes-one-hurdle-for-trump-mail-voting-order-as-states-file-new-challenge-before/article_cab161f9-c607-5410-ac76-9c99899b444d.html",
-          "domain": "santafenewmexican.com",
-          "seendate": "2026-08-27T07:00:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/santafenewmexican.com/content/tncms/assets/v3/editorial/8/c7/8c7a0e5e-f39c-55ac-95a9-f4696c2df529/6a8fb81e586f9.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
-          "url": "https://www.butlereagle.com/20260826/judge-removes-one-hurdle-for-trump-mail-voting-order-as-states-file-new-challenge-before-midterms/",
-          "domain": "butlereagle.com",
-          "seendate": "2026-08-27T04:15:00Z",
-          "image": "https://imengine.public.prod.bte.navigacloud.com/?uuid=a4d5a058-6913-5f6e-8a1d-232e52ab4fae&function=cover&type=preview&source=false"
-        },
-        {
-          "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
-          "url": "https://www.wdio.com/ap-top-news/ap-top-news-us-headlines-ap-top-news/judge-removes-one-hurdle-for-trump-mail-voting-order-as-states-file-new-challenge-before-midterms/",
-          "domain": "wdio.com",
-          "seendate": "2026-08-26T23:30:00Z",
-          "image": "https://www.wdio.com/wp-content/uploads/apimg/2026/08/Supreme_Court_Trump_Elections_24836.jpg"
-        },
-        {
-          "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
-          "url": "https://www.ksat.com/news/politics/2026/08/26/democratic-states-file-new-lawsuit-seeking-to-block-trumps-order-limiting-mail-voting-in-midterms/",
-          "domain": "ksat.com",
-          "seendate": "2026-08-26T19:15:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/67NGIDDMIFBCBGQWAAUOIQE7AI.jpg?_a=DATAg1kSZAA0"
-        },
-        {
-          "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
-          "url": "https://www.nvdaily.com/associated_press_national/judge-removes-one-hurdle-for-trump-mail-voting-order-as-states-file-new-challenge-before/article_180c2890-1eab-5395-8a92-273e1ac97c5c.html",
-          "domain": "nvdaily.com",
-          "seendate": "2026-08-26T19:15:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/nvdaily.com/content/tncms/assets/v3/editorial/5/7c/57c4292e-22f4-55dd-835a-365e1f05c1dc/6a8dcebd879cb.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
-          "url": "http://www.idahopress.com/ap_news/us/judge-removes-one-hurdle-for-trump-mail-voting-order-as-states-file-new-challenge-before/article_b77bc8a9-a419-5337-a7f0-a7fadf7d3c49.html",
-          "domain": "idahopress.com",
-          "seendate": "2026-08-26T19:00:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/idahopress.com/content/tncms/assets/v3/editorial/9/51/9515bcdd-aedd-5472-9cec-9aa32610d00b/6a84d0085f716.image.jpg?crop=1763%2C926%2C0%2C125"
-        },
-        {
-          "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
-          "url": "https://www.news4jax.com/news/politics/2026/08/26/democratic-states-file-new-lawsuit-seeking-to-block-trumps-order-limiting-mail-voting-in-midterms/",
-          "domain": "news4jax.com",
-          "seendate": "2026-08-26T18:30:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/67NGIDDMIFBCBGQWAAUOIQE7AI.jpg?_a=DATAg1kSZAA0"
-        }
-      ]
-    },
-    "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
-    "summary": "2026-08-27 texarkanagazette.com: Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms\n2026-08-27 santafenewmexican.com: Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms\n2026-08-27 butlereagle.com: Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms\n2026-08-26 wdio.com: Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms\n2026-08-26 ksat.com: Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms\n2026-08-26 nvdaily.com: Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_comply-judge-lack",
     "source": "news",
-    "ts": 1788022198388,
+    "ts": 1788037409504,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.526,
+      "salience": 0.499,
       "articles": [
         {
           "title": "Judge says states lack time to comply with Trump new mail voting rules",
@@ -25366,57 +25380,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_cruz-podcast-president",
-    "source": "news",
-    "ts": 1788022198388,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.377,
-      "articles": [
-        {
-          "title": "Ted Cruz says on podcast it  no secret that I want to be president  ",
-          "url": "https://www.kwtx.com/2026/08/27/ted-cruz-says-podcast-its-no-secret-that-i-want-be-president/",
-          "domain": "kwtx.com",
-          "seendate": "2026-08-28T02:45:00Z",
-          "image": "https://gray-kwtx-prod.gtv-cdn.com/resizer/v2/W7PIYSTJOFGFRAM4ZQOD4YUH3Y.jpg?auth=7bf73e83ec7d0c48569bf787e9cb8c99683732d2f19494cd366cb7fddd2acddb&smart=true"
-        },
-        {
-          "title": "Ted Cruz says on podcast it  no secret that I want to be president  ",
-          "url": "https://www.ksat.com/news/texas/2026/08/26/ted-cruz-says-on-podcast-its-no-secret-that-i-want-to-be-president/",
-          "domain": "ksat.com",
-          "seendate": "2026-08-26T23:15:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/A33VHIOZ2FBVXPR72QOHHILZDA.jpg?_a=DATAg1kSZAA0"
-        },
-        {
-          "title": "Ted Cruz says on podcast it  no secret that I want to be president  ",
-          "url": "https://www.yahoo.com/news/politics/articles/ted-cruz-says-podcast-no-193338764.html",
-          "domain": "yahoo.com",
-          "seendate": "2026-08-26T20:00:00Z",
-          "image": "https://s.yimg.com/lo/mysterio/api/b108313ccf11b6bcc08ebafa9d73d00fe75f11c84d08b7d89a9915ac29a6d1a6/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fmysa_hearst_708%2Ff94af3d3d42e7c6a1959d83f6bae8bd1.jpg"
-        }
-      ]
-    },
-    "title": "Ted Cruz says on podcast it  no secret that I want to be president  ",
-    "summary": "2026-08-28 kwtx.com: Ted Cruz says on podcast it  no secret that I want to be president  \n2026-08-26 ksat.com: Ted Cruz says on podcast it  no secret that I want to be president  \n2026-08-26 yahoo.com: Ted Cruz says on podcast it  no secret that I want to be president  ",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_ballot-envelope-faces",
     "source": "news",
-    "ts": 1788022198389,
+    "ts": 1788037409504,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.346,
+      "salience": 0.319,
       "articles": [
         {
           "title": "  Pushing the envelope : Trump mail ballot rule faces new lawsuit with midterms looming",
@@ -25452,104 +25423,47 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_federal-judge-legal",
+    "cid": "cand_news_before-challenge-file",
     "source": "news",
-    "ts": 1788022198388,
+    "ts": 1788037409503,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.303,
+      "salience": 0.295,
       "articles": [
         {
-          "title": "Boston federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely",
-          "url": "https://www.wbur.org/news/2026/08/26/boston-judge-mail-voting-obstical-scotus",
-          "domain": "wbur.org",
-          "seendate": "2026-08-26T21:15:00Z",
-          "image": "https://media.wbur.org/wp/2026/08/Election_2026_Florida_26230766602771-1000x666.jpg"
+          "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
+          "url": "https://www.texarkanagazette.com/news/2026/aug/26/judge-removes-one-hurdle-for-trump-mail-voting/",
+          "domain": "texarkanagazette.com",
+          "seendate": "2026-08-27T09:00:00Z",
+          "image": "https://wehco.media.clients.ellingtoncms.com/imports/adg/img/2026/08/26/213525096_213525096-3857c0eb0b9c413b9a02a0531c321521_t1200.jpg?57a0c2296240c280e9492005c3cad63e7cbe80f4"
         },
         {
-          "title": "Federal judge removes major legal obstacle to Trump mail voting order",
-          "url": "https://www.mcall.com/2026/08/26/trump-mail-voting-lawsuit/",
-          "domain": "mcall.com",
-          "seendate": "2026-08-26T21:00:00Z",
-          "image": "https://www.mcall.com/wp-content/uploads/2026/08/AP26230767195568_28f17e.jpg"
+          "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
+          "url": "https://www.santafenewmexican.com/ap/national/judge-removes-one-hurdle-for-trump-mail-voting-order-as-states-file-new-challenge-before/article_cab161f9-c607-5410-ac76-9c99899b444d.html",
+          "domain": "santafenewmexican.com",
+          "seendate": "2026-08-27T07:00:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/santafenewmexican.com/content/tncms/assets/v3/editorial/8/c7/8c7a0e5e-f39c-55ac-95a9-f4696c2df529/6a8fb81e586f9.image.jpg?crop=1763%2C926%2C0%2C124"
         },
         {
-          "title": "Federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely",
-          "url": "https://www.wsls.com/news/politics/2026/08/26/democratic-states-file-new-lawsuit-seeking-to-block-trumps-order-limiting-mail-voting-in-midterms/",
-          "domain": "wsls.com",
-          "seendate": "2026-08-26T17:30:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/67NGIDDMIFBCBGQWAAUOIQE7AI.jpg?_a=DATAg1kSZAA0"
+          "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
+          "url": "https://www.butlereagle.com/20260826/judge-removes-one-hurdle-for-trump-mail-voting-order-as-states-file-new-challenge-before-midterms/",
+          "domain": "butlereagle.com",
+          "seendate": "2026-08-27T04:15:00Z",
+          "image": "https://imengine.public.prod.bte.navigacloud.com/?uuid=a4d5a058-6913-5f6e-8a1d-232e52ab4fae&function=cover&type=preview&source=false"
         },
         {
-          "title": "Federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely",
-          "url": "https://www.durangoherald.com/articles/associated-press/democratic-states-file-new-lawsuit-seeking-to-block-trumps-order-limiting-mail-voting-in-midterms/",
-          "domain": "durangoherald.com",
-          "seendate": "2026-08-26T17:15:00Z",
-          "image": "https://imengine.public.prod.dur.navigacloud.com/?uuid=F22244DF-89F9-5DFB-99B2-5E08E31EFB54&function=cover&type=preview&source=false"
-        },
-        {
-          "title": "Federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely",
-          "url": "http://www.dailyadvance.com/news/national/federal-judge-removes-major-legal-obstacle-to-trump-mail-voting-order-with-more-challenges-likely/article_8958c29b-fa5d-56ec-ac14-18d3afee2d23.html",
-          "domain": "dailyadvance.com",
-          "seendate": "2026-08-26T17:15:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/dailyadvance.com/content/tncms/assets/v3/editorial/1/af/1af4edb1-922d-5871-bb36-4eb043d36576/6a84ecb9729b9.image.jpg?crop=1763%2C926%2C0%2C125"
+          "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
+          "url": "https://www.wdio.com/ap-top-news/ap-top-news-us-headlines-ap-top-news/judge-removes-one-hurdle-for-trump-mail-voting-order-as-states-file-new-challenge-before-midterms/",
+          "domain": "wdio.com",
+          "seendate": "2026-08-26T23:30:00Z",
+          "image": "https://www.wdio.com/wp-content/uploads/apimg/2026/08/Supreme_Court_Trump_Elections_24836.jpg"
         }
       ]
     },
-    "title": "Federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely",
-    "summary": "2026-08-26 wbur.org: Boston federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely\n2026-08-26 mcall.com: Federal judge removes major legal obstacle to Trump mail voting order\n2026-08-26 wsls.com: Federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely\n2026-08-26 durangoherald.com: Federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely\n2026-08-26 dailyadvance.com: Federal judge removes major legal obstacle to Trump mail voting order , with more challenges likely",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_block-democratic-file",
-    "source": "news",
-    "ts": 1788022198388,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.24,
-      "articles": [
-        {
-          "title": "Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms",
-          "url": "https://abc30.com/story/democratic-states-file-new-lawsuit-seeking-block-trumps-order-limiting-mail-voting-midterms/19739342/",
-          "domain": "abc30.com",
-          "seendate": "2026-08-26T20:00:00Z",
-          "image": "https://cdn.abcotvs.com/dip/images/19739404_082626-ap-usps-mail-voting-img.png"
-        },
-        {
-          "title": "Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms",
-          "url": "https://abc7ny.com/story/democratic-states-file-new-lawsuit-seeking-block-trumps-order-limiting-mail-voting-midterms/19739342/",
-          "domain": "abc7ny.com",
-          "seendate": "2026-08-26T17:45:00Z",
-          "image": "https://cdn.abcotvs.com/dip/images/19739404_082626-ap-usps-mail-voting-img.png"
-        },
-        {
-          "title": "Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms",
-          "url": "https://abc13.com/story/democratic-states-file-new-lawsuit-seeking-block-trumps-order-limiting-mail-voting-midterms/19739342/",
-          "domain": "abc13.com",
-          "seendate": "2026-08-26T17:15:00Z",
-          "image": "https://cdn.abcotvs.com/dip/images/19739404_082626-ap-usps-mail-voting-img.png"
-        },
-        {
-          "title": "Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms",
-          "url": "https://www.wgbh.org/news/politics/2026-08-26/democratic-states-file-new-lawsuit-seeking-to-block-trumps-order-limiting-mail-voting-in-midterms",
-          "domain": "wgbh.org",
-          "seendate": "2026-08-26T17:15:00Z",
-          "image": "https://k1-prod-gbh.s3.us-east-2.amazonaws.com/brightspot/ac/80/1bfa21504ed5848516ac19e3a359/260826-ap-voting-lawsuit.jpeg"
-        }
-      ]
-    },
-    "title": "Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms",
-    "summary": "2026-08-26 abc30.com: Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms\n2026-08-26 abc7ny.com: Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms\n2026-08-26 abc13.com: Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms\n2026-08-26 wgbh.org: Democratic states file new lawsuit seeking to block Trump order limiting mail voting in midterms",
+    "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
+    "summary": "2026-08-27 texarkanagazette.com: Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms\n2026-08-27 santafenewmexican.com: Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms\n2026-08-27 butlereagle.com: Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms\n2026-08-26 wdio.com: Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
