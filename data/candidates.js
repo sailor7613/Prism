@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-29T21:03:29.510Z · 29 legislative + 13 news (GDELT, 3d)
+// 2026-08-29T23:26:13.536Z · 29 legislative + 15 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1788037217638,
+    "ts": 1788045949145,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.672,
+      "salience": 0.671,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,7 +259,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1788037217638,
+    "ts": 1788045949145,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1788037217637,
+    "ts": 1788045949144,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.634,
+      "salience": 0.633,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -2843,7 +2843,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1788037217638,
+    "ts": 1788045949145,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
@@ -3118,11 +3118,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1788037217637,
+    "ts": 1788045949144,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.562,
+      "salience": 0.561,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4520,11 +4520,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1788037217638,
+    "ts": 1788045949145,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
-      "salience": 0.562,
+      "salience": 0.561,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
       "votes": [
         {
@@ -4794,7 +4794,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1788037217638,
+    "ts": 1788045949145,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
@@ -5065,11 +5065,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1788037217637,
+    "ts": 1788045949143,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.537,
+      "salience": 0.536,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6467,7 +6467,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1788037217637,
+    "ts": 1788045949143,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
@@ -7869,11 +7869,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1788037217638,
+    "ts": 1788045949145,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.526,
+      "salience": 0.525,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -8396,7 +8396,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1788037217637,
+    "ts": 1788045949144,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
@@ -9330,11 +9330,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1788037217638,
+    "ts": 1788045949145,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.484,
+      "salience": 0.483,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -9606,7 +9606,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1788037217637,
+    "ts": 1788045949143,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
@@ -10538,11 +10538,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1788037217638,
+    "ts": 1788045949145,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.468,
+      "salience": 0.467,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -10814,7 +10814,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1788037217637,
+    "ts": 1788045949144,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
@@ -11747,11 +11747,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1788037217637,
+    "ts": 1788045949144,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.446,
+      "salience": 0.445,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -12680,11 +12680,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1788037217638,
+    "ts": 1788045949145,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.435,
+      "salience": 0.434,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -13072,11 +13072,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1788037217637,
+    "ts": 1788045949144,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.327,
+      "salience": 0.326,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -14475,7 +14475,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1788037217638,
+    "ts": 1788045949145,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
@@ -15368,11 +15368,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1788037217638,
+    "ts": 1788045949145,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.263,
+      "salience": 0.262,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -16283,11 +16283,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1788037217638,
+    "ts": 1788045949145,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.256,
+      "salience": 0.255,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -17171,7 +17171,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1788037217637,
+    "ts": 1788045949144,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
@@ -18092,7 +18092,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1788037217637,
+    "ts": 1788045949144,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
@@ -19010,11 +19010,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1788037217637,
+    "ts": 1788045949144,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.18,
+      "salience": 0.179,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -19909,7 +19909,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1788037217636,
+    "ts": 1788045949143,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
@@ -20843,7 +20843,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1788037217636,
+    "ts": 1788045949143,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
@@ -21772,11 +21772,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1788037217636,
+    "ts": 1788045949142,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
-      "salience": 0.075,
+      "salience": 0.074,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7618",
       "votes": [
         {
@@ -22681,7 +22681,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1788037217637,
+    "ts": 1788045949143,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
@@ -23556,7 +23556,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1788037217637,
+    "ts": 1788045949143,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
@@ -24440,12 +24440,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_appeals-blocking-latest",
     "source": "news",
-    "ts": 1788037409503,
+    "ts": 1788045973528,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.907,
+      "salience": 0.893,
       "articles": [
         {
           "title": "Trump admin appeals latest ruling blocking his mail voting executive order",
@@ -24544,14 +24544,106 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_blocks-executive-judge",
+    "cid": "cand_news_congress-democrats-election",
     "source": "news",
-    "ts": 1788037409504,
+    "ts": 1788045973528,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.836,
+      "salience": 0.863,
+      "articles": [
+        {
+          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
+          "url": "https://www.mtpr.org/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
+          "domain": "mtpr.org",
+          "seendate": "2026-08-29T01:30:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
+          "url": "https://www.ideastream.org/npr-news/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
+          "domain": "ideastream.org",
+          "seendate": "2026-08-28T16:15:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
+          "url": "https://www.kjzz.org/npr-top-stories/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
+          "domain": "kjzz.org",
+          "seendate": "2026-08-28T15:45:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
+          "url": "https://www.kzyx.org/npr-news/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
+          "domain": "kzyx.org",
+          "seendate": "2026-08-28T15:45:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
+          "url": "https://wysu.org/npr-national-news/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
+          "domain": "wysu.org",
+          "seendate": "2026-08-28T15:45:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
+          "url": "https://www.upr.org/npr-news/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
+          "domain": "upr.org",
+          "seendate": "2026-08-28T15:45:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
+          "url": "https://www.kawc.org/npr-news/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
+          "domain": "kawc.org",
+          "seendate": "2026-08-28T14:45:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
+          "url": "https://www.aspenpublicradio.org/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
+          "domain": "aspenpublicradio.org",
+          "seendate": "2026-08-28T13:30:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
+          "url": "https://www.kasu.org/politics/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
+          "domain": "kasu.org",
+          "seendate": "2026-08-28T13:30:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
+          "url": "https://www.wcsufm.org/latest-from-npr/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
+          "domain": "wcsufm.org",
+          "seendate": "2026-08-28T13:30:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        }
+      ]
+    },
+    "title": "How Democrats in Congress are preparing for Trump midterm election interference",
+    "summary": "2026-08-29 mtpr.org: How Democrats in Congress are preparing for Trump midterm election interference\n2026-08-28 ideastream.org: How Democrats in Congress are preparing for Trump midterm election interference\n2026-08-28 kjzz.org: How Democrats in Congress are preparing for Trump midterm election interference\n2026-08-28 kzyx.org: How Democrats in Congress are preparing for Trump midterm election interference\n2026-08-28 wysu.org: How Democrats in Congress are preparing for Trump midterm election interference\n2026-08-28 upr.org: How Democrats in Congress are preparing for Trump midterm election interference",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_blocks-executive-judge",
+    "source": "news",
+    "ts": 1788045973529,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.821,
       "articles": [
         {
           "title": "Judge again blocks Trump mail ballot executive order in ruling that likely to be swiftly appealed",
@@ -24650,14 +24742,106 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_ahead-civil-elections",
+    "cid": "cand_news_democratic-force-inside",
     "source": "news",
-    "ts": 1788037409504,
+    "ts": 1788045973528,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.774,
+      "salience": 0.775,
+      "articles": [
+        {
+          "title": "Inside the Democratic task force preparing for if Trump interferes in the midterms",
+          "url": "https://www.ideastream.org/2026-08-28/inside-the-democratic-task-force-preparing-for-if-trump-interferes-in-the-midterms",
+          "domain": "ideastream.org",
+          "seendate": "2026-08-28T11:30:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "Inside the Democratic task force preparing for if Trump interferes in the midterms",
+          "url": "https://news.wjct.org/elections/2026-08-28/inside-the-democratic-task-force-preparing-for-if-trump-interferes-in-the-midterms",
+          "domain": "news.wjct.org",
+          "seendate": "2026-08-28T11:15:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "Inside the Democratic task force preparing for if Trump interferes in the midterms",
+          "url": "https://www.wbaa.org/npr-news/2026-08-28/inside-the-democratic-task-force-preparing-for-if-trump-interferes-in-the-midterms",
+          "domain": "wbaa.org",
+          "seendate": "2026-08-28T11:15:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "Inside the Democratic task force preparing for if Trump interferes in the midterms",
+          "url": "https://www.kgou.org/politics-and-government/2026-08-28/inside-the-democratic-task-force-preparing-for-if-trump-interferes-in-the-midterms",
+          "domain": "kgou.org",
+          "seendate": "2026-08-28T11:15:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "Inside the Democratic task force preparing for if Trump interferes in the midterms",
+          "url": "https://www.delawarepublic.org/npr-headlines/2026-08-28/inside-the-democratic-task-force-preparing-for-if-trump-interferes-in-the-midterms",
+          "domain": "delawarepublic.org",
+          "seendate": "2026-08-28T10:15:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "Inside the Democratic task force preparing for if Trump interferes in the midterms",
+          "url": "https://www.kwit.org/2026-08-28/inside-the-democratic-task-force-preparing-for-if-trump-interferes-in-the-midterms",
+          "domain": "kwit.org",
+          "seendate": "2026-08-28T10:15:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "Inside the Democratic task force preparing for if Trump interferes in the midterms",
+          "url": "https://www.tspr.org/npr-news/2026-08-28/inside-the-democratic-task-force-preparing-for-if-trump-interferes-in-the-midterms",
+          "domain": "tspr.org",
+          "seendate": "2026-08-28T10:15:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "Inside the Democratic task force preparing for if Trump interferes in the midterms",
+          "url": "https://www.ksmu.org/2026-08-28/inside-the-democratic-task-force-preparing-for-if-trump-interferes-in-the-midterms",
+          "domain": "ksmu.org",
+          "seendate": "2026-08-28T10:15:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "Inside the Democratic task force preparing for if Trump interferes in the midterms",
+          "url": "https://www.kmxt.org/2026-08-28/inside-the-democratic-task-force-preparing-for-if-trump-interferes-in-the-midterms",
+          "domain": "kmxt.org",
+          "seendate": "2026-08-28T10:15:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "Inside the Democratic task force preparing for if Trump interferes in the midterms",
+          "url": "https://www.kuow.org/npr-news/2026-08-28/inside-the-democratic-task-force-preparing-for-if-trump-interferes-in-the-midterms",
+          "domain": "kuow.org",
+          "seendate": "2026-08-28T10:15:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        }
+      ]
+    },
+    "title": "Inside the Democratic task force preparing for if Trump interferes in the midterms",
+    "summary": "2026-08-28 ideastream.org: Inside the Democratic task force preparing for if Trump interferes in the midterms\n2026-08-28 news.wjct.org: Inside the Democratic task force preparing for if Trump interferes in the midterms\n2026-08-28 wbaa.org: Inside the Democratic task force preparing for if Trump interferes in the midterms\n2026-08-28 kgou.org: Inside the Democratic task force preparing for if Trump interferes in the midterms\n2026-08-28 delawarepublic.org: Inside the Democratic task force preparing for if Trump interferes in the midterms\n2026-08-28 kwit.org: Inside the Democratic task force preparing for if Trump interferes in the midterms",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_ahead-civil-elections",
+    "source": "news",
+    "ts": 1788045973529,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.759,
       "articles": [
         {
           "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
@@ -24728,184 +24912,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_congress-democrats-election",
-    "source": "news",
-    "ts": 1788037409503,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.71,
-      "articles": [
-        {
-          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
-          "url": "https://www.ideastream.org/npr-news/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
-          "domain": "ideastream.org",
-          "seendate": "2026-08-28T16:15:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
-          "url": "https://www.kjzz.org/npr-top-stories/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
-          "domain": "kjzz.org",
-          "seendate": "2026-08-28T15:45:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
-          "url": "https://www.kzyx.org/npr-news/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
-          "domain": "kzyx.org",
-          "seendate": "2026-08-28T15:45:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
-          "url": "https://wysu.org/npr-national-news/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
-          "domain": "wysu.org",
-          "seendate": "2026-08-28T15:45:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
-          "url": "https://www.upr.org/npr-news/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
-          "domain": "upr.org",
-          "seendate": "2026-08-28T15:45:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
-          "url": "https://www.aspenpublicradio.org/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
-          "domain": "aspenpublicradio.org",
-          "seendate": "2026-08-28T13:30:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
-          "url": "https://www.kasu.org/politics/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
-          "domain": "kasu.org",
-          "seendate": "2026-08-28T13:30:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
-          "url": "https://www.wcsufm.org/latest-from-npr/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
-          "domain": "wcsufm.org",
-          "seendate": "2026-08-28T13:30:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        }
-      ]
-    },
-    "title": "How Democrats in Congress are preparing for Trump midterm election interference",
-    "summary": "2026-08-28 ideastream.org: How Democrats in Congress are preparing for Trump midterm election interference\n2026-08-28 kjzz.org: How Democrats in Congress are preparing for Trump midterm election interference\n2026-08-28 kzyx.org: How Democrats in Congress are preparing for Trump midterm election interference\n2026-08-28 wysu.org: How Democrats in Congress are preparing for Trump midterm election interference\n2026-08-28 upr.org: How Democrats in Congress are preparing for Trump midterm election interference\n2026-08-28 aspenpublicradio.org: How Democrats in Congress are preparing for Trump midterm election interference",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_bannon-contempt-conviction",
-    "source": "news",
-    "ts": 1788037409502,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.709,
-      "articles": [
-        {
-          "title": "Judge declines to dismiss Steve Bannon criminal contempt conviction – Connect FM | Local News Radio",
-          "url": "https://www.connectradio.fm/abc-national/judge-declines-to-dismiss-steve-bannons-criminal-contempt-conviction/",
-          "domain": "connectradio.fm",
-          "seendate": "2026-08-27T22:30:00Z",
-          "image": "https://www.connectradio.fm/wp-content/uploads/2026/08/Getty_SteveBannon_082726-900x506.jpg"
-        },
-        {
-          "title": "Judge declines to dismiss Steve Bannon criminal contempt conviction",
-          "url": "https://1310kfka.com/abc-news/u-s-news/08/judge-declines-to-dismiss-steve-bannons-criminal-contempt-conviction/",
-          "domain": "1310kfka.com",
-          "seendate": "2026-08-27T18:45:00Z",
-          "image": "https://s3.amazonaws.com/syndication.abcaudio.com/files/2026-08-27/Getty_SteveBannon_082726.jpg"
-        },
-        {
-          "title": "Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case – Taylorville Daily News",
-          "url": "https://www.taylorvilledailynews.com/judge-for-now-refuses-to-dismiss-steve-bannons-conviction-in-contempt-of-congress-case/",
-          "domain": "taylorvilledailynews.com",
-          "seendate": "2026-08-27T03:30:00Z",
-          "image": "https://www.taylorvilledailynews.com/wp-content/uploads/2026/08/1787782700644877jNdYCN4JGb-apn-938x625.jpg"
-        },
-        {
-          "title": "Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case",
-          "url": "https://www.clickondetroit.com/news/politics/2026/08/26/judge-for-now-refuses-to-dismiss-steve-bannons-conviction-in-contempt-of-congress-case/",
-          "domain": "clickondetroit.com",
-          "seendate": "2026-08-27T01:45:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/GGCV5NXSBBGJJEM2LG4CAZUEWY.jpg?_a=DATAg1kSZAA0"
-        },
-        {
-          "title": "Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case - Las Vegas Sun News",
-          "url": "https://lasvegassun.com/news/2026/aug/26/judge-for-now-refuses-to-dismiss-steve-bannons-con/",
-          "domain": "lasvegassun.com",
-          "seendate": "2026-08-27T00:45:00Z",
-          "image": null
-        },
-        {
-          "title": "Judge refuses to dismiss Steve Bannon contempt conviction case",
-          "url": "https://www.wgauradio.com/news/politics/judge-now-refuses/64VJ6BZASM3HBHSSKPBFFZRYEQ/",
-          "domain": "wgauradio.com",
-          "seendate": "2026-08-27T00:45:00Z",
-          "image": "https://cmg-cmg-rd-20015-prod.cdn.arcpublishing.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-1.images.arcpublishing.com%2Fcmg%2F2H35UHIKFI3EBM4IDBZND26OEY.jpg?auth=ed3a5a5ba0cecb51d381455232ef067eeb9f51b55c7c078e23c768cc0f1d115f&smart=true"
-        },
-        {
-          "title": "Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case",
-          "url": "https://www.kxl.com/judge-for-now-refuses-to-dismiss-steve-bannons-conviction-in-contempt-of-congress-case/",
-          "domain": "kxl.com",
-          "seendate": "2026-08-27T00:00:00Z",
-          "image": "https://mapi.associatedpress.com/v2/items/92bef51edc8d41338c2ea7e788f584d8.0/preview/preview.jpg?nfe=true&wm=false&app=MPK&tag=tag%3Dact%7E%3Arss%21orgId%7E66880%21iid%7E92bef51edc8d41338c2ea7e788f584d8%21qt%7E1mW9cj_GWdR&icb=1787785058"
-        },
-        {
-          "title": "Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case",
-          "url": "https://www.clickorlando.com/news/politics/2026/08/26/judge-for-now-refuses-to-dismiss-steve-bannons-conviction-in-contempt-of-congress-case/",
-          "domain": "clickorlando.com",
-          "seendate": "2026-08-26T23:30:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/GGCV5NXSBBGJJEM2LG4CAZUEWY.jpg?_a=DATAg1kSZAA0"
-        },
-        {
-          "title": "Judge refuses to dismiss Steve Bannon contempt conviction case",
-          "url": "https://www.wokv.com/news/politics/judge-now-refuses/64VJ6BZASM3HBHSSKPBFFZRYEQ/",
-          "domain": "wokv.com",
-          "seendate": "2026-08-26T23:30:00Z",
-          "image": "https://cmg-cmg-rd-20056-prod.cdn.arcpublishing.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-1.images.arcpublishing.com%2Fcmg%2F2H35UHIKFI3EBM4IDBZND26OEY.jpg?auth=ed3a5a5ba0cecb51d381455232ef067eeb9f51b55c7c078e23c768cc0f1d115f&smart=true"
-        },
-        {
-          "title": "Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case",
-          "url": "https://www.wsls.com/news/politics/2026/08/26/judge-for-now-refuses-to-dismiss-steve-bannons-conviction-in-contempt-of-congress-case/",
-          "domain": "wsls.com",
-          "seendate": "2026-08-26T22:30:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/GGCV5NXSBBGJJEM2LG4CAZUEWY.jpg?_a=DATAg1kSZAA0"
-        }
-      ]
-    },
-    "title": "Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case",
-    "summary": "2026-08-27 connectradio.fm: Judge declines to dismiss Steve Bannon criminal contempt conviction – Connect FM | Local News Radio\n2026-08-27 1310kfka.com: Judge declines to dismiss Steve Bannon criminal contempt conviction\n2026-08-27 taylorvilledailynews.com: Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case – Taylorville Daily News\n2026-08-27 clickondetroit.com: Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case\n2026-08-27 lasvegassun.com: Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case - Las Vegas Sun News\n2026-08-27 wgauradio.com: Judge refuses to dismiss Steve Bannon contempt conviction case",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_direct-helped-next",
     "source": "news",
-    "ts": 1788037409503,
+    "ts": 1788045973529,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.709,
+      "salience": 0.694,
       "articles": [
         {
           "title": "Zelenskyy Direct Plea Helped Unlock Russia Sanctions In The Senate . What Next Is Uncertain – The Yeshiva World",
@@ -24997,14 +25011,99 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_cook-fed-fire",
+    "cid": "cand_news_bannon-contempt-conviction",
     "source": "news",
-    "ts": 1788037409503,
+    "ts": 1788045973527,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.595,
+      "salience": 0.639,
+      "articles": [
+        {
+          "title": "Judge declines to dismiss Steve Bannon criminal contempt conviction – Connect FM | Local News Radio",
+          "url": "https://www.connectradio.fm/abc-national/judge-declines-to-dismiss-steve-bannons-criminal-contempt-conviction/",
+          "domain": "connectradio.fm",
+          "seendate": "2026-08-27T22:30:00Z",
+          "image": "https://www.connectradio.fm/wp-content/uploads/2026/08/Getty_SteveBannon_082726-900x506.jpg"
+        },
+        {
+          "title": "Judge declines to dismiss Steve Bannon criminal contempt conviction",
+          "url": "https://1310kfka.com/abc-news/u-s-news/08/judge-declines-to-dismiss-steve-bannons-criminal-contempt-conviction/",
+          "domain": "1310kfka.com",
+          "seendate": "2026-08-27T18:45:00Z",
+          "image": "https://s3.amazonaws.com/syndication.abcaudio.com/files/2026-08-27/Getty_SteveBannon_082726.jpg"
+        },
+        {
+          "title": "Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case – Taylorville Daily News",
+          "url": "https://www.taylorvilledailynews.com/judge-for-now-refuses-to-dismiss-steve-bannons-conviction-in-contempt-of-congress-case/",
+          "domain": "taylorvilledailynews.com",
+          "seendate": "2026-08-27T03:30:00Z",
+          "image": "https://www.taylorvilledailynews.com/wp-content/uploads/2026/08/1787782700644877jNdYCN4JGb-apn-938x625.jpg"
+        },
+        {
+          "title": "Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case",
+          "url": "https://www.clickondetroit.com/news/politics/2026/08/26/judge-for-now-refuses-to-dismiss-steve-bannons-conviction-in-contempt-of-congress-case/",
+          "domain": "clickondetroit.com",
+          "seendate": "2026-08-27T01:45:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/GGCV5NXSBBGJJEM2LG4CAZUEWY.jpg?_a=DATAg1kSZAA0"
+        },
+        {
+          "title": "Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case - Las Vegas Sun News",
+          "url": "https://lasvegassun.com/news/2026/aug/26/judge-for-now-refuses-to-dismiss-steve-bannons-con/",
+          "domain": "lasvegassun.com",
+          "seendate": "2026-08-27T00:45:00Z",
+          "image": null
+        },
+        {
+          "title": "Judge refuses to dismiss Steve Bannon contempt conviction case",
+          "url": "https://www.wgauradio.com/news/politics/judge-now-refuses/64VJ6BZASM3HBHSSKPBFFZRYEQ/",
+          "domain": "wgauradio.com",
+          "seendate": "2026-08-27T00:45:00Z",
+          "image": "https://cmg-cmg-rd-20015-prod.cdn.arcpublishing.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-1.images.arcpublishing.com%2Fcmg%2F2H35UHIKFI3EBM4IDBZND26OEY.jpg?auth=ed3a5a5ba0cecb51d381455232ef067eeb9f51b55c7c078e23c768cc0f1d115f&smart=true"
+        },
+        {
+          "title": "Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case",
+          "url": "https://www.kxl.com/judge-for-now-refuses-to-dismiss-steve-bannons-conviction-in-contempt-of-congress-case/",
+          "domain": "kxl.com",
+          "seendate": "2026-08-27T00:00:00Z",
+          "image": "https://mapi.associatedpress.com/v2/items/92bef51edc8d41338c2ea7e788f584d8.0/preview/preview.jpg?nfe=true&wm=false&app=MPK&tag=tag%3Dact%7E%3Arss%21orgId%7E66880%21iid%7E92bef51edc8d41338c2ea7e788f584d8%21qt%7E1mW9cj_GWdR&icb=1787785058"
+        },
+        {
+          "title": "Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case",
+          "url": "https://www.clickorlando.com/news/politics/2026/08/26/judge-for-now-refuses-to-dismiss-steve-bannons-conviction-in-contempt-of-congress-case/",
+          "domain": "clickorlando.com",
+          "seendate": "2026-08-26T23:30:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/GGCV5NXSBBGJJEM2LG4CAZUEWY.jpg?_a=DATAg1kSZAA0"
+        },
+        {
+          "title": "Judge refuses to dismiss Steve Bannon contempt conviction case",
+          "url": "https://www.wokv.com/news/politics/judge-now-refuses/64VJ6BZASM3HBHSSKPBFFZRYEQ/",
+          "domain": "wokv.com",
+          "seendate": "2026-08-26T23:30:00Z",
+          "image": "https://cmg-cmg-rd-20056-prod.cdn.arcpublishing.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-1.images.arcpublishing.com%2Fcmg%2F2H35UHIKFI3EBM4IDBZND26OEY.jpg?auth=ed3a5a5ba0cecb51d381455232ef067eeb9f51b55c7c078e23c768cc0f1d115f&smart=true"
+        }
+      ]
+    },
+    "title": "Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case",
+    "summary": "2026-08-27 connectradio.fm: Judge declines to dismiss Steve Bannon criminal contempt conviction – Connect FM | Local News Radio\n2026-08-27 1310kfka.com: Judge declines to dismiss Steve Bannon criminal contempt conviction\n2026-08-27 taylorvilledailynews.com: Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case – Taylorville Daily News\n2026-08-27 clickondetroit.com: Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case\n2026-08-27 lasvegassun.com: Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case - Las Vegas Sun News\n2026-08-27 wgauradio.com: Judge refuses to dismiss Steve Bannon contempt conviction case",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_cook-fed-fire",
+    "source": "news",
+    "ts": 1788045973528,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.58,
       "articles": [
         {
           "title": "Fed governor Lisa Cook slams Trump renewed threat to fire her",
@@ -25105,12 +25204,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_blow-campaigning-data",
     "source": "news",
-    "ts": 1788037409504,
+    "ts": 1788045973529,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.581,
+      "salience": 0.566,
       "articles": [
         {
           "title": "New inflation data delivers blow to Republicans campaigning on economic strength",
@@ -25181,20 +25280,6 @@ window.PRISM_CANDIDATES = [
           "domain": "katv.com",
           "seendate": "2026-08-26T23:30:00Z",
           "image": "https://katv.com/resources/media2/16x9/6000/1320/0x313/90/e0685e00-50f4-4fa2-a38f-34b5ff2d2ade-GettyImages2291006892.jpg"
-        },
-        {
-          "title": "New inflation data delivers blow to Republicans campaigning on economic strength",
-          "url": "https://wlos.com/news/nation-world/new-inflation-data-delivers-blow-to-republicans-campaigning-on-economic-strength-cpi-president-donald-trump",
-          "domain": "wlos.com",
-          "seendate": "2026-08-26T23:15:00Z",
-          "image": "https://wlos.com/resources/media2/16x9/6000/1320/0x313/90/e0685e00-50f4-4fa2-a38f-34b5ff2d2ade-GettyImages2291006892.jpg"
-        },
-        {
-          "title": "New inflation data delivers blow to Republicans campaigning on economic strength",
-          "url": "https://wwmt.com/news/nation-world/new-inflation-data-delivers-blow-to-republicans-campaigning-on-economic-strength-cpi-president-donald-trump",
-          "domain": "wwmt.com",
-          "seendate": "2026-08-26T23:15:00Z",
-          "image": "https://wwmt.com/resources/media2/16x9/6000/1320/0x313/90/e0685e00-50f4-4fa2-a38f-34b5ff2d2ade-GettyImages2291006892.jpg"
         }
       ]
     },
@@ -25211,12 +25296,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_act-archivists-defend",
     "source": "news",
-    "ts": 1788037409504,
+    "ts": 1788045973529,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.545,
+      "salience": 0.53,
       "articles": [
         {
           "title": "Former archivists defend Presidential Records Act",
@@ -25275,12 +25360,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_arrive-challenges-court",
     "source": "news",
-    "ts": 1788037409503,
+    "ts": 1788045973528,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.542,
+      "salience": 0.527,
       "articles": [
         {
           "title": "New challenges to Trump mail - in voting order arrive after Supreme Court ruling",
@@ -25332,12 +25417,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_comply-judge-lack",
     "source": "news",
-    "ts": 1788037409504,
+    "ts": 1788045973529,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.499,
+      "salience": 0.484,
       "articles": [
         {
           "title": "Judge says states lack time to comply with Trump new mail voting rules",
@@ -25380,14 +25465,64 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_ballot-envelope-faces",
+    "cid": "cand_news_ahead-elections-midterm",
     "source": "news",
-    "ts": 1788037409504,
+    "ts": 1788045973529,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.319,
+      "salience": 0.484,
+      "articles": [
+        {
+          "title": "Thousands of protesters rally in DC over voting rights ahead of midterm elections",
+          "url": "https://www.wxii12.com/article/defend-the-vote-march-voting-rights-racial-justice/73554385",
+          "domain": "wxii12.com",
+          "seendate": "2026-08-28T17:45:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/7f8d8f4d-56ec-41cc-9f14-95d12f2463d4.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0600xh"
+        },
+        {
+          "title": "Thousands of protesters rally in DC over voting rights ahead of midterm elections",
+          "url": "https://www.wesh.com/article/defend-the-vote-march-voting-rights-racial-justice/73554385",
+          "domain": "wesh.com",
+          "seendate": "2026-08-28T17:45:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/7f8d8f4d-56ec-41cc-9f14-95d12f2463d4.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0600xh"
+        },
+        {
+          "title": "Thousands of protesters rally in DC over voting rights ahead of midterm elections",
+          "url": "https://www.kcra.com/article/defend-the-vote-march-voting-rights-racial-justice/73554385",
+          "domain": "kcra.com",
+          "seendate": "2026-08-28T17:15:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/7f8d8f4d-56ec-41cc-9f14-95d12f2463d4.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0600xh"
+        },
+        {
+          "title": "Thousands of protesters rally in DC over voting rights ahead of midterm elections",
+          "url": "https://www.wyff4.com/article/defend-the-vote-march-voting-rights-racial-justice/73554385",
+          "domain": "wyff4.com",
+          "seendate": "2026-08-28T16:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/7f8d8f4d-56ec-41cc-9f14-95d12f2463d4.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0600xh"
+        }
+      ]
+    },
+    "title": "Thousands of protesters rally in DC over voting rights ahead of midterm elections",
+    "summary": "2026-08-28 wxii12.com: Thousands of protesters rally in DC over voting rights ahead of midterm elections\n2026-08-28 wesh.com: Thousands of protesters rally in DC over voting rights ahead of midterm elections\n2026-08-28 kcra.com: Thousands of protesters rally in DC over voting rights ahead of midterm elections\n2026-08-28 wyff4.com: Thousands of protesters rally in DC over voting rights ahead of midterm elections",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_ballot-envelope-faces",
+    "source": "news",
+    "ts": 1788045973529,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.304,
       "articles": [
         {
           "title": "  Pushing the envelope : Trump mail ballot rule faces new lawsuit with midterms looming",
@@ -25425,12 +25560,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_before-challenge-file",
     "source": "news",
-    "ts": 1788037409503,
+    "ts": 1788045973528,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.295,
+      "salience": 0.28,
       "articles": [
         {
           "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
