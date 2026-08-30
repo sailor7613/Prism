@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-30T16:52:05.040Z · 29 legislative + 12 news (GDELT, 3d)
+// 2026-08-30T21:15:37.804Z · 29 legislative + 10 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1788108525563,
+    "ts": 1788124514123,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.668,
+      "salience": 0.667,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,11 +259,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1788108525563,
+    "ts": 1788124514123,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.659,
+      "salience": 0.658,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1788108525562,
+    "ts": 1788124514122,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.63,
+      "salience": 0.629,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1788108525563,
+    "ts": 1788124514123,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.577,
+      "salience": 0.576,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3118,11 +3118,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1788108525563,
+    "ts": 1788124514123,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.558,
+      "salience": 0.557,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4520,11 +4520,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1788108525563,
+    "ts": 1788124514123,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
-      "salience": 0.558,
+      "salience": 0.557,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
       "votes": [
         {
@@ -4794,11 +4794,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1788108525563,
+    "ts": 1788124514123,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.544,
+      "salience": 0.543,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5065,11 +5065,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1788108525562,
+    "ts": 1788124514122,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.533,
+      "salience": 0.532,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6467,11 +6467,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1788108525562,
+    "ts": 1788124514122,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.528,
+      "salience": 0.527,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -7869,11 +7869,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1788108525563,
+    "ts": 1788124514123,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.522,
+      "salience": 0.521,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -8396,11 +8396,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1788108525563,
+    "ts": 1788124514123,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.481,
+      "salience": 0.48,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -9330,11 +9330,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1788108525563,
+    "ts": 1788124514123,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.48,
+      "salience": 0.479,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -9606,7 +9606,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1788108525562,
+    "ts": 1788124514122,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
@@ -10538,11 +10538,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1788108525563,
+    "ts": 1788124514123,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.464,
+      "salience": 0.463,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -10814,7 +10814,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1788108525563,
+    "ts": 1788124514123,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
@@ -11747,11 +11747,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1788108525563,
+    "ts": 1788124514123,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.442,
+      "salience": 0.441,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -12680,11 +12680,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1788108525563,
+    "ts": 1788124514123,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.431,
+      "salience": 0.43,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -13072,11 +13072,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1788108525563,
+    "ts": 1788124514123,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.323,
+      "salience": 0.322,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -14475,11 +14475,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1788108525563,
+    "ts": 1788124514123,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.266,
+      "salience": 0.265,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -15368,11 +15368,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1788108525563,
+    "ts": 1788124514123,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.259,
+      "salience": 0.258,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -16283,11 +16283,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1788108525563,
+    "ts": 1788124514123,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.252,
+      "salience": 0.251,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -17171,11 +17171,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1788108525563,
+    "ts": 1788124514123,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.248,
+      "salience": 0.247,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -18092,7 +18092,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1788108525563,
+    "ts": 1788124514123,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
@@ -19010,11 +19010,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1788108525563,
+    "ts": 1788124514123,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.176,
+      "salience": 0.175,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -19909,11 +19909,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1788108525562,
+    "ts": 1788124514122,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.148,
+      "salience": 0.147,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -20843,7 +20843,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1788108525562,
+    "ts": 1788124514122,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
@@ -21772,11 +21772,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1788108525561,
+    "ts": 1788124514122,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
-      "salience": 0.071,
+      "salience": 0.07,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7618",
       "votes": [
         {
@@ -22681,7 +22681,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1788108525562,
+    "ts": 1788124514122,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
@@ -23556,7 +23556,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1788108525562,
+    "ts": 1788124514122,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
@@ -24440,12 +24440,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballots-battle-developments",
     "source": "news",
-    "ts": 1788108725031,
+    "ts": 1788124537798,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.83,
+      "salience": 0.802,
       "articles": [
         {
           "title": "Legal battle over mailed ballots after a series of developments",
@@ -24511,12 +24511,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_appeals-blocking-latest",
     "source": "news",
-    "ts": 1788108725032,
+    "ts": 1788124537799,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.784,
+      "salience": 0.756,
       "articles": [
         {
           "title": "Trump admin appeals latest ruling blocking his mail voting executive order",
@@ -24617,12 +24617,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_civil-groups-make",
     "source": "news",
-    "ts": 1788108725033,
+    "ts": 1788124537800,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.76,
+      "salience": 0.733,
       "articles": [
         {
           "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
@@ -24723,12 +24723,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_congress-democrats-election",
     "source": "news",
-    "ts": 1788108725032,
+    "ts": 1788124537799,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.754,
+      "salience": 0.726,
       "articles": [
         {
           "title": "How Democrats in Congress are preparing for Trump midterm election interference",
@@ -24815,12 +24815,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_blocks-executive-judge",
     "source": "news",
-    "ts": 1788108725033,
+    "ts": 1788124537799,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.712,
+      "salience": 0.684,
       "articles": [
         {
           "title": "Judge again blocks Trump mail ballot executive order in ruling that likely to be swiftly appealed",
@@ -24921,12 +24921,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_democratic-force-inside",
     "source": "news",
-    "ts": 1788108725032,
+    "ts": 1788124537799,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.666,
+      "salience": 0.639,
       "articles": [
         {
           "title": "Inside the Democratic task force preparing for if Trump interferes in the midterms",
@@ -25013,12 +25013,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_act-archivists-defend",
     "source": "news",
-    "ts": 1788108725033,
+    "ts": 1788124537799,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.531,
+      "salience": 0.504,
       "articles": [
         {
           "title": "Former archivists defend Presidential Records Act",
@@ -25089,92 +25089,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_direct-helped-next",
-    "source": "news",
-    "ts": 1788108725033,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.475,
-      "articles": [
-        {
-          "title": "Zelenskyy Direct Plea Helped Unlock Russia Sanctions In The Senate . What Next Is Uncertain – The Yeshiva World",
-          "url": "https://www.theyeshivaworld.com/news/general/2590508/zelenskyys-direct-plea-helped-unlock-russia-sanctions-in-the-senate-whats-next-is-uncertain.html",
-          "domain": "theyeshivaworld.com",
-          "seendate": "2026-08-27T22:30:00Z",
-          "image": "https://www.theyeshivaworld.com/wp-content/uploads/2026/08/AP26209823873569-1.jpg"
-        },
-        {
-          "title": "Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain",
-          "url": "https://www.citizensvoice.com/2026/08/27/congress-ukraine/",
-          "domain": "citizensvoice.com",
-          "seendate": "2026-08-27T19:45:00Z",
-          "image": "https://www.citizensvoice.com/wp-content/uploads/2026/08/Congress_Ukraine_51475-1.jpg"
-        },
-        {
-          "title": "Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain",
-          "url": "https://www.republicanherald.com/2026/08/27/congress-ukraine/",
-          "domain": "republicanherald.com",
-          "seendate": "2026-08-27T19:30:00Z",
-          "image": "https://www.republicanherald.com/wp-content/uploads/2026/08/Congress_Ukraine_51475-1.jpg"
-        },
-        {
-          "title": "Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain",
-          "url": "https://www.fortmorgantimes.com/2026/08/27/congress-ukraine/",
-          "domain": "fortmorgantimes.com",
-          "seendate": "2026-08-27T19:30:00Z",
-          "image": "https://www.fortmorgantimes.com/wp-content/uploads/2026/08/Congress_Ukraine_51475-1.jpg"
-        },
-        {
-          "title": "Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain",
-          "url": "https://www.sandiegouniontribune.com/2026/08/27/congress-ukraine/",
-          "domain": "sandiegouniontribune.com",
-          "seendate": "2026-08-27T19:15:00Z",
-          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/08/Congress_Ukraine_51475-1.jpg"
-        },
-        {
-          "title": "Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain",
-          "url": "https://www.courant.com/2026/08/27/congress-ukraine/",
-          "domain": "courant.com",
-          "seendate": "2026-08-27T19:00:00Z",
-          "image": "https://www.courant.com/wp-content/uploads/2026/08/Congress_Ukraine_51475-1.jpg"
-        },
-        {
-          "title": "Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain",
-          "url": "https://www.reporterherald.com/2026/08/27/congress-ukraine/",
-          "domain": "reporterherald.com",
-          "seendate": "2026-08-27T18:45:00Z",
-          "image": "https://www.reporterherald.com/wp-content/uploads/2026/08/Congress_Ukraine_51475-1.jpg"
-        },
-        {
-          "title": "Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain",
-          "url": "https://www.capitalgazette.com/2026/08/27/congress-ukraine/",
-          "domain": "capitalgazette.com",
-          "seendate": "2026-08-27T17:45:00Z",
-          "image": "https://www.capitalgazette.com/wp-content/uploads/2026/08/Congress_Ukraine_51475-1.jpg"
-        }
-      ]
-    },
-    "title": "Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain",
-    "summary": "2026-08-27 theyeshivaworld.com: Zelenskyy Direct Plea Helped Unlock Russia Sanctions In The Senate . What Next Is Uncertain – The Yeshiva World\n2026-08-27 citizensvoice.com: Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain\n2026-08-27 republicanherald.com: Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain\n2026-08-27 fortmorgantimes.com: Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain\n2026-08-27 sandiegouniontribune.com: Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain\n2026-08-27 courant.com: Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_comply-judge-lack",
     "source": "news",
-    "ts": 1788108725033,
+    "ts": 1788124537799,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.431,
+      "salience": 0.403,
       "articles": [
         {
           "title": "Judge says states lack time to comply with Trump new mail voting rules",
@@ -25224,71 +25146,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_arrive-challenges-court",
-    "source": "news",
-    "ts": 1788108725032,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.418,
-      "articles": [
-        {
-          "title": "New challenges to Trump mail - in voting order arrive after Supreme Court ruling",
-          "url": "https://www.fultonsun.com/news/2026/aug/28/new-challenges-to-trump-mail-in-voting-order/",
-          "domain": "fultonsun.com",
-          "seendate": "2026-08-28T15:45:00Z",
-          "image": "https://faughnmedia.media.clients.ellingtoncms.com/imports/nt/img/2026/08/28/217527924_california-ballot-drop-box_t1200.jpg?57a0c2296240c280e9492005c3cad63e7cbe80f4"
-        },
-        {
-          "title": "New challenges to Trump mail - in voting order arrive after Supreme Court ruling",
-          "url": "https://www.newstribune.com/news/2026/aug/28/new-challenges-to-trump-mail-in-voting-order/",
-          "domain": "newstribune.com",
-          "seendate": "2026-08-28T10:15:00Z",
-          "image": "https://faughnmedia.media.clients.ellingtoncms.com/imports/nt/img/2026/08/28/217527924_california-ballot-drop-box_t1200.jpg?57a0c2296240c280e9492005c3cad63e7cbe80f4"
-        },
-        {
-          "title": "New challenges to Trump mail - in voting order arrive after US Supreme Court ruling",
-          "url": "https://www.thenewsguard.com/news_free/new-challenges-to-trump-mail-in-voting-order-arrive-after-us-supreme-court-ruling/article_78776110-e2eb-42df-a3ff-d2118f07bd9d.html",
-          "domain": "thenewsguard.com",
-          "seendate": "2026-08-27T23:00:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/thenewsguard.com/content/tncms/assets/v3/editorial/2/81/281d70b2-5d5b-4cde-a021-a9d531944359/6a902b26c7b0c.image.png?crop=1053%2C553%2C0%2C75"
-        },
-        {
-          "title": "New challenges to Trump mail - in voting order arrive after US Supreme Court ruling",
-          "url": "https://bendbulletin.com/2026/08/27/new-challenges-to-trump-mail-in-voting-order-arrive-after-us-supreme-court-ruling/",
-          "domain": "bendbulletin.com",
-          "seendate": "2026-08-27T18:30:00Z",
-          "image": "https://bendbulletin.com/wp-content/uploads/sites/10/2026/08/Ballot20box.jpg"
-        },
-        {
-          "title": "New challenges to Trump mail - in voting order arrive after US Supreme Court ruling",
-          "url": "https://eastoregonian.com/2026/08/27/new-challenges-to-trump-mail-in-voting-order-arrive-after-us-supreme-court-ruling/",
-          "domain": "eastoregonian.com",
-          "seendate": "2026-08-27T18:15:00Z",
-          "image": "https://eastoregonian.com/wp-content/uploads/sites/7/2026/08/Ballot20box.jpg"
-        }
-      ]
-    },
-    "title": "New challenges to Trump mail - in voting order arrive after Supreme Court ruling",
-    "summary": "2026-08-28 fultonsun.com: New challenges to Trump mail - in voting order arrive after Supreme Court ruling\n2026-08-28 newstribune.com: New challenges to Trump mail - in voting order arrive after Supreme Court ruling\n2026-08-27 thenewsguard.com: New challenges to Trump mail - in voting order arrive after US Supreme Court ruling\n2026-08-27 bendbulletin.com: New challenges to Trump mail - in voting order arrive after US Supreme Court ruling\n2026-08-27 eastoregonian.com: New challenges to Trump mail - in voting order arrive after US Supreme Court ruling",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_ahead-elections-midterm",
     "source": "news",
-    "ts": 1788108725033,
+    "ts": 1788124537800,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.376,
+      "salience": 0.348,
       "articles": [
         {
           "title": "Thousands of protesters rally in DC over voting rights ahead of midterm elections",
@@ -25331,40 +25196,40 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_ballot-envelope-faces",
+    "cid": "cand_news_arrive-challenges-court",
     "source": "news",
-    "ts": 1788108725033,
+    "ts": 1788124537799,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.196,
+      "salience": 0.281,
       "articles": [
         {
-          "title": "  Pushing the envelope : Trump mail ballot rule faces new lawsuit with midterms looming",
-          "url": "https://fox11online.com/news/nation-world/pushing-the-envelope-trumps-mail-ballot-rule-faces-new-lawsuit-with-midterms-looming",
-          "domain": "fox11online.com",
-          "seendate": "2026-08-27T21:45:00Z",
-          "image": "https://fox11online.com/resources/media2/16x9/5616/1320/0x293/90/8b19120b-c18c-4121-b82e-2efae2491d81-GettyImages2291733692.jpg"
+          "title": "New challenges to Trump mail - in voting order arrive after Supreme Court ruling",
+          "url": "https://www.fultonsun.com/news/2026/aug/28/new-challenges-to-trump-mail-in-voting-order/",
+          "domain": "fultonsun.com",
+          "seendate": "2026-08-28T15:45:00Z",
+          "image": "https://faughnmedia.media.clients.ellingtoncms.com/imports/nt/img/2026/08/28/217527924_california-ballot-drop-box_t1200.jpg?57a0c2296240c280e9492005c3cad63e7cbe80f4"
         },
         {
-          "title": "  Pushing the envelope : Trump mail ballot rule faces new lawsuit with midterms looming",
-          "url": "https://wpde.com/news/nation-world/pushing-the-envelope-trumps-mail-ballot-rule-faces-new-lawsuit-with-midterms-looming",
-          "domain": "wpde.com",
-          "seendate": "2026-08-27T21:15:00Z",
-          "image": "https://wpde.com/resources/media2/16x9/5616/1320/0x293/90/8b19120b-c18c-4121-b82e-2efae2491d81-GettyImages2291733692.jpg"
+          "title": "New challenges to Trump mail - in voting order arrive after Supreme Court ruling",
+          "url": "https://www.newstribune.com/news/2026/aug/28/new-challenges-to-trump-mail-in-voting-order/",
+          "domain": "newstribune.com",
+          "seendate": "2026-08-28T10:15:00Z",
+          "image": "https://faughnmedia.media.clients.ellingtoncms.com/imports/nt/img/2026/08/28/217527924_california-ballot-drop-box_t1200.jpg?57a0c2296240c280e9492005c3cad63e7cbe80f4"
         },
         {
-          "title": "  Pushing the envelope : Trump mail ballot rule faces new lawsuit with midterms looming",
-          "url": "https://upnorthlive.com/news/nation-world/pushing-the-envelope-trumps-mail-ballot-rule-faces-new-lawsuit-with-midterms-looming",
-          "domain": "upnorthlive.com",
-          "seendate": "2026-08-27T21:00:00Z",
-          "image": "https://upnorthlive.com/resources/media2/16x9/5616/1320/0x293/90/8b19120b-c18c-4121-b82e-2efae2491d81-GettyImages2291733692.jpg"
+          "title": "New challenges to Trump mail - in voting order arrive after US Supreme Court ruling",
+          "url": "https://www.thenewsguard.com/news_free/new-challenges-to-trump-mail-in-voting-order-arrive-after-us-supreme-court-ruling/article_78776110-e2eb-42df-a3ff-d2118f07bd9d.html",
+          "domain": "thenewsguard.com",
+          "seendate": "2026-08-27T23:00:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/thenewsguard.com/content/tncms/assets/v3/editorial/2/81/281d70b2-5d5b-4cde-a021-a9d531944359/6a902b26c7b0c.image.png?crop=1053%2C553%2C0%2C75"
         }
       ]
     },
-    "title": "  Pushing the envelope : Trump mail ballot rule faces new lawsuit with midterms looming",
-    "summary": "2026-08-27 fox11online.com:   Pushing the envelope : Trump mail ballot rule faces new lawsuit with midterms looming\n2026-08-27 wpde.com:   Pushing the envelope : Trump mail ballot rule faces new lawsuit with midterms looming\n2026-08-27 upnorthlive.com:   Pushing the envelope : Trump mail ballot rule faces new lawsuit with midterms looming",
+    "title": "New challenges to Trump mail - in voting order arrive after Supreme Court ruling",
+    "summary": "2026-08-28 fultonsun.com: New challenges to Trump mail - in voting order arrive after Supreme Court ruling\n2026-08-28 newstribune.com: New challenges to Trump mail - in voting order arrive after Supreme Court ruling\n2026-08-27 thenewsguard.com: New challenges to Trump mail - in voting order arrive after US Supreme Court ruling",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
