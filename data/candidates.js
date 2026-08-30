@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-29T23:26:13.536Z · 29 legislative + 15 news (GDELT, 3d)
+// 2026-08-30T05:33:32.901Z · 29 legislative + 12 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1788045949145,
+    "ts": 1788067988906,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.671,
+      "salience": 0.67,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,11 +259,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1788045949145,
+    "ts": 1788067988906,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.663,
+      "salience": 0.661,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1788045949144,
+    "ts": 1788067988905,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.633,
+      "salience": 0.632,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1788045949145,
+    "ts": 1788067988906,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.58,
+      "salience": 0.579,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3118,11 +3118,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1788045949144,
+    "ts": 1788067988906,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.561,
+      "salience": 0.56,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4520,11 +4520,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1788045949145,
+    "ts": 1788067988906,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
-      "salience": 0.561,
+      "salience": 0.56,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
       "votes": [
         {
@@ -4794,11 +4794,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1788045949145,
+    "ts": 1788067988906,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.547,
+      "salience": 0.546,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5065,11 +5065,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1788045949143,
+    "ts": 1788067988905,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.536,
+      "salience": 0.535,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6467,11 +6467,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1788045949143,
+    "ts": 1788067988905,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.531,
+      "salience": 0.53,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -7869,11 +7869,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1788045949145,
+    "ts": 1788067988906,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.525,
+      "salience": 0.524,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -8396,11 +8396,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1788045949144,
+    "ts": 1788067988906,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.484,
+      "salience": 0.483,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -9330,11 +9330,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1788045949145,
+    "ts": 1788067988906,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.483,
+      "salience": 0.482,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -9606,11 +9606,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1788045949143,
+    "ts": 1788067988905,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
-      "salience": 0.468,
+      "salience": 0.467,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2913",
       "votes": [
         {
@@ -10538,11 +10538,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1788045949145,
+    "ts": 1788067988906,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.467,
+      "salience": 0.466,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -10814,11 +10814,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1788045949144,
+    "ts": 1788067988906,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
-      "salience": 0.465,
+      "salience": 0.463,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8312",
       "votes": [
         {
@@ -11747,11 +11747,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1788045949144,
+    "ts": 1788067988906,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.445,
+      "salience": 0.444,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -12680,11 +12680,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1788045949145,
+    "ts": 1788067988906,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.434,
+      "salience": 0.433,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -13072,11 +13072,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1788045949144,
+    "ts": 1788067988906,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.326,
+      "salience": 0.325,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -14475,11 +14475,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1788045949145,
+    "ts": 1788067988906,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.269,
+      "salience": 0.268,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -15368,11 +15368,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1788045949145,
+    "ts": 1788067988906,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.262,
+      "salience": 0.261,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -16283,11 +16283,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1788045949145,
+    "ts": 1788067988906,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.255,
+      "salience": 0.254,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -17171,11 +17171,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1788045949144,
+    "ts": 1788067988906,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.251,
+      "salience": 0.25,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -18092,11 +18092,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1788045949144,
+    "ts": 1788067988906,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.24,
+      "salience": 0.238,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -19010,11 +19010,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1788045949144,
+    "ts": 1788067988906,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.179,
+      "salience": 0.178,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -19909,11 +19909,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1788045949143,
+    "ts": 1788067988905,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.151,
+      "salience": 0.15,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -20843,11 +20843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1788045949143,
+    "ts": 1788067988905,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
-      "salience": 0.077,
+      "salience": 0.076,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/254",
       "votes": [
         {
@@ -21772,11 +21772,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1788045949142,
+    "ts": 1788067988904,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
-      "salience": 0.074,
+      "salience": 0.073,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7618",
       "votes": [
         {
@@ -22681,11 +22681,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1788045949143,
+    "ts": 1788067988905,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
-      "salience": 0.069,
+      "salience": 0.068,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8466",
       "votes": [
         {
@@ -23556,11 +23556,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1788045949143,
+    "ts": 1788067988905,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
-      "salience": 0.069,
+      "salience": 0.068,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8428",
       "votes": [
         {
@@ -24440,12 +24440,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_appeals-blocking-latest",
     "source": "news",
-    "ts": 1788045973528,
+    "ts": 1788068012893,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.893,
+      "salience": 0.854,
       "articles": [
         {
           "title": "Trump admin appeals latest ruling blocking his mail voting executive order",
@@ -24544,14 +24544,120 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_congress-democrats-election",
+    "cid": "cand_news_civil-groups-make",
     "source": "news",
-    "ts": 1788045973528,
+    "ts": 1788068012895,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.863,
+      "salience": 0.831,
+      "articles": [
+        {
+          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
+          "url": "https://www.wral.com/news/ap/a78df-civil-rights-groups-make-urgent-plea-for-voting-rights-in-dc-ahead-of-midterm-elections/",
+          "domain": "wral.com",
+          "seendate": "2026-08-29T02:30:00Z",
+          "image": "https://images.wral.com/6c6dc4cb-fd89-55bc-af3c-8caff179559e"
+        },
+        {
+          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections - WSVN 7News | Miami News , Weather , Sports",
+          "url": "https://wsvn.com/news/politics/civil-rights-groups-make-urgent-plea-for-voting-rights-in-dc-ahead-of-midterm-elections/",
+          "domain": "wsvn.com",
+          "seendate": "2026-08-29T02:15:00Z",
+          "image": null
+        },
+        {
+          "title": "Civil rights groups make urgent plea for voting rights in DC",
+          "url": "https://www.mcall.com/2026/08/28/civil-rights-groups-dc-voting-rights/",
+          "domain": "mcall.com",
+          "seendate": "2026-08-28T21:15:00Z",
+          "image": "https://www.mcall.com/wp-content/uploads/2026/08/AP26240568790396-1.jpg"
+        },
+        {
+          "title": "Civil rights groups make urgent plea for voting rights in DC",
+          "url": "https://www.pasadenastarnews.com/2026/08/28/civil-rights-groups-dc-voting-rights/",
+          "domain": "pasadenastarnews.com",
+          "seendate": "2026-08-28T20:00:00Z",
+          "image": "https://www.pasadenastarnews.com/wp-content/uploads/2026/08/AP26240568790396-1.jpg"
+        },
+        {
+          "title": "Civil rights groups make urgent plea for voting rights in DC",
+          "url": "https://www.sun-sentinel.com/2026/08/28/civil-rights-groups-dc-voting-rights/",
+          "domain": "sun-sentinel.com",
+          "seendate": "2026-08-28T19:30:00Z",
+          "image": "https://www.sun-sentinel.com/wp-content/uploads/2026/08/AP26240547310642.jpg"
+        },
+        {
+          "title": "Civil rights groups make urgent plea for voting rights in DC",
+          "url": "https://www.dailynews.com/2026/08/28/civil-rights-groups-dc-voting-rights/",
+          "domain": "dailynews.com",
+          "seendate": "2026-08-28T18:45:00Z",
+          "image": "https://www.dailynews.com/wp-content/uploads/2026/08/AP26240547310642.jpg"
+        },
+        {
+          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
+          "url": "https://www.news-gazette.com/news/nation-world/civil-rights-groups-make-urgent-plea-for-voting-rights-in-dc-ahead-of-midterm-elections/article_15ffb7e5-ec03-5281-b4be-a9f33ac3d125.html",
+          "domain": "news-gazette.com",
+          "seendate": "2026-08-28T18:30:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/news-gazette.com/content/tncms/custom/image/3d3bfbd4-3cf5-11ec-9461-574a9d514a20.jpg"
+        },
+        {
+          "title": "Civil rights groups make urgent plea for voting rights in DC",
+          "url": "https://www.marinij.com/2026/08/28/civil-rights-groups-dc-voting-rights/",
+          "domain": "marinij.com",
+          "seendate": "2026-08-28T18:30:00Z",
+          "image": "https://www.marinij.com/wp-content/uploads/2026/08/AP26240547310642.jpg"
+        },
+        {
+          "title": "Civil rights groups make urgent plea for voting rights in DC",
+          "url": "https://www.bostonherald.com/2026/08/28/civil-rights-groups-dc-voting-rights/",
+          "domain": "bostonherald.com",
+          "seendate": "2026-08-28T18:00:00Z",
+          "image": "https://www.bostonherald.com/wp-content/uploads/2026/08/AP26240547310642.jpg"
+        },
+        {
+          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
+          "url": "https://www.ksat.com/news/politics/2026/08/28/civil-rights-groups-make-urgent-plea-for-voting-rights-in-dc-ahead-of-midterm-elections/",
+          "domain": "ksat.com",
+          "seendate": "2026-08-28T17:45:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/ZVY6HBQT2RGALLERG5IY5M4BDE.jpg?_a=DATAg1kSZAA0"
+        },
+        {
+          "title": "Civil rights groups make urgent plea for voting rights in DC",
+          "url": "https://www.orlandosentinel.com/2026/08/28/civil-rights-groups-dc-voting-rights/",
+          "domain": "orlandosentinel.com",
+          "seendate": "2026-08-28T17:15:00Z",
+          "image": "https://www.orlandosentinel.com/wp-content/uploads/2026/08/AP26240547310642.jpg"
+        },
+        {
+          "title": "Civil rights groups make urgent plea for voting rights in DC",
+          "url": "https://www.baltimoresun.com/2026/08/28/civil-rights-groups-dc-voting-rights/",
+          "domain": "baltimoresun.com",
+          "seendate": "2026-08-28T16:15:00Z",
+          "image": "https://www.baltimoresun.com/wp-content/uploads/2026/08/AP26240547310642.jpg"
+        }
+      ]
+    },
+    "title": "Civil rights groups make urgent plea for voting rights in DC",
+    "summary": "2026-08-29 wral.com: Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections\n2026-08-29 wsvn.com: Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections - WSVN 7News | Miami News , Weather , Sports\n2026-08-28 mcall.com: Civil rights groups make urgent plea for voting rights in DC\n2026-08-28 pasadenastarnews.com: Civil rights groups make urgent plea for voting rights in DC\n2026-08-28 sun-sentinel.com: Civil rights groups make urgent plea for voting rights in DC\n2026-08-28 dailynews.com: Civil rights groups make urgent plea for voting rights in DC",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_congress-democrats-election",
+    "source": "news",
+    "ts": 1788068012894,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.825,
       "articles": [
         {
           "title": "How Democrats in Congress are preparing for Trump midterm election interference",
@@ -24638,12 +24744,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_blocks-executive-judge",
     "source": "news",
-    "ts": 1788045973529,
+    "ts": 1788068012895,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.821,
+      "salience": 0.782,
       "articles": [
         {
           "title": "Judge again blocks Trump mail ballot executive order in ruling that likely to be swiftly appealed",
@@ -24744,12 +24850,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_democratic-force-inside",
     "source": "news",
-    "ts": 1788045973528,
+    "ts": 1788068012894,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.775,
+      "salience": 0.737,
       "articles": [
         {
           "title": "Inside the Democratic task force preparing for if Trump interferes in the midterms",
@@ -24834,92 +24940,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_ahead-civil-elections",
-    "source": "news",
-    "ts": 1788045973529,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.759,
-      "articles": [
-        {
-          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
-          "url": "https://www.wral.com/news/ap/a78df-civil-rights-groups-make-urgent-plea-for-voting-rights-in-dc-ahead-of-midterm-elections/",
-          "domain": "wral.com",
-          "seendate": "2026-08-29T02:30:00Z",
-          "image": "https://images.wral.com/6c6dc4cb-fd89-55bc-af3c-8caff179559e"
-        },
-        {
-          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections - WSVN 7News | Miami News , Weather , Sports",
-          "url": "https://wsvn.com/news/politics/civil-rights-groups-make-urgent-plea-for-voting-rights-in-dc-ahead-of-midterm-elections/",
-          "domain": "wsvn.com",
-          "seendate": "2026-08-29T02:15:00Z",
-          "image": null
-        },
-        {
-          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
-          "url": "https://www.news-gazette.com/news/nation-world/civil-rights-groups-make-urgent-plea-for-voting-rights-in-dc-ahead-of-midterm-elections/article_15ffb7e5-ec03-5281-b4be-a9f33ac3d125.html",
-          "domain": "news-gazette.com",
-          "seendate": "2026-08-28T18:30:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/news-gazette.com/content/tncms/custom/image/3d3bfbd4-3cf5-11ec-9461-574a9d514a20.jpg"
-        },
-        {
-          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
-          "url": "https://www.ksat.com/news/politics/2026/08/28/civil-rights-groups-make-urgent-plea-for-voting-rights-in-dc-ahead-of-midterm-elections/",
-          "domain": "ksat.com",
-          "seendate": "2026-08-28T17:45:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/ZVY6HBQT2RGALLERG5IY5M4BDE.jpg?_a=DATAg1kSZAA0"
-        },
-        {
-          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
-          "url": "https://www.clickondetroit.com/news/politics/2026/08/28/civil-rights-groups-make-urgent-plea-for-voting-rights-in-dc-ahead-of-midterm-elections/",
-          "domain": "clickondetroit.com",
-          "seendate": "2026-08-28T07:15:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/B64RLSDMYBDQ3K7JVHQLYCHRAY.jpg?_a=DATAg1kSZAA0"
-        },
-        {
-          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections - Las Vegas Sun News",
-          "url": "https://lasvegassun.com/news/2026/aug/27/civil-rights-groups-make-urgent-plea-for-voting-ri/",
-          "domain": "lasvegassun.com",
-          "seendate": "2026-08-28T05:45:00Z",
-          "image": null
-        },
-        {
-          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
-          "url": "https://www.clickorlando.com/news/politics/2026/08/28/civil-rights-groups-make-urgent-plea-for-voting-rights-in-dc-ahead-of-midterm-elections/",
-          "domain": "clickorlando.com",
-          "seendate": "2026-08-28T05:30:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/B64RLSDMYBDQ3K7JVHQLYCHRAY.jpg?_a=DATAg1kSZAA0"
-        },
-        {
-          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
-          "url": "https://www.erienewsnow.com/news/politics/civil-rights-groups-make-urgent-plea-for-voting-rights-in-dc-ahead-of-midterm-elections/article_4eea7e4b-664c-5314-901b-00c36d79d507.html",
-          "domain": "erienewsnow.com",
-          "seendate": "2026-08-28T04:30:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/erienewsnow.com/content/tncms/custom/image/b278f54b-830b-4f05-9350-cb090f41a0d4.png"
-        }
-      ]
-    },
-    "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
-    "summary": "2026-08-29 wral.com: Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections\n2026-08-29 wsvn.com: Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections - WSVN 7News | Miami News , Weather , Sports\n2026-08-28 news-gazette.com: Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections\n2026-08-28 ksat.com: Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections\n2026-08-28 clickondetroit.com: Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections\n2026-08-28 lasvegassun.com: Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections - Las Vegas Sun News",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_direct-helped-next",
     "source": "news",
-    "ts": 1788045973529,
+    "ts": 1788068012894,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.694,
+      "salience": 0.656,
       "articles": [
         {
           "title": "Zelenskyy Direct Plea Helped Unlock Russia Sanctions In The Senate . What Next Is Uncertain – The Yeshiva World",
@@ -24957,11 +24985,39 @@ window.PRISM_CANDIDATES = [
           "image": "https://www.capitalgazette.com/wp-content/uploads/2026/08/Congress_Ukraine_51475-1.jpg"
         },
         {
+          "title": "Zelenskyy Direct Plea Helped Unlock Russia Sanctions In The Senate . What Next Is Uncertain – 710am KURV",
+          "url": "https://www.kurv.com/zelenskyys-direct-plea-helped-unlock-russia-sanctions-in-the-senate-whats-next-is-uncertain/",
+          "domain": "kurv.com",
+          "seendate": "2026-08-27T14:30:00Z",
+          "image": null
+        },
+        {
+          "title": "Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain – Taylorville Daily News",
+          "url": "https://www.taylorvilledailynews.com/zelenskyys-direct-plea-helped-unlock-russia-sanctions-in-the-senate-whats-next-is-uncertain/",
+          "domain": "taylorvilledailynews.com",
+          "seendate": "2026-08-27T12:15:00Z",
+          "image": "https://www.taylorvilledailynews.com/wp-content/uploads/2026/08/1787804290655593mI8PlraBgg-apn-938x625.jpg"
+        },
+        {
+          "title": "Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain",
+          "url": "http://theitem.com/stories/zelenskyys-direct-plea-helped-unlock-russia-sanctions-in-the-senate-whats-next-is-uncertain,446552",
+          "domain": "theitem.com",
+          "seendate": "2026-08-27T11:45:00Z",
+          "image": "https://eta.creativecirclecdn.com/sumter/original/20260827-065910-fe7-ZELENSKYY%20Volodymyr.jpg"
+        },
+        {
           "title": "Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain",
           "url": "https://www.wsls.com/news/politics/2026/08/27/zelenskyys-direct-plea-helped-unlock-russia-sanctions-in-the-senate-whats-next-is-uncertain/",
           "domain": "wsls.com",
           "seendate": "2026-08-27T08:15:00Z",
           "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/EUVIOYSAUZE5NFEJTMUC32SJBA.jpg?_a=DATAg1kSZAA0"
+        },
+        {
+          "title": "Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain",
+          "url": "http://www.wataugademocrat.com/ap/washington/zelenskyys-direct-plea-helped-unlock-russia-sanctions-in-the-senate-whats-next-is-uncertain/article_f4453ced-01e6-57ed-9820-4e972be26e05.html",
+          "domain": "wataugademocrat.com",
+          "seendate": "2026-08-27T08:15:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/wataugademocrat.com/content/tncms/assets/v3/editorial/e/77/e7709f6a-900a-5e20-a9d3-e9587785ce87/6a8fd6e82b1fd.image.jpg?crop=1763%2C926%2C0%2C124"
         },
         {
           "title": "Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain",
@@ -24976,315 +25032,11 @@ window.PRISM_CANDIDATES = [
           "domain": "wfmz.com",
           "seendate": "2026-08-27T07:00:00Z",
           "image": "https://bloximages.newyork1.vip.townnews.com/wfmz.com/content/tncms/assets/v3/editorial/a/20/a20ee0b9-1fa0-5e2c-88cb-26d4d335ac37/6a6d158a3b7cf.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain",
-          "url": "https://www.clickondetroit.com/news/politics/2026/08/27/zelenskyys-direct-plea-helped-unlock-russia-sanctions-in-the-senate-whats-next-is-uncertain/",
-          "domain": "clickondetroit.com",
-          "seendate": "2026-08-27T05:45:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/EUVIOYSAUZE5NFEJTMUC32SJBA.jpg?_a=DATAg1kSZAA0"
-        },
-        {
-          "title": "Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain - Las Vegas Sun News",
-          "url": "https://lasvegassun.com/news/2026/aug/26/zelenskyys-direct-plea-helped-unlock-russia-sancti/",
-          "domain": "lasvegassun.com",
-          "seendate": "2026-08-27T05:30:00Z",
-          "image": null
-        },
-        {
-          "title": "Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain",
-          "url": "https://www.wral.com/news/ap/5ed89-zelenskyys-direct-plea-helped-unlock-russia-sanctions-in-the-senate-whats-next-is-uncertain/",
-          "domain": "wral.com",
-          "seendate": "2026-08-27T04:30:00Z",
-          "image": "https://images.wral.com/823a2972-3438-58c5-98a1-0e603bebc708"
         }
       ]
     },
     "title": "Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain",
-    "summary": "2026-08-27 theyeshivaworld.com: Zelenskyy Direct Plea Helped Unlock Russia Sanctions In The Senate . What Next Is Uncertain – The Yeshiva World\n2026-08-27 citizensvoice.com: Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain\n2026-08-27 sandiegouniontribune.com: Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain\n2026-08-27 courant.com: Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain\n2026-08-27 capitalgazette.com: Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain\n2026-08-27 wsls.com: Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_bannon-contempt-conviction",
-    "source": "news",
-    "ts": 1788045973527,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.639,
-      "articles": [
-        {
-          "title": "Judge declines to dismiss Steve Bannon criminal contempt conviction – Connect FM | Local News Radio",
-          "url": "https://www.connectradio.fm/abc-national/judge-declines-to-dismiss-steve-bannons-criminal-contempt-conviction/",
-          "domain": "connectradio.fm",
-          "seendate": "2026-08-27T22:30:00Z",
-          "image": "https://www.connectradio.fm/wp-content/uploads/2026/08/Getty_SteveBannon_082726-900x506.jpg"
-        },
-        {
-          "title": "Judge declines to dismiss Steve Bannon criminal contempt conviction",
-          "url": "https://1310kfka.com/abc-news/u-s-news/08/judge-declines-to-dismiss-steve-bannons-criminal-contempt-conviction/",
-          "domain": "1310kfka.com",
-          "seendate": "2026-08-27T18:45:00Z",
-          "image": "https://s3.amazonaws.com/syndication.abcaudio.com/files/2026-08-27/Getty_SteveBannon_082726.jpg"
-        },
-        {
-          "title": "Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case – Taylorville Daily News",
-          "url": "https://www.taylorvilledailynews.com/judge-for-now-refuses-to-dismiss-steve-bannons-conviction-in-contempt-of-congress-case/",
-          "domain": "taylorvilledailynews.com",
-          "seendate": "2026-08-27T03:30:00Z",
-          "image": "https://www.taylorvilledailynews.com/wp-content/uploads/2026/08/1787782700644877jNdYCN4JGb-apn-938x625.jpg"
-        },
-        {
-          "title": "Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case",
-          "url": "https://www.clickondetroit.com/news/politics/2026/08/26/judge-for-now-refuses-to-dismiss-steve-bannons-conviction-in-contempt-of-congress-case/",
-          "domain": "clickondetroit.com",
-          "seendate": "2026-08-27T01:45:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/GGCV5NXSBBGJJEM2LG4CAZUEWY.jpg?_a=DATAg1kSZAA0"
-        },
-        {
-          "title": "Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case - Las Vegas Sun News",
-          "url": "https://lasvegassun.com/news/2026/aug/26/judge-for-now-refuses-to-dismiss-steve-bannons-con/",
-          "domain": "lasvegassun.com",
-          "seendate": "2026-08-27T00:45:00Z",
-          "image": null
-        },
-        {
-          "title": "Judge refuses to dismiss Steve Bannon contempt conviction case",
-          "url": "https://www.wgauradio.com/news/politics/judge-now-refuses/64VJ6BZASM3HBHSSKPBFFZRYEQ/",
-          "domain": "wgauradio.com",
-          "seendate": "2026-08-27T00:45:00Z",
-          "image": "https://cmg-cmg-rd-20015-prod.cdn.arcpublishing.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-1.images.arcpublishing.com%2Fcmg%2F2H35UHIKFI3EBM4IDBZND26OEY.jpg?auth=ed3a5a5ba0cecb51d381455232ef067eeb9f51b55c7c078e23c768cc0f1d115f&smart=true"
-        },
-        {
-          "title": "Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case",
-          "url": "https://www.kxl.com/judge-for-now-refuses-to-dismiss-steve-bannons-conviction-in-contempt-of-congress-case/",
-          "domain": "kxl.com",
-          "seendate": "2026-08-27T00:00:00Z",
-          "image": "https://mapi.associatedpress.com/v2/items/92bef51edc8d41338c2ea7e788f584d8.0/preview/preview.jpg?nfe=true&wm=false&app=MPK&tag=tag%3Dact%7E%3Arss%21orgId%7E66880%21iid%7E92bef51edc8d41338c2ea7e788f584d8%21qt%7E1mW9cj_GWdR&icb=1787785058"
-        },
-        {
-          "title": "Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case",
-          "url": "https://www.clickorlando.com/news/politics/2026/08/26/judge-for-now-refuses-to-dismiss-steve-bannons-conviction-in-contempt-of-congress-case/",
-          "domain": "clickorlando.com",
-          "seendate": "2026-08-26T23:30:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/GGCV5NXSBBGJJEM2LG4CAZUEWY.jpg?_a=DATAg1kSZAA0"
-        },
-        {
-          "title": "Judge refuses to dismiss Steve Bannon contempt conviction case",
-          "url": "https://www.wokv.com/news/politics/judge-now-refuses/64VJ6BZASM3HBHSSKPBFFZRYEQ/",
-          "domain": "wokv.com",
-          "seendate": "2026-08-26T23:30:00Z",
-          "image": "https://cmg-cmg-rd-20056-prod.cdn.arcpublishing.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-1.images.arcpublishing.com%2Fcmg%2F2H35UHIKFI3EBM4IDBZND26OEY.jpg?auth=ed3a5a5ba0cecb51d381455232ef067eeb9f51b55c7c078e23c768cc0f1d115f&smart=true"
-        }
-      ]
-    },
-    "title": "Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case",
-    "summary": "2026-08-27 connectradio.fm: Judge declines to dismiss Steve Bannon criminal contempt conviction – Connect FM | Local News Radio\n2026-08-27 1310kfka.com: Judge declines to dismiss Steve Bannon criminal contempt conviction\n2026-08-27 taylorvilledailynews.com: Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case – Taylorville Daily News\n2026-08-27 clickondetroit.com: Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case\n2026-08-27 lasvegassun.com: Judge , for now , refuses to dismiss Steve Bannon conviction in contempt of Congress case - Las Vegas Sun News\n2026-08-27 wgauradio.com: Judge refuses to dismiss Steve Bannon contempt conviction case",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_cook-fed-fire",
-    "source": "news",
-    "ts": 1788045973528,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.58,
-      "articles": [
-        {
-          "title": "Fed governor Lisa Cook slams Trump renewed threat to fire her",
-          "url": "https://www.koat.com/article/fed-lisa-cook-response-trump-fire-her/73537444",
-          "domain": "koat.com",
-          "seendate": "2026-08-27T04:15:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/90434bc0-c98b-4c84-8ddd-48ce8b38472c.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.0457xh"
-        },
-        {
-          "title": "Fed governor Lisa Cook slams Trump renewed threat to fire her",
-          "url": "https://www.wdsu.com/article/fed-lisa-cook-response-trump-fire-her/73537444",
-          "domain": "wdsu.com",
-          "seendate": "2026-08-27T03:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/90434bc0-c98b-4c84-8ddd-48ce8b38472c.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.0457xh"
-        },
-        {
-          "title": "Fed governor Lisa Cook slams Trump renewed threat to fire her",
-          "url": "https://www.wmtw.com/article/fed-lisa-cook-response-trump-fire-her/73537444",
-          "domain": "wmtw.com",
-          "seendate": "2026-08-27T03:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/90434bc0-c98b-4c84-8ddd-48ce8b38472c.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.0457xh"
-        },
-        {
-          "title": "Fed governor Lisa Cook slams Trump renewed threat to fire her",
-          "url": "https://www.wcvb.com/article/fed-lisa-cook-response-trump-fire-her/73537444",
-          "domain": "wcvb.com",
-          "seendate": "2026-08-27T03:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/90434bc0-c98b-4c84-8ddd-48ce8b38472c.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.0457xh"
-        },
-        {
-          "title": "Fed governor Lisa Cook slams Trump renewed threat to fire her",
-          "url": "https://www.kcra.com/article/fed-lisa-cook-response-trump-fire-her/73537444",
-          "domain": "kcra.com",
-          "seendate": "2026-08-27T03:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/90434bc0-c98b-4c84-8ddd-48ce8b38472c.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.0457xh"
-        },
-        {
-          "title": "Fed governor Lisa Cook slams Trump renewed threat to fire her",
-          "url": "https://www.kcci.com/article/fed-lisa-cook-response-trump-fire-her/73537444",
-          "domain": "kcci.com",
-          "seendate": "2026-08-27T03:15:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/90434bc0-c98b-4c84-8ddd-48ce8b38472c.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.0457xh"
-        },
-        {
-          "title": "Fed governor Lisa Cook slams Trump renewed threat to fire her",
-          "url": "https://www.wyff4.com/article/fed-lisa-cook-response-trump-fire-her/73537444",
-          "domain": "wyff4.com",
-          "seendate": "2026-08-27T03:00:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/90434bc0-c98b-4c84-8ddd-48ce8b38472c.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.0457xh"
-        },
-        {
-          "title": "Fed governor Lisa Cook slams Trump renewed threat to fire her",
-          "url": "https://www.wxii12.com/article/fed-lisa-cook-response-trump-fire-her/73537444",
-          "domain": "wxii12.com",
-          "seendate": "2026-08-27T02:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/90434bc0-c98b-4c84-8ddd-48ce8b38472c.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.0457xh"
-        },
-        {
-          "title": "Fed governor Lisa Cook slams Trump renewed threat to fire her",
-          "url": "https://www.koco.com/article/fed-lisa-cook-response-trump-fire-her/73537444",
-          "domain": "koco.com",
-          "seendate": "2026-08-27T02:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/90434bc0-c98b-4c84-8ddd-48ce8b38472c.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.0457xh"
-        },
-        {
-          "title": "Fed governor Lisa Cook slams Trump renewed threat to fire her",
-          "url": "https://www.wgal.com/article/fed-lisa-cook-response-trump-fire-her/73537444",
-          "domain": "wgal.com",
-          "seendate": "2026-08-27T02:00:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/90434bc0-c98b-4c84-8ddd-48ce8b38472c.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.0457xh"
-        },
-        {
-          "title": "Fed governor Lisa Cook slams Trump renewed threat to fire her",
-          "url": "https://www.wlwt.com/article/fed-lisa-cook-response-trump-fire-her/73537444",
-          "domain": "wlwt.com",
-          "seendate": "2026-08-27T01:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/90434bc0-c98b-4c84-8ddd-48ce8b38472c.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.0457xh"
-        },
-        {
-          "title": "Fed governor Lisa Cook slams Trump renewed threat to fire her",
-          "url": "https://www.wtae.com/article/fed-lisa-cook-response-trump-fire-her/73537444",
-          "domain": "wtae.com",
-          "seendate": "2026-08-27T01:00:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/90434bc0-c98b-4c84-8ddd-48ce8b38472c.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.0457xh"
-        }
-      ]
-    },
-    "title": "Fed governor Lisa Cook slams Trump renewed threat to fire her",
-    "summary": "2026-08-27 koat.com: Fed governor Lisa Cook slams Trump renewed threat to fire her\n2026-08-27 wdsu.com: Fed governor Lisa Cook slams Trump renewed threat to fire her\n2026-08-27 wmtw.com: Fed governor Lisa Cook slams Trump renewed threat to fire her\n2026-08-27 wcvb.com: Fed governor Lisa Cook slams Trump renewed threat to fire her\n2026-08-27 kcra.com: Fed governor Lisa Cook slams Trump renewed threat to fire her\n2026-08-27 kcci.com: Fed governor Lisa Cook slams Trump renewed threat to fire her",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_blow-campaigning-data",
-    "source": "news",
-    "ts": 1788045973529,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.566,
-      "articles": [
-        {
-          "title": "New inflation data delivers blow to Republicans campaigning on economic strength",
-          "url": "https://kfdm.com/news/nation-world/new-inflation-data-delivers-blow-to-republicans-campaigning-on-economic-strength-cpi-president-donald-trump",
-          "domain": "kfdm.com",
-          "seendate": "2026-08-27T02:00:00Z",
-          "image": "https://kfdm.com/resources/media2/16x9/6000/1320/0x313/90/e0685e00-50f4-4fa2-a38f-34b5ff2d2ade-GettyImages2291006892.jpg"
-        },
-        {
-          "title": "New inflation data delivers blow to Republicans campaigning on economic strength",
-          "url": "https://upnorthlive.com/news/nation-world/new-inflation-data-delivers-blow-to-republicans-campaigning-on-economic-strength-cpi-president-donald-trump",
-          "domain": "upnorthlive.com",
-          "seendate": "2026-08-27T01:15:00Z",
-          "image": "https://upnorthlive.com/resources/media2/16x9/6000/1320/0x313/90/e0685e00-50f4-4fa2-a38f-34b5ff2d2ade-GettyImages2291006892.jpg"
-        },
-        {
-          "title": "New inflation data delivers blow to Republicans campaigning on economic strength",
-          "url": "https://13wham.com/news/nation-world/new-inflation-data-delivers-blow-to-republicans-campaigning-on-economic-strength-cpi-president-donald-trump",
-          "domain": "13wham.com",
-          "seendate": "2026-08-27T01:00:00Z",
-          "image": "https://13wham.com/resources/media2/16x9/6000/1320/0x313/90/e0685e00-50f4-4fa2-a38f-34b5ff2d2ade-GettyImages2291006892.jpg"
-        },
-        {
-          "title": "New inflation data delivers blow to Republicans campaigning on economic strength",
-          "url": "https://cbs12.com/news/nation-world/new-inflation-data-delivers-blow-to-republicans-campaigning-on-economic-strength-cpi-president-donald-trump",
-          "domain": "cbs12.com",
-          "seendate": "2026-08-27T01:00:00Z",
-          "image": "https://cbs12.com/resources/media2/16x9/6000/1320/0x313/90/e0685e00-50f4-4fa2-a38f-34b5ff2d2ade-GettyImages2291006892.jpg"
-        },
-        {
-          "title": "New inflation data delivers blow to Republicans campaigning on economic strength",
-          "url": "https://nbcmontana.com/news/nation-world/new-inflation-data-delivers-blow-to-republicans-campaigning-on-economic-strength-cpi-president-donald-trump",
-          "domain": "nbcmontana.com",
-          "seendate": "2026-08-27T00:45:00Z",
-          "image": "https://nbcmontana.com/resources/media2/16x9/6000/1320/0x313/90/e0685e00-50f4-4fa2-a38f-34b5ff2d2ade-GettyImages2291006892.jpg"
-        },
-        {
-          "title": "New inflation data delivers blow to Republicans campaigning on economic strength",
-          "url": "https://wjla.com/news/nation-world/new-inflation-data-delivers-blow-to-republicans-campaigning-on-economic-strength-cpi-president-donald-trump",
-          "domain": "wjla.com",
-          "seendate": "2026-08-27T00:15:00Z",
-          "image": "https://wjla.com/resources/media2/16x9/6000/1320/0x313/90/e0685e00-50f4-4fa2-a38f-34b5ff2d2ade-GettyImages2291006892.jpg"
-        },
-        {
-          "title": "New inflation data delivers blow to Republicans campaigning on economic strength",
-          "url": "https://komonews.com/news/nation-world/new-inflation-data-delivers-blow-to-republicans-campaigning-on-economic-strength-cpi-president-donald-trump",
-          "domain": "komonews.com",
-          "seendate": "2026-08-27T00:00:00Z",
-          "image": "https://komonews.com/resources/media2/16x9/6000/1320/0x313/90/e0685e00-50f4-4fa2-a38f-34b5ff2d2ade-GettyImages2291006892.jpg"
-        },
-        {
-          "title": "New inflation data delivers blow to Republicans campaigning on economic strength",
-          "url": "https://wset.com/news/nation-world/new-inflation-data-delivers-blow-to-republicans-campaigning-on-economic-strength-cpi-president-donald-trump",
-          "domain": "wset.com",
-          "seendate": "2026-08-27T00:00:00Z",
-          "image": "https://wset.com/resources/media2/16x9/6000/1320/0x313/90/e0685e00-50f4-4fa2-a38f-34b5ff2d2ade-GettyImages2291006892.jpg"
-        },
-        {
-          "title": "New inflation data delivers blow to Republicans campaigning on economic strength",
-          "url": "https://kval.com/news/nation-world/new-inflation-data-delivers-blow-to-republicans-campaigning-on-economic-strength-cpi-president-donald-trump",
-          "domain": "kval.com",
-          "seendate": "2026-08-27T00:00:00Z",
-          "image": "https://kval.com/resources/media2/16x9/6000/1320/0x313/90/e0685e00-50f4-4fa2-a38f-34b5ff2d2ade-GettyImages2291006892.jpg"
-        },
-        {
-          "title": "New inflation data delivers blow to Republicans campaigning on economic strength",
-          "url": "https://katv.com/news/nation-world/new-inflation-data-delivers-blow-to-republicans-campaigning-on-economic-strength-cpi-president-donald-trump",
-          "domain": "katv.com",
-          "seendate": "2026-08-26T23:30:00Z",
-          "image": "https://katv.com/resources/media2/16x9/6000/1320/0x313/90/e0685e00-50f4-4fa2-a38f-34b5ff2d2ade-GettyImages2291006892.jpg"
-        }
-      ]
-    },
-    "title": "New inflation data delivers blow to Republicans campaigning on economic strength",
-    "summary": "2026-08-27 kfdm.com: New inflation data delivers blow to Republicans campaigning on economic strength\n2026-08-27 upnorthlive.com: New inflation data delivers blow to Republicans campaigning on economic strength\n2026-08-27 13wham.com: New inflation data delivers blow to Republicans campaigning on economic strength\n2026-08-27 cbs12.com: New inflation data delivers blow to Republicans campaigning on economic strength\n2026-08-27 nbcmontana.com: New inflation data delivers blow to Republicans campaigning on economic strength\n2026-08-27 wjla.com: New inflation data delivers blow to Republicans campaigning on economic strength",
+    "summary": "2026-08-27 theyeshivaworld.com: Zelenskyy Direct Plea Helped Unlock Russia Sanctions In The Senate . What Next Is Uncertain – The Yeshiva World\n2026-08-27 citizensvoice.com: Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain\n2026-08-27 sandiegouniontribune.com: Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain\n2026-08-27 courant.com: Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain\n2026-08-27 capitalgazette.com: Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain\n2026-08-27 kurv.com: Zelenskyy Direct Plea Helped Unlock Russia Sanctions In The Senate . What Next Is Uncertain – 710am KURV",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -25296,12 +25048,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_act-archivists-defend",
     "source": "news",
-    "ts": 1788045973529,
+    "ts": 1788068012894,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.53,
+      "salience": 0.602,
       "articles": [
         {
           "title": "Former archivists defend Presidential Records Act",
@@ -25333,6 +25085,13 @@ window.PRISM_CANDIDATES = [
         },
         {
           "title": "Former archivists defend Presidential Records Act",
+          "url": "https://www.mynbc5.com/article/former-archivists-trump-presidential-records-act-court/73537931",
+          "domain": "mynbc5.com",
+          "seendate": "2026-08-28T04:15:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/a9b07228-b811-45fc-8436-cec0f5059fcd.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0240xh"
+        },
+        {
+          "title": "Former archivists defend Presidential Records Act",
           "url": "https://www.wcvb.com/article/former-archivists-trump-presidential-records-act-court/73537931",
           "domain": "wcvb.com",
           "seendate": "2026-08-28T02:45:00Z",
@@ -25344,11 +25103,75 @@ window.PRISM_CANDIDATES = [
           "domain": "wdsu.com",
           "seendate": "2026-08-28T02:45:00Z",
           "image": "https://kubrick.htvapps.com/htv-prod/images/a9b07228-b811-45fc-8436-cec0f5059fcd.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0240xh"
+        },
+        {
+          "title": "Former archivists defend Presidential Records Act",
+          "url": "https://www.wisn.com/article/former-archivists-trump-presidential-records-act-court/73537931",
+          "domain": "wisn.com",
+          "seendate": "2026-08-28T02:45:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/a9b07228-b811-45fc-8436-cec0f5059fcd.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0240xh"
         }
       ]
     },
     "title": "Former archivists defend Presidential Records Act",
-    "summary": "2026-08-28 kcci.com: Former archivists defend Presidential Records Act\n2026-08-28 wmur.com: Former archivists defend Presidential Records Act\n2026-08-28 wtae.com: Former archivists defend Presidential Records Act\n2026-08-28 kmbc.com: Former archivists defend Presidential Records Act\n2026-08-28 wcvb.com: Former archivists defend Presidential Records Act\n2026-08-28 wdsu.com: Former archivists defend Presidential Records Act",
+    "summary": "2026-08-28 kcci.com: Former archivists defend Presidential Records Act\n2026-08-28 wmur.com: Former archivists defend Presidential Records Act\n2026-08-28 wtae.com: Former archivists defend Presidential Records Act\n2026-08-28 kmbc.com: Former archivists defend Presidential Records Act\n2026-08-28 mynbc5.com: Former archivists defend Presidential Records Act\n2026-08-28 wcvb.com: Former archivists defend Presidential Records Act",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_comply-judge-lack",
+    "source": "news",
+    "ts": 1788068012894,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.501,
+      "articles": [
+        {
+          "title": "Judge says states lack time to comply with Trump new mail voting rules",
+          "url": "https://www.fox13now.com/politics/america-votes/judge-says-states-lack-time-to-comply-with-trumps-new-mail-voting-rules",
+          "domain": "fox13now.com",
+          "seendate": "2026-08-28T17:45:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/4b/d2/6575e54d4a4ea2c5afaa841de948/ap26180526190256.jpg"
+        },
+        {
+          "title": "Judge says states lack time to comply with Trump new mail voting rules",
+          "url": "https://www.koaa.com/politics/america-votes/judge-says-states-lack-time-to-comply-with-trumps-new-mail-voting-rules",
+          "domain": "koaa.com",
+          "seendate": "2026-08-28T17:45:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/4b/d2/6575e54d4a4ea2c5afaa841de948/ap26180526190256.jpg"
+        },
+        {
+          "title": "Judge says states lack time to comply with Trump new mail voting rules",
+          "url": "https://www.ksby.com/politics/america-votes/judge-says-states-lack-time-to-comply-with-trumps-new-mail-voting-rules",
+          "domain": "ksby.com",
+          "seendate": "2026-08-28T15:45:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/4b/d2/6575e54d4a4ea2c5afaa841de948/ap26180526190256.jpg"
+        },
+        {
+          "title": "Judge says states lack time to comply with Trump new mail voting rules",
+          "url": "https://www.katc.com/politics/america-votes/judge-says-states-lack-time-to-comply-with-trumps-new-mail-voting-rules",
+          "domain": "katc.com",
+          "seendate": "2026-08-28T14:45:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/4b/d2/6575e54d4a4ea2c5afaa841de948/ap26180526190256.jpg"
+        },
+        {
+          "title": "Judge says states lack time to comply with Trump new mail voting rules",
+          "url": "https://www.kxxv.com/politics/america-votes/judge-says-states-lack-time-to-comply-with-trumps-new-mail-voting-rules",
+          "domain": "kxxv.com",
+          "seendate": "2026-08-28T13:45:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/4b/d2/6575e54d4a4ea2c5afaa841de948/ap26180526190256.jpg"
+        }
+      ]
+    },
+    "title": "Judge says states lack time to comply with Trump new mail voting rules",
+    "summary": "2026-08-28 fox13now.com: Judge says states lack time to comply with Trump new mail voting rules\n2026-08-28 koaa.com: Judge says states lack time to comply with Trump new mail voting rules\n2026-08-28 ksby.com: Judge says states lack time to comply with Trump new mail voting rules\n2026-08-28 katc.com: Judge says states lack time to comply with Trump new mail voting rules\n2026-08-28 kxxv.com: Judge says states lack time to comply with Trump new mail voting rules",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -25360,12 +25183,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_arrive-challenges-court",
     "source": "news",
-    "ts": 1788045973528,
+    "ts": 1788068012894,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.527,
+      "salience": 0.489,
       "articles": [
         {
           "title": "New challenges to Trump mail - in voting order arrive after Supreme Court ruling",
@@ -25415,64 +25238,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_comply-judge-lack",
-    "source": "news",
-    "ts": 1788045973529,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.484,
-      "articles": [
-        {
-          "title": "Judge says states lack time to comply with Trump new mail voting rules",
-          "url": "https://www.fox13now.com/politics/america-votes/judge-says-states-lack-time-to-comply-with-trumps-new-mail-voting-rules",
-          "domain": "fox13now.com",
-          "seendate": "2026-08-28T17:45:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/4b/d2/6575e54d4a4ea2c5afaa841de948/ap26180526190256.jpg"
-        },
-        {
-          "title": "Judge says states lack time to comply with Trump new mail voting rules",
-          "url": "https://www.ksby.com/politics/america-votes/judge-says-states-lack-time-to-comply-with-trumps-new-mail-voting-rules",
-          "domain": "ksby.com",
-          "seendate": "2026-08-28T15:45:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/4b/d2/6575e54d4a4ea2c5afaa841de948/ap26180526190256.jpg"
-        },
-        {
-          "title": "Judge says states lack time to comply with Trump new mail voting rules",
-          "url": "https://www.katc.com/politics/america-votes/judge-says-states-lack-time-to-comply-with-trumps-new-mail-voting-rules",
-          "domain": "katc.com",
-          "seendate": "2026-08-28T14:45:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/4b/d2/6575e54d4a4ea2c5afaa841de948/ap26180526190256.jpg"
-        },
-        {
-          "title": "Judge says states lack time to comply with Trump new mail voting rules",
-          "url": "https://www.kxxv.com/politics/america-votes/judge-says-states-lack-time-to-comply-with-trumps-new-mail-voting-rules",
-          "domain": "kxxv.com",
-          "seendate": "2026-08-28T13:45:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/4b/d2/6575e54d4a4ea2c5afaa841de948/ap26180526190256.jpg"
-        }
-      ]
-    },
-    "title": "Judge says states lack time to comply with Trump new mail voting rules",
-    "summary": "2026-08-28 fox13now.com: Judge says states lack time to comply with Trump new mail voting rules\n2026-08-28 ksby.com: Judge says states lack time to comply with Trump new mail voting rules\n2026-08-28 katc.com: Judge says states lack time to comply with Trump new mail voting rules\n2026-08-28 kxxv.com: Judge says states lack time to comply with Trump new mail voting rules",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_ahead-elections-midterm",
     "source": "news",
-    "ts": 1788045973529,
+    "ts": 1788068012895,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.484,
+      "salience": 0.446,
       "articles": [
         {
           "title": "Thousands of protesters rally in DC over voting rights ahead of midterm elections",
@@ -25517,12 +25290,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballot-envelope-faces",
     "source": "news",
-    "ts": 1788045973529,
+    "ts": 1788068012895,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.304,
+      "salience": 0.266,
       "articles": [
         {
           "title": "  Pushing the envelope : Trump mail ballot rule faces new lawsuit with midterms looming",
@@ -25558,47 +25331,40 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_before-challenge-file",
+    "cid": "cand_news_documents-refute-rfk",
     "source": "news",
-    "ts": 1788045973528,
+    "ts": 1788068012895,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.28,
+      "salience": 0.246,
       "articles": [
         {
-          "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
-          "url": "https://www.texarkanagazette.com/news/2026/aug/26/judge-removes-one-hurdle-for-trump-mail-voting/",
-          "domain": "texarkanagazette.com",
-          "seendate": "2026-08-27T09:00:00Z",
-          "image": "https://wehco.media.clients.ellingtoncms.com/imports/adg/img/2026/08/26/213525096_213525096-3857c0eb0b9c413b9a02a0531c321521_t1200.jpg?57a0c2296240c280e9492005c3cad63e7cbe80f4"
+          "title": "RFK Jr . said a Samoa trip had nothing to do with vaccines . New documents refute that . ",
+          "url": "https://www.adn.com/nation-world/2026/08/27/rfk-jr-said-a-samoa-trip-had-nothing-to-do-with-vaccines-new-documents-refute-that/",
+          "domain": "adn.com",
+          "seendate": "2026-08-27T18:30:00Z",
+          "image": "https://www.adn.com/resizer/v2/4QGKRLMA3X3QFTXX6U72E52AFY.jpg?smart=true&auth=deb975468406cdadba7c3ab3cead4721a598e96676da6ee9743382f513f8522a"
         },
         {
-          "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
-          "url": "https://www.santafenewmexican.com/ap/national/judge-removes-one-hurdle-for-trump-mail-voting-order-as-states-file-new-challenge-before/article_cab161f9-c607-5410-ac76-9c99899b444d.html",
-          "domain": "santafenewmexican.com",
-          "seendate": "2026-08-27T07:00:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/santafenewmexican.com/content/tncms/assets/v3/editorial/8/c7/8c7a0e5e-f39c-55ac-95a9-f4696c2df529/6a8fb81e586f9.image.jpg?crop=1763%2C926%2C0%2C124"
+          "title": "RFK Jr . said Samoa trip wasnt about vaccines . Documents refute that",
+          "url": "https://www.twincities.com/2026/08/27/rfk-jr-samoa-trip-vaccines/",
+          "domain": "twincities.com",
+          "seendate": "2026-08-27T14:30:00Z",
+          "image": "https://www.twincities.com/wp-content/uploads/2026/08/Kennedy_Measles_Samoa_22419-1.jpg"
         },
         {
-          "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
-          "url": "https://www.butlereagle.com/20260826/judge-removes-one-hurdle-for-trump-mail-voting-order-as-states-file-new-challenge-before-midterms/",
-          "domain": "butlereagle.com",
-          "seendate": "2026-08-27T04:15:00Z",
-          "image": "https://imengine.public.prod.bte.navigacloud.com/?uuid=a4d5a058-6913-5f6e-8a1d-232e52ab4fae&function=cover&type=preview&source=false"
-        },
-        {
-          "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
-          "url": "https://www.wdio.com/ap-top-news/ap-top-news-us-headlines-ap-top-news/judge-removes-one-hurdle-for-trump-mail-voting-order-as-states-file-new-challenge-before-midterms/",
-          "domain": "wdio.com",
-          "seendate": "2026-08-26T23:30:00Z",
-          "image": "https://www.wdio.com/wp-content/uploads/apimg/2026/08/Supreme_Court_Trump_Elections_24836.jpg"
+          "title": "RFK Jr . said Samoa trip wasnt about vaccines . Documents refute that",
+          "url": "https://www.sandiegouniontribune.com/2026/08/27/rfk-jr-samoa-trip-vaccines/",
+          "domain": "sandiegouniontribune.com",
+          "seendate": "2026-08-27T14:15:00Z",
+          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/08/Kennedy_Measles_Samoa_22419-1.jpg"
         }
       ]
     },
-    "title": "Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
-    "summary": "2026-08-27 texarkanagazette.com: Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms\n2026-08-27 santafenewmexican.com: Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms\n2026-08-27 butlereagle.com: Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms\n2026-08-26 wdio.com: Judge removes one hurdle for Trump mail voting order as states file new challenge before midterms",
+    "title": "RFK Jr . said Samoa trip wasnt about vaccines . Documents refute that",
+    "summary": "2026-08-27 adn.com: RFK Jr . said a Samoa trip had nothing to do with vaccines . New documents refute that . \n2026-08-27 twincities.com: RFK Jr . said Samoa trip wasnt about vaccines . Documents refute that\n2026-08-27 sandiegouniontribune.com: RFK Jr . said Samoa trip wasnt about vaccines . Documents refute that",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
