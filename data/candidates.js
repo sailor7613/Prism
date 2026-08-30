@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-30T05:33:32.901Z · 29 legislative + 12 news (GDELT, 3d)
+// 2026-08-30T12:03:07.880Z · 29 legislative + 12 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1788067988906,
+    "ts": 1788091323023,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.67,
+      "salience": 0.669,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,11 +259,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1788067988906,
+    "ts": 1788091323023,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.661,
+      "salience": 0.66,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1788067988905,
+    "ts": 1788091323022,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.632,
+      "salience": 0.631,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1788067988906,
+    "ts": 1788091323023,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.579,
+      "salience": 0.578,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3118,11 +3118,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1788067988906,
+    "ts": 1788091323023,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.56,
+      "salience": 0.559,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4520,11 +4520,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1788067988906,
+    "ts": 1788091323023,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
-      "salience": 0.56,
+      "salience": 0.559,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
       "votes": [
         {
@@ -4794,11 +4794,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1788067988906,
+    "ts": 1788091323023,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.546,
+      "salience": 0.545,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5065,11 +5065,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1788067988905,
+    "ts": 1788091323022,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.535,
+      "salience": 0.534,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6467,11 +6467,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1788067988905,
+    "ts": 1788091323022,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.53,
+      "salience": 0.529,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -7869,11 +7869,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1788067988906,
+    "ts": 1788091323023,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.524,
+      "salience": 0.523,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -8396,11 +8396,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1788067988906,
+    "ts": 1788091323022,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.483,
+      "salience": 0.482,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -9330,11 +9330,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1788067988906,
+    "ts": 1788091323023,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.482,
+      "salience": 0.481,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -9606,11 +9606,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1788067988905,
+    "ts": 1788091323022,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
-      "salience": 0.467,
+      "salience": 0.465,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2913",
       "votes": [
         {
@@ -10538,11 +10538,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1788067988906,
+    "ts": 1788091323023,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.466,
+      "salience": 0.465,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -10814,11 +10814,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1788067988906,
+    "ts": 1788091323023,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
-      "salience": 0.463,
+      "salience": 0.462,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8312",
       "votes": [
         {
@@ -11747,11 +11747,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1788067988906,
+    "ts": 1788091323022,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.444,
+      "salience": 0.443,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -12680,11 +12680,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1788067988906,
+    "ts": 1788091323023,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.433,
+      "salience": 0.432,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -13072,11 +13072,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1788067988906,
+    "ts": 1788091323023,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.325,
+      "salience": 0.324,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -14475,11 +14475,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1788067988906,
+    "ts": 1788091323023,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.268,
+      "salience": 0.267,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -15368,11 +15368,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1788067988906,
+    "ts": 1788091323023,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.261,
+      "salience": 0.26,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -16283,11 +16283,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1788067988906,
+    "ts": 1788091323023,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.254,
+      "salience": 0.253,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -17171,11 +17171,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1788067988906,
+    "ts": 1788091323023,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.25,
+      "salience": 0.248,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -18092,11 +18092,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1788067988906,
+    "ts": 1788091323023,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.238,
+      "salience": 0.237,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -19010,11 +19010,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1788067988906,
+    "ts": 1788091323023,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.178,
+      "salience": 0.177,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -19909,11 +19909,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1788067988905,
+    "ts": 1788091323022,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.15,
+      "salience": 0.149,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -20843,11 +20843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1788067988905,
+    "ts": 1788091323021,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
-      "salience": 0.076,
+      "salience": 0.074,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/254",
       "votes": [
         {
@@ -21772,11 +21772,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1788067988904,
+    "ts": 1788091323021,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
-      "salience": 0.073,
+      "salience": 0.072,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7618",
       "votes": [
         {
@@ -22681,11 +22681,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1788067988905,
+    "ts": 1788091323022,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
-      "salience": 0.068,
+      "salience": 0.066,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8466",
       "votes": [
         {
@@ -23556,11 +23556,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1788067988905,
+    "ts": 1788091323022,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
-      "salience": 0.068,
+      "salience": 0.066,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8428",
       "votes": [
         {
@@ -24440,12 +24440,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_appeals-blocking-latest",
     "source": "news",
-    "ts": 1788068012893,
+    "ts": 1788091387872,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.854,
+      "salience": 0.814,
       "articles": [
         {
           "title": "Trump admin appeals latest ruling blocking his mail voting executive order",
@@ -24546,12 +24546,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_civil-groups-make",
     "source": "news",
-    "ts": 1788068012895,
+    "ts": 1788091387874,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.831,
+      "salience": 0.79,
       "articles": [
         {
           "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
@@ -24652,12 +24652,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_congress-democrats-election",
     "source": "news",
-    "ts": 1788068012894,
+    "ts": 1788091387872,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.825,
+      "salience": 0.784,
       "articles": [
         {
           "title": "How Democrats in Congress are preparing for Trump midterm election interference",
@@ -24744,12 +24744,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_blocks-executive-judge",
     "source": "news",
-    "ts": 1788068012895,
+    "ts": 1788091387873,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.782,
+      "salience": 0.742,
       "articles": [
         {
           "title": "Judge again blocks Trump mail ballot executive order in ruling that likely to be swiftly appealed",
@@ -24850,12 +24850,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_democratic-force-inside",
     "source": "news",
-    "ts": 1788068012894,
+    "ts": 1788091387872,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.737,
+      "salience": 0.697,
       "articles": [
         {
           "title": "Inside the Democratic task force preparing for if Trump interferes in the midterms",
@@ -24942,12 +24942,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_direct-helped-next",
     "source": "news",
-    "ts": 1788068012894,
+    "ts": 1788091387873,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.656,
+      "salience": 0.615,
       "articles": [
         {
           "title": "Zelenskyy Direct Plea Helped Unlock Russia Sanctions In The Senate . What Next Is Uncertain – The Yeshiva World",
@@ -24965,6 +24965,20 @@ window.PRISM_CANDIDATES = [
         },
         {
           "title": "Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain",
+          "url": "https://www.republicanherald.com/2026/08/27/congress-ukraine/",
+          "domain": "republicanherald.com",
+          "seendate": "2026-08-27T19:30:00Z",
+          "image": "https://www.republicanherald.com/wp-content/uploads/2026/08/Congress_Ukraine_51475-1.jpg"
+        },
+        {
+          "title": "Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain",
+          "url": "https://www.fortmorgantimes.com/2026/08/27/congress-ukraine/",
+          "domain": "fortmorgantimes.com",
+          "seendate": "2026-08-27T19:30:00Z",
+          "image": "https://www.fortmorgantimes.com/wp-content/uploads/2026/08/Congress_Ukraine_51475-1.jpg"
+        },
+        {
+          "title": "Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain",
           "url": "https://www.sandiegouniontribune.com/2026/08/27/congress-ukraine/",
           "domain": "sandiegouniontribune.com",
           "seendate": "2026-08-27T19:15:00Z",
@@ -24976,6 +24990,13 @@ window.PRISM_CANDIDATES = [
           "domain": "courant.com",
           "seendate": "2026-08-27T19:00:00Z",
           "image": "https://www.courant.com/wp-content/uploads/2026/08/Congress_Ukraine_51475-1.jpg"
+        },
+        {
+          "title": "Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain",
+          "url": "https://www.reporterherald.com/2026/08/27/congress-ukraine/",
+          "domain": "reporterherald.com",
+          "seendate": "2026-08-27T18:45:00Z",
+          "image": "https://www.reporterherald.com/wp-content/uploads/2026/08/Congress_Ukraine_51475-1.jpg"
         },
         {
           "title": "Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain",
@@ -24997,46 +25018,11 @@ window.PRISM_CANDIDATES = [
           "domain": "taylorvilledailynews.com",
           "seendate": "2026-08-27T12:15:00Z",
           "image": "https://www.taylorvilledailynews.com/wp-content/uploads/2026/08/1787804290655593mI8PlraBgg-apn-938x625.jpg"
-        },
-        {
-          "title": "Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain",
-          "url": "http://theitem.com/stories/zelenskyys-direct-plea-helped-unlock-russia-sanctions-in-the-senate-whats-next-is-uncertain,446552",
-          "domain": "theitem.com",
-          "seendate": "2026-08-27T11:45:00Z",
-          "image": "https://eta.creativecirclecdn.com/sumter/original/20260827-065910-fe7-ZELENSKYY%20Volodymyr.jpg"
-        },
-        {
-          "title": "Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain",
-          "url": "https://www.wsls.com/news/politics/2026/08/27/zelenskyys-direct-plea-helped-unlock-russia-sanctions-in-the-senate-whats-next-is-uncertain/",
-          "domain": "wsls.com",
-          "seendate": "2026-08-27T08:15:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/EUVIOYSAUZE5NFEJTMUC32SJBA.jpg?_a=DATAg1kSZAA0"
-        },
-        {
-          "title": "Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain",
-          "url": "http://www.wataugademocrat.com/ap/washington/zelenskyys-direct-plea-helped-unlock-russia-sanctions-in-the-senate-whats-next-is-uncertain/article_f4453ced-01e6-57ed-9820-4e972be26e05.html",
-          "domain": "wataugademocrat.com",
-          "seendate": "2026-08-27T08:15:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/wataugademocrat.com/content/tncms/assets/v3/editorial/e/77/e7709f6a-900a-5e20-a9d3-e9587785ce87/6a8fd6e82b1fd.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain",
-          "url": "https://www.ksat.com/news/politics/2026/08/27/zelenskyys-direct-plea-helped-unlock-russia-sanctions-in-the-senate-whats-next-is-uncertain/",
-          "domain": "ksat.com",
-          "seendate": "2026-08-27T08:00:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/EUVIOYSAUZE5NFEJTMUC32SJBA.jpg?_a=DATAg1kSZAA0"
-        },
-        {
-          "title": "Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain",
-          "url": "https://www.wfmz.com/news/zelenskyys-direct-plea-helped-unlock-russia-sanctions-in-the-senate-whats-next-is-uncertain/article_f85dd327-327d-5b97-b86d-efe643cdfbea.html",
-          "domain": "wfmz.com",
-          "seendate": "2026-08-27T07:00:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/wfmz.com/content/tncms/assets/v3/editorial/a/20/a20ee0b9-1fa0-5e2c-88cb-26d4d335ac37/6a6d158a3b7cf.image.jpg?crop=1763%2C926%2C0%2C124"
         }
       ]
     },
     "title": "Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain",
-    "summary": "2026-08-27 theyeshivaworld.com: Zelenskyy Direct Plea Helped Unlock Russia Sanctions In The Senate . What Next Is Uncertain – The Yeshiva World\n2026-08-27 citizensvoice.com: Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain\n2026-08-27 sandiegouniontribune.com: Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain\n2026-08-27 courant.com: Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain\n2026-08-27 capitalgazette.com: Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain\n2026-08-27 kurv.com: Zelenskyy Direct Plea Helped Unlock Russia Sanctions In The Senate . What Next Is Uncertain – 710am KURV",
+    "summary": "2026-08-27 theyeshivaworld.com: Zelenskyy Direct Plea Helped Unlock Russia Sanctions In The Senate . What Next Is Uncertain – The Yeshiva World\n2026-08-27 citizensvoice.com: Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain\n2026-08-27 republicanherald.com: Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain\n2026-08-27 fortmorgantimes.com: Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain\n2026-08-27 sandiegouniontribune.com: Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain\n2026-08-27 courant.com: Zelenskyy direct plea helped unlock Russia sanctions in the Senate . What next is uncertain",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -25048,12 +25034,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_act-archivists-defend",
     "source": "news",
-    "ts": 1788068012894,
+    "ts": 1788091387873,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.602,
+      "salience": 0.562,
       "articles": [
         {
           "title": "Former archivists defend Presidential Records Act",
@@ -25126,12 +25112,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_comply-judge-lack",
     "source": "news",
-    "ts": 1788068012894,
+    "ts": 1788091387873,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.501,
+      "salience": 0.461,
       "articles": [
         {
           "title": "Judge says states lack time to comply with Trump new mail voting rules",
@@ -25183,12 +25169,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_arrive-challenges-court",
     "source": "news",
-    "ts": 1788068012894,
+    "ts": 1788091387872,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.489,
+      "salience": 0.448,
       "articles": [
         {
           "title": "New challenges to Trump mail - in voting order arrive after Supreme Court ruling",
@@ -25240,12 +25226,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ahead-elections-midterm",
     "source": "news",
-    "ts": 1788068012895,
+    "ts": 1788091387874,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.446,
+      "salience": 0.406,
       "articles": [
         {
           "title": "Thousands of protesters rally in DC over voting rights ahead of midterm elections",
@@ -25288,14 +25274,64 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_ballot-envelope-faces",
+    "cid": "cand_news_documents-refute-rfk",
     "source": "news",
-    "ts": 1788068012895,
+    "ts": 1788091387874,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.266,
+      "salience": 0.262,
+      "articles": [
+        {
+          "title": "Exclusive : RFK Jr . said a Samoa trip had nothing to do with vaccines . New documents refute that",
+          "url": "https://www.idahostatejournal.com/news/national/exclusive-rfk-jr-said-a-samoa-trip-had-nothing-to-do-with-vaccines-new-documents/article_b1946e7c-99a4-549f-a2fe-eb24f01d9d16.html",
+          "domain": "idahostatejournal.com",
+          "seendate": "2026-08-27T18:45:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/idahostatejournal.com/content/tncms/assets/v3/editorial/7/73/7731b7d6-0ba8-5934-b85e-7e799cb9dd4b/6a9028de85469.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
+        {
+          "title": "RFK Jr . said a Samoa trip had nothing to do with vaccines . New documents refute that . ",
+          "url": "https://www.adn.com/nation-world/2026/08/27/rfk-jr-said-a-samoa-trip-had-nothing-to-do-with-vaccines-new-documents-refute-that/",
+          "domain": "adn.com",
+          "seendate": "2026-08-27T18:30:00Z",
+          "image": "https://www.adn.com/resizer/v2/4QGKRLMA3X3QFTXX6U72E52AFY.jpg?smart=true&auth=deb975468406cdadba7c3ab3cead4721a598e96676da6ee9743382f513f8522a"
+        },
+        {
+          "title": "RFK Jr . said Samoa trip wasnt about vaccines . Documents refute that",
+          "url": "https://www.twincities.com/2026/08/27/rfk-jr-samoa-trip-vaccines/",
+          "domain": "twincities.com",
+          "seendate": "2026-08-27T14:30:00Z",
+          "image": "https://www.twincities.com/wp-content/uploads/2026/08/Kennedy_Measles_Samoa_22419-1.jpg"
+        },
+        {
+          "title": "RFK Jr . said Samoa trip wasnt about vaccines . Documents refute that",
+          "url": "https://www.sandiegouniontribune.com/2026/08/27/rfk-jr-samoa-trip-vaccines/",
+          "domain": "sandiegouniontribune.com",
+          "seendate": "2026-08-27T14:15:00Z",
+          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/08/Kennedy_Measles_Samoa_22419-1.jpg"
+        }
+      ]
+    },
+    "title": "RFK Jr . said Samoa trip wasnt about vaccines . Documents refute that",
+    "summary": "2026-08-27 idahostatejournal.com: Exclusive : RFK Jr . said a Samoa trip had nothing to do with vaccines . New documents refute that\n2026-08-27 adn.com: RFK Jr . said a Samoa trip had nothing to do with vaccines . New documents refute that . \n2026-08-27 twincities.com: RFK Jr . said Samoa trip wasnt about vaccines . Documents refute that\n2026-08-27 sandiegouniontribune.com: RFK Jr . said Samoa trip wasnt about vaccines . Documents refute that",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_ballot-envelope-faces",
+    "source": "news",
+    "ts": 1788091387874,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.226,
       "articles": [
         {
           "title": "  Pushing the envelope : Trump mail ballot rule faces new lawsuit with midterms looming",
@@ -25322,49 +25358,6 @@ window.PRISM_CANDIDATES = [
     },
     "title": "  Pushing the envelope : Trump mail ballot rule faces new lawsuit with midterms looming",
     "summary": "2026-08-27 fox11online.com:   Pushing the envelope : Trump mail ballot rule faces new lawsuit with midterms looming\n2026-08-27 wpde.com:   Pushing the envelope : Trump mail ballot rule faces new lawsuit with midterms looming\n2026-08-27 upnorthlive.com:   Pushing the envelope : Trump mail ballot rule faces new lawsuit with midterms looming",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_documents-refute-rfk",
-    "source": "news",
-    "ts": 1788068012895,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.246,
-      "articles": [
-        {
-          "title": "RFK Jr . said a Samoa trip had nothing to do with vaccines . New documents refute that . ",
-          "url": "https://www.adn.com/nation-world/2026/08/27/rfk-jr-said-a-samoa-trip-had-nothing-to-do-with-vaccines-new-documents-refute-that/",
-          "domain": "adn.com",
-          "seendate": "2026-08-27T18:30:00Z",
-          "image": "https://www.adn.com/resizer/v2/4QGKRLMA3X3QFTXX6U72E52AFY.jpg?smart=true&auth=deb975468406cdadba7c3ab3cead4721a598e96676da6ee9743382f513f8522a"
-        },
-        {
-          "title": "RFK Jr . said Samoa trip wasnt about vaccines . Documents refute that",
-          "url": "https://www.twincities.com/2026/08/27/rfk-jr-samoa-trip-vaccines/",
-          "domain": "twincities.com",
-          "seendate": "2026-08-27T14:30:00Z",
-          "image": "https://www.twincities.com/wp-content/uploads/2026/08/Kennedy_Measles_Samoa_22419-1.jpg"
-        },
-        {
-          "title": "RFK Jr . said Samoa trip wasnt about vaccines . Documents refute that",
-          "url": "https://www.sandiegouniontribune.com/2026/08/27/rfk-jr-samoa-trip-vaccines/",
-          "domain": "sandiegouniontribune.com",
-          "seendate": "2026-08-27T14:15:00Z",
-          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/08/Kennedy_Measles_Samoa_22419-1.jpg"
-        }
-      ]
-    },
-    "title": "RFK Jr . said Samoa trip wasnt about vaccines . Documents refute that",
-    "summary": "2026-08-27 adn.com: RFK Jr . said a Samoa trip had nothing to do with vaccines . New documents refute that . \n2026-08-27 twincities.com: RFK Jr . said Samoa trip wasnt about vaccines . Documents refute that\n2026-08-27 sandiegouniontribune.com: RFK Jr . said Samoa trip wasnt about vaccines . Documents refute that",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
