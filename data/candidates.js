@@ -1,11 +1,11 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-30T21:15:37.804Z · 29 legislative + 10 news (GDELT, 3d)
+// 2026-08-30T23:37:04.241Z · 29 legislative + 9 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1788124514123,
+    "ts": 1788133001698,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
@@ -259,7 +259,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1788124514123,
+    "ts": 1788133001697,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
@@ -532,7 +532,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1788124514122,
+    "ts": 1788133001697,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
@@ -2843,7 +2843,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1788124514123,
+    "ts": 1788133001697,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
@@ -3118,7 +3118,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1788124514123,
+    "ts": 1788133001697,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
@@ -4520,7 +4520,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1788124514123,
+    "ts": 1788133001698,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
@@ -4794,7 +4794,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1788124514123,
+    "ts": 1788133001698,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
@@ -5065,7 +5065,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1788124514122,
+    "ts": 1788133001696,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
@@ -6467,11 +6467,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1788124514122,
+    "ts": 1788133001696,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.527,
+      "salience": 0.526,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -7869,7 +7869,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1788124514123,
+    "ts": 1788133001698,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
@@ -8396,7 +8396,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1788124514123,
+    "ts": 1788133001697,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
@@ -9330,7 +9330,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1788124514123,
+    "ts": 1788133001698,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
@@ -9606,11 +9606,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1788124514122,
+    "ts": 1788133001696,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
-      "salience": 0.464,
+      "salience": 0.463,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2913",
       "votes": [
         {
@@ -10538,7 +10538,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1788124514123,
+    "ts": 1788133001698,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
@@ -10814,11 +10814,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1788124514123,
+    "ts": 1788133001697,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
-      "salience": 0.461,
+      "salience": 0.46,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8312",
       "votes": [
         {
@@ -11747,7 +11747,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1788124514123,
+    "ts": 1788133001697,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
@@ -12680,7 +12680,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1788124514123,
+    "ts": 1788133001698,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
@@ -13072,7 +13072,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1788124514123,
+    "ts": 1788133001697,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
@@ -14475,11 +14475,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1788124514123,
+    "ts": 1788133001698,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.265,
+      "salience": 0.264,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -15368,7 +15368,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1788124514123,
+    "ts": 1788133001698,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
@@ -16283,7 +16283,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1788124514123,
+    "ts": 1788133001698,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
@@ -17171,11 +17171,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1788124514123,
+    "ts": 1788133001697,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.247,
+      "salience": 0.246,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -18092,11 +18092,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1788124514123,
+    "ts": 1788133001697,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.236,
+      "salience": 0.235,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -19010,7 +19010,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1788124514123,
+    "ts": 1788133001697,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
@@ -19909,11 +19909,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1788124514122,
+    "ts": 1788133001696,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.147,
+      "salience": 0.146,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -20843,11 +20843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1788124514122,
+    "ts": 1788133001696,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
-      "salience": 0.073,
+      "salience": 0.072,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/254",
       "votes": [
         {
@@ -21772,7 +21772,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1788124514122,
+    "ts": 1788133001696,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
@@ -22681,11 +22681,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1788124514122,
+    "ts": 1788133001696,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
-      "salience": 0.065,
+      "salience": 0.064,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8466",
       "votes": [
         {
@@ -23556,11 +23556,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1788124514122,
+    "ts": 1788133001696,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
-      "salience": 0.065,
+      "salience": 0.064,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8428",
       "votes": [
         {
@@ -24440,12 +24440,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballots-battle-developments",
     "source": "news",
-    "ts": 1788124537798,
+    "ts": 1788133024233,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.802,
+      "salience": 0.787,
       "articles": [
         {
           "title": "Legal battle over mailed ballots after a series of developments",
@@ -24511,12 +24511,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_appeals-blocking-latest",
     "source": "news",
-    "ts": 1788124537799,
+    "ts": 1788133024233,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.756,
+      "salience": 0.741,
       "articles": [
         {
           "title": "Trump admin appeals latest ruling blocking his mail voting executive order",
@@ -24617,12 +24617,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_civil-groups-make",
     "source": "news",
-    "ts": 1788124537800,
+    "ts": 1788133024235,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.733,
+      "salience": 0.718,
       "articles": [
         {
           "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
@@ -24723,12 +24723,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_congress-democrats-election",
     "source": "news",
-    "ts": 1788124537799,
+    "ts": 1788133024234,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.726,
+      "salience": 0.712,
       "articles": [
         {
           "title": "How Democrats in Congress are preparing for Trump midterm election interference",
@@ -24815,12 +24815,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_blocks-executive-judge",
     "source": "news",
-    "ts": 1788124537799,
+    "ts": 1788133024234,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.684,
+      "salience": 0.67,
       "articles": [
         {
           "title": "Judge again blocks Trump mail ballot executive order in ruling that likely to be swiftly appealed",
@@ -24921,12 +24921,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_democratic-force-inside",
     "source": "news",
-    "ts": 1788124537799,
+    "ts": 1788133024234,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.639,
+      "salience": 0.624,
       "articles": [
         {
           "title": "Inside the Democratic task force preparing for if Trump interferes in the midterms",
@@ -25013,12 +25013,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_act-archivists-defend",
     "source": "news",
-    "ts": 1788124537799,
+    "ts": 1788133024234,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.504,
+      "salience": 0.489,
       "articles": [
         {
           "title": "Former archivists defend Presidential Records Act",
@@ -25091,12 +25091,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_comply-judge-lack",
     "source": "news",
-    "ts": 1788124537799,
+    "ts": 1788133024234,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.403,
+      "salience": 0.388,
       "articles": [
         {
           "title": "Judge says states lack time to comply with Trump new mail voting rules",
@@ -25148,12 +25148,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ahead-elections-midterm",
     "source": "news",
-    "ts": 1788124537800,
+    "ts": 1788133024235,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.348,
+      "salience": 0.333,
       "articles": [
         {
           "title": "Thousands of protesters rally in DC over voting rights ahead of midterm elections",
@@ -25187,49 +25187,6 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Thousands of protesters rally in DC over voting rights ahead of midterm elections",
     "summary": "2026-08-28 wxii12.com: Thousands of protesters rally in DC over voting rights ahead of midterm elections\n2026-08-28 wesh.com: Thousands of protesters rally in DC over voting rights ahead of midterm elections\n2026-08-28 kcra.com: Thousands of protesters rally in DC over voting rights ahead of midterm elections\n2026-08-28 wyff4.com: Thousands of protesters rally in DC over voting rights ahead of midterm elections",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_arrive-challenges-court",
-    "source": "news",
-    "ts": 1788124537799,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.281,
-      "articles": [
-        {
-          "title": "New challenges to Trump mail - in voting order arrive after Supreme Court ruling",
-          "url": "https://www.fultonsun.com/news/2026/aug/28/new-challenges-to-trump-mail-in-voting-order/",
-          "domain": "fultonsun.com",
-          "seendate": "2026-08-28T15:45:00Z",
-          "image": "https://faughnmedia.media.clients.ellingtoncms.com/imports/nt/img/2026/08/28/217527924_california-ballot-drop-box_t1200.jpg?57a0c2296240c280e9492005c3cad63e7cbe80f4"
-        },
-        {
-          "title": "New challenges to Trump mail - in voting order arrive after Supreme Court ruling",
-          "url": "https://www.newstribune.com/news/2026/aug/28/new-challenges-to-trump-mail-in-voting-order/",
-          "domain": "newstribune.com",
-          "seendate": "2026-08-28T10:15:00Z",
-          "image": "https://faughnmedia.media.clients.ellingtoncms.com/imports/nt/img/2026/08/28/217527924_california-ballot-drop-box_t1200.jpg?57a0c2296240c280e9492005c3cad63e7cbe80f4"
-        },
-        {
-          "title": "New challenges to Trump mail - in voting order arrive after US Supreme Court ruling",
-          "url": "https://www.thenewsguard.com/news_free/new-challenges-to-trump-mail-in-voting-order-arrive-after-us-supreme-court-ruling/article_78776110-e2eb-42df-a3ff-d2118f07bd9d.html",
-          "domain": "thenewsguard.com",
-          "seendate": "2026-08-27T23:00:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/thenewsguard.com/content/tncms/assets/v3/editorial/2/81/281d70b2-5d5b-4cde-a021-a9d531944359/6a902b26c7b0c.image.png?crop=1053%2C553%2C0%2C75"
-        }
-      ]
-    },
-    "title": "New challenges to Trump mail - in voting order arrive after Supreme Court ruling",
-    "summary": "2026-08-28 fultonsun.com: New challenges to Trump mail - in voting order arrive after Supreme Court ruling\n2026-08-28 newstribune.com: New challenges to Trump mail - in voting order arrive after Supreme Court ruling\n2026-08-27 thenewsguard.com: New challenges to Trump mail - in voting order arrive after US Supreme Court ruling",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
