@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-31T14:10:54.772Z · 29 legislative + 8 news (GDELT, 3d)
+// 2026-08-31T20:53:37.631Z · 29 legislative + 4 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1788185281975,
+    "ts": 1788209592562,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.664,
+      "salience": 0.663,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,11 +259,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1788185281975,
+    "ts": 1788209592561,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.655,
+      "salience": 0.654,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1788185281975,
+    "ts": 1788209592560,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.626,
+      "salience": 0.625,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1788185281975,
+    "ts": 1788209592561,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.573,
+      "salience": 0.572,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3118,11 +3118,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1788185281975,
+    "ts": 1788209592561,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.554,
+      "salience": 0.553,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4520,11 +4520,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1788185281975,
+    "ts": 1788209592561,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
-      "salience": 0.554,
+      "salience": 0.553,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
       "votes": [
         {
@@ -4794,11 +4794,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1788185281975,
+    "ts": 1788209592562,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.54,
+      "salience": 0.539,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5065,11 +5065,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1788185281974,
+    "ts": 1788209592560,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.529,
+      "salience": 0.528,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6467,11 +6467,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1788185281974,
+    "ts": 1788209592560,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.524,
+      "salience": 0.522,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -7869,11 +7869,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1788185281976,
+    "ts": 1788209592562,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.518,
+      "salience": 0.517,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -8396,11 +8396,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1788185281975,
+    "ts": 1788209592561,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.477,
+      "salience": 0.476,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -9330,11 +9330,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1788185281975,
+    "ts": 1788209592562,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.476,
+      "salience": 0.475,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -9606,11 +9606,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1788185281974,
+    "ts": 1788209592560,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
-      "salience": 0.46,
+      "salience": 0.459,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2913",
       "votes": [
         {
@@ -10538,11 +10538,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1788185281975,
+    "ts": 1788209592562,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.46,
+      "salience": 0.459,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -10814,11 +10814,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1788185281975,
+    "ts": 1788209592561,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
-      "salience": 0.457,
+      "salience": 0.456,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8312",
       "votes": [
         {
@@ -11747,11 +11747,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1788185281975,
+    "ts": 1788209592561,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.438,
+      "salience": 0.437,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -12680,11 +12680,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1788185281976,
+    "ts": 1788209592562,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.427,
+      "salience": 0.426,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -13072,11 +13072,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1788185281975,
+    "ts": 1788209592561,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.319,
+      "salience": 0.318,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -14475,11 +14475,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1788185281975,
+    "ts": 1788209592562,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.262,
+      "salience": 0.26,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -15368,11 +15368,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1788185281976,
+    "ts": 1788209592562,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.255,
+      "salience": 0.254,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -16283,11 +16283,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1788185281975,
+    "ts": 1788209592562,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.248,
+      "salience": 0.247,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -17171,11 +17171,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1788185281975,
+    "ts": 1788209592561,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.244,
+      "salience": 0.242,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -18092,11 +18092,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1788185281975,
+    "ts": 1788209592561,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.232,
+      "salience": 0.231,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -19010,11 +19010,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1788185281975,
+    "ts": 1788209592561,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.172,
+      "salience": 0.171,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -19909,11 +19909,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1788185281974,
+    "ts": 1788209592560,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.144,
+      "salience": 0.142,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -20843,11 +20843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1788185281974,
+    "ts": 1788209592560,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
-      "salience": 0.069,
+      "salience": 0.068,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/254",
       "votes": [
         {
@@ -21772,11 +21772,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1788185281974,
+    "ts": 1788209592559,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
-      "salience": 0.067,
+      "salience": 0.066,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7618",
       "votes": [
         {
@@ -22681,11 +22681,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1788185281974,
+    "ts": 1788209592560,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
-      "salience": 0.062,
+      "salience": 0.06,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8466",
       "votes": [
         {
@@ -23556,11 +23556,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1788185281975,
+    "ts": 1788209592560,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
-      "salience": 0.062,
+      "salience": 0.06,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8428",
       "votes": [
         {
@@ -24438,92 +24438,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_congress-democrats-election",
-    "source": "news",
-    "ts": 1788185454763,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.878,
-      "articles": [
-        {
-          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
-          "url": "https://whyy.org/npr-story/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference/",
-          "domain": "whyy.org",
-          "seendate": "2026-08-31T12:15:00Z",
-          "image": "https://whyy.org/wp-content/uploads/2026/08/gettyimages-12800315651-scaled.jpeg"
-        },
-        {
-          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
-          "url": "https://www.mtpr.org/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
-          "domain": "mtpr.org",
-          "seendate": "2026-08-29T01:30:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
-          "url": "https://www.ideastream.org/npr-news/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
-          "domain": "ideastream.org",
-          "seendate": "2026-08-28T16:15:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
-          "url": "https://www.kjzz.org/npr-top-stories/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
-          "domain": "kjzz.org",
-          "seendate": "2026-08-28T15:45:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
-          "url": "https://www.kzyx.org/npr-news/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
-          "domain": "kzyx.org",
-          "seendate": "2026-08-28T15:45:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
-          "url": "https://wysu.org/npr-national-news/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
-          "domain": "wysu.org",
-          "seendate": "2026-08-28T15:45:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
-          "url": "https://www.upr.org/npr-news/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
-          "domain": "upr.org",
-          "seendate": "2026-08-28T15:45:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
-          "url": "https://www.kawc.org/npr-news/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
-          "domain": "kawc.org",
-          "seendate": "2026-08-28T14:45:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        }
-      ]
-    },
-    "title": "How Democrats in Congress are preparing for Trump midterm election interference",
-    "summary": "2026-08-31 whyy.org: How Democrats in Congress are preparing for Trump midterm election interference\n2026-08-29 mtpr.org: How Democrats in Congress are preparing for Trump midterm election interference\n2026-08-28 ideastream.org: How Democrats in Congress are preparing for Trump midterm election interference\n2026-08-28 kjzz.org: How Democrats in Congress are preparing for Trump midterm election interference\n2026-08-28 kzyx.org: How Democrats in Congress are preparing for Trump midterm election interference\n2026-08-28 wysu.org: How Democrats in Congress are preparing for Trump midterm election interference",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_ballots-battle-developments",
     "source": "news",
-    "ts": 1788185454763,
+    "ts": 1788209617624,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.696,
+      "salience": 0.654,
       "articles": [
         {
           "title": "Legal battle over mailed ballots after a series of developments",
@@ -24587,14 +24509,71 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_appeals-blocking-latest",
+    "cid": "cand_news_canada-legal-questions",
     "source": "news",
-    "ts": 1788185454764,
+    "ts": 1788209617625,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.65,
+      "salience": 0.61,
+      "articles": [
+        {
+          "title": "Trump new Canada tariffs raise legal questions",
+          "url": "https://www.bostonglobe.com/2026/08/29/business/trump-canada-tariffs-legal-questions/",
+          "domain": "bostonglobe.com",
+          "seendate": "2026-08-31T02:30:00Z",
+          "image": "https://bostonglobe-prod.cdn.arcpublishing.com/resizer/v2/JANSATKUVVCW5NAUHNYADPRCNI.jpg?auth=f1136bd3d66d10efa412be3c50ca2a2abb72936fdb4acfc4df705f54df8aa0ec"
+        },
+        {
+          "title": "Trump new tariffs on Canada raise legal questions",
+          "url": "https://www.eastbaytimes.com/2026/08/29/untested-in-court-trumps-new-tariffs-on-canada-raise-legal-questions/",
+          "domain": "eastbaytimes.com",
+          "seendate": "2026-08-30T03:30:00Z",
+          "image": "https://www.eastbaytimes.com/wp-content/uploads/2026/08/Canada_Carney_Icebreakers_843_8-1.jpg"
+        },
+        {
+          "title": "Trump new tariffs on Canada raise legal questions",
+          "url": "https://www.pressdemocrat.com/2026/08/29/untested-in-court-trumps-new-tariffs-on-canada-raise-legal-questions/",
+          "domain": "pressdemocrat.com",
+          "seendate": "2026-08-30T03:00:00Z",
+          "image": "https://www.pressdemocrat.com/wp-content/uploads/2026/08/Canada_Carney_Icebreakers_843_8-1-1.jpg"
+        },
+        {
+          "title": "Untested in court , Trump new tariffs on Canada raise legal questions",
+          "url": "https://www.centralmaine.com/2026/08/29/untested-in-court-trumps-new-tariffs-on-canada-raise-legal-questions/",
+          "domain": "centralmaine.com",
+          "seendate": "2026-08-29T22:15:00Z",
+          "image": null
+        },
+        {
+          "title": "Untested in court , Trump new tariffs on Canada raise legal questions",
+          "url": "https://www.pressherald.com/2026/08/29/untested-in-court-trumps-new-tariffs-on-canada-raise-legal-questions/",
+          "domain": "pressherald.com",
+          "seendate": "2026-08-29T21:30:00Z",
+          "image": null
+        }
+      ]
+    },
+    "title": "Trump new Canada tariffs raise legal questions",
+    "summary": "2026-08-31 bostonglobe.com: Trump new Canada tariffs raise legal questions\n2026-08-30 eastbaytimes.com: Trump new tariffs on Canada raise legal questions\n2026-08-30 pressdemocrat.com: Trump new tariffs on Canada raise legal questions\n2026-08-29 centralmaine.com: Untested in court , Trump new tariffs on Canada raise legal questions\n2026-08-29 pressherald.com: Untested in court , Trump new tariffs on Canada raise legal questions",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_appeals-blocking-latest",
+    "source": "news",
+    "ts": 1788209617625,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.608,
       "articles": [
         {
           "title": "Trump admin appeals latest ruling blocking his mail voting executive order",
@@ -24695,12 +24674,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_civil-groups-make",
     "source": "news",
-    "ts": 1788185454764,
+    "ts": 1788209617625,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.627,
+      "salience": 0.2,
       "articles": [
         {
           "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
@@ -24722,260 +24701,11 @@ window.PRISM_CANDIDATES = [
           "domain": "mcall.com",
           "seendate": "2026-08-28T21:15:00Z",
           "image": "https://www.mcall.com/wp-content/uploads/2026/08/AP26240568790396-1.jpg"
-        },
-        {
-          "title": "Civil rights groups make urgent plea for voting rights in DC",
-          "url": "https://www.pasadenastarnews.com/2026/08/28/civil-rights-groups-dc-voting-rights/",
-          "domain": "pasadenastarnews.com",
-          "seendate": "2026-08-28T20:00:00Z",
-          "image": "https://www.pasadenastarnews.com/wp-content/uploads/2026/08/AP26240568790396-1.jpg"
-        },
-        {
-          "title": "Civil rights groups make urgent plea for voting rights in DC",
-          "url": "https://www.sun-sentinel.com/2026/08/28/civil-rights-groups-dc-voting-rights/",
-          "domain": "sun-sentinel.com",
-          "seendate": "2026-08-28T19:30:00Z",
-          "image": "https://www.sun-sentinel.com/wp-content/uploads/2026/08/AP26240547310642.jpg"
-        },
-        {
-          "title": "Civil rights groups make urgent plea for voting rights in DC",
-          "url": "https://www.dailynews.com/2026/08/28/civil-rights-groups-dc-voting-rights/",
-          "domain": "dailynews.com",
-          "seendate": "2026-08-28T18:45:00Z",
-          "image": "https://www.dailynews.com/wp-content/uploads/2026/08/AP26240547310642.jpg"
-        },
-        {
-          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
-          "url": "https://www.news-gazette.com/news/nation-world/civil-rights-groups-make-urgent-plea-for-voting-rights-in-dc-ahead-of-midterm-elections/article_15ffb7e5-ec03-5281-b4be-a9f33ac3d125.html",
-          "domain": "news-gazette.com",
-          "seendate": "2026-08-28T18:30:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/news-gazette.com/content/tncms/custom/image/3d3bfbd4-3cf5-11ec-9461-574a9d514a20.jpg"
-        },
-        {
-          "title": "Civil rights groups make urgent plea for voting rights in DC",
-          "url": "https://www.marinij.com/2026/08/28/civil-rights-groups-dc-voting-rights/",
-          "domain": "marinij.com",
-          "seendate": "2026-08-28T18:30:00Z",
-          "image": "https://www.marinij.com/wp-content/uploads/2026/08/AP26240547310642.jpg"
-        },
-        {
-          "title": "Civil rights groups make urgent plea for voting rights in DC",
-          "url": "https://www.bostonherald.com/2026/08/28/civil-rights-groups-dc-voting-rights/",
-          "domain": "bostonherald.com",
-          "seendate": "2026-08-28T18:00:00Z",
-          "image": "https://www.bostonherald.com/wp-content/uploads/2026/08/AP26240547310642.jpg"
-        },
-        {
-          "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
-          "url": "https://www.ksat.com/news/politics/2026/08/28/civil-rights-groups-make-urgent-plea-for-voting-rights-in-dc-ahead-of-midterm-elections/",
-          "domain": "ksat.com",
-          "seendate": "2026-08-28T17:45:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg/ZVY6HBQT2RGALLERG5IY5M4BDE.jpg?_a=DATAg1kSZAA0"
-        },
-        {
-          "title": "Civil rights groups make urgent plea for voting rights in DC",
-          "url": "https://www.orlandosentinel.com/2026/08/28/civil-rights-groups-dc-voting-rights/",
-          "domain": "orlandosentinel.com",
-          "seendate": "2026-08-28T17:15:00Z",
-          "image": "https://www.orlandosentinel.com/wp-content/uploads/2026/08/AP26240547310642.jpg"
-        },
-        {
-          "title": "Civil rights groups make urgent plea for voting rights in DC",
-          "url": "https://www.baltimoresun.com/2026/08/28/civil-rights-groups-dc-voting-rights/",
-          "domain": "baltimoresun.com",
-          "seendate": "2026-08-28T16:15:00Z",
-          "image": "https://www.baltimoresun.com/wp-content/uploads/2026/08/AP26240547310642.jpg"
         }
       ]
     },
-    "title": "Civil rights groups make urgent plea for voting rights in DC",
-    "summary": "2026-08-29 wral.com: Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections\n2026-08-29 wsvn.com: Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections - WSVN 7News | Miami News , Weather , Sports\n2026-08-28 mcall.com: Civil rights groups make urgent plea for voting rights in DC\n2026-08-28 pasadenastarnews.com: Civil rights groups make urgent plea for voting rights in DC\n2026-08-28 sun-sentinel.com: Civil rights groups make urgent plea for voting rights in DC\n2026-08-28 dailynews.com: Civil rights groups make urgent plea for voting rights in DC",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_canada-legal-questions",
-    "source": "news",
-    "ts": 1788185454764,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.542,
-      "articles": [
-        {
-          "title": "Trump new Canada tariffs raise legal questions",
-          "url": "https://www.bostonglobe.com/2026/08/29/business/trump-canada-tariffs-legal-questions/",
-          "domain": "bostonglobe.com",
-          "seendate": "2026-08-31T02:30:00Z",
-          "image": "https://bostonglobe-prod.cdn.arcpublishing.com/resizer/v2/JANSATKUVVCW5NAUHNYADPRCNI.jpg?auth=f1136bd3d66d10efa412be3c50ca2a2abb72936fdb4acfc4df705f54df8aa0ec"
-        },
-        {
-          "title": "Untested in court , Trump new tariffs on Canada raise legal questions",
-          "url": "https://www.centralmaine.com/2026/08/29/untested-in-court-trumps-new-tariffs-on-canada-raise-legal-questions/",
-          "domain": "centralmaine.com",
-          "seendate": "2026-08-29T22:15:00Z",
-          "image": null
-        },
-        {
-          "title": "Untested in court , Trump new tariffs on Canada raise legal questions",
-          "url": "https://www.pressherald.com/2026/08/29/untested-in-court-trumps-new-tariffs-on-canada-raise-legal-questions/",
-          "domain": "pressherald.com",
-          "seendate": "2026-08-29T21:30:00Z",
-          "image": null
-        }
-      ]
-    },
-    "title": "Untested in court , Trump new tariffs on Canada raise legal questions",
-    "summary": "2026-08-31 bostonglobe.com: Trump new Canada tariffs raise legal questions\n2026-08-29 centralmaine.com: Untested in court , Trump new tariffs on Canada raise legal questions\n2026-08-29 pressherald.com: Untested in court , Trump new tariffs on Canada raise legal questions",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_comply-judge-lack",
-    "source": "news",
-    "ts": 1788185454764,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.242,
-      "articles": [
-        {
-          "title": "Judge says states lack time to comply with Trump new mail voting rules",
-          "url": "https://www.fox13now.com/politics/america-votes/judge-says-states-lack-time-to-comply-with-trumps-new-mail-voting-rules",
-          "domain": "fox13now.com",
-          "seendate": "2026-08-28T17:45:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/4b/d2/6575e54d4a4ea2c5afaa841de948/ap26180526190256.jpg"
-        },
-        {
-          "title": "Judge says states lack time to comply with Trump new mail voting rules",
-          "url": "https://www.koaa.com/politics/america-votes/judge-says-states-lack-time-to-comply-with-trumps-new-mail-voting-rules",
-          "domain": "koaa.com",
-          "seendate": "2026-08-28T17:45:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/4b/d2/6575e54d4a4ea2c5afaa841de948/ap26180526190256.jpg"
-        },
-        {
-          "title": "Judge says states lack time to comply with Trump new mail voting rules",
-          "url": "https://www.ksby.com/politics/america-votes/judge-says-states-lack-time-to-comply-with-trumps-new-mail-voting-rules",
-          "domain": "ksby.com",
-          "seendate": "2026-08-28T15:45:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/4b/d2/6575e54d4a4ea2c5afaa841de948/ap26180526190256.jpg"
-        },
-        {
-          "title": "Judge says states lack time to comply with Trump new mail voting rules",
-          "url": "https://www.katc.com/politics/america-votes/judge-says-states-lack-time-to-comply-with-trumps-new-mail-voting-rules",
-          "domain": "katc.com",
-          "seendate": "2026-08-28T14:45:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/4b/d2/6575e54d4a4ea2c5afaa841de948/ap26180526190256.jpg"
-        }
-      ]
-    },
-    "title": "Judge says states lack time to comply with Trump new mail voting rules",
-    "summary": "2026-08-28 fox13now.com: Judge says states lack time to comply with Trump new mail voting rules\n2026-08-28 koaa.com: Judge says states lack time to comply with Trump new mail voting rules\n2026-08-28 ksby.com: Judge says states lack time to comply with Trump new mail voting rules\n2026-08-28 katc.com: Judge says states lack time to comply with Trump new mail voting rules",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_ahead-elections-midterm",
-    "source": "news",
-    "ts": 1788185454764,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.242,
-      "articles": [
-        {
-          "title": "Thousands of protesters rally in DC over voting rights ahead of midterm elections",
-          "url": "https://www.wxii12.com/article/defend-the-vote-march-voting-rights-racial-justice/73554385",
-          "domain": "wxii12.com",
-          "seendate": "2026-08-28T17:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/7f8d8f4d-56ec-41cc-9f14-95d12f2463d4.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0600xh"
-        },
-        {
-          "title": "Thousands of protesters rally in DC over voting rights ahead of midterm elections",
-          "url": "https://www.wesh.com/article/defend-the-vote-march-voting-rights-racial-justice/73554385",
-          "domain": "wesh.com",
-          "seendate": "2026-08-28T17:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/7f8d8f4d-56ec-41cc-9f14-95d12f2463d4.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0600xh"
-        },
-        {
-          "title": "Thousands of protesters rally in DC over voting rights ahead of midterm elections",
-          "url": "https://www.kcra.com/article/defend-the-vote-march-voting-rights-racial-justice/73554385",
-          "domain": "kcra.com",
-          "seendate": "2026-08-28T17:15:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/7f8d8f4d-56ec-41cc-9f14-95d12f2463d4.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0600xh"
-        },
-        {
-          "title": "Thousands of protesters rally in DC over voting rights ahead of midterm elections",
-          "url": "https://www.wyff4.com/article/defend-the-vote-march-voting-rights-racial-justice/73554385",
-          "domain": "wyff4.com",
-          "seendate": "2026-08-28T16:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/7f8d8f4d-56ec-41cc-9f14-95d12f2463d4.jpg?crop=1.00xw%3A0.847xh%3B0%2C0.0600xh"
-        }
-      ]
-    },
-    "title": "Thousands of protesters rally in DC over voting rights ahead of midterm elections",
-    "summary": "2026-08-28 wxii12.com: Thousands of protesters rally in DC over voting rights ahead of midterm elections\n2026-08-28 wesh.com: Thousands of protesters rally in DC over voting rights ahead of midterm elections\n2026-08-28 kcra.com: Thousands of protesters rally in DC over voting rights ahead of midterm elections\n2026-08-28 wyff4.com: Thousands of protesters rally in DC over voting rights ahead of midterm elections",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_again-ballot-blocks",
-    "source": "news",
-    "ts": 1788185454764,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.194,
-      "articles": [
-        {
-          "title": "Judge again blocks Trump mail ballot executive order in ruling that likely to be swiftly appealed",
-          "url": "https://www.wwaytv3.com/judge-again-blocks-trump-mail-ballot-executive-order-in-ruling-thats-likely-to-be-swiftly-appealed/",
-          "domain": "wwaytv3.com",
-          "seendate": "2026-08-28T18:45:00Z",
-          "image": "https://wpcdn.us-east-1.vip.tn-cloud.net/www.wwaytv3.com/content/uploads/2026/08/p/n/mgn-1280x960-50818c00-kujay.png"
-        },
-        {
-          "title": "Judge again blocks Trump mail ballot executive order in ruling",
-          "url": "https://www.denverpost.com/2026/08/28/judge-blocks-trump-mail-ballot-executive-order/",
-          "domain": "denverpost.com",
-          "seendate": "2026-08-28T16:15:00Z",
-          "image": "https://www.denverpost.com/wp-content/uploads/2026/08/Election_2_26_Florida__2771_711654.jpg"
-        },
-        {
-          "title": "Judge again blocks Trump mail ballot executive order in ruling",
-          "url": "https://www.mcall.com/2026/08/28/judge-blocks-trump-mail-ballot-executive-order/",
-          "domain": "mcall.com",
-          "seendate": "2026-08-28T16:15:00Z",
-          "image": "https://www.mcall.com/wp-content/uploads/2026/08/Election_2_26_Florida__2771_711654.jpg"
-        }
-      ]
-    },
-    "title": "Judge again blocks Trump mail ballot executive order in ruling",
-    "summary": "2026-08-28 wwaytv3.com: Judge again blocks Trump mail ballot executive order in ruling that likely to be swiftly appealed\n2026-08-28 denverpost.com: Judge again blocks Trump mail ballot executive order in ruling\n2026-08-28 mcall.com: Judge again blocks Trump mail ballot executive order in ruling",
+    "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
+    "summary": "2026-08-29 wral.com: Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections\n2026-08-29 wsvn.com: Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections - WSVN 7News | Miami News , Weather , Sports\n2026-08-28 mcall.com: Civil rights groups make urgent plea for voting rights in DC",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
