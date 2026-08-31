@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-08-31T05:48:15.314Z · 29 legislative + 9 news (GDELT, 3d)
+// 2026-08-31T14:10:54.772Z · 29 legislative + 8 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1788155270794,
+    "ts": 1788185281975,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.666,
+      "salience": 0.664,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,11 +259,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1788155270794,
+    "ts": 1788185281975,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.657,
+      "salience": 0.655,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1788155270793,
+    "ts": 1788185281975,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.628,
+      "salience": 0.626,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1788155270794,
+    "ts": 1788185281975,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.574,
+      "salience": 0.573,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3116,287 +3116,13 @@ window.PRISM_CANDIDATES = [
     "mts": 1784784262612
   },
   {
-    "cid": "cand_leg_sjres-119-196",
-    "source": "legislative",
-    "ts": 1788155270794,
-    "raw": {
-      "method": "legislative_rollcall_v1",
-      "billId": "sjres-119-196",
-      "salience": 0.556,
-      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
-      "votes": [
-        {
-          "voteId": "s-119-2-190",
-          "chamber": "senate",
-          "date": "June 24, 2026,  09:16 PM",
-          "question": "On the Motion to Proceed",
-          "result": "Motion to Proceed Rejected",
-          "margin": -0.072,
-          "totals": {
-            "yea": 45,
-            "nay": 52,
-            "present": 0,
-            "notVoting": 3
-          },
-          "party": {
-            "D": {
-              "yea": 43,
-              "nay": 0
-            },
-            "R": {
-              "yea": 0,
-              "nay": 52
-            },
-            "I": {
-              "yea": 2,
-              "nay": 0
-            }
-          },
-          "positions": {
-            "yea": [
-              "A000382",
-              "B001230",
-              "B001277",
-              "B001303",
-              "B001288",
-              "C000127",
-              "C001088",
-              "C001113",
-              "D000622",
-              "D000563",
-              "F000479",
-              "G000574",
-              "G000555",
-              "H001076",
-              "H001046",
-              "H000273",
-              "H001042",
-              "K000384",
-              "K000377",
-              "K000394",
-              "K000383",
-              "K000367",
-              "M000133",
-              "M001176",
-              "M001169",
-              "M001111",
-              "O000174",
-              "P000145",
-              "P000595",
-              "R000122",
-              "R000608",
-              "S000033",
-              "S001194",
-              "S001150",
-              "S000148",
-              "S001208",
-              "S001203",
-              "V000128",
-              "W000805",
-              "W000790",
-              "W000817",
-              "W000800",
-              "W000802",
-              "W000779"
-            ],
-            "nay": [
-              "B001299",
-              "B001261",
-              "B001243",
-              "B001236",
-              "B001319",
-              "B001305",
-              "C001047",
-              "C001075",
-              "C001035",
-              "C001056",
-              "C001095",
-              "C001096",
-              "C000880",
-              "C001098",
-              "C001114",
-              "D000618",
-              "E000295",
-              "F000463",
-              "G000359",
-              "G000386",
-              "H000601",
-              "H001089",
-              "H001061",
-              "H001104",
-              "H001079",
-              "J000293",
-              "J000312",
-              "K000393",
-              "L000575",
-              "L000577",
-              "L000571",
-              "M001198",
-              "M001243",
-              "M001244",
-              "M000934",
-              "M001242",
-              "M001153",
-              "P000603",
-              "R000618",
-              "R000584",
-              "R000605",
-              "S001227",
-              "S001217",
-              "S001184",
-              "S001232",
-              "S001198",
-              "T000250",
-              "T000476",
-              "T000278",
-              "W000437",
-              "Y000064"
-            ],
-            "present": [],
-            "notVoting": [
-              "B001267",
-              "M000355",
-              "S001181"
-            ]
-          }
-        }
-      ]
-    },
-    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
-    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
-    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
-    "suggestedAxes": {
-      "x": {
-        "pos": "Disapprove rule",
-        "neg": "Uphold rule"
-      },
-      "y": {
-        "pos": "Executive overreach",
-        "neg": "Agency discretion legitimate"
-      }
-    },
-    "prevalentAxisGuess": "x",
-    "members": [
-      "A000382",
-      "B001230",
-      "B001277",
-      "B001303",
-      "B001288",
-      "C000127",
-      "C001088",
-      "C001113",
-      "D000622",
-      "D000563",
-      "F000479",
-      "G000574",
-      "G000555",
-      "H001076",
-      "H001046",
-      "H000273",
-      "H001042",
-      "K000384",
-      "K000377",
-      "K000394",
-      "K000383",
-      "K000367",
-      "M000133",
-      "M001176",
-      "M001169",
-      "M001111",
-      "O000174",
-      "P000145",
-      "P000595",
-      "R000122",
-      "R000608",
-      "S000033",
-      "S001194",
-      "S001150",
-      "S000148",
-      "S001208",
-      "S001203",
-      "V000128",
-      "W000805",
-      "W000790",
-      "W000817",
-      "W000800",
-      "W000802",
-      "W000779",
-      "B001299",
-      "B001261",
-      "B001243",
-      "B001236",
-      "B001319",
-      "B001305",
-      "C001047",
-      "C001075",
-      "C001035",
-      "C001056",
-      "C001095",
-      "C001096",
-      "C000880",
-      "C001098",
-      "C001114",
-      "D000618",
-      "E000295",
-      "F000463",
-      "G000359",
-      "G000386",
-      "H000601",
-      "H001089",
-      "H001061",
-      "H001104",
-      "H001079",
-      "J000293",
-      "J000312",
-      "K000393",
-      "L000575",
-      "L000577",
-      "L000571",
-      "M001198",
-      "M001243",
-      "M001244",
-      "M000934",
-      "M001242",
-      "M001153",
-      "P000603",
-      "R000618",
-      "R000584",
-      "R000605",
-      "S001227",
-      "S001217",
-      "S001184",
-      "S001232",
-      "S001198",
-      "T000250",
-      "T000476",
-      "T000278",
-      "W000437",
-      "Y000064"
-    ],
-    "bills": [
-      "sjres-119-196"
-    ],
-    "fitness": {
-      "score": 0.3,
-      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
-      "method": "m2_constitutive_v1",
-      "ts": "2026-07-14T04:28:30.038Z"
-    },
-    "status": "new",
-    "voteMap": {
-      "voteId": "s-119-2-190",
-      "yeaPole": "pos"
-    },
-    "mts": 1784044297586
-  },
-  {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1788155270794,
+    "ts": 1788185281975,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.555,
+      "salience": 0.554,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4792,13 +4518,287 @@ window.PRISM_CANDIDATES = [
     "mts": 1784044297586
   },
   {
+    "cid": "cand_leg_sjres-119-196",
+    "source": "legislative",
+    "ts": 1788185281975,
+    "raw": {
+      "method": "legislative_rollcall_v1",
+      "billId": "sjres-119-196",
+      "salience": 0.554,
+      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
+      "votes": [
+        {
+          "voteId": "s-119-2-190",
+          "chamber": "senate",
+          "date": "June 24, 2026,  09:16 PM",
+          "question": "On the Motion to Proceed",
+          "result": "Motion to Proceed Rejected",
+          "margin": -0.072,
+          "totals": {
+            "yea": 45,
+            "nay": 52,
+            "present": 0,
+            "notVoting": 3
+          },
+          "party": {
+            "D": {
+              "yea": 43,
+              "nay": 0
+            },
+            "R": {
+              "yea": 0,
+              "nay": 52
+            },
+            "I": {
+              "yea": 2,
+              "nay": 0
+            }
+          },
+          "positions": {
+            "yea": [
+              "A000382",
+              "B001230",
+              "B001277",
+              "B001303",
+              "B001288",
+              "C000127",
+              "C001088",
+              "C001113",
+              "D000622",
+              "D000563",
+              "F000479",
+              "G000574",
+              "G000555",
+              "H001076",
+              "H001046",
+              "H000273",
+              "H001042",
+              "K000384",
+              "K000377",
+              "K000394",
+              "K000383",
+              "K000367",
+              "M000133",
+              "M001176",
+              "M001169",
+              "M001111",
+              "O000174",
+              "P000145",
+              "P000595",
+              "R000122",
+              "R000608",
+              "S000033",
+              "S001194",
+              "S001150",
+              "S000148",
+              "S001208",
+              "S001203",
+              "V000128",
+              "W000805",
+              "W000790",
+              "W000817",
+              "W000800",
+              "W000802",
+              "W000779"
+            ],
+            "nay": [
+              "B001299",
+              "B001261",
+              "B001243",
+              "B001236",
+              "B001319",
+              "B001305",
+              "C001047",
+              "C001075",
+              "C001035",
+              "C001056",
+              "C001095",
+              "C001096",
+              "C000880",
+              "C001098",
+              "C001114",
+              "D000618",
+              "E000295",
+              "F000463",
+              "G000359",
+              "G000386",
+              "H000601",
+              "H001089",
+              "H001061",
+              "H001104",
+              "H001079",
+              "J000293",
+              "J000312",
+              "K000393",
+              "L000575",
+              "L000577",
+              "L000571",
+              "M001198",
+              "M001243",
+              "M001244",
+              "M000934",
+              "M001242",
+              "M001153",
+              "P000603",
+              "R000618",
+              "R000584",
+              "R000605",
+              "S001227",
+              "S001217",
+              "S001184",
+              "S001232",
+              "S001198",
+              "T000250",
+              "T000476",
+              "T000278",
+              "W000437",
+              "Y000064"
+            ],
+            "present": [],
+            "notVoting": [
+              "B001267",
+              "M000355",
+              "S001181"
+            ]
+          }
+        }
+      ]
+    },
+    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
+    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
+    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Disapprove rule",
+        "neg": "Uphold rule"
+      },
+      "y": {
+        "pos": "Executive overreach",
+        "neg": "Agency discretion legitimate"
+      }
+    },
+    "prevalentAxisGuess": "x",
+    "members": [
+      "A000382",
+      "B001230",
+      "B001277",
+      "B001303",
+      "B001288",
+      "C000127",
+      "C001088",
+      "C001113",
+      "D000622",
+      "D000563",
+      "F000479",
+      "G000574",
+      "G000555",
+      "H001076",
+      "H001046",
+      "H000273",
+      "H001042",
+      "K000384",
+      "K000377",
+      "K000394",
+      "K000383",
+      "K000367",
+      "M000133",
+      "M001176",
+      "M001169",
+      "M001111",
+      "O000174",
+      "P000145",
+      "P000595",
+      "R000122",
+      "R000608",
+      "S000033",
+      "S001194",
+      "S001150",
+      "S000148",
+      "S001208",
+      "S001203",
+      "V000128",
+      "W000805",
+      "W000790",
+      "W000817",
+      "W000800",
+      "W000802",
+      "W000779",
+      "B001299",
+      "B001261",
+      "B001243",
+      "B001236",
+      "B001319",
+      "B001305",
+      "C001047",
+      "C001075",
+      "C001035",
+      "C001056",
+      "C001095",
+      "C001096",
+      "C000880",
+      "C001098",
+      "C001114",
+      "D000618",
+      "E000295",
+      "F000463",
+      "G000359",
+      "G000386",
+      "H000601",
+      "H001089",
+      "H001061",
+      "H001104",
+      "H001079",
+      "J000293",
+      "J000312",
+      "K000393",
+      "L000575",
+      "L000577",
+      "L000571",
+      "M001198",
+      "M001243",
+      "M001244",
+      "M000934",
+      "M001242",
+      "M001153",
+      "P000603",
+      "R000618",
+      "R000584",
+      "R000605",
+      "S001227",
+      "S001217",
+      "S001184",
+      "S001232",
+      "S001198",
+      "T000250",
+      "T000476",
+      "T000278",
+      "W000437",
+      "Y000064"
+    ],
+    "bills": [
+      "sjres-119-196"
+    ],
+    "fitness": {
+      "score": 0.3,
+      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:28:30.038Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "s-119-2-190",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297586
+  },
+  {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1788155270794,
+    "ts": 1788185281975,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.541,
+      "salience": 0.54,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5065,11 +5065,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1788155270793,
+    "ts": 1788185281974,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.531,
+      "salience": 0.529,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6467,11 +6467,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7726",
     "source": "legislative",
-    "ts": 1788155270793,
+    "ts": 1788185281974,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7726",
-      "salience": 0.525,
+      "salience": 0.524,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7726",
       "votes": [
         {
@@ -7869,11 +7869,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1788155270794,
+    "ts": 1788185281976,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.52,
+      "salience": 0.518,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -8396,11 +8396,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1788155270793,
+    "ts": 1788185281975,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.478,
+      "salience": 0.477,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -9330,11 +9330,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1788155270794,
+    "ts": 1788185281975,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.478,
+      "salience": 0.476,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -9606,11 +9606,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1788155270793,
+    "ts": 1788185281974,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
-      "salience": 0.462,
+      "salience": 0.46,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2913",
       "votes": [
         {
@@ -10538,11 +10538,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1788155270794,
+    "ts": 1788185281975,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.462,
+      "salience": 0.46,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -10814,11 +10814,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1788155270794,
+    "ts": 1788185281975,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
-      "salience": 0.459,
+      "salience": 0.457,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8312",
       "votes": [
         {
@@ -11747,11 +11747,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1788155270793,
+    "ts": 1788185281975,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.44,
+      "salience": 0.438,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -12680,11 +12680,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1788155270794,
+    "ts": 1788185281976,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.429,
+      "salience": 0.427,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -13072,11 +13072,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1788155270794,
+    "ts": 1788185281975,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.321,
+      "salience": 0.319,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -14475,11 +14475,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1788155270794,
+    "ts": 1788185281975,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.263,
+      "salience": 0.262,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -15368,11 +15368,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1788155270794,
+    "ts": 1788185281976,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.256,
+      "salience": 0.255,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -16283,11 +16283,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1788155270794,
+    "ts": 1788185281975,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.25,
+      "salience": 0.248,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -17171,11 +17171,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1788155270794,
+    "ts": 1788185281975,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.245,
+      "salience": 0.244,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -18092,11 +18092,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1788155270794,
+    "ts": 1788185281975,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.234,
+      "salience": 0.232,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -19010,11 +19010,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1788155270794,
+    "ts": 1788185281975,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.174,
+      "salience": 0.172,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -19909,11 +19909,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2860",
     "source": "legislative",
-    "ts": 1788155270793,
+    "ts": 1788185281974,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2860",
-      "salience": 0.145,
+      "salience": 0.144,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2860",
       "votes": [
         {
@@ -20843,11 +20843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-254",
     "source": "legislative",
-    "ts": 1788155270793,
+    "ts": 1788185281974,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-254",
-      "salience": 0.071,
+      "salience": 0.069,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/254",
       "votes": [
         {
@@ -21772,11 +21772,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7618",
     "source": "legislative",
-    "ts": 1788155270792,
+    "ts": 1788185281974,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7618",
-      "salience": 0.069,
+      "salience": 0.067,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7618",
       "votes": [
         {
@@ -22681,11 +22681,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1788155270793,
+    "ts": 1788185281974,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
-      "salience": 0.063,
+      "salience": 0.062,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8466",
       "votes": [
         {
@@ -23556,11 +23556,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1788155270793,
+    "ts": 1788185281975,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
-      "salience": 0.063,
+      "salience": 0.062,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8428",
       "votes": [
         {
@@ -24438,14 +24438,92 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_ballots-battle-developments",
+    "cid": "cand_news_congress-democrats-election",
     "source": "news",
-    "ts": 1788155295306,
+    "ts": 1788185454763,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.749,
+      "salience": 0.878,
+      "articles": [
+        {
+          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
+          "url": "https://whyy.org/npr-story/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference/",
+          "domain": "whyy.org",
+          "seendate": "2026-08-31T12:15:00Z",
+          "image": "https://whyy.org/wp-content/uploads/2026/08/gettyimages-12800315651-scaled.jpeg"
+        },
+        {
+          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
+          "url": "https://www.mtpr.org/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
+          "domain": "mtpr.org",
+          "seendate": "2026-08-29T01:30:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
+          "url": "https://www.ideastream.org/npr-news/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
+          "domain": "ideastream.org",
+          "seendate": "2026-08-28T16:15:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
+          "url": "https://www.kjzz.org/npr-top-stories/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
+          "domain": "kjzz.org",
+          "seendate": "2026-08-28T15:45:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
+          "url": "https://www.kzyx.org/npr-news/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
+          "domain": "kzyx.org",
+          "seendate": "2026-08-28T15:45:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
+          "url": "https://wysu.org/npr-national-news/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
+          "domain": "wysu.org",
+          "seendate": "2026-08-28T15:45:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
+          "url": "https://www.upr.org/npr-news/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
+          "domain": "upr.org",
+          "seendate": "2026-08-28T15:45:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        },
+        {
+          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
+          "url": "https://www.kawc.org/npr-news/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
+          "domain": "kawc.org",
+          "seendate": "2026-08-28T14:45:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
+        }
+      ]
+    },
+    "title": "How Democrats in Congress are preparing for Trump midterm election interference",
+    "summary": "2026-08-31 whyy.org: How Democrats in Congress are preparing for Trump midterm election interference\n2026-08-29 mtpr.org: How Democrats in Congress are preparing for Trump midterm election interference\n2026-08-28 ideastream.org: How Democrats in Congress are preparing for Trump midterm election interference\n2026-08-28 kjzz.org: How Democrats in Congress are preparing for Trump midterm election interference\n2026-08-28 kzyx.org: How Democrats in Congress are preparing for Trump midterm election interference\n2026-08-28 wysu.org: How Democrats in Congress are preparing for Trump midterm election interference",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_ballots-battle-developments",
+    "source": "news",
+    "ts": 1788185454763,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.696,
       "articles": [
         {
           "title": "Legal battle over mailed ballots after a series of developments",
@@ -24511,12 +24589,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_appeals-blocking-latest",
     "source": "news",
-    "ts": 1788155295306,
+    "ts": 1788185454764,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.703,
+      "salience": 0.65,
       "articles": [
         {
           "title": "Trump admin appeals latest ruling blocking his mail voting executive order",
@@ -24617,12 +24695,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_civil-groups-make",
     "source": "news",
-    "ts": 1788155295307,
+    "ts": 1788185454764,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.679,
+      "salience": 0.627,
       "articles": [
         {
           "title": "Civil rights groups make urgent plea for voting rights in DC , ahead of midterm elections",
@@ -24721,198 +24799,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_congress-democrats-election",
-    "source": "news",
-    "ts": 1788155295307,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.673,
-      "articles": [
-        {
-          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
-          "url": "https://www.mtpr.org/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
-          "domain": "mtpr.org",
-          "seendate": "2026-08-29T01:30:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
-          "url": "https://www.ideastream.org/npr-news/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
-          "domain": "ideastream.org",
-          "seendate": "2026-08-28T16:15:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
-          "url": "https://www.kjzz.org/npr-top-stories/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
-          "domain": "kjzz.org",
-          "seendate": "2026-08-28T15:45:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
-          "url": "https://www.kzyx.org/npr-news/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
-          "domain": "kzyx.org",
-          "seendate": "2026-08-28T15:45:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
-          "url": "https://wysu.org/npr-national-news/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
-          "domain": "wysu.org",
-          "seendate": "2026-08-28T15:45:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
-          "url": "https://www.upr.org/npr-news/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
-          "domain": "upr.org",
-          "seendate": "2026-08-28T15:45:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
-          "url": "https://www.kawc.org/npr-news/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
-          "domain": "kawc.org",
-          "seendate": "2026-08-28T14:45:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
-          "url": "https://www.aspenpublicradio.org/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
-          "domain": "aspenpublicradio.org",
-          "seendate": "2026-08-28T13:30:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
-          "url": "https://www.kasu.org/politics/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
-          "domain": "kasu.org",
-          "seendate": "2026-08-28T13:30:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "How Democrats in Congress are preparing for Trump midterm election interference",
-          "url": "https://www.wcsufm.org/latest-from-npr/2026-08-28/how-democrats-in-congress-are-preparing-for-trump-midterm-election-interference",
-          "domain": "wcsufm.org",
-          "seendate": "2026-08-28T13:30:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        }
-      ]
-    },
-    "title": "How Democrats in Congress are preparing for Trump midterm election interference",
-    "summary": "2026-08-29 mtpr.org: How Democrats in Congress are preparing for Trump midterm election interference\n2026-08-28 ideastream.org: How Democrats in Congress are preparing for Trump midterm election interference\n2026-08-28 kjzz.org: How Democrats in Congress are preparing for Trump midterm election interference\n2026-08-28 kzyx.org: How Democrats in Congress are preparing for Trump midterm election interference\n2026-08-28 wysu.org: How Democrats in Congress are preparing for Trump midterm election interference\n2026-08-28 upr.org: How Democrats in Congress are preparing for Trump midterm election interference",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_blocks-executive-judge",
-    "source": "news",
-    "ts": 1788155295307,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.631,
-      "articles": [
-        {
-          "title": "Judge again blocks Trump mail ballot executive order in ruling that likely to be swiftly appealed",
-          "url": "https://www.wwaytv3.com/judge-again-blocks-trump-mail-ballot-executive-order-in-ruling-thats-likely-to-be-swiftly-appealed/",
-          "domain": "wwaytv3.com",
-          "seendate": "2026-08-28T18:45:00Z",
-          "image": "https://wpcdn.us-east-1.vip.tn-cloud.net/www.wwaytv3.com/content/uploads/2026/08/p/n/mgn-1280x960-50818c00-kujay.png"
-        },
-        {
-          "title": "Judge temporarily blocks President Donald Trump mail - in voting executive order",
-          "url": "https://abc7.com/post/judge-temporarily-blocks-president-donald-trump-mail-voting-executive-order/19752447/",
-          "domain": "abc7.com",
-          "seendate": "2026-08-28T18:00:00Z",
-          "image": "https://cdn.abcotvs.com/dip/images/19739404_082626-ap-usps-mail-voting-img.png"
-        },
-        {
-          "title": "Judge again blocks Trump mail ballot executive order in ruling",
-          "url": "https://www.denverpost.com/2026/08/28/judge-blocks-trump-mail-ballot-executive-order/",
-          "domain": "denverpost.com",
-          "seendate": "2026-08-28T16:15:00Z",
-          "image": "https://www.denverpost.com/wp-content/uploads/2026/08/Election_2_26_Florida__2771_711654.jpg"
-        },
-        {
-          "title": "Judge again blocks Trump mail ballot executive order in ruling",
-          "url": "https://www.mcall.com/2026/08/28/judge-blocks-trump-mail-ballot-executive-order/",
-          "domain": "mcall.com",
-          "seendate": "2026-08-28T16:15:00Z",
-          "image": "https://www.mcall.com/wp-content/uploads/2026/08/Election_2_26_Florida__2771_711654.jpg"
-        },
-        {
-          "title": "Judge again blocks Trump mail ballot executive order in ruling",
-          "url": "https://www.baltimoresun.com/2026/08/28/judge-blocks-trump-mail-ballot-executive-order/",
-          "domain": "baltimoresun.com",
-          "seendate": "2026-08-28T11:30:00Z",
-          "image": "https://www.baltimoresun.com/wp-content/uploads/2026/08/Election_2_26_Florida__2771_711654.jpg"
-        },
-        {
-          "title": "Judge again blocks Trump mail ballot executive order",
-          "url": "https://www.cnbc.com/2026/08/28/judge-again-blocks-trump-mail-ballot-executive-order.html",
-          "domain": "cnbc.com",
-          "seendate": "2026-08-28T11:15:00Z",
-          "image": "https://image.cnbcfm.com/api/v1/image/108035462-1726599850257-gettyimages-2171843766-sept-17-voting-asj011.jpeg?v=1726600019"
-        },
-        {
-          "title": "Judge again blocks Trump mail ballot executive order in ruling",
-          "url": "https://www.whec.com/top-news/judge-again-blocks-trump-mail-ballot-executive-order-in-ruling-likely-to-be-appealed/",
-          "domain": "whec.com",
-          "seendate": "2026-08-28T11:15:00Z",
-          "image": "https://www.whec.com/wp-content/uploads/2026/08/Mail-in-ballots-file-photo.png"
-        },
-        {
-          "title": "Judge again blocks Trump mail ballot executive order in ruling that likely to be swiftly appealed | National",
-          "url": "http://www.idahostatejournal.com/news/national/judge-again-blocks-trump-mail-ballot-executive-order-in-ruling-that-s-likely-to-be/article_cfe81468-643f-5b75-861f-eedc0285f9c7.html",
-          "domain": "idahostatejournal.com",
-          "seendate": "2026-08-28T07:30:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/idahostatejournal.com/content/tncms/assets/v3/editorial/d/ff/dffef3df-9e29-5ee4-aa75-12e2d1826f2c/6a84d0853a1cc.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "Judge again blocks Trump mail ballot executive order in ruling that likely to be swiftly appealed",
-          "url": "https://www.latimes.com/world-nation/story/2026-08-27/judge-again-blocks-trump-mail-ballot-executive-order-in-ruling-thats-likely-to-be-swiftly-appealed",
-          "domain": "latimes.com",
-          "seendate": "2026-08-28T06:00:00Z",
-          "image": "https://california-times-brightspot.s3.amazonaws.com/ae/8b/94af0448463886904d7398278ab8/cea7a79b66b34367b13139f56a4318dd.jpg"
-        },
-        {
-          "title": "Judge again blocks Trump mail ballot executive order in ruling that likely to be swiftly appealed",
-          "url": "https://abcnews.com/Politics/wireStory/judge-blocks-trump-mail-ballot-executive-order-ruling-136019938",
-          "domain": "abcnews.com",
-          "seendate": "2026-08-28T06:00:00Z",
-          "image": "https://i.abcnewsfe.com/a/ed42ddc0-5176-4a0a-91bc-a9a55ba3f1e4/wirestory_15cf1ec7dcdb8211bf6b624b75a7f4ab_16x9.jpg"
-        }
-      ]
-    },
-    "title": "Judge again blocks Trump mail ballot executive order in ruling",
-    "summary": "2026-08-28 wwaytv3.com: Judge again blocks Trump mail ballot executive order in ruling that likely to be swiftly appealed\n2026-08-28 abc7.com: Judge temporarily blocks President Donald Trump mail - in voting executive order\n2026-08-28 denverpost.com: Judge again blocks Trump mail ballot executive order in ruling\n2026-08-28 mcall.com: Judge again blocks Trump mail ballot executive order in ruling\n2026-08-28 baltimoresun.com: Judge again blocks Trump mail ballot executive order in ruling\n2026-08-28 cnbc.com: Judge again blocks Trump mail ballot executive order",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_canada-legal-questions",
     "source": "news",
-    "ts": 1788155295307,
+    "ts": 1788185454764,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.594,
+      "salience": 0.542,
       "articles": [
         {
           "title": "Trump new Canada tariffs raise legal questions",
@@ -24948,106 +24842,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_democratic-force-inside",
-    "source": "news",
-    "ts": 1788155295307,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.586,
-      "articles": [
-        {
-          "title": "Inside the Democratic task force preparing for if Trump interferes in the midterms",
-          "url": "https://www.ideastream.org/2026-08-28/inside-the-democratic-task-force-preparing-for-if-trump-interferes-in-the-midterms",
-          "domain": "ideastream.org",
-          "seendate": "2026-08-28T11:30:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "Inside the Democratic task force preparing for if Trump interferes in the midterms",
-          "url": "https://news.wjct.org/elections/2026-08-28/inside-the-democratic-task-force-preparing-for-if-trump-interferes-in-the-midterms",
-          "domain": "news.wjct.org",
-          "seendate": "2026-08-28T11:15:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "Inside the Democratic task force preparing for if Trump interferes in the midterms",
-          "url": "https://www.wbaa.org/npr-news/2026-08-28/inside-the-democratic-task-force-preparing-for-if-trump-interferes-in-the-midterms",
-          "domain": "wbaa.org",
-          "seendate": "2026-08-28T11:15:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "Inside the Democratic task force preparing for if Trump interferes in the midterms",
-          "url": "https://www.kgou.org/politics-and-government/2026-08-28/inside-the-democratic-task-force-preparing-for-if-trump-interferes-in-the-midterms",
-          "domain": "kgou.org",
-          "seendate": "2026-08-28T11:15:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "Inside the Democratic task force preparing for if Trump interferes in the midterms",
-          "url": "https://www.delawarepublic.org/npr-headlines/2026-08-28/inside-the-democratic-task-force-preparing-for-if-trump-interferes-in-the-midterms",
-          "domain": "delawarepublic.org",
-          "seendate": "2026-08-28T10:15:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "Inside the Democratic task force preparing for if Trump interferes in the midterms",
-          "url": "https://www.kwit.org/2026-08-28/inside-the-democratic-task-force-preparing-for-if-trump-interferes-in-the-midterms",
-          "domain": "kwit.org",
-          "seendate": "2026-08-28T10:15:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "Inside the Democratic task force preparing for if Trump interferes in the midterms",
-          "url": "https://www.tspr.org/npr-news/2026-08-28/inside-the-democratic-task-force-preparing-for-if-trump-interferes-in-the-midterms",
-          "domain": "tspr.org",
-          "seendate": "2026-08-28T10:15:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "Inside the Democratic task force preparing for if Trump interferes in the midterms",
-          "url": "https://www.ksmu.org/2026-08-28/inside-the-democratic-task-force-preparing-for-if-trump-interferes-in-the-midterms",
-          "domain": "ksmu.org",
-          "seendate": "2026-08-28T10:15:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "Inside the Democratic task force preparing for if Trump interferes in the midterms",
-          "url": "https://www.kmxt.org/2026-08-28/inside-the-democratic-task-force-preparing-for-if-trump-interferes-in-the-midterms",
-          "domain": "kmxt.org",
-          "seendate": "2026-08-28T10:15:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        },
-        {
-          "title": "Inside the Democratic task force preparing for if Trump interferes in the midterms",
-          "url": "https://www.kuow.org/npr-news/2026-08-28/inside-the-democratic-task-force-preparing-for-if-trump-interferes-in-the-midterms",
-          "domain": "kuow.org",
-          "seendate": "2026-08-28T10:15:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/db/00/20d81ba34b7b9e045999811d284f/gettyimages-12800315651.jpg"
-        }
-      ]
-    },
-    "title": "Inside the Democratic task force preparing for if Trump interferes in the midterms",
-    "summary": "2026-08-28 ideastream.org: Inside the Democratic task force preparing for if Trump interferes in the midterms\n2026-08-28 news.wjct.org: Inside the Democratic task force preparing for if Trump interferes in the midterms\n2026-08-28 wbaa.org: Inside the Democratic task force preparing for if Trump interferes in the midterms\n2026-08-28 kgou.org: Inside the Democratic task force preparing for if Trump interferes in the midterms\n2026-08-28 delawarepublic.org: Inside the Democratic task force preparing for if Trump interferes in the midterms\n2026-08-28 kwit.org: Inside the Democratic task force preparing for if Trump interferes in the midterms",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_comply-judge-lack",
     "source": "news",
-    "ts": 1788155295307,
+    "ts": 1788185454764,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.35,
+      "salience": 0.242,
       "articles": [
         {
           "title": "Judge says states lack time to comply with Trump new mail voting rules",
@@ -25076,18 +24878,11 @@ window.PRISM_CANDIDATES = [
           "domain": "katc.com",
           "seendate": "2026-08-28T14:45:00Z",
           "image": "https://ewscripps.brightspotcdn.com/4b/d2/6575e54d4a4ea2c5afaa841de948/ap26180526190256.jpg"
-        },
-        {
-          "title": "Judge says states lack time to comply with Trump new mail voting rules",
-          "url": "https://www.kxxv.com/politics/america-votes/judge-says-states-lack-time-to-comply-with-trumps-new-mail-voting-rules",
-          "domain": "kxxv.com",
-          "seendate": "2026-08-28T13:45:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/4b/d2/6575e54d4a4ea2c5afaa841de948/ap26180526190256.jpg"
         }
       ]
     },
     "title": "Judge says states lack time to comply with Trump new mail voting rules",
-    "summary": "2026-08-28 fox13now.com: Judge says states lack time to comply with Trump new mail voting rules\n2026-08-28 koaa.com: Judge says states lack time to comply with Trump new mail voting rules\n2026-08-28 ksby.com: Judge says states lack time to comply with Trump new mail voting rules\n2026-08-28 katc.com: Judge says states lack time to comply with Trump new mail voting rules\n2026-08-28 kxxv.com: Judge says states lack time to comply with Trump new mail voting rules",
+    "summary": "2026-08-28 fox13now.com: Judge says states lack time to comply with Trump new mail voting rules\n2026-08-28 koaa.com: Judge says states lack time to comply with Trump new mail voting rules\n2026-08-28 ksby.com: Judge says states lack time to comply with Trump new mail voting rules\n2026-08-28 katc.com: Judge says states lack time to comply with Trump new mail voting rules",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -25099,12 +24894,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ahead-elections-midterm",
     "source": "news",
-    "ts": 1788155295307,
+    "ts": 1788185454764,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.295,
+      "salience": 0.242,
       "articles": [
         {
           "title": "Thousands of protesters rally in DC over voting rights ahead of midterm elections",
@@ -25138,6 +24933,49 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Thousands of protesters rally in DC over voting rights ahead of midterm elections",
     "summary": "2026-08-28 wxii12.com: Thousands of protesters rally in DC over voting rights ahead of midterm elections\n2026-08-28 wesh.com: Thousands of protesters rally in DC over voting rights ahead of midterm elections\n2026-08-28 kcra.com: Thousands of protesters rally in DC over voting rights ahead of midterm elections\n2026-08-28 wyff4.com: Thousands of protesters rally in DC over voting rights ahead of midterm elections",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_again-ballot-blocks",
+    "source": "news",
+    "ts": 1788185454764,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.194,
+      "articles": [
+        {
+          "title": "Judge again blocks Trump mail ballot executive order in ruling that likely to be swiftly appealed",
+          "url": "https://www.wwaytv3.com/judge-again-blocks-trump-mail-ballot-executive-order-in-ruling-thats-likely-to-be-swiftly-appealed/",
+          "domain": "wwaytv3.com",
+          "seendate": "2026-08-28T18:45:00Z",
+          "image": "https://wpcdn.us-east-1.vip.tn-cloud.net/www.wwaytv3.com/content/uploads/2026/08/p/n/mgn-1280x960-50818c00-kujay.png"
+        },
+        {
+          "title": "Judge again blocks Trump mail ballot executive order in ruling",
+          "url": "https://www.denverpost.com/2026/08/28/judge-blocks-trump-mail-ballot-executive-order/",
+          "domain": "denverpost.com",
+          "seendate": "2026-08-28T16:15:00Z",
+          "image": "https://www.denverpost.com/wp-content/uploads/2026/08/Election_2_26_Florida__2771_711654.jpg"
+        },
+        {
+          "title": "Judge again blocks Trump mail ballot executive order in ruling",
+          "url": "https://www.mcall.com/2026/08/28/judge-blocks-trump-mail-ballot-executive-order/",
+          "domain": "mcall.com",
+          "seendate": "2026-08-28T16:15:00Z",
+          "image": "https://www.mcall.com/wp-content/uploads/2026/08/Election_2_26_Florida__2771_711654.jpg"
+        }
+      ]
+    },
+    "title": "Judge again blocks Trump mail ballot executive order in ruling",
+    "summary": "2026-08-28 wwaytv3.com: Judge again blocks Trump mail ballot executive order in ruling that likely to be swiftly appealed\n2026-08-28 denverpost.com: Judge again blocks Trump mail ballot executive order in ruling\n2026-08-28 mcall.com: Judge again blocks Trump mail ballot executive order in ruling",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
