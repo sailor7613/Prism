@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-09-01T00:40:50.823Z · 27 legislative + 4 news (GDELT, 3d)
+// 2026-09-01T08:47:39.738Z · 27 legislative + 2 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1788223231139,
+    "ts": 1788252369543,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.662,
+      "salience": 0.661,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,11 +259,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1788223231139,
+    "ts": 1788252369543,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.653,
+      "salience": 0.652,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1788223231138,
+    "ts": 1788252369542,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.624,
+      "salience": 0.623,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -2843,11 +2843,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1788223231139,
+    "ts": 1788252369543,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.571,
+      "salience": 0.569,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3116,13 +3116,287 @@ window.PRISM_CANDIDATES = [
     "mts": 1784784262612
   },
   {
+    "cid": "cand_leg_sjres-119-196",
+    "source": "legislative",
+    "ts": 1788252369543,
+    "raw": {
+      "method": "legislative_rollcall_v1",
+      "billId": "sjres-119-196",
+      "salience": 0.551,
+      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
+      "votes": [
+        {
+          "voteId": "s-119-2-190",
+          "chamber": "senate",
+          "date": "June 24, 2026,  09:16 PM",
+          "question": "On the Motion to Proceed",
+          "result": "Motion to Proceed Rejected",
+          "margin": -0.072,
+          "totals": {
+            "yea": 45,
+            "nay": 52,
+            "present": 0,
+            "notVoting": 3
+          },
+          "party": {
+            "D": {
+              "yea": 43,
+              "nay": 0
+            },
+            "R": {
+              "yea": 0,
+              "nay": 52
+            },
+            "I": {
+              "yea": 2,
+              "nay": 0
+            }
+          },
+          "positions": {
+            "yea": [
+              "A000382",
+              "B001230",
+              "B001277",
+              "B001303",
+              "B001288",
+              "C000127",
+              "C001088",
+              "C001113",
+              "D000622",
+              "D000563",
+              "F000479",
+              "G000574",
+              "G000555",
+              "H001076",
+              "H001046",
+              "H000273",
+              "H001042",
+              "K000384",
+              "K000377",
+              "K000394",
+              "K000383",
+              "K000367",
+              "M000133",
+              "M001176",
+              "M001169",
+              "M001111",
+              "O000174",
+              "P000145",
+              "P000595",
+              "R000122",
+              "R000608",
+              "S000033",
+              "S001194",
+              "S001150",
+              "S000148",
+              "S001208",
+              "S001203",
+              "V000128",
+              "W000805",
+              "W000790",
+              "W000817",
+              "W000800",
+              "W000802",
+              "W000779"
+            ],
+            "nay": [
+              "B001299",
+              "B001261",
+              "B001243",
+              "B001236",
+              "B001319",
+              "B001305",
+              "C001047",
+              "C001075",
+              "C001035",
+              "C001056",
+              "C001095",
+              "C001096",
+              "C000880",
+              "C001098",
+              "C001114",
+              "D000618",
+              "E000295",
+              "F000463",
+              "G000359",
+              "G000386",
+              "H000601",
+              "H001089",
+              "H001061",
+              "H001104",
+              "H001079",
+              "J000293",
+              "J000312",
+              "K000393",
+              "L000575",
+              "L000577",
+              "L000571",
+              "M001198",
+              "M001243",
+              "M001244",
+              "M000934",
+              "M001242",
+              "M001153",
+              "P000603",
+              "R000618",
+              "R000584",
+              "R000605",
+              "S001227",
+              "S001217",
+              "S001184",
+              "S001232",
+              "S001198",
+              "T000250",
+              "T000476",
+              "T000278",
+              "W000437",
+              "Y000064"
+            ],
+            "present": [],
+            "notVoting": [
+              "B001267",
+              "M000355",
+              "S001181"
+            ]
+          }
+        }
+      ]
+    },
+    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
+    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
+    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Disapprove rule",
+        "neg": "Uphold rule"
+      },
+      "y": {
+        "pos": "Executive overreach",
+        "neg": "Agency discretion legitimate"
+      }
+    },
+    "prevalentAxisGuess": "x",
+    "members": [
+      "A000382",
+      "B001230",
+      "B001277",
+      "B001303",
+      "B001288",
+      "C000127",
+      "C001088",
+      "C001113",
+      "D000622",
+      "D000563",
+      "F000479",
+      "G000574",
+      "G000555",
+      "H001076",
+      "H001046",
+      "H000273",
+      "H001042",
+      "K000384",
+      "K000377",
+      "K000394",
+      "K000383",
+      "K000367",
+      "M000133",
+      "M001176",
+      "M001169",
+      "M001111",
+      "O000174",
+      "P000145",
+      "P000595",
+      "R000122",
+      "R000608",
+      "S000033",
+      "S001194",
+      "S001150",
+      "S000148",
+      "S001208",
+      "S001203",
+      "V000128",
+      "W000805",
+      "W000790",
+      "W000817",
+      "W000800",
+      "W000802",
+      "W000779",
+      "B001299",
+      "B001261",
+      "B001243",
+      "B001236",
+      "B001319",
+      "B001305",
+      "C001047",
+      "C001075",
+      "C001035",
+      "C001056",
+      "C001095",
+      "C001096",
+      "C000880",
+      "C001098",
+      "C001114",
+      "D000618",
+      "E000295",
+      "F000463",
+      "G000359",
+      "G000386",
+      "H000601",
+      "H001089",
+      "H001061",
+      "H001104",
+      "H001079",
+      "J000293",
+      "J000312",
+      "K000393",
+      "L000575",
+      "L000577",
+      "L000571",
+      "M001198",
+      "M001243",
+      "M001244",
+      "M000934",
+      "M001242",
+      "M001153",
+      "P000603",
+      "R000618",
+      "R000584",
+      "R000605",
+      "S001227",
+      "S001217",
+      "S001184",
+      "S001232",
+      "S001198",
+      "T000250",
+      "T000476",
+      "T000278",
+      "W000437",
+      "Y000064"
+    ],
+    "bills": [
+      "sjres-119-196"
+    ],
+    "fitness": {
+      "score": 0.3,
+      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:28:30.038Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "s-119-2-190",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297586
+  },
+  {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1788223231138,
+    "ts": 1788252369543,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.552,
+      "salience": 0.55,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -4518,287 +4792,13 @@ window.PRISM_CANDIDATES = [
     "mts": 1784044297586
   },
   {
-    "cid": "cand_leg_sjres-119-196",
-    "source": "legislative",
-    "ts": 1788223231139,
-    "raw": {
-      "method": "legislative_rollcall_v1",
-      "billId": "sjres-119-196",
-      "salience": 0.552,
-      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
-      "votes": [
-        {
-          "voteId": "s-119-2-190",
-          "chamber": "senate",
-          "date": "June 24, 2026,  09:16 PM",
-          "question": "On the Motion to Proceed",
-          "result": "Motion to Proceed Rejected",
-          "margin": -0.072,
-          "totals": {
-            "yea": 45,
-            "nay": 52,
-            "present": 0,
-            "notVoting": 3
-          },
-          "party": {
-            "D": {
-              "yea": 43,
-              "nay": 0
-            },
-            "R": {
-              "yea": 0,
-              "nay": 52
-            },
-            "I": {
-              "yea": 2,
-              "nay": 0
-            }
-          },
-          "positions": {
-            "yea": [
-              "A000382",
-              "B001230",
-              "B001277",
-              "B001303",
-              "B001288",
-              "C000127",
-              "C001088",
-              "C001113",
-              "D000622",
-              "D000563",
-              "F000479",
-              "G000574",
-              "G000555",
-              "H001076",
-              "H001046",
-              "H000273",
-              "H001042",
-              "K000384",
-              "K000377",
-              "K000394",
-              "K000383",
-              "K000367",
-              "M000133",
-              "M001176",
-              "M001169",
-              "M001111",
-              "O000174",
-              "P000145",
-              "P000595",
-              "R000122",
-              "R000608",
-              "S000033",
-              "S001194",
-              "S001150",
-              "S000148",
-              "S001208",
-              "S001203",
-              "V000128",
-              "W000805",
-              "W000790",
-              "W000817",
-              "W000800",
-              "W000802",
-              "W000779"
-            ],
-            "nay": [
-              "B001299",
-              "B001261",
-              "B001243",
-              "B001236",
-              "B001319",
-              "B001305",
-              "C001047",
-              "C001075",
-              "C001035",
-              "C001056",
-              "C001095",
-              "C001096",
-              "C000880",
-              "C001098",
-              "C001114",
-              "D000618",
-              "E000295",
-              "F000463",
-              "G000359",
-              "G000386",
-              "H000601",
-              "H001089",
-              "H001061",
-              "H001104",
-              "H001079",
-              "J000293",
-              "J000312",
-              "K000393",
-              "L000575",
-              "L000577",
-              "L000571",
-              "M001198",
-              "M001243",
-              "M001244",
-              "M000934",
-              "M001242",
-              "M001153",
-              "P000603",
-              "R000618",
-              "R000584",
-              "R000605",
-              "S001227",
-              "S001217",
-              "S001184",
-              "S001232",
-              "S001198",
-              "T000250",
-              "T000476",
-              "T000278",
-              "W000437",
-              "Y000064"
-            ],
-            "present": [],
-            "notVoting": [
-              "B001267",
-              "M000355",
-              "S001181"
-            ]
-          }
-        }
-      ]
-    },
-    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
-    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
-    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
-    "suggestedAxes": {
-      "x": {
-        "pos": "Disapprove rule",
-        "neg": "Uphold rule"
-      },
-      "y": {
-        "pos": "Executive overreach",
-        "neg": "Agency discretion legitimate"
-      }
-    },
-    "prevalentAxisGuess": "x",
-    "members": [
-      "A000382",
-      "B001230",
-      "B001277",
-      "B001303",
-      "B001288",
-      "C000127",
-      "C001088",
-      "C001113",
-      "D000622",
-      "D000563",
-      "F000479",
-      "G000574",
-      "G000555",
-      "H001076",
-      "H001046",
-      "H000273",
-      "H001042",
-      "K000384",
-      "K000377",
-      "K000394",
-      "K000383",
-      "K000367",
-      "M000133",
-      "M001176",
-      "M001169",
-      "M001111",
-      "O000174",
-      "P000145",
-      "P000595",
-      "R000122",
-      "R000608",
-      "S000033",
-      "S001194",
-      "S001150",
-      "S000148",
-      "S001208",
-      "S001203",
-      "V000128",
-      "W000805",
-      "W000790",
-      "W000817",
-      "W000800",
-      "W000802",
-      "W000779",
-      "B001299",
-      "B001261",
-      "B001243",
-      "B001236",
-      "B001319",
-      "B001305",
-      "C001047",
-      "C001075",
-      "C001035",
-      "C001056",
-      "C001095",
-      "C001096",
-      "C000880",
-      "C001098",
-      "C001114",
-      "D000618",
-      "E000295",
-      "F000463",
-      "G000359",
-      "G000386",
-      "H000601",
-      "H001089",
-      "H001061",
-      "H001104",
-      "H001079",
-      "J000293",
-      "J000312",
-      "K000393",
-      "L000575",
-      "L000577",
-      "L000571",
-      "M001198",
-      "M001243",
-      "M001244",
-      "M000934",
-      "M001242",
-      "M001153",
-      "P000603",
-      "R000618",
-      "R000584",
-      "R000605",
-      "S001227",
-      "S001217",
-      "S001184",
-      "S001232",
-      "S001198",
-      "T000250",
-      "T000476",
-      "T000278",
-      "W000437",
-      "Y000064"
-    ],
-    "bills": [
-      "sjres-119-196"
-    ],
-    "fitness": {
-      "score": 0.3,
-      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
-      "method": "m2_constitutive_v1",
-      "ts": "2026-07-14T04:28:30.038Z"
-    },
-    "status": "new",
-    "voteMap": {
-      "voteId": "s-119-2-190",
-      "yeaPole": "pos"
-    },
-    "mts": 1784044297586
-  },
-  {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1788223231139,
+    "ts": 1788252369543,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.538,
+      "salience": 0.536,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -5065,11 +5065,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8646",
     "source": "legislative",
-    "ts": 1788223231137,
+    "ts": 1788252369542,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8646",
-      "salience": 0.527,
+      "salience": 0.526,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8646",
       "votes": [
         {
@@ -6467,11 +6467,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1788223231139,
+    "ts": 1788252369543,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.516,
+      "salience": 0.515,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -6994,11 +6994,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1788223231138,
+    "ts": 1788252369543,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.475,
+      "salience": 0.473,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -7928,11 +7928,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1788223231139,
+    "ts": 1788252369543,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.474,
+      "salience": 0.473,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -8204,11 +8204,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2913",
     "source": "legislative",
-    "ts": 1788223231138,
+    "ts": 1788252369542,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2913",
-      "salience": 0.459,
+      "salience": 0.457,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2913",
       "votes": [
         {
@@ -9136,11 +9136,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-188",
     "source": "legislative",
-    "ts": 1788223231139,
+    "ts": 1788252369543,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-188",
-      "salience": 0.458,
+      "salience": 0.457,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/188",
       "votes": [
         {
@@ -9412,11 +9412,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1788223231139,
+    "ts": 1788252369544,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.456,
+      "salience": 0.455,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10292,11 +10292,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1788223231138,
+    "ts": 1788252369543,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
-      "salience": 0.455,
+      "salience": 0.454,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8312",
       "votes": [
         {
@@ -11225,11 +11225,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1788223231139,
+    "ts": 1788252369543,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.452,
+      "salience": 0.45,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -12101,11 +12101,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1788223231138,
+    "ts": 1788252369543,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.436,
+      "salience": 0.435,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -13034,11 +13034,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1788223231139,
+    "ts": 1788252369543,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.425,
+      "salience": 0.424,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -13426,11 +13426,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1788223231139,
+    "ts": 1788252369543,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.317,
+      "salience": 0.316,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -14829,11 +14829,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1788223231139,
+    "ts": 1788252369543,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.26,
+      "salience": 0.258,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -15722,11 +15722,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1788223231139,
+    "ts": 1788252369543,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.253,
+      "salience": 0.251,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -16637,11 +16637,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1788223231139,
+    "ts": 1788252369543,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.246,
+      "salience": 0.245,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -17525,11 +17525,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1788223231139,
+    "ts": 1788252369543,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.242,
+      "salience": 0.24,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -18446,11 +18446,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1788223231139,
+    "ts": 1788252369543,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.23,
+      "salience": 0.229,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -19364,11 +19364,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1788223231138,
+    "ts": 1788252369543,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.17,
+      "salience": 0.169,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -20263,11 +20263,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1788223231138,
+    "ts": 1788252369542,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
-      "salience": 0.06,
+      "salience": 0.058,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8466",
       "votes": [
         {
@@ -21138,11 +21138,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1788223231138,
+    "ts": 1788252369542,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
-      "salience": 0.06,
+      "salience": 0.058,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8428",
       "votes": [
         {
@@ -22022,151 +22022,101 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballroom-house-white",
     "source": "news",
-    "ts": 1788223250818,
+    "ts": 1788252459732,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.997,
+      "salience": 0.979,
       "articles": [
         {
-          "title": "Supreme Court Allows White House Ballroom Construction To Proceed",
-          "url": "https://kxic.iheart.com/content/2026-08-31-supreme-court-allows-white-house-ballroom-construction-to-proceed/",
-          "domain": "kxic.iheart.com",
-          "seendate": "2026-09-01T00:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a95e4c98b781055d9f2e8aa?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "Supreme Court lets construction on Trump $400M White House ballroom continue",
+          "url": "https://www.wptv.com/politics/the-president/supreme-court-lets-white-house-continue-construction-on-trumps-400-million-ballroom",
+          "domain": "wptv.com",
+          "seendate": "2026-09-01T05:30:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/ad/55/ad878e634e3883470babf3896de3/ap26139537500101.jpg"
         },
         {
-          "title": "Supreme Court lets White House continue construction on Trump $400 million ballroom | Ap",
-          "url": "https://www.thedailyreview.com/ap/washington/supreme-court-lets-white-house-continue-construction-on-trump-s-400-million-ballroom/article_563c420d-8ff9-5807-b8f3-229bc8ed33aa.html",
-          "domain": "thedailyreview.com",
-          "seendate": "2026-09-01T00:15:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/thedailyreview.com/content/tncms/custom/image/8ae8c126-2b81-11e7-8ccf-fba9d1099000.jpg"
+          "title": "Supreme Court signs off on White House ballroom construction continuing",
+          "url": "https://www.foxla.com/news/supreme-court-signs-off-white-house-ballroom-construction-continuing",
+          "domain": "foxla.com",
+          "seendate": "2026-09-01T05:30:00Z",
+          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/08/1280/720/gettyimages-2291873237-white-house-east-wing.jpg?ve=1&tl=1"
         },
         {
-          "title": "Supreme Court Allows White House Ballroom Construction To Proceed",
-          "url": "https://kogo.iheart.com/content/2026-08-31-supreme-court-allows-white-house-ballroom-construction-to-proceed/",
-          "domain": "kogo.iheart.com",
-          "seendate": "2026-08-31T23:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a95e4c98b781055d9f2e8aa?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "Supreme Court lets White House continue construction on Trump $400 million ballroom",
+          "url": "https://www.fox8live.com/2026/08/31/supreme-court-lets-white-house-continue-construction-trumps-400-million-ballroom/",
+          "domain": "fox8live.com",
+          "seendate": "2026-09-01T04:45:00Z",
+          "image": "https://gray-wvue-prod.gtv-cdn.com/resizer/v2/GMBTNO2ALNE35AM2RSKLIXEAGI.jpg?auth=eae99ec34563611e0eedfb76c91ed88d11296c5fe49d5b7046f3389ef5b214f0&smart=true"
         },
         {
-          "title": "Supreme Court Allows White House Ballroom Construction To Proceed | News Radio 1410 AM & 100 . 9 FM",
-          "url": "https://newsradio1410.iheart.com/content/2026-08-31-supreme-court-allows-white-house-ballroom-construction-to-proceed/",
-          "domain": "newsradio1410.iheart.com",
-          "seendate": "2026-08-31T23:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a95e4c98b781055d9f2e8aa?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "Supreme Court allows Trump to continue building White House ballroom",
+          "url": "https://www.kimt.com/news/supreme-court-allows-trump-to-continue-building-white-house-ballroom/article_2e9d3631-c714-538b-9c9f-bc7551c87bd3.html",
+          "domain": "kimt.com",
+          "seendate": "2026-09-01T04:00:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/kimt.com/content/tncms/assets/v3/editorial/4/e2/4e26d707-c4c7-5b2f-a8b8-3725fa329e36/6a962575e7953.image.jpg?crop=1763%2C926%2C0%2C124"
         },
         {
-          "title": "Supreme Court Allows White House Ballroom Construction To Proceed",
-          "url": "https://wgiram.iheart.com/content/2026-08-31-supreme-court-allows-white-house-ballroom-construction-to-proceed/",
-          "domain": "wgiram.iheart.com",
-          "seendate": "2026-08-31T23:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a95e4c98b781055d9f2e8aa?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "Supreme Court signs off on White House ballroom construction continuing",
+          "url": "https://www.fox5dc.com/news/supreme-court-signs-off-white-house-ballroom-construction-continuing",
+          "domain": "fox5dc.com",
+          "seendate": "2026-09-01T03:15:00Z",
+          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/08/1280/720/gettyimages-2291873237-white-house-east-wing.jpg?ve=1&tl=1"
         },
         {
-          "title": "Supreme Court Allows White House Ballroom Construction To Proceed",
-          "url": "https://powertalk1360.iheart.com/content/2026-08-31-supreme-court-allows-white-house-ballroom-construction-to-proceed/",
-          "domain": "powertalk1360.iheart.com",
-          "seendate": "2026-08-31T23:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a95e4c98b781055d9f2e8aa?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "Supreme Court Lets White House Ballroom Construction Continue",
+          "url": "https://www.enr.com/articles/63585-supreme-court-lets-white-house-ballroom-construction-continue",
+          "domain": "enr.com",
+          "seendate": "2026-09-01T03:15:00Z",
+          "image": "https://www.enr.com/ext/resources/2026/08/31/Ballroom_Construction_August_2026_ENRwebready.jpg?&t=1788219151"
         },
         {
-          "title": "Supreme Court Allows White House Ballroom Construction To Proceed | News Radio 920 AM & 104 . 7 FM",
-          "url": "https://newsradiori.iheart.com/content/2026-08-31-supreme-court-allows-white-house-ballroom-construction-to-proceed/",
-          "domain": "newsradiori.iheart.com",
-          "seendate": "2026-08-31T23:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a95e4c98b781055d9f2e8aa?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "Supreme Court lets White House continue construction on Trump $400 million ballroom",
+          "url": "https://cdapress.com/news/2026/aug/31/supreme-court-lets-white-house-continue-construction-on-trumps-400-million-ballroom/",
+          "domain": "cdapress.com",
+          "seendate": "2026-09-01T03:15:00Z",
+          "image": "https://hagadone.media.clients.ellingtoncms.com/img/photos/2026/08/31/AP26235740248058_t1200x1200.jpg?89991875fe57e095a7a6851653f0e1c1091b3037"
         },
         {
-          "title": "Supreme Court Allows White House Ballroom Construction To Proceed",
-          "url": "https://wbex.iheart.com/content/2026-08-31-supreme-court-allows-white-house-ballroom-construction-to-proceed/",
-          "domain": "wbex.iheart.com",
-          "seendate": "2026-08-31T23:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a95e4c98b781055d9f2e8aa?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "Trump Scores Supreme Court Win Over $400M White House Ballroom",
+          "url": "https://radaronline.com/p/trump-supreme-court-win-white-house-ballroom-construction-fortress/",
+          "domain": "radaronline.com",
+          "seendate": "2026-09-01T03:00:00Z",
+          "image": "https://media.radaronline.com/brand-img/cGet0XeoG/1200x628/trumpballroom-1788217966769.jpg"
         },
         {
-          "title": "Supreme Court Allows White House Ballroom Construction To Proceed",
-          "url": "https://veropatriot.iheart.com/content/2026-08-31-supreme-court-allows-white-house-ballroom-construction-to-proceed/",
-          "domain": "veropatriot.iheart.com",
-          "seendate": "2026-08-31T23:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6a95e4c98b781055d9f2e8aa?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "Read the new Supreme Court 5 - 4 ruling on White House ballroom construction",
+          "url": "https://jcpost.com/posts/a2bbf878-c154-41c1-8215-1ed673bb721e",
+          "domain": "jcpost.com",
+          "seendate": "2026-09-01T03:00:00Z",
+          "image": "https://media.eaglewebservices.com/public/2026/4/1775154254779.png"
         },
         {
-          "title": "Trump White House Ballroom Scores Major Supreme Court Victory",
-          "url": "https://dailycaller.com/2026/08/31/supreme-court-order-donald-trump-white-house-east-wing-modernization-ballroom-construction/",
-          "domain": "dailycaller.com",
-          "seendate": "2026-08-31T23:30:00Z",
-          "image": "https://images.dailycaller.com/image/width=1280,height=549,fit=cover,format=webp,f=auto/https://cdn01.dailycaller.com/wp-content/uploads/2026/08/P20260819JB0449.jpg"
+          "title": "Supreme Court lets White House continue construction on Trump $400 million ballroom - WSVN 7News | Miami News , Weather , Sports",
+          "url": "https://wsvn.com/news/us-world/supreme-court-lets-white-house-continue-construction-on-trumps-400-million-ballroom/",
+          "domain": "wsvn.com",
+          "seendate": "2026-09-01T02:45:00Z",
+          "image": null
         },
         {
-          "title": "SCOTUS lets White House continue construction on ballroom",
-          "url": "https://www.wmur.com/article/supreme-court-continue-construction-ballroom/73572670",
-          "domain": "wmur.com",
-          "seendate": "2026-08-31T23:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/e2f704b5-6f4d-4e4f-b810-39b71b4036a8.jpg?crop=1xw%3A0.8430913348946136xh%3Bcenter%2Ctop"
+          "title": "White House construction on $400m ballroom can go on , says US Supreme Court",
+          "url": "https://www.aljazeera.com/news/2026/8/31/white-house-construction-on-400m-ballroom-can-go-on-says-us-supreme-court",
+          "domain": "aljazeera.com",
+          "seendate": "2026-09-01T02:45:00Z",
+          "image": "https://www.aljazeera.com/wp-content/uploads/2026/08/reuters_6a95f6ce-1788212942.jpg"
         },
         {
-          "title": "Supreme Court rules ballroom construction can continue",
-          "url": "https://rollcall.com/2026/08/31/supreme-court-rules-ballroom-construction-can-continue/",
-          "domain": "rollcall.com",
-          "seendate": "2026-08-31T23:30:00Z",
-          "image": "https://rollcall.com/app/uploads/2026/08/sotu_TW_039_022426.jpg"
+          "title": "Supreme Court allows construction of White House ballroom",
+          "url": "https://homenewshere.com/national/news/article_be01c1c7-5517-5428-ae65-b0f9aded33ed.html",
+          "domain": "homenewshere.com",
+          "seendate": "2026-09-01T02:00:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/homenewshere.com/content/tncms/custom/image/0e896112-c6fa-11e6-ba62-e7651b43ea5e.jpg"
         }
       ]
     },
-    "title": "Supreme Court lets White House continue construction on Trump $400 million ballroom",
-    "summary": "2026-09-01 kxic.iheart.com: Supreme Court Allows White House Ballroom Construction To Proceed\n2026-09-01 thedailyreview.com: Supreme Court lets White House continue construction on Trump $400 million ballroom | Ap\n2026-08-31 kogo.iheart.com: Supreme Court Allows White House Ballroom Construction To Proceed\n2026-08-31 newsradio1410.iheart.com: Supreme Court Allows White House Ballroom Construction To Proceed | News Radio 1410 AM & 100 . 9 FM\n2026-08-31 wgiram.iheart.com: Supreme Court Allows White House Ballroom Construction To Proceed\n2026-08-31 powertalk1360.iheart.com: Supreme Court Allows White House Ballroom Construction To Proceed",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_allows-ballroom-court",
-    "source": "news",
-    "ts": 1788223250818,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.667,
-      "articles": [
-        {
-          "title": "Supreme Court allows White House Ballroom project to move forward during lawsuits",
-          "url": "https://upnorthlive.com/news/nation-world/white-house-ballroom-east-wing-project-lower-court-washington-dc-donald-trump-historic-preservation-national-security",
-          "domain": "upnorthlive.com",
-          "seendate": "2026-09-01T00:15:00Z",
-          "image": "https://upnorthlive.com/resources/media2/16x9/8192/1320/0x428/90/2778ecc7-7dfa-4009-b05d-04d6dac8e8f9-AP26217654784670.jpg"
-        },
-        {
-          "title": "Supreme Court allows White House Ballroom project to move forward during lawsuits",
-          "url": "https://wsbt.com/news/nation-world/white-house-ballroom-east-wing-project-lower-court-washington-dc-donald-trump-historic-preservation-national-security",
-          "domain": "wsbt.com",
-          "seendate": "2026-08-31T23:30:00Z",
-          "image": "https://wsbt.com/resources/media2/16x9/8192/1320/0x428/90/2778ecc7-7dfa-4009-b05d-04d6dac8e8f9-AP26217654784670.jpg"
-        },
-        {
-          "title": "Supreme Court allows White House Ballroom project to move forward during lawsuits",
-          "url": "https://wset.com/news/nation-world/white-house-ballroom-east-wing-project-lower-court-washington-dc-donald-trump-historic-preservation-national-security",
-          "domain": "wset.com",
-          "seendate": "2026-08-31T22:30:00Z",
-          "image": "https://wset.com/resources/media2/16x9/8192/1320/0x428/90/2778ecc7-7dfa-4009-b05d-04d6dac8e8f9-AP26217654784670.jpg"
-        },
-        {
-          "title": "Supreme Court allows White House Ballroom project to move forward during lawsuits",
-          "url": "https://wcyb.com/news/nation-world/white-house-ballroom-east-wing-project-lower-court-washington-dc-donald-trump-historic-preservation-national-security",
-          "domain": "wcyb.com",
-          "seendate": "2026-08-31T22:30:00Z",
-          "image": "https://wcyb.com/resources/media2/16x9/8192/1320/0x428/90/2778ecc7-7dfa-4009-b05d-04d6dac8e8f9-AP26217654784670.jpg"
-        }
-      ]
-    },
-    "title": "Supreme Court allows White House Ballroom project to move forward during lawsuits",
-    "summary": "2026-09-01 upnorthlive.com: Supreme Court allows White House Ballroom project to move forward during lawsuits\n2026-08-31 wsbt.com: Supreme Court allows White House Ballroom project to move forward during lawsuits\n2026-08-31 wset.com: Supreme Court allows White House Ballroom project to move forward during lawsuits\n2026-08-31 wcyb.com: Supreme Court allows White House Ballroom project to move forward during lawsuits",
+    "title": "Supreme Court Allows White House Ballroom Construction To Proceed",
+    "summary": "2026-09-01 wptv.com: Supreme Court lets construction on Trump $400M White House ballroom continue\n2026-09-01 foxla.com: Supreme Court signs off on White House ballroom construction continuing\n2026-09-01 fox8live.com: Supreme Court lets White House continue construction on Trump $400 million ballroom\n2026-09-01 kimt.com: Supreme Court allows Trump to continue building White House ballroom\n2026-09-01 fox5dc.com: Supreme Court signs off on White House ballroom construction continuing\n2026-09-01 enr.com: Supreme Court Lets White House Ballroom Construction Continue",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -22178,12 +22128,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballots-battle-developments",
     "source": "news",
-    "ts": 1788223250816,
+    "ts": 1788252459732,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.631,
+      "salience": 0.58,
       "articles": [
         {
           "title": "Legal battle over mailed ballots after a series of developments",
@@ -22238,105 +22188,6 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Legal battle over mailed ballots after a series of developments",
     "summary": "2026-08-30 4029tv.com: Legal battle over mailed ballots after a series of developments\n2026-08-30 wjcl.com: Legal battle over mailed ballots after a series of developments\n2026-08-30 wpbf.com: Legal battle over mailed ballots after a series of developments\n2026-08-30 wlwt.com: Legal battle over mailed ballots after a series of developments\n2026-08-30 wcvb.com: Legal battle over mailed ballots after a series of developments\n2026-08-30 wxii12.com: Legal battle over mailed ballots after a series of developments",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_appeals-blocking-latest",
-    "source": "news",
-    "ts": 1788223250818,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.585,
-      "articles": [
-        {
-          "title": "Trump admin appeals latest ruling blocking his mail voting executive order",
-          "url": "https://www.kuer.org/politics-government/2026-08-28/trump-admin-appeals-latest-ruling-blocking-his-mail-voting-executive-order",
-          "domain": "kuer.org",
-          "seendate": "2026-08-29T06:15:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/35/28/d8bcbce745ec8f7a6ad752310aac/ap26240610439280.jpg"
-        },
-        {
-          "title": "Trump administration appeals latest ruling blocking his mail voting order from taking effect",
-          "url": "https://www.wfmj.com/news/political/trump-administration-appeals-latest-ruling-blocking-his-mail-voting-order-from-taking-effect/article_d8ef2a84-da60-5cb4-bd48-0923f19d103f.html",
-          "domain": "wfmj.com",
-          "seendate": "2026-08-29T04:45:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/wfmj.com/content/tncms/assets/v3/editorial/2/2c/22c3530a-545c-5bd7-a74f-c7d51e46671e/6a920f11d42b2.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "Trump admin . appeals latest ruling blocking mail voting order – NBC 7 San Diego",
-          "url": "https://www.nbcsandiego.com/news/politics/trump-administration-appeals-mail-voting-order-block-ruling/4066922/",
-          "domain": "nbcsandiego.com",
-          "seendate": "2026-08-29T04:30:00Z",
-          "image": "https://media.nbcsandiego.com/2026/08/AP26230766521713.jpg?quality=85&strip=all"
-        },
-        {
-          "title": "Trump admin . appeals latest ruling blocking mail voting order – NBC4 Washington",
-          "url": "https://www.nbcwashington.com/news/politics/trump-administration-appeals-mail-voting-order-block-ruling/4147796/",
-          "domain": "nbcwashington.com",
-          "seendate": "2026-08-29T03:30:00Z",
-          "image": "https://media.nbcwashington.com/2026/08/AP26230766521713.jpg?quality=85&strip=all"
-        },
-        {
-          "title": "Trump administration appeals latest ruling blocking his mail voting order from taking effect",
-          "url": "https://santamariatimes.com/ap/washington/trump-administration-appeals-latest-ruling-blocking-his-mail-voting-order-from-taking-effect/article_83303c55-ffff-4358-9408-4a3b76082e6e.html",
-          "domain": "santamariatimes.com",
-          "seendate": "2026-08-29T03:30:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/santamariatimes.com/content/tncms/assets/v3/editorial/6/ab/6abe5d46-b620-41f1-8a7e-449f68339cda/6a9211fb5e88f.image.jpg?crop=1024%2C538%2C0%2C72"
-        },
-        {
-          "title": "Trump administration appeals latest ruling blocking his mail voting order from taking effect",
-          "url": "https://www.union-bulletin.com/news/national/trump-administration-appeals-latest-ruling-blocking-his-mail-voting-order-from-taking-effect/article_a7c27c45-4019-56b0-96ef-a3d5d1991ec6.html",
-          "domain": "union-bulletin.com",
-          "seendate": "2026-08-29T03:15:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/union-bulletin.com/content/tncms/assets/v3/editorial/2/a2/2a2d0d16-2313-5d5b-83a5-ca77fff82b7c/6a8d9cfb9a7d4.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "Trump admin . appeals latest ruling blocking mail voting order – NBC Chicago",
-          "url": "https://www.nbcchicago.com/news/politics/trump-administration-appeals-mail-voting-order-block-ruling/3982021/",
-          "domain": "nbcchicago.com",
-          "seendate": "2026-08-29T02:30:00Z",
-          "image": "https://media.nbcchicago.com/2026/08/AP26230766521713.jpg?quality=85&strip=all"
-        },
-        {
-          "title": "Trump admin . appeals latest ruling blocking mail voting order – NBC Los Angeles",
-          "url": "https://www.nbclosangeles.com/news/politics/trump-administration-appeals-mail-voting-order-block-ruling/3935124/",
-          "domain": "nbclosangeles.com",
-          "seendate": "2026-08-29T02:15:00Z",
-          "image": "https://media.nbclosangeles.com/2026/08/AP26230766521713.jpg?quality=85&strip=all"
-        },
-        {
-          "title": "Trump administration appeals latest ruling blocking his mail voting order from taking effect",
-          "url": "http://www.reflector.com/news/national/trump-administration-appeals-latest-ruling-blocking-his-mail-voting-order-from-taking-effect/article_6a219db2-db55-5248-bf73-7c1c6230bd4a.html",
-          "domain": "reflector.com",
-          "seendate": "2026-08-29T02:15:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/reflector.com/content/tncms/assets/v3/editorial/3/27/32771f6d-278f-5b4d-9734-090785b23d72/6a8d9d61c260b.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "Trump administration appeals latest ruling blocking his mail voting order from taking effect",
-          "url": "https://www.whec.com/ap-top-news/ap-top-news-political/trump-administration-appeals-latest-ruling-blocking-his-mail-voting-order-from-taking-effect/",
-          "domain": "whec.com",
-          "seendate": "2026-08-29T02:00:00Z",
-          "image": "https://www.whec.com/wp-content/uploads/apimg/2026/08/Election_2_26_Florida_21713.jpg"
-        },
-        {
-          "title": "Trump admin . appeals latest ruling blocking mail voting order – NBC Bay Area",
-          "url": "https://www.nbcbayarea.com/news/politics/trump-administration-appeals-mail-voting-order-block-ruling/4134779/",
-          "domain": "nbcbayarea.com",
-          "seendate": "2026-08-29T01:45:00Z",
-          "image": "https://media.nbcbayarea.com/2026/08/AP26230766521713.jpg?quality=85&strip=all"
-        }
-      ]
-    },
-    "title": "Trump administration appeals latest ruling blocking his mail voting order from taking effect",
-    "summary": "2026-08-29 kuer.org: Trump admin appeals latest ruling blocking his mail voting executive order\n2026-08-29 wfmj.com: Trump administration appeals latest ruling blocking his mail voting order from taking effect\n2026-08-29 nbcsandiego.com: Trump admin . appeals latest ruling blocking mail voting order – NBC 7 San Diego\n2026-08-29 nbcwashington.com: Trump admin . appeals latest ruling blocking mail voting order – NBC4 Washington\n2026-08-29 santamariatimes.com: Trump administration appeals latest ruling blocking his mail voting order from taking effect\n2026-08-29 union-bulletin.com: Trump administration appeals latest ruling blocking his mail voting order from taking effect",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
