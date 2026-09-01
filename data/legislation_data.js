@@ -5609,7 +5609,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Prison Staff Safety Enhancement Act",
     "meta": "S. 307 · Passed Senate · Criminal Justice",
-    "id": "s-119-307"
+    "id": "s-119-307",
+    "rc": 1,
+    "mm": 0.958
   },
   {
     "name": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the United States Fish and Wildlife Service relating to \"Endangered and Threatened Wildlife and Plants; Endangered Species Status for the San Francisco Bay-Delta Distinct Population Segment of the Longfin Smelt\".",
@@ -6000,7 +6002,9 @@ const LEGISLATION_DATA = [
   {
     "name": "LACA",
     "meta": "S. 32 · Passed Senate · Law",
-    "id": "s-119-32"
+    "id": "s-119-32",
+    "rc": 1,
+    "mm": 0.948
   },
   {
     "name": "Chinese Currency Accountability Act of 2025",
