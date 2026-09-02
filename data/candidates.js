@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-09-02T11:29:51.812Z · 24 legislative + 7 news (GDELT, 3d)
+// 2026-09-02T16:41:51.850Z · 24 legislative + 6 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1788348567944,
+    "ts": 1788367289220,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.656,
+      "salience": 0.655,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -259,11 +259,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1788348567944,
+    "ts": 1788367289220,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.647,
+      "salience": 0.646,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1788348567943,
+    "ts": 1788367289219,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.618,
+      "salience": 0.617,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -1877,146 +1877,11 @@ window.PRISM_CANDIDATES = [
               "G000574"
             ]
           }
-        },
-        {
-          "voteId": "s-119-2-141",
-          "chamber": "senate",
-          "date": "June 4, 2026,  03:51 PM",
-          "question": "On the Motion",
-          "result": "Motion Rejected",
-          "margin": -0.031,
-          "totals": {
-            "yea": 47,
-            "nay": 50,
-            "present": 0,
-            "notVoting": 3
-          },
-          "party": {
-            "D": {
-              "yea": 44,
-              "nay": 0
-            },
-            "R": {
-              "yea": 1,
-              "nay": 50
-            },
-            "I": {
-              "yea": 2,
-              "nay": 0
-            }
-          },
-          "positions": {
-            "yea": [
-              "A000382",
-              "B001230",
-              "B001277",
-              "B001303",
-              "B001288",
-              "C000127",
-              "C001035",
-              "C001088",
-              "C001113",
-              "D000622",
-              "D000563",
-              "F000479",
-              "G000574",
-              "G000555",
-              "H001076",
-              "H001046",
-              "H000273",
-              "H001042",
-              "K000384",
-              "K000377",
-              "K000394",
-              "K000383",
-              "K000367",
-              "M000133",
-              "M001176",
-              "M001169",
-              "M001111",
-              "O000174",
-              "P000145",
-              "P000595",
-              "R000122",
-              "R000608",
-              "S000033",
-              "S001194",
-              "S001150",
-              "S000148",
-              "S001181",
-              "S001208",
-              "S001203",
-              "V000128",
-              "W000805",
-              "W000790",
-              "W000817",
-              "W000800",
-              "W000802",
-              "W000779"
-            ],
-            "nay": [
-              "B001299",
-              "B001261",
-              "B001243",
-              "B001236",
-              "B001319",
-              "B001305",
-              "C001047",
-              "C001075",
-              "C001056",
-              "C001095",
-              "C001096",
-              "C000880",
-              "C001098",
-              "C001114",
-              "D000618",
-              "F000463",
-              "G000359",
-              "G000386",
-              "H000601",
-              "H001089",
-              "H001061",
-              "H001104",
-              "H001079",
-              "J000293",
-              "J000312",
-              "K000393",
-              "L000575",
-              "L000577",
-              "L000571",
-              "M001198",
-              "M000355",
-              "M001243",
-              "M001244",
-              "M000934",
-              "M001242",
-              "M001153",
-              "P000603",
-              "R000618",
-              "R000584",
-              "R000605",
-              "S001227",
-              "S001217",
-              "S001184",
-              "S001232",
-              "S001198",
-              "T000250",
-              "T000278",
-              "W000437",
-              "Y000064"
-            ],
-            "present": [],
-            "notVoting": [
-              "B001267",
-              "E000295",
-              "T000476"
-            ]
-          }
         }
       ]
     },
-    "title": "Secure America Act (6 roll calls)",
-    "summary": "2026-06-09 house: On Motion to Commit — Failed (211-215; D 211-0 · R 0-214 · I 0-1)\n2026-06-09 house: On Passage — Passed (214-212; D 0-211 · R 214-0 · I 0-1)\n2026-06-05 senate: On the Motion — Motion Rejected (48-51; D 44-0 · R 2-51 · I 2-0)\n2026-06-05 senate: On Passage of the Bill — Bill Passed (52-47; D 0-44 · R 52-1 · I 0-2)\n2026-06-04 senate: On the Motion — Motion Rejected (46-52; D 43-0 · R 1-52 · I 2-0)\n2026-06-04 senate: On the Motion — Motion Rejected (47-50; D 44-0 · R 1-50 · I 2-0)",
+    "title": "Secure America Act (5 roll calls)",
+    "summary": "2026-06-09 house: On Motion to Commit — Failed (211-215; D 211-0 · R 0-214 · I 0-1)\n2026-06-09 house: On Passage — Passed (214-212; D 0-211 · R 214-0 · I 0-1)\n2026-06-05 senate: On the Motion — Motion Rejected (48-51; D 44-0 · R 2-51 · I 2-0)\n2026-06-05 senate: On Passage of the Bill — Bill Passed (52-47; D 0-44 · R 52-1 · I 0-2)\n2026-06-04 senate: On the Motion — Motion Rejected (46-52; D 43-0 · R 1-52 · I 2-0)",
     "framingDraft": "Secure America Act splits almost perfectly along party lines on passage, but the small, consistent Republican defections (1-3 senators across every motion) suggest a civil-liberties-vs-security-enforcement tension distinct from the partisan headcount. This latent axis pits expansive federal enforcement/surveillance authority against constitutional/privacy limits on state power.",
     "suggestedAxes": {
       "x": {
@@ -2573,11 +2438,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1788348567944,
+    "ts": 1788367289220,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.609,
+      "salience": 0.608,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -3852,7 +3717,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1788348567944,
+    "ts": 1788367289220,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
@@ -4125,283 +3990,9 @@ window.PRISM_CANDIDATES = [
     "mts": 1784784262612
   },
   {
-    "cid": "cand_leg_sjres-119-196",
-    "source": "legislative",
-    "ts": 1788348567944,
-    "raw": {
-      "method": "legislative_rollcall_v1",
-      "billId": "sjres-119-196",
-      "salience": 0.546,
-      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
-      "votes": [
-        {
-          "voteId": "s-119-2-190",
-          "chamber": "senate",
-          "date": "June 24, 2026,  09:16 PM",
-          "question": "On the Motion to Proceed",
-          "result": "Motion to Proceed Rejected",
-          "margin": -0.072,
-          "totals": {
-            "yea": 45,
-            "nay": 52,
-            "present": 0,
-            "notVoting": 3
-          },
-          "party": {
-            "D": {
-              "yea": 43,
-              "nay": 0
-            },
-            "R": {
-              "yea": 0,
-              "nay": 52
-            },
-            "I": {
-              "yea": 2,
-              "nay": 0
-            }
-          },
-          "positions": {
-            "yea": [
-              "A000382",
-              "B001230",
-              "B001277",
-              "B001303",
-              "B001288",
-              "C000127",
-              "C001088",
-              "C001113",
-              "D000622",
-              "D000563",
-              "F000479",
-              "G000574",
-              "G000555",
-              "H001076",
-              "H001046",
-              "H000273",
-              "H001042",
-              "K000384",
-              "K000377",
-              "K000394",
-              "K000383",
-              "K000367",
-              "M000133",
-              "M001176",
-              "M001169",
-              "M001111",
-              "O000174",
-              "P000145",
-              "P000595",
-              "R000122",
-              "R000608",
-              "S000033",
-              "S001194",
-              "S001150",
-              "S000148",
-              "S001208",
-              "S001203",
-              "V000128",
-              "W000805",
-              "W000790",
-              "W000817",
-              "W000800",
-              "W000802",
-              "W000779"
-            ],
-            "nay": [
-              "B001299",
-              "B001261",
-              "B001243",
-              "B001236",
-              "B001319",
-              "B001305",
-              "C001047",
-              "C001075",
-              "C001035",
-              "C001056",
-              "C001095",
-              "C001096",
-              "C000880",
-              "C001098",
-              "C001114",
-              "D000618",
-              "E000295",
-              "F000463",
-              "G000359",
-              "G000386",
-              "H000601",
-              "H001089",
-              "H001061",
-              "H001104",
-              "H001079",
-              "J000293",
-              "J000312",
-              "K000393",
-              "L000575",
-              "L000577",
-              "L000571",
-              "M001198",
-              "M001243",
-              "M001244",
-              "M000934",
-              "M001242",
-              "M001153",
-              "P000603",
-              "R000618",
-              "R000584",
-              "R000605",
-              "S001227",
-              "S001217",
-              "S001184",
-              "S001232",
-              "S001198",
-              "T000250",
-              "T000476",
-              "T000278",
-              "W000437",
-              "Y000064"
-            ],
-            "present": [],
-            "notVoting": [
-              "B001267",
-              "M000355",
-              "S001181"
-            ]
-          }
-        }
-      ]
-    },
-    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
-    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
-    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
-    "suggestedAxes": {
-      "x": {
-        "pos": "Disapprove rule",
-        "neg": "Uphold rule"
-      },
-      "y": {
-        "pos": "Executive overreach",
-        "neg": "Agency discretion legitimate"
-      }
-    },
-    "prevalentAxisGuess": "x",
-    "members": [
-      "A000382",
-      "B001230",
-      "B001277",
-      "B001303",
-      "B001288",
-      "C000127",
-      "C001088",
-      "C001113",
-      "D000622",
-      "D000563",
-      "F000479",
-      "G000574",
-      "G000555",
-      "H001076",
-      "H001046",
-      "H000273",
-      "H001042",
-      "K000384",
-      "K000377",
-      "K000394",
-      "K000383",
-      "K000367",
-      "M000133",
-      "M001176",
-      "M001169",
-      "M001111",
-      "O000174",
-      "P000145",
-      "P000595",
-      "R000122",
-      "R000608",
-      "S000033",
-      "S001194",
-      "S001150",
-      "S000148",
-      "S001208",
-      "S001203",
-      "V000128",
-      "W000805",
-      "W000790",
-      "W000817",
-      "W000800",
-      "W000802",
-      "W000779",
-      "B001299",
-      "B001261",
-      "B001243",
-      "B001236",
-      "B001319",
-      "B001305",
-      "C001047",
-      "C001075",
-      "C001035",
-      "C001056",
-      "C001095",
-      "C001096",
-      "C000880",
-      "C001098",
-      "C001114",
-      "D000618",
-      "E000295",
-      "F000463",
-      "G000359",
-      "G000386",
-      "H000601",
-      "H001089",
-      "H001061",
-      "H001104",
-      "H001079",
-      "J000293",
-      "J000312",
-      "K000393",
-      "L000575",
-      "L000577",
-      "L000571",
-      "M001198",
-      "M001243",
-      "M001244",
-      "M000934",
-      "M001242",
-      "M001153",
-      "P000603",
-      "R000618",
-      "R000584",
-      "R000605",
-      "S001227",
-      "S001217",
-      "S001184",
-      "S001232",
-      "S001198",
-      "T000250",
-      "T000476",
-      "T000278",
-      "W000437",
-      "Y000064"
-    ],
-    "bills": [
-      "sjres-119-196"
-    ],
-    "fitness": {
-      "score": 0.3,
-      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
-      "method": "m2_constitutive_v1",
-      "ts": "2026-07-14T04:28:30.038Z"
-    },
-    "status": "new",
-    "voteMap": {
-      "voteId": "s-119-2-190",
-      "yeaPole": "pos"
-    },
-    "mts": 1784044297586
-  },
-  {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1788348567944,
+    "ts": 1788367289219,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
@@ -5801,13 +5392,287 @@ window.PRISM_CANDIDATES = [
     "mts": 1784044297586
   },
   {
+    "cid": "cand_leg_sjres-119-196",
+    "source": "legislative",
+    "ts": 1788367289220,
+    "raw": {
+      "method": "legislative_rollcall_v1",
+      "billId": "sjres-119-196",
+      "salience": 0.545,
+      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
+      "votes": [
+        {
+          "voteId": "s-119-2-190",
+          "chamber": "senate",
+          "date": "June 24, 2026,  09:16 PM",
+          "question": "On the Motion to Proceed",
+          "result": "Motion to Proceed Rejected",
+          "margin": -0.072,
+          "totals": {
+            "yea": 45,
+            "nay": 52,
+            "present": 0,
+            "notVoting": 3
+          },
+          "party": {
+            "D": {
+              "yea": 43,
+              "nay": 0
+            },
+            "R": {
+              "yea": 0,
+              "nay": 52
+            },
+            "I": {
+              "yea": 2,
+              "nay": 0
+            }
+          },
+          "positions": {
+            "yea": [
+              "A000382",
+              "B001230",
+              "B001277",
+              "B001303",
+              "B001288",
+              "C000127",
+              "C001088",
+              "C001113",
+              "D000622",
+              "D000563",
+              "F000479",
+              "G000574",
+              "G000555",
+              "H001076",
+              "H001046",
+              "H000273",
+              "H001042",
+              "K000384",
+              "K000377",
+              "K000394",
+              "K000383",
+              "K000367",
+              "M000133",
+              "M001176",
+              "M001169",
+              "M001111",
+              "O000174",
+              "P000145",
+              "P000595",
+              "R000122",
+              "R000608",
+              "S000033",
+              "S001194",
+              "S001150",
+              "S000148",
+              "S001208",
+              "S001203",
+              "V000128",
+              "W000805",
+              "W000790",
+              "W000817",
+              "W000800",
+              "W000802",
+              "W000779"
+            ],
+            "nay": [
+              "B001299",
+              "B001261",
+              "B001243",
+              "B001236",
+              "B001319",
+              "B001305",
+              "C001047",
+              "C001075",
+              "C001035",
+              "C001056",
+              "C001095",
+              "C001096",
+              "C000880",
+              "C001098",
+              "C001114",
+              "D000618",
+              "E000295",
+              "F000463",
+              "G000359",
+              "G000386",
+              "H000601",
+              "H001089",
+              "H001061",
+              "H001104",
+              "H001079",
+              "J000293",
+              "J000312",
+              "K000393",
+              "L000575",
+              "L000577",
+              "L000571",
+              "M001198",
+              "M001243",
+              "M001244",
+              "M000934",
+              "M001242",
+              "M001153",
+              "P000603",
+              "R000618",
+              "R000584",
+              "R000605",
+              "S001227",
+              "S001217",
+              "S001184",
+              "S001232",
+              "S001198",
+              "T000250",
+              "T000476",
+              "T000278",
+              "W000437",
+              "Y000064"
+            ],
+            "present": [],
+            "notVoting": [
+              "B001267",
+              "M000355",
+              "S001181"
+            ]
+          }
+        }
+      ]
+    },
+    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
+    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
+    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Disapprove rule",
+        "neg": "Uphold rule"
+      },
+      "y": {
+        "pos": "Executive overreach",
+        "neg": "Agency discretion legitimate"
+      }
+    },
+    "prevalentAxisGuess": "x",
+    "members": [
+      "A000382",
+      "B001230",
+      "B001277",
+      "B001303",
+      "B001288",
+      "C000127",
+      "C001088",
+      "C001113",
+      "D000622",
+      "D000563",
+      "F000479",
+      "G000574",
+      "G000555",
+      "H001076",
+      "H001046",
+      "H000273",
+      "H001042",
+      "K000384",
+      "K000377",
+      "K000394",
+      "K000383",
+      "K000367",
+      "M000133",
+      "M001176",
+      "M001169",
+      "M001111",
+      "O000174",
+      "P000145",
+      "P000595",
+      "R000122",
+      "R000608",
+      "S000033",
+      "S001194",
+      "S001150",
+      "S000148",
+      "S001208",
+      "S001203",
+      "V000128",
+      "W000805",
+      "W000790",
+      "W000817",
+      "W000800",
+      "W000802",
+      "W000779",
+      "B001299",
+      "B001261",
+      "B001243",
+      "B001236",
+      "B001319",
+      "B001305",
+      "C001047",
+      "C001075",
+      "C001035",
+      "C001056",
+      "C001095",
+      "C001096",
+      "C000880",
+      "C001098",
+      "C001114",
+      "D000618",
+      "E000295",
+      "F000463",
+      "G000359",
+      "G000386",
+      "H000601",
+      "H001089",
+      "H001061",
+      "H001104",
+      "H001079",
+      "J000293",
+      "J000312",
+      "K000393",
+      "L000575",
+      "L000577",
+      "L000571",
+      "M001198",
+      "M001243",
+      "M001244",
+      "M000934",
+      "M001242",
+      "M001153",
+      "P000603",
+      "R000618",
+      "R000584",
+      "R000605",
+      "S001227",
+      "S001217",
+      "S001184",
+      "S001232",
+      "S001198",
+      "T000250",
+      "T000476",
+      "T000278",
+      "W000437",
+      "Y000064"
+    ],
+    "bills": [
+      "sjres-119-196"
+    ],
+    "fitness": {
+      "score": 0.3,
+      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:28:30.038Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "s-119-2-190",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297586
+  },
+  {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1788348567944,
+    "ts": 1788367289220,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.531,
+      "salience": 0.53,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -6074,11 +5939,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1788348567944,
+    "ts": 1788367289220,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.51,
+      "salience": 0.509,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -6601,11 +6466,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1788348567943,
+    "ts": 1788367289219,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.468,
+      "salience": 0.467,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -7535,11 +7400,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1788348567944,
+    "ts": 1788367289220,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
-      "salience": 0.468,
+      "salience": 0.467,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/1318",
       "votes": [
         {
@@ -7811,11 +7676,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1788348567944,
+    "ts": 1788367289220,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.45,
+      "salience": 0.449,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -8691,11 +8556,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1788348567944,
+    "ts": 1788367289219,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
-      "salience": 0.449,
+      "salience": 0.448,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8312",
       "votes": [
         {
@@ -9624,11 +9489,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1788348567944,
+    "ts": 1788367289220,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.445,
+      "salience": 0.444,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -10500,11 +10365,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1788348567943,
+    "ts": 1788367289219,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.43,
+      "salience": 0.429,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -11433,11 +11298,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1788348567944,
+    "ts": 1788367289219,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.311,
+      "salience": 0.31,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -12836,11 +12701,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1788348567944,
+    "ts": 1788367289220,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.253,
+      "salience": 0.252,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -13729,11 +13594,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1788348567944,
+    "ts": 1788367289220,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.247,
+      "salience": 0.246,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -14644,11 +14509,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1788348567944,
+    "ts": 1788367289220,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.24,
+      "salience": 0.239,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -15532,11 +15397,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1788348567944,
+    "ts": 1788367289220,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.235,
+      "salience": 0.234,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -16453,11 +16318,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1788348567944,
+    "ts": 1788367289219,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.224,
+      "salience": 0.223,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -17371,11 +17236,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1788348567944,
+    "ts": 1788367289219,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.164,
+      "salience": 0.163,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -18270,11 +18135,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1788348567943,
+    "ts": 1788367289218,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
-      "salience": 0.053,
+      "salience": 0.052,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8466",
       "votes": [
         {
@@ -19145,11 +19010,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1788348567943,
+    "ts": 1788367289219,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
-      "salience": 0.053,
+      "salience": 0.052,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8428",
       "votes": [
         {
@@ -20029,12 +19894,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballroom-beyond-could",
     "source": "news",
-    "ts": 1788348591807,
+    "ts": 1788367311844,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.92,
+      "salience": 0.888,
       "articles": [
         {
           "title": "Why the Supreme Court ballroom ruling could matter beyond the ballroom",
@@ -20135,12 +20000,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballroom-court-supreme",
     "source": "news",
-    "ts": 1788348591807,
+    "ts": 1788367311844,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.909,
+      "salience": 0.877,
       "articles": [
         {
           "title": "Supreme Court Lets Trump White House Ballroom Proceed in New Ruling",
@@ -20241,12 +20106,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_army-dan-down",
     "source": "news",
-    "ts": 1788348591807,
+    "ts": 1788367311844,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.603,
+      "salience": 0.571,
       "articles": [
         {
           "title": "The Latest : Army Secretary Dan Driscoll is stepping down , White House says",
@@ -20298,12 +20163,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ahead-averts-congress",
     "source": "news",
-    "ts": 1788348591808,
+    "ts": 1788367311844,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.587,
+      "salience": 0.555,
       "articles": [
         {
           "title": "Congress averts a government shutdown ahead of the midterms",
@@ -20348,12 +20213,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballroom-build-can",
     "source": "news",
-    "ts": 1788348591808,
+    "ts": 1788367311844,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.545,
+      "salience": 0.513,
       "articles": [
         {
           "title": "White House ballroom cleared for now , but question remains : Can president legally use donations to build it ? ",
@@ -20398,12 +20263,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_editorial-effect-election",
     "source": "news",
-    "ts": 1788348591808,
+    "ts": 1788367311844,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.465,
+      "salience": 0.433,
       "articles": [
         {
           "title": "Editorial : Ruling unlikely to effect the November election",
@@ -20430,77 +20295,6 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Editorial : Ruling unlikely to effect the November election",
     "summary": "2026-09-01 republicanherald.com: Editorial : Ruling unlikely to effect the November election\n2026-09-01 standardspeaker.com: Editorial : Ruling unlikely to effect the November election\n2026-09-01 citizensvoice.com: Editorial : Ruling unlikely to effect the November election",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_ballots-battle-developments",
-    "source": "news",
-    "ts": 1788348591807,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.413,
-      "articles": [
-        {
-          "title": "Legal battle over mailed ballots after a series of developments",
-          "url": "https://www.4029tv.com/article/mailed-ballots-legal-battle-latest/73562198",
-          "domain": "4029tv.com",
-          "seendate": "2026-08-30T16:00:00Z",
-          "image": "https://kubrick.htvapps.com/mediaos.s3.amazonaws.com/images/cnn-l19jb21wb25lbnrzl2ltywdll2luc3rhbmnlcy9jbxrjywp4ym4wmdb6mmrwmdg0ejq0n296-l19jb21wb25lbnrzl2fydgljbguvaw5zdgfuy2vzl2ntdgnhanhibjawmtayzhawnzr0bzdjdhkpreview-3326632420765499-038129112212264293.JPG?crop=1.00xw%3A0.847xh%3B0%2C0"
-        },
-        {
-          "title": "Legal battle over mailed ballots after a series of developments",
-          "url": "https://www.wjcl.com/article/mailed-ballots-legal-battle-latest/73562198",
-          "domain": "wjcl.com",
-          "seendate": "2026-08-30T15:30:00Z",
-          "image": "https://kubrick.htvapps.com/mediaos.s3.amazonaws.com/images/cnn-l19jb21wb25lbnrzl2ltywdll2luc3rhbmnlcy9jbxrjywp4ym4wmdb6mmrwmdg0ejq0n296-l19jb21wb25lbnrzl2fydgljbguvaw5zdgfuy2vzl2ntdgnhanhibjawmtayzhawnzr0bzdjdhkpreview-3326632420765499-038129112212264293.JPG?crop=1.00xw%3A0.847xh%3B0%2C0"
-        },
-        {
-          "title": "Legal battle over mailed ballots after a series of developments",
-          "url": "https://www.wpbf.com/article/mailed-ballots-legal-battle-latest/73562198",
-          "domain": "wpbf.com",
-          "seendate": "2026-08-30T15:15:00Z",
-          "image": "https://kubrick.htvapps.com/mediaos.s3.amazonaws.com/images/cnn-l19jb21wb25lbnrzl2ltywdll2luc3rhbmnlcy9jbxrjywp4ym4wmdb6mmrwmdg0ejq0n296-l19jb21wb25lbnrzl2fydgljbguvaw5zdgfuy2vzl2ntdgnhanhibjawmtayzhawnzr0bzdjdhkpreview-3326632420765499-038129112212264293.JPG?crop=1.00xw%3A0.847xh%3B0%2C0"
-        },
-        {
-          "title": "Legal battle over mailed ballots after a series of developments",
-          "url": "https://www.wlwt.com/article/mailed-ballots-legal-battle-latest/73562198",
-          "domain": "wlwt.com",
-          "seendate": "2026-08-30T14:45:00Z",
-          "image": "https://kubrick.htvapps.com/mediaos.s3.amazonaws.com/images/cnn-l19jb21wb25lbnrzl2ltywdll2luc3rhbmnlcy9jbxrjywp4ym4wmdb6mmrwmdg0ejq0n296-l19jb21wb25lbnrzl2fydgljbguvaw5zdgfuy2vzl2ntdgnhanhibjawmtayzhawnzr0bzdjdhkpreview-3326632420765499-038129112212264293.JPG?crop=1.00xw%3A0.847xh%3B0%2C0"
-        },
-        {
-          "title": "Legal battle over mailed ballots after a series of developments",
-          "url": "https://www.wcvb.com/article/mailed-ballots-legal-battle-latest/73562198",
-          "domain": "wcvb.com",
-          "seendate": "2026-08-30T13:30:00Z",
-          "image": "https://kubrick.htvapps.com/mediaos.s3.amazonaws.com/images/cnn-l19jb21wb25lbnrzl2ltywdll2luc3rhbmnlcy9jbxrjywp4ym4wmdb6mmrwmdg0ejq0n296-l19jb21wb25lbnrzl2fydgljbguvaw5zdgfuy2vzl2ntdgnhanhibjawmtayzhawnzr0bzdjdhkpreview-3326632420765499-038129112212264293.JPG?crop=1.00xw%3A0.847xh%3B0%2C0"
-        },
-        {
-          "title": "Legal battle over mailed ballots after a series of developments",
-          "url": "https://www.wxii12.com/article/mailed-ballots-legal-battle-latest/73562198",
-          "domain": "wxii12.com",
-          "seendate": "2026-08-30T13:00:00Z",
-          "image": "https://kubrick.htvapps.com/mediaos.s3.amazonaws.com/images/cnn-l19jb21wb25lbnrzl2ltywdll2luc3rhbmnlcy9jbxrjywp4ym4wmdb6mmrwmdg0ejq0n296-l19jb21wb25lbnrzl2fydgljbguvaw5zdgfuy2vzl2ntdgnhanhibjawmtayzhawnzr0bzdjdhkpreview-3326632420765499-038129112212264293.JPG?crop=1.00xw%3A0.847xh%3B0%2C0"
-        },
-        {
-          "title": "Legal battle over mailed ballots after a series of developments",
-          "url": "https://www.ketv.com/article/mailed-ballots-legal-battle-latest/73562198",
-          "domain": "ketv.com",
-          "seendate": "2026-08-30T13:00:00Z",
-          "image": "https://kubrick.htvapps.com/mediaos.s3.amazonaws.com/images/cnn-l19jb21wb25lbnrzl2ltywdll2luc3rhbmnlcy9jbxrjywp4ym4wmdb6mmrwmdg0ejq0n296-l19jb21wb25lbnrzl2fydgljbguvaw5zdgfuy2vzl2ntdgnhanhibjawmtayzhawnzr0bzdjdhkpreview-3326632420765499-038129112212264293.JPG?crop=1.00xw%3A0.847xh%3B0%2C0"
-        }
-      ]
-    },
-    "title": "Legal battle over mailed ballots after a series of developments",
-    "summary": "2026-08-30 4029tv.com: Legal battle over mailed ballots after a series of developments\n2026-08-30 wjcl.com: Legal battle over mailed ballots after a series of developments\n2026-08-30 wpbf.com: Legal battle over mailed ballots after a series of developments\n2026-08-30 wlwt.com: Legal battle over mailed ballots after a series of developments\n2026-08-30 wcvb.com: Legal battle over mailed ballots after a series of developments\n2026-08-30 wxii12.com: Legal battle over mailed ballots after a series of developments",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
