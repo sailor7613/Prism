@@ -10482,7 +10482,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Proposing an amendment to the Constitution of the United States to require that the Supreme Court of the United States be composed of nine justices.",
     "meta": "H.J.Res. 1 · Reported · Law",
-    "id": "hjres-119-1"
+    "id": "hjres-119-1",
+    "rc": 1,
+    "mm": 0.014
   },
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"National Emission Standards for Hazardous Air Pollutants: Coal- and Oil-Fired Electric Utility Steam Generating Units: Final Repeal\".",
