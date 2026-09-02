@@ -1,11 +1,11 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-09-02T21:13:28.485Z · 25 legislative + 6 news (GDELT, 3d)
+// 2026-09-02T23:26:01.457Z · 25 legislative + 6 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1788383312051,
+    "ts": 1788391368253,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
@@ -918,11 +918,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1788383312051,
+    "ts": 1788391368252,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.654,
+      "salience": 0.653,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -1172,7 +1172,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1788383312051,
+    "ts": 1788391368252,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
@@ -1445,7 +1445,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1788383312050,
+    "ts": 1788391368251,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
@@ -3216,11 +3216,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1788383312051,
+    "ts": 1788391368252,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.608,
+      "salience": 0.607,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -4495,11 +4495,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1788383312051,
+    "ts": 1788391368252,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.563,
+      "salience": 0.562,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -4768,13 +4768,287 @@ window.PRISM_CANDIDATES = [
     "mts": 1784784262612
   },
   {
+    "cid": "cand_leg_sjres-119-196",
+    "source": "legislative",
+    "ts": 1788391368252,
+    "raw": {
+      "method": "legislative_rollcall_v1",
+      "billId": "sjres-119-196",
+      "salience": 0.544,
+      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
+      "votes": [
+        {
+          "voteId": "s-119-2-190",
+          "chamber": "senate",
+          "date": "June 24, 2026,  09:16 PM",
+          "question": "On the Motion to Proceed",
+          "result": "Motion to Proceed Rejected",
+          "margin": -0.072,
+          "totals": {
+            "yea": 45,
+            "nay": 52,
+            "present": 0,
+            "notVoting": 3
+          },
+          "party": {
+            "D": {
+              "yea": 43,
+              "nay": 0
+            },
+            "R": {
+              "yea": 0,
+              "nay": 52
+            },
+            "I": {
+              "yea": 2,
+              "nay": 0
+            }
+          },
+          "positions": {
+            "yea": [
+              "A000382",
+              "B001230",
+              "B001277",
+              "B001303",
+              "B001288",
+              "C000127",
+              "C001088",
+              "C001113",
+              "D000622",
+              "D000563",
+              "F000479",
+              "G000574",
+              "G000555",
+              "H001076",
+              "H001046",
+              "H000273",
+              "H001042",
+              "K000384",
+              "K000377",
+              "K000394",
+              "K000383",
+              "K000367",
+              "M000133",
+              "M001176",
+              "M001169",
+              "M001111",
+              "O000174",
+              "P000145",
+              "P000595",
+              "R000122",
+              "R000608",
+              "S000033",
+              "S001194",
+              "S001150",
+              "S000148",
+              "S001208",
+              "S001203",
+              "V000128",
+              "W000805",
+              "W000790",
+              "W000817",
+              "W000800",
+              "W000802",
+              "W000779"
+            ],
+            "nay": [
+              "B001299",
+              "B001261",
+              "B001243",
+              "B001236",
+              "B001319",
+              "B001305",
+              "C001047",
+              "C001075",
+              "C001035",
+              "C001056",
+              "C001095",
+              "C001096",
+              "C000880",
+              "C001098",
+              "C001114",
+              "D000618",
+              "E000295",
+              "F000463",
+              "G000359",
+              "G000386",
+              "H000601",
+              "H001089",
+              "H001061",
+              "H001104",
+              "H001079",
+              "J000293",
+              "J000312",
+              "K000393",
+              "L000575",
+              "L000577",
+              "L000571",
+              "M001198",
+              "M001243",
+              "M001244",
+              "M000934",
+              "M001242",
+              "M001153",
+              "P000603",
+              "R000618",
+              "R000584",
+              "R000605",
+              "S001227",
+              "S001217",
+              "S001184",
+              "S001232",
+              "S001198",
+              "T000250",
+              "T000476",
+              "T000278",
+              "W000437",
+              "Y000064"
+            ],
+            "present": [],
+            "notVoting": [
+              "B001267",
+              "M000355",
+              "S001181"
+            ]
+          }
+        }
+      ]
+    },
+    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
+    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
+    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
+    "suggestedAxes": {
+      "x": {
+        "pos": "Disapprove rule",
+        "neg": "Uphold rule"
+      },
+      "y": {
+        "pos": "Executive overreach",
+        "neg": "Agency discretion legitimate"
+      }
+    },
+    "prevalentAxisGuess": "x",
+    "members": [
+      "A000382",
+      "B001230",
+      "B001277",
+      "B001303",
+      "B001288",
+      "C000127",
+      "C001088",
+      "C001113",
+      "D000622",
+      "D000563",
+      "F000479",
+      "G000574",
+      "G000555",
+      "H001076",
+      "H001046",
+      "H000273",
+      "H001042",
+      "K000384",
+      "K000377",
+      "K000394",
+      "K000383",
+      "K000367",
+      "M000133",
+      "M001176",
+      "M001169",
+      "M001111",
+      "O000174",
+      "P000145",
+      "P000595",
+      "R000122",
+      "R000608",
+      "S000033",
+      "S001194",
+      "S001150",
+      "S000148",
+      "S001208",
+      "S001203",
+      "V000128",
+      "W000805",
+      "W000790",
+      "W000817",
+      "W000800",
+      "W000802",
+      "W000779",
+      "B001299",
+      "B001261",
+      "B001243",
+      "B001236",
+      "B001319",
+      "B001305",
+      "C001047",
+      "C001075",
+      "C001035",
+      "C001056",
+      "C001095",
+      "C001096",
+      "C000880",
+      "C001098",
+      "C001114",
+      "D000618",
+      "E000295",
+      "F000463",
+      "G000359",
+      "G000386",
+      "H000601",
+      "H001089",
+      "H001061",
+      "H001104",
+      "H001079",
+      "J000293",
+      "J000312",
+      "K000393",
+      "L000575",
+      "L000577",
+      "L000571",
+      "M001198",
+      "M001243",
+      "M001244",
+      "M000934",
+      "M001242",
+      "M001153",
+      "P000603",
+      "R000618",
+      "R000584",
+      "R000605",
+      "S001227",
+      "S001217",
+      "S001184",
+      "S001232",
+      "S001198",
+      "T000250",
+      "T000476",
+      "T000278",
+      "W000437",
+      "Y000064"
+    ],
+    "bills": [
+      "sjres-119-196"
+    ],
+    "fitness": {
+      "score": 0.3,
+      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
+      "method": "m2_constitutive_v1",
+      "ts": "2026-07-14T04:28:30.038Z"
+    },
+    "status": "new",
+    "voteMap": {
+      "voteId": "s-119-2-190",
+      "yeaPole": "pos"
+    },
+    "mts": 1784044297586
+  },
+  {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1788383312050,
+    "ts": 1788391368251,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.544,
+      "salience": 0.543,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -6170,287 +6444,13 @@ window.PRISM_CANDIDATES = [
     "mts": 1784044297586
   },
   {
-    "cid": "cand_leg_sjres-119-196",
-    "source": "legislative",
-    "ts": 1788383312051,
-    "raw": {
-      "method": "legislative_rollcall_v1",
-      "billId": "sjres-119-196",
-      "salience": 0.544,
-      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
-      "votes": [
-        {
-          "voteId": "s-119-2-190",
-          "chamber": "senate",
-          "date": "June 24, 2026,  09:16 PM",
-          "question": "On the Motion to Proceed",
-          "result": "Motion to Proceed Rejected",
-          "margin": -0.072,
-          "totals": {
-            "yea": 45,
-            "nay": 52,
-            "present": 0,
-            "notVoting": 3
-          },
-          "party": {
-            "D": {
-              "yea": 43,
-              "nay": 0
-            },
-            "R": {
-              "yea": 0,
-              "nay": 52
-            },
-            "I": {
-              "yea": 2,
-              "nay": 0
-            }
-          },
-          "positions": {
-            "yea": [
-              "A000382",
-              "B001230",
-              "B001277",
-              "B001303",
-              "B001288",
-              "C000127",
-              "C001088",
-              "C001113",
-              "D000622",
-              "D000563",
-              "F000479",
-              "G000574",
-              "G000555",
-              "H001076",
-              "H001046",
-              "H000273",
-              "H001042",
-              "K000384",
-              "K000377",
-              "K000394",
-              "K000383",
-              "K000367",
-              "M000133",
-              "M001176",
-              "M001169",
-              "M001111",
-              "O000174",
-              "P000145",
-              "P000595",
-              "R000122",
-              "R000608",
-              "S000033",
-              "S001194",
-              "S001150",
-              "S000148",
-              "S001208",
-              "S001203",
-              "V000128",
-              "W000805",
-              "W000790",
-              "W000817",
-              "W000800",
-              "W000802",
-              "W000779"
-            ],
-            "nay": [
-              "B001299",
-              "B001261",
-              "B001243",
-              "B001236",
-              "B001319",
-              "B001305",
-              "C001047",
-              "C001075",
-              "C001035",
-              "C001056",
-              "C001095",
-              "C001096",
-              "C000880",
-              "C001098",
-              "C001114",
-              "D000618",
-              "E000295",
-              "F000463",
-              "G000359",
-              "G000386",
-              "H000601",
-              "H001089",
-              "H001061",
-              "H001104",
-              "H001079",
-              "J000293",
-              "J000312",
-              "K000393",
-              "L000575",
-              "L000577",
-              "L000571",
-              "M001198",
-              "M001243",
-              "M001244",
-              "M000934",
-              "M001242",
-              "M001153",
-              "P000603",
-              "R000618",
-              "R000584",
-              "R000605",
-              "S001227",
-              "S001217",
-              "S001184",
-              "S001232",
-              "S001198",
-              "T000250",
-              "T000476",
-              "T000278",
-              "W000437",
-              "Y000064"
-            ],
-            "present": [],
-            "notVoting": [
-              "B001267",
-              "M000355",
-              "S001181"
-            ]
-          }
-        }
-      ]
-    },
-    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Department of Education relating to \"Reimagining and Improving Student Education-Federal Student Loan Program Final Regulations\".",
-    "summary": "2026-06-24 senate: On the Motion to Proceed — Motion to Proceed Rejected (45-52; D 43-0 · R 0-52 · I 2-0)",
-    "framingDraft": "Beyond whether to disapprove the student-loan rule, the debate crystallizes around who should bear the cost of loan forgiveness — taxpayers/lenders versus borrowers — and separately, how far executive agencies may go in restructuring debt obligations without new statutory authorization.",
-    "suggestedAxes": {
-      "x": {
-        "pos": "Disapprove rule",
-        "neg": "Uphold rule"
-      },
-      "y": {
-        "pos": "Executive overreach",
-        "neg": "Agency discretion legitimate"
-      }
-    },
-    "prevalentAxisGuess": "x",
-    "members": [
-      "A000382",
-      "B001230",
-      "B001277",
-      "B001303",
-      "B001288",
-      "C000127",
-      "C001088",
-      "C001113",
-      "D000622",
-      "D000563",
-      "F000479",
-      "G000574",
-      "G000555",
-      "H001076",
-      "H001046",
-      "H000273",
-      "H001042",
-      "K000384",
-      "K000377",
-      "K000394",
-      "K000383",
-      "K000367",
-      "M000133",
-      "M001176",
-      "M001169",
-      "M001111",
-      "O000174",
-      "P000145",
-      "P000595",
-      "R000122",
-      "R000608",
-      "S000033",
-      "S001194",
-      "S001150",
-      "S000148",
-      "S001208",
-      "S001203",
-      "V000128",
-      "W000805",
-      "W000790",
-      "W000817",
-      "W000800",
-      "W000802",
-      "W000779",
-      "B001299",
-      "B001261",
-      "B001243",
-      "B001236",
-      "B001319",
-      "B001305",
-      "C001047",
-      "C001075",
-      "C001035",
-      "C001056",
-      "C001095",
-      "C001096",
-      "C000880",
-      "C001098",
-      "C001114",
-      "D000618",
-      "E000295",
-      "F000463",
-      "G000359",
-      "G000386",
-      "H000601",
-      "H001089",
-      "H001061",
-      "H001104",
-      "H001079",
-      "J000293",
-      "J000312",
-      "K000393",
-      "L000575",
-      "L000577",
-      "L000571",
-      "M001198",
-      "M001243",
-      "M001244",
-      "M000934",
-      "M001242",
-      "M001153",
-      "P000603",
-      "R000618",
-      "R000584",
-      "R000605",
-      "S001227",
-      "S001217",
-      "S001184",
-      "S001232",
-      "S001198",
-      "T000250",
-      "T000476",
-      "T000278",
-      "W000437",
-      "Y000064"
-    ],
-    "bills": [
-      "sjres-119-196"
-    ],
-    "fitness": {
-      "score": 0.3,
-      "reason": "The proposed secondary axis (executive overreach vs. legitimate agency discretion) is the standard CRA framing, but the roll call shows perfectly clean party-line splits (D 43-0, R 0-52) with zero defectors, including no libertarian-leaning or deficit-hawk R crossovers that would confirm the axis is live independent of party position. Without any defection pattern to anchor it, this axis collapses into a redescription of the party-line vote itself — Republicans invoke overreach rhetoric but the vote is fully predicted by party alone, suggesting no cross-cutting constituency actually exists here beyond the substantive policy fight over loan forgiveness costs, which is really just the same disapprove/uphold binary restated in institutional language.",
-      "method": "m2_constitutive_v1",
-      "ts": "2026-07-14T04:28:30.038Z"
-    },
-    "status": "new",
-    "voteMap": {
-      "voteId": "s-119-2-190",
-      "yeaPole": "pos"
-    },
-    "mts": 1784044297586
-  },
-  {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1788383312051,
+    "ts": 1788391368252,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.53,
+      "salience": 0.529,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -6717,11 +6717,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1788383312051,
+    "ts": 1788391368252,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.508,
+      "salience": 0.507,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -7244,11 +7244,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1788383312050,
+    "ts": 1788391368251,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.467,
+      "salience": 0.466,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -8178,7 +8178,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-1318",
     "source": "legislative",
-    "ts": 1788383312051,
+    "ts": 1788391368252,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-1318",
@@ -8454,7 +8454,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1788383312051,
+    "ts": 1788391368253,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
@@ -9334,7 +9334,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1788383312050,
+    "ts": 1788391368251,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
@@ -10267,11 +10267,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1788383312051,
+    "ts": 1788391368253,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.444,
+      "salience": 0.443,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11143,11 +11143,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1788383312050,
+    "ts": 1788391368251,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.428,
+      "salience": 0.427,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -12076,11 +12076,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1788383312050,
+    "ts": 1788391368252,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.309,
+      "salience": 0.308,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -13479,11 +13479,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1788383312051,
+    "ts": 1788391368252,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.252,
+      "salience": 0.251,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -14372,11 +14372,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1788383312051,
+    "ts": 1788391368252,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.245,
+      "salience": 0.244,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -15287,7 +15287,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1788383312051,
+    "ts": 1788391368252,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
@@ -16175,7 +16175,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1788383312051,
+    "ts": 1788391368252,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
@@ -17096,7 +17096,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1788383312050,
+    "ts": 1788391368252,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
@@ -18014,7 +18014,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1788383312050,
+    "ts": 1788391368252,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
@@ -18913,7 +18913,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1788383312049,
+    "ts": 1788391368251,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
@@ -19788,7 +19788,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1788383312050,
+    "ts": 1788391368251,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
@@ -20672,12 +20672,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballroom-beyond-could",
     "source": "news",
-    "ts": 1788383608479,
+    "ts": 1788391561451,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.86,
+      "salience": 0.846,
       "articles": [
         {
           "title": "Why the Supreme Court ballroom ruling could matter beyond the ballroom",
@@ -20778,12 +20778,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballroom-court-supreme",
     "source": "news",
-    "ts": 1788383608479,
+    "ts": 1788391561451,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.849,
+      "salience": 0.835,
       "articles": [
         {
           "title": "Supreme Court Lets Trump White House Ballroom Proceed in New Ruling",
@@ -20796,13 +20796,6 @@ window.PRISM_CANDIDATES = [
           "title": "Supreme Court allows ballroom project to continue for now",
           "url": "https://www.wesh.com/article/supreme-court-allows-ballroom-project-continue-now/73580251",
           "domain": "wesh.com",
-          "seendate": "2026-09-01T17:00:00Z",
-          "image": "https://kubrick.htvapps.com/vidthumb/87475415-3e22-401b-89ba-d5d7bf66caf5/73a9f495-3f3f-45e3-b8bb-8233deae63e2.jpg?crop=1xw%3A0.844574780058651xh%3Bcenter%2Ctop"
-        },
-        {
-          "title": "Supreme Court allows ballroom project to continue for now",
-          "url": "https://www.wpbf.com/article/supreme-court-allows-ballroom-project-continue-now/73580251",
-          "domain": "wpbf.com",
           "seendate": "2026-09-01T17:00:00Z",
           "image": "https://kubrick.htvapps.com/vidthumb/87475415-3e22-401b-89ba-d5d7bf66caf5/73a9f495-3f3f-45e3-b8bb-8233deae63e2.jpg?crop=1xw%3A0.844574780058651xh%3Bcenter%2Ctop"
         },
@@ -20824,13 +20817,6 @@ window.PRISM_CANDIDATES = [
           "title": "Supreme Court allows ballroom project to continue for now",
           "url": "https://www.wgal.com/article/supreme-court-allows-ballroom-project-continue-now/73580251",
           "domain": "wgal.com",
-          "seendate": "2026-09-01T16:30:00Z",
-          "image": "https://kubrick.htvapps.com/vidthumb/87475415-3e22-401b-89ba-d5d7bf66caf5/73a9f495-3f3f-45e3-b8bb-8233deae63e2.jpg?crop=1xw%3A0.844574780058651xh%3Bcenter%2Ctop"
-        },
-        {
-          "title": "Supreme Court allows ballroom project to continue for now",
-          "url": "https://www.wapt.com/article/supreme-court-allows-ballroom-project-continue-now/73580251",
-          "domain": "wapt.com",
           "seendate": "2026-09-01T16:30:00Z",
           "image": "https://kubrick.htvapps.com/vidthumb/87475415-3e22-401b-89ba-d5d7bf66caf5/73a9f495-3f3f-45e3-b8bb-8233deae63e2.jpg?crop=1xw%3A0.844574780058651xh%3Bcenter%2Ctop"
         },
@@ -20868,11 +20854,89 @@ window.PRISM_CANDIDATES = [
           "domain": "wptv.com",
           "seendate": "2026-09-01T05:30:00Z",
           "image": "https://ewscripps.brightspotcdn.com/ad/55/ad878e634e3883470babf3896de3/ap26139537500101.jpg"
+        },
+        {
+          "title": "Supreme Court signs off on White House ballroom construction continuing",
+          "url": "https://www.foxla.com/news/supreme-court-signs-off-white-house-ballroom-construction-continuing",
+          "domain": "foxla.com",
+          "seendate": "2026-09-01T05:30:00Z",
+          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/08/1280/720/gettyimages-2291873237-white-house-east-wing.jpg?ve=1&tl=1"
+        },
+        {
+          "title": "Supreme Court lets White House continue construction on Trump $400 million ballroom",
+          "url": "https://www.fox8live.com/2026/08/31/supreme-court-lets-white-house-continue-construction-trumps-400-million-ballroom/",
+          "domain": "fox8live.com",
+          "seendate": "2026-09-01T04:45:00Z",
+          "image": "https://gray-wvue-prod.gtv-cdn.com/resizer/v2/GMBTNO2ALNE35AM2RSKLIXEAGI.jpg?auth=eae99ec34563611e0eedfb76c91ed88d11296c5fe49d5b7046f3389ef5b214f0&smart=true"
         }
       ]
     },
     "title": "Supreme Court Allows White House Ballroom Construction To Proceed",
-    "summary": "2026-09-01 elledecor.com: Supreme Court Lets Trump White House Ballroom Proceed in New Ruling\n2026-09-01 wesh.com: Supreme Court allows ballroom project to continue for now\n2026-09-01 wpbf.com: Supreme Court allows ballroom project to continue for now\n2026-09-01 koat.com: Supreme Court allows ballroom project to continue for now\n2026-09-01 wbaltv.com: Supreme Court allows ballroom project to continue for now\n2026-09-01 wgal.com: Supreme Court allows ballroom project to continue for now",
+    "summary": "2026-09-01 elledecor.com: Supreme Court Lets Trump White House Ballroom Proceed in New Ruling\n2026-09-01 wesh.com: Supreme Court allows ballroom project to continue for now\n2026-09-01 koat.com: Supreme Court allows ballroom project to continue for now\n2026-09-01 wbaltv.com: Supreme Court allows ballroom project to continue for now\n2026-09-01 wgal.com: Supreme Court allows ballroom project to continue for now\n2026-09-01 kcra.com: Supreme Court allows ballroom project to continue for now",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_amendment-court-house",
+    "source": "news",
+    "ts": 1788391561451,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.773,
+      "articles": [
+        {
+          "title": "House Democrats block constitutional amendment to lock Supreme Court at 9 justices",
+          "url": "https://www.aol.com/articles/house-democrats-block-constitutional-amendment-203843000.html",
+          "domain": "aol.com",
+          "seendate": "2026-09-02T22:15:00Z",
+          "image": "https://hermes.media.static.aol.com/media/2026/09/02/73d7c449-c7fa-3daa-a930-534f5646763b/78a32a1b-7405-436e-b510-ab2c9166ce4c.jpg"
+        },
+        {
+          "title": "House rejects GOP constitutional amendment to limit Supreme Court to 9 justices",
+          "url": "https://www.cbsnews.com/news/house-supreme-court-constitutional-amendment-vote/",
+          "domain": "cbsnews.com",
+          "seendate": "2026-09-02T21:30:00Z",
+          "image": "https://assets1.cbsnewsstatic.com/hub/i/r/2026/09/02/96b9be71-4a70-4647-9b81-9a91d7008851/thumbnail/1200x630/443a86295ceecaf66333c4f9916d2e92/gettyimages-2289746924.jpg"
+        },
+        {
+          "title": "House Democrats block amendment to cap Supreme Court at 9 justices",
+          "url": "https://www.foxnews.com/politics/republicans-fail-ease-one-trumps-greatest-fears-supreme-court-measure-collapses",
+          "domain": "foxnews.com",
+          "seendate": "2026-09-02T21:30:00Z",
+          "image": "https://static.foxnews.com/foxnews.com/content/uploads/2025/05/house-gop.jpg"
+        },
+        {
+          "title": "House Democrats block amendment to lock Supreme Court size at 9 justices – NBC Connecticut",
+          "url": "https://www.nbcconnecticut.com/news/politics/house-democrats-block-constitutional-amendment-lock-supreme-court-9-justices/3771144/",
+          "domain": "nbcconnecticut.com",
+          "seendate": "2026-09-02T21:30:00Z",
+          "image": "https://media.nbcconnecticut.com/2026/09/SCOTUS-COLUMNS.jpg?quality=85&strip=all"
+        },
+        {
+          "title": "House Democrats block amendment to lock Supreme Court size at 9 justices – NBC Los Angeles",
+          "url": "https://www.nbclosangeles.com/news/politics/house-democrats-block-constitutional-amendment-lock-supreme-court-9-justices/3936836/",
+          "domain": "nbclosangeles.com",
+          "seendate": "2026-09-02T21:15:00Z",
+          "image": "https://media.nbclosangeles.com/2026/09/SCOTUS-COLUMNS.jpg?quality=85&strip=all"
+        },
+        {
+          "title": "House Democrats block amendment to lock Supreme Court size at 9 justices – NBC 7 San Diego",
+          "url": "https://www.nbcsandiego.com/news/politics/house-democrats-block-constitutional-amendment-lock-supreme-court-9-justices/4068740/",
+          "domain": "nbcsandiego.com",
+          "seendate": "2026-09-02T21:15:00Z",
+          "image": "https://media.nbcsandiego.com/2026/09/SCOTUS-COLUMNS.jpg?quality=85&strip=all"
+        }
+      ]
+    },
+    "title": "House Democrats block amendment to lock Supreme Court size at 9 justices – NBC Connecticut",
+    "summary": "2026-09-02 aol.com: House Democrats block constitutional amendment to lock Supreme Court at 9 justices\n2026-09-02 cbsnews.com: House rejects GOP constitutional amendment to limit Supreme Court to 9 justices\n2026-09-02 foxnews.com: House Democrats block amendment to cap Supreme Court at 9 justices\n2026-09-02 nbcconnecticut.com: House Democrats block amendment to lock Supreme Court size at 9 justices – NBC Connecticut\n2026-09-02 nbclosangeles.com: House Democrats block amendment to lock Supreme Court size at 9 justices – NBC Los Angeles\n2026-09-02 nbcsandiego.com: House Democrats block amendment to lock Supreme Court size at 9 justices – NBC 7 San Diego",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -20884,12 +20948,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_army-dan-down",
     "source": "news",
-    "ts": 1788383608479,
+    "ts": 1788391561451,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.542,
+      "salience": 0.529,
       "articles": [
         {
           "title": "The Latest : Army Secretary Dan Driscoll is stepping down , White House says",
@@ -20941,12 +21005,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ahead-averts-congress",
     "source": "news",
-    "ts": 1788383608479,
+    "ts": 1788391561451,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.526,
+      "salience": 0.513,
       "articles": [
         {
           "title": "Congress averts a government shutdown ahead of the midterms",
@@ -20991,12 +21055,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballroom-build-can",
     "source": "news",
-    "ts": 1788383608479,
+    "ts": 1788391561452,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.484,
+      "salience": 0.47,
       "articles": [
         {
           "title": "White House ballroom cleared for now , but question remains : Can president legally use donations to build it ? ",
@@ -21030,49 +21094,6 @@ window.PRISM_CANDIDATES = [
     },
     "title": "White House ballroom cleared for now , but question remains : Can president legally use donations to build it ? ",
     "summary": "2026-09-01 southernminn.com: White House ballroom cleared for now , but question remains : Can president legally use donations to build it ? \n2026-09-01 suncommercial.com: White House ballroom cleared for now , but question remains : Can president legally use donations to build it ? \n2026-09-01 bransontrilakesnews.com: White House ballroom cleared for now , but question remains : Can president legally use donations to build it ? \n2026-09-01 wyomingnews.com: White House ballroom cleared for now , but question remains : Can president legally use donations to build it ? ",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_editorial-effect-election",
-    "source": "news",
-    "ts": 1788383608479,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.404,
-      "articles": [
-        {
-          "title": "Editorial : Ruling unlikely to effect the November election",
-          "url": "https://www.republicanherald.com/2026/09/01/editorial-ruling-unlikely-to-effect-the-november-election-2/",
-          "domain": "republicanherald.com",
-          "seendate": "2026-09-01T11:30:00Z",
-          "image": "https://www.republicanherald.com/wp-content/uploads/2026/09/202608281250MCT_____PHOTO____OPED-SCOTUS-ELECTIONS-EDITORIAL-FILEPIC-GET.jpg"
-        },
-        {
-          "title": "Editorial : Ruling unlikely to effect the November election",
-          "url": "https://www.standardspeaker.com/2026/09/01/editorial-ruling-unlikely-to-effect-the-november-election-2/",
-          "domain": "standardspeaker.com",
-          "seendate": "2026-09-01T11:30:00Z",
-          "image": "https://www.standardspeaker.com/wp-content/uploads/2026/09/202608281250MCT_____PHOTO____OPED-SCOTUS-ELECTIONS-EDITORIAL-FILEPIC-GET.jpg"
-        },
-        {
-          "title": "Editorial : Ruling unlikely to effect the November election",
-          "url": "https://www.citizensvoice.com/2026/09/01/editorial-ruling-unlikely-to-effect-the-november-election-2/",
-          "domain": "citizensvoice.com",
-          "seendate": "2026-09-01T11:00:00Z",
-          "image": "https://www.citizensvoice.com/wp-content/uploads/2026/09/202608281250MCT_____PHOTO____OPED-SCOTUS-ELECTIONS-EDITORIAL-FILEPIC-GET.jpg"
-        }
-      ]
-    },
-    "title": "Editorial : Ruling unlikely to effect the November election",
-    "summary": "2026-09-01 republicanherald.com: Editorial : Ruling unlikely to effect the November election\n2026-09-01 standardspeaker.com: Editorial : Ruling unlikely to effect the November election\n2026-09-01 citizensvoice.com: Editorial : Ruling unlikely to effect the November election",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
