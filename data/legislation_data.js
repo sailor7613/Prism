@@ -9946,7 +9946,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Protect Economic and Academic Freedom Act of 2025",
     "meta": "H.R. 4795 · Reported · Education",
-    "id": "hr-119-4795"
+    "id": "hr-119-4795",
+    "rc": 1,
+    "mm": 0.167
   },
   {
     "name": "Equal Campus Access Act of 2025",
