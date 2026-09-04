@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-09-04T04:44:57.439Z · 25 legislative + 12 news (GDELT, 3d)
+// 2026-09-04T11:29:58.133Z · 25 legislative + 12 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1788497079239,
+    "ts": 1788521344558,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.871,
+      "salience": 0.87,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -918,11 +918,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1788497079239,
+    "ts": 1788521344558,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.807,
+      "salience": 0.806,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -1819,11 +1819,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1788497079238,
+    "ts": 1788521344557,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.648,
+      "salience": 0.647,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -2073,11 +2073,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1788497079238,
+    "ts": 1788521344557,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.639,
+      "salience": 0.638,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -2346,11 +2346,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1788497079239,
+    "ts": 1788521344558,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.602,
+      "salience": 0.601,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -3625,11 +3625,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1788497079238,
+    "ts": 1788521344557,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.557,
+      "salience": 0.556,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3900,11 +3900,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8464",
     "source": "legislative",
-    "ts": 1788497079238,
+    "ts": 1788521344557,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8464",
-      "salience": 0.538,
+      "salience": 0.537,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8464",
       "votes": [
         {
@@ -5302,11 +5302,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1788497079238,
+    "ts": 1788521344557,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
-      "salience": 0.538,
+      "salience": 0.537,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
       "votes": [
         {
@@ -5576,11 +5576,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2",
     "source": "legislative",
-    "ts": 1788497079238,
+    "ts": 1788521344556,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2",
-      "salience": 0.535,
+      "salience": 0.534,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2",
       "votes": [
         {
@@ -6980,11 +6980,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1788497079238,
+    "ts": 1788521344557,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.524,
+      "salience": 0.523,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -7251,11 +7251,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1788497079239,
+    "ts": 1788521344557,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.502,
+      "salience": 0.501,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -7778,11 +7778,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5408",
     "source": "legislative",
-    "ts": 1788497079238,
+    "ts": 1788521344556,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5408",
-      "salience": 0.461,
+      "salience": 0.46,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5408",
       "votes": [
         {
@@ -8712,11 +8712,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1788497079239,
+    "ts": 1788521344558,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.442,
+      "salience": 0.441,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -9592,11 +9592,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8312",
     "source": "legislative",
-    "ts": 1788497079238,
+    "ts": 1788521344557,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8312",
-      "salience": 0.441,
+      "salience": 0.44,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8312",
       "votes": [
         {
@@ -10525,11 +10525,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1788497079239,
+    "ts": 1788521344558,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.438,
+      "salience": 0.436,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11401,11 +11401,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7892",
     "source": "legislative",
-    "ts": 1788497079238,
+    "ts": 1788521344557,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7892",
-      "salience": 0.422,
+      "salience": 0.421,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7892",
       "votes": [
         {
@@ -12334,11 +12334,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1788497079238,
+    "ts": 1788521344557,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.303,
+      "salience": 0.302,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -13737,11 +13737,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1788497079239,
+    "ts": 1788521344557,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.246,
+      "salience": 0.244,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -14630,11 +14630,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1788497079239,
+    "ts": 1788521344557,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.239,
+      "salience": 0.238,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -15545,11 +15545,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1788497079239,
+    "ts": 1788521344557,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.232,
+      "salience": 0.231,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -16433,11 +16433,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1788497079238,
+    "ts": 1788521344557,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.228,
+      "salience": 0.226,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -17354,11 +17354,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1788497079238,
+    "ts": 1788521344557,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.216,
+      "salience": 0.215,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -18272,11 +18272,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1788497079238,
+    "ts": 1788521344557,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.156,
+      "salience": 0.155,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -19171,11 +19171,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8466",
     "source": "legislative",
-    "ts": 1788497079237,
+    "ts": 1788521344556,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8466",
-      "salience": 0.046,
+      "salience": 0.044,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8466",
       "votes": [
         {
@@ -20046,11 +20046,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8428",
     "source": "legislative",
-    "ts": 1788497079237,
+    "ts": 1788521344556,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8428",
-      "salience": 0.046,
+      "salience": 0.044,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8428",
       "votes": [
         {
@@ -20930,12 +20930,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_campaign-republicans-trump",
     "source": "news",
-    "ts": 1788497097432,
+    "ts": 1788521398125,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.919,
+      "salience": 0.877,
       "articles": [
         {
           "title": "Trump promises to campaign for Republicans during midterm elections",
@@ -21036,12 +21036,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_admin-approve-asks",
     "source": "news",
-    "ts": 1788497097432,
+    "ts": 1788521398126,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.882,
+      "salience": 0.84,
       "articles": [
         {
           "title": "Trump admin asks SCOTUS to approve mail - in voting changes before midterms",
@@ -21114,12 +21114,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_avert-bill-government",
     "source": "news",
-    "ts": 1788497097433,
+    "ts": 1788521398127,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.877,
+      "salience": 0.834,
       "articles": [
         {
           "title": "Trump Signs Stopgap Bill To Avert Government Shutdown | NewsRadio 1370 AM & 92 . 9 FM WSPD",
@@ -21218,14 +21218,85 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_amendment-court-house",
+    "cid": "cand_news_agenda-arcade-debuts",
     "source": "news",
-    "ts": 1788497097431,
+    "ts": 1788521398126,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.768,
+      "salience": 0.796,
+      "articles": [
+        {
+          "title": "White House website debuts Trump agenda arcade games",
+          "url": "https://www.wbaltv.com/article/white-house-arcade-trump-agenda-games/73609639",
+          "domain": "wbaltv.com",
+          "seendate": "2026-09-04T05:15:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/36c28bbc-aa62-4243-ba47-a4b24bf5371d.jpg?crop=1.00xw%3A1.00xh%3B0%2C0"
+        },
+        {
+          "title": "White House website debuts Trump agenda arcade games",
+          "url": "https://www.kcra.com/article/white-house-arcade-trump-agenda-games/73609639",
+          "domain": "kcra.com",
+          "seendate": "2026-09-04T04:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/36c28bbc-aa62-4243-ba47-a4b24bf5371d.jpg?crop=1.00xw%3A1.00xh%3B0%2C0"
+        },
+        {
+          "title": "White House website debuts Trump agenda arcade games",
+          "url": "https://www.wcvb.com/article/white-house-arcade-trump-agenda-games/73609639",
+          "domain": "wcvb.com",
+          "seendate": "2026-09-04T03:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/36c28bbc-aa62-4243-ba47-a4b24bf5371d.jpg?crop=1.00xw%3A1.00xh%3B0%2C0"
+        },
+        {
+          "title": "White House website debuts Trump agenda arcade games",
+          "url": "https://www.wesh.com/article/white-house-arcade-trump-agenda-games/73609639",
+          "domain": "wesh.com",
+          "seendate": "2026-09-04T03:00:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/36c28bbc-aa62-4243-ba47-a4b24bf5371d.jpg?crop=1.00xw%3A1.00xh%3B0%2C0"
+        },
+        {
+          "title": "White House website debuts Trump agenda arcade games",
+          "url": "https://www.wyff4.com/article/white-house-arcade-trump-agenda-games/73609639",
+          "domain": "wyff4.com",
+          "seendate": "2026-09-04T02:15:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/36c28bbc-aa62-4243-ba47-a4b24bf5371d.jpg?crop=1.00xw%3A1.00xh%3B0%2C0"
+        },
+        {
+          "title": "White House website debuts Trump agenda arcade games",
+          "url": "https://www.kcci.com/article/white-house-arcade-trump-agenda-games/73609639",
+          "domain": "kcci.com",
+          "seendate": "2026-09-04T02:00:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/36c28bbc-aa62-4243-ba47-a4b24bf5371d.jpg?crop=1.00xw%3A1.00xh%3B0%2C0"
+        },
+        {
+          "title": "White House website debuts Trump agenda arcade games",
+          "url": "https://www.wmur.com/article/white-house-arcade-trump-agenda-games/73609639",
+          "domain": "wmur.com",
+          "seendate": "2026-09-04T01:45:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/36c28bbc-aa62-4243-ba47-a4b24bf5371d.jpg?crop=1.00xw%3A1.00xh%3B0%2C0"
+        }
+      ]
+    },
+    "title": "White House website debuts Trump agenda arcade games",
+    "summary": "2026-09-04 wbaltv.com: White House website debuts Trump agenda arcade games\n2026-09-04 kcra.com: White House website debuts Trump agenda arcade games\n2026-09-04 wcvb.com: White House website debuts Trump agenda arcade games\n2026-09-04 wesh.com: White House website debuts Trump agenda arcade games\n2026-09-04 wyff4.com: White House website debuts Trump agenda arcade games\n2026-09-04 kcci.com: White House website debuts Trump agenda arcade games",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_amendment-court-house",
+    "source": "news",
+    "ts": 1788521398125,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.726,
       "articles": [
         {
           "title": "House Democrats block amendment to lock Supreme Court size at 9 justices – NBC10 Philadelphia",
@@ -21303,54 +21374,54 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_agenda-arcade-debuts",
+    "cid": "cand_news_ballroom-build-can",
     "source": "news",
-    "ts": 1788497097432,
+    "ts": 1788521398126,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.717,
+      "salience": 0.683,
       "articles": [
         {
-          "title": "White House website debuts Trump agenda arcade games",
-          "url": "https://www.wcvb.com/article/white-house-arcade-trump-agenda-games/73609639",
-          "domain": "wcvb.com",
-          "seendate": "2026-09-04T03:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/36c28bbc-aa62-4243-ba47-a4b24bf5371d.jpg?crop=1.00xw%3A1.00xh%3B0%2C0"
+          "title": "White House ballroom cleared for now , but question remains : Can president legally use donations to build it ? ",
+          "url": "https://www.wbkb11.com/news/politics/national-politics/white-house-ballroom-cleared-for-now-but-question-remains-can-president-legally-use-donations-to/article_32d92d13-e36e-531e-a3f4-d32a24f5d3dc.html",
+          "domain": "wbkb11.com",
+          "seendate": "2026-09-04T04:45:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/wbkb11.com/content/tncms/assets/v3/editorial/b/b0/bb02ab78-2926-589d-9ae4-56c4af4459a0/6a9a29f21e241.image.jpg?crop=1762%2C925%2C0%2C235"
         },
         {
-          "title": "White House website debuts Trump agenda arcade games",
-          "url": "https://www.wesh.com/article/white-house-arcade-trump-agenda-games/73609639",
-          "domain": "wesh.com",
-          "seendate": "2026-09-04T03:00:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/36c28bbc-aa62-4243-ba47-a4b24bf5371d.jpg?crop=1.00xw%3A1.00xh%3B0%2C0"
+          "title": "White House ballroom cleared for now , but question remains : Can president legally use donations to build it ? ",
+          "url": "http://www.southernminn.com/around_the_web/news/white-house-ballroom-cleared-for-now-but-question-remains-can-president-legally-use-donations-to/article_b24dd9fa-30ae-5f12-92ac-6cb873531c38.html",
+          "domain": "southernminn.com",
+          "seendate": "2026-09-01T15:30:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/southernminn.com/content/tncms/assets/v3/editorial/9/b4/9b444c07-20fb-598e-ac2f-cc8848ec5334/6a96de320dcf1.image.jpg?crop=1763%2C926%2C0%2C124"
         },
         {
-          "title": "White House website debuts Trump agenda arcade games",
-          "url": "https://www.wyff4.com/article/white-house-arcade-trump-agenda-games/73609639",
-          "domain": "wyff4.com",
-          "seendate": "2026-09-04T02:15:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/36c28bbc-aa62-4243-ba47-a4b24bf5371d.jpg?crop=1.00xw%3A1.00xh%3B0%2C0"
+          "title": "White House ballroom cleared for now , but question remains : Can president legally use donations to build it ? ",
+          "url": "https://www.suncommercial.com/banner_graphic/news/national/article_48a22c97-9ffd-5b50-8d13-a7532a62cf27.html",
+          "domain": "suncommercial.com",
+          "seendate": "2026-09-01T15:30:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/suncommercial.com/content/tncms/assets/v3/editorial/0/ee/0ee66822-88e3-5b47-8b97-67685b5f8309/6a96ddfd6b5e3.image.jpg?crop=1763%2C926%2C0%2C124"
         },
         {
-          "title": "White House website debuts Trump agenda arcade games",
-          "url": "https://www.kcci.com/article/white-house-arcade-trump-agenda-games/73609639",
-          "domain": "kcci.com",
-          "seendate": "2026-09-04T02:00:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/36c28bbc-aa62-4243-ba47-a4b24bf5371d.jpg?crop=1.00xw%3A1.00xh%3B0%2C0"
+          "title": "White House ballroom cleared for now , but question remains : Can president legally use donations to build it ? ",
+          "url": "https://www.bransontrilakesnews.com/news/national/article_8808dc2d-5c98-57a4-9e4b-d4596a2b23fe.html",
+          "domain": "bransontrilakesnews.com",
+          "seendate": "2026-09-01T15:30:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/bransontrilakesnews.com/content/tncms/assets/v3/editorial/c/f3/cf3e35bc-997c-5e78-9cf5-f24b10ef9c5b/6a96de3bb1195.image.jpg?crop=1763%2C926%2C0%2C124"
         },
         {
-          "title": "White House website debuts Trump agenda arcade games",
-          "url": "https://www.wmur.com/article/white-house-arcade-trump-agenda-games/73609639",
-          "domain": "wmur.com",
-          "seendate": "2026-09-04T01:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/36c28bbc-aa62-4243-ba47-a4b24bf5371d.jpg?crop=1.00xw%3A1.00xh%3B0%2C0"
+          "title": "White House ballroom cleared for now , but question remains : Can president legally use donations to build it ? ",
+          "url": "http://www.wyomingnews.com/news/national/white-house-ballroom-cleared-for-now-but-question-remains-can-president-legally-use-donations-to/article_cabd4ef6-770a-57a8-aa2b-d4d854d25afa.html",
+          "domain": "wyomingnews.com",
+          "seendate": "2026-09-01T15:00:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/wyomingnews.com/content/tncms/assets/v3/editorial/8/79/879c13bb-545f-56dc-bf34-65665624c159/6a96ddf9eac28.image.jpg?crop=1763%2C926%2C0%2C124"
         }
       ]
     },
-    "title": "White House website debuts Trump agenda arcade games",
-    "summary": "2026-09-04 wcvb.com: White House website debuts Trump agenda arcade games\n2026-09-04 wesh.com: White House website debuts Trump agenda arcade games\n2026-09-04 wyff4.com: White House website debuts Trump agenda arcade games\n2026-09-04 kcci.com: White House website debuts Trump agenda arcade games\n2026-09-04 wmur.com: White House website debuts Trump agenda arcade games",
+    "title": "White House ballroom cleared for now , but question remains : Can president legally use donations to build it ? ",
+    "summary": "2026-09-04 wbkb11.com: White House ballroom cleared for now , but question remains : Can president legally use donations to build it ? \n2026-09-01 southernminn.com: White House ballroom cleared for now , but question remains : Can president legally use donations to build it ? \n2026-09-01 suncommercial.com: White House ballroom cleared for now , but question remains : Can president legally use donations to build it ? \n2026-09-01 bransontrilakesnews.com: White House ballroom cleared for now , but question remains : Can president legally use donations to build it ? \n2026-09-01 wyomingnews.com: White House ballroom cleared for now , but question remains : Can president legally use donations to build it ? ",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -21362,12 +21433,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_aggressive-before-campaign",
     "source": "news",
-    "ts": 1788497097432,
+    "ts": 1788521398126,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.684,
+      "salience": 0.642,
       "articles": [
         {
           "title": "Trump plans aggressive campaign schedule before midterms",
@@ -21419,12 +21490,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballroom-beyond-could",
     "source": "news",
-    "ts": 1788497097431,
+    "ts": 1788521398125,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.663,
+      "salience": 0.62,
       "articles": [
         {
           "title": "Why the Supreme Court ballroom ruling could matter beyond the ballroom",
@@ -21523,22 +21594,58 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_ballroom-court-supreme",
+    "cid": "cand_news_california-defense-first",
     "source": "news",
-    "ts": 1788497097431,
+    "ts": 1788521398126,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.652,
+      "salience": 0.395,
       "articles": [
         {
-          "title": "Supreme Court Lets Trump White House Ballroom Proceed in New Ruling",
-          "url": "https://www.elledecor.com/life-culture/a73581891/supreme-court-ruling-trump-ballroom/",
-          "domain": "elledecor.com",
-          "seendate": "2026-09-01T21:00:00Z",
-          "image": "https://hips.hearstapps.com/hmg-prod/images/e8797220-8d06-495e-97c1-de5b2bfed932.jpeg?crop=1xw:0.750062578223xh;center,top"
+          "title": "How California plans to be voter  first line of defense  – Daily Breeze",
+          "url": "https://www.dailybreeze.com/2026/09/02/how-california-plans-to-be-voters-first-line-of-defense/",
+          "domain": "dailybreeze.com",
+          "seendate": "2026-09-03T00:15:00Z",
+          "image": "https://www.dailybreeze.com/wp-content/uploads/2026/05/OCR-L-ELEX-FAQ-0502-09.jpg"
         },
+        {
+          "title": "How California plans to be voter  first line of defense  – Daily News",
+          "url": "https://www.dailynews.com/2026/09/02/how-california-plans-to-be-voters-first-line-of-defense/",
+          "domain": "dailynews.com",
+          "seendate": "2026-09-02T22:30:00Z",
+          "image": "https://www.dailynews.com/wp-content/uploads/2026/05/OCR-L-ELEX-FAQ-0502-09.jpg"
+        },
+        {
+          "title": "How California plans to be voter  first line of defense  – Orange County Register",
+          "url": "https://www.ocregister.com/2026/09/02/how-california-plans-to-be-voters-first-line-of-defense/",
+          "domain": "ocregister.com",
+          "seendate": "2026-09-02T20:00:00Z",
+          "image": "https://www.ocregister.com/wp-content/uploads/2026/05/OCR-L-ELEX-FAQ-0502-09.jpg"
+        }
+      ]
+    },
+    "title": "How California plans to be voter  first line of defense  – Daily News",
+    "summary": "2026-09-03 dailybreeze.com: How California plans to be voter  first line of defense  – Daily Breeze\n2026-09-02 dailynews.com: How California plans to be voter  first line of defense  – Daily News\n2026-09-02 ocregister.com: How California plans to be voter  first line of defense  – Orange County Register",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_allows-ballroom-court",
+    "source": "news",
+    "ts": 1788521398125,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.364,
+      "articles": [
         {
           "title": "Supreme Court allows ballroom project to continue for now",
           "url": "https://www.wesh.com/article/supreme-court-allows-ballroom-project-continue-now/73580251",
@@ -21575,94 +21682,16 @@ window.PRISM_CANDIDATES = [
           "image": "https://kubrick.htvapps.com/vidthumb/87475415-3e22-401b-89ba-d5d7bf66caf5/73a9f495-3f3f-45e3-b8bb-8233deae63e2.jpg?crop=1xw%3A0.844574780058651xh%3Bcenter%2Ctop"
         },
         {
-          "title": "Supreme Court Allows Trump White House Ballroom Construction to Continue",
-          "url": "https://www.townandcountrymag.com/society/politics/a73580269/supreme-court-trump-white-house-ballroom-construction/",
-          "domain": "townandcountrymag.com",
-          "seendate": "2026-09-01T14:00:00Z",
-          "image": "https://hips.hearstapps.com/hmg-prod/images/405240f0-7bd5-485b-808a-942565dfaa25.jpeg?crop=1xw:0.75xh;0xw,0.25xh"
-        },
-        {
           "title": "Supreme Court Allows Trump Ballroom To Proceed , For Now",
           "url": "https://outsidethebeltway.com/supreme-court-allows-trump-ballroom-to-proceed-for-now/",
           "domain": "outsidethebeltway.com",
           "seendate": "2026-09-01T14:00:00Z",
           "image": "https://jetpack.com/redirect/?source=sigenerate&query=t%3DeyJpbWciOiJodHRwczpcL1wvb3V0c2lkZXRoZWJlbHR3YXkuY29tXC93cC1jb250ZW50XC91cGxvYWRzXC8yMDI2XC8wOVwvdHJ1bXBfYmFsbHJvb21fZGVzdHJ1Y3Rpb25fb2ZmaWNpYWxfd2hpdGVob3VzZS5qcGciLCJ0eHQiOiJTdXByZW1lIENvdXJ0IEFsbG93cyBUcnVtcCBCYWxscm9vbSBUbyBQcm9jZWVkLCBGb3IgTm93IiwidGVtcGxhdGUiOiJoaWdod2F5IiwiZm9udCI6IiIsImJsb2dfaWQiOjI1MjYyODAyNH0.OrPM-PUn2iu_3H5Fd87M-UJrn0eQLe-0eBT1wIAR7A4MQ"
-        },
-        {
-          "title": "Supreme Court allows Trump White House ballroom construction",
-          "url": "https://www.westhawaiitoday.com/2026/09/01/nation-world-news/supreme-court-allows-trumps-white-house-ballroom-construction/",
-          "domain": "westhawaiitoday.com",
-          "seendate": "2026-09-01T11:15:00Z",
-          "image": "https://www.westhawaiitoday.com/wp-content/uploads/sites/8/2026/08/web1_USA-COURT-TRUMP-BALLROOM.jpg"
-        },
-        {
-          "title": "Supreme Court lets construction on Trump $400M White House ballroom continue",
-          "url": "https://www.wptv.com/politics/the-president/supreme-court-lets-white-house-continue-construction-on-trumps-400-million-ballroom",
-          "domain": "wptv.com",
-          "seendate": "2026-09-01T05:30:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/ad/55/ad878e634e3883470babf3896de3/ap26139537500101.jpg"
-        },
-        {
-          "title": "Supreme Court signs off on White House ballroom construction continuing",
-          "url": "https://www.foxla.com/news/supreme-court-signs-off-white-house-ballroom-construction-continuing",
-          "domain": "foxla.com",
-          "seendate": "2026-09-01T05:30:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/08/1280/720/gettyimages-2291873237-white-house-east-wing.jpg?ve=1&tl=1"
-        },
-        {
-          "title": "Supreme Court lets White House continue construction on Trump $400 million ballroom",
-          "url": "https://www.fox8live.com/2026/08/31/supreme-court-lets-white-house-continue-construction-trumps-400-million-ballroom/",
-          "domain": "fox8live.com",
-          "seendate": "2026-09-01T04:45:00Z",
-          "image": "https://gray-wvue-prod.gtv-cdn.com/resizer/v2/GMBTNO2ALNE35AM2RSKLIXEAGI.jpg?auth=eae99ec34563611e0eedfb76c91ed88d11296c5fe49d5b7046f3389ef5b214f0&smart=true"
         }
       ]
     },
     "title": "Supreme Court allows ballroom project to continue for now",
-    "summary": "2026-09-01 elledecor.com: Supreme Court Lets Trump White House Ballroom Proceed in New Ruling\n2026-09-01 wesh.com: Supreme Court allows ballroom project to continue for now\n2026-09-01 koat.com: Supreme Court allows ballroom project to continue for now\n2026-09-01 wbaltv.com: Supreme Court allows ballroom project to continue for now\n2026-09-01 wgal.com: Supreme Court allows ballroom project to continue for now\n2026-09-01 kcra.com: Supreme Court allows ballroom project to continue for now",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_california-defense-first",
-    "source": "news",
-    "ts": 1788497097432,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.437,
-      "articles": [
-        {
-          "title": "How California plans to be voter  first line of defense  – Daily Breeze",
-          "url": "https://www.dailybreeze.com/2026/09/02/how-california-plans-to-be-voters-first-line-of-defense/",
-          "domain": "dailybreeze.com",
-          "seendate": "2026-09-03T00:15:00Z",
-          "image": "https://www.dailybreeze.com/wp-content/uploads/2026/05/OCR-L-ELEX-FAQ-0502-09.jpg"
-        },
-        {
-          "title": "How California plans to be voter  first line of defense  – Daily News",
-          "url": "https://www.dailynews.com/2026/09/02/how-california-plans-to-be-voters-first-line-of-defense/",
-          "domain": "dailynews.com",
-          "seendate": "2026-09-02T22:30:00Z",
-          "image": "https://www.dailynews.com/wp-content/uploads/2026/05/OCR-L-ELEX-FAQ-0502-09.jpg"
-        },
-        {
-          "title": "How California plans to be voter  first line of defense  – Orange County Register",
-          "url": "https://www.ocregister.com/2026/09/02/how-california-plans-to-be-voters-first-line-of-defense/",
-          "domain": "ocregister.com",
-          "seendate": "2026-09-02T20:00:00Z",
-          "image": "https://www.ocregister.com/wp-content/uploads/2026/05/OCR-L-ELEX-FAQ-0502-09.jpg"
-        }
-      ]
-    },
-    "title": "How California plans to be voter  first line of defense  – Daily News",
-    "summary": "2026-09-03 dailybreeze.com: How California plans to be voter  first line of defense  – Daily Breeze\n2026-09-02 dailynews.com: How California plans to be voter  first line of defense  – Daily News\n2026-09-02 ocregister.com: How California plans to be voter  first line of defense  – Orange County Register",
+    "summary": "2026-09-01 wesh.com: Supreme Court allows ballroom project to continue for now\n2026-09-01 koat.com: Supreme Court allows ballroom project to continue for now\n2026-09-01 wbaltv.com: Supreme Court allows ballroom project to continue for now\n2026-09-01 wgal.com: Supreme Court allows ballroom project to continue for now\n2026-09-01 kcra.com: Supreme Court allows ballroom project to continue for now\n2026-09-01 outsidethebeltway.com: Supreme Court Allows Trump Ballroom To Proceed , For Now",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -21674,12 +21703,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ahead-averts-congress",
     "source": "news",
-    "ts": 1788497097432,
+    "ts": 1788521398126,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.329,
+      "salience": 0.287,
       "articles": [
         {
           "title": "Congress averts a government shutdown ahead of the midterms",
@@ -21724,12 +21753,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_army-dan-down",
     "source": "news",
-    "ts": 1788497097432,
+    "ts": 1788521398125,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.29,
+      "salience": 0.248,
       "articles": [
         {
           "title": "The Latest : Army Secretary Dan Driscoll is stepping down , White House says",
@@ -21763,56 +21792,6 @@ window.PRISM_CANDIDATES = [
     },
     "title": "The Latest : Army Secretary Dan Driscoll is stepping down , White House says",
     "summary": "2026-09-01 winchesterstar.com: The Latest : Army Secretary Dan Driscoll is stepping down , White House says\n2026-09-01 bangordailynews.com: The Latest : Army Secretary Dan Driscoll is stepping down , White House says\n2026-09-01 clickorlando.com: The Latest : Army Secretary Dan Driscoll is stepping down , White House says\n2026-09-01 averyjournal.com: The Latest : Army Secretary Dan Driscoll is stepping down , White House says",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_ballroom-build-can",
-    "source": "news",
-    "ts": 1788497097432,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.287,
-      "articles": [
-        {
-          "title": "White House ballroom cleared for now , but question remains : Can president legally use donations to build it ? ",
-          "url": "http://www.southernminn.com/around_the_web/news/white-house-ballroom-cleared-for-now-but-question-remains-can-president-legally-use-donations-to/article_b24dd9fa-30ae-5f12-92ac-6cb873531c38.html",
-          "domain": "southernminn.com",
-          "seendate": "2026-09-01T15:30:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/southernminn.com/content/tncms/assets/v3/editorial/9/b4/9b444c07-20fb-598e-ac2f-cc8848ec5334/6a96de320dcf1.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "White House ballroom cleared for now , but question remains : Can president legally use donations to build it ? ",
-          "url": "https://www.suncommercial.com/banner_graphic/news/national/article_48a22c97-9ffd-5b50-8d13-a7532a62cf27.html",
-          "domain": "suncommercial.com",
-          "seendate": "2026-09-01T15:30:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/suncommercial.com/content/tncms/assets/v3/editorial/0/ee/0ee66822-88e3-5b47-8b97-67685b5f8309/6a96ddfd6b5e3.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "White House ballroom cleared for now , but question remains : Can president legally use donations to build it ? ",
-          "url": "https://www.bransontrilakesnews.com/news/national/article_8808dc2d-5c98-57a4-9e4b-d4596a2b23fe.html",
-          "domain": "bransontrilakesnews.com",
-          "seendate": "2026-09-01T15:30:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/bransontrilakesnews.com/content/tncms/assets/v3/editorial/c/f3/cf3e35bc-997c-5e78-9cf5-f24b10ef9c5b/6a96de3bb1195.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "White House ballroom cleared for now , but question remains : Can president legally use donations to build it ? ",
-          "url": "http://www.wyomingnews.com/news/national/white-house-ballroom-cleared-for-now-but-question-remains-can-president-legally-use-donations-to/article_cabd4ef6-770a-57a8-aa2b-d4d854d25afa.html",
-          "domain": "wyomingnews.com",
-          "seendate": "2026-09-01T15:00:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/wyomingnews.com/content/tncms/assets/v3/editorial/8/79/879c13bb-545f-56dc-bf34-65665624c159/6a96ddf9eac28.image.jpg?crop=1763%2C926%2C0%2C124"
-        }
-      ]
-    },
-    "title": "White House ballroom cleared for now , but question remains : Can president legally use donations to build it ? ",
-    "summary": "2026-09-01 southernminn.com: White House ballroom cleared for now , but question remains : Can president legally use donations to build it ? \n2026-09-01 suncommercial.com: White House ballroom cleared for now , but question remains : Can president legally use donations to build it ? \n2026-09-01 bransontrilakesnews.com: White House ballroom cleared for now , but question remains : Can president legally use donations to build it ? \n2026-09-01 wyomingnews.com: White House ballroom cleared for now , but question remains : Can president legally use donations to build it ? ",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
