@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-09-09T04:54:22.828Z · 18 legislative + 9 news (GDELT, 3d)
+// 2026-09-09T11:35:22.450Z · 18 legislative + 9 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1788929614306,
+    "ts": 1788953688383,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.849,
+      "salience": 0.848,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -918,11 +918,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1788929614306,
+    "ts": 1788953688384,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.785,
+      "salience": 0.784,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -1819,11 +1819,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1788929614305,
+    "ts": 1788953688383,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.626,
+      "salience": 0.624,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -2073,11 +2073,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1788929614305,
+    "ts": 1788953688383,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.617,
+      "salience": 0.616,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -2346,11 +2346,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1788929614306,
+    "ts": 1788953688383,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.58,
+      "salience": 0.578,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -3625,11 +3625,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1788929614305,
+    "ts": 1788953688383,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.535,
+      "salience": 0.533,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3900,11 +3900,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1788929614305,
+    "ts": 1788953688383,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
-      "salience": 0.516,
+      "salience": 0.515,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
       "votes": [
         {
@@ -4174,11 +4174,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1788929614305,
+    "ts": 1788953688383,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.502,
+      "salience": 0.5,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -4445,11 +4445,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1788929614305,
+    "ts": 1788953688383,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.48,
+      "salience": 0.479,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -4972,11 +4972,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1788929614306,
+    "ts": 1788953688383,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.42,
+      "salience": 0.419,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -5852,11 +5852,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1788929614306,
+    "ts": 1788953688383,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.415,
+      "salience": 0.414,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -6728,11 +6728,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1788929614305,
+    "ts": 1788953688383,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.281,
+      "salience": 0.279,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -8131,11 +8131,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1788929614305,
+    "ts": 1788953688383,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.223,
+      "salience": 0.222,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -9024,11 +9024,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1788929614305,
+    "ts": 1788953688383,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.217,
+      "salience": 0.215,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -9939,11 +9939,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1788929614305,
+    "ts": 1788953688383,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.21,
+      "salience": 0.209,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -10827,11 +10827,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1788929614305,
+    "ts": 1788953688383,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.205,
+      "salience": 0.204,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -11748,11 +11748,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1788929614305,
+    "ts": 1788953688383,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.194,
+      "salience": 0.193,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -12666,11 +12666,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1788929614304,
+    "ts": 1788953688382,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.134,
+      "salience": 0.133,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -13563,107 +13563,22 @@ window.PRISM_CANDIDATES = [
     "mts": 1784044297586
   },
   {
-    "cid": "cand_news_arch-block-critics",
-    "source": "news",
-    "ts": 1788929662823,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.996,
-      "articles": [
-        {
-          "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
-          "url": "https://www.fox13now.com/politics/the-president/veterans-critics-intensify-effort-to-block-trumps-proposed-triumphal-arch",
-          "domain": "fox13now.com",
-          "seendate": "2026-09-09T04:15:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/38/be/90ab7de540b28c4ab15a789008f2/ap26100708020265.jpg"
-        },
-        {
-          "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
-          "url": "https://www.wptv.com/politics/the-president/veterans-critics-intensify-effort-to-block-trumps-proposed-triumphal-arch",
-          "domain": "wptv.com",
-          "seendate": "2026-09-09T03:45:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/38/be/90ab7de540b28c4ab15a789008f2/ap26100708020265.jpg"
-        },
-        {
-          "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
-          "url": "https://www.wcpo.com/politics/the-president/veterans-critics-intensify-effort-to-block-trumps-proposed-triumphal-arch",
-          "domain": "wcpo.com",
-          "seendate": "2026-09-09T03:30:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/38/be/90ab7de540b28c4ab15a789008f2/ap26100708020265.jpg"
-        },
-        {
-          "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
-          "url": "https://www.lex18.com/politics/the-president/veterans-critics-intensify-effort-to-block-trumps-proposed-triumphal-arch",
-          "domain": "lex18.com",
-          "seendate": "2026-09-09T03:15:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/38/be/90ab7de540b28c4ab15a789008f2/ap26100708020265.jpg"
-        },
-        {
-          "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
-          "url": "https://www.ksby.com/politics/the-president/veterans-critics-intensify-effort-to-block-trumps-proposed-triumphal-arch",
-          "domain": "ksby.com",
-          "seendate": "2026-09-09T03:00:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/38/be/90ab7de540b28c4ab15a789008f2/ap26100708020265.jpg"
-        },
-        {
-          "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
-          "url": "https://www.kristv.com/politics/the-president/veterans-critics-intensify-effort-to-block-trumps-proposed-triumphal-arch",
-          "domain": "kristv.com",
-          "seendate": "2026-09-09T02:45:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/38/be/90ab7de540b28c4ab15a789008f2/ap26100708020265.jpg"
-        },
-        {
-          "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
-          "url": "https://www.kxxv.com/politics/the-president/veterans-critics-intensify-effort-to-block-trumps-proposed-triumphal-arch",
-          "domain": "kxxv.com",
-          "seendate": "2026-09-09T02:45:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/38/be/90ab7de540b28c4ab15a789008f2/ap26100708020265.jpg"
-        },
-        {
-          "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
-          "url": "https://www.wxyz.com/politics/the-president/veterans-critics-intensify-effort-to-block-trumps-proposed-triumphal-arch",
-          "domain": "wxyz.com",
-          "seendate": "2026-09-09T02:00:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/38/be/90ab7de540b28c4ab15a789008f2/ap26100708020265.jpg"
-        },
-        {
-          "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
-          "url": "https://www.wtvr.com/politics/the-president/veterans-critics-intensify-effort-to-block-trumps-proposed-triumphal-arch",
-          "domain": "wtvr.com",
-          "seendate": "2026-09-09T01:30:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/38/be/90ab7de540b28c4ab15a789008f2/ap26100708020265.jpg"
-        },
-        {
-          "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
-          "url": "https://www.turnto23.com/politics/the-president/veterans-critics-intensify-effort-to-block-trumps-proposed-triumphal-arch",
-          "domain": "turnto23.com",
-          "seendate": "2026-09-09T01:30:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/38/be/90ab7de540b28c4ab15a789008f2/ap26100708020265.jpg"
-        }
-      ]
-    },
-    "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
-    "summary": "2026-09-09 fox13now.com: Veterans , critics intensify effort to block Trump proposed Triumphal Arch\n2026-09-09 wptv.com: Veterans , critics intensify effort to block Trump proposed Triumphal Arch\n2026-09-09 wcpo.com: Veterans , critics intensify effort to block Trump proposed Triumphal Arch\n2026-09-09 lex18.com: Veterans , critics intensify effort to block Trump proposed Triumphal Arch\n2026-09-09 ksby.com: Veterans , critics intensify effort to block Trump proposed Triumphal Arch\n2026-09-09 kristv.com: Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_bunch-lonnie-smithsonian",
     "source": "news",
-    "ts": 1788929662822,
+    "ts": 1788953722446,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.982,
+      "salience": 0.964,
       "articles": [
+        {
+          "title": "Smithsonian head Lonnie Bunch to retire amid Trump administration effort to reshape institution – WTOP News",
+          "url": "https://wtop.com/dc/2026/09/smithsonian-head-lonnie-bunch-to-retire-amid-trump-administration-effort-to-reshape-institution/",
+          "domain": "wtop.com",
+          "seendate": "2026-09-09T05:45:00Z",
+          "image": "https://wtop.com/wp-content/uploads/2026/09/GettyImages-2262709064-scaled.jpg"
+        },
         {
           "title": "Lonnie Bunch to retire from Smithsonian leadership following clash",
           "url": "https://www.nydailynews.com/2026/09/08/lonnie-bunch-retires-smithsonian/",
@@ -13740,18 +13655,117 @@ window.PRISM_CANDIDATES = [
           "domain": "ksat.com",
           "seendate": "2026-09-08T17:30:00Z",
           "image": "https://res.cloudinary.com/graham-media-group/image/upload/c_thumb,q_auto,f_auto,w_700/media/gmg/76CLDVJVIBHUZKCYJ3JQYXHVRU.jpg"
-        },
-        {
-          "title": "Smithsonian head Lonnie Bunch to retire amid Trump administration effort to reshape institution",
-          "url": "https://www.cnn.com/2026/09/08/politics/lonnie-bunch-smithsonian",
-          "domain": "cnn.com",
-          "seendate": "2026-09-08T17:30:00Z",
-          "image": "https://media.cnn.com/api/v1/images/stellar/prod/sipausa-38451092.jpg?c=16x9&q=w_800,c_fill"
         }
       ]
     },
-    "title": "Lonnie Bunch to retire from Smithsonian leadership following clash",
-    "summary": "2026-09-09 nydailynews.com: Lonnie Bunch to retire from Smithsonian leadership following clash\n2026-09-08 citizensvoice.com: Lonnie Bunch to retire from Smithsonian leadership following clash\n2026-09-08 bostonherald.com: Lonnie Bunch to retire from Smithsonian leadership following clash\n2026-09-08 courant.com: Lonnie Bunch to retire from Smithsonian leadership following clash\n2026-09-08 dailyadvance.com: Lonnie Bunch to retire from Smithsonian leadership following clash with Trump administration\n2026-09-08 dailypress.com: Lonnie Bunch to retire from Smithsonian leadership following clash",
+    "title": "Lonnie Bunch to retire from Smithsonian leadership following clash with Trump administration",
+    "summary": "2026-09-09 wtop.com: Smithsonian head Lonnie Bunch to retire amid Trump administration effort to reshape institution – WTOP News\n2026-09-09 nydailynews.com: Lonnie Bunch to retire from Smithsonian leadership following clash\n2026-09-08 citizensvoice.com: Lonnie Bunch to retire from Smithsonian leadership following clash\n2026-09-08 bostonherald.com: Lonnie Bunch to retire from Smithsonian leadership following clash\n2026-09-08 courant.com: Lonnie Bunch to retire from Smithsonian leadership following clash\n2026-09-08 dailyadvance.com: Lonnie Bunch to retire from Smithsonian leadership following clash with Trump administration",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_arch-block-critics",
+    "source": "news",
+    "ts": 1788953722446,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.957,
+      "articles": [
+        {
+          "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
+          "url": "https://www.kshb.com/politics/the-president/veterans-critics-intensify-effort-to-block-trumps-proposed-triumphal-arch",
+          "domain": "kshb.com",
+          "seendate": "2026-09-09T04:45:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/38/be/90ab7de540b28c4ab15a789008f2/ap26100708020265.jpg"
+        },
+        {
+          "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
+          "url": "https://www.fox17online.com/politics/the-president/veterans-critics-intensify-effort-to-block-trumps-proposed-triumphal-arch",
+          "domain": "fox17online.com",
+          "seendate": "2026-09-09T04:45:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/38/be/90ab7de540b28c4ab15a789008f2/ap26100708020265.jpg"
+        },
+        {
+          "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
+          "url": "https://www.fox13now.com/politics/the-president/veterans-critics-intensify-effort-to-block-trumps-proposed-triumphal-arch",
+          "domain": "fox13now.com",
+          "seendate": "2026-09-09T04:15:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/38/be/90ab7de540b28c4ab15a789008f2/ap26100708020265.jpg"
+        },
+        {
+          "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
+          "url": "https://www.wptv.com/politics/the-president/veterans-critics-intensify-effort-to-block-trumps-proposed-triumphal-arch",
+          "domain": "wptv.com",
+          "seendate": "2026-09-09T03:45:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/38/be/90ab7de540b28c4ab15a789008f2/ap26100708020265.jpg"
+        },
+        {
+          "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
+          "url": "https://www.wcpo.com/politics/the-president/veterans-critics-intensify-effort-to-block-trumps-proposed-triumphal-arch",
+          "domain": "wcpo.com",
+          "seendate": "2026-09-09T03:30:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/38/be/90ab7de540b28c4ab15a789008f2/ap26100708020265.jpg"
+        },
+        {
+          "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
+          "url": "https://www.lex18.com/politics/the-president/veterans-critics-intensify-effort-to-block-trumps-proposed-triumphal-arch",
+          "domain": "lex18.com",
+          "seendate": "2026-09-09T03:15:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/38/be/90ab7de540b28c4ab15a789008f2/ap26100708020265.jpg"
+        },
+        {
+          "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
+          "url": "https://www.ksby.com/politics/the-president/veterans-critics-intensify-effort-to-block-trumps-proposed-triumphal-arch",
+          "domain": "ksby.com",
+          "seendate": "2026-09-09T03:00:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/38/be/90ab7de540b28c4ab15a789008f2/ap26100708020265.jpg"
+        },
+        {
+          "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
+          "url": "https://www.kristv.com/politics/the-president/veterans-critics-intensify-effort-to-block-trumps-proposed-triumphal-arch",
+          "domain": "kristv.com",
+          "seendate": "2026-09-09T02:45:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/38/be/90ab7de540b28c4ab15a789008f2/ap26100708020265.jpg"
+        },
+        {
+          "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
+          "url": "https://www.kxxv.com/politics/the-president/veterans-critics-intensify-effort-to-block-trumps-proposed-triumphal-arch",
+          "domain": "kxxv.com",
+          "seendate": "2026-09-09T02:45:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/38/be/90ab7de540b28c4ab15a789008f2/ap26100708020265.jpg"
+        },
+        {
+          "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
+          "url": "https://www.wxyz.com/politics/the-president/veterans-critics-intensify-effort-to-block-trumps-proposed-triumphal-arch",
+          "domain": "wxyz.com",
+          "seendate": "2026-09-09T02:00:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/38/be/90ab7de540b28c4ab15a789008f2/ap26100708020265.jpg"
+        },
+        {
+          "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
+          "url": "https://www.wtvr.com/politics/the-president/veterans-critics-intensify-effort-to-block-trumps-proposed-triumphal-arch",
+          "domain": "wtvr.com",
+          "seendate": "2026-09-09T01:30:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/38/be/90ab7de540b28c4ab15a789008f2/ap26100708020265.jpg"
+        },
+        {
+          "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
+          "url": "https://www.turnto23.com/politics/the-president/veterans-critics-intensify-effort-to-block-trumps-proposed-triumphal-arch",
+          "domain": "turnto23.com",
+          "seendate": "2026-09-09T01:30:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/38/be/90ab7de540b28c4ab15a789008f2/ap26100708020265.jpg"
+        }
+      ]
+    },
+    "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
+    "summary": "2026-09-09 kshb.com: Veterans , critics intensify effort to block Trump proposed Triumphal Arch\n2026-09-09 fox17online.com: Veterans , critics intensify effort to block Trump proposed Triumphal Arch\n2026-09-09 fox13now.com: Veterans , critics intensify effort to block Trump proposed Triumphal Arch\n2026-09-09 wptv.com: Veterans , critics intensify effort to block Trump proposed Triumphal Arch\n2026-09-09 wcpo.com: Veterans , critics intensify effort to block Trump proposed Triumphal Arch\n2026-09-09 lex18.com: Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -13763,12 +13777,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_allow-emergency-mail",
     "source": "news",
-    "ts": 1788929662821,
+    "ts": 1788953722445,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.83,
+      "salience": 0.789,
       "articles": [
         {
           "title": "Trump makes emergency plea to SCOTUS to allow mail - in voting restrictions to proceed",
@@ -13800,17 +13814,17 @@ window.PRISM_CANDIDATES = [
         },
         {
           "title": "Trump makes emergency plea to SCOTUS to allow mail - in voting restrictions to proceed",
-          "url": "https://foxreno.com/news/nation-world/trump-makes-emergency-plea-to-scotus-to-allow-mail-in-voting-restrictions-to-proceed-supreme-court-washington-ballots-executive-order-usps-roy-cooper-democrat-republican-midterm-elections",
-          "domain": "foxreno.com",
-          "seendate": "2026-09-08T01:30:00Z",
-          "image": "https://foxreno.com/resources/media2/16x9/8030/1320/0x420/90/9e426833-475a-4868-87d8-75ee1305e220-GettyImages2282946395.jpg"
-        },
-        {
-          "title": "Trump makes emergency plea to SCOTUS to allow mail - in voting restrictions to proceed",
           "url": "https://kcby.com/news/nation-world/trump-makes-emergency-plea-to-scotus-to-allow-mail-in-voting-restrictions-to-proceed-supreme-court-washington-ballots-executive-order-usps-roy-cooper-democrat-republican-midterm-elections",
           "domain": "kcby.com",
           "seendate": "2026-09-08T01:30:00Z",
           "image": "https://kcby.com/resources/media2/16x9/8030/1320/0x420/90/9e426833-475a-4868-87d8-75ee1305e220-GettyImages2282946395.jpg"
+        },
+        {
+          "title": "Trump makes emergency plea to SCOTUS to allow mail - in voting restrictions to proceed",
+          "url": "https://foxreno.com/news/nation-world/trump-makes-emergency-plea-to-scotus-to-allow-mail-in-voting-restrictions-to-proceed-supreme-court-washington-ballots-executive-order-usps-roy-cooper-democrat-republican-midterm-elections",
+          "domain": "foxreno.com",
+          "seendate": "2026-09-08T01:30:00Z",
+          "image": "https://foxreno.com/resources/media2/16x9/8030/1320/0x420/90/9e426833-475a-4868-87d8-75ee1305e220-GettyImages2282946395.jpg"
         },
         {
           "title": "Trump makes emergency plea to SCOTUS to allow mail - in voting restrictions to proceed",
@@ -13857,7 +13871,7 @@ window.PRISM_CANDIDATES = [
       ]
     },
     "title": "Trump makes emergency plea to SCOTUS to allow mail - in voting restrictions to proceed",
-    "summary": "2026-09-08 fox23.com: Trump makes emergency plea to SCOTUS to allow mail - in voting restrictions to proceed\n2026-09-08 cbs12.com: Trump makes emergency plea to SCOTUS to allow mail - in voting restrictions to proceed\n2026-09-08 upnorthlive.com: Trump makes emergency plea to SCOTUS to allow mail - in voting restrictions to proceed\n2026-09-08 news4sanantonio.com: Trump makes emergency plea to SCOTUS to allow mail - in voting restrictions to proceed\n2026-09-08 foxreno.com: Trump makes emergency plea to SCOTUS to allow mail - in voting restrictions to proceed\n2026-09-08 kcby.com: Trump makes emergency plea to SCOTUS to allow mail - in voting restrictions to proceed",
+    "summary": "2026-09-08 fox23.com: Trump makes emergency plea to SCOTUS to allow mail - in voting restrictions to proceed\n2026-09-08 cbs12.com: Trump makes emergency plea to SCOTUS to allow mail - in voting restrictions to proceed\n2026-09-08 upnorthlive.com: Trump makes emergency plea to SCOTUS to allow mail - in voting restrictions to proceed\n2026-09-08 news4sanantonio.com: Trump makes emergency plea to SCOTUS to allow mail - in voting restrictions to proceed\n2026-09-08 kcby.com: Trump makes emergency plea to SCOTUS to allow mail - in voting restrictions to proceed\n2026-09-08 foxreno.com: Trump makes emergency plea to SCOTUS to allow mail - in voting restrictions to proceed",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -13869,12 +13883,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_candidates-day-elections",
     "source": "news",
-    "ts": 1788929662823,
+    "ts": 1788953722446,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.818,
+      "salience": 0.776,
       "articles": [
         {
           "title": "Midterm elections head into the home stretch as candidates hit Labor Day events",
@@ -13896,13 +13910,6 @@ window.PRISM_CANDIDATES = [
           "domain": "wmur.com",
           "seendate": "2026-09-07T22:45:00Z",
           "image": "https://kubrick.htvapps.com/htv-prod/images/9c45c8e0-cc51-49e0-9ea3-5a75f96a7483.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.00962xh"
-        },
-        {
-          "title": "Midterm elections head into the home stretch as candidates hit Labor Day events",
-          "url": "https://abcnews.com/US/wireStory/midterm-elections-head-home-stretch-candidates-hit-labor-136256946",
-          "domain": "abcnews.com",
-          "seendate": "2026-09-07T22:45:00Z",
-          "image": "https://i.abcnewsfe.com/a/844b8a18-5204-4da1-b726-3e7da3082269/wirestory_bf59e0d457677ae19b84536d96031a47_16x9.jpg"
         },
         {
           "title": "Midterm elections head into the home stretch as candidates hit Labor Day events",
@@ -13959,11 +13966,18 @@ window.PRISM_CANDIDATES = [
           "domain": "sandiegouniontribune.com",
           "seendate": "2026-09-07T20:30:00Z",
           "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/09/Election_2_26_Maine_Senate_651_6-1.jpg"
+        },
+        {
+          "title": "Midterm elections head into the home stretch as candidates hit Labor Day events",
+          "url": "https://www.wyff4.com/article/midterm-elections-candidates-labor-day-events/73633895",
+          "domain": "wyff4.com",
+          "seendate": "2026-09-07T20:15:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/9c45c8e0-cc51-49e0-9ea3-5a75f96a7483.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.00962xh"
         }
       ]
     },
     "title": "Midterm elections head into the home stretch as candidates hit Labor Day events",
-    "summary": "2026-09-07 wfmj.com: Midterm elections head into the home stretch as candidates hit Labor Day events\n2026-09-07 kcra.com: Midterm elections head into the home stretch as candidates hit Labor Day events\n2026-09-07 wmur.com: Midterm elections head into the home stretch as candidates hit Labor Day events\n2026-09-07 abcnews.com: Midterm elections head into the home stretch as candidates hit Labor Day events\n2026-09-07 wdsu.com: Midterm elections head into the home stretch as candidates hit Labor Day events\n2026-09-07 wesh.com: Midterm elections head into the home stretch as candidates hit Labor Day events",
+    "summary": "2026-09-07 wfmj.com: Midterm elections head into the home stretch as candidates hit Labor Day events\n2026-09-07 kcra.com: Midterm elections head into the home stretch as candidates hit Labor Day events\n2026-09-07 wmur.com: Midterm elections head into the home stretch as candidates hit Labor Day events\n2026-09-07 wdsu.com: Midterm elections head into the home stretch as candidates hit Labor Day events\n2026-09-07 wesh.com: Midterm elections head into the home stretch as candidates hit Labor Day events\n2026-09-07 breitbart.com: Midterm elections head into the home stretch as candidates hit Labor Day events",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -13975,12 +13989,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_allow-asks-ballot",
     "source": "news",
-    "ts": 1788929662822,
+    "ts": 1788953722445,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.647,
+      "salience": 0.606,
       "articles": [
         {
           "title": "Trump asks Supreme Court to allow new mail ballot restrictions before midterms",
@@ -14079,14 +14093,57 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_change-court-economics",
+    "cid": "cand_news_america-been-congress",
     "source": "news",
-    "ts": 1788929662821,
+    "ts": 1788953722444,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.628,
+      "salience": 0.597,
+      "articles": [
+        {
+          "title": "A more perfect union ? Congress has been the place where America tries to resolve its problems",
+          "url": "https://abcnews.com/Politics/wireStory/perfect-union-congress-place-america-resolve-problems-136293018",
+          "domain": "abcnews.com",
+          "seendate": "2026-09-09T08:45:00Z",
+          "image": "https://i.abcnewsfe.com/a/4533e783-9437-472e-8c61-2f4c945cc119/wirestory_2dd382bccfaaeb9c06a2544648d60f9f_16x9.jpg"
+        },
+        {
+          "title": "A more perfect union ? Congress has been the place where America tries to resolve its problems",
+          "url": "https://www.winchesterstar.com/associated_press/washington/a-more-perfect-union-congress-has-been-the-place-where-america-tries-to-resolve-its/article_0daa5349-acbc-56ab-9941-c58bd07fa980.html",
+          "domain": "winchesterstar.com",
+          "seendate": "2026-09-09T08:00:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/winchesterstar.com/content/tncms/assets/v3/editorial/a/33/a338c947-4732-5939-9d8e-0620acd464ae/6aa0da9c6b902.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
+        {
+          "title": "A more perfect union ? Congress has been the place where America tries to resolve its problems",
+          "url": "https://www.yahoo.com/news/politics/articles/more-perfect-union-congress-place-040313504.html",
+          "domain": "yahoo.com",
+          "seendate": "2026-09-09T04:45:00Z",
+          "image": "https://s.yimg.com/lo/mysterio/api/f7a961790eb98764fba390959eb740353c8495137de7b6d2f3a9504449b09a18/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fap.org%2F8a5b75d130c3df715d22a50a6c5bf28c.jpg"
+        }
+      ]
+    },
+    "title": "A more perfect union ? Congress has been the place where America tries to resolve its problems",
+    "summary": "2026-09-09 abcnews.com: A more perfect union ? Congress has been the place where America tries to resolve its problems\n2026-09-09 winchesterstar.com: A more perfect union ? Congress has been the place where America tries to resolve its problems\n2026-09-09 yahoo.com: A more perfect union ? Congress has been the place where America tries to resolve its problems",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_change-court-economics",
+    "source": "news",
+    "ts": 1788953722444,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.587,
       "articles": [
         {
           "title": "Supreme Court rulings change the economics of political party spending",
@@ -14104,100 +14161,22 @@ window.PRISM_CANDIDATES = [
         },
         {
           "title": "Supreme Court rulings change the economics of political party spending",
-          "url": "https://abc3340.com/news/connect-to-congress/supreme-court-rulings-change-the-economics-of-political-party-spending-fcc-election-rules-midterms-politics-congress",
-          "domain": "abc3340.com",
-          "seendate": "2026-09-08T20:15:00Z",
-          "image": "https://abc3340.com/resources/media2/16x9/5000/1320/0x261/90/3258d3c1-6920-419d-a7b2-332cf3633b8e-GettyImages22778563601.jpg"
-        },
-        {
-          "title": "Supreme Court rulings change the economics of political party spending",
           "url": "https://okcfox.com/news/connect-to-congress/supreme-court-rulings-change-the-economics-of-political-party-spending-fcc-election-rules-midterms-politics-congress",
           "domain": "okcfox.com",
           "seendate": "2026-09-08T20:15:00Z",
           "image": "https://okcfox.com/resources/media2/16x9/5000/1320/0x261/90/3258d3c1-6920-419d-a7b2-332cf3633b8e-GettyImages22778563601.jpg"
+        },
+        {
+          "title": "Supreme Court rulings change the economics of political party spending",
+          "url": "https://abc3340.com/news/connect-to-congress/supreme-court-rulings-change-the-economics-of-political-party-spending-fcc-election-rules-midterms-politics-congress",
+          "domain": "abc3340.com",
+          "seendate": "2026-09-08T20:15:00Z",
+          "image": "https://abc3340.com/resources/media2/16x9/5000/1320/0x261/90/3258d3c1-6920-419d-a7b2-332cf3633b8e-GettyImages22778563601.jpg"
         }
       ]
     },
     "title": "Supreme Court rulings change the economics of political party spending",
-    "summary": "2026-09-08 cbs6albany.com: Supreme Court rulings change the economics of political party spending\n2026-09-08 kval.com: Supreme Court rulings change the economics of political party spending\n2026-09-08 abc3340.com: Supreme Court rulings change the economics of political party spending\n2026-09-08 okcfox.com: Supreme Court rulings change the economics of political party spending",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_cards-election-enters",
-    "source": "news",
-    "ts": 1788929662823,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.586,
-      "articles": [
-        {
-          "title": "A whiplash election year enters its final stretch as Trump holds wild cards",
-          "url": "https://www.twincities.com/2026/09/06/a-whiplash-election-year-enters-its-final-stretch-as-trump-holds-wild-cards/",
-          "domain": "twincities.com",
-          "seendate": "2026-09-07T04:15:00Z",
-          "image": "https://www.twincities.com/wp-content/uploads/2026/09/Trump_741_7-1.jpg"
-        },
-        {
-          "title": "A whiplash election year enters its final stretch as Trump holds wild cards",
-          "url": "https://www.boston.com/news/politics/2026/09/06/a-whiplash-election-year-enters-its-final-stretch-as-trump-holds-wild-cards/",
-          "domain": "boston.com",
-          "seendate": "2026-09-06T17:45:00Z",
-          "image": "https://bdc2020.o0bc.com/wp-content/uploads/2026/09/Trump_741_7-6a9d55c26c6f2-768x432.jpg"
-        },
-        {
-          "title": "A whiplash election year enters its final stretch as Trump holds wild cards",
-          "url": "https://www.chicagotribune.com/2026/09/06/2026-midterms-final-stretch/",
-          "domain": "chicagotribune.com",
-          "seendate": "2026-09-06T17:45:00Z",
-          "image": "https://www.chicagotribune.com/wp-content/uploads/2026/09/Trump_741_7-1.jpg"
-        },
-        {
-          "title": "A whiplash election year enters its final stretch as Trump holds wild cards",
-          "url": "https://www.orlandosentinel.com/2026/09/06/a-whiplash-election-year-enters-its-final-stretch-as-trump-holds-wild-cards/",
-          "domain": "orlandosentinel.com",
-          "seendate": "2026-09-06T16:30:00Z",
-          "image": "https://www.orlandosentinel.com/wp-content/uploads/2026/09/Trump_741_7-1.jpg"
-        },
-        {
-          "title": "A whiplash election year enters its final stretch as Trump holds wild cards",
-          "url": "https://www.sandiegouniontribune.com/2026/09/06/a-whiplash-election-year-enters-its-final-stretch-as-trump-holds-wild-cards/",
-          "domain": "sandiegouniontribune.com",
-          "seendate": "2026-09-06T15:30:00Z",
-          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/09/Trump_741_7-1.jpg"
-        },
-        {
-          "title": "A whiplash election year enters its final stretch as Trump holds wild cards",
-          "url": "https://www.ksat.com/news/politics/2026/09/06/a-whiplash-election-year-enters-its-final-stretch-as-trump-holds-wild-cards/",
-          "domain": "ksat.com",
-          "seendate": "2026-09-06T14:00:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/c_thumb,q_auto,f_auto,w_700/media/gmg/QWBAID6RJJHQBDCM6OFWQU6H7E.jpg"
-        },
-        {
-          "title": "A whiplash election year enters its final stretch as Trump holds wild cards",
-          "url": "https://www.news4jax.com/news/politics/2026/09/06/a-whiplash-election-year-enters-its-final-stretch-as-trump-holds-wild-cards/",
-          "domain": "news4jax.com",
-          "seendate": "2026-09-06T13:15:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/c_thumb,q_auto,f_auto,w_700/media/gmg/QWBAID6RJJHQBDCM6OFWQU6H7E.jpg"
-        },
-        {
-          "title": "A whiplash election year enters its final stretch as Trump holds wild cards",
-          "url": "https://www.clickondetroit.com/news/politics/2026/09/06/a-whiplash-election-year-enters-its-final-stretch-as-trump-holds-wild-cards/",
-          "domain": "clickondetroit.com",
-          "seendate": "2026-09-06T13:00:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/c_thumb,q_auto,f_auto,w_700/media/gmg/QWBAID6RJJHQBDCM6OFWQU6H7E.jpg"
-        }
-      ]
-    },
-    "title": "A whiplash election year enters its final stretch as Trump holds wild cards",
-    "summary": "2026-09-07 twincities.com: A whiplash election year enters its final stretch as Trump holds wild cards\n2026-09-06 boston.com: A whiplash election year enters its final stretch as Trump holds wild cards\n2026-09-06 chicagotribune.com: A whiplash election year enters its final stretch as Trump holds wild cards\n2026-09-06 orlandosentinel.com: A whiplash election year enters its final stretch as Trump holds wild cards\n2026-09-06 sandiegouniontribune.com: A whiplash election year enters its final stretch as Trump holds wild cards\n2026-09-06 ksat.com: A whiplash election year enters its final stretch as Trump holds wild cards",
+    "summary": "2026-09-08 cbs6albany.com: Supreme Court rulings change the economics of political party spending\n2026-09-08 kval.com: Supreme Court rulings change the economics of political party spending\n2026-09-08 okcfox.com: Supreme Court rulings change the economics of political party spending\n2026-09-08 abc3340.com: Supreme Court rulings change the economics of political party spending",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -14209,12 +14188,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_administration-ballot-court",
     "source": "news",
-    "ts": 1788929662822,
+    "ts": 1788953722446,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.536,
+      "salience": 0.494,
       "articles": [
         {
           "title": "Trump administration files another Supreme Court emergency appeal over USPS mail ballot rules",
@@ -14285,40 +14264,61 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_building-case-crocodile",
+    "cid": "cand_news_cards-election-enters",
     "source": "news",
-    "ts": 1788929662822,
+    "ts": 1788953722446,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.216,
+      "salience": 0.369,
       "articles": [
         {
-          "title": "What a Nile crocodile case means for Trump DC building projects",
-          "url": "https://edition.cnn.com/2026/09/06/politics/trump-washington-building-projects-nile-crocodile",
-          "domain": "edition.cnn.com",
+          "title": "A whiplash election year enters its final stretch as Trump holds wild cards",
+          "url": "https://www.boston.com/news/politics/2026/09/06/a-whiplash-election-year-enters-its-final-stretch-as-trump-holds-wild-cards/",
+          "domain": "boston.com",
+          "seendate": "2026-09-06T17:45:00Z",
+          "image": "https://bdc2020.o0bc.com/wp-content/uploads/2026/09/Trump_741_7-6a9d55c26c6f2-768x432.jpg"
+        },
+        {
+          "title": "A whiplash election year enters its final stretch as Trump holds wild cards",
+          "url": "https://www.chicagotribune.com/2026/09/06/2026-midterms-final-stretch/",
+          "domain": "chicagotribune.com",
+          "seendate": "2026-09-06T17:45:00Z",
+          "image": "https://www.chicagotribune.com/wp-content/uploads/2026/09/Trump_741_7-1.jpg"
+        },
+        {
+          "title": "A whiplash election year enters its final stretch as Trump holds wild cards",
+          "url": "https://www.orlandosentinel.com/2026/09/06/a-whiplash-election-year-enters-its-final-stretch-as-trump-holds-wild-cards/",
+          "domain": "orlandosentinel.com",
+          "seendate": "2026-09-06T16:30:00Z",
+          "image": "https://www.orlandosentinel.com/wp-content/uploads/2026/09/Trump_741_7-1.jpg"
+        },
+        {
+          "title": "A whiplash election year enters its final stretch as Trump holds wild cards",
+          "url": "https://www.sandiegouniontribune.com/2026/09/06/a-whiplash-election-year-enters-its-final-stretch-as-trump-holds-wild-cards/",
+          "domain": "sandiegouniontribune.com",
+          "seendate": "2026-09-06T15:30:00Z",
+          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/09/Trump_741_7-1.jpg"
+        },
+        {
+          "title": "A whiplash election year enters its final stretch as Trump holds wild cards",
+          "url": "https://www.ksat.com/news/politics/2026/09/06/a-whiplash-election-year-enters-its-final-stretch-as-trump-holds-wild-cards/",
+          "domain": "ksat.com",
+          "seendate": "2026-09-06T14:00:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/c_thumb,q_auto,f_auto,w_700/media/gmg/QWBAID6RJJHQBDCM6OFWQU6H7E.jpg"
+        },
+        {
+          "title": "A whiplash election year enters its final stretch as Trump holds wild cards",
+          "url": "https://www.clickondetroit.com/news/politics/2026/09/06/a-whiplash-election-year-enters-its-final-stretch-as-trump-holds-wild-cards/",
+          "domain": "clickondetroit.com",
           "seendate": "2026-09-06T13:00:00Z",
-          "image": "https://media.cnn.com/api/v1/images/stellar/prod/2023-05-25t000000z-1982532526-rc2n51aku048-rtrmadp-3-emirates-park-crocodile.jpg?c=16x9&q=w_800,c_fill"
-        },
-        {
-          "title": "What a Nile crocodile case means for Trump DC building projects",
-          "url": "https://www.yahoo.com/news/politics/articles/nile-crocodile-case-means-trump-090029398.html",
-          "domain": "yahoo.com",
-          "seendate": "2026-09-06T11:15:00Z",
-          "image": "https://s.yimg.com/lo/mysterio/api/c2637b0bae97b8a3c3aa8c04945573d58394f998851a41cd7964988880f8f39a/lightyear_networkapi/resizefill_w960_h540%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fcnn_articles_875%2Fb108f3686fda817f190b055c5f9e623c.jpg"
-        },
-        {
-          "title": "What a Nile crocodile case means for Trump DC building projects",
-          "url": "https://us.cnn.com/2026/09/06/politics/trump-washington-building-projects-nile-crocodile",
-          "domain": "us.cnn.com",
-          "seendate": "2026-09-06T10:30:00Z",
-          "image": "https://media.cnn.com/api/v1/images/stellar/prod/2023-05-25t000000z-1982532526-rc2n51aku048-rtrmadp-3-emirates-park-crocodile.jpg?c=16x9&q=w_800,c_fill"
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/c_thumb,q_auto,f_auto,w_700/media/gmg/QWBAID6RJJHQBDCM6OFWQU6H7E.jpg"
         }
       ]
     },
-    "title": "What a Nile crocodile case means for Trump DC building projects",
-    "summary": "2026-09-06 edition.cnn.com: What a Nile crocodile case means for Trump DC building projects\n2026-09-06 yahoo.com: What a Nile crocodile case means for Trump DC building projects\n2026-09-06 us.cnn.com: What a Nile crocodile case means for Trump DC building projects",
+    "title": "A whiplash election year enters its final stretch as Trump holds wild cards",
+    "summary": "2026-09-06 boston.com: A whiplash election year enters its final stretch as Trump holds wild cards\n2026-09-06 chicagotribune.com: A whiplash election year enters its final stretch as Trump holds wild cards\n2026-09-06 orlandosentinel.com: A whiplash election year enters its final stretch as Trump holds wild cards\n2026-09-06 sandiegouniontribune.com: A whiplash election year enters its final stretch as Trump holds wild cards\n2026-09-06 ksat.com: A whiplash election year enters its final stretch as Trump holds wild cards\n2026-09-06 clickondetroit.com: A whiplash election year enters its final stretch as Trump holds wild cards",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
