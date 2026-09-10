@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-09-10T04:56:25.986Z · 18 legislative + 9 news (GDELT, 3d)
+// 2026-09-10T11:31:48.811Z · 18 legislative + 7 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1789016152411,
+    "ts": 1789039891121,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.845,
+      "salience": 0.844,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -918,11 +918,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1789016152411,
+    "ts": 1789039891122,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.78,
+      "salience": 0.779,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -1819,11 +1819,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1789016152410,
+    "ts": 1789039891121,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.621,
+      "salience": 0.62,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -2073,11 +2073,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1789016152410,
+    "ts": 1789039891121,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.613,
+      "salience": 0.611,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -2346,11 +2346,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1789016152410,
+    "ts": 1789039891121,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.575,
+      "salience": 0.574,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -3625,11 +3625,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1789016152410,
+    "ts": 1789039891121,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.53,
+      "salience": 0.529,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3900,11 +3900,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1789016152410,
+    "ts": 1789039891121,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
-      "salience": 0.511,
+      "salience": 0.51,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
       "votes": [
         {
@@ -4174,11 +4174,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1789016152410,
+    "ts": 1789039891121,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.497,
+      "salience": 0.496,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -4445,11 +4445,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1789016152410,
+    "ts": 1789039891121,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.475,
+      "salience": 0.474,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -4972,11 +4972,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1789016152411,
+    "ts": 1789039891121,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.416,
+      "salience": 0.414,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -5852,11 +5852,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1789016152411,
+    "ts": 1789039891121,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.411,
+      "salience": 0.41,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -6728,11 +6728,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1789016152410,
+    "ts": 1789039891121,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.276,
+      "salience": 0.275,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -8131,11 +8131,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1789016152410,
+    "ts": 1789039891121,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.219,
+      "salience": 0.218,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -9024,11 +9024,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1789016152410,
+    "ts": 1789039891121,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.212,
+      "salience": 0.211,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -9939,11 +9939,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1789016152410,
+    "ts": 1789039891121,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.205,
+      "salience": 0.204,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -10827,11 +10827,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1789016152410,
+    "ts": 1789039891121,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.201,
+      "salience": 0.2,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -11748,11 +11748,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1789016152410,
+    "ts": 1789039891121,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.19,
+      "salience": 0.188,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -12666,11 +12666,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1789016152409,
+    "ts": 1789039891120,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.13,
+      "salience": 0.128,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -13563,14 +13563,120 @@ window.PRISM_CANDIDATES = [
     "mts": 1784044297586
   },
   {
-    "cid": "cand_news_court-map-missouri",
+    "cid": "cand_news_000-gop-trump",
     "source": "news",
-    "ts": 1789016185981,
+    "ts": 1789039908804,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.991,
+      "salience": 0.997,
+      "articles": [
+        {
+          "title": "Trump pledges to give every US adult $5 , 000 if GOP wins midterms",
+          "url": "https://www.kfvs12.com/2026/09/10/trump-makes-dubious-pledge-give-every-us-adult-5000-if-gop-keeps-control-congress/",
+          "domain": "kfvs12.com",
+          "seendate": "2026-09-10T11:00:00Z",
+          "image": "https://gray-kfvs12-prod.gtv-cdn.com/resizer/v2/S3US6R5Y7VHWPN7TFCY5JLDMTA.jpg?auth=fb03f7c9a34b08a01bb98dc64c235a7aa79c6c02e7999939d60a2548da9b14a5&smart=true"
+        },
+        {
+          "title": "Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins",
+          "url": "https://www.aol.com/articles/trump-hoping-salvage-midterms-makes-030812000.html",
+          "domain": "aol.com",
+          "seendate": "2026-09-10T10:15:00Z",
+          "image": "https://hermes.media.static.aol.com/media/2026/09/10/b9e29237-25bc-37c4-a85b-0b700c862579/fd9bbc3d-ebfa-4b2d-8775-4da980264f7d.jpg"
+        },
+        {
+          "title": "Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins",
+          "url": "http://www.dailyadvance.com/news/national/trump-hoping-to-salvage-midterms-makes-dubious-pledge-to-give-every-us-adult-5-000/article_b1a9943b-429a-5927-bb84-22f373fa4409.html",
+          "domain": "dailyadvance.com",
+          "seendate": "2026-09-10T10:15:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/dailyadvance.com/content/tncms/assets/v3/editorial/8/57/85702e53-e8be-53e7-b951-2d8f89efa718/6aa24bf66a11c.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
+        {
+          "title": "ELECTION 2026 | Trump makes pledge to give every U . S . adult $5 , 000 if GOP wins",
+          "url": "https://www.texarkanagazette.com/news/2026/sep/10/election-2026-trump-makes-pledge-to-give-every-us/",
+          "domain": "texarkanagazette.com",
+          "seendate": "2026-09-10T10:15:00Z",
+          "image": "https://wehco.media.clients.ellingtoncms.com/imports/adg/img/2026/09/10/213621506_213621506-455d4638c7514fbcb813741b672e2ac2_t1200.jpg?57a0c2296240c280e9492005c3cad63e7cbe80f4"
+        },
+        {
+          "title": "Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins - Boston News , Weather , Sports",
+          "url": "https://whdh.com/news/trump-hoping-to-salvage-midterms-makes-dubious-pledge-to-give-every-us-adult-5000-if-gop-wins/",
+          "domain": "whdh.com",
+          "seendate": "2026-09-10T10:00:00Z",
+          "image": null
+        },
+        {
+          "title": "Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins",
+          "url": "https://www.durangoherald.com/articles/associated-press/trump-hoping-to-salvage-midterms-makes-dubious-pledge-to-give-every-us-adult-5000-if-gop-wins/",
+          "domain": "durangoherald.com",
+          "seendate": "2026-09-10T10:00:00Z",
+          "image": "https://www.durangoherald.com/wp-content/uploads/2026/06/DurangoHeraldB-web.png"
+        },
+        {
+          "title": "Trump pledges $5 , 000  dividend  to Americans if GOP wins midterms",
+          "url": "https://www.cnbc.com/2026/09/10/trump-dividend-midterms-gop.html",
+          "domain": "cnbc.com",
+          "seendate": "2026-09-10T09:45:00Z",
+          "image": "https://image.cnbcfm.com/api/v1/image/108361004-1789016407038-gettyimages-2294419714-_73a2710_pjrxcicp.jpeg?v=1789016417"
+        },
+        {
+          "title": "Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins",
+          "url": "http://www.idahostatejournal.com/news/national/trump-hoping-to-salvage-midterms-makes-dubious-pledge-to-give-every-us-adult-5-000/article_e9c4a813-8afa-56b6-ae10-4de98e47b2f9.html",
+          "domain": "idahostatejournal.com",
+          "seendate": "2026-09-10T09:30:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/idahostatejournal.com/content/tncms/assets/v3/editorial/8/52/852c8c5a-81f8-5a1e-b2c6-522efd1195c4/6aa20d74cf71d.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
+        {
+          "title": "Trump pledges to give every US adult $5 , 000 if GOP wins midterms",
+          "url": "https://www.wabi.tv:443/2026/09/10/trump-makes-dubious-pledge-give-every-us-adult-5000-if-gop-keeps-control-congress/",
+          "domain": "wabi.tv",
+          "seendate": "2026-09-10T09:00:00Z",
+          "image": "https://gray-wabi-prod.gtv-cdn.com/resizer/v2/S3US6R5Y7VHWPN7TFCY5JLDMTA.jpg?auth=fb03f7c9a34b08a01bb98dc64c235a7aa79c6c02e7999939d60a2548da9b14a5&smart=true"
+        },
+        {
+          "title": "Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins",
+          "url": "http://www.hngnews.com/nation_world/trump-hoping-to-salvage-midterms-makes-dubious-pledge-to-give-every-us-adult-5-000/article_313df73d-dfde-5bc8-8322-6fe86eac2327.html",
+          "domain": "hngnews.com",
+          "seendate": "2026-09-10T09:00:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/hngnews.com/content/tncms/assets/v3/editorial/a/d7/ad7b73bc-a1d4-5553-850a-47b727f82072/6aa24c7dc7b0c.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
+        {
+          "title": "Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins",
+          "url": "https://www.erienewsnow.com/news/politics/trump-hoping-to-salvage-midterms-makes-dubious-pledge-to-give-every-us-adult-5-000/article_643cca70-1345-526c-8646-ac9ecf1c81a1.html",
+          "domain": "erienewsnow.com",
+          "seendate": "2026-09-10T08:30:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/erienewsnow.com/content/tncms/custom/image/b278f54b-830b-4f05-9350-cb090f41a0d4.png"
+        },
+        {
+          "title": "Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins",
+          "url": "http://www.somdnews.com/ap/nation/trump-hoping-to-salvage-midterms-makes-dubious-pledge-to-give-every-us-adult-5-000/article_94bf58d0-7094-51d4-8d43-7523ed732284.html",
+          "domain": "somdnews.com",
+          "seendate": "2026-09-10T08:15:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/somdnews.com/content/tncms/assets/v3/editorial/f/e6/fe646ae8-b273-5741-b6d0-aa2d7cadbc93/6aa24bedb7728.image.jpg?crop=1763%2C926%2C0%2C124"
+        }
+      ]
+    },
+    "title": "Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins",
+    "summary": "2026-09-10 kfvs12.com: Trump pledges to give every US adult $5 , 000 if GOP wins midterms\n2026-09-10 aol.com: Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins\n2026-09-10 dailyadvance.com: Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins\n2026-09-10 texarkanagazette.com: ELECTION 2026 | Trump makes pledge to give every U . S . adult $5 , 000 if GOP wins\n2026-09-10 whdh.com: Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins - Boston News , Weather , Sports\n2026-09-10 durangoherald.com: Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_court-map-missouri",
+    "source": "news",
+    "ts": 1789039908807,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.95,
       "articles": [
         {
           "title": "Missouri Redistricting Map Heads Back To Supreme Court",
@@ -13671,12 +13777,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_america-been-congress",
     "source": "news",
-    "ts": 1789016185978,
+    "ts": 1789039908804,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.949,
+      "salience": 0.908,
       "articles": [
         {
           "title": "Congress has been the place where America tries to resolve problems",
@@ -13768,139 +13874,47 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_bunch-leadership-lonnie",
+    "cid": "cand_news_centers-gop-himself",
     "source": "news",
-    "ts": 1789016185982,
+    "ts": 1789039908804,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.722,
+      "salience": 0.648,
       "articles": [
         {
-          "title": "Lonnie Bunch to retire from Smithsonian leadership following clash",
-          "url": "https://www.nydailynews.com/2026/09/08/lonnie-bunch-retires-smithsonian/",
-          "domain": "nydailynews.com",
-          "seendate": "2026-09-09T02:00:00Z",
-          "image": "https://www.nydailynews.com/wp-content/uploads/2026/09/AP26186612560803.jpg"
+          "title": "The Latest : Trump centers himself in pitch to midterm voters , promising payouts if the GOP wins",
+          "url": "https://www.local10.com/news/national/2026/09/09/the-latest-trump-centers-himself-in-pitch-to-midterm-voters-promising-payouts-if-the-gop-wins/",
+          "domain": "local10.com",
+          "seendate": "2026-09-10T08:00:00Z",
+          "image": "https://www.local10.com/resizer/v2/W6QLUNLO6C2UTSESLAJQKR4MCA.jpg?auth=1aec9cf8b00bbec6ccd4a9530ca645cf9f73b73d45fa188f16de19d1d250e33c"
         },
         {
-          "title": "Lonnie Bunch to retire from Smithsonian leadership following clash",
-          "url": "https://www.citizensvoice.com/2026/09/08/lonnie-bunch-retires-smithsonian/",
-          "domain": "citizensvoice.com",
-          "seendate": "2026-09-08T22:00:00Z",
-          "image": "https://www.citizensvoice.com/wp-content/uploads/2026/09/AP26186612560803.jpg"
+          "title": "The Latest : Trump centers himself in pitch to midterm voters , promising payouts if the GOP wins",
+          "url": "http://www.idahostatejournal.com/news/national/the-latest-trump-centers-himself-in-pitch-to-midterm-voters-promising-payouts-if-the-gop/article_2a097309-75f5-5a1b-8eda-5ffe49d8068a.html",
+          "domain": "idahostatejournal.com",
+          "seendate": "2026-09-10T04:30:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/idahostatejournal.com/content/tncms/assets/v3/editorial/b/26/b26205f3-f42c-5a64-9560-7b4522b2ab76/6aa08287b4d27.image.jpg?crop=1763%2C926%2C0%2C124"
         },
         {
-          "title": "Lonnie Bunch to retire from Smithsonian leadership following clash",
-          "url": "https://www.bostonherald.com/2026/09/08/lonnie-bunch-retires-smithsonian/",
-          "domain": "bostonherald.com",
-          "seendate": "2026-09-08T20:45:00Z",
-          "image": "https://www.bostonherald.com/wp-content/uploads/2026/09/AP26186612560803.jpg"
+          "title": "The Latest : Trump centers himself in pitch to midterm voters , promising payouts if the GOP wins",
+          "url": "https://www.dailyfreeman.com/2026/09/09/the-latest-trump-centers-himself-in-pitch-to-midterm-voters-promising-payouts-if-the-gop-wins/",
+          "domain": "dailyfreeman.com",
+          "seendate": "2026-09-10T03:45:00Z",
+          "image": "https://www.dailyfreeman.com/wp-content/uploads/2026/09/Election_2_26_Republicans_6_296.jpg"
         },
         {
-          "title": "Lonnie Bunch to retire from Smithsonian leadership following clash",
-          "url": "https://www.courant.com/2026/09/08/lonnie-bunch-retires-smithsonian/",
-          "domain": "courant.com",
-          "seendate": "2026-09-08T20:45:00Z",
-          "image": "https://www.courant.com/wp-content/uploads/2026/09/AP26186612560803.jpg"
-        },
-        {
-          "title": "Lonnie Bunch to retire from Smithsonian leadership following clash with Trump administration",
-          "url": "http://www.dailyadvance.com/news/national/lonnie-bunch-to-retire-from-smithsonian-leadership-following-clash-with-trump-administration/article_1441c5e7-0759-5116-a69a-2c2ff0639bfd.html",
-          "domain": "dailyadvance.com",
-          "seendate": "2026-09-08T20:30:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/dailyadvance.com/content/tncms/assets/v3/editorial/9/8e/98e4ab29-20b2-5660-9e87-51dc4ccb91f6/6aa0443481f3d.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "Lonnie Bunch to retire from Smithsonian leadership following clash",
-          "url": "https://www.dailypress.com/2026/09/08/lonnie-bunch-retires-smithsonian/",
-          "domain": "dailypress.com",
-          "seendate": "2026-09-08T20:00:00Z",
-          "image": "https://www.dailypress.com/wp-content/uploads/2026/09/AP26186612560803.jpg"
-        },
-        {
-          "title": "Lonnie Bunch to retire from Smithsonian leadership",
-          "url": "https://www.chicagotribune.com/2026/09/08/lonnie-bunch-smithsonian-leadership/",
-          "domain": "chicagotribune.com",
-          "seendate": "2026-09-08T18:00:00Z",
-          "image": "https://www.chicagotribune.com/wp-content/uploads/2026/09/ctc-ENTER_SMITHSONIAN_LEADER_TB_238838991.jpg"
-        },
-        {
-          "title": "Lonnie Bunch to retire from Smithsonian leadership following clash with Trump administration",
-          "url": "https://www.ksat.com/news/politics/2026/09/08/lonnie-bunch-to-retire-from-smithsonian-leadership-following-clash-with-trump-administration/",
-          "domain": "ksat.com",
-          "seendate": "2026-09-08T17:30:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/c_thumb,q_auto,f_auto,w_700/media/gmg/76CLDVJVIBHUZKCYJ3JQYXHVRU.jpg"
+          "title": "The Latest : Trump centers himself in pitch to midterm voters , promising payouts if the GOP wins",
+          "url": "https://www.erienewsnow.com/news/national/the-latest-trump-centers-himself-in-pitch-to-midterm-voters-promising-payouts-if-the-gop/article_52278949-37d9-54a0-95fa-3e915cc14450.html",
+          "domain": "erienewsnow.com",
+          "seendate": "2026-09-10T03:45:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/erienewsnow.com/content/tncms/custom/image/b278f54b-830b-4f05-9350-cb090f41a0d4.png"
         }
       ]
     },
-    "title": "Lonnie Bunch to retire from Smithsonian leadership following clash",
-    "summary": "2026-09-09 nydailynews.com: Lonnie Bunch to retire from Smithsonian leadership following clash\n2026-09-08 citizensvoice.com: Lonnie Bunch to retire from Smithsonian leadership following clash\n2026-09-08 bostonherald.com: Lonnie Bunch to retire from Smithsonian leadership following clash\n2026-09-08 courant.com: Lonnie Bunch to retire from Smithsonian leadership following clash\n2026-09-08 dailyadvance.com: Lonnie Bunch to retire from Smithsonian leadership following clash with Trump administration\n2026-09-08 dailypress.com: Lonnie Bunch to retire from Smithsonian leadership following clash",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_000-adult-every",
-    "source": "news",
-    "ts": 1789016185978,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.721,
-      "articles": [
-        {
-          "title": "Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins",
-          "url": "https://www.clickondetroit.com/news/politics/2026/09/10/trump-hoping-to-salvage-midterms-makes-dubious-pledge-to-give-every-us-adult-5000-if-gop-wins/",
-          "domain": "clickondetroit.com",
-          "seendate": "2026-09-10T04:15:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/c_thumb,q_auto,f_auto,w_700/media/gmg/2JG6MSKZ4RA2VIRRZX6G4HMX3M.jpg"
-        },
-        {
-          "title": "Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins",
-          "url": "https://www.yahoo.com/news/politics/articles/trump-hoping-salvage-midterms-makes-033655093.html",
-          "domain": "yahoo.com",
-          "seendate": "2026-09-10T04:15:00Z",
-          "image": "https://s.yimg.com/lo/mysterio/api/1f5fbbc2f5e93d6f5a4cc4ad8313ee8cc170345dff6b08fe82ab8d0fdc9fd29f/lightyear_networkapi/resizefill_w900_h600%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fwpri_providence_articles_919%2F065adf8fb31293c54b6e3c0c926b9db0.jpg"
-        },
-        {
-          "title": "Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins",
-          "url": "https://www.yahoo.com/news/politics/articles/trump-hoping-salvage-midterms-makes-030812889.html",
-          "domain": "yahoo.com",
-          "seendate": "2026-09-10T04:00:00Z",
-          "image": "https://s.yimg.com/lo/mysterio/api/e44bf9b35f11f8fe88686f3009f617159aa64f84b59622e8c08e363870f72854/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fap.org%2F551ed866101e7518549acb8ec6429220"
-        },
-        {
-          "title": "Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins",
-          "url": "https://www.ksat.com/news/politics/2026/09/10/trump-hoping-to-salvage-midterms-makes-dubious-pledge-to-give-every-us-adult-5000-if-gop-wins/",
-          "domain": "ksat.com",
-          "seendate": "2026-09-10T04:00:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/c_thumb,q_auto,f_auto,w_700/media/gmg/2JG6MSKZ4RA2VIRRZX6G4HMX3M.jpg"
-        },
-        {
-          "title": "Trump pledges to give every US adult $5 , 000 if GOP wins midterms",
-          "url": "https://www.azfamily.com/2026/09/10/trump-makes-dubious-pledge-give-every-us-adult-5000-if-gop-keeps-control-congress/",
-          "domain": "azfamily.com",
-          "seendate": "2026-09-10T04:00:00Z",
-          "image": "https://gray-kpho-prod.gtv-cdn.com/resizer/v2/S3US6R5Y7VHWPN7TFCY5JLDMTA.jpg?auth=fb03f7c9a34b08a01bb98dc64c235a7aa79c6c02e7999939d60a2548da9b14a5&smart=true"
-        },
-        {
-          "title": "Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins",
-          "url": "https://www.dailygazette.com/the_recorder/ap/business/trump-hoping-to-salvage-midterms-makes-dubious-pledge-to-give-every-us-adult-5-000/article_09a60466-4223-51a8-8d4b-8897384c60cb.html",
-          "domain": "dailygazette.com",
-          "seendate": "2026-09-10T04:00:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/dailygazette.com/content/tncms/assets/v3/editorial/1/fe/1feceb9d-6c41-5d5e-a8b1-141bfc29388d/6aa21f29af2c4.image.jpg?crop=1763%2C926%2C0%2C124"
-        }
-      ]
-    },
-    "title": "Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins",
-    "summary": "2026-09-10 clickondetroit.com: Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins\n2026-09-10 yahoo.com: Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins\n2026-09-10 yahoo.com: Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins\n2026-09-10 ksat.com: Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins\n2026-09-10 azfamily.com: Trump pledges to give every US adult $5 , 000 if GOP wins midterms\n2026-09-10 dailygazette.com: Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins",
+    "title": "The Latest : Trump centers himself in pitch to midterm voters , promising payouts if the GOP wins",
+    "summary": "2026-09-10 local10.com: The Latest : Trump centers himself in pitch to midterm voters , promising payouts if the GOP wins\n2026-09-10 idahostatejournal.com: The Latest : Trump centers himself in pitch to midterm voters , promising payouts if the GOP wins\n2026-09-10 dailyfreeman.com: The Latest : Trump centers himself in pitch to midterm voters , promising payouts if the GOP wins\n2026-09-10 erienewsnow.com: The Latest : Trump centers himself in pitch to midterm voters , promising payouts if the GOP wins",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -13912,12 +13926,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_allow-emergency-mail",
     "source": "news",
-    "ts": 1789016185979,
+    "ts": 1789039908804,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.68,
+      "salience": 0.639,
       "articles": [
         {
           "title": "Trump makes emergency plea to SCOTUS to allow mail - in voting restrictions to proceed",
@@ -14016,104 +14030,68 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_arch-block-critics",
+    "cid": "cand_news_bunch-leadership-lonnie",
     "source": "news",
-    "ts": 1789016185982,
+    "ts": 1789039908807,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.629,
+      "salience": 0.625,
       "articles": [
         {
-          "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
-          "url": "https://www.kshb.com/politics/the-president/veterans-critics-intensify-effort-to-block-trumps-proposed-triumphal-arch",
-          "domain": "kshb.com",
-          "seendate": "2026-09-09T04:45:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/38/be/90ab7de540b28c4ab15a789008f2/ap26100708020265.jpg"
-        },
-        {
-          "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
-          "url": "https://www.fox13now.com/politics/the-president/veterans-critics-intensify-effort-to-block-trumps-proposed-triumphal-arch",
-          "domain": "fox13now.com",
-          "seendate": "2026-09-09T04:15:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/38/be/90ab7de540b28c4ab15a789008f2/ap26100708020265.jpg"
-        },
-        {
-          "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
-          "url": "https://www.wptv.com/politics/the-president/veterans-critics-intensify-effort-to-block-trumps-proposed-triumphal-arch",
-          "domain": "wptv.com",
-          "seendate": "2026-09-09T03:45:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/38/be/90ab7de540b28c4ab15a789008f2/ap26100708020265.jpg"
-        },
-        {
-          "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
-          "url": "https://www.wcpo.com/politics/the-president/veterans-critics-intensify-effort-to-block-trumps-proposed-triumphal-arch",
-          "domain": "wcpo.com",
-          "seendate": "2026-09-09T03:30:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/38/be/90ab7de540b28c4ab15a789008f2/ap26100708020265.jpg"
-        },
-        {
-          "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
-          "url": "https://www.wxyz.com/politics/the-president/veterans-critics-intensify-effort-to-block-trumps-proposed-triumphal-arch",
-          "domain": "wxyz.com",
+          "title": "Lonnie Bunch to retire from Smithsonian leadership following clash",
+          "url": "https://www.nydailynews.com/2026/09/08/lonnie-bunch-retires-smithsonian/",
+          "domain": "nydailynews.com",
           "seendate": "2026-09-09T02:00:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/38/be/90ab7de540b28c4ab15a789008f2/ap26100708020265.jpg"
+          "image": "https://www.nydailynews.com/wp-content/uploads/2026/09/AP26186612560803.jpg"
         },
         {
-          "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
-          "url": "https://www.wtvr.com/politics/the-president/veterans-critics-intensify-effort-to-block-trumps-proposed-triumphal-arch",
-          "domain": "wtvr.com",
-          "seendate": "2026-09-09T01:30:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/38/be/90ab7de540b28c4ab15a789008f2/ap26100708020265.jpg"
+          "title": "Lonnie Bunch to retire from Smithsonian leadership following clash",
+          "url": "https://www.citizensvoice.com/2026/09/08/lonnie-bunch-retires-smithsonian/",
+          "domain": "citizensvoice.com",
+          "seendate": "2026-09-08T22:00:00Z",
+          "image": "https://www.citizensvoice.com/wp-content/uploads/2026/09/AP26186612560803.jpg"
+        },
+        {
+          "title": "Lonnie Bunch to retire from Smithsonian leadership following clash",
+          "url": "https://www.bostonherald.com/2026/09/08/lonnie-bunch-retires-smithsonian/",
+          "domain": "bostonherald.com",
+          "seendate": "2026-09-08T20:45:00Z",
+          "image": "https://www.bostonherald.com/wp-content/uploads/2026/09/AP26186612560803.jpg"
+        },
+        {
+          "title": "Lonnie Bunch to retire from Smithsonian leadership following clash",
+          "url": "https://www.courant.com/2026/09/08/lonnie-bunch-retires-smithsonian/",
+          "domain": "courant.com",
+          "seendate": "2026-09-08T20:45:00Z",
+          "image": "https://www.courant.com/wp-content/uploads/2026/09/AP26186612560803.jpg"
+        },
+        {
+          "title": "Lonnie Bunch to retire from Smithsonian leadership following clash",
+          "url": "https://www.dailypress.com/2026/09/08/lonnie-bunch-retires-smithsonian/",
+          "domain": "dailypress.com",
+          "seendate": "2026-09-08T20:00:00Z",
+          "image": "https://www.dailypress.com/wp-content/uploads/2026/09/AP26186612560803.jpg"
+        },
+        {
+          "title": "Lonnie Bunch to retire from Smithsonian leadership",
+          "url": "https://www.chicagotribune.com/2026/09/08/lonnie-bunch-smithsonian-leadership/",
+          "domain": "chicagotribune.com",
+          "seendate": "2026-09-08T18:00:00Z",
+          "image": "https://www.chicagotribune.com/wp-content/uploads/2026/09/ctc-ENTER_SMITHSONIAN_LEADER_TB_238838991.jpg"
+        },
+        {
+          "title": "Lonnie Bunch to retire from Smithsonian leadership following clash with Trump administration",
+          "url": "https://www.ksat.com/news/politics/2026/09/08/lonnie-bunch-to-retire-from-smithsonian-leadership-following-clash-with-trump-administration/",
+          "domain": "ksat.com",
+          "seendate": "2026-09-08T17:30:00Z",
+          "image": "https://res.cloudinary.com/graham-media-group/image/upload/c_thumb,q_auto,f_auto,w_700/media/gmg/76CLDVJVIBHUZKCYJ3JQYXHVRU.jpg"
         }
       ]
     },
-    "title": "Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
-    "summary": "2026-09-09 kshb.com: Veterans , critics intensify effort to block Trump proposed Triumphal Arch\n2026-09-09 fox13now.com: Veterans , critics intensify effort to block Trump proposed Triumphal Arch\n2026-09-09 wptv.com: Veterans , critics intensify effort to block Trump proposed Triumphal Arch\n2026-09-09 wcpo.com: Veterans , critics intensify effort to block Trump proposed Triumphal Arch\n2026-09-09 wxyz.com: Veterans , critics intensify effort to block Trump proposed Triumphal Arch\n2026-09-09 wtvr.com: Veterans , critics intensify effort to block Trump proposed Triumphal Arch",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_centers-gop-himself",
-    "source": "news",
-    "ts": 1789016185979,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.612,
-      "articles": [
-        {
-          "title": "The Latest : Trump centers himself in pitch to midterm voters , promising payouts if the GOP wins",
-          "url": "http://www.idahostatejournal.com/news/national/the-latest-trump-centers-himself-in-pitch-to-midterm-voters-promising-payouts-if-the-gop/article_2a097309-75f5-5a1b-8eda-5ffe49d8068a.html",
-          "domain": "idahostatejournal.com",
-          "seendate": "2026-09-10T04:30:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/idahostatejournal.com/content/tncms/assets/v3/editorial/b/26/b26205f3-f42c-5a64-9560-7b4522b2ab76/6aa08287b4d27.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "The Latest : Trump centers himself in pitch to midterm voters , promising payouts if the GOP wins",
-          "url": "https://www.dailyfreeman.com/2026/09/09/the-latest-trump-centers-himself-in-pitch-to-midterm-voters-promising-payouts-if-the-gop-wins/",
-          "domain": "dailyfreeman.com",
-          "seendate": "2026-09-10T03:45:00Z",
-          "image": "https://www.dailyfreeman.com/wp-content/uploads/2026/09/Election_2_26_Republicans_6_296.jpg"
-        },
-        {
-          "title": "The Latest : Trump centers himself in pitch to midterm voters , promising payouts if the GOP wins",
-          "url": "https://www.erienewsnow.com/news/national/the-latest-trump-centers-himself-in-pitch-to-midterm-voters-promising-payouts-if-the-gop/article_52278949-37d9-54a0-95fa-3e915cc14450.html",
-          "domain": "erienewsnow.com",
-          "seendate": "2026-09-10T03:45:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/erienewsnow.com/content/tncms/custom/image/b278f54b-830b-4f05-9350-cb090f41a0d4.png"
-        }
-      ]
-    },
-    "title": "The Latest : Trump centers himself in pitch to midterm voters , promising payouts if the GOP wins",
-    "summary": "2026-09-10 idahostatejournal.com: The Latest : Trump centers himself in pitch to midterm voters , promising payouts if the GOP wins\n2026-09-10 dailyfreeman.com: The Latest : Trump centers himself in pitch to midterm voters , promising payouts if the GOP wins\n2026-09-10 erienewsnow.com: The Latest : Trump centers himself in pitch to midterm voters , promising payouts if the GOP wins",
+    "title": "Lonnie Bunch to retire from Smithsonian leadership following clash",
+    "summary": "2026-09-09 nydailynews.com: Lonnie Bunch to retire from Smithsonian leadership following clash\n2026-09-08 citizensvoice.com: Lonnie Bunch to retire from Smithsonian leadership following clash\n2026-09-08 bostonherald.com: Lonnie Bunch to retire from Smithsonian leadership following clash\n2026-09-08 courant.com: Lonnie Bunch to retire from Smithsonian leadership following clash\n2026-09-08 dailypress.com: Lonnie Bunch to retire from Smithsonian leadership following clash\n2026-09-08 chicagotribune.com: Lonnie Bunch to retire from Smithsonian leadership",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -14125,12 +14103,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_change-court-economics",
     "source": "news",
-    "ts": 1789016185978,
+    "ts": 1789039908804,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.478,
+      "salience": 0.437,
       "articles": [
         {
           "title": "Supreme Court rulings change the economics of political party spending",
@@ -14164,49 +14142,6 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Supreme Court rulings change the economics of political party spending",
     "summary": "2026-09-08 cbs6albany.com: Supreme Court rulings change the economics of political party spending\n2026-09-08 kval.com: Supreme Court rulings change the economics of political party spending\n2026-09-08 okcfox.com: Supreme Court rulings change the economics of political party spending\n2026-09-08 abc3340.com: Supreme Court rulings change the economics of political party spending",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_candidates-day-elections",
-    "source": "news",
-    "ts": 1789016185982,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.262,
-      "articles": [
-        {
-          "title": "Midterm elections head into the home stretch as candidates hit Labor Day events",
-          "url": "https://www.sandiegouniontribune.com/2026/09/07/midterm-elections-head-into-the-home-stretch-as-candidates-hit-labor-day-events/",
-          "domain": "sandiegouniontribune.com",
-          "seendate": "2026-09-07T20:30:00Z",
-          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/09/Election_2_26_Maine_Senate_651_6-1.jpg"
-        },
-        {
-          "title": "Midterm elections head into the home stretch as candidates hit Labor Day events",
-          "url": "https://www.aol.com/articles/midterm-elections-head-home-stretch-172520000.html",
-          "domain": "aol.com",
-          "seendate": "2026-09-07T19:15:00Z",
-          "image": "https://hermes.media.static.aol.com/media/2026/09/07/cb8ff72a-6950-3096-bcea-c97347800780/5d26fc73-8fe7-4d22-8e95-8a5d0d20e5d7.jpg"
-        },
-        {
-          "title": "Midterm elections head into the home stretch as candidates hit Labor Day events",
-          "url": "https://www.ksat.com/news/politics/2026/09/07/midterm-elections-head-into-the-home-stretch-as-candidates-hit-labor-day-events/",
-          "domain": "ksat.com",
-          "seendate": "2026-09-07T18:30:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/c_thumb,q_auto,f_auto,w_700/media/gmg/4VWBE5IQSRAZHCYDJH62I5VD5I.jpg"
-        }
-      ]
-    },
-    "title": "Midterm elections head into the home stretch as candidates hit Labor Day events",
-    "summary": "2026-09-07 sandiegouniontribune.com: Midterm elections head into the home stretch as candidates hit Labor Day events\n2026-09-07 aol.com: Midterm elections head into the home stretch as candidates hit Labor Day events\n2026-09-07 ksat.com: Midterm elections head into the home stretch as candidates hit Labor Day events",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
