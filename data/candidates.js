@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-09-10T11:31:48.811Z · 18 legislative + 7 news (GDELT, 3d)
+// 2026-09-10T16:33:07.903Z · 18 legislative + 8 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1789039891121,
+    "ts": 1789057972990,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.844,
+      "salience": 0.843,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -918,11 +918,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1789039891122,
+    "ts": 1789057972990,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.779,
+      "salience": 0.778,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -1819,11 +1819,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1789039891121,
+    "ts": 1789057972990,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.62,
+      "salience": 0.619,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -2073,11 +2073,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1789039891121,
+    "ts": 1789057972990,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.611,
+      "salience": 0.61,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -2346,11 +2346,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1789039891121,
+    "ts": 1789057972990,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.574,
+      "salience": 0.573,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -3625,11 +3625,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1789039891121,
+    "ts": 1789057972990,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.529,
+      "salience": 0.528,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3900,11 +3900,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1789039891121,
+    "ts": 1789057972990,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
-      "salience": 0.51,
+      "salience": 0.509,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
       "votes": [
         {
@@ -4174,11 +4174,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1789039891121,
+    "ts": 1789057972990,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.496,
+      "salience": 0.495,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -4445,11 +4445,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1789039891121,
+    "ts": 1789057972990,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.474,
+      "salience": 0.473,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -4972,11 +4972,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1789039891121,
+    "ts": 1789057972990,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.414,
+      "salience": 0.413,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -5852,11 +5852,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1789039891121,
+    "ts": 1789057972990,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.41,
+      "salience": 0.409,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -6728,11 +6728,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1789039891121,
+    "ts": 1789057972990,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.275,
+      "salience": 0.274,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -8131,11 +8131,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1789039891121,
+    "ts": 1789057972990,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.218,
+      "salience": 0.217,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -9024,11 +9024,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1789039891121,
+    "ts": 1789057972990,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.211,
+      "salience": 0.21,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -9939,11 +9939,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1789039891121,
+    "ts": 1789057972990,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.204,
+      "salience": 0.203,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -10827,11 +10827,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1789039891121,
+    "ts": 1789057972990,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.2,
+      "salience": 0.199,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -11748,7 +11748,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1789039891121,
+    "ts": 1789057972990,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
@@ -12666,11 +12666,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1789039891120,
+    "ts": 1789057972989,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.128,
+      "salience": 0.127,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -13563,103 +13563,103 @@ window.PRISM_CANDIDATES = [
     "mts": 1784044297586
   },
   {
-    "cid": "cand_news_000-gop-trump",
+    "cid": "cand_news_000-every-trump",
     "source": "news",
-    "ts": 1789039908804,
+    "ts": 1789057987898,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.997,
+      "salience": 0.993,
       "articles": [
         {
           "title": "Trump pledges to give every US adult $5 , 000 if GOP wins midterms",
-          "url": "https://www.kfvs12.com/2026/09/10/trump-makes-dubious-pledge-give-every-us-adult-5000-if-gop-keeps-control-congress/",
-          "domain": "kfvs12.com",
-          "seendate": "2026-09-10T11:00:00Z",
-          "image": "https://gray-kfvs12-prod.gtv-cdn.com/resizer/v2/S3US6R5Y7VHWPN7TFCY5JLDMTA.jpg?auth=fb03f7c9a34b08a01bb98dc64c235a7aa79c6c02e7999939d60a2548da9b14a5&smart=true"
+          "url": "https://www.wctv.tv/2026/09/10/trump-makes-dubious-pledge-give-every-us-adult-5000-if-gop-keeps-control-congress/",
+          "domain": "wctv.tv",
+          "seendate": "2026-09-10T15:30:00Z",
+          "image": "https://gray-wctv-prod.gtv-cdn.com/resizer/v2/S3US6R5Y7VHWPN7TFCY5JLDMTA.jpg?auth=fb03f7c9a34b08a01bb98dc64c235a7aa79c6c02e7999939d60a2548da9b14a5&smart=true"
         },
         {
-          "title": "Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins",
-          "url": "https://www.aol.com/articles/trump-hoping-salvage-midterms-makes-030812000.html",
-          "domain": "aol.com",
-          "seendate": "2026-09-10T10:15:00Z",
-          "image": "https://hermes.media.static.aol.com/media/2026/09/10/b9e29237-25bc-37c4-a85b-0b700c862579/fd9bbc3d-ebfa-4b2d-8775-4da980264f7d.jpg"
+          "title": "Trump pledges to give every U . S . adult $5 , 000 if GOP wins – NBC 7 San Diego",
+          "url": "https://www.nbcsandiego.com/news/national-international/trump-dubious-pledge-give-every-adult-5000-dollars-if-gop-wins/4071741/",
+          "domain": "nbcsandiego.com",
+          "seendate": "2026-09-10T15:30:00Z",
+          "image": "https://media.nbcsandiego.com/2026/09/AP26253063625006.jpg?quality=85&strip=all"
         },
         {
-          "title": "Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins",
-          "url": "http://www.dailyadvance.com/news/national/trump-hoping-to-salvage-midterms-makes-dubious-pledge-to-give-every-us-adult-5-000/article_b1a9943b-429a-5927-bb84-22f373fa4409.html",
-          "domain": "dailyadvance.com",
-          "seendate": "2026-09-10T10:15:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/dailyadvance.com/content/tncms/assets/v3/editorial/8/57/85702e53-e8be-53e7-b951-2d8f89efa718/6aa24bf66a11c.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "ELECTION 2026 | Trump makes pledge to give every U . S . adult $5 , 000 if GOP wins",
-          "url": "https://www.texarkanagazette.com/news/2026/sep/10/election-2026-trump-makes-pledge-to-give-every-us/",
-          "domain": "texarkanagazette.com",
-          "seendate": "2026-09-10T10:15:00Z",
-          "image": "https://wehco.media.clients.ellingtoncms.com/imports/adg/img/2026/09/10/213621506_213621506-455d4638c7514fbcb813741b672e2ac2_t1200.jpg?57a0c2296240c280e9492005c3cad63e7cbe80f4"
-        },
-        {
-          "title": "Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins - Boston News , Weather , Sports",
-          "url": "https://whdh.com/news/trump-hoping-to-salvage-midterms-makes-dubious-pledge-to-give-every-us-adult-5000-if-gop-wins/",
-          "domain": "whdh.com",
-          "seendate": "2026-09-10T10:00:00Z",
-          "image": null
-        },
-        {
-          "title": "Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins",
-          "url": "https://www.durangoherald.com/articles/associated-press/trump-hoping-to-salvage-midterms-makes-dubious-pledge-to-give-every-us-adult-5000-if-gop-wins/",
-          "domain": "durangoherald.com",
-          "seendate": "2026-09-10T10:00:00Z",
-          "image": "https://www.durangoherald.com/wp-content/uploads/2026/06/DurangoHeraldB-web.png"
-        },
-        {
-          "title": "Trump pledges $5 , 000  dividend  to Americans if GOP wins midterms",
-          "url": "https://www.cnbc.com/2026/09/10/trump-dividend-midterms-gop.html",
-          "domain": "cnbc.com",
-          "seendate": "2026-09-10T09:45:00Z",
-          "image": "https://image.cnbcfm.com/api/v1/image/108361004-1789016407038-gettyimages-2294419714-_73a2710_pjrxcicp.jpeg?v=1789016417"
-        },
-        {
-          "title": "Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins",
-          "url": "http://www.idahostatejournal.com/news/national/trump-hoping-to-salvage-midterms-makes-dubious-pledge-to-give-every-us-adult-5-000/article_e9c4a813-8afa-56b6-ae10-4de98e47b2f9.html",
-          "domain": "idahostatejournal.com",
-          "seendate": "2026-09-10T09:30:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/idahostatejournal.com/content/tncms/assets/v3/editorial/8/52/852c8c5a-81f8-5a1e-b2c6-522efd1195c4/6aa20d74cf71d.image.jpg?crop=1763%2C926%2C0%2C124"
+          "title": "Trump , hoping to salvage midterms , makes a dubious pledge to give every US adult $5 , 000 if GOP wins – WTOP News",
+          "url": "https://wtop.com/national/2026/09/trump-hoping-to-salvage-midterms-makes-dubious-pledge-to-give-every-us-adult-5000-if-gop-wins/",
+          "domain": "wtop.com",
+          "seendate": "2026-09-10T15:15:00Z",
+          "image": "https://wtop.com/wp-content/uploads/2026/09/APTOPIX_Election_2_26_Republicans_25_6-scaled.jpg"
         },
         {
           "title": "Trump pledges to give every US adult $5 , 000 if GOP wins midterms",
-          "url": "https://www.wabi.tv:443/2026/09/10/trump-makes-dubious-pledge-give-every-us-adult-5000-if-gop-keeps-control-congress/",
-          "domain": "wabi.tv",
-          "seendate": "2026-09-10T09:00:00Z",
-          "image": "https://gray-wabi-prod.gtv-cdn.com/resizer/v2/S3US6R5Y7VHWPN7TFCY5JLDMTA.jpg?auth=fb03f7c9a34b08a01bb98dc64c235a7aa79c6c02e7999939d60a2548da9b14a5&smart=true"
+          "url": "https://www.knoe.com/2026/09/10/trump-makes-dubious-pledge-give-every-us-adult-5000-if-gop-keeps-control-congress/",
+          "domain": "knoe.com",
+          "seendate": "2026-09-10T15:15:00Z",
+          "image": "https://gray-knoe-prod.gtv-cdn.com/resizer/v2/S3US6R5Y7VHWPN7TFCY5JLDMTA.jpg?auth=fb03f7c9a34b08a01bb98dc64c235a7aa79c6c02e7999939d60a2548da9b14a5&smart=true"
         },
         {
-          "title": "Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins",
-          "url": "http://www.hngnews.com/nation_world/trump-hoping-to-salvage-midterms-makes-dubious-pledge-to-give-every-us-adult-5-000/article_313df73d-dfde-5bc8-8322-6fe86eac2327.html",
-          "domain": "hngnews.com",
-          "seendate": "2026-09-10T09:00:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/hngnews.com/content/tncms/assets/v3/editorial/a/d7/ad7b73bc-a1d4-5553-850a-47b727f82072/6aa24c7dc7b0c.image.jpg?crop=1763%2C926%2C0%2C124"
+          "title": "Trump promises every American adult $5 , 000 if GOP wins the midterms",
+          "url": "https://www.foxla.com/news/trump-promises-every-american-adult-5000-gop-wins-midterms",
+          "domain": "foxla.com",
+          "seendate": "2026-09-10T15:15:00Z",
+          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/09/1280/720/gettyimages-2294421242.jpg?ve=1&tl=1"
         },
         {
-          "title": "Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins",
-          "url": "https://www.erienewsnow.com/news/politics/trump-hoping-to-salvage-midterms-makes-dubious-pledge-to-give-every-us-adult-5-000/article_643cca70-1345-526c-8646-ac9ecf1c81a1.html",
-          "domain": "erienewsnow.com",
-          "seendate": "2026-09-10T08:30:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/erienewsnow.com/content/tncms/custom/image/b278f54b-830b-4f05-9350-cb090f41a0d4.png"
+          "title": "Trump makes dubious pledge to give every US adult $5 , 000 if GOP wins",
+          "url": "https://www.dailypress.com/2026/09/10/trump-pledge-5000-payments-midterms/",
+          "domain": "dailypress.com",
+          "seendate": "2026-09-10T14:30:00Z",
+          "image": "https://www.dailypress.com/wp-content/uploads/2026/09/APTOPIX_Election_2_26_Republicans_25_6-1.jpg"
         },
         {
-          "title": "Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins",
-          "url": "http://www.somdnews.com/ap/nation/trump-hoping-to-salvage-midterms-makes-dubious-pledge-to-give-every-us-adult-5-000/article_94bf58d0-7094-51d4-8d43-7523ed732284.html",
-          "domain": "somdnews.com",
-          "seendate": "2026-09-10T08:15:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/somdnews.com/content/tncms/assets/v3/editorial/f/e6/fe646ae8-b273-5741-b6d0-aa2d7cadbc93/6aa24bedb7728.image.jpg?crop=1763%2C926%2C0%2C124"
+          "title": "Trump promises every American adult $5 , 000 if GOP wins the midterms",
+          "url": "https://www.fox29.com/news/trump-promises-every-american-adult-5000-gop-wins-midterms",
+          "domain": "fox29.com",
+          "seendate": "2026-09-10T14:30:00Z",
+          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/09/1280/720/gettyimages-2294421242.jpg?ve=1&tl=1"
+        },
+        {
+          "title": "Trump makes dubious pledge to give every US adult $5 , 000 if GOP wins",
+          "url": "https://www.republicanherald.com/2026/09/10/trump-pledge-5000-payments-midterms/",
+          "domain": "republicanherald.com",
+          "seendate": "2026-09-10T14:15:00Z",
+          "image": "https://www.republicanherald.com/wp-content/uploads/2026/09/APTOPIX_Election_2_26_Republicans_25_6-1.jpg"
+        },
+        {
+          "title": "Trump promises every American adult $5 , 000 if GOP wins the midterms",
+          "url": "https://www.fox5atlanta.com/news/trump-promises-every-american-adult-5000-gop-wins-midterms",
+          "domain": "fox5atlanta.com",
+          "seendate": "2026-09-10T14:15:00Z",
+          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/09/1280/720/gettyimages-2294421242.jpg?ve=1&tl=1"
+        },
+        {
+          "title": "Trump promises $5 , 000 dividend if Republicans win midterms",
+          "url": "https://finance.yahoo.com/economy/policy/articles/trump-promises-5-000-dividend-132752995.html",
+          "domain": "finance.yahoo.com",
+          "seendate": "2026-09-10T14:00:00Z",
+          "image": "https://s.yimg.com/lo/mysterio/api/13ff8223782da505ac30f75c06bce175b402cddf5f66fb47148affedc6c6bcac/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fquartz_855%2Fa47a8e28a3cc2a07aafe85377b145e25.jpg"
+        },
+        {
+          "title": "Trump makes dubious pledge to give every US adult $5 , 000 if GOP wins",
+          "url": "https://www.bostonherald.com/2026/09/10/trump-pledge-5000-payments-midterms/",
+          "domain": "bostonherald.com",
+          "seendate": "2026-09-10T13:00:00Z",
+          "image": "https://www.bostonherald.com/wp-content/uploads/2026/09/APTOPIX_Election_2_26_Republicans_25_6-1.jpg"
+        },
+        {
+          "title": "Trump makes dubious pledge to give every US adult $5 , 000 if GOP wins",
+          "url": "https://www.greeleytribune.com/2026/09/10/trump-pledge-5000-payments-midterms/",
+          "domain": "greeleytribune.com",
+          "seendate": "2026-09-10T13:00:00Z",
+          "image": "https://www.greeleytribune.com/wp-content/uploads/2026/09/APTOPIX_Election_2_26_Republicans_25_6-1.jpg"
         }
       ]
     },
     "title": "Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins",
-    "summary": "2026-09-10 kfvs12.com: Trump pledges to give every US adult $5 , 000 if GOP wins midterms\n2026-09-10 aol.com: Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins\n2026-09-10 dailyadvance.com: Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins\n2026-09-10 texarkanagazette.com: ELECTION 2026 | Trump makes pledge to give every U . S . adult $5 , 000 if GOP wins\n2026-09-10 whdh.com: Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins - Boston News , Weather , Sports\n2026-09-10 durangoherald.com: Trump , hoping to salvage midterms , makes dubious pledge to give every US adult $5 , 000 if GOP wins",
+    "summary": "2026-09-10 wctv.tv: Trump pledges to give every US adult $5 , 000 if GOP wins midterms\n2026-09-10 nbcsandiego.com: Trump pledges to give every U . S . adult $5 , 000 if GOP wins – NBC 7 San Diego\n2026-09-10 wtop.com: Trump , hoping to salvage midterms , makes a dubious pledge to give every US adult $5 , 000 if GOP wins – WTOP News\n2026-09-10 knoe.com: Trump pledges to give every US adult $5 , 000 if GOP wins midterms\n2026-09-10 foxla.com: Trump promises every American adult $5 , 000 if GOP wins the midterms\n2026-09-10 dailypress.com: Trump makes dubious pledge to give every US adult $5 , 000 if GOP wins",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -13669,27 +13669,20 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_court-map-missouri",
+    "cid": "cand_news_back-court-heads",
     "source": "news",
-    "ts": 1789039908807,
+    "ts": 1789057987900,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.95,
+      "salience": 0.918,
       "articles": [
         {
           "title": "Missouri Redistricting Map Heads Back To Supreme Court",
           "url": "https://1150wima.iheart.com/content/2026-09-09-missouris-redistricting-map-heads-back-to-supreme-court/",
           "domain": "1150wima.iheart.com",
           "seendate": "2026-09-10T03:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6aa1da76815285523f3199e3?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Missouri Redistricting Map Heads Back To Supreme Court",
-          "url": "https://700wlw.iheart.com/content/2026-09-09-missouris-redistricting-map-heads-back-to-supreme-court/",
-          "domain": "700wlw.iheart.com",
-          "seendate": "2026-09-10T03:00:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6aa1da76815285523f3199e3?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
@@ -13715,16 +13708,9 @@ window.PRISM_CANDIDATES = [
         },
         {
           "title": "Missouri Redistricting Map Heads Back To Supreme Court",
-          "url": "https://wrak.iheart.com/content/2026-09-09-missouris-redistricting-map-heads-back-to-supreme-court/",
-          "domain": "wrak.iheart.com",
-          "seendate": "2026-09-10T02:45:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6aa1da76815285523f3199e3?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Missouri Redistricting Map Heads Back To Supreme Court",
-          "url": "https://wbhpam.iheart.com/content/2026-09-09-missouris-redistricting-map-heads-back-to-supreme-court/",
-          "domain": "wbhpam.iheart.com",
-          "seendate": "2026-09-10T02:45:00Z",
+          "url": "https://700wlw.iheart.com/content/2026-09-09-missouris-redistricting-map-heads-back-to-supreme-court/",
+          "domain": "700wlw.iheart.com",
+          "seendate": "2026-09-10T03:00:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6aa1da76815285523f3199e3?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
@@ -13738,6 +13724,20 @@ window.PRISM_CANDIDATES = [
           "title": "Missouri Redistricting Map Heads Back To Supreme Court",
           "url": "https://wflafm.iheart.com/content/2026-09-09-missouris-redistricting-map-heads-back-to-supreme-court/",
           "domain": "wflafm.iheart.com",
+          "seendate": "2026-09-10T02:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6aa1da76815285523f3199e3?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Missouri Redistricting Map Heads Back To Supreme Court",
+          "url": "https://wrak.iheart.com/content/2026-09-09-missouris-redistricting-map-heads-back-to-supreme-court/",
+          "domain": "wrak.iheart.com",
+          "seendate": "2026-09-10T02:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6aa1da76815285523f3199e3?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Missouri Redistricting Map Heads Back To Supreme Court",
+          "url": "https://wbhpam.iheart.com/content/2026-09-09-missouris-redistricting-map-heads-back-to-supreme-court/",
+          "domain": "wbhpam.iheart.com",
           "seendate": "2026-09-10T02:45:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6aa1da76815285523f3199e3?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
@@ -13765,7 +13765,7 @@ window.PRISM_CANDIDATES = [
       ]
     },
     "title": "Missouri Redistricting Map Heads Back To Supreme Court",
-    "summary": "2026-09-10 1150wima.iheart.com: Missouri Redistricting Map Heads Back To Supreme Court\n2026-09-10 700wlw.iheart.com: Missouri Redistricting Map Heads Back To Supreme Court\n2026-09-10 kfyr.iheart.com: Missouri Redistricting Map Heads Back To Supreme Court\n2026-09-10 newsradio710.iheart.com: Missouri Redistricting Map Heads Back To Supreme Court\n2026-09-10 wmeq.iheart.com: Missouri Redistricting Map Heads Back To Supreme Court | NewsTalk WMEQ\n2026-09-10 wrak.iheart.com: Missouri Redistricting Map Heads Back To Supreme Court",
+    "summary": "2026-09-10 1150wima.iheart.com: Missouri Redistricting Map Heads Back To Supreme Court\n2026-09-10 kfyr.iheart.com: Missouri Redistricting Map Heads Back To Supreme Court\n2026-09-10 newsradio710.iheart.com: Missouri Redistricting Map Heads Back To Supreme Court\n2026-09-10 wmeq.iheart.com: Missouri Redistricting Map Heads Back To Supreme Court | NewsTalk WMEQ\n2026-09-10 700wlw.iheart.com: Missouri Redistricting Map Heads Back To Supreme Court\n2026-09-10 newsradio540.iheart.com: Missouri Redistricting Map Heads Back To Supreme Court",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -13777,12 +13777,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_america-been-congress",
     "source": "news",
-    "ts": 1789039908804,
+    "ts": 1789057987898,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.908,
+      "salience": 0.876,
       "articles": [
         {
           "title": "Congress has been the place where America tries to resolve problems",
@@ -13874,14 +13874,64 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_centers-gop-himself",
+    "cid": "cand_news_000-about-adult",
     "source": "news",
-    "ts": 1789039908804,
+    "ts": 1789057987899,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.648,
+      "salience": 0.663,
+      "articles": [
+        {
+          "title": "What to know about Trump promise to give every US adult $5 , 000",
+          "url": "https://www.koat.com/article/trump-pledge-to-give-every-us-adult-5000/73665553",
+          "domain": "koat.com",
+          "seendate": "2026-09-10T15:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/fce932fd-14be-4336-882f-51ded4bd851c.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.00721xh"
+        },
+        {
+          "title": "What to know about Trump promise to give every US adult $5 , 000",
+          "url": "https://www.kmbc.com/article/trump-pledge-to-give-every-us-adult-5000/73665553",
+          "domain": "kmbc.com",
+          "seendate": "2026-09-10T15:15:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/fce932fd-14be-4336-882f-51ded4bd851c.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.00721xh"
+        },
+        {
+          "title": "What to know about Trump promise to give every US adult $5 , 000",
+          "url": "https://www.wyff4.com/article/trump-pledge-to-give-every-us-adult-5000/73665553",
+          "domain": "wyff4.com",
+          "seendate": "2026-09-10T14:15:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/fce932fd-14be-4336-882f-51ded4bd851c.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.00721xh"
+        },
+        {
+          "title": "What to know about Trump promise to give every US adult $5 , 000",
+          "url": "https://www.wgal.com/article/trump-pledge-to-give-every-us-adult-5000/73665553",
+          "domain": "wgal.com",
+          "seendate": "2026-09-10T13:00:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/fce932fd-14be-4336-882f-51ded4bd851c.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.00721xh"
+        }
+      ]
+    },
+    "title": "What to know about Trump promise to give every US adult $5 , 000",
+    "summary": "2026-09-10 koat.com: What to know about Trump promise to give every US adult $5 , 000\n2026-09-10 kmbc.com: What to know about Trump promise to give every US adult $5 , 000\n2026-09-10 wyff4.com: What to know about Trump promise to give every US adult $5 , 000\n2026-09-10 wgal.com: What to know about Trump promise to give every US adult $5 , 000",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_centers-gop-himself",
+    "source": "news",
+    "ts": 1789057987899,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.617,
       "articles": [
         {
           "title": "The Latest : Trump centers himself in pitch to midterm voters , promising payouts if the GOP wins",
@@ -13924,14 +13974,57 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_allow-emergency-mail",
+    "cid": "cand_news_000-gop-kan",
     "source": "news",
-    "ts": 1789039908804,
+    "ts": 1789057987898,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.639,
+      "salience": 0.61,
+      "articles": [
+        {
+          "title": "Kan . U . S . Senator responds to Trump $5 , 000 pledge if GOP wins midterms",
+          "url": "https://littleapplepost.com/posts/213cd42d-a66f-4a3c-99af-f3c4bd892824",
+          "domain": "littleapplepost.com",
+          "seendate": "2026-09-10T15:45:00Z",
+          "image": "https://media.eaglewebservices.com/public/2026/9/1789035487236.png"
+        },
+        {
+          "title": "Kan . U . S . Senator responds to Trump $5 , 000 pledge if GOP wins midterms",
+          "url": "https://jcpost.com/posts/213cd42d-a66f-4a3c-99af-f3c4bd892824",
+          "domain": "jcpost.com",
+          "seendate": "2026-09-10T15:15:00Z",
+          "image": "https://media.eaglewebservices.com/public/2026/9/1789035487236.png"
+        },
+        {
+          "title": "Kan . U . S . Senator responds to Trump $5 , 000 pledge if GOP wins midterms",
+          "url": "https://salinapost.com/posts/213cd42d-a66f-4a3c-99af-f3c4bd892824",
+          "domain": "salinapost.com",
+          "seendate": "2026-09-10T14:15:00Z",
+          "image": "https://media.eaglewebservices.com/public/2026/9/1789035487236.png"
+        }
+      ]
+    },
+    "title": "Kan . U . S . Senator responds to Trump $5 , 000 pledge if GOP wins midterms",
+    "summary": "2026-09-10 littleapplepost.com: Kan . U . S . Senator responds to Trump $5 , 000 pledge if GOP wins midterms\n2026-09-10 jcpost.com: Kan . U . S . Senator responds to Trump $5 , 000 pledge if GOP wins midterms\n2026-09-10 salinapost.com: Kan . U . S . Senator responds to Trump $5 , 000 pledge if GOP wins midterms",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_allow-emergency-mail",
+    "source": "news",
+    "ts": 1789057987899,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.607,
       "articles": [
         {
           "title": "Trump makes emergency plea to SCOTUS to allow mail - in voting restrictions to proceed",
@@ -14030,85 +14123,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_bunch-leadership-lonnie",
-    "source": "news",
-    "ts": 1789039908807,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.625,
-      "articles": [
-        {
-          "title": "Lonnie Bunch to retire from Smithsonian leadership following clash",
-          "url": "https://www.nydailynews.com/2026/09/08/lonnie-bunch-retires-smithsonian/",
-          "domain": "nydailynews.com",
-          "seendate": "2026-09-09T02:00:00Z",
-          "image": "https://www.nydailynews.com/wp-content/uploads/2026/09/AP26186612560803.jpg"
-        },
-        {
-          "title": "Lonnie Bunch to retire from Smithsonian leadership following clash",
-          "url": "https://www.citizensvoice.com/2026/09/08/lonnie-bunch-retires-smithsonian/",
-          "domain": "citizensvoice.com",
-          "seendate": "2026-09-08T22:00:00Z",
-          "image": "https://www.citizensvoice.com/wp-content/uploads/2026/09/AP26186612560803.jpg"
-        },
-        {
-          "title": "Lonnie Bunch to retire from Smithsonian leadership following clash",
-          "url": "https://www.bostonherald.com/2026/09/08/lonnie-bunch-retires-smithsonian/",
-          "domain": "bostonherald.com",
-          "seendate": "2026-09-08T20:45:00Z",
-          "image": "https://www.bostonherald.com/wp-content/uploads/2026/09/AP26186612560803.jpg"
-        },
-        {
-          "title": "Lonnie Bunch to retire from Smithsonian leadership following clash",
-          "url": "https://www.courant.com/2026/09/08/lonnie-bunch-retires-smithsonian/",
-          "domain": "courant.com",
-          "seendate": "2026-09-08T20:45:00Z",
-          "image": "https://www.courant.com/wp-content/uploads/2026/09/AP26186612560803.jpg"
-        },
-        {
-          "title": "Lonnie Bunch to retire from Smithsonian leadership following clash",
-          "url": "https://www.dailypress.com/2026/09/08/lonnie-bunch-retires-smithsonian/",
-          "domain": "dailypress.com",
-          "seendate": "2026-09-08T20:00:00Z",
-          "image": "https://www.dailypress.com/wp-content/uploads/2026/09/AP26186612560803.jpg"
-        },
-        {
-          "title": "Lonnie Bunch to retire from Smithsonian leadership",
-          "url": "https://www.chicagotribune.com/2026/09/08/lonnie-bunch-smithsonian-leadership/",
-          "domain": "chicagotribune.com",
-          "seendate": "2026-09-08T18:00:00Z",
-          "image": "https://www.chicagotribune.com/wp-content/uploads/2026/09/ctc-ENTER_SMITHSONIAN_LEADER_TB_238838991.jpg"
-        },
-        {
-          "title": "Lonnie Bunch to retire from Smithsonian leadership following clash with Trump administration",
-          "url": "https://www.ksat.com/news/politics/2026/09/08/lonnie-bunch-to-retire-from-smithsonian-leadership-following-clash-with-trump-administration/",
-          "domain": "ksat.com",
-          "seendate": "2026-09-08T17:30:00Z",
-          "image": "https://res.cloudinary.com/graham-media-group/image/upload/c_thumb,q_auto,f_auto,w_700/media/gmg/76CLDVJVIBHUZKCYJ3JQYXHVRU.jpg"
-        }
-      ]
-    },
-    "title": "Lonnie Bunch to retire from Smithsonian leadership following clash",
-    "summary": "2026-09-09 nydailynews.com: Lonnie Bunch to retire from Smithsonian leadership following clash\n2026-09-08 citizensvoice.com: Lonnie Bunch to retire from Smithsonian leadership following clash\n2026-09-08 bostonherald.com: Lonnie Bunch to retire from Smithsonian leadership following clash\n2026-09-08 courant.com: Lonnie Bunch to retire from Smithsonian leadership following clash\n2026-09-08 dailypress.com: Lonnie Bunch to retire from Smithsonian leadership following clash\n2026-09-08 chicagotribune.com: Lonnie Bunch to retire from Smithsonian leadership",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_change-court-economics",
     "source": "news",
-    "ts": 1789039908804,
+    "ts": 1789057987898,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.437,
+      "salience": 0.406,
       "articles": [
         {
           "title": "Supreme Court rulings change the economics of political party spending",
