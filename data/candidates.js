@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-09-12T04:45:11.495Z · 18 legislative + 12 news (GDELT, 3d)
+// 2026-09-12T10:58:25.579Z · 18 legislative + 12 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1789188287322,
+    "ts": 1789210663099,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.836,
+      "salience": 0.835,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -918,11 +918,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1789188287322,
+    "ts": 1789210663099,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.771,
+      "salience": 0.77,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -1819,11 +1819,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1789188287322,
+    "ts": 1789210663098,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.612,
+      "salience": 0.611,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -2073,11 +2073,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1789188287321,
+    "ts": 1789210663098,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.604,
+      "salience": 0.603,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -2346,11 +2346,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1789188287322,
+    "ts": 1789210663099,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.566,
+      "salience": 0.565,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -3625,11 +3625,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-185",
     "source": "legislative",
-    "ts": 1789188287321,
+    "ts": 1789210663098,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-185",
-      "salience": 0.521,
+      "salience": 0.52,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/185",
       "votes": [
         {
@@ -3900,11 +3900,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-196",
     "source": "legislative",
-    "ts": 1789188287322,
+    "ts": 1789210663098,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-196",
-      "salience": 0.503,
+      "salience": 0.501,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/196",
       "votes": [
         {
@@ -4174,11 +4174,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-190",
     "source": "legislative",
-    "ts": 1789188287322,
+    "ts": 1789210663098,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-190",
-      "salience": 0.488,
+      "salience": 0.487,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/190",
       "votes": [
         {
@@ -4445,11 +4445,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1789188287322,
+    "ts": 1789210663098,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.466,
+      "salience": 0.465,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -4972,11 +4972,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1789188287322,
+    "ts": 1789210663099,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.407,
+      "salience": 0.406,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -5852,11 +5852,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1789188287322,
+    "ts": 1789210663099,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.402,
+      "salience": 0.401,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -6728,11 +6728,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6644",
     "source": "legislative",
-    "ts": 1789188287321,
+    "ts": 1789210663098,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6644",
-      "salience": 0.267,
+      "salience": 0.266,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6644",
       "votes": [
         {
@@ -8131,11 +8131,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1789188287322,
+    "ts": 1789210663098,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.21,
+      "salience": 0.209,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -9024,11 +9024,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1789188287322,
+    "ts": 1789210663098,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.203,
+      "salience": 0.202,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -9939,11 +9939,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1789188287322,
+    "ts": 1789210663098,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.197,
+      "salience": 0.195,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -10827,11 +10827,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1789188287321,
+    "ts": 1789210663098,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.192,
+      "salience": 0.191,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -11748,11 +11748,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1789188287321,
+    "ts": 1789210663098,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.181,
+      "salience": 0.18,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -12666,11 +12666,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-629",
     "source": "legislative",
-    "ts": 1789188287321,
+    "ts": 1789210663098,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-629",
-      "salience": 0.121,
+      "salience": 0.12,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/629",
       "votes": [
         {
@@ -13565,12 +13565,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_000-adult-trump",
     "source": "news",
-    "ts": 1789188311489,
+    "ts": 1789210705574,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.812,
+      "salience": 0.774,
       "articles": [
         {
           "title": "Trump , hoping to salvage midterms , makes a dubious pledge to give every US adult $5 , 000 if GOP wins",
@@ -13671,12 +13671,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_back-court-heads",
     "source": "news",
-    "ts": 1789188311491,
+    "ts": 1789210705576,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.692,
+      "salience": 0.653,
       "articles": [
         {
           "title": "Missouri Redistricting Map Heads Back To Supreme Court",
@@ -13775,113 +13775,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_america-been-congress",
-    "source": "news",
-    "ts": 1789188311490,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.65,
-      "articles": [
-        {
-          "title": "Congress has been the place where America tries to resolve problems",
-          "url": "https://www.orlandosentinel.com/2026/09/09/congress-america-250/",
-          "domain": "orlandosentinel.com",
-          "seendate": "2026-09-09T20:45:00Z",
-          "image": "https://www.orlandosentinel.com/wp-content/uploads/2026/09/Congress_49668-1.jpg"
-        },
-        {
-          "title": "Congress has been the place where America tries to resolve problems",
-          "url": "https://www.fortmorgantimes.com/2026/09/09/congress-america-250/",
-          "domain": "fortmorgantimes.com",
-          "seendate": "2026-09-09T20:15:00Z",
-          "image": "https://www.fortmorgantimes.com/wp-content/uploads/2026/09/Congress_49668-1.jpg"
-        },
-        {
-          "title": "Congress has been the place where America tries to resolve problems",
-          "url": "https://www.dailypress.com/2026/09/09/congress-america-250/",
-          "domain": "dailypress.com",
-          "seendate": "2026-09-09T20:00:00Z",
-          "image": "https://www.dailypress.com/wp-content/uploads/2026/09/Congress_49668-1.jpg"
-        },
-        {
-          "title": "Congress has been the place where America tries to resolve problems",
-          "url": "https://www.pilotonline.com/2026/09/09/congress-america-250/",
-          "domain": "pilotonline.com",
-          "seendate": "2026-09-09T19:45:00Z",
-          "image": "https://www.pilotonline.com/wp-content/uploads/2026/09/Congress_49668-1.jpg"
-        },
-        {
-          "title": "Congress has been the place where America tries to resolve problems",
-          "url": "https://www.sun-sentinel.com/2026/09/09/congress-america-250/",
-          "domain": "sun-sentinel.com",
-          "seendate": "2026-09-09T19:30:00Z",
-          "image": "https://www.sun-sentinel.com/wp-content/uploads/2026/09/Congress_49668-1.jpg"
-        },
-        {
-          "title": "Congress has been the place where America tries to resolve problems",
-          "url": "https://www.reporterherald.com/2026/09/09/congress-america-250/",
-          "domain": "reporterherald.com",
-          "seendate": "2026-09-09T18:45:00Z",
-          "image": "https://www.reporterherald.com/wp-content/uploads/2026/09/Congress_49668-1.jpg"
-        },
-        {
-          "title": "Congress has been the place where America tries to resolve problems",
-          "url": "https://www.greeleytribune.com/2026/09/09/congress-america-250/",
-          "domain": "greeleytribune.com",
-          "seendate": "2026-09-09T18:30:00Z",
-          "image": "https://www.greeleytribune.com/wp-content/uploads/2026/09/Congress_49668-1.jpg"
-        },
-        {
-          "title": "Congress has been the place where America tries to resolve problems",
-          "url": "https://www.bostonherald.com/2026/09/09/congress-america-250/",
-          "domain": "bostonherald.com",
-          "seendate": "2026-09-09T16:45:00Z",
-          "image": "https://www.bostonherald.com/wp-content/uploads/2026/09/Congress_49668-1.jpg"
-        },
-        {
-          "title": "A more perfect union ? Congress has been the place where America tries to resolve its problems",
-          "url": "https://abcnews.com/Politics/wireStory/perfect-union-congress-place-america-resolve-problems-136293018",
-          "domain": "abcnews.com",
-          "seendate": "2026-09-09T08:45:00Z",
-          "image": "https://i.abcnewsfe.com/a/4533e783-9437-472e-8c61-2f4c945cc119/wirestory_2dd382bccfaaeb9c06a2544648d60f9f_16x9.jpg"
-        },
-        {
-          "title": "A more perfect union ? Congress has been the place where America tries to resolve its problems",
-          "url": "https://www.winchesterstar.com/associated_press/washington/a-more-perfect-union-congress-has-been-the-place-where-america-tries-to-resolve-its/article_0daa5349-acbc-56ab-9941-c58bd07fa980.html",
-          "domain": "winchesterstar.com",
-          "seendate": "2026-09-09T08:00:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/winchesterstar.com/content/tncms/assets/v3/editorial/a/33/a338c947-4732-5939-9d8e-0620acd464ae/6aa0da9c6b902.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "A more perfect union ? Congress has been the place where America tries to resolve its problems",
-          "url": "https://www.yahoo.com/news/politics/articles/more-perfect-union-congress-place-040313504.html",
-          "domain": "yahoo.com",
-          "seendate": "2026-09-09T04:45:00Z",
-          "image": "https://s.yimg.com/lo/mysterio/api/f7a961790eb98764fba390959eb740353c8495137de7b6d2f3a9504449b09a18/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fap.org%2F8a5b75d130c3df715d22a50a6c5bf28c.jpg"
-        }
-      ]
-    },
-    "title": "Congress has been the place where America tries to resolve problems",
-    "summary": "2026-09-09 orlandosentinel.com: Congress has been the place where America tries to resolve problems\n2026-09-09 fortmorgantimes.com: Congress has been the place where America tries to resolve problems\n2026-09-09 dailypress.com: Congress has been the place where America tries to resolve problems\n2026-09-09 pilotonline.com: Congress has been the place where America tries to resolve problems\n2026-09-09 sun-sentinel.com: Congress has been the place where America tries to resolve problems\n2026-09-09 reporterherald.com: Congress has been the place where America tries to resolve problems",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_convention-highlights-midterm",
     "source": "news",
-    "ts": 1789188311490,
+    "ts": 1789210705575,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.643,
+      "salience": 0.604,
       "articles": [
         {
           "title": "Trump highlights swing races in midterm convention speech",
@@ -13947,12 +13848,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_000-defends-dividend",
     "source": "news",
-    "ts": 1789188311490,
+    "ts": 1789210705575,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.563,
+      "salience": 0.525,
       "articles": [
         {
           "title": "Trump defends proposed $5 , 000 dividend as  reward , says  growth  will pay for it",
@@ -13988,14 +13889,92 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_500-checks-enrollees",
+    "cid": "cand_news_america-been-congress",
     "source": "news",
-    "ts": 1789188311490,
+    "ts": 1789210705574,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.459,
+      "salience": 0.501,
+      "articles": [
+        {
+          "title": "Congress has been the place where America tries to resolve problems",
+          "url": "https://www.orlandosentinel.com/2026/09/09/congress-america-250/",
+          "domain": "orlandosentinel.com",
+          "seendate": "2026-09-09T20:45:00Z",
+          "image": "https://www.orlandosentinel.com/wp-content/uploads/2026/09/Congress_49668-1.jpg"
+        },
+        {
+          "title": "Congress has been the place where America tries to resolve problems",
+          "url": "https://www.fortmorgantimes.com/2026/09/09/congress-america-250/",
+          "domain": "fortmorgantimes.com",
+          "seendate": "2026-09-09T20:15:00Z",
+          "image": "https://www.fortmorgantimes.com/wp-content/uploads/2026/09/Congress_49668-1.jpg"
+        },
+        {
+          "title": "Congress has been the place where America tries to resolve problems",
+          "url": "https://www.dailypress.com/2026/09/09/congress-america-250/",
+          "domain": "dailypress.com",
+          "seendate": "2026-09-09T20:00:00Z",
+          "image": "https://www.dailypress.com/wp-content/uploads/2026/09/Congress_49668-1.jpg"
+        },
+        {
+          "title": "Congress has been the place where America tries to resolve problems",
+          "url": "https://www.pilotonline.com/2026/09/09/congress-america-250/",
+          "domain": "pilotonline.com",
+          "seendate": "2026-09-09T19:45:00Z",
+          "image": "https://www.pilotonline.com/wp-content/uploads/2026/09/Congress_49668-1.jpg"
+        },
+        {
+          "title": "Congress has been the place where America tries to resolve problems",
+          "url": "https://www.sun-sentinel.com/2026/09/09/congress-america-250/",
+          "domain": "sun-sentinel.com",
+          "seendate": "2026-09-09T19:30:00Z",
+          "image": "https://www.sun-sentinel.com/wp-content/uploads/2026/09/Congress_49668-1.jpg"
+        },
+        {
+          "title": "Congress has been the place where America tries to resolve problems",
+          "url": "https://www.reporterherald.com/2026/09/09/congress-america-250/",
+          "domain": "reporterherald.com",
+          "seendate": "2026-09-09T18:45:00Z",
+          "image": "https://www.reporterherald.com/wp-content/uploads/2026/09/Congress_49668-1.jpg"
+        },
+        {
+          "title": "Congress has been the place where America tries to resolve problems",
+          "url": "https://www.greeleytribune.com/2026/09/09/congress-america-250/",
+          "domain": "greeleytribune.com",
+          "seendate": "2026-09-09T18:30:00Z",
+          "image": "https://www.greeleytribune.com/wp-content/uploads/2026/09/Congress_49668-1.jpg"
+        },
+        {
+          "title": "Congress has been the place where America tries to resolve problems",
+          "url": "https://www.bostonherald.com/2026/09/09/congress-america-250/",
+          "domain": "bostonherald.com",
+          "seendate": "2026-09-09T16:45:00Z",
+          "image": "https://www.bostonherald.com/wp-content/uploads/2026/09/Congress_49668-1.jpg"
+        }
+      ]
+    },
+    "title": "Congress has been the place where America tries to resolve problems",
+    "summary": "2026-09-09 orlandosentinel.com: Congress has been the place where America tries to resolve problems\n2026-09-09 fortmorgantimes.com: Congress has been the place where America tries to resolve problems\n2026-09-09 dailypress.com: Congress has been the place where America tries to resolve problems\n2026-09-09 pilotonline.com: Congress has been the place where America tries to resolve problems\n2026-09-09 sun-sentinel.com: Congress has been the place where America tries to resolve problems\n2026-09-09 reporterherald.com: Congress has been the place where America tries to resolve problems",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_500-checks-enrollees",
+    "source": "news",
+    "ts": 1789210705575,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.42,
       "articles": [
         {
           "title": "Trump promises $500 Obamacare rebate checks for 1M enrollees in 30 states",
@@ -14038,14 +14017,64 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_000-about-adult",
+    "cid": "cand_news_again-backed-congressional",
     "source": "news",
-    "ts": 1789188311490,
+    "ts": 1789210705574,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.437,
+      "salience": 0.414,
+      "articles": [
+        {
+          "title": "The Latest : US Supreme Court again rejects push to use Trump - backed congressional map in Missouri",
+          "url": "https://www.wboc.com/news/national/the-latest-us-supreme-court-again-rejects-push-to-use-trump-backed-congressional-map-in/article_5826fdf7-f0a5-5d9b-9668-165c13f85288.html",
+          "domain": "wboc.com",
+          "seendate": "2026-09-10T18:00:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/wboc.com/content/tncms/assets/v3/editorial/2/b1/2b1b72fa-cad8-50d2-88c6-7363f93c52f1/6aa2df438e16e.image.jpg?crop=1760%2C924%2C0%2C126"
+        },
+        {
+          "title": "The Latest : US Supreme Court again rejects push to use Trump - backed congressional map in Missouri",
+          "url": "http://www.thegazette.com/news/national/the-latest-us-supreme-court-again-rejects-push-to-use-trump-backed-congressional-map-in/article_c4c3af20-7a40-5b14-8691-17410e1414ac.html",
+          "domain": "thegazette.com",
+          "seendate": "2026-09-10T17:45:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/thegazette.com/content/tncms/assets/v3/editorial/4/e7/4e75aa0f-3726-5617-b772-5878add767d4/6aa2a0124f58b.image.jpg?crop=3936%2C2066%2C0%2C282"
+        },
+        {
+          "title": "The Latest : US Supreme Court again rejects push to use Trump - backed congressional map in Missouri",
+          "url": "https://www.local10.com/news/2026/09/10/the-latest-us-supreme-court-again-rejects-push-to-use-trump-backed-congressional-map-in-missouri/",
+          "domain": "local10.com",
+          "seendate": "2026-09-10T17:15:00Z",
+          "image": "https://www.local10.com/resizer/v2/JADDG6GRFO6M4KS3ESIGER3PAQ.jpg?auth=48669387d212e6ce86212d7b99c5e064a77442265272afd9e91deaec85972bf5"
+        },
+        {
+          "title": "The Latest : US Supreme Court again rejects push to use Trump - backed congressional map in Missouri",
+          "url": "http://www.postregister.com/news/national/the-latest-us-supreme-court-again-rejects-push-to-use-trump-backed-congressional-map-in/article_aa33ff97-734f-5534-8b7b-54b54e5135b8.html",
+          "domain": "postregister.com",
+          "seendate": "2026-09-10T16:15:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/postregister.com/content/tncms/assets/v3/editorial/1/2c/12c49225-a67a-5b52-8f98-2152056cdaed/6aa2298fa69fb.image.jpg?crop=1760%2C924%2C0%2C126"
+        }
+      ]
+    },
+    "title": "The Latest : US Supreme Court again rejects push to use Trump - backed congressional map in Missouri",
+    "summary": "2026-09-10 wboc.com: The Latest : US Supreme Court again rejects push to use Trump - backed congressional map in Missouri\n2026-09-10 thegazette.com: The Latest : US Supreme Court again rejects push to use Trump - backed congressional map in Missouri\n2026-09-10 local10.com: The Latest : US Supreme Court again rejects push to use Trump - backed congressional map in Missouri\n2026-09-10 postregister.com: The Latest : US Supreme Court again rejects push to use Trump - backed congressional map in Missouri",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_000-about-adult",
+    "source": "news",
+    "ts": 1789210705575,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.398,
       "articles": [
         {
           "title": "What to know about Trump promise to give every US adult $5 , 000",
@@ -14090,12 +14119,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_appeals-blocked-court",
     "source": "news",
-    "ts": 1789188311490,
+    "ts": 1789210705574,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.431,
+      "salience": 0.392,
       "articles": [
         {
           "title": "Trump order to limit mail voting blocked by appeals court",
@@ -14133,12 +14162,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_court-doesnt-lawmakers",
     "source": "news",
-    "ts": 1789188311490,
+    "ts": 1789210705574,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.399,
+      "salience": 0.36,
       "articles": [
         {
           "title": "Trump doesnt have the power to limit mail - in voting , lawmakers tell US Supreme Court | National & World News",
@@ -14174,57 +14203,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_again-backed-congressional",
-    "source": "news",
-    "ts": 1789188311490,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.398,
-      "articles": [
-        {
-          "title": "The Latest : US Supreme Court again rejects push to use Trump - backed congressional map in Missouri",
-          "url": "https://www.wboc.com/news/national/the-latest-us-supreme-court-again-rejects-push-to-use-trump-backed-congressional-map-in/article_5826fdf7-f0a5-5d9b-9668-165c13f85288.html",
-          "domain": "wboc.com",
-          "seendate": "2026-09-10T18:00:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/wboc.com/content/tncms/assets/v3/editorial/2/b1/2b1b72fa-cad8-50d2-88c6-7363f93c52f1/6aa2df438e16e.image.jpg?crop=1760%2C924%2C0%2C126"
-        },
-        {
-          "title": "The Latest : US Supreme Court again rejects push to use Trump - backed congressional map in Missouri",
-          "url": "http://www.thegazette.com/news/national/the-latest-us-supreme-court-again-rejects-push-to-use-trump-backed-congressional-map-in/article_c4c3af20-7a40-5b14-8691-17410e1414ac.html",
-          "domain": "thegazette.com",
-          "seendate": "2026-09-10T17:45:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/thegazette.com/content/tncms/assets/v3/editorial/4/e7/4e75aa0f-3726-5617-b772-5878add767d4/6aa2a0124f58b.image.jpg?crop=3936%2C2066%2C0%2C282"
-        },
-        {
-          "title": "The Latest : US Supreme Court again rejects push to use Trump - backed congressional map in Missouri",
-          "url": "https://www.local10.com/news/2026/09/10/the-latest-us-supreme-court-again-rejects-push-to-use-trump-backed-congressional-map-in-missouri/",
-          "domain": "local10.com",
-          "seendate": "2026-09-10T17:15:00Z",
-          "image": "https://www.local10.com/resizer/v2/JADDG6GRFO6M4KS3ESIGER3PAQ.jpg?auth=48669387d212e6ce86212d7b99c5e064a77442265272afd9e91deaec85972bf5"
-        }
-      ]
-    },
-    "title": "The Latest : US Supreme Court again rejects push to use Trump - backed congressional map in Missouri",
-    "summary": "2026-09-10 wboc.com: The Latest : US Supreme Court again rejects push to use Trump - backed congressional map in Missouri\n2026-09-10 thegazette.com: The Latest : US Supreme Court again rejects push to use Trump - backed congressional map in Missouri\n2026-09-10 local10.com: The Latest : US Supreme Court again rejects push to use Trump - backed congressional map in Missouri",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_centers-gop-himself",
     "source": "news",
-    "ts": 1789188311490,
+    "ts": 1789210705575,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.39,
+      "salience": 0.351,
       "articles": [
         {
           "title": "The Latest : Trump centers himself in pitch to midterm voters , promising payouts if the GOP wins",
@@ -14269,12 +14255,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_000-gop-kan",
     "source": "news",
-    "ts": 1789188311490,
+    "ts": 1789210705574,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.384,
+      "salience": 0.345,
       "articles": [
         {
           "title": "Kan . U . S . Senator responds to Trump $5 , 000 pledge if GOP wins midterms",
