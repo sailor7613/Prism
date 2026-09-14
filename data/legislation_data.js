@@ -10354,7 +10354,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Local Communities & Bird Habitat Stewardship Act of 2025",
     "meta": "H.R. 3276 · Reported · Climate & Energy",
-    "id": "hr-119-3276"
+    "id": "hr-119-3276",
+    "rc": 1,
+    "mm": 0.704
   },
   {
     "name": "Yuhaaviatam of San Manuel Nation Land Exchange Act",
