@@ -2742,8 +2742,8 @@ const LEGISLATION_DATA = [
     "name": "Digital Asset Market Clarity Act",
     "meta": "H.R. 3633 · Passed House · Financial Regulation",
     "id": "hr-119-3633",
-    "rc": 1,
-    "mm": 0.374
+    "rc": 2,
+    "mm": 0.01
   },
   {
     "name": "25th Anniversary of 9/11 Commemorative Coin Act",
