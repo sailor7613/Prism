@@ -9871,7 +9871,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Tax Relief for Fraud Victims Act",
     "meta": "H.R. 9500 · Reported",
-    "id": "hr-119-9500"
+    "id": "hr-119-9500",
+    "rc": 1,
+    "mm": 0.92
   },
   {
     "name": "End Tax Penalties on American Hostages Act",
@@ -10124,7 +10126,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Protect College Sports Act of 2026",
     "meta": "S. 4668 · Reported · Other",
-    "id": "s-119-4668"
+    "id": "s-119-4668",
+    "rc": 1,
+    "mm": 0.51
   },
   {
     "name": "An original bill to authorize appropriations for fiscal year 2027 for military activities of the Department of Defense, for military construction, and for defense activities of the Department of Energy, to prescribe military personnel strengths for such fiscal year, and for other purposes.",
@@ -12073,7 +12077,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Whistleblower Protection Act of 2025",
     "meta": "H.R. 4646 · Reported · Housing",
-    "id": "hr-119-4646"
+    "id": "hr-119-4646",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "New Mexico Land Grant-Mercedes Historical or Traditional Use Cooperation and Coordination Act",
