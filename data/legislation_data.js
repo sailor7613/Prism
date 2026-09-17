@@ -10129,7 +10129,7 @@ const LEGISLATION_DATA = [
     "name": "Protect College Sports Act of 2026",
     "meta": "S. 4668 · Reported · Other",
     "id": "s-119-4668",
-    "rc": 1,
+    "rc": 2,
     "mm": 0.51
   },
   {
