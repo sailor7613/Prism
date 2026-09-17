@@ -2742,8 +2742,8 @@ const LEGISLATION_DATA = [
     "name": "Digital Asset Market Clarity Act",
     "meta": "H.R. 3633 · Passed House · Financial Regulation",
     "id": "hr-119-3633",
-    "rc": 1,
-    "mm": 0.374
+    "rc": 2,
+    "mm": 0.01
   },
   {
     "name": "25th Anniversary of 9/11 Commemorative Coin Act",
@@ -3031,8 +3031,8 @@ const LEGISLATION_DATA = [
     "name": "SEED Act",
     "meta": "H.R. 5334 · Passed House · Tax Policy",
     "id": "hr-119-5334",
-    "rc": 3,
-    "mm": 0.75
+    "rc": 4,
+    "mm": 0.245
   },
   {
     "name": "Doug LaMalfa Federal Disaster Tax Relief Certainty Act",
@@ -3741,7 +3741,7 @@ const LEGISLATION_DATA = [
     "name": "AGOA Extension Act",
     "meta": "H.R. 6500 · Passed House · Trade",
     "id": "hr-119-6500",
-    "rc": 3,
+    "rc": 4,
     "mm": 0.726
   },
   {
@@ -4673,7 +4673,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Retire through Ownership Act",
     "meta": "S. 2403 · Passed Senate · Labor",
-    "id": "s-119-2403"
+    "id": "s-119-2403",
+    "rc": 1,
+    "mm": 0.933
   },
   {
     "name": "ANCHOR Act",
@@ -5609,7 +5611,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Prison Staff Safety Enhancement Act",
     "meta": "S. 307 · Passed Senate · Criminal Justice",
-    "id": "s-119-307"
+    "id": "s-119-307",
+    "rc": 1,
+    "mm": 0.958
   },
   {
     "name": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the United States Fish and Wildlife Service relating to \"Endangered and Threatened Wildlife and Plants; Endangered Species Status for the San Francisco Bay-Delta Distinct Population Segment of the Longfin Smelt\".",
@@ -6000,7 +6004,9 @@ const LEGISLATION_DATA = [
   {
     "name": "LACA",
     "meta": "S. 32 · Passed Senate · Law",
-    "id": "s-119-32"
+    "id": "s-119-32",
+    "rc": 1,
+    "mm": 0.948
   },
   {
     "name": "Chinese Currency Accountability Act of 2025",
@@ -9867,7 +9873,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Tax Relief for Fraud Victims Act",
     "meta": "H.R. 9500 · Reported",
-    "id": "hr-119-9500"
+    "id": "hr-119-9500",
+    "rc": 1,
+    "mm": 0.92
   },
   {
     "name": "End Tax Penalties on American Hostages Act",
@@ -9942,7 +9950,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Protect Economic and Academic Freedom Act of 2025",
     "meta": "H.R. 4795 · Reported · Education",
-    "id": "hr-119-4795"
+    "id": "hr-119-4795",
+    "rc": 1,
+    "mm": 0.167
   },
   {
     "name": "Equal Campus Access Act of 2025",
@@ -10118,7 +10128,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Protect College Sports Act of 2026",
     "meta": "S. 4668 · Reported · Other",
-    "id": "s-119-4668"
+    "id": "s-119-4668",
+    "rc": 1,
+    "mm": 0.51
   },
   {
     "name": "An original bill to authorize appropriations for fiscal year 2027 for military activities of the Department of Defense, for military construction, and for defense activities of the Department of Energy, to prescribe military personnel strengths for such fiscal year, and for other purposes.",
@@ -10348,7 +10360,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Local Communities & Bird Habitat Stewardship Act of 2025",
     "meta": "H.R. 3276 · Reported · Climate & Energy",
-    "id": "hr-119-3276"
+    "id": "hr-119-3276",
+    "rc": 1,
+    "mm": 0.704
   },
   {
     "name": "Yuhaaviatam of San Manuel Nation Land Exchange Act",
@@ -10478,7 +10492,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Proposing an amendment to the Constitution of the United States to require that the Supreme Court of the United States be composed of nine justices.",
     "meta": "H.J.Res. 1 · Reported · Law",
-    "id": "hjres-119-1"
+    "id": "hjres-119-1",
+    "rc": 1,
+    "mm": 0.014
   },
   {
     "name": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Environmental Protection Agency relating to \"National Emission Standards for Hazardous Air Pollutants: Coal- and Oil-Fired Electric Utility Steam Generating Units: Final Repeal\".",
@@ -12063,7 +12079,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Whistleblower Protection Act of 2025",
     "meta": "H.R. 4646 · Reported · Housing",
-    "id": "hr-119-4646"
+    "id": "hr-119-4646",
+    "rc": 1,
+    "mm": 1
   },
   {
     "name": "New Mexico Land Grant-Mercedes Historical or Traditional Use Cooperation and Coordination Act",
