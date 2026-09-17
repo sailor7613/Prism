@@ -3031,8 +3031,8 @@ const LEGISLATION_DATA = [
     "name": "SEED Act",
     "meta": "H.R. 5334 · Passed House · Tax Policy",
     "id": "hr-119-5334",
-    "rc": 3,
-    "mm": 0.75
+    "rc": 4,
+    "mm": 0.245
   },
   {
     "name": "Doug LaMalfa Federal Disaster Tax Relief Certainty Act",
@@ -4673,7 +4673,9 @@ const LEGISLATION_DATA = [
   {
     "name": "Retire through Ownership Act",
     "meta": "S. 2403 · Passed Senate · Labor",
-    "id": "s-119-2403"
+    "id": "s-119-2403",
+    "rc": 1,
+    "mm": 0.933
   },
   {
     "name": "ANCHOR Act",
