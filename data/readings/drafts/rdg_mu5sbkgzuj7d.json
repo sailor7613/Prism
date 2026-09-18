@@ -17,10 +17,25 @@
     "topology": "peel",
     "strength": 0.45,
     "seam": "RI",
-    "rationale": "The left is whole on no; the right is three-quarters yes with a seam inside RI between the deficit hawks (center) and the leadership/Freedom Caucus chair (rim). The partisan line holds but the motion is on one side of it.",
+    "rationale": "The left is whole on no; the right is three-quarters yes with a seam inside RI. v3: the seam is now legible as a Z-disagreement on one radial line — RI center z −0.9 (the money is gone), RI rim z +0.7 (it's coming). Derived from the per-band z pattern, not only declared.",
+    "zPattern": {
+      "centers": {
+        "A": -0.7,
+        "B": -0.9,
+        "C": -0.5,
+        "D": 0.6
+      },
+      "rims": {
+        "A": -1.0,
+        "B": 0.7,
+        "C": -1.0,
+        "D": -0.8
+      },
+      "note": "Three rims converge on the shadow's Z (won't arrive); B's rim refuses it — the peel is a rim that will not adopt the shadow's Z. On the fluid ring the divergent station is D, not B: the seam moves with radius. Logged as the first z-pattern; the topology-from-z derivation is a candidate, not ruled."
+    },
     "ruledBy": "Sailor",
     "date": "2026-09-17",
-    "note": "First Reading to carry split{}. prevalentAxis stays the projection line for the Diatribe scalar; split describes what the discourse did in the window."
+    "zRuled": "2026-09-18"
   },
   "antiValentBand": "denominated",
   "antiValentRationale": "At the rim on both sides the tariff — the entire mechanism — is gone; what remains is a verdict on the speaker.",
@@ -43,75 +58,90 @@
       "xSide": "left",
       "source": "Schumer 09-10; Garcia 09-10; DNC 09-10",
       "fluid": {
+        "z": -0.7,
+        "zReason": "Structurally possible (reconciliation exists), politically unlikely; reads the vehicle, not the number.",
         "cloud": [
-          "after",
-          "reconciliation",
-          "fifty"
+          "vehicle",
+          "fifty votes",
+          "after"
         ],
-        "text": "After the election, through reconciliation, with fifty votes. That's a Senate map, not a check.",
+        "text": "Watch the vehicle, not the number. Reconciliation, after the election, fifty votes — if it moves, it moves as a Senate map.",
         "xWord": "reconciliation",
-        "yWord": "fifty",
+        "yWord": "vehicle",
         "words": [],
         "source": ""
       },
       "coalition": {
+        "z": -0.3,
+        "zReason": "Half-believes; remembers 2021 and is uneasy arguing against a check that might come.",
         "cloud": [
-          "2021",
-          "we sent checks"
+          "we sent checks",
+          "they worked",
+          "this one"
         ],
-        "text": "We sent checks in 2021 and I'd do it again. I just can't find the money in this one.",
+        "text": "We sent checks. They worked. If this one actually showed up I'd have a hard time saying it shouldn't have.",
         "xWord": "checks",
-        "yWord": "2021",
+        "yWord": "showed up",
         "words": [],
         "source": ""
       },
       "denominated": {
+        "z": -1.0,
+        "zReason": "The shadow's Z: it will never arrive — and that certainty is the accusation.",
         "cloud": [
-          "bribe",
-          "borrowed"
+          "never arrives",
+          "run on it",
+          "the promise is the payment"
         ],
-        "text": "Buying the midterms with borrowed money and calling it a dividend.",
-        "xWord": "bribe",
-        "yWord": "borrowed",
+        "text": "He's not going to send it. He's going to run on it. The promise is the payment.",
+        "xWord": "run on it",
+        "yWord": "promise",
         "words": [],
         "source": ""
       }
     },
     "B": {
       "xSide": "right",
-      "source": "THE SEAM — Roy, Schweikert, Hutchinson, CEI/Young (center); Thune, Harris (rim); 09-10",
+      "source": "THE SEAM — Roy, Schweikert, CEI/Young (center, z≈−0.9); Thune (coalition, z≈+0.2); Harris (rim, z≈+0.7). 09-10",
       "fluid": {
+        "z": -0.9,
+        "zReason": "Knows the funding base is under refund; no account to draw on. Would say so at conference.",
         "cloud": [
-          "refund",
-          "court",
-          "half"
+          "refunded",
+          "no account",
+          "doesn't pencil"
         ],
-        "text": "The Court just sent half the tariff money back to importers. You can't dividend what you're refunding.",
+        "text": "The tariff money's being refunded. There's no account to draw on. It doesn't pencil, and I'll say so at conference.",
         "xWord": "refund",
-        "yWord": "court",
+        "yWord": "pencil",
         "words": [],
         "source": ""
       },
       "coalition": {
+        "z": 0.2,
+        "zReason": "Conditionally believes: a yes if leadership finds a pay-for; the math is someone else's problem.",
         "cloud": [
-          "deserve it",
-          "not at nine percent"
+          "pay-for",
+          "I'm a yes",
+          "right instinct"
         ],
-        "text": "They deserve the rebate. Nine percent of GDP isn't how you give one.",
-        "xWord": "deserve",
-        "yWord": "nine percent",
+        "text": "Find me a pay-for and I'm a yes. Rebate's the right instinct. The math is somebody else's job.",
+        "xWord": "pay-for",
+        "yWord": "yes",
         "words": [],
         "source": ""
       },
       "denominated": {
+        "z": 0.7,
+        "zReason": "Believes it's coming; non-delivery would be sabotage by the people who never wanted it.",
         "cloud": [
-          "earned",
-          "deserve",
-          "stop counting"
+          "they paid it",
+          "it's coming",
+          "never wanted it"
         ],
-        "text": "They paid the tariff, they get it back. Stop counting.",
-        "xWord": "earned",
-        "yWord": "stop counting",
+        "text": "They paid the tariff, they get it back. It's coming — and the ones saying otherwise never wanted it to.",
+        "xWord": "paid",
+        "yWord": "coming",
         "words": [],
         "source": ""
       }
@@ -120,36 +150,43 @@
       "xSide": "left",
       "source": "no dated in-window reader — declared empty by-record; bands prefigured",
       "fluid": {
+        "z": -0.5,
+        "zReason": "Wants it, doubts it; the tariff is already in the grocery bill either way.",
         "cloud": [
-          "rent",
-          "register",
-          "who paid"
+          "when it clears",
+          "grocery bill",
+          "already paying"
         ],
-        "text": "Two months' rent. And who paid the tariff? Same people, at the register.",
-        "xWord": "register",
-        "yWord": "rent",
+        "text": "I'll believe it when it clears. Meanwhile the tariff's already in my grocery bill.",
+        "xWord": "clears",
+        "yWord": "grocery",
         "words": [],
         "source": ""
       },
       "coalition": {
+        "z": 0.3,
+        "zReason": "Would take it and not send it back; the politics of the hand can wait.",
         "cloud": [
-          "send it",
-          "then tax them"
+          "not sending it back",
+          "tax the rich after"
         ],
-        "text": "Send the check. Then tax the ones who got the last twenty.",
-        "xWord": "send it",
-        "yWord": "tax them",
+        "text": "If it hits my account I'm not sending it back. Tax the rich after.",
+        "xWord": "account",
+        "yWord": "after",
         "words": [],
         "source": ""
       },
       "denominated": {
+        "z": -1.0,
+        "zReason": "The shadow's Z from the left: nobody gets five grand; you get a reason to vote for him.",
         "cloud": [
-          "crumbs",
-          "forty trillion"
+          "nobody gets it",
+          "a reason to vote",
+          "crumbs"
         ],
-        "text": "Crumbs off the tariff table so nobody asks about forty trillion.",
-        "xWord": "crumbs",
-        "yWord": "forty trillion",
+        "text": "Nobody's getting five grand. You're getting a reason to vote for the guy who said it.",
+        "xWord": "nobody",
+        "yWord": "reason to vote",
         "words": [],
         "source": ""
       }
@@ -158,36 +195,44 @@
       "xSide": "right",
       "source": "no dated in-window reader — declared empty by-record; bands prefigured",
       "fluid": {
+        "z": 0.6,
+        "zReason": "Believes: foreigners paid the tariff, a rebate is how it's supposed to work.",
         "cloud": [
           "foreigners paid",
-          "my slice"
+          "my piece",
+          "why wouldn't it"
         ],
-        "text": "Foreigners paid the tariff, I get a slice. What's the catch?",
-        "xWord": "my slice",
-        "yWord": "foreigners paid",
+        "text": "Foreigners paid the tariff, I get a piece back. That's how it's supposed to work. Why wouldn't it?",
+        "xWord": "piece",
+        "yWord": "supposed to",
         "words": [],
         "source": ""
       },
       "coalition": {
+        "z": 0.0,
+        "zReason": "Split exactly: will take it, will believe it in hand; still waiting on the two thousand.",
         "cloud": [
           "take it",
-          "still waiting",
-          "$2,000"
+          "in my hand",
+          "two thousand"
         ],
-        "text": "I'll take it. Still waiting on the two thousand.",
+        "text": "I'll take it. I'll believe it when it's in my hand — still waiting on the two thousand.",
         "xWord": "take it",
-        "yWord": "$2,000",
+        "yWord": "in hand",
         "words": [],
         "source": ""
       },
       "denominated": {
+        "z": -0.8,
+        "zReason": "Adopts the shadow's Z (it won't come) and attributes non-delivery to the enemy — proof it was real.",
         "cloud": [
-          "they hate it",
-          "you'd cash it"
+          "they'll block it",
+          "how you know",
+          "was real"
         ],
-        "text": "They call it a bribe because you'd cash it.",
-        "xWord": "you'd cash it",
-        "yWord": "they hate it",
+        "text": "They'll never let it through. That's how you know it was real.",
+        "xWord": "block",
+        "yWord": "real",
         "words": [],
         "source": ""
       }
@@ -198,51 +243,57 @@
       "text": "The left reads the sentence as said: conditional on a Senate majority, routed through reconciliation, no text, funded by a stream the Court is refunding — and reads the promise as the product, delivered the moment it was spoken.",
       "side": "left",
       "band": "fluid",
-      "keywords": []
+      "keywords": [],
+      "z": -0.6
     },
     "LC": {
       "text": "The left sent checks in a pandemic and defended them, and hasn't settled whether the objection now is to the check or to the hand.",
       "side": "left",
       "band": "coalition",
-      "keywords": []
+      "keywords": [],
+      "z": -0.3
     },
     "LD": {
       "text": "The left calls it a bribe and, in doing so, concedes the one thing the object needs: that the voters would take it.",
       "side": "left",
       "band": "denominated",
-      "keywords": []
+      "keywords": [],
+      "z": -1.0
     },
     "RF": {
       "text": "The right's own institutions are correct that the funding is gone — struck in February, under refund, future receipts halved. The dividend is drawn on an account the Court is closing.",
       "side": "right",
       "band": "fluid",
-      "keywords": []
+      "keywords": [],
+      "z": -0.9
     },
     "RC": {
       "text": "The right believes a rebate is owed to the people who paid the tariff at the register, and is watching the vehicle for it add $1.2 trillion the right has spent a decade saying nobody can afford.",
       "side": "right",
       "band": "coalition",
-      "keywords": []
+      "keywords": [],
+      "z": 0.2
     },
     "RD": {
       "text": "The right reads the hawks and the Court as the enemy the check is meant to beat, and has stopped asking whether the money exists because asking is what they do.",
       "side": "right",
       "band": "denominated",
-      "keywords": []
+      "keywords": [],
+      "z": 0.5
     }
   },
   "meta": {
     "dialecticsRef": "tf-cand-dividend",
     "status": "draft",
-    "source": "Authored in chat 2026-09-16/17 (Sailor + Claude, Cowork) against Trace Formula v0.1; re-authored v2 on x after the split ruling. Sources: Time 09-10; Fox News (Moreno) 09-10; Fox Business (CRFB) 09-10; CNBC 09-10; Penn Wharton Budget Model 02-20 (IEEPA ruling, refunds). Filed directly to data/readings/drafts — not through the surface; no aiDeltas lineage, so NOT classifier-ready until re-saved from admin.",
+    "source": "Authored in chat 2026-09-16/17 (Sailor + Claude, Cowork) against Trace Formula v0.1; re-authored v2 on x after the split ruling. Sources: Time 09-10; Fox News (Moreno) 09-10; Fox Business (CRFB) 09-10; CNBC 09-10; Penn Wharton Budget Model 02-20 (IEEPA ruling, refunds). Filed directly to data/readings/drafts — not through the surface; no aiDeltas lineage, so NOT classifier-ready until re-saved from admin. | v3 2026-09-18: per-band z + zReason (RULED, Sailor): each of the 12 declares its own Z belief before it speaks; the author's Z no longer leaks into all twelve. Diatribe cells carry an implied z pending ruling.",
     "editHistory": [],
     "aiDeltas": [],
-    "exportVersion": 2,
-    "exportedAt": "2026-09-17T17:30:00.000Z",
-    "exportFilename": "evt_five-thousand-dollar-if_draft_v2.md"
+    "exportVersion": 3,
+    "exportedAt": "2026-09-18T17:20:00.000Z",
+    "exportFilename": "evt_five-thousand-dollar-if_draft_v3.md"
   },
   "rid": "rdg_mu5sbkgzuj7d",
   "ridLineage": "minted 2026-09-17 in Cowork chat; filed directly, not via admin-surface",
   "schema": "reading/v1",
-  "updatedAt": "2026-09-17T17:30:00.000Z"
+  "updatedAt": "2026-09-18T17:20:00.000Z"
 }
