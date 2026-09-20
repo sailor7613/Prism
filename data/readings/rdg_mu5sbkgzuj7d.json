@@ -55,21 +55,27 @@
         "xWord": "reconciliation",
         "yWord": "vehicle",
         "words": [],
-        "source": ""
+        "source": "",
+        "z": -0.7,
+        "zReason": "Structurally possible (reconciliation exists), politically unlikely; reads the vehicle, not the number."
       },
       "coalition": {
         "text": "We sent checks. They worked. If this one actually showed up I'd have a hard time saying it shouldn't have.",
         "xWord": "checks",
         "yWord": "showed up",
         "words": [],
-        "source": ""
+        "source": "",
+        "z": -0.3,
+        "zReason": "Half-believes; remembers 2021 and is uneasy arguing against a check that might come."
       },
       "denominated": {
         "text": "He's not going to send it. He's going to run on it. The promise is the payment.",
         "xWord": "run on it",
         "yWord": "promise",
         "words": [],
-        "source": ""
+        "source": "",
+        "z": -1.0,
+        "zReason": "The shadow's Z: it will never arrive — and that certainty is the accusation."
       }
     },
     "B": {
@@ -80,21 +86,27 @@
         "xWord": "refund",
         "yWord": "pencil",
         "words": [],
-        "source": ""
+        "source": "",
+        "z": -0.9,
+        "zReason": "Knows the funding base is under refund; no account to draw on. Would say so at conference."
       },
       "coalition": {
         "text": "Find me a pay-for and I'm a yes. Rebate's the right instinct. The math is somebody else's job.",
         "xWord": "pay-for",
         "yWord": "yes",
         "words": [],
-        "source": ""
+        "source": "",
+        "z": 0.2,
+        "zReason": "Conditionally believes: a yes if leadership finds a pay-for; the math is someone else's problem."
       },
       "denominated": {
         "text": "They paid the tariff, they get it back. It's coming — and the ones saying otherwise never wanted it to.",
         "xWord": "paid",
         "yWord": "coming",
         "words": [],
-        "source": ""
+        "source": "",
+        "z": 0.7,
+        "zReason": "Believes it's coming; non-delivery would be sabotage by the people who never wanted it."
       }
     },
     "C": {
@@ -105,21 +117,27 @@
         "xWord": "clears",
         "yWord": "grocery",
         "words": [],
-        "source": ""
+        "source": "",
+        "z": -0.5,
+        "zReason": "Wants it, doubts it; the tariff is already in the grocery bill either way."
       },
       "coalition": {
         "text": "If it hits my account I'm not sending it back. Tax the rich after.",
         "xWord": "account",
         "yWord": "after",
         "words": [],
-        "source": ""
+        "source": "",
+        "z": 0.3,
+        "zReason": "Would take it and not send it back; the politics of the hand can wait."
       },
       "denominated": {
         "text": "Nobody's getting five grand. You're getting a reason to vote for the guy who said it.",
         "xWord": "nobody",
         "yWord": "reason to vote",
         "words": [],
-        "source": ""
+        "source": "",
+        "z": -1.0,
+        "zReason": "The shadow's Z from the left: nobody gets five grand; you get a reason to vote for him."
       }
     },
     "D": {
@@ -130,21 +148,27 @@
         "xWord": "piece",
         "yWord": "supposed to",
         "words": [],
-        "source": ""
+        "source": "",
+        "z": 0.6,
+        "zReason": "Believes: foreigners paid the tariff, a rebate is how it's supposed to work."
       },
       "coalition": {
         "text": "I'll take it. I'll believe it when it's in my hand — still waiting on the two thousand.",
         "xWord": "take it",
         "yWord": "in hand",
         "words": [],
-        "source": ""
+        "source": "",
+        "z": 0.0,
+        "zReason": "Split exactly: will take it, will believe it in hand; still waiting on the two thousand."
       },
       "denominated": {
         "text": "They'll never let it through. That's how you know it was real.",
         "xWord": "block",
         "yWord": "real",
         "words": [],
-        "source": ""
+        "source": "",
+        "z": -0.8,
+        "zReason": "Adopts the shadow's Z (it won't come) and attributes non-delivery to the enemy — proof it was real."
       }
     }
   },
@@ -194,7 +218,8 @@
     "aiDeltas": [],
     "exportVersion": 3,
     "exportedAt": "2026-09-18T17:20:00.000Z",
-    "exportFilename": "evt_five-thousand-dollar-if_draft_v3.md"
+    "exportFilename": "evt_five-thousand-dollar-if_draft_v3.md",
+    "zBackfill": "2026-09-20: per-band z + zReason written from Parameters/06_Events/evt_five-thousand-dollar-if_draft_v3.md (v0.3 form). Storage shape: responses.<Q>.<ring>.z / .zReason. Mechanical, Claude, under the decision-routing rule."
   },
   "rid": "rdg_mu5sbkgzuj7d",
   "ridLineage": "minted 2026-09-17 in Cowork chat; filed directly, not via admin-surface",

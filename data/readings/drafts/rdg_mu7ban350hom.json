@@ -1,0 +1,235 @@
+{
+  "title": "The Unsigned Ban",
+  "category": "Economic Policy · Housing · Finance · Regulation",
+  "date": "2026-07-11",
+  "prompt": "Wall Street can't buy another house. It keeps every one it has. Is that a ban, or the shape of one?",
+  "framing": "On June 22 the Senate passed the 21st Century ROAD to Housing Act 85–5; the House followed the next day 358–32. Tim Scott wrote the supply titles; Elizabeth Warren and Raphael Warnock wrote Title X: any for-profit entity with investment control of 350 or more single-family homes may not buy another. No divestiture — everything already owned stays owned. New construction, build-to-rent, renovation over 15%, and rent-to-own are exempt. The Treasury Secretary writes the regulations, with HUD and the SEC. The President neither signed nor vetoed it; the ten days ran out and it became law on July 11. Corporate landlords own more than 72,000 rentals in metro Atlanta — one in four — and the law does not touch one of them.",
+  "framingKeywords": [
+    "350",
+    "unsigned",
+    "build-to-rent"
+  ],
+  "prevalentAxis": "y",
+  "split": {
+    "topology": "axis",
+    "strength": 0.35,
+    "seam": "radial (center vs rim, all four stations) — declared axis along y; radial is a candidate enum value, not ruled",
+    "rationale": "Passage was 85–5, so the scalar runs along y: 'we passed it and the regs will handle it' vs 'they keep every house and the exemptions are the business model.' The centers sort weakly by y; the strong seam is between rings in every station — see zPattern.",
+    "zPattern": {
+      "centers": {
+        "A": 0.5,
+        "B": 0.4,
+        "C": -0.3,
+        "D": 0.3
+      },
+      "rims": {
+        "A": -0.6,
+        "B": -0.5,
+        "C": -0.9,
+        "D": -0.7
+      },
+      "note": "Second z-pattern on record; first with a POSITIVE shadow (+0.8) against an object at +0.2. All four rims negative — the rims did not follow the shadow. Candidate reading: rims converge on non-delivery whichever way the shadow points (the cynical-rim hypothesis). Seam is radial: every center sits 0.9–1.1 above its rim."
+    },
+    "ruledBy": null,
+    "date": "2026-09-20"
+  },
+  "antiValentBand": "denominated",
+  "antiValentRationale": "At the rim on both sides the statute is gone; what remains is who wrote the exemptions and why he would not sign it.",
+  "axes": {
+    "x": {
+      "pos": "Right",
+      "neg": "Left"
+    },
+    "y": {
+      "pos": "Institutional",
+      "neg": "Populist"
+    },
+    "z": {
+      "pos": "The ban takes homes off Wall Street's table",
+      "neg": "Nothing changes hands"
+    }
+  },
+  "responses": {
+    "A": {
+      "xSide": "left",
+      "source": "",
+      "fluid": {
+        "text": "It's in force. Title X is law as of July. What matters now is the rule Treasury writes, and we'll be reading every line of it.",
+        "xWord": "in force",
+        "yWord": "Title X",
+        "words": [],
+        "source": "",
+        "z": 0.5,
+        "zReason": "It is law and the ban is in force today; enforcement is Treasury's and will be watched."
+      },
+      "coalition": {
+        "text": "Eighty-five to five. And he wouldn't put his name on it. So it lives or dies in the regulations, written by his Treasury.",
+        "xWord": "85 to 5",
+        "yWord": "unsigned",
+        "words": [],
+        "source": "",
+        "z": 0.2,
+        "zReason": "Glad of the margins; uneasy that it needed no signature; the regs are the ballgame."
+      },
+      "denominated": {
+        "text": "He let it pass without signing so Bessent can gut it in the rule. Build-to-rent, new construction — those carve-outs were written by the people they carve out. It looks like a ban.",
+        "xWord": "hollow it",
+        "yWord": "their exemptions",
+        "words": [],
+        "source": "",
+        "z": -0.6,
+        "zReason": "Let through unsigned so the same Treasury can hollow it in the rule; the exemptions were the industry's; a ban in appearance."
+      }
+    },
+    "B": {
+      "xSide": "right",
+      "source": "",
+      "fluid": {
+        "text": "The supply titles are the bill. The cap is marginal — but it's real. As of July the big buyers are out of the resale market, and that's a fact on the ground.",
+        "xWord": "supply",
+        "yWord": "marginal",
+        "words": [],
+        "source": "",
+        "z": 0.4,
+        "zReason": "The supply titles are the win; the cap is marginal but real — 350-plus buyers are out of the resale market as of July."
+      },
+      "coalition": {
+        "text": "I voted for the supply. The cap I could take or leave — it's a line in the sand, and the market will walk around it.",
+        "xWord": "voted for supply",
+        "yWord": "line in the sand",
+        "words": [],
+        "source": "",
+        "z": 0.1,
+        "zReason": "Voted for the supply; the cap is a line the market will route around."
+      },
+      "denominated": {
+        "text": "Telling an American company it can't buy a house is un-American. It's Warren's trophy. It'll be litigated, read narrowly, and do nothing. Good.",
+        "xWord": "un-American",
+        "yWord": "Warren's",
+        "words": [],
+        "source": "",
+        "z": -0.5,
+        "zReason": "Regulating who may buy a house is un-American; it's Warren's; it will be litigated and read narrowly and do nothing — which is fine."
+      }
+    },
+    "C": {
+      "xSide": "left",
+      "source": "",
+      "fluid": {
+        "text": "They already own the block. Banning them from buying more is banning the past. Make them sell — that would have been a law.",
+        "xWord": "already own the block",
+        "yWord": "ban on the past",
+        "words": [],
+        "source": "",
+        "z": -0.3,
+        "zReason": "A ban on buying more, when they already own the block, is a ban on the past; divestiture would have been the thing."
+      },
+      "coalition": {
+        "text": "It's better than nothing, which is apparently the bar now. The rule's going to be written for the landlords. I'd love to be wrong.",
+        "xWord": "better than nothing",
+        "yWord": "the standard",
+        "words": [],
+        "source": "",
+        "z": -0.5,
+        "zReason": "Better than nothing, which is the standard now; expects the rule to be written for the landlords."
+      },
+      "denominated": {
+        "text": "Blackstone wrote the number. Build-to-rent is the loophole they'll drive the whole business through. And he didn't sign it — that's the tell. Nothing changes.",
+        "xWord": "they wrote the number",
+        "yWord": "carve-out",
+        "words": [],
+        "source": "",
+        "z": -0.9,
+        "zReason": "Blackstone wrote the 350 number and the build-to-rent carve-out; nothing changes; the unsigned law is the tell."
+      }
+    },
+    "D": {
+      "xSide": "right",
+      "source": "",
+      "fluid": {
+        "text": "Good. BlackRock can't buy your neighbor's house anymore. Now enforce it.",
+        "xWord": "can't buy the next one",
+        "yWord": "neighbor's house",
+        "words": [],
+        "source": "",
+        "z": 0.3,
+        "zReason": "Good: Wall Street can't buy your neighbor's house anymore; now enforce it."
+      },
+      "coalition": {
+        "text": "I'll believe it when I see one of their trucks leave a street. And somebody tell me why he didn't sign it.",
+        "xWord": "when a truck leaves",
+        "yWord": "why didn't he sign",
+        "words": [],
+        "source": "",
+        "z": 0.0,
+        "zReason": "Will believe it when a truck leaves; and why didn't he sign it?"
+      },
+      "denominated": {
+        "text": "They passed a 'ban' that lets them keep every house and build ten thousand more to rent. The uniparty protecting BlackRock. And he wouldn't even touch it.",
+        "xWord": "keep everything",
+        "yWord": "uniparty",
+        "words": [],
+        "source": "",
+        "z": -0.7,
+        "zReason": "A \"ban\" that lets them keep everything and keep building rentals — the uniparty protecting BlackRock, and Trump wouldn't touch it."
+      }
+    }
+  },
+  "diatribe": {
+    "LF": {
+      "text": "The left reads the statute as in force and the rule as the object: a ban whose reach is now an executive act by the executive that would not sign it.",
+      "side": "left",
+      "band": "fluid",
+      "keywords": []
+    },
+    "LC": {
+      "text": "The left is glad of eighty-five votes and cannot stop looking at the missing signature.",
+      "side": "left",
+      "band": "coalition",
+      "keywords": []
+    },
+    "LD": {
+      "text": "The left has decided the exemptions were dictated and the unsigned law is the receipt, and in saying so concedes the ban is real enough to need hollowing.",
+      "side": "left",
+      "band": "denominated",
+      "keywords": []
+    },
+    "RF": {
+      "text": "The right's institutions count the cap as marginal and real and move on to the supply titles, which they wrote.",
+      "side": "right",
+      "band": "fluid",
+      "keywords": []
+    },
+    "RC": {
+      "text": "The right voted for the bill and will let the market walk around the one line in it that it did not want.",
+      "side": "right",
+      "band": "coalition",
+      "keywords": []
+    },
+    "RD": {
+      "text": "The right's rim has two enemies for one law — Warren for writing it and the uniparty for gutting it — and has stopped asking which it believes.",
+      "side": "right",
+      "band": "denominated",
+      "keywords": []
+    }
+  },
+  "meta": {
+    "dialecticsRef": "evt-cand-unsigned-ban",
+    "status": "draft",
+    "source": "Authored 2026-09-20 (Sailor + Claude, Cowork) against Trace Formula v1, z-first. Object + axis ruled by Sailor 2026-09-20 (published-floor ruling A the same day). Supersedes the Feb 2026 Housing draft rdg_ms51urghp04a, which is not edited (I8). Sources: BPC section-by-section (final law); Morgan Lewis 07-07; HousingWire 07-14 (became law 07-11 without signature; Atlanta 72,000); WaPo 06-22; Axios 06-23; Senate Banking releases. Filed directly to data/readings/drafts — not through the surface; no aiDeltas lineage; not classifier-ready until re-saved from admin.",
+    "editHistory": [],
+    "aiDeltas": [],
+    "exportVersion": 1,
+    "exportedAt": "2026-09-20T18:16:43.000Z",
+    "exportFilename": "evt_road-act-350_draft_v1.md",
+    "slateRole": "delivered object (delivery settled, meaning contested) — beside the tariff refunds",
+    "linkedBillsOwed": "21st Century ROAD to Housing Act — bill number and roll-call IDs owed for linkedBills"
+  },
+  "rid": "rdg_mu7ban350hom",
+  "ridLineage": "minted 2026-09-20 in Cowork chat; filed directly, not via admin-surface",
+  "schema": "reading/v1",
+  "updatedAt": "2026-09-20T18:16:43.000Z",
+  "diatribeScore": -12,
+  "images": [],
+  "formulaVersion": "1"
+}
