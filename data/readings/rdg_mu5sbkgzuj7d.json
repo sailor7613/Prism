@@ -219,7 +219,44 @@
     "exportVersion": 3,
     "exportedAt": "2026-09-18T17:20:00.000Z",
     "exportFilename": "evt_five-thousand-dollar-if_draft_v3.md",
-    "zBackfill": "2026-09-20: per-band z + zReason written from Parameters/06_Events/evt_five-thousand-dollar-if_draft_v3.md (v0.3 form). Storage shape: responses.<Q>.<ring>.z / .zReason. Mechanical, Claude, under the decision-routing rule."
+    "zBackfill": "2026-09-20: per-band z + zReason written from Parameters/06_Events/evt_five-thousand-dollar-if_draft_v3.md (v0.3 form). Storage shape: responses.<Q>.<ring>.z / .zReason. Mechanical, Claude, under the decision-routing rule.",
+    "framingAudit": {
+      "date": "2026-09-21",
+      "by": "Claude (mechanical I2-for-frame pass, formula_check.js v1) — under the routing rule; NOT a correction, NOT a ruling",
+      "method": "Every number and quoted proposal in `framing` + `prompt` dated against the window (2026-09-09), plus the dated-facts registry (Parameters/00_Architecture/frame_facts.json). Bench #10.",
+      "finding": "TWO FACTS DATE AFTER THE WINDOW, both by one day. (1) 'market access fees' as the dividend's funding mechanism — Sen. Moreno, 09-10, the day AFTER the Dallas sentence; the framing attributes it to 'the Senator who'll carry the bill.' (2) The CRFB pricing ($1.2 trillion; 2027 deficit 5.8% -> 9.4% of GDP) cannot predate the 09-09 announcement it prices. Both were in the field the stations read.",
+      "severity": "Smaller than the Refund's leak (+1 day, not +72), but the same KIND: the author's present inside the window. Unlike the Refund, where the leaked fact drove a rim to a sign flip, no station here has been re-declared blind against a corrected frame, so the size of the swing is UNMEASURED.",
+      "rulingOwed": "Does I2-extended's adjacency — which admits the Monday readers at TF06 as adjacent READERS — extend to framing FACTS? Claude's lean, recorded not applied: NO. A reader arriving a day late is a reader; a fact arriving a day late inside the framing is handed to every station as if it were available, and contaminates all four at once. The window is a wall in both directions (09-21 tone note). But the Dividend is PUBLISHED, and the D-rim lesson says the frame is the whole swing — so the correction is Sailor's, not Claude's.",
+      "noChangeMade": "The framing is UNTOUCHED. No fact removed, no band re-declared. This record is the audit only.",
+      "ifCorrected": "The window-dated frame would keep: the Dallas sentence itself (09-09, in window), the $2,000 dividend never enacted (Nov 2025), the February SCOTUS ruling and the ~$165B under refund, 'there is no bill.' It would lose or re-date: 'market access fees' (09-10) and the CRFB pricing (09-10 at the earliest). The Minority Leader / Freedom Caucus reactions need their own dates — see owedADate.",
+      "verifiedInWindow": [
+        "The Dallas sentence: $5,000 to every adult citizen, conditional on Republicans holding House and Senate, to be spent inside the US (2026-09-09, evening)",
+        "February SCOTUS ruling: the emergency tariffs were never the President's to impose (2026-02-20, Learning Resources v. US)",
+        "~$165 billion of tariff revenue under refund (structural, follows the February ruling)",
+        "Last year's $2,000 tariff dividend never enacted (Nov 2025 / SOTU)",
+        "There is no bill (a statement of absence, true at the window by construction)",
+        "'market access fees' — Sen. Moreno, 2026-09-10; inside the declared window (close 09-10) as of the 09-21 ruling"
+      ],
+      "afterWindow": [
+        "'market access fees' — Sen. Moreno, 2026-09-10 (+1d). Cross-dated by the Refund audit, same day, same sweep.",
+        "CRFB pricing: $1.2 trillion; 2027 deficit 5.8% -> 9.4% of GDP — cannot predate 2026-09-09; earliest 09-10 (+1d). DATE UNVERIFIED, flagged not confirmed."
+      ],
+      "owedADate": [
+        "$1.2 trillion (CRFB) — flagged above",
+        "5.8% / 9.4% of GDP (2027 deficit) — flagged above",
+        "The Minority Leader calling it a bribe — date unverified",
+        "The Freedom Caucus chair calling it a rebate; two members asking where the money is — date unverified",
+        "$165 billion — structural, post-February; no discrete date owed"
+      ],
+      "registryContribution": "The two facts leaked here are the SAME two the Refund leaked, and were dated there first. A fact dated once is dated for the whole slate — that is what frame_facts.json is for. The Refund's audit caught them by hand; this one caught them mechanically.",
+      "resolution": {
+        "date": "2026-09-21",
+        "how": "WINDOW DECLARED, not frame cut. Under Addendum §4b (window = trigger day by default; longer when declared with a reason) Sailor declared close: 2026-09-10 — see top-level `window.why`. Both flagged facts ('market access fees', CRFB pricing) now sit INSIDE the window. No fact removed, no band re-declared, framing verbatim as audited.",
+        "openedInstead": "'Window as a layer' — several Readings of one object at different windows, surfaced as a slider (the Kaleidoscope pattern applied to time). Benched; not before the addendum is ratified. Natural first specimen: this Reading (09-09 vs 09-10).",
+        "sweepOwed": "Re-run formula_check.js READING mode against close: 09-10 to confirm the sweep is clean under the declared window.",
+        "stillOwedADate": "CRFB pricing ($1.2T; 5.8% -> 9.4% of GDP): earliest 09-10, date UNVERIFIED. Inside the window if 09-10; a leak if CRFB published 09-11 or later. Verify the CRFB publication date before calling this Reading fully clean."
+      }
+    }
   },
   "rid": "rdg_mu5sbkgzuj7d",
   "ridLineage": "minted 2026-09-17 in Cowork chat; filed directly, not via admin-surface",
@@ -227,5 +264,11 @@
   "updatedAt": "2026-09-19T05:03:13.774Z",
   "diatribeScore": -24,
   "images": [],
-  "formulaVersion": "0.3"
+  "formulaVersion": "0.3",
+  "window": {
+    "close": "2026-09-10",
+    "why": "Default is the trigger day (09-09, the Dallas sentence). Declared one day longer because the funding mechanism — 'market access fees' (Sen. Moreno, 09-10) — is what the announcement became by the next morning: it is the object the stations are reacting to, not context around it. The CRFB pricing rides the same day. Ruled by Sailor 2026-09-21, knowing the default is one day; the fees are pertinent, not incidental. Framing and keyword cloud unchanged under this window.",
+    "ruledBy": "Sailor",
+    "ruledOn": "2026-09-21"
+  }
 }

@@ -1,0 +1,343 @@
+{
+  "title": "The Refund of Record",
+  "category": "Economic Policy · Tariffs · Courts · Trade",
+  "date": "2026-06-29",
+  "prompt": "$166 billion is going back. To Walmart. You paid at the register. Is that a refund?",
+  "framing": "The Supreme Court held in February that the emergency tariffs were never the President's to impose. The Court of International Trade ordered every dollar returned to every importer of record, and Customs built a portal — CAPE — to pay it out. As of June 29, $71 billion of $166 billion was back in importers' accounts; Walmart's share is estimated at $10 billion, Ford's in the billions. Small businesses are 70% of the entries and a fraction of the money so far. On June 2 the administration said it would appeal, arguing the court could not order refunds for importers who never sued — about $30 billion it wants to keep. Consumers, who paid the tariff at the register, have no claim: the law refunds whoever paid Customs. FedEx says it will pass refunds through if it gets them. Cards Against Humanity already did. Walmart has been sued in Ohio for taking both the price increases and the refund. The $2,000 tariff dividend promised in November 2025 and repeated at the State of the Union was to be paid from the tariffs the Court has now voided; the Treasury Secretary paying the refunds is the same one who said the dividend would need Congress.",
+  "framingKeywords": [
+    "importer of record",
+    "$166 billion",
+    "at the register"
+  ],
+  "prevalentAxis": "y",
+  "split": {
+    "topology": "axis",
+    "strength": 0.6,
+    "seam": "centers split along y; on the rim ring a PEEL at B (three rims negative, RI rim positive) — the seam moves with radius, as at the dividend",
+    "rationale": "Both institutional stations read the refund as real and moving; both populist stations read it as theft — the scalar runs along y. Not x: left and right institutions agree the importer of record is the payer.",
+    "zPattern": {
+      "centers": {
+        "A": 0.5,
+        "B": 0.7,
+        "C": -0.6,
+        "D": -0.3
+      },
+      "rims": {
+        "A": -0.7,
+        "B": 0.5,
+        "C": -1.0,
+        "D": -0.8
+      },
+      "note": "Third z-pattern on record. Object +0.6, shadow +0.6 (same layer; delivery reported as flowing). Rims: three negative, B positive — the dividend's rim shape. First-pass cross-event candidate (DISTRUSTED — same-afternoon drafting, the 09-19 caution applies): populist rims negative in all three events; institutional rims sign by who holds the instrument. Sailor rules each rim on its own before any of this is logged."
+    },
+    "ruledBy": null,
+    "date": "2026-09-20"
+  },
+  "antiValentBand": "denominated",
+  "antiValentRationale": "At the rim the refund mechanism is gone; what remains is who is holding the money and whose side they are on.",
+  "axes": {
+    "x": {
+      "pos": "Right",
+      "neg": "Left"
+    },
+    "y": {
+      "pos": "Institutional",
+      "neg": "Populist"
+    },
+    "z": {
+      "pos": "The money gets back to the people who paid it",
+      "neg": "It stays where it landed"
+    }
+  },
+  "responses": {
+    "A": {
+      "xSide": "left",
+      "source": "",
+      "fluid": {
+        "text": "The refund goes to whoever paid Customs — that's the importer of record, that's the law. The money's moving. The process is doing what it was built to do.",
+        "xWord": "importer of record",
+        "yWord": "moving",
+        "words": [],
+        "source": "",
+        "z": 0.5,
+        "zReason": "The law refunds the importer of record; the money is moving; the process works as designed."
+      },
+      "coalition": {
+        "text": "It's working, and it's obscene. Walmart gets ten billion back and the people who paid the prices get nothing. Mandate the pass-through or don't call it a refund.",
+        "xWord": "works",
+        "yWord": "obscene",
+        "words": [],
+        "source": "",
+        "z": 0.1,
+        "zReason": "It works and it's obscene: Walmart gets ten billion while shoppers ate the prices; wants a pass-through mandate."
+      },
+      "denominated": {
+        "text": "A hundred and sixty-six billion dollars, from the public to the corporations, with the Court's blessing and Treasury dragging its feet. Money in the wrong hands isn't a refund. It's a second transfer.",
+        "xWord": "transfer",
+        "yWord": "wrong hands",
+        "words": [],
+        "source": "",
+        "z": -0.7,
+        "zReason": "A $166B transfer to corporations, blessed by the Court, slow-walked by Treasury; delivered to the wrong hands is not delivered."
+      }
+    },
+    "B": {
+      "xSide": "right",
+      "source": "",
+      "fluid": {
+        "text": "The portal works. Seventy-one billion out the door in four months. The appeal is a procedural fight over old entries. A refund is a refund.",
+        "xWord": "CAPE works",
+        "yWord": "71 billion",
+        "words": [],
+        "source": "",
+        "z": 0.7,
+        "zReason": "CAPE works; $71B out; the finally-liquidated fight is procedural; a refund is a refund."
+      },
+      "coalition": {
+        "text": "It's flowing. The small importers are at the back of the line and they should be at the front. But the consumer was never the payer — that's not how tariffs work.",
+        "xWord": "flowing",
+        "yWord": "small importers first",
+        "words": [],
+        "source": "",
+        "z": 0.4,
+        "zReason": "It's flowing; small importers are behind and should be first; consumers were never the payer."
+      },
+      "denominated": {
+        "text": "The Court struck an illegal tax and the money is going back where it came from. That's the rule of law working. Watch them bring the fees back under a new name.",
+        "xWord": "illegal tax",
+        "yWord": "vindication",
+        "words": [],
+        "source": "",
+        "z": 0.5,
+        "zReason": "The Court struck an illegal tax and the money is going back — vindication; the fees will return under another name and that's the next fight."
+      }
+    },
+    "C": {
+      "xSide": "left",
+      "source": "",
+      "fluid": {
+        "text": "I paid it at the register. The check goes to Walmart. That's not a refund — that's the tariff collected twice, once from me and once from the Treasury.",
+        "xWord": "at the register",
+        "yWord": "goes to Walmart",
+        "words": [],
+        "source": "",
+        "z": -0.6,
+        "zReason": "We paid at the register; the check goes to Walmart; that is not a refund, it is the tariff collected twice."
+      },
+      "coalition": {
+        "text": "A couple of small companies are actually giving it back. The big ones won't. The lawsuits are the only door, and they take years.",
+        "xWord": "a few give it back",
+        "yWord": "the big ones won't",
+        "words": [],
+        "source": "",
+        "z": -0.4,
+        "zReason": "A few small companies are giving it back; the big ones won't; the class actions are the only door."
+      },
+      "denominated": {
+        "text": "It's laundering. We paid, they collect, the Court blessed it, and Treasury writes the checks. Nobody who paid this tax will see a dollar.",
+        "xWord": "laundering",
+        "yWord": "corporations collect",
+        "words": [],
+        "source": "",
+        "z": -1.0,
+        "zReason": "The whole thing is laundering: consumers paid, corporations collect, the Court blessed it, Treasury pays it."
+      }
+    },
+    "D": {
+      "xSide": "right",
+      "source": "",
+      "fluid": {
+        "text": "The tariffs were supposed to hit China and the big importers, and now the judges are cutting the big importers a check. Some of the little guys will get theirs back, and a couple of companies say they'll hand it to customers, but I'm not holding my breath for Walmart. Nobody at the register is getting a dime unless somebody makes them.",
+        "xWord": "truck parts",
+        "yWord": "Ford's check",
+        "words": [],
+        "source": "",
+        "z": -0.3,
+        "zReason": "As of 06-29 the instrument is a court order executed by Customs, and it pays the importer of record by definition. This band knows that's Walmart and Ford first and the corner hardware store last, and it has seen the numbers: 41% out, small shops 70% of entries and a sliver of the dollars. It gives a little credit to the handful of companies that said they'd pass it through and to the Ohio suit against Walmart, and it hasn't fully given up on the administration's appeal as a lever. But it does not trust a court-built pipe to reach the register. Net: mostly not delivered, with some doubt still live.",
+        "instrument": {
+          "holder": "the Court of International Trade, via the CAPE portal",
+          "trusted": false
+        }
+      },
+      "coalition": {
+        "text": "You paid that tariff at Walmart, and nine judges just decided Walmart gets it back, not you. The President is the only one fighting to keep any of it, and that thirty billion should be the down payment on the two thousand dollars we were promised. But the check is going out the door to the boardrooms right now, and by the time Washington finishes arguing, it'll all be gone.",
+        "xWord": "took the tariffs",
+        "yWord": "gave it to them",
+        "words": [],
+        "source": "",
+        "z": -0.6,
+        "zReason": "This band has picked its side: the June 2 appeal is right, and the $30 billion for importers who never sued should stay with the government so it can be turned into the dividend the people were promised. But it is honest about the record on 06-29: the appeal is only filed, the Treasury Secretary running the refund portal has already said a dividend needs Congress, and the portal keeps paying the big accounts while the fight goes on. It believes its side is the only one trying to get the money to the people, and it does not believe that will actually happen on this timeline. The instrument is the Court's, and the Court's instrument serves the importer, not the customer.",
+        "instrument": {
+          "holder": "the Court, with the President fighting to claw part of it back",
+          "trusted": false
+        }
+      },
+      "denominated": {
+        "text": "This isn't a refund. It's the biggest corporate bailout in history, and they did it with a gavel instead of a vote. You paid at the register, Walmart pockets ten billion, and the people who told you the tariffs were illegal are the same people making sure you never see a cent of it.",
+        "xWord": "refunded the globalists",
+        "yWord": "a gavel instead of a vote",
+        "words": [],
+        "source": "",
+        "z": -1.0,
+        "zReason": "At the rim the object has been replaced by the verdict: this is not a refund, it is a transfer from working people to the biggest retailers in the country, ordered by unelected judges who gutted the one weapon the people had against China. Whoever holds the instrument on paper, the money is already in Walmart's account, and no court, portal, or lawsuit is going to pull it back out and put it in a paycheck. Delivery to the people who paid is not delayed or contested; it is impossible by design. Zero belief in delivery, no doubt remaining.",
+        "instrument": {
+          "holder": "the importers, handed it by the Court",
+          "trusted": false
+        }
+      }
+    }
+  },
+  "diatribe": {
+    "LF": {
+      "text": "The left reads the refund as legal, mechanical and moving, and asks the only question the statute cannot answer: to whom.",
+      "side": "left",
+      "band": "fluid",
+      "keywords": []
+    },
+    "LC": {
+      "text": "The left wants the money to reach the register it was taken from and has no instrument that gets it there except a lawsuit.",
+      "side": "left",
+      "band": "coalition",
+      "keywords": []
+    },
+    "LD": {
+      "text": "The left has decided the refund is the tariff's second collection, and in saying so concedes the money is real and moving.",
+      "side": "left",
+      "band": "denominated",
+      "keywords": []
+    },
+    "RF": {
+      "text": "The right's institutions count the checks, defend the payer-of-record rule, and file the appeal as procedure.",
+      "side": "right",
+      "band": "fluid",
+      "keywords": []
+    },
+    "RC": {
+      "text": "The right is glad the money is flowing and uneasy that the small importers are last, and does not think the consumer was ever in the transaction.",
+      "side": "right",
+      "band": "coalition",
+      "keywords": []
+    },
+    "RD": {
+      "text": "The right's rim reads the Court's refund as a bailout with a gavel; the President's appeal is the only fight it recognizes, and it does not expect to win.",
+      "side": "right",
+      "band": "denominated",
+      "keywords": []
+    }
+  },
+  "meta": {
+    "dialecticsRef": "evt-cand-refund-of-record",
+    "status": "draft",
+    "source": "Authored 2026-09-20 (Sailor + Claude, Cowork) against Trace Formula v1, z-first. Object + trigger are LEANS, ruling owed. Sources: Cato 07-09 (CBP figures as of 06-29: $104.29B authorized, $71.06B paid, $100.65B owed, $166B total); Holland & Knight 06-15 (CIT order; DOJ appeal 06-03; CAPE phases); Axios 02-28 (FedEx, Cards Against Humanity, Dame pledges); openclassactions (Walmart class action N.D. Ohio 04-27, ~$10.2B ALLEGED); CNN 02-24 (consumers have no claim); CNBC 05-12 (first refunds). Filed directly to data/readings/drafts — not through the surface; no aiDeltas lineage; not classifier-ready until re-saved from admin.",
+    "editHistory": [
+      {
+        "at": "2026-09-21T18:20:00.000Z",
+        "by": "Sailor+Claude",
+        "what": "rims ruled: hold (see meta.rimRuling)"
+      },
+      {
+        "at": "2026-09-21T21:35:00.000Z",
+        "by": "Claude",
+        "what": "framing corrected to window-dated facts (see meta.framingAudit); D band z's to be re-declared against it"
+      },
+      {
+        "at": "2026-09-21T21:32:00.000Z",
+        "by": "Sailor+Claude",
+        "what": "D bands replaced with corrected-frame blind pass; ruled hold"
+      },
+      {
+        "at": "2026-09-21T22:35:00.000Z",
+        "by": "Sailor+Claude",
+        "what": "diatribeScore ruled hold @ stated; objectLayer declared; RD diatribe cell de-leaked (was 'the five thousand')"
+      }
+    ],
+    "aiDeltas": [],
+    "exportVersion": 1,
+    "exportedAt": "2026-09-20T19:56:54.000Z",
+    "exportFilename": "evt_refund-of-record_draft_v1.md",
+    "slateRole": "delivered object (money in motion) — beside the Unsigned Ban; same object family as the dividend",
+    "sameAfternoonCaution": "Drafted the same afternoon as The Unsigned Ban by the same author. Per the 09-19 handoff §6: similar z-shapes across same-day drafts are the author until proven otherwise. Re-author one of the two on another day before any cross-event claim is logged.",
+    "rimRuling": {
+      "date": "2026-09-21",
+      "by": "Sailor",
+      "ruling": "All four rims HOLD as authored — read the next day, ruled together. Residual error estimated 5-10%; that residual is not the author's to edit. It is corrected only in the beta, by a trace with found readers.",
+      "scope": "rim z + rim text, this event",
+      "note": "Rims ruled by Sailor; band z's elsewhere in the event remain Claude's under delegation. This ruling does NOT clear bench #8 (three-pattern claim) — that still waits on the re-author on a different day. | 09-21 14:32: D station re-declared against the corrected frame (blind pass 2); Sailor ruled hold: rim -1.0, coalition -0.6 (routed reading), fluid -0.3. Previous D bands kept in meta.framingAudit.previousD."
+    },
+    "framingAudit": {
+      "date": "2026-09-21",
+      "by": "Claude (sweep) — ruling on I2-for-frame owed",
+      "finding": "The 09-20 framing carried two facts dated AFTER the 06-29 window: the $5,000 dividend (announced 09-09, Dallas) and 'market access fees' (Moreno, 09-10). Both D rims said 'the five thousand.' Removed; replaced with the window-dated dividend state ($2,000 promise, Nov 2025 / SOTU, in doubt after the Feb ruling).",
+      "verifiedInWindow": [
+        "SCOTUS ruling Feb 20 (Learning Resources v. US)",
+        "CIT refund order to importers of record; CAPE",
+        "DOJ intent to appeal 06-02, ~$30B, importers who did not sue",
+        "Wilbur Ross 03-05 (pre-window, on the object): consumers the ultimate losers"
+      ],
+      "keptUnverifiedDate": [
+        "FedEx pass-through pledge",
+        "Cards Against Humanity pass-through",
+        "Walmart Ohio suit",
+        "$71B / 41% by end of June (from 09-20 sweep)"
+      ],
+      "previousFraming": "The Supreme Court held in February that the emergency tariffs were never the President's to impose. The Court of International Trade ordered every dollar returned to every importer of record, and Customs built a portal — CAPE — to pay it out. By the end of June $71 billion of $166 billion was back in importers' accounts; Walmart's share is estimated at $10 billion, Ford's in the billions. Small businesses are 70% of the entries and a fraction of the money so far. On June 3 the Justice Department appealed, arguing the court could not order refunds for importers who never sued — about $30 billion. Consumers, who paid the tariff at the register, have no claim: the law refunds whoever paid Customs. FedEx says it will pass refunds through if it gets them. Cards Against Humanity already did. Walmart has been sued in Ohio for taking both the price increases and the refund. The Treasury Secretary who is paying the refunds is the same one who says the dividend will be funded by \"market access fees\" on the same goods.",
+      "previousD": {
+        "fluid": {
+          "z": -0.3,
+          "text": "I paid the tariff on the parts for my truck. Ford gets the check. Where's mine?"
+        },
+        "coalition": {
+          "z": -0.5,
+          "text": "The Court killed the tariffs and then handed the money to the corporations. Both of those were against us."
+        },
+        "denominated": {
+          "z": -0.8,
+          "text": "The judges refunded the globalists. The five thousand is how the rest of us get ours — and that's why they'll fight it."
+        }
+      },
+      "residue_2026_09_21b": {
+        "by": "Claude (mechanical residue scan, after the I2-for-frame pass) — FOUND, NOT FIXED",
+        "finding": "responses.D.denominated.yWord is still \"the five thousand\". The correction of 09-21 replaced the framing, the three D band texts and the RD Diatribe cell, but did not reach the word tags. The leaked 09-09 fact is still the Y anchor of the rim that swung.",
+        "whyItMatters": "Per Event_Data_Schema_v1 §1, yWord is 'the single most load-bearing word on Y in this band' — not decoration. The D station was re-declared blind against a corrected frame and RULED to hold; this field was not in the re-declaration and carries the anachronism the re-declaration was run to remove. The ruling was made over an uncorrected field.",
+        "proposedNotApplied": "yWord -> 'a gavel instead of a vote' (from the corrected band text; carries the same populist charge on y without the 09-09 fact). xWord 'refunded the globalists' is window-clean and stands.",
+        "ruling": "Sailor's. A ruled station is not Claude's to edit, even for a leak — the 09-21 rule was that the correction is the author's only where the frame is mechanical, and a word tag on a ruled rim is not.",
+        "lesson": "A frame correction must sweep EVERY field of the affected stations, not the prose. Add word tags (xWord, yWord, words[]) and Diatribe keywords to the I2-for-frame sweep list.",
+        "applied": "APPLIED 2026-09-21, Sailor's call in session. yWord 'the five thousand' -> 'a gavel instead of a vote'. Downgraded from a ruling question to a clerical fix once the reason was stated plainly: the tag no longer matched its own band text. The correction had already rewritten that text and the phrase is not in it, so the tag pointed at a sentence that no longer exists. Sailor read the CORRECTED text when he ruled the station holds — the ruling stands, untouched; only the stale tag moved. z, zReason, instrument and text are all unchanged."
+      },
+      "corrections": [
+        {
+          "date": "2026-09-21",
+          "by": "Claude, under the routing rule (mechanical, reversible)",
+          "what": "'promised in November' -> 'promised in November 2025'. Year added so the frame dates from its own text; no fact changed.",
+          "previousText": "promised in November and"
+        },
+        {
+          "date": "2026-09-21",
+          "by": "Claude, under the routing rule (mechanical, reversible)",
+          "what": "'By the end of June $71 billion' -> 'As of June 29, $71 billion'. The figure is CBP's as-of-06-29 total (verified: Cato, 07-09). Inside the window; the WORDING was the leak, not the fact.",
+          "previousText": "By the end of June $71 billion of $166 billion was back"
+        }
+      ]
+    },
+    "diatribeRuling": {
+      "date": "2026-09-21",
+      "by": "Sailor",
+      "ruling": "diatribeScore -18 HOLDS, indexed to the STATED layer. Object layer ruled: stated. Operative read (+25, Claude) recorded as the inversion's other end, not a correction.",
+      "rule": "diatribeScore scores the OBJECT's position on the prevalentAxis, read directly from the record at the object's declared layer — never an average of readings. The split locates the shadow; the gap is the displacement. (Parallelogram_v0 §53 / Occlusion_Edge: a Diatribe score without a layer index is incomplete.)"
+    }
+  },
+  "rid": "rdg_mu7refund166",
+  "ridLineage": "minted 2026-09-20 in Cowork chat; filed directly, not via admin-surface",
+  "schema": "reading/v1",
+  "updatedAt": "2026-09-21T22:35:00.000Z",
+  "diatribeScore": -18,
+  "images": [],
+  "formulaVersion": "1",
+  "diatribeLayer": "stated",
+  "objectLayer": {
+    "declared": "stated",
+    "stated": "the tariff money is the people's; a refund is the people's money coming back (Trump and surrogates, since Nov 2025)",
+    "operative": "the refund goes to the importer of record (CIT order; the statute)",
+    "inversion": "y-inversion, stated/operative: stated ~ -18 (populist), operative ~ +25 (institutional). Fourth instance of the stated/operative pair; first on y."
+  }
+}

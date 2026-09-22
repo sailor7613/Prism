@@ -1011,7 +1011,19 @@ function loadEvent(ev){
   ['LF','LC','LD','RF','RC','RD'].forEach(c=>{ const e=d[c]||{}; model[c]=markKeywords(e.text||'', e.keywords||[]); if(e.final) cellFinal[c]=true; });
   tedEvent = ev.ted ? JSON.parse(JSON.stringify(ev.ted)) : {};
   const R=ev.responses||{}; responses={A:{},B:{},C:{},D:{}};
-  ['A','B','C','D'].forEach(q=>{ const rq=R[q]||{}; const cvt=o=>{ const r={ text:(o&&o.text)||'', xWord:(o&&o.xWord)||'', yWord:(o&&o.yWord)||'', source:(o&&o.source)||'' }; if(o&&o.final) r.final=true; return r; };
+
+  // ── BAND CARRY-THROUGH (2026-09-21, Claude under the routing rule — reversible) ──
+  // The admin rebuilds `responses` wholesale on both load (cvt) and save (mk),
+  // naming six keys. Every OTHER band key was silently destroyed on the next Save.
+  // On disk at the time of this fix: z + zReason on 24 bands (Dividend + Refund,
+  // 09-19 → 09-21) and instrument{holder,trusted} on the Refund's three D rims —
+  // the entire z-first authoring, one Save from gone. Canonical keys still win;
+  // anything the surface does not edit simply rides. See Schema_v2_Addendum §4.
+  const BAND_CANON = ['text','xWord','yWord','words','source','final'];
+  const carryBand = (src, out) => { if(!src) return out;
+    Object.keys(src).forEach(k => { if(!BAND_CANON.includes(k) && src[k] !== undefined) out[k] = src[k]; });
+    return out; };
+  ['A','B','C','D'].forEach(q=>{ const rq=R[q]||{}; const cvt=o=>{ const r={ text:(o&&o.text)||'', xWord:(o&&o.xWord)||'', yWord:(o&&o.yWord)||'', source:(o&&o.source)||'' }; if(o&&o.final) r.final=true; return carryBand(o, r); };
     // canonical band keys first, legacy aliases second (schema §7) — events
     // authored in admin.html write fluid/denominated; seed data writes
     // goodFaith/badFaith. Reading only legacy broke new events (2026-07-02).
@@ -1595,7 +1607,12 @@ function resp(q,b){ responses[q]=responses[q]||{}; return responses[q][b]||{}; }
 function respFilled(q,b){ const r=resp(q,b); return !!(r.text&&r.text.trim()); }
 function responsesSchema(){ const out={}; QUAD_DEF.forEach(q=>{ const rq=responses[q.id]||{};
   const mk=b=>{ const r=rq[b]||{}; const o={ text:(r.text||''), xWord:(r.xWord||''), yWord:(r.yWord||''), words:[], source:(r.source||'') };
-    if(r.final) o.final=true; return o; };   // FINAL rides the Reading (2026-07-27); written only when true
+    if(r.final) o.final=true;
+    // Carry-through (2026-09-21) — see BAND_CANON note in the load path. Unknown
+    // band keys (z, zReason, instrument{}) survive the rebuild.
+    const BC=['text','xWord','yWord','words','source','final'];
+    Object.keys(r).forEach(k=>{ if(!BC.includes(k) && r[k]!==undefined) o[k]=r[k]; });
+    return o; };   // FINAL rides the Reading (2026-07-27); written only when true
   // Write CANONICAL band keys (Event_Data_Schema_v1 §7). Safe: v2 reads via
   // BAND_KEY_ALIASES, admin.html reads canonical, v56 doesn't touch bands.
   out[q.id]={ xSide:q.xSide, source:'', fluid:mk('fluid'), coalition:mk('coalition'), denominated:mk('denominated') }; });

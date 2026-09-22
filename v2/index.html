@@ -537,6 +537,9 @@ body.orb-select .answers-grid { display: none; }
 .answer-card[data-quad="C"] { --accent: rgba(96, 168, 128, 0.6); }  /* green  */
 .answer-card[data-quad="D"] { --accent: rgba(196, 156, 72, 0.6); }  /* orange */
 
+.answer-card .ac-z {            /* the band's declared z (delivery), 2026-09-21 */
+  margin-top: 6px; font-size: 0.72em; letter-spacing: 0.04em; opacity: 0.55; font-variant-numeric: tabular-nums;
+}
 .answer-card .ac-text {
   font-family: var(--serif);
   font-size: var(--type-caption-base);
@@ -3662,6 +3665,15 @@ function variantAt(quad, band) {
   return null;
 }
 
+// Per-band Z from the Reading (Trace Formula v1 §3b: twelve z stored, z first
+// then the words). Wired 2026-09-21 — until now the twelve orbs sat at z=0 on
+// the plane whatever the Reading declared. Falls back to 0 for pre-v1 Readings.
+function bandZ(quad, band) {
+  const v = variantAt(quad, band);
+  const z = v && typeof v.z === 'number' ? v.z : 0;
+  return Math.max(-0.98, Math.min(0.98, z));
+}
+
 function variantPool(v) {
   if (!v) return [];
   const pool = [];
@@ -3723,8 +3735,11 @@ function renderAnswers(band) {
     card.setAttribute('data-quad', q);
     // Axis labels (Left/Right · Institutional/Grassroots) dropped for now —
     // ev.axes still carries them when we want to bring them back.
+    const hasZ = v && typeof v.z === 'number';
+    if (hasZ) { card.setAttribute('data-z', v.z.toFixed(2)); if (v.zReason) card.title = v.zReason; }
     card.innerHTML =
-      '<div class="ac-text">' + (v ? PE.applyKeywords(v.text, variantPool(v)) : '—') + '</div>';
+      '<div class="ac-text">' + (v ? PE.applyKeywords(v.text, variantPool(v)) : '—') + '</div>' +
+      (hasZ ? '<div class="ac-z" aria-label="delivery">' + (v.z >= 0 ? '+' : '−') + Math.abs(v.z).toFixed(2) + '</div>' : '');
     card.addEventListener('click', () => selectCard(q, card));
     answersGrid.appendChild(card);
   });
@@ -3792,7 +3807,7 @@ function placeAnswerOrbs() {
       const o = ORB_OFF[band], d = ORB_DIR[q];
       const nx = 0.5 + d[0] * o, ny = 0.5 - d[1] * o;   // +Y up → smaller normY
       try {
-        agm.addDot(nx, ny, GM_QUAD[q], 0, {
+        agm.addDot(nx, ny, GM_QUAD[q], bandZ(q, band), {
           label: 'cs:' + q + ':' + band,
           ring: BAND_RING[band],
           radius: 0.072,
@@ -4952,7 +4967,7 @@ function placeCoordinateOrbs() {
       const o = OFF[band], d = DIR[q];
       const nx = 0.5 + d[0] * o, ny = 0.5 - d[1] * o;   // +Y is up → smaller normY
       try {
-        gm.addDot(nx, ny, GM_QUAD[q], 0, { label: 'cs:' + q + ':' + band, ring: BAND_RING[band] });
+        gm.addDot(nx, ny, GM_QUAD[q], bandZ(q, band), { label: 'cs:' + q + ':' + band, ring: BAND_RING[band] });
       } catch (e) { console.warn('[v2] coordinate orb', q, band, e && e.message); }
     });
   });

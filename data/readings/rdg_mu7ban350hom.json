@@ -217,19 +217,70 @@
     "dialecticsRef": "evt-cand-unsigned-ban",
     "status": "draft",
     "source": "Authored 2026-09-20 (Sailor + Claude, Cowork) against Trace Formula v1, z-first. Object + axis ruled by Sailor 2026-09-20 (published-floor ruling A the same day). Supersedes the Feb 2026 Housing draft rdg_ms51urghp04a, which is not edited (I8). Sources: BPC section-by-section (final law); Morgan Lewis 07-07; HousingWire 07-14 (became law 07-11 without signature; Atlanta 72,000); WaPo 06-22; Axios 06-23; Senate Banking releases. Filed directly to data/readings/drafts — not through the surface; no aiDeltas lineage; not classifier-ready until re-saved from admin.",
-    "editHistory": [],
+    "editHistory": [
+      {
+        "at": "2026-09-21T18:20:00.000Z",
+        "by": "Sailor+Claude",
+        "what": "rims ruled: hold (see meta.rimRuling)"
+      },
+      {
+        "at": "2026-09-21T21:40:00.000Z",
+        "by": "Claude",
+        "what": "frame audit (I2-for-frame): clean"
+      },
+      {
+        "at": "2026-09-21T22:35:00.000Z",
+        "by": "Sailor+Claude",
+        "what": "diatribeScore ruled hold @ stated; objectLayer declared"
+      }
+    ],
     "aiDeltas": [],
     "exportVersion": 1,
     "exportedAt": "2026-09-20T18:16:43.000Z",
     "exportFilename": "evt_road-act-350_draft_v1.md",
     "slateRole": "delivered object (delivery settled, meaning contested) — beside the tariff refunds",
-    "linkedBillsOwed": "21st Century ROAD to Housing Act — bill number and roll-call IDs owed for linkedBills"
+    "linkedBillsOwed": "21st Century ROAD to Housing Act — bill number and roll-call IDs owed for linkedBills",
+    "rimRuling": {
+      "date": "2026-09-21",
+      "by": "Sailor",
+      "ruling": "All four rims HOLD as authored — read the next day, ruled together. Residual error estimated 5-10%; that residual is not the author's to edit. It is corrected only in the beta, by a trace with found readers.",
+      "scope": "rim z + rim text, this event",
+      "note": "Rims ruled by Sailor; band z's elsewhere in the event remain Claude's under delegation. This ruling does NOT clear bench #8 (three-pattern claim) — that still waits on the re-author on a different day."
+    },
+    "framingAudit": {
+      "date": "2026-09-21",
+      "by": "Claude (sweep)",
+      "finding": "CLEAN. No fact in framing or band text is dated after the 07-11 window.",
+      "verifiedInWindow": [
+        "Senate 06-22 85-5; House 06-23 358-32",
+        "350-SFH investment-control threshold; no divestiture (7-year sale requirement removed in conference)",
+        "exemptions: new construction, build-to-rent, renovate-to-rent (>=15%), rent-to-own",
+        "Treasury writes regs with HUD and SEC",
+        "delivered to the President 06-29; became law without signature after the 10-day period (07-11)"
+      ],
+      "keptUnverifiedDate": [
+        "72,000 corporate-owned rentals in metro Atlanta, one in four"
+      ]
+    },
+    "diatribeRuling": {
+      "date": "2026-09-21",
+      "by": "Sailor",
+      "ruling": "diatribeScore -12 HOLDS, indexed to the STATED layer. Direct object read confirms.",
+      "rule": "see rdg_mu7refund166 meta.diatribeRuling.rule"
+    }
   },
   "rid": "rdg_mu7ban350hom",
   "ridLineage": "minted 2026-09-20 in Cowork chat; filed directly, not via admin-surface",
   "schema": "reading/v1",
-  "updatedAt": "2026-09-20T18:16:43.000Z",
+  "updatedAt": "2026-09-21T22:35:00.000Z",
   "diatribeScore": -12,
   "images": [],
-  "formulaVersion": "1"
+  "formulaVersion": "1",
+  "diatribeLayer": "stated",
+  "objectLayer": {
+    "declared": "stated",
+    "stated": "Wall Street can't buy your neighbor's house (a populist demand made law)",
+    "operative": "a Treasury-regulated 350-home cap with carve-outs and no divestiture",
+    "inversion": "none — same sign on y; operative layer attenuates the stated one."
+  }
 }
