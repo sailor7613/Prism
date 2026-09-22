@@ -95,6 +95,10 @@ main {
   position: absolute;
   top: 0;
 }
+/* At rest the captions have no text yet — an empty bordered box reads as a
+   broken panel. Fade them until the first drag writes them (space is kept on
+   mobile so nothing jumps when they arrive). */
+.stage .prism-caption:has(.caption-text:empty) { opacity: 0; pointer-events: none; }
 /* Fallback home shelves — if positionCaption() hasn't set an inline left yet
    (first paint, or a stale-viewport branch), the two captions still land on
    opposite sides instead of collapsing onto each other. */
@@ -537,9 +541,40 @@ body.orb-select .answers-grid { display: none; }
 .answer-card[data-quad="C"] { --accent: rgba(96, 168, 128, 0.6); }  /* green  */
 .answer-card[data-quad="D"] { --accent: rgba(196, 156, 72, 0.6); }  /* orange */
 
-.answer-card .ac-z {            /* the band's declared z (delivery), 2026-09-21 */
-  margin-top: 6px; font-size: 0.72em; letter-spacing: 0.04em; opacity: 0.55; font-variant-numeric: tabular-nums;
+.answer-card .ac-z {            /* the band's declared z (delivery), 2026-09-21 — a meter, not a number */
+  --zf: 0.5;                    /* thumb position, 0 = frustrated … 1 = realized (set inline) */
+  display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 10px;
+  margin-top: 10px;
+  font-family: var(--mono); font-size: 8px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink-low);
 }
+.answer-card .ac-z-track {      /* the graph's z-track, in miniature */
+  position: relative; height: 6px; border-radius: 3px;
+  background: linear-gradient(to right,
+    rgba(128, 116, 170, 0.24) 0%,
+    rgba(245, 240, 232, 0.05) 50%,
+    rgba(220, 190, 120, 0.26) 100%);
+  border: 1px solid var(--rule-soft);
+}
+.answer-card .ac-z-track::before {   /* center mark: the plane */
+  content: ''; position: absolute; left: 50%; top: -3px; width: 1px; height: 12px;
+  background: var(--ink-mid); opacity: 0.45;
+}
+.answer-card .ac-z-fill {       /* from the plane out to the declared z */
+  position: absolute; top: 0; bottom: 0;
+  left: min(50%, calc(var(--zf) * 100%)); right: min(50%, calc(100% - var(--zf) * 100%));
+  background: var(--accent); opacity: 0.75; border-radius: 3px;
+}
+.answer-card .ac-z-thumb {
+  position: absolute; top: 50%; left: calc(var(--zf) * 100%);
+  width: 10px; height: 10px; border-radius: 50%; transform: translate(-50%, -50%);
+  background: radial-gradient(circle at 35% 30%, rgba(255,255,255,0.55), var(--accent) 65%, rgba(10,18,38,0.9) 100%);
+  box-shadow: 0 0 8px var(--accent);
+}
+.answer-card .ac-z-num { margin-top: 5px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-mid); font-variant-numeric: tabular-nums; }
+.answer-card .ac-z-num b { font-weight: 400; color: var(--ink-low); margin-left: 6px; }
+.answer-card .ac-z-pole { opacity: 0.8; }
+.answer-card.selected .ac-z-fill { opacity: 1; }
 .answer-card .ac-text {
   font-family: var(--serif);
   font-size: var(--type-caption-base);
@@ -621,7 +656,7 @@ body:not(.phase-diatribe) .to-answers { opacity: 0 !important; pointer-events: n
 @media (max-width: 480px) {
   .answers-phase { align-items: flex-start; }
   .answers-grid { grid-template-columns: 1fr; }   /* single column; order A,B,C,D */
-  .to-answers { bottom: 76px; font-size: 9px; }
+  .to-answers { bottom: 76px; font-size: 9px; white-space: nowrap; }
   .stage { padding-bottom: 144px; }   /* CTA sits higher at ≤480 — keep clearing it */
 }
 
@@ -1383,6 +1418,21 @@ body.words-open .words-pill { color: var(--ink); border-color: rgba(180, 198, 23
   content: '\2039'; position: absolute; top: 50%; left: 4px; transform: translateY(-50%);
   font-size: 18px; color: var(--ink-low); opacity: 0.75;
 }
+/* Committed rest, all widths (2026-09-21 walk): the ribbon re-seats at the top,
+   so the stage starts below the chrome instead of centering up under the art;
+   recenter drops below the beam; Ted's bubble lifts above the strip. */
+body.ticker-live .graph-phase { justify-content: flex-start; padding-top: calc(var(--top-chrome) + 8px); }
+/* short desktop windows: the stage gives a little so the words box and the
+   foot sit above the strip without scrolling (the factory follows its box) */
+@media (min-width: 861px) and (max-height: 960px) {
+  body.ticker-live .gm3d { width: min(440px, 44vh); }
+}
+body.ticker-live .graph-head { margin-bottom: 14px; }
+body.ticker-live .graph-readout { margin-top: 14px; }
+body.ticker-live .graph-dialect { margin-top: 14px; }
+body.ticker-live .graph-foot { margin-top: 14px; }
+body.ticker-live .recenter-btn { top: calc(var(--top-chrome) + 12px); }
+body.ticker-live .ted-guide { bottom: calc(var(--ticker-h, 78px) + var(--safe-bottom) + 14px); max-width: min(400px, 88vw); }
 @media (max-width: 860px) {
   body.ticker-live .graph-foot { display: none; }   /* commit already retired; reconsider → edge swipe; #graphNote rides out */
   body.ticker-live .graph-dialect {
@@ -1399,6 +1449,22 @@ body.words-open .words-pill { color: var(--ink); border-color: rgba(180, 198, 23
     position: fixed; left: 14px; right: 62px; width: auto; margin: 0;
     bottom: calc(var(--ticker-h, 78px) + var(--safe-bottom) + 16px); z-index: 31;
   }
+  /* The fixed slider was CONTAINED by .graph-left's perspective (a perspective
+     ancestor is the containing block for fixed descendants, 2026-09-21 walk):
+     its bottom measured from the pad's box, so it sat across the middle of the
+     committed stage. The pad has retired by now; drop the perspective. */
+  body.ticker-live .graph-left { perspective: none; }
+  body.ticker-live .graph-readout { gap: 10px; font-size: 10px; letter-spacing: 0.12em; left: 12px; right: 62px; }   /* clear of the round controls */
+  /* recenter: a round control stacked above the words pill, clear of the ribbon art */
+  body.ticker-live .recenter-btn {
+    top: auto; left: auto; right: 12px;
+    bottom: calc(var(--ticker-h, 78px) + var(--safe-bottom) + 60px);
+    width: 40px; height: 40px; padding: 0; border-radius: 50%; justify-content: center;
+    font-size: 0; z-index: 31;
+  }
+  body.ticker-live .recenter-btn .recenter-glyph { font-size: 16px; }
+  /* Ted's bubble sits above the readout + slider band, never on them */
+  body.ticker-live .ted-guide { bottom: calc(var(--ticker-h, 78px) + var(--safe-bottom) + 108px); }
   body.ticker-live .words-pill { display: inline-flex; }
   body.ticker-live .back-edge { display: block; }
   /* the graphmap takes the reclaimed stage */
@@ -1871,6 +1937,54 @@ body.ted-away .ted-guide { opacity: 0 !important; pointer-events: none !importan
 body.phase-event .ted-face, body.phase-diatribe .ted-face { display: none; }
 body.phase-event .ted-guide, body.phase-diatribe .ted-guide {
   left: 12px; bottom: calc(var(--ted-stage-h) - 30px); max-width: min(330px, 80vw); }
+/* Phones (2026-09-21 walk): Ted keeps to the left of his stage, so the bubble
+   takes the right of it — beside him, not floated up over the slider readout. */
+@media (max-width: 480px) {
+  body.phase-event .ted-guide, body.phase-diatribe .ted-guide {
+    left: auto; right: 12px; max-width: 62vw;
+    bottom: calc(var(--ted-stage-h) * 0.46); }
+}
+
+/* ── TED'S TOUR (prism-ted-tour.js, 2026-09-22): a dim in four panels around
+   the spotlit element (which stays in place, undimmed, fully live), a thin
+   ring on it, and the presenter row — Ted peeking in over the left edge of
+   the frame with his line beside him. The row sits under the element, or
+   above it when there's no room; never on it. ── */
+#tedTour { position: fixed; inset: 0; z-index: 72; pointer-events: none; display: none; }
+#tedTour.on { display: block; }
+#tedTour .tt-dim { position: fixed; background: rgba(4, 8, 20, 0.74); pointer-events: auto;
+  -webkit-backdrop-filter: saturate(0.6); backdrop-filter: saturate(0.6);
+  transition: left 0.45s cubic-bezier(0.22,1,0.36,1), top 0.45s cubic-bezier(0.22,1,0.36,1),
+              width 0.45s cubic-bezier(0.22,1,0.36,1), height 0.45s cubic-bezier(0.22,1,0.36,1); }
+#tedTour .tt-ring { position: fixed; border-radius: 10px; pointer-events: none;
+  box-shadow: 0 0 0 1px rgba(196, 210, 240, 0.55), 0 0 28px rgba(96, 148, 220, 0.28);
+  transition: left 0.45s cubic-bezier(0.22,1,0.36,1), top 0.45s cubic-bezier(0.22,1,0.36,1),
+              width 0.45s cubic-bezier(0.22,1,0.36,1), height 0.45s cubic-bezier(0.22,1,0.36,1); }
+#tedTour .tt-presenter { position: fixed; display: flex; align-items: flex-end; gap: 4px;
+  padding: 0 14px 0 0; pointer-events: auto; cursor: pointer;
+  transition: top 0.45s cubic-bezier(0.22,1,0.36,1); }
+#tedTour .tt-ted { width: 132px; height: 132px; flex: none; margin-left: -34px; margin-bottom: -10px;
+  filter: drop-shadow(0 4px 14px rgba(0,0,0,0.55));
+  transform: translateX(-100%); transition: transform 0.55s cubic-bezier(0.22,1,0.36,1); }
+#tedTour.on .tt-ted { transform: translateX(0); }
+#tedTour .tt-bubble { flex: 1 1 auto; min-width: 0; margin-bottom: 18px;
+  font-family: var(--serif); font-size: 14.5px; line-height: 1.5; color: var(--ink);
+  background: rgba(9, 15, 32, 0.92); -webkit-backdrop-filter: blur(11px); backdrop-filter: blur(11px);
+  border: 0.5px solid var(--rule); border-radius: 13px; padding: 12px 15px 10px;
+  box-shadow: 0 10px 34px rgba(0,0,0,0.45); }
+#tedTour .tt-foot { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-top: 8px;
+  font-family: var(--mono); font-size: 8px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-low); }
+#tedTour .tt-step { white-space: nowrap; }
+#tedTour .tt-hint { text-align: right; }
+#tedTour.tt-swap .tt-text { opacity: 0; }
+#tedTour .tt-text { transition: opacity 0.2s ease; }
+/* while a tour runs, his full-body stage steps back so only one Ted is talking */
+body.ted-touring #tedStage { display: none !important; }
+body.ted-touring .ted-guide { opacity: 0 !important; pointer-events: none !important; }
+@media (max-width: 480px) {
+  #tedTour .tt-ted { width: 108px; height: 108px; margin-left: -28px; }
+  #tedTour .tt-bubble { font-size: 13.5px; padding: 10px 12px 8px; }
+}
 
 /* ── Ted's two toggles — a small persistent dock. One sends him off-screen
    (and calls him back); one turns on cursor-hover commentary. ── */
@@ -2441,7 +2555,7 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
 </section>
 
 <main>
-  <div class="diatribe-eyebrow">the diatribe · upper-left · set your aperture</div>
+  <div class="diatribe-eyebrow">the diatribe · set your aperture</div>
   <!-- framing now lives ONLY in the splash Framing beat (Sailor 2026-07-11) -->
   <div class="framing" id="framing" hidden>[event framing loads here]</div>
 
@@ -2514,7 +2628,7 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
   <div class="answers-grid" id="answersGrid"></div>
   <div class="answers-foot" id="answersFoot">
     <button class="a-back" id="aBack">&larr; reconsider</button>
-    <button class="a-commit" id="aCommit"><span>place your pin</span><span class="ev-enter-glyph">&rarr;</span></button>
+    <button class="a-commit" id="aCommit" data-ted-hint="This takes your pick onto the plane, where you'll set exactly where you sit."><span>place your pin</span><span class="ev-enter-glyph">&rarr;</span></button>
     <span class="a-note" id="aNote"></span>
   </div>
 </section>
@@ -2624,7 +2738,7 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
 
   <div class="graph-foot">
     <button class="a-back" id="graphBack">&larr; reconsider</button>
-    <button class="a-commit" id="graphCommit"><span>commit your pin</span><span class="ev-enter-glyph">&rarr;</span></button>
+    <button class="a-commit" id="graphCommit" data-ted-hint="Commit, and it's on the record — your reading, kept, against everyone else's."><span>commit your pin</span><span class="ev-enter-glyph">&rarr;</span></button>
     <span class="a-note" id="graphNote"></span>
   </div>
 </section>
@@ -2854,6 +2968,7 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
 </div>
 
 <!-- Data layer -->
+<script src="../data/readings_seed.js"></script>   <!-- the live tier, baked (scripts/bake-seed.js) -->
 <script src="../src/js/prismdb.js"></script>
 <script src="../src/js/prism-sync.js"></script>
 <script src="../src/js/prism-ai.js"></script>
@@ -2884,115 +2999,30 @@ const mqMobile = window.matchMedia('(max-width: 768px)');
 const isMobile = () => mqMobile.matches;
 
 // ---- Data ----
-// Remember the event the admin marked active BEFORE we seed / upsert the
-// curated showcase events below. Those events carry active:true, so adding
-// them would otherwise steal the active flag from an admin-authored draft
-// (the "setActive-last clobber"). We restore this after the upserts.
-const _priorActiveId = (() => {
-  try { const a = PrismDB.getActiveEvent && PrismDB.getActiveEvent(); return (a && a.id) || null; } catch (e) { return null; }
+PrismDB.seed();   // fresh device → the live tier (data/readings_seed.js), landing on the Ban
+
+try { PrismDB.migrate(); } catch (e) {}   // seed migration v2 lives in PrismDB (desk and portal share the store)
+
+// The portal shows the LIVE TIER: a Reading is on the surface when it is
+// published (synced, or its file sha is known). Drafts and desk runs stay in
+// the store for the admin surface; ?dev (or a saved desk key) lifts the veil.
+const SHOW_ALL_TIERS = (() => {
+  try { if (new URLSearchParams(location.search).has('dev')) return true; } catch (e) {}
+  try { return !!(localStorage.getItem('prism.admin.deskKey') || '').trim(); } catch (e) { return false; }
 })();
-PrismDB.seed();
-
-// ── Iran-at-large event (drafted in Parameters/06_Events/evt_iran_general_draft_v2.md).
-// Upserted here so it surfaces in existing storage; addEvent assigns a fresh
-// numeric id, so we guard by a meta marker and make it the active default once. ──
-const IRAN_EVENT = {
-  title: 'The conflict with Iran (general)',
-  category: 'Foreign Policy · Iran · Nuclear',
-  framing: "For two decades the U.S.–Iran standoff has circled the same object — Iran's nuclear program — through sanctions, sabotage, a landmark deal and its collapse, and the recurring shadow of war. Two questions keep recurring: is Iran a threat, and is the answer confrontation or diplomacy?",
-  prompt: 'The decades-long U.S.–Iran standoff over the nuclear program — threat or not, confrontation or diplomacy.',
-  meta: { dialecticsRef: 'iran_general_v2', status: 'draft', editHistory: [] },
-  date: '2026-06-24', active: true, prevalentAxis: 'y', antiValentBand: 'coalition',
-  axes: { x: { pos: 'Threat', neg: 'Non-threat' }, y: { pos: 'Confrontation', neg: 'Diplomacy' } },
-  responses: {
-    A: { xSide: 'left', source: '',
-      goodFaith: { text: "The deal was working — verified, contained. We threw it away.", xWord: 'contained', yWord: 'deal', words: [] },
-      coalition: { text: "The economy is tanking and we're chasing Iran — fix it at home, now.", xWord: 'economy', yWord: 'now', words: [] },
-      badFaith:  { text: "Trump is endangering Israel, provoking Iran for a fight nobody needs.", xWord: 'provoking', yWord: 'Trump', words: [] } },
-    B: { xSide: 'right', source: '',
-      goodFaith: { text: "Iran is a threat we have to deal with — clear-eyed about it.", xWord: 'threat', yWord: 'deal with', words: [] },
-      coalition: { text: "They want a nuke and the clock is real — we have to act.", xWord: 'nuke', yWord: 'act', words: [] },
-      badFaith:  { text: '"Death to America" — they mean it. They\'re evil and must be destroyed.', xWord: 'evil', yWord: 'destroy', words: [] } },
-    C: { xSide: 'left', source: '',
-      goodFaith: { text: "Not another war — Iran isn't the threat they're selling.", xWord: 'not a threat', yWord: 'anti-war', words: [] },
-      coalition: { text: "The empire is out of control, manufacturing the next war.", xWord: 'manufactured', yWord: 'empire', words: [] },
-      badFaith:  { text: "Down with the empire — Iran's the one standing up to it.", xWord: 'pro-Iran', yWord: 'anti-empire', words: [] } },
-    D: { xSide: 'right', source: '',
-      goodFaith: { text: "Iran's real, but America comes first — not our fight.", xWord: 'real', yWord: 'America first', words: [] },
-      coalition: { text: "No more endless wars — we've bled enough for that region.", xWord: 'endless war', yWord: 'no more', words: [] },
-      badFaith:  { text: "We already lost — Iran won, and the empire's too spent to admit it.", xWord: 'Iran won', yWord: 'spent', words: [] } },
-  },
-  diatribe: {
-    LF: { text: "Doesn't seem like a serious problem.", side: 'left', band: 'fluid' },
-    LC: { text: "Diplomacy over military.", side: 'left', band: 'coalition' },
-    LD: { text: "Iran is a legitimate, revolutionary state.", side: 'left', band: 'denominated' },
-    RF: { text: "Iran is a problem.", side: 'right', band: 'fluid' },
-    RC: { text: "Iran wants nuclear weapons.", side: 'right', band: 'coalition' },
-    RD: { text: "Iran is evil.", side: 'right', band: 'denominated' },
-  },
-};
-try {
-  const existsIran = (PrismDB.getEvents() || []).find(e => e.meta && e.meta.dialecticsRef === 'iran_general_v2');
-  if (!existsIran) { const added = PrismDB.addEvent(IRAN_EVENT); if (added && PrismDB.setActive) PrismDB.setActive(added.id); }
-} catch (e) { console.warn('[v2] Iran event upsert failed:', e && e.message); }
-
-// ── Immigration-at-large event (Parameters/06_Events/evt_immigration_general_draft_v2.md).
-// Object = the dignity/security dialectic. X-prevalent (Dignity−/Security+), weak;
-// Y = institutional channel (State+/Market−). Same upsert pattern as Iran; set active
-// last so the bare URL opens on it. ──
-const IMMIGRATION_EVENT = {
-  title: 'Immigration (general)',
-  category: 'Domestic · Immigration · Borders',
-  framing: "Immigration is staged as open versus closed, but the country argues past itself because two goods are on the table — the dignity of the person who moves for a better life, and the security of the citizen who receives them. Both are real. The fight scrambles party because the security good is mostly spoken in a racial vehicle that discredits it, and the welcome good keeps forgetting the cause that produced the refugee and the consequence that follows them in.",
-  prompt: 'Two goods in tension — the dignity of the one who moves and the security of the one who receives.',
-  meta: { dialecticsRef: 'immigration_general_v2', status: 'draft', editHistory: [] },
-  date: '2026-06-27', active: true, prevalentAxis: 'x', antiValentBand: 'coalition',
-  axes: { x: { pos: 'Security', neg: 'Dignity' }, y: { pos: 'State', neg: 'Market' } },
-  responses: {
-    A: { xSide: 'left', source: '',
-      goodFaith: { text: "We made promises to the persecuted — asylum is a covenant, honor it.", xWord: 'refuge', yWord: 'covenant', words: [] },
-      coalition: { text: "No human is illegal — legalize them, protect them.", xWord: 'not illegal', yWord: 'legalize', words: [] },
-      badFaith:  { text: "The border itself is violence — any enforcement is cruelty.", xWord: 'border = violence', yWord: 'no enforcement', words: [] } },
-    B: { xSide: 'right', source: '',
-      goodFaith: { text: "A country has to decide who enters — that's self-government, not hatred.", xWord: 'govern', yWord: 'who enters', words: [] },
-      coalition: { text: "We've lost control of the border — enforce it, build the wall.", xWord: 'control', yWord: 'the wall', words: [] },
-      badFaith:  { text: "This is an invasion — a deliberate replacement of a people.", xWord: 'invasion', yWord: 'replacement', words: [] } },
-    C: { xSide: 'left', source: '',
-      goodFaith: { text: "Immigrants do the work and build the businesses — the economy needs them.", xWord: 'they build', yWord: 'economy needs', words: [] },
-      coalition: { text: "Let people move — strivers should get to chase a better life.", xWord: 'strivers', yWord: 'free movement', words: [] },
-      badFaith:  { text: "Borders are just protectionism with a flag — abolish them.", xWord: 'protectionism', yWord: 'abolish borders', words: [] } },
-    D: { xSide: 'right', source: '',
-      goodFaith: { text: "A real border lets us keep government small — secure the line, leave us alone.", xWord: 'strong border', yWord: 'small state', words: [] },
-      coalition: { text: "We can't be the world's welfare magnet — a country isn't a charity.", xWord: 'not a charity', yWord: 'welfare magnet', words: [] },
-      badFaith:  { text: "They come to take — a drain on the people who actually build.", xWord: 'drain', yWord: 'parasite', words: [] } },
-  },
-  diatribe: {
-    LF: { text: "People seeking a better life deserve dignity — welcome them well.", side: 'left', band: 'fluid' },
-    LC: { text: "No human is illegal — protect them.", side: 'left', band: 'coalition' },
-    LD: { text: "The border itself is violence; any enforcement is cruelty.", side: 'left', band: 'denominated' },
-    RF: { text: "A country has to be able to secure its border and govern who enters.", side: 'right', band: 'fluid' },
-    RC: { text: "We've lost control — enforce it.", side: 'right', band: 'coalition' },
-    RD: { text: "It's an invasion — they're replacing us.", side: 'right', band: 'denominated' },
-  },
-};
-try {
-  const existsImm = (PrismDB.getEvents() || []).find(e => e.meta && e.meta.dialecticsRef === 'immigration_general_v2');
-  if (!existsImm) { const added = PrismDB.addEvent(IMMIGRATION_EVENT); if (added && PrismDB.setActive) PrismDB.setActive(added.id); }
-} catch (e) { console.warn('[v2] Immigration event upsert failed:', e && e.message); }
-
-// Restore the admin's active choice if the curated upserts (above) stole it on
-// first run. On a truly fresh device _priorActiveId is null, so the Immigration
-// showcase stays the default; on a returning device it hands the flag back to
-// the admin-authored event. A ?event= override still wins in selection below.
-if (_priorActiveId && PrismDB.getEvent(_priorActiveId) && PrismDB.setActive) {
-  PrismDB.setActive(_priorActiveId);
+function isLiveReading(e) {
+  if (!e) return false;
+  if (SHOW_ALL_TIERS) return true;
+  if (e.syncedAt) return true;
+  try { const shas = JSON.parse(localStorage.getItem('prism.sync.shas') || '{}') || {}; return !!(e.rid && shas[e.rid]); } catch (_) { return false; }
 }
 
 // Event selection: ?event=<id> in the URL wins (lets several events sit side by
 // side for testing), else the admin-marked active event, else evt_001.
 const EVENT_ID = (() => {
   try { const q = new URLSearchParams(location.search).get('event'); if (q) return q.trim(); } catch (e) {}
-  try { const a = (typeof PrismDB !== 'undefined' && PrismDB.getActiveEvent) ? PrismDB.getActiveEvent() : null; if (a && a.id) return a.id; } catch (e) {}
+  try { const a = (typeof PrismDB !== 'undefined' && PrismDB.getActiveEvent) ? PrismDB.getActiveEvent() : null; if (a && a.id && isLiveReading(a)) return a.id; } catch (e) {}
+  try { const l = (PrismDB.getEvents() || []).filter(isLiveReading); if (l.length) return l[0].id; } catch (e) {}
   return 'evt_001';
 })();
 let ev = PrismDB.getEvent(EVENT_ID);
@@ -3010,9 +3040,12 @@ if (ev && !diatribeIsFresh(ev.diatribe)) {
   // Preserve any non-default (custom/draft) events the seed doesn't know about,
   // so re-seeding a stale default never wipes authored drafts like evt_007.
   let custom = [];
-  try { custom = PrismDB.getEvents().filter(e => !/^evt_00[1-6]$/.test(e.id)); } catch (e) {}
+  try {
+    const seeded = new Set((window.PRISM_SEED_READINGS || []).map(x => x.rid));
+    custom = PrismDB.getEvents().filter(e => e.rid && !seeded.has(e.rid));
+  } catch (e) {}
   PrismDB.clear(); PrismDB.seed();
-  custom.forEach(e => { try { (PrismDB.addEvent || PrismDB.updateEvent).call(PrismDB, e); } catch (_) {} });
+  custom.forEach(e => { try { delete e.id; PrismDB.addEvent(e); } catch (_) {} });
   ev = PrismDB.getEvent(EVENT_ID);
 }
 if (!ev) console.error('[v2] Event not found:', EVENT_ID);
@@ -3043,11 +3076,14 @@ function wireEventPicker() {
     // ✓ = published to the repo, ◇ N = curated bill readings in the store.
     let shas = {}; try { shas = JSON.parse(localStorage.getItem('prism.sync.shas')) || {}; } catch (e2) {}
     const evNum = e => parseInt(String(e.id || '').replace('evt_', ''), 10) || 0;
-    const evs = (PrismDB.getEvents() || []).slice().sort((a, b) => {
+    const evs = (PrismDB.getEvents() || []).filter(isLiveReading).sort((a, b) => {
       const ta = Date.parse(a.updatedAt || '') || 0, tb = Date.parse(b.updatedAt || '') || 0;
       return (tb - ta) || (evNum(b) - evNum(a));
     });
     sel.innerHTML = '';
+    if (!evs.some(e => e.id === EVENT_ID)) {          // a draft opened by ?event= still lists itself
+      const cur = PrismDB.getEvent(EVENT_ID); if (cur) evs.unshift(cur);
+    }
     evs.forEach(e => {
       const o = document.createElement('option');
       o.value = e.id;
@@ -3739,13 +3775,28 @@ function renderAnswers(band) {
     if (hasZ) { card.setAttribute('data-z', v.z.toFixed(2)); if (v.zReason) card.title = v.zReason; }
     card.innerHTML =
       '<div class="ac-text">' + (v ? PE.applyKeywords(v.text, variantPool(v)) : '—') + '</div>' +
-      (hasZ ? '<div class="ac-z" aria-label="delivery">' + (v.z >= 0 ? '+' : '−') + Math.abs(v.z).toFixed(2) + '</div>' : '');
+      (hasZ ? zMeterHTML(v.z) : '');
     card.addEventListener('click', () => selectCard(q, card));
     answersGrid.appendChild(card);
   });
 
   aPrompt.textContent = ev?.prompt || ev?.framing || '';
   aBand.textContent = 'aperture · ' + band;
+}
+
+// The band's declared z as a small frustrated ← plane → realized meter (the
+// graph's z-track in miniature, same gradient and poles) so the Reading's
+// delivery reads at a glance before the user sets their own. Number kept.
+function zMeterHTML(z) {
+  const zc = Math.max(-1, Math.min(1, z));
+  const f = ((zc + 1) / 2).toFixed(3);
+  const num = (zc >= 0 ? '+' : '−') + Math.abs(zc).toFixed(2);
+  return '<div class="ac-z" style="--zf:' + f + '" aria-label="delivery z ' + num + ' · ' + zPole(zc) + '">' +
+    '<span class="ac-z-pole">frustrated</span>' +
+    '<span class="ac-z-track"><span class="ac-z-fill"></span><span class="ac-z-thumb"></span></span>' +
+    '<span class="ac-z-pole">realized</span>' +
+    '</div>' +
+    '<div class="ac-z-num">z ' + num + '<b>' + zPole(zc) + '</b></div>';
 }
 
 function selectCard(quad, card) {
@@ -4481,7 +4532,7 @@ function showContrast(dot) {
   cmpAgg.setAttribute('data-side', ameta ? ameta.side : 'left');
   cmpAggNums.textContent = numsLine(ax, ay, dot.z, ai);
   cmpAggText.innerHTML = av ? PE.applyKeywords(av.text, variantPool(av)) : '';
-  cmpAggLabel.textContent = 'a voice · ' + dot.band;
+  cmpAggLabel.textContent = (dot.station ? 'the station · ' : 'a voice · ') + dot.band;
 
   // condensed keyword cloud + dock the panel away from the locked voice
   renderCmpCloud([...(av ? variantPool(av) : []).slice(0, 5), dot.band]);
@@ -4877,9 +4928,16 @@ function commitGraph() {
   // (the measured clearance only helps once the stage is scrolled). The
   // moment the ticker takes the band, settle the stage so the foot rests
   // above it — the affordance is never born buried.
+  // (2026-09-21) …but never at the head's expense: a full scroll-to-bottom
+  // put the prompt under the re-seated ribbon art on a 900px desktop. Scroll
+  // only what a small overflow needs; a large one leaves the head legible and
+  // the foot reachable by scrolling — the stage is a scroller.
   try {
     const gp = document.querySelector('.graph-phase');
-    if (gp) setTimeout(() => { gp.scrollTo({ top: gp.scrollHeight, behavior: 'smooth' }); }, 350);
+    if (gp) setTimeout(() => {
+      const over = gp.scrollHeight - gp.clientHeight;
+      if (over > 0 && over <= 48) gp.scrollTo({ top: over, behavior: 'smooth' });
+    }, 350);
   } catch (_) {}
   if (mountGM()) {
     // Hand the committed graph to the graphmap FACTORY — v56 pins, true 3D
@@ -4935,6 +4993,13 @@ function mountGM() {
       if (!d) return;
       if (d.isBill) {
         showContrastBill(d);                                  // legislation → bill inspector
+      } else if (typeof d.label === 'string' && d.label.indexOf('cs:') === 0) {
+        // a station orb (2026-09-21): quad + band from the label, z from the Reading
+        const [, q, band] = d.label.split(':');
+        const off = { fluid: 0.17, coalition: 0.30, denominated: 0.42 }[band] || 0.3;
+        const dir = { A: [-1, 1], B: [1, 1], C: [-1, -1], D: [1, -1] }[q] || [0, 0];
+        showContrast({ quad: q, band, x: 0.5 + dir[0] * off, y: 0.5 - dir[1] * off, z: bandZ(q, band), station: true });
+        try { gm.setFocus(0.5 + dir[0] * off, 0.5 - dir[1] * off); } catch (e) {}
       } else if (d.label !== undefined && d.label !== '' && aggDots[+d.label]) {
         if (visorP < 0.05) return;   // visor up = the aggregate isn't there — no ghost hits
         const dot = aggDots[+d.label];
@@ -4964,6 +5029,7 @@ function placeCoordinateOrbs() {
   const DIR = { A: [-1, 1], B: [1, 1], C: [-1, -1], D: [1, -1] };    // (X, Y) signs
   ['A', 'B', 'C', 'D'].forEach(q => {
     ['fluid', 'coalition', 'denominated'].forEach(band => {
+      if (!variantAt(q, band)) return;                   // skip unauthored coordinates
       const o = OFF[band], d = DIR[q];
       const nx = 0.5 + d[0] * o, ny = 0.5 - d[1] * o;   // +Y is up → smaller normY
       try {
@@ -5209,6 +5275,12 @@ function gmCommit() {
     if (v) corners[GM_QUAD[q]] = (v.xWord || '') + ' · ' + (v.yWord || '');
   });
   try { gm.setCornerLabels(corners); } catch (e) {}
+  // The twelve stations, revived on the committed graph (2026-09-21): each
+  // band's orb floats at ITS authored z (Trace Formula v1 §3b, via bandZ),
+  // so the Reading's declared delivery reads as depth around the user's pin.
+  // Dormant since the 07-07 orb-swap retirement — the 09-21 wiring fed a
+  // function nothing called. Hold an orb to read its station (onInspect).
+  try { placeCoordinateOrbs(); } catch (e) { console.warn('[v2] station orbs failed:', e && e.message); }
   // On-plane keyword field — each quadrant's keyword pool laid flat on its region
   // of the plane (legible discrete terms; GM_QUAD fixes the X-mirror). The full
   // response lives in the upright panel where it can actually be read.
@@ -6868,6 +6940,7 @@ applyState(true);
 
   function say(text) {
     if (away) return;
+    if (window.Ted && window.Ted.touring) return;   // the tour is talking (prism-ted-tour.js)
     bubble.textContent = text; el.classList.add('show');
     if (voiceOn && typeof Voice !== 'undefined' && Voice.available) Voice.speak(text);
     clearTimeout(hideTimer); hideTimer = setTimeout(hide, 15000);
@@ -6877,13 +6950,18 @@ applyState(true);
     if (typeof Voice !== 'undefined' && Voice.available) Voice.stop();
   }
   el.addEventListener('click', hide);
+  (function () {   // tap Ted's face → replay this phase's tour (2026-09-22)
+    const face = document.getElementById('tedFace');
+    if (face) face.addEventListener('click', function (e) { e.stopPropagation(); hide(); if (window.Ted.tour) window.Ted.tour(); });
+  })();
 
-  window.Ted = {
+  window.Ted = Object.assign(window.Ted || {}, {
     beat: function (key, text) { if (seen[key]) return; seen[key] = true; say(text); },
     say: say, hide: hide,
+    speak: function (text) { if (voiceOn && typeof Voice !== 'undefined' && Voice.available) Voice.speak(text); },
     isAway: function () { return away; },
     narrating: function () { return narrate; },
-  };
+  });
 
   // Audit finding 1 (fixed 2026-07-22): a hint bubble's lifecycle ends with
   // its stage. Any phase flip dismisses it, so the DIATRIBE hint can never
@@ -6999,7 +7077,7 @@ applyState(true);
 
     const BAND_COLOR = { fluid: 0x60a880, coalition: 0xc49c48, denominated: 0xd45c5c };
     let bandTarget = new THREE.Color(0x60a880);
-    const REST = function () { return -xExtent * 0.30; };   // his usual hang-out spot (left of center)
+    const REST = function () { return -xExtent * (window.innerWidth < 700 ? 0.62 : 0.30); };   // his usual hang-out spot (left of center; further left on phones, clear of the centered advance button)
 
     // ── state machine ──  enter | idle | walk | away
     let mode = 'enter', t = 0, walkClock = 0;
@@ -7029,6 +7107,10 @@ applyState(true);
         const roll = Math.random();
         if (roll < 0.42) {                                   // stroll to the other side
           targetX = (posX < 0 ? 1 : -1) * xExtent * (0.30 + Math.random() * 0.45);
+          // Phones (2026-09-21 walk): the flow-advance button is centered in
+          // his stage, and a 3D coyote standing on "see the four responses"
+          // hides the way forward. Keep his strolls to the left third there.
+          if (window.innerWidth < 700) targetX = -xExtent * (0.22 + Math.random() * 0.5);
           mode = 'walk';
         } else if (roll < 0.74) {                            // lock onto the cursor a moment
           tracking = true; trackUntil = t + 4 + Math.random() * 3;
@@ -8621,6 +8703,7 @@ applyState(true);
 
 })();
 </script>
+<script src="../src/js/prism-ted-tour.js"></script>   <!-- Ted's tour: isolation + a peeking presenter (2026-09-22) -->
 
 </body>
 </html>
