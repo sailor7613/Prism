@@ -60,7 +60,11 @@
         "words": [],
         "source": "",
         "z": 0.5,
-        "zReason": "The law refunds the importer of record; the money is moving; the process works as designed."
+        "zReason": "The law refunds the importer of record; the money is moving; the process works as designed.",
+        "instrument": {
+          "holder": "the Court of International Trade, executed by Customs through CAPE",
+          "trusted": true
+        }
       },
       "coalition": {
         "text": "It's working, and it's obscene. Walmart gets ten billion back and the people who paid the prices get nothing. Mandate the pass-through or don't call it a refund.",
@@ -69,7 +73,11 @@
         "words": [],
         "source": "",
         "z": 0.1,
-        "zReason": "It works and it's obscene: Walmart gets ten billion while shoppers ate the prices; wants a pass-through mandate."
+        "zReason": "It works and it's obscene: Walmart gets ten billion while shoppers ate the prices; wants a pass-through mandate.",
+        "instrument": {
+          "holder": "the Court and Customs — paying the importer, not the shopper",
+          "trusted": true
+        }
       },
       "denominated": {
         "text": "A hundred and sixty-six billion dollars, from the public to the corporations, with the Court's blessing and Treasury dragging its feet. Money in the wrong hands isn't a refund. It's a second transfer.",
@@ -78,7 +86,11 @@
         "words": [],
         "source": "",
         "z": -0.7,
-        "zReason": "A $166B transfer to corporations, blessed by the Court, slow-walked by Treasury; delivered to the wrong hands is not delivered."
+        "zReason": "A $166B transfer to corporations, blessed by the Court, slow-walked by Treasury; delivered to the wrong hands is not delivered.",
+        "instrument": {
+          "holder": "the Court and a slow-walking Treasury, paying corporations",
+          "trusted": false
+        }
       }
     },
     "B": {
@@ -91,7 +103,11 @@
         "words": [],
         "source": "",
         "z": 0.7,
-        "zReason": "CAPE works; $71B out; the finally-liquidated fight is procedural; a refund is a refund."
+        "zReason": "CAPE works; $71B out; the finally-liquidated fight is procedural; a refund is a refund.",
+        "instrument": {
+          "holder": "Customs, through CAPE — $71B out",
+          "trusted": true
+        }
       },
       "coalition": {
         "text": "It's flowing. The small importers are at the back of the line and they should be at the front. But the consumer was never the payer — that's not how tariffs work.",
@@ -100,7 +116,11 @@
         "words": [],
         "source": "",
         "z": 0.4,
-        "zReason": "It's flowing; small importers are behind and should be first; consumers were never the payer."
+        "zReason": "It's flowing; small importers are behind and should be first; consumers were never the payer.",
+        "instrument": {
+          "holder": "Customs, with small importers owed first",
+          "trusted": true
+        }
       },
       "denominated": {
         "text": "The Court struck an illegal tax and the money is going back where it came from. That's the rule of law working. Watch them bring the fees back under a new name.",
@@ -109,7 +129,11 @@
         "words": [],
         "source": "",
         "z": 0.5,
-        "zReason": "The Court struck an illegal tax and the money is going back — vindication; the fees will return under another name and that's the next fight."
+        "zReason": "The Court struck an illegal tax and the money is going back — vindication; the fees will return under another name and that's the next fight.",
+        "instrument": {
+          "holder": "the Court, which struck an illegal tax",
+          "trusted": true
+        }
       }
     },
     "C": {
@@ -122,7 +146,11 @@
         "words": [],
         "source": "",
         "z": -0.6,
-        "zReason": "We paid at the register; the check goes to Walmart; that is not a refund, it is the tariff collected twice."
+        "zReason": "We paid at the register; the check goes to Walmart; that is not a refund, it is the tariff collected twice.",
+        "instrument": {
+          "holder": "Walmart, holding the check we paid for at the register",
+          "trusted": false
+        }
       },
       "coalition": {
         "text": "A couple of small companies are actually giving it back. The big ones won't. The lawsuits are the only door, and they take years.",
@@ -131,7 +159,11 @@
         "words": [],
         "source": "",
         "z": -0.4,
-        "zReason": "A few small companies are giving it back; the big ones won't; the class actions are the only door."
+        "zReason": "A few small companies are giving it back; the big ones won't; the class actions are the only door.",
+        "instrument": {
+          "holder": "the class actions — the only door left",
+          "trusted": false
+        }
       },
       "denominated": {
         "text": "It's laundering. We paid, they collect, the Court blessed it, and Treasury writes the checks. Nobody who paid this tax will see a dollar.",
@@ -140,7 +172,11 @@
         "words": [],
         "source": "",
         "z": -1.0,
-        "zReason": "The whole thing is laundering: consumers paid, corporations collect, the Court blessed it, Treasury pays it."
+        "zReason": "The whole thing is laundering: consumers paid, corporations collect, the Court blessed it, Treasury pays it.",
+        "instrument": {
+          "holder": "consumers paid, corporations collect, the Court blessed it, Treasury pays it",
+          "trusted": false
+        }
       }
     },
     "D": {
@@ -324,6 +360,23 @@
       "by": "Sailor",
       "ruling": "diatribeScore -18 HOLDS, indexed to the STATED layer. Object layer ruled: stated. Operative read (+25, Claude) recorded as the inversion's other end, not a correction.",
       "rule": "diatribeScore scores the OBJECT's position on the prevalentAxis, read directly from the record at the object's declared layer — never an average of readings. The split locates the shadow; the gap is the displacement. (Parallelogram_v0 §53 / Occlusion_Edge: a Diatribe score without a layer index is incomplete.)"
+    },
+    "rimRule": {
+      "instrumentBackfill": {
+        "date": "2026-09-21",
+        "by": "Claude, mechanical under R-0921-1: holder and trust derived from each band's own zReason/text; z, zReason and text untouched",
+        "bands": [
+          "A.coalition",
+          "A.denominated",
+          "A.fluid",
+          "B.coalition",
+          "B.denominated",
+          "B.fluid",
+          "C.coalition",
+          "C.denominated",
+          "C.fluid"
+        ]
+      }
     }
   },
   "rid": "rdg_mu7refund166",
