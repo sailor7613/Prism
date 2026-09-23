@@ -1,8 +1,42 @@
 # Prism
 
-Prism is a static web app that maps political positions in the U.S.
-Congress. It pulls roll-call and bill data from the Congress.gov API
-and renders an interactive graph view + admin/refraction panels.
+**→ Open it: https://sailor7613.github.io/Prism/** — it runs in the browser, nothing to install. Best on a phone.
+
+Prism is a way of seeing your own politics. It takes one real thing that happened — a law that
+passed, an order that was signed, a ruling that landed — and lets you find where you actually stand
+on it, in three dimensions: *which side*, *how hard you hold it*, and *whether you believe the thing
+delivers*. Then it shows you the room: the twelve stations a Reading was authored from, and the pins
+of everyone else who has stood on that plane.
+
+One way to say it: a Bloomberg terminal for legislative politics — except the instrument is you.
+
+<p align="center">
+  <img src="docs/img/responses-phone.png" width="260" alt="The four responses, each with its delivery meter">
+  &nbsp;&nbsp;
+  <img src="docs/img/plane-phone.png" width="260" alt="Your pin on the plane, the twelve stations floating at their authored depth">
+</p>
+
+## How to read a Reading (about three minutes)
+
+1. **The framing.** The wall text: what happened, dated, no spin. Ted the coyote will walk you through the first time.
+2. **The Diatribe.** Drag the rail to set your *aperture* — how much this thing grabs you. Outer third: you disagree but you're arguing about the same thing. Middle: it's teams. Inner: you're arguing about what the thing even *is*.
+3. **The four responses.** One per corner of the plane, at the aperture you chose, each with the author's call on whether it *delivers* (the small rail: frustrated ← → realized). Pick the one you'd actually say.
+4. **Place your pin.** Where you sit in that corner, how hard, and your own call on delivery — the third axis.
+5. **The plane.** Your pin among the twelve stations, floating at their authored depth; hold one to read it against yours. Pull the ribbon down for the room. The strip at the bottom is **Burns** — where your pin and the Reading's stations disagree, and every object the newsroom is watching.
+
+<p align="center"><img src="docs/img/ted-tour.png" width="560" alt="Ted's tour: one element at a time, explained in place"></p>
+
+## Where it is (September 2026)
+
+Live now: ten authored Readings (housing, tariffs, the dividend, the refund, the NDAA, birthright citizenship and others), the three-axis instrument, the twelve-station plane, Ted's tour, Burns.
+
+Landing this week: a **newsroom** that scans the wire every three hours for *objects* — instruments that finished forming — keeps a register of what the discourse does to them (goes dark, comes back renamed, flips sides), and drafts new Readings from it daily; **profiles** for the beta group, so your pins are public under your name and the plane shows the room; the residents' avatars on the plane.
+
+It is a closed beta and a work in progress; the seams show in places. The concept is the thing to look at.
+
+---
+
+*Everything below is for people working on the code.*
 
 ## Layout
 

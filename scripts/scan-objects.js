@@ -268,12 +268,17 @@ function mergeScan(reg, clusters) {
 
 // ── 5. The day's queue ────────────────────────────────────────────────
 function queueDay(reg) {
+  // The scan now runs several times a day (it rides the 3-hourly workflow),
+  // so the quota is per DAY: top up to DAILY_QUOTA counting what's already
+  // queued or drafted today.
+  const already = reg.objects.filter(o => o.queuedOn === TODAY).length;
+  const room = Math.max(0, DAILY_QUOTA - already);
   const fresh = reg.objects.filter(o => o.status === 'new' && o.holder && o.kind !== 'hearing');
   fresh.sort((a, b) => (b.peakOutlets - a.peakOutlets) || (b.lastSeen || '').localeCompare(a.lastSeen || ''));
-  const picked = fresh.slice(0, DAILY_QUOTA);
+  const picked = fresh.slice(0, room);
   picked.forEach(o => { o.status = 'queued'; o.queuedOn = TODAY; });
   // anything 'new' that didn't make the cut watches for a second scan
-  fresh.slice(DAILY_QUOTA).forEach(o => { o.status = 'watch'; });
+  fresh.slice(room).forEach(o => { o.status = 'watch'; });
   return picked;
 }
 

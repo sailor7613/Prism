@@ -114,7 +114,7 @@
     '<div class="tt-ring"></div>' +
     '<div class="tt-presenter">' +
       '<canvas class="tt-ted" id="tedPeek" width="220" height="220"></canvas>' +
-      '<div class="tt-bubble"><div class="tt-text"></div><div class="tt-foot"><span class="tt-step"></span><span class="tt-hint">tap to continue · tap outside to skip</span></div></div>' +
+      '<div class="tt-bubble"><div class="tt-text"></div><div class="tt-foot"><span class="tt-step"></span><span class="tt-hint">tap to continue</span><button type="button" class="tt-skip">skip the tour</button></div></div>' +
     '</div>';
   document.body.appendChild(root);
   const dims = Array.from(root.querySelectorAll('.tt-dim'));
@@ -125,6 +125,7 @@
   const stepEl = root.querySelector('.tt-step');
   const hintEl = root.querySelector('.tt-hint');
   const peekCanvas = root.querySelector('#tedPeek');
+  const skipBtn = root.querySelector('.tt-skip');
 
   // ── The peeking head (a third little coyote renderer, only live in a tour) ──
   const Peek = (function () {
@@ -143,9 +144,12 @@
     scene.add(new THREE.AmbientLight(0x6072a0, 0.6));
     // head-and-shoulders, three-quarter, like he's leaning over the edge of the
     // frame (head is at y≈1.20, z≈0.46 in the model; ears to 1.57, snout to z 0.87)
-    const aim = new THREE.Vector3(0.0, 1.22, 0.52);
+    // FACE ONLY (Sailor, 2026-09-23: "his body with the cut frame is weird") —
+    // a round portrait medallion: the camera sits on the muzzle, the canvas is
+    // clipped to a circle in CSS, so nothing is ever cut mid-body.
+    const aim = new THREE.Vector3(0.0, 1.27, 0.55);
     function frame(px, py, pz, fov) { cam.position.set(px, py, pz); cam.fov = fov; cam.updateProjectionMatrix(); cam.lookAt(aim); }
-    frame(0.66, 1.50, 1.58, 26);
+    frame(0.50, 1.38, 1.62, 22);
     let yawT = 0, pitchT = 0, yaw = 0, pitch = 0, t = 0, live = false;
     (function loop() {
       requestAnimationFrame(loop);
@@ -212,7 +216,7 @@
     const kind = step.wait || 'tap';
     let off = () => {};
     if (kind === 'tap') {
-      hintEl.textContent = 'tap to continue · tap outside to skip';
+      hintEl.textContent = 'tap to continue';
       off = () => {};
     } else if (kind === 'click') {
       hintEl.textContent = 'go ahead — press it';
@@ -316,8 +320,10 @@
   }
 
   // taps: on Ted or the bubble → next (only for 'tap' steps); on the dim → skip
+  skipBtn.addEventListener('click', (e) => { e.stopPropagation(); stop(false); });
   presenter.addEventListener('click', (e) => {
     e.stopPropagation();
+    if (e.target === skipBtn) return;
     if (!active) return;
     const step = active.steps[stepIdx];
     if (!step || (step.wait || 'tap') === 'tap') showStep(stepIdx + 1);
