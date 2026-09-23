@@ -1,9 +1,9 @@
 # Newsroom digest — 2026-09-23
 
-Register: 3 objects · this scan: 1 new, 0 seen again, 0 returned.
+Register: 5 objects · this scan: 2 new, 0 seen again, 0 returned.
 
-## Queued for drafting (1)
-- **Will FDA advisers recommend a multi - cancer blood test for approval ? Theyll vote** — vote · voted · holder: HHS · formed 2026-09-23 · 11 outlets (peak 11) · `obj_hhs_advisers-approval-blood-cancer`
+## Queued for drafting (0)
+- (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
 - none today
@@ -12,6 +12,7 @@ Register: 3 objects · this scan: 1 new, 0 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **Will FDA advisers recommend a multi - cancer blood test for approval ? Theyll vote** — vote · voted · holder: HHS · formed 2026-09-23 · 11 outlets (peak 11) · `obj_hhs_advisers-approval-blood-cancer`
+- **Harvey Weinstein set to be sentenced for sexual assault** — indictment · charged · holder: ? · formed 2026-09-23 · 3 outlets (peak 3) · `obj_x_assault-harvey-sentenced-set`
+- **Proposed Roadless Rule rescission could hurt rural economies** — ruling · ruled · holder: ? · formed 2026-09-23 · 3 outlets (peak 3) · `obj_x_could-economies-hurt-proposed`
 
 ## Watching (0)
