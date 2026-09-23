@@ -1,11 +1,11 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-09-23T17:16:26.876Z · 19 legislative + 7 news (GDELT, 3d)
+// 2026-09-23T21:36:47.503Z · 19 legislative + 7 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1790183770378,
+    "ts": 1790199392578,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
@@ -1423,11 +1423,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1790183770379,
+    "ts": 1790199392579,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.847,
+      "salience": 0.846,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -1680,11 +1680,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1790183770379,
+    "ts": 1790199392579,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.785,
+      "salience": 0.784,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -2593,11 +2593,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1790183770379,
+    "ts": 1790199392579,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.72,
+      "salience": 0.719,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -3494,11 +3494,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1790183770379,
+    "ts": 1790199392579,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.668,
+      "salience": 0.667,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3887,11 +3887,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1790183770378,
+    "ts": 1790199392578,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.561,
+      "salience": 0.56,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -4141,11 +4141,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1790183770378,
+    "ts": 1790199392578,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.553,
+      "salience": 0.552,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -4414,11 +4414,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1790183770379,
+    "ts": 1790199392579,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.528,
+      "salience": 0.527,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5313,11 +5313,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1790183770378,
+    "ts": 1790199392578,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.515,
+      "salience": 0.514,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6592,11 +6592,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1790183770379,
+    "ts": 1790199392579,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.435,
+      "salience": 0.434,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7512,7 +7512,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1790183770379,
+    "ts": 1790199392579,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
@@ -8422,11 +8422,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1790183770379,
+    "ts": 1790199392579,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.399,
+      "salience": 0.398,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9340,7 +9340,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1790183770378,
+    "ts": 1790199392579,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
@@ -10220,11 +10220,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1790183770378,
+    "ts": 1790199392579,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.351,
+      "salience": 0.35,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11096,11 +11096,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1790183770378,
+    "ts": 1790199392578,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.159,
+      "salience": 0.158,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -11989,11 +11989,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1790183770378,
+    "ts": 1790199392578,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.152,
+      "salience": 0.151,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -12904,7 +12904,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1790183770378,
+    "ts": 1790199392578,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
@@ -13792,11 +13792,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1790183770378,
+    "ts": 1790199392578,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.141,
+      "salience": 0.14,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -14713,11 +14713,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1790183770377,
+    "ts": 1790199392578,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.13,
+      "salience": 0.129,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -15629,14 +15629,106 @@ window.PRISM_CANDIDATES = [
     "mts": 1784044297586
   },
   {
-    "cid": "cand_news_court-map-missouri",
+    "cid": "cand_news_ballroom-battles-defense",
     "source": "news",
-    "ts": 1790183786870,
+    "ts": 1790199407498,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.983,
+      "salience": 0.998,
+      "articles": [
+        {
+          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
+          "url": "https://www.mercurynews.com/2026/09/23/preservation-fund/",
+          "domain": "mercurynews.com",
+          "seendate": "2026-09-23T21:15:00Z",
+          "image": "https://www.mercurynews.com/wp-content/uploads/2026/09/Trump_White_House_36734-1.jpg"
+        },
+        {
+          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects - Las Vegas Sun News",
+          "url": "https://lasvegassun.com/news/2026/sep/23/preservation-group-launches-legal-defense-fund-as-/",
+          "domain": "lasvegassun.com",
+          "seendate": "2026-09-23T21:15:00Z",
+          "image": null
+        },
+        {
+          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
+          "url": "https://www.clickorlando.com/news/politics/2026/09/23/preservation-group-launches-legal-defense-fund-as-it-battles-trump-over-ballroom-and-other-projects/",
+          "domain": "clickorlando.com",
+          "seendate": "2026-09-23T21:00:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/CN4IMXBGL5HTXCBRHUDZG6TZUU.jpg?api_key=clickorlando_488cff2bcc157b2e"
+        },
+        {
+          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
+          "url": "https://www.orlandosentinel.com/2026/09/23/preservation-fund/",
+          "domain": "orlandosentinel.com",
+          "seendate": "2026-09-23T21:00:00Z",
+          "image": "https://www.orlandosentinel.com/wp-content/uploads/2026/09/Trump_White_House_36734-1.jpg"
+        },
+        {
+          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
+          "url": "https://www.courant.com/2026/09/23/preservation-fund/",
+          "domain": "courant.com",
+          "seendate": "2026-09-23T21:00:00Z",
+          "image": "https://www.courant.com/wp-content/uploads/2026/09/Trump_White_House_36734-1.jpg"
+        },
+        {
+          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
+          "url": "https://www.citizensvoice.com/2026/09/23/preservation-fund/",
+          "domain": "citizensvoice.com",
+          "seendate": "2026-09-23T21:00:00Z",
+          "image": "https://www.citizensvoice.com/wp-content/uploads/2026/09/Trump_White_House_36734-1.jpg"
+        },
+        {
+          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
+          "url": "https://www.dailylocal.com/2026/09/23/preservation-fund/",
+          "domain": "dailylocal.com",
+          "seendate": "2026-09-23T21:00:00Z",
+          "image": "https://www.dailylocal.com/wp-content/uploads/2026/09/Trump_White_House_36734-1.jpg"
+        },
+        {
+          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
+          "url": "https://www.capitalgazette.com/2026/09/23/preservation-fund/",
+          "domain": "capitalgazette.com",
+          "seendate": "2026-09-23T21:00:00Z",
+          "image": "https://www.capitalgazette.com/wp-content/uploads/2026/09/Trump_White_House_36734-1.jpg"
+        },
+        {
+          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects – Taylorville Daily News",
+          "url": "https://www.taylorvilledailynews.com/preservation-group-launches-legal-defense-fund-as-it-battles-trump-over-ballroom-and-other-projects/",
+          "domain": "taylorvilledailynews.com",
+          "seendate": "2026-09-23T21:00:00Z",
+          "image": "https://www.taylorvilledailynews.com/wp-content/uploads/2026/09/179019470446755nkxBIALyQq-apn-938x625.jpg"
+        },
+        {
+          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
+          "url": "https://www.dailypress.com/2026/09/23/preservation-fund/",
+          "domain": "dailypress.com",
+          "seendate": "2026-09-23T20:45:00Z",
+          "image": "https://www.dailypress.com/wp-content/uploads/2026/09/Trump_White_House_36734-1.jpg"
+        }
+      ]
+    },
+    "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
+    "summary": "2026-09-23 mercurynews.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-23 lasvegassun.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects - Las Vegas Sun News\n2026-09-23 clickorlando.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-23 orlandosentinel.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-23 courant.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-23 citizensvoice.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_court-map-missouri",
+    "source": "news",
+    "ts": 1790199407498,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.956,
       "articles": [
         {
           "title": "Trump - backed Missouri congressional map returns to the Supreme Court for the third time",
@@ -15737,12 +15829,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_coffers-facing-headwinds",
     "source": "news",
-    "ts": 1790183786870,
+    "ts": 1790199407498,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.897,
+      "salience": 0.87,
       "articles": [
         {
           "title": "Facing political headwinds , Republicans open up their coffers",
@@ -15836,12 +15928,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_appropriate-ban-defend",
     "source": "news",
-    "ts": 1790183786870,
+    "ts": 1790199407498,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.733,
+      "salience": 0.706,
       "articles": [
         {
           "title": "Vance , Scalise , others defend Trump over White House media ban :  Totally appropriate  ",
@@ -15942,12 +16034,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_already-ballroom-door",
     "source": "news",
-    "ts": 1790183786871,
+    "ts": 1790199407499,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.672,
+      "salience": 0.645,
       "articles": [
         {
           "title": "Trump says his ballroom will house a drone port . The Secret Service already has one next door",
@@ -15999,12 +16091,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_amendment-ban-constitutional",
     "source": "news",
-    "ts": 1790183786871,
+    "ts": 1790199407499,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.613,
+      "salience": 0.586,
       "articles": [
         {
           "title": "When presidents ban journalists from the White House , the First Amendment is not the only constitutional right at stake",
@@ -16070,12 +16162,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_440-allies-bans",
     "source": "news",
-    "ts": 1790183786871,
+    "ts": 1790199407499,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.551,
+      "salience": 0.524,
       "articles": [
         {
           "title": "Did Biden revoke 440 press passes ? Fact - checking Trump allies after White House bans news outlets",
@@ -16109,70 +16201,6 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Did Biden revoke 440 press passes ? Fact - checking Trump allies after White House bans news outlets",
     "summary": "2026-09-22 wmur.com: Did Biden revoke 440 press passes ? Fact - checking Trump allies after White House bans news outlets\n2026-09-22 kcci.com: Did Biden revoke 440 press passes ? Fact - checking Trump allies after White House bans news outlets\n2026-09-22 koco.com: Did Biden revoke 440 press passes ? Fact - checking Trump allies after White House bans news outlets\n2026-09-22 wxii12.com: Did Biden revoke 440 press passes ? Fact - checking Trump allies after White House bans news outlets",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_ambassador-ban-defends",
-    "source": "news",
-    "ts": 1790183786871,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.347,
-      "articles": [
-        {
-          "title": "Trump UN ambassador defends White House press ban",
-          "url": "https://www.wxii12.com/article/trump-mike-waltz-defends-news-press-ban/73809972",
-          "domain": "wxii12.com",
-          "seendate": "2026-09-20T20:00:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/b22a642d-a7c5-4b96-b251-38509858b853.jpg?crop=1.00xw%3A0.856xh%3B0%2C0"
-        },
-        {
-          "title": "Trump UN ambassador defends White House press ban",
-          "url": "https://www.wbaltv.com/article/trump-mike-waltz-defends-news-press-ban/73809972",
-          "domain": "wbaltv.com",
-          "seendate": "2026-09-20T20:00:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/b22a642d-a7c5-4b96-b251-38509858b853.jpg?crop=1.00xw%3A0.856xh%3B0%2C0"
-        },
-        {
-          "title": "Trump UN ambassador defends White House press ban",
-          "url": "https://www.kmbc.com/article/trump-mike-waltz-defends-news-press-ban/73809972",
-          "domain": "kmbc.com",
-          "seendate": "2026-09-20T20:00:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/b22a642d-a7c5-4b96-b251-38509858b853.jpg?crop=1.00xw%3A0.856xh%3B0%2C0"
-        },
-        {
-          "title": "Trump UN ambassador defends White House press ban",
-          "url": "https://www.koat.com/article/trump-mike-waltz-defends-news-press-ban/73809972",
-          "domain": "koat.com",
-          "seendate": "2026-09-20T19:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/b22a642d-a7c5-4b96-b251-38509858b853.jpg?crop=1.00xw%3A0.856xh%3B0%2C0"
-        },
-        {
-          "title": "Trump UN ambassador defends White House press ban",
-          "url": "https://www.wmtw.com/article/trump-mike-waltz-defends-news-press-ban/73809972",
-          "domain": "wmtw.com",
-          "seendate": "2026-09-20T19:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/b22a642d-a7c5-4b96-b251-38509858b853.jpg?crop=1.00xw%3A0.856xh%3B0%2C0"
-        },
-        {
-          "title": "Trump UN ambassador defends White House press ban",
-          "url": "https://www.wmur.com/article/trump-mike-waltz-defends-news-press-ban/73809972",
-          "domain": "wmur.com",
-          "seendate": "2026-09-20T19:00:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/b22a642d-a7c5-4b96-b251-38509858b853.jpg?crop=1.00xw%3A0.856xh%3B0%2C0"
-        }
-      ]
-    },
-    "title": "Trump UN ambassador defends White House press ban",
-    "summary": "2026-09-20 wxii12.com: Trump UN ambassador defends White House press ban\n2026-09-20 wbaltv.com: Trump UN ambassador defends White House press ban\n2026-09-20 kmbc.com: Trump UN ambassador defends White House press ban\n2026-09-20 koat.com: Trump UN ambassador defends White House press ban\n2026-09-20 wmtw.com: Trump UN ambassador defends White House press ban\n2026-09-20 wmur.com: Trump UN ambassador defends White House press ban",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
