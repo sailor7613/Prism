@@ -1,11 +1,11 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-09-23T11:51:55.622Z · 19 legislative + 7 news (GDELT, 3d)
+// 2026-09-23T16:37:47.218Z · 19 legislative + 7 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1790164267124,
+    "ts": 1790181433227,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
@@ -1423,11 +1423,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1790164267124,
+    "ts": 1790181433227,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.848,
+      "salience": 0.847,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -1680,11 +1680,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1790164267124,
+    "ts": 1790181433227,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.786,
+      "salience": 0.785,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -2593,11 +2593,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1790164267124,
+    "ts": 1790181433227,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.721,
+      "salience": 0.72,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -3494,11 +3494,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1790164267124,
+    "ts": 1790181433227,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.669,
+      "salience": 0.668,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3887,11 +3887,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1790164267123,
+    "ts": 1790181433227,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.562,
+      "salience": 0.561,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -4141,11 +4141,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1790164267123,
+    "ts": 1790181433227,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.554,
+      "salience": 0.553,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -4414,11 +4414,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1790164267124,
+    "ts": 1790181433227,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.529,
+      "salience": 0.528,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5313,11 +5313,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1790164267124,
+    "ts": 1790181433227,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.516,
+      "salience": 0.515,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6592,11 +6592,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1790164267124,
+    "ts": 1790181433227,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.436,
+      "salience": 0.435,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7512,11 +7512,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1790164267125,
+    "ts": 1790181433227,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.434,
+      "salience": 0.433,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -8422,11 +8422,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1790164267124,
+    "ts": 1790181433227,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.4,
+      "salience": 0.399,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9340,7 +9340,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1790164267124,
+    "ts": 1790181433227,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
@@ -10220,11 +10220,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1790164267124,
+    "ts": 1790181433227,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.352,
+      "salience": 0.351,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11096,11 +11096,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1790164267123,
+    "ts": 1790181433227,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.16,
+      "salience": 0.159,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -11989,11 +11989,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1790164267124,
+    "ts": 1790181433227,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.153,
+      "salience": 0.152,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -12904,7 +12904,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1790164267124,
+    "ts": 1790181433227,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
@@ -13792,11 +13792,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1790164267123,
+    "ts": 1790181433227,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.142,
+      "salience": 0.141,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -14713,11 +14713,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1790164267123,
+    "ts": 1790181433227,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.131,
+      "salience": 0.13,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -15631,13 +15631,34 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_court-map-missouri",
     "source": "news",
-    "ts": 1790164315617,
+    "ts": 1790181467215,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.979,
+      "salience": 0.987,
       "articles": [
+        {
+          "title": "Trump - backed Missouri congressional map returns to the Supreme Court for the third time",
+          "url": "https://www.timesfreepress.com/news/2026/sep/23/trump-backed-missouri-congressional-map-returns-to-the-supreme-court-for-the-third-time/",
+          "domain": "timesfreepress.com",
+          "seendate": "2026-09-23T14:30:00Z",
+          "image": "https://wehco.media.clients.ellingtoncms.com/img/photos/2026/09/23/AP26251747749795_t1200.jpg?57a0c2296240c280e9492005c3cad63e7cbe80f4"
+        },
+        {
+          "title": "Missouri congressional map returns to Supreme Court for the third time",
+          "url": "https://www.marinij.com/2026/09/23/missouri-congressional-map-supreme-court-third-time/",
+          "domain": "marinij.com",
+          "seendate": "2026-09-23T14:30:00Z",
+          "image": "https://www.marinij.com/wp-content/uploads/2026/09/Election_2_26_Redistricting_Missouri_49795_860bf5.jpg"
+        },
+        {
+          "title": "Missouri congressional map returns to Supreme Court for the third time",
+          "url": "https://www.presstelegram.com/2026/09/23/missouri-congressional-map-supreme-court-third-time/",
+          "domain": "presstelegram.com",
+          "seendate": "2026-09-23T12:30:00Z",
+          "image": "https://www.presstelegram.com/wp-content/uploads/2026/09/Election_2_26_Redistricting_Missouri_49795_860bf5.jpg"
+        },
         {
           "title": "Missouri congressional map back at Supreme Court again",
           "url": "https://www.wyff4.com/article/kansas-city-redistricting-map-supreme-court/73843945",
@@ -15700,32 +15721,11 @@ window.PRISM_CANDIDATES = [
           "domain": "wgal.com",
           "seendate": "2026-09-23T06:15:00Z",
           "image": "https://kubrick.htvapps.com/htv-prod/images/3ab500d8-b522-462c-b8f1-c8a993bf829f.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.0986xh"
-        },
-        {
-          "title": "Missouri congressional map back at Supreme Court again",
-          "url": "https://www.kcci.com/article/kansas-city-redistricting-map-supreme-court/73843945",
-          "domain": "kcci.com",
-          "seendate": "2026-09-23T06:00:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/3ab500d8-b522-462c-b8f1-c8a993bf829f.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.0986xh"
-        },
-        {
-          "title": "Missouri congressional map back at Supreme Court again",
-          "url": "https://www.koco.com/article/kansas-city-redistricting-map-supreme-court/73843945",
-          "domain": "koco.com",
-          "seendate": "2026-09-23T06:00:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/3ab500d8-b522-462c-b8f1-c8a993bf829f.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.0986xh"
-        },
-        {
-          "title": "Missouri map fight returns to U . S . Supreme Court",
-          "url": "https://www.kmbc.com/article/missouri-congressional-map-supreme-court-2025-2022-map/73844041",
-          "domain": "kmbc.com",
-          "seendate": "2026-09-23T06:00:00Z",
-          "image": "https://kubrick.htvapps.com/vidthumb/c270c140-00a1-45af-84bd-d9c4bae98f39/176b0195-b465-4ff6-af67-d7906e2ecb1a.jpg?crop=0.770xw%3A0.770xh%3B0.103xw%2C0.0321xh"
         }
       ]
     },
     "title": "Missouri congressional map back at Supreme Court again",
-    "summary": "2026-09-23 wyff4.com: Missouri congressional map back at Supreme Court again\n2026-09-23 wmur.com: Missouri congressional map back at Supreme Court again\n2026-09-23 koat.com: Missouri congressional map back at Supreme Court again\n2026-09-23 khqa.com: Trump - backed Missouri congressional map returns to the Supreme Court for the third time\n2026-09-23 winchesterstar.com: Trump - backed Missouri congressional map returns to the Supreme Court for the third time\n2026-09-23 yahoo.com: Trump - backed Missouri congressional map returns to the Supreme Court for the third time",
+    "summary": "2026-09-23 timesfreepress.com: Trump - backed Missouri congressional map returns to the Supreme Court for the third time\n2026-09-23 marinij.com: Missouri congressional map returns to Supreme Court for the third time\n2026-09-23 presstelegram.com: Missouri congressional map returns to Supreme Court for the third time\n2026-09-23 wyff4.com: Missouri congressional map back at Supreme Court again\n2026-09-23 wmur.com: Missouri congressional map back at Supreme Court again\n2026-09-23 koat.com: Missouri congressional map back at Supreme Court again",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -15737,12 +15737,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_coffers-facing-headwinds",
     "source": "news",
-    "ts": 1790164315617,
+    "ts": 1790181467214,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.931,
+      "salience": 0.901,
       "articles": [
         {
           "title": "Facing political headwinds , Republicans open up their coffers",
@@ -15836,12 +15836,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_appropriate-ban-defend",
     "source": "news",
-    "ts": 1790164315616,
+    "ts": 1790181467214,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.766,
+      "salience": 0.737,
       "articles": [
         {
           "title": "Vance , Scalise , others defend Trump over White House media ban :  Totally appropriate  ",
@@ -15942,12 +15942,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_already-ballroom-door",
     "source": "news",
-    "ts": 1790164315617,
+    "ts": 1790181467215,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.706,
+      "salience": 0.676,
       "articles": [
         {
           "title": "Trump says his ballroom will house a drone port . The Secret Service already has one next door",
@@ -15999,12 +15999,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_amendment-ban-constitutional",
     "source": "news",
-    "ts": 1790164315617,
+    "ts": 1790181467215,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.647,
+      "salience": 0.617,
       "articles": [
         {
           "title": "When presidents ban journalists from the White House , the First Amendment is not the only constitutional right at stake",
@@ -16070,12 +16070,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_440-allies-bans",
     "source": "news",
-    "ts": 1790164315617,
+    "ts": 1790181467215,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.585,
+      "salience": 0.555,
       "articles": [
         {
           "title": "Did Biden revoke 440 press passes ? Fact - checking Trump allies after White House bans news outlets",
@@ -16120,12 +16120,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ambassador-ban-defends",
     "source": "news",
-    "ts": 1790164315617,
+    "ts": 1790181467215,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.491,
+      "salience": 0.461,
       "articles": [
         {
           "title": "Trump UN ambassador defends White House press ban",
