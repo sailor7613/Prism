@@ -16,6 +16,7 @@ const PrismDB = (() => {
     billScores: 'prism_bill_scores',
     ticker:    'prism_ticker_ledger',
     register:  'prism_object_register',   // Burns (2026-09-22): the newsroom's object register, pulled daily
+    field:     'prism_field',             // the public burns per Reading, pulled from data/field/<rid>/ (2026-09-22)
     candidates: 'prism_candidates',
     // Editorial Desk runs (2026-07-26). Key name kept from build 1's inline
     // store in admin-surface.html, so any run recorded before this store
@@ -1224,6 +1225,8 @@ const PrismDB = (() => {
   // like a Reading. A frame's state is read off the object + this device's
   // ledger; precedence flared > burnt > dark > exposed > lit (the rarest,
   // most editorial fact wins — Claude's call, logged in the spec).
+  function setField(rid, entries) { const f = _get(KEYS.field) || {}; f[rid] = entries || []; _set(KEYS.field, f); }
+  function getField(rid) { const f = _get(KEYS.field) || {}; return f[rid] || []; }
   function setRegister(reg) { _set(KEYS.register, reg || null); }
   function getRegister() { return _get(KEYS.register) || null; }
   function frameStates() {
@@ -1231,6 +1234,8 @@ const PrismDB = (() => {
     if (!reg || !Array.isArray(reg.objects)) return [];
     const ledger = _get(KEYS.ticker) || [];
     const burntRids = new Set(ledger.map(t => t.rid).filter(Boolean));
+    const fieldAll = _get(KEYS.field) || {};
+    Object.keys(fieldAll).forEach(rid => { if ((fieldAll[rid] || []).length) burntRids.add(rid); });
     const events = getEvents();
     return reg.objects.filter(o => o.status !== 'dismissed').map(o => {
       const rid = o.live || (o.drafts && (o.drafts.sailor || o.drafts.claude)) || null;
@@ -1359,7 +1364,7 @@ const PrismDB = (() => {
     getUser, setUser,
     getFollowed, isFollowing, follow, unfollow, toggleFollow,
     getDelegation, setDelegation,
-    setRegister, getRegister, frameStates,
+    setRegister, getRegister, frameStates, setField, getField,
     clear, seed
   };
 })();

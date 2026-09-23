@@ -1771,6 +1771,17 @@ body.tri-cover footer, body.tri-cover .graph-info, body.tri-cover .derive-panel 
 .beam-displayname.placeholder { color: var(--ink-low); font-style: italic; }
 .beam-handle { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; color: var(--side-left); margin-top: 1px; }
 .beam-handle.placeholder { color: var(--ink-low); }
+/* the villa key (2026-09-22) */
+.beam-key { margin: 12px 0 4px; padding: 10px 12px; border: 0.5px solid var(--rule); border-radius: 6px; background: rgba(9,15,32,0.5);
+  font-family: var(--serif); font-size: 13.5px; line-height: 1.45; color: var(--ink-mid); }
+.beam-key-tag { font-family: var(--mono); font-size: 8px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-low); margin-right: 8px; }
+.beam-key strong { color: var(--ink); font-weight: 500; }
+.beam-key-row { display: flex; gap: 8px; margin-top: 8px; }
+.beam-key-row input { flex: 1 1 auto; min-width: 0; background: var(--bg-soft); border: 1px solid var(--rule); border-radius: 3px; color: var(--ink); padding: 8px 10px; font-family: var(--mono); font-size: 12px; }
+.beam-key-row button, .beam-key-out { background: transparent; border: 1px solid var(--rule); border-radius: 2px; color: var(--ink-mid); font-family: var(--mono); font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; padding: 8px 14px; cursor: pointer; }
+.beam-key-out { margin-top: 8px; padding: 5px 10px; font-size: 8px; }
+.beam-key-msg { margin-top: 6px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.08em; color: var(--ink-low); min-height: 12px; }
+.beam-key-bio { margin-top: 8px; color: var(--ink-mid); font-style: italic; }
 .beam-edit { font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; color: var(--ink-mid); background: none;
   border: 0.5px solid var(--rule); border-radius: 6px; padding: 5px 10px; cursor: pointer; flex: none; }
 .beam-edit:hover { color: var(--ink); border-color: rgba(255,255,255,0.3); }
@@ -2993,6 +3004,7 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
 <script src="../data/readings_seed.js"></script>   <!-- the live tier, baked (scripts/bake-seed.js) -->
 <script src="../src/js/prismdb.js"></script>
 <script src="../src/js/prism-sync.js"></script>
+<script src="../src/js/prism-field.js"></script>   <!-- profiles + public burns via the burn-gate (2026-09-22) -->
 <script src="../src/js/prism-ai.js"></script>
 <!-- Congressional roster as a script (not fetch) so it loads on file:// too,
      where Safari/Chrome block fetch() of local JSON. Sets window.PRISM_MEMBERS_DATA
@@ -4297,6 +4309,11 @@ function placeAt(x, y) {
 }
 
 function enterGraph() {
+  // the field for this Reading (2026-09-22): others' burns, pulled keyless
+  try {
+    const ridG = (PrismDB.getEvent(EVENT_ID) || {}).rid;
+    if (ridG && typeof PrismField !== 'undefined') PrismField.pullField(ridG).then(() => { try { visorRepour(); if (document.body.classList.contains('ticker-live')) renderTicker(); } catch (e) {} });
+  } catch (e) {}
   if (!selectedQuad) return;
   graphQuad = null;                  // force focus setup in placeAt
   graphBand = committedBand;         // start at the aperture band; pin intensity owns it now
@@ -4560,7 +4577,7 @@ function showContrast(dot) {
   cmpAgg.setAttribute('data-side', ameta ? ameta.side : 'left');
   cmpAggNums.textContent = numsLine(ax, ay, dot.z, ai);
   cmpAggText.innerHTML = av ? PE.applyKeywords(av.text, variantPool(av)) : '';
-  cmpAggLabel.textContent = (dot.station ? 'the station · ' : 'a voice · ') + dot.band;
+  cmpAggLabel.textContent = (dot.station ? 'the station · ' : (dot.avatar ? PrismField.nameOf(dot.avatar) + ' · ' : 'a voice · ')) + dot.band;
 
   // condensed keyword cloud + dock the panel away from the locked voice
   renderCmpCloud([...(av ? variantPool(av) : []).slice(0, 5), dot.band]);
@@ -4949,6 +4966,17 @@ function commitGraph() {
   // Delta ticker: capture at commit, once, append-only (build spec v1 §2).
   // Nothing recomputes later; nothing captures on pull.
   try { captureTickerDeltas(); } catch (e) { console.warn('[v2] ticker capture failed:', e && e.message); }
+  // The burn goes public under the avatar (2026-09-22) — only when Beam is
+  // bound; otherwise the commit stays on this device as before.
+  try {
+    if (typeof PrismField !== 'undefined' && PrismField.bound()) {
+      const evB = PrismDB.getEvent(EVENT_ID) || {};
+      const tilesB = (PrismDB.getTickerEntries(EVENT_ID) || []).slice(-8);
+      PrismField.pushBurn({ rid: evB.rid, title: evB.title, x: pinX, y: pinY, z: graphZ, quad: graphQuad, band: graphBand,
+        intensity: graphIntensity, words: graphDialect.value.trim().slice(0, 180), tiles: tilesB, device: EVENT_ID })
+        .then(r => { if (r && r.ok) { console.log('[v2 · field] burn placed as ' + PrismField.bound().avatar); try { visorRepour(); } catch (e) {} } else if (r && r.error) console.warn('[v2 · field] burn refused:', r.error); });
+    }
+  } catch (e) { console.warn('[v2 · field] push failed:', e && e.message); }
   aggCommitted = true;
   graphCommitBtn.disabled = true;
   // Bottom-band contract, audit follow-up (2026-07-22): at desktop heights
@@ -5366,7 +5394,26 @@ try { if (new URLSearchParams(location.search).has('dev')) document.documentElem
 // precipitating"). ?dev pours the synthetic stand-in for testing the optics.
 function visorField() {
   if (document.documentElement.classList.contains('dev-skip')) return genAggregate(46);
+  // The real field (2026-09-22): every other resident's latest burn on this
+  // Reading, pulled from data/field/<rid>/. Your own pin is already on the plane.
+  try {
+    const rid = (PrismDB.getEvent(EVENT_ID) || {}).rid;
+    const me = (typeof PrismField !== 'undefined' && PrismField.bound()) ? PrismField.bound().avatar : null;
+    if (rid && typeof PrismField !== 'undefined') {
+      return PrismField.latestByResident(rid).filter(e => e.author !== me)
+        .map(e => ({ x: e.x, y: e.y, quad: e.quad, band: e.band, z: e.z, avatar: e.author, words: e.words || '', t: e.t }));
+    }
+  } catch (e) {}
   return [];
+}
+// re-pour the visor when the field changes underneath it (a pull landed, a burn placed)
+function visorRepour() {
+  if (!visorPoured) return;
+  // host-side teardown (the factory file is keep-out): lift the meshes off the
+  // plane; the factory's own list is cleared on reconsider/commit as before
+  try { visorDots.forEach(en => { try { if (en.mesh && en.mesh.parent) en.mesh.parent.remove(en.mesh); if (en.connector && en.connector.parent) en.connector.parent.remove(en.connector); } catch (e) {} }); } catch (e) {}
+  visorPoured = false; visorDots = [];
+  visorEnsurePoured();
 }
 
 function visorEnsurePoured() {
@@ -8246,6 +8293,37 @@ applyState(true);
     const edit = document.createElement('button'); edit.className = 'beam-edit'; edit.type = 'button';
     edit.textContent = p.handle ? 'edit' : 'set up';
     top.appendChild(av); top.appendChild(id); top.appendChild(edit);
+    // ── the villa key (2026-09-22): the passcode that opens the Dream Getty
+    //    opens Beam. The gate names the resident; the avatar becomes the
+    //    identity every burn goes public under. ──
+    const key = document.createElement('div'); key.className = 'beam-key';
+    const b = (typeof PrismField !== 'undefined') ? PrismField.bound() : null;
+    if (b) {
+      const who = document.createElement('div'); who.className = 'beam-key-who';
+      who.innerHTML = '<span class="beam-key-tag">villa</span> you are <strong>' + b.name + '</strong>' + (b.creature ? ' · the ' + b.creature : '') + ' — your burns go public under that name';
+      const out = document.createElement('button'); out.type = 'button'; out.className = 'beam-key-out'; out.textContent = 'leave';
+      out.addEventListener('click', () => { PrismField.unbind(); renderBeam(); });
+      key.appendChild(who); key.appendChild(out);
+      av.textContent = b.name.replace(/^the /, '').charAt(0).toUpperCase();
+      if (!p.displayName) nm.textContent = b.name;
+      PrismField.profileOf(b.avatar).then(pr => { if (pr && pr.bio) { const bio = document.createElement('div'); bio.className = 'beam-key-bio'; bio.textContent = pr.bio; key.appendChild(bio); } });
+    } else {
+      const lab = document.createElement('div'); lab.className = 'beam-key-who';
+      lab.innerHTML = '<span class="beam-key-tag">villa</span> have a key to the Dream Getty? It opens this too.';
+      const row = document.createElement('div'); row.className = 'beam-key-row';
+      const inp = document.createElement('input'); inp.type = 'password'; inp.placeholder = 'your villa key'; inp.autocomplete = 'off'; inp.maxLength = 80;
+      const go = document.createElement('button'); go.type = 'button'; go.textContent = 'knock';
+      const msg = document.createElement('div'); msg.className = 'beam-key-msg';
+      go.addEventListener('click', async () => {
+        go.disabled = true; msg.textContent = 'knocking…';
+        const r = await PrismField.knock(inp.value);
+        go.disabled = false;
+        if (r.ok) renderBeam(); else msg.textContent = r.error || 'no';
+      });
+      inp.addEventListener('keydown', e => { if (e.key === 'Enter') go.click(); });
+      row.appendChild(inp); row.appendChild(go);
+      key.appendChild(lab); key.appendChild(row); key.appendChild(msg);
+    }
     const form = document.createElement('div'); form.className = 'beam-pform' + (p.handle ? '' : ' open');
     const nameIn = document.createElement('input'); nameIn.type = 'text'; nameIn.placeholder = 'display name'; nameIn.maxLength = 40; if (p.displayName) nameIn.value = p.displayName;
     const handleIn = document.createElement('input'); handleIn.type = 'text'; handleIn.className = 'pf-handle'; handleIn.placeholder = '*handle'; handleIn.maxLength = 24; if (p.handle) handleIn.value = p.handle;
@@ -8260,7 +8338,7 @@ applyState(true);
       renderBeam();
     });
     form.appendChild(nameIn); form.appendChild(handleIn); form.appendChild(save);
-    card.appendChild(top); card.appendChild(form);
+    card.appendChild(top); card.appendChild(key); card.appendChild(form);
     return card;
   }
 
