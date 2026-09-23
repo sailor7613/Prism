@@ -100,7 +100,7 @@
         { sel: '#gm3d', wait: 'tap',
           text: "You're on the plane now. Those twelve orbs are the Reading's own stations, floating at the depth their author gave them. Hold one to read it against your pin." },
         { sel: '#zSlider', wait: 'tap', text: "Your delivery call stays live — slide it and watch the distance to each station change." },
-        { sel: '#deltaTicker', wait: 'tap', text: "The strip keeps the ledger: your reading, then the field as it fills in. Nothing here recomputes later." },
+        { sel: '#deltaTicker', wait: 'tap', text: "The strip is Burns. Top row: your burns — where your pin and this Reading's stations disagree. Bottom row: every object the newsroom is watching; a frame burns when someone holds it to the light." },
       ],
     },
   };

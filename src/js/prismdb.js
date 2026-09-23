@@ -15,6 +15,7 @@ const PrismDB = (() => {
     followed:  'prism_followed',
     billScores: 'prism_bill_scores',
     ticker:    'prism_ticker_ledger',
+    register:  'prism_object_register',   // Burns (2026-09-22): the newsroom's object register, pulled daily
     candidates: 'prism_candidates',
     // Editorial Desk runs (2026-07-26). Key name kept from build 1's inline
     // store in admin-surface.html, so any run recorded before this store
@@ -1218,6 +1219,35 @@ const PrismDB = (() => {
     return true;
   }
 
+  // ── Burns: the object register + frame states (Burns Spec v2 §2) ──
+  // The register is the newsroom's file (data/newsroom/objects.json), pulled
+  // like a Reading. A frame's state is read off the object + this device's
+  // ledger; precedence flared > burnt > dark > exposed > lit (the rarest,
+  // most editorial fact wins — Claude's call, logged in the spec).
+  function setRegister(reg) { _set(KEYS.register, reg || null); }
+  function getRegister() { return _get(KEYS.register) || null; }
+  function frameStates() {
+    const reg = getRegister();
+    if (!reg || !Array.isArray(reg.objects)) return [];
+    const ledger = _get(KEYS.ticker) || [];
+    const burntRids = new Set(ledger.map(t => t.rid).filter(Boolean));
+    const events = getEvents();
+    return reg.objects.filter(o => o.status !== 'dismissed').map(o => {
+      const rid = o.live || (o.drafts && (o.drafts.sailor || o.drafts.claude)) || null;
+      const ev = rid ? events.find(e => e.rid === rid) : null;
+      const broken = (o.permanence && o.permanence.breaks && o.permanence.breaks.length) ? o.permanence.breaks[o.permanence.breaks.length - 1] : null;
+      const returned = (o.permanence && o.permanence.returns && o.permanence.returns.length) ? o.permanence.returns[o.permanence.returns.length - 1] : null;
+      const dark = !!(broken && !(returned && returned.on > broken.on));
+      const scarred = !!(broken && !dark);
+      let state = 'lit';
+      if (rid) state = 'exposed';
+      if (dark) state = 'dark';
+      if (rid && burntRids.has(rid)) state = 'burnt';
+      if (o.inversions && o.inversions.length) state = 'flared';
+      return { oid: o.oid, rid, eventId: ev ? ev.id : null, headline: o.headline || '', kind: o.kind, holder: o.holder, formedOn: o.formedOn, state, scarred, lastSeen: o.lastSeen, articles: o.articles || [] };
+    }).sort((a, b) => (b.lastSeen || '').localeCompare(a.lastSeen || ''));
+  }
+
   // ── Arc Seed — CS04: Iran-Contra → Maduro ──────────────
   function seedArc() {
     const arc = {
@@ -1329,6 +1359,7 @@ const PrismDB = (() => {
     getUser, setUser,
     getFollowed, isFollowing, follow, unfollow, toggleFollow,
     getDelegation, setDelegation,
+    setRegister, getRegister, frameStates,
     clear, seed
   };
 })();

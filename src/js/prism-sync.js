@@ -611,6 +611,23 @@ const PrismSync = (() => {
     return { pulled, checked: list.length };
   }
 
+  // ── Pull (the register — Burns Spec v2 §2) ──────────────
+  // One file, sha-cached like a Reading; feeds THE FIELD row's frames.
+  const REGISTER_PATH = 'data/newsroom/objects.json';
+  const REGISTER_SHA_KEY = 'prism.sync.registerSha';
+  async function pullRegister() {
+    const res = await fetch(`${FILE_API}${REGISTER_PATH}?ref=${BRANCH}&t=${Date.now()}`, { headers: headers() });
+    if (res.status === 404) return { pulled: 0 };
+    if (!res.ok) throw new Error('GitHub register fetch failed (' + res.status + ')');
+    const body = await res.json();
+    let known = null; try { known = localStorage.getItem(REGISTER_SHA_KEY); } catch (e) {}
+    if (known === body.sha) return { pulled: 0 };
+    let reg; try { reg = JSON.parse(b64decode(body.content)); } catch (e) { return { pulled: 0 }; }
+    PrismDB.setRegister(reg);
+    try { localStorage.setItem(REGISTER_SHA_KEY, body.sha); } catch (e) {}
+    return { pulled: 1, objects: (reg.objects || []).length };
+  }
+
   async function pull() {
     const r = await pullPublished();               // throws like it always did
     const out = { pulled: r.pulled, checked: r.checked, draftsPulled: 0, claudePulled: 0, deskPulled: 0 };
@@ -618,6 +635,8 @@ const PrismSync = (() => {
     catch (e) { out.draftsError = e.message; }
     try { out.claudePulled = (await pullClaudeDrafts()).pulled; }
     catch (e) { out.claudeError = e.message; }
+    try { out.registerPulled = (await pullRegister()).pulled; }
+    catch (e) { out.registerError = e.message; }
     try { out.deskPulled = (await pullDesk()).pulled; }
     catch (e) { out.deskError = e.message; }
     return out;
@@ -652,7 +671,7 @@ const PrismSync = (() => {
     });
   }
 
-  return { pull, publish, deskKey, verifyKey, KEY_STORE, getFile, putFile,
+  return { pull, pullRegister, publish, deskKey, verifyKey, KEY_STORE, getFile, putFile,
            pushDraft, pushAllDrafts, deleteDraft, queueDraftPush,
            pushDesk, pushAllDesk, queueDeskPush, flushQueues, onNotice };
 })();

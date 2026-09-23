@@ -122,8 +122,17 @@ async function fetchArticles(query) {
     try { const j = JSON.parse(last.body); if (Array.isArray(j.articles)) return j.articles; } catch (_) {}
   }
   console.warn('  ⚠ no usable GDELT response for: ' + query.slice(0, 60) + '… (status ' + (last && last.status) + ')');
+  // keep the raw reply in the repo so a failed query can be read after the run
+  try {
+    fs.mkdirSync(NR_DIR, { recursive: true });
+    fs.appendFileSync(path.join(NR_DIR, 'scan-debug.txt'),
+      `\n# ${new Date().toISOString()} · status ${last && last.status}\n# query: ${query}\n# url: ${gdeltUrl(query)}\n` + String(last && last.body || '').slice(0, 1500) + '\n');
+  } catch (e) {}
   return [];
 }
+// The July pipeline's query is known to return articles; if every instrument
+// query comes back empty, the day still gets a pool to read objects from.
+const FALLBACK_QUERY = '(congress OR senate OR "white house" OR "supreme court" OR governor OR "executive order" OR tariff)';
 function fixtureArticles() {
   const s = fs.readFileSync(path.resolve(ROOT, FIXTURE), 'utf8');
   const i = s.indexOf('['), j = s.lastIndexOf(']');
@@ -292,11 +301,18 @@ function digest(reg, ev, queued) {
     articles = fixtureArticles();
     console.log(`fixture: ${articles.length} articles from ${FIXTURE}`);
   } else {
+    try { fs.unlinkSync(path.join(NR_DIR, 'scan-debug.txt')); } catch (e) {}
     for (const q of QUERIES) {
       const got = await fetchArticles(q);
       console.log(`  ${got.length} articles · ${q.slice(0, 70)}…`);
       articles.push(...got);
       await new Promise(r => setTimeout(r, 2500));
+    }
+    if (!articles.length) {
+      console.warn('  ⚠ every instrument query came back empty — falling back to the broad query');
+      const got = await fetchArticles(FALLBACK_QUERY);
+      console.log(`  ${got.length} articles · fallback`);
+      articles.push(...got);
     }
     articles = articles.filter(a => (a.language || 'English') === 'English' && (!a.sourcecountry || a.sourcecountry === 'United States'));
   }

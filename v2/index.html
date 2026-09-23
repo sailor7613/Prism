@@ -2260,6 +2260,16 @@ body.ticker-live #graphNote {
   text-transform: uppercase; color: var(--ink-low); opacity: 0.8;
 }
 
+/* BURNS v2 — frames on THE FIELD: state glyph + headline lean; band palette only */
+.dt-tile.dt-frame .dt-frame-fig { font-size: 11px; letter-spacing: 0.02em; text-transform: none; font-weight: 400; max-width: 30ch; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dt-tile.dt-frame .dt-glyph { margin-right: 6px; }
+.dt-tile.frame-lit     { --tile: var(--ink-low); }
+.dt-tile.frame-exposed { --tile: rgb(84, 200, 138); }
+.dt-tile.frame-burnt   { --tile: rgb(232, 148, 72); }
+.dt-tile.frame-dark    { --tile: var(--ink-low); opacity: 0.55; }
+.dt-tile.frame-flared  { --tile: rgb(232, 88, 88); }
+.dt-tile.dt-frame .dt-glyph, .dt-tile.dt-frame .dt-scar { color: var(--tile); }
+.dt-tile.dt-frame .dt-scar { margin-left: 6px; opacity: 0.6; font-size: 9px; }
 /* rows — YOUR READING (taller, slower) over THE FIELD */
 .dt-row { position: relative; overflow: hidden; height: 38px; display: flex; align-items: center; }
 .dt-row.dt-field { height: 30px; }
@@ -2932,9 +2942,9 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
 
 <!-- Delta ticker: two-row ribbon (hidden until the first commit captures
      deltas) + the right-edge call column. Build spec v1. -->
-<div class="delta-ticker" id="deltaTicker" hidden>
+<div class="delta-ticker" id="deltaTicker" hidden data-ted-hint="The strip is Burns — every frame is an object the newsroom is watching; a frame burns when you hold it to the light.">
   <div class="dt-row dt-personal">
-    <span class="dt-rowtag">your reading</span>
+    <span class="dt-rowtag">burns</span>
     <div class="dt-track" id="dtPersonalTrack"></div>
   </div>
   <div class="dt-row dt-field">
@@ -6053,6 +6063,74 @@ function captureTickerDeltas() {
     }
   } catch (e) {}
 
+  // ── BURNS v2 §3 — the twelve stations as objects (2026-09-22). Every band
+  // carries z + instrument now, so the species fire against the Reading's own
+  // stations with no curated bills: say-vs-do against the chosen station,
+  // crossing against the rims across the prevalent pole, temperature against
+  // the band nearest the user's z in their own quadrant. Additive to the
+  // bill/member forms above; lead-ordering grammar unchanged. ──
+  try {
+    const evS = PrismDB.getEvent(EVENT_ID);
+    const R = evS && evS.responses;
+    if (R) {
+      const S_OFF = { fluid: 0.17, coalition: 0.30, denominated: 0.42 };
+      const S_DIR = { A: [-1, 1], B: [1, 1], C: [-1, -1], D: [1, -1] };
+      const stationAt = (q, band) => { const v = R[q] && R[q][band]; if (!v || typeof v.z !== 'number') return null;
+        const d = S_DIR[q], o = S_OFF[band]; return { q, band, z: v.z, x: 0.5 + d[0] * o, y: 0.5 - d[1] * o, holder: (v.instrument && v.instrument.holder) || null, trusted: !!(v.instrument && v.instrument.trusted) }; };
+      const subj = (st) => ({ kind: 'station', quad: st.q, band: st.band, holder: st.holder, trusted: st.trusted });
+      // ≠ say-vs-do vs the chosen station
+      const mine = stationAt(graphQuad, graphBand);
+      if (mine && (mine.z < 0) !== (graphZ < 0) && Math.abs(mine.z) > 0.05 && Math.abs(graphZ) > 0.05) {
+        const gap = Math.abs(mine.z - graphZ);
+        mid.push({ species: 'saydo', glyph: TICKER_GLYPH.saydo, valence: 'apart', pole: null,
+          figure: 'z ' + (mine.z >= graphZ ? '+' : '−') + gap.toFixed(2) + ' apart',
+          label: 'you vs the station · ' + (mine.z > 0 ? 'it delivers, you say no' : 'it says no, you say it delivers'),
+          subject: subj(mine), a: userA, b: { x: mine.x, y: mine.y, z: mine.z },
+          lineage: { dx: 0, dy: 0, dz: +(mine.z - graphZ).toFixed(2) } });
+      }
+      // ⤫ crossing vs the rims across the prevalent pole
+      const paS = (evS.prevalentAxis === 'y') ? 'y' : 'x';
+      const farQuads = ['A', 'B', 'C', 'D'].filter(q => paS === 'x' ? S_DIR[q][0] !== (ux < 0 ? -1 : 1) : S_DIR[q][1] !== (uy < 0 ? -1 : 1));
+      const gateS = paS === 'x' ? Math.abs(ux) > 33 : Math.abs(uy) > 33;
+      if (gateS && Math.abs(graphZ) > 0.05) {
+        const rims = farQuads.map(q => stationAt(q, 'denominated')).filter(Boolean);
+        const pressing = rims.filter(r => (r.z < 0) !== (graphZ < 0) && Math.abs(r.z) > 0.05);
+        if (rims.length && pressing.length * 2 >= rims.length) {
+          const flank = farQuads.join('/');
+          lead.push({ species: 'crossing', glyph: TICKER_GLYPH.crossing, valence: 'apart', pole: paS,
+            figure: pressing.length + '/' + rims.length, label: 'rims press the ' + flank + ' flank',
+            subject: { kind: 'station', quad: null, band: 'denominated', rims: pressing.map(r => r.q) },
+            a: userA, b: { x: pressing[0].x, y: pressing[0].y, z: pressing[0].z },
+            pairs: pressing.map(r => ({ x: r.x, y: r.y, z: r.z, station: r.q + ':' + r.band })),
+            lineage: null });
+        }
+        // the named exception: the rim on the user's own side that opposes them
+        const ownRim = stationAt(graphQuad, 'denominated');
+        if (ownRim && (ownRim.z < 0) !== (graphZ < 0) && Math.abs(ownRim.z) > 0.05 && graphBand !== 'denominated') {
+          lead.push({ species: 'crossing', glyph: TICKER_GLYPH.crossing, valence: 'apart', pole: paS,
+            figure: (ownRim.holder || 'YOUR RIM').toUpperCase().slice(0, 22), label: 'your own rim reads it the other way',
+            subject: subj(ownRim), a: userA, b: { x: ownRim.x, y: ownRim.y, z: ownRim.z }, lineage: { dx: 0, dy: 0, dz: +(ownRim.z - graphZ).toFixed(2) } });
+        }
+      }
+      // ∿ temperature vs the band whose z is nearest yours in your quadrant
+      const bandsQ = ['fluid', 'coalition', 'denominated'].map(b => stationAt(graphQuad, b)).filter(Boolean);
+      if (bandsQ.length) {
+        const nearest = bandsQ.slice().sort((p1, p2) => Math.abs(p1.z - graphZ) - Math.abs(p2.z - graphZ))[0];
+        const uStepS = BAND_STEP[graphBand], sStep = BAND_STEP[nearest.band];
+        if (uStepS != null && sStep != null && sStep !== uStepS) {
+          const dStep = Math.abs(sStep - uStepS);
+          const ends = dtBandEndpoints(sStep);
+          const far = Math.abs(graphIntensity - ends[0]) > Math.abs(graphIntensity - ends[1]) ? ends[0] : ends[1];
+          if (dStep === 2 || Math.abs(graphIntensity - far) >= 33) {
+            mid.push({ species: 'temperature', glyph: TICKER_GLYPH.temperature, valence: dStep === 2 ? 'apart' : 'middling', pole: null,
+              figure: nearest.band.toUpperCase(), label: 'read ' + (sStep > uStepS ? 'hot' : 'cool') + ' · you ran ' + graphBand + ' · the station that agrees on z',
+              subject: subj(nearest), a: userA, b: { x: nearest.x, y: nearest.y, z: nearest.z }, pairs: [{ x: nearest.x, y: nearest.y, z: nearest.z, station: nearest.q + ':' + nearest.band }], lineage: null });
+          }
+        }
+      }
+    }
+  } catch (e) { console.warn('[v2 · burns] station species failed:', e && e.message); }
+
   const tiles = lead.concat(mid, tail);
   if (tiles.length) {
     const batch = Date.now();
@@ -6265,6 +6343,39 @@ function dtOrderedEntries() {
   return entries.slice().sort((a, b) => ((b.batch || b.ts || 0) - (a.batch || a.ts || 0)) || ((a.seq || 0) - (b.seq || 0)));
 }
 
+// BURNS v2 §2 — THE FIELD scrolls the register: every object the newsroom is
+// watching is a frame; its state is what the discourse did to it.
+const FRAME_GLYPH = { lit: '○', exposed: '◐', burnt: '●', dark: '◌', flared: '✶' };
+function dtFrameLean(h) {
+  const t = String(h || '').replace(/\s+\.\s+/g, '. ').replace(/\s+,/g, ',').replace(/\s+/g, ' ').trim();
+  if (t.length <= 40) return t;
+  const cut = t.slice(0, 40); const i = cut.lastIndexOf(' ');
+  return (i > 24 ? cut.slice(0, i) : cut) + '…';
+}
+function dtFrameEl(fr) {
+  const tappable = !!(fr.eventId || (fr.articles && fr.articles.length));
+  const el = document.createElement(tappable ? 'button' : 'div');
+  if (tappable) el.type = 'button';
+  el.className = 'dt-tile dt-frame frame-' + fr.state + (fr.scarred ? ' scarred' : '');
+  const top = document.createElement('span'); top.className = 'dt-top';
+  const g = document.createElement('span'); g.className = 'dt-glyph'; g.textContent = FRAME_GLYPH[fr.state] || '○'; top.appendChild(g);
+  const f = document.createElement('span'); f.className = 'dt-fig dt-frame-fig'; f.textContent = dtFrameLean(fr.headline); top.appendChild(f);
+  if (fr.scarred) { const sc = document.createElement('span'); sc.className = 'dt-scar'; sc.textContent = '◌'; sc.title = 'went dark once'; top.appendChild(sc); }
+  const l = document.createElement('span'); l.className = 'dt-label';
+  l.textContent = [fr.kind, fr.holder, fr.formedOn].filter(Boolean).join(' · ') + ' · ' + fr.state;
+  el.appendChild(top); el.appendChild(l);
+  if (tappable) el.addEventListener('click', () => {
+    if (fr.eventId && fr.eventId !== EVENT_ID) { const u = new URL(location.href); u.searchParams.set('event', fr.eventId); location.href = u.toString(); return; }
+    if (fr.articles && fr.articles.length) window.open(fr.articles[0].url, '_blank', 'noopener');
+  });
+  return el;
+}
+function dtFieldFrames() {
+  let frames = [];
+  try { frames = PrismDB.frameStates ? PrismDB.frameStates() : []; } catch (e) {}
+  return frames.slice(0, 40);
+}
+
 function renderTicker() {
   if (!dtEl || !dtPersonalTrack || !dtFieldTrack) return;
   const entries = dtOrderedEntries();
@@ -6279,8 +6390,16 @@ function renderTicker() {
     }
   };
   if (entries.length) fill(dtPersonalTrack, entries, true);
-  else fill(dtPersonalTrack, [{ figure: '—', label: 'no deltas yet · commit a reading' }], false);
-  fill(dtFieldTrack, dtFieldStats(), false);
+  else fill(dtPersonalTrack, [{ figure: '—', label: 'no burns yet · commit a reading' }], false);
+  const frames = dtFieldFrames();
+  if (frames.length) {
+    dtFieldTrack.innerHTML = '';
+    for (let copy = 0; copy < 2; copy++) {
+      const cyc = document.createElement('span'); cyc.className = 'dt-cycle';
+      frames.forEach(fr => cyc.appendChild(dtFrameEl(fr)));
+      dtFieldTrack.appendChild(cyc);
+    }
+  } else fill(dtFieldTrack, [{ figure: '—', label: 'no frames yet · the newsroom scans at 05:30' }], false);
   // folded footer (design v2): the end-cap plate carries what the footer did
   const dtStatus = document.getElementById('dtStatus');
   if (dtStatus) {
@@ -6288,7 +6407,8 @@ function renderTicker() {
     const s1 = document.createElement('span'); s1.textContent = EVENT_ID;
     const asymEl = document.getElementById('asymDelta');
     const s2 = document.createElement('span'); s2.textContent = 'asym ' + ((asymEl && asymEl.textContent) || '0');
-    dtStatus.appendChild(s1); dtStatus.appendChild(s2);
+    const s3 = document.createElement('span'); s3.textContent = frames.length + ' frames · ' + frames.filter(f => f.state === 'burnt').length + ' burnt';
+    dtStatus.appendChild(s1); dtStatus.appendChild(s2); dtStatus.appendChild(s3);
   }
   dtEl.hidden = false;
   document.body.classList.add('ticker-live');
