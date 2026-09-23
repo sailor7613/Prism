@@ -657,6 +657,17 @@ body:not(.phase-diatribe) .to-answers { opacity: 0 !important; pointer-events: n
   .answers-phase { align-items: flex-start; }
   .answers-grid { grid-template-columns: 1fr; }   /* single column; order A,B,C,D */
   .to-answers { bottom: 76px; font-size: 9px; white-space: nowrap; }
+  /* "place your pin" was scrolling UNDER the ribbon's bottom seat (a full-width
+     60px touch band, z 45): a thumb tap there read as a nav drag and the answers
+     phase hid — Sailor's 2026-09-22 phone walk. The advance chrome rides above
+     the band, fixed, like .to-answers; the grid reserves the room. */
+  .answers-foot.show {
+    position: fixed; left: 0; right: 0; z-index: 8; margin: 0; padding: 8px 12px;
+    bottom: calc(var(--ribbon-h) + var(--safe-bottom) + 12px);
+    justify-content: center; gap: 14px;
+    background: linear-gradient(180deg, rgba(7,12,26,0) 0%, rgba(7,12,26,0.82) 35%, rgba(7,12,26,0.92) 100%);
+  }
+  .answers-phase { padding-bottom: calc(var(--ribbon-h) + var(--safe-bottom) + 96px); }
   .stage { padding-bottom: 144px; }   /* CTA sits higher at ≤480 — keep clearing it */
 }
 
@@ -1660,16 +1671,17 @@ body.light .ns-rv.on { color: #f6f4ee; background: rgba(40,48,70,0.85); }
    stretched to the right edge (drawn-to-stretch plates; the ten ribbon
    paintings keep the never-stretch ruling). Phone (<900px) untouched. */
 :root { --nav-elastic-ease: cubic-bezier(0.3, 1.3, 0.35, 1); }
-.elastic-nav { display: none; }
-@media (min-width: 900px) {
-  .ribbon-art { display: none; }
-  .elastic-nav { display: block; position: absolute; inset: 0; pointer-events: none; }
-  .elastic-plate { position: absolute; max-width: none; object-fit: fill; pointer-events: none;
-    mix-blend-mode: var(--art-blend); filter: drop-shadow(0 2px 10px rgba(0,0,0,0.42)); }
-  #elBeam { left: 0; transition: width 0.85s var(--nav-elastic-ease); }
-  #elFan  { transition: left 0.85s var(--nav-elastic-ease), width 0.85s var(--nav-elastic-ease); }
-  #elPrism { transition: left 0.85s var(--nav-elastic-ease); }
-}
+/* 2026-09-22 (Sailor's phone walk): the elastic plates are the nav art on EVERY
+   width now — the beam enters from off the left edge, the fan runs off the
+   right — "I've always wanted the light spectrum to stretch and run off the
+   screen." The sliced ribbon paintings (.ribbon-art) retire from the band. */
+.ribbon-art { display: none; }
+.elastic-nav { display: block; position: absolute; inset: 0; pointer-events: none; }
+.elastic-plate { position: absolute; max-width: none; object-fit: fill; pointer-events: none;
+  mix-blend-mode: var(--art-blend); filter: drop-shadow(0 2px 10px rgba(0,0,0,0.42)); }
+#elBeam { transition: width 0.85s var(--nav-elastic-ease); }
+#elFan  { transition: left 0.85s var(--nav-elastic-ease), width 0.85s var(--nav-elastic-ease); }
+#elPrism { transition: left 0.85s var(--nav-elastic-ease); }
 
 /* upper-row tabs RETIRED (Sailor, 2026-07-11): the ribbon is the single nav
    instrument — its position IS the row/column indicator; a second labeled
@@ -3031,8 +3043,14 @@ function isLiveReading(e) {
 // side for testing), else the admin-marked active event, else evt_001.
 const EVENT_ID = (() => {
   try { const q = new URLSearchParams(location.search).get('event'); if (q) return q.trim(); } catch (e) {}
-  try { const a = (typeof PrismDB !== 'undefined' && PrismDB.getActiveEvent) ? PrismDB.getActiveEvent() : null; if (a && a.id && isLiveReading(a)) return a.id; } catch (e) {}
-  try { const l = (PrismDB.getEvents() || []).filter(isLiveReading); if (l.length) return l[0].id; } catch (e) {}
+  // The portal lands on the MOST RECENT Reading (Sailor, 2026-09-22 phone
+  // walk: "I'd want us to land on the most recent event"). The device's
+  // active flag is an admin notion and no longer steers the portal.
+  try {
+    const l = (PrismDB.getEvents() || []).filter(isLiveReading)
+      .sort((a, b) => ((b.date || '').localeCompare(a.date || '')) || ((b.updatedAt || '').localeCompare(a.updatedAt || '')));
+    if (l.length) return l[0].id;
+  } catch (e) {}
   return 'evt_001';
 })();
 let ev = PrismDB.getEvent(EVENT_ID);
@@ -7432,7 +7450,7 @@ applyState(true);
   // 1210x1538 (aspect .787), slant edges at y=.30 of crop: L .298 / R .612;
   // beam right-end centerline .291 of its 72px crop; fan apex y .294 of its
   // 1074px crop, natural aspect 3.814. Anchors 30/50/70% per column.
-  const elasticMQ = window.matchMedia('(min-width: 900px)');
+  const elasticMQ = window.matchMedia('(min-width: 1px)');   // elastic on every width (2026-09-22); the listener plumbing stays
   const elNav = document.getElementById('elasticNav');
   const elBeam = document.getElementById('elBeam'), elFan = document.getElementById('elFan');
   const elPrism = document.getElementById('elPrism');
@@ -7661,11 +7679,16 @@ applyState(true);
     elPrism.style.height = g.prismH.toFixed(1) + 'px';
     elBeam.style.top = (g.beamY - 0.291 * g.beamH).toFixed(1) + 'px';
     elBeam.style.height = g.beamH.toFixed(1) + 'px';
-    elBeam.style.width = 'calc(' + a + '% - ' + g.entryOff.toFixed(1) + 'px)';
+    // the beam starts OFF the left edge (its drawn end never shows) …
+    const over = Math.round(vw * 0.18);
+    elBeam.style.left = (-over) + 'px';
+    elBeam.style.width = 'calc(' + a + '% - ' + g.entryOff.toFixed(1) + 'px + ' + over + 'px)';
     elFan.style.left = 'calc(' + a + '% + ' + g.exitOff.toFixed(1) + 'px)';
     elFan.style.top = (g.beamY - 0.294 * g.fanH).toFixed(1) + 'px';
     elFan.style.height = g.fanH.toFixed(1) + 'px';
-    const run = vw - (a / 100 * vw + g.exitOff);
+    // … and the fan runs OFF the right edge (the band clips it) — the spectrum
+    // leaves the screen rather than ending on it
+    const run = vw - (a / 100 * vw + g.exitOff) + over;
     elFan.style.width = Math.max(run, g.fanH * 3.814).toFixed(1) + 'px';
     if (!animated) { void elNav.offsetWidth; els.forEach(el => { el.style.transition = ''; }); }
   }
