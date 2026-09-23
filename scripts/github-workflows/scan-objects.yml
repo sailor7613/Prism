@@ -1,0 +1,34 @@
+# The newsroom's daily scan (2026-09-22): GDELT → object register → digest.
+# Runs here because GDELT is unreachable from the Cowork shells. Commits
+# data/newsroom/ back to main; the drafting task reads the register from there.
+name: newsroom scan
+on:
+  schedule:
+    - cron: '30 12 * * *'      # 05:30 Pacific (PDT) — before the drafting task at 06:30
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: newsroom-scan
+  cancel-in-progress: false
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/scan-objects.js
+        env:
+          TIMESPAN: 2d
+          QUOTA: '3'
+      - name: commit the register + digest
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/newsroom
+          git diff --cached --quiet && { echo "no change"; exit 0; }
+          git commit -m "newsroom scan: $(date -u +%F) — register + digest"
+          git pull --rebase
+          git push

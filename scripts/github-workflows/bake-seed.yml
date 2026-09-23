@@ -1,0 +1,36 @@
+# Bake the live tier into data/readings_seed.js whenever the tier changes
+# (2026-09-21). A publish from the admin surface writes data/readings/<rid>.json
+# through the gate; this keeps a fresh device's first paint in step with it
+# without anyone remembering to run the bake by hand.
+name: bake seed
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/readings/*.json'
+      - 'scripts/bake-seed.js'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: bake-seed
+  cancel-in-progress: true
+jobs:
+  bake:
+    # never loop on our own commit
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/bake-seed.js
+      - name: commit if changed
+        run: |
+          if git diff --quiet -- data/readings_seed.js; then echo "seed unchanged"; exit 0; fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/readings_seed.js
+          git commit -m "bake seed: live tier → data/readings_seed.js"
+          git push

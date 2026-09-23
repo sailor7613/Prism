@@ -82,6 +82,13 @@ const PrismSync = (() => {
   // Reading, §3.1–3.2) and data/readings/desk/ (Editorial Desk runs,
   // §3.5). Each keeps its own sha cache, same shape as SHAS_KEY.
   const DRAFTS_DIR = 'data/readings/drafts';
+  // Two draft tiers (Sailor, 2026-09-22): CLAUDE drafts — agent-authored by
+  // the daily newsroom flow — land in drafts/claude/; the moment Sailor edits
+  // one on the surface it REFILES to drafts/ (Sailor drafts) and the claude
+  // copy is removed. Authorship transfers on first edit, no button. The
+  // portal shows neither tier.
+  const CLAUDE_DIR = 'data/readings/drafts/claude';
+  const CLAUDE_SHAS_KEY = 'prism.sync.claudeShas';
   const DESK_DIR   = 'data/readings/desk';
   const DRAFT_SHAS_KEY = 'prism.sync.draftShas';
   const DESK_SHAS_KEY  = 'prism.sync.deskShas';
@@ -267,6 +274,15 @@ const PrismSync = (() => {
     // canonical origin (PrismDB.backfillRids) — until then they stay home.
     if (!ev.rid) return { skipped: 'no rid — backfill on the canonical origin first' };
     if (isPublished(ev)) return { rid: ev.rid, skipped: 'published' };  // its own pipe
+    // Refile (2026-09-22): a push only ever follows a save on this device, so
+    // a claude-tier draft reaching here has been edited by Sailor. It becomes
+    // a Sailor draft now — the file moves tiers, the claude copy goes.
+    let refiled = false;
+    if (ev.authorTier === 'claude') {
+      PrismDB.updateEvent(ev.id, { authorTier: 'sailor', refiledAt: new Date().toISOString(), refiledFrom: 'claude' });
+      Object.assign(ev, { authorTier: 'sailor', refiledAt: new Date().toISOString(), refiledFrom: 'claude' });
+      refiled = true;
+    }
     const file = toDraftFile(ev);
     const rel = `${DRAFTS_DIR}/${ev.rid}.json`;
     const cur = await getFile(rel);
@@ -275,9 +291,18 @@ const PrismSync = (() => {
         String(cur.json.updatedAt).slice(0, 19) + '); reload to pull it');
       return { rid: ev.rid, refused: cur.json.updatedAt };
     }
-    const sha = await putFile(rel, file, 'Draft: ' + (ev.title || ev.rid), cur ? cur.sha : undefined);
+    const sha = await putFile(rel, file, (refiled ? 'Refile to Sailor drafts: ' : 'Draft: ') + (ev.title || ev.rid), cur ? cur.sha : undefined);
     setShaIn(DRAFT_SHAS_KEY, ev.rid, sha);
-    return { rid: ev.rid, pushed: true };
+    if (refiled) {
+      try {
+        const crel = `${CLAUDE_DIR}/${ev.rid}.json`;
+        const ccur = await getFile(crel);
+        if (ccur) await gateFile({ op: 'del', path: crel, sha: ccur.sha, message: 'Refiled to Sailor drafts: ' + ev.rid });
+        setShaIn(CLAUDE_SHAS_KEY, ev.rid, null);
+        notice('refiled “' + (ev.title || ev.rid) + '” from Claude drafts to your drafts');
+      } catch (e) { notice('refiled, but the Claude copy could not be removed: ' + e.message); }
+    }
+    return { rid: ev.rid, pushed: true, refiled };
   }
 
   // Every unpublished Reading, one pass — the ⇡ full-sync gesture and
@@ -552,11 +577,47 @@ const PrismSync = (() => {
   // Published first (published outranks draft), then drafts, then desk
   // (a desk record needs its Reading in the store to land). A tier
   // failing never blocks the others; errors ride the result.
+  // ── Pull (Claude tier) ────────────────────────────────────
+  // Same machinery over drafts/claude/. A local copy that has already been
+  // refiled to Sailor (authorTier 'sailor', or published) never takes the
+  // claude file back — the pull only fills what this device hasn't touched.
+  async function pullClaudeDrafts() {
+    const res = await fetch(`${FILE_API}${CLAUDE_DIR}?ref=${BRANCH}&t=${Date.now()}`, { headers: headers() });
+    if (res.status === 404) return { pulled: 0, checked: 0 };
+    if (!res.ok) throw new Error('GitHub list failed (' + res.status + ')');
+    const list = (await res.json()).filter(f => f.type === 'file' && f.name.endsWith('.json'));
+    const known = shasIn(CLAUDE_SHAS_KEY);
+    let pulled = 0;
+    for (const f of list) {
+      const rid = f.name.replace(/\.json$/, '');
+      if (known[rid] === f.sha) continue;
+      const fres = await fetch(f.url, { headers: headers() });
+      if (!fres.ok) continue;
+      let reading;
+      try { reading = JSON.parse(b64decode((await fres.json()).content)); } catch(e) { continue; }
+      if (!reading.rid) reading.rid = rid;
+      reading.authorTier = 'claude';
+      const bills = Array.isArray(reading.billReadings) ? reading.billReadings : null;
+      if ('billReadings' in reading) delete reading.billReadings;
+      let local = findLocal(reading);
+      if (local && (local.syncedAt || local.authorTier === 'sailor')) { setShaIn(CLAUDE_SHAS_KEY, rid, f.sha); continue; }
+      if (!local || (reading.updatedAt || '') > (local.updatedAt || '')) {
+        local = PrismDB.importReading(reading);
+        pulled++;
+      }
+      if (bills && local) PrismDB.importBillReadings(local.id, bills);
+      setShaIn(CLAUDE_SHAS_KEY, rid, f.sha);
+    }
+    return { pulled, checked: list.length };
+  }
+
   async function pull() {
     const r = await pullPublished();               // throws like it always did
-    const out = { pulled: r.pulled, checked: r.checked, draftsPulled: 0, deskPulled: 0 };
+    const out = { pulled: r.pulled, checked: r.checked, draftsPulled: 0, claudePulled: 0, deskPulled: 0 };
     try { out.draftsPulled = (await pullDrafts()).pulled; }
     catch (e) { out.draftsError = e.message; }
+    try { out.claudePulled = (await pullClaudeDrafts()).pulled; }
+    catch (e) { out.claudeError = e.message; }
     try { out.deskPulled = (await pullDesk()).pulled; }
     catch (e) { out.deskError = e.message; }
     return out;
