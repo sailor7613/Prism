@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-09-23T21:36:47.503Z · 19 legislative + 7 news (GDELT, 3d)
+// 2026-09-24T05:04:23.374Z · 19 legislative + 8 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1790199392578,
+    "ts": 1790226231266,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.855,
+      "salience": 0.853,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -1423,11 +1423,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1790199392579,
+    "ts": 1790226231267,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.846,
+      "salience": 0.845,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -1680,11 +1680,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1790199392579,
+    "ts": 1790226231267,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.784,
+      "salience": 0.782,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -2593,11 +2593,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1790199392579,
+    "ts": 1790226231267,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.719,
+      "salience": 0.718,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -3494,11 +3494,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1790199392579,
+    "ts": 1790226231267,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.667,
+      "salience": 0.666,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3887,11 +3887,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1790199392578,
+    "ts": 1790226231266,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.56,
+      "salience": 0.559,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -4141,11 +4141,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1790199392578,
+    "ts": 1790226231266,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.552,
+      "salience": 0.55,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -4414,11 +4414,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1790199392579,
+    "ts": 1790226231267,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.527,
+      "salience": 0.525,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5313,11 +5313,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1790199392578,
+    "ts": 1790226231267,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.514,
+      "salience": 0.513,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6592,11 +6592,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1790199392579,
+    "ts": 1790226231267,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.434,
+      "salience": 0.433,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7512,11 +7512,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1790199392579,
+    "ts": 1790226231267,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.433,
+      "salience": 0.431,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -8422,11 +8422,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1790199392579,
+    "ts": 1790226231267,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.398,
+      "salience": 0.397,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9340,11 +9340,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1790199392579,
+    "ts": 1790226231267,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.355,
+      "salience": 0.353,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10220,11 +10220,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1790199392579,
+    "ts": 1790226231267,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.35,
+      "salience": 0.349,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11096,11 +11096,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1790199392578,
+    "ts": 1790226231266,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.158,
+      "salience": 0.157,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -11989,11 +11989,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1790199392578,
+    "ts": 1790226231266,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.151,
+      "salience": 0.15,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -12904,11 +12904,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1790199392578,
+    "ts": 1790226231266,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.145,
+      "salience": 0.143,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -13792,11 +13792,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1790199392578,
+    "ts": 1790226231266,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.14,
+      "salience": 0.139,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -14713,11 +14713,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1790199392578,
+    "ts": 1790226231266,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.129,
+      "salience": 0.127,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -15631,13 +15631,48 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballroom-battles-defense",
     "source": "news",
-    "ts": 1790199407498,
+    "ts": 1790226263369,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.998,
+      "salience": 0.978,
       "articles": [
+        {
+          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
+          "url": "https://www.sandiegouniontribune.com/2026/09/23/preservation-fund/",
+          "domain": "sandiegouniontribune.com",
+          "seendate": "2026-09-24T01:30:00Z",
+          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/09/Trump_White_House_36734-1.jpg"
+        },
+        {
+          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
+          "url": "https://www.bostonherald.com/2026/09/23/preservation-fund/",
+          "domain": "bostonherald.com",
+          "seendate": "2026-09-24T00:00:00Z",
+          "image": "https://www.bostonherald.com/wp-content/uploads/2026/09/Trump_White_House_36734-1.jpg"
+        },
+        {
+          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
+          "url": "https://www.sun-sentinel.com/2026/09/23/preservation-fund/",
+          "domain": "sun-sentinel.com",
+          "seendate": "2026-09-23T21:30:00Z",
+          "image": "https://www.sun-sentinel.com/wp-content/uploads/2026/09/Trump_White_House_36734-1.jpg"
+        },
+        {
+          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
+          "url": "https://www.pilotonline.com/2026/09/23/preservation-fund/",
+          "domain": "pilotonline.com",
+          "seendate": "2026-09-23T21:30:00Z",
+          "image": "https://www.pilotonline.com/wp-content/uploads/2026/09/Trump_White_House_36734-1.jpg"
+        },
+        {
+          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
+          "url": "https://abcnews.com/US/wireStory/preservation-group-launches-legal-defense-fund-battles-trump-136696953",
+          "domain": "abcnews.com",
+          "seendate": "2026-09-23T21:30:00Z",
+          "image": "https://i.abcnewsfe.com/a/369920c5-5db6-4631-a77d-460db73afb0a/wirestory_39c7d01c6456892f7a3fe920a6e46869_16x9.jpg"
+        },
         {
           "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
           "url": "https://www.mercurynews.com/2026/09/23/preservation-fund/",
@@ -15686,32 +15721,11 @@ window.PRISM_CANDIDATES = [
           "domain": "dailylocal.com",
           "seendate": "2026-09-23T21:00:00Z",
           "image": "https://www.dailylocal.com/wp-content/uploads/2026/09/Trump_White_House_36734-1.jpg"
-        },
-        {
-          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
-          "url": "https://www.capitalgazette.com/2026/09/23/preservation-fund/",
-          "domain": "capitalgazette.com",
-          "seendate": "2026-09-23T21:00:00Z",
-          "image": "https://www.capitalgazette.com/wp-content/uploads/2026/09/Trump_White_House_36734-1.jpg"
-        },
-        {
-          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects – Taylorville Daily News",
-          "url": "https://www.taylorvilledailynews.com/preservation-group-launches-legal-defense-fund-as-it-battles-trump-over-ballroom-and-other-projects/",
-          "domain": "taylorvilledailynews.com",
-          "seendate": "2026-09-23T21:00:00Z",
-          "image": "https://www.taylorvilledailynews.com/wp-content/uploads/2026/09/179019470446755nkxBIALyQq-apn-938x625.jpg"
-        },
-        {
-          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
-          "url": "https://www.dailypress.com/2026/09/23/preservation-fund/",
-          "domain": "dailypress.com",
-          "seendate": "2026-09-23T20:45:00Z",
-          "image": "https://www.dailypress.com/wp-content/uploads/2026/09/Trump_White_House_36734-1.jpg"
         }
       ]
     },
     "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
-    "summary": "2026-09-23 mercurynews.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-23 lasvegassun.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects - Las Vegas Sun News\n2026-09-23 clickorlando.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-23 orlandosentinel.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-23 courant.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-23 citizensvoice.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
+    "summary": "2026-09-24 sandiegouniontribune.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-24 bostonherald.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-23 sun-sentinel.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-23 pilotonline.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-23 abcnews.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-23 mercurynews.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -15721,15 +15735,22 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_court-map-missouri",
+    "cid": "cand_news_congressional-court-map",
     "source": "news",
-    "ts": 1790199407498,
+    "ts": 1790226263370,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.956,
+      "salience": 0.953,
       "articles": [
+        {
+          "title": "Trump - backed Missouri congressional map returns to the Supreme Court for the third time",
+          "url": "https://www.columbian.com/news/2026/sep/23/trump-backed-missouri-congressional-map-returns-to-the-supreme-court-for-the-third-time/",
+          "domain": "columbian.com",
+          "seendate": "2026-09-23T21:30:00Z",
+          "image": "https://www.columbian.com/wp-content/themes/columbian3/static/img/og/default-2026-3.jpg"
+        },
         {
           "title": "Trump - backed Missouri congressional map returns to the Supreme Court for the third time",
           "url": "https://www.timesfreepress.com/news/2026/sep/23/trump-backed-missouri-congressional-map-returns-to-the-supreme-court-for-the-third-time/",
@@ -15806,18 +15827,11 @@ window.PRISM_CANDIDATES = [
           "domain": "news4jax.com",
           "seendate": "2026-09-23T06:15:00Z",
           "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/WG55RJDBHZCZ7EQHVIC5NWUCTQ.jpg?api_key=news4jax_3f10b25586458189"
-        },
-        {
-          "title": "Missouri congressional map back at Supreme Court again",
-          "url": "https://www.wgal.com/article/kansas-city-redistricting-map-supreme-court/73843945",
-          "domain": "wgal.com",
-          "seendate": "2026-09-23T06:15:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/3ab500d8-b522-462c-b8f1-c8a993bf829f.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.0986xh"
         }
       ]
     },
     "title": "Missouri congressional map back at Supreme Court again",
-    "summary": "2026-09-23 timesfreepress.com: Trump - backed Missouri congressional map returns to the Supreme Court for the third time\n2026-09-23 marinij.com: Missouri congressional map returns to Supreme Court for the third time\n2026-09-23 presstelegram.com: Missouri congressional map returns to Supreme Court for the third time\n2026-09-23 wyff4.com: Missouri congressional map back at Supreme Court again\n2026-09-23 wmur.com: Missouri congressional map back at Supreme Court again\n2026-09-23 koat.com: Missouri congressional map back at Supreme Court again",
+    "summary": "2026-09-23 columbian.com: Trump - backed Missouri congressional map returns to the Supreme Court for the third time\n2026-09-23 timesfreepress.com: Trump - backed Missouri congressional map returns to the Supreme Court for the third time\n2026-09-23 marinij.com: Missouri congressional map returns to Supreme Court for the third time\n2026-09-23 presstelegram.com: Missouri congressional map returns to Supreme Court for the third time\n2026-09-23 wyff4.com: Missouri congressional map back at Supreme Court again\n2026-09-23 wmur.com: Missouri congressional map back at Supreme Court again",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -15829,12 +15843,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_coffers-facing-headwinds",
     "source": "news",
-    "ts": 1790199407498,
+    "ts": 1790226263369,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.87,
+      "salience": 0.823,
       "articles": [
         {
           "title": "Facing political headwinds , Republicans open up their coffers",
@@ -15870,13 +15884,6 @@ window.PRISM_CANDIDATES = [
           "domain": "wjla.com",
           "seendate": "2026-09-22T22:15:00Z",
           "image": "https://wjla.com/resources/media2/16x9/5661/1320/0x355/90/be75c083-3d8d-44d7-927d-d4c114925a2d-GettyImages2295660832.jpg"
-        },
-        {
-          "title": "Facing political headwinds , Republicans open up their coffers",
-          "url": "https://news4sanantonio.com/news/beyond-the-podium/facing-political-headwinds-republicans-open-up-their-coffers-midterm-elections-inflation-economy-gas-prices-congress-majority",
-          "domain": "news4sanantonio.com",
-          "seendate": "2026-09-22T22:00:00Z",
-          "image": "https://news4sanantonio.com/resources/media2/16x9/5661/1320/0x355/90/be75c083-3d8d-44d7-927d-d4c114925a2d-GettyImages2295660832.jpg"
         },
         {
           "title": "Facing political headwinds , Republicans open up their coffers",
@@ -15916,7 +15923,135 @@ window.PRISM_CANDIDATES = [
       ]
     },
     "title": "Facing political headwinds , Republicans open up their coffers",
-    "summary": "2026-09-23 nbcmontana.com: Facing political headwinds , Republicans open up their coffers\n2026-09-22 abc6onyourside.com: Facing political headwinds , Republicans open up their coffers\n2026-09-22 cbs12.com: Facing political headwinds , Republicans open up their coffers\n2026-09-22 upnorthlive.com: Facing political headwinds , Republicans open up their coffers\n2026-09-22 wjla.com: Facing political headwinds , Republicans open up their coffers\n2026-09-22 news4sanantonio.com: Facing political headwinds , Republicans open up their coffers",
+    "summary": "2026-09-23 nbcmontana.com: Facing political headwinds , Republicans open up their coffers\n2026-09-22 abc6onyourside.com: Facing political headwinds , Republicans open up their coffers\n2026-09-22 cbs12.com: Facing political headwinds , Republicans open up their coffers\n2026-09-22 upnorthlive.com: Facing political headwinds , Republicans open up their coffers\n2026-09-22 wjla.com: Facing political headwinds , Republicans open up their coffers\n2026-09-22 13wham.com: Facing political headwinds , Republicans open up their coffers",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_400-biden-did",
+    "source": "news",
+    "ts": 1790226263369,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.756,
+      "articles": [
+        {
+          "title": "FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists",
+          "url": "https://www.dailypress.com/2026/09/23/biden-media-ban-fact-focus/",
+          "domain": "dailypress.com",
+          "seendate": "2026-09-24T01:15:00Z",
+          "image": "https://www.dailypress.com/wp-content/uploads/2026/09/Trump_News_Media_9_661_5bb317-1.jpg"
+        },
+        {
+          "title": "FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists",
+          "url": "https://www.orlandosentinel.com/2026/09/23/biden-media-ban-fact-focus/",
+          "domain": "orlandosentinel.com",
+          "seendate": "2026-09-23T23:30:00Z",
+          "image": "https://www.orlandosentinel.com/wp-content/uploads/2026/09/Trump_News_Media_9_661_5bb317-1.jpg"
+        },
+        {
+          "title": "FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists",
+          "url": "https://www.courant.com/2026/09/23/biden-media-ban-fact-focus/",
+          "domain": "courant.com",
+          "seendate": "2026-09-23T22:00:00Z",
+          "image": "https://www.courant.com/wp-content/uploads/2026/09/Trump_News_Media_9_661_5bb317-1.jpg"
+        },
+        {
+          "title": "FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists",
+          "url": "https://www.sun-sentinel.com/2026/09/23/biden-media-ban-fact-focus/",
+          "domain": "sun-sentinel.com",
+          "seendate": "2026-09-23T21:30:00Z",
+          "image": "https://www.sun-sentinel.com/wp-content/uploads/2026/09/Trump_News_Media_9_661_5bb317-1.jpg"
+        },
+        {
+          "title": "FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists",
+          "url": "https://www.pilotonline.com/2026/09/23/biden-media-ban-fact-focus/",
+          "domain": "pilotonline.com",
+          "seendate": "2026-09-23T21:30:00Z",
+          "image": "https://www.pilotonline.com/wp-content/uploads/2026/09/Trump_News_Media_9_661_5bb317-1.jpg"
+        },
+        {
+          "title": "FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists",
+          "url": "http://www.idahopress.com/ap_news/us/fact-focus-no-biden-did-not-revoke-the-white-house-press-passes-of-more-than/article_90b44a31-3015-54dd-8e58-7e3578200657.html",
+          "domain": "idahopress.com",
+          "seendate": "2026-09-23T21:00:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/idahopress.com/content/tncms/assets/v3/editorial/0/25/025117bc-347b-5f49-918c-324229d32254/6ab11709ec760.image.jpg?crop=1763%2C926%2C0%2C124"
+        }
+      ]
+    },
+    "title": "FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists",
+    "summary": "2026-09-24 dailypress.com: FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists\n2026-09-23 orlandosentinel.com: FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists\n2026-09-23 courant.com: FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists\n2026-09-23 sun-sentinel.com: FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists\n2026-09-23 pilotonline.com: FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists\n2026-09-23 idahopress.com: FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_already-ballroom-drone",
+    "source": "news",
+    "ts": 1790226263370,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.742,
+      "articles": [
+        {
+          "title": "Trump says his ballroom will house a drone port . The Secret Service already has one nearby",
+          "url": "https://wjla.com/news/local/secret-service-drone-ai-artificial-intelligence-ballroom-unmanned-aeriel-fortress-military-port-logistics-warfare-ballroom-construction-security",
+          "domain": "wjla.com",
+          "seendate": "2026-09-23T23:00:00Z",
+          "image": "https://wjla.com/resources/media2/16x9/6596/1320/0x344/90/3c79aae7-35a9-4186-a1b8-169f8aad3122-Trump_Drone_Port_26259847395710.jpg"
+        },
+        {
+          "title": "Trump says his ballroom will house a drone port . The Secret Service already has one next door",
+          "url": "https://www.wsls.com/news/politics/2026/09/23/trump-says-his-ballroom-will-house-a-drone-port-the-secret-service-already-has-one-next-door/",
+          "domain": "wsls.com",
+          "seendate": "2026-09-23T08:45:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/QVPJWZLAYRCZDHQMGWSGBKHC2Y.jpg?api_key=wsls_8c3a4bc35af7684e"
+        },
+        {
+          "title": "Trump says his ballroom will house a drone port . The Secret Service already has one next door",
+          "url": "https://www.clickondetroit.com/news/politics/2026/09/23/trump-says-his-ballroom-will-house-a-drone-port-the-secret-service-already-has-one-next-door/",
+          "domain": "clickondetroit.com",
+          "seendate": "2026-09-23T08:00:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/QVPJWZLAYRCZDHQMGWSGBKHC2Y.jpg?api_key=clickondetroit_06f87fefb2123598"
+        },
+        {
+          "title": "Trump says his ballroom will house a drone port . The Secret Service already has one next door",
+          "url": "https://www.news4jax.com/news/politics/2026/09/23/trump-says-his-ballroom-will-house-a-drone-port-the-secret-service-already-has-one-next-door/",
+          "domain": "news4jax.com",
+          "seendate": "2026-09-23T06:15:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/QVPJWZLAYRCZDHQMGWSGBKHC2Y.jpg?api_key=news4jax_3f10b25586458189"
+        },
+        {
+          "title": "Trump says his ballroom will house a drone port . The Secret Service already has one next door",
+          "url": "https://www.clickorlando.com/news/politics/2026/09/23/trump-says-his-ballroom-will-house-a-drone-port-the-secret-service-already-has-one-next-door/",
+          "domain": "clickorlando.com",
+          "seendate": "2026-09-23T05:00:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/QVPJWZLAYRCZDHQMGWSGBKHC2Y.jpg?api_key=clickorlando_488cff2bcc157b2e"
+        },
+        {
+          "title": "Trump says his ballroom will house a drone port . The Secret Service already has one next door",
+          "url": "https://www.wfmz.com/news/us/trump-says-his-ballroom-will-house-a-drone-port-the-secret-service-already-has-one-next-door/article_87f63ca7-9e2d-57bc-a8bf-38d1b3a51d13.html",
+          "domain": "wfmz.com",
+          "seendate": "2026-09-23T05:00:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/wfmz.com/content/tncms/assets/v3/editorial/9/3c/93ccbfe6-04fe-5770-958a-8418accce237/6ab3536aae43c.image.jpg?crop=1764%2C926%2C0%2C124"
+        }
+      ]
+    },
+    "title": "Trump says his ballroom will house a drone port . The Secret Service already has one next door",
+    "summary": "2026-09-23 wjla.com: Trump says his ballroom will house a drone port . The Secret Service already has one nearby\n2026-09-23 wsls.com: Trump says his ballroom will house a drone port . The Secret Service already has one next door\n2026-09-23 clickondetroit.com: Trump says his ballroom will house a drone port . The Secret Service already has one next door\n2026-09-23 news4jax.com: Trump says his ballroom will house a drone port . The Secret Service already has one next door\n2026-09-23 clickorlando.com: Trump says his ballroom will house a drone port . The Secret Service already has one next door\n2026-09-23 wfmz.com: Trump says his ballroom will house a drone port . The Secret Service already has one next door",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -15928,12 +16063,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_appropriate-ban-defend",
     "source": "news",
-    "ts": 1790199407498,
+    "ts": 1790226263369,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.706,
+      "salience": 0.659,
       "articles": [
         {
           "title": "Vance , Scalise , others defend Trump over White House media ban :  Totally appropriate  ",
@@ -16032,71 +16167,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_already-ballroom-door",
-    "source": "news",
-    "ts": 1790199407499,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.645,
-      "articles": [
-        {
-          "title": "Trump says his ballroom will house a drone port . The Secret Service already has one next door",
-          "url": "https://www.wsls.com/news/politics/2026/09/23/trump-says-his-ballroom-will-house-a-drone-port-the-secret-service-already-has-one-next-door/",
-          "domain": "wsls.com",
-          "seendate": "2026-09-23T08:45:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/QVPJWZLAYRCZDHQMGWSGBKHC2Y.jpg?api_key=wsls_8c3a4bc35af7684e"
-        },
-        {
-          "title": "Trump says his ballroom will house a drone port . The Secret Service already has one next door",
-          "url": "https://www.clickondetroit.com/news/politics/2026/09/23/trump-says-his-ballroom-will-house-a-drone-port-the-secret-service-already-has-one-next-door/",
-          "domain": "clickondetroit.com",
-          "seendate": "2026-09-23T08:00:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/QVPJWZLAYRCZDHQMGWSGBKHC2Y.jpg?api_key=clickondetroit_06f87fefb2123598"
-        },
-        {
-          "title": "Trump says his ballroom will house a drone port . The Secret Service already has one next door",
-          "url": "https://www.news4jax.com/news/politics/2026/09/23/trump-says-his-ballroom-will-house-a-drone-port-the-secret-service-already-has-one-next-door/",
-          "domain": "news4jax.com",
-          "seendate": "2026-09-23T06:15:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/QVPJWZLAYRCZDHQMGWSGBKHC2Y.jpg?api_key=news4jax_3f10b25586458189"
-        },
-        {
-          "title": "Trump says his ballroom will house a drone port . The Secret Service already has one next door",
-          "url": "https://www.clickorlando.com/news/politics/2026/09/23/trump-says-his-ballroom-will-house-a-drone-port-the-secret-service-already-has-one-next-door/",
-          "domain": "clickorlando.com",
-          "seendate": "2026-09-23T05:00:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/QVPJWZLAYRCZDHQMGWSGBKHC2Y.jpg?api_key=clickorlando_488cff2bcc157b2e"
-        },
-        {
-          "title": "Trump says his ballroom will house a drone port . The Secret Service already has one next door",
-          "url": "https://www.wfmz.com/news/us/trump-says-his-ballroom-will-house-a-drone-port-the-secret-service-already-has-one-next-door/article_87f63ca7-9e2d-57bc-a8bf-38d1b3a51d13.html",
-          "domain": "wfmz.com",
-          "seendate": "2026-09-23T05:00:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/wfmz.com/content/tncms/assets/v3/editorial/9/3c/93ccbfe6-04fe-5770-958a-8418accce237/6ab3536aae43c.image.jpg?crop=1764%2C926%2C0%2C124"
-        }
-      ]
-    },
-    "title": "Trump says his ballroom will house a drone port . The Secret Service already has one next door",
-    "summary": "2026-09-23 wsls.com: Trump says his ballroom will house a drone port . The Secret Service already has one next door\n2026-09-23 clickondetroit.com: Trump says his ballroom will house a drone port . The Secret Service already has one next door\n2026-09-23 news4jax.com: Trump says his ballroom will house a drone port . The Secret Service already has one next door\n2026-09-23 clickorlando.com: Trump says his ballroom will house a drone port . The Secret Service already has one next door\n2026-09-23 wfmz.com: Trump says his ballroom will house a drone port . The Secret Service already has one next door",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_amendment-ban-constitutional",
     "source": "news",
-    "ts": 1790199407499,
+    "ts": 1790226263370,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.586,
+      "salience": 0.539,
       "articles": [
         {
           "title": "When presidents ban journalists from the White House , the First Amendment is not the only constitutional right at stake",
@@ -16162,12 +16240,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_440-allies-bans",
     "source": "news",
-    "ts": 1790199407499,
+    "ts": 1790226263370,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.524,
+      "salience": 0.477,
       "articles": [
         {
           "title": "Did Biden revoke 440 press passes ? Fact - checking Trump allies after White House bans news outlets",
