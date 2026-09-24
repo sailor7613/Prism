@@ -10129,8 +10129,8 @@ const LEGISLATION_DATA = [
     "name": "Protect College Sports Act of 2026",
     "meta": "S. 4668 · Reported · Other",
     "id": "s-119-4668",
-    "rc": 2,
-    "mm": 0.51
+    "rc": 3,
+    "mm": 0.495
   },
   {
     "name": "An original bill to authorize appropriations for fiscal year 2027 for military activities of the Department of Defense, for military construction, and for defense activities of the Department of Energy, to prescribe military personnel strengths for such fiscal year, and for other purposes.",
