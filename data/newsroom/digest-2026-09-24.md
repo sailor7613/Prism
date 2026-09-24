@@ -1,10 +1,9 @@
 # Newsroom digest — 2026-09-24
 
-Register: 15 objects · this scan: 3 new, 1 seen again, 0 returned.
+Register: 16 objects · this scan: 1 new, 0 seen again, 0 returned.
 
-## Queued for drafting (2)
-- **Judge dismisses Trump lawsuit against Des Moines Register and pollster** — ruling · ruled · holder: a federal court · formed 2026-09-24 · 16 outlets (peak 16) · `obj_afederal_against-des-dismisses-judge`
-- **ABC : Elizabeth Holmes approved to move to halfway house next year** — vote · voted · holder: the House · formed 2026-09-24 · 3 outlets (peak 3) · `obj_thehouse_abc-approved-elizabeth-halfway`
+## Queued for drafting (1)
+- **Judge orders White House to restore access to CNN , MS NOW and Politico** — ruling · ruled · holder: a federal court · formed 2026-09-24 · 20 outlets (peak 20) · `obj_afederal_access-cnn-house-judge`
 
 ## Permanence breaks (went silent while unresolved)
 - none today
@@ -13,9 +12,7 @@ Register: 15 objects · this scan: 3 new, 1 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **Judge dismisses Trump lawsuit against Des Moines Register and pollster** — ruling · ruled · holder: a federal court · formed 2026-09-24 · 16 outlets (peak 16) · `obj_afederal_against-des-dismisses-judge`
-- **ABC : Elizabeth Holmes approved to move to halfway house next year** — vote · voted · holder: the House · formed 2026-09-24 · 3 outlets (peak 3) · `obj_thehouse_abc-approved-elizabeth-halfway`
-- **20 years after Big Bear Lake woman disappeared , her former husband is charged with murder** — indictment · charged · holder: ? · formed 2026-09-24 · 3 outlets (peak 3) · `obj_x_bear-big-charged-disappeared`
+- **Judge orders White House to restore access to CNN , MS NOW and Politico** — ruling · ruled · holder: a federal court · formed 2026-09-24 · 20 outlets (peak 20) · `obj_afederal_access-cnn-house-judge`
 
 ## Watching (2)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
