@@ -25,14 +25,16 @@
    "scans": 1,
    "outlets": 3,
    "peakOutlets": 3,
-   "status": "queued",
+   "status": "drafted",
    "permanence": {
     "silentDays": 2,
     "breaks": [],
     "returns": []
    },
    "inversions": [],
-   "drafts": {},
+   "drafts": {
+    "claude": "rdg_4dj3rzbo1o12"
+   },
    "live": null,
    "articles": [
     {
@@ -58,7 +60,26 @@
     }
    ],
    "aliases": [],
-   "queuedOn": "2026-09-22"
+   "queuedOn": "2026-09-22",
+   "draftedOn": "2026-09-23",
+   "corrections": [
+    {
+     "field": "formedOn",
+     "from": "2026-09-21",
+     "to": "2026-09-19",
+     "why": "The Governor signed the bills 09-19 (gov.ca.gov release, Democracy Center, LA); 09-21 is the day regional papers ran it — report date, not as-of date.",
+     "by": "Claude (drafting)",
+     "on": "2026-09-23"
+    },
+    {
+     "field": "holder",
+     "from": "a state",
+     "to": "the State of California — Governor Newsom, with the Secretary of State and Attorney General as custodians",
+     "why": "\"a state\" is the right kind, unnamed.",
+     "by": "Claude (drafting)",
+     "on": "2026-09-23"
+    }
+   ]
   },
   {
    "oid": "obj_thepresi_ban-cnn-house-now",
@@ -83,14 +104,16 @@
    "scans": 1,
    "outlets": 3,
    "peakOutlets": 3,
-   "status": "queued",
+   "status": "drafted",
    "permanence": {
     "silentDays": 2,
     "breaks": [],
     "returns": []
    },
    "inversions": [],
-   "drafts": {},
+   "drafts": {
+    "claude": "rdg_bcmepstrq2bx"
+   },
    "live": null,
    "articles": [
     {
@@ -116,7 +139,18 @@
     }
    ],
    "aliases": [],
-   "queuedOn": "2026-09-22"
+   "queuedOn": "2026-09-22",
+   "draftedOn": "2026-09-23",
+   "corrections": [
+    {
+     "field": "holder",
+     "from": "the President",
+     "to": "the three outlets as plaintiffs (the suit); delivery held by the D.D.C. court — the President holds the ban the suit challenges",
+     "why": "The object is the lawsuit filed 09-21; the President holds the instrument it attacks (ban posted 09-18, enforced 09-19), not the suit.",
+     "by": "Claude (drafting)",
+     "on": "2026-09-23"
+    }
+   ]
   },
   {
    "oid": "obj_hhs_advisers-approval-blood-cancer",
@@ -142,14 +176,16 @@
    "scans": 1,
    "outlets": 11,
    "peakOutlets": 11,
-   "status": "queued",
+   "status": "drafted",
    "permanence": {
     "silentDays": 0,
     "breaks": [],
     "returns": []
    },
    "inversions": [],
-   "drafts": {},
+   "drafts": {
+    "claude": "rdg_lq7vkp5b6adh"
+   },
    "live": null,
    "articles": [
     {
@@ -210,7 +246,26 @@
     }
    ],
    "aliases": [],
-   "queuedOn": "2026-09-23"
+   "queuedOn": "2026-09-23",
+   "draftedOn": "2026-09-23",
+   "corrections": [
+    {
+     "field": "holder",
+     "from": "HHS",
+     "to": "the FDA (CDRH) — the Molecular and Clinical Genetics Devices Panel voted; the FDA decides",
+     "why": "The panel is advisory; the approval is the FDA's. HHS is one level too high.",
+     "by": "Claude (drafting)",
+     "on": "2026-09-23"
+    },
+    {
+     "field": "kind",
+     "from": "vote (queued on \"They'll vote\")",
+     "to": "vote — held 09-23, 7–2 benefit-risk",
+     "why": "Queued on the morning pre-vote headline; the vote landed the same afternoon, so it had finished forming inside the day.",
+     "by": "Claude (drafting)",
+     "on": "2026-09-23"
+    }
+   ]
   }
  ],
  "scans": [

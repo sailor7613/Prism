@@ -1945,7 +1945,23 @@ html.visor-mode .recenter-btn { top: calc(var(--safe-top) + var(--hdr-h) + 46px)
 /* ── Ted's full-body stage: a quiet night plane under stars where his whole
    body stands. Shown only on the splash + diatribe; on the graph he trots the
    real plane, so the stage stays hidden there. ── */
-:root { --ted-stage-h: clamp(220px, 42vh, 400px); }
+:root { --ted-stage-h: clamp(180px, 30vh, 300px); }   /* was 42vh — he was taking the screen */
+/* Phones: no full-body stage during the flow; Ted is a face in the corner
+   (tap → replay this phase's tour). The coyote still trots the committed plane. */
+@media (max-width: 700px) {
+  html body.phase-event #tedStage, html body.phase-diatribe #tedStage { display: none; }
+}
+#tedCorner { display: none; }
+@media (max-width: 700px) {
+  body.phase-event #tedCorner, body.phase-diatribe #tedCorner,
+  body.phase-graph:not(.ticker-live) #tedCorner { display: block; }
+}
+body.ted-away #tedCorner, body.ted-touring #tedCorner { display: none !important; }
+#tedCorner { position: fixed; left: 12px; z-index: 40; width: 46px; height: 46px; border-radius: 50%;
+  bottom: calc(var(--ribbon-h) + var(--safe-bottom) + 12px); padding: 0; cursor: pointer;
+  border: 0.5px solid var(--rule); background: radial-gradient(circle at 40% 35%, rgba(34,52,92,0.9), rgba(8,12,26,0.95) 75%);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.45); overflow: hidden; }
+#tedCorner canvas { width: 100%; height: 100%; display: block; }
 /* Full-width strip along the bottom so Ted can walk clear across the screen.
    Pointer-events stay off so the UI underneath keeps working. */
 #tedStage { position: fixed; left: 0; right: 0; bottom: 0; z-index: 58;
@@ -7146,7 +7162,10 @@ applyState(true);
   })();
 
   window.Ted = Object.assign(window.Ted || {}, {
-    beat: function (key, text) { if (seen[key]) return; seen[key] = true; say(text); },
+    // Scripted phase beats RETIRED (2026-09-23, Sailor: "his speech boxes
+    // totally cover the text"). Ted's tour teaches each phase once, in place;
+    // after that he speaks only when asked (hover commentary, or a tap).
+    beat: function (key, text) { if (seen[key]) return; seen[key] = true; if (narrate && !(window.Ted && window.Ted.tour)) say(text); },
     say: say, hide: hide,
     speak: function (text) { if (voiceOn && typeof Voice !== 'undefined' && Voice.available) Voice.speak(text); },
     isAway: function () { return away; },
@@ -7190,12 +7209,31 @@ applyState(true);
     if (!synth) return { available: false, speak: function () {}, stop: function () {} };
     let voices = [];
     function load() { try { voices = synth.getVoices() || []; } catch (e) { voices = []; } }
-    load(); try { synth.onvoiceschanged = load; } catch (e) {}
+    load(); try { synth.onvoiceschanged = function () { load(); chosen = null; }; } catch (e) {}
+    // The most natural voice this device has (Sailor, 2026-09-23: the robot
+    // voice read as clunky). Score every English voice: neural / enhanced /
+    // premium voices first, a warm male voice preferred when there's a
+    // choice, the macOS novelty voices never. Cached — voices load async.
+    const NOVELTY = /zarvox|trinoids|fred|albert|ralph|junior|cellos|bad news|good news|bells|boing|bubbles|jester|organ|superstar|whisper|wobble|bahh|deranged|hysterical|princess|kathy|grandma|grandpa|eddy|flo|reed|rocko|sandy|shelley/i;
+    const MALE = /daniel|evan|nathan|aaron|arthur|alex|tom|oliver|lee|gordon|reed|jamie|guy|andrew|brian|christopher|eric|davis|roger|steffan|ryan|william|george|david|mark|james|thomas|google uk english male|male/i;
+    let chosen = null;
+    function score(v) {
+      if (!/^en/i.test(v.lang) || NOVELTY.test(v.name)) return -1;
+      let s = 0;
+      if (/premium|enhanced|neural|natural|siri/i.test(v.name)) s += 50;
+      if (/online/i.test(v.name) && /microsoft/i.test(v.name)) s += 40;    // Edge's neural voices
+      if (/^google/i.test(v.name)) s += 30;                                   // Chrome's cloud voices
+      if (MALE.test(v.name)) s += 12;
+      if (/en[-_](us|gb)/i.test(v.lang)) s += 6;
+      if (v.localService === false) s += 4;
+      return s;
+    }
     function pick() {
-      const order = [/zarvox/i, /trinoids/i, /fred/i, /albert/i, /ralph/i, /junior/i, /cellos/i,
-                     /google uk english male/i, /microsoft (david|mark|george)/i];
-      for (let i = 0; i < order.length; i++) { const v = voices.find(function (x) { return order[i].test(x.name); }); if (v) return v; }
-      return voices.find(function (x) { return /^en/i.test(x.lang); }) || voices[0] || null;
+      if (chosen && voices.indexOf(chosen) !== -1) return chosen;
+      const ranked = voices.map(function (v) { return [score(v), v]; }).filter(function (x) { return x[0] >= 0; })
+        .sort(function (a, b) { return b[0] - a[0]; });
+      chosen = ranked.length ? ranked[0][1] : null;
+      return chosen;
     }
     return {
       available: true,
@@ -7204,7 +7242,7 @@ applyState(true);
           synth.cancel();
           const u = new SpeechSynthesisUtterance(text);
           const v = pick(); if (v) u.voice = v;
-          u.pitch = 0.35; u.rate = 0.92; u.volume = 0.9;   // low + steady = vintage TTS
+          u.pitch = 0.92; u.rate = 1.0; u.volume = 0.9;    // a natural read — a touch low, not a robot
           synth.speak(u);
         } catch (e) {}
       },
@@ -7267,7 +7305,7 @@ applyState(true);
 
     const BAND_COLOR = { fluid: 0x60a880, coalition: 0xc49c48, denominated: 0xd45c5c };
     let bandTarget = new THREE.Color(0x60a880);
-    const REST = function () { return -xExtent * (window.innerWidth < 700 ? 0.62 : 0.30); };   // his usual hang-out spot (left of center; further left on phones, clear of the centered advance button)
+    const REST = function () { return -xExtent * 0.72; };   // the left margin, on every width   // his usual hang-out spot (left of center; further left on phones, clear of the centered advance button)
 
     // ── state machine ──  enter | idle | walk | away
     let mode = 'enter', t = 0, walkClock = 0;
@@ -7295,8 +7333,10 @@ applyState(true);
       else if (mode === 'away') { targetX = -xExtent * 1.5; }
       else if (mode === 'idle' && t > nextAt) {
         const roll = Math.random();
-        if (roll < 0.42) {                                   // stroll to the other side
-          targetX = (posX < 0 ? 1 : -1) * xExtent * (0.30 + Math.random() * 0.45);
+        if (roll < 0.42) {                                   // stroll — within the left margin only
+          // (2026-09-23) he never wanders under the content column or the
+          // advance button: strolls stay in the left third of his stage
+          targetX = -xExtent * (0.58 + Math.random() * 0.34);
           // Phones (2026-09-21 walk): the flow-advance button is centered in
           // his stage, and a 3D coyote standing on "see the four responses"
           // hides the way forward. Keep his strolls to the left third there.
@@ -7367,7 +7407,9 @@ applyState(true);
     if (TedStage) TedStage.setBand(band);
     if (away || band === lastBand) return;
     lastBand = band;
-    if (BAND_LINES[band]) say(BAND_LINES[band]);
+    // band commentary only when "guide me" is on — the tour's own drag step
+    // says it the first time; afterwards dragging stays quiet
+    if (narrate && BAND_LINES[band]) say(BAND_LINES[band]);
   };
 
   // If the 3D stage is unavailable (no WebGL), there's no walk-in to trigger

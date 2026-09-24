@@ -31,6 +31,22 @@ Every draft looks for both and records what it finds on the object.
 - Checker: `node "Parameters/00_Architecture/formula_check.js" <reading.json>` — must
   report **All clean** before a draft lands.
 
+## Before drafting: skip what's already done (added 2026-09-23)
+
+The task now runs every two hours whenever the Mac is on, and the register on GitHub is
+rewritten by every scan, so a `queued` status there does NOT mean undrafted. Before
+authoring anything:
+
+1. List every file in `Prism/data/readings/drafts/claude/` (including `_held/`) and in
+   `Prism/data/readings/drafts/`, and collect each file's `newsroom.oid`.
+2. Skip any queued object whose `oid` is already in that set.
+3. Also skip any queued object that is **not yet an object**: a vote, ruling, sentencing or
+   hearing that is scheduled, pending or "without ruling" has not finished forming (§4c).
+   Leave it queued; don't dismiss it — a later scan will see it land. One line in the note.
+4. If nothing is left, write nothing and end with the single line "nothing new".
+   Don't write a morning note for an empty run.
+5. At most 3 new drafts per calendar day (Pacific). Count today's files by `newsroom.draftedOn`.
+
 ## The order of authoring (each object, in this order — never reversed)
 
 1. **Object before window.** State the instrument in one line: what it is, who holds
@@ -78,7 +94,7 @@ prompt, framing, framingKeywords, prevalentAxis, split, antiValentBand,
 antiValentRationale, axes, responses, diatribe, diatribeLayer, objectLayer, window,
 meta, rid, schema: "reading/v1", formulaVersion: "v1", updatedAt`. Plus:
 
-- `authorTier: "claude"` and `newsroom: { oid, queuedOn, draftedOn }`.
+- `authorTier: "claude"` and `newsroom: { oid, queuedOn, draftedOn }` — **required**; the duplicate guard above reads `newsroom.oid`.
 - `meta.status: "draft"`, `meta.frameFirst`, `meta.framingAudit`, `meta.blindAuthoring`
   as in the Tariff exemplar. `meta.dialecticsRef` = the oid.
 - `rid`: `rdg_` + 12 lowercase base36 chars (mint fresh; never reuse).

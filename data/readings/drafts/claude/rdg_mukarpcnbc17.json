@@ -1,0 +1,714 @@
+{
+ "title": "The Karp Minute",
+ "category": "Technology · AI · Liability · Speech",
+ "date": "2026-09-17",
+ "eventClass": "utterance",
+ "prompt": "Alex Karp on CNBC, one minute: the far left, the far right, data centers, China. Does he make sense to you?",
+ "framing": "On the morning of September 17, 2026, Palantir CEO Alex Karp told CNBC's Squawk on the Street that the far right and the far left are one reaction: people who won't watch others get a hundred times wealthier and want to blow up the system. On the left he named the DSA and said it hides its politics on race. On the right he described a movement that sees 'a data center run by somebody' behind everything and attacks Palantir, which, he said, doesn't build data centers. Then he turned to China: the labs' mistake is not accepting that it's a competition, and either the US provides the AI stack to the world or China does. Elsewhere in the same interview he said AI builders should carry civil and possibly criminal liability, that some labs believe they need to be nationalized (an OpenAI IPO may never come, he said, because the answer to that liability is asking Washington to nationalize them), that what clients fear most isn't safety but their data ending up in a competitor's model, and that seemingly everyone who understands the technology is on someone's payroll. He spoke the day after OpenAI disclosed six new cases of concerning model behavior (09-16) and the day after Sen. Rand Paul blocked Sen. John Kennedy's AI kill switch bill on the Senate floor (09-16), days after Anthropic's Dario Amodei called for a slowdown at the frontier, in a week the President was calling AI risk a hoax.",
+ "framingKeywords": [
+  "a hundred times wealthier",
+  "blow up the whole system",
+  "far right and far left",
+  "we don't even build data centers",
+  "provide the stack to the world"
+ ],
+ "prevalentAxis": "y",
+ "split": {
+  "topology": "axis",
+  "strength": 0.5,
+  "seam": "y: the institutional stations against the populist ones, which Karp names as the problem. Secondary: a B-rim peel (only B trusts him at the rim)",
+  "rationale": "The clip's stated object is a y-claim: the populist left and right are one revolt against wealth concentration, and the builders are its target. The scalar runs along y. The centers split on it (A +0.3 and B +0.5 against C −0.3 and D 0.0), with both populist stations named and cast as the revolt. At the rims the split turns into trust: A, C and D go negative together and only B holds.",
+  "zPattern": {
+   "centers": {
+    "A": 0.3,
+    "B": 0.5,
+    "C": -0.3,
+    "D": 0.0
+   },
+   "rims": {
+    "A": -0.7,
+    "B": 0.6,
+    "C": -0.9,
+    "D": -0.8
+   },
+   "note": "First utterance-class pattern. The speaker placed the stations himself: he named C (the DSA) and D (the far right) as the revolt, so their z reads in part as a response to being scored by the object. Centers split on y; rims split on trust (B against three)."
+  },
+  "ruledBy": null,
+  "date": "2026-09-23"
+ },
+ "antiValentBand": "denominated",
+ "antiValentRationale": "At the rims the minute's argument is gone on every side. What's left is Karp himself: the left's surveillance contractor, the populist right's data broker, the institutional right's China hawk.",
+ "axes": {
+  "x": {
+   "pos": "Right",
+   "neg": "Left"
+  },
+  "y": {
+   "pos": "Institutional",
+   "neg": "Populist"
+  },
+  "z": {
+   "pos": "He makes sense: the minute holds one argument",
+   "neg": "Noise: the minute never lands on one thing"
+  }
+ },
+ "responses": {
+  "A": {
+   "xSide": "left",
+   "source": "",
+   "fluid": {
+    "text": "Take away the delivery and there's a real point: when a few people get a hundred times richer, both ends of the spectrum want to burn it down. He's describing a problem we've been naming for years.",
+    "xWord": "inequality",
+    "yWord": "both ends",
+    "words": [],
+    "source": "",
+    "z": 0.3,
+    "zReason": "Inequality driving a revolt at both ends is the institutional left's own analysis; the China turn is a non sequitur but a familiar one.",
+    "instrument": {
+     "holder": "Alex Karp (CEO, Palantir) — the speaker, as holder of what he proposes",
+     "trusted": true
+    }
+   },
+   "coalition": {
+    "text": "He's right about why people are angry and wrong about who to blame. The DSA line is a smear, and 'we don't build data centers' dodges what Palantir actually does with data.",
+    "xWord": "smear",
+    "yWord": "dodge",
+    "words": [],
+    "source": "",
+    "z": -0.1,
+    "zReason": "The diagnosis holds, then he aims it at the left and at his critics, and he's one of the hundred-times people.",
+    "instrument": {
+     "holder": "Alex Karp (CEO, Palantir) — the speaker, as holder of what he proposes",
+     "trusted": false
+    }
+   },
+   "denominated": {
+    "text": "A man who got a hundred times richer off government surveillance contracts explains that everyone angry about it is a bigot or a crank. That's not analysis. It's a pitch.",
+    "xWord": "surveillance",
+    "yWord": "pitch",
+    "words": [],
+    "source": "",
+    "z": -0.7,
+    "zReason": "No argument, only a contractor painting his critics as extremists; untrusted, so the scatter reads as spin.",
+    "instrument": {
+     "holder": "Alex Karp (CEO, Palantir) — the speaker, as holder of what he proposes",
+     "trusted": false
+    }
+   }
+  },
+  "B": {
+   "xSide": "right",
+   "source": "",
+   "fluid": {
+    "text": "Both extremes want to tear the system down, and the one question that matters is whether America or China builds the stack. He's said it for years, and he's right.",
+    "xWord": "the stack",
+    "yWord": "the system",
+    "words": [],
+    "source": "",
+    "z": 0.5,
+    "zReason": "The horseshoe and the China frame are this station's worldview, and he connects them.",
+    "instrument": {
+     "holder": "Alex Karp (CEO, Palantir) — the speaker, as holder of what he proposes",
+     "trusted": true
+    }
+   },
+   "coalition": {
+    "text": "The substance is right: the populist fringes are a real threat, and China is the competition. He could say it without sounding like he's had six espressos.",
+    "xWord": "China",
+    "yWord": "fringes",
+    "words": [],
+    "source": "",
+    "z": 0.3,
+    "zReason": "The station agrees with the argument and winces at the delivery; it won't defend every line on live TV.",
+    "instrument": {
+     "holder": "Alex Karp (CEO, Palantir) — the speaker, as holder of what he proposes",
+     "trusted": true
+    }
+   },
+   "denominated": {
+    "text": "He named them: the DSA and the conspiracy right, both coming for the people who actually build things. Beat China or lose. Everyone else is noise.",
+    "xWord": "beat China",
+    "yWord": "builders",
+    "words": [],
+    "source": "",
+    "z": 0.6,
+    "zReason": "The only builder who says out loud who the enemies are; trusted, so the scatter reads as candor.",
+    "instrument": {
+     "holder": "Alex Karp (CEO, Palantir) — the speaker, as holder of what he proposes",
+     "trusted": true
+    }
+   }
+  },
+  "C": {
+   "xSide": "left",
+   "source": "",
+   "fluid": {
+    "text": "He said it himself: people are angry because guys like him got a hundred times richer. Then he calls the people who are angry about it bigots. He can't have both.",
+    "xWord": "100 times",
+    "yWord": "bigots",
+    "words": [],
+    "source": "",
+    "z": -0.3,
+    "zReason": "He admits the hundred-times wealth is the cause, then calls the reaction bigotry; the argument undercuts itself.",
+    "instrument": {
+     "holder": "Alex Karp (CEO, Palantir) — the speaker, as holder of what he proposes",
+     "trusted": false
+    }
+   },
+   "coalition": {
+    "text": "He went on CNBC and accused the DSA of hiding racism, with no evidence, to change the subject from what Palantir sells.",
+    "xWord": "DSA",
+    "yWord": "smear",
+    "words": [],
+    "source": "",
+    "z": -0.6,
+    "zReason": "The minute is a smear of the organized left dressed up as sociology.",
+    "instrument": {
+     "holder": "Alex Karp (CEO, Palantir) — the speaker, as holder of what he proposes",
+     "trusted": false
+    }
+   },
+   "denominated": {
+    "text": "Listen to him. Jittery, ranting, calling the left racists while his stock prints money off deportations. That's what scared looks like.",
+    "xWord": "ranting",
+    "yWord": "oligarchs",
+    "words": [],
+    "source": "",
+    "z": -0.9,
+    "zReason": "Nothing lands; the rim hears a billionaire rattled that the people know what he is.",
+    "instrument": {
+     "holder": "Alex Karp (CEO, Palantir) — the speaker, as holder of what he proposes",
+     "trusted": false
+    }
+   }
+  },
+  "D": {
+   "xSide": "right",
+   "source": "",
+   "fluid": {
+    "text": "He's right that regular people are done watching tech billionaires get a hundred times richer. He just doesn't notice he's the one they mean.",
+    "xWord": "billionaires",
+    "yWord": "regular people",
+    "words": [],
+    "source": "",
+    "z": 0.0,
+    "zReason": "Right that people are sick of billionaires; he is one, so the point turns on him.",
+    "instrument": {
+     "holder": "Alex Karp (CEO, Palantir) — the speaker, as holder of what he proposes",
+     "trusted": false
+    }
+   },
+   "coalition": {
+    "text": "He put us in the same box as the DSA because we don't trust Palantir with our data. 'We don't build data centers' isn't the point. It's what runs on them.",
+    "xWord": "same box",
+    "yWord": "our data",
+    "words": [],
+    "source": "",
+    "z": -0.4,
+    "zReason": "He lumps the populist right in with the DSA and waves off the surveillance concern.",
+    "instrument": {
+     "holder": "Alex Karp (CEO, Palantir) — the speaker, as holder of what he proposes",
+     "trusted": false
+    }
+   },
+   "denominated": {
+    "text": "Palantir is the surveillance state. Its CEO just went on TV to call everyone who says so a crank. Think about who's holding the data.",
+    "xWord": "surveillance state",
+    "yWord": "cranks",
+    "words": [],
+    "source": "",
+    "z": -0.8,
+    "zReason": "The surveillance state explaining why its critics are cranks; the words are theater.",
+    "instrument": {
+     "holder": "Alex Karp (CEO, Palantir) — the speaker, as holder of what he proposes",
+     "trusted": false
+    }
+   }
+  }
+ },
+ "diatribe": {
+  "LF": {
+   "text": "The left hears its own inequality analysis come out of a billionaire's mouth and keeps the analysis.",
+   "side": "left",
+   "band": "fluid",
+   "keywords": [
+    "inequality",
+    "both ends"
+   ]
+  },
+  "LC": {
+   "text": "The left takes the diagnosis and rejects the blame: the DSA line is a smear, and the data-center line is a dodge.",
+   "side": "left",
+   "band": "coalition",
+   "keywords": [
+    "smear",
+    "dodge"
+   ]
+  },
+  "LD": {
+   "text": "The left's rim hears a surveillance contractor calling everyone angry at him a bigot, rattled because they're right.",
+   "side": "left",
+   "band": "denominated",
+   "keywords": [
+    "surveillance",
+    "oligarchs"
+   ]
+  },
+  "RF": {
+   "text": "The right's institutions hear the horseshoe and the China stakes, their own map, drawn by an ally.",
+   "side": "right",
+   "band": "fluid",
+   "keywords": [
+    "the stack",
+    "the system"
+   ]
+  },
+  "RC": {
+   "text": "The right agrees with the argument and winces at the delivery; the populist right hears itself filed next to the DSA.",
+   "side": "right",
+   "band": "coalition",
+   "keywords": [
+    "China",
+    "same box"
+   ]
+  },
+  "RD": {
+   "text": "The right's rim splits on the man: the hawks hear the only honest builder, the populists hear the surveillance state calling them cranks.",
+   "side": "right",
+   "band": "denominated",
+   "keywords": [
+    "beat China",
+    "surveillance state"
+   ]
+  }
+ },
+ "diatribeLayer": "stated",
+ "objectLayer": {
+  "declared": "stated",
+  "stated": "The populist left and right are one revolt against wealth concentration, and the US–China race is what's actually at stake",
+  "operative": "lean, not ruled: a government AI contractor recasting his critics on both flanks as extremists, and moving the question from what Palantir does to who wins against China",
+  "inversion": "lean, not ruled: speaker-for-object, with a twist. The speaker names and places the stations himself (C = the DSA, D = the far right), so the object the rims react to is partly their own portrait. Also a Z-inversion claim: 'we don't even build data centers' answers a charge about data with a fact about buildings."
+ },
+ "window": {
+  "close": "2026-09-17",
+  "why": "An utterance finishes forming when it is spoken: the object is the Squawk on the Street segment, aired the morning of 09-17. Facts in the frame are as-of on or before that morning. Declared at authoring, before any z (§4c clause 3), under the proposed utterance class.",
+  "ruledBy": null,
+  "ruledOn": null
+ },
+ "speaker": {
+  "name": "Alex Karp",
+  "role": "Co-founder and CEO, Palantir Technologies",
+  "holds": "Palantir's position as a principal AI contractor to the US government — the standing that makes his proposals consequential"
+ },
+ "utterance": {
+  "venue": "CNBC, Squawk on the Street",
+  "airedOn": "2026-09-17",
+  "durationApprox": "about 60 seconds (the circulated clip); the full interview is longer",
+  "transcriptSource": "https://www.cnbc.com/2026/09/17/cnbc-exclusive-excerpts-palantir-co-founder-ceo-alex-karp-speaks-with-cnbcs-squawk-on-the-street-today-.html",
+  "layers": [
+   {
+    "id": "L1",
+    "object": "Wealth concentration → populist revolt",
+    "claim": "the far right and far left are one reaction to a few people getting a hundred times wealthier; they want to blow up the system",
+    "predicateType": "F",
+    "inClip": true,
+    "tethers": [],
+    "void": "No instrument addresses AI-era wealth concentration in this window. The line that sets up the whole minute is a void."
+   },
+   {
+    "id": "L2",
+    "object": "The named rims",
+    "claim": "on the left, the DSA hides its politics on race; on the right, a movement that sees a data center behind everything attacks Palantir",
+    "predicateType": "C",
+    "inClip": true,
+    "tethers": [],
+    "void": "No instrument. This is the speaker placing the stations himself. The DSA sentence rests on auto-captions; check it against the audio before anything is published.",
+    "note": "C predicate: 'they attack us for running data' sits next to 'we don't even build data centers,' which answers a charge about data with a fact about buildings."
+   },
+   {
+    "id": "L3",
+    "object": "US vs China",
+    "claim": "the labs' biggest mistake is not treating China as a competition; either the US provides the AI stack to the world or China does; Europe has decided not to participate and Israel is small, so the choice is us or them",
+    "predicateType": "F",
+    "inClip": true,
+    "tethers": [
+     {
+      "bill": "H.R.6996",
+      "billId": "hr-119-6996",
+      "inDb": true,
+      "title": "Full AI Stack Export Promotion Act",
+      "relation": "advocates",
+      "statusAsOf": "reported 2026-04-22, 37–7",
+      "why": "'Provide the stack to the world' is this bill's premise"
+     },
+     {
+      "bill": "H.R.6875",
+      "billId": "hr-119-6875",
+      "inDb": true,
+      "title": "AI OVERWATCH Act",
+      "relation": "advocates",
+      "statusAsOf": "reported 2026-01-21, 42–2",
+      "why": "The China half of the either/or: congressional control over advanced-chip exports"
+     },
+     {
+      "bill": "H.R.8283",
+      "billId": "hr-119-8283",
+      "inDb": true,
+      "title": "Deterring American AI Model Theft Act of 2026",
+      "relation": "adjacent",
+      "statusAsOf": "reported 2026-04-22, 43–0",
+      "why": "Model theft by foreign adversaries"
+     }
+    ]
+   },
+   {
+    "id": "L4",
+    "object": "Liability",
+    "claim": "AI builders should carry civil and possibly criminal liability. Asking for regulation is a way to escape that first line of defense, and a technology that could destroy 10% of the world carries liability",
+    "predicateType": "F",
+    "inClip": false,
+    "tethers": [
+     {
+      "bill": "S.2937",
+      "billId": "s-119-2937",
+      "inDb": false,
+      "title": "AI LEAD Act (Durbin–Hawley)",
+      "relation": "advocates",
+      "statusAsOf": "introduced 2025-09-29",
+      "why": "Makes AI systems products and lets victims sue the builders"
+     },
+     {
+      "bill": "(unnumbered)",
+      "billId": null,
+      "inDb": false,
+      "title": "Thune–Cruz–Klobuchar frontier duty-of-care bill",
+      "relation": "advocates",
+      "statusAsOf": "announced 2026-09-12, not yet introduced",
+      "why": "Legal duty plus liability for design failures"
+     }
+    ]
+   },
+   {
+    "id": "L5",
+    "object": "Nationalization",
+    "claim": "some labs' real view is that they must be nationalized or their clients will sue; an OpenAI IPO may never happen because the only answer to that liability is asking the government to nationalize them",
+    "predicateType": "F",
+    "inClip": false,
+    "note": "Attributed view: Karp states another party's position for them, a Z-assertion candidate. The party is Anthropic, Claude's maker, so Sailor rules this one. He also praised Amodei as smart, shrewd and ethical in the same interview, so the attribution is framed as insight, not attack.",
+    "tethers": [
+     {
+      "bill": "H.R.9917",
+      "billId": "hr-119-9917",
+      "inDb": false,
+      "title": "AI Kill Switch Act (Lieu–Moran)",
+      "relation": "adjacent",
+      "statusAsOf": "introduced 2026-07-23",
+      "why": "The nearest real instrument to state control: DHS can order a model slowed or shut down"
+     },
+     {
+      "bill": "(Kennedy, Senate)",
+      "billId": null,
+      "inDb": false,
+      "title": "Kennedy's AI kill switch bill",
+      "relation": "adjacent",
+      "statusAsOf": "unanimous consent blocked by Sen. Paul, 2026-09-16",
+      "why": "Same instrument, Senate side; it stalled the day before the utterance"
+     }
+    ],
+    "void": "No bill anywhere nationalizes an AI lab."
+   },
+   {
+    "id": "L6",
+    "object": "Data and IP (the 'alpha')",
+    "claim": "what clients are really livid about isn't safety. It's their data and business methods landing in a model their competitor then uses. The labs' philosophy is that a thousand people who think alike deserve all the IP in the world, and that's why they can't work with the military",
+    "predicateType": "F",
+    "inClip": false,
+    "tethers": [
+     {
+      "bill": "H.R.8283",
+      "billId": "hr-119-8283",
+      "inDb": true,
+      "title": "Deterring American AI Model Theft Act of 2026",
+      "relation": "adjacent",
+      "statusAsOf": "reported 2026-04-22, 43–0",
+      "why": "Protects models from theft; Karp's charge runs the other way, with models taking from clients. Adjacent, and inverted"
+     }
+    ],
+    "void": "No bill protects a business's data from ending up in a model. The grievance he says clients feel most has no instrument.",
+    "note": "Z-inversion candidate: 'safety' gets redefined as IP protection. And 'can't work with the military' is a claim about named competitors from a defense contractor."
+   },
+   {
+    "id": "L7",
+    "object": "Who can regulate (the payroll problem)",
+    "claim": "regulation needs people who understand the technology, and seemingly everyone who understands it is on some company's payroll, so who do you trust?",
+    "predicateType": "V",
+    "inClip": false,
+    "tethers": [],
+    "void": "No instrument builds an independent technical corps. The Kill Switch Act and the Thune–Cruz–Klobuchar bill both hand authority to agencies without saying who staffs them.",
+    "note": "The most defensible line in the interview. Karp is on a payroll too, which is what the rims will say."
+   },
+   {
+    "id": "L8",
+    "object": "The pitch problem",
+    "claim": "the way AI technology is presented to the public 'could not be worse' (CNBC's own headline for a segment)",
+    "predicateType": "C",
+    "inClip": false,
+    "tethers": [],
+    "void": "No instrument; this is a meta layer.",
+    "note": "C predicate with the clip's reception: the clip went viral as proof an AI executive can't present AI, and in the same interview he said the industry's presentation could not be worse. The critic and the criticized agree on the object."
+   }
+  ],
+  "blurNote": "Eight objects in one interview: three in the circulated minute (L1–L3), five more off-clip (L4–L8). Blur is information: the 'makes no sense' reading is layer-hopping, recorded here, not averaged away. Which layers circulated matters too. The clip carries the populist and China material, while liability, the only layer with bills behind it, didn't make the clip.",
+  "captionsFile": "data/readings/clips/rdg_mukarpcnbc17/captions.txt",
+  "beats": [
+   {
+    "t": 2,
+    "source": "clip",
+    "quote": "look at the far right and far left in this country",
+    "layer": "L1",
+    "gloss": "The setup: both extremes are one phenomenon.",
+    "sourceRef": "clip (Sailor's recording, captions)"
+   },
+   {
+    "t": 8,
+    "source": "clip",
+    "quote": "I don't want these people becoming 100 times wealthier",
+    "layer": "L1",
+    "gloss": "Why, in his telling: rage at wealth concentration. The '100 times' people include him.",
+    "sourceRef": "clip (Sailor's recording, captions)"
+   },
+   {
+    "t": 11,
+    "source": "clip",
+    "quote": "I'm going to blow up the whole system",
+    "layer": "L1",
+    "gloss": "What the rage wants, in his voice.",
+    "sourceRef": "clip (Sailor's recording, captions)"
+   },
+   {
+    "t": 16,
+    "source": "clip",
+    "quote": "It looks like DSA people who are…",
+    "layer": "L2",
+    "gloss": "He names the left flank. (The caption for the rest of this line is unreliable; check the audio.)",
+    "sourceRef": "clip (Sailor's recording, captions)"
+   },
+   {
+    "t": 25,
+    "source": "clip",
+    "quote": "You have the far right…",
+    "layer": "L2",
+    "gloss": "He names the right flank.",
+    "sourceRef": "clip (Sailor's recording, captions)"
+   },
+   {
+    "t": 29,
+    "source": "clip",
+    "quote": "they attack us for running data",
+    "layer": "L2",
+    "gloss": "Palantir as the target of both.",
+    "sourceRef": "clip (Sailor's recording, captions)"
+   },
+   {
+    "t": 30,
+    "source": "clip",
+    "quote": "We don't even build data centers.",
+    "layer": "L2",
+    "gloss": "The dodge: a charge about data answered with a fact about buildings.",
+    "sourceRef": "clip (Sailor's recording, captions)"
+   },
+   {
+    "t": 35,
+    "source": "clip",
+    "quote": "one of the biggest mistakes the labs have made",
+    "layer": "L3",
+    "gloss": "The pivot, from domestic politics to the labs.",
+    "sourceRef": "clip (Sailor's recording, captions)"
+   },
+   {
+    "t": 42,
+    "source": "clip",
+    "quote": "Pick your spectrum.",
+    "layer": "L3",
+    "gloss": "Enemy or competitor, China is the frame either way.",
+    "sourceRef": "clip (Sailor's recording, captions)"
+   },
+   {
+    "t": 45,
+    "source": "clip",
+    "quote": "Either we are going to win and provide the stack to the world",
+    "layer": "L3",
+    "gloss": "The either/or. The stack bill (H.R.6996) is the instrument.",
+    "sourceRef": "clip (Sailor's recording, captions)"
+   },
+   {
+    "t": 53,
+    "source": "clip",
+    "quote": "the danger is not just the danger of dangerous things happening to humanity",
+    "layer": "L3",
+    "gloss": "He moves AI risk from safety to geopolitics. The clip cuts off here.",
+    "sourceRef": "clip (Sailor's recording, captions)"
+   },
+   {
+    "t": null,
+    "source": "excerpt",
+    "quote": "you can't have a revolution where I become 50 times wealthier",
+    "layer": "L1",
+    "gloss": "Same point as the clip's opener, said elsewhere in the interview with a different number (50x, not 100x).",
+    "sourceRef": "CNBC excerpts (unofficial transcript), 09-17"
+   },
+   {
+    "t": null,
+    "source": "excerpt",
+    "quote": "It's going to drive political insanity.",
+    "layer": "L1",
+    "gloss": "The consequence he predicts.",
+    "sourceRef": "CNBC excerpts (unofficial transcript), 09-17"
+   },
+   {
+    "t": null,
+    "source": "report",
+    "quote": "The first line of defense is you're liable for your own actions.",
+    "layer": "L4",
+    "gloss": "Liability before regulation. Tethers: AI LEAD Act, the Thune–Cruz–Klobuchar bill.",
+    "sourceRef": "Yahoo Finance report of the interview, 09-17"
+   },
+   {
+    "t": null,
+    "source": "excerpt",
+    "quote": "I want new rules for myself",
+    "layer": "L4",
+    "gloss": "His paraphrase of the labs: they want the rules without the cost.",
+    "sourceRef": "CNBC excerpts (unofficial transcript), 09-17"
+   },
+   {
+    "t": null,
+    "source": "report",
+    "quote": "a technology that can destroy 10% of the world",
+    "layer": "L4",
+    "gloss": "The scale he assigns the risk.",
+    "sourceRef": "Yahoo Finance report of the interview, 09-17"
+   },
+   {
+    "t": null,
+    "source": "report",
+    "quote": "'nationalize us, please!'",
+    "layer": "L5",
+    "gloss": "On whether OpenAI will ever file to go public. The line that made the headlines, with no bill behind it.",
+    "sourceRef": "Yahoo Finance report of the interview, 09-17"
+   },
+   {
+    "t": null,
+    "source": "excerpt",
+    "quote": "seemingly everyone who understands this is on some payroll",
+    "layer": "L7",
+    "gloss": "The regulator problem.",
+    "sourceRef": "CNBC excerpts (unofficial transcript), 09-17"
+   },
+   {
+    "t": null,
+    "source": "excerpt",
+    "quote": "what they believe is the theft of their alpha",
+    "layer": "L6",
+    "gloss": "Clients' real fear, he says: their data ending up in a competitor's model.",
+    "sourceRef": "CNBC excerpts (unofficial transcript), 09-17"
+   },
+   {
+    "t": null,
+    "source": "excerpt",
+    "quote": "Europe has decided to not participate. Israel is small.",
+    "layer": "L3",
+    "gloss": "Why it's a two-country race.",
+    "sourceRef": "CNBC excerpts (unofficial transcript), 09-17"
+   },
+   {
+    "t": null,
+    "source": "excerpt",
+    "quote": "a very, very smart, shrewd, ethical person",
+    "layer": "L5",
+    "gloss": "On Dario Amodei, the same labs he's describing.",
+    "sourceRef": "CNBC excerpts (unofficial transcript), 09-17"
+   },
+   {
+    "t": null,
+    "source": "video title",
+    "quote": "could not be worse",
+    "layer": "L8",
+    "gloss": "His verdict on how AI is presented to the public. The clip became the example.",
+    "sourceRef": "CNBC video title, 09-17"
+   }
+  ],
+  "sources": {
+   "excerpt": "https://www.cnbc.com/2026/09/17/cnbc-exclusive-excerpts-palantir-co-founder-ceo-alex-karp-speaks-with-cnbcs-squawk-on-the-street-today-.html",
+   "report": "https://finance.yahoo.com/technology/ai/articles/palantirs-alex-karp-says-ais-213000729.html",
+   "video title": "https://www.cnbc.com/video/2026/09/17/palantir-ceo-presentation-of-ai-technology-to-public-could-not-be-worse.html"
+  }
+ },
+ "clip": {
+  "file": "data/readings/clips/rdg_mukarpcnbc17/karp-cnbc-0917.mp4",
+  "poster": "data/readings/clips/rdg_mukarpcnbc17/poster.jpg",
+  "captions": "data/readings/clips/rdg_mukarpcnbc17/captions.txt",
+  "sourcePost": "https://x.com/atrupar/status/2100607474986369444",
+  "recordedBy": "Sailor, screen recording 2026-09-23",
+  "encoding": "H.264 1280x724 30fps, AAC; 60.5s; converted from the HEVC .mov",
+  "note": "The reader surface doesn't render clips yet."
+ },
+ "images": [],
+ "authorTier": "claude",
+ "meta": {
+  "dialecticsRef": "utt-karp-cnbc-0917",
+  "status": "draft",
+  "editHistory": [],
+  "aiDeltas": [],
+  "source": "Authored 2026-09-23 (Claude, Cowork chat, at Sailor's direction) as the first specimen of the proposed utterance event class — Specs/Prism_Event_Classes_v0.md. Revised 09-23 against the actual clip: the circulated minute is the populist and China passage, not the liability excerpt. Prompt, frame, axis (x → y), layers and the twelve were rewritten z-first.",
+  "frameFirst": {
+   "date": "2026-09-23",
+   "by": "Claude",
+   "titleLean": "'The Karp Minute' — Claude's; Sailor names Readings",
+   "sourcesInWindow": [
+    "CNBC excerpts of the Squawk on the Street interview, 2026-09-17",
+    "CNBC, 'Leading AI labs may need to be nationalized', 2026-09-17 (OpenAI six cases 09-16; Amodei slowdown call the prior weekend; President's 'hoax' posts)"
+   ],
+   "status": "Frame and twelve authored in one pass, not blind. Stations unruled."
+  },
+  "blindAuthoring": {
+   "date": "2026-09-23",
+   "author": "Claude (this chat) — NOT blind: authored with the discussion in view",
+   "zFirst": true,
+   "instrumentOnAll12": true,
+   "rulings": "NONE"
+  },
+  "conflictNote": "Claude is made by Anthropic, and L5 is Karp characterizing Anthropic's view. Every band touching L5 should be read with that in mind; Sailor rules L5.",
+  "classNote": "eventClass 'utterance': the object is the speech act; Z reads legibility (does the utterance hold one object) rather than delivery; instrument.holder is the speaker on all twelve, so the Rim Rule reads trust in the man directly. Legislative context runs through utterance.layers[].tethers (bill, relation, statusAsOf) and layer voids; bills in the local DB also go in linkedBills.",
+  "framingAudit": {
+   "date": "2026-09-23",
+   "by": "Claude (sweep)",
+   "finding": "CLEAN. Every fact in the frame is as-of 09-17 or earlier: interview 09-17; OpenAI disclosure 09-16; Amodei slowdown call the weekend before; 'hoax' posts the days before.",
+   "verifiedInWindow": [
+    "interview 2026-09-17",
+    "OpenAI six cases 2026-09-16",
+    "Amodei slowdown call, weekend before 09-17",
+    "Paul objects to Kennedy kill switch UC, 2026-09-16 (Wednesday)",
+    "Clip content: captions read frame by frame from Sailor's recording, 2026-09-23"
+   ],
+   "keptUnverifiedDate": [
+    "President's 'hoax' posts — CNBC dates them only as 'the last few days' before 09-17"
+   ],
+   "excludedAfterWindow": [
+    "Rupar's framing and the clip's circulation — reception, not object"
+   ]
+  },
+  "linkedBillsOwed": "S.2937 (AI LEAD Act) and H.R.9917 (AI Kill Switch Act) are not in prism_legislation.json. Add them to the fetch, then to linkedBills"
+ },
+ "rid": "rdg_mukarpcnbc17",
+ "ridLineage": "minted 2026-09-23 in Cowork chat; filed directly as a Claude draft",
+ "schema": "reading/v1",
+ "formulaVersion": "v1",
+ "diatribeScore": -8,
+ "updatedAt": "2026-09-24T00:15:00.000Z",
+ "linkedBills": [
+  "hr-119-6996",
+  "hr-119-6875",
+  "hr-119-8283"
+ ]
+}

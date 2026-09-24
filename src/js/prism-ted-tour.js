@@ -190,16 +190,26 @@
     // presenter: a row (Ted peeking in from the left edge + bubble), placed
     // below the target when there's room, else above; never over it.
     const ph = presenter.offsetHeight || 150;
-    const below = r.y + r.h + 8, above = r.y - ph - 8;
-    let top;
-    if (below + ph <= H - 8) top = below;
-    else if (above >= 8) top = above;
-    else top = Math.max(8, Math.min(H - ph - 8, r.y + r.h - ph));   // overlaps a tall target's foot — rare
+    let top, left, pw;
+    // Wide screens (2026-09-23, Sailor: "his speech boxes totally cover the
+    // text"): sit BESIDE the element — right if there's room, else left — so
+    // the bubble never lands on the text around it. Phones: below, else above.
+    const SIDE_W = Math.min(440, W * 0.34);
+    if (W >= 900 && W - (r.x + r.w) >= SIDE_W + 24) {
+      pw = SIDE_W; left = r.x + r.w + 16;
+      top = Math.max(8, Math.min(H - ph - 8, r.y + Math.min(r.h, 160) / 2 - ph / 2));
+    } else if (W >= 900 && r.x >= SIDE_W + 24) {
+      pw = SIDE_W; left = r.x - SIDE_W - 16;
+      top = Math.max(8, Math.min(H - ph - 8, r.y + Math.min(r.h, 160) / 2 - ph / 2));
+    } else {
+      const below = r.y + r.h + 8, above = r.y - ph - 8;
+      if (below + ph <= H - 8) top = below;
+      else if (above >= 8) top = above;
+      else top = Math.max(8, Math.min(H - ph - 8, r.y + r.h - ph));
+      pw = Math.min(W, 560);
+      left = Math.max(0, Math.min(W - pw, r.x - 36));
+    }
     presenter.style.top = top + 'px';
-    // the row lines up with the element (on a phone that's the frame edge;
-    // on a wide screen Ted peeks in from the dim just left of it)
-    const pw = Math.min(W, 560);
-    const left = Math.max(0, Math.min(W - pw, r.x - 36));
     presenter.style.left = left + 'px';
     presenter.style.width = pw + 'px';
     // Ted looks from his spot toward the target's center
@@ -350,6 +360,55 @@
   }
   try { new MutationObserver(onPhaseMaybe).observe(body, { attributes: true, attributeFilter: ['class'] }); } catch (e) {}
   setTimeout(onPhaseMaybe, 1600);
+
+  // ── Ted in the corner (phones, 2026-09-23) ──────────────────────────
+  // The full-body stage is gone from the phone flow; he's a face in the
+  // corner instead. Rendered ONCE (a still portrait, no loop — one more GL
+  // context that costs nothing after the first frame). Tap → this phase's tour.
+  (function corner() {
+    const btn = document.createElement('button');
+    btn.id = 'tedCorner'; btn.type = 'button'; btn.setAttribute('aria-label', 'Ted — replay the tour');
+    const cv = document.createElement('canvas'); cv.width = 96; cv.height = 96; btn.appendChild(cv);
+    document.body.appendChild(btn);
+    btn.addEventListener('click', (e) => { e.stopPropagation(); if (window.Ted && window.Ted.tour) window.Ted.tour(); });
+    if (typeof THREE === 'undefined' || typeof PrismGraphmap === 'undefined' || !PrismGraphmap.buildCoyote) return;
+    try {
+      const r = new THREE.WebGLRenderer({ canvas: cv, alpha: true, antialias: true });
+      r.setPixelRatio(Math.min(2, window.devicePixelRatio || 1)); r.setSize(96, 96, false);
+      const sc = new THREE.Scene(); const cam = new THREE.PerspectiveCamera(22, 1, 0.1, 100);
+      const t = PrismGraphmap.buildCoyote(); sc.add(t);
+      const k = new THREE.DirectionalLight(0xfff2e0, 1.25); k.position.set(1.6, 2.4, 2.6); sc.add(k);
+      const rim = new THREE.DirectionalLight(0x90a8d0, 0.6); rim.position.set(-1.8, 1, -1.2); sc.add(rim);
+      sc.add(new THREE.AmbientLight(0x6072a0, 0.6));
+      cam.position.set(0.50, 1.38, 1.62); cam.lookAt(new THREE.Vector3(0.0, 1.27, 0.55));
+      const draw = () => { try { r.render(sc, cam); } catch (e) {} };
+      draw(); setTimeout(draw, 400);   // once more after fonts/layout settle
+      window.addEventListener('resize', draw);
+    } catch (e) {}
+  })();
+
+  // ── Send Ted away / call him back (2026-09-23) ───────────────────────
+  (function awayControl() {
+    const b = document.createElement('button'); b.id = 'tedAway'; b.type = 'button';
+    document.body.appendChild(b);
+    const narrow = () => window.innerWidth <= 700;
+    function paint() {
+      const gone = document.body.classList.contains('ted-away');
+      b.classList.toggle('gone', gone); b.classList.toggle('present', !gone);
+      if (gone) { b.innerHTML = '<span aria-hidden="true">◐</span> Ted'; b.setAttribute('aria-label', 'Call Ted back'); b.title = 'Call Ted back'; }
+      else if (narrow()) { b.textContent = '✕'; b.setAttribute('aria-label', 'Send Ted away'); b.title = 'Send Ted away'; }
+      else { b.innerHTML = '<span aria-hidden="true">✕</span> send Ted away'; b.setAttribute('aria-label', 'Send Ted away'); b.title = 'Send Ted away'; }
+    }
+    b.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const gone = document.body.classList.contains('ted-away');
+      if (!gone && active) stop(false);
+      if (window.Ted && window.Ted.setAway) window.Ted.setAway(!gone);
+    });
+    try { new MutationObserver(paint).observe(document.body, { attributes: true, attributeFilter: ['class'] }); } catch (e) {}
+    window.addEventListener('resize', paint);
+    paint();
+  })();
 
   // ── Public ─────────────────────────────────────────────────────────
   window.Ted = window.Ted || {};
