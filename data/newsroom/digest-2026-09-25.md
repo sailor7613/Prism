@@ -1,10 +1,9 @@
 # Newsroom digest — 2026-09-25
 
-Register: 24 objects · this scan: 2 new, 1 seen again, 0 returned.
+Register: 25 objects · this scan: 1 new, 0 seen again, 0 returned.
 
-## Queued for drafting (2)
-- **Texas appeals court rejects ruling of innocence for woman on death row for 18 years** — ruling · ruled · holder: a federal court · formed 2026-09-25 · 6 outlets (peak 6) · `obj_afederal_appeals-court-death-innocence`
-- **California Supreme Court rules against Riverside County Sheriff Chad Bianco in ballot seizure fight** — ruling · ruled · holder: a federal court · formed 2026-09-25 · 5 outlets (peak 5) · `obj_afederal_against-ballot-bianco-california`
+## Queued for drafting (1)
+- **Federal Judge Temporarily Blocks Trump Media Ban** — ruling · ruled · holder: a federal court · formed 2026-09-25 · 3 outlets (peak 3) · `obj_afederal_ban-blocks-federal-judge`
 
 ## Permanence breaks (went silent while unresolved)
 - none today
@@ -13,8 +12,7 @@ Register: 24 objects · this scan: 2 new, 1 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **California Supreme Court rules against Riverside County Sheriff Chad Bianco in ballot seizure fight** — ruling · ruled · holder: a federal court · formed 2026-09-25 · 5 outlets (peak 5) · `obj_afederal_against-ballot-bianco-california`
-- **Texas appeals court rejects ruling of innocence for woman on death row for 18 years** — ruling · ruled · holder: a federal court · formed 2026-09-25 · 6 outlets (peak 6) · `obj_afederal_appeals-court-death-innocence`
+- **Federal Judge Temporarily Blocks Trump Media Ban** — ruling · ruled · holder: a federal court · formed 2026-09-25 · 3 outlets (peak 3) · `obj_afederal_ban-blocks-federal-judge`
 
 ## Watching (6)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
