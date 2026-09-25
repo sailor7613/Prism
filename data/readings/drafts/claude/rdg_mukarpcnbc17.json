@@ -322,8 +322,13 @@
     "predicateType": "C",
     "inClip": true,
     "tethers": [],
-    "void": "No instrument. This is the speaker placing the stations himself. The DSA sentence rests on auto-captions; check it against the audio before anything is published.",
-    "note": "C predicate: 'they attack us for running data' sits next to 'we don't even build data centers,' which answers a charge about data with a fact about buildings."
+    "void": "No instrument. This is the speaker placing the stations himself.",
+    "note": "C predicate: 'they attack us for running data' sits next to 'we don't even build data centers,' which answers a charge about data with a fact about buildings.",
+    "legibility": {
+     "confirmedBy": "Sailor",
+     "confirmedOn": "2026-09-24",
+     "finding": "The DSA sentence is verbatim and doesn't parse: each clause asserts the negation of the charge it seems to intend ('not anti-Jewish,' 'not anti-Black'). The gibberish is part of what the Reading scores. It's local illegibility inside the layer that names the rims, the most consequential line in the clip."
+    }
    },
    {
     "id": "L3",
@@ -462,7 +467,7 @@
   "captionsFile": "data/readings/clips/rdg_mukarpcnbc17/captions.txt",
   "beats": [
    {
-    "t": 2,
+    "t": 0.2,
     "source": "clip",
     "quote": "look at the far right and far left in this country",
     "layer": "L1",
@@ -470,7 +475,7 @@
     "sourceRef": "clip (Sailor's recording, captions)"
    },
    {
-    "t": 8,
+    "t": 6.2,
     "source": "clip",
     "quote": "I don't want these people becoming 100 times wealthier",
     "layer": "L1",
@@ -478,7 +483,7 @@
     "sourceRef": "clip (Sailor's recording, captions)"
    },
    {
-    "t": 11,
+    "t": 9.2,
     "source": "clip",
     "quote": "I'm going to blow up the whole system",
     "layer": "L1",
@@ -486,15 +491,25 @@
     "sourceRef": "clip (Sailor's recording, captions)"
    },
    {
-    "t": 16,
+    "t": 14.2,
     "source": "clip",
-    "quote": "It looks like DSA people who are…",
+    "quote": "DSA people who are very happy to talk about how they're not anti-Jewish",
     "layer": "L2",
-    "gloss": "He names the left flank. (The caption for the rest of this line is unreliable; check the audio.)",
-    "sourceRef": "clip (Sailor's recording, captions)"
+    "gloss": "He names the left flank, and the sentence inverts itself. As spoken, it praises the thing he seems to mean as a charge.",
+    "legible": false,
+    "sourceRef": "clip (Sailor's recording, captions; confirmed against the audio by Sailor)"
    },
    {
-    "t": 25,
+    "t": 18.2,
+    "source": "clip",
+    "quote": "They don't like to talk about how they're not anti-Black",
+    "layer": "L2",
+    "gloss": "The second half doubles the inversion. The charge, whatever it was, never lands as a sentence.",
+    "legible": false,
+    "sourceRef": "clip (Sailor's recording, captions; confirmed against the audio by Sailor)"
+   },
+   {
+    "t": 23.2,
     "source": "clip",
     "quote": "You have the far right…",
     "layer": "L2",
@@ -502,7 +517,7 @@
     "sourceRef": "clip (Sailor's recording, captions)"
    },
    {
-    "t": 29,
+    "t": 27.2,
     "source": "clip",
     "quote": "they attack us for running data",
     "layer": "L2",
@@ -510,7 +525,7 @@
     "sourceRef": "clip (Sailor's recording, captions)"
    },
    {
-    "t": 30,
+    "t": 28.2,
     "source": "clip",
     "quote": "We don't even build data centers.",
     "layer": "L2",
@@ -518,7 +533,7 @@
     "sourceRef": "clip (Sailor's recording, captions)"
    },
    {
-    "t": 35,
+    "t": 33.2,
     "source": "clip",
     "quote": "one of the biggest mistakes the labs have made",
     "layer": "L3",
@@ -526,7 +541,7 @@
     "sourceRef": "clip (Sailor's recording, captions)"
    },
    {
-    "t": 42,
+    "t": 40.2,
     "source": "clip",
     "quote": "Pick your spectrum.",
     "layer": "L3",
@@ -534,7 +549,7 @@
     "sourceRef": "clip (Sailor's recording, captions)"
    },
    {
-    "t": 45,
+    "t": 43.2,
     "source": "clip",
     "quote": "Either we are going to win and provide the stack to the world",
     "layer": "L3",
@@ -542,7 +557,7 @@
     "sourceRef": "clip (Sailor's recording, captions)"
    },
    {
-    "t": 53,
+    "t": 51.2,
     "source": "clip",
     "quote": "the danger is not just the danger of dangerous things happening to humanity",
     "layer": "L3",
@@ -650,8 +665,8 @@
   "captions": "data/readings/clips/rdg_mukarpcnbc17/captions.txt",
   "sourcePost": "https://x.com/atrupar/status/2100607474986369444",
   "recordedBy": "Sailor, screen recording 2026-09-23",
-  "encoding": "H.264 1280x724 30fps, AAC; 60.5s; converted from the HEVC .mov",
-  "note": "The reader surface doesn't render clips yet."
+  "encoding": "H.264 1280x724 30fps, AAC; trimmed 1.75s off the head (the recording opened mid-loop under X's player overlay); converted from the HEVC .mov",
+  "note": "Plays on the portal's clip step (CARD → CLIP → FRAMING) for eventClass 'utterance'."
  },
  "images": [],
  "authorTier": "claude",
@@ -698,14 +713,15 @@
     "Rupar's framing and the clip's circulation — reception, not object"
    ]
   },
-  "linkedBillsOwed": "S.2937 (AI LEAD Act) and H.R.9917 (AI Kill Switch Act) are not in prism_legislation.json. Add them to the fetch, then to linkedBills"
+  "linkedBillsOwed": "S.2937 (AI LEAD Act) and H.R.9917 (AI Kill Switch Act) are not in prism_legislation.json. Add them to the fetch, then to linkedBills",
+  "legibilityNote": "Legibility is scored at two grains: per band (zₖ, does the utterance make sense to this station) and per beat (legible: false marks a sentence that doesn't parse as spoken). Two beats in L2 are marked, confirmed by Sailor 2026-09-24."
  },
  "rid": "rdg_mukarpcnbc17",
  "ridLineage": "minted 2026-09-23 in Cowork chat; filed directly as a Claude draft",
  "schema": "reading/v1",
  "formulaVersion": "v1",
  "diatribeScore": -8,
- "updatedAt": "2026-09-24T00:15:00.000Z",
+ "updatedAt": "2026-09-24T17:50:00.000Z",
  "linkedBills": [
   "hr-119-6996",
   "hr-119-6875",

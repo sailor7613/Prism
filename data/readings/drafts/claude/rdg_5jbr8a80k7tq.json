@@ -1,0 +1,428 @@
+{
+  "title": "Declined to Adopt",
+  "category": "Courts · Death Penalty · Texas",
+  "date": "2026-09-24",
+  "prompt": "Texas's top criminal court threw out a judge's finding that Melissa Lucio is innocent. Does the ruling settle her case?",
+  "framing": "On Thursday, September 24, 2026, the Texas Court of Criminal Appeals, the state's highest criminal court, voted 5–4 to reject a trial judge's findings that Melissa Lucio is actually innocent in the 2007 death of her 2-year-old daughter, Mariah Alvarez, leaving in place the capital murder conviction and death sentence a Cameron County jury returned in July 2008. In an unsigned opinion the majority wrote: \"We decline to adopt any of the habeas court's findings and conclusions, which exclusively reflect Applicant's interpretation of the evidence and are often unsupported.\" In 2024, District Judge Arturo Nelson had found Lucio actually innocent and that prosecutors suppressed evidence at her trial, and Cameron County District Attorney Luis Saenz had conceded that the State withheld material evidence. Judges David Newell, Lee Finley, David Schenck and Scott Walker dissented; Newell wrote that the facts were devastating, which \"makes the State's failure to disclose material exculpatory evidence all the more tragic.\" The same court had stayed her scheduled execution in April 2022. On September 24, Saenz said his office would \"seek to carry out the punishment verdict,\" and Lucio's lawyer Vanessa Potkin of the Innocence Project said they would take the case to federal court.",
+  "framingKeywords": [
+    "actually innocent",
+    "decline to adopt",
+    "material exculpatory evidence"
+  ],
+  "prevalentAxis": "x",
+  "split": {
+    "topology": "peel",
+    "strength": 0.6,
+    "seam": "B (right-institutional) alone believes the ruling delivers at the rim; the coalitions split cleanly on x; the fluid band runs diagonal (B+C vs A+D).",
+    "rationale": "The scalar runs along x — the death penalty's left and right. At the coalition radius the discourse is x exactly: A −0.6 and C −0.5 against B +0.7 and D +0.5. At the rim it peels: only B trusts the holder (the Court of Criminal Appeals and the DA) and signs positive; D's rim reads custody as passed to federal judges and outside lawyers and signs negative. At the fluid band C (+0.2) expects the execution machinery to move because it distrusts it, and D (−0.1) reads the State's concession as a real opening — a diagonal. The seam moves with radius (bench R9).",
+    "zPattern": {
+      "centers": {
+        "A": -0.3,
+        "B": 0.4,
+        "C": 0.2,
+        "D": -0.1
+      },
+      "rims": {
+        "A": -0.7,
+        "B": 0.8,
+        "C": -0.9,
+        "D": -0.4
+      },
+      "note": "Coalitions A −0.6 · B +0.7 · C −0.5 · D +0.5 (pure x). Rims: B +0.8 alone (trusts the CCA and the DA). The blind author trusts D's rim least (a full sign flip, ±1.2, if D reads the Texas court as holder)."
+    },
+    "ruledBy": null,
+    "date": "2026-09-25"
+  },
+  "antiValentBand": "fluid",
+  "antiValentRationale": "C fluid (+0.2) believes the ruling delivers — that the machinery moves toward execution — and opposes it; D fluid (−0.1) doubts delivery on the State's own concession while its coalition (+0.5) wants the verdict carried out. Belief is not approval.",
+  "axes": {
+    "x": {
+      "pos": "Right",
+      "neg": "Left"
+    },
+    "y": {
+      "pos": "Institutional",
+      "neg": "Populist"
+    },
+    "z": {
+      "pos": "the ruling settles it — the conviction and death sentence stand and the case moves toward execution",
+      "neg": "the ruling doesn't settle it — federal courts, clemency or the State's own concession keep the sentence from being carried out"
+    }
+  },
+  "responses": {
+    "A": {
+      "xSide": "left",
+      "source": "",
+      "fluid": {
+        "text": "A 5–4 vote that throws out a trial judge's findings in a case where the DA admitted evidence was withheld isn't the end of anything. It closes the state courts, but the concession stays on the record and federal review is now the next step. It's a hard road, but it's still open.",
+        "xWord": "due process",
+        "yWord": "state court closed",
+        "words": [
+          "material exculpatory evidence",
+          "5–4",
+          "federal court"
+        ],
+        "source": "",
+        "z": -0.3,
+        "zReason": "The state appeal is over, but the State's own admission that it withheld material evidence gives a federal court and the clemency process a concrete basis to act before any execution.",
+        "instrument": {
+          "holder": "federal habeas courts",
+          "trusted": false
+        }
+      },
+      "coalition": {
+        "text": "A court can't decline to adopt the facts when the prosecutor already admitted them. The dissent said out loud that the State hid material exculpatory evidence. This goes to federal court, and it isn't settled.",
+        "xWord": "wrongful conviction",
+        "yWord": "rule of law",
+        "words": [
+          "actually innocent",
+          "decline to adopt",
+          "material exculpatory evidence"
+        ],
+        "source": "",
+        "z": -0.6,
+        "zReason": "The party line expects a split ruling that contradicts the prosecutor's own concession to be overturned or delayed by further review and public pressure.",
+        "instrument": {
+          "holder": "federal courts and clemency board",
+          "trusted": false
+        }
+      },
+      "denominated": {
+        "text": "The Court of Criminal Appeals has held this sentence for eighteen years, and it just told the judge who heard the evidence that his findings don't count. We don't trust that bench to be where this ends. Whoever holds the pen in Austin isn't holding it for Melissa Lucio.",
+        "xWord": "Texas courts",
+        "yWord": "custody",
+        "words": [
+          "unsigned opinion",
+          "decline to adopt",
+          "5–4"
+        ],
+        "source": "",
+        "z": -0.7,
+        "zReason": "The rim reads the Texas high court as the holder and does not trust it, so it refuses to treat that court's word as final.",
+        "instrument": {
+          "holder": "Texas Court of Criminal Appeals",
+          "trusted": false
+        }
+      }
+    },
+    "B": {
+      "xSide": "right",
+      "source": "",
+      "fluid": {
+        "text": "The state's highest criminal court reviewed the habeas record and found the lower court's findings one-sided and often unsupported. Federal courts give heavy deference to state-court rulings like this, so the conviction is on firm ground. The DA's concession is awkward, but it didn't carry the majority.",
+        "xWord": "finality",
+        "yWord": "highest court",
+        "words": [
+          "decline to adopt",
+          "often unsupported",
+          "capital murder conviction"
+        ],
+        "source": "",
+        "z": 0.4,
+        "zReason": "Federal habeas review defers heavily to the state's high court, so the ruling probably holds even though the 5–4 split and the concession leave some risk.",
+        "instrument": {
+          "holder": "Texas Court of Criminal Appeals",
+          "trusted": true
+        }
+      },
+      "coalition": {
+        "text": "A jury convicted her in 2008 and the highest court in the state has now upheld that. The findings reflected only the defense's reading of the evidence. The verdict stands.",
+        "xWord": "law and order",
+        "yWord": "jury verdict",
+        "words": [
+          "capital murder conviction",
+          "decline to adopt",
+          "punishment verdict"
+        ],
+        "source": "",
+        "z": 0.7,
+        "zReason": "The party line treats the Court of Criminal Appeals as the last word on state law and expects the federal appeal to be a formality.",
+        "instrument": {
+          "holder": "Texas Court of Criminal Appeals",
+          "trusted": true
+        }
+      },
+      "denominated": {
+        "text": "The Court of Criminal Appeals holds this case, and it has spoken. The district attorney says he'll carry out the sentence. The system is working as designed.",
+        "xWord": "state authority",
+        "yWord": "custody",
+        "words": [
+          "highest criminal court",
+          "punishment verdict",
+          "decline to adopt"
+        ],
+        "source": "",
+        "z": 0.8,
+        "zReason": "The rim sees the Texas high court and the DA as holding the instrument and trusts them to carry the sentence through.",
+        "instrument": {
+          "holder": "Texas Court of Criminal Appeals and Cameron County DA",
+          "trusted": true
+        }
+      }
+    },
+    "C": {
+      "xSide": "left",
+      "source": "",
+      "fluid": {
+        "text": "Be honest about how this usually goes: federal courts almost never overturn a Texas death case on innocence, and the DA says he'll push the sentence. The concession may not save her. That's what makes this ruling so dangerous.",
+        "xWord": "death machine",
+        "yWord": "no one stops it",
+        "words": [
+          "punishment verdict",
+          "5–4",
+          "federal court"
+        ],
+        "source": "",
+        "z": 0.2,
+        "zReason": "Federal review of state death cases rarely grants relief, and the DA has said he'll seek execution, so the machinery is more likely to move forward than stop.",
+        "instrument": {
+          "holder": "Cameron County DA",
+          "trusted": false
+        }
+      },
+      "coalition": {
+        "text": "We stopped her execution in 2022 and we can do it again. Four judges said the State hid evidence. The movement doesn't accept five judges as the final word on an innocent woman's life.",
+        "xWord": "abolition",
+        "yWord": "people's pressure",
+        "words": [
+          "actually innocent",
+          "material exculpatory evidence",
+          "stayed"
+        ],
+        "source": "",
+        "z": -0.5,
+        "zReason": "The movement line holds that public pressure and a new federal case can stall execution again, as they did in 2022.",
+        "instrument": {
+          "holder": "Texas courts and prosecutors",
+          "trusted": false
+        }
+      },
+      "denominated": {
+        "text": "The same state that hid the evidence now gets to decide she dies. We don't trust the court or the prosecutor with anything. Nothing they sign settles a thing.",
+        "xWord": "the state",
+        "yWord": "custody",
+        "words": [
+          "decline to adopt",
+          "material exculpatory evidence",
+          "unsigned opinion"
+        ],
+        "source": "",
+        "z": -0.9,
+        "zReason": "The rim sees the state as holding the instrument and does not trust it at all, so it refuses to recognize the ruling as settling anything.",
+        "instrument": {
+          "holder": "State of Texas",
+          "trusted": false
+        }
+      }
+    },
+    "D": {
+      "xSide": "right",
+      "source": "",
+      "fluid": {
+        "text": "When the county's own DA admits evidence was withheld and four judges on a conservative court dissent, something went wrong. Now the same DA wants to go ahead with the execution anyway. This looks less settled than the headline makes it sound.",
+        "xWord": "fair trial",
+        "yWord": "government overreach",
+        "words": [
+          "material exculpatory evidence",
+          "5–4",
+          "dissented"
+        ],
+        "source": "",
+        "z": -0.1,
+        "zReason": "The State admitted withholding evidence and four judges dissented, which gives a federal judge a real opening, so the ruling is near a coin flip.",
+        "instrument": {
+          "holder": "federal courts",
+          "trusted": false
+        }
+      },
+      "coalition": {
+        "text": "A jury heard the case and gave a verdict. The top court isn't going to let one judge rewrite it for the defense lawyers. Justice for Mariah means the sentence stands.",
+        "xWord": "tough on crime",
+        "yWord": "jury decided",
+        "words": [
+          "capital murder conviction",
+          "punishment verdict",
+          "decline to adopt"
+        ],
+        "source": "",
+        "z": 0.5,
+        "zReason": "The movement line trusts the jury and the high court and expects the sentence to go forward, though federal delays are still possible.",
+        "instrument": {
+          "holder": "Texas Court of Criminal Appeals",
+          "trusted": true
+        }
+      },
+      "denominated": {
+        "text": "Now it goes to federal judges and the Innocence Project, and that's where cases go to die. Those people aren't carrying out any Texas verdict. It isn't over, and it won't be.",
+        "xWord": "outside lawyers",
+        "yWord": "custody",
+        "words": [
+          "federal court",
+          "Innocence Project",
+          "punishment verdict"
+        ],
+        "source": "",
+        "z": -0.4,
+        "zReason": "The rim sees federal judges and national advocacy lawyers as holding the instrument now and does not trust them to let the sentence be carried out.",
+        "instrument": {
+          "holder": "federal judges and Innocence Project lawyers",
+          "trusted": false
+        }
+      }
+    }
+  },
+  "diatribe": {
+    "LF": {
+      "text": "The left's close readers see the state courts closed but the State's own admission still on the record — a hard road through federal court, not an end.",
+      "side": "left",
+      "band": "fluid",
+      "keywords": [
+        "material exculpatory evidence"
+      ]
+    },
+    "LC": {
+      "text": "Democrats and the abolition movement refuse five judges as the last word: the prosecutor conceded, four judges dissented, and 2022 showed an execution can be stopped.",
+      "side": "left",
+      "band": "coalition",
+      "keywords": [
+        "actually innocent",
+        "5–4"
+      ]
+    },
+    "LD": {
+      "text": "At the left rim the holder is Texas itself — the court and the prosecutor — and nothing either signs is trusted to settle it.",
+      "side": "left",
+      "band": "denominated",
+      "keywords": [
+        "decline to adopt"
+      ]
+    },
+    "RF": {
+      "text": "Legal conservatives expect the ruling to hold under federal deference, with the concession as an awkward fact the majority didn't adopt.",
+      "side": "right",
+      "band": "fluid",
+      "keywords": [
+        "decline to adopt"
+      ]
+    },
+    "RC": {
+      "text": "The party and movement lines stand with the 2008 jury: the highest criminal court has spoken and the DA will seek the sentence.",
+      "side": "right",
+      "band": "coalition",
+      "keywords": [
+        "punishment verdict"
+      ]
+    },
+    "RD": {
+      "text": "The right rim splits on custody: the institutional side trusts Austin and the DA to finish it; the populist side sees the case handed to federal judges and outside lawyers, and doubts it ends.",
+      "side": "right",
+      "band": "denominated",
+      "keywords": [
+        "federal court"
+      ]
+    }
+  },
+  "diatribeLayer": "stated",
+  "objectLayer": {
+    "declared": "stated",
+    "stated": "a 5–4 state high-court ruling rejecting a trial judge's actual-innocence findings for a woman on death row",
+    "operative": "the state courts closing on a conviction the State itself conceded was tried with withheld evidence — delivery now sits with the federal courts and with a DA who says he will seek the execution",
+    "inversion": "lean, not ruled: the prosecutor who conceded error in 2024 now seeks to carry out the sentence (2026-09-24) — an actor reversal on the object, not a station's; the stations mostly hold their priors on x"
+  },
+  "window": {
+    "close": "2026-09-24",
+    "why": "Trigger day = the ruling, Thursday 2026-09-24 (Texas Court of Criminal Appeals). The register read 09-25 because the stories landed after 00:00 UTC — report date, corrected on the card; the holder is a state court, not a federal one — also corrected. Saenz's and Potkin's same-day statements are inside the window; no execution date had been requested or set. Declared at authoring, before any z (§4c).",
+    "ruledBy": null,
+    "ruledOn": null
+  },
+  "meta": {
+    "dialecticsRef": "obj_afederal_appeals-court-death-innocence",
+    "status": "draft",
+    "source": "Claude draft — daily newsroom drafting (scheduled), authored z-first against Trace Formula v1 per scripts/newsroom/AUTHORING_PROTOCOL.md v1. Filed to drafts/claude; not through the surface; no aiDeltas lineage. Rulings: none.",
+    "editHistory": [
+      {
+        "at": "2026-09-25T08:40:00.000Z",
+        "by": "Claude (scheduled drafting)",
+        "what": "authored: object -> window -> frame -> sweep (All clean) -> axes -> twelve (blind subagent) -> split/diatribe/layers -> sweep"
+      }
+    ],
+    "aiDeltas": [],
+    "frameFirst": {
+      "date": "2026-09-25",
+      "by": "Claude, under §4c (window declared at authoring; sweep before z). Object NOT ruled — Claude's read, correctable by Sailor.",
+      "status": "Frame authored and swept (All clean) before any z; the twelve authored blind z-first by a subagent (meta.blindAuthoring). Stations unruled.",
+      "objectLean": {
+        "stated": "a 5–4 state high-court ruling rejecting a trial judge's actual-innocence findings for a woman on death row",
+        "operative": "the state courts closing on a conviction the State itself conceded was tried with withheld evidence — delivery now sits with the federal courts and with a DA who says he will seek the execution",
+        "inversion": "lean, not ruled: the prosecutor who conceded error in 2024 now seeks to carry out the sentence (2026-09-24) — an actor reversal on the object, not a station's; the stations mostly hold their priors on x"
+      },
+      "titleLean": "'Declined to Adopt' — Claude's; Sailor names Readings",
+      "sourcesInWindow": [
+        "AP via TPR / KERA / KSAT / Click2Houston 2026-09-24",
+        "Texas Tribune 2026-09-24",
+        "KRGV 2026-09-24 (reactions)",
+        "Innocence Project attorney statement 2026-09-24",
+        "TCADP 2026-09-24",
+        "register articles (CNN syndication) 2026-09-24"
+      ],
+      "background_preWindow": [
+        "Mariah Alvarez died 2007-02-17 in Harlingen",
+        "Lucio convicted and sentenced to death July 2008 (Cameron County)",
+        "execution set for 2022-04-27; stayed by the CCA 2022-04-25 and remanded",
+        "Judge Arturo Nelson finds her actually innocent and recommends relief, 2024; DA Saenz concedes error",
+        "a Texas House committee had pressed for a stay in April 2022 (not in frame)"
+      ]
+    },
+    "framingAudit": {
+      "date": "2026-09-25",
+      "by": "Claude — frame-first authoring under §4c; sweep run BEFORE any z. Not a ruling.",
+      "window": "2026-09-24 (declared, see window.why)",
+      "verifiedInWindow": [
+        "5–4 ruling 2026-09-24, Texas Court of Criminal Appeals — AP, Texas Tribune 2026-09-24",
+        "Mariah Alvarez, 2, died 2007 — AP (pre-window, dated)",
+        "conviction and death sentence July 2008, Cameron County jury — AP; Saenz statement 2026-09-24 ('July of 2008')",
+        "\"We decline to adopt any of the habeas court's findings and conclusions, which exclusively reflect Applicant's interpretation of the evidence and are often unsupported.\" — unsigned opinion 2026-09-24 (AP)",
+        "Judge Arturo Nelson's actual-innocence finding and suppression finding, 2024 — AP (pre-window, dated)",
+        "Saenz conceded the State withheld material evidence, 2024 — AP (pre-window, dated)",
+        "dissenters Newell, Finley, Schenck, Walker — Texas Tribune 2026-09-24",
+        "\"makes the State's failure to disclose material exculpatory evidence all the more tragic.\" — Newell dissent 2026-09-24",
+        "execution stayed April 2022 — AP (pre-window, dated)",
+        "\"seek to carry out the punishment verdict,\" — Saenz 2026-09-24 (KRGV)",
+        "Potkin: case to federal court — KRGV 2026-09-24"
+      ],
+      "keptUnverifiedDate": [],
+      "deliberatelyExcluded_afterWindow": [
+        "'first woman exonerated from Texas death row' framing — context, not a fact of the window; left out",
+        "medical detail (coagulation disorder, fall down stairs) — contested evidence, left out of the frame for length, not date",
+        "reactions on 2026-09-25 and later — none used"
+      ]
+    },
+    "blindAuthoring": {
+      "date": "2026-09-25",
+      "author": "Claude (general-purpose subagent) — blind: given the frame, prompt, keywords, axes, a station/radius brief and Trace Formula v1 §3b + R-0921-1 only; no other Reading, no register, no web",
+      "zFirst": true,
+      "instrumentOnAll12": true,
+      "rulings": "NONE — every station awaits Sailor's ruling; z, zReason, instrument, text as authored",
+      "authorNote": "The hardest band was D's rim, because right-populist distrust could land on either the Texas court or the federal courts, and which one I picked flips the sign under the rim rule. I chose federal judges and outside lawyers, so z is negative. It surprised me that the left-populist fluid band came out positive: it expects the execution to go forward because it distrusts the system. I trust D-denominated least and could be off by about 1.2, a full sign flip if that rim actually reads the Texas court as the holder and trusts it."
+    },
+    "newsroomFindings": {
+      "inversionLeans": [
+        "DA Saenz reverses his own 2024 concession by seeking the sentence the same day — an actor-level reversal; cited prior in-window.",
+        "D.fluid (−0.1) reads against D.coalition (+0.5) on the State's own admission — intra-station, not an inversion."
+      ],
+      "permanence": "Not a break or a return in the register. A long arc (death 2007, conviction 2008, stay 2022, innocence findings 2024) first seen by the register at this ruling. The federal filing or an execution-date motion would be its next object."
+    }
+  },
+  "rid": "rdg_5jbr8a80k7tq",
+  "ridLineage": "minted 2026-09-25 (UTC) by the scheduled newsroom drafting task; filed directly to drafts/claude",
+  "schema": "reading/v1",
+  "formulaVersion": "1",
+  "updatedAt": "2026-09-25T08:40:00.000Z",
+  "authorTier": "claude",
+  "newsroom": {
+    "oid": "obj_afederal_appeals-court-death-innocence",
+    "queuedOn": "2026-09-25",
+    "draftedOn": "2026-09-25"
+  },
+  "images": []
+}

@@ -360,58 +360,6 @@ body.ev-step-framing .ev-logo { margin-bottom: 8px; }
 .ev-framing-beat .ev-keywords { margin-bottom: 18px; }
 .ev-framing-beat .ev-rule { margin: 12px auto; }
 
-/* ── CLIP BEAT (utterance class, 2026-09-24) ──
-   CARD → CLIP → FRAMING for eventClass 'utterance'. The speech act is the
-   object: the clip plays, its beats surface in sync (tagged by layer), then an
-   "also said" strip and the bills the layers touch. The prism stays, small. */
-.ev-clip-beat { display: none; flex-direction: column; align-items: center; width: 100%; max-width: 680px; }
-body.ev-step-clip .ev-card, body.ev-step-clip .ev-framing-beat { display: none; }
-body.ev-step-clip .ev-clip-beat { display: flex; animation: ev-rise 0.7s ease forwards; }
-body.ev-step-clip .ev-logo { width: clamp(70px, 15vw, 118px); margin-bottom: 2px; }
-body.ev-step-clip .ev-logo .ev-logo-word { display: none; }
-#clipNext[hidden] { display: none; }
-.clip-speaker { font-family: var(--serif); font-size: clamp(15px, 1.8vw, 19px); color: var(--ink); text-align: center; margin: 0 0 2px; }
-.clip-venue { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; opacity: .6; margin: 0 0 10px; text-align: center; }
-.clip-frame { position: relative; width: 100%; border-radius: 10px; overflow: hidden; background: #000; box-shadow: 0 10px 40px rgba(0,0,0,.45); cursor: pointer; }
-.clip-frame video { display: block; width: 100%; height: auto; max-height: 42vh; object-fit: contain; background: #000; }
-.clip-play { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 42px; color: rgba(255,255,255,.9); background: rgba(0,0,0,.28); transition: opacity .3s; pointer-events: none; }
-.clip-frame.playing .clip-play { opacity: 0; }
-.clip-bar { position: relative; width: 100%; height: 14px; margin: 8px 0 2px; cursor: pointer; }
-.clip-bar-track { position: absolute; left: 0; right: 0; top: 6px; height: 2px; background: rgba(255,255,255,.14); border-radius: 2px; }
-.clip-bar-fill { position: absolute; left: 0; top: 6px; height: 2px; width: 0; background: rgba(255,255,255,.7); border-radius: 2px; }
-.clip-tick { position: absolute; top: 2px; width: 3px; height: 10px; margin-left: -1px; border-radius: 2px; background: var(--lc, #aaa); opacity: .45; transition: opacity .2s, transform .2s; }
-.clip-tick.past { opacity: 1; }
-.clip-tick.on { opacity: 1; transform: scaleY(1.5); }
-.clip-chip { width: 100%; min-height: 86px; margin: 8px 0 6px; padding: 10px 14px; border-left: 3px solid var(--lc, #888); background: rgba(255,255,255,.04); border-radius: 0 8px 8px 0; transition: border-color .3s; }
-.clip-chip-layer { font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--lc, #aaa); margin-bottom: 4px; }
-.clip-chip-quote { font-family: var(--serif); font-style: italic; font-size: clamp(15px, 1.8vw, 18px); line-height: 1.35; color: var(--ink); }
-.clip-chip-gloss { font-size: 12.5px; line-height: 1.45; opacity: .72; margin-top: 4px; }
-.clip-chip.garbled .clip-chip-quote { text-decoration: underline wavy color-mix(in srgb, var(--lc, #aaa) 55%, transparent); text-underline-offset: 5px; }
-.clip-chip-flag { display: none; margin-left: 8px; padding: 0 6px; border: 1px dashed currentColor; border-radius: 8px; font-size: 9.5px; letter-spacing: .1em; }
-.clip-chip.garbled .clip-chip-flag { display: inline-block; }
-.clip-tick.garbled { background: transparent; border: 1px solid var(--lc, #aaa); width: 4px; }
-.clip-chip.fresh .clip-chip-quote, .clip-chip.fresh .clip-chip-gloss { animation: prism-caption-develop 700ms cubic-bezier(0.22, 0.61, 0.36, 1) both; }
-.clip-layers { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 6px; margin: 2px 0 8px; }
-.clip-layer { font-size: 10.5px; padding: 2px 8px; border-radius: 10px; border: 1px solid var(--lc, #777); color: var(--lc, #aaa); opacity: .4; transition: opacity .25s, background .25s; white-space: nowrap; }
-.clip-layer.seen { opacity: .85; }
-.clip-layer.on { opacity: 1; background: color-mix(in srgb, var(--lc, #777) 18%, transparent); }
-.clip-layer.off-clip { border-style: dashed; }
-.clip-after { display: none; width: 100%; }
-.ev-clip-beat.ended .clip-after { display: block; animation: ev-rise .6s ease forwards; }
-.ev-clip-beat.ended .clip-chip { display: none; }
-.clip-h { font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; opacity: .55; margin: 8px 0 6px; }
-.clip-also { max-height: 22vh; overflow-y: auto; display: flex; flex-direction: column; gap: 6px; padding-right: 4px; }
-.clip-also-item { border-left: 2px solid var(--lc, #888); padding: 2px 0 2px 10px; }
-.clip-also-item q { font-family: var(--serif); font-style: italic; font-size: 14.5px; color: var(--ink); quotes: "\201C" "\201D"; }
-.clip-also-item span { display: block; font-size: 12px; opacity: .65; margin-top: 1px; }
-.clip-tethers { display: flex; flex-wrap: wrap; gap: 6px; }
-.clip-tether { font-size: 11.5px; padding: 3px 9px; border-radius: 10px; border: 1px solid var(--lc, #777); color: var(--ink); background: color-mix(in srgb, var(--lc, #777) 10%, transparent); }
-.clip-tether.void { border-style: dashed; opacity: .7; }
-.clip-foot { display: flex; gap: 10px; justify-content: center; align-items: center; margin-top: 10px; }
-.clip-skip { background: none; border: 0; color: var(--ink); opacity: .5; font-size: 12px; letter-spacing: .08em; cursor: pointer; }
-.clip-skip:hover { opacity: .85; }
-body.ev-step-clip .clip-foot .ev-enter { opacity: 1; }
-
 /* Cloud of load-bearing terms — floats, glows fluid-green, staggers in */
 .ev-keywords {
   display: flex; flex-wrap: wrap; justify-content: center;
@@ -2640,33 +2588,6 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
     </div>
 
     <!-- STEP 2 · FRAMING BEAT — the editorial wall text + terms, one screen. -->
-
-    <!-- CLIP BEAT (utterance class, 2026-09-24): CARD → CLIP → FRAMING. -->
-    <div class="ev-clip-beat" id="evClipBeat">
-      <div class="clip-speaker" id="clipSpeaker"></div>
-      <div class="clip-venue" id="clipVenue"></div>
-      <div class="clip-frame" id="clipFrame" data-ted-hint="This is the thing itself: what he said, in his words. Watch the tags underneath. Every time he changes subject, the color changes.">
-        <video id="clipVideo" playsinline preload="metadata"></video>
-        <div class="clip-play" id="clipPlay">&#9654;</div>
-      </div>
-      <div class="clip-bar" id="clipBar"><div class="clip-bar-track"></div><div class="clip-bar-fill" id="clipBarFill"></div></div>
-      <div class="clip-layers" id="clipLayers"></div>
-      <div class="clip-chip" id="clipChip">
-        <div class="clip-chip-layer"><span id="clipChipLayer"></span><span class="clip-chip-flag" title="Verbatim. As spoken, this sentence doesn't parse, and that counts toward legibility.">as spoken · doesn't parse</span></div>
-        <div class="clip-chip-quote" id="clipChipQuote"></div>
-        <div class="clip-chip-gloss" id="clipChipGloss"></div>
-      </div>
-      <div class="clip-after" id="clipAfter">
-        <div class="clip-h">also said, same interview</div>
-        <div class="clip-also" id="clipAlso"></div>
-        <div class="clip-h">what it touches in Congress</div>
-        <div class="clip-tethers" id="clipTethers"></div>
-      </div>
-      <div class="clip-foot">
-        <button class="clip-skip" id="clipSkip">skip to the rest &rarr;</button>
-        <button class="ev-enter" id="clipNext" hidden><span>read the framing</span><span class="ev-enter-glyph">&rarr;</span></button>
-      </div>
-    </div><!-- /.ev-clip-beat -->
     <div class="ev-framing-beat" id="evFramingBeat">
       <div class="ev-framing-title" id="evFramingTitle"></div>
       <div class="ev-rule" id="evRule"></div>
@@ -3396,140 +3317,10 @@ function revealFraming() {
   setTimeout(() => evCloudEl.querySelectorAll('.ev-kw').forEach(s => s.classList.add('in')), 620);
   setTimeout(() => { if (window.Ted) window.Ted.beat('framing', "This is the framing — the wall text for what happened. Read it, feel the weather of it, then take a position."); }, 900);
 }
-
-// ── CLIP BEAT (utterance class, 2026-09-24) ──
-// For eventClass 'utterance' the splash runs CARD → CLIP → FRAMING. The clip
-// is the object; utterance.beats surface in sync with it (on-clip beats carry
-// t in seconds), tagged by the layer they belong to. At the end (or on skip)
-// the off-clip beats and the layers' tethers (bills, voids) show, then the
-// framing. Readings without the class never see this step.
-const IS_UTTERANCE = !!(ev && ev.eventClass === 'utterance' && ev.utterance);
-const CLIP_HUES = ['#e0a458', '#d9705f', '#7fb3d5', '#9fcf8f', '#c79bd8', '#e3cf6b', '#77c6c0', '#e89ab8'];
-const clipBeatEl = document.getElementById('evClipBeat');
-let clipBuilt = false, clipOnBeats = [], clipLayerColor = {}, clipCurrent = -1;
-function clipEsc(t) { return String(t == null ? '' : t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
-function buildClipBeat() {
-  if (clipBuilt || !IS_UTTERANCE || !clipBeatEl) return; clipBuilt = true;
-  const u = ev.utterance, sp = ev.speaker || {}, clip = ev.clip || {};
-  const layers = Array.isArray(u.layers) ? u.layers : [];
-  layers.forEach((l, i) => { clipLayerColor[l.id] = CLIP_HUES[i % CLIP_HUES.length]; });
-  const layerOf = id => layers.find(l => l.id === id) || { id: id, object: id };
-  document.getElementById('clipSpeaker').textContent = [sp.name, sp.role].filter(Boolean).join(' · ');
-  document.getElementById('clipVenue').textContent = [u.venue, u.airedOn].filter(Boolean).join(' · ');
-  const video = document.getElementById('clipVideo'), frame = document.getElementById('clipFrame');
-  if (clip.poster) video.poster = '../' + clip.poster;
-  if (clip.file) video.src = '../' + clip.file;
-  const beats = Array.isArray(u.beats) ? u.beats : [];
-  clipOnBeats = beats.filter(b => typeof b.t === 'number').sort((a, b) => a.t - b.t);
-  const offBeats = beats.filter(b => typeof b.t !== 'number');
-  // layer pills: solid = in the clip, dashed = off-clip only
-  const pills = document.getElementById('clipLayers');
-  layers.forEach(l => {
-    const el = document.createElement('span');
-    el.className = 'clip-layer' + (l.inClip === false ? ' off-clip' : '');
-    el.dataset.layer = l.id; el.style.setProperty('--lc', clipLayerColor[l.id]);
-    el.textContent = l.object || l.id; el.title = l.claim || '';
-    pills.appendChild(el);
-  });
-  // beat ticks on the scrub bar (placed once duration is known)
-  const bar = document.getElementById('clipBar'), fill = document.getElementById('clipBarFill');
-  function placeTicks() {
-    const d = video.duration; if (!d || !isFinite(d) || bar.querySelector('.clip-tick')) return;
-    clipOnBeats.forEach((b, i) => {
-      const t = document.createElement('div'); t.className = 'clip-tick'; t.dataset.i = i;
-      t.style.left = (100 * Math.min(1, b.t / d)).toFixed(2) + '%';
-      t.style.setProperty('--lc', clipLayerColor[b.layer] || '#aaa');
-      if (b.legible === false) t.classList.add('garbled');
-      bar.appendChild(t);
-    });
-  }
-  video.addEventListener('loadedmetadata', placeTicks);
-  bar.addEventListener('click', e => {
-    const r = bar.getBoundingClientRect(); if (!video.duration) return;
-    video.currentTime = Math.max(0, Math.min(1, (e.clientX - r.left) / r.width)) * video.duration;
-  });
-  const chip = document.getElementById('clipChip');
-  function showBeat(i) {
-    if (i === clipCurrent) return; clipCurrent = i;
-    const b = clipOnBeats[i];
-    bar.querySelectorAll('.clip-tick').forEach(t => { const k = +t.dataset.i; t.classList.toggle('past', k <= i); t.classList.toggle('on', k === i); });
-    if (!b) { chip.classList.remove('garbled'); chip.style.removeProperty('--lc'); document.getElementById('clipChipLayer').textContent = ''; document.getElementById('clipChipQuote').textContent = ''; document.getElementById('clipChipGloss').textContent = ''; return; }
-    const lc = clipLayerColor[b.layer] || '#aaa';
-    chip.style.setProperty('--lc', lc);
-    document.getElementById('clipChipLayer').textContent = layerOf(b.layer).object || b.layer;
-    document.getElementById('clipChipQuote').textContent = '“' + (b.quote || '') + '”';
-    document.getElementById('clipChipGloss').textContent = b.gloss || '';
-    chip.classList.toggle('garbled', b.legible === false);
-    chip.classList.remove('fresh'); void chip.offsetWidth; chip.classList.add('fresh');
-    pills.querySelectorAll('.clip-layer').forEach(p => {
-      if (p.dataset.layer === b.layer) p.classList.add('seen');
-      p.classList.toggle('on', p.dataset.layer === b.layer);
-    });
-  }
-  video.addEventListener('timeupdate', () => {
-    const t = video.currentTime, d = video.duration || 0;
-    if (d) fill.style.width = (100 * t / d).toFixed(2) + '%';
-    let i = -1; for (let k = 0; k < clipOnBeats.length; k++) if (clipOnBeats[k].t <= t) i = k;
-    showBeat(i);
-  });
-  frame.addEventListener('click', e => { e.stopPropagation(); if (video.paused) video.play().catch(() => {}); else video.pause(); });
-  video.addEventListener('play',  () => frame.classList.add('playing'));
-  video.addEventListener('pause', () => frame.classList.remove('playing'));
-  video.addEventListener('ended', endClip);
-  // after: off-clip beats, then tethers + voids per layer
-  const also = document.getElementById('clipAlso');
-  offBeats.forEach(b => {
-    const d = document.createElement('div'); d.className = 'clip-also-item';
-    d.style.setProperty('--lc', clipLayerColor[b.layer] || '#888');
-    d.innerHTML = '<q>' + clipEsc(b.quote) + '</q><span>' + clipEsc(b.gloss) + '</span>';
-    d.title = b.sourceRef || b.source || '';
-    also.appendChild(d);
-  });
-  const teth = document.getElementById('clipTethers'), seen = new Set();
-  layers.forEach(l => {
-    (l.tethers || []).forEach(t => {
-      const key = t.billId || t.bill; if (seen.has(key)) return; seen.add(key);
-      const el = document.createElement('span'); el.className = 'clip-tether';
-      el.style.setProperty('--lc', clipLayerColor[l.id]);
-      el.textContent = t.bill + ' · ' + t.title; el.title = [t.statusAsOf, t.why].filter(Boolean).join(' — ');
-      teth.appendChild(el);
-    });
-    if (l.void && !(l.tethers || []).length) {
-      const el = document.createElement('span'); el.className = 'clip-tether void';
-      el.style.setProperty('--lc', clipLayerColor[l.id]);
-      el.textContent = (l.object || l.id) + ' · no bill'; el.title = l.void;
-      teth.appendChild(el);
-    }
-  });
-  document.getElementById('clipSkip').addEventListener('click', e => { e.stopPropagation(); if (clipBeatEl.classList.contains('ended')) goFraming(); else endClip(); });
-  document.getElementById('clipNext').addEventListener('click', e => { e.stopPropagation(); goFraming(); });
-}
-function endClip() {
-  if (!clipBeatEl) return;
-  try { document.getElementById('clipVideo').pause(); } catch (_) {}
-  clipBeatEl.classList.add('ended');
-  document.getElementById('clipNext').hidden = false;
-  document.getElementById('clipSkip').innerHTML = 'straight to the framing &rarr;';
-  document.getElementById('clipSkip').style.display = 'none';
-  document.querySelectorAll('#clipLayers .clip-layer').forEach(p => { p.classList.add('seen'); p.classList.remove('on'); });
-  if (window.Ted) window.Ted.beat('clip-after', "That's the rest of what he said, and which bills any of it actually touches. Notice which parts have no bill at all.");
-}
-function goClip() {
-  if (splashStep !== 'card' || entered || migrating) return;
-  buildClipBeat();
-  splashStep = 'clip';
-  document.body.classList.remove('ev-step-card');
-  document.body.classList.add('ev-step-clip');
-  const v = document.getElementById('clipVideo');
-  if (v && v.src) v.play().catch(() => {});      // Begin was a click, so sound is allowed
-  setTimeout(() => { if (window.Ted) window.Ted.beat('clip', "This one's a person talking, not a bill. Watch it through, then decide: does he make sense to you?"); }, 1200);
-}
 function goFraming() {
-  if ((splashStep !== 'card' && splashStep !== 'clip') || entered || migrating) return;
-  if (splashStep === 'clip') { try { document.getElementById('clipVideo').pause(); } catch (_) {} }
+  if (splashStep !== 'card' || entered || migrating) return;
   splashStep = 'framing';
   document.body.classList.remove('ev-step-card');
-  document.body.classList.remove('ev-step-clip');
   document.body.classList.add('ev-step-framing');
   revealFraming();
 }
@@ -3602,22 +3393,16 @@ function migrateToDiatribe() {
 let logoDragged = false;
 function advanceSplash() {
   if (entered || migrating) return;
-  if (splashStep === 'card') { if (IS_UTTERANCE) goClip(); else goFraming(); }
-  else if (splashStep === 'clip') goFraming();
+  if (splashStep === 'card') goFraming();
   else migrateToDiatribe();
 }
-if (evBeginBtn) evBeginBtn.addEventListener('click', e => { e.stopPropagation(); if (IS_UTTERANCE) goClip(); else goFraming(); });
+if (evBeginBtn) evBeginBtn.addEventListener('click', e => { e.stopPropagation(); goFraming(); });
 evEnterBtn.addEventListener('click', e => { e.stopPropagation(); migrateToDiatribe(); });
 { const logo = document.getElementById('evLogo'); if (logo) logo.addEventListener('click', () => { if (!logoDragged) advanceSplash(); }); }
 window.addEventListener('keydown', e => {
   if (document.body.classList.contains('phase-event') &&
       (e.key === 'Enter' || e.key === ' ')) {
     e.preventDefault();
-    if (splashStep === 'clip' && e.key === ' ') {   // space plays/pauses the clip; Enter moves on
-      const v = document.getElementById('clipVideo');
-      if (v) { if (v.paused) v.play().catch(() => {}); else v.pause(); }
-      return;
-    }
     advanceSplash();
   }
 });
