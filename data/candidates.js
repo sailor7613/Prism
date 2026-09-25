@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-09-25T17:20:21.854Z · 19 legislative + 11 news (GDELT, 3d)
+// 2026-09-25T21:41:22.769Z · 19 legislative + 10 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1790356806119,
+    "ts": 1790372468210,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.847,
+      "salience": 0.846,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -1423,11 +1423,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1790356806120,
+    "ts": 1790372468211,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.838,
+      "salience": 0.837,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -1680,11 +1680,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1790356806120,
+    "ts": 1790372468211,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.776,
+      "salience": 0.775,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -2593,11 +2593,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1790356806120,
+    "ts": 1790372468211,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.734,
+      "salience": 0.733,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3121,7 +3121,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1790356806120,
+    "ts": 1790372468211,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
@@ -4022,7 +4022,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1790356806119,
+    "ts": 1790372468210,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
@@ -4276,11 +4276,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1790356806119,
+    "ts": 1790372468210,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.544,
+      "salience": 0.543,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -4549,11 +4549,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1790356806120,
+    "ts": 1790372468211,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.519,
+      "salience": 0.518,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5448,11 +5448,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1790356806119,
+    "ts": 1790372468211,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.506,
+      "salience": 0.505,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6727,11 +6727,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1790356806120,
+    "ts": 1790372468211,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.426,
+      "salience": 0.425,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7647,7 +7647,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1790356806120,
+    "ts": 1790372468212,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
@@ -8557,11 +8557,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1790356806120,
+    "ts": 1790372468211,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.39,
+      "salience": 0.389,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9475,11 +9475,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1790356806120,
+    "ts": 1790372468211,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.347,
+      "salience": 0.346,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10355,11 +10355,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1790356806120,
+    "ts": 1790372468211,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.342,
+      "salience": 0.341,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11231,11 +11231,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1790356806119,
+    "ts": 1790372468210,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.15,
+      "salience": 0.149,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -12124,11 +12124,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1790356806119,
+    "ts": 1790372468210,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.143,
+      "salience": 0.142,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -13039,11 +13039,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1790356806119,
+    "ts": 1790372468210,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.137,
+      "salience": 0.136,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -13927,11 +13927,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1790356806119,
+    "ts": 1790372468210,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.132,
+      "salience": 0.131,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -14848,11 +14848,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1790356806119,
+    "ts": 1790372468210,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.121,
+      "salience": 0.12,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -15766,12 +15766,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_gas-halt-iran",
     "source": "news",
-    "ts": 1790356821848,
+    "ts": 1790372482764,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.924,
+      "salience": 0.897,
       "articles": [
         {
           "title": "Senate rejects resolution to halt the Iran war as gas prices upend midterms",
@@ -15872,12 +15872,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballroom-battles-defense",
     "source": "news",
-    "ts": 1790356821848,
+    "ts": 1790372482764,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.751,
+      "salience": 0.724,
       "articles": [
         {
           "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
@@ -15978,12 +15978,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_brief-edt-news",
     "source": "news",
-    "ts": 1790356821849,
+    "ts": 1790372482764,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.715,
+      "salience": 0.688,
       "articles": [
         {
           "title": "AP News Summary at 11 : 52 p . m . EDT",
@@ -16070,12 +16070,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_congressional-court-map",
     "source": "news",
-    "ts": 1790356821849,
+    "ts": 1790372482765,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.682,
+      "salience": 0.655,
       "articles": [
         {
           "title": "Trump - backed Missouri congressional map returns to the Supreme Court for the third time",
@@ -16176,12 +16176,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_400-biden-did",
     "source": "news",
-    "ts": 1790356821849,
+    "ts": 1790372482764,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.677,
+      "salience": 0.649,
       "articles": [
         {
           "title": "FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists",
@@ -16247,12 +16247,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_iran-powers-resolution",
     "source": "news",
-    "ts": 1790356821848,
+    "ts": 1790372482764,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.645,
+      "salience": 0.618,
       "articles": [
         {
           "title": "Senate set to vote on resolution targeting Trump Iran war powers",
@@ -16309,89 +16309,47 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_coffers-facing-headwinds",
+    "cid": "cand_news_american-claiming-group",
     "source": "news",
-    "ts": 1790356821849,
+    "ts": 1790372482765,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.596,
+      "salience": 0.524,
       "articles": [
         {
-          "title": "Facing political headwinds , Republicans open up their coffers",
-          "url": "https://nbcmontana.com/news/beyond-the-podium/facing-political-headwinds-republicans-open-up-their-coffers-midterm-elections-inflation-economy-gas-prices-congress-majority",
-          "domain": "nbcmontana.com",
-          "seendate": "2026-09-23T00:45:00Z",
-          "image": "https://nbcmontana.com/resources/media2/16x9/5661/1320/0x355/90/be75c083-3d8d-44d7-927d-d4c114925a2d-GettyImages2295660832.jpg"
+          "title": "Iranian - American group sues Trump , claiming Iran war is unconstitutional",
+          "url": "https://www.kshb.com/us-news/iran-war/iranian-american-group-sues-trump-claiming-iran-war-is-unconstitutional-without-congressional-approval",
+          "domain": "kshb.com",
+          "seendate": "2026-09-24T22:15:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/22/dd/940c34914a0486c84af6e1782094/ap26239609489882.jpg"
         },
         {
-          "title": "Facing political headwinds , Republicans open up their coffers",
-          "url": "https://abc6onyourside.com/news/nation-world/facing-political-headwinds-republicans-open-up-their-coffers-midterm-elections-inflation-economy-gas-prices-congress-majority",
-          "domain": "abc6onyourside.com",
-          "seendate": "2026-09-22T22:45:00Z",
-          "image": "https://abc6onyourside.com/resources/media2/16x9/5661/1320/0x355/90/be75c083-3d8d-44d7-927d-d4c114925a2d-GettyImages2295660832.jpg"
+          "title": "Iranian - American group sues Trump , claiming Iran war is unconstitutional",
+          "url": "https://www.ksby.com/us-news/iran-war/iranian-american-group-sues-trump-claiming-iran-war-is-unconstitutional-without-congressional-approval",
+          "domain": "ksby.com",
+          "seendate": "2026-09-24T22:15:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/22/dd/940c34914a0486c84af6e1782094/ap26239609489882.jpg"
         },
         {
-          "title": "Facing political headwinds , Republicans open up their coffers",
-          "url": "https://cbs12.com/news/connect-to-congress/facing-political-headwinds-republicans-open-up-their-coffers-midterm-elections-inflation-economy-gas-prices-congress-majority",
-          "domain": "cbs12.com",
-          "seendate": "2026-09-22T22:45:00Z",
-          "image": "https://cbs12.com/resources/media2/16x9/5661/1320/0x355/90/be75c083-3d8d-44d7-927d-d4c114925a2d-GettyImages2295660832.jpg"
+          "title": "Iranian - American group sues Trump , claiming Iran war is unconstitutional",
+          "url": "https://www.wxyz.com/us-news/iran-war/iranian-american-group-sues-trump-claiming-iran-war-is-unconstitutional-without-congressional-approval",
+          "domain": "wxyz.com",
+          "seendate": "2026-09-24T22:00:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/22/dd/940c34914a0486c84af6e1782094/ap26239609489882.jpg"
         },
         {
-          "title": "Facing political headwinds , Republicans open up their coffers",
-          "url": "https://upnorthlive.com/news/connect-to-congress/facing-political-headwinds-republicans-open-up-their-coffers-midterm-elections-inflation-economy-gas-prices-congress-majority",
-          "domain": "upnorthlive.com",
-          "seendate": "2026-09-22T22:45:00Z",
-          "image": "https://upnorthlive.com/resources/media2/16x9/5661/1320/0x355/90/be75c083-3d8d-44d7-927d-d4c114925a2d-GettyImages2295660832.jpg"
-        },
-        {
-          "title": "Facing political headwinds , Republicans open up their coffers",
-          "url": "https://wjla.com/news/connect-to-congress/facing-political-headwinds-republicans-open-up-their-coffers-midterm-elections-inflation-economy-gas-prices-congress-majority",
-          "domain": "wjla.com",
-          "seendate": "2026-09-22T22:15:00Z",
-          "image": "https://wjla.com/resources/media2/16x9/5661/1320/0x355/90/be75c083-3d8d-44d7-927d-d4c114925a2d-GettyImages2295660832.jpg"
-        },
-        {
-          "title": "Facing political headwinds , Republicans open up their coffers",
-          "url": "https://13wham.com/news/connect-to-congress/facing-political-headwinds-republicans-open-up-their-coffers-midterm-elections-inflation-economy-gas-prices-congress-majority",
-          "domain": "13wham.com",
-          "seendate": "2026-09-22T20:45:00Z",
-          "image": "https://13wham.com/resources/media2/16x9/5661/1320/0x355/90/be75c083-3d8d-44d7-927d-d4c114925a2d-GettyImages2295660832.jpg"
-        },
-        {
-          "title": "Facing political headwinds , Republicans open up their coffers",
-          "url": "https://wset.com/news/nation-world/facing-political-headwinds-republicans-open-up-their-coffers-midterm-elections-inflation-economy-gas-prices-congress-majority",
-          "domain": "wset.com",
-          "seendate": "2026-09-22T20:15:00Z",
-          "image": "https://wset.com/resources/media2/16x9/5661/1320/0x355/90/be75c083-3d8d-44d7-927d-d4c114925a2d-GettyImages2295660832.jpg"
-        },
-        {
-          "title": "Facing political headwinds , Republicans open up their coffers",
-          "url": "https://wsbt.com/news/connect-to-congress/facing-political-headwinds-republicans-open-up-their-coffers-midterm-elections-inflation-economy-gas-prices-congress-majority",
-          "domain": "wsbt.com",
-          "seendate": "2026-09-22T20:15:00Z",
-          "image": "https://wsbt.com/resources/media2/16x9/5661/1320/0x355/90/be75c083-3d8d-44d7-927d-d4c114925a2d-GettyImages2295660832.jpg"
-        },
-        {
-          "title": "Facing political headwinds , Republicans open up their coffers",
-          "url": "https://kfdm.com/news/beyond-the-podium/facing-political-headwinds-republicans-open-up-their-coffers-midterm-elections-inflation-economy-gas-prices-congress-majority",
-          "domain": "kfdm.com",
-          "seendate": "2026-09-22T20:15:00Z",
-          "image": "https://kfdm.com/resources/media2/16x9/5661/1320/0x355/90/be75c083-3d8d-44d7-927d-d4c114925a2d-GettyImages2295660832.jpg"
-        },
-        {
-          "title": "Facing political headwinds , Republicans open up their coffers",
-          "url": "https://fox11online.com/news/nation-world/facing-political-headwinds-republicans-open-up-their-coffers-midterm-elections-inflation-economy-gas-prices-congress-majority",
-          "domain": "fox11online.com",
-          "seendate": "2026-09-22T20:15:00Z",
-          "image": "https://fox11online.com/resources/media2/16x9/5661/1320/0x355/90/be75c083-3d8d-44d7-927d-d4c114925a2d-GettyImages2295660832.jpg"
+          "title": "Iranian - American group sues Trump , claiming Iran war is unconstitutional",
+          "url": "https://www.wtvr.com/us-news/iran-war/iranian-american-group-sues-trump-claiming-iran-war-is-unconstitutional-without-congressional-approval",
+          "domain": "wtvr.com",
+          "seendate": "2026-09-24T21:30:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/22/dd/940c34914a0486c84af6e1782094/ap26239609489882.jpg"
         }
       ]
     },
-    "title": "Facing political headwinds , Republicans open up their coffers",
-    "summary": "2026-09-23 nbcmontana.com: Facing political headwinds , Republicans open up their coffers\n2026-09-22 abc6onyourside.com: Facing political headwinds , Republicans open up their coffers\n2026-09-22 cbs12.com: Facing political headwinds , Republicans open up their coffers\n2026-09-22 upnorthlive.com: Facing political headwinds , Republicans open up their coffers\n2026-09-22 wjla.com: Facing political headwinds , Republicans open up their coffers\n2026-09-22 13wham.com: Facing political headwinds , Republicans open up their coffers",
+    "title": "Iranian - American group sues Trump , claiming Iran war is unconstitutional",
+    "summary": "2026-09-24 kshb.com: Iranian - American group sues Trump , claiming Iran war is unconstitutional\n2026-09-24 ksby.com: Iranian - American group sues Trump , claiming Iran war is unconstitutional\n2026-09-24 wxyz.com: Iranian - American group sues Trump , claiming Iran war is unconstitutional\n2026-09-24 wtvr.com: Iranian - American group sues Trump , claiming Iran war is unconstitutional",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -16403,12 +16361,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_beyond-credentials-house",
     "source": "news",
-    "ts": 1790356821849,
+    "ts": 1790372482764,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.549,
+      "salience": 0.522,
       "articles": [
         {
           "title": "The intricacies of press credentials , at the White House and beyond - LocalNews8 . com",
@@ -16453,12 +16411,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_bass-dinner-diplomacy",
     "source": "news",
-    "ts": 1790356821849,
+    "ts": 1790372482764,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.51,
+      "salience": 0.483,
       "articles": [
         {
           "title": "The Latest : Trump - Xi state dinner expected to include tech titans , sea bass and glitzy diplomacy",
@@ -16494,83 +16452,54 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_american-claiming-group",
+    "cid": "cand_news_coffers-facing-headwinds",
     "source": "news",
-    "ts": 1790356821849,
+    "ts": 1790372482764,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.496,
+      "salience": 0.294,
       "articles": [
         {
-          "title": "Iranian - American group sues Trump , claiming Iran war is unconstitutional",
-          "url": "https://www.kshb.com/us-news/iran-war/iranian-american-group-sues-trump-claiming-iran-war-is-unconstitutional-without-congressional-approval",
-          "domain": "kshb.com",
-          "seendate": "2026-09-24T22:15:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/22/dd/940c34914a0486c84af6e1782094/ap26239609489882.jpg"
+          "title": "Facing political headwinds , Republicans open up their coffers",
+          "url": "https://nbcmontana.com/news/beyond-the-podium/facing-political-headwinds-republicans-open-up-their-coffers-midterm-elections-inflation-economy-gas-prices-congress-majority",
+          "domain": "nbcmontana.com",
+          "seendate": "2026-09-23T00:45:00Z",
+          "image": "https://nbcmontana.com/resources/media2/16x9/5661/1320/0x355/90/be75c083-3d8d-44d7-927d-d4c114925a2d-GettyImages2295660832.jpg"
         },
         {
-          "title": "Iranian - American group sues Trump , claiming Iran war is unconstitutional",
-          "url": "https://www.wxyz.com/us-news/iran-war/iranian-american-group-sues-trump-claiming-iran-war-is-unconstitutional-without-congressional-approval",
-          "domain": "wxyz.com",
-          "seendate": "2026-09-24T22:00:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/22/dd/940c34914a0486c84af6e1782094/ap26239609489882.jpg"
+          "title": "Facing political headwinds , Republicans open up their coffers",
+          "url": "https://abc6onyourside.com/news/nation-world/facing-political-headwinds-republicans-open-up-their-coffers-midterm-elections-inflation-economy-gas-prices-congress-majority",
+          "domain": "abc6onyourside.com",
+          "seendate": "2026-09-22T22:45:00Z",
+          "image": "https://abc6onyourside.com/resources/media2/16x9/5661/1320/0x355/90/be75c083-3d8d-44d7-927d-d4c114925a2d-GettyImages2295660832.jpg"
         },
         {
-          "title": "Iranian - American group sues Trump , claiming Iran war is unconstitutional",
-          "url": "https://www.wtvr.com/us-news/iran-war/iranian-american-group-sues-trump-claiming-iran-war-is-unconstitutional-without-congressional-approval",
-          "domain": "wtvr.com",
-          "seendate": "2026-09-24T21:30:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/22/dd/940c34914a0486c84af6e1782094/ap26239609489882.jpg"
-        }
-      ]
-    },
-    "title": "Iranian - American group sues Trump , claiming Iran war is unconstitutional",
-    "summary": "2026-09-24 kshb.com: Iranian - American group sues Trump , claiming Iran war is unconstitutional\n2026-09-24 wxyz.com: Iranian - American group sues Trump , claiming Iran war is unconstitutional\n2026-09-24 wtvr.com: Iranian - American group sues Trump , claiming Iran war is unconstitutional",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_440-allies-bans",
-    "source": "news",
-    "ts": 1790356821849,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.196,
-      "articles": [
+          "title": "Facing political headwinds , Republicans open up their coffers",
+          "url": "https://cbs12.com/news/connect-to-congress/facing-political-headwinds-republicans-open-up-their-coffers-midterm-elections-inflation-economy-gas-prices-congress-majority",
+          "domain": "cbs12.com",
+          "seendate": "2026-09-22T22:45:00Z",
+          "image": "https://cbs12.com/resources/media2/16x9/5661/1320/0x355/90/be75c083-3d8d-44d7-927d-d4c114925a2d-GettyImages2295660832.jpg"
+        },
         {
-          "title": "Did Biden revoke 440 press passes ? Fact - checking Trump allies after White House bans news outlets",
-          "url": "https://www.wmur.com/article/biden-press-passes-trump-faceb-check/73839505",
-          "domain": "wmur.com",
+          "title": "Facing political headwinds , Republicans open up their coffers",
+          "url": "https://upnorthlive.com/news/connect-to-congress/facing-political-headwinds-republicans-open-up-their-coffers-midterm-elections-inflation-economy-gas-prices-congress-majority",
+          "domain": "upnorthlive.com",
+          "seendate": "2026-09-22T22:45:00Z",
+          "image": "https://upnorthlive.com/resources/media2/16x9/5661/1320/0x355/90/be75c083-3d8d-44d7-927d-d4c114925a2d-GettyImages2295660832.jpg"
+        },
+        {
+          "title": "Facing political headwinds , Republicans open up their coffers",
+          "url": "https://wjla.com/news/connect-to-congress/facing-political-headwinds-republicans-open-up-their-coffers-midterm-elections-inflation-economy-gas-prices-congress-majority",
+          "domain": "wjla.com",
           "seendate": "2026-09-22T22:15:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/76210bfb-e07d-4855-bd88-f38167f67f69.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
-        },
-        {
-          "title": "Did Biden revoke 440 press passes ? Fact - checking Trump allies after White House bans news outlets",
-          "url": "https://www.kcci.com/article/biden-press-passes-trump-faceb-check/73839505",
-          "domain": "kcci.com",
-          "seendate": "2026-09-22T20:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/76210bfb-e07d-4855-bd88-f38167f67f69.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
-        },
-        {
-          "title": "Did Biden revoke 440 press passes ? Fact - checking Trump allies after White House bans news outlets",
-          "url": "https://www.wxii12.com/article/biden-press-passes-trump-faceb-check/73839505",
-          "domain": "wxii12.com",
-          "seendate": "2026-09-22T20:15:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/76210bfb-e07d-4855-bd88-f38167f67f69.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
+          "image": "https://wjla.com/resources/media2/16x9/5661/1320/0x355/90/be75c083-3d8d-44d7-927d-d4c114925a2d-GettyImages2295660832.jpg"
         }
       ]
     },
-    "title": "Did Biden revoke 440 press passes ? Fact - checking Trump allies after White House bans news outlets",
-    "summary": "2026-09-22 wmur.com: Did Biden revoke 440 press passes ? Fact - checking Trump allies after White House bans news outlets\n2026-09-22 kcci.com: Did Biden revoke 440 press passes ? Fact - checking Trump allies after White House bans news outlets\n2026-09-22 wxii12.com: Did Biden revoke 440 press passes ? Fact - checking Trump allies after White House bans news outlets",
+    "title": "Facing political headwinds , Republicans open up their coffers",
+    "summary": "2026-09-23 nbcmontana.com: Facing political headwinds , Republicans open up their coffers\n2026-09-22 abc6onyourside.com: Facing political headwinds , Republicans open up their coffers\n2026-09-22 cbs12.com: Facing political headwinds , Republicans open up their coffers\n2026-09-22 upnorthlive.com: Facing political headwinds , Republicans open up their coffers\n2026-09-22 wjla.com: Facing political headwinds , Republicans open up their coffers",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
