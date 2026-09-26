@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-09-26T11:35:08.692Z · 19 legislative + 10 news (GDELT, 3d)
+// 2026-09-26T21:18:46.231Z · 19 legislative + 10 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1790422489886,
+    "ts": 1790457473029,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.843,
+      "salience": 0.841,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -1423,11 +1423,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1790422489886,
+    "ts": 1790457473029,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.835,
+      "salience": 0.833,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -1680,11 +1680,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1790422489886,
+    "ts": 1790457473029,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.772,
+      "salience": 0.771,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -2593,11 +2593,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1790422489886,
+    "ts": 1790457473030,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.731,
+      "salience": 0.729,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3121,11 +3121,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1790422489886,
+    "ts": 1790457473029,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.708,
+      "salience": 0.706,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4022,11 +4022,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1790422489885,
+    "ts": 1790457473028,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.549,
+      "salience": 0.547,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -4276,11 +4276,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1790422489885,
+    "ts": 1790457473028,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.54,
+      "salience": 0.538,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -4549,11 +4549,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1790422489886,
+    "ts": 1790457473029,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.515,
+      "salience": 0.513,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5448,11 +5448,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1790422489886,
+    "ts": 1790457473029,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.503,
+      "salience": 0.501,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6727,11 +6727,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1790422489886,
+    "ts": 1790457473030,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.422,
+      "salience": 0.421,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7647,11 +7647,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1790422489886,
+    "ts": 1790457473030,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.421,
+      "salience": 0.419,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -8557,11 +8557,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1790422489886,
+    "ts": 1790457473029,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.386,
+      "salience": 0.385,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9475,11 +9475,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1790422489886,
+    "ts": 1790457473029,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.343,
+      "salience": 0.341,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10355,11 +10355,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1790422489886,
+    "ts": 1790457473029,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.339,
+      "salience": 0.337,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11231,11 +11231,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1790422489885,
+    "ts": 1790457473029,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.147,
+      "salience": 0.145,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -12124,11 +12124,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1790422489886,
+    "ts": 1790457473029,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.14,
+      "salience": 0.138,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -13039,11 +13039,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1790422489885,
+    "ts": 1790457473029,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.133,
+      "salience": 0.131,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -13927,11 +13927,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1790422489885,
+    "ts": 1790457473028,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.129,
+      "salience": 0.127,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -14848,11 +14848,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1790422489885,
+    "ts": 1790457473028,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.117,
+      "salience": 0.116,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -15766,12 +15766,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_halt-iran-midterms",
     "source": "news",
-    "ts": 1790422508687,
+    "ts": 1790457526225,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.837,
+      "salience": 0.776,
       "articles": [
         {
           "title": "Senate again rejects resolution to halt Iran war as rising fuel prices upend midterms",
@@ -15870,120 +15870,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_ballroom-battles-defense",
-    "source": "news",
-    "ts": 1790422508687,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.637,
-      "articles": [
-        {
-          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
-          "url": "https://www.sandiegouniontribune.com/2026/09/23/preservation-fund/",
-          "domain": "sandiegouniontribune.com",
-          "seendate": "2026-09-24T01:30:00Z",
-          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/09/Trump_White_House_36734-1.jpg"
-        },
-        {
-          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
-          "url": "https://www.wdio.com/ap-top-news/preservation-group-launches-legal-defense-fund-as-it-battles-trump-over-ballroom-and-other-projects/",
-          "domain": "wdio.com",
-          "seendate": "2026-09-24T01:00:00Z",
-          "image": "https://www.wdio.com/wp-content/uploads/apimg/2026/09/Trump_White_House_36734.jpg"
-        },
-        {
-          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
-          "url": "https://www.bostonherald.com/2026/09/23/preservation-fund/",
-          "domain": "bostonherald.com",
-          "seendate": "2026-09-24T00:00:00Z",
-          "image": "https://www.bostonherald.com/wp-content/uploads/2026/09/Trump_White_House_36734-1.jpg"
-        },
-        {
-          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
-          "url": "https://www.sun-sentinel.com/2026/09/23/preservation-fund/",
-          "domain": "sun-sentinel.com",
-          "seendate": "2026-09-23T21:30:00Z",
-          "image": "https://www.sun-sentinel.com/wp-content/uploads/2026/09/Trump_White_House_36734-1.jpg"
-        },
-        {
-          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
-          "url": "https://www.pilotonline.com/2026/09/23/preservation-fund/",
-          "domain": "pilotonline.com",
-          "seendate": "2026-09-23T21:30:00Z",
-          "image": "https://www.pilotonline.com/wp-content/uploads/2026/09/Trump_White_House_36734-1.jpg"
-        },
-        {
-          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
-          "url": "https://abcnews.com/US/wireStory/preservation-group-launches-legal-defense-fund-battles-trump-136696953",
-          "domain": "abcnews.com",
-          "seendate": "2026-09-23T21:30:00Z",
-          "image": "https://i.abcnewsfe.com/a/369920c5-5db6-4631-a77d-460db73afb0a/wirestory_39c7d01c6456892f7a3fe920a6e46869_16x9.jpg"
-        },
-        {
-          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
-          "url": "https://www.mercurynews.com/2026/09/23/preservation-fund/",
-          "domain": "mercurynews.com",
-          "seendate": "2026-09-23T21:15:00Z",
-          "image": "https://www.mercurynews.com/wp-content/uploads/2026/09/Trump_White_House_36734-1.jpg"
-        },
-        {
-          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects - Las Vegas Sun News",
-          "url": "https://lasvegassun.com/news/2026/sep/23/preservation-group-launches-legal-defense-fund-as-/",
-          "domain": "lasvegassun.com",
-          "seendate": "2026-09-23T21:15:00Z",
-          "image": null
-        },
-        {
-          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
-          "url": "https://www.clickorlando.com/news/politics/2026/09/23/preservation-group-launches-legal-defense-fund-as-it-battles-trump-over-ballroom-and-other-projects/",
-          "domain": "clickorlando.com",
-          "seendate": "2026-09-23T21:00:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/CN4IMXBGL5HTXCBRHUDZG6TZUU.jpg?api_key=clickorlando_488cff2bcc157b2e"
-        },
-        {
-          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
-          "url": "https://www.orlandosentinel.com/2026/09/23/preservation-fund/",
-          "domain": "orlandosentinel.com",
-          "seendate": "2026-09-23T21:00:00Z",
-          "image": "https://www.orlandosentinel.com/wp-content/uploads/2026/09/Trump_White_House_36734-1.jpg"
-        },
-        {
-          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
-          "url": "https://www.courant.com/2026/09/23/preservation-fund/",
-          "domain": "courant.com",
-          "seendate": "2026-09-23T21:00:00Z",
-          "image": "https://www.courant.com/wp-content/uploads/2026/09/Trump_White_House_36734-1.jpg"
-        },
-        {
-          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
-          "url": "https://www.citizensvoice.com/2026/09/23/preservation-fund/",
-          "domain": "citizensvoice.com",
-          "seendate": "2026-09-23T21:00:00Z",
-          "image": "https://www.citizensvoice.com/wp-content/uploads/2026/09/Trump_White_House_36734-1.jpg"
-        }
-      ]
-    },
-    "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
-    "summary": "2026-09-24 sandiegouniontribune.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-24 wdio.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-24 bostonherald.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-23 sun-sentinel.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-23 pilotonline.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-23 abcnews.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_brief-edt-news",
     "source": "news",
-    "ts": 1790422508687,
+    "ts": 1790457526225,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.601,
+      "salience": 0.651,
       "articles": [
         {
           "title": "AP News Summary at 11 : 52 p . m . EDT",
@@ -16002,6 +15896,13 @@ window.PRISM_CANDIDATES = [
         {
           "title": "AP News Summary at 1 : 41 a . m . EDT",
           "url": "http://www.hngnews.com/nation_world/ap-news-summary-at-1-41-a-m-edt/article_ea766f46-d0c6-5fbb-8e54-ee36a08fbdac.html",
+          "domain": "hngnews.com",
+          "seendate": "2026-09-25T07:00:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/hngnews.com/content/tncms/custom/image/ab050ce8-ef00-11eb-9947-3fa732d15a79.jpg"
+        },
+        {
+          "title": "AP News in Brief at 12 : 04 a . m . EDT",
+          "url": "http://www.hngnews.com/nation_world/ap-news-in-brief-at-12-04-a-m-edt/article_18c22fc7-9ed7-5928-b058-ccee32cfa0b6.html",
           "domain": "hngnews.com",
           "seendate": "2026-09-25T07:00:00Z",
           "image": "https://bloximages.newyork1.vip.townnews.com/hngnews.com/content/tncms/custom/image/ab050ce8-ef00-11eb-9947-3fa732d15a79.jpg"
@@ -16042,23 +15943,30 @@ window.PRISM_CANDIDATES = [
           "image": null
         },
         {
+          "title": "AP News in Brief at 12 : 04 a . m . EDT",
+          "url": "http://www.wdtimes.com/news/national/ap-news-in-brief-at-12-04-a-m-edt/article_f6385ef2-343d-59a6-acf9-3fec26643f63.html",
+          "domain": "wdtimes.com",
+          "seendate": "2026-09-25T05:15:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/wdtimes.com/content/tncms/custom/image/ce798cda-eee7-11eb-8bec-bb1141083add.jpg"
+        },
+        {
+          "title": "AP News in Brief at 9 : 04 p . m . EDT",
+          "url": "https://santamariatimes.com/ap/national/ap-news-in-brief-at-9-04-p-m-edt/article_2350c7d8-b3cb-50c4-b5ae-f774c747293f.html",
+          "domain": "santamariatimes.com",
+          "seendate": "2026-09-25T01:45:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/santamariatimes.com/content/tncms/custom/image/b9c888ca-59a2-11eb-a31f-0b4d74fa96dc.jpg"
+        },
+        {
           "title": "AP News in Brief at 6 : 04 p . m . EDT",
           "url": "http://www.idahostatejournal.com/news/national/ap-news-in-brief-at-6-04-p-m-edt/article_462469b1-f714-58de-8ade-6f17549104af.html",
           "domain": "idahostatejournal.com",
           "seendate": "2026-09-24T23:00:00Z",
           "image": null
-        },
-        {
-          "title": "AP News Summary at 4 : 19 p . m . EDT",
-          "url": "https://www.cadillacnews.com/ap/national/ap-news-summary-at-4-19-p-m-edt/article_893f9827-10f3-5e2e-8a2c-f4c2f1dec733.html",
-          "domain": "cadillacnews.com",
-          "seendate": "2026-09-24T20:45:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/cadillacnews.com/content/tncms/custom/image/b45cec82-e266-4ee5-8309-6a16877bc51b.png"
         }
       ]
     },
     "title": "AP News in Brief at 12 : 04 a . m . EDT",
-    "summary": "2026-09-25 mykxlg.com: AP News Summary at 11 : 52 p . m . EDT\n2026-09-25 mykxlg.com: AP News Summary at 1 : 41 a . m . EDT\n2026-09-25 hngnews.com: AP News Summary at 1 : 41 a . m . EDT\n2026-09-25 cecildaily.com: AP News Summary at 1 : 05 a . m . EDT\n2026-09-25 thegazette.com: AP News in Brief at 12 : 04 a . m . EDT\n2026-09-25 thegazette.com: AP News in Brief at 11 : 04 p . m . EDT",
+    "summary": "2026-09-25 mykxlg.com: AP News Summary at 11 : 52 p . m . EDT\n2026-09-25 mykxlg.com: AP News Summary at 1 : 41 a . m . EDT\n2026-09-25 hngnews.com: AP News Summary at 1 : 41 a . m . EDT\n2026-09-25 hngnews.com: AP News in Brief at 12 : 04 a . m . EDT\n2026-09-25 cecildaily.com: AP News Summary at 1 : 05 a . m . EDT\n2026-09-25 thegazette.com: AP News in Brief at 12 : 04 a . m . EDT",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -16070,12 +15978,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_400-biden-did",
     "source": "news",
-    "ts": 1790422508687,
+    "ts": 1790457526225,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.563,
+      "salience": 0.557,
       "articles": [
         {
           "title": "FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists",
@@ -16107,6 +16015,20 @@ window.PRISM_CANDIDATES = [
         },
         {
           "title": "FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists",
+          "url": "https://www.mainlinemedianews.com/2026/09/23/biden-media-ban-fact-focus/",
+          "domain": "mainlinemedianews.com",
+          "seendate": "2026-09-23T22:00:00Z",
+          "image": "https://www.mainlinemedianews.com/wp-content/uploads/2026/09/Trump_News_Media_9_661_5bb317-1.jpg"
+        },
+        {
+          "title": "FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists",
+          "url": "https://www.mendocinobeacon.com/2026/09/23/biden-media-ban-fact-focus/",
+          "domain": "mendocinobeacon.com",
+          "seendate": "2026-09-23T22:00:00Z",
+          "image": null
+        },
+        {
+          "title": "FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists",
           "url": "https://www.sun-sentinel.com/2026/09/23/biden-media-ban-fact-focus/",
           "domain": "sun-sentinel.com",
           "seendate": "2026-09-23T21:30:00Z",
@@ -16118,18 +16040,11 @@ window.PRISM_CANDIDATES = [
           "domain": "pilotonline.com",
           "seendate": "2026-09-23T21:30:00Z",
           "image": "https://www.pilotonline.com/wp-content/uploads/2026/09/Trump_News_Media_9_661_5bb317-1.jpg"
-        },
-        {
-          "title": "FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists",
-          "url": "http://www.idahopress.com/ap_news/us/fact-focus-no-biden-did-not-revoke-the-white-house-press-passes-of-more-than/article_90b44a31-3015-54dd-8e58-7e3578200657.html",
-          "domain": "idahopress.com",
-          "seendate": "2026-09-23T21:00:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/idahopress.com/content/tncms/assets/v3/editorial/0/25/025117bc-347b-5f49-918c-324229d32254/6ab11709ec760.image.jpg?crop=1763%2C926%2C0%2C124"
         }
       ]
     },
     "title": "FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists",
-    "summary": "2026-09-24 mercurynews.com: FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists\n2026-09-24 dailypress.com: FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists\n2026-09-23 orlandosentinel.com: FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists\n2026-09-23 courant.com: FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists\n2026-09-23 sun-sentinel.com: FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists\n2026-09-23 pilotonline.com: FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists",
+    "summary": "2026-09-24 mercurynews.com: FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists\n2026-09-24 dailypress.com: FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists\n2026-09-23 orlandosentinel.com: FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists\n2026-09-23 courant.com: FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists\n2026-09-23 mainlinemedianews.com: FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists\n2026-09-23 mendocinobeacon.com: FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -16141,12 +16056,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_iran-powers-resolution",
     "source": "news",
-    "ts": 1790422508687,
+    "ts": 1790457526225,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.531,
+      "salience": 0.47,
       "articles": [
         {
           "title": "Senate set to vote on resolution targeting Trump Iran war powers",
@@ -16205,12 +16120,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_american-claiming-group",
     "source": "news",
-    "ts": 1790422508688,
+    "ts": 1790457526226,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.492,
+      "salience": 0.431,
       "articles": [
         {
           "title": "Iranian - American group sues Trump , claiming Iran war is unconstitutional",
@@ -16260,14 +16175,85 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_halt-help-iran",
+    "cid": "cand_news_break-fuel-iran",
     "source": "news",
-    "ts": 1790422508688,
+    "ts": 1790457526226,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.46,
+      "salience": 0.402,
+      "articles": [
+        {
+          "title": "Rising fuel prices push Republicans in tight races to break with Trump on Iran",
+          "url": "https://wcyb.com/news/nation-world/rising-fuel-prices-push-republicans-in-tight-races-to-break-with-trump-on-iran-gas-prices-war-powers-resolution-midterm-elections",
+          "domain": "wcyb.com",
+          "seendate": "2026-09-24T00:00:00Z",
+          "image": "https://wcyb.com/resources/media2/16x9/6314/1320/0x329/90/8faf3f10-95b1-4faa-9e9a-c266fb45602a-GettyImages2296577666.jpg"
+        },
+        {
+          "title": "Rising fuel prices push Republicans in tight races to break with Trump on Iran",
+          "url": "https://kfdm.com/news/beyond-the-podium/rising-fuel-prices-push-republicans-in-tight-races-to-break-with-trump-on-iran-gas-prices-war-powers-resolution-midterm-elections",
+          "domain": "kfdm.com",
+          "seendate": "2026-09-24T00:00:00Z",
+          "image": "https://kfdm.com/resources/media2/16x9/6314/1320/0x329/90/8faf3f10-95b1-4faa-9e9a-c266fb45602a-GettyImages2296577666.jpg"
+        },
+        {
+          "title": "Rising fuel prices push Republicans in tight races to break with Trump on Iran",
+          "url": "https://abc6onyourside.com/news/nation-world/rising-fuel-prices-push-republicans-in-tight-races-to-break-with-trump-on-iran-gas-prices-war-powers-resolution-midterm-elections",
+          "domain": "abc6onyourside.com",
+          "seendate": "2026-09-23T22:45:00Z",
+          "image": "https://abc6onyourside.com/resources/media2/16x9/6314/1320/0x329/90/8faf3f10-95b1-4faa-9e9a-c266fb45602a-GettyImages2296577666.jpg"
+        },
+        {
+          "title": "Rising fuel prices push Republicans in tight races to break with Trump on Iran",
+          "url": "https://upnorthlive.com/news/connect-to-congress/rising-fuel-prices-push-republicans-in-tight-races-to-break-with-trump-on-iran-gas-prices-war-powers-resolution-midterm-elections",
+          "domain": "upnorthlive.com",
+          "seendate": "2026-09-23T22:45:00Z",
+          "image": "https://upnorthlive.com/resources/media2/16x9/6314/1320/0x329/90/8faf3f10-95b1-4faa-9e9a-c266fb45602a-GettyImages2296577666.jpg"
+        },
+        {
+          "title": "Rising fuel prices push Republicans in tight races to break with Trump on Iran",
+          "url": "https://turnto10.com/news/beyond-the-podium/rising-fuel-prices-push-republicans-in-tight-races-to-break-with-trump-on-iran-gas-prices-war-powers-resolution-midterm-elections",
+          "domain": "turnto10.com",
+          "seendate": "2026-09-23T22:15:00Z",
+          "image": "https://turnto10.com/resources/media2/16x9/6314/1320/0x329/90/8faf3f10-95b1-4faa-9e9a-c266fb45602a-GettyImages2296577666.jpg"
+        },
+        {
+          "title": "Rising fuel prices push Republicans in tight races to break with Trump on Iran",
+          "url": "https://wpde.com/news/beyond-the-podium/rising-fuel-prices-push-republicans-in-tight-races-to-break-with-trump-on-iran-gas-prices-war-powers-resolution-midterm-elections",
+          "domain": "wpde.com",
+          "seendate": "2026-09-23T21:45:00Z",
+          "image": "https://wpde.com/resources/media2/16x9/6314/1320/0x329/90/8faf3f10-95b1-4faa-9e9a-c266fb45602a-GettyImages2296577666.jpg"
+        },
+        {
+          "title": "Rising fuel prices push Republicans in tight races to break with Trump on Iran",
+          "url": "https://news3lv.com/news/connect-to-congress/rising-fuel-prices-push-republicans-in-tight-races-to-break-with-trump-on-iran-gas-prices-war-powers-resolution-midterm-elections",
+          "domain": "news3lv.com",
+          "seendate": "2026-09-23T21:30:00Z",
+          "image": "https://news3lv.com/resources/media2/16x9/6314/1320/0x329/90/8faf3f10-95b1-4faa-9e9a-c266fb45602a-GettyImages2296577666.jpg"
+        }
+      ]
+    },
+    "title": "Rising fuel prices push Republicans in tight races to break with Trump on Iran",
+    "summary": "2026-09-24 wcyb.com: Rising fuel prices push Republicans in tight races to break with Trump on Iran\n2026-09-24 kfdm.com: Rising fuel prices push Republicans in tight races to break with Trump on Iran\n2026-09-23 abc6onyourside.com: Rising fuel prices push Republicans in tight races to break with Trump on Iran\n2026-09-23 upnorthlive.com: Rising fuel prices push Republicans in tight races to break with Trump on Iran\n2026-09-23 turnto10.com: Rising fuel prices push Republicans in tight races to break with Trump on Iran\n2026-09-23 wpde.com: Rising fuel prices push Republicans in tight races to break with Trump on Iran",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_halt-help-iran",
+    "source": "news",
+    "ts": 1790457526226,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.399,
       "articles": [
         {
           "title": "Moran , Marshall help Senate reject resolution to halt the Iran war",
@@ -16312,12 +16298,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_beyond-credentials-house",
     "source": "news",
-    "ts": 1790422508687,
+    "ts": 1790457526226,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.435,
+      "salience": 0.374,
       "articles": [
         {
           "title": "The intricacies of press credentials , at the White House and beyond - LocalNews8 . com",
@@ -16362,13 +16348,20 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_bass-dinner-diplomacy",
     "source": "news",
-    "ts": 1790422508687,
+    "ts": 1790457526226,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.396,
+      "salience": 0.365,
       "articles": [
+        {
+          "title": "The Latest : Trump - Xi state dinner includes tech titans , sea bass and glitzy diplomacy",
+          "url": "http://www.idahostatejournal.com/news/national/the-latest-trump-xi-state-dinner-includes-tech-titans-sea-bass-and-glitzy-diplomacy/article_3ee3552a-385f-5a8e-a1e5-f711c299517a.html",
+          "domain": "idahostatejournal.com",
+          "seendate": "2026-09-25T05:15:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/idahostatejournal.com/content/tncms/assets/v3/editorial/2/da/2da53daf-aec3-5033-a551-7a0ab15f6c36/6ab4620b6d59d.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
         {
           "title": "The Latest : Trump - Xi state dinner expected to include tech titans , sea bass and glitzy diplomacy",
           "url": "http://www.thegazette.com/news/national/the-latest-trump-xi-state-dinner-expected-to-include-tech-titans-sea-bass-and-glitzy/article_d7ea1cae-6888-5d43-8dfe-9772fa229c6f.html",
@@ -16393,7 +16386,7 @@ window.PRISM_CANDIDATES = [
       ]
     },
     "title": "The Latest : Trump - Xi state dinner expected to include tech titans , sea bass and glitzy diplomacy",
-    "summary": "2026-09-25 thegazette.com: The Latest : Trump - Xi state dinner expected to include tech titans , sea bass and glitzy diplomacy\n2026-09-25 dailyadvance.com: The Latest : Trump - Xi state dinner expected to include tech titans , sea bass and glitzy diplomacy\n2026-09-24 idahostatejournal.com: The Latest : Trump - Xi state dinner expected to include tech titans , sea bass and glitzy diplomacy",
+    "summary": "2026-09-25 idahostatejournal.com: The Latest : Trump - Xi state dinner includes tech titans , sea bass and glitzy diplomacy\n2026-09-25 thegazette.com: The Latest : Trump - Xi state dinner expected to include tech titans , sea bass and glitzy diplomacy\n2026-09-25 dailyadvance.com: The Latest : Trump - Xi state dinner expected to include tech titans , sea bass and glitzy diplomacy\n2026-09-24 idahostatejournal.com: The Latest : Trump - Xi state dinner expected to include tech titans , sea bass and glitzy diplomacy",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -16403,47 +16396,61 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_congressional-court-map",
+    "cid": "cand_news_ballroom-battles-defense",
     "source": "news",
-    "ts": 1790422508688,
+    "ts": 1790457526225,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.282,
+      "salience": 0.356,
       "articles": [
         {
-          "title": "Trump - backed Missouri congressional map returns to the Supreme Court for the third time",
-          "url": "https://www.columbian.com/news/2026/sep/23/trump-backed-missouri-congressional-map-returns-to-the-supreme-court-for-the-third-time/",
-          "domain": "columbian.com",
+          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
+          "url": "https://www.sandiegouniontribune.com/2026/09/23/preservation-fund/",
+          "domain": "sandiegouniontribune.com",
+          "seendate": "2026-09-24T01:30:00Z",
+          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/09/Trump_White_House_36734-1.jpg"
+        },
+        {
+          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
+          "url": "https://www.wdio.com/ap-top-news/preservation-group-launches-legal-defense-fund-as-it-battles-trump-over-ballroom-and-other-projects/",
+          "domain": "wdio.com",
+          "seendate": "2026-09-24T01:00:00Z",
+          "image": "https://www.wdio.com/wp-content/uploads/apimg/2026/09/Trump_White_House_36734.jpg"
+        },
+        {
+          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
+          "url": "https://www.bostonherald.com/2026/09/23/preservation-fund/",
+          "domain": "bostonherald.com",
+          "seendate": "2026-09-24T00:00:00Z",
+          "image": "https://www.bostonherald.com/wp-content/uploads/2026/09/Trump_White_House_36734-1.jpg"
+        },
+        {
+          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
+          "url": "https://www.sun-sentinel.com/2026/09/23/preservation-fund/",
+          "domain": "sun-sentinel.com",
           "seendate": "2026-09-23T21:30:00Z",
-          "image": "https://www.columbian.com/wp-content/themes/columbian3/static/img/og/default-2026-3.jpg"
+          "image": "https://www.sun-sentinel.com/wp-content/uploads/2026/09/Trump_White_House_36734-1.jpg"
         },
         {
-          "title": "Trump - backed Missouri congressional map returns to the Supreme Court for the third time",
-          "url": "https://www.timesfreepress.com/news/2026/sep/23/trump-backed-missouri-congressional-map-returns-to-the-supreme-court-for-the-third-time/",
-          "domain": "timesfreepress.com",
-          "seendate": "2026-09-23T14:30:00Z",
-          "image": "https://wehco.media.clients.ellingtoncms.com/img/photos/2026/09/23/AP26251747749795_t1200.jpg?57a0c2296240c280e9492005c3cad63e7cbe80f4"
+          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
+          "url": "https://www.pilotonline.com/2026/09/23/preservation-fund/",
+          "domain": "pilotonline.com",
+          "seendate": "2026-09-23T21:30:00Z",
+          "image": "https://www.pilotonline.com/wp-content/uploads/2026/09/Trump_White_House_36734-1.jpg"
         },
         {
-          "title": "Missouri congressional map returns to Supreme Court for the third time",
-          "url": "https://www.marinij.com/2026/09/23/missouri-congressional-map-supreme-court-third-time/",
-          "domain": "marinij.com",
-          "seendate": "2026-09-23T14:30:00Z",
-          "image": "https://www.marinij.com/wp-content/uploads/2026/09/Election_2_26_Redistricting_Missouri_49795_860bf5.jpg"
-        },
-        {
-          "title": "Missouri congressional map returns to Supreme Court for the third time",
-          "url": "https://www.presstelegram.com/2026/09/23/missouri-congressional-map-supreme-court-third-time/",
-          "domain": "presstelegram.com",
-          "seendate": "2026-09-23T12:30:00Z",
-          "image": "https://www.presstelegram.com/wp-content/uploads/2026/09/Election_2_26_Redistricting_Missouri_49795_860bf5.jpg"
+          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
+          "url": "https://abcnews.com/US/wireStory/preservation-group-launches-legal-defense-fund-battles-trump-136696953",
+          "domain": "abcnews.com",
+          "seendate": "2026-09-23T21:30:00Z",
+          "image": "https://i.abcnewsfe.com/a/369920c5-5db6-4631-a77d-460db73afb0a/wirestory_39c7d01c6456892f7a3fe920a6e46869_16x9.jpg"
         }
       ]
     },
-    "title": "Trump - backed Missouri congressional map returns to the Supreme Court for the third time",
-    "summary": "2026-09-23 columbian.com: Trump - backed Missouri congressional map returns to the Supreme Court for the third time\n2026-09-23 timesfreepress.com: Trump - backed Missouri congressional map returns to the Supreme Court for the third time\n2026-09-23 marinij.com: Missouri congressional map returns to Supreme Court for the third time\n2026-09-23 presstelegram.com: Missouri congressional map returns to Supreme Court for the third time",
+    "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
+    "summary": "2026-09-24 sandiegouniontribune.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-24 wdio.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-24 bostonherald.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-23 sun-sentinel.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-23 pilotonline.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-23 abcnews.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
