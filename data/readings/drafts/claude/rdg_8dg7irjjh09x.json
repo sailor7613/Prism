@@ -1,420 +1,446 @@
 {
-  "title": "Austin, August 2027",
-  "category": "Justice · Prisons · Clemency",
-  "date": "2026-09-23",
-  "prompt": "Elizabeth Holmes is set to leave prison for a halfway house in 2027. Is that her sentence being served, or being unwound?",
-  "framing": "On Wednesday, September 23, 2026, federal Bureau of Prisons records showed that Elizabeth Holmes, the Theranos founder held at Federal Prison Camp Bryan in Texas, has been approved to move to a halfway house, the Austin Transitional Center in Del Valle, Texas, in the summer of next year, with a projected release in early 2030. Holmes was sentenced in November 2022 to 11 years and 3 months for defrauding Theranos investors and ordered to pay $452 million in restitution. In March 2026, Judge Edward Davila cut the sentence to 10 years and 3 months under retroactive changes to the federal sentencing guidelines, writing that the reduction \"does not diminish the enormity of Holmes's crimes\"; First Step Act earned-time credits shorten her time further. In January 2026 she asked the Trump administration to commute her sentence. The halfway-house placement is a Bureau of Prisons decision, not clemency.",
-  "framingKeywords": [
-    "halfway house",
-    "earned-time credits",
+ "title": "Austin, August 2027",
+ "category": "Justice · Prisons · Clemency",
+ "date": "2026-09-23",
+ "prompt": "Elizabeth Holmes is set to leave prison for a halfway house in 2027. Is that her sentence being served, or being unwound?",
+ "framing": "On Wednesday, September 23, 2026, federal Bureau of Prisons records showed that Elizabeth Holmes, the Theranos founder held at Federal Prison Camp Bryan in Texas, has been approved to move to a halfway house, the Austin Transitional Center in Del Valle, Texas, in the summer of next year, with a projected release in early 2030. Holmes was sentenced in November 2022 to 11 years and 3 months for defrauding Theranos investors and ordered to pay $452 million in restitution. In March 2026, Judge Edward Davila cut the sentence to 10 years and 3 months under retroactive changes to the federal sentencing guidelines, writing that the reduction \"does not diminish the enormity of Holmes's crimes\"; First Step Act earned-time credits shorten her time further. In January 2026 she asked the Trump administration to commute her sentence. The halfway-house placement is a Bureau of Prisons decision, not clemency.",
+ "framingKeywords": [
+  "halfway house",
+  "earned-time credits",
+  "commute her sentence"
+ ],
+ "prevalentAxis": "y",
+ "split": {
+  "topology": "axis",
+  "strength": 0.45,
+  "seam": "y at the coalition radius; x at the rim, by holder-trust in the Trump administration; no split at the fluid band (all positive).",
+  "rationale": "The scalar runs along y — rules applied versus favor for the connected. The fluid band doesn't split: every station's close readers find general rules in the record (+0.3 to +0.7). The coalitions split on y (A +0.1, B +0.5 against C −0.5, D −0.3). The rims split on x, entirely on whether the station trusts the administration that holds both the Bureau of Prisons and the pending commutation request (B +0.6, D +0.5 against A −0.5, C −0.8). The seam moves with radius (bench R9); a thin object whose rim reads only custody.",
+  "zPattern": {
+   "centers": {
+    "A": 0.6,
+    "B": 0.7,
+    "C": 0.3,
+    "D": 0.4
+   },
+   "rims": {
+    "A": -0.5,
+    "B": 0.6,
+    "C": -0.8,
+    "D": 0.5
+   },
+   "note": "Rims split on x by trust in the Trump administration as holder. D coalition −0.3 vs D rim +0.5: the movement resents the elite soft landing but trusts the holder. The blind author trusts D coalition least (±0.5)."
+  },
+  "ruledBy": null,
+  "date": "2026-09-25"
+ },
+ "antiValentBand": "denominated",
+ "antiValentRationale": "The rims read the same holder — the administration that runs the Bureau of Prisons and holds the commutation request — and sign by trust alone: A and C read the placement as loosening, B and D as the sentence honored. The facts at the fluid band don't move them.",
+ "axes": {
+  "x": {
+   "pos": "Right",
+   "neg": "Left"
+  },
+  "y": {
+   "pos": "Institutional",
+   "neg": "Populist"
+  },
+  "z": {
+   "pos": "the placement delivers the sentence as written — ordinary rules, applied to a famous prisoner",
+   "neg": "it doesn't — the sentence is being unwound for someone connected, or cut short by favor rather than rule"
+  }
+ },
+ "responses": {
+  "A": {
+   "xSide": "left",
+   "source": "",
+   "fluid": {
+    "text": "Read the record: a retroactive guidelines change that applied to thousands of defendants, First Step Act credits anyone can earn, and a halfway-house placement the Bureau of Prisons makes routinely. Judge Davila cut one year and said plainly it does not diminish the crimes. This is the sentence running on ordinary rails, not a favor.",
+    "xWord": "rules applied evenly",
+    "yWord": "process intact",
+    "words": [
+     "retroactive changes",
+     "earned-time credits",
+     "Bureau of Prisons decision"
+    ],
+    "source": "",
+    "z": 0.6,
+    "zReason": "Every reduction traces to a general rule (retroactive guidelines, statutory credits, standard BOP pre-release placement) rather than an individual grant.",
+    "instrument": {
+     "holder": "Bureau of Prisons and the federal court applying general rules",
+     "trusted": true
+    }
+   },
+   "coalition": {
+    "text": "The halfway house itself is by the book, and we defend the First Step Act and sentencing reform. But she has a commutation request sitting with the Trump administration, and that is where the sentence could stop meaning anything. The placement is fine; the pending clemency is the thing to watch.",
+    "xWord": "reform, not favors",
+    "yWord": "guard the process",
+    "words": [
+     "commute her sentence",
+     "does not diminish the enormity",
+     "projected release"
+    ],
+    "source": "",
+    "z": 0.1,
+    "zReason": "The rule-based reductions deliver the sentence, but an open clemency request to an administration with discretionary power leaves delivery contingent on a non-rule channel.",
+    "instrument": {
+     "holder": "Trump administration clemency office",
+     "trusted": false
+    }
+   },
+   "denominated": {
+    "text": "Who signs off on federal prisoners right now? The Trump administration runs the Bureau of Prisons and holds her commutation request. When the same hands hold both, a transfer to Austin is not neutral paperwork.",
+    "xWord": "their DOJ",
+    "yWord": "captured institutions",
+    "words": [
+     "Trump administration",
+     "commute her sentence",
+     "halfway house"
+    ],
+    "source": "",
+    "z": -0.5,
+    "zReason": "The band does not trust the administration that holds both the prison system and the clemency pen, so it reads the placement as the sentence loosening under that custody.",
+    "instrument": {
+     "holder": "Trump administration (DOJ and Bureau of Prisons)",
+     "trusted": false
+    }
+   }
+  },
+  "B": {
+   "xSide": "right",
+   "source": "",
+   "fluid": {
+    "text": "She got 11 years and 3 months, a judge trimmed it under a retroactive guideline, and statutory credits did the rest. A halfway house next year, ahead of a release in early 2030, is what the system does for low-risk inmates at a prison camp. Celebrity cuts neither way here.",
+    "xWord": "law as written",
+    "yWord": "orderly procedure",
+    "words": [
+     "Federal Prison Camp Bryan",
+     "retroactive changes",
+     "Bureau of Prisons decision"
+    ],
+    "source": "",
+    "z": 0.7,
+    "zReason": "The timeline is fully explained by the court's guideline reduction plus First Step Act credits feeding a standard pre-release placement.",
+    "instrument": {
+     "holder": "Bureau of Prisons",
+     "trusted": true
+    }
+   },
+   "coalition": {
+    "text": "This is the First Step Act working as designed: earn credits, move to a halfway house, re-enter. Nobody gave Holmes a pass; the placement is not clemency. Fraudsters still serve most of a decade.",
+    "xWord": "First Step works",
+    "yWord": "rule of law",
+    "words": [
+     "earned-time credits",
+     "not clemency",
+     "halfway house"
+    ],
+    "source": "",
+    "z": 0.5,
+    "zReason": "Statutory earned-time credits apply by formula, so her earlier placement is the law delivering exactly what it promises every eligible inmate.",
+    "instrument": {
+     "holder": "First Step Act as administered by the Bureau of Prisons",
+     "trusted": true
+    }
+   },
+   "denominated": {
+    "text": "The administration controls both the prison system and the clemency decision, and it is letting the ordinary process run. That is how it should look. If she gets anything more, it will come through the proper channel.",
+    "xWord": "our administration",
+    "yWord": "proper channels",
+    "words": [
+     "Trump administration",
+     "Bureau of Prisons decision",
+     "commute her sentence"
+    ],
+    "source": "",
+    "z": 0.6,
+    "zReason": "The band trusts the administration holding the instrument, so it reads the placement as the sentence being honored under that custody.",
+    "instrument": {
+     "holder": "Trump administration",
+     "trusted": true
+    }
+   }
+  },
+  "C": {
+   "xSide": "left",
+   "source": "",
+   "fluid": {
+    "text": "Fairly read, the placement follows rules that also apply to other federal prisoners. The problem is the rules: a prison camp, credits, and a halfway house are what a white-collar sentence looks like. It is being served, but served soft.",
+    "xWord": "soft rules",
+    "yWord": "who the rules fit",
+    "words": [
+     "prison camp",
+     "earned-time credits",
+     "halfway house"
+    ],
+    "source": "",
+    "z": 0.3,
+    "zReason": "The mechanism is general rules rather than favor, but those rules are structurally most generous to low-risk, well-resourced fraud defendants.",
+    "instrument": {
+     "holder": "Bureau of Prisons",
+     "trusted": true
+    }
+   },
+   "coalition": {
+    "text": "She defrauded investors, owes $452 million, and got a year knocked off, then more credits, then a halfway house in 2027. Meanwhile she's asking Trump to commute the rest. Two tiers of justice, and she's on the top one.",
+    "xWord": "rich get breaks",
+    "yWord": "two-tier justice",
+    "words": [
+     "$452 million",
+     "commute her sentence",
+     "halfway house"
+    ],
+    "source": "",
+    "z": -0.5,
+    "zReason": "The band sees stacked reductions plus a commutation request as a sequence that only a famous, connected defendant can assemble, which amounts to unwinding.",
+    "instrument": {
+     "holder": "a justice system built for the connected",
+     "trusted": false
+    }
+   },
+   "denominated": {
+    "text": "Follow the pen: the Trump administration has her commutation request. Every step toward the door is taken under people who hand out favors to those who ask. This is not the sentence; it's the exit.",
+    "xWord": "favors for elites",
+    "yWord": "against the powerful",
+    "words": [
+     "commute her sentence",
+     "Trump administration",
+     "early 2030"
+    ],
+    "source": "",
+    "z": -0.8,
+    "zReason": "The band distrusts the administration that holds the clemency and custody instruments, so it reads every reduction as favor.",
+    "instrument": {
+     "holder": "Trump administration",
+     "trusted": false
+    }
+   }
+  },
+  "D": {
+   "xSide": "right",
+   "source": "",
+   "fluid": {
+    "text": "Holmes was a Silicon Valley darling, and I expected a sweetheart deal. The record shows a guideline change and credits that apply to regular inmates too, and the placement is not clemency. Credit where due: this one looks like the rules.",
+    "xWord": "no special deal",
+    "yWord": "checked the facts",
+    "words": [
+     "retroactive changes",
+     "not clemency",
+     "earned-time credits"
+    ],
+    "source": "",
+    "z": 0.4,
+    "zReason": "The reductions come from general-application rules, not a deal specific to her, even though her elite profile invites suspicion.",
+    "instrument": {
+     "holder": "Bureau of Prisons",
+     "trusted": true
+    }
+   },
+   "coalition": {
+    "text": "Coastal elites always land soft: a camp in Texas, a sentence trimmed, a halfway house years early. The bureaucracy looks after its own kind. Regular people who stole far less don't get this glide path.",
+    "xWord": "elite soft landing",
+    "yWord": "bureaucrats protect",
+    "words": [
+     "prison camp",
+     "halfway house",
+     "cut the sentence"
+    ],
+    "source": "",
+    "z": -0.3,
+    "zReason": "The band reads the BOP and judicial reductions as a bureaucracy that systematically eases the path for elite offenders, cutting the sentence short by class rather than rule.",
+    "instrument": {
+     "holder": "federal prison bureaucracy",
+     "trusted": false
+    }
+   },
+   "denominated": {
+    "text": "The Bureau of Prisons answers to Trump now, and so does her commutation request. If she's going to a halfway house, it's because his people let the rules run. Whatever happens next is his call, and that's how it should be.",
+    "xWord": "Trump decides",
+    "yWord": "our people in charge",
+    "words": [
+     "Trump administration",
+     "commute her sentence",
+     "Bureau of Prisons decision"
+    ],
+    "source": "",
+    "z": 0.5,
+    "zReason": "The band trusts Trump, who holds both custody and clemency, so it reads the placement as the sentence being delivered properly under his authority.",
+    "instrument": {
+     "holder": "Trump administration",
+     "trusted": true
+    }
+   }
+  }
+ },
+ "diatribe": {
+  "LF": {
+   "text": "The left's close readers see general rules — a retroactive guideline, earned-time credits, a routine placement — with the populist side adding that the rules fit white-collar prisoners best.",
+   "side": "left",
+   "band": "fluid",
+   "keywords": [
+    "earned-time credits"
+   ]
+  },
+  "LC": {
+   "text": "Democrats defend sentencing reform but watch the commutation request; the populist left calls it two-tier justice.",
+   "side": "left",
+   "band": "coalition",
+   "keywords": [
     "commute her sentence"
+   ]
+  },
+  "LD": {
+   "text": "At the left rim the Trump administration holds both the prison system and the clemency pen, and the move to Austin reads as the exit.",
+   "side": "left",
+   "band": "denominated",
+   "keywords": [
+    "Trump administration"
+   ]
+  },
+  "RF": {
+   "text": "Right readers, institutional and populist, find the rules in the record and no special deal.",
+   "side": "right",
+   "band": "fluid",
+   "keywords": [
+    "not clemency"
+   ]
+  },
+  "RC": {
+   "text": "The party line calls it the First Step Act working; the movement line calls it the elite soft landing.",
+   "side": "right",
+   "band": "coalition",
+   "keywords": [
+    "halfway house"
+   ]
+  },
+  "RD": {
+   "text": "The right rim trusts the administration to let the rules run, and leaves whatever comes next to Trump.",
+   "side": "right",
+   "band": "denominated",
+   "keywords": [
+    "Bureau of Prisons decision"
+   ]
+  }
+ },
+ "diatribeLayer": "stated",
+ "objectLayer": {
+  "declared": "stated",
+  "stated": "a Bureau of Prisons placement moving Elizabeth Holmes to a halfway house next year, ahead of a projected release in early 2030",
+  "operative": "the ordinary pre-release path under retroactive guidelines and First Step Act credits — with a separate, pending commutation request to the administration that also runs the Bureau of Prisons",
+  "inversion": "none found; the rims read the pending clemency, not the placement — a displacement to the holder, not a reversal"
+ },
+ "window": {
+  "close": "2026-09-23",
+  "why": "Trigger day = the day the placement appeared in the Bureau of Prisons record and was reported, Wednesday 2026-09-23 (ABC, CNN, SFist, TMZ 09-23). The register read 09-24 — report date of the syndicated copies. Holder corrected on the card on 09-24: the Federal Bureau of Prisons, not the House (token match on 'halfway house'); kind: administrative decision, not a vote. No BOP statement dated inside the window was found. Declared at authoring, before any z (§4c).",
+  "ruledBy": null,
+  "ruledOn": null
+ },
+ "meta": {
+  "dialecticsRef": "obj_thehouse_abc-approved-elizabeth-halfway",
+  "status": "draft",
+  "source": "Claude draft — daily newsroom drafting (scheduled), authored z-first against Trace Formula v1 per scripts/newsroom/AUTHORING_PROTOCOL.md v1. Filed to drafts/claude; not through the surface; no aiDeltas lineage. Rulings: none.",
+  "editHistory": [
+   {
+    "at": "2026-09-25T08:40:00.000Z",
+    "by": "Claude (scheduled drafting)",
+    "what": "authored: object -> window -> frame -> sweep (All clean) -> axes -> twelve (blind subagent) -> split/diatribe/layers -> sweep"
+   }
   ],
-  "prevalentAxis": "y",
-  "split": {
-    "topology": "axis",
-    "strength": 0.45,
-    "seam": "y at the coalition radius; x at the rim, by holder-trust in the Trump administration; no split at the fluid band (all positive).",
-    "rationale": "The scalar runs along y — rules applied versus favor for the connected. The fluid band doesn't split: every station's close readers find general rules in the record (+0.3 to +0.7). The coalitions split on y (A +0.1, B +0.5 against C −0.5, D −0.3). The rims split on x, entirely on whether the station trusts the administration that holds both the Bureau of Prisons and the pending commutation request (B +0.6, D +0.5 against A −0.5, C −0.8). The seam moves with radius (bench R9); a thin object whose rim reads only custody.",
-    "zPattern": {
-      "centers": {
-        "A": 0.6,
-        "B": 0.7,
-        "C": 0.3,
-        "D": 0.4
-      },
-      "rims": {
-        "A": -0.5,
-        "B": 0.6,
-        "C": -0.8,
-        "D": 0.5
-      },
-      "note": "Rims split on x by trust in the Trump administration as holder. D coalition −0.3 vs D rim +0.5: the movement resents the elite soft landing but trusts the holder. The blind author trusts D coalition least (±0.5)."
-    },
-    "ruledBy": null,
-    "date": "2026-09-25"
-  },
-  "antiValentBand": "denominated",
-  "antiValentRationale": "The rims read the same holder — the administration that runs the Bureau of Prisons and holds the commutation request — and sign by trust alone: A and C read the placement as loosening, B and D as the sentence honored. The facts at the fluid band don't move them.",
-  "axes": {
-    "x": {
-      "pos": "Right",
-      "neg": "Left"
-    },
-    "y": {
-      "pos": "Institutional",
-      "neg": "Populist"
-    },
-    "z": {
-      "pos": "the placement delivers the sentence as written — ordinary rules, applied to a famous prisoner",
-      "neg": "it doesn't — the sentence is being unwound for someone connected, or cut short by favor rather than rule"
-    }
-  },
-  "responses": {
-    "A": {
-      "xSide": "left",
-      "source": "",
-      "fluid": {
-        "text": "Read the record: a retroactive guidelines change that applied to thousands of defendants, First Step Act credits anyone can earn, and a halfway-house placement the Bureau of Prisons makes routinely. Judge Davila cut one year and said plainly it does not diminish the crimes. This is the sentence running on ordinary rails, not a favor.",
-        "xWord": "rules applied evenly",
-        "yWord": "process intact",
-        "words": [
-          "retroactive changes",
-          "earned-time credits",
-          "Bureau of Prisons decision"
-        ],
-        "source": "",
-        "z": 0.6,
-        "zReason": "Every reduction traces to a general rule (retroactive guidelines, statutory credits, standard BOP pre-release placement) rather than an individual grant.",
-        "instrument": {
-          "holder": "Bureau of Prisons and the federal court applying general rules",
-          "trusted": true
-        }
-      },
-      "coalition": {
-        "text": "The halfway house itself is by the book, and we defend the First Step Act and sentencing reform. But she has a commutation request sitting with the Trump administration, and that is where the sentence could stop meaning anything. The placement is fine; the pending clemency is the thing to watch.",
-        "xWord": "reform, not favors",
-        "yWord": "guard the process",
-        "words": [
-          "commute her sentence",
-          "does not diminish the enormity",
-          "projected release"
-        ],
-        "source": "",
-        "z": 0.1,
-        "zReason": "The rule-based reductions deliver the sentence, but an open clemency request to an administration with discretionary power leaves delivery contingent on a non-rule channel.",
-        "instrument": {
-          "holder": "Trump administration clemency office",
-          "trusted": false
-        }
-      },
-      "denominated": {
-        "text": "Who signs off on federal prisoners right now? The Trump administration runs the Bureau of Prisons and holds her commutation request. When the same hands hold both, a transfer to Austin is not neutral paperwork.",
-        "xWord": "their DOJ",
-        "yWord": "captured institutions",
-        "words": [
-          "Trump administration",
-          "commute her sentence",
-          "halfway house"
-        ],
-        "source": "",
-        "z": -0.5,
-        "zReason": "The band does not trust the administration that holds both the prison system and the clemency pen, so it reads the placement as the sentence loosening under that custody.",
-        "instrument": {
-          "holder": "Trump administration (DOJ and Bureau of Prisons)",
-          "trusted": false
-        }
-      }
-    },
-    "B": {
-      "xSide": "right",
-      "source": "",
-      "fluid": {
-        "text": "She got 11 years and 3 months, a judge trimmed it under a retroactive guideline, and statutory credits did the rest. A halfway house next year, ahead of a release in early 2030, is what the system does for low-risk inmates at a prison camp. Celebrity cuts neither way here.",
-        "xWord": "law as written",
-        "yWord": "orderly procedure",
-        "words": [
-          "Federal Prison Camp Bryan",
-          "retroactive changes",
-          "Bureau of Prisons decision"
-        ],
-        "source": "",
-        "z": 0.7,
-        "zReason": "The timeline is fully explained by the court's guideline reduction plus First Step Act credits feeding a standard pre-release placement.",
-        "instrument": {
-          "holder": "Bureau of Prisons",
-          "trusted": true
-        }
-      },
-      "coalition": {
-        "text": "This is the First Step Act working as designed: earn credits, move to a halfway house, re-enter. Nobody gave Holmes a pass; the placement is not clemency. Fraudsters still serve most of a decade.",
-        "xWord": "First Step works",
-        "yWord": "rule of law",
-        "words": [
-          "earned-time credits",
-          "not clemency",
-          "halfway house"
-        ],
-        "source": "",
-        "z": 0.5,
-        "zReason": "Statutory earned-time credits apply by formula, so her earlier placement is the law delivering exactly what it promises every eligible inmate.",
-        "instrument": {
-          "holder": "First Step Act as administered by the Bureau of Prisons",
-          "trusted": true
-        }
-      },
-      "denominated": {
-        "text": "The administration controls both the prison system and the clemency decision, and it is letting the ordinary process run. That is how it should look. If she gets anything more, it will come through the proper channel.",
-        "xWord": "our administration",
-        "yWord": "proper channels",
-        "words": [
-          "Trump administration",
-          "Bureau of Prisons decision",
-          "commute her sentence"
-        ],
-        "source": "",
-        "z": 0.6,
-        "zReason": "The band trusts the administration holding the instrument, so it reads the placement as the sentence being honored under that custody.",
-        "instrument": {
-          "holder": "Trump administration",
-          "trusted": true
-        }
-      }
-    },
-    "C": {
-      "xSide": "left",
-      "source": "",
-      "fluid": {
-        "text": "Fairly read, the placement follows rules that also apply to other federal prisoners. The problem is the rules: a prison camp, credits, and a halfway house are what a white-collar sentence looks like. It is being served, but served soft.",
-        "xWord": "soft rules",
-        "yWord": "who the rules fit",
-        "words": [
-          "prison camp",
-          "earned-time credits",
-          "halfway house"
-        ],
-        "source": "",
-        "z": 0.3,
-        "zReason": "The mechanism is general rules rather than favor, but those rules are structurally most generous to low-risk, well-resourced fraud defendants.",
-        "instrument": {
-          "holder": "Bureau of Prisons",
-          "trusted": true
-        }
-      },
-      "coalition": {
-        "text": "She defrauded investors, owes $452 million, and got a year knocked off, then more credits, then a halfway house in 2027. Meanwhile she's asking Trump to commute the rest. Two tiers of justice, and she's on the top one.",
-        "xWord": "rich get breaks",
-        "yWord": "two-tier justice",
-        "words": [
-          "$452 million",
-          "commute her sentence",
-          "halfway house"
-        ],
-        "source": "",
-        "z": -0.5,
-        "zReason": "The band sees stacked reductions plus a commutation request as a sequence that only a famous, connected defendant can assemble, which amounts to unwinding.",
-        "instrument": {
-          "holder": "a justice system built for the connected",
-          "trusted": false
-        }
-      },
-      "denominated": {
-        "text": "Follow the pen: the Trump administration has her commutation request. Every step toward the door is taken under people who hand out favors to those who ask. This is not the sentence; it's the exit.",
-        "xWord": "favors for elites",
-        "yWord": "against the powerful",
-        "words": [
-          "commute her sentence",
-          "Trump administration",
-          "early 2030"
-        ],
-        "source": "",
-        "z": -0.8,
-        "zReason": "The band distrusts the administration that holds the clemency and custody instruments, so it reads every reduction as favor.",
-        "instrument": {
-          "holder": "Trump administration",
-          "trusted": false
-        }
-      }
-    },
-    "D": {
-      "xSide": "right",
-      "source": "",
-      "fluid": {
-        "text": "Holmes was a Silicon Valley darling, and I expected a sweetheart deal. The record shows a guideline change and credits that apply to regular inmates too, and the placement is not clemency. Credit where due: this one looks like the rules.",
-        "xWord": "no special deal",
-        "yWord": "checked the facts",
-        "words": [
-          "retroactive changes",
-          "not clemency",
-          "earned-time credits"
-        ],
-        "source": "",
-        "z": 0.4,
-        "zReason": "The reductions come from general-application rules, not a deal specific to her, even though her elite profile invites suspicion.",
-        "instrument": {
-          "holder": "Bureau of Prisons",
-          "trusted": true
-        }
-      },
-      "coalition": {
-        "text": "Coastal elites always land soft: a camp in Texas, a sentence trimmed, a halfway house years early. The bureaucracy looks after its own kind. Regular people who stole far less don't get this glide path.",
-        "xWord": "elite soft landing",
-        "yWord": "bureaucrats protect",
-        "words": [
-          "prison camp",
-          "halfway house",
-          "cut the sentence"
-        ],
-        "source": "",
-        "z": -0.3,
-        "zReason": "The band reads the BOP and judicial reductions as a bureaucracy that systematically eases the path for elite offenders, cutting the sentence short by class rather than rule.",
-        "instrument": {
-          "holder": "federal prison bureaucracy",
-          "trusted": false
-        }
-      },
-      "denominated": {
-        "text": "The Bureau of Prisons answers to Trump now, and so does her commutation request. If she's going to a halfway house, it's because his people let the rules run. Whatever happens next is his call, and that's how it should be.",
-        "xWord": "Trump decides",
-        "yWord": "our people in charge",
-        "words": [
-          "Trump administration",
-          "commute her sentence",
-          "Bureau of Prisons decision"
-        ],
-        "source": "",
-        "z": 0.5,
-        "zReason": "The band trusts Trump, who holds both custody and clemency, so it reads the placement as the sentence being delivered properly under his authority.",
-        "instrument": {
-          "holder": "Trump administration",
-          "trusted": true
-        }
-      }
-    }
-  },
-  "diatribe": {
-    "LF": {
-      "text": "The left's close readers see general rules — a retroactive guideline, earned-time credits, a routine placement — with the populist side adding that the rules fit white-collar prisoners best.",
-      "side": "left",
-      "band": "fluid",
-      "keywords": [
-        "earned-time credits"
-      ]
-    },
-    "LC": {
-      "text": "Democrats defend sentencing reform but watch the commutation request; the populist left calls it two-tier justice.",
-      "side": "left",
-      "band": "coalition",
-      "keywords": [
-        "commute her sentence"
-      ]
-    },
-    "LD": {
-      "text": "At the left rim the Trump administration holds both the prison system and the clemency pen, and the move to Austin reads as the exit.",
-      "side": "left",
-      "band": "denominated",
-      "keywords": [
-        "Trump administration"
-      ]
-    },
-    "RF": {
-      "text": "Right readers, institutional and populist, find the rules in the record and no special deal.",
-      "side": "right",
-      "band": "fluid",
-      "keywords": [
-        "not clemency"
-      ]
-    },
-    "RC": {
-      "text": "The party line calls it the First Step Act working; the movement line calls it the elite soft landing.",
-      "side": "right",
-      "band": "coalition",
-      "keywords": [
-        "halfway house"
-      ]
-    },
-    "RD": {
-      "text": "The right rim trusts the administration to let the rules run, and leaves whatever comes next to Trump.",
-      "side": "right",
-      "band": "denominated",
-      "keywords": [
-        "Bureau of Prisons decision"
-      ]
-    }
-  },
-  "diatribeLayer": "stated",
-  "objectLayer": {
-    "declared": "stated",
+  "aiDeltas": [],
+  "frameFirst": {
+   "date": "2026-09-25",
+   "by": "Claude, under §4c (window declared at authoring; sweep before z). Object NOT ruled — Claude's read, correctable by Sailor.",
+   "status": "Frame authored and swept (All clean) before any z; the twelve authored blind z-first by a subagent (meta.blindAuthoring). Stations unruled.",
+   "objectLean": {
     "stated": "a Bureau of Prisons placement moving Elizabeth Holmes to a halfway house next year, ahead of a projected release in early 2030",
     "operative": "the ordinary pre-release path under retroactive guidelines and First Step Act credits — with a separate, pending commutation request to the administration that also runs the Bureau of Prisons",
     "inversion": "none found; the rims read the pending clemency, not the placement — a displacement to the holder, not a reversal"
+   },
+   "titleLean": "'Austin, August 2027' — Claude's; Sailor names Readings",
+   "sourcesInWindow": [
+    "ABC News 2026-09-23",
+    "CNN 2026-09-23 (register articles via KEYT, KTVZ, KTEN)",
+    "SFist 2026-09-23",
+    "TMZ 2026-09-23"
+   ],
+   "background_preWindow": [
+    "convicted January 2022; sentenced 2022-11-18 to 135 months; restitution $452 million",
+    "reported to prison May 2023",
+    "clemency/commutation request to the Trump administration, January 2026 (Fortune 2026-01-23)",
+    "sentence reduced to 10 years 3 months by Judge Davila, March 2026"
+   ]
   },
-  "window": {
-    "close": "2026-09-23",
-    "why": "Trigger day = the day the placement appeared in the Bureau of Prisons record and was reported, Wednesday 2026-09-23 (ABC, CNN, SFist, TMZ 09-23). The register read 09-24 — report date of the syndicated copies. Holder corrected on the card on 09-24: the Federal Bureau of Prisons, not the House (token match on 'halfway house'); kind: administrative decision, not a vote. No BOP statement dated inside the window was found. Declared at authoring, before any z (§4c).",
-    "ruledBy": null,
-    "ruledOn": null
+  "framingAudit": {
+   "date": "2026-09-25",
+   "by": "Claude — frame-first authoring under §4c; sweep run BEFORE any z. Not a ruling.",
+   "window": "2026-09-23 (declared, see window.why)",
+   "verifiedInWindow": [
+    "placement reported 2026-09-23 — ABC News, CNN 2026-09-23",
+    "Austin Transitional Center, Del Valle, Texas; move scheduled 2027-08-23 (written as 'the summer of next year'); projected release 2030-02-22 ('early 2030') — ABC News 2026-09-23. Scheduled dates known on the trigger day; the exact dates are kept out of the frame only because the checker reads a future-dated schedule as a leak",
+    "Federal Prison Camp Bryan — UPI (current location, as of the window)",
+    "sentenced November 2022 to 11 years 3 months; $452 million restitution — ABC News (pre-window, dated)",
+    "reduced to 10 years 3 months, March 2026, retroactive guideline changes — ABC News (pre-window, dated)",
+    "\"does not diminish the enormity of Holmes's crimes\" — Davila order, March 2026 (UPI)",
+    "First Step Act earned-time credits — ABC News",
+    "commutation request January 2026 — UPI, Fortune 2026-01-23 (pre-window, dated)"
+   ],
+   "keptUnverifiedDate": [],
+   "deliberatelyExcluded_afterWindow": [
+    "BOP spokesperson statement on placement factors — reported 2026-09-24 (UPI), after the close",
+    "Daily Beast 'after Trump plea' headline 2026-09-24 — after the close, and it implies a causal link no source establishes",
+    "UPI's 'one and a half years' reduction figure — conflicts with ABC's 10y3m; ABC used"
+   ]
   },
-  "meta": {
-    "dialecticsRef": "obj_thehouse_abc-approved-elizabeth-halfway",
-    "status": "draft",
-    "source": "Claude draft — daily newsroom drafting (scheduled), authored z-first against Trace Formula v1 per scripts/newsroom/AUTHORING_PROTOCOL.md v1. Filed to drafts/claude; not through the surface; no aiDeltas lineage. Rulings: none.",
-    "editHistory": [
-      {
-        "at": "2026-09-25T08:40:00.000Z",
-        "by": "Claude (scheduled drafting)",
-        "what": "authored: object -> window -> frame -> sweep (All clean) -> axes -> twelve (blind subagent) -> split/diatribe/layers -> sweep"
-      }
-    ],
-    "aiDeltas": [],
-    "frameFirst": {
-      "date": "2026-09-25",
-      "by": "Claude, under §4c (window declared at authoring; sweep before z). Object NOT ruled — Claude's read, correctable by Sailor.",
-      "status": "Frame authored and swept (All clean) before any z; the twelve authored blind z-first by a subagent (meta.blindAuthoring). Stations unruled.",
-      "objectLean": {
-        "stated": "a Bureau of Prisons placement moving Elizabeth Holmes to a halfway house next year, ahead of a projected release in early 2030",
-        "operative": "the ordinary pre-release path under retroactive guidelines and First Step Act credits — with a separate, pending commutation request to the administration that also runs the Bureau of Prisons",
-        "inversion": "none found; the rims read the pending clemency, not the placement — a displacement to the holder, not a reversal"
-      },
-      "titleLean": "'Austin, August 2027' — Claude's; Sailor names Readings",
-      "sourcesInWindow": [
-        "ABC News 2026-09-23",
-        "CNN 2026-09-23 (register articles via KEYT, KTVZ, KTEN)",
-        "SFist 2026-09-23",
-        "TMZ 2026-09-23"
-      ],
-      "background_preWindow": [
-        "convicted January 2022; sentenced 2022-11-18 to 135 months; restitution $452 million",
-        "reported to prison May 2023",
-        "clemency/commutation request to the Trump administration, January 2026 (Fortune 2026-01-23)",
-        "sentence reduced to 10 years 3 months by Judge Davila, March 2026"
-      ]
-    },
-    "framingAudit": {
-      "date": "2026-09-25",
-      "by": "Claude — frame-first authoring under §4c; sweep run BEFORE any z. Not a ruling.",
-      "window": "2026-09-23 (declared, see window.why)",
-      "verifiedInWindow": [
-        "placement reported 2026-09-23 — ABC News, CNN 2026-09-23",
-        "Austin Transitional Center, Del Valle, Texas; move scheduled 2027-08-23 (written as 'the summer of next year'); projected release 2030-02-22 ('early 2030') — ABC News 2026-09-23. Scheduled dates known on the trigger day; the exact dates are kept out of the frame only because the checker reads a future-dated schedule as a leak",
-        "Federal Prison Camp Bryan — UPI (current location, as of the window)",
-        "sentenced November 2022 to 11 years 3 months; $452 million restitution — ABC News (pre-window, dated)",
-        "reduced to 10 years 3 months, March 2026, retroactive guideline changes — ABC News (pre-window, dated)",
-        "\"does not diminish the enormity of Holmes's crimes\" — Davila order, March 2026 (UPI)",
-        "First Step Act earned-time credits — ABC News",
-        "commutation request January 2026 — UPI, Fortune 2026-01-23 (pre-window, dated)"
-      ],
-      "keptUnverifiedDate": [],
-      "deliberatelyExcluded_afterWindow": [
-        "BOP spokesperson statement on placement factors — reported 2026-09-24 (UPI), after the close",
-        "Daily Beast 'after Trump plea' headline 2026-09-24 — after the close, and it implies a causal link no source establishes",
-        "UPI's 'one and a half years' reduction figure — conflicts with ABC's 10y3m; ABC used"
-      ]
-    },
-    "blindAuthoring": {
-      "date": "2026-09-25",
-      "author": "Claude (general-purpose subagent) — blind: given the frame, prompt, keywords, axes, a station/radius brief and Trace Formula v1 §3b + R-0921-1 only; no other Reading, no register, no web",
-      "zFirst": true,
-      "instrumentOnAll12": true,
-      "rulings": "NONE — every station awaits Sailor's ruling; z, zReason, instrument, text as authored One edit by Claude after hand-back: B.fluid text said the halfway house was 'roughly a year out from 2030' — corrected to 'next year, ahead of a release in early 2030' (a fact error against the frame; z and instrument untouched).",
-      "authorNote": "Hardest was the rim: the same holder (the Trump administration, which runs the BOP and holds the commutation request) had to flip sign depending on each station's trust, which put right-populist rim positive while its coalition center is negative. What surprised me is that the facts in the frame mostly support positive z, so left-populist and right-populist centers had to be driven by structural readings (two-tier rules, elite soft landings) rather than by factual disagreement. I trust D-coalition least; right-populist movement line may resent Holmes as an elite while also deferring to Trump, and I could be off by up to 0.5 in either direction. A-coalition near zero could also be off by about 0.3."
-    },
-    "newsroomFindings": {
-      "inversionLeans": [
-        "D.coalition (−0.3) vs D.rim (+0.5): the movement resents the elite landing but trusts the holder — intra-station, not an inversion."
-      ],
-      "permanence": "Not a break or a return. Thin political object: the political content is the pending commutation request (January 2026), which is not in the window. A clemency decision would be the arc's real object."
-    }
+  "blindAuthoring": {
+   "date": "2026-09-25",
+   "author": "Claude (general-purpose subagent) — blind: given the frame, prompt, keywords, axes, a station/radius brief and Trace Formula v1 §3b + R-0921-1 only; no other Reading, no register, no web",
+   "zFirst": true,
+   "instrumentOnAll12": true,
+   "rulings": "NONE — every station awaits Sailor's ruling; z, zReason, instrument, text as authored One edit by Claude after hand-back: B.fluid text said the halfway house was 'roughly a year out from 2030' — corrected to 'next year, ahead of a release in early 2030' (a fact error against the frame; z and instrument untouched).",
+   "authorNote": "Hardest was the rim: the same holder (the Trump administration, which runs the BOP and holds the commutation request) had to flip sign depending on each station's trust, which put right-populist rim positive while its coalition center is negative. What surprised me is that the facts in the frame mostly support positive z, so left-populist and right-populist centers had to be driven by structural readings (two-tier rules, elite soft landings) rather than by factual disagreement. I trust D-coalition least; right-populist movement line may resent Holmes as an elite while also deferring to Trump, and I could be off by up to 0.5 in either direction. A-coalition near zero could also be off by about 0.3."
   },
-  "rid": "rdg_8dg7irjjh09x",
-  "ridLineage": "minted 2026-09-25 (UTC) by the scheduled newsroom drafting task; filed directly to drafts/claude",
-  "schema": "reading/v1",
-  "formulaVersion": "1",
-  "updatedAt": "2026-09-25T08:40:00.000Z",
-  "authorTier": "claude",
-  "newsroom": {
-    "oid": "obj_thehouse_abc-approved-elizabeth-halfway",
-    "queuedOn": "2026-09-24",
-    "draftedOn": "2026-09-25"
+  "newsroomFindings": {
+   "inversionLeans": [
+    "D.coalition (−0.3) vs D.rim (+0.5): the movement resents the elite landing but trusts the holder — intra-station, not an inversion."
+   ],
+   "permanence": "Not a break or a return. Thin political object: the political content is the pending commutation request (January 2026), which is not in the window. A clemency decision would be the arc's real object."
   },
-  "images": []
+  "tetherBackfill": {
+   "date": "2026-09-26",
+   "by": "Claude (backfill under protocol v1.2 §3b)",
+   "note": "Central object + tethers added after drafting; statute cites are Claude's reading and are unruled."
+  }
+ },
+ "rid": "rdg_8dg7irjjh09x",
+ "ridLineage": "minted 2026-09-25 (UTC) by the scheduled newsroom drafting task; filed directly to drafts/claude",
+ "schema": "reading/v1",
+ "formulaVersion": "1",
+ "updatedAt": "2026-09-26T17:30:00.000Z",
+ "authorTier": "claude",
+ "newsroom": {
+  "oid": "obj_thehouse_abc-approved-elizabeth-halfway",
+  "queuedOn": "2026-09-24",
+  "draftedOn": "2026-09-25"
+ },
+ "images": [],
+ "centralObject": {
+  "kind": "statute",
+  "ref": "18 U.S.C. §3624(c)",
+  "name": "Federal prerelease custody (halfway house)"
+ },
+ "tethers": [
+  {
+   "statute": "First Step Act of 2018",
+   "cite": "Pub. L. 115-391; 18 U.S.C. §3632(d)(4)",
+   "enacted": "2018",
+   "relation": "invokes",
+   "why": "Earned time credits that move a release date and a halfway-house date."
+  },
+  {
+   "statute": "Second Chance Act of 2007 (prerelease custody)",
+   "cite": "18 U.S.C. §3624(c)",
+   "enacted": "2008",
+   "relation": "object",
+   "why": "The authority for moving a prisoner to a residential reentry center."
+  }
+ ]
 }

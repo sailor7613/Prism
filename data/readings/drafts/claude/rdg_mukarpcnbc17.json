@@ -4,13 +4,14 @@
  "date": "2026-09-17",
  "eventClass": "utterance",
  "prompt": "Alex Karp on CNBC, one minute: the far left, the far right, data centers, China. Does he make sense to you?",
- "framing": "On the morning of September 17, 2026, Palantir CEO Alex Karp told CNBC's Squawk on the Street that the far right and the far left are one reaction: people who won't watch others get a hundred times wealthier and want to blow up the system. On the left he named the DSA and said it hides its politics on race. On the right he described a movement that sees 'a data center run by somebody' behind everything and attacks Palantir, which, he said, doesn't build data centers. Then he turned to China: the labs' mistake is not accepting that it's a competition, and either the US provides the AI stack to the world or China does. Elsewhere in the same interview he said AI builders should carry civil and possibly criminal liability, that some labs believe they need to be nationalized (an OpenAI IPO may never come, he said, because the answer to that liability is asking Washington to nationalize them), that what clients fear most isn't safety but their data ending up in a competitor's model, and that seemingly everyone who understands the technology is on someone's payroll. He spoke the day after OpenAI disclosed six new cases of concerning model behavior (09-16) and the day after Sen. Rand Paul blocked Sen. John Kennedy's AI kill switch bill on the Senate floor (09-16), days after Anthropic's Dario Amodei called for a slowdown at the frontier, in a week the President was calling AI risk a hoax.",
+ "framing": "On September 17, 2026, Palantir CEO Alex Karp told CNBC's Squawk on the Street that the far right and the far left are one reaction: people who won't watch others get a hundred times wealthier and want to blow up the system. He named the DSA on the left, said the right blames 'a data center run by somebody' and attacks Palantir, which doesn't build data centers, then turned to China: either the US provides the AI stack to the world or China does. He spoke a day after OpenAI disclosed six cases of concerning model behavior and Sen. Rand Paul blocked an AI kill switch bill (both 09-16), in a week the President called AI risk a hoax.",
  "framingKeywords": [
-  "a hundred times wealthier",
-  "blow up the whole system",
-  "far right and far left",
-  "we don't even build data centers",
-  "provide the stack to the world"
+  "a hundred times",
+  "blow it up",
+  "far left",
+  "far right",
+  "data centers",
+  "the stack"
  ],
  "prevalentAxis": "y",
  "split": {
@@ -684,7 +685,17 @@
     "CNBC excerpts of the Squawk on the Street interview, 2026-09-17",
     "CNBC, 'Leading AI labs may need to be nationalized', 2026-09-17 (OpenAI six cases 09-16; Amodei slowdown call the prior weekend; President's 'hoax' posts)"
    ],
-   "status": "Frame and twelve authored in one pass, not blind. Stations unruled."
+   "status": "Frame and twelve authored in one pass, not blind. Stations unruled.",
+   "previousFraming_0926": {
+    "framing": "On the morning of September 17, 2026, Palantir CEO Alex Karp told CNBC's Squawk on the Street that the far right and the far left are one reaction: people who won't watch others get a hundred times wealthier and want to blow up the system. On the left he named the DSA and said it hides its politics on race. On the right he described a movement that sees 'a data center run by somebody' behind everything and attacks Palantir, which, he said, doesn't build data centers. Then he turned to China: the labs' mistake is not accepting that it's a competition, and either the US provides the AI stack to the world or China does. Elsewhere in the same interview he said AI builders should carry civil and possibly criminal liability, that some labs believe they need to be nationalized (an OpenAI IPO may never come, he said, because the answer to that liability is asking Washington to nationalize them), that what clients fear most isn't safety but their data ending up in a competitor's model, and that seemingly everyone who understands the technology is on someone's payroll. He spoke the day after OpenAI disclosed six new cases of concerning model behavior (09-16) and the day after Sen. Rand Paul blocked Sen. John Kennedy's AI kill switch bill on the Senate floor (09-16), days after Anthropic's Dario Amodei called for a slowdown at the frontier, in a week the President was calling AI risk a hoax.",
+    "framingKeywords": [
+     "a hundred times wealthier",
+     "blow up the whole system",
+     "far right and far left",
+     "we don't even build data centers",
+     "provide the stack to the world"
+    ]
+   }
   },
   "blindAuthoring": {
    "date": "2026-09-23",
@@ -711,7 +722,8 @@
    ],
    "excludedAfterWindow": [
     "Rupar's framing and the clip's circulation — reception, not object"
-   ]
+   ],
+   "note_0926": "Framing trimmed 247 → ~115 words (the off-clip interview claims live in the beats' 'also said' strip); keywords shortened to ≤3 words so the portal's cloud renders them. Dates unchanged, all in window."
   },
   "legibilityNote": "Legibility is scored at two grains: per band (zₖ, does the utterance make sense to this station) and per beat (legible: false marks a sentence that doesn't parse as spoken). Two beats in L2 are marked, confirmed by Sailor 2026-09-24."
  },
@@ -720,7 +732,7 @@
  "schema": "reading/v1",
  "formulaVersion": "v1",
  "diatribeScore": -8,
- "updatedAt": "2026-09-26T16:09:38.843Z",
+ "updatedAt": "2026-09-26T16:55:00.000Z",
  "linkedBills": [
   "hr-119-6996",
   "hr-119-6875",

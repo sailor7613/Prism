@@ -1,6 +1,6 @@
 # The daily drafting — authoring protocol for Claude drafts
 
-*v1.2 · 2026-09-26 (central object + tethers) · v1.1 2026-09-25 (overlay; no git) · v1 2026-09-22 · Sailor + Claude. This file is the canonical instruction the daily
+*v1.1 · 2026-09-25 (overlay; no git) · v1 2026-09-22 · Sailor + Claude. This file is the canonical instruction the daily
 drafting task follows. Edit it here; the task reads it fresh each run.*
 
 ## What this is
@@ -65,31 +65,7 @@ authoring anything:
    article list first; search for primary text (the bill, the order, the opinion) when
    it exists. Pre-window background goes in `meta.frameFirst.background_preWindow`, not
    the frame. Then `prompt` (one line, the question the Reading asks) and
-   `framingKeywords` (3–6 phrases, each three words or fewer; longer ones don't render). Keep the frame to ~130 words: the portal reads it on one screen.
-
-3b. **The central object and its law (v1.2, 2026-09-26).** Sailor's standing direction:
-   everything in Prism is unified to a central object, and ideally every event relates to
-   a piece of legislation, live or legacy. Before any z:
-   - **Search the catalog** (`Prism/data/prism_legislation.json`, 118th–119th) for the bills
-     this object touches. A `kind: "bill"` object from the register arrives already
-     tethered to its bill; confirm it and look for companions (the other chamber's version,
-     the rule it amends).
-   - **Name the legacy law still in force** when the object runs on older statute (the
-     Insurrection Act, Section 230, the Voting Rights Act, the War Powers Resolution, a
-     tariff authority like Section 232). Cite it; it doesn't need to be in the catalog.
-   - Write `tethers[]` at the top level of the Reading:
-     `{ billId, bill, title, relation, statusAsOf, why, inDb }` for a bill, or
-     `{ statute, cite, title, enacted, relation, why }` for legacy law.
-     `relation` is `object` (this IS the Reading's instrument) · `advocates` · `opposes` ·
-     `adjacent` · `amends` · `invokes`. A live bill missing from the catalog goes in with
-     `inDb: false`; Sailor's **Fetch Tethered Bills** pulls it and fills `linkedBills`.
-     Catalog ids also go in `linkedBills`.
-   - Declare `centralObject: { kind: "bill" | "statute" | "object", ref, name }`: the one
-     thing the Reading is about. For a bill object it's the bill. When legislation is
-     void, it's still named.
-   - **Don't miss a culturally broad event because it lacks legislation.** Write
-     `legislativeVoid: { why, standsAgainst }`: why no instrument exists, and which law or
-     object the absence stands against. A void is a finding, never a skip.
+   `framingKeywords`.
 4. **Sweep before z.** Run the checker on the frame. Fix leaks (wording that moves a
    fact's date, e.g. "by the end of June" for a June-29 as-of). Log what was excluded
    as after-window in `meta.framingAudit`.
@@ -116,7 +92,7 @@ authoring anything:
 
 ## File shape
 
-Match the exemplars exactly. Required top level: `centralObject, tethers (may be []), legislativeVoid (when tethers is empty), title, category, date (= formedOn),
+Match the exemplars exactly. Required top level: `title, category, date (= formedOn),
 prompt, framing, framingKeywords, prevalentAxis, split, antiValentBand,
 antiValentRationale, axes, responses, diatribe, diatribeLayer, objectLayer, window,
 meta, rid, schema: "reading/v1", formulaVersion: "v1", updatedAt`. Plus:

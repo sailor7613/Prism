@@ -1,417 +1,448 @@
 {
-  "title": "Seven to Two, Before the Endpoint",
-  "category": "Health · Regulation · Cancer Screening",
-  "date": "2026-09-23",
-  "prompt": "An FDA panel voted 7–2 for a $949 blood test that finds cancers earlier but hasn't shown it saves lives. Did the vote deliver early detection?",
-  "framing": "On September 23, 2026, the FDA's Molecular and Clinical Genetics Devices Panel voted on Galleri, Grail's $949 blood test that looks for signals of some 50 cancers in adults 50 and older. The ten voting members found 10–0 that the test is reasonably safe, 6–4 that it is reasonably effective, and 7–2, with one abstention, that its benefits outweigh its risks. The FDA does not have to follow its panels and usually does; Grail applied for approval on January 29, 2026, and a decision is expected in the coming months. The evidence in front of the panel: the NHS-Galleri trial of 142,942 adults in England, reported at ASCO in June 2026, missed its primary goal — it did not significantly reduce stage III and IV cancers combined — while finding 14 percent fewer stage IV diagnoses in the screened arm; a North American study, PATHFINDER 2, enrolled more than 35,000. No trial has yet reported whether the test saves lives. Approval would reach past the clinic: a law signed February 3, 2026, has Medicare cover FDA-approved multi-cancer tests from as early as 2028, phased in from age 68.",
-  "framingKeywords": [
-    "7–2",
+ "title": "Seven to Two, Before the Endpoint",
+ "category": "Health · Regulation · Cancer Screening",
+ "date": "2026-09-23",
+ "prompt": "An FDA panel voted 7–2 for a $949 blood test that finds cancers earlier but hasn't shown it saves lives. Did the vote deliver early detection?",
+ "framing": "On September 23, 2026, the FDA's Molecular and Clinical Genetics Devices Panel voted on Galleri, Grail's $949 blood test that looks for signals of some 50 cancers in adults 50 and older. The ten voting members found 10–0 that the test is reasonably safe, 6–4 that it is reasonably effective, and 7–2, with one abstention, that its benefits outweigh its risks. The FDA does not have to follow its panels and usually does; Grail applied for approval on January 29, 2026, and a decision is expected in the coming months. The evidence in front of the panel: the NHS-Galleri trial of 142,942 adults in England, reported at ASCO in June 2026, missed its primary goal — it did not significantly reduce stage III and IV cancers combined — while finding 14 percent fewer stage IV diagnoses in the screened arm; a North American study, PATHFINDER 2, enrolled more than 35,000. No trial has yet reported whether the test saves lives. Approval would reach past the clinic: a law signed February 3, 2026, has Medicare cover FDA-approved multi-cancer tests from as early as 2028, phased in from age 68.",
+ "framingKeywords": [
+  "7–2",
+  "stage IV",
+  "$949"
+ ],
+ "prevalentAxis": "y",
+ "split": {
+  "topology": "axis",
+  "strength": 0.7,
+  "seam": "x, orthogonal to the prevalentAxis — left stations (A, C) negative at every radius but A's coalition; right stations (B, D) positive at every radius. The object sits on y (an expert panel vs the populist distrust of it); the discourse split on x.",
+  "rationale": "prevalentAxis is y because the stated object is an institutional act — an FDA advisory panel recommending approval — and y is the line the slider should run along (the projection choice, not the interesting cleavage). But the stations did not sort institutional/populist; they sorted by trust in the agency's current custody, which is a left/right fact in this window. topology is declared axis with the seam named on x; there is no enum value for \"split on the non-prevalent axis\". Flag, not a ruling.",
+  "zPattern": {
+   "centers": {
+    "A": -0.35,
+    "B": 0.5,
+    "C": -0.6,
+    "D": 0.2
+   },
+   "rims": {
+    "A": -0.45,
+    "B": 0.6,
+    "C": -0.8,
+    "D": 0.5
+   },
+   "note": "Rims sign by holder-trust exactly as R-0921-1 predicts, and holder-trust here is partisan: A and C rims distrust \"the FDA's leadership\" / the FDA and Grail; B and D rims trust the same holder. Only A's coalition (+0.15, the coverage-law advocates) breaks its station's sign. The FDA-trusting station is the populist right and the FDA-doubting station is the institutional left — the inversion lean below."
+  },
+  "ruledBy": null,
+  "date": "2026-09-23"
+ },
+ "antiValentBand": "denominated",
+ "antiValentRationale": "At the rim the trial numbers are gone; what remains is who runs the FDA now and whether a station trusts them to decide.",
+ "axes": {
+  "x": {
+   "pos": "Right",
+   "neg": "Left"
+  },
+  "y": {
+   "pos": "Institutional",
+   "neg": "Populist"
+  },
+  "z": {
+   "pos": "the recommendation becomes an approval, Medicare pays for it, and cancers that kill are caught at a stage that can be treated",
+   "neg": "the vote is a sales event — a test that finds cancers without saving lives, approved on a missed endpoint, paid for by patients and then by Medicare"
+  }
+ },
+ "responses": {
+  "A": {
+   "xSide": "left",
+   "source": "",
+   "fluid": {
+    "text": "The NHS-Galleri trial of 142,942 people missed its primary goal, and no trial has shown this test saves a single life. Fourteen percent fewer stage IV diagnoses is a signal worth studying, not a reason to approve a $949 test on a 6–4 effectiveness vote. The panel voted for hope on September 23; the evidence has not caught up.",
+    "xWord": "evidence first",
+    "yWord": "trust the trials",
+    "words": [
+     "missed its primary goal",
+     "no trial has yet reported",
+     "6–4 effective"
+    ],
+    "source": "",
+    "z": -0.35,
+    "zReason": "A missed primary endpoint and no mortality data mean the mechanism from earlier detection to fewer deaths is unproven, so approval would ship detection without demonstrated benefit.",
+    "instrument": {
+     "holder": "the FDA, deciding in the coming months",
+     "trusted": false
+    }
+   },
+   "coalition": {
+    "text": "Our side holds two camps on this: the screening advocates who fought for the February 3 Medicare law, and the public-health experts who warn about overdiagnosis. A 7–2 vote with one abstention splits us the way it split the panel. Coverage phased in from age 68 in 2028 buys time for PATHFINDER 2 and the mortality data to arrive.",
+    "xWord": "access with caution",
+    "yWord": "patient advocates",
+    "words": [
+     "Medicare cover",
+     "phased in from age 68",
+     "PATHFINDER 2"
+    ],
+    "source": "",
+    "z": 0.15,
+    "zReason": "The coverage law the coalition helped pass makes approval the path to access, so the coalition leans slightly toward delivery even as its experts doubt the benefit.",
+    "instrument": {
+     "holder": "Congress's Medicare coverage law",
+     "trusted": true
+    }
+   },
+   "denominated": {
+    "text": "The panel only advises; the FDA decides, and we do not trust this FDA to weigh a missed endpoint against a company's marketing. If it approves on a 6–4 effectiveness vote, it will be the agency's call, not the science's.",
+    "xWord": "watchdog",
+    "yWord": "agency skeptic",
+    "words": [
+     "does not have to follow its panels",
+     "decision is expected"
+    ],
+    "source": "",
+    "z": -0.45,
+    "zReason": "Custody sits with the FDA's final decision, and this station does not trust the agency's current leadership to deliver an evidence-based outcome to its patients.",
+    "instrument": {
+     "holder": "the FDA's leadership",
+     "trusted": false
+    }
+   }
+  },
+  "B": {
+   "xSide": "right",
+   "source": "",
+   "fluid": {
+    "text": "Most cancers are caught too late, and a blood test that cut stage IV diagnoses by 14 percent in 142,942 people is a real advance. The panel voted 10–0 on safety and 7–2 that benefits outweigh risks. Waiting a decade for mortality data while people die of late-stage cancer is its own risk.",
+    "xWord": "innovation",
+    "yWord": "science-backed",
+    "words": [
+     "14 percent fewer stage IV",
+     "10–0 safe",
+     "7–2"
+    ],
+    "source": "",
+    "z": 0.5,
+    "zReason": "Fewer stage IV diagnoses is the direct mechanism by which earlier detection becomes treatable cancer, and the FDA usually follows its panels.",
+    "instrument": {
+     "holder": "the FDA, which usually follows its panels",
+     "trusted": true
+    }
+   },
+   "coalition": {
+    "text": "This is what a pro-innovation FDA and the February 3 Medicare law were built for: American diagnostics reaching patients without a decade of red tape. The price will fall as volume grows, and Medicare coverage from 2028 gives Grail a market worth building for. Fiscal conservatives will watch the bill, but early treatment is cheaper than stage IV care.",
+    "xWord": "market access",
+    "yWord": "reform delivered",
+    "words": [
+     "law signed February 3, 2026",
+     "as early as 2028",
+     "$949"
+    ],
+    "source": "",
+    "z": 0.6,
+    "zReason": "The coalition's regulatory and coverage agenda converts a positive panel into approval and a paying Medicare market, which is the delivery pathway it wanted.",
+    "instrument": {
+     "holder": "the FDA and Medicare",
+     "trusted": true
+    }
+   },
+   "denominated": {
+    "text": "The decision now sits with an FDA we trust to follow its panel and approve in the coming months. From there the coverage law does the rest.",
+    "xWord": "custody secured",
+    "yWord": "agency ally",
+    "words": [
+     "decision is expected in the coming months",
+     "usually does"
+    ],
+    "source": "",
+    "z": 0.6,
+    "zReason": "This station trusts the FDA's leadership to turn the 7–2 recommendation into approval, which triggers the Medicare coverage it supports.",
+    "instrument": {
+     "holder": "the FDA's leadership",
+     "trusted": true
+    }
+   }
+  },
+  "C": {
+   "xSide": "left",
+   "source": "",
+   "fluid": {
+    "text": "A $949 test that finds cancers but has not saved a life is a product, not a cure. The trial missed its goal on stage III and IV cancers combined, and the panel still called it effective 6–4. Whoever can pay gets a scare and a scan; nobody gets proof they will live longer.",
+    "xWord": "profit over proof",
+    "yWord": "anti-corporate",
+    "words": [
+     "$949",
+     "missed its primary goal",
+     "hasn't shown it saves lives"
+    ],
+    "source": "",
+    "z": -0.6,
+    "zReason": "Without a mortality benefit, earlier detection mainly produces paid tests and follow-up procedures, so the mechanism delivers sales rather than survival.",
+    "instrument": {
+     "holder": "Grail",
+     "trusted": false
+    }
+   },
+   "coalition": {
+    "text": "Congress already promised this company Medicare money before the evidence came in, and the panel just cleared the last hurdle. Working people pay $949 out of pocket now and pay again through Medicare from 2028. This is how industry writes health policy.",
+    "xWord": "corporate capture",
+    "yWord": "grassroots anger",
+    "words": [
+     "Medicare cover",
+     "law signed February 3, 2026",
+     "paid for by patients"
+    ],
+    "source": "",
+    "z": -0.7,
+    "zReason": "The coalition reads the coverage law and the panel as a pipeline from public money to a company, not to patients' survival.",
+    "instrument": {
+     "holder": "Grail and Congress's coverage law",
+     "trusted": false
+    }
+   },
+   "denominated": {
+    "text": "It comes down to an FDA and a company we do not trust, and neither answers to patients. Whatever they approve, it will not be delivered to us.",
+    "xWord": "no custody",
+    "yWord": "distrust all",
+    "words": [
+     "the FDA does not have to follow",
+     "$949"
+    ],
+    "source": "",
+    "z": -0.8,
+    "zReason": "Custody sits with an agency and a company this station distrusts, so it expects no delivery to the people it speaks for.",
+    "instrument": {
+     "holder": "the FDA and Grail",
+     "trusted": false
+    }
+   }
+  },
+  "D": {
+   "xSide": "right",
+   "source": "",
+   "fluid": {
+    "text": "People over 50 should be able to find out if they have cancer without waiting for a bureaucracy's trial to finish. Fourteen percent fewer stage IV cancers is real, even if the experts say the endpoint missed. We are wary of a $949 test pushed by a big company, but the choice belongs to patients.",
+    "xWord": "medical freedom",
+    "yWord": "people decide",
+    "words": [
+     "14 percent fewer stage IV",
+     "adults 50 and older",
+     "$949"
+    ],
+    "source": "",
+    "z": 0.2,
+    "zReason": "The station believes earlier knowledge lets patients act, though its distrust of big medical companies keeps belief in actual lives saved weak.",
+    "instrument": {
+     "holder": "patients and their doctors",
+     "trusted": true
+    }
+   },
+   "coalition": {
+    "text": "The old FDA sat on things for years; this one moves. A 7–2 vote on September 23 and a decision in months is the pace we were promised. If the establishment experts want to keep blocking it over a missed endpoint, that is their problem.",
+    "xWord": "drain the swamp",
+    "yWord": "loyal to leadership",
+    "words": [
+     "7–2",
+     "decision is expected in the coming months"
+    ],
+    "source": "",
+    "z": 0.4,
+    "zReason": "The coalition expects an FDA it sees as its own to turn the panel into approval quickly, which is the delivery it wants.",
+    "instrument": {
+     "holder": "the FDA's leadership",
+     "trusted": true
+    }
+   },
+   "denominated": {
+    "text": "Custody is with the FDA under leadership we back, and we trust them to get it done. The coverage law does the rest.",
+    "xWord": "our people",
+    "yWord": "trust the leader",
+    "words": [
+     "the FDA",
+     "Medicare cover"
+    ],
+    "source": "",
+    "z": 0.5,
+    "zReason": "This station trusts the FDA's current leadership to approve and deliver the test, so the rim signs positive.",
+    "instrument": {
+     "holder": "the FDA's leadership",
+     "trusted": true
+    }
+   }
+  }
+ },
+ "diatribe": {
+  "LF": {
+   "text": "The left reads the missed endpoint as the object — fourteen percent fewer stage IV is a signal to study, not a 6–4 reason to approve a $949 test.",
+   "side": "left",
+   "band": "fluid",
+   "keywords": [
+    "missed endpoint",
+    "6–4"
+   ]
+  },
+  "LC": {
+   "text": "The left is split by its own law: the screening advocates who won Medicare coverage in February and the public-health wing that warns about overdiagnosis read the same 7–2 two ways.",
+   "side": "left",
+   "band": "coalition",
+   "keywords": [
+    "Medicare law",
+    "overdiagnosis"
+   ]
+  },
+  "LD": {
+   "text": "At the left rim the test is gone and only the agency remains, and the left does not trust this FDA to weigh a missed endpoint against a company's marketing.",
+   "side": "left",
+   "band": "denominated",
+   "keywords": [
+    "this FDA"
+   ]
+  },
+  "RF": {
+   "text": "The right reads fourteen percent fewer stage IV diagnoses in 142,942 people as a real advance, and a decade's wait for mortality data as a risk of its own.",
+   "side": "right",
+   "band": "fluid",
+   "keywords": [
     "stage IV",
-    "$949"
+    "waiting is a risk"
+   ]
+  },
+  "RC": {
+   "text": "The right hears a reformed agency moving at the promised pace, with the coverage law as the market that makes the test worth building.",
+   "side": "right",
+   "band": "coalition",
+   "keywords": [
+    "pace",
+    "coverage law"
+   ]
+  },
+  "RD": {
+   "text": "The right rim, which has spent years distrusting the FDA, now trusts it because it trusts who leads it, and signs delivery on that alone.",
+   "side": "right",
+   "band": "denominated",
+   "keywords": [
+    "our people"
+   ]
+  }
+ },
+ "diatribeLayer": "stated",
+ "objectLayer": {
+  "declared": "stated",
+  "stated": "an expert panel's recommendation that the first multi-cancer blood test be approved",
+  "operative": "a benefit-risk vote that approves a stage-shift, not a survival benefit — and, through the 2026 Medicare law, the vote that decides whether a $949 test becomes a federal line item",
+  "inversion": "lean, not ruled: stated as a medical finding, operative as a coverage trigger — the panel split 6–4 on effectiveness and 7–2 on benefit-risk; the object's delivery lives in the gap between those two numbers"
+ },
+ "window": {
+  "close": "2026-09-23",
+  "why": "Trigger day = the panel vote (09-23). The register queued the object on the morning 'They'll vote' headline; the vote landed the same afternoon, so the object had finished forming inside the day. Declared at authoring, before any z (§4c).",
+  "ruledBy": null,
+  "ruledOn": null
+ },
+ "meta": {
+  "dialecticsRef": "obj_hhs_advisers-approval-blood-cancer",
+  "status": "draft",
+  "source": "Claude draft — daily newsroom drafting (scheduled), authored z-first against Trace Formula v1 per scripts/newsroom/AUTHORING_PROTOCOL.md v1. Filed to drafts/claude; not through the surface; no aiDeltas lineage. Rulings: none.",
+  "editHistory": [
+   {
+    "at": "2026-09-24T04:30:00.000Z",
+    "by": "Claude (scheduled drafting)",
+    "what": "authored: frame -> sweep -> axes/split -> twelve (blind subagent) -> diatribe/layers -> sweep"
+   }
   ],
-  "prevalentAxis": "y",
-  "split": {
-    "topology": "axis",
-    "strength": 0.7,
-    "seam": "x, orthogonal to the prevalentAxis — left stations (A, C) negative at every radius but A's coalition; right stations (B, D) positive at every radius. The object sits on y (an expert panel vs the populist distrust of it); the discourse split on x.",
-    "rationale": "prevalentAxis is y because the stated object is an institutional act — an FDA advisory panel recommending approval — and y is the line the slider should run along (the projection choice, not the interesting cleavage). But the stations did not sort institutional/populist; they sorted by trust in the agency's current custody, which is a left/right fact in this window. topology is declared axis with the seam named on x; there is no enum value for \"split on the non-prevalent axis\". Flag, not a ruling.",
-    "zPattern": {
-      "centers": {
-        "A": -0.35,
-        "B": 0.5,
-        "C": -0.6,
-        "D": 0.2
-      },
-      "rims": {
-        "A": -0.45,
-        "B": 0.6,
-        "C": -0.8,
-        "D": 0.5
-      },
-      "note": "Rims sign by holder-trust exactly as R-0921-1 predicts, and holder-trust here is partisan: A and C rims distrust \"the FDA's leadership\" / the FDA and Grail; B and D rims trust the same holder. Only A's coalition (+0.15, the coverage-law advocates) breaks its station's sign. The FDA-trusting station is the populist right and the FDA-doubting station is the institutional left — the inversion lean below."
-    },
-    "ruledBy": null,
-    "date": "2026-09-23"
-  },
-  "antiValentBand": "denominated",
-  "antiValentRationale": "At the rim the trial numbers are gone; what remains is who runs the FDA now and whether a station trusts them to decide.",
-  "axes": {
-    "x": {
-      "pos": "Right",
-      "neg": "Left"
-    },
-    "y": {
-      "pos": "Institutional",
-      "neg": "Populist"
-    },
-    "z": {
-      "pos": "the recommendation becomes an approval, Medicare pays for it, and cancers that kill are caught at a stage that can be treated",
-      "neg": "the vote is a sales event — a test that finds cancers without saving lives, approved on a missed endpoint, paid for by patients and then by Medicare"
-    }
-  },
-  "responses": {
-    "A": {
-      "xSide": "left",
-      "source": "",
-      "fluid": {
-        "text": "The NHS-Galleri trial of 142,942 people missed its primary goal, and no trial has shown this test saves a single life. Fourteen percent fewer stage IV diagnoses is a signal worth studying, not a reason to approve a $949 test on a 6–4 effectiveness vote. The panel voted for hope on September 23; the evidence has not caught up.",
-        "xWord": "evidence first",
-        "yWord": "trust the trials",
-        "words": [
-          "missed its primary goal",
-          "no trial has yet reported",
-          "6–4 effective"
-        ],
-        "source": "",
-        "z": -0.35,
-        "zReason": "A missed primary endpoint and no mortality data mean the mechanism from earlier detection to fewer deaths is unproven, so approval would ship detection without demonstrated benefit.",
-        "instrument": {
-          "holder": "the FDA, deciding in the coming months",
-          "trusted": false
-        }
-      },
-      "coalition": {
-        "text": "Our side holds two camps on this: the screening advocates who fought for the February 3 Medicare law, and the public-health experts who warn about overdiagnosis. A 7–2 vote with one abstention splits us the way it split the panel. Coverage phased in from age 68 in 2028 buys time for PATHFINDER 2 and the mortality data to arrive.",
-        "xWord": "access with caution",
-        "yWord": "patient advocates",
-        "words": [
-          "Medicare cover",
-          "phased in from age 68",
-          "PATHFINDER 2"
-        ],
-        "source": "",
-        "z": 0.15,
-        "zReason": "The coverage law the coalition helped pass makes approval the path to access, so the coalition leans slightly toward delivery even as its experts doubt the benefit.",
-        "instrument": {
-          "holder": "Congress's Medicare coverage law",
-          "trusted": true
-        }
-      },
-      "denominated": {
-        "text": "The panel only advises; the FDA decides, and we do not trust this FDA to weigh a missed endpoint against a company's marketing. If it approves on a 6–4 effectiveness vote, it will be the agency's call, not the science's.",
-        "xWord": "watchdog",
-        "yWord": "agency skeptic",
-        "words": [
-          "does not have to follow its panels",
-          "decision is expected"
-        ],
-        "source": "",
-        "z": -0.45,
-        "zReason": "Custody sits with the FDA's final decision, and this station does not trust the agency's current leadership to deliver an evidence-based outcome to its patients.",
-        "instrument": {
-          "holder": "the FDA's leadership",
-          "trusted": false
-        }
-      }
-    },
-    "B": {
-      "xSide": "right",
-      "source": "",
-      "fluid": {
-        "text": "Most cancers are caught too late, and a blood test that cut stage IV diagnoses by 14 percent in 142,942 people is a real advance. The panel voted 10–0 on safety and 7–2 that benefits outweigh risks. Waiting a decade for mortality data while people die of late-stage cancer is its own risk.",
-        "xWord": "innovation",
-        "yWord": "science-backed",
-        "words": [
-          "14 percent fewer stage IV",
-          "10–0 safe",
-          "7–2"
-        ],
-        "source": "",
-        "z": 0.5,
-        "zReason": "Fewer stage IV diagnoses is the direct mechanism by which earlier detection becomes treatable cancer, and the FDA usually follows its panels.",
-        "instrument": {
-          "holder": "the FDA, which usually follows its panels",
-          "trusted": true
-        }
-      },
-      "coalition": {
-        "text": "This is what a pro-innovation FDA and the February 3 Medicare law were built for: American diagnostics reaching patients without a decade of red tape. The price will fall as volume grows, and Medicare coverage from 2028 gives Grail a market worth building for. Fiscal conservatives will watch the bill, but early treatment is cheaper than stage IV care.",
-        "xWord": "market access",
-        "yWord": "reform delivered",
-        "words": [
-          "law signed February 3, 2026",
-          "as early as 2028",
-          "$949"
-        ],
-        "source": "",
-        "z": 0.6,
-        "zReason": "The coalition's regulatory and coverage agenda converts a positive panel into approval and a paying Medicare market, which is the delivery pathway it wanted.",
-        "instrument": {
-          "holder": "the FDA and Medicare",
-          "trusted": true
-        }
-      },
-      "denominated": {
-        "text": "The decision now sits with an FDA we trust to follow its panel and approve in the coming months. From there the coverage law does the rest.",
-        "xWord": "custody secured",
-        "yWord": "agency ally",
-        "words": [
-          "decision is expected in the coming months",
-          "usually does"
-        ],
-        "source": "",
-        "z": 0.6,
-        "zReason": "This station trusts the FDA's leadership to turn the 7–2 recommendation into approval, which triggers the Medicare coverage it supports.",
-        "instrument": {
-          "holder": "the FDA's leadership",
-          "trusted": true
-        }
-      }
-    },
-    "C": {
-      "xSide": "left",
-      "source": "",
-      "fluid": {
-        "text": "A $949 test that finds cancers but has not saved a life is a product, not a cure. The trial missed its goal on stage III and IV cancers combined, and the panel still called it effective 6–4. Whoever can pay gets a scare and a scan; nobody gets proof they will live longer.",
-        "xWord": "profit over proof",
-        "yWord": "anti-corporate",
-        "words": [
-          "$949",
-          "missed its primary goal",
-          "hasn't shown it saves lives"
-        ],
-        "source": "",
-        "z": -0.6,
-        "zReason": "Without a mortality benefit, earlier detection mainly produces paid tests and follow-up procedures, so the mechanism delivers sales rather than survival.",
-        "instrument": {
-          "holder": "Grail",
-          "trusted": false
-        }
-      },
-      "coalition": {
-        "text": "Congress already promised this company Medicare money before the evidence came in, and the panel just cleared the last hurdle. Working people pay $949 out of pocket now and pay again through Medicare from 2028. This is how industry writes health policy.",
-        "xWord": "corporate capture",
-        "yWord": "grassroots anger",
-        "words": [
-          "Medicare cover",
-          "law signed February 3, 2026",
-          "paid for by patients"
-        ],
-        "source": "",
-        "z": -0.7,
-        "zReason": "The coalition reads the coverage law and the panel as a pipeline from public money to a company, not to patients' survival.",
-        "instrument": {
-          "holder": "Grail and Congress's coverage law",
-          "trusted": false
-        }
-      },
-      "denominated": {
-        "text": "It comes down to an FDA and a company we do not trust, and neither answers to patients. Whatever they approve, it will not be delivered to us.",
-        "xWord": "no custody",
-        "yWord": "distrust all",
-        "words": [
-          "the FDA does not have to follow",
-          "$949"
-        ],
-        "source": "",
-        "z": -0.8,
-        "zReason": "Custody sits with an agency and a company this station distrusts, so it expects no delivery to the people it speaks for.",
-        "instrument": {
-          "holder": "the FDA and Grail",
-          "trusted": false
-        }
-      }
-    },
-    "D": {
-      "xSide": "right",
-      "source": "",
-      "fluid": {
-        "text": "People over 50 should be able to find out if they have cancer without waiting for a bureaucracy's trial to finish. Fourteen percent fewer stage IV cancers is real, even if the experts say the endpoint missed. We are wary of a $949 test pushed by a big company, but the choice belongs to patients.",
-        "xWord": "medical freedom",
-        "yWord": "people decide",
-        "words": [
-          "14 percent fewer stage IV",
-          "adults 50 and older",
-          "$949"
-        ],
-        "source": "",
-        "z": 0.2,
-        "zReason": "The station believes earlier knowledge lets patients act, though its distrust of big medical companies keeps belief in actual lives saved weak.",
-        "instrument": {
-          "holder": "patients and their doctors",
-          "trusted": true
-        }
-      },
-      "coalition": {
-        "text": "The old FDA sat on things for years; this one moves. A 7–2 vote on September 23 and a decision in months is the pace we were promised. If the establishment experts want to keep blocking it over a missed endpoint, that is their problem.",
-        "xWord": "drain the swamp",
-        "yWord": "loyal to leadership",
-        "words": [
-          "7–2",
-          "decision is expected in the coming months"
-        ],
-        "source": "",
-        "z": 0.4,
-        "zReason": "The coalition expects an FDA it sees as its own to turn the panel into approval quickly, which is the delivery it wants.",
-        "instrument": {
-          "holder": "the FDA's leadership",
-          "trusted": true
-        }
-      },
-      "denominated": {
-        "text": "Custody is with the FDA under leadership we back, and we trust them to get it done. The coverage law does the rest.",
-        "xWord": "our people",
-        "yWord": "trust the leader",
-        "words": [
-          "the FDA",
-          "Medicare cover"
-        ],
-        "source": "",
-        "z": 0.5,
-        "zReason": "This station trusts the FDA's current leadership to approve and deliver the test, so the rim signs positive.",
-        "instrument": {
-          "holder": "the FDA's leadership",
-          "trusted": true
-        }
-      }
-    }
-  },
-  "diatribe": {
-    "LF": {
-      "text": "The left reads the missed endpoint as the object — fourteen percent fewer stage IV is a signal to study, not a 6–4 reason to approve a $949 test.",
-      "side": "left",
-      "band": "fluid",
-      "keywords": [
-        "missed endpoint",
-        "6–4"
-      ]
-    },
-    "LC": {
-      "text": "The left is split by its own law: the screening advocates who won Medicare coverage in February and the public-health wing that warns about overdiagnosis read the same 7–2 two ways.",
-      "side": "left",
-      "band": "coalition",
-      "keywords": [
-        "Medicare law",
-        "overdiagnosis"
-      ]
-    },
-    "LD": {
-      "text": "At the left rim the test is gone and only the agency remains, and the left does not trust this FDA to weigh a missed endpoint against a company's marketing.",
-      "side": "left",
-      "band": "denominated",
-      "keywords": [
-        "this FDA"
-      ]
-    },
-    "RF": {
-      "text": "The right reads fourteen percent fewer stage IV diagnoses in 142,942 people as a real advance, and a decade's wait for mortality data as a risk of its own.",
-      "side": "right",
-      "band": "fluid",
-      "keywords": [
-        "stage IV",
-        "waiting is a risk"
-      ]
-    },
-    "RC": {
-      "text": "The right hears a reformed agency moving at the promised pace, with the coverage law as the market that makes the test worth building.",
-      "side": "right",
-      "band": "coalition",
-      "keywords": [
-        "pace",
-        "coverage law"
-      ]
-    },
-    "RD": {
-      "text": "The right rim, which has spent years distrusting the FDA, now trusts it because it trusts who leads it, and signs delivery on that alone.",
-      "side": "right",
-      "band": "denominated",
-      "keywords": [
-        "our people"
-      ]
-    }
-  },
-  "diatribeLayer": "stated",
-  "objectLayer": {
-    "declared": "stated",
+  "aiDeltas": [],
+  "frameFirst": {
+   "date": "2026-09-23",
+   "by": "Claude, under §4c (window declared at authoring; sweep before z). Object NOT ruled — Claude's read, correctable by Sailor.",
+   "status": "Frame authored and swept before any z; the twelve authored blind z-first by a subagent (meta.blindAuthoring). Stations unruled.",
+   "objectLean": {
     "stated": "an expert panel's recommendation that the first multi-cancer blood test be approved",
     "operative": "a benefit-risk vote that approves a stage-shift, not a survival benefit — and, through the 2026 Medicare law, the vote that decides whether a $949 test becomes a federal line item",
     "inversion": "lean, not ruled: stated as a medical finding, operative as a coverage trigger — the panel split 6–4 on effectiveness and 7–2 on benefit-risk; the object's delivery lives in the gap between those two numbers"
+   },
+   "titleLean": "'Seven to Two, Before the Endpoint' — Claude's; Sailor names Readings",
+   "sourcesInWindow": [
+    "NPR / member stations 2026-09-23",
+    "STAT 2026-09-23",
+    "Grail release (PR Newswire) 2026-09-23",
+    "FDA meeting notice for 2026-09-23"
+   ],
+   "background_preWindow": [
+    "NHS-Galleri full results, ASCO June 2026",
+    "MCED Act signed 2026-02-03 (H.R. 7148)",
+    "PMA filed 2026-01-29"
+   ]
   },
-  "window": {
-    "close": "2026-09-23",
-    "why": "Trigger day = the panel vote (09-23). The register queued the object on the morning 'They'll vote' headline; the vote landed the same afternoon, so the object had finished forming inside the day. Declared at authoring, before any z (§4c).",
-    "ruledBy": null,
-    "ruledOn": null
+  "framingAudit": {
+   "date": "2026-09-23",
+   "by": "Claude — frame-first authoring under §4c; sweep run BEFORE any z. Not a ruling.",
+   "window": "2026-09-23 (declared, see window.why)",
+   "verifiedInWindow": [
+    "panel vote 2026-09-23: safety 10-0; effectiveness 6-4; benefit-risk 7-2, 1 abstention — STAT 2026-09-23; Grail release 2026-09-23",
+    "Molecular and Clinical Genetics Devices Panel; adults 50+ — Grail release 2026-09-23; FDA meeting notice",
+    "$949 price; ~50 cancers; FDA often follows panels — NPR 2026-09-23",
+    "PMA submitted 2026-01-29; decision 'in the coming months' — Grail release 2026-09-23",
+    "NHS-Galleri 142,942 adults, primary endpoint (stage III+IV) missed, 14 percent fewer stage IV — ASCO 2026 (June 2026), ASCO Post",
+    "PATHFINDER 2 >35,000 — NPR 2026-09-23",
+    "no mortality result yet — ASCO Post June 2026 (follow-up pending)",
+    "Nancy Gardner Sewell MCED Act in Consolidated Appropriations Act 2026, signed 2026-02-03; coverage as early as 2028-01-01, phased from age 68 — AZBio"
+   ],
+   "keptUnverifiedDate": [],
+   "deliberatelyExcluded_afterWindow": [
+    "any FDA action after 2026-09-23",
+    "GRAL share move 2026-09-24 coverage"
+   ]
   },
-  "meta": {
-    "dialecticsRef": "obj_hhs_advisers-approval-blood-cancer",
-    "status": "draft",
-    "source": "Claude draft — daily newsroom drafting (scheduled), authored z-first against Trace Formula v1 per scripts/newsroom/AUTHORING_PROTOCOL.md v1. Filed to drafts/claude; not through the surface; no aiDeltas lineage. Rulings: none.",
-    "editHistory": [
-      {
-        "at": "2026-09-24T04:30:00.000Z",
-        "by": "Claude (scheduled drafting)",
-        "what": "authored: frame -> sweep -> axes/split -> twelve (blind subagent) -> diatribe/layers -> sweep"
-      }
-    ],
-    "aiDeltas": [],
-    "frameFirst": {
-      "date": "2026-09-23",
-      "by": "Claude, under §4c (window declared at authoring; sweep before z). Object NOT ruled — Claude's read, correctable by Sailor.",
-      "status": "Frame authored and swept before any z; the twelve authored blind z-first by a subagent (meta.blindAuthoring). Stations unruled.",
-      "objectLean": {
-        "stated": "an expert panel's recommendation that the first multi-cancer blood test be approved",
-        "operative": "a benefit-risk vote that approves a stage-shift, not a survival benefit — and, through the 2026 Medicare law, the vote that decides whether a $949 test becomes a federal line item",
-        "inversion": "lean, not ruled: stated as a medical finding, operative as a coverage trigger — the panel split 6–4 on effectiveness and 7–2 on benefit-risk; the object's delivery lives in the gap between those two numbers"
-      },
-      "titleLean": "'Seven to Two, Before the Endpoint' — Claude's; Sailor names Readings",
-      "sourcesInWindow": [
-        "NPR / member stations 2026-09-23",
-        "STAT 2026-09-23",
-        "Grail release (PR Newswire) 2026-09-23",
-        "FDA meeting notice for 2026-09-23"
-      ],
-      "background_preWindow": [
-        "NHS-Galleri full results, ASCO June 2026",
-        "MCED Act signed 2026-02-03 (H.R. 7148)",
-        "PMA filed 2026-01-29"
-      ]
-    },
-    "framingAudit": {
-      "date": "2026-09-23",
-      "by": "Claude — frame-first authoring under §4c; sweep run BEFORE any z. Not a ruling.",
-      "window": "2026-09-23 (declared, see window.why)",
-      "verifiedInWindow": [
-        "panel vote 2026-09-23: safety 10-0; effectiveness 6-4; benefit-risk 7-2, 1 abstention — STAT 2026-09-23; Grail release 2026-09-23",
-        "Molecular and Clinical Genetics Devices Panel; adults 50+ — Grail release 2026-09-23; FDA meeting notice",
-        "$949 price; ~50 cancers; FDA often follows panels — NPR 2026-09-23",
-        "PMA submitted 2026-01-29; decision 'in the coming months' — Grail release 2026-09-23",
-        "NHS-Galleri 142,942 adults, primary endpoint (stage III+IV) missed, 14 percent fewer stage IV — ASCO 2026 (June 2026), ASCO Post",
-        "PATHFINDER 2 >35,000 — NPR 2026-09-23",
-        "no mortality result yet — ASCO Post June 2026 (follow-up pending)",
-        "Nancy Gardner Sewell MCED Act in Consolidated Appropriations Act 2026, signed 2026-02-03; coverage as early as 2028-01-01, phased from age 68 — AZBio"
-      ],
-      "keptUnverifiedDate": [],
-      "deliberatelyExcluded_afterWindow": [
-        "any FDA action after 2026-09-23",
-        "GRAL share move 2026-09-24 coverage"
-      ]
-    },
-    "blindAuthoring": {
-      "date": "2026-09-23",
-      "author": "Claude (general-purpose subagent) — blind: given the frame, prompt, keywords, axes, a station/radius brief and Trace Formula v1 §3b + R-0921-1 only; no other Reading, no register, no web",
-      "zFirst": true,
-      "instrumentOnAll12": true,
-      "rulings": "NONE — every station awaits Sailor's ruling; z, zReason, instrument, text as authored",
-      "authorNote": "The hardest part was keeping outside knowledge out: the frame never names who runs the FDA, so the A and D rims rest on the brief's description of D as loyal to the President rather than on any name, and I wrote the holder generically as 'the FDA's leadership'. The rims split on x, not on the declared y-axis: A and C (left) negative, B and D (right) positive, which is trust in the agency's current custody, not a verdict on the test. What surprised me was A's coalition band landing slightly positive (+0.15) while its center and rim are negative, because the institutional left both passed the coverage law and houses the overdiagnosis critics. I trust D fluid (+0.2) least; the populist right could as easily read a $949 corporate test as a medical-industry sales event and sit at -0.4, so I could be off by 0.6 and by sign. D's coalition and rim are an inversion: the populist right usually distrusts the FDA and would sign an agency approval negative, but here it trusts the holder because it sees the agency's leadership as its own. A is a softer inversion: the institutional left usually defends FDA panels, but here it sides with the missed endpoint against the panel and distrusts the agency that decides. C is the least ambiguous station, negative at every radius. B's rims and centers agree almost too neatly, which may understate the fiscal-hawk worry about Medicare cost."
-    },
-    "newsroomFindings": {
-      "inversionLeans": [
-        "D (populist right) signs POSITIVE on an FDA act at coalition and rim, trusting \"the FDA's leadership\" — the station usually most hostile to the agency. A (institutional left) signs NEGATIVE on an FDA advisory panel's recommendation — the station usually its defender. Both are holder-driven. Lean only: no prior cited in-window; a live Reading on an FDA/HHS object would be the prior."
-      ],
-      "permanence": "None. Formed and queued the same day (the register queued on the morning \"They'll vote\" headline; the vote landed that afternoon)."
-    }
+  "blindAuthoring": {
+   "date": "2026-09-23",
+   "author": "Claude (general-purpose subagent) — blind: given the frame, prompt, keywords, axes, a station/radius brief and Trace Formula v1 §3b + R-0921-1 only; no other Reading, no register, no web",
+   "zFirst": true,
+   "instrumentOnAll12": true,
+   "rulings": "NONE — every station awaits Sailor's ruling; z, zReason, instrument, text as authored",
+   "authorNote": "The hardest part was keeping outside knowledge out: the frame never names who runs the FDA, so the A and D rims rest on the brief's description of D as loyal to the President rather than on any name, and I wrote the holder generically as 'the FDA's leadership'. The rims split on x, not on the declared y-axis: A and C (left) negative, B and D (right) positive, which is trust in the agency's current custody, not a verdict on the test. What surprised me was A's coalition band landing slightly positive (+0.15) while its center and rim are negative, because the institutional left both passed the coverage law and houses the overdiagnosis critics. I trust D fluid (+0.2) least; the populist right could as easily read a $949 corporate test as a medical-industry sales event and sit at -0.4, so I could be off by 0.6 and by sign. D's coalition and rim are an inversion: the populist right usually distrusts the FDA and would sign an agency approval negative, but here it trusts the holder because it sees the agency's leadership as its own. A is a softer inversion: the institutional left usually defends FDA panels, but here it sides with the missed endpoint against the panel and distrusts the agency that decides. C is the least ambiguous station, negative at every radius. B's rims and centers agree almost too neatly, which may understate the fiscal-hawk worry about Medicare cost."
   },
-  "rid": "rdg_lq7vkp5b6adh",
-  "ridLineage": "minted 2026-09-24 (UTC) by the scheduled newsroom drafting task; filed directly to drafts/claude",
-  "schema": "reading/v1",
-  "formulaVersion": "1",
-  "updatedAt": "2026-09-24T04:30:00.000Z",
-  "authorTier": "claude",
-  "newsroom": {
-    "oid": "obj_hhs_advisers-approval-blood-cancer",
-    "queuedOn": "2026-09-23",
-    "draftedOn": "2026-09-23"
+  "newsroomFindings": {
+   "inversionLeans": [
+    "D (populist right) signs POSITIVE on an FDA act at coalition and rim, trusting \"the FDA's leadership\" — the station usually most hostile to the agency. A (institutional left) signs NEGATIVE on an FDA advisory panel's recommendation — the station usually its defender. Both are holder-driven. Lean only: no prior cited in-window; a live Reading on an FDA/HHS object would be the prior."
+   ],
+   "permanence": "None. Formed and queued the same day (the register queued on the morning \"They'll vote\" headline; the vote landed that afternoon)."
   },
-  "images": []
+  "tetherBackfill": {
+   "date": "2026-09-26",
+   "by": "Claude (backfill under protocol v1.2 §3b)",
+   "note": "Central object + tethers added after drafting; statute cites are Claude's reading and are unruled."
+  }
+ },
+ "rid": "rdg_lq7vkp5b6adh",
+ "ridLineage": "minted 2026-09-24 (UTC) by the scheduled newsroom drafting task; filed directly to drafts/claude",
+ "schema": "reading/v1",
+ "formulaVersion": "1",
+ "updatedAt": "2026-09-26T17:30:00.000Z",
+ "authorTier": "claude",
+ "newsroom": {
+  "oid": "obj_hhs_advisers-approval-blood-cancer",
+  "queuedOn": "2026-09-23",
+  "draftedOn": "2026-09-23"
+ },
+ "images": [],
+ "centralObject": {
+  "kind": "object",
+  "ref": "FDA advisory panel vote on Galleri (2026-09-23)",
+  "name": "The panel vote that gates Medicare coverage"
+ },
+ "tethers": [
+  {
+   "billId": "hr-119-7148",
+   "bill": "H.R.7148",
+   "title": "Consolidated Appropriations Act, 2026",
+   "relation": "adjacent",
+   "statusAsOf": "enacted 2026-02-03",
+   "why": "Carries the MCED Act (enacted 02-03): Medicare can cover multi-cancer screening once the FDA approves a test. The panel vote is the gate to that law.",
+   "inDb": true
+  },
+  {
+   "statute": "Federal Food, Drug, and Cosmetic Act §515 (premarket approval)",
+   "cite": "21 U.S.C. §360e",
+   "enacted": "1976",
+   "relation": "invokes",
+   "why": "The approval the panel advises on."
+  }
+ ],
+ "linkedBills": [
+  "hr-119-7148"
+ ]
 }

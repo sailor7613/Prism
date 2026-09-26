@@ -1,0 +1,55 @@
+# refresh-bills — keeps the bill catalog current (2026-09-26).
+#
+# The 3-hourly scan refreshes roll calls, candidates and news, but nothing
+# refreshed data/prism_legislation.json: its newest action was 2026-07-24,
+# so drafts could not tether to anything from the last two months. This runs
+# the notable pipeline once a day, then fetches + links every tethered bill
+# the Readings name (fetch-bills.js --tethers).
+#
+# NEEDS a repository secret named CONGRESS_API_KEY (Settings → Secrets and
+# variables → Actions → New repository secret). Without it the job skips
+# cleanly and says so; nothing breaks.
+name: refresh-bills
+
+on:
+  schedule:
+    - cron: '10 11 * * *'     # 04:10 Pacific — before the 05:30 object scan
+  workflow_dispatch: {}
+
+concurrency:
+  group: scan                 # same lane as scan.yml: never two writers pushing at once
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  bills:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Refresh the notable bill catalog
+        run: |
+          if [ -z "$CONGRESS_API_KEY" ]; then echo "No CONGRESS_API_KEY secret — skipping (add it under Settings → Secrets → Actions)"; exit 0; fi
+          node scripts/fetch-bills.js
+      - name: Fetch + link tethered bills
+        run: |
+          if [ -z "$CONGRESS_API_KEY" ]; then exit 0; fi
+          node scripts/fetch-bills.js --tethers
+      - name: Commit
+        run: |
+          git config user.name  "prism-scan"
+          git config user.email "prism-scan@users.noreply.github.com"
+          git add data/prism_legislation.json data/legislation_data.js data/bill_fetch_stats.json
+          [ -e data/readings ] && git add -A data/readings || true
+          if git diff --cached --quiet; then echo "nothing changed — no commit"; else
+            git commit -m "bills: daily catalog refresh"
+            git pull --rebase --autostash origin main
+            git push origin main
+          fi

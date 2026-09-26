@@ -811,18 +811,6 @@ html.parallax-mode .answers-phase { padding-top: calc(var(--safe-top) + var(--hd
 .pad-corner.receding { opacity: 0.4; }
 .pad-corner .word { font-size: 11px; }
 
-/* ── THE LAW LINE (2026-09-26) ── one quiet row on the framing beat: the
-   Reading's central object's law (live bill or legacy statute), or its declared
-   void. Sailor: everything in Prism unified to a central object, even when
-   legislation is void. */
-.ev-law { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; max-width: 640px; margin: 0 0 14px; opacity: 0; transition: opacity .6s ease .9s; }
-body.ev-step-framing .ev-law { opacity: 1; }
-.ev-law-tag { font-family: var(--mono); font-size: 9.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-low); align-self: center; margin-right: 2px; }
-.ev-law-chip { font-family: var(--mono); font-size: 10.5px; color: var(--ink-mid); border: .5px solid var(--rule); border-radius: 10px; padding: 2px 9px; white-space: nowrap; max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
-.ev-law-chip.obj { color: var(--ink); border-color: rgba(196,156,72,.55); }
-.ev-law-chip.void { border-style: dashed; white-space: normal; text-align: center; }
-@media (max-height: 860px) { .ev-law { margin-bottom: 10px; } }
-
 /* ── FIT PASS · PHONES (2026-09-26) ──
    Walked at 390×844 and 375×667 (iPhone SE). */
 
@@ -2810,7 +2798,6 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
       <div class="ev-photos" id="evPhotos" aria-hidden="true"></div>
       <p class="ev-framing" id="evFraming"></p>
       <div class="ev-keywords" id="evKeywords" data-band="fluid" data-ted-hint="Those words are the weather of this whole thing — the cloud you're about to take a position inside."></div>
-      <div class="ev-law" id="evLaw" aria-label="The law this Reading is tethered to"></div>
       <button class="ev-enter" id="evEnter" data-ted-hint="When you've got a feel for it, hit this. It drops you into the Prism to set your aperture.">
         <span class="ev-enter-label">take a position</span>
         <span class="ev-enter-glyph">&rarr;</span>
@@ -3511,37 +3498,6 @@ function buildIntroitPhotos(event) {
   });
 }
 buildIntroitPhotos(ev);
-
-// ── The law line (2026-09-26): the central object's law, or its void ──
-// Object Readings carry top-level tethers[] (bills + legacy statutes);
-// utterances show theirs on the clip step, so they're skipped here.
-function buildLawLine(event) {
-  const host = document.getElementById('evLaw');
-  if (!host || !event || event.eventClass === 'utterance') return;
-  const t = Array.isArray(event.tethers) ? event.tethers : [];
-  const v = event.legislativeVoid;
-  if (!t.length && !v) return;
-  const tag = document.createElement('span'); tag.className = 'ev-law-tag'; tag.textContent = 'the law'; host.appendChild(tag);
-  t.slice().sort((a, b) => (b.relation === 'object') - (a.relation === 'object')).slice(0, 3).forEach(x => {
-    const c = document.createElement('span');
-    c.className = 'ev-law-chip' + (x.relation === 'object' ? ' obj' : '');
-    // bills read by number + short title; statutes by their cite (the name rides the tooltip)
-    const shortTitle = String(x.title || '').replace(/,?\s*(of )?\d{4}$/, '').replace(/\s*\(.*?\)\s*/g, ' ').trim();
-    const label = x.billId ? (x.bill || x.billId) + ' · ' + shortTitle
-      : (x.cite ? String(x.cite).split(';').pop().trim() : String(x.statute || '').replace(/\s*\(.*?\)\s*/g, ' ').trim());
-    c.textContent = label.length > 44 ? label.slice(0, 42) + '…' : label;
-    c.title = [x.billId ? x.title : x.statute, x.relation, x.statusAsOf || x.enacted, x.why].filter(Boolean).join(' — ');
-    host.appendChild(c);
-  });
-  if (!t.length && v) {
-    const c = document.createElement('span'); c.className = 'ev-law-chip void';
-    const against = String(v.standsAgainst || '').split(/[,(;]| and the /)[0].replace(/\.$/, '').trim().replace(/^The /, 'the ');
-    c.textContent = 'no statute · stands against ' + against;
-    c.title = (v.why || '') + (v.standsAgainst ? ' Stands against: ' + v.standsAgainst : '');
-    host.appendChild(c);
-  }
-}
-buildLawLine(ev);
 
 // Splash steps (Sailor 2026-07-11): CARD → FRAMING beat → diatribe. The card
 // is a clean title card; the framing beat carries the wall-text (its develop +

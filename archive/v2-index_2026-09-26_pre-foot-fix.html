@@ -723,137 +723,6 @@ body:not(.phase-diatribe) .to-answers { opacity: 0 !important; pointer-events: n
   .stage { padding-bottom: 144px; }   /* CTA sits higher at ≤480 — keep clearing it */
 }
 
-/* The same collision at EVERY width (2026-09-26, Sailor's desktop walk of the
-   Karp Minute): on a short window the ribbon's bottom seat (92px ≥900w) covered
-   "place your pin", the click read as a nav pull, and the visor opened on "the
-   aggregate · still precipitating". The ≤480 fix above only covered phones.
-   Advance chrome now rides above the seated ribbon at all sizes. */
-.answers-foot.show {
-  position: fixed; left: 0; right: 0; z-index: 8; margin: 0; padding: 8px 12px;
-  bottom: calc(var(--ribbon-h) + var(--safe-bottom) + 12px);
-  justify-content: center;
-  background: linear-gradient(180deg, rgba(7,12,26,0) 0%, rgba(7,12,26,0.82) 35%, rgba(7,12,26,0.92) 100%);
-}
-.answers-phase { padding-bottom: calc(var(--ribbon-h) + var(--safe-bottom) + 96px); }
-.to-answers { bottom: calc(var(--ribbon-h) + var(--safe-bottom) + 14px); }
-
-/* ── FIT PASS (2026-09-26, Sailor's desktop walk: "things feel a little clunky") ──
-   Every step was sized for a tall screen. On a laptop window (~590px of
-   viewport) the Begin button sat below the fold, the framing ran two screens,
-   the clip's beat chip fell off the bottom, "see the four responses" landed on
-   the readout, and the pin graph's prompt was pushed ABOVE the top edge where
-   no scroll can reach (flex centering + overflow). Height-aware sizing only;
-   logic and design unchanged. Verified in Chrome at 1354×586. */
-
-/* 1 · centered phases scroll from the top when they overflow, never clip it */
-.answers-phase, .graph-phase { justify-content: safe center; }
-/* the answers phase runs with the ribbon in its BOTTOM seat — its top padding
-   stops reserving the ribbon's (empty) top band */
-html.parallax-mode .answers-phase { padding-top: calc(var(--safe-top) + var(--hdr-h) + 14px); }
-/* the advance bar reads as a bar, not text floating over the lower cards */
-.answers-foot.show { background: rgba(7,12,26,0.94); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
-  border-top: .5px solid var(--rule); padding: 10px 12px; }
-#answersReadout:empty { display: none; }
-
-/* 2 · the prism scales with the window's HEIGHT as well as its width */
-@media (max-height: 860px) {
-  .ev-logo { gap: 10px; margin-bottom: 14px; }
-  .ev-logo.prismform { width: clamp(120px, 27vh, 260px); }
-  body.ev-step-framing .ev-logo, body.ev-step-framing .ev-logo.prismform { width: clamp(84px, 15vh, 200px); margin-bottom: 6px; }
-  body.ev-step-framing .ev-logo .ev-logo-word { display: none; }
-  body.ev-step-clip .ev-logo.prismform, body.ev-step-clip .ev-logo { width: clamp(56px, 9vh, 118px); }
-  .ev-card .ev-title { margin-bottom: 10px; }
-}
-
-/* 3 · the clip step fits one screen: the frame hugs the video, the layer
-   pills ride one scrollable row, the chip stays above the fold */
-.clip-frame { width: auto; max-width: 100%; align-self: center; }
-.clip-frame video { width: auto; max-width: 100%; max-height: max(180px, min(42vh, calc(100vh - 380px))); }
-.clip-bar { width: 100%; }
-@media (max-height: 860px) {
-  .clip-speaker { font-size: 15px; }
-  .clip-venue { margin-bottom: 6px; }
-  .clip-layers { flex-wrap: nowrap; overflow-x: auto; justify-content: flex-start; scrollbar-width: none;
-    padding-bottom: 2px; width: 100%; max-width: 100%; box-sizing: border-box; }
-  .clip-layers::-webkit-scrollbar { display: none; }
-  .clip-chip { min-height: 72px; padding: 8px 12px; margin: 6px 0 4px; }
-  .clip-also { max-height: 18vh; }
-}
-
-/* 4 · the framing beat reads in one screen: a wider, tighter measure */
-@media (max-height: 860px) {
-  .ev-framing-beat .ev-framing { font-size: 15px; line-height: 1.45; margin-bottom: 10px; max-width: 700px; }
-  .ev-framing-title { margin: 0 0 6px; }
-  .ev-framing-beat .ev-rule { margin: 6px auto; }
-}
-
-/* 5 · the Diatribe clears its advance button: the stage rides up so
-   "see the four responses" never sits on the readout */
-@media (max-height: 860px) and (min-width: 481px) {
-  main { padding-bottom: calc(var(--ribbon-h) + var(--safe-bottom) + 110px); }
-}
-
-/* 6 · the answers and the pin graph size to the window */
-@media (max-height: 860px) {
-  .answers-head { margin-bottom: 12px; }
-  .answers-grid { gap: 12px; }
-  .answer-card { padding: 12px 15px 13px; }
-}
-@media (max-height: 860px) and (min-width: 481px) {
-  .graph-pad, .z-slider { width: max(260px, min(440px, 86vw, calc(100vh - 290px))); }
-  .graph-head { margin-bottom: 12px; }
-  .graph-readout { margin-top: 10px; }
-  .graph-dialect { margin-top: 10px; }
-  .graph-foot { margin-top: 12px; }
-}
-
-/* 7 · the receding quadrant labels stay legible (0.22 read as blank at 10px) */
-.pad-corner.receding { opacity: 0.4; }
-.pad-corner .word { font-size: 11px; }
-
-/* ── THE LAW LINE (2026-09-26) ── one quiet row on the framing beat: the
-   Reading's central object's law (live bill or legacy statute), or its declared
-   void. Sailor: everything in Prism unified to a central object, even when
-   legislation is void. */
-.ev-law { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; max-width: 640px; margin: 0 0 14px; opacity: 0; transition: opacity .6s ease .9s; }
-body.ev-step-framing .ev-law { opacity: 1; }
-.ev-law-tag { font-family: var(--mono); font-size: 9.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-low); align-self: center; margin-right: 2px; }
-.ev-law-chip { font-family: var(--mono); font-size: 10.5px; color: var(--ink-mid); border: .5px solid var(--rule); border-radius: 10px; padding: 2px 9px; white-space: nowrap; max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
-.ev-law-chip.obj { color: var(--ink); border-color: rgba(196,156,72,.55); }
-.ev-law-chip.void { border-style: dashed; white-space: normal; text-align: center; }
-@media (max-height: 860px) { .ev-law { margin-bottom: 10px; } }
-
-/* ── FIT PASS · PHONES (2026-09-26) ──
-   Walked at 390×844 and 375×667 (iPhone SE). */
-
-/* the clip frame is sized from the video's aspect (1280×724), never from its
-   intrinsic width — on a phone that came out 626px wide on a 390px screen and
-   dragged the scrub bar, tags and chip off both edges */
-:root { --clip-h: max(180px, min(42vh, calc(100vh - 380px))); }
-/* the splash column fills the screen up to its 760px cap — without a width it
-   sized to its widest child, and a video's intrinsic 1280px won */
-.ev-inner { width: 100%; min-width: 0; }
-.ev-clip-beat { max-width: min(680px, 100%); }
-.clip-frame { width: min(100%, calc(var(--clip-h) * 1.768)); }
-.clip-frame video { width: 100%; height: auto; max-height: var(--clip-h); }
-.clip-speaker { text-wrap: balance; }
-
-@media (max-width: 640px) {
-  /* the moon moves to the header corner: in the sky band it sat on captions,
-     the graph prompt and the clip's venue line */
-  html body #skyMoon { top: calc(var(--safe-top) + 9px); right: 12px; width: 30px; height: 30px; opacity: 0.8; }
-}
-@media (max-width: 480px) {
-  /* the event-id / asymmetry whisper sat on the pin readout and commit row */
-  body.phase-graph footer, body.phase-answers footer { display: none; }
-  /* the Diatribe readout stacks instead of wrapping into two ragged columns */
-  .readout { flex-direction: column; gap: 2px; bottom: -16px; }
-  .readout .sep { display: none; }
-}
-/* Ted's corner face drops to the true bottom whenever the ribbon isn't seated
-   there — it was hovering over the clip chip and the Z slider */
-html:not(.parallax-mode) #tedCorner { bottom: calc(var(--safe-bottom) + 14px); }
-
 @media (prefers-reduced-motion: reduce) {
   .answer-card { transition: opacity 0.01ms, border-color 0.3s ease, box-shadow 0.3s ease; }
   .answer-card.tl, .answer-card.tr, .answer-card.bl, .answer-card.br,
@@ -2810,7 +2679,6 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
       <div class="ev-photos" id="evPhotos" aria-hidden="true"></div>
       <p class="ev-framing" id="evFraming"></p>
       <div class="ev-keywords" id="evKeywords" data-band="fluid" data-ted-hint="Those words are the weather of this whole thing — the cloud you're about to take a position inside."></div>
-      <div class="ev-law" id="evLaw" aria-label="The law this Reading is tethered to"></div>
       <button class="ev-enter" id="evEnter" data-ted-hint="When you've got a feel for it, hit this. It drops you into the Prism to set your aperture.">
         <span class="ev-enter-label">take a position</span>
         <span class="ev-enter-glyph">&rarr;</span>
@@ -2942,9 +2810,9 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
           <div class="z-thumb" id="zThumb"></div>
         </div>
         <div class="z-poles">
-          <span id="zPoleNeg">frustrated</span>
+          <span>frustrated</span>
           <span class="z-read" id="zRead">z · +0.00 · neutral</span>
-          <span id="zPolePos">realized</span>
+          <span>realized</span>
         </div>
       </div>
     </div><!-- /graph-left -->
@@ -3512,37 +3380,6 @@ function buildIntroitPhotos(event) {
 }
 buildIntroitPhotos(ev);
 
-// ── The law line (2026-09-26): the central object's law, or its void ──
-// Object Readings carry top-level tethers[] (bills + legacy statutes);
-// utterances show theirs on the clip step, so they're skipped here.
-function buildLawLine(event) {
-  const host = document.getElementById('evLaw');
-  if (!host || !event || event.eventClass === 'utterance') return;
-  const t = Array.isArray(event.tethers) ? event.tethers : [];
-  const v = event.legislativeVoid;
-  if (!t.length && !v) return;
-  const tag = document.createElement('span'); tag.className = 'ev-law-tag'; tag.textContent = 'the law'; host.appendChild(tag);
-  t.slice().sort((a, b) => (b.relation === 'object') - (a.relation === 'object')).slice(0, 3).forEach(x => {
-    const c = document.createElement('span');
-    c.className = 'ev-law-chip' + (x.relation === 'object' ? ' obj' : '');
-    // bills read by number + short title; statutes by their cite (the name rides the tooltip)
-    const shortTitle = String(x.title || '').replace(/,?\s*(of )?\d{4}$/, '').replace(/\s*\(.*?\)\s*/g, ' ').trim();
-    const label = x.billId ? (x.bill || x.billId) + ' · ' + shortTitle
-      : (x.cite ? String(x.cite).split(';').pop().trim() : String(x.statute || '').replace(/\s*\(.*?\)\s*/g, ' ').trim());
-    c.textContent = label.length > 44 ? label.slice(0, 42) + '…' : label;
-    c.title = [x.billId ? x.title : x.statute, x.relation, x.statusAsOf || x.enacted, x.why].filter(Boolean).join(' — ');
-    host.appendChild(c);
-  });
-  if (!t.length && v) {
-    const c = document.createElement('span'); c.className = 'ev-law-chip void';
-    const against = String(v.standsAgainst || '').split(/[,(;]| and the /)[0].replace(/\.$/, '').trim().replace(/^The /, 'the ');
-    c.textContent = 'no statute · stands against ' + against;
-    c.title = (v.why || '') + (v.standsAgainst ? ' Stands against: ' + v.standsAgainst : '');
-    host.appendChild(c);
-  }
-}
-buildLawLine(ev);
-
 // Splash steps (Sailor 2026-07-11): CARD → FRAMING beat → diatribe. The card
 // is a clean title card; the framing beat carries the wall-text (its develop +
 // keyword stagger fire only when the beat opens, so nothing loads off-screen).
@@ -3574,7 +3411,6 @@ if (IS_UTTERANCE && evBeginBtn) {
   const lab = evBeginBtn.querySelector('.ev-enter-label'); if (lab) lab.textContent = 'watch the clip';
   evBeginBtn.dataset.tedHint = "This one's a person talking. It plays the clip first, then the framing.";
 }
-if (IS_UTTERANCE) { const n = document.getElementById('zPoleNeg'), p = document.getElementById('zPolePos'); if (n) n.textContent = 'noise'; if (p) p.textContent = 'makes sense'; }
 let clipBuilt = false, clipOnBeats = [], clipLayerColor = {}, clipCurrent = -1;
 function clipEsc(t) { return String(t == null ? '' : t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
 function buildClipBeat() {
@@ -4237,9 +4073,9 @@ function zMeterHTML(z) {
   const f = ((zc + 1) / 2).toFixed(3);
   const num = (zc >= 0 ? '+' : '−') + Math.abs(zc).toFixed(2);
   return '<div class="ac-z" style="--zf:' + f + '" aria-label="delivery z ' + num + ' · ' + zPole(zc) + '">' +
-    '<span class="ac-z-pole">' + zWords().neg + '</span>' +
+    '<span class="ac-z-pole">frustrated</span>' +
     '<span class="ac-z-track"><span class="ac-z-fill"></span><span class="ac-z-thumb"></span></span>' +
-    '<span class="ac-z-pole">' + zWords().pos + '</span>' +
+    '<span class="ac-z-pole">realized</span>' +
     '</div>' +
     '<div class="ac-z-num">z ' + num + '<b>' + zPole(zc) + '</b></div>';
 }
@@ -4550,9 +4386,7 @@ function updateInfo() {
 }
 
 // ── Z displacement (ethical/strategic tension): −1 frustrated ↔ +1 realized ──
-// Z's words follow the class (2026-09-26): an utterance's Z is legibility.
-function zWords() { return (ev && ev.eventClass === 'utterance') ? { neg: 'noise', pos: 'makes sense' } : { neg: 'frustrated', pos: 'realized' }; }
-function zPole(z) { const zw = zWords(); return Math.abs(z) < 0.05 ? 'neutral' : (z > 0 ? zw.pos : zw.neg); }
+function zPole(z) { return Math.abs(z) < 0.05 ? 'neutral' : (z > 0 ? 'realized' : 'frustrated'); }
 function padHalf() { return (graphPad.clientWidth || 440) / 2; }   // z in ratio to x/y extent
 
 function renderZ() {

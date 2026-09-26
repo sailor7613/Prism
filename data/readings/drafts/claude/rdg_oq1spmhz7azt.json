@@ -1,439 +1,454 @@
 {
-  "title": "Badges by Noon",
-  "category": "Press · Due Process · Executive Power",
-  "date": "2026-09-24",
-  "prompt": "A judge ordered the three banned newsrooms' passes restored. Does the order open the gate — and keep it open?",
-  "framing": "Shortly after 1 a.m. on Thursday, September 24, 2026, U.S. District Judge Timothy J. Kelly in Washington, a Trump appointee who had ordered CNN reporter Jim Acosta's pass restored in 2018, granted CNN, MS NOW and Politico a temporary restraining order requiring the administration to \"immediately return, reinstate, and restore\" their reporters' White House hard passes, six days after the President posted that the outlets were banned \"effective immediately\". The eight-page order rests mainly on due process: the outlets were likely to show the passes were pulled with no notice and no chance to be heard, under a vague standard of objectionable reporting, and the government's arguments \"offer little to back up\" its claimed security interest. The order lasts 14 days while a preliminary injunction is briefed, and the judge noted such orders are generally not appealable. That morning the Secret Service turned the outlets' reporters away at the gate and took their passes; the outlets went back to the judge, who gave the government until 12:30 p.m. to answer, and by about noon the reporters were inside, a White House official telling the court the badges had reached the gate at 9:55 a.m. On September 21 Trump had written that he expected to lose and would appeal; no appeal had been filed by the end of the day. The D.C. Circuit's June 2025 stay in the Associated Press case, holding that the President's restricted spaces are not a First Amendment forum, still stands; the coverage of this order concerns the passes and the grounds, not the Oval Office.",
-  "framingKeywords": [
-    "hard passes",
+ "title": "Badges by Noon",
+ "category": "Press · Due Process · Executive Power",
+ "date": "2026-09-24",
+ "prompt": "A judge ordered the three banned newsrooms' passes restored. Does the order open the gate — and keep it open?",
+ "framing": "Shortly after 1 a.m. on Thursday, September 24, 2026, U.S. District Judge Timothy J. Kelly in Washington, a Trump appointee who had ordered CNN reporter Jim Acosta's pass restored in 2018, granted CNN, MS NOW and Politico a temporary restraining order requiring the administration to \"immediately return, reinstate, and restore\" their reporters' White House hard passes, six days after the President posted that the outlets were banned \"effective immediately\". The eight-page order rests mainly on due process: the outlets were likely to show the passes were pulled with no notice and no chance to be heard, under a vague standard of objectionable reporting, and the government's arguments \"offer little to back up\" its claimed security interest. The order lasts 14 days while a preliminary injunction is briefed, and the judge noted such orders are generally not appealable. That morning the Secret Service turned the outlets' reporters away at the gate and took their passes; the outlets went back to the judge, who gave the government until 12:30 p.m. to answer, and by about noon the reporters were inside, a White House official telling the court the badges had reached the gate at 9:55 a.m. On September 21 Trump had written that he expected to lose and would appeal; no appeal had been filed by the end of the day. The D.C. Circuit's June 2025 stay in the Associated Press case, holding that the President's restricted spaces are not a First Amendment forum, still stands; the coverage of this order concerns the passes and the grounds, not the Oval Office.",
+ "framingKeywords": [
+  "hard passes",
+  "due process",
+  "14 days",
+  "effective immediately"
+ ],
+ "prevalentAxis": "x",
+ "split": {
+  "topology": "peel",
+  "strength": 0.55,
+  "seam": "A against the other three at the rim — only the institutional left trusts the holder to keep the gate open; at the centers the line runs institutional (A, B) against populist (C, D).",
+  "rationale": "The scalar runs along x — a Republican President's ban undone, for now, by his own appointee. The rim is custody: A trusts a bench that got its order obeyed within hours; B names the D.C. Circuit and distrusts it to keep these passes restored; C names the people at the gate; D names the bench and distrusts it. B's fluid crosses its coalition: the close reader concedes the order holds for now.",
+  "zPattern": {
+   "centers": {
+    "A": 0.3,
+    "B": 0.15,
+    "C": -0.25,
+    "D": -0.35
+   },
+   "rims": {
+    "A": 0.5,
+    "B": -0.4,
+    "C": -0.65,
+    "D": -0.7
+   },
+   "note": "Rims A +0.5 · B −0.4 · C −0.65 · D −0.7 — the same A-only-positive rim peel as the 09-21 suit draft (rdg_bcmepstrq2bx: +0.3 / −0.6 / −0.7 / −0.85), now after the order the suit asked for. Centers moved toward delivery in A and B (A +0.2 → +0.3, B −0.45 → +0.15); C and D barely moved. The blind author trusts B coalition least (±0.4)."
+  },
+  "ruledBy": null,
+  "date": "2026-09-24"
+ },
+ "antiValentBand": "denominated",
+ "antiValentRationale": "At the rim the badges are back and the question is whose word the gate obeys — the judge's, for fourteen days, or the President's after.",
+ "axes": {
+  "x": {
+   "pos": "Right",
+   "neg": "Left"
+  },
+  "y": {
+   "pos": "Institutional",
+   "neg": "Populist"
+  },
+  "z": {
+   "pos": "the passes are restored and stay restored — the order holds through the injunction and any appeal, and the three outlets keep working inside",
+   "neg": "the order is outlasted — the passes come back for a few days, then the Circuit or the White House finds another way to close the gate"
+  }
+ },
+ "responses": {
+  "A": {
+   "xSide": "left",
+   "source": "",
+   "fluid": {
+    "text": "The order worked fast: the badges were at the gate by 9:55 and the reporters were back inside by noon. But it rests on how the passes were pulled, with no notice and no chance to be heard, not on whether they can be pulled at all. If the White House goes back and does it with a hearing, this fight starts over.",
+    "xWord": "rule-of-law liberal",
+    "yWord": "court-trusting",
+    "words": [
+     "due process",
+     "no notice",
+     "14 days"
+    ],
+    "source": "",
+    "z": 0.3,
+    "zReason": "The order is grounded in due process, and the reporters were inside by noon, but a due-process defect can in principle be cured by giving notice and a hearing, so the gate stays open only as long as the White House does not rebuild the ban with process.",
+    "instrument": {
+     "holder": "Judge Kelly's court through the preliminary injunction",
+     "trusted": true
+    }
+   },
+   "coalition": {
+    "text": "A judge the President appointed looked at this and saw exactly what it was: punishing reporters for their coverage with no notice and no hearing. The government could offer little to back up its security story. The courts held, the reporters are back inside, and a free press keeps working.",
+    "xWord": "press-freedom",
+    "yWord": "institutional",
+    "words": [
+     "immediately return, reinstate, and restore",
+     "offer little to back up",
+     "hard passes"
+    ],
+    "source": "",
+    "z": 0.55,
+    "zReason": "A Trump-appointed judge who has done this before found the security claim thin, and a TRO is generally not appealable, so the passes stay restored through the injunction briefing with the courts holding the line.",
+    "instrument": {
+     "holder": "federal courts",
+     "trusted": true
+    }
+   },
+   "denominated": {
+    "text": "The Secret Service took the passes at the gate, the outlets went back to the judge, and by noon they were inside. That is the whole answer: when the court says restore, the court makes it stick. As long as the judges hold custody, the gate stays open.",
+    "xWord": "left",
+    "yWord": "judiciary",
+    "words": [
+     "went back to the judge",
+     "by about noon",
+     "inside"
+    ],
+    "source": "",
+    "z": 0.5,
+    "zReason": "Custody of delivery sits with the federal bench, which already enforced its order within hours when the Secret Service balked, and this station trusts that bench to keep enforcing it.",
+    "instrument": {
+     "holder": "the federal judiciary",
+     "trusted": true
+    }
+   }
+  },
+  "B": {
+   "xSide": "right",
+   "source": "",
+   "fluid": {
+    "text": "On the law, the government walked in with a weak hand: no notice, no hearing, a vague standard, and a security claim the judge said had little behind it. That probably carries through the injunction. But the Circuit already said the President's restricted spaces are not a public forum, so a ban done by the book could look very different.",
+    "xWord": "legal conservative",
+    "yWord": "procedural",
+    "words": [
+     "due process",
+     "vague standard",
+     "not appealable"
+    ],
+    "source": "",
+    "z": 0.15,
+    "zReason": "The TRO is generally unappealable and the security argument was weak on the record, so the passes likely survive to the injunction stage, but the narrow due-process ground and the standing AP precedent on restricted spaces leave the White House room to reimpose limits with process.",
+    "instrument": {
+     "holder": "Judge Kelly, then the D.C. Circuit on any injunction appeal",
+     "trusted": true
+    }
+   },
+   "coalition": {
+    "text": "The President decides who works inside his house, and the Circuit already agreed in the AP case. This is a 14-day order from one judge on a procedural point. He said he would appeal, and we expect the higher court to put the decision back where it belongs.",
+    "xWord": "executive-power right",
+    "yWord": "establishment",
+    "words": [
+     "14 days",
+     "would appeal",
+     "restricted spaces"
+    ],
+    "source": "",
+    "z": -0.3,
+    "zReason": "The party line expects the President to appeal as he said he would and the D.C. Circuit, which already stayed the AP ruling, to restore the executive's control over who gets access.",
+    "instrument": {
+     "holder": "the D.C. Circuit",
+     "trusted": false
+    }
+   },
+   "denominated": {
+    "text": "What happens at a district court at 1 a.m. is not the last word. The court that counts already stayed the AP ruling and still has it on the books. We do not expect it to keep three outlets' passes in place once the White House gets there.",
+    "xWord": "right",
+    "yWord": "appellate",
+    "words": [
+     "June 2025 stay",
+     "still stands",
+     "appeal"
+    ],
+    "source": "",
+    "z": -0.4,
+    "zReason": "This station places delivery with the D.C. Circuit and does not trust it to keep these outlets' passes restored, since it expects that court to side with the executive as it did in June 2025.",
+    "instrument": {
+     "holder": "the D.C. Circuit",
+     "trusted": false
+    }
+   }
+  },
+  "C": {
+   "xSide": "left",
+   "source": "",
+   "fluid": {
+    "text": "The judge ruled at 1 a.m., and hours later the Secret Service still took their passes at the gate. It only moved when the court leaned on it again. A ruling that says you forgot to give notice mostly tells them to give notice next time.",
+    "xWord": "left",
+    "yWord": "skeptical",
+    "words": [
+     "turned away at the gate",
+     "took their passes",
+     "no notice"
+    ],
+    "source": "",
+    "z": -0.25,
+    "zReason": "The Secret Service physically holds the gate and already turned the reporters away once after the order, and a due-process ruling only obliges the White House to add a hearing before closing it again.",
+    "instrument": {
+     "holder": "the White House and Secret Service at the gate",
+     "trusted": false
+    }
+   },
+   "coalition": {
+    "text": "This is a two-week reprieve for three big networks, not a win for a free press. The court did not say the ban was wrong, only that it was done without a hearing. The people who run the gate will find another way to close it.",
+    "xWord": "anti-establishment left",
+    "yWord": "populist",
+    "words": [
+     "14 days",
+     "effective immediately",
+     "another way"
+    ],
+    "source": "",
+    "z": -0.45,
+    "zReason": "Relief is a 14-day procedural order for three corporate outlets, and the administration keeps the gate, the security excuse and a clear path to redo the ban.",
+    "instrument": {
+     "holder": "the administration",
+     "trusted": false
+    }
+   },
+   "denominated": {
+    "text": "Whoever holds the badges holds the gate, and that is the White House. They ignored the order until noon and will wait out the clock. Courts do not stand at the door.",
+    "xWord": "left",
+    "yWord": "distrustful",
+    "words": [
+     "took their passes",
+     "9:55 a.m.",
+     "the gate"
+    ],
+    "source": "",
+    "z": -0.65,
+    "zReason": "Custody of delivery is with the people who physically hold the gate, and this station does not trust them to honor a court order longer than they are forced to.",
+    "instrument": {
+     "holder": "the White House and Secret Service",
+     "trusted": false
+    }
+   }
+  },
+  "D": {
+   "xSide": "right",
+   "source": "",
+   "fluid": {
+    "text": "Trump said days ago he expected to lose in this court and would appeal, so this is no surprise. The judge did not say the President cannot choose who covers him, only that he skipped the paperwork. Give notice, hold the hearing, and the gate closes again.",
+    "xWord": "America First",
+    "yWord": "populist",
+    "words": [
+     "expected to lose",
+     "would appeal",
+     "hard passes"
+    ],
+    "source": "",
+    "z": -0.35,
+    "zReason": "The President said he expected to lose here and would appeal, and the order only faults the lack of notice, so the White House can re-ban with a hearing or win on the Circuit's AP reasoning once the 14 days run.",
+    "instrument": {
+     "holder": "the President",
+     "trusted": false
+    }
+   },
+   "coalition": {
+    "text": "These outlets were banned effective immediately for a reason, and one judge cannot run the White House. This order lasts 14 days. The President will appeal and win, and the fake news will be back outside the gate.",
+    "xWord": "MAGA",
+    "yWord": "anti-court",
+    "words": [
+     "effective immediately",
+     "14 days",
+     "appeal"
+    ],
+    "source": "",
+    "z": -0.6,
+    "zReason": "The base line is that an unelected judge's temporary order will be outlasted by the President's appeal and his control over his own house.",
+    "instrument": {
+     "holder": "the President",
+     "trusted": false
+    }
+   },
+   "denominated": {
+    "text": "The judges are the ones holding the door open for these outlets right now. We do not trust them, and we do not think their order lasts. It is borrowed time for the press they love.",
+    "xWord": "right",
+    "yWord": "anti-judiciary",
+    "words": [
+     "temporary restraining order",
+     "14 days",
+     "another way"
+    ],
+    "source": "",
+    "z": -0.7,
+    "zReason": "This station puts custody with the federal judiciary and does not trust that bench to keep delivering these passes once the Circuit and the President weigh in.",
+    "instrument": {
+     "holder": "the federal judiciary",
+     "trusted": false
+    }
+   }
+  }
+ },
+ "diatribe": {
+  "LF": {
+   "text": "The left's close readers think the order has footing — a Trump appointee found the security claim thin — but know a due-process defect can be cured with notice and a hearing.",
+   "side": "left",
+   "band": "fluid",
+   "keywords": [
     "due process",
+    "offer little to back up"
+   ]
+  },
+  "LC": {
+   "text": "Democrats and the press groups call it a vindication; the populist left sees a 14-day order for three corporate outlets while the administration keeps the gate.",
+   "side": "left",
+   "band": "coalition",
+   "keywords": [
     "14 days",
+    "hard passes"
+   ]
+  },
+  "LD": {
+   "text": "At the left rim the institutional side trusts a bench whose order was obeyed within hours; the populist side trusts only whoever holds the gate, and not them.",
+   "side": "left",
+   "band": "denominated",
+   "keywords": [
+    "the gate"
+   ]
+  },
+  "RF": {
+   "text": "The right's readers concede the order stands for now — generally not appealable, security argument thin — but expect the Circuit's AP stay to matter at the injunction.",
+   "side": "right",
+   "band": "fluid",
+   "keywords": [
+    "restricted spaces",
+    "not appealable"
+   ]
+  },
+  "RC": {
+   "text": "The party line waits for the appeal the President promised and for the Circuit that stayed the AP order.",
+   "side": "right",
+   "band": "coalition",
+   "keywords": [
+    "appeal"
+   ]
+  },
+  "RD": {
+   "text": "The right rim distrusts the Washington bench and expects the President to outlast a temporary order in his own house.",
+   "side": "right",
+   "band": "denominated",
+   "keywords": [
     "effective immediately"
+   ]
+  }
+ },
+ "diatribeLayer": "stated",
+ "objectLayer": {
+  "declared": "stated",
+  "stated": "a temporary restraining order restoring three newsrooms' White House hard passes",
+  "operative": "a 14-day due-process order — curable by notice and a hearing — that the Secret Service refused at the gate in the morning and obeyed by noon; it reaches the passes, not the forum question the Circuit answered in 2025",
+  "inversion": "lean, not ruled: the stated object is a press-freedom win; the operative ground is procedure, so the same holder could re-ban with notice — attenuation, same sign"
+ },
+ "window": {
+  "close": "2026-09-24",
+  "why": "Trigger day = the order, 2026-09-24 (about 1 a.m. ET). The register's date is right. The same-day events — the morning refusals at the gate, the emergency return to the judge, readmission by about noon — are inside the window and are part of whether the order delivers. The 09-23 hearing without a ruling (obj_afederal_arguments-ban-hears-house) is this object's pre-trigger step, not a separate object. Declared at authoring, before any z (§4c).",
+  "ruledBy": null,
+  "ruledOn": null
+ },
+ "meta": {
+  "dialecticsRef": "obj_afederal_access-cnn-house-judge",
+  "status": "draft",
+  "source": "Claude draft — daily newsroom drafting (scheduled), authored z-first against Trace Formula v1 per scripts/newsroom/AUTHORING_PROTOCOL.md v1. Filed to drafts/claude; not through the surface; no aiDeltas lineage. Rulings: none.",
+  "editHistory": [
+   {
+    "at": "2026-09-24T21:30:00.000Z",
+    "by": "Claude (scheduled drafting)",
+    "what": "authored: object -> window -> frame -> sweep -> axes/split -> twelve (blind subagent) -> diatribe/layers -> sweep"
+   }
   ],
-  "prevalentAxis": "x",
-  "split": {
-    "topology": "peel",
-    "strength": 0.55,
-    "seam": "A against the other three at the rim — only the institutional left trusts the holder to keep the gate open; at the centers the line runs institutional (A, B) against populist (C, D).",
-    "rationale": "The scalar runs along x — a Republican President's ban undone, for now, by his own appointee. The rim is custody: A trusts a bench that got its order obeyed within hours; B names the D.C. Circuit and distrusts it to keep these passes restored; C names the people at the gate; D names the bench and distrusts it. B's fluid crosses its coalition: the close reader concedes the order holds for now.",
-    "zPattern": {
-      "centers": {
-        "A": 0.3,
-        "B": 0.15,
-        "C": -0.25,
-        "D": -0.35
-      },
-      "rims": {
-        "A": 0.5,
-        "B": -0.4,
-        "C": -0.65,
-        "D": -0.7
-      },
-      "note": "Rims A +0.5 · B −0.4 · C −0.65 · D −0.7 — the same A-only-positive rim peel as the 09-21 suit draft (rdg_bcmepstrq2bx: +0.3 / −0.6 / −0.7 / −0.85), now after the order the suit asked for. Centers moved toward delivery in A and B (A +0.2 → +0.3, B −0.45 → +0.15); C and D barely moved. The blind author trusts B coalition least (±0.4)."
-    },
-    "ruledBy": null,
-    "date": "2026-09-24"
-  },
-  "antiValentBand": "denominated",
-  "antiValentRationale": "At the rim the badges are back and the question is whose word the gate obeys — the judge's, for fourteen days, or the President's after.",
-  "axes": {
-    "x": {
-      "pos": "Right",
-      "neg": "Left"
-    },
-    "y": {
-      "pos": "Institutional",
-      "neg": "Populist"
-    },
-    "z": {
-      "pos": "the passes are restored and stay restored — the order holds through the injunction and any appeal, and the three outlets keep working inside",
-      "neg": "the order is outlasted — the passes come back for a few days, then the Circuit or the White House finds another way to close the gate"
-    }
-  },
-  "responses": {
-    "A": {
-      "xSide": "left",
-      "source": "",
-      "fluid": {
-        "text": "The order worked fast: the badges were at the gate by 9:55 and the reporters were back inside by noon. But it rests on how the passes were pulled, with no notice and no chance to be heard, not on whether they can be pulled at all. If the White House goes back and does it with a hearing, this fight starts over.",
-        "xWord": "rule-of-law liberal",
-        "yWord": "court-trusting",
-        "words": [
-          "due process",
-          "no notice",
-          "14 days"
-        ],
-        "source": "",
-        "z": 0.3,
-        "zReason": "The order is grounded in due process, and the reporters were inside by noon, but a due-process defect can in principle be cured by giving notice and a hearing, so the gate stays open only as long as the White House does not rebuild the ban with process.",
-        "instrument": {
-          "holder": "Judge Kelly's court through the preliminary injunction",
-          "trusted": true
-        }
-      },
-      "coalition": {
-        "text": "A judge the President appointed looked at this and saw exactly what it was: punishing reporters for their coverage with no notice and no hearing. The government could offer little to back up its security story. The courts held, the reporters are back inside, and a free press keeps working.",
-        "xWord": "press-freedom",
-        "yWord": "institutional",
-        "words": [
-          "immediately return, reinstate, and restore",
-          "offer little to back up",
-          "hard passes"
-        ],
-        "source": "",
-        "z": 0.55,
-        "zReason": "A Trump-appointed judge who has done this before found the security claim thin, and a TRO is generally not appealable, so the passes stay restored through the injunction briefing with the courts holding the line.",
-        "instrument": {
-          "holder": "federal courts",
-          "trusted": true
-        }
-      },
-      "denominated": {
-        "text": "The Secret Service took the passes at the gate, the outlets went back to the judge, and by noon they were inside. That is the whole answer: when the court says restore, the court makes it stick. As long as the judges hold custody, the gate stays open.",
-        "xWord": "left",
-        "yWord": "judiciary",
-        "words": [
-          "went back to the judge",
-          "by about noon",
-          "inside"
-        ],
-        "source": "",
-        "z": 0.5,
-        "zReason": "Custody of delivery sits with the federal bench, which already enforced its order within hours when the Secret Service balked, and this station trusts that bench to keep enforcing it.",
-        "instrument": {
-          "holder": "the federal judiciary",
-          "trusted": true
-        }
-      }
-    },
-    "B": {
-      "xSide": "right",
-      "source": "",
-      "fluid": {
-        "text": "On the law, the government walked in with a weak hand: no notice, no hearing, a vague standard, and a security claim the judge said had little behind it. That probably carries through the injunction. But the Circuit already said the President's restricted spaces are not a public forum, so a ban done by the book could look very different.",
-        "xWord": "legal conservative",
-        "yWord": "procedural",
-        "words": [
-          "due process",
-          "vague standard",
-          "not appealable"
-        ],
-        "source": "",
-        "z": 0.15,
-        "zReason": "The TRO is generally unappealable and the security argument was weak on the record, so the passes likely survive to the injunction stage, but the narrow due-process ground and the standing AP precedent on restricted spaces leave the White House room to reimpose limits with process.",
-        "instrument": {
-          "holder": "Judge Kelly, then the D.C. Circuit on any injunction appeal",
-          "trusted": true
-        }
-      },
-      "coalition": {
-        "text": "The President decides who works inside his house, and the Circuit already agreed in the AP case. This is a 14-day order from one judge on a procedural point. He said he would appeal, and we expect the higher court to put the decision back where it belongs.",
-        "xWord": "executive-power right",
-        "yWord": "establishment",
-        "words": [
-          "14 days",
-          "would appeal",
-          "restricted spaces"
-        ],
-        "source": "",
-        "z": -0.3,
-        "zReason": "The party line expects the President to appeal as he said he would and the D.C. Circuit, which already stayed the AP ruling, to restore the executive's control over who gets access.",
-        "instrument": {
-          "holder": "the D.C. Circuit",
-          "trusted": false
-        }
-      },
-      "denominated": {
-        "text": "What happens at a district court at 1 a.m. is not the last word. The court that counts already stayed the AP ruling and still has it on the books. We do not expect it to keep three outlets' passes in place once the White House gets there.",
-        "xWord": "right",
-        "yWord": "appellate",
-        "words": [
-          "June 2025 stay",
-          "still stands",
-          "appeal"
-        ],
-        "source": "",
-        "z": -0.4,
-        "zReason": "This station places delivery with the D.C. Circuit and does not trust it to keep these outlets' passes restored, since it expects that court to side with the executive as it did in June 2025.",
-        "instrument": {
-          "holder": "the D.C. Circuit",
-          "trusted": false
-        }
-      }
-    },
-    "C": {
-      "xSide": "left",
-      "source": "",
-      "fluid": {
-        "text": "The judge ruled at 1 a.m., and hours later the Secret Service still took their passes at the gate. It only moved when the court leaned on it again. A ruling that says you forgot to give notice mostly tells them to give notice next time.",
-        "xWord": "left",
-        "yWord": "skeptical",
-        "words": [
-          "turned away at the gate",
-          "took their passes",
-          "no notice"
-        ],
-        "source": "",
-        "z": -0.25,
-        "zReason": "The Secret Service physically holds the gate and already turned the reporters away once after the order, and a due-process ruling only obliges the White House to add a hearing before closing it again.",
-        "instrument": {
-          "holder": "the White House and Secret Service at the gate",
-          "trusted": false
-        }
-      },
-      "coalition": {
-        "text": "This is a two-week reprieve for three big networks, not a win for a free press. The court did not say the ban was wrong, only that it was done without a hearing. The people who run the gate will find another way to close it.",
-        "xWord": "anti-establishment left",
-        "yWord": "populist",
-        "words": [
-          "14 days",
-          "effective immediately",
-          "another way"
-        ],
-        "source": "",
-        "z": -0.45,
-        "zReason": "Relief is a 14-day procedural order for three corporate outlets, and the administration keeps the gate, the security excuse and a clear path to redo the ban.",
-        "instrument": {
-          "holder": "the administration",
-          "trusted": false
-        }
-      },
-      "denominated": {
-        "text": "Whoever holds the badges holds the gate, and that is the White House. They ignored the order until noon and will wait out the clock. Courts do not stand at the door.",
-        "xWord": "left",
-        "yWord": "distrustful",
-        "words": [
-          "took their passes",
-          "9:55 a.m.",
-          "the gate"
-        ],
-        "source": "",
-        "z": -0.65,
-        "zReason": "Custody of delivery is with the people who physically hold the gate, and this station does not trust them to honor a court order longer than they are forced to.",
-        "instrument": {
-          "holder": "the White House and Secret Service",
-          "trusted": false
-        }
-      }
-    },
-    "D": {
-      "xSide": "right",
-      "source": "",
-      "fluid": {
-        "text": "Trump said days ago he expected to lose in this court and would appeal, so this is no surprise. The judge did not say the President cannot choose who covers him, only that he skipped the paperwork. Give notice, hold the hearing, and the gate closes again.",
-        "xWord": "America First",
-        "yWord": "populist",
-        "words": [
-          "expected to lose",
-          "would appeal",
-          "hard passes"
-        ],
-        "source": "",
-        "z": -0.35,
-        "zReason": "The President said he expected to lose here and would appeal, and the order only faults the lack of notice, so the White House can re-ban with a hearing or win on the Circuit's AP reasoning once the 14 days run.",
-        "instrument": {
-          "holder": "the President",
-          "trusted": false
-        }
-      },
-      "coalition": {
-        "text": "These outlets were banned effective immediately for a reason, and one judge cannot run the White House. This order lasts 14 days. The President will appeal and win, and the fake news will be back outside the gate.",
-        "xWord": "MAGA",
-        "yWord": "anti-court",
-        "words": [
-          "effective immediately",
-          "14 days",
-          "appeal"
-        ],
-        "source": "",
-        "z": -0.6,
-        "zReason": "The base line is that an unelected judge's temporary order will be outlasted by the President's appeal and his control over his own house.",
-        "instrument": {
-          "holder": "the President",
-          "trusted": false
-        }
-      },
-      "denominated": {
-        "text": "The judges are the ones holding the door open for these outlets right now. We do not trust them, and we do not think their order lasts. It is borrowed time for the press they love.",
-        "xWord": "right",
-        "yWord": "anti-judiciary",
-        "words": [
-          "temporary restraining order",
-          "14 days",
-          "another way"
-        ],
-        "source": "",
-        "z": -0.7,
-        "zReason": "This station puts custody with the federal judiciary and does not trust that bench to keep delivering these passes once the Circuit and the President weigh in.",
-        "instrument": {
-          "holder": "the federal judiciary",
-          "trusted": false
-        }
-      }
-    }
-  },
-  "diatribe": {
-    "LF": {
-      "text": "The left's close readers think the order has footing — a Trump appointee found the security claim thin — but know a due-process defect can be cured with notice and a hearing.",
-      "side": "left",
-      "band": "fluid",
-      "keywords": [
-        "due process",
-        "offer little to back up"
-      ]
-    },
-    "LC": {
-      "text": "Democrats and the press groups call it a vindication; the populist left sees a 14-day order for three corporate outlets while the administration keeps the gate.",
-      "side": "left",
-      "band": "coalition",
-      "keywords": [
-        "14 days",
-        "hard passes"
-      ]
-    },
-    "LD": {
-      "text": "At the left rim the institutional side trusts a bench whose order was obeyed within hours; the populist side trusts only whoever holds the gate, and not them.",
-      "side": "left",
-      "band": "denominated",
-      "keywords": [
-        "the gate"
-      ]
-    },
-    "RF": {
-      "text": "The right's readers concede the order stands for now — generally not appealable, security argument thin — but expect the Circuit's AP stay to matter at the injunction.",
-      "side": "right",
-      "band": "fluid",
-      "keywords": [
-        "restricted spaces",
-        "not appealable"
-      ]
-    },
-    "RC": {
-      "text": "The party line waits for the appeal the President promised and for the Circuit that stayed the AP order.",
-      "side": "right",
-      "band": "coalition",
-      "keywords": [
-        "appeal"
-      ]
-    },
-    "RD": {
-      "text": "The right rim distrusts the Washington bench and expects the President to outlast a temporary order in his own house.",
-      "side": "right",
-      "band": "denominated",
-      "keywords": [
-        "effective immediately"
-      ]
-    }
-  },
-  "diatribeLayer": "stated",
-  "objectLayer": {
-    "declared": "stated",
+  "aiDeltas": [],
+  "frameFirst": {
+   "date": "2026-09-24",
+   "by": "Claude, under §4c (window declared at authoring; sweep before z). Object NOT ruled — Claude's read, correctable by Sailor.",
+   "status": "Frame authored and swept before any z; the twelve authored blind z-first by a subagent (meta.blindAuthoring). Stations unruled.",
+   "objectLean": {
     "stated": "a temporary restraining order restoring three newsrooms' White House hard passes",
     "operative": "a 14-day due-process order — curable by notice and a hearing — that the Secret Service refused at the gate in the morning and obeyed by noon; it reaches the passes, not the forum question the Circuit answered in 2025",
     "inversion": "lean, not ruled: the stated object is a press-freedom win; the operative ground is procedure, so the same holder could re-ban with notice — attenuation, same sign"
+   },
+   "titleLean": "'Badges by Noon' — Claude's; Sailor names Readings",
+   "sourcesInWindow": [
+    "ABC News 2026-09-24 01:56",
+    "CBS News 2026-09-24",
+    "PBS NewsHour 2026-09-24",
+    "Time 2026-09-24",
+    "News From The States 2026-09-24",
+    "TheWrap 2026-09-24",
+    "WRTV 2026-09-24",
+    "CNN wire via Action News Now / KEYT 2026-09-24",
+    "register articles (WIBW, local10, rock102) 2026-09-24"
+   ],
+   "background_preWindow": [
+    "ban posted 2026-09-18 (\"effective immediately\"); passes pulled 2026-09-19",
+    "suit filed 2026-09-21 (drafted as rdg_bcmepstrq2bx)",
+    "hearing without a ruling 2026-09-23",
+    "Acosta v. Trump, Judge Kelly, November 2018",
+    "AP v. Budowich: district order 2025-04-08; D.C. Circuit stay 2025-06-06"
+   ]
   },
-  "window": {
-    "close": "2026-09-24",
-    "why": "Trigger day = the order, 2026-09-24 (about 1 a.m. ET). The register's date is right. The same-day events — the morning refusals at the gate, the emergency return to the judge, readmission by about noon — are inside the window and are part of whether the order delivers. The 09-23 hearing without a ruling (obj_afederal_arguments-ban-hears-house) is this object's pre-trigger step, not a separate object. Declared at authoring, before any z (§4c).",
-    "ruledBy": null,
-    "ruledOn": null
+  "framingAudit": {
+   "date": "2026-09-24",
+   "by": "Claude — frame-first authoring under §4c; sweep run BEFORE any z. Not a ruling.",
+   "window": "2026-09-24 (declared, see window.why)",
+   "verifiedInWindow": [
+    "TRO granted about 1 a.m. ET 2026-09-24 by Judge Timothy J. Kelly, D.D.C. — ABC 2026-09-24 01:56; Daily Beast 2026-09-24",
+    "Kelly appointed by Trump (2017); decided Acosta in 2018 — PBS, Time 2026-09-24",
+    "\"immediately return, reinstate, and restore\" hard passes — order 2026-09-24 (ABC)",
+    "\"effective immediately\" — Trump post 2026-09-18",
+    "eight-page order; due process: no notice, no hearing, vague standard — PBS, News From The States 2026-09-24",
+    "\"offer little to back up\" the asserted security interest — order 2026-09-24 (as quoted)",
+    "14 days; preliminary injunction briefing to follow; TROs generally not appealable — Time, PBS 2026-09-24",
+    "morning refusals at the gate, passes taken by the Secret Service — TheWrap 05:53, WRTV 10:55, 2026-09-24",
+    "deadline 12:30 p.m. for the government; badges delivered to the gate 9:55 a.m. per a White House filing — CNN wire 2026-09-24",
+    "reporters inside by about noon — CNN wire via Action News Now 2026-09-24",
+    "Trump on 2026-09-21: expects to lose, will appeal — Epoch Times 2026-09-21",
+    "no appeal or stay motion found on file 2026-09-24",
+    "D.C. Circuit stay in AP v. Budowich, June 2025 — pre-window background, dated"
+   ],
+   "keptUnverifiedDate": [],
+   "deliberatelyExcluded_afterWindow": [
+    "CBS report that the order also restores grounds access and CNN's pool place — not confirmed in the order text; left out",
+    "First Amendment holding — sources conflict (Daily Beast/CBS yes; Turley no); frame says \"mainly on due process\"",
+    "network pool solidarity (ABC, CBS, Fox, NBC) — date within 09-22..09-24 not pinned; left out",
+    "Boutrous \"a strong ruling vindicating...\" and WHCA statement — in window, left out for length",
+    "Turley commentary 2026-09-24 12:06 — commentary, not fact",
+    "anything after 2026-09-24 — not consulted"
+   ]
   },
-  "meta": {
-    "dialecticsRef": "obj_afederal_access-cnn-house-judge",
-    "status": "draft",
-    "source": "Claude draft — daily newsroom drafting (scheduled), authored z-first against Trace Formula v1 per scripts/newsroom/AUTHORING_PROTOCOL.md v1. Filed to drafts/claude; not through the surface; no aiDeltas lineage. Rulings: none.",
-    "editHistory": [
-      {
-        "at": "2026-09-24T21:30:00.000Z",
-        "by": "Claude (scheduled drafting)",
-        "what": "authored: object -> window -> frame -> sweep -> axes/split -> twelve (blind subagent) -> diatribe/layers -> sweep"
-      }
-    ],
-    "aiDeltas": [],
-    "frameFirst": {
-      "date": "2026-09-24",
-      "by": "Claude, under §4c (window declared at authoring; sweep before z). Object NOT ruled — Claude's read, correctable by Sailor.",
-      "status": "Frame authored and swept before any z; the twelve authored blind z-first by a subagent (meta.blindAuthoring). Stations unruled.",
-      "objectLean": {
-        "stated": "a temporary restraining order restoring three newsrooms' White House hard passes",
-        "operative": "a 14-day due-process order — curable by notice and a hearing — that the Secret Service refused at the gate in the morning and obeyed by noon; it reaches the passes, not the forum question the Circuit answered in 2025",
-        "inversion": "lean, not ruled: the stated object is a press-freedom win; the operative ground is procedure, so the same holder could re-ban with notice — attenuation, same sign"
-      },
-      "titleLean": "'Badges by Noon' — Claude's; Sailor names Readings",
-      "sourcesInWindow": [
-        "ABC News 2026-09-24 01:56",
-        "CBS News 2026-09-24",
-        "PBS NewsHour 2026-09-24",
-        "Time 2026-09-24",
-        "News From The States 2026-09-24",
-        "TheWrap 2026-09-24",
-        "WRTV 2026-09-24",
-        "CNN wire via Action News Now / KEYT 2026-09-24",
-        "register articles (WIBW, local10, rock102) 2026-09-24"
-      ],
-      "background_preWindow": [
-        "ban posted 2026-09-18 (\"effective immediately\"); passes pulled 2026-09-19",
-        "suit filed 2026-09-21 (drafted as rdg_bcmepstrq2bx)",
-        "hearing without a ruling 2026-09-23",
-        "Acosta v. Trump, Judge Kelly, November 2018",
-        "AP v. Budowich: district order 2025-04-08; D.C. Circuit stay 2025-06-06"
-      ]
-    },
-    "framingAudit": {
-      "date": "2026-09-24",
-      "by": "Claude — frame-first authoring under §4c; sweep run BEFORE any z. Not a ruling.",
-      "window": "2026-09-24 (declared, see window.why)",
-      "verifiedInWindow": [
-        "TRO granted about 1 a.m. ET 2026-09-24 by Judge Timothy J. Kelly, D.D.C. — ABC 2026-09-24 01:56; Daily Beast 2026-09-24",
-        "Kelly appointed by Trump (2017); decided Acosta in 2018 — PBS, Time 2026-09-24",
-        "\"immediately return, reinstate, and restore\" hard passes — order 2026-09-24 (ABC)",
-        "\"effective immediately\" — Trump post 2026-09-18",
-        "eight-page order; due process: no notice, no hearing, vague standard — PBS, News From The States 2026-09-24",
-        "\"offer little to back up\" the asserted security interest — order 2026-09-24 (as quoted)",
-        "14 days; preliminary injunction briefing to follow; TROs generally not appealable — Time, PBS 2026-09-24",
-        "morning refusals at the gate, passes taken by the Secret Service — TheWrap 05:53, WRTV 10:55, 2026-09-24",
-        "deadline 12:30 p.m. for the government; badges delivered to the gate 9:55 a.m. per a White House filing — CNN wire 2026-09-24",
-        "reporters inside by about noon — CNN wire via Action News Now 2026-09-24",
-        "Trump on 2026-09-21: expects to lose, will appeal — Epoch Times 2026-09-21",
-        "no appeal or stay motion found on file 2026-09-24",
-        "D.C. Circuit stay in AP v. Budowich, June 2025 — pre-window background, dated"
-      ],
-      "keptUnverifiedDate": [],
-      "deliberatelyExcluded_afterWindow": [
-        "CBS report that the order also restores grounds access and CNN's pool place — not confirmed in the order text; left out",
-        "First Amendment holding — sources conflict (Daily Beast/CBS yes; Turley no); frame says \"mainly on due process\"",
-        "network pool solidarity (ABC, CBS, Fox, NBC) — date within 09-22..09-24 not pinned; left out",
-        "Boutrous \"a strong ruling vindicating...\" and WHCA statement — in window, left out for length",
-        "Turley commentary 2026-09-24 12:06 — commentary, not fact",
-        "anything after 2026-09-24 — not consulted"
-      ]
-    },
-    "blindAuthoring": {
-      "date": "2026-09-24",
-      "author": "Claude (general-purpose subagent) — blind: given the frame, prompt, keywords, axes, a station/radius brief and Trace Formula v1 §3b + R-0921-1 only; no other Reading, no register, no web",
-      "zFirst": true,
-      "instrumentOnAll12": true,
-      "rulings": "NONE — every station awaits Sailor's ruling; z, zReason, instrument, text as authored",
-      "authorNote": "The hard part was separating belief in delivery from approval: the left stations like the order but the populist left doubts it lasts, while the institutional right mostly dislikes it but its fluid reader concedes the legal footing is sound for now, which gives B fluid a mildly positive z against its own coalition. The key mechanism cutting both ways is that the ruling rests on due process, which is curable by a hearing, so nobody near the facts should sit far from zero. I trust B coalition least and could be off by about 0.4: legal conservatives might read the unappealable TRO and the thin security record as firmly positive rather than expecting the Circuit to intervene. The surprise is the D denominated rim, where the MAGA station names the judiciary as holder and distrusts it, landing on the same negative sign as the populist left for opposite reasons; A denominated is the only rim that trusts its holder."
-    },
-    "newsroomFindings": {
-      "inversionLeans": [
-        "B.fluid flips sign against its prior on the suit: −0.45 in rdg_bcmepstrq2bx (09-21 window: 'the Circuit's stay controls') → +0.15 here (TRO generally unappealable; security record thin). The cause is a new fact (the order), not a new stance, and both are blind Claude drafts — a draft-to-draft comparison, not a found reader. Candidate, not ruled.",
-        "D.fluid names the President as holder and does not trust him to deliver the passes (−0.35); in the suit draft D.coalition trusted the President to keep the gate shut (−0.8). Same sign, holder-trust expressed from the other side of the object. Not an inversion."
-      ],
-      "permanence": "A continuation, not a return: the second formed object on the press-ban arc (suit 09-21 → order 09-24). The register now carries seven objects on that arc — the suit, this order, obj_afederal_arguments-ban-hears-house (09-23, unformed, now superseded by this order), obj_afederal_administration-ban-court-house, obj_thepresi_ban-hearing-house-media, obj_thepresi_ban-court-despite-hearing (09-24, the morning refusal — inside this window) and the Biden fact-check obj_thepresi_400-biden-did-fact. Candidates for aliases[] — Sailor's call."
-    }
+  "blindAuthoring": {
+   "date": "2026-09-24",
+   "author": "Claude (general-purpose subagent) — blind: given the frame, prompt, keywords, axes, a station/radius brief and Trace Formula v1 §3b + R-0921-1 only; no other Reading, no register, no web",
+   "zFirst": true,
+   "instrumentOnAll12": true,
+   "rulings": "NONE — every station awaits Sailor's ruling; z, zReason, instrument, text as authored",
+   "authorNote": "The hard part was separating belief in delivery from approval: the left stations like the order but the populist left doubts it lasts, while the institutional right mostly dislikes it but its fluid reader concedes the legal footing is sound for now, which gives B fluid a mildly positive z against its own coalition. The key mechanism cutting both ways is that the ruling rests on due process, which is curable by a hearing, so nobody near the facts should sit far from zero. I trust B coalition least and could be off by about 0.4: legal conservatives might read the unappealable TRO and the thin security record as firmly positive rather than expecting the Circuit to intervene. The surprise is the D denominated rim, where the MAGA station names the judiciary as holder and distrusts it, landing on the same negative sign as the populist left for opposite reasons; A denominated is the only rim that trusts its holder."
   },
-  "rid": "rdg_oq1spmhz7azt",
-  "ridLineage": "minted 2026-09-24 (UTC) by the scheduled newsroom drafting task; filed directly to drafts/claude",
-  "schema": "reading/v1",
-  "formulaVersion": "1",
-  "updatedAt": "2026-09-24T21:30:00.000Z",
-  "authorTier": "claude",
-  "newsroom": {
-    "oid": "obj_afederal_access-cnn-house-judge",
-    "queuedOn": "2026-09-24",
-    "draftedOn": "2026-09-24"
+  "newsroomFindings": {
+   "inversionLeans": [
+    "B.fluid flips sign against its prior on the suit: −0.45 in rdg_bcmepstrq2bx (09-21 window: 'the Circuit's stay controls') → +0.15 here (TRO generally unappealable; security record thin). The cause is a new fact (the order), not a new stance, and both are blind Claude drafts — a draft-to-draft comparison, not a found reader. Candidate, not ruled.",
+    "D.fluid names the President as holder and does not trust him to deliver the passes (−0.35); in the suit draft D.coalition trusted the President to keep the gate shut (−0.8). Same sign, holder-trust expressed from the other side of the object. Not an inversion."
+   ],
+   "permanence": "A continuation, not a return: the second formed object on the press-ban arc (suit 09-21 → order 09-24). The register now carries seven objects on that arc — the suit, this order, obj_afederal_arguments-ban-hears-house (09-23, unformed, now superseded by this order), obj_afederal_administration-ban-court-house, obj_thepresi_ban-hearing-house-media, obj_thepresi_ban-court-despite-hearing (09-24, the morning refusal — inside this window) and the Biden fact-check obj_thepresi_400-biden-did-fact. Candidates for aliases[] — Sailor's call."
   },
-  "images": []
+  "tetherBackfill": {
+   "date": "2026-09-26",
+   "by": "Claude (backfill under protocol v1.2 §3b)",
+   "note": "Central object + tethers added after drafting; statute cites are Claude's reading and are unruled."
+  }
+ },
+ "rid": "rdg_oq1spmhz7azt",
+ "ridLineage": "minted 2026-09-24 (UTC) by the scheduled newsroom drafting task; filed directly to drafts/claude",
+ "schema": "reading/v1",
+ "formulaVersion": "1",
+ "updatedAt": "2026-09-26T17:30:00.000Z",
+ "authorTier": "claude",
+ "newsroom": {
+  "oid": "obj_afederal_access-cnn-house-judge",
+  "queuedOn": "2026-09-24",
+  "draftedOn": "2026-09-24"
+ },
+ "images": [],
+ "centralObject": {
+  "kind": "object",
+  "ref": "CNN v. Trump TRO (D.D.C., 2026-09-24)",
+  "name": "Judge Kelly restores the hard passes"
+ },
+ "tethers": [],
+ "legislativeVoid": {
+  "why": "The order rests on due process and the First Amendment; no statute speaks to press passes.",
+  "standsAgainst": "The First Amendment and Sherrill v. Knight (1977). Same object family as 'The Badge at the Gate'."
+ }
 }

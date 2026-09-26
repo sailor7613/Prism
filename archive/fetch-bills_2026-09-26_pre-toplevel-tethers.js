@@ -578,7 +578,7 @@ async function writeBillOutputs(bills) {
     try {
       const prev = JSON.parse(fs.readFileSync(prevPath, 'utf8'));
       const have = new Set(bills.map(b => b.billId));
-      const carried = prev.filter(b => /^(terrain_fetch|tether_fetch|manual_web)/.test(b.provenance || '') && !have.has(b.billId));   // tethered + hand-added bills survive a rebuild too (2026-09-26)
+      const carried = prev.filter(b => (b.provenance || '').startsWith('terrain_fetch') && !have.has(b.billId));
       if (carried.length) {
         bills.push(...carried);
         console.log(`  ✓ carried ${carried.length} terrain-fetched bills across the rebuild`);
@@ -836,10 +836,8 @@ async function fetchTethers() {
   const withTethers = [];
   for (const f of files) {
     let r; try { r = JSON.parse(fs.readFileSync(f, 'utf8')); } catch (e) { continue; }
-    // tethers live on utterance layers AND (2026-09-26) at the top level of any
-    // Reading; statute tethers (legacy law, no billId) are skipped here
     const layers = (r.utterance && r.utterance.layers) || [];
-    const t = layers.flatMap(l => l.tethers || []).concat(r.tethers || []).filter(x => x && x.billId);
+    const t = layers.flatMap(l => l.tethers || []).filter(x => x && x.billId);
     if (!t.length) continue;
     t.forEach(x => ids.add(String(x.billId).toLowerCase()));
     withTethers.push(f);
@@ -851,12 +849,12 @@ async function fetchTethers() {
     const r = JSON.parse(fs.readFileSync(f, 'utf8'));
     let changed = false;
     r.linkedBills = Array.isArray(r.linkedBills) ? r.linkedBills : [];
-    (((r.utterance && r.utterance.layers) || []).flatMap(l => l.tethers || []).concat(r.tethers || [])).forEach(t => {
+    (r.utterance.layers || []).forEach(l => (l.tethers || []).forEach(t => {
       const id = t.billId && String(t.billId).toLowerCase();
       if (!id || !catalog.has(id)) return;
       if (!t.inDb) { t.inDb = true; changed = true; }
       if (!r.linkedBills.includes(id)) { r.linkedBills.push(id); changed = true; }
-    });
+    }));
     if (changed) {
       if (r.meta && r.meta.linkedBillsOwed) delete r.meta.linkedBillsOwed;
       r.updatedAt = new Date().toISOString();

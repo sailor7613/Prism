@@ -75,10 +75,7 @@ const HOLDERS = [
   { re: /\bsupreme court\b|\bscotus\b|\bjustices?\b/i, holder: 'the Supreme Court' },
   { re: /\bappeals? court\b|\bcircuit\b|\b(federal )?judge\b|\bcourt\b/i, holder: 'a federal court' },
   { re: /\bsenate\b|\bsenators?\b/i, holder: 'the Senate' },
-  // "House" means Congress only when nothing turns it into a building: the
-  // 09-23 register read Elizabeth Holmes's move to a "halfway house" as a
-  // House vote (2026-09-26 fix).
-  { re: /\bhouse (?:of representatives|republicans|democrats|gop|votes?|passes|speaker)\b|\bspeaker (?:johnson|of the house)\b|(?<!\b(?:white|halfway|safe|green|opera|court|full|open|guest|boarding|town|farm|light|dog|tree|haunted|ware|in)[ -]?)\bhouse\b(?! (?:media|press|ban|arrest|fire|party|music))/i, holder: 'the House' },
+  { re: /\bhouse (?:of representatives|republicans|democrats|gop|votes?|passes|speaker)\b|\bspeaker (?:johnson|of the house)\b|(?<!white )\bhouse\b(?! (?:media|press|ban))/i, holder: 'the House' },
   { re: /\bcongress\b|\blawmakers\b/i, holder: 'Congress' },
   { re: /\btrump\b|\bwhite house\b|\bpresident\b|\badministration\b|\bexecutive order\b/i, holder: 'the President' },
   { re: /\btreasury\b|\bbessent\b|\birs\b/i, holder: 'Treasury' },
@@ -281,62 +278,6 @@ function mergeScan(reg, clusters) {
   return events;
 }
 
-// ── 4b. Live legislation joins the register (2026-09-26) ─────────────
-// The roll-call pipeline (fetch-activity.js → data/candidates.js) shapes
-// legislative candidates every run, but the drafting queue only ever saw
-// GDELT objects, so no Claude draft carried a bill. A bill with a recent
-// roll call is an instrument that finished forming on its vote day: it
-// enters the register as kind 'bill', already tethered to its billId.
-const LEG_FRESH_DAYS = parseInt(process.env.LEG_FRESH_DAYS || '14', 10);
-const LEG_QUOTA = parseInt(process.env.LEG_QUOTA || '1', 10);   // daily slots reserved for a bill
-function parseVoteDate(s) {
-  if (!s) return null;
-  const m = String(s).match(/^(\d{1,2})-([A-Za-z]{3})-(\d{4})/);      // House: 16-Sep-2026
-  if (m) { const d = new Date(m[2] + ' ' + m[1] + ', ' + m[3] + ' UTC'); return isNaN(d) ? null : d.toISOString().slice(0, 10); }
-  const d = new Date(String(s).replace(/,\s+\d{1,2}:\d{2}.*$/, '') + ' UTC');   // Senate: September 16, 2026, 05:46 PM
-  return isNaN(d) ? null : d.toISOString().slice(0, 10);
-}
-function mergeLegislative(reg) {
-  let cands = [];
-  try {
-    const src = fs.readFileSync(path.join(ROOT, 'data', 'candidates.js'), 'utf8');
-    const w = {}; new Function('window', src)(w); cands = (w.PRISM_CANDIDATES || []).filter(c => c.source === 'legislative');
-  } catch (e) { console.warn('  ⚠ legislative candidates unreadable: ' + e.message); return []; }
-  const added = [];
-  cands.forEach(c => {
-    const raw = c.raw || {}; const billId = raw.billId || (c.bills || [])[0];
-    if (!billId) return;
-    const votes = (raw.votes || []).map(v => Object.assign({}, v, { iso: parseVoteDate(v.date) })).filter(v => v.iso)
-      .sort((a, b) => b.iso.localeCompare(a.iso));
-    const last = votes[0]; if (!last) return;
-    if (daysBetween(last.iso, TODAY) > LEG_FRESH_DAYS) return;          // live = a roll call inside the window
-    const oidB = 'obj_bill_' + billId;
-    const title = String(c.title || billId).replace(/\s*\(\d+ roll calls?\)\s*$/, '');
-    const holder = last.chamber === 'senate' ? 'the Senate' : 'the House';
-    const head = title + ' — ' + holder.replace('the ', '') + ' ' + (last.question || 'vote').replace(/^On /, '').toLowerCase() + ' (' + (last.result || '') + ')';
-    let o = reg.objects.find(x => x.oid === oidB);
-    if (!o) {
-      o = { oid: oidB, headline: head, tokens: [...tokens(title)], kind: 'bill', verb: 'voted', holder,
-        formedOn: last.iso, firstSeen: last.iso, lastSeen: last.iso, scans: 1, outlets: 0, peakOutlets: 0,
-        status: 'new', permanence: { silentDays: 0, breaks: [], returns: [] }, inversions: [], drafts: {}, live: null,
-        articles: [], aliases: [],
-        legislation: { billId, congressGovUrl: raw.congressGovUrl || null, salience: raw.salience || null,
-          lastVote: { on: last.iso, chamber: last.chamber, question: last.question, result: last.result, totals: last.totals, party: last.party },
-          roll: votes.length },
-        tethers: [{ billId, relation: 'object', statusAsOf: last.iso + ' ' + (last.question || '') + ' — ' + (last.result || '') }] };
-      reg.objects.push(o); added.push(o);
-    } else {
-      if (last.iso > (o.formedOn || '')) {                              // a new roll call re-forms the object
-        o.headline = head; o.formedOn = last.iso; o.lastSeen = last.iso;
-        o.legislation = Object.assign({}, o.legislation, { lastVote: { on: last.iso, chamber: last.chamber, question: last.question, result: last.result, totals: last.totals, party: last.party }, roll: votes.length });
-        if (o.status === 'watch') o.status = 'new';
-      }
-      o.scans += 1; o.permanence.silentDays = 0;
-    }
-  });
-  return added;
-}
-
 // ── 5. The day's queue ────────────────────────────────────────────────
 function queueDay(reg) {
   // The scan now runs several times a day (it rides the 3-hourly workflow),
@@ -346,17 +287,10 @@ function queueDay(reg) {
   const room = Math.max(0, DAILY_QUOTA - already);
   const fresh = reg.objects.filter(o => o.status === 'new' && o.holder && o.kind !== 'hearing');
   fresh.sort((a, b) => (b.peakOutlets - a.peakOutlets) || (b.lastSeen || '').localeCompare(a.lastSeen || ''));
-  // One slot a day belongs to live legislation when any is waiting (Sailor,
-  // 2026-09-26: ideally every event relates to a piece of legislation). The
-  // rest go to the news objects by heat, as before.
-  const bills = fresh.filter(o => o.kind === 'bill').sort((a, b) =>
-    ((b.legislation && b.legislation.salience) || 0) - ((a.legislation && a.legislation.salience) || 0) || (b.formedOn || '').localeCompare(a.formedOn || ''));
-  const billsToday = reg.objects.filter(o => o.queuedOn === TODAY && o.kind === 'bill').length;
-  const legPick = bills.slice(0, Math.max(0, Math.min(room, LEG_QUOTA - billsToday)));
-  const picked = legPick.concat(fresh.filter(o => !legPick.includes(o) && o.kind !== 'bill').slice(0, room - legPick.length));
+  const picked = fresh.slice(0, room);
   picked.forEach(o => { o.status = 'queued'; o.queuedOn = TODAY; });
   // anything 'new' that didn't make the cut watches for a second scan
-  fresh.filter(o => !picked.includes(o)).forEach(o => { o.status = 'watch'; });
+  fresh.slice(room).forEach(o => { o.status = 'watch'; });
   return picked;
 }
 
@@ -404,8 +338,6 @@ function digest(reg, ev, queued) {
   articles = articles.filter(a => { const k = a.url || (a.title + '|' + a.domain); if (seen.has(k)) return false; seen.add(k); return true; });
   const clusters = cluster(articles);
   const ev = mergeScan(reg, clusters);
-  const legAdded = mergeLegislative(reg);
-  if (legAdded.length) console.log(`  ${legAdded.length} live bill(s) joined the register`);
   const queued = queueDay(reg);
   reg.scans.push({ on: TODAY, at: new Date().toISOString(), articles: articles.length, clusters: clusters.length, new: ev.new.length, queued: queued.map(o => o.oid), fixture: !!FIXTURE });
   reg.scans = reg.scans.slice(-60);

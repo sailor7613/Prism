@@ -1,434 +1,467 @@
 {
-  "title": "The Custodial Command",
-  "category": "Elections · Courts · California",
-  "date": "2026-09-24",
-  "prompt": "The California Supreme Court ordered Sheriff Bianco to give back 650,000 ballots. Does the order end it?",
-  "framing": "On Thursday, September 24, 2026, the California Supreme Court ruled unanimously that Riverside County Sheriff Chad Bianco broke state election law when his office took more than 650,000 ballots from the county registrar of voters in March 2026 — about 611,000 of them from the November 2025 special election on Proposition 50, the congressional redistricting measure. In an opinion by Chief Justice Patricia Guerrero, the court held in Cervantes v. Bianco that the Elections Code's \"clear custodial command\" keeps ballots with elections officials during any investigation, and in Bonta v. Bianco that the sheriff was bound by Attorney General Rob Bonta's directives to stop. It ordered the ballots returned to the Registrar of Voters and told the sheriff to \"refrain from further handling of the ballots except as necessary to comply with our order.\" Bianco, a Republican who ran unsuccessfully for governor in 2026, had pointed to a claimed discrepancy of about 45,000 ballots and said in August 2026 that he would keep investigating. On September 24 he called the ruling \"frightening\" and said, \"We abide by the law.\" Bonta said the court had \"reaffirmed my authority as Attorney General to supervise county sheriffs\"; Governor Gavin Newsom, who had signed an election-protection package on September 19, said the ruling \"affirms that in California we will defend democracy.\"",
-  "framingKeywords": [
-    "clear custodial command",
-    "Registrar of Voters",
+ "title": "The Custodial Command",
+ "category": "Elections · Courts · California",
+ "date": "2026-09-24",
+ "prompt": "The California Supreme Court ordered Sheriff Bianco to give back 650,000 ballots. Does the order end it?",
+ "framing": "On Thursday, September 24, 2026, the California Supreme Court ruled unanimously that Riverside County Sheriff Chad Bianco broke state election law when his office took more than 650,000 ballots from the county registrar of voters in March 2026 — about 611,000 of them from the November 2025 special election on Proposition 50, the congressional redistricting measure. In an opinion by Chief Justice Patricia Guerrero, the court held in Cervantes v. Bianco that the Elections Code's \"clear custodial command\" keeps ballots with elections officials during any investigation, and in Bonta v. Bianco that the sheriff was bound by Attorney General Rob Bonta's directives to stop. It ordered the ballots returned to the Registrar of Voters and told the sheriff to \"refrain from further handling of the ballots except as necessary to comply with our order.\" Bianco, a Republican who ran unsuccessfully for governor in 2026, had pointed to a claimed discrepancy of about 45,000 ballots and said in August 2026 that he would keep investigating. On September 24 he called the ruling \"frightening\" and said, \"We abide by the law.\" Bonta said the court had \"reaffirmed my authority as Attorney General to supervise county sheriffs\"; Governor Gavin Newsom, who had signed an election-protection package on September 19, said the ruling \"affirms that in California we will defend democracy.\"",
+ "framingKeywords": [
+  "clear custodial command",
+  "Registrar of Voters",
+  "Proposition 50"
+ ],
+ "prevalentAxis": "x",
+ "split": {
+  "topology": "axis",
+  "strength": 0.6,
+  "seam": "x at the coalition radius; y at the fluid; A alone at the rim.",
+  "rationale": "The scalar runs along x — a Republican sheriff against a Democratic attorney general and governor over a Democratic redistricting measure. The coalitions split on x cleanly (A +0.8, C +0.4 against B −0.3, D −0.8). The fluid band splits on y instead (A +0.6, B +0.3 against C −0.2, D −0.6): the institutional readers weigh the custody holding, the populist readers weigh the absent consequence or the unexamined discrepancy. At the rim only A trusts the holder (the registrar under Bonta) — a peel. The seam moves with radius (bench R9); declared axis for the coalition line.",
+  "zPattern": {
+   "centers": {
+    "A": 0.6,
+    "B": 0.3,
+    "C": -0.2,
+    "D": -0.6
+   },
+   "rims": {
+    "A": 0.7,
+    "B": -0.6,
+    "C": -0.5,
+    "D": -0.9
+   },
+   "note": "Rims A +0.7 alone (trusts the registrar under the AG); B −0.6 and D −0.9 distrust Bonta and Newsom; C −0.5 distrusts the sheriff's department still holding the ballots. Intra-station: B fluid +0.3 vs B coalition −0.3; C coalition +0.4 between C fluid −0.2 and C rim −0.5. The blind author trusts C coalition least (±0.6)."
+  },
+  "ruledBy": null,
+  "date": "2026-09-25"
+ },
+ "antiValentBand": "coalition",
+ "antiValentRationale": "B coalition (−0.3) follows the sheriff's unexamined discrepancy against its own fluid band (+0.3), which accepts the custody holding; C coalition (+0.4) believes the order delivers the Proposition 50 result its own fluid and rim doubt will hold.",
+ "axes": {
+  "x": {
+   "pos": "Right",
+   "neg": "Left"
+  },
+  "y": {
+   "pos": "Institutional",
+   "neg": "Populist"
+  },
+  "z": {
+   "pos": "the order delivers — the ballots go back to the registrar and the sheriff's investigation is over",
+   "neg": "the order doesn't close it — the sheriff, or the doubt he raised about Proposition 50, outlasts the ruling"
+  }
+ },
+ "responses": {
+  "A": {
+   "xSide": "left",
+   "source": "",
+   "fluid": {
+    "text": "A unanimous opinion, two cases, and an explicit order to return the ballots to the Registrar of Voters is about as complete as a court can make it. The 'clear custodial command' means ballots stay with elections officials during any investigation, so the sheriff's route to the ballots is closed. He says he will abide by the law, and the order leaves him little room to do anything else.",
+    "xWord": "rule of law",
+    "yWord": "court order",
+    "words": [
+     "clear custodial command",
+     "Registrar of Voters",
+     "refrain from further handling"
+    ],
+    "source": "",
+    "z": 0.6,
+    "zReason": "A unanimous order that names the custodian and bars further handling removes the sheriff's physical and legal access to the ballots, which is what his investigation depended on.",
+    "instrument": {
+     "holder": "California Supreme Court and the Registrar of Voters",
+     "trusted": true
+    }
+   },
+   "coalition": {
+    "text": "The court confirmed what the Attorney General said from the start: sheriffs answer to his directives, and ballots belong with elections officials. Together with the election-protection package signed on September 19, this closes the door on a sheriff seizing ballots again. Proposition 50 was decided by voters, and today the court defended that.",
+    "xWord": "defend democracy",
+    "yWord": "AG authority",
+    "words": [
+     "reaffirmed my authority",
+     "defend democracy",
+     "Proposition 50"
+    ],
+    "source": "",
+    "z": 0.8,
+    "zReason": "The ruling in Bonta v. Bianco makes the Attorney General's directives binding on sheriffs, so the state now has a tested lever to stop any repeat.",
+    "instrument": {
+     "holder": "Attorney General Bonta",
+     "trusted": true
+    }
+   },
+   "denominated": {
+    "text": "The ballots go back to the registrar and the Attorney General holds the supervisory authority the court just confirmed. That is where custody should sit. Whoever holds the ballots now is on our side of the law.",
+    "xWord": "state custody",
+    "yWord": "supervision",
+    "words": [
+     "Registrar of Voters",
+     "clear custodial command",
+     "Bonta v. Bianco"
+    ],
+    "source": "",
+    "z": 0.7,
+    "zReason": "Custody returns to elections officials under an Attorney General this band trusts, so delivery is secured by who holds the instrument.",
+    "instrument": {
+     "holder": "Registrar of Voters under the Attorney General's supervision",
+     "trusted": true
+    }
+   }
+  },
+  "B": {
+   "xSide": "right",
+   "source": "",
+   "fluid": {
+    "text": "A sheriff does not get to take 650,000 ballots out of the registrar's hands, and a unanimous court said so plainly. The ballots go back. But the ruling was about custody, not about whether the claimed 45,000-ballot discrepancy is real, and that question was never answered on the merits.",
+    "xWord": "lawful process",
+    "yWord": "custody vs. merits",
+    "words": [
+     "clear custodial command",
+     "45,000 ballots",
+     "unanimously"
+    ],
+    "source": "",
+    "z": 0.3,
+    "zReason": "The order ends the sheriff's possession of the ballots but decides only who holds them, leaving the discrepancy claim unexamined rather than disproven.",
+    "instrument": {
+     "holder": "California Supreme Court",
+     "trusted": true
+    }
+   },
+   "coalition": {
+    "text": "The court told a sheriff to hand the ballots back to the same officials whose count he questioned. Nobody has explained the 45,000-ballot gap he pointed to. Winning on who holds the box is not the same as showing what is in it.",
+    "xWord": "unanswered questions",
+    "yWord": "accountability",
+    "words": [
+     "45,000 ballots",
+     "Proposition 50",
+     "who holds the ballots"
+    ],
+    "source": "",
+    "z": -0.3,
+    "zReason": "Because the ruling settles custody without testing the discrepancy, the doubt about Proposition 50 remains available to anyone who wants to raise it.",
+    "instrument": {
+     "holder": "Registrar of Voters and the Attorney General",
+     "trusted": false
+    }
+   },
+   "denominated": {
+    "text": "The instrument now sits with a Democratic Attorney General whose authority over sheriffs the court just expanded, and a governor who called it defending democracy. The people the sheriff was investigating now hold the ballots. We do not expect them to look at this again.",
+    "xWord": "Sacramento",
+    "yWord": "one-party custody",
+    "words": [
+     "reaffirmed my authority",
+     "Registrar of Voters",
+     "Proposition 50"
+    ],
+    "source": "",
+    "z": -0.6,
+    "zReason": "Delivery runs through state officials this band does not trust to examine their own count, so the order does not close the question for it.",
+    "instrument": {
+     "holder": "Attorney General Bonta and Governor Newsom",
+     "trusted": false
+    }
+   }
+  },
+  "C": {
+   "xSide": "left",
+   "source": "",
+   "fluid": {
+    "text": "The ballots go back, good. But a sheriff took 650,000 ballots in March, kept saying in August he would keep investigating, and the order only tells him to stop touching them. There is no consequence here, just an instruction, so the doubt he spread about Proposition 50 is still out there.",
+    "xWord": "no consequences",
+    "yWord": "order vs. accountability",
+    "words": [
+     "refrain from further handling",
+     "Proposition 50",
+     "Registrar of Voters"
+    ],
+    "source": "",
+    "z": -0.2,
+    "zReason": "The order corrects custody but imposes no penalty, so the sheriff keeps his office and his claim keeps circulating.",
+    "instrument": {
+     "holder": "California Supreme Court",
+     "trusted": true
+    }
+   },
+   "coalition": {
+    "text": "Voters won this one. Proposition 50 was passed by the people, and a sheriff with a political agenda could not take their ballots and rewrite the story. The court sided with the voters and the ballots go back where they belong.",
+    "xWord": "voters' win",
+    "yWord": "people's ballots",
+    "words": [
+     "Proposition 50",
+     "Registrar of Voters",
+     "clear custodial command"
+    ],
+    "source": "",
+    "z": 0.4,
+    "zReason": "Returning the ballots to elections officials protects the Proposition 50 result from being reopened by the sheriff's investigation.",
+    "instrument": {
+     "holder": "Registrar of Voters",
+     "trusted": true
+    }
+   },
+   "denominated": {
+    "text": "Until the ballots are physically back, the sheriff still has them, and he is still the sheriff. He called the ruling frightening. A badge that took the ballots once can find another reason.",
+    "xWord": "the badge",
+    "yWord": "police power",
+    "words": [
+     "frightening",
+     "refrain from further handling",
+     "650,000 ballots"
+    ],
+    "source": "",
+    "z": -0.5,
+    "zReason": "The sheriff's department still holds both the ballots and the enforcement power, and this band does not trust it to comply fully or stop.",
+    "instrument": {
+     "holder": "Sheriff Bianco's department",
+     "trusted": false
+    }
+   }
+  },
+  "D": {
+   "xSide": "right",
+   "source": "",
+   "fluid": {
+    "text": "The sheriff found a 45,000-ballot discrepancy and the court never looked at it. The ruling says who gets to hold the ballots, not whether the count was right. Ending an investigation is not the same as answering it.",
+    "xWord": "unanswered discrepancy",
+    "yWord": "custody not truth",
+    "words": [
+     "45,000 ballots",
+     "Proposition 50",
+     "clear custodial command"
+    ],
+    "source": "",
+    "z": -0.6,
+    "zReason": "The ruling decides custody without addressing the discrepancy, so the doubt it was meant to resolve is left standing.",
+    "instrument": {
+     "holder": "California Supreme Court",
+     "trusted": false
+    }
+   },
+   "coalition": {
+    "text": "A sheriff tried to check the Proposition 50 count and the state shut him down. Bonta called it his authority, Newsom called it defending democracy, and the ballots go back to the office being questioned. That does not settle anything for us.",
+    "xWord": "shut down",
+    "yWord": "state vs. sheriff",
+    "words": [
+     "Proposition 50",
+     "reaffirmed my authority",
+     "45,000 ballots"
+    ],
+    "source": "",
+    "z": -0.8,
+    "zReason": "The order stops the investigation by removing the ballots, which this band reads as suppression that keeps the doubt alive rather than resolving it.",
+    "instrument": {
+     "holder": "Attorney General Bonta",
+     "trusted": false
+    }
+   },
+   "denominated": {
+    "text": "Now Sacramento holds the ballots and the power over every county sheriff. The same people who wanted Proposition 50 hold the evidence about Proposition 50. That is the whole story.",
+    "xWord": "Sacramento",
+    "yWord": "who holds the box",
+    "words": [
+     "Registrar of Voters",
+     "reaffirmed my authority",
+     "Proposition 50"
+    ],
+    "source": "",
+    "z": -0.9,
+    "zReason": "Custody and supervisory power both sit with state officials this band distrusts, so the order delivers nothing it will accept.",
+    "instrument": {
+     "holder": "Attorney General Bonta and Governor Newsom",
+     "trusted": false
+    }
+   }
+  }
+ },
+ "diatribe": {
+  "LF": {
+   "text": "The left's close readers call the order about as complete as a court can make one: a unanimous custodial command and an order to return the ballots.",
+   "side": "left",
+   "band": "fluid",
+   "keywords": [
+    "clear custodial command"
+   ]
+  },
+  "LC": {
+   "text": "Democrats and the populist left read a win for voters and for the Attorney General's authority; the populist left adds that the sheriff faces no consequence.",
+   "side": "left",
+   "band": "coalition",
+   "keywords": [
+    "reaffirmed my authority",
     "Proposition 50"
+   ]
+  },
+  "LD": {
+   "text": "At the left rim the institutional side trusts the registrar under Bonta; the populist side notes the ballots are still with a sheriff who called the ruling frightening.",
+   "side": "left",
+   "band": "denominated",
+   "keywords": [
+    "Registrar of Voters",
+    "frightening"
+   ]
+  },
+  "RF": {
+   "text": "Conservative lawyers accept that a sheriff can't take the ballots, but say the ruling settled custody, not the 45,000-ballot question.",
+   "side": "right",
+   "band": "fluid",
+   "keywords": [
+    "45,000 ballots"
+   ]
+  },
+  "RC": {
+   "text": "The party and movement lines say the state shut the investigation down and handed the ballots back to the office under question.",
+   "side": "right",
+   "band": "coalition",
+   "keywords": [
+    "Proposition 50"
+   ]
+  },
+  "RD": {
+   "text": "The right rim sees Sacramento now holding the ballots and the power over every county sheriff, and accepts nothing it delivers.",
+   "side": "right",
+   "band": "denominated",
+   "keywords": [
+    "reaffirmed my authority"
+   ]
+  }
+ },
+ "diatribeLayer": "stated",
+ "objectLayer": {
+  "declared": "stated",
+  "stated": "a unanimous state high-court ruling ordering a sheriff to return 650,000 seized ballots and stop his investigation",
+  "operative": "a holding on custody and supervision — ballots stay with elections officials and sheriffs answer to the Attorney General — that leaves the sheriff's discrepancy claim unexamined on its merits",
+  "inversion": "lean, not ruled: the stated object is x (a Republican sheriff v. Democratic state officials); the operative object is custody, and the fluid band reads it on y — attenuation, not a reversal"
+ },
+ "window": {
+  "close": "2026-09-24",
+  "why": "Trigger day = the ruling, Thursday 2026-09-24 (California Supreme Court). The register read 09-25 because the stories landed after 00:00 UTC — report date, corrected on the card; the holder is the state's high court, not a federal one — also corrected. The same ruling is already on the register as obj_afederal_000-650-ballots-california (watch, 24 outlets); this card is its alias. Bianco's, Bonta's and Newsom's same-day statements are inside the window; the physical return of the ballots had not been reported. Declared at authoring, before any z (§4c).",
+  "ruledBy": null,
+  "ruledOn": null
+ },
+ "meta": {
+  "dialecticsRef": "obj_afederal_against-ballot-bianco-california",
+  "status": "draft",
+  "source": "Claude draft — daily newsroom drafting (scheduled), authored z-first against Trace Formula v1 per scripts/newsroom/AUTHORING_PROTOCOL.md v1. Filed to drafts/claude; not through the surface; no aiDeltas lineage. Rulings: none.",
+  "editHistory": [
+   {
+    "at": "2026-09-25T08:40:00.000Z",
+    "by": "Claude (scheduled drafting)",
+    "what": "authored: object -> window -> frame -> sweep (All clean) -> axes -> twelve (blind subagent) -> split/diatribe/layers -> sweep"
+   }
   ],
-  "prevalentAxis": "x",
-  "split": {
-    "topology": "axis",
-    "strength": 0.6,
-    "seam": "x at the coalition radius; y at the fluid; A alone at the rim.",
-    "rationale": "The scalar runs along x — a Republican sheriff against a Democratic attorney general and governor over a Democratic redistricting measure. The coalitions split on x cleanly (A +0.8, C +0.4 against B −0.3, D −0.8). The fluid band splits on y instead (A +0.6, B +0.3 against C −0.2, D −0.6): the institutional readers weigh the custody holding, the populist readers weigh the absent consequence or the unexamined discrepancy. At the rim only A trusts the holder (the registrar under Bonta) — a peel. The seam moves with radius (bench R9); declared axis for the coalition line.",
-    "zPattern": {
-      "centers": {
-        "A": 0.6,
-        "B": 0.3,
-        "C": -0.2,
-        "D": -0.6
-      },
-      "rims": {
-        "A": 0.7,
-        "B": -0.6,
-        "C": -0.5,
-        "D": -0.9
-      },
-      "note": "Rims A +0.7 alone (trusts the registrar under the AG); B −0.6 and D −0.9 distrust Bonta and Newsom; C −0.5 distrusts the sheriff's department still holding the ballots. Intra-station: B fluid +0.3 vs B coalition −0.3; C coalition +0.4 between C fluid −0.2 and C rim −0.5. The blind author trusts C coalition least (±0.6)."
-    },
-    "ruledBy": null,
-    "date": "2026-09-25"
-  },
-  "antiValentBand": "coalition",
-  "antiValentRationale": "B coalition (−0.3) follows the sheriff's unexamined discrepancy against its own fluid band (+0.3), which accepts the custody holding; C coalition (+0.4) believes the order delivers the Proposition 50 result its own fluid and rim doubt will hold.",
-  "axes": {
-    "x": {
-      "pos": "Right",
-      "neg": "Left"
-    },
-    "y": {
-      "pos": "Institutional",
-      "neg": "Populist"
-    },
-    "z": {
-      "pos": "the order delivers — the ballots go back to the registrar and the sheriff's investigation is over",
-      "neg": "the order doesn't close it — the sheriff, or the doubt he raised about Proposition 50, outlasts the ruling"
-    }
-  },
-  "responses": {
-    "A": {
-      "xSide": "left",
-      "source": "",
-      "fluid": {
-        "text": "A unanimous opinion, two cases, and an explicit order to return the ballots to the Registrar of Voters is about as complete as a court can make it. The 'clear custodial command' means ballots stay with elections officials during any investigation, so the sheriff's route to the ballots is closed. He says he will abide by the law, and the order leaves him little room to do anything else.",
-        "xWord": "rule of law",
-        "yWord": "court order",
-        "words": [
-          "clear custodial command",
-          "Registrar of Voters",
-          "refrain from further handling"
-        ],
-        "source": "",
-        "z": 0.6,
-        "zReason": "A unanimous order that names the custodian and bars further handling removes the sheriff's physical and legal access to the ballots, which is what his investigation depended on.",
-        "instrument": {
-          "holder": "California Supreme Court and the Registrar of Voters",
-          "trusted": true
-        }
-      },
-      "coalition": {
-        "text": "The court confirmed what the Attorney General said from the start: sheriffs answer to his directives, and ballots belong with elections officials. Together with the election-protection package signed on September 19, this closes the door on a sheriff seizing ballots again. Proposition 50 was decided by voters, and today the court defended that.",
-        "xWord": "defend democracy",
-        "yWord": "AG authority",
-        "words": [
-          "reaffirmed my authority",
-          "defend democracy",
-          "Proposition 50"
-        ],
-        "source": "",
-        "z": 0.8,
-        "zReason": "The ruling in Bonta v. Bianco makes the Attorney General's directives binding on sheriffs, so the state now has a tested lever to stop any repeat.",
-        "instrument": {
-          "holder": "Attorney General Bonta",
-          "trusted": true
-        }
-      },
-      "denominated": {
-        "text": "The ballots go back to the registrar and the Attorney General holds the supervisory authority the court just confirmed. That is where custody should sit. Whoever holds the ballots now is on our side of the law.",
-        "xWord": "state custody",
-        "yWord": "supervision",
-        "words": [
-          "Registrar of Voters",
-          "clear custodial command",
-          "Bonta v. Bianco"
-        ],
-        "source": "",
-        "z": 0.7,
-        "zReason": "Custody returns to elections officials under an Attorney General this band trusts, so delivery is secured by who holds the instrument.",
-        "instrument": {
-          "holder": "Registrar of Voters under the Attorney General's supervision",
-          "trusted": true
-        }
-      }
-    },
-    "B": {
-      "xSide": "right",
-      "source": "",
-      "fluid": {
-        "text": "A sheriff does not get to take 650,000 ballots out of the registrar's hands, and a unanimous court said so plainly. The ballots go back. But the ruling was about custody, not about whether the claimed 45,000-ballot discrepancy is real, and that question was never answered on the merits.",
-        "xWord": "lawful process",
-        "yWord": "custody vs. merits",
-        "words": [
-          "clear custodial command",
-          "45,000 ballots",
-          "unanimously"
-        ],
-        "source": "",
-        "z": 0.3,
-        "zReason": "The order ends the sheriff's possession of the ballots but decides only who holds them, leaving the discrepancy claim unexamined rather than disproven.",
-        "instrument": {
-          "holder": "California Supreme Court",
-          "trusted": true
-        }
-      },
-      "coalition": {
-        "text": "The court told a sheriff to hand the ballots back to the same officials whose count he questioned. Nobody has explained the 45,000-ballot gap he pointed to. Winning on who holds the box is not the same as showing what is in it.",
-        "xWord": "unanswered questions",
-        "yWord": "accountability",
-        "words": [
-          "45,000 ballots",
-          "Proposition 50",
-          "who holds the ballots"
-        ],
-        "source": "",
-        "z": -0.3,
-        "zReason": "Because the ruling settles custody without testing the discrepancy, the doubt about Proposition 50 remains available to anyone who wants to raise it.",
-        "instrument": {
-          "holder": "Registrar of Voters and the Attorney General",
-          "trusted": false
-        }
-      },
-      "denominated": {
-        "text": "The instrument now sits with a Democratic Attorney General whose authority over sheriffs the court just expanded, and a governor who called it defending democracy. The people the sheriff was investigating now hold the ballots. We do not expect them to look at this again.",
-        "xWord": "Sacramento",
-        "yWord": "one-party custody",
-        "words": [
-          "reaffirmed my authority",
-          "Registrar of Voters",
-          "Proposition 50"
-        ],
-        "source": "",
-        "z": -0.6,
-        "zReason": "Delivery runs through state officials this band does not trust to examine their own count, so the order does not close the question for it.",
-        "instrument": {
-          "holder": "Attorney General Bonta and Governor Newsom",
-          "trusted": false
-        }
-      }
-    },
-    "C": {
-      "xSide": "left",
-      "source": "",
-      "fluid": {
-        "text": "The ballots go back, good. But a sheriff took 650,000 ballots in March, kept saying in August he would keep investigating, and the order only tells him to stop touching them. There is no consequence here, just an instruction, so the doubt he spread about Proposition 50 is still out there.",
-        "xWord": "no consequences",
-        "yWord": "order vs. accountability",
-        "words": [
-          "refrain from further handling",
-          "Proposition 50",
-          "Registrar of Voters"
-        ],
-        "source": "",
-        "z": -0.2,
-        "zReason": "The order corrects custody but imposes no penalty, so the sheriff keeps his office and his claim keeps circulating.",
-        "instrument": {
-          "holder": "California Supreme Court",
-          "trusted": true
-        }
-      },
-      "coalition": {
-        "text": "Voters won this one. Proposition 50 was passed by the people, and a sheriff with a political agenda could not take their ballots and rewrite the story. The court sided with the voters and the ballots go back where they belong.",
-        "xWord": "voters' win",
-        "yWord": "people's ballots",
-        "words": [
-          "Proposition 50",
-          "Registrar of Voters",
-          "clear custodial command"
-        ],
-        "source": "",
-        "z": 0.4,
-        "zReason": "Returning the ballots to elections officials protects the Proposition 50 result from being reopened by the sheriff's investigation.",
-        "instrument": {
-          "holder": "Registrar of Voters",
-          "trusted": true
-        }
-      },
-      "denominated": {
-        "text": "Until the ballots are physically back, the sheriff still has them, and he is still the sheriff. He called the ruling frightening. A badge that took the ballots once can find another reason.",
-        "xWord": "the badge",
-        "yWord": "police power",
-        "words": [
-          "frightening",
-          "refrain from further handling",
-          "650,000 ballots"
-        ],
-        "source": "",
-        "z": -0.5,
-        "zReason": "The sheriff's department still holds both the ballots and the enforcement power, and this band does not trust it to comply fully or stop.",
-        "instrument": {
-          "holder": "Sheriff Bianco's department",
-          "trusted": false
-        }
-      }
-    },
-    "D": {
-      "xSide": "right",
-      "source": "",
-      "fluid": {
-        "text": "The sheriff found a 45,000-ballot discrepancy and the court never looked at it. The ruling says who gets to hold the ballots, not whether the count was right. Ending an investigation is not the same as answering it.",
-        "xWord": "unanswered discrepancy",
-        "yWord": "custody not truth",
-        "words": [
-          "45,000 ballots",
-          "Proposition 50",
-          "clear custodial command"
-        ],
-        "source": "",
-        "z": -0.6,
-        "zReason": "The ruling decides custody without addressing the discrepancy, so the doubt it was meant to resolve is left standing.",
-        "instrument": {
-          "holder": "California Supreme Court",
-          "trusted": false
-        }
-      },
-      "coalition": {
-        "text": "A sheriff tried to check the Proposition 50 count and the state shut him down. Bonta called it his authority, Newsom called it defending democracy, and the ballots go back to the office being questioned. That does not settle anything for us.",
-        "xWord": "shut down",
-        "yWord": "state vs. sheriff",
-        "words": [
-          "Proposition 50",
-          "reaffirmed my authority",
-          "45,000 ballots"
-        ],
-        "source": "",
-        "z": -0.8,
-        "zReason": "The order stops the investigation by removing the ballots, which this band reads as suppression that keeps the doubt alive rather than resolving it.",
-        "instrument": {
-          "holder": "Attorney General Bonta",
-          "trusted": false
-        }
-      },
-      "denominated": {
-        "text": "Now Sacramento holds the ballots and the power over every county sheriff. The same people who wanted Proposition 50 hold the evidence about Proposition 50. That is the whole story.",
-        "xWord": "Sacramento",
-        "yWord": "who holds the box",
-        "words": [
-          "Registrar of Voters",
-          "reaffirmed my authority",
-          "Proposition 50"
-        ],
-        "source": "",
-        "z": -0.9,
-        "zReason": "Custody and supervisory power both sit with state officials this band distrusts, so the order delivers nothing it will accept.",
-        "instrument": {
-          "holder": "Attorney General Bonta and Governor Newsom",
-          "trusted": false
-        }
-      }
-    }
-  },
-  "diatribe": {
-    "LF": {
-      "text": "The left's close readers call the order about as complete as a court can make one: a unanimous custodial command and an order to return the ballots.",
-      "side": "left",
-      "band": "fluid",
-      "keywords": [
-        "clear custodial command"
-      ]
-    },
-    "LC": {
-      "text": "Democrats and the populist left read a win for voters and for the Attorney General's authority; the populist left adds that the sheriff faces no consequence.",
-      "side": "left",
-      "band": "coalition",
-      "keywords": [
-        "reaffirmed my authority",
-        "Proposition 50"
-      ]
-    },
-    "LD": {
-      "text": "At the left rim the institutional side trusts the registrar under Bonta; the populist side notes the ballots are still with a sheriff who called the ruling frightening.",
-      "side": "left",
-      "band": "denominated",
-      "keywords": [
-        "Registrar of Voters",
-        "frightening"
-      ]
-    },
-    "RF": {
-      "text": "Conservative lawyers accept that a sheriff can't take the ballots, but say the ruling settled custody, not the 45,000-ballot question.",
-      "side": "right",
-      "band": "fluid",
-      "keywords": [
-        "45,000 ballots"
-      ]
-    },
-    "RC": {
-      "text": "The party and movement lines say the state shut the investigation down and handed the ballots back to the office under question.",
-      "side": "right",
-      "band": "coalition",
-      "keywords": [
-        "Proposition 50"
-      ]
-    },
-    "RD": {
-      "text": "The right rim sees Sacramento now holding the ballots and the power over every county sheriff, and accepts nothing it delivers.",
-      "side": "right",
-      "band": "denominated",
-      "keywords": [
-        "reaffirmed my authority"
-      ]
-    }
-  },
-  "diatribeLayer": "stated",
-  "objectLayer": {
-    "declared": "stated",
+  "aiDeltas": [],
+  "frameFirst": {
+   "date": "2026-09-25",
+   "by": "Claude, under §4c (window declared at authoring; sweep before z). Object NOT ruled — Claude's read, correctable by Sailor.",
+   "status": "Frame authored and swept (All clean) before any z; the twelve authored blind z-first by a subagent (meta.blindAuthoring). Stations unruled.",
+   "objectLean": {
     "stated": "a unanimous state high-court ruling ordering a sheriff to return 650,000 seized ballots and stop his investigation",
     "operative": "a holding on custody and supervision — ballots stay with elections officials and sheriffs answer to the Attorney General — that leaves the sheriff's discrepancy claim unexamined on its merits",
     "inversion": "lean, not ruled: the stated object is x (a Republican sheriff v. Democratic state officials); the operative object is custody, and the fluid band reads it on y — attenuation, not a reversal"
+   },
+   "titleLean": "'The Custodial Command' — Claude's; Sailor names Readings",
+   "sourcesInWindow": [
+    "CalMatters 2026-09-24",
+    "CBS Los Angeles 2026-09-24",
+    "The Riverside Record 2026-09-24",
+    "NBC Palm Springs 2026-09-24",
+    "Governor of California statement 2026-09-24",
+    "register articles (Bay Area News Group syndication) 2026-09-24"
+   ],
+   "background_preWindow": [
+    "Proposition 50 special election, November 2025",
+    "ballots seized from the Registrar of Voters, March 2026",
+    "California Supreme Court interim order to pause the review and preserve the ballots, April 2026",
+    "Bianco says he will keep investigating, August 2026",
+    "oral argument 2026-08-23 (Riverside Record)",
+    "Newsom signs election-protection package incl. ballot-seizure felony, 2026-09-19"
+   ]
   },
-  "window": {
-    "close": "2026-09-24",
-    "why": "Trigger day = the ruling, Thursday 2026-09-24 (California Supreme Court). The register read 09-25 because the stories landed after 00:00 UTC — report date, corrected on the card; the holder is the state's high court, not a federal one — also corrected. The same ruling is already on the register as obj_afederal_000-650-ballots-california (watch, 24 outlets); this card is its alias. Bianco's, Bonta's and Newsom's same-day statements are inside the window; the physical return of the ballots had not been reported. Declared at authoring, before any z (§4c).",
-    "ruledBy": null,
-    "ruledOn": null
+  "framingAudit": {
+   "date": "2026-09-25",
+   "by": "Claude — frame-first authoring under §4c; sweep run BEFORE any z. Not a ruling.",
+   "window": "2026-09-24 (declared, see window.why)",
+   "verifiedInWindow": [
+    "unanimous ruling 2026-09-24 — CalMatters, CBS LA 2026-09-24",
+    "more than 650,000 ballots; about 611,000 from Prop 50 — CBS LA 2026-09-24",
+    "seized March 2026 — CalMatters, NBC Palm Springs (pre-window, dated)",
+    "November 2025 special election on Proposition 50 — CalMatters (pre-window, dated)",
+    "opinion by Chief Justice Patricia Guerrero — CalMatters 2026-09-24",
+    "Cervantes v. Bianco / Bonta v. Bianco holdings — Riverside Record 2026-09-24",
+    "\"clear custodial command\" — opinion 2026-09-24 (Riverside Record)",
+    "\"refrain from further handling of the ballots except as necessary to comply with our order.\" — opinion 2026-09-24 (CBS LA)",
+    "ran unsuccessfully for governor in 2026 — CalMatters (dated to the year)",
+    "~45,000-ballot discrepancy claim — NBC Palm Springs (pre-window claim)",
+    "said he would keep investigating, August 2026 — CalMatters, NBC Palm Springs",
+    "\"frightening\", \"We abide by the law.\" — Bianco 2026-09-24 (Riverside Record)",
+    "\"reaffirmed my authority as Attorney General to supervise county sheriffs\" — Bonta 2026-09-24 (CBS LA)",
+    "election-protection package signed 2026-09-19 — gov.ca.gov 2026-09-24",
+    "\"affirms that in California we will defend democracy.\" — Newsom 2026-09-24 (gov.ca.gov)"
+   ],
+   "keptUnverifiedDate": [],
+   "deliberatelyExcluded_afterWindow": [
+    "Bonta ordering the return of seized materials under SB 1418 — reported with the ruling but the order's date is unclear; left out",
+    "U.S. Supreme Court Postal Service order 2026-09-14 (in Newsom's release) — a different object",
+    "anything 2026-09-25 or later — none used"
+   ]
   },
-  "meta": {
-    "dialecticsRef": "obj_afederal_against-ballot-bianco-california",
-    "status": "draft",
-    "source": "Claude draft — daily newsroom drafting (scheduled), authored z-first against Trace Formula v1 per scripts/newsroom/AUTHORING_PROTOCOL.md v1. Filed to drafts/claude; not through the surface; no aiDeltas lineage. Rulings: none.",
-    "editHistory": [
-      {
-        "at": "2026-09-25T08:40:00.000Z",
-        "by": "Claude (scheduled drafting)",
-        "what": "authored: object -> window -> frame -> sweep (All clean) -> axes -> twelve (blind subagent) -> split/diatribe/layers -> sweep"
-      }
-    ],
-    "aiDeltas": [],
-    "frameFirst": {
-      "date": "2026-09-25",
-      "by": "Claude, under §4c (window declared at authoring; sweep before z). Object NOT ruled — Claude's read, correctable by Sailor.",
-      "status": "Frame authored and swept (All clean) before any z; the twelve authored blind z-first by a subagent (meta.blindAuthoring). Stations unruled.",
-      "objectLean": {
-        "stated": "a unanimous state high-court ruling ordering a sheriff to return 650,000 seized ballots and stop his investigation",
-        "operative": "a holding on custody and supervision — ballots stay with elections officials and sheriffs answer to the Attorney General — that leaves the sheriff's discrepancy claim unexamined on its merits",
-        "inversion": "lean, not ruled: the stated object is x (a Republican sheriff v. Democratic state officials); the operative object is custody, and the fluid band reads it on y — attenuation, not a reversal"
-      },
-      "titleLean": "'The Custodial Command' — Claude's; Sailor names Readings",
-      "sourcesInWindow": [
-        "CalMatters 2026-09-24",
-        "CBS Los Angeles 2026-09-24",
-        "The Riverside Record 2026-09-24",
-        "NBC Palm Springs 2026-09-24",
-        "Governor of California statement 2026-09-24",
-        "register articles (Bay Area News Group syndication) 2026-09-24"
-      ],
-      "background_preWindow": [
-        "Proposition 50 special election, November 2025",
-        "ballots seized from the Registrar of Voters, March 2026",
-        "California Supreme Court interim order to pause the review and preserve the ballots, April 2026",
-        "Bianco says he will keep investigating, August 2026",
-        "oral argument 2026-08-23 (Riverside Record)",
-        "Newsom signs election-protection package incl. ballot-seizure felony, 2026-09-19"
-      ]
-    },
-    "framingAudit": {
-      "date": "2026-09-25",
-      "by": "Claude — frame-first authoring under §4c; sweep run BEFORE any z. Not a ruling.",
-      "window": "2026-09-24 (declared, see window.why)",
-      "verifiedInWindow": [
-        "unanimous ruling 2026-09-24 — CalMatters, CBS LA 2026-09-24",
-        "more than 650,000 ballots; about 611,000 from Prop 50 — CBS LA 2026-09-24",
-        "seized March 2026 — CalMatters, NBC Palm Springs (pre-window, dated)",
-        "November 2025 special election on Proposition 50 — CalMatters (pre-window, dated)",
-        "opinion by Chief Justice Patricia Guerrero — CalMatters 2026-09-24",
-        "Cervantes v. Bianco / Bonta v. Bianco holdings — Riverside Record 2026-09-24",
-        "\"clear custodial command\" — opinion 2026-09-24 (Riverside Record)",
-        "\"refrain from further handling of the ballots except as necessary to comply with our order.\" — opinion 2026-09-24 (CBS LA)",
-        "ran unsuccessfully for governor in 2026 — CalMatters (dated to the year)",
-        "~45,000-ballot discrepancy claim — NBC Palm Springs (pre-window claim)",
-        "said he would keep investigating, August 2026 — CalMatters, NBC Palm Springs",
-        "\"frightening\", \"We abide by the law.\" — Bianco 2026-09-24 (Riverside Record)",
-        "\"reaffirmed my authority as Attorney General to supervise county sheriffs\" — Bonta 2026-09-24 (CBS LA)",
-        "election-protection package signed 2026-09-19 — gov.ca.gov 2026-09-24",
-        "\"affirms that in California we will defend democracy.\" — Newsom 2026-09-24 (gov.ca.gov)"
-      ],
-      "keptUnverifiedDate": [],
-      "deliberatelyExcluded_afterWindow": [
-        "Bonta ordering the return of seized materials under SB 1418 — reported with the ruling but the order's date is unclear; left out",
-        "U.S. Supreme Court Postal Service order 2026-09-14 (in Newsom's release) — a different object",
-        "anything 2026-09-25 or later — none used"
-      ]
-    },
-    "blindAuthoring": {
-      "date": "2026-09-25",
-      "author": "Claude (general-purpose subagent) — blind: given the frame, prompt, keywords, axes, a station/radius brief and Trace Formula v1 §3b + R-0921-1 only; no other Reading, no register, no web",
-      "zFirst": true,
-      "instrumentOnAll12": true,
-      "rulings": "NONE — every station awaits Sailor's ruling; z, zReason, instrument, text as authored",
-      "authorNote": "Hardest was separating custody from merits: the order plainly delivers on the first half of the pole (ballots go back) while being silent on the discrepancy, so bands split on which half they weigh. It surprised me that the left-populist center came out slightly negative, since it reads the missing consequence for the sheriff as leaving the story open. I trust the C coalition band least; it could plausibly be negative rather than +0.4, an error of up to about 0.6. The B fluid band is also soft and could sit anywhere from 0 to +0.5."
-    },
-    "newsroomFindings": {
-      "inversionLeans": [
-        "B.coalition (−0.3) follows the sheriff's discrepancy claim against its own fluid band (+0.3) — same shape as Selzer's B.coalition on 09-24. Lean; no prior cited.",
-        "A-only-positive rim (peel) again."
-      ],
-      "permanence": "Alias, not a new object: the same ruling is on the register as obj_afederal_000-650-ballots-california (watch, 24 outlets, 09-24). The arc predates the register (seizure March 2026, interim order April 2026, argument 2026-08-23) and touches obj_astate_bills-changes-elections-gavin (the 09-19 package made ballot seizure a felony). Returned to the discourse at the ruling."
-    }
+  "blindAuthoring": {
+   "date": "2026-09-25",
+   "author": "Claude (general-purpose subagent) — blind: given the frame, prompt, keywords, axes, a station/radius brief and Trace Formula v1 §3b + R-0921-1 only; no other Reading, no register, no web",
+   "zFirst": true,
+   "instrumentOnAll12": true,
+   "rulings": "NONE — every station awaits Sailor's ruling; z, zReason, instrument, text as authored",
+   "authorNote": "Hardest was separating custody from merits: the order plainly delivers on the first half of the pole (ballots go back) while being silent on the discrepancy, so bands split on which half they weigh. It surprised me that the left-populist center came out slightly negative, since it reads the missing consequence for the sheriff as leaving the story open. I trust the C coalition band least; it could plausibly be negative rather than +0.4, an error of up to about 0.6. The B fluid band is also soft and could sit anywhere from 0 to +0.5."
   },
-  "rid": "rdg_jy46cnvrpz57",
-  "ridLineage": "minted 2026-09-25 (UTC) by the scheduled newsroom drafting task; filed directly to drafts/claude",
-  "schema": "reading/v1",
-  "formulaVersion": "1",
-  "updatedAt": "2026-09-25T08:40:00.000Z",
-  "authorTier": "claude",
-  "newsroom": {
-    "oid": "obj_afederal_against-ballot-bianco-california",
-    "queuedOn": "2026-09-25",
-    "draftedOn": "2026-09-25"
+  "newsroomFindings": {
+   "inversionLeans": [
+    "B.coalition (−0.3) follows the sheriff's discrepancy claim against its own fluid band (+0.3) — same shape as Selzer's B.coalition on 09-24. Lean; no prior cited.",
+    "A-only-positive rim (peel) again."
+   ],
+   "permanence": "Alias, not a new object: the same ruling is on the register as obj_afederal_000-650-ballots-california (watch, 24 outlets, 09-24). The arc predates the register (seizure March 2026, interim order April 2026, argument 2026-08-23) and touches obj_astate_bills-changes-elections-gavin (the 09-19 package made ballot seizure a felony). Returned to the discourse at the ruling."
   },
-  "images": []
+  "tetherBackfill": {
+   "date": "2026-09-26",
+   "by": "Claude (backfill under protocol v1.2 §3b)",
+   "note": "Central object + tethers added after drafting; statute cites are Claude's reading and are unruled."
+  }
+ },
+ "rid": "rdg_jy46cnvrpz57",
+ "ridLineage": "minted 2026-09-25 (UTC) by the scheduled newsroom drafting task; filed directly to drafts/claude",
+ "schema": "reading/v1",
+ "formulaVersion": "1",
+ "updatedAt": "2026-09-26T17:30:00.000Z",
+ "authorTier": "claude",
+ "newsroom": {
+  "oid": "obj_afederal_against-ballot-bianco-california",
+  "queuedOn": "2026-09-25",
+  "draftedOn": "2026-09-25"
+ },
+ "images": [],
+ "centralObject": {
+  "kind": "object",
+  "ref": "Cervantes v. Bianco (Cal. 2026-09-24)",
+  "name": "California Supreme Court: the sheriff broke the custodial command"
+ },
+ "tethers": [
+  {
+   "statute": "California Elections Code (custody of ballots)",
+   "cite": "Cal. Elections Code",
+   "enacted": "",
+   "relation": "invokes",
+   "why": "The 'clear custodial command' the court applied."
+  },
+  {
+   "statute": "California AB 282 (2026)",
+   "cite": "Cal. Elections Code, as amended",
+   "enacted": "2026",
+   "relation": "adjacent",
+   "why": "Signed five days earlier: makes the same seizure a felony going forward. Same object family as 'The Felony at the Warehouse Door'."
+  },
+  {
+   "statute": "Civil Rights Act of 1960, Title III",
+   "cite": "52 U.S.C. §20701",
+   "enacted": "1960",
+   "relation": "adjacent",
+   "why": "The federal record-keeping duty any federal claim to these ballots would invoke."
+  }
+ ]
 }
