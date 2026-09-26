@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-09-25T21:41:22.769Z · 19 legislative + 10 news (GDELT, 3d)
+// 2026-09-26T11:35:08.692Z · 19 legislative + 10 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1790372468210,
+    "ts": 1790422489886,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.846,
+      "salience": 0.843,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -1423,11 +1423,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1790372468211,
+    "ts": 1790422489886,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.837,
+      "salience": 0.835,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -1680,11 +1680,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1790372468211,
+    "ts": 1790422489886,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.775,
+      "salience": 0.772,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -2593,11 +2593,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1790372468211,
+    "ts": 1790422489886,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.733,
+      "salience": 0.731,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3121,11 +3121,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1790372468211,
+    "ts": 1790422489886,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.711,
+      "salience": 0.708,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4022,11 +4022,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1790372468210,
+    "ts": 1790422489885,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.552,
+      "salience": 0.549,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -4276,11 +4276,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1790372468210,
+    "ts": 1790422489885,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.543,
+      "salience": 0.54,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -4549,11 +4549,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1790372468211,
+    "ts": 1790422489886,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.518,
+      "salience": 0.515,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5448,11 +5448,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1790372468211,
+    "ts": 1790422489886,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.505,
+      "salience": 0.503,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6727,11 +6727,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1790372468211,
+    "ts": 1790422489886,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.425,
+      "salience": 0.422,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7647,11 +7647,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1790372468212,
+    "ts": 1790422489886,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.424,
+      "salience": 0.421,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -8557,11 +8557,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1790372468211,
+    "ts": 1790422489886,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.389,
+      "salience": 0.386,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9475,11 +9475,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1790372468211,
+    "ts": 1790422489886,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.346,
+      "salience": 0.343,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10355,11 +10355,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1790372468211,
+    "ts": 1790422489886,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.341,
+      "salience": 0.339,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11231,11 +11231,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1790372468210,
+    "ts": 1790422489885,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.149,
+      "salience": 0.147,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4541",
       "votes": [
         {
@@ -12124,11 +12124,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1790372468210,
+    "ts": 1790422489886,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.142,
+      "salience": 0.14,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -13039,11 +13039,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1790372468210,
+    "ts": 1790422489885,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.136,
+      "salience": 0.133,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -13927,11 +13927,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1790372468210,
+    "ts": 1790422489885,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.131,
+      "salience": 0.129,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -14848,11 +14848,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1790372468210,
+    "ts": 1790422489885,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.12,
+      "salience": 0.117,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -15764,21 +15764,35 @@ window.PRISM_CANDIDATES = [
     "mts": 1784044297586
   },
   {
-    "cid": "cand_news_gas-halt-iran",
+    "cid": "cand_news_halt-iran-midterms",
     "source": "news",
-    "ts": 1790372482764,
+    "ts": 1790422508687,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.897,
+      "salience": 0.837,
       "articles": [
+        {
+          "title": "Senate again rejects resolution to halt Iran war as rising fuel prices upend midterms",
+          "url": "https://www.texarkanagazette.com/news/2026/sep/25/senate-again-rejects-resolution-to-halt-iran-war/",
+          "domain": "texarkanagazette.com",
+          "seendate": "2026-09-25T09:30:00Z",
+          "image": "https://wehco.media.clients.ellingtoncms.com/imports/adg/img/2026/09/25/213726682_213726682-937582db1654420ba7c0f6de42c721a3_t1200.jpg?57a0c2296240c280e9492005c3cad63e7cbe80f4"
+        },
         {
           "title": "Senate rejects resolution to halt the Iran war as gas prices upend midterms",
           "url": "https://www.wandtv.com/2026/09/24/senate-rejects-resolution-halt-iran-war-gas-prices-upend-midterms/",
           "domain": "wandtv.com",
           "seendate": "2026-09-25T05:15:00Z",
           "image": "https://gray-wand-prod.gtv-cdn.com/resizer/v2/LRF3ZDAIBJELDFCMSKT7QJ4F4I.jpg?auth=efef3675deb6e41e3a1654e80ea01bd079655466f20c177a0963dae3468b4bf9&smart=true"
+        },
+        {
+          "title": "Senate rejects resolution to halt the Iran war as gas prices upend midterms",
+          "url": "https://www.kmvt.com/2026/09/24/senate-rejects-resolution-halt-iran-war-gas-prices-upend-midterms/",
+          "domain": "kmvt.com",
+          "seendate": "2026-09-25T00:00:00Z",
+          "image": "https://gray-kmvt-prod.gtv-cdn.com/resizer/v2/LRF3ZDAIBJELDFCMSKT7QJ4F4I.jpg?auth=efef3675deb6e41e3a1654e80ea01bd079655466f20c177a0963dae3468b4bf9&smart=true"
         },
         {
           "title": "Senate to Vote on Resolution to Halt the Iran War as Gas Prices Upend Midterms",
@@ -15795,6 +15809,13 @@ window.PRISM_CANDIDATES = [
           "image": "https://california-times-brightspot.s3.amazonaws.com/dd/96/7316bac94082af91333558922872/937582db1654420ba7c0f6de42c721a3.jpg"
         },
         {
+          "title": "Senate rejects resolution to halt the Iran war as gas prices upend midterms",
+          "url": "https://www.news8000.com/news/politics/national-politics/senate-rejects-resolution-to-halt-the-iran-war-as-gas-prices-upend-midterms/article_c0fab44e-506a-5273-9070-1ae49364908d.html",
+          "domain": "news8000.com",
+          "seendate": "2026-09-24T23:15:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/news8000.com/content/tncms/assets/v3/editorial/c/a7/ca7021b5-a968-4d4b-8918-1f68460315e3/6ab578c2d6a24.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
+        {
           "title": "Senate rejects resolution to halt the Iran war as gas prices upend midterms - Las Vegas Sun News",
           "url": "https://lasvegassun.com/news/2026/sep/24/senate-rejects-resolution-to-halt-the-iran-war-as-/",
           "domain": "lasvegassun.com",
@@ -15803,10 +15824,24 @@ window.PRISM_CANDIDATES = [
         },
         {
           "title": "Senate to vote on resolution to halt the Iran war as gas prices upend midterms",
+          "url": "https://www.wxow.com/news/national-politics/senate-to-vote-on-resolution-to-halt-the-iran-war-as-gas-prices-upend-midterms/article_7c84e993-e384-54e6-8cc6-2dbb5bec2881.html",
+          "domain": "wxow.com",
+          "seendate": "2026-09-24T20:45:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/wxow.com/content/tncms/assets/v3/editorial/1/d6/1d68a40e-bbb5-4a92-9445-2033fbc2404a/6a300b204d94c.image.jpg?crop=1280%2C672%2C0%2C23"
+        },
+        {
+          "title": "Senate to vote on resolution to halt the Iran war as gas prices upend midterms",
           "url": "https://www.winchesterstar.com/associated_press/washington/senate-to-vote-on-resolution-to-halt-the-iran-war-as-gas-prices-upend-midterms/article_ebc0998f-3ac0-54f5-81b7-f60df72d8a96.html",
           "domain": "winchesterstar.com",
           "seendate": "2026-09-24T20:30:00Z",
           "image": "https://bloximages.newyork1.vip.townnews.com/winchesterstar.com/content/tncms/assets/v3/editorial/0/dd/0dd6aea6-245c-5a56-8689-4abc05061b6b/6ab5425ced3f4.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
+        {
+          "title": "Senate rejects resolution to halt the Iran war as gas prices upend midterms",
+          "url": "http://www.goskagit.com/news/politics/senate-rejects-resolution-to-halt-the-iran-war-as-gas-prices-upend-midterms/article_3419d605-8c59-5654-8ff1-9cd04a4eedfc.html",
+          "domain": "goskagit.com",
+          "seendate": "2026-09-24T20:30:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/goskagit.com/content/tncms/assets/v3/editorial/9/11/9111de2b-2baf-5cae-8f3d-57ca288da560/6aad7efe3dca1.image.jpg?crop=1763%2C926%2C0%2C124"
         },
         {
           "title": "Senate rejects resolution to halt the Iran war as gas prices upend midterms",
@@ -15821,46 +15856,11 @@ window.PRISM_CANDIDATES = [
           "domain": "dailypress.com",
           "seendate": "2026-09-24T19:30:00Z",
           "image": "https://www.dailypress.com/wp-content/uploads/2026/09/Congress_79921.jpg"
-        },
-        {
-          "title": "Senate to vote on resolution to halt the Iran war as gas prices upend midterms",
-          "url": "https://www.newsday.com/news/nation/war-powers-iran-senate-trump-m70022",
-          "domain": "newsday.com",
-          "seendate": "2026-09-24T19:00:00Z",
-          "image": "https://cdn.newsday.com/ace/c:M2QyMGJlYjUtZDhjYS00:NjY4MDc4OTAtYTBhNC00/landscape/1280"
-        },
-        {
-          "title": "Senate to vote on resolution to halt the Iran war as gas prices upend midterms",
-          "url": "https://www.ksat.com/news/politics/2026/09/24/senate-to-vote-on-resolution-to-halt-the-iran-war-as-gas-prices-upend-midterms/",
-          "domain": "ksat.com",
-          "seendate": "2026-09-24T19:00:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/GT3LFMRFZVDRVJG7OF6ZCMIHEQ.jpg?api_key=ksat_9a37fc89631abedf"
-        },
-        {
-          "title": "Senate to vote on resolution to halt the Iran war as gas prices upend midterms",
-          "url": "https://www.krgv.com/news/senate-to-vote-on-resolution-to-halt-the-iran-war-as-gas-prices-upend-midterms",
-          "domain": "krgv.com",
-          "seendate": "2026-09-24T19:00:00Z",
-          "image": "https://dcer237tfveol.cloudfront.net/v2/_DvLW4vdxShaUCsOaWjNtwyR6E5oxs7nChqViQMh50lKRezia0O_e6uLLPveK4aW8McwUAjHUNNVBwtTUFcQXf4gAPpng-Z2nM4A029ugFL8uc-SmAJGBwD4ItEprFizE"
-        },
-        {
-          "title": "Senate to vote on resolution to halt the Iran war as gas prices upend midterms",
-          "url": "https://www.wsls.com/news/politics/2026/09/24/senate-to-vote-on-resolution-to-halt-the-iran-war-as-gas-prices-upend-midterms/",
-          "domain": "wsls.com",
-          "seendate": "2026-09-24T17:30:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/GT3LFMRFZVDRVJG7OF6ZCMIHEQ.jpg?api_key=wsls_8c3a4bc35af7684e"
-        },
-        {
-          "title": "Senate to vote on resolution to halt the Iran war as gas prices upend midterms",
-          "url": "https://isp.netscape.com:443/news/story/0001/20260924/a3f88638b0b3a77ec7ac318f85e55887",
-          "domain": "isp.netscape.com",
-          "seendate": "2026-09-24T17:30:00Z",
-          "image": null
         }
       ]
     },
     "title": "Senate to vote on resolution to halt the Iran war as gas prices upend midterms",
-    "summary": "2026-09-25 wandtv.com: Senate rejects resolution to halt the Iran war as gas prices upend midterms\n2026-09-24 military.com: Senate to Vote on Resolution to Halt the Iran War as Gas Prices Upend Midterms\n2026-09-24 latimes.com: Senate rejects resolution to halt the Iran war as gas prices upend midterms\n2026-09-24 lasvegassun.com: Senate rejects resolution to halt the Iran war as gas prices upend midterms - Las Vegas Sun News\n2026-09-24 winchesterstar.com: Senate to vote on resolution to halt the Iran war as gas prices upend midterms\n2026-09-24 clickondetroit.com: Senate rejects resolution to halt the Iran war as gas prices upend midterms",
+    "summary": "2026-09-25 texarkanagazette.com: Senate again rejects resolution to halt Iran war as rising fuel prices upend midterms\n2026-09-25 wandtv.com: Senate rejects resolution to halt the Iran war as gas prices upend midterms\n2026-09-25 kmvt.com: Senate rejects resolution to halt the Iran war as gas prices upend midterms\n2026-09-24 military.com: Senate to Vote on Resolution to Halt the Iran War as Gas Prices Upend Midterms\n2026-09-24 latimes.com: Senate rejects resolution to halt the Iran war as gas prices upend midterms\n2026-09-24 news8000.com: Senate rejects resolution to halt the Iran war as gas prices upend midterms",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -15872,12 +15872,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballroom-battles-defense",
     "source": "news",
-    "ts": 1790372482764,
+    "ts": 1790422508687,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.724,
+      "salience": 0.637,
       "articles": [
         {
           "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
@@ -15885,6 +15885,13 @@ window.PRISM_CANDIDATES = [
           "domain": "sandiegouniontribune.com",
           "seendate": "2026-09-24T01:30:00Z",
           "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/09/Trump_White_House_36734-1.jpg"
+        },
+        {
+          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
+          "url": "https://www.wdio.com/ap-top-news/preservation-group-launches-legal-defense-fund-as-it-battles-trump-over-ballroom-and-other-projects/",
+          "domain": "wdio.com",
+          "seendate": "2026-09-24T01:00:00Z",
+          "image": "https://www.wdio.com/wp-content/uploads/apimg/2026/09/Trump_White_House_36734.jpg"
         },
         {
           "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
@@ -15955,18 +15962,11 @@ window.PRISM_CANDIDATES = [
           "domain": "citizensvoice.com",
           "seendate": "2026-09-23T21:00:00Z",
           "image": "https://www.citizensvoice.com/wp-content/uploads/2026/09/Trump_White_House_36734-1.jpg"
-        },
-        {
-          "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
-          "url": "https://www.dailylocal.com/2026/09/23/preservation-fund/",
-          "domain": "dailylocal.com",
-          "seendate": "2026-09-23T21:00:00Z",
-          "image": "https://www.dailylocal.com/wp-content/uploads/2026/09/Trump_White_House_36734-1.jpg"
         }
       ]
     },
     "title": "Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
-    "summary": "2026-09-24 sandiegouniontribune.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-24 bostonherald.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-23 sun-sentinel.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-23 pilotonline.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-23 abcnews.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-23 mercurynews.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
+    "summary": "2026-09-24 sandiegouniontribune.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-24 wdio.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-24 bostonherald.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-23 sun-sentinel.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-23 pilotonline.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects\n2026-09-23 abcnews.com: Preservation group launches legal defense fund as it battles Trump over ballroom and other projects",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -15978,12 +15978,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_brief-edt-news",
     "source": "news",
-    "ts": 1790372482764,
+    "ts": 1790422508687,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.688,
+      "salience": 0.601,
       "articles": [
         {
           "title": "AP News Summary at 11 : 52 p . m . EDT",
@@ -16068,120 +16068,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_congressional-court-map",
-    "source": "news",
-    "ts": 1790372482765,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.655,
-      "articles": [
-        {
-          "title": "Trump - backed Missouri congressional map returns to the Supreme Court for the third time",
-          "url": "https://www.timesfreepress.com/news/2026/sep/23/trump-backed-missouri-congressional-map-returns-to-the-supreme-court-for-the-third-time/",
-          "domain": "timesfreepress.com",
-          "seendate": "2026-09-23T14:30:00Z",
-          "image": "https://wehco.media.clients.ellingtoncms.com/img/photos/2026/09/23/AP26251747749795_t1200.jpg?57a0c2296240c280e9492005c3cad63e7cbe80f4"
-        },
-        {
-          "title": "Missouri congressional map returns to Supreme Court for the third time",
-          "url": "https://www.marinij.com/2026/09/23/missouri-congressional-map-supreme-court-third-time/",
-          "domain": "marinij.com",
-          "seendate": "2026-09-23T14:30:00Z",
-          "image": "https://www.marinij.com/wp-content/uploads/2026/09/Election_2_26_Redistricting_Missouri_49795_860bf5.jpg"
-        },
-        {
-          "title": "Missouri congressional map returns to Supreme Court for the third time",
-          "url": "https://www.presstelegram.com/2026/09/23/missouri-congressional-map-supreme-court-third-time/",
-          "domain": "presstelegram.com",
-          "seendate": "2026-09-23T12:30:00Z",
-          "image": "https://www.presstelegram.com/wp-content/uploads/2026/09/Election_2_26_Redistricting_Missouri_49795_860bf5.jpg"
-        },
-        {
-          "title": "Missouri congressional map back at Supreme Court again",
-          "url": "https://www.wyff4.com/article/kansas-city-redistricting-map-supreme-court/73843945",
-          "domain": "wyff4.com",
-          "seendate": "2026-09-23T08:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/3ab500d8-b522-462c-b8f1-c8a993bf829f.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.0986xh"
-        },
-        {
-          "title": "Missouri congressional map back at Supreme Court again",
-          "url": "https://www.wmur.com/article/kansas-city-redistricting-map-supreme-court/73843945",
-          "domain": "wmur.com",
-          "seendate": "2026-09-23T07:45:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/3ab500d8-b522-462c-b8f1-c8a993bf829f.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.0986xh"
-        },
-        {
-          "title": "Missouri congressional map back at Supreme Court again",
-          "url": "https://www.koat.com/article/kansas-city-redistricting-map-supreme-court/73843945",
-          "domain": "koat.com",
-          "seendate": "2026-09-23T07:15:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/3ab500d8-b522-462c-b8f1-c8a993bf829f.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.0986xh"
-        },
-        {
-          "title": "Trump - backed Missouri congressional map returns to the Supreme Court for the third time",
-          "url": "https://www.khqa.com/news/nation-world/trump-backed-missouri-congressional-map-returns-to-the-supreme-court-for-the-third-time/article_3b69d30e-799b-554f-b8a1-7ca263060cf4.html",
-          "domain": "khqa.com",
-          "seendate": "2026-09-23T07:15:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/khqa.com/content/tncms/assets/v3/editorial/0/93/0939c69e-d09f-5e56-bf30-5f06b18f9094/6aa083b533ce9.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "Trump - backed Missouri congressional map returns to the Supreme Court for the third time",
-          "url": "https://www.yahoo.com/news/politics/articles/trump-backed-missouri-congressional-map-035536596.html",
-          "domain": "yahoo.com",
-          "seendate": "2026-09-23T06:30:00Z",
-          "image": "https://s.yimg.com/lo/mysterio/api/50139eeb87d823c334a2e04cc9f0df92cb7d7daace9f28c36c69da605096c58b/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_jpg/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fap.org%2F8fdc0c9c9fcac23d802b8dc2501a1c3e.jpg"
-        },
-        {
-          "title": "Missouri congressional map back at Supreme Court again",
-          "url": "https://www.wlwt.com/article/kansas-city-redistricting-map-supreme-court/73843945",
-          "domain": "wlwt.com",
-          "seendate": "2026-09-23T06:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/3ab500d8-b522-462c-b8f1-c8a993bf829f.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.0986xh"
-        },
-        {
-          "title": "Trump - backed Missouri congressional map returns to the Supreme Court for the third time",
-          "url": "https://www.news4jax.com/news/politics/2026/09/23/trump-backed-missouri-congressional-map-returns-to-the-supreme-court-for-the-third-time/",
-          "domain": "news4jax.com",
-          "seendate": "2026-09-23T06:15:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/WG55RJDBHZCZ7EQHVIC5NWUCTQ.jpg?api_key=news4jax_3f10b25586458189"
-        },
-        {
-          "title": "Missouri congressional map back at Supreme Court again",
-          "url": "https://www.wgal.com/article/kansas-city-redistricting-map-supreme-court/73843945",
-          "domain": "wgal.com",
-          "seendate": "2026-09-23T06:15:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/3ab500d8-b522-462c-b8f1-c8a993bf829f.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.0986xh"
-        },
-        {
-          "title": "Missouri congressional map back at Supreme Court again",
-          "url": "https://www.kcci.com/article/kansas-city-redistricting-map-supreme-court/73843945",
-          "domain": "kcci.com",
-          "seendate": "2026-09-23T06:00:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/3ab500d8-b522-462c-b8f1-c8a993bf829f.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.0986xh"
-        }
-      ]
-    },
-    "title": "Missouri congressional map back at Supreme Court again",
-    "summary": "2026-09-23 timesfreepress.com: Trump - backed Missouri congressional map returns to the Supreme Court for the third time\n2026-09-23 marinij.com: Missouri congressional map returns to Supreme Court for the third time\n2026-09-23 presstelegram.com: Missouri congressional map returns to Supreme Court for the third time\n2026-09-23 wyff4.com: Missouri congressional map back at Supreme Court again\n2026-09-23 wmur.com: Missouri congressional map back at Supreme Court again\n2026-09-23 koat.com: Missouri congressional map back at Supreme Court again",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_400-biden-did",
     "source": "news",
-    "ts": 1790372482764,
+    "ts": 1790422508687,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.649,
+      "salience": 0.563,
       "articles": [
         {
           "title": "FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists",
@@ -16247,12 +16141,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_iran-powers-resolution",
     "source": "news",
-    "ts": 1790372482764,
+    "ts": 1790422508687,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.618,
+      "salience": 0.531,
       "articles": [
         {
           "title": "Senate set to vote on resolution targeting Trump Iran war powers",
@@ -16311,12 +16205,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_american-claiming-group",
     "source": "news",
-    "ts": 1790372482765,
+    "ts": 1790422508688,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.524,
+      "salience": 0.492,
       "articles": [
         {
           "title": "Iranian - American group sues Trump , claiming Iran war is unconstitutional",
@@ -16345,11 +16239,68 @@ window.PRISM_CANDIDATES = [
           "domain": "wtvr.com",
           "seendate": "2026-09-24T21:30:00Z",
           "image": "https://ewscripps.brightspotcdn.com/22/dd/940c34914a0486c84af6e1782094/ap26239609489882.jpg"
+        },
+        {
+          "title": "Iranian - American group sues Trump , claiming Iran war is unconstitutional",
+          "url": "https://www.kxxv.com/us-news/iran-war/iranian-american-group-sues-trump-claiming-iran-war-is-unconstitutional-without-congressional-approval",
+          "domain": "kxxv.com",
+          "seendate": "2026-09-24T20:45:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/22/dd/940c34914a0486c84af6e1782094/ap26239609489882.jpg"
         }
       ]
     },
     "title": "Iranian - American group sues Trump , claiming Iran war is unconstitutional",
-    "summary": "2026-09-24 kshb.com: Iranian - American group sues Trump , claiming Iran war is unconstitutional\n2026-09-24 ksby.com: Iranian - American group sues Trump , claiming Iran war is unconstitutional\n2026-09-24 wxyz.com: Iranian - American group sues Trump , claiming Iran war is unconstitutional\n2026-09-24 wtvr.com: Iranian - American group sues Trump , claiming Iran war is unconstitutional",
+    "summary": "2026-09-24 kshb.com: Iranian - American group sues Trump , claiming Iran war is unconstitutional\n2026-09-24 ksby.com: Iranian - American group sues Trump , claiming Iran war is unconstitutional\n2026-09-24 wxyz.com: Iranian - American group sues Trump , claiming Iran war is unconstitutional\n2026-09-24 wtvr.com: Iranian - American group sues Trump , claiming Iran war is unconstitutional\n2026-09-24 kxxv.com: Iranian - American group sues Trump , claiming Iran war is unconstitutional",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_halt-help-iran",
+    "source": "news",
+    "ts": 1790422508688,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.46,
+      "articles": [
+        {
+          "title": "Moran , Marshall help Senate reject resolution to halt the Iran war",
+          "url": "https://hayspost.com/posts/2676808a-fb2a-4d82-a6ef-eae802d5fa93",
+          "domain": "hayspost.com",
+          "seendate": "2026-09-25T02:00:00Z",
+          "image": "https://media.eaglewebservices.com/public/2026/5/1779755574750.png"
+        },
+        {
+          "title": "Moran , Marshall help Senate reject resolution to halt the Iran war",
+          "url": "https://greatbendpost.com/posts/2676808a-fb2a-4d82-a6ef-eae802d5fa93",
+          "domain": "greatbendpost.com",
+          "seendate": "2026-09-25T01:45:00Z",
+          "image": "https://media.eaglewebservices.com/public/2026/5/1779755574750.png"
+        },
+        {
+          "title": "Moran , Marshall help Senate reject resolution to halt the Iran war",
+          "url": "https://salinapost.com/posts/2676808a-fb2a-4d82-a6ef-eae802d5fa93",
+          "domain": "salinapost.com",
+          "seendate": "2026-09-25T00:30:00Z",
+          "image": "https://media.eaglewebservices.com/public/2026/5/1779755574750.png"
+        },
+        {
+          "title": "Moran , Marshall help Senate reject resolution to halt the Iran war",
+          "url": "https://littleapplepost.com/posts/2676808a-fb2a-4d82-a6ef-eae802d5fa93",
+          "domain": "littleapplepost.com",
+          "seendate": "2026-09-25T00:00:00Z",
+          "image": "https://media.eaglewebservices.com/public/2026/5/1779755574750.png"
+        }
+      ]
+    },
+    "title": "Moran , Marshall help Senate reject resolution to halt the Iran war",
+    "summary": "2026-09-25 hayspost.com: Moran , Marshall help Senate reject resolution to halt the Iran war\n2026-09-25 greatbendpost.com: Moran , Marshall help Senate reject resolution to halt the Iran war\n2026-09-25 salinapost.com: Moran , Marshall help Senate reject resolution to halt the Iran war\n2026-09-25 littleapplepost.com: Moran , Marshall help Senate reject resolution to halt the Iran war",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -16361,12 +16312,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_beyond-credentials-house",
     "source": "news",
-    "ts": 1790372482764,
+    "ts": 1790422508687,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.522,
+      "salience": 0.435,
       "articles": [
         {
           "title": "The intricacies of press credentials , at the White House and beyond - LocalNews8 . com",
@@ -16411,12 +16362,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_bass-dinner-diplomacy",
     "source": "news",
-    "ts": 1790372482764,
+    "ts": 1790422508687,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.483,
+      "salience": 0.396,
       "articles": [
         {
           "title": "The Latest : Trump - Xi state dinner expected to include tech titans , sea bass and glitzy diplomacy",
@@ -16452,54 +16403,47 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_coffers-facing-headwinds",
+    "cid": "cand_news_congressional-court-map",
     "source": "news",
-    "ts": 1790372482764,
+    "ts": 1790422508688,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.294,
+      "salience": 0.282,
       "articles": [
         {
-          "title": "Facing political headwinds , Republicans open up their coffers",
-          "url": "https://nbcmontana.com/news/beyond-the-podium/facing-political-headwinds-republicans-open-up-their-coffers-midterm-elections-inflation-economy-gas-prices-congress-majority",
-          "domain": "nbcmontana.com",
-          "seendate": "2026-09-23T00:45:00Z",
-          "image": "https://nbcmontana.com/resources/media2/16x9/5661/1320/0x355/90/be75c083-3d8d-44d7-927d-d4c114925a2d-GettyImages2295660832.jpg"
+          "title": "Trump - backed Missouri congressional map returns to the Supreme Court for the third time",
+          "url": "https://www.columbian.com/news/2026/sep/23/trump-backed-missouri-congressional-map-returns-to-the-supreme-court-for-the-third-time/",
+          "domain": "columbian.com",
+          "seendate": "2026-09-23T21:30:00Z",
+          "image": "https://www.columbian.com/wp-content/themes/columbian3/static/img/og/default-2026-3.jpg"
         },
         {
-          "title": "Facing political headwinds , Republicans open up their coffers",
-          "url": "https://abc6onyourside.com/news/nation-world/facing-political-headwinds-republicans-open-up-their-coffers-midterm-elections-inflation-economy-gas-prices-congress-majority",
-          "domain": "abc6onyourside.com",
-          "seendate": "2026-09-22T22:45:00Z",
-          "image": "https://abc6onyourside.com/resources/media2/16x9/5661/1320/0x355/90/be75c083-3d8d-44d7-927d-d4c114925a2d-GettyImages2295660832.jpg"
+          "title": "Trump - backed Missouri congressional map returns to the Supreme Court for the third time",
+          "url": "https://www.timesfreepress.com/news/2026/sep/23/trump-backed-missouri-congressional-map-returns-to-the-supreme-court-for-the-third-time/",
+          "domain": "timesfreepress.com",
+          "seendate": "2026-09-23T14:30:00Z",
+          "image": "https://wehco.media.clients.ellingtoncms.com/img/photos/2026/09/23/AP26251747749795_t1200.jpg?57a0c2296240c280e9492005c3cad63e7cbe80f4"
         },
         {
-          "title": "Facing political headwinds , Republicans open up their coffers",
-          "url": "https://cbs12.com/news/connect-to-congress/facing-political-headwinds-republicans-open-up-their-coffers-midterm-elections-inflation-economy-gas-prices-congress-majority",
-          "domain": "cbs12.com",
-          "seendate": "2026-09-22T22:45:00Z",
-          "image": "https://cbs12.com/resources/media2/16x9/5661/1320/0x355/90/be75c083-3d8d-44d7-927d-d4c114925a2d-GettyImages2295660832.jpg"
+          "title": "Missouri congressional map returns to Supreme Court for the third time",
+          "url": "https://www.marinij.com/2026/09/23/missouri-congressional-map-supreme-court-third-time/",
+          "domain": "marinij.com",
+          "seendate": "2026-09-23T14:30:00Z",
+          "image": "https://www.marinij.com/wp-content/uploads/2026/09/Election_2_26_Redistricting_Missouri_49795_860bf5.jpg"
         },
         {
-          "title": "Facing political headwinds , Republicans open up their coffers",
-          "url": "https://upnorthlive.com/news/connect-to-congress/facing-political-headwinds-republicans-open-up-their-coffers-midterm-elections-inflation-economy-gas-prices-congress-majority",
-          "domain": "upnorthlive.com",
-          "seendate": "2026-09-22T22:45:00Z",
-          "image": "https://upnorthlive.com/resources/media2/16x9/5661/1320/0x355/90/be75c083-3d8d-44d7-927d-d4c114925a2d-GettyImages2295660832.jpg"
-        },
-        {
-          "title": "Facing political headwinds , Republicans open up their coffers",
-          "url": "https://wjla.com/news/connect-to-congress/facing-political-headwinds-republicans-open-up-their-coffers-midterm-elections-inflation-economy-gas-prices-congress-majority",
-          "domain": "wjla.com",
-          "seendate": "2026-09-22T22:15:00Z",
-          "image": "https://wjla.com/resources/media2/16x9/5661/1320/0x355/90/be75c083-3d8d-44d7-927d-d4c114925a2d-GettyImages2295660832.jpg"
+          "title": "Missouri congressional map returns to Supreme Court for the third time",
+          "url": "https://www.presstelegram.com/2026/09/23/missouri-congressional-map-supreme-court-third-time/",
+          "domain": "presstelegram.com",
+          "seendate": "2026-09-23T12:30:00Z",
+          "image": "https://www.presstelegram.com/wp-content/uploads/2026/09/Election_2_26_Redistricting_Missouri_49795_860bf5.jpg"
         }
       ]
     },
-    "title": "Facing political headwinds , Republicans open up their coffers",
-    "summary": "2026-09-23 nbcmontana.com: Facing political headwinds , Republicans open up their coffers\n2026-09-22 abc6onyourside.com: Facing political headwinds , Republicans open up their coffers\n2026-09-22 cbs12.com: Facing political headwinds , Republicans open up their coffers\n2026-09-22 upnorthlive.com: Facing political headwinds , Republicans open up their coffers\n2026-09-22 wjla.com: Facing political headwinds , Republicans open up their coffers",
+    "title": "Trump - backed Missouri congressional map returns to the Supreme Court for the third time",
+    "summary": "2026-09-23 columbian.com: Trump - backed Missouri congressional map returns to the Supreme Court for the third time\n2026-09-23 timesfreepress.com: Trump - backed Missouri congressional map returns to the Supreme Court for the third time\n2026-09-23 marinij.com: Missouri congressional map returns to Supreme Court for the third time\n2026-09-23 presstelegram.com: Missouri congressional map returns to Supreme Court for the third time",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
