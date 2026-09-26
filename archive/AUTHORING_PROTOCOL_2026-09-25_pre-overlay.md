@@ -1,6 +1,6 @@
 # The daily drafting — authoring protocol for Claude drafts
 
-*v1.1 · 2026-09-25 (overlay; no git) · v1 2026-09-22 · Sailor + Claude. This file is the canonical instruction the daily
+*v1 · 2026-09-22 · Sailor + Claude. This file is the canonical instruction the daily
 drafting task follows. Edit it here; the task reads it fresh each run.*
 
 ## What this is
@@ -22,9 +22,6 @@ Every draft looks for both and records what it finds on the object.
 
 - Register: `https://raw.githubusercontent.com/sailor7613/Prism/main/data/newsroom/objects.json`
   (fetch from the Mac's shell; the cloud container cannot reach GitHub raw).
-- Overlay (on disk): `Prism/data/newsroom/objects.local.json`. Apply it over the register
-  before choosing work (`require('Prism/scripts/newsroom/overlay.js').applyOverlay(reg, ov)`),
-  so objects already drafted or dismissed aren't drafted twice.
 - Digest for the day: `data/newsroom/digest-latest.md` (same repo).
 - Exemplars (the live tier, on disk): `Prism/data/readings/*.json` — the Ban
   (`rdg_mu7ban350hom`), the Tariff (`rdg_ms51urghz7zi`) and the Refund
@@ -107,15 +104,10 @@ meta, rid, schema: "reading/v1", formulaVersion: "v1", updatedAt`. Plus:
 ## Where it lands, and the note
 
 - Write each draft to `Prism/data/readings/drafts/claude/<rid>.json`.
-- Record the drafting in the **overlay**, `Prism/data/newsroom/objects.local.json`, never in
-  `objects.json` (v1.1, 2026-09-25). The scan owns `objects.json` and the drafting task owns
-  the overlay, so the two never collide on Sailor's pull. Under `objects.<oid>` set
-  `status: "drafted"`, `drafts: {claude: rid}`, `draftedOn`, plus `inversions[]` and any
-  holder/formedOn correction as `corrections[]`. Dismissed objects get `status: "dismissed"`
-  with `dismissedWhy`. Also allowed: `permanenceNote`, `aliasCandidates`. Bump the overlay's
-  `updatedAt`. Scanner fields (lastSeen, permanence, articles) never go in the overlay.
-- **Never run git** — no status, pull, fetch or commit. Git in the Cowork shell can create
-  lock files it can't remove, and a stranded `.git/index.lock` blocks Sailor's commits.
+- Update the register on disk (`Prism/data/newsroom/objects.json`): the object's
+  `status` → `drafted`, `drafts.claude` → rid, `draftedOn`, plus `inversions[]` and any
+  holder/formedOn correction with a `corrections[]` note. Dismissed objects → `dismissed`
+  with `dismissedWhy`.
 - Do **not** commit. Sailor commits in GitHub Desktop.
 - Write the morning note to `Handoffs/Prism/newsroom/YYYY-MM-DD.md`: one line per
   object (title lean · kind · holder · trigger day · z pattern in eight numbers ·

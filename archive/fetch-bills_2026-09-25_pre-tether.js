@@ -790,99 +790,17 @@ async function fetchTerrain(policyArea, congress) {
   console.log('  Survey graph excludes them; catalog pane + curate see them. Hard-reload the browser (Cmd-Shift-R).');
 }
 
-// ═══ TETHER FETCH (2026-09-25) ══════════════════════════════════════
-// An utterance Reading tethers its layers to bills by id (Event Classes v0,
-// "Tethers"). A tethered bill the catalog doesn't hold yet is fetched here,
-// one by one, through the same enrichment as every other arrival, and
-// appended provenance-marked. Like terrain bills, no notable filter: a
-// tether is an editorial pointer, and a thin record is honest.
-const TETHER_PROVENANCE = 'tether_fetch_v1';
-async function fetchByIds(ids) {
-  console.log(`\n═══ TETHER FETCH — ${ids.join(', ')} ═══`);
-  const catalogPath = path.join(config.OUTPUT_DIR, 'prism_legislation.json');
-  const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
-  const inCatalog = new Set(catalog.map(b => b.billId));
-  const newRecords = [];
-  for (const id of ids) {
-    if (inCatalog.has(id)) { console.log(`  · ${id} already in catalog`); continue; }
-    const [type, cg, number] = id.split('-');
-    if (!type || !cg || !number) { console.warn(`  ⚠ ${id}: expected <type>-<congress>-<number>, e.g. s-119-2937`); continue; }
-    const record = await enrichBillRecord({ number }, parseInt(cg, 10), type, number);
-    record.provenance = TETHER_PROVENANCE;
-    ceremonial.apply(record);
-    newRecords.push(record);
-    console.log(`  ✓ ${id} · ${record.title || ''} · ${record.status || ''}`);
-  }
-  if (newRecords.length) appendToCatalogFiles(catalog, newRecords);
-  else console.log('Nothing to add.');
-}
-
-// --tethers: collect every tethered billId across the Readings (live, drafts,
-// Claude drafts), fetch the ones the catalog lacks, then mark them in the
-// Readings: tether.inDb = true and the id joins linkedBills.
-function readingFiles(dir) {
-  let out = [];
-  if (!fs.existsSync(dir)) return out;
-  for (const f of fs.readdirSync(dir, { withFileTypes: true })) {
-    const p = path.join(dir, f.name);
-    if (f.isDirectory()) { if (!/^(_retired|clips|images)$/.test(f.name)) out = out.concat(readingFiles(p)); }
-    else if (f.name.endsWith('.json')) out.push(p);
-  }
-  return out;
-}
-async function fetchTethers() {
-  const files = readingFiles(path.join(config.OUTPUT_DIR, 'readings'));
-  const ids = new Set();
-  const withTethers = [];
-  for (const f of files) {
-    let r; try { r = JSON.parse(fs.readFileSync(f, 'utf8')); } catch (e) { continue; }
-    const layers = (r.utterance && r.utterance.layers) || [];
-    const t = layers.flatMap(l => l.tethers || []).filter(x => x && x.billId);
-    if (!t.length) continue;
-    t.forEach(x => ids.add(String(x.billId).toLowerCase()));
-    withTethers.push(f);
-  }
-  if (!ids.size) { console.log('No tethered bills in any Reading.'); return; }
-  await fetchByIds([...ids]);
-  const catalog = new Set(JSON.parse(fs.readFileSync(path.join(config.OUTPUT_DIR, 'prism_legislation.json'), 'utf8')).map(b => b.billId));
-  for (const f of withTethers) {
-    const r = JSON.parse(fs.readFileSync(f, 'utf8'));
-    let changed = false;
-    r.linkedBills = Array.isArray(r.linkedBills) ? r.linkedBills : [];
-    (r.utterance.layers || []).forEach(l => (l.tethers || []).forEach(t => {
-      const id = t.billId && String(t.billId).toLowerCase();
-      if (!id || !catalog.has(id)) return;
-      if (!t.inDb) { t.inDb = true; changed = true; }
-      if (!r.linkedBills.includes(id)) { r.linkedBills.push(id); changed = true; }
-    }));
-    if (changed) {
-      if (r.meta && r.meta.linkedBillsOwed) delete r.meta.linkedBillsOwed;
-      r.updatedAt = new Date().toISOString();
-      fs.writeFileSync(f, JSON.stringify(r, null, 1));
-      console.log(`  ✓ linked in ${path.basename(f)} (${r.title || ''})`);
-    }
-  }
-}
-
 // ── Export for run-all.js ────────────────────────────────────────────
-module.exports = { fetchBills, writeBillOutputs, fetchTerrain, fetchByIds, fetchTethers };
+module.exports = { fetchBills, writeBillOutputs, fetchTerrain };
 
 // ── Standalone execution ─────────────────────────────────────────────
 //   node fetch-bills.js                                → notable pipeline
 //   node fetch-bills.js --terrain "Immigration"        → terrain fetch (119th)
 //   node fetch-bills.js --terrain "Health" --congress 118
-//   node fetch-bills.js --bills s-119-2937,hr-119-9917   → tether fetch (specific bills)
 if (require.main === module) {
   const args = process.argv.slice(2);
   const ti = args.indexOf('--terrain');
-  const bi = args.indexOf('--bills');
-  if (args.includes('--tethers')) {
-    fetchTethers().then(() => console.log('\n✓ Tethers fetched and linked.\n')).catch(err => { console.error('✗ Tether fetch failed:', err); process.exit(1); });
-  } else if (bi !== -1) {
-    const ids = String(args[bi + 1] || '').split(',').map(x => x.trim().toLowerCase()).filter(Boolean);
-    if (!ids.length) { console.error('Usage: node fetch-bills.js --bills s-119-2937,hr-119-9917'); process.exit(1); }
-    fetchByIds(ids).then(() => console.log('\n✓ Tether fetch done.\n')).catch(err => { console.error('✗ Tether fetch failed:', err); process.exit(1); });
-  } else if (ti !== -1) {
+  if (ti !== -1) {
     const area = args[ti + 1];
     if (!area || area.startsWith('--')) {
       console.error('Usage: node fetch-bills.js --terrain "Immigration" [--congress 119]');

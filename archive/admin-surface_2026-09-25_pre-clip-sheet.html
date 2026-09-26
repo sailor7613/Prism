@@ -423,31 +423,6 @@
   .cite-row{ display:grid; grid-template-columns:1fr 130px 28px; gap:8px; margin-bottom:8px; align-items:center; }
   .cite-row input{ font-family:var(--mono); font-size:12px; color:var(--ink); background:rgba(255,255,255,.04); border:.5px solid var(--rule); border-radius:8px; padding:8px 10px; outline:none; }
   .cite-row .del{ cursor:pointer; color:var(--ink-low); text-align:center; font-size:13px; }
-  /* ── 🎬 Clip sheet (utterance class, 2026-09-25) ── */
-  #clipModal .sheet{ max-width:900px; width:100%; max-height:88vh; overflow-y:auto; }
-  .ut-h{ font-family:var(--mono); font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-low); margin:16px 0 6px; display:flex; align-items:center; gap:8px; }
-  .ut-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:8px; }
-  .ut-in, .ut-sel, .ut-ta{ font-family:var(--mono); font-size:12px; color:var(--ink); background:rgba(255,255,255,.04); border:.5px solid var(--rule); border-radius:8px; padding:7px 9px; outline:none; width:100%; box-sizing:border-box; }
-  #clipModal .ut-ta{ font-family:var(--serif); font-size:14px; resize:vertical; min-height:34px; height:52px; max-height:220px; white-space:pre-wrap; overflow-wrap:anywhere; }
-  #clipModal .btn{ white-space:nowrap; }
-  .ut-in::placeholder, .ut-ta::placeholder{ color:var(--ink-low); font-style:italic; }
-  .ut-seg button{ font-family:var(--mono); font-size:11px; background:transparent; border:1px solid var(--rule); color:var(--ink-low); padding:5px 12px; cursor:pointer; }
-  .ut-seg button:first-child{ border-radius:8px 0 0 8px; } .ut-seg button:last-child{ border-radius:0 8px 8px 0; border-left:0; }
-  .ut-seg button.on{ color:var(--ink); border-color:rgba(48,96,192,.55); background:rgba(48,96,192,.12); }
-  .ut-video{ width:100%; max-height:34vh; background:#000; border-radius:8px; margin-top:8px; display:block; }
-  .ut-layer{ border-left:3px solid var(--lc,#888); padding:8px 0 8px 10px; margin-bottom:10px; }
-  .ut-row{ display:grid; gap:6px; align-items:center; margin-bottom:6px; }
-  .ut-row.l1{ grid-template-columns:42px 1fr 92px 70px 24px; }
-  .ut-row.teth{ grid-template-columns:110px 1fr 100px 150px 24px; margin-left:12px; }
-  .ut-row.beat{ grid-template-columns:104px 120px 96px 1fr 1fr 58px 24px; }
-  .ut-id{ font-family:var(--mono); font-size:11px; color:var(--lc,#aaa); }
-  .ut-del{ cursor:pointer; color:var(--ink-low); text-align:center; }
-  .ut-del:hover{ color:#e07a6a; }
-  .ut-chk{ font-family:var(--mono); font-size:10.5px; color:var(--ink-mid); display:flex; gap:4px; align-items:center; white-space:nowrap; }
-  .ut-t{ display:flex; gap:3px; } .ut-t input{ width:62px; padding:7px 5px; } .ut-t button{ font-size:10px; padding:0 5px; }
-  .ut-warn{ font-family:var(--mono); font-size:10.5px; color:#e0a458; margin-top:6px; white-space:pre-line; }
-  .ut-note{ font-family:var(--mono); font-size:11px; color:var(--ink-low); }
-  @media (max-width:720px){ .ut-row.beat{ grid-template-columns:104px 1fr 1fr; } .ut-row.teth{ grid-template-columns:1fr 1fr; margin-left:0; } .ut-row.l1{ grid-template-columns:42px 1fr 24px; } }
   .cite-row .del:hover{ color:var(--red); }
 
   /* ── Bill reading room (📜) — the portal's first §4 reading room:
@@ -614,7 +589,6 @@
   <button class="btn" id="tedBtn" title="Edit Ted's speech">🐺 Ted</button>
   <span class="viewseg" id="viewSeg" title="Author the diatribe and the 12 quadrant responses — Desk toggles the editorial round over both surfaces; publish through the galley proof"><button data-v="dia" class="on">Diatribe</button><button data-v="quad">Quadrants</button><button data-v="desk">Desk</button></span>
   <button class="btn" id="citeBtn" title="Citation bank — sources for this event">📎 Sources</button>
-  <button class="btn" id="clipBtn" title="Clip — author an utterance Reading: speaker, clip, layers, tethers, beats">🎬 Clip</button>
   <button class="btn" id="brBtn" title="Bill reading room — curate the bills this event links">📜 Bills</button>
   <button class="btn" id="nrBtn" title="Newsroom — Event Engine candidates from the vote record">📡 Newsroom</button>
   <button class="btn" id="themeBtn" title="Day / night">◐</button>
@@ -744,15 +718,6 @@
   <p style="font-family:var(--mono);font-size:11px;color:var(--ink-low)">Drop links to the articles and posts that ground this object. Attach one to any voice via its editor's “source”. Photos the wire delivered ride below — tap to keep or drop; kept ones save on the Reading.</p>
   <div id="citeList"></div>
   <div id="citePhotos"></div>
-</div></div>
-
-<div class="modal" id="clipModal"><div class="sheet">
-  <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><strong style="font-family:var(--serif)">🎬 Clip · utterance</strong>
-    <span class="ut-seg" id="utClass"><button data-c="object">object</button><button data-c="utterance">utterance</button></span>
-    <span style="flex:1"></span>
-    <button class="btn" id="clipClose">Done</button></div>
-  <p class="ut-note">An utterance Reading: the speech act is the object. The portal plays the clip, surfaces the beats in sync, then shows what else was said and which bills each layer touches. Save as usual; everything here rides the Reading.</p>
-  <div id="utBody"></div>
 </div></div>
 
 <button id="kwPill" type="button">★ keyword</button>
@@ -1081,7 +1046,6 @@ function loadEvent(ev){
   desk=currentId?deskLoad(currentId):null; deskMergeKey=null; dmMergeArm=null;
   if(document.body.classList.contains('view-desk')||document.body.classList.contains('desk-mode')) renderDesk();
   if(document.body.classList.contains('view-proof')) renderProof();
-  if(typeof uttFrom==='function') utt=uttFrom(ev);
   setPoleFields(); setThumb(pct,false); status(currentId?('Loaded '+currentId):'Loaded onto the surface');
 }
 function loadSeed(){
@@ -1089,7 +1053,6 @@ function loadSeed(){
   model={}; ['LF','LC','LD','RF','RC','RD'].forEach(c=>model[c]=escHtml(SEED.diatribe[c]||'')); tedEvent={};
   responses={A:{},B:{},C:{},D:{}}; otherPole={neg:'Market',pos:'State'}; if(typeof citations!=='undefined') citations=[];
   if(typeof images!=='undefined') images=[];
-  if(typeof uttFrom==='function') utt=uttFrom(null);
   if(typeof nrPendingPromote!=='undefined') nrPendingPromote=null;
   loadedUpdatedAt=null; desk=null; deskMergeKey=null; dmMergeArm=null; cellFinal={}; sdBox={};
   if(document.body.classList.contains('view-desk')||document.body.classList.contains('desk-mode')) renderDesk();
@@ -1218,8 +1181,6 @@ function assemble(){
   if(typeof images!=='undefined')
     ev.images=images.filter(p=>p&&p.keep&&p.url).map(p=>{ const o={url:p.url,credit:p.credit||'',articleUrl:p.articleUrl||''};
       if(p.place) o.place=p.place; if(p.baked) o.baked=p.baked; return o; });
-  // Utterance class (2026-09-25): the 🎬 sheet's working copy rides the Reading.
-  if(typeof uttPatch==='function') Object.assign(ev, uttPatch());
   return ev;
 }
 function axesObj(){
@@ -2321,127 +2282,6 @@ function renderProof(){
 }
 $('proofPublish').onclick=()=>publishNow();
 $('proofDeltas').onclick=deskExport;
-
-/* ===== 🎬 Clip sheet — utterance class (2026-09-25) =====
-   Working copy `utt` = { eventClass, speaker, utterance, clip }. Loaded with
-   the event, written by assemble() only when the class is 'utterance' or the
-   Reading already carried an utterance (switching back to 'object' keeps the
-   data but flips the class, so the portal skips the clip step). */
-var utt=null;   // var, not let: loadEvent can run before this line on first paint
-const UT_HUES=['#e0a458','#d9705f','#7fb3d5','#9fcf8f','#c79bd8','#e3cf6b','#77c6c0','#e89ab8'];
-function uttFrom(ev){
-  const u=ev&&ev.utterance?JSON.parse(JSON.stringify(ev.utterance)):null;
-  return { eventClass:(ev&&ev.eventClass)||'object', had:!!u,
-    speaker:Object.assign({name:'',role:'',holds:''}, ev&&ev.speaker||{}),
-    utterance:Object.assign({venue:'',airedOn:'',layers:[],beats:[]}, u||{}),
-    clip:Object.assign({file:'',poster:'',sourcePost:''}, ev&&ev.clip||{}) };
-}
-function utWords(t){ return String(t||'').trim().split(/\s+/).filter(Boolean).length; }
-function utWarnings(){
-  const w=[], L=utt.utterance.layers, ids=new Set(L.map(l=>l.id));
-  utt.utterance.beats.forEach((b,i)=>{ const n=utWords(b.quote);
-    if(n>15) w.push('beat '+(i+1)+': quote is '+n+' words (keep ≤ 15)');
-    if(b.layer && !ids.has(b.layer)) w.push('beat '+(i+1)+': layer '+b.layer+' does not exist'); });
-  if(utt.eventClass==='utterance'){
-    if(!utt.speaker.name) w.push('speaker name is empty');
-    if(!utt.utterance.airedOn) w.push('aired-on date is empty (it closes the window)');
-    if(!utt.clip.file) w.push('no clip file — the portal will show beats without video');
-  }
-  return w;
-}
-function renderUtt(){
-  const host=$('utBody'); if(!host||!utt) return; host.innerHTML='';
-  document.querySelectorAll('#utClass button').forEach(b=>b.classList.toggle('on', b.dataset.c===utt.eventClass));
-  const el=(tag,cls,html)=>{ const e=document.createElement(tag); if(cls) e.className=cls; if(html!=null) e.innerHTML=html; return e; };
-  const input=(obj,key,ph,type)=>{ const i=el('input','ut-in'); i.type=type||'text'; i.placeholder=ph||''; i.value=obj[key]==null?'':obj[key];
-    i.oninput=()=>{ obj[key]= (type==='number') ? (i.value===''?null:parseFloat(i.value)) : i.value; utWarnRefresh(); }; return i; };
-  const ta=(obj,key,ph)=>{ const t=el('textarea','ut-ta'); t.rows=1; t.placeholder=ph||''; t.value=obj[key]||''; t.oninput=()=>{ obj[key]=t.value; utWarnRefresh(); }; return t; };
-  const sel=(obj,key,opts)=>{ const s=el('select','ut-sel'); opts.forEach(([v,lab])=>{ const o=document.createElement('option'); o.value=v; o.textContent=lab; if((obj[key]||'')===v) o.selected=true; s.appendChild(o); });
-    s.onchange=()=>{ obj[key]=s.value; utWarnRefresh(); }; return s; };
-  const chk=(obj,key,label,invert)=>{ const w=el('label','ut-chk'); const c=document.createElement('input'); c.type='checkbox';
-    c.checked = invert ? obj[key]===false : !!obj[key]; c.onchange=()=>{ if(invert){ if(c.checked) obj[key]=false; else delete obj[key]; } else obj[key]=c.checked; };
-    w.appendChild(c); w.appendChild(document.createTextNode(label)); return w; };
-  const del=(fn)=>{ const d=el('span','ut-del','✕'); d.title='remove'; d.onclick=()=>{ fn(); renderUtt(); }; return d; };
-
-  // speaker + venue
-  host.appendChild(el('div','ut-h','Speaker'));
-  const g1=el('div','ut-grid'); g1.appendChild(input(utt.speaker,'name','name — Alex Karp')); g1.appendChild(input(utt.speaker,'role','role — CEO, Palantir'));
-  g1.appendChild(input(utt.utterance,'venue','venue — CNBC, Squawk on the Street')); g1.appendChild(input(utt.utterance,'airedOn','aired on — YYYY-MM-DD'));
-  host.appendChild(g1);
-  const hold=input(utt.speaker,'holds','holds — the standing that makes the words consequential'); hold.style.marginTop='8px'; host.appendChild(hold);
-
-  // clip
-  host.appendChild(el('div','ut-h','Clip'));
-  const g2=el('div','ut-grid'); g2.appendChild(input(utt.clip,'file','data/readings/clips/<rid>/clip.mp4')); g2.appendChild(input(utt.clip,'poster','poster jpg (optional)'));
-  g2.appendChild(input(utt.clip,'sourcePost','where it circulated — URL')); host.appendChild(g2);
-  host.appendChild(el('div','ut-note','Drop the MP4 (H.264) into <code>Prism/data/readings/clips/&lt;rid&gt;/</code> and commit it with the Reading. Play it here to stamp beats at the current time.'));
-  const v=document.createElement('video'); v.className='ut-video'; v.controls=true; v.playsInline=true; v.preload='metadata'; v.id='utVideo';
-  if(utt.clip.file){ v.src=utt.clip.file; if(utt.clip.poster) v.poster=utt.clip.poster; host.appendChild(v); }
-
-  // layers + tethers
-  const L=utt.utterance.layers;
-  const lh=el('div','ut-h','Layers <span style="text-transform:none;letter-spacing:0">— one per object he talks about; tethers = the bills a layer touches</span>');
-  const addL=el('button','btn','+ layer'); addL.onclick=()=>{ let n=L.length+1; while(L.some(l=>l.id==='L'+n)) n++; L.push({id:'L'+n,object:'',claim:'',predicateType:'F',inClip:true,tethers:[]}); renderUtt(); };
-  lh.appendChild(el('span',null,'')).style.flex='1'; lh.appendChild(addL); host.appendChild(lh);
-  L.forEach((l,li)=>{
-    const box=el('div','ut-layer'); box.style.setProperty('--lc',UT_HUES[li%UT_HUES.length]);
-    const r=el('div','ut-row l1'); r.appendChild(el('span','ut-id',l.id)); r.appendChild(input(l,'object','object — e.g. Liability'));
-    r.appendChild(sel(l,'predicateType',[['F','F frame'],['C','C contradiction'],['V','V void'],['T','T trigger']]));
-    r.appendChild(chk(l,'inClip','in clip')); r.appendChild(del(()=>L.splice(li,1))); box.appendChild(r);
-    const c=ta(l,'claim','the claim, in plain words'); c.style.marginBottom='6px'; box.appendChild(c);
-    (l.tethers=l.tethers||[]).forEach((t,ti)=>{
-      const tr=el('div','ut-row teth'); tr.appendChild(input(t,'billId','bill id — s-119-2937')); tr.appendChild(input(t,'title','title'));
-      tr.appendChild(sel(t,'relation',[['advocates','advocates'],['opposes','opposes'],['adjacent','adjacent'],['attributes','attributes']]));
-      tr.appendChild(input(t,'statusAsOf','status as of air date')); tr.appendChild(del(()=>l.tethers.splice(ti,1))); box.appendChild(tr);
-      const why=input(t,'why','why this bill'); why.style.cssText='margin:0 0 6px 12px;width:calc(100% - 12px)'; box.appendChild(why);
-    });
-    const row=el('div',null); row.style.cssText='display:flex;gap:8px;align-items:center;margin-top:4px';
-    const addT=el('button','btn','+ tether'); addT.onclick=()=>{ l.tethers.push({bill:'',billId:'',title:'',relation:'advocates',statusAsOf:'',why:'',inDb:false}); renderUtt(); };
-    row.appendChild(addT); const vd=input(l,'void','no bill? say why (a void is a finding)'); row.appendChild(vd); box.appendChild(row);
-    host.appendChild(box);
-  });
-
-  // beats
-  const B=utt.utterance.beats;
-  const bh=el('div','ut-h','Beats <span style="text-transform:none;letter-spacing:0">— t in seconds (blank = off-clip) · quote ≤ 15 words, verbatim · untick "parses" for gibberish</span>');
-  bh.appendChild(el('span',null,'')).style.flex='1';
-  const addNow=el('button','btn','+ beat at clip time'); addNow.onclick=()=>{ const vv=$('utVideo'); const t=vv&&!isNaN(vv.currentTime)?Math.round(vv.currentTime*10)/10:null;
-    B.push({t, source: t==null?'excerpt':'clip', quote:'', layer:(L[0]&&L[0].id)||'', gloss:''}); utSortBeats(); renderUtt(); };
-  const addOff=el('button','btn','+ off-clip beat'); addOff.onclick=()=>{ B.push({t:null,source:'excerpt',quote:'',layer:(L[0]&&L[0].id)||'',gloss:''}); renderUtt(); };
-  bh.appendChild(addNow); bh.appendChild(addOff); host.appendChild(bh);
-  B.forEach((b,bi)=>{
-    const r=el('div','ut-row beat');
-    const tw=el('span','ut-t'); const ti=input(b,'t','t','number'); ti.step='0.1'; tw.appendChild(ti);
-    const now=el('button','btn','now'); now.title='stamp the clip\'s current time'; now.onclick=()=>{ const vv=$('utVideo'); if(vv){ b.t=Math.round(vv.currentTime*10)/10; b.source='clip'; utSortBeats(); renderUtt(); } };
-    tw.appendChild(now); r.appendChild(tw);
-    r.appendChild(sel(b,'layer',L.map(l=>[l.id,l.id+' · '+(l.object||'').slice(0,14)])));
-    r.appendChild(sel(b,'source',[['clip','clip'],['excerpt','excerpt'],['report','report'],['video title','video title']]));
-    r.appendChild(ta(b,'quote','quote (verbatim)')); r.appendChild(ta(b,'gloss','gloss — what he\'s doing here'));
-    const pc=el('label','ut-chk'); const c=document.createElement('input'); c.type='checkbox'; c.checked=b.legible!==false;
-    c.onchange=()=>{ if(c.checked) delete b.legible; else b.legible=false; }; pc.appendChild(c); pc.appendChild(document.createTextNode('parses')); r.appendChild(pc);
-    r.appendChild(del(()=>B.splice(bi,1)));
-    if(typeof b.t==='number'){ r.querySelector('.ut-t input').title='jump the preview here'; r.querySelector('.ut-t input').ondblclick=()=>{ const vv=$('utVideo'); if(vv){ vv.currentTime=b.t; vv.play().catch(()=>{}); } }; }
-    host.appendChild(r);
-  });
-  host.appendChild(el('div','ut-warn')).id='utWarn'; utWarnRefresh();
-}
-function utSortBeats(){ const B=utt.utterance.beats; const on=B.filter(b=>typeof b.t==='number').sort((a,b)=>a.t-b.t), off=B.filter(b=>typeof b.t!=='number'); B.length=0; B.push(...on,...off); }
-function utWarnRefresh(){ const w=$('utWarn'); if(w) w.textContent=utWarnings().map(x=>'⚠ '+x).join('\n'); }
-function uttPatch(){
-  if(!utt) return {};
-  if(utt.eventClass!=='utterance' && !utt.had) return {};
-  utSortBeats();
-  const u=JSON.parse(JSON.stringify(utt.utterance));
-  u.layers=(u.layers||[]).map(l=>{ l.tethers=(l.tethers||[]).filter(t=>t.billId||t.title).map(t=>{ if(!t.bill && t.billId){ const m=String(t.billId).match(/^([a-z]+)-\d+-(\d+)$/i); if(m) t.bill=(m[1].toLowerCase()==='hr'?'H.R.':m[1].toUpperCase()+'.')+m[2]; } return t; });
-    if(!l.void) delete l.void; return l; });
-  u.beats=(u.beats||[]).filter(b=>b.quote||b.gloss);
-  const out={ eventClass:utt.eventClass, speaker:Object.assign({},utt.speaker), utterance:u, clip:Object.assign({},utt.clip) };
-  if(!out.clip.file) out.clip.file=null;
-  return out;
-}
-$('clipBtn').onclick=()=>{ if(!utt) utt=uttFrom(null); renderUtt(); $('clipModal').classList.add('show'); };
-$('clipClose').onclick=()=>{ try{ const vv=$('utVideo'); if(vv) vv.pause(); }catch(_){} $('clipModal').classList.remove('show'); };
-document.querySelectorAll('#utClass button').forEach(b=>b.onclick=()=>{ if(!utt) utt=uttFrom(null); utt.eventClass=b.dataset.c; renderUtt(); });
 
 /* ===== Citation bank — per-event sources; attachable to any voice ===== */
 let citations=[];

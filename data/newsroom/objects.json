@@ -2157,7 +2157,7 @@
       "scans": 2,
       "outlets": 3,
       "peakOutlets": 3,
-      "status": "queued",
+      "status": "dismissed",
       "permanence": {
         "silentDays": 0,
         "breaks": [],
@@ -2189,8 +2189,19 @@
           "image": "https://hiphopwired.com/wp-content/uploads/sites/43/2026/09/17902941882032.jpg"
         }
       ],
-      "aliases": [],
-      "queuedOn": "2026-09-25"
+      "aliases": [
+        "obj_afederal_access-cnn-house-judge"
+      ],
+      "queuedOn": "2026-09-25",
+      "dismissedWhy": "Duplicate: same instrument as obj_afederal_access-cnn-house-judge — Judge Kelly's TRO restoring CNN/MS NOW/Politico hard passes, entered ~1 a.m. ET 2026-09-24, already drafted as rdg_oq1spmhz7azt. The 09-25 items are syndicated re-reports (one hiphopwired story on three sister sites), not a new order.",
+      "corrections": [
+        {
+          "field": "formedOn",
+          "from": "2026-09-25",
+          "to": "2026-09-24",
+          "why": "The order is dated 2026-09-24; 09-25 is the report date, not the as-of date (§4c). Claude's call, 2026-09-26 run."
+        }
+      ]
     }
   ],
   "scans": [

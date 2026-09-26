@@ -615,45 +615,16 @@ const PrismSync = (() => {
   // One file, sha-cached like a Reading; feeds THE FIELD row's frames.
   const REGISTER_PATH = 'data/newsroom/objects.json';
   const REGISTER_SHA_KEY = 'prism.sync.registerSha';
-  // The drafting overlay (objects.local.json, 2026-09-25) rides on top: the
-  // scan owns objects.json, the drafting task owns the overlay, and readers
-  // apply one over the other. Copy of scripts/newsroom/overlay.js — keep them identical.
-  const OVERLAY_PATH = 'data/newsroom/objects.local.json';
-  const OVERLAY_FIELDS = ['status', 'drafts', 'draftedOn', 'corrections', 'inversions',
-    'permanenceNote', 'aliasCandidates', 'dismissedWhy'];
-  const OVERLAY_STATUSES = ['drafted', 'dismissed', 'promoted'];
-  function applyOverlay(reg, overlay) {
-    if (!reg || !Array.isArray(reg.objects) || !overlay || !overlay.objects) return reg;
-    reg.objects.forEach(o => {
-      const e = overlay.objects[o.oid];
-      if (!e) return;
-      OVERLAY_FIELDS.forEach(f => {
-        if (!(f in e)) return;
-        if (f === 'status') { if (OVERLAY_STATUSES.includes(e.status)) o.status = e.status; return; }
-        if (f === 'drafts') { o.drafts = Object.assign({}, o.drafts || {}, e.drafts || {}); return; }
-        o[f] = e[f];
-      });
-    });
-    reg.overlayAppliedAt = overlay.updatedAt || null;
-    return reg;
-  }
   async function pullRegister() {
     const res = await fetch(`${FILE_API}${REGISTER_PATH}?ref=${BRANCH}&t=${Date.now()}`, { headers: headers() });
     if (res.status === 404) return { pulled: 0 };
     if (!res.ok) throw new Error('GitHub register fetch failed (' + res.status + ')');
     const body = await res.json();
-    let ovBody = null;
-    try {
-      const ores = await fetch(`${FILE_API}${OVERLAY_PATH}?ref=${BRANCH}&t=${Date.now()}`, { headers: headers() });
-      if (ores.ok) ovBody = await ores.json();
-    } catch (e) {}
-    const sha = body.sha + (ovBody ? '+' + ovBody.sha : '');
     let known = null; try { known = localStorage.getItem(REGISTER_SHA_KEY); } catch (e) {}
-    if (known === sha) return { pulled: 0 };
+    if (known === body.sha) return { pulled: 0 };
     let reg; try { reg = JSON.parse(b64decode(body.content)); } catch (e) { return { pulled: 0 }; }
-    if (ovBody) { try { applyOverlay(reg, JSON.parse(b64decode(ovBody.content))); } catch (e) {} }
     PrismDB.setRegister(reg);
-    try { localStorage.setItem(REGISTER_SHA_KEY, sha); } catch (e) {}
+    try { localStorage.setItem(REGISTER_SHA_KEY, body.sha); } catch (e) {}
     return { pulled: 1, objects: (reg.objects || []).length };
   }
 

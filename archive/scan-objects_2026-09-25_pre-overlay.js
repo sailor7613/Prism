@@ -190,20 +190,8 @@ function readInstrument(arts) {
 function domains(arts) { return new Set(arts.map(a => a.domain).filter(Boolean)); }
 
 // ── 4. The register ───────────────────────────────────────────────────
-// The drafting overlay (objects.local.json) is READ here and never written:
-// the drafting task owns it. Applying it keeps drafted/dismissed objects from
-// being re-queued, and the register the scan writes carries their status, so
-// the two files never need merging by hand (scripts/newsroom/overlay.js).
-const OVERLAY = path.join(NR_DIR, 'objects.local.json');
-const { applyOverlay } = require('./newsroom/overlay.js');
 function loadRegister() {
-  let reg;
-  try { reg = JSON.parse(fs.readFileSync(REGISTER, 'utf8')); } catch (e) { reg = { schema: 'prism_object_register_v1', objects: [], scans: [] }; }
-  let ov = null;
-  try { ov = JSON.parse(fs.readFileSync(OVERLAY, 'utf8')); } catch (e) {}
-  if (ov) applyOverlay(reg, ov);
-  delete reg.localEdits;                 // retired: the overlay replaces hand-merged registers
-  return reg;
+  try { return JSON.parse(fs.readFileSync(REGISTER, 'utf8')); } catch (e) { return { schema: 'prism_object_register_v1', objects: [], scans: [] }; }
 }
 function oid(headline, holder) {
   const t = [...tokens(headline)].sort().slice(0, 4).join('-') || 'object';
