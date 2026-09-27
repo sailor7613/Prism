@@ -1,11 +1,9 @@
 # Newsroom digest — 2026-09-27
 
-Register: 35 objects · this scan: 3 new, 0 seen again, 0 returned.
+Register: 35 objects · this scan: 0 new, 0 seen again, 0 returned.
 
-## Queued for drafting (3)
-- **Trump Rejects Iran Proposal To Open Strait Of Hormuz** — vote · voted · holder: the President · formed 2026-09-27 · 18 outlets (peak 18) · `obj_thepresi_hormuz-iran-open-proposal`
-- **Trump says he approved rollback of Biden - era fuel economy rules , cutting mpg targets** — ruling · ruled · holder: the President · formed 2026-09-27 · 12 outlets (peak 12) · `obj_thepresi_approved-biden-cutting-economy`
-- **Trump seeks to cancel nearly $1B in congressionally approved funds** — vote · voted · holder: the President · formed 2026-09-27 · 11 outlets (peak 11) · `obj_thepresi_approved-cancel-congressionally-funds`
+## Queued for drafting (0)
+- (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
 - none today
@@ -14,9 +12,7 @@ Register: 35 objects · this scan: 3 new, 0 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **Trump Rejects Iran Proposal To Open Strait Of Hormuz** — vote · voted · holder: the President · formed 2026-09-27 · 18 outlets (peak 18) · `obj_thepresi_hormuz-iran-open-proposal`
-- **Trump says he approved rollback of Biden - era fuel economy rules , cutting mpg targets** — ruling · ruled · holder: the President · formed 2026-09-27 · 12 outlets (peak 12) · `obj_thepresi_approved-biden-cutting-economy`
-- **Trump seeks to cancel nearly $1B in congressionally approved funds** — vote · voted · holder: the President · formed 2026-09-27 · 11 outlets (peak 11) · `obj_thepresi_approved-cancel-congressionally-funds`
+- none
 
 ## Watching (12)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
