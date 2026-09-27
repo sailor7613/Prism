@@ -103,10 +103,10 @@ authoring anything:
    sentence, mechanism not mood), then `instrument{holder, trusted}` — **the holder as
    this station sees it, and whether the station trusts that holder to deliver to
    them** (R-0921-1: a rim's z is signed by holder-trust). Only then the words:
-   `text` (2–3 sentences in the station's own voice), `xWord`, `yWord`, `words[]`.
+   `text` (2–3 sentences in the station's own voice: a person talking, first person, the way they'd say it out loud. Not a report of what someone did ("He went on CNBC and accused…"), not narration about the station ("The left reads…"). Contractions, questions and fragments are fine. **One person, singular: never "we / us / our"** (Sailor's 2026-07-25 ruling). The speaker notices their side ("the people I vote with"), never speaks as it. The full rules are `PRISM_VOICE_RULES` in `admin-surface.html`; they bind drafts too), `xWord`, `yWord`, `words[]`.
    Author blind if possible: a subagent given only the frame, prompt, keywords, axes
    and the formula — no other Readings, no register.
-7. **Diatribe** (`LF LC LD RF RC RD`, each `{text, side, band}`), `diatribeLayer`,
+7. **Diatribe** (`LF LC LD RF RC RD`, each `{text, side, band}`), each written **in the station's own voice**: first person singular (no we/us/our), one or two spoken sentences ("He got the anger right and the blame wrong…"), never narration about the side ("The left reads…"). Sailor, 2026-09-26: the narrated form reads clunky., `diatribeLayer`,
    `objectLayer` (stated vs operative object; an inversion lean if there is one).
 8. **Sweep again** — the whole file. All clean or it does not land.
 9. **Record the two pathologies on the object card**, in the register you write back:
