@@ -1,6 +1,6 @@
 # Newsroom digest — 2026-09-27
 
-Register: 35 objects · this scan: 0 new, 0 seen again, 0 returned.
+Register: 37 objects · this scan: 2 new, 0 seen again, 0 returned.
 
 ## Queued for drafting (0)
 - (nothing cleared the bar)
@@ -12,9 +12,10 @@ Register: 35 objects · this scan: 0 new, 0 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- none
+- **Exclusive : Stratton talks Trump , filibuster , the far - left as early voting begins** — vote · voted · holder: the President · formed 2026-09-27 · 8 outlets (peak 8) · `obj_thepresi_begins-early-exclusive-far`
+- **Palestinian death toll in Gaza war passes 74 , 000 , and other Mideast news** — vote · voted · holder: ? · formed 2026-09-27 · 3 outlets (peak 3) · `obj_x_000-death-gaza-mideast`
 
-## Watching (12)
+## Watching (13)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
 - **Former state senator sentenced to 16 months in child solicitation case** — indictment · charged · holder: the Senate · formed 2026-09-23 · 4 outlets (peak 4) · `obj_thesenat_case-child-former-months`
 - **CNN , MS NOW and Politico back at the White House after judge ordered Trump to lift ban** — ruling · ruled · holder: the House · formed 2026-09-24 · 18 outlets (peak 18) · `obj_thehouse_back-ban-cnn-house`
@@ -27,3 +28,4 @@ Register: 35 objects · this scan: 0 new, 0 seen again, 0 returned.
 - **Tax Relief for Fraud Victims Act — House motion to suspend the rules and pass, as amended (Passed)** — bill · voted · holder: the House · formed 2026-09-15 · 0 outlets (peak 0) · `obj_bill_hr-119-9500`
 - **s-119-2403 — House motion to suspend the rules and pass (Passed)** — bill · voted · holder: the House · formed 2026-09-16 · 0 outlets (peak 0) · `obj_bill_s-119-2403`
 - **Whistleblower Protection Act of 2025 — House motion to suspend the rules and pass, as amended (Passed)** — bill · voted · holder: the House · formed 2026-09-15 · 0 outlets (peak 0) · `obj_bill_hr-119-4646`
+- **Exclusive : Stratton talks Trump , filibuster , the far - left as early voting begins** — vote · voted · holder: the President · formed 2026-09-27 · 8 outlets (peak 8) · `obj_thepresi_begins-early-exclusive-far`
