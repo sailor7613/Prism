@@ -1,6 +1,6 @@
 {
  "schema": "prism_object_overlay_v1",
- "updatedAt": "2026-09-26T17:35:00Z",
+ "updatedAt": "2026-09-27T04:35:00Z",
  "note": "Written ONLY by the drafting task (Sailor commits it). The scan owns objects.json and only reads this file. See scripts/newsroom/overlay.js.",
  "objects": {
   "obj_astate_bills-changes-elections-gavin": {
@@ -302,6 +302,47 @@
     }
    ],
    "dismissedWhy": "Duplicate: same instrument as obj_afederal_access-cnn-house-judge — Judge Kelly's TRO restoring CNN/MS NOW/Politico hard passes, entered ~1 a.m. ET 2026-09-24, already drafted as rdg_oq1spmhz7azt. The 09-25 items are syndicated re-reports (one hiphopwired story on three sister sites), not a new order."
+  },
+  "obj_bill_hr-119-5334": {
+   "status": "drafted",
+   "drafts": {
+    "claude": "rdg_1fw5rn0x8jcj"
+   },
+   "draftedOn": "2026-09-26",
+   "corrections": [
+    {
+     "field": "formedOn",
+     "from": "2026-09-16",
+     "to": "2026-09-18",
+     "why": "09-16 is the House vote that cleared Congress; the President signed H.R. 5334 on Friday 09-18 (White House statement 09-18). The law finished forming at the signature.",
+     "by": "Claude (drafting)",
+     "on": "2026-09-27"
+    },
+    {
+     "field": "holder",
+     "from": "the House",
+     "to": "the President — holds implementation (due within 30 days) and a national-interest waiver over every sanction and tariff; Congress wrote it",
+     "why": "The House was the last chamber to act, not the holder of delivery.",
+     "by": "Claude (drafting)",
+     "on": "2026-09-27"
+    }
+   ],
+   "inversions": [
+    {
+     "station": "A",
+     "lean": true,
+     "prior": "CAATSA 2017 (House 419-3); House Democrats as the Ukraine/sanctions caucus since 2022",
+     "now": "152 of 210 House Democrats voted no on 2026-09-16, following Jeffries (Trump \"cannot be entrusted\" with tariff powers)",
+     "note": "Stated/operative displacement: a vote against the tariff key (operative), not against sanctions (stated). Reported, not ruled."
+    }
+   ],
+   "permanenceNote": "Return, renamed: the Sanctioning Russia Act of 2025 (S. 1241 / H.R. 2548, filed 2025-04-01) stalled through 2025 and returned after Graham died (2026-07-12) under his name, with Iran added, on a House vehicle (H.R. 5334, originally the SEED Act — the catalog still carries that title).",
+   "aliasCandidates": [
+    "Sanctioning Russia Act of 2025",
+    "S. 1241",
+    "H.R. 2548",
+    "Graham Russia sanctions bill"
+   ]
   }
  }
 }

@@ -823,15 +823,6 @@ body.ev-step-framing .ev-law { opacity: 1; }
 .ev-law-chip.void { border-style: dashed; white-space: normal; text-align: center; }
 @media (max-height: 860px) { .ev-law { margin-bottom: 10px; } }
 
-/* ── GRAPHMAP CENTERING (2026-09-26, Sailor: "the graphmap doesn't center itself") ──
-   The graph column is as wide as its widest child (the Z slider, 440px). On
-   short windows the committed factory shrinks to 44vh and sat FLUSH LEFT in
-   that column, ~75px off the stage's center at 1000×660. Center every child. */
-.graph-left { align-items: center; }
-.gm3d { margin-left: auto; margin-right: auto; }
-/* during the handoff the factory overlays the pad absolutely — centered the same way */
-.gm3d.overlay { left: 0; right: 0; }
-
 /* ── FIT PASS · PHONES (2026-09-26) ──
    Walked at 390×844 and 375×667 (iPhone SE). */
 
@@ -3257,7 +3248,7 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
      off to this instrument: v56 pins, true 3D dots, full orbit. -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <!-- cache-busting query: bump ?v= whenever the module changes (Safari caches hard) -->
-<script src="../src/js/prism-graphmap.js?v=9"></script>
+<script src="../src/js/prism-graphmap.js?v=8"></script>
 
 <script>
 /* ============================================================
@@ -5452,7 +5443,6 @@ function mountGM() {
       spectrumAxes: true,   // iridescent gradient axis lines
       holdMs: 900,          // deliberate hold-to-lock (400 felt accidental, 2s sluggish)
       zoom: 12, zoomMax: 14, // camera pulled back to compensate the oversized stage
-      zLabels: (typeof zWords === 'function') ? zWords() : undefined,   // the Z walls read the Reading's own poles
       artifacts: false,     // vases CUT 2026-07-11 (Sailor: didn't land right) — revisit as a later furniture/statuary pass
       // Ted follows the away toggle (2026-07-26): `ted: true` was
       // unconditional, so the factory coyote trotted the plane for users who

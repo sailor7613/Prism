@@ -1,0 +1,501 @@
+{
+ "centralObject": {
+  "kind": "bill",
+  "ref": "hr-119-5334",
+  "name": "Lindsey O. Graham Sanctioning Russia and Iran Act of 2026 (H.R. 5334)"
+ },
+ "tethers": [
+  {
+   "billId": "hr-119-5334",
+   "bill": "H.R. 5334",
+   "title": "Lindsey O. Graham Sanctioning Russia and Iran Act of 2026",
+   "relation": "object",
+   "statusAsOf": "2026-09-18 Signed into law (House concurred in Senate amendment 2026-09-16, 262-159; Senate 86-11 on 2026-08-07)",
+   "why": "The Reading's instrument. H.R. 5334 was a House-passed vehicle (the catalog still carries its original title, the SEED Act, last action 2026-04-28); the Senate replaced its text with the Russia–Iran sanctions bill.",
+   "inDb": true
+  },
+  {
+   "billId": "s-119-1241",
+   "bill": "S. 1241",
+   "title": "Sanctioning Russia Act of 2025",
+   "relation": "adjacent",
+   "statusAsOf": "introduced 2025-04-01 (Graham, 84 cosponsors); superseded by H.R. 5334",
+   "why": "The first version, filed by Graham in April 2025 and held back from the floor through 2025; the object is its return under his name.",
+   "inDb": false
+  },
+  {
+   "billId": "hr-119-2548",
+   "bill": "H.R. 2548",
+   "title": "Sanctioning Russia Act of 2025 (House companion)",
+   "relation": "adjacent",
+   "statusAsOf": "introduced 2025 (151 cosponsors); superseded",
+   "why": "The House companion of S. 1241.",
+   "inDb": false
+  },
+  {
+   "billId": "hr-119-1422",
+   "bill": "H.R. 1422",
+   "title": "Enhanced Iran Sanctions Act of 2025",
+   "relation": "adjacent",
+   "statusAsOf": "Passed House 2026-03-16; in Senate Foreign Relations",
+   "why": "The other live Iran-sanctions vehicle; H.R. 5334 carries the Iran Sanctions Act extension instead.",
+   "inDb": true
+  },
+  {
+   "statute": "Iran Sanctions Act of 1996",
+   "cite": "Pub. L. 104-172; 50 U.S.C. §1701 note",
+   "title": "Iran Sanctions Act of 1996 (originally the Iran and Libya Sanctions Act)",
+   "enacted": "1996",
+   "relation": "amends",
+   "why": "H.R. 5334 extends it (to 2031-12-31, per the enacted text) — the 'and Iran' in the title."
+  },
+  {
+   "statute": "Countering America's Adversaries Through Sanctions Act",
+   "cite": "Pub. L. 115-44 (2017), §216",
+   "title": "CAATSA — congressional review of Russia sanctions relief",
+   "enacted": "2017",
+   "relation": "adjacent",
+   "why": "The prior Russia sanctions law with a congressional review of any lifting; H.R. 5334's 30-day review follows its pattern. Also the prior against which the House Democrats' vote is read (inversion lean)."
+  },
+  {
+   "statute": "International Emergency Economic Powers Act",
+   "cite": "50 U.S.C. §1701 et seq.",
+   "title": "IEEPA",
+   "enacted": "1977",
+   "relation": "adjacent",
+   "why": "The emergency authority the earlier tariffs rested on (see the Tariff Reading, rdg_ms51urghz7zi). H.R. 5334 gives the President a statutory, country-specific tariff power instead — the part Jeffries objected to."
+  }
+ ],
+ "linkedBills": [
+  "hr-119-5334",
+  "hr-119-1422"
+ ],
+ "title": "The Key Left in the Lock",
+ "category": "Foreign Policy · Sanctions · Russia · Trade",
+ "date": "2026-09-18",
+ "prompt": "Congress wrote a 500 percent tariff on Russia and a 100 percent tariff on its biggest customers, and handed the President the key to waive both. Is that pressure on Moscow, or a weapon left on a shelf?",
+ "framing": "On Friday, September 18, 2026, President Trump signed H.R. 5334, the Lindsey O. Graham Sanctioning Russia and Iran Act, without public remarks. The House cleared it on September 16, 262 to 159, over its own Democratic leaders; the Senate had passed it 86 to 11 on August 7. Graham, who filed the first version in April 2025, died on July 12, 2026. The law authorizes duties of up to 500 percent on Russian goods and up to 100 percent on all imports from the five largest buyers of Russian oil and gas, sanctions Russia’s leaders, banks and shadow fleet, and extends the 1996 Iran Sanctions Act. The President may waive any of it in the national interest. Before the vote, Hakeem Jeffries said Trump \"cannot be entrusted with new powers to impose tariffs\". On September 17 the Kremlin said the law would complicate a peace settlement.",
+ "framingKeywords": [
+  "500 percent",
+  "national-interest waiver",
+  "five largest buyers",
+  "Graham's name"
+ ],
+ "prevalentAxis": "x",
+ "split": {
+  "topology": "peel",
+  "strength": 0.6,
+  "seam": "trust in the waiver-holder",
+  "rationale": "At the fluid radius the four readings of whether the law delivers sit close together (−0.4 to +0.4), and the right-populist fluid reading is barely above the left's. Moving outward, the stations separate along x: the rims sign by trust in Trump, so the left rims fall to −0.7 and −0.8 and the right rims rise to +0.5 and +0.6. The sharpest break is inside the right: the D coalition wants the law kept on the shelf, while the D rim believes it lands because Trump holds it. Disagreement about how the law works turns, at the rims, into disagreement about who holds it.",
+  "zPattern": {
+   "centers": {
+    "A": -0.4,
+    "B": 0.4,
+    "C": -0.3,
+    "D": -0.1
+   },
+   "rims": {
+    "A": -0.8,
+    "B": 0.6,
+    "C": -0.7,
+    "D": 0.5
+   },
+   "note": "Centers span 0.8 and do not fall cleanly on either axis. Rims span 1.4 and fall along x, because trust in the holder is partisan. D moves from −0.3 at the coalition to +0.5 at the rim, the only station that changes sign as it moves out."
+  },
+  "ruledBy": null,
+  "date": "2026-09-27"
+ },
+ "antiValentBand": "denominated",
+ "antiValentRationale": "At the rim the usual valences flip: Russia hawks on the left expect nothing to land and the anti-tariff right expects a 100 percent tariff threat to work, purely because of who holds the waiver.",
+ "axes": {
+  "x": {
+   "pos": "Right",
+   "neg": "Left"
+  },
+  "y": {
+   "pos": "Institutional",
+   "neg": "Populist"
+  },
+  "z": {
+   "pos": "the pressure lands — the tariffs and sanctions are actually imposed on Russia's buyers, banks and fleet, and push Moscow toward a settlement",
+   "neg": "the law sits waived on the shelf — authority granted, discretion kept, and nothing reaches Moscow but the signature"
+  }
+ },
+ "responses": {
+  "A": {
+   "fluid": {
+    "text": "Read the text. Congress wrote strong sanctions on Russia's banks and shadow fleet, then let one signature waive any of them in the national interest. The 30-day review stops the President lifting sanctions quietly, but nothing forces him to impose them.",
+    "xWord": "center-left",
+    "yWord": "institutional",
+    "words": [
+     "waiver authority",
+     "congressional review",
+     "implementation deadline",
+     "shadow fleet"
+    ],
+    "source": "",
+    "z": -0.4,
+    "zReason": "The national-interest waiver makes every clause optional, and the only hard trigger is the 30-day review on lifting sanctions, which constrains unwinding them, not imposing them.",
+    "instrument": {
+     "holder": "President Trump, through a unilateral national-interest waiver",
+     "trusted": false
+    }
+   },
+   "coalition": {
+    "text": "We want Moscow squeezed and Ukraine backed, and 58 of us voted for that. The 152 who voted no were not voting for Putin; they were refusing to give tariff authority over the world's biggest economies to a President who treats tariffs as leverage for anything. Jeffries was right that the pressure and the power came bundled.",
+    "xWord": "Democratic establishment",
+    "yWord": "leadership line",
+    "words": [
+     "cannot be entrusted",
+     "tariff powers",
+     "stand with Ukraine",
+     "split caucus"
+    ],
+    "source": "",
+    "z": -0.5,
+    "zReason": "The coalition expects the sanctions on banks and the fleet to be partly carried out, and the tariffs, which it opposed handing over, to be waived or used against trading partners instead of Moscow.",
+    "instrument": {
+     "holder": "a President Democrats voted not to give new tariff powers",
+     "trusted": false
+    }
+   },
+   "denominated": {
+    "text": "It is Trump's weapon now, and Trump decides who it points at. Don't expect it to point at the Kremlin.",
+    "xWord": "left",
+    "yWord": "establishment",
+    "words": [
+     "his key",
+     "blank check"
+    ],
+    "source": "",
+    "z": -0.8,
+    "zReason": "Delivery depends entirely on the holder, and this station does not trust the holder to use it on Moscow.",
+    "instrument": {
+     "holder": "Trump",
+     "trusted": false
+    }
+   }
+  },
+  "B": {
+   "fluid": {
+    "text": "The tariffs get the headlines, but the working parts are the sanctions on Russia's banks, leaders and shadow fleet, due within 30 days. Lifting them triggers a 30-day congressional review, which gives the law a floor. A tariff threat of 100 percent on the biggest buyers of Russian oil works because it is credible, not because it is used on day one.",
+    "xWord": "center-right",
+    "yWord": "institutional",
+    "words": [
+     "secondary tariffs",
+     "30-day implementation",
+     "congressional review",
+     "credible threat"
+    ],
+    "source": "",
+    "z": 0.4,
+    "zReason": "The sanctions on banks, leaders and the shadow fleet run through existing Treasury machinery on a 30-day clock, and the 30-day review keeps them from being lifted quietly, so part of the law lands even if the tariffs stay a threat.",
+    "instrument": {
+     "holder": "the President, bound by a 30-day implementation clock and congressional review of any lifting",
+     "trusted": true
+    }
+   },
+   "coalition": {
+    "text": "This is Lindsey Graham's law, 86 to 11, and it finally puts a price on buying Putin's oil. We want the shadow fleet choked and the banks cut off. We would also like the 500 and 100 percent figures to do their work as a threat, not as a tax on American importers.",
+    "xWord": "GOP establishment",
+    "yWord": "Senate hawks",
+    "words": [
+     "Graham's legacy",
+     "86 to 11",
+     "energy revenue",
+     "deterrent"
+    ],
+    "source": "",
+    "z": 0.2,
+    "zReason": "The hawks expect the sanctions to be imposed, while the business wing is counting on the waiver to keep 100 percent tariffs off its supply chains, so the coalition expects the law to deliver only in part.",
+    "instrument": {
+     "holder": "the President, as the Senate's 86 votes intended",
+     "trusted": true
+    }
+   },
+   "denominated": {
+    "text": "The President has the full toolkit now. Moscow knows it, and that is why the Kremlin is complaining.",
+    "xWord": "right",
+    "yWord": "establishment",
+    "words": [
+     "peace through strength",
+     "full toolkit"
+    ],
+    "source": "",
+    "z": 0.6,
+    "zReason": "This station trusts the holder to use the authority on Moscow, and that trust is what signs its z.",
+    "instrument": {
+     "holder": "the President",
+     "trusted": true
+    }
+   }
+  },
+  "C": {
+   "fluid": {
+    "text": "Look at who the 100 percent tariff actually hits: the five largest buyers of Russian energy, meaning countries that sell us most of what we buy. That is a tariff on American households, and the waiver lets the President decide when to use it and on whom. Whatever it does, it will not reach the Kremlin first.",
+    "xWord": "progressive",
+    "yWord": "populist",
+    "words": [
+     "tariff on consumers",
+     "five largest buyers",
+     "discretion",
+     "who pays"
+    ],
+    "source": "",
+    "z": -0.3,
+    "zReason": "The waiver lets the President hold the Russia clauses back while using the 100 percent tariffs on the five largest buyers as trade leverage, so what does get imposed is unlikely to be aimed at Moscow.",
+    "instrument": {
+     "holder": "the President, with discretion over tariffs on the world's largest economies",
+     "trusted": false
+    }
+   },
+   "coalition": {
+    "text": "We want the war to end, and we don't think tariffs this size or an unlimited sanctions ladder get us to a deal; the Kremlin said as much on September 17. Workers pay when trade wars start. Handing this President a tariff switch in the name of Ukraine is not peace policy.",
+    "xWord": "antiwar left",
+    "yWord": "grassroots",
+    "words": [
+     "negotiated peace",
+     "workers pay",
+     "escalation",
+     "no blank check"
+    ],
+    "source": "",
+    "z": -0.4,
+    "zReason": "The antiwar and labor left expects the waiver to keep the law mostly unused against Russia, with any use turning into escalation or higher prices instead of a settlement.",
+    "instrument": {
+     "holder": "a President and a hawkish Congress",
+     "trusted": false
+    }
+   },
+   "denominated": {
+    "text": "Trump holds it, and it will land on whoever he is bargaining with that week.",
+    "xWord": "left",
+    "yWord": "populist",
+    "words": [
+     "his leverage",
+     "their war"
+    ],
+    "source": "",
+    "z": -0.7,
+    "zReason": "The holder is untrusted, so this station expects the instrument to serve the holder's own purposes rather than reach Moscow.",
+    "instrument": {
+     "holder": "Trump and the war caucus",
+     "trusted": false
+    }
+   }
+  },
+  "D": {
+   "fluid": {
+    "text": "Read the waiver clause: it gives the President leverage, not a mandate. Nothing is imposed unless Trump decides it helps get a deal, and that is how it should be. He signed it without remarks because the tool is held in reserve.",
+    "xWord": "America First",
+    "yWord": "populist",
+    "words": [
+     "leverage",
+     "national interest",
+     "deal-maker's tool",
+     "his call"
+    ],
+    "source": "",
+    "z": -0.1,
+    "zReason": "This station reads the waiver as putting delivery on the President's timetable, which means the law will be used when it helps a deal and held back when it doesn't.",
+    "instrument": {
+     "holder": "President Trump, who can use or waive every clause",
+     "trusted": true
+    }
+   },
+   "coalition": {
+    "text": "The base never wanted Lindsey Graham's war bill, and the seven Republicans who voted no heard from us. What makes it acceptable is the waiver: Trump holds it, not the Senate. We want the war ended and no American money or tariffs locked into it.",
+    "xWord": "MAGA base",
+    "yWord": "anti-establishment",
+    "words": [
+     "no forever wars",
+     "Graham's bill",
+     "waiver is the point",
+     "America First"
+    ],
+    "source": "",
+    "z": -0.3,
+    "zReason": "The base wants the law kept on the shelf so it cannot pull the country into a Graham-style forever war or a tariff fight it didn't choose.",
+    "instrument": {
+     "holder": "Trump, not the Senate hawks",
+     "trusted": true
+    }
+   },
+   "denominated": {
+    "text": "Trump has the hammer, and that alone brings Putin to the table.",
+    "xWord": "right",
+    "yWord": "populist",
+    "words": [
+     "the hammer",
+     "art of the deal"
+    ],
+    "source": "",
+    "z": 0.5,
+    "zReason": "The holder is trusted, so this station believes the threat of use is itself enough to push Moscow toward a deal.",
+    "instrument": {
+     "holder": "Trump",
+     "trusted": true
+    }
+   }
+  }
+ },
+ "diatribe": {
+  "LF": {
+   "text": "The left reads the clauses and finds that the waiver makes pressure optional while the 100 percent tariff on the largest buyers lands on American importers.",
+   "side": "left",
+   "band": "fluid",
+   "keywords": [
+    "waiver",
+    "who pays",
+    "optional pressure"
+   ]
+  },
+  "LC": {
+   "text": "The left splits: its establishment wants Russia sanctioned but refuses to hand over the tariff power, while its antiwar wing doubts sanctions pressure leads to peace.",
+   "side": "left",
+   "band": "coalition",
+   "keywords": [
+    "58 to 152",
+    "cannot be entrusted",
+    "negotiated peace"
+   ]
+  },
+  "LD": {
+   "text": "The left stops asking what the law does to Moscow and concludes that anything Trump holds will be pointed somewhere else.",
+   "side": "left",
+   "band": "denominated",
+   "keywords": [
+    "his key",
+    "blank check"
+   ]
+  },
+  "RF": {
+   "text": "The right reads the bank and shadow-fleet sanctions and the 30-day clocks as a floor, and sees the tariffs as a credible threat.",
+   "side": "right",
+   "band": "fluid",
+   "keywords": [
+    "30-day implementation",
+    "credible threat"
+   ]
+  },
+  "RC": {
+   "text": "The right holds Graham's hawkish legacy and the base's wish to stay out of a forever war together, and the waiver is what lets both sign on.",
+   "side": "right",
+   "band": "coalition",
+   "keywords": [
+    "Graham's legacy",
+    "waiver is the point"
+   ]
+  },
+  "RD": {
+   "text": "The right trusts the holder, so it treats the threat of use as pressure and believes the signature alone moves Putin.",
+   "side": "right",
+   "band": "denominated",
+   "keywords": [
+    "the hammer",
+    "peace through strength"
+   ]
+  }
+ },
+ "diatribeLayer": "stated",
+ "objectLayer": {
+  "declared": "stated",
+  "stated": "Economic pressure on Moscow through tariffs and sanctions on Russia, its buyers, its banks and its shadow fleet.",
+  "operative": "Discretionary presidential authority to impose up to 100 percent tariffs on all imports from the five largest buyers of Russian oil and gas, which are major US trading partners, with a waiver that can be used any time.",
+  "inversion": "Lean toward inversion: the part with the most reach points at third-country trade rather than Russia, and the waiver makes it a bargaining chip. A law named for sanctioning Russia works in practice as a tariff authority, and only the bank and fleet sanctions, with their 30-day clocks, clearly stay pointed at Moscow."
+ },
+ "window": {
+  "close": "2026-09-18",
+  "why": "Trigger day = the day the object finished forming: the President signed H.R. 5334 on Friday 2026-09-18 (White House statement 2026-09-18). The register read 2026-09-16, the House vote to concur in the Senate amendment — the day it cleared Congress, not the day it became law; the signing is a pertinent fact after a 09-16 close, so the trigger day is re-declared, not widened (§4c). Holder corrected on the card: the President (who holds implementation and the national-interest waiver), not the House. Declared at authoring, before any z.",
+  "ruledBy": null,
+  "ruledOn": null
+ },
+ "meta": {
+  "dialecticsRef": "obj_bill_hr-119-5334",
+  "status": "draft",
+  "source": "Claude draft — daily newsroom drafting (scheduled), authored z-first against Trace Formula v1 per scripts/newsroom/AUTHORING_PROTOCOL.md v1.2. Filed to drafts/claude; not through the surface; no aiDeltas lineage. Rulings: none.",
+  "editHistory": [
+   {
+    "at": "2026-09-27T04:30:00.000Z",
+    "by": "Claude (scheduled drafting)",
+    "what": "authored: object -> window (re-declared 09-16 -> 09-18) -> frame -> sweep (All clean) -> central object + tethers -> axes -> twelve (blind subagent) -> split/diatribe/layers -> sweep"
+   }
+  ],
+  "aiDeltas": [],
+  "frameFirst": {
+   "date": "2026-09-27",
+   "by": "Claude, under §4c (window declared at authoring; sweep before z). Object NOT ruled — Claude's read, correctable by Sailor.",
+   "status": "Frame authored and swept (All clean) before any z; the twelve authored blind z-first by a subagent (meta.blindAuthoring). Stations unruled.",
+   "objectLean": {
+    "stated": "Economic pressure on Moscow through tariffs and sanctions on Russia, its buyers, its banks and its shadow fleet.",
+    "operative": "Discretionary presidential authority to impose up to 100 percent tariffs on all imports from the five largest buyers of Russian oil and gas, which are major US trading partners, with a waiver that can be used any time.",
+    "inversion": "lean, not ruled: a law named for sanctioning Russia whose widest-reaching clause is a discretionary tariff on third countries, every clause waivable — the object travels from 'pressure on Moscow' (stated) to 'a tariff key held by the President' (operative)"
+   },
+   "titleLean": "'The Key Left in the Lock' — Claude's; Sailor names Readings",
+   "sourcesInWindow": [
+    "White House statement 'Congressional Bill H.R. 5334 Signed into Law' 2026-09-18",
+    "RFE/RL 2026-09-18 (signing) and 2026-09-16/17 (House passage, Peskov)",
+    "CBS News 2026-09-16/17 (House vote, Jeffries) and 2026-09-18 (signing)",
+    "GovTrack House Vote #308, 2026-09-16",
+    "Baker McKenzie, Clyde & Co summaries of the enacted text (enacted 2026-09-18)"
+   ],
+   "background_preWindow": [
+    "S. 1241 introduced 2025-04-01 by Graham with 84 cosponsors; House companion H.R. 2548",
+    "Trump endorsed the measure January 2026 after meeting Graham (Wikipedia)",
+    "Graham died 2026-07-12 (NPR, Roll Call)",
+    "Senate passed the revised bill 86-11 on 2026-08-07 (Al Jazeera 2026-08-08)",
+    "H.R. 5334 passed the House 2026-04-27 as the SEED Act (catalog) — the vehicle"
+   ]
+  },
+  "framingAudit": {
+   "date": "2026-09-27",
+   "verifiedInWindow": [
+    "signed 2026-09-18 (Friday), no public remarks — White House statement 2026-09-18; RFE/RL and CBS 2026-09-18",
+    "House 262-159 on 2026-09-16 (House Vote #308, motion to concur in Senate amendments); 58 Democrats yes, 7 Republicans no — GovTrack h308; CBS; RFE/RL 2026-09-16",
+    "Senate 86-11 on 2026-08-07 — Al Jazeera 2026-08-08; Wikipedia (pre-window, dated)",
+    "Graham filed S.1241 2025-04-01; died 2026-07-12 — Wikipedia; NPR/Roll Call 2026-07-12 (pre-window, dated)",
+    "up to 500 percent (500%) on Russian-origin goods; up to 100 percent (100%) on all imports from top-five importers of Russian crude or gas — enacted text as summarized by Clyde & Co and Baker McKenzie (enacted 2026-09-18)",
+    "sanctions on leaders, banks, shadow fleet; Iran Sanctions Act of 1996 extended — enacted text 2026-09-18 (Baker McKenzie; White House statement)",
+    "national-interest waiver; 30-day congressional review of termination — enacted text 2026-09-18 (Baker McKenzie)",
+    "\"cannot be entrusted with new powers to impose tariffs\" — Jeffries, before the 2026-09-16 vote (CBS)",
+    "Kremlin: would 'complicate' a peace settlement — Peskov 2026-09-17 (RFE/RL)"
+   ],
+   "by": "Claude — frame-first authoring under §4c; sweep run BEFORE any z. Not a ruling.",
+   "window": "2026-09-18 (declared, see window.why)",
+   "keptUnverifiedDate": [],
+   "deliberatelyExcluded_afterWindow": [
+    "30-day implementation deadline landing ~2026-10-18 — a future date inside the window; kept out of the frame as a date (bands mention 'within 30 days')",
+    "Xi meeting 2026-09-24 (CBS) — after the close",
+    "Senate GOP blocks Iran war-powers resolution 2026-09-24 — after the close (separate register object)",
+    "Iran Sanctions Act extension date '2031-12-31' and the 270-day winddown to 2027-06-15 — enacted on the trigger day but future-dated; kept out of the frame so the checker does not read them as leaks"
+   ]
+  },
+  "blindAuthoring": {
+   "date": "2026-09-27",
+   "author": "Claude (general-purpose subagent) — blind: given the frame, prompt, keywords, axes, a station/radius brief, four in-window facts (party split, 30-day clocks, Zelensky 09-18) and Trace Formula v1 §3b + R-0921-1 only; no other Reading, no register, no web",
+   "zFirst": true,
+   "instrumentOnAll12": true,
+   "rulings": "NONE — every station awaits Sailor's ruling; z, zReason, instrument, text as authored. No edits by Claude after hand-back. Note: the blind author's xWord/yWord tags are mostly station labels ('center-left', 'institutional') rather than the Reading's own words — left as authored.",
+   "authorNote": "The hardest part was keeping the centers from collapsing into one skeptical reading, since the waiver clause tempts every close reader toward the shelf. The D station surprised me: its coalition wants the law left unused, but under R-0921-1 its rim has to be positive because it trusts the holder, so D is the only station whose z changes sign between radii. That is correct under the rule, but it rests on the rim treating the threat itself as delivery, which stretches the z definition of pressure that is 'actually imposed.' I trust the D rim least, by about 0.3; a literal reading of the z axis would put it near 0. I trust the B coalition second least: I set it at +0.2, but the business wing's reliance on the waiver could put it at 0 or below. I kept all rims without exceptions, since none clearly believed in delivery while distrusting the holder."
+  },
+  "newsroomFindings": {
+   "inversionLeans": [
+    "A station (left-institutional) on Russia sanctions: prior strongly pro — CAATSA passed the House 419-3 in 2017, and House Democrats have been the Ukraine/sanctions caucus since 2022; here 152 of 210 House Democrats voted no, on their leader's word that Trump 'cannot be entrusted' with tariff powers. Lean, not ruled: they voted against the operative object (the tariff key), not the stated one (sanctions) — a stated/operative displacement that reads as an inversion from outside.",
+    "D station (right-populist): coalition −0.3 vs rim +0.5 — the base distrusts Graham's bill and trusts the holder; intra-station sign change across radii, not an inversion against a prior."
+   ],
+   "permanence": "A RETURN, renamed. The Sanctioning Russia Act of 2025 (S. 1241 / H.R. 2548) was filed 2025-04-01, repeatedly promised a vote through 2025, and left the discourse unresolved; it returned after Graham's death (2026-07-12) under his name and 'and Iran', riding a House vehicle (H.R. 5334, originally the SEED Act). Alias candidates recorded on the card."
+  }
+ },
+ "rid": "rdg_1fw5rn0x8jcj",
+ "ridLineage": "minted 2026-09-27 (UTC) by the scheduled newsroom drafting task; filed directly to drafts/claude",
+ "schema": "reading/v1",
+ "formulaVersion": "1",
+ "updatedAt": "2026-09-27T04:30:00.000Z",
+ "authorTier": "claude",
+ "newsroom": {
+  "oid": "obj_bill_hr-119-5334",
+  "queuedOn": "2026-09-26",
+  "draftedOn": "2026-09-26"
+ },
+ "images": []
+}

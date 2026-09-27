@@ -304,8 +304,7 @@ const PrismGraphmap = (function () {
   // The positive plane = "Winner" (the determining force succeeds).
   // The negative plane = "Loser" (the determining force is constrained/defeated).
 
-  function buildBoundaryPlanes(group, zLabels) {
-    zLabels = zLabels || {};
+  function buildBoundaryPlanes(group) {
     var bpGroup = new THREE.Group();
     var zWorld = Z_EXTENT * 0.8;              // ±1.76
     var planeSize = GRAPH_SIZE * 0.82;        // slightly smaller than base plane
@@ -367,9 +366,8 @@ const PrismGraphmap = (function () {
       };
     }
 
-    // the Z walls speak the Reading's own Z words (2026-09-26: an utterance's Z is legibility)
-    var positive = makeBoundary(zWorld, zLabels.pos || 'realized');
-    var negative = makeBoundary(-zWorld, zLabels.neg || 'frustrated');
+    var positive = makeBoundary(zWorld, 'realized');
+    var negative = makeBoundary(-zWorld, 'frustrated');
 
     group.add(bpGroup);
 
@@ -839,7 +837,7 @@ const PrismGraphmap = (function () {
     }
 
     // ── Z Boundary Planes (translucent quads at ±Z ceiling) ──
-    const boundaries = buildBoundaryPlanes(group, config.zLabels);
+    const boundaries = buildBoundaryPlanes(group);
 
     // Gate: hide boundary planes when zRender disabled
     if (!config.capabilities.zRender) {
