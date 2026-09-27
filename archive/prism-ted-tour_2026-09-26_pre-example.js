@@ -48,9 +48,7 @@
       when: () => body.classList.contains('phase-event') && body.classList.contains('ev-step-card'),
       steps: [
         { sel: '#eventPicker, .event-picker select, header select', wait: 'tap',
-          text: () => window.PRISM_ON_EXAMPLE
-            ? "Welcome in. This first one's a practice round: a small, real law about leaf blowers, so the only new thing is how Prism works. The real ones live up here."
-            : "This picks the Reading — the moment we're looking at. There are a few in here; start with this one." },
+          text: "This picks the Reading — the moment we're looking at. There are a few in here; start with this one." },
         { sel: '#evBegin', wait: 'click' },
       ],
     },
@@ -66,8 +64,6 @@
     diatribe: {
       when: () => body.classList.contains('phase-diatribe'),
       steps: [
-        { sel: '#track', wait: 'tap', skipUnless: () => !!window.PRISM_ON_EXAMPLE, 
-          text: "Here's the whole logic, three moves. One: how hot are you on this? Two: which corner of the plane are you standing in? Three: does the law actually deliver? This rail is move one." },
         { sel: '#track', wait: 'drag',
           text: "This rail is your aperture. Center is lukewarm; the harder you push out, the more this thing grabs you. Drag it — go on." },
         { sel: '#track', wait: 'tap', text: () => bandLine(currentBand()) },
@@ -81,8 +77,6 @@
       steps: [
         { sel: '.answer-card', wait: 'tap',
           text: "Four responses, one per corner of the plane, all at the aperture you just set. Read them like four people at a table." },
-        { sel: '#answersGrid', wait: 'tap', skipUnless: () => !!window.PRISM_ON_EXAMPLE, 
-          text: "Move two: the corners are two axes. Across is left ↔ right. Up and down is institutional ↔ populist: the top row trusts the state to run this, the bottom row is talking from the driveway. Top-left calls it a rule with a runway. Bottom-right says my blower works fine." },
         { sel: '.answer-card .ac-z', wait: 'tap',
           text: "That little rail under each one is the author's call on delivery — does this station think the thing actually lands? Left is frustrated, right is realized." },
         { sel: '#answersGrid', wait: 'select', text: "Pick the one that's closest to you. Not the one you admire — the one you'd actually say." },
@@ -92,16 +86,10 @@
     graph: {
       when: () => body.classList.contains('phase-graph') && !body.classList.contains('ticker-live'),
       steps: [
-        { sel: '#padAxisX', wait: 'tap', skipUnless: () => !!window.PRISM_ON_EXAMPLE, 
-          text: "Axis one runs across: left ↔ right. On leaf blowers that's clean air first versus the cost landing on small crews." },
-        { sel: '#padAxisY', wait: 'tap', skipUnless: () => !!window.PRISM_ON_EXAMPLE, 
-          text: "Axis two runs up and down: institutional ↔ populist. Up top you trust the Air Board to write the rule and pay the rebates. Down low you trust your own garage." },
         { sel: '#graphPad', wait: 'pin',
           text: "The plane. Your corner is lit; put your pin down where you sit in it — distance from center is how hard you hold it." },
         { sel: '#zTrack', wait: 'z',
-          text: () => window.PRISM_ON_EXAMPLE
-            ? "Move three, the third axis: delivery. Here it's the question the law is really asking. Does it actually clear the air, or does nothing change on your street? Pull toward the one you believe."
-            : "And the third axis: does it deliver? Pull toward realized if you think this thing lands, frustrated if you think it won't." },
+          text: "And the third axis: does it deliver? Pull toward realized if you think this thing lands, frustrated if you think it won't." },
         { sel: '#graphDialect', wait: 'tap', text: "Words if you want them. Optional. Most people don't, the ones who do are worth reading." },
         { sel: '#graphCommit', wait: 'click' },
       ],
@@ -110,11 +98,9 @@
       when: () => body.classList.contains('ticker-live'),
       steps: [
         { sel: '#gm3d', wait: 'tap',
-          text: () => (window.PRISM_ON_EXAMPLE ? "All three axes, one space: across is left ↔ right, up is institutional, depth is delivery. " : "") + "You're on the plane now. Those twelve orbs are the Reading's own stations, floating at the depth their author gave them. Hold one to read it against your pin." },
+          text: "You're on the plane now. Those twelve orbs are the Reading's own stations, floating at the depth their author gave them. Hold one to read it against your pin." },
         { sel: '#zSlider', wait: 'tap', text: "Your delivery call stays live — slide it and watch the distance to each station change." },
         { sel: '#deltaTicker', wait: 'tap', text: "The strip is Burns. Top row: your burns — where your pin and this Reading's stations disagree. Bottom row: every object the newsroom is watching; a frame burns when someone holds it to the light." },
-        { sel: '#exampleNext', wait: 'click', skipUnless: () => !!window.PRISM_ON_EXAMPLE,
-          text: "That's the whole loop: read it, find your band, pick a voice, pin it, call the delivery. Now do it for real." },
       ],
     },
   };
@@ -302,8 +288,7 @@
     if (cleanupWait) { cleanupWait(); cleanupWait = null; }
     const steps = active.steps;
     // skip steps whose element isn't on screen right now
-    const applies = (st) => !st.skipUnless || st.skipUnless();
-    while (i < steps.length && (!applies(steps[i]) || !resolve(steps[i].sel))) i++;
+    while (i < steps.length && !resolve(steps[i].sel)) i++;
     if (i >= steps.length) return stop(true);
     stepIdx = i;
     const step = steps[i];
@@ -312,8 +297,7 @@
     try { el.scrollIntoView({ block: 'center', behavior: 'smooth' }); } catch (e) {}
     const text = typeof step.text === 'function' ? step.text() : (step.text || el.getAttribute('data-ted-hint') || '');
     textEl.textContent = text;
-    const live = steps.filter(applies);
-    stepEl.textContent = (live.indexOf(step) + 1) + ' / ' + live.length;
+    stepEl.textContent = (i + 1) + ' / ' + steps.length;
     root.classList.add('tt-swap'); setTimeout(() => root.classList.remove('tt-swap'), 60);
     layout();
     cleanupWait = armWait(step, el, () => showStep(stepIdx + 1));

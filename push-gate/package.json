@@ -1,0 +1,4 @@
+{ "name": "push-gate", "version": "1.0.0", "private": true, "type": "module",
+  "description": "Prism's notification door — web push subscriptions + VAPID sender.",
+  "scripts": { "deploy": "wrangler deploy", "test": "node test/vapid.test.mjs" },
+  "devDependencies": { "wrangler": "^4" } }

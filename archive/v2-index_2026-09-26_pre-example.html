@@ -832,15 +832,6 @@ body.ev-step-framing .ev-law { opacity: 1; }
 .ev-law-chip.void { border-style: dashed; white-space: normal; text-align: center; }
 @media (max-height: 860px) { .ev-law { margin-bottom: 10px; } }
 
-/* ── The practice Reading's way out (2026-09-26) ── */
-#exampleNext { position: fixed; left: 0; right: 0; margin: 0 auto; width: max-content; max-width: calc(100vw - 32px); top: calc(var(--top-chrome) + 10px); z-index: 32; display: none;
-  font-family: var(--mono); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: #f0dca2; background: rgba(9,15,32,.9);
-  border: 1px solid rgba(196,156,72,.6); border-radius: 18px; padding: 9px 18px; cursor: pointer; box-shadow: 0 6px 24px rgba(0,0,0,.4); }
-body.on-example.ticker-live #exampleNext { display: block; animation: ev-rise .6s ease 1.2s both; }
-.ev-example-tag { display: none; font-family: var(--mono); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: #f0dca2; margin: 0 0 6px; }
-body.on-example .ev-example-tag { display: block; }
-body.on-example.ticker-live .graph-head { visibility: hidden; }   /* the way-out button takes the prompt's seat */
-
 /* ── GRAPHMAP CENTERING (2026-09-26, Sailor: "the graphmap doesn't center itself") ──
    The graph column is as wide as its widest child (the Z slider, 440px). On
    short windows the committed factory shrinks to 44vh and sat FLUSH LEFT in
@@ -2796,7 +2787,6 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
 
     <!-- STEP 1 · CARD — a clean title card. No body text, never scrolls. -->
     <div class="ev-card" id="evCard">
-      <div class="ev-example-tag">practice round · a small, real law</div>
       <div class="ev-category" id="evCategory"></div>
       <h1 class="ev-title" id="evTitle"></h1>
       <button class="ev-enter ev-begin" id="evBegin" data-ted-hint="This drops you into the framing — the wall text for what happened.">
@@ -3155,7 +3145,6 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
 
 <!-- Recenter the camera to its home framing. Direct body child (same reason as
      the legislators toggle). Hidden until commit. -->
-<button id="exampleNext" type="button">that’s the loop · now a real one &rarr;</button>
 <button class="recenter-btn" id="recenterBtn" type="button" hidden title="Recenter the view">
   <span class="recenter-glyph">&#8982;</span> recenter
 </button>
@@ -3273,8 +3262,7 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
 <script src="../src/js/prismdb.js"></script>
 <script src="../src/js/prism-sync.js"></script>
 <script src="../src/js/prism-field.js"></script>
-<script src="../src/js/push-config.js" onerror="void 0"></script>
-<script src="../src/js/prism-example.js"></script>   <!-- the practice Reading every new tester meets first (2026-09-26) -->   <!-- push gate + VAPID public key (written by Deploy Push Gate) -->   <!-- profiles + public burns via the burn-gate (2026-09-22) -->
+<script src="../src/js/push-config.js" onerror="void 0"></script>   <!-- push gate + VAPID public key (written by Deploy Push Gate) -->   <!-- profiles + public burns via the burn-gate (2026-09-22) -->
 <script src="../src/js/prism-ai.js"></script>
 <!-- Congressional roster as a script (not fetch) so it loads on file:// too,
      where Safari/Chrome block fetch() of local JSON. Sets window.PRISM_MEMBERS_DATA
@@ -3316,7 +3304,6 @@ const SHOW_ALL_TIERS = (() => {
 })();
 function isLiveReading(e) {
   if (!e) return false;
-  if (e.example) return false;                     // the practice Reading never lists or lands (2026-09-26)
   if (SHOW_ALL_TIERS) return true;
   if (e.syncedAt) return true;
   try { const shas = JSON.parse(localStorage.getItem('prism.sync.shas') || '{}') || {}; return !!(e.rid && shas[e.rid]); } catch (_) { return false; }
@@ -3330,18 +3317,6 @@ const WANT_RID = (() => { try { const r = new URLSearchParams(location.search).g
 const EVENT_ID = (() => {
   try { const q = new URLSearchParams(location.search).get('event'); if (q) return q.trim(); } catch (e) {}
   if (WANT_RID) { try { const hit = (PrismDB.getEvents() || []).find(e => e.rid === WANT_RID); if (hit) return hit.id; } catch (e) {} }
-  // The practice Reading (2026-09-26, Sailor): a new tester's first Reading is
-  // a small, real, easy one, so Ted's tour teaches the moves and nothing else
-  // is new. First visit on this device = the tour's first phase never ran.
-  // ?example replays it any time.
-  try {
-    const wantExample = new URLSearchParams(location.search).has('example') || !localStorage.getItem('prism.tour.event');
-    if (wantExample && window.PRISM_EXAMPLE) {
-      let ex = (PrismDB.getEvents() || []).find(e => e.rid === window.PRISM_EXAMPLE.rid);
-      if (!ex || (ex.updatedAt || '') < (window.PRISM_EXAMPLE.updatedAt || '')) ex = PrismDB.importReading(JSON.parse(JSON.stringify(window.PRISM_EXAMPLE)));
-      if (ex) { window.PRISM_ON_EXAMPLE = true; return ex.id; }
-    }
-  } catch (e) {}
   // The portal lands on the MOST RECENT Reading (Sailor, 2026-09-22 phone
   // walk: "I'd want us to land on the most recent event"). The device's
   // active flag is an admin notion and no longer steers the portal.
@@ -3604,15 +3579,6 @@ function buildLawLine(event) {
   }
 }
 buildLawLine(ev);
-if (ev && ev.example) document.body.classList.add('on-example');
-{ const nx = document.getElementById('exampleNext');
-  if (nx) nx.addEventListener('click', () => {
-    const live = (PrismDB.getEvents() || []).filter(isLiveReading)
-      .sort((a, b) => ((b.date || '').localeCompare(a.date || '')) || ((b.updatedAt || '').localeCompare(a.updatedAt || '')));
-    const u = new URL(location.href); u.searchParams.delete('example'); u.searchParams.delete('reading');
-    if (live[0]) u.searchParams.set('event', live[0].id); else u.searchParams.delete('event');
-    location.href = u.toString();
-  }); }
 
 // Splash steps (Sailor 2026-07-11): CARD → FRAMING beat → diatribe. The card
 // is a clean title card; the framing beat carries the wall-text (its develop +
@@ -5449,7 +5415,7 @@ function commitGraph() {
   // The burn goes public under the avatar (2026-09-22) — only when Beam is
   // bound; otherwise the commit stays on this device as before.
   try {
-    if (typeof PrismField !== 'undefined' && PrismField.bound() && !(ev && ev.example)) {   // practice pins stay private
+    if (typeof PrismField !== 'undefined' && PrismField.bound()) {
       const evB = PrismDB.getEvent(EVENT_ID) || {};
       const tilesB = (PrismDB.getTickerEntries(EVENT_ID) || []).slice(-8);
       PrismField.pushBurn({ rid: evB.rid, title: evB.title, x: pinX, y: pinY, z: graphZ, quad: graphQuad, band: graphBand,
@@ -9482,7 +9448,7 @@ function profileCard() {
 
 })();
 </script>
-<script src="../src/js/prism-ted-tour.js?v=2"></script>   <!-- Ted's tour: isolation + a peeking presenter (2026-09-22) -->
+<script src="../src/js/prism-ted-tour.js"></script>   <!-- Ted's tour: isolation + a peeking presenter (2026-09-22) -->
 
 </body>
 </html>

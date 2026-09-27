@@ -12,3 +12,11 @@ data/news_debug.txt
 # trash this folder by hand whenever, git never sees it.
 _to_delete/
 .claude/
+
+# auto-published drafts move aside locally (publish-draft.js)
+data/readings/drafts/claude/_published/
+
+# push-gate: tooling + the transient key file (never committed)
+push-gate/node_modules/
+push-gate/.vapid.tmp
+push-gate/.wrangler/

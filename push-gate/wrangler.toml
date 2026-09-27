@@ -1,0 +1,10 @@
+name = "push-gate"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+
+# NO SECRETS IN THIS FILE. VAPID_PUBLIC, VAPID_PRIVATE_JWK and NOTIFY_KEY are
+# set with `wrangler secret put` by "Deploy Push Gate.command".
+# The KV id names a storage bin; it is not a secret.
+[[kv_namespaces]]
+binding = "PUSH"
+id = "REPLACE_WITH_KV_ID"

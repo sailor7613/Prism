@@ -192,22 +192,6 @@ const PrismSync = (() => {
 
   // ── Pull (published tier) ─────────────────────────────────
   // Returns { pulled: n, checked: n } or throws with a readable message.
-  // git's blob sha = sha1("blob <bytes>\0" + bytes): lets a raw fetch prove
-  // it is the exact version the listing named.
-  async function rawVerified(path, sha) {
-    try {
-      const res = await fetch(`https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/${path}?t=${Date.now()}`, { cache: 'no-store' });
-      if (!res.ok) return null;
-      const bytes = new Uint8Array(await res.arrayBuffer());
-      const head = new TextEncoder().encode('blob ' + bytes.length + '\0');
-      const all = new Uint8Array(head.length + bytes.length); all.set(head); all.set(bytes, head.length);
-      const d = new Uint8Array(await crypto.subtle.digest('SHA-1', all));
-      const hex = Array.from(d, b => b.toString(16).padStart(2, '0')).join('');
-      if (sha && hex !== sha) return null;
-      return JSON.parse(new TextDecoder().decode(bytes));
-    } catch (e) { return null; }
-  }
-
   async function pullPublished() {
     const res = await fetch(`${API}?ref=${BRANCH}&t=${Date.now()}`, { headers: headers() });
     if (res.status === 404) return { pulled: 0, checked: 0 };   // no readings dir yet — fine
@@ -218,17 +202,11 @@ const PrismSync = (() => {
     for (const f of list) {
       const rid = f.name.replace(/\.json$/, '');
       if (known[rid] === f.sha) continue;                        // already have this exact version
-      // Body from raw (no API rate limit — 60 anonymous calls/hour per
-      // network was the beta's ceiling, 2026-09-26), verified against the
-      // listing's blob sha so a stale CDN copy can never be cached as new;
-      // on a mismatch, fall back to the contents API as before.
-      let reading = await rawVerified(`${DIR}/${f.name}`, f.sha);
-      if (!reading) {
-        const fres = await fetch(f.url, { headers: headers() });   // contents API per-file (includes content)
-        if (!fres.ok) continue;
-        const body = await fres.json();
-        try { reading = JSON.parse(b64decode(body.content)); } catch(e) { continue; }
-      }
+      const fres = await fetch(f.url, { headers: headers() });   // contents API per-file (includes content)
+      if (!fres.ok) continue;
+      const body = await fres.json();
+      let reading;
+      try { reading = JSON.parse(b64decode(body.content)); } catch(e) { continue; }
       if (!reading.rid) reading.rid = rid;                       // filename is authoritative
       // Detach bill readings before the event upsert — they live in
       // the store, never on the event object.

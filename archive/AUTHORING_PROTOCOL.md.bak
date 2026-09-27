@@ -1,6 +1,6 @@
 # The daily drafting — authoring protocol for Claude drafts
 
-*v1.2 · 2026-09-26 (central object + tethers) · v1.1 2026-09-25 (overlay; no git) · v1 2026-09-22 · Sailor + Claude. This file is the canonical instruction the daily
+*v1.3 · 2026-09-26 (auto-publish) · v1.2 2026-09-26 (central object + tethers) · v1.1 2026-09-25 (overlay; no git) · v1 2026-09-22 · Sailor + Claude. This file is the canonical instruction the daily
 drafting task follows. Edit it here; the task reads it fresh each run.*
 
 ## What this is
@@ -65,7 +65,7 @@ authoring anything:
    article list first; search for primary text (the bill, the order, the opinion) when
    it exists. Pre-window background goes in `meta.frameFirst.background_preWindow`, not
    the frame. Then `prompt` (one line, the question the Reading asks) and
-   `framingKeywords`. Keep the frame to ~130 words: the portal reads it on one screen.
+   `framingKeywords` (3–6 phrases, each three words or fewer; longer ones don't render). Keep the frame to ~130 words: the portal reads it on one screen.
 
 3b. **The central object and its law (v1.2, 2026-09-26).** Sailor's standing direction:
    everything in Prism is unified to a central object, and ideally every event relates to
@@ -103,10 +103,10 @@ authoring anything:
    sentence, mechanism not mood), then `instrument{holder, trusted}` — **the holder as
    this station sees it, and whether the station trusts that holder to deliver to
    them** (R-0921-1: a rim's z is signed by holder-trust). Only then the words:
-   `text` (2–3 sentences in the station's own voice), `xWord`, `yWord`, `words[]`.
+   `text` (2–3 sentences in the station's own voice: a person talking, first person, the way they'd say it out loud. Not a report of what someone did ("He went on CNBC and accused…"), not narration about the station ("The left reads…"). Contractions, questions and fragments are fine. **One person, singular: never "we / us / our"** (Sailor's 2026-07-25 ruling). The speaker notices their side ("the people I vote with"), never speaks as it. The full rules are `PRISM_VOICE_RULES` in `admin-surface.html`; they bind drafts too), `xWord`, `yWord`, `words[]`.
    Author blind if possible: a subagent given only the frame, prompt, keywords, axes
    and the formula — no other Readings, no register.
-7. **Diatribe** (`LF LC LD RF RC RD`, each `{text, side, band}`), `diatribeLayer`,
+7. **Diatribe** (`LF LC LD RF RC RD`, each `{text, side, band}`), each written **in the station's own voice**: first person singular (no we/us/our), one or two spoken sentences ("He got the anger right and the blame wrong…"), never narration about the side ("The left reads…"). Sailor, 2026-09-26: the narrated form reads clunky., `diatribeLayer`,
    `objectLayer` (stated vs operative object; an inversion lean if there is one).
 8. **Sweep again** — the whole file. All clean or it does not land.
 9. **Record the two pathologies on the object card**, in the register you write back:
@@ -131,6 +131,14 @@ meta, rid, schema: "reading/v1", formulaVersion: "v1", updatedAt`. Plus:
 ## Where it lands, and the note
 
 - Write each draft to `Prism/data/readings/drafts/claude/<rid>.json`.
+- **Then publish it (v1.3, 2026-09-26, Sailor: the beta runs on auto-publish).** Run
+  `node Prism/scripts/newsroom/publish-draft.js <rid>` from the Mac's shell. It re-runs the
+  checker, files the Reading into `data/readings/` through GitHub's API (no git), marks the
+  object `promoted` on the remote overlay, and moves the local draft to
+  `drafts/claude/_published/`. Publishing notifies every subscribed tester, so a draft
+  that isn't beta-ready stays a draft: exit code 3 = the kill switch
+  (`data/newsroom/autopublish.json`) is off; 4 = checker not clean; 5 = no token; 6 = Sailor
+  already owns the published copy. Report the code in the morning note and move on.
 - Record the drafting in the **overlay**, `Prism/data/newsroom/objects.local.json`, never in
   `objects.json` (v1.1, 2026-09-25). The scan owns `objects.json` and the drafting task owns
   the overlay, so the two never collide on Sailor's pull. Under `objects.<oid>` set

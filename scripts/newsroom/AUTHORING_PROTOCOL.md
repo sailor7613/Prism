@@ -1,6 +1,6 @@
 # The daily drafting — authoring protocol for Claude drafts
 
-*v1.2 · 2026-09-26 (central object + tethers) · v1.1 2026-09-25 (overlay; no git) · v1 2026-09-22 · Sailor + Claude. This file is the canonical instruction the daily
+*v1.3 · 2026-09-26 (auto-publish) · v1.2 2026-09-26 (central object + tethers) · v1.1 2026-09-25 (overlay; no git) · v1 2026-09-22 · Sailor + Claude. This file is the canonical instruction the daily
 drafting task follows. Edit it here; the task reads it fresh each run.*
 
 ## What this is
@@ -131,6 +131,14 @@ meta, rid, schema: "reading/v1", formulaVersion: "v1", updatedAt`. Plus:
 ## Where it lands, and the note
 
 - Write each draft to `Prism/data/readings/drafts/claude/<rid>.json`.
+- **Then publish it (v1.3, 2026-09-26, Sailor: the beta runs on auto-publish).** Run
+  `node Prism/scripts/newsroom/publish-draft.js <rid>` from the Mac's shell. It re-runs the
+  checker, files the Reading into `data/readings/` through GitHub's API (no git), marks the
+  object `promoted` in the local overlay, and moves the local draft to
+  `drafts/claude/_published/`. Publishing notifies every subscribed tester, so a draft
+  that isn't beta-ready stays a draft: exit code 3 = the kill switch
+  (`data/newsroom/autopublish.json`) is off; 4 = checker not clean; 5 = no token; 6 = Sailor
+  already owns the published copy. Report the code in the morning note and move on.
 - Record the drafting in the **overlay**, `Prism/data/newsroom/objects.local.json`, never in
   `objects.json` (v1.1, 2026-09-25). The scan owns `objects.json` and the drafting task owns
   the overlay, so the two never collide on Sailor's pull. Under `objects.<oid>` set

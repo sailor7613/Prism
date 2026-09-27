@@ -1,0 +1,39 @@
+# notify-reading — a push to every subscribed tester when a NEW Reading
+# publishes (2026-09-26). Fires on any commit that adds data/readings/<rid>.json
+# (auto-published Claude drafts and Sailor's own publishes alike); edits to an
+# existing Reading don't notify. Needs the repo secret PRISM_NOTIFY_KEY
+# (printed once by "Deploy Push Gate.command"); without it the job skips.
+name: notify-reading
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/readings/*.json'
+permissions:
+  contents: read
+jobs:
+  notify:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    env:
+      NOTIFY_KEY: ${{ secrets.PRISM_NOTIFY_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Find new Readings and notify
+        run: |
+          if [ -z "$NOTIFY_KEY" ]; then echo "No PRISM_NOTIFY_KEY secret — skipping"; exit 0; fi
+          BEFORE="${{ github.event.before }}"
+          if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then BEFORE="HEAD~1"; fi
+          NEW=$(git diff --name-only --diff-filter=A "$BEFORE" HEAD -- 'data/readings/*.json' | grep -E '^data/readings/rdg_[a-z0-9]+\.json$' || true)
+          if [ -z "$NEW" ]; then echo "No new Readings in this push"; exit 0; fi
+          COUNT=$(echo "$NEW" | wc -l | tr -d ' ')
+          FIRST=$(echo "$NEW" | head -1)
+          TITLE=$(node -e 'const r=require("./"+process.argv[1]); process.stdout.write(String(r.title||"A new Reading"))' "$FIRST")
+          PROMPT=$(node -e 'const r=require("./"+process.argv[1]); process.stdout.write(String(r.prompt||"").slice(0,160))' "$FIRST")
+          if [ "$COUNT" -gt 1 ]; then BODY="$COUNT new Readings, starting with $TITLE."; HEAD="New in Prism"; else BODY="$PROMPT"; HEAD="$TITLE"; fi
+          RID=$(basename "$FIRST" .json)
+          PAYLOAD=$(HEAD="$HEAD" BODY="$BODY" RID="$RID" node -e 'process.stdout.write(JSON.stringify({key:process.env.NOTIFY_KEY,title:process.env.HEAD,body:process.env.BODY||"A new Reading is up.",url:"./v2/index.html?reading="+process.env.RID}))')
+          echo "Notifying: $HEAD"
+          curl -s -m 60 -X POST https://push-gate.shanecorwin.workers.dev/notify -H 'content-type: application/json' --data-binary "$PAYLOAD"; echo
