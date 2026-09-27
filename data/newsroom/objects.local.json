@@ -1,6 +1,6 @@
 {
  "schema": "prism_object_overlay_v1",
- "updatedAt": "2026-09-27T04:35:00Z",
+ "updatedAt": "2026-09-27T06:09:05.541Z",
  "note": "Written ONLY by the drafting task (Sailor commits it). The scan owns objects.json and only reads this file. See scripts/newsroom/overlay.js.",
  "objects": {
   "obj_astate_bills-changes-elections-gavin": {
@@ -342,6 +342,54 @@
     "S. 1241",
     "H.R. 2548",
     "Graham Russia sanctions bill"
+   ]
+  },
+  "obj_thepresi_approved-cancel-congressionally-funds": {
+   "status": "drafted",
+   "drafts": {
+    "claude": "rdg_yl1nla2fcy3v"
+   },
+   "draftedOn": "2026-09-26",
+   "corrections": [
+    {
+     "field": "formedOn",
+     "from": "2026-09-27",
+     "to": "2026-09-25",
+     "why": "The special message went to Congress Friday 09-25 (Newsweek 09-25 23:03 EDT; ABC \"Friday evening\"); 09-27 is the syndicated copies date — report date, not as-of date.",
+     "by": "Claude (drafting)",
+     "on": "2026-09-27"
+    },
+    {
+     "field": "kind",
+     "from": "vote",
+     "to": "executive action — special rescission message under the Impoundment Control Act (2 U.S.C. §683)",
+     "why": "Nothing was voted on; the point of a pocket rescission is that no vote happens.",
+     "by": "Claude (drafting)",
+     "on": "2026-09-27"
+    },
+    {
+     "field": "holder",
+     "from": "the President",
+     "to": "the President through OMB (Director Russ Vought); delivery held by the calendar — the funds lapse at fiscal-year end, five days after the message — with Congress and the courts as the only brakes",
+     "why": "Right actor, but the instrument runs on the clock, not a signature.",
+     "by": "Claude (drafting)",
+     "on": "2026-09-27"
+    }
+   ],
+   "inversions": [
+    {
+     "station": "object",
+     "bands": "objectLayer",
+     "lean": "the 1974 Impoundment Control Act, written to stop presidential impoundment, is the vehicle of this one (y)",
+     "prior": "the Act itself (1974)",
+     "ruled": false
+    }
+   ],
+   "permanenceNote": "A RETURN: the first pocket rescission in nearly 50 years (late Aug 2025, $4.9B foreign aid) went quiet after the Supreme Court stay of Sept 2025 without a merits ruling; the same maneuver returns one year later on refugee and diversity money. The register never carried the 2025 arc.",
+   "aliasCandidates": [
+    "pocket rescission",
+    "$810 million rescission",
+    "Trump cancels $1B in approved funds"
    ]
   }
  }

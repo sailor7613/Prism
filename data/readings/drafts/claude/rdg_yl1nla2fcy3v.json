@@ -1,0 +1,475 @@
+{
+ "centralObject": {
+  "kind": "object",
+  "ref": "Special rescission message of 2026-09-25 under the Impoundment Control Act (2 U.S.C. §683)",
+  "name": "The September 25 pocket rescission: about $810 million held until it lapses"
+ },
+ "tethers": [
+  {
+   "statute": "Impoundment Control Act of 1974",
+   "cite": "Pub. L. 93-344, Title X; 2 U.S.C. §§681-688 (rescission: §683)",
+   "title": "Congressional Budget and Impoundment Control Act of 1974, Title X",
+   "enacted": "1974",
+   "relation": "invokes",
+   "why": "The message is sent under §1012 (2 U.S.C. §683), which lets the President withhold funds for 45 days of continuous session while Congress considers a rescission. Sent five days before the funds lapse, the 45 days outlast the money: the pocket. The Act was written to stop presidential impoundment; here it is the instrument."
+  },
+  {
+   "billId": "hr-119-4",
+   "bill": "H.R. 4",
+   "title": "Rescissions Act of 2025",
+   "relation": "adjacent",
+   "statusAsOf": "Became Public Law 119-28 on 2025-07-24",
+   "why": "The last rescission that went the ordinary route: proposed under the same Act and passed by both chambers (about $9 billion). The contrast the object stands against: a rescission Congress voted on.",
+   "inDb": true
+  },
+  {
+   "billId": "hr-119-7148",
+   "bill": "H.R. 7148",
+   "title": "Consolidated Appropriations Act, 2026",
+   "relation": "adjacent",
+   "statusAsOf": "Became Public Law 119-75 on 2026-02-03",
+   "why": "An enacted fiscal-2026 appropriations law; the rescinded accounts were appropriated for fiscal 2026. Which of the fiscal-2026 acts carries each rescinded account (ORR, migrant education, DOJ Community Relations Service, MBDA, HUD counseling) is NOT verified in this draft; Sailor's Fetch Tethered Bills can confirm or drop this tether.",
+   "inDb": true
+  }
+ ],
+ "linkedBills": [
+  "hr-119-4",
+  "hr-119-7148"
+ ],
+ "title": "Held Until It Expires",
+ "category": "Budget · Appropriations · Immigration · Separation of Powers",
+ "date": "2026-09-25",
+ "prompt": "Congress wrote the checks; the White House is holding them until they expire. Is that a cut, or a way around the vote?",
+ "framing": "On Friday, September 25, 2026, the White House sent Congress a special message proposing to cancel about $810 million that Congress had appropriated for fiscal 2026; the administration put the figure near $1 billion. The largest piece is $567 million from the HHS Office of Refugee Resettlement. Smaller pieces come from migrant-student education, a Justice Department office that mediates community racial conflict, the Minority Business Development Agency and HUD housing counseling. The 1974 Impoundment Control Act lets a President hold funds for 45 days of session while Congress considers a rescission; these funds lapse when the fiscal year ends, five days after the message. GAO has held such a pocket rescission unlawful. Susan Collins, the Republican who chairs Senate Appropriations, called it illegal that night.",
+ "framingKeywords": [
+  "pocket rescission",
+  "power of the purse",
+  "refugee resettlement",
+  "five days"
+ ],
+ "prevalentAxis": "x",
+ "split": {
+  "topology": "axis",
+  "strength": 0.45,
+  "seam": "y at the rim (institutional rims vs populist rims), off the declared prevalent axis x",
+  "rationale": "The stated object (a cut to refugee, migrant and diversity programs) runs along x, so the scalar does too. But the z split does not: all six center bands expect the money to lapse (+0.2 to +0.7), because the mechanism is a calendar and the Supreme Court let the 2025 one stand. At the rim the stations sort by y: both institutional rims (A, B) believe the law will make the money flow and sign negative; both populist rims (C, D) believe the cut lands and sign positive, C in despair and D in triumph. The fight at the rim is about whether the law binds the holder, not about refugees.",
+  "zPattern": {
+   "centers": {
+    "A": 0.5,
+    "B": 0.2,
+    "C": 0.6,
+    "D": 0.7
+   },
+   "rims": {
+    "A": -0.6,
+    "B": -0.3,
+    "C": 0.8,
+    "D": 0.9
+   },
+   "note": "Centers are fluid z; coalition z: A +0.3, B +0.5, C +0.3, D +0.4. All eight center bands positive: every station that reads the mechanism expects the cut to hold. Rims split on y, not x. The two institutional rims are the only negative bands, and each names OMB/Vought as the holder it does not trust to prevail. C rim is anti-valent: it believes delivery and hates it (trusted:true meaning relied on, flagged by the blind author as an exception note)."
+  },
+  "ruledBy": null,
+  "date": "2026-09-27"
+ },
+ "antiValentBand": "denominated",
+ "antiValentRationale": "At the rim the left-populist station is the most certain the cut lands (+0.8) and the right-institutional station doubts it (−0.3): the rim signs by whether the law or the holder is trusted to win, not by who wants the money spent.",
+ "axes": {
+  "x": {
+   "pos": "Right",
+   "neg": "Left"
+  },
+  "y": {
+   "pos": "Institutional",
+   "neg": "Populist"
+  },
+  "z": {
+   "pos": "the money is gone: the funds lapse unspent and the cancellation holds",
+   "neg": "the money flows: Congress, a court or the law makes the White House spend it"
+  }
+ },
+ "responses": {
+  "A": {
+   "fluid": {
+    "z": 0.5,
+    "zReason": "Five days to lapse, no vote required, and a Supreme Court that already let the 2025 version stay withheld means GAO's opinion has no enforcement arm before the money expires.",
+    "instrument": {
+     "holder": "OMB and the fiscal-year calendar",
+     "trusted": true
+    },
+    "text": "I think it's a way around the vote, and a clean one legally speaking: GAO says it's unlawful, but GAO can't write a check. The Act gives him 45 days, the money dies in five, and the Court already shrugged at this in 2025. Unless a judge freezes the clock this week, that $567 million is gone.",
+    "xWord": "refugee resettlement",
+    "yWord": "GAO",
+    "words": [
+     "no enforcement arm",
+     "clock runs out",
+     "45 versus five"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0.3,
+    "zReason": "The lapse mechanism still favors the White House, but a fast suit or a bill keeping the funds available could pull some of it back, and I give that more weight than the lawyers do.",
+    "instrument": {
+     "holder": "federal courts on an emergency motion",
+     "trusted": false
+    },
+    "text": "The people I work with are already calling it theft on cable, and I get why, but that word lets everyone skip the boring part: who files, where, and by when. Congress could pass a bill this week keeping those funds available if the appropriators actually write one. I'd bet it lapses, and I'm not sure my own side's anger is aimed at the thing that could stop it.",
+    "xWord": "appropriators",
+    "yWord": "who files",
+    "words": [
+     "keep available",
+     "who files",
+     "not just outrage"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.6,
+    "zReason": "The rim sees Vought as the holder and doesn't trust a lawless maneuver GAO already condemned to survive Congress and the courts.",
+    "instrument": {
+     "holder": "Vought's OMB",
+     "trusted": false
+    },
+    "text": "This is theft from the American people, and it's illegal on its face. The law is the law, and the courts will make him spend it.",
+    "xWord": "theft",
+    "yWord": "illegal",
+    "words": [
+     "rule of law",
+     "power of purse",
+     "he'll lose"
+    ],
+    "source": ""
+   },
+   "xSide": "left",
+   "source": ""
+  },
+  "B": {
+   "fluid": {
+    "z": 0.2,
+    "zReason": "The lapse favors OMB, but Collins holding the Appropriations gavel gives appropriators some leverage to keep the funds available, so it's closer to a coin flip than the White House thinks.",
+    "instrument": {
+     "holder": "OMB, subject to the Appropriations Committee",
+     "trusted": true
+    },
+    "text": "I don't object to cutting refugee money or MBDA; I voted for the $9 billion rescission last year and I'd do it again. What I object to is skipping the vote. If Collins moves a bill keeping those funds available, that five-day trick gets a lot less clever.",
+    "xWord": "skipping vote",
+    "yWord": "Collins",
+    "words": [
+     "vote it through",
+     "keep available",
+     "it worked"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0.5,
+    "zReason": "Leadership in my own party won't spend floor time defending refugee money in five days, so the lapse almost certainly holds even though the Chair is right that it's illegal.",
+    "instrument": {
+     "holder": "the fiscal-year deadline",
+     "trusted": true
+    },
+    "text": "Collins called it illegal that night, and she's right, but I can count votes. The folks I serve with like the cuts more than they like the precedent, and nobody's going to spend a floor fight in five days defending $567 million for refugee resettlement. I'm watching my party trade the purse for a win it could've gotten honestly.",
+    "xWord": "precedent",
+    "yWord": "leadership",
+    "words": [
+     "count votes",
+     "trade the purse",
+     "could've voted"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.3,
+    "zReason": "The rim casts OMB as the holder and doesn't trust an unelected budget office to override Article I for long.",
+    "instrument": {
+     "holder": "OMB",
+     "trusted": false
+    },
+    "text": "Article I isn't a suggestion. The purse belongs to Congress, and OMB doesn't get the last word.",
+    "xWord": "Article One",
+    "yWord": "Congress",
+    "words": [
+     "Article I",
+     "purse belongs",
+     "not OMB"
+    ],
+    "source": ""
+   },
+   "xSide": "right",
+   "source": ""
+  },
+  "C": {
+   "fluid": {
+    "z": 0.6,
+    "zReason": "Resettlement agencies have every reason to plan for the money to be gone, because the 2025 Court order showed a lapse-and-shrug is what actually happens.",
+    "instrument": {
+     "holder": "the Supreme Court's 2025 order",
+     "trusted": true
+    },
+    "text": "If I ran a resettlement office I'd be drafting layoff notices tonight, because I watched the foreign aid money vanish last year while the Court said it wasn't deciding anything. Five days isn't enough time to win a lawsuit, it's barely enough to file one. So yeah, it's a cut, dressed up as a proposal.",
+    "xWord": "resettlement",
+    "yWord": "layoff notices",
+    "words": [
+     "five days",
+     "layoff notices",
+     "barely file"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0.3,
+    "zReason": "Most of it likely lapses, but I think a coordinated suit from agencies and states could claw back some pieces, and I don't want fatalism on my own side to guarantee the loss.",
+    "instrument": {
+     "holder": "agency and state lawsuits",
+     "trusted": false
+    },
+    "text": "A lot of the people I organize with have already decided it's gone and moved on to rage posting, and I understand it, but migrant-student money and housing counseling have names attached. Is there a judge who'll move in five days? Probably not, but somebody should at least make them say no on the record.",
+    "xWord": "migrant students",
+    "yWord": "organize",
+    "words": [
+     "make them say",
+     "names attached",
+     "not give up"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": 0.8,
+    "zReason": "The rim sees Vought and a compliant Court as the holder and fully expects them to deliver the cut, trusting their reliability while hating the result.",
+    "instrument": {
+     "holder": "Vought and a Court that lets him",
+     "trusted": true,
+     "exception": "trusted here means relied upon to carry it out, not approved of; the rim believes delivery and despises it"
+    },
+    "text": "They're stealing from refugees and they'll get away with it, because they always do. The Court already told him he can.",
+    "xWord": "stealing",
+    "yWord": "Court",
+    "words": [
+     "stealing from refugees",
+     "always do",
+     "rigged court"
+    ],
+    "source": ""
+   },
+   "xSide": "left",
+   "source": ""
+  },
+  "D": {
+   "fluid": {
+    "z": 0.7,
+    "zReason": "The money expires in five days, Congress doesn't have to vote, and the Court let last year's version stand, so the mechanism does exactly what it's built to do.",
+    "instrument": {
+     "holder": "Russ Vought",
+     "trusted": true
+    },
+    "text": "Vought found a door the law left open and walked through it. Congress had 45 days in the statute and the fiscal year gives it five, that's not the President's fault. That refugee office money was never helping citizens anyway.",
+    "xWord": "Vought",
+    "yWord": "door open",
+    "words": [
+     "left open",
+     "five days",
+     "not citizens"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0.4,
+    "zReason": "I expect the cut to hold, but Collins and GAO give a future court something to grab, and I'm less sure than the people around me that this sticks.",
+    "instrument": {
+     "holder": "the Supreme Court",
+     "trusted": true
+    },
+    "text": "I'm glad the refugee money's going, don't get me wrong. But the folks cheering loudest never ask what happens when a Democrat in the White House pockets money for the border. Collins isn't a nobody, and one of these times the Court actually rules on the merits.",
+    "xWord": "border",
+    "yWord": "Collins",
+    "words": [
+     "next president",
+     "on the merits",
+     "glad but"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": 0.9,
+    "zReason": "The rim trusts Trump as the holder to finish the job and sees nothing that can stop him.",
+    "instrument": {
+     "holder": "Trump",
+     "trusted": true
+    },
+    "text": "No more tax dollars for illegal aliens and woke DEI offices. Trump's cutting it, and it's done.",
+    "xWord": "aliens",
+    "yWord": "Trump",
+    "words": [
+     "America first",
+     "it's done",
+     "defund woke"
+    ],
+    "source": ""
+   },
+   "xSide": "right",
+   "source": ""
+  }
+ },
+ "diatribe": {
+  "LF": {
+   "text": "It's a way around the vote, and I think it works. GAO can call it unlawful all day; the money lapses in five days unless a judge moves first.",
+   "side": "left",
+   "band": "fluid",
+   "keywords": [
+    "five days",
+    "GAO"
+   ]
+  },
+  "LC": {
+   "text": "The people I stand with keep saying theft, and they're not wrong, but saying it won't put $567 million back into refugee resettlement before the year runs out.",
+   "side": "left",
+   "band": "coalition",
+   "keywords": [
+    "theft",
+    "refugee resettlement"
+   ]
+  },
+  "LD": {
+   "text": "It's stealing from refugees with a budget office letterhead on it, and I don't expect anyone in that building to answer for it.",
+   "side": "left",
+   "band": "denominated",
+   "keywords": [
+    "stealing",
+    "refugees"
+   ]
+  },
+  "RF": {
+   "text": "I'd vote for most of these cuts tomorrow. What I won't defend is letting the calendar cast the vote Congress never took.",
+   "side": "right",
+   "band": "fluid",
+   "keywords": [
+    "vote",
+    "calendar"
+   ]
+  },
+  "RC": {
+   "text": "I'm glad that money's gone, and I notice the people cheering loudest never ask what the next President pockets with the same trick.",
+   "side": "right",
+   "band": "coalition",
+   "keywords": [
+    "same trick",
+    "next President"
+   ]
+  },
+  "RD": {
+   "text": "Congress kept funding this stuff, so Trump stopped it himself. Done.",
+   "side": "right",
+   "band": "denominated",
+   "keywords": [
+    "it's done"
+   ]
+  }
+ },
+ "diatribeLayer": "stated",
+ "objectLayer": {
+  "declared": "stated",
+  "stated": "Cancelling about $810 million the administration says funds illegal immigration and diversity programs that do not benefit citizens.",
+  "operative": "An executive cancellation of appropriated money that needs no vote: the 45-day review in the Impoundment Control Act outlasts funds that lapse five days after the message.",
+  "inversion": "Lean, not ruled: the Impoundment Control Act was written in 1974 to stop Presidents withholding appropriated money; here its review clock is the instrument of the withholding. The statute meant to bind the holder is the holder's tool. Object-level, on y."
+ },
+ "window": {
+  "close": "2026-09-25",
+  "why": "Trigger day = the day the object finished forming: the special message went to Congress on Friday 2026-09-25 (Newsweek, published 2026-09-25 23:03 EDT; ABC: \"Friday evening\"). The register read 2026-09-27, the syndicated copies' date: report date, not as-of date. Declared at authoring, before any z.",
+  "ruledBy": null,
+  "ruledOn": null
+ },
+ "meta": {
+  "dialecticsRef": "obj_thepresi_approved-cancel-congressionally-funds",
+  "status": "draft",
+  "source": "Claude draft — daily newsroom drafting (scheduled), authored z-first against Trace Formula v1 per scripts/newsroom/AUTHORING_PROTOCOL.md v1.3. Filed to drafts/claude; not through the surface; no aiDeltas lineage. Rulings: none.",
+  "editHistory": [
+   {
+    "at": "2026-09-27T06:45:00.000Z",
+    "by": "Claude (scheduled drafting)",
+    "what": "authored: object -> window (re-declared 09-27 -> 09-25) -> frame -> sweep -> central object + tethers -> axes -> twelve (blind subagent) -> five factual edits by Claude (see meta.blindAuthoring.editsAfterHandback) -> split/diatribe/layers -> sweep"
+   }
+  ],
+  "aiDeltas": [],
+  "frameFirst": {
+   "date": "2026-09-27",
+   "by": "Claude, under §4c (window declared at authoring; sweep before z). Object NOT ruled — Claude's read, correctable by Sailor.",
+   "status": "Frame authored and swept before any z; the twelve authored blind z-first by a subagent (meta.blindAuthoring). Stations unruled.",
+   "objectLean": {
+    "stated": "a cut to refugee, migrant-student and diversity programs",
+    "operative": "a cancellation by calendar: no vote, because the review window outlasts the money",
+    "inversion": "lean, not ruled: the anti-impoundment statute used as the impoundment's vehicle"
+   },
+   "titleLean": "'Held Until It Expires' — Claude's; Sailor names Readings",
+   "sourcesInWindow": [
+    "Newsweek 2026-09-25 23:03 EDT (\"Lawmakers rip Trump over nearly $1B pocket rescission move\"): Friday announcement, ~$1B / $810M, $567M HHS, $25M education, GAO \"unlawful\", Collins \"illegal\", Murray \"theft from the American people\", Merkley, Murphy",
+    "ABC News (story 136772703): Friday evening; $567M HHS; Collins chairs Senate Appropriations",
+    "TIME 2026-09-26 explainer (report date after close; used only to confirm in-window facts: ORR $567M, ~$25M migrant students, $15M DOJ office, $10M MBDA, HUD counseling, 45-day rule)",
+    "Fox News 2026-09-26 (report date after close; Vought's reading of the Act; used for bands' background only)"
+   ],
+   "background_preWindow": [
+    "2025-08 (late August): $4.9 billion foreign-aid pocket rescission, first in nearly 50 years (TIME, Newsweek, Fox)",
+    "2025-09: Supreme Court stayed the lower-court injunction, letting about $4 billion stay withheld, without ruling on the merits (TIME, ABC)",
+    "2025-07-24: Rescissions Act of 2025 (H.R. 4) became law — about $9 billion rescinded by vote (catalog)",
+    "GAO's standing position that pocket rescissions are unlawful (Newsweek, TIME)"
+   ]
+  },
+  "framingAudit": {
+   "date": "2026-09-27",
+   "by": "Claude — frame-first authoring under §4c; sweep run BEFORE any z. Not a ruling.",
+   "window": "2026-09-25 (declared, see window.why)",
+   "verifiedInWindow": [
+    "special message sent Friday 2026-09-25 (Newsweek 2026-09-25; ABC \"Friday evening\")",
+    "about $810 million (Collins figure) / near $1 billion (administration) — Newsweek 2026-09-25",
+    "$567 million from HHS Office of Refugee Resettlement — Newsweek 2026-09-25; ABC; TIME",
+    "migrant-student education (~$25M), DOJ community racial-conflict office ($15M), MBDA ($10M), HUD housing counseling — itemised as of the 09-25 message (TIME, Fox; amounts kept out of the frame except $567 million)",
+    "45 days of session under the 1974 Impoundment Control Act — statute",
+    "funds lapse at fiscal-year end, five days after the message — Newsweek 2026-09-25 (fiscal year ends 2026-09-30)",
+    "GAO: pocket rescissions \"unlawful\" — standing position, quoted Newsweek 2026-09-25",
+    "Collins called it illegal — Newsweek 2026-09-25 23:03 EDT (ABC carries her fuller statement dated 09-26)"
+   ],
+   "keptUnverifiedDate": [],
+   "deliberatelyExcluded_afterWindow": [
+    "Collins's fuller statement (\"a clear violation of the law\", \"intentionally withheld these funds for months\") — ABC, dated 2026-09-26",
+    "the fiscal-year-end date itself (2026-09-30) — future-dated inside the window; written as \"when the fiscal year ends, five days after the message\"",
+    "any lawsuit filed after the message — none found in window",
+    "the $70 million \"international education\" line (Fox 09-26) — not confirmed elsewhere; left out"
+   ]
+  },
+  "blindAuthoring": {
+   "date": "2026-09-27",
+   "author": "Claude (general-purpose subagent) — blind: given the frame, prompt, keywords, axes, a station/radius brief, a short dated background (2025 precedent, Rescissions Act of 2025, Vought's reading, Murray 09-25), R-0921-1 and the voice rules only; no other Reading, no register, no web",
+   "zFirst": true,
+   "instrumentOnAll12": true,
+   "rulings": "NONE — every station awaits Sailor's ruling. z, zReason and instrument as authored by the blind author; no z changed.",
+   "editsAfterHandback": {
+    "by": "Claude (orchestrator), 2026-09-27 — factual repairs only, no z or instrument changed; Sailor may revert",
+    "what": [
+     "B.fluid, B.coalition, A.coalition: the blind author assumed a stopgap fight was still ahead; the fiscal-2027 continuing resolution (H.R. 6500) had already become law on 2026-09-02, so \"the stopgap\" became \"a bill\" / a vote to extend availability. zReasons adjusted in wording to match, same z.",
+     "B.fluid: \"in July\" (bare month, read as this year) → \"last year\", since the Rescissions Act was July 2025.",
+     "C.fluid: the speaker's claim that a local office is \"already drafting layoff notices\" (an unsourced fact) → conditional.",
+     "D.denominated: \"illegals\" → \"illegal aliens\" (the statutory term the station itself uses); xWord to match."
+    ]
+   },
+   "authorNote": "The hardest bands were C denominated and A denominated, because the rim rule forces the sign from trust, and the natural left rims split: the institutional rim trusts the law (so it names Vought as holder, distrusts him, and goes negative) while the populist rim is fatalistic and believes delivery, which only fits the rule if 'trusted' means relied upon, so I flagged it with an exception. B denominated also strained: an Article I identity rim doesn't really forecast, and its -0.3 is the z I trust least, probably off by 0.4 or more toward positive given the five-day math. B fluid at +0.2 relies on a stopgap extending availability, which isn't in the brief, so it may be too low by about 0.2. The z spread runs from -0.6 to +0.9, and the discourse sits mostly in the centers (+0.2 to +0.7)."
+  },
+  "newsroomFindings": {
+   "inversionLeans": [
+    "Object-level, on y: the Impoundment Control Act (1974), written to stop presidential impoundment, is the vehicle of this one (objectLayer). Lean, not ruled.",
+    "No station-level inversion found in window: the right-institutional appropriators who voted for the 2025 rescission by ordinary vote (H.R. 4) now object to the pocket route — consistent (vote yes, pocket no), not a reversal."
+   ],
+   "permanence": "A RETURN. The first pocket rescission in nearly 50 years (late August 2025, $4.9 billion foreign aid) left the discourse after the Supreme Court's September 2025 stay without a merits ruling — unresolved. It returns on the same calendar, one year later, aimed at refugee and diversity programs. The register never carried the 2025 arc."
+  }
+ },
+ "rid": "rdg_yl1nla2fcy3v",
+ "ridLineage": "minted 2026-09-27 (UTC) by the scheduled newsroom drafting task; filed directly to drafts/claude",
+ "schema": "reading/v1",
+ "formulaVersion": "1",
+ "updatedAt": "2026-09-27T06:45:00.000Z",
+ "authorTier": "claude",
+ "newsroom": {
+  "oid": "obj_thepresi_approved-cancel-congressionally-funds",
+  "queuedOn": "2026-09-27",
+  "draftedOn": "2026-09-26"
+ },
+ "images": []
+}

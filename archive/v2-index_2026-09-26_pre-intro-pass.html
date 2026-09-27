@@ -2239,23 +2239,6 @@ body.phase-event .ted-guide, body.phase-diatribe .ted-guide {
 #tedTour .tt-hint { text-align: right; }
 #tedTour.tt-swap .tt-text { opacity: 0; }
 #tedTour .tt-text { transition: opacity 0.2s ease; }
-/* the move track (2026-09-26): one arc across the first run — read it · heat ·
-   corner · delivery · the space — so the tour reads as one walk, not six */
-#tedTour .tt-step:empty { display: none; }
-#tedTour .tt-moves { display: flex; align-items: center; gap: 5px; white-space: nowrap; margin-bottom: 7px;
-  font-family: var(--mono); font-size: 8px; letter-spacing: 0.16em; text-transform: uppercase; }
-#tedTour .tt-hint { white-space: nowrap; }
-#tedTour .tt-moves i { width: 5px; height: 5px; border-radius: 50%; background: rgba(160,178,214,0.22);
-  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; }
-#tedTour .tt-moves i.past { background: rgba(160,178,214,0.55); }
-#tedTour .tt-moves i.now { background: #cfe0ff; box-shadow: 0 0 8px rgba(140,180,255,0.8); transform: scale(1.25); }
-#tedTour .tt-moves b { font-weight: normal; margin-left: 4px; color: var(--ink-mid); }
-/* a tap on the dim during an action step: the ring pulses toward the thing to do */
-#tedTour.tt-nudge .tt-ring { animation: tt-nudge 0.7s ease; }
-#tedTour.tt-nudge .tt-hint { animation: tt-nudge-hint 0.7s ease; }
-@keyframes tt-nudge { 0%,100% { box-shadow: 0 0 0 1px rgba(196,210,240,0.55), 0 0 28px rgba(96,148,220,0.28); }
-  40% { box-shadow: 0 0 0 2px rgba(214,228,255,0.95), 0 0 46px rgba(120,170,255,0.7); } }
-@keyframes tt-nudge-hint { 40% { color: #e6eeff; } }
 /* while a tour runs, his full-body stage steps back so only one Ted is talking */
 body.ted-touring #tedStage { display: none !important; }
 body.ted-touring .ted-guide { opacity: 0 !important; pointer-events: none !important; }
@@ -9499,7 +9482,7 @@ function profileCard() {
 
 })();
 </script>
-<script src="../src/js/prism-ted-tour.js?v=3"></script>   <!-- Ted's tour: isolation + a peeking presenter (2026-09-22) -->
+<script src="../src/js/prism-ted-tour.js?v=2"></script>   <!-- Ted's tour: isolation + a peeking presenter (2026-09-22) -->
 
 </body>
 </html>

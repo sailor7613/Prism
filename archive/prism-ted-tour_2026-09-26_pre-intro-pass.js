@@ -38,98 +38,82 @@
     denominated: "Inner third — the deep end. You're not arguing about the thing now, you're arguing about what it even is.",
   }[band] || '');
   const currentBand = () => {
-    const el = q('#readoutReal') || q('#captionReal .band');   // readout is live; the caption label develops late
+    const el = q('#captionReal .band') || q('#readoutReal');
     const t = (el && el.textContent || '').toLowerCase();
     return /denominated/.test(t) ? 'denominated' : /coalition/.test(t) ? 'coalition' : 'fluid';
   };
 
-  const wide = () => window.innerWidth >= 900;
-  const selOf = (v) => (typeof v === 'function' ? v() : v);
   const PHASES = {
-    firstReal: {
-      when: () => !window.PRISM_ON_EXAMPLE && store.get('prism.example.done') === '1' &&
-                  body.classList.contains('phase-event') && body.classList.contains('ev-step-card'),
-      steps: [
-        { sel: '#evCard', wait: 'tap', move: 'read',
-          text: "That was practice. This one's live: your pin goes on the record next to everyone else's. Same three moves. I'll be in the corner if you want me." },
-      ],
-    },
     event: {
       when: () => body.classList.contains('phase-event') && body.classList.contains('ev-step-card'),
       steps: [
-        { sel: '#evLogo', also: () => (wide() ? null : '#evCard'), wait: 'tap', move: 'read', skipUnless: () => !!window.PRISM_ON_EXAMPLE,
-          text: "I'm Ted. I'll walk you through this once. Prism takes a law people are loud about and asks where you actually stand on it, not which team you're on." },
-        { sel: () => (wide() ? '.ev-example-tag' : '#evCard'), also: () => (wide() ? '#evTitle' : null), wait: 'tap', move: 'read', skipUnless: () => !!window.PRISM_ON_EXAMPLE,
-          text: "This first one's a practice round: a small, real law about leaf blowers. Nothing rides on it, so the only new thing is how Prism works." },
-        { sel: '#eventPicker, .event-picker select, header select', wait: 'tap', move: 'read', skipUnless: () => !window.PRISM_ON_EXAMPLE,
-          text: "This picks the Reading — the moment we're looking at. There are a few in here; start with this one." },
-        { sel: '#evBegin', wait: 'click', move: 'read',
-          text: () => window.PRISM_ON_EXAMPLE ? "Start by reading what actually happened." : null },
+        { sel: '#eventPicker, .event-picker select, header select', wait: 'tap',
+          text: () => window.PRISM_ON_EXAMPLE
+            ? "Welcome in. This first one's a practice round: a small, real law about leaf blowers, so the only new thing is how Prism works. The real ones live up here."
+            : "This picks the Reading — the moment we're looking at. There are a few in here; start with this one." },
+        { sel: '#evBegin', wait: 'click' },
       ],
     },
     framing: {
       when: () => body.classList.contains('phase-event') && body.classList.contains('ev-step-framing'),
       steps: [
-        { sel: '#evFraming', wait: 'tap', move: 'read',
+        { sel: '#evFraming', wait: 'tap',
           text: "The wall text. What actually happened, dated, no spin — read it once and get the weather of it." },
-        { sel: '#evKeywords', wait: 'tap', move: 'read' },
-        { sel: '#evEnter', wait: 'click', move: 'read' },
+        { sel: '#evKeywords', wait: 'tap' },
+        { sel: '#evEnter', wait: 'click' },
       ],
     },
     diatribe: {
       when: () => body.classList.contains('phase-diatribe'),
       steps: [
-        { sel: '#track', wait: 'tap', move: 'heat', skipUnless: () => !!window.PRISM_ON_EXAMPLE, 
+        { sel: '#track', wait: 'tap', skipUnless: () => !!window.PRISM_ON_EXAMPLE, 
           text: "Here's the whole logic, three moves. One: how hot are you on this? Two: which corner of the plane are you standing in? Three: does the law actually deliver? This rail is move one." },
-        { sel: '#track', wait: 'drag', move: 'heat',
+        { sel: '#track', wait: 'drag',
           text: "This rail is your aperture. Center is lukewarm; the harder you push out, the more this thing grabs you. Drag it — go on." },
-        { sel: '#track', wait: 'tap', move: 'heat', live: true, text: () => bandLine(currentBand()) },
-        { sel: '#captionReal', wait: 'tap', move: 'heat',
-          text: () => window.PRISM_ON_EXAMPLE
-            ? "That's your position, spelled out. It rewrites itself every time you move the rail. The faint one across from it is the other chair: the same heat, mirrored."
-            : null },
-        { sel: '#captionGhost', wait: 'tap', move: 'heat', skipUnless: () => !window.PRISM_ON_EXAMPLE },
-        { sel: '#toAnswers', wait: 'click', move: 'heat', text: "When you've found your band, hit this — the four responses, at that aperture." },
+        { sel: '#track', wait: 'tap', text: () => bandLine(currentBand()) },
+        { sel: '#captionReal', wait: 'tap' },
+        { sel: '#captionGhost', wait: 'tap' },
+        { sel: '#toAnswers', wait: 'click', text: "When you've found your band, hit this — the four responses, at that aperture." },
       ],
     },
     answers: {
       when: () => body.classList.contains('phase-answers'),
       steps: [
-        { sel: '.answer-card', wait: 'tap', move: 'corner',
+        { sel: '.answer-card', wait: 'tap',
           text: "Four responses, one per corner of the plane, all at the aperture you just set. Read them like four people at a table." },
-        { sel: '#answersGrid', wait: 'tap', move: 'corner', skipUnless: () => !!window.PRISM_ON_EXAMPLE, 
+        { sel: '#answersGrid', wait: 'tap', skipUnless: () => !!window.PRISM_ON_EXAMPLE, 
           text: "Move two: the corners are two axes. Across is left ↔ right. Up and down is institutional ↔ populist: the top row trusts the state to run this, the bottom row is talking from the driveway. Top-left calls it a rule with a runway. Bottom-right says my blower works fine." },
-        { sel: '.answer-card .ac-z', wait: 'tap', move: 'corner',
+        { sel: '.answer-card .ac-z', wait: 'tap',
           text: "That little rail under each one is the author's call on delivery — does this station think the thing actually lands? Left is frustrated, right is realized." },
-        { sel: '#answersGrid', wait: 'select', move: 'corner', text: "Pick the one that's closest to you. Not the one you admire — the one you'd actually say." },
-        { sel: '#aCommit', wait: 'click', move: 'corner' },
+        { sel: '#answersGrid', wait: 'select', text: "Pick the one that's closest to you. Not the one you admire — the one you'd actually say." },
+        { sel: '#aCommit', wait: 'click' },
       ],
     },
     graph: {
       when: () => body.classList.contains('phase-graph') && !body.classList.contains('ticker-live'),
       steps: [
-        { sel: '#padAxisX', wait: 'tap', move: 'corner', skipUnless: () => !!window.PRISM_ON_EXAMPLE, 
+        { sel: '#padAxisX', wait: 'tap', skipUnless: () => !!window.PRISM_ON_EXAMPLE, 
           text: "Axis one runs across: left ↔ right. On leaf blowers that's clean air first versus the cost landing on small crews." },
-        { sel: '#padAxisY', wait: 'tap', move: 'corner', skipUnless: () => !!window.PRISM_ON_EXAMPLE, 
+        { sel: '#padAxisY', wait: 'tap', skipUnless: () => !!window.PRISM_ON_EXAMPLE, 
           text: "Axis two runs up and down: institutional ↔ populist. Up top you trust the Air Board to write the rule and pay the rebates. Down low you trust your own garage." },
-        { sel: '#graphPad', wait: 'pin', move: 'corner',
+        { sel: '#graphPad', wait: 'pin',
           text: "The plane. Your corner is lit; put your pin down where you sit in it — distance from center is how hard you hold it." },
-        { sel: '#zTrack', wait: 'z', move: 'delivery',
+        { sel: '#zTrack', wait: 'z',
           text: () => window.PRISM_ON_EXAMPLE
             ? "Move three, the third axis: delivery. Here it's the question the law is really asking. Does it actually clear the air, or does nothing change on your street? Pull toward the one you believe."
             : "And the third axis: does it deliver? Pull toward realized if you think this thing lands, frustrated if you think it won't." },
-        { sel: '#graphDialect', wait: 'tap', move: 'delivery', text: "Words if you want them. Optional. Most people don't, the ones who do are worth reading." },
-        { sel: '#graphCommit', wait: 'click', move: 'delivery' },
+        { sel: '#graphDialect', wait: 'tap', text: "Words if you want them. Optional. Most people don't, the ones who do are worth reading." },
+        { sel: '#graphCommit', wait: 'click' },
       ],
     },
     committed: {
       when: () => body.classList.contains('ticker-live'),
       steps: [
-        { sel: '#gm3d', wait: 'tap', move: 'space',
+        { sel: '#gm3d', wait: 'tap',
           text: () => (window.PRISM_ON_EXAMPLE ? "All three axes, one space: across is left ↔ right, up is institutional, depth is delivery. " : "") + "You're on the plane now. Those twelve orbs are the Reading's own stations, floating at the depth their author gave them. Hold one to read it against your pin." },
-        { sel: '#zSlider', wait: 'tap', move: 'space', skipUnless: () => !window.PRISM_ON_EXAMPLE, text: "Your delivery call stays live — slide it and watch the distance to each station change." },
-        { sel: '#deltaTicker', wait: 'tap', move: 'space', text: "The strip is Burns. Top row: your burns — where your pin and this Reading's stations disagree. Bottom row: every object the newsroom is watching; a frame burns when someone holds it to the light." },
-        { sel: '#exampleNext', wait: 'click', move: 'space', skipUnless: () => !!window.PRISM_ON_EXAMPLE,
+        { sel: '#zSlider', wait: 'tap', text: "Your delivery call stays live — slide it and watch the distance to each station change." },
+        { sel: '#deltaTicker', wait: 'tap', text: "The strip is Burns. Top row: your burns — where your pin and this Reading's stations disagree. Bottom row: every object the newsroom is watching; a frame burns when someone holds it to the light." },
+        { sel: '#exampleNext', wait: 'click', skipUnless: () => !!window.PRISM_ON_EXAMPLE,
           text: "That's the whole loop: read it, find your band, pick a voice, pin it, call the delivery. Now do it for real." },
       ],
     },
@@ -144,7 +128,7 @@
     '<div class="tt-ring"></div>' +
     '<div class="tt-presenter">' +
       '<canvas class="tt-ted" id="tedPeek" width="220" height="220"></canvas>' +
-      '<div class="tt-bubble"><div class="tt-moves"></div><div class="tt-text"></div><div class="tt-foot"><span class="tt-step"></span><span class="tt-hint">tap to continue</span><button type="button" class="tt-skip">skip the tour</button></div></div>' +
+      '<div class="tt-bubble"><div class="tt-text"></div><div class="tt-foot"><span class="tt-step"></span><span class="tt-hint">tap to continue</span><button type="button" class="tt-skip">skip the tour</button></div></div>' +
     '</div>';
   document.body.appendChild(root);
   const dims = Array.from(root.querySelectorAll('.tt-dim'));
@@ -154,18 +138,6 @@
   const textEl = root.querySelector('.tt-text');
   const stepEl = root.querySelector('.tt-step');
   const hintEl = root.querySelector('.tt-hint');
-  const movesEl = root.querySelector('.tt-moves');
-  // One arc across the whole first run (2026-09-26): read it → the three
-  // moves → the space. Replaces a per-phase "1 / 6" that restarted each screen.
-  const MOVES = [['read', 'read it'], ['heat', 'heat'], ['corner', 'corner'], ['delivery', 'delivery'], ['space', 'the space']];
-  movesEl.innerHTML = MOVES.map(([k, l]) => '<i data-m="' + k + '" title="' + l + '"></i>').join('') + '<b></b>';
-  function paintMoves(m) {
-    const at = MOVES.findIndex(([k]) => k === m);
-    movesEl.style.display = at < 0 ? 'none' : '';
-    movesEl.querySelectorAll('i').forEach((d, i) => { d.classList.toggle('now', i === at); d.classList.toggle('past', i < at); });
-    const lbl = at < 0 ? '' : (at >= 1 && at <= 3 ? 'move ' + at + ' · ' : '') + MOVES[at][1];
-    movesEl.querySelector('b').textContent = lbl;
-  }
   const peekCanvas = root.querySelector('#tedPeek');
   const skipBtn = root.querySelector('.tt-skip');
 
@@ -198,17 +170,15 @@
       if (!live) return;
       t += 0.016;
       yaw += (yawT - yaw) * 0.08; pitch += (pitchT - pitch) * 0.08;
-      // the medallion is face-only: turning the whole body swung his face out of
-      // the circle (2026-09-26) — the head does the looking, the body a little
-      ted.rotation.y = yaw * 0.18 + Math.sin(t * 0.6) * 0.04;
-      if (head) { head.rotation.y = yaw * 0.55; head.rotation.x = pitch + Math.sin(t * 0.9) * 0.03; }
+      ted.rotation.y = yaw + Math.sin(t * 0.6) * 0.05;
+      if (head) head.rotation.x = pitch + Math.sin(t * 0.9) * 0.03;
       ted.position.y = Math.sin(t * 1.1) * 0.01;
       renderer.render(scene, cam);
     })();
     return {
       look: function (nx, ny) {      // where the target is, relative to Ted, in normalized screen units (−1..1)
-        yawT = Math.max(-0.7, Math.min(0.7, nx * 0.9));
-        pitchT = Math.max(-0.35, Math.min(0.4, ny * 0.6));
+        yawT = Math.max(-0.9, Math.min(0.9, nx * 0.95));
+        pitchT = Math.max(-0.5, Math.min(0.55, ny * 0.7));
       },
       setLive: function (v) { live = v; },
       frame: frame,   // tuning hook: Ted.peekFrame(px, py, pz, fov)
@@ -217,15 +187,13 @@
   if (!Peek) peekCanvas.style.display = 'none';
 
   // ── Layout: cutout around the target; presenter row beside it ──────
-  let target = null, targetAlso = null, raf = 0, active = null, stepIdx = -1, cleanupWait = null, phaseKey = null;
+  let target = null, raf = 0, active = null, stepIdx = -1, cleanupWait = null, phaseKey = null;
   const PAD = 10;
   function rectOf(el) { const r = el.getBoundingClientRect(); return { x: r.left - PAD, y: r.top - PAD, w: r.width + 2 * PAD, h: r.height + 2 * PAD }; }
   function layout() {
     if (!target) return;
     const W = window.innerWidth, H = window.innerHeight;
-    let r = rectOf(target);
-    if (targetAlso) { const b = rectOf(targetAlso); const x = Math.min(r.x, b.x), y = Math.min(r.y, b.y);
-      r = { x, y, w: Math.max(r.x + r.w, b.x + b.w) - x, h: Math.max(r.y + r.h, b.y + b.h) - y }; }
+    const r = rectOf(target);
     // four panels around the hole
     const px = (el, x, y, w, h) => { el.style.left = x + 'px'; el.style.top = y + 'px'; el.style.width = Math.max(0, w) + 'px'; el.style.height = Math.max(0, h) + 'px'; };
     px(dims[0], 0, 0, W, r.y);
@@ -240,21 +208,21 @@
     // Wide screens (2026-09-23, Sailor: "his speech boxes totally cover the
     // text"): sit BESIDE the element — right if there's room, else left — so
     // the bubble never lands on the text around it. Phones: below, else above.
-    // Wide screens: beside the element when the margin is roomy; otherwise
-    // below/above like a phone; a narrow side margin only as a last resort
-    // before landing on the element (2026-09-26, the welcome's wide hero).
-    const roomR = W - (r.x + r.w) - 24, roomL = r.x - 24, room = Math.max(roomR, roomL);
-    const below = r.y + r.h + 8, above = r.y - ph - 8;
-    const side = (w) => { pw = w; left = roomR >= roomL ? r.x + r.w + 16 : r.x - w - 16;
-      top = Math.max(8, Math.min(H - ph - 8, r.y + Math.min(r.h, 160) / 2 - ph / 2)); };
-    if (W >= 900 && room >= 320) side(Math.min(440, W * 0.34, room));
-    else if (below + ph <= H - 8 || above >= 8 || !(W >= 900 && room >= 240)) {
+    const SIDE_W = Math.min(440, W * 0.34);
+    if (W >= 900 && W - (r.x + r.w) >= SIDE_W + 24) {
+      pw = SIDE_W; left = r.x + r.w + 16;
+      top = Math.max(8, Math.min(H - ph - 8, r.y + Math.min(r.h, 160) / 2 - ph / 2));
+    } else if (W >= 900 && r.x >= SIDE_W + 24) {
+      pw = SIDE_W; left = r.x - SIDE_W - 16;
+      top = Math.max(8, Math.min(H - ph - 8, r.y + Math.min(r.h, 160) / 2 - ph / 2));
+    } else {
+      const below = r.y + r.h + 8, above = r.y - ph - 8;
       if (below + ph <= H - 8) top = below;
       else if (above >= 8) top = above;
       else top = Math.max(8, Math.min(H - ph - 8, r.y + r.h - ph));
       pw = Math.min(W, 560);
-      left = Math.max(0, Math.min(W - pw, W >= 900 ? r.x + r.w / 2 - pw / 2 : r.x - 36));
-    } else side(room);
+      left = Math.max(0, Math.min(W - pw, r.x - 36));
+    }
     presenter.style.top = top + 'px';
     presenter.style.left = left + 'px';
     presenter.style.width = pw + 'px';
@@ -265,18 +233,7 @@
       Peek.look((cx - tx) / (W * 0.6), (cy - ty) / (H * 0.5));
     }
   }
-  function track() {
-    layout();
-    // a 'live' step's line follows the state (the band line tracks the rail)
-    const st = active && active.steps[stepIdx];
-    if (st && st.live && typeof st.text === 'function') { const t = st.text(); if (t && textEl.textContent !== t) textEl.textContent = t; }
-    raf = requestAnimationFrame(track);
-  }
-  // is a finger / button down right now? (a drag step settles only after release)
-  let pointerDown = false;
-  window.addEventListener('pointerdown', () => { pointerDown = true; }, true);
-  window.addEventListener('pointerup', () => { pointerDown = false; }, true);
-  window.addEventListener('pointercancel', () => { pointerDown = false; }, true);
+  function track() { layout(); raf = requestAnimationFrame(track); }
 
   // ── Waits ──────────────────────────────────────────────────────────
   function armWait(step, el, done) {
@@ -302,9 +259,7 @@
         last = thumb.style.left;
         const pct = parseFloat(last);
         if (Math.abs(pct - 50) < 14) return;               // past the first third mark
-        clearTimeout(settled);
-        const settle = () => { if (pointerDown) { settled = setTimeout(settle, 250); return; } done(); };
-        settled = setTimeout(settle, 700);
+        clearTimeout(settled); settled = setTimeout(done, 700);
       });
       if (thumb) mo.observe(thumb, { attributes: true, attributeFilter: ['style'] });
       off = () => { mo.disconnect(); clearTimeout(settled); };
@@ -335,7 +290,6 @@
 
   // ── Run ────────────────────────────────────────────────────────────
   function resolve(sel) {
-    if (!sel) return null;
     for (const s of sel.split(',')) {
       const el = q(s.trim()); if (!el) continue;
       const cs = getComputedStyle(el), r = el.getBoundingClientRect();   // fixed elements have no offsetParent — go by the box
@@ -349,19 +303,17 @@
     const steps = active.steps;
     // skip steps whose element isn't on screen right now
     const applies = (st) => !st.skipUnless || st.skipUnless();
-    while (i < steps.length && (!applies(steps[i]) || !resolve(selOf(steps[i].sel)))) i++;
+    while (i < steps.length && (!applies(steps[i]) || !resolve(steps[i].sel))) i++;
     if (i >= steps.length) return stop(true);
     stepIdx = i;
     const step = steps[i];
-    const el = resolve(selOf(step.sel));
-    const alsoSel = selOf(step.also);
-    target = el; targetAlso = alsoSel ? resolve(alsoSel) : null;
+    const el = resolve(step.sel);
+    target = el;
     try { el.scrollIntoView({ block: 'center', behavior: 'smooth' }); } catch (e) {}
-    const text = (typeof step.text === 'function' ? step.text() : step.text) || el.getAttribute('data-ted-hint') || '';
+    const text = typeof step.text === 'function' ? step.text() : (step.text || el.getAttribute('data-ted-hint') || '');
     textEl.textContent = text;
     const live = steps.filter(applies);
-    if (step.move) { stepEl.textContent = ''; paintMoves(step.move); }
-    else { paintMoves(null); stepEl.textContent = (live.indexOf(step) + 1) + ' / ' + live.length; }
+    stepEl.textContent = (live.indexOf(step) + 1) + ' / ' + live.length;
     root.classList.add('tt-swap'); setTimeout(() => root.classList.remove('tt-swap'), 60);
     layout();
     cleanupWait = armWait(step, el, () => showStep(stepIdx + 1));
@@ -385,7 +337,7 @@
     if (!active) return;
     if (cleanupWait) { cleanupWait(); cleanupWait = null; }
     if (phaseKey) store.set('prism.tour.' + phaseKey, completed ? 'done' : 'skipped');
-    active = null; target = null; targetAlso = null; phaseKey = null;
+    active = null; target = null; phaseKey = null;
     cancelAnimationFrame(raf);
     root.classList.remove('on');
     body.classList.remove('ted-touring');
@@ -402,21 +354,12 @@
     const step = active.steps[stepIdx];
     if (!step || (step.wait || 'tap') === 'tap') showStep(stepIdx + 1);
   });
-  // A tap on the dim (2026-09-26): a stray tap used to end the whole tour on a
-  // phone. Now it advances a 'tap' step and, on an action step, nudges the ring
-  // toward the thing to do. Leaving is only ever the skip button.
-  dims.forEach(d => d.addEventListener('click', (e) => {
-    e.stopPropagation();
-    if (!active) return;
-    const step = active.steps[stepIdx];
-    if (!step || (step.wait || 'tap') === 'tap') return showStep(stepIdx + 1);
-    root.classList.remove('tt-nudge'); void root.offsetWidth; root.classList.add('tt-nudge');
-  }));
+  dims.forEach(d => d.addEventListener('click', (e) => { e.stopPropagation(); stop(false); }));
   window.addEventListener('resize', layout);
 
   // ── Triggers: first time a phase appears on this device ────────────
   function phaseNow() {
-    for (const k of ['committed', 'graph', 'answers', 'diatribe', 'framing', 'firstReal', 'event']) { if (PHASES[k].when()) return k; }
+    for (const k of ['committed', 'graph', 'answers', 'diatribe', 'framing', 'event']) { if (PHASES[k].when()) return k; }
     return null;
   }
   let lastPhase = null, pending = null;
@@ -457,11 +400,6 @@
       const draw = () => { try { r.render(sc, cam); } catch (e) {} };
       draw(); setTimeout(draw, 400);   // once more after fonts/layout settle
       window.addEventListener('resize', draw);
-      // drawn while hidden (a tour running) the buffer can come back blank —
-      // redraw each time he's shown again (2026-09-26)
-      let shown = false;
-      new MutationObserver(() => { const v = btn.offsetParent !== null || getComputedStyle(btn).display !== 'none';
-        if (v && !shown) requestAnimationFrame(draw); shown = v; }).observe(document.body, { attributes: true, attributeFilter: ['class'] });
     } catch (e) {}
   })();
 
@@ -487,10 +425,6 @@
     window.addEventListener('resize', paint);
     paint();
   })();
-
-  // the practice run handed off → the first live Reading gets one line
-  { const nx = document.getElementById('exampleNext');
-    if (nx) nx.addEventListener('click', () => store.set('prism.example.done', '1')); }
 
   // ── Public ─────────────────────────────────────────────────────────
   window.Ted = window.Ted || {};
