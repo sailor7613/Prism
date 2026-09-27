@@ -1,0 +1,477 @@
+{
+ "centralObject": {
+  "kind": "object",
+  "ref": "The President's on-record refusal, 2026-09-26, of Iran's seven-day Hormuz roadmap (announced 2026-09-25 via Qatar), which keeps the U.S. naval blockade of Iranian ports in place",
+  "name": "No to the seven-day roadmap: the blockade stays"
+ },
+ "tethers": [
+  {
+   "statute": "War Powers Resolution",
+   "cite": "Pub. L. 93-148; 50 U.S.C. §§1541-1550",
+   "title": "War Powers Resolution",
+   "enacted": "1973",
+   "relation": "adjacent",
+   "why": "The blockade is part of hostilities no statute has authorized: no authorization for use of military force against Iran has been enacted. Every congressional attempt to end the war runs through this Act (§5(c) concurrent resolutions, §1013 joint resolutions). The latest failed in the Senate 49-50 on 2026-09-24 after passing the House in July; its number is NOT verified in this draft. The refusal is the holder acting inside the room the Act has not closed."
+  },
+  {
+   "billId": "sjres-119-185",
+   "bill": "S.J.Res. 185",
+   "title": "A joint resolution to direct the removal of United States Armed Forces from hostilities within or against the Islamic Republic of Iran that have not been authorized by Congress.",
+   "relation": "opposes",
+   "statusAsOf": "Motion to proceed rejected in Senate 47-50 on 2026-06-24 (catalog)",
+   "why": "The Senate's June attempt to end the hostilities the blockade belongs to; the catalog's nearest record of the war-powers line. The 09-24 measure (49-50) is not in the catalog.",
+   "inDb": true
+  },
+  {
+   "billId": "hr-119-5334",
+   "bill": "H.R. 5334",
+   "title": "Lindsey O. Graham Sanctioning Russia and Iran Act of 2026",
+   "relation": "adjacent",
+   "statusAsOf": "Became Public Law 119-111 on 2026-09-18",
+   "why": "Iran's roadmap asks the United States to waive sanctions on Iranian oil; this law, eight days old on the trigger day, is the newest statute on the sanctions side of that ledger. How it bears on any oil waiver is NOT verified here.",
+   "inDb": true
+  }
+ ],
+ "linkedBills": [
+  "sjres-119-185",
+  "hr-119-5334"
+ ],
+ "title": "The Seventh Day",
+ "category": "Foreign Policy · War Powers · Energy",
+ "date": "2026-09-26",
+ "prompt": "Iran offered to reopen Hormuz in a week if the blockade lifts. Trump said no. Does holding the blockade get a better deal, or just a longer closure?",
+ "framing": "On Saturday, September 26, 2026, as he left the White House, President Trump said he was rejecting Iran's offer to reopen the Strait of Hormuz. Foreign Minister Abbas Araghchi had announced the seven-day roadmap on Friday, September 25, through Qatari mediators: Iran would reopen the strait on the seventh day if the United States lifted its naval blockade of Iranian ports, waived sanctions on Iranian oil, released frozen Iranian assets and observed a ceasefire that included Lebanon. Trump said the United States already had \"total control\" of the waterway. On September 26 Araghchi said Iran was still waiting for the formal American answer through the mediators. The blockade was reimposed on July 14. On September 24 the Senate voted 49 to 50 against a resolution to end U.S. hostilities with Iran.",
+ "framingKeywords": [
+  "seven-day roadmap",
+  "naval blockade",
+  "Strait of Hormuz",
+  "total control",
+  "war powers"
+ ],
+ "prevalentAxis": "x",
+ "split": {
+  "topology": "axis",
+  "strength": 0.55,
+  "seam": "x, cleanest at the rim; the centers lean negative on both sides except the right-institutional fluid",
+  "rationale": "The stated object (refusing to pay Iran to reopen a strait it closed) runs along x, and so does the rim: both left rims read an unauthorized war that cannot deliver (−0.8, −0.9), both right rims trust the Commander in Chief to make Iran fold (+0.8, +0.7). The centers don't mirror that. Five of eight center bands sit at or below zero because the frame's facts (the strait still shut, no formal answer sent, a one-vote Senate margin) pull every station that reads the mechanism toward 'a longer closure'. The right-populist center is the soft spot: it backs the no and resents the pump price, and its coalition band goes slightly negative while its rim goes strongly positive.",
+  "zPattern": {
+   "centers": {
+    "A": -0.5,
+    "B": 0.2,
+    "C": -0.7,
+    "D": 0.1
+   },
+   "rims": {
+    "A": -0.8,
+    "B": 0.8,
+    "C": -0.9,
+    "D": 0.7
+   },
+   "note": "Centers are fluid z; coalition z: A −0.3, B 0.0, C −0.5, D −0.1. Rims sign by trust in the holder, cleanly on x: the left rims name Trump's White House and distrust it; the right rims name the Commander in Chief / Trump and trust him. D changes sign between coalition (−0.1) and rim (+0.7): the base doubts the blockade is working and trusts the man holding it."
+  },
+  "ruledBy": null,
+  "date": "2026-09-27"
+ },
+ "antiValentBand": "denominated",
+ "antiValentRationale": "At the rim the roadmap's terms (frozen assets, oil waivers, Lebanon, day seven) are gone; what's left is whether the man saying no is trusted, and the rims split exactly on that.",
+ "axes": {
+  "x": {
+   "pos": "Right",
+   "neg": "Left"
+  },
+  "y": {
+   "pos": "Institutional",
+   "neg": "Populist"
+  },
+  "z": {
+   "pos": "the refusal delivers: holding the blockade gets the strait open on U.S. terms without paying Iran",
+   "neg": "the refusal fails: the strait stays shut, prices stay high, and the war goes on or widens"
+  }
+ },
+ "responses": {
+  "A": {
+   "fluid": {
+    "z": -0.5,
+    "zReason": "The refusal drops a dated sequence (reopen on day seven against the blockade lifting) and swaps in an open-ended blockade with no stated end point and no congressional authorization, so the closure keeps running while oil stays above $100.",
+    "instrument": {
+     "holder": "Trump's White House, acting without authorization from Congress",
+     "trusted": false
+    },
+    "text": "The roadmap is at least a sequence you can check: the blockade lifts, and on day seven the strait opens or it doesn't. Turning it down on the way out of the White House, before any formal answer has gone back through Qatar, means the closure keeps going and oil stays over $100 while nobody has told Congress what winning looks like. And the Senate just voted 49 to 50 against even asking that question.",
+    "xWord": "diplomacy",
+    "yWord": "war powers",
+    "words": [
+     "checkable sequence",
+     "Congress sidelined",
+     "Qatari channel"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": -0.3,
+    "zReason": "The refusal most likely drags the closure out, but Iran's terms leave the nuclear program to later talks, so the deal on offer doesn't clearly deliver the stated goal either, and that softens the case against refusing.",
+    "instrument": {
+     "holder": "Trump's White House, with a Senate that won't check it",
+     "trusted": false
+    },
+    "text": "I think turning down the roadmap was a mistake, and the Senate should have ended this. But the people I vote with talk as if Iran's list is fine on its face: frozen assets, oil waivers, Lebanon, and the nuclear program pushed off to some later round of talks. If my side's only position is 'take whatever Trump rejected,' I'm not sure that counts as a policy.",
+    "xWord": "restraint",
+    "yWord": "oversight",
+    "words": [
+     "nuclear deferred",
+     "reflexive opposition",
+     "take the deal?"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.8,
+    "zReason": "An unauthorized executive war can't produce a lawful or lasting settlement, so the refusal just prolongs it.",
+    "instrument": {
+     "holder": "Trump's White House",
+     "trusted": false
+    },
+    "text": "An unauthorized war, run by a man who answers diplomats on his way out the door. Fifty senators just put their names on it.",
+    "xWord": "illegal war",
+    "yWord": "rule of law",
+    "words": [
+     "unauthorized war",
+     "Congress decides",
+     "No Kings"
+    ],
+    "source": ""
+   },
+   "xSide": "left",
+   "source": ""
+  },
+  "B": {
+   "fluid": {
+    "z": 0.2,
+    "zReason": "The new Graham act's sanctions pressure, added to the blockade, builds over time, so holding out can win better terms (a nuclear clause, no payout), but only if a counteroffer follows, and each week of closure costs more.",
+    "instrument": {
+     "holder": "the President, backed by the blockade and the Graham sanctions",
+     "trusted": true
+    },
+    "text": "Iran's offer asks for everything at once, the blockade, oil sanctions, frozen assets, even Lebanon, and all it gives back is a strait it had no right to close, with the nuclear question left for later. With the Graham act now on the books, the pressure is only starting to build, so I understand not taking the first offer. What I'd want is a counteroffer through the Qataris, not just a no on the way out the door.",
+    "xWord": "leverage",
+    "yWord": "sanctions",
+    "words": [
+     "compounding pressure",
+     "counteroffer needed",
+     "nuclear terms"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0,
+    "zReason": "The leverage is real, but Iran is still collecting tolls and oil is above $100 while no one has defined what success means, so it's a toss-up whether holding out gets a better deal or just a longer closure.",
+    "instrument": {
+     "holder": "the President and a party leadership that won't define the endgame",
+     "trusted": true
+    },
+    "text": "I back the blockade, but 'total control' is a hard line to sell when ships are still paying Iran tolls and oil is over a hundred. Tillis asked what success looks like, and I've heard people in my party treat him like a defector for asking. Four Republicans broke ranks, and I don't agree with them, but I'd like somebody to answer the question.",
+    "xWord": "deterrence",
+    "yWord": "accountability",
+    "words": [
+     "define success",
+     "Tillis's question",
+     "tolls still paid"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": 0.8,
+    "zReason": "Refusing to pay Iran means holding firm, and holding firm is what makes the other side give in.",
+    "instrument": {
+     "holder": "the Commander in Chief",
+     "trusted": true
+    },
+    "text": "You don't pay a regime to stop blockading a waterway it never had the right to close. Peace through strength.",
+    "xWord": "strength",
+    "yWord": "commander",
+    "words": [
+     "no ransom",
+     "peace through strength",
+     "hold the line"
+    ],
+    "source": ""
+   },
+   "xSide": "right",
+   "source": ""
+  },
+  "C": {
+   "fluid": {
+    "z": -0.7,
+    "zReason": "The blockade's costs land on fuel, food and fertilizer prices long before they reach decision-makers in either capital, and the refusal throws away the one dated exit on the table.",
+    "instrument": {
+     "holder": "a White House that doesn't pay the costs of the war",
+     "trusted": false
+    },
+    "text": "The blockade isn't squeezing the people who make decisions in Tehran or Washington. It's squeezing anybody who buys diesel, groceries or fertilizer. Iran put a date on reopening, Trump waved it off with 'total control' while oil sits above a hundred dollars, and only 34% approve of the strikes, so who is this holdout for?",
+    "xWord": "working families",
+    "yWord": "prices",
+    "words": [
+     "grocery bills",
+     "fertilizer costs",
+     "endless war"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": -0.5,
+    "zReason": "The refusal keeps the war and the high prices going, though how long depends on a formal answer that hasn't been sent yet.",
+    "instrument": {
+     "holder": "Trump, with too many Democrats going along",
+     "trusted": false
+    },
+    "text": "I want this war over, and saying no to the roadmap keeps it going. But I've heard people on my own side practically rooting for pump prices to climb before November because it hurts Trump, and what they're rooting for is somebody's fertilizer bill. Some of them spend more energy on Fetterman's vote than on the strait, as if punishing him opens it.",
+    "xWord": "antiwar",
+    "yWord": "grassroots",
+    "words": [
+     "midterm math",
+     "Fetterman fixation",
+     "who pays"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.9,
+    "zReason": "The war serves the people running it, not anyone paying for it, so of course it doesn't deliver.",
+    "instrument": {
+     "holder": "the war party in both parties",
+     "trusted": false
+    },
+    "text": "Billionaires get the war, and everybody else gets the bill. End it now.",
+    "xWord": "antiwar",
+    "yWord": "working class",
+    "words": [
+     "no war",
+     "end it now",
+     "bill comes due"
+    ],
+    "source": ""
+   },
+   "xSide": "left",
+   "source": ""
+  },
+  "D": {
+   "fluid": {
+    "z": 0.1,
+    "zReason": "Refusing to give up frozen assets and sanctions relief keeps America from paying Iran, but a blockade that just sits there keeps the strait shut and gas expensive, so the payoff only comes if a deal lands soon.",
+    "instrument": {
+     "holder": "Trump",
+     "trusted": true
+    },
+    "text": "Trump's right not to hand Iran back its frozen money and a sanctions waiver just to reopen a shipping lane that never should have been shut. But I didn't vote for a forever blockade either, and every week it runs I'm paying for it at the pump. If this gets a deal before November, great; if it just sits there, it's the kind of war he said he'd end.",
+    "xWord": "America First",
+    "yWord": "gas prices",
+    "words": [
+     "no payouts",
+     "forever blockade",
+     "pump prices"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": -0.1,
+    "zReason": "'Total control' hasn't reopened the strait to ordinary traffic, and with no timeline the refusal leans toward a longer closure rather than a win.",
+    "instrument": {
+     "holder": "Trump, surrounded by the hawks he used to run against",
+     "trusted": true
+    },
+    "text": "I trust Trump's gut more than the foreign policy crowd, and I didn't love Iran's list. But Rand Paul voted to end this, and some people I usually agree with treat him like he's disloyal, when he's saying what a lot of them said about the last wars. 'Total control' sounds great; I just want to know when the ships start moving.",
+    "xWord": "no new wars",
+    "yWord": "loyalty",
+    "words": [
+     "Rand Paul",
+     "loyalty test",
+     "when ships move"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": 0.7,
+    "zReason": "Trump won't be pushed around, and the other side always folds first.",
+    "instrument": {
+     "holder": "Trump",
+     "trusted": true
+    },
+    "text": "Trump doesn't pay ransom to the ayatollahs. Total control means total control.",
+    "xWord": "MAGA",
+    "yWord": "base",
+    "words": [
+     "total control",
+     "no ransom",
+     "Trump delivers"
+    ],
+    "source": ""
+   },
+   "xSide": "right",
+   "source": ""
+  }
+ },
+ "diatribe": {
+  "LF": {
+   "text": "Iran put a date on reopening the strait. I don't see what a no on the White House lawn buys that a counteroffer through Qatar wouldn't.",
+   "side": "left",
+   "band": "fluid",
+   "keywords": [
+    "seven-day roadmap",
+    "Qatar"
+   ]
+  },
+  "LC": {
+   "text": "I wanted the Senate to end this, and I still notice the people I march with never ask what Iran's list leaves for later on the nuclear program.",
+   "side": "left",
+   "band": "coalition",
+   "keywords": [
+    "Senate",
+    "nuclear program"
+   ]
+  },
+  "LD": {
+   "text": "It's an unauthorized war and he answers diplomats on his way out the door. Fifty senators own it now.",
+   "side": "left",
+   "band": "denominated",
+   "keywords": [
+    "unauthorized war"
+   ]
+  },
+  "RF": {
+   "text": "I wouldn't hand Iran frozen money to reopen a strait it had no right to close. I'd still want a counteroffer on the table, not just a no.",
+   "side": "right",
+   "band": "fluid",
+   "keywords": [
+    "frozen money",
+    "counteroffer"
+   ]
+  },
+  "RC": {
+   "text": "I back the blockade, and I'd still like someone in my own party to answer Tillis about what success looks like.",
+   "side": "right",
+   "band": "coalition",
+   "keywords": [
+    "blockade",
+    "Tillis"
+   ]
+  },
+  "RD": {
+   "text": "No ransom for the ayatollahs. Total control means total control.",
+   "side": "right",
+   "band": "denominated",
+   "keywords": [
+    "total control"
+   ]
+  }
+ },
+ "diatribeLayer": "stated",
+ "objectLayer": {
+  "declared": "stated",
+  "stated": "Refusing to pay Iran (sanctions waivers, frozen assets, a Lebanon ceasefire) to reopen a strait it closed, because the United States already has 'total control' of it.",
+  "operative": "An open-ended naval blockade kept in place by a spoken no, before any formal answer went back through the mediators, in a war Congress has neither authorized nor ended.",
+  "inversion": "Lean, not ruled: a station-level lean at D coalition. The right-populist base that backed the President as the candidate who would end foreign wars now backs an open-ended blockade; its coalition band registers that ('the kind of war he said he'd end') without reversing. Partial, not a full flip."
+ },
+ "window": {
+  "close": "2026-09-26",
+  "why": "Trigger day = the day the object finished forming: Trump's on-record rejection as he left the White House on Saturday 2026-09-26 (CBS live updates; Times of Israel liveblog 09-26: \"They made a proposal, but I rejected it\"). WSJ had reported him ruling it out privately a day earlier, but the on-record refusal is the object. The register read 2026-09-27, the syndicated copies' date: report date, not as-of date. Declared at authoring, before any z.",
+  "ruledBy": null,
+  "ruledOn": null
+ },
+ "meta": {
+  "dialecticsRef": "obj_thepresi_hormuz-iran-open-proposal",
+  "status": "draft",
+  "source": "Claude draft — daily newsroom drafting (scheduled), authored z-first against Trace Formula v1 per scripts/newsroom/AUTHORING_PROTOCOL.md v1.3. Filed to drafts/claude; not through the surface; no aiDeltas lineage. Rulings: none.",
+  "editHistory": [
+   {
+    "at": "2026-09-27T18:08:00.000Z",
+    "by": "Claude (scheduled drafting)",
+    "what": "authored: object (kind corrected vote -> executive decision) -> window (re-declared 09-27 -> 09-26) -> frame -> sweep -> central object + tethers -> axes -> twelve (blind subagent) -> factual edits by Claude (see meta.blindAuthoring.editsAfterHandback) -> split/diatribe/layers -> sweep"
+   }
+  ],
+  "aiDeltas": [],
+  "frameFirst": {
+   "date": "2026-09-27",
+   "by": "Claude, under §4c (window declared at authoring; sweep before z). Object NOT ruled — Claude's read, correctable by Sailor.",
+   "status": "Frame authored and swept before any z; the twelve authored blind z-first by a subagent (meta.blindAuthoring). Stations unruled.",
+   "objectLean": {
+    "stated": "refusing to pay Iran to reopen a strait it closed",
+    "operative": "an open-ended blockade held by a spoken no, before a formal answer",
+    "inversion": "lean, not ruled: D coalition, the anti-forever-war base backing an open-ended blockade"
+   },
+   "titleLean": "'The Seventh Day' — Claude's; Sailor names Readings",
+   "sourcesInWindow": [
+    "Euronews / PBS / Haaretz / KSLA, 2026-09-25: Araghchi's seven-day roadmap via Qatar; terms (blockade lifted, oil sanctions waived, ceasefire including Lebanon, reopening on day seven)",
+    "Al Jazeera 2026-09-26: terms incl. release of frozen assets ($12 billion, kept out of the frame); WSJ-sourced report that Trump 'quickly ruled it out'; US 'no hurry' to respond",
+    "Times of Israel liveblog 2026-09-26: Araghchi awaiting the definitive US position via mediators; Trump: \"They made a proposal, but I rejected it\" / \"total control\"",
+    "CBS News live updates (published 2026-09-27; used only for the in-window remark as he left the White House Saturday 09-26 and the 07-14 reimposition date)",
+    "UPI / The National 2026-09-24: Senate 49-50 against the war powers resolution; Collins, Murkowski, Paul, Tillis yes; Fetterman no; passed House in July; Reuters/Ipsos 34% approval of strikes; war since 2026-02-28"
+   ],
+   "background_preWindow": [
+    "2026-02-28: US and Israeli strikes begin the war (The National)",
+    "2026-04-08: two-week ceasefire; 04-11/12 Islamabad talks fail; blockade first announced 04-12 (Wikipedia, 2026 Iran war ceasefire)",
+    "2026-06: Islamabad memorandum; collapsed by July; blockade reimposed 2026-07-14 (CBS)",
+    "2026-06-24: S.J.Res. 185 motion to proceed rejected 47-50 (catalog)",
+    "2026-09-18: H.R. 5334 became Public Law 119-111 (catalog)"
+   ]
+  },
+  "framingAudit": {
+   "date": "2026-09-27",
+   "by": "Claude — frame-first authoring under §4c; sweep run BEFORE any z. Not a ruling.",
+   "window": "2026-09-26 (declared, see window.why)",
+   "verifiedInWindow": [
+    "Trump rejected the offer as he left the White House, Saturday 2026-09-26 (CBS; Times of Israel 09-26)",
+    "seven-day roadmap announced Friday 2026-09-25 by Araghchi through Qatari mediators (Euronews, PBS 09-25)",
+    "terms: lift naval blockade of Iranian ports, waive oil sanctions, release frozen assets, ceasefire including Lebanon, reopen on the seventh day (Euronews, PBS 09-25; Al Jazeera 09-26)",
+    "\"total control\" — Trump, 2026-09-26 (Times of Israel; CBS)",
+    "Araghchi still awaiting the formal US answer via mediators — Times of Israel liveblog 2026-09-26",
+    "blockade reimposed July 14 (CBS) — pre-window, load-bearing for the object",
+    "Senate 49 to 50 on 2026-09-24 (UPI, The National)"
+   ],
+   "keptUnverifiedDate": [],
+   "deliberatelyExcluded_afterWindow": [
+    "Sen. John Kennedy calling the plan 'not a serious offer' — as-of date not established (CBS 09-27)",
+    "WSJ report that Trump privately expects to resume bombing after the November midterms — report in window, as-of date of the private remark unknown; kept out of frame and bands",
+    "Trump's claim of 29 ships escorted and 122 redirected — reported 09-27; left out",
+    "the $12 billion frozen-asset figure — single source; frame says 'frozen Iranian assets'",
+    "Brent prices — sources disagree on the week's close; bands say 'above $100' only, from the background"
+   ]
+  },
+  "blindAuthoring": {
+   "date": "2026-09-27",
+   "author": "Claude (general-purpose subagent) — blind: given the frame, prompt, keywords, axes, a station/radius brief, a short dated background, R-0921-1 and the voice rules only; no other Reading, no register, no web",
+   "zFirst": true,
+   "instrumentOnAll12": true,
+   "rulings": "NONE — every station awaits Sailor's ruling. z and instrument as authored by the blind author; no z or instrument changed.",
+   "editsAfterHandback": {
+    "by": "Claude (orchestrator), 2026-09-27 — factual repairs only, no z or instrument changed; Sailor may revert",
+    "what": [
+     "A.coalition, B.fluid (and A.coalition zReason): the blind author wrote that Iran's list had 'not a word' / 'nothing' on the nuclear program; the roadmap's stated aim was to restart the stalled nuclear talks, so both now say the nuclear question is 'left for later' / 'pushed off to later talks'. Same z.",
+     "A.fluid: 'reopen on day seven or the blockade goes back on' asserted a snap-back clause not in the sources → 'the blockade lifts, and on day seven the strait opens or it doesn't'. zReason matched.",
+     "B.fluid: 'squeezing whoever buys Iranian oil' → 'now on the books' (how H.R. 5334 bears on Iranian oil buyers is not verified here).",
+     "B.coalition, C.coalition, D.coalition: three unsourced claims about how each side had reacted (Tillis 'treated like a defector', Fetterman 'the whole conversation', Paul 'called a traitor overnight') softened to the speaker's own hearing ('I've heard', 'some of them', 'some people I usually agree with'). Same z.",
+     "D.coalition zReason: 'hasn't moved a single ship' contradicted the President's claim of escorted transits → 'hasn't reopened the strait to ordinary traffic'."
+    ]
+   },
+   "authorNote": "The hardest bands were D-fluid and D-coalition, because the right-populist center is split between loyalty to Trump's refusal and anger at pump prices and a forever war; its z sits near zero and could be off by 0.3 in either direction. B-fluid at +0.2 is the z I trust least: it relies on the Graham act and the blockade building pressure, and nothing in the frame shows that happening, so the honest range is about -0.2 to +0.3. The frame's facts (the closure continues, oil above $100, 34% approval, a one-vote Senate margin) pull most centers below zero, so the weight of the discourse sits in the lower-left to middle: A and C centers well below zero, B coalition at zero, and only the right rims confidently positive. The coalition bands deliberately turn on each side's own blind spot: the left's silence on the nuclear clause and its midterm glee, and the right's treatment of Tillis and Paul as defectors."
+  },
+  "newsroomFindings": {
+   "inversionLeans": [
+    "Station-level lean, D coalition: the base that backed Trump as the end-the-wars candidate backs an open-ended blockade; the band registers it without reversing. Lean, not ruled.",
+    "Rand Paul's yes on 09-24 is consistent with his priors (not an inversion). No other station-level reversal found in window."
+   ],
+   "permanence": "A RETURN (lean). The reopen-for-relief bargain is on its third pass: the April ceasefire's reopening provisions, the June Islamabad memorandum (collapsed by July), and now the seven-day roadmap. Each time the strait's reopening is traded against the blockade and sanctions. The register never carried the April or June arcs."
+  }
+ },
+ "rid": "rdg_6gsmq4x22x20",
+ "ridLineage": "minted 2026-09-27 (UTC) by the scheduled newsroom drafting task; filed directly to drafts/claude",
+ "schema": "reading/v1",
+ "formulaVersion": "1",
+ "updatedAt": "2026-09-27T18:08:00.000Z",
+ "authorTier": "claude",
+ "newsroom": {
+  "oid": "obj_thepresi_hormuz-iran-open-proposal",
+  "queuedOn": "2026-09-27",
+  "draftedOn": "2026-09-27"
+ },
+ "images": []
+}

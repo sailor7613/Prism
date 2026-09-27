@@ -22,9 +22,12 @@
   'use strict';
   const body = document.body;
   const q = (s) => document.querySelector(s);
+  // ?intro (the intro test) keeps the tour's memory in this tab only, so a
+  // test run never changes what the working index does on this device
+  const box = () => (window.PRISM_INTRO_TEST ? sessionStorage : localStorage);
   const store = {
-    get: (k) => { try { return localStorage.getItem(k); } catch (e) { return null; } },
-    set: (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} },
+    get: (k) => { try { return box().getItem(k); } catch (e) { return null; } },
+    set: (k, v) => { try { box().setItem(k, v); } catch (e) {} },
   };
 
   // ── Phases and their steps ─────────────────────────────────────────
@@ -58,9 +61,9 @@
       when: () => body.classList.contains('phase-event') && body.classList.contains('ev-step-card'),
       steps: [
         { sel: '#evLogo', also: () => (wide() ? null : '#evCard'), wait: 'tap', move: 'read', skipUnless: () => !!window.PRISM_ON_EXAMPLE,
-          text: "I'm Ted. I'll walk you through this once. Prism takes a law people are loud about and asks where you actually stand on it, not which team you're on." },
+          text: "Welcome to Prism, a political econometric system meant to cancel out the noise of pop political discourse and instantiate object permanence. Think of it as a fun interactive Bloomberg Terminal for legislation." },
         { sel: () => (wide() ? '.ev-example-tag' : '#evCard'), also: () => (wide() ? '#evTitle' : null), wait: 'tap', move: 'read', skipUnless: () => !!window.PRISM_ON_EXAMPLE,
-          text: "This first one's a practice round: a small, real law about leaf blowers. Nothing rides on it, so the only new thing is how Prism works." },
+          text: "I'm Ted. I'll walk you through this once. This first one's a practice round: a small, real law about leaf blowers. Nothing rides on it, so the only new thing is how Prism works." },
         { sel: '#eventPicker, .event-picker select, header select', wait: 'tap', move: 'read', skipUnless: () => !window.PRISM_ON_EXAMPLE,
           text: "This picks the Reading — the moment we're looking at. There are a few in here; start with this one." },
         { sel: '#evBegin', wait: 'click', move: 'read',
@@ -217,6 +220,7 @@
   if (!Peek) peekCanvas.style.display = 'none';
 
   // ── Layout: cutout around the target; presenter row beside it ──────
+  let waitIdx = -1, waitTries = 0, waitTm = 0;
   let target = null, targetAlso = null, raf = 0, active = null, stepIdx = -1, cleanupWait = null, phaseKey = null;
   const PAD = 10;
   function rectOf(el) { const r = el.getBoundingClientRect(); return { x: r.left - PAD, y: r.top - PAD, w: r.width + 2 * PAD, h: r.height + 2 * PAD }; }
@@ -349,6 +353,14 @@
     const steps = active.steps;
     // skip steps whose element isn't on screen right now
     const applies = (st) => !st.skipUnless || st.skipUnless();
+    while (i < steps.length && !applies(steps[i])) i++;
+    // the element may still be fading in (the 3D space after commit) — give it
+    // up to ~2s before skipping past it (2026-09-27)
+    if (i < steps.length && !resolve(selOf(steps[i].sel))) {
+      waitTries = (waitIdx === i) ? waitTries + 1 : 1; waitIdx = i;
+      if (waitTries <= 8) { clearTimeout(waitTm); waitTm = setTimeout(() => showStep(i), 250); return; }
+    }
+    waitIdx = -1; waitTries = 0;
     while (i < steps.length && (!applies(steps[i]) || !resolve(selOf(steps[i].sel)))) i++;
     if (i >= steps.length) return stop(true);
     stepIdx = i;
@@ -385,7 +397,7 @@
     if (!active) return;
     if (cleanupWait) { cleanupWait(); cleanupWait = null; }
     if (phaseKey) store.set('prism.tour.' + phaseKey, completed ? 'done' : 'skipped');
-    active = null; target = null; targetAlso = null; phaseKey = null;
+    active = null; target = null; targetAlso = null; phaseKey = null; clearTimeout(waitTm); waitIdx = -1; waitTries = 0;
     cancelAnimationFrame(raf);
     root.classList.remove('on');
     body.classList.remove('ted-touring');
@@ -498,5 +510,14 @@
   window.Ted.tourStop = function () { stop(false); };
   window.Ted.touring = false;
   window.Ted.peekFrame = function (px, py, pz, fov) { if (Peek) Peek.frame(px, py, pz, fov); };
-  window.Ted.tourReset = function () { Object.keys(PHASES).forEach(k => { try { localStorage.removeItem('prism.tour.' + k); } catch (e) {} }); };
+  window.Ted.tourReset = function () { Object.keys(PHASES).forEach(k => { try { box().removeItem('prism.tour.' + k); } catch (e) {} }); try { box().removeItem('prism.example.done'); } catch (e) {} };
+
+  // the intro-test badge: you're in the sandbox; tap to run it again from zero
+  if (window.PRISM_INTRO_TEST) {
+    const t = document.createElement('button'); t.id = 'introTest'; t.type = 'button';
+    t.textContent = 'intro test ↺'; t.title = 'Restart the intro from zero';
+    t.addEventListener('click', (e) => { e.stopPropagation(); const u = new URL(location.href);
+      ['event', 'reading', 'example'].forEach(k => u.searchParams.delete(k)); u.searchParams.set('intro', ''); location.href = u.toString(); });
+    document.body.appendChild(t);
+  }
 })();

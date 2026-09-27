@@ -2239,6 +2239,11 @@ body.phase-event .ted-guide, body.phase-diatribe .ted-guide {
 #tedTour .tt-hint { text-align: right; }
 #tedTour.tt-swap .tt-text { opacity: 0; }
 #tedTour .tt-text { transition: opacity 0.2s ease; }
+/* the intro-test badge (?intro): says you're in the sandbox; tap to restart */
+#introTest { position: fixed; right: 10px; bottom: calc(var(--safe-bottom, 0px) + 10px); z-index: 80;
+  font-family: var(--mono); font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: #ffd98a; background: rgba(40, 30, 8, 0.82); border: 0.5px solid rgba(255, 214, 128, 0.5);
+  border-radius: 999px; padding: 6px 11px; cursor: pointer; }
 /* the move track (2026-09-26): one arc across the first run — read it · heat ·
    corner · delivery · the space — so the tour reads as one walk, not six */
 #tedTour .tt-step:empty { display: none; }
@@ -3285,6 +3290,22 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
   <div class="mc-meta"></div>
 </div>
 
+<!-- INTRO TEST (?intro, 2026-09-27): the whole first visit from zero, as a
+     new tester meets it — without touching this device's real state. The
+     tour's memory lives in this tab (sessionStorage), so the working index
+     never moves. ?intro starts fresh; the handoff to a live Reading carries
+     ?intro=live so the first-real line still plays. -->
+<script>
+(function () {
+  let sp; try { sp = new URLSearchParams(location.search); } catch (e) { return; }
+  if (!sp.has('intro')) return;
+  window.PRISM_INTRO_TEST = true;
+  window.PRISM_INTRO_STAGE = sp.get('intro') === 'live' ? 'live' : 'fresh';
+  if (window.PRISM_INTRO_STAGE === 'fresh') {
+    try { Object.keys(sessionStorage).filter(k => k.indexOf('prism.') === 0).forEach(k => sessionStorage.removeItem(k)); } catch (e) {}
+  }
+})();
+</script>
 <!-- Data layer -->
 <script src="../data/readings_seed.js"></script>   <!-- the live tier, baked (scripts/bake-seed.js) -->
 <script src="../src/js/prismdb.js"></script>
@@ -3352,7 +3373,8 @@ const EVENT_ID = (() => {
   // is new. First visit on this device = the tour's first phase never ran.
   // ?example replays it any time.
   try {
-    const wantExample = new URLSearchParams(location.search).has('example') || !localStorage.getItem('prism.tour.event');
+    const wantExample = new URLSearchParams(location.search).has('example') || window.PRISM_INTRO_STAGE === 'fresh'
+      || (!window.PRISM_INTRO_TEST && !localStorage.getItem('prism.tour.event'));
     if (wantExample && window.PRISM_EXAMPLE) {
       let ex = (PrismDB.getEvents() || []).find(e => e.rid === window.PRISM_EXAMPLE.rid);
       if (!ex || (ex.updatedAt || '') < (window.PRISM_EXAMPLE.updatedAt || '')) ex = PrismDB.importReading(JSON.parse(JSON.stringify(window.PRISM_EXAMPLE)));
@@ -3627,6 +3649,7 @@ if (ev && ev.example) document.body.classList.add('on-example');
     const live = (PrismDB.getEvents() || []).filter(isLiveReading)
       .sort((a, b) => ((b.date || '').localeCompare(a.date || '')) || ((b.updatedAt || '').localeCompare(a.updatedAt || '')));
     const u = new URL(location.href); u.searchParams.delete('example'); u.searchParams.delete('reading');
+    if (window.PRISM_INTRO_TEST) u.searchParams.set('intro', 'live');   // the test carries on into the first live Reading
     if (live[0]) u.searchParams.set('event', live[0].id); else u.searchParams.delete('event');
     location.href = u.toString();
   }); }
@@ -7959,7 +7982,7 @@ applyState(true);
   try {
     setVoice(localStorage.getItem('prism.ted.voice') !== '0', false);   // default ON
     setNarrate(localStorage.getItem('prism.ted.narrate') === '1', false);
-    setAway(localStorage.getItem('prism.ted.away') === '1', false);
+    setAway(!window.PRISM_INTRO_TEST && localStorage.getItem('prism.ted.away') === '1', false);   // the intro test always has Ted
   } catch (e) { setVoice(true, false); setNarrate(false, false); setAway(false, false); }
 
   // Live 3D portrait of the real Ted in the bubble — kept for the graph phase,
@@ -9499,7 +9522,7 @@ function profileCard() {
 
 })();
 </script>
-<script src="../src/js/prism-ted-tour.js?v=3"></script>   <!-- Ted's tour: isolation + a peeking presenter (2026-09-22) -->
+<script src="../src/js/prism-ted-tour.js?v=4"></script>   <!-- Ted's tour: isolation + a peeking presenter (2026-09-22) -->
 
 </body>
 </html>

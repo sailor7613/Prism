@@ -1,6 +1,6 @@
 {
  "schema": "prism_object_overlay_v1",
- "updatedAt": "2026-09-27T06:09:05.541Z",
+ "updatedAt": "2026-09-27T18:08:34.906Z",
  "note": "Written ONLY by the drafting task (Sailor commits it). The scan owns objects.json and only reads this file. See scripts/newsroom/overlay.js.",
  "objects": {
   "obj_astate_bills-changes-elections-gavin": {
@@ -390,6 +390,46 @@
     "pocket rescission",
     "$810 million rescission",
     "Trump cancels $1B in approved funds"
+   ]
+  },
+  "obj_thepresi_hormuz-iran-open-proposal": {
+   "status": "drafted",
+   "drafts": {
+    "claude": "rdg_6gsmq4x22x20"
+   },
+   "draftedOn": "2026-09-27",
+   "corrections": [
+    {
+     "field": "formedOn",
+     "from": "2026-09-27",
+     "to": "2026-09-26",
+     "why": "Trump rejected the roadmap on record as he left the White House Saturday 09-26 (CBS; Times of Israel liveblog 09-26); 09-27 is the syndicated iHeart copies date — report date, not as-of date.",
+     "by": "Claude (drafting)",
+     "on": "2026-09-27"
+    },
+    {
+     "field": "kind",
+     "from": "vote",
+     "to": "executive decision — the President refusing Iran's seven-day Hormuz roadmap, keeping the naval blockade (reimposed 07-14) in place",
+     "why": "Nothing was voted on. The instrument is the blockade; the refusal is the holder keeping it.",
+     "by": "Claude (drafting)",
+     "on": "2026-09-27"
+    }
+   ],
+   "inversions": [
+    {
+     "station": "D",
+     "bands": "coalition",
+     "lean": "the base that backed Trump as the end-foreign-wars candidate backs an open-ended blockade; the band registers it without reversing (partial)",
+     "prior": "2024 campaign positioning; no live Reading cited",
+     "ruled": false
+    }
+   ],
+   "permanenceNote": "A RETURN (lean): third pass of the reopen-for-relief bargain — April ceasefire reopening provisions, June Islamabad memorandum (collapsed by July), now the seven-day roadmap. The register never carried the April or June arcs.",
+   "aliasCandidates": [
+    "seven-day roadmap",
+    "Iran Hormuz proposal",
+    "Trump Strait"
    ]
   }
  }
