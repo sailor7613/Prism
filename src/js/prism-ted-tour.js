@@ -467,6 +467,7 @@
     if (!k) return;
     if (store.get('prism.tour.' + k)) return;
     if (store.get('prism.ted.away') === '1') return;   // he's been sent away — no tours
+    if (body.classList.contains('door-open')) return;  // the ?join door is up — it calls Ted.tour() when it closes
     pending = setTimeout(() => { if (phaseNow() === k && !active) start(k); }, k === 'committed' ? 4200 : 1400);
   }
   try { new MutationObserver(onPhaseMaybe).observe(body, { attributes: true, attributeFilter: ['class'] }); } catch (e) {}

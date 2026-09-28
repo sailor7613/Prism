@@ -2315,6 +2315,37 @@ body.phase-event .ted-guide, body.phase-diatribe .ted-guide {
 #tedTour .tt-hint { text-align: right; }
 #tedTour.tt-swap .tt-text { opacity: 0; }
 #tedTour .tt-text { transition: opacity 0.2s ease; }
+/* ── THE DOOR (2026-09-28) — the ?join arrival, over everything, once ── */
+#theDoor { position: fixed; inset: 0; z-index: 90; display: flex; align-items: center; justify-content: center; padding: 20px;
+  background: rgba(4, 8, 20, 0.82); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  transition: opacity 0.5s ease; }
+#theDoor.out { opacity: 0; pointer-events: none; }
+.door-card { width: min(440px, 100%); background: rgba(9, 15, 32, 0.94); border: 0.5px solid var(--rule); border-radius: 14px;
+  padding: 26px 28px 22px; box-shadow: 0 24px 70px rgba(0,0,0,0.6); display: flex; flex-direction: column; gap: 12px; }
+.door-kicker { font-family: var(--mono); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-low); }
+.door-title { font-family: var(--serif); font-weight: 400; font-size: 27px; line-height: 1.1; margin: 0; color: var(--ink); }
+.door-copy { font-family: var(--serif); font-size: 14px; line-height: 1.5; color: var(--ink-mid); margin: 0 0 4px; }
+.door-field { display: grid; grid-template-columns: 78px 1fr; align-items: center; gap: 10px; }
+.door-field span { font-family: var(--mono); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-low); }
+.door-field input, .door-keyrow input { width: 100%; min-width: 0; background: var(--bg-soft); border: 1px solid var(--rule); border-radius: 4px; color: var(--ink);
+  padding: 10px 12px; font-family: var(--mono); font-size: 13px; }
+.door-field input:focus, .door-keyrow input:focus { outline: none; border-color: rgba(150, 188, 255, 0.7); }
+#theDoor.signin .door-invite { display: none; }
+.door-msg { font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; color: #ffd98a; min-height: 14px; }
+.door-go { width: 100%; padding: 14px 18px; border-radius: 4px; cursor: pointer; font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: #eef3ff; background: rgba(96, 148, 220, 0.22); border: 1px solid rgba(150, 188, 255, 0.75);
+  box-shadow: 0 0 22px rgba(96, 148, 220, 0.25), inset 0 0 18px rgba(96, 148, 220, 0.12); display: flex; justify-content: center; gap: 12px; }
+.door-go:hover { background: rgba(96, 148, 220, 0.32); }
+.door-go:disabled { opacity: 0.5; cursor: default; }
+.door-alt { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.door-alt button { background: none; border: 0; cursor: pointer; font-family: var(--mono); font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-low); padding: 4px 0; }
+.door-alt button:hover { color: var(--ink-mid); }
+.door-keyrow { display: flex; gap: 8px; }
+.door-keyrow[hidden] { display: none; }
+.door-keyrow button { background: transparent; border: 1px solid var(--rule); border-radius: 3px; color: var(--ink-mid); font-family: var(--mono); font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; padding: 8px 14px; cursor: pointer; }
+/* while the door is up, nothing else talks */
+body.door-open #tedTour, body.door-open #tedStage, body.door-open .ted-guide { display: none !important; }
+
 /* the intro-test badge (?intro): says you're in the sandbox; tap to restart */
 #introTest { position: fixed; right: 10px; bottom: calc(var(--safe-bottom, 0px) + 10px); z-index: 80;
   font-family: var(--mono); font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase;
@@ -3399,9 +3430,20 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
 <script>
 (function () {
   let sp; try { sp = new URLSearchParams(location.search); } catch (e) { return; }
-  // ?join=<invite> (2026-09-27): the link Sailor sends the beta group. The
-  // invite waits in localStorage for the door in Beam → profile.
-  if (sp.get('join')) { try { localStorage.setItem('prism.beam.invite', sp.get('join').trim()); } catch (e) {} }
+  // ?join=<invite> (2026-09-27/28): the link Sailor sends the beta group.
+  // A newcomer meets THE DOOR first (take a seat: name + passcode, invite
+  // filled in), then the whole first visit from zero — the practice Reading
+  // with Ted's tour, then a real one. Someone already seated on this device
+  // just lands normally. The invite also waits for the door in Beam → profile.
+  if (sp.get('join')) {
+    const code = sp.get('join').trim();
+    try { localStorage.setItem('prism.beam.invite', code); } catch (e) {}
+    let seated = false; try { seated = !!localStorage.getItem('prism.beam.avatar'); } catch (e) {}
+    if (!seated) {
+      window.PRISM_JOIN = code;
+      try { Object.keys(localStorage).filter(k => k.indexOf('prism.tour.') === 0).forEach(k => localStorage.removeItem(k)); localStorage.removeItem('prism.example.done'); } catch (e) {}
+    }
+  }
   if (!sp.has('intro')) return;
   window.PRISM_INTRO_TEST = true;
   window.PRISM_INTRO_STAGE = sp.get('intro') === 'live' ? 'live' : 'fresh';
@@ -3477,7 +3519,7 @@ const EVENT_ID = (() => {
   // is new. First visit on this device = the tour's first phase never ran.
   // ?example replays it any time.
   try {
-    const wantExample = new URLSearchParams(location.search).has('example') || window.PRISM_INTRO_STAGE === 'fresh'
+    const wantExample = new URLSearchParams(location.search).has('example') || window.PRISM_INTRO_STAGE === 'fresh' || !!window.PRISM_JOIN
       || (!window.PRISM_INTRO_TEST && !localStorage.getItem('prism.tour.event'));
     if (wantExample && window.PRISM_EXAMPLE) {
       let ex = (PrismDB.getEvents() || []).find(e => e.rid === window.PRISM_EXAMPLE.rid);
@@ -9792,7 +9834,68 @@ function profileCard() {
 
 })();
 </script>
-<script src="../src/js/prism-ted-tour.js?v=7"></script>   <!-- Ted's tour: isolation + a peeking presenter (2026-09-22) -->
+<script src="../src/js/prism-ted-tour.js?v=8"></script>
+<!-- ── THE DOOR (2026-09-28): what a ?join link opens on first. A seat is taken
+     here — name, passcode, the invite already in — and then the first visit
+     runs from zero: practice Reading, Ted's tour, then a real Reading. ── -->
+<script>
+(function theDoor() {
+  if (!window.PRISM_JOIN || typeof PrismField === 'undefined') return;
+  document.body.classList.add('door-open');
+  const root = document.createElement('div'); root.id = 'theDoor';
+  root.innerHTML =
+    '<div class="door-card">' +
+      '<div class="door-kicker">Prism · beta</div>' +
+      '<h2 class="door-title">Shine your light into Prism.</h2>' +
+      '<p class="door-copy">Pick a name and a passcode. Where you land on each Reading shows up under that name; the passcode is yours alone, so choose one you\'ll remember.</p>' +
+      '<label class="door-field"><span>name</span><input id="doorName" type="text" maxlength="20" autocomplete="username" spellcheck="false" placeholder="letters, numbers, dashes"></label>' +
+      '<label class="door-field"><span>passcode</span><input id="doorPass" type="password" maxlength="80" autocomplete="new-password" placeholder="8 or more characters"></label>' +
+      '<label class="door-field door-invite"><span>invite</span><input id="doorInvite" type="text" maxlength="80" autocomplete="off" spellcheck="false"></label>' +
+      '<div class="door-msg" id="doorMsg"></div>' +
+      '<button type="button" class="door-go" id="doorGo">come in <span>→</span></button>' +
+      '<div class="door-alt"><button type="button" id="doorHaveKey">I have a villa key</button><button type="button" id="doorHaveSeat">I already have a seat</button></div>' +
+      '<div class="door-keyrow" id="doorKeyRow" hidden><input id="doorKey" type="password" maxlength="80" autocomplete="off" placeholder="your villa key"><button type="button" id="doorKnock">knock</button></div>' +
+    '</div>';
+  document.body.appendChild(root);
+  const q = (id) => document.getElementById(id);
+  q('doorInvite').value = window.PRISM_JOIN;
+  const msg = q('doorMsg');
+  let mode = 'claim';
+  function done() {
+    try { localStorage.removeItem('prism.beam.invite'); } catch (e) {}
+    try { const u = new URL(location.href); u.searchParams.delete('join'); history.replaceState(null, '', u.toString()); } catch (e) {}
+    root.classList.add('out');
+    document.body.classList.remove('door-open');
+    setTimeout(() => { root.remove(); try { if (window.Ted && window.Ted.tour) window.Ted.tour(); } catch (e) {} }, 500);
+  }
+  q('doorGo').addEventListener('click', async () => {
+    const go = q('doorGo'); go.disabled = true; msg.textContent = mode === 'claim' ? 'one moment…' : 'knocking…';
+    const r = mode === 'claim'
+      ? await PrismField.claim(q('doorInvite').value, q('doorName').value, q('doorPass').value)
+      : await PrismField.knock(q('doorPass').value, q('doorName').value);
+    go.disabled = false;
+    if (r.ok) { msg.textContent = 'welcome, ' + r.name; setTimeout(done, 600); } else msg.textContent = r.error || 'no';
+  });
+  q('doorHaveSeat').addEventListener('click', () => {
+    mode = mode === 'claim' ? 'signin' : 'claim';
+    root.classList.toggle('signin', mode === 'signin');
+    q('doorGo').innerHTML = mode === 'claim' ? 'come in <span>→</span>' : 'sign in <span>→</span>';
+    q('doorHaveSeat').textContent = mode === 'claim' ? 'I already have a seat' : 'I\'m new here';
+    q('doorPass').autocomplete = mode === 'claim' ? 'new-password' : 'current-password';
+    msg.textContent = '';
+  });
+  q('doorHaveKey').addEventListener('click', () => { const row = q('doorKeyRow'); row.hidden = !row.hidden; if (!row.hidden) q('doorKey').focus(); });
+  q('doorKnock').addEventListener('click', async () => {
+    const b = q('doorKnock'); b.disabled = true; msg.textContent = 'knocking…';
+    const r = await PrismField.knock(q('doorKey').value);
+    b.disabled = false;
+    if (r.ok) { msg.textContent = 'welcome, ' + r.name; setTimeout(done, 600); } else msg.textContent = r.error || 'no';
+  });
+  [q('doorName'), q('doorPass'), q('doorInvite')].forEach(el => el.addEventListener('keydown', e => { if (e.key === 'Enter') q('doorGo').click(); }));
+  q('doorKey').addEventListener('keydown', e => { if (e.key === 'Enter') q('doorKnock').click(); });
+  setTimeout(() => q('doorName').focus(), 400);
+})();
+</script>   <!-- Ted's tour: isolation + a peeking presenter (2026-09-22) -->
 
 </body>
 </html>
