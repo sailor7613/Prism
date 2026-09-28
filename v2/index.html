@@ -2902,7 +2902,7 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
     </div>
 
     <div class="track-wrap">
-      <div class="track" id="track" data-ted-hint="This rail is your aperture. Center means lukewarm; the harder you push out, the more this thing grabs you. The marks are the three thirds.">
+      <div class="track" id="track" data-ted-hint="This rail is your aperture: how hard you'd push this in an argument. Center, you'd barely argue it. The marks are the three thirds: fluid, coalition, denominated.">
         <div class="prism-threshold" style="left: 17%"></div>
         <div class="prism-threshold" style="left: 33%"></div>
         <div class="prism-threshold center" style="left: 50%"></div>
@@ -8048,7 +8048,13 @@ applyState(true);
   const elNav = document.getElementById('elasticNav');
   const elBeam = document.getElementById('elBeam'), elFan = document.getElementById('elFan');
   const elPrism = document.getElementById('elPrism');
-  const EL_ANCHORS = [30, 50, 70];
+  // Seats follow the ontology (2026-09-27 fix): the camera looks at the part
+  // of the painting the column IS — Beam/Diatribe (col 0) looks at the beam,
+  // so the prism sits RIGHT (70%) and the beam fills the screen; Refraction/
+  // Spectrum (col 2) looks at the fan, prism LEFT (30%). The July build had
+  // these mirrored (prism at 30% on the Diatribe = the fan view), which is
+  // the same filmstrip the phone ribbon always had, read backwards.
+  const EL_ANCHORS = [70, 50, 30];
   function isElastic() { return !!(elNav && elasticMQ.matches); }
   function elGeom() {
     const navH = ribbon.offsetHeight || 92;
@@ -8246,7 +8252,7 @@ applyState(true);
   }
 
   function positionRibbon(animated) {
-    if (isElastic()) { positionElastic(dragging ? true : animated); return; }
+    if (isElastic()) { if (dragging) return; positionElastic(animated); return; }   // mid-drag the finger owns the prism
     if (dragging) return;   // the finger owns the ribbon during a free-plane drag
     const imgW = (ribbonImg.offsetHeight || (ribbon.clientHeight || 70) * 0.76) * RIBBON_ASPECT;
     const vw = window.innerWidth;
@@ -8262,9 +8268,9 @@ applyState(true);
   // Seat the prism at the active column; the beam and fan plates stretch to
   // the screen edges (drawn-to-stretch plates — the fan never compresses
   // below its natural aspect, it only stretches when the run exceeds it).
-  function positionElastic(animated) {
+  function positionElastic(animated, livePct) {
     if (!elNav) return;
-    const g = elGeom(), vw = window.innerWidth, a = EL_ANCHORS[col];
+    const g = elGeom(), vw = window.innerWidth, a = (livePct != null) ? livePct : EL_ANCHORS[col];
     const els = [elBeam, elFan, elPrism];
     if (!animated) els.forEach(el => { el.style.transition = 'none'; });
     elPrism.style.left = 'calc(' + a + '% - ' + (g.prismW / 2).toFixed(1) + 'px)';
@@ -8484,7 +8490,7 @@ applyState(true);
       startLeft: imgLeftFor(col, shade), startTop: shade ? botSeat : topSeat,
       topSeat: topSeat, botSeat: botSeat, travel: Math.max(1, botSeat - topSeat),
       leftMax: imgLeftFor(0, shade), leftMin: imgLeftFor(2, shade),
-      rowShade: shade, lastC: col, lastS: shade
+      rowShade: shade, lastC: col, lastS: shade, startCol: col
     };
     dragging = true;
     ribbon.style.transition = 'none'; ribbonArt.style.transition = 'none';
@@ -8497,13 +8503,25 @@ applyState(true);
     // 1:1 follow, clamped to the plane's bounds
     const left = Math.max(plane.leftMin, Math.min(plane.leftMax, plane.startLeft + dx));
     const top  = Math.max(plane.topSeat, Math.min(plane.botSeat, plane.startTop + dy));
-    ribbonArt.style.transform = 'translateY(-50%) translateX(' + left + 'px)';
+    let elPct = null;
+    if (isElastic()) {
+      // desktop + phone (elastic everywhere): the PRISM rides the finger, the
+      // beam and fan stretch live to meet it (2026-09-27 — it used to sit
+      // still and then jump the OTHER way when a cell boundary was crossed)
+      const vw = window.innerWidth || 1;
+      elPct = Math.max(EL_ANCHORS[2], Math.min(EL_ANCHORS[0], EL_ANCHORS[plane.startCol] + dx / vw * 100));
+      positionElastic(false, elPct);
+    } else {
+      ribbonArt.style.transform = 'translateY(-50%) translateX(' + left + 'px)';
+    }
     ribbon.style.top = top + 'px';
     // which cell are we over right now?
     const vFrac = (top - plane.topSeat) / plane.travel;     // 0 = lower row, 1 = upper row
     const nShade = vFrac >= 0.5;
     plane.rowShade = nShade;                                  // slice math follows the row
-    const nCol = nearestColFromLeft(left);
+    const nCol = (elPct != null)
+      ? [0, 1, 2].reduce((b, c) => Math.abs(elPct - EL_ANCHORS[c]) < Math.abs(elPct - EL_ANCHORS[b]) ? c : b, 0)
+      : nearestColFromLeft(left);
     if (nCol !== plane.lastC || nShade !== plane.lastS) {
       col = nCol; shade = nShade; plane.lastC = nCol; plane.lastS = nShade;
       applyNav(false);                                        // reveal destination (positionRibbon & visor-snap are guarded off while dragging)
@@ -8521,6 +8539,7 @@ applyState(true);
       plane = null;
       ribbon.style.transition = ''; ribbonArt.style.transition = '';   // restore the ease…
       ribbon.style.top = '';                                            // …release the inline row so CSS seats it
+      if (isElastic()) { try { elPrism.style.transition = ''; elBeam.style.transition = ''; elFan.style.transition = ''; } catch (_) {} }
       applyNav(true);                                                   // ease to the nearest cell's exact seat + settle the visor
     }
     dx0 = null; dy0 = null; setTimeout(() => { dragMoved = false; }, 30);
@@ -9522,7 +9541,7 @@ function profileCard() {
 
 })();
 </script>
-<script src="../src/js/prism-ted-tour.js?v=4"></script>   <!-- Ted's tour: isolation + a peeking presenter (2026-09-22) -->
+<script src="../src/js/prism-ted-tour.js?v=5"></script>   <!-- Ted's tour: isolation + a peeking presenter (2026-09-22) -->
 
 </body>
 </html>

@@ -35,10 +35,15 @@
   //       'drag' (the rail moved past a third) · 'select' (a card chosen) ·
   //       'pin' (pad pointerup) · 'z' (the z thumb moved) · 'auto' (timer)
   // text: string | function() → string  (default: the element's data-ted-hint)
+  // The three thirds as an argument (Sailor, 2026-09-27): how far you'd take
+  // it with someone across the table. Fluid states a belief; coalition tries
+  // to win people over; denominated stops gathering support and spends
+  // political capital. Fluid sits nearest the center of the rail, denominated
+  // at the edges.
   const bandLine = (band) => ({
-    fluid:       "Outer third — the easy stuff. You two disagree, sure, but you're still arguing about the same thing.",
-    coalition:   "Middle third — now it's teams. Pick this and you're picking a whole side, package deal.",
-    denominated: "Inner third — the deep end. You're not arguing about the thing now, you're arguing about what it even is.",
+    fluid:       "First third: fluid. You'd say what you think and leave it there. No urge to explain it or qualify it.",
+    coalition:   "Middle third: coalition. You'd go two or three rounds with somebody to bring them around. You're gathering support.",
+    denominated: "Last third: denominated. You're done gathering support. You'd burn a bridge to make the point, and spend political capital doing it.",
   }[band] || '');
   const currentBand = () => {
     const el = q('#readoutReal') || q('#captionReal .band');   // readout is live; the caption label develops late
@@ -83,9 +88,13 @@
       when: () => body.classList.contains('phase-diatribe'),
       steps: [
         { sel: '#track', wait: 'tap', move: 'heat', skipUnless: () => !!window.PRISM_ON_EXAMPLE, 
-          text: "Here's the whole logic, three moves. One: how hot are you on this? Two: which corner of the plane are you standing in? Three: does the law actually deliver? This rail is move one." },
+          text: "Here's the whole logic, three moves. One: how hard would you push this? Two: which corner of the plane are you standing in? Three: does the law actually deliver? This rail is move one." },
+        { sel: '#track', wait: 'tap', move: 'heat', skipUnless: () => !!window.PRISM_ON_EXAMPLE,
+          text: "Picture arguing this with somebody. First third: you say what you think and leave it. Middle third: you'd go two or three rounds to win them over. Last third: you'd burn a bridge to make the point." },
         { sel: '#track', wait: 'drag', move: 'heat',
-          text: "This rail is your aperture. Center is lukewarm; the harder you push out, the more this thing grabs you. Drag it — go on." },
+          text: () => window.PRISM_ON_EXAMPLE
+            ? "Now drag it out to where you'd actually be on leaf blowers. Either side. Go on."
+            : "This rail is your aperture. Center, you'd barely argue it; the farther out you drag, the harder you'd push. Drag it — go on." },
         { sel: '#track', wait: 'tap', move: 'heat', live: true, text: () => bandLine(currentBand()) },
         { sel: '#captionReal', wait: 'tap', move: 'heat',
           text: () => window.PRISM_ON_EXAMPLE
