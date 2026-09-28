@@ -1,9 +1,9 @@
 # Newsroom digest — 2026-09-28
 
-Register: 44 objects · this scan: 5 new, 0 seen again, 0 returned.
+Register: 44 objects · this scan: 0 new, 5 seen again, 0 returned.
 
-## Queued for drafting (1)
-- **Mediators working to broker US - Iran deal even after Trump rejected latest Tehran proposal** — vote · voted · holder: the President · formed 2026-09-28 · 10 outlets (peak 10) · `obj_thepresi_broker-deal-even-iran`
+## Queued for drafting (0)
+- (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
 - **Will FDA advisers recommend a multi - cancer blood test for approval ? Theyll vote** — vote · voted · holder: HHS · formed 2026-09-23 · 10 outlets (peak 11) · `obj_hhs_advisers-approval-blood-cancer` · silent 5d after 2 scans
@@ -15,11 +15,7 @@ Register: 44 objects · this scan: 5 new, 0 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **Mediators working to broker US - Iran deal even after Trump rejected latest Tehran proposal** — vote · voted · holder: the President · formed 2026-09-28 · 10 outlets (peak 10) · `obj_thepresi_broker-deal-even-iran`
-- **Sen . John Kennedy proposes rule for no politician to name buildings after themselves** — ruling · ruled · holder: HHS · formed 2026-09-28 · 5 outlets (peak 5) · `obj_hhs_buildings-john-kennedy-name`
-- **Trump rolls back Biden - era mileage rules amid slow US shift to electric vehicles** — ruling · ruled · holder: the President · formed 2026-09-28 · 6 outlets (peak 6) · `obj_thepresi_back-biden-electric-era`
-- **Investigation reopened into alleged gang rape at Cornell University** — suit · sued · holder: ? · formed 2026-09-28 · 14 outlets (peak 14) · `obj_x_alleged-cornell-gang-into`
-- **Shark super hearing detects sounds from nearly 250 feet away | National** — hearing · compelled · holder: ? · formed 2026-09-28 · 3 outlets (peak 3) · `obj_x_250-away-detects-feet`
+- none
 
 ## Watching (15)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
@@ -35,5 +31,5 @@ Register: 44 objects · this scan: 5 new, 0 seen again, 0 returned.
 - **s-119-2403 — House motion to suspend the rules and pass (Passed)** — bill · voted · holder: the House · formed 2026-09-16 · 0 outlets (peak 0) · `obj_bill_s-119-2403`
 - **Whistleblower Protection Act of 2025 — House motion to suspend the rules and pass, as amended (Passed)** — bill · voted · holder: the House · formed 2026-09-15 · 0 outlets (peak 0) · `obj_bill_hr-119-4646`
 - **Exclusive : Stratton talks Trump , filibuster , the far - left as early voting begins** — vote · voted · holder: the President · formed 2026-09-27 · 8 outlets (peak 8) · `obj_thepresi_begins-early-exclusive-far`
-- **Sen . John Kennedy proposes rule for no politician to name buildings after themselves** — ruling · ruled · holder: HHS · formed 2026-09-28 · 5 outlets (peak 5) · `obj_hhs_buildings-john-kennedy-name`
+- **Sen . John Kennedy proposes rule for no politician to name buildings after themselves** — ruling · ruled · holder: HHS · formed 2026-09-28 · 6 outlets (peak 6) · `obj_hhs_buildings-john-kennedy-name`
 - **Trump rolls back Biden - era mileage rules amid slow US shift to electric vehicles** — ruling · ruled · holder: the President · formed 2026-09-28 · 6 outlets (peak 6) · `obj_thepresi_back-biden-electric-era`

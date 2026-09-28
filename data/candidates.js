@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-09-28T14:11:48.841Z · 19 legislative + 5 news (GDELT, 3d)
+// 2026-09-28T21:17:38.526Z · 19 legislative + 8 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1790604687587,
+    "ts": 1790630222629,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.834,
+      "salience": 0.832,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -1423,11 +1423,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1790604687588,
+    "ts": 1790630222629,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.825,
+      "salience": 0.824,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -1680,11 +1680,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1790604687587,
+    "ts": 1790630222629,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.763,
+      "salience": 0.762,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -2593,11 +2593,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1790604687588,
+    "ts": 1790630222630,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.722,
+      "salience": 0.72,
       "congressGovUrl": null,
       "votes": [
         {
@@ -3121,11 +3121,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1790604687587,
+    "ts": 1790630222629,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.699,
+      "salience": 0.697,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4022,11 +4022,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1790604687587,
+    "ts": 1790630222629,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.54,
+      "salience": 0.538,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -4276,11 +4276,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1790604687587,
+    "ts": 1790630222628,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.531,
+      "salience": 0.53,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -4549,11 +4549,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1790604687588,
+    "ts": 1790630222629,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.506,
+      "salience": 0.505,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5448,11 +5448,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1790604687587,
+    "ts": 1790630222629,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.493,
+      "salience": 0.492,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6727,11 +6727,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1790604687588,
+    "ts": 1790630222630,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.413,
+      "salience": 0.412,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7647,11 +7647,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1790604687588,
+    "ts": 1790630222630,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.412,
+      "salience": 0.41,
       "congressGovUrl": null,
       "votes": [
         {
@@ -8557,11 +8557,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1790604687588,
+    "ts": 1790630222630,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.377,
+      "salience": 0.376,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9475,11 +9475,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1790604687587,
+    "ts": 1790630222629,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.334,
+      "salience": 0.333,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10355,11 +10355,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1790604687587,
+    "ts": 1790630222629,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.329,
+      "salience": 0.328,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11231,11 +11231,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1790604687587,
+    "ts": 1790630222629,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.137,
+      "salience": 0.136,
       "congressGovUrl": null,
       "votes": [
         {
@@ -12124,11 +12124,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1790604687587,
+    "ts": 1790630222629,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.13,
+      "salience": 0.129,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -13039,11 +13039,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1790604687587,
+    "ts": 1790630222629,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.124,
+      "salience": 0.122,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -13927,11 +13927,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1790604687586,
+    "ts": 1790630222628,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.119,
+      "salience": 0.118,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -14848,11 +14848,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1790604687586,
+    "ts": 1790630222628,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.108,
+      "salience": 0.107,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -15764,15 +15764,135 @@ window.PRISM_CANDIDATES = [
     "mts": 1784044297586
   },
   {
-    "cid": "cand_news_810-about-canceled",
+    "cid": "cand_news_crackdown-leader-mail",
     "source": "news",
-    "ts": 1790604708836,
+    "ts": 1790630258521,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.994,
+      "salience": 0.981,
       "articles": [
+        {
+          "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  – Chicago Tribune",
+          "url": "https://www.chicagotribune.com/2026/09/28/trumps-mail-voting-crackdown/",
+          "domain": "chicagotribune.com",
+          "seendate": "2026-09-28T18:15:00Z",
+          "image": "https://www.chicagotribune.com/wp-content/uploads/2026/09/Postmaster_General_Steiner_39349_7a6ab2-1.jpg"
+        },
+        {
+          "title": "Trump mail voting crackdown tests Postal Service leader",
+          "url": "https://www.capitalgazette.com/2026/09/28/trump-mail-voting-crackdown-postal-service-leader/",
+          "domain": "capitalgazette.com",
+          "seendate": "2026-09-28T17:00:00Z",
+          "image": "https://www.capitalgazette.com/wp-content/uploads/2026/09/Postmaster_General_Steiner_13852-1.jpg"
+        },
+        {
+          "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  - Las Vegas Sun News",
+          "url": "https://lasvegassun.com/news/2026/sep/28/trumps-mail-voting-crackdown-tests-postal-service-/",
+          "domain": "lasvegassun.com",
+          "seendate": "2026-09-28T16:45:00Z",
+          "image": null
+        },
+        {
+          "title": "Trump mail voting crackdown tests Postal Service leader",
+          "url": "https://www.sandiegouniontribune.com/2026/09/28/trump-mail-voting-crackdown-postal-service-leader/",
+          "domain": "sandiegouniontribune.com",
+          "seendate": "2026-09-28T16:30:00Z",
+          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/09/Postmaster_General_Steiner_13852-1.jpg"
+        },
+        {
+          "title": "Trump mail voting crackdown tests Postal Service leader",
+          "url": "https://www.troyrecord.com/2026/09/28/trump-mail-voting-crackdown-postal-service-leader/",
+          "domain": "troyrecord.com",
+          "seendate": "2026-09-28T16:30:00Z",
+          "image": "https://www.troyrecord.com/wp-content/uploads/2026/09/Postmaster_General_Steiner_13852-1.jpg"
+        },
+        {
+          "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
+          "url": "https://www.winchesterstar.com/associated_press/washington/trumps-mail-voting-crackdown-tests-postal-service-leader-who-says-hes-not-political/article_0c5beb8f-8f90-5e39-b621-c17950d91ec1.html",
+          "domain": "winchesterstar.com",
+          "seendate": "2026-09-28T15:45:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/winchesterstar.com/content/tncms/assets/v3/editorial/a/b3/ab376ac5-9c4f-5604-8ca4-7828fcdecb5c/6aba46c59f5dd.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
+        {
+          "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
+          "url": "https://mymotherlode.com/news/national/general-election/11175142/trumps-mail-voting-crackdown-tests-postal-service-leader-who-says-hes-not-political.html",
+          "domain": "mymotherlode.com",
+          "seendate": "2026-09-28T13:15:00Z",
+          "image": "https://mymotherlode.com/wp-content/uploads/2026/09/AP_99d137dec53045ddb65c5a7f0aa54a6b_08fd22b7ba.jpg"
+        },
+        {
+          "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
+          "url": "https://www.clickondetroit.com/news/politics/2026/09/28/trumps-mail-voting-crackdown-tests-postal-service-leader-who-says-hes-not-political/",
+          "domain": "clickondetroit.com",
+          "seendate": "2026-09-28T12:30:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/D4R64CPGYVCF7GOPTQZ4O6JGSU.jpg?api_key=clickondetroit_06f87fefb2123598"
+        },
+        {
+          "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
+          "url": "https://www.clickorlando.com/news/politics/2026/09/28/trumps-mail-voting-crackdown-tests-postal-service-leader-who-says-hes-not-political/",
+          "domain": "clickorlando.com",
+          "seendate": "2026-09-28T12:15:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/D4R64CPGYVCF7GOPTQZ4O6JGSU.jpg?api_key=clickorlando_488cff2bcc157b2e"
+        },
+        {
+          "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
+          "url": "https://www.wral.com/news/ap/ba0fc-trumps-mail-voting-crackdown-tests-postal-service-leader-who-says-hes-not-political/",
+          "domain": "wral.com",
+          "seendate": "2026-09-28T11:30:00Z",
+          "image": "https://images.wral.com/f0c8efa8-8436-5fc5-9e2f-2f4c31637097"
+        },
+        {
+          "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
+          "url": "http://www.bozemandailychronicle.com/wire/business/trumps-mail-voting-crackdown-tests-postal-service-leader-who-says-hes-not-political/article_bb3eb835-f590-56fe-8e4b-55887bb47be1.html",
+          "domain": "bozemandailychronicle.com",
+          "seendate": "2026-09-28T11:30:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/bozemandailychronicle.com/content/tncms/assets/v3/editorial/c/43/c434697a-f76b-56c1-8a04-01644576c9cd/6aba46f4f3630.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
+        {
+          "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
+          "url": "https://www.wsls.com/news/politics/2026/09/28/trumps-mail-voting-crackdown-tests-postal-service-leader-who-says-hes-not-political/",
+          "domain": "wsls.com",
+          "seendate": "2026-09-28T11:15:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/D4R64CPGYVCF7GOPTQZ4O6JGSU.jpg?api_key=wsls_8c3a4bc35af7684e"
+        }
+      ]
+    },
+    "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
+    "summary": "2026-09-28 chicagotribune.com: Trump mail voting crackdown tests Postal Service leader who says he  not political  – Chicago Tribune\n2026-09-28 capitalgazette.com: Trump mail voting crackdown tests Postal Service leader\n2026-09-28 lasvegassun.com: Trump mail voting crackdown tests Postal Service leader who says he  not political  - Las Vegas Sun News\n2026-09-28 sandiegouniontribune.com: Trump mail voting crackdown tests Postal Service leader\n2026-09-28 troyrecord.com: Trump mail voting crackdown tests Postal Service leader\n2026-09-28 winchesterstar.com: Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_810-about-canceled",
+    "source": "news",
+    "ts": 1790630258520,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.978,
+      "articles": [
+        {
+          "title": "What to know about the $810 million in spending canceled by President Trump",
+          "url": "https://www.krcu.org/2026-09-28/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
+          "domain": "krcu.org",
+          "seendate": "2026-09-28T17:45:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/c1/be/d961f31c4644bdc1daa89c0c8f3d/gettyimages-2284040971.jpg"
+        },
+        {
+          "title": "What to know about the $810 million in spending canceled by President Trump",
+          "url": "https://www.nhpr.org/2026-09-28/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
+          "domain": "nhpr.org",
+          "seendate": "2026-09-28T16:30:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/c1/be/d961f31c4644bdc1daa89c0c8f3d/gettyimages-2284040971.jpg"
+        },
         {
           "title": "What to know about the $810 million in spending canceled by President Trump",
           "url": "https://www.wdiy.org/npr-news/2026-09-28/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
@@ -15842,25 +15962,11 @@ window.PRISM_CANDIDATES = [
           "domain": "kwit.org",
           "seendate": "2026-09-28T11:15:00Z",
           "image": "http://npr-brightspot.s3.amazonaws.com/c1/be/d961f31c4644bdc1daa89c0c8f3d/gettyimages-2284040971.jpg"
-        },
-        {
-          "title": "What to know about the $810 million in spending canceled by President Trump",
-          "url": "https://www.kazu.org/npr-news/2026-09-28/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
-          "domain": "kazu.org",
-          "seendate": "2026-09-28T11:15:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/c1/be/d961f31c4644bdc1daa89c0c8f3d/gettyimages-2284040971.jpg"
-        },
-        {
-          "title": "What to know about the $810 million in spending canceled by President Trump",
-          "url": "https://www.kzyx.org/npr-news/2026-09-28/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
-          "domain": "kzyx.org",
-          "seendate": "2026-09-28T11:00:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/c1/be/d961f31c4644bdc1daa89c0c8f3d/gettyimages-2284040971.jpg"
         }
       ]
     },
     "title": "What to know about the $810 million in spending canceled by President Trump",
-    "summary": "2026-09-28 wdiy.org: What to know about the $810 million in spending canceled by President Trump\n2026-09-28 aspenpublicradio.org: What to know about the $810 million in spending canceled by President Trump\n2026-09-28 whqr.org: What to know about the $810 million in spending canceled by President Trump\n2026-09-28 wunc.org: What to know about the $810 million in spending canceled by President Trump\n2026-09-28 wkyufm.org: What to know about the $810 million in spending canceled by President Trump\n2026-09-28 wyso.org: What to know about the $810 million in spending canceled by President Trump",
+    "summary": "2026-09-28 krcu.org: What to know about the $810 million in spending canceled by President Trump\n2026-09-28 nhpr.org: What to know about the $810 million in spending canceled by President Trump\n2026-09-28 wdiy.org: What to know about the $810 million in spending canceled by President Trump\n2026-09-28 aspenpublicradio.org: What to know about the $810 million in spending canceled by President Trump\n2026-09-28 whqr.org: What to know about the $810 million in spending canceled by President Trump\n2026-09-28 wunc.org: What to know about the $810 million in spending canceled by President Trump",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -15872,40 +15978,19 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_abortion-collins-court",
     "source": "news",
-    "ts": 1790604708836,
+    "ts": 1790630258521,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.955,
+      "salience": 0.873,
       "articles": [
-        {
-          "title": "Supreme Court Vote Shadows Sen . Collins in First Race after Abortion Decision",
-          "url": "https://989wclz.com/news/074470-supreme-court-vote-shadows-sen-collins-in-first-race-after-abortion-decision/",
-          "domain": "989wclz.com",
-          "seendate": "2026-09-28T07:00:00Z",
-          "image": "https://wgan.com/wp-content/blogs.dir/47/files/2026/09/AP26266540307822-1-620x400.jpg"
-        },
-        {
-          "title": "Supreme Court Vote Shadows Sen . Collins in First Race after Abortion Decision",
-          "url": "https://coast931.com/news/074470-supreme-court-vote-shadows-sen-collins-in-first-race-after-abortion-decision/",
-          "domain": "coast931.com",
-          "seendate": "2026-09-28T05:30:00Z",
-          "image": "https://wgan.com/wp-content/blogs.dir/47/files/2026/09/AP26266540307822-1-620x400.jpg"
-        },
         {
           "title": "Supreme Court vote shadows Maine Sen . Susan Collins in her first race after abortion rights decision",
           "url": "https://www.santafenewmexican.com/ap/national/supreme-court-vote-shadows-maine-sen-susan-collins-in-her-first-race-after-abortion-rights/article_a1994c6f-15a2-5613-a602-4f41562ec3cb.html",
           "domain": "santafenewmexican.com",
           "seendate": "2026-09-28T01:00:00Z",
           "image": "https://bloximages.newyork1.vip.townnews.com/santafenewmexican.com/content/tncms/assets/v3/editorial/b/e6/be636156-ffa5-52b1-b2c7-99646aa1b200/6ab9a336afa98.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "Supreme Court vote shadows Maine Sen . Susan Collins in her first race after abortion rights decision",
-          "url": "https://www.nvdaily.com/associated_press_national/supreme-court-vote-shadows-maine-sen-susan-collins-in-her-first-race-after-abortion-rights/article_a7d1eb97-255d-5ec2-ad91-fbefba5335d7.html",
-          "domain": "nvdaily.com",
-          "seendate": "2026-09-27T21:15:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/nvdaily.com/content/tncms/assets/v3/editorial/e/8d/e8d1c7de-7d7a-5f0f-87c2-5aa6d7360191/6ab905f1ca732.image.jpg?crop=1763%2C926%2C0%2C124"
         },
         {
           "title": "Supreme Court vote shadows Maine Sen . Susan Collins in her first race after abortion rights decision",
@@ -15944,13 +16029,6 @@ window.PRISM_CANDIDATES = [
         },
         {
           "title": "Supreme Court vote shadows Maine Sen . Susan Collins in her first bid after abortion rights decision",
-          "url": "http://www.sitkasentinel.com/stories/supreme-court-vote-shadows-maine-sen-susan-collins-in-her-first-bid-after-abortion-rights-decision,174400",
-          "domain": "sitkasentinel.com",
-          "seendate": "2026-09-27T16:00:00Z",
-          "image": "https://mapi.associatedpress.com/v2/items/8b169007f5424f04854dd5211bd34a56.0/preview/preview.jpg?nfe=true&s=512&wm=false&app=MPK&tag=iid~8b169007f5424f04854dd5211bd34a56!rsn~0!cid~59a5d23268b949f4a5ef329c0f8cce9d!orgId~48830!qt~y9zyDIuyMVeI!orgNm~DAILY%20SITKA%20SENTINEL!role~Preview!mt~photo!fmt~JPEG%20Baseline"
-        },
-        {
-          "title": "Supreme Court vote shadows Maine Sen . Susan Collins in her first bid after abortion rights decision",
           "url": "https://www.ksat.com/news/politics/2026/09/27/supreme-court-vote-shadows-maine-sen-susan-collins-in-her-first-bid-after-abortion-rights-decision/",
           "domain": "ksat.com",
           "seendate": "2026-09-27T15:45:00Z",
@@ -15962,11 +16040,181 @@ window.PRISM_CANDIDATES = [
           "domain": "click2houston.com",
           "seendate": "2026-09-27T15:45:00Z",
           "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/O3Z5TXQZDNGI7BHZKH4ZUL2NGU.jpg?api_key=click2houston_85fdeb57f8cd3635"
+        },
+        {
+          "title": "Supreme Court vote shadows Maine Sen . Susan Collins in her first bid after abortion rights decision",
+          "url": "https://www.clickorlando.com/news/politics/2026/09/27/supreme-court-vote-shadows-maine-sen-susan-collins-in-her-first-bid-after-abortion-rights-decision/",
+          "domain": "clickorlando.com",
+          "seendate": "2026-09-27T15:45:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/O3Z5TXQZDNGI7BHZKH4ZUL2NGU.jpg?api_key=clickorlando_488cff2bcc157b2e"
+        },
+        {
+          "title": "Supreme Court vote shadows Maine Sen . Susan Collins in her first bid after abortion rights decision",
+          "url": "https://www.wboc.com/news/national/supreme-court-vote-shadows-maine-sen-susan-collins-in-her-first-bid-after-abortion-rights/article_de113a3c-92c6-5506-9a51-92f6d0599c1f.html",
+          "domain": "wboc.com",
+          "seendate": "2026-09-27T14:45:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/wboc.com/content/tncms/assets/v3/editorial/1/9f/19f588df-0d1c-5815-93bb-afd6de59e1d9/6ab906d9b4620.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
+        {
+          "title": "Supreme Court vote shadows Maine Sen . Susan Collins in her first bid after abortion rights decision",
+          "url": "http://www.thegazette.com/news/national/supreme-court-vote-shadows-maine-sen-susan-collins-in-her-first-bid-after-abortion-rights/article_db364aa4-f9ce-5345-b1f9-41159abbf84a.html",
+          "domain": "thegazette.com",
+          "seendate": "2026-09-27T14:30:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/thegazette.com/content/tncms/assets/v3/editorial/6/0c/60caff96-7524-5f73-9508-150c73970e0a/6ab906c2b6d01.image.jpg?crop=3907%2C2051%2C0%2C276"
+        },
+        {
+          "title": "Supreme Court vote shadows Maine Sen . Susan Collins in her first bid after abortion rights decision",
+          "url": "https://www.news-gazette.com/news/nation-world/supreme-court-vote-shadows-maine-sen-susan-collins-in-her-first-bid-after-abortion-rights/article_39e2db81-05dd-5639-a0bb-46603519323c.html",
+          "domain": "news-gazette.com",
+          "seendate": "2026-09-27T13:45:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/news-gazette.com/content/tncms/custom/image/3d3bfbd4-3cf5-11ec-9461-574a9d514a20.jpg"
         }
       ]
     },
     "title": "Supreme Court vote shadows Maine Sen . Susan Collins in her first bid after abortion rights decision",
-    "summary": "2026-09-28 989wclz.com: Supreme Court Vote Shadows Sen . Collins in First Race after Abortion Decision\n2026-09-28 coast931.com: Supreme Court Vote Shadows Sen . Collins in First Race after Abortion Decision\n2026-09-28 santafenewmexican.com: Supreme Court vote shadows Maine Sen . Susan Collins in her first race after abortion rights decision\n2026-09-27 nvdaily.com: Supreme Court vote shadows Maine Sen . Susan Collins in her first race after abortion rights decision\n2026-09-27 dailypress.com: Supreme Court vote shadows Maine Sen . Susan Collins in her first race after abortion rights decision\n2026-09-27 sandiegouniontribune.com: Supreme Court vote shadows Maine Sen . Susan Collins in her first race after abortion rights decision",
+    "summary": "2026-09-28 santafenewmexican.com: Supreme Court vote shadows Maine Sen . Susan Collins in her first race after abortion rights decision\n2026-09-27 dailypress.com: Supreme Court vote shadows Maine Sen . Susan Collins in her first race after abortion rights decision\n2026-09-27 sandiegouniontribune.com: Supreme Court vote shadows Maine Sen . Susan Collins in her first race after abortion rights decision\n2026-09-27 idahostatejournal.com: Supreme Court vote shadows Maine Sen . Susan Collins in her first bid after abortion rights decision\n2026-09-27 wsls.com: Supreme Court vote shadows Maine Sen . Susan Collins in her first bid after abortion rights decision\n2026-09-27 bangordailynews.com: Supreme Court vote shadows Susan Collins in her first bid after abortion rights decision",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_administration-democrats-house",
+    "source": "news",
+    "ts": 1790630258521,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.871,
+      "articles": [
+        {
+          "title": "House Democrats plan vast oversight of Trump administration",
+          "url": "https://www.presstelegram.com/2026/09/28/election-2026-house-democrats-oversight-plans/",
+          "domain": "presstelegram.com",
+          "seendate": "2026-09-28T18:15:00Z",
+          "image": "https://www.presstelegram.com/wp-content/uploads/2026/09/Election_2_26_Democrats__8546-1.jpg"
+        },
+        {
+          "title": "House Democrats plan vast oversight of Trump administration",
+          "url": "https://www.mercurynews.com/2026/09/28/election-2026-house-democrats-oversight-plans/",
+          "domain": "mercurynews.com",
+          "seendate": "2026-09-28T17:45:00Z",
+          "image": "https://www.mercurynews.com/wp-content/uploads/2026/09/Election_2_26_Democrats__8546-1.jpg"
+        },
+        {
+          "title": "House Democrats plan vast oversight of Trump administration",
+          "url": "https://www.pasadenastarnews.com/2026/09/28/election-2026-house-democrats-oversight-plans/",
+          "domain": "pasadenastarnews.com",
+          "seendate": "2026-09-28T17:00:00Z",
+          "image": "https://www.pasadenastarnews.com/wp-content/uploads/2026/09/Election_2_26_Democrats__8546-1.jpg"
+        },
+        {
+          "title": "House Democrats plan vast oversight of Trump administration",
+          "url": "https://www.sandiegouniontribune.com/2026/09/28/election-2026-house-democrats-oversight-plans/",
+          "domain": "sandiegouniontribune.com",
+          "seendate": "2026-09-28T16:30:00Z",
+          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/09/Election_2_26_Democrats__8546-1.jpg"
+        },
+        {
+          "title": "House Democrats plan vast oversight of Trump administration",
+          "url": "https://www.dailybreeze.com/2026/09/28/election-2026-house-democrats-oversight-plans/",
+          "domain": "dailybreeze.com",
+          "seendate": "2026-09-28T16:30:00Z",
+          "image": "https://www.dailybreeze.com/wp-content/uploads/2026/09/Election_2_26_Democrats__8546-1.jpg"
+        },
+        {
+          "title": "House Democrats Plan Vast Oversight of Trump Administration ; Impeachment Is an Option",
+          "url": "https://www.theyeshivaworld.com/news/general/2603423/house-democrats-plan-vast-oversight-of-trump-administration-impeachment-is-an-option.html",
+          "domain": "theyeshivaworld.com",
+          "seendate": "2026-09-28T04:15:00Z",
+          "image": "https://www.theyeshivaworld.com/wp-content/uploads/2026/09/AP26266769408546.jpg"
+        },
+        {
+          "title": "House Democrats plan vast oversight of Trump administration . Impeachment is an option",
+          "url": "https://www.erienewsnow.com/news/politics/house-democrats-plan-vast-oversight-of-trump-administration-impeachment-is-an-option/article_8d701ce9-2e1c-5b4a-8407-586494a117b1.html",
+          "domain": "erienewsnow.com",
+          "seendate": "2026-09-28T04:15:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/erienewsnow.com/content/tncms/custom/image/b278f54b-830b-4f05-9350-cb090f41a0d4.png"
+        },
+        {
+          "title": "House Democrats plan vast oversight of Trump administration . Impeachment is an option",
+          "url": "https://www.twincities.com/2026/09/26/house-democrats-plan-vast-oversight-of-trump-administration-impeachment-is-an-option/",
+          "domain": "twincities.com",
+          "seendate": "2026-09-27T04:00:00Z",
+          "image": "https://www.twincities.com/wp-content/uploads/2026/09/Election_2_26_Democrats__8546-1.jpg"
+        }
+      ]
+    },
+    "title": "House Democrats plan vast oversight of Trump administration",
+    "summary": "2026-09-28 presstelegram.com: House Democrats plan vast oversight of Trump administration\n2026-09-28 mercurynews.com: House Democrats plan vast oversight of Trump administration\n2026-09-28 pasadenastarnews.com: House Democrats plan vast oversight of Trump administration\n2026-09-28 sandiegouniontribune.com: House Democrats plan vast oversight of Trump administration\n2026-09-28 dailybreeze.com: House Democrats plan vast oversight of Trump administration\n2026-09-28 theyeshivaworld.com: House Democrats Plan Vast Oversight of Trump Administration ; Impeachment Is an Option",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_church-explosives-gets",
+    "source": "news",
+    "ts": 1790630258521,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.777,
+      "articles": [
+        {
+          "title": "Man gets 6 years in prison for taking explosives to church hosting annual Red Mass for justices",
+          "url": "https://www.clickorlando.com/news/politics/2026/09/28/man-gets-6-years-in-prison-for-taking-explosives-to-church-hosting-annual-red-mass-for-justices/",
+          "domain": "clickorlando.com",
+          "seendate": "2026-09-28T20:45:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/MDWC533G6ZG7ZIFYUUETOLXO44.jpg?api_key=clickorlando_488cff2bcc157b2e"
+        },
+        {
+          "title": "Man gets 6 years in prison for taking explosives to church hosting annual Red Mass for justices",
+          "url": "https://www.ksat.com/news/politics/2026/09/28/man-gets-6-years-in-prison-for-taking-explosives-to-church-hosting-annual-red-mass-for-justices/",
+          "domain": "ksat.com",
+          "seendate": "2026-09-28T19:30:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/MDWC533G6ZG7ZIFYUUETOLXO44.jpg?api_key=ksat_9a37fc89631abedf"
+        },
+        {
+          "title": "Man gets 6 years in prison for taking explosives to church hosting annual Red Mass for justices",
+          "url": "https://cruxnow.com/church-in-the-usa/2026/09/man-gets-6-years-in-prison-for-taking-explosives-to-church-hosting-annual-red-mass-for-justices",
+          "domain": "cruxnow.com",
+          "seendate": "2026-09-28T18:45:00Z",
+          "image": "https://wp.cruxnow.com/wp-content/uploads/2026/09/supreme-court-ap.png"
+        },
+        {
+          "title": "Man gets 6 years in prison for taking explosives to church hosting annual Red Mass for justices",
+          "url": "https://www.wfmz.com/news/us/man-gets-6-years-in-prison-for-taking-explosives-to-church-hosting-annual-red-mass-for-justices/article_cf9119b6-8fd2-5d20-ab95-2b3b1a99a7c6.html",
+          "domain": "wfmz.com",
+          "seendate": "2026-09-28T18:00:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/wfmz.com/content/tncms/assets/v3/editorial/7/c3/7c3b692f-de40-55cf-b12b-289df5805b79/6abaa17b0b42e.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
+        {
+          "title": "Man gets 6 years in prison for taking explosives to church hosting annual Red Mass for justices",
+          "url": "http://www.bozemandailychronicle.com/wire/national/man-gets-6-years-in-prison-for-taking-explosives-to-church-hosting-annual-red-mass/article_7bbb889c-8fbd-5398-86c8-c98cbd4fc362.html",
+          "domain": "bozemandailychronicle.com",
+          "seendate": "2026-09-28T18:00:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/bozemandailychronicle.com/content/tncms/assets/v3/editorial/d/98/d9823e1d-dd32-5422-a37c-710c5acd3c5c/6abaa141f3740.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
+        {
+          "title": "Man gets 6 years in prison for taking explosives to church Red Mass",
+          "url": "https://www.wdbo.com/news/politics/man-gets-6-years/EUAA6TNEY46W3E4PO3TJXZWHQI/",
+          "domain": "wdbo.com",
+          "seendate": "2026-09-28T17:45:00Z",
+          "image": "https://cmg-cmg-rd-20082-prod.cdn.arcpublishing.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-1.images.arcpublishing.com%2Fcmg%2FHP6ZQTF6S4ZLBNIKD5KVXL3TOE.jpg?auth=7fcaad89e67a8f1703afd19458353aae6a3371c588b43f35332a000e8c0d7115&smart=true"
+        }
+      ]
+    },
+    "title": "Man gets 6 years in prison for taking explosives to church hosting annual Red Mass for justices",
+    "summary": "2026-09-28 clickorlando.com: Man gets 6 years in prison for taking explosives to church hosting annual Red Mass for justices\n2026-09-28 ksat.com: Man gets 6 years in prison for taking explosives to church hosting annual Red Mass for justices\n2026-09-28 cruxnow.com: Man gets 6 years in prison for taking explosives to church hosting annual Red Mass for justices\n2026-09-28 wfmz.com: Man gets 6 years in prison for taking explosives to church hosting annual Red Mass for justices\n2026-09-28 bozemandailychronicle.com: Man gets 6 years in prison for taking explosives to church hosting annual Red Mass for justices\n2026-09-28 wdbo.com: Man gets 6 years in prison for taking explosives to church Red Mass",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -15978,12 +16226,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_approved-cancel-congressionally",
     "source": "news",
-    "ts": 1790604708835,
+    "ts": 1790630258520,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.786,
+      "salience": 0.742,
       "articles": [
         {
           "title": "Trump seeks to cancel nearly $1B in congressionally approved funds",
@@ -16075,61 +16323,47 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_crackdown-leader-mail",
+    "cid": "cand_news_announcing-iowa-plant",
     "source": "news",
-    "ts": 1790604708836,
+    "ts": 1790630258521,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.774,
+      "salience": 0.662,
       "articles": [
         {
-          "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
-          "url": "https://mymotherlode.com/news/national/general-election/11175142/trumps-mail-voting-crackdown-tests-postal-service-leader-who-says-hes-not-political.html",
-          "domain": "mymotherlode.com",
-          "seendate": "2026-09-28T13:15:00Z",
-          "image": "https://mymotherlode.com/wp-content/uploads/2026/09/AP_99d137dec53045ddb65c5a7f0aa54a6b_08fd22b7ba.jpg"
+          "title": "Trump announcing a new Iowa steel plant",
+          "url": "https://www.bostonherald.com/2026/09/28/trump-steel-plant-announcement/",
+          "domain": "bostonherald.com",
+          "seendate": "2026-09-28T20:00:00Z",
+          "image": "https://www.bostonherald.com/wp-content/uploads/2026/09/Trump_311_4.jpg"
         },
         {
-          "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
-          "url": "https://www.clickondetroit.com/news/politics/2026/09/28/trumps-mail-voting-crackdown-tests-postal-service-leader-who-says-hes-not-political/",
-          "domain": "clickondetroit.com",
-          "seendate": "2026-09-28T12:30:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/D4R64CPGYVCF7GOPTQZ4O6JGSU.jpg?api_key=clickondetroit_06f87fefb2123598"
+          "title": "Trump announcing a new Iowa steel plant",
+          "url": "https://www.sandiegouniontribune.com/2026/09/28/trump-steel-plant-announcement/",
+          "domain": "sandiegouniontribune.com",
+          "seendate": "2026-09-28T18:45:00Z",
+          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/09/Trump_311_4.jpg"
         },
         {
-          "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
-          "url": "https://www.clickorlando.com/news/politics/2026/09/28/trumps-mail-voting-crackdown-tests-postal-service-leader-who-says-hes-not-political/",
-          "domain": "clickorlando.com",
-          "seendate": "2026-09-28T12:15:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/D4R64CPGYVCF7GOPTQZ4O6JGSU.jpg?api_key=clickorlando_488cff2bcc157b2e"
+          "title": "Trump announcing a new Iowa steel plant",
+          "url": "https://www.citizensvoice.com/2026/09/28/trump-steel-plant-announcement/",
+          "domain": "citizensvoice.com",
+          "seendate": "2026-09-28T18:45:00Z",
+          "image": "https://www.citizensvoice.com/wp-content/uploads/2026/09/Trump_311_4.jpg"
         },
         {
-          "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
-          "url": "https://www.wral.com/news/ap/ba0fc-trumps-mail-voting-crackdown-tests-postal-service-leader-who-says-hes-not-political/",
-          "domain": "wral.com",
-          "seendate": "2026-09-28T11:30:00Z",
-          "image": "https://images.wral.com/f0c8efa8-8436-5fc5-9e2f-2f4c31637097"
-        },
-        {
-          "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
-          "url": "http://www.bozemandailychronicle.com/wire/business/trumps-mail-voting-crackdown-tests-postal-service-leader-who-says-hes-not-political/article_bb3eb835-f590-56fe-8e4b-55887bb47be1.html",
-          "domain": "bozemandailychronicle.com",
-          "seendate": "2026-09-28T11:30:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/bozemandailychronicle.com/content/tncms/assets/v3/editorial/c/43/c434697a-f76b-56c1-8a04-01644576c9cd/6aba46f4f3630.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
-          "url": "https://www.wsls.com/news/politics/2026/09/28/trumps-mail-voting-crackdown-tests-postal-service-leader-who-says-hes-not-political/",
-          "domain": "wsls.com",
-          "seendate": "2026-09-28T11:15:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/D4R64CPGYVCF7GOPTQZ4O6JGSU.jpg?api_key=wsls_8c3a4bc35af7684e"
+          "title": "Trump announcing a new Iowa steel plant that the White House says will be the nation biggest",
+          "url": "https://www.news4jax.com/news/politics/2026/09/28/trump-announcing-a-new-iowa-steel-plant-that-the-white-house-says-will-be-the-nations-biggest/",
+          "domain": "news4jax.com",
+          "seendate": "2026-09-28T18:00:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/DDPBHUQUFZDJVHMY5CS7JQP4BM.jpg?api_key=news4jax_3f10b25586458189"
         }
       ]
     },
-    "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
-    "summary": "2026-09-28 mymotherlode.com: Trump mail voting crackdown tests Postal Service leader who says he  not political  \n2026-09-28 clickondetroit.com: Trump mail voting crackdown tests Postal Service leader who says he  not political  \n2026-09-28 clickorlando.com: Trump mail voting crackdown tests Postal Service leader who says he  not political  \n2026-09-28 wral.com: Trump mail voting crackdown tests Postal Service leader who says he  not political  \n2026-09-28 bozemandailychronicle.com: Trump mail voting crackdown tests Postal Service leader who says he  not political  \n2026-09-28 wsls.com: Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
+    "title": "Trump announcing a new Iowa steel plant",
+    "summary": "2026-09-28 bostonherald.com: Trump announcing a new Iowa steel plant\n2026-09-28 sandiegouniontribune.com: Trump announcing a new Iowa steel plant\n2026-09-28 citizensvoice.com: Trump announcing a new Iowa steel plant\n2026-09-28 news4jax.com: Trump announcing a new Iowa steel plant that the White House says will be the nation biggest",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -16139,40 +16373,40 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_administration-democrats-house",
+    "cid": "cand_news_approved-authority-back",
     "source": "news",
-    "ts": 1790604708837,
+    "ts": 1790630258520,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.553,
+      "salience": 0.602,
       "articles": [
         {
-          "title": "House Democrats Plan Vast Oversight of Trump Administration ; Impeachment Is an Option",
-          "url": "https://www.theyeshivaworld.com/news/general/2603423/house-democrats-plan-vast-oversight-of-trump-administration-impeachment-is-an-option.html",
-          "domain": "theyeshivaworld.com",
-          "seendate": "2026-09-28T04:15:00Z",
-          "image": "https://www.theyeshivaworld.com/wp-content/uploads/2026/09/AP26266769408546.jpg"
+          "title": "Trump admin . uses rare authority to claw back nearly $1B in spending approved by Congress",
+          "url": "https://salinapost.com/posts/cd66e6d8-b4eb-400f-8200-80be3a36d5ec",
+          "domain": "salinapost.com",
+          "seendate": "2026-09-28T19:15:00Z",
+          "image": "https://media.eaglewebservices.com/public/2025/1/1737114271198.png"
         },
         {
-          "title": "House Democrats plan vast oversight of Trump administration . Impeachment is an option",
-          "url": "https://www.erienewsnow.com/news/politics/house-democrats-plan-vast-oversight-of-trump-administration-impeachment-is-an-option/article_8d701ce9-2e1c-5b4a-8407-586494a117b1.html",
-          "domain": "erienewsnow.com",
-          "seendate": "2026-09-28T04:15:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/erienewsnow.com/content/tncms/custom/image/b278f54b-830b-4f05-9350-cb090f41a0d4.png"
+          "title": "Trump uses rare authority to claw back nearly $1B in approved spending",
+          "url": "https://www.coloradohometownweekly.com/2026/09/25/trump-rescissions-immigration-dei/",
+          "domain": "coloradohometownweekly.com",
+          "seendate": "2026-09-27T07:45:00Z",
+          "image": "https://www.coloradohometownweekly.com/wp-content/uploads/2026/09/Trump_Xi_79771.jpg"
         },
         {
-          "title": "House Democrats plan vast oversight of Trump administration . Impeachment is an option",
-          "url": "https://www.twincities.com/2026/09/26/house-democrats-plan-vast-oversight-of-trump-administration-impeachment-is-an-option/",
-          "domain": "twincities.com",
-          "seendate": "2026-09-27T04:00:00Z",
-          "image": "https://www.twincities.com/wp-content/uploads/2026/09/Election_2_26_Democrats__8546-1.jpg"
+          "title": "Trump administration uses rare authority to claw back nearly $1B in spending approved by Congress",
+          "url": "https://www.krgv.com/news/trump-administration-uses-rare-authority-to-claw-back-nearly-1b-in-spending-approved-by-congress/",
+          "domain": "krgv.com",
+          "seendate": "2026-09-27T05:15:00Z",
+          "image": "https://dcer237tfveol.cloudfront.net/v2/P6sx96qSgMCrPmXG8T-SCQ0s6QVH7zyPnGNvmi6IosotH2E9onF2auq8x7xPekL09cToDPA0gxu7JN7rBZ-KsS000clCKxNKpM4jh7bH11Rm_MFHWeN4dcOGJGLRivUaA"
         }
       ]
     },
-    "title": "House Democrats plan vast oversight of Trump administration . Impeachment is an option",
-    "summary": "2026-09-28 theyeshivaworld.com: House Democrats Plan Vast Oversight of Trump Administration ; Impeachment Is an Option\n2026-09-28 erienewsnow.com: House Democrats plan vast oversight of Trump administration . Impeachment is an option\n2026-09-27 twincities.com: House Democrats plan vast oversight of Trump administration . Impeachment is an option",
+    "title": "Trump administration uses rare authority to claw back nearly $1B in spending approved by Congress",
+    "summary": "2026-09-28 salinapost.com: Trump admin . uses rare authority to claw back nearly $1B in spending approved by Congress\n2026-09-27 coloradohometownweekly.com: Trump uses rare authority to claw back nearly $1B in approved spending\n2026-09-27 krgv.com: Trump administration uses rare authority to claw back nearly $1B in spending approved by Congress",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
