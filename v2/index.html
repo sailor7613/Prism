@@ -2063,6 +2063,12 @@ body.tri-cover footer, body.tri-cover .graph-info, body.tri-cover .derive-panel 
 .beam-key-row input { flex: 1 1 auto; min-width: 0; background: var(--bg-soft); border: 1px solid var(--rule); border-radius: 3px; color: var(--ink); padding: 8px 10px; font-family: var(--mono); font-size: 12px; }
 .beam-key-row button, .beam-key-out { background: transparent; border: 1px solid var(--rule); border-radius: 2px; color: var(--ink-mid); font-family: var(--mono); font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; padding: 8px 14px; cursor: pointer; }
 .beam-key-out { margin-top: 8px; padding: 5px 10px; font-size: 8px; }
+.beam-door-tabs { display: flex; gap: 6px; margin-bottom: 4px; }
+.beam-door-tabs button { background: transparent; border: 0.5px solid var(--rule); border-radius: 999px; color: var(--ink-low); font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.16em; text-transform: uppercase; padding: 4px 10px; cursor: pointer; }
+.beam-door-tabs button.on { color: var(--ink); border-color: rgba(180,198,230,0.8); background: rgba(96,148,220,0.12); }
+.beam-door-pane[hidden] { display: none; }
+.beam-door-pane .beam-key-row { flex-wrap: wrap; }
+.beam-door-pane .beam-key-row input { min-width: 150px; }
 .beam-key-msg { margin-top: 6px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.08em; color: var(--ink-low); min-height: 12px; }
 .beam-key-bio { margin-top: 8px; color: var(--ink-mid); font-style: italic; }
 .beam-edit { font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; color: var(--ink-mid); background: none;
@@ -3393,6 +3399,9 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
 <script>
 (function () {
   let sp; try { sp = new URLSearchParams(location.search); } catch (e) { return; }
+  // ?join=<invite> (2026-09-27): the link Sailor sends the beta group. The
+  // invite waits in localStorage for the door in Beam → profile.
+  if (sp.get('join')) { try { localStorage.setItem('prism.beam.invite', sp.get('join').trim()); } catch (e) {} }
   if (!sp.has('intro')) return;
   window.PRISM_INTRO_TEST = true;
   window.PRISM_INTRO_STAGE = sp.get('intro') === 'live' ? 'live' : 'fresh';
@@ -3405,7 +3414,7 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
 <script src="../data/readings_seed.js"></script>   <!-- the live tier, baked (scripts/bake-seed.js) -->
 <script src="../src/js/prismdb.js"></script>
 <script src="../src/js/prism-sync.js"></script>
-<script src="../src/js/prism-field.js"></script>
+<script src="../src/js/prism-field.js?v=2"></script>
 <script src="../src/js/push-config.js" onerror="void 0"></script>
 <script src="../src/js/prism-example.js"></script>   <!-- the practice Reading every new tester meets first (2026-09-26) -->   <!-- push gate + VAPID public key (written by Deploy Push Gate) -->   <!-- profiles + public burns via the burn-gate (2026-09-22) -->
 <script src="../src/js/prism-ai.js"></script>
@@ -9117,7 +9126,7 @@ function profileCard() {
     const b = (typeof PrismField !== 'undefined') ? PrismField.bound() : null;
     if (b) {
       const who = document.createElement('div'); who.className = 'beam-key-who';
-      who.innerHTML = '<span class="beam-key-tag">villa</span> you are <strong>' + b.name + '</strong>' + (b.creature ? ' · the ' + b.creature : '') + ' — your burns go public under that name';
+      who.innerHTML = '<span class="beam-key-tag">' + (b.seat ? 'seat' : 'villa') + '</span> you are <strong>' + b.name + '</strong>' + (b.creature ? ' · the ' + b.creature : '') + ' — your burns go public under that name';
       const out = document.createElement('button'); out.type = 'button'; out.className = 'beam-key-out'; out.textContent = 'leave';
       out.addEventListener('click', () => { PrismField.unbind(); renderBeam(); });
       key.appendChild(who); key.appendChild(out);
@@ -9125,12 +9134,49 @@ function profileCard() {
       if (!p.displayName) nm.textContent = b.name;
       PrismField.profileOf(b.avatar).then(pr => { if (pr && pr.bio) { const bio = document.createElement('div'); bio.className = 'beam-key-bio'; bio.textContent = pr.bio; key.appendChild(bio); } });
     } else {
+      // ── THE DOOR (2026-09-27): two ways in. A villa key (the gate names you),
+      //    or a SEAT — you pick a name and your own passcode, with Sailor's
+      //    invite code. A link with ?join=<code> arrives with the invite
+      //    filled in and this tab open. ──
+      let invite = ''; try { invite = localStorage.getItem('prism.beam.invite') || ''; } catch (e) {}
+      const tabs = document.createElement('div'); tabs.className = 'beam-door-tabs';
+      const tSeat = document.createElement('button'); tSeat.type = 'button'; tSeat.textContent = 'new here';
+      const tKey = document.createElement('button'); tKey.type = 'button'; tKey.textContent = 'I have a key';
+      tabs.appendChild(tSeat); tabs.appendChild(tKey);
+      const msg = document.createElement('div'); msg.className = 'beam-key-msg';
+      const mk = (type, ph, max) => { const i = document.createElement('input'); i.type = type; i.placeholder = ph; i.autocomplete = 'off'; i.maxLength = max || 80; i.spellcheck = false; return i; };
+      // a seat: claim it (first time) or sign back in (name + passcode)
+      const seatPane = document.createElement('div'); seatPane.className = 'beam-door-pane';
+      const seatLab = document.createElement('div'); seatLab.className = 'beam-key-who';
+      seatLab.innerHTML = '<span class="beam-key-tag">seat</span> pick a name and a passcode. Your pins go public under that name.';
+      const nameIn2 = mk('text', 'name (letters, numbers, dashes)', 20); nameIn2.className = 'pf-handle';
+      const passIn2 = mk('password', 'a passcode you choose (8+)', 80);
+      const invIn = mk('text', 'invite code', 80); if (invite) invIn.value = invite;
+      const rowA = document.createElement('div'); rowA.className = 'beam-key-row'; rowA.appendChild(nameIn2); rowA.appendChild(passIn2);
+      const rowB = document.createElement('div'); rowB.className = 'beam-key-row';
+      const claimBtn = document.createElement('button'); claimBtn.type = 'button'; claimBtn.textContent = 'take the seat';
+      const backBtn = document.createElement('button'); backBtn.type = 'button'; backBtn.textContent = 'sign in'; backBtn.title = 'already have a seat? name + passcode, then this';
+      rowB.appendChild(invIn); rowB.appendChild(claimBtn); rowB.appendChild(backBtn);
+      claimBtn.addEventListener('click', async () => {
+        claimBtn.disabled = true; msg.textContent = 'taking the seat…';
+        const r = await PrismField.claim(invIn.value, nameIn2.value, passIn2.value);
+        claimBtn.disabled = false;
+        if (r.ok) { try { localStorage.removeItem('prism.beam.invite'); } catch (e) {} renderBeam(); } else msg.textContent = r.error || 'no';
+      });
+      backBtn.addEventListener('click', async () => {
+        backBtn.disabled = true; msg.textContent = 'knocking…';
+        const r = await PrismField.knock(passIn2.value, nameIn2.value);
+        backBtn.disabled = false;
+        if (r.ok) renderBeam(); else msg.textContent = r.error || 'no';
+      });
+      seatPane.appendChild(seatLab); seatPane.appendChild(rowA); seatPane.appendChild(rowB);
+      // a villa key, as before
+      const keyPane = document.createElement('div'); keyPane.className = 'beam-door-pane';
       const lab = document.createElement('div'); lab.className = 'beam-key-who';
       lab.innerHTML = '<span class="beam-key-tag">villa</span> have a key to the Dream Getty? It opens this too.';
       const row = document.createElement('div'); row.className = 'beam-key-row';
-      const inp = document.createElement('input'); inp.type = 'password'; inp.placeholder = 'your villa key'; inp.autocomplete = 'off'; inp.maxLength = 80;
+      const inp = mk('password', 'your villa key', 80);
       const go = document.createElement('button'); go.type = 'button'; go.textContent = 'knock';
-      const msg = document.createElement('div'); msg.className = 'beam-key-msg';
       go.addEventListener('click', async () => {
         go.disabled = true; msg.textContent = 'knocking…';
         const r = await PrismField.knock(inp.value);
@@ -9139,7 +9185,12 @@ function profileCard() {
       });
       inp.addEventListener('keydown', e => { if (e.key === 'Enter') go.click(); });
       row.appendChild(inp); row.appendChild(go);
-      key.appendChild(lab); key.appendChild(row); key.appendChild(msg);
+      keyPane.appendChild(lab); keyPane.appendChild(row);
+      const show = (seat) => { seatPane.hidden = !seat; keyPane.hidden = seat; tSeat.classList.toggle('on', seat); tKey.classList.toggle('on', !seat); msg.textContent = ''; };
+      tSeat.addEventListener('click', () => show(true)); tKey.addEventListener('click', () => show(false));
+      let hadKey = false; try { hadKey = !!localStorage.getItem('prism.beam.pass'); } catch (e) {}
+      show(!!invite || !hadKey);
+      key.appendChild(tabs); key.appendChild(seatPane); key.appendChild(keyPane); key.appendChild(msg);
     }
     const form = document.createElement('div'); form.className = 'beam-pform' + (p.handle ? '' : ' open');
     const nameIn = document.createElement('input'); nameIn.type = 'text'; nameIn.placeholder = 'display name'; nameIn.maxLength = 40; if (p.displayName) nameIn.value = p.displayName;

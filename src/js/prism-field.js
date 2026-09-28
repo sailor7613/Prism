@@ -20,7 +20,7 @@ const PrismField = (() => {
   const GATE = (typeof window !== 'undefined' && window.PRISM_BURN_GATE) || 'https://burn-gate.shanecorwin.workers.dev';
   const RAW_PRISM = 'https://raw.githubusercontent.com/sailor7613/Prism/main/';
   const RAW_VILLA = 'https://raw.githubusercontent.com/sailor7613/dreamgetty/main/';
-  const K_PASS = 'prism.beam.pass', K_AVATAR = 'prism.beam.avatar';
+  const K_PASS = 'prism.beam.pass', K_AVATAR = 'prism.beam.avatar', K_NAME = 'prism.beam.name';
   const store = {
     get: (k) => { try { return localStorage.getItem(k); } catch (e) { return null; } },
     set: (k, v) => { try { if (v == null) localStorage.removeItem(k); else localStorage.setItem(k, v); } catch (e) {} },
@@ -45,21 +45,38 @@ const PrismField = (() => {
   const nameOf = (avatar) => (roster[avatar] && roster[avatar].name) || avatar || 'someone';
 
   // ── the door ────────────────────────────────────────────────────────
-  async function knock(pass) {
-    const p = String(pass || '').trim();
+  // Two ways in (2026-09-27): a villa key (the gate names you), or a SEAT you
+  // claimed yourself — a name + a passcode you chose, with Sailor's invite
+  // code. A seat signs in with both name and passcode.
+  async function knock(pass, name) {
+    const p = String(pass || '').trim(), n = String(name || '').trim().toLowerCase();
     if (!p) return { ok: false, error: 'no key' };
     let res, json = null;
     try {
-      res = await fetch(GATE + '/verify', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ pass: p }) });
+      res = await fetch(GATE + '/verify', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(n ? { pass: p, name: n } : { pass: p }) });
       try { json = await res.json(); } catch (e) {}
     } catch (e) { return { ok: false, error: 'the door is not answering' }; }
     if (!res.ok) return { ok: false, error: (json && json.error) || ('refused (' + res.status + ')') };
     if (!json || !json.avatar) return { ok: false, error: 'that key opens the villa but does not name you — ask Sailor for your own' };
-    store.set(K_PASS, p); store.set(K_AVATAR, json.avatar);
+    store.set(K_PASS, p); store.set(K_AVATAR, json.avatar); store.set(K_NAME, json.seat ? json.avatar : null);
     return { ok: true, avatar: json.avatar, name: nameOf(json.avatar) };
   }
-  function bound() { const a = store.get(K_AVATAR); return a ? { avatar: a, name: nameOf(a), creature: (roster[a] || {}).creature || null } : null; }
-  function unbind() { store.set(K_PASS, null); store.set(K_AVATAR, null); }
+  async function claim(invite, name, pass) {
+    const i = String(invite || '').trim(), n = String(name || '').trim().toLowerCase(), p = String(pass || '').trim();
+    if (!i) return { ok: false, error: 'you need the invite code' };
+    if (!/^[a-z0-9][a-z0-9-]{1,19}$/.test(n)) return { ok: false, error: 'a name is 2–20 letters, numbers or dashes' };
+    if (p.length < 8) return { ok: false, error: 'a passcode is at least 8 characters' };
+    let res, json = null;
+    try {
+      res = await fetch(GATE + '/claim', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ invite: i, name: n, pass: p }) });
+      try { json = await res.json(); } catch (e) {}
+    } catch (e) { return { ok: false, error: 'the door is not answering' }; }
+    if (!res.ok) return { ok: false, error: (json && json.error) || ('refused (' + res.status + ')') };
+    store.set(K_PASS, p); store.set(K_AVATAR, n); store.set(K_NAME, n);
+    return { ok: true, avatar: n, name: nameOf(n) };
+  }
+  function bound() { const a = store.get(K_AVATAR); return a ? { avatar: a, name: nameOf(a), creature: (roster[a] || {}).creature || null, seat: !!store.get(K_NAME) } : null; }
+  function unbind() { store.set(K_PASS, null); store.set(K_AVATAR, null); store.set(K_NAME, null); }
 
   // ── a burn: the commit, under the avatar ─────────────────────────────
   async function pushBurn(commit) {
@@ -73,7 +90,8 @@ const PrismField = (() => {
     };
     let res, json = null;
     try {
-      res = await fetch(GATE + '/burn', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ pass, burn }) });
+      const seatName = store.get(K_NAME);
+      res = await fetch(GATE + '/burn', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(seatName ? { pass, name: seatName, burn } : { pass, burn }) });
       try { json = await res.json(); } catch (e) {}
     } catch (e) { return { ok: false, error: 'the field is not answering' }; }
     if (!res.ok) return { ok: false, error: (json && json.error) || ('refused (' + res.status + ')') };
@@ -126,5 +144,5 @@ const PrismField = (() => {
     return all[avatar] || { name: nameOf(avatar), bio: '' };
   }
 
-  return { knock, bound, unbind, pushBurn, pullField, field, latestByResident, profileOf, roster, nameOf, GATE };
+  return { knock, claim, bound, unbind, pushBurn, pullField, field, latestByResident, profileOf, roster, nameOf, GATE };
 })();
