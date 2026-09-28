@@ -425,7 +425,14 @@
   }
 
   // taps: on Ted or the bubble → next (only for 'tap' steps); on the dim → skip
-  skipBtn.addEventListener('click', (e) => { e.stopPropagation(); stop(false); });
+  // "skip the tour" means the WHOLE tour (Sailor, 2026-09-27: it used to close
+  // this screen's leg and the next screen started its own). Every phase is
+  // marked skipped; a tap on Ted's face still replays the current one.
+  skipBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    Object.keys(PHASES).forEach(k => store.set('prism.tour.' + k, 'skipped'));
+    stop(false);
+  });
   presenter.addEventListener('click', (e) => {
     e.stopPropagation();
     if (e.target === skipBtn) return;

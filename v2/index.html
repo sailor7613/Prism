@@ -1153,7 +1153,13 @@ body.light .pad-grid {
    working; below 1100px they move back. */
 .graph-instrument { display: none; }
 @media (min-width: 1100px) {
-  :root { --gm-size: clamp(420px, calc(100vh - 345px), 700px); }
+  /* 2026-09-27, Sailor: no page scroll. The plane + slider + head fit the
+     window; the frame is exactly the plane column's height and scrolls INSIDE
+     (its foot pinned) when the copy is taller than the window allows. */
+  :root { --gm-size: clamp(300px, calc(100vh - 310px), 700px); }
+  body.ticker-live { --gm-size: clamp(300px, calc(100vh - var(--ticker-h, 90px) - 330px), 700px); }   /* the strip takes its share */
+  .graph-phase { overflow: hidden; }
+  .graph-left { perspective: calc(var(--gm-size) * 2.2); }
   .graph-phase { justify-content: flex-start; padding-top: calc(var(--top-chrome) + 4px); }
   .graph-head { margin-bottom: 12px; max-width: 760px; }
   .graph-stage { max-width: none; width: min(1200px, 100%); gap: 34px; align-items: flex-start; justify-content: center; }
@@ -1161,14 +1167,25 @@ body.light .pad-grid {
      to make room for the words box — on wide screens the box is in the frame) */
   html body .graph-stage .graph-pad, html body .graph-stage .gm3d, html body .graph-stage .z-slider { width: var(--gm-size); }
   .graph-instrument[hidden] { display: none; }
-  .graph-instrument { display: flex; flex-direction: column; gap: 16px; flex: none;
-    width: 350px; max-height: calc(var(--gm-size) + 62px); overflow-y: auto; overscroll-behavior: contain;
-    border: 0.5px solid var(--rule); border-radius: 8px; padding: 18px 20px 16px;
+  .graph-instrument { display: flex; flex-direction: column; gap: 0; flex: none;
+    width: 350px; height: calc(var(--gm-size) + 62px); overflow: hidden;
+    border: 0.5px solid var(--rule); border-radius: 8px; padding: 0;
     background: rgba(9, 15, 32, 0.58); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
     box-shadow: inset 0 0 26px rgba(8, 16, 40, 0.3), 0 10px 34px rgba(0,0,0,0.3);
     position: relative; z-index: 3; }
+  .gi-scroll { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 16px 20px 12px; display: flex; flex-direction: column; gap: 14px; }
+  .gi-foot { flex: none; padding: 12px 20px 14px; border-top: 0.5px solid var(--rule); background: rgba(9, 15, 32, 0.7); display: flex; flex-direction: column; gap: 8px; }
+  .gi-foot .graph-foot { margin: 0; display: flex; flex-direction: column-reverse; align-items: stretch; gap: 8px; }
+  .gi-foot .graph-foot .a-note { display: none; }
+  .gi-foot .a-back { align-self: center; padding: 4px 8px; }
+  .gi-foot .a-commit { width: 100%; justify-content: center; padding: 14px 18px; font-size: 11.5px; letter-spacing: 0.22em;
+    color: #eef3ff; background: rgba(96, 148, 220, 0.22); border: 1px solid rgba(150, 188, 255, 0.75);
+    box-shadow: 0 0 22px rgba(96, 148, 220, 0.25), inset 0 0 18px rgba(96, 148, 220, 0.12); }
+  .gi-foot .a-commit:hover { background: rgba(96, 148, 220, 0.32); letter-spacing: 0.26em; }
+  .gi-foot .a-commit:disabled { opacity: 0.35; box-shadow: none; }
+  body.ticker-live .gi-foot .a-commit { display: none; }   /* committed: only "reconsider" stays */
   .gi-kicker { font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-low); margin-bottom: 4px; }
-  .gi-legend { display: flex; flex-direction: column; gap: 7px; }
+  .gi-legend { display: flex; flex-direction: column; gap: 6px; }
   .gi-axis { display: grid; grid-template-columns: 92px 1fr; gap: 10px; align-items: baseline; }
   .gi-ax { font-family: var(--mono); font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-low); }
   .gi-poles { font-family: var(--serif); font-size: 13.5px; line-height: 1.35; color: var(--ink); display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
@@ -1182,7 +1199,7 @@ body.light .pad-grid {
   .gi-how .gi-v { color: var(--ink-low); }
   .gi-controls .graph-foot .a-note { display: none; }   /* the frame's own how-to says it */
   .gi-slot:empty { display: none; }
-  .gi-controls { display: flex; flex-direction: column; gap: 12px; padding-top: 14px; border-top: 0.5px solid var(--rule); }
+  .gi-controls { display: flex; flex-direction: column; gap: 10px; padding-top: 12px; border-top: 0.5px solid var(--rule); }
   .gi-controls .graph-readout { margin-top: 0; justify-content: flex-start; gap: 10px; font-size: 10.5px; }
   .gi-controls .graph-dialect { width: 100%; margin-top: 0; }
   .gi-controls .graph-dialect textarea { min-height: 64px; }
@@ -3068,6 +3085,7 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
          and the held station's card (#graphInfo docks in here). Below 1100px
          it is hidden and everything sits where it always did. ── -->
     <aside class="graph-instrument" id="graphInstrument" hidden>
+      <div class="gi-scroll" id="giScroll">
       <div class="gi-legend" id="giLegend">
         <div class="gi-kicker" id="giKicker">the plane</div>
         <div class="gi-axis"><span class="gi-ax">across</span><span class="gi-poles"><b class="gi-l" id="giXneg"></b><i>↔</i><b class="gi-r" id="giXpos"></b></span></div>
@@ -3078,6 +3096,9 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
       </div>
       <div class="gi-slot gi-controls" id="giControls"></div>
       <div class="gi-slot gi-held" id="giHeld"></div>
+      </div><!-- /gi-scroll -->
+      <!-- the foot is pinned below the scrolling part: the commit is never scrolled away -->
+      <div class="gi-foot" id="giFoot"></div>
     </aside>
 
     <div class="graph-info" id="graphInfo">
@@ -4609,10 +4630,11 @@ const graphInfo    = document.getElementById('graphInfo');
 // keep their ids, so every listener and the tour keep working.
 const giLayout = (function () {
   const inst = document.getElementById('graphInstrument');
-  const ctrl = document.getElementById('giControls'), held = document.getElementById('giHeld');
-  if (!inst || !ctrl || !held) return function () {};
-  const movable = ['graphReadout', 'graphFoot'].map(id => document.getElementById(id)).filter(Boolean);
-  const dialectWrap = document.querySelector('.graph-dialect'); if (dialectWrap) movable.splice(1, 0, dialectWrap);
+  const ctrl = document.getElementById('giControls'), held = document.getElementById('giHeld'), footSlot = document.getElementById('giFoot');
+  if (!inst || !ctrl || !held || !footSlot) return function () {};
+  const movable = [document.getElementById('graphReadout'), document.querySelector('.graph-dialect')].filter(Boolean);
+  const foot = document.getElementById('graphFoot'); if (foot) movable.push(foot);
+  const slotFor = (n) => (n === foot ? footSlot : ctrl);
   const home = new Map();   // node → { parent, next }
   [].concat(movable, graphInfo ? [graphInfo] : []).forEach(n => home.set(n, { parent: n.parentNode, next: n.nextSibling }));
   let wide = null;
@@ -4625,13 +4647,43 @@ const giLayout = (function () {
     const live = document.body.classList.contains('ticker-live');
     const note = document.getElementById('giNote'), how = document.getElementById('giHow'), kick = document.getElementById('giKicker');
     if (kick) kick.textContent = live ? 'the space' : 'the plane';
-    if (note) note.textContent = live
-      ? 'The twelve orbs are this Reading\'s stations: four voices at three heats, floating at the depth their author gave them. Your pin is the lit one. Hold an orb to read it against your pin.'
-      : 'Your corner is lit. Distance from the center is how hard you hold it. The third axis, depth, is delivery: does this thing actually land?';
+    if (note) note.innerHTML = giNoteHtml(live, ax);
     const rows = live
       ? [['drag', 'rotate'], ['right-drag', 'move'], ['scroll', 'zoom'], ['hold an orb', 'lock on · read it against your pin'], ['⌖ recenter', 'come back to center']]
       : [['tap or drag', 'place your pin'], ['pull z', 'your delivery call'], ['commit', 'it goes on the record']];
     if (how) how.innerHTML = rows.map(([k, v]) => '<span class="gi-k">' + k + '</span><span class="gi-v">' + v + '</span>').join('');
+  }
+  // The note is about THIS pin (Sailor, 2026-09-27: "that copy in gray could
+  // be more pertinent"): the corner you're in and what it says, your heat, and
+  // the delivery call in the Reading's own poles — live, rewritten as you move.
+  const esc = (t) => PE.escapeHtml(String(t || ''));
+  function giNoteHtml(live, ax) {
+    const q = (typeof graphQuad === 'string' && graphQuad) || (typeof selectedQuad === 'string' && selectedQuad) || null;
+    const band = (typeof graphBand === 'string' && graphBand) || 'fluid';
+    const z = (typeof graphZ === 'number') ? graphZ : 0;
+    const v = q ? variantAt(q, band) : null;
+    const xSide = q ? ((q === 'A' || q === 'C') ? (ax.x && ax.x.neg || 'left') : (ax.x && ax.x.pos || 'right')) : '';
+    const ySide = q ? ((q === 'A' || q === 'B') ? (ax.y && ax.y.pos || 'institutional') : (ax.y && ax.y.neg || 'populist')) : '';
+    const corner = q ? '<b>' + esc(ySide) + ' · ' + esc(xSide) + '</b>' : 'a corner';
+    const words = v && (v.xWord || v.yWord) ? ' — the corner that says <i>' + esc([v.xWord, v.yWord].filter(Boolean).join(' · ')) + '</i>' : '';
+    const heat = band === 'denominated' ? 'out at the rim: you\'d burn a bridge over this'
+      : band === 'coalition' ? 'in the middle third: you\'d go a few rounds to bring someone around'
+      : 'near the center: you\'d say it once and leave it';
+    const zPos = esc(ax.z && ax.z.pos || 'realized'), zNeg = esc(ax.z && ax.z.neg || 'frustrated');
+    const zCall = Math.abs(z) < 0.08 ? 'You haven\'t called delivery yet: pull toward <i>' + zPos + '</i> if you think it lands, <i>' + zNeg + '</i> if not.'
+      : (z > 0 ? 'You\'re calling it <i>' + zPos + '</i>' : 'You\'re calling it <i>' + zNeg + '</i>') + (Math.abs(z) > 0.6 ? ', hard.' : ', a little.');
+    if (!live) return 'You\'re in ' + corner + words + '. Your pin sits ' + heat + '. ' + zCall;
+    // committed: the space — the nearest station to your pin in your own corner
+    let near = '';
+    try {
+      const bands = ['fluid', 'coalition', 'denominated'].map(b => ({ b, v: variantAt(q, b) })).filter(o => o.v && typeof o.v.z === 'number');
+      if (bands.length) {
+        const n = bands.slice().sort((p1, p2) => Math.abs(p1.v.z - z) - Math.abs(p2.v.z - z))[0];
+        const first = String(n.v.text || '').split(/(?<=[.!?])\s/)[0];
+        near = ' The station nearest your delivery call in your corner is the <b>' + n.b + '</b> one: <i>' + esc(first) + '</i>';
+      }
+    } catch (e) {}
+    return 'Twelve orbs: this Reading\'s stations, four voices at three heats, each at the depth its author gave it. You\'re the lit one in ' + corner + '.' + near + ' Hold any orb to read it against your pin.';
   }
   function apply() {
     const w = window.innerWidth >= 1100;
@@ -4639,7 +4691,7 @@ const giLayout = (function () {
     if (w === wide) return;
     wide = w;
     inst.hidden = !w;
-    if (w) { movable.forEach(n => ctrl.appendChild(n)); if (graphInfo) held.appendChild(graphInfo); }
+    if (w) { movable.forEach(n => slotFor(n).appendChild(n)); if (graphInfo) held.appendChild(graphInfo); }
     else { [].concat(movable, graphInfo ? [graphInfo] : []).forEach(n => { const h = home.get(n); h.parent.insertBefore(n, h.next && h.next.parentNode === h.parent ? h.next : null); }); }
     document.body.classList.toggle('gi-wide', w);
   }
@@ -4824,6 +4876,7 @@ function renderZ() {
     graphPad.style.setProperty('--tiltdeg', angle.toFixed(2) + 'deg');
     graphPad.style.transform = 'rotateY(' + angle.toFixed(2) + 'deg)';
     graphPad.classList.toggle('tilted', m > 0.02);
+    try { if (document.body.classList.contains('gi-wide')) giLayout(); } catch (e) {}   // the note's delivery line follows z
     // keep the context panel's nums line honest as z moves (it previously
     // refreshed only on quadrant/band change and went stale)
     cmpUserNums.textContent = numsLine(Math.round((pinX - 0.5) * 200), Math.round((0.5 - pinY) * 200), z, graphIntensity);
@@ -4909,6 +4962,7 @@ function updateGraphReadout() {
   gCoords.textContent = 'x ' + (xRaw >= 0 ? '+' : '') + xRaw + ' · y ' + (yRaw >= 0 ? '+' : '') + yRaw;
   gIntensityEl.textContent = graphIntensity;
   gBandEl.textContent = graphBand;
+  try { if (document.body.classList.contains('gi-wide')) giLayout(); } catch (e) {}   // the instrument's note follows the pin
 }
 
 function placeAt(x, y) {
@@ -9687,7 +9741,7 @@ function profileCard() {
 
 })();
 </script>
-<script src="../src/js/prism-ted-tour.js?v=6"></script>   <!-- Ted's tour: isolation + a peeking presenter (2026-09-22) -->
+<script src="../src/js/prism-ted-tour.js?v=7"></script>   <!-- Ted's tour: isolation + a peeking presenter (2026-09-22) -->
 
 </body>
 </html>
