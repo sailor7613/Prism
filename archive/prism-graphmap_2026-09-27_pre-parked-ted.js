@@ -595,39 +595,22 @@ const PrismGraphmap = (function () {
     [-1, 1].forEach(side => { const sh = new THREE.Mesh(new THREE.SphereGeometry(0.10, 8, 6), bodyMat); sh.scale.set(0.7, 0.65, 1.0); sh.position.set(side * 0.14, 0.96, 0.22); g.add(sh); });
     [-1, 1].forEach(side => { const h = new THREE.Mesh(new THREE.SphereGeometry(0.13, 8, 6), bodyMat); h.scale.set(0.65, 0.75, 0.9); h.position.set(side * 0.13, 0.86, -0.30); g.add(h); });
     const neckGeo = new THREE.TubeGeometry(new THREE.CatmullRomCurve3([new THREE.Vector3(0, 0.98, 0.30), new THREE.Vector3(0, 1.06, 0.36), new THREE.Vector3(0, 1.14, 0.40)]), 6, 0.12, 8, false); g.add(new THREE.Mesh(neckGeo, tawnyFur));
-    // The head as a joint (2026-09-27): a group at the head's position that
-    // carries the skull AND the face — brows, snout, eyes, ears — so turning
-    // `head` turns what he's looking with. Every part keeps its old world
-    // position (offsets are old position minus the head's), so the rest pose
-    // is pixel-identical for the three renderers that draw him.
-    const HEAD = new THREE.Vector3(0, 1.20, 0.46);
-    const head = new THREE.Group(); head.position.copy(HEAD); g.add(head); g.userData.head = head;
-    const at = (mesh, x, y, z) => { mesh.position.set(x - HEAD.x, y - HEAD.y, z - HEAD.z); head.add(mesh); return mesh; };
-    const skull = new THREE.Mesh(new THREE.SphereGeometry(0.17, 10, 8), tawnyFur); skull.scale.set(0.82, 0.88, 1.05); at(skull, 0, 1.20, 0.46); g.userData.skull = skull;
-    [-1, 1].forEach(side => { const brow = new THREE.Mesh(new THREE.SphereGeometry(0.035, 6, 4), darkFur); brow.scale.set(2.0, 0.7, 0.9); at(brow, side * 0.065, 1.285, 0.56); });
-    const forehead = new THREE.Mesh(new THREE.SphereGeometry(0.06, 6, 4), tawnyFur); forehead.scale.set(1.8, 0.6, 1.0); at(forehead, 0, 1.30, 0.50);
-    const snout = new THREE.Mesh(new THREE.ConeGeometry(0.075, 0.30, 6), darkFur); snout.rotation.x = Math.PI / 2; at(snout, 0, 1.16, 0.72);
-    const bridge = new THREE.Mesh(new THREE.SphereGeometry(0.03, 6, 4), tawnyFur); bridge.scale.set(0.9, 0.5, 2.2); at(bridge, 0, 1.20, 0.62);
-    const jaw = new THREE.Mesh(new THREE.SphereGeometry(0.04, 6, 4), lightFur); jaw.scale.set(0.6, 0.35, 1.3); at(jaw, 0, 1.11, 0.62); g.userData.jaw = jaw;
-    [-1, 1].forEach(side => { const patch = new THREE.Mesh(new THREE.SphereGeometry(0.035, 6, 4), lightFur); patch.scale.set(0.8, 0.7, 0.9); at(patch, side * 0.10, 1.17, 0.55); });
-    const nose = new THREE.Mesh(new THREE.SphereGeometry(0.028, 6, 5), new THREE.MeshStandardMaterial({ color: 0x111111, roughness: 0.1, metalness: 0.15 })); at(nose, 0, 1.17, 0.85);
-    // Ears as joints: each ear + its inner in a group pivoting at the ear's base
-    const ears = [];
-    [-1, 1].forEach(side => {
-      const base = new THREE.Vector3(side * 0.10, 1.35, 0.40);
-      const pivot = new THREE.Group(); at(pivot, base.x, base.y, base.z);
-      const ear = new THREE.Mesh(new THREE.ConeGeometry(0.06, 0.22, 6), darkFur); ear.position.set(0, 1.46 - base.y, 0); ear.rotation.z = side * -0.20; ear.rotation.x = -0.10; pivot.add(ear);
-      const inner = new THREE.Mesh(new THREE.ConeGeometry(0.038, 0.16, 5), tawnyFur); inner.position.set(0, 1.45 - base.y, 0.02); inner.rotation.z = side * -0.20; inner.rotation.x = -0.10; pivot.add(inner);
-      ears.push(pivot);
-    });
-    g.userData.ears = ears;
+    const head = new THREE.Mesh(new THREE.SphereGeometry(0.17, 10, 8), tawnyFur); head.scale.set(0.82, 0.88, 1.05); head.position.set(0, 1.20, 0.46); g.add(head); g.userData.head = head;
+    [-1, 1].forEach(side => { const brow = new THREE.Mesh(new THREE.SphereGeometry(0.035, 6, 4), darkFur); brow.scale.set(2.0, 0.7, 0.9); brow.position.set(side * 0.065, 1.285, 0.56); g.add(brow); });
+    const forehead = new THREE.Mesh(new THREE.SphereGeometry(0.06, 6, 4), tawnyFur); forehead.scale.set(1.8, 0.6, 1.0); forehead.position.set(0, 1.30, 0.50); g.add(forehead);
+    const snout = new THREE.Mesh(new THREE.ConeGeometry(0.075, 0.30, 6), darkFur); snout.rotation.x = Math.PI / 2; snout.position.set(0, 1.16, 0.72); g.add(snout);
+    const bridge = new THREE.Mesh(new THREE.SphereGeometry(0.03, 6, 4), tawnyFur); bridge.scale.set(0.9, 0.5, 2.2); bridge.position.set(0, 1.20, 0.62); g.add(bridge);
+    const jaw = new THREE.Mesh(new THREE.SphereGeometry(0.04, 6, 4), lightFur); jaw.scale.set(0.6, 0.35, 1.3); jaw.position.set(0, 1.11, 0.62); g.add(jaw);
+    [-1, 1].forEach(side => { const patch = new THREE.Mesh(new THREE.SphereGeometry(0.035, 6, 4), lightFur); patch.scale.set(0.8, 0.7, 0.9); patch.position.set(side * 0.10, 1.17, 0.55); g.add(patch); });
+    const nose = new THREE.Mesh(new THREE.SphereGeometry(0.028, 6, 5), new THREE.MeshStandardMaterial({ color: 0x111111, roughness: 0.1, metalness: 0.15 })); nose.position.set(0, 1.17, 0.85); g.add(nose);
+    [-1, 1].forEach(side => { const ear = new THREE.Mesh(new THREE.ConeGeometry(0.06, 0.22, 6), darkFur); ear.position.set(side * 0.10, 1.46, 0.40); ear.rotation.z = side * -0.20; ear.rotation.x = -0.10; g.add(ear); const inner = new THREE.Mesh(new THREE.ConeGeometry(0.038, 0.16, 5), tawnyFur); inner.position.set(side * 0.10, 1.45, 0.42); inner.rotation.z = side * -0.20; inner.rotation.x = -0.10; g.add(inner); });
     const eyeMat = new THREE.MeshStandardMaterial({ color: 0xd4a020, emissive: 0xd4a020, emissiveIntensity: 0.25, roughness: 0.15 });
     [-1, 1].forEach(side => {
-      const socket = new THREE.Mesh(new THREE.SphereGeometry(0.030, 6, 4), darkFur); at(socket, side * 0.08, 1.24, 0.58);
-      const eye = new THREE.Mesh(new THREE.SphereGeometry(0.026, 8, 6), eyeMat); at(eye, side * 0.08, 1.245, 0.605);
+      const socket = new THREE.Mesh(new THREE.SphereGeometry(0.030, 6, 4), darkFur); socket.position.set(side * 0.08, 1.24, 0.58); g.add(socket);
+      const eye = new THREE.Mesh(new THREE.SphereGeometry(0.026, 8, 6), eyeMat); eye.position.set(side * 0.08, 1.245, 0.605); g.add(eye);
       const pupilGeo = new THREE.SphereGeometry(0.013, 6, 4); pupilGeo.scale(0.7, 1.0, 1.0);
-      const pupil = new THREE.Mesh(pupilGeo, new THREE.MeshStandardMaterial({ color: 0x050505 })); at(pupil, side * 0.08, 1.245, 0.625);
-      const catchLight = new THREE.Mesh(new THREE.SphereGeometry(0.006, 3, 2), new THREE.MeshBasicMaterial({ color: 0xffffff })); at(catchLight, side * 0.074, 1.255, 0.63);
+      const pupil = new THREE.Mesh(pupilGeo, new THREE.MeshStandardMaterial({ color: 0x050505 })); pupil.position.set(side * 0.08, 1.245, 0.625); g.add(pupil);
+      const catchLight = new THREE.Mesh(new THREE.SphereGeometry(0.006, 3, 2), new THREE.MeshBasicMaterial({ color: 0xffffff })); catchLight.position.set(side * 0.074, 1.255, 0.63); g.add(catchLight);
     });
     // Legs: hip group pivots at the HIP (top), a knee sub-group pivots at the
     // joint — so the foot swings under a fixed hip and the knee can bend. Rest
@@ -645,17 +628,10 @@ const PrismGraphmap = (function () {
       g.add(hip); legs.push({ hip: hip, knee: knee });
     });
     g.userData.legs = legs;
-    // Tail as a joint (2026-09-27): the three tail meshes in a group pivoting
-    // at the tail's root, so a wag is a rotation.y. Rest pose is identical.
-    const tailRoot = new THREE.Vector3(0, 0.82, -0.42);
-    const tail = new THREE.Group(); tail.position.copy(tailRoot);
     const tailCurve = new THREE.CatmullRomCurve3([new THREE.Vector3(0, 0.82, -0.42), new THREE.Vector3(0, 0.72, -0.62), new THREE.Vector3(0, 0.58, -0.78), new THREE.Vector3(0.02, 0.50, -0.92)]);
-    const tg1 = new THREE.TubeGeometry(tailCurve, 10, 0.06, 6, false); tg1.translate(-tailRoot.x, -tailRoot.y, -tailRoot.z);
-    const tg2 = new THREE.TubeGeometry(tailCurve, 8, 0.085, 5, false); tg2.translate(-tailRoot.x, -tailRoot.y, -tailRoot.z);
-    tail.add(new THREE.Mesh(tg1, bodyMat));
-    tail.add(new THREE.Mesh(tg2, new THREE.MeshStandardMaterial({ color: 0x5a4a32, roughness: 0.92, transparent: true, opacity: 0.45 })));
-    const tailTip = new THREE.Mesh(new THREE.SphereGeometry(0.065, 6, 5), darkFur); tailTip.scale.set(0.65, 0.65, 1.3); tailTip.position.set(0.02 - tailRoot.x, 0.50 - tailRoot.y, -0.92 - tailRoot.z); tail.add(tailTip);
-    g.add(tail); g.userData.tail = tail;
+    g.add(new THREE.Mesh(new THREE.TubeGeometry(tailCurve, 10, 0.06, 6, false), bodyMat));
+    g.add(new THREE.Mesh(new THREE.TubeGeometry(tailCurve, 8, 0.085, 5, false), new THREE.MeshStandardMaterial({ color: 0x5a4a32, roughness: 0.92, transparent: true, opacity: 0.45 })));
+    const tailTip = new THREE.Mesh(new THREE.SphereGeometry(0.065, 6, 5), darkFur); tailTip.scale.set(0.65, 0.65, 1.3); tailTip.position.set(0.02, 0.50, -0.92); g.add(tailTip);
     return g;
   }
 
@@ -1057,59 +1033,24 @@ const PrismGraphmap = (function () {
         a.mesh.position.y = a.baseY + Math.sin(pinT * 0.5 + a.bobPhase) * a.bobAmp;
       }
 
-      // ── Ted the Coyote, parked (Sailor, 2026-09-27: "just chilling to one
-      // side or another, maybe doing a cute task"). He sits front-right of the
-      // plane, on the ground beneath it, and cycles through small business:
-      // watching your pin, wagging, an ear flick, a scratch, a shake, a yawn. ──
+      // ── Ted the Coyote: trots a slow circle around the plane's base ──
       if (tedCoyote) {
         tedClock += 0.016;
-        const T = tedCoyote, U = T.userData, legs = U.legs || [], head = U.head, tail = U.tail, ears = U.ears || [];
-        if (!U.park) {
-          U.park = { x: -2.35, z: 0.9, yaw: 0.8, act: 'watch', until: tedClock + 3, t0: tedClock, blink: tedClock + 2 };
-          T.rotation.set(-0.30, U.park.yaw, 0);                 // sitting: nose up, haunches down
-          T.position.set(U.park.x, -1.7 - 0.10, U.park.z);
+        const r = 2.9, ang = tedClock * 0.16, stride = tedClock * 8;
+        const bob = Math.abs(Math.sin(stride)) * 0.045;       // body rises/falls twice per stride
+        tedCoyote.position.set(Math.cos(ang) * r, -1.7 + bob, Math.sin(ang) * r);
+        tedCoyote.rotation.y = -ang;                          // face direction of travel (+z is his nose)
+        const legs = tedCoyote.userData.legs || [];
+        // Legs build order is [front+x, front−x, back+x, back−x]. Equal phases
+        // pair the diagonals — front-one-side with back-the-other (the trot).
+        const off = [0, Math.PI, Math.PI, 0];
+        for (let i = 0; i < legs.length; i++) {
+          const phi = stride + off[i];
+          if (legs[i].hip) legs[i].hip.rotation.x = Math.cos(phi) * 0.42;                    // fore/aft swing: forward at phi 0, back at phi π
+          if (legs[i].knee) legs[i].knee.rotation.x = -Math.max(0, -Math.sin(phi)) * 0.85;   // knee lifts on the RECOVERY half (foot swinging forward), plants on the push
         }
-        const P = U.park, a = tedClock - P.t0;
-        // sit pose: front legs straight under the tilted body, hind legs folded flat
-        if (legs[0]) { legs[0].hip.rotation.x = 0.42; legs[0].knee.rotation.x = 0; }
-        if (legs[1]) { legs[1].hip.rotation.x = 0.42; legs[1].knee.rotation.x = 0; }
-        // hind legs: thigh nearly vertical, shin folded forward flat along the
-        // ground (hip.x negative swings the foot to +z, his front)
-        if (legs[2]) { legs[2].hip.rotation.x = -0.10; legs[2].knee.rotation.x = -1.04; }
-        if (legs[3]) { legs[3].hip.rotation.x = -0.10; legs[3].knee.rotation.x = -1.04; }
-        // choose the next bit of business
-        if (tedClock > P.until) {
-          const r = Math.random();
-          P.act = r < 0.40 ? 'watch' : r < 0.58 ? 'wag' : r < 0.72 ? 'scratch' : r < 0.84 ? 'shake' : r < 0.93 ? 'yawn' : 'flick';
-          P.t0 = tedClock; P.until = tedClock + ({ watch: 4 + Math.random() * 4, wag: 2.5, scratch: 1.6, shake: 0.9, yawn: 2.2, flick: 0.6 })[P.act];
-        }
-        // breathing + the head's default: looking at your pin (or the plane's heart)
-        const breathe = Math.sin(tedClock * 1.3) * 0.006;
-        T.position.y = -1.7 - 0.10 + breathe;
-        let lookYaw = 0, lookPitch = 0;
-        try {
-          const target = (pinGroup && pinGroup.visible) ? pinGroup.getWorldPosition(new THREE.Vector3()) : new THREE.Vector3(0, 0, 0.4);
-          const local = T.worldToLocal(target.clone());
-          local.y -= 1.2;
-          lookYaw = Math.max(-0.95, Math.min(0.95, Math.atan2(local.x, local.z)));
-          lookPitch = Math.max(-0.45, Math.min(0.5, Math.atan2(local.y, Math.hypot(local.x, local.z))));
-        } catch (e) {}
-        let hy = lookYaw, hx = -lookPitch, hz = 0, wag = 0.35, earL = 0, earR = 0;
-        if (P.act === 'wag') { wag = 1.1; hz = Math.sin(a * 2.2) * 0.06; }
-        else if (P.act === 'scratch') {                          // hind leg up, quick jitter at the ear; head tilts into it
-          const k = Math.min(1, a / 0.25) * Math.min(1, (1.6 - a) / 0.25);
-          if (legs[2]) { legs[2].hip.rotation.x = -0.10 - 0.9 * k; legs[2].hip.rotation.z = -0.9 * k; legs[2].knee.rotation.x = -1.04 + (0.5 + Math.sin(a * 34) * 0.35) * k; }
-          hz = -0.32 * k; hy = 0.25 * k; earR = 0.5 * k;
-        }
-        else if (P.act === 'shake') { hy = Math.sin(a * 30) * 0.45; hz = Math.sin(a * 30 + 1) * 0.12; earL = Math.sin(a * 30) * 0.5; earR = -Math.sin(a * 30) * 0.5; }
-        else if (P.act === 'yawn') { const k = Math.sin(Math.min(1, a / 2.2) * Math.PI); hx = -0.55 * k; if (U.jaw) U.jaw.position.y = (1.11 - 1.20) - 0.04 * k; }
-        else if (P.act === 'flick') { const k = Math.sin(Math.min(1, a / 0.6) * Math.PI); earL = 0.7 * k; }
-        if (legs[2] && P.act !== 'scratch') legs[2].hip.rotation.z = 0;
-        if (U.jaw && P.act !== 'yawn') U.jaw.position.y = 1.11 - 1.20;
-        if (head) { head.rotation.y += (hy - head.rotation.y) * 0.1; head.rotation.x += (hx - head.rotation.x) * 0.1; head.rotation.z += (hz - head.rotation.z) * 0.12; }
-        if (tail) tail.rotation.y = Math.sin(tedClock * (P.act === 'wag' ? 9 : 2.2)) * wag;
-        if (ears[0]) ears[0].rotation.x += (earL - ears[0].rotation.x) * 0.25;
-        if (ears[1]) ears[1].rotation.x += (earR - ears[1].rotation.x) * 0.25;
+        const head = tedCoyote.userData.head;
+        if (head) head.rotation.x = Math.sin(stride) * 0.04;  // soft head bob
       }
 
       // ── Pin hover animation ──

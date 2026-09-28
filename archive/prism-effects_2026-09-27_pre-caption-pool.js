@@ -110,59 +110,6 @@
     });
   }
 
-  // ── Caption pool (the Diatribe highlights) ─────────────────
-  // 2026-09-27. The Diatribe caption used to glow the whole-side pool
-  // above, so the same framing words lit at every band and the line's
-  // own `keywords[]` was never read: "leaf blowers" glowed in the
-  // denominated line while "my truck" — the actual escalation — sat
-  // dark. The highlight is meant to track the band, so this pool is
-  // built band-first:
-  //   1. the Diatribe line's own `keywords[]` (the authored highlight —
-  //      what carries this band's move; see AUTHORING_PROTOCOL §7),
-  //   2. this band's xWord / yWord / words[] on this side (both quadrants),
-  //   3. framingKeywords — only when nothing above lands in the text,
-  //      so a Reading with no authored keywords still glows something.
-  // `text` is the caption text (optional); without it, tier 3 is
-  // appended unconditionally.
-  // Sailor, 2026-09-27: highlights are layered — the object first, then
-  // the words that express the response. The line's first keyword is the
-  // object; getCaptionPool returns it at pool[0] and also exposes it as
-  // pool.object so applyKeywords can render it as the anchor.
-  function getCaptionPool(event, side, band, text) {
-    if (!event) return [];
-    const pool = [];
-    const add = w => { const s = (typeof w === 'string') ? w : (w && (w.t || w.word)) || ''; if (s && s.trim()) pool.push(s.trim()); };
-
-    const key = side[0].toUpperCase() + bandSuffix(band);
-    const line = event.diatribe && event.diatribe[key];
-    if (line && Array.isArray(line.keywords)) line.keywords.forEach(add);
-
-    const quads = side === 'left' ? ['A', 'C'] : ['B', 'D'];
-    quads.forEach(q => {
-      const quad = event.responses && event.responses[q];
-      if (!quad) return;
-      let r = null;
-      for (const k of BAND_KEY_ALIASES[band] || [band]) { if (quad[k]) { r = quad[k]; break; } }
-      if (!r) return;
-      add(r.xWord); add(r.yWord);
-      if (Array.isArray(r.words)) r.words.forEach(add);
-    });
-
-    const dedupe = arr => { const seen = new Set(); return arr.filter(w => { const k = w.toLowerCase(); if (!k || seen.has(k)) return false; seen.add(k); return true; }); };
-    let out = dedupe(pool);
-
-    const hits = (typeof text === 'string')
-      ? out.filter(w => text.toLowerCase().includes(w.toLowerCase())).length
-      : -1;
-    if (hits === 0 || hits === -1) {
-      if (Array.isArray(event.framingKeywords)) event.framingKeywords.forEach(add);
-      out = dedupe(pool);
-    }
-    const first = line && Array.isArray(line.keywords) && line.keywords[0];
-    if (typeof first === 'string' && first.trim()) out.object = first.trim();
-    return out;
-  }
-
   // ── Apply keyword wrapping to caption text ─────────────────
   // Wraps matched keywords in <span class="keyword">. Permissive
   // matching: whole-word, case-insensitive, optional plural / -es /
@@ -172,25 +119,17 @@
     let safe = escapeHtml(text);
     if (!pool || pool.length === 0) return safe;
 
-    // The object (pool.object, from getCaptionPool) is wrapped first and
-    // as the anchor; everything else is expression. With no object the
-    // old single-tier rendering stands.
-    const object = pool.object || null;
-    const cls = w => 'keyword ' + (object ? (w.toLowerCase() === object.toLowerCase() ? 'kw-object' : 'kw-expr') : '');
-    const rest = pool.filter(w => !object || w.toLowerCase() !== object.toLowerCase());
-    const ordered = object ? [object].concat(rest) : rest;
-
-    const phrases = ordered.filter(w => /\s/.test(w)).sort((a, b) => (b === object) - (a === object) || b.length - a.length);
-    const singles = ordered.filter(w => !/\s/.test(w)).sort((a, b) => (b === object) - (a === object) || b.length - a.length);
+    const phrases = pool.filter(w => /\s/.test(w)).sort((a, b) => b.length - a.length);
+    const singles = pool.filter(w => !/\s/.test(w)).sort((a, b) => b.length - a.length);
 
     phrases.forEach(p => {
-      const re = new RegExp(`(${escapeRe(escapeHtml(p))})(?![^<]*</span>)`, 'gi');   // escape the phrase too: "didn't" is didn&#39;t in `safe`
-      safe = safe.replace(re, '<span class="' + cls(p).trim() + '">$1</span>');
+      const re = new RegExp(`(${escapeRe(p)})`, 'gi');
+      safe = safe.replace(re, '<span class="keyword">$1</span>');
     });
     singles.forEach(w => {
       if (w.length < 3) return; // skip very short — would over-match
-      const re = new RegExp(`\\b(${escapeRe(escapeHtml(w))}(?:s|es|ed|ing)?)\\b(?![^<]*</span>)`, 'gi');
-      safe = safe.replace(re, '<span class="' + cls(w).trim() + '">$1</span>');
+      const re = new RegExp(`\\b(${escapeRe(w)}(?:s|es|ed|ing)?)\\b(?![^<]*</span>)`, 'gi');
+      safe = safe.replace(re, '<span class="keyword">$1</span>');
     });
     return safe;
   }
@@ -343,7 +282,7 @@
     // Score / band
     bandFromScore, bandSuffix, scoreToPct, pctToScore, clamp,
     // Text
-    escapeHtml, escapeRe, applyKeywords, getKeywordPool, getCaptionPool,
+    escapeHtml, escapeRe, applyKeywords, getKeywordPool,
     // Animation
     breath,
     // Caption helpers

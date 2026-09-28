@@ -189,16 +189,10 @@
     catch (e) { return null; }
     renderer.setPixelRatio(Math.min(2, window.devicePixelRatio || 1));
     renderer.setSize(220, 220, false);
-
     const scene = new THREE.Scene();
     const cam = new THREE.PerspectiveCamera(30, 1, 0.1, 100);
     const ted = PrismGraphmap.buildCoyote(); scene.add(ted);
     const head = ted.userData.head;
-    // head only (2026-09-27): the coyote is built flat — every part is a direct
-    // child, positioned in body space — so the body, neck, legs and tail are
-    // the children sitting below the head (y < 1.05, or at the origin for the
-    // tube geometries). Hide those; what's left is the head, brows to snout.
-    ted.children.forEach(c => { if (c.position.y < 1.05) c.visible = false; });
     const key = new THREE.DirectionalLight(0xfff2e0, 1.25); key.position.set(1.6, 2.4, 2.6); scene.add(key);
     const rim = new THREE.DirectionalLight(0x90a8d0, 0.6); rim.position.set(-1.8, 1, -1.2); scene.add(rim);
     scene.add(new THREE.AmbientLight(0x6072a0, 0.6));
@@ -207,13 +201,9 @@
     // FACE ONLY (Sailor, 2026-09-23: "his body with the cut frame is weird") —
     // a round portrait medallion: the camera sits on the muzzle, the canvas is
     // clipped to a circle in CSS, so nothing is ever cut mid-body.
-    // 2026-09-27 (Sailor: no frame): the canvas is transparent and unclipped, so
-    // the camera frames the WHOLE head — ears to chin — three-quarter, with air
-    // around it. Nothing below the neck is in shot (the body is out of frame
-    // below the canvas), so he reads as a head looking in, not a bust in a hole.
-    const aim = new THREE.Vector3(0.0, 1.26, 0.52);
+    const aim = new THREE.Vector3(0.0, 1.27, 0.55);
     function frame(px, py, pz, fov) { cam.position.set(px, py, pz); cam.fov = fov; cam.updateProjectionMatrix(); cam.lookAt(aim); }
-    frame(0.60, 1.36, 1.60, 28);
+    frame(0.50, 1.38, 1.62, 22);
     let yawT = 0, pitchT = 0, yaw = 0, pitch = 0, t = 0, live = false;
     (function loop() {
       requestAnimationFrame(loop);

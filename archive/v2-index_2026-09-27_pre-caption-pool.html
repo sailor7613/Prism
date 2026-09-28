@@ -18,7 +18,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 
 <!-- Shared grammar (design system) -->
-<link rel="stylesheet" href="../src/css/prism-grammar.css?v=2">
+<link rel="stylesheet" href="../src/css/prism-grammar.css">
 
 <style>
 /* ============================================================
@@ -1145,55 +1145,6 @@ body.light .pad-grid {
 }
 .gm3d.live { display: block; }
 .gm3d.in { opacity: 1; }
-
-/* ── THE INSTRUMENT · desktop graph stage (2026-09-27) ──
-   ≥1100px: the plane is sized to the window (up to 700px) and the frame on
-   the right carries the legend, the readout, your words, the commit and the
-   held station. The nodes are MOVED there by giLayout() so every id keeps
-   working; below 1100px they move back. */
-.graph-instrument { display: none; }
-@media (min-width: 1100px) {
-  :root { --gm-size: clamp(420px, calc(100vh - 345px), 700px); }
-  .graph-phase { justify-content: flex-start; padding-top: calc(var(--top-chrome) + 4px); }
-  .graph-head { margin-bottom: 12px; max-width: 760px; }
-  .graph-stage { max-width: none; width: min(1200px, 100%); gap: 34px; align-items: flex-start; justify-content: center; }
-  /* (html body …: outranks the short-window rules below that shrink the plane
-     to make room for the words box — on wide screens the box is in the frame) */
-  html body .graph-stage .graph-pad, html body .graph-stage .gm3d, html body .graph-stage .z-slider { width: var(--gm-size); }
-  .graph-instrument[hidden] { display: none; }
-  .graph-instrument { display: flex; flex-direction: column; gap: 16px; flex: none;
-    width: 350px; max-height: calc(var(--gm-size) + 62px); overflow-y: auto; overscroll-behavior: contain;
-    border: 0.5px solid var(--rule); border-radius: 8px; padding: 18px 20px 16px;
-    background: rgba(9, 15, 32, 0.58); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
-    box-shadow: inset 0 0 26px rgba(8, 16, 40, 0.3), 0 10px 34px rgba(0,0,0,0.3);
-    position: relative; z-index: 3; }
-  .gi-kicker { font-family: var(--mono); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-low); margin-bottom: 4px; }
-  .gi-legend { display: flex; flex-direction: column; gap: 7px; }
-  .gi-axis { display: grid; grid-template-columns: 92px 1fr; gap: 10px; align-items: baseline; }
-  .gi-ax { font-family: var(--mono); font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-low); }
-  .gi-poles { font-family: var(--serif); font-size: 13.5px; line-height: 1.35; color: var(--ink); display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
-  .gi-poles i { font-style: normal; color: var(--ink-low); font-size: 11px; }
-  .gi-poles b { font-weight: 500; }
-  .gi-poles .gi-l { color: #8fb4ec; } .gi-poles .gi-r { color: #ec8f8f; }
-  .gi-axis-z .gi-poles b:first-child { color: #b9a8e0; } .gi-axis-z .gi-poles b:last-child { color: #e8cf8a; }
-  .gi-note { font-family: var(--serif); font-size: 13px; line-height: 1.5; color: var(--ink-mid); margin: 6px 0 0; }
-  .gi-how { display: grid; grid-template-columns: max-content 1fr; gap: 3px 12px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; line-height: 1.6; margin: 6px 0 0; }
-  .gi-how .gi-k { color: var(--ink-mid); white-space: nowrap; }
-  .gi-how .gi-v { color: var(--ink-low); }
-  .gi-controls .graph-foot .a-note { display: none; }   /* the frame's own how-to says it */
-  .gi-slot:empty { display: none; }
-  .gi-controls { display: flex; flex-direction: column; gap: 12px; padding-top: 14px; border-top: 0.5px solid var(--rule); }
-  .gi-controls .graph-readout { margin-top: 0; justify-content: flex-start; gap: 10px; font-size: 10.5px; }
-  .gi-controls .graph-dialect { width: 100%; margin-top: 0; }
-  .gi-controls .graph-dialect textarea { min-height: 64px; }
-  .gi-controls .graph-foot { margin-top: 0; justify-content: flex-start; gap: 14px; }
-  .gi-held:not(:empty) { padding-top: 14px; border-top: 0.5px solid var(--rule); }
-  /* the held-station card docks in the frame instead of floating over the plane */
-  .gi-held .graph-info, .gi-held .graph-info.dock-left { position: static; width: auto; max-height: none; padding: 0; border: 0;
-    background: transparent; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; overflow: visible; }
-  .gi-held .graph-info .gi-future { display: none; }
-}
-
 /* Soft handoff (the "soft transform"): during the commit crossfade the factory
    OVERLAYS the pad exactly (same footprint, same slot), the pad fades out
    beneath it, then retires from flow and the factory takes its place. */
@@ -2268,13 +2219,9 @@ body.phase-event .ted-guide, body.phase-diatribe .ted-guide {
 #tedTour .tt-presenter { position: fixed; display: flex; align-items: flex-end; gap: 6px;
   padding: 0 14px 0 0; pointer-events: auto; cursor: pointer;
   transition: top 0.45s cubic-bezier(0.22,1,0.36,1); }
-/* Just his head (Sailor, 2026-09-27: "actually just render his head, not in a
-   frame") — no medallion, no border, no backing; the canvas is transparent and
-   the head sits on the starfield, a soft drop-shadow the only grounding. */
-#tedTour .tt-ted { width: 128px; height: 128px; flex: none; margin: 0 -6px -4px 0;
-  background: transparent; border: 0; border-radius: 0; box-shadow: none;
-  filter: drop-shadow(0 8px 14px rgba(0,0,0,0.55));
-  -webkit-mask-image: linear-gradient(to bottom, #000 72%, transparent 96%); mask-image: linear-gradient(to bottom, #000 72%, transparent 96%);
+#tedTour .tt-ted { width: 96px; height: 96px; flex: none; margin: 0 2px 6px 10px;
+  border-radius: 50%; background: radial-gradient(circle at 40% 35%, rgba(34,52,92,0.9), rgba(8,12,26,0.95) 75%);
+  border: 0.5px solid var(--rule); box-shadow: 0 6px 22px rgba(0,0,0,0.5), inset 0 0 18px rgba(0,0,0,0.35);
   transform: translateY(14px) scale(0.9); opacity: 0; transition: transform 0.5s cubic-bezier(0.22,1,0.36,1), opacity 0.4s ease; }
 #tedTour.on .tt-ted { transform: none; opacity: 1; }
 #tedTour .tt-skip { margin-left: auto; background: transparent; border: 0.5px solid var(--rule); border-radius: 999px;
@@ -2318,7 +2265,7 @@ body.phase-event .ted-guide, body.phase-diatribe .ted-guide {
 body.ted-touring #tedStage { display: none !important; }
 body.ted-touring .ted-guide { opacity: 0 !important; pointer-events: none !important; }
 @media (max-width: 480px) {
-  #tedTour .tt-ted { width: 92px; height: 92px; margin: 0 -4px -2px -4px; }
+  #tedTour .tt-ted { width: 72px; height: 72px; margin-left: 8px; }
   #tedTour .tt-bubble { font-size: 13.5px; padding: 10px 12px 8px; }
 }
 
@@ -2643,7 +2590,6 @@ body.ticker-live #graphNote {
 .dt-field .dt-track { animation-duration: 35s; }   /* THE FIELD scrolls faster — the §6 temporal beat */
 .delta-ticker:hover .dt-track, .delta-ticker.paused .dt-track { animation-play-state: paused; }
 @keyframes dt-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-.dt-track.dt-static { animation: none; transform: none; }   /* fits the strip — no loop, no twin */
 
 /* the tile — a discrete chip. Number-led: glyph · FIGURE / label */
 .dt-tile {
@@ -3060,26 +3006,6 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
       </div>
     </div><!-- /graph-left -->
 
-    <!-- ── THE INSTRUMENT (desktop, 2026-09-27; Sailor: "bring in some framed
-         element on the right hand side that helps express what the graphmap
-         is and how to interact with it"). On wide screens the plane takes the
-         room and this frame carries: the three axes in this Reading's own
-         words, what the orbs are, the live readout, your words, the commit —
-         and the held station's card (#graphInfo docks in here). Below 1100px
-         it is hidden and everything sits where it always did. ── -->
-    <aside class="graph-instrument" id="graphInstrument" hidden>
-      <div class="gi-legend" id="giLegend">
-        <div class="gi-kicker" id="giKicker">the plane</div>
-        <div class="gi-axis"><span class="gi-ax">across</span><span class="gi-poles"><b class="gi-l" id="giXneg"></b><i>↔</i><b class="gi-r" id="giXpos"></b></span></div>
-        <div class="gi-axis"><span class="gi-ax">up · down</span><span class="gi-poles"><b class="gi-u" id="giYpos"></b><i>↔</i><b class="gi-d" id="giYneg"></b></span></div>
-        <div class="gi-axis gi-axis-z"><span class="gi-ax">depth · delivery</span><span class="gi-poles"><b id="giZneg"></b><i>↔</i><b id="giZpos"></b></span></div>
-        <p class="gi-note" id="giNote"></p>
-        <p class="gi-how" id="giHow"></p>
-      </div>
-      <div class="gi-slot gi-controls" id="giControls"></div>
-      <div class="gi-slot gi-held" id="giHeld"></div>
-    </aside>
-
     <div class="graph-info" id="graphInfo">
       <!-- ── Tracker (resting state): followed legislators. Hidden while comparing. ── -->
       <div class="tracker" id="tracker">
@@ -3132,7 +3058,7 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
     <span class="graph-charcount" id="graphCharcount">0/180</span>
   </div>
 
-  <div class="graph-foot" id="graphFoot">
+  <div class="graph-foot">
     <button class="a-back" id="graphBack">&larr; reconsider</button>
     <button class="a-commit" id="graphCommit" data-ted-hint="Commit, and it's on the record — your reading, kept, against everyone else's."><span>commit your pin</span><span class="ev-enter-glyph">&rarr;</span></button>
     <span class="a-note" id="graphNote"></span>
@@ -3393,12 +3319,12 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
      and seeds PrismDB. Regenerate from prism_members.json when the data changes. -->
 <script src="../data/prism_members.js"></script>
 <!-- Shared behavior layer -->
-<script src="../src/js/prism-effects.js?v=3"></script>   <!-- v=3: band-first caption pool, object anchor + expression tiers (2026-09-27) -->
+<script src="../src/js/prism-effects.js"></script>
 <!-- The graphmap factory (Three.js) — post-commit the committed graph hands
      off to this instrument: v56 pins, true 3D dots, full orbit. -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <!-- cache-busting query: bump ?v= whenever the module changes (Safari caches hard) -->
-<script src="../src/js/prism-graphmap.js?v=10"></script>
+<script src="../src/js/prism-graphmap.js?v=9"></script>
 
 <script>
 /* ============================================================
@@ -3590,10 +3516,6 @@ function lookup(side, band) {
   return diatribe[key]?.text || '';
 }
 function poolFor(side, band) {
-  // Diatribe highlights track the band (2026-09-27): the line's own
-  // keywords[], then this band's words, framing words only as fallback.
-  // The whole-side pool (getKeywordPool) still serves the graphmap/panels.
-  if (PE.getCaptionPool) return PE.getCaptionPool(ev, side, band, lookup(side, band));
   return PE.getKeywordPool(ev, side, band, V2_KEYWORD_AUGMENT);
 }
 
@@ -4602,51 +4524,6 @@ const billToggle = document.getElementById('billToggle');
 const padShades  = { A: document.getElementById('padShadeA'), B: document.getElementById('padShadeB'), C: document.getElementById('padShadeC'), D: document.getElementById('padShadeD') };
 const padCorners = { A: document.getElementById('padCornerA'), B: document.getElementById('padCornerB'), C: document.getElementById('padCornerC'), D: document.getElementById('padCornerD') };
 const graphInfo    = document.getElementById('graphInfo');
-
-// ── THE INSTRUMENT (desktop, 2026-09-27) — see the aside in the markup. On
-// wide screens the readout, your words, the foot and the held-station card
-// move into the frame beside the plane; narrower, they move back home. Nodes
-// keep their ids, so every listener and the tour keep working.
-const giLayout = (function () {
-  const inst = document.getElementById('graphInstrument');
-  const ctrl = document.getElementById('giControls'), held = document.getElementById('giHeld');
-  if (!inst || !ctrl || !held) return function () {};
-  const movable = ['graphReadout', 'graphFoot'].map(id => document.getElementById(id)).filter(Boolean);
-  const dialectWrap = document.querySelector('.graph-dialect'); if (dialectWrap) movable.splice(1, 0, dialectWrap);
-  const home = new Map();   // node → { parent, next }
-  [].concat(movable, graphInfo ? [graphInfo] : []).forEach(n => home.set(n, { parent: n.parentNode, next: n.nextSibling }));
-  let wide = null;
-  function poles() {
-    const ax = (ev && ev.axes) || {};
-    const put = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v || ''; };
-    put('giXneg', ax.x && ax.x.neg || 'left'); put('giXpos', ax.x && ax.x.pos || 'right');
-    put('giYpos', ax.y && ax.y.pos || 'institutional'); put('giYneg', ax.y && ax.y.neg || 'populist');
-    put('giZneg', ax.z && ax.z.neg || 'frustrated'); put('giZpos', ax.z && ax.z.pos || 'realized');
-    const live = document.body.classList.contains('ticker-live');
-    const note = document.getElementById('giNote'), how = document.getElementById('giHow'), kick = document.getElementById('giKicker');
-    if (kick) kick.textContent = live ? 'the space' : 'the plane';
-    if (note) note.textContent = live
-      ? 'The twelve orbs are this Reading\'s stations: four voices at three heats, floating at the depth their author gave them. Your pin is the lit one. Hold an orb to read it against your pin.'
-      : 'Your corner is lit. Distance from the center is how hard you hold it. The third axis, depth, is delivery: does this thing actually land?';
-    const rows = live
-      ? [['drag', 'rotate'], ['right-drag', 'move'], ['scroll', 'zoom'], ['hold an orb', 'lock on · read it against your pin'], ['⌖ recenter', 'come back to center']]
-      : [['tap or drag', 'place your pin'], ['pull z', 'your delivery call'], ['commit', 'it goes on the record']];
-    if (how) how.innerHTML = rows.map(([k, v]) => '<span class="gi-k">' + k + '</span><span class="gi-v">' + v + '</span>').join('');
-  }
-  function apply() {
-    const w = window.innerWidth >= 1100;
-    poles();
-    if (w === wide) return;
-    wide = w;
-    inst.hidden = !w;
-    if (w) { movable.forEach(n => ctrl.appendChild(n)); if (graphInfo) held.appendChild(graphInfo); }
-    else { [].concat(movable, graphInfo ? [graphInfo] : []).forEach(n => { const h = home.get(n); h.parent.insertBefore(n, h.next && h.next.parentNode === h.parent ? h.next : null); }); }
-    document.body.classList.toggle('gi-wide', w);
-  }
-  window.addEventListener('resize', apply);
-  return apply;
-})();
-
 const cmpUser      = document.getElementById('cmpUser');
 const cmpUserLabel = document.getElementById('cmpUserLabel');
 const cmpUserText  = document.getElementById('cmpUserText');
@@ -4962,7 +4839,6 @@ function enterGraph() {
   graphBand = committedBand;         // start at the aperture band; pin intensity owns it now
   graphZ = 0;                        // neutral — the user places their own tension
   gPromptEl.textContent = ev ? (ev.prompt || ev.framing || '') : '';
-  try { giLayout(); } catch (e) {}
   graphDialect.value = ''; updateGraphCharcount();
   graphNote.textContent = ''; graphCommitBtn.disabled = false;
   aggCommitted = false; aggDots = []; aggLayer.innerHTML = '';   // clear any prior aggregate (incl. contrast line)
@@ -7101,18 +6977,6 @@ function renderTicker() {
   };
   if (entries.length) fill(dtPersonalTrack, entries, true);
   else fill(dtPersonalTrack, [{ figure: '—', label: 'no burns yet · commit a reading' }], false);
-  // A short row does not marquee (2026-09-27): when one cycle already fits the
-  // strip, the seamless-loop's second copy sat right beside the first and one
-  // burn read as two identical tiles. Measure after paint; drop the copy and
-  // hold the row still. The field row gets the same test below.
-  const settle = (track) => requestAnimationFrame(() => {
-    const cyc = track.querySelector('.dt-cycle'); if (!cyc) return;
-    const row = track.parentElement; const avail = row ? row.clientWidth - (parseFloat(getComputedStyle(track).paddingLeft) || 0) : 0;
-    const fits = cyc.scrollWidth - (parseFloat(getComputedStyle(cyc).paddingRight) || 0) <= avail;
-    track.classList.toggle('dt-static', fits);
-    if (fits && track.children.length > 1) track.removeChild(track.lastElementChild);
-  });
-  settle(dtPersonalTrack);
   const frames = dtFieldFrames();
   if (frames.length) {
     dtFieldTrack.innerHTML = '';
@@ -7122,7 +6986,6 @@ function renderTicker() {
       dtFieldTrack.appendChild(cyc);
     }
   } else fill(dtFieldTrack, [{ figure: '—', label: 'no frames yet · the newsroom scans at 05:30' }], false);
-  settle(dtFieldTrack);
   // folded footer (design v2): the end-cap plate carries what the footer did
   const dtStatus = document.getElementById('dtStatus');
   if (dtStatus) {
@@ -7135,7 +6998,6 @@ function renderTicker() {
   }
   dtEl.hidden = false;
   document.body.classList.add('ticker-live');
-  try { giLayout(); } catch (e) {}      // the instrument's copy flips from the plane to the space
   requestAnimationFrame(bandMeasure);   // strip is fresh — measure the real box
   if (dtEdge) dtEdge.hidden = true;   // edge call arms itself per cycle
 }
@@ -9687,7 +9549,7 @@ function profileCard() {
 
 })();
 </script>
-<script src="../src/js/prism-ted-tour.js?v=6"></script>   <!-- Ted's tour: isolation + a peeking presenter (2026-09-22) -->
+<script src="../src/js/prism-ted-tour.js?v=5"></script>   <!-- Ted's tour: isolation + a peeking presenter (2026-09-22) -->
 
 </body>
 </html>

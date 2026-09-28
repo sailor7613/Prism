@@ -1,6 +1,6 @@
 # The daily drafting — authoring protocol for Claude drafts
 
-*v1.3 · 2026-09-26 (auto-publish) · v1.2 2026-09-26 (central object + tethers) · v1.1 2026-09-25 (overlay; no git) · v1 2026-09-22 · Sailor + Claude. This file is the canonical instruction the daily
+*v1.4 · 2026-09-27 (highlights track the band) · v1.3 2026-09-26 (auto-publish) · v1.2 2026-09-26 (central object + tethers) · v1.1 2026-09-25 (overlay; no git) · v1 2026-09-22 · Sailor + Claude. This file is the canonical instruction the daily
 drafting task follows. Edit it here; the task reads it fresh each run.*
 
 ## What this is
@@ -106,8 +106,31 @@ authoring anything:
    `text` (2–3 sentences in the station's own voice: a person talking, first person, the way they'd say it out loud. Not a report of what someone did ("He went on CNBC and accused…"), not narration about the station ("The left reads…"). Contractions, questions and fragments are fine. **One person, singular: never "we / us / our"** (Sailor's 2026-07-25 ruling). The speaker notices their side ("the people I vote with"), never speaks as it. The full rules are `PRISM_VOICE_RULES` in `admin-surface.html`; they bind drafts too), `xWord`, `yWord`, `words[]`.
    Author blind if possible: a subagent given only the frame, prompt, keywords, axes
    and the formula — no other Readings, no register.
-7. **Diatribe** (`LF LC LD RF RC RD`, each `{text, side, band}`), each written **in the station's own voice**: first person singular (no we/us/our), one or two spoken sentences ("He got the anger right and the blame wrong…"), never narration about the side ("The left reads…"). Sailor, 2026-09-26: the narrated form reads clunky., `diatribeLayer`,
+7. **Diatribe** (`LF LC LD RF RC RD`, each `{text, side, band, keywords}` — see 7b), each written **in the station's own voice**: first person singular (no we/us/our), one or two spoken sentences ("He got the anger right and the blame wrong…"), never narration about the side ("The left reads…"). Sailor, 2026-09-26: the narrated form reads clunky., `diatribeLayer`,
    `objectLayer` (stated vs operative object; an inversion lean if there is one).
+
+   **7b. The highlight (v1.4, 2026-09-27, Sailor's ruling: object first, then the words
+   that express the response).** Each Diatribe line carries `keywords[]`, **two to four
+   phrases, each copied verbatim from that line's `text`** (case doesn't matter). The
+   portal lights exactly these — the first as the anchor, the rest lighter — then this
+   band's xWord/yWord, and falls back to the framing words only when nothing lands
+   (an empty `keywords[]` is what made every band glow the same framing nouns).
+   - **`keywords[0]` is the object** — *where the object is in this sentence*, in
+     Sailor's framing of the three bands as an argument: **fluid** → the law itself,
+     the noun the speaker would repeat if asked once ("cleaner air", "small
+     business"); **coalition** → the people the speaker is bringing along ("landscaping
+     crews", "the people I work with"); **denominated** → what replaced the object —
+     the word that shows the law has left the sentence ("my truck", "just want their
+     noise"). Read the six anchors in order and you have the object's drift across
+     the argument. A denominated anchor that is still the central object is the rare
+     disciplined edge; author it as one, and say so in `meta`.
+   - **The rest are the expression** — the words that carry the response: the axis
+     word if it is spoken ("the state deciding"), the inversion word, the charge
+     ("didn't ask for", "up for debate"), the frame's noun where the speaker still
+     holds it ("leaf blowers" in the right-denominated line, lit *lighter* beside "my
+     truck": the object it is leaving, next to the one that replaced it).
+   Never pad to four; two is fine. The exemplar is
+   `data/readings/examples/rdg_examplelawn.json`.
 8. **Sweep again** — the whole file. All clean or it does not land.
 9. **Record the two pathologies on the object card**, in the register you write back:
    `inversions[]` — any station whose polarity on this object reverses a prior it

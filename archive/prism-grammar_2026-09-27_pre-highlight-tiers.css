@@ -442,27 +442,6 @@ body.light .caption-text.refracting {
 .caption-text .keyword:nth-child(3n+2),
 .prism-keyword:nth-child(3n+2) { animation-delay: -0.6s; }
 
-/* Two tiers (2026-09-27, Sailor: object first, then the words that
-   express the response). .kw-object is the line's anchor — where the
-   object is in this sentence — and carries the full halo. The other
-   lit words are the expression: same band color, lighter hand. */
-.caption-text .keyword.kw-object,
-.prism-keyword.kw-object {
-  font-weight: 600;
-  text-shadow:
-    0 0 6px  var(--keyword-glow-near, rgba(96, 148, 220, 0.65)),
-    0 0 14px var(--keyword-glow-far,  rgba(96, 148, 220, 0.35)),
-    0 0 26px var(--keyword-glow-far,  rgba(96, 148, 220, 0.35));
-}
-.caption-text .keyword.kw-expr,
-.prism-keyword.kw-expr {
-  font-weight: 500;
-  text-shadow:
-    0 0 4px  var(--keyword-glow-far, rgba(96, 148, 220, 0.35)),
-    0 0 10px var(--keyword-glow-far, rgba(96, 148, 220, 0.22));
-  opacity: 0.94;
-}
-
 /* Per-band keyword glow color — values live in the --kw-* tokens
    (:root dark, body.light light), so the light theme needs no
    separate scoping rules here. */
