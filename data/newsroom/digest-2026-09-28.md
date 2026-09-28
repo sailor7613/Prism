@@ -1,10 +1,9 @@
 # Newsroom digest — 2026-09-28
 
-Register: 39 objects · this scan: 2 new, 0 seen again, 0 returned.
+Register: 44 objects · this scan: 5 new, 0 seen again, 0 returned.
 
-## Queued for drafting (2)
-- **US and China release reciprocal $30 billion product lists for tariff cuts after Trump - Xi meeting** — tariff/sanction · imposed · holder: the President · formed 2026-09-28 · 12 outlets (peak 12) · `obj_thepresi_billion-china-cuts-lists`
-- **US and China cut tariffs on $30B in goods after Trump - Xi meeting** — tariff/sanction · imposed · holder: the President · formed 2026-09-28 · 3 outlets (peak 3) · `obj_thepresi_30b-china-cut-goods`
+## Queued for drafting (1)
+- **Mediators working to broker US - Iran deal even after Trump rejected latest Tehran proposal** — vote · voted · holder: the President · formed 2026-09-28 · 10 outlets (peak 10) · `obj_thepresi_broker-deal-even-iran`
 
 ## Permanence breaks (went silent while unresolved)
 - **Will FDA advisers recommend a multi - cancer blood test for approval ? Theyll vote** — vote · voted · holder: HHS · formed 2026-09-23 · 10 outlets (peak 11) · `obj_hhs_advisers-approval-blood-cancer` · silent 5d after 2 scans
@@ -16,10 +15,13 @@ Register: 39 objects · this scan: 2 new, 0 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **US and China release reciprocal $30 billion product lists for tariff cuts after Trump - Xi meeting** — tariff/sanction · imposed · holder: the President · formed 2026-09-28 · 12 outlets (peak 12) · `obj_thepresi_billion-china-cuts-lists`
-- **US and China cut tariffs on $30B in goods after Trump - Xi meeting** — tariff/sanction · imposed · holder: the President · formed 2026-09-28 · 3 outlets (peak 3) · `obj_thepresi_30b-china-cut-goods`
+- **Mediators working to broker US - Iran deal even after Trump rejected latest Tehran proposal** — vote · voted · holder: the President · formed 2026-09-28 · 10 outlets (peak 10) · `obj_thepresi_broker-deal-even-iran`
+- **Sen . John Kennedy proposes rule for no politician to name buildings after themselves** — ruling · ruled · holder: HHS · formed 2026-09-28 · 5 outlets (peak 5) · `obj_hhs_buildings-john-kennedy-name`
+- **Trump rolls back Biden - era mileage rules amid slow US shift to electric vehicles** — ruling · ruled · holder: the President · formed 2026-09-28 · 6 outlets (peak 6) · `obj_thepresi_back-biden-electric-era`
+- **Investigation reopened into alleged gang rape at Cornell University** — suit · sued · holder: ? · formed 2026-09-28 · 14 outlets (peak 14) · `obj_x_alleged-cornell-gang-into`
+- **Shark super hearing detects sounds from nearly 250 feet away | National** — hearing · compelled · holder: ? · formed 2026-09-28 · 3 outlets (peak 3) · `obj_x_250-away-detects-feet`
 
-## Watching (13)
+## Watching (15)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
 - **Former state senator sentenced to 16 months in child solicitation case** — indictment · charged · holder: the Senate · formed 2026-09-23 · 4 outlets (peak 4) · `obj_thesenat_case-child-former-months`
 - **CNN , MS NOW and Politico back at the White House after judge ordered Trump to lift ban** — ruling · ruled · holder: the House · formed 2026-09-24 · 18 outlets (peak 18) · `obj_thehouse_back-ban-cnn-house`
@@ -33,3 +35,5 @@ Register: 39 objects · this scan: 2 new, 0 seen again, 0 returned.
 - **s-119-2403 — House motion to suspend the rules and pass (Passed)** — bill · voted · holder: the House · formed 2026-09-16 · 0 outlets (peak 0) · `obj_bill_s-119-2403`
 - **Whistleblower Protection Act of 2025 — House motion to suspend the rules and pass, as amended (Passed)** — bill · voted · holder: the House · formed 2026-09-15 · 0 outlets (peak 0) · `obj_bill_hr-119-4646`
 - **Exclusive : Stratton talks Trump , filibuster , the far - left as early voting begins** — vote · voted · holder: the President · formed 2026-09-27 · 8 outlets (peak 8) · `obj_thepresi_begins-early-exclusive-far`
+- **Sen . John Kennedy proposes rule for no politician to name buildings after themselves** — ruling · ruled · holder: HHS · formed 2026-09-28 · 5 outlets (peak 5) · `obj_hhs_buildings-john-kennedy-name`
+- **Trump rolls back Biden - era mileage rules amid slow US shift to electric vehicles** — ruling · ruled · holder: the President · formed 2026-09-28 · 6 outlets (peak 6) · `obj_thepresi_back-biden-electric-era`
