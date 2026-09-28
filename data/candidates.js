@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-09-28T05:35:28.681Z · 19 legislative + 5 news (GDELT, 3d)
+// 2026-09-28T14:11:48.841Z · 19 legislative + 5 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1790573712811,
+    "ts": 1790604687587,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.835,
+      "salience": 0.834,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -1423,11 +1423,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1790573712811,
+    "ts": 1790604687588,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.827,
+      "salience": 0.825,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -1680,11 +1680,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1790573712811,
+    "ts": 1790604687587,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.765,
+      "salience": 0.763,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -2593,11 +2593,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1790573712812,
+    "ts": 1790604687588,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.723,
+      "salience": 0.722,
       "congressGovUrl": null,
       "votes": [
         {
@@ -3121,11 +3121,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1790573712811,
+    "ts": 1790604687587,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.7,
+      "salience": 0.699,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4022,11 +4022,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1790573712811,
+    "ts": 1790604687587,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.541,
+      "salience": 0.54,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -4276,11 +4276,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1790573712811,
+    "ts": 1790604687587,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.533,
+      "salience": 0.531,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -4549,11 +4549,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1790573712811,
+    "ts": 1790604687588,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.507,
+      "salience": 0.506,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5448,11 +5448,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1790573712811,
+    "ts": 1790604687587,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.495,
+      "salience": 0.493,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6727,11 +6727,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1790573712812,
+    "ts": 1790604687588,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.415,
+      "salience": 0.413,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7647,11 +7647,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1790573712812,
+    "ts": 1790604687588,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.413,
+      "salience": 0.412,
       "congressGovUrl": null,
       "votes": [
         {
@@ -8557,11 +8557,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1790573712812,
+    "ts": 1790604687588,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.379,
+      "salience": 0.377,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9475,11 +9475,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1790573712811,
+    "ts": 1790604687587,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.335,
+      "salience": 0.334,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10355,11 +10355,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1790573712811,
+    "ts": 1790604687587,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.331,
+      "salience": 0.329,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11231,11 +11231,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1790573712811,
+    "ts": 1790604687587,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.139,
+      "salience": 0.137,
       "congressGovUrl": null,
       "votes": [
         {
@@ -12124,11 +12124,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1790573712811,
+    "ts": 1790604687587,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.132,
+      "salience": 0.13,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -13039,11 +13039,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1790573712811,
+    "ts": 1790604687587,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.125,
+      "salience": 0.124,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -13927,11 +13927,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1790573712811,
+    "ts": 1790604687586,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.121,
+      "salience": 0.119,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -14848,11 +14848,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1790573712811,
+    "ts": 1790604687586,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.11,
+      "salience": 0.108,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -15764,15 +15764,135 @@ window.PRISM_CANDIDATES = [
     "mts": 1784044297586
   },
   {
-    "cid": "cand_news_abortion-collins-court",
+    "cid": "cand_news_810-about-canceled",
     "source": "news",
-    "ts": 1790573728678,
+    "ts": 1790604708836,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.971,
+      "salience": 0.994,
       "articles": [
+        {
+          "title": "What to know about the $810 million in spending canceled by President Trump",
+          "url": "https://www.wdiy.org/npr-news/2026-09-28/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
+          "domain": "wdiy.org",
+          "seendate": "2026-09-28T13:15:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/c1/be/d961f31c4644bdc1daa89c0c8f3d/gettyimages-2284040971.jpg"
+        },
+        {
+          "title": "What to know about the $810 million in spending canceled by President Trump",
+          "url": "https://www.aspenpublicradio.org/2026-09-28/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
+          "domain": "aspenpublicradio.org",
+          "seendate": "2026-09-28T13:15:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/c1/be/d961f31c4644bdc1daa89c0c8f3d/gettyimages-2284040971.jpg"
+        },
+        {
+          "title": "What to know about the $810 million in spending canceled by President Trump",
+          "url": "https://www.whqr.org/2026-09-28/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
+          "domain": "whqr.org",
+          "seendate": "2026-09-28T13:15:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/c1/be/d961f31c4644bdc1daa89c0c8f3d/gettyimages-2284040971.jpg"
+        },
+        {
+          "title": "What to know about the $810 million in spending canceled by President Trump",
+          "url": "https://www.wunc.org/2026-09-28/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
+          "domain": "wunc.org",
+          "seendate": "2026-09-28T13:15:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/c1/be/d961f31c4644bdc1daa89c0c8f3d/gettyimages-2284040971.jpg"
+        },
+        {
+          "title": "What to know about the $810 million in spending canceled by President Trump",
+          "url": "https://www.wkyufm.org/news/2026-09-28/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
+          "domain": "wkyufm.org",
+          "seendate": "2026-09-28T12:15:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/c1/be/d961f31c4644bdc1daa89c0c8f3d/gettyimages-2284040971.jpg"
+        },
+        {
+          "title": "What to know about the $810 million in spending canceled by President Trump",
+          "url": "https://www.wyso.org/npr-news/2026-09-28/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
+          "domain": "wyso.org",
+          "seendate": "2026-09-28T11:30:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/c1/be/d961f31c4644bdc1daa89c0c8f3d/gettyimages-2284040971.jpg"
+        },
+        {
+          "title": "What to know about the $810 million in spending canceled by President Trump",
+          "url": "https://kansaspublicradio.org/npr-news/2026-09-28/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
+          "domain": "kansaspublicradio.org",
+          "seendate": "2026-09-28T11:30:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/c1/be/d961f31c4644bdc1daa89c0c8f3d/gettyimages-2284040971.jpg"
+        },
+        {
+          "title": "What to know about the $810 million in spending canceled by President Trump",
+          "url": "https://www.northernpublicradio.org/2026-09-28/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
+          "domain": "northernpublicradio.org",
+          "seendate": "2026-09-28T11:30:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/c1/be/d961f31c4644bdc1daa89c0c8f3d/gettyimages-2284040971.jpg"
+        },
+        {
+          "title": "What to know about the $810 million in spending canceled by President Trump",
+          "url": "https://news.wfsu.org/npr-news/2026-09-28/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
+          "domain": "news.wfsu.org",
+          "seendate": "2026-09-28T11:30:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/c1/be/d961f31c4644bdc1daa89c0c8f3d/gettyimages-2284040971.jpg"
+        },
+        {
+          "title": "What to know about the $810 million in spending canceled by President Trump",
+          "url": "https://www.kwit.org/2026-09-28/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
+          "domain": "kwit.org",
+          "seendate": "2026-09-28T11:15:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/c1/be/d961f31c4644bdc1daa89c0c8f3d/gettyimages-2284040971.jpg"
+        },
+        {
+          "title": "What to know about the $810 million in spending canceled by President Trump",
+          "url": "https://www.kazu.org/npr-news/2026-09-28/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
+          "domain": "kazu.org",
+          "seendate": "2026-09-28T11:15:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/c1/be/d961f31c4644bdc1daa89c0c8f3d/gettyimages-2284040971.jpg"
+        },
+        {
+          "title": "What to know about the $810 million in spending canceled by President Trump",
+          "url": "https://www.kzyx.org/npr-news/2026-09-28/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
+          "domain": "kzyx.org",
+          "seendate": "2026-09-28T11:00:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/c1/be/d961f31c4644bdc1daa89c0c8f3d/gettyimages-2284040971.jpg"
+        }
+      ]
+    },
+    "title": "What to know about the $810 million in spending canceled by President Trump",
+    "summary": "2026-09-28 wdiy.org: What to know about the $810 million in spending canceled by President Trump\n2026-09-28 aspenpublicradio.org: What to know about the $810 million in spending canceled by President Trump\n2026-09-28 whqr.org: What to know about the $810 million in spending canceled by President Trump\n2026-09-28 wunc.org: What to know about the $810 million in spending canceled by President Trump\n2026-09-28 wkyufm.org: What to know about the $810 million in spending canceled by President Trump\n2026-09-28 wyso.org: What to know about the $810 million in spending canceled by President Trump",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_abortion-collins-court",
+    "source": "news",
+    "ts": 1790604708836,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.955,
+      "articles": [
+        {
+          "title": "Supreme Court Vote Shadows Sen . Collins in First Race after Abortion Decision",
+          "url": "https://989wclz.com/news/074470-supreme-court-vote-shadows-sen-collins-in-first-race-after-abortion-decision/",
+          "domain": "989wclz.com",
+          "seendate": "2026-09-28T07:00:00Z",
+          "image": "https://wgan.com/wp-content/blogs.dir/47/files/2026/09/AP26266540307822-1-620x400.jpg"
+        },
+        {
+          "title": "Supreme Court Vote Shadows Sen . Collins in First Race after Abortion Decision",
+          "url": "https://coast931.com/news/074470-supreme-court-vote-shadows-sen-collins-in-first-race-after-abortion-decision/",
+          "domain": "coast931.com",
+          "seendate": "2026-09-28T05:30:00Z",
+          "image": "https://wgan.com/wp-content/blogs.dir/47/files/2026/09/AP26266540307822-1-620x400.jpg"
+        },
         {
           "title": "Supreme Court vote shadows Maine Sen . Susan Collins in her first race after abortion rights decision",
           "url": "https://www.santafenewmexican.com/ap/national/supreme-court-vote-shadows-maine-sen-susan-collins-in-her-first-race-after-abortion-rights/article_a1994c6f-15a2-5613-a602-4f41562ec3cb.html",
@@ -15842,25 +15962,11 @@ window.PRISM_CANDIDATES = [
           "domain": "click2houston.com",
           "seendate": "2026-09-27T15:45:00Z",
           "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/O3Z5TXQZDNGI7BHZKH4ZUL2NGU.jpg?api_key=click2houston_85fdeb57f8cd3635"
-        },
-        {
-          "title": "Supreme Court vote shadows Maine Sen . Susan Collins in her first bid after abortion rights decision",
-          "url": "https://www.clickorlando.com/news/politics/2026/09/27/supreme-court-vote-shadows-maine-sen-susan-collins-in-her-first-bid-after-abortion-rights-decision/",
-          "domain": "clickorlando.com",
-          "seendate": "2026-09-27T15:45:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/O3Z5TXQZDNGI7BHZKH4ZUL2NGU.jpg?api_key=clickorlando_488cff2bcc157b2e"
-        },
-        {
-          "title": "Supreme Court vote shadows Maine Sen . Susan Collins in her first bid after abortion rights decision",
-          "url": "http://www.cecildaily.com/ap/nation/supreme-court-vote-shadows-maine-sen-susan-collins-in-her-first-bid-after-abortion-rights/article_832a90fd-ad29-5514-8853-c152faf69497.html",
-          "domain": "cecildaily.com",
-          "seendate": "2026-09-27T15:00:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/cecildaily.com/content/tncms/assets/v3/editorial/d/fb/dfb6f207-6af1-550a-b98d-3bbf17015f6a/6ab9075c13a40.image.jpg?crop=1763%2C926%2C0%2C124"
         }
       ]
     },
     "title": "Supreme Court vote shadows Maine Sen . Susan Collins in her first bid after abortion rights decision",
-    "summary": "2026-09-28 santafenewmexican.com: Supreme Court vote shadows Maine Sen . Susan Collins in her first race after abortion rights decision\n2026-09-27 nvdaily.com: Supreme Court vote shadows Maine Sen . Susan Collins in her first race after abortion rights decision\n2026-09-27 dailypress.com: Supreme Court vote shadows Maine Sen . Susan Collins in her first race after abortion rights decision\n2026-09-27 sandiegouniontribune.com: Supreme Court vote shadows Maine Sen . Susan Collins in her first race after abortion rights decision\n2026-09-27 idahostatejournal.com: Supreme Court vote shadows Maine Sen . Susan Collins in her first bid after abortion rights decision\n2026-09-27 wsls.com: Supreme Court vote shadows Maine Sen . Susan Collins in her first bid after abortion rights decision",
+    "summary": "2026-09-28 989wclz.com: Supreme Court Vote Shadows Sen . Collins in First Race after Abortion Decision\n2026-09-28 coast931.com: Supreme Court Vote Shadows Sen . Collins in First Race after Abortion Decision\n2026-09-28 santafenewmexican.com: Supreme Court vote shadows Maine Sen . Susan Collins in her first race after abortion rights decision\n2026-09-27 nvdaily.com: Supreme Court vote shadows Maine Sen . Susan Collins in her first race after abortion rights decision\n2026-09-27 dailypress.com: Supreme Court vote shadows Maine Sen . Susan Collins in her first race after abortion rights decision\n2026-09-27 sandiegouniontribune.com: Supreme Court vote shadows Maine Sen . Susan Collins in her first race after abortion rights decision",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -15872,12 +15978,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_approved-cancel-congressionally",
     "source": "news",
-    "ts": 1790573728678,
+    "ts": 1790604708835,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.84,
+      "salience": 0.786,
       "articles": [
         {
           "title": "Trump seeks to cancel nearly $1B in congressionally approved funds",
@@ -15969,14 +16075,78 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_administration-democrats-house",
+    "cid": "cand_news_crackdown-leader-mail",
     "source": "news",
-    "ts": 1790573728679,
+    "ts": 1790604708836,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.607,
+      "salience": 0.774,
+      "articles": [
+        {
+          "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
+          "url": "https://mymotherlode.com/news/national/general-election/11175142/trumps-mail-voting-crackdown-tests-postal-service-leader-who-says-hes-not-political.html",
+          "domain": "mymotherlode.com",
+          "seendate": "2026-09-28T13:15:00Z",
+          "image": "https://mymotherlode.com/wp-content/uploads/2026/09/AP_99d137dec53045ddb65c5a7f0aa54a6b_08fd22b7ba.jpg"
+        },
+        {
+          "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
+          "url": "https://www.clickondetroit.com/news/politics/2026/09/28/trumps-mail-voting-crackdown-tests-postal-service-leader-who-says-hes-not-political/",
+          "domain": "clickondetroit.com",
+          "seendate": "2026-09-28T12:30:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/D4R64CPGYVCF7GOPTQZ4O6JGSU.jpg?api_key=clickondetroit_06f87fefb2123598"
+        },
+        {
+          "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
+          "url": "https://www.clickorlando.com/news/politics/2026/09/28/trumps-mail-voting-crackdown-tests-postal-service-leader-who-says-hes-not-political/",
+          "domain": "clickorlando.com",
+          "seendate": "2026-09-28T12:15:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/D4R64CPGYVCF7GOPTQZ4O6JGSU.jpg?api_key=clickorlando_488cff2bcc157b2e"
+        },
+        {
+          "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
+          "url": "https://www.wral.com/news/ap/ba0fc-trumps-mail-voting-crackdown-tests-postal-service-leader-who-says-hes-not-political/",
+          "domain": "wral.com",
+          "seendate": "2026-09-28T11:30:00Z",
+          "image": "https://images.wral.com/f0c8efa8-8436-5fc5-9e2f-2f4c31637097"
+        },
+        {
+          "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
+          "url": "http://www.bozemandailychronicle.com/wire/business/trumps-mail-voting-crackdown-tests-postal-service-leader-who-says-hes-not-political/article_bb3eb835-f590-56fe-8e4b-55887bb47be1.html",
+          "domain": "bozemandailychronicle.com",
+          "seendate": "2026-09-28T11:30:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/bozemandailychronicle.com/content/tncms/assets/v3/editorial/c/43/c434697a-f76b-56c1-8a04-01644576c9cd/6aba46f4f3630.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
+        {
+          "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
+          "url": "https://www.wsls.com/news/politics/2026/09/28/trumps-mail-voting-crackdown-tests-postal-service-leader-who-says-hes-not-political/",
+          "domain": "wsls.com",
+          "seendate": "2026-09-28T11:15:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/D4R64CPGYVCF7GOPTQZ4O6JGSU.jpg?api_key=wsls_8c3a4bc35af7684e"
+        }
+      ]
+    },
+    "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
+    "summary": "2026-09-28 mymotherlode.com: Trump mail voting crackdown tests Postal Service leader who says he  not political  \n2026-09-28 clickondetroit.com: Trump mail voting crackdown tests Postal Service leader who says he  not political  \n2026-09-28 clickorlando.com: Trump mail voting crackdown tests Postal Service leader who says he  not political  \n2026-09-28 wral.com: Trump mail voting crackdown tests Postal Service leader who says he  not political  \n2026-09-28 bozemandailychronicle.com: Trump mail voting crackdown tests Postal Service leader who says he  not political  \n2026-09-28 wsls.com: Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_administration-democrats-house",
+    "source": "news",
+    "ts": 1790604708837,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.553,
       "articles": [
         {
           "title": "House Democrats Plan Vast Oversight of Trump Administration ; Impeachment Is an Option",
@@ -16003,169 +16173,6 @@ window.PRISM_CANDIDATES = [
     },
     "title": "House Democrats plan vast oversight of Trump administration . Impeachment is an option",
     "summary": "2026-09-28 theyeshivaworld.com: House Democrats Plan Vast Oversight of Trump Administration ; Impeachment Is an Option\n2026-09-28 erienewsnow.com: House Democrats plan vast oversight of Trump administration . Impeachment is an option\n2026-09-27 twincities.com: House Democrats plan vast oversight of Trump administration . Impeachment is an option",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_abolished-amnesty-calls",
-    "source": "news",
-    "ts": 1790573728679,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.574,
-      "articles": [
-        {
-          "title": "Amnesty International Calls For ICE To Be Abolished | Newsradio WFLA Orlando",
-          "url": "https://wflaorlando.iheart.com/content/2026-09-25-amnesty-international-calls-for-ice-to-be-abolished/",
-          "domain": "wflaorlando.iheart.com",
-          "seendate": "2026-09-25T09:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ab622177d540a262d624b23?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Amnesty International Calls For ICE To Be Abolished",
-          "url": "https://wtkg.iheart.com/content/2026-09-25-amnesty-international-calls-for-ice-to-be-abolished/",
-          "domain": "wtkg.iheart.com",
-          "seendate": "2026-09-25T09:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ab622177d540a262d624b23?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Amnesty International Calls For ICE To Be Abolished",
-          "url": "https://kfyi.iheart.com/content/2026-09-25-amnesty-international-calls-for-ice-to-be-abolished/",
-          "domain": "kfyi.iheart.com",
-          "seendate": "2026-09-25T09:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ab622177d540a262d624b23?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Amnesty International Calls For ICE To Be Abolished",
-          "url": "https://wvoc.iheart.com/content/2026-09-25-amnesty-international-calls-for-ice-to-be-abolished/",
-          "domain": "wvoc.iheart.com",
-          "seendate": "2026-09-25T09:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ab622177d540a262d624b23?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Amnesty International Calls For ICE To Be Abolished",
-          "url": "https://wiod.iheart.com/content/2026-09-25-amnesty-international-calls-for-ice-to-be-abolished/",
-          "domain": "wiod.iheart.com",
-          "seendate": "2026-09-25T09:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ab622177d540a262d624b23?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Amnesty International Calls For ICE To Be Abolished",
-          "url": "https://talkradio1080.iheart.com/content/2026-09-25-amnesty-international-calls-for-ice-to-be-abolished/",
-          "domain": "talkradio1080.iheart.com",
-          "seendate": "2026-09-25T09:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ab622177d540a262d624b23?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Amnesty International Calls For ICE To Be Abolished",
-          "url": "https://650keni.iheart.com/content/2026-09-25-amnesty-international-calls-for-ice-to-be-abolished/",
-          "domain": "650keni.iheart.com",
-          "seendate": "2026-09-25T09:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ab622177d540a262d624b23?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Amnesty International Calls For ICE To Be Abolished",
-          "url": "https://jetradio1400.iheart.com/content/2026-09-25-amnesty-international-calls-for-ice-to-be-abolished/",
-          "domain": "jetradio1400.iheart.com",
-          "seendate": "2026-09-25T09:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ab622177d540a262d624b23?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Amnesty International Calls For ICE To Be Abolished",
-          "url": "https://khow.iheart.com/content/2026-09-25-amnesty-international-calls-for-ice-to-be-abolished/",
-          "domain": "khow.iheart.com",
-          "seendate": "2026-09-25T08:45:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ab622177d540a262d624b23?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Amnesty International Calls For ICE To Be Abolished",
-          "url": "https://powertalk967.iheart.com/content/2026-09-25-amnesty-international-calls-for-ice-to-be-abolished/",
-          "domain": "powertalk967.iheart.com",
-          "seendate": "2026-09-25T08:45:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ab622177d540a262d624b23?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Amnesty International Calls For ICE To Be Abolished",
-          "url": "https://wccfradio.iheart.com/content/2026-09-25-amnesty-international-calls-for-ice-to-be-abolished/",
-          "domain": "wccfradio.iheart.com",
-          "seendate": "2026-09-25T08:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ab622177d540a262d624b23?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Amnesty International Calls For ICE To Be Abolished",
-          "url": "https://kogo.iheart.com/content/2026-09-25-amnesty-international-calls-for-ice-to-be-abolished/",
-          "domain": "kogo.iheart.com",
-          "seendate": "2026-09-25T08:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ab622177d540a262d624b23?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        }
-      ]
-    },
-    "title": "Amnesty International Calls For ICE To Be Abolished",
-    "summary": "2026-09-25 wflaorlando.iheart.com: Amnesty International Calls For ICE To Be Abolished | Newsradio WFLA Orlando\n2026-09-25 wtkg.iheart.com: Amnesty International Calls For ICE To Be Abolished\n2026-09-25 kfyi.iheart.com: Amnesty International Calls For ICE To Be Abolished\n2026-09-25 wvoc.iheart.com: Amnesty International Calls For ICE To Be Abolished\n2026-09-25 wiod.iheart.com: Amnesty International Calls For ICE To Be Abolished\n2026-09-25 talkradio1080.iheart.com: Amnesty International Calls For ICE To Be Abolished",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_edt-news-summary",
-    "source": "news",
-    "ts": 1790573728678,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.174,
-      "articles": [
-        {
-          "title": "AP News Summary at 11 : 52 p . m . EDT",
-          "url": "https://www.mykxlg.com/news/national/ap-news-summary-at-11-52-p-m-edt/article_1eb9bc5a-c332-5950-8ffd-f96eea72f825.html",
-          "domain": "mykxlg.com",
-          "seendate": "2026-09-25T07:00:00Z",
-          "image": null
-        },
-        {
-          "title": "AP News Summary at 1 : 41 a . m . EDT",
-          "url": "https://www.mykxlg.com/news/national/ap-news-summary-at-1-41-a-m-edt/article_4155ba15-5228-5517-922e-fc1edce7aa39.html",
-          "domain": "mykxlg.com",
-          "seendate": "2026-09-25T07:00:00Z",
-          "image": null
-        },
-        {
-          "title": "AP News Summary at 1 : 41 a . m . EDT",
-          "url": "http://www.hngnews.com/nation_world/ap-news-summary-at-1-41-a-m-edt/article_ea766f46-d0c6-5fbb-8e54-ee36a08fbdac.html",
-          "domain": "hngnews.com",
-          "seendate": "2026-09-25T07:00:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/hngnews.com/content/tncms/custom/image/ab050ce8-ef00-11eb-9947-3fa732d15a79.jpg"
-        },
-        {
-          "title": "AP News in Brief at 12 : 04 a . m . EDT",
-          "url": "http://www.hngnews.com/nation_world/ap-news-in-brief-at-12-04-a-m-edt/article_18c22fc7-9ed7-5928-b058-ccee32cfa0b6.html",
-          "domain": "hngnews.com",
-          "seendate": "2026-09-25T07:00:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/hngnews.com/content/tncms/custom/image/ab050ce8-ef00-11eb-9947-3fa732d15a79.jpg"
-        },
-        {
-          "title": "AP News Summary at 1 : 05 a . m . EDT",
-          "url": "http://www.cecildaily.com/ap/nation/ap-news-summary-at-1-05-a-m-edt/article_e0f53f7d-278d-52bf-b00d-1bbd8483ed82.html",
-          "domain": "cecildaily.com",
-          "seendate": "2026-09-25T05:45:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/cecildaily.com/content/tncms/custom/image/02cd1374-449d-11e8-a457-4f5bb67fe1cc.jpg"
-        }
-      ]
-    },
-    "title": "AP News Summary at 1 : 05 a . m . EDT",
-    "summary": "2026-09-25 mykxlg.com: AP News Summary at 11 : 52 p . m . EDT\n2026-09-25 mykxlg.com: AP News Summary at 1 : 41 a . m . EDT\n2026-09-25 hngnews.com: AP News Summary at 1 : 41 a . m . EDT\n2026-09-25 hngnews.com: AP News in Brief at 12 : 04 a . m . EDT\n2026-09-25 cecildaily.com: AP News Summary at 1 : 05 a . m . EDT",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,

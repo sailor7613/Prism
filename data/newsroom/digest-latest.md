@@ -1,9 +1,10 @@
 # Newsroom digest — 2026-09-28
 
-Register: 37 objects · this scan: 0 new, 0 seen again, 0 returned.
+Register: 39 objects · this scan: 2 new, 0 seen again, 0 returned.
 
-## Queued for drafting (0)
-- (nothing cleared the bar)
+## Queued for drafting (2)
+- **US and China release reciprocal $30 billion product lists for tariff cuts after Trump - Xi meeting** — tariff/sanction · imposed · holder: the President · formed 2026-09-28 · 12 outlets (peak 12) · `obj_thepresi_billion-china-cuts-lists`
+- **US and China cut tariffs on $30B in goods after Trump - Xi meeting** — tariff/sanction · imposed · holder: the President · formed 2026-09-28 · 3 outlets (peak 3) · `obj_thepresi_30b-china-cut-goods`
 
 ## Permanence breaks (went silent while unresolved)
 - **Will FDA advisers recommend a multi - cancer blood test for approval ? Theyll vote** — vote · voted · holder: HHS · formed 2026-09-23 · 10 outlets (peak 11) · `obj_hhs_advisers-approval-blood-cancer` · silent 5d after 2 scans
@@ -15,7 +16,8 @@ Register: 37 objects · this scan: 0 new, 0 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- none
+- **US and China release reciprocal $30 billion product lists for tariff cuts after Trump - Xi meeting** — tariff/sanction · imposed · holder: the President · formed 2026-09-28 · 12 outlets (peak 12) · `obj_thepresi_billion-china-cuts-lists`
+- **US and China cut tariffs on $30B in goods after Trump - Xi meeting** — tariff/sanction · imposed · holder: the President · formed 2026-09-28 · 3 outlets (peak 3) · `obj_thepresi_30b-china-cut-goods`
 
 ## Watching (13)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
