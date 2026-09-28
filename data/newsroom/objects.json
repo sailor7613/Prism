@@ -2228,7 +2228,7 @@
    "formedOn": "2026-09-16",
    "firstSeen": "2026-09-16",
    "lastSeen": "2026-09-16",
-   "scans": 4,
+   "scans": 5,
    "outlets": 0,
    "peakOutlets": 0,
    "status": "drafted",
@@ -2335,7 +2335,7 @@
    "formedOn": "2026-09-15",
    "firstSeen": "2026-09-15",
    "lastSeen": "2026-09-15",
-   "scans": 4,
+   "scans": 5,
    "outlets": 0,
    "peakOutlets": 0,
    "status": "watch",
@@ -2402,7 +2402,7 @@
    "formedOn": "2026-09-24",
    "firstSeen": "2026-09-24",
    "lastSeen": "2026-09-24",
-   "scans": 4,
+   "scans": 5,
    "outlets": 0,
    "peakOutlets": 0,
    "status": "watch",
@@ -2474,7 +2474,7 @@
    "formedOn": "2026-09-14",
    "firstSeen": "2026-09-14",
    "lastSeen": "2026-09-14",
-   "scans": 4,
+   "scans": 5,
    "outlets": 0,
    "peakOutlets": 0,
    "status": "watch",
@@ -2544,7 +2544,7 @@
    "formedOn": "2026-09-15",
    "firstSeen": "2026-09-15",
    "lastSeen": "2026-09-15",
-   "scans": 4,
+   "scans": 5,
    "outlets": 0,
    "peakOutlets": 0,
    "status": "watch",
@@ -2611,7 +2611,7 @@
    "formedOn": "2026-09-16",
    "firstSeen": "2026-09-16",
    "lastSeen": "2026-09-16",
-   "scans": 4,
+   "scans": 5,
    "outlets": 0,
    "peakOutlets": 0,
    "status": "watch",
@@ -2680,7 +2680,7 @@
    "formedOn": "2026-09-15",
    "firstSeen": "2026-09-15",
    "lastSeen": "2026-09-15",
-   "scans": 4,
+   "scans": 5,
    "outlets": 0,
    "peakOutlets": 0,
    "status": "watch",
@@ -2755,14 +2755,24 @@
    "scans": 2,
    "outlets": 6,
    "peakOutlets": 18,
-   "status": "queued",
+   "status": "drafted",
    "permanence": {
     "silentDays": 0,
     "breaks": [],
     "returns": []
    },
-   "inversions": [],
-   "drafts": {},
+   "inversions": [
+    {
+     "station": "D",
+     "bands": "coalition",
+     "lean": "the base that backed Trump as the end-foreign-wars candidate backs an open-ended blockade; the band registers it without reversing (partial)",
+     "prior": "2024 campaign positioning; no live Reading cited",
+     "ruled": false
+    }
+   ],
+   "drafts": {
+    "claude": "rdg_6gsmq4x22x20"
+   },
    "live": null,
    "articles": [
     {
@@ -2851,7 +2861,32 @@
     }
    ],
    "aliases": [],
-   "queuedOn": "2026-09-27"
+   "queuedOn": "2026-09-27",
+   "draftedOn": "2026-09-27",
+   "corrections": [
+    {
+     "field": "formedOn",
+     "from": "2026-09-27",
+     "to": "2026-09-26",
+     "why": "Trump rejected the roadmap on record as he left the White House Saturday 09-26 (CBS; Times of Israel liveblog 09-26); 09-27 is the syndicated iHeart copies date — report date, not as-of date.",
+     "by": "Claude (drafting)",
+     "on": "2026-09-27"
+    },
+    {
+     "field": "kind",
+     "from": "vote",
+     "to": "executive decision — the President refusing Iran's seven-day Hormuz roadmap, keeping the naval blockade (reimposed 07-14) in place",
+     "why": "Nothing was voted on. The instrument is the blockade; the refusal is the holder keeping it.",
+     "by": "Claude (drafting)",
+     "on": "2026-09-27"
+    }
+   ],
+   "permanenceNote": "A RETURN (lean): third pass of the reopen-for-relief bargain — April ceasefire reopening provisions, June Islamabad memorandum (collapsed by July), now the seven-day roadmap. The register never carried the April or June arcs.",
+   "aliasCandidates": [
+    "seven-day roadmap",
+    "Iran Hormuz proposal",
+    "Trump Strait"
+   ]
   },
   {
    "oid": "obj_thepresi_approved-biden-cutting-economy",
@@ -2969,14 +3004,24 @@
    "scans": 1,
    "outlets": 11,
    "peakOutlets": 11,
-   "status": "queued",
+   "status": "drafted",
    "permanence": {
     "silentDays": 0,
     "breaks": [],
     "returns": []
    },
-   "inversions": [],
-   "drafts": {},
+   "inversions": [
+    {
+     "station": "object",
+     "bands": "objectLayer",
+     "lean": "the 1974 Impoundment Control Act, written to stop presidential impoundment, is the vehicle of this one (y)",
+     "prior": "the Act itself (1974)",
+     "ruled": false
+    }
+   ],
+   "drafts": {
+    "claude": "rdg_yl1nla2fcy3v"
+   },
    "live": null,
    "articles": [
     {
@@ -3037,7 +3082,191 @@
     }
    ],
    "aliases": [],
-   "queuedOn": "2026-09-27"
+   "queuedOn": "2026-09-27",
+   "draftedOn": "2026-09-26",
+   "corrections": [
+    {
+     "field": "formedOn",
+     "from": "2026-09-27",
+     "to": "2026-09-25",
+     "why": "The special message went to Congress Friday 09-25 (Newsweek 09-25 23:03 EDT; ABC \"Friday evening\"); 09-27 is the syndicated copies date — report date, not as-of date.",
+     "by": "Claude (drafting)",
+     "on": "2026-09-27"
+    },
+    {
+     "field": "kind",
+     "from": "vote",
+     "to": "executive action — special rescission message under the Impoundment Control Act (2 U.S.C. §683)",
+     "why": "Nothing was voted on; the point of a pocket rescission is that no vote happens.",
+     "by": "Claude (drafting)",
+     "on": "2026-09-27"
+    },
+    {
+     "field": "holder",
+     "from": "the President",
+     "to": "the President through OMB (Director Russ Vought); delivery held by the calendar — the funds lapse at fiscal-year end, five days after the message — with Congress and the courts as the only brakes",
+     "why": "Right actor, but the instrument runs on the clock, not a signature.",
+     "by": "Claude (drafting)",
+     "on": "2026-09-27"
+    }
+   ],
+   "permanenceNote": "A RETURN: the first pocket rescission in nearly 50 years (late Aug 2025, $4.9B foreign aid) went quiet after the Supreme Court stay of Sept 2025 without a merits ruling; the same maneuver returns one year later on refugee and diversity money. The register never carried the 2025 arc.",
+   "aliasCandidates": [
+    "pocket rescission",
+    "$810 million rescission",
+    "Trump cancels $1B in approved funds"
+   ]
+  },
+  {
+   "oid": "obj_thepresi_begins-early-exclusive-far",
+   "headline": "Exclusive : Stratton talks Trump , filibuster , the far - left as early voting begins",
+   "tokens": [
+    "exclusive",
+    "stratton",
+    "talks",
+    "trump",
+    "filibuster",
+    "far",
+    "left",
+    "early",
+    "voting",
+    "begins"
+   ],
+   "kind": "vote",
+   "verb": "voted",
+   "holder": "the President",
+   "formedOn": "2026-09-27",
+   "firstSeen": "2026-09-27T17:00:00Z",
+   "lastSeen": "2026-09-27T20:00:00Z",
+   "scans": 1,
+   "outlets": 8,
+   "peakOutlets": 8,
+   "status": "watch",
+   "permanence": {
+    "silentDays": 0,
+    "breaks": [],
+    "returns": []
+   },
+   "inversions": [],
+   "drafts": {},
+   "live": null,
+   "articles": [
+    {
+     "title": "Exclusive : Stratton talks Trump , filibuster , the far - left as early voting begins",
+     "url": "https://www.vtcng.com/shelburnenews/state_and_world/world_news/exclusive-stratton-talks-trump-filibuster-the-far-left-as-early-voting-begins/article_9694a990-f131-5064-b14b-6785ec822a16.html",
+     "domain": "vtcng.com",
+     "seendate": "2026-09-27T20:00:00Z",
+     "image": "https://bloximages.chicago2.vip.townnews.com/vtcng.com/content/tncms/assets/v3/editorial/4/ce/4ce4694f-dc27-54ec-83ea-1ddc04b7e837/6ab6ef1670165.preview.jpg?crop=1280%2C672%2C0%2C23"
+    },
+    {
+     "title": "Exclusive : Stratton talks Trump , filibuster , the far - left as early voting begins",
+     "url": "https://homenewshere.com/national/news/article_f3f6518a-e618-54de-bfb7-466761069d34.html",
+     "domain": "homenewshere.com",
+     "seendate": "2026-09-27T20:00:00Z",
+     "image": "https://bloximages.chicago2.vip.townnews.com/homenewshere.com/content/tncms/assets/v3/editorial/8/6c/86c51cc0-a962-5514-b8f1-a2b9e6bac1fd/6ab6ef910bb77.preview.jpg?crop=1280%2C672%2C0%2C23"
+    },
+    {
+     "title": "Exclusive : Stratton talks Trump , filibuster , the far - left as early voting begins",
+     "url": "https://www.insidenova.com/news/national/exclusive-stratton-talks-trump-filibuster-the-far-left-as-early-voting-begins/article_d4e815b0-3579-5309-919b-9dc6366d3eae.html",
+     "domain": "insidenova.com",
+     "seendate": "2026-09-27T18:30:00Z",
+     "image": "https://bloximages.chicago2.vip.townnews.com/insidenova.com/content/tncms/assets/v3/editorial/0/12/01211342-b24f-58da-8281-40abb423c31a/6ab6ef72e3e0c.preview.jpg?crop=1280%2C672%2C0%2C23"
+    },
+    {
+     "title": "Exclusive : Stratton talks Trump , filibuster , the far - left as early voting begins",
+     "url": "https://www.lebanondemocrat.com/hartsville/news/national/exclusive-stratton-talks-trump-filibuster-the-far-left-as-early-voting-begins/article_84b7f899-aa50-57f6-9abe-5a4d243fd5e1.html",
+     "domain": "lebanondemocrat.com",
+     "seendate": "2026-09-27T18:30:00Z",
+     "image": "https://bloximages.chicago2.vip.townnews.com/lebanondemocrat.com/content/tncms/assets/v3/editorial/1/93/193e58d8-2c87-5e47-ac06-7169fe1ce890/6ab6eef4391e7.preview.jpg?crop=1280%2C672%2C0%2C23"
+    },
+    {
+     "title": "Exclusive : Stratton talks Trump , filibuster , the far - left as early voting begins",
+     "url": "https://www.keysnews.com/news/national/exclusive-stratton-talks-trump-filibuster-the-far-left-as-early-voting-begins/article_f724a08c-cf0b-5d67-a271-81cdad260622.html",
+     "domain": "keysnews.com",
+     "seendate": "2026-09-27T18:30:00Z",
+     "image": "https://bloximages.newyork1.vip.townnews.com/keysnews.com/content/tncms/assets/v3/editorial/a/0f/a0f5a0a8-04dc-5d7d-b3de-4c62561277e2/6ab6ef36749ee.preview.jpg?crop=1280%2C672%2C0%2C23"
+    },
+    {
+     "title": "Exclusive : Stratton talks Trump , filibuster , the far - left as early voting begins",
+     "url": "https://www.mykxlg.com/news/national/exclusive-stratton-talks-trump-filibuster-the-far-left-as-early-voting-begins/article_21698b40-6499-596e-8c12-75f95dc4610c.html",
+     "domain": "mykxlg.com",
+     "seendate": "2026-09-27T17:15:00Z",
+     "image": "https://bloximages.newyork1.vip.townnews.com/mykxlg.com/content/tncms/assets/v3/editorial/9/84/9849a467-1de5-50b9-aab5-0a89b489e4df/6ab6ef5fe6533.preview.jpg?crop=1280%2C672%2C0%2C23"
+    },
+    {
+     "title": "Exclusive : Stratton talks Trump , filibuster , the far - left as early voting begins",
+     "url": "https://www.suncommercial.com/brazil_times/news/national/article_5e457720-9c50-55ec-abe9-7ee64d229eee.html",
+     "domain": "suncommercial.com",
+     "seendate": "2026-09-27T17:15:00Z",
+     "image": "https://bloximages.chicago2.vip.townnews.com/suncommercial.com/content/tncms/assets/v3/editorial/6/80/68035477-ce11-5328-8949-c6c44c119ece/6ab6efa7b2d52.preview.jpg?crop=1280%2C672%2C0%2C23"
+    },
+    {
+     "title": "Exclusive : Stratton talks Trump , filibuster , the far - left as early voting begins",
+     "url": "https://www.wyomingnewsnow.tv/news/national/exclusive-stratton-talks-trump-filibuster-the-far-left-as-early-voting-begins/article_f39e2741-f4f9-53a1-a09c-f13cc885db97.html",
+     "domain": "wyomingnewsnow.tv",
+     "seendate": "2026-09-27T17:00:00Z",
+     "image": "https://bloximages.chicago2.vip.townnews.com/wyomingnewsnow.tv/content/tncms/assets/v3/editorial/5/d7/5d7dd44a-9733-5724-8845-26bbf92b69ac/6ab6ef1a2fd07.preview.jpg?crop=1280%2C672%2C0%2C23"
+    }
+   ],
+   "aliases": []
+  },
+  {
+   "oid": "obj_x_000-death-gaza-mideast",
+   "headline": "Palestinian death toll in Gaza war passes 74 , 000 , and other Mideast news",
+   "tokens": [
+    "palestinian",
+    "death",
+    "toll",
+    "gaza",
+    "war",
+    "passes",
+    "000",
+    "other",
+    "mideast",
+    "news"
+   ],
+   "kind": "vote",
+   "verb": "voted",
+   "holder": null,
+   "formedOn": "2026-09-27",
+   "firstSeen": "2026-09-27T20:00:00Z",
+   "lastSeen": "2026-09-27T20:15:00Z",
+   "scans": 1,
+   "outlets": 3,
+   "peakOutlets": 3,
+   "status": "new",
+   "permanence": {
+    "silentDays": 0,
+    "breaks": [],
+    "returns": []
+   },
+   "inversions": [],
+   "drafts": {},
+   "live": null,
+   "articles": [
+    {
+     "title": "Palestinian death toll in Gaza war passes 74 , 000 , and other Mideast news",
+     "url": "https://www.yakimaherald.com/news/nation_and_world/nation/palestinian-death-toll-in-gaza-war-passes-74-000-and-other-mideast-news/article_77395658-3356-5821-b0fb-843e91a58d81.html",
+     "domain": "yakimaherald.com",
+     "seendate": "2026-09-27T20:15:00Z",
+     "image": "https://bloximages.newyork1.vip.townnews.com/yakimaherald.com/content/tncms/assets/v3/editorial/b/88/b88eaf03-f4d0-5e15-b133-968573ad92b1/6ab8ee40831b2.image.jpg?crop=1763%2C926%2C0%2C124"
+    },
+    {
+     "title": "Palestinian death toll in Gaza war passes 74 , 000 , and other Mideast news",
+     "url": "https://www.sbsun.com/2026/09/27/palestinian-death-toll-in-gaza-war-passes-74000-and-other-mideast-news/",
+     "domain": "sbsun.com",
+     "seendate": "2026-09-27T20:00:00Z",
+     "image": "https://www.sbsun.com/wp-content/uploads/2026/09/Israel_Palestinians_Gaza_25658.jpg"
+    },
+    {
+     "title": "Palestinian death toll in Gaza war passes 74 , 000 , and other Mideast news",
+     "url": "https://lancasteronline.com/news/world/palestinian-death-toll-in-gaza-war-passes-74-000-and-other-mideast-news/article_08580002-6569-545c-86c4-13dbba9ffa54.html",
+     "domain": "lancasteronline.com",
+     "seendate": "2026-09-27T20:00:00Z",
+     "image": "https://bloximages.newyork1.vip.townnews.com/lancasteronline.com/content/tncms/assets/v3/editorial/f/8d/f8d60d1b-5dc9-5d25-aafe-3b2d204226db/6ab8c34310f32.image.jpg?crop=1763%2C926%2C0%2C124"
+    }
+   ],
+   "aliases": []
   }
  ],
  "scans": [
@@ -3263,8 +3492,17 @@
    "new": 0,
    "queued": [],
    "fixture": false
+  },
+  {
+   "on": "2026-09-27",
+   "at": "2026-09-27T21:32:21.424Z",
+   "articles": 165,
+   "clusters": 80,
+   "new": 2,
+   "queued": [],
+   "fixture": false
   }
  ],
- "updatedAt": "2026-09-27T17:08:23.302Z",
- "overlayAppliedAt": "2026-09-27T04:35:00Z"
+ "updatedAt": "2026-09-27T21:32:21.424Z",
+ "overlayAppliedAt": "2026-09-27T18:08:34.906Z"
 }
