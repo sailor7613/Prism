@@ -1,20 +1,21 @@
 # Newsroom digest — 2026-09-29
 
-Register: 45 objects · this scan: 1 new, 0 seen again, 0 returned.
+Register: 47 objects · this scan: 2 new, 0 seen again, 0 returned.
 
 ## Queued for drafting (1)
-- **Trump Denies Report on Iran Sanctions Relief** — tariff/sanction · imposed · holder: the President · formed 2026-09-28 · 20 outlets (peak 20) · `obj_thepresi_denies-iran-relief-report`
+- **Trump Rejects Sanctions Relief Rumors While Iran Signals Openness to Talks** — vote · voted · holder: the President · formed 2026-09-29 · 3 outlets (peak 3) · `obj_thepresi_iran-openness-rejects-relief`
 
 ## Permanence breaks (went silent while unresolved)
 - **Judge hears arguments without immediately ruling in lawsuit over White House ban on 3 news outlets** — ruling · ruled · holder: a federal court · formed 2026-09-23 · 3 outlets (peak 6) · `obj_afederal_arguments-ban-hears-house` · silent 5d after 2 scans
 - **Judge orders White House to restore access to CNN , MS NOW and Politico** — ruling · ruled · holder: a federal court · formed 2026-09-24 · 34 outlets (peak 34) · `obj_afederal_access-cnn-house-judge` · silent 5d after 2 scans
-- **s-119-4668 — Senate the cloture motion (Cloture Motion Agreed to)** — bill · voted · holder: the Senate · formed 2026-09-24 · 0 outlets (peak 0) · `obj_bill_s-119-4668` · silent 0d after 10 scans
+- **s-119-4668 — Senate the cloture motion (Cloture Motion Agreed to)** — bill · voted · holder: the Senate · formed 2026-09-24 · 0 outlets (peak 0) · `obj_bill_s-119-4668` · silent 0d after 11 scans
 
 ## Returned after a break
 - none today
 
 ## New objects (all)
-- **Trump Denies Report on Iran Sanctions Relief** — tariff/sanction · imposed · holder: the President · formed 2026-09-28 · 20 outlets (peak 20) · `obj_thepresi_denies-iran-relief-report`
+- **Responsible Fintech Institute Appoints Four Executive Fellows and Elevates Distinguished Professor Patrick H . M . Loh to Co - Founder** — appointment · personnel · holder: ? · formed 2026-09-29 · 4 outlets (peak 4) · `obj_x_appoints-distinguished-elevates-executive`
+- **Trump Rejects Sanctions Relief Rumors While Iran Signals Openness to Talks** — vote · voted · holder: the President · formed 2026-09-29 · 3 outlets (peak 3) · `obj_thepresi_iran-openness-rejects-relief`
 
 ## Watching (15)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
