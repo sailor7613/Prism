@@ -1,0 +1,476 @@
+{
+ "centralObject": {
+  "kind": "object",
+  "ref": "The reciprocal U.S.–China tariff-cut lists released 2026-09-28 by the U.S. Trade Representative and China's commerce ministry: about $30 billion of goods each way (1,619 U.S. items into China; 77 categories of Chinese goods into the U.S.), over 90% moved to most-favored-nation rates, following the 2026-09-24 Trump–Xi meeting",
+  "name": "The 30-for-30 lists"
+ },
+ "tethers": [
+  {
+   "statute": "Trade Act of 1974, Section 301",
+   "cite": "Pub. L. 93-618 §301; 19 U.S.C. §2411",
+   "title": "Actions by the United States Trade Representative",
+   "enacted": "1975-01-03",
+   "relation": "adjacent",
+   "why": "The standing legal home of the China-specific tariffs USTR has imposed since 2018, and USTR is the U.S. holder of these lists. Which of the stacked tariffs on Chinese goods the most-favored-nation cuts run through, and the effective date, were NOT stated in the day's coverage and are NOT verified in this draft."
+  },
+  {
+   "billId": "sjres-119-88",
+   "bill": "S.J.Res. 88",
+   "title": "A joint resolution terminating the national emergency declared to impose global tariffs.",
+   "relation": "adjacent",
+   "statusAsOf": "Held at the desk, 2025-10-31 (catalog)",
+   "why": "The catalog's nearest record of Congress's check on the emergency-tariff layer (Wyden). Named because the lists move tariffs set by the executive without a vote; whether any of today's cuts touch the emergency tariffs is NOT verified.",
+   "inDb": true
+  }
+ ],
+ "linkedBills": [
+  "sjres-119-88"
+ ],
+ "legislativeVoid": {
+  "why": "No statute or vote created the lists: they are an executive trade arrangement announced by USTR and China's commerce ministry. Congress has no role in them as released.",
+  "standsAgainst": "Section 301 of the Trade Act of 1974 (the tariffs being cut) and the unpassed emergency-tariff terminations (S.J.Res. 88)"
+ },
+ "title": "Fireworks and Soccer Balls",
+ "category": "Trade · China · Agriculture",
+ "date": "2026-09-28",
+ "prompt": "The U.S. and China cut tariffs on $30 billion of goods each way. Is this the start of a real thaw, or a small trade that leaves the big tariffs standing?",
+ "framing": "On Monday, September 28, 2026, the United States and China released matching lists of goods, about $30 billion on each side, that will get lower tariffs. China's list covers 1,619 American items, including farm commodities, timber, medical equipment and coal; soybeans are not on it. The U.S. list covers 77 categories of Chinese goods, such as fireworks, tableware and soccer balls. More than 90% of the products move to standard \"most-favored-nation\" rates, which are often in the single digits. Chips, electric vehicles and batteries are left out. Trade Representative Jamieson Greer said the lists cover \"nonsensitive goods.\" The lists follow President Trump's September 24 White House meeting with Xi Jinping, and the two sides extended their trade truce by two months. One estimate has the average U.S. tariff on Chinese goods falling from about 22% to 20.5%.",
+ "framingKeywords": [
+  "$30 billion",
+  "tariff cuts",
+  "soybeans",
+  "most-favored-nation",
+  "trade truce"
+ ],
+ "prevalentAxis": "x",
+ "split": {
+  "topology": "peel",
+  "strength": 0.4,
+  "seam": "at the centers, the institutional right peels off from the other three stations; at the rim the seam returns to x",
+  "rationale": "The stated object runs along x, but the centers don't. Only B reads the lists as working as designed (+0.45 fluid). A's fluid (−0.15), C's fluid (−0.45) and D's fluid (−0.25) all read a small trade that leaves the wall standing, and the missing soybeans put the right-populist center on the left's side of zero. The coalitions cross over: the institutional left's coalition band goes positive (+0.15) because it has called tariffs a consumer tax for years and can't sneer at a cut, while the populist-right coalition sits near zero (+0.05) between loyalty and soybeans. The rims sort cleanly on x by trust in the holder (Trump): −0.6 / +0.75 / −0.85 / +0.55. A peel at the centers, an axis at the rim; the slider stays on x because the stated object is on x.",
+  "zPattern": {
+   "centers": {
+    "A": -0.15,
+    "B": 0.45,
+    "C": -0.45,
+    "D": -0.25
+   },
+   "rims": {
+    "A": -0.6,
+    "B": 0.75,
+    "C": -0.85,
+    "D": 0.55
+   },
+   "note": "Centers are fluid z; coalition z: A 0.15, B 0.2, C -0.2, D 0.05. D changes sign twice: fluid −0.25, coalition +0.05, rim +0.55. A changes sign fluid → coalition (−0.15 → +0.15) and back at the rim (−0.6)."
+  },
+  "ruledBy": null,
+  "date": "2026-09-28"
+ },
+ "antiValentBand": "denominated",
+ "antiValentRationale": "At the rim the goods are gone (no fireworks, no timber, no percentages): the lists become a photo op or a deal for insiders on the left, and proof that China came to Trump on the right.",
+ "axes": {
+  "x": {
+   "pos": "Right",
+   "neg": "Left"
+  },
+  "y": {
+   "pos": "Institutional",
+   "neg": "Populist"
+  },
+  "z": {
+   "pos": "the lists deliver: a real thaw, with lower prices here and open markets for American goods there",
+   "neg": "the lists fail: a token trade that leaves the big tariffs standing and farmers and workers where they were"
+  }
+ },
+ "responses": {
+  "A": {
+   "fluid": {
+    "z": -0.15,
+    "zReason": "Moving about $30 billion each way to most-favored-nation rates lowers prices on some consumer goods, but the average tariff only falls from about 22% to 20.5%, and chips, EVs and batteries are left out, so the tariff wall is mostly still there.",
+    "instrument": {
+     "holder": "the negotiated lists and their annual review",
+     "trusted": true
+    },
+    "text": "Look, a tariff cut on tableware and soccer balls is still a price cut, and I'll take one wherever I can get it. But the average going from about 22% to 20.5%? That's a rounding error on a tax American households are still paying, and the chips, EVs and batteries are all still walled off.",
+    "xWord": "consumers",
+    "yWord": "negotiators",
+    "words": [
+     "tax on households",
+     "rounding error",
+     "still walled off"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0.15,
+    "zReason": "MFN rates on 1,619 American items and 77 Chinese categories are real trade liberalization, and the annual adjustment gives the lists room to grow.",
+    "instrument": {
+     "holder": "career trade negotiators and the annual list review",
+     "trusted": true
+    },
+    "text": "This is a real step toward normal trade, even if it's a small one, and the lists can be adjusted every year. I've heard people on my side wave it off just because Trump's name is on it, and I get the instinct. But I spent years saying tariffs are a tax on consumers, so how do I sneer when some of them come down?",
+    "xWord": "free trade",
+    "yWord": "process",
+    "words": [
+     "small real step",
+     "annual adjustment",
+     "can't sneer now"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.6,
+    "zReason": "The speaker sees Trump as the holder and doesn't trust him, so a point and a half off the average counts as cleanup of damage he did himself, not a thaw.",
+    "instrument": {
+     "holder": "Trump",
+     "trusted": false
+    },
+    "text": "It's a photo op priced at a point and a half. He built the tariff wall and now he wants credit for putting in a door.",
+    "xWord": "tariff tax",
+    "yWord": "photo op",
+    "words": [
+     "photo op",
+     "self-made mess",
+     "credit grab"
+    ],
+    "source": ""
+   },
+   "xSide": "left",
+   "source": ""
+  },
+  "B": {
+   "fluid": {
+    "z": 0.45,
+    "zReason": "The lists move nonsensitive goods to normal rates and open China to American timber, coal, medical equipment and farm commodities, while chips, EVs and batteries stay protected, so the leverage survives.",
+    "instrument": {
+     "holder": "Greer and the U.S. Trade Representative's office",
+     "trusted": true
+    },
+    "text": "This does exactly what it was built to do. Nonsensitive goods get normal rates, American timber, coal and medical equipment get a way into China, and chips, EVs and batteries stay protected. Leaving soybeans off stings, but that's what APEC and the G20 are for.",
+    "xWord": "leverage",
+    "yWord": "USTR",
+    "words": [
+     "nonsensitive goods",
+     "leverage kept",
+     "next round APEC"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0.2,
+    "zReason": "$30 billion each way at MFN rates is trade coming unstuck, but a two-month truce extension and a small drop in the average make it a start, not a settlement.",
+    "instrument": {
+     "holder": "the Trump–Xi summit track",
+     "trusted": true
+    },
+    "text": "I think it works, as a start. $30 billion each way is real trade getting unstuck. But I've heard people I usually agree with calling it a breakthrough, and it isn't one: the average only drops to about 20.5%, soybeans aren't on China's list, and the truce is only extended two months. Oversell it now and it looks foolish if the truce lapses.",
+    "xWord": "trade",
+    "yWord": "summit",
+    "words": [
+     "a start",
+     "don't oversell",
+     "two-month clock"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": 0.75,
+    "zReason": "The speaker trusts Trump and his negotiators as the holder, so the swap reads as proof that pressure got China to the table.",
+    "instrument": {
+     "holder": "Trump and Greer",
+     "trusted": true
+    },
+    "text": "This is disciplined deal-making: give on soccer balls, keep the chips. Trump brought Xi to the table and got China to open the door to American goods.",
+    "xWord": "strength",
+    "yWord": "statecraft",
+    "words": [
+     "deal-making",
+     "keep the chips",
+     "pressure worked"
+    ],
+    "source": ""
+   },
+   "xSide": "right",
+   "source": ""
+  },
+  "C": {
+   "fluid": {
+    "z": -0.45,
+    "zReason": "Soybeans, the crop hit hardest, aren't on China's list, and cheaper imported fireworks and tableware don't change the tariff picture for factory workers, so the people most exposed stay where they were.",
+    "instrument": {
+     "holder": "the two governments and the big exporters",
+     "trusted": false
+    },
+    "text": "Soybeans aren't on the list. For a lot of farm towns that's the whole story: timber and coal get a break, but the crop that took the worst of it gets nothing. And cheaper fireworks don't do anything about jobs here, one way or the other.",
+    "xWord": "workers",
+    "yWord": "farm towns",
+    "words": [
+     "no soybeans",
+     "farm towns",
+     "jobs untouched"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": -0.2,
+    "zReason": "Leaving out soybeans and moving the average only a little mean limited delivery, but farm commodities and timber on China's list could still open real doors for some growers.",
+    "instrument": {
+     "holder": "agribusiness exporters and trade negotiators",
+     "trusted": false
+    },
+    "text": "It doesn't do much for the people I care about: no soybeans, and the average barely moves. But I'm watching folks on my side call it a sellout before anyone even knows how the U.S. side gets implemented. Some farm and timber exporters might actually get an opening, so why not see what happens before scoring it?",
+    "xWord": "growers",
+    "yWord": "grassroots",
+    "words": [
+     "not much yet",
+     "sellout too fast",
+     "wait and see"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.85,
+    "zReason": "The speaker sees the holders as Trump and corporate traders and doesn't trust them, so the lists read as a deal for insiders.",
+    "instrument": {
+     "holder": "Trump and corporate traders",
+     "trusted": false
+    },
+    "text": "Another deal cut at the White House for people who were already doing fine. Farmers and workers get a list, and the insiders get a summit.",
+    "xWord": "working people",
+    "yWord": "insiders",
+    "words": [
+     "White House deal",
+     "insiders win",
+     "farmers forgotten"
+    ],
+    "source": ""
+   },
+   "xSide": "left",
+   "source": ""
+  },
+  "D": {
+   "fluid": {
+    "z": -0.25,
+    "zReason": "Chips and EVs staying out is the right call, but China's list leaves out soybeans and the average only falls by about a point and a half, so the heartland hasn't gotten its buyer back.",
+    "instrument": {
+     "holder": "Trump's trade team",
+     "trusted": true
+    },
+    "text": "Where are the soybeans? Farmers carried this trade fight, and China's list gives coal and timber a break but not the crop they need sold. Keeping chips and EVs off is right, but a point and a half off the average isn't a win for the heartland yet.",
+    "xWord": "America First",
+    "yWord": "heartland",
+    "words": [
+     "where are soybeans",
+     "farmers carried it",
+     "chips stay out"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0.05,
+    "zReason": "Getting Xi to Washington and keeping sensitive goods protected is real progress, but farm delivery depends on future rounds at APEC and the G20 that haven't happened yet.",
+    "instrument": {
+     "holder": "Trump personally",
+     "trusted": true
+    },
+    "text": "I'll give Trump room: he got Xi here, kept the chips and EVs off the table, and there are more meetings coming. But I notice a lot of people I stand with ready to call anything he signs a win, and somebody has to ask where the soybeans are. Loyalty's fine. The farmers still need a buyer.",
+    "xWord": "China hawk",
+    "yWord": "loyalty",
+    "words": [
+     "give him room",
+     "ask anyway",
+     "farmers need buyers"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": 0.55,
+    "zReason": "The speaker trusts Trump as the holder, so Xi coming to Washington counts as proof that pressure delivers, and the soybeans are expected to come later.",
+    "instrument": {
+     "holder": "Trump",
+     "trusted": true
+    },
+    "text": "Trump made China come to him. The hawks kept their chips, and he's just getting started.",
+    "xWord": "America First",
+    "yWord": "Trump",
+    "words": [
+     "China came to him",
+     "hawks kept chips",
+     "just getting started"
+    ],
+    "source": ""
+   },
+   "xSide": "right",
+   "source": ""
+  }
+ },
+ "diatribe": {
+  "LF": {
+   "text": "A tariff cut is a price cut, and I'll take it. But going from 22% to 20.5% barely touches a tax households are still paying.",
+   "side": "left",
+   "band": "fluid",
+   "keywords": [
+    "tariff cut",
+    "barely touches",
+    "households"
+   ]
+  },
+  "LC": {
+   "text": "I don't see much here for farm towns without soybeans, and I'd still ask the people on my side calling it a sellout to wait and see how it's implemented.",
+   "side": "left",
+   "band": "coalition",
+   "keywords": [
+    "the people on my side",
+    "sellout",
+    "wait and see"
+   ]
+  },
+  "LD": {
+   "text": "It's a photo op. He built the wall and wants credit for putting in a door.",
+   "side": "left",
+   "band": "denominated",
+   "keywords": [
+    "photo op",
+    "credit"
+   ]
+  },
+  "RF": {
+   "text": "Nonsensitive goods get normal rates, American timber and coal get into China, and the chips stay protected. That's the deal working as designed.",
+   "side": "right",
+   "band": "fluid",
+   "keywords": [
+    "nonsensitive goods",
+    "chips stay protected",
+    "as designed"
+   ]
+  },
+  "RC": {
+   "text": "It's a start. I'd tell the people I usually agree with to stop calling it a breakthrough while the soybeans are still missing.",
+   "side": "right",
+   "band": "coalition",
+   "keywords": [
+    "the people I usually agree with",
+    "breakthrough",
+    "soybeans"
+   ]
+  },
+  "RD": {
+   "text": "Trump made China come to him. He's just getting started.",
+   "side": "right",
+   "band": "denominated",
+   "keywords": [
+    "Trump",
+    "come to him",
+    "getting started"
+   ]
+  }
+ },
+ "diatribeLayer": "stated",
+ "objectLayer": {
+  "declared": "stated",
+  "stated": "Reciprocal tariff cuts on $30 billion of goods each way: a step toward normal trade after the Trump–Xi meeting.",
+  "operative": "Most-favored-nation rates on nonsensitive goods (fireworks, tableware, timber, coal), with the strategic tariffs (chips, EVs, batteries) and soybeans untouched; the average U.S. tariff on Chinese goods moves about a point and a half, on terms and dates not yet published on the U.S. side.",
+  "inversion": "Lean, not ruled: B fluid. The China-hawk institutional right, which built its case on tariffs as leverage over China, reads tariff cuts to China as the policy working; it keeps the sign by holding that the leverage (chips) survives. Partial, not a flip. A second lean at A coalition runs the other way: the free-trade left praising a Trump tariff cut, consistent with its own prior (tariffs as a consumer tax), so not an inversion."
+ },
+ "window": {
+  "close": "2026-09-28",
+  "why": "Trigger day = the day the object finished forming: the lists were released Monday 2026-09-28 (AP via Boston Globe, Click2Houston, CP24; Spectrum; all 09-28). The 09-24 meeting is when the deal was struck, but the instrument (the lists) did not exist until today. The register's 09-28 is right. Declared at authoring, before any z.",
+  "ruledBy": null,
+  "ruledOn": null
+ },
+ "meta": {
+  "dialecticsRef": "obj_thepresi_billion-china-cuts-lists",
+  "status": "draft",
+  "source": "Claude draft — daily newsroom drafting (scheduled), authored z-first against Trace Formula v1 per scripts/newsroom/AUTHORING_PROTOCOL.md v1.4. Filed to drafts/claude; not through the surface; no aiDeltas lineage. Rulings: none.",
+  "editHistory": [
+   {
+    "at": "2026-09-28T20:40:56.255Z",
+    "by": "Claude (scheduled drafting)",
+    "what": "authored: object (holder sharpened: USTR with China's commerce ministry, under the President) -> window -> frame -> sweep -> central object + tethers + legislative void -> axes -> twelve (blind subagent) -> small edits by Claude (meta.blindAuthoring.editsAfterHandback) -> split/diatribe/layers -> sweep"
+   }
+  ],
+  "aiDeltas": [],
+  "frameFirst": {
+   "date": "2026-09-28",
+   "by": "Claude, under §4c (window declared at authoring; sweep before z). Object NOT ruled — Claude's read, correctable by Sailor.",
+   "status": "Frame authored and swept before any z; the twelve authored blind z-first by a subagent (meta.blindAuthoring). Stations unruled.",
+   "objectLean": {
+    "stated": "reciprocal tariff cuts, $30B each way",
+    "operative": "MFN rates on nonsensitive goods; strategic tariffs and soybeans untouched; U.S. implementation unpublished",
+    "inversion": "lean, not ruled: B fluid (hawks reading cuts as leverage kept)"
+   },
+   "titleLean": "'Fireworks and Soccer Balls' — Claude's; Sailor names Readings",
+   "sourcesInWindow": [
+    "AP via Boston Globe / Click2Houston, 2026-09-28: lists released Monday; 1,619 U.S. items, 77 Chinese categories; >90% to MFN; chips, EVs, batteries excluded; meeting 2026-09-24 at the White House; truce extended two months; APEC and G20 meetings ahead; lists adjustable annually; Greer \"nonsensitive goods\"",
+    "CP24 (AP) 2026-09-28: soybeans absent from China's list; average U.S. tariff on China ~22% → ~20.5%, vs ~11% before 2025; trade volumes; analysts (ING's Lynn Song and others)",
+    "Spectrum News 2026-09-28: MFN rates 'often in the single digits' (China's commerce ministry); tariffs reached 145% at one point in 2025",
+    "Quartz 2026-09-28: the \"30-for-30\" framework"
+   ],
+   "background_preWindow": [
+    "2018 onward: Section 301 tariffs on Chinese goods (USTR)",
+    "2025: tariffs on Chinese goods reached as high as 145% before being reduced (AP)",
+    "2025-10-30: Trump–Xi meeting in Busan (Quartz photo caption); the truce whose expiry was extended today",
+    "2026-09-24: Trump–Xi meeting at the White House, Xi's first state visit since 2015 (AP)"
+   ]
+  },
+  "framingAudit": {
+   "date": "2026-09-28",
+   "by": "Claude — frame-first authoring under §4c; sweep run BEFORE any z. Not a ruling.",
+   "window": "2026-09-28 (declared, see window.why)",
+   "verifiedInWindow": [
+    "lists released Monday 2026-09-28 (AP; Spectrum; Quartz)",
+    "$30 billion each side; 1,619 U.S. items; 77 Chinese categories (AP; CP24)",
+    "farm commodities, timber, medical equipment, coal; fireworks, tableware, soccer balls (AP)",
+    "soybeans not on China's list (CP24/AP 2026-09-28)",
+    "more than 90% to most-favored-nation rates; \"often in the single digits\" (AP; Spectrum quoting China's commerce ministry)",
+    "chips, electric vehicles and batteries excluded (Boston Globe/AP)",
+    "\"nonsensitive goods\" — Jamieson Greer (AP 2026-09-28)",
+    "Trump–Xi meeting 2026-09-24 at the White House (Boston Globe/AP) — pre-window, load-bearing",
+    "truce extended two months (AP 2026-09-28)",
+    "average U.S. tariff on Chinese goods ~22% → ~20.5% (CP24/AP estimate, 2026-09-28)"
+   ],
+   "keptUnverifiedDate": [],
+   "deliberatelyExcluded_afterWindow": [
+    "nothing after the window was used",
+    "the truce's old and new expiry dates (a November date and a January date) — kept as 'by two months': a later month name in the frame reads as a leak, and the new date is not stated precisely",
+    "the U.S. legal authority and effective date for the U.S. cuts — not stated in any window source; left out of the frame, flagged in the Section 301 tether",
+    "trade volumes ($68B / $270B) — kept to the blind brief's background, out of the frame",
+    "analyst forecasts (ING et al.) — left out"
+   ]
+  },
+  "blindAuthoring": {
+   "date": "2026-09-28",
+   "author": "Claude (general-purpose subagent) — blind: given the frame, prompt, keywords, axes, a station/radius brief, a short dated background, R-0921-1 and the voice rules only; no other Reading, no register, no web",
+   "zFirst": true,
+   "instrumentOnAll12": true,
+   "rulings": "NONE — every station awaits Sailor's ruling. z and instrument as authored by the blind author; no z or instrument changed.",
+   "editsAfterHandback": {
+    "by": "Claude (orchestrator), 2026-09-28 — no z or instrument changed; Sailor may revert",
+    "what": [
+     "C.denominated: 'a deal cut in a ballroom' → 'cut at the White House' (the meeting's place per AP; a ballroom is not in the sources); words 'ballroom deal' → 'White House deal'.",
+     "A.coalition: dropped the opening 'Honestly,' (filler; same sentence)."
+    ]
+   },
+   "authorNote": "The hardest bands were D-coalition and C-coalition. On D's side, trust in Trump and the missing soybeans pull against each other, so the band sits close to zero, and that zero is honest ambivalence, not a hedge. C-coalition had to show the left-populist reflex without turning into a milder rim, and it does that by pointing to a real fact: the U.S. side's implementation details were not stated. The z I trust least is D-denominated at +0.55. R-0921-1 requires it to be positive because the speaker trusts Trump, but plenty of rim right-populists are farm-state voters, and the missing soybeans could pull them toward distrust. Its honest range is about +0.2 to +0.8, and a farm-anchored rim could sit near zero. A-denominated at -0.6 is the next most fragile; it could be anywhere from -0.3 to -0.7. The pattern: the centers are fairly tight, between about -0.45 and +0.45, and only the institutional right reads the lists as working as designed. The rim spread comes from trust in Trump, not from the goods. D is the one station whose rim goes positive while its fluid band is negative. The institutional left's fluid and coalition bands also split in sign, because its dislike of tariffs as a consumer tax works against its distrust of the person cutting them."
+  },
+  "newsroomFindings": {
+   "inversionLeans": [
+    "B fluid (lean, not ruled): the China-hawk institutional right reads tariff cuts to China as the policy working; prior = the tariff-as-leverage case it has made since 2018 (coverage, not a live Reading). Partial: the band keeps its sign by holding that the chips leverage survives.",
+    "D fluid (lean): the right-populist center goes negative on a Trump trade deal over the missing soybeans, while its rim goes positive. A split inside the station, not a reversal of a prior."
+   ],
+   "permanence": "A RETURN (lean). The trade-truce arc: the 2025 escalation to 145%, the 2025-10-30 Busan meeting and truce, and now the Washington meeting and the lists. The register never carried the Busan arc. Today the register carries this object twice: obj_thepresi_billion-china-cuts-lists (12 outlets) and obj_thepresi_30b-china-cut-goods (3 outlets, the same AP/Sinclair story)."
+  }
+ },
+ "rid": "rdg_4ot3ind0ufll",
+ "ridLineage": "minted 2026-09-28 (UTC) by the scheduled newsroom drafting task; filed directly to drafts/claude",
+ "schema": "reading/v1",
+ "formulaVersion": "1",
+ "updatedAt": "2026-09-28T20:40:56.255Z",
+ "authorTier": "claude",
+ "newsroom": {
+  "oid": "obj_thepresi_billion-china-cuts-lists",
+  "queuedOn": "2026-09-28",
+  "draftedOn": "2026-09-28"
+ },
+ "images": []
+}

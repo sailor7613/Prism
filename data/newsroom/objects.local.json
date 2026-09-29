@@ -1,6 +1,6 @@
 {
  "schema": "prism_object_overlay_v1",
- "updatedAt": "2026-09-27T18:08:34.906Z",
+ "updatedAt": "2026-09-29T02:02:27.218Z",
  "note": "Written ONLY by the drafting task (Sailor commits it). The scan owns objects.json and only reads this file. See scripts/newsroom/overlay.js.",
  "objects": {
   "obj_astate_bills-changes-elections-gavin": {
@@ -430,6 +430,106 @@
     "seven-day roadmap",
     "Iran Hormuz proposal",
     "Trump Strait"
+   ]
+  },
+  "obj_thepresi_approved-biden-cutting-economy": {
+   "status": "drafted",
+   "drafts": {
+    "claude": "rdg_qsov81k3le2s"
+   },
+   "draftedOn": "2026-09-28",
+   "corrections": [
+    {
+     "field": "formedOn",
+     "from": "2026-09-27",
+     "to": "2026-09-28",
+     "why": "The final rule was released by DOT on 09-28. 09-26 was Trump saying he approved it (reported 09-27): an announcement, not the instrument.",
+     "by": "Claude (drafting)",
+     "on": "2026-09-28"
+    },
+    {
+     "field": "holder",
+     "from": "the President",
+     "to": "NHTSA / the Department of Transportation (Secretary Duffy), on the President's approval",
+     "why": "The rule is NHTSA's under EPCA; the President approved it.",
+     "by": "Claude (drafting)",
+     "on": "2026-09-28"
+    }
+   ],
+   "inversions": [],
+   "permanenceNote": "A return (lean): third pass of the same standard. 2020 SAFE Vehicles Rule rollback, Biden 2022/2024 rules, now SAFE Vehicles Rule III. Penalties for missing it were zeroed in July 2025.",
+   "aliasCandidates": [
+    "obj_thepresi_back-biden-electric-era",
+    "Freedom Means Affordable Cars",
+    "SAFE Vehicles Rule III",
+    "CAFE rollback"
+   ]
+  },
+  "obj_thepresi_billion-china-cuts-lists": {
+   "status": "drafted",
+   "drafts": {
+    "claude": "rdg_4ot3ind0ufll"
+   },
+   "draftedOn": "2026-09-28",
+   "corrections": [
+    {
+     "field": "holder",
+     "from": "the President",
+     "to": "the U.S. Trade Representative (Greer) with China's commerce ministry, under the President and Xi",
+     "why": "The lists were issued by USTR and MOFCOM; the President struck the deal at the 09-24 meeting.",
+     "by": "Claude (drafting)",
+     "on": "2026-09-28"
+    },
+    {
+     "field": "kind",
+     "from": "tariff/sanction (imposed)",
+     "to": "tariff/sanction (cut)",
+     "why": "The instrument lowers tariffs; nothing was imposed.",
+     "by": "Claude (drafting)",
+     "on": "2026-09-28"
+    }
+   ],
+   "inversions": [
+    {
+     "station": "B",
+     "bands": "fluid +0.45",
+     "lean": "China-hawk institutional right reads tariff cuts to China as the policy working; keeps its sign by holding that the chips leverage survives",
+     "prior": "tariff-as-leverage case, coverage since 2018 (not a live Reading)",
+     "ruled": false
+    }
+   ],
+   "permanenceNote": "A return (lean): the trade-truce arc (2025 escalation to 145%, 2025-10-30 Busan truce, 2026-09-24 Washington meeting). The register never carried the Busan arc.",
+   "aliasCandidates": [
+    "obj_thepresi_30b-china-cut-goods",
+    "30-for-30",
+    "US-China tariff lists"
+   ]
+  },
+  "obj_thepresi_30b-china-cut-goods": {
+   "status": "dismissed",
+   "dismissedWhy": "Duplicate: same instrument as obj_thepresi_billion-china-cuts-lists (the reciprocal $30B lists released 2026-09-28), drafted as rdg_4ot3ind0ufll. Three Sinclair sites carrying one story.",
+   "aliasCandidates": [
+    "obj_thepresi_billion-china-cuts-lists"
+   ]
+  },
+  "obj_thepresi_broker-deal-even-iran": {
+   "status": "dismissed",
+   "dismissedWhy": "Duplicate: the headline instrument is Trump's rejection of Iran's seven-day Hormuz roadmap, already drafted as rdg_6gsmq4x22x20 (obj_thepresi_hormuz-iran-open-proposal). The 09-28 news is mediators working on a revised phased framework, with talks resuming; no new agreement, order or vote. Not a vote (register kind is wrong). If the revised deal lands, a later scan will see it as a new object.",
+   "permanenceNote": "Continuation of the Hormuz arc; per the 09-28 AP report, officials say the U.S. has not formally rejected the current proposal.",
+   "aliasCandidates": [
+    "obj_thepresi_hormuz-iran-open-proposal"
+   ]
+  },
+  "obj_thepresi_denies-iran-relief-report": {
+   "status": "dismissed",
+   "dismissedWhy": "No instrument: Trump's 2026-09-28 Truth Social denial of an Axios report (09-27) that U.S. negotiators were weighing Iran sanctions relief for nuclear concessions. No sanctions were imposed, lifted or ordered; the register's \"imposed\" is wrong. The 20 outlets are one iHeart syndicated story. Same indirect Iran talks as obj_thepresi_broker-deal-even-iran (dismissed 09-28) and the Hormuz rejection drafted as rdg_6gsmq4x22x20. If relief is actually granted or refused by order, a later scan will see it as a new object.",
+   "corrections": [
+    {
+     "field": "kind",
+     "was": "tariff/sanction · imposed",
+     "now": "denial of a press report (no instrument)",
+     "why": "nothing imposed or lifted"
+    }
    ]
   }
  }

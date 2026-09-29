@@ -1,0 +1,483 @@
+{
+ "centralObject": {
+  "kind": "object",
+  "ref": "NHTSA's final CAFE rule for model years 2022-2031 (DOT: 'Freedom Means Affordable Cars'; the SAFE Vehicles Rule III), released by the Department of Transportation on 2026-09-28: a fleet average of about 34.9 mpg by model year 2031, replacing the 2024 rule's 50.4 mpg",
+  "name": "The 34.9 mpg rule"
+ },
+ "tethers": [
+  {
+   "statute": "Energy Policy and Conservation Act of 1975 (EPCA), fuel economy title",
+   "cite": "Pub. L. 94-163; 49 U.S.C. §32902",
+   "title": "Average fuel economy standards",
+   "enacted": "1975-12-22",
+   "relation": "invokes",
+   "why": "The rule is issued under EPCA's CAFE authority. §32902(h) bars NHTSA from considering electric vehicles when it sets the maximum feasible standard; that bar is the ground of the 'illegal mandate' charge against the 2024 rule. The rule's own citations were not read for this draft (the 892-page notice); the section is named from the statute, not the rule text."
+  },
+  {
+   "billId": "hr-119-1",
+   "bill": "H.R. 1",
+   "title": "An act to provide for reconciliation pursuant to title II of H. Con. Res. 14.",
+   "relation": "adjacent",
+   "statusAsOf": "Became Public Law 119-21 on 2025-07-04 (catalog)",
+   "why": "Roll Call (2026-09-28): in July 2025 Republicans zeroed out the civil penalties for missing the CAFE standards in the reconciliation package. The standard had already lost its enforcement before this rule lowered it. The exact section is NOT verified in this draft.",
+   "inDb": true
+  },
+  {
+   "billId": "hjres-119-88",
+   "bill": "H.J.Res. 88",
+   "title": "Providing congressional disapproval of EPA's waiver for California's Advanced Clean Cars II",
+   "relation": "adjacent",
+   "statusAsOf": "Became Public Law 119-16 on 2025-06-12 (catalog)",
+   "why": "The other half of the federal EV-mandate fight: Congress used the Congressional Review Act to revoke California's waiver to require zero-emission new-car sales. Named for context; the 34.9 rule does not rest on it.",
+   "inDb": true
+  }
+ ],
+ "linkedBills": [
+  "hr-119-1",
+  "hjres-119-88"
+ ],
+ "title": "The Sticker and the Pump",
+ "category": "Energy · Transportation · Regulation",
+ "date": "2026-09-28",
+ "prompt": "The 2031 mileage target drops from 50.4 to 34.9 mpg. Does that make cars affordable, or just make driving them cost more?",
+ "framing": "On Monday, September 28, 2026, the Department of Transportation finalized new fuel economy standards for cars and light trucks, setting a fleet average of about 34.9 miles per gallon by model year 2031. The Biden administration's 2024 rule had set 50.4 mpg for the same year. Transportation Secretary Sean Duffy said the rule ends \"the illegal mandate that forced automakers to produce more expensive electric vehicles,\" and the department put the savings at $1,300 per new vehicle. President Trump had said on September 26 that he approved it. The Alliance for Automotive Innovation called it \"an appropriate course correction.\" NRDC said drivers would pay more at the pump and signaled a legal challenge. In July 2025 Congress zeroed out the penalties for missing the standards.",
+ "framingKeywords": [
+  "fuel economy",
+  "34.9 mpg",
+  "illegal mandate",
+  "electric vehicles",
+  "$1,300"
+ ],
+ "prevalentAxis": "x",
+ "split": {
+  "topology": "axis",
+  "strength": 0.7,
+  "seam": "x: the sticker (what a new car costs) against the pump (what driving it costs)",
+  "rationale": "The stated object (lower standards, cheaper new cars, no EV push) runs along x, and the stations sort along it at every radius but one. Both left centers read the fuel bill (−0.6, −0.75); both right centers read the sticker (+0.45, +0.55). The coalitions each pull toward zero from their own side for a different reason: the left concedes the EV path was out of reach and the statute limits NHTSA, the right concedes the pump. The one crossing is the right-populist coalition band (−0.1): it wants the cheaper truck and doesn't believe the $1,300 survives the dealer lot at $4 gas. The rims sign by trust in the holder, cleanly on x.",
+  "zPattern": {
+   "centers": {
+    "A": -0.6,
+    "B": 0.45,
+    "C": -0.75,
+    "D": 0.55
+   },
+   "rims": {
+    "A": -0.85,
+    "B": 0.8,
+    "C": -0.9,
+    "D": 0.9
+   },
+   "note": "Centers are fluid z; coalition z: A -0.3, B 0.15, C -0.4, D -0.1. Rims: the left rims name Duffy's DOT / automakers and oil companies and distrust them; the right rims name the market / Trump and trust them. D changes sign between coalition (−0.1) and rim (+0.9), again."
+  },
+  "ruledBy": null,
+  "date": "2026-09-28"
+ },
+ "antiValentBand": "denominated",
+ "antiValentRationale": "At the rim the mileage numbers are gone: one side hears a gift to automakers and oil companies, the other hears a dead mandate and cars given back. Nobody at the edge is talking about miles per gallon.",
+ "axes": {
+  "x": {
+   "pos": "Right",
+   "neg": "Left"
+  },
+  "y": {
+   "pos": "Institutional",
+   "neg": "Populist"
+  },
+  "z": {
+   "pos": "the rollback delivers: cheaper new cars and real choice for buyers",
+   "neg": "the rollback fails: the sticker savings get eaten at the pump, and the air pays for it"
+  }
+ },
+ "responses": {
+  "A": {
+   "fluid": {
+    "z": -0.6,
+    "zReason": "NHTSA's own estimate says the change raises fuel use for decades, so with gas above $4 the $1,300 sticker cut gets eaten by higher fuel spending over the life of the car.",
+    "instrument": {
+     "holder": "Duffy's Department of Transportation",
+     "trusted": false
+    },
+    "text": "NHTSA's own analysis says this raises fuel use and CO2 for decades, and that's the agency writing the rule. A $1,300 cut on the sticker is real money, but at over $4 a gallon, how many years of driving before a thirstier car eats it? The standard was there to lower the cost of owning a car, not just buying one.",
+    "xWord": "climate",
+    "yWord": "NHTSA",
+    "words": [
+     "cost of ownership",
+     "NHTSA's own estimate",
+     "decades of CO2"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": -0.3,
+    "zReason": "Fuel costs still outweigh the sticker savings, but a Biden target that relied on an EV switchover the 1975 law bars NHTSA from counting makes some of the lost savings legally shaky to begin with.",
+    "instrument": {
+     "holder": "the courts reading EPCA",
+     "trusted": true
+    },
+    "text": "I still think the math runs against drivers once they're paying at the pump. But I've heard people on my side talk as if 50.4 was purely about efficiency, and the Alliance has a point that it leaned hard on an EV switchover the 1975 law says NHTSA can't count. If the old rule was stretched, the courts are going to see that too.",
+    "xWord": "efficiency",
+    "yWord": "statute",
+    "words": [
+     "EPCA limits",
+     "stretched rule",
+     "still costs more"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.85,
+    "zReason": "The rim reads the rule as a political verdict imposed over the agency's own evidence, so nothing it promises can be delivered.",
+    "instrument": {
+     "holder": "Duffy's Department of Transportation",
+     "trusted": false
+    },
+    "text": "This is an administration bending the evidence to fit a slogan. 'Illegal mandate' is the verdict, and the agency's own numbers are the casualty.",
+    "xWord": "science",
+    "yWord": "rulemaking",
+    "words": [
+     "slogan over evidence",
+     "political verdict",
+     "numbers buried"
+    ],
+    "source": ""
+   },
+   "xSide": "left",
+   "source": ""
+  },
+  "B": {
+   "fluid": {
+    "z": 0.45,
+    "zReason": "Removing a target that effectively required EV sales strips compliance cost out of new-vehicle pricing, though zeroed penalties since July 2025 mean part of that relief was already in place.",
+    "instrument": {
+     "holder": "automakers pricing under a lawful standard",
+     "trusted": true
+    },
+    "text": "The Biden target couldn't be hit without selling a lot of EVs, and EPCA says NHTSA can't set standards on that basis. Resetting to 34.9 brings the rule back inside the statute and takes about $1,300 off a new vehicle, which matters when payments are already brutal. Anyone who wants an EV can still buy one.",
+    "xWord": "market",
+    "yWord": "statute",
+    "words": [
+     "back inside EPCA",
+     "$1,300 off",
+     "buyer's choice"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0.15,
+    "zReason": "The legal reset is sound, but with penalties already zeroed the marginal sticker savings are uncertain while fuel costs at $4-plus are not.",
+    "instrument": {
+     "holder": "automakers",
+     "trusted": true
+    },
+    "text": "I think the legal reading is right, and I'll take cheaper cars. But Congress already zeroed the penalties back in 2025, so I'm not sure how much of that $1,300 is new, and with gas over $4 I'd rather my side not act like fuel costs don't exist. 'Illegal mandate' is a good line; I'm less sure it's the whole story.",
+    "xWord": "deregulation",
+    "yWord": "Congress",
+    "words": [
+     "penalties already zeroed",
+     "gas over $4",
+     "good line, partial story"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": 0.8,
+    "zReason": "At the rim, trust in the market and the statute makes delivery a given.",
+    "instrument": {
+     "holder": "automakers and buyers in the market",
+     "trusted": true
+    },
+    "text": "Automakers know what buyers want better than a regulator in Washington does. This is the rule of law correcting itself.",
+    "xWord": "markets",
+    "yWord": "law",
+    "words": [
+     "rule of law",
+     "buyers decide",
+     "course corrected"
+    ],
+    "source": ""
+   },
+   "xSide": "right",
+   "source": ""
+  },
+  "C": {
+   "fluid": {
+    "z": -0.75,
+    "zReason": "The sticker savings go to new-car buyers while less efficient vehicles flow into the used market, so the people buying gas at war-driven prices pay more for years.",
+    "instrument": {
+     "holder": "automakers",
+     "trusted": false
+    },
+    "text": "Nobody I know is buying a new car this year; they're filling up an old one at over $4 a gallon because of a war. Weaker standards mean the cars that end up on the used lot burn more gas for years, and the Sierra Club's right that families get the bill at the pump. A $1,300 discount goes to people who can already afford a new car.",
+    "xWord": "workers",
+    "yWord": "pump",
+    "words": [
+     "bill at the pump",
+     "used-car buyers",
+     "war-price gas"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": -0.4,
+    "zReason": "Pump costs still dominate, but the EV-heavy path was out of reach for many working buyers, so the sticker-price argument has real force.",
+    "instrument": {
+     "holder": "my own side's EV pitch",
+     "trusted": false
+    },
+    "text": "I still think working people pay for this at the pump. But I've heard my own side talk like everybody can just go electric, and for a lot of people an EV is out of reach, so 'mandate' landed. If the left can't answer the sticker price, somebody else will.",
+    "xWord": "affordability",
+    "yWord": "sticker",
+    "words": [
+     "EVs out of reach",
+     "mandate landed",
+     "answer the sticker"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.9,
+    "zReason": "At the rim the rule is a transfer from drivers to industry, so it cannot deliver to them by definition.",
+    "instrument": {
+     "holder": "automakers and oil companies",
+     "trusted": false
+    },
+    "text": "Automakers and oil companies wrote themselves a gift and handed drivers the tab. Of course the gas station collects.",
+    "xWord": "corporations",
+    "yWord": "drivers",
+    "words": [
+     "gift to industry",
+     "drivers pay",
+     "gas station collects"
+    ],
+    "source": ""
+   },
+   "xSide": "left",
+   "source": ""
+  },
+  "D": {
+   "fluid": {
+    "z": 0.55,
+    "zReason": "Dropping the EV-driven target lowers new-truck prices and restores choice, and the fuel-price spike is attributed to the war rather than the standard.",
+    "instrument": {
+     "holder": "the Trump administration",
+     "trusted": true
+    },
+    "text": "Being told what car to buy so Washington can hit an electric target was never going to fly where I live. Take $1,300 off a truck and let people pick what fits their work and their roads. Gas is high, sure, but that's the war, not the mileage sticker.",
+    "xWord": "choice",
+    "yWord": "Washington",
+    "words": [
+     "$1,300 off a truck",
+     "no EV push",
+     "pick your own car"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": -0.1,
+    "zReason": "The $1,300 is a department estimate that has to survive the dealer lot, while a thirstier truck at $4-plus gas costs more every week.",
+    "instrument": {
+     "holder": "the dealers",
+     "trusted": false
+    },
+    "text": "I'm glad the EV push is gone, and I want the cheaper truck. But I've heard people on my side cheer like this lowers what it costs to drive, and at over $4 a gallon a thirstier truck isn't savings. The $1,300 is the department's number; I'll believe it when the dealer shows it to me.",
+    "xWord": "trucks",
+    "yWord": "dealers",
+    "words": [
+     "show me at the dealer",
+     "thirstier truck",
+     "cheering too early"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": 0.9,
+    "zReason": "At the rim, trust in the president who approved it settles delivery.",
+    "instrument": {
+     "holder": "President Trump",
+     "trusted": true
+    },
+    "text": "Trump signed off and the mandate is dead. Working people get their cars back.",
+    "xWord": "Trump",
+    "yWord": "people",
+    "words": [
+     "mandate is dead",
+     "Trump signed off",
+     "cars back"
+    ],
+    "source": ""
+   },
+   "xSide": "right",
+   "source": ""
+  }
+ },
+ "diatribe": {
+  "LF": {
+   "text": "The mileage standard was there to cut what it costs to own a car, not just buy one. At over $4 a gallon, $1,300 off the sticker doesn't last long.",
+   "side": "left",
+   "band": "fluid",
+   "keywords": [
+    "mileage standard",
+    "$4 a gallon",
+    "off the sticker"
+   ]
+  },
+  "LC": {
+   "text": "I think drivers pay for this at the pump, and I also know the people I vote with oversold how many families could just go electric.",
+   "side": "left",
+   "band": "coalition",
+   "keywords": [
+    "the people I vote with",
+    "pay for this at the pump",
+    "go electric"
+   ]
+  },
+  "LD": {
+   "text": "Automakers and oil companies wrote themselves a gift, and drivers got the tab.",
+   "side": "left",
+   "band": "denominated",
+   "keywords": [
+    "a gift",
+    "the tab"
+   ]
+  },
+  "RF": {
+   "text": "The old target couldn't be met without selling EVs the law says NHTSA can't count. This puts the standard back inside the statute and takes $1,300 off a new car.",
+   "side": "right",
+   "band": "fluid",
+   "keywords": [
+    "the standard",
+    "back inside the statute",
+    "$1,300"
+   ]
+  },
+  "RC": {
+   "text": "I want the cheaper truck, and I'd still like the people cheering on my side to remember what a thirstier engine costs at $4 gas.",
+   "side": "right",
+   "band": "coalition",
+   "keywords": [
+    "the people cheering on my side",
+    "cheaper truck",
+    "thirstier engine"
+   ]
+  },
+  "RD": {
+   "text": "Trump signed off and the mandate is dead. Working people get their cars back.",
+   "side": "right",
+   "band": "denominated",
+   "keywords": [
+    "their cars back",
+    "mandate is dead"
+   ]
+  }
+ },
+ "diatribeLayer": "stated",
+ "objectLayer": {
+  "declared": "stated",
+  "stated": "Ending an 'illegal' EV mandate so new cars cost about $1,300 less.",
+  "operative": "A lower mileage floor, 34.9 mpg by model year 2031, on a standard that has carried no penalty for missing it since July 2025; the sticker saving is the department's estimate, the fuel cost is the drivers'.",
+  "inversion": "None found at station level. Lean only: the stated/operative gap is the penalty. The rule lowers a number automakers could already miss without paying, so the stated object (ending a mandate) was largely delivered in 2025 and the operative one is the signal. Not ruled."
+ },
+ "window": {
+  "close": "2026-09-28",
+  "why": "Trigger day = the day the object finished forming: the final rule was released by DOT on Monday 2026-09-28 (DOT release; Roll Call 09-28; NRDC 09-28). The register read 2026-09-27: Trump's 09-26 Truth Social 'approved', reported 09-27, is an announcement, and the 09-27 run declined to draft it for that reason. Declared at authoring, before any z.",
+  "ruledBy": null,
+  "ruledOn": null
+ },
+ "meta": {
+  "dialecticsRef": "obj_thepresi_approved-biden-cutting-economy",
+  "status": "draft",
+  "source": "Claude draft — daily newsroom drafting (scheduled), authored z-first against Trace Formula v1 per scripts/newsroom/AUTHORING_PROTOCOL.md v1.4. Filed to drafts/claude; not through the surface; no aiDeltas lineage. Rulings: none.",
+  "editHistory": [
+   {
+    "at": "2026-09-28T20:40:56.255Z",
+    "by": "Claude (scheduled drafting)",
+    "what": "authored: object (formedOn corrected 09-27 -> 09-28: the final rule, not the announcement) -> window -> frame -> sweep -> central object + tethers -> axes -> twelve (blind subagent) -> two small edits by Claude (meta.blindAuthoring.editsAfterHandback) -> split/diatribe/layers -> sweep"
+   }
+  ],
+  "aiDeltas": [],
+  "frameFirst": {
+   "date": "2026-09-28",
+   "by": "Claude, under §4c (window declared at authoring; sweep before z). Object NOT ruled — Claude's read, correctable by Sailor.",
+   "status": "Frame authored and swept before any z; the twelve authored blind z-first by a subagent (meta.blindAuthoring). Stations unruled.",
+   "objectLean": {
+    "stated": "ending an 'illegal' EV mandate, $1,300 off a new car",
+    "operative": "a lower floor on a standard with no penalty since July 2025",
+    "inversion": "none at station level; stated/operative lean on the penalty"
+   },
+   "titleLean": "'The Sticker and the Pump' — Claude's; Sailor names Readings",
+   "sourcesInWindow": [
+    "DOT briefing room, 2026-09-28: 'Freedom Means Affordable Cars' finalized; 34.9 mpg by MY2031; $1,300 per vehicle; $138B over five years; Duffy quote; credit trading ends MY2028",
+    "Roll Call 2026-09-28: 892-page final rule; Biden 50.4 mpg by 2031; July 2025 reconciliation zeroed CAFE civil penalties; Bozzella (Alliance) 'appropriate course correction'; EDF $1,400 more on gas",
+    "NRDC release 2026-09-28: 34.9 mpg; $1,400 more in fuel per vehicle lifetime (NHTSA); gas above $4; 'violates the law. Stay tuned.'",
+    "Claims Journal (Bloomberg) 2026-09-28: Alliance 'made the right call'; Sierra Club 'handing families the bill — at the pump'; fuel prices higher since the war began in late February",
+    "WSBT/Sinclair 2026-09-26/27: Trump said Saturday 09-26 he approved the standards; final rule not yet released; Duffy: announcement Monday"
+   ],
+   "background_preWindow": [
+    "1975-12-22: EPCA enacted; CAFE authority at 49 U.S.C. §32902",
+    "2020-03-31: first-term SAFE Vehicles Rule rolled back the Obama-era standards (the Roll Call 2020 story on the lawsuits it drew)",
+    "2024: Biden-era NHTSA rule, 50.4 mpg by MY2031",
+    "2025-06-12: Pub. L. 119-16 (H.J.Res. 88) revoked California's Advanced Clean Cars II waiver (catalog)",
+    "2025-07-04: Pub. L. 119-21 (H.R. 1) — CAFE civil penalties zeroed (Roll Call)",
+    "2026-09-26: Trump says he approved the rollback (WSBT)"
+   ]
+  },
+  "framingAudit": {
+   "date": "2026-09-28",
+   "by": "Claude — frame-first authoring under §4c; sweep run BEFORE any z. Not a ruling.",
+   "window": "2026-09-28 (declared, see window.why)",
+   "verifiedInWindow": [
+    "final rule released Monday 2026-09-28 (DOT; Roll Call; NRDC)",
+    "34.9 mpg fleet average by model year 2031 (DOT; Roll Call; NRDC; Claims Journal)",
+    "50.4 mpg — the 2024 rule for MY2031 (Roll Call; NRDC; Claims Journal)",
+    "\"the illegal mandate that forced automakers to produce more expensive electric vehicles\" — Duffy, DOT release 2026-09-28",
+    "$1,300 per new vehicle — DOT release 2026-09-28",
+    "Trump approved it, said 2026-09-26 (WSBT, 09-26/27)",
+    "\"an appropriate course correction\" — John Bozzella, Alliance for Automotive Innovation (Roll Call 2026-09-28)",
+    "NRDC: pay more at the pump; \"Stay tuned\" (NRDC release 2026-09-28)",
+    "July 2025: civil penalties zeroed (Roll Call 2026-09-28) — pre-window, load-bearing"
+   ],
+   "keptUnverifiedDate": [],
+   "deliberatelyExcluded_afterWindow": [
+    "nothing after the window was used; the rule is the day's own",
+    "the 34.5 mpg figure — the December 2025 proposal's number, carried in the 09-26/27 syndication; superseded by the final 34.9",
+    "$138 billion five-year savings and '1,900 lives saved' — DOT claims, left out of the frame to keep it to one screen",
+    "EDF's $1,400-more-on-gas and NHTSA's '100 billion gallons through 2050' — kept to 'pay more at the pump'; sources disagree on the basis",
+    "Tesla stock move (Roll Call) — market color, left out"
+   ]
+  },
+  "blindAuthoring": {
+   "date": "2026-09-28",
+   "author": "Claude (general-purpose subagent) — blind: given the frame, prompt, keywords, axes, a station/radius brief, a short dated background, R-0921-1 and the voice rules only; no other Reading, no register, no web",
+   "zFirst": true,
+   "instrumentOnAll12": true,
+   "rulings": "NONE — every station awaits Sailor's ruling. z and instrument as authored by the blind author; no z or instrument changed.",
+   "editsAfterHandback": {
+    "by": "Claude (orchestrator), 2026-09-28 — no z or instrument changed; Sailor may revert",
+    "what": [
+     "B.coalition: 'zeroed the penalties last July' → 'back in 2025'. Said in 2026-09, 'last July' reads as July 2026; the penalties went in July 2025.",
+     "B.denominated xWord 'freemarket' → 'markets' (one clean token)."
+    ]
+   },
+   "authorNote": "Hardest bands: D coalition and A coalition. D coalition had to stay a Right-populist who wants the rollback yet doubts it delivers at the pump; I put it slightly negative (-0.1), and that's the z I trust least. Its honest range is about -0.3 to +0.25, depending on whether the speaker weighs the sticker or the tank. A coalition was hard because conceding the EPCA point without sliding into B's voice meant giving the courts as a trusted holder while z stays negative. B coalition (+0.15) also rests on one mechanism: penalties zeroed in July 2025 may mean the $1,300 is mostly notional. That point cuts across both sides and is the most interesting factual hinge in the frame. Pattern: the centers split along a sticker-vs-pump accounting (who buys new cars vs. who buys gas), and both coalitions move toward zero from opposite sides, each for a different reason: the left concedes the sticker and statute, the right concedes the pump. The rims are set purely by trust (Duffy/industry distrusted vs. Trump/market trusted), so they sit at the extremes (-0.9 to +0.9)."
+  },
+  "newsroomFindings": {
+   "inversionLeans": [
+    "None found at station level in window. The left coalition band concedes the EV path was out of reach (\"mandate landed\"); that is a concession, not a reversal of a prior.",
+    "Stated/operative lean (object, not station): the rule lowers a standard that has carried no penalty since July 2025."
+   ],
+   "permanence": "A RETURN (lean). Third pass of the same standard: the 2020 SAFE Vehicles Rule rolled back the Obama-era targets, the Biden rules (2022, 2024) restored and raised them, and this rule rolls them back again under a name that echoes the first (SAFE Vehicles Rule III). The register carries this object twice today: obj_thepresi_approved-biden-cutting-economy (the 09-26 approval) and obj_thepresi_back-biden-electric-era (the 09-28 final rule)."
+  }
+ },
+ "rid": "rdg_qsov81k3le2s",
+ "ridLineage": "minted 2026-09-28 (UTC) by the scheduled newsroom drafting task; filed directly to drafts/claude",
+ "schema": "reading/v1",
+ "formulaVersion": "1",
+ "updatedAt": "2026-09-28T20:40:56.255Z",
+ "authorTier": "claude",
+ "newsroom": {
+  "oid": "obj_thepresi_approved-biden-cutting-economy",
+  "queuedOn": "2026-09-27",
+  "draftedOn": "2026-09-28"
+ },
+ "images": []
+}
