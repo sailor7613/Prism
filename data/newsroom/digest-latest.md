@@ -1,24 +1,23 @@
 # Newsroom digest — 2026-09-29
 
-Register: 50 objects · this scan: 3 new, 0 seen again, 0 returned.
+Register: 53 objects · this scan: 2 new, 2 seen again, 0 returned.
 
-## Queued for drafting (1)
-- **CNN , Politico and MS NOW press judge to keep White House media ban on hold** — ruling · ruled · holder: a federal court · formed 2026-09-29 · 8 outlets (peak 8) · `obj_afederal_ban-cnn-hold-house`
+## Queued for drafting (0)
+- (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
 - **Judge hears arguments without immediately ruling in lawsuit over White House ban on 3 news outlets** — ruling · ruled · holder: a federal court · formed 2026-09-23 · 3 outlets (peak 6) · `obj_afederal_arguments-ban-hears-house` · silent 5d after 2 scans
 - **Judge orders White House to restore access to CNN , MS NOW and Politico** — ruling · ruled · holder: a federal court · formed 2026-09-24 · 34 outlets (peak 34) · `obj_afederal_access-cnn-house-judge` · silent 5d after 2 scans
-- **s-119-4668 — Senate the cloture motion (Cloture Motion Agreed to)** — bill · voted · holder: the Senate · formed 2026-09-24 · 0 outlets (peak 0) · `obj_bill_s-119-4668` · silent 0d after 12 scans
+- **s-119-4668 — Senate the cloture motion (Cloture Motion Agreed to)** — bill · voted · holder: the Senate · formed 2026-09-24 · 0 outlets (peak 0) · `obj_bill_s-119-4668` · silent 0d after 13 scans
 
 ## Returned after a break
 - none today
 
 ## New objects (all)
-- **Republican senator blocks bill protecting Kennedy Center from demolition** — ruling · ruled · holder: the Senate · formed 2026-09-29 · 3 outlets (peak 3) · `obj_thesenat_bill-blocks-center-demolition`
-- **CNN , Politico and MS NOW press judge to keep White House media ban on hold** — ruling · ruled · holder: a federal court · formed 2026-09-29 · 8 outlets (peak 8) · `obj_afederal_ban-cnn-hold-house`
-- **Appeals court upholds Green Bay attempted homicide conviction** — ruling · ruled · holder: a federal court · formed 2026-09-29 · 3 outlets (peak 3) · `obj_afederal_appeals-attempted-bay-conviction`
+- **Appeals court weighs fate of judge contempt probe over Trump administration deportation flights** — hearing · compelled · holder: a federal court · formed 2026-09-29 · 5 outlets (peak 5) · `obj_afederal_administration-appeals-contempt-court`
+- **U . S . Supreme Court sides with Trump administration in third - country deportations** — ruling · ruled · holder: a federal court · formed 2026-09-29 · 4 outlets (peak 4) · `obj_afederal_administration-country-court-deportations`
 
-## Watching (17)
+## Watching (19)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
 - **Former state senator sentenced to 16 months in child solicitation case** — indictment · charged · holder: the Senate · formed 2026-09-23 · 4 outlets (peak 4) · `obj_thesenat_case-child-former-months`
 - **CNN , MS NOW and Politico back at the White House after judge ordered Trump to lift ban** — ruling · ruled · holder: the House · formed 2026-09-24 · 18 outlets (peak 18) · `obj_thehouse_back-ban-cnn-house`
