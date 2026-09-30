@@ -1,9 +1,9 @@
 # Newsroom digest — 2026-09-30
 
-Register: 54 objects · this scan: 1 new, 0 seen again, 0 returned.
+Register: 55 objects · this scan: 1 new, 0 seen again, 0 returned.
 
 ## Queued for drafting (1)
-- **Congress votes to end production of the penny after 234 years** — vote · voted · holder: Congress · formed 2026-09-29 · 3 outlets (peak 3) · `obj_congress_234-congress-end-penny`
+- **Trump says top tech firms have signed accord to self - police AI development** — agreement · agreed · holder: the President · formed 2026-09-30 · 7 outlets (peak 7) · `obj_thepresi_accord-development-firms-police`
 
 ## Permanence breaks (went silent while unresolved)
 - **In one of their last votes before November , Senate GOP blocks effort to end Iran war** — ruling · ruled · holder: the Senate · formed 2026-09-24 · 11 outlets (peak 11) · `obj_thesenat_before-blocks-effort-end` · silent 5d after 2 scans
@@ -12,7 +12,7 @@ Register: 54 objects · this scan: 1 new, 0 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **Congress votes to end production of the penny after 234 years** — vote · voted · holder: Congress · formed 2026-09-29 · 3 outlets (peak 3) · `obj_congress_234-congress-end-penny`
+- **Trump says top tech firms have signed accord to self - police AI development** — agreement · agreed · holder: the President · formed 2026-09-30 · 7 outlets (peak 7) · `obj_thepresi_accord-development-firms-police`
 
 ## Watching (19)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
