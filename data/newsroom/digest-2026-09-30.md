@@ -1,9 +1,9 @@
 # Newsroom digest — 2026-09-30
 
-Register: 55 objects · this scan: 1 new, 0 seen again, 0 returned.
+Register: 58 objects · this scan: 3 new, 0 seen again, 0 returned.
 
 ## Queued for drafting (1)
-- **Trump says top tech firms have signed accord to self - police AI development** — agreement · agreed · holder: the President · formed 2026-09-30 · 7 outlets (peak 7) · `obj_thepresi_accord-development-firms-police`
+- **US can deport the leader of Wisconsin largest mosque , judge rules** — ruling · ruled · holder: a federal court · formed 2026-09-30 · 8 outlets (peak 8) · `obj_afederal_can-deport-judge-largest`
 
 ## Permanence breaks (went silent while unresolved)
 - **In one of their last votes before November , Senate GOP blocks effort to end Iran war** — ruling · ruled · holder: the Senate · formed 2026-09-24 · 11 outlets (peak 11) · `obj_thesenat_before-blocks-effort-end` · silent 5d after 2 scans
@@ -12,9 +12,11 @@ Register: 55 objects · this scan: 1 new, 0 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **Trump says top tech firms have signed accord to self - police AI development** — agreement · agreed · holder: the President · formed 2026-09-30 · 7 outlets (peak 7) · `obj_thepresi_accord-development-firms-police`
+- **After failed execution , health workers say Tennessee method flouts medical ethics** — vote · voted · holder: ? · formed 2026-09-30 · 7 outlets (peak 7) · `obj_x_ethics-execution-failed-flouts`
+- **US can deport the leader of Wisconsin largest mosque , judge rules** — ruling · ruled · holder: a federal court · formed 2026-09-30 · 8 outlets (peak 8) · `obj_afederal_can-deport-judge-largest`
+- **Senate panel advances surgeon general nominee Nicole Saphier** — vote · voted · holder: the Senate · formed 2026-09-30 · 7 outlets (peak 7) · `obj_thesenat_advances-general-nicole-nominee`
 
-## Watching (19)
+## Watching (20)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
 - **Former state senator sentenced to 16 months in child solicitation case** — indictment · charged · holder: the Senate · formed 2026-09-23 · 4 outlets (peak 4) · `obj_thesenat_case-child-former-months`
 - **CNN , MS NOW and Politico back at the White House after judge ordered Trump to lift ban** — ruling · ruled · holder: the House · formed 2026-09-24 · 18 outlets (peak 18) · `obj_thehouse_back-ban-cnn-house`
