@@ -1,11 +1,9 @@
 # Newsroom digest — 2026-10-01
 
-Register: 67 objects · this scan: 6 new, 0 seen again, 0 returned.
+Register: 68 objects · this scan: 1 new, 0 seen again, 0 returned.
 
-## Queued for drafting (3)
-- **Judge approves Paramount settlement with states over Warner buyout , allowing merger to soon close** — vote · voted · holder: a federal court · formed 2026-09-30 · 16 outlets (peak 16) · `obj_afederal_allowing-approves-buyout-close`
-- **Senate Democrats block bill restricting Congress members from trading stocks** — ruling · ruled · holder: the Senate · formed 2026-09-30 · 11 outlets (peak 11) · `obj_thesenat_bill-block-congress-democrats`
-- **Senate blocks bill aimed at keeping data center costs off electric bills** — ruling · ruled · holder: the Senate · formed 2026-09-30 · 7 outlets (peak 7) · `obj_thesenat_aimed-bill-bills-blocks`
+## Queued for drafting (0)
+- (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
 - none today
@@ -14,14 +12,9 @@ Register: 67 objects · this scan: 6 new, 0 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **Ohio lawmakers overwhelmingly approve three - month gas tax holiday** — vote · voted · holder: Congress · formed 2026-09-30 · 4 outlets (peak 4) · `obj_congress_approve-gas-holiday-lawmakers`
-- **Ukraine to present wish list for new Russia sanctions under Graham law** — tariff/sanction · imposed · holder: ? · formed 2026-09-30 · 4 outlets (peak 4) · `obj_x_graham-law-list-present`
-- **Senate reaches bipartisan deal on permitting bill to speed approvals of new energy projects** — agreement · agreed · holder: the Senate · formed 2026-09-30 · 5 outlets (peak 5) · `obj_thesenat_approvals-bill-bipartisan-deal`
-- **Senate blocks bill aimed at keeping data center costs off electric bills** — ruling · ruled · holder: the Senate · formed 2026-09-30 · 7 outlets (peak 7) · `obj_thesenat_aimed-bill-bills-blocks`
-- **Senate Democrats block bill restricting Congress members from trading stocks** — ruling · ruled · holder: the Senate · formed 2026-09-30 · 11 outlets (peak 11) · `obj_thesenat_bill-block-congress-democrats`
-- **Judge approves Paramount settlement with states over Warner buyout , allowing merger to soon close** — vote · voted · holder: a federal court · formed 2026-09-30 · 16 outlets (peak 16) · `obj_afederal_allowing-approves-buyout-close`
+- **Senate approves Trump pick to lead the Labor Department** — vote · voted · holder: the Senate · formed 2026-10-01 · 5 outlets (peak 5) · `obj_thesenat_approves-department-labor-lead`
 
-## Watching (25)
+## Watching (26)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
 - **Former state senator sentenced to 16 months in child solicitation case** — indictment · charged · holder: the Senate · formed 2026-09-23 · 4 outlets (peak 4) · `obj_thesenat_case-child-former-months`
 - **CNN , MS NOW and Politico back at the White House after judge ordered Trump to lift ban** — ruling · ruled · holder: the House · formed 2026-09-24 · 18 outlets (peak 18) · `obj_thehouse_back-ban-cnn-house`
