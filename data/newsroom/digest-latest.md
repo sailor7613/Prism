@@ -1,6 +1,6 @@
 # Newsroom digest — 2026-10-01
 
-Register: 68 objects · this scan: 1 new, 0 seen again, 0 returned.
+Register: 71 objects · this scan: 3 new, 0 seen again, 0 returned.
 
 ## Queued for drafting (0)
 - (nothing cleared the bar)
@@ -12,9 +12,11 @@ Register: 68 objects · this scan: 1 new, 0 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **Senate approves Trump pick to lead the Labor Department** — vote · voted · holder: the Senate · formed 2026-10-01 · 5 outlets (peak 5) · `obj_thesenat_approves-department-labor-lead`
+- **Rapper Rick Ross charged with battery after domestic violence accusation** — indictment · charged · holder: ? · formed 2026-10-01 · 7 outlets (peak 7) · `obj_x_accusation-battery-charged-domestic`
+- **DC judge permanently dismisses case charging ex - Olympian with vandalizing Reflecting Pool** — ruling · ruled · holder: a federal court · formed 2026-10-01 · 13 outlets (peak 13) · `obj_afederal_case-charging-dismisses-judge`
+- **Renee Good family sues US government , immigration officials** — suit · sued · holder: DHS · formed 2026-10-01 · 5 outlets (peak 5) · `obj_dhs_family-good-government-immigration`
 
-## Watching (26)
+## Watching (28)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
 - **Former state senator sentenced to 16 months in child solicitation case** — indictment · charged · holder: the Senate · formed 2026-09-23 · 4 outlets (peak 4) · `obj_thesenat_case-child-former-months`
 - **CNN , MS NOW and Politico back at the White House after judge ordered Trump to lift ban** — ruling · ruled · holder: the House · formed 2026-09-24 · 18 outlets (peak 18) · `obj_thehouse_back-ban-cnn-house`
