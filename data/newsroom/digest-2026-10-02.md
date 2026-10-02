@@ -1,9 +1,9 @@
 # Newsroom digest — 2026-10-02
 
-Register: 74 objects · this scan: 1 new, 0 seen again, 0 returned.
+Register: 75 objects · this scan: 1 new, 0 seen again, 0 returned.
 
-## Queued for drafting (0)
-- (nothing cleared the bar)
+## Queued for drafting (1)
+- **Senate Democrats block GOP bills on insider trading ban , national voter ID ahead of midterms** — ruling · ruled · holder: the Senate · formed 2026-10-02 · 12 outlets (peak 12) · `obj_thesenat_ahead-ban-bills-block`
 
 ## Permanence breaks (went silent while unresolved)
 - **Trump Rejects Iran Proposal To Open Strait Of Hormuz** — vote · voted · holder: the President · formed 2026-09-27 · 6 outlets (peak 18) · `obj_thepresi_hormuz-iran-open-proposal` · silent 5d after 2 scans
@@ -12,7 +12,7 @@ Register: 74 objects · this scan: 1 new, 0 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **EC - Council Releases ADG 2 . 0 and Offers Its AI Governance Crosswalks Free to Every Government , Regulator and Standards Body as Nations Split on AI Rules** — ruling · ruled · holder: ? · formed 2026-10-02 · 7 outlets (peak 7) · `obj_x_adg-body-council-crosswalks`
+- **Senate Democrats block GOP bills on insider trading ban , national voter ID ahead of midterms** — ruling · ruled · holder: the Senate · formed 2026-10-02 · 12 outlets (peak 12) · `obj_thesenat_ahead-ban-bills-block`
 
 ## Watching (28)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
