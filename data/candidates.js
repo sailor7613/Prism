@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-10-02T01:12:28.795Z · 22 legislative + 8 news (GDELT, 3d)
+// 2026-10-02T09:55:33.259Z · 22 legislative + 9 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1790903496745,
+    "ts": 1790934905321,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.863,
+      "salience": 0.861,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -262,11 +262,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1790903496745,
+    "ts": 1790934905321,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.854,
+      "salience": 0.852,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -519,11 +519,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1790903496744,
+    "ts": 1790934905320,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.818,
+      "salience": 0.817,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -1937,11 +1937,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1790903496745,
+    "ts": 1790934905321,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.818,
+      "salience": 0.816,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -2194,11 +2194,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1790903496744,
+    "ts": 1790934905321,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.81,
+      "salience": 0.808,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -2451,11 +2451,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1790903496744,
+    "ts": 1790934905321,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.748,
+      "salience": 0.746,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -3364,11 +3364,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1790903496745,
+    "ts": 1790934905321,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.706,
+      "salience": 0.705,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3892,11 +3892,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1790903496744,
+    "ts": 1790934905321,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.683,
+      "salience": 0.682,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4793,11 +4793,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1790903496744,
+    "ts": 1790934905320,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.524,
+      "salience": 0.523,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -5047,11 +5047,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1790903496743,
+    "ts": 1790934905320,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.516,
+      "salience": 0.514,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -5320,11 +5320,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1790903496744,
+    "ts": 1790934905321,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.49,
+      "salience": 0.489,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -6219,11 +6219,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1790903496744,
+    "ts": 1790934905321,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.478,
+      "salience": 0.476,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -7498,11 +7498,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1790903496745,
+    "ts": 1790934905321,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.398,
+      "salience": 0.396,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -8418,11 +8418,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1790903496745,
+    "ts": 1790934905321,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.396,
+      "salience": 0.395,
       "congressGovUrl": null,
       "votes": [
         {
@@ -9328,11 +9328,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1790903496744,
+    "ts": 1790934905321,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.362,
+      "salience": 0.36,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -10246,11 +10246,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1790903496744,
+    "ts": 1790934905321,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.318,
+      "salience": 0.317,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -11126,11 +11126,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1790903496744,
+    "ts": 1790934905321,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.314,
+      "salience": 0.312,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -12002,11 +12002,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1790903496744,
+    "ts": 1790934905320,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.122,
+      "salience": 0.12,
       "congressGovUrl": null,
       "votes": [
         {
@@ -12895,11 +12895,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1790903496744,
+    "ts": 1790934905320,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.115,
+      "salience": 0.113,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -13810,11 +13810,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1790903496744,
+    "ts": 1790934905320,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.108,
+      "salience": 0.107,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -14698,11 +14698,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1790903496743,
+    "ts": 1790934905320,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.104,
+      "salience": 0.102,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -15619,11 +15619,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1790903496743,
+    "ts": 1790934905320,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.093,
+      "salience": 0.091,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -16537,12 +16537,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_claims-demolished-office",
     "source": "news",
-    "ts": 1790903548790,
+    "ts": 1790934933254,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.989,
+      "salience": 0.935,
       "articles": [
         {
           "title": "President Claims Secret Service Wanted Oval Office Demolished",
@@ -16643,12 +16643,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_campaign-cash-chief",
     "source": "news",
-    "ts": 1790903548788,
+    "ts": 1790934933252,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.85,
+      "salience": 0.796,
       "articles": [
         {
           "title": "Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority",
@@ -16747,103 +16747,111 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_ads-criticism-nearly",
+    "cid": "cand_news_before-blitz-campaign",
     "source": "news",
-    "ts": 1790903548787,
+    "ts": 1790934933253,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.644,
+      "salience": 0.59,
       "articles": [
         {
-          "title": "Taxpayers fund nearly $1 . 5M in pro - Trump ads as criticism mounts",
-          "url": "https://www.fox13now.com/news/national-politics/taxpayers-have-funded-nearly-1-5m-in-pro-trump-ads-criticism-is-mounting-including-from-the-gop",
-          "domain": "fox13now.com",
-          "seendate": "2026-09-29T16:15:00Z",
-          "image": "https://cf.cdn.uplynk.com/ause1/slices/284/e63aadb6928b4cd6ab0dec6fb3cddabd/2849035a990748958e1ed97a88ad2649/poster_edc05ed39cda4db994c131c29d9c1889.jpeg"
+          "title": "The Latest : Trump hits the campaign trail , kicking off blitz before midterms",
+          "url": "http://www.idahostatejournal.com/news/national/the-latest-trump-hits-the-campaign-trail-kicking-off-blitz-before-midterms/article_ef295f2f-527e-5d3a-9388-d7744ce1f7c9.html",
+          "domain": "idahostatejournal.com",
+          "seendate": "2026-10-02T06:00:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/idahostatejournal.com/content/tncms/assets/v3/editorial/d/ba/dba20404-1113-55c0-87be-0287f2bd6a95/6abd7d80d1378.image.jpg?crop=1763%2C926%2C0%2C125"
         },
         {
-          "title": "Taxpayers have funded nearly $1 . 5M in pro - Trump ads . Criticism is mounting",
-          "url": "https://www.ksby.com/politics/the-president/taxpayers-have-funded-nearly-1-5m-in-pro-trump-ads-criticism-is-mounting-including-from-the-gop",
-          "domain": "ksby.com",
-          "seendate": "2026-09-29T15:45:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/03/1b/3fc519b244cf83c3b4294df0031e/ap26271697857599.jpg"
+          "title": "The Latest : Trump hits the campaign trail , kicking off blitz before midterms",
+          "url": "https://www.idahostatejournal.com/news/national/the-latest-trump-hits-the-campaign-trail-kicking-off-blitz-before-midterms/article_ef295f2f-527e-5d3a-9388-d7744ce1f7c9.html",
+          "domain": "idahostatejournal.com",
+          "seendate": "2026-10-02T05:30:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/idahostatejournal.com/content/tncms/assets/v3/editorial/d/ba/dba20404-1113-55c0-87be-0287f2bd6a95/6abd7d80d1378.image.jpg?crop=1763%2C926%2C0%2C125"
         },
         {
-          "title": "Taxpayers have funded nearly $1 . 5M in pro - Trump ads . Criticism is mounting , including from the GOP",
-          "url": "https://www.kake.com/news/politics/taxpayers-have-funded-nearly-1-5m-in-pro-trump-ads-criticism-is-mounting-including-from/article_0d22d549-0812-4c85-beb1-52bc76b11a21.html",
-          "domain": "kake.com",
-          "seendate": "2026-09-29T14:45:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/kake.com/content/tncms/assets/v3/editorial/c/54/c549d13b-9373-4058-bcdb-4b5a2b68ece3/6abb1d3543798.image.jpg?crop=1440%2C756%2C0%2C102"
+          "title": "The Latest : Trump hits the campaign trail , kicking off blitz before midterms",
+          "url": "http://www.idahopress.com/ap_news/us/the-latest-trump-hits-the-campaign-trail-kicking-off-blitz-before-midterms/article_cbd98704-f1b8-5a9d-b130-048f97bc6f5b.html",
+          "domain": "idahopress.com",
+          "seendate": "2026-10-02T04:30:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/idahopress.com/content/tncms/assets/v3/editorial/3/6c/36c27c96-983e-58bd-ae93-9970e5e83e6e/6abd7e03e9ec8.image.jpg?crop=1763%2C926%2C0%2C125"
         },
         {
-          "title": "Taxpayers have funded nearly $1 . 5M in pro - Trump ads . Criticism is mounting",
-          "url": "https://www.kztv10.com/politics/the-president/taxpayers-have-funded-nearly-1-5m-in-pro-trump-ads-criticism-is-mounting-including-from-the-gop",
-          "domain": "kztv10.com",
-          "seendate": "2026-09-29T04:15:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/03/1b/3fc519b244cf83c3b4294df0031e/ap26271697857599.jpg"
-        },
-        {
-          "title": "Taxpayers have funded nearly $1 . 5M in pro - Trump ads . Criticism is mounting , including from the GOP",
-          "url": "https://www.pilotonline.com/2026/09/28/us-election-2026-government-ad/",
-          "domain": "pilotonline.com",
-          "seendate": "2026-09-29T04:15:00Z",
-          "image": "https://www.pilotonline.com/wp-content/uploads/2026/09/Trump_57599_28cc56.jpg"
-        },
-        {
-          "title": "Taxpayers have funded nearly $1 . 5M in pro - Trump ads . Criticism is mounting , including from the GOP",
-          "url": "https://www.twincities.com/2026/09/28/us-election-2026-government-ad/",
-          "domain": "twincities.com",
-          "seendate": "2026-09-29T04:00:00Z",
-          "image": "https://www.twincities.com/wp-content/uploads/2026/09/Trump_57599_28cc56.jpg"
-        },
-        {
-          "title": "Taxpayers have funded nearly $1 . 5M in pro - Trump ads . Criticism is mounting , including from the GOP",
-          "url": "https://www.gjsentinel.com/news/us/taxpayers-have-funded-nearly-1-5m-in-pro-trump-ads-criticism-is-mounting-including-from/article_8b2d2bea-fd03-5fad-9cd1-4703983e41b3.html",
-          "domain": "gjsentinel.com",
-          "seendate": "2026-09-29T03:30:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/gjsentinel.com/content/tncms/assets/v3/editorial/7/cd/7cde5ad9-9d8b-5307-9cac-bf9b2deb8c11/6abac0c5cf50f.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "Taxpayers have funded nearly $1 . 5M in pro - Trump ads . Criticism is mounting , including from the GOP",
-          "url": "https://www.timescall.com/2026/09/28/us-election-2026-government-ad/",
-          "domain": "timescall.com",
-          "seendate": "2026-09-29T02:15:00Z",
-          "image": "https://www.timescall.com/wp-content/uploads/2026/09/Trump_57599_28cc56.jpg"
-        },
-        {
-          "title": "Taxpayers have funded nearly $1 . 5M in pro - Trump ads . Criticism is mounting , including from the GOP",
-          "url": "https://www.pressdemocrat.com/2026/09/28/us-election-2026-government-ad/",
-          "domain": "pressdemocrat.com",
-          "seendate": "2026-09-29T02:00:00Z",
-          "image": "https://www.pressdemocrat.com/wp-content/uploads/2026/09/Trump_57599_28cc56.jpg"
-        },
-        {
-          "title": "Taxpayers have funded nearly $1 . 5M in pro - Trump ads . Criticism is mounting , including from the GOP",
-          "url": "https://www.wsls.com/news/politics/2026/09/28/taxpayers-have-funded-nearly-15m-in-pro-trump-ads-criticism-is-mounting-including-from-the-gop/",
-          "domain": "wsls.com",
-          "seendate": "2026-09-29T02:00:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/64KPAO4CBJBANNZYRFG6YEUCGE.jpg?api_key=wsls_8c3a4bc35af7684e"
-        },
-        {
-          "title": "Taxpayers have funded nearly $1 . 5M in pro - Trump ads . Criticism is mounting , including from the GOP",
-          "url": "https://www.mercurynews.com/2026/09/28/us-election-2026-government-ad/",
-          "domain": "mercurynews.com",
-          "seendate": "2026-09-29T01:15:00Z",
-          "image": "https://www.mercurynews.com/wp-content/uploads/2026/09/Trump_57599_28cc56.jpg"
-        },
-        {
-          "title": "Taxpayers have funded nearly $1 . 5M in pro - Trump ads . Criticism is mounting , including from the GOP",
-          "url": "https://www.clickorlando.com/news/politics/2026/09/28/taxpayers-have-funded-nearly-15m-in-pro-trump-ads-criticism-is-mounting-including-from-the-gop/",
-          "domain": "clickorlando.com",
-          "seendate": "2026-09-29T01:15:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/64KPAO4CBJBANNZYRFG6YEUCGE.jpg?api_key=clickorlando_488cff2bcc157b2e"
+          "title": "The Latest : Trump hits the campaign trail , kicking off blitz before midterms",
+          "url": "http://www.dailyadvance.com/news/national/the-latest-trump-hits-the-campaign-trail-kicking-off-blitz-before-midterms/article_5be6d280-c429-5218-9414-26fea5dd5260.html",
+          "domain": "dailyadvance.com",
+          "seendate": "2026-10-02T04:30:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/dailyadvance.com/content/tncms/assets/v3/editorial/5/ae/5ae86241-9ffe-56b3-88b5-29927dbd52ba/6abe572041527.image.jpg?crop=1763%2C926%2C0%2C125"
         }
       ]
     },
-    "title": "Taxpayers have funded nearly $1 . 5M in pro - Trump ads . Criticism is mounting , including from the GOP",
-    "summary": "2026-09-29 fox13now.com: Taxpayers fund nearly $1 . 5M in pro - Trump ads as criticism mounts\n2026-09-29 ksby.com: Taxpayers have funded nearly $1 . 5M in pro - Trump ads . Criticism is mounting\n2026-09-29 kake.com: Taxpayers have funded nearly $1 . 5M in pro - Trump ads . Criticism is mounting , including from the GOP\n2026-09-29 kztv10.com: Taxpayers have funded nearly $1 . 5M in pro - Trump ads . Criticism is mounting\n2026-09-29 pilotonline.com: Taxpayers have funded nearly $1 . 5M in pro - Trump ads . Criticism is mounting , including from the GOP\n2026-09-29 twincities.com: Taxpayers have funded nearly $1 . 5M in pro - Trump ads . Criticism is mounting , including from the GOP",
+    "title": "The Latest : Trump hits the campaign trail , kicking off blitz before midterms",
+    "summary": "2026-10-02 idahostatejournal.com: The Latest : Trump hits the campaign trail , kicking off blitz before midterms\n2026-10-02 idahostatejournal.com: The Latest : Trump hits the campaign trail , kicking off blitz before midterms\n2026-10-02 idahopress.com: The Latest : Trump hits the campaign trail , kicking off blitz before midterms\n2026-10-02 dailyadvance.com: The Latest : Trump hits the campaign trail , kicking off blitz before midterms",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_alaska-investment-korean",
+    "source": "news",
+    "ts": 1790934933252,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.563,
+      "articles": [
+        {
+          "title": "Trump unveils South Korean investment in pipeline in Alaska , site of a tight Senate race",
+          "url": "https://www.cbsnews.com/news/trump-south-korean-investment-alaska-gas-pipeline/",
+          "domain": "cbsnews.com",
+          "seendate": "2026-09-30T23:15:00Z",
+          "image": "https://assets1.cbsnewsstatic.com/hub/i/r/2026/09/30/bd93680e-d153-4d56-8e1d-7dabba6141c2/thumbnail/1200x630/5b9f16c66102253f5bd80079e561bef2/ap26273787572528.jpg"
+        },
+        {
+          "title": "Trump Unveils $54 Billion In South Korean Investment In Alaska , Site Of A Tight Senate Race",
+          "url": "https://www.theyeshivaworld.com/news/general/2604374/trump-unveils-54-billion-in-south-korean-investment-in-alaska-site-of-a-tight-senate-race.html",
+          "domain": "theyeshivaworld.com",
+          "seendate": "2026-09-30T23:00:00Z",
+          "image": "https://www.theyeshivaworld.com/wp-content/uploads/2026/09/AP26272759343246.jpg"
+        },
+        {
+          "title": "Trump will unveil $54 billion in South Korean investment in Alaska",
+          "url": "https://www.presstelegram.com/2026/09/30/trump-south-korean-investment-alaska/",
+          "domain": "presstelegram.com",
+          "seendate": "2026-09-30T17:45:00Z",
+          "image": "https://www.presstelegram.com/wp-content/uploads/2026/09/Trump_AI_43246-1.jpg"
+        },
+        {
+          "title": "Trump will unveil $54 billion in South Korean investment in Alaska , site of a tight Senate race",
+          "url": "https://www.ksat.com/news/politics/2026/09/30/trump-will-unveil-54-billion-in-south-korean-investment-in-alaska-site-of-a-tight-senate-race/",
+          "domain": "ksat.com",
+          "seendate": "2026-09-30T17:15:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/5GCYV3XDGZDJZPE6VRPIVYREHA.jpg?api_key=ksat_9a37fc89631abedf"
+        },
+        {
+          "title": "Trump will unveil $54 billion in South Korean investment in Alaska , site of a tight Senate race",
+          "url": "https://www.wral.com/news/ap/03d3b-trump-will-unveil-54-billion-in-south-korean-investment-in-alaska-site-of-a-tight-senate-race/",
+          "domain": "wral.com",
+          "seendate": "2026-09-30T15:15:00Z",
+          "image": "https://images.wral.com/89d2f334-21cb-568e-b143-4b6b27df523d"
+        },
+        {
+          "title": "Trump will unveil $54 billion in South Korean investment in Alaska",
+          "url": "https://www.dailylocal.com/2026/09/30/trump-south-korean-investment-alaska/",
+          "domain": "dailylocal.com",
+          "seendate": "2026-09-30T15:15:00Z",
+          "image": "https://www.dailylocal.com/wp-content/uploads/2026/09/Trump_AI_43246-1.jpg"
+        }
+      ]
+    },
+    "title": "Trump will unveil $54 billion in South Korean investment in Alaska , site of a tight Senate race",
+    "summary": "2026-09-30 cbsnews.com: Trump unveils South Korean investment in pipeline in Alaska , site of a tight Senate race\n2026-09-30 theyeshivaworld.com: Trump Unveils $54 Billion In South Korean Investment In Alaska , Site Of A Tight Senate Race\n2026-09-30 presstelegram.com: Trump will unveil $54 billion in South Korean investment in Alaska\n2026-09-30 ksat.com: Trump will unveil $54 billion in South Korean investment in Alaska , site of a tight Senate race\n2026-09-30 wral.com: Trump will unveil $54 billion in South Korean investment in Alaska , site of a tight Senate race\n2026-09-30 dailylocal.com: Trump will unveil $54 billion in South Korean investment in Alaska",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -16855,12 +16863,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_approval-center-design",
     "source": "news",
-    "ts": 1790903548790,
+    "ts": 1790934933255,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.592,
+      "salience": 0.537,
       "articles": [
         {
           "title": "Federal panel gives final approval to new design for White House security screening center",
@@ -16896,71 +16904,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_alaska-investment-korean",
-    "source": "news",
-    "ts": 1790903548788,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.563,
-      "articles": [
-        {
-          "title": "Trump unveils South Korean investment in pipeline in Alaska , site of a tight Senate race",
-          "url": "https://www.cbsnews.com/news/trump-south-korean-investment-alaska-gas-pipeline/",
-          "domain": "cbsnews.com",
-          "seendate": "2026-09-30T23:15:00Z",
-          "image": "https://assets1.cbsnewsstatic.com/hub/i/r/2026/09/30/bd93680e-d153-4d56-8e1d-7dabba6141c2/thumbnail/1200x630/5b9f16c66102253f5bd80079e561bef2/ap26273787572528.jpg"
-        },
-        {
-          "title": "Trump will unveil $54 billion in South Korean investment in Alaska",
-          "url": "https://www.presstelegram.com/2026/09/30/trump-south-korean-investment-alaska/",
-          "domain": "presstelegram.com",
-          "seendate": "2026-09-30T17:45:00Z",
-          "image": "https://www.presstelegram.com/wp-content/uploads/2026/09/Trump_AI_43246-1.jpg"
-        },
-        {
-          "title": "Trump will unveil $54 billion in South Korean investment in Alaska , site of a tight Senate race",
-          "url": "https://www.ksat.com/news/politics/2026/09/30/trump-will-unveil-54-billion-in-south-korean-investment-in-alaska-site-of-a-tight-senate-race/",
-          "domain": "ksat.com",
-          "seendate": "2026-09-30T17:15:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/5GCYV3XDGZDJZPE6VRPIVYREHA.jpg?api_key=ksat_9a37fc89631abedf"
-        },
-        {
-          "title": "Trump will unveil $54 billion in South Korean investment in Alaska , site of a tight Senate race",
-          "url": "https://www.wral.com/news/ap/03d3b-trump-will-unveil-54-billion-in-south-korean-investment-in-alaska-site-of-a-tight-senate-race/",
-          "domain": "wral.com",
-          "seendate": "2026-09-30T15:15:00Z",
-          "image": "https://images.wral.com/89d2f334-21cb-568e-b143-4b6b27df523d"
-        },
-        {
-          "title": "Trump will unveil $54 billion in South Korean investment in Alaska",
-          "url": "https://www.dailylocal.com/2026/09/30/trump-south-korean-investment-alaska/",
-          "domain": "dailylocal.com",
-          "seendate": "2026-09-30T15:15:00Z",
-          "image": "https://www.dailylocal.com/wp-content/uploads/2026/09/Trump_AI_43246-1.jpg"
-        }
-      ]
-    },
-    "title": "Trump will unveil $54 billion in South Korean investment in Alaska , site of a tight Senate race",
-    "summary": "2026-09-30 cbsnews.com: Trump unveils South Korean investment in pipeline in Alaska , site of a tight Senate race\n2026-09-30 presstelegram.com: Trump will unveil $54 billion in South Korean investment in Alaska\n2026-09-30 ksat.com: Trump will unveil $54 billion in South Korean investment in Alaska , site of a tight Senate race\n2026-09-30 wral.com: Trump will unveil $54 billion in South Korean investment in Alaska , site of a tight Senate race\n2026-09-30 dailylocal.com: Trump will unveil $54 billion in South Korean investment in Alaska",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_800m-approved-cancel",
     "source": "news",
-    "ts": 1790903548787,
+    "ts": 1790934933252,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.542,
+      "salience": 0.488,
       "articles": [
         {
           "title": "Watchdog says Trump cant cancel $800M in spending approved by Congress",
@@ -17005,12 +16956,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ads-air-campaign",
     "source": "news",
-    "ts": 1790903548788,
+    "ts": 1790934933252,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.369,
+      "salience": 0.315,
       "articles": [
         {
           "title": "White House uses taxpayer money to air Trump campaign ads – NBC Bay Area",
@@ -17062,12 +17013,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_counsel-former-jack",
     "source": "news",
-    "ts": 1790903548788,
+    "ts": 1790934933252,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.267,
+      "salience": 0.212,
       "articles": [
         {
           "title": "Senate Republicans target former special counsel Jack Smith over Trump probes",
@@ -17094,6 +17045,49 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Senate Republicans target former special counsel Jack Smith over Trump probes",
     "summary": "2026-09-29 abc15.com: Senate Republicans target former special counsel Jack Smith over Trump probes\n2026-09-29 wtkr.com: Senate Republicans target former special counsel Jack Smith over Trump probes\n2026-09-29 kristv.com: Senate Republicans target former special counsel Jack Smith over Trump probes",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_ads-criticism-nearly",
+    "source": "news",
+    "ts": 1790934933252,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.205,
+      "articles": [
+        {
+          "title": "Taxpayers fund nearly $1 . 5M in pro - Trump ads as criticism mounts",
+          "url": "https://www.fox13now.com/news/national-politics/taxpayers-have-funded-nearly-1-5m-in-pro-trump-ads-criticism-is-mounting-including-from-the-gop",
+          "domain": "fox13now.com",
+          "seendate": "2026-09-29T16:15:00Z",
+          "image": "https://cf.cdn.uplynk.com/ause1/slices/284/e63aadb6928b4cd6ab0dec6fb3cddabd/2849035a990748958e1ed97a88ad2649/poster_edc05ed39cda4db994c131c29d9c1889.jpeg"
+        },
+        {
+          "title": "Taxpayers have funded nearly $1 . 5M in pro - Trump ads . Criticism is mounting",
+          "url": "https://www.ksby.com/politics/the-president/taxpayers-have-funded-nearly-1-5m-in-pro-trump-ads-criticism-is-mounting-including-from-the-gop",
+          "domain": "ksby.com",
+          "seendate": "2026-09-29T15:45:00Z",
+          "image": "https://ewscripps.brightspotcdn.com/03/1b/3fc519b244cf83c3b4294df0031e/ap26271697857599.jpg"
+        },
+        {
+          "title": "Taxpayers have funded nearly $1 . 5M in pro - Trump ads . Criticism is mounting , including from the GOP",
+          "url": "https://www.kake.com/news/politics/taxpayers-have-funded-nearly-1-5m-in-pro-trump-ads-criticism-is-mounting-including-from/article_0d22d549-0812-4c85-beb1-52bc76b11a21.html",
+          "domain": "kake.com",
+          "seendate": "2026-09-29T14:45:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/kake.com/content/tncms/assets/v3/editorial/c/54/c549d13b-9373-4058-bcdb-4b5a2b68ece3/6abb1d3543798.image.jpg?crop=1440%2C756%2C0%2C102"
+        }
+      ]
+    },
+    "title": "Taxpayers have funded nearly $1 . 5M in pro - Trump ads . Criticism is mounting",
+    "summary": "2026-09-29 fox13now.com: Taxpayers fund nearly $1 . 5M in pro - Trump ads as criticism mounts\n2026-09-29 ksby.com: Taxpayers have funded nearly $1 . 5M in pro - Trump ads . Criticism is mounting\n2026-09-29 kake.com: Taxpayers have funded nearly $1 . 5M in pro - Trump ads . Criticism is mounting , including from the GOP",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,

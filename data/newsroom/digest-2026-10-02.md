@@ -1,10 +1,9 @@
 # Newsroom digest — 2026-10-02
 
-Register: 73 objects · this scan: 2 new, 0 seen again, 0 returned.
+Register: 73 objects · this scan: 0 new, 0 seen again, 0 returned.
 
-## Queued for drafting (2)
-- **Trump economic approval falls as he says White House has a public relation problem** — vote · voted · holder: the President · formed 2026-10-01 · 7 outlets (peak 7) · `obj_thepresi_approval-economic-falls-house`
-- **New ICE guidance sets tighter rules for traffic stops , a memo shows** — ruling · ruled · holder: DHS · formed 2026-10-01 · 5 outlets (peak 5) · `obj_dhs_guidance-ice-memo-rules`
+## Queued for drafting (0)
+- (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
 - **Trump Rejects Iran Proposal To Open Strait Of Hormuz** — vote · voted · holder: the President · formed 2026-09-27 · 6 outlets (peak 18) · `obj_thepresi_hormuz-iran-open-proposal` · silent 5d after 2 scans
@@ -13,8 +12,7 @@ Register: 73 objects · this scan: 2 new, 0 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **Trump economic approval falls as he says White House has a public relation problem** — vote · voted · holder: the President · formed 2026-10-01 · 7 outlets (peak 7) · `obj_thepresi_approval-economic-falls-house`
-- **New ICE guidance sets tighter rules for traffic stops , a memo shows** — ruling · ruled · holder: DHS · formed 2026-10-01 · 5 outlets (peak 5) · `obj_dhs_guidance-ice-memo-rules`
+- none
 
 ## Watching (28)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
