@@ -1,15 +1,529 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-09-28T14:11:48.841Z · 19 legislative + 5 news (GDELT, 3d)
+// 2026-10-03T16:32:06.069Z · 22 legislative + 5 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
+    "cid": "cand_leg_sjres-119-197",
+    "source": "legislative",
+    "ts": 1791045093194,
+    "raw": {
+      "method": "legislative_rollcall_v1",
+      "billId": "sjres-119-197",
+      "salience": 0.856,
+      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
+      "votes": [
+        {
+          "voteId": "s-119-2-251",
+          "chamber": "senate",
+          "date": "September 29, 2026,  02:21 PM",
+          "question": "On the Motion to Proceed",
+          "result": "Motion to Proceed Rejected",
+          "margin": -0.03,
+          "totals": {
+            "yea": 48,
+            "nay": 51,
+            "present": 0,
+            "notVoting": 1
+          },
+          "party": {
+            "D": {
+              "yea": 45,
+              "nay": 0
+            },
+            "R": {
+              "yea": 1,
+              "nay": 51
+            },
+            "I": {
+              "yea": 2,
+              "nay": 0
+            }
+          },
+          "positions": {
+            "yea": [
+              "A000382",
+              "B001230",
+              "B001267",
+              "B001277",
+              "B001303",
+              "B001288",
+              "C000127",
+              "C001035",
+              "C001088",
+              "C001113",
+              "D000622",
+              "D000563",
+              "F000479",
+              "G000574",
+              "G000555",
+              "H001076",
+              "H001046",
+              "H000273",
+              "H001042",
+              "K000384",
+              "K000377",
+              "K000394",
+              "K000383",
+              "K000367",
+              "M000133",
+              "M001176",
+              "M001169",
+              "M001111",
+              "O000174",
+              "P000145",
+              "P000595",
+              "R000122",
+              "R000608",
+              "S000033",
+              "S001194",
+              "S001150",
+              "S000148",
+              "S001181",
+              "S001208",
+              "S001203",
+              "V000128",
+              "W000805",
+              "W000790",
+              "W000817",
+              "W000800",
+              "W000802",
+              "W000779"
+            ],
+            "nay": [
+              "B001299",
+              "B001261",
+              "B001243",
+              "B001236",
+              "B001319",
+              "B001305",
+              "C001047",
+              "C001075",
+              "C001056",
+              "C001095",
+              "C001096",
+              "C000880",
+              "C001098",
+              "C001114",
+              "D000618",
+              "E000295",
+              "F000463",
+              "G000359",
+              "G000386",
+              "H000601",
+              "H001089",
+              "H001061",
+              "H001104",
+              "H001079",
+              "J000293",
+              "J000312",
+              "K000393",
+              "L000575",
+              "L000577",
+              "L000571",
+              "M001198",
+              "M000355",
+              "M001243",
+              "M001244",
+              "M000934",
+              "M001242",
+              "M001153",
+              "P000603",
+              "R000618",
+              "R000584",
+              "R000605",
+              "S001227",
+              "S001217",
+              "S001184",
+              "S001232",
+              "T000250",
+              "T000476",
+              "T000278",
+              "W000437",
+              "Y000064"
+            ],
+            "present": [],
+            "notVoting": [
+              "S001198"
+            ]
+          }
+        }
+      ]
+    },
+    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Centers for Medicare & Medicaid Services of the Department of Health and Human Services relating to \"Patient Protection and Affordable Care Act, HHS Notice of Benefit and Payment Parameters for 2027; and Basic Health Program\".",
+    "summary": "2026-09-29 senate: On the Motion to Proceed — Motion to Proceed Rejected (48-51; D 45-0 · R 1-51 · I 2-0)",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [
+      "A000382",
+      "B001230",
+      "B001267",
+      "B001277",
+      "B001303",
+      "B001288",
+      "C000127",
+      "C001035",
+      "C001088",
+      "C001113",
+      "D000622",
+      "D000563",
+      "F000479",
+      "G000574",
+      "G000555",
+      "H001076",
+      "H001046",
+      "H000273",
+      "H001042",
+      "K000384",
+      "K000377",
+      "K000394",
+      "K000383",
+      "K000367",
+      "M000133",
+      "M001176",
+      "M001169",
+      "M001111",
+      "O000174",
+      "P000145",
+      "P000595",
+      "R000122",
+      "R000608",
+      "S000033",
+      "S001194",
+      "S001150",
+      "S000148",
+      "S001181",
+      "S001208",
+      "S001203",
+      "V000128",
+      "W000805",
+      "W000790",
+      "W000817",
+      "W000800",
+      "W000802",
+      "W000779",
+      "B001299",
+      "B001261",
+      "B001243",
+      "B001236",
+      "B001319",
+      "B001305",
+      "C001047",
+      "C001075",
+      "C001056",
+      "C001095",
+      "C001096",
+      "C000880",
+      "C001098",
+      "C001114",
+      "D000618",
+      "E000295",
+      "F000463",
+      "G000359",
+      "G000386",
+      "H000601",
+      "H001089",
+      "H001061",
+      "H001104",
+      "H001079",
+      "J000293",
+      "J000312",
+      "K000393",
+      "L000575",
+      "L000577",
+      "L000571",
+      "M001198",
+      "M000355",
+      "M001243",
+      "M001244",
+      "M000934",
+      "M001242",
+      "M001153",
+      "P000603",
+      "R000618",
+      "R000584",
+      "R000605",
+      "S001227",
+      "S001217",
+      "S001184",
+      "S001232",
+      "T000250",
+      "T000476",
+      "T000278",
+      "W000437",
+      "Y000064"
+    ],
+    "bills": [
+      "sjres-119-197"
+    ],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_leg_hr-119-7008",
+    "source": "legislative",
+    "ts": 1791045093194,
+    "raw": {
+      "method": "legislative_rollcall_v1",
+      "billId": "hr-119-7008",
+      "salience": 0.846,
+      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
+      "votes": [
+        {
+          "voteId": "s-119-2-253",
+          "chamber": "senate",
+          "date": "September 30, 2026,  11:58 AM",
+          "question": "On Cloture on the Motion to Proceed",
+          "result": "Cloture on the Motion to Proceed Rejected",
+          "margin": 0.06,
+          "totals": {
+            "yea": 53,
+            "nay": 47,
+            "present": 0,
+            "notVoting": 0
+          },
+          "party": {
+            "D": {
+              "yea": 0,
+              "nay": 45
+            },
+            "R": {
+              "yea": 53,
+              "nay": 0
+            },
+            "I": {
+              "yea": 0,
+              "nay": 2
+            }
+          },
+          "positions": {
+            "yea": [
+              "B001299",
+              "B001261",
+              "B001243",
+              "B001236",
+              "B001319",
+              "B001305",
+              "C001047",
+              "C001075",
+              "C001035",
+              "C001056",
+              "C001095",
+              "C001096",
+              "C000880",
+              "C001098",
+              "C001114",
+              "D000618",
+              "E000295",
+              "F000463",
+              "G000359",
+              "G000386",
+              "H000601",
+              "H001089",
+              "H001061",
+              "H001104",
+              "H001079",
+              "J000293",
+              "J000312",
+              "K000393",
+              "L000575",
+              "L000577",
+              "L000571",
+              "M001198",
+              "M000355",
+              "M001243",
+              "M001244",
+              "M000934",
+              "M001242",
+              "M001153",
+              "P000603",
+              "R000618",
+              "R000584",
+              "R000605",
+              "S001227",
+              "S001217",
+              "S001184",
+              "S001232",
+              "S001198",
+              "T000250",
+              "T000476",
+              "T000278",
+              "W000437",
+              "Y000064"
+            ],
+            "nay": [
+              "A000382",
+              "B001230",
+              "B001267",
+              "B001277",
+              "B001303",
+              "B001288",
+              "C000127",
+              "C001088",
+              "C001113",
+              "D000622",
+              "D000563",
+              "F000479",
+              "G000574",
+              "G000555",
+              "H001076",
+              "H001046",
+              "H000273",
+              "H001042",
+              "K000384",
+              "K000377",
+              "K000394",
+              "K000383",
+              "K000367",
+              "M000133",
+              "M001176",
+              "M001169",
+              "M001111",
+              "O000174",
+              "P000145",
+              "P000595",
+              "R000122",
+              "R000608",
+              "S000033",
+              "S001194",
+              "S001150",
+              "S000148",
+              "S001181",
+              "S001208",
+              "S001203",
+              "V000128",
+              "W000805",
+              "W000790",
+              "W000817",
+              "W000800",
+              "W000802",
+              "W000779"
+            ],
+            "present": [],
+            "notVoting": []
+          }
+        }
+      ]
+    },
+    "title": "Stop Insider Trading Act",
+    "summary": "2026-09-30 senate: On Cloture on the Motion to Proceed — Cloture on the Motion to Proceed Rejected (53-47; D 0-45 · R 53-0 · I 0-2)",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [
+      "B001299",
+      "B001261",
+      "B001243",
+      "B001236",
+      "B001319",
+      "B001305",
+      "C001047",
+      "C001075",
+      "C001035",
+      "C001056",
+      "C001095",
+      "C001096",
+      "C000880",
+      "C001098",
+      "C001114",
+      "D000618",
+      "E000295",
+      "F000463",
+      "G000359",
+      "G000386",
+      "H000601",
+      "H001089",
+      "H001061",
+      "H001104",
+      "H001079",
+      "J000293",
+      "J000312",
+      "K000393",
+      "L000575",
+      "L000577",
+      "L000571",
+      "M001198",
+      "M000355",
+      "M001243",
+      "M001244",
+      "M000934",
+      "M001242",
+      "M001153",
+      "P000603",
+      "R000618",
+      "R000584",
+      "R000605",
+      "S001227",
+      "S001217",
+      "S001184",
+      "S001232",
+      "S001198",
+      "T000250",
+      "T000476",
+      "T000278",
+      "W000437",
+      "Y000064",
+      "A000382",
+      "B001230",
+      "B001267",
+      "B001277",
+      "B001303",
+      "B001288",
+      "C000127",
+      "C001088",
+      "C001113",
+      "D000622",
+      "D000563",
+      "F000479",
+      "G000574",
+      "G000555",
+      "H001076",
+      "H001046",
+      "H000273",
+      "H001042",
+      "K000384",
+      "K000377",
+      "K000394",
+      "K000383",
+      "K000367",
+      "M000133",
+      "M001176",
+      "M001169",
+      "M001111",
+      "O000174",
+      "P000145",
+      "P000595",
+      "R000122",
+      "R000608",
+      "S000033",
+      "S001194",
+      "S001150",
+      "S000148",
+      "S001181",
+      "S001208",
+      "S001203",
+      "V000128",
+      "W000805",
+      "W000790",
+      "W000817",
+      "W000800",
+      "W000802",
+      "W000779"
+    ],
+    "bills": [
+      "hr-119-7008"
+    ],
+    "fitness": null,
+    "status": "new"
+  },
+  {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1790604687587,
+    "ts": 1791045093193,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.834,
+      "salience": 0.811,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -1421,13 +1935,270 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
+    "cid": "cand_leg_hr-119-9340",
+    "source": "legislative",
+    "ts": 1791045093194,
+    "raw": {
+      "method": "legislative_rollcall_v1",
+      "billId": "hr-119-9340",
+      "salience": 0.81,
+      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
+      "votes": [
+        {
+          "voteId": "s-119-2-254",
+          "chamber": "senate",
+          "date": "September 30, 2026,  12:51 PM",
+          "question": "On Cloture on the Motion to Proceed",
+          "result": "Cloture on the Motion to Proceed Rejected",
+          "margin": 0.14,
+          "totals": {
+            "yea": 57,
+            "nay": 43,
+            "present": 0,
+            "notVoting": 0
+          },
+          "party": {
+            "D": {
+              "yea": 4,
+              "nay": 41
+            },
+            "R": {
+              "yea": 53,
+              "nay": 0
+            },
+            "I": {
+              "yea": 0,
+              "nay": 2
+            }
+          },
+          "positions": {
+            "yea": [
+              "B001299",
+              "B001261",
+              "B001243",
+              "B001236",
+              "B001319",
+              "B001305",
+              "C001047",
+              "C001075",
+              "C001035",
+              "C001056",
+              "C001095",
+              "C001096",
+              "C000880",
+              "C001098",
+              "C001114",
+              "D000618",
+              "E000295",
+              "F000463",
+              "G000359",
+              "G000386",
+              "H000601",
+              "H001076",
+              "H001089",
+              "H001061",
+              "H001104",
+              "H001079",
+              "J000293",
+              "J000312",
+              "K000393",
+              "K000367",
+              "L000575",
+              "L000577",
+              "L000571",
+              "M001198",
+              "M000355",
+              "M001243",
+              "M001244",
+              "M000934",
+              "M001242",
+              "M001153",
+              "O000174",
+              "P000603",
+              "R000618",
+              "R000584",
+              "R000605",
+              "S001227",
+              "S001217",
+              "S001184",
+              "S001232",
+              "S001198",
+              "T000250",
+              "T000476",
+              "T000278",
+              "W000790",
+              "W000437",
+              "Y000064"
+            ],
+            "nay": [
+              "A000382",
+              "B001230",
+              "B001267",
+              "B001277",
+              "B001303",
+              "B001288",
+              "C000127",
+              "C001088",
+              "C001113",
+              "D000622",
+              "D000563",
+              "F000479",
+              "G000574",
+              "G000555",
+              "H001046",
+              "H000273",
+              "H001042",
+              "K000384",
+              "K000377",
+              "K000394",
+              "K000383",
+              "M000133",
+              "M001176",
+              "M001169",
+              "M001111",
+              "P000145",
+              "P000595",
+              "R000122",
+              "R000608",
+              "S000033",
+              "S001194",
+              "S001150",
+              "S000148",
+              "S001181",
+              "S001208",
+              "S001203",
+              "V000128",
+              "W000805",
+              "W000817",
+              "W000800",
+              "W000802",
+              "W000779"
+            ],
+            "present": [],
+            "notVoting": []
+          }
+        }
+      ]
+    },
+    "title": "Ratepayer Protection Act",
+    "summary": "2026-09-30 senate: On Cloture on the Motion to Proceed — Cloture on the Motion to Proceed Rejected (57-43; D 4-41 · R 53-0 · I 0-2)",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [
+      "B001299",
+      "B001261",
+      "B001243",
+      "B001236",
+      "B001319",
+      "B001305",
+      "C001047",
+      "C001075",
+      "C001035",
+      "C001056",
+      "C001095",
+      "C001096",
+      "C000880",
+      "C001098",
+      "C001114",
+      "D000618",
+      "E000295",
+      "F000463",
+      "G000359",
+      "G000386",
+      "H000601",
+      "H001076",
+      "H001089",
+      "H001061",
+      "H001104",
+      "H001079",
+      "J000293",
+      "J000312",
+      "K000393",
+      "K000367",
+      "L000575",
+      "L000577",
+      "L000571",
+      "M001198",
+      "M000355",
+      "M001243",
+      "M001244",
+      "M000934",
+      "M001242",
+      "M001153",
+      "O000174",
+      "P000603",
+      "R000618",
+      "R000584",
+      "R000605",
+      "S001227",
+      "S001217",
+      "S001184",
+      "S001232",
+      "S001198",
+      "T000250",
+      "T000476",
+      "T000278",
+      "W000790",
+      "W000437",
+      "Y000064",
+      "A000382",
+      "B001230",
+      "B001267",
+      "B001277",
+      "B001303",
+      "B001288",
+      "C000127",
+      "C001088",
+      "C001113",
+      "D000622",
+      "D000563",
+      "F000479",
+      "G000574",
+      "G000555",
+      "H001046",
+      "H000273",
+      "H001042",
+      "K000384",
+      "K000377",
+      "K000394",
+      "K000383",
+      "M000133",
+      "M001176",
+      "M001169",
+      "M001111",
+      "P000145",
+      "P000595",
+      "R000122",
+      "R000608",
+      "S000033",
+      "S001194",
+      "S001150",
+      "S000148",
+      "S001181",
+      "S001208",
+      "S001203",
+      "V000128",
+      "W000805",
+      "W000817",
+      "W000800",
+      "W000802",
+      "W000779"
+    ],
+    "bills": [
+      "hr-119-9340"
+    ],
+    "fitness": null,
+    "status": "new"
+  },
+  {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1790604687588,
+    "ts": 1791045093194,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.825,
+      "salience": 0.803,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -1680,11 +2451,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1790604687587,
+    "ts": 1791045093194,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.763,
+      "salience": 0.74,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -2593,12 +3364,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1790604687588,
+    "ts": 1791045093194,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.722,
-      "congressGovUrl": null,
+      "salience": 0.699,
+      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
           "voteId": "s-119-2-243",
@@ -3007,7 +3778,7 @@ window.PRISM_CANDIDATES = [
         }
       ]
     },
-    "title": "s-119-4668 (3 roll calls)",
+    "title": "Protect College Sports Act of 2026 (3 roll calls)",
     "summary": "2026-09-24 senate: On the Cloture Motion — Cloture Motion Agreed to (74-25; D 24-21 · R 49-3 · I 1-1)\n2026-09-17 senate: On the Motion to Proceed — Motion to Proceed Agreed to (77-22; D 27-18 · R 49-3 · I 1-1)\n2026-09-15 senate: On Cloture on the Motion to Proceed — Cloture on the Motion to Proceed Agreed to (74-24; D 24-19 · R 49-4 · I 1-1)",
     "framingDraft": null,
     "suggestedAxes": null,
@@ -3121,11 +3892,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1790604687587,
+    "ts": 1791045093194,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.699,
+      "salience": 0.676,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4022,11 +4793,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1790604687587,
+    "ts": 1791045093193,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.54,
+      "salience": 0.517,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -4276,11 +5047,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1790604687587,
+    "ts": 1791045093193,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.531,
+      "salience": 0.508,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -4549,11 +5320,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1790604687588,
+    "ts": 1791045093194,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.506,
+      "salience": 0.483,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5448,11 +6219,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1790604687587,
+    "ts": 1791045093193,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.493,
+      "salience": 0.471,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6727,11 +7498,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1790604687588,
+    "ts": 1791045093194,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.413,
+      "salience": 0.39,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7647,11 +8418,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1790604687588,
+    "ts": 1791045093194,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.412,
+      "salience": 0.389,
       "congressGovUrl": null,
       "votes": [
         {
@@ -8557,11 +9328,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1790604687588,
+    "ts": 1791045093194,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.377,
+      "salience": 0.354,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9475,11 +10246,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1790604687587,
+    "ts": 1791045093194,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.334,
+      "salience": 0.311,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10355,11 +11126,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1790604687587,
+    "ts": 1791045093193,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.329,
+      "salience": 0.307,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11231,11 +12002,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1790604687587,
+    "ts": 1791045093193,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.137,
+      "salience": 0.115,
       "congressGovUrl": null,
       "votes": [
         {
@@ -12124,11 +12895,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1790604687587,
+    "ts": 1791045093193,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.13,
+      "salience": 0.108,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -13039,11 +13810,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1790604687587,
+    "ts": 1791045093193,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.124,
+      "salience": 0.101,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -13927,11 +14698,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1790604687586,
+    "ts": 1791045093193,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.119,
+      "salience": 0.097,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -14848,11 +15619,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1790604687586,
+    "ts": 1791045093193,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.108,
+      "salience": 0.085,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -15764,415 +16535,415 @@ window.PRISM_CANDIDATES = [
     "mts": 1784044297586
   },
   {
-    "cid": "cand_news_810-about-canceled",
+    "cid": "cand_news_approval-center-design",
     "source": "news",
-    "ts": 1790604708836,
+    "ts": 1791045126066,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.994,
+      "salience": 0.748,
       "articles": [
         {
-          "title": "What to know about the $810 million in spending canceled by President Trump",
-          "url": "https://www.wdiy.org/npr-news/2026-09-28/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
-          "domain": "wdiy.org",
-          "seendate": "2026-09-28T13:15:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/c1/be/d961f31c4644bdc1daa89c0c8f3d/gettyimages-2284040971.jpg"
-        },
-        {
-          "title": "What to know about the $810 million in spending canceled by President Trump",
-          "url": "https://www.aspenpublicradio.org/2026-09-28/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
-          "domain": "aspenpublicradio.org",
-          "seendate": "2026-09-28T13:15:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/c1/be/d961f31c4644bdc1daa89c0c8f3d/gettyimages-2284040971.jpg"
-        },
-        {
-          "title": "What to know about the $810 million in spending canceled by President Trump",
-          "url": "https://www.whqr.org/2026-09-28/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
-          "domain": "whqr.org",
-          "seendate": "2026-09-28T13:15:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/c1/be/d961f31c4644bdc1daa89c0c8f3d/gettyimages-2284040971.jpg"
-        },
-        {
-          "title": "What to know about the $810 million in spending canceled by President Trump",
-          "url": "https://www.wunc.org/2026-09-28/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
-          "domain": "wunc.org",
-          "seendate": "2026-09-28T13:15:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/c1/be/d961f31c4644bdc1daa89c0c8f3d/gettyimages-2284040971.jpg"
-        },
-        {
-          "title": "What to know about the $810 million in spending canceled by President Trump",
-          "url": "https://www.wkyufm.org/news/2026-09-28/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
-          "domain": "wkyufm.org",
-          "seendate": "2026-09-28T12:15:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/c1/be/d961f31c4644bdc1daa89c0c8f3d/gettyimages-2284040971.jpg"
-        },
-        {
-          "title": "What to know about the $810 million in spending canceled by President Trump",
-          "url": "https://www.wyso.org/npr-news/2026-09-28/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
-          "domain": "wyso.org",
-          "seendate": "2026-09-28T11:30:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/c1/be/d961f31c4644bdc1daa89c0c8f3d/gettyimages-2284040971.jpg"
-        },
-        {
-          "title": "What to know about the $810 million in spending canceled by President Trump",
-          "url": "https://kansaspublicradio.org/npr-news/2026-09-28/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
-          "domain": "kansaspublicradio.org",
-          "seendate": "2026-09-28T11:30:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/c1/be/d961f31c4644bdc1daa89c0c8f3d/gettyimages-2284040971.jpg"
-        },
-        {
-          "title": "What to know about the $810 million in spending canceled by President Trump",
-          "url": "https://www.northernpublicradio.org/2026-09-28/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
-          "domain": "northernpublicradio.org",
-          "seendate": "2026-09-28T11:30:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/c1/be/d961f31c4644bdc1daa89c0c8f3d/gettyimages-2284040971.jpg"
-        },
-        {
-          "title": "What to know about the $810 million in spending canceled by President Trump",
-          "url": "https://news.wfsu.org/npr-news/2026-09-28/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
-          "domain": "news.wfsu.org",
-          "seendate": "2026-09-28T11:30:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/c1/be/d961f31c4644bdc1daa89c0c8f3d/gettyimages-2284040971.jpg"
-        },
-        {
-          "title": "What to know about the $810 million in spending canceled by President Trump",
-          "url": "https://www.kwit.org/2026-09-28/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
-          "domain": "kwit.org",
-          "seendate": "2026-09-28T11:15:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/c1/be/d961f31c4644bdc1daa89c0c8f3d/gettyimages-2284040971.jpg"
-        },
-        {
-          "title": "What to know about the $810 million in spending canceled by President Trump",
-          "url": "https://www.kazu.org/npr-news/2026-09-28/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
-          "domain": "kazu.org",
-          "seendate": "2026-09-28T11:15:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/c1/be/d961f31c4644bdc1daa89c0c8f3d/gettyimages-2284040971.jpg"
-        },
-        {
-          "title": "What to know about the $810 million in spending canceled by President Trump",
-          "url": "https://www.kzyx.org/npr-news/2026-09-28/what-to-know-about-the-810-million-in-spending-canceled-by-president-trump",
-          "domain": "kzyx.org",
-          "seendate": "2026-09-28T11:00:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/c1/be/d961f31c4644bdc1daa89c0c8f3d/gettyimages-2284040971.jpg"
-        }
-      ]
-    },
-    "title": "What to know about the $810 million in spending canceled by President Trump",
-    "summary": "2026-09-28 wdiy.org: What to know about the $810 million in spending canceled by President Trump\n2026-09-28 aspenpublicradio.org: What to know about the $810 million in spending canceled by President Trump\n2026-09-28 whqr.org: What to know about the $810 million in spending canceled by President Trump\n2026-09-28 wunc.org: What to know about the $810 million in spending canceled by President Trump\n2026-09-28 wkyufm.org: What to know about the $810 million in spending canceled by President Trump\n2026-09-28 wyso.org: What to know about the $810 million in spending canceled by President Trump",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_abortion-collins-court",
-    "source": "news",
-    "ts": 1790604708836,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.955,
-      "articles": [
-        {
-          "title": "Supreme Court Vote Shadows Sen . Collins in First Race after Abortion Decision",
-          "url": "https://989wclz.com/news/074470-supreme-court-vote-shadows-sen-collins-in-first-race-after-abortion-decision/",
-          "domain": "989wclz.com",
-          "seendate": "2026-09-28T07:00:00Z",
-          "image": "https://wgan.com/wp-content/blogs.dir/47/files/2026/09/AP26266540307822-1-620x400.jpg"
-        },
-        {
-          "title": "Supreme Court Vote Shadows Sen . Collins in First Race after Abortion Decision",
-          "url": "https://coast931.com/news/074470-supreme-court-vote-shadows-sen-collins-in-first-race-after-abortion-decision/",
-          "domain": "coast931.com",
-          "seendate": "2026-09-28T05:30:00Z",
-          "image": "https://wgan.com/wp-content/blogs.dir/47/files/2026/09/AP26266540307822-1-620x400.jpg"
-        },
-        {
-          "title": "Supreme Court vote shadows Maine Sen . Susan Collins in her first race after abortion rights decision",
-          "url": "https://www.santafenewmexican.com/ap/national/supreme-court-vote-shadows-maine-sen-susan-collins-in-her-first-race-after-abortion-rights/article_a1994c6f-15a2-5613-a602-4f41562ec3cb.html",
-          "domain": "santafenewmexican.com",
-          "seendate": "2026-09-28T01:00:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/santafenewmexican.com/content/tncms/assets/v3/editorial/b/e6/be636156-ffa5-52b1-b2c7-99646aa1b200/6ab9a336afa98.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "Supreme Court vote shadows Maine Sen . Susan Collins in her first race after abortion rights decision",
-          "url": "https://www.nvdaily.com/associated_press_national/supreme-court-vote-shadows-maine-sen-susan-collins-in-her-first-race-after-abortion-rights/article_a7d1eb97-255d-5ec2-ad91-fbefba5335d7.html",
-          "domain": "nvdaily.com",
-          "seendate": "2026-09-27T21:15:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/nvdaily.com/content/tncms/assets/v3/editorial/e/8d/e8d1c7de-7d7a-5f0f-87c2-5aa6d7360191/6ab905f1ca732.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "Supreme Court vote shadows Maine Sen . Susan Collins in her first race after abortion rights decision",
-          "url": "https://www.dailypress.com/2026/09/27/supreme-court-vote-maine-sen-susan-collins/",
-          "domain": "dailypress.com",
-          "seendate": "2026-09-27T19:45:00Z",
-          "image": "https://www.dailypress.com/wp-content/uploads/2026/09/FDA_Commissioner_67926-1-1.jpg"
-        },
-        {
-          "title": "Supreme Court vote shadows Maine Sen . Susan Collins in her first race after abortion rights decision",
-          "url": "https://www.sandiegouniontribune.com/2026/09/27/supreme-court-vote-shadows-maine-sen-susan-collins-in-her-first-race-after-abortion-rights-decision/",
+          "title": "Federal panel gives final approval to new design for White House security screening center",
+          "url": "https://www.sandiegouniontribune.com/2026/10/01/white-house-security/",
           "domain": "sandiegouniontribune.com",
-          "seendate": "2026-09-27T18:30:00Z",
-          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/09/FDA_Commissioner_67926-1.jpg"
+          "seendate": "2026-10-02T00:15:00Z",
+          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/10/Trump_White_House_17762-1.jpg"
         },
         {
-          "title": "Supreme Court vote shadows Maine Sen . Susan Collins in her first bid after abortion rights decision",
-          "url": "http://www.idahostatejournal.com/news/national/supreme-court-vote-shadows-maine-sen-susan-collins-in-her-first-bid-after-abortion-rights/article_06a6d210-c480-54e6-99c7-1c016913a5e1.html",
-          "domain": "idahostatejournal.com",
-          "seendate": "2026-09-27T17:00:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/idahostatejournal.com/content/tncms/assets/v3/editorial/4/16/41658b4f-b9c0-5247-ac34-b2e7f3f8f1f5/6ab563623fb90.image.jpg?crop=1763%2C926%2C0%2C124"
+          "title": "Federal panel gives final approval to new design for White House security screening center",
+          "url": "https://www.bostonherald.com/2026/10/01/white-house-security/",
+          "domain": "bostonherald.com",
+          "seendate": "2026-10-02T00:15:00Z",
+          "image": "https://www.bostonherald.com/wp-content/uploads/2026/10/Trump_White_House_17762-1.jpg"
         },
         {
-          "title": "Supreme Court vote shadows Maine Sen . Susan Collins in her first bid after abortion rights decision",
-          "url": "https://www.wsls.com/news/politics/2026/09/27/supreme-court-vote-shadows-maine-sen-susan-collins-in-her-first-bid-after-abortion-rights-decision/",
-          "domain": "wsls.com",
-          "seendate": "2026-09-27T16:15:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/O3Z5TXQZDNGI7BHZKH4ZUL2NGU.jpg?api_key=wsls_8c3a4bc35af7684e"
+          "title": "Federal panel gives final approval to new design for White House security screening center",
+          "url": "https://www.orlandosentinel.com/2026/10/01/white-house-security/",
+          "domain": "orlandosentinel.com",
+          "seendate": "2026-10-01T23:45:00Z",
+          "image": "https://www.orlandosentinel.com/wp-content/uploads/2026/10/Trump_White_House_17762-1.jpg"
         },
         {
-          "title": "Supreme Court vote shadows Susan Collins in her first bid after abortion rights decision",
-          "url": "https://www.bangordailynews.com/2026/09/27/nation/supreme-court-vote-shadows-maine-sen-susan-collins-in-her-first-bid-after-abortion-rights-decision/",
-          "domain": "bangordailynews.com",
-          "seendate": "2026-09-27T16:00:00Z",
-          "image": "https://i0.wp.com/bdn-data.s3.amazonaws.com/uploads/2026/09/preview-1348.jpg?fit=1024%2C682&ssl=1"
+          "title": "Federal panel gives final approval to new design for White House security screening center",
+          "url": "https://www.pilotonline.com/2026/10/01/white-house-security-5/",
+          "domain": "pilotonline.com",
+          "seendate": "2026-10-01T23:15:00Z",
+          "image": "https://www.pilotonline.com/wp-content/uploads/2026/10/Trump_White_House_17762-1.jpg"
         },
         {
-          "title": "Supreme Court vote shadows Maine Sen . Susan Collins in her first bid after abortion rights decision",
-          "url": "http://www.sitkasentinel.com/stories/supreme-court-vote-shadows-maine-sen-susan-collins-in-her-first-bid-after-abortion-rights-decision,174400",
-          "domain": "sitkasentinel.com",
-          "seendate": "2026-09-27T16:00:00Z",
-          "image": "https://mapi.associatedpress.com/v2/items/8b169007f5424f04854dd5211bd34a56.0/preview/preview.jpg?nfe=true&s=512&wm=false&app=MPK&tag=iid~8b169007f5424f04854dd5211bd34a56!rsn~0!cid~59a5d23268b949f4a5ef329c0f8cce9d!orgId~48830!qt~y9zyDIuyMVeI!orgNm~DAILY%20SITKA%20SENTINEL!role~Preview!mt~photo!fmt~JPEG%20Baseline"
-        },
-        {
-          "title": "Supreme Court vote shadows Maine Sen . Susan Collins in her first bid after abortion rights decision",
-          "url": "https://www.ksat.com/news/politics/2026/09/27/supreme-court-vote-shadows-maine-sen-susan-collins-in-her-first-bid-after-abortion-rights-decision/",
-          "domain": "ksat.com",
-          "seendate": "2026-09-27T15:45:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/O3Z5TXQZDNGI7BHZKH4ZUL2NGU.jpg?api_key=ksat_9a37fc89631abedf"
-        },
-        {
-          "title": "Supreme Court vote shadows Maine Sen . Susan Collins in her first bid after abortion rights decision",
-          "url": "https://www.click2houston.com/news/politics/2026/09/27/supreme-court-vote-shadows-maine-sen-susan-collins-in-her-first-bid-after-abortion-rights-decision/",
-          "domain": "click2houston.com",
-          "seendate": "2026-09-27T15:45:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/O3Z5TXQZDNGI7BHZKH4ZUL2NGU.jpg?api_key=click2houston_85fdeb57f8cd3635"
-        }
-      ]
-    },
-    "title": "Supreme Court vote shadows Maine Sen . Susan Collins in her first bid after abortion rights decision",
-    "summary": "2026-09-28 989wclz.com: Supreme Court Vote Shadows Sen . Collins in First Race after Abortion Decision\n2026-09-28 coast931.com: Supreme Court Vote Shadows Sen . Collins in First Race after Abortion Decision\n2026-09-28 santafenewmexican.com: Supreme Court vote shadows Maine Sen . Susan Collins in her first race after abortion rights decision\n2026-09-27 nvdaily.com: Supreme Court vote shadows Maine Sen . Susan Collins in her first race after abortion rights decision\n2026-09-27 dailypress.com: Supreme Court vote shadows Maine Sen . Susan Collins in her first race after abortion rights decision\n2026-09-27 sandiegouniontribune.com: Supreme Court vote shadows Maine Sen . Susan Collins in her first race after abortion rights decision",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_approved-cancel-congressionally",
-    "source": "news",
-    "ts": 1790604708835,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.786,
-      "articles": [
-        {
-          "title": "Trump seeks to cancel nearly $1B in congressionally approved funds",
-          "url": "https://wsbt.com/news/nation-world/trump-seeks-to-cancel-nearly-1-billion-in-approved-funds-with-rare-pocket-rescission",
-          "domain": "wsbt.com",
-          "seendate": "2026-09-27T04:00:00Z",
-          "image": "https://wsbt.com/resources/media2/16x9/8640/1320/0x450/90/212527e3-7af5-4397-a0fb-0e4474acbad4-GettyImages2296656299.jpg"
-        },
-        {
-          "title": "Trump seeks to cancel nearly $1B in congressionally approved funds",
-          "url": "https://wgxa.tv/news/nation-world/trump-seeks-to-cancel-nearly-1-billion-in-approved-funds-with-rare-pocket-rescission",
-          "domain": "wgxa.tv",
-          "seendate": "2026-09-27T02:30:00Z",
-          "image": "https://wgxa.tv/resources/media2/16x9/8640/1320/0x450/90/212527e3-7af5-4397-a0fb-0e4474acbad4-GettyImages2296656299.jpg"
-        },
-        {
-          "title": "Trump seeks to cancel nearly $1B in congressionally approved funds",
-          "url": "https://fox4beaumont.com/news/nation-world/trump-seeks-to-cancel-nearly-1-billion-in-approved-funds-with-rare-pocket-rescission",
-          "domain": "fox4beaumont.com",
-          "seendate": "2026-09-27T02:30:00Z",
-          "image": "https://fox4beaumont.com/resources/media2/16x9/8640/1320/0x450/90/212527e3-7af5-4397-a0fb-0e4474acbad4-GettyImages2296656299.jpg"
-        },
-        {
-          "title": "Trump seeks to cancel nearly $1B in congressionally approved funds",
-          "url": "https://turnto10.com/news/nation-world/trump-seeks-to-cancel-nearly-1-billion-in-approved-funds-with-rare-pocket-rescission",
-          "domain": "turnto10.com",
-          "seendate": "2026-09-27T01:00:00Z",
-          "image": "https://turnto10.com/resources/media2/16x9/8640/1320/0x450/90/212527e3-7af5-4397-a0fb-0e4474acbad4-GettyImages2296656299.jpg"
-        },
-        {
-          "title": "Trump seeks to cancel nearly $1B in congressionally approved funds",
-          "url": "https://wach.com/news/nation-world/trump-seeks-to-cancel-nearly-1-billion-in-approved-funds-with-rare-pocket-rescission",
-          "domain": "wach.com",
-          "seendate": "2026-09-27T01:00:00Z",
-          "image": "https://wach.com/resources/media2/16x9/8640/1320/0x450/90/212527e3-7af5-4397-a0fb-0e4474acbad4-GettyImages2296656299.jpg"
-        },
-        {
-          "title": "Trump seeks to cancel nearly $1B in congressionally approved funds",
-          "url": "https://komonews.com/news/nation-world/trump-seeks-to-cancel-nearly-1-billion-in-approved-funds-with-rare-pocket-rescission",
-          "domain": "komonews.com",
-          "seendate": "2026-09-27T00:30:00Z",
-          "image": "https://komonews.com/resources/media2/16x9/8640/1320/0x450/90/212527e3-7af5-4397-a0fb-0e4474acbad4-GettyImages2296656299.jpg"
-        },
-        {
-          "title": "Trump seeks to cancel nearly $1B in congressionally approved funds",
-          "url": "https://fox56.com/news/nation-world/trump-seeks-to-cancel-nearly-1-billion-in-approved-funds-with-rare-pocket-rescission",
-          "domain": "fox56.com",
-          "seendate": "2026-09-27T00:30:00Z",
-          "image": "https://fox56.com/resources/media2/16x9/8640/1320/0x450/90/212527e3-7af5-4397-a0fb-0e4474acbad4-GettyImages2296656299.jpg"
-        },
-        {
-          "title": "Trump seeks to cancel nearly $1B in congressionally approved funds",
-          "url": "https://wjactv.com/news/nation-world/trump-seeks-to-cancel-nearly-1-billion-in-approved-funds-with-rare-pocket-rescission",
-          "domain": "wjactv.com",
-          "seendate": "2026-09-27T00:30:00Z",
-          "image": "https://wjactv.com/resources/media2/16x9/8640/1320/0x450/90/212527e3-7af5-4397-a0fb-0e4474acbad4-GettyImages2296656299.jpg"
-        },
-        {
-          "title": "Trump seeks to cancel nearly $1B in congressionally approved funds",
-          "url": "https://katu.com/news/nation-world/trump-seeks-to-cancel-nearly-1-billion-in-approved-funds-with-rare-pocket-rescission",
-          "domain": "katu.com",
-          "seendate": "2026-09-27T00:15:00Z",
-          "image": "https://katu.com/resources/media2/16x9/8640/1320/0x450/90/212527e3-7af5-4397-a0fb-0e4474acbad4-GettyImages2296656299.jpg"
-        },
-        {
-          "title": "Trump seeks to cancel nearly $1B in congressionally approved funds",
-          "url": "https://cbs12.com/news/nation-world/trump-seeks-to-cancel-nearly-1-billion-in-approved-funds-with-rare-pocket-rescission",
-          "domain": "cbs12.com",
-          "seendate": "2026-09-27T00:15:00Z",
-          "image": "https://cbs12.com/resources/media2/16x9/8640/1320/0x450/90/212527e3-7af5-4397-a0fb-0e4474acbad4-GettyImages2296656299.jpg"
-        },
-        {
-          "title": "Trump seeks to cancel nearly $1B in congressionally approved funds",
-          "url": "https://okcfox.com/news/nation-world/trump-seeks-to-cancel-nearly-1-billion-in-approved-funds-with-rare-pocket-rescission",
-          "domain": "okcfox.com",
-          "seendate": "2026-09-27T00:15:00Z",
-          "image": "https://okcfox.com/resources/media2/16x9/8640/1320/0x450/90/212527e3-7af5-4397-a0fb-0e4474acbad4-GettyImages2296656299.jpg"
-        }
-      ]
-    },
-    "title": "Trump seeks to cancel nearly $1B in congressionally approved funds",
-    "summary": "2026-09-27 wsbt.com: Trump seeks to cancel nearly $1B in congressionally approved funds\n2026-09-27 wgxa.tv: Trump seeks to cancel nearly $1B in congressionally approved funds\n2026-09-27 fox4beaumont.com: Trump seeks to cancel nearly $1B in congressionally approved funds\n2026-09-27 turnto10.com: Trump seeks to cancel nearly $1B in congressionally approved funds\n2026-09-27 wach.com: Trump seeks to cancel nearly $1B in congressionally approved funds\n2026-09-27 komonews.com: Trump seeks to cancel nearly $1B in congressionally approved funds",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_crackdown-leader-mail",
-    "source": "news",
-    "ts": 1790604708836,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.774,
-      "articles": [
-        {
-          "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
-          "url": "https://mymotherlode.com/news/national/general-election/11175142/trumps-mail-voting-crackdown-tests-postal-service-leader-who-says-hes-not-political.html",
-          "domain": "mymotherlode.com",
-          "seendate": "2026-09-28T13:15:00Z",
-          "image": "https://mymotherlode.com/wp-content/uploads/2026/09/AP_99d137dec53045ddb65c5a7f0aa54a6b_08fd22b7ba.jpg"
-        },
-        {
-          "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
-          "url": "https://www.clickondetroit.com/news/politics/2026/09/28/trumps-mail-voting-crackdown-tests-postal-service-leader-who-says-hes-not-political/",
-          "domain": "clickondetroit.com",
-          "seendate": "2026-09-28T12:30:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/D4R64CPGYVCF7GOPTQZ4O6JGSU.jpg?api_key=clickondetroit_06f87fefb2123598"
-        },
-        {
-          "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
-          "url": "https://www.clickorlando.com/news/politics/2026/09/28/trumps-mail-voting-crackdown-tests-postal-service-leader-who-says-hes-not-political/",
-          "domain": "clickorlando.com",
-          "seendate": "2026-09-28T12:15:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/D4R64CPGYVCF7GOPTQZ4O6JGSU.jpg?api_key=clickorlando_488cff2bcc157b2e"
-        },
-        {
-          "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
-          "url": "https://www.wral.com/news/ap/ba0fc-trumps-mail-voting-crackdown-tests-postal-service-leader-who-says-hes-not-political/",
-          "domain": "wral.com",
-          "seendate": "2026-09-28T11:30:00Z",
-          "image": "https://images.wral.com/f0c8efa8-8436-5fc5-9e2f-2f4c31637097"
-        },
-        {
-          "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
-          "url": "http://www.bozemandailychronicle.com/wire/business/trumps-mail-voting-crackdown-tests-postal-service-leader-who-says-hes-not-political/article_bb3eb835-f590-56fe-8e4b-55887bb47be1.html",
-          "domain": "bozemandailychronicle.com",
-          "seendate": "2026-09-28T11:30:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/bozemandailychronicle.com/content/tncms/assets/v3/editorial/c/43/c434697a-f76b-56c1-8a04-01644576c9cd/6aba46f4f3630.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
-          "url": "https://www.wsls.com/news/politics/2026/09/28/trumps-mail-voting-crackdown-tests-postal-service-leader-who-says-hes-not-political/",
-          "domain": "wsls.com",
-          "seendate": "2026-09-28T11:15:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/D4R64CPGYVCF7GOPTQZ4O6JGSU.jpg?api_key=wsls_8c3a4bc35af7684e"
-        }
-      ]
-    },
-    "title": "Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
-    "summary": "2026-09-28 mymotherlode.com: Trump mail voting crackdown tests Postal Service leader who says he  not political  \n2026-09-28 clickondetroit.com: Trump mail voting crackdown tests Postal Service leader who says he  not political  \n2026-09-28 clickorlando.com: Trump mail voting crackdown tests Postal Service leader who says he  not political  \n2026-09-28 wral.com: Trump mail voting crackdown tests Postal Service leader who says he  not political  \n2026-09-28 bozemandailychronicle.com: Trump mail voting crackdown tests Postal Service leader who says he  not political  \n2026-09-28 wsls.com: Trump mail voting crackdown tests Postal Service leader who says he  not political  ",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_administration-democrats-house",
-    "source": "news",
-    "ts": 1790604708837,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.553,
-      "articles": [
-        {
-          "title": "House Democrats Plan Vast Oversight of Trump Administration ; Impeachment Is an Option",
-          "url": "https://www.theyeshivaworld.com/news/general/2603423/house-democrats-plan-vast-oversight-of-trump-administration-impeachment-is-an-option.html",
-          "domain": "theyeshivaworld.com",
-          "seendate": "2026-09-28T04:15:00Z",
-          "image": "https://www.theyeshivaworld.com/wp-content/uploads/2026/09/AP26266769408546.jpg"
-        },
-        {
-          "title": "House Democrats plan vast oversight of Trump administration . Impeachment is an option",
-          "url": "https://www.erienewsnow.com/news/politics/house-democrats-plan-vast-oversight-of-trump-administration-impeachment-is-an-option/article_8d701ce9-2e1c-5b4a-8407-586494a117b1.html",
-          "domain": "erienewsnow.com",
-          "seendate": "2026-09-28T04:15:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/erienewsnow.com/content/tncms/custom/image/b278f54b-830b-4f05-9350-cb090f41a0d4.png"
-        },
-        {
-          "title": "House Democrats plan vast oversight of Trump administration . Impeachment is an option",
-          "url": "https://www.twincities.com/2026/09/26/house-democrats-plan-vast-oversight-of-trump-administration-impeachment-is-an-option/",
+          "title": "Federal panel gives final approval to new design for White House security screening center",
+          "url": "https://www.twincities.com/2026/10/01/white-house-security/",
           "domain": "twincities.com",
-          "seendate": "2026-09-27T04:00:00Z",
-          "image": "https://www.twincities.com/wp-content/uploads/2026/09/Election_2_26_Democrats__8546-1.jpg"
+          "seendate": "2026-10-01T22:30:00Z",
+          "image": "https://www.twincities.com/wp-content/uploads/2026/10/Trump_White_House_17762-1.jpg"
+        },
+        {
+          "title": "Federal panel gives final approval to new design for White House security screening center",
+          "url": "https://www.clickondetroit.com/news/politics/2026/10/01/federal-panel-gives-final-approval-to-new-design-for-white-house-security-screening-center/",
+          "domain": "clickondetroit.com",
+          "seendate": "2026-10-01T21:30:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/GKUAD7ZVARGIJP62WX3SVQQOQA.jpg?api_key=clickondetroit_06f87fefb2123598"
+        },
+        {
+          "title": "Federal panel gives final approval to new design for White House security screening center",
+          "url": "https://www.mercurynews.com/2026/10/01/white-house-security/",
+          "domain": "mercurynews.com",
+          "seendate": "2026-10-01T21:30:00Z",
+          "image": "https://www.mercurynews.com/wp-content/uploads/2026/10/Trump_White_House_17762-1.jpg"
+        },
+        {
+          "title": "Federal panel gives final approval to new design for White House security screening center",
+          "url": "https://www.clickorlando.com/news/politics/2026/10/01/federal-panel-gives-final-approval-to-new-design-for-white-house-security-screening-center/",
+          "domain": "clickorlando.com",
+          "seendate": "2026-10-01T21:15:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/GKUAD7ZVARGIJP62WX3SVQQOQA.jpg?api_key=clickorlando_488cff2bcc157b2e"
+        },
+        {
+          "title": "Federal panel gives final approval to new design for White House security screening center",
+          "url": "https://www.news4jax.com/news/politics/2026/10/01/federal-panel-gives-final-approval-to-new-design-for-white-house-security-screening-center/",
+          "domain": "news4jax.com",
+          "seendate": "2026-10-01T21:00:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/GKUAD7ZVARGIJP62WX3SVQQOQA.jpg?api_key=news4jax_3f10b25586458189"
+        },
+        {
+          "title": "Federal panel gives final approval to new design for White House security screening center",
+          "url": "https://www.sun-sentinel.com/2026/10/01/white-house-security/",
+          "domain": "sun-sentinel.com",
+          "seendate": "2026-10-01T21:00:00Z",
+          "image": "https://www.sun-sentinel.com/wp-content/uploads/2026/10/Trump_White_House_17762-1.jpg"
         }
       ]
     },
-    "title": "House Democrats plan vast oversight of Trump administration . Impeachment is an option",
-    "summary": "2026-09-28 theyeshivaworld.com: House Democrats Plan Vast Oversight of Trump Administration ; Impeachment Is an Option\n2026-09-28 erienewsnow.com: House Democrats plan vast oversight of Trump administration . Impeachment is an option\n2026-09-27 twincities.com: House Democrats plan vast oversight of Trump administration . Impeachment is an option",
+    "title": "Federal panel gives final approval to new design for White House security screening center",
+    "summary": "2026-10-02 sandiegouniontribune.com: Federal panel gives final approval to new design for White House security screening center\n2026-10-02 bostonherald.com: Federal panel gives final approval to new design for White House security screening center\n2026-10-01 orlandosentinel.com: Federal panel gives final approval to new design for White House security screening center\n2026-10-01 pilotonline.com: Federal panel gives final approval to new design for White House security screening center\n2026-10-01 twincities.com: Federal panel gives final approval to new design for White House security screening center\n2026-10-01 clickondetroit.com: Federal panel gives final approval to new design for White House security screening center",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_claims-demolished-office",
+    "source": "news",
+    "ts": 1791045126066,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.744,
+      "articles": [
+        {
+          "title": "President Claims Secret Service Wanted Oval Office Demolished",
+          "url": "https://wiod.iheart.com/content/2026-10-01-president-claims-secret-service-wanted-oval-office-demolished/",
+          "domain": "wiod.iheart.com",
+          "seendate": "2026-10-01T23:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6abea30b522dc8d41d9c3aac?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "President Claims Secret Service Wanted Oval Office Demolished",
+          "url": "https://kfyi.iheart.com/content/2026-10-01-president-claims-secret-service-wanted-oval-office-demolished/",
+          "domain": "kfyi.iheart.com",
+          "seendate": "2026-10-01T23:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6abea30b522dc8d41d9c3aac?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "President Claims Secret Service Wanted Oval Office Demolished",
+          "url": "https://wdov.iheart.com/content/2026-10-01-president-claims-secret-service-wanted-oval-office-demolished/",
+          "domain": "wdov.iheart.com",
+          "seendate": "2026-10-01T23:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6abea30b522dc8d41d9c3aac?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "President Claims Secret Service Wanted Oval Office Demolished",
+          "url": "https://kfyr.iheart.com/content/2026-10-01-president-claims-secret-service-wanted-oval-office-demolished/",
+          "domain": "kfyr.iheart.com",
+          "seendate": "2026-10-01T23:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6abea30b522dc8d41d9c3aac?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "President Claims Secret Service Wanted Oval Office Demolished",
+          "url": "https://1190kex.iheart.com/content/2026-10-01-president-claims-secret-service-wanted-oval-office-demolished/",
+          "domain": "1190kex.iheart.com",
+          "seendate": "2026-10-01T23:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6abea30b522dc8d41d9c3aac?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "President Claims Secret Service Wanted Oval Office Demolished",
+          "url": "https://kfab.iheart.com/content/2026-10-01-president-claims-secret-service-wanted-oval-office-demolished/",
+          "domain": "kfab.iheart.com",
+          "seendate": "2026-10-01T23:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6abea30b522dc8d41d9c3aac?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "President Claims Secret Service Wanted Oval Office Demolished",
+          "url": "https://800wvhu.iheart.com/content/2026-10-01-president-claims-secret-service-wanted-oval-office-demolished/",
+          "domain": "800wvhu.iheart.com",
+          "seendate": "2026-10-01T23:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6abea30b522dc8d41d9c3aac?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "President Claims Secret Service Wanted Oval Office Demolished",
+          "url": "https://wflaorlando.iheart.com/content/2026-10-01-president-claims-secret-service-wanted-oval-office-demolished/",
+          "domain": "wflaorlando.iheart.com",
+          "seendate": "2026-10-01T23:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6abea30b522dc8d41d9c3aac?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "President Claims Secret Service Wanted Oval Office Demolished | WJBO Newsradio 1150 AM & 98 . 7 FM",
+          "url": "https://wjbo.iheart.com/content/2026-10-01-president-claims-secret-service-wanted-oval-office-demolished/",
+          "domain": "wjbo.iheart.com",
+          "seendate": "2026-10-01T23:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6abea30b522dc8d41d9c3aac?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "President Claims Secret Service Wanted Oval Office Demolished",
+          "url": "https://1430kasi.iheart.com/content/2026-10-01-president-claims-secret-service-wanted-oval-office-demolished/",
+          "domain": "1430kasi.iheart.com",
+          "seendate": "2026-10-01T23:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6abea30b522dc8d41d9c3aac?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "President Claims Secret Service Wanted Oval Office Demolished",
+          "url": "https://talk1200boston.iheart.com/content/2026-10-01-president-claims-secret-service-wanted-oval-office-demolished/",
+          "domain": "talk1200boston.iheart.com",
+          "seendate": "2026-10-01T23:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6abea30b522dc8d41d9c3aac?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "President Claims Secret Service Wanted Oval Office Demolished",
+          "url": "https://kfbk.iheart.com/content/2026-10-01-president-claims-secret-service-wanted-oval-office-demolished/",
+          "domain": "kfbk.iheart.com",
+          "seendate": "2026-10-01T23:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6abea30b522dc8d41d9c3aac?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        }
+      ]
+    },
+    "title": "President Claims Secret Service Wanted Oval Office Demolished",
+    "summary": "2026-10-01 wiod.iheart.com: President Claims Secret Service Wanted Oval Office Demolished\n2026-10-01 kfyi.iheart.com: President Claims Secret Service Wanted Oval Office Demolished\n2026-10-01 wdov.iheart.com: President Claims Secret Service Wanted Oval Office Demolished\n2026-10-01 kfyr.iheart.com: President Claims Secret Service Wanted Oval Office Demolished\n2026-10-01 1190kex.iheart.com: President Claims Secret Service Wanted Oval Office Demolished\n2026-10-01 kfab.iheart.com: President Claims Secret Service Wanted Oval Office Demolished",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_campaign-cash-chief",
+    "source": "news",
+    "ts": 1791045126064,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.604,
+      "articles": [
+        {
+          "title": "Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority",
+          "url": "https://www.clickondetroit.com/news/politics/2026/09/30/senate-gop-campaign-chief-says-cash-is-king-as-trump-team-promises-millions-to-keep-majority/",
+          "domain": "clickondetroit.com",
+          "seendate": "2026-10-01T01:15:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/B4FIFTZR65AVTLIVJ3EMWYB25I.jpg?api_key=clickondetroit_06f87fefb2123598"
+        },
+        {
+          "title": "Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority",
+          "url": "https://www.thetimesnews.com/senate-gop-campaign-chief-says-cash-is-king-as-trump-team-promises-millions-to-keep/article_83905e23-93d3-5c34-8801-58c74f13e292.html",
+          "domain": "thetimesnews.com",
+          "seendate": "2026-10-01T01:15:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/thetimesnews.com/content/tncms/custom/image/95f3a09e-983c-11ed-8535-4784d3c189d2.png"
+        },
+        {
+          "title": "Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority - Las Vegas Sun News",
+          "url": "https://lasvegassun.com/news/2026/sep/30/senate-gop-campaign-chief-says-cash-is-king-as-tru/",
+          "domain": "lasvegassun.com",
+          "seendate": "2026-10-01T01:00:00Z",
+          "image": null
+        },
+        {
+          "title": "Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority",
+          "url": "https://www.bostonherald.com/2026/09/30/us-election-2026-senate-gop/",
+          "domain": "bostonherald.com",
+          "seendate": "2026-10-01T01:00:00Z",
+          "image": "https://www.bostonherald.com/wp-content/uploads/2026/09/Election_2_26_Republicans_6774_-1.jpg"
+        },
+        {
+          "title": "Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority",
+          "url": "https://www.news4jax.com/news/politics/2026/09/30/senate-gop-campaign-chief-says-cash-is-king-as-trump-team-promises-millions-to-keep-majority/",
+          "domain": "news4jax.com",
+          "seendate": "2026-10-01T00:45:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/B4FIFTZR65AVTLIVJ3EMWYB25I.jpg?api_key=news4jax_3f10b25586458189"
+        },
+        {
+          "title": "Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority",
+          "url": "https://www.orlandosentinel.com/2026/09/30/us-election-2026-senate-gop/",
+          "domain": "orlandosentinel.com",
+          "seendate": "2026-10-01T00:45:00Z",
+          "image": "https://www.orlandosentinel.com/wp-content/uploads/2026/09/Election_2_26_Republicans_6774_-1.jpg"
+        },
+        {
+          "title": "Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority",
+          "url": "https://www.pilotonline.com/2026/09/30/us-election-2026-senate-gop/",
+          "domain": "pilotonline.com",
+          "seendate": "2026-10-01T00:15:00Z",
+          "image": "https://www.pilotonline.com/wp-content/uploads/2026/09/Election_2_26_Republicans_6774_-1.jpg"
+        },
+        {
+          "title": "Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority",
+          "url": "https://www.capitalgazette.com/2026/09/30/us-election-2026-senate-gop/",
+          "domain": "capitalgazette.com",
+          "seendate": "2026-10-01T00:15:00Z",
+          "image": "https://www.capitalgazette.com/wp-content/uploads/2026/09/Election_2_26_Republicans_6774_-1.jpg"
+        },
+        {
+          "title": "Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority",
+          "url": "https://www.clickorlando.com/news/politics/2026/09/30/senate-gop-campaign-chief-says-cash-is-king-as-trump-team-promises-millions-to-keep-majority/",
+          "domain": "clickorlando.com",
+          "seendate": "2026-09-30T23:30:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/B4FIFTZR65AVTLIVJ3EMWYB25I.jpg?api_key=clickorlando_488cff2bcc157b2e"
+        },
+        {
+          "title": "Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority",
+          "url": "https://www.dailypress.com/2026/09/30/us-election-2026-senate-gop/",
+          "domain": "dailypress.com",
+          "seendate": "2026-09-30T23:30:00Z",
+          "image": "https://www.dailypress.com/wp-content/uploads/2026/09/Election_2_26_Republicans_6774_-1.jpg"
+        },
+        {
+          "title": "Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority",
+          "url": "https://abcnews.com/US/wireStory/senate-gop-campaign-chief-cash-king-trump-team-136902689",
+          "domain": "abcnews.com",
+          "seendate": "2026-09-30T23:15:00Z",
+          "image": "https://i.abcnewsfe.com/a/3fb94c71-ff5d-42e7-a099-6ef16d64a5e3/wirestory_674c49bdfb74e9ec286ea8f21aa3e8fd_16x9.jpg"
+        },
+        {
+          "title": "Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority",
+          "url": "https://www.mercurynews.com/2026/09/30/us-election-2026-senate-gop/",
+          "domain": "mercurynews.com",
+          "seendate": "2026-09-30T23:15:00Z",
+          "image": "https://www.mercurynews.com/wp-content/uploads/2026/09/Election_2_26_Republicans_6774_-1.jpg"
+        }
+      ]
+    },
+    "title": "Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority",
+    "summary": "2026-10-01 clickondetroit.com: Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority\n2026-10-01 thetimesnews.com: Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority\n2026-10-01 lasvegassun.com: Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority - Las Vegas Sun News\n2026-10-01 bostonherald.com: Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority\n2026-10-01 news4jax.com: Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority\n2026-10-01 orlandosentinel.com: Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_before-blitz-campaign",
+    "source": "news",
+    "ts": 1791045126065,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.454,
+      "articles": [
+        {
+          "title": "The Latest : Trump hits the campaign trail , kicking off blitz before midterms",
+          "url": "http://www.idahostatejournal.com/news/national/the-latest-trump-hits-the-campaign-trail-kicking-off-blitz-before-midterms/article_ef295f2f-527e-5d3a-9388-d7744ce1f7c9.html",
+          "domain": "idahostatejournal.com",
+          "seendate": "2026-10-02T06:00:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/idahostatejournal.com/content/tncms/assets/v3/editorial/d/ba/dba20404-1113-55c0-87be-0287f2bd6a95/6abd7d80d1378.image.jpg?crop=1763%2C926%2C0%2C125"
+        },
+        {
+          "title": "The Latest : Trump hits the campaign trail , kicking off blitz before midterms",
+          "url": "https://www.idahostatejournal.com/news/national/the-latest-trump-hits-the-campaign-trail-kicking-off-blitz-before-midterms/article_ef295f2f-527e-5d3a-9388-d7744ce1f7c9.html",
+          "domain": "idahostatejournal.com",
+          "seendate": "2026-10-02T05:30:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/idahostatejournal.com/content/tncms/assets/v3/editorial/d/ba/dba20404-1113-55c0-87be-0287f2bd6a95/6abd7d80d1378.image.jpg?crop=1763%2C926%2C0%2C125"
+        },
+        {
+          "title": "The Latest : Trump hits the campaign trail , kicking off blitz before midterms",
+          "url": "http://www.idahopress.com/ap_news/us/the-latest-trump-hits-the-campaign-trail-kicking-off-blitz-before-midterms/article_cbd98704-f1b8-5a9d-b130-048f97bc6f5b.html",
+          "domain": "idahopress.com",
+          "seendate": "2026-10-02T04:30:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/idahopress.com/content/tncms/assets/v3/editorial/3/6c/36c27c96-983e-58bd-ae93-9970e5e83e6e/6abd7e03e9ec8.image.jpg?crop=1763%2C926%2C0%2C125"
+        },
+        {
+          "title": "The Latest : Trump hits the campaign trail , kicking off blitz before midterms",
+          "url": "http://www.dailyadvance.com/news/national/the-latest-trump-hits-the-campaign-trail-kicking-off-blitz-before-midterms/article_5be6d280-c429-5218-9414-26fea5dd5260.html",
+          "domain": "dailyadvance.com",
+          "seendate": "2026-10-02T04:30:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/dailyadvance.com/content/tncms/assets/v3/editorial/5/ae/5ae86241-9ffe-56b3-88b5-29927dbd52ba/6abe572041527.image.jpg?crop=1763%2C926%2C0%2C125"
+        },
+        {
+          "title": "The Latest : Trump hits the campaign trail in Texas , kicking off blitz before midterms",
+          "url": "https://lancasteronline.com/news/national/the-latest-trump-hits-the-campaign-trail-in-texas-kicking-off-blitz-before-midterms/article_4cab0e87-ab54-5e33-9a4f-85c1cc4c2ded.html",
+          "domain": "lancasteronline.com",
+          "seendate": "2026-10-02T02:00:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/lancasteronline.com/content/tncms/assets/v3/editorial/1/ce/1cead9ff-5dd3-5b4e-adad-e015b0929a0a/6abe7abdc4a64.image.jpg?crop=1763%2C926%2C0%2C125"
+        },
+        {
+          "title": "The Latest : Trump hits the campaign trail in Texas , kicking off blitz before midterms",
+          "url": "http://www.dailyadvance.com/news/national/the-latest-trump-hits-the-campaign-trail-in-texas-kicking-off-blitz-before-midterms/article_5be6d280-c429-5218-9414-26fea5dd5260.html",
+          "domain": "dailyadvance.com",
+          "seendate": "2026-10-02T00:00:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/dailyadvance.com/content/tncms/assets/v3/editorial/5/ae/5ae86241-9ffe-56b3-88b5-29927dbd52ba/6abe572041527.image.jpg?crop=1763%2C926%2C0%2C125"
+        }
+      ]
+    },
+    "title": "The Latest : Trump hits the campaign trail , kicking off blitz before midterms",
+    "summary": "2026-10-02 idahostatejournal.com: The Latest : Trump hits the campaign trail , kicking off blitz before midterms\n2026-10-02 idahostatejournal.com: The Latest : Trump hits the campaign trail , kicking off blitz before midterms\n2026-10-02 idahopress.com: The Latest : Trump hits the campaign trail , kicking off blitz before midterms\n2026-10-02 dailyadvance.com: The Latest : Trump hits the campaign trail , kicking off blitz before midterms\n2026-10-02 lancasteronline.com: The Latest : Trump hits the campaign trail in Texas , kicking off blitz before midterms\n2026-10-02 dailyadvance.com: The Latest : Trump hits the campaign trail in Texas , kicking off blitz before midterms",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_alaska-investment-korean",
+    "source": "news",
+    "ts": 1791045126065,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.262,
+      "articles": [
+        {
+          "title": "Trump unveils South Korean investment in pipeline in Alaska , site of a tight Senate race",
+          "url": "https://www.cbsnews.com/news/trump-south-korean-investment-alaska-gas-pipeline/",
+          "domain": "cbsnews.com",
+          "seendate": "2026-09-30T23:15:00Z",
+          "image": "https://assets1.cbsnewsstatic.com/hub/i/r/2026/09/30/bd93680e-d153-4d56-8e1d-7dabba6141c2/thumbnail/1200x630/5b9f16c66102253f5bd80079e561bef2/ap26273787572528.jpg"
+        },
+        {
+          "title": "Trump Unveils $54 Billion In South Korean Investment In Alaska , Site Of A Tight Senate Race",
+          "url": "https://www.theyeshivaworld.com/news/general/2604374/trump-unveils-54-billion-in-south-korean-investment-in-alaska-site-of-a-tight-senate-race.html",
+          "domain": "theyeshivaworld.com",
+          "seendate": "2026-09-30T23:00:00Z",
+          "image": "https://www.theyeshivaworld.com/wp-content/uploads/2026/09/AP26272759343246.jpg"
+        },
+        {
+          "title": "Trump will unveil $54 billion in South Korean investment in Alaska",
+          "url": "https://www.presstelegram.com/2026/09/30/trump-south-korean-investment-alaska/",
+          "domain": "presstelegram.com",
+          "seendate": "2026-09-30T17:45:00Z",
+          "image": "https://www.presstelegram.com/wp-content/uploads/2026/09/Trump_AI_43246-1.jpg"
+        },
+        {
+          "title": "Trump will unveil $54 billion in South Korean investment in Alaska , site of a tight Senate race",
+          "url": "https://www.ksat.com/news/politics/2026/09/30/trump-will-unveil-54-billion-in-south-korean-investment-in-alaska-site-of-a-tight-senate-race/",
+          "domain": "ksat.com",
+          "seendate": "2026-09-30T17:15:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/5GCYV3XDGZDJZPE6VRPIVYREHA.jpg?api_key=ksat_9a37fc89631abedf"
+        }
+      ]
+    },
+    "title": "Trump Unveils $54 Billion In South Korean Investment In Alaska , Site Of A Tight Senate Race",
+    "summary": "2026-09-30 cbsnews.com: Trump unveils South Korean investment in pipeline in Alaska , site of a tight Senate race\n2026-09-30 theyeshivaworld.com: Trump Unveils $54 Billion In South Korean Investment In Alaska , Site Of A Tight Senate Race\n2026-09-30 presstelegram.com: Trump will unveil $54 billion in South Korean investment in Alaska\n2026-09-30 ksat.com: Trump will unveil $54 billion in South Korean investment in Alaska , site of a tight Senate race",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
