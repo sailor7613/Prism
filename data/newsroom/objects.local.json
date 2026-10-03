@@ -1,6 +1,6 @@
 {
  "schema": "prism_object_overlay_v1",
- "updatedAt": "2026-09-29T02:02:27.218Z",
+ "updatedAt": "2026-10-03T06:07:23.349Z",
  "note": "Written ONLY by the drafting task (Sailor commits it). The scan owns objects.json and only reads this file. See scripts/newsroom/overlay.js.",
  "objects": {
   "obj_astate_bills-changes-elections-gavin": {
@@ -531,6 +531,324 @@
      "why": "nothing imposed or lifted"
     }
    ]
+  },
+  "obj_thepresi_iran-openness-rejects-relief": {
+   "status": "dismissed",
+   "dismissedWhy": "No instrument, and a duplicate: the same Trump denial (09-28) of the Axios sanctions-relief report already dismissed as obj_thepresi_denies-iran-relief-report. Today’s three outlets are one syndicated radio story (Reuters rewrite) adding Pezeshkian saying Iran is open to talks without coercion. Nothing voted, ordered, imposed or lifted; the register’s \"vote\" is wrong. If relief is granted or refused by order, or a deal is signed, a later scan will see a new object. Claude’s call, 2026-09-29 12:04 UTC run.",
+   "corrections": [
+    {
+     "field": "kind",
+     "was": "vote · voted",
+     "now": "denial of a press report (no instrument)",
+     "why": "nothing was voted on",
+     "by": "Claude (drafting)",
+     "on": "2026-09-29"
+    },
+    {
+     "field": "formedOn",
+     "was": "2026-09-29",
+     "now": "2026-09-28",
+     "why": "the denial was made 09-28 (US News/Hill/iHeart 09-28); 09-29 is the syndication date",
+     "by": "Claude (drafting)",
+     "on": "2026-09-29"
+    }
+   ],
+   "permanenceNote": "Continuation of the Hormuz/Iran-talks arc (rdg_6gsmq4x22x20); second register card for the same denial.",
+   "aliasCandidates": [
+    "obj_thepresi_denies-iran-relief-report",
+    "obj_thepresi_hormuz-iran-open-proposal"
+   ]
+  },
+  "obj_congress_234-congress-end-penny": {
+   "status": "drafted",
+   "drafts": {
+    "claude": "rdg_fv1bpfabq16p"
+   },
+   "draftedOn": "2026-09-29",
+   "inversions": [
+    {
+     "station": "A",
+     "band": "denominated",
+     "lean": true,
+     "note": "Rim negative on a bill a Democrat (Garcia) co-sponsored and no member opposed on the record; scores Trump's custody of the 2025 halt. A split inside the station, not a reversal of a prior."
+    }
+   ],
+   "corrections": [
+    {
+     "field": "formedOn",
+     "from": "2026-09-29",
+     "to": "2026-09-28",
+     "why": "AP (datelined 09-29) says the Senate passed it 'late Monday' = 2026-09-28; 09-29 is the report date."
+    },
+    {
+     "field": "holder",
+     "from": "Congress",
+     "to": "Congress (the Senate's 09-28 voice vote completing passage of H.R. 10167; signature pending)",
+     "why": "Names the vehicle; the bill number is Claude's read (AP doesn't print it)."
+    }
+   ],
+   "permanenceNote": "Return (lean): the penny arc — 2025-02 Trump directive and 2025 halt, 07-14 House and 08-07 Senate versions, 09-14 consolidated House vote, 09-28 final passage. The signature, when it lands, completes this object; it is not a new one."
+  },
+  "obj_thepresi_accord-development-firms-police": {
+   "status": "drafted",
+   "drafts": {
+    "claude": "rdg_8duj3r93ot5w"
+   },
+   "draftedOn": "2026-09-30",
+   "inversions": [
+    {
+     "station": "A",
+     "band": "fluid/denominated",
+     "lean": true,
+     "prior": "July 2023 White House voluntary AI commitments, welcomed by the institutional left (coverage, not a live Reading)",
+     "note": "voluntary pledge from largely the same companies now read as failing (−0.2 / −0.8); keyed to the holder"
+    }
+   ],
+   "corrections": [
+    {
+     "field": "formedOn",
+     "from": "2026-09-30",
+     "to": "2026-09-29",
+     "why": "East Room meeting and the Truth Social post of the signed accord were both Tuesday 09-29 (AP via Boston.com dated 09-29); 09-30 is the report date.",
+     "by": "Claude (drafting)",
+     "on": "2026-09-30"
+    },
+    {
+     "field": "holder",
+     "from": "the President",
+     "to": "the six signing companies (Anthropic, Google, Meta, OpenAI, Nvidia, Musk), with the President as convener and would-be overseer",
+     "why": "The companies make the commitments; Trump posted the accord and says he will name ~10 overseers.",
+     "by": "Claude (drafting)",
+     "on": "2026-09-30"
+    }
+   ],
+   "permanenceNote": "Return (lean): the 2023 voluntary-commitments arc (July 2023 commitments, EO 14110, revoked 2025-01-20). Publish attempted 2026-09-30, exit 5 (no GITHUB_PUBLISH_TOKEN); draft remains in drafts/claude."
+  },
+  "obj_afederal_arguments-ban-hears-house": {
+   "aliasCandidates": [
+    "obj_afederal_access-cnn-house-judge"
+   ],
+   "permanenceNote": "not yet an object on its own (hearing without ruling, 09-23); the ruling it awaited landed 09-24 and was drafted as obj_afederal_access-cnn-house-judge (rdg_oq1spmhz7azt) — left queued (§4c), Claude 2026-09-30"
+  },
+  "obj_afederal_ban-cnn-hold-house": {
+   "aliasCandidates": [
+    "obj_afederal_access-cnn-house-judge"
+   ],
+   "permanenceNote": "motion pending: outlets asked the judge 09-29 to extend the block; no ruling yet — left queued (§4c), Claude 2026-09-30"
+  },
+  "obj_afederal_can-deport-judge-largest": {
+   "status": "drafted",
+   "drafts": {
+    "claude": "rdg_zjxak4ltqrk7"
+   },
+   "draftedOn": "2026-09-30",
+   "inversions": [],
+   "corrections": [
+    {
+     "field": "holder",
+     "from": "a federal court",
+     "to": "the Chicago Immigration Court (DOJ/EOIR), applying Secretary of State Rubio’s foreign-policy determination",
+     "why": "An immigration judge is an executive-branch (Justice Department) adjudicator, not an Article III federal court; the federal district court (Judge Hanlon) is a separate, earlier leg (the June 2026 release order)."
+    }
+   ],
+   "permanenceNote": "A return (lean): the INA §237(a)(4)(C) foreign-policy-ground arc — Khalil and Mahdawi (2025), Sarsour arrest 2026-03-30, release June 2026, removability ruling 2026-09-30; appeal due within 30 days.",
+   "publishAttempt": {
+    "on": "2026-09-30T19:28:51.586Z",
+    "exit": 5,
+    "why": "no GITHUB_PUBLISH_TOKEN on the Mac; draft stays in drafts/claude"
+   }
+  },
+  "obj_thesenat_bill-block-congress-democrats": {
+   "status": "drafted",
+   "drafts": {
+    "claude": "rdg_2cs16s93dghl"
+   },
+   "draftedOn": "2026-09-30",
+   "inversions": [
+    {
+     "stations": "A, C",
+     "kind": "vote flip (lean, not ruled)",
+     "prior": "Senate HSGAC vote 2025-07-30: Democrats + Hawley advanced a stronger ban 8-7 (AP 2025-07-30)",
+     "now": "all 47 no votes on 2026-09-30 are Democratic; left centers still hold that a real ban delivers"
+    },
+    {
+     "stations": "B, D",
+     "kind": "vote flip (lean, not ruled)",
+     "prior": "Trump called Hawley a second-tier senator over a ban covering the president (AP 2025-07-30)",
+     "now": "White House backed H.R. 7008, which exempts the president, on House passage (Forbes 2026-09-30)"
+    }
+   ],
+   "corrections": [
+    {
+     "field": "kind",
+     "from": "ruling",
+     "to": "vote",
+     "why": "A failed Senate motion to advance (53-47, 60 needed); no court or ruling involved."
+    }
+   ],
+   "permanenceNote": "A return (lean): the congressional stock-ban arc — STOCK Act 2012, Hawley committee vote 2025-07-30, House passage with voter ID 2026-07-22, Senate vote 2026-09-30.",
+   "publishAttempt": {
+    "on": "2026-10-01T02:07:25.271Z",
+    "exit": 5,
+    "why": "no GITHUB_PUBLISH_TOKEN on the Mac; draft stays in drafts/claude"
+   }
+  },
+  "obj_thesenat_aimed-bill-bills-blocks": {
+   "status": "drafted",
+   "drafts": {
+    "claude": "rdg_o7di9vup43f8"
+   },
+   "draftedOn": "2026-10-01",
+   "inversions": [
+    {
+     "stations": "A, C",
+     "kind": "chamber flip (lean, not ruled)",
+     "prior": "House passed H.R. 9340 417-3 on 2026-09-16 (Daily Caller, Valley News Live 2026-09-30)",
+     "now": "43 of 47 Senate Democrats voted no on 2026-09-30, holding out for the GRID Savings Act; not a z flip"
+    }
+   ],
+   "corrections": [
+    {
+     "field": "kind",
+     "from": "ruling",
+     "to": "vote",
+     "why": "A failed Senate motion to advance (57-43, 60 needed); no court or ruling involved."
+    },
+    {
+     "field": "bill",
+     "from": null,
+     "to": "hr-119-9340",
+     "why": "The blocked bill is H.R. 9340, the Ratepayer Protection Act (in catalog)."
+    }
+   ],
+   "permanenceNote": "A return (lean): the data-center-costs arc — White House Ratepayer Protection Pledge 2026-03-04 (expanded 07-23), House passage 09-16, the AI accord 09-29 (rdg_8duj3r93ot5w), Senate vote 09-30.",
+   "publishAttempt": {
+    "on": "2026-10-01T18:10:21.532Z",
+    "exit": 5,
+    "why": "no GITHUB_PUBLISH_TOKEN on the Mac; draft stays in drafts/claude"
+   }
+  },
+  "obj_afederal_allowing-approves-buyout-close": {
+   "status": "drafted",
+   "drafts": {
+    "claude": "rdg_qdosaaksy41l"
+   },
+   "draftedOn": "2026-10-01",
+   "inversions": [],
+   "corrections": [
+    {
+     "field": "kind",
+     "from": "vote",
+     "to": "ruling",
+     "why": "A federal judge approving a consent decree (N.D. Cal., Martínez-Olguín, 2026-09-30); no vote."
+    },
+    {
+     "field": "holder",
+     "from": "a federal court",
+     "to": "U.S. District Court, N.D. Cal. (Judge Araceli Martínez-Olguín); the decree binds Paramount and is enforced by the 12 states",
+     "why": "Names the court; the instrument is the decree, not the court."
+    }
+   ],
+   "permanenceNote": "Return (lean, unverified this run): the Ellison media arc (Skydance–Paramount 2025) extended to CNN; touches the White House press-ban cards.",
+   "publishAttempt": {
+    "on": "2026-10-01T18:10:21.532Z",
+    "exit": 5,
+    "why": "no GITHUB_PUBLISH_TOKEN on the Mac; draft stays in drafts/claude"
+   }
+  },
+  "obj_dhs_guidance-ice-memo-rules": {
+   "status": "drafted",
+   "drafts": {
+    "claude": "rdg_64eiv0kp2d3u"
+   },
+   "draftedOn": "2026-10-01",
+   "corrections": [
+    {
+     "field": "formedOn",
+     "from": "2026-10-01",
+     "to": "2026-09-30",
+     "why": "The memo was signed Wednesday 09-30 (AP); 10-01 is the day the AP obtained and reported it — report date, not as-of date.",
+     "by": "Claude (drafting)",
+     "on": "2026-10-01"
+    },
+    {
+     "field": "holder",
+     "from": "DHS",
+     "to": "ICE Enforcement and Removal Operations (Marcos D. Charles, executive associate director)",
+     "why": "An internal ICE memo signed by the head of ERO, not by the DHS Secretary. DHS is one level too high.",
+     "by": "Claude (drafting)",
+     "on": "2026-10-01"
+    },
+    {
+     "field": "kind",
+     "from": "ruling",
+     "to": "agency guidance memo",
+     "why": "Nothing was ruled; it is internal operating guidance.",
+     "by": "Claude (drafting)",
+     "on": "2026-10-01"
+    }
+   ],
+   "inversions": [
+    {
+     "station": "B (and the administration as holder)",
+     "bands": "fluid +0.6, coalition +0.2",
+     "lean": "the right defended the President reversing the July pause on vehicle stops; eleven weeks later ICE leadership restricted the stops and B-fluid reads that as professionalism, B-coalition as a quieter version of the pause",
+     "prior": "CBS News, July 2026: pause 07-14, reversal 07-15 (coverage, not a live Reading)",
+     "ruled": false
+    }
+   ],
+   "permanenceNote": "A return (lean): the July vehicle-stop pause (07-14, reversed 07-15) re-formed as internal guidance on 09-30; the register never carried the July arc."
+  },
+  "obj_thepresi_approval-economic-falls-house": {
+   "status": "dismissed",
+   "dismissedWhy": "No instrument: a poll number and a remark about public relations. Nothing was voted, signed or ordered, so there is nothing for the stations to believe delivers. Dismissed by Claude (drafting) 2026-10-01; reversible by Sailor."
+  },
+  "obj_thesenat_ahead-ban-bills-block": {
+   "status": "drafted",
+   "drafts": {
+    "claude": "rdg_l9xd9omvnpa7"
+   },
+   "draftedOn": "2026-10-02",
+   "corrections": [
+    {
+     "field": "formedOn",
+     "from": "2026-10-02",
+     "to": "2026-09-30",
+     "why": "The cloture vote was Wednesday 09-30 (Senate Record Vote 253); 10-02 is the day the wire story was scanned — report date, not as-of date.",
+     "by": "Claude (drafting)",
+     "on": "2026-10-02"
+    },
+    {
+     "field": "kind",
+     "from": "ruling",
+     "to": "cloture vote (motion to proceed, H.R. 7008)",
+     "why": "Nothing was ruled; the Senate voted 53–47 and 60 were needed.",
+     "by": "Claude (drafting)",
+     "on": "2026-10-02"
+    }
+   ],
+   "inversions": [
+    {
+     "station": "A",
+     "bands": "fluid −0.6, coalition −0.3",
+     "lean": "Senate Democrats have pressed for a congressional stock-trading ban; every one voted against proceeding to a bill with that title, citing the voter-ID rider and the loopholes",
+     "prior": "Hoodline 2026-09-30: Ossoff unanimous-consent request, June 2026 (coverage, not a live Reading)",
+     "ruled": false
+    },
+    {
+     "station": "B / D (Republican leadership as holder)",
+     "bands": "D coalition −0.2 against D fluid +0.5",
+     "lean": "leadership gave the floor to the purchase-only House bill while the HONEST Act (S. 1498), a full ban from its own side, has sat on the calendar since 2025-12-10",
+     "prior": "Prism catalog: S. 1498, Calendar No. 294",
+     "ruled": false
+    }
+   ],
+   "permanenceNote": "A return (lean): the voter-ID bill that failed cloture 08-08 (S. 5271) came back tied to the stock bill.",
+   "publishAttempt": {
+    "on": "2026-10-03T06:07:23.349Z",
+    "exit": 5,
+    "why": "no GITHUB_PUBLISH_TOKEN on the Mac; draft stays in drafts/claude"
+   }
   }
  }
 }

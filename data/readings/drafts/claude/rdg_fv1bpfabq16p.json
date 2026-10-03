@@ -1,0 +1,489 @@
+{
+ "centralObject": {
+  "kind": "bill",
+  "ref": "hr-119-10167",
+  "name": "The Common Cents Act (H.R. 10167, 119th Congress)"
+ },
+ "tethers": [
+  {
+   "billId": "hr-119-10167",
+   "bill": "H.R. 10167",
+   "title": "Common Cents Act",
+   "relation": "object",
+   "statusAsOf": "Passed House 2026-09-14 (catalog); passed Senate by voice vote 2026-09-28 per AP (2026-09-29), not yet in the catalog; to the President",
+   "why": "The consolidated House bill (McClain, R-Mich.; Garcia, D-Calif.) that the House passed by voice vote on 09-14 and that awaited only the Senate. AP names the Common Cents Act and the sponsors but does not print the bill number; that the Senate cleared H.R. 10167 rather than another vehicle is Claude's read from the catalog and trade-press accounts of the 09-14 House vote.",
+   "inDb": true
+  },
+  {
+   "billId": "s-119-1525",
+   "bill": "S. 1525",
+   "title": "Common Cents Act",
+   "relation": "adjacent",
+   "statusAsOf": "Passed Senate 2026-08-07; held at the desk 2026-08-10 (catalog)",
+   "why": "The Senate's own version (Lummis), passed in August; superseded as the vehicle by the consolidated House bill.",
+   "inDb": true
+  },
+  {
+   "billId": "hr-119-3074",
+   "bill": "H.R. 3074",
+   "title": "Common Cents Act",
+   "relation": "adjacent",
+   "statusAsOf": "Passed House 2026-07-14 (catalog)",
+   "why": "The earlier House version (McClain); the consolidated H.R. 10167 followed it.",
+   "inDb": true
+  },
+  {
+   "statute": "Coinage Act of 1792, as codified at 31 U.S.C. §5112",
+   "cite": "1 Stat. 246 (1792); 31 U.S.C. §5112(a) (denominations), §5103 (legal tender)",
+   "title": "The Mint's coin denominations, including the one-cent coin",
+   "enacted": "1792-04-02",
+   "relation": "amends",
+   "why": "The 234 years in the headline run from the 1792 Act that created the cent. The bill ends circulating production of a denomination the statute authorizes and keeps existing cents legal tender. Which subsections the enrolled text amends is NOT verified in this draft (enrolled text not read)."
+  }
+ ],
+ "linkedBills": [
+  "hr-119-10167",
+  "s-119-1525",
+  "hr-119-3074"
+ ],
+ "title": "Rounded to the Nearest Nickel",
+ "category": "Currency · Treasury · Consumer",
+ "date": "2026-09-28",
+ "prompt": "Congress voted to end the penny and let stores round cash to the nearest nickel. Does it deliver savings and certainty at the register, or push the cost onto people who pay in cash?",
+ "framing": "Late on Monday, September 28, 2026, the Senate passed the Common Cents Act by voice vote, sending it to President Trump, who is expected to sign it. The House had passed it by voice vote on September 14. The bill ends production of the penny for circulation, 234 years after it began. Pennies already in circulation stay legal tender. Stores may round cash totals up or down to the nearest nickel; card and electronic payments stay exact. The bill also lets the Mint put a cheaper zinc core in the nickel. The Mint says a penny costs almost 4 cents to make, and ending it saves about $56 million a year. The Trump administration already stopped making pennies in 2025, and retailers pushed for the bill, citing penny shortages and uncertainty over making change.",
+ "framingKeywords": [
+  "the penny",
+  "Common Cents Act",
+  "nearest nickel",
+  "cash totals",
+  "legal tender"
+ ],
+ "prevalentAxis": "y",
+ "split": {
+  "topology": "peel",
+  "strength": 0.35,
+  "seam": "at the fluid ring the populist left peels off alone; at the coalition ring the seam lies on y (both populist stations just below zero, both institutional stations above); at the rim it turns to x, by trust in Trump",
+  "rationale": "The stated object runs along y: an efficiency-and-certainty bill written by institutions (the Mint, Congress, retail groups) against a cash-payer's worry about who absorbs the change. The centers are mild. Only C's fluid band is negative (-0.3), on cash access rather than the rounding math. At the coalition ring both populist stations sit at -0.1 while the institutional stations stay positive (+0.3, +0.5). The rims sort cleanly on x by holder-trust: A -0.4 (Trump holds it, untrusted), B +0.8, D +0.6 (Trump holds it, trusted), C -0.8 (the retail lobby holds it, untrusted). The seam moving by radius is bench #9's radial shape; the enum has no value for it, so it is declared peel. Low strength because a bill passed by voice vote in both chambers has little heat at the centers.",
+  "zPattern": {
+   "centers": {
+    "A": 0.5,
+    "B": 0.7,
+    "C": -0.3,
+    "D": 0.3
+   },
+   "rims": {
+    "A": -0.4,
+    "B": 0.8,
+    "C": -0.8,
+    "D": 0.6
+   },
+   "note": "Centers are fluid z; coalition z: A 0.3, B 0.5, C -0.1, D -0.1. A changes sign at the rim (+0.3 -> -0.4). D changes sign twice: fluid +0.3, coalition -0.1, rim +0.6 (the D coalition-to-rim sign change again; see the morning note's bench line)."
+  },
+  "ruledBy": null,
+  "date": "2026-09-28"
+ },
+ "antiValentBand": "denominated",
+ "antiValentRationale": "At the rim the coin and the rounding table are gone: the penny becomes Trump's shortcut or Trump's win over waste, and on the populist left a favor for big grocers. Only one rim (C) keeps a trace of the object, in the cash payer.",
+ "axes": {
+  "x": {
+   "pos": "Right",
+   "neg": "Left"
+  },
+  "y": {
+   "pos": "Institutional",
+   "neg": "Populist"
+  },
+  "z": {
+   "pos": "the bill delivers: savings for taxpayers and clear, fair rules for making change",
+   "neg": "the bill fails: the savings are trivial, or the rounding and lost cash access land on people who pay cash"
+  }
+ },
+ "responses": {
+  "A": {
+   "fluid": {
+    "z": 0.5,
+    "zReason": "The rounding table is symmetric, applies only to cash after tax, and the bill attaches a Federal Reserve report and a consumer-impact review of unbanked people, so the mechanism is fair and checked.",
+    "instrument": {
+     "holder": "Congress and the Federal Reserve review",
+     "trusted": true
+    },
+    "text": "The rounding rule is actually symmetric: 1, 2, 6 and 7 go down, 3, 4, 8 and 9 go up, and it only touches cash, after tax, so nobody gets skimmed by design. What sold me is the Fed report and the review of how it lands on unbanked people. That's how you retire a coin, with rules and a check on who it hurts.",
+    "xWord": "consumer review",
+    "yWord": "Federal Reserve",
+    "words": [
+     "symmetric rounding",
+     "unbanked review",
+     "cash only"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0.3,
+    "zReason": "The text still splits rounding evenly and carries the impact review, but a real share of the value is legal cleanup of a halt the speaker's side distrusts, which tempers the read.",
+    "instrument": {
+     "holder": "bipartisan sponsors McClain and Garcia",
+     "trusted": true
+    },
+    "text": "I think the bill is fine. The rounding splits evenly and the impact review is in there. But the people I vote with keep calling it cleanup of Trump's mess, and I catch myself grading it by who stopped the penny first instead of by what the text does. Garcia co-sponsored it; does that count for nothing?",
+    "xWord": "Garcia",
+    "yWord": "bill text",
+    "words": [
+     "splits evenly",
+     "Trump's mess",
+     "co-sponsor"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.4,
+    "zReason": "The rim sees custody of the outcome with the Trump administration, which it does not trust, so the sign goes negative.",
+    "instrument": {
+     "holder": "Trump administration",
+     "trusted": false
+    },
+    "text": "Trump killed the penny with a post and left stores to improvise. Congress just signed off on his shortcut.",
+    "xWord": "Trump",
+    "yWord": "shortcut",
+    "words": [
+     "killed by post",
+     "signed off",
+     "his shortcut"
+    ],
+    "source": ""
+   },
+   "xSide": "left",
+   "source": ""
+  },
+  "B": {
+   "fluid": {
+    "z": 0.7,
+    "zReason": "A coin costing almost four cents to make loses money on every strike, and one federal rounding rule replaces a patchwork of state methods and uncovered retailer rounding.",
+    "instrument": {
+     "holder": "Congress and the Mint",
+     "trusted": true
+    },
+    "text": "A coin that costs almost four cents to make is a loss on every strike, and about $56 million a year is real money even if it won't fix the deficit. Retailers were rounding with no legal cover and roughly twenty states had their own methods; one federal rule ends that. Cards stay exact, cash rounds both ways. That's clean.",
+    "xWord": "legal certainty",
+    "yWord": "Mint",
+    "words": [
+     "four-cent coin",
+     "one rule",
+     "cards exact"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0.5,
+    "zReason": "The savings and certainty are real but modest, and the speaker notices the win being credited to an executive halt rather than to the statute that actually supplies the rules.",
+    "instrument": {
+     "holder": "Congress",
+     "trusted": true
+    },
+    "text": "I'd vote for it on the numbers. What bugs me is how fast the people I vote with turned it into a Trump trophy; the Mint stopped in 2025 without a statute, and I'd rather cheer Congress finally writing the rules than cheer the shortcut. And $56 million a year isn't the fiscal victory some of them are selling.",
+    "xWord": "Trump trophy",
+    "yWord": "statute",
+    "words": [
+     "on the numbers",
+     "writing rules",
+     "modest savings"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": 0.8,
+    "zReason": "The rim places custody with Trump, whom it trusts, so the sign is positive.",
+    "instrument": {
+     "holder": "President Trump",
+     "trusted": true
+    },
+    "text": "Trump ended the waste Washington ignored for decades. Done.",
+    "xWord": "Trump",
+    "yWord": "Washington waste",
+    "words": [
+     "ended waste",
+     "decades ignored",
+     "done"
+    ],
+    "source": ""
+   },
+   "xSide": "right",
+   "source": ""
+  },
+  "C": {
+   "fluid": {
+    "z": -0.3,
+    "zReason": "After-tax rounding is hard to game, but the savings are small and the shortage-driven drift away from cash lands on unbanked people, with the impact review only reporting after the fact.",
+    "instrument": {
+     "holder": "retailers",
+     "trusted": false
+    },
+    "text": "The rounding splits evenly on paper, and since it happens after tax it's hard to game. My worry is the direction of travel: the shortage already pushed stores toward cards, and the people who live on cash are the ones without bank accounts. $56 million is small money next to that, and the impact review only reports after the damage.",
+    "xWord": "unbanked",
+    "yWord": "cash access",
+    "words": [
+     "after tax",
+     "toward cards",
+     "small money"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": -0.1,
+    "zReason": "The rounding math does not support a hidden tax, so the harm case rests on cash access and on whether the consumer review has teeth, which keeps the read only slightly negative.",
+    "instrument": {
+     "holder": "grocers and retail groups",
+     "trusted": false
+    },
+    "text": "I came in ready to call it a tax on the poor, and the rounding table doesn't really back that up; it goes down as often as up. The people I vote with have already decided it's a grocers' giveaway, and I get why, since the grocers did push it. But I'd rather fight to give the unbanked review teeth than pretend the math is rigged.",
+    "xWord": "grocers",
+    "yWord": "review teeth",
+    "words": [
+     "tax on poor",
+     "not rigged",
+     "grocers pushed"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.8,
+    "zReason": "The rim places custody with the retail lobby, which it does not trust, so the sign is negative.",
+    "instrument": {
+     "holder": "retail lobby",
+     "trusted": false
+    },
+    "text": "Big grocers asked and Congress delivered. The folks paying cash pay for it.",
+    "xWord": "big grocers",
+    "yWord": "cash payers",
+    "words": [
+     "grocers asked",
+     "Congress delivered",
+     "cash pays"
+    ],
+    "source": ""
+   },
+   "xSide": "left",
+   "source": ""
+  },
+  "D": {
+   "fluid": {
+    "z": 0.3,
+    "zReason": "The four-cent penny is waste and two-way cash rounding costs the cash payer little, but the new authority for a cheaper nickel raises an open question about the next coin.",
+    "instrument": {
+     "holder": "President Trump",
+     "trusted": true
+    },
+    "text": "Trump was right that a four-cent penny is a joke, and I'll take the savings. Rounding goes both ways and my card stays exact, so I'm not losing anything real at the counter. I do wonder what a zinc nickel means for the next coin somebody decides costs too much.",
+    "xWord": "savings",
+    "yWord": "zinc nickel",
+    "words": [
+     "four-cent joke",
+     "both ways",
+     "next coin"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": -0.1,
+    "zReason": "The math is fine, but the bill was pushed by retailers and passed without debate, and it does nothing to protect cash as a way to pay, which leaves the read near zero.",
+    "instrument": {
+     "holder": "President Trump",
+     "trusted": true
+    },
+    "text": "I'm with the president on the math. But the people I vote with are cheering this like a win over the swamp, when the retail lobby pushed it and both chambers passed it by voice vote with barely an argument. I carry cash on purpose, and I'd like someone on my side to at least ask where cash goes after the penny.",
+    "xWord": "president",
+    "yWord": "retail lobby",
+    "words": [
+     "voice vote",
+     "carry cash",
+     "swamp win"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": 0.6,
+    "zReason": "The rim places custody with Trump, whom it trusts, so the sign is positive.",
+    "instrument": {
+     "holder": "President Trump",
+     "trusted": true
+    },
+    "text": "Trump said stop wasting money on pennies, and he stopped it. That's the deal.",
+    "xWord": "Trump",
+    "yWord": "the deal",
+    "words": [
+     "stop wasting",
+     "he stopped",
+     "the deal"
+    ],
+    "source": ""
+   },
+   "xSide": "right",
+   "source": ""
+  }
+ },
+ "diatribe": {
+  "LF": {
+   "text": "The penny's done, and the rounding only touches cash, after tax. What sold me is the review of how it lands on unbanked people.",
+   "side": "left",
+   "band": "fluid",
+   "keywords": [
+    "the penny",
+    "only touches cash",
+    "unbanked people"
+   ]
+  },
+  "LC": {
+   "text": "I came in ready to call it a tax on the poor, and the rounding math doesn't back that up. The people I vote with already call it a grocers' giveaway; I'd rather give the unbanked review some teeth.",
+   "side": "left",
+   "band": "coalition",
+   "keywords": [
+    "the people I vote with",
+    "tax on the poor",
+    "grocers' giveaway"
+   ]
+  },
+  "LD": {
+   "text": "Trump killed it with a post and left stores to improvise. Congress just signed off on his shortcut.",
+   "side": "left",
+   "band": "denominated",
+   "keywords": [
+    "his shortcut",
+    "killed it with a post",
+    "signed off"
+   ]
+  },
+  "RF": {
+   "text": "A coin that costs almost four cents to make loses money every time it's struck. One federal rounding rule ends the guessing at the register, and cards stay exact.",
+   "side": "right",
+   "band": "fluid",
+   "keywords": [
+    "one federal rounding rule",
+    "almost four cents",
+    "cards stay exact"
+   ]
+  },
+  "RC": {
+   "text": "I'm with the president on the math. But the people I vote with are cheering a swamp win the retail lobby pushed through on a voice vote, and nobody on my side is asking where cash goes next.",
+   "side": "right",
+   "band": "coalition",
+   "keywords": [
+    "the people I vote with",
+    "swamp win",
+    "where cash goes"
+   ]
+  },
+  "RD": {
+   "text": "Trump ended the waste Washington ignored for decades. Done.",
+   "side": "right",
+   "band": "denominated",
+   "keywords": [
+    "the waste",
+    "Trump",
+    "Done"
+   ]
+  }
+ },
+ "diatribeLayer": "stated",
+ "objectLayer": {
+  "declared": "stated",
+  "stated": "Ending the penny and letting stores round cash totals to the nearest nickel, to save about $56 million a year and give retailers clear rules.",
+  "operative": "Codifying a halt the executive already made in 2025: circulating penny production had stopped before the vote, so the bill's working content is a federal rounding safe harbor for retailers (ending uncovered rounding and a state-by-state patchwork), existing cents kept as legal tender, and authority to test a zinc-core nickel.",
+  "inversion": "Lean, not ruled: A denominated. The institutional-left rim goes negative on a bill a Democrat co-sponsored and no member opposed on the record (voice votes in both chambers); it scores custody (Trump's 2025 halt), not the bill. A split inside the station, not a reversal of a prior. No station-level inversion found."
+ },
+ "window": {
+  "close": "2026-09-28",
+  "why": "Trigger day = the day the object finished forming: the Senate cleared the bill by voice vote 'late Monday' (AP, datelined 2026-09-29), i.e. Monday 2026-09-28. The register's formedOn 2026-09-29 is the report date, not the as-of date; corrected on the card. Signature is the next step and has not happened in the window. Declared at authoring, before any z.",
+  "ruledBy": null,
+  "ruledOn": null
+ },
+ "meta": {
+  "dialecticsRef": "obj_congress_234-congress-end-penny",
+  "status": "draft",
+  "source": "Claude draft — daily newsroom drafting (scheduled), authored z-first against Trace Formula v1 per scripts/newsroom/AUTHORING_PROTOCOL.md v1.4. Filed to drafts/claude; not through the surface; no aiDeltas lineage. Rulings: none.",
+  "editHistory": [
+   {
+    "at": "2026-09-30T06:08:00.000Z",
+    "by": "Claude (scheduled drafting)",
+    "what": "authored: object (holder sharpened: Congress, the Senate's 09-28 voice vote completing passage; formedOn corrected 09-29 -> 09-28) -> window -> frame -> sweep -> central object + tethers -> axes -> twelve (blind subagent) -> one filler word cut by Claude (meta.blindAuthoring.editsAfterHandback) -> split/diatribe/layers -> sweep"
+   }
+  ],
+  "aiDeltas": [],
+  "frameFirst": {
+   "date": "2026-09-28",
+   "by": "Claude, under §4c (window declared at authoring; sweep before z). Object NOT ruled — Claude's read, correctable by Sailor.",
+   "status": "Frame authored and swept before any z; the twelve authored blind z-first by a subagent (meta.blindAuthoring). Stations unruled.",
+   "objectLean": {
+    "stated": "end the penny; round cash to the nearest nickel; save ~$56M a year",
+    "operative": "codifies the 2025 executive halt; the working content is the retailer rounding safe harbor and the zinc-nickel authority",
+    "inversion": "lean, not ruled: A denominated (rim negative on a bipartisan bill, scoring custody)"
+   },
+   "titleLean": "'Rounded to the Nearest Nickel' — Claude's; Sailor names Readings",
+   "sourcesInWindow": [
+    "AP via WSLS / ABC News / Boston Globe, 2026-09-29 (reporting Monday 2026-09-28): Senate passed the Common Cents Act by voice vote late Monday, sending it to Trump, who is expected to sign; ends penny production after 234 years; existing pennies stay legal tender; stores may round up or down to the nearest 5 cents; zinc inner layer for the nickel; Mint: almost 4 cents per penny, $56 million a year saved; 3.2 billion pennies made in 2024; production halted in 2025; retailer coalition on 'cascading impacts'; Garcia quote; sponsors McClain and Garcia",
+    "The Shelby Report 2026-09-17 and CoinWeek (2026-09): H.R. 10167 passed the House by voice vote 2026-09-14; rounding 1/2/6/7 down, 3/4/8/9 up, cash only; Federal Reserve report and consumer-impact review; nickel-composition testing authority — pre-window, load-bearing (the House date is in the frame)"
+   ],
+   "background_preWindow": [
+    "1792-04-02: the Coinage Act creates the cent",
+    "2025-02: Trump says the U.S. has minted pennies 'for far too long' and directs Treasury to stop; circulating production halted in 2025",
+    "2026: about 20 states enact their own rounding laws (Bloomberg Tax; exact dates not verified)",
+    "2026-07-14: H.R. 3074 passes the House; 2026-08-07: S. 1525 passes the Senate (catalog)",
+    "2026-09-14: H.R. 10167, the consolidated bill, passes the House by voice vote (catalog; Shelby Report)"
+   ]
+  },
+  "framingAudit": {
+   "date": "2026-09-28",
+   "by": "Claude — frame-first authoring under §4c; sweep run BEFORE any z. Not a ruling.",
+   "window": "2026-09-28 (declared, see window.why)",
+   "verifiedInWindow": [
+    "Senate passage by voice vote, late Monday 2026-09-28 (AP 2026-09-29)",
+    "sent to Trump; expected to sign (AP)",
+    "House passage by voice vote 2026-09-14 (Shelby Report 2026-09-17; catalog) — pre-window, load-bearing",
+    "ends penny production after 234 years; existing pennies legal tender (AP)",
+    "round cash up or down to the nearest 5 cents (AP); card/electronic exact (Shelby Report on the House text)",
+    "zinc inner layer for the nickel (AP)",
+    "almost 4 cents per penny; $56 million a year (AP citing the Mint)",
+    "production halted in 2025 by the Trump administration (AP)",
+    "retailers pushed for it, citing shortages and uncertainty over exact change (AP)"
+   ],
+   "keptUnverifiedDate": [],
+   "deliberatelyExcluded_afterWindow": [
+    "nothing after the window was used",
+    "the signing (not in the window; if and when it happens it is the next step of this object, not a new one)",
+    "the exact rounding table and the Fed/consumer-impact review — kept out of the frame (they are in the House-passed text per trade press, not in AP's account of the final vote) and given to the blind author as dated background; A fluid, C fluid and C coalition lean on them",
+    "state rounding-law counts (Bloomberg Tax, undated) — background only",
+    "the bill number — AP doesn't print it; it lives in the tether with its caveat"
+   ]
+  },
+  "blindAuthoring": {
+   "date": "2026-09-30",
+   "author": "Claude (general-purpose subagent) — blind: given the frame, prompt, keywords, axes, a station/radius brief, a short dated background, R-0921-1 and the voice rules only; no other Reading, no register, no web",
+   "zFirst": true,
+   "instrumentOnAll12": true,
+   "rulings": "NONE — every station awaits Sailor's ruling. z and instrument as authored by the blind author; no z or instrument changed.",
+   "editsAfterHandback": {
+    "by": "Claude (orchestrator), 2026-09-30 — no z or instrument changed; Sailor may revert",
+    "what": [
+     "A.coalition: dropped 'honestly' from 'I think the bill is fine, honestly.' (filler; same sentence)."
+    ]
+   },
+   "authorNote": "The coalition bands were hardest: the object has low salience and passed both chambers by voice vote, so 'denomination on my side' had to be found in small places — the left grading the bill by who halted the penny first, the right crediting the executive halt over the statute, left-populists calling it a grocers' giveaway, right-populists cheering a 'swamp win' the retail lobby drove. The z trusted least is D coalition (-0.1), honest range about -0.3 to +0.3. C fluid (-0.3) is also soft (range -0.5 to 0): after-tax symmetric rounding undercuts the strongest harm claim, so the case rests on cash access and the review's timing. The centers cluster mildly positive-to-neutral because the mechanism is symmetric and the savings real but small; the rims split cleanly by custody under R-0921-1 (Trump trusted by B and D, not by A; C puts custody with the retail lobby)."
+  },
+  "newsroomFindings": {
+   "inversionLeans": [
+    "A denominated (lean, not ruled): negative on a bill a Democrat co-sponsored, scoring Trump's custody of the 2025 halt; a split inside the station, not a reversal of a prior."
+   ],
+   "permanence": "A RETURN (lean). The penny arc: the 2025-02 Trump directive and the 2025 halt, the summer's House and Senate versions (07-14, 08-07), the 09-14 consolidated House vote, and now final passage. The register never carried the earlier steps. Next step is the signature — if it lands, it's this object completing, not a new one."
+  }
+ },
+ "rid": "rdg_fv1bpfabq16p",
+ "ridLineage": "minted 2026-09-30 (UTC) by the scheduled newsroom drafting task; filed directly to drafts/claude",
+ "schema": "reading/v1",
+ "formulaVersion": "1",
+ "updatedAt": "2026-09-30T06:08:00.000Z",
+ "authorTier": "claude",
+ "newsroom": {
+  "oid": "obj_congress_234-congress-end-penny",
+  "queuedOn": "2026-09-30",
+  "draftedOn": "2026-09-29"
+ },
+ "images": []
+}

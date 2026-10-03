@@ -1,0 +1,540 @@
+{
+ "centralObject": {
+  "kind": "bill",
+  "ref": "hr-119-9340",
+  "name": "The Ratepayer Protection Act, H.R. 9340 — a large-load cost standard states must consider under PURPA, which failed to advance in the Senate 57-43 on 2026-09-30",
+  "place": {
+   "quadrants": [
+    "A",
+    "B"
+   ],
+   "band": "coalition",
+   "z": -0.6,
+   "why": "After the vote nothing is in force, and even passage would have produced only a PURPA 111(d) consider-and-determine duty with no binding cost rule, so the instrument mainly presses on the institutional blocs: Republicans who sold it as price relief and Democrats who sank a 417-3 bill for one that can't pass a 53-47 Senate."
+  }
+ },
+ "tethers": [
+  {
+   "billId": "hr-119-9340",
+   "bill": "H.R. 9340",
+   "title": "Ratepayer Protection Act",
+   "relation": "object",
+   "statusAsOf": "2026-09-30: failed to advance in the Senate, 57-43 with 60 needed (Hassan, Klobuchar, Ossoff, Warnock yes); House-passed 2026-09-16, 417-3; on the Senate calendar (No. 684) since 2026-09-24",
+   "why": "The instrument itself: adds a 'Standards for Large-Load Customers' standard to PURPA §111(d) that state regulators and non-regulated utilities must consider — whether customers of 100 MW or more pay the full incremental cost of grid upgrades, with financial assurance up front.",
+   "inDb": true,
+   "place": {
+    "quadrants": [
+     "A",
+     "B"
+    ],
+    "band": "coalition",
+    "z": -0.6,
+    "why": "Same instrument as the central object."
+   }
+  },
+  {
+   "statute": "Public Utility Regulatory Policies Act of 1978 (PURPA), §111(d)",
+   "cite": "16 U.S.C. §2621(d)",
+   "title": "PURPA's consider-and-determine standards",
+   "enacted": "1978-11-09",
+   "relation": "amends",
+   "why": "The legacy mechanism H.R. 9340 rides: states must hold a proceeding and decide on each federal standard, but need not adopt it. The bill's whole delivery question is this statute's design.",
+   "place": {
+    "quadrants": [
+     "A",
+     "B"
+    ],
+    "band": "fluid",
+    "z": 0,
+    "why": "The 1978 vehicle, not the instrument; it neither delivers nor fails on this vote."
+   }
+  },
+  {
+   "billId": null,
+   "bill": "S. — (number not found in-window)",
+   "title": "GRID Savings Act (Heinrich)",
+   "relation": "adjacent",
+   "statusAsOf": "Introduced 2026-08-03 (Senate Energy and Natural Resources Committee release); no further action found",
+   "why": "The Democrats' alternative named on the floor 09-30: FERC would set binding interconnection rules making large new users pay for the grid upgrades they need. The 'real teeth' the no votes cited.",
+   "inDb": false,
+   "place": {
+    "quadrants": [
+     "A",
+     "B"
+    ],
+    "band": "fluid",
+    "z": 0,
+    "why": "A rival text that never became the instrument; it neither delivers nor fails."
+   }
+  },
+  {
+   "billId": "hr-119-6529",
+   "bill": "H.R. 6529",
+   "title": "Protecting Families from AI Data Center Energy Costs Act",
+   "relation": "adjacent",
+   "statusAsOf": "2026-07-21: ordered reported 44-0 (catalog latestAction)",
+   "why": "A House companion on the same cost question, reported the same day H.R. 9340 was; cited by title and status only, text not read.",
+   "inDb": true,
+   "place": {
+    "quadrants": [
+     "A",
+     "B"
+    ],
+    "band": "fluid",
+    "z": 0,
+    "why": "A companion that never became the instrument; it neither delivers nor fails."
+   }
+  }
+ ],
+ "linkedBills": [
+  "hr-119-9340",
+  "hr-119-6529"
+ ],
+ "title": "Asked to Consider",
+ "category": "Energy · Congress · Tech",
+ "date": "2026-09-30",
+ "prompt": "The Senate blocked a bill to keep data center costs off household electric bills. Does a standard states only have to consider protect anyone?",
+ "framing": "On Wednesday, September 30, 2026, the Senate voted 57 to 43 to advance the Ratepayer Protection Act (H.R. 9340), short of the 60 votes needed. Four Democrats voted yes: Maggie Hassan, Amy Klobuchar, Jon Ossoff and Raphael Warnock. The House passed the bill 417 to 3 on September 16, 2026. It would require state regulators to consider whether data centers and other customers drawing 100 megawatts or more should pay the full cost of the grid upgrades they need. Each state decides whether to adopt it. On the day of the vote, Sen. Jon Husted (R-Ohio) said the bill lets Republicans prove they are \"for lower electricity prices,\" and Minority Leader Chuck Schumer called it \"a fraud.\" Democrats back Sen. Martin Heinrich's GRID Savings Act (introduced August 3, 2026), which would require it.",
+ "framingKeywords": [
+  "data center costs",
+  "57 to 43",
+  "states consider",
+  "toothless",
+  "electric bills"
+ ],
+ "prevalentAxis": "x",
+ "split": {
+  "topology": "peel",
+  "strength": 0.55,
+  "seam": "Whether state discretion plus voluntary pledges count as protection, or whether only a binding rule that makes the big users pay does.",
+  "rationale": "Most stations read the bill as non-delivering. The right-institutional quadrant peels off positive on trust in states and governors, joined weakly by the left-institutional coalition speaker who prefers a passable floor and the right-populist coalition speaker who prefers the statehouse to Washington. The populist rims sit deep negative on distrust of Big Tech.",
+  "zPattern": {
+   "centers": {
+    "A": -0.3,
+    "B": 0.3,
+    "C": -0.8,
+    "D": -0.5
+   },
+   "rims": {
+    "A": -0.7,
+    "B": 0.6,
+    "C": -0.9,
+    "D": -0.8
+   },
+   "note": "Centers are fluid z; coalition z: A +0.2, B −0.15, C −0.45, D +0.1. Three of four coalitions cross their own fluid sign (A and D up through zero, B down through it). Rims sign by holder-trust exactly: B's rim trusts the Republican governors; A, C and D rims distrust Husted's party, Big Tech, or the tech billionaires."
+  },
+  "ruledBy": null,
+  "date": "2026-09-30"
+ },
+ "antiValentBand": "coalition",
+ "antiValentRationale": "In the coalition band signs run against each quadrant's tendency: A crosses to positive (taking the floor its own party blocked), B drops below zero (doubting the pledge its side leans on), and D crosses to positive (statehouse over Washington). Weighing their own side's tactic is what flips them.",
+ "axes": {
+  "x": {
+   "pos": "Right",
+   "neg": "Left"
+  },
+  "y": {
+   "pos": "Institutional",
+   "neg": "Populist"
+  },
+  "z": {
+   "pos": "the bill delivers: data centers end up paying their own grid costs, household bills are protected, and this vote moves that closer",
+   "neg": "it doesn't: a standard states only have to consider, with nothing to make data centers pay; no protection comes of it"
+  }
+ },
+ "responses": {
+  "A": {
+   "fluid": {
+    "z": -0.3,
+    "zReason": "Under PURPA 111(d) a commission has to hold a proceeding and rule on the large-load standard, but it can say no, so any cost shifting depends entirely on each state choosing it.",
+    "instrument": {
+     "holder": "state utility commissions",
+     "trusted": true
+    },
+    "text": "I know how 111(d) works: the commission has to open a docket, take comment, and write down a decision. That isn't nothing, because it puts data center cost allocation on the record in every state. But a commission that's already friendly to the data center can just decline, so I can't call it protection for my bill.",
+    "xWord": "rules-based fix",
+    "yWord": "regulatory process",
+    "words": [
+     "consider and determine",
+     "on the record",
+     "no mandate"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0.2,
+    "zReason": "Forcing every commission to rule on the question is a real, passable step, and blocking it for the GRID Savings Act gives up that step for a bill with no path in a 53-47 Senate.",
+    "instrument": {
+     "holder": "state utility commissions",
+     "trusted": true
+    },
+    "text": "The people I vote with killed a bill the House passed 417 to 3 so they could hold out for Heinrich's version, and Heinrich's version isn't getting 60 votes either. Hassan, Klobuchar, Ossoff and Warnock looked at that math and took the docket in every state. I think they're right. A weak floor beats an empty room.",
+    "xWord": "pragmatic Democrat",
+    "yWord": "take the floor",
+    "words": [
+     "417 to 3",
+     "four crossed",
+     "better than nothing"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.7,
+    "zReason": "The speaker reads the bill as a Republican campaign device and distrusts its sponsors to deliver anything to ratepayers.",
+    "instrument": {
+     "holder": "Husted and Senate Republicans",
+     "trusted": false
+    },
+    "text": "It's Jon Husted's ad for November. I don't trust anything his side needs to pass five weeks before an election.",
+    "xWord": "anti-GOP",
+    "yWord": "party read",
+    "words": [
+     "campaign prop",
+     "Husted's race"
+    ],
+    "source": ""
+   },
+   "xSide": "left",
+   "source": ""
+  },
+  "B": {
+   "fluid": {
+    "z": 0.3,
+    "zReason": "The standard puts large-load cost recovery in front of every state regulator while leaving the decision with states, and it works alongside the pledge companies already signed to pay for their own upgrades.",
+    "instrument": {
+     "holder": "state regulators",
+     "trusted": true
+    },
+    "text": "This is the right shape for it: it adds a standard to a law that's been around since 1978 and lets each state's regulators decide what fits their grid. Add the pledge, where the big tech companies already said they'd cover their own upgrades, and the direction is clear. It didn't clear 60 today, but 57 senators and nearly the whole House want this.",
+    "xWord": "federalism",
+    "yWord": "orderly process",
+    "words": [
+     "states decide",
+     "upfront guarantees",
+     "57 votes"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": -0.15,
+    "zReason": "Without a binding rule, protection rests on a voluntary pledge from the same companies the President wants building faster, and nothing enforces it.",
+    "instrument": {
+     "holder": "pledge-signing tech firms and utilities",
+     "trusted": false
+    },
+    "text": "I like the bill, but the people I vote with keep pointing at the pledge as if it settles the question. It's voluntary, and the White House wants these data centers built as fast as possible. If Husted needs this to prove he's for lower prices, I'd want it to actually make somebody pay.",
+    "xWord": "skeptical Republican",
+    "yWord": "wants enforcement",
+    "words": [
+     "voluntary pledge",
+     "no teeth",
+     "campaign pressure"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": 0.6,
+    "zReason": "The speaker trusts Republican governors and state leadership to make data centers pay without Washington ordering it.",
+    "instrument": {
+     "holder": "Republican governors",
+     "trusted": true
+    },
+    "text": "Twenty-three Republican governors already signed on. Leave it to them.",
+    "xWord": "states first",
+    "yWord": "governors' call",
+    "words": [
+     "governors' addendum",
+     "state control"
+    ],
+    "source": ""
+   },
+   "xSide": "right",
+   "source": ""
+  },
+  "C": {
+   "fluid": {
+    "z": -0.8,
+    "zReason": "A standard regulators only have to consider leaves cost allocation with commissions and utilities that have every reason to keep data centers happy, so nothing makes the 100-megawatt users pay.",
+    "instrument": {
+     "holder": "state utility commissions",
+     "trusted": false
+    },
+    "text": "Consider? My electric bill doesn't get considered, it gets paid. This hands the question to the same state commissions that approved the rate hikes, and lets them shrug. Without a rule that makes the big users pay, it's toothless.",
+    "xWord": "anti-corporate",
+    "yWord": "ratepayer first",
+    "words": [
+     "toothless",
+     "rate hikes",
+     "captured regulators"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": -0.45,
+    "zReason": "The Democratic alternative also can't pass, so blocking this one only means no rule at all while bills keep rising.",
+    "instrument": {
+     "holder": "Senate Democrats",
+     "trusted": false
+    },
+    "text": "Schumer's right that this bill is weak. But the people I vote with blocked it and their real bill isn't moving either, so what do I get in the meantime? A fraud on one side and a press release on the other, and my bill still goes up.",
+    "xWord": "left, impatient",
+    "yWord": "against both",
+    "words": [
+     "GRID Savings Act",
+     "no relief",
+     "both sides posturing"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.9,
+    "zReason": "The speaker trusts no instrument that depends on Big Tech's good faith.",
+    "instrument": {
+     "holder": "Amazon, Google, Meta and Microsoft",
+     "trusted": false
+    },
+    "text": "Big Tech never pays for anything it can push onto everybody else. I don't believe that changes.",
+    "xWord": "anti-Big Tech",
+    "yWord": "against billionaires",
+    "words": [
+     "they never pay",
+     "data center giants"
+    ],
+    "source": ""
+   },
+   "xSide": "left",
+   "source": ""
+  },
+  "D": {
+   "fluid": {
+    "z": -0.5,
+    "zReason": "Making the full-cost standard optional and relying on voluntary pledges lets the tech companies decide whether they pay, and nothing obliges them to.",
+    "instrument": {
+     "holder": "tech companies and utilities",
+     "trusted": false
+    },
+    "text": "I don't want these data centers in my county, and I sure don't want to pay for their power lines. A standard my state can just ignore doesn't stop that. The companies promising to pay are the same ones who've never paid for anything they could dodge.",
+    "xWord": "anti-Big Tech right",
+    "yWord": "local control",
+    "words": [
+     "not my bill",
+     "empty promise",
+     "Silicon Valley"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0.1,
+    "zReason": "A state-decided standard keeps the fight at the statehouse, where voters can push, instead of handing it to federal regulators under Heinrich's bill.",
+    "instrument": {
+     "holder": "my state legislature and regulators",
+     "trusted": true
+    },
+    "text": "The people I vote with sold this as more than it is, and the President wants every data center built yesterday, so I don't buy that it's a cure. But Heinrich's bill hands the whole thing to regulators in Washington. I'd rather fight it out in my own statehouse, so I'll take the weak version.",
+    "xWord": "populist right",
+    "yWord": "statehouse fight",
+    "words": [
+     "not Washington",
+     "oversold",
+     "states' fight"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.8,
+    "zReason": "The speaker reads the bill as cover for tech billionaires and distrusts them to protect anyone's bill.",
+    "instrument": {
+     "holder": "tech billionaires",
+     "trusted": false
+    },
+    "text": "It's the tech billionaires' bill wearing a red jersey. They're not paying my light bill.",
+    "xWord": "MAGA populist",
+    "yWord": "anti-elite",
+    "words": [
+     "billionaires' bill",
+     "not fooled"
+    ],
+    "source": ""
+   },
+   "xSide": "right",
+   "source": ""
+  }
+ },
+ "diatribe": {
+  "LF": {
+   "text": "The commission has to open a docket and write down a decision, so data center costs land on the record in every state. But a commission that's friendly to the data center can just decline.",
+   "side": "left",
+   "band": "fluid",
+   "keywords": [
+    "open a docket",
+    "just decline",
+    "on the record"
+   ]
+  },
+  "LC": {
+   "text": "The people I vote with killed a bill the House passed 417 to 3 to hold out for Heinrich's version, and Heinrich's version isn't getting 60 votes either. A weak floor beats an empty room.",
+   "side": "left",
+   "band": "coalition",
+   "keywords": [
+    "The people I vote with",
+    "weak floor",
+    "empty room"
+   ]
+  },
+  "LD": {
+   "text": "Big Tech never pays for anything it can push onto everybody else. I don't believe that changes.",
+   "side": "left",
+   "band": "denominated",
+   "keywords": [
+    "Big Tech",
+    "never pays"
+   ]
+  },
+  "RF": {
+   "text": "It adds a standard to a law that's been around since 1978 and lets each state's regulators decide what fits their grid. It didn't clear 60 today, but 57 senators want this.",
+   "side": "right",
+   "band": "fluid",
+   "keywords": [
+    "a standard",
+    "each state's regulators decide",
+    "57 senators"
+   ]
+  },
+  "RC": {
+   "text": "I like the bill, but the people I vote with keep pointing at the pledge as if it settles the question. If Husted needs this to prove he's for lower prices, I'd want it to actually make somebody pay.",
+   "side": "right",
+   "band": "coalition",
+   "keywords": [
+    "the people I vote with",
+    "the pledge",
+    "make somebody pay"
+   ]
+  },
+  "RD": {
+   "text": "It's the tech billionaires' bill wearing a red jersey. They're not paying my light bill.",
+   "side": "right",
+   "band": "denominated",
+   "keywords": [
+    "tech billionaires",
+    "red jersey",
+    "my light bill"
+   ]
+  }
+ },
+ "diatribeLayer": "stated",
+ "objectLayer": {
+  "declared": "stated",
+  "stated": "A ratepayer protection: data centers of 100 MW or more pay the full incremental cost of the grid upgrades they need, so household bills don't carry it.",
+  "operative": "A PURPA §111(d) consider-and-determine duty: every state commission must open a proceeding and rule on the standard, and may reject it. The vote was over whether a duty to consider counts as protection; 57 said yes, and the no votes, by their own account, held out for a binding FERC rule (GRID Savings Act) that has no visible path.",
+  "inversion": "Lean, not ruled: a chamber flip on the left, not a z flip. House Democrats voted for the bill almost unanimously on 2026-09-16 (417-3); 43 of 47 Senate Democrats voted no on 09-30. On the right, D-fluid reads against its own party's bill on Big Tech distrust, while the president backs data center buildout. See meta.newsroomFindings."
+ },
+ "window": {
+  "close": "2026-09-30",
+  "why": "Trigger day = the day the object finished forming: the Senate vote on Wednesday 2026-09-30 (Hearst/KOAT, Gray/Valley News Live, Daily Caller, Townhall, AP via Insurance Journal — all dated 09-30 or reporting the 09-30 vote). The register's formedOn (09-30) is right; its kind is corrected on the object card ('ruling' → 'vote': a failed motion to advance, no court involved). Declared at authoring, before any z.",
+  "ruledBy": null,
+  "ruledOn": null
+ },
+ "meta": {
+  "dialecticsRef": "obj_thesenat_aimed-bill-bills-blocks",
+  "status": "draft",
+  "source": "Claude draft — newsroom drafting (scheduled), authored z-first against Trace Formula v1 per scripts/newsroom/AUTHORING_PROTOCOL.md v1.5. Filed to drafts/claude; no aiDeltas lineage. Rulings: none.",
+  "editHistory": [
+   {
+    "at": "2026-10-01T18:20:00.000Z",
+    "by": "Claude (scheduled drafting)",
+    "what": "authored: object (kind corrected: 'ruling' → vote) -> window -> frame -> sweep -> central object + tethers (H.R. 9340 object, PURPA §111(d) amends, GRID Savings Act + H.R. 6529 adjacent) + place -> axes -> twelve and object z (blind subagent; one pronoun edit) -> split/diatribe/layers -> sweep"
+   }
+  ],
+  "aiDeltas": [],
+  "frameFirst": {
+   "date": "2026-09-30",
+   "by": "Claude, under §4c (window declared at authoring; sweep before z). Object NOT ruled — Claude's read, correctable by Sailor.",
+   "status": "Frame authored and swept before any z; the twelve and the object's own z authored blind z-first by a subagent (meta.blindAuthoring). Stations unruled.",
+   "objectLean": {
+    "stated": "a ratepayer protection from data center grid costs",
+    "operative": "a duty for each state to consider a cost standard, which it may reject",
+    "inversion": "lean, not ruled: a chamber flip on the left (House 417-3 → Senate 43 of 47 Democrats no); right-populist distrust of its own side's bill"
+   },
+   "titleLean": "'Asked to Consider' — Claude's; Sailor names Readings",
+   "sourcesInWindow": [
+    "Gray / Valley News Live 2026-09-30: H.R. 9340, 57-43, 60 needed; Hassan, Klobuchar, Ossoff, Warnock yes; 100 MW large-load customers, full incremental cost, financial assurance; states' discretion; Hoeven and Schumer ('a fraud') quotes; House 417-3",
+    "AP via Insurance Journal 2026-10-01 (reporting 09-30): state regulators to evaluate whether large users pay; Democrats' GRID Savings Act would mandate it; Husted quote; Schumer 'toothless messaging bill'; 53-47 Senate; Husted's race against Sherrod Brown",
+    "Daily Caller 2026-09-30: Heinrich's 09-17 objection ('real teeth'); House 417-3 on 09-16",
+    "Townhall 2026-09-30: Husted, Lawler, Banks, Grassley quotes",
+    "POWER Magazine (pre-window): H.R. 9340 amends PURPA §111(d); the White House Ratepayer Protection Pledge (2026-03-04; expanded 2026-07-23)",
+    "Senate Energy and Natural Resources Committee (Democrats) release, 2026-08-03: Heinrich introduces the GRID Savings Act",
+    "Catalog (prism_legislation.json): hr-119-9340 passed House 2026-09-16, Senate Calendar No. 684 on 2026-09-24"
+   ],
+   "background_preWindow": [
+    "1978-11-09: PURPA enacted; §111(d) consider-and-determine standards (16 U.S.C. §2621(d))",
+    "2026-03-04: White House Ratepayer Protection Pledge — Amazon, Google, Meta, Microsoft, OpenAI, Oracle, xAI (voluntary)",
+    "2026-07-21: H.R. 9340 reported by House Energy and Commerce (POWER: 52-0); H.R. 6529 ordered reported 44-0 the same day",
+    "2026-07-23: pledge expanded to 187 utilities, co-ops and developers; 23 Republican governors sign an addendum",
+    "2026-08-03: Heinrich introduces the GRID Savings Act",
+    "2026-09-16: House passes H.R. 9340, 417-3",
+    "2026-09-17: Heinrich objects to fast-tracking it ('real legislation with real teeth')",
+    "2026-09-29: the White House AI accord (drafted as rdg_8duj3r93ot5w) includes help for communities near data centers"
+   ]
+  },
+  "framingAudit": {
+   "date": "2026-09-30",
+   "by": "Claude — frame-first authoring under §4c; sweep run BEFORE any z. Not a ruling.",
+   "window": "2026-09-30 (declared, see window.why)",
+   "verifiedInWindow": [
+    "Senate vote Wednesday 2026-09-30, 57-43, 60 needed (Valley News Live, Daily Caller, Townhall, AP — all 09-30)",
+    "Hassan, Klobuchar, Ossoff, Warnock voted yes (Valley News Live, Daily Caller 09-30)",
+    "100 MW large-load customers; full incremental cost; financial assurance up front; state discretion (Valley News Live, Townhall 09-30)",
+    "\"for lower electricity prices\" — Sen. Jon Husted, 2026-09-30 (AP via Insurance Journal)",
+    "\"a fraud.\" — Minority Leader Chuck Schumer, 2026-09-30 (Valley News Live: 'The Ratepayer Protection Act is a fraud.')",
+    "Democrats back the GRID Savings Act, which would mandate that large data centers cover upgrade costs (AP 09-30); introduced 2026-08-03 (Senate ENR release)"
+   ],
+   "keptUnverifiedDate": [
+    "House Energy and Commerce committee tally for H.R. 9340: 52-0 (POWER) — not in the frame",
+    "GRID Savings Act bill number not found in any source read; tethered with inDb:false and billId null",
+    "The exact Senate motion (cloture on the motion to proceed vs. other) isn't named in the in-window sources; the frame says 'advance'"
+   ],
+   "deliberatelyExcluded_afterWindow": [
+    "Reactions after 09-30 (e.g. RVM News 2026-10) — none in the frame"
+   ]
+  },
+  "blindAuthoring": {
+   "date": "2026-10-01",
+   "author": "Claude (general-purpose subagent) — blind: given the frame, prompt, keywords, axes, a station/radius brief, a short dated background (PURPA §111(d), the pledge and its expansion, the committee vote, Heinrich's 09-17 objection, Husted's race, the 53-47 Senate), R-0921-1 and the voice rules only; no other Reading, no register, no web",
+   "zFirst": true,
+   "instrumentOnAll12": true,
+   "objectZ": "The object's own place.z (−0.6) authored by the same subagent, with the twelve, before the words.",
+   "rulings": "NONE — every station awaits Sailor's ruling. z, zReason and instrument as authored. One edit after hand-back: C-denominated text 'push onto the rest of us' → 'push onto everybody else' (voice rule: never we/us/our). No z changed.",
+   "authorNote": "I trust D coalition's +0.1 least. A right-populist could just as easily stay negative on the Big Tech point, and the statehouse-over-Washington argument is a thin reason to cross zero. B fluid at +0.3 is also shaky, because the vote failed, so 'moves it closer' only holds if the 57-vote majority is read as momentum and not as defeat."
+  },
+  "newsroomFindings": {
+   "inversionLeans": [
+    {
+     "station": "A, C (left)",
+     "what": "chamber flip: House Democrats voted for H.R. 9340 almost unanimously on 2026-09-16 (417-3); 43 of 47 Senate Democrats voted no on 2026-09-30",
+     "prior": "House roll call 2026-09-16 (Daily Caller, Valley News Live 09-30)",
+     "note": "Not a z flip: the left centers read the bill as weak in both chambers; the no votes hold out for a binding rule. A-coalition crosses to + and carries the four Democrats' math."
+    },
+    {
+     "station": "D (right-populist)",
+     "what": "reads against its own party's bill: Big Tech distrust outranks the party line, while the president backs data center buildout",
+     "prior": "none cited — a station read, not a recorded flip",
+     "note": "Lean only."
+    }
+   ],
+   "inversionNote": "Leans only; the priors are coverage, not live Readings. Sailor rules.",
+   "permanence": "A RETURN (lean): the data-center-costs arc — the White House pledge (2026-03-04, expanded 07-23), the House vote (09-16), the AI accord's community help (09-29, rdg_8duj3r93ot5w), now the Senate vote. The register carried only the last two legs."
+  }
+ },
+ "rid": "rdg_o7di9vup43f8",
+ "ridLineage": "minted 2026-10-01 (UTC) by the scheduled newsroom drafting task; filed directly to drafts/claude",
+ "schema": "reading/v1",
+ "formulaVersion": "1",
+ "updatedAt": "2026-10-01T18:20:00.000Z",
+ "authorTier": "claude",
+ "newsroom": {
+  "oid": "obj_thesenat_aimed-bill-bills-blocks",
+  "queuedOn": "2026-10-01",
+  "draftedOn": "2026-10-01"
+ },
+ "images": []
+}

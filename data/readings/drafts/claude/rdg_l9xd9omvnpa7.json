@@ -1,0 +1,544 @@
+{
+ "centralObject": {
+  "kind": "bill",
+  "ref": "hr-119-7008",
+  "name": "The Stop Insider Trading Act (H.R. 7008), as it reached the Senate floor with a voter-ID requirement tied to it",
+  "place": {
+   "quadrants": [
+    "A",
+    "B"
+   ],
+   "band": "coalition",
+   "z": -0.5,
+   "why": "It bears on the institutional top of both parties, the members whose portfolios it would touch. A ban on new purchases only, with existing holdings kept and a $2,000 fine, reached the floor tied to voter-ID language that had already failed 52–46, so it had no path to sixty."
+  }
+ },
+ "tethers": [
+  {
+   "billId": "hr-119-7008",
+   "bill": "H.R. 7008",
+   "title": "Stop Insider Trading Act",
+   "relation": "object",
+   "statusAsOf": "Cloture on the motion to proceed not invoked in Senate, 53–47, Record Vote Number 253, 2026-09-30",
+   "why": "The Reading's instrument: no new purchases of publicly traded stock by members, spouses and dependent children; existing holdings kept; 7 to 14 days' notice before a sale; fine of $2,000 or 10%.",
+   "inDb": true,
+   "place": {
+    "quadrants": [
+     "A",
+     "B"
+    ],
+    "band": "coalition",
+    "z": -0.5,
+    "why": "Same instrument as the central object."
+   }
+  },
+  {
+   "billId": "s-119-5271",
+   "bill": "S. 5271",
+   "title": "A bill to amend the Help America Vote Act of 2002 to require voters to provide photo identification",
+   "relation": "adjacent",
+   "statusAsOf": "Cloture on the motion to proceed not invoked in Senate, 52–46, Record Vote Number 231, 2026-08-08",
+   "why": "The standalone voter-ID bill that failed in August; its requirement came back tied to the stock bill.",
+   "inDb": true,
+   "place": {
+    "quadrants": [
+     "A",
+     "C"
+    ],
+    "band": "fluid",
+    "z": 0,
+    "why": "A bill that never became the instrument; it neither delivers nor fails here."
+   }
+  },
+  {
+   "billId": "s-119-1498",
+   "bill": "S. 1498",
+   "title": "Halting Ownership and Non-Ethical Stock Transactions (HONEST) Act",
+   "relation": "adjacent",
+   "statusAsOf": "Placed on Senate Legislative Calendar under General Orders, Calendar No. 294, 2025-12-10",
+   "why": "The stronger ban (no holding or trading, reaching the President and Vice President) that has sat on the calendar without a floor vote while H.R. 7008 got one.",
+   "inDb": true,
+   "place": {
+    "quadrants": [
+     "A",
+     "B"
+    ],
+    "band": "fluid",
+    "z": 0,
+    "why": "A bill that never became the instrument; it neither delivers nor fails here."
+   }
+  },
+  {
+   "statute": "Stop Trading on Congressional Knowledge (STOCK) Act of 2012",
+   "cite": "Pub. L. 112-105",
+   "title": "STOCK Act",
+   "enacted": "2012-04-04",
+   "relation": "amends",
+   "why": "The law in force: disclosure of members' trades within 45 days, with a $200 late fee. H.R. 7008 would have added a purchase ban on top of it; with the vote lost, disclosure remains the only rule.",
+   "place": {
+    "quadrants": [
+     "A",
+     "B"
+    ],
+    "band": "fluid",
+    "z": 0,
+    "why": "Standing law the bill would have built on; it neither delivers nor fails here."
+   }
+  }
+ ],
+ "linkedBills": [
+  "hr-119-7008",
+  "s-119-5271",
+  "s-119-1498"
+ ],
+ "title": "Seven Short",
+ "category": "Congress · Ethics · Elections",
+ "date": "2026-09-30",
+ "prompt": "A stock-trading ban for Congress got 53 votes and needed 60. Was that a ban that was blocked, or a vote that was built to lose?",
+ "framing": "On Wednesday, September 30, 2026, the Senate voted 53–47 on cloture on the motion to proceed to H.R. 7008, the Stop Insider Trading Act. Sixty were needed; every Democrat voted no. The House had passed it on July 22, 2026, 232–198, with 13 Democrats. The bill bars members of Congress, their spouses and dependent children from buying new shares in publicly traded companies. They keep what they already own, must give public notice 7 to 14 days before selling, and face a fine of $2,000 or 10% of the trade. The President and Vice President are not covered. Republicans tied a photo-ID requirement for federal elections to it; a standalone voter-ID bill had failed 52–46 on August 8, 2026. It was among the Senate's last votes before the election recess, five weeks before the midterms.",
+ "framingKeywords": [
+  "stock trading ban",
+  "voter ID",
+  "poison pill",
+  "53 to 47",
+  "existing holdings"
+ ],
+ "prevalentAxis": "x",
+ "split": {
+  "topology": "axis",
+  "strength": 0.8,
+  "seam": "x, clean in the fluid band and at the rim: both left stations read the vote as built to lose (A −0.6, C −0.8; rims −0.9, −1.0), both right stations read a real ban that was blocked (B +0.7, D +0.5; rims +0.8, +0.6). The coalition band is where it frays: D crosses to −0.2.",
+  "rationale": "The vote was 53–47 on party lines, and belief in delivery follows it. The stated object (Congress trading stocks) is a populist demand that could have run along y, and C and D-coalition do meet there: both ask why the stronger bill never got the floor. But no station crosses x on the object itself.",
+  "zPattern": {
+   "centers": {
+    "A": -0.6,
+    "B": 0.7,
+    "C": -0.8,
+    "D": 0.5
+   },
+   "rims": {
+    "A": -0.9,
+    "B": 0.8,
+    "C": -1,
+    "D": 0.6
+   },
+   "note": "Centers are fluid z; coalition z: A −0.3, B +0.2, C −0.6, D −0.2. Rims sign by holder-trust: B and D trust the Republican majority, A and C trust no holder they name. Every coalition band sits closer to zero than its own fluid, and D-coalition changes sign over the HONEST Act."
+  },
+  "ruledBy": null,
+  "date": "2026-10-03"
+ },
+ "antiValentBand": "coalition",
+ "antiValentRationale": "The coalition band is where each station turns on its own side: A winces at the unanimous no, B asks why the pairing, C faults Democrats for not demanding divestment, and D crosses its own sign (+0.5 fluid, −0.2 coalition, +0.6 rim) asking why Hawley's bill never got the vote.",
+ "axes": {
+  "x": {
+   "pos": "Right",
+   "neg": "Left"
+  },
+  "y": {
+   "pos": "Institutional",
+   "neg": "Populist"
+  },
+  "z": {
+   "pos": "this bill is a real ban, and the vote was a real try at passing it",
+   "neg": "it was built to lose: a ban with holes and a rider, and a vote meant for the ads"
+  }
+ },
+ "responses": {
+  "A": {
+   "fluid": {
+    "z": -0.6,
+    "zReason": "Attaching a photo-ID requirement that had already failed 52-46 in August guaranteed every Democrat would vote no, so the sixty-vote threshold was unreachable by design.",
+    "instrument": {
+     "holder": "Senate Republican leadership that assembled the package",
+     "trusted": false
+    },
+    "text": "Voter ID failed 52 to 46 in August, and then the same language shows up bolted to a stock bill five weeks before the midterms. Members keep everything they already own, the fine is $2,000, and the President and Vice President aren't covered at all. I don't see how anyone counts to sixty with that, and I don't think anyone was meant to.",
+    "xWord": "clean bill",
+    "yWord": "floor procedure",
+    "words": [
+     "voter-ID rider",
+     "existing holdings",
+     "sixty votes"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": -0.3,
+    "zReason": "The rider made passage impossible, but the underlying purchase ban is real text that 13 House Democrats voted for, so a unanimous no carries a cost the caucus chose to accept.",
+    "instrument": {
+     "holder": "Senate Democratic leadership deciding what to offer instead",
+     "trusted": false
+    },
+    "text": "I think the rider sank it, and I still wince at the tally: every Democrat, no, on a bill with stock trading ban in the title. Thirteen House Democrats voted yes in July, so it wasn't unthinkable. The people I vote with are very good at explaining the loopholes, and I haven't heard which clean bill they intend to force to the floor.",
+    "xWord": "uneasy Democrat",
+    "yWord": "caucus discipline",
+    "words": [
+     "unanimous no",
+     "thirteen House Democrats",
+     "where's the alternative"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.9,
+    "zReason": "A party that attaches a failed election restriction to an ethics bill is read as wanting the failure, not the law.",
+    "instrument": {
+     "holder": "Republicans who write the riders",
+     "trusted": false
+    },
+    "text": "A poison pill from people who never wanted the cure. Anyone who exempts the President from an ethics bill isn't doing ethics.",
+    "xWord": "Democratic loyalist",
+    "yWord": "institution defender",
+    "words": [
+     "poison pill",
+     "Swiss cheese",
+     "exempt President"
+    ],
+    "source": ""
+   },
+   "xSide": "left",
+   "source": ""
+  },
+  "B": {
+   "fluid": {
+    "z": 0.7,
+    "zReason": "The bill passed the House with 13 Democrats and drew a Senate majority, and its mechanism (no new purchases, public notice before selling) changes member behavior without forcing a fire sale.",
+    "instrument": {
+     "holder": "the Senate majority that brought it to the floor",
+     "trusted": true
+    },
+    "text": "Fifty-three senators voted to take it up. That's a majority, and the House passed it 232 to 198 with Democrats on board. No new shares for members, spouses or dependent children, and 7 to 14 days' public notice before any sale: I'd call that a workable rule, and it was one cloture vote from being debated.",
+    "xWord": "governing conservative",
+    "yWord": "regular order",
+    "words": [
+     "majority voted yes",
+     "prospective ban",
+     "public notice"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0.2,
+    "zReason": "The ban itself is enforceable and was offered in earnest, but pairing it with language that lost 52-46 weeks earlier traded away the seven extra votes it needed.",
+    "instrument": {
+     "holder": "Senate Republican leadership setting the floor schedule",
+     "trusted": true
+    },
+    "text": "I think the ban is real and I'd have voted for it. I also notice that the people I vote with paired it with voter ID after that failed on its own in August, and nobody in the room could have expected sixty. Hawley voted yes and still said he wanted tougher penalties, and his bill has been on the calendar since December. Was the pairing strategy or was it scheduling for the recess?",
+    "xWord": "wary Republican",
+    "yWord": "leadership tactics",
+    "words": [
+     "why the pairing",
+     "Hawley's calendar bill",
+     "recess timing"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": 0.8,
+    "zReason": "The roll call sorts the chamber: the party that supplied all 53 yes votes is taken as the party that means the ban.",
+    "instrument": {
+     "holder": "the Republican majority",
+     "trusted": true
+    },
+    "text": "Fifty-three Republicans for, every Democrat against. I know which party is serious about cleaning up Congress.",
+    "xWord": "party loyalist",
+    "yWord": "majority rule",
+    "words": [
+     "53 to 47",
+     "Democrats blocked it",
+     "simple measure"
+    ],
+    "source": ""
+   },
+   "xSide": "right",
+   "source": ""
+  },
+  "C": {
+   "fluid": {
+    "z": -0.8,
+    "zReason": "A bill that leaves existing portfolios intact, allows private-company purchases and fines 10% of a trade does not remove the conflict of interest it claims to address.",
+    "instrument": {
+     "holder": "stock-owning members in both caucuses",
+     "trusted": false
+    },
+    "text": "They keep what they already own. That's the whole portfolio, untouched, plus private companies still open for buying, and the penalty is $2,000 or 10% of the trade. A bill requiring actual divestment exists in the House and hasn't moved. So what exactly got blocked on Wednesday?",
+    "xWord": "divestment left",
+    "yWord": "distrusts both caucuses",
+    "words": [
+     "keep existing holdings",
+     "$2,000 fine",
+     "divestment stalled"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": -0.6,
+    "zReason": "The vote was structured to fail, but a prospective purchase ban is not nothing, and treating every partial measure as fake leaves the stronger bills with no floor pressure behind them.",
+    "instrument": {
+     "holder": "Senate Democrats who could demand a clean divestment vote",
+     "trusted": false
+    },
+    "text": "I think it was built to lose, rider and all. But I catch the people I usually agree with calling every partial bill worthless, and a ban on new purchases would have been more than the STOCK Act's $200 late fee. Forty-seven no votes and not one of them standing up to demand the divestment bill instead. That bothers me about my own side of the aisle.",
+    "xWord": "restless left",
+    "yWord": "outsider pressure",
+    "words": [
+     "built to lose",
+     "no clean alternative",
+     "purity reflex"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -1,
+    "zReason": "People who profit from the trades are the ones writing and blocking the rules, so no version they schedule is expected to bind them.",
+    "instrument": {
+     "holder": "the investor class in Congress",
+     "trusted": false
+    },
+    "text": "One side wrote a ban with holes, the other side got its excuse to vote no. Same grift, two press releases.",
+    "xWord": "anti-corruption left",
+    "yWord": "anti-establishment",
+    "words": [
+     "both caucuses",
+     "the grift",
+     "campaign ad"
+    ],
+    "source": ""
+   },
+   "xSide": "left",
+   "source": ""
+  },
+  "D": {
+   "fluid": {
+    "z": 0.5,
+    "zReason": "Both halves of the package poll above 80%, so a Senate that put it on the floor was offering something voters want and 47 senators declined it.",
+    "instrument": {
+     "holder": "Senate Republicans who paired the ban with photo ID",
+     "trusted": true
+    },
+    "text": "No new stock for members of Congress and a photo ID to vote in a federal election. I can't find the controversial part. Forty-seven senators looked at both and said no, five weeks before people vote. I'd like each of them to explain which half they couldn't live with.",
+    "xWord": "America First",
+    "yWord": "voter common sense",
+    "words": [
+     "photo ID",
+     "47 said no",
+     "popular both ways"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": -0.2,
+    "zReason": "Leadership chose the weaker House bill over Hawley's full ban already on the calendar, which suggests the vote protected sitting members' holdings while producing a campaign contrast.",
+    "instrument": {
+     "holder": "Senate Republican leadership choosing which bill gets a vote",
+     "trusted": false
+    },
+    "text": "I wanted this to pass, and I wanted voter ID with it. But Hawley's bill, the one with no holding or trading at all, has sat on the calendar since December without a vote, and the one that got the floor lets everybody keep what they own. The ones cheering loudest on my side haven't said why the weaker bill was the one picked. I'd like an answer before I repeat the talking point.",
+    "xWord": "skeptical right",
+    "yWord": "base versus leadership",
+    "words": [
+     "Hawley's bill waits",
+     "holdings kept",
+     "who picked this"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": 0.6,
+    "zReason": "A unanimous Democratic no on a package containing both a trading ban and voter ID is taken as proof the blockers, not the bill, are the obstacle.",
+    "instrument": {
+     "holder": "America First Republicans",
+     "trusted": true
+    },
+    "text": "Every Democrat voted to keep the trades and keep the polls ID-free. The swamp just signed its own name.",
+    "xWord": "MAGA",
+    "yWord": "anti-swamp",
+    "words": [
+     "the swamp",
+     "every Democrat",
+     "voter ID now"
+    ],
+    "source": ""
+   },
+   "xSide": "right",
+   "source": ""
+  }
+ },
+ "diatribe": {
+  "LF": {
+   "text": "Members keep everything they already own, the fine is $2,000, and the President and Vice President aren't covered at all. I don't see how anyone counts to sixty with that, and I don't think anyone was meant to.",
+   "side": "left",
+   "band": "fluid",
+   "keywords": [
+    "keep everything they already own",
+    "counts to sixty",
+    "aren't covered"
+   ]
+  },
+  "LC": {
+   "text": "I think it was built to lose, rider and all. But I catch the people I usually agree with calling every partial bill worthless, and a ban on new purchases would have been more than the STOCK Act's $200 late fee.",
+   "side": "left",
+   "band": "coalition",
+   "keywords": [
+    "the people I usually agree with",
+    "built to lose",
+    "a ban on new purchases"
+   ]
+  },
+  "LD": {
+   "text": "One side wrote a ban with holes, the other side got its excuse to vote no. Same grift, two press releases.",
+   "side": "left",
+   "band": "denominated",
+   "keywords": [
+    "Same grift",
+    "a ban with holes",
+    "two press releases"
+   ]
+  },
+  "RF": {
+   "text": "No new shares for members, spouses or dependent children, and 7 to 14 days' public notice before any sale: I'd call that a workable rule, and it was one cloture vote from being debated.",
+   "side": "right",
+   "band": "fluid",
+   "keywords": [
+    "No new shares",
+    "a workable rule",
+    "one cloture vote"
+   ]
+  },
+  "RC": {
+   "text": "The ones cheering loudest on my side haven't said why the weaker bill was the one picked. I'd like an answer before I repeat the talking point.",
+   "side": "right",
+   "band": "coalition",
+   "keywords": [
+    "The ones cheering loudest",
+    "the weaker bill",
+    "the talking point"
+   ]
+  },
+  "RD": {
+   "text": "Every Democrat voted to keep the trades and keep the polls ID-free. The swamp just signed its own name.",
+   "side": "right",
+   "band": "denominated",
+   "keywords": [
+    "The swamp",
+    "Every Democrat",
+    "keep the trades"
+   ]
+  }
+ },
+ "diatribeLayer": "stated",
+ "objectLayer": {
+  "declared": "stated",
+  "stated": "A ban on members of Congress trading stocks, blocked by Senate Democrats.",
+  "operative": "A ban on new purchases only (holdings kept, $2,000 fine, the President not covered), tied to a voter-ID requirement that had already failed, put to a 60-vote test five weeks before the midterms with 53 votes available.",
+  "inversion": "Lean, not ruled: Senate Democrats, who have pressed for a congressional stock ban, voted unanimously against a bill carrying that title; Republican leadership gave the floor to the weaker House bill while the HONEST Act stayed on the calendar. See meta.newsroomFindings."
+ },
+ "window": {
+  "close": "2026-09-30",
+  "why": "Trigger day = the day the object finished forming: the cloture vote was Wednesday 2026-09-30 (Senate Record Vote 253). The register's formedOn (10-02) is the day the wire story was scanned: a report date, not the as-of date. Corrected on the object card, with kind ('ruling' → cloture vote). Declared at authoring, before any z.",
+  "ruledBy": null,
+  "ruledOn": null
+ },
+ "meta": {
+  "dialecticsRef": "obj_thesenat_ahead-ban-bills-block",
+  "status": "draft",
+  "source": "Claude draft — newsroom drafting (scheduled), authored z-first against Trace Formula v1 per scripts/newsroom/AUTHORING_PROTOCOL.md v1.5. Filed to drafts/claude; no aiDeltas lineage. Rulings: none.",
+  "editHistory": [
+   {
+    "at": "2026-10-03T06:06:53.414Z",
+    "by": "Claude (scheduled drafting)",
+    "what": "authored: object (kind and formedOn corrected) -> window -> frame -> central object (H.R. 7008) + tethers (S. 5271 and S. 1498 adjacent; STOCK Act amends) + place -> axes -> twelve and object z (blind subagent; no edits) -> split/diatribe/layers -> sweep"
+   }
+  ],
+  "aiDeltas": [],
+  "frameFirst": {
+   "date": "2026-09-30",
+   "by": "Claude, under §4c (window declared at authoring; sweep before z). Object NOT ruled — Claude's read, correctable by Sailor.",
+   "status": "Frame authored before any z; the twelve and the object's own z authored blind z-first by a subagent (meta.blindAuthoring). Stations unruled.",
+   "objectLean": {
+    "stated": "a congressional stock-trading ban, blocked",
+    "operative": "a purchase-only ban with a voter-ID rider, put to a vote it could not win",
+    "inversion": "lean, not ruled: Senate Democrats voting against a stock ban by title; GOP leadership passing over the stronger HONEST Act"
+   },
+   "titleLean": "'Seven Short' — Claude's; Sailor names Readings",
+   "sourcesInWindow": [
+    "senate.gov roll call list, 119th Congress 2nd session: Vote 253, Sep 30, 53–47, cloture on the motion to proceed to H.R. 7008 rejected; Vote 254, Sep 30, 57–43, cloture on the motion to proceed to H.R. 9340 rejected",
+    "Hoodline (2026-09-30) and Washington Sun: House passage July 2026, 232–198, 13 Democrats; holdings kept; private-company purchases allowed; 7 to 14 days notice; Schumer and Thune floor quotes",
+    "Newsweek (2026-09-30): $2,000 or 10% penalty; President and Vice President exempt; five weeks before the midterms",
+    "Daily Caller (2026-09-30): Hawley would prefer something stronger; SAVE America Act language included",
+    "Fox News (2026-09-30): Schumer \"poison pill\"; Thune",
+    "Prism catalog: H.R. 7008 passed House 2026-07-22; S. 5271 cloture not invoked 52–46 on 2026-08-08 (Record Vote 231); S. 1498 on the calendar 2025-12-10"
+   ],
+   "background_preWindow": [
+    "2012-04-04: STOCK Act (Pub. L. 112-105); enactment date and the $200 late fee are from my background knowledge, not re-verified this run",
+    "2025-12-10: HONEST Act (S. 1498) placed on the Senate calendar",
+    "2026-07-22: House passes H.R. 7008, 232–198",
+    "2026-08-08: standalone voter-ID bill S. 5271 fails cloture 52–46",
+    "Polls cited by both sides: 86% favour a congressional stock ban (University of Maryland, 2023); 83% favour voter ID (Pew, 2025)"
+   ]
+  },
+  "framingAudit": {
+   "date": "2026-09-30",
+   "by": "Claude — frame-first authoring under §4c. Not a ruling.",
+   "window": "2026-09-30 (declared, see window.why)",
+   "verifiedInWindow": [
+    "Senate Record Vote 253, 2026-09-30, 53–47, cloture on the motion to proceed to H.R. 7008 rejected (senate.gov)",
+    "Every Democrat voted no (Newsweek, the wire story)",
+    "House passage 2026-07-22 (catalog), 232–198 with 13 Democrats (Hoodline, Washington Sun, Daily Caller)",
+    "No new purchases by members, spouses, dependent children; holdings kept; 7 to 14 days notice; $2,000 or 10% (Newsweek, Hoodline, Daily Caller)",
+    "President and Vice President not covered (Newsweek)",
+    "S. 5271 cloture not invoked 52–46 on 2026-08-08 (catalog)"
+   ],
+   "keptUnverifiedDate": [
+    "How and when the voter-ID requirement was tied to H.R. 7008 is not settled in my sources: one says it was in the House version, one cites a separate H.R. 9368, the Senate roll call describes H.R. 7008 only as congressional stock restrictions. The frame says only that Republicans tied it to the bill. Worth your eye.",
+    "One source gave House passage as 2026-09-28; the catalog and two others give July. Kept 07-22.",
+    "\"Among the last votes before the election recess\" rests on CNBC's 09-30 headline; the page itself would not load."
+   ],
+   "deliberatelyExcluded_afterWindow": [
+    "2026-10-01 and 10-02: the wire follow-ups the register scanned (the National Desk, American Greatness), including Moreno's and Massie's remarks, whose dates I could not place inside the window",
+    "H.R. 9340 (data-center electricity costs) failing cloture 57–43 the same day: in window, but a different object; given to the blind author as background only",
+    "Talk of reviving the bill in a lame-duck session"
+   ]
+  },
+  "blindAuthoring": {
+   "date": "2026-10-03",
+   "author": "Claude (general-purpose subagent) — blind: given the frame, prompt, keywords, axes, a station/radius brief, a short dated background (STOCK Act, HONEST Act on the calendar, Restore Trust in Congress Act, the 09-30 floor quotes, H.R. 9340, the two polls), R-0921-1 and the voice rules only; no other Reading, no register, no web",
+   "zFirst": true,
+   "instrumentOnAll12": true,
+   "objectZ": "The object's own place.z (−0.5) authored by the same subagent, with the twelve, before the words.",
+   "rulings": "NONE — every station awaits Sailor's ruling. z, zReason, instrument and text as authored; no edits after hand-back.",
+   "authorNote": "I trust D least: the denominated line could plausibly flip negative (swamp on both sides, with existing holdings kept), and I chose the positive, partisan reading mainly to keep it distinct from C's rim, so a ruling should check that sign. B coalition is the next weakest: z is +0.2 with trusted:true, which may be too generous for a voice that openly doubts the pairing. A coalition and D coalition both name their own side's leadership as an untrusted holder, which is an assumption about how self-aware those bands should be. I kept 'poison pill' out of non-rim lines by treating it as a vehicle, although it is also a keyword and a floor quote."
+  },
+  "newsroomFindings": {
+   "inversionLeans": [
+    {
+     "station": "A",
+     "what": "Senate Democrats have pressed for a congressional stock-trading ban; on 09-30 every one of them voted against proceeding to a bill with that title. A-coalition says so itself.",
+     "prior": "Hoodline 2026-09-30: Ossoff's unanimous-consent request for a senators' trading ban, June 2026 (coverage, not a live Reading)",
+     "note": "Lean only; the rider and the loopholes are the stated reason. Entered in the overlay as unruled."
+    },
+    {
+     "station": "B / D (Republican leadership as holder)",
+     "what": "Leadership gave floor time to the purchase-only House bill while the HONEST Act, a full ban from its own side, has sat on the calendar since 2025-12-10. D-coalition crosses its own sign over it.",
+     "prior": "Prism catalog: S. 1498, Calendar No. 294",
+     "note": "Lean only."
+    }
+   ],
+   "inversionNote": "Two leans, each with a cited prior. Sailor rules.",
+   "permanence": "A RETURN (lean): the voter-ID bill that failed cloture on 2026-08-08 (S. 5271) came back as a requirement tied to the stock bill."
+  }
+ },
+ "rid": "rdg_l9xd9omvnpa7",
+ "ridLineage": "minted 2026-10-03 (UTC) by the scheduled newsroom drafting task; filed directly to drafts/claude",
+ "schema": "reading/v1",
+ "formulaVersion": "1",
+ "updatedAt": "2026-10-03T06:06:53.414Z",
+ "authorTier": "claude",
+ "newsroom": {
+  "oid": "obj_thesenat_ahead-ban-bills-block",
+  "queuedOn": "2026-10-02",
+  "draftedOn": "2026-10-02"
+ },
+ "images": []
+}

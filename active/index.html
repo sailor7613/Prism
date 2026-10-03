@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PG01 · the active layer</title>
+<!--
+  PG01 §6.4 — the active layer, drawn (ruled 2026-10-02).
+  The arc read as motion: the object's realized layer (where the barrel goes,
+  in what settlement) in motion on the still frame, the detection series
+  (when it was read) landing late above it, the price (the shadow) last.
+  Reads ../data/active/active.json (written by scripts/active-layer.js).
+  Hand-dated accruals.json / events.json ride inside that bundle.
+
+  Guards (PG01 §6.3), as code:
+    1. no row carries a z, and nothing here computes one
+    2. no causal field — a strike and a re-route on one scrubber are two dated facts
+    3. the frame's axes are drawn in the corner from active.json.frame, never from data
+    4. accruals render dashed + "est." — never promoted by repetition
+    5. this is an instrument page, not the portal; Prism sees the layer through Readings
+
+  ?demo — synthetic flows, watermarked, for layout only (no real series yet).
+-->
+<style>
+:root {
+  --bg: #0b1020; --panel: rgba(13,20,40,.86); --rule: rgba(200,210,235,.14);
+  --ink: #f0ebe0; --ink-mid: #b9b4a8; --ink-low: #7d8290;
+  --dollar: #b08a36; --dollar-hi: #d4aa52; --nondollar: #6f8be0; --unknown: #7d8290;
+  --mono: ui-monospace, "SF Mono", Menlo, monospace; --serif: Georgia, "Times New Roman", serif;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink); font-family: var(--serif); }
+body { display: grid; grid-template-rows: auto 1fr auto; height: 100vh; overflow: hidden; }
+header { display: flex; align-items: baseline; gap: 18px; padding: 12px 18px 8px; border-bottom: 1px solid var(--rule); }
+header h1 { font-size: 15px; font-weight: normal; letter-spacing: .02em; margin: 0; }
+header h1 span { color: var(--ink-low); }
+header .guards { font-family: var(--mono); font-size: 9.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-low); margin-left: auto; }
+main { position: relative; display: grid; grid-template-columns: 1fr 300px; min-height: 0; }
+#map { position: relative; min-height: 0; }
+#mapc { position: absolute; inset: 0; width: 100%; height: 100%; }
+#frame { position: absolute; left: 14px; top: 12px; font-family: var(--mono); font-size: 9.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-low); line-height: 1.7; pointer-events: none; }
+#frame b { color: var(--ink-mid); font-weight: normal; }
+#legend { position: absolute; right: 14px; top: 12px; font-family: var(--mono); font-size: 9.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-low); line-height: 1.9; }
+#legend i { display: inline-block; width: 22px; height: 0; border-top: 2px solid; vertical-align: middle; margin-right: 8px; }
+#legend .d { border-color: var(--dollar); } #legend .n { border-color: var(--nondollar); } #legend .u { border-color: var(--unknown); border-top-style: dashed; }
+#demo { position: absolute; left: 50%; top: 42%; transform: translate(-50%,-50%) rotate(-12deg); font-family: var(--mono); font-size: 44px; letter-spacing: .3em; color: rgba(220,80,80,.28); pointer-events: none; display: none; }
+body.demo #demo { display: block; }
+aside { border-left: 1px solid var(--rule); background: var(--panel); padding: 14px 16px; overflow: auto; font-size: 13px; line-height: 1.45; }
+aside h2 { font-family: var(--mono); font-size: 9.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-low); font-weight: normal; margin: 0 0 8px; }
+aside .at { font-size: 22px; margin: 0 0 12px; }
+aside .at small { font-family: var(--mono); font-size: 10px; letter-spacing: .12em; color: var(--ink-low); display: block; margin-top: 2px; text-transform: uppercase; }
+.row { padding: 8px 0; border-top: 1px solid var(--rule); }
+.row .k { font-family: var(--mono); font-size: 9.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-low); }
+.row .k.est::after { content: " · est."; color: var(--unknown); }
+.row .v { color: var(--ink); }
+.row .b { color: var(--ink-mid); font-size: 12px; margin-top: 3px; }
+.row .lag { font-family: var(--mono); font-size: 10px; color: var(--ink-low); }
+.swatch { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+footer { border-top: 1px solid var(--rule); padding: 8px 18px 10px; }
+#scrub { position: relative; height: 220px; }
+#scrub canvas { position: absolute; inset: 0; width: 100%; height: 100%; cursor: ew-resize; }
+#tip { position: absolute; display: none; pointer-events: none; background: var(--panel); border: 1px solid var(--rule); padding: 6px 9px; font-family: var(--mono); font-size: 10.5px; color: var(--ink); white-space: nowrap; z-index: 5; }
+#status { font-family: var(--mono); font-size: 9.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-low); margin-top: 6px; display: flex; gap: 18px; }
+#status .err { color: #c0607a; }
+button.play { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; background: none; color: var(--ink-mid); border: 1px solid var(--rule); border-radius: 12px; padding: 2px 10px; cursor: pointer; }
+/* the hypothesis — the ledger's P3, drawn: a z meter with the target, unscored, and its observables at the playhead */
+#hyp { border: 1px solid rgba(212,170,82,.35); border-radius: 6px; padding: 10px 12px; margin: 0 0 14px; background: rgba(212,170,82,.05); }
+#hyp h2 { color: var(--dollar-hi); margin-bottom: 6px; }
+#hyp .short { font-size: 15px; margin: 0 0 6px; }
+#hyp .stated { font-size: 12px; color: var(--ink-mid); margin: 0 0 8px; line-height: 1.4; }
+#hyp .zmeter { position: relative; height: 10px; margin: 6px 0 4px; background: linear-gradient(90deg, rgba(192,96,122,.35), rgba(240,235,224,.08) 50%, rgba(176,138,54,.45)); border-radius: 5px; }
+#hyp .zmeter .target { position: absolute; top: -4px; width: 2px; height: 18px; background: var(--dollar-hi); }
+#hyp .zmeter .target::after { content: attr(data-l); position: absolute; top: 19px; left: -24px; font-family: var(--mono); font-size: 9px; letter-spacing: .08em; color: var(--dollar-hi); white-space: nowrap; }
+#hyp .zlabels { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-low); margin-top: 14px; }
+#hyp .obs { margin-top: 8px; border-top: 1px solid var(--rule); padding-top: 6px; }
+#hyp .obs div { display: flex; justify-content: space-between; font-size: 12px; padding: 2px 0; }
+#hyp .obs span:last-child { font-family: var(--mono); font-size: 11px; color: var(--ink); }
+#hyp .obs .fals { font-family: var(--mono); font-size: 9.5px; color: var(--ink-low); line-height: 1.5; margin-top: 6px; display: block; }
+.hl { outline: 1px solid rgba(212,170,82,.7); outline-offset: 3px; border-radius: 4px; box-shadow: 0 0 0 6px rgba(212,170,82,.08); }
+/* Ted — the presenter strip for beta users (?ted or ?g4) */
+#ted { display: none; position: absolute; left: 14px; bottom: 56px; max-width: 520px; z-index: 6; align-items: flex-end; gap: 6px; }
+body.ted #ted { display: flex; }
+#tedHead { width: 150px !important; height: 150px !important; flex: none; margin-bottom: -14px; }
+#tedCard { background: var(--panel); border: 1px solid rgba(212,170,82,.35); border-radius: 10px; padding: 10px 14px 8px; font-size: 14px; line-height: 1.45; }
+#tedCard .who { font-family: var(--mono); font-size: 9.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--dollar-hi); margin-bottom: 4px; }
+#tedCard .nav { display: flex; gap: 10px; align-items: center; margin-top: 8px; font-family: var(--mono); font-size: 9.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-low); }
+#tedCard .nav button { font: inherit; background: none; border: 1px solid var(--rule); color: var(--ink-mid); border-radius: 10px; padding: 2px 9px; cursor: pointer; }
+#tedCard .nav .dots i { display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: var(--ink-low); opacity: .35; margin-right: 3px; }
+#tedCard .nav .dots i.on { opacity: 1; background: var(--dollar-hi); }
+button.tedbtn { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; background: none; color: var(--ink-mid); border: 1px solid var(--rule); border-radius: 12px; padding: 2px 10px; cursor: pointer; }
+/* ?g4 — inside the villa's iMac: no header, tighter */
+body.g4 header { display: none; }
+body.g4 main { grid-template-columns: 1fr 260px; }
+body.g4 #scrub { height: 160px; }
+@media (max-width: 900px) {
+  main { grid-template-columns: 1fr; grid-template-rows: minmax(300px, 1fr) auto; }
+  aside { max-height: 210px; }
+  body.g4 main { grid-template-columns: 1fr; grid-template-rows: minmax(320px, 1fr) auto; }
+  body.g4 aside { max-height: 230px; }
+  #hyp .stated { display: none; }
+  #frame { font-size: 8.5px; line-height: 1.5; } #legend { font-size: 8.5px; line-height: 1.7; }
+  #tedCard { font-size: 12.5px; }
+  #ted { max-width: calc(100vw - 28px); } #tedHead { width: 96px; height: 96px; }
+  aside { border-left: 0; border-top: 1px solid var(--rule); }
+  #scrub { height: 150px; }
+  header .guards { display: none; }
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="../src/js/prism-graphmap.js?v=10"></script>
+</head>
+<body>
+<header>
+  <h1>PG01 <span>· the active layer</span> — the petrogas-dollar, read as motion</h1>
+  <div class="guards">the frame stands still · flows do not score z · no instrumentality · accruals stay accruals</div>
+</header>
+<main>
+  <div id="map">
+    <canvas id="mapc"></canvas>
+    <div id="frame">the still frame<br><b>x</b> left ↔ right<br><b>y</b> grassroots ↔ institutional<br><b>z</b> frustrated ↔ realized</div>
+    <div id="legend"><i class="d"></i>dollar-settled<br><i class="n"></i>non-dollar<br><i class="u"></i>unknown / estimated</div>
+    <div id="demo">DEMO · SYNTHETIC</div>
+    <div id="ted"><canvas id="tedHead" width="300" height="300"></canvas>
+      <div id="tedCard"><div class="who">Ted</div><div id="tedText"></div>
+        <div class="nav"><button id="tedPrev">◀</button><span class="dots" id="tedDots"></span><button id="tedNext">next ▶</button><button id="tedOff">enough</button></div></div></div>
+  </div>
+  <aside>
+    <div id="hyp" hidden>
+      <h2>the hypothesis · <span id="hypId"></span> · <span id="hypState">unscored</span></h2>
+      <p class="short" id="hypShort"></p>
+      <p class="stated" id="hypStated"></p>
+      <div class="zmeter"><div class="target" id="hypTarget" data-l=""></div></div>
+      <div class="zlabels"><span>frustrated −1</span><span>z</span><span>realized +1</span></div>
+      <div class="obs" id="hypObs"></div>
+    </div>
+    <h2>at the playhead</h2>
+    <p class="at" id="atDate">—<small id="atNote">drag the scrubber</small></p>
+    <div id="ledger"></div>
+  </aside>
+</main>
+<footer>
+  <div id="scrub"><canvas id="scrubc"></canvas><div id="tip"></div></div>
+  <div id="status"><button class="play" id="play">▶ play</button><button class="tedbtn" id="tedOn">Ted</button><span id="built">loading…</span><span id="errs"></span></div>
+</footer>
+<script>
+(function () {
+'use strict';
+const DEMO = /[?&]demo\b/.test(location.search);
+if (DEMO) document.body.classList.add('demo');
+const G4 = /[?&]g4\b/.test(location.search);
+if (G4) document.body.classList.add('g4');
+const TED_ON_LOAD = G4 || /[?&]ted\b/.test(location.search);
+const C = { dollar: '#b08a36', dollarHi: '#d4aa52', nondollar: '#6f8be0', unknown: '#7d8290', ink: '#f0ebe0', mid: '#b9b4a8', low: '#7d8290', rule: 'rgba(200,210,235,.14)' };
+
+// ── nodes: a schematic, not a map projection. Positions are hand-set (0..1). ──
+const NODES = {
+  US:        { x: .20, y: .40, label: 'United States' },
+  Canada:    { x: .18, y: .16, label: 'Canada' },
+  Mexico:    { x: .16, y: .62, label: 'Mexico' },
+  Venezuela: { x: .30, y: .80, label: 'Venezuela' },
+  Brazil:    { x: .40, y: .92, label: 'Brazil' },
+  Andes:     { x: .22, y: .92, label: 'Colombia · Ecuador' },
+  Europe:    { x: .54, y: .18, label: 'Europe' },
+  Russia:    { x: .72, y: .10, label: 'Russia' },
+  Gulf:      { x: .64, y: .52, label: 'The Gulf' },
+  Iran:      { x: .74, y: .40, label: 'Iran' },
+  WAfrica:   { x: .50, y: .66, label: 'West Africa' },
+  India:     { x: .84, y: .62, label: 'India' },
+  China:     { x: .92, y: .34, label: 'China' },
+  EAsia:     { x: .94, y: .78, label: 'Japan · Korea · Taiwan' },
+  Sea:       { x: .60, y: .32, label: 'at sea' },
+  Other:     { x: .44, y: .46, label: 'other' },
+};
+// EIA labels areas by ISO-3 code. Codes → node + display name. Aggregate rows
+// (U.S. total, OPEC / non-OPEC / Persian Gulf, unclassified) are never edges.
+const ISO = {
+  CAN: ['Canada', 'Canada'], MEX: ['Mexico', 'Mexico'], VEN: ['Venezuela', 'Venezuela'], BRA: ['Brazil', 'Brazil'],
+  COL: ['Colombia', 'Andes'], ECU: ['Ecuador', 'Andes'], PER: ['Peru', 'Andes'], ARG: ['Argentina', 'Andes'], GUY: ['Guyana', 'Andes'], TTO: ['Trinidad', 'Andes'], GTM: ['Guatemala', 'Andes'], PAN: ['Panama', 'Andes'], CHL: ['Chile', 'Andes'], URY: ['Uruguay', 'Andes'],
+  RUS: ['Russia', 'Russia'], KAZ: ['Kazakhstan', 'Russia'], IRN: ['Iran', 'Iran'],
+  SAU: ['Saudi Arabia', 'Gulf'], IRQ: ['Iraq', 'Gulf'], KWT: ['Kuwait', 'Gulf'], ARE: ['UAE', 'Gulf'], QAT: ['Qatar', 'Gulf'], OMN: ['Oman', 'Gulf'], BHR: ['Bahrain', 'Gulf'],
+  NGA: ['Nigeria', 'WAfrica'], AGO: ['Angola', 'WAfrica'], LBY: ['Libya', 'WAfrica'], DZA: ['Algeria', 'WAfrica'], GAB: ['Gabon', 'WAfrica'], COD: ['Congo', 'WAfrica'], TCD: ['Chad', 'WAfrica'], GHA: ['Ghana', 'WAfrica'], CMR: ['Cameroon', 'WAfrica'], CIV: ["Côte d'Ivoire", 'WAfrica'], SEN: ['Senegal', 'WAfrica'], TUN: ['Tunisia', 'WAfrica'], EGY: ['Egypt', 'WAfrica'], ZAF: ['South Africa', 'WAfrica'], LBR: ['Liberia', 'WAfrica'],
+  IND: ['India', 'India'], PAK: ['Pakistan', 'India'], LKA: ['Sri Lanka', 'India'],
+  CHN: ['China', 'China'], HKG: ['Hong Kong', 'China'],
+  JPN: ['Japan', 'EAsia'], KOR: ['Korea', 'EAsia'], TWN: ['Taiwan', 'EAsia'], SGP: ['Singapore', 'EAsia'], THA: ['Thailand', 'EAsia'], IDN: ['Indonesia', 'EAsia'], MYS: ['Malaysia', 'EAsia'], VNM: ['Vietnam', 'EAsia'], AUS: ['Australia', 'EAsia'], NZL: ['New Zealand', 'EAsia'],
+  NLD: ['Netherlands', 'Europe'], GBR: ['United Kingdom', 'Europe'], FRA: ['France', 'Europe'], DEU: ['Germany', 'Europe'], ITA: ['Italy', 'Europe'], ESP: ['Spain', 'Europe'], NOR: ['Norway', 'Europe'], DNK: ['Denmark', 'Europe'], SWE: ['Sweden', 'Europe'], FIN: ['Finland', 'Europe'], BEL: ['Belgium', 'Europe'], POL: ['Poland', 'Europe'], GRC: ['Greece', 'Europe'], PRT: ['Portugal', 'Europe'], IRL: ['Ireland', 'Europe'], LTU: ['Lithuania', 'Europe'], HRV: ['Croatia', 'Europe'], CHE: ['Switzerland', 'Europe'], TUR: ['Turkey', 'Europe'], ISR: ['Israel', 'Europe'],
+  BHS: ['Bahamas', 'Other'], BMU: ['Bermuda', 'Other'], ABW: ['Aruba', 'Other'], CYM: ['Cayman', 'Other'], JAM: ['Jamaica', 'Other'], DOM: ['Dominican Rep.', 'Other'], VIR: ['US Virgin Is.', 'Other'], CRI: ['Costa Rica', 'Other'], SLV: ['El Salvador', 'Other'], HND: ['Honduras', 'Other'], NIC: ['Nicaragua', 'Other'],
+};
+const AGGREGATE = /^(U\.S\.|NA|OPEC|NON-OPEC|WORLD|TOTAL)$/i;
+const nodeFor = label => { const c = String(label || '').toUpperCase(); if (AGGREGATE.test(c)) return null; return ISO[c] ? ISO[c][1] : 'Other'; };
+const nodeByName = name => { const n = String(name || ''); if (NODES[n]) return n; const hit = Object.entries(ISO).find(([, v]) => v[0].toLowerCase() === n.toLowerCase()); return hit ? hit[1][1] : 'Other'; };
+const nameFor = label => { const c = String(label || '').toUpperCase(); return ISO[c] ? ISO[c][0] : label; };
+// settlement for OFFICIAL US edges: a US import or export is invoiced in dollars — declared, with its basis (PG01 §6.2a)
+const US_BASIS = 'US crude trade is dollar-invoiced (EIA official series; the counterparty sells into or buys from the US market in dollars).';
+
+// ── data ──
+let A = null, months = [], mi = 0, playing = false, flowsByMonth = {};
+const $ = id => document.getElementById(id);
+
+function synth() {   // ?demo only — watermarked, never shipped as data
+  const ms = []; for (let y = 2025; y <= 2026; y++) for (let m = 1; m <= 12; m++) if (!(y === 2026 && m > 9)) ms.push(y + '-' + String(m).padStart(2, '0'));
+  const pts = (base, amp, ph) => ms.map((p, i) => [p, Math.round(base + amp * Math.sin(i / 3 + ph) + (Math.random() - .5) * base * .08)]);
+  return { importsByOrigin: { series: { 'NUS-NCA': { label: 'CAN', points: pts(4000, 200, 0) }, 'NUS-NMX': { label: 'MEX', points: pts(500, 80, 1) }, 'NUS-NVE': { label: 'VEN', points: pts(180, 120, 2) }, 'NUS-NSA': { label: 'SAU', points: pts(300, 90, 3) }, 'NUS-NIZ': { label: 'IRQ', points: pts(220, 60, 4) }, 'NUS-NCO': { label: 'COL', points: pts(190, 40, 5) }, 'NUS-NNI': { label: 'NGA', points: pts(120, 50, 1) }, 'NUS-NBR': { label: 'BRA', points: pts(150, 60, 2) } } },
+    exportsByDestination: { series: { 'NUS-NNL': { label: 'NLD', points: pts(600, 120, 0) }, 'NUS-NKS': { label: 'KOR', points: pts(500, 100, 2) }, 'NUS-NIN': { label: 'IND', points: pts(300, 150, 1) }, 'NUS-NCH': { label: 'CHN', points: pts(250, 200, 3) }, 'NUS-NUK': { label: 'GBR', points: pts(400, 60, 4) }, 'NUS-NJA': { label: 'JPN', points: pts(200, 40, 5) }, 'NUS-NTW': { label: 'TWN', points: pts(180, 40, 1) } } } };
+}
+
+function buildFlows() {
+  flowsByMonth = {};
+  const R = A.realization || {};
+  const add = (period, from, to, v, label, kind) => {
+    if (!from || !to || !(v > 0)) return;
+    const m = (flowsByMonth[period] = flowsByMonth[period] || {});
+    const k = from + '>' + to;
+    const e = (m[k] = m[k] || { from, to, value: 0, settlement: 'dollar', basis: US_BASIS, parts: [], official: true, kind });
+    e.value += v; e.parts.push(label + ' ' + Math.round(v));
+  };
+  Object.values((R.importsByOrigin || {}).series || {}).forEach(s => { const n = nodeFor(s.label); if (n && n !== 'US') s.points.forEach(([p, v]) => add(p, n, 'US', v, nameFor(s.label), 'import')); });
+  Object.values((R.exportsByDestination || {}).series || {}).forEach(s => { const n = nodeFor(s.label); if (n && n !== 'US') s.points.forEach(([p, v]) => add(p, 'US', n, v, nameFor(s.label), 'export')); });
+  months = Object.keys(flowsByMonth).sort();
+  // accruals are month-stamped by asOf and never summed into official edges
+  (A.accruals && A.accruals.rows || []).forEach(r => { const p = String(r.asOf || '').slice(0, 7); if (p && months.indexOf(p) < 0) months.push(p); });
+  (A.events && A.events.rows || []).forEach(r => { const p = String(r.asOf || '').slice(0, 7); if (p.length === 7 && months.indexOf(p) < 0) months.push(p); });
+  months.sort();
+  if (!months.length) months = [new Date().toISOString().slice(0, 7)];
+  const official = Object.keys(flowsByMonth).sort();
+  mi = official.length ? months.indexOf(official[official.length - 1]) : months.length - 1;
+}
+
+// ── the map ──
+const mapc = $('mapc'), mctx = mapc.getContext('2d');
+function sizeCanvas(c) { const r = c.getBoundingClientRect(), d = devicePixelRatio || 1; c.width = r.width * d; c.height = r.height * d; c.getContext('2d').setTransform(d, 0, 0, d, 0, 0); return r; }
+function drawMap() {
+  const r = sizeCanvas(mapc), W = r.width, H = r.height, ctx = mctx;
+  ctx.clearRect(0, 0, W, H);
+  const P = { l: 70, r: 70, t: 60, b: 50 }, px = n => P.l + NODES[n].x * (W - P.l - P.r), py = n => P.t + NODES[n].y * (H - P.t - P.b);
+  const period = months[mi], m = flowsByMonth[period] || {};
+  const vals = Object.values(m).map(e => e.value), vmax = Math.max(1, ...vals);
+  const width = v => 1.5 + 9 * Math.sqrt(v / vmax);
+  // edges — official, solid
+  Object.values(m).sort((a, b) => a.value - b.value).forEach(e => {
+    const x1 = px(e.from), y1 = py(e.from), x2 = px(e.to), y2 = py(e.to);
+    const cx = (x1 + x2) / 2 + (y1 - y2) * .25, cy = (y1 + y2) / 2 + (x2 - x1) * .25;
+    ctx.beginPath(); ctx.moveTo(x1, y1); ctx.quadraticCurveTo(cx, cy, x2, y2);
+    ctx.strokeStyle = e.settlement === 'dollar' ? C.dollar : e.settlement === 'non-dollar' ? C.nondollar : C.unknown;
+    ctx.lineWidth = width(e.value); ctx.globalAlpha = .85; ctx.setLineDash([]); ctx.stroke(); ctx.globalAlpha = 1;
+    // direction: a small arrowhead at 70% of the curve
+    const t = .72, ax = (1 - t) * (1 - t) * x1 + 2 * (1 - t) * t * cx + t * t * x2, ay = (1 - t) * (1 - t) * y1 + 2 * (1 - t) * t * cy + t * t * y2;
+    const dx = 2 * (1 - t) * (cx - x1) + 2 * t * (x2 - cx), dy = 2 * (1 - t) * (cy - y1) + 2 * t * (y2 - cy), L = Math.hypot(dx, dy) || 1;
+    ctx.beginPath(); ctx.moveTo(ax + dx / L * 6, ay + dy / L * 6); ctx.lineTo(ax - dy / L * 4, ay + dx / L * 4); ctx.lineTo(ax + dy / L * 4, ay - dx / L * 4); ctx.closePath(); ctx.fillStyle = ctx.strokeStyle; ctx.fill();
+    e._mid = [(1 - .5) * (1 - .5) * x1 + 2 * .5 * .5 * cx + .25 * x2, .25 * y1 + .5 * cy + .25 * y2];
+  });
+  // accruals in force at this month — dashed, estimated
+  const acc = (A.accruals && A.accruals.rows || []).filter(a => String(a.asOf || '').slice(0, 7) <= period && String(a.asOf || '').slice(0, 7) >= addMonths(period, -3));
+  acc.forEach(a => {
+    const f = nodeByName(a.from), t = /sea/i.test(a.to) ? 'Sea' : nodeByName(a.to);
+    if (!NODES[f] || !NODES[t]) return;
+    const x1 = px(f), y1 = py(f), x2 = px(t), y2 = py(t), cx = (x1 + x2) / 2 - (y1 - y2) * .25, cy = (y1 + y2) / 2 - (x2 - x1) * .25;
+    ctx.beginPath(); ctx.moveTo(x1, y1); ctx.quadraticCurveTo(cx, cy, x2, y2);
+    const s = (a.settlement || {}).declared; ctx.strokeStyle = s === 'dollar' ? C.dollar : s === 'non-dollar' ? C.nondollar : C.unknown;
+    ctx.setLineDash([5, 5]); ctx.lineWidth = 2; ctx.globalAlpha = .9; ctx.stroke(); ctx.setLineDash([]); ctx.globalAlpha = 1;
+    // one small "est." at the curve's midpoint; the measure and basis live in the ledger
+    ctx.font = '9px ' + getComputedStyle(document.body).getPropertyValue('--mono'); ctx.fillStyle = C.low; ctx.textAlign = 'center';
+    ctx.fillText('est.', .25 * x1 + .5 * cx + .25 * x2, .25 * y1 + .5 * cy + .25 * y2 - 5);
+  });
+  // nodes
+  Object.entries(NODES).forEach(([k, n]) => {
+    const x = px(k), y = py(k), hub = k === 'US';
+    const active = hub || Object.values(m).some(e => e.from === k || e.to === k) || acc.some(a => nodeByName(a.from) === k || (/sea/i.test(a.to) ? k === 'Sea' : nodeByName(a.to) === k));
+    ctx.beginPath(); ctx.arc(x, y, hub ? 9 : 4.5, 0, Math.PI * 2);
+    ctx.fillStyle = active ? (hub ? C.dollarHi : C.ink) : 'rgba(240,235,224,.18)'; ctx.fill();
+    if (hub) { ctx.beginPath(); ctx.arc(x, y, 15, 0, Math.PI * 2); ctx.strokeStyle = 'rgba(212,170,82,.35)'; ctx.lineWidth = 1; ctx.stroke(); }
+    ctx.font = (hub ? '13px ' : '11px ') + getComputedStyle(document.body).getPropertyValue('--serif'); ctx.fillStyle = active ? C.ink : C.low; ctx.textAlign = 'center';
+    ctx.fillText(n.label, x, y + (hub ? 30 : 18));
+  });
+  // volume labels on the three largest official edges (selective direct labels)
+  ctx.font = '10px ' + getComputedStyle(document.body).getPropertyValue('--mono'); ctx.fillStyle = C.mid; ctx.textAlign = 'center';
+  Object.values(m).sort((a, b) => b.value - a.value).slice(0, 3).forEach(e => { if (e._mid) ctx.fillText(Math.round(e.value) + ' kb/d', e._mid[0], e._mid[1] - 6); });
+  // month stamp
+  ctx.font = '26px ' + getComputedStyle(document.body).getPropertyValue('--serif'); ctx.fillStyle = C.ink; ctx.textAlign = 'left';
+  ctx.fillText(monthName(period), P.l, H - 16);
+  ctx.font = '9.5px ' + getComputedStyle(document.body).getPropertyValue('--mono'); ctx.fillStyle = C.low;
+  ctx.fillText((Object.keys(m).length ? 'OFFICIAL US CRUDE FLOWS, KB/D (EIA)' : 'NO OFFICIAL FLOWS FOR THIS MONTH') + (acc.length ? ' · ' + acc.length + ' ACCRUAL' + (acc.length > 1 ? 'S' : '') + ' IN FORCE' : ''), P.l + 170, H - 18);
+}
+function addMonths(p, n) { const [y, m] = p.split('-').map(Number); const d = new Date(Date.UTC(y, m - 1 + n, 1)); return d.toISOString().slice(0, 7); }
+function monthName(p) { const [y, m] = p.split('-').map(Number); return new Date(Date.UTC(y, m - 1, 1)).toLocaleString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' }); }
+
+// ── the hypothesis (PG01 §2 P3) — its observables computed from the official rows, nothing else ──
+function sharesAt(period) {
+  const m = flowsByMonth[period] || {};
+  const imps = Object.values(m).filter(e => e.to === 'US');
+  const tot = imps.reduce((s, e) => s + e.value, 0);
+  const by = nodes => imps.filter(e => nodes.indexOf(e.from) >= 0).reduce((s, e) => s + e.value, 0);
+  const bySet = st => imps.filter(e => e.settlement === st).reduce((s, e) => s + e.value, 0);
+  return { total: tot, part: o => o.nodes ? by(o.nodes) : o.settlement ? bySet(o.settlement) : 0 };
+}
+function hypothesis() { const h = (A.hypotheses && A.hypotheses.rows || [])[0]; return h || null; }
+function drawHypothesis() {
+  const h = hypothesis(), box = $('hyp');
+  if (!h) { box.hidden = true; return; }
+  box.hidden = false;
+  $('hypId').textContent = h.arc + ' · ' + h.id + ' · stated ' + h.statedDate;
+  $('hypState').textContent = h.outcome === 'pending' ? 'unscored' : h.outcome;
+  $('hypShort').textContent = h.short || '';
+  $('hypStated').textContent = h.stated || '';
+  const t = $('hypTarget'); t.style.left = ((h.zTarget + 1) / 2 * 100) + '%'; t.dataset.l = 'z ≥ ' + (h.zTarget >= 0 ? '+' : '') + h.zTarget + ' · awaits ' + String(h.scoredBy || '').split(' ')[0];
+  const sh = sharesAt(months[mi]);
+  $('hypObs').innerHTML = (h.observables || []).map(o => { const v = sh.total ? Math.round(sh.part(o) / sh.total * 100) : null;
+    return '<div><span>' + esc(o.label) + '</span><span>' + (v == null ? '—' : v + '%') + '</span></div>'; }).join('') +
+    '<span class="fals">falsified if ' + esc(h.falsifiedIf) + '</span>';
+}
+
+// ── the ledger (aside) ──
+function drawLedger() {
+  drawHypothesis();
+  const period = months[mi];
+  $('atDate').firstChild.nodeValue = monthName(period);
+  const ev = (A.events && A.events.rows || []).filter(e => String(e.asOf || '').slice(0, 7) === period);
+  const acc = (A.accruals && A.accruals.rows || []).filter(a => String(a.asOf || '').slice(0, 7) === period);
+  const flows = Object.values(flowsByMonth[period] || {}).sort((a, b) => b.value - a.value);
+  $('atNote').textContent = ev.length + ' event' + (ev.length === 1 ? '' : 's') + ' · ' + acc.length + ' accrual' + (acc.length === 1 ? '' : 's') + ' · ' + flows.length + ' official edges';
+  const h = [];
+  ev.forEach(e => h.push('<div class="row"><div class="k">' + esc(e.theater) + ' · ' + esc(e.kind) + '</div><div class="v">' + esc(e.what) + '</div><div class="lag">as of ' + esc(e.asOf) + ' · detected ' + esc(e.detected) + lag(e) + '</div></div>'));
+  acc.forEach(a => h.push('<div class="row"><div class="k est">' + esc(a.theater) + ' · ' + esc(a.from) + ' → ' + esc(a.to) + '</div><div class="v"><span class="swatch" style="background:' + sw((a.settlement || {}).declared) + '"></span>' + esc(a.measure) + (a.value != null ? ' · ' + a.value + ' ' + esc(a.units) : '') + '</div><div class="b">' + esc((a.settlement || {}).declared || 'unknown') + ' — ' + esc((a.settlement || {}).basis || '') + '</div><div class="lag">as of ' + esc(a.asOf) + ' · detected ' + esc(a.detected) + '</div></div>'));
+  flows.slice(0, 6).forEach(f => h.push('<div class="row"><div class="k">' + esc(f.kind) + ' · ' + esc(NODES[f.from].label) + ' → ' + esc(NODES[f.to].label) + '</div><div class="v"><span class="swatch" style="background:' + sw(f.settlement) + '"></span>' + Math.round(f.value) + ' kb/d</div><div class="b">' + esc(f.parts.join(' · ')) + '</div></div>'));
+  if (!h.length) h.push('<div class="row"><div class="b">Nothing dated to this month yet.</div></div>');
+  $('ledger').innerHTML = h.join('');
+}
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const sw = s => s === 'dollar' ? C.dollar : s === 'non-dollar' ? C.nondollar : C.unknown;
+function lag(e) { const a = Date.parse(e.asOf), d = Date.parse(e.detected); if (isNaN(a) || isNaN(d)) return ''; const n = Math.round((d - a) / 864e5); return n > 0 ? ' · +' + n + 'd' : ''; }
+
+// ── the scrubber: price (shadow, faint) · detection strips · events · P2 span · playhead ──
+const sc = $('scrubc'), sctx = sc.getContext('2d');
+let scrubGeom = null;
+function drawScrub() {
+  const r = sizeCanvas(sc), W = r.width, H = r.height, ctx = sctx;
+  ctx.clearRect(0, 0, W, H);
+  const L = 96, R = 16, t0 = months[0], t1 = addMonths(months[months.length - 1], 1);
+  const x = p => L + (idx(p) / Math.max(1, idx(t1))) * (W - L - R);
+  function idx(p) { const [y0, m0] = t0.split('-').map(Number), [y, m] = String(p).slice(0, 7).split('-').map(Number); const dd = Number(String(p).slice(8, 10)) || 1; return (y - y0) * 12 + (m - m0) + (dd - 1) / 30; }
+  scrubGeom = { x, L, R, W, idx, t1 };
+  const mono = '9.5px ' + getComputedStyle(document.body).getPropertyValue('--mono');
+  // P2 window span
+  ctx.fillStyle = 'rgba(111,139,224,.08)'; ctx.fillRect(x('2026-08-14'), 0, x('2026-11-30') - x('2026-08-14'), H - 22);
+  ctx.font = mono; ctx.fillStyle = C.low; ctx.textAlign = 'left'; ctx.fillText('P2 WINDOW', x('2026-08-14') + 4, 10);
+  // month ticks
+  months.forEach((p, i) => { ctx.fillStyle = C.rule; ctx.fillRect(x(p), H - 22, 1, 4); if (p.endsWith('-01') || i === 0) { ctx.fillStyle = C.low; ctx.fillText(p.slice(0, 4), x(p) + 3, H - 10); } });
+  // price — the shadow, faint, last column, drawn first so it sits under everything
+  const pr = (A.price && A.price.series) || {}, brent = pr.RBRTE && pr.RBRTE.points || [];
+  const band = { y0: 18, y1: 62 };
+  if (brent.length) {
+    const vs = brent.map(p => p[1]), lo = Math.min(...vs), hi = Math.max(...vs);
+    ctx.beginPath(); brent.forEach(([p, v], i) => { const X = x(p), Y = band.y1 - (v - lo) / Math.max(1, hi - lo) * (band.y1 - band.y0); i ? ctx.lineTo(X, Y) : ctx.moveTo(X, Y); });
+    ctx.strokeStyle = 'rgba(240,235,224,.28)'; ctx.lineWidth = 1.5; ctx.stroke();
+    ctx.fillStyle = C.low; ctx.textAlign = 'right'; ctx.fillText('BRENT (SHADOW)', L - 6, band.y0 + 8);
+  } else { ctx.fillStyle = C.low; ctx.textAlign = 'right'; ctx.fillText('PRICE · NONE YET', L - 6, band.y0 + 8); }
+  // detection strips — one hue, small multiples, direct-labeled
+  const det = (A.detection && A.detection.series) || {}; const names = Object.keys(det);
+  const top = 70, rowH = Math.max(12, (H - 22 - top - 24 - 74) / Math.max(1, names.length));
+  names.forEach((n, i) => {
+    const pts = det[n].points || [], y0 = top + i * rowH, y1 = y0 + rowH - 3, vmax = Math.max(.01, ...pts.map(p => p[1]));
+    ctx.fillStyle = C.low; ctx.textAlign = 'right'; ctx.font = mono; ctx.fillText(n.toUpperCase(), L - 6, y1 - 2);
+    if (!pts.length) return;
+    ctx.beginPath(); ctx.moveTo(x(pts[0][0]), y1);
+    pts.forEach(([p, v]) => ctx.lineTo(x(p), y1 - (v / vmax) * (y1 - y0)));
+    ctx.lineTo(x(pts[pts.length - 1][0]), y1); ctx.closePath(); ctx.fillStyle = 'rgba(240,235,224,.22)'; ctx.fill();
+  });
+  if (!names.length) { ctx.fillStyle = C.low; ctx.textAlign = 'right'; ctx.fillText('DETECTION · NONE', L - 6, top + 12); }
+  // the hypothesis' observables — shares of US crude imports by month, 0–100%, direct-labeled; the months land against the stated prediction
+  const hyp = hypothesis();
+  if (hyp && months.length > 1) {
+    const hy0 = H - 22 - 24 - 68, hy1 = H - 22 - 26;
+    ctx.fillStyle = C.low; ctx.textAlign = 'right'; ctx.font = mono; ctx.fillText(hyp.id + ' · OBSERVABLES', L - 6, hy1 - 2);
+    ctx.strokeStyle = C.rule; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(L, hy1); ctx.lineTo(W - R, hy1); ctx.stroke();
+    let lbl = 0;
+    (hyp.observables || []).forEach(o => {
+      const pts = months.filter(p => flowsByMonth[p]).map(p => { const sh = sharesAt(p); return [p, sh.total ? sh.part(o) / sh.total : null]; }).filter(q => q[1] != null);
+      if (!pts.length) return;
+      if (!pts.length) return;
+      ctx.beginPath(); pts.forEach(([p, v], i) => { const X = x(p) + (x(addMonths(p, 1)) - x(p)) / 2, Y = hy1 - v * (hy1 - hy0); i ? ctx.lineTo(X, Y) : ctx.moveTo(X, Y); });
+      ctx.setLineDash(o.style === 'dashed' ? [4, 4] : o.style === 'dotted' ? [1.5, 3] : []); ctx.strokeStyle = o.settlement ? C.dollarHi : C.ink; ctx.globalAlpha = o.settlement ? .8 : .7; ctx.lineWidth = 1.5; ctx.stroke(); ctx.setLineDash([]); ctx.globalAlpha = 1;
+      const last = pts[pts.length - 1]; ctx.fillStyle = C.mid; ctx.textAlign = 'left'; ctx.font = mono;
+      // labels stack at the right edge in a fixed order, each with its own line sample — never on the lines themselves
+      const ly = hy0 + 9 + (lbl++) * 12, lx = W - R - 150;
+      ctx.beginPath(); ctx.moveTo(lx - 22, ly - 3); ctx.lineTo(lx - 6, ly - 3); ctx.setLineDash(o.style === 'dashed' ? [4, 4] : o.style === 'dotted' ? [1.5, 3] : []); ctx.strokeStyle = o.settlement ? C.dollarHi : C.ink; ctx.lineWidth = 1.5; ctx.stroke(); ctx.setLineDash([]);
+      ctx.fillStyle = C.mid; ctx.textAlign = 'left'; ctx.font = mono;
+      ctx.fillText(String(o.label).replace(/ share of US crude imports/i, '').toUpperCase() + ' ' + Math.round(last[1] * 100) + '%', lx, ly);
+    });
+  }
+  // events: as-of tick + trailing mark to detected (the lag, drawn)
+  const ey = H - 34;
+  (A.events && A.events.rows || []).forEach(e => {
+    const xa = x(e.asOf), xd = x(e.detected || e.asOf);
+    ctx.strokeStyle = C.dollarHi; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(xa, ey - 7); ctx.lineTo(xa, ey + 7); ctx.stroke();
+    if (xd > xa + .5) { ctx.beginPath(); ctx.moveTo(xa, ey); ctx.lineTo(xd, ey); ctx.strokeStyle = 'rgba(212,170,82,.6)'; ctx.stroke(); ctx.beginPath(); ctx.arc(xd, ey, 2, 0, Math.PI * 2); ctx.fillStyle = C.dollarHi; ctx.fill(); }
+    e._x = xa;
+  });
+  (A.accruals && A.accruals.rows || []).forEach(a => { const xa = x(a.asOf); ctx.strokeStyle = C.unknown; ctx.setLineDash([2, 2]); ctx.beginPath(); ctx.moveTo(xa, ey - 5); ctx.lineTo(xa, ey + 5); ctx.stroke(); ctx.setLineDash([]); });
+  // playhead
+  const X = x(months[mi]), X2 = x(addMonths(months[mi], 1));
+  ctx.fillStyle = 'rgba(212,170,82,.10)'; ctx.fillRect(X, 0, X2 - X, H - 22);
+  ctx.fillStyle = C.dollarHi; ctx.fillRect(X, 0, 1.5, H - 22);
+}
+
+// ── interaction ──
+function setMonth(i) { mi = Math.max(0, Math.min(months.length - 1, i)); drawMap(); drawLedger(); drawScrub(); }
+function monthAt(clientX) { const r = sc.getBoundingClientRect(); const px = clientX - r.left; const f = (px - scrubGeom.L) / (scrubGeom.W - scrubGeom.L - scrubGeom.R) * scrubGeom.idx(scrubGeom.t1); return Math.floor(f) + 0; }
+function monthIndexFromIdx(k) { const t0 = months[0]; const p = addMonths(t0, Math.max(0, k)); let best = 0; months.forEach((m, i) => { if (m <= p) best = i; }); return best; }
+let dragging = false;
+sc.addEventListener('pointerdown', e => { dragging = true; sc.setPointerCapture(e.pointerId); setMonth(monthIndexFromIdx(monthAt(e.clientX))); });
+sc.addEventListener('pointermove', e => {
+  if (dragging) setMonth(monthIndexFromIdx(monthAt(e.clientX)));
+  const r = sc.getBoundingClientRect(), px = e.clientX - r.left, tip = $('tip');
+  const near = (A.events && A.events.rows || []).filter(ev => Math.abs(ev._x - px) < 6);
+  if (near.length) { tip.style.display = 'block'; tip.style.left = Math.min(px + 10, r.width - 320) + 'px'; tip.style.top = '8px'; tip.innerHTML = near.map(ev => esc(ev.asOf) + ' · ' + esc(ev.theater) + ' · ' + esc(ev.what).slice(0, 90)).join('<br>'); }
+  else tip.style.display = 'none';
+});
+sc.addEventListener('pointerup', () => { dragging = false; });
+sc.addEventListener('pointerleave', () => { dragging = false; $('tip').style.display = 'none'; });
+window.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') setMonth(mi - 1); if (e.key === 'ArrowRight') setMonth(mi + 1); if (e.key === ' ') { e.preventDefault(); togglePlay(); } });
+function togglePlay() { playing = !playing; $('play').textContent = playing ? '▮▮ pause' : '▶ play'; if (playing) tick(); }
+function tick() { if (!playing) return; setMonth(mi + 1 >= months.length ? 0 : mi + 1); setTimeout(tick, 900); }
+$('play').addEventListener('click', togglePlay);
+window.addEventListener('resize', () => { drawMap(); drawScrub(); });
+// the map's box settles after fonts/layout (and changes inside the villa's iMac pane): redraw whenever it resizes
+try { new ResizeObserver(() => { if (A) { drawMap(); drawScrub(); } }).observe($('map')); } catch (e) {}
+
+// ── Ted — the presenter, for the beta group (PG01 §6.4 in his voice: determinations and refusals alike) ──
+const TED_STEPS = [
+  { at: '#map', text: "This is PG01 — the petrogas-dollar — read as motion. The frame in the corner never moves. Everything that does move on this screen is real: it's barrels." },
+  { at: '#legend', text: "Gold is a barrel invoiced in dollars. Blue is one that isn't. Grey-and-dashed means we don't know, and we draw not-knowing instead of guessing. Dashed lines are estimates — they stay dashed until something official exists." },
+  { at: '#map', text: "A line that goes dark is a fact too. Scrub from February to July 2026 and watch the Gulf edge vanish while Venezuela's thickens. The map doesn't say why. It says when." },
+  { at: '#scrub', text: "The strip is time. Ticks are events, dated the day they were true, with a trailing mark for the day the press noticed — that gap is the arc's favorite number. The faint line is Brent: the price is the shadow, what everyone read instead of the thing." },
+  { at: '#hyp', text: "This is the bet. Before the next frame of the arc exists, PG01 stated in public where it lands: the shock realizes the object by re-routing it, and the dollar's share doesn't fall. Delivery, z, at or above +0.8." },
+  { at: '#hyp', text: "The flows don't score that. A traceframe does — TF03, the Strait closure — and it hasn't been authored yet. Until then the meter stays empty and the shares beside it are the months landing against the prediction." },
+  { at: '#ledger', text: "Everything dated to the month you're standing in lives here: events with their lag, estimates with the reason we called them dollar or not, the biggest official edges. No arrows between any of them. That's the rule." },
+  { at: '#scrub', text: "So: not a forecast. A bet the arc made with its name on it, and you're watching it get paid or not. Scrub it." },
+];
+let tedI = 0, tedHl = null, tedPeek = null;
+function tedShow(i) {
+  tedI = Math.max(0, Math.min(TED_STEPS.length - 1, i));
+  const st = TED_STEPS[tedI];
+  $('tedText').textContent = st.text;
+  $('tedDots').innerHTML = TED_STEPS.map((_, k) => '<i class="' + (k === tedI ? 'on' : '') + '"></i>').join('');
+  $('tedNext').textContent = tedI === TED_STEPS.length - 1 ? 'done' : 'next ▶';
+  if (tedHl) tedHl.classList.remove('hl');
+  tedHl = document.querySelector(st.at); if (tedHl) tedHl.classList.add('hl');
+  if (tedPeek && tedHl) { const r = tedHl.getBoundingClientRect(); tedPeek.look((r.left + r.width / 2) / innerWidth * 2 - 1, -((r.top + r.height / 2) / innerHeight * 2 - 1)); }
+}
+function tedOn() { document.body.classList.add('ted'); if (!tedPeek) tedPeek = buildPeek(); if (tedPeek) tedPeek.setLive(true); tedShow(0); }
+function tedOff() { document.body.classList.remove('ted'); if (tedHl) tedHl.classList.remove('hl'); if (tedPeek) tedPeek.setLive(false); }
+$('tedOn').addEventListener('click', tedOn); $('tedOff').addEventListener('click', tedOff);
+$('tedPrev').addEventListener('click', () => tedShow(tedI - 1));
+$('tedNext').addEventListener('click', () => { if (tedI === TED_STEPS.length - 1) tedOff(); else tedShow(tedI + 1); });
+// Ted's head — the same medallion the portal's tour draws (prism-ted-tour.js), when Three + the graphmap factory are loaded; otherwise text only
+function buildPeek() {
+  const peekCanvas = $('tedHead');
+  if (typeof THREE === 'undefined' || typeof PrismGraphmap === 'undefined' || !PrismGraphmap.buildCoyote) { peekCanvas.style.display = 'none'; return null; }
+  let renderer; try { renderer = new THREE.WebGLRenderer({ canvas: peekCanvas, alpha: true, antialias: true }); } catch (e) { peekCanvas.style.display = 'none'; return null; }
+  renderer.setPixelRatio(Math.min(2, devicePixelRatio || 1)); renderer.setSize(300, 300, false);
+  const scene = new THREE.Scene(), cam = new THREE.PerspectiveCamera(30, 1, 0.1, 100);
+  const ted = PrismGraphmap.buildCoyote(); scene.add(ted); const head = ted.userData.head;
+  ted.children.forEach(c => { if (c.position.y < 1.05) c.visible = false; });
+  const key = new THREE.DirectionalLight(0xfff2e0, 1.25); key.position.set(1.6, 2.4, 2.6); scene.add(key);
+  const rim = new THREE.DirectionalLight(0x90a8d0, 0.6); rim.position.set(-1.8, 1, -1.2); scene.add(rim);
+  scene.add(new THREE.AmbientLight(0x6072a0, 0.6));
+  const aim = new THREE.Vector3(0, 1.26, 0.52); cam.position.set(0.60, 1.36, 1.60); cam.fov = 28; cam.updateProjectionMatrix(); cam.lookAt(aim);
+  let yawT = 0, pitchT = 0, yaw = 0, pitch = 0, t = 0, live = false;
+  (function loop() { requestAnimationFrame(loop); if (!live) return; t += 0.016; yaw += (yawT - yaw) * 0.08; pitch += (pitchT - pitch) * 0.08;
+    ted.rotation.y = yaw * 0.18 + Math.sin(t * 0.6) * 0.04; if (head) { head.rotation.y = yaw * 0.55; head.rotation.x = pitch + Math.sin(t * 0.9) * 0.03; }
+    ted.position.y = Math.sin(t * 1.1) * 0.01; renderer.render(scene, cam); })();
+  return { look: (nx, ny) => { yawT = Math.max(-0.7, Math.min(0.7, nx * 0.9)); pitchT = Math.max(-0.35, Math.min(0.4, ny * 0.6)); }, setLive: v => { live = v; } };
+}
+
+// ── load ──
+fetch('../data/active/active.json', { cache: 'no-store' }).then(r => r.ok ? r.json() : Promise.reject(new Error('HTTP ' + r.status))).catch(() => ({ errors: ['active.json not found — run scripts/active-layer.js (or the Action)'], events: { rows: [] }, accruals: { rows: [] } }))
+  .then(j => {
+    A = j;
+    if (DEMO) A.realization = synth();
+    if (A.frame) $('frame').innerHTML = 'the still frame<br><b>x</b> ' + esc(A.frame.x.join(' ↔ ')) + '<br><b>y</b> ' + esc(A.frame.y.join(' ↔ ')) + '<br><b>z</b> ' + esc(A.frame.z.join(' ↔ '));
+    buildFlows();
+    const hasOfficial = Object.keys(flowsByMonth).length > 0;
+    $('built').textContent = (A.builtAt ? 'built ' + A.builtAt.slice(0, 16).replace('T', ' ') + 'Z' : 'no bundle') + (hasOfficial ? '' : ' · no official flows yet — the first fetch needs the EIA key') + (DEMO ? ' · DEMO FLOWS ARE SYNTHETIC' : '');
+    $('errs').textContent = (A.errors || []).length ? '✗ ' + A.errors.join(' · ').slice(0, 160) : '';
+    $('errs').className = (A.errors || []).length ? 'err' : '';
+    requestAnimationFrame(() => { setMonth(mi); if (TED_ON_LOAD) tedOn(); });
+  });
+})();
+</script>
+</body>
+</html>

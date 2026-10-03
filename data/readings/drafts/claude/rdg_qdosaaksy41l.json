@@ -1,0 +1,493 @@
+{
+ "centralObject": {
+  "kind": "object",
+  "ref": "consent-decree-paramount-wbd-ndcal-2026-09-30",
+  "name": "The Paramount–states consent decree (N.D. Cal., Judge Martínez-Olguín, approved 2026-09-30) — five years of conduct terms that clear Paramount's takeover of Warner Bros. Discovery",
+  "place": {
+   "quadrants": [
+    "B",
+    "C"
+   ],
+   "band": "coalition",
+   "z": -0.2,
+   "why": "The decree binds Paramount's management (theatrical output, lots, cable bundling, a newsroom board) while letting the merger close, which mainly presses on the pro-business right and leaves the anti-monopoly left without the structural remedy it wanted; its time limit and thin newsroom protection pull the read slightly negative."
+  }
+ },
+ "tethers": [
+  {
+   "statute": "Clayton Act §7 and §16",
+   "cite": "15 U.S.C. §18; 15 U.S.C. §26",
+   "title": "Mergers that may substantially lessen competition; private and state suits for injunctive relief",
+   "enacted": "1914-10-15",
+   "relation": "invokes",
+   "why": "The law the 12 states sued under (late July 2026); §16 is what let states sue after the Justice Department cleared the deal, and the decree is the remedy entered in that suit.",
+   "place": {
+    "quadrants": [
+     "B",
+     "C"
+    ],
+    "band": "coalition",
+    "z": -0.2,
+    "why": "The decree is this statute's remedy here; it carries the decree's read."
+   }
+  },
+  {
+   "statute": "Hart-Scott-Rodino Antitrust Improvements Act",
+   "cite": "15 U.S.C. §18a",
+   "title": "Premerger notification and federal review",
+   "enacted": "1976-09-30",
+   "relation": "adjacent",
+   "why": "The federal review path: the Antitrust Division closed its review on 2026-06-12 with no divestitures or conditions, which is why the remedy came from the states instead.",
+   "place": {
+    "quadrants": [
+     "A",
+     "B"
+    ],
+    "band": "fluid",
+    "z": 0,
+    "why": "The federal track that cleared the deal before the window; it neither delivers nor fails here."
+   }
+  }
+ ],
+ "linkedBills": [],
+ "title": "Thirty Films a Year",
+ "category": "Media · Antitrust · Courts",
+ "date": "2026-09-30",
+ "prompt": "A judge approved the states' deal with Paramount, and Warner Bros. is about to be absorbed. Do thirty films a year and a CNN board protect anything?",
+ "framing": "On Wednesday, September 30, 2026, U.S. District Judge Araceli Martínez-Olguín in Northern California approved a settlement between Paramount and 12 states led by California Attorney General Rob Bonta, clearing Paramount's takeover of Warner Bros. Discovery to close. The states had sued under federal antitrust law in July 2026; the Justice Department had cleared the deal without conditions on June 12, 2026. For five years, Paramount must release at least 30 films a year in theaters, raise U.S. film production spending, negotiate its cable channels separately from Warner's, keep an independent board for CBS News and CNN editorial disputes, and fund support for displaced workers. The judge called the decree \"a reasonable factual and legal resolution\" and rejected outside objections. Paramount is run by David Ellison; his father, Larry Ellison, a Trump ally, is financing the deal.",
+ "framingKeywords": [
+  "thirty films",
+  "CNN board",
+  "12 states",
+  "Warner Bros.",
+  "five years"
+ ],
+ "prevalentAxis": "y",
+ "split": {
+  "topology": "axis",
+  "strength": 0.6,
+  "seam": "Institutional vs populist (y): both institutional fluid stations read delivery positive because they trust the enforcer or the operator, and both populist fluid stations read it negative because the structure and ownership are untouched; at the rim, trust in Ellison/Trump pulls D across the seam.",
+  "rationale": "Party (x) predicts less than y here: A and B agree the terms will be kept, and C and D agree they don't touch concentration. The fluid band splits cleanly on y, while the rim regroups by who trusts the Ellisons (B, D) and who trusts Bonta (A) against C.",
+  "zPattern": {
+   "centers": {
+    "A": 0.4,
+    "B": 0.3,
+    "C": -0.7,
+    "D": -0.55
+   },
+   "rims": {
+    "A": 0.5,
+    "B": 0.6,
+    "C": -0.85,
+    "D": 0.4
+   },
+   "note": "Centers are fluid z; coalition z: A −0.05, B −0.15, C −0.3, D −0.2. Fluid splits on y (A, B +; C, D −); every coalition sits just below zero. Rims sign by holder-trust exactly: A trusts Bonta, B the Ellisons, D 'Trump's people' (+); C distrusts Ellison and Trump (−). D's rim crosses its own fluid sign."
+  },
+  "ruledBy": null,
+  "date": "2026-09-30"
+ },
+ "antiValentBand": "denominated",
+ "antiValentRationale": "At D's rim the sign flips from its own fluid read (−0.55 to +0.4), because a trusted Trump-allied owner replaces the anti-Big-Media argument, and B's rim rises well above its coalition doubts; holder-trust inverts the merits read in exactly the band where the object drops out.",
+ "axes": {
+  "x": {
+   "pos": "Right",
+   "neg": "Left"
+  },
+  "y": {
+   "pos": "Institutional",
+   "neg": "Populist"
+  },
+  "z": {
+   "pos": "the decree delivers: its commitments keep films, jobs and newsroom independence in place for five years, and enforcement has teeth",
+   "neg": "it doesn't: the merger goes through, the terms are thin and time-limited, and the concentration and political ownership of CNN and CBS go unchecked"
+  }
+ },
+ "responses": {
+  "A": {
+   "fluid": {
+    "z": 0.4,
+    "zReason": "A court-enforced decree with a $30 million penalty for each missing film, 45-day windows and a ban on selling or closing the lots makes compliance cheaper than default for five years.",
+    "instrument": {
+     "holder": "the federal court and the state AGs",
+     "trusted": true
+    },
+    "text": "Thirty films a year, then thirty-two, with $30 million on the line for every one they skip. That's not a press release, that's a number a judge can collect. The DOJ waved this through with nothing, so I'll count the lots staying open as a real win.",
+    "xWord": "enforceable terms",
+    "yWord": "court oversight",
+    "words": [
+     "penalty per film",
+     "lots stay open",
+     "better than DOJ",
+     "45-day windows"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": -0.05,
+    "zReason": "The terms protect California's production base, which is what the brokers needed, but they don't touch the concentration that Letitia James and William Tong said was the actual problem.",
+    "instrument": {
+     "holder": "Bonta and Newsom",
+     "trusted": true
+    },
+    "text": "I defended this all week, and then I noticed who pushed hardest for it: the governor and the mayor, worried about the studio leaving for Texas. The people I vote with got jobs in LA and called it antitrust. James and Tong aren't wrong that nobody touched the size of the thing.",
+    "xWord": "jobs over structure",
+    "yWord": "brokered deal",
+    "words": [
+     "Texas threat",
+     "home-state win",
+     "James dissent"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": 0.5,
+    "zReason": "Trust in Bonta stands in for the terms.",
+    "instrument": {
+     "holder": "Rob Bonta",
+     "trusted": true
+    },
+    "text": "Bonta fought for this and he said it protects competition. That's enough for me.",
+    "xWord": "Bonta",
+    "yWord": "the AG",
+    "words": [
+     "Bonta's word",
+     "California"
+    ],
+    "source": ""
+   },
+   "xSide": "left",
+   "source": ""
+  },
+  "B": {
+   "fluid": {
+    "z": 0.3,
+    "zReason": "Paramount's management has the scale and the cash to meet the film quota and production commitments, so the terms will be met, even if they are state-imposed industrial policy.",
+    "instrument": {
+     "holder": "Paramount under David Ellison",
+     "trusted": true
+    },
+    "text": "The Justice Department reviewed this for eight months and found nothing to fix, and then twelve states rewrote a business plan anyway. Will Paramount hit thirty films? Sure, it needs the scale to take on Netflix and Disney, and the penalties are easy to see coming. My problem is twelve states writing a studio's business plan, not whether the promises get kept.",
+    "xWord": "market scale",
+    "yWord": "DOJ cleared it",
+    "words": [
+     "state overreach",
+     "Netflix competition",
+     "will comply"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": -0.15,
+    "zReason": "A five-member board with no ownership power can't hold out against an owner that political friends want to reshape CNN, and the free-market side has stopped caring about rules when the buyer is an ally.",
+    "instrument": {
+     "holder": "the Ellison family",
+     "trusted": false
+    },
+    "text": "The people I vote with spent years warning about media conglomerates, and now they're cheering one because Larry Ellison is a friend of the president. If I wouldn't trust a five-person board to check an owner I disliked, why would I pretend it checks one I like? Foreign money owning nearly half of it doesn't sit right with me either.",
+    "xWord": "principle check",
+    "yWord": "rules for allies",
+    "words": [
+     "friendly owner",
+     "toothless board",
+     "foreign stake"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": 0.6,
+    "zReason": "Trust in the Ellisons stands in for the terms.",
+    "instrument": {
+     "holder": "the Ellisons",
+     "trusted": true
+    },
+    "text": "Larry Ellison builds things that work. If the Ellisons signed it, they'll deliver.",
+    "xWord": "Ellison",
+    "yWord": "builders",
+    "words": [
+     "Ellison family",
+     "deal-makers"
+    ],
+    "source": ""
+   },
+   "xSide": "right",
+   "source": ""
+  },
+  "C": {
+   "fluid": {
+    "z": -0.7,
+    "zReason": "Conduct terms that expire in five years leave the merger itself, and a Trump ally's control of CNN and CBS News, permanently in place.",
+    "instrument": {
+     "holder": "Larry Ellison",
+     "trusted": false
+    },
+    "text": "Five years of movie quotas, and then Warner Bros. is gone for good. A five-member board doesn't own anything; the Ellisons do, and the money behind them comes from a Trump ally. Why does the merger last forever when the protections don't?",
+    "xWord": "monopoly stays",
+    "yWord": "sold out",
+    "words": [
+     "five-year sunset",
+     "CNN captured",
+     "no breakup",
+     "fewer buyers"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": -0.3,
+    "zReason": "The worker fund and the ban on closing the lots give guild members something a blocked suit might not have, which narrows the gap between this deal and a loss in court.",
+    "instrument": {
+     "holder": "the guilds",
+     "trusted": true
+    },
+    "text": "I keep calling it a sellout, but the people I organize with need the lots open and the displaced-worker fund paid, and a lawsuit that loses gets them nothing. Maybe my side wanted a scalp more than a paycheck. Still, I'm not calling a layoff cushion antitrust.",
+    "xWord": "worker floor",
+    "yWord": "purity cost",
+    "words": [
+     "worker fund",
+     "lots stay",
+     "still concentration"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.85,
+    "zReason": "Distrust of Ellison and Trump stands in for the terms.",
+    "instrument": {
+     "holder": "Ellison and Trump",
+     "trusted": false
+    },
+    "text": "Trump's billionaire just bought CNN. A board isn't going to stop that.",
+    "xWord": "billionaires",
+    "yWord": "rigged",
+    "words": [
+     "Trump's buddy",
+     "bought news"
+    ],
+    "source": ""
+   },
+   "xSide": "left",
+   "source": ""
+  },
+  "D": {
+   "fluid": {
+    "z": -0.55,
+    "zReason": "The decree regulates California output and jobs instead of market structure, so the giant still gets bigger and the newsroom board is just a guarantee written by blue-state AGs.",
+    "instrument": {
+     "holder": "blue-state attorneys general",
+     "trusted": false
+    },
+    "text": "Twelve blue states set a quota for Hollywood and called it competition. HBO Max, Paramount+, CNN and CBS all under one roof, and the fix is a theater count? The CNN board just lets Sacramento babysit the newsroom.",
+    "xWord": "Big Media",
+    "yWord": "blue-state deal",
+    "words": [
+     "one giant",
+     "Hollywood quota",
+     "Sacramento's board"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": -0.2,
+    "zReason": "The board may keep CNN from changing much, but if the populist right is betting on new ownership to fix CNN, it is counting on the same concentration it says it opposes.",
+    "instrument": {
+     "holder": "the Ellison family",
+     "trusted": false
+    },
+    "text": "The people I vote with hated Big Media until a Trump-friendly family bought the biggest piece of it. Now they're hoping the new owner cleans up CNN, and the board's the only thing in the way. I don't like the board, but I'm not sure I like what I'm rooting for either.",
+    "xWord": "same giant",
+    "yWord": "new owners",
+    "words": [
+     "CNN cleanup",
+     "double standard",
+     "still huge"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": 0.4,
+    "zReason": "Trust in Trump's camp stands in for the terms.",
+    "instrument": {
+     "holder": "Trump's people",
+     "trusted": true
+    },
+    "text": "Trump's guy owns CNN now. That's the only protection I care about.",
+    "xWord": "Trump",
+    "yWord": "Trump's win",
+    "words": [
+     "Trump ally",
+     "CNN flipped"
+    ],
+    "source": ""
+   },
+   "xSide": "right",
+   "source": ""
+  }
+ },
+ "diatribe": {
+  "LF": {
+   "text": "Thirty films a year, then thirty-two, with $30 million on the line for every one they skip. That's not a press release, that's a number a judge can collect.",
+   "side": "left",
+   "band": "fluid",
+   "keywords": [
+    "Thirty films a year",
+    "a judge can collect",
+    "$30 million"
+   ]
+  },
+  "LC": {
+   "text": "I defended this all week, and then I noticed who pushed hardest for it: the governor and the mayor, worried about the studio leaving for Texas. The people I vote with got jobs in LA and called it antitrust.",
+   "side": "left",
+   "band": "coalition",
+   "keywords": [
+    "The people I vote with",
+    "jobs in LA",
+    "called it antitrust"
+   ]
+  },
+  "LD": {
+   "text": "Trump's billionaire just bought CNN. A board isn't going to stop that.",
+   "side": "left",
+   "band": "denominated",
+   "keywords": [
+    "Trump's billionaire",
+    "bought CNN"
+   ]
+  },
+  "RF": {
+   "text": "The Justice Department reviewed this for eight months and found nothing to fix, and then twelve states rewrote a business plan anyway. Will Paramount hit thirty films? Sure.",
+   "side": "right",
+   "band": "fluid",
+   "keywords": [
+    "thirty films",
+    "rewrote a business plan",
+    "found nothing to fix"
+   ]
+  },
+  "RC": {
+   "text": "The people I vote with hated Big Media until a Trump-friendly family bought the biggest piece of it. Now they're hoping the new owner cleans up CNN, and the board's the only thing in the way.",
+   "side": "right",
+   "band": "coalition",
+   "keywords": [
+    "The people I vote with",
+    "Big Media",
+    "cleans up CNN"
+   ]
+  },
+  "RD": {
+   "text": "Trump's guy owns CNN now. That's the only protection I care about.",
+   "side": "right",
+   "band": "denominated",
+   "keywords": [
+    "Trump's guy",
+    "only protection"
+   ]
+  }
+ },
+ "diatribeLayer": "stated",
+ "objectLayer": {
+  "declared": "stated",
+  "stated": "An antitrust remedy: conduct commitments (theatrical output, production spending, separate cable negotiation, a CBS News/CNN editorial board, worker support) that protect competition for five years.",
+  "operative": "The price of letting the merger close. No divestiture; behavioral terms with a five-year life, policed by the states and the court. The operative fight is over who owns CNN and CBS News, which the decree touches only through a board.",
+  "inversion": "Lean, not ruled: at the right rims, holder-trust in a Trump-allied owner replaces the right-populist anti-Big-Media read (D −0.55 fluid → +0.4 rim). No cited prior; see meta.newsroomFindings."
+ },
+ "window": {
+  "close": "2026-09-30",
+  "why": "Trigger day = the day the object finished forming: the court's approval on Wednesday 2026-09-30 (AP via Washington Times/ADN/CTV, UPI, The Desk, France 24 — all 09-30). The register's formedOn (09-30) is right; its kind and holder are corrected on the object card ('vote' → ruling: a court's approval of a consent decree; holder 'a federal court' kept, named as N.D. Cal., with the decree binding Paramount and enforced by the 12 states). Quartz dates the approval 'October 1'; every other source has Wednesday 09-30, which is the calendar Wednesday. Declared at authoring, before any z.",
+  "ruledBy": null,
+  "ruledOn": null
+ },
+ "meta": {
+  "dialecticsRef": "obj_afederal_allowing-approves-buyout-close",
+  "status": "draft",
+  "source": "Claude draft — newsroom drafting (scheduled), authored z-first against Trace Formula v1 per scripts/newsroom/AUTHORING_PROTOCOL.md v1.5. Filed to drafts/claude; no aiDeltas lineage. Rulings: none.",
+  "editHistory": [
+   {
+    "at": "2026-10-01T18:20:00.000Z",
+    "by": "Claude (scheduled drafting)",
+    "what": "authored: object (kind corrected: 'vote' → ruling) -> window -> frame -> sweep -> central object (the decree; no bill) + tethers (Clayton Act §§7/16 invokes, HSR adjacent) + place -> axes -> twelve and object z (blind subagent; one line edited) -> split/diatribe/layers -> sweep"
+   }
+  ],
+  "aiDeltas": [],
+  "frameFirst": {
+   "date": "2026-09-30",
+   "by": "Claude, under §4c (window declared at authoring; sweep before z). Object NOT ruled — Claude's read, correctable by Sailor.",
+   "status": "Frame authored and swept before any z; the twelve and the object's own z authored blind z-first by a subagent (meta.blindAuthoring). Stations unruled.",
+   "objectLean": {
+    "stated": "an antitrust remedy for the Paramount–Warner merger",
+    "operative": "the price of letting the merger close; the ownership of CNN and CBS News is the real object, touched only by a board",
+    "inversion": "lean, not ruled: right-populist anti-Big-Media read flips at the rim on trust in a Trump-allied owner"
+   },
+   "titleLean": "'Thirty Films a Year' — Claude's; Sailor names Readings",
+   "sourcesInWindow": [
+    "The Desk 2026-09-30: Judge Araceli Martínez-Olguín approved Wednesday 09-30; 'a reasonable factual and legal resolution'; 12 AGs led by Bonta; suit filed July 2026; five-year terms (theatrical releases, production spending, separate cable negotiations, independent CBS/CNN editorial board, displaced-worker support); outside objections rejected",
+    "UPI 2026-09-30: 12 states led by Bonta; 30 films a year; ~$110 billion takeover; Larry Ellison a Trump ally financing the deal; Kreiz co-CEO; closing as soon as the following week",
+    "Quartz (dated 10-01): Clayton Act §7; 30 films years 1–2, 32 years 3–5; 45-day windows; $30 million per missing film; $300M/yr production increase; lots can't be sold or closed; five-member editorial board; closing ~10-06",
+    "The Spokesman-Review / LA Times 2026-09-21 (pre-window): settlement announced; N.D. Cal.; suit filed late July; NY AG James and CT AG Tong displeased; Newsom and Bass pressed for settlement; foreign investors near 50% with Ellison voting control",
+    "Law Commentary (pre-window): DOJ cleared the deal 2026-06-12 after an eight-month review, no divestitures or conditions"
+   ],
+   "background_preWindow": [
+    "1914-10-15: Clayton Act (§7 mergers; §16 injunctive relief incl. states)",
+    "1976-09-30: Hart-Scott-Rodino premerger review",
+    "2026-06-12: DOJ Antitrust Division clears Paramount–WBD without conditions",
+    "late July 2026: 12 states sue in N.D. Cal. under Clayton §7",
+    "2026-09-21: settlement announced; James and Tong object; Newsom and Bass had pressed for it"
+   ]
+  },
+  "framingAudit": {
+   "date": "2026-09-30",
+   "by": "Claude — frame-first authoring under §4c; sweep run BEFORE any z. Not a ruling.",
+   "window": "2026-09-30 (declared, see window.why)",
+   "verifiedInWindow": [
+    "Approval Wednesday 2026-09-30 by U.S. District Judge Araceli Martínez-Olguín (The Desk, UPI, AP — 09-30)",
+    "12 states led by California AG Rob Bonta (UPI, The Desk 09-30)",
+    "five-year terms: 30 films/yr theatrical, production spending, separate cable negotiations, CBS News/CNN editorial board, displaced-worker support (The Desk 09-30)",
+    "\"a reasonable factual and legal resolution\" — Judge Martínez-Olguín, 2026-09-30 (The Desk)",
+    "outside objections rejected (The Desk 09-30)",
+    "Larry Ellison, a Trump ally, financing the deal; David Ellison runs Paramount (UPI 09-30)",
+    "suit filed in July 2026 (The Desk 09-30; Spokesman 09-21: 'late July')",
+    "DOJ cleared without conditions 2026-06-12 (Law Commentary)"
+   ],
+   "keptUnverifiedDate": [
+    "Deal value varies by source: ~$110 billion (UPI, AP), $111 billion (Spokesman), $81 billion (Quartz, likely equity value). The frame names no figure.",
+    "Quartz dates the approval 'Wednesday, October 1, 2026'; 2026-10-01 is a Thursday, and every other source has 09-30. Kept 09-30.",
+    "Bonta's 'protects competition and consumer choice' quote: UPI runs it 09-30 but it may date to the 09-21 announcement; left out of the frame, given to the stations as background."
+   ],
+   "deliberatelyExcluded_afterWindow": [
+    "Closing (expected ~2026-10-06) and the new company's name (possibly announced 10-01) — after the window, out of the frame",
+    "Kreiz as co-CEO 'effective Monday' — after-window effect, out of the frame"
+   ]
+  },
+  "blindAuthoring": {
+   "date": "2026-10-01",
+   "author": "Claude (general-purpose subagent) — blind: given the frame, prompt, keywords, axes, a station/radius brief, a short dated background (Clayton Act, DOJ clearance, the July suit, the 09-21 settlement terms and objections, Newsom/Bass pressure, foreign stake), R-0921-1 and the voice rules only; no other Reading, no register, no web",
+   "zFirst": true,
+   "instrumentOnAll12": true,
+   "objectZ": "The object's own place.z (−0.2) authored by the same subagent, with the twelve, before the words.",
+   "rulings": "NONE — every station awaits Sailor's ruling. z, zReason and instrument as authored. Edits after hand-back: D-denominated yWord 'our win' → 'Trump's win' (voice rule); B-fluid last sentence 'My problem is who's running the studio, and it isn't whether the promises get kept' → 'My problem is twelve states writing a studio's business plan, not whether the promises get kept' (the original contradicted the station's trusted holder). No z changed.",
+   "authorNote": "I trust D-denominated least: the rim rule forces positive z once the holder is read as a trusted Trump ally, but much of the populist right still dislikes Big Media no matter who owns it, so a distrust-based rim (holder: Hollywood/Sacramento, z negative) is just as plausible. B-fluid at +0.3 is also shaky, because the institutional right might score delivery low simply out of resentment toward state-imposed terms. The A-fluid positive read depends on the $30 million penalty actually being enforced, and nothing in the frame describes an enforcement mechanism beyond the decree itself."
+  },
+  "newsroomFindings": {
+   "inversionLeans": [
+    {
+     "station": "D, B (right)",
+     "what": "the anti-Big-Media read on the right gives way at the rims to trust in a Trump-allied owner (D −0.55 fluid → +0.4 rim); B-coalition and D-coalition voice the double standard",
+     "prior": "none cited — station reads, not a recorded flip",
+     "note": "Lean only; not entered in inversions[]."
+    }
+   ],
+   "inversionNote": "No cited inversion. Sailor rules.",
+   "permanence": "A RETURN (lean, from my background knowledge, not verified this run): the Ellison media arc — Skydance's 2025 purchase of Paramount (CBS) — now extended to CNN. It also touches the register's White House press-ban cards (CNN is one of the three banned outlets)."
+  }
+ },
+ "rid": "rdg_qdosaaksy41l",
+ "ridLineage": "minted 2026-10-01 (UTC) by the scheduled newsroom drafting task; filed directly to drafts/claude",
+ "schema": "reading/v1",
+ "formulaVersion": "1",
+ "updatedAt": "2026-10-01T18:20:00.000Z",
+ "authorTier": "claude",
+ "newsroom": {
+  "oid": "obj_afederal_allowing-approves-buyout-close",
+  "queuedOn": "2026-10-01",
+  "draftedOn": "2026-10-01"
+ },
+ "images": []
+}

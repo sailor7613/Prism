@@ -10,3 +10,4 @@ Then commit. Both need **Settings → Actions → General → Workflow permissio
 
 - `scan-objects.yml` — the newsroom's daily GDELT scan → `data/newsroom/` (05:30 PT).
 - `bake-seed.yml` — rebakes `data/readings_seed.js` when the live tier changes.
+- `active-layer.yml` — PG01 §6, the active layer: EIA flows + prices, GDELT detection → `data/active/` (07:00 PT). Needs the `EIA_API_KEY` repo secret (free key).

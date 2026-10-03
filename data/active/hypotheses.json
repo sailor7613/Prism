@@ -1,0 +1,17 @@
+{
+ "what": "The arc's stated predictions that the active layer draws — PG01 §2 ledger entries with observables on this page. Derived from the PG01 markdown (canonical); update both together. Hand-dated; the pipeline never writes here.",
+ "rows": [
+  {
+   "id": "P3", "arc": "PG01", "statedDate": "2026-10-02", "outcome": "pending", "zTarget": 0.8,
+   "short": "The shock realizes the object by re-routing it.",
+   "stated": "The next member traceframe (TF03, the Strait closure) scores the real object at z ≥ +0.8, with the realization read at the hemisphere barrel: Gulf supply to the US goes to zero and is replaced by Western-Hemisphere supply that is dollar-settled by construction; the dollar-settled share of US crude imports does not fall through the shock.",
+   "falsifiedIf": "TF03's record shows the replacement barrel settled outside the dollar, or the Gulf edge returns before the hemisphere edges consolidate.",
+   "scoredBy": "TF03 — ruled, unauthored. The flows do not score z; TF03 does.",
+   "observables": [
+    { "id": "gulfShare", "label": "Gulf share of US crude imports", "nodes": ["Gulf"], "style": "dashed" },
+    { "id": "hemisphereShare", "label": "Hemisphere share of US crude imports", "nodes": ["Canada", "Mexico", "Venezuela", "Brazil", "Andes"], "style": "solid" },
+    { "id": "dollarShare", "label": "Dollar-settled share of US crude imports", "settlement": "dollar", "style": "dotted" }
+   ]
+  }
+ ]
+}

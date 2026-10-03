@@ -1,0 +1,515 @@
+{
+ "centralObject": {
+  "kind": "object",
+  "ref": "ice-ero-vehicle-stop-memo-2026-09-30",
+  "name": "The ICE vehicle-stop memo (Enforcement and Removal Operations, signed by Marcos D. Charles, 2026-09-30): no chases, trained officers only, body cameras on",
+  "place": {
+   "quadrants": [
+    "B",
+    "D"
+   ],
+   "band": "coalition",
+   "z": -0.2,
+   "why": "The memo binds ICE's own officers and the enforcement right that defended the stops in July; a flat no-chase rule is easy to follow and to check, but it names no penalty and no outside enforcer, and the stops go on under the President's July order."
+  }
+ },
+ "tethers": [
+  {
+   "statute": "Immigration and Nationality Act §287 (powers of immigration officers), with its regulation 8 C.F.R. §287.8",
+   "cite": "8 U.S.C. §1357; 8 C.F.R. §287.8",
+   "title": "Powers of immigration officers and employees; standards for enforcement activities, including vehicle pursuits",
+   "enacted": "1952-06-27",
+   "relation": "invokes",
+   "why": "The authority ICE officers make vehicle stops under. The regulation already sets pursuit standards; the memo is internal guidance tightening practice beneath it, with no change to statute or rule.",
+   "place": {
+    "quadrants": [
+     "B",
+     "D"
+    ],
+    "band": "fluid",
+    "z": 0,
+    "why": "Standing authority the memo operates under; it neither delivers nor fails here."
+   }
+  },
+  {
+   "billId": "hr-119-4651",
+   "bill": "H.R. 4651",
+   "title": "Immigration Enforcement Staff Body Camera Accountability Act",
+   "relation": "adjacent",
+   "statusAsOf": "Referred to the Subcommittee on Border Security and Enforcement, 2025-07-24",
+   "why": "Would put the body-camera requirement in statute; it has not moved, so the camera rule exists only as agency guidance.",
+   "inDb": true,
+   "place": {
+    "quadrants": [
+     "B",
+     "D"
+    ],
+    "band": "fluid",
+    "z": 0,
+    "why": "A bill that never became the instrument; it neither delivers nor fails."
+   }
+  },
+  {
+   "billId": "hr-119-7119",
+   "bill": "H.R. 7119",
+   "title": "DHS Use of Force Oversight Act",
+   "relation": "adjacent",
+   "statusAsOf": "Referred to the Subcommittee on Border Security and Enforcement, 2026-01-16",
+   "why": "The outside-oversight version of what the memo does internally; it has not moved.",
+   "inDb": true,
+   "place": {
+    "quadrants": [
+     "B",
+     "D"
+    ],
+    "band": "fluid",
+    "z": 0,
+    "why": "A bill that never became the instrument; it neither delivers nor fails."
+   }
+  }
+ ],
+ "linkedBills": [
+  "hr-119-4651",
+  "hr-119-7119"
+ ],
+ "title": "Never Chase",
+ "category": "Immigration · Policing · Executive Branch",
+ "date": "2026-09-30",
+ "prompt": "ICE told its officers never to chase a car, eleven weeks after the President ordered the stops to go on. Does a memo change what happens on the road?",
+ "framing": "On Wednesday, September 30, 2026, Marcos D. Charles, who runs ICE's Enforcement and Removal Operations, signed a memo barring officers from chasing a vehicle that fails to pull over, under any circumstances. Only officers who have finished one of five training courses may make a vehicle stop; every officer at the scene must wear a body camera and turn it on; the vehicle needs working lights and sirens. Since 2025, ICE officers have fired their weapons in more than a dozen vehicle stops, and at least four people have died. After fatal shootings in Houston on July 7, 2026 and in Biddeford, Maine on July 14, 2026, DHS paused most stops; President Trump reversed that on July 15, 2026. On September 20, 2026, an officer shot a delivery driver in Austin; the officer who fired wore no body camera.",
+ "framingKeywords": [
+  "no chases",
+  "body cameras",
+  "traffic stops",
+  "trained officers",
+  "July pause"
+ ],
+ "prevalentAxis": "x",
+ "split": {
+  "topology": "peel",
+  "strength": 0.5,
+  "seam": "C against the other three in the fluid band (A +0.3, B +0.6, D +0.7 believe the memo binds; C −0.6 does not); at the rim the peel reverses and B stands alone (+0.5) against three negatives.",
+  "rationale": "The stated object is immigration enforcement, so the scalar runs along x. But belief in delivery does not sort by party: three fluid stations think officers will follow the rule, and D believes it for the reason it dislikes it. Every coalition except B's sits below zero, and three of four rims distrust the holder they name (Trump for A, ICE itself for C, an unbacked career official for D).",
+  "zPattern": {
+   "centers": {
+    "A": 0.3,
+    "B": 0.6,
+    "C": -0.6,
+    "D": 0.7
+   },
+   "rims": {
+    "A": -0.6,
+    "B": 0.5,
+    "C": -0.9,
+    "D": -0.6
+   },
+   "note": "Centers are fluid z; coalition z: A −0.3, B +0.2, C −0.2, D −0.3. Rims sign by holder-trust: only B trusts its holder (ICE leadership). A and D both expect the President to override the memo and land on the same rim z from opposite sides. D crosses its own fluid sign (+0.7 to −0.6)."
+  },
+  "ruledBy": null,
+  "date": "2026-10-01"
+ },
+ "antiValentBand": "fluid",
+ "antiValentRationale": "D's fluid band is the anti-valent one: it believes the memo binds (+0.7) and counts that as the loss, the July pause under another label. Belief in delivery is not approval.",
+ "axes": {
+  "x": {
+   "pos": "Right",
+   "neg": "Left"
+  },
+  "y": {
+   "pos": "Institutional",
+   "neg": "Populist"
+  },
+  "z": {
+   "pos": "the memo changes the stops: no chases, cameras on, trained officers only, and fewer people get shot",
+   "neg": "it doesn't: the guidance isn't followed or enforced, or it is overridden, and the stops go on as before"
+  }
+ },
+ "responses": {
+  "A": {
+   "fluid": {
+    "z": 0.3,
+    "zReason": "A bright-line ban on pursuits and a training gate are checkable rules that give supervisors and later litigants something concrete to hold an officer to, even without a stated penalty.",
+    "instrument": {
+     "holder": "ICE supervisors, with courts behind them",
+     "trusted": true
+    },
+    "text": "A flat rule is easier to follow than a judgment call, and never chase is about as flat as a rule gets. I'd still point out there was already a federal regulation on pursuits, so the new part is really the cameras and the training requirement. No penalty is written down, but a written standard is what a lawyer holds up afterward.",
+    "xWord": "civil liberties",
+    "yWord": "written standards",
+    "words": [
+     "bright-line rule",
+     "cameras on",
+     "paper trail"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": -0.3,
+    "zReason": "The agency already promised universal cameras by the end of August and the officer who fired in Austin had none, so internal promises have a recent record of not reaching the road.",
+    "instrument": {
+     "holder": "ICE leadership policing itself",
+     "trusted": false
+    },
+    "text": "I want to believe this, and that's what worries me. Cameras for everyone by the end of August, and then Austin, where the officer who fired wore none and the second one switched his off. The people I vote with have body camera bills sitting in committee, and I notice how quick some of them are to praise a memo that asks nothing of Congress.",
+    "xWord": "liberal, uneasy",
+    "yWord": "oversight first",
+    "words": [
+     "August promise",
+     "bills in committee",
+     "self-policing"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.6,
+    "zReason": "Guidance signed by a career official can be withdrawn or overruled by the same White House that reversed the July pause within a day.",
+    "instrument": {
+     "holder": "Trump",
+     "trusted": false
+    },
+    "text": "A career official signed it. The President undid the last pause in a day, and I don't trust him to leave this one alone.",
+    "xWord": "opposition",
+    "yWord": "rule of law",
+    "words": [
+     "one-day reversal",
+     "no statute",
+     "his call"
+    ],
+    "source": ""
+   },
+   "xSide": "left",
+   "source": ""
+  },
+  "B": {
+   "fluid": {
+    "z": 0.6,
+    "zReason": "The memo comes down the chain of command from the head of the operation, and officers generally follow written operating rules from their own leadership because their careers depend on it.",
+    "instrument": {
+     "holder": "ERO chain of command",
+     "trusted": true
+    },
+    "text": "This is how a professional agency fixes a problem. The stops continue, as the President ordered, but with trained officers, lights and sirens, cameras running, and no pursuits. Pinning a car and spike strips are still allowed for officers trained to do it, so I read this as tightening the tool, not giving it up.",
+    "xWord": "law and order",
+    "yWord": "chain of command",
+    "words": [
+     "professional standards",
+     "stops continue",
+     "trained officers"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0.2,
+    "zReason": "Officers will mostly comply, but the rule works partly by letting drivers who refuse to stop simply leave, which changes outcomes in a way its backers may not like.",
+    "instrument": {
+     "holder": "field office directors",
+     "trusted": true
+    },
+    "text": "I think it will be followed, and that's my problem with part of it. If a driver knows nobody will chase him, what's the stop worth? People on my side spent July saying this was one of the most effective tools ICE has, and I'm not sure they've admitted this memo is a quieter version of the pause the President threw out. I'd also like to hear Collins say whether this is what she was asking for.",
+    "xWord": "conservative, wary",
+    "yWord": "agency discipline",
+    "words": [
+     "quiet pause",
+     "drivers flee",
+     "tool weakened"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": 0.5,
+    "zReason": "Agency leadership controls training, assignments and discipline, which is enough to make an internal directive stick without Congress.",
+    "instrument": {
+     "holder": "ICE leadership",
+     "trusted": true
+    },
+    "text": "The agency wrote its own rules and the agency will enforce them. I trust the people running it more than I trust a committee to do it for them.",
+    "xWord": "right, institutional",
+    "yWord": "trust the agency",
+    "words": [
+     "its own house",
+     "no new law",
+     "leadership answers"
+    ],
+    "source": ""
+   },
+   "xSide": "right",
+   "source": ""
+  },
+  "C": {
+   "fluid": {
+    "z": -0.6,
+    "zReason": "The stops keep happening, the memo names no penalty and no outside enforcer, and the camera rule depends on officers choosing to switch on a device one of them switched off in Austin.",
+    "instrument": {
+     "holder": "the officers at the stop",
+     "trusted": false
+    },
+    "text": "The shooting in Austin didn't come out of a chase. It came after a stop by an unmarked vehicle, and the memo keeps the stops. A camera rule with no penalty is a request, and one officer there already turned his off.",
+    "xWord": "immigrant rights",
+    "yWord": "from the street",
+    "words": [
+     "stops continue",
+     "no penalty",
+     "camera off"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": -0.2,
+    "zReason": "A no-chase rule could remove one real source of crashes and gunfire, but allowing officers to pin cars and use spike strips leaves forceful stops in place.",
+    "instrument": {
+     "holder": "ICE, under outside pressure",
+     "trusted": false
+    },
+    "text": "I'll say something the folks I organize with don't love hearing. If officers really stop chasing cars, some driver who panics gets home alive, and I'm not going to sneer at that. But pinning a car is still allowed, and I worry that calling it a win tells everyone the stops are fine as long as they're filmed.",
+    "xWord": "abolitionist, torn",
+    "yWord": "organizer",
+    "words": [
+     "small mercy",
+     "pinning allowed",
+     "filmed, not ended"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.9,
+    "zReason": "An agency that investigates itself has no reason to punish its own officers for breaking a rule nobody outside can enforce.",
+    "instrument": {
+     "holder": "ICE itself",
+     "trusted": false
+    },
+    "text": "ICE holds this, start to finish. I don't trust the agency that did the shooting to police the shooters.",
+    "xWord": "abolish ICE",
+    "yWord": "no faith",
+    "words": [
+     "self-investigation",
+     "paper",
+     "same officers"
+    ],
+    "source": ""
+   },
+   "xSide": "left",
+   "source": ""
+  },
+  "D": {
+   "fluid": {
+    "z": 0.7,
+    "zReason": "Officers will obey a written order because breaking it puts their jobs on the line, and word that ICE will not chase spreads quickly among the drivers they are trying to stop.",
+    "instrument": {
+     "holder": "rank-and-file officers",
+     "trusted": true
+    },
+    "text": "Oh, it'll change the stops, all right. Officers follow orders, and now the order says let him drive away. Anybody who doesn't want to be pulled over just has to keep going, and I don't see how that isn't the July pause with a different label.",
+    "xWord": "border hawk",
+    "yWord": "ordinary citizen",
+    "words": [
+     "hands tied",
+     "just drive off",
+     "pause again"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": -0.3,
+    "zReason": "The President publicly ordered the stops resumed and overrode his own department once already, so guidance from a career official that undercuts that order may not survive.",
+    "instrument": {
+     "holder": "Trump",
+     "trusted": true
+    },
+    "text": "I keep wondering whether the President even signed off on this. He said the stops go on, and eleven weeks later somebody inside ICE writes a rule that lets drivers leave. The people I vote with are split, and I get it, because nobody wants an officer in prison over a bad chase either. My guess is it gets pulled the way the pause did.",
+    "xWord": "MAGA",
+    "yWord": "outside Washington",
+    "words": [
+     "did he approve",
+     "gets pulled",
+     "officers exposed"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.6,
+    "zReason": "A memo from a career official has no backing from the Secretary or the President, and the President has already shown he will reverse the bureaucracy on this exact question.",
+    "instrument": {
+     "holder": "a career official with no backing",
+     "trusted": false
+    },
+    "text": "A bureaucrat signed this, not the President and not the Secretary. I don't trust him to make it stick, and I don't think he can.",
+    "xWord": "America First",
+    "yWord": "against the bureaucracy",
+    "words": [
+     "unelected",
+     "no backing",
+     "won't last"
+    ],
+    "source": ""
+   },
+   "xSide": "right",
+   "source": ""
+  }
+ },
+ "diatribe": {
+  "LF": {
+   "text": "A flat rule is easier to follow than a judgment call, and never chase is about as flat as a rule gets. No penalty is written down, but a written standard is what a lawyer holds up afterward.",
+   "side": "left",
+   "band": "fluid",
+   "keywords": [
+    "never chase",
+    "a written standard",
+    "No penalty"
+   ]
+  },
+  "LC": {
+   "text": "The people I vote with have body camera bills sitting in committee, and I notice how quick some of them are to praise a memo that asks nothing of Congress.",
+   "side": "left",
+   "band": "coalition",
+   "keywords": [
+    "The people I vote with",
+    "bills sitting in committee",
+    "asks nothing of Congress"
+   ]
+  },
+  "LD": {
+   "text": "ICE holds this, start to finish. I don't trust the agency that did the shooting to police the shooters.",
+   "side": "left",
+   "band": "denominated",
+   "keywords": [
+    "the agency that did the shooting",
+    "police the shooters"
+   ]
+  },
+  "RF": {
+   "text": "This is how a professional agency fixes a problem. The stops continue, as the President ordered, but with trained officers, lights and sirens, cameras running, and no pursuits.",
+   "side": "right",
+   "band": "fluid",
+   "keywords": [
+    "no pursuits",
+    "The stops continue",
+    "professional agency"
+   ]
+  },
+  "RC": {
+   "text": "People on my side spent July saying this was one of the most effective tools ICE has, and I'm not sure they've admitted this memo is a quieter version of the pause the President threw out.",
+   "side": "right",
+   "band": "coalition",
+   "keywords": [
+    "People on my side",
+    "quieter version of the pause",
+    "most effective tools"
+   ]
+  },
+  "RD": {
+   "text": "A bureaucrat signed this, not the President and not the Secretary. I don't trust him to make it stick, and I don't think he can.",
+   "side": "right",
+   "band": "denominated",
+   "keywords": [
+    "A bureaucrat",
+    "make it stick"
+   ]
+  }
+ },
+ "diatribeLayer": "stated",
+ "objectLayer": {
+  "declared": "stated",
+  "stated": "A safety rule for ICE vehicle stops: no chases, trained officers only, body cameras on, lights and sirens.",
+  "operative": "Internal guidance from a career official, with no stated penalty and no outside enforcer, that narrows a tool the President ordered kept on 2026-07-15. Whether it holds depends on the agency policing itself and on the White House leaving it alone.",
+  "inversion": "Lean, not ruled: the administration's own polarity on vehicle stops has turned twice (pause 07-14, reversal 07-15, restriction 09-30), and the institutional right that defended the reversal now reads the restriction as professionalism. See meta.newsroomFindings."
+ },
+ "window": {
+  "close": "2026-09-30",
+  "why": "Trigger day = the day the object finished forming: the memo was signed Wednesday 2026-09-30 (AP, via WSLS, Scripps and others). The register's formedOn (10-01) is the day the AP obtained and reported it: a report date, not the as-of date. Corrected on the object card, along with kind ('ruling' → agency guidance memo) and holder ('DHS' → ICE Enforcement and Removal Operations). Declared at authoring, before any z.",
+  "ruledBy": null,
+  "ruledOn": null
+ },
+ "meta": {
+  "dialecticsRef": "obj_dhs_guidance-ice-memo-rules",
+  "status": "draft",
+  "source": "Claude draft — newsroom drafting (scheduled), authored z-first against Trace Formula v1 per scripts/newsroom/AUTHORING_PROTOCOL.md v1.5. Filed to drafts/claude; no aiDeltas lineage. Rulings: none.",
+  "editHistory": [
+   {
+    "at": "2026-10-02T02:40:00.000Z",
+    "by": "Claude (scheduled drafting)",
+    "what": "authored: object (kind, holder and formedOn corrected) -> window -> frame -> central object (the memo; no bill) + tethers (INA §287 / 8 C.F.R. §287.8 invokes; H.R. 4651 and H.R. 7119 adjacent) + place -> axes -> twelve and object z (blind subagent; no edits) -> split/diatribe/layers -> sweep"
+   }
+  ],
+  "aiDeltas": [],
+  "frameFirst": {
+   "date": "2026-09-30",
+   "by": "Claude, under §4c (window declared at authoring; sweep before z). Object NOT ruled — Claude's read, correctable by Sailor.",
+   "status": "Frame authored before any z; the twelve and the object's own z authored blind z-first by a subagent (meta.blindAuthoring). Stations unruled.",
+   "objectLean": {
+    "stated": "a safety rule for ICE vehicle stops",
+    "operative": "unenforced internal guidance that narrows a tool the President ordered kept",
+    "inversion": "lean, not ruled: the administration's polarity on vehicle stops turned twice in eleven weeks"
+   },
+   "titleLean": "'Never Chase' — Claude's; Sailor names Readings",
+   "sourcesInWindow": [
+    "AP (WSLS, Scripps/NewsChannel 5, reported 2026-10-01): memo signed Wednesday by Marcos D. Charles, ICE executive associate director for Enforcement and Removal Operations; no chasing vehicles that fail to pull over under any circumstances; one of five training courses required; all officers at a stop wear and activate body cameras; working lights and sirens; pinning and spike strips only for trained officers; more than a dozen shootings in vehicle stops since last year, at least four dead",
+    "CBS News (July 2026): Houston shooting 07-07 (Lorenzo Salgado Araujo); Biddeford, Maine shooting 07-14 (Johan Sebastián Durán Guerrero); DHS paused most vehicle stops 07-14; Trump reversed it on Truth Social 07-15; Collins and King reactions",
+    "Fox (2026-09-22): Austin shooting 09-20 of Wilber Rafael Garces Perez, a DoorDash driver; the officer who fired wore no body camera; ICE leadership said in August 2026 that all agents would have cameras by month's end"
+   ],
+   "background_preWindow": [
+    "1952-06-27: Immigration and Nationality Act §287 (8 U.S.C. §1357); 8 C.F.R. §287.8 sets enforcement standards including vehicle pursuits (cited from my background knowledge, not re-verified this run)",
+    "2025-07-23: H.R. 4651 (ICE body cameras) introduced; 2026-01-15: H.R. 7119 (DHS use-of-force oversight) introduced; both in committee",
+    "2026-07-07: fatal ICE shooting, Houston",
+    "2026-07-14: fatal ICE shooting, Biddeford, Maine; DHS pauses most vehicle stops",
+    "2026-07-15: Trump orders the stops resumed",
+    "August 2026: ICE leadership says all agents will have body cameras by the end of the month",
+    "2026-09-20: Austin shooting of a delivery driver; no camera on the officer who fired"
+   ]
+  },
+  "framingAudit": {
+   "date": "2026-09-30",
+   "by": "Claude — frame-first authoring under §4c. Not a ruling.",
+   "window": "2026-09-30 (declared, see window.why)",
+   "verifiedInWindow": [
+    "Memo signed Wednesday 2026-09-30 by Marcos D. Charles (AP)",
+    "No chases under any circumstances; one of five training courses; body cameras worn and activated; working lights and sirens (AP)",
+    "More than a dozen vehicle-stop shootings since 2025, at least four deaths (AP)",
+    "Houston 07-07, Biddeford 07-14, DHS pause 07-14, Trump reversal 07-15 (CBS News)",
+    "Austin shooting 2026-09-20; the officer who fired wore no body camera (Fox 09-22; AP)"
+   ],
+   "keptUnverifiedDate": [
+    "One AP copy's summary gave the signing day as October 1; 'Wednesday' is 09-30 on the calendar (10-01 is a Thursday). Kept 09-30.",
+    "The shooting and death counts are AP's running tally as reported 10-01; no as-of date is given for the tally itself."
+   ],
+   "deliberatelyExcluded_afterWindow": [
+    "2026-10-01: the AP's report of the memo (the memo was not released by ICE) — report date, outside the window",
+    "2026-10-01: ICE's response describing the memo as a routine guidance reminder",
+    "2026-10-01: Judge P. Kevin Castel's ruling against ICE arrests at immigration courts (Newsweek pairs the two)",
+    "Testimony at Garces Perez's bond hearing that a second officer turned his camera off: sources disagree on whether the hearing was 09-30 or 10-01. Kept out of the frame; the blind author was given it as background and two bands use it (A-coalition, C-fluid). Worth your eye."
+   ]
+  },
+  "blindAuthoring": {
+   "date": "2026-10-02",
+   "author": "Claude (general-purpose subagent) — blind: given the frame, prompt, keywords, axes, a station/radius brief, a short dated background (the memo's status as internal guidance, pinning and spike strips, the July pause and reversal, Collins and King, the August camera promise, Austin, 8 C.F.R. §287.8, the stalled House bills), R-0921-1 and the voice rules only; no other Reading, no register, no web",
+   "zFirst": true,
+   "instrumentOnAll12": true,
+   "objectZ": "The object's own place.z (−0.2) authored by the same subagent, with the twelve, before the words.",
+   "rulings": "NONE — every station awaits Sailor's ruling. z, zReason, instrument and text as authored; no edits after hand-back.",
+   "authorNote": "I trust D least: its fluid and rim point in opposite directions (the memo binds officers, yet will be overridden), which I think is a real split in that station but may read as incoherent, and D-coalition has trusted:true on Trump with negative z because the trust is in him to override the memo rather than deliver it. B-denominated is the only positive rim and rests on my assumption that the institutional right would defend an internal ICE rule rather than side with the President's July order against it; that could easily be wrong. C-coalition's concession that a no-chase rule might save a life is my guess at that station's smartest member and may be more generous to the memo than the abolitionist left would actually be."
+  },
+  "newsroomFindings": {
+   "inversionLeans": [
+    {
+     "station": "B (and the administration as holder)",
+     "what": "On 2026-07-15 the President reversed a one-day pause, calling the traffic stop one of ICE's most important tools; on 09-30 ICE's own leadership restricted the stops, and B-fluid reads the restriction as professionalism while B-coalition calls it a quieter version of the pause.",
+     "prior": "CBS News, July 2026 (coverage, not a live Reading)",
+     "note": "Lean only; entered in the overlay's inversions[] as unruled."
+    }
+   ],
+   "inversionNote": "One lean with a cited prior. Sailor rules.",
+   "permanence": "A RETURN (lean): the July vehicle-stop pause (07-14, reversed 07-15) re-formed as internal guidance on 09-30. The register never carried the July arc."
+  }
+ },
+ "rid": "rdg_64eiv0kp2d3u",
+ "ridLineage": "minted 2026-10-02 (UTC) by the scheduled newsroom drafting task; filed directly to drafts/claude",
+ "schema": "reading/v1",
+ "formulaVersion": "1",
+ "updatedAt": "2026-10-02T02:40:00.000Z",
+ "authorTier": "claude",
+ "newsroom": {
+  "oid": "obj_dhs_guidance-ice-memo-rules",
+  "queuedOn": "2026-10-02",
+  "draftedOn": "2026-10-01"
+ },
+ "images": []
+}

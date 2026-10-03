@@ -1,0 +1,15 @@
+{
+ "column": "detection",
+ "what": "The detection series' dated events — PG01 §6.2(b). Every row carries asOf (the day it was true; the window rule) and detected (the day it was reported). The gap is latency, measured. Hand-dated; the pipeline never writes here.",
+ "schema": { "id": "evt-…", "theater": "iran | russia | venezuela | settlement", "kind": "strike | seizure | license | sanction | admission | order | statement | closure", "asOf": "YYYY-MM-DD", "detected": "YYYY-MM-DD", "what": "one line", "source": "where", "pg01": "where it already sits in PG01, if it does" },
+ "rows": [
+  { "id": "evt-nspm2", "theater": "iran", "kind": "order", "asOf": "2025-02-04", "detected": "2025-02-04", "what": "NSPM-2 signed — maximum pressure; Iran's exports to zero assigned to State and Treasury.", "source": "White House memorandum", "pg01": "TF01 (first member)" },
+  { "id": "evt-first-strikes", "theater": "iran", "kind": "strike", "asOf": "2025-06", "detected": "2025-06", "what": "The first strikes — oil spike, safe-haven flow, the closure threat as predicate.", "source": "PG01 series TF02 (ruled, unauthored)", "pg01": "TF02" },
+  { "id": "evt-senate-dem-statement", "theater": "iran", "kind": "statement", "asOf": "2026-03-06", "detected": "2026-03-06", "what": "Senate Democratic joint statement on the war's economics — gas prices, the Russian-oil general license; not one word on the dollar or invoicing.", "source": "PG01 §4", "pg01": "§4 accrual · P1 evidence" },
+  { "id": "evt-islamabad", "theater": "settlement", "kind": "admission", "asOf": "2026-06-17", "detected": "2026-06-17", "what": "The Islamabad Memorandum — invoicing lands in paper before speech.", "source": "PG01 series TF04 (ruled, unauthored)", "pg01": "TF04" },
+  { "id": "evt-bessent-cnbc", "theater": "settlement", "kind": "admission", "asOf": "2026-06-24", "detected": "2026-06-24", "what": "Bessent on CNBC names the object aloud; pickup runs as a market story, a sanctions-relief defence, a win.", "source": "PG01 §1.3 calibration case", "pg01": "TF05 (admitted 2026-09-10)" },
+  { "id": "evt-demotion-c2", "theater": "settlement", "kind": "statement", "asOf": "2026-08-08", "detected": "2026-08-08", "what": "The demotion — 'just another body of water'; the cover completing itself.", "source": "PG01 series TF06 (authored 2026-09-20)", "pg01": "TF06" },
+  { "id": "evt-ru-shortages", "theater": "russia", "kind": "admission", "asOf": "2026-08-14", "detected": "2026-08-14", "what": "Petrol shortages admitted in Russia; the #2 gasoline producer repeatedly suspended.", "source": "PG01 §4 (Russian-theater accrual)", "pg01": "§4 · P2 window opens" },
+  { "id": "evt-norsi", "theater": "russia", "kind": "strike", "asOf": "2026-08-26", "detected": "2026-08-27", "what": "Ukraine strikes Lukoil's NORSI refinery (Nizhny Novgorod, Russia's 4th-largest; shut down per Reuters) in a claimed 16-target wave.", "source": "Reuters via PG01 §4", "pg01": "§4 accrual 2026-08-27" }
+ ]
+}

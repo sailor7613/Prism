@@ -80,8 +80,6 @@
       steps: [
         { sel: '#evFraming', wait: 'tap', move: 'read',
           text: "The wall text. What actually happened, dated, no spin — read it once and get the weather of it." },
-        { sel: '#evLaw', wait: 'tap', move: 'read', skipUnless: () => !!window.PRISM_HAS_OBJECT,
-          text: "This is the object: the law as signed, with a date on it. Whatever anyone says later gets measured against this." },
         { sel: '#evKeywords', wait: 'tap', move: 'read' },
         { sel: '#evEnter', wait: 'click', move: 'read' },
       ],
@@ -141,10 +139,8 @@
       steps: [
         { sel: '#gm3d', wait: 'tap', move: 'space',
           text: () => (window.PRISM_ON_EXAMPLE ? "All three axes, one space: across is left ↔ right, up is institutional, depth is delivery. " : "") + "You're on the plane now. Those twelve orbs are the Reading's own stations, floating at the depth their author gave them. Hold one to read it against your pin." },
-        { sel: '#gm3d', wait: 'tap', move: 'space', skipUnless: () => !!window.PRISM_HAS_OBJECT,
-          text: "The gold block is the object itself — the law, on the plane, at the depth its author gave its delivery. Every station you see is a read of that one thing." },
         { sel: '#zSlider', wait: 'tap', move: 'space', skipUnless: () => !window.PRISM_ON_EXAMPLE, text: "Your delivery call stays live — slide it and watch the distance to each station change." },
-        { sel: '#deltaTicker', wait: 'tap', move: 'space', text: () => "The strip is Burns. Top row: your burns — where your pin and this Reading's stations disagree. Bottom row: every object the newsroom is watching; a frame burns when someone holds it to the light." + (window.PRISM_HAS_OBJECT ? " The noise moves. The object doesn't." : "") },
+        { sel: '#deltaTicker', wait: 'tap', move: 'space', text: "The strip is Burns. Top row: your burns — where your pin and this Reading's stations disagree. Bottom row: every object the newsroom is watching; a frame burns when someone holds it to the light." },
         { sel: '#exampleNext', wait: 'click', move: 'space', skipUnless: () => !!window.PRISM_ON_EXAMPLE,
           text: "That's the whole loop: read it, find your band, pick a voice, pin it, call the delivery. Now do it for real." },
       ],

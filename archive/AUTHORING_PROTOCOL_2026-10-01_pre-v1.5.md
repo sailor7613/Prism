@@ -1,6 +1,6 @@
 # The daily drafting — authoring protocol for Claude drafts
 
-*v1.5 · 2026-10-01 (the object on the plane) · v1.4 2026-09-27 (highlights track the band) · v1.3 2026-09-26 (auto-publish) · v1.2 2026-09-26 (central object + tethers) · v1.1 2026-09-25 (overlay; no git) · v1 2026-09-22 · Sailor + Claude. This file is the canonical instruction the daily
+*v1.4 · 2026-09-27 (highlights track the band) · v1.3 2026-09-26 (auto-publish) · v1.2 2026-09-26 (central object + tethers) · v1.1 2026-09-25 (overlay; no git) · v1 2026-09-22 · Sailor + Claude. This file is the canonical instruction the daily
 drafting task follows. Edit it here; the task reads it fresh each run.*
 
 ## What this is
@@ -90,29 +90,6 @@ authoring anything:
    - **Don't miss a culturally broad event because it lacks legislation.** Write
      `legislativeVoid: { why, standsAgainst }`: why no instrument exists, and which law or
      object the absence stands against. A void is a finding, never a skip.
-3c. **The object on the plane (v1.5, 2026-10-01).** The central object is rendered on
-   the portal's plane as *the* object — one gold block the twelve stations are measured
-   against — and it is placed from the Reading itself, never from an admin scoring step.
-   Write `place` on `centralObject` and on every tether:
-   `place: { quadrants, band, z, why }`
-   - `quadrants[]` — who the instrument presses on: the pressured corners (A left·
-     institutional, B right·institutional, C left·populist, D right·populist). One to four;
-     the object lands at their centroid. Not where its supporters sit — where it bears.
-   - `band` — how hot the object itself runs in the discourse: `fluid` (stated and left),
-     `coalition` (argued over, two or three rounds), `denominated` (a bridge gets burnt
-     over it). The ring on the block.
-   - `z` (−1..1) — the author's delivery read of the instrument: does it land. Author it
-     blind, with the twelve, before the words; it is the thirteenth z, the object's own,
-     and the stations' z's are reads of it. An unscored object hovers at 0.15 — never
-     leave it unscored.
-   - `why` — one sentence.
-   A tether that never became the instrument (the companion bill, the superseded text)
-   still carries a place; it renders as a diamond beside the block. A Reading with a
-   `centralObject` and no `place` is not clean (checker: PLACE RULE, held at claude-tier
-   like the highlight rule). A `legislativeVoid` Reading has nothing to place.
-   Exemplar: the Unsigned Ban — `hr-119-6644`, quadrants `[A, B]`, band `coalition`,
-   z `+0.2`, "Law 07-11 without a signature: the 350-home cap is in force, and whether a
-   house changes hands is decided in Treasury's rule and the carve-outs."
 4. **Sweep before z.** Run the checker on the frame. Fix leaks (wording that moves a
    fact's date, e.g. "by the end of June" for a June-29 as-of). Log what was excluded
    as after-window in `meta.framingAudit`.
@@ -162,7 +139,7 @@ authoring anything:
 
 ## File shape
 
-Match the exemplars exactly. Required top level: `centralObject (with place), tethers (may be []; each with place), legislativeVoid (when tethers is empty), title, category, date (= formedOn),
+Match the exemplars exactly. Required top level: `centralObject, tethers (may be []), legislativeVoid (when tethers is empty), title, category, date (= formedOn),
 prompt, framing, framingKeywords, prevalentAxis, split, antiValentBand,
 antiValentRationale, axes, responses, diatribe, diatribeLayer, objectLayer, window,
 meta, rid, schema: "reading/v1", formulaVersion: "v1", updatedAt`. Plus:

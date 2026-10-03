@@ -3793,7 +3793,6 @@ function buildLawLine(event) {
   }
 }
 buildLawLine(ev);
-window.PRISM_HAS_OBJECT = !!(ev && ev.centralObject && ev.centralObject.place);   // Ted's payoff line fires only when the object is on the plane (2026-10-01)
 if (ev && ev.example) document.body.classList.add('on-example');
 { const nx = document.getElementById('exampleNext');
   if (nx) nx.addEventListener('click', () => {
@@ -6539,55 +6538,7 @@ let billDots = [];             // factory dotEntry refs for visibility toggling
 let billShown = true;          // legislation layer on by default — it's the point of the phase
 let billRendered = false;
 
-const BILL_RING = { low: BAND_RING.fluid, medium: BAND_RING.coalition, high: BAND_RING.denominated,
-                    fluid: BAND_RING.fluid, coalition: BAND_RING.coalition, denominated: BAND_RING.denominated };
-const OBJECT_HEX = '#d4aa52';   // the object's accent — the same gold the law chip wears on the framing beat
-
-// ── THE OBJECT ON THE PLANE (2026-10-01) ──
-// Rows for computeBillPlacements come from the Reading itself: centralObject.place
-// and each tether's place (protocol v1.5: {quadrants, band, z, why}). No admin
-// scoring step. Admin bill scores (PrismDB.getBillScoresForEvent) still render
-// when present; a Reading-declared row with the same billId wins over them.
-// The central object is flagged isObject and renders as its own pin — the thing
-// the twelve stations are measured against — while tethers stay diamonds.
-const BAND_TO_DIA = { fluid: 'low', coalition: 'medium', denominated: 'high' };
-function placeRow(pl, billId, name, extra) {
-  if (!pl || typeof pl !== 'object') return null;
-  const band = String(pl.band || '').toLowerCase();
-  return Object.assign({
-    id: 'obj_' + billId, billId, billName: name,
-    quadrants: Array.isArray(pl.quadrants) ? pl.quadrants : [],
-    diatribe: BAND_TO_DIA[band] || band || '',
-    objectZ: (typeof pl.z === 'number') ? pl.z : undefined,
-    reason: pl.why || '', method: 'reading', provenance: 'authored · place',
-  }, extra || {});
-}
-function objectRowsForEvent(event) {
-  const rows = [];
-  if (!event) return rows;
-  const co = event.centralObject;
-  if (co && co.place) {
-    const r = placeRow(co.place, String(co.ref || co.name || 'object'), co.name || co.ref, { isObject: true, kind: co.kind });
-    if (r) rows.push(r);
-  }
-  (Array.isArray(event.tethers) ? event.tethers : []).forEach(t => {
-    if (!t || !t.place) return;
-    const id = String(t.billId || t.cite || t.statute || '');
-    if (!id || rows.some(r => r.billId === id)) return;        // the object's own tether is the object
-    const r = placeRow(t.place, id, t.bill ? (t.bill + ' · ' + (t.title || '')) : (t.title || t.statute || id), { relation: t.relation });
-    if (r) rows.push(r);
-  });
-  return rows;
-}
-function billRowsForEvent() {
-  let scored = [];
-  try { scored = (PrismDB.getBillScoresForEvent && PrismDB.getBillScoresForEvent(EVENT_ID)) || []; } catch (e) {}
-  let declared = [];
-  try { declared = objectRowsForEvent(PrismDB.getEvent(EVENT_ID)); } catch (e) {}
-  const seen = new Set(declared.map(r => String(r.billId)));
-  return declared.concat(scored.filter(b => !seen.has(String(b.billId))));
-}
-function readingHasObject() { try { return objectRowsForEvent(PrismDB.getEvent(EVENT_ID)).some(r => r.isObject); } catch (e) { return false; } }
+const BILL_RING = { low: BAND_RING.fluid, medium: BAND_RING.coalition, high: BAND_RING.denominated };
 
 function setBillToggleUI() {
   if (!billToggle) return;
@@ -6596,7 +6547,7 @@ function setBillToggleUI() {
   billToggle.classList.toggle('is-unavailable', none);
   const glyph = (billShown && !none) ? '&#9670;' : '&#9671;';
   billToggle.innerHTML = '<span class="member-toggle-glyph">' + glyph + '</span> ' +
-    (none ? 'legislation · none yet' : (readingHasObject() ? 'the object' : 'legislation'));
+    (none ? 'legislation · none yet' : 'legislation');
 }
 
 function revealBillToggle() {
@@ -6644,7 +6595,8 @@ function computeBillPlacements(rows) {
 function renderBillDiamonds() {
   if (!gm || !gmActive || billRendered) return;
   billRendered = true;
-  const rows = billRowsForEvent();
+  let rows = [];
+  try { rows = (PrismDB.getBillScoresForEvent && PrismDB.getBillScoresForEvent(EVENT_ID)) || []; } catch (e) {}
   const places = computeBillPlacements(rows);
   let n = 0;
   rows.forEach(b => {
@@ -6652,24 +6604,7 @@ function renderBillDiamonds() {
       const p = places[b.id || b.billId];
       const nx = p.nx, ny = p.ny, bz = p.bz, prim = p.prim;
       const bid = String(b.billId || '');
-      // the central object: one pin, not a diamond among diamonds — a solid
-      // (cube) in the object's gold, bigger, named on the plane
-      const entry = gm.addDot(nx, ny, GM_QUAD[prim], bz, b.isObject ? {
-        shape: 'cube',
-        radius: 0.1,
-        color: OBJECT_HEX,
-        ring: BILL_RING[(b.diatribe || '').toLowerCase()] || null,
-        label: b.billName || bid,
-        desc: b.reason || '',
-        // the name rides the plane as one small word sprite — short form: no
-        // parenthetical, no leading article (the full name is in the inspector)
-        keywords: [{ text: String(b.billName || bid).replace(/\s*\(.*?\)\s*/g, ' ').replace(/^the\s+/i, '').trim().slice(0, 40), weight: 0.15 }],
-        meta: {
-          isBill: true, isObject: true, kind: b.kind, billId: b.billId, billName: b.billName,
-          objectZ: b.objectZ, diatribe: b.diatribe, quadrants: b.quadrants, reason: b.reason, semQuad: prim,
-          method: b.method, provenance: b.provenance,
-        },
-      } : {
+      const entry = gm.addDot(nx, ny, GM_QUAD[prim], bz, {
         shape: 'diamond',
         radius: 0.05 + bz * 0.03,
         ring: BILL_RING[(b.diatribe || '').toLowerCase()] || null,
@@ -6740,7 +6675,8 @@ function dtCrossesPole(a, b) { return (a < 0) !== (b < 0) && (Math.abs(a) > 33 |
 
 // ── Capture: compute every tile ONCE, at commit, from frozen inputs ──
 function captureTickerDeltas() {
-  const rows = billRowsForEvent();   // Reading-declared places + admin scores (2026-10-01)
+  let rows = [];
+  try { rows = (PrismDB.getBillScoresForEvent && PrismDB.getBillScoresForEvent(EVENT_ID)) || []; } catch (e) {}
   const places = computeBillPlacements(rows);
   const ux = (pinX - 0.5) * 200, uy = (0.5 - pinY) * 200;
   const userA = { x: pinX, y: pinY, z: graphZ, quad: graphQuad, band: graphBand, intensity: graphIntensity };
@@ -7567,10 +7503,10 @@ function showContrastBill(d) {
   cmpAgg.setAttribute('data-band', band);
   cmpAgg.setAttribute('data-side', d.normX >= 0.5 ? 'right' : 'left');
   cmpAggNums.textContent = numsLine(bx, by, bz, Math.round(Math.abs(bz) * 100));
-  cmpAggLabel.textContent = (d.billName || d.billId) + (d.isObject ? ' · the object' : ' · bill reading');
+  cmpAggLabel.textContent = (d.billName || d.billId) + ' · bill reading';
   // Title above (cmp-label), summary here — displacement/object-z live in the
   // chips, not the prose. Curate reasons carry markdown bold; strip for display.
-  cmpAggText.textContent = String(d.reason || (d.isObject ? 'The object this Reading is measured against.' : 'Curated bill reading for this event.')).replace(/\*\*/g, '');
+  cmpAggText.textContent = String(d.reason || 'Curated bill reading for this event.').replace(/\*\*/g, '');
 
   // condensed record cloud: structured fields + lineage as chips
   const chips = [];
@@ -9898,7 +9834,7 @@ function profileCard() {
 
 })();
 </script>
-<script src="../src/js/prism-ted-tour.js?v=9"></script>
+<script src="../src/js/prism-ted-tour.js?v=8"></script>
 <!-- ── THE DOOR (2026-09-28): what a ?join link opens on first. A seat is taken
      here — name, passcode, the invite already in — and then the first visit
      runs from zero: practice Reading, Ted's tour, then a real Reading. ── -->

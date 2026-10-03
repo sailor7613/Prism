@@ -1,0 +1,10 @@
+{
+ "column": "realization",
+ "what": "Sanctioned-theater flows — estimates, never members (PG01 §6.2a, §6.3.4). Each row: source, asOf, detected, marked estimated, and a declared settlement layer with a basis. 'unknown' is a legitimate value and expected to be the commonest; the map renders it as unknown. Hand-dated; the pipeline never writes here.",
+ "schema": { "id": "acc-…", "theater": "iran | russia | venezuela", "from": "origin", "to": "destination", "asOf": "YYYY-MM-DD", "detected": "YYYY-MM-DD", "measure": "what is measured", "value": "number or null", "units": "…", "estimated": true, "source": "…", "settlement": { "declared": "dollar | non-dollar | unknown", "basis": "one line" } },
+ "rows": [
+  { "id": "acc-urals-discount", "theater": "russia", "from": "Russia", "to": "India", "asOf": "2026-08-26", "detected": "2026-08-27", "measure": "Urals discount to Brent in India", "value": null, "units": "$/bbl (near-widest since 2022)", "estimated": true, "source": "PG01 §4 (Russian-theater accrual, 2026-08-27)", "settlement": { "declared": "non-dollar", "basis": "Russia–India crude trade has run in rupees/dirhams/yuan since 2022 sanctions; the discount is the price of the non-dollar barrel." } },
+  { "id": "acc-india-cutbacks", "theater": "russia", "from": "Russia", "to": "China", "asOf": "2026-08-26", "detected": "2026-08-27", "measure": "Barrels redirected from Indian cutbacks to China", "value": null, "units": "bbl/d (direction only)", "estimated": true, "source": "PG01 §4", "settlement": { "declared": "non-dollar", "basis": "Russia–China crude is yuan-settled by both parties' statements since 2023." } },
+  { "id": "acc-floating-storage", "theater": "russia", "from": "Russia", "to": "at sea", "asOf": "2026-08-26", "detected": "2026-08-27", "measure": "Russian crude in floating storage", "value": 135, "units": "million bbl", "estimated": true, "source": "PG01 §4", "settlement": { "declared": "unknown", "basis": "Unsold; no counterparty yet." } }
+ ]
+}

@@ -1,0 +1,492 @@
+{
+ "centralObject": {
+  "kind": "object",
+  "ref": "The voluntary AI accord posted by President Trump on Truth Social late on 2026-09-29, after a White House East Room meeting that day, signed by Anthropic (Dario Amodei), Google (Sundar Pichai), Meta (Mark Zuckerberg), OpenAI (Greg Brockman), Nvidia (Jensen Huang) and Elon Musk: robust internal controls, an independent external auditor to test them, a board committee to review the audit reports, and support for communities near data centers; described by Trump as \"morally binding\", with no stated penalty",
+  "name": "The self-policing accord"
+ },
+ "tethers": [
+  {
+   "billId": "s-119-2937",
+   "bill": "S. 2937",
+   "title": "AI LEAD Act",
+   "relation": "adjacent",
+   "statusAsOf": "Referred to the Senate Judiciary Committee, 2025-09-29 (catalog)",
+   "why": "The bipartisan Durbin–Hawley bill to let people sue AI developers for harms under product liability. It is the enforceable alternative the accord's critics point to; the accord neither mentions nor displaces it.",
+   "inDb": true
+  },
+  {
+   "billId": "hr-119-9333",
+   "bill": "H.R. 9333",
+   "title": "AI Flaw Reporting and Security Enhancement Act",
+   "relation": "adjacent",
+   "statusAsOf": "Ordered reported by committee 35–0, 2026-06-25 (catalog)",
+   "why": "The nearest live House bill to the accord's audit-and-controls steps (Ross). Named by title and status only; its text is NOT compared to the accord in this draft.",
+   "inDb": true
+  },
+  {
+   "billId": "hr-119-6529",
+   "bill": "H.R. 6529",
+   "title": "Protecting Families from AI Data Center Energy Costs Act",
+   "relation": "adjacent",
+   "statusAsOf": "Ordered reported by committee 44–0, 2026-07-21 (catalog)",
+   "why": "The accord's community pledge (lower energy costs near data centers) is the voluntary version of what this bill (Landsman) addresses by statute. Named by title and status only; provisions NOT verified here.",
+   "inDb": true
+  }
+ ],
+ "linkedBills": [
+  "s-119-2937",
+  "hr-119-9333",
+  "hr-119-6529"
+ ],
+ "legislativeVoid": {
+  "why": "No statute, rule or executive order created the accord: it is a voluntary pledge posted by the President and signed by the companies, with no penalty named. Its own text defers law (\"may make sense to codify\" over time). Congress has passed no general federal AI law; the executive order that covered this ground (EO 14110, 2023) was revoked on 2025-01-20.",
+  "standsAgainst": "The unpassed AI LEAD Act (S. 2937, liability) and the committee-reported House AI bills (H.R. 9333, H.R. 6529); and, as precedent, the voluntary White House AI commitments of July 2023"
+ },
+ "title": "Morally Binding",
+ "category": "Technology · AI · Regulation",
+ "date": "2026-09-29",
+ "prompt": "Six AI leaders signed a pledge to audit themselves. Is self-policing how AI gets made safe, or a way around real rules?",
+ "framing": "On Tuesday, September 29, 2026, President Trump met the heads of the biggest AI companies in the White House East Room; House Speaker Mike Johnson attended. Late that night he posted an accord on Truth Social signed by Anthropic's Dario Amodei, Google's Sundar Pichai, Meta's Mark Zuckerberg, OpenAI's Greg Brockman, Nvidia's Jensen Huang and Elon Musk. The companies commit to \"robust internal controls,\" to hire an independent external auditor to test those controls, and to have a board committee review the audit reports. They also pledge help for communities near data centers, such as money for local schools and lower energy costs. Trump called the accord \"morally binding.\" It is not a law, and it names no penalty. Its text says it \"may make sense to codify these steps into laws and regulations\" over time. Trump said he would name about ten people to watch over it.",
+ "framingKeywords": [
+  "self-policing",
+  "external auditor",
+  "morally binding",
+  "data centers",
+  "codify"
+ ],
+ "prevalentAxis": "x",
+ "split": {
+  "topology": "peel",
+  "strength": 0.45,
+  "seam": "at the centers, the institutional right peels off from the other three stations; at the rim the seam returns to x, signed by trust in Trump",
+  "rationale": "The stated object (voluntary pledge versus enforceable rules) runs along x, but the centers don't split on x. Only B's fluid band believes the design works (+0.5: auditors reporting to a board is how companies already handle risk). A (−0.2), C (−0.7) and D (−0.3) all read an audit with no penalty, and the populist right's distrust of Big Tech puts its center on the left's side of zero. The coalitions cross: A's goes slightly positive (+0.05) because it defended Biden's 2023 voluntary commitments and hears its own side calling the same idea a sham; D's goes positive (+0.2) on trust in Trump's ten overseers; C's stays negative (−0.4) but holds the data-center money. The rims sort cleanly on x by trust in the holder: −0.8 / +0.7 / −0.95 / +0.6. A peel at the centers, an axis at the rim; the slider stays on x because the stated object is on x.",
+  "zPattern": {
+   "centers": {
+    "A": -0.2,
+    "B": 0.5,
+    "C": -0.7,
+    "D": -0.3
+   },
+   "rims": {
+    "A": -0.8,
+    "B": 0.7,
+    "C": -0.95,
+    "D": 0.6
+   },
+   "note": "Centers are fluid z; coalition z: A 0.05, B 0.3, C -0.4, D 0.2. D changes sign fluid → coalition (−0.3 → +0.2) and climbs to +0.6 at the rim. A crosses zero at coalition (+0.05) and falls to −0.8 at the rim. C never crosses: −0.7 / −0.4 / −0.95."
+  },
+  "ruledBy": null,
+  "date": "2026-09-29"
+ },
+ "antiValentBand": "denominated",
+ "antiValentRationale": "At the rim the audits and board committees are gone: the accord becomes billionaires writing their own rules on the left, and proof that the tech giants answer to Trump on the right.",
+ "axes": {
+  "x": {
+   "pos": "Right",
+   "neg": "Left"
+  },
+  "y": {
+   "pos": "Institutional",
+   "neg": "Populist"
+  },
+  "z": {
+   "pos": "the accord delivers: independent audits and board oversight make AI development safer, and the steps can become law later",
+   "neg": "the accord fails: a voluntary pledge with no enforcement that stands in for rules that never come"
+  }
+ },
+ "responses": {
+  "A": {
+   "fluid": {
+    "z": -0.2,
+    "zReason": "An outside auditor testing internal controls does produce findings, but the findings go to each company's own board committee and nothing happens if a company ignores them.",
+    "instrument": {
+     "holder": "the AI companies and their board committees",
+     "trusted": false
+    },
+    "text": "I'll give it this much: an independent auditor testing the controls is a real step. But the audit reports go to a board committee at the same company, and the text names no penalty. 'May make sense to codify' is a maybe, and the AI LEAD Act has been sitting in committee for a year.",
+    "xWord": "accountability",
+    "yWord": "external auditor",
+    "words": [
+     "audit without teeth",
+     "codify someday",
+     "board grades itself"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0.05,
+    "zReason": "The structure is close to Biden's voluntary commitments, which included third-party testing, so the design is only as weak as it was in 2023, and a written audit trail could later feed a statute.",
+    "instrument": {
+     "holder": "the independent auditors",
+     "trusted": true
+    },
+    "text": "This looks a lot like the voluntary commitments I defended when Biden announced them in 2023, and now I hear people on my side calling the same idea a sham because Trump posted it. I don't think the audits are worthless. What worries me is whether I'm judging the pledge or the person holding it.",
+    "xWord": "consistency",
+    "yWord": "precedent",
+    "words": [
+     "Biden's 2023 version",
+     "same pledge, new host",
+     "audit trail"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.8,
+    "zReason": "Seen as Trump's accord, it serves to make a federal AI law look unnecessary after he revoked the executive order that did something.",
+    "instrument": {
+     "holder": "Trump",
+     "trusted": false
+    },
+    "text": "He tore up the executive order on day one and now wants credit for a Truth Social post. Ten people he picks will 'watch over' nothing.",
+    "xWord": "revocation",
+    "yWord": "cronyism",
+    "words": [
+     "Truth Social governance",
+     "hand-picked watchers",
+     "EO 14110 gone"
+    ],
+    "source": ""
+   },
+   "xSide": "left",
+   "source": ""
+  },
+  "B": {
+   "fluid": {
+    "z": 0.5,
+    "zReason": "Independent audits plus board-level review is how publicly traded companies already handle financial risk, and that system works without a new regulator.",
+    "instrument": {
+     "holder": "company boards and their auditors",
+     "trusted": true
+    },
+    "text": "I don't need a new federal agency for this. External auditors reporting to a board committee is how Sarbanes-Oxley-era compliance works, and boards have legal duties to shareholders. Keep it flexible while the technology is still changing, and codify only what the audits show actually works.",
+    "xWord": "governance",
+    "yWord": "board oversight",
+    "words": [
+     "audit committee model",
+     "no new agency",
+     "flexibility first"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0.3,
+    "zReason": "The audit mechanism is sound, but the 'codify' clause and the community payments open the door to the kind of mandates the pledge was supposed to replace.",
+    "instrument": {
+     "holder": "the companies, with Trump as convener",
+     "trusted": true
+    },
+    "text": "I like the audit piece, but I noticed the text says it 'may make sense to codify these steps,' and plenty of people I vote with want Big Tech punished, not just audited. Hawley co-sponsored a liability bill with Durbin, after all. I'm backing this, but my side isn't one voice on AI anymore, and I can feel people drifting toward whichever position is more anti-Silicon Valley.",
+    "xWord": "light touch",
+    "yWord": "codify clause",
+    "words": [
+     "Hawley's liability bill",
+     "split on Big Tech",
+     "keep it voluntary"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": 0.7,
+    "zReason": "The president got every major lab to sign without Congress writing a single rule, and that is the result his supporters voted for.",
+    "instrument": {
+     "holder": "Trump",
+     "trusted": true
+    },
+    "text": "Six of the biggest names in AI in the East Room, signing his document. That's leadership, not a bureaucracy.",
+    "xWord": "deregulation",
+    "yWord": "East Room",
+    "words": [
+     "deal done",
+     "no red tape",
+     "AI leaders at the table"
+    ],
+    "source": ""
+   },
+   "xSide": "right",
+   "source": ""
+  },
+  "C": {
+   "fluid": {
+    "z": -0.7,
+    "zReason": "The companies pick and pay their own auditor, report to their own board, and face no penalty, so the incentive to stay safe never changes.",
+    "instrument": {
+     "holder": "the AI companies",
+     "trusted": false
+    },
+    "text": "They hire the auditor, their board reads the report, and if they break it, nothing happens. 'Morally binding' means it binds nothing. What would actually change their behavior is what the AI LEAD Act does: let people sue when they get hurt.",
+    "xWord": "liability",
+    "yWord": "self-policing",
+    "words": [
+     "no penalty",
+     "let people sue",
+     "paid auditor"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": -0.4,
+    "zReason": "The data-center commitments could put real money into schools and lower power bills in towns that get nothing now, even if the safety audits are hollow.",
+    "instrument": {
+     "holder": "the AI companies",
+     "trusted": false
+    },
+    "text": "I think the audits are theater, but I'm not going to pretend lower energy costs and money for local schools near these data centers are nothing to people living next to them. Folks I organize with want to reject the whole thing because Musk and Zuckerberg signed it. I get the reflex, but I'd rather hold them to the power-bill promise than toss it out.",
+    "xWord": "communities",
+    "yWord": "power bills",
+    "words": [
+     "data center towns",
+     "hold them to it",
+     "school money"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.95,
+    "zReason": "A deal among billionaires and the president protects the billionaires by design.",
+    "instrument": {
+     "holder": "Musk, Zuckerberg and the billionaire class",
+     "trusted": false
+    },
+    "text": "Musk, Zuckerberg and Trump at one table writing their own rules. Who do you think the rules protect?",
+    "xWord": "oligarchy",
+    "yWord": "billionaires",
+    "words": [
+     "billionaires' pact",
+     "rigged table",
+     "their rules"
+    ],
+    "source": ""
+   },
+   "xSide": "left",
+   "source": ""
+  },
+  "D": {
+   "fluid": {
+    "z": -0.3,
+    "zReason": "These are the same companies that censored users and ignored their own promises, and a pledge they audit themselves can't overcome that record, though lower energy costs near data centers are a real concrete promise.",
+    "instrument": {
+     "holder": "Big Tech (Zuckerberg, Pichai, OpenAI)",
+     "trusted": false
+    },
+    "text": "Zuckerberg and Pichai promising 'robust internal controls'? I've heard that one before. The part I care about is my electric bill going up because a data center moved in down the road. If they actually cut energy costs, great. I'll believe it when I see my bill.",
+    "xWord": "distrust",
+    "yWord": "Big Tech",
+    "words": [
+     "electric bill",
+     "heard it before",
+     "show me"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0.2,
+    "zReason": "Big Tech alone can't be trusted, but ten overseers picked by Trump might keep pressure on the companies in a way their own boards won't.",
+    "instrument": {
+     "holder": "Trump and his ten overseers",
+     "trusted": true
+    },
+    "text": "I don't trust Silicon Valley one inch, but I trust Trump to lean on them, and the ten people he's naming could actually hold their feet to the fire. I notice people on my side cheering just because it's his accord, with Zuckerberg signing it right next to Musk, and I'm not sure they've read it. I'm in, but I'm watching who he picks.",
+    "xWord": "leverage",
+    "yWord": "ten overseers",
+    "words": [
+     "watch his picks",
+     "feet to the fire",
+     "Musk inside"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": 0.6,
+    "zReason": "The president made the tech giants sign his terms, which is proof enough that he's in charge of them.",
+    "instrument": {
+     "holder": "Trump",
+     "trusted": true
+    },
+    "text": "Trump got Zuckerberg to sign on the dotted line. They answer to him now.",
+    "xWord": "strength",
+    "yWord": "Trump",
+    "words": [
+     "brought to heel",
+     "they answer to him",
+     "winning"
+    ],
+    "source": ""
+   },
+   "xSide": "right",
+   "source": ""
+  }
+ },
+ "diatribe": {
+  "LF": {
+   "text": "An outside auditor is a real step, but the reports go to the company's own board, and nothing happens if they're ignored.",
+   "side": "left",
+   "band": "fluid",
+   "keywords": [
+    "outside auditor",
+    "company's own board",
+    "nothing happens"
+   ]
+  },
+  "LC": {
+   "text": "I defended the same kind of pledge when Biden announced it in 2023, and now I hear the people on my side calling this one a sham because Trump posted it. Am I judging the pledge or the person?",
+   "side": "left",
+   "band": "coalition",
+   "keywords": [
+    "the people on my side",
+    "a sham",
+    "judging the pledge"
+   ]
+  },
+  "LD": {
+   "text": "Billionaires and Trump at one table, writing their own rules. Who do you think the rules protect?",
+   "side": "left",
+   "band": "denominated",
+   "keywords": [
+    "Billionaires and Trump",
+    "their own rules"
+   ]
+  },
+  "RF": {
+   "text": "Outside auditors reporting to a board committee is how serious companies already handle risk. I don't need a new agency for this.",
+   "side": "right",
+   "band": "fluid",
+   "keywords": [
+    "Outside auditors",
+    "board committee",
+    "new agency"
+   ]
+  },
+  "RC": {
+   "text": "I like the audits, but plenty of people I vote with want Big Tech punished, not audited, and I can feel them drifting.",
+   "side": "right",
+   "band": "coalition",
+   "keywords": [
+    "people I vote with",
+    "punished, not audited",
+    "drifting"
+   ]
+  },
+  "RD": {
+   "text": "Trump got Zuckerberg to sign on the dotted line. They answer to him now.",
+   "side": "right",
+   "band": "denominated",
+   "keywords": [
+    "answer to him",
+    "dotted line"
+   ]
+  }
+ },
+ "diatribeLayer": "stated",
+ "objectLayer": {
+  "declared": "stated",
+  "stated": "A voluntary accord in which six AI leaders commit to internal controls, independent audits and board review, plus help for data-center communities: self-policing as the safety regime.",
+  "operative": "A pledge with no penalty and no enforcer beyond an oversight group the President says he will name; the audits report to each company's own board; law is deferred (\"may make sense to codify\" over time) while the enforceable alternatives (the AI LEAD Act, the reported House bills) sit unpassed.",
+  "inversion": "Lean, not ruled: A (institutional left). In July 2023 the institutional left welcomed the Biden White House's voluntary commitments from AI companies as a first step; here a voluntary pledge from largely the same companies reads as failing (fluid −0.2, rim −0.8). The coalition band names the flip itself (+0.05). Keyed to the holder, not the mechanism. A second lean at D: the populist right's distrust of Big Tech (fluid −0.3) reverses at the rim (+0.6) when the holder is Trump — a split inside the station, not a reversal of a prior."
+ },
+ "window": {
+  "close": "2026-09-29",
+  "why": "Trigger day = the day the object finished forming: the East Room meeting and the Truth Social post of the signed accord were both Tuesday 2026-09-29 (Boston.com/AP dated 09-29; NBC Washington, Euronews, KGOU/NPR 09-30 reporting Tuesday's events). The register's formedOn of 09-30 is the report date, not the as-of date; corrected to 09-29 on the object card. Declared at authoring, before any z.",
+  "ruledBy": null,
+  "ruledOn": null
+ },
+ "meta": {
+  "dialecticsRef": "obj_thepresi_accord-development-firms-police",
+  "status": "draft",
+  "source": "Claude draft — daily newsroom drafting (scheduled), authored z-first against Trace Formula v1 per scripts/newsroom/AUTHORING_PROTOCOL.md v1.4. Filed to drafts/claude; not through the surface; no aiDeltas lineage. Rulings: none.",
+  "conflictNote": "Disclosure: Anthropic, which makes Claude (the author of this draft), is one of the six signatories. The frame names all six equally and the twelve were authored blind; Sailor may want to read this one with that in mind.",
+  "editHistory": [
+   {
+    "at": "2026-09-30T14:06:36.863Z",
+    "by": "Claude (scheduled drafting)",
+    "what": "authored: object (holder corrected: the six signing companies, with the President as convener and would-be overseer; formedOn corrected 09-30 → 09-29) -> window -> frame -> sweep -> central object + tethers + legislative void -> axes -> twelve (blind subagent) -> small edits by Claude (meta.blindAuthoring.editsAfterHandback) -> split/diatribe/layers -> sweep"
+   }
+  ],
+  "aiDeltas": [],
+  "frameFirst": {
+   "date": "2026-09-29",
+   "by": "Claude, under §4c (window declared at authoring; sweep before z). Object NOT ruled — Claude's read, correctable by Sailor.",
+   "status": "Frame authored and swept before any z; the twelve authored blind z-first by a subagent (meta.blindAuthoring). Stations unruled.",
+   "objectLean": {
+    "stated": "voluntary self-policing accord: controls, independent audits, board review, community pledge",
+    "operative": "no penalty, no enforcer yet, audits report to each company's own board; law deferred",
+    "inversion": "lean, not ruled: A (voluntary commitments welcomed in 2023, read as failing now)"
+   },
+   "titleLean": "'Morally Binding' — Claude's; Sailor names Readings",
+   "sourcesInWindow": [
+    "Boston.com (AP), dated 2026-09-29: Tuesday meeting at the White House; accord posted on Truth Social late Tuesday; signatories Amodei, Pichai, Zuckerberg, Brockman, Huang, Musk; \"robust internal controls\"; independent external auditor; board committee; \"may make sense to codify these steps into laws and regulations\"; about ten people to watch over it",
+    "Euronews 2026-09-30 (reporting 09-29): East Room; Speaker Mike Johnson attended; \"morally binding\"; four commitments incl. community support near data centers",
+    "NBC Washington (AP) 2026-09-30 (reporting 09-29): East Room; Johnson attended; local schools and energy costs; ~10-person oversight",
+    "KGOU / NPR member stations (AP) 2026-09-30: same facts"
+   ],
+   "background_preWindow": [
+    "2023-07-21: Biden White House announces voluntary AI safety commitments from seven companies",
+    "2023-10-30: EO 14110 on AI (Biden)",
+    "2025-01-20: EO 14110 revoked",
+    "2025-09-29: AI LEAD Act (S. 2937) introduced by Sens. Durbin and Hawley; referred to Judiciary",
+    "2026-06-25 / 2026-07-21: H.R. 9333 and H.R. 6529 ordered reported by House committees (catalog)"
+   ]
+  },
+  "framingAudit": {
+   "date": "2026-09-29",
+   "by": "Claude — frame-first authoring under §4c; sweep run BEFORE any z. Not a ruling.",
+   "window": "2026-09-29 (declared, see window.why)",
+   "verifiedInWindow": [
+    "Tuesday, September 29, 2026 meeting in the White House East Room (Euronews; NBC Washington/AP)",
+    "House Speaker Mike Johnson attended (Euronews; NBC Washington)",
+    "accord posted on Truth Social late Tuesday 09-29 (Boston.com/AP; KGOU/AP)",
+    "signatories: Anthropic's Dario Amodei, Google's Sundar Pichai, Meta's Mark Zuckerberg, OpenAI's Greg Brockman, Nvidia's Jensen Huang, Elon Musk (AP)",
+    "\"robust internal controls\" (accord text via AP)",
+    "independent external auditor; board committee to review audit reports (AP)",
+    "community support near data centers: local schools, energy costs (Euronews; NBC Washington)",
+    "\"morally binding.\" (Trump, via Euronews/AP; the frame quotes it with the period)",
+    "\"may make sense to codify these steps into laws and regulations\" (accord text via AP)",
+    "about ten people to watch over it (Trump, via AP)",
+    "\"It is not a law, and it names no penalty\": no enforcement mechanism reported in any window source (AP; Euronews: not legally enforceable)"
+   ],
+   "keptUnverifiedDate": [
+    "\"morally binding\" and the ten overseers: said by Trump and reported 09-30 about Tuesday's events; whether said at the 09-29 meeting or at a later press gaggle is not pinned. The frame gives no date for them beyond the accord's day."
+   ],
+   "deliberatelyExcluded_afterWindow": [
+    "critics' reactions quoted 09-30 (Robin Jia, USC; Alex Pascal, Berkman Klein) — after the close; left out of the frame and the brief",
+    "Trump's \"tremendous self-policing\" remark (outside the West Wing; date not pinned) — left out",
+    "reports of an OpenAI agent test incident and of a paused model rollout cited in some 09-30 coverage — dates not pinned, not load-bearing; left out",
+    "Trump's remarks rejecting \"guardrails\" — date not pinned; left out of the frame"
+   ]
+  },
+  "blindAuthoring": {
+   "date": "2026-09-30",
+   "author": "Claude (general-purpose subagent) — blind: given the frame, prompt, keywords, axes, a station/radius brief, a short dated background, R-0921-1 and the voice rules only; no other Reading, no register, no web",
+   "zFirst": true,
+   "instrumentOnAll12": true,
+   "rulings": "NONE — every station awaits Sailor's ruling. z and instrument as authored by the blind author; no z or instrument changed.",
+   "editsAfterHandback": {
+    "by": "Claude (orchestrator), 2026-09-30 — no z or instrument changed; Sailor may revert",
+    "what": [
+     "A.coalition: dropped the opening 'Honestly,' (filler; same sentence).",
+     "A.fluid: 'is more than the 2023 commitments ever asked for' → 'is a real step' (an unverified comparison to the 2023 commitments, which did include outside testing).",
+     "B.denominated: 'Six CEOs in the East Room signing his document' → 'Six of the biggest names in AI in the East Room, signing his document' (Brockman is OpenAI's president and Musk signed as founder, not six CEOs); words 'CEOs at the table' → 'AI leaders at the table'."
+    ]
+   },
+   "authorNote": "The hardest bands were the two coalitions on the left (A and C), because holding the object while noticing your own side's reflex means admitting something good about a Trump-hosted deal without apologizing for it; I anchored A's coalition on the Biden 2023 precedent and C's on the concrete data-center money so the ambivalence has a real object. The z I trust least is D coalition (+0.2): a populist right that distrusts Big Tech but trusts Trump could plausibly land anywhere from about -0.3 to +0.5 depending on whether the ten overseers read as enforcers or as a photo op, and D fluid (-0.3) could just as easily be -0.6. B denominated at +0.7 may also be too high, since some institutional-right readers dislike the codify clause no matter who holds it. The pattern: the fluid centers mostly split on mechanism (auditor independence vs. no penalty), with only the institutional right believing the design works; the rims flip on the holder, so the right rims read 'Trump' and go positive while the left rims read 'Trump' or 'billionaires' and go negative. The accord's actual content (audits, the board committee) matters most at the centers and disappears at the rims, and the right quadrants cross zero moving outward (D goes from -0.3 to +0.6) while the left stays negative and only drops further (C goes from -0.4 to -0.95)."
+  },
+  "newsroomFindings": {
+   "inversionLeans": [
+    "A (lean, not ruled): the institutional left welcomed the July 2023 voluntary AI commitments from largely the same companies; it reads this voluntary pledge as failing (fluid −0.2, rim −0.8). Prior = coverage of the 2023 commitments, not a live Reading. The coalition band voices the flip itself.",
+    "D (lean): the populist right's Big Tech distrust (fluid −0.3) turns positive at coalition and rim when the holder is Trump. A split inside the station, not a reversal of a prior."
+   ],
+   "permanence": "A RETURN (lean): the voluntary-commitments arc — July 2023 White House commitments, EO 14110 (2023), its revocation (2025-01-20), and now a Trump-hosted accord with overlapping signatories. The register never carried the 2023 arc."
+  }
+ },
+ "rid": "rdg_8duj3r93ot5w",
+ "ridLineage": "minted 2026-09-30 (UTC) by the scheduled newsroom drafting task; filed directly to drafts/claude",
+ "schema": "reading/v1",
+ "formulaVersion": "1",
+ "updatedAt": "2026-09-30T14:06:36.863Z",
+ "authorTier": "claude",
+ "newsroom": {
+  "oid": "obj_thepresi_accord-development-firms-police",
+  "queuedOn": "2026-09-30",
+  "draftedOn": "2026-09-30"
+ },
+ "images": []
+}
