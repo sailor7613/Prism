@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-10-03T11:50:19.951Z · 22 legislative + 5 news (GDELT, 3d)
+// 2026-10-03T16:32:06.069Z · 22 legislative + 5 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1791028196365,
+    "ts": 1791045093194,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.857,
+      "salience": 0.856,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -262,11 +262,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1791028196365,
+    "ts": 1791045093194,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.847,
+      "salience": 0.846,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -519,11 +519,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1791028196364,
+    "ts": 1791045093193,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.812,
+      "salience": 0.811,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -1937,11 +1937,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1791028196365,
+    "ts": 1791045093194,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.811,
+      "salience": 0.81,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -2194,7 +2194,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1791028196365,
+    "ts": 1791045093194,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
@@ -2451,11 +2451,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1791028196365,
+    "ts": 1791045093194,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.741,
+      "salience": 0.74,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -3364,11 +3364,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1791028196365,
+    "ts": 1791045093194,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.7,
+      "salience": 0.699,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3892,11 +3892,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1791028196365,
+    "ts": 1791045093194,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.677,
+      "salience": 0.676,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4793,11 +4793,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1791028196364,
+    "ts": 1791045093193,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.518,
+      "salience": 0.517,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -5047,11 +5047,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1791028196364,
+    "ts": 1791045093193,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.509,
+      "salience": 0.508,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -5320,11 +5320,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1791028196365,
+    "ts": 1791045093194,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.484,
+      "salience": 0.483,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -6219,11 +6219,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1791028196364,
+    "ts": 1791045093193,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.472,
+      "salience": 0.471,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -7498,11 +7498,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1791028196365,
+    "ts": 1791045093194,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.391,
+      "salience": 0.39,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -8418,11 +8418,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1791028196365,
+    "ts": 1791045093194,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.39,
+      "salience": 0.389,
       "congressGovUrl": null,
       "votes": [
         {
@@ -9328,11 +9328,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1791028196365,
+    "ts": 1791045093194,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.355,
+      "salience": 0.354,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -10246,11 +10246,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1791028196364,
+    "ts": 1791045093194,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.312,
+      "salience": 0.311,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -11126,11 +11126,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1791028196364,
+    "ts": 1791045093193,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.308,
+      "salience": 0.307,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -12002,7 +12002,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1791028196364,
+    "ts": 1791045093193,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
@@ -12895,11 +12895,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1791028196364,
+    "ts": 1791045093193,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.109,
+      "salience": 0.108,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -13810,11 +13810,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1791028196364,
+    "ts": 1791045093193,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.102,
+      "salience": 0.101,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -14698,7 +14698,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1791028196364,
+    "ts": 1791045093193,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
@@ -15619,11 +15619,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1791028196363,
+    "ts": 1791045093193,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.086,
+      "salience": 0.085,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -16535,14 +16535,106 @@ window.PRISM_CANDIDATES = [
     "mts": 1784044297586
   },
   {
-    "cid": "cand_news_claims-demolished-office",
+    "cid": "cand_news_approval-center-design",
     "source": "news",
-    "ts": 1791028219945,
+    "ts": 1791045126066,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.773,
+      "salience": 0.748,
+      "articles": [
+        {
+          "title": "Federal panel gives final approval to new design for White House security screening center",
+          "url": "https://www.sandiegouniontribune.com/2026/10/01/white-house-security/",
+          "domain": "sandiegouniontribune.com",
+          "seendate": "2026-10-02T00:15:00Z",
+          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/10/Trump_White_House_17762-1.jpg"
+        },
+        {
+          "title": "Federal panel gives final approval to new design for White House security screening center",
+          "url": "https://www.bostonherald.com/2026/10/01/white-house-security/",
+          "domain": "bostonherald.com",
+          "seendate": "2026-10-02T00:15:00Z",
+          "image": "https://www.bostonherald.com/wp-content/uploads/2026/10/Trump_White_House_17762-1.jpg"
+        },
+        {
+          "title": "Federal panel gives final approval to new design for White House security screening center",
+          "url": "https://www.orlandosentinel.com/2026/10/01/white-house-security/",
+          "domain": "orlandosentinel.com",
+          "seendate": "2026-10-01T23:45:00Z",
+          "image": "https://www.orlandosentinel.com/wp-content/uploads/2026/10/Trump_White_House_17762-1.jpg"
+        },
+        {
+          "title": "Federal panel gives final approval to new design for White House security screening center",
+          "url": "https://www.pilotonline.com/2026/10/01/white-house-security-5/",
+          "domain": "pilotonline.com",
+          "seendate": "2026-10-01T23:15:00Z",
+          "image": "https://www.pilotonline.com/wp-content/uploads/2026/10/Trump_White_House_17762-1.jpg"
+        },
+        {
+          "title": "Federal panel gives final approval to new design for White House security screening center",
+          "url": "https://www.twincities.com/2026/10/01/white-house-security/",
+          "domain": "twincities.com",
+          "seendate": "2026-10-01T22:30:00Z",
+          "image": "https://www.twincities.com/wp-content/uploads/2026/10/Trump_White_House_17762-1.jpg"
+        },
+        {
+          "title": "Federal panel gives final approval to new design for White House security screening center",
+          "url": "https://www.clickondetroit.com/news/politics/2026/10/01/federal-panel-gives-final-approval-to-new-design-for-white-house-security-screening-center/",
+          "domain": "clickondetroit.com",
+          "seendate": "2026-10-01T21:30:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/GKUAD7ZVARGIJP62WX3SVQQOQA.jpg?api_key=clickondetroit_06f87fefb2123598"
+        },
+        {
+          "title": "Federal panel gives final approval to new design for White House security screening center",
+          "url": "https://www.mercurynews.com/2026/10/01/white-house-security/",
+          "domain": "mercurynews.com",
+          "seendate": "2026-10-01T21:30:00Z",
+          "image": "https://www.mercurynews.com/wp-content/uploads/2026/10/Trump_White_House_17762-1.jpg"
+        },
+        {
+          "title": "Federal panel gives final approval to new design for White House security screening center",
+          "url": "https://www.clickorlando.com/news/politics/2026/10/01/federal-panel-gives-final-approval-to-new-design-for-white-house-security-screening-center/",
+          "domain": "clickorlando.com",
+          "seendate": "2026-10-01T21:15:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/GKUAD7ZVARGIJP62WX3SVQQOQA.jpg?api_key=clickorlando_488cff2bcc157b2e"
+        },
+        {
+          "title": "Federal panel gives final approval to new design for White House security screening center",
+          "url": "https://www.news4jax.com/news/politics/2026/10/01/federal-panel-gives-final-approval-to-new-design-for-white-house-security-screening-center/",
+          "domain": "news4jax.com",
+          "seendate": "2026-10-01T21:00:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/GKUAD7ZVARGIJP62WX3SVQQOQA.jpg?api_key=news4jax_3f10b25586458189"
+        },
+        {
+          "title": "Federal panel gives final approval to new design for White House security screening center",
+          "url": "https://www.sun-sentinel.com/2026/10/01/white-house-security/",
+          "domain": "sun-sentinel.com",
+          "seendate": "2026-10-01T21:00:00Z",
+          "image": "https://www.sun-sentinel.com/wp-content/uploads/2026/10/Trump_White_House_17762-1.jpg"
+        }
+      ]
+    },
+    "title": "Federal panel gives final approval to new design for White House security screening center",
+    "summary": "2026-10-02 sandiegouniontribune.com: Federal panel gives final approval to new design for White House security screening center\n2026-10-02 bostonherald.com: Federal panel gives final approval to new design for White House security screening center\n2026-10-01 orlandosentinel.com: Federal panel gives final approval to new design for White House security screening center\n2026-10-01 pilotonline.com: Federal panel gives final approval to new design for White House security screening center\n2026-10-01 twincities.com: Federal panel gives final approval to new design for White House security screening center\n2026-10-01 clickondetroit.com: Federal panel gives final approval to new design for White House security screening center",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_claims-demolished-office",
+    "source": "news",
+    "ts": 1791045126066,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.744,
       "articles": [
         {
           "title": "President Claims Secret Service Wanted Oval Office Demolished",
@@ -16643,12 +16735,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_campaign-cash-chief",
     "source": "news",
-    "ts": 1791028219943,
+    "ts": 1791045126064,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.634,
+      "salience": 0.604,
       "articles": [
         {
           "title": "Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority",
@@ -16747,85 +16839,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_approval-center-design",
-    "source": "news",
-    "ts": 1791028219945,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.613,
-      "articles": [
-        {
-          "title": "Federal panel gives final approval to new design for White House security screening center",
-          "url": "https://www.sandiegouniontribune.com/2026/10/01/white-house-security/",
-          "domain": "sandiegouniontribune.com",
-          "seendate": "2026-10-02T00:15:00Z",
-          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/10/Trump_White_House_17762-1.jpg"
-        },
-        {
-          "title": "Federal panel gives final approval to new design for White House security screening center",
-          "url": "https://www.orlandosentinel.com/2026/10/01/white-house-security/",
-          "domain": "orlandosentinel.com",
-          "seendate": "2026-10-01T23:45:00Z",
-          "image": "https://www.orlandosentinel.com/wp-content/uploads/2026/10/Trump_White_House_17762-1.jpg"
-        },
-        {
-          "title": "Federal panel gives final approval to new design for White House security screening center",
-          "url": "https://www.clickondetroit.com/news/politics/2026/10/01/federal-panel-gives-final-approval-to-new-design-for-white-house-security-screening-center/",
-          "domain": "clickondetroit.com",
-          "seendate": "2026-10-01T21:30:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/GKUAD7ZVARGIJP62WX3SVQQOQA.jpg?api_key=clickondetroit_06f87fefb2123598"
-        },
-        {
-          "title": "Federal panel gives final approval to new design for White House security screening center",
-          "url": "https://www.mercurynews.com/2026/10/01/white-house-security/",
-          "domain": "mercurynews.com",
-          "seendate": "2026-10-01T21:30:00Z",
-          "image": "https://www.mercurynews.com/wp-content/uploads/2026/10/Trump_White_House_17762-1.jpg"
-        },
-        {
-          "title": "Federal panel gives final approval to new design for White House security screening center",
-          "url": "https://www.clickorlando.com/news/politics/2026/10/01/federal-panel-gives-final-approval-to-new-design-for-white-house-security-screening-center/",
-          "domain": "clickorlando.com",
-          "seendate": "2026-10-01T21:15:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/GKUAD7ZVARGIJP62WX3SVQQOQA.jpg?api_key=clickorlando_488cff2bcc157b2e"
-        },
-        {
-          "title": "Federal panel gives final approval to new design for White House security screening center",
-          "url": "https://www.news4jax.com/news/politics/2026/10/01/federal-panel-gives-final-approval-to-new-design-for-white-house-security-screening-center/",
-          "domain": "news4jax.com",
-          "seendate": "2026-10-01T21:00:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/GKUAD7ZVARGIJP62WX3SVQQOQA.jpg?api_key=news4jax_3f10b25586458189"
-        },
-        {
-          "title": "Federal panel gives final approval to new design for White House security screening center",
-          "url": "https://www.sun-sentinel.com/2026/10/01/white-house-security/",
-          "domain": "sun-sentinel.com",
-          "seendate": "2026-10-01T21:00:00Z",
-          "image": "https://www.sun-sentinel.com/wp-content/uploads/2026/10/Trump_White_House_17762-1.jpg"
-        }
-      ]
-    },
-    "title": "Federal panel gives final approval to new design for White House security screening center",
-    "summary": "2026-10-02 sandiegouniontribune.com: Federal panel gives final approval to new design for White House security screening center\n2026-10-01 orlandosentinel.com: Federal panel gives final approval to new design for White House security screening center\n2026-10-01 clickondetroit.com: Federal panel gives final approval to new design for White House security screening center\n2026-10-01 mercurynews.com: Federal panel gives final approval to new design for White House security screening center\n2026-10-01 clickorlando.com: Federal panel gives final approval to new design for White House security screening center\n2026-10-01 news4jax.com: Federal panel gives final approval to new design for White House security screening center",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_before-blitz-campaign",
     "source": "news",
-    "ts": 1791028219944,
+    "ts": 1791045126065,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.484,
+      "salience": 0.454,
       "articles": [
         {
           "title": "The Latest : Trump hits the campaign trail , kicking off blitz before midterms",
@@ -16884,12 +16905,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_alaska-investment-korean",
     "source": "news",
-    "ts": 1791028219943,
+    "ts": 1791045126065,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.401,
+      "salience": 0.262,
       "articles": [
         {
           "title": "Trump unveils South Korean investment in pipeline in Alaska , site of a tight Senate race",
@@ -16918,25 +16939,11 @@ window.PRISM_CANDIDATES = [
           "domain": "ksat.com",
           "seendate": "2026-09-30T17:15:00Z",
           "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/5GCYV3XDGZDJZPE6VRPIVYREHA.jpg?api_key=ksat_9a37fc89631abedf"
-        },
-        {
-          "title": "Trump will unveil $54 billion in South Korean investment in Alaska , site of a tight Senate race",
-          "url": "https://www.wral.com/news/ap/03d3b-trump-will-unveil-54-billion-in-south-korean-investment-in-alaska-site-of-a-tight-senate-race/",
-          "domain": "wral.com",
-          "seendate": "2026-09-30T15:15:00Z",
-          "image": "https://images.wral.com/89d2f334-21cb-568e-b143-4b6b27df523d"
-        },
-        {
-          "title": "Trump will unveil $54 billion in South Korean investment in Alaska",
-          "url": "https://www.dailylocal.com/2026/09/30/trump-south-korean-investment-alaska/",
-          "domain": "dailylocal.com",
-          "seendate": "2026-09-30T15:15:00Z",
-          "image": "https://www.dailylocal.com/wp-content/uploads/2026/09/Trump_AI_43246-1.jpg"
         }
       ]
     },
-    "title": "Trump will unveil $54 billion in South Korean investment in Alaska , site of a tight Senate race",
-    "summary": "2026-09-30 cbsnews.com: Trump unveils South Korean investment in pipeline in Alaska , site of a tight Senate race\n2026-09-30 theyeshivaworld.com: Trump Unveils $54 Billion In South Korean Investment In Alaska , Site Of A Tight Senate Race\n2026-09-30 presstelegram.com: Trump will unveil $54 billion in South Korean investment in Alaska\n2026-09-30 ksat.com: Trump will unveil $54 billion in South Korean investment in Alaska , site of a tight Senate race\n2026-09-30 wral.com: Trump will unveil $54 billion in South Korean investment in Alaska , site of a tight Senate race\n2026-09-30 dailylocal.com: Trump will unveil $54 billion in South Korean investment in Alaska",
+    "title": "Trump Unveils $54 Billion In South Korean Investment In Alaska , Site Of A Tight Senate Race",
+    "summary": "2026-09-30 cbsnews.com: Trump unveils South Korean investment in pipeline in Alaska , site of a tight Senate race\n2026-09-30 theyeshivaworld.com: Trump Unveils $54 Billion In South Korean Investment In Alaska , Site Of A Tight Senate Race\n2026-09-30 presstelegram.com: Trump will unveil $54 billion in South Korean investment in Alaska\n2026-09-30 ksat.com: Trump will unveil $54 billion in South Korean investment in Alaska , site of a tight Senate race",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
