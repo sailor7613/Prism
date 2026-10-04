@@ -8,7 +8,7 @@ Register: 75 objects · this scan: 0 new, 0 seen again, 0 returned.
 ## Permanence breaks (went silent while unresolved)
 - **Republican senator blocks bill protecting Kennedy Center from demolition** — ruling · ruled · holder: the Senate · formed 2026-09-29 · 3 outlets (peak 3) · `obj_thesenat_bill-blocks-center-demolition` · silent 5d after 2 scans
 - **CNN , Politico and MS NOW press judge to keep White House media ban on hold** — ruling · ruled · holder: a federal court · formed 2026-09-29 · 4 outlets (peak 8) · `obj_afederal_ban-cnn-hold-house` · silent 5d after 2 scans
-- **A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Centers for Medicare & Medicaid Services of the Department of Health and Human Services relating to "Patient Protection and Affordable Care Act, HHS Notice of Benefit and Payment Parameters for 2027; and Basic Health Program". — Senate the motion to proceed (Motion to Proceed Rejected)** — bill · voted · holder: the Senate · formed 2026-09-29 · 0 outlets (peak 0) · `obj_bill_sjres-119-197` · silent 0d after 18 scans
+- **A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Centers for Medicare & Medicaid Services of the Department of Health and Human Services relating to "Patient Protection and Affordable Care Act, HHS Notice of Benefit and Payment Parameters for 2027; and Basic Health Program". — Senate the motion to proceed (Motion to Proceed Rejected)** — bill · voted · holder: the Senate · formed 2026-09-29 · 0 outlets (peak 0) · `obj_bill_sjres-119-197` · silent 0d after 19 scans
 
 ## Returned after a break
 - none today
