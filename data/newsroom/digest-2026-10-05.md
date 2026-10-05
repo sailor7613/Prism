@@ -9,8 +9,8 @@ Register: 75 objects · this scan: 0 new, 0 seen again, 0 returned.
 - **After failed execution , health workers say Tennessee method flouts medical ethics** — vote · voted · holder: ? · formed 2026-09-30 · 7 outlets (peak 7) · `obj_x_ethics-execution-failed-flouts` · silent 5d after 2 scans
 - **US can deport the leader of Wisconsin largest mosque , judge rules** — ruling · ruled · holder: a federal court · formed 2026-09-30 · 3 outlets (peak 8) · `obj_afederal_can-deport-judge-largest` · silent 5d after 2 scans
 - **Senate panel advances surgeon general nominee Nicole Saphier** — vote · voted · holder: the Senate · formed 2026-09-30 · 3 outlets (peak 7) · `obj_thesenat_advances-general-nicole-nominee` · silent 5d after 2 scans
-- **Stop Insider Trading Act — Senate cloture on the motion to proceed (Cloture on the Motion to Proceed Rejected)** — bill · voted · holder: the Senate · formed 2026-09-30 · 0 outlets (peak 0) · `obj_bill_hr-119-7008` · silent 0d after 17 scans
-- **Ratepayer Protection Act — Senate cloture on the motion to proceed (Cloture on the Motion to Proceed Rejected)** — bill · voted · holder: the Senate · formed 2026-09-30 · 0 outlets (peak 0) · `obj_bill_hr-119-9340` · silent 0d after 17 scans
+- **Stop Insider Trading Act — Senate cloture on the motion to proceed (Cloture on the Motion to Proceed Rejected)** — bill · voted · holder: the Senate · formed 2026-09-30 · 0 outlets (peak 0) · `obj_bill_hr-119-7008` · silent 0d after 18 scans
+- **Ratepayer Protection Act — Senate cloture on the motion to proceed (Cloture on the Motion to Proceed Rejected)** — bill · voted · holder: the Senate · formed 2026-09-30 · 0 outlets (peak 0) · `obj_bill_hr-119-9340` · silent 0d after 18 scans
 
 ## Returned after a break
 - none today

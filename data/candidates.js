@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-10-05T00:01:09.795Z · 22 legislative + 7 news (GDELT, 3d)
+// 2026-10-05T05:55:44.775Z · 22 legislative + 3 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1791158410176,
+    "ts": 1791179712891,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.85,
+      "salience": 0.849,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -262,11 +262,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1791158410176,
+    "ts": 1791179712891,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.84,
+      "salience": 0.839,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -519,11 +519,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1791158410175,
+    "ts": 1791179712891,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.805,
+      "salience": 0.804,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -1937,11 +1937,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1791158410176,
+    "ts": 1791179712891,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.805,
+      "salience": 0.804,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -2194,11 +2194,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1791158410176,
+    "ts": 1791179712891,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.797,
+      "salience": 0.796,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -2451,11 +2451,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1791158410176,
+    "ts": 1791179712891,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.735,
+      "salience": 0.733,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -3364,11 +3364,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1791158410176,
+    "ts": 1791179712891,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.693,
+      "salience": 0.692,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3892,11 +3892,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1791158410176,
+    "ts": 1791179712891,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.67,
+      "salience": 0.669,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4793,11 +4793,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1791158410175,
+    "ts": 1791179712890,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.511,
+      "salience": 0.51,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -5047,11 +5047,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1791158410175,
+    "ts": 1791179712890,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.502,
+      "salience": 0.501,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -5320,11 +5320,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1791158410176,
+    "ts": 1791179712891,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.477,
+      "salience": 0.476,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -6219,11 +6219,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1791158410176,
+    "ts": 1791179712891,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.465,
+      "salience": 0.464,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -7498,11 +7498,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1791158410176,
+    "ts": 1791179712891,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.385,
+      "salience": 0.384,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -8418,11 +8418,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1791158410176,
+    "ts": 1791179712891,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.383,
+      "salience": 0.382,
       "congressGovUrl": null,
       "votes": [
         {
@@ -9328,11 +9328,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1791158410176,
+    "ts": 1791179712891,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.349,
+      "salience": 0.348,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -10246,11 +10246,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1791158410176,
+    "ts": 1791179712891,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.305,
+      "salience": 0.304,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -11126,11 +11126,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1791158410176,
+    "ts": 1791179712891,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.301,
+      "salience": 0.3,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -12002,11 +12002,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1791158410175,
+    "ts": 1791179712891,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.109,
+      "salience": 0.108,
       "congressGovUrl": null,
       "votes": [
         {
@@ -12895,11 +12895,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1791158410175,
+    "ts": 1791179712891,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.102,
+      "salience": 0.101,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -13810,11 +13810,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1791158410175,
+    "ts": 1791179712891,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.095,
+      "salience": 0.094,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -14698,11 +14698,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1791158410175,
+    "ts": 1791179712890,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.091,
+      "salience": 0.09,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -15619,11 +15619,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1791158410175,
+    "ts": 1791179712890,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.079,
+      "salience": 0.078,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -16537,12 +16537,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_court-picks-regrets",
     "source": "news",
-    "ts": 1791158469790,
+    "ts": 1791179744772,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.617,
+      "salience": 0.58,
       "articles": [
         {
           "title": "Trump Regrets Supreme Court Picks",
@@ -16613,13 +16613,6 @@ window.PRISM_CANDIDATES = [
           "domain": "720thevoice.iheart.com",
           "seendate": "2026-10-02T09:45:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6abf78337fe4fb32aee42273?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Trump Says He Regrets All 3 of His Supreme Court Picks",
-          "url": "https://www.breitbart.com/politics/2026/10/01/trump-says-he-regrets-all-3-of-his-supreme-court-picks/",
-          "domain": "breitbart.com",
-          "seendate": "2026-10-02T04:00:00Z",
-          "image": "https://media.breitbart.com/media/2026/10/Gorsuch-Kavanaugh-Barrett-640x335.jpeg"
         }
       ]
     },
@@ -16636,12 +16629,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ahead-ban-bills",
     "source": "news",
-    "ts": 1791158469790,
+    "ts": 1791179744772,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.597,
+      "salience": 0.34,
       "articles": [
         {
           "title": "Senate Democrats block GOP bills on insider trading ban , national voter ID ahead of midterms",
@@ -16649,6 +16642,13 @@ window.PRISM_CANDIDATES = [
           "domain": "news3lv.com",
           "seendate": "2026-10-02T07:30:00Z",
           "image": "https://news3lv.com/resources/media2/16x9/5616/1320/0x293/90/f054b75c-b773-4edd-83c6-27a19be753d2-GettyImages2297250684.jpg"
+        },
+        {
+          "title": "Senate Democrats block GOP bills on insider trading ban , national voter ID ahead of midterms",
+          "url": "https://bakersfieldnow.com/news/nation-world/senate-democrats-block-gop-bills-on-insider-trading-ban-national-voter-id-ahead-of-midterms-voter-id",
+          "domain": "bakersfieldnow.com",
+          "seendate": "2026-10-02T07:15:00Z",
+          "image": "https://bakersfieldnow.com/resources/media2/16x9/5616/1320/0x293/90/f054b75c-b773-4edd-83c6-27a19be753d2-GettyImages2297250684.jpg"
         },
         {
           "title": "Senate Democrats block GOP bills on insider trading ban , national voter ID ahead of midterms",
@@ -16677,252 +16677,11 @@ window.PRISM_CANDIDATES = [
           "domain": "nbcmontana.com",
           "seendate": "2026-10-02T06:00:00Z",
           "image": "https://nbcmontana.com/resources/media2/16x9/5616/1320/0x293/90/f054b75c-b773-4edd-83c6-27a19be753d2-GettyImages2297250684.jpg"
-        },
-        {
-          "title": "Senate Democrats block GOP bills on insider trading ban , national voter ID ahead of midterms",
-          "url": "https://fox23.com/news/nation-world/senate-democrats-block-gop-bills-on-insider-trading-ban-national-voter-id-ahead-of-midterms-voter-id",
-          "domain": "fox23.com",
-          "seendate": "2026-10-02T05:45:00Z",
-          "image": "https://fox23.com/resources/media2/16x9/5616/1320/0x293/90/f054b75c-b773-4edd-83c6-27a19be753d2-GettyImages2297250684.jpg"
-        },
-        {
-          "title": "Senate Democrats block GOP bills on insider trading ban , national voter ID ahead of midterms",
-          "url": "https://wjla.com/news/nation-world/senate-democrats-block-gop-bills-on-insider-trading-ban-national-voter-id-ahead-of-midterms-voter-id",
-          "domain": "wjla.com",
-          "seendate": "2026-10-02T05:30:00Z",
-          "image": "https://wjla.com/resources/media2/16x9/5616/1320/0x293/90/f054b75c-b773-4edd-83c6-27a19be753d2-GettyImages2297250684.jpg"
-        },
-        {
-          "title": "Senate Democrats block GOP bills on insider trading ban , national voter ID ahead of midterms",
-          "url": "https://cnycentral.com/news/nation-world/senate-democrats-block-gop-bills-on-insider-trading-ban-national-voter-id-ahead-of-midterms-voter-id",
-          "domain": "cnycentral.com",
-          "seendate": "2026-10-02T05:00:00Z",
-          "image": "https://cnycentral.com/resources/media2/16x9/5616/1320/0x293/90/f054b75c-b773-4edd-83c6-27a19be753d2-GettyImages2297250684.jpg"
-        },
-        {
-          "title": "Senate Democrats block GOP bills on insider trading ban , national voter ID ahead of midterms",
-          "url": "https://wset.com/news/nation-world/senate-democrats-block-gop-bills-on-insider-trading-ban-national-voter-id-ahead-of-midterms-voter-id",
-          "domain": "wset.com",
-          "seendate": "2026-10-02T04:30:00Z",
-          "image": "https://wset.com/resources/media2/16x9/5616/1320/0x293/90/f054b75c-b773-4edd-83c6-27a19be753d2-GettyImages2297250684.jpg"
-        },
-        {
-          "title": "Senate Democrats block GOP bills on insider trading ban , national voter ID ahead of midterms",
-          "url": "https://wpde.com/news/nation-world/senate-democrats-block-gop-bills-on-insider-trading-ban-national-voter-id-ahead-of-midterms-voter-id",
-          "domain": "wpde.com",
-          "seendate": "2026-10-02T04:15:00Z",
-          "image": "https://wpde.com/resources/media2/16x9/5616/1320/0x293/90/f054b75c-b773-4edd-83c6-27a19be753d2-GettyImages2297250684.jpg"
-        },
-        {
-          "title": "Senate Democrats block GOP bills on insider trading ban , national voter ID ahead of midterms",
-          "url": "https://abc6onyourside.com/news/nation-world/senate-democrats-block-gop-bills-on-insider-trading-ban-national-voter-id-ahead-of-midterms-voter-id",
-          "domain": "abc6onyourside.com",
-          "seendate": "2026-10-02T04:15:00Z",
-          "image": "https://abc6onyourside.com/resources/media2/16x9/5616/1320/0x293/90/f054b75c-b773-4edd-83c6-27a19be753d2-GettyImages2297250684.jpg"
-        },
-        {
-          "title": "Senate Democrats block GOP bills on insider trading ban , national voter ID ahead of midterms",
-          "url": "https://fox17.com/news/nation-world/senate-democrats-block-gop-bills-on-insider-trading-ban-national-voter-id-ahead-of-midterms-voter-id",
-          "domain": "fox17.com",
-          "seendate": "2026-10-02T04:00:00Z",
-          "image": "https://fox17.com/resources/media2/16x9/5616/1320/0x293/90/f054b75c-b773-4edd-83c6-27a19be753d2-GettyImages2297250684.jpg"
         }
       ]
     },
     "title": "Senate Democrats block GOP bills on insider trading ban , national voter ID ahead of midterms",
-    "summary": "2026-10-02 news3lv.com: Senate Democrats block GOP bills on insider trading ban , national voter ID ahead of midterms\n2026-10-02 upnorthlive.com: Senate Democrats block GOP bills on insider trading ban , national voter ID ahead of midterms\n2026-10-02 kfdm.com: Senate Democrats block GOP bills on insider trading ban , national voter ID ahead of midterms\n2026-10-02 cbs12.com: Senate Democrats block GOP bills on insider trading ban , national voter ID ahead of midterms\n2026-10-02 nbcmontana.com: Senate Democrats block GOP bills on insider trading ban , national voter ID ahead of midterms\n2026-10-02 fox23.com: Senate Democrats block GOP bills on insider trading ban , national voter ID ahead of midterms",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_before-blitz-campaign",
-    "source": "news",
-    "ts": 1791158469789,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.484,
-      "articles": [
-        {
-          "title": "The Latest : Trump hits the campaign trail , kicking off blitz before midterms",
-          "url": "https://www.nvdaily.com/associated_press_national/the-latest-trump-hits-the-campaign-trail-kicking-off-blitz-before-midterms/article_f0b7c7ef-5dcd-5a97-b908-2a2455c17136.html",
-          "domain": "nvdaily.com",
-          "seendate": "2026-10-02T07:00:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/nvdaily.com/content/tncms/assets/v3/editorial/e/4e/e4edc92d-68ff-561d-9283-726f72f620b9/6abd7d5ea6aa0.image.jpg?crop=1763%2C926%2C0%2C125"
-        },
-        {
-          "title": "The Latest : Trump hits the campaign trail , kicking off blitz before midterms",
-          "url": "http://www.idahostatejournal.com/news/national/the-latest-trump-hits-the-campaign-trail-kicking-off-blitz-before-midterms/article_ef295f2f-527e-5d3a-9388-d7744ce1f7c9.html",
-          "domain": "idahostatejournal.com",
-          "seendate": "2026-10-02T06:00:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/idahostatejournal.com/content/tncms/assets/v3/editorial/d/ba/dba20404-1113-55c0-87be-0287f2bd6a95/6abd7d80d1378.image.jpg?crop=1763%2C926%2C0%2C125"
-        },
-        {
-          "title": "The Latest : Trump hits the campaign trail , kicking off blitz before midterms",
-          "url": "https://www.idahostatejournal.com/news/national/the-latest-trump-hits-the-campaign-trail-kicking-off-blitz-before-midterms/article_ef295f2f-527e-5d3a-9388-d7744ce1f7c9.html",
-          "domain": "idahostatejournal.com",
-          "seendate": "2026-10-02T05:30:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/idahostatejournal.com/content/tncms/assets/v3/editorial/d/ba/dba20404-1113-55c0-87be-0287f2bd6a95/6abd7d80d1378.image.jpg?crop=1763%2C926%2C0%2C125"
-        },
-        {
-          "title": "The Latest : Trump hits the campaign trail , kicking off blitz before midterms",
-          "url": "http://www.idahopress.com/ap_news/us/the-latest-trump-hits-the-campaign-trail-kicking-off-blitz-before-midterms/article_cbd98704-f1b8-5a9d-b130-048f97bc6f5b.html",
-          "domain": "idahopress.com",
-          "seendate": "2026-10-02T04:30:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/idahopress.com/content/tncms/assets/v3/editorial/3/6c/36c27c96-983e-58bd-ae93-9970e5e83e6e/6abd7e03e9ec8.image.jpg?crop=1763%2C926%2C0%2C125"
-        },
-        {
-          "title": "The Latest : Trump hits the campaign trail , kicking off blitz before midterms",
-          "url": "http://www.dailyadvance.com/news/national/the-latest-trump-hits-the-campaign-trail-kicking-off-blitz-before-midterms/article_5be6d280-c429-5218-9414-26fea5dd5260.html",
-          "domain": "dailyadvance.com",
-          "seendate": "2026-10-02T04:30:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/dailyadvance.com/content/tncms/assets/v3/editorial/5/ae/5ae86241-9ffe-56b3-88b5-29927dbd52ba/6abe572041527.image.jpg?crop=1763%2C926%2C0%2C125"
-        },
-        {
-          "title": "The Latest : Trump hits the campaign trail , kicking off blitz before midterms",
-          "url": "http://www.rockymounttelegram.com/news/national/the-latest-trump-hits-the-campaign-trail-kicking-off-blitz-before-midterms/article_b770338b-29b3-5086-87c6-7bf03024af15.html",
-          "domain": "rockymounttelegram.com",
-          "seendate": "2026-10-02T03:45:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/rockymounttelegram.com/content/tncms/assets/v3/editorial/c/01/c01c28cc-b641-572c-8656-d749caaab216/6abe53f6ce282.image.jpg?crop=1763%2C926%2C0%2C125"
-        },
-        {
-          "title": "The Latest : Trump hits the campaign trail , kicking off blitz before midterms",
-          "url": "https://www.yumasun.com/news/national_news/the-latest-trump-hits-the-campaign-trail-kicking-off-blitz-before-midterms/article_46f8a17c-5dab-5c96-89cf-fe5e91d3cf9a.html",
-          "domain": "yumasun.com",
-          "seendate": "2026-10-02T03:15:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/yumasun.com/content/tncms/assets/v3/editorial/9/38/9385305c-f00f-55cb-874b-140bfb9edaea/6abe571f06e77.image.jpg?crop=1763%2C926%2C0%2C125"
-        },
-        {
-          "title": "The Latest : Trump hits the campaign trail in Texas , kicking off blitz before midterms",
-          "url": "https://lancasteronline.com/news/national/the-latest-trump-hits-the-campaign-trail-in-texas-kicking-off-blitz-before-midterms/article_4cab0e87-ab54-5e33-9a4f-85c1cc4c2ded.html",
-          "domain": "lancasteronline.com",
-          "seendate": "2026-10-02T02:00:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/lancasteronline.com/content/tncms/assets/v3/editorial/1/ce/1cead9ff-5dd3-5b4e-adad-e015b0929a0a/6abe7abdc4a64.image.jpg?crop=1763%2C926%2C0%2C125"
-        },
-        {
-          "title": "The Latest : Trump hits the campaign trail in Texas , kicking off blitz before midterms",
-          "url": "http://www.postregister.com/news/national/the-latest-trump-hits-the-campaign-trail-in-texas-kicking-off-blitz-before-midterms/article_57cd26b8-6bd2-586d-a2f6-1ae55c72a8a4.html",
-          "domain": "postregister.com",
-          "seendate": "2026-10-02T01:00:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/postregister.com/content/tncms/assets/v3/editorial/6/c1/6c1c28af-ebca-5548-93ee-ad1e3fe8961e/6abd8123a6317.image.jpg?crop=1763%2C926%2C0%2C125"
-        }
-      ]
-    },
-    "title": "The Latest : Trump hits the campaign trail , kicking off blitz before midterms",
-    "summary": "2026-10-02 nvdaily.com: The Latest : Trump hits the campaign trail , kicking off blitz before midterms\n2026-10-02 idahostatejournal.com: The Latest : Trump hits the campaign trail , kicking off blitz before midterms\n2026-10-02 idahostatejournal.com: The Latest : Trump hits the campaign trail , kicking off blitz before midterms\n2026-10-02 idahopress.com: The Latest : Trump hits the campaign trail , kicking off blitz before midterms\n2026-10-02 dailyadvance.com: The Latest : Trump hits the campaign trail , kicking off blitz before midterms\n2026-10-02 rockymounttelegram.com: The Latest : Trump hits the campaign trail , kicking off blitz before midterms",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_bill-center-data",
-    "source": "news",
-    "ts": 1791158469790,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.283,
-      "articles": [
-        {
-          "title": "Senate top party leaders point fingers after data center bill fails",
-          "url": "https://fox23.com/news/nation-world/senates-top-party-leaders-chuck-schumer-john-thune-point-fingers-after-house-data-center-ai-bill-fails-congress",
-          "domain": "fox23.com",
-          "seendate": "2026-10-02T01:15:00Z",
-          "image": "https://fox23.com/resources/media2/16x9/1920/1320/center/90/d1972ad9-b02f-494e-9bb8-7d8c7db5611a-Untitleddesign29.jpg"
-        },
-        {
-          "title": "Senate top party leaders point fingers after data center bill fails",
-          "url": "https://nbcmontana.com/news/nation-world/senates-top-party-leaders-chuck-schumer-john-thune-point-fingers-after-house-data-center-ai-bill-fails-congress",
-          "domain": "nbcmontana.com",
-          "seendate": "2026-10-02T01:15:00Z",
-          "image": "https://nbcmontana.com/resources/media2/16x9/1920/1320/center/90/d1972ad9-b02f-494e-9bb8-7d8c7db5611a-Untitleddesign29.jpg"
-        },
-        {
-          "title": "Senate top party leaders point fingers after data center bill fails",
-          "url": "https://kfdm.com/news/nation-world/senates-top-party-leaders-chuck-schumer-john-thune-point-fingers-after-house-data-center-ai-bill-fails-congress",
-          "domain": "kfdm.com",
-          "seendate": "2026-10-02T01:00:00Z",
-          "image": "https://kfdm.com/resources/media2/16x9/1920/1320/center/90/d1972ad9-b02f-494e-9bb8-7d8c7db5611a-Untitleddesign29.jpg"
-        },
-        {
-          "title": "Senate top party leaders point fingers after data center bill fails",
-          "url": "https://cbs12.com/news/nation-world/senates-top-party-leaders-chuck-schumer-john-thune-point-fingers-after-house-data-center-ai-bill-fails-congress",
-          "domain": "cbs12.com",
-          "seendate": "2026-10-02T01:00:00Z",
-          "image": "https://cbs12.com/resources/media2/16x9/1920/1320/center/90/d1972ad9-b02f-494e-9bb8-7d8c7db5611a-Untitleddesign29.jpg"
-        },
-        {
-          "title": "Senate top party leaders point fingers after data center bill fails",
-          "url": "https://wpde.com/news/nation-world/senates-top-party-leaders-chuck-schumer-john-thune-point-fingers-after-house-data-center-ai-bill-fails-congress",
-          "domain": "wpde.com",
-          "seendate": "2026-10-02T00:15:00Z",
-          "image": "https://wpde.com/resources/media2/16x9/1920/1320/center/90/d1972ad9-b02f-494e-9bb8-7d8c7db5611a-Untitleddesign29.jpg"
-        }
-      ]
-    },
-    "title": "Senate top party leaders point fingers after data center bill fails",
-    "summary": "2026-10-02 fox23.com: Senate top party leaders point fingers after data center bill fails\n2026-10-02 nbcmontana.com: Senate top party leaders point fingers after data center bill fails\n2026-10-02 kfdm.com: Senate top party leaders point fingers after data center bill fails\n2026-10-02 cbs12.com: Senate top party leaders point fingers after data center bill fails\n2026-10-02 wpde.com: Senate top party leaders point fingers after data center bill fails",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_approval-center-design",
-    "source": "news",
-    "ts": 1791158469789,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.226,
-      "articles": [
-        {
-          "title": "Federal panel gives final approval to new design for White House security screening center",
-          "url": "https://www.capitalgazette.com/2026/10/01/white-house-security/",
-          "domain": "capitalgazette.com",
-          "seendate": "2026-10-02T01:00:00Z",
-          "image": "https://www.capitalgazette.com/wp-content/uploads/2026/10/Trump_White_House_17762-1.jpg"
-        },
-        {
-          "title": "Federal panel gives final approval to new design for White House security screening center",
-          "url": "https://www.sandiegouniontribune.com/2026/10/01/white-house-security/",
-          "domain": "sandiegouniontribune.com",
-          "seendate": "2026-10-02T00:15:00Z",
-          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/10/Trump_White_House_17762-1.jpg"
-        },
-        {
-          "title": "Federal panel gives final approval to new design for White House security screening center",
-          "url": "https://www.bostonherald.com/2026/10/01/white-house-security/",
-          "domain": "bostonherald.com",
-          "seendate": "2026-10-02T00:15:00Z",
-          "image": "https://www.bostonherald.com/wp-content/uploads/2026/10/Trump_White_House_17762-1.jpg"
-        },
-        {
-          "title": "Federal panel gives final approval to new design for White House security screening center",
-          "url": "https://www.kxl.com/federal-panel-gives-final-approval-to-new-design-for-white-house-security-screening-center/",
-          "domain": "kxl.com",
-          "seendate": "2026-10-02T00:15:00Z",
-          "image": "https://mapi.associatedpress.com/v2/items/8dfe585cbae34984b81a169d2d48ec3a.0/preview/preview.jpg?nfe=true&wm=false&app=MPK&tag=tag%3Dact%7E%3Arss%21orgId%7E66880%21iid%7E8dfe585cbae34984b81a169d2d48ec3a%21qt%7E4451wog7NmR&icb=1790899297"
-        }
-      ]
-    },
-    "title": "Federal panel gives final approval to new design for White House security screening center",
-    "summary": "2026-10-02 capitalgazette.com: Federal panel gives final approval to new design for White House security screening center\n2026-10-02 sandiegouniontribune.com: Federal panel gives final approval to new design for White House security screening center\n2026-10-02 bostonherald.com: Federal panel gives final approval to new design for White House security screening center\n2026-10-02 kxl.com: Federal panel gives final approval to new design for White House security screening center",
+    "summary": "2026-10-02 news3lv.com: Senate Democrats block GOP bills on insider trading ban , national voter ID ahead of midterms\n2026-10-02 bakersfieldnow.com: Senate Democrats block GOP bills on insider trading ban , national voter ID ahead of midterms\n2026-10-02 upnorthlive.com: Senate Democrats block GOP bills on insider trading ban , national voter ID ahead of midterms\n2026-10-02 kfdm.com: Senate Democrats block GOP bills on insider trading ban , national voter ID ahead of midterms\n2026-10-02 cbs12.com: Senate Democrats block GOP bills on insider trading ban , national voter ID ahead of midterms\n2026-10-02 nbcmontana.com: Senate Democrats block GOP bills on insider trading ban , national voter ID ahead of midterms",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -16934,12 +16693,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_city-history-hundreds",
     "source": "news",
-    "ts": 1791158469789,
+    "ts": 1791179744771,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.223,
+      "salience": 0.186,
       "articles": [
         {
           "title": "Today in History : October 2 , hundreds massacred at Mexico City student protest",
@@ -16966,49 +16725,6 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Today in History : October 2 , hundreds massacred at Mexico City student protest",
     "summary": "2026-10-02 pressdemocrat.com: Today in History : October 2 , hundreds massacred at Mexico City student protest\n2026-10-02 bostonherald.com: Today in History : October 2 , hundreds massacred at Mexico City student protest\n2026-10-02 mcall.com: Today in History : October 2 , hundreds massacred at Mexico City student protest",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_g20-little-progress",
-    "source": "news",
-    "ts": 1791158469790,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.173,
-      "articles": [
-        {
-          "title": "G20 trade talks yield little progress while tensions simmer",
-          "url": "https://www.clickondetroit.com/business/2026/10/01/g20-trade-talks-yield-little-progress-while-tensions-simmer/",
-          "domain": "clickondetroit.com",
-          "seendate": "2026-10-02T01:15:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/TY6EQ3N54NDQHAI5FQNVO7EMGQ.jpg?api_key=clickondetroit_06f87fefb2123598"
-        },
-        {
-          "title": "G20 trade talks yield little progress while tensions simmer",
-          "url": "https://www.wsls.com/business/2026/10/01/g20-trade-talks-yield-little-progress-while-tensions-simmer/",
-          "domain": "wsls.com",
-          "seendate": "2026-10-02T01:15:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/TY6EQ3N54NDQHAI5FQNVO7EMGQ.jpg?api_key=wsls_8c3a4bc35af7684e"
-        },
-        {
-          "title": "G20 trade talks yield little progress while tensions simmer",
-          "url": "https://www.sandiegouniontribune.com/2026/10/01/g20-trade/",
-          "domain": "sandiegouniontribune.com",
-          "seendate": "2026-10-02T00:15:00Z",
-          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/10/G2__Trade_Ministerial_25117-1.jpg"
-        }
-      ]
-    },
-    "title": "G20 trade talks yield little progress while tensions simmer",
-    "summary": "2026-10-02 clickondetroit.com: G20 trade talks yield little progress while tensions simmer\n2026-10-02 wsls.com: G20 trade talks yield little progress while tensions simmer\n2026-10-02 sandiegouniontribune.com: G20 trade talks yield little progress while tensions simmer",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
