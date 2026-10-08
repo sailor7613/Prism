@@ -23,9 +23,8 @@
   "Accruals stay accruals.",
   "Prism sees it through Readings."
  ],
- "builtAt": "2026-10-07T19:40:40.267Z",
+ "builtAt": "2026-10-08T19:36:12.832Z",
  "errors": [
-  "GDELT venezuela: gave up: https://api.gdeltproject.org/api/v2/doc/doc?query=venezuela%20(oil%20OR%20chevron%20OR%20pdvsa%20OR%20sanctions)&mode=timelinevol&format=json&timespan=90d",
   "GDELT settlement: gave up: https://api.gdeltproject.org/api/v2/doc/doc?query=(oil%20OR%20crude)%20(yuan%20OR%20petrodollar%20OR%20%22dollar%20settlement%22%20OR%20%22non-dollar%22%20OR%20invoicing)&mode=timelinevol&format=json&timespan=90d"
  ],
  "realization": {
@@ -8533,7 +8532,7 @@
     }
    }
   },
-  "fetchedAt": "2026-10-07T19:37:53.769Z",
+  "fetchedAt": "2026-10-08T19:33:20.773Z",
   "column": "realization",
   "guard": "Flows do not score Z; they are the layer Z is scored from (PG01 §6.3.1)."
  },
@@ -10074,7 +10073,11 @@
      ],
      [
       "2026-10-02",
-      0.1343
+      0.1021
+     ],
+     [
+      "2026-10-06",
+      0.0505
      ]
     ]
    }
@@ -10086,7 +10089,7 @@
    "venezuela": "venezuela (oil OR chevron OR pdvsa OR sanctions)",
    "settlement": "(oil OR crude) (yuan OR petrodollar OR \"dollar settlement\" OR \"non-dollar\" OR invoicing)"
   },
-  "fetchedAt": "2026-10-07T19:40:40.265Z"
+  "fetchedAt": "2026-10-08T19:36:12.830Z"
  },
  "price": {
   "series": {
@@ -11842,7 +11845,7 @@
    }
   },
   "what": "The shadow: what the institutional stations read (PG01 §6.2c). Kept last.",
-  "fetchedAt": "2026-10-07T19:38:27.405Z",
+  "fetchedAt": "2026-10-08T19:33:36.557Z",
   "column": "price"
  }
 }
