@@ -20,7 +20,8 @@
 // basis, per edge. Quantities are netWgt in kg → kt here.
 //
 // Endpoints:
-//   preview (no key, ≤500 rows/call, rate-limited):
+//   preview (no key, ONE period per call, ≤500 rows, rate-limited — verified 2026-10-11:
+//     "Maximum number of periods for preview is 1"):
 //     https://comtradeapi.un.org/public/v1/preview/C/M/HS?...
 //   full (free key from comtradeplus.un.org, header Ocp-Apim-Subscription-Key):
 //     https://comtradeapi.un.org/data/v1/get/C/M/HS?...
@@ -44,7 +45,7 @@ const REPORTERS = { 699: 'India', 156: 'China', 792: 'Türkiye', 97: 'EU-27', 39
 const PARTNERS = { 643: 'Russia', 364: 'Iran', 862: 'Venezuela', 682: 'Saudi Arabia', 368: 'Iraq', 414: 'Kuwait', 784: 'UAE', 398: 'Kazakhstan', 458: 'Malaysia', 566: 'Nigeria', 24: 'Angola', 124: 'Canada', 484: 'Mexico', 578: 'Norway', 842: 'United States', 76: 'Brazil', 328: 'Guyana', 634: 'Qatar', 512: 'Oman', 12: 'Algeria', 434: 'Libya', 699: 'India', 156: 'China', 792: 'Türkiye', 0: 'World' };
 const CMDS = { 2709: 'crude', 2710: 'products' };
 const args = process.argv.slice(2), mi = args.indexOf('--months');
-const MONTHS = mi >= 0 ? Number(args[mi + 1]) : 18;
+const MONTHS = mi >= 0 ? Number(args[mi + 1]) : (KEY ? 18 : 12);   // preview: 1 call per reporter×cmd×month
 const log = (...a) => console.log('[comtrade]', ...a), errors = [];
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
@@ -63,11 +64,11 @@ async function fetchReporter(rep, cmd, pers) {
   const q = ['reporterCode=' + rep, 'cmdCode=' + cmd, 'flowCode=M', 'period=' + pers.join(','), 'partnerCode=' + Object.keys(PARTNERS).filter(p => p !== '0').join(','), 'partner2Code=0', 'motCode=0', 'customsCode=C00', 'includeDesc=false'];
   const j = await getJSON(base + '?' + q.join('&'));
   const rows = (j && j.data) || [];
-  if (j && j.count && j.count > rows.length) log('truncated', rep, cmd, pers[0] + '…' + pers[pers.length - 1], j.count, '>', rows.length, '(preview cap — fewer months per call, or a key)');
+  if (j && j.count && j.count > rows.length) log('truncated', rep, cmd, pers[0] + '…' + pers[pers.length - 1], j.count, '>', rows.length, '(preview cap — a key lifts it)');
   return rows.map(r => ({ period: String(r.period).slice(0, 4) + '-' + String(r.period).slice(4, 6), reporter: REPORTERS[r.reporterCode] || String(r.reporterCode), reporterCode: r.reporterCode, partner: PARTNERS[r.partnerCode] || String(r.partnerCode), partnerCode: r.partnerCode, cmd: CMDS[String(r.cmdCode)] || String(r.cmdCode), kt: r.netWgt ? +(r.netWgt / 1e6).toFixed(1) : null, usdM: r.primaryValue ? +(r.primaryValue / 1e6).toFixed(1) : null }));
 }
 (async () => {
-  const pers = periods(MONTHS), chunk = KEY ? 12 : 6;   // preview: ≤500 rows → ~6 months × ~25 partners
+  const pers = periods(MONTHS), chunk = KEY ? 12 : 1;   // preview allows exactly one period per call (HTTP 400 otherwise)
   log('reporters', Object.values(REPORTERS).join(' · '), '· periods', pers[0], '→', pers[pers.length - 1], KEY ? '· keyed' : '· preview (no key)');
   const edges = [];
   for (const rep of Object.keys(REPORTERS)) for (const cmd of Object.keys(CMDS)) for (let i = 0; i < pers.length; i += chunk) {
