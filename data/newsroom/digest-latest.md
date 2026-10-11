@@ -1,16 +1,12 @@
-# Newsroom digest — 2026-10-03
+# Newsroom digest — 2026-10-10
 
-Register: 75 objects · this scan: 0 new, 1 seen again, 0 returned.
+Register: 75 objects · this scan: 0 new, 0 seen again, 0 returned.
 
 ## Queued for drafting (0)
 - (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
-- **Mediators working to broker US - Iran deal even after Trump rejected latest Tehran proposal** — vote · voted · holder: the President · formed 2026-09-28 · 11 outlets (peak 11) · `obj_thepresi_broker-deal-even-iran` · silent 5d after 2 scans
-- **Sen . John Kennedy proposes rule for no politician to name buildings after themselves** — ruling · ruled · holder: HHS · formed 2026-09-28 · 6 outlets (peak 6) · `obj_hhs_buildings-john-kennedy-name` · silent 5d after 2 scans
-- **Trump rolls back Biden - era mileage rules amid slow US shift to electric vehicles** — ruling · ruled · holder: the President · formed 2026-09-28 · 6 outlets (peak 6) · `obj_thepresi_back-biden-electric-era` · silent 5d after 2 scans
-- **Investigation reopened into alleged gang rape at Cornell University** — suit · sued · holder: ? · formed 2026-09-28 · 16 outlets (peak 16) · `obj_x_alleged-cornell-gang-into` · silent 5d after 2 scans
-- **Shark super hearing detects sounds from nearly 250 feet away | National** — hearing · compelled · holder: ? · formed 2026-09-28 · 4 outlets (peak 4) · `obj_x_250-away-detects-feet` · silent 5d after 2 scans
+- none today
 
 ## Returned after a break
 - none today

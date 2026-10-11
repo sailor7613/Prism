@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-10-03T16:32:06.069Z · 22 legislative + 5 news (GDELT, 3d)
+// 2026-10-10T21:52:49.047Z · 22 legislative + 1 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1791045093194,
+    "ts": 1791669159112,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.856,
+      "salience": 0.824,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -262,11 +262,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1791045093194,
+    "ts": 1791669159112,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.846,
+      "salience": 0.814,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -519,11 +519,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1791045093193,
+    "ts": 1791669159111,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.811,
+      "salience": 0.779,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -1937,11 +1937,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1791045093194,
+    "ts": 1791669159112,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.81,
+      "salience": 0.778,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -2194,11 +2194,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1791045093194,
+    "ts": 1791669159112,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.803,
+      "salience": 0.77,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -2451,11 +2451,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1791045093194,
+    "ts": 1791669159112,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.74,
+      "salience": 0.708,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -3364,11 +3364,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1791045093194,
+    "ts": 1791669159112,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.699,
+      "salience": 0.667,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3892,11 +3892,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1791045093194,
+    "ts": 1791669159112,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.676,
+      "salience": 0.644,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4793,11 +4793,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1791045093193,
+    "ts": 1791669159111,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.517,
+      "salience": 0.485,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -5047,11 +5047,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4784",
     "source": "legislative",
-    "ts": 1791045093193,
+    "ts": 1791669159111,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4784",
-      "salience": 0.508,
+      "salience": 0.476,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
       "votes": [
         {
@@ -5320,11 +5320,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1791045093194,
+    "ts": 1791669159112,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.483,
+      "salience": 0.451,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -6219,11 +6219,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1791045093193,
+    "ts": 1791669159111,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.471,
+      "salience": 0.439,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -7498,11 +7498,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1791045093194,
+    "ts": 1791669159112,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.39,
+      "salience": 0.358,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -8418,12 +8418,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1791045093194,
+    "ts": 1791669159112,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.389,
-      "congressGovUrl": null,
+      "salience": 0.357,
+      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
           "voteId": "h-119-2026-314",
@@ -8897,7 +8897,7 @@ window.PRISM_CANDIDATES = [
         }
       ]
     },
-    "title": "s-119-2403",
+    "title": "Retire through Ownership Act",
     "summary": "2026-09-16 house: On Motion to Suspend the Rules and Pass — Passed (401-14; D 209-0 · R 191-14 · I 1-0)",
     "framingDraft": null,
     "suggestedAxes": null,
@@ -9328,11 +9328,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1791045093194,
+    "ts": 1791669159112,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.354,
+      "salience": 0.322,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -10246,11 +10246,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1791045093194,
+    "ts": 1791669159112,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.311,
+      "salience": 0.279,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -11126,11 +11126,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1791045093193,
+    "ts": 1791669159111,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.307,
+      "salience": 0.275,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -12002,11 +12002,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1791045093193,
+    "ts": 1791669159111,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.115,
+      "salience": 0.083,
       "congressGovUrl": null,
       "votes": [
         {
@@ -12895,11 +12895,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1791045093193,
+    "ts": 1791669159111,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.108,
+      "salience": 0.076,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -13810,11 +13810,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1791045093193,
+    "ts": 1791669159111,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.101,
+      "salience": 0.069,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -14698,11 +14698,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8897",
     "source": "legislative",
-    "ts": 1791045093193,
+    "ts": 1791669159111,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8897",
-      "salience": 0.097,
+      "salience": 0.064,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8897",
       "votes": [
         {
@@ -15619,11 +15619,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3106",
     "source": "legislative",
-    "ts": 1791045093193,
+    "ts": 1791669159110,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3106",
-      "salience": 0.085,
+      "salience": 0.053,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3106",
       "votes": [
         {
@@ -16535,415 +16535,40 @@ window.PRISM_CANDIDATES = [
     "mts": 1784044297586
   },
   {
-    "cid": "cand_news_approval-center-design",
+    "cid": "cand_news_against-anger-chief",
     "source": "news",
-    "ts": 1791045126066,
+    "ts": 1791669169042,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.748,
+      "salience": 0.52,
       "articles": [
         {
-          "title": "Federal panel gives final approval to new design for White House security screening center",
-          "url": "https://www.sandiegouniontribune.com/2026/10/01/white-house-security/",
-          "domain": "sandiegouniontribune.com",
-          "seendate": "2026-10-02T00:15:00Z",
-          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/10/Trump_White_House_17762-1.jpg"
+          "title": "India young return to streets as anger against election chief and Modi grows",
+          "url": "https://www.newsday.com/news/nation/india-sir-cockroach-election-commission-gyanesh-protests-s09270",
+          "domain": "newsday.com",
+          "seendate": "2026-10-10T06:45:00Z",
+          "image": "https://cdn.newsday.com/ace/c:NDg5OGYxYjItNmE0Mi00:ZTlhNjY0MTYtOGY5Zi00/landscape/1280"
         },
         {
-          "title": "Federal panel gives final approval to new design for White House security screening center",
-          "url": "https://www.bostonherald.com/2026/10/01/white-house-security/",
-          "domain": "bostonherald.com",
-          "seendate": "2026-10-02T00:15:00Z",
-          "image": "https://www.bostonherald.com/wp-content/uploads/2026/10/Trump_White_House_17762-1.jpg"
+          "title": "India young return to streets as anger against election chief and Modi grows | International",
+          "url": "https://www.wboc.com/news/international/india-s-young-return-to-streets-as-anger-against-election-chief-and-modi-grows/article_bee5567c-a6e7-543c-a2f3-5ed6fcdb689a.html",
+          "domain": "wboc.com",
+          "seendate": "2026-10-10T06:45:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/wboc.com/content/tncms/assets/v3/editorial/b/f6/bf6b853e-1d08-5bce-9498-7b6f774db7c9/6ac9cafcb1469.image.jpg?crop=1763%2C926%2C0%2C124"
         },
         {
-          "title": "Federal panel gives final approval to new design for White House security screening center",
-          "url": "https://www.orlandosentinel.com/2026/10/01/white-house-security/",
-          "domain": "orlandosentinel.com",
-          "seendate": "2026-10-01T23:45:00Z",
-          "image": "https://www.orlandosentinel.com/wp-content/uploads/2026/10/Trump_White_House_17762-1.jpg"
-        },
-        {
-          "title": "Federal panel gives final approval to new design for White House security screening center",
-          "url": "https://www.pilotonline.com/2026/10/01/white-house-security-5/",
-          "domain": "pilotonline.com",
-          "seendate": "2026-10-01T23:15:00Z",
-          "image": "https://www.pilotonline.com/wp-content/uploads/2026/10/Trump_White_House_17762-1.jpg"
-        },
-        {
-          "title": "Federal panel gives final approval to new design for White House security screening center",
-          "url": "https://www.twincities.com/2026/10/01/white-house-security/",
-          "domain": "twincities.com",
-          "seendate": "2026-10-01T22:30:00Z",
-          "image": "https://www.twincities.com/wp-content/uploads/2026/10/Trump_White_House_17762-1.jpg"
-        },
-        {
-          "title": "Federal panel gives final approval to new design for White House security screening center",
-          "url": "https://www.clickondetroit.com/news/politics/2026/10/01/federal-panel-gives-final-approval-to-new-design-for-white-house-security-screening-center/",
-          "domain": "clickondetroit.com",
-          "seendate": "2026-10-01T21:30:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/GKUAD7ZVARGIJP62WX3SVQQOQA.jpg?api_key=clickondetroit_06f87fefb2123598"
-        },
-        {
-          "title": "Federal panel gives final approval to new design for White House security screening center",
-          "url": "https://www.mercurynews.com/2026/10/01/white-house-security/",
-          "domain": "mercurynews.com",
-          "seendate": "2026-10-01T21:30:00Z",
-          "image": "https://www.mercurynews.com/wp-content/uploads/2026/10/Trump_White_House_17762-1.jpg"
-        },
-        {
-          "title": "Federal panel gives final approval to new design for White House security screening center",
-          "url": "https://www.clickorlando.com/news/politics/2026/10/01/federal-panel-gives-final-approval-to-new-design-for-white-house-security-screening-center/",
-          "domain": "clickorlando.com",
-          "seendate": "2026-10-01T21:15:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/GKUAD7ZVARGIJP62WX3SVQQOQA.jpg?api_key=clickorlando_488cff2bcc157b2e"
-        },
-        {
-          "title": "Federal panel gives final approval to new design for White House security screening center",
-          "url": "https://www.news4jax.com/news/politics/2026/10/01/federal-panel-gives-final-approval-to-new-design-for-white-house-security-screening-center/",
-          "domain": "news4jax.com",
-          "seendate": "2026-10-01T21:00:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/GKUAD7ZVARGIJP62WX3SVQQOQA.jpg?api_key=news4jax_3f10b25586458189"
-        },
-        {
-          "title": "Federal panel gives final approval to new design for White House security screening center",
-          "url": "https://www.sun-sentinel.com/2026/10/01/white-house-security/",
-          "domain": "sun-sentinel.com",
-          "seendate": "2026-10-01T21:00:00Z",
-          "image": "https://www.sun-sentinel.com/wp-content/uploads/2026/10/Trump_White_House_17762-1.jpg"
-        }
-      ]
-    },
-    "title": "Federal panel gives final approval to new design for White House security screening center",
-    "summary": "2026-10-02 sandiegouniontribune.com: Federal panel gives final approval to new design for White House security screening center\n2026-10-02 bostonherald.com: Federal panel gives final approval to new design for White House security screening center\n2026-10-01 orlandosentinel.com: Federal panel gives final approval to new design for White House security screening center\n2026-10-01 pilotonline.com: Federal panel gives final approval to new design for White House security screening center\n2026-10-01 twincities.com: Federal panel gives final approval to new design for White House security screening center\n2026-10-01 clickondetroit.com: Federal panel gives final approval to new design for White House security screening center",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_claims-demolished-office",
-    "source": "news",
-    "ts": 1791045126066,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.744,
-      "articles": [
-        {
-          "title": "President Claims Secret Service Wanted Oval Office Demolished",
-          "url": "https://wiod.iheart.com/content/2026-10-01-president-claims-secret-service-wanted-oval-office-demolished/",
-          "domain": "wiod.iheart.com",
-          "seendate": "2026-10-01T23:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6abea30b522dc8d41d9c3aac?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "President Claims Secret Service Wanted Oval Office Demolished",
-          "url": "https://kfyi.iheart.com/content/2026-10-01-president-claims-secret-service-wanted-oval-office-demolished/",
-          "domain": "kfyi.iheart.com",
-          "seendate": "2026-10-01T23:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6abea30b522dc8d41d9c3aac?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "President Claims Secret Service Wanted Oval Office Demolished",
-          "url": "https://wdov.iheart.com/content/2026-10-01-president-claims-secret-service-wanted-oval-office-demolished/",
-          "domain": "wdov.iheart.com",
-          "seendate": "2026-10-01T23:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6abea30b522dc8d41d9c3aac?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "President Claims Secret Service Wanted Oval Office Demolished",
-          "url": "https://kfyr.iheart.com/content/2026-10-01-president-claims-secret-service-wanted-oval-office-demolished/",
-          "domain": "kfyr.iheart.com",
-          "seendate": "2026-10-01T23:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6abea30b522dc8d41d9c3aac?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "President Claims Secret Service Wanted Oval Office Demolished",
-          "url": "https://1190kex.iheart.com/content/2026-10-01-president-claims-secret-service-wanted-oval-office-demolished/",
-          "domain": "1190kex.iheart.com",
-          "seendate": "2026-10-01T23:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6abea30b522dc8d41d9c3aac?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "President Claims Secret Service Wanted Oval Office Demolished",
-          "url": "https://kfab.iheart.com/content/2026-10-01-president-claims-secret-service-wanted-oval-office-demolished/",
-          "domain": "kfab.iheart.com",
-          "seendate": "2026-10-01T23:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6abea30b522dc8d41d9c3aac?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "President Claims Secret Service Wanted Oval Office Demolished",
-          "url": "https://800wvhu.iheart.com/content/2026-10-01-president-claims-secret-service-wanted-oval-office-demolished/",
-          "domain": "800wvhu.iheart.com",
-          "seendate": "2026-10-01T23:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6abea30b522dc8d41d9c3aac?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "President Claims Secret Service Wanted Oval Office Demolished",
-          "url": "https://wflaorlando.iheart.com/content/2026-10-01-president-claims-secret-service-wanted-oval-office-demolished/",
-          "domain": "wflaorlando.iheart.com",
-          "seendate": "2026-10-01T23:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6abea30b522dc8d41d9c3aac?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "President Claims Secret Service Wanted Oval Office Demolished | WJBO Newsradio 1150 AM & 98 . 7 FM",
-          "url": "https://wjbo.iheart.com/content/2026-10-01-president-claims-secret-service-wanted-oval-office-demolished/",
-          "domain": "wjbo.iheart.com",
-          "seendate": "2026-10-01T23:00:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6abea30b522dc8d41d9c3aac?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "President Claims Secret Service Wanted Oval Office Demolished",
-          "url": "https://1430kasi.iheart.com/content/2026-10-01-president-claims-secret-service-wanted-oval-office-demolished/",
-          "domain": "1430kasi.iheart.com",
-          "seendate": "2026-10-01T23:00:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6abea30b522dc8d41d9c3aac?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "President Claims Secret Service Wanted Oval Office Demolished",
-          "url": "https://talk1200boston.iheart.com/content/2026-10-01-president-claims-secret-service-wanted-oval-office-demolished/",
-          "domain": "talk1200boston.iheart.com",
-          "seendate": "2026-10-01T23:00:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6abea30b522dc8d41d9c3aac?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "President Claims Secret Service Wanted Oval Office Demolished",
-          "url": "https://kfbk.iheart.com/content/2026-10-01-president-claims-secret-service-wanted-oval-office-demolished/",
-          "domain": "kfbk.iheart.com",
-          "seendate": "2026-10-01T23:00:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6abea30b522dc8d41d9c3aac?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        }
-      ]
-    },
-    "title": "President Claims Secret Service Wanted Oval Office Demolished",
-    "summary": "2026-10-01 wiod.iheart.com: President Claims Secret Service Wanted Oval Office Demolished\n2026-10-01 kfyi.iheart.com: President Claims Secret Service Wanted Oval Office Demolished\n2026-10-01 wdov.iheart.com: President Claims Secret Service Wanted Oval Office Demolished\n2026-10-01 kfyr.iheart.com: President Claims Secret Service Wanted Oval Office Demolished\n2026-10-01 1190kex.iheart.com: President Claims Secret Service Wanted Oval Office Demolished\n2026-10-01 kfab.iheart.com: President Claims Secret Service Wanted Oval Office Demolished",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_campaign-cash-chief",
-    "source": "news",
-    "ts": 1791045126064,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.604,
-      "articles": [
-        {
-          "title": "Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority",
-          "url": "https://www.clickondetroit.com/news/politics/2026/09/30/senate-gop-campaign-chief-says-cash-is-king-as-trump-team-promises-millions-to-keep-majority/",
-          "domain": "clickondetroit.com",
-          "seendate": "2026-10-01T01:15:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/B4FIFTZR65AVTLIVJ3EMWYB25I.jpg?api_key=clickondetroit_06f87fefb2123598"
-        },
-        {
-          "title": "Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority",
-          "url": "https://www.thetimesnews.com/senate-gop-campaign-chief-says-cash-is-king-as-trump-team-promises-millions-to-keep/article_83905e23-93d3-5c34-8801-58c74f13e292.html",
-          "domain": "thetimesnews.com",
-          "seendate": "2026-10-01T01:15:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/thetimesnews.com/content/tncms/custom/image/95f3a09e-983c-11ed-8535-4784d3c189d2.png"
-        },
-        {
-          "title": "Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority - Las Vegas Sun News",
-          "url": "https://lasvegassun.com/news/2026/sep/30/senate-gop-campaign-chief-says-cash-is-king-as-tru/",
-          "domain": "lasvegassun.com",
-          "seendate": "2026-10-01T01:00:00Z",
+          "title": "India young return to streets as anger against election chief and Modi grows",
+          "url": "https://isp.netscape.com:443/news/world/story/0001/20261010/030b35e23279c75394b7654233c99d6b",
+          "domain": "isp.netscape.com",
+          "seendate": "2026-10-10T06:45:00Z",
           "image": null
-        },
-        {
-          "title": "Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority",
-          "url": "https://www.bostonherald.com/2026/09/30/us-election-2026-senate-gop/",
-          "domain": "bostonherald.com",
-          "seendate": "2026-10-01T01:00:00Z",
-          "image": "https://www.bostonherald.com/wp-content/uploads/2026/09/Election_2_26_Republicans_6774_-1.jpg"
-        },
-        {
-          "title": "Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority",
-          "url": "https://www.news4jax.com/news/politics/2026/09/30/senate-gop-campaign-chief-says-cash-is-king-as-trump-team-promises-millions-to-keep-majority/",
-          "domain": "news4jax.com",
-          "seendate": "2026-10-01T00:45:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/B4FIFTZR65AVTLIVJ3EMWYB25I.jpg?api_key=news4jax_3f10b25586458189"
-        },
-        {
-          "title": "Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority",
-          "url": "https://www.orlandosentinel.com/2026/09/30/us-election-2026-senate-gop/",
-          "domain": "orlandosentinel.com",
-          "seendate": "2026-10-01T00:45:00Z",
-          "image": "https://www.orlandosentinel.com/wp-content/uploads/2026/09/Election_2_26_Republicans_6774_-1.jpg"
-        },
-        {
-          "title": "Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority",
-          "url": "https://www.pilotonline.com/2026/09/30/us-election-2026-senate-gop/",
-          "domain": "pilotonline.com",
-          "seendate": "2026-10-01T00:15:00Z",
-          "image": "https://www.pilotonline.com/wp-content/uploads/2026/09/Election_2_26_Republicans_6774_-1.jpg"
-        },
-        {
-          "title": "Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority",
-          "url": "https://www.capitalgazette.com/2026/09/30/us-election-2026-senate-gop/",
-          "domain": "capitalgazette.com",
-          "seendate": "2026-10-01T00:15:00Z",
-          "image": "https://www.capitalgazette.com/wp-content/uploads/2026/09/Election_2_26_Republicans_6774_-1.jpg"
-        },
-        {
-          "title": "Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority",
-          "url": "https://www.clickorlando.com/news/politics/2026/09/30/senate-gop-campaign-chief-says-cash-is-king-as-trump-team-promises-millions-to-keep-majority/",
-          "domain": "clickorlando.com",
-          "seendate": "2026-09-30T23:30:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/B4FIFTZR65AVTLIVJ3EMWYB25I.jpg?api_key=clickorlando_488cff2bcc157b2e"
-        },
-        {
-          "title": "Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority",
-          "url": "https://www.dailypress.com/2026/09/30/us-election-2026-senate-gop/",
-          "domain": "dailypress.com",
-          "seendate": "2026-09-30T23:30:00Z",
-          "image": "https://www.dailypress.com/wp-content/uploads/2026/09/Election_2_26_Republicans_6774_-1.jpg"
-        },
-        {
-          "title": "Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority",
-          "url": "https://abcnews.com/US/wireStory/senate-gop-campaign-chief-cash-king-trump-team-136902689",
-          "domain": "abcnews.com",
-          "seendate": "2026-09-30T23:15:00Z",
-          "image": "https://i.abcnewsfe.com/a/3fb94c71-ff5d-42e7-a099-6ef16d64a5e3/wirestory_674c49bdfb74e9ec286ea8f21aa3e8fd_16x9.jpg"
-        },
-        {
-          "title": "Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority",
-          "url": "https://www.mercurynews.com/2026/09/30/us-election-2026-senate-gop/",
-          "domain": "mercurynews.com",
-          "seendate": "2026-09-30T23:15:00Z",
-          "image": "https://www.mercurynews.com/wp-content/uploads/2026/09/Election_2_26_Republicans_6774_-1.jpg"
         }
       ]
     },
-    "title": "Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority",
-    "summary": "2026-10-01 clickondetroit.com: Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority\n2026-10-01 thetimesnews.com: Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority\n2026-10-01 lasvegassun.com: Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority - Las Vegas Sun News\n2026-10-01 bostonherald.com: Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority\n2026-10-01 news4jax.com: Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority\n2026-10-01 orlandosentinel.com: Senate GOP campaign chief says  cash is king  as Trump team promises millions to keep majority",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_before-blitz-campaign",
-    "source": "news",
-    "ts": 1791045126065,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.454,
-      "articles": [
-        {
-          "title": "The Latest : Trump hits the campaign trail , kicking off blitz before midterms",
-          "url": "http://www.idahostatejournal.com/news/national/the-latest-trump-hits-the-campaign-trail-kicking-off-blitz-before-midterms/article_ef295f2f-527e-5d3a-9388-d7744ce1f7c9.html",
-          "domain": "idahostatejournal.com",
-          "seendate": "2026-10-02T06:00:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/idahostatejournal.com/content/tncms/assets/v3/editorial/d/ba/dba20404-1113-55c0-87be-0287f2bd6a95/6abd7d80d1378.image.jpg?crop=1763%2C926%2C0%2C125"
-        },
-        {
-          "title": "The Latest : Trump hits the campaign trail , kicking off blitz before midterms",
-          "url": "https://www.idahostatejournal.com/news/national/the-latest-trump-hits-the-campaign-trail-kicking-off-blitz-before-midterms/article_ef295f2f-527e-5d3a-9388-d7744ce1f7c9.html",
-          "domain": "idahostatejournal.com",
-          "seendate": "2026-10-02T05:30:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/idahostatejournal.com/content/tncms/assets/v3/editorial/d/ba/dba20404-1113-55c0-87be-0287f2bd6a95/6abd7d80d1378.image.jpg?crop=1763%2C926%2C0%2C125"
-        },
-        {
-          "title": "The Latest : Trump hits the campaign trail , kicking off blitz before midterms",
-          "url": "http://www.idahopress.com/ap_news/us/the-latest-trump-hits-the-campaign-trail-kicking-off-blitz-before-midterms/article_cbd98704-f1b8-5a9d-b130-048f97bc6f5b.html",
-          "domain": "idahopress.com",
-          "seendate": "2026-10-02T04:30:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/idahopress.com/content/tncms/assets/v3/editorial/3/6c/36c27c96-983e-58bd-ae93-9970e5e83e6e/6abd7e03e9ec8.image.jpg?crop=1763%2C926%2C0%2C125"
-        },
-        {
-          "title": "The Latest : Trump hits the campaign trail , kicking off blitz before midterms",
-          "url": "http://www.dailyadvance.com/news/national/the-latest-trump-hits-the-campaign-trail-kicking-off-blitz-before-midterms/article_5be6d280-c429-5218-9414-26fea5dd5260.html",
-          "domain": "dailyadvance.com",
-          "seendate": "2026-10-02T04:30:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/dailyadvance.com/content/tncms/assets/v3/editorial/5/ae/5ae86241-9ffe-56b3-88b5-29927dbd52ba/6abe572041527.image.jpg?crop=1763%2C926%2C0%2C125"
-        },
-        {
-          "title": "The Latest : Trump hits the campaign trail in Texas , kicking off blitz before midterms",
-          "url": "https://lancasteronline.com/news/national/the-latest-trump-hits-the-campaign-trail-in-texas-kicking-off-blitz-before-midterms/article_4cab0e87-ab54-5e33-9a4f-85c1cc4c2ded.html",
-          "domain": "lancasteronline.com",
-          "seendate": "2026-10-02T02:00:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/lancasteronline.com/content/tncms/assets/v3/editorial/1/ce/1cead9ff-5dd3-5b4e-adad-e015b0929a0a/6abe7abdc4a64.image.jpg?crop=1763%2C926%2C0%2C125"
-        },
-        {
-          "title": "The Latest : Trump hits the campaign trail in Texas , kicking off blitz before midterms",
-          "url": "http://www.dailyadvance.com/news/national/the-latest-trump-hits-the-campaign-trail-in-texas-kicking-off-blitz-before-midterms/article_5be6d280-c429-5218-9414-26fea5dd5260.html",
-          "domain": "dailyadvance.com",
-          "seendate": "2026-10-02T00:00:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/dailyadvance.com/content/tncms/assets/v3/editorial/5/ae/5ae86241-9ffe-56b3-88b5-29927dbd52ba/6abe572041527.image.jpg?crop=1763%2C926%2C0%2C125"
-        }
-      ]
-    },
-    "title": "The Latest : Trump hits the campaign trail , kicking off blitz before midterms",
-    "summary": "2026-10-02 idahostatejournal.com: The Latest : Trump hits the campaign trail , kicking off blitz before midterms\n2026-10-02 idahostatejournal.com: The Latest : Trump hits the campaign trail , kicking off blitz before midterms\n2026-10-02 idahopress.com: The Latest : Trump hits the campaign trail , kicking off blitz before midterms\n2026-10-02 dailyadvance.com: The Latest : Trump hits the campaign trail , kicking off blitz before midterms\n2026-10-02 lancasteronline.com: The Latest : Trump hits the campaign trail in Texas , kicking off blitz before midterms\n2026-10-02 dailyadvance.com: The Latest : Trump hits the campaign trail in Texas , kicking off blitz before midterms",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_alaska-investment-korean",
-    "source": "news",
-    "ts": 1791045126065,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.262,
-      "articles": [
-        {
-          "title": "Trump unveils South Korean investment in pipeline in Alaska , site of a tight Senate race",
-          "url": "https://www.cbsnews.com/news/trump-south-korean-investment-alaska-gas-pipeline/",
-          "domain": "cbsnews.com",
-          "seendate": "2026-09-30T23:15:00Z",
-          "image": "https://assets1.cbsnewsstatic.com/hub/i/r/2026/09/30/bd93680e-d153-4d56-8e1d-7dabba6141c2/thumbnail/1200x630/5b9f16c66102253f5bd80079e561bef2/ap26273787572528.jpg"
-        },
-        {
-          "title": "Trump Unveils $54 Billion In South Korean Investment In Alaska , Site Of A Tight Senate Race",
-          "url": "https://www.theyeshivaworld.com/news/general/2604374/trump-unveils-54-billion-in-south-korean-investment-in-alaska-site-of-a-tight-senate-race.html",
-          "domain": "theyeshivaworld.com",
-          "seendate": "2026-09-30T23:00:00Z",
-          "image": "https://www.theyeshivaworld.com/wp-content/uploads/2026/09/AP26272759343246.jpg"
-        },
-        {
-          "title": "Trump will unveil $54 billion in South Korean investment in Alaska",
-          "url": "https://www.presstelegram.com/2026/09/30/trump-south-korean-investment-alaska/",
-          "domain": "presstelegram.com",
-          "seendate": "2026-09-30T17:45:00Z",
-          "image": "https://www.presstelegram.com/wp-content/uploads/2026/09/Trump_AI_43246-1.jpg"
-        },
-        {
-          "title": "Trump will unveil $54 billion in South Korean investment in Alaska , site of a tight Senate race",
-          "url": "https://www.ksat.com/news/politics/2026/09/30/trump-will-unveil-54-billion-in-south-korean-investment-in-alaska-site-of-a-tight-senate-race/",
-          "domain": "ksat.com",
-          "seendate": "2026-09-30T17:15:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/5GCYV3XDGZDJZPE6VRPIVYREHA.jpg?api_key=ksat_9a37fc89631abedf"
-        }
-      ]
-    },
-    "title": "Trump Unveils $54 Billion In South Korean Investment In Alaska , Site Of A Tight Senate Race",
-    "summary": "2026-09-30 cbsnews.com: Trump unveils South Korean investment in pipeline in Alaska , site of a tight Senate race\n2026-09-30 theyeshivaworld.com: Trump Unveils $54 Billion In South Korean Investment In Alaska , Site Of A Tight Senate Race\n2026-09-30 presstelegram.com: Trump will unveil $54 billion in South Korean investment in Alaska\n2026-09-30 ksat.com: Trump will unveil $54 billion in South Korean investment in Alaska , site of a tight Senate race",
+    "title": "India young return to streets as anger against election chief and Modi grows",
+    "summary": "2026-10-10 newsday.com: India young return to streets as anger against election chief and Modi grows\n2026-10-10 wboc.com: India young return to streets as anger against election chief and Modi grows | International\n2026-10-10 isp.netscape.com: India young return to streets as anger against election chief and Modi grows",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
