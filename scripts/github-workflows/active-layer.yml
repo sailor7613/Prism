@@ -22,6 +22,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - run: node scripts/comtrade.js
+        env:
+          COMTRADE_KEY: ${{ secrets.COMTRADE_KEY }}
+        continue-on-error: true
       - run: node scripts/active-layer.js
         env:
           EIA_API_KEY: ${{ secrets.EIA_API_KEY }}

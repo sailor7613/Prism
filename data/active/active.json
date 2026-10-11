@@ -23,7 +23,7 @@
   "Accruals stay accruals.",
   "Prism sees it through Readings."
  ],
- "builtAt": "2026-10-03T06:10:53.188Z",
+ "builtAt": "2026-10-11T03:05:03.084Z",
  "errors": [],
  "realization": {
   "importsByOrigin": {
@@ -8526,6 +8526,9 @@
   "column": "realization",
   "guard": "Flows do not score Z; they are the layer Z is scored from (PG01 §6.3.1)."
  },
+ "bilateral": {
+  "edges": []
+ },
  "accruals": {
   "column": "realization",
   "what": "Sanctioned-theater flows — estimates, never members (PG01 §6.2a, §6.3.4). Each row: source, asOf, detected, marked estimated, and a declared settlement layer with a basis. 'unknown' is a legitimate value and expected to be the commonest; the map renders it as unknown. Hand-dated; the pipeline never writes here.",
@@ -8596,6 +8599,23 @@
     "settlement": {
      "declared": "unknown",
      "basis": "Unsold; no counterparty yet."
+    }
+   },
+   {
+    "id": "acc-ru-diesel-to-us",
+    "theater": "russia",
+    "from": "Russia",
+    "to": "United States",
+    "asOf": "2026-10-09",
+    "detected": "2026-10-09",
+    "measure": "Russian diesel licensed into the US — promised volumes",
+    "value": 3,
+    "units": "million tonnes total (300k t immediately · 500k t in November · 1M t thereafter), per Trump's post; estimated",
+    "estimated": true,
+    "source": "Trump post 2026-10-09 via The National / CNBC; Russia has not confirmed supply; refinery capacity uncertain after the strike campaign",
+    "settlement": {
+     "declared": "dollar",
+     "basis": "Sale into the US market under an OFAC general license — dollar-invoiced by construction — with Russia's sovereign accounts (central bank, NWF, MinFin) barred from receiving debits at US institutions. The dollar clears; the state is cut out of the clearing."
     }
    }
   ]
@@ -8693,6 +8713,16 @@
     "what": "Ukraine strikes Lukoil's NORSI refinery (Nizhny Novgorod, Russia's 4th-largest; shut down per Reuters) in a claimed 16-target wave.",
     "source": "Reuters via PG01 §4",
     "pg01": "§4 accrual 2026-08-27"
+   },
+   {
+    "id": "evt-ru-diesel-license",
+    "theater": "russia",
+    "kind": "license",
+    "asOf": "2026-10-09",
+    "detected": "2026-10-09",
+    "what": "OFAC general license: Russian-origin diesel may be sold, delivered and imported into the US through April 2027; no debits to Russia's central bank, wealth fund or finance ministry accounts at US banks. Announced by Trump after a call with Putin; diesel $6.27/gal vs $3.67 a year earlier.",
+    "source": "The National 2026-10-09; CNBC, NPR, NBC, Ship & Bunker same day. No license number reported yet.",
+    "pg01": "§4 accrual · P2 window (08-14 → 11-30): the test case — coverage reads price, midterms, Putin; the license's one explicit term is about bank accounts"
    }
   ]
  },
@@ -8737,6 +8767,48 @@
       "style": "dotted"
      }
     ]
+   }
+  ]
+ },
+ "statements": {
+  "column": "detection",
+  "what": "Statements by principals, filed as hypotheses the STATEMENT makes about the realized layer — not ours. Each row: who said what, verbatim, dated by detection; what it implies about where the barrel goes and in what settlement; the observables that would show it; and what falsifies it. The ledger tracks whether the world moved the way the words implied. Hand-dated; the pipeline never writes here. (2026-10-10)",
+  "rows": [
+   {
+    "id": "S1",
+    "theater": "russia",
+    "speaker": "Trump",
+    "venue": "to reporters, the White House",
+    "asOf": "2026-10-10",
+    "detected": "2026-10-10",
+    "verbatim": [
+     "He better damn well stop",
+     "I suggest they get a new leader who can make a deal"
+    ],
+    "context": "One day after the OFAC general license on Russian diesel (evt-ru-diesel-license); the strikes referred to are Ukraine's campaign on Russian refineries (evt-norsi and after).",
+    "implies": "The US now has an interest in Russian refining capacity staying intact; the sanctions regime is being operated as a supply valve; the non-dollar barrel is being licensed back into dollar-settled supply.",
+    "observables": [
+     {
+      "id": "strikes",
+      "what": "Ukrainian strikes on Russian refineries (detection series, theater russia) — stop, slow, or continue at the September rate"
+     },
+     {
+      "id": "ru-distillate-exports",
+      "what": "Russian distillate exports recover (JODI / Comtrade products from Russia, importer-reported)"
+     },
+     {
+      "id": "us-diesel-from-russia",
+      "what": "Russian diesel lands in US ports (EIA distillate imports by origin, RUS)"
+     },
+     {
+      "id": "diesel-price",
+      "what": "US retail diesel falls from $6.27 (2026-10-09)"
+     }
+    ],
+    "falsifiedIf": "Refinery strikes continue at the September rate through November, or no Russian-origin distillate appears in US import data by December 2026.",
+    "outcome": "pending",
+    "outcomeDate": null,
+    "source": "EnergyNow 2026-10-10; Bloomberg, The Hill, Modern Diplomacy same day"
    }
   ]
  },

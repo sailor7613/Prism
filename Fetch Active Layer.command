@@ -16,7 +16,7 @@ if ! command -v node >/dev/null 2>&1; then
   echo "✗ Node isn't installed. Install it from https://nodejs.org (LTS), then try again."
   read -r -p "Press Enter to close."; exit 1
 fi
-node scripts/active-layer.js || { echo; echo "✗ Stopped (see above)."; read -r -p "Press Enter to close."; exit 1; }
+node scripts/comtrade.js; node scripts/active-layer.js || { echo; echo "✗ Stopped (see above)."; read -r -p "Press Enter to close."; exit 1; }
 echo
 echo "✓ Done. Commit data/active in GitHub Desktop."
 echo

@@ -17,6 +17,8 @@
 //                               with as-of + detected dates + settlement
 //   data/active/events.json   — the detection series' dated events
 //   data/active/hypotheses.json — the ledger's predictions this page draws (P3)
+//   data/active/statements.json — statements by principals, filed as what they IMPLY about the realized layer, with observables and a falsifier
+//   data/active/bilateral.json  — written by scripts/comtrade.js (UN Comtrade, importer-reported); bundled here
 //
 // Guards (PG01 §6.3): no row carries a z; no causal field exists; the
 // still frame's axes are drawn by the map, never computed here.
@@ -145,6 +147,19 @@ async function fetchEIA() {
     log('imports by origin:', Object.keys(realization.importsByOrigin.series).length, 'origins,', rows.length, 'rows');
   } catch (e) { errors.push('EIA imports by origin: ' + e.message); }
 
+  // (a) US DISTILLATE imports by origin — monthly, Mbbl/d (2026-10-10: the Russian diesel
+  //     license is a product flow; crude alone can't show it). product EPD0 = distillate fuel oil.
+  try {
+    const rows = (await eiaRows('petroleum/move/impcus', { product: ['EPD0'], process: ['IM0'] }, 'monthly', START)).map(normFlow)
+      .filter(r => /MBBL\/D/i.test(r.units || ''));
+    realization.distillateImportsByOrigin = {
+      what: 'US distillate fuel oil (diesel) imports by country of origin, thousand barrels per day, monthly (EIA, official; as-of = period)',
+      source: 'EIA APIv2 petroleum/move/impcus · EPD0 · IM0',
+      series: toSeries(rows, r => r.areaId || r.area, r => r.area),
+    };
+    log('distillate imports by origin:', Object.keys(realization.distillateImportsByOrigin.series).length, 'origins,', rows.length, 'rows');
+  } catch (e) { errors.push('EIA distillate imports by origin: ' + e.message); }
+
   // (a) US crude exports by destination — monthly, Mbbl/d.
   //     route petroleum/move/expc · product EPC0 · process EEX (exports)
   try {
@@ -233,6 +248,8 @@ function bundle() {
   const accruals = readJSON(path.join(OUT, 'accruals.json'), { rows: [] });
   const events = readJSON(path.join(OUT, 'events.json'), { rows: [] });
   const hypotheses = readJSON(path.join(OUT, 'hypotheses.json'), { rows: [] });
+  const statements = readJSON(path.join(OUT, 'statements.json'), { rows: [] });
+  const bilateral = readJSON(path.join(OUT, 'bilateral.json'), { edges: [] });
   const out = {
     arc: 'PG01', section: '§6 the active layer (ruled 2026-10-02)',
     frame: { x: ['left', 'right'], y: ['grassroots', 'institutional'], z: ['frustrated', 'realized'],
@@ -240,7 +257,7 @@ function bundle() {
     guards: ['Flows do not score Z.', 'No instrumentality claim.', 'The frame stands still.', 'Accruals stay accruals.', 'Prism sees it through Readings.'],
     builtAt: new Date().toISOString(),
     errors,
-    realization, accruals, events, hypotheses, detection, price,
+    realization, bilateral, accruals, events, hypotheses, statements, detection, price,
   };
   writeJSON(path.join(OUT, 'active.json'), out);
 }

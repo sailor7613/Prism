@@ -1,9 +1,41 @@
 {
+  "centralObject": {
+    "kind": "ruling",
+    "ref": "Trump v. Barbara, Supreme Court, 2026-06-30",
+    "name": "The Court's judgment: citizens at birth",
+    "state": "decided",
+    "stateDate": "2026-06-30",
+    "declaredBy": "claude 2026-10-08 — declared from the Reading's own framing for the front door; awaiting Sailor's ruling"
+  },
+  "tethers": [
+    {
+      "statute": "Executive Order 14160 (birthright citizenship)",
+      "cite": "EO 14160, signed 2025-01-20",
+      "title": "The order that never ran",
+      "enacted": "2025-01-20 (enjoined within a month)",
+      "relation": "object",
+      "why": "The instrument the Court held unlawful; it never operated a day."
+    },
+    {
+      "statute": "Immigration and Nationality Act §301(a)",
+      "cite": "8 U.S.C. §1401(a)",
+      "title": "Nationals and citizens of the United States at birth",
+      "enacted": "1952",
+      "relation": "invokes",
+      "why": "Kavanaugh's sixth vote locates the bar here and says Congress may amend it."
+    }
+  ],
   "category": "Law · Constitutional · Citizenship",
   "prompt": "The Court said the child is a citizen the second it is born, and no one has to sign anything. So why did both sides walk out of June 30 already naming their next instrument?",
   "meta": {
     "status": "published",
-    "editHistory": [],
+    "editHistory": [
+      {
+        "at": "2026-10-08T03:30:00.000Z",
+        "by": "Claude",
+        "what": "centralObject + tethers/void declared for the front door (awaiting ruling); no place yet"
+      }
+    ],
     "tierNote": "2026-09-20 (Sailor, published-floor ruling A): the live floor is the current form (split declared, twelve z stored). This reading is formulaVersion 0 — no split, no per-band z — and steps back to drafts until redrafted z-first. Nothing deleted (I8).",
     "previousDraft_v1": {
       "note": "pre-09-21 draft (object-less or mis-dated); superseded by the z-first authoring; also in git history",

@@ -16,4 +16,6 @@ module.exports = {
   CONGRESS_API_KEY: 'paste-your-congress-gov-key-here',
   // PG01 §6 active layer (scripts/active-layer.js) — free: https://www.eia.gov/opendata/register.php
   EIA_API_KEY: 'paste-your-eia-key-here',
+  // optional — UN Comtrade full endpoint (free: comtradeplus.un.org → My account → subscription key); without it scripts/comtrade.js uses the keyless preview
+  COMTRADE_KEY: '',
 };

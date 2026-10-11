@@ -1,9 +1,34 @@
 {
+  "centralObject": {
+    "kind": "bill",
+    "ref": "hr-119-8800",
+    "name": "H.R. 8800 · National Defense Authorization Act for FY2027",
+    "state": "passed the House 216–212",
+    "stateDate": "2026-07-22",
+    "declaredBy": "claude 2026-10-08 — declared from the Reading's own framing for the front door; awaiting Sailor's ruling"
+  },
+  "tethers": [
+    {
+      "billId": "hr-119-8800",
+      "bill": "H.R. 8800",
+      "title": "National Defense Authorization Act for Fiscal Year 2027",
+      "relation": "object",
+      "statusAsOf": "Passed House 216–212, 2026-07-22; blocked in the Senate eight days earlier",
+      "why": "The $1.15 trillion authorization — and the vehicle carrying the US–Israel Defense Technology Cooperation Initiative.",
+      "inDb": false
+    }
+  ],
   "category": "Politics · Congress · War Powers",
   "prompt": "The House authorized $1.15 trillion by four votes for a war it never voted on. When 205 of one party vote no and the Senate won't take the bill up, what exactly did the authorization authorize?",
   "meta": {
     "status": "draft",
-    "editHistory": [],
+    "editHistory": [
+      {
+        "at": "2026-10-08T03:30:00.000Z",
+        "by": "Claude",
+        "what": "centralObject + tethers/void declared for the front door (awaiting ruling); no place yet"
+      }
+    ],
     "previousDraft_v1": {
       "note": "pre-09-21 draft (object-less or mis-dated); superseded by the z-first authoring; also in git history",
       "header": {

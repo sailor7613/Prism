@@ -1282,6 +1282,9 @@ body.light .pad-grid {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath d='M2 3l3 3 3-3' stroke='%23b8c4dc' stroke-width='1.3' fill='none'/%3E%3C/svg%3E");
   background-repeat: no-repeat; background-position: right 10px center;
 }
+/* ⌂ the objects — the door back to the front (2026-10-08); sits where the dropdown was */
+.front-btn { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-mid); background: rgba(9,15,32,.6); border: 1px solid var(--rule); border-radius: 14px; padding: 5px 12px; cursor: pointer; }
+.front-btn:hover { color: var(--ink); border-color: rgba(196,156,72,.55); }
 .event-picker:hover { border-color: rgba(180,198,230,0.7); }
 .event-picker option { color: #1a2030; }
 body.light .event-picker { color: rgba(40,44,54,0.85); background: rgba(255,255,255,0.6); border-color: rgba(80,90,110,0.3); }
@@ -2901,7 +2904,8 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
        status bar (time left / signal right). -->
   <div class="prism-title" id="phaseLabel" hidden>prism · <strong>v2</strong> · event</div>
   <div class="header-right">
-    <select class="event-picker" id="eventPicker" aria-label="Select event" title="Select event"></select>
+    <select class="event-picker" id="eventPicker" aria-label="Select event" title="Select event" hidden></select>
+    <button class="front-btn" id="frontBtn" type="button" title="The objects standing">⌂ the objects</button>
   </div>
   <!-- Dark-only for now. On ship: drop the forced `dark` body class and let
        prefers-color-scheme pick (system default). Light-mode CSS is retained. -->
@@ -3458,7 +3462,8 @@ body.ev-has-photos .ev-framing-beat .ev-keywords { margin-bottom: 10px; gap: 6px
 <script src="../src/js/prism-sync.js"></script>
 <script src="../src/js/prism-field.js?v=2"></script>
 <script src="../src/js/push-config.js" onerror="void 0"></script>
-<script src="../src/js/prism-example.js"></script>   <!-- the practice Reading every new tester meets first (2026-09-26) -->   <!-- push gate + VAPID public key (written by Deploy Push Gate) -->   <!-- profiles + public burns via the burn-gate (2026-09-22) -->
+<script src="../src/js/prism-example.js"></script>
+<script src="../src/js/prism-front.js?v=1"></script>   <!-- the front door: the landing built out of objects (2026-10-08) -->   <!-- the practice Reading every new tester meets first (2026-09-26) -->   <!-- push gate + VAPID public key (written by Deploy Push Gate) -->   <!-- profiles + public burns via the burn-gate (2026-09-22) -->
 <script src="../src/js/prism-ai.js"></script>
 <!-- Congressional roster as a script (not fetch) so it loads on file:// too,
      where Safari/Chrome block fetch() of local JSON. Sets window.PRISM_MEMBERS_DATA
@@ -3613,6 +3618,26 @@ function wireEventPicker() {
   } catch (e) { console.warn('[v2] event picker wiring failed:', e && e.message); }
 }
 wireEventPicker();
+
+// ── THE FRONT DOOR (2026-10-08) — the landing built out of objects (src/js/prism-front.js).
+// Shown to a seated tester who arrives without naming a Reading (?event / ?reading / ?example
+// name one; a newcomer still meets the practice Reading and Ted first). ?front forces it.
+// The dropdown is retired; ⌂ in the header reopens the door.
+function showFrontDoor() {
+  if (typeof PrismFront === 'undefined' || typeof PrismDB === 'undefined') return;
+  const live = (PrismDB.getEvents() || []).filter(isLiveReading);
+  let seat = ''; try { const b = (typeof PrismField !== 'undefined' && PrismField.bound) ? PrismField.bound() : null; if (b && b.avatar) seat = 'seated as ' + b.avatar; } catch (e) {}
+  PrismFront.show({ events: live, currentId: EVENT_ID, seat,
+    onSeat: () => { try { goToPanel(0); } catch (e) {} },
+    onField: () => { try { const t = document.getElementById('deltaTicker'); if (t && !t.hidden) t.scrollIntoView({ behavior: 'smooth', block: 'end' }); } catch (e) {} } });
+}
+(function () {
+  let sp; try { sp = new URLSearchParams(location.search); } catch (e) { return; }
+  const explicit = sp.has('event') || sp.has('reading') || sp.has('example');
+  let seated = false; try { seated = !!localStorage.getItem('prism.example.done'); } catch (e) {}
+  if (sp.has('front') || (!explicit && !window.PRISM_ON_EXAMPLE && !window.PRISM_JOIN && seated)) showFrontDoor();
+  const fb = document.getElementById('frontBtn'); if (fb) fb.addEventListener('click', showFrontDoor);
+})();
 
 // Sync: pull published Readings from the repo on every load — the same quiet
 // contract as the admin surface. This is how a portal user RECEIVES content:
