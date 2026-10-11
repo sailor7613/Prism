@@ -103,6 +103,29 @@ const PrismField = (() => {
     return { ok: true, entry: json && json.entry };
   }
 
+  // ── a call on a slate prediction (2026-10-10): held or missed, under the avatar ──
+  async function pushCall(slateId, call, words) {
+    const pass = store.get(K_PASS);
+    if (!pass) return { skipped: 'unbound' };
+    let res, json = null;
+    try {
+      const seatName = store.get(K_NAME);
+      res = await fetch(GATE + '/call', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(seatName ? { pass, name: seatName, call: { slateId, call, words: words || '' } } : { pass, call: { slateId, call, words: words || '' } }) });
+      try { json = await res.json(); } catch (e) {}
+    } catch (e) { return { ok: false, error: 'the slate is not answering' }; }
+    if (!res.ok) return { ok: false, error: (json && json.error) || ('refused (' + res.status + ')') };
+    return { ok: true, entry: json && json.entry };
+  }
+  // everyone's calls on one prediction — keyless, off the public repo
+  async function pullCalls(slateId) {
+    try {
+      const res = await fetch(RAW_PRISM + 'data/slate/calls/' + slateId + '/manifest.json?t=' + Date.now(), { cache: 'no-store' });
+      if (!res.ok) return [];
+      const j = await res.json();
+      return Array.isArray(j.entries) ? j.entries.filter(e => e && e.kind === 'call') : [];
+    } catch (e) { return []; }
+  }
+
   // ── the field: everyone's burns on a Reading ─────────────────────────
   async function pullField(rid) {
     if (!rid) return [];
@@ -144,5 +167,5 @@ const PrismField = (() => {
     return all[avatar] || { name: nameOf(avatar), bio: '' };
   }
 
-  return { knock, claim, bound, unbind, pushBurn, pullField, field, latestByResident, profileOf, roster, nameOf, GATE };
+  return { knock, claim, bound, unbind, pushBurn, pushCall, pullCalls, pullField, field, latestByResident, profileOf, roster, nameOf, GATE };
 })();

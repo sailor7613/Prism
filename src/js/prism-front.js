@@ -59,6 +59,19 @@
   #front .fr-rail .row:hover .lbl { fill: #f0ebe0; }
   #front .fr-rail .key { font-family: ui-monospace, Menlo, monospace; font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: #7d8290; margin-top: 6px; display: flex; gap: 14px; flex-wrap: wrap; }
   #front .fr-rail .key i { display: inline-block; width: 7px; height: 7px; vertical-align: middle; margin-right: 5px; }
+  /* the slate — predictions stated before election day; held or missed after; testers call them */
+  #front .fr-slate { display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 2px 2px 10px; margin: 0 -2px 14px; }
+  #front .fr-pred { flex: 0 0 300px; scroll-snap-align: start; border: 1px solid rgba(200,210,235,.14); border-radius: 10px; padding: 12px 13px 10px; background: rgba(13,20,40,.7); display: flex; flex-direction: column; gap: 6px; }
+  #front .fr-pred .o { font-size: 13.5px; color: #f0ebe0; }
+  #front .fr-pred .p { font-size: 12.5px; line-height: 1.4; color: #d8d3c8; font-style: italic; }
+  #front .fr-pred .s { font-family: ui-monospace, Menlo, monospace; font-size: 9px; letter-spacing: .12em; text-transform: uppercase; color: #7d8290; }
+  #front .fr-pred .s b { color: #d4aa52; font-weight: normal; }
+  #front .fr-pred .s b.held { color: #60a880; } #front .fr-pred .s b.missed { color: #dc6060; }
+  #front .fr-pred .calls { margin-top: auto; display: flex; gap: 6px; align-items: center; font-family: ui-monospace, Menlo, monospace; font-size: 9.5px; letter-spacing: .12em; text-transform: uppercase; color: #7d8290; }
+  #front .fr-pred .calls button { font: inherit; background: none; color: #b9b4a8; border: 1px solid rgba(200,210,235,.16); border-radius: 10px; padding: 3px 9px; cursor: pointer; }
+  #front .fr-pred .calls button.on { border-color: #d4aa52; color: #d4aa52; }
+  #front .fr-pred .calls .n { margin-left: auto; }
+  #front .fr-countdown { font-family: ui-monospace, Menlo, monospace; font-size: 9.5px; letter-spacing: .18em; text-transform: uppercase; color: #d4aa52; margin: -4px 0 8px; }
   /* the doors */
   #front .fr-doors { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
   #front .fr-door { border: 1px solid rgba(200,210,235,.14); border-radius: 10px; padding: 12px 13px; background: rgba(13,20,40,.55); cursor: pointer; text-decoration: none; color: inherit; display: block; min-height: 96px; }
@@ -187,6 +200,9 @@
         '<div class="fr-objects" id="frObjects">' + rest.map(e => { const o = objectOf(e); return '<div class="fr-card' + (e.id === opts.currentId ? ' now' : '') + '" data-id="' + esc(e.id) + '">' + planeSVG(e, false) + chip(o, true) + '<div class="n">' + esc(short(o.name, 70)) + '</div><div class="t">' + esc(e.title || '') + '</div><div class="d">' + esc(fmtDate(o.stateDate || e.date)) + (o.state ? ' · ' + esc(short(o.state, 26)) : '') + '</div></div>'; }).join('') + '</div>' +
         '<h2>the rail · the object stays, the noise moves</h2>' +
         '<div class="fr-rail" id="frRail"></div>' +
+        '<h2>the slate · called before election day</h2>' +
+        '<div class="fr-countdown" id="frCountdown"></div>' +
+        '<div class="fr-slate" id="frSlate"></div>' +
         '<h2>the dimensions</h2>' +
         '<div class="fr-doors">' +
           '<a class="fr-door arc" href="../active/?ted"><div class="ic">' + ICON.arc + '</div><div class="k">the arc</div><div class="n">Where the oil went</div><div class="l" id="frArc">reading the layer…</div></a>' +
@@ -197,7 +213,7 @@
         '</div>' +
       '</div>';
 
-    loadRail(live);
+    loadSlate();
     root.querySelector('#frX').addEventListener('click', hide);
     root.querySelector('#frRead').addEventListener('click', ev => { ev.stopPropagation(); openHead(); });
     root.querySelector('#frHead').addEventListener('click', openHead);
@@ -240,7 +256,8 @@
       .filter(r => r.t0).sort((a, b) => b.t0 - a.t0);
     if (!rows.length) { host.innerHTML = ''; return; }
     const today = dayOf(Date.now());
-    const tMin = Math.min(...rows.map(r => r.t0)) - 15 * 864e5, tMax = today + 10 * 864e5;
+    const election = opts.electionDay ? dayStr(opts.electionDay) : null;
+    const tMin = Math.min(...rows.map(r => r.t0)) - 15 * 864e5, tMax = Math.max(today, election || 0) + 10 * 864e5;
     const W = 900, L = 170, R = 16, rowH = 22, top = 18, H = top + rows.length * rowH + 22;
     const x = t => L + (t - tMin) / (tMax - tMin) * (W - L - R);
     const parts = ['<svg viewBox="0 0 ' + W + ' ' + H + '" preserveAspectRatio="none" style="height:' + H + 'px" aria-label="The rail">'];
@@ -254,6 +271,11 @@
     // today
     parts.push('<line x1="' + x(today) + '" y1="' + top + '" x2="' + x(today) + '" y2="' + (H - 18) + '" stroke="rgba(212,170,82,.5)" stroke-width="1" stroke-dasharray="2 3"/>');
     parts.push('<text x="' + (x(today) - 3) + '" y="' + (top - 6) + '" text-anchor="end" font-family="ui-monospace,Menlo,monospace" font-size="8.5" fill="#d4aa52" letter-spacing=".12em">TODAY</text>');
+    // the election: the date every line runs toward; after it the lines keep going — what the vote changed and what it didn't
+    if (election) {
+      parts.push('<line x1="' + x(election) + '" y1="' + top + '" x2="' + x(election) + '" y2="' + (H - 18) + '" stroke="rgba(240,235,224,.55)" stroke-width="1.5"/>');
+      parts.push('<text x="' + (x(election) + 4) + '" y="' + (top - 6) + '" font-family="ui-monospace,Menlo,monospace" font-size="8.5" fill="#f0ebe0" letter-spacing=".12em">' + (today < election ? 'ELECTION · ' + Math.ceil((election - today) / 864e5) + ' DAYS' : 'ELECTION') + '</text>');
+    }
     rows.forEach((r, i) => {
       const y = top + i * rowH + rowH / 2;
       parts.push('<g class="row" data-id="' + esc(r.e.id) + '">');
@@ -285,6 +307,53 @@
     if (typeof PrismField !== 'undefined' && PrismField.pullField) {
       Promise.all(live.filter(e => e.rid).map(e => PrismField.pullField(e.rid).then(b => { cache[e.rid] = b || []; }).catch(() => {}))).then(() => drawRail(live, cache, events));
     }
+  }
+
+  // ── the slate: predictions, their state, and the testers' calls ──
+  function drawSlate(slate, callsById, mine) {
+    const host = root.querySelector('#frSlate'); if (!host) return;
+    const cd = root.querySelector('#frCountdown');
+    if (cd && slate.electionDay) { const d = Math.ceil((dayStr(slate.electionDay) - dayOf(Date.now())) / 864e5); cd.textContent = (d > 0 ? d + ' days to the vote · ' : d === 0 ? 'election day · ' : 'after the vote · ') + 'stated ' + fmtDate(slate.statedDate) + ' · outcomes never revised'; }
+    const bound = !!(opts.seat);
+    host.innerHTML = (slate.rows || []).map(r => {
+      const calls = callsById[r.id] || [], held = calls.filter(c => c.call === 'held').length, missed = calls.length - held, my = mine[r.id];
+      const st = r.outcome === 'pending' ? '<b>pending</b>' : '<b class="' + esc(r.outcome) + '">' + esc(r.outcome) + '</b>';
+      return '<div class="fr-pred" data-id="' + esc(r.id) + '"' + (r.rid ? ' data-rid="' + esc(r.rid) + '"' : '') + '>' +
+        '<div class="s">' + esc(r.id.replace('slate', 'the slate · ')) + ' · ' + st + '</div>' +
+        '<div class="o">' + esc(r.object) + '</div>' +
+        '<div class="p">' + esc(r.prediction) + '</div>' +
+        '<div class="s">missed if ' + esc(short(r.missedIf, 90)) + '</div>' +
+        '<div class="calls">' + (bound ? '<button data-call="held"' + (my === 'held' ? ' class="on"' : '') + '>held</button><button data-call="missed"' + (my === 'missed' ? ' class="on"' : '') + '>missed</button>' : '<span>take a seat to call it</span>') +
+        '<span class="n">' + held + ' held · ' + missed + ' missed</span></div></div>';
+    }).join('');
+    host.querySelectorAll('.fr-pred button[data-call]').forEach(b => b.addEventListener('click', async ev => {
+      ev.stopPropagation();
+      const card = b.closest('.fr-pred'), id = card.dataset.id, call = b.dataset.call;
+      if (typeof PrismField === 'undefined' || !PrismField.pushCall) return;
+      b.textContent = '…';
+      const r = await PrismField.pushCall(id, call, '');
+      if (r && r.ok) { mine[id] = call; callsById[id] = (callsById[id] || []).filter(c => c.author !== (r.entry && r.entry.author)).concat([r.entry]); drawSlate(slate, callsById, mine); }
+      else { b.textContent = call; if (r && r.error) alert(r.error); }
+    }));
+    host.querySelectorAll('.fr-pred[data-rid]').forEach(card => card.addEventListener('click', () => {
+      const rid = card.dataset.rid, e = (opts.events || []).find(x => x.rid === rid); if (!e) return;
+      if (e.id === opts.currentId) hide(); else { const u = new URL(location.href); u.searchParams.delete('front'); u.searchParams.delete('reading'); u.searchParams.set('event', e.id); location.href = u.toString(); }
+    }));
+  }
+  function loadSlate() {
+    fetch('../data/slate/slate.json', { cache: 'no-store' }).then(r => r.ok ? r.json() : null).then(async slate => {
+      if (!slate) { const h = root.querySelector('#frSlate'); if (h) h.innerHTML = ''; loadRail(opts.events || []); return; }
+      opts.electionDay = slate.electionDay;
+      const callsById = {}, mine = {};
+      drawSlate(slate, callsById, mine);
+      if (typeof PrismField !== 'undefined' && PrismField.pullCalls) {
+        let me = null; try { const b = PrismField.bound(); me = b && b.avatar; } catch (e) {}
+        await Promise.all((slate.rows || []).map(r => PrismField.pullCalls(r.id).then(cs => { callsById[r.id] = cs; const m = cs.find(c => c.author === me); if (m) mine[r.id] = m.call; }).catch(() => {})));
+        drawSlate(slate, callsById, mine);
+      }
+      try { drawRail(opts.events || [], {}, []); } catch (e) {}
+      loadRail(opts.events || []);
+    }).catch(() => loadRail(opts.events || []));
   }
 
   function show(o) { opts = Object.assign({}, opts || {}, o || {}); build(); render(); root.hidden = false; document.body.classList.add('on-front'); try { root.scrollTop = 0; } catch (e) {} }
