@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-10-12T11:06:13.558Z · 20 legislative + 1 news (GDELT, 3d)
+// 2026-10-12T21:19:49.222Z · 19 legislative + 1 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1791803139525,
+    "ts": 1791839960949,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.817,
+      "salience": 0.815,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -262,11 +262,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1791803139525,
+    "ts": 1791839960949,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.807,
+      "salience": 0.805,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -519,11 +519,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1791803139524,
+    "ts": 1791839960948,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.772,
+      "salience": 0.77,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -1937,11 +1937,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1791803139525,
+    "ts": 1791839960949,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.771,
+      "salience": 0.77,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -2194,11 +2194,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1791803139524,
+    "ts": 1791839960949,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.764,
+      "salience": 0.762,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -2451,11 +2451,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1791803139524,
+    "ts": 1791839960949,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.701,
+      "salience": 0.699,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -3364,11 +3364,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1791803139525,
+    "ts": 1791839960949,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.66,
+      "salience": 0.658,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3892,11 +3892,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1791803139524,
+    "ts": 1791839960949,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.637,
+      "salience": 0.635,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4793,11 +4793,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-198",
     "source": "legislative",
-    "ts": 1791803139523,
+    "ts": 1791839960948,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-198",
-      "salience": 0.478,
+      "salience": 0.476,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
       "votes": [
         {
@@ -5045,286 +5045,13 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_leg_s-119-4784",
-    "source": "legislative",
-    "ts": 1791803139523,
-    "raw": {
-      "method": "legislative_rollcall_v1",
-      "billId": "s-119-4784",
-      "salience": 0.469,
-      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4784",
-      "votes": [
-        {
-          "voteId": "s-119-2-195",
-          "chamber": "senate",
-          "date": "July 14, 2026,  02:41 PM",
-          "question": "On Cloture on the Motion to Proceed",
-          "result": "Cloture on the Motion to Proceed Rejected",
-          "margin": 0.042,
-          "totals": {
-            "yea": 50,
-            "nay": 46,
-            "present": 0,
-            "notVoting": 4
-          },
-          "party": {
-            "D": {
-              "yea": 0,
-              "nay": 43
-            },
-            "R": {
-              "yea": 50,
-              "nay": 1
-            },
-            "I": {
-              "yea": 0,
-              "nay": 2
-            }
-          },
-          "positions": {
-            "yea": [
-              "B001299",
-              "B001261",
-              "B001243",
-              "B001236",
-              "B001319",
-              "B001305",
-              "C001047",
-              "C001075",
-              "C001035",
-              "C001056",
-              "C001095",
-              "C001096",
-              "C000880",
-              "C001098",
-              "C001114",
-              "D000618",
-              "E000295",
-              "F000463",
-              "G000359",
-              "G000386",
-              "H000601",
-              "H001089",
-              "H001061",
-              "H001104",
-              "H001079",
-              "J000293",
-              "K000393",
-              "L000575",
-              "L000577",
-              "L000571",
-              "M001198",
-              "M001243",
-              "M001244",
-              "M000934",
-              "M001242",
-              "M001153",
-              "P000603",
-              "R000618",
-              "R000584",
-              "R000605",
-              "S001227",
-              "S001217",
-              "S001184",
-              "S001232",
-              "S001198",
-              "T000476",
-              "T000278",
-              "W000437",
-              "Y000064"
-            ],
-            "nay": [
-              "A000382",
-              "B001230",
-              "B001267",
-              "B001277",
-              "B001303",
-              "B001288",
-              "C000127",
-              "C001088",
-              "C001113",
-              "D000622",
-              "D000563",
-              "G000574",
-              "G000555",
-              "H001076",
-              "H001046",
-              "H000273",
-              "H001042",
-              "K000384",
-              "K000377",
-              "K000394",
-              "K000383",
-              "K000367",
-              "M000133",
-              "M001176",
-              "M001169",
-              "M001111",
-              "O000174",
-              "P000595",
-              "R000122",
-              "R000608",
-              "S000033",
-              "S001194",
-              "S001150",
-              "S000148",
-              "S001181",
-              "S001208",
-              "S001203",
-              "T000250",
-              "V000128",
-              "W000805",
-              "W000790",
-              "W000817",
-              "W000800",
-              "W000802",
-              "W000779"
-            ],
-            "present": [],
-            "notVoting": [
-              "F000479",
-              "J000312",
-              "M000355",
-              "P000145"
-            ]
-          }
-        }
-      ]
-    },
-    "title": "National Defense Authorization Act for Fiscal Year 2027",
-    "summary": "2026-07-14 senate: On Cloture on the Motion to Proceed — Cloture on the Motion to Proceed Rejected (50-46; D 0-43 · R 50-1 · I 0-2)",
-    "framingDraft": "The NDAA vote nominally splits on partisan lines over advancing the defense bill, but beneath that lies a recurring tension over how the bill's substance—troop levels, weapons systems, base policy riders—should be shaped: through open floor amendment or through leadership-controlled process. The near-unanimous party split on cloture masks disagreements that surface once members discuss amendment access and policy riders (culture-war provisions, Ukraine funding, personnel policy) rather than the topline authorization itself.",
-    "suggestedAxes": {
-      "x": {
-        "pos": "Advance the bill",
-        "neg": "Block the bill"
-      },
-      "y": {
-        "pos": "Open amendment process",
-        "neg": "Leadership-controlled process"
-      }
-    },
-    "prevalentAxisGuess": "x",
-    "members": [
-      "B001299",
-      "B001261",
-      "B001243",
-      "B001236",
-      "B001319",
-      "B001305",
-      "C001047",
-      "C001075",
-      "C001035",
-      "C001056",
-      "C001095",
-      "C001096",
-      "C000880",
-      "C001098",
-      "C001114",
-      "D000618",
-      "E000295",
-      "F000463",
-      "G000359",
-      "G000386",
-      "H000601",
-      "H001089",
-      "H001061",
-      "H001104",
-      "H001079",
-      "J000293",
-      "K000393",
-      "L000575",
-      "L000577",
-      "L000571",
-      "M001198",
-      "M001243",
-      "M001244",
-      "M000934",
-      "M001242",
-      "M001153",
-      "P000603",
-      "R000618",
-      "R000584",
-      "R000605",
-      "S001227",
-      "S001217",
-      "S001184",
-      "S001232",
-      "S001198",
-      "T000476",
-      "T000278",
-      "W000437",
-      "Y000064",
-      "A000382",
-      "B001230",
-      "B001267",
-      "B001277",
-      "B001303",
-      "B001288",
-      "C000127",
-      "C001088",
-      "C001113",
-      "D000622",
-      "D000563",
-      "G000574",
-      "G000555",
-      "H001076",
-      "H001046",
-      "H000273",
-      "H001042",
-      "K000384",
-      "K000377",
-      "K000394",
-      "K000383",
-      "K000367",
-      "M000133",
-      "M001176",
-      "M001169",
-      "M001111",
-      "O000174",
-      "P000595",
-      "R000122",
-      "R000608",
-      "S000033",
-      "S001194",
-      "S001150",
-      "S000148",
-      "S001181",
-      "S001208",
-      "S001203",
-      "T000250",
-      "V000128",
-      "W000805",
-      "W000790",
-      "W000817",
-      "W000800",
-      "W000802",
-      "W000779"
-    ],
-    "bills": [
-      "s-119-4784"
-    ],
-    "fitness": {
-      "score": 0.35,
-      "reason": "The vote here is a stark 50-46 party-line cloture vote with only one Republican defector and no Democrats, which is classic minority-blocks-for-leverage behavior, not evidence of a substantive amendment-process divide. Without visible floor debate specifics or amendment fights recorded, the open-vs-controlled process axis is plausible in NDAA history generally (riders on trans troops, Ukraine aid, base closures typically scramble coalitions) but cannot be confirmed from this single cloture roll call, which is procedural in nature and essentially redundant with the underlying partisan vote-to-block dynamic. This is a case where a good second axis likely exists in the broader debate over riders, but the evidence given doesn't let me name specific defectors or factions to confirm it isn't just the same binary in procedural clothing.",
-      "method": "m2_constitutive_v1",
-      "ts": "2026-07-20T02:11:12.408Z"
-    },
-    "status": "held",
-    "voteMap": {
-      "voteId": "s-119-2-195",
-      "yeaPole": "pos"
-    },
-    "mts": 1784513472408
-  },
-  {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1791803139524,
+    "ts": 1791839960949,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.444,
+      "salience": 0.442,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -6219,11 +5946,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1791803139524,
+    "ts": 1791839960948,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.432,
+      "salience": 0.43,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -7498,11 +7225,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1791803139525,
+    "ts": 1791839960949,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.351,
+      "salience": 0.35,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -8418,11 +8145,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1791803139525,
+    "ts": 1791839960949,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.35,
+      "salience": 0.348,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -9328,11 +9055,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1791803139524,
+    "ts": 1791839960949,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.315,
+      "salience": 0.314,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -10246,11 +9973,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1791803139524,
+    "ts": 1791839960949,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.272,
+      "salience": 0.27,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -11126,11 +10853,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1791803139524,
+    "ts": 1791839960949,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.268,
+      "salience": 0.266,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -12002,11 +11729,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1791803139523,
+    "ts": 1791839960948,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.076,
+      "salience": 0.074,
       "congressGovUrl": null,
       "votes": [
         {
@@ -12895,11 +12622,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1791803139524,
+    "ts": 1791839960948,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.069,
+      "salience": 0.067,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -13810,11 +13537,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1791803139524,
+    "ts": 1791839960948,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.062,
+      "salience": 0.06,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -14698,12 +14425,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_against-anger-chief",
     "source": "news",
-    "ts": 1791803173554,
+    "ts": 1791839989217,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.288,
+      "salience": 0.224,
       "articles": [
         {
           "title": "India young return to streets as anger against election chief and Modi grows",
