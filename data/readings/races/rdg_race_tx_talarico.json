@@ -1,0 +1,242 @@
+{
+ "rid": "rdg_race_tx_talarico",
+ "schema": "reading/v1",
+ "kind": "race",
+ "race": "tx-sen",
+ "variant": "talarico",
+ "title": "The Insulin Bill Beats the Lawsuit",
+ "category": "The Races · Midterms 2026",
+ "date": "2026-11-03",
+ "updatedAt": "2026-10-12T18:00:00.000Z",
+ "centralObject": {
+  "kind": "seat",
+  "ref": "tx-sen",
+  "name": "Texas's Senate seat (Class 2)",
+  "state": "conditional — paid on election day",
+  "stateDate": "2026-11-03",
+  "declared": true
+ },
+ "prompt": "If James Talarico flips Texas: what was actually on the ballot — the seat, or the walkout?",
+ "framing": "A state representative with one statute to his name (the $25 insulin cap) beats the Attorney General who sued to vacate his seat, after the party chose Paxton over its own senator 64–36. The polls had him ahead or tied in nineteen of twenty since July.",
+ "framingKeywords": [],
+ "axes": {
+  "x": {
+   "pos": "Right",
+   "neg": "Left"
+  },
+  "y": {
+   "pos": "Institutional",
+   "neg": "Populist"
+  },
+  "z": {
+   "pos": "The seat delivers — vouchers answered, insulin, the Valley",
+   "neg": "The seat is a thirty-eight-year habit with a new name on it"
+  }
+ },
+ "prevalentAxis": "x",
+ "split": {
+  "topology": "peel",
+  "strength": 0.55,
+  "seam": "the institutional right peels from the populist right on whose loss this was — the primary's or the party's",
+  "rationale": "The left is whole on yes; the right splits on blame. A flip realizes C and A; B is frustrated at the primary, not the general; D is frustrated but half-charmed.",
+  "ruledBy": null,
+  "date": "2026-10-12"
+ },
+ "responses": {
+  "A": {
+   "xSide": "left",
+   "source": "race reading — authored z-first, blind to the other variant",
+   "fluid": {
+    "text": "Texas. Texas! The map just broke open.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": 0.7,
+    "zReason": "The seat realized as a count; the biggest count on the board.",
+    "instrument": {
+     "holder": "the Senate Democratic caucus",
+     "trusted": true
+    }
+   },
+   "coalition": {
+    "text": "A state rep beat the Attorney General in Texas on vouchers and insulin. That's the model, and we'll fund it in six more states.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": 0.6,
+    "zReason": "Realized through the caucus and the model; the holder trusted.",
+    "instrument": {
+     "holder": "the Senate Democratic caucus",
+     "trusted": true
+    }
+   },
+   "denominated": {
+    "text": "I don't need him to be a progressive. I need the gavel. Texas gave us the gavel.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": 0.8,
+    "zReason": "The rim's object is the majority instrument; a Texas flip delivers it outright.",
+    "instrument": {
+     "holder": "the Senate Democratic caucus",
+     "trusted": true
+    }
+   }
+  },
+  "B": {
+   "xSide": "right",
+   "source": "race reading — authored z-first, blind to the other variant",
+   "fluid": {
+    "text": "We nominated Paxton and lost Texas. Cornyn would have won by ten.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": -1.0,
+    "zReason": "The seat lost; the station's instrument (the incumbent) was discarded by its own primary.",
+    "instrument": {
+     "holder": "the Republican primary electorate",
+     "trusted": false
+    }
+   },
+   "coalition": {
+    "text": "Hunt, Cornyn, the runoff — the party chose the indictment over the incumbent and paid with the seat. The object was always the seat.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": -0.9,
+    "zReason": "Frustration signed at the primary electorate; the holder was never trusted.",
+    "instrument": {
+     "holder": "the Republican primary electorate",
+     "trusted": false
+    }
+   },
+   "denominated": {
+    "text": "I'll say what nobody will: the primary was the loss. Paxton never delivered anything to the Senate map except a vacancy.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": -1.0,
+    "zReason": "The rim distrusts the holder completely; the object is gone.",
+    "instrument": {
+     "holder": "the Republican primary electorate",
+     "trusted": false
+    }
+   }
+  },
+  "C": {
+   "xSide": "left",
+   "source": "race reading — authored z-first, blind to the other variant",
+   "fluid": {
+    "text": "The voucher guy lost to the insulin guy. Rogan's audience voted for the seminarian.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": 0.9,
+    "zReason": "The seat held by one of us; realized on sight.",
+    "instrument": {
+     "holder": "James Talarico",
+     "trusted": true
+    }
+   },
+   "coalition": {
+    "text": "He broke quorum, Paxton sued, the court threw it out, and Texas picked the one who walked. The walkout was answered.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": 0.8,
+    "zReason": "The object (the walkout as an act) is realized by the vote; holder trusted.",
+    "instrument": {
+     "holder": "James Talarico",
+     "trusted": true
+    }
+   },
+   "denominated": {
+    "text": "He'll vote with Schumer on the war money and I'll be the one saying so. But the seat flipped on rent and insulin, not on the caucus — hold him to that.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": 0.4,
+    "zReason": "The rim trusts the holder, distrusts the vehicle; z positive but thin.",
+    "instrument": {
+     "holder": "James Talarico",
+     "trusted": true
+    }
+   }
+  },
+  "D": {
+   "xSide": "right",
+   "source": "race reading — authored z-first, blind to the other variant",
+   "fluid": {
+    "text": "Paxton lost? In Texas? Somebody rigged something.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": -0.9,
+    "zReason": "The seat lost and the loss disbelieved; frustrated at the instrument of the count.",
+    "instrument": {
+     "holder": "the Trump endorsement",
+     "trusted": false
+    }
+   },
+   "coalition": {
+    "text": "Trump endorsed on the nineteenth and Texas said no in November. Read it: the endorsement isn't the object anymore.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": -0.7,
+    "zReason": "Frustration at the holder of the endorsement; the station's own instrument failed.",
+    "instrument": {
+     "holder": "the Trump endorsement",
+     "trusted": false
+    }
+   },
+   "denominated": {
+    "text": "Talarico's a preacher who reads the Bible on Rogan. Half our people liked him. If he votes against the next CR he's done more for us than Cornyn did.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": -0.1,
+    "zReason": "The rim half-trusts the winner as a populist; z nearly zero.",
+    "instrument": {
+     "holder": "the Trump endorsement",
+     "trusted": false
+    }
+   }
+  }
+ },
+ "impliedZ": -0.033,
+ "window": {
+  "opens": "2026-10-12",
+  "closes": "2026-11-03",
+  "rule": "§4c — the trigger day is declared in advance; the frame dates itself on the vote"
+ },
+ "meta": {
+  "status": "claude-draft",
+  "conditional": true,
+  "paidOn": "2026-11-03",
+  "source": "Parallelogram race reading, 2026-10-12 — two conditional Readings per seat; one collapses into the live Reading on 11-03, the other retires as the record of the miss",
+  "editHistory": [
+   {
+    "at": "2026-10-12T18:00:00.000Z",
+    "by": "claude",
+    "what": "authored z-first, twelve stations, blind"
+   }
+  ],
+  "aiDeltas": []
+ },
+ "formulaVersion": "1",
+ "diatribeLayer": "owed",
+ "images": []
+}

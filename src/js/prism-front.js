@@ -73,7 +73,11 @@
   #front .fr-pred .calls .n { margin-left: auto; }
   #front .fr-countdown { font-family: ui-monospace, Menlo, monospace; font-size: 9.5px; letter-spacing: .18em; text-transform: uppercase; color: #d4aa52; margin: -4px 0 8px; }
   /* the doors */
-  #front .fr-doors { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+  #front .fr-doors { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
+  #front .fr-door.paper { background: #e7e2d3; color: #1c1a16; border-color: #c9c2ad; }
+  #front .fr-door.paper .k { color: #2c4470; }
+  #front .fr-door.paper .l { color: #2c4470; }
+  #front .fr-door.paper:hover { border-color: #1c1a16; }
   #front .fr-door { border: 1px solid rgba(200,210,235,.14); border-radius: 10px; padding: 12px 13px; background: rgba(13,20,40,.55); cursor: pointer; text-decoration: none; color: inherit; display: block; min-height: 96px; }
   #front .fr-door:hover { border-color: rgba(212,170,82,.5); }
   #front .fr-door .k { font-family: ui-monospace, Menlo, monospace; font-size: 9px; letter-spacing: .18em; text-transform: uppercase; color: #7d8290; }
@@ -163,6 +167,7 @@
     seat: '<svg viewBox="0 0 44 44" fill="none" stroke="rgba(240,235,224,.6)" stroke-width="1.5"><circle cx="22" cy="16" r="7" stroke-dasharray="3 2"/><path d="M8 38 Q22 24 36 38" stroke-dasharray="3 2"/><circle cx="22" cy="16" r="2" fill="#d4aa52" stroke="none"/></svg>',
     ted: '<img src="' + IMG + 'Ted.png" alt="">',
     codex: '<img src="' + IMG + 'prism_mark.png" alt="" style="object-fit:contain">',
+    paper: '<svg viewBox="0 0 44 44" fill="none" stroke="#2c4470" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M13 8 H40 L31 36 H4 Z"/><path d="M17 16 H34" stroke="#d9a93a"/><path d="M14 23 H30" stroke="#de4f2b"/><path d="M11 30 H25" stroke="#5f8e3f"/></svg>',
   };
 
   let root = null, opts = null;
@@ -209,6 +214,7 @@
           '<div class="fr-door" id="frField"><div class="ic">' + ICON.field + '</div><div class="k">the field</div><div class="n">What the newsroom is watching</div><div class="l" id="frFieldLine">…</div></div>' +
           '<div class="fr-door" id="frSeat"><div class="ic">' + ICON.seat + '</div><div class="k">your seat</div><div class="n">Your pins and burns</div><div class="l" id="frSeatLine">' + esc(opts.seat || 'take a seat') + '</div></div>' +
           '<a class="fr-door" href="?example"><div class="ic">' + ICON.ted + '</div><div class="k">ted</div><div class="n">The tour, again</div><div class="l">a small real law, three moves</div></a>' +
+          '<a class="fr-door paper" href="../parallelogram/"><div class="ic">' + ICON.paper + '</div><div class="k">the election paper</div><div class="n">Is the race moving the needle?</div><div class="l" id="frPaperLine">laying out…</div></a>' +
           '<a class="fr-door" href="https://sailor7613.github.io/dreamgetty/" target="_blank" rel="noopener"><div class="ic">' + ICON.codex + '</div><div class="k">the codex</div><div class="n">The words, defined</div><div class="l">object · settlement · the frame · z</div></a>' +
         '</div>' +
       '</div>';
@@ -221,6 +227,17 @@
     root.querySelector('#frField').addEventListener('click', () => { hide(); if (typeof opts.onField === 'function') opts.onField(); });
     root.querySelector('#frSeat').addEventListener('click', () => { hide(); if (typeof opts.onSeat === 'function') opts.onSeat(); });
 
+    // the paper's line — quiet on failure
+    fetch('../data/races/races.json', { cache: 'no-store' }).then(r => r.json()).then(async j => {
+      const el = root.querySelector('#frPaperLine'); if (!el) return;
+      const days = Math.ceil((dayStr(j.electionDay) - dayOf(Date.now())) / 864e5);
+      const parts = [];
+      for (const rc of (j.races || []).slice(0, 2)) {
+        const zs = await Promise.all(rc.variants.map(v => fetch(v.file.replace(/^\.\.\//, '../'), { cache: 'no-store' }).then(r => r.json()).then(x => x.impliedZ).catch(() => null)));
+        parts.push(rc.shortSeat.split(',')[0] + ' ' + zs.map(z => z == null ? '·' : (z > 0 ? '+' : z < 0 ? '−' : '') + Math.abs(z).toFixed(2)).join(' / '));
+      }
+      el.textContent = parts.join(' · ') + (days > 0 ? ' · ' + days + ' days' : '');
+    }).catch(() => {});
     // live lines — both optional, both quiet on failure
     fetch('../data/active/active.json', { cache: 'no-store' }).then(r => r.ok ? r.json() : null).then(a => {
       const el = root.querySelector('#frArc'); if (!el) return;

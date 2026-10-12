@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Parallelogram · The Races</title>
+<meta name="description" content="Parallelogram — Prism's election paper. Is this race moving the needle the right way? Scored before the vote, checked after.">
+<link rel="icon" href="../pwa/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sky: #0b1020;
+    --paper: #e7e2d3;
+    --paper-2: #ddd7c6;
+    --paper-edge: #c9c2ad;
+    --ink: #1c1a16;
+    --ink-2: #4f4a40;
+    --ink-3: #8a8375;
+    --navy: #2c4470;
+    --gold: #d9a93a;
+    --red: #de4f2b;
+    --green: #5f8e3f;
+    --blue: #6e7fc0;
+    --orange: #e38a2d;
+    --serif: "Fraunces", "Iowan Old Style", Georgia, serif;
+    --mono: "DM Mono", ui-monospace, Menlo, monospace;
+    --col: 1120px;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    background: var(--sky) radial-gradient(ellipse at 50% -20%, #17213f 0%, var(--sky) 60%);
+    color: var(--ink); font-family: var(--serif); font-optical-sizing: auto;
+    overflow: hidden; -webkit-font-smoothing: antialiased;
+  }
+  /* the sky: fixed; the paper: a sheet that scrolls inside it (no page scroll) */
+  #sky { position: fixed; inset: 0; display: grid; grid-template-rows: auto 1fr; }
+  #strip {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding: 10px 18px; color: #c9c4b6; font-family: var(--mono); font-size: 11px; letter-spacing: .04em;
+  }
+  #strip a { color: #c9c4b6; text-decoration: none; border-bottom: 1px dotted #5c6480; }
+  #strip a:hover { color: #fff; }
+  #sheetWrap { overflow: auto; padding: 0 16px 40px; scroll-behavior: smooth; }
+  #sheet {
+    position: relative; margin: 0 auto; max-width: var(--col);
+    background: var(--paper);
+    box-shadow: 0 30px 80px rgba(0,0,0,.55), 0 2px 0 var(--paper-edge) inset;
+    padding: clamp(18px, 3vw, 44px) clamp(16px, 3.5vw, 56px) 60px;
+  }
+  /* paper grain, procedurally */
+  #sheet::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .5; mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .55 0 0 0 0 .52 0 0 0 0 .45 0 0 0 .35 0'/></filter><rect width='300' height='300' filter='url(%23g)'/></svg>");
+  }
+  #sheet > * { position: relative; }
+
+  /* ── masthead ── */
+  .masthead { display: grid; grid-template-columns: auto 1fr auto; align-items: end; gap: 18px; padding-bottom: 10px; }
+  .masthead h1 {
+    margin: 0; font-weight: 800; font-variation-settings: "opsz" 144, "SOFT" 60, "WONK" 1;
+    font-size: clamp(40px, 7vw, 84px); line-height: .9; letter-spacing: -.02em; color: var(--ink);
+  }
+  .masthead h1 small { display: block; font-weight: 400; font-style: italic; font-size: .26em; letter-spacing: 0; color: var(--ink-2); margin-top: 8px; font-variation-settings: "opsz" 14, "WONK" 1; }
+  .mark { width: clamp(54px, 8vw, 96px); height: auto; }
+  .dateline { text-align: right; font-size: 13px; line-height: 1.5; color: var(--ink-2); }
+  .dateline b { display: block; font-size: 22px; font-weight: 600; color: var(--ink); font-variation-settings: "opsz" 40; }
+  .dateline .days { font-family: var(--mono); font-size: 11px; letter-spacing: .06em; color: var(--navy); }
+
+  .crayon-rule { height: 10px; width: 100%; display: block; }
+
+  /* ── section heads ── */
+  .sec { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; margin: 34px 0 10px; }
+  .sec h2 { white-space: nowrap; }
+  .sec h2 { margin: 0; font-style: italic; font-weight: 500; font-size: 26px; font-variation-settings: "opsz" 48, "WONK" 1; letter-spacing: -.01em; }
+  .sec .glyph { width: 26px; height: 26px; flex: none; align-self: center; }
+  .sec p { margin: 0; color: var(--ink-3); font-size: 14px; font-style: italic; }
+
+  /* ── the lede ── */
+  .lede { display: grid; grid-template-columns: 1.4fr 1fr; gap: 36px; margin-top: 14px; }
+  .lede h2 { margin: 0 0 10px; font-weight: 700; font-size: clamp(28px, 4vw, 44px); line-height: 1.02; letter-spacing: -.02em; font-variation-settings: "opsz" 96, "SOFT" 30; }
+  .lede p { margin: 0 0 12px; font-size: 17px; line-height: 1.5; max-width: 62ch; }
+  .lede .seatline { font-style: italic; color: var(--ink-2); }
+  .ted { align-self: start; display: grid; grid-template-columns: 84px 1fr; gap: 14px; align-items: start; padding: 14px 16px; border: 2px solid transparent; border-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><rect x='2' y='2' width='36' height='36' fill='none' stroke='%232c4470' stroke-width='2.4' stroke-dasharray='7 3 4 2' stroke-linecap='round'/></svg>") 4 round; }
+  .ted img { width: 84px; height: 84px; object-fit: contain; }
+  .ted p { margin: 0; font-size: 15px; line-height: 1.45; }
+  .ted p b { font-style: italic; font-weight: 500; color: var(--navy); }
+
+  /* ── the fold ── */
+  .fold { position: relative; margin-top: 18px; display: grid; grid-template-columns: var(--foldL, 1fr) var(--foldR, 1fr); gap: 0; }
+  .half { padding: 18px 22px 22px; min-width: 0; }
+  .half:first-child { padding-left: 0; }
+  .half:last-child { padding-right: 0; }
+  .half h3 { margin: 0; font-weight: 700; font-size: clamp(22px, 2.6vw, 30px); line-height: 1.05; letter-spacing: -.015em; font-variation-settings: "opsz" 72; }
+  .half .odds { font-family: var(--mono); font-size: 11px; letter-spacing: .06em; color: var(--ink-3); margin: 6px 0 12px; }
+  .half .zline { display: flex; align-items: baseline; gap: 10px; margin: 10px 0 4px; }
+  .half .zline b { font-size: 34px; font-weight: 300; letter-spacing: -.02em; font-variation-settings: "opsz" 72; }
+  .half .zline span { font-size: 13px; color: var(--ink-2); font-style: italic; }
+  .half .plane { width: 100%; max-width: 360px; height: auto; display: block; margin: 6px 0 10px; }
+  .half .frame { font-size: 15px; line-height: 1.48; margin: 0; color: var(--ink); max-width: 46ch; }
+  .crease { position: absolute; top: -6px; bottom: -6px; left: var(--crease, 50%); width: 18px; transform: translateX(-50%); pointer-events: none; }
+  .crease svg { width: 100%; height: 100%; }
+  .crease .tag { position: absolute; top: -2px; left: 50%; transform: translate(-50%, -100%); white-space: nowrap; font-family: var(--mono); font-size: 10px; letter-spacing: .08em; color: var(--navy); background: var(--paper); padding: 2px 6px; }
+
+  /* ── stations grid under each plane ── */
+  .legend { font-size: 12px; font-style: italic; color: var(--ink-3); margin: 8px 0 0; }
+  .stations { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px 10px; margin-top: 10px; font-size: 12.5px; }
+  .stations .st { border-top: 2px solid; padding-top: 5px; }
+  .stations .st i { display: block; font-style: italic; color: var(--ink-2); font-size: 11.5px; margin-bottom: 2px; }
+  .stations .st b { font-family: var(--mono); font-weight: 500; font-size: 11px; letter-spacing: .04em; }
+
+  /* ── talk and record ── */
+  .gap { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-top: 6px; }
+  .gap .cand h4 { margin: 0; font-size: 20px; font-weight: 600; font-variation-settings: "opsz" 36; }
+  .gap .cand .role { font-size: 12.5px; color: var(--ink-3); font-style: italic; margin: 2px 0 10px; }
+  .meter { width: 100%; height: auto; display: block; }
+  .gap .line { font-size: 14.5px; line-height: 1.45; margin: 8px 0 0; }
+  .gap .line b { font-weight: 600; }
+  .gapkey { font-size: 12.5px; font-style: italic; color: var(--ink-3); margin: 10px 0 0; max-width: 70ch; }
+  .gap .key { font-size: 12px; font-style: italic; color: var(--ink-3); margin: 6px 0 0; }
+
+  /* ── two-column body ── */
+  .cols { display: grid; grid-template-columns: 1.25fr .9fr; gap: 40px; }
+  .record li { list-style: none; margin: 0; padding: 10px 0 10px 32px; position: relative; border-bottom: 1px solid var(--paper-edge); }
+  .record ul { margin: 0; padding: 0; }
+  .record li::before { content: ""; position: absolute; left: 4px; top: 15px; width: 14px; height: 14px; background: center/contain no-repeat; }
+  .record li.yea::before { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M3 11 8 16 17 4' fill='none' stroke='%235f8e3f' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/></svg>"); }
+  .record li.nay::before { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M4 4 16 16M16 4 4 16' fill='none' stroke='%23de4f2b' stroke-width='3.4' stroke-linecap='round'/></svg>"); }
+  .record li.other::before { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M10 3 17 7v6l-7 4-7-4V7z' fill='%23d9a93a' stroke='%23b58a26' stroke-width='1.4' stroke-linejoin='round'/></svg>"); }
+  .record .bill { font-family: var(--mono); font-size: 11px; letter-spacing: .05em; color: var(--navy); }
+  .record .bill .tally { color: var(--ink-3); }
+  .record .t { display: block; font-size: 15px; line-height: 1.35; margin: 2px 0; }
+  .record .r { display: block; font-size: 13.5px; font-style: italic; color: var(--ink-2); line-height: 1.4; }
+  .record .r a { color: var(--navy); }
+  .who { display: flex; align-items: baseline; gap: 10px; margin: 14px 0 4px; }
+  .who h4 { margin: 0; font-size: 18px; font-weight: 600; font-variation-settings: "opsz" 24; }
+  .who span { font-size: 12.5px; color: var(--ink-3); font-style: italic; }
+  .who .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; flex: none; align-self: center; }
+
+  .wire table { width: 100%; border-collapse: collapse; font-family: var(--mono); font-size: 11.5px; }
+  .wire th { text-align: left; font-weight: 500; color: var(--ink-3); padding: 4px 0; border-bottom: 2px solid var(--ink); letter-spacing: .04em; }
+  .wire td { padding: 6px 0; border-bottom: 1px dotted var(--paper-edge); vertical-align: top; }
+  .wire td.n, .wire th.n { text-align: right; width: 52px; padding-left: 10px; }
+  .wire td.lead { font-weight: 500; }
+  .wire .avg td { border-top: 2px solid var(--ink); border-bottom: 0; padding-top: 8px; }
+  .wire .issue { margin: 12px 0 0; padding: 0; list-style: none; font-family: var(--serif); font-size: 14px; }
+  .wire .issue li { display: flex; justify-content: space-between; gap: 10px; padding: 5px 0; border-bottom: 1px dotted var(--paper-edge); }
+  .wire .issue b { font-family: var(--mono); font-weight: 500; font-size: 12px; white-space: nowrap; color: var(--navy); }
+  .wire .note { font-size: 12.5px; font-style: italic; color: var(--ink-3); margin: 8px 0 0; }
+
+  .trail .row { display: grid; grid-template-columns: 60px 1fr; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--paper-edge); }
+  .trail .pin { width: 44px; height: 44px; margin: 0 auto; }
+  .trail q { quotes: "“" "”"; font-size: 17px; line-height: 1.4; font-variation-settings: "opsz" 24; }
+  .trail .m { font-size: 12.5px; color: var(--ink-2); margin-top: 4px; line-height: 1.45; }
+  .trail .m i { color: var(--navy); }
+  .trail .m a { color: var(--navy); }
+
+  /* ── your pin ── */
+  .you { margin-top: 10px; display: grid; grid-template-columns: 1fr 1fr; gap: 26px; align-items: start; }
+  .pick { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .pick button { font: inherit; font-size: 14px; text-align: left; padding: 10px 12px; background: transparent; color: var(--ink); border: 2px solid var(--paper-edge); cursor: pointer; border-radius: 3px; }
+  .pick button:hover { border-color: var(--ink-2); }
+  .pick button[aria-pressed="true"] { border-color: var(--ink); background: var(--paper-2); }
+  .pick button i { display: block; font-size: 12px; color: var(--ink-3); }
+  .bands { display: flex; gap: 8px; margin-top: 10px; }
+  .bands button { font: inherit; font-size: 13px; padding: 7px 12px; background: transparent; border: 2px solid var(--paper-edge); cursor: pointer; border-radius: 999px; color: var(--ink); }
+  .bands button[aria-pressed="true"] { border-color: var(--ink); background: var(--paper-2); }
+  .verdict { padding: 16px 18px; background: var(--paper-2); border-radius: 4px; min-height: 120px; }
+  .verdict h3 { margin: 0 0 8px; font-weight: 600; font-size: 20px; font-variation-settings: "opsz" 36; }
+  .verdict .v { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .verdict .v div { border-top: 2px solid var(--ink); padding-top: 8px; }
+  .verdict .v b { display: block; font-size: 30px; font-weight: 300; letter-spacing: -.02em; }
+  .verdict .v i { font-size: 13px; color: var(--ink-2); display: block; line-height: 1.4; }
+  .verdict .v small { display: block; font-family: var(--mono); font-size: 10.5px; letter-spacing: .05em; color: var(--ink-3); margin-bottom: 4px; }
+  .verdict .act { margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  .btn { font: inherit; font-size: 14px; font-weight: 600; padding: 10px 16px; background: var(--ink); color: var(--paper); border: 0; border-radius: 3px; cursor: pointer; text-decoration: none; }
+  .btn.quiet { background: transparent; color: var(--ink); border: 2px solid var(--ink); font-weight: 500; }
+  .verdict .act p { margin: 0; font-size: 13px; font-style: italic; color: var(--ink-2); }
+
+  .colophon { margin-top: 44px; padding-top: 14px; border-top: 2px solid var(--ink); font-size: 12.5px; color: var(--ink-2); line-height: 1.5; display: grid; grid-template-columns: 1fr auto; gap: 20px; }
+  .colophon a { color: var(--navy); }
+  .races-nav { display: flex; gap: 14px; flex-wrap: wrap; }
+  .races-nav a { font-style: italic; color: var(--ink-2); text-decoration: none; border-bottom: 2px solid transparent; padding-bottom: 2px; }
+  .races-nav a[aria-current="page"] { color: var(--ink); border-color: var(--gold); }
+  .empty { padding: 30px; text-align: center; font-style: italic; color: var(--ink-2); }
+
+  :focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+  @media (prefers-reduced-motion: no-preference) {
+    #sheet { animation: lay .7s cubic-bezier(.2,.8,.2,1) both; }
+    @keyframes lay { from { transform: translateY(22px) rotate(-.4deg); opacity: 0; } to { transform: none; opacity: 1; } }
+  }
+  @media (max-width: 600px) { #stripRight { display: none; } }
+  @media (max-width: 860px) {
+    .lede, .cols, .you, .gap { grid-template-columns: 1fr; gap: 22px; }
+    .fold { grid-template-columns: 1fr !important; }
+    .crease { display: none; }
+    .half { padding: 14px 0; border-top: 2px dashed var(--paper-edge); }
+    .half:first-child { border-top: 0; }
+    .masthead { grid-template-columns: auto 1fr; }
+    .dateline { grid-column: 1 / -1; text-align: left; }
+    .stations { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- crayon: a displaced, roughened stroke -->
+    <filter id="crayon" x="-5%" y="-40%" width="110%" height="180%">
+      <feTurbulence type="fractalNoise" baseFrequency="1.1 .35" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="1" seed="3" result="g"/>
+      <feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1.6 -.35" result="mask"/>
+      <feComposite in="d" in2="mask" operator="in"/>
+    </filter>
+    <filter id="crayon-soft" x="-5%" y="-40%" width="110%" height="180%">
+      <feTurbulence type="fractalNoise" baseFrequency=".8 .3" numOctaves="2" seed="11" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.8" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+</svg>
+
+<div id="sky">
+  <div id="strip">
+    <span><a href="../v2/?front">⌂ Prism</a> &nbsp;·&nbsp; Parallelogram, the election paper</span>
+    <span id="stripRight">scored before the vote · checked after</span>
+  </div>
+  <div id="sheetWrap">
+    <article id="sheet" aria-live="polite">
+      <div class="empty">Laying out the paper…</div>
+    </article>
+  </div>
+</div>
+
+<script>
+(function () {
+  const $ = (s, r) => (r || document).querySelector(s);
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const QCOL = { A: '#6e7fc0', B: '#de4f2b', C: '#5f8e3f', D: '#e38a2d' };
+  const QNAME = { A: 'left, insider', B: 'right, insider', C: 'left, outsider', D: 'right, outsider' };
+  const BWORD = { fluid: 'said lightly', coalition: 'argued for', denominated: 'would fight for' };
+  const DIR = { A: [-1, 1], B: [1, 1], C: [-1, -1], D: [1, -1] }, OFF = { fluid: 0.17, coalition: 0.30, denominated: 0.42 };
+  const BANDS = ['fluid', 'coalition', 'denominated'];
+  const PIN = { A: '../src/img/front/pin_B_blue.png', B: '../src/img/front/pin_A_red.png', C: '../src/img/front/pin_C_green.png', D: '../src/img/front/pin_D_orange.png' };
+  const fmtZ = z => (z > 0 ? '+' : z < 0 ? '−' : '') + Math.abs(z).toFixed(2);
+  const word = z => z > 0.25 ? 'moves your way' : z < -0.25 ? 'goes against you' : 'barely moves';
+  const wordAll = z => z > 0.25 ? 'moves things the right way' : z < -0.25 ? 'moves things the wrong way' : 'barely moves the needle';
+  const M = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const D = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const dayUTC = t => { const d = new Date(t); return Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()); };
+
+  // ── crayon marks ──
+  const rule = (color, w) => '<svg class="crayon-rule" viewBox="0 0 1000 10" preserveAspectRatio="none" aria-hidden="true"><path d="M4 5 C 250 3, 500 7, 996 5" fill="none" stroke="' + color + '" stroke-width="' + (w || 4) + '" stroke-linecap="round" filter="url(#crayon)"/></svg>';
+  const MARK = '<svg class="mark" viewBox="0 0 100 70" aria-hidden="true"><path d="M26 10 H92 L74 60 H8 Z" fill="none" stroke="#2c4470" stroke-width="5" stroke-linejoin="round" filter="url(#crayon)"/><path d="M34 22 C 50 21.4, 64 22.6, 78 22" fill="none" stroke="#d9a93a" stroke-width="4" stroke-linecap="round" filter="url(#crayon)"/><path d="M28 36 C 42 35.4, 56 36.6, 70 36" fill="none" stroke="#de4f2b" stroke-width="4" stroke-linecap="round" filter="url(#crayon)"/><path d="M22 50 C 34 49.4, 48 50.6, 60 50" fill="none" stroke="#5f8e3f" stroke-width="4" stroke-linecap="round" filter="url(#crayon)"/></svg>';
+  const GLYPH = {
+    fold: '<svg class="glyph" viewBox="0 0 26 26" aria-hidden="true"><path d="M3 20 L13 4 L23 20" fill="none" stroke="#2c4470" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="url(#crayon-soft)"/><path d="M13 4 C 12.6 10, 13.4 16, 13 22" fill="none" stroke="#d9a93a" stroke-width="3" stroke-linecap="round" filter="url(#crayon-soft)"/></svg>',
+    record: '<svg class="glyph" viewBox="0 0 26 26" aria-hidden="true"><path d="M13 3 22 8v10l-9 5-9-5V8z" fill="#d9a93a" stroke="#b58a26" stroke-width="1.6" stroke-linejoin="round" filter="url(#crayon-soft)"/><path d="M13 13 22 8M13 13v10M13 13 4 8" fill="none" stroke="#8a6a1c" stroke-width="1.2"/></svg>',
+    wire: '<svg class="glyph" viewBox="0 0 26 26" aria-hidden="true"><path d="M2 14 h4 l3-8 3 14 3-10 3 6 h6" fill="none" stroke="#2c4470" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" filter="url(#crayon-soft)"/></svg>',
+    trail: '<svg class="glyph" viewBox="0 0 26 26" aria-hidden="true"><path d="M4 22 C 8 12, 12 12, 13 6 M13 6 l2 4 M13 6 l-3 3" fill="none" stroke="#de4f2b" stroke-width="2.8" stroke-linecap="round" filter="url(#crayon-soft)"/><path d="M16 20 c2-6 5-7 7-13" fill="none" stroke="#5f8e3f" stroke-width="2.6" stroke-linecap="round" filter="url(#crayon-soft)"/></svg>',
+    gap: '<svg class="glyph" viewBox="0 0 26 26" aria-hidden="true"><path d="M3 9 C 9 8.5, 17 9.5, 23 9" fill="none" stroke="#2c4470" stroke-width="2.6" stroke-linecap="round" filter="url(#crayon-soft)"/><path d="M3 18 C 9 17.5, 17 18.5, 23 18" fill="none" stroke="#2c4470" stroke-width="2.6" stroke-linecap="round" filter="url(#crayon-soft)"/><circle cx="18" cy="9" r="3.2" fill="#de4f2b"/><circle cx="9" cy="18" r="3.2" fill="#d9a93a"/></svg>',
+    you: '<svg class="glyph" viewBox="0 0 26 26" aria-hidden="true"><path d="M13 13 l9 -9 M13 13 l-9 -9 M13 13 l9 9 M13 13 l-9 9 M13 2 v22 M2 13 h22" stroke="#de4f2b" stroke-width="2.4" stroke-linecap="round" filter="url(#crayon-soft)"/></svg>'
+  };
+
+  // the drawn plane — same geometry as the front door, drawn in crayon on paper
+  function plane(rd, you) {
+    const S = 100, c = S / 2, R = rd.responses || {}, p = [];
+    p.push('<svg class="plane" viewBox="0 0 100 100" aria-label="Twelve seats: left to right, insiders to outsiders. Full dots: this result moves things their way. Hollow: it goes against them.">');
+    p.push('<path d="M4 50 C 30 49.2, 70 50.8, 96 50" fill="none" stroke="#6e7fc0" stroke-width="2.2" stroke-linecap="round" filter="url(#crayon)"/>');
+    p.push('<path d="M50 4 C 49.2 30, 50.8 70, 50 96" fill="none" stroke="#d9a93a" stroke-width="2.2" stroke-linecap="round" filter="url(#crayon)"/>');
+    p.push('<text x="95" y="47" font-size="4" text-anchor="end" fill="#4f4a40" font-style="italic">right</text><text x="5" y="47" font-size="4" fill="#4f4a40" font-style="italic">left</text>');
+    p.push('<text x="52" y="7" font-size="4" fill="#4f4a40" font-style="italic">insiders</text><text x="52" y="97" font-size="4" fill="#4f4a40" font-style="italic">outsiders</text>');
+    Object.keys(DIR).forEach(q => BANDS.forEach(b => {
+      const v = R[q] && R[q][b]; if (!v) return;
+      const o = OFF[b] * S, d = DIR[q], x = c + d[0] * o, y = c - d[1] * o, z = +v.z || 0;
+      const r = 3.2 + 2.2 * Math.abs(z), op = (0.35 + 0.65 * (z + 1) / 2).toFixed(2);
+      const col = z >= 0 ? QCOL[q] : '#8a8375';
+      p.push('<g transform="translate(' + x + ' ' + y + ')" opacity="' + op + '"><circle r="' + r.toFixed(1) + '" fill="' + col + '" filter="url(#crayon-soft)"/>' + (z < 0 ? '<circle r="' + (r * .45).toFixed(1) + '" fill="#e7e2d3"/>' : '') + '<title>' + esc(QNAME[q] + ', ' + BWORD[b] + ': ' + fmtZ(z) + ' — ' + word(z)) + '</title></g>');
+      if (you && you.q === q && you.band === b) p.push('<image href="' + PIN[q] + '" x="' + (x - 7) + '" y="' + (y - 7) + '" width="14" height="14"/>');
+    }));
+    p.push('<g transform="translate(50 50)"><path d="M0 -5 4.5 -2.5v5L0 5l-4.5-2.5v-5z" fill="#d9a93a" stroke="#b58a26" stroke-width=".6"/></g>');
+    p.push('</svg>');
+    return p.join('');
+  }
+
+  function stations(rd) {
+    return '<p class="legend">Each seat gives three scores: said lightly · argued for · would fight for.</p><div class="stations">' + Object.keys(DIR).map(q => {
+      const zs = BANDS.map(b => (rd.responses[q] && rd.responses[q][b] && +rd.responses[q][b].z) || 0);
+      return '<div class="st" style="border-color:' + QCOL[q] + '"><i>' + QNAME[q] + '</i><b>' + zs.map(fmtZ).join(' · ') + '</b></div>';
+    }).join('') + '</div>';
+  }
+
+  // ── polls → the fold ──
+  function weight(race) {
+    const rows = (race.polls.rows || []).filter(r => typeof r[race.variants[0].id] === 'number');
+    const a = race.variants[0].id, b = race.variants[1].id;
+    if (race.polls.average && typeof race.polls.average[a] === 'number') return { a: race.polls.average[a], b: race.polls.average[b], n: rows.length, src: 'average' };
+    const take = rows.slice(0, 5), sa = take.reduce((s, r) => s + r[a], 0) / take.length, sb = take.reduce((s, r) => s + r[b], 0) / take.length;
+    return { a: +sa.toFixed(1), b: +sb.toFixed(1), n: take.length, src: 'mean of the last ' + take.length };
+  }
+
+  function render(data, race, readings, you) {
+    const today = new Date(), eday = Date.UTC(2026, 10, 3), days = Math.round((eday - dayUTC(today)) / 864e5);
+    const w = weight(race), share = w.a / (w.a + w.b);
+    const [vA, vB] = race.variants, rA = readings[vA.rid], rB = readings[vB.rid];
+    const cands = Object.fromEntries(race.candidates.map(c => [c.id, c]));
+    const creasePct = (share * 100).toFixed(1);
+    const lessBad = (rA.impliedZ >= rB.impliedZ ? vA : vB);
+
+    const head = '<header class="masthead">' + MARK +
+      '<h1>Parallelogram<small>Prism\'s election paper</small></h1>' +
+      '<div class="dateline"><b>' + D[today.getDay()] + ' ' + today.getDate() + ' ' + M[today.getMonth()] + ' ' + today.getFullYear() + '</b>' +
+      '<span class="days">' + (days > 0 ? days + ' days to the vote' : days === 0 ? 'election day' : 'after the vote') + '</span><br>Written 12 October. Checked against the result on 3 November. Not changed after.</div></header>' + rule('#1c1a16', 5);
+
+    const nav = '<nav class="races-nav" aria-label="The races">' + data.races.map(r => '<a href="?race=' + r.id + '"' + (r.id === race.id ? ' aria-current="page"' : '') + '>' + esc(r.shortSeat) + '</a>').join('') + '</nav>';
+
+    const lede = '<section class="lede"><div>' +
+      '<h2>' + esc(race.seat.split(' · ')[0]) + ': ' + (Math.max(rA.impliedZ, rB.impliedZ) < 0.1 ? 'whoever wins, the needle barely moves.' : 'one result moves the needle; the other doesn\'t.') + '</h2>' +
+      '<p class="seatline">' + esc(race.object) + '</p>' +
+      '<p>' + esc(race.question) + '</p>' +
+      '<p><b>The needle</b> is the score on this page. Right of zero means the result moves things toward what people keep telling pollsters they want — lower costs, fewer wars, a fairer deal. Left of zero means it doesn\'t. We score both possible results <i>before</i> the vote, from twelve different seats in the room, and lock the scores so nobody can rewrite them after.</p>' +
+      '<p>Right now the result that moves the needle furthest is <b>' + esc(lessBad.headline) + '</b>: ' + fmtZ(readings[lessBad.rid].impliedZ) + ', against ' + fmtZ(readings[lessBad === vA ? vB.rid : vA.rid].impliedZ) + ' the other way. Neither is much. That\'s the finding.</p>' +
+      '</div><aside class="ted"><img src="../src/img/front/Ted.png" alt="Ted, the coyote"><p><b>Ted.</b> How to read this page, in three lines. The crease down the middle is the polls — who\'s likely to win. The two halves are what each result would actually change, scored before it happens. And the needle at the bottom is yours: tell the page where you sit and it reads both results from your seat.</p></aside></section>';
+
+    const half = (v, rd, odds) => '<div class="half"><h3>' + esc(v.headline) + '</h3><div class="odds">' + odds + '</div>' +
+      '<div class="zline"><b>' + fmtZ(rd.impliedZ) + '</b><span>the needle, all twelve seats together — ' + wordAll(rd.impliedZ) + '</span></div>' +
+      plane(rd, you) + '<p class="frame">' + esc(rd.framing) + '</p>' + stations(rd) + '</div>';
+    const fold = '<section>' + secHead('fold', 'Both ways it could go', 'scored before the vote — the crease is where the polls put it') +
+      '<div class="fold" style="--foldL:' + share.toFixed(3) + 'fr;--foldR:' + (1 - share).toFixed(3) + 'fr;--crease:' + creasePct + '%">' +
+      half(vA, rA, esc(cands[vA.id].name) + ' ' + w.a + ' · ' + w.src) +
+      '<div class="crease"><span class="tag">' + w.a + ' – ' + w.b + '</span><svg viewBox="0 0 18 400" preserveAspectRatio="none" aria-hidden="true"><path d="M9 2 C 7 100, 11 200, 9 398" fill="none" stroke="#2c4470" stroke-width="3" stroke-dasharray="14 5 3 5" stroke-linecap="round" filter="url(#crayon)"/></svg></div>' +
+      half(vB, rB, esc(cands[vB.id].name) + ' ' + w.b) +
+      '</div></section>';
+
+    const meter = g => {
+      const X = z => 30 + (z + 1) / 2 * 240;
+      return '<svg class="meter" viewBox="0 0 300 64" role="img" aria-label="What they say: ' + fmtZ(g.talk) + '. What they have done: ' + fmtZ(g.done) + '.">' +
+        '<path d="M30 40 C 110 39.2, 190 40.8, 270 40" fill="none" stroke="#2c4470" stroke-width="2.4" stroke-linecap="round" filter="url(#crayon)"/>' +
+        '<path d="M150 32 V48" stroke="#8a8375" stroke-width="1.4"/>' +
+        '<text x="30" y="12" font-size="9" fill="#8a8375" font-style="italic">wrong way</text><text x="270" y="12" font-size="9" fill="#8a8375" font-style="italic" text-anchor="end">right way</text>' +
+        '<path d="M' + X(g.done) + ' 40 L' + X(g.talk) + ' 40" stroke="#de4f2b" stroke-width="5" stroke-linecap="round" opacity=".35"/>' +
+        '<circle cx="' + X(g.talk) + '" cy="40" r="7" fill="#de4f2b" filter="url(#crayon-soft)"/><text x="' + X(g.talk) + '" y="27" font-size="10" text-anchor="middle" fill="#1c1a16">says ' + fmtZ(g.talk) + '</text>' +
+        '<circle cx="' + X(g.done) + '" cy="40" r="7" fill="#d9a93a" filter="url(#crayon-soft)"/><text x="' + X(g.done) + '" y="60" font-size="10" text-anchor="middle" fill="#1c1a16">done ' + fmtZ(g.done) + '</text></svg>';
+    };
+    const gapSec = race.candidates.some(c => c.gap) ? '<section>' + secHead('gap', 'Do they vote the way they talk?', 'the second needle — what they say against what they have actually done') +
+      '<div class="gap">' + race.candidates.map(c => c.gap ? '<div class="cand"><h4>' + esc(c.name) + '</h4><div class="role">' + esc(c.role.split(' · ')[0]) + '</div>' + meter(c.gap) +
+        '<p class="line"><b>Gap ' + Math.abs(c.gap.talk - c.gap.done).toFixed(1) + '.</b> ' + esc(c.gap.line) + '</p></div>' : '').join('') + '</div>' +
+      '<p class="gapkey">Red is what they say they will do, scored the same way as the needle. Gold is what their record has actually done. The wider the gap, the more the talk is running ahead of the record.</p></section>' : '';
+
+    const recordFor = c => {
+      const rows = race.record[c.id] || [];
+      return '<div class="who"><span class="dot" style="background:' + QCOL[c.station] + '"></span><h4>' + esc(c.name) + '</h4><span>' + esc(c.role) + '</span></div><ul>' +
+        rows.map(r => '<li class="' + (r.vote === 'yea' ? 'yea' : r.vote === 'nay' ? 'nay' : 'other') + '">' +
+          (r.bill ? '<span class="bill">' + esc(r.bill) + (r.tally ? ' <span class="tally">· ' + esc(r.tally) + '</span>' : '') + (r.vote ? ' <span class="tally">· ' + esc(r.vote) + '</span>' : '') + '</span>' : '') +
+          '<span class="t">' + esc(r.title) + '</span><span class="r">' + esc(r.read) + (r.rid ? ' <a href="../v2/?event=' + esc(r.rid) + '">the Reading →</a>' : r.src ? ' <a href="' + esc(r.src) + '" rel="noopener">source</a>' : '') + '</span></li>').join('') + '</ul>';
+    };
+    const record = '<section class="record">' + secHead('record', 'What they\'ve actually done', 'votes and bills with their name on them') + race.candidates.map(recordFor).join('') +
+      '<p class="wire note" style="font-style:italic;color:var(--ink-3);font-size:12.5px;margin-top:10px">' + esc(race.record.note) + '</p></section>';
+
+    const a = vA.id, b = vB.id;
+    const wire = '<section class="wire">' + secHead('wire', 'Who\'s likely to win', 'the polls move the crease, not the needle') +
+      '<table><thead><tr><th>poll</th><th>field</th><th class="n">' + esc(cands[a].name.split(' ').pop()) + '</th><th class="n">' + esc(cands[b].name.split(' ').pop()) + '</th></tr></thead><tbody>' +
+      (race.polls.rows || []).map(r => '<tr><td>' + esc(r.pollster) + (r.src ? ' <a href="' + esc(r.src) + '" rel="noopener" style="color:var(--navy)">↗</a>' : '') + '</td><td>' + esc(r.dates) + '</td>' +
+        (r.tied ? '<td class="n" colspan="2" style="text-align:center">tied</td>' : '<td class="n' + (r[a] > r[b] ? ' lead' : '') + '">' + r[a] + '</td><td class="n' + (r[b] > r[a] ? ' lead' : '') + '">' + r[b] + '</td>') + '</tr>').join('') +
+      '<tr class="avg"><td>the crease — where the fold sits</td><td>' + esc(w.src) + '</td><td class="n lead">' + w.a + '</td><td class="n">' + w.b + '</td></tr></tbody></table>' +
+      '<ul class="issue">' + (race.polls.issue || []).map(i => '<li><span>' + esc(i.what) + (i.src ? ' <i style="color:var(--ink-3)">— ' + esc(i.src) + '</i>' : '') + '</span><b>' + esc(i.value) + '</b></li>').join('') + '</ul>' +
+      '<p class="note">' + esc(race.polls.note) + '</p></section>';
+
+    const trail = '<section class="trail">' + secHead('trail', 'What they\'re saying', 'promises on the record — we check them after the vote') +
+      (race.trail.rows || []).map(s => { const c = cands[s.who]; return '<div class="row"><img class="pin" src="' + PIN[c.station] + '" alt=""><div><q>' + esc(s.said) + '</q><div class="m"><i>' + esc(c.name) + '</i> · ' + esc(s.date) + (s.verbatim === false ? ' · their position, in our words' : '') + '<br>about: ' + esc(s.object) + ' — how we\'ll check it: ' + esc(s.pays) + (s.src ? ' <a href="' + esc(s.src) + '" rel="noopener">source</a>' : '') + '</div></div></div>'; }).join('') + '</section>';
+
+    const youSec = '<section>' + secHead('you', 'Where you sit', 'then the page reads both results from your seat') +
+      '<div class="you"><div><div class="pick" id="pickQ">' + Object.keys(DIR).map(q => '<button type="button" data-q="' + q + '" aria-pressed="' + (you && you.q === q) + '"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:' + QCOL[q] + ';margin-right:8px"></span>' + QNAME[q] + '<i>' + ({ A: 'change comes through parties, committees and courts', B: 'change comes through markets, chairs and long records', C: 'change comes from strikes, walkouts and the rent', D: 'change comes from rallies, lawsuits and the right endorsement' })[q] + '</i></button>').join('') + '</div>' +
+      '<div class="bands" id="pickB">' + BANDS.map(bd => '<button type="button" data-band="' + bd + '" aria-pressed="' + (you && you.band === bd) + '">' + ({ fluid: 'I\'d just say it', coalition: 'I\'d argue it', denominated: 'I\'d fight for it' })[bd] + '</button>').join('') + '</div>' +
+      '<p style="font-size:13px;color:var(--ink-2);font-style:italic;margin:10px 0 0">How strongly you hold it changes the score — people who\'d fight for a thing are harder to satisfy.</p></div>' +
+      '<div class="verdict" id="verdict"></div></div></section>';
+
+    const colophon = '<footer class="colophon"><div>Parallelogram is Prism\'s election paper. Every score on this page was written before the vote, from twelve seats in the room, each scoring one result without seeing the other\'s score. On 3 November the real result keeps its page and the other is kept as the miss. Votes come from Prism\'s own roll-call record; polls are the published numbers, typed in by hand. <a href="../v2/?front">Back to Prism</a>.</div><div>' + nav + '</div></footer>';
+
+    $('#sheet').innerHTML = head + lede + fold + gapSec + '<div class="cols"><div>' + record + trail + '</div><div>' + wire + '</div></div>' + youSec + colophon;
+    $('#stripRight').textContent = race.shortSeat + ' · ' + (days > 0 ? days + ' days' : 'the vote') + ' · the crease at ' + w.a + '–' + w.b;
+
+    // your pin
+    const verdict = () => {
+      const el = $('#verdict');
+      if (!you || !you.q || !you.band) { el.innerHTML = '<h3>Pick a seat and a strength.</h3><p style="margin:0;font-size:14px;color:var(--ink-2)">Then the page reads both results from where you sit — the score, and what someone in your seat would say about it.</p>'; return; }
+      const za = rA.responses[you.q][you.band], zb = rB.responses[you.q][you.band];
+      el.innerHTML = '<h3>From the ' + QNAME[you.q] + ' seat, ' + BWORD[you.band] + ':</h3><div class="v">' +
+        '<div><small>' + esc(vA.headline) + '</small><b>' + fmtZ(za.z) + '</b><i>' + esc(word(za.z)) + ' — “' + esc(za.text) + '”</i></div>' +
+        '<div><small>' + esc(vB.headline) + '</small><b>' + fmtZ(zb.z) + '</b><i>' + esc(word(zb.z)) + ' — “' + esc(zb.text) + '”</i></div></div>' +
+        '<div class="act"><a class="btn" href="../v2/?front">Mark your spot in Prism</a><a class="btn quiet" href="../v2/?event=' + esc((race.record[race.candidates[0].id] || []).find(r => r.rid) ? (race.record[race.candidates[0].id] || []).find(r => r.rid).rid : 'rdg_mu7ban350hom') + '">Score a bill on this ballot</a><p>Your first mark goes on a promise or a bill, not on the seat. The seat scores itself on 3 November.</p></div>';
+      // redraw the two planes with the pin on them
+      const halves = document.querySelectorAll('.half');
+      [rA, rB].forEach((rd, i) => { const old = halves[i].querySelector('.plane'); if (old) old.outerHTML = plane(rd, you); });
+    };
+    const $$ = s => Array.from(document.querySelectorAll(s));
+    $('#pickQ').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; you = Object.assign({}, you, { q: b.dataset.q }); $$('#pickQ button').forEach(x => x.setAttribute('aria-pressed', x === b)); save(); verdict(); });
+    $('#pickB').addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; you = Object.assign({}, you, { band: b.dataset.band }); $$('#pickB button').forEach(x => x.setAttribute('aria-pressed', x === b)); save(); verdict(); });
+    const save = () => { try { localStorage.setItem('pg.you', JSON.stringify(you)); } catch (x) {} };
+    verdict();
+  }
+
+  function secHead(g, title, sub) { return '<div class="sec">' + GLYPH[g] + '<h2>' + esc(title) + '</h2><p>' + esc(sub) + '</p></div>' + rule(g === 'fold' ? '#2c4470' : g === 'record' ? '#d9a93a' : g === 'wire' ? '#6e7fc0' : g === 'trail' ? '#de4f2b' : g === 'gap' ? '#1c1a16' : '#5f8e3f', 3); }
+
+  async function main() {
+    const q = new URL(location.href).searchParams;
+    let you = null; try { you = JSON.parse(localStorage.getItem('pg.you') || 'null'); } catch (x) {}
+    const data = await (await fetch('../data/races/races.json', { cache: 'no-store' })).json();
+    const race = data.races.find(r => r.id === q.get('race')) || data.races[0];
+    const readings = {};
+    await Promise.all(race.variants.map(async v => { readings[v.rid] = await (await fetch(v.file, { cache: 'no-store' })).json(); }));
+    render(data, race, readings, you);
+  }
+  main().catch(e => { $('#sheet').innerHTML = '<div class="empty">The paper could not be laid out: ' + esc(e.message) + '. Check that data/races/races.json and the race Readings are in place.</div>'; console.error(e); });
+})();
+</script>
+</body>
+</html>

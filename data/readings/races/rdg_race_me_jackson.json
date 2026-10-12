@@ -1,0 +1,242 @@
+{
+ "rid": "rdg_race_me_jackson",
+ "schema": "reading/v1",
+ "kind": "race",
+ "race": "me-sen",
+ "variant": "jackson",
+ "title": "The Logger Takes the Seat",
+ "category": "The Races · Midterms 2026",
+ "date": "2026-11-03",
+ "updatedAt": "2026-10-12T18:00:00.000Z",
+ "centralObject": {
+  "kind": "seat",
+  "ref": "me-sen",
+  "name": "Maine's Senate seat (Class 2)",
+  "state": "conditional — paid on election day",
+  "stateDate": "2026-11-03",
+  "declared": true
+ },
+ "prompt": "If Troy Jackson wins: does Maine get the thing it asked for, or a vote?",
+ "framing": "A fifth-generation logger from Allagash, substituted onto the ballot in July, beats the only Republican who has ever held a Trump-losing state three times over. The polls had him +3 to +4 in October with the over-50s against him.",
+ "framingKeywords": [],
+ "axes": {
+  "x": {
+   "pos": "Right",
+   "neg": "Left"
+  },
+  "y": {
+   "pos": "Institutional",
+   "neg": "Populist"
+  },
+  "z": {
+   "pos": "The seat answers to Maine — rent, insulin, the shipyard",
+   "neg": "The seat answers to a caucus; nothing changes in Maine"
+  }
+ },
+ "prevalentAxis": "y",
+ "split": {
+  "topology": "diagonal",
+  "strength": 0.6,
+  "seam": "C + A realized, B frustrated, D split — the populist right can't decide whether losing Collins was a loss",
+  "rationale": "The seat flipping realizes the left on both rings and frustrates the institutional right absolutely; the populist right's z sits near zero because Collins was never theirs.",
+  "ruledBy": null,
+  "date": "2026-10-12"
+ },
+ "responses": {
+  "A": {
+   "xSide": "left",
+   "source": "race reading — authored z-first, blind to the other variant",
+   "fluid": {
+    "text": "Maine sent a Democrat. The map got one seat closer and that is the whole story tonight.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": 0.4,
+    "zReason": "The seat is realized as a count, not as Maine's object; the caucus delivers, not the county.",
+    "instrument": {
+     "holder": "the Senate Democratic caucus",
+     "trusted": true
+    }
+   },
+   "coalition": {
+    "text": "A logger from Allagash beat Collins on cost of living. We will hold him to the drug-pricing votes, and we will have the votes to hold.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": 0.5,
+    "zReason": "Delivery runs through the majority he makes possible; trusted because the holder is the caucus.",
+    "instrument": {
+     "holder": "the Senate Democratic caucus",
+     "trusted": true
+    }
+   },
+   "denominated": {
+    "text": "I don't need him to be one of ours. Fifty-one is fifty-one, and the committee gavels are the object.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": 0.7,
+    "zReason": "The gavel is a real instrument and the seat produces it; the rim trusts the caucus completely.",
+    "instrument": {
+     "holder": "the Senate Democratic caucus",
+     "trusted": true
+    }
+   }
+  },
+  "B": {
+   "xSide": "right",
+   "source": "race reading — authored z-first, blind to the other variant",
+   "fluid": {
+    "text": "We lost the one Republican who could win Maine. That's it. That's the seat.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": -0.8,
+    "zReason": "The object was the majority's margin and it walked out; nothing replaces it.",
+    "instrument": {
+     "holder": "Senator Collins' record and the Appropriations gavel",
+     "trusted": true
+    }
+   },
+   "coalition": {
+    "text": "She voted for the housing ban, against the rescissions, alone on the ACA rule — and lost anyway. Tell me what the record was for.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": -0.9,
+    "zReason": "The record is trusted and useless; the instrument delivered to Maine and Maine didn't return it.",
+    "instrument": {
+     "holder": "Senator Collins' record and the Appropriations gavel",
+     "trusted": true
+    }
+   },
+   "denominated": {
+    "text": "Thirty years of appropriations for Maine walk out the door, and Bath will learn what a freshman in the minority can bring home.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": -1.0,
+    "zReason": "The rim's object is the Appropriations gavel; it is gone outright.",
+    "instrument": {
+     "holder": "Senator Collins' record and the Appropriations gavel",
+     "trusted": true
+    }
+   }
+  },
+  "C": {
+   "xSide": "left",
+   "source": "race reading — authored z-first, blind to the other variant",
+   "fluid": {
+    "text": "A logger in the Senate. Finally somebody who has stood on a blockade.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": 0.9,
+    "zReason": "The seat is the object and it is held by one of us; realized on sight.",
+    "instrument": {
+     "holder": "Troy Jackson",
+     "trusted": true
+    }
+   },
+   "coalition": {
+    "text": "He didn't win on her record, he won on rent and insulin. Now the caucus has to move on both or he is just another vote.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": 0.6,
+    "zReason": "Realized at the seat, conditional on the caucus — the holder is trusted, the caucus less so.",
+    "instrument": {
+     "holder": "Troy Jackson",
+     "trusted": true
+    }
+   },
+   "denominated": {
+    "text": "If Jackson votes for the next CR with the war money in it, I will say so out loud. The seat isn't the object; who it answers to is.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": 0.3,
+    "zReason": "The rim trusts Jackson and distrusts the vehicle; z stays positive but thin.",
+    "instrument": {
+     "holder": "Troy Jackson",
+     "trusted": true
+    }
+   }
+  },
+  "D": {
+   "xSide": "right",
+   "source": "race reading — authored z-first, blind to the other variant",
+   "fluid": {
+    "text": "Collins lost because she was never with us. Good riddance, bad trade.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": -0.3,
+    "zReason": "A loss on paper, but not of anything the station held.",
+    "instrument": {
+     "holder": "the next vehicle on the floor",
+     "trusted": false
+    }
+   },
+   "coalition": {
+    "text": "A union logger beat a Trump-skeptic Republican in a state Trump lost three times. That's the establishment's loss, not ours.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": -0.2,
+    "zReason": "The frustrated object belongs to B; D's own object was never in the seat.",
+    "instrument": {
+     "holder": "the next vehicle on the floor",
+     "trusted": false
+    }
+   },
+   "denominated": {
+    "text": "Jackson is a Democrat who talks like us. Watch the tariff vote — if he breaks with Schumer, Maine got a better deal than we did.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": 0.1,
+    "zReason": "The rim half-trusts the holder as a populist; z crosses zero on the chance of a defection.",
+    "instrument": {
+     "holder": "the next vehicle on the floor",
+     "trusted": false
+    }
+   }
+  }
+ },
+ "impliedZ": 0.025,
+ "window": {
+  "opens": "2026-10-12",
+  "closes": "2026-11-03",
+  "rule": "§4c — the trigger day is declared in advance; the frame dates itself on the vote"
+ },
+ "meta": {
+  "status": "claude-draft",
+  "conditional": true,
+  "paidOn": "2026-11-03",
+  "source": "Parallelogram race reading, 2026-10-12 — two conditional Readings per seat; one collapses into the live Reading on 11-03, the other retires as the record of the miss",
+  "editHistory": [
+   {
+    "at": "2026-10-12T18:00:00.000Z",
+    "by": "claude",
+    "what": "authored z-first, twelve stations, blind"
+   }
+  ],
+  "aiDeltas": []
+ },
+ "formulaVersion": "1",
+ "diatribeLayer": "owed",
+ "images": []
+}

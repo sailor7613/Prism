@@ -1,0 +1,242 @@
+{
+ "rid": "rdg_race_me_collins",
+ "schema": "reading/v1",
+ "kind": "race",
+ "race": "me-sen",
+ "variant": "collins",
+ "title": "Collins Holds, Alone",
+ "category": "The Races · Midterms 2026",
+ "date": "2026-11-03",
+ "updatedAt": "2026-10-12T18:00:00.000Z",
+ "centralObject": {
+  "kind": "seat",
+  "ref": "me-sen",
+  "name": "Maine's Senate seat (Class 2)",
+  "state": "conditional — paid on election day",
+  "stateDate": "2026-11-03",
+  "declared": true
+ },
+ "prompt": "If Susan Collins holds: is a lone vote a delivery, or a signal?",
+ "framing": "The incumbent crossed her caucus on the reconciliation bill, the rescissions and the ACA payment rule, led by 24 on bringing money home, trailed in every October poll, and held the seat anyway — a sixth term in a state that wanted a Democratic Senate 55–42.",
+ "framingKeywords": [],
+ "axes": {
+  "x": {
+   "pos": "Right",
+   "neg": "Left"
+  },
+  "y": {
+   "pos": "Institutional",
+   "neg": "Populist"
+  },
+  "z": {
+   "pos": "The seat answers to Maine — rent, insulin, the shipyard",
+   "neg": "The seat answers to a caucus; nothing changes in Maine"
+  }
+ },
+ "prevalentAxis": "y",
+ "split": {
+  "topology": "diagonal",
+  "strength": 0.7,
+  "seam": "B realized, A + C frustrated, D cool — the institutional right alone is paid",
+  "rationale": "A hold pays one station fully and frustrates both left stations; the populist right gets a seat it doesn't trust.",
+  "ruledBy": null,
+  "date": "2026-10-12"
+ },
+ "responses": {
+  "A": {
+   "xSide": "left",
+   "source": "race reading — authored z-first, blind to the other variant",
+   "fluid": {
+    "text": "She did it again. Maine looks at the map and votes for the person. The map doesn't move.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": -0.4,
+    "zReason": "The count is frustrated; the person is not the object.",
+    "instrument": {
+     "holder": "the Senate majority",
+     "trusted": false
+    }
+   },
+   "coalition": {
+    "text": "Collins holds, the majority holds, and every one of her lonely yeas — the ACA rule, the housing ban — stays a lonely yea. One vote is not a check.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": -0.6,
+    "zReason": "The record is real and does not move outcomes; frustrated at the instrument.",
+    "instrument": {
+     "holder": "the Senate majority",
+     "trusted": false
+    }
+   },
+   "denominated": {
+    "text": "Thirty years of 'concerned' and the state keeps buying it. The object was the majority, and she delivered it to them, not to Maine.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": -0.8,
+    "zReason": "The rim reads the hold as delivering the opposing gavel; near-total frustration.",
+    "instrument": {
+     "holder": "the Senate majority",
+     "trusted": false
+    }
+   }
+  },
+  "B": {
+   "xSide": "right",
+   "source": "race reading — authored z-first, blind to the other variant",
+   "fluid": {
+    "text": "Collins holds Maine. The majority runs through Portland and nobody can explain how, but it does.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": 0.9,
+    "zReason": "The seat and the margin are realized on sight.",
+    "instrument": {
+     "holder": "Senator Collins and the Appropriations gavel",
+     "trusted": true
+    }
+   },
+   "coalition": {
+    "text": "She crossed on the ACA rule and the rescissions and still won — that's proof the record is the product. The Appropriations seat stays Maine's.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": 0.9,
+    "zReason": "The holder is trusted; the instrument (the record) is shown to work at the ballot.",
+    "instrument": {
+     "holder": "Senator Collins and the Appropriations gavel",
+     "trusted": true
+    }
+   },
+   "denominated": {
+    "text": "I'll spend whatever it costs to keep that gavel. The object is Appropriations and the shipyard; it stays.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": 1.0,
+    "zReason": "The rim's object is exactly what a hold delivers.",
+    "instrument": {
+     "holder": "Senator Collins and the Appropriations gavel",
+     "trusted": true
+    }
+   }
+  },
+  "C": {
+   "xSide": "left",
+   "source": "race reading — authored z-first, blind to the other variant",
+   "fluid": {
+    "text": "Of course she won. The money always wins in Maine.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": -0.9,
+    "zReason": "The seat is the object and it is held against us; frustrated on sight.",
+    "instrument": {
+     "holder": "Senator Collins",
+     "trusted": false
+    }
+   },
+   "coalition": {
+    "text": "Jackson lost by two in a state where 55 percent wanted a Democratic Senate. The seat answered to the donors, not the county.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": -0.8,
+    "zReason": "The holder is distrusted; the base's own expectation (55–42) was not delivered.",
+    "instrument": {
+     "holder": "Senator Collins",
+     "trusted": false
+    }
+   },
+   "denominated": {
+    "text": "The blockade story was true. She promised to listen in '97 and she is still listening. Nothing she brings home is the thing we asked for.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": -1.0,
+    "zReason": "The rim signs by the station's trust in the holder: none.",
+    "instrument": {
+     "holder": "Senator Collins",
+     "trusted": false
+    }
+   }
+  },
+  "D": {
+   "xSide": "right",
+   "source": "race reading — authored z-first, blind to the other variant",
+   "fluid": {
+    "text": "Collins wins, fine. She is still a Republican on paper.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": 0.2,
+    "zReason": "A seat kept; thin realization.",
+    "instrument": {
+     "holder": "Senator Collins",
+     "trusted": false
+    }
+   },
+   "coalition": {
+    "text": "She'll vote against us on the next tariff and the next rescission and call it Maine independence. It's a seat, not a vote.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": -0.2,
+    "zReason": "The seat is realized, the vote is not; z straddles zero.",
+    "instrument": {
+     "holder": "Senator Collins",
+     "trusted": false
+    }
+   },
+   "denominated": {
+    "text": "I'd rather have had the logger and a clean fight. A Republican who votes with Baldwin on the ACA rule isn't delivering the object to anyone I know.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": -0.5,
+    "zReason": "The rim distrusts the holder outright; a hold frustrates its object.",
+    "instrument": {
+     "holder": "Senator Collins",
+     "trusted": false
+    }
+   }
+  }
+ },
+ "impliedZ": -0.183,
+ "window": {
+  "opens": "2026-10-12",
+  "closes": "2026-11-03",
+  "rule": "§4c — the trigger day is declared in advance; the frame dates itself on the vote"
+ },
+ "meta": {
+  "status": "claude-draft",
+  "conditional": true,
+  "paidOn": "2026-11-03",
+  "source": "Parallelogram race reading, 2026-10-12 — two conditional Readings per seat; one collapses into the live Reading on 11-03, the other retires as the record of the miss",
+  "editHistory": [
+   {
+    "at": "2026-10-12T18:00:00.000Z",
+    "by": "claude",
+    "what": "authored z-first, twelve stations, blind"
+   }
+  ],
+  "aiDeltas": []
+ },
+ "formulaVersion": "1",
+ "diatribeLayer": "owed",
+ "images": []
+}

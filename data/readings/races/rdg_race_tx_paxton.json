@@ -1,0 +1,242 @@
+{
+ "rid": "rdg_race_tx_paxton",
+ "schema": "reading/v1",
+ "kind": "race",
+ "race": "tx-sen",
+ "variant": "paxton",
+ "title": "The Docket Takes the Seat",
+ "category": "The Races · Midterms 2026",
+ "date": "2026-11-03",
+ "updatedAt": "2026-10-12T18:00:00.000Z",
+ "centralObject": {
+  "kind": "seat",
+  "ref": "tx-sen",
+  "name": "Texas's Senate seat (Class 2)",
+  "state": "conditional — paid on election day",
+  "stateDate": "2026-11-03",
+  "declared": true
+ },
+ "prompt": "If Ken Paxton holds Texas: does the Attorney General's docket become a Senate instrument, or stay a docket?",
+ "framing": "The impeached-and-acquitted Attorney General, who beat the sitting senator 64–36 with the President's endorsement, holds the seat by low single digits after trailing in nearly every poll — the thirty-eighth year without a Democratic Senate win in Texas.",
+ "framingKeywords": [],
+ "axes": {
+  "x": {
+   "pos": "Right",
+   "neg": "Left"
+  },
+  "y": {
+   "pos": "Institutional",
+   "neg": "Populist"
+  },
+  "z": {
+   "pos": "The seat delivers — vouchers answered, insulin, the Valley",
+   "neg": "The seat is a thirty-eight-year habit with a new name on it"
+  }
+ },
+ "prevalentAxis": "y",
+ "split": {
+  "topology": "peel",
+  "strength": 0.5,
+  "seam": "the institutional right peels from the populist right on whether the seat was kept or the senator lost",
+  "rationale": "A hold realizes D fully and B thinly; the left is frustrated whole, the populist left absolutely.",
+  "ruledBy": null,
+  "date": "2026-10-12"
+ },
+ "responses": {
+  "A": {
+   "xSide": "left",
+   "source": "race reading — authored z-first, blind to the other variant",
+   "fluid": {
+    "text": "Texas is still Texas. We spent a hundred million to find that out.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": -0.8,
+    "zReason": "The count frustrated at scale.",
+    "instrument": {
+     "holder": "Senator Paxton",
+     "trusted": false
+    }
+   },
+   "coalition": {
+    "text": "Talarico ran even for three months and lost by three. The Senate was never in Texas; it was in Maine and Iowa.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": -0.6,
+    "zReason": "Frustration tempered by the station's own reading that the object lay elsewhere.",
+    "instrument": {
+     "holder": "Senator Paxton",
+     "trusted": false
+    }
+   },
+   "denominated": {
+    "text": "Paxton in the Senate is a sanctions-and-subpoena machine with a gavel. The seat is now an instrument against us, not a vacancy.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": -0.9,
+    "zReason": "The rim reads the holder as an adversarial instrument; near-total frustration.",
+    "instrument": {
+     "holder": "Senator Paxton",
+     "trusted": false
+    }
+   }
+  },
+  "B": {
+   "xSide": "right",
+   "source": "race reading — authored z-first, blind to the other variant",
+   "fluid": {
+    "text": "Held Texas. Paxton's a problem, but he's our problem.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": 0.5,
+    "zReason": "The seat realized; the holder not trusted.",
+    "instrument": {
+     "holder": "Senator Paxton",
+     "trusted": false
+    }
+   },
+   "coalition": {
+    "text": "The runoff was ugly, the general was close, and the seat is red. Cornyn's chairmanships are gone, though — the record will show the cost.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": 0.3,
+    "zReason": "Seat realized, instrument (seniority) lost; z thin.",
+    "instrument": {
+     "holder": "Senator Paxton",
+     "trusted": false
+    }
+   },
+   "denominated": {
+    "text": "We kept the seat and lost the senator. Paxton delivers to Paxton. Don't expect the appropriations Cornyn brought home.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": 0.0,
+    "zReason": "The rim distrusts the holder; the seat's object (delivery to Texas) is unpaid — zero.",
+    "instrument": {
+     "holder": "Senator Paxton",
+     "trusted": false
+    }
+   }
+  },
+  "C": {
+   "xSide": "left",
+   "source": "race reading — authored z-first, blind to the other variant",
+   "fluid": {
+    "text": "The impeached guy won. Texas voted for the lawsuit over the insulin cap.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": -1.0,
+    "zReason": "The seat held against us by the instrument that sued us; frustrated absolutely.",
+    "instrument": {
+     "holder": "Senator Paxton",
+     "trusted": false
+    }
+   },
+   "coalition": {
+    "text": "Talarico won every suburb and lost the Valley. The object was the Valley and nobody on our side could speak to it.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": -0.8,
+    "zReason": "Frustration signed at the station's own failure to deliver the base.",
+    "instrument": {
+     "holder": "Senator Paxton",
+     "trusted": false
+    }
+   },
+   "denominated": {
+    "text": "I told you a nice Democrat doesn't beat a machine. Vouchers, the walkout, the Ten Commandments — all of it stands.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": -1.0,
+    "zReason": "Every object on the state record stays unanswered; the rim distrusts the holder entirely.",
+    "instrument": {
+     "holder": "Senator Paxton",
+     "trusted": false
+    }
+   }
+  },
+  "D": {
+   "xSide": "right",
+   "source": "race reading — authored z-first, blind to the other variant",
+   "fluid": {
+    "text": "Paxton! The guy who sued the whole Biden administration is in the Senate.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": 1.0,
+    "zReason": "The seat held by the station's own instrument; realized on sight.",
+    "instrument": {
+     "holder": "Ken Paxton and the President's endorsement",
+     "trusted": true
+    }
+   },
+   "coalition": {
+    "text": "He beat Cornyn, he beat Talarico, he beat the court's dismissal. Trump's guy won and the establishment lost twice.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": 0.9,
+    "zReason": "The holder trusted; the endorsement instrument delivered.",
+    "instrument": {
+     "holder": "Ken Paxton and the President's endorsement",
+     "trusted": true
+    }
+   },
+   "denominated": {
+    "text": "Now he has to deliver — the refunds, the dividend bill, the war money. If he's just a lawsuit with a seat, I'll say it before anyone.",
+    "xWord": "",
+    "yWord": "",
+    "words": [],
+    "source": "",
+    "z": 0.6,
+    "zReason": "The rim trusts the holder but names the unpaid objects; z positive, discounted.",
+    "instrument": {
+     "holder": "Ken Paxton and the President's endorsement",
+     "trusted": true
+    }
+   }
+  }
+ },
+ "impliedZ": -0.15,
+ "window": {
+  "opens": "2026-10-12",
+  "closes": "2026-11-03",
+  "rule": "§4c — the trigger day is declared in advance; the frame dates itself on the vote"
+ },
+ "meta": {
+  "status": "claude-draft",
+  "conditional": true,
+  "paidOn": "2026-11-03",
+  "source": "Parallelogram race reading, 2026-10-12 — two conditional Readings per seat; one collapses into the live Reading on 11-03, the other retires as the record of the miss",
+  "editHistory": [
+   {
+    "at": "2026-10-12T18:00:00.000Z",
+    "by": "claude",
+    "what": "authored z-first, twelve stations, blind"
+   }
+  ],
+  "aiDeltas": []
+ },
+ "formulaVersion": "1",
+ "diatribeLayer": "owed",
+ "images": []
+}
