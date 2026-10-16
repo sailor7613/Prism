@@ -1,11 +1,9 @@
 # Newsroom digest — 2026-10-16
 
-Register: 79 objects · this scan: 4 new, 0 seen again, 0 returned.
+Register: 79 objects · this scan: 0 new, 0 seen again, 0 returned.
 
-## Queued for drafting (3)
-- **Teen kills 4 at Oregon school . And , DOJ sues California over alleged noncitizens** — suit · sued · holder: the Justice Department · formed 2026-10-16 · 14 outlets (peak 14) · `obj_thejusti_alleged-california-doj-kills`
-- **NCAA sues Ohio governor over his executive order allowing schools to ignore new eligibility rule** — order · issued · holder: a state · formed 2026-10-16 · 6 outlets (peak 6) · `obj_astate_allowing-eligibility-executive-governor`
-- **White House press secretary Katie Zacharia says she did not pass bar exam** — vote · voted · holder: the President · formed 2026-10-16 · 3 outlets (peak 3) · `obj_thepresi_bar-did-exam-house`
+## Queued for drafting (0)
+- (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
 - none today
@@ -14,10 +12,7 @@ Register: 79 objects · this scan: 4 new, 0 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **NCAA sues Ohio governor over his executive order allowing schools to ignore new eligibility rule** — order · issued · holder: a state · formed 2026-10-16 · 6 outlets (peak 6) · `obj_astate_allowing-eligibility-executive-governor`
-- **White House press secretary Katie Zacharia says she did not pass bar exam** — vote · voted · holder: the President · formed 2026-10-16 · 3 outlets (peak 3) · `obj_thepresi_bar-did-exam-house`
-- **New Orleans jail worker sentenced for helping 10 inmates escape through toilet hole** — indictment · charged · holder: ? · formed 2026-10-16 · 3 outlets (peak 3) · `obj_x_escape-helping-hole-inmates`
-- **Teen kills 4 at Oregon school . And , DOJ sues California over alleged noncitizens** — suit · sued · holder: the Justice Department · formed 2026-10-16 · 14 outlets (peak 14) · `obj_thejusti_alleged-california-doj-kills`
+- none
 
 ## Watching (28)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
