@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-10-12T21:19:49.222Z · 19 legislative + 1 news (GDELT, 3d)
+// 2026-10-15T21:32:54.439Z · 18 legislative + 3 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1791839960949,
+    "ts": 1792099922905,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.815,
+      "salience": 0.802,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -262,11 +262,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1791839960949,
+    "ts": 1792099922905,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.805,
+      "salience": 0.792,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -519,11 +519,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1791839960948,
+    "ts": 1792099922905,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.77,
+      "salience": 0.757,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -1937,11 +1937,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1791839960949,
+    "ts": 1792099922905,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.77,
+      "salience": 0.756,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -2194,11 +2194,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1791839960949,
+    "ts": 1792099922905,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.762,
+      "salience": 0.748,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -2451,11 +2451,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1791839960949,
+    "ts": 1792099922905,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.699,
+      "salience": 0.686,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -3364,11 +3364,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1791839960949,
+    "ts": 1792099922905,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.658,
+      "salience": 0.645,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3892,11 +3892,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1791839960949,
+    "ts": 1792099922905,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.635,
+      "salience": 0.622,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4791,267 +4791,13 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_leg_sjres-119-198",
-    "source": "legislative",
-    "ts": 1791839960948,
-    "raw": {
-      "method": "legislative_rollcall_v1",
-      "billId": "sjres-119-198",
-      "salience": 0.476,
-      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/198",
-      "votes": [
-        {
-          "voteId": "s-119-2-199",
-          "chamber": "senate",
-          "date": "July 16, 2026,  01:25 PM",
-          "question": "On the Motion to Proceed",
-          "result": "Motion to Proceed Rejected",
-          "margin": -0.042,
-          "totals": {
-            "yea": 46,
-            "nay": 50,
-            "present": 0,
-            "notVoting": 4
-          },
-          "party": {
-            "D": {
-              "yea": 44,
-              "nay": 0
-            },
-            "R": {
-              "yea": 0,
-              "nay": 50
-            },
-            "I": {
-              "yea": 2,
-              "nay": 0
-            }
-          },
-          "positions": {
-            "yea": [
-              "A000382",
-              "B001230",
-              "B001267",
-              "B001277",
-              "B001303",
-              "B001288",
-              "C000127",
-              "C001088",
-              "C001113",
-              "D000622",
-              "D000563",
-              "F000479",
-              "G000574",
-              "G000555",
-              "H001076",
-              "H001046",
-              "H000273",
-              "H001042",
-              "K000384",
-              "K000377",
-              "K000394",
-              "K000383",
-              "K000367",
-              "M000133",
-              "M001176",
-              "M001111",
-              "O000174",
-              "P000145",
-              "P000595",
-              "R000122",
-              "R000608",
-              "S000033",
-              "S001194",
-              "S001150",
-              "S000148",
-              "S001181",
-              "S001208",
-              "S001203",
-              "V000128",
-              "W000805",
-              "W000790",
-              "W000817",
-              "W000800",
-              "W000802",
-              "W000779"
-            ],
-            "nay": [
-              "B001299",
-              "B001261",
-              "B001243",
-              "B001236",
-              "B001319",
-              "B001305",
-              "C001047",
-              "C001075",
-              "C001035",
-              "C001056",
-              "C001095",
-              "C001096",
-              "C000880",
-              "C001098",
-              "C001114",
-              "D000618",
-              "E000295",
-              "F000463",
-              "G000359",
-              "G000386",
-              "H001089",
-              "H001061",
-              "H001104",
-              "H001079",
-              "J000293",
-              "J000312",
-              "K000393",
-              "L000575",
-              "L000577",
-              "L000571",
-              "M001198",
-              "M001243",
-              "M001244",
-              "M000934",
-              "M001242",
-              "M001153",
-              "P000603",
-              "R000618",
-              "R000584",
-              "R000605",
-              "S001227",
-              "S001217",
-              "S001184",
-              "S001232",
-              "S001198",
-              "T000250",
-              "T000476",
-              "T000278",
-              "Y000064"
-            ],
-            "present": [],
-            "notVoting": [
-              "H000601",
-              "M000355",
-              "M001169",
-              "W000437"
-            ]
-          }
-        }
-      ]
-    },
-    "title": "A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Centers for Medicare & Medicaid Services of the Department of Health and Human Services relating to \"Medicare Program; Implementation of Prior Authorization for Select Services for the Wasteful and Inappropriate Services Reduction (WISeR) Model\".",
-    "summary": "2026-07-16 senate: On the Motion to Proceed — Motion to Proceed Rejected (46-50; D 44-0 · R 0-50 · I 2-0)",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [
-      "A000382",
-      "B001230",
-      "B001267",
-      "B001277",
-      "B001303",
-      "B001288",
-      "C000127",
-      "C001088",
-      "C001113",
-      "D000622",
-      "D000563",
-      "F000479",
-      "G000574",
-      "G000555",
-      "H001076",
-      "H001046",
-      "H000273",
-      "H001042",
-      "K000384",
-      "K000377",
-      "K000394",
-      "K000383",
-      "K000367",
-      "M000133",
-      "M001176",
-      "M001111",
-      "O000174",
-      "P000145",
-      "P000595",
-      "R000122",
-      "R000608",
-      "S000033",
-      "S001194",
-      "S001150",
-      "S000148",
-      "S001181",
-      "S001208",
-      "S001203",
-      "V000128",
-      "W000805",
-      "W000790",
-      "W000817",
-      "W000800",
-      "W000802",
-      "W000779",
-      "B001299",
-      "B001261",
-      "B001243",
-      "B001236",
-      "B001319",
-      "B001305",
-      "C001047",
-      "C001075",
-      "C001035",
-      "C001056",
-      "C001095",
-      "C001096",
-      "C000880",
-      "C001098",
-      "C001114",
-      "D000618",
-      "E000295",
-      "F000463",
-      "G000359",
-      "G000386",
-      "H001089",
-      "H001061",
-      "H001104",
-      "H001079",
-      "J000293",
-      "J000312",
-      "K000393",
-      "L000575",
-      "L000577",
-      "L000571",
-      "M001198",
-      "M001243",
-      "M001244",
-      "M000934",
-      "M001242",
-      "M001153",
-      "P000603",
-      "R000618",
-      "R000584",
-      "R000605",
-      "S001227",
-      "S001217",
-      "S001184",
-      "S001232",
-      "S001198",
-      "T000250",
-      "T000476",
-      "T000278",
-      "Y000064"
-    ],
-    "bills": [
-      "sjres-119-198"
-    ],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1791839960949,
+    "ts": 1792099922905,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.442,
+      "salience": 0.429,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5946,11 +5692,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1791839960948,
+    "ts": 1792099922905,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.43,
+      "salience": 0.416,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -7225,11 +6971,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1791839960949,
+    "ts": 1792099922905,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.35,
+      "salience": 0.336,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -8145,11 +7891,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1791839960949,
+    "ts": 1792099922905,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.348,
+      "salience": 0.335,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -9055,11 +8801,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1791839960949,
+    "ts": 1792099922905,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.314,
+      "salience": 0.3,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9973,11 +9719,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1791839960949,
+    "ts": 1792099922905,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.27,
+      "salience": 0.257,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10853,11 +10599,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1791839960949,
+    "ts": 1792099922905,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.266,
+      "salience": 0.252,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11729,11 +11475,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1791839960948,
+    "ts": 1792099922904,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.074,
+      "salience": 0.06,
       "congressGovUrl": null,
       "votes": [
         {
@@ -12622,11 +12368,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1791839960948,
+    "ts": 1792099922905,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.067,
+      "salience": 0.054,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -13537,11 +13283,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1791839960948,
+    "ts": 1792099922904,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.06,
+      "salience": 0.047,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -14423,40 +14169,217 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_against-anger-chief",
+    "cid": "cand_news_change-finds-frustrated",
     "source": "news",
-    "ts": 1791839989217,
+    "ts": 1792099974435,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.224,
+      "salience": 0.965,
       "articles": [
         {
-          "title": "India young return to streets as anger against election chief and Modi grows",
-          "url": "https://www.newsday.com/news/nation/india-sir-cockroach-election-commission-gyanesh-protests-s09270",
-          "domain": "newsday.com",
-          "seendate": "2026-10-10T06:45:00Z",
-          "image": "https://cdn.newsday.com/ace/c:NDg5OGYxYjItNmE0Mi00:ZTlhNjY0MTYtOGY5Zi00/landscape/1280"
+          "title": "Frustrated with Trump , voters overwhelmingly want change , poll finds",
+          "url": "https://www.dailybreeze.com/2026/10/15/trump-frustration-midterms-poll/",
+          "domain": "dailybreeze.com",
+          "seendate": "2026-10-15T16:00:00Z",
+          "image": "https://www.dailybreeze.com/wp-content/uploads/2026/10/Trump__4388-1.jpg"
         },
         {
-          "title": "India young return to streets as anger against election chief and Modi grows | International",
-          "url": "https://www.wboc.com/news/international/india-s-young-return-to-streets-as-anger-against-election-chief-and-modi-grows/article_bee5567c-a6e7-543c-a2f3-5ed6fcdb689a.html",
-          "domain": "wboc.com",
-          "seendate": "2026-10-10T06:45:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/wboc.com/content/tncms/assets/v3/editorial/b/f6/bf6b853e-1d08-5bce-9498-7b6f774db7c9/6ac9cafcb1469.image.jpg?crop=1763%2C926%2C0%2C124"
+          "title": "Frustrated with Trump , voters overwhelmingly want change in Washington , an AP - NORC poll finds",
+          "url": "https://www.ksat.com/news/politics/2026/10/15/frustrated-with-trump-voters-overwhelmingly-want-change-in-washington-an-ap-norc-poll-finds/",
+          "domain": "ksat.com",
+          "seendate": "2026-10-15T15:30:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/QRTI4MYZWFHQ7MENTGGW2G2XSU.jpg?api_key=ksat_9a37fc89631abedf"
         },
         {
-          "title": "India young return to streets as anger against election chief and Modi grows",
-          "url": "https://isp.netscape.com:443/news/world/story/0001/20261010/030b35e23279c75394b7654233c99d6b",
+          "title": "Frustrated with Trump , voters overwhelmingly want change in Washington , an AP - NORC poll finds",
+          "url": "https://isp.netscape.com:443/news/story/0001/20261015/e12dd9b19013c75a3d4ede01c1b9d0c3",
           "domain": "isp.netscape.com",
-          "seendate": "2026-10-10T06:45:00Z",
+          "seendate": "2026-10-15T15:30:00Z",
           "image": null
+        },
+        {
+          "title": "Frustrated with Trump , voters overwhelmingly want change , poll finds",
+          "url": "https://www.pasadenastarnews.com/2026/10/15/trump-frustration-midterms-poll/",
+          "domain": "pasadenastarnews.com",
+          "seendate": "2026-10-15T15:30:00Z",
+          "image": "https://www.pasadenastarnews.com/wp-content/uploads/2026/10/Trump__4388-1.jpg"
+        },
+        {
+          "title": "Frustrated with Trump , voters overwhelmingly want change , poll finds",
+          "url": "https://www.citizensvoice.com/2026/10/15/trump-frustration-midterms-poll/",
+          "domain": "citizensvoice.com",
+          "seendate": "2026-10-15T15:15:00Z",
+          "image": "https://www.citizensvoice.com/wp-content/uploads/2026/10/Trump__4388-1.jpg"
+        },
+        {
+          "title": "Frustrated with Trump , voters overwhelmingly want change , poll finds",
+          "url": "https://www.dailypress.com/2026/10/15/trump-frustration-midterms-poll/",
+          "domain": "dailypress.com",
+          "seendate": "2026-10-15T14:30:00Z",
+          "image": "https://www.dailypress.com/wp-content/uploads/2026/10/Trump__4388-1.jpg"
+        },
+        {
+          "title": "Frustrated with Trump , voters overwhelmingly want change , poll finds",
+          "url": "https://www.orlandosentinel.com/2026/10/15/trump-frustration-midterms-poll-2/",
+          "domain": "orlandosentinel.com",
+          "seendate": "2026-10-15T14:00:00Z",
+          "image": "https://www.orlandosentinel.com/wp-content/uploads/2026/10/Trump__4388-1_4fe30b.jpg"
+        },
+        {
+          "title": "Frustrated with Trump , voters overwhelmingly want change , poll finds",
+          "url": "https://www.dailynews.com/2026/10/15/trump-frustration-midterms-poll/",
+          "domain": "dailynews.com",
+          "seendate": "2026-10-15T14:00:00Z",
+          "image": "https://www.dailynews.com/wp-content/uploads/2026/10/Trump__4388-1.jpg"
+        },
+        {
+          "title": "Frustrated with Trump , voters overwhelmingly want change , poll finds",
+          "url": "https://www.sandiegouniontribune.com/2026/10/15/trump-frustration-midterms-poll/",
+          "domain": "sandiegouniontribune.com",
+          "seendate": "2026-10-15T13:30:00Z",
+          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/10/Trump__4388-1.jpg"
+        },
+        {
+          "title": "Frustrated with Trump , voters overwhelmingly want change , poll finds",
+          "url": "https://www.pilotonline.com/2026/10/15/trump-frustration-midterms-poll/",
+          "domain": "pilotonline.com",
+          "seendate": "2026-10-15T12:30:00Z",
+          "image": "https://www.pilotonline.com/wp-content/uploads/2026/10/Trump__4388-1.jpg"
+        },
+        {
+          "title": "Frustrated with Trump , voters overwhelmingly want change in Washington , an AP - NORC poll finds",
+          "url": "https://www.newsday.com/long-island/politics/2026-midterms-trump-approval-economy-change-election-x02977",
+          "domain": "newsday.com",
+          "seendate": "2026-10-15T11:45:00Z",
+          "image": "https://cdn.newsday.com/ace/c:OGRlOWYxNzYtNThiMi00:N2RmMzRlOWMtYThlMS00/landscape/1280"
+        },
+        {
+          "title": "Frustrated with Trump , voters overwhelmingly want change , poll finds",
+          "url": "https://www.bostonherald.com/2026/10/15/trump-frustration-midterms-poll/",
+          "domain": "bostonherald.com",
+          "seendate": "2026-10-15T11:45:00Z",
+          "image": "https://www.bostonherald.com/wp-content/uploads/2026/10/Trump__4388-1.jpg"
         }
       ]
     },
-    "title": "India young return to streets as anger against election chief and Modi grows",
-    "summary": "2026-10-10 newsday.com: India young return to streets as anger against election chief and Modi grows\n2026-10-10 wboc.com: India young return to streets as anger against election chief and Modi grows | International\n2026-10-10 isp.netscape.com: India young return to streets as anger against election chief and Modi grows",
+    "title": "Frustrated with Trump , voters overwhelmingly want change , poll finds",
+    "summary": "2026-10-15 dailybreeze.com: Frustrated with Trump , voters overwhelmingly want change , poll finds\n2026-10-15 ksat.com: Frustrated with Trump , voters overwhelmingly want change in Washington , an AP - NORC poll finds\n2026-10-15 isp.netscape.com: Frustrated with Trump , voters overwhelmingly want change in Washington , an AP - NORC poll finds\n2026-10-15 pasadenastarnews.com: Frustrated with Trump , voters overwhelmingly want change , poll finds\n2026-10-15 citizensvoice.com: Frustrated with Trump , voters overwhelmingly want change , poll finds\n2026-10-15 dailypress.com: Frustrated with Trump , voters overwhelmingly want change , poll finds",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_100-announce-democrats",
+    "source": "news",
+    "ts": 1792099974435,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.775,
+      "articles": [
+        {
+          "title": "Senate Democrats announce recruitment of 100+ staffers for election observer program",
+          "url": "https://turnto10.com/news/nation-world/senate-democrats-chuck-schumer-alex-padilla-recruit-more-than-a-hundred-staffers-for-november-midterm-election-observer-program-president-trump-republicans-congress",
+          "domain": "turnto10.com",
+          "seendate": "2026-10-15T20:45:00Z",
+          "image": "https://turnto10.com/resources/media2/16x9/5556/1320/0x1/90/037ffe1c-7138-4636-8f30-82fb17931df3-GettyImages2268188953.jpg"
+        },
+        {
+          "title": "Senate Democrats announce recruitment of 100+ staffers for election observer program",
+          "url": "https://cbs6albany.com/news/nation-world/senate-democrats-chuck-schumer-alex-padilla-recruit-more-than-a-hundred-staffers-for-november-midterm-election-observer-program-president-trump-republicans-congress",
+          "domain": "cbs6albany.com",
+          "seendate": "2026-10-15T20:30:00Z",
+          "image": "https://cbs6albany.com/resources/media2/16x9/5556/1320/0x1/90/037ffe1c-7138-4636-8f30-82fb17931df3-GettyImages2268188953.jpg"
+        },
+        {
+          "title": "Senate Democrats announce recruitment of 100+ staffers for election observer program",
+          "url": "https://komonews.com/news/nation-world/senate-democrats-chuck-schumer-alex-padilla-recruit-more-than-a-hundred-staffers-for-november-midterm-election-observer-program-president-trump-republicans-congress",
+          "domain": "komonews.com",
+          "seendate": "2026-10-15T20:15:00Z",
+          "image": "https://komonews.com/resources/media2/16x9/5556/1320/0x1/90/037ffe1c-7138-4636-8f30-82fb17931df3-GettyImages2268188953.jpg"
+        },
+        {
+          "title": "Senate Democrats announce recruitment of 100+ staffers for election observer program",
+          "url": "https://wcyb.com/news/nation-world/senate-democrats-chuck-schumer-alex-padilla-recruit-more-than-a-hundred-staffers-for-november-midterm-election-observer-program-president-trump-republicans-congress",
+          "domain": "wcyb.com",
+          "seendate": "2026-10-15T20:15:00Z",
+          "image": "https://wcyb.com/resources/media2/16x9/5556/1320/0x1/90/037ffe1c-7138-4636-8f30-82fb17931df3-GettyImages2268188953.jpg"
+        },
+        {
+          "title": "Senate Democrats announce recruitment of 100+ staffers for election observer program",
+          "url": "https://wtov9.com/news/nation-world/senate-democrats-chuck-schumer-alex-padilla-recruit-more-than-a-hundred-staffers-for-november-midterm-election-observer-program-president-trump-republicans-congress",
+          "domain": "wtov9.com",
+          "seendate": "2026-10-15T20:15:00Z",
+          "image": "https://wtov9.com/resources/media2/16x9/5556/1320/0x1/90/037ffe1c-7138-4636-8f30-82fb17931df3-GettyImages2268188953.jpg"
+        },
+        {
+          "title": "Senate Democrats announce recruitment of 100+ staffers for election observer program",
+          "url": "https://local21news.com/news/nation-world/senate-democrats-chuck-schumer-alex-padilla-recruit-more-than-a-hundred-staffers-for-november-midterm-election-observer-program-president-trump-republicans-congress",
+          "domain": "local21news.com",
+          "seendate": "2026-10-15T20:15:00Z",
+          "image": "https://local21news.com/resources/media2/16x9/5556/1320/0x1/90/037ffe1c-7138-4636-8f30-82fb17931df3-GettyImages2268188953.jpg"
+        }
+      ]
+    },
+    "title": "Senate Democrats announce recruitment of 100+ staffers for election observer program",
+    "summary": "2026-10-15 turnto10.com: Senate Democrats announce recruitment of 100+ staffers for election observer program\n2026-10-15 cbs6albany.com: Senate Democrats announce recruitment of 100+ staffers for election observer program\n2026-10-15 komonews.com: Senate Democrats announce recruitment of 100+ staffers for election observer program\n2026-10-15 wcyb.com: Senate Democrats announce recruitment of 100+ staffers for election observer program\n2026-10-15 wtov9.com: Senate Democrats announce recruitment of 100+ staffers for election observer program\n2026-10-15 local21news.com: Senate Democrats announce recruitment of 100+ staffers for election observer program",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_authorities-congressional-election",
+    "source": "news",
+    "ts": 1792099974435,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.659,
+      "articles": [
+        {
+          "title": "Authorities investigate letters with  suspicious substance sent to congressional , election offices",
+          "url": "https://abcnews.com/Politics/wireStory/authorities-investigate-letters-suspicious-substances-congressional-election-offices-137290377",
+          "domain": "abcnews.com",
+          "seendate": "2026-10-15T19:45:00Z",
+          "image": "https://i.abcnewsfe.com/a/cf7a6297-8740-4dbd-98f8-a24b60b6e9bb/wirestory_c90253b9873a27471e63c6f1dcf979e9_16x9.jpg"
+        },
+        {
+          "title": "Authorities investigate letters with  suspicious substance sent to congressional , election offices",
+          "url": "https://www.channel3000.com/news/authorities-investigate-letters-with-suspicious-substances-sent-to-congressional-election-offices/article_cb9adeac-e4a1-5d8f-85e4-0fd00ab974bd.html",
+          "domain": "channel3000.com",
+          "seendate": "2026-10-15T18:30:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/channel3000.com/content/tncms/assets/v3/editorial/0/e7/0e77ba82-558d-4703-ba7c-a6dda2794a1f/6ad0f4cc9bd05.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
+        {
+          "title": "Authorities investigate letters with  suspicious substance sent to congressional , election offices",
+          "url": "https://www.click2houston.com/news/politics/2026/10/15/authorities-investigate-letters-with-suspicious-substances-sent-to-congressional-election-offices/",
+          "domain": "click2houston.com",
+          "seendate": "2026-10-15T16:15:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/SRWRPWVHMJFAFD775EWGSQK5BA.jpg?api_key=click2houston_85fdeb57f8cd3635"
+        },
+        {
+          "title": "Authorities investigate letters with  suspicious substance sent to congressional , election offices",
+          "url": "https://www.wsls.com/news/politics/2026/10/15/authorities-investigate-letters-with-suspicious-substances-sent-to-congressional-election-offices/",
+          "domain": "wsls.com",
+          "seendate": "2026-10-15T16:15:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/SRWRPWVHMJFAFD775EWGSQK5BA.jpg?api_key=wsls_8c3a4bc35af7684e"
+        }
+      ]
+    },
+    "title": "Authorities investigate letters with  suspicious substance sent to congressional , election offices",
+    "summary": "2026-10-15 abcnews.com: Authorities investigate letters with  suspicious substance sent to congressional , election offices\n2026-10-15 channel3000.com: Authorities investigate letters with  suspicious substance sent to congressional , election offices\n2026-10-15 click2houston.com: Authorities investigate letters with  suspicious substance sent to congressional , election offices\n2026-10-15 wsls.com: Authorities investigate letters with  suspicious substance sent to congressional , election offices",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,

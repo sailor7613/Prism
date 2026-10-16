@@ -23,9 +23,9 @@
   "Accruals stay accruals.",
   "Prism sees it through Readings."
  ],
- "builtAt": "2026-10-11T20:59:17.174Z",
+ "builtAt": "2026-10-15T18:18:02.873Z",
  "errors": [
-  "GDELT iran: gave up: https://api.gdeltproject.org/api/v2/doc/doc?query=iran%20(oil%20OR%20tanker%20OR%20hormuz%20OR%20sanctions%20OR%20strike)&mode=timelinevol&format=json&timespan=90d",
+  "GDELT iran: fetch failed",
   "GDELT russia: gave up: https://api.gdeltproject.org/api/v2/doc/doc?query=russia%20(refinery%20OR%20urals%20OR%20%22oil%20exports%22%20OR%20tanker)&mode=timelinevol&format=json&timespan=90d",
   "GDELT venezuela: gave up: https://api.gdeltproject.org/api/v2/doc/doc?query=venezuela%20(oil%20OR%20chevron%20OR%20pdvsa%20OR%20sanctions)&mode=timelinevol&format=json&timespan=90d",
   "GDELT settlement: gave up: https://api.gdeltproject.org/api/v2/doc/doc?query=(oil%20OR%20crude)%20(yuan%20OR%20petrodollar%20OR%20%22dollar%20settlement%22%20OR%20%22non-dollar%22%20OR%20invoicing)&mode=timelinevol&format=json&timespan=90d"
@@ -8535,7 +8535,7 @@
     }
    }
   },
-  "fetchedAt": "2026-10-11T20:56:14.724Z",
+  "fetchedAt": "2026-10-15T18:14:34.545Z",
   "column": "realization",
   "guard": "Flows do not score Z; they are the layer Z is scored from (PG01 §6.3.1).",
   "distillateImportsByOrigin": {
@@ -9470,45 +9470,9 @@
    "202607",
    "202608"
   ],
-  "fetchedAt": "2026-10-11T20:56:11.292Z",
+  "fetchedAt": "2026-10-15T18:14:30.211Z",
   "keyed": false,
-  "errors": [
-   "Türkiye products 202510: HTTP 403",
-   "Türkiye products 202511: HTTP 403",
-   "Türkiye products 202512: HTTP 403",
-   "Türkiye products 202601: HTTP 403",
-   "Türkiye products 202602: HTTP 403",
-   "Türkiye products 202603: HTTP 403",
-   "Türkiye products 202604: HTTP 403",
-   "Türkiye products 202605: HTTP 403",
-   "Türkiye products 202606: HTTP 403",
-   "Türkiye products 202607: HTTP 403",
-   "Türkiye products 202608: HTTP 403",
-   "United States crude 202509: HTTP 403",
-   "United States crude 202510: HTTP 403",
-   "United States crude 202511: HTTP 403",
-   "United States crude 202512: HTTP 403",
-   "United States crude 202601: HTTP 403",
-   "United States crude 202602: HTTP 403",
-   "United States crude 202603: HTTP 403",
-   "United States crude 202604: HTTP 403",
-   "United States crude 202605: HTTP 403",
-   "United States crude 202606: HTTP 403",
-   "United States crude 202607: HTTP 403",
-   "United States crude 202608: HTTP 403",
-   "United States products 202509: HTTP 403",
-   "United States products 202510: HTTP 403",
-   "United States products 202511: HTTP 403",
-   "United States products 202512: HTTP 403",
-   "United States products 202601: HTTP 403",
-   "United States products 202602: HTTP 403",
-   "United States products 202603: HTTP 403",
-   "United States products 202604: HTTP 403",
-   "United States products 202605: HTTP 403",
-   "United States products 202606: HTTP 403",
-   "United States products 202607: HTTP 403",
-   "United States products 202608: HTTP 403"
-  ],
+  "errors": [],
   "edges": [
    {
     "period": "2025-09",
@@ -21929,6 +21893,3366 @@
     "cmd": "products",
     "kt": 4.9,
     "usdM": 5
+   },
+   {
+    "period": "2025-10",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Brazil",
+    "partnerCode": 76,
+    "cmd": "products",
+    "kt": 0,
+    "usdM": 0
+   },
+   {
+    "period": "2025-10",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Canada",
+    "partnerCode": 124,
+    "cmd": "products",
+    "kt": 0.1,
+    "usdM": 0.3
+   },
+   {
+    "period": "2025-10",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "China",
+    "partnerCode": 156,
+    "cmd": "products",
+    "kt": 0,
+    "usdM": 0.6
+   },
+   {
+    "period": "2025-10",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Iran",
+    "partnerCode": 364,
+    "cmd": "products",
+    "kt": 0.1,
+    "usdM": 0.1
+   },
+   {
+    "period": "2025-10",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Iraq",
+    "partnerCode": 368,
+    "cmd": "products",
+    "kt": 188.7,
+    "usdM": 59.6
+   },
+   {
+    "period": "2025-10",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Kazakhstan",
+    "partnerCode": 398,
+    "cmd": "products",
+    "kt": 279.5,
+    "usdM": 119.8
+   },
+   {
+    "period": "2025-10",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Kuwait",
+    "partnerCode": 414,
+    "cmd": "products",
+    "kt": 48,
+    "usdM": 34.6
+   },
+   {
+    "period": "2025-10",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Malaysia",
+    "partnerCode": 458,
+    "cmd": "products",
+    "kt": 0.1,
+    "usdM": 0.1
+   },
+   {
+    "period": "2025-10",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Qatar",
+    "partnerCode": 634,
+    "cmd": "products",
+    "kt": 3,
+    "usdM": 3.1
+   },
+   {
+    "period": "2025-10",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Russia",
+    "partnerCode": 643,
+    "cmd": "products",
+    "kt": 1018.5,
+    "usdM": 657
+   },
+   {
+    "period": "2025-10",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Saudi Arabia",
+    "partnerCode": 682,
+    "cmd": "products",
+    "kt": 257.2,
+    "usdM": 161.8
+   },
+   {
+    "period": "2025-10",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "India",
+    "partnerCode": 699,
+    "cmd": "products",
+    "kt": 26,
+    "usdM": 18.2
+   },
+   {
+    "period": "2025-10",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "UAE",
+    "partnerCode": 784,
+    "cmd": "products",
+    "kt": 0.2,
+    "usdM": 0.5
+   },
+   {
+    "period": "2025-10",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "United States",
+    "partnerCode": 842,
+    "cmd": "products",
+    "kt": 7.1,
+    "usdM": 7.6
+   },
+   {
+    "period": "2025-11",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Algeria",
+    "partnerCode": 12,
+    "cmd": "products",
+    "kt": 0,
+    "usdM": 0
+   },
+   {
+    "period": "2025-11",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Canada",
+    "partnerCode": 124,
+    "cmd": "products",
+    "kt": 0.1,
+    "usdM": 0.3
+   },
+   {
+    "period": "2025-11",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "China",
+    "partnerCode": 156,
+    "cmd": "products",
+    "kt": 0.1,
+    "usdM": 0.1
+   },
+   {
+    "period": "2025-11",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Iran",
+    "partnerCode": 364,
+    "cmd": "products",
+    "kt": 0.3,
+    "usdM": 0.2
+   },
+   {
+    "period": "2025-11",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Iraq",
+    "partnerCode": 368,
+    "cmd": "products",
+    "kt": 162.7,
+    "usdM": 52.7
+   },
+   {
+    "period": "2025-11",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Kazakhstan",
+    "partnerCode": 398,
+    "cmd": "products",
+    "kt": 153.5,
+    "usdM": 64.6
+   },
+   {
+    "period": "2025-11",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Kuwait",
+    "partnerCode": 414,
+    "cmd": "products",
+    "kt": 64.2,
+    "usdM": 46.5
+   },
+   {
+    "period": "2025-11",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Malaysia",
+    "partnerCode": 458,
+    "cmd": "products",
+    "kt": 0,
+    "usdM": 0.1
+   },
+   {
+    "period": "2025-11",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Qatar",
+    "partnerCode": 634,
+    "cmd": "products",
+    "kt": 10.4,
+    "usdM": 9.4
+   },
+   {
+    "period": "2025-11",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Russia",
+    "partnerCode": 643,
+    "cmd": "products",
+    "kt": 1044.4,
+    "usdM": 672.2
+   },
+   {
+    "period": "2025-11",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Saudi Arabia",
+    "partnerCode": 682,
+    "cmd": "products",
+    "kt": 171.9,
+    "usdM": 114.8
+   },
+   {
+    "period": "2025-11",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "India",
+    "partnerCode": 699,
+    "cmd": "products",
+    "kt": 104.7,
+    "usdM": 77.5
+   },
+   {
+    "period": "2025-11",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "UAE",
+    "partnerCode": 784,
+    "cmd": "products",
+    "kt": 0.1,
+    "usdM": 0.1
+   },
+   {
+    "period": "2025-11",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "United States",
+    "partnerCode": 842,
+    "cmd": "products",
+    "kt": 3.6,
+    "usdM": 3.7
+   },
+   {
+    "period": "2025-12",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Algeria",
+    "partnerCode": 12,
+    "cmd": "products",
+    "kt": 0,
+    "usdM": 0
+   },
+   {
+    "period": "2025-12",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Canada",
+    "partnerCode": 124,
+    "cmd": "products",
+    "kt": 0.1,
+    "usdM": 0.4
+   },
+   {
+    "period": "2025-12",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "China",
+    "partnerCode": 156,
+    "cmd": "products",
+    "kt": 0,
+    "usdM": 0.1
+   },
+   {
+    "period": "2025-12",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Iran",
+    "partnerCode": 364,
+    "cmd": "products",
+    "kt": 0.2,
+    "usdM": 0.2
+   },
+   {
+    "period": "2025-12",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Iraq",
+    "partnerCode": 368,
+    "cmd": "products",
+    "kt": 183.8,
+    "usdM": 60
+   },
+   {
+    "period": "2025-12",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Kazakhstan",
+    "partnerCode": 398,
+    "cmd": "products",
+    "kt": 231.6,
+    "usdM": 93.8
+   },
+   {
+    "period": "2025-12",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Mexico",
+    "partnerCode": 484,
+    "cmd": "products",
+    "kt": 0,
+    "usdM": 0
+   },
+   {
+    "period": "2025-12",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Qatar",
+    "partnerCode": 634,
+    "cmd": "products",
+    "kt": 3.6,
+    "usdM": 4
+   },
+   {
+    "period": "2025-12",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Russia",
+    "partnerCode": 643,
+    "cmd": "products",
+    "kt": 1436.4,
+    "usdM": 914.3
+   },
+   {
+    "period": "2025-12",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Saudi Arabia",
+    "partnerCode": 682,
+    "cmd": "products",
+    "kt": 69.2,
+    "usdM": 45.3
+   },
+   {
+    "period": "2025-12",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "India",
+    "partnerCode": 699,
+    "cmd": "products",
+    "kt": 69.9,
+    "usdM": 49.7
+   },
+   {
+    "period": "2025-12",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "UAE",
+    "partnerCode": 784,
+    "cmd": "products",
+    "kt": 0.2,
+    "usdM": 0.3
+   },
+   {
+    "period": "2025-12",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "United States",
+    "partnerCode": 842,
+    "cmd": "products",
+    "kt": 2.9,
+    "usdM": 3.6
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Angola",
+    "partnerCode": 24,
+    "cmd": "crude",
+    "kt": 113.5,
+    "usdM": 59.5
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Brazil",
+    "partnerCode": 76,
+    "cmd": "crude",
+    "kt": 1178.4,
+    "usdM": 536.8
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Canada",
+    "partnerCode": 124,
+    "cmd": "crude",
+    "kt": 18919.1,
+    "usdM": 7398.6
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Guyana",
+    "partnerCode": 328,
+    "cmd": "crude",
+    "kt": 539,
+    "usdM": 244.4
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Iraq",
+    "partnerCode": 368,
+    "cmd": "crude",
+    "kt": 511.5,
+    "usdM": 221.4
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Kazakhstan",
+    "partnerCode": 398,
+    "cmd": "crude",
+    "kt": 424,
+    "usdM": 189.9
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Kuwait",
+    "partnerCode": 414,
+    "cmd": "crude",
+    "kt": 111.7,
+    "usdM": 49.1
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Libya",
+    "partnerCode": 434,
+    "cmd": "crude",
+    "kt": 233.6,
+    "usdM": 115.5
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Mexico",
+    "partnerCode": 484,
+    "cmd": "crude",
+    "kt": 1536.7,
+    "usdM": 625.8
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Nigeria",
+    "partnerCode": 566,
+    "cmd": "crude",
+    "kt": 781.9,
+    "usdM": 373.8
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Saudi Arabia",
+    "partnerCode": 682,
+    "cmd": "crude",
+    "kt": 1155.7,
+    "usdM": 513.4
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "UAE",
+    "partnerCode": 784,
+    "cmd": "crude",
+    "kt": 400,
+    "usdM": 183
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Venezuela",
+    "partnerCode": 862,
+    "cmd": "crude",
+    "kt": 377.6,
+    "usdM": 146.8
+   },
+   {
+    "period": "2025-10",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Algeria",
+    "partnerCode": 12,
+    "cmd": "crude",
+    "kt": 94.3,
+    "usdM": 44.2
+   },
+   {
+    "period": "2025-10",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Angola",
+    "partnerCode": 24,
+    "cmd": "crude",
+    "kt": 82.2,
+    "usdM": 41.6
+   },
+   {
+    "period": "2025-10",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Brazil",
+    "partnerCode": 76,
+    "cmd": "crude",
+    "kt": 703.9,
+    "usdM": 329.8
+   },
+   {
+    "period": "2025-10",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Canada",
+    "partnerCode": 124,
+    "cmd": "crude",
+    "kt": 18741.3,
+    "usdM": 7158.4
+   },
+   {
+    "period": "2025-10",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Guyana",
+    "partnerCode": 328,
+    "cmd": "crude",
+    "kt": 1031.8,
+    "usdM": 446.9
+   },
+   {
+    "period": "2025-10",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Iraq",
+    "partnerCode": 368,
+    "cmd": "crude",
+    "kt": 685,
+    "usdM": 287.4
+   },
+   {
+    "period": "2025-10",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Kazakhstan",
+    "partnerCode": 398,
+    "cmd": "crude",
+    "kt": 161.6,
+    "usdM": 67
+   },
+   {
+    "period": "2025-10",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Kuwait",
+    "partnerCode": 414,
+    "cmd": "crude",
+    "kt": 113.6,
+    "usdM": 49.3
+   },
+   {
+    "period": "2025-10",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Libya",
+    "partnerCode": 434,
+    "cmd": "crude",
+    "kt": 252.2,
+    "usdM": 123.3
+   },
+   {
+    "period": "2025-10",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Mexico",
+    "partnerCode": 484,
+    "cmd": "crude",
+    "kt": 1852.1,
+    "usdM": 741.8
+   },
+   {
+    "period": "2025-10",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Nigeria",
+    "partnerCode": 566,
+    "cmd": "crude",
+    "kt": 522.6,
+    "usdM": 233.2
+   },
+   {
+    "period": "2025-10",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Saudi Arabia",
+    "partnerCode": 682,
+    "cmd": "crude",
+    "kt": 1532.1,
+    "usdM": 659
+   },
+   {
+    "period": "2025-10",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "UAE",
+    "partnerCode": 784,
+    "cmd": "crude",
+    "kt": 160.8,
+    "usdM": 76.2
+   },
+   {
+    "period": "2025-10",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Venezuela",
+    "partnerCode": 862,
+    "cmd": "crude",
+    "kt": 699.5,
+    "usdM": 279.9
+   },
+   {
+    "period": "2025-11",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Algeria",
+    "partnerCode": 12,
+    "cmd": "crude",
+    "kt": 14.8,
+    "usdM": 6.9
+   },
+   {
+    "period": "2025-11",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Angola",
+    "partnerCode": 24,
+    "cmd": "crude",
+    "kt": 86,
+    "usdM": 39
+   },
+   {
+    "period": "2025-11",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Brazil",
+    "partnerCode": 76,
+    "cmd": "crude",
+    "kt": 453.1,
+    "usdM": 199.8
+   },
+   {
+    "period": "2025-11",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Canada",
+    "partnerCode": 124,
+    "cmd": "crude",
+    "kt": 16595.1,
+    "usdM": 6244.1
+   },
+   {
+    "period": "2025-11",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "China",
+    "partnerCode": 156,
+    "cmd": "crude",
+    "kt": 0.1,
+    "usdM": 0
+   },
+   {
+    "period": "2025-11",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Guyana",
+    "partnerCode": 328,
+    "cmd": "crude",
+    "kt": 875.8,
+    "usdM": 374.6
+   },
+   {
+    "period": "2025-11",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Iraq",
+    "partnerCode": 368,
+    "cmd": "crude",
+    "kt": 1062.6,
+    "usdM": 430
+   },
+   {
+    "period": "2025-11",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Libya",
+    "partnerCode": 434,
+    "cmd": "crude",
+    "kt": 167.7,
+    "usdM": 77.5
+   },
+   {
+    "period": "2025-11",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Mexico",
+    "partnerCode": 484,
+    "cmd": "crude",
+    "kt": 1858.5,
+    "usdM": 719.8
+   },
+   {
+    "period": "2025-11",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Nigeria",
+    "partnerCode": 566,
+    "cmd": "crude",
+    "kt": 416,
+    "usdM": 187.8
+   },
+   {
+    "period": "2025-11",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Saudi Arabia",
+    "partnerCode": 682,
+    "cmd": "crude",
+    "kt": 1175.7,
+    "usdM": 499.8
+   },
+   {
+    "period": "2025-11",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "India",
+    "partnerCode": 699,
+    "cmd": "crude",
+    "kt": 0.2,
+    "usdM": 0.1
+   },
+   {
+    "period": "2025-11",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "UAE",
+    "partnerCode": 784,
+    "cmd": "crude",
+    "kt": 113.6,
+    "usdM": 49.3
+   },
+   {
+    "period": "2025-11",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Venezuela",
+    "partnerCode": 862,
+    "cmd": "crude",
+    "kt": 715.9,
+    "usdM": 290.1
+   },
+   {
+    "period": "2025-12",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Angola",
+    "partnerCode": 24,
+    "cmd": "crude",
+    "kt": 91.4,
+    "usdM": 39.9
+   },
+   {
+    "period": "2025-12",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Brazil",
+    "partnerCode": 76,
+    "cmd": "crude",
+    "kt": 746,
+    "usdM": 335.9
+   },
+   {
+    "period": "2025-12",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Canada",
+    "partnerCode": 124,
+    "cmd": "crude",
+    "kt": 21615.2,
+    "usdM": 7895.7
+   },
+   {
+    "period": "2025-12",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Guyana",
+    "partnerCode": 328,
+    "cmd": "crude",
+    "kt": 1039.7,
+    "usdM": 442
+   },
+   {
+    "period": "2025-12",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Iraq",
+    "partnerCode": 368,
+    "cmd": "crude",
+    "kt": 952.5,
+    "usdM": 372.4
+   },
+   {
+    "period": "2025-12",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Kuwait",
+    "partnerCode": 414,
+    "cmd": "crude",
+    "kt": 95.4,
+    "usdM": 36.5
+   },
+   {
+    "period": "2025-12",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Libya",
+    "partnerCode": 434,
+    "cmd": "crude",
+    "kt": 339.7,
+    "usdM": 149.5
+   },
+   {
+    "period": "2025-12",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Mexico",
+    "partnerCode": 484,
+    "cmd": "crude",
+    "kt": 1220.9,
+    "usdM": 456.9
+   },
+   {
+    "period": "2025-12",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Nigeria",
+    "partnerCode": 566,
+    "cmd": "crude",
+    "kt": 592.3,
+    "usdM": 263
+   },
+   {
+    "period": "2025-12",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Saudi Arabia",
+    "partnerCode": 682,
+    "cmd": "crude",
+    "kt": 1397.9,
+    "usdM": 579.8
+   },
+   {
+    "period": "2025-12",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Venezuela",
+    "partnerCode": 862,
+    "cmd": "crude",
+    "kt": 676.8,
+    "usdM": 281.4
+   },
+   {
+    "period": "2026-01",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Algeria",
+    "partnerCode": 12,
+    "cmd": "crude",
+    "kt": 104.6,
+    "usdM": 44.4
+   },
+   {
+    "period": "2026-01",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Angola",
+    "partnerCode": 24,
+    "cmd": "crude",
+    "kt": 379.8,
+    "usdM": 159.7
+   },
+   {
+    "period": "2026-01",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Brazil",
+    "partnerCode": 76,
+    "cmd": "crude",
+    "kt": 1029.3,
+    "usdM": 462.2
+   },
+   {
+    "period": "2026-01",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Canada",
+    "partnerCode": 124,
+    "cmd": "crude",
+    "kt": 19001.8,
+    "usdM": 6701.1
+   },
+   {
+    "period": "2026-01",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Guyana",
+    "partnerCode": 328,
+    "cmd": "crude",
+    "kt": 1117.8,
+    "usdM": 468
+   },
+   {
+    "period": "2026-01",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Iraq",
+    "partnerCode": 368,
+    "cmd": "crude",
+    "kt": 1070.3,
+    "usdM": 405.7
+   },
+   {
+    "period": "2026-01",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Kuwait",
+    "partnerCode": 414,
+    "cmd": "crude",
+    "kt": 113.3,
+    "usdM": 37.5
+   },
+   {
+    "period": "2026-01",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Libya",
+    "partnerCode": 434,
+    "cmd": "crude",
+    "kt": 172.7,
+    "usdM": 75.4
+   },
+   {
+    "period": "2026-01",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Mexico",
+    "partnerCode": 484,
+    "cmd": "crude",
+    "kt": 1354.3,
+    "usdM": 482
+   },
+   {
+    "period": "2026-01",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Nigeria",
+    "partnerCode": 566,
+    "cmd": "crude",
+    "kt": 264.6,
+    "usdM": 119
+   },
+   {
+    "period": "2026-01",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Saudi Arabia",
+    "partnerCode": 682,
+    "cmd": "crude",
+    "kt": 1768.5,
+    "usdM": 712.5
+   },
+   {
+    "period": "2026-01",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Venezuela",
+    "partnerCode": 862,
+    "cmd": "crude",
+    "kt": 983.7,
+    "usdM": 407.7
+   },
+   {
+    "period": "2026-02",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Angola",
+    "partnerCode": 24,
+    "cmd": "crude",
+    "kt": 118.8,
+    "usdM": 53.9
+   },
+   {
+    "period": "2026-02",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Brazil",
+    "partnerCode": 76,
+    "cmd": "crude",
+    "kt": 421.4,
+    "usdM": 191.3
+   },
+   {
+    "period": "2026-02",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Canada",
+    "partnerCode": 124,
+    "cmd": "crude",
+    "kt": 17912.8,
+    "usdM": 6371.2
+   },
+   {
+    "period": "2026-02",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "China",
+    "partnerCode": 156,
+    "cmd": "crude",
+    "kt": 0,
+    "usdM": 0
+   },
+   {
+    "period": "2026-02",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Guyana",
+    "partnerCode": 328,
+    "cmd": "crude",
+    "kt": 1080.8,
+    "usdM": 469.1
+   },
+   {
+    "period": "2026-02",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Iraq",
+    "partnerCode": 368,
+    "cmd": "crude",
+    "kt": 1185.7,
+    "usdM": 469.5
+   },
+   {
+    "period": "2026-02",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Kuwait",
+    "partnerCode": 414,
+    "cmd": "crude",
+    "kt": 109.7,
+    "usdM": 35.5
+   },
+   {
+    "period": "2026-02",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Libya",
+    "partnerCode": 434,
+    "cmd": "crude",
+    "kt": 473.1,
+    "usdM": 213
+   },
+   {
+    "period": "2026-02",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Mexico",
+    "partnerCode": 484,
+    "cmd": "crude",
+    "kt": 1240.2,
+    "usdM": 469.2
+   },
+   {
+    "period": "2026-02",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Nigeria",
+    "partnerCode": 566,
+    "cmd": "crude",
+    "kt": 737.3,
+    "usdM": 345.3
+   },
+   {
+    "period": "2026-02",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Saudi Arabia",
+    "partnerCode": 682,
+    "cmd": "crude",
+    "kt": 2021.6,
+    "usdM": 833.2
+   },
+   {
+    "period": "2026-02",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Venezuela",
+    "partnerCode": 862,
+    "cmd": "crude",
+    "kt": 869.4,
+    "usdM": 349
+   },
+   {
+    "period": "2026-03",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Angola",
+    "partnerCode": 24,
+    "cmd": "crude",
+    "kt": 30.2,
+    "usdM": 14.4
+   },
+   {
+    "period": "2026-03",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Brazil",
+    "partnerCode": 76,
+    "cmd": "crude",
+    "kt": 455.1,
+    "usdM": 232.4
+   },
+   {
+    "period": "2026-03",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Canada",
+    "partnerCode": 124,
+    "cmd": "crude",
+    "kt": 19440.3,
+    "usdM": 7502.5
+   },
+   {
+    "period": "2026-03",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Guyana",
+    "partnerCode": 328,
+    "cmd": "crude",
+    "kt": 1028.7,
+    "usdM": 510.1
+   },
+   {
+    "period": "2026-03",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Iraq",
+    "partnerCode": 368,
+    "cmd": "crude",
+    "kt": 889.8,
+    "usdM": 380.1
+   },
+   {
+    "period": "2026-03",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Libya",
+    "partnerCode": 434,
+    "cmd": "crude",
+    "kt": 231.3,
+    "usdM": 114.2
+   },
+   {
+    "period": "2026-03",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Mexico",
+    "partnerCode": 484,
+    "cmd": "crude",
+    "kt": 1615.6,
+    "usdM": 746.9
+   },
+   {
+    "period": "2026-03",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Nigeria",
+    "partnerCode": 566,
+    "cmd": "crude",
+    "kt": 244.9,
+    "usdM": 114.5
+   },
+   {
+    "period": "2026-03",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Saudi Arabia",
+    "partnerCode": 682,
+    "cmd": "crude",
+    "kt": 2556.5,
+    "usdM": 1186.7
+   },
+   {
+    "period": "2026-03",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "India",
+    "partnerCode": 699,
+    "cmd": "crude",
+    "kt": 0.2,
+    "usdM": 0.2
+   },
+   {
+    "period": "2026-03",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Venezuela",
+    "partnerCode": 862,
+    "cmd": "crude",
+    "kt": 2003.3,
+    "usdM": 902.9
+   },
+   {
+    "period": "2026-04",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Algeria",
+    "partnerCode": 12,
+    "cmd": "crude",
+    "kt": 121.8,
+    "usdM": 84.2
+   },
+   {
+    "period": "2026-04",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Angola",
+    "partnerCode": 24,
+    "cmd": "crude",
+    "kt": 36.6,
+    "usdM": 17
+   },
+   {
+    "period": "2026-04",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Brazil",
+    "partnerCode": 76,
+    "cmd": "crude",
+    "kt": 319.2,
+    "usdM": 184.5
+   },
+   {
+    "period": "2026-04",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Canada",
+    "partnerCode": 124,
+    "cmd": "crude",
+    "kt": 19060.5,
+    "usdM": 9211.3
+   },
+   {
+    "period": "2026-04",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Guyana",
+    "partnerCode": 328,
+    "cmd": "crude",
+    "kt": 1025.1,
+    "usdM": 570
+   },
+   {
+    "period": "2026-04",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Iraq",
+    "partnerCode": 368,
+    "cmd": "crude",
+    "kt": 396.4,
+    "usdM": 182.9
+   },
+   {
+    "period": "2026-04",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Kuwait",
+    "partnerCode": 414,
+    "cmd": "crude",
+    "kt": 51.1,
+    "usdM": 17
+   },
+   {
+    "period": "2026-04",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Libya",
+    "partnerCode": 434,
+    "cmd": "crude",
+    "kt": 278.4,
+    "usdM": 137
+   },
+   {
+    "period": "2026-04",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Mexico",
+    "partnerCode": 484,
+    "cmd": "crude",
+    "kt": 1012.1,
+    "usdM": 615
+   },
+   {
+    "period": "2026-04",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Nigeria",
+    "partnerCode": 566,
+    "cmd": "crude",
+    "kt": 150.4,
+    "usdM": 92.4
+   },
+   {
+    "period": "2026-04",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Saudi Arabia",
+    "partnerCode": 682,
+    "cmd": "crude",
+    "kt": 1611.9,
+    "usdM": 888.5
+   },
+   {
+    "period": "2026-04",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Venezuela",
+    "partnerCode": 862,
+    "cmd": "crude",
+    "kt": 1966.1,
+    "usdM": 1155
+   },
+   {
+    "period": "2026-05",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Algeria",
+    "partnerCode": 12,
+    "cmd": "crude",
+    "kt": 66.7,
+    "usdM": 53.6
+   },
+   {
+    "period": "2026-05",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Brazil",
+    "partnerCode": 76,
+    "cmd": "crude",
+    "kt": 685.3,
+    "usdM": 411.6
+   },
+   {
+    "period": "2026-05",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Canada",
+    "partnerCode": 124,
+    "cmd": "crude",
+    "kt": 17860.4,
+    "usdM": 9720.6
+   },
+   {
+    "period": "2026-05",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Guyana",
+    "partnerCode": 328,
+    "cmd": "crude",
+    "kt": 1098.9,
+    "usdM": 808.7
+   },
+   {
+    "period": "2026-05",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Iraq",
+    "partnerCode": 368,
+    "cmd": "crude",
+    "kt": 508,
+    "usdM": 190.8
+   },
+   {
+    "period": "2026-05",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Kuwait",
+    "partnerCode": 414,
+    "cmd": "crude",
+    "kt": 60,
+    "usdM": 20
+   },
+   {
+    "period": "2026-05",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Libya",
+    "partnerCode": 434,
+    "cmd": "crude",
+    "kt": 96.9,
+    "usdM": 78.2
+   },
+   {
+    "period": "2026-05",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Mexico",
+    "partnerCode": 484,
+    "cmd": "crude",
+    "kt": 1321.9,
+    "usdM": 806.3
+   },
+   {
+    "period": "2026-05",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Nigeria",
+    "partnerCode": 566,
+    "cmd": "crude",
+    "kt": 420.7,
+    "usdM": 314
+   },
+   {
+    "period": "2026-05",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Saudi Arabia",
+    "partnerCode": 682,
+    "cmd": "crude",
+    "kt": 587.1,
+    "usdM": 415.2
+   },
+   {
+    "period": "2026-05",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Venezuela",
+    "partnerCode": 862,
+    "cmd": "crude",
+    "kt": 2373.5,
+    "usdM": 1368.6
+   },
+   {
+    "period": "2026-06",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Algeria",
+    "partnerCode": 12,
+    "cmd": "crude",
+    "kt": 21,
+    "usdM": 16.8
+   },
+   {
+    "period": "2026-06",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Angola",
+    "partnerCode": 24,
+    "cmd": "crude",
+    "kt": 151,
+    "usdM": 109.4
+   },
+   {
+    "period": "2026-06",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Brazil",
+    "partnerCode": 76,
+    "cmd": "crude",
+    "kt": 539.6,
+    "usdM": 341.5
+   },
+   {
+    "period": "2026-06",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Canada",
+    "partnerCode": 124,
+    "cmd": "crude",
+    "kt": 18711.5,
+    "usdM": 10217.6
+   },
+   {
+    "period": "2026-06",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Guyana",
+    "partnerCode": 328,
+    "cmd": "crude",
+    "kt": 1006.8,
+    "usdM": 822.2
+   },
+   {
+    "period": "2026-06",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Libya",
+    "partnerCode": 434,
+    "cmd": "crude",
+    "kt": 295.7,
+    "usdM": 213.6
+   },
+   {
+    "period": "2026-06",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Mexico",
+    "partnerCode": 484,
+    "cmd": "crude",
+    "kt": 1062.4,
+    "usdM": 578.4
+   },
+   {
+    "period": "2026-06",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Nigeria",
+    "partnerCode": 566,
+    "cmd": "crude",
+    "kt": 38.3,
+    "usdM": 27.1
+   },
+   {
+    "period": "2026-06",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Saudi Arabia",
+    "partnerCode": 682,
+    "cmd": "crude",
+    "kt": 380.5,
+    "usdM": 214.3
+   },
+   {
+    "period": "2026-06",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Venezuela",
+    "partnerCode": 862,
+    "cmd": "crude",
+    "kt": 3149.1,
+    "usdM": 1664.8
+   },
+   {
+    "period": "2026-07",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Algeria",
+    "partnerCode": 12,
+    "cmd": "crude",
+    "kt": 2.8,
+    "usdM": 2.5
+   },
+   {
+    "period": "2026-07",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Angola",
+    "partnerCode": 24,
+    "cmd": "crude",
+    "kt": 120.4,
+    "usdM": 83.1
+   },
+   {
+    "period": "2026-07",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Brazil",
+    "partnerCode": 76,
+    "cmd": "crude",
+    "kt": 977.9,
+    "usdM": 546.9
+   },
+   {
+    "period": "2026-07",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Canada",
+    "partnerCode": 124,
+    "cmd": "crude",
+    "kt": 18125.6,
+    "usdM": 9230.8
+   },
+   {
+    "period": "2026-07",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Guyana",
+    "partnerCode": 328,
+    "cmd": "crude",
+    "kt": 721.8,
+    "usdM": 489.6
+   },
+   {
+    "period": "2026-07",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Libya",
+    "partnerCode": 434,
+    "cmd": "crude",
+    "kt": 129.9,
+    "usdM": 90.2
+   },
+   {
+    "period": "2026-07",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Malaysia",
+    "partnerCode": 458,
+    "cmd": "crude",
+    "kt": 0,
+    "usdM": 0
+   },
+   {
+    "period": "2026-07",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Mexico",
+    "partnerCode": 484,
+    "cmd": "crude",
+    "kt": 1675,
+    "usdM": 832.8
+   },
+   {
+    "period": "2026-07",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Nigeria",
+    "partnerCode": 566,
+    "cmd": "crude",
+    "kt": 204,
+    "usdM": 159.3
+   },
+   {
+    "period": "2026-07",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Venezuela",
+    "partnerCode": 862,
+    "cmd": "crude",
+    "kt": 3060.8,
+    "usdM": 1479.6
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Algeria",
+    "partnerCode": 12,
+    "cmd": "products",
+    "kt": 490.8,
+    "usdM": 269.4
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Angola",
+    "partnerCode": 24,
+    "cmd": "products",
+    "kt": 30.7,
+    "usdM": 19.1
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Brazil",
+    "partnerCode": 76,
+    "cmd": "products",
+    "kt": 307.8,
+    "usdM": 149
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Canada",
+    "partnerCode": 124,
+    "cmd": "products",
+    "kt": 1545.7,
+    "usdM": 909.4
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "China",
+    "partnerCode": 156,
+    "cmd": "products",
+    "kt": 0,
+    "usdM": 0.1
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Iraq",
+    "partnerCode": 368,
+    "cmd": "products",
+    "kt": 323.6,
+    "usdM": 142.9
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Kuwait",
+    "partnerCode": 414,
+    "cmd": "products",
+    "kt": 350.2,
+    "usdM": 178.4
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Libya",
+    "partnerCode": 434,
+    "cmd": "products",
+    "kt": 33.4,
+    "usdM": 17.7
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Malaysia",
+    "partnerCode": 458,
+    "cmd": "products",
+    "kt": 23,
+    "usdM": 15.5
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Mexico",
+    "partnerCode": 484,
+    "cmd": "products",
+    "kt": 772,
+    "usdM": 299.4
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Nigeria",
+    "partnerCode": 566,
+    "cmd": "products",
+    "kt": 279.4,
+    "usdM": 154.5
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Qatar",
+    "partnerCode": 634,
+    "cmd": "products",
+    "kt": 57.5,
+    "usdM": 58.3
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Saudi Arabia",
+    "partnerCode": 682,
+    "cmd": "products",
+    "kt": 327.1,
+    "usdM": 168.5
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "India",
+    "partnerCode": 699,
+    "cmd": "products",
+    "kt": 431.4,
+    "usdM": 276.9
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "UAE",
+    "partnerCode": 784,
+    "cmd": "products",
+    "kt": 36.6,
+    "usdM": 33.8
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Türkiye",
+    "partnerCode": 792,
+    "cmd": "products",
+    "kt": 32.5,
+    "usdM": 17.4
+   },
+   {
+    "period": "2025-10",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Algeria",
+    "partnerCode": 12,
+    "cmd": "products",
+    "kt": 120.6,
+    "usdM": 52.9
+   },
+   {
+    "period": "2025-10",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Brazil",
+    "partnerCode": 76,
+    "cmd": "products",
+    "kt": 14.2,
+    "usdM": 7.6
+   },
+   {
+    "period": "2025-10",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Canada",
+    "partnerCode": 124,
+    "cmd": "products",
+    "kt": 1682.4,
+    "usdM": 997.7
+   },
+   {
+    "period": "2025-10",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "China",
+    "partnerCode": 156,
+    "cmd": "products",
+    "kt": 0.1,
+    "usdM": 0.2
+   },
+   {
+    "period": "2025-10",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Iraq",
+    "partnerCode": 368,
+    "cmd": "products",
+    "kt": 237.5,
+    "usdM": 102.4
+   },
+   {
+    "period": "2025-10",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Kuwait",
+    "partnerCode": 414,
+    "cmd": "products",
+    "kt": 45.9,
+    "usdM": 18.9
+   },
+   {
+    "period": "2025-10",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Malaysia",
+    "partnerCode": 458,
+    "cmd": "products",
+    "kt": 29.6,
+    "usdM": 16.5
+   },
+   {
+    "period": "2025-10",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Mexico",
+    "partnerCode": 484,
+    "cmd": "products",
+    "kt": 711.5,
+    "usdM": 276.9
+   },
+   {
+    "period": "2025-10",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Nigeria",
+    "partnerCode": 566,
+    "cmd": "products",
+    "kt": 214.6,
+    "usdM": 123.7
+   },
+   {
+    "period": "2025-10",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Qatar",
+    "partnerCode": 634,
+    "cmd": "products",
+    "kt": 53,
+    "usdM": 50.6
+   },
+   {
+    "period": "2025-10",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Saudi Arabia",
+    "partnerCode": 682,
+    "cmd": "products",
+    "kt": 392,
+    "usdM": 201.3
+   },
+   {
+    "period": "2025-10",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "India",
+    "partnerCode": 699,
+    "cmd": "products",
+    "kt": 229.1,
+    "usdM": 145.8
+   },
+   {
+    "period": "2025-10",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "UAE",
+    "partnerCode": 784,
+    "cmd": "products",
+    "kt": 37.2,
+    "usdM": 35.1
+   },
+   {
+    "period": "2025-10",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Türkiye",
+    "partnerCode": 792,
+    "cmd": "products",
+    "kt": 51.9,
+    "usdM": 31.8
+   },
+   {
+    "period": "2025-11",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Algeria",
+    "partnerCode": 12,
+    "cmd": "products",
+    "kt": 172.1,
+    "usdM": 78
+   },
+   {
+    "period": "2025-11",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Brazil",
+    "partnerCode": 76,
+    "cmd": "products",
+    "kt": 1.6,
+    "usdM": 1.6
+   },
+   {
+    "period": "2025-11",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Canada",
+    "partnerCode": 124,
+    "cmd": "products",
+    "kt": 1751,
+    "usdM": 1026.6
+   },
+   {
+    "period": "2025-11",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "China",
+    "partnerCode": 156,
+    "cmd": "products",
+    "kt": 0,
+    "usdM": 0.2
+   },
+   {
+    "period": "2025-11",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Iraq",
+    "partnerCode": 368,
+    "cmd": "products",
+    "kt": 294.7,
+    "usdM": 125.1
+   },
+   {
+    "period": "2025-11",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Kuwait",
+    "partnerCode": 414,
+    "cmd": "products",
+    "kt": 97.8,
+    "usdM": 53.6
+   },
+   {
+    "period": "2025-11",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Malaysia",
+    "partnerCode": 458,
+    "cmd": "products",
+    "kt": 1,
+    "usdM": 1.5
+   },
+   {
+    "period": "2025-11",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Mexico",
+    "partnerCode": 484,
+    "cmd": "products",
+    "kt": 829.6,
+    "usdM": 314.9
+   },
+   {
+    "period": "2025-11",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Nigeria",
+    "partnerCode": 566,
+    "cmd": "products",
+    "kt": 14,
+    "usdM": 9.2
+   },
+   {
+    "period": "2025-11",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Qatar",
+    "partnerCode": 634,
+    "cmd": "products",
+    "kt": 54.8,
+    "usdM": 50
+   },
+   {
+    "period": "2025-11",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Saudi Arabia",
+    "partnerCode": 682,
+    "cmd": "products",
+    "kt": 254.6,
+    "usdM": 119.9
+   },
+   {
+    "period": "2025-11",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "India",
+    "partnerCode": 699,
+    "cmd": "products",
+    "kt": 489.4,
+    "usdM": 306.2
+   },
+   {
+    "period": "2025-11",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "UAE",
+    "partnerCode": 784,
+    "cmd": "products",
+    "kt": 1.5,
+    "usdM": 1.9
+   },
+   {
+    "period": "2025-11",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Türkiye",
+    "partnerCode": 792,
+    "cmd": "products",
+    "kt": 15.8,
+    "usdM": 10
+   },
+   {
+    "period": "2025-12",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Algeria",
+    "partnerCode": 12,
+    "cmd": "products",
+    "kt": 280.8,
+    "usdM": 125.9
+   },
+   {
+    "period": "2025-12",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Brazil",
+    "partnerCode": 76,
+    "cmd": "products",
+    "kt": 279.5,
+    "usdM": 129.9
+   },
+   {
+    "period": "2025-12",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Canada",
+    "partnerCode": 124,
+    "cmd": "products",
+    "kt": 2210.7,
+    "usdM": 1204.8
+   },
+   {
+    "period": "2025-12",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "China",
+    "partnerCode": 156,
+    "cmd": "products",
+    "kt": 0,
+    "usdM": 0.1
+   },
+   {
+    "period": "2025-12",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Iraq",
+    "partnerCode": 368,
+    "cmd": "products",
+    "kt": 274.4,
+    "usdM": 118.5
+   },
+   {
+    "period": "2025-12",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Kuwait",
+    "partnerCode": 414,
+    "cmd": "products",
+    "kt": 90.1,
+    "usdM": 40.7
+   },
+   {
+    "period": "2025-12",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Libya",
+    "partnerCode": 434,
+    "cmd": "products",
+    "kt": 16.8,
+    "usdM": 9.4
+   },
+   {
+    "period": "2025-12",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Malaysia",
+    "partnerCode": 458,
+    "cmd": "products",
+    "kt": 10.7,
+    "usdM": 6.3
+   },
+   {
+    "period": "2025-12",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Mexico",
+    "partnerCode": 484,
+    "cmd": "products",
+    "kt": 1019.6,
+    "usdM": 432.6
+   },
+   {
+    "period": "2025-12",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Nigeria",
+    "partnerCode": 566,
+    "cmd": "products",
+    "kt": 57.8,
+    "usdM": 26.8
+   },
+   {
+    "period": "2025-12",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Qatar",
+    "partnerCode": 634,
+    "cmd": "products",
+    "kt": 114.2,
+    "usdM": 87.8
+   },
+   {
+    "period": "2025-12",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Saudi Arabia",
+    "partnerCode": 682,
+    "cmd": "products",
+    "kt": 200.9,
+    "usdM": 88.8
+   },
+   {
+    "period": "2025-12",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "India",
+    "partnerCode": 699,
+    "cmd": "products",
+    "kt": 479.9,
+    "usdM": 281.3
+   },
+   {
+    "period": "2025-12",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "UAE",
+    "partnerCode": 784,
+    "cmd": "products",
+    "kt": 32.2,
+    "usdM": 26.6
+   },
+   {
+    "period": "2025-12",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Türkiye",
+    "partnerCode": 792,
+    "cmd": "products",
+    "kt": 103.2,
+    "usdM": 50.2
+   },
+   {
+    "period": "2026-01",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Algeria",
+    "partnerCode": 12,
+    "cmd": "products",
+    "kt": 352.9,
+    "usdM": 161
+   },
+   {
+    "period": "2026-01",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Brazil",
+    "partnerCode": 76,
+    "cmd": "products",
+    "kt": 270.7,
+    "usdM": 115.5
+   },
+   {
+    "period": "2026-01",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Canada",
+    "partnerCode": 124,
+    "cmd": "products",
+    "kt": 2027.9,
+    "usdM": 1075.4
+   },
+   {
+    "period": "2026-01",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "China",
+    "partnerCode": 156,
+    "cmd": "products",
+    "kt": 0.1,
+    "usdM": 0.2
+   },
+   {
+    "period": "2026-01",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Iraq",
+    "partnerCode": 368,
+    "cmd": "products",
+    "kt": 391.5,
+    "usdM": 164.3
+   },
+   {
+    "period": "2026-01",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Kuwait",
+    "partnerCode": 414,
+    "cmd": "products",
+    "kt": 64.1,
+    "usdM": 28
+   },
+   {
+    "period": "2026-01",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Libya",
+    "partnerCode": 434,
+    "cmd": "products",
+    "kt": 22,
+    "usdM": 11.9
+   },
+   {
+    "period": "2026-01",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Malaysia",
+    "partnerCode": 458,
+    "cmd": "products",
+    "kt": 0.7,
+    "usdM": 1.1
+   },
+   {
+    "period": "2026-01",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Mexico",
+    "partnerCode": 484,
+    "cmd": "products",
+    "kt": 770.3,
+    "usdM": 303.9
+   },
+   {
+    "period": "2026-01",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Nigeria",
+    "partnerCode": 566,
+    "cmd": "products",
+    "kt": 88,
+    "usdM": 45.1
+   },
+   {
+    "period": "2026-01",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Qatar",
+    "partnerCode": 634,
+    "cmd": "products",
+    "kt": 104.5,
+    "usdM": 95.8
+   },
+   {
+    "period": "2026-01",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Saudi Arabia",
+    "partnerCode": 682,
+    "cmd": "products",
+    "kt": 133.5,
+    "usdM": 59.4
+   },
+   {
+    "period": "2026-01",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "India",
+    "partnerCode": 699,
+    "cmd": "products",
+    "kt": 278.5,
+    "usdM": 154.1
+   },
+   {
+    "period": "2026-01",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "UAE",
+    "partnerCode": 784,
+    "cmd": "products",
+    "kt": 44.5,
+    "usdM": 36.7
+   },
+   {
+    "period": "2026-01",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Türkiye",
+    "partnerCode": 792,
+    "cmd": "products",
+    "kt": 157.3,
+    "usdM": 80.4
+   },
+   {
+    "period": "2026-02",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Algeria",
+    "partnerCode": 12,
+    "cmd": "products",
+    "kt": 112.5,
+    "usdM": 57.2
+   },
+   {
+    "period": "2026-02",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Angola",
+    "partnerCode": 24,
+    "cmd": "products",
+    "kt": 31.1,
+    "usdM": 12.8
+   },
+   {
+    "period": "2026-02",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Brazil",
+    "partnerCode": 76,
+    "cmd": "products",
+    "kt": 135.5,
+    "usdM": 63
+   },
+   {
+    "period": "2026-02",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Canada",
+    "partnerCode": 124,
+    "cmd": "products",
+    "kt": 1783.7,
+    "usdM": 1021.3
+   },
+   {
+    "period": "2026-02",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "China",
+    "partnerCode": 156,
+    "cmd": "products",
+    "kt": 0.1,
+    "usdM": 0.1
+   },
+   {
+    "period": "2026-02",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Iraq",
+    "partnerCode": 368,
+    "cmd": "products",
+    "kt": 248.8,
+    "usdM": 100.2
+   },
+   {
+    "period": "2026-02",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Kuwait",
+    "partnerCode": 414,
+    "cmd": "products",
+    "kt": 41.5,
+    "usdM": 25.7
+   },
+   {
+    "period": "2026-02",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Malaysia",
+    "partnerCode": 458,
+    "cmd": "products",
+    "kt": 55.8,
+    "usdM": 24.4
+   },
+   {
+    "period": "2026-02",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Mexico",
+    "partnerCode": 484,
+    "cmd": "products",
+    "kt": 877.2,
+    "usdM": 402.7
+   },
+   {
+    "period": "2026-02",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Nigeria",
+    "partnerCode": 566,
+    "cmd": "products",
+    "kt": 32.8,
+    "usdM": 15.7
+   },
+   {
+    "period": "2026-02",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Qatar",
+    "partnerCode": 634,
+    "cmd": "products",
+    "kt": 87.5,
+    "usdM": 63.7
+   },
+   {
+    "period": "2026-02",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Saudi Arabia",
+    "partnerCode": 682,
+    "cmd": "products",
+    "kt": 136,
+    "usdM": 64.4
+   },
+   {
+    "period": "2026-02",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "India",
+    "partnerCode": 699,
+    "cmd": "products",
+    "kt": 207,
+    "usdM": 130.3
+   },
+   {
+    "period": "2026-02",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "UAE",
+    "partnerCode": 784,
+    "cmd": "products",
+    "kt": 29.2,
+    "usdM": 24.4
+   },
+   {
+    "period": "2026-02",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Türkiye",
+    "partnerCode": 792,
+    "cmd": "products",
+    "kt": 48.5,
+    "usdM": 29.9
+   },
+   {
+    "period": "2026-02",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Venezuela",
+    "partnerCode": 862,
+    "cmd": "products",
+    "kt": 199.6,
+    "usdM": 79.3
+   },
+   {
+    "period": "2026-03",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Algeria",
+    "partnerCode": 12,
+    "cmd": "products",
+    "kt": 374,
+    "usdM": 202.2
+   },
+   {
+    "period": "2026-03",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Brazil",
+    "partnerCode": 76,
+    "cmd": "products",
+    "kt": 325.1,
+    "usdM": 182.5
+   },
+   {
+    "period": "2026-03",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Canada",
+    "partnerCode": 124,
+    "cmd": "products",
+    "kt": 1968.3,
+    "usdM": 1512
+   },
+   {
+    "period": "2026-03",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "China",
+    "partnerCode": 156,
+    "cmd": "products",
+    "kt": 0,
+    "usdM": 0.3
+   },
+   {
+    "period": "2026-03",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Iraq",
+    "partnerCode": 368,
+    "cmd": "products",
+    "kt": 456.2,
+    "usdM": 193.2
+   },
+   {
+    "period": "2026-03",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Kuwait",
+    "partnerCode": 414,
+    "cmd": "products",
+    "kt": 82.1,
+    "usdM": 45.9
+   },
+   {
+    "period": "2026-03",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Malaysia",
+    "partnerCode": 458,
+    "cmd": "products",
+    "kt": 1.9,
+    "usdM": 1.8
+   },
+   {
+    "period": "2026-03",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Mexico",
+    "partnerCode": 484,
+    "cmd": "products",
+    "kt": 592.6,
+    "usdM": 271.3
+   },
+   {
+    "period": "2026-03",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Nigeria",
+    "partnerCode": 566,
+    "cmd": "products",
+    "kt": 212.2,
+    "usdM": 129.3
+   },
+   {
+    "period": "2026-03",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Qatar",
+    "partnerCode": 634,
+    "cmd": "products",
+    "kt": 57.7,
+    "usdM": 70.1
+   },
+   {
+    "period": "2026-03",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Saudi Arabia",
+    "partnerCode": 682,
+    "cmd": "products",
+    "kt": 5.6,
+    "usdM": 5.9
+   },
+   {
+    "period": "2026-03",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "India",
+    "partnerCode": 699,
+    "cmd": "products",
+    "kt": 260.5,
+    "usdM": 195
+   },
+   {
+    "period": "2026-03",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "UAE",
+    "partnerCode": 784,
+    "cmd": "products",
+    "kt": 29.1,
+    "usdM": 25.5
+   },
+   {
+    "period": "2026-03",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Türkiye",
+    "partnerCode": 792,
+    "cmd": "products",
+    "kt": 242.5,
+    "usdM": 138
+   },
+   {
+    "period": "2026-03",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Venezuela",
+    "partnerCode": 862,
+    "cmd": "products",
+    "kt": 232.4,
+    "usdM": 125.3
+   },
+   {
+    "period": "2026-04",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Algeria",
+    "partnerCode": 12,
+    "cmd": "products",
+    "kt": 280.2,
+    "usdM": 225.3
+   },
+   {
+    "period": "2026-04",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Angola",
+    "partnerCode": 24,
+    "cmd": "products",
+    "kt": 12.2,
+    "usdM": 8.1
+   },
+   {
+    "period": "2026-04",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Brazil",
+    "partnerCode": 76,
+    "cmd": "products",
+    "kt": 96,
+    "usdM": 52.1
+   },
+   {
+    "period": "2026-04",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Canada",
+    "partnerCode": 124,
+    "cmd": "products",
+    "kt": 1599.2,
+    "usdM": 1397.7
+   },
+   {
+    "period": "2026-04",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "China",
+    "partnerCode": 156,
+    "cmd": "products",
+    "kt": 0.1,
+    "usdM": 0.4
+   },
+   {
+    "period": "2026-04",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Iraq",
+    "partnerCode": 368,
+    "cmd": "products",
+    "kt": 112.6,
+    "usdM": 75.4
+   },
+   {
+    "period": "2026-04",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Kuwait",
+    "partnerCode": 414,
+    "cmd": "products",
+    "kt": 1.9,
+    "usdM": 1.4
+   },
+   {
+    "period": "2026-04",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Libya",
+    "partnerCode": 434,
+    "cmd": "products",
+    "kt": 0.4,
+    "usdM": 0.4
+   },
+   {
+    "period": "2026-04",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Malaysia",
+    "partnerCode": 458,
+    "cmd": "products",
+    "kt": 0.8,
+    "usdM": 1.1
+   },
+   {
+    "period": "2026-04",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Mexico",
+    "partnerCode": 484,
+    "cmd": "products",
+    "kt": 685.3,
+    "usdM": 334.2
+   },
+   {
+    "period": "2026-04",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Nigeria",
+    "partnerCode": 566,
+    "cmd": "products",
+    "kt": 30.8,
+    "usdM": 23.1
+   },
+   {
+    "period": "2026-04",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Qatar",
+    "partnerCode": 634,
+    "cmd": "products",
+    "kt": 7.8,
+    "usdM": 5.6
+   },
+   {
+    "period": "2026-04",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Saudi Arabia",
+    "partnerCode": 682,
+    "cmd": "products",
+    "kt": 141.7,
+    "usdM": 100.8
+   },
+   {
+    "period": "2026-04",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "India",
+    "partnerCode": 699,
+    "cmd": "products",
+    "kt": 591.6,
+    "usdM": 474.4
+   },
+   {
+    "period": "2026-04",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "UAE",
+    "partnerCode": 784,
+    "cmd": "products",
+    "kt": 0.8,
+    "usdM": 1
+   },
+   {
+    "period": "2026-04",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Türkiye",
+    "partnerCode": 792,
+    "cmd": "products",
+    "kt": 96.1,
+    "usdM": 75.9
+   },
+   {
+    "period": "2026-04",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Venezuela",
+    "partnerCode": 862,
+    "cmd": "products",
+    "kt": 349.5,
+    "usdM": 214.9
+   },
+   {
+    "period": "2026-05",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Algeria",
+    "partnerCode": 12,
+    "cmd": "products",
+    "kt": 489.4,
+    "usdM": 396.9
+   },
+   {
+    "period": "2026-05",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Angola",
+    "partnerCode": 24,
+    "cmd": "products",
+    "kt": 2.9,
+    "usdM": 3.4
+   },
+   {
+    "period": "2026-05",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Brazil",
+    "partnerCode": 76,
+    "cmd": "products",
+    "kt": 133.6,
+    "usdM": 89.1
+   },
+   {
+    "period": "2026-05",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Canada",
+    "partnerCode": 124,
+    "cmd": "products",
+    "kt": 1775,
+    "usdM": 1641.2
+   },
+   {
+    "period": "2026-05",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "China",
+    "partnerCode": 156,
+    "cmd": "products",
+    "kt": 0,
+    "usdM": 0.1
+   },
+   {
+    "period": "2026-05",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Iraq",
+    "partnerCode": 368,
+    "cmd": "products",
+    "kt": 94.5,
+    "usdM": 64.4
+   },
+   {
+    "period": "2026-05",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Malaysia",
+    "partnerCode": 458,
+    "cmd": "products",
+    "kt": 2.7,
+    "usdM": 4.5
+   },
+   {
+    "period": "2026-05",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Mexico",
+    "partnerCode": 484,
+    "cmd": "products",
+    "kt": 548.3,
+    "usdM": 291.8
+   },
+   {
+    "period": "2026-05",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Nigeria",
+    "partnerCode": 566,
+    "cmd": "products",
+    "kt": 127.6,
+    "usdM": 94.9
+   },
+   {
+    "period": "2026-05",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Qatar",
+    "partnerCode": 634,
+    "cmd": "products",
+    "kt": 12.8,
+    "usdM": 9.1
+   },
+   {
+    "period": "2026-05",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Saudi Arabia",
+    "partnerCode": 682,
+    "cmd": "products",
+    "kt": 39.3,
+    "usdM": 29.1
+   },
+   {
+    "period": "2026-05",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "India",
+    "partnerCode": 699,
+    "cmd": "products",
+    "kt": 432.3,
+    "usdM": 345.4
+   },
+   {
+    "period": "2026-05",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "UAE",
+    "partnerCode": 784,
+    "cmd": "products",
+    "kt": 0.1,
+    "usdM": 0.4
+   },
+   {
+    "period": "2026-05",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Türkiye",
+    "partnerCode": 792,
+    "cmd": "products",
+    "kt": 165.4,
+    "usdM": 150.2
+   },
+   {
+    "period": "2026-05",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Venezuela",
+    "partnerCode": 862,
+    "cmd": "products",
+    "kt": 333.2,
+    "usdM": 201.1
+   },
+   {
+    "period": "2026-06",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Algeria",
+    "partnerCode": 12,
+    "cmd": "products",
+    "kt": 219.2,
+    "usdM": 158.4
+   },
+   {
+    "period": "2026-06",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Brazil",
+    "partnerCode": 76,
+    "cmd": "products",
+    "kt": 137.8,
+    "usdM": 102.7
+   },
+   {
+    "period": "2026-06",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Canada",
+    "partnerCode": 124,
+    "cmd": "products",
+    "kt": 1551.6,
+    "usdM": 1258.8
+   },
+   {
+    "period": "2026-06",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "China",
+    "partnerCode": 156,
+    "cmd": "products",
+    "kt": 0.2,
+    "usdM": 0.4
+   },
+   {
+    "period": "2026-06",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Malaysia",
+    "partnerCode": 458,
+    "cmd": "products",
+    "kt": 2.5,
+    "usdM": 4.1
+   },
+   {
+    "period": "2026-06",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Mexico",
+    "partnerCode": 484,
+    "cmd": "products",
+    "kt": 546.8,
+    "usdM": 261.2
+   },
+   {
+    "period": "2026-06",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Nigeria",
+    "partnerCode": 566,
+    "cmd": "products",
+    "kt": 59.8,
+    "usdM": 45.1
+   },
+   {
+    "period": "2026-06",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Qatar",
+    "partnerCode": 634,
+    "cmd": "products",
+    "kt": 0,
+    "usdM": 0
+   },
+   {
+    "period": "2026-06",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Saudi Arabia",
+    "partnerCode": 682,
+    "cmd": "products",
+    "kt": 127.2,
+    "usdM": 107.6
+   },
+   {
+    "period": "2026-06",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "India",
+    "partnerCode": 699,
+    "cmd": "products",
+    "kt": 284,
+    "usdM": 193.4
+   },
+   {
+    "period": "2026-06",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "UAE",
+    "partnerCode": 784,
+    "cmd": "products",
+    "kt": 0.4,
+    "usdM": 0.3
+   },
+   {
+    "period": "2026-06",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Türkiye",
+    "partnerCode": 792,
+    "cmd": "products",
+    "kt": 266.3,
+    "usdM": 246.8
+   },
+   {
+    "period": "2026-06",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Venezuela",
+    "partnerCode": 862,
+    "cmd": "products",
+    "kt": 419.8,
+    "usdM": 214.3
+   },
+   {
+    "period": "2026-07",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Algeria",
+    "partnerCode": 12,
+    "cmd": "products",
+    "kt": 53.8,
+    "usdM": 105.4
+   },
+   {
+    "period": "2026-07",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Brazil",
+    "partnerCode": 76,
+    "cmd": "products",
+    "kt": 203,
+    "usdM": 142.3
+   },
+   {
+    "period": "2026-07",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Canada",
+    "partnerCode": 124,
+    "cmd": "products",
+    "kt": 981,
+    "usdM": 1229.9
+   },
+   {
+    "period": "2026-07",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "China",
+    "partnerCode": 156,
+    "cmd": "products",
+    "kt": 0.2,
+    "usdM": 0.4
+   },
+   {
+    "period": "2026-07",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Iraq",
+    "partnerCode": 368,
+    "cmd": "products",
+    "kt": 38.1,
+    "usdM": 74.8
+   },
+   {
+    "period": "2026-07",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Kazakhstan",
+    "partnerCode": 398,
+    "cmd": "products",
+    "kt": 4.1,
+    "usdM": 7.9
+   },
+   {
+    "period": "2026-07",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Malaysia",
+    "partnerCode": 458,
+    "cmd": "products",
+    "kt": 92.5,
+    "usdM": 74.3
+   },
+   {
+    "period": "2026-07",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Mexico",
+    "partnerCode": 484,
+    "cmd": "products",
+    "kt": 144.3,
+    "usdM": 276.5
+   },
+   {
+    "period": "2026-07",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Nigeria",
+    "partnerCode": 566,
+    "cmd": "products",
+    "kt": 49.5,
+    "usdM": 97.2
+   },
+   {
+    "period": "2026-07",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Qatar",
+    "partnerCode": 634,
+    "cmd": "products",
+    "kt": 2.6,
+    "usdM": 5.1
+   },
+   {
+    "period": "2026-07",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Saudi Arabia",
+    "partnerCode": 682,
+    "cmd": "products",
+    "kt": 100.2,
+    "usdM": 72
+   },
+   {
+    "period": "2026-07",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "India",
+    "partnerCode": 699,
+    "cmd": "products",
+    "kt": 130.8,
+    "usdM": 132.2
+   },
+   {
+    "period": "2026-07",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "UAE",
+    "partnerCode": 784,
+    "cmd": "products",
+    "kt": 0.2,
+    "usdM": 0.5
+   },
+   {
+    "period": "2026-07",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Türkiye",
+    "partnerCode": 792,
+    "cmd": "products",
+    "kt": 117.9,
+    "usdM": 137.9
+   },
+   {
+    "period": "2026-07",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Venezuela",
+    "partnerCode": 862,
+    "cmd": "products",
+    "kt": 110.5,
+    "usdM": 216.8
    }
   ]
  },
@@ -23852,6 +27176,14 @@
      [
       "2026-10-06",
       0.0505
+     ],
+     [
+      "2026-10-08",
+      0
+     ],
+     [
+      "2026-10-10",
+      0.1634
      ]
     ]
    }
@@ -23863,7 +27195,7 @@
    "venezuela": "venezuela (oil OR chevron OR pdvsa OR sanctions)",
    "settlement": "(oil OR crude) (yuan OR petrodollar OR \"dollar settlement\" OR \"non-dollar\" OR invoicing)"
   },
-  "fetchedAt": "2026-10-11T20:59:17.169Z"
+  "fetchedAt": "2026-10-15T18:18:02.867Z"
  },
  "price": {
   "series": {
@@ -25614,12 +28946,16 @@
      [
       "2026-10-05",
       4.354
+     ],
+     [
+      "2026-10-12",
+      4.331
      ]
     ]
    }
   },
   "what": "The shadow: what the institutional stations read (PG01 §6.2c). Kept last.",
-  "fetchedAt": "2026-10-11T20:56:15.722Z",
+  "fetchedAt": "2026-10-15T18:14:35.845Z",
   "column": "price"
  },
  "pressMergedAt": "2026-10-15"
