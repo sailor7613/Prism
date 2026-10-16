@@ -206,6 +206,18 @@ const PrismGraphmap = (function () {
 
   // Ring sprite (additive, v2) — the Diatribe aperture-band halo. A canvas-
   // stroked circle as a billboard sprite, so it always faces the camera.
+  let _orbGlowTex = null;
+  function orbGlowTexture() {
+    if (_orbGlowTex) return _orbGlowTex;
+    const c = document.createElement('canvas'); c.width = 128; c.height = 128;
+    const x = c.getContext('2d');
+    const g = x.createRadialGradient(64, 64, 4, 64, 64, 62);
+    g.addColorStop(0, 'rgba(255,255,255,1)'); g.addColorStop(0.35, 'rgba(255,255,255,.45)'); g.addColorStop(1, 'rgba(255,255,255,0)');
+    x.fillStyle = g; x.fillRect(0, 0, 128, 128);
+    _orbGlowTex = new THREE.CanvasTexture(c);
+    return _orbGlowTex;
+  }
+
   function makeRingSprite(color) {
     const css = (typeof color === 'number')
       ? '#' + color.toString(16).padStart(6, '0')
@@ -509,9 +521,10 @@ const PrismGraphmap = (function () {
       });
       const core = new THREE.Mesh(new THREE.SphereGeometry(0.045, 16, 12), coreMat);
       pinGroup.add(core);
-      // soft bloom
+      // soft bloom — a radial glow texture (2026-10-14: an untextured sprite is a
+      // square; it read as a plate behind the orb on every surface)
       const orbGlowMat = new THREE.SpriteMaterial({
-        color: baseColor, transparent: true, opacity: 0.3,
+        map: orbGlowTexture(), color: baseColor, transparent: true, opacity: 0.55,
         blending: THREE.AdditiveBlending, depthWrite: false,
       });
       const orbGlow = new THREE.Sprite(orbGlowMat);
@@ -1777,6 +1790,58 @@ const PrismGraphmap = (function () {
     const dots = [];       // { mesh, connector, glow, data }
     const dotsGroup = new THREE.Group();
     group.add(dotsGroup);
+
+    // ── Press additive (2026-10-13): worldline paths + per-dot visibility.
+    // A path is a polyline through normalized points ({x,y,z} in the same
+    // units addDot takes); the Press draws one per speaker so a reading's
+    // migration across the rings is visible as a line, not a guess.
+    const paths = [];
+    const pathsGroup = new THREE.Group();
+    group.add(pathsGroup);
+    function normToWorld(pt) {
+      return new THREE.Vector3((pt.x - 0.5) * GRAPH_SIZE, (0.5 - pt.y) * GRAPH_SIZE, (pt.z || 0) * Z_EXTENT * 0.8);
+    }
+    function addPath(points, opts) {
+      opts = opts || {};
+      const pts = (points || []).map(normToWorld);
+      const geo = new THREE.BufferGeometry().setFromPoints(pts.length ? pts : [new THREE.Vector3(), new THREE.Vector3()]);
+      const mat = opts.dashed
+        ? new THREE.LineDashedMaterial({ color: opts.color != null ? opts.color : C.cream, transparent: true, opacity: opts.opacity != null ? opts.opacity : 0.5, dashSize: 0.05, gapSize: 0.04 })
+        : new THREE.LineBasicMaterial({ color: opts.color != null ? opts.color : C.cream, transparent: true, opacity: opts.opacity != null ? opts.opacity : 0.5 });
+      const line = new THREE.Line(geo, mat);
+      if (opts.dashed) line.computeLineDistances();
+      line.userData = { id: opts.id || null };
+      pathsGroup.add(line);
+      const entry = { line, geo, mat, id: opts.id || null, dashed: !!opts.dashed };
+      paths.push(entry);
+      return entry;
+    }
+    function setPath(id, points) {
+      const e = paths.find(function (p) { return p.id === id; });
+      if (!e) return instance;
+      const pts = (points || []).map(normToWorld);
+      e.geo.dispose();
+      e.geo = new THREE.BufferGeometry().setFromPoints(pts.length > 1 ? pts : [new THREE.Vector3(), new THREE.Vector3()]);
+      e.line.geometry = e.geo;
+      e.line.visible = pts.length > 1;
+      if (e.dashed) e.line.computeLineDistances();
+      return instance;
+    }
+    function clearPaths() {
+      paths.forEach(function (e) { e.geo.dispose(); e.mat.dispose(); pathsGroup.remove(e.line); });
+      paths.length = 0;
+      return instance;
+    }
+    function setDotVisible(index, v) {
+      const d = dots[index]; if (!d) return instance;
+      d.mesh.visible = !!v; if (d.connector) d.connector.visible = !!v;
+      return instance;
+    }
+    function setDotEmphasis(index, scale) {
+      const d = dots[index]; if (!d) return instance;
+      const s = scale || 1; d.mesh.scale.set(s, s, s);
+      return instance;
+    }
 
     // ── Portrait card (Photo Z-Probe grammar, ruled 2026-07-19) ──
     // The pin's photograph takes the GLOW-SPRITE FORM: a camera-flat
@@ -3301,6 +3366,9 @@ const PrismGraphmap = (function () {
       clearDots,
       getDots,
       computeProximity,
+
+      // Press additive (2026-10-13)
+      addPath, setPath, clearPaths, setDotVisible, setDotEmphasis,
 
       // Contrast line (v2 — tether between two normalized points)
       setContrastLine,

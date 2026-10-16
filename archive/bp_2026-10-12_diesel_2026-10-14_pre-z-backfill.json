@@ -1,0 +1,769 @@
+{
+ "schema": "press/parallelogram/v0",
+ "id": "bp_2026-10-12_diesel",
+ "status": "claude-draft",
+ "title": "The Diesel Deal, Reduced",
+ "source": {
+  "program": "Breaking Points",
+  "date": "2026-10-12",
+  "title": "Trump PANICS: Invents FAKE RUS-UKR Ceasefire",
+  "url": "https://youtu.be/RI_swSkg4w8",
+  "length": 1027
+ },
+ "arc": "PG01",
+ "object": {
+  "label": "the diesel deal / the energy ceasefire",
+  "layer": 1,
+  "zAxis": {
+   "pos": "delivers",
+   "neg": "does not"
+  }
+ },
+ "transform": "Z-assertion",
+ "scoreboard": {
+  "dia": 46,
+  "tier": "oscillation zone",
+  "declaredZ": 1.0,
+  "readZ": -0.7,
+  "readZRange": [
+   -0.3,
+   -1.0
+  ],
+  "stations": {
+   "LP": {
+    "dia": 52,
+    "spread": [
+     20,
+     86
+    ]
+   },
+   "RP": {
+    "dia": 40,
+    "spread": [
+     12,
+     62
+    ]
+   },
+   "RI": {
+    "dia": 18,
+    "spread": [
+     10,
+     30
+    ]
+   },
+   "LI": null
+  },
+  "split": {
+   "topology": "intra",
+   "station": "LP",
+   "strength": 0.6
+  },
+  "lumens": 40
+ },
+ "names": {
+  "SE": "Saagar Enjeti",
+  "KB": "Krystal Ball",
+  "DT": "Donald Trump",
+  "VZ": "Volodymyr Zelensky",
+  "GB": "Gregory Brew",
+  "SA": "sanctions analysts (quoted)"
+ },
+ "trace": {
+  "object": {
+   "x": 0,
+   "y": 0,
+   "z": -0.75
+  },
+  "shadow": {
+   "x": 0,
+   "y": 0,
+   "z": 0.85
+  },
+  "predicates": {
+   "operative": [
+    {
+     "type": "T",
+     "label": "strike on Russia’s largest oil storage, 10-11/12",
+     "z": 1.0
+    },
+    {
+     "type": "T",
+     "label": "Kyiv blackout; cruise missiles, 10-11",
+     "z": 0.9
+    },
+    {
+     "type": "M",
+     "label": "weapons procurement conditioned on refinery strikes",
+     "z": 0.7
+    },
+    {
+     "type": "B",
+     "label": "Feb 2026 desanction-then-blockade precedent",
+     "z": 0.55
+    }
+   ],
+   "stated": [
+    {
+     "type": "F",
+     "label": "“effective immediately… both parties have agreed”",
+     "z": 1.0
+    }
+   ],
+   "challenge": [
+    {
+     "type": "X",
+     "label": "Graham act: OFAC cannot override statute (unverified)",
+     "z": 0.85
+    }
+   ]
+  },
+  "positions": [
+   {
+    "quadrant": "A",
+    "station": "LI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty, by-record"
+   },
+   {
+    "quadrant": "B",
+    "station": "RI",
+    "fluid": "sizes the object; states the falsifier",
+    "denominated": "aligned to statute, vacant on the dollar",
+    "distinguishability": "Low",
+    "fluidKeywords": [
+     "74,000 b/d",
+     "3.66 million",
+     "cannot override statute",
+     "30-day notice"
+    ],
+    "denomKeywords": [
+     "reverse course"
+    ]
+   },
+   {
+    "quadrant": "C",
+    "station": "LP",
+    "fluid": "a pitch to the market, priced",
+    "denominated": "a fabrication; invert what he says",
+    "distinguishability": "Very high",
+    "fluidKeywords": [
+     "jawbone",
+     "minimal",
+     "$100 Brent",
+     "Iranian oil trucks",
+     "keeps us engaged"
+    ],
+    "denomKeywords": [
+     "out of whole cloth",
+     "lied",
+     "gullible",
+     "the opposite",
+     "insane",
+     "pathetic"
+    ]
+   },
+   {
+    "quadrant": "D",
+    "station": "RP",
+    "fluid": "the mechanism, dated",
+    "denominated": "panic, stupidity, decline",
+    "distinguishability": "High",
+    "fluidKeywords": [
+     "largest oil storage",
+     "cruise missiles",
+     "procurement system",
+     "Patriot"
+    ],
+    "denomKeywords": [
+     "panic",
+     "sheer stupidity",
+     "proxy war",
+     "pole position",
+     "the world continues to burn"
+    ]
+   }
+  ]
+ },
+ "lines": [
+  {
+   "t": 0,
+   "who": "SE",
+   "station": "RP",
+   "quote": "Ukrainian strikes crippling the Russian economy, tightening US diesel — the US sells the weapons",
+   "touch": "O",
+   "z": -0.6,
+   "dia": 24,
+   "mode": "open",
+   "note": "dates the substrate: the shortage is upstream of the deal",
+   "chapter": "The deal",
+   "normX": 0.6226,
+   "normY": 0.5793,
+   "normZ": -0.45,
+   "quadrant": "D"
+  },
+  {
+   "t": 23,
+   "who": "SE",
+   "station": "RP",
+   "quote": "only a matter of time before Trump woke up — a problem on top of the disastrous war he launched",
+   "touch": "F",
+   "z": -0.7,
+   "dia": 41,
+   "mode": "—",
+   "note": "performative: motive assigned before the instrument is read",
+   "chapter": null,
+   "normX": 0.6625,
+   "normY": 0.6393,
+   "normZ": -0.525,
+   "quadrant": "D"
+  },
+  {
+   "t": 47,
+   "who": "DT",
+   "station": "O",
+   "quote": "Russia will «immediately» supply 300,000 tons… 500,000 in «November»… a million… 3 million",
+   "touch": "O′",
+   "z": 1.0,
+   "dia": null,
+   "mode": "constitutive",
+   "note": "THE HYPOTHESIS (H1). His words are the object; never scored as a reader of them.",
+   "chapter": null,
+   "normX": 0.482,
+   "normY": 0.5,
+   "normZ": 0.75,
+   "quadrant": "T"
+  },
+  {
+   "t": 73,
+   "who": "DT",
+   "station": "O",
+   "quote": "between our «total control of the Strait of Hormuz» and this procurement, diesel prices coming down in «record numbers»",
+   "touch": "O′",
+   "z": 1.0,
+   "dia": null,
+   "mode": "constitutive",
+   "note": "names the instrument → PG01. \"Just another body of water\" (08-08) becomes \"total control\" (10-11).",
+   "chapter": null,
+   "normX": 0.518,
+   "normY": 0.5,
+   "normZ": 0.75,
+   "quadrant": "T"
+  },
+  {
+   "t": 97,
+   "who": "GB",
+   "station": "RI",
+   "quote": "300k tons a month is «74,000 barrels a day»; the US makes «3.66 million», exports a third — a few percent",
+   "touch": "O",
+   "z": -0.6,
+   "dia": 10,
+   "mode": "open",
+   "note": "SIZES THE OBJECT. The one number that survives removal of every adjective.",
+   "chapter": "Legal and strategic flaws",
+   "normX": 0.5489,
+   "normY": 0.4244,
+   "normZ": -0.45,
+   "quadrant": "B"
+  },
+  {
+   "t": 125,
+   "who": "SE",
+   "station": "RP",
+   "quote": "very clearly this was about something a lot bigger than the numbers",
+   "touch": "O",
+   "z": -0.6,
+   "dia": 30,
+   "mode": "open",
+   "note": "correct inference, unnamed referent — the sentence reaches and stops",
+   "chapter": null,
+   "normX": 0.6131,
+   "normY": 0.6269,
+   "normZ": -0.45,
+   "quadrant": "D"
+  },
+  {
+   "t": 149,
+   "who": "SA",
+   "station": "RI",
+   "quote": "hours before, he signed the Graham sanctions act; an OFAC license «cannot override statute»; 30-day notice; CBP «legally barred» from clearing the cargo",
+   "touch": "X",
+   "z": -0.9,
+   "dia": 14,
+   "mode": "method",
+   "note": "STATES THE FALSIFIER. The legislative object. (Unverified against primaries.)",
+   "chapter": null,
+   "normX": 0.569,
+   "normY": 0.4195,
+   "normZ": -0.675,
+   "quadrant": "B"
+  },
+  {
+   "t": 228,
+   "who": "SE",
+   "station": "RP",
+   "quote": "absolute «panic» in the White House… «sheer stupidity» and lack of coherence",
+   "touch": "F",
+   "z": -0.8,
+   "dia": 62,
+   "mode": "—",
+   "note": "reactionary #17 riding on a true gap",
+   "chapter": "Chaotic foreign policy",
+   "normX": 0.6666,
+   "normY": 0.7471,
+   "normZ": -0.6,
+   "quadrant": "D"
+  },
+  {
+   "t": 244,
+   "who": "SE",
+   "station": "RP",
+   "quote": "the diesel crunch for farmers is throwing the Midwest elections into toss-up territory",
+   "touch": "O",
+   "z": -0.5,
+   "dia": 26,
+   "mode": "open",
+   "note": "dates the pressure; the midterm as the deal’s actual addressee",
+   "chapter": null,
+   "normX": 0.6207,
+   "normY": 0.5957,
+   "normZ": -0.375,
+   "quadrant": "D"
+  },
+  {
+   "t": 277,
+   "who": "KB",
+   "station": "LP",
+   "quote": "the «most chaotic foreign policy in history» — bragging about sanctions, five seconds later a deal with Russia",
+   "touch": "F",
+   "z": -0.8,
+   "dia": 58,
+   "mode": "—",
+   "note": "the contradiction is real; the superlative is the vehicle",
+   "chapter": null,
+   "normX": 0.3468,
+   "normY": 0.7368,
+   "normZ": -0.6,
+   "quadrant": "C"
+  },
+  {
+   "t": 294,
+   "who": "KB",
+   "station": "LP",
+   "quote": "hundreds of «Iranian oil trucks» spotted in Russia; some of this oil may be Iranian; «no way to tell» once it’s in the market",
+   "touch": "O",
+   "z": -0.3,
+   "dia": 20,
+   "mode": "surface-bound",
+   "note": "THE BEST OBJECT-TOUCH IN THE TAPE → PG01. Fungibility is the settlement layer’s substrate; read here as scandal, not structure.",
+   "chapter": null,
+   "normX": 0.4154,
+   "normY": 0.5987,
+   "normZ": -0.225,
+   "quadrant": "C"
+  },
+  {
+   "t": 327,
+   "who": "KB",
+   "station": "LP",
+   "quote": "early in the Iran war they desanctioned Iranian oil over gas prices, then reversed and blockaded",
+   "touch": "B",
+   "z": -0.4,
+   "dia": 32,
+   "mode": "open",
+   "note": "dated precedent; load-bearing for the pattern",
+   "chapter": null,
+   "normX": 0.3671,
+   "normY": 0.6184,
+   "normZ": -0.3,
+   "quadrant": "C"
+  },
+  {
+   "t": 352,
+   "who": "KB",
+   "station": "LP",
+   "quote": "best seen as Trump’s attempt to «jawbone» the market so there’s no price spike before the midterms; impact «minimal»; maybe keeps Brent around «$100»",
+   "touch": "O",
+   "z": -0.5,
+   "dia": 28,
+   "mode": "open",
+   "note": "THE GOOD-FAITH READING, stated by Krystal herself: a pitch to the market, priced. Compare 15:18.",
+   "chapter": null,
+   "normX": 0.3657,
+   "normY": 0.5906,
+   "normZ": -0.375,
+   "quadrant": "C"
+  },
+  {
+   "t": 377,
+   "who": "SE",
+   "station": "RP",
+   "quote": "no coherence… this should have ended long ago… the Europeans paying very high diesel prices",
+   "touch": "F",
+   "z": -0.6,
+   "dia": 44,
+   "mode": "—",
+   "note": "coalition register: an argument built across rounds",
+   "chapter": null,
+   "normX": 0.6567,
+   "normY": 0.6628,
+   "normZ": -0.45,
+   "quadrant": "D"
+  },
+  {
+   "t": 404,
+   "who": "SE",
+   "station": "RP",
+   "quote": "he said 24 hours; he has funded them, continued weapons, Anchorage produced nothing — this is a «proxy war» of the United States",
+   "touch": "F",
+   "z": -0.7,
+   "dia": 52,
+   "mode": "—",
+   "note": "the record cited is true; the frame is the vehicle",
+   "chapter": null,
+   "normX": 0.6524,
+   "normY": 0.7082,
+   "normZ": -0.525,
+   "quadrant": "D"
+  },
+  {
+   "t": 458,
+   "who": "SE",
+   "station": "RP",
+   "quote": "Ukraine wants to shut down the Russian diesel economy; Russia wants Ukrainian morale to break",
+   "touch": "O",
+   "z": null,
+   "dia": 18,
+   "mode": "open",
+   "note": "both parties’ interests, no vehicle — the cleanest RP line",
+   "chapter": null,
+   "normX": 0.5984,
+   "normY": 0.5721,
+   "normZ": 0,
+   "quadrant": "D"
+  },
+  {
+   "t": 481,
+   "who": "SE",
+   "station": "RP",
+   "quote": "overnight Ukraine hit Russia’s «largest oil storage» and pumping facility; Russia answered with «cruise missiles»",
+   "touch": "T",
+   "z": -1.0,
+   "dia": 12,
+   "mode": "open",
+   "note": "DATES THE BREAK: the trigger inside the window",
+   "chapter": "The energy ceasefire",
+   "normX": 0.5706,
+   "normY": 0.568,
+   "normZ": -0.75,
+   "quadrant": "D"
+  },
+  {
+   "t": 503,
+   "who": "DT",
+   "station": "O",
+   "quote": "«Effective immediately», there is an energy ceasefire… «Both parties have agreed», do not break it",
+   "touch": "O′",
+   "z": 1.0,
+   "dia": null,
+   "mode": "constitutive",
+   "note": "THE HYPOTHESIS (H2). Z-assertion in its purest form: delivery declared as already done. Falsified within hours, both sides.",
+   "chapter": null,
+   "normX": 0.464,
+   "normY": 0.5,
+   "normZ": 0.75,
+   "quadrant": "T"
+  },
+  {
+   "t": 548,
+   "who": "DT",
+   "station": "O",
+   "quote": "we said do whatever you want to Russia — «don’t hit the refineries», that’s a world problem… our farmers, our ranchers",
+   "touch": "F",
+   "z": null,
+   "dia": null,
+   "mode": "constitutive",
+   "note": "the conditioning term made public: weapons for refineries (see 13:46)",
+   "chapter": null,
+   "normX": 0.536,
+   "normY": 0.5,
+   "normZ": 0.0,
+   "quadrant": "T"
+  },
+  {
+   "t": 584,
+   "who": "DT",
+   "station": "O",
+   "quote": "time for Ukraine to get a «new president»",
+   "touch": "F",
+   "z": null,
+   "dia": null,
+   "mode": "constitutive",
+   "note": "a second object introduced inside the first’s window",
+   "chapter": "Zelensky’s response",
+   "normX": 0.446,
+   "normY": 0.5,
+   "normZ": 0.0,
+   "quadrant": "T"
+  },
+  {
+   "t": 650,
+   "who": "VZ",
+   "station": "O",
+   "quote": "if they want energy ceasefire we are «open» — don’t kill our children, we stop hitting your diesel; «fair deal»",
+   "touch": "O",
+   "z": 0.0,
+   "dia": null,
+   "mode": "constitutive-adjacent",
+   "note": "the counter-term: conditional, not agreed",
+   "chapter": null,
+   "normX": 0.554,
+   "normY": 0.5,
+   "normZ": 0.0,
+   "quadrant": "T"
+  },
+  {
+   "t": 726,
+   "who": "VZ",
+   "station": "O",
+   "quote": "tell Putin: give us «60 days» of total ceasefire and we «organize elections»",
+   "touch": "X",
+   "z": 0.0,
+   "dia": null,
+   "mode": "constitutive-adjacent",
+   "note": "H3 — the one statement in the tape with its own test built in",
+   "chapter": null,
+   "normX": 0.428,
+   "normY": 0.5,
+   "normZ": 0.0,
+   "quadrant": "T"
+  },
+  {
+   "t": 746,
+   "who": "SE",
+   "station": "RP",
+   "quote": "Russia rejected the ceasefire; Kyiv in blackout hours after; devastating cruise missile attacks — I don’t want to whitewash any of this",
+   "touch": "T",
+   "z": -1.0,
+   "dia": 16,
+   "mode": "open",
+   "note": "dates the other party’s break; the disclaimer is the fluid register speaking",
+   "chapter": "Behind the scenes pressure",
+   "normX": 0.5708,
+   "normY": 0.5893,
+   "normZ": -0.75,
+   "quadrant": "D"
+  },
+  {
+   "t": 786,
+   "who": "SE",
+   "station": "RP",
+   "quote": "stack this on the Houthis in Saudi — a United States «not in control», losing the «pole position»; the illusion itself is what mattered",
+   "touch": "F",
+   "z": -0.8,
+   "dia": 50,
+   "mode": "inverted-lens",
+   "note": "→ PG01: reads loss of control where the arc’s record reads the instrument working. Recorded, not ruled.",
+   "chapter": null,
+   "normX": 0.7073,
+   "normY": 0.6398,
+   "normZ": -0.6,
+   "quadrant": "D"
+  },
+  {
+   "t": 810,
+   "who": "SE",
+   "station": "RP",
+   "quote": "a direct US beneficiary like Zelensky… out of the «Bibi playbook» — do what you want, they won’t do anything to you",
+   "touch": "F",
+   "z": null,
+   "dia": 55,
+   "mode": "—",
+   "note": "performative; analogy as vehicle",
+   "chapter": null,
+   "normX": 0.7016,
+   "normY": 0.6796,
+   "normZ": 0,
+   "quadrant": "D"
+  },
+  {
+   "t": 826,
+   "who": "SE",
+   "station": "RP",
+   "quote": "threatening to stop the Ukraine «weapons procurement system» to halt the strikes; lobbying European capitals; weeks ago, near approving «Patriot» production in Ukraine",
+   "touch": "M",
+   "z": -0.5,
+   "dia": 22,
+   "mode": "open",
+   "note": "THE MECHANISM: weapons conditioned on refineries. The second cleanest RP line.",
+   "chapter": null,
+   "normX": 0.5898,
+   "normY": 0.6048,
+   "normZ": -0.375,
+   "quadrant": "D"
+  },
+  {
+   "t": 868,
+   "who": "KB",
+   "station": "LP",
+   "quote": "Ukraine has an incentive to cause problems for us in the global market — it «keeps us engaged»",
+   "touch": "O",
+   "z": null,
+   "dia": 22,
+   "mode": "open",
+   "note": "reads the third party’s interest; fluid",
+   "chapter": "Political desperation",
+   "normX": 0.4143,
+   "normY": 0.6081,
+   "normZ": 0,
+   "quadrant": "C"
+  },
+  {
+   "t": 884,
+   "who": "KB",
+   "station": "LP",
+   "quote": "it’s almost impossible not to «grade Trump on a curve»",
+   "touch": "F",
+   "z": null,
+   "dia": 66,
+   "mode": "—",
+   "note": "the Z-gap priced in and named: the expected gap has become the baseline. The hinge.",
+   "chapter": null,
+   "normX": 0.2737,
+   "normY": 0.7177,
+   "normZ": 0,
+   "quadrant": "C"
+  },
+  {
+   "t": 902,
+   "who": "KB",
+   "station": "LP",
+   "quote": "any other president who «invented a fake ceasefire» and announced it on social media…",
+   "touch": "O′",
+   "z": -1.0,
+   "dia": 72,
+   "mode": "—",
+   "note": "the pitch (5:52) re-read as fabrication: the reading has migrated",
+   "chapter": null,
+   "normX": 0.2272,
+   "normY": 0.6996,
+   "normZ": -0.75,
+   "quadrant": "C"
+  },
+  {
+   "t": 918,
+   "who": "KB",
+   "station": "LP",
+   "quote": "literally invented this ceasefire «out of whole cloth», «lied» about it, posted it",
+   "touch": "O′",
+   "z": -1.0,
+   "dia": 78,
+   "mode": "inverted-lens",
+   "note": "reactionary #17: intent supplied where the record shows a gap. Same object as 5:52, opposite account of it.",
+   "chapter": null,
+   "normX": 0.2862,
+   "normY": 0.7921,
+   "normZ": -0.75,
+   "quadrant": "C"
+  },
+  {
+   "t": 927,
+   "who": "KB",
+   "station": "LP",
+   "quote": "the media stop being so «gullible»… “oh I guess there’s an energy ceasefire.” No, there’s not",
+   "touch": "O",
+   "z": -1.0,
+   "dia": 48,
+   "mode": "open",
+   "note": "the correct observation in the denominated register; the media as second subject",
+   "chapter": null,
+   "normX": 0.3322,
+   "normY": 0.6744,
+   "normZ": -0.75,
+   "quadrant": "C"
+  },
+  {
+   "t": 935,
+   "who": "KB",
+   "station": "LP",
+   "quote": "you cannot believe a word; if it’s coming out of his mouth, «the opposite is more likely the case»",
+   "touch": "F",
+   "z": null,
+   "dia": 84,
+   "mode": "inverted-lens (as method)",
+   "note": "THE POP-DIALECTIC LINE: an inversion rule stated as a reading rule. The sentence that makes the segment a specimen.",
+   "chapter": null,
+   "normX": 0.1975,
+   "normY": 0.7398,
+   "normZ": 0,
+   "quadrant": "C"
+  },
+  {
+   "t": 944,
+   "who": "KB",
+   "station": "LP",
+   "quote": "an «insane» person, a «desperate» person, no plan, grasping at straws, trying to save his political ass before the midterms",
+   "touch": "F",
+   "z": null,
+   "dia": 86,
+   "mode": "—",
+   "note": "denominated dominant; the object has left the sentence entirely",
+   "chapter": null,
+   "normX": 0.2797,
+   "normY": 0.8266,
+   "normZ": 0,
+   "quadrant": "C"
+  },
+  {
+   "t": 960,
+   "who": "KB",
+   "station": "LP",
+   "quote": "he says he doesn’t care about the midterms; obviously he does — desperate, «pathetic», insane things to keep oil down before a disastrous reckoning",
+   "touch": "F",
+   "z": -0.9,
+   "dia": 80,
+   "mode": "—",
+   "note": "the motive (midterm price) is the one she stated fluidly at 5:52; now carried by the vehicle",
+   "chapter": null,
+   "normX": 0.2539,
+   "normY": 0.7763,
+   "normZ": -0.675,
+   "quadrant": "C"
+  },
+  {
+   "t": 983,
+   "who": "SE",
+   "station": "RP",
+   "quote": "the «bipartisan support» for Russia sanctions is there; multiple Republican senators say reverse course on Russian diesel",
+   "touch": "X",
+   "z": -0.9,
+   "dia": 30,
+   "mode": "open",
+   "note": "dates the institutional-right reader by report: aligned to the statute, vacant on the dollar",
+   "chapter": null,
+   "normX": 0.5923,
+   "normY": 0.6427,
+   "normZ": -0.675,
+   "quadrant": "D"
+  },
+  {
+   "t": 1003,
+   "who": "SE",
+   "station": "RP",
+   "quote": "no coherence, no strategy, and «the world continues to burn»",
+   "touch": "F",
+   "z": null,
+   "dia": 60,
+   "mode": "—",
+   "note": "sign-off in the denominated register",
+   "chapter": null,
+   "normX": 0.7238,
+   "normY": 0.6845,
+   "normZ": 0,
+   "quadrant": "D"
+  }
+ ]
+}

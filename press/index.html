@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parallelogram · Press — The Diesel Deal, Reduced</title>
+<!-- ======================================================================
+     PRESS on the GRAPHMAP — 2026-10-13 · Claude draft for Sailor's ruling.
+     Reads ../data/press/<id>.json (a parallelogram: one media segment cut to
+     lines, scored, with a trace block). Every line is addDot()'d on the real
+     factory graphmap: station → corner, Dia → radius, z → height. The trace
+     block goes through loadTrace() (O, O′, the Z-assertion vector, the four
+     diagnostic boundaries). Scroll the tape; the dots arrive in tape order;
+     each speaker's worldline draws through addPath()/setPath() (additive,
+     2026-10-13). Serve from the Prism root: open /press/?p=bp_2026-10-12_diesel
+     ====================================================================== -->
+<style>
+  :root { --paper:#0c0b09; --paper-2:#14120e; --ink:#e8e2d6; --dim:#8a8375; --ghost:#55503f; --gold:#d4a94e; --warm:#c9a06a;
+          --realized:#7fae8b; --frustrated:#b07070; --LI:rgb(184,58,58); --RI:rgb(56,104,168); --LP:rgb(58,138,82); --RP:rgb(184,120,40); --O:#e8d9a8; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--paper); color:var(--ink); font-family:Georgia,'Times New Roman',serif; line-height:1.5; }
+  a { color:var(--gold); text-decoration:none; }
+  header { padding:30px 26px 14px; max-width:1280px; margin:0 auto; }
+  .kicker { font-size:11px; letter-spacing:.18em; color:var(--gold); text-transform:uppercase; }
+  h1 { font-size:clamp(28px,4vw,44px); font-weight:normal; margin-top:8px; line-height:1.1; }
+  .dek { color:var(--dim); font-style:italic; margin-top:8px; max-width:760px; font-size:15px; }
+  .byline { font-size:11px; color:var(--ghost); margin-top:10px; letter-spacing:.06em; }
+  .board { max-width:1280px; margin:12px auto 0; padding:0 26px; display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; }
+  .tile { background:var(--paper-2); border:1px solid #221f19; padding:11px 13px; }
+  .tile .l { font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--dim); }
+  .tile .v { font-size:28px; margin-top:4px; line-height:1; }
+  .tile .v small { font-size:12px; color:var(--dim); margin-left:4px; }
+  .tile .s { font-size:11px; color:var(--dim); margin-top:6px; }
+  .tile.LI .v{color:var(--LI)} .tile.RI .v{color:var(--RI)} .tile.LP .v{color:var(--LP)} .tile.RP .v{color:var(--RP)} .tile.O .v{color:var(--O)} .tile.gold .v{color:var(--gold)}
+  .tier { display:inline-block; padding:1px 6px; border:1px solid #3a352c; border-radius:10px; font-size:10px; }
+  .body { max-width:1280px; margin:22px auto 0; padding:0 26px 120px; display:grid; grid-template-columns:minmax(420px,1fr) minmax(360px,500px); gap:28px; align-items:start; }
+  .stage { position:sticky; top:12px; }
+  #map { width:100%; aspect-ratio:1/0.9; background:radial-gradient(ellipse at center,#15130e 0%,var(--paper) 72%); border:1px solid #221f19; position:relative; overflow:hidden; }
+  #map canvas { display:block; width:100% !important; height:100% !important; }
+  .readout { padding:11px 14px; font-size:12.5px; color:var(--dim); min-height:92px; border:1px solid #221f19; border-top:0; background:var(--paper-2); }
+  .readout b { color:var(--ink); font-weight:normal; } .readout .q { color:var(--warm); font-style:italic; }
+  .scrub { padding:12px 14px 12px; border:1px solid #221f19; border-top:0; background:var(--paper-2); }
+  .scrub input { width:100%; -webkit-appearance:none; appearance:none; height:2px; background:#3a352c; outline:none; cursor:pointer; }
+  .scrub input::-webkit-slider-thumb { -webkit-appearance:none; width:13px; height:13px; border-radius:50%; background:var(--gold); border:1px solid #6b5a2e; }
+  .scrub input::-moz-range-thumb { width:13px; height:13px; border-radius:50%; background:var(--gold); border:1px solid #6b5a2e; }
+  .scrub .t { text-align:center; font-size:12px; letter-spacing:.08em; margin-bottom:8px; } .scrub .t span { color:var(--gold); }
+  .scrub .row { display:flex; gap:14px; justify-content:space-between; align-items:center; font-size:10.5px; color:var(--dim); margin-top:8px; }
+  .scrub label { cursor:pointer; } .scrub input[type=checkbox] { width:auto; height:auto; vertical-align:-1px; margin-right:4px; accent-color:#d4a94e; }
+  .legend { display:flex; flex-wrap:wrap; gap:8px 14px; font-size:10.5px; color:var(--dim); padding-top:8px; }
+  .legend i { display:inline-block; width:9px; height:9px; border-radius:50%; margin-right:5px; vertical-align:-1px; }
+  .tape h2 { font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); font-weight:normal; margin:26px 0 10px; padding-top:10px; border-top:1px solid #221f19; }
+  .tape h2:first-child { margin-top:0; border-top:0; padding-top:0; }
+  .line { padding:11px 14px; margin:8px 0; border:1px solid #1d1a15; background:#100e0b; transition:border-color .25s,background .25s; cursor:pointer; }
+  .line.active { border-color:#4a4232; background:#171410; }
+  .line .meta { display:flex; align-items:center; gap:8px; font-size:10.5px; color:var(--dim); letter-spacing:.06em; }
+  .line .ts { color:var(--ghost); font-variant-numeric:tabular-nums; }
+  .chip { display:inline-block; padding:1px 7px; border-radius:10px; font-size:10px; letter-spacing:.08em; color:#fff; }
+  .chip.LI{background:var(--LI)} .chip.RI{background:var(--RI)} .chip.LP{background:var(--LP)} .chip.RP{background:var(--RP)} .chip.O{background:var(--O);color:#0c0b09}
+  .line q { display:block; font-size:15px; margin:7px 0 6px; quotes:"“" "”"; } .line q::before,.line q::after{color:var(--ghost)}
+  .line .hi { color:var(--gold); }
+  .scores { display:flex; flex-wrap:wrap; gap:6px 12px; font-size:11px; color:var(--dim); } .scores b { color:var(--ink); font-weight:normal; }
+  .scores .z.pos{color:var(--realized)} .scores .z.neg{color:var(--frustrated)} .scores .touch{border:1px solid #3a352c;padding:0 5px;border-radius:3px}
+  .note { font-size:12px; color:var(--dim); margin-top:6px; font-style:italic; }
+  footer { max-width:1280px; margin:0 auto; padding:0 26px 40px; font-size:11px; color:var(--ghost); line-height:1.6; }
+  @media (max-width:880px){ .body{grid-template-columns:1fr} .stage{position:sticky;top:0;z-index:5;background:var(--paper)} .readout,.legend{display:none} #map{aspect-ratio:1/0.75} }
+</style>
+</head>
+<body>
+<header>
+  <div class="kicker" id="kicker">Parallelogram · Press</div>
+  <h1 id="title">—</h1>
+  <div class="dek" id="dek"></div>
+  <div class="byline" id="byline"></div>
+</header>
+<section class="board" id="board"></section>
+<div class="body">
+  <div class="stage">
+    <div id="map"></div>
+    <div class="readout" id="readout"><b>The graphmap.</b> The object sits at the center; its shadow (“done”) stands above it on Z, and the arrow between them is the transform. Each station reads from its corner; distance from the center is Dia; height is what the voice believes happened. Scroll the tape.</div>
+    <div class="scrub">
+      <div class="t">TAPE <span id="tnow">0:00</span> / <span id="tlen">—</span></div>
+      <input type="range" id="scrubber" min="0" max="1" value="0" step="1">
+      <div class="row">
+        <span><label><input type="checkbox" id="showTrace" checked>trace (O · O′ · boundaries)</label></span>
+        <span><label><input type="checkbox" id="showPaths" checked>worldlines</label></span>
+        <span><a href="#" id="recenter">recenter</a></span>
+      </div>
+      <div class="legend">
+        <span><i style="background:var(--LI)"></i>LI</span><span><i style="background:var(--RI)"></i>RI</span><span><i style="background:var(--LP)"></i>LP</span><span><i style="background:var(--RP)"></i>RP</span>
+        <span><i style="background:var(--O)"></i>constitutive</span><span><i style="background:var(--realized)"></i>z + delivers</span><span><i style="background:var(--frustrated)"></i>z − doesn’t</span>
+      </div>
+    </div>
+  </div>
+  <div class="tape" id="tape"></div>
+</div>
+<footer id="foot"></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="../src/js/prism-graphmap.js?v=11"></script>
+<script>
+(async function(){
+  const id = new URLSearchParams(location.search).get('p') || 'bp_2026-10-12_diesel';
+  const D = await fetch('../data/press/' + id + '.json').then(r => r.json());
+  const fmt = s => `${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`;
+  const COL = { LI:0xb83a3a, RI:0x3868a8, LP:0x3a8a52, RP:0xb87828, O:0xe8d9a8 };
+  const zs = z => z==null ? '—' : (z>0?'+':'') + z.toFixed(1);
+  const tier = d => d<=33?'fluid':d<=66?'coalition':'denominated';
+
+  // ── masthead + scoreboard
+  document.getElementById('kicker').textContent = `Parallelogram · Press · ${D.arc} · cut ${D.source.date}`;
+  document.getElementById('title').textContent = D.title;
+  document.getElementById('dek').textContent = `${D.source.program}, “${D.source.title}” — cut to the words that carry the object, scored, and placed on the graphmap.`;
+  document.getElementById('byline').textContent = `${D.status.toUpperCase().replace('-', ' ')} · scores pending Sailor's ruling · ${fmt(D.source.length)}`;
+  document.getElementById('tlen').textContent = fmt(D.source.length);
+  const S = D.scoreboard, st = S.stations;
+  const tile = (cls,l,v,s) => `<div class="tile ${cls}"><div class="l">${l}</div><div class="v">${v}</div><div class="s">${s||''}</div></div>`;
+  document.getElementById('board').innerHTML =
+    tile('gold','Lumens', S.lumens, 'how much of the object’s light gets through') +
+    tile('gold','Segment Dia', S.dia, `<span class="tier">${S.tier}</span>`) +
+    tile('O','The transform', `<span style="font-size:19px">${D.transform}</span>`, 'delivery credited before it happened') +
+    tile('O','Declared z', zs(S.declaredZ), 'the statements') +
+    tile('gold','Read z', `${zs(S.readZ)}<small>mean</small>`, `range ${zs(S.readZRange[0])} → ${zs(S.readZRange[1])}`) +
+    ['LP','RP','RI'].map(k => tile(k, k, `${st[k].dia}<small>${st[k].spread[0]} → ${st[k].spread[1]}</small>`, '')).join('') +
+    tile('LI','LI', '<span style="color:var(--ghost)">—</span>', 'declared empty, by-record') +
+    tile('gold','Split', `<span style="font-size:19px">${S.split.topology} · ${S.split.station} · ${S.split.strength}</span>`, '');
+
+  // ── graphmap
+  const g = PrismGraphmap.create({ container: document.getElementById('map'), mode: 'analytical',
+    capabilities: { orbit:true, zInput:true, zRender:true, diatribeSlider:false, clustering:'individual' } });
+  g.mount(document.getElementById('map'));
+  g.setCornerLabels && g.setCornerLabels({ A:'LI', B:'RI', C:'LP', D:'RP' });
+  g.loadTrace(D.trace);
+  g.setBoundaryMode && g.setBoundaryMode('dual');
+  g.setBoundaryVisible && g.setBoundaryVisible(false);   // the Z-ceiling photo planes are another instrument; off for the Press
+  g.setOrbit(0, -40); g.setZoom && g.setZoom(6.8);
+
+  const L = D.lines;
+  const dotIndex = [];
+  L.forEach((p, i) => {
+    const col = p.station==='O' ? COL.O : COL[p.station];
+    const e = g.addDot(p.normX, p.normY, p.quadrant, p.normZ, {
+      color: col, radius: p.station==='O' ? 0.03 : 0.045, shape: p.station==='O' ? 'diamond' : undefined,
+      label: `${p.who} ${fmt(p.t)}`, meta: { i, t:p.t, who:p.who, dia:p.dia, z:p.z, mode:p.mode, touch:p.touch },
+    });
+    dotIndex.push(e); g.setDotVisible(i, false);
+  });
+  const speakers = [...new Set(L.filter(p => p.station!=='O').map(p => p.who))];
+  speakers.forEach(w => { const st0 = L.find(p=>p.who===w).station; g.addPath([], { id:w, color: COL[st0], opacity:.55, dashed:true }); });
+
+  // ── scrub
+  let activeIdx = -1;
+  function render(tsec, focus){
+    document.getElementById('tnow').textContent = fmt(tsec);
+    const scr = document.getElementById('scrubber'); if (+scr.value!==tsec) scr.value = tsec;
+    const seen = {};
+    L.forEach((p,i) => { const on = p.t<=tsec; g.setDotVisible(i, on); g.setDotEmphasis(i, i===focus?1.8:1); if (on && p.station!=='O') (seen[p.who]=seen[p.who]||[]).push({x:p.normX,y:p.normY,z:p.normZ}); });
+    speakers.forEach(w => g.setPath(w, seen[w]||[]));
+    const f = L[focus]; if (!f) return;
+    document.getElementById('readout').innerHTML = `<b>${fmt(f.t)} · ${D.names[f.who]}${f.station==='O'?'':' · '+f.station}</b> — <span class="q">${f.quote.replace(/[«»]/g,'')}</span><br>` +
+      (f.dia==null ? `<b>constitutive</b> — his words are the object (or its shadow); unscored. Declared z ${zs(f.z)}.` :
+       `Dia <b>${f.dia}</b> (${tier(f.dia)}) · z <b>${zs(f.z)}</b> · ${f.mode} · touches <b>${f.touch}</b>. ${f.note}`);
+  }
+  document.getElementById('scrubber').max = D.source.length;
+  document.getElementById('scrubber').addEventListener('input', e => { const t=+e.target.value; let i=-1; L.forEach((p,k)=>{ if(p.t<=t) i=k; }); if (i>=0 && i!==activeIdx){ activeIdx=i; cards[i].scrollIntoView({block:'center'}); } render(t,i); });
+  document.getElementById('showTrace').addEventListener('change', e => g.setTraceVisible(e.target.checked));
+  document.getElementById('showPaths').addEventListener('change', e => { speakers.forEach(w => g.setPath(w, e.target.checked ? null : [])); if (e.target.checked) render(+document.getElementById('scrubber').value, activeIdx); });
+  document.getElementById('recenter').addEventListener('click', e => { e.preventDefault(); g.recenter && g.recenter(); });
+  g.onInspect(d => { if (d && d.i!=null) { cards[d.i].scrollIntoView({block:'center'}); } });
+
+  // ── tape
+  const tape = document.getElementById('tape');
+  L.forEach((p,i) => {
+    if (p.chapter){ const h=document.createElement('h2'); h.textContent=p.chapter; tape.appendChild(h); }
+    const d=document.createElement('div'); d.className='line'; d.dataset.i=i;
+    const q = p.quote.replace(/«(.*?)»/g, '<span class="hi">$1</span>');
+    const ds = p.dia==null ? `<span><b>unscored</b> · constitutive</span>` : `<span>Dia <b>${p.dia}</b> · ${tier(p.dia)}</span>`;
+    const zz = p.z==null ? `<span>z —</span>` : `<span class="z ${p.z>=0?'pos':'neg'}">z ${zs(p.z)}</span>`;
+    d.innerHTML = `<div class="meta"><span class="ts">${fmt(p.t)}</span><span class="chip ${p.station}">${p.station==='O'?'@O':p.station}</span><span>${D.names[p.who]}</span></div><q>${q}</q><div class="scores">${ds}${zz}<span class="touch">${p.touch}</span><span>${p.mode}</span></div><div class="note">${p.note}</div>`;
+    d.addEventListener('click', () => { activeIdx=i; render(p.t,i); });
+    tape.appendChild(d);
+  });
+  const cards=[...tape.querySelectorAll('.line')];
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ const i=+e.target.dataset.i; cards.forEach(c=>c.classList.toggle('active',+c.dataset.i===i)); activeIdx=i; render(L[i].t,i); } }), { rootMargin:'-42% 0px -50% 0px' });
+  cards.forEach(c => io.observe(c));
+  document.getElementById('foot').textContent = `Lumens is a draft derivation: the mean, over scored lines, of (1 − Dia/100) for lines that touch the record (O · T · B · M · X), zero for lines that don’t. Scores pending Sailor's ruling. Source transcript and cut in Parameters/09_Parallelograms/Press.`;
+  render(0,-1);
+})();
+</script>
+</body>
+</html>

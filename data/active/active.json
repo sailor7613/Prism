@@ -22020,6 +22020,23 @@
      "declared": "dollar",
      "basis": "Sale into the US market under an OFAC general license — dollar-invoiced by construction — with Russia's sovereign accounts (central bank, NWF, MinFin) barred from receiving debits at US institutions. The dollar clears; the state is cut out of the clearing."
     }
+   },
+   {
+    "id": "acc-iran-trucks-russia",
+    "theater": "iran",
+    "from": "Iran",
+    "to": "Russia",
+    "asOf": "2026-10-11",
+    "detected": "2026-10-12",
+    "measure": "Iranian oil trucked into Russia (hundreds of tankers spotted)",
+    "value": null,
+    "units": "trucks (count unverified)",
+    "estimated": true,
+    "source": "Press · Breaking Points 2026-10-12 (cut: Parameters/09_Parallelograms/Press/2026-10-12_BP_Diesel_Deal/cut.md) · KB 4:54 (O, →PG01)",
+    "settlement": {
+     "declared": "unknown",
+     "basis": "the cut: fungibility — once in the market there is no way to tell; a bilateral edge Comtrade cannot draw"
+    }
    }
   ]
  },
@@ -22126,6 +22143,96 @@
     "what": "OFAC general license: Russian-origin diesel may be sold, delivered and imported into the US through April 2027; no debits to Russia's central bank, wealth fund or finance ministry accounts at US banks. Announced by Trump after a call with Putin; diesel $6.27/gal vs $3.67 a year earlier.",
     "source": "The National 2026-10-09; CNBC, NPR, NBC, Ship & Bunker same day. No license number reported yet.",
     "pg01": "§4 accrual · P2 window (08-14 → 11-30): the test case — coverage reads price, midterms, Putin; the license's one explicit term is about bank accounts"
+   },
+   {
+    "id": "evt-press-ru-storage-strike",
+    "theater": "russia",
+    "kind": "strike",
+    "asOf": "2026-10-11",
+    "detected": "2026-10-12",
+    "what": "Ukraine strikes Russia's largest oil storage and pumping facility overnight; Russia answers with cruise missiles — the energy ceasefire broken within hours, both sides.",
+    "source": "Press · Breaking Points 2026-10-12 (cut: Parameters/09_Parallelograms/Press/2026-10-12_BP_Diesel_Deal/cut.md) · SE 8:01 (T)",
+    "pg01": "PG01 §4 Russian-theater accrual (draft, 10-12)",
+    "press": {
+     "line": "8:01",
+     "who": "SE",
+     "station": "RP",
+     "touch": "T",
+     "dia": 12,
+     "z": -1.0
+    }
+   },
+   {
+    "id": "evt-press-ru-rejects-ceasefire",
+    "theater": "russia",
+    "kind": "statement",
+    "asOf": "2026-10-12",
+    "detected": "2026-10-12",
+    "what": "Russia rejects the ceasefire; Kyiv in blackout hours after; cruise-missile attacks.",
+    "source": "Press · Breaking Points 2026-10-12 (cut: Parameters/09_Parallelograms/Press/2026-10-12_BP_Diesel_Deal/cut.md) · SE 12:26 (T)",
+    "pg01": "",
+    "press": {
+     "line": "12:26",
+     "who": "SE",
+     "station": "RP",
+     "touch": "T",
+     "dia": 16,
+     "z": -1.0
+    }
+   },
+   {
+    "id": "evt-press-graham-act-bars-cargo",
+    "theater": "russia",
+    "kind": "sanction",
+    "asOf": "2026-10-11",
+    "detected": "2026-10-12",
+    "what": "Hours before the diesel statement, the Russia sanctions act is signed; an OFAC license cannot override statute; 30-day notice to Congress; CBP barred from clearing the cargo before the election. UNVERIFIED against primaries (the cut has only BP’s account).",
+    "source": "Press · Breaking Points 2026-10-12 (cut: Parameters/09_Parallelograms/Press/2026-10-12_BP_Diesel_Deal/cut.md) · SA 2:29 (X)",
+    "pg01": "the frame candidate (signing-day collision) — verify first",
+    "press": {
+     "line": "2:29",
+     "who": "SA",
+     "station": "RI",
+     "touch": "X",
+     "dia": 14,
+     "z": -0.9
+    },
+    "verified": false
+   },
+   {
+    "id": "evt-press-feb-desanction-precedent",
+    "theater": "iran",
+    "kind": "license",
+    "asOf": "2026-02-15",
+    "detected": "2026-10-12",
+    "what": "Early in the Iran war Iranian oil was desanctioned over gas prices, then reversed and blockaded — the dated precedent for the pattern.",
+    "source": "Press · Breaking Points 2026-10-12 (cut: Parameters/09_Parallelograms/Press/2026-10-12_BP_Diesel_Deal/cut.md) · KB 5:27 (B)",
+    "pg01": "PG01 members (Feb 2026)",
+    "press": {
+     "line": "5:27",
+     "who": "KB",
+     "station": "LP",
+     "touch": "B",
+     "dia": 32,
+     "z": -0.4
+    }
+   },
+   {
+    "id": "evt-press-weapons-for-refineries",
+    "theater": "russia",
+    "kind": "admission",
+    "asOf": "2026-10-11",
+    "detected": "2026-10-12",
+    "what": "The conditioning term made public: weapons procurement conditioned on refinery strikes — 'do whatever you want to Russia, don't hit the refineries'.",
+    "source": "Press · Breaking Points 2026-10-12 (cut: Parameters/09_Parallelograms/Press/2026-10-12_BP_Diesel_Deal/cut.md) · DT 9:08 / SE 13:46 (M)",
+    "pg01": "",
+    "press": {
+     "line": "13:46",
+     "who": "SE",
+     "station": "RP",
+     "touch": "M",
+     "z": -0.6
+    }
    }
   ]
  },
@@ -22170,6 +22277,131 @@
       "style": "dotted"
      }
     ]
+   },
+   {
+    "id": "H1",
+    "arc": "PG01",
+    "layer": "detection",
+    "who": "Donald Trump",
+    "statedDate": "2026-10-11",
+    "window": {
+     "start": "2026-10-11",
+     "end": "2026-11-30"
+    },
+    "outcome": "pending",
+    "zTarget": 1.0,
+    "short": "Russian diesel lands in the US, and prices fall.",
+    "stated": "Russia will immediately supply over 300,000 tons of diesel to the American and global marketplace, another 500,000 tons during November, a million tons immediately thereafter, and 3 million tons within a short period; diesel prices will come down in record numbers.",
+    "litWords": [
+     "immediately",
+     "300,000 tons",
+     "500,000 tons",
+     "November",
+     "3 million tons",
+     "record numbers"
+    ],
+    "falsifiedIf": "H1a: Russian-origin diesel cargo cleared by CBP at a US port — >= 300,000 t by 2026-11-03; H1b: Russian-origin diesel delivered (US + global) — 500,000 t by 2026-11-30; H1c: US retail diesel price (EIA weekly) — below 2026-10-10 level by 2026-11-30",
+    "scoredBy": "the record, term by term (the active layer fetches H1a/H1c; H2/H3 by the detection series)",
+    "observables": [
+     {
+      "id": "ruDiesel",
+      "label": "Russian-origin diesel into the US (EIA distillate imports by origin)",
+      "nodes": [
+       "Russia"
+      ],
+      "style": "dashed",
+      "cmd": "products"
+     }
+    ],
+    "source": "Press · Breaking Points 2026-10-12 (cut: Parameters/09_Parallelograms/Press/2026-10-12_BP_Diesel_Deal/cut.md)",
+    "status": "claude-draft",
+    "transform": "Z-assertion"
+   },
+   {
+    "id": "H2",
+    "arc": "PG01",
+    "layer": "detection",
+    "who": "Donald Trump",
+    "statedDate": "2026-10-11",
+    "window": {
+     "start": "2026-10-11",
+     "end": "2026-10-12"
+    },
+    "outcome": "falsified-in-window (draft; Sailor rules)",
+    "zTarget": 1.0,
+    "short": "An energy ceasefire holds, both sides.",
+    "stated": "Effective immediately, there is an energy ceasefire in the war between Russia and Ukraine. Both parties have agreed, do not break it.",
+    "litWords": [
+     "effective immediately",
+     "both parties have agreed",
+     "do not break it"
+    ],
+    "falsifiedIf": "H2a: strikes on energy infrastructure by either party after statement — 0 by open",
+    "scoredBy": "the record, term by term (the active layer fetches H1a/H1c; H2/H3 by the detection series)",
+    "observables": [],
+    "source": "Press · Breaking Points 2026-10-12 (cut: Parameters/09_Parallelograms/Press/2026-10-12_BP_Diesel_Deal/cut.md)",
+    "status": "claude-draft",
+    "transform": "Z-assertion"
+   },
+   {
+    "id": "H3",
+    "arc": "PG01",
+    "layer": "detection",
+    "who": "Volodymyr Zelensky",
+    "statedDate": "2026-10-11",
+    "window": {
+     "start": "2026-10-11",
+     "end": null
+    },
+    "outcome": "pending",
+    "zTarget": 0.0,
+    "short": "Sixty days of total ceasefire, then an election.",
+    "stated": "Tell Putin: give us 60 days of total ceasefire and we will organize elections.",
+    "litWords": [
+     "60 days",
+     "total ceasefire",
+     "organize elections"
+    ],
+    "falsifiedIf": "H3a: a total ceasefire begins — yes by 2026-12-31; H3b: election scheduled within 60 days of H3a — yes by H3a + 60d",
+    "scoredBy": "the record, term by term (the active layer fetches H1a/H1c; H2/H3 by the detection series)",
+    "observables": [],
+    "source": "Press · Breaking Points 2026-10-12 (cut: Parameters/09_Parallelograms/Press/2026-10-12_BP_Diesel_Deal/cut.md)",
+    "status": "claude-draft",
+    "transform": null
+   },
+   {
+    "id": "H4",
+    "arc": "PG01",
+    "layer": "arc",
+    "who": "Donald Trump",
+    "statedDate": "2026-10-11",
+    "window": {
+     "start": "2026-10-11",
+     "end": null
+    },
+    "outcome": "pending",
+    "zTarget": 1.0,
+    "short": "Total control of the Strait: the Gulf edge stays at zero or returns on US terms.",
+    "stated": "Between our total control of the Strait of Hormuz and this great procurement of Russian energy, diesel prices for Americans and the world will be coming down.",
+    "litWords": [
+     "total control",
+     "Strait of Hormuz"
+    ],
+    "falsifiedIf": "H4a: Gulf → US crude edge (active layer §6) — stays 0 or returns under US terms by TF03 authoring",
+    "scoredBy": "TF03 — ruled, unauthored",
+    "observables": [
+     {
+      "id": "gulfShare",
+      "label": "Gulf share of US crude imports",
+      "nodes": [
+       "Gulf"
+      ],
+      "style": "dashed"
+     }
+    ],
+    "source": "Press · Breaking Points 2026-10-12 (cut: Parameters/09_Parallelograms/Press/2026-10-12_BP_Diesel_Deal/cut.md)",
+    "status": "claude-draft",
+    "transform": null
    }
   ]
  },
@@ -22212,6 +22444,55 @@
     "outcome": "pending",
     "outcomeDate": null,
     "source": "EnergyNow 2026-10-10; Bloomberg, The Hill, Modern Diplomacy same day"
+   },
+   {
+    "id": "S2",
+    "theater": "russia",
+    "speaker": "Trump",
+    "venue": "post, weekend of 10-10/11 (per BP 10-12)",
+    "asOf": "2026-10-11",
+    "detected": "2026-10-12",
+    "verbatim": [
+     "Russia will immediately supply 300,000 tons",
+     "500,000 in November",
+     "3 million tons",
+     "diesel prices coming down in record numbers"
+    ],
+    "context": "The diesel deal as stated — H1. Declared z +1.0; the record inside the window: 300k t/mo ≈ 74 kb/d against ~3.66 mb/d US production; the statute bar (unverified); no CBP-cleared cargo.",
+    "hypothesis": "H1",
+    "source": "Press · Breaking Points 2026-10-12 (cut: Parameters/09_Parallelograms/Press/2026-10-12_BP_Diesel_Deal/cut.md) · DT 0:47 / 1:13",
+    "implies": "Delivery pre-credited: the schedule is spoken as done. The record inside the window is a few percent of US supply, a statute bar (unverified) and no cleared cargo — H1 is the test."
+   },
+   {
+    "id": "S3",
+    "theater": "russia",
+    "speaker": "Trump",
+    "venue": "post, 2026-10-11",
+    "asOf": "2026-10-11",
+    "detected": "2026-10-12",
+    "verbatim": [
+     "Effective immediately, there is an energy ceasefire",
+     "Both parties have agreed, do not break it"
+    ],
+    "context": "The energy ceasefire as stated — H2. Z-assertion in its purest form: delivery declared as already done; broken within hours by both sides (evt-press-ru-storage-strike, evt-press-ru-rejects-ceasefire).",
+    "hypothesis": "H2",
+    "source": "Press · Breaking Points 2026-10-12 (cut: Parameters/09_Parallelograms/Press/2026-10-12_BP_Diesel_Deal/cut.md) · DT 8:23",
+    "implies": "A ceasefire declared as already in force; both sides struck within hours — H2 falsified in its own window (draft; Sailor rules)."
+   },
+   {
+    "id": "S4",
+    "theater": "russia",
+    "speaker": "Zelensky",
+    "venue": "interview, 2026-10-11 (per BP 10-12)",
+    "asOf": "2026-10-11",
+    "detected": "2026-10-12",
+    "verbatim": [
+     "give us 60 days of total ceasefire and we organize elections"
+    ],
+    "context": "The counter-term with its own test — H3.",
+    "hypothesis": "H3",
+    "source": "Press · Breaking Points 2026-10-12 (cut: Parameters/09_Parallelograms/Press/2026-10-12_BP_Diesel_Deal/cut.md) · VZ 12:06",
+    "implies": "The one counter-term with its own test built in: sixty days, then an election — H3, open."
    }
   ]
  },
@@ -25340,5 +25621,6 @@
   "what": "The shadow: what the institutional stations read (PG01 §6.2c). Kept last.",
   "fetchedAt": "2026-10-11T20:56:15.722Z",
   "column": "price"
- }
+ },
+ "pressMergedAt": "2026-10-15"
 }

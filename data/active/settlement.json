@@ -1,0 +1,52 @@
+{
+  "column": "realization",
+  "what": "The declared settlement layer for the active layer's edges (PG01 §6.2a; §6.7 the globe, drafted 2026-10-12). Every rule names a basis. 'unknown' is a legitimate value and is expected to be the commonest; the globe draws it dashed and the determination counts it as unnamed, never toward either pole. A rule declared 'default' is an industry-default declaration (USD benchmark pricing and invoicing) with no edge-specific evidence — the dashboard reports how much of the volume rests on defaults. Hand-dated; the pipeline never writes here. Match order: first rule whose from/to match (a '*' matches anything); 'United States' as a party is always dollar (EIA official series, US market).",
+  "updated": "2026-10-12",
+  "rules": [
+    { "from": "*", "to": "United States", "declared": "dollar", "confidence": "official",
+      "basis": "US crude and product trade is dollar-invoiced; the counterparty sells into the US market in dollars (EIA official series)." },
+    { "from": "United States", "to": "*", "declared": "dollar", "confidence": "official",
+      "basis": "US exports are dollar-invoiced at the US Gulf; buyers pay in dollars (EIA official series)." },
+
+    { "from": "Russia", "to": "India", "declared": "non-dollar", "confidence": "reported",
+      "basis": "Russia–India crude trade has run in rupees, dirhams and yuan since the 2022 sanctions; the Urals discount is the price of the non-dollar barrel (PG01 §4 accrual, 2026-08-27)." },
+    { "from": "Russia", "to": "China", "declared": "non-dollar", "confidence": "reported",
+      "basis": "Russian crude to China is settled in yuan and roubles since 2022; dollar clearing is closed to the sanctioned seller." },
+    { "from": "Russia", "to": "Türkiye", "declared": "non-dollar", "confidence": "reported",
+      "basis": "Turkish refiners pay for Russian barrels in lira, roubles and dirhams; dollar clearing is closed to the seller." },
+    { "from": "Russia", "to": "Brazil", "declared": "unknown", "confidence": "none",
+      "basis": "Brazilian product imports from Russia (diesel) are reported in value only; settlement currency not declared in any source filed." },
+    { "from": "Russia", "to": "EU-27", "declared": "unknown", "confidence": "none",
+      "basis": "Residual pipeline crude to Hungary and Slovakia under the sanctions exemption; reported settlement mixed (euro, rouble). Not declared toward either pole." },
+    { "from": "Russia", "to": "Japan", "declared": "unknown", "confidence": "none",
+      "basis": "Sakhalin crude under Japan's own exemption; settlement not declared in any source filed." },
+    { "from": "Russia", "to": "*", "declared": "unknown", "confidence": "none",
+      "basis": "Sanctioned seller; settlement varies by buyer and is not declared for this edge." },
+
+    { "from": "Iran", "to": "*", "declared": "non-dollar", "confidence": "reported",
+      "basis": "Iranian crude is sold outside dollar clearing by necessity — yuan, barter, and third-flag transfers (NSPM-2, TF01; China customs 'Malaysian' entries). Importer-reported volumes are small; the real flow is an accrual." },
+
+    { "from": "Venezuela", "to": "India", "declared": "unknown", "confidence": "none",
+      "basis": "Venezuelan crude to Indian refiners resumed under licence; reported settlement mixed (dollar under licence, otherwise barter/yuan). Not declared toward either pole." },
+    { "from": "Venezuela", "to": "EU-27", "declared": "unknown", "confidence": "none",
+      "basis": "Debt-for-oil and licensed cargoes to European majors; settlement not declared per cargo." },
+    { "from": "Venezuela", "to": "*", "declared": "unknown", "confidence": "none",
+      "basis": "Sanctioned seller outside the US licence; settlement varies and is not declared for this edge." },
+
+    { "from": "Saudi Arabia", "to": "*", "declared": "dollar", "confidence": "default",
+      "basis": "Gulf crude is priced on official selling prices quoted in dollars and invoiced in dollars; reported yuan settlements are small and unconfirmed. Declared by industry default, not by evidence for this edge." },
+    { "from": "UAE", "to": "*", "declared": "dollar", "confidence": "default",
+      "basis": "Murban and Upper Zakum are exchange-priced and invoiced in dollars. Declared by industry default." },
+    { "from": "Iraq", "to": "*", "declared": "dollar", "confidence": "default",
+      "basis": "SOMO sells against dollar-quoted OSPs; Iraq's oil revenue clears through the Federal Reserve. Declared by industry default." },
+    { "from": "Kuwait", "to": "*", "declared": "dollar", "confidence": "default",
+      "basis": "KPC crude is invoiced in dollars against OSPs. Declared by industry default." },
+    { "from": "Qatar", "to": "*", "declared": "dollar", "confidence": "default",
+      "basis": "Qatari crude and condensate are dollar-invoiced. Declared by industry default." },
+    { "from": "Oman", "to": "*", "declared": "dollar", "confidence": "default",
+      "basis": "Oman crude is exchange-priced (DME) and dollar-invoiced. Declared by industry default." },
+
+    { "from": "*", "to": "*", "declared": "dollar", "confidence": "default",
+      "basis": "Crude and products on international benchmarks (Brent, WTI, Dubai) are priced and invoiced in dollars unless a sanctions regime intervenes; no alternative settlement reported for this edge. Declared by industry default — the dashboard counts how much of the volume rests on defaults." }
+  ]
+}

@@ -1,0 +1,244 @@
+/* ============================================================
+   g4 OS · the glass grammar (2026-10-14 · Claude draft, Sailor to rule)
+   ------------------------------------------------------------
+   Extends prism-grammar.css. Does not replace it.
+   Field: the night navy (the sky is the desktop).
+   Chrome: cool white, pinstriped at 3%, flat; shadows only where
+           something floats. 2002 underneath.
+   Accent: the Venus's thin film — the ONLY accent. Iridescence
+           means "look here": one sheen pass on entry, then rest.
+   Spec: Specs/G4_OS_and_the_Two_Modes_v2.md §3–§5
+   ============================================================ */
+
+:root {
+  --g4-field:        var(--bg, rgb(10, 18, 38));
+  --g4-field-deep:   rgb(6, 11, 26);
+  --g4-chrome:       #e9ecf2;
+  --g4-chrome-2:     #d7dbe3;
+  --g4-chrome-ink:   #1d2433;
+  --g4-chrome-dim:   rgba(29, 36, 51, 0.55);
+  --g4-rule:         rgba(233, 236, 242, 0.14);
+  --g4-rule-soft:    rgba(233, 236, 242, 0.07);
+  --g4-glass:        rgba(233, 236, 242, 0.04);
+  --g4-ui:           'Lucida Grande', 'Lucida Sans Unicode', 'Segoe UI', system-ui, sans-serif;
+  /* the villa's G4 draws its OS in Georgia, cream on a blue-black, with blue-tinted
+     rectangles for buttons and a grain in the field (2026-10-14, "the DG g4 has a
+     slightly more retro feel I'd like in the glassed g4") — the glass takes the same */
+  --g4-os:           Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  --g4-blue-rgb:     48, 96, 192;
+
+  /* the film — the Venus ghost's palette, sampled at five stops of t */
+  --film-0: rgb(236, 219, 255);
+  --film-1: rgb(190, 232, 255);
+  --film-2: rgb(214, 255, 226);
+  --film-3: rgb(255, 232, 206);
+  --film-4: rgb(255, 212, 236);
+  --film-rest: var(--ink, #f5f0e8);
+
+  --bar-h: 24px;
+  --bar-h-phone: 28px;
+}
+
+/* ── the field ───────────────────────────────────────────── */
+html.g4, .g4 body { background: var(--g4-field); color: var(--ink, #f5f0e8); }
+.g4-sky {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse at 50% 120%, rgba(32, 64, 160, 0.14), transparent 60%),
+    linear-gradient(#0c0e1a, #080a12 50%, #060810);
+}
+.g4-sky::after { content: ''; position: absolute; inset: 0; opacity: .5; pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .19 0 0 0 0 .38 0 0 0 0 .75 0 0 0 .05 0'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>"); }
+.g4-sky canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+/* ── the bar: the navtool ────────────────────────────────── */
+.g4-bar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+  height: var(--bar-h);
+  background: linear-gradient(var(--g4-chrome), var(--g4-chrome-2));
+  background-image:
+    repeating-linear-gradient(0deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 3px),
+    linear-gradient(var(--g4-chrome), var(--g4-chrome-2));
+  border-bottom: 1px solid rgba(0,0,0,0.28);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset;
+  display: grid; grid-template-columns: var(--bar-h) 1fr auto; align-items: center;
+  user-select: none; -webkit-user-select: none; touch-action: pan-y;
+  font-family: var(--g4-ui); font-size: 11px; color: var(--g4-chrome-ink);
+}
+.g4-bar .badge {
+  height: var(--bar-h); display: grid; place-items: center; cursor: pointer;
+  border-right: 1px solid rgba(0,0,0,0.12);
+}
+.g4-bar .badge img { height: calc(var(--bar-h) * .7); width: auto; mix-blend-mode: multiply; opacity: .9; }
+.g4-bar .nav {
+  position: relative; height: var(--bar-h); overflow: hidden; cursor: grab;
+}
+.g4-bar .nav:active { cursor: grabbing; }
+.g4-bar .nav img {
+  position: absolute; top: 50%; left: 50%; height: calc(var(--bar-h) * .78); width: auto; max-width: none;
+  transform: translate(-50%, -50%) translateX(var(--nav-dx, 0px));
+  transition: transform .28s cubic-bezier(.2,.8,.2,1);
+  mix-blend-mode: multiply; opacity: .92; pointer-events: none;
+}
+.g4-bar .nav.dragging img { transition: none; }
+.g4-bar .right .crumb { font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: var(--g4-chrome-dim); white-space: nowrap; }
+.g4-bar .nav .hint { position: absolute; top: 50%; transform: translateY(-50%); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; color: var(--g4-chrome-dim); opacity: 0; transition: opacity .2s; pointer-events: none; }
+.g4-bar .nav .hint.l { left: 10px; } .g4-bar .nav .hint.r { right: 10px; }
+.g4-bar .nav.dragging .hint { opacity: 1; }
+.g4-bar .nav.holding img { filter: brightness(.8); }
+.g4-bar .right { padding: 0 10px; display: flex; gap: 12px; align-items: center; height: var(--bar-h); color: var(--g4-chrome-dim); letter-spacing: .04em; }
+.g4-bar .right b { color: var(--g4-chrome-ink); font-weight: 600; }
+@media (max-width: 480px) {
+  .g4-bar { --bar-h: var(--bar-h-phone); grid-template-columns: var(--bar-h-phone) 1fr auto; }
+  .g4-bar .right span.opt { display: none; }
+}
+.g4-under-bar { padding-top: calc(var(--bar-h) + 10px); }
+@media (max-width: 480px) { .g4-under-bar { padding-top: calc(var(--bar-h-phone) + 8px); } }
+
+/* ── the desktop ─────────────────────────────────────────── */
+.g4-desk { position: relative; z-index: 1; min-height: 100vh; display: grid; place-content: center; gap: 28px; padding: 40px 16px; }
+.g4-desk .tiles { display: flex; gap: 28px; flex-wrap: wrap; justify-content: center; }
+.g4-tile { width: 132px; text-align: center; text-decoration: none; color: var(--ink); font-family: var(--g4-ui); }
+.g4-tile .ic {
+  width: 84px; height: 84px; margin: 0 auto 10px; border-radius: 16px;
+  background: var(--g4-glass); border: 1px solid var(--g4-rule); display: grid; place-items: center;
+  font-size: 34px; transition: border-color .2s, background .2s;
+}
+.g4-tile:hover .ic, .g4-tile:focus-visible .ic { border-color: rgba(233,236,242,.4); background: rgba(233,236,242,.07); }
+.g4-tile { font-family: var(--g4-os); }
+.g4-tile .n { font-size: 15px; font-weight: 600; color: rgba(245,240,232,.72); } .g4-tile .s { font-size: 11px; font-style: italic; color: rgba(245,240,232,.38); margin-top: 3px; }
+.g4-tile .ic { background: rgba(var(--g4-blue-rgb), 0.07); border-color: rgba(var(--g4-blue-rgb), 0.18); border-radius: 10px; }
+
+/* ── a window ────────────────────────────────────────────── */
+.g4-win {
+  position: relative; z-index: 1;
+  background: rgba(10, 18, 38, 0.72);
+  border: 1px solid rgba(233,236,242,0.22);
+  box-shadow: 0 18px 50px rgba(0,0,0,.45), 0 1px 0 rgba(255,255,255,.06) inset;
+  border-radius: 6px;   /* no overflow:hidden — a sticky stage inside must stick to the viewport */
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+}
+.g4-win > .title {
+  height: 22px; border-radius: 6px 6px 0 0; display: grid; grid-template-columns: 54px 1fr 54px; align-items: center;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(0,0,0,0.035) 0 1px, transparent 1px 3px),
+    linear-gradient(var(--g4-chrome), var(--g4-chrome-2));
+  border-bottom: 1px solid rgba(0,0,0,0.3); color: var(--g4-chrome-ink);
+  font-family: var(--g4-ui); font-size: 11px; text-align: center; letter-spacing: .02em;
+}
+.g4-win > .title .dots { display: flex; gap: 6px; padding-left: 8px; }
+.g4-win > .title .dots i { width: 10px; height: 10px; border-radius: 50%; border: 1px solid rgba(0,0,0,.35); background: linear-gradient(#f6f7fa, #c9cfdb); }
+.g4-win > .title .dots i:first-child { background: linear-gradient(#ffd0cc, #e07a7a); }
+.g4-win > .title .dots i:first-child:hover { background: linear-gradient(#ffb0aa, #d05a5a); }
+.g4-win > .title .fn { font-family: var(--mono); font-size: 10px; letter-spacing: .18em; color: var(--g4-chrome-dim); text-align: right; padding-right: 10px; }
+.g4-win > .body { padding: 16px 18px 22px; }
+
+/* ── chrome widgets ──────────────────────────────────────── */
+.g4-pill {
+  display: inline-flex; align-items: center; gap: 6px; height: 26px; padding: 0 13px; border-radius: 3px;
+  background: rgba(var(--g4-blue-rgb), 0.10); color: rgba(245,240,232,.62); border: 1px solid rgba(var(--g4-blue-rgb), 0.22);
+  font-family: var(--g4-os); font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; cursor: pointer; text-decoration: none; user-select: none;
+  transition: background .15s, color .15s, border-color .15s;
+}
+.g4-pill:hover { color: rgba(245,240,232,.85); border-color: rgba(var(--g4-blue-rgb), 0.4); }
+.g4-pill:active { background: rgba(var(--g4-blue-rgb), 0.2); }
+.g4-pill.on { background: rgba(var(--g4-blue-rgb), 0.22); color: rgba(245,240,232,.92); border-color: rgba(var(--g4-blue-rgb), 0.5); }
+.g4-pill.quiet { background: transparent; color: rgba(245,240,232,.45); border-color: rgba(var(--g4-blue-rgb), 0.16); }
+.g4-pill.quiet.on { color: rgba(245,240,232,.9); border-color: rgba(var(--g4-blue-rgb), 0.5); background: rgba(var(--g4-blue-rgb), 0.14); }
+.g4-tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+.g4-key { font-family: var(--g4-os); font-size: 10.5px; letter-spacing: .2em; color: rgba(245,240,232,.4); text-transform: uppercase; }
+.g4-rule { height: 1px; background: var(--g4-rule); margin: 14px 0; }
+.g4-row { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: baseline; padding: 8px 0; border-bottom: 1px solid rgba(245,240,232,.06); }
+.g4-row:last-child { border-bottom: 0; }
+.g4-bar-meter { height: 3px; background: var(--g4-rule-soft); position: relative; border-radius: 2px; overflow: hidden; }
+.g4-bar-meter > i { position: absolute; inset: 0 auto 0 0; background: var(--ink-mid); }
+
+/* ── the sheet (the Codex opens as one) ──────────────────── */
+.g4-sheet {
+  position: fixed; left: 50%; top: var(--bar-h); transform: translate(-50%, -8px); z-index: 60;
+  width: min(560px, 94vw); max-height: 70vh; overflow: auto;
+  background: rgba(10,18,38,.96); border: 1px solid rgba(233,236,242,.28); border-top: 0; border-radius: 0 0 8px 8px;
+  box-shadow: 0 24px 60px rgba(0,0,0,.55); padding: 18px 20px; opacity: 0; pointer-events: none;
+  transition: transform .26s cubic-bezier(.2,.8,.2,1), opacity .2s;
+}
+.g4-sheet.open { transform: translate(-50%, 0); opacity: 1; pointer-events: auto; }
+
+/* ── the film ────────────────────────────────────────────── */
+/* .film — a sheen pass on entry, then rest. Add .film to any element
+   that should say "look here"; it plays once. .film.loop keeps sweeping
+   (for a value that is moving, a hypothesis line). */
+@keyframes film-sweep {
+  0%   { background-position: 120% 0; }
+  100% { background-position: -120% 0; }
+}
+.film {
+  color: var(--film-rest);
+  background-image: linear-gradient(100deg,
+    var(--film-rest) 0%, var(--film-rest) 30%,
+    var(--film-0) 38%, var(--film-1) 44%, var(--film-2) 50%, var(--film-3) 56%, var(--film-4) 62%,
+    var(--film-rest) 70%, var(--film-rest) 100%);
+  background-size: 240% 100%; background-position: -120% 0;
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  animation: film-sweep .9s cubic-bezier(.3,.6,.3,1) 1 both;
+}
+.film.quick { animation-duration: .36s; }       /* the subliminal register: seen, not read */
+.film.loop  { animation: film-sweep 2.6s linear infinite; }
+.film-stroke { stroke: url(#filmGrad); }
+.film-rule { height: 1px; background: linear-gradient(90deg, transparent, var(--film-1), var(--film-3), transparent); opacity: .7; }
+@media (prefers-reduced-motion: reduce) { .film, .film.loop { animation: none; } }
+
+/* ── the housing (boot and the pull) ─────────────────────── */
+.g4-housing {
+  position: fixed; inset: 0; z-index: 100; pointer-events: none;
+  display: grid; place-items: center; background: var(--g4-field-deep);
+  transition: opacity .35s;
+}
+.g4-housing .shell {
+  position: relative; width: 78vmin; aspect-ratio: 5/4; border-radius: 4vmin;
+  background-image: repeating-linear-gradient(0deg, rgba(0,0,0,0.025) 0 1px, transparent 1px 3px), linear-gradient(160deg, #f4f5f8, #cfd4dd);
+  box-shadow: 0 30px 80px rgba(0,0,0,.6), 0 0 0 1px rgba(0,0,0,.4), 0 1px 0 rgba(255,255,255,.8) inset;
+  padding: 3.2vmin 3.2vmin 6.4vmin;
+  transform-origin: 50% 50%;
+  animation: g4-boot 1.5s cubic-bezier(.4,0,.2,1) .25s 1 forwards;
+}
+.g4-housing .glass { position: absolute; inset: 3.2vmin 3.2vmin 6.4vmin; background: var(--g4-field); border-radius: 1.2vmin; overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.5) inset, 0 0 40px rgba(60,100,220,.18) inset, 0 1px 0 rgba(255,255,255,.35) inset; }
+/* the glare — the room's overhead light crossing the glass once, its edge in the film.
+   The screen is a surface for this one moment; then it is a window. */
+.g4-housing .glass::before {
+  content: ''; position: absolute; top: -60%; bottom: -60%; left: -40%; width: 46%;
+  transform: rotate(18deg) translateX(-120%);
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(255,255,255,0.06) 18%,
+    rgba(255,255,255,0.30) 44%,
+    rgba(255,255,255,0.72) 50%,
+    rgba(255,255,255,0.30) 56%,
+    var(--film-1) 64%, var(--film-0) 70%, var(--film-4) 76%,
+    transparent 100%);
+  mix-blend-mode: screen; opacity: 0; filter: blur(1px);
+  animation: g4-glare 1.5s linear .25s 1 forwards;
+}
+@keyframes g4-glare {
+  0%   { opacity: 0; transform: rotate(18deg) translateX(-120%); }
+  30%  { opacity: 0; transform: rotate(18deg) translateX(-120%); }
+  40%  { opacity: 1; }
+  78%  { opacity: 1; }
+  88%  { opacity: 0; transform: rotate(18deg) translateX(340%); }
+  100% { opacity: 0; transform: rotate(18deg) translateX(340%); }
+}
+/* the bezel's own highlight — a hairline of the film along the top edge, so the housing reads as a body */
+.g4-housing .shell::after {
+  content: ''; position: absolute; left: 6%; right: 6%; top: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--film-1), rgba(255,255,255,.9), var(--film-3), transparent);
+  opacity: .8;
+}
+.g4-housing .chin { position: absolute; left: 50%; bottom: 1.6vmin; transform: translateX(-50%); height: 3.2vmin; }
+.g4-housing .chin img { height: 100%; width: auto; mix-blend-mode: multiply; opacity: .85; }
+@keyframes g4-boot {
+  0%   { transform: scale(.96); opacity: 0; }
+  26%  { transform: scale(1);   opacity: 1; }
+  66%  { transform: scale(1);   opacity: 1; }
+  100% { transform: scale(2.6); opacity: 1; }
+}
+.g4-housing.done { opacity: 0; }

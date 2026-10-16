@@ -1,0 +1,21 @@
+{
+ "column": "detection",
+ "what": "Statements by principals, filed as hypotheses the STATEMENT makes about the realized layer — not ours. Each row: who said what, verbatim, dated by detection; what it implies about where the barrel goes and in what settlement; the observables that would show it; and what falsifies it. The ledger tracks whether the world moved the way the words implied. Hand-dated; the pipeline never writes here. (2026-10-10)",
+ "rows": [
+  {
+   "id": "S1", "theater": "russia", "speaker": "Trump", "venue": "to reporters, the White House", "asOf": "2026-10-10", "detected": "2026-10-10",
+   "verbatim": ["He better damn well stop", "I suggest they get a new leader who can make a deal"],
+   "context": "One day after the OFAC general license on Russian diesel (evt-ru-diesel-license); the strikes referred to are Ukraine's campaign on Russian refineries (evt-norsi and after).",
+   "implies": "The US now has an interest in Russian refining capacity staying intact; the sanctions regime is being operated as a supply valve; the non-dollar barrel is being licensed back into dollar-settled supply.",
+   "observables": [
+    { "id": "strikes", "what": "Ukrainian strikes on Russian refineries (detection series, theater russia) — stop, slow, or continue at the September rate" },
+    { "id": "ru-distillate-exports", "what": "Russian distillate exports recover (JODI / Comtrade products from Russia, importer-reported)" },
+    { "id": "us-diesel-from-russia", "what": "Russian diesel lands in US ports (EIA distillate imports by origin, RUS)" },
+    { "id": "diesel-price", "what": "US retail diesel falls from $6.27 (2026-10-09)" }
+   ],
+   "falsifiedIf": "Refinery strikes continue at the September rate through November, or no Russian-origin distillate appears in US import data by December 2026.",
+   "outcome": "pending", "outcomeDate": null,
+   "source": "EnergyNow 2026-10-10; Bloomberg, The Hill, Modern Diplomacy same day"
+  }
+ ]
+}

@@ -1,17 +1,169 @@
 {
- "what": "The arc's stated predictions that the active layer draws — PG01 §2 ledger entries with observables on this page. Derived from the PG01 markdown (canonical); update both together. Hand-dated; the pipeline never writes here.",
+ "what": "The arc's stated predictions that the active layer draws — PG01 §2 ledger entries with observables on this page. Derived from the PG01 markdown (canonical); update both together. Hand-dated; the pipeline never writes here. Press rows (H1–H4, 2026-10-15): principals' contemporaneous statements as trackable hypotheses — Sailor's 10-10 direction, drafted from the Breaking Points cut of 10-12; Claude drafts until ruled.",
  "rows": [
   {
-   "id": "P3", "arc": "PG01", "statedDate": "2026-10-02", "outcome": "pending", "zTarget": 0.8,
+   "id": "P3",
+   "arc": "PG01",
+   "statedDate": "2026-10-02",
+   "outcome": "pending",
+   "zTarget": 0.8,
    "short": "The shock realizes the object by re-routing it.",
    "stated": "The next member traceframe (TF03, the Strait closure) scores the real object at z ≥ +0.8, with the realization read at the hemisphere barrel: Gulf supply to the US goes to zero and is replaced by Western-Hemisphere supply that is dollar-settled by construction; the dollar-settled share of US crude imports does not fall through the shock.",
    "falsifiedIf": "TF03's record shows the replacement barrel settled outside the dollar, or the Gulf edge returns before the hemisphere edges consolidate.",
    "scoredBy": "TF03 — ruled, unauthored. The flows do not score z; TF03 does.",
    "observables": [
-    { "id": "gulfShare", "label": "Gulf share of US crude imports", "nodes": ["Gulf"], "style": "dashed" },
-    { "id": "hemisphereShare", "label": "Hemisphere share of US crude imports", "nodes": ["Canada", "Mexico", "Venezuela", "Brazil", "Andes"], "style": "solid" },
-    { "id": "dollarShare", "label": "Dollar-settled share of US crude imports", "settlement": "dollar", "style": "dotted" }
+    {
+     "id": "gulfShare",
+     "label": "Gulf share of US crude imports",
+     "nodes": [
+      "Gulf"
+     ],
+     "style": "dashed"
+    },
+    {
+     "id": "hemisphereShare",
+     "label": "Hemisphere share of US crude imports",
+     "nodes": [
+      "Canada",
+      "Mexico",
+      "Venezuela",
+      "Brazil",
+      "Andes"
+     ],
+     "style": "solid"
+    },
+    {
+     "id": "dollarShare",
+     "label": "Dollar-settled share of US crude imports",
+     "settlement": "dollar",
+     "style": "dotted"
+    }
    ]
+  },
+  {
+   "id": "H1",
+   "arc": "PG01",
+   "layer": "detection",
+   "who": "Donald Trump",
+   "statedDate": "2026-10-11",
+   "window": {
+    "start": "2026-10-11",
+    "end": "2026-11-30"
+   },
+   "outcome": "pending",
+   "zTarget": 1.0,
+   "short": "Russian diesel lands in the US, and prices fall.",
+   "stated": "Russia will immediately supply over 300,000 tons of diesel to the American and global marketplace, another 500,000 tons during November, a million tons immediately thereafter, and 3 million tons within a short period; diesel prices will come down in record numbers.",
+   "litWords": [
+    "immediately",
+    "300,000 tons",
+    "500,000 tons",
+    "November",
+    "3 million tons",
+    "record numbers"
+   ],
+   "falsifiedIf": "H1a: Russian-origin diesel cargo cleared by CBP at a US port — >= 300,000 t by 2026-11-03; H1b: Russian-origin diesel delivered (US + global) — 500,000 t by 2026-11-30; H1c: US retail diesel price (EIA weekly) — below 2026-10-10 level by 2026-11-30",
+   "scoredBy": "the record, term by term (the active layer fetches H1a/H1c; H2/H3 by the detection series)",
+   "observables": [
+    {
+     "id": "ruDiesel",
+     "label": "Russian-origin diesel into the US (EIA distillate imports by origin)",
+     "nodes": [
+      "Russia"
+     ],
+     "style": "dashed",
+     "cmd": "products"
+    }
+   ],
+   "source": "Press · Breaking Points 2026-10-12 (cut: Parameters/09_Parallelograms/Press/2026-10-12_BP_Diesel_Deal/cut.md)",
+   "status": "claude-draft",
+   "transform": "Z-assertion"
+  },
+  {
+   "id": "H2",
+   "arc": "PG01",
+   "layer": "detection",
+   "who": "Donald Trump",
+   "statedDate": "2026-10-11",
+   "window": {
+    "start": "2026-10-11",
+    "end": "2026-10-12"
+   },
+   "outcome": "falsified-in-window (draft; Sailor rules)",
+   "zTarget": 1.0,
+   "short": "An energy ceasefire holds, both sides.",
+   "stated": "Effective immediately, there is an energy ceasefire in the war between Russia and Ukraine. Both parties have agreed, do not break it.",
+   "litWords": [
+    "effective immediately",
+    "both parties have agreed",
+    "do not break it"
+   ],
+   "falsifiedIf": "H2a: strikes on energy infrastructure by either party after statement — 0 by open",
+   "scoredBy": "the record, term by term (the active layer fetches H1a/H1c; H2/H3 by the detection series)",
+   "observables": [],
+   "source": "Press · Breaking Points 2026-10-12 (cut: Parameters/09_Parallelograms/Press/2026-10-12_BP_Diesel_Deal/cut.md)",
+   "status": "claude-draft",
+   "transform": "Z-assertion"
+  },
+  {
+   "id": "H3",
+   "arc": "PG01",
+   "layer": "detection",
+   "who": "Volodymyr Zelensky",
+   "statedDate": "2026-10-11",
+   "window": {
+    "start": "2026-10-11",
+    "end": null
+   },
+   "outcome": "pending",
+   "zTarget": 0.0,
+   "short": "Sixty days of total ceasefire, then an election.",
+   "stated": "Tell Putin: give us 60 days of total ceasefire and we will organize elections.",
+   "litWords": [
+    "60 days",
+    "total ceasefire",
+    "organize elections"
+   ],
+   "falsifiedIf": "H3a: a total ceasefire begins — yes by 2026-12-31; H3b: election scheduled within 60 days of H3a — yes by H3a + 60d",
+   "scoredBy": "the record, term by term (the active layer fetches H1a/H1c; H2/H3 by the detection series)",
+   "observables": [],
+   "source": "Press · Breaking Points 2026-10-12 (cut: Parameters/09_Parallelograms/Press/2026-10-12_BP_Diesel_Deal/cut.md)",
+   "status": "claude-draft",
+   "transform": null
+  },
+  {
+   "id": "H4",
+   "arc": "PG01",
+   "layer": "arc",
+   "who": "Donald Trump",
+   "statedDate": "2026-10-11",
+   "window": {
+    "start": "2026-10-11",
+    "end": null
+   },
+   "outcome": "pending",
+   "zTarget": 1.0,
+   "short": "Total control of the Strait: the Gulf edge stays at zero or returns on US terms.",
+   "stated": "Between our total control of the Strait of Hormuz and this great procurement of Russian energy, diesel prices for Americans and the world will be coming down.",
+   "litWords": [
+    "total control",
+    "Strait of Hormuz"
+   ],
+   "falsifiedIf": "H4a: Gulf → US crude edge (active layer §6) — stays 0 or returns under US terms by TF03 authoring",
+   "scoredBy": "TF03 — ruled, unauthored",
+   "observables": [
+    {
+     "id": "gulfShare",
+     "label": "Gulf share of US crude imports",
+     "nodes": [
+      "Gulf"
+     ],
+     "style": "dashed"
+    }
+   ],
+   "source": "Press · Breaking Points 2026-10-12 (cut: Parameters/09_Parallelograms/Press/2026-10-12_BP_Diesel_Deal/cut.md)",
+   "status": "claude-draft",
+   "transform": null
   }
  ]
 }
