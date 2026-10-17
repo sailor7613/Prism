@@ -1,0 +1,15 @@
+# The code half of CHARTER.md. Runs on every push and PR; fails the build if
+# any charter invariant is broken. See scripts/charter-check.js.
+name: charter
+on:
+  push: {}
+  pull_request: {}
+  workflow_dispatch: {}
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - run: node scripts/charter-check.js

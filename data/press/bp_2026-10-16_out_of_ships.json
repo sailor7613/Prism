@@ -1,0 +1,329 @@
+{
+ "schema": "press/parallelogram/v0",
+ "id": "bp_2026-10-16_out_of_ships",
+ "status": "claude-draft",
+ "kind": "parallelogram",
+ "title": "Out of Ships",
+ "source": {
+  "program": "Breaking Points",
+  "network": "Breaking Points (YouTube)",
+  "format": "tape",
+  "date": "2026-10-16",
+  "title": "RUNNING OUT OF SHIPS As Iran Sinks Daily Vessels",
+  "url": "https://www.youtube.com/watch?v=QYmp2AcFMaQ",
+  "length": 763,
+  "segments": 106,
+  "transcript": "Parameters/03_Libraries/sources/BreakingPoints_2026-10-16_Running_Out_Of_Ships_transcript.md",
+  "note": "the Friday crew open (Krystal, Ryan Grim, Emily Jashinsky); the H6 segment is 6:03–8:43; the rest is slate and sorted"
+ },
+ "arc": "PG01",
+ "object": {
+  "label": "US control of the Strait of Hormuz (H6, proposed) — throughput as control",
+  "layer": 1,
+  "zAxis": {
+   "pos": "open under US control",
+   "neg": "not — passage priced by Iran, insurers, freight"
+  }
+ },
+ "transform": "inversion",
+ "transformNote": "'the strait is open' read through its loss rate — two of every ten ships hit, hulls that take months to repair. The count that asserts control becomes the count that falsifies it. Proposed value, second specimen (TC 09-23 was the first)",
+ "names": {
+  "KB": "Krystal Ball",
+  "RG": "Ryan Grim",
+  "EJ": "Emily Jashinsky",
+  "RJ": "Rory Johnston (oil analyst, reported by Grim)"
+ },
+ "trace": {
+  "object": {
+   "x": 0,
+   "y": 0,
+   "z": -0.55
+  },
+  "shadow": {
+   "x": 0,
+   "y": 0,
+   "z": 1.0
+  },
+  "shadowNote": "CENTCOM's 19M barrels (10-12): the Strait open by count",
+  "predicates": {
+   "operative": [
+    {
+     "type": "T",
+     "label": "≈950 VLCCs worldwide; a couple hit per day or several per week (Johnston, 10-15)",
+     "z": 0.85
+    },
+    {
+     "type": "M",
+     "label": "repair capacity: months per hull, and a queue (7:11)",
+     "z": 0.8
+    },
+    {
+     "type": "T",
+     "label": "China's import reduction masked the shortfall and is reversing; SPR all but drained; PPI hot (7:39)",
+     "z": 0.7
+    }
+   ],
+   "stated": [
+    {
+     "type": "F",
+     "label": "'run out of ships' · 'saved our asses' · 'not a pretty picture'",
+     "z": 0.3
+    }
+   ],
+   "challenge": [
+    {
+     "type": "X",
+     "label": "'if he means two out of every ten ships are getting hit, at some point they run out of ships' (6:57)",
+     "z": 0.9
+    }
+   ]
+  },
+  "positions": [
+   {
+    "quadrant": "C",
+    "station": "LP",
+    "fluid": "a fleet count, a loss rate, a repair queue, three buffers spent",
+    "denominated": "run out of ships · saved our asses · not a pretty picture",
+    "distinguishability": "High",
+    "fluidKeywords": [
+     "950 VLCC",
+     "two out of every 10",
+     "several month process",
+     "strategic petroleum reserves",
+     "wholesale prices"
+    ],
+    "denomKeywords": [
+     "run out of ships",
+     "saved our asses",
+     "not a pretty picture"
+    ],
+    "note": "the second LP reading on H6 (Krystal 10-15: −0.8, passage tolled). Grim adds two layers no reader had named — the fleet and the yards — and the figure holds at −0.55"
+   },
+   {
+    "quadrant": "D",
+    "station": "RP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "Jashinsky is in the room but speaks only on the slate (callers who want Trump 'to feel some pain'; the Obama–Trump voters) — declared empty on H6, by record"
+   },
+   {
+    "quadrant": "A",
+    "station": "LI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — compare nyt_2026-10-15_gulf_oil_flowing_lede (+0.1, beta)"
+   },
+   {
+    "quadrant": "B",
+    "station": "RI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — the Close 10-16 reads the barrel's price, not the Strait"
+   }
+  ]
+ },
+ "log": [
+  {
+   "date": "2026-10-16",
+   "what": "same-day cut of the Friday open (12:43; 106 cues). Eight lines on H6, all LP; the slate lines sorted, not scored. Reductions filed; one quotation under fifteen words",
+   "by": "Claude"
+  }
+ ],
+ "scoreboard": {
+  "dia": 18,
+  "tier": "fluid",
+  "declaredZ": null,
+  "readZ": -0.55,
+  "readZRange": [
+   -0.3,
+   -0.8
+  ],
+  "stations": {
+   "LI": null,
+   "RI": null,
+   "LP": {
+    "dia": 18,
+    "spread": [
+     10,
+     24
+    ],
+    "readZ": -0.55,
+    "voices": {
+     "KB": {
+      "dia": 20,
+      "readZ": -0.47,
+      "n": 3
+     },
+     "RG": {
+      "dia": 17,
+      "readZ": -0.6,
+      "n": 5
+     }
+    }
+   },
+   "RP": null
+  },
+  "split": {
+   "topology": "none",
+   "station": "LP",
+   "strength": 0.0,
+   "note": "one station, two voices, one sign (−0.3 → −0.8). Grim carries the record (10–22), Krystal the frames (16–24); RP is in the room and silent on the object"
+  },
+  "lumens": 82,
+  "zRule": "every line carries a z, inferred where implied (Sailor 2026-10-13); inferred lines are marked zInferred with a zWhy",
+  "mode": "open"
+ },
+ "lines": [
+  {
+   "t": 363,
+   "who": "RG",
+   "station": "LP",
+   "quote": "Rory Johnston, yesterday: about 950 VLCC tankers in the world — just under a thousand — and a couple are getting hit every day, or several a week, depending on the volume of Iran's attacks",
+   "touch": "T",
+   "z": -0.6,
+   "dia": 10,
+   "mode": "open",
+   "note": "THE FLEET COUNT: a new denominator for H6 — not barrels through, but hulls left",
+   "chapter": "The fleet",
+   "normX": 0.437,
+   "normY": 0.5684,
+   "normZ": -0.45,
+   "quadrant": "C",
+   "zInferred": true,
+   "zWhy": "a fleet losing hulls daily is not a controlled strait"
+  },
+  {
+   "t": 371,
+   "who": "RG",
+   "station": "LP",
+   "quote": "what we've learned through this conflict is that the physical reality matters — the number of refineries, the pipelines, the straits we move refined products through",
+   "touch": "M",
+   "z": -0.3,
+   "dia": 18,
+   "mode": "open",
+   "note": "the mechanism stated as a lesson: the object is physical — Prism's own grammar in LP register",
+   "chapter": "The fleet",
+   "normX": 0.4306,
+   "normY": 0.602,
+   "normZ": -0.225,
+   "quadrant": "C",
+   "zInferred": true,
+   "zWhy": "physical constraint reads against a count-based 'open'"
+  },
+  {
+   "t": 417,
+   "who": "RG",
+   "station": "LP",
+   "quote": "when Trump says the strait is open — if he means two out of every ten ships going through are getting hit, then at some point they're going to run out of ships",
+   "touch": "X",
+   "z": -0.8,
+   "dia": 20,
+   "mode": "open",
+   "note": "THE CHALLENGE: H6's Z-assertion ('open', 19M barrels) read against its own loss rate — the line the cut exists for",
+   "chapter": "The fleet",
+   "normX": 0.3973,
+   "normY": 0.5813,
+   "normZ": -0.6,
+   "quadrant": "C"
+  },
+  {
+   "t": 431,
+   "who": "RG",
+   "station": "LP",
+   "quote": "they're running out of capacity to repair them — a blown engine room is normally a several-month process, and now you're in line behind all the other tankers with holes",
+   "touch": "M",
+   "z": -0.6,
+   "dia": 14,
+   "mode": "open",
+   "note": "THE SECOND CONSTRAINT: yard capacity — a layer no reader had named",
+   "chapter": "The fleet",
+   "normX": 0.4115,
+   "normY": 0.5623,
+   "normZ": -0.45,
+   "quadrant": "C",
+   "zInferred": true,
+   "zWhy": "repair queues mean each hit removes a hull for months"
+  },
+  {
+   "t": 447,
+   "who": "RG",
+   "station": "LP",
+   "quote": "this isn't something where you can just keep having the Coast Guard or the US Navy send ships through and lose a couple a day",
+   "touch": "M",
+   "z": -0.7,
+   "dia": 22,
+   "mode": "open",
+   "note": "escort as an attrition problem, not a control problem",
+   "chapter": "The fleet",
+   "normX": 0.4147,
+   "normY": 0.6093,
+   "normZ": -0.525,
+   "quadrant": "C",
+   "zInferred": true,
+   "zWhy": "the convoy loses what it escorts"
+  },
+  {
+   "t": 459,
+   "who": "KB",
+   "station": "LP",
+   "quote": "China basically saved us over the past several months by surprisingly and dramatically reducing its imports — and that is changing; the strategic reserves are all but drained; a hot PPI — wholesale prices to be passed to consumers",
+   "touch": "T",
+   "z": -0.5,
+   "dia": 16,
+   "mode": "open",
+   "note": "three records in one breath: China's import drop (the flow layer), the SPR, the PPI",
+   "chapter": "The record",
+   "normX": 0.4298,
+   "normY": 0.5921,
+   "normZ": -0.375,
+   "quadrant": "C",
+   "zInferred": true,
+   "zWhy": "the buffers that masked the shortfall are spent"
+  },
+  {
+   "t": 492,
+   "who": "KB",
+   "station": "LP",
+   "quote": "you'd be hard-pressed to find a better predictor of Trump's political fortunes than the gas prices",
+   "touch": "M",
+   "z": -0.3,
+   "dia": 20,
+   "mode": "open",
+   "note": "THE CROSS-ARC PREDICATE, third sighting (Krystal 10-15 '1:1'; Kitroeff 10-14 'could'): now 'the best predictor'",
+   "chapter": "The record",
+   "normX": 0.3948,
+   "normY": 0.578,
+   "normZ": -0.225,
+   "quadrant": "C",
+   "zInferred": true,
+   "zWhy": "the pump as the slate's instrument — not on H6's axis, scored lightly"
+  },
+  {
+   "t": 508,
+   "who": "KB",
+   "station": "LP",
+   "quote": "between the Houthi escalation and Iran clamping down on the Strait of Hormuz after the UN General Assembly, it is not a pretty picture",
+   "touch": "T",
+   "z": -0.6,
+   "dia": 24,
+   "mode": "open",
+   "note": "the two chokepoints named and dated (post-UNGA)",
+   "chapter": "The record",
+   "normX": 0.4129,
+   "normY": 0.6174,
+   "normZ": -0.45,
+   "quadrant": "C",
+   "zInferred": true,
+   "zWhy": "two chokepoints under pressure is the opposite of control"
+  }
+ ]
+}

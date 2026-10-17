@@ -1,0 +1,445 @@
+{
+ "schema": "press/parallelogram/v0",
+ "id": "close_2026-10-16",
+ "status": "claude-draft",
+ "kind": "baseline",
+ "title": "The Crunch, Sapping",
+ "source": {
+  "program": "The Close",
+  "network": "Bloomberg Television",
+  "format": "tape",
+  "date": "2026-10-16",
+  "title": "AI Selloff, Oil & Treasury Yields Pressure Markets",
+  "url": "https://www.youtube.com/watch?v=vgyc2Au0dbA",
+  "length": 5392,
+  "segments": 649,
+  "transcript": "Parameters/03_Libraries/sources/TheClose_2026-10-16_transcript.md",
+  "hosts": "Romaine Bostick, Kristine Aquino · Closing Bell simulcast with Carol Massar, Tim Stenovec"
+ },
+ "arc": "PG01",
+ "object": {
+  "label": "the refined-products crunch (PG01 layer 1)",
+  "layer": 1,
+  "zAxis": {
+   "pos": "bites",
+   "neg": "passes through"
+  }
+ },
+ "transform": "baseline",
+ "transformNote": "the floor: the trade's own reading of the object, scored so every parallelogram can be read against it. No split is possible on one station; the figure is a point on the RI axis",
+ "names": {
+  "RB": "Romaine Bostick (host)",
+  "KA": "Kristine Aquino (host)",
+  "CM": "Carol Massar (Closing Bell)",
+  "TK": "Thomas Hoenig (former KC Fed president, guest)",
+  "TF": "Tom Forte (Maxim Group, guest)"
+ },
+ "trace": {
+  "object": {
+   "x": 0,
+   "y": 0,
+   "z": 0.1
+  },
+  "shadow": {
+   "x": 0,
+   "y": 0,
+   "z": 0.0
+  },
+  "shadowNote": "a baseline has no principal in the room — the shadow is zero by construction (the graphmap's loadTrace needs one)",
+  "predicates": {
+   "operative": [
+    {
+     "type": "T",
+     "label": "CPI rising at the fastest rate since April (12:18)",
+     "z": 0.2
+    },
+    {
+     "type": "T",
+     "label": "gasoline prices continue to sap consumer spending; restaurants the bright spot (56:17)",
+     "z": 0.5
+    },
+    {
+     "type": "T",
+     "label": "Exxon refining earnings ≈$7.8B in Q3, offset by lower oil; +50% YTD (48:02)",
+     "z": -0.5
+    },
+    {
+     "type": "M",
+     "label": "energy still very expensive, with secondary effects in core (Hoenig, 15:25)",
+     "z": 0.6
+    }
+   ],
+   "stated": [
+    {
+     "type": "F",
+     "label": "'never short of oil' · 'sap' · 'topsy-turvy'",
+     "z": 0.0
+    }
+   ],
+   "challenge": [
+    {
+     "type": "X",
+     "label": "the deal's first RI touch: a midday oil spike on a potential congressional block of 'what President Trump saw as a remedy' (44:45) — attributed, not read",
+     "z": 0.4
+    }
+   ]
+  },
+  "positions": [
+   {
+    "quadrant": "B",
+    "station": "RI",
+    "fluid": "Brent and WTI +3.5%; CPI fastest since April; $7.8B refining; retail sales sapped by gasoline",
+    "denominated": "never short of oil · sap · topsy-turvy",
+    "distinguishability": "High",
+    "fluidKeywords": [
+     "3.5 percent",
+     "$110 a barrel",
+     "fastest rate since April",
+     "$7.8 billion",
+     "sap consumer spending",
+     "3.5%"
+    ],
+    "denomKeywords": [
+     "never short of oil",
+     "sap",
+     "topsy-turvy"
+    ],
+    "note": "the floor's second point. Yesterday the Close passed the crunch through at −0.44; today it reads the bite three times on the record and lands near zero. The deal is mentioned once, as the President's remedy under threat of a block"
+   },
+   {
+    "quadrant": "A",
+    "station": "LI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "not a reading — the floor"
+   },
+   {
+    "quadrant": "C",
+    "station": "LP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "not a reading — the floor"
+   },
+   {
+    "quadrant": "D",
+    "station": "RP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "not a reading — the floor"
+   }
+  ]
+ },
+ "log": [
+  {
+   "date": "2026-10-16",
+   "what": "second Close cut, same evening (the full show posted ≈8pm ET). YouTube's transcript panel moved again: 'Show transcript' sits below the description; segments are transcript-segment-view-model with a .ytwTranscriptSegmentViewModelTimestamp child. Thirteen register-touching lines cut; 636 cues kept",
+   "by": "Claude"
+  }
+ ],
+ "scoreboard": {
+  "dia": 11,
+  "tier": "fluid",
+  "declaredZ": null,
+  "readZ": 0.12,
+  "readZRange": [
+   0.6,
+   -0.5
+  ],
+  "stations": {
+   "LI": null,
+   "RI": {
+    "dia": 11,
+    "spread": [
+     6,
+     16
+    ],
+    "readZ": 0.12,
+    "voices": {
+     "CM": {
+      "dia": 8,
+      "readZ": -0.5,
+      "n": 1
+     },
+     "KA": {
+      "dia": 11,
+      "readZ": 0.0,
+      "n": 2
+     },
+     "RB": {
+      "dia": 10,
+      "readZ": 0.11,
+      "n": 7
+     },
+     "TF": {
+      "dia": 16,
+      "readZ": 0.3,
+      "n": 1
+     },
+     "TK": {
+      "dia": 11,
+      "readZ": 0.45,
+      "n": 2
+     }
+    }
+   },
+   "LP": null,
+   "RP": null
+  },
+  "split": {
+   "topology": "none",
+   "station": "RI",
+   "strength": 0.0,
+   "note": "one station. The spread is 6→16: the trade lines (6–10) and the Fed guest (10–12) at the floor, one frame at 16"
+  },
+  "lumens": 83,
+  "zRule": "every line carries a z, inferred where implied (Sailor 2026-10-13); inferred lines are marked zInferred with a zWhy",
+  "mode": "aligned",
+  "baseline": true,
+  "baselineNote": "The Close, 10-16: the RI floor's second Close point. Rule (1): only register-touching segments scored; the rest of the tape (AI selloff, Apple, data centers, Netflix, TGI Fridays, Graza, Rubenstein) kept for the objects pass. Read as aligned — the object is reported from the trade's side — but today the bite entered the record three times (CPI, 'sap', the refiner's quarter)."
+ },
+ "lines": [
+  {
+   "t": 51,
+   "who": "RB",
+   "station": "RI",
+   "quote": "the big story today is oil up once again — Brent and WTI both up more than 3.5%; never short of oil heading into the weekend",
+   "touch": "T",
+   "z": -0.2,
+   "dia": 10,
+   "mode": "aligned",
+   "note": "the crunch opens the show as a trade, not a bill — the weekend as the risk",
+   "chapter": "The open",
+   "normX": 0.5549,
+   "normY": 0.4249,
+   "normZ": -0.15,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "oil as a position to hold: priced, not felt"
+  },
+  {
+   "t": 738,
+   "who": "RB",
+   "station": "RI",
+   "quote": "several hot inflation reports this week, including a CPI rising at the fastest rate since April",
+   "touch": "T",
+   "z": 0.2,
+   "dia": 8,
+   "mode": "aligned",
+   "note": "the record of the pass-through, dated to the week",
+   "chapter": "Warsh",
+   "normX": 0.567,
+   "normY": 0.447,
+   "normZ": 0.15,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "CPI rising reads the crunch as arriving in prices"
+  },
+  {
+   "t": 911,
+   "who": "TK",
+   "station": "RI",
+   "quote": "inflation above 3.5% — and I think it will get higher through the course of the year",
+   "touch": "M",
+   "z": 0.3,
+   "dia": 12,
+   "mode": "aligned",
+   "note": "the former KC Fed president's path: higher",
+   "chapter": "Warsh",
+   "normX": 0.5793,
+   "normY": 0.438,
+   "normZ": 0.225,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "higher inflation ahead is the bite, forecast"
+  },
+  {
+   "t": 925,
+   "who": "TK",
+   "station": "RI",
+   "quote": "the economy runs on energy and energy is still very expensive; it has secondary effects — we see it in the core numbers",
+   "touch": "M",
+   "z": 0.6,
+   "dia": 10,
+   "mode": "aligned",
+   "note": "THE RI MECHANISM LINE: energy → core — the crunch as the driver of the Fed's problem, stated plainly",
+   "chapter": "Warsh",
+   "normX": 0.5764,
+   "normY": 0.4469,
+   "normZ": 0.45,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "energy expensive with secondary effects is the bite in the institution's own grammar"
+  },
+  {
+   "t": 1223,
+   "who": "TF",
+   "station": "RI",
+   "quote": "I won't say consumers are completely insensitive to price — I do worry about the $100 barrel of oil and inflation",
+   "touch": "F",
+   "z": 0.3,
+   "dia": 16,
+   "mode": "aligned",
+   "note": "a frame inside an Apple segment: the barrel as the thing that could break pricing power",
+   "chapter": "Apple",
+   "normX": 0.5656,
+   "normY": 0.4046,
+   "normZ": 0.225,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "worry about the barrel reads bite, softly"
+  },
+  {
+   "t": 2192,
+   "who": "KA",
+   "station": "RI",
+   "quote": "WTI and Brent heading into the weekend up about 3.5% — 'never short oil', the mantra that reigns into the weekend",
+   "touch": "T",
+   "z": -0.3,
+   "dia": 8,
+   "mode": "aligned",
+   "note": "the trade restated at the close",
+   "chapter": "Into the close",
+   "normX": 0.5617,
+   "normY": 0.4409,
+   "normZ": -0.225,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a mantra is a position; the barrel absorbed into the book"
+  },
+  {
+   "t": 2213,
+   "who": "RB",
+   "station": "RI",
+   "quote": "the gainers in the S&P 500: oil and gas stocks and defense contractors",
+   "touch": "T",
+   "z": -0.4,
+   "dia": 6,
+   "mode": "aligned",
+   "note": "the lowest-Dia line: the crunch as the day's winners",
+   "chapter": "Into the close",
+   "normX": 0.549,
+   "normY": 0.4396,
+   "normZ": -0.3,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "the bite lands as producer gain — passes through to the sector"
+  },
+  {
+   "t": 2321,
+   "who": "RB",
+   "station": "RI",
+   "quote": "is this the AI trade breaking, or is it because Brent is at $110 a barrel — are equity investors more worried about the macro and the geopolitical?",
+   "touch": "T",
+   "z": 0.1,
+   "dia": 14,
+   "mode": "aligned",
+   "note": "the question that puts the barrel beside the AI selloff",
+   "chapter": "JPMorgan",
+   "normX": 0.559,
+   "normY": 0.4093,
+   "normZ": 0.075,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a question, lightly on the bite side — the barrel as a cause of worry"
+  },
+  {
+   "t": 2668,
+   "who": "KA",
+   "station": "RI",
+   "quote": "consumer sentiment — the concern over the increase in oil prices, heading into a weekend; who knows what the weekend brings geopolitically",
+   "touch": "M",
+   "z": 0.3,
+   "dia": 14,
+   "mode": "aligned",
+   "note": "sentiment named as the channel",
+   "chapter": "Closing Bell",
+   "normX": 0.563,
+   "normY": 0.412,
+   "normZ": 0.225,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "sentiment hit by the barrel: bite, by report"
+  },
+  {
+   "t": 2685,
+   "who": "RB",
+   "station": "RI",
+   "quote": "a big spike midday in oil futures on concerns about re-escalation of strikes on energy assets by Ukraine and a potential block by Congress of what President Trump saw as a remedy — the release of Russian diesel",
+   "touch": "T",
+   "z": 0.4,
+   "dia": 10,
+   "mode": "aligned",
+   "note": "THE DEAL FROM RI, FIRST TOUCH: one clause, attributed ('what the President saw as a remedy'), with the senators' block as the risk and H2's strikes as the driver — the Close reports the deal's weather, never its delivery",
+   "chapter": "Closing Bell",
+   "normX": 0.5653,
+   "normY": 0.4338,
+   "normZ": 0.3,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "the spike is the bite; the deal enters as a remedy at risk, not as a cargo"
+  },
+  {
+   "t": 2882,
+   "who": "CM",
+   "station": "RI",
+   "quote": "Exxon's preliminary earnings: refining earnings expected around $7.8 billion in the third quarter, offset by lower oil prices and a hit from timing effects on derivatives linked to cargoes; up 50% year to date",
+   "touch": "T",
+   "z": -0.5,
+   "dia": 8,
+   "mode": "aligned",
+   "note": "THE REFINER'S QUARTER: the crunch priced into a refining margin — the processing layer the TC cut flagged, now with a number",
+   "chapter": "Closing Bell",
+   "normX": 0.5589,
+   "normY": 0.4382,
+   "normZ": -0.375,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a $7.8B refining quarter is the bite passed to the processor"
+  },
+  {
+   "t": 3377,
+   "who": "RB",
+   "station": "RI",
+   "quote": "retail sales this week showed gasoline prices continue to sap consumer spending; the one bright spot was restaurants and bars — the second-strongest growth in a year and a half",
+   "touch": "T",
+   "z": 0.5,
+   "dia": 10,
+   "mode": "aligned",
+   "note": "THE RECORD OF THE BITE: 'sap' is the Close's own verb for it, on the record",
+   "chapter": "Restaurants",
+   "normX": 0.5668,
+   "normY": 0.4353,
+   "normZ": 0.375,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "gasoline sapping spending is the bite, in the data"
+  },
+  {
+   "t": 3421,
+   "who": "RB",
+   "station": "RI",
+   "quote": "the Restaurant Association expects price inflation; more diners are demanding value",
+   "touch": "T",
+   "z": 0.2,
+   "dia": 12,
+   "mode": "aligned",
+   "note": "the pass-through to the menu",
+   "chapter": "Restaurants",
+   "normX": 0.5583,
+   "normY": 0.418,
+   "normZ": 0.15,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "inflation expected at the menu — bite, downstream"
+  }
+ ]
+}

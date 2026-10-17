@@ -168,6 +168,7 @@
   .sec::after { content: ''; height: 1px; background: linear-gradient(90deg, rgba(233,236,242,.42), rgba(233,236,242,.08) 60%, transparent); margin-top: 6px; }
   .sec .orn { display: inline-block; width: 10px; height: 10px; border: 1px solid rgba(233,236,242,.5); transform: rotate(45deg); margin-right: 8px; vertical-align: 1px; }
   .sec.first { margin-top: 6px; }
+  .roster .sec, .media .sec { grid-column: 1 / -1; }
   /* ── the media we track: one tile per publication, refreshed by every sweep */
   .media { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
   .media .ch { grid-column: 1 / -1; display: flex; align-items: baseline; gap: 10px; font-family: var(--mono); font-size: 9.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-low); margin: 8px 0 -2px; }
@@ -767,22 +768,37 @@
 
   // ── SST: the reading on the glass ──
   async function loadSST() {
-    const el = $('#sst');
+    const el = $('#sst'); const esc = x => String(x == null ? '' : x).replace(/</g, '&lt;');
     let A = null; try { A = await fetch('../data/active/active.json', { cache: 'no-store' }).then(r => r.json()); } catch (e) {}
     const villa = location.hostname.endsWith('github.io') ? '/dreamgetty/' : '../../DreamGetty/dreamgetty/index.html';
-    const frame = A && A.frame ? A.frame : null;
-    const months = A && A.realization && A.realization.months ? A.realization.months : null;
+    const last = pts => (pts && pts.length) ? pts[pts.length - 1] : null;
+    const ser = (blk, key) => { try { return last(blk.series[key].points); } catch (e) { return null; } };
+    const brent = A ? ser(A.price, 'RBRTE') : null, wti = A ? ser(A.price, 'RWTC') : null, diesel = A ? ser(A.price, 'EMM_EPMR_PTE_NUS_DPG') : null;
+    const imp = A ? ser(A.realization.weekly, 'WCRIMUS2') : null, exp = A ? ser(A.realization.weekly, 'WCREXUS2') : null;
+    const H = A && A.hypotheses ? A.hypotheses.rows || [] : []; const pending = H.filter(h => /pending/.test(h.outcome || '')).length;
+    const share = A && A.realization && A.realization.share != null ? Math.round(A.realization.share * 100) + '%' : null;
+    const bn = (glyph, v, l, gloss, cls) => `<div class="bn ${cls || ''}">${gl(glyph)}<div class="v">${v == null ? '—' : v}</div><div class="l">${l}${gloss ? `<i>${gloss}</i>` : ''}</div></div>`;
     el.innerHTML = `
+      <div class="sec first"><div class="eb">the determination</div><h2><span class="orn"></span>Is the dollar getting stronger or weaker?</h2><div class="gloss">One number: the share of traded energy settled in dollars, with its denominator. Flows do not score z — they are the layer z is scored from. Until the pipeline writes the share, the board shows the record it will be computed from.</div></div>
       <div class="reading">
-        <div class="big"><span class="film loop" id="sstShare">${A && A.realization && A.realization.share != null ? Math.round(A.realization.share * 100) + '%' : '—'}</span><small>sold in dollars</small></div>
+        <div class="big"><span class="film loop" id="sstShare">${share || '—'}</span><small>sold in dollars</small></div>
         <div>
-          <div class="verdict">${A && A.realization && A.realization.verdict ? A.realization.verdict : 'the pipeline writes the share'}</div>
-          <p style="color:var(--ink-mid);font-size:14px;margin:8px 0 10px">${frame && frame.object ? frame.object : 'PG01 — the petrogas-dollar. The share of traded energy settled in dollars, read over a panel of stations that report every month.'}</p>
+          <div class="verdict">${A && A.realization && A.realization.verdict ? esc(A.realization.verdict) : 'the pipeline writes the share'}</div>
+          <p style="color:var(--ink-mid);font-size:14px;margin:8px 0 10px">${A && A.frame && A.frame.object ? esc(A.frame.object) : 'PG01 — the petrogas-dollar. The share of traded energy settled in dollars, read over a panel of stations that report every month.'}</p>
           <div class="g4-tabs"><a class="g4-pill" href="${villa}">🌍 to the pedestal</a><a class="g4-pill quiet" href="#wire">the series</a></div>
         </div>
       </div>
-      <div class="g4-rule"></div>
-      <div class="g4-key">Built ${A && A.builtAt ? A.builtAt.slice(0, 10) : '—'} · ${A && A.errors && A.errors.length ? A.errors.length + ' pipeline errors' : 'pipeline clean'} · the determination's history belongs to scripts/active-layer.js (owed)</div>`;
+      <div class="piece"><div class="board" style="margin-top:10px">
+        ${bn('z', brent ? '$' + Math.round(brent[1]) : null, 'Brent', brent ? 'spot · ' + brent[0].slice(5) : 'no series')}
+        ${bn('z', wti ? '$' + Math.round(wti[1]) : null, 'WTI', wti ? 'spot · ' + wti[0].slice(5) : 'no series')}
+        ${bn('dia', diesel ? '$' + Number(diesel[1]).toFixed(2) : null, 'US retail gasoline', diesel ? 'regular · EIA · ' + diesel[0].slice(5) : 'no series')}
+        ${bn('T', imp ? Math.round(imp[1] / 1000 * 10) / 10 + '<small>M</small>' : null, 'crude imports', imp ? 'bbl/d · week of ' + imp[0].slice(5) : 'no series')}
+        ${bn('T', exp ? Math.round(exp[1] / 1000 * 10) / 10 + '<small>M</small>' : null, 'crude exports', exp ? 'bbl/d · week of ' + exp[0].slice(5) : 'no series')}
+        ${bn('obj', H.length ? `${pending}<small>/ ${H.length}</small>` : null, 'hypotheses', 'pending on the arc')}
+      </div></div>
+      <div class="sec"><div class="eb">the arc’s bets</div><h2><span class="orn"></span>What PG01 says will happen</h2><div class="gloss">Each hypothesis carries a z target and what would falsify it. The record scores them; the Press only files the record.</div></div>
+      <div class="pub"><div class="rows">${H.map(h => `<div class="row"><div class="d">${esc(h.id)}${h.window ? '<br>' + esc((h.window.start || '').slice(5)) + ' → ' + esc((h.window.end || '').slice(5)) : ''}</div><div class="t">${esc(h.short || h.stated || '')}<small>${esc(h.who || '')}</small></div><div class="s">z target <b>${zs(h.zTarget)}</b> · <b>${esc(h.outcome || '')}</b></div>${h.falsifiedIf ? `<div class="m">falsified if: ${esc(h.falsifiedIf)}</div>` : ''}</div>`).join('') || '<div class="empty">No hypotheses on the arc.</div>'}</div></div>
+      <div class="g4-key" style="margin-top:12px">Built ${A && A.builtAt ? A.builtAt.slice(0, 10) : '—'} · ${A && A.errors && A.errors.length ? A.errors.length + ' pipeline errors' : 'pipeline clean'} · the determination’s history belongs to scripts/active-layer.js (owed)</div>`;
   }
 
   // ── WIRE: the record ──
@@ -813,7 +829,7 @@
 
   // ── the roster: the stated list, by corner, with what has been read this week ──
   async function loadRoster() {
-    const el = $('#roster'); let R; try { R = await fetch('../data/press/roster.json', { cache: 'no-store' }).then(r => r.json()); } catch (e) { el.innerHTML = '<div class="empty">No roster on disk.</div>'; return; }
+    const el = $('#roster'); await mediaData(); let R = MEDIA.roster; if (!R || !R.sources) { el.innerHTML = '<div class="empty">No roster on disk.</div>'; return; }
     const today = paperIndex.length ? paperIndex.map(p => p.date).sort().pop() : new Date().toISOString().slice(0, 10);
     const d0 = new Date(today + 'T00:00:00Z'), day = 864e5;
     const norm = x => (x || '').toLowerCase().replace(/\s*\(.*?\)\s*/g, '').trim();
@@ -827,12 +843,13 @@
       return `<div class="corner${thin ? ' thin' : ''}"><div class="h"><span><b class="${k}c">${k}</b> · ${label}</span><small>${ruled.length} ruled · ${list.length - ruled.length} proposed · ${readWeek} read this week</small></div>
         ${list.map(s => { const c = lastCutFor(s); const age = c ? Math.round((d0 - new Date(c + 'T00:00:00Z')) / day) : null;
           const st = s.status !== 'ruled' ? ['proposed', 'proposed'] : c == null ? ['never', 'not yet cut'] : age <= 7 ? ['read', `cut ${c}`] : ['stale', `last ${c}`];
-          return `<div class="src"><div class="n">${s.name}${s.role === 'baseline' ? '<small>BASELINE</small>' : ''}${s.horizon && s.horizon !== 'US' && s.horizon !== '—' ? `<small>${s.horizon}</small>` : ''}</div><div class="st ${st[0]}">${st[1]}</div><div class="m">${s.cadence} · ${s.route}${s.notes ? ' · ' + s.notes : ''}</div></div>`; }).join('')}
+          const pm = pubModel(s); const nums = pm.lum != null ? ` · ☼ <b style="color:var(--ink)">${pm.lum}</b> · Dia <b style="color:var(--ink)">${pm.dia}</b>${pm.z != null ? ` · z <b style="color:var(--ink)">${zs(pm.z)}</b>` : ''}${pm.betaOnly ? ' β' : ''}` : '';
+          return `<div class="src"><div class="n"><a href="#pub/${s.id}" style="text-decoration:none">${s.name}</a>${s.role === 'baseline' ? '<small>BASELINE</small>' : ''}${s.horizon && s.horizon !== 'US' && s.horizon !== '—' ? `<small>${s.horizon}</small>` : ''}</div><div class="st ${st[0]}">${st[1]}</div><div class="m">${s.cadence} · ${s.route}${nums}</div></div>`; }).join('')}
       </div>`; }).join('');
     let IDX = null; try { IDX = await fetch('../data/press/indices.json', { cache: 'no-store' }).then(r => r.json()); } catch (e) {}
     const idxHtml = IDX && IDX.indices ? IDX.indices.map(x => `<div class="corner" style="grid-column:1/-1;border-left:2px solid #e8d9a8"><div class="h"><span><b>${x.name}</b> · index v${x.version} · ${x.status}</span><small>${x.cadence} · object: ${x.object}</small></div>${x.members.map(m => `<div class="src"><div class="n">${m.source}<small>${m.corner}</small></div><div class="st ${m.status && m.status.startsWith('ruled') ? 'read' : 'proposed'}">${m.status}</div><div class="m">${m.route}${m.stationRuling ? ' · ruling: ' + m.stationRuling : ''}${m.access ? ' · ' + m.access : ''}</div></div>`).join('')}<div class="src"><div class="n">floor</div><div class="st read">separate</div><div class="m">${x.floorMember} — the floor is vertical (everyone against the terminal), the index is horizontal (the four corners against each other)</div></div></div>`).join('') : '';
     const wire = R.sources.filter(s => s.station === 'wire');
-    el.innerHTML = html + idxHtml + (wire.length ? `<div class="corner" style="grid-column:1/-1"><div class="h"><span><b>the wire</b> · the record's register</span><small>never a station reading</small></div>${wire.map(s => `<div class="src"><div class="n">${s.name}</div><div class="st read">continuous</div><div class="m">${s.notes}</div></div>`).join('')}</div>` : '');
+    el.innerHTML = `<div class="sec first"><div class="eb">the roster</div><h2><span class="orn"></span>Four corners, three voices each</h2><div class="gloss">A corner is an interval: three or more ruled voices per quadrant, so a station’s spread can be seen. Thin corners are outlined. Each voice carries its Lumens, Dia and z from its cuts; open one for everything we have on it.</div></div>` + html + `<div class="sec"><div class="eb">the indices</div><h2><span class="orn"></span>Fixed baskets, swept daily</h2><div class="gloss">An index reads one object through the same four publications every day; the composite per corner is the day’s value. Beta ledes never enter it.</div></div>` + idxHtml + (wire.length ? `<div class="corner" style="grid-column:1/-1"><div class="h"><span><b>the wire</b> · the record's register</span><small>never a station reading</small></div>${wire.map(s => `<div class="src"><div class="n">${s.name}</div><div class="st read">continuous</div><div class="m">${s.notes}</div></div>`).join('')}</div>` : '');
   }
 
 
