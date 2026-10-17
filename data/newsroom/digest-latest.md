@@ -1,9 +1,9 @@
-# Newsroom digest — 2026-10-15
+# Newsroom digest — 2026-10-17
 
-Register: 75 objects · this scan: 0 new, 0 seen again, 0 returned.
+Register: 80 objects · this scan: 1 new, 0 seen again, 0 returned.
 
-## Queued for drafting (0)
-- (nothing cleared the bar)
+## Queued for drafting (1)
+- **Judge dismisses child sex abuse charges against actor Timothy Busfield** — ruling · ruled · holder: a federal court · formed 2026-10-17 · 7 outlets (peak 7) · `obj_afederal_abuse-actor-against-busfield`
 
 ## Permanence breaks (went silent while unresolved)
 - none today
@@ -12,7 +12,7 @@ Register: 75 objects · this scan: 0 new, 0 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- none
+- **Judge dismisses child sex abuse charges against actor Timothy Busfield** — ruling · ruled · holder: a federal court · formed 2026-10-17 · 7 outlets (peak 7) · `obj_afederal_abuse-actor-against-busfield`
 
 ## Watching (28)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
