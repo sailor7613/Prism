@@ -130,6 +130,8 @@
     #prog { top: calc(var(--bar-h-phone) + var(--sat)); height: calc(100% - var(--bar-h-phone) - var(--sat)); }
     #desk { top: calc(var(--bar-h-phone) + var(--sat)); }
   }
+  /* the phone already shows its own clock above the bar when installed — one clock, not two (10-17) */
+  @media (display-mode: standalone) and (max-width: 480px) { #clock { display: none; } }
 </style>
 </head>
 <body>

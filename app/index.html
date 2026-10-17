@@ -151,19 +151,118 @@
   .trk .m .x { font-family: var(--mono); font-size: 9.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-low); }
   .trk .m .x:hover { color: var(--band-denominated); }
   @media (max-width: 760px) { .graph { grid-template-columns: 1fr; } }
+  /* explainers are tutorial copy (10-17) */
+  html:not(.tutorial) .tut { display: none !important; }
+
+  /* ── REFRACTION: your legislators (10-17) */
+  .vt { font-family: var(--serif); font-weight: 400; font-size: clamp(26px, 4vw, 36px); margin: 4px 0 0; }
+  .mlist { border-top: 1px solid var(--g4-rule); margin-bottom: 18px; }
+  .mrow { display: grid; grid-template-columns: 44px 1fr auto; gap: 12px; align-items: center; padding: 9px 4px; border-bottom: 1px solid var(--g4-rule-soft); text-decoration: none; color: inherit; }
+  .mrow:hover { background: rgba(233,236,242,.04); }
+  .mrow img { width: 44px; height: 54px; object-fit: cover; border-radius: 2px; background: rgba(233,236,242,.06); }
+  .mrow .nm b { font-weight: 400; font-size: 16px; display: block; } .mrow .nm small { font-family: var(--mono); font-size: 10px; color: var(--ink-low); }
+  .mrow .ag { font-family: var(--mono); font-size: 18px; min-width: 52px; text-align: right; color: var(--ink-low); }
+  .mrow .ag small { display: block; font-size: 8.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-low); }
+  .pos { color: #8fd0a0 !important; } .neg { color: #e9967f !important; } .mix { color: #d8d0b0 !important; }
+  .mrow .fb { font-family: var(--mono); font-size: 10px; letter-spacing: .1em; padding: 4px 10px; border: 1px solid var(--g4-rule); border-radius: 2px; color: var(--ink-mid); background: none; cursor: pointer; }
+  .mrow .fb.on { background: #e9ecf2; color: #0c0b09; border-color: #e9ecf2; }
+  .msearch { width: 100%; box-sizing: border-box; background: rgba(233,236,242,.05); border: 1px solid var(--g4-rule); color: var(--ink); font: 15px var(--serif); padding: 10px 12px; border-radius: 3px; margin: 8px 0 6px; }
+  .mhead { display: grid; grid-template-columns: 120px 1fr; gap: 18px; align-items: end; margin: 10px 0 18px; }
+  .mhead img { width: 120px; height: 148px; object-fit: cover; border-radius: 3px; }
+  .mhead h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(26px, 4vw, 38px); margin: 0 0 6px; line-height: 1.05; }
+  .mhead .who { font-family: var(--mono); font-size: 11px; color: var(--ink-mid); line-height: 1.6; }
+  .mgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px; }
+  .mcard { border: 1px solid var(--g4-rule); background: var(--g4-glass); border-radius: 4px; padding: 14px 16px; }
+  .mcard .k { font-family: var(--mono); font-size: 9.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-low); margin-bottom: 6px; }
+  .mcard .big { font-family: var(--serif); font-size: 46px; line-height: 1; }
+  .mcard p { margin: 6px 0 0; font-size: 14px; color: var(--ink-mid); line-height: 1.45; }
+  .mcard .ln { display: flex; justify-content: space-between; gap: 10px; padding: 6px 0; border-top: 1px solid var(--g4-rule-soft); font-size: 14px; }
+  .mcard .ln:first-of-type { border-top: 0; }
+  .mcard .ln b { font-family: var(--mono); font-weight: 400; }
+  .mmap { width: 100%; max-width: 300px; height: auto; display: block; margin: 4px auto 0; }
+  @media (max-width: 640px) { .mgrid { grid-template-columns: 1fr; } .mhead { grid-template-columns: 90px 1fr; } .mhead img { width: 90px; height: 112px; } }
+
+  /* ── YOU: profile, sign-in, notifications, your pins (10-17) */
+  .ycard { border: 1px solid var(--g4-rule); background: var(--g4-glass); border-radius: 4px; padding: 16px; margin-bottom: 14px; }
+  .ycard .k { font-family: var(--mono); font-size: 9.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-low); margin-bottom: 8px; }
+  .yid { display: grid; grid-template-columns: 56px 1fr auto; gap: 14px; align-items: center; }
+  .yav { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; font-family: var(--serif); font-size: 26px; background: linear-gradient(135deg, var(--film-0), var(--film-2), var(--film-4)); color: #0c0b09; }
+  .yid .nm { font-family: var(--serif); font-size: 22px; } .yid .hd { font-family: var(--mono); font-size: 11px; color: var(--ink-low); }
+  .yform { display: none; gap: 8px; flex-wrap: wrap; margin-top: 12px; } .yform.open { display: flex; }
+  .ycard input { flex: 1 1 160px; background: rgba(233,236,242,.05); border: 1px solid var(--g4-rule); color: var(--ink); font: 14px var(--serif); padding: 9px 11px; border-radius: 3px; min-width: 0; }
+  .ybtn { font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em; padding: 8px 14px; border: 1px solid var(--g4-rule); border-radius: 2px; background: none; color: var(--ink-mid); cursor: pointer; }
+  .ybtn.on, .ybtn.solid { background: #e9ecf2; color: #0c0b09; border-color: #e9ecf2; }
+  .ycard p { margin: 0 0 10px; font-size: 14.5px; line-height: 1.45; color: var(--ink-mid); }
+  .ycard .msg { font-family: var(--mono); font-size: 10.5px; color: var(--ink-low); margin-top: 8px; min-height: 1em; }
+  .ytabs { display: flex; gap: 6px; margin-bottom: 10px; }
+  .yrow { display: grid; grid-template-columns: 1fr auto; gap: 10px; padding: 9px 0; border-top: 1px solid var(--g4-rule-soft); text-decoration: none; color: inherit; font-size: 15px; }
+  .yrow small { display: block; font-family: var(--mono); font-size: 10px; color: var(--ink-low); margin-top: 2px; }
+  .yrow .sd { font-family: var(--mono); font-size: 10.5px; color: var(--ink-mid); text-align: right; }
+
+  /* ── BURNS: the newsroom's watch list as a film strip (10-17, from the classic flow; Burns spec v2 §2) */
+  .burns { position: relative; height: 104px; overflow: hidden; margin: 0 -16px 14px; background: #07090f; border-top: 1px solid var(--g4-rule); border-bottom: 1px solid var(--g4-rule); }
+  .burns::before, .burns::after { content: ''; position: absolute; left: 0; right: 0; height: 9px; z-index: 2; pointer-events: none; background: repeating-linear-gradient(90deg, transparent 0 9px, rgba(233,236,242,.16) 9px 17px, transparent 17px 26px); background-size: 26px 6px; background-repeat: repeat-x; background-position: 0 2px; }
+  .burns::before { top: 0; } .burns::after { bottom: 0; }
+  .burns .reel { display: flex; height: 100%; width: max-content; padding: 13px 0; box-sizing: border-box; animation: reel 160s linear infinite; }
+  .burns:hover .reel, .burns:active .reel { animation-play-state: paused; }
+  @keyframes reel { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) { .burns { overflow-x: auto; } .burns .reel { animation: none; } }
+  .burns .fr { flex: 0 0 auto; width: 190px; margin-right: 8px; padding: 7px 11px; box-sizing: border-box; border: 1px solid rgba(233,236,242,.1); border-radius: 2px; background: rgba(233,236,242,.03); display: grid; grid-template-rows: auto 1fr auto; text-decoration: none; color: inherit; cursor: pointer; }
+  .burns .fr .k { font-family: var(--mono); font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-low); display: flex; justify-content: space-between; gap: 6px; }
+  .burns .fr .k i { font-style: normal; white-space: nowrap; }
+  .burns .fr .h { font-size: 13.5px; line-height: 1.25; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; align-self: center; }
+  .burns .fr .d { font-family: var(--mono); font-size: 9.5px; color: var(--ink-low); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .burns .fr.exposed .k i { color: var(--band-fluid); } .burns .fr.burnt { border-color: rgba(212,170,82,.5); } .burns .fr.burnt .k i { color: var(--band-coalition); }
+  .burns .fr.dark { opacity: .5; } .burns .fr.flared { border-color: rgba(224,138,114,.45); } .burns .fr.flared .k i { color: var(--band-denominated); }
+  .osheet { position: fixed; inset: 0; z-index: 60; background: rgba(4,6,12,.6); display: grid; place-items: end center; }
+  .osheet[hidden] { display: none; }
+  .osheet .in { width: min(560px, 100%); max-height: 80vh; overflow: auto; background: #0e1424; border: 1px solid var(--g4-rule); border-radius: 8px 8px 0 0; padding: 18px 18px 28px; box-sizing: border-box; position: relative; }
+  .osheet .x { position: absolute; top: 12px; right: 14px; font-family: var(--mono); font-size: 10px; color: var(--ink-low); text-decoration: none; }
+  .osheet h3 { font-family: var(--serif); font-weight: 400; font-size: 22px; margin: 4px 0 8px; line-height: 1.2; }
+  .osheet .m { font-family: var(--mono); font-size: 10.5px; color: var(--ink-low); line-height: 1.7; }
+  .osheet a.lk { display: block; padding: 8px 0; border-top: 1px solid var(--g4-rule-soft); color: var(--ink); text-decoration: none; font-size: 14px; }
+  .osheet a.lk small { display: block; font-family: var(--mono); font-size: 10px; color: var(--ink-low); }
 </style>
 </head>
 <body>
 <div class="wrap view on" id="v-objects">
   <div class="mast">
     <canvas id="mark" aria-label="Prism"></canvas>
-    <div class="fn g4-tabs"><a class="g4-pill on" href="#beam" title="the object, before reading">BEAM</a><a class="g4-pill quiet" href="#prism" title="the Reading — set your aperture">PRISM</a><a class="g4-pill quiet" href="#refraction" title="what it splits into">REFRACTION</a></div>
+    <div class="fn g4-tabs"><a class="g4-pill on" href="#beam" title="the object, before reading">BEAM</a><a class="g4-pill quiet" href="#prism" title="the Reading — set your aperture">PRISM</a><a class="g4-pill quiet" href="#refraction" title="what it splits into">REFRACTION</a><a class="g4-pill quiet youpill" href="#you">YOU</a></div>
   </div>
-  <div class="dek">The objects standing — each a law, an order, a ruling, a thing with a date on it — and the discourse moving across them. Pick one; the Reading is what people said, placed against what the thing is.</div>
+  <div class="dek tut">The objects standing — each a law, an order, a ruling, a thing with a date on it — and the discourse moving across them. Pick one; the Reading is what people said, placed against what the thing is.</div>
+  <div class="sec" style="margin-top:6px"><span class="g4-key">burns · what the newsroom is watching</span><span class="g4-key" id="burnCount"></span></div>
+  <div class="burns" id="burns"><div class="reel" id="reel"></div></div>
   <a class="head" id="head" href="#"></a>
-  <div class="sec"><span class="g4-key">the standing objects · law first</span><span class="g4-key" id="count"></span></div>
+  <div class="sec"><span class="g4-key">everything on the table · laws first</span><span class="g4-key" id="count"></span></div>
   <div class="rows" id="rows"></div>
-  <div class="foot">Headline rule: the object that most recently changed state — a rule, not a hand. Object declarations marked by Claude await Sailor's ruling. <a href="#" id="classicLink" style="color:inherit">classic flow ↗</a></div>
+  <div class="foot tut">Headline rule: the object that most recently changed state — a rule, not a hand. Object declarations marked by Claude await Sailor's ruling. <a href="#" id="classicLink" style="color:inherit">classic flow ↗</a></div>
+</div>
+
+
+<div class="osheet" id="osheet" hidden><div class="in"><a href="#" class="x" id="oClose">close</a><div id="oBody"></div></div></div>
+
+<div class="wrap view" id="v-refr">
+  <div class="mast"><div><div class="g4-key">Prism</div><h1 class="vt">Your legislators</h1></div>
+    <div class="fn g4-tabs"><a class="g4-pill quiet" href="#">BEAM</a><a class="g4-pill quiet tab-prism" href="#">PRISM</a><a class="g4-pill on" href="#refraction">REFRACTION</a><a class="g4-pill quiet youpill" href="#you">YOU</a></div></div>
+  <div class="g4-key" id="refrNote" style="margin:4px 0 10px"></div>
+  <div class="mlist" id="refrList"></div>
+  <div class="sec"><span class="g4-key">find anyone in Congress</span><span class="g4-key" id="refrCount"></span></div>
+  <input class="msearch" id="refrQ" type="search" placeholder="a name or a state" autocomplete="off">
+  <div class="mlist" id="refrRes"></div>
+</div>
+
+<div class="wrap view" id="v-member">
+  <div class="mast"><div><a class="g4-key" href="#refraction" style="color:inherit;text-decoration:none">← your legislators</a></div>
+    <div class="fn g4-tabs"><a class="g4-pill quiet" href="#">BEAM</a><a class="g4-pill quiet tab-prism" href="#">PRISM</a><a class="g4-pill on" href="#refraction">REFRACTION</a><a class="g4-pill quiet youpill" href="#you">YOU</a></div></div>
+  <div id="mbody"></div>
+</div>
+
+
+<div class="wrap view" id="v-you">
+  <div class="mast"><div><div class="g4-key">Prism</div><h1 class="vt">You</h1></div>
+    <div class="fn g4-tabs"><a class="g4-pill quiet" href="#">BEAM</a><a class="g4-pill quiet tab-prism" href="#">PRISM</a><a class="g4-pill quiet" href="#refraction">REFRACTION</a><a class="g4-pill on youpill" href="#you">YOU</a></div></div>
+  <div id="youBody"></div>
 </div>
 
 <div class="wrap view" id="v-reading">
@@ -241,6 +340,7 @@
 <script src="../data/readings_seed.js"></script>
 <script src="../src/js/prismdb.js"></script>
 <script src="../src/js/prism-field.js"></script>
+<script src="../src/js/push-config.js" onerror="void 0"></script>
 <script src="../data/prism_members.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="../src/js/prism-graphmap.js?v=11"></script>
@@ -295,10 +395,10 @@
     const co = headline.centralObject || {};
     const h = $('#head'); h.href = open(headline);
     h.innerHTML = `<div class="tag">today’s object · ${co.kind || 'object'} · ${co.state || ''} ${fmt(co.stateDate || headline.date)}</div>
-      <div class="chip"><i></i><span class="k">the object</span><span>${co.ref || ''}</span></div>
+      <div class="chip"><i></i><span class="k">what it is</span><span>${co.ref || ''}</span></div>
       <div class="obj">${(co.name || headline.title).replace(/(\w+)$/, '<span class="film">$1</span>')}</div>
       <div class="rd">the Reading: <b>${headline.title}</b> — ${headline.category || ''}</div>
-      <div class="meta"><span>window closes <b>${fmt((headline.window || {}).close)}</b></span><span>split <b>${headline.split ? headline.split.topology + ' · ' + headline.split.strength : '—'}</b></span><span>axis <b>${headline.prevalentAxis || '—'}</b></span>${headline.status === 'draft' ? '<span>draft</span>' : ''}</div>
+      <div class="meta"><span>open until <b>${fmt((headline.window || {}).close)}</b></span>${headline.status === 'draft' ? '<span>draft</span>' : ''}</div>
       <span class="g4-pill go">read it →</span>`;
   }
   $('#count').textContent = `${sorted.length} standing`;
@@ -324,10 +424,10 @@
 
   function showReading(rid) {
     R = SEED.find(r => r.rid === rid); if (!R) { location.hash = ''; return; }
-    $('#v-objects').classList.remove('on'); $('#v-reading').classList.add('on');
+    showView('v-reading');
     const co = R.centralObject || {};
     $('#rdTag').textContent = `${co.kind || 'object'} · ${co.state || ''} ${fmt(co.stateDate || R.date)} · window closes ${fmt((R.window || {}).close)}${R.status === 'draft' ? ' · draft' : ''}`;
-    $('#rdChip').innerHTML = `<i></i><span class="k">the object</span><span>${co.name || ''}</span>`;
+    $('#rdChip').innerHTML = `<i></i><span class="k">what it is</span><span>${co.name || ''}</span>`;
     $('#rdTitle').textContent = R.title; $('#rdCat').textContent = R.category || '';
     $('#rdPrompt').textContent = R.prompt || '';
     $('#rdFraming').innerHTML = lit(R.framing || '', R.framingKeywords);
@@ -442,7 +542,7 @@
     // PrismDB: the same record the classic flow writes, so the Beam and the aggregate see it
     try { const ev = dbEvent(); if (ev) { const saved = PrismDB.saveResponse({ eventId: ev.id, finalQuadrant: q, initialChoice: pick ? pick.q : q, pin: { x: pin.x, y: pin.y }, band: b, apertureBand: b, z: row.z, dialect: '', diatribeScore: aperture, diatribeSliderPosition: aperture }); row.intensity = saved && saved.intensity; } } catch (err) { console.warn('[g4] saveResponse', err && err.message); }
     $('#commit').textContent = 'pinned ✓'; $('#commit').classList.add('film'); setTimeout(() => { $('#commit').textContent = 'commit the pin'; $('#commit').classList.remove('film'); }, 1600);
-    burn(row);
+    burn(row); try { paintBurns(); } catch (e) {}
   });
   // the seat sheet
   function openSeat() { $('#seat').classList.add('open'); $('#seatErr').textContent = ''; setTimeout(() => $('#seatPass').focus(), 50); }
@@ -529,11 +629,193 @@
   async function pullField() { try { await PrismField.pullField(R.rid); } catch (e) {} const n = fieldEntries(); $('#fieldNote').innerHTML = n.length ? `${n.length} in the field: ${n.slice(0, 6).map(en => PrismField.nameOf(en.author)).join(' · ')}${n.length > 6 ? ' …' : ''}` : 'nobody has pinned this Reading yet.'; drawGraph(); }
   seatNote();
 
+
+  // ── REFRACTION: your legislators (10-17 — the classic flow's Spectrum, Refraction, profile and alignment, in plain words) ──
+  // "Lines up with you" is the classic alignment index: −100..+100 per Reading you pinned, weighted to the Reading's
+  // main axis (0.7 / 0.3), crossing zero at 60 points apart (calibrated 07-13); the overall number is the mean.
+  const STATES = { AL:'Alabama',AK:'Alaska',AZ:'Arizona',AR:'Arkansas',CA:'California',CO:'Colorado',CT:'Connecticut',DE:'Delaware',FL:'Florida',GA:'Georgia',HI:'Hawaii',ID:'Idaho',IL:'Illinois',IN:'Indiana',IA:'Iowa',KS:'Kansas',KY:'Kentucky',LA:'Louisiana',ME:'Maine',MD:'Maryland',MA:'Massachusetts',MI:'Michigan',MN:'Minnesota',MS:'Mississippi',MO:'Missouri',MT:'Montana',NE:'Nebraska',NV:'Nevada',NH:'New Hampshire',NJ:'New Jersey',NM:'New Mexico',NY:'New York',NC:'North Carolina',ND:'North Dakota',OH:'Ohio',OK:'Oklahoma',OR:'Oregon',PA:'Pennsylvania',RI:'Rhode Island',SC:'South Carolina',SD:'South Dakota',TN:'Tennessee',TX:'Texas',UT:'Utah',VT:'Vermont',VA:'Virginia',WA:'Washington',WV:'West Virginia',WI:'Wisconsin',WY:'Wyoming',DC:'District of Columbia',PR:'Puerto Rico',GU:'Guam',VI:'Virgin Islands',AS:'American Samoa',MP:'Northern Mariana Islands' };
+  const PARTY = { D: 'Democrat', R: 'Republican', I: 'Independent' };
+  const portrait = m => m.portraitUrl || ('https://unitedstates.github.io/images/congress/225x275/' + m.bioguideId + '.jpg');
+  const plainMeta = m => [PARTY[(m.party || '').toUpperCase()] || m.partyFull || '', STATES[m.state] || m.state || '', (m.chamber || '').toLowerCase() === 'senate' ? 'Senator' : ('Representative' + (m.district ? ', district ' + m.district : ''))].filter(Boolean).join(' · ');
+  const READ_BY_ID = {}; live.forEach(r => { READ_BY_ID[r.rid] = r; });
+  const myPins = () => { try { return JSON.parse(localStorage.getItem('g4.pins') || '[]'); } catch (e) { return []; } };
+  function latestPins() { const out = {}; myPins().forEach(p => { if (READ_BY_ID[p.rid] && (!out[p.rid] || p.at > out[p.rid].at)) out[p.rid] = p; }); return out; }
+  function memberPosOn(m, rid) {
+    let dp = null; try { const ev = (PrismDB.getEvents() || []).find(e => e.rid === rid); if (ev && PrismDB.getMemberPosition) dp = PrismDB.getMemberPosition(m.bioguideId, ev.id); } catch (e) {}
+    if (dp && dp.pin && (dp.provenance === 'DERIVED' || dp.provenance === 'MANUAL' || dp.adminOverride)) return { x: dp.pin.x, y: dp.pin.y, derived: true };
+    const p = placeMember(m); return { x: p.x, y: p.y, derived: false };
+  }
+  function agreeOn(m, pin, rid) {
+    const pa = (READ_BY_ID[rid] || {}).prevalentAxis; const pk = pa === 'y' ? 'y' : 'x', ok = pk === 'x' ? 'y' : 'x', wP = (pa === 'x' || pa === 'y') ? 0.7 : 0.5, wO = 1 - wP;
+    const mp = memberPosOn(m, rid), U = { x: (pin.x - 0.5) * 200, y: (0.5 - pin.y) * 200 }, M = { x: (mp.x - 0.5) * 200, y: (0.5 - mp.y) * 200 };
+    const ag = (u, v) => Math.max(-1, Math.min(1, 1 - Math.abs(u - v) / 60));
+    return { v: Math.round(Math.max(-100, Math.min(100, (wP * ag(U[pk], M[pk]) + wO * ag(U[ok], M[ok])) * 100))), derived: mp.derived, mp };
+  }
+  function agreement(m) { const L = latestPins(); const per = Object.keys(L).map(rid => Object.assign({ rid, pin: L[rid] }, agreeOn(m, L[rid], rid))); return per.length ? { v: Math.round(per.reduce((a, b) => a + b.v, 0) / per.length), per } : null; }
+  const sgn = v => (v > 0 ? '+' : v < 0 ? '−' : '±') + Math.abs(v);
+  const agCls = v => v == null ? '' : v > 8 ? 'pos' : v < -8 ? 'neg' : 'mix';
+  const isFol = id => followed().includes(id);
+  function followToggle(id) { if (REHEARSAL) { const f = followed(); const i = f.indexOf(id); if (i >= 0) f.splice(i, 1); else f.push(id); try { localStorage.setItem('g4.follow', JSON.stringify(f)); } catch (e) {} } else { try { PrismDB.toggleFollow(id); } catch (e) {} } }
+  const mRow = (m, a, withBtn) => `<a class="mrow" href="#member/${m.bioguideId}"><img src="${portrait(m)}" alt="" loading="lazy"><span class="nm"><b>${m.name}</b><small>${plainMeta(m)}</small></span>${withBtn ? `<button class="fb ${isFol(m.bioguideId) ? 'on' : ''}" data-fol="${m.bioguideId}">${isFol(m.bioguideId) ? 'following' : 'follow'}</button>` : `<span class="ag ${agCls(a && a.v)}">${a ? sgn(a.v) : '—'}<small>with you</small></span>`}</a>`;
+  function wireFollow(root) { root.querySelectorAll('[data-fol]').forEach(b => b.addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); followToggle(b.dataset.fol); renderRefr(); refrSearch(); })); }
+  function renderRefr() {
+    const n = Object.keys(latestPins()).length;
+    const rows = followed().map(id => MEMBERS.find(m => m.bioguideId === id)).filter(Boolean).map(m => ({ m, a: agreement(m) })).sort((x, y) => (y.a ? y.a.v : -999) - (x.a ? x.a.v : -999));
+    $('#refrNote').textContent = rows.length ? (n ? `How each one lines up with you, from the ${n} reading${n === 1 ? '' : 's'} you've pinned. +100 is right beside you; −100 is the far side.` : 'Pin a reading and you will see how each one lines up with you.') : '';
+    $('#refrList').innerHTML = rows.map(r => mRow(r.m, r.a)).join('') || '<div class="g4-key" style="padding:14px 4px">You aren’t following anyone yet. Find someone below.</div>';
+    $('#refrCount').textContent = MEMBERS.length + ' members';
+  }
+  function refrSearch() {
+    const t = ($('#refrQ').value || '').trim().toLowerCase(); const res = $('#refrRes');
+    if (!t) { res.innerHTML = ''; return; }
+    const hits = MEMBERS.filter(m => (m.name || '').toLowerCase().includes(t) || (m.state || '').toLowerCase() === t || (STATES[m.state] || '').toLowerCase().startsWith(t)).slice(0, 40);
+    res.innerHTML = hits.map(m => mRow(m, null, true)).join('') || '<div class="g4-key" style="padding:14px 4px">No one by that name or state.</div>';
+    wireFollow(res);
+  }
+  $('#refrQ').addEventListener('input', refrSearch);
+  function miniMap(mp, pin, party) {
+    const S = 220, X = v => (v * S).toFixed(1), col = { D: '#6fa8dc', R: '#e07474' }[(party || '').toUpperCase()] || '#e0b84c';
+    return `<svg class="mmap" viewBox="0 0 ${S} ${S}"><rect x=".5" y=".5" width="${S - 1}" height="${S - 1}" fill="rgba(233,236,242,.02)" stroke="rgba(233,236,242,.14)"/>
+      <line x1="${S / 2}" y1="0" x2="${S / 2}" y2="${S}" stroke="rgba(233,236,242,.1)"/><line x1="0" y1="${S / 2}" x2="${S}" y2="${S / 2}" stroke="rgba(233,236,242,.1)"/>
+      <text x="8" y="16" font-family="var(--mono)" font-size="8.5" fill="#b83a3a">LEFT EST.</text><text x="${S - 8}" y="16" text-anchor="end" font-family="var(--mono)" font-size="8.5" fill="#3868a8">RIGHT EST.</text>
+      <text x="8" y="${S - 8}" font-family="var(--mono)" font-size="8.5" fill="#3a8a52">LEFT POP.</text><text x="${S - 8}" y="${S - 8}" text-anchor="end" font-family="var(--mono)" font-size="8.5" fill="#b87828">RIGHT POP.</text>
+      ${pin ? `<line x1="${X(pin.x)}" y1="${X(pin.y)}" x2="${X(mp.x)}" y2="${X(mp.y)}" stroke="rgba(233,236,242,.3)" stroke-dasharray="3 3"/><circle cx="${X(pin.x)}" cy="${X(pin.y)}" r="6" fill="none" stroke="#e9ecf2" stroke-width="1.6"/><text x="${X(pin.x)}" y="${(pin.y * S + 18).toFixed(1)}" text-anchor="middle" font-family="var(--mono)" font-size="9" fill="rgba(233,236,242,.7)">you</text>` : ''}
+      <rect x="${(mp.x * S - 6).toFixed(1)}" y="${(mp.y * S - 6).toFixed(1)}" width="12" height="12" transform="rotate(45 ${X(mp.x)} ${X(mp.y)})" fill="${col}"/></svg>`;
+  }
+  function renderMember(id) {
+    const m = MEMBERS.find(x => x.bioguideId === id); const el = $('#mbody');
+    if (!m) { el.innerHTML = '<p>No such member.</p>'; return; }
+    const a = agreement(m), since = (m.terms || []).reduce((y, t) => Math.min(y, t.startYear || 9999), 9999);
+    const last = a ? a.per.slice().sort((x, y) => (y.pin.at || '').localeCompare(x.pin.at || ''))[0] : null;
+    const base = placeMember(m), mp = last ? last.mp : { x: base.x, y: base.y };
+    const dz = num(m.deliveryZ), moves = dz == null ? 'not enough record' : dz > 0.3 ? 'more often than most' : dz < -0.3 ? 'less often than most' : 'about as often as most';
+    el.innerHTML = `<div class="mhead"><img src="${portrait(m)}" alt=""><div><h1>${m.name}</h1><div class="who">${plainMeta(m)}${since < 9999 ? '<br>in Congress since ' + since : ''}</div>
+        <div style="margin-top:10px"><button class="g4-pill ${isFol(id) ? '' : 'quiet'}" id="mFol" style="cursor:pointer">${isFol(id) ? 'following ✓' : 'follow'}</button></div></div></div>
+      <div class="mgrid">
+        <div class="mcard"><div class="k">lines up with you</div>${a ? `<div class="big ${agCls(a.v)}">${sgn(a.v)}</div><p>Across ${a.per.length} reading${a.per.length === 1 ? '' : 's'} you've pinned. +100 is right beside you; −100 is the far side.</p>
+          <div style="margin-top:10px">${a.per.map(p => `<div class="ln"><a href="#reading/${encodeURIComponent(p.rid)}" style="color:inherit;text-decoration:none">${(READ_BY_ID[p.rid].centralObject || {}).name || READ_BY_ID[p.rid].title}</a><b class="${agCls(p.v)}">${sgn(p.v)}</b></div>`).join('')}</div>` : `<p>Pin a reading and you'll see how ${m.lastName || m.name} lines up with you.</p>`}</div>
+        <div class="mcard"><div class="k">${last ? 'where they stand · ' + ((READ_BY_ID[last.rid].centralObject || {}).name || READ_BY_ID[last.rid].title) : 'where they stand'}</div>${miniMap(mp, last ? last.pin : null, m.party)}
+          <p style="font-size:12px">${last && last.derived ? 'Placed from their own words on this reading.' : 'Placed from their voting record.'}</p></div>
+        <div class="mcard"><div class="k">their record</div>
+          <div class="ln"><span>Bills they wrote</span><b>${m.sponsorCount != null ? m.sponsorCount : '—'}</b></div>
+          <div class="ln"><span>Bills they signed onto</span><b>${m.cosponsorCount != null ? m.cosponsorCount : '—'}</b></div>
+          <div class="ln"><span>Their bills move forward</span><b>${moves}</b></div></div>
+      </div>`;
+    $('#mFol').addEventListener('click', () => { followToggle(id); renderMember(id); });
+  }
+
+  // ── YOU (10-17 — the classic flow's profile card, door and notifications, in plain words) ──
+  const SIDE = { A: 'Left establishment', B: 'Right establishment', C: 'Left populist', D: 'Right populist' };
+  const getUser = () => { try { return PrismDB.getUser() || {}; } catch (e) { return {}; } };
+  const normHandle = t => { t = (t || '').trim().replace(/^[*@\s]+/, '').replace(/[^A-Za-z0-9_]/g, '').toLowerCase(); return t ? '*' + t.slice(0, 20) : ''; };
+  (function joinLink() { const m = /[?&]join=([^&#]+)/.exec(location.search); if (m) { try { localStorage.setItem('prism.beam.invite', decodeURIComponent(m[1])); } catch (e) {} } })();
+  const pushOK = () => 'serviceWorker' in navigator && 'PushManager' in window && 'Notification' in window;
+  const isIOS = () => /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  const isStandalone = () => (window.matchMedia && matchMedia('(display-mode: standalone)').matches) || navigator.standalone === true;
+  const b64 = t => { const pad = '='.repeat((4 - t.length % 4) % 4); const raw = atob((t + pad).replace(/-/g, '+').replace(/_/g, '/')); return Uint8Array.from(raw, c => c.charCodeAt(0)); };
+  function renderYou() {
+    const u = getUser(); let b = null; try { b = PrismField.bound(); } catch (e) {}
+    const name = u.displayName || (b && b.name) || '';
+    const L = latestPins(); const pins = Object.values(L).sort((x, y) => (y.at || '').localeCompare(x.at || ''));
+    const cfg = window.PRISM_PUSH;
+    let invite = ''; try { invite = localStorage.getItem('prism.beam.invite') || ''; } catch (e) {}
+    $('#youBody').innerHTML = `
+      <div class="ycard"><div class="yid"><div class="yav">${(name || '◆').replace(/^the /, '').charAt(0).toUpperCase()}</div><div><div class="nm">${name || 'Set up your profile'}</div><div class="hd">${u.handle || '*yourhandle'}</div></div><button class="ybtn" id="yEdit">${u.handle ? 'edit' : 'set up'}</button></div>
+        <div class="yform ${u.handle ? '' : 'open'}" id="yForm"><input id="yName" placeholder="your name" maxlength="40" value="${(u.displayName || '').replace(/"/g, '&quot;')}"><input id="yHandle" placeholder="*handle" maxlength="24" value="${u.handle || ''}"><button class="ybtn solid" id="ySave">save</button></div></div>
+      <div class="ycard"><div class="k">posting your pins</div>${b
+        ? `<p>Your pins go public as <b style="color:var(--ink)">${b.name}</b>${b.creature ? ' (the ' + b.creature + ')' : ''}.</p><button class="ybtn" id="yLeave">sign out</button>`
+        : `<p>Sign in to put your pins on the public map with everyone else's. Until then they stay on this phone.</p>
+          <div class="ytabs"><button class="ybtn ${invite || !1 ? 'on' : 'on'}" data-yt="new">new here</button><button class="ybtn" data-yt="key">I have a key</button></div>
+          <div id="yNew"><div style="display:flex;gap:8px;flex-wrap:wrap"><input id="yN" placeholder="pick a name" maxlength="20"><input id="yP" type="password" placeholder="pick a passcode (8+)"><input id="yI" placeholder="invite code" value="${invite.replace(/"/g, '&quot;')}"></div><div style="display:flex;gap:8px;margin-top:8px"><button class="ybtn solid" id="yClaim">join</button><button class="ybtn" id="yBack">I've joined before</button></div></div>
+          <div id="yKey" hidden><div style="display:flex;gap:8px"><input id="yK" type="password" placeholder="your key"><button class="ybtn solid" id="yKnock">sign in</button></div></div>
+          <div class="msg" id="yMsg"></div>`}</div>
+      <div class="ycard"><div class="k">notifications</div><div id="yNote"></div></div>
+      <div class="ycard"><div class="k">your pins</div>${pins.length ? pins.map(p => { const r = READ_BY_ID[p.rid] || {}; return `<a class="yrow" href="#reading/${encodeURIComponent(p.rid)}"><span>${(r.centralObject || {}).name || r.title || p.rid}<small>${(p.at || '').slice(0, 10)}</small></span><span class="sd">${SIDE[p.quadrant] || ''}</span></a>`; }).join('') : '<p>Nothing yet. Open a reading, place yourself, and commit the pin.</p>'}</div>`;
+    $('#yEdit').onclick = () => $('#yForm').classList.toggle('open');
+    $('#yHandle').onblur = e => { if (e.target.value.trim()) e.target.value = normHandle(e.target.value); };
+    $('#ySave').onclick = () => { const pr = getUser(); pr.displayName = $('#yName').value.trim().slice(0, 40); pr.handle = normHandle($('#yHandle').value); try { PrismDB.setUser(pr); } catch (e) {} renderYou(); };
+    if (b) $('#yLeave').onclick = () => { try { PrismField.unbind(); } catch (e) {} renderYou(); seatNote(); };
+    else {
+      document.querySelectorAll('[data-yt]').forEach(t => t.onclick = () => { const nw = t.dataset.yt === 'new'; $('#yNew').hidden = !nw; $('#yKey').hidden = nw; document.querySelectorAll('[data-yt]').forEach(x => x.classList.toggle('on', x === t)); $('#yMsg').textContent = ''; });
+      const done = r => { if (r && r.ok) { try { localStorage.removeItem('prism.beam.invite'); } catch (e) {} renderYou(); seatNote(); } else $('#yMsg').textContent = (r && r.error) || 'that didn’t work'; };
+      $('#yClaim').onclick = async () => { $('#yMsg').textContent = 'joining…'; let r; try { r = await PrismField.claim($('#yI').value, $('#yN').value, $('#yP').value); } catch (e) { r = { ok: false, error: e.message }; } done(r); };
+      $('#yBack').onclick = async () => { $('#yMsg').textContent = 'signing in…'; let r; try { r = await PrismField.knock($('#yP').value, $('#yN').value); } catch (e) { r = { ok: false, error: e.message }; } done(r); };
+      $('#yKnock').onclick = async () => { $('#yMsg').textContent = 'signing in…'; let r; try { r = await PrismField.knock($('#yK').value); } catch (e) { r = { ok: false, error: e.message }; } done(r); };
+    }
+    // notifications: a new reading → a ping. iPhone allows it only from the home-screen app.
+    const nt = $('#yNote');
+    if (!cfg || !cfg.vapidPublic) { nt.innerHTML = '<p>Coming soon: a ping when a new reading goes up.</p>'; }
+    else if (!pushOK()) { nt.innerHTML = `<p>${isIOS() && !isStandalone() ? 'To get a ping when a new reading goes up: tap Share, then “Add to Home Screen”, open Prism from there, and turn this on.' : 'This browser can’t do notifications.'}</p>`; }
+    else {
+      nt.innerHTML = '<p id="yNt"></p><button class="ybtn" id="yNb"></button><div class="msg" id="yNm"></div>';
+      const paint = on => { $('#yNt').textContent = on ? 'You’ll get a ping when a new reading goes up.' : 'Get a ping when a new reading goes up.'; $('#yNb').textContent = on ? 'on' : 'turn on'; $('#yNb').classList.toggle('on', on); };
+      const reg = () => navigator.serviceWorker.register('../sw.js', { scope: '../' }).then(() => navigator.serviceWorker.ready);
+      reg().then(r => r.pushManager.getSubscription()).then(x => paint(!!x)).catch(() => paint(false));
+      $('#yNb').onclick = async () => { const btn = $('#yNb'); btn.disabled = true; $('#yNm').textContent = '';
+        try { const r = await reg(); const cur = await r.pushManager.getSubscription();
+          if (cur) { await fetch(cfg.gate + '/unsubscribe', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ endpoint: cur.endpoint }) }).catch(() => {}); await cur.unsubscribe(); paint(false); }
+          else { const perm = await Notification.requestPermission(); if (perm !== 'granted') { $('#yNm').textContent = 'Notifications are blocked for Prism. Allow them in your phone’s settings.'; paint(false); return; }
+            const sub = await r.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: b64(cfg.vapidPublic) }); let bb = null; try { bb = PrismField.bound(); } catch (e) {}
+            const res = await fetch(cfg.gate + '/subscribe', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ subscription: sub.toJSON(), avatar: bb ? bb.avatar : '' }) });
+            if (!res.ok) { await sub.unsubscribe().catch(() => {}); throw new Error('the server said no (' + res.status + ')'); } paint(true); } }
+        catch (e) { $('#yNm').textContent = 'Couldn’t switch notifications: ' + (e && e.message || e); } finally { btn.disabled = false; } };
+    }
+  }
+
+
+  // ── BURNS: the newsroom's watch list as a film strip (10-17 — Burns spec v2 §2, plain words) ──
+  // A frame's state, rarest first: turned around ✶ (an inversion) · you pinned it ● · gone quiet ◌ (a break with no return) · has a reading ◐ · watching ○
+  const BURN = { flared: ['✶', 'turned around'], burnt: ['●', 'you pinned it'], dark: ['◌', 'gone quiet'], exposed: ['◐', 'has a reading'], lit: ['○', 'watching'] };
+  let OBJS = [];
+  const ridOf = o => (o.live && READ_BY_ID[o.live] && o.live) || (o.drafts && ['sailor', 'claude'].map(k => o.drafts[k]).find(r => r && READ_BY_ID[r])) || null;
+  function burnState(o) {
+    const rid = ridOf(o), pinned = rid && latestPins()[rid];
+    if ((o.inversions || []).length) return 'flared';
+    if (pinned) return 'burnt';
+    const pm = o.permanence || {}; if ((pm.breaks || []).length && !(pm.returns || []).length) return 'dark';
+    if (rid || o.live || (o.drafts && Object.keys(o.drafts).length)) return 'exposed';
+    return 'lit';
+  }
+  const shortDate = d => { const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(d || ''); return m ? ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][+m[2] - 1] + ' ' + (+m[3]) : ''; };
+  const clip = (t, n) => { t = String(t || '').replace(/\s+([,.])/g, '$1').trim(); return t.length > n ? t.slice(0, n - 1).replace(/\s+\S*$/, '') + '…' : t; };
+  async function loadBurns() {
+    try { const j = await fetch('../data/newsroom/objects.json', { cache: 'no-store' }).then(r => r.json()); OBJS = (j.objects || []).filter(o => o.status !== 'dismissed'); } catch (e) { OBJS = []; }
+    OBJS.sort((a, b) => (b.lastSeen || b.firstSeen || '').localeCompare(a.lastSeen || a.firstSeen || ''));
+    paintBurns();
+  }
+  function paintBurns() {
+    const reel = $('#reel'); if (!reel) return;
+    if (!OBJS.length) { reel.innerHTML = '<div class="fr"><div class="k"><span>no frames yet</span></div><div class="h">The newsroom scan runs every morning.</div><div class="d"></div></div>'; $('#burnCount').textContent = ''; return; }
+    const html = OBJS.map((o, i) => { const st = burnState(o); return `<a class="fr ${st}" data-oi="${i}"><div class="k"><span>${o.kind || 'object'}</span><i>${BURN[st][0]} ${BURN[st][1]}</i></div><div class="h">${clip(o.headline, 70)}</div><div class="d">${shortDate(o.formedOn || o.firstSeen)}${o.outlets ? ' · ' + o.outlets + ' outlet' + (o.outlets === 1 ? '' : 's') : ''}</div></a>`; }).join('');
+    reel.innerHTML = html + html;
+    const n = OBJS.filter(o => burnState(o) === 'burnt').length;
+    $('#burnCount').textContent = `${OBJS.length} frames${n ? ' · ' + n + ' you pinned' : ''}`;
+    reel.querySelectorAll('[data-oi]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); openObj(OBJS[+a.dataset.oi]); }));
+  }
+  function openObj(o) {
+    const rid = ridOf(o); if (rid) { location.hash = '#reading/' + encodeURIComponent(rid); return; }
+    const st = burnState(o);
+    $('#oBody').innerHTML = `<div class="m">${BURN[st][0]} ${BURN[st][1]} · ${o.kind || 'object'}</div><h3>${clip(o.headline, 160)}</h3>
+      <div class="m">${o.holder ? 'Who holds it: ' + o.holder + '<br>' : ''}Happened: ${shortDate(o.formedOn) || '—'} · first seen ${shortDate(o.firstSeen)} · ${o.outlets || 0} outlet${o.outlets === 1 ? '' : 's'}</div>
+      <div style="margin-top:12px">${(o.articles || []).slice(0, 6).map(a => `<a class="lk" href="${a.url}" target="_blank" rel="noopener">${clip(a.title, 120)}<small>${a.domain} · ${shortDate(a.seendate)}</small></a>`).join('') || '<div class="m">No coverage links.</div>'}</div>
+      <div class="m" style="margin-top:12px">No reading on this one yet.</div>`;
+    $('#osheet').hidden = false;
+  }
+  $('#oClose').addEventListener('click', e => { e.preventDefault(); $('#osheet').hidden = true; });
+  $('#osheet').addEventListener('click', e => { if (e.target.id === 'osheet') $('#osheet').hidden = true; });
+  loadBurns();
+
+  function showView(id) { document.querySelectorAll('.view').forEach(v => v.classList.toggle('on', v.id === id)); window.scrollTo(0, 0); }
+  document.querySelectorAll('.tab-prism').forEach(a => { a.href = headline ? '#reading/' + encodeURIComponent(headline.rid) : '#'; });
+
   // ── routing ──
   function route() {
     const h = location.hash.replace(/^#/, ''); const [head, id] = h.split('/');
     if (head === 'reading' && id) { showReading(decodeURIComponent(id)); return; }
-    $('#v-reading').classList.remove('on'); $('#v-objects').classList.add('on');
+    if (head === 'you') { showView('v-you'); renderYou(); tell({ type: 'g4:crumb', name: 'Prism', fn: 'YOU', crumb: 'Prism · you' }); return; }
+    if (head === 'refraction') { showView('v-refr'); renderRefr(); refrSearch(); tell({ type: 'g4:crumb', name: 'Prism', fn: 'REFRACTION', crumb: 'Prism · your legislators' }); tell({ type: 'g4:navpos', t: 0.86 }); return; }
+    if (head === 'member' && id) { showView('v-member'); renderMember(id); tell({ type: 'g4:crumb', name: 'Prism', fn: 'REFRACTION', crumb: 'Prism · ' + ((MEMBERS.find(m => m.bioguideId === id) || {}).name || 'member') }); return; }
+    showView('v-objects');
     tell({ type: 'g4:crumb', name: 'Prism', fn: 'BEAM', crumb: 'Prism · the objects' }); tell({ type: 'g4:navpos', t: 0.12 });
     window.scrollTo(0, 0);
   }
@@ -544,7 +826,7 @@
     if (R) { const i = PANES.indexOf(pane); if (m.dir === 'up') location.hash = ''; else if (m.dir === 'forward' && i < PANES.length - 1) goPane(PANES[i + 1]); else if (m.dir === 'back' && i > 0) goPane(PANES[i - 1]); }
     else { const ids = sorted.map(r => r.rid); if (m.dir === 'up') tell({ type: 'g4:desk' }); else if (m.dir === 'forward' && ids.length) location.hash = '#reading/' + ids[0]; }
   });
-  document.querySelectorAll('#v-objects .fn .g4-pill').forEach(p => p.addEventListener('click', e => { e.preventDefault(); const k = p.getAttribute('href').slice(1); tell({ type: 'g4:navpos', t: k === 'beam' ? 0.12 : k === 'prism' ? 0.5 : 0.86 }); }));
+  document.querySelectorAll('#v-objects .fn .g4-pill').forEach(p => p.addEventListener('click', e => { e.preventDefault(); const k = p.getAttribute('href').slice(1); tell({ type: 'g4:navpos', t: k === 'beam' ? 0.12 : k === 'prism' ? 0.5 : 0.86 }); if (k === 'refraction') location.hash = '#refraction'; else if (k === 'you') location.hash = '#you'; else if (k === 'prism' && headline) location.hash = '#reading/' + encodeURIComponent(headline.rid); }));
 })();
 </script>
 </body>

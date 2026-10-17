@@ -352,7 +352,11 @@
   .day .dd a { font-family: var(--mono); font-size: 10.5px; letter-spacing: .08em; padding: 4px 10px; border: 1px solid var(--g4-rule); border-radius: 2px; color: var(--ink-mid); text-decoration: none; white-space: nowrap; }
   .day .dd a.on { background: #e9ecf2; color: #0c0b09; border-color: #e9ecf2; }
   .day .db { display: grid; grid-template-columns: minmax(0, 340px) 1fr; gap: 20px; align-items: center; }
-  .day .dmap { width: 100%; height: auto; display: block; }
+  .day .dmap { width: 100%; height: 340px; display: block; position: relative; border-radius: 3px; overflow: hidden; background: radial-gradient(ellipse at 50% 40%, rgba(40,60,110,.35), rgba(0,0,0,0) 70%); }
+  .day .dlist { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 8px; font-family: var(--mono); font-size: 10.5px; }
+  .day .dlist a { color: var(--ink); text-decoration: none; white-space: nowrap; }
+  .day .dlist a i { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
+  .day .dlist a span { color: var(--ink-low); margin-left: 6px; }
   .day .rd .when { font-family: var(--serif); font-size: 26px; margin-bottom: 6px; }
   .day .rd p { margin: 0 0 8px; font-size: 15px; line-height: 1.45; color: var(--ink); }
   .day .rd p.x { color: var(--ink-mid); font-size: 14px; }
@@ -371,6 +375,7 @@
   .card .r b.neg, .says.neg { color: #e9967f; } .card .r b.pos, .says.pos { color: #8fd0a0; } .card .r b.mix, .says.mix { color: #d8d0b0; }
   .says { font-size: .62em; }
   .rack { border-bottom: 0; }
+  @media (display-mode: standalone) and (max-width: 480px) { #clock { display: none; } }
 </style>
 </head>
 <body>
@@ -686,27 +691,35 @@
   }
 
   // ── the figure of the day: the lead object's four corners, each from its newest full reading (beta ledes and the floor excluded), joined
-  let dayPick = null;
+  let dayPick = null, gDay = null;
+  function dayGraph(dots) {
+    const el = $('#dayMap'); if (!el || typeof PrismGraphmap === 'undefined') return;
+    if (!el.offsetWidth) { const ro = new ResizeObserver(() => { if (el.offsetWidth && el.isConnected) { ro.disconnect(); dayGraph(dots); } }); ro.observe(el); return; }   // the paper may still be hidden at load
+    requestAnimationFrame(() => {
+      try {
+        if (!gDay) gDay = PrismGraphmap.create({ container: el, mode: 'analytical', capabilities: { orbit: true, zInput: false, zRender: true, diatribeSlider: false, clustering: 'individual' } });
+        gDay.mount(el); try { gDay.clearDots && gDay.clearDots(); gDay.clearPaths && gDay.clearPaths(); } catch (e) {}
+        gDay.setCornerLabels && gDay.setCornerLabels({ A: 'Left est.', B: 'Right est.', C: 'Left pop.', D: 'Right pop.' });
+        gDay.setBoundaryVisible && gDay.setBoundaryVisible(false);
+        gDay.setOrbit(0, -40); gDay.setZoom && gDay.setZoom(6.8);
+        const rad = dia => 0.055 + (dia / 100) * 0.38;
+        [[33, .16], [66, .10]].forEach(([dia, op]) => { const r = rad(dia), pts = []; for (let i = 0; i <= 72; i++) { const a = i / 72 * Math.PI * 2; pts.push({ x: 0.5 + r * Math.cos(a), y: 0.5 + r * Math.sin(a), z: 0 }); } gDay.addPath(pts, { id: 'ring-' + dia, color: 0xe9ecf2, opacity: op }); });
+        gDay.addDot(0.5, 0.5, 'T', 0, { color: COL.O, radius: 0.03, shape: 'diamond', label: 'the story' });
+        dots.forEach(d => gDay.addDot(d.x, d.y, d.q, d.z * 0.75, { color: COL[d.k], radius: 0.05, label: `${d.p.program} · Heat ${d.dia} · ${saysWord(d.p.id, d.z)}`, meta: { id: d.p.id } }));
+        gDay.onInspect && gDay.onInspect(d => { if (d && d.id) location.hash = '#pg/' + d.id; });
+      } catch (e) { console.warn('[day map]', e); }
+    });
+  }
   function renderFOD() {
     const el = $('#fod'); if (!el) return;
     const days = [...new Set(paperIndex.map(p => p.date).filter(Boolean))].sort().reverse();
     if (!days.length) { el.hidden = true; return; }
     const day = dayPick && days.includes(dayPick) ? dayPick : days[0];
     const items = paperIndex.filter(p => p.date === day && paperFull[p.id]);
-    // the map: left/right across, establishment/populist up/down; nearer the edge = more heated; colour = what it says
-    const S = 300, c = S / 2, R = S * .44;
-    const corner = { LI: [-1, -1], RI: [1, -1], LP: [-1, 1], RP: [1, 1] };
+    // the map: the real graphmap. Side = which corner; distance from the centre = heat; height = what it says (up yes, down no).
+    const QD = { LI: ['A', -1, -1], RI: ['B', 1, -1], LP: ['C', -1, 1], RP: ['D', 1, 1] };
     const dots = [];
-    items.forEach((p, n) => { const st = paperFull[p.id].scoreboard.stations || {}; Object.keys(st).forEach(k => { if (!st[k] || !corner[k]) return; const r = Math.max(.12, Math.min(1, (st[k].dia || 0) / 100 * 1.6)); const [ux, uy] = corner[k]; const j = (n % 3 - 1) * .07; dots.push({ p, k, x: c + ux * (r + j) * R * .7071 * 1.3, y: c + uy * (r - j) * R * .7071 * 1.3, z: st[k].readZ, dia: st[k].dia }); }); });
-    const col = z => z == null ? '#9aa3b5' : z > 0.15 ? '#7cc48e' : z < -0.15 ? '#e07a62' : '#c9c2a6';
-    const svg = `<svg class="dmap" viewBox="0 0 ${S} ${S}" aria-label="the day's coverage on one map">
-      <rect x="6" y="6" width="${S - 12}" height="${S - 12}" fill="none" stroke="rgba(233,236,242,.12)"/>
-      <line x1="${c}" y1="6" x2="${c}" y2="${S - 6}" stroke="rgba(233,236,242,.08)"/><line x1="6" y1="${c}" x2="${S - 6}" y2="${c}" stroke="rgba(233,236,242,.08)"/>
-      <circle cx="${c}" cy="${c}" r="${R * .45}" fill="none" stroke="rgba(233,236,242,.07)"/>
-      ${[['LI', 14, 22, 'start'], ['RI', S - 14, 22, 'end'], ['LP', 14, S - 14, 'start'], ['RP', S - 14, S - 14, 'end']].map(([k, x, y, a]) => `<text x="${x}" y="${y}" text-anchor="${a}" font-family="var(--mono)" font-size="9.5" letter-spacing=".5" fill="${COLH[k]}">${stName(k).toUpperCase()}</text>`).join('')}
-      <circle cx="${c}" cy="${c}" r="3" fill="#e8d9a8"/>
-      ${dots.map(d => `<a href="#pg/${d.p.id}"><circle cx="${d.x.toFixed(1)}" cy="${d.y.toFixed(1)}" r="9" fill="${col(d.z)}" fill-opacity=".85" stroke="#0c0b09" stroke-width="1.5"><title>${d.p.program} · Heat ${d.dia} · ${saysWord(d.p.id, d.z)}</title></circle><text x="${d.x.toFixed(1)}" y="${(d.y + 21).toFixed(1)}" text-anchor="middle" font-family="var(--mono)" font-size="9" fill="rgba(233,236,242,.75)">${(d.p.program || '').replace(/^The /, '')}</text></a>`).join('')}
-    </svg>`;
+    items.forEach((p, n) => { const st = paperFull[p.id].scoreboard.stations || {}; Object.keys(st).forEach(k => { if (!st[k] || !QD[k]) return; const [q, ux, uy] = QD[k]; const r = 0.055 + ((st[k].dia || 0) / 100) * 0.38; const ang = (45 + ((n * 0.37) % 1 - 0.5) * 30) * Math.PI / 180; dots.push({ p, k, q, x: 0.5 + ux * r * Math.cos(ang), y: 0.5 + uy * r * Math.sin(ang), z: st[k].readZ || 0, dia: st[k].dia }); }); });
     // the readout: plain sentences, per topic
     const byT = {}; items.forEach(p => { const t = topicOf(p.id); const k = t ? t.key : 'other'; (byT[k] = byT[k] || { t, ps: [] }).ps.push(p); });
     const n = x => x === 1 ? 'One' : x === 2 ? 'Two' : x === 3 ? 'Three' : x === 4 ? 'Four' : x === 5 ? 'Five' : String(x);
@@ -723,7 +736,8 @@
     el.hidden = false;
     el.className = 'day';
     el.innerHTML = `<div class="dd">${days.slice(0, 10).map(d => `<a href="#" data-day="${d}" class="${d === day ? 'on' : ''}">${dlab(d)}</a>`).join('')}</div>
-      <div class="db">${svg}<div class="rd"><div class="when">${dlab(day)}</div>${lines.join('')}<div class="key"><i style="background:#e07a62"></i>no <i style="background:#7cc48e"></i>yes <i style="background:#c9c2a6"></i>mixed · further out = more heated</div></div></div>`;
+      <div class="db"><div class="dmapwrap"><div id="dayMap" class="dmap"></div><div class="dlist">${dots.map(d => `<a href="#pg/${d.p.id}"><i style="background:${COLH[d.k]}"></i>${d.p.program}<span>Heat ${d.dia} · ${saysWord(d.p.id, d.z)}</span></a>`).join('')}</div></div><div class="rd"><div class="when">${dlab(day)}</div>${lines.join('')}<div class="key">Each dot is one segment. Side: where it comes from. Further out: more heated. Higher: says yes; lower: says no. Drag to turn it.</div></div></div>`;
+    dayGraph(dots);
     el.querySelectorAll('.dd a').forEach(a => a.addEventListener('click', e => { e.preventDefault(); dayPick = a.dataset.day; renderFOD(); }));
   }
 
@@ -810,7 +824,7 @@
 
     // the prose, if the index carries it
     const mine = seen.filter(x => x.piece === id);
-    $('#prose').innerHTML = (meta.lede ? `<p>${meta.lede}</p>` : ''); $('#seenfold').innerHTML = (mine.length ? `<div class="seen"><div class="k">Objects on this tape · ${mine.length} · sorted by the schema</div><ul>${mine.map(x => {
+    $('#prose').innerHTML = (meta.lede ? `<p class="tut">${meta.lede}</p>` : ''); $('#seenfold').innerHTML = (mine.length ? `<div class="seen"><div class="k">Objects on this tape · ${mine.length} · sorted by the schema</div><ul>${mine.map(x => {
       const cand = x.match && x.match.candidate; const ds = (x.match && x.match.dataset) || 'none';
       return `<li><span class="ds${cand ? ' cand' : ''}">${cand ? 'candidate' : ds}</span><span>${x.object}${x.analog && x.analog.ref ? ` <span class="m">· ${x.analog.type || 'analog'}: ${x.analog.ref}</span>` : ''}${x.match && x.match.as ? ` <span class="m">· ${x.match.as}</span>` : ''}${x.scored ? '' : ' <span class="m">· not scored</span>'}</span></li>`; }).join('')}</ul></div>` : '');
 
