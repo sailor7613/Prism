@@ -23,11 +23,12 @@
   "Accruals stay accruals.",
   "Prism sees it through Readings."
  ],
- "builtAt": "2026-10-16T18:03:36.012Z",
+ "builtAt": "2026-10-17T17:04:07.395Z",
  "errors": [
   "GDELT iran: fetch failed",
   "GDELT russia: fetch failed",
-  "GDELT venezuela: fetch failed"
+  "GDELT venezuela: gave up: https://api.gdeltproject.org/api/v2/doc/doc?query=venezuela%20(oil%20OR%20chevron%20OR%20pdvsa%20OR%20sanctions)&mode=timelinevol&format=json&timespan=90d",
+  "GDELT settlement: gave up: https://api.gdeltproject.org/api/v2/doc/doc?query=(oil%20OR%20crude)%20(yuan%20OR%20petrodollar%20OR%20%22dollar%20settlement%22%20OR%20%22non-dollar%22%20OR%20invoicing)&mode=timelinevol&format=json&timespan=90d"
  ],
  "realization": {
   "importsByOrigin": {
@@ -8534,7 +8535,7 @@
     }
    }
   },
-  "fetchedAt": "2026-10-16T18:00:58.678Z",
+  "fetchedAt": "2026-10-17T17:00:19.833Z",
   "column": "realization",
   "guard": "Flows do not score Z; they are the layer Z is scored from (PG01 §6.3.1).",
   "distillateImportsByOrigin": {
@@ -9469,10 +9470,9 @@
    "202607",
    "202608"
   ],
-  "fetchedAt": "2026-10-16T18:00:10.351Z",
+  "fetchedAt": "2026-10-17T16:58:26.208Z",
   "keyed": false,
   "errors": [
-   "Türkiye crude 202608: HTTP 403",
    "Türkiye products 202509: HTTP 403",
    "Türkiye products 202510: HTTP 403",
    "Türkiye products 202511: HTTP 403",
@@ -9505,7 +9505,10 @@
    "United States products 202602: HTTP 403",
    "United States products 202603: HTTP 403",
    "United States products 202604: HTTP 403",
-   "United States products 202605: HTTP 403"
+   "United States products 202605: HTTP 403",
+   "United States products 202606: HTTP 403",
+   "United States products 202607: HTTP 403",
+   "United States products 202608: HTTP 403"
   ],
   "edges": [
    {
@@ -21957,286 +21960,6 @@
     "cmd": "products",
     "kt": 18.1,
     "usdM": 23.1
-   },
-   {
-    "period": "2026-06",
-    "reporter": "United States",
-    "reporterCode": 842,
-    "partner": "Algeria",
-    "partnerCode": 12,
-    "cmd": "products",
-    "kt": 219.2,
-    "usdM": 158.4
-   },
-   {
-    "period": "2026-06",
-    "reporter": "United States",
-    "reporterCode": 842,
-    "partner": "Brazil",
-    "partnerCode": 76,
-    "cmd": "products",
-    "kt": 137.8,
-    "usdM": 102.7
-   },
-   {
-    "period": "2026-06",
-    "reporter": "United States",
-    "reporterCode": 842,
-    "partner": "Canada",
-    "partnerCode": 124,
-    "cmd": "products",
-    "kt": 1551.6,
-    "usdM": 1258.8
-   },
-   {
-    "period": "2026-06",
-    "reporter": "United States",
-    "reporterCode": 842,
-    "partner": "China",
-    "partnerCode": 156,
-    "cmd": "products",
-    "kt": 0.2,
-    "usdM": 0.4
-   },
-   {
-    "period": "2026-06",
-    "reporter": "United States",
-    "reporterCode": 842,
-    "partner": "Malaysia",
-    "partnerCode": 458,
-    "cmd": "products",
-    "kt": 2.5,
-    "usdM": 4.1
-   },
-   {
-    "period": "2026-06",
-    "reporter": "United States",
-    "reporterCode": 842,
-    "partner": "Mexico",
-    "partnerCode": 484,
-    "cmd": "products",
-    "kt": 546.8,
-    "usdM": 261.2
-   },
-   {
-    "period": "2026-06",
-    "reporter": "United States",
-    "reporterCode": 842,
-    "partner": "Nigeria",
-    "partnerCode": 566,
-    "cmd": "products",
-    "kt": 59.8,
-    "usdM": 45.1
-   },
-   {
-    "period": "2026-06",
-    "reporter": "United States",
-    "reporterCode": 842,
-    "partner": "Qatar",
-    "partnerCode": 634,
-    "cmd": "products",
-    "kt": 0,
-    "usdM": 0
-   },
-   {
-    "period": "2026-06",
-    "reporter": "United States",
-    "reporterCode": 842,
-    "partner": "Saudi Arabia",
-    "partnerCode": 682,
-    "cmd": "products",
-    "kt": 127.2,
-    "usdM": 107.6
-   },
-   {
-    "period": "2026-06",
-    "reporter": "United States",
-    "reporterCode": 842,
-    "partner": "India",
-    "partnerCode": 699,
-    "cmd": "products",
-    "kt": 284,
-    "usdM": 193.4
-   },
-   {
-    "period": "2026-06",
-    "reporter": "United States",
-    "reporterCode": 842,
-    "partner": "UAE",
-    "partnerCode": 784,
-    "cmd": "products",
-    "kt": 0.4,
-    "usdM": 0.3
-   },
-   {
-    "period": "2026-06",
-    "reporter": "United States",
-    "reporterCode": 842,
-    "partner": "Türkiye",
-    "partnerCode": 792,
-    "cmd": "products",
-    "kt": 266.3,
-    "usdM": 246.8
-   },
-   {
-    "period": "2026-06",
-    "reporter": "United States",
-    "reporterCode": 842,
-    "partner": "Venezuela",
-    "partnerCode": 862,
-    "cmd": "products",
-    "kt": 419.8,
-    "usdM": 214.3
-   },
-   {
-    "period": "2026-07",
-    "reporter": "United States",
-    "reporterCode": 842,
-    "partner": "Algeria",
-    "partnerCode": 12,
-    "cmd": "products",
-    "kt": 53.8,
-    "usdM": 105.4
-   },
-   {
-    "period": "2026-07",
-    "reporter": "United States",
-    "reporterCode": 842,
-    "partner": "Brazil",
-    "partnerCode": 76,
-    "cmd": "products",
-    "kt": 203,
-    "usdM": 142.3
-   },
-   {
-    "period": "2026-07",
-    "reporter": "United States",
-    "reporterCode": 842,
-    "partner": "Canada",
-    "partnerCode": 124,
-    "cmd": "products",
-    "kt": 981,
-    "usdM": 1229.9
-   },
-   {
-    "period": "2026-07",
-    "reporter": "United States",
-    "reporterCode": 842,
-    "partner": "China",
-    "partnerCode": 156,
-    "cmd": "products",
-    "kt": 0.2,
-    "usdM": 0.4
-   },
-   {
-    "period": "2026-07",
-    "reporter": "United States",
-    "reporterCode": 842,
-    "partner": "Iraq",
-    "partnerCode": 368,
-    "cmd": "products",
-    "kt": 38.1,
-    "usdM": 74.8
-   },
-   {
-    "period": "2026-07",
-    "reporter": "United States",
-    "reporterCode": 842,
-    "partner": "Kazakhstan",
-    "partnerCode": 398,
-    "cmd": "products",
-    "kt": 4.1,
-    "usdM": 7.9
-   },
-   {
-    "period": "2026-07",
-    "reporter": "United States",
-    "reporterCode": 842,
-    "partner": "Malaysia",
-    "partnerCode": 458,
-    "cmd": "products",
-    "kt": 92.5,
-    "usdM": 74.3
-   },
-   {
-    "period": "2026-07",
-    "reporter": "United States",
-    "reporterCode": 842,
-    "partner": "Mexico",
-    "partnerCode": 484,
-    "cmd": "products",
-    "kt": 144.3,
-    "usdM": 276.5
-   },
-   {
-    "period": "2026-07",
-    "reporter": "United States",
-    "reporterCode": 842,
-    "partner": "Nigeria",
-    "partnerCode": 566,
-    "cmd": "products",
-    "kt": 49.5,
-    "usdM": 97.2
-   },
-   {
-    "period": "2026-07",
-    "reporter": "United States",
-    "reporterCode": 842,
-    "partner": "Qatar",
-    "partnerCode": 634,
-    "cmd": "products",
-    "kt": 2.6,
-    "usdM": 5.1
-   },
-   {
-    "period": "2026-07",
-    "reporter": "United States",
-    "reporterCode": 842,
-    "partner": "Saudi Arabia",
-    "partnerCode": 682,
-    "cmd": "products",
-    "kt": 100.2,
-    "usdM": 72
-   },
-   {
-    "period": "2026-07",
-    "reporter": "United States",
-    "reporterCode": 842,
-    "partner": "India",
-    "partnerCode": 699,
-    "cmd": "products",
-    "kt": 130.8,
-    "usdM": 132.2
-   },
-   {
-    "period": "2026-07",
-    "reporter": "United States",
-    "reporterCode": 842,
-    "partner": "UAE",
-    "partnerCode": 784,
-    "cmd": "products",
-    "kt": 0.2,
-    "usdM": 0.5
-   },
-   {
-    "period": "2026-07",
-    "reporter": "United States",
-    "reporterCode": 842,
-    "partner": "Türkiye",
-    "partnerCode": 792,
-    "cmd": "products",
-    "kt": 117.9,
-    "usdM": 137.9
-   },
-   {
-    "period": "2026-07",
-    "reporter": "United States",
-    "reporterCode": 842,
-    "partner": "Venezuela",
-    "partnerCode": 862,
-    "cmd": "products",
-    "kt": 110.5,
-    "usdM": 216.8
    }
   ]
  },
@@ -22448,9 +22171,10 @@
     "kind": "license",
     "asOf": "2026-10-09",
     "detected": "2026-10-09",
-    "what": "OFAC general license: Russian-origin diesel may be sold, delivered and imported into the US through April 2027; no debits to Russia's central bank, wealth fund or finance ministry accounts at US banks. Announced by Trump after a call with Putin; diesel $6.27/gal vs $3.67 a year earlier.",
+    "what": "OFAC general license: Russian-origin diesel may be sold, delivered and imported into the US through April 2027; no debits to Russia's central bank, wealth fund or finance ministry accounts at US banks. Announced by Trump after a call with Putin; diesel $6.27/gal vs $3.67 a year earlier. — General License No. 135 (number per the senators' 10-13 letter; verify against treasury.gov).",
     "source": "The National 2026-10-09; CNBC, NPR, NBC, Ship & Bunker same day. No license number reported yet.",
-    "pg01": "§4 accrual · P2 window (08-14 → 11-30): the test case — coverage reads price, midterms, Putin; the license's one explicit term is about bank accounts"
+    "pg01": "§4 accrual · P2 window (08-14 → 11-30): the test case — coverage reads price, midterms, Putin; the license's one explicit term is about bank accounts",
+    "licenseNo": "GL 135 (per letter 10-13; unverified)"
    },
    {
     "id": "evt-press-ru-storage-strike",
@@ -22747,7 +22471,7 @@
      "station": "LI",
      "touch": "T",
      "dia": 8,
-     "z": 0.0
+     "z": 0
     },
     "verified": false
    },
@@ -22766,7 +22490,7 @@
      "station": "LI",
      "touch": "T",
      "dia": 8,
-     "z": 0.0
+     "z": 0
     },
     "verified": false
    },
@@ -23427,7 +23151,14 @@
     ],
     "source": "Press · Breaking Points 2026-10-12 (cut: Parameters/09_Parallelograms/Press/2026-10-12_BP_Diesel_Deal/cut.md)",
     "status": "claude-draft",
-    "transform": "Z-assertion"
+    "transform": "Z-assertion",
+    "pressNotes": [
+     {
+      "piece": "nyt_2026-10-14_the_daily_diesel_deal",
+      "date": "2026-10-16",
+      "note": "The Daily (10-14) reads the terms with a condition the register does not carry: \"potentially millions more… depending on the state of Russian oil refineries\" — the principal’s own falsifier, tying H1 to H2. Proposed terms amendment. The tape dates the announcement Friday 10-09 (Shell Bay → Truth Social); the register says 10-11."
+     }
+    ]
    },
    {
     "id": "H2",
@@ -23452,7 +23183,7 @@
     "scoredBy": "the record, term by term (the active layer fetches H1a/H1c; H2/H3 by the detection series)",
     "observables": [],
     "source": "Press · Breaking Points 2026-10-12 (cut: Parameters/09_Parallelograms/Press/2026-10-12_BP_Diesel_Deal/cut.md)",
-    "status": "claude-draft",
+    "status": "falsified",
     "transform": "Z-assertion",
     "falsifiedOn": "2026-10-12",
     "falsifiedBy": "strikes by both sides within hours of the 10-11 'effective immediately' statement (BP 10-12 record; Sailor's ruling 2026-10-15)"
@@ -25182,7 +24913,7 @@
    "venezuela": "venezuela (oil OR chevron OR pdvsa OR sanctions)",
    "settlement": "(oil OR crude) (yuan OR petrodollar OR \"dollar settlement\" OR \"non-dollar\" OR invoicing)"
   },
-  "fetchedAt": "2026-10-16T18:03:36.009Z"
+  "fetchedAt": "2026-10-17T17:04:07.391Z"
  },
  "price": {
   "series": {
@@ -26950,8 +26681,7 @@
    }
   },
   "what": "The shadow: what the institutional stations read (PG01 §6.2c). Kept last.",
-  "fetchedAt": "2026-10-16T18:01:25.305Z",
+  "fetchedAt": "2026-10-17T17:01:00.471Z",
   "column": "price"
- },
- "pressMergedAt": "2026-10-16"
+ }
 }
