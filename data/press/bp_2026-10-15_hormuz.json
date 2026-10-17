@@ -1,0 +1,738 @@
+{
+ "schema": "press/parallelogram/v0",
+ "id": "bp_2026-10-15_hormuz",
+ "status": "claude-draft",
+ "kind": "parallelogram",
+ "title": "The Strait, Priced",
+ "source": {
+  "program": "Breaking Points",
+  "network": "Breaking Points (YouTube)",
+  "date": "2026-10-15",
+  "title": "SAUDI UNDER SIEGE: Planes Flee, World Cup Stadiums ABANDONED",
+  "url": "https://www.youtube.com/watch?v=mFb7eQGpEyI",
+  "length": 1531,
+  "transcript": "Parameters/03_Libraries/sources/BreakingPoints_2026-10-15_Saudi_Under_Siege_transcript.md"
+ },
+ "arc": "PG01",
+ "object": {
+  "label": "US control of the Strait of Hormuz — CENTCOM's throughput claim against the record of sinkings, tolls and freight",
+  "layer": 1,
+  "zAxis": {
+   "pos": "the Strait is open under US control",
+   "neg": "it is not — passage is priced by Iran, insurers and freight"
+  }
+ },
+ "layer2": "who sets the price of passage — Iran's toll (10:53), the insurers (20:01), freight at $1.4M/day (18:23): PG01's question on a waterway",
+ "transform": "Z-assertion",
+ "transformNote": "control credited by throughput — '19 million barrels came through Monday' (CENTCOM) — while the record shows a tanker on the bottom of the channel and a toll being paid",
+ "names": {
+  "SE": "Saagar Enjeti",
+  "KB": "Krystal Ball",
+  "AH": "Amos Hochstein (Biden's energy envoy, quoted clip)",
+  "CC": "CENTCOM (statement, via the tape)"
+ },
+ "trace": {
+  "object": {
+   "x": 0,
+   "y": 0,
+   "z": -0.65
+  },
+  "shadow": {
+   "x": 0,
+   "y": 0,
+   "z": 0.9,
+   "note": "control as throughput — the convoy count standing in for the open sea"
+  },
+  "predicates": {
+   "operative": [
+    {
+     "type": "T",
+     "label": "Singapore-flagged tanker sunk in the Strait, confirmed by Singapore; a second ship sunk by projectile; attacks > 20 (as-of 10-15)",
+     "z": 0.95
+    },
+    {
+     "type": "T",
+     "label": "CENTCOM: ≈19M bbl transited Monday 10-12 in convoy under blockade — vs 20M+/day before without convoy",
+     "z": 0.9
+    },
+    {
+     "type": "T",
+     "label": "tanker freight ≈$1.4M/day vs ≈$100k; ≈$35/bbl in freight alone (Hochstein; Saagar)",
+     "z": 0.85
+    },
+    {
+     "type": "T",
+     "label": "Riyadh airport struck: 14 killed, 300 injured; aircraft on the ground 134 → 38 by noon 10-14; ≈$4B of aircraft evacuated; ≈$400M insured damage; closed to Sunday midnight",
+     "z": 0.9
+    },
+    {
+     "type": "T",
+     "label": "Semafor 10-15: Saudi PIF drops five of its proposed 2034 World Cup stadiums (to three new, ten total); Six Kings tennis postponed",
+     "z": 0.8
+    },
+    {
+     "type": "T",
+     "label": "Zelenskyy (FT, 10-15): will keep striking Russian refineries 'whatever the Americans say'; US reportedly reduced Starlink access to curb drone strikes; US weighing de-sanctioning non-Iranian 'dark' tankers to free freight",
+     "z": 0.8
+    },
+    {
+     "type": "M",
+     "label": "IRGC spotters in small boats replacing bombed radar (Reuters); CENTCOM's first strike in weeks was a spotter boat",
+     "z": 0.7
+    },
+    {
+     "type": "M",
+     "label": "insurers and state oil companies, not navies, decide who runs the blockade (Kpler data)",
+     "z": 0.6
+    },
+    {
+     "type": "B",
+     "label": "Saudi–Houthi détente broken; Bab el-Mandeb as Saudi's remaining export route with Hormuz impaired",
+     "z": 0.7
+    }
+   ],
+   "stated": [
+    {
+     "type": "F",
+     "label": "the MOAB as 'messaging bombs' / propaganda before the midterms (both)",
+     "z": 0.5
+    },
+    {
+     "type": "F",
+     "label": "'they're liars'; 'MBS is a psychopath' (character)",
+     "z": 0.4
+    },
+    {
+     "type": "F",
+     "label": "'flailing… desperation… triage' — the deal and the tanker de-sanctioning read as forced",
+     "z": 0.6
+    }
+   ],
+   "challenge": [
+    {
+     "type": "X",
+     "label": "countries paying Iran for passage — the counter-claim to control, stated as 'increasing indications' (Krystal 10:53); verify",
+     "z": 0.8
+    }
+   ]
+  },
+  "positions": [
+   {
+    "quadrant": "A",
+    "station": "LI",
+    "fluid": "control as a cost: $1.4M/day; a million-dollar toll would be a discount",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [
+     "do I control the strait now",
+     "$1.4 million a day",
+     "a discount"
+    ],
+    "denomKeywords": [],
+    "note": "one quoted reader (Hochstein) — not a sampled corner"
+   },
+   {
+    "quadrant": "B",
+    "station": "RI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty, by-record"
+   },
+   {
+    "quadrant": "C",
+    "station": "LP",
+    "fluid": "the sinking read honestly (struck or mined — either way a warning); the toll; Bab el-Mandeb",
+    "denominated": "messaging bombs · sick and depraved and pathetic and absurd · lied, lied · psychopath · flailing",
+    "distinguishability": "High",
+    "fluidKeywords": [
+     "struck or hit a mine",
+     "paying Iran for the privilege",
+     "allowing them through for a price",
+     "Bab el-Mandeb"
+    ],
+    "denomKeywords": [
+     "messaging bombs",
+     "sick and depraved",
+     "pathetic and absurd",
+     "lied",
+     "psychopath",
+     "flailing"
+    ]
+   },
+   {
+    "quadrant": "D",
+    "station": "RP",
+    "fluid": "the record in numbers: the tanker, 19M vs 20M, 134 → 38, $400M, $35/bbl, five stadiums; the spotters; the insurers",
+    "denominated": "propaganda · liars · desperation · bloodiest day",
+    "distinguishability": "Medium",
+    "fluidKeywords": [
+     "sinking to the bottom",
+     "19 million barrels",
+     "convoy system",
+     "134 to 38",
+     "$400 million",
+     "walkie-talkie",
+     "insurance companies",
+     "$35 per barrel",
+     "five new stadiums"
+    ],
+    "denomKeywords": [
+     "propaganda op",
+     "liars",
+     "desperation",
+     "triage",
+     "bloodiest days"
+    ]
+   }
+  ]
+ },
+ "log": [
+  {
+   "date": "2026-10-15",
+   "what": "first cut — same-day; a new PG01 object (the Hormuz control claim) read from LP+RP; the deal remarks sorted to H1/H2; Krystal's 10:53 toll line filed to PG01 layer 2 as a challenge predicate",
+   "by": "Claude"
+  }
+ ],
+ "scoreboard": {
+  "dia": 30,
+  "tier": "fluid",
+  "declaredZ": 1.0,
+  "readZ": -0.57,
+  "readZRange": [
+   -0.2,
+   -0.8
+  ],
+  "stations": {
+   "LI": {
+    "dia": 9,
+    "spread": [
+     8,
+     10
+    ],
+    "readZ": -0.65,
+    "voices": {
+     "AH": {
+      "dia": 9,
+      "readZ": -0.65,
+      "n": 2
+     }
+    }
+   },
+   "RI": null,
+   "LP": {
+    "dia": 46,
+    "spread": [
+     12,
+     72
+    ],
+    "readZ": -0.57,
+    "voices": {
+     "KB": {
+      "dia": 46,
+      "readZ": -0.57,
+      "n": 7
+     }
+    }
+   },
+   "RP": {
+    "dia": 25,
+    "spread": [
+     8,
+     56
+    ],
+    "readZ": -0.56,
+    "voices": {
+     "SE": {
+      "dia": 25,
+      "readZ": -0.56,
+      "n": 17
+     }
+    }
+   }
+  },
+  "split": {
+   "topology": "none",
+   "station": "LP+RP",
+   "strength": 0.0,
+   "note": "both populist stations read Z the same way (the Strait is not controlled: −0.5 to −0.8). The gap is on Dia, not Z: Saagar carries the record (8–20) with frames at 44–56; Krystal's record lines are as fluid (12–14) but her frames run to 72 ('sick and depraved and pathetic and absurd', 'psychopath')"
+  },
+  "lumens": 57,
+  "zRule": "every line carries a z, inferred where implied (Sailor 2026-10-13); inferred lines are marked zInferred with a zWhy",
+  "mode": "open"
+ },
+ "lines": [
+  {
+   "t": 123,
+   "who": "SE",
+   "station": "RP",
+   "quote": "Trump is now considering dropping the MOAB against Iran — the largest non-nuclear bomb in the arsenal; the Pentagon's own write-up calls it an information operation",
+   "touch": "T",
+   "z": -0.3,
+   "dia": 18,
+   "mode": "open",
+   "note": "dates the plan (by report); a bomb for messaging is control not held",
+   "chapter": "The bomb",
+   "normX": 0.6024,
+   "normY": 0.5688,
+   "normZ": -0.225,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "a demonstration is what you do when the thing itself isn't working"
+  },
+  {
+   "t": 171,
+   "who": "SE",
+   "station": "RP",
+   "quote": "it's propaganda — it did nothing in Afghanistan; it's not a bunker buster; the only reason to drop it is mass civilian and infrastructure damage",
+   "touch": "F",
+   "z": -0.4,
+   "dia": 48,
+   "mode": "open",
+   "note": "the frame on the instrument; 'propaganda' the vehicle, Afghanistan the precedent",
+   "chapter": "The bomb",
+   "normX": 0.6906,
+   "normY": 0.6415,
+   "normZ": -0.3,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "the frame presumes control isn't held"
+  },
+  {
+   "t": 233,
+   "who": "SE",
+   "station": "RP",
+   "quote": "what Iran is doing in the Strait is genuinely unprecedented — the number of ships taken out; a tanker sinking to the bottom, visible from satellite, obstructing the channel; not a single response from CENTCOM",
+   "touch": "T",
+   "z": -0.8,
+   "dia": 20,
+   "mode": "open",
+   "note": "THE RECORD against the claim: a sunk tanker in the channel",
+   "chapter": "The strait",
+   "normX": 0.6059,
+   "normY": 0.5771,
+   "normZ": -0.6,
+   "quadrant": "D"
+  },
+  {
+   "t": 264,
+   "who": "SE",
+   "station": "RP",
+   "quote": "November 4th is going to be one of the bloodiest days of this war — they're penning it all up until after the midterms",
+   "touch": "F",
+   "z": -0.2,
+   "dia": 56,
+   "mode": "open",
+   "note": "a prediction as a frame, dated to election day + 1",
+   "chapter": "The bomb",
+   "normX": 0.6799,
+   "normY": 0.6983,
+   "normZ": -0.15,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "no claim on control; a claim on timing"
+  },
+  {
+   "t": 307,
+   "who": "KB",
+   "station": "LP",
+   "quote": "we're used to messaging bills in Congress — now we've got messaging bombs; that's how sick and depraved and pathetic and absurd this situation is",
+   "touch": "F",
+   "z": -0.3,
+   "dia": 72,
+   "mode": "open",
+   "note": "four vehicles in one sentence; the highest-Dia line",
+   "chapter": "The bomb",
+   "normX": 0.2348,
+   "normY": 0.694,
+   "normZ": -0.225,
+   "quadrant": "C",
+   "zInferred": true,
+   "zWhy": "the vehicles say the thing is failing"
+  },
+  {
+   "t": 358,
+   "who": "KB",
+   "station": "LP",
+   "quote": "just like he lied and said he destroyed the nuclear program, the Air Force, the Navy — he could lie and pretend this accomplished something before the midterm",
+   "touch": "F",
+   "z": -0.5,
+   "dia": 66,
+   "mode": "open",
+   "note": "character: 'lied' twice — Krystal's 10-12 register again",
+   "chapter": "The bomb",
+   "normX": 0.2437,
+   "normY": 0.6668,
+   "normZ": -0.375,
+   "quadrant": "C",
+   "zInferred": true,
+   "zWhy": "prior claims read as false, so this one too"
+  },
+  {
+   "t": 386,
+   "who": "SE",
+   "station": "RP",
+   "quote": "a Singaporean-flagged tanker sank to the bottom of the Strait — confirmed by the Singaporean government; its cargo drifting, smugglers converging on it",
+   "touch": "T",
+   "z": -0.8,
+   "dia": 12,
+   "mode": "open",
+   "note": "the record, sourced",
+   "chapter": "The strait",
+   "normX": 0.5638,
+   "normY": 0.5778,
+   "normZ": -0.6,
+   "quadrant": "D"
+  },
+  {
+   "t": 441,
+   "who": "KB",
+   "station": "LP",
+   "quote": "confusion over whether it was struck or hit a mine — good for the Iranians in either case; unprecedented, and a warning to every ship coming through",
+   "touch": "T",
+   "z": -0.7,
+   "dia": 14,
+   "mode": "open",
+   "note": "reads the uncertainty honestly and states the effect",
+   "chapter": "The strait",
+   "normX": 0.4167,
+   "normY": 0.5691,
+   "normZ": -0.525,
+   "quadrant": "C"
+  },
+  {
+   "t": 460,
+   "who": "SE",
+   "station": "RP",
+   "quote": "CENTCOM claims 19 million barrels came through on Monday — but in a convoy system, under cover of darkness and a US naval blockade; it was 20-some million per day before without any of that",
+   "touch": "T",
+   "z": -0.6,
+   "dia": 16,
+   "mode": "open",
+   "note": "THE NUMBER AGAINST THE NUMBER: the control claim and its denominator",
+   "chapter": "The strait",
+   "normX": 0.5733,
+   "normY": 0.5897,
+   "normZ": -0.45,
+   "quadrant": "D"
+  },
+  {
+   "t": 460,
+   "who": "CC",
+   "station": "O",
+   "quote": "some 19 million barrels were brought through the Strait of Hormuz [Monday]",
+   "touch": "O",
+   "z": 1.0,
+   "dia": null,
+   "mode": "—",
+   "note": "constitutive: the Z-assertion — throughput as control (CENTCOM, via the tape; as-of 10-12)",
+   "chapter": "The strait",
+   "normX": 0.5,
+   "normY": 0.5,
+   "normZ": 0.75,
+   "quadrant": "T"
+  },
+  {
+   "t": 505,
+   "who": "SE",
+   "station": "RP",
+   "quote": "Reuters: Iran is shifting tactics — the US bombed the radar, so the IRGC puts a man with binoculars and a walkie-talkie in a small boat; CENTCOM's first strike in weeks was one of those spotters",
+   "touch": "M",
+   "z": -0.6,
+   "dia": 14,
+   "mode": "open",
+   "note": "the mechanism of disruption, sourced",
+   "chapter": "The strait",
+   "normX": 0.5883,
+   "normY": 0.5625,
+   "normZ": -0.45,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "a strait disrupted by a man in a boat is not controlled"
+  },
+  {
+   "t": 653,
+   "who": "KB",
+   "station": "LP",
+   "quote": "increasing indications that oil transits because countries are paying Iran for the privilege — some of those barrel counts are because Iran is allowing them through for a price",
+   "touch": "X",
+   "z": -0.8,
+   "dia": 12,
+   "mode": "open",
+   "note": "→PG01 LAYER 2: who sets the price of passage. The counter-claim to control stated as a toll; the segment's falsifier of 'control'",
+   "chapter": "The toll",
+   "normX": 0.4182,
+   "normY": 0.5585,
+   "normZ": -0.6,
+   "quadrant": "C"
+  },
+  {
+   "t": 693,
+   "who": "SE",
+   "station": "RP",
+   "quote": "another ship sunk after being hit by a projectile; the number of attacks is now more than 20",
+   "touch": "T",
+   "z": -0.7,
+   "dia": 10,
+   "mode": "open",
+   "note": "the count",
+   "chapter": "The strait",
+   "normX": 0.5549,
+   "normY": 0.5751,
+   "normZ": -0.525,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "twenty attacks is not control"
+  },
+  {
+   "t": 707,
+   "who": "SE",
+   "station": "RP",
+   "quote": "the Emirati ruler to citizens — 'we must be prepared for the worst possibilities'; Aramco was literally on fire; we'll never know the extent because they're liars and arrest anyone who takes a picture",
+   "touch": "T",
+   "z": -0.6,
+   "dia": 40,
+   "mode": "open",
+   "note": "a dated statement (UAE) carrying a vehicle ('liars')",
+   "chapter": "The kingdom",
+   "normX": 0.6314,
+   "normY": 0.6599,
+   "normZ": -0.45,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "the Gulf's own statements price in a closure"
+  },
+  {
+   "t": 754,
+   "who": "SE",
+   "station": "RP",
+   "quote": "Riyadh airport: dozens of planes evacuated — $4 billion of aircraft moved; 300 injured, 14 killed; aircraft on the ground from 134 to 38 as of noon Wednesday; one written off, five damaged; $400 million in insurance claims",
+   "touch": "T",
+   "z": -0.5,
+   "dia": 8,
+   "mode": "open",
+   "note": "THE RECORD IN NUMBERS: the Gulf theater's realized layer, as-of 10-14; the lowest-Dia line",
+   "chapter": "The kingdom",
+   "normX": 0.5487,
+   "normY": 0.5701,
+   "normZ": -0.375,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "the strike is on the kingdom, not the strait — the control claim's neighbourhood"
+  },
+  {
+   "t": 845,
+   "who": "SE",
+   "station": "RP",
+   "quote": "it pierces the entire thing — Saudi uses money for cultural influence, LIV, F1, tennis — and now you can't fly there",
+   "touch": "F",
+   "z": -0.4,
+   "dia": 44,
+   "mode": "open",
+   "note": "the frame: soft power pierced",
+   "chapter": "The kingdom",
+   "normX": 0.6535,
+   "normY": 0.6607,
+   "normZ": -0.3,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "no claim on the strait"
+  },
+  {
+   "t": 986,
+   "who": "KB",
+   "station": "LP",
+   "quote": "MBS is on precarious footing — a psychopath, brutal tactics, his family doesn't like him; a population used to luxury on the backs of millions of guest workers",
+   "touch": "F",
+   "z": -0.3,
+   "dia": 70,
+   "mode": "open",
+   "note": "character; 'psychopath'",
+   "chapter": "The kingdom",
+   "normX": 0.241,
+   "normY": 0.6897,
+   "normZ": -0.225,
+   "quadrant": "C",
+   "zInferred": true,
+   "zWhy": "no claim on the strait"
+  },
+  {
+   "t": 1058,
+   "who": "KB",
+   "station": "LP",
+   "quote": "MBS made a devastating error provoking the Houthis after a détente; Bab el-Mandeb is how they export with Hormuz as it is — now in jeopardy",
+   "touch": "M",
+   "z": -0.7,
+   "dia": 28,
+   "mode": "open",
+   "note": "the second chokepoint named: Saudi exports depend on both",
+   "chapter": "The toll",
+   "normX": 0.3768,
+   "normY": 0.6043,
+   "normZ": -0.525,
+   "quadrant": "C",
+   "zInferred": true,
+   "zWhy": "two straits impaired is less control, not more"
+  },
+  {
+   "t": 1103,
+   "who": "AH",
+   "station": "LI",
+   "quote": "do I control the strait now? oil's getting out, but shipping costs are $1.4 million a day when they were $100,000 — I can say I control it, but it's costing me",
+   "touch": "O",
+   "z": -0.6,
+   "dia": 8,
+   "mode": "open",
+   "note": "THE INSTITUTIONAL LINE ON CONTROL: control as a cost — Biden's energy envoy, quoted inside the tape",
+   "chapter": "The toll",
+   "normX": 0.4437,
+   "normY": 0.4358,
+   "normZ": -0.45,
+   "quadrant": "A"
+  },
+  {
+   "t": 1117,
+   "who": "AH",
+   "station": "LI",
+   "quote": "if they signed a deal saying the strait is open and you pay a million dollars per ship — that would be a discount to where we are now",
+   "touch": "M",
+   "z": -0.7,
+   "dia": 10,
+   "mode": "open",
+   "note": "prices the toll against the convoy: the petrogas-dollar question in one sentence",
+   "chapter": "The toll",
+   "normX": 0.4349,
+   "normY": 0.4336,
+   "normZ": -0.525,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a toll cheaper than the convoy means the convoy isn't control"
+  },
+  {
+   "t": 1201,
+   "who": "SE",
+   "station": "RP",
+   "quote": "the military doesn't run the world — the insurance companies do, the state-backed oil companies do; everyone willing to run the blockade looked at the Kpler data and said, I don't know",
+   "touch": "M",
+   "z": -0.7,
+   "dia": 26,
+   "mode": "open",
+   "note": "who decides transit: insurers, not navies — the holder of the strait reread",
+   "chapter": "The toll",
+   "normX": 0.5983,
+   "normY": 0.6183,
+   "normZ": -0.525,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "if insurers decide, the navy doesn't control"
+  },
+  {
+   "t": 1213,
+   "who": "SE",
+   "station": "RP",
+   "quote": "breaking this morning: the US reduces Starlink to stop Ukrainian drones hitting Russian refineries; Zelensky says fine, then in the FT today — we don't care what the Americans say, we'll keep hitting them; and the US is looking to unsanction non-Iranian dark tankers to free up freight at $1.4 million a day",
+   "touch": "T",
+   "z": -0.7,
+   "dia": 20,
+   "mode": "open",
+   "note": "→THE DEAL, three days on: the ceasefire not honored (H2), the sanctions regime loosened to find ships. As-of 10-15",
+   "chapter": "The deal",
+   "normX": 0.5826,
+   "normY": 0.6017,
+   "normZ": -0.525,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "a government hunting for tankers does not control the water"
+  },
+  {
+   "t": 1264,
+   "who": "SE",
+   "station": "RP",
+   "quote": "ten to fifteen times more expensive — about $35 per barrel just in freight, and you can see it in oil",
+   "touch": "T",
+   "z": -0.6,
+   "dia": 8,
+   "mode": "open",
+   "note": "the freight premium, sized",
+   "chapter": "The toll",
+   "normX": 0.5574,
+   "normY": 0.5632,
+   "normZ": -0.45,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "the premium is the price of not controlling"
+  },
+  {
+   "t": 1296,
+   "who": "SE",
+   "station": "RP",
+   "quote": "we're going to buy Russian diesel even though we're legally not allowed to; free up Venezuelan and Russian tankers — you have to sacrifice parts of your remaining foreign policy, and being forced to shows desperation",
+   "touch": "O",
+   "z": -0.8,
+   "dia": 34,
+   "mode": "open",
+   "note": "THE DEAL FROM RP, hardened: 10-12's instrument reading ('a pitch to the market') is now 'triage'",
+   "chapter": "The deal",
+   "normX": 0.6535,
+   "normY": 0.6019,
+   "normZ": -0.6,
+   "quadrant": "D"
+  },
+  {
+   "t": 1319,
+   "who": "KB",
+   "station": "LP",
+   "quote": "it's just desperation, it's triage, it's flailing — this whole policy has been flailing from the get-go; he's now admitting it was a mistake to assassinate the Supreme Leader",
+   "touch": "F",
+   "z": -0.7,
+   "dia": 58,
+   "mode": "open",
+   "note": "the frame, with one record clause (the admission)",
+   "chapter": "The deal",
+   "normX": 0.2797,
+   "normY": 0.6652,
+   "normZ": -0.525,
+   "quadrant": "C",
+   "zInferred": true,
+   "zWhy": "flailing is the frame for not controlling"
+  },
+  {
+   "t": 1352,
+   "who": "SE",
+   "station": "RP",
+   "quote": "Semafor exclusive: Saudi's PIF to drop five of its proposed 2034 World Cup stadiums, narrowing to three new — ten total",
+   "touch": "T",
+   "z": -0.4,
+   "dia": 10,
+   "mode": "open",
+   "note": "dated (10-15), sourced; the realized layer in the kingdom's spending",
+   "chapter": "The kingdom",
+   "normX": 0.5661,
+   "normY": 0.5654,
+   "normZ": -0.3,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "spending cut on the strait's account"
+  },
+  {
+   "t": 1478,
+   "who": "SE",
+   "station": "RP",
+   "quote": "I think the MOAB is going to happen, before or right after the midterms — I think we're going to hit the energy infrastructure; he's seething",
+   "touch": "F",
+   "z": -0.5,
+   "dia": 46,
+   "mode": "open",
+   "note": "prediction as frame; reader hypothesis R4, out of the tracker",
+   "chapter": "The bomb",
+   "normX": 0.6766,
+   "normY": 0.647,
+   "normZ": -0.375,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "a strike on infrastructure is what you do when the strait isn't yours"
+  }
+ ]
+}

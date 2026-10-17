@@ -1,0 +1,504 @@
+{
+ "centralObject": {
+  "kind": "object",
+  "ref": "oh-eo-2026-04d",
+  "name": "Ohio Executive Order 2026-04D (Gov. DeWine, 2026-10-13), letting Ohio colleges field 2022 high school graduates for a fifth season, as the NCAA sued to void it",
+  "place": {
+   "quadrants": [
+    "A",
+    "B"
+   ],
+   "band": "fluid",
+   "z": -0.3,
+   "why": "It bears on the institutions that run eligibility (the NCAA and the schools it governs): an opt-in permission for Ohio colleges that cannot make the NCAA count the games, standing on a state-court pause while a federal suit and a Senate-passed preemption bill bear on it."
+  }
+ },
+ "tethers": [
+  {
+   "billId": "s-119-4668",
+   "bill": "S. 4668",
+   "title": "Protect College Sports Act of 2026",
+   "relation": "opposes",
+   "statusAsOf": "Passed Senate 77–22, 2026-09-28; held at the desk in the House, 2026-10-05",
+   "why": "The federal bill NCAA President Charlie Baker is urging on Congress. As passed, it preempts state law on specified subjects including years of eligibility, which would take away the power the order uses.",
+   "inDb": true,
+   "place": {
+    "quadrants": [
+     "A",
+     "B"
+    ],
+    "band": "coalition",
+    "z": 0,
+    "why": "A bill that never became the instrument; it neither delivers nor fails here."
+   }
+  },
+  {
+   "statute": "Sherman Antitrust Act",
+   "cite": "15 U.S.C. §§ 1–7",
+   "title": "Sherman Act",
+   "enacted": "1890-07-02",
+   "relation": "adjacent",
+   "why": "The athletes' federal challenges to NCAA eligibility limits (the class case now before the 10th Circuit) run on antitrust law; the order is a state route around the same rule. Identification is mine, from background, not re-verified in-window this run.",
+   "place": {
+    "quadrants": [
+     "A",
+     "B"
+    ],
+    "band": "fluid",
+    "z": 0,
+    "why": "Standing law the challenges rest on; it neither delivers nor fails here."
+   }
+  }
+ ],
+ "linkedBills": [
+  "s-119-4668"
+ ],
+ "title": "The Fifth Season",
+ "category": "States · College sports · Executive power",
+ "date": "2026-10-16",
+ "prompt": "Ohio's governor told his colleges they may ignore an NCAA rule for one class of athletes. Is that fairness for players caught by a rule change, or a state writing itself an exemption?",
+ "framing": "On Tuesday, October 13, 2026, Ohio Gov. Mike DeWine signed Executive Order 2026-04D. It gives Ohio colleges the option to let athletes from the high school class of 2022 play a fifth season despite the NCAA's eligibility rule. That rule, adopted in June 2026, allows five years of competition starting the academic year after an athlete turns 19 or first enrolls full-time; under NCAA guidance, 2022 graduates who have played four seasons get no fifth. On October 14, 2026, the Ohio Supreme Court paused a state appeals ruling finding them ineligible. On Friday, October 16, 2026, the NCAA sued DeWine in the Southern District of Ohio to have the order declared unconstitutional, calling it \"a hall pass to break the rules.\" The Senate passed the Protect College Sports Act 77–22 on September 28, 2026; it awaits the House.",
+ "framingKeywords": [
+  "fifth season",
+  "class of 2022",
+  "executive order",
+  "level playing field",
+  "eligibility rule"
+ ],
+ "prevalentAxis": "y",
+ "split": {
+  "topology": "axis",
+  "strength": 0.45,
+  "seam": "y at the rim: the institutional rims both say the order dies in court (A −0.7, B −0.7), the populist rims both say it delivers (C +0.5, D +0.75). The fluid band sorts on x instead (A −0.4, C −0.3 against B +0.3, D +0.55), and the coalition band peels: B alone goes negative (−0.35) while A (+0.15), C (+0.25) and D (+0.3) read the state-court pause as holding.",
+  "rationale": "The stated object is a state against a national rulebook, an institutional-versus-populist line, and that is where the rims land. Party sorts the plain reads, because the order came from a Republican governor; it does not survive to the rim, where the left-populist station sides with the players against the NCAA and the right-institutional station sides with uniform rules against its own governor.",
+  "zPattern": {
+   "centers": {
+    "A": -0.4,
+    "B": 0.3,
+    "C": -0.3,
+    "D": 0.55
+   },
+   "rims": {
+    "A": -0.7,
+    "B": -0.7,
+    "C": 0.5,
+    "D": 0.75
+   },
+   "note": "Centers are fluid z; coalition z: A +0.15, B −0.35, C +0.25, D +0.3. Rims sign by holder-trust: C and D trust the governor (or the players behind him), A and B do not. A, B and C each change sign between fluid and coalition, because each coalition voice names a different holder (the state court, the House vote, the athletes' suits)."
+  },
+  "ruledBy": null,
+  "date": "2026-10-16"
+ },
+ "antiValentBand": "coalition",
+ "antiValentRationale": "The coalition band is where three of four stations cross their own fluid sign: A and C credit an order from a Republican governor because the state court and the athletes are behind it, and B turns against its own governor over the Senate's 77–22 preemption vote. Each speaker there notices their side cheering for the wrong reason.",
+ "axes": {
+  "x": {
+   "pos": "Right",
+   "neg": "Left"
+  },
+  "y": {
+   "pos": "Institutional",
+   "neg": "Populist"
+  },
+  "z": {
+   "pos": "the order delivers: Ohio's class of 2022 gets its fifth season",
+   "neg": "it doesn't: a governor's order can't make a player eligible, and it ends in court or in a federal override"
+  }
+ },
+ "responses": {
+  "A": {
+   "fluid": {
+    "z": -0.4,
+    "zReason": "An executive order binds Ohio's own schools, not a national association, so eligibility will actually be settled by the federal suit and the 10th Circuit class case, not by the governor.",
+    "instrument": {
+     "holder": "Gov. DeWine",
+     "trusted": false
+    },
+    "text": "I actually think the 2022 class got a raw deal from that June rule. But a governor's order telling colleges they 'may' ignore it doesn't make anybody eligible. The real fight is the class case in the 10th Circuit, and I'd rather those athletes win it there than get a permission slip that falls apart the minute a federal judge looks at it.",
+    "xWord": "athlete fairness",
+    "yWord": "proper forum",
+    "words": [
+     "permission slip",
+     "10th Circuit",
+     "raw deal"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0.15,
+    "zReason": "The Ohio Supreme Court's pause of the ineligibility ruling keeps these athletes playing in Ohio while the NCAA's suit goes forward, so the order holds for now.",
+    "instrument": {
+     "holder": "the Ohio Supreme Court",
+     "trusted": true
+    },
+    "text": "Honestly, the Ohio Supreme Court pausing that ruling is what's keeping these kids on the field, and I'm glad for them. What bugs me is how fast people I usually agree with lined up behind Charlie Baker just because the order came from a Republican governor. Those same people oppose the Protect College Sports Act. So which is it, a national rulebook or athletes' rights?",
+    "xWord": "athletes' rights",
+    "yWord": "state court",
+    "words": [
+     "court pause",
+     "Baker cheering",
+     "which is it"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.7,
+    "zReason": "A governor can't override a national eligibility rule by decree, so the order collapses in federal court.",
+    "instrument": {
+     "holder": "Gov. DeWine",
+     "trusted": false
+    },
+    "text": "It's a Republican governor's stunt to buy Ohio State another season, dressed up as fairness. The courts will throw it out.",
+    "xWord": "stunt",
+    "yWord": "rule of law",
+    "words": [
+     "Buckeye stunt",
+     "dressed-up fairness",
+     "courts end it"
+    ],
+    "source": ""
+   },
+   "xSide": "left",
+   "source": ""
+  },
+  "B": {
+   "fluid": {
+    "z": 0.3,
+    "zReason": "The order covers only Ohio institutions that choose to opt in, and with the state high court's pause in place, those schools can field the 2022 class while the federal case is argued.",
+    "instrument": {
+     "holder": "Gov. DeWine",
+     "trusted": true
+    },
+    "text": "DeWine didn't order anybody to do anything. He gave Ohio's colleges an option for one class of athletes who got caught when the rules changed. That's a governor using the authority he has, carefully, the same way he handled NIL in 2021 and 2024. If the NCAA thinks he went too far, fine, it's in court, and that's the right place for it.",
+    "xWord": "state authority",
+    "yWord": "measured order",
+    "words": [
+     "an option",
+     "one class",
+     "NIL precedent"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": -0.35,
+    "zReason": "The Protect College Sports Act would preempt state law on years of eligibility, so if the House passes it, the order is gone.",
+    "instrument": {
+     "holder": "Gov. DeWine",
+     "trusted": false
+    },
+    "text": "I'm sympathetic to these players, I really am. But the people I vote with talk about federalism, and then most of them cheer for Ohio getting its own carve-out while the Senate passes a bill 77–22 to take this exact power away from states. If California did this for USC, they'd call it chaos. I can't make it add up, and I don't think DeWine's order outlasts the House vote.",
+    "xWord": "federalism",
+    "yWord": "uniform rules",
+    "words": [
+     "Ohio carve-out",
+     "77–22",
+     "if California did it"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.7,
+    "zReason": "An order that sets one state against the national rulebook gets overridden by the federal courts or by Congress.",
+    "instrument": {
+     "holder": "Gov. DeWine",
+     "trusted": false
+    },
+    "text": "Rules are rules. Fifty governors handing out fifty hall passes means there's no level playing field at all.",
+    "xWord": "rules are rules",
+    "yWord": "level playing field",
+    "words": [
+     "hall passes",
+     "fifty rulebooks",
+     "order first"
+    ],
+    "source": ""
+   },
+   "xSide": "right",
+   "source": ""
+  },
+  "C": {
+   "fluid": {
+    "z": -0.3,
+    "zReason": "The order only permits schools to play these athletes, so whether any of them actually suits up depends on athletic departments that answer to conferences and the NCAA, not to the players.",
+    "instrument": {
+     "holder": "Ohio's college athletic departments",
+     "trusted": false
+    },
+    "text": "Look, the 2022 kids are losing a season and the NIL and revenue-sharing money that comes with it. That's real. But read the order: colleges 'may' play them. So the decision goes right back to the same athletic departments that didn't stick up for these players in the first place. Why would anybody trust that?",
+    "xWord": "players' pay",
+    "yWord": "who decides",
+    "words": [
+     "lost season",
+     "revenue sharing",
+     "colleges may"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0.25,
+    "zReason": "The order and the state high court's pause keep the 2022 class on Ohio rosters while their class case is argued in the 10th Circuit.",
+    "instrument": {
+     "holder": "the athletes in the class case",
+     "trusted": true
+    },
+    "text": "The athletes are the ones forcing this. The Colorado class case, the Hamilton County suit, all of it, and DeWine's order just buys them time while the 10th Circuit decides. What's strange to me is how the people I organize with won't say a nice word about it because Tressel and a Republican governor are behind it. If a player gets paid this year, does it matter whose order it was?",
+    "xWord": "athlete power",
+    "yWord": "the players' suits",
+    "words": [
+     "buys time",
+     "Tressel problem",
+     "who signed it"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": 0.5,
+    "zReason": "Every season the order keeps a player on the field is a season of pay the NCAA can't take back.",
+    "instrument": {
+     "holder": "Gov. DeWine",
+     "trusted": true
+    },
+    "text": "The NCAA is a cartel that's lived off unpaid labor for a century. If something costs it a fight, the players win.",
+    "xWord": "cartel",
+    "yWord": "labor",
+    "words": [
+     "unpaid labor",
+     "cartel",
+     "players win"
+    ],
+    "source": ""
+   },
+   "xSide": "left",
+   "source": ""
+  },
+  "D": {
+   "fluid": {
+    "z": 0.55,
+    "zReason": "With the Ohio Supreme Court's pause and the order on the books, Ohio schools can play their 2022 athletes this season unless a federal judge acts.",
+    "instrument": {
+     "holder": "Gov. DeWine and Lt. Gov. Tressel",
+     "trusted": true
+    },
+    "text": "These are Ohio kids who did everything right, and then a rule written in June tells them they're done. Tressel's right, why should they lose what athletes in other states get? DeWine stood up for them, the state Supreme Court backed him up, and they're playing. That's what it looks like when somebody actually delivers.",
+    "xWord": "Ohio kids",
+    "yWord": "stood up",
+    "words": [
+     "did everything right",
+     "Tressel",
+     "they're playing"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0.3,
+    "zReason": "The order holds as long as the state court's pause holds and the House doesn't pass preemption, and right now neither has changed.",
+    "instrument": {
+     "holder": "Gov. DeWine",
+     "trusted": true
+    },
+    "text": "I'm with DeWine on this one. But some of the guys cheering loudest around me don't care about fairness, they care about Ohio State's depth chart. And a lot of the Republicans those same people voted for just passed the Protect College Sports Act in the Senate. So the order works for now, but I'm not sure the people on my side know who's actually going to end it.",
+    "xWord": "home state",
+    "yWord": "fairness",
+    "words": [
+     "depth chart",
+     "Senate Republicans",
+     "works for now"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": 0.75,
+    "zReason": "An Ohio governor protecting Ohio athletes beats an out-of-state bureaucracy that can't enforce its rule inside the state.",
+    "instrument": {
+     "holder": "Gov. DeWine",
+     "trusted": true
+    },
+    "text": "It's an Indianapolis power grab, plain and simple. Ohio takes care of its own.",
+    "xWord": "Ohio first",
+    "yWord": "power grab",
+    "words": [
+     "Indianapolis",
+     "takes care",
+     "own kids"
+    ],
+    "source": ""
+   },
+   "xSide": "right",
+   "source": ""
+  }
+ },
+ "diatribe": {
+  "LF": {
+   "text": "I actually think the 2022 class got a raw deal from that June rule. But a governor's order telling colleges they 'may' ignore it doesn't make anybody eligible.",
+   "side": "left",
+   "band": "fluid",
+   "keywords": [
+    "a governor's order",
+    "doesn't make anybody eligible",
+    "raw deal"
+   ]
+  },
+  "LC": {
+   "text": "What's strange to me is how the people I organize with won't say a nice word about it because Tressel and a Republican governor are behind it. If a player gets paid this year, does it matter whose order it was?",
+   "side": "left",
+   "band": "coalition",
+   "keywords": [
+    "the people I organize with",
+    "a Republican governor",
+    "whose order it was"
+   ]
+  },
+  "LD": {
+   "text": "It's a Republican governor's stunt to buy Ohio State another season, dressed up as fairness. The courts will throw it out.",
+   "side": "left",
+   "band": "denominated",
+   "keywords": [
+    "Ohio State",
+    "stunt",
+    "dressed up as fairness"
+   ]
+  },
+  "RF": {
+   "text": "DeWine didn't order anybody to do anything. He gave Ohio's colleges an option for one class of athletes who got caught when the rules changed.",
+   "side": "right",
+   "band": "fluid",
+   "keywords": [
+    "an option for one class",
+    "didn't order anybody",
+    "the rules changed"
+   ]
+  },
+  "RC": {
+   "text": "The people I vote with talk about federalism, and then most of them cheer for Ohio getting its own carve-out while the Senate passes a bill 77–22 to take this exact power away from states.",
+   "side": "right",
+   "band": "coalition",
+   "keywords": [
+    "The people I vote with",
+    "federalism",
+    "its own carve-out"
+   ]
+  },
+  "RD": {
+   "text": "It's an Indianapolis power grab, plain and simple. Ohio takes care of its own.",
+   "side": "right",
+   "band": "denominated",
+   "keywords": [
+    "Indianapolis",
+    "power grab",
+    "takes care of its own"
+   ]
+  }
+ },
+ "diatribeLayer": "stated",
+ "objectLayer": {
+  "declared": "stated",
+  "stated": "Fairness for the class of 2022, caught by a rule change.",
+  "operative": "An opt-in permission for Ohio colleges to field athletes the NCAA counts ineligible, resting on a state-court pause while a federal suit and a Senate-passed preemption bill bear on it.",
+  "inversion": "Lean, not ruled: the right-institutional station turns against a Republican governor's assertion of state power on the strength of a Republican federal-preemption bill; left stations that back athletes' rights hesitate over an order that grants athletes eligibility. See meta.newsroomFindings."
+ },
+ "window": {
+  "close": "2026-10-16",
+  "why": "The order was signed 2026-10-13, but the object as the register found it (an executive order whose force is contested) finished forming on 2026-10-16, when the NCAA sued to void it. The state-court pause (10-14) and the suit (10-16) are pertinent and fall after the signing, so under §4c the trigger day is re-declared to 10-16 rather than widened. Declared at authoring, before any z.",
+  "ruledBy": null,
+  "ruledOn": null
+ },
+ "meta": {
+  "dialecticsRef": "obj_astate_allowing-eligibility-executive-governor",
+  "status": "draft",
+  "source": "Claude draft — newsroom drafting (scheduled), authored z-first against Trace Formula v1 per scripts/newsroom/AUTHORING_PROTOCOL.md v1.5. Filed to drafts/claude; no aiDeltas lineage. Rulings: none.",
+  "editHistory": [
+   {
+    "at": "2026-10-16T21:00:21.498Z",
+    "by": "Claude (scheduled drafting)",
+    "what": "authored: object (holder corrected 'a state' → Gov. DeWine; trigger re-declared, see window.why) -> window -> frame -> central object (Ohio EO 2026-04D) + tethers (S. 4668 opposes; Sherman Act adjacent) + place -> axes -> twelve and object z (blind subagent; no edits) -> split/diatribe/layers -> sweep"
+   }
+  ],
+  "aiDeltas": [],
+  "frameFirst": {
+   "date": "2026-10-16",
+   "by": "Claude, under §4c (window declared at authoring; sweep before z). Object NOT ruled — Claude's read, correctable by Sailor.",
+   "status": "Frame authored before any z; the twelve and the object's own z authored blind z-first by a subagent (meta.blindAuthoring). Stations unruled.",
+   "objectLean": {
+    "stated": "fairness for the 2022 class after a rule change",
+    "operative": "an opt-in state permission against a national eligibility rule, already in federal court",
+    "inversion": "lean, not ruled: right-institutional against its own governor over federal preemption; athlete-rights left hesitant over an order that helps athletes"
+   },
+   "titleLean": "'The Fifth Season' — Claude's; Sailor names Readings",
+   "sourcesInWindow": [
+    "governor.ohio.gov (2026-10-13): Executive Order 2026-04D signed; option for public and private colleges to allow otherwise eligible 2022 graduates to compete; NCAA's June model (five years from the academic year after turning 19 or first full-time enrollment); DeWine and Tressel quotes; Borovicanin v. NCAA in Hamilton County",
+    "LiveNow Fox / AP (2026-10-14): order signed Tuesday; 10th Circuit argument the same day; Baker: DeWine 'cannot legislate NCAA eligibility rules'; Baker urges the Protect College Sports Act",
+    "Fox Sports / AP (2026-10-16): NCAA sues DeWine in federal court three days after the order; complaint's \"a hall pass to break the rules\"; Ohio Supreme Court paused the appeals ruling",
+    "Hoodline (2026-10-16): 41-page complaint in the Southern District of Ohio; Ohio Supreme Court stay 2026-10-14; Senate passed S. 4668 77–22 on 2026-09-28",
+    "Morgan Lewis (2026-09): S. 4668 passed 77–22; preemption limited to specified subjects including years of eligibility; House path uncertain",
+    "Prism catalog: s-119-4668, passed Senate 2026-09-28, held at the desk 2026-10-05"
+   ],
+   "background_preWindow": [
+    "2021 and 2024: DeWine executive orders on athlete name, image and likeness rights",
+    "June 2026: NCAA adopts the five-year eligibility model",
+    "August 2026: a federal appeals panel pauses a district judge's nationwide class injunction granting a fifth year",
+    "Sherman Act (1890) as the basis of the athletes' federal challenges: my background, not re-verified this run"
+   ]
+  },
+  "framingAudit": {
+   "date": "2026-10-16",
+   "by": "Claude — frame-first authoring under §4c. Not a ruling.",
+   "window": "2026-10-16 (declared, see window.why)",
+   "verifiedInWindow": [
+    "Executive Order 2026-04D signed Tuesday 2026-10-13 (governor.ohio.gov)",
+    "class of 2022; fifth season; public and private colleges, opt-in (governor.ohio.gov)",
+    "NCAA rule adopted June 2026: five years from the academic year after turning 19 or first full-time enrollment; 2022 graduates with four seasons played get no fifth (governor.ohio.gov, AP)",
+    "Ohio Supreme Court stay 2026-10-14 (Hoodline; Fox Sports/AP)",
+    "NCAA suit Friday 2026-10-16, Southern District of Ohio; \"a hall pass to break the rules.\" (Fox Sports/AP, Hoodline)",
+    "Protect College Sports Act passed Senate 77–22 on 2026-09-28; awaits the House (catalog, Morgan Lewis, Hoodline)"
+   ],
+   "keptUnverifiedDate": [
+    "Sources disagree on the count of Ohio Division I programs (eight or nine); the frame does not state it.",
+    "The complaint's specific legal claims are not in my sources beyond 'unconstitutional and contrary to state law'. ESPN, Sportico and NBC4 would not load."
+   ],
+   "deliberatelyExcluded_afterWindow": [
+    "The Ohio Supreme Court's briefing deadline (2026-10-19) and anything that follows it",
+    "Any ruling on the NCAA's federal suit or in the 10th Circuit class case"
+   ]
+  },
+  "blindAuthoring": {
+   "date": "2026-10-16",
+   "author": "Claude (general-purpose subagent) — blind: given the frame, prompt, keywords, axes, a station/band brief, a short dated background (DeWine's NIL orders, the Tressel and Baker quotes, S. 4668 and its opponents, the class case and Borovicanin), R-0921-1 and the voice rules only; no other Reading, no register, no web",
+   "zFirst": true,
+   "instrumentOnAll12": true,
+   "objectZ": "The object's own place.z (−0.3) authored by the same subagent, with the twelve, before the words.",
+   "rulings": "NONE — every station awaits Sailor's ruling. z, zReason, instrument and text as authored; no edits after hand-back.",
+   "authorNote": "The signs I trust least are the coalition flips (A and C coalition positive, B coalition negative). Each one depends on the speaker naming a different holder than their fluid station does, either the state court or the players' suit instead of the governor. That's defensible as being in transit, but it makes the sign depend on holder choice more than on any change in what the order actually delivers. C fluid is also close to zero, because naming the athletic departments as the holder is an interpretive call. D rim's +0.75 is the station least supported by the facts, since the NCAA's suit and the Senate's preemption vote both point the other way."
+  },
+  "newsroomFindings": {
+   "inversionLeans": [
+    {
+     "station": "B (right·institutional)",
+     "what": "B-coalition and the B rim turn against a Republican governor's use of state power over college sports, siding with uniform national rules and the Senate's preemption bill.",
+     "prior": "Prism catalog: S. 4668 (Cruz) passed the Senate 77–22 on 2026-09-28 (in-window coverage, not a live Reading)",
+     "note": "Lean only. A states'-rights station reading a federal override as the better rule."
+    },
+    {
+     "station": "A / C (left)",
+     "what": "Stations that back athletes against the NCAA hesitate over an order that gives athletes eligibility, because a Republican governor signed it; A and C coalition both say so themselves.",
+     "prior": "none cited beyond the stations' own text; the AFL-CIO, NAACP and Congressional Black Caucus opposition to S. 4668 (Morgan Lewis, 2026-09) is the nearest coverage",
+     "note": "Lean only, weaker: no dated prior from a live Reading."
+    }
+   ],
+   "inversionNote": "Two leans; the first has a cited prior. Sailor rules.",
+   "permanence": "New object. Not a return: DeWine's 2021 and 2024 NIL orders are earlier objects of the same kind (lean: a pattern, not a return)."
+  },
+  "holderCorrection": "Register holder 'a state' → Gov. Mike DeWine (Executive Order 2026-04D). formedOn kept 10-16 as the trigger day; the order itself was signed 10-13."
+ },
+ "rid": "rdg_zgkkvpr0f6kb",
+ "ridLineage": "minted 2026-10-16 (UTC) by the scheduled newsroom drafting task; filed directly to drafts/claude",
+ "schema": "reading/v1",
+ "formulaVersion": "1",
+ "updatedAt": "2026-10-16T21:00:21.498Z",
+ "authorTier": "claude",
+ "newsroom": {
+  "oid": "obj_astate_allowing-eligibility-executive-governor",
+  "queuedOn": "2026-10-16",
+  "draftedOn": "2026-10-16"
+ },
+ "images": []
+}

@@ -1,0 +1,555 @@
+{
+ "what": "The Races — the register Parallelogram tracks. A race is a seat with two conditional Readings (data/readings/races/), each authored z-first by the twelve stations and paid on election day: one collapses into the live Reading, the other is retired as the record of the miss. Polling enters as outcome weight only, never as z. The record is the candidates' actual legislative objects; the trail is what they said, paid after. Each candidate also carries a second needle, gap{talk, done, line}: what they say scored the same way as the needle, against what their record has done — Claude drafts, 2026-10-12.",
+ "schema": "races/v1",
+ "electionDay": "2026-11-03",
+ "authored": "2026-10-12",
+ "races": [
+  {
+   "id": "me-sen",
+   "seat": "Maine · United States Senate · Class 2",
+   "shortSeat": "Maine, Senate",
+   "object": "The seat. A six-year instrument held since 1997 by the only Republican senator in a state that has voted against Trump three times.",
+   "question": "Does Maine's seat deliver the thing Maine asked for — rent, insulin, the shipyard — or does it deliver a vote to a caucus?",
+   "rating": "Tossup (Cook, Sabato) · Lean D (Economist, Silver Bulletin, Split Ticket) — as of late September",
+   "candidates": [
+    {
+     "id": "collins",
+     "name": "Susan Collins",
+     "party": "R",
+     "role": "Incumbent since 1997 · Chair, Senate Appropriations",
+     "bioguideId": "C001035",
+     "station": "B",
+     "stationWord": "institutional right",
+     "variant": "collins",
+     "portrait": "https://bioguide.congress.gov/bioguide/photo/C/C001035.jpg",
+     "gap": {
+      "talk": 0.5,
+      "done": 0.2,
+      "line": "She says Maine first and independent of the party. Her record: she did cross her party on the big spending bill, the rescissions and the health-insurance rule — but she voted for the Iran sanctions bill and every funding bill with everyone else. The independence is real on money; it stops at war."
+     }
+    },
+    {
+     "id": "jackson",
+     "name": "Troy Jackson",
+     "party": "D",
+     "role": "Logger from Allagash · Maine Senate President 2018–2024 · nominated at convention 2026-07-25 after Graham Platner withdrew",
+     "station": "C",
+     "stationWord": "populist left",
+     "variant": "jackson",
+     "gap": {
+      "talk": 0.7,
+      "done": 0.4,
+      "line": "He says lower costs, no more war money, stand with workers. His record is twenty years in Augusta with real bills passed — school meals, drug prices — and no vote yet on a war or a tariff, because he has never had one. The gap is untested, not broken."
+     }
+    }
+   ],
+   "variants": [
+    {
+     "id": "jackson",
+     "headline": "Jackson takes the seat",
+     "rid": "rdg_race_me_jackson",
+     "file": "../data/readings/races/rdg_race_me_jackson.json"
+    },
+    {
+     "id": "collins",
+     "headline": "Collins holds",
+     "rid": "rdg_race_me_collins",
+     "file": "../data/readings/races/rdg_race_me_collins.json"
+    }
+   ],
+   "polls": {
+    "note": "Hand-curated from published toplines; the daily task appends. Detection only — weights the fold, never moves z.",
+    "leader": "jackson",
+    "rows": [
+     {
+      "pollster": "Marist",
+      "dates": "2026-10-01 → 10-04",
+      "n": 1505,
+      "pop": "RV",
+      "moe": 3.8,
+      "jackson": 51,
+      "collins": 47,
+      "src": "https://maristpoll.marist.edu/polls/midterm-elections-in-maine-october-2026/"
+     },
+     {
+      "pollster": "Washington Post / Schar",
+      "dates": "2026-09-30 → 10-05",
+      "pop": "RV",
+      "moe": 3.6,
+      "jackson": 50,
+      "collins": 46,
+      "src": "https://www.washingtonpost.com/politics/2026/10/09/poll-democrat-troy-jackson-narrowly-leads-susan-collins-maine-senate-race/"
+     },
+     {
+      "pollster": "CBS News / YouGov",
+      "dates": "2026-09-23 → 10-01",
+      "n": 1144,
+      "pop": "RV",
+      "moe": 4.7,
+      "jackson": null,
+      "collins": null,
+      "tied": true,
+      "src": "https://www.cbsnews.com/news/maine-senate-poll-2026-10-02/"
+     },
+     {
+      "pollster": "AARP (Fabrizio Ward / Impact)",
+      "dates": "2026-09-20 → 09-22",
+      "n": 982,
+      "pop": "LV",
+      "moe": 3.1,
+      "jackson": 50,
+      "collins": 47,
+      "src": "https://www.aarp.org/government-elections/maine-election-poll-2026/"
+     },
+     {
+      "pollster": "NYT / Press Herald / Siena",
+      "dates": "2026-09-15 → 09-22",
+      "n": 619,
+      "pop": "RV",
+      "moe": 4.9,
+      "jackson": 46,
+      "collins": 49,
+      "src": "https://www.pressherald.com/2026/09/24/susan-collins-polling-maine-senate-race/"
+     }
+    ],
+    "issue": [
+     {
+      "what": "Cost of living is the top issue",
+      "value": "41%",
+      "src": "WaPo/Schar"
+     },
+     {
+      "what": "Say Collins sides with Trump too often",
+      "value": "58%",
+      "src": "WaPo/Schar"
+     },
+     {
+      "what": "Collins' lead on bringing federal money to Maine",
+      "value": "+24",
+      "src": "WaPo/Schar"
+     },
+     {
+      "what": "Want Democrats to win the Senate",
+      "value": "55 – 42",
+      "src": "WaPo/Schar"
+     },
+     {
+      "what": "Voters 50+: Collins 53 – 44; under 50: Jackson by 25",
+      "value": "",
+      "src": "AARP"
+     },
+     {
+      "what": "Say their vote is mainly a vote against the President",
+      "value": "44%",
+      "src": "Marist"
+     }
+    ]
+   },
+   "record": {
+    "note": "Collins' roll calls are read from Prism's own record (data/prism_votes.json). Jackson's are the Maine Legislature's; a LegiScan pull is owed.",
+    "collins": [
+     {
+      "ref": "hr-119-5334",
+      "bill": "H.R. 5334",
+      "title": "Sanctioning Russia and Iran Act (the delegation) — Public Law 119-111",
+      "vote": "yea",
+      "tally": "86–11",
+      "date": "2026-08-07",
+      "object": "slate01",
+      "rid": "rdg_mrzfjcdizsds",
+      "read": "With the chamber. The instrument passed with her, not because of her."
+     },
+     {
+      "ref": "sjres-119-197",
+      "bill": "S.J.Res. 197",
+      "title": "Disapproval of CMS's ACA 2027 payment-parameters rule (Congressional Review Act, Baldwin)",
+      "vote": "yea",
+      "tally": "48–51 · the only Republican yea",
+      "date": "2026-09-29",
+      "read": "Alone. One vote against her caucus on health costs, and it lost by three."
+     },
+     {
+      "ref": "hr-119-6644",
+      "bill": "H.R. 6644",
+      "title": "ROAD to Housing Act — the 350-home investor ban, law without signature",
+      "vote": "yea",
+      "tally": "89–10 · 85–5",
+      "date": "2026-06-22",
+      "object": "slate05",
+      "rid": "rdg_mu7ban350hom",
+      "read": "With the chamber. The delivered object on the slate has her name on it, with eighty-eight others."
+     },
+     {
+      "ref": "hr-119-1",
+      "bill": "H.R. 1",
+      "title": "The reconciliation act (the 'big bill')",
+      "vote": "nay",
+      "tally": "50–50, VP",
+      "date": "2025-07-01",
+      "read": "Against. The one Republican nay that didn't change the outcome."
+     },
+     {
+      "ref": "hr-119-4",
+      "bill": "H.R. 4",
+      "title": "Rescissions Act of 2025",
+      "vote": "nay",
+      "tally": "51–48",
+      "date": "2025-07-17",
+      "read": "Against. The Appropriations chair voting to keep appropriations."
+     },
+     {
+      "ref": "hr-119-3633",
+      "bill": "H.R. 3633",
+      "title": "Digital Asset Market Clarity Act — cloture",
+      "vote": "nay",
+      "tally": "49–50",
+      "date": "2026-09-15",
+      "read": "Against, and it fell by one."
+     }
+    ],
+    "jackson": [
+     {
+      "ref": "me-legislature",
+      "title": "Twenty years in the Maine Legislature; Senate President 2018–2024 (six years)",
+      "read": "The record is a state record: universal school meals, prescription-drug pricing, reproductive-health protections, property-tax relief — as his campaign states them. Bill numbers owed from LegiScan.",
+      "src": "https://www.jacksonformaine.com/about"
+     },
+     {
+      "ref": "blockade",
+      "title": "The loggers' blockade against wage-cutting landowners (late 1990s)",
+      "read": "His founding story, and it names her: a first-term Senator Collins promised to listen and didn't. The race, told by him, is that blockade thirty years on.",
+      "src": "https://www.jacksonformaine.com/about"
+     }
+    ]
+   },
+   "trail": {
+    "note": "Said on the trail — positions as hypotheses, paid after the vote. verbatim:false means the position is sourced but not quoted.",
+    "rows": [
+     {
+      "id": "me-s1",
+      "who": "jackson",
+      "date": "2026-10",
+      "said": "Collins has been in Washington thirty years and sides with Trump when it counts.",
+      "verbatim": false,
+      "object": "The caucus vote",
+      "pays": "If Jackson wins and votes with his own caucus on the first CR with war money, the line pays against him.",
+      "src": "https://www.washingtonpost.com/politics/2026/10/09/poll-democrat-troy-jackson-narrowly-leads-susan-collins-maine-senate-race/"
+     },
+     {
+      "id": "me-s2",
+      "who": "collins",
+      "date": "2026-10",
+      "said": "Maine first: the seat on Appropriations is the seat that brings the money home.",
+      "verbatim": false,
+      "object": "Federal money to Maine",
+      "pays": "Measurable on the FY27 appropriations if she holds; a +24 issue lead is the base's expectation, not a z.",
+      "src": "https://www.washingtonpost.com/politics/2026/10/09/poll-democrat-troy-jackson-narrowly-leads-susan-collins-maine-senate-race/"
+     },
+     {
+      "id": "me-s3",
+      "who": "collins",
+      "date": "2026-09-29",
+      "said": "Voted alone to disapprove the ACA payment rule — the only Republican.",
+      "verbatim": false,
+      "object": "sjres-119-197",
+      "pays": "A roll call, already paid: 48–51. The question the paper asks is whether a lone vote is a delivery or a signal.",
+      "src": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00251.htm"
+     }
+    ]
+   }
+  },
+  {
+   "id": "tx-sen",
+   "seat": "Texas · United States Senate · Class 2",
+   "shortSeat": "Texas, Senate",
+   "object": "The seat John Cornyn held since 2002 and lost in a runoff. No Democrat has won it, or any Texas Senate seat, since 1988.",
+   "question": "Does Texas's seat deliver — vouchers, insulin, the Valley, the lawsuits — or is it a thirty-eight-year habit on the ballot?",
+   "rating": "Tilt R (Inside Elections) · RCP average Talarico +2.8 (9/18–10/8)",
+   "candidates": [
+    {
+     "id": "paxton",
+     "name": "Ken Paxton",
+     "party": "R",
+     "role": "Texas Attorney General since 2015 · beat Cornyn in the 2026-05-26 runoff, 64–36 · Trump endorsed 05-19",
+     "station": "D",
+     "stationWord": "populist right",
+     "variant": "paxton",
+     "gap": {
+      "talk": 0.3,
+      "done": -0.3,
+      "line": "He says he fights for Texans against Washington. His record as Attorney General is lawsuits — including one to throw his own opponent out of the Legislature, which the state Supreme Court threw out instead. Nothing on his record lowers a cost or ends a war."
+     }
+    },
+    {
+     "id": "talarico",
+     "name": "James Talarico",
+     "party": "D",
+     "role": "Texas State Representative, HD-50, since 2019 · seminarian · won the 03-03 primary outright, 52%, over Rep. Jasmine Crockett",
+     "station": "C",
+     "stationWord": "populist left",
+     "variant": "talarico",
+     "gap": {
+      "talk": 0.8,
+      "done": 0.6,
+      "line": "He says insulin, schools, no vouchers. His record: one law with his name on it (the $25 insulin cap) and three fights lost on the floor — vouchers, the Ten Commandments bill, the THC ban. The talk and the record point the same way; most of the record is losses."
+     }
+    }
+   ],
+   "variants": [
+    {
+     "id": "talarico",
+     "headline": "Talarico flips Texas",
+     "rid": "rdg_race_tx_talarico",
+     "file": "../data/readings/races/rdg_race_tx_talarico.json"
+    },
+    {
+     "id": "paxton",
+     "headline": "Paxton holds Texas",
+     "rid": "rdg_race_tx_paxton",
+     "file": "../data/readings/races/rdg_race_tx_paxton.json"
+    }
+   ],
+   "polls": {
+    "note": "RealClearPolling table as of 2026-10-08 (average Talarico 48.1 – Paxton 45.3). Detection only.",
+    "leader": "talarico",
+    "average": {
+     "talarico": 48.1,
+     "paxton": 45.3,
+     "span": "9/18 – 10/8",
+     "src": "https://www.realclearpolling.com/polls/senate/general/2026/texas/talarico-vs-paxton"
+    },
+    "rows": [
+     {
+      "pollster": "University of Texas (per BP 10-15)",
+      "dates": "≈2026-10-14",
+      "talarico": null,
+      "paxton": null,
+      "margin": "Talarico +3",
+      "note": "margin only, as read on the tape (cited as the most accurate Texas pollster of 2024); toplines and field dates to verify against the release",
+      "verified": false
+     },
+     {
+      "pollster": "Trafalgar",
+      "dates": "2026-10-06 → 10-08",
+      "talarico": 47,
+      "paxton": 44
+     },
+     {
+      "pollster": "YouGov",
+      "dates": "2026-09-28 → 10-05",
+      "talarico": 50,
+      "paxton": 44
+     },
+     {
+      "pollster": "Rasmussen",
+      "dates": "2026-09-28 → 09-29",
+      "talarico": 46,
+      "paxton": 45
+     },
+     {
+      "pollster": "Fox News",
+      "dates": "2026-09-24 → 09-28",
+      "talarico": 51,
+      "paxton": 49
+     },
+     {
+      "pollster": "NYT / Siena",
+      "dates": "2026-09-21 → 09-30",
+      "talarico": 51,
+      "paxton": 45
+     },
+     {
+      "pollster": "Big Data Poll",
+      "dates": "2026-09-24 → 09-26",
+      "talarico": 47,
+      "paxton": 45
+     },
+     {
+      "pollster": "UMass Lowell",
+      "dates": "2026-09-18 → 09-28",
+      "talarico": 45,
+      "paxton": 45
+     },
+     {
+      "pollster": "Marist",
+      "dates": "2026-09-17 → 09-20",
+      "talarico": 50,
+      "paxton": 44
+     },
+     {
+      "pollster": "Emerson",
+      "dates": "2026-09-12 → 09-14",
+      "talarico": 47,
+      "paxton": 46
+     }
+    ],
+    "issue": [
+     {
+      "what": "Polls since July with Talarico ahead or tied",
+      "value": "19 of 20",
+      "src": "RCP"
+     },
+     {
+      "what": "Last Democrat to win a Texas Senate seat",
+      "value": "1988",
+      "src": ""
+     },
+     {
+      "what": "Paxton's runoff margin over the sitting senator",
+      "value": "64 – 36",
+      "src": ""
+     },
+     {
+      "what": "Fort Bend County (Barbara Jordan Research Center) — Talarico margin; Trump–Harris tied there in 2024",
+      "value": "+18 (county); ≈+2 projected statewide",
+      "src": "Press · Breaking Points 2026-10-15 \"Texans Republicans Panic\" (cut: Parameters/09_Parallelograms/Press/2026-10-15_BP_Texas_Trail/cut.md) · SE 6:06",
+      "verified": false
+     },
+     {
+      "what": "Gas prices ↔ Trump approval, near 1:1 (cross-arc: PG01 → slate)",
+      "value": "the segment's \"single most important dynamic\"",
+      "src": "Press · Breaking Points 2026-10-15 \"Texans Republicans Panic\" (cut: Parameters/09_Parallelograms/Press/2026-10-15_BP_Texas_Trail/cut.md) · KB 10:23 (M)",
+      "verified": false
+     },
+     {
+      "what": "AP: share saying Trump prioritizes \"people like me\"",
+      "value": "11% (56% of independents: not at all)",
+      "src": "Press · Breaking Points 2026-10-15 \"Texans Republicans Panic\" (cut: Parameters/09_Parallelograms/Press/2026-10-15_BP_Texas_Trail/cut.md) · SE 11:35",
+      "verified": false
+     }
+    ]
+   },
+   "record": {
+    "note": "Neither candidate has a federal roll call. Talarico's record is the Texas House (TLO/LegiScan); Paxton's is the Attorney General's docket — the executive/ruling kind the protocol still owes.",
+    "talarico": [
+     {
+      "ref": "tx-89-sb2",
+      "bill": "SB 2 (89th)",
+      "title": "Education savings accounts — the voucher program",
+      "vote": "against · offered a statewide-referendum amendment, tabled 2025-04-17",
+      "date": "2025-04-17",
+      "read": "The object he ran against. Signed into law May 2025; it stands whoever wins.",
+      "src": "https://en.wikipedia.org/wiki/James_Talarico"
+     },
+     {
+      "ref": "tx-89-sb10",
+      "bill": "SB 10 (89th)",
+      "title": "Ten Commandments in every classroom",
+      "vote": "against · point of order that delayed the bill; it passed",
+      "date": "2025-05",
+      "read": "The floor speech that made him national. The law stands.",
+      "src": "https://en.wikipedia.org/wiki/James_Talarico"
+     },
+     {
+      "ref": "tx-89-sb3",
+      "bill": "SB 3 (89th)",
+      "title": "Hemp THC ban",
+      "vote": "against",
+      "date": "2025",
+      "read": "A populist no on a prohibition.",
+      "src": "https://en.wikipedia.org/wiki/James_Talarico"
+     },
+     {
+      "ref": "tx-88-hb82",
+      "bill": "HB 82 (88th)",
+      "title": "Insulin cap — $25 a month",
+      "vote": "author · passed",
+      "date": "2023",
+      "read": "The delivered object. The one thing on his record that is a statute with his name on it.",
+      "src": "https://en.wikipedia.org/wiki/James_Talarico"
+     },
+     {
+      "ref": "tx-87-hb54",
+      "bill": "HB 54 (87th) · Javier Ambler's Law",
+      "title": "Bars state law enforcement from contracting with reality TV",
+      "vote": "author · passed",
+      "date": "2021",
+      "read": "Delivered.",
+      "src": "https://en.wikipedia.org/wiki/James_Talarico"
+     },
+     {
+      "ref": "tx-quorum-2025",
+      "bill": "The quorum break",
+      "title": "One of 51 Democrats who left the state over the mid-decade congressional map, 2025-08-04 → 08-18",
+      "vote": "walked",
+      "date": "2025-08",
+      "read": "Paxton sued on 08-08 to vacate 13 seats; the Texas Supreme Court dismissed it 2026-05-15. The two candidates have already met in court.",
+      "src": "https://en.wikipedia.org/wiki/James_Talarico"
+     }
+    ],
+    "paxton": [
+     {
+      "ref": "tx-ag-quorum-suit",
+      "title": "Suit to declare 13 House seats vacant after the quorum break (filed 2025-08-08; dismissed for want of jurisdiction 2026-05-15)",
+      "read": "The executive kind: an instrument aimed at his opponent, and it failed in the court he usually wins in.",
+      "src": "https://en.wikipedia.org/wiki/James_Talarico"
+     },
+     {
+      "ref": "tx-ag-docket",
+      "title": "The Attorney General's docket, 2015 → — the lawsuits as the legislative analog",
+      "read": "Owed: a Federal Register / court-docket ingestion for the executive kind. Until then the record is the one object above.",
+      "src": ""
+     }
+    ]
+   },
+   "trail": {
+    "note": "Said on the trail — positions as hypotheses, paid after the vote.",
+    "rows": [
+     {
+      "id": "tx-s1",
+      "who": "talarico",
+      "date": "2025-04-17",
+      "said": "Put vouchers to the voters — a statewide referendum before the program starts.",
+      "verbatim": false,
+      "object": "SB 2",
+      "pays": "Already paid at the state level (tabled). In the Senate it becomes a federal-voucher vote when one comes.",
+      "src": "https://en.wikipedia.org/wiki/James_Talarico"
+     },
+     {
+      "id": "tx-s2",
+      "who": "paxton",
+      "date": "2025-08-08",
+      "said": "Members who break quorum have abandoned their seats.",
+      "verbatim": false,
+      "object": "The quorum suit",
+      "pays": "Paid: dismissed 2026-05-15. The paper records the miss on his ledger, not his opponent's.",
+      "src": "https://en.wikipedia.org/wiki/James_Talarico"
+     },
+     {
+      "id": "tx-s3",
+      "who": "talarico",
+      "date": "2023",
+      "said": "Insulin at $25 a month — the cap is the model for drug pricing.",
+      "verbatim": false,
+      "object": "HB 82",
+      "pays": "Delivered in Texas. The federal version is the hypothesis: does he carry it to the Senate floor in the 120th?",
+      "src": "https://en.wikipedia.org/wiki/James_Talarico"
+     },
+     {
+      "id": "tx-s4",
+      "who": "paxton",
+      "date": "2026-10-14",
+      "said": "Abbott is struggling but he has a lot of money; she has none. My disadvantages: not having time to raise more money, the negative ads from a brutal primary, and a well-funded, well-known opponent.",
+      "verbatim": true,
+      "object": "the seat — his own position in the race",
+      "pays": "Pays 11-03: if he holds, the disadvantages were survivable; if he loses, his own ledger named the cause first.",
+      "src": "Press · Breaking Points 2026-10-15 \"Texans Republicans Panic\" (cut: Parameters/09_Parallelograms/Press/2026-10-15_BP_Texas_Trail/cut.md) · leaked audio 3:45–4:24 (date approximate — the tape says new; verify)"
+     }
+    ]
+   },
+   "press": [
+    {
+     "id": "bp_2026-10-15_texas_trail",
+     "date": "2026-10-15",
+     "program": "Breaking Points",
+     "stations": "LP+RP (+ forecaster, LI pending)",
+     "dia": 19,
+     "readZ": 0.32,
+     "reads": "flips",
+     "file": "../data/press/bp_2026-10-15_texas_trail.json",
+     "note": "the first trail cut on the seat; z is belief about the outcome, paid 11-03, never weight"
+    }
+   ]
+  }
+ ]
+}

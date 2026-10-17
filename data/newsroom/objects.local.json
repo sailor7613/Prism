@@ -1,6 +1,6 @@
 {
  "schema": "prism_object_overlay_v1",
- "updatedAt": "2026-10-03T06:07:23.349Z",
+ "updatedAt": "2026-10-17T02:09:39.226Z",
  "note": "Written ONLY by the drafting task (Sailor commits it). The scan owns objects.json and only reads this file. See scripts/newsroom/overlay.js.",
  "objects": {
   "obj_astate_bills-changes-elections-gavin": {
@@ -634,7 +634,38 @@
    "aliasCandidates": [
     "obj_afederal_access-cnn-house-judge"
    ],
-   "permanenceNote": "motion pending: outlets asked the judge 09-29 to extend the block; no ruling yet — left queued (§4c), Claude 2026-09-30"
+   "permanenceNote": "landed: preliminary injunction 2026-10-13, appealed 2026-10-14; the scan did not see it (no return); found by search. Publish attempt exit 5 (no token) — draft stays in drafts/claude. Claude 2026-10-17 UTC",
+   "status": "drafted",
+   "drafts": {
+    "claude": "rdg_am1i9bcuma60"
+   },
+   "draftedOn": "2026-10-16",
+   "inversions": [
+    {
+     "station": "D",
+     "lean": "D rim flips −0.7 → +0.5 against the 09-24 TRO draft (rdg_oq1spmhz7azt): holder changes from the judiciary (distrusted) to the President (trusted to keep the plane); anti-valent, draft-to-draft, no found reader",
+     "ruled": false
+    },
+    {
+     "station": "B",
+     "lean": "right-institutional coalition faults its own side’s pleading (no national-security reason on 09-18); no dated prior",
+     "ruled": false
+    }
+   ],
+   "corrections": [
+    {
+     "field": "formedOn",
+     "was": "2026-09-29",
+     "now": "2026-10-14",
+     "why": "the motion (09-29) was pending; the instrument formed with the preliminary injunction late 10-13 and the notice of appeal 10-14 — Claude 2026-10-17 UTC"
+    },
+    {
+     "field": "holder",
+     "was": "a federal court",
+     "now": "Judge Timothy J. Kelly (D.D.C.), D.C. Circuit on appeal",
+     "why": "names the court — Claude"
+    }
+   ]
   },
   "obj_afederal_can-deport-judge-largest": {
    "status": "drafted",
@@ -651,12 +682,7 @@
      "why": "An immigration judge is an executive-branch (Justice Department) adjudicator, not an Article III federal court; the federal district court (Judge Hanlon) is a separate, earlier leg (the June 2026 release order)."
     }
    ],
-   "permanenceNote": "A return (lean): the INA §237(a)(4)(C) foreign-policy-ground arc — Khalil and Mahdawi (2025), Sarsour arrest 2026-03-30, release June 2026, removability ruling 2026-09-30; appeal due within 30 days.",
-   "publishAttempt": {
-    "on": "2026-09-30T19:28:51.586Z",
-    "exit": 5,
-    "why": "no GITHUB_PUBLISH_TOKEN on the Mac; draft stays in drafts/claude"
-   }
+   "permanenceNote": "A return (lean): the INA §237(a)(4)(C) foreign-policy-ground arc — Khalil and Mahdawi (2025), Sarsour arrest 2026-03-30, release June 2026, removability ruling 2026-09-30; appeal due within 30 days."
   },
   "obj_thesenat_bill-block-congress-democrats": {
    "status": "drafted",
@@ -686,12 +712,7 @@
      "why": "A failed Senate motion to advance (53-47, 60 needed); no court or ruling involved."
     }
    ],
-   "permanenceNote": "A return (lean): the congressional stock-ban arc — STOCK Act 2012, Hawley committee vote 2025-07-30, House passage with voter ID 2026-07-22, Senate vote 2026-09-30.",
-   "publishAttempt": {
-    "on": "2026-10-01T02:07:25.271Z",
-    "exit": 5,
-    "why": "no GITHUB_PUBLISH_TOKEN on the Mac; draft stays in drafts/claude"
-   }
+   "permanenceNote": "A return (lean): the congressional stock-ban arc — STOCK Act 2012, Hawley committee vote 2025-07-30, House passage with voter ID 2026-07-22, Senate vote 2026-09-30."
   },
   "obj_thesenat_aimed-bill-bills-blocks": {
    "status": "drafted",
@@ -721,12 +742,7 @@
      "why": "The blocked bill is H.R. 9340, the Ratepayer Protection Act (in catalog)."
     }
    ],
-   "permanenceNote": "A return (lean): the data-center-costs arc — White House Ratepayer Protection Pledge 2026-03-04 (expanded 07-23), House passage 09-16, the AI accord 09-29 (rdg_8duj3r93ot5w), Senate vote 09-30.",
-   "publishAttempt": {
-    "on": "2026-10-01T18:10:21.532Z",
-    "exit": 5,
-    "why": "no GITHUB_PUBLISH_TOKEN on the Mac; draft stays in drafts/claude"
-   }
+   "permanenceNote": "A return (lean): the data-center-costs arc — White House Ratepayer Protection Pledge 2026-03-04 (expanded 07-23), House passage 09-16, the AI accord 09-29 (rdg_8duj3r93ot5w), Senate vote 09-30."
   },
   "obj_afederal_allowing-approves-buyout-close": {
    "status": "drafted",
@@ -749,12 +765,7 @@
      "why": "Names the court; the instrument is the decree, not the court."
     }
    ],
-   "permanenceNote": "Return (lean, unverified this run): the Ellison media arc (Skydance–Paramount 2025) extended to CNN; touches the White House press-ban cards.",
-   "publishAttempt": {
-    "on": "2026-10-01T18:10:21.532Z",
-    "exit": 5,
-    "why": "no GITHUB_PUBLISH_TOKEN on the Mac; draft stays in drafts/claude"
-   }
+   "permanenceNote": "Return (lean, unverified this run): the Ellison media arc (Skydance–Paramount 2025) extended to CNN; touches the White House press-ban cards."
   },
   "obj_dhs_guidance-ice-memo-rules": {
    "status": "drafted",
@@ -843,12 +854,81 @@
      "ruled": false
     }
    ],
-   "permanenceNote": "A return (lean): the voter-ID bill that failed cloture 08-08 (S. 5271) came back tied to the stock bill.",
-   "publishAttempt": {
-    "on": "2026-10-03T06:07:23.349Z",
-    "exit": 5,
-    "why": "no GITHUB_PUBLISH_TOKEN on the Mac; draft stays in drafts/claude"
-   }
+   "permanenceNote": "A return (lean): the voter-ID bill that failed cloture 08-08 (S. 5271) came back tied to the stock bill."
+  },
+  "obj_astate_allowing-eligibility-executive-governor": {
+   "status": "drafted",
+   "drafts": {
+    "claude": "rdg_zgkkvpr0f6kb"
+   },
+   "draftedOn": "2026-10-16",
+   "inversions": [
+    {
+     "station": "B",
+     "lean": "right-institutional turns against a Republican governor’s state power, siding with the Senate preemption bill S. 4668 (77–22, 2026-09-28)",
+     "ruled": false
+    },
+    {
+     "station": "A/C",
+     "lean": "athlete-rights left hesitates over an order that grants athletes eligibility because a Republican governor signed it; no dated prior",
+     "ruled": false
+    }
+   ],
+   "corrections": [
+    {
+     "field": "holder",
+     "from": "a state",
+     "to": "Gov. Mike DeWine (Executive Order 2026-04D)",
+     "by": "Claude",
+     "on": "2026-10-16"
+    },
+    {
+     "field": "kind",
+     "note": "kept order; the order was signed 2026-10-13, trigger day kept at 2026-10-16 (the day the NCAA sued) — see the Reading window.why",
+     "by": "Claude",
+     "on": "2026-10-16"
+    }
+   ]
+  },
+  "obj_thejusti_alleged-california-doj-kills": {
+   "status": "drafted",
+   "drafts": {
+    "claude": "rdg_9wjfhhpxcp0d"
+   },
+   "draftedOn": "2026-10-16",
+   "inversions": [
+    {
+     "station": "B/D",
+     "lean": "states-run-elections right backing a federal suit to control which ballots California counts; no dated prior",
+     "ruled": false
+    },
+    {
+     "station": "A",
+     "lean": "left-institutional defending a state’s refusal to open a federal list; no dated prior",
+     "ruled": false
+    }
+   ],
+   "corrections": [
+    {
+     "field": "formedOn",
+     "from": "2026-10-16",
+     "to": "2026-10-15",
+     "why": "suit filed Thursday 10-15; 10-16 is the NPR roundup’s report date",
+     "by": "Claude",
+     "on": "2026-10-16"
+    },
+    {
+     "field": "headline",
+     "note": "register headline bundles an unrelated Oregon school shooting; object is the DOJ suit only",
+     "by": "Claude",
+     "on": "2026-10-16"
+    }
+   ],
+   "permanenceNote": "return (lean): DHS’s earlier unsubstantiated 190,000 figure came back as a 20,000-name list in a suit — Claude 2026-10-16"
+  },
+  "obj_thepresi_bar-did-exam-house": {
+   "status": "dismissed",
+   "dismissedWhy": "No instrument: a press secretary saying she did not pass the bar exam is a personal disclosure, not a vote, order or law; the register’s kind (vote) and holder (the President) are both wrong — Claude 2026-10-16"
   }
  }
 }

@@ -1,0 +1,357 @@
+{
+ "schema": "press/parallelogram/v0",
+ "id": "nyt_2026-10-15_gulf_oil_flowing_lede",
+ "status": "claude-draft",
+ "kind": "parallelogram",
+ "partial": "beta lede",
+ "partialNote": "a beta lede — headline + dek + ¶1–¶6; 'checking your access' wall after ¶6 signed-out. Runs as data: printed flagged, excluded from corner composites and indices (Sailor 10-16). The first LI reading on H6 (US control of the Strait), surfaced by the 10-16 sweep.",
+ "title": "Still Flowing, at a Price",
+ "source": {
+  "program": "The New York Times",
+  "network": "The New York Times (Business)",
+  "format": "print report",
+  "date": "2026-10-15",
+  "title": "Gulf Oil Is Still Flowing Despite a Surge in Attacks on Ships",
+  "feedTitle": "Gulf Oil Is Still Flowing Despite a Surge in Attacks on Ships",
+  "byline": "Peter Eavis",
+  "url": "https://www.nytimes.com/2026/10/15/business/hormuz-oil-tanker-attacks.html",
+  "length": 6,
+  "paragraphs": 6,
+  "transcript": "Parameters/09_Parallelograms/Press/2026-10-15_NYT_Gulf_Oil_Flowing/PARTIAL.md",
+  "sweep": "Prism/data/press/sweeps/sweep_2026-10-16.json"
+ },
+ "positions": "paragraphs",
+ "arc": "PG01",
+ "index": null,
+ "object": {
+  "label": "US control of the Strait of Hormuz (H6, proposed) — throughput as control",
+  "layer": 1,
+  "zAxis": {
+   "pos": "open under US control",
+   "neg": "not — passage priced by Iran, insurers, freight"
+  }
+ },
+ "transform": "Z-assertion",
+ "transformNote": "'still flowing' credits the open Strait by a count, with 26 ships struck and one sunk in the same month — the same move as CENTCOM's 19M, read from the institutional left-center with the price attached in the dek",
+ "names": {
+  "NYT": "The New York Times (headline, dek)",
+  "PE": "Peter Eavis",
+  "SM": "Samir Madani (TankerTrackers, quoted)",
+  "KP": "Kpler (cited)"
+ },
+ "depth": {
+  "what": "distinct touches across the opening ÷ scored lines",
+  "touches": [
+   "O",
+   "M",
+   "T"
+  ],
+  "lines": 8,
+  "value": 0.38,
+  "note": "three touches in eight lines; five are T — the LI house style again: the headline says, the paragraphs count"
+ },
+ "trace": {
+  "object": {
+   "x": 0,
+   "y": 0,
+   "z": 0.1
+  },
+  "shadow": {
+   "x": 0,
+   "y": 0,
+   "z": 1.0
+  },
+  "predicates": {
+   "operative": [
+    {
+     "type": "T",
+     "label": "26 vessels struck this month; a 730-ft container ship sunk Wednesday 10-14 (¶2)",
+     "z": -0.5
+    },
+    {
+     "type": "T",
+     "label": "TankerTrackers: >12M bbl/d crude through the Strait in October, slightly above September (¶5)",
+     "z": 0.4
+    },
+    {
+     "type": "T",
+     "label": "Kpler: ≈10M bbl/d in October, down from ≈11M in September (¶6)",
+     "z": -0.2
+    },
+    {
+     "type": "T",
+     "label": "under US protection, Middle East exports neared prewar levels last month (¶3)",
+     "z": 0.5
+    }
+   ],
+   "stated": [
+    {
+     "type": "F",
+     "label": "'still flowing' · 'braving' · 'skyrocketed' · 'most dangerous period'",
+     "z": 0.2
+    }
+   ],
+   "challenge": [
+    {
+     "type": "X",
+     "label": "two trackers disagree on the direction (TankerTrackers up, Kpler down) — the count is contested inside the lede",
+     "z": 0.0
+    }
+   ]
+  },
+  "positions": [
+   {
+    "quadrant": "A",
+    "station": "LI",
+    "fluid": "counts ships struck and barrels through, by named tracker, month against month",
+    "denominated": "still flowing · braving · skyrocketed · most dangerous",
+    "distinguishability": "High",
+    "fluidKeywords": [
+     "26 vessels",
+     "730-foot",
+     "12 million barrels",
+     "10 million barrels",
+     "11 million",
+     "prewar levels"
+    ],
+    "denomKeywords": [
+     "still flowing",
+     "braving",
+     "skyrocketed",
+     "most dangerous period"
+    ],
+    "note": "beta lede — the first LI reading on H6; reads the Strait as open-at-a-price: the headline credits flow, the dek prices it, the paragraphs count it both ways"
+   },
+   {
+    "quadrant": "B",
+    "station": "RI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty, by-record"
+   },
+   {
+    "quadrant": "C",
+    "station": "LP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — compare bp_2026-10-15_hormuz (Krystal: −0.8, passage is tolled)"
+   },
+   {
+    "quadrant": "D",
+    "station": "RP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — compare bp_2026-10-15_hormuz (Saagar: the number against the number)"
+   }
+  ]
+ },
+ "log": [
+  {
+   "date": "2026-10-16",
+   "what": "beta lede cut (hed · dek · ¶1–¶6). Surfaced by the 10-16 sweep (NYT Business). Reductions filed, not text; one quotation under fifteen words. The H6 record: both trackers' October throughput (10–12M bbl/d crude) sits under H6's 15M falsifier line — unit caveat flagged (crude vs CENTCOM's 'barrels')",
+   "by": "Claude"
+  }
+ ],
+ "scoreboard": {
+  "dia": 16,
+  "tier": "fluid",
+  "declaredZ": null,
+  "readZ": 0.1,
+  "readZRange": [
+   0.5,
+   -0.5
+  ],
+  "stations": {
+   "LI": {
+    "dia": 16,
+    "spread": [
+     8,
+     30
+    ],
+    "readZ": 0.1,
+    "voices": {
+     "NYT": {
+      "dia": 26,
+      "readZ": 0.05,
+      "n": 2
+     },
+     "PE": {
+      "dia": 12,
+      "readZ": 0.06,
+      "n": 5
+     },
+     "SM": {
+      "dia": 10,
+      "readZ": 0.4,
+      "n": 1
+     }
+    }
+   },
+   "RI": null,
+   "LP": null,
+   "RP": null
+  },
+  "split": {
+   "topology": "intra",
+   "station": "LI",
+   "strength": 0.3,
+   "note": "one reporter, two trackers pulling opposite ways on the count (+0.4 / −0.2) under a headline that picks one — a small split inside the lede, on the record not the frame"
+  },
+  "lumens": 85,
+  "zRule": "every line carries a z, inferred where implied (Sailor 2026-10-13); inferred lines are marked zInferred with a zWhy",
+  "mode": "open"
+ },
+ "lines": [
+  {
+   "t": 0,
+   "who": "NYT",
+   "station": "LI",
+   "quote": "Gulf oil is still flowing despite a surge in attacks on ships",
+   "touch": "O",
+   "z": 0.3,
+   "dia": 22,
+   "mode": "surface-bound",
+   "note": "THE HEADLINE: flow credited ('still'), attacks sized as a 'surge' — H6's Z-assertion in LI register",
+   "chapter": "The door",
+   "normX": 0.3838,
+   "normY": 0.4245,
+   "normZ": 0.225,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "'still flowing' asserts the open Strait before the count"
+  },
+  {
+   "t": 0,
+   "who": "NYT",
+   "station": "LI",
+   "quote": "operators are braving the Strait, but risks are high and transport costs have skyrocketed",
+   "touch": "M",
+   "z": -0.2,
+   "dia": 30,
+   "mode": "open",
+   "note": "THE DEK: the price attached — Hochstein's $1.4M/day line (BP 10-15) as a dek; 'braving' and 'skyrocketed' the two vehicles",
+   "chapter": "The door",
+   "normX": 0.3583,
+   "normY": 0.408,
+   "normZ": -0.15,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "if passage costs this much, control is nominal — the LI concession"
+  },
+  {
+   "t": 1,
+   "who": "PE",
+   "station": "LI",
+   "quote": "Iran is hitting a lot more tankers, but operators are still going through, transporting oil in significant volumes",
+   "touch": "T",
+   "z": 0.2,
+   "dia": 16,
+   "mode": "open",
+   "note": "restates the headline with 'a lot more' and 'significant' — both unsized",
+   "chapter": "The record",
+   "normX": 0.4337,
+   "normY": 0.4051,
+   "normZ": 0.15,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "flow at volume, lightly credited"
+  },
+  {
+   "t": 2,
+   "who": "PE",
+   "station": "LI",
+   "quote": "26 vessels struck so far this month — the most dangerous period of the war; on Wednesday a 730-foot container ship sank after a projectile hit it",
+   "touch": "T",
+   "z": -0.5,
+   "dia": 8,
+   "mode": "open",
+   "note": "THE RECORD against the claim: the count of strikes and the sinking (BP's Singapore-flagged ship, 10-14), dated",
+   "chapter": "The record",
+   "normX": 0.4487,
+   "normY": 0.4317,
+   "normZ": -0.375,
+   "quadrant": "A"
+  },
+  {
+   "t": 3,
+   "who": "PE",
+   "station": "LI",
+   "quote": "under US military protection tankers had been returning in greater numbers; Middle East exports got close to prewar levels last month",
+   "touch": "T",
+   "z": 0.5,
+   "dia": 12,
+   "mode": "open",
+   "note": "THE CONTROL LINE: protection → return → near-prewar exports — the institutional read of H6, dated to September",
+   "chapter": "The record",
+   "normX": 0.4369,
+   "normY": 0.4216,
+   "normZ": 0.375,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "prewar levels under escort reads as control working, last month"
+  },
+  {
+   "t": 4,
+   "who": "PE",
+   "station": "LI",
+   "quote": "Iran's escalated attacks appear aimed at reversing the surge, but tracker data suggest the recovery has held up",
+   "touch": "M",
+   "z": 0.3,
+   "dia": 18,
+   "mode": "open",
+   "note": "the mechanism: attacks vs escort, with the trackers as the referee",
+   "chapter": "The record",
+   "normX": 0.4194,
+   "normY": 0.4066,
+   "normZ": 0.225,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "'held up' credits the escort over the attacks"
+  },
+  {
+   "t": 5,
+   "who": "SM",
+   "station": "LI",
+   "quote": "TankerTrackers: over 12 million barrels of crude a day through the waterway on average this month, slightly above September — “Exports continue to strengthen”",
+   "touch": "T",
+   "z": 0.4,
+   "dia": 10,
+   "mode": "open",
+   "note": "THE COUNT (one tracker): up month on month; → H6 record — under the 15M line, but crude only",
+   "chapter": "The record",
+   "normX": 0.4369,
+   "normY": 0.4317,
+   "normZ": 0.3,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "up month on month reads as open"
+  },
+  {
+   "t": 6,
+   "who": "PE",
+   "station": "LI",
+   "quote": "Kpler: nearly 10 million barrels of oil a day this month, down from around 11 million in September",
+   "touch": "T",
+   "z": -0.2,
+   "dia": 8,
+   "mode": "open",
+   "note": "THE COUNT (the other tracker): down month on month — the lede's own split; → H6 record, also under 15M",
+   "chapter": "The record",
+   "normX": 0.44,
+   "normY": 0.4393,
+   "normZ": -0.15,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "down month on month reads as closing — the paywall falls here"
+  }
+ ]
+}

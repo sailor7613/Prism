@@ -1,0 +1,520 @@
+{
+ "centralObject": {
+  "kind": "object",
+  "ref": "us-v-california-cdcal-2026-10-15",
+  "name": "United States v. California (C.D. Cal., filed 2026-10-15): the Justice Department's suit to hold back about 20,000 mail ballots from voters it calls likely noncitizens",
+  "place": {
+   "quadrants": [
+    "A",
+    "C"
+   ],
+   "band": "denominated",
+   "z": -0.45,
+   "why": "It presses on California's election officials and on the voters on the list: a hold built on matches DOJ's own complaint says can be outdated, delivered with 48 hours' notice after ballots went out, by a department that has lost 26 of 31 voter-roll suits, so it is unlikely to stop much before Election Day and likely to catch some citizens."
+  }
+ },
+ "tethers": [
+  {
+   "statute": "Voting by aliens",
+   "cite": "18 U.S.C. § 611 (added by the Illegal Immigration Reform and Immigrant Responsibility Act, Pub. L. 104-208)",
+   "title": "Federal ban on noncitizen voting in federal elections",
+   "enacted": "1996-09-30",
+   "relation": "invokes",
+   "why": "DOJ rests the suit on the federal prohibition on noncitizen voting in federal elections and the Supremacy Clause. Coverage does not give the section; naming § 611 is my identification, and its enactment date is from background, not re-verified this run.",
+   "place": {
+    "quadrants": [
+     "A",
+     "C"
+    ],
+    "band": "fluid",
+    "z": 0,
+    "why": "Standing law the suit invokes; it neither delivers nor fails here."
+   }
+  },
+  {
+   "statute": "National Voter Registration Act of 1993",
+   "cite": "52 U.S.C. § 20507(c)(2)(A) (Pub. L. 103-31)",
+   "title": "NVRA 90-day bar on systematic removals",
+   "enacted": "1993-05-20",
+   "relation": "adjacent",
+   "why": "Bars systematic programs to remove names from the rolls within 90 days of a federal election. Bonta cites it; DOJ says it seeks no purge, only a hold on counting, which is how the suit stays outside it. Section and date from background.",
+   "place": {
+    "quadrants": [
+     "A",
+     "B"
+    ],
+    "band": "fluid",
+    "z": 0,
+    "why": "Standing law the suit is shaped around; it neither delivers nor fails here."
+   }
+  },
+  {
+   "billId": "hr-119-22",
+   "bill": "H.R. 22",
+   "title": "SAVE Act",
+   "relation": "adjacent",
+   "statusAsOf": "Passed House 2025-04-10; received in the Senate, no vote",
+   "why": "Would require documentary proof of citizenship at registration: the front-end check the suit tries to do at the counting end, eighteen months after the bill stalled in the Senate. D-coalition names it as the real fix.",
+   "inDb": true,
+   "place": {
+    "quadrants": [
+     "A",
+     "C"
+    ],
+    "band": "denominated",
+    "z": 0,
+    "why": "A bill that never became the instrument; it neither delivers nor fails here."
+   }
+  }
+ ],
+ "linkedBills": [
+  "hr-119-22"
+ ],
+ "title": "The Thumb Drive",
+ "category": "Elections · Justice Department · States",
+ "date": "2026-10-15",
+ "prompt": "The Justice Department wants about 20,000 California mail ballots held back as likely noncitizen votes. Is that stopping illegal votes before they count, or a late list built to cast doubt on an election?",
+ "framing": "On Thursday, October 15, 2026, the Justice Department sued the State of California in the Central District of California. It asks a judge to bar counting vote-by-mail ballots from about 20,000 registered voters it calls likely noncitizens until their citizenship is determined, and says it is not seeking to purge the rolls. The names came from matching by U.S. Citizenship and Immigration Services and Homeland Security Investigations, run outside the SAVE system. On Tuesday, October 13, 2026, Acting Deputy Attorney General Trent McCotter sent the list to Secretary of State Shirley Weber and Los Angeles County on a password-protected thumb drive with a 48-hour deadline; the county declined to open it, citing data-security rules. Attorney General Todd Blanche: \"California has refused to comply.\" Weber: \"I will not disenfranchise thousands of Californians.\" Most counties had begun mailing ballots the week before; the midterms are less than three weeks away.",
+ "framingKeywords": [
+  "likely noncitizens",
+  "mail ballots",
+  "20,000 names",
+  "thumb drive",
+  "Election Day"
+ ],
+ "prevalentAxis": "x",
+ "split": {
+  "topology": "axis",
+  "strength": 0.95,
+  "seam": "x, clean in every band: both left stations read a late list that catches citizens (fluid A −0.7, C −0.75; rims −0.95, −0.95), both right stations read a hold that stops illegal votes before they count (B +0.4, D +0.6; rims +0.85, +0.9). No station crosses.",
+  "rationale": "Who is trusted to run the check sorts the reads: the Justice Department for the right, California's officials for the left. The coalition band narrows the gap on both sides (A −0.5, C −0.45, B +0.2, D +0.35) without closing it.",
+  "zPattern": {
+   "centers": {
+    "A": -0.7,
+    "B": 0.4,
+    "C": -0.75,
+    "D": 0.6
+   },
+   "rims": {
+    "A": -0.95,
+    "B": 0.85,
+    "C": -0.95,
+    "D": 0.9
+   },
+   "note": "Centers are fluid z; coalition z: A −0.5, B +0.2, C −0.45, D +0.35. Rims sign by holder-trust: B and D trust the Justice Department, A and C do not. Every coalition band sits closer to zero than its own fluid."
+  },
+  "ruledBy": null,
+  "date": "2026-10-16"
+ },
+ "antiValentBand": "coalition",
+ "antiValentRationale": "The coalition band is where each station turns on its own side without changing sign: A faults the county for not opening the drive, C faults Newsom and Bonta for press conferences, B asks why the suit looks rushed after 26 losses, and D warns that a stolen-election chorus and a Nevada-style miss would bury the SAVE Act.",
+ "axes": {
+  "x": {
+   "pos": "Right",
+   "neg": "Left"
+  },
+  "y": {
+   "pos": "Institutional",
+   "neg": "Populist"
+  },
+  "z": {
+   "pos": "the suit delivers: ballots from noncitizens are stopped before they count",
+   "neg": "it doesn't: a late list no one can check, that catches citizens and casts doubt"
+  }
+ },
+ "responses": {
+  "A": {
+   "fluid": {
+    "z": -0.7,
+    "zReason": "A hold built on non-SAVE matching that DOJ admits can reflect stale records, with no time to check it before Election Day, will delay real citizens' ballots far more reliably than it catches noncitizens.",
+    "instrument": {
+     "holder": "the Justice Department",
+     "trusted": false
+    },
+    "text": "Noncitizen voting is already illegal and California already requires citizenship to register, so what's this suit actually adding? A list matched outside SAVE, handed over on a thumb drive with 48 hours to respond, after ballots were already going out. Nevada checked people DHS flagged and found none were noncitizens, so why would I assume these 20,000 are any different?",
+    "xWord": "due process",
+    "yWord": "SAVE system",
+    "words": [
+     "outdated records",
+     "48-hour deadline",
+     "Nevada found none"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": -0.5,
+    "zReason": "The list still can't be checked in time, but the speaker sees that refusing to even open the drive gives DOJ its 'refused to comply' line and lets the court read California as stonewalling.",
+    "instrument": {
+     "holder": "the Justice Department",
+     "trusted": false
+    },
+    "text": "I don't trust this list, and I think the timing is bad faith. But the county wouldn't even open the thumb drive, and now Blanche gets to say California refused to comply, and the people I usually agree with are cheering that like it's a win. If even a handful on that list really are noncitizens, isn't it worth a look, inside the rules, before calling the whole thing a fraud?",
+    "xWord": "verification",
+    "yWord": "data security",
+    "words": [
+     "open the drive",
+     "refused to comply",
+     "worth a look"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.95,
+    "zReason": "The suit is read entirely as a partisan attack on the vote, so nothing about its contents can count as delivery.",
+    "instrument": {
+     "holder": "the Trump Justice Department",
+     "trusted": false
+    },
+    "text": "It's voter suppression with a court filing stapled to it. Same playbook, new state.",
+    "xWord": "suppression",
+    "yWord": "playbook",
+    "words": [
+     "voter suppression",
+     "same playbook",
+     "partisan DOJ"
+    ],
+    "source": ""
+   },
+   "xSide": "left",
+   "source": ""
+  },
+  "B": {
+   "fluid": {
+    "z": 0.4,
+    "zReason": "The suit asks a judge to pause, not purge, ballots from names DOJ says were manually verified, so a court, not DOJ alone, decides what counts.",
+    "instrument": {
+     "holder": "the Justice Department, before a federal judge",
+     "trusted": true
+    },
+    "text": "It's not a purge; DOJ says so in the filing. It asks a judge to hold about 20,000 mail ballots until citizenship is checked, from names it says were manually verified. Weber asked for data in July; now there's data, and a court gets to weigh it. Isn't that exactly how this is supposed to work?",
+    "xWord": "rule of law",
+    "yWord": "federal court",
+    "words": [
+     "not a purge",
+     "manually verified",
+     "let a judge decide"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0.2,
+    "zReason": "Judicial review still makes the hold the right channel, but DOJ's 26 losses and the Nevada result mean the list may not survive scrutiny.",
+    "instrument": {
+     "holder": "the Justice Department",
+     "trusted": true
+    },
+    "text": "I still think a court-supervised hold beats doing nothing about ineligible ballots. But the people on my side are already talking about 20,000 noncitizen votes like it's proven, and DOJ's own complaint says some matches come from outdated records. Twenty-six losses and no wins on these suits, Nevada coming up empty, a thumb drive less than three weeks out... I want this to work, so why does it look rushed?",
+    "xWord": "election integrity",
+    "yWord": "Civil Rights Division",
+    "words": [
+     "court-supervised hold",
+     "26 losses",
+     "looks rushed"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": 0.85,
+    "zReason": "California's refusal is taken as proof the list is right, so the suit is assumed to deliver.",
+    "instrument": {
+     "holder": "the Justice Department",
+     "trusted": true
+    },
+    "text": "California refused to comply, and that tells you everything. Enforce the law.",
+    "xWord": "enforcement",
+    "yWord": "defiance",
+    "words": [
+     "refused to comply",
+     "enforce the law",
+     "lawless Sacramento"
+    ],
+    "source": ""
+   },
+   "xSide": "right",
+   "source": ""
+  },
+  "C": {
+   "fluid": {
+    "z": -0.75,
+    "zReason": "A late hold on mail ballots hits naturalized citizens and people with mismatched records, who have the least time and money to prove themselves before Nov 3.",
+    "instrument": {
+     "holder": "Todd Blanche's Justice Department",
+     "trusted": false
+    },
+    "text": "Who's on that list? Probably someone's tía who naturalized years ago and has a name some database spells two ways. Her ballot's already in the mail, and now it sits in a pile until she proves she's a citizen, again. And where are the other 170,000 Mullin talked about? They never showed Weber anything.",
+    "xWord": "naturalized citizens",
+    "yWord": "neighborhood",
+    "words": [
+     "held ballots",
+     "prove it again",
+     "where's the 170,000"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": -0.45,
+    "zReason": "The list still can't be checked in time, but the speaker sees Newsom and Bonta using the fight for their own profile while the voters on the list stay in limbo.",
+    "instrument": {
+     "holder": "the Justice Department",
+     "trusted": false
+    },
+    "text": "The list is junk, I'm sure of that much. But watch Newsom and Bonta, it's press conferences and fundraising emails while the actual people on those 20,000 lines still don't know if their ballot counts. Who on my side is calling those voters, instead of just tweeting about them?",
+    "xWord": "working people",
+    "yWord": "press conferences",
+    "words": [
+     "actual voters",
+     "fundraising emails",
+     "who's calling them"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.95,
+    "zReason": "The suit is read as pure power play, so no delivery is possible.",
+    "instrument": {
+     "holder": "the Trump administration",
+     "trusted": false
+    },
+    "text": "It's voter suppression, plain and simple, aimed at immigrant neighborhoods. Rich guys in D.C. deciding whose vote is real.",
+    "xWord": "suppression",
+    "yWord": "rich guys",
+    "words": [
+     "voter suppression",
+     "immigrant neighborhoods",
+     "whose vote counts"
+    ],
+    "source": ""
+   },
+   "xSide": "left",
+   "source": ""
+  },
+  "D": {
+   "fluid": {
+    "z": 0.6,
+    "zReason": "A hold before counting is the only point where an ineligible ballot can be stopped, and DOJ is the one actor pushing to stop it.",
+    "instrument": {
+     "holder": "the Justice Department under Todd Blanche",
+     "trusted": true
+    },
+    "text": "They hand the county a list of 20,000 names and the county won't even plug in the thumb drive? Once those ballots get counted, there's no pulling them back out. Hold them, check them, count the real ones. What's the problem with that?",
+    "xWord": "citizens only",
+    "yWord": "Sacramento",
+    "words": [
+     "won't open it",
+     "hold and check",
+     "before they count"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0.35,
+    "zReason": "Holding ballots still stops what counting can't undo, but the speaker sees that if citizens get caught, the backlash buries the issue and the SAVE Act along with it.",
+    "instrument": {
+     "holder": "the Justice Department",
+     "trusted": true
+    },
+    "text": "I'm glad somebody's finally pushing. But some of the people I vote with are already calling this election stolen before a single ballot's counted, and if a bunch of those 20,000 turn out to be citizens, like in Nevada, that's the story forever. The SAVE Act's still stuck in the Senate. Isn't that the fix, not a thumb drive in October?",
+    "xWord": "proof of citizenship",
+    "yWord": "SAVE Act",
+    "words": [
+     "finally pushing",
+     "like Nevada",
+     "stuck in the Senate"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": 0.9,
+    "zReason": "The list is assumed true because the other side resists it, so the suit is taken as delivering by definition.",
+    "instrument": {
+     "holder": "the Justice Department",
+     "trusted": true
+    },
+    "text": "They're trying to steal the election and DOJ just caught them at it. Why else hide from a thumb drive?",
+    "xWord": "stolen election",
+    "yWord": "hiding",
+    "words": [
+     "stolen election",
+     "caught them",
+     "what are they hiding"
+    ],
+    "source": ""
+   },
+   "xSide": "right",
+   "source": ""
+  }
+ },
+ "diatribe": {
+  "LF": {
+   "text": "Noncitizen voting is already illegal and California already requires citizenship to register, so what's this suit actually adding? A list matched outside SAVE, handed over on a thumb drive with 48 hours to respond, after ballots were already going out.",
+   "side": "left",
+   "band": "fluid",
+   "keywords": [
+    "this suit",
+    "matched outside SAVE",
+    "already illegal"
+   ]
+  },
+  "LC": {
+   "text": "The county wouldn't even open the thumb drive, and now Blanche gets to say California refused to comply, and the people I usually agree with are cheering that like it's a win.",
+   "side": "left",
+   "band": "coalition",
+   "keywords": [
+    "the people I usually agree with",
+    "wouldn't even open the thumb drive",
+    "refused to comply"
+   ]
+  },
+  "LD": {
+   "text": "It's voter suppression, plain and simple, aimed at immigrant neighborhoods. Rich guys in D.C. deciding whose vote is real.",
+   "side": "left",
+   "band": "denominated",
+   "keywords": [
+    "Rich guys in D.C.",
+    "voter suppression",
+    "whose vote is real"
+   ]
+  },
+  "RF": {
+   "text": "It's not a purge; DOJ says so in the filing. It asks a judge to hold about 20,000 mail ballots until citizenship is checked, from names it says were manually verified.",
+   "side": "right",
+   "band": "fluid",
+   "keywords": [
+    "hold about 20,000 mail ballots",
+    "not a purge",
+    "manually verified"
+   ]
+  },
+  "RC": {
+   "text": "Some of the people I vote with are already calling this election stolen before a single ballot's counted, and if a bunch of those 20,000 turn out to be citizens, like in Nevada, that's the story forever.",
+   "side": "right",
+   "band": "coalition",
+   "keywords": [
+    "the people I vote with",
+    "calling this election stolen",
+    "like in Nevada"
+   ]
+  },
+  "RD": {
+   "text": "They're trying to steal the election and DOJ just caught them at it. Why else hide from a thumb drive?",
+   "side": "right",
+   "band": "denominated",
+   "keywords": [
+    "steal the election",
+    "caught them",
+    "hide from a thumb drive"
+   ]
+  }
+ },
+ "diatribeLayer": "stated",
+ "objectLayer": {
+  "declared": "stated",
+  "stated": "Stopping noncitizen votes in California before they are counted.",
+  "operative": "A request to hold about 20,000 mail ballots on a list matched outside SAVE, which DOJ's own complaint says can reflect outdated records, delivered with a 48-hour deadline after ballots went out, framed as a hold rather than a purge to stay outside the 90-day bar.",
+  "inversion": "Lean, not ruled: right stations backing federal control of a state's ballot count; left stations defending a state's refusal to cooperate with federal election enforcement. See meta.newsroomFindings."
+ },
+ "window": {
+  "close": "2026-10-15",
+  "why": "Trigger day = the day the object finished forming: the suit was filed Thursday 2026-10-15. The register's formedOn (10-16) is the day the NPR roundup was scanned, a report date, not the as-of date. The register's headline also bundles an unrelated story (a school shooting in Oregon); the object is the suit alone. Corrected on the object card. Declared at authoring, before any z.",
+  "ruledBy": null,
+  "ruledOn": null
+ },
+ "meta": {
+  "dialecticsRef": "obj_thejusti_alleged-california-doj-kills",
+  "status": "draft",
+  "source": "Claude draft — newsroom drafting (scheduled), authored z-first against Trace Formula v1 per scripts/newsroom/AUTHORING_PROTOCOL.md v1.5. Filed to drafts/claude; no aiDeltas lineage. Rulings: none.",
+  "editHistory": [
+   {
+    "at": "2026-10-16T21:01:27.391Z",
+    "by": "Claude (scheduled drafting)",
+    "what": "authored: object (formedOn 10-16 → 10-15; bundled Oregon story split off) -> window -> frame -> central object (United States v. California) + tethers (18 U.S.C. § 611 invokes; NVRA adjacent; H.R. 22 SAVE Act adjacent) + place -> axes -> twelve and object z (blind subagent; one factual edit, see blindAuthoring) -> split/diatribe/layers -> sweep"
+   }
+  ],
+  "aiDeltas": [],
+  "frameFirst": {
+   "date": "2026-10-15",
+   "by": "Claude, under §4c (window declared at authoring; sweep before z). Object NOT ruled — Claude's read, correctable by Sailor.",
+   "status": "Frame authored before any z; the twelve and the object's own z authored blind z-first by a subagent (meta.blindAuthoring). Stations unruled.",
+   "objectLean": {
+    "stated": "stopping noncitizen votes before they count",
+    "operative": "a late hold on 20,000 mail ballots from an unverified list, shaped to avoid the 90-day purge bar",
+    "inversion": "lean, not ruled: right for federal control of a state count; left for a state's refusal"
+   },
+   "titleLean": "'The Thumb Drive' — Claude's; Sailor names Readings",
+   "sourcesInWindow": [
+    "CBS News (2026-10-15): suit filed Thursday in the Central District of California against the State; asks to bar tabulating mail ballots from likely noncitizens until status is determined; more than 20,000; McCotter letters with a 48-hour deadline; Logan declined the thumb drive; Blanche statement; Civil Rights Division 31 suits, 26 losses",
+    "Newsweek (2026-10-15): USCIS and HSI matching, run outside SAVE; high/medium/low confidence tiers, complaint concedes lower tiers may reflect outdated records; 'manually verified to date'; injunction sought; Supremacy Clause and the federal ban on noncitizen voting; DHS's earlier 190,000 figure; Weber requested data in July; Bonta on the 90-day bar",
+    "ABC News (2026-10-15): filed by the deputy attorney general's office, not the Civil Rights Division; not seeking a purge; thumb drive with the password on a sticky note; Weber 'chaos and distrust'; Logan on data security",
+    "KQED (2026-10-15): letters sent Tuesday; suit Thursday; most counties began mailing ballots the week before; Blanche 'California has refused to comply'; Weber 'I will not disenfranchise thousands of Californians'; Newsom quote"
+   ],
+   "background_preWindow": [
+    "Undated, before July 2026: DHS Secretary Markwayne Mullin's claim that more than 190,000 California registrants 'may be' noncitizens; Weber requested the data in July",
+    "Past year: DOJ voter-roll suits, 26 losses in 31, no wins (CBS)",
+    "Nevada: a review of people DHS flagged found none were noncitizens (date not established in my sources)",
+    "2025-04-10: SAVE Act (H.R. 22) passes the House (catalog)",
+    "1993 NVRA and 1996 § 611: statute dates from my background, not re-verified this run"
+   ]
+  },
+  "framingAudit": {
+   "date": "2026-10-15",
+   "by": "Claude — frame-first authoring under §4c. Not a ruling.",
+   "window": "2026-10-15 (declared, see window.why)",
+   "verifiedInWindow": [
+    "Suit filed Thursday 2026-10-15, Central District of California, against the State of California (CBS, Newsweek)",
+    "about 20,000 / more than 20,000 voters called likely noncitizens; relief: bar counting their mail ballots until citizenship is determined; no purge sought (CBS, ABC, KQED)",
+    "USCIS and HSI matching, run outside SAVE (Newsweek)",
+    "Letters Tuesday 2026-10-13 from Acting Deputy AG Trent McCotter to Weber and Los Angeles County; password-protected thumb drive; 48-hour deadline; county declined citing data security (ABC, CBS, KQED)",
+    "Blanche: \"California has refused to comply.\" (KQED)",
+    "Weber: \"I will not disenfranchise thousands of Californians.\" (KQED)",
+    "Most counties began mailing ballots the week before (KQED)"
+   ],
+   "keptUnverifiedDate": [
+    "Election Day 2026-11-03 is stated in the frame only as 'less than three weeks away', so the frame names no date after the window.",
+    "Whether letters went to counties other than Los Angeles is not settled in my sources (KQED: five Bay Area counties said they got none). The Washington Post, the San Francisco Chronicle and CNBC would not load."
+   ],
+   "deliberatelyExcluded_afterWindow": [
+    "2026-10-16 coverage the register scanned (the NPR morning roundup), and anything said or filed after 10-15",
+    "Any hearing or ruling on the injunction"
+   ]
+  },
+  "blindAuthoring": {
+   "date": "2026-10-16",
+   "author": "Claude (general-purpose subagent) — blind: given the frame, prompt, keywords, axes, a station/band brief, a short dated background (the 190,000 claim, the complaint's concession, Nevada, the 26 losses, the NVRA 90-day bar, the Newsom quote, the SAVE Act), R-0921-1 and the voice rules only; no other Reading, no register, no web",
+   "zFirst": true,
+   "instrumentOnAll12": true,
+   "objectZ": "The object's own place.z (−0.45) authored by the same subagent, with the twelve, before the words.",
+   "rulings": "NONE — every station awaits Sailor's ruling. z, zReason, instrument as authored. One edit to text after hand-back, mine: B-coalition 'a thumb drive two weeks out' → 'less than three weeks out' (the suit was 19 days before Election Day).",
+   "authorNote": "I trust the B-coalition and D-coalition signs least: both are rated positive only because rule R-0921-1 ties sign to holder-trust, though their texts lean toward doubt, so z of 0.2 and 0.35 sit near the boundary. B-fluid's trust also rests on the judge as much as on DOJ, which blurs who the holder is. The left-side negatives hold up better, since the frame's own facts (DOJ's concession, Nevada, 26 losses) back them directly."
+  },
+  "newsroomFindings": {
+   "inversionLeans": [
+    {
+     "station": "B / D (right)",
+     "what": "Stations that usually hold that states run their own elections back a federal suit asking a judge to control which ballots California counts.",
+     "prior": "none from a live Reading; Newsom's in-window line ('the federal government has no role in running state elections') is the left's statement of the position the right usually holds",
+     "note": "Lean only, no cited prior of the stations' own. Entered unruled."
+    },
+    {
+     "station": "A (left·institutional)",
+     "what": "A station that usually looks to the federal government to protect voting access defends a state's refusal to open a federal list; A-coalition says the refusal was a mistake.",
+     "prior": "none cited",
+     "note": "Lean only, weaker."
+    }
+   ],
+   "inversionNote": "Two leans, neither with a dated prior. Sailor rules.",
+   "permanence": "A RETURN (lean): DHS's earlier claim of 190,000 possible noncitizen registrants, never substantiated to the state, came back as a 20,000-name list in a suit. Also: the register bundled this object with the Oregon school shooting under one NPR headline; that story is not drafted here."
+  }
+ },
+ "rid": "rdg_9wjfhhpxcp0d",
+ "ridLineage": "minted 2026-10-16 (UTC) by the scheduled newsroom drafting task; filed directly to drafts/claude",
+ "schema": "reading/v1",
+ "formulaVersion": "1",
+ "updatedAt": "2026-10-16T21:01:27.391Z",
+ "authorTier": "claude",
+ "newsroom": {
+  "oid": "obj_thejusti_alleged-california-doj-kills",
+  "queuedOn": "2026-10-16",
+  "draftedOn": "2026-10-16"
+ },
+ "images": []
+}

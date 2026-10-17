@@ -1,0 +1,323 @@
+{
+ "schema": "press/parallelogram/v0",
+ "id": "fp_2026-10-13_diesel_deal_lede",
+ "status": "claude-draft",
+ "kind": "parallelogram",
+ "partial": "beta lede",
+ "partialNote": "a beta lede — headline + dek + the open paragraphs (¶1–¶5); the body is paywalled for a signed-out reader. Runs as data: printed on the paper flagged, excluded from corner composites and indices until read in full (Sailor 10-16).",
+ "title": "The Deal, as an Embarrassment",
+ "source": {
+  "program": "The Free Press",
+  "network": "The Free Press (Substack)",
+  "format": "print column",
+  "date": "2026-10-13",
+  "title": "Trump’s Disastrous Diesel Deal",
+  "byline": "Aaron MacLean",
+  "url": "https://www.thefp.com/p/trump-disastrous-diesel-deal-russia-ukraine",
+  "length": 7,
+  "paragraphs": 7,
+  "transcript": "Parameters/09_Parallelograms/Press/2026-10-13_FreePress_Diesel_Deal/PARTIAL.md"
+ },
+ "positions": "paragraphs",
+ "arc": "PG01",
+ "object": {
+  "label": "the diesel deal / the energy ceasefire",
+  "layer": 1,
+  "zAxis": {
+   "pos": "delivers",
+   "neg": "does not"
+  }
+ },
+ "transform": "Z-assertion",
+ "transformNote": "delivery credited before it happened — read here from the institutional right, as a failure of statecraft rather than of delivery",
+ "names": {
+  "FP": "The Free Press (headline, dek)",
+  "AM": "Aaron MacLean"
+ },
+ "depth": {
+  "what": "distinct touches (O · T · B · M · X) across the opening ÷ scored lines — a measure of whether the lede says more than its headline",
+  "touches": [
+   "B",
+   "T",
+   "F",
+   "M",
+   "O"
+  ],
+  "lines": 7,
+  "value": 0.57,
+  "note": "five of seven lines carry a distinct touch; the headline and dek restate ¶5. Not shallow for a lede"
+ },
+ "trace": {
+  "object": {
+   "x": 0,
+   "y": 0,
+   "z": -0.75
+  },
+  "shadow": {
+   "x": 0,
+   "y": 0,
+   "z": 0.85
+  },
+  "predicates": {
+   "operative": [
+    {
+     "type": "T",
+     "label": "US diesel up ≈50% since the start of the Iran war; steady for several years before",
+     "z": 0.85
+    },
+    {
+     "type": "M",
+     "label": "Gulf refining capacity extensively damaged; Kyiv's long-range strikes on Russian refineries",
+     "z": 0.7
+    },
+    {
+     "type": "B",
+     "label": "the 2024 pledge ('cut your energy costs in half within 12 months') against the first-year record",
+     "z": 0.6
+    }
+   ],
+   "stated": [
+    {
+     "type": "F",
+     "label": "'disastrous', 'desperate', 'one of the most embarrassing weeks of his second term'",
+     "z": 0.5
+    },
+    {
+     "type": "F",
+     "label": "'a price worth paying if it means Iran will never have a nuclear weapon'",
+     "z": 0.4
+    }
+   ],
+   "challenge": []
+  },
+  "positions": [
+   {
+    "quadrant": "A",
+    "station": "LI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty, by-record — compare aj_2026-10-12_energy_ceasefire"
+   },
+   {
+    "quadrant": "B",
+    "station": "RI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty, by-record"
+   },
+   {
+    "quadrant": "C",
+    "station": "LP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty, by-record — compare bp_2026-10-12_diesel"
+   },
+   {
+    "quadrant": "D",
+    "station": "RP",
+    "fluid": "dates the pledge against the first-year record; sizes the crunch (+50%); names both causes",
+    "denominated": "disastrous · desperate · embarrassing",
+    "distinguishability": "Medium",
+    "fluidKeywords": [
+     "cut your energy costs in half",
+     "diesel held steady",
+     "roughly 50 percent",
+     "refining capacity throughout the Gulf",
+     "long-range strike campaign"
+    ],
+    "denomKeywords": [
+     "disastrous",
+     "desperate",
+     "most embarrassing weeks"
+    ],
+    "note": "lede only — the institutional right reads the deal as a competence failure; the second RP voice on the deal (Saagar read an instrument)"
+   }
+  ]
+ },
+ "log": [
+  {
+   "date": "2026-10-15",
+   "what": "lede cut (headline · dek · ¶1–¶5; paywalled after). The Free Press ruled RP by Sailor 10-15; the second RP voice on the deal. 'depth' measured for the first time",
+   "by": "Claude"
+  }
+ ],
+ "scoreboard": {
+  "dia": 27,
+  "tier": "fluid",
+  "declaredZ": null,
+  "readZ": -0.3,
+  "readZRange": [
+   0.0,
+   -0.6
+  ],
+  "stations": {
+   "LI": null,
+   "RI": null,
+   "LP": null,
+   "RP": {
+    "dia": 27,
+    "spread": [
+     8,
+     48
+    ],
+    "readZ": -0.3,
+    "voices": {
+     "AM": {
+      "dia": 20,
+      "readZ": -0.2,
+      "n": 5
+     },
+     "FP": {
+      "dia": 46,
+      "readZ": -0.55,
+      "n": 2
+     }
+    }
+   }
+  },
+  "split": {
+   "topology": "none",
+   "station": "RP",
+   "strength": 0.0,
+   "note": "one voice, five paragraphs: the record (¶1, ¶2, ¶4) and the verdict (headline, dek, ¶5) — same sign on Z, different Dia"
+  },
+  "lumens": 47,
+  "zRule": "every line carries a z, inferred where implied (Sailor 2026-10-13); inferred lines are marked zInferred with a zWhy",
+  "mode": "surface-bound"
+ },
+ "lines": [
+  {
+   "t": 0,
+   "who": "FP",
+   "station": "RP",
+   "quote": "Trump’s Disastrous Diesel Deal",
+   "touch": "F",
+   "z": -0.6,
+   "dia": 48,
+   "mode": "surface-bound",
+   "note": "THE HEADLINE: the deal as a verdict before it is a deal; 'disastrous' is the vehicle",
+   "chapter": "The door",
+   "normX": 0.6991,
+   "normY": 0.6293,
+   "normZ": -0.45,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "a disaster is a deal that does not deliver — read as competence, not cargo"
+  },
+  {
+   "t": 0,
+   "who": "FP",
+   "station": "RP",
+   "quote": "the president’s desperate effort to bring fuel prices down has made this one of the most embarrassing weeks of his second term",
+   "touch": "F",
+   "z": -0.5,
+   "dia": 44,
+   "mode": "surface-bound",
+   "note": "THE DEK: restates the headline with two more vehicles ('desperate', 'embarrassing'); the object (fuel prices) is a clause",
+   "chapter": "The door",
+   "normX": 0.6864,
+   "normY": 0.621,
+   "normZ": -0.375,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "'desperate' presumes the effort fails"
+  },
+  {
+   "t": 1,
+   "who": "AM",
+   "station": "RP",
+   "quote": "the 2024 pledge to 'cut your energy costs in half within 12 months' — in the first 12 months gas and heating oil came down modestly, electricity and natural gas up, diesel steady",
+   "touch": "B",
+   "z": 0.0,
+   "dia": 14,
+   "mode": "open",
+   "note": "dates the pledge against the record; 'outlandish' the one adjective, applied to all politicians",
+   "chapter": "The record",
+   "normX": 0.562,
+   "normY": 0.5887,
+   "normZ": 0.0,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "no claim on the deal"
+  },
+  {
+   "t": 2,
+   "who": "AM",
+   "station": "RP",
+   "quote": "then this spring came the war with Iran, and prices, especially the price of diesel, went up, up, up",
+   "touch": "T",
+   "z": -0.1,
+   "dia": 8,
+   "mode": "open",
+   "note": "dates the crunch to the war",
+   "chapter": "The record",
+   "normX": 0.5513,
+   "normY": 0.5683,
+   "normZ": -0.075,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "a cause named; the deal not yet in view"
+  },
+  {
+   "t": 3,
+   "who": "AM",
+   "station": "RP",
+   "quote": "at times the president has shown leadership and resolve — a price worth paying if it means Iran will never have a nuclear weapon",
+   "touch": "F",
+   "z": 0.0,
+   "dia": 30,
+   "mode": "open",
+   "note": "the right-institutional frame on the crunch: a cost knowingly borne",
+   "chapter": "The record",
+   "normX": 0.606,
+   "normY": 0.6316,
+   "normZ": 0.0,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "no claim on the deal"
+  },
+  {
+   "t": 4,
+   "who": "AM",
+   "station": "RP",
+   "quote": "diesel has risen by roughly 50 percent since the start of the Iran war, steady for several years before; refining capacity throughout the Gulf has been extensively damaged; and Kyiv’s long-range strike campaign on Russia’s refineries",
+   "touch": "M",
+   "z": -0.3,
+   "dia": 10,
+   "mode": "open",
+   "note": "SIZES THE CRUNCH and names both causes — Carlson's two causes in institutional register; 'effective' is the one adjective",
+   "chapter": "The record",
+   "normX": 0.5607,
+   "normY": 0.5704,
+   "normZ": -0.225,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "a crunch this structural is not fixed by a cargo"
+  },
+  {
+   "t": 5,
+   "who": "AM",
+   "station": "RP",
+   "quote": "Trump has an acute political and economic problem; his attempt to address it in recent days has led to one of the most embarrassing weeks of his second term",
+   "touch": "O",
+   "z": -0.6,
+   "dia": 36,
+   "mode": "surface-bound",
+   "note": "the verdict, restated as the lede's last line: the deal read as a failure of statecraft",
+   "chapter": "The verdict",
+   "normX": 0.6301,
+   "normY": 0.6409,
+   "normZ": -0.45,
+   "quadrant": "D"
+  }
+ ]
+}

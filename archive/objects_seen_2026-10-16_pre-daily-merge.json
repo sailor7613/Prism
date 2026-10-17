@@ -1,0 +1,1249 @@
+{
+ "schema": "press/objects_seen/v0",
+ "what": "Every object-shaped thing a Press cut saw on its tape, sorted by the schema into the data set it belongs to. Written ONLY by the Press (a cut's objects pass); the newsroom scan and the drafting overlay never write here. Readers: the paper (a piece's 'objects on this tape' list), the register's intake (candidates), a Reading's later-sightings, a PG's statements, the tracker, the slate.",
+ "rule": "Sailor 2026-10-15: every daily/weekly show we scan gets an objects pass — look for objects, then sort them with the schema into any data set we have going. Shows stay readers: a sighting becomes an object only when the record confirms one. A scored cut needs a live object with an open window (PG arcs are standing); a sighting of a Reading whose window has closed files as a later sighting, never a reopening.",
+ "kinds": "register kinds (ruling · vote · bill · indictment · hearing · suit · tariff/sanction · agreement · appointment · law) plus the Press's own: statement · realization · price · activity",
+ "datasets": "PG01 · readings · register-intake · tracker · slate",
+ "sightings": [
+  {
+   "id": "see-close-1015-diesel",
+   "piece": "close_2026-10-15",
+   "program": "The Close",
+   "date": "2026-10-15",
+   "t": [
+    "2:04",
+    "29:11–29:51",
+    "42:46",
+    "51:12–51:33",
+    "1:04:21–1:08:05"
+   ],
+   "object": "the refined-products crunch (diesel) as it reaches the balance sheet",
+   "kind": "realization",
+   "holder": null,
+   "analog": {
+    "type": "statement",
+    "ref": "the 10-09 Russian-diesel statement; the US export-ban talk",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "PG01 §6 active layer"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 8,
+   "z": -0.44,
+   "reduced": "fuel surcharges inside J.B. Hunt's top line (+20%); loads +8.5%; 'a lot of this is oil'; diesel prices rising → inflation pressure"
+  },
+  {
+   "id": "see-close-1015-tsmc",
+   "piece": "close_2026-10-15",
+   "program": "The Close",
+   "date": "2026-10-15",
+   "t": [
+    "16:43–16:54",
+    "18:11–22:04",
+    "56:34"
+   ],
+   "object": "TSMC's US/Japan buildout — the realized layer of the Jan 14–15 chip-tariff proclamation and the US–Taiwan deal",
+   "kind": "realization",
+   "holder": "TSMC",
+   "analog": {
+    "type": "proclamation",
+    "ref": "chip-tariff proclamation 2026-01-14/15 + US–Taiwan deal",
+    "reading": "rdg_ms51urghz7zi"
+   },
+   "match": {
+    "dataset": "readings",
+    "ref": "rdg_ms51urghz7zi — The Tariff With Eight Exceptions",
+    "windowClosed": "2026-01-15",
+    "as": "later sighting"
+   },
+   "scored": false,
+   "station": "RI",
+   "reduced": "record quarter, raised outlook, ADR −1.7% (−13% from the 10-05 high); 'we have been anticipating higher costs associated with investment in the US and Japan' (the exceptions, realized as capex); ~20 fabs; capex toward $100B; 'the only prospective customer to sign is Elon Musk'; margin pressure 'known for some time'",
+   "why": "the deal's substance — fabs on US soil — is now a margin line in the Reading's object-holder's accounts; a sighting of the object nine months after its window closed. Candidate first specimen for 'window as a layer' (benched 09-21) alongside the Dividend"
+  },
+  {
+   "id": "see-close-1015-fed",
+   "piece": "close_2026-10-15",
+   "program": "The Close",
+   "date": "2026-10-15",
+   "t": [
+    "7:54–9:02",
+    "41:06–42:51",
+    "1:31:22–1:31:37"
+   ],
+   "object": "the Fed's hiking path under Warsh — 'one rate hike in'; the chair's remarks at the IMF/World Bank meetings (Bangkok, tonight)",
+   "kind": "appointment",
+   "holder": "the Fed chair",
+   "analog": {
+    "type": "decision",
+    "ref": "FOMC decision (the first hike of the cycle); Warsh's IMF remarks 2026-10-15/16"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": null,
+    "candidate": true,
+    "related": "obj_thepresi_104-building-fed-oust"
+   },
+   "reduced": "Sonders: the speed of the hike matters, elevator vs escalator; Envestnet CIO: 'came in as the administration's pick, they wanted a dovish posture — he's not known for that'; 'his predecessor let inflation get away'; 'a lot of this is oil'",
+   "why": "object permanence test: the chair appointed for dovishness hiking into an oil-driven print. Needs the record (FOMC statement date; the IMF remarks) before it is an object"
+  },
+  {
+   "id": "see-close-1015-drivers",
+   "piece": "close_2026-10-15",
+   "program": "The Close",
+   "date": "2026-10-15",
+   "t": [
+    "1:05:45–1:06:41"
+   ],
+   "object": "the federal crackdown on foreign-domiciled truck drivers — 'court battles going on; if the administration had its way the crackdown would increase'",
+   "kind": "ruling",
+   "holder": "the administration / the courts",
+   "analog": {
+    "type": "executive action",
+    "ref": "needs the record — likely the FMCSA non-domiciled CDL / English-proficiency rules and their litigation"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": null,
+    "candidate": true
+   },
+   "reduced": "Black: 'potential drivers are shrinking as a crackdown on foreign drivers'; driver shortage pushing freight rates, signing and safety bonuses",
+   "why": "a second object under the freight number, with a legislative/executive analog and live litigation — exactly the kind the register wants. Also the thing the diesel pass-through rides on"
+  },
+  {
+   "id": "see-close-1015-hormuz",
+   "piece": "close_2026-10-15",
+   "program": "The Close",
+   "date": "2026-10-15",
+   "t": [
+    "29:11–29:19"
+   ],
+   "object": "the Strait of Hormuz 'not flowing freely for quite some time'",
+   "kind": "statement",
+   "holder": "Tim Walsh (KPMG US CEO), reader",
+   "analog": {
+    "type": "vote",
+    "ref": "obj_thepresi_hormuz-iran-open-proposal (Trump rejects Iran's proposal to open the Strait, 09-27)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "PG01 statements (reader, not principal); register obj_thepresi_hormuz-iran-open-proposal"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 10,
+   "z": -0.3,
+   "reduced": "oil not flowing freely in the Strait; showing up in inflation and interest rates"
+  },
+  {
+   "id": "see-close-1015-memory",
+   "piece": "close_2026-10-15",
+   "program": "The Close",
+   "date": "2026-10-15",
+   "t": [
+    "10:57–15:59"
+   ],
+   "object": "the memory-chip shortage → smartphone prices (IDC: worst quarter on record, −22%; memory costs +300–350% y/y; recovery 2028 at earliest)",
+   "kind": "price",
+   "holder": null,
+   "analog": {
+    "type": null,
+    "ref": "none found on the tape — a supply object without a legislative analog unless export controls are the substrate"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": null,
+    "candidate": true,
+    "permanence": "low"
+   },
+   "reduced": "memory prices not at peak; smartphone prices up 30% then 8–10%; Apple/Samsung gain share as budget Android shrinks",
+   "why": "kept as a sighting for the 'broad cultural impact without a legislative analog' case Sailor flagged 09-26; not queued"
+  },
+  {
+   "id": "see-bp-1012-deal",
+   "piece": "bp_2026-10-12_diesel",
+   "program": "Breaking Points",
+   "date": "2026-10-12",
+   "t": [
+    "whole segment"
+   ],
+   "object": "the Russian diesel deal (300,000 t/month) and the 'energy ceasefire' — delivery credited before it happened",
+   "kind": "statement",
+   "holder": "the President",
+   "analog": {
+    "type": "statement",
+    "ref": "presidential statements 10-09 / 10-11",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "PG01 H1–H4"
+   },
+   "scored": true,
+   "station": "LP+RP",
+   "dia": 46,
+   "z": -0.73
+  },
+  {
+   "id": "see-bp-1012-graham",
+   "piece": "bp_2026-10-12_diesel",
+   "program": "Breaking Points",
+   "date": "2026-10-12",
+   "t": [
+    "2:29"
+   ],
+   "object": "the statute that bars the cargo — the Graham sanctions law (OFAC / CBP enforcement)",
+   "kind": "law",
+   "holder": "Congress",
+   "analog": {
+    "type": "bill",
+    "ref": "hr-119-5334 — Lindsey O. Graham Sanctioning Russia and Iran Act of 2026"
+   },
+   "match": {
+    "dataset": "register",
+    "ref": "obj_bill_hr-119-5334 (drafted) · obj_x_graham-law-list-present (new)"
+   },
+   "scored": true,
+   "station": "LP/RP",
+   "why": "the 2:29 line's primary is on the register already; the ruling owed (verify against congress.gov) is a verification, not a discovery"
+  },
+  {
+   "id": "see-bp-1012-ceasefire",
+   "piece": "bp_2026-10-12_diesel",
+   "program": "Breaking Points",
+   "date": "2026-10-12",
+   "t": [
+    "9:08",
+    "16:43"
+   ],
+   "object": "the energy ceasefire 'effective immediately' — broken by strikes within hours",
+   "kind": "agreement",
+   "holder": "the President (declared)",
+   "analog": {
+    "type": "statement",
+    "ref": "10-11 statement; strikes 10-11/12"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H2 — falsified 2026-10-12 (Sailor's ruling 10-15)"
+   },
+   "scored": true
+  },
+  {
+   "id": "see-bp-1012-midterms",
+   "piece": "bp_2026-10-12_diesel",
+   "program": "Breaking Points",
+   "date": "2026-10-12",
+   "t": [
+    "Saagar, the instrument reading"
+   ],
+   "object": "the deal as a pitch to the market before the midterms",
+   "kind": "statement",
+   "holder": "the President (as read by RP)",
+   "analog": {
+    "type": "election",
+    "ref": "2026-11-03"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "Midterm Slate 2026 — a reading of motive, not a race object; filed as context"
+   },
+   "scored": true
+  },
+  {
+   "id": "see-ol-1005-crunch",
+   "piece": "ol_2026-10-05_fuel_hedging",
+   "program": "Odd Lots",
+   "date": "2026-10-05",
+   "t": [
+    "whole episode"
+   ],
+   "object": "the refined-products crunch (diesel · jet) as it reaches the balance sheet",
+   "kind": "realization",
+   "holder": null,
+   "analog": {
+    "type": "statement",
+    "ref": "pre-dates the deal (recorded 09-29); the shortage that made the deal worth announcing",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "PG01 §6"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 13,
+   "z": -0.23
+  },
+  {
+   "id": "see-ol-1005-us-export-ban",
+   "piece": "ol_2026-10-05_fuel_hedging",
+   "program": "Odd Lots",
+   "date": "2026-10-05",
+   "t": [
+    "45:09–46:29"
+   ],
+   "object": "a possible US diesel export ban — rhetoric that moved heating oil the other way",
+   "kind": "ruling",
+   "holder": "the President (threatened)",
+   "analog": {
+    "type": "executive action",
+    "ref": "none enacted as of 09-29; DOE/White House statements"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": null,
+    "candidate": true,
+    "event": "evt-press-ol-export-ban-rhetoric"
+   },
+   "scored": true
+  },
+  {
+   "id": "see-ol-1005-russia-ban",
+   "piece": "ol_2026-10-05_fuel_hedging",
+   "program": "Odd Lots",
+   "date": "2026-10-05",
+   "t": [
+    "45:52"
+   ],
+   "object": "Russia's diesel export ban — the second-largest exporter out of the complex",
+   "kind": "ruling",
+   "holder": "the Russian government",
+   "analog": {
+    "type": "decree",
+    "ref": "Russian government decree — date/scope to verify"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "PG01 §4 Russian theater; evt-press-ol-russia-diesel-out"
+   },
+   "scored": true
+  },
+  {
+   "id": "see-ol-1005-sing-jet",
+   "piece": "ol_2026-10-05_fuel_hedging",
+   "program": "Odd Lots",
+   "date": "2026-10-05",
+   "t": [
+    "19:12–20:58"
+   ],
+   "object": "the Singapore jet assessment as a controlled price — who sets the number",
+   "kind": "price",
+   "holder": "trading houses + oil majors (per Kang)",
+   "analog": {
+    "type": null,
+    "ref": "PG01 layer 2"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "price shadow — Platts/Argus Singapore jet"
+   },
+   "scored": true
+  },
+  {
+   "id": "see-aj-1012-deal",
+   "piece": "aj_2026-10-12_energy_ceasefire",
+   "program": "Al Jazeera",
+   "date": "2026-10-12",
+   "t": [
+    "¶1–¶17",
+    "¶32"
+   ],
+   "object": "the diesel deal / the energy ceasefire — delivery credited before it happened",
+   "kind": "statement",
+   "holder": "the President",
+   "analog": {
+    "type": "statement",
+    "ref": "10-09 deal; 10-11 ceasefire statement",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "PG01 H1–H4; H1 terms amended (1.5M t; through Apr 2027)"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 17,
+   "z": -0.04
+  },
+  {
+   "id": "see-aj-1012-graham-critics",
+   "piece": "aj_2026-10-12_energy_ceasefire",
+   "program": "Al Jazeera",
+   "date": "2026-10-12",
+   "t": [
+    "¶7"
+   ],
+   "object": "the critics' objection — Russian fuel back in markets finances the war; the sanctions regime the deal cuts across",
+   "kind": "law",
+   "holder": "Congress / European allies",
+   "analog": {
+    "type": "bill",
+    "ref": "hr-119-5334 — Graham Sanctioning Russia and Iran Act"
+   },
+   "match": {
+    "dataset": "register",
+    "ref": "obj_bill_hr-119-5334"
+   },
+   "scored": true
+  },
+  {
+   "id": "see-aj-1012-g7-release",
+   "piece": "aj_2026-10-12_energy_ceasefire",
+   "program": "Al Jazeera",
+   "date": "2026-10-12",
+   "t": [
+    "¶24"
+   ],
+   "object": "the G7 agreement to release 100 million barrels of emergency oil and diesel reserves",
+   "kind": "agreement",
+   "holder": "the G7",
+   "analog": {
+    "type": "agreement",
+    "ref": "G7 statement, week of 10-05 — needs the record"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": null,
+    "candidate": true,
+    "event": "evt-press-aj-g7-release"
+   },
+   "scored": true,
+   "why": "an agreement with a holder and a number — the other instrument on the same object; the register has no row for it"
+  },
+  {
+   "id": "see-aj-1012-waiver-series",
+   "piece": "aj_2026-10-12_energy_ceasefire",
+   "program": "Al Jazeera",
+   "date": "2026-10-12",
+   "t": [
+    "¶25–¶32"
+   ],
+   "object": "the sanctions series: Mar 2022 ban → G7 cap → Aug 2025 India tariffs → Oct 2025 Rosneft/Lukoil → Mar 5 2026 waiver (to Apr 11) → Sept → Oct 9",
+   "kind": "ruling",
+   "holder": "the President / Treasury (OFAC)",
+   "analog": {
+    "type": "ruling",
+    "ref": "OFAC general licenses, March 2026"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "PG01 §4 Russian theater — the series the deal belongs to; evt-press-aj-waiver-series"
+   },
+   "scored": true
+  },
+  {
+   "id": "see-aj-1012-houthi",
+   "piece": "aj_2026-10-12_energy_ceasefire",
+   "program": "Al Jazeera",
+   "date": "2026-10-12",
+   "t": [
+    "¶22"
+   ],
+   "object": "Houthi attacks on Saudi oil installations and airports; fighting around the Red Sea and Bab al-Mandeb",
+   "kind": "strike",
+   "holder": null,
+   "analog": {
+    "type": null,
+    "ref": "PG01 Gulf theater"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "PG01 §5 Gulf — sighting; the tracker's OSINT series is the record"
+   },
+   "scored": false
+  },
+  {
+   "id": "see-aj-1012-midterms",
+   "piece": "aj_2026-10-12_energy_ceasefire",
+   "program": "Al Jazeera",
+   "date": "2026-10-12",
+   "t": [
+    "¶3",
+    "¶37",
+    "¶41"
+   ],
+   "object": "the deal as a midterm instrument — 'claim a victory on energy prices before the midterms'",
+   "kind": "statement",
+   "holder": "the President (as read by LI)",
+   "analog": {
+    "type": "election",
+    "ref": "2026-11-03"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "Midterm Slate 2026 — motive reading, context"
+   },
+   "scored": true
+  },
+  {
+   "id": "see-tc-0923-crunch",
+   "piece": "tc_2026-09-23_refineries",
+   "program": "Tucker Carlson",
+   "date": "2026-09-23",
+   "t": [
+    "0:00–38:18",
+    "53:08–1:05:35"
+   ],
+   "object": "the refined-products crunch (diesel) as it reaches the balance sheet — read as a bite",
+   "kind": "realization",
+   "holder": null,
+   "analog": {
+    "type": "statement",
+    "ref": "the 09-20 request; the 10-09 deal to follow",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "PG01 §6; the rose's first cross-corner split on Z (RP +0.44 vs RI −0.44)"
+   },
+   "scored": true,
+   "station": "RP",
+   "dia": 35,
+   "z": 0.44
+  },
+  {
+   "id": "see-tc-0923-request",
+   "piece": "tc_2026-09-23_refineries",
+   "program": "Tucker Carlson",
+   "date": "2026-09-23",
+   "t": [
+    "26:04–26:28"
+   ],
+   "object": "Trump's 09-20 request that Zelenskyy stop striking Russian diesel refining — 'causing a shortage… hurting the world'",
+   "kind": "statement",
+   "holder": "the President",
+   "analog": {
+    "type": "statement",
+    "ref": "the predecessor to the 10-09 deal (AJ ¶31)",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "PG01 statements — stmt-trump-2026-09-20-diesel-request"
+   },
+   "scored": true
+  },
+  {
+   "id": "see-tc-0923-h5",
+   "piece": "tc_2026-09-23_refineries",
+   "program": "Tucker Carlson",
+   "date": "2026-09-23",
+   "t": [
+    "28:11–28:56"
+   ],
+   "object": "Trump's 09-18 claim: when the war ends, gas prices return to pre-war, 'maybe even lower'",
+   "kind": "statement",
+   "holder": "the President",
+   "analog": {
+    "type": "statement",
+    "ref": "a dated falsifiable claim with a floating window",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H5 (proposed)"
+   },
+   "scored": true
+  },
+  {
+   "id": "see-tc-0923-moscow-strike",
+   "piece": "tc_2026-09-23_refineries",
+   "program": "Tucker Carlson",
+   "date": "2026-09-23",
+   "t": [
+    "32:11–32:58"
+   ],
+   "object": "the Moscow-area refinery strike ≈09-22, a week after the request",
+   "kind": "strike",
+   "holder": "Ukraine",
+   "analog": {
+    "type": null,
+    "ref": "PG01 §4 record"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "evt-press-tc-moscow-refinery-strike"
+   },
+   "scored": true
+  },
+  {
+   "id": "see-tc-0923-china-refining",
+   "piece": "tc_2026-09-23_refineries",
+   "program": "Tucker Carlson",
+   "date": "2026-09-23",
+   "t": [
+    "21:51",
+    "57:38–1:00:25"
+   ],
+   "object": "China's spare refining capacity, coal-to-liquids, the sanctioned Shandong teapots, the SPR — processing capacity as a flow determinant",
+   "kind": "supply",
+   "holder": "China",
+   "analog": {
+    "type": null,
+    "ref": "the tracker's flows — refining capacity by country is not yet a series"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": null,
+    "candidate": true
+   },
+   "scored": true,
+   "why": "the tracker maps flows and price; refining capacity (who can turn crude into diesel) is the layer both Carlson and Weichert read and the tracker does not yet carry"
+  },
+  {
+   "id": "see-tc-0923-us-refining",
+   "piece": "tc_2026-09-23_refineries",
+   "program": "Tucker Carlson",
+   "date": "2026-09-23",
+   "t": [
+    "55:25–57:30"
+   ],
+   "object": "US refining: no new refinery since the late 1970s; configured for heavy sour; light sweet exported, heavy sour imported from Mexico and Canada",
+   "kind": "supply",
+   "holder": "US",
+   "analog": {
+    "type": null,
+    "ref": "EIA refinery capacity / PADD configuration"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "evt-press-ol-plumbing (OL 46:29: PADD 3 is the kitchen) — the same plumbing from RP",
+    "candidate": true
+   },
+   "scored": true
+  },
+  {
+   "id": "see-tc-0923-nordstream",
+   "piece": "tc_2026-09-23_refineries",
+   "program": "Tucker Carlson",
+   "date": "2026-09-23",
+   "t": [
+    "7:32"
+   ],
+   "object": "Nord Stream's destruction as 'the largest man-made CO2 emission in history'",
+   "kind": "statement",
+   "holder": null,
+   "analog": {
+    "type": null,
+    "ref": "none on the register"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": null,
+    "candidate": false,
+    "permanence": "low"
+   },
+   "scored": true,
+   "why": "a frame, not an object; kept as a sighting for the lens's furniture"
+  },
+  {
+   "id": "see-tc-0923-cia",
+   "piece": "tc_2026-09-23_refineries",
+   "program": "Tucker Carlson",
+   "date": "2026-09-23",
+   "t": [
+    "27:19",
+    "1:11:15–1:12:43"
+   ],
+   "object": "the claim that US intelligence provides Ukraine's targeting and the war is 'run out of Langley'",
+   "kind": "statement",
+   "holder": null,
+   "analog": {
+    "type": null,
+    "ref": "no record on the tape"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": null,
+    "candidate": false,
+    "permanence": "low"
+   },
+   "scored": true,
+   "why": "a frame about who decides; no checkable predicate offered"
+  },
+  {
+   "id": "see-fp-1013-deal",
+   "piece": "fp_2026-10-13_diesel_deal_lede",
+   "program": "The Free Press",
+   "date": "2026-10-13",
+   "t": [
+    "headline",
+    "dek",
+    "¶1–¶5"
+   ],
+   "object": "the diesel deal / the energy ceasefire — read as a failure of statecraft",
+   "kind": "statement",
+   "holder": "the President",
+   "analog": {
+    "type": "statement",
+    "ref": "10-09 / 10-11",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "PG01 H1–H4"
+   },
+   "scored": true,
+   "station": "RP",
+   "dia": 27,
+   "z": -0.3,
+   "partial": "lede"
+  },
+  {
+   "id": "see-fp-1013-pledge",
+   "piece": "fp_2026-10-13_diesel_deal_lede",
+   "program": "The Free Press",
+   "date": "2026-10-13",
+   "t": [
+    "¶1"
+   ],
+   "object": "the 2024 campaign pledge — 'cut your energy costs in half within 12 months' — against the first-year record",
+   "kind": "statement",
+   "holder": "the President (candidate)",
+   "analog": {
+    "type": "statement",
+    "ref": "campaign pledge, late 2024"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "PG01 statements — a dated B predicate for the arc's opening"
+   },
+   "scored": true
+  },
+  {
+   "id": "see-fp-1013-crunch-50",
+   "piece": "fp_2026-10-13_diesel_deal_lede",
+   "program": "The Free Press",
+   "date": "2026-10-13",
+   "t": [
+    "¶4"
+   ],
+   "object": "diesel +≈50% since the start of the Iran war; Gulf refining damaged; Kyiv's strikes on Russian refineries",
+   "kind": "price",
+   "holder": null,
+   "analog": {
+    "type": null,
+    "ref": "PG01 §6"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "evt-press-fp-diesel-50 (to merge with the full cut)"
+   },
+   "scored": true
+  },
+  {
+   "id": "see-bp2-1015-hormuz-control",
+   "piece": "bp_2026-10-15_hormuz",
+   "program": "Breaking Points",
+   "date": "2026-10-15",
+   "t": [
+    "3:53–11:33",
+    "18:23–21:04"
+   ],
+   "object": "US control of the Strait of Hormuz — CENTCOM's throughput claim vs sinkings, tolls, freight",
+   "kind": "statement",
+   "holder": "CENTCOM",
+   "analog": {
+    "type": "statement",
+    "ref": "CENTCOM 10-12 (19M bbl)",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "proposed H6 — a new object, opened by a reader's tape; record to confirm"
+   },
+   "scored": true,
+   "station": "LP+RP",
+   "dia": 30,
+   "z": -0.57
+  },
+  {
+   "id": "see-bp2-1015-toll",
+   "piece": "bp_2026-10-15_hormuz",
+   "program": "Breaking Points",
+   "date": "2026-10-15",
+   "t": [
+    "10:53",
+    "18:37",
+    "20:01"
+   ],
+   "object": "who sets the price of passage — Iran's toll, the freight market, the insurers",
+   "kind": "statement",
+   "holder": null,
+   "analog": {
+    "type": null,
+    "ref": "PG01 layer 2 — the petrogas-dollar question on a waterway"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "PG01 statements layer 2 (stmt-l2-toll-*)"
+   },
+   "scored": true
+  },
+  {
+   "id": "see-bp2-1015-dark-tankers",
+   "piece": "bp_2026-10-15_hormuz",
+   "program": "Breaking Points",
+   "date": "2026-10-15",
+   "t": [
+    "20:52",
+    "21:36"
+   ],
+   "object": "US weighing de-sanctioning non-Iranian 'dark' tankers (Russian, Venezuelan) to free freight; buying Russian diesel 'even though we're legally not allowed to'",
+   "kind": "ruling",
+   "holder": "Treasury / OFAC (the administration)",
+   "analog": {
+    "type": "executive action",
+    "ref": "OFAC general license — needs the record; cuts across hr-119-5334"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": null,
+    "candidate": true,
+    "priority": "high",
+    "event": "evt-press-bp2-dark-tankers"
+   },
+   "scored": true,
+   "why": "an executive action with a holder and a statute it cuts across — the register's kind of object; also H1 record"
+  },
+  {
+   "id": "see-bp2-1015-moab",
+   "piece": "bp_2026-10-15_hormuz",
+   "program": "Breaking Points",
+   "date": "2026-10-15",
+   "t": [
+    "2:03–3:45",
+    "24:38"
+   ],
+   "object": "the MOAB plan against Iran — 'an information operation' per the Pentagon write-up",
+   "kind": "statement",
+   "holder": "the President / War Department",
+   "analog": {
+    "type": "decision",
+    "ref": "a strike decision; originating report to find"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": null,
+    "candidate": true,
+    "event": "evt-press-bp2-moab-plan"
+   },
+   "scored": true
+  },
+  {
+   "id": "see-bp2-1015-starlink",
+   "piece": "bp_2026-10-15_hormuz",
+   "program": "Breaking Points",
+   "date": "2026-10-15",
+   "t": [
+    "20:13"
+   ],
+   "object": "US reduces Starlink access to curb Ukrainian drone strikes on Russian refineries (by report)",
+   "kind": "ruling",
+   "holder": "the administration / SpaceX",
+   "analog": {
+    "type": "executive action",
+    "ref": "needs the record"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": null,
+    "candidate": true
+   },
+   "scored": true,
+   "why": "an instrument used to enforce the energy ceasefire from the US side — if confirmed, it is H2's enforcement predicate"
+  },
+  {
+   "id": "see-bp2-1015-zelenskyy-ft",
+   "piece": "bp_2026-10-15_hormuz",
+   "program": "Breaking Points",
+   "date": "2026-10-15",
+   "t": [
+    "20:35"
+   ],
+   "object": "Zelenskyy, FT 10-15: Ukraine will keep striking refineries regardless",
+   "kind": "statement",
+   "holder": "Zelenskyy",
+   "analog": {
+    "type": "statement",
+    "ref": "FT interview 10-15",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H2 record — falsification supported"
+   },
+   "scored": true
+  },
+  {
+   "id": "see-bp2-1015-riyadh",
+   "piece": "bp_2026-10-15_hormuz",
+   "program": "Breaking Points",
+   "date": "2026-10-15",
+   "t": [
+    "11:47–15:57",
+    "22:32"
+   ],
+   "object": "the Houthi campaign on Saudi Arabia — Riyadh airport struck (134 → 38 aircraft, $400M), Aramco fire, Six Kings postponed, five World Cup stadiums dropped",
+   "kind": "strike",
+   "holder": null,
+   "analog": {
+    "type": null,
+    "ref": "PG01 §5 Gulf theater"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "PG01 §5 record — evt-press-bp2-riyadh-airport, evt-press-bp2-pif-stadiums; the tracker's OSINT series"
+   },
+   "scored": true
+  },
+  {
+   "id": "see-bp2-1015-texas",
+   "piece": "bp_2026-10-15_hormuz",
+   "program": "Breaking Points",
+   "date": "2026-10-15",
+   "t": [
+    "0:37",
+    "5:22–5:49; the episode's Texas segment (EbgFRwl8AKg) not cut tonight"
+   ],
+   "object": "Republicans abandoning seats as a blue wave builds; Trump campaigning in South Carolina; the Texas statewide sweep (leaked audio)",
+   "kind": "vote",
+   "holder": null,
+   "analog": {
+    "type": "election",
+    "ref": "2026-11-03 — the Texas Senate race"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "Midterm Slate 2026 — Texas (Sailor's 'big one'); the companion segment is the next cut"
+   },
+   "scored": false
+  },
+  {
+   "id": "see-bp3-1015-tx-sen",
+   "piece": "bp_2026-10-15_texas_trail",
+   "program": "Breaking Points",
+   "date": "2026-10-15",
+   "t": [
+    "3:13–7:14",
+    "19:26"
+   ],
+   "object": "Texas's Senate seat — the trail before it pays",
+   "kind": "vote",
+   "holder": "the electorate (11-03)",
+   "analog": {
+    "type": "election",
+    "ref": "tx-sen, 2026-11-03"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "races.json tx-sen — press link, trail row tx-s4 (Paxton), weight polls"
+   },
+   "scored": true,
+   "station": "LP+RP+LI",
+   "dia": 19,
+   "z": 0.32
+  },
+  {
+   "id": "see-bp3-1015-tx-gov",
+   "piece": "bp_2026-10-15_texas_trail",
+   "program": "Breaking Points",
+   "date": "2026-10-15",
+   "t": [
+    "3:13",
+    "5:28",
+    "7:01"
+   ],
+   "object": "Texas governor — Abbott v. Hinojosa (UT +1; Fort Bend +11; Phillips: 1-in-3 to 40% flip)",
+   "kind": "vote",
+   "holder": "the electorate",
+   "analog": {
+    "type": "election",
+    "ref": "tx-gov 2026-11-03"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": null,
+    "candidate": true
+   },
+   "scored": true,
+   "why": "not on the race register (which has tx-sen and me-sen); the tape treats it as part of a statewide sweep"
+  },
+  {
+   "id": "see-bp3-1015-gas-approval",
+   "piece": "bp_2026-10-15_texas_trail",
+   "program": "Breaking Points",
+   "date": "2026-10-15",
+   "t": [
+    "10:23–11:05"
+   ],
+   "object": "gas prices ↔ Trump approval, ≈1:1 — PG01's object as the slate's driver",
+   "kind": "statement",
+   "holder": null,
+   "analog": {
+    "type": null,
+    "ref": "the cross-arc predicate"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statements stmt-l2-gas-approval-krystal-1015; also races.json tx-sen issue",
+    "crossArc": [
+     "PG01",
+     "slate"
+    ]
+   },
+   "scored": true
+  },
+  {
+   "id": "see-bp3-1015-trump-oil",
+   "piece": "bp_2026-10-15_texas_trail",
+   "program": "Breaking Points",
+   "date": "2026-10-15",
+   "t": [
+    "0:05–0:49"
+   ],
+   "object": "Trump on the trail: 'making more money than ever because oil is so high… Texas, Oklahoma, North Dakota making a fortune… not happy until the price is down to where it was prior'",
+   "kind": "statement",
+   "holder": "the President",
+   "analog": {
+    "type": "statement",
+    "ref": "campaign remarks ≈10-14",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statements stmt-trump-2026-10-14-oil-fortune; restates H5"
+   },
+   "scored": false
+  },
+  {
+   "id": "see-bp3-1015-data-centers",
+   "piece": "bp_2026-10-15_texas_trail",
+   "program": "Breaking Points",
+   "date": "2026-10-15",
+   "t": [
+    "8:19–10:17"
+   ],
+   "object": "data-center siting as an electoral issue — voters within 2 km swing to Democrats (The Economist); Hinojosa, Sherrod Brown campaigns",
+   "kind": "ruling",
+   "holder": "state governments (abatements, siting)",
+   "analog": {
+    "type": "law",
+    "ref": "state tax-abatement and siting statutes — needs the record"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": null,
+    "candidate": true
+   },
+   "scored": true,
+   "why": "an issue with legislative analogs and a measured electoral effect — the register's kind"
+  },
+  {
+   "id": "see-bp3-1015-gop-triage",
+   "piece": "bp_2026-10-15_texas_trail",
+   "program": "Breaking Points",
+   "date": "2026-10-15",
+   "t": [
+    "1:34–2:14"
+   ],
+   "object": "Republicans pulling money from House candidates — 'triage mode' (Jake Sherman)",
+   "kind": "statement",
+   "holder": "the NRCC / party committees",
+   "analog": {
+    "type": null,
+    "ref": "FEC spending data"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "House context; not a slate object"
+   },
+   "scored": true
+  },
+  {
+   "id": "see-bp3-1015-polling-miss",
+   "piece": "bp_2026-10-15_texas_trail",
+   "program": "Breaking Points",
+   "date": "2026-10-15",
+   "t": [
+    "14:19–16:20"
+   ],
+   "object": "the polling-miss question — 2016/2020/2024 adjustments (The Atlantic); Phillips's brackets",
+   "kind": "statement",
+   "holder": null,
+   "analog": {
+    "type": null,
+    "ref": "the slate's own falsifier — outcomes vs weight"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "slate.json — the miss as the slate's test condition"
+   },
+   "scored": true
+  },
+  {
+   "id": "see-nyt-1014-deal-sized",
+   "piece": "nyt_2026-10-14_diesel_deal_lede",
+   "program": "The New York Times",
+   "date": "2026-10-14",
+   "t": [
+    "hed",
+    "¶1–2",
+    "¶4"
+   ],
+   "object": "the deal sized: 300k t/Oct ≈ 75k bbl/d vs Russia’s own 693k bbl/d (Jul–Sep 2025) → 140k (2026)",
+   "kind": "figure",
+   "holder": "S&P Global Energy",
+   "analog": {
+    "type": "hypothesis",
+    "ref": "H1 — the deal delivers"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "hypotheses.json H1 · tracker flows"
+   },
+   "scored": true
+  },
+  {
+   "id": "see-nyt-1014-gulf-hole",
+   "piece": "nyt_2026-10-14_diesel_deal_lede",
+   "program": "The New York Times",
+   "date": "2026-10-14",
+   "t": [
+    "¶5"
+   ],
+   "object": "Middle East diesel exports −809k bbl/d, Jul–Sep y/y, since Feb 28",
+   "kind": "figure",
+   "holder": "S&P Global Energy",
+   "analog": {
+    "type": "flow",
+    "ref": "PG01 §5 — the Gulf’s lost barrels"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "flows — ME diesel exports"
+   },
+   "scored": true
+  },
+  {
+   "id": "see-nyt-1014-hormuz-binding",
+   "piece": "nyt_2026-10-14_diesel_deal_lede",
+   "program": "The New York Times",
+   "date": "2026-10-14",
+   "t": [
+    "¶6"
+   ],
+   "object": "Hormuz as the binding constraint (Raffoul, Argus)",
+   "kind": "statement",
+   "holder": "Sarah Raffoul / Argus",
+   "analog": {
+    "type": "hypothesis",
+    "ref": "H6 (proposed) — the Hormuz control claim"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "hypotheses.json H6 — first LI sighting"
+   },
+   "scored": true
+  },
+  {
+   "id": "see-nyt-1014-diesel-ytd",
+   "piece": "nyt_2026-10-14_diesel_deal_lede",
+   "program": "The New York Times",
+   "date": "2026-10-14",
+   "t": [
+    "¶7"
+   ],
+   "object": "US diesel +≈77% YTD; cause = ME + Russia shortfall",
+   "kind": "figure",
+   "holder": null,
+   "analog": {
+    "type": "price",
+    "ref": "tracker — diesel"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "prices — diesel (cf. FP ¶4 “roughly 50% since the war”; TC $6.50)"
+   },
+   "scored": true
+  },
+  {
+   "id": "see-nyt-1014-refinery-strikes",
+   "piece": "nyt_2026-10-14_diesel_deal_lede",
+   "program": "The New York Times",
+   "date": "2026-10-14",
+   "t": [
+    "dek"
+   ],
+   "object": "Ukrainian strikes on Russian refineries as a cause of the crunch",
+   "kind": "statement",
+   "holder": null,
+   "analog": {
+    "type": "hypothesis",
+    "ref": "H2 — energy ceasefire (falsified 10-12)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "hypotheses.json H2 record"
+   },
+   "scored": true
+  },
+  {
+   "id": "see-nyt-1014-headline-split",
+   "piece": "nyt_2026-10-14_diesel_deal_lede",
+   "program": "The New York Times",
+   "date": "2026-10-14",
+   "t": [
+    "hed"
+   ],
+   "object": "feed title vs page headline (“unlikely to lower” → “won’t knock down”) — a Dia difference inside one publication",
+   "kind": "register-intake",
+   "holder": null,
+   "analog": {
+    "type": null,
+    "ref": "the sweep reads the feed; the cut reads the page — file both"
+   },
+   "match": {
+    "dataset": "press",
+    "ref": "sweep_2026-10-16.json · spec titleNote"
+   },
+   "scored": false
+  }
+ ],
+ "log": [
+  {
+   "date": "2026-10-15",
+   "what": "intake opened; objects pass run over the three existing cuts (Close, BP, OL); TSMC sorted as a later sighting on rdg_ms51urghz7zi; three register candidates (Fed path, driver crackdown, memory shortage)",
+   "by": "Claude"
+  },
+  {
+   "date": "2026-10-15",
+   "what": "objects pass on the Al Jazeera cut: six sightings; the G7 release as a register candidate",
+   "by": "Claude"
+  },
+  {
+   "date": "2026-10-15",
+   "what": "objects pass on the Tucker Carlson cut: eight sightings; China's and the US's refining capacity flagged as a tracker candidate layer (processing, not flow)",
+   "by": "Claude"
+  },
+  {
+   "date": "2026-10-15",
+   "what": "objects pass on BP 'Saudi Under Siege': eight sightings; a new PG01 object (Hormuz control, H6 proposed); the dark-tanker de-sanctioning as a high-priority register candidate; the Texas segment sorted to the slate for the next cut",
+   "by": "Claude"
+  },
+  {
+   "date": "2026-10-15",
+   "what": "objects pass on BP Texas: seven sightings; the first cross-arc predicate (gas ↔ approval) filed to both PG01 and the slate; tx-gov and data-center siting as candidates",
+   "by": "Claude"
+  },
+  {
+   "date": "2026-10-16",
+   "what": "objects pass on the NYT beta lede (6 sightings; 5 scored). First sightings from a sweep rather than a scan",
+   "by": "Claude"
+  }
+ ]
+}

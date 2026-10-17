@@ -1,0 +1,74 @@
+{
+ "schema": "press/indices/v0",
+ "what": "Indexed samples (Sailor, 2026-10-16). An index is a fixed basket of publications — one or more per corner — swept on the same object in the same window, every day. The composite per corner is the index value for the day; join the four and you get the day's figure. Opportunistic cuts show who happened to speak; an index shows what the same four readers said. Balance is by design, not by luck.",
+ "rules": [
+  "members are fixed; a change to the basket is a new index version, dated",
+  "every member is swept every day it publishes (the sweep is mechanical: headlines · deks · openings · transcripts); only pieces that touch the index's object are cut",
+  "beta ledes (headline · dek · opening of a paywalled piece) run as data: they print on the paper flagged, and do NOT enter the index composite until the member is subscribed and read in full",
+  "the floor is a separate series: an index member may also be the floor (The Close), but the floor is never computed from the index — a yardstick that changes length isn't a yardstick",
+  "an index reads one object at a time; the same basket may run on several objects as separate indices"
+ ],
+ "indices": [
+  {
+   "id": "idx-diesel-01",
+   "name": "The Diesel Index",
+   "version": 1,
+   "opened": "2026-10-16",
+   "status": "proposed",
+   "object": "the refined-products crunch / the diesel deal (PG01 layer 1) — bites ↔ passes; delivers ↔ does not",
+   "arc": "PG01",
+   "cadence": "daily",
+   "members": [
+    {
+     "corner": "LI",
+     "source": "The New York Times",
+     "route": "sweep: RSS per section → objects pass → full read (subscription) · pods: The Daily, Ezra Klein (nytimes.com transcripts)",
+     "status": "read in full — The Daily 10-14 (nyt_2026-10-14_the_daily_diesel_deal); print still beta-lede",
+     "access": "subscription needed for full cuts; beta ledes until then (excluded from the composite)",
+     "reads": [
+      {
+       "piece": "nyt_2026-10-14_the_daily_diesel_deal",
+       "date": "2026-10-14",
+       "dia": 20,
+       "readZ": -0.34,
+       "lumens": 72,
+       "full": true
+      }
+     ],
+     "note": "the podcast is open (YouTube captions); the print body needs the subscription. The beta lede of 10-14 and the full read agree in sign and tier (−0.49 / 17 vs −0.34 / 20)."
+    },
+    {
+     "corner": "RI",
+     "source": "Fox News (foxnews.com, Fox Business)",
+     "route": "sweep: RSS (free) → objects pass → full read (fetchable)",
+     "status": "proposed",
+     "stationRuling": "owed — RI by institution (corporate cable) with a populist voice, or RP?"
+    },
+    {
+     "corner": "LP",
+     "source": "The Grayzone",
+     "route": "sweep: site/Substack feed → objects pass → full read (some paywalled)",
+     "status": "proposed — feed verified 10-16; no piece on the object in the window (0/12)",
+     "notes": "LP at the far edge; anti-establishment left on foreign policy"
+    },
+    {
+     "corner": "RP",
+     "source": "The Free Press · Tucker Carlson Network",
+     "route": "FP: fetch (subscription for full) · TCN: yt-dlp captions",
+     "status": "ruled 10-15 (both RP)"
+    }
+   ],
+   "floorMember": "The Close (RI) — reads into the floor series, not the index",
+   "readout": "daily: LI · RI · LP · RP composites (Dia, read z, Lumens) + the figure; weekly: the rolling figure",
+   "note": "first basket, proposed on the phone 10-16; the NYT whole-output sweep is feasible (sweep everything, cut what touches the object — ~5–15 pieces/day) and runs natively on the Mac",
+   "readout_2026-10-16": "LI read in full (Dia 20 · z −0.34 · Lumens 72) · RI none (Fox silent on the deal) · LP none (Grayzone route unverified) · RP beta only (FP lede) — no figure published"
+  }
+ ],
+ "log": [
+  {
+   "date": "2026-10-16",
+   "what": "indices opened; the Diesel Index proposed with a four-corner basket; lede cuts demoted to beta and excluded from composites",
+   "by": "Claude, from Sailor's direction"
+  }
+ ]
+}

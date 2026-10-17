@@ -1,0 +1,638 @@
+{
+ "schema": "press/parallelogram/v0",
+ "id": "bp_2026-10-15_texas_trail",
+ "status": "claude-draft",
+ "kind": "parallelogram",
+ "title": "The Seat, Before It Pays",
+ "source": {
+  "program": "Breaking Points",
+  "network": "Breaking Points (YouTube)",
+  "date": "2026-10-15",
+  "title": "MORE LEAKED AUDIO: Texans REPUBLICANS PANIC As Statewide Dem Sweep Looms",
+  "url": "https://www.youtube.com/watch?v=EbgFRwl8AKg",
+  "length": 1320,
+  "transcript": "Parameters/03_Libraries/sources/BreakingPoints_2026-10-15_Texas_Trail_transcript.md"
+ },
+ "arc": "Midterm Slate 2026 · tx-sen",
+ "race": "tx-sen",
+ "object": {
+  "label": "Texas's Senate seat (Class 2) — the trail before it pays (Talarico v. Paxton; window 10-12 → 11-03)",
+  "layer": 1,
+  "zAxis": {
+   "pos": "flips (Talarico takes the seat)",
+   "neg": "holds (Paxton)"
+  }
+ },
+ "transform": "trail",
+ "transformNote": "what readers say about the seat before election day, scored as lines; z is each voice's belief about the outcome, paid on 11-03 and never used as weight. Polls quoted on the tape enter races.json as weight only (races/v1 rule). Proposed value; ruling owed",
+ "names": {
+  "KB": "Krystal Ball",
+  "SE": "Saagar Enjeti",
+  "LP": "Logan Phillips (Race to the WH, forecaster — guest)",
+  "KP": "Ken Paxton (leaked audio)",
+  "DT": "Donald Trump (clip — filed to PG01, not scored here)"
+ },
+ "trace": {
+  "object": {
+   "x": 0,
+   "y": 0,
+   "z": 0.35
+  },
+  "shadow": {
+   "x": 0,
+   "y": 0,
+   "z": 0.0,
+   "note": "none declared — a conditional object has no Z-assertion yet; the shadow is the poll read as the outcome"
+  },
+  "predicates": {
+   "operative": [
+    {
+     "type": "T",
+     "label": "UT poll (cited as 2024's most accurate in Texas): Talarico +3; Hinojosa +1; Lt Gov +3; RR Commissioner +1; AG +1 — weight only",
+     "z": 0.9
+    },
+    {
+     "type": "T",
+     "label": "Barbara Jordan Research Center, Fort Bend County: Talarico +18, Hinojosa +11 (Trump–Harris tied there 2024) → ≈+2 statewide; RCP average ≈ Talarico +2 — weight only",
+     "z": 0.85
+    },
+    {
+     "type": "T",
+     "label": "AP: 11% say Trump prioritizes 'people like me'; 56% of independents say not at all",
+     "z": 0.7
+    },
+    {
+     "type": "T",
+     "label": "Republicans pulling money from candidates — 'triage mode' (Jake Sherman)",
+     "z": 0.7
+    },
+    {
+     "type": "M",
+     "label": "gas prices ↔ Trump approval, near 1:1 (C7) — PG01's crunch as the slate's driver",
+     "z": 0.9
+    },
+    {
+     "type": "B",
+     "label": "Abbott has won every race by ≥10 since 1998; 2022: Democrats three seats short after over-learning 2020",
+     "z": 0.6
+    },
+    {
+     "type": "X",
+     "label": "the polls could be wrong — 2016/2020/2024 misses and the adjustments after each (education, recalled vote)",
+     "z": 0.8
+    }
+   ],
+   "stated": [
+    {
+     "type": "F",
+     "label": "Trump 'a massive drag' + candidate quality; 'singularly Trump' causing gas prices; 'all his policies help the wealthy'",
+     "z": 0.5
+    },
+    {
+     "type": "F",
+     "label": "depolarization — one-party states point dissatisfaction one way (Phillips's hot take)",
+     "z": 0.4
+    }
+   ],
+   "challenge": [
+    {
+     "type": "X",
+     "label": "a 2020-scale polling miss",
+     "z": 0.8
+    }
+   ]
+  },
+  "positions": [
+   {
+    "quadrant": "A",
+    "station": "LI",
+    "fluid": "the forecaster: probabilities bracketed (1-in-3 to 40% for tx-gov; 2024-miss → Dems still win the Senate; 2020-miss → not); selection effects named; 'a cloudy mirror, not an oracle'",
+    "denominated": "'singularly Trump'; 'all his policies focused on the wealthy'",
+    "distinguishability": "Medium",
+    "fluidKeywords": [
+     "one in three",
+     "40% chance",
+     "every election by at least 10",
+     "cloudy mirror",
+     "not an oracle",
+     "three seats short",
+     "what people choose to reveal"
+    ],
+    "denomKeywords": [
+     "singularly",
+     "all of his policies"
+    ],
+    "note": "Logan Phillips filed LI pending ruling — a guest forecaster, not a sampled corner"
+   },
+   {
+    "quadrant": "B",
+    "station": "RI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty, by-record"
+   },
+   {
+    "quadrant": "C",
+    "station": "LP",
+    "fluid": "the gas-approval link; the triage; the falsifier stated (what if the polls are wrong)",
+    "denominated": "'not buying it'; 'warped'",
+    "distinguishability": "Medium",
+    "fluidKeywords": [
+     "triage mode",
+     "broadening map",
+     "1:1",
+     "as gas prices rise",
+     "what if the polls are all wrong",
+     "education",
+     "recalled vote"
+    ],
+    "denomKeywords": [
+     "not buying it"
+    ]
+   },
+   {
+    "quadrant": "D",
+    "station": "RP",
+    "fluid": "the polls, sourced and dated (UT; Fort Bend; RCP; AP); the data-center swing",
+    "denominated": "'massive drag', 'stars aligning', 'complete statewide sweep', 'hate him'",
+    "distinguishability": "Medium",
+    "fluidKeywords": [
+     "Talarico plus three",
+     "Fort Bend",
+     "plus 18",
+     "within two points",
+     "RCP average",
+     "11%",
+     "two kilometers"
+    ],
+    "denomKeywords": [
+     "massive drag",
+     "stars aligning",
+     "statewide sweep",
+     "hate him"
+    ]
+   }
+  ]
+ },
+ "log": [
+  {
+   "date": "2026-10-15",
+   "what": "first trail cut on a race object (tx-sen); same-day. Polls quoted filed to races.json as weight; Trump's oil clip (0:05) filed to PG01 statements; the gas↔approval link (10:23) filed as the cross-arc predicate PG01 → slate",
+   "by": "Claude"
+  }
+ ],
+ "scoreboard": {
+  "dia": 19,
+  "tier": "fluid",
+  "declaredZ": -0.3,
+  "readZ": 0.32,
+  "readZRange": [
+   0.6,
+   0.0
+  ],
+  "stations": {
+   "LI": {
+    "dia": 20,
+    "spread": [
+     10,
+     38
+    ],
+    "readZ": 0.23,
+    "voices": {
+     "LP": {
+      "dia": 20,
+      "readZ": 0.23,
+      "n": 9
+     }
+    }
+   },
+   "RI": null,
+   "LP": {
+    "dia": 18,
+    "spread": [
+     12,
+     28
+    ],
+    "readZ": 0.28,
+    "voices": {
+     "KB": {
+      "dia": 18,
+      "readZ": 0.28,
+      "n": 4
+     }
+    }
+   },
+   "RP": {
+    "dia": 19,
+    "spread": [
+     8,
+     36
+    ],
+    "readZ": 0.44,
+    "voices": {
+     "SE": {
+      "dia": 19,
+      "readZ": 0.44,
+      "n": 8
+     }
+    }
+   }
+  },
+  "split": {
+   "topology": "none",
+   "station": "LP+RP+LI",
+   "strength": 0.0,
+   "note": "every reader leans flip (+0.1 → +0.6); no split on Z. The gap is between the forecaster's bracketed lines (Dia 8–12, z +0.1/+0.2 — probability, not belief) and the hosts' frames (26–38, +0.5/+0.6). Logan Phillips's station is a ruling: filed LI (the data/forecasting establishment) pending Sailor"
+  },
+  "lumens": 58,
+  "zRule": "every line carries a z, inferred where implied (Sailor 2026-10-13); inferred lines are marked zInferred with a zWhy",
+  "mode": "open"
+ },
+ "lines": [
+  {
+   "t": 49,
+   "who": "KB",
+   "station": "LP",
+   "quote": "Trump framing the high price of oil as a good thing for the United States — voters don't seem to be buying it",
+   "touch": "F",
+   "z": 0.2,
+   "dia": 28,
+   "mode": "open",
+   "note": "reads the Trump clip (0:05) as a pitch that fails; the oil statement itself is filed to PG01",
+   "chapter": "The pitch",
+   "normX": 0.3658,
+   "normY": 0.5897,
+   "normZ": 0.15,
+   "quadrant": "C",
+   "zInferred": true,
+   "zWhy": "a failing pitch leans flip"
+  },
+  {
+   "t": 111,
+   "who": "KB",
+   "station": "LP",
+   "quote": "Republicans are pulling money from any number of their candidates — triage mode; Democrats with fewer resources see a broadening map (Jake Sherman)",
+   "touch": "T",
+   "z": 0.4,
+   "dia": 16,
+   "mode": "open",
+   "note": "dated by report; the parties' own behaviour as the record",
+   "chapter": "The map",
+   "normX": 0.4031,
+   "normY": 0.5634,
+   "normZ": 0.3,
+   "quadrant": "C",
+   "zInferred": true,
+   "zWhy": "triage is a party that expects to lose seats"
+  },
+  {
+   "t": 141,
+   "who": "LP",
+   "station": "LI",
+   "quote": "a great sign for Democrats — but in 2022 they lost the House by over-learning 2020, playing defense, and came three seats short",
+   "touch": "B",
+   "z": 0.3,
+   "dia": 12,
+   "mode": "open",
+   "note": "the precedent for a miss in the other direction, dated",
+   "chapter": "The map",
+   "normX": 0.4313,
+   "normY": 0.4266,
+   "normZ": 0.225,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a lesson about under-reaching leans flip"
+  },
+  {
+   "t": 193,
+   "who": "SE",
+   "station": "RP",
+   "quote": "growing signs Abbott himself could be in genuine trouble; Paxton's staff and fundraisers leak everything he says — ninth leaked audio",
+   "touch": "T",
+   "z": 0.3,
+   "dia": 30,
+   "mode": "open",
+   "note": "the leak as record; 'hate him' the vehicle",
+   "chapter": "The leak",
+   "normX": 0.626,
+   "normY": 0.6127,
+   "normZ": 0.225,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "a campaign that leaks is a campaign in trouble"
+  },
+  {
+   "t": 225,
+   "who": "KP",
+   "station": "O",
+   "quote": "Abbott is struggling but he has a lot of money; she has none — maybe one in a hundred would know her name. I didn't have time to raise money, the negative ads, and my opponent is well-funded and well-known — those are my disadvantages",
+   "touch": "O",
+   "z": -0.3,
+   "dia": null,
+   "mode": "—",
+   "note": "constitutive (leaked, ≈10-14): a party to the race names his three disadvantages — time, ads, the opponent's money and name",
+   "chapter": "The leak",
+   "normX": 0.5,
+   "normY": 0.5,
+   "normZ": -0.225,
+   "quadrant": "T"
+  },
+  {
+   "t": 264,
+   "who": "SE",
+   "station": "RP",
+   "quote": "University of Texas — the most accurate pollster of 2024 in Texas: Talarico +3; Hinojosa +1; Railroad Commissioner +1; Lieutenant Governor +3; Attorney General +1 — all Democrats",
+   "touch": "T",
+   "z": 0.5,
+   "dia": 8,
+   "mode": "open",
+   "note": "THE RECORD, polled: enters races.json as weight, never z; the line's z is the voice's belief",
+   "chapter": "The numbers",
+   "normX": 0.5574,
+   "normY": 0.5632,
+   "normZ": 0.375,
+   "quadrant": "D"
+  },
+  {
+   "t": 305,
+   "who": "SE",
+   "station": "RP",
+   "quote": "two-pronged: Trump is a massive drag, and candidate quality on top — all the stars seem to be aligning for the Democrats in Texas",
+   "touch": "F",
+   "z": 0.6,
+   "dia": 36,
+   "mode": "open",
+   "note": "the frame: two vehicles",
+   "chapter": "The numbers",
+   "normX": 0.6468,
+   "normY": 0.6235,
+   "normZ": 0.45,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "'stars aligning' is a flip believed"
+  },
+  {
+   "t": 328,
+   "who": "LP",
+   "station": "LI",
+   "quote": "no scattering of polls shows her taking the lead; Abbott is up on average — but a one-in-three, one-in-four, maybe 40% chance of flipping if Democratic turnout is strong; he's won every election by at least 10 since 1998",
+   "touch": "T",
+   "z": 0.1,
+   "dia": 10,
+   "mode": "open",
+   "note": "THE FORECASTER'S LINE: a probability stated and a prior dated (tx-gov, the adjacent seat)",
+   "chapter": "The numbers",
+   "normX": 0.4324,
+   "normY": 0.4361,
+   "normZ": 0.075,
+   "quadrant": "A"
+  },
+  {
+   "t": 366,
+   "who": "SE",
+   "station": "RP",
+   "quote": "Barbara Jordan Research Center polled Fort Bend County alone — the best indicator of suburban and statewide trends; Trump and Harris tied there in 2024; now Talarico +18, Hinojosa +11; projected statewide, within two points — and the RCP average has Talarico at about two",
+   "touch": "T",
+   "z": 0.5,
+   "dia": 12,
+   "mode": "open",
+   "note": "the method and the number, sourced",
+   "chapter": "The numbers",
+   "normX": 0.5753,
+   "normY": 0.5667,
+   "normZ": 0.375,
+   "quadrant": "D"
+  },
+  {
+   "t": 421,
+   "who": "SE",
+   "station": "RP",
+   "quote": "a lot of this is demographic extrapolation — but if things tilt slightly the wrong way for Abbott, a Hinojosa victory too: a complete statewide sweep",
+   "touch": "F",
+   "z": 0.5,
+   "dia": 26,
+   "mode": "open",
+   "note": "the hedge, then the sweep",
+   "chapter": "The numbers",
+   "normX": 0.5891,
+   "normY": 0.6253,
+   "normZ": 0.375,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "the sweep is the flip and more"
+  },
+  {
+   "t": 483,
+   "who": "LP",
+   "station": "LI",
+   "quote": "it's partly what people choose to reveal — a district moving less than expected isn't exciting; what we're hearing are the big wow factors",
+   "touch": "M",
+   "z": 0.0,
+   "dia": 10,
+   "mode": "open",
+   "note": "selection effect named — the reader's own method guard",
+   "chapter": "The numbers",
+   "normX": 0.4454,
+   "normY": 0.4247,
+   "normZ": 0.0,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a method caution; no lean"
+  },
+  {
+   "t": 510,
+   "who": "SE",
+   "station": "RP",
+   "quote": "voters within two kilometers of a data center swing hard to Democrats (The Economist); data centers a huge part of the Hinojosa campaign; Sherrod Brown built his race on it",
+   "touch": "T",
+   "z": 0.3,
+   "dia": 14,
+   "mode": "open",
+   "note": "a new object surfaces: data-center siting as an electoral issue (candidate)",
+   "chapter": "The centers",
+   "normX": 0.5702,
+   "normY": 0.5823,
+   "normZ": 0.225,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "an issue cutting one way leans flip"
+  },
+  {
+   "t": 623,
+   "who": "KB",
+   "station": "LP",
+   "quote": "the single most important dynamic in this campaign: as gas prices rise, Trump's approval falls — nearly 1:1; the dip and the recovery track each other",
+   "touch": "M",
+   "z": 0.5,
+   "dia": 14,
+   "mode": "open",
+   "note": "THE LINK: PG01's crunch as the slate's driver. The cross-arc predicate",
+   "chapter": "The link",
+   "normX": 0.4247,
+   "normY": 0.5777,
+   "normZ": 0.375,
+   "quadrant": "C"
+  },
+  {
+   "t": 671,
+   "who": "LP",
+   "station": "LI",
+   "quote": "he's responsible for it — if Russia invades Ukraine it's not fair to blame the president, but everyone knows it's singularly Trump causing this, and they blame him",
+   "touch": "F",
+   "z": 0.4,
+   "dia": 32,
+   "mode": "open",
+   "note": "attribution as a frame; 'singularly'",
+   "chapter": "The link",
+   "normX": 0.3832,
+   "normY": 0.3676,
+   "normZ": 0.3,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "blame attached leans flip"
+  },
+  {
+   "t": 695,
+   "who": "SE",
+   "station": "RP",
+   "quote": "AP: only 11% say Trump prioritizes people like me; majorities say his business interests and billionaires; 56% of independents say not at all",
+   "touch": "T",
+   "z": 0.4,
+   "dia": 10,
+   "mode": "open",
+   "note": "the record, polled (weight)",
+   "chapter": "The link",
+   "normX": 0.5599,
+   "normY": 0.5712,
+   "normZ": 0.3,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "the 2012 metric, pointing away from the incumbent party"
+  },
+  {
+   "t": 748,
+   "who": "LP",
+   "station": "LI",
+   "quote": "48% thought he was fighting for them in 2016 and 2024; his actions didn't say it — all of his policies have been focused on helping people that are wealthy",
+   "touch": "F",
+   "z": 0.3,
+   "dia": 38,
+   "mode": "open",
+   "note": "the 2012 frame inverted onto Trump; 'all' is the vehicle — the highest-Dia line",
+   "chapter": "The link",
+   "normX": 0.3539,
+   "normY": 0.3643,
+   "normZ": 0.225,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "the frame says the coalition is breaking"
+  },
+  {
+   "t": 801,
+   "who": "LP",
+   "station": "LI",
+   "quote": "when he talks about oil prices being high as a good thing, it's a signal about the things he cares about",
+   "touch": "F",
+   "z": 0.3,
+   "dia": 30,
+   "mode": "open",
+   "note": "reads the Trump clip as motive",
+   "chapter": "The link",
+   "normX": 0.363,
+   "normY": 0.401,
+   "normZ": 0.225,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "motive read against him leans flip"
+  },
+  {
+   "t": 859,
+   "who": "KB",
+   "station": "LP",
+   "quote": "what if the polls are all wrong — public and private polling both say something big is happening for Democrats; pollsters adjusted for education after 2016, for recalled vote after 2020, and missed again in 2024",
+   "touch": "X",
+   "z": 0.0,
+   "dia": 12,
+   "mode": "open",
+   "note": "THE FALSIFIER STATED: a 2016/2020-style miss. The Atlantic as the source",
+   "chapter": "The miss",
+   "normX": 0.4266,
+   "normY": 0.5687,
+   "normZ": 0.0,
+   "quadrant": "C"
+  },
+  {
+   "t": 937,
+   "who": "LP",
+   "station": "LI",
+   "quote": "a 2024-size miss — Democrats probably still win the Senate; a 2020 miss is the worst in history; midterms poll better; treat averages as a cloudy mirror, not an oracle",
+   "touch": "X",
+   "z": 0.2,
+   "dia": 10,
+   "mode": "open",
+   "note": "the miss, sized; the reader's own guard on his instrument",
+   "chapter": "The miss",
+   "normX": 0.4243,
+   "normY": 0.446,
+   "normZ": 0.15,
+   "quadrant": "A"
+  },
+  {
+   "t": 990,
+   "who": "LP",
+   "station": "LI",
+   "quote": "off a lot for Democrats: 56–58 seats, like 2008 or 1980; off for Republicans — lose nothing and gain Michigan or Minnesota, less likely than the first; the real risk is running close in Kansas, Iowa, Nebraska and losing all of them",
+   "touch": "T",
+   "z": 0.2,
+   "dia": 12,
+   "mode": "open",
+   "note": "the scenarios, bracketed",
+   "chapter": "The miss",
+   "normX": 0.4387,
+   "normY": 0.4203,
+   "normZ": 0.15,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "the bracket's centre is a flip"
+  },
+  {
+   "t": 1101,
+   "who": "LP",
+   "station": "LI",
+   "quote": "my hot take: after a decade of polarization we may be heading the other way — people hate both parties, so they're open to candidate quality; in Kansas and Texas, one-party control means dissatisfaction points one way",
+   "touch": "F",
+   "z": 0.3,
+   "dia": 26,
+   "mode": "open",
+   "note": "the model's frame; Texas named",
+   "chapter": "The seat",
+   "normX": 0.4067,
+   "normY": 0.3777,
+   "normZ": 0.225,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a one-way grievance leans flip"
+  },
+  {
+   "t": 1166,
+   "who": "SE",
+   "station": "RP",
+   "quote": "in Texas, that's why all these races are so close even though people don't really know the candidates",
+   "touch": "O",
+   "z": 0.4,
+   "dia": 18,
+   "mode": "open",
+   "note": "the seat read as a referendum on one-party control, not on the candidate — the object's shape, stated",
+   "chapter": "The seat",
+   "normX": 0.5853,
+   "normY": 0.5892,
+   "normZ": 0.3,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "a referendum on the incumbents leans flip"
+  }
+ ]
+}

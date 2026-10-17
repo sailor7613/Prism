@@ -1,0 +1,322 @@
+{
+ "schema": "press/sweep/v0",
+ "date": "2026-10-16",
+ "index": "idx-diesel-01",
+ "objects": [
+  "diesel",
+  "tx-sen"
+ ],
+ "route": "Chrome (feeds loaded in the extension; the Mac VM and the container are allowlisted to package registries only). Native route: press-pull.py sweep from Terminal.",
+ "publications": {
+  "nyt": {
+   "station": "LI",
+   "feeds": [
+    "HomePage",
+    "Politics",
+    "Business",
+    "World",
+    "The Daily (simplecast)"
+   ],
+   "items": 141,
+   "hits": 13,
+   "note": "Energy-Environment feed 404 — removed from SWEEP_FEEDS"
+  },
+  "fox": {
+   "station": "RI?",
+   "feeds": [
+    "latest",
+    "politics",
+    "world",
+    "foxbusiness latest"
+   ],
+   "items": 100,
+   "hits": 7,
+   "note": "nothing on the deal itself today; one tx-sen item; Hormuz/Houthi via a former envoy"
+  },
+  "grayzone": {
+   "station": "LP",
+   "feeds": [
+    "/feed/"
+   ],
+   "items": 12,
+   "hits": 0,
+   "note": "feed verified 10-16 (12 items, 08-15 → 10-14); yesterday’s 0 was a Chrome XML-as-text parse error. Nothing on the deal, Russian diesel or Hormuz in the window — LP member has no piece; ≈2 posts/week",
+   "lastBuild": "2026-10-14T18:55:21Z"
+  },
+  "freepress": {
+   "station": "RP",
+   "feeds": [
+    "/feed"
+   ],
+   "items": 20,
+   "hits": 3,
+   "note": "MacLean 10-13 (already a beta lede); the digest; an Iran item"
+  }
+ },
+ "queue": [
+  {
+   "publication": "nyt",
+   "station": "LI",
+   "title": "Why Trump’s Russian Diesel Deal Is Unlikely to Lower Fuel Costs",
+   "dek": "the deal will probably not lower diesel prices that have soared because of his war with Iran and Ukrainian attacks on Russian refineries",
+   "published": "2026-10-14",
+   "link": "https://www.nytimes.com/2026/10/14/business/energy-environment/trump-russia-diesel-prices.html",
+   "matched": {
+    "diesel": [
+     "diesel",
+     "refiner"
+    ]
+   },
+   "sort": "PG01 — the deal (H1): the LI read, sized against the record",
+   "cut": "nyt_2026-10-14_diesel_deal_lede (beta lede — paywalled after ¶8)"
+  },
+  {
+   "publication": "nyt",
+   "station": "LI",
+   "title": "Gulf Oil Is Still Flowing Despite a Surge in Attacks on Ships",
+   "dek": "shipping operators are braving the Strait of Hormuz, but the risks are high and transportation costs have skyrocketed",
+   "published": "2026-10-15",
+   "link": "https://www.nytimes.com/2026/10/15/business/hormuz-oil-tanker-attacks.html",
+   "matched": {
+    "diesel": [
+     "strait",
+     "hormuz",
+     "tanker"
+    ]
+   },
+   "sort": "PG01 — H6 (the Hormuz control claim) from LI",
+   "cut": "nyt_2026-10-15_gulf_oil_flowing_lede",
+   "status": "nyt_2026-10-15_gulf_oil_flowing_lede (beta lede — wall after ¶6; H6 record filed)"
+  },
+  {
+   "publication": "nyt",
+   "station": "LI",
+   "title": "Attacks on Ships in Strait of Hormuz Escalate Sharply",
+   "published": "2026-10-14",
+   "link": "https://www.nytimes.com/2026/10/14/business/saudi-houthi-hormuz-oil.html",
+   "matched": {
+    "diesel": [
+     "strait",
+     "hormuz"
+    ]
+   },
+   "sort": "PG01 §5 record (H6 falsifier)",
+   "cut": "detection row only"
+  },
+  {
+   "publication": "nyt",
+   "station": "LI",
+   "title": "Senators Urge Trump to Reverse Diesel Deal With Putin",
+   "dek": "a bipartisan group of 12 senators called on the president to drop his decision to ease sanctions on Russia’s diesel exports",
+   "published": "2026-10-14",
+   "link": "https://www.nytimes.com/2026/10/14/",
+   "matched": {
+    "diesel": [
+     "diesel",
+     "sanction"
+    ]
+   },
+   "sort": "register-intake — a dated congressional object (a letter; the Graham-law line hr-119-5334)",
+   "cut": "primary filed — evt-press-senate-letter-1013 (letter PDF 10-13; GL 135; 11 names read, NYT says 12)",
+   "primary": "https://www.blumenthal.senate.gov/imo/media/doc/2026-10-13_letter_to_potus_re_russian_diesel_exports.pdf"
+  },
+  {
+   "publication": "nyt",
+   "station": "LI",
+   "title": "Trump’s Deal With Russia Inflames Ukraine War He Vowed to End",
+   "published": "2026-10-15",
+   "link": "https://www.nytimes.com/2026/10/15/us/politics/trump-russia-ukraine.html",
+   "matched": {
+    "diesel": [
+     "refiner"
+    ]
+   },
+   "sort": "PG01 — H2 record; the deal read as a war-policy failure (LI frame)",
+   "cut": "objects pass only (H2 closed) — AAA 10-15 price row + Zelensky later-sighting filed"
+  },
+  {
+   "publication": "nyt",
+   "station": "LI",
+   "title": "Zelensky Says Ukraine Will Resume Russian Refinery Strikes, Defying Trump",
+   "published": "2026-10-16",
+   "link": "https://www.nytimes.com/2026/10/15/world/europe/ukraine-russia-oil-strikes-zelensky-us-intelligence.html",
+   "matched": {
+    "diesel": [
+     "refiner"
+    ]
+   },
+   "sort": "PG01 — H2 record (the FT interview, via NYT; 'US intelligence' in the slug — the Starlink/targeting predicate)",
+   "cut": "detection row"
+  },
+  {
+   "publication": "nyt",
+   "station": "LI",
+   "title": "Gas Prices Are Up 34% From a Year Ago, Adding to Inflation Pressures",
+   "published": "2026-10-14",
+   "link": "https://www.nytimes.com/2026/10/14/business/economy/gas-prices-inflation-cpi.html",
+   "matched": {
+    "diesel": [
+     "gas price"
+    ]
+   },
+   "sort": "tracker — price; the cross-arc predicate's denominator",
+   "cut": "detection row"
+  },
+  {
+   "publication": "nyt",
+   "station": "LI",
+   "title": "Elon Musk Spends Heavily to Back Ken Paxton’s Senate Bid in Texas",
+   "dek": "$158 million to a group that spent it to help Paxton",
+   "published": "2026-10-16",
+   "link": "https://www.nytimes.com/2026/10/16/us/politics/elon-musk-ken-paxton-texas-senate-race.html",
+   "matched": {
+    "tx-sen": [
+     "paxton"
+    ]
+   },
+   "sort": "slate — tx-sen record (money); Paxton's own 'disadvantage' line (tx-s4) against a $158M group",
+   "cut": "sighting filed — races.json tx-sen money tx-m1 (NYT beta lede; FEC primary owed)"
+  },
+  {
+   "publication": "nyt",
+   "station": "LI",
+   "title": "The Daily: The U.S. Tried to Choke Russia’s Energy Market. Then It Made a Diesel Deal.",
+   "published": "2026-10-14",
+   "link": "https://www.nytimes.com/the-daily",
+   "matched": {
+    "diesel": [
+     "diesel",
+     "sanction"
+    ]
+   },
+   "sort": "PG01 — the deal; LI pod (transcript on nytimes.com)",
+   "cut": "nyt_2026-10-14_the_daily_diesel_deal",
+   "status": "nyt_2026-10-14_the_daily_diesel_deal (full read — the transcript came through YouTube’s panel; nytimes.com’s transcript field was null signed-out)"
+  },
+  {
+   "publication": "nyt",
+   "station": "LI",
+   "title": "Families of Sailors Killed in Iran War Struggle for Compensation and Closure",
+   "published": "2026-10-15",
+   "link": "https://www.nytimes.com/2026/10/15/business/iran-war-hormuz-sailors-dead-compensation.html",
+   "matched": {
+    "diesel": [
+     "strait",
+     "hormuz"
+    ]
+   },
+   "sort": "PG01 §5 — sighting (≥25 seafarers killed near the Strait)",
+   "cut": "sighting"
+  },
+  {
+   "publication": "fox",
+   "station": "RI?",
+   "title": "Zelenskyy accuses Putin of defying Trump's ceasefire push",
+   "dek": "Putin attacking Ukraine's gas infrastructure hours after Trump announced an immediate energy ceasefire",
+   "published": "2026-10-12",
+   "link": "https://www.foxnews.com/world/zelenskyy-blasts-putin-defying-trump",
+   "matched": {
+    "diesel": [
+     "energy ceasefire"
+    ]
+   },
+   "sort": "PG01 — H2 record (the falsifier from the right-institutional side)",
+   "cut": "detection row"
+  },
+  {
+   "publication": "fox",
+   "station": "RI?",
+   "title": "Houthis emerge as global threat beyond Iran control amid Saudi strikes, former envoy warns",
+   "published": "2026-10-15",
+   "link": "https://www.foxnews.com/world/houthis-emerge-global-threat-iran-control-saudi-attacks-says-former-envoy",
+   "matched": {
+    "diesel": [
+     "saudi",
+     "houthi"
+    ]
+   },
+   "sort": "PG01 §5 — sighting (Lenderking)",
+   "cut": "sighting"
+  },
+  {
+   "publication": "fox",
+   "station": "RI?",
+   "title": "Black civic group blasts Talarico campaign over canceled event",
+   "published": "2026-10-16",
+   "link": "https://www.foxnews.com/politics/black-civic-group-blasts-talarico-campaign-canceled-event-deeply-disappointed",
+   "matched": {
+    "tx-sen": [
+     "talarico"
+    ]
+   },
+   "sort": "slate — tx-sen trail (the $25M outreach pledge as a statement)",
+   "cut": "sighting filed — races.json tx-sen trail tx-s5 (the $25M pledge) + the cancelled-event record"
+  },
+  {
+   "publication": "freepress",
+   "station": "RP",
+   "title": "Trump’s Disastrous Diesel Deal",
+   "published": "2026-10-13",
+   "link": "https://www.thefp.com/p/trump-disastrous-diesel-deal-russia-ukraine",
+   "matched": {
+    "diesel": [
+     "diesel"
+    ]
+   },
+   "sort": "PG01 — already cut as a beta lede",
+   "cut": "fp_2026-10-13_diesel_deal_lede"
+  },
+  {
+   "station": "LP",
+   "pub": "grayzone",
+   "title": "(no match) — The Grayzone has not published on the deal in the window",
+   "link": "https://thegrayzone.com/feed/",
+   "status": "no piece; LP corner of idx-diesel-01 empty by-record as of 10-16"
+  }
+ ],
+ "composite": {
+  "note": "the Diesel Index's first day: LI read in full-or-lede (NYT); RI (Fox) silent on the deal; LP (Grayzone) feed empty; RP (FP) a beta lede. No index value published — three of four corners aren't readings yet. The point of the first sweep is the queue."
+ },
+ "log": [
+  {
+   "date": "2026-10-16",
+   "what": "first live sweep, run through Chrome from the session; 261 items swept, 23 hits, 14 queued; one cut made (NYT beta lede)",
+   "by": "Claude"
+  },
+  {
+   "date": "2026-10-16",
+   "what": "The Daily 10-14 cut in full (LI); queue item closed",
+   "by": "Claude"
+  },
+  {
+   "date": "2026-10-16",
+   "what": "Grayzone feed verified in Chrome (12 items, 0 hits); route fixed in press-pull notes (parse text with DOMParser in-page; native urllib is fine)",
+   "by": "Claude"
+  },
+  {
+   "date": "2026-10-16",
+   "what": "Gulf Oil 10-15 cut as a beta lede (H6, LI)",
+   "by": "Claude"
+  },
+  {
+   "date": "2026-10-16",
+   "what": "senators' letter: primary pulled, register row filed",
+   "by": "Claude"
+  },
+  {
+   "date": "2026-10-16",
+   "what": "Musk $158M → tx-sen money row; Fox Talarico → tx-sen trail row",
+   "by": "Claude"
+  },
+  {
+   "date": "2026-10-16",
+   "what": "NYT Inflames 10-15: objects pass; queue closed",
+   "by": "Claude"
+  },
+  {
+   "date": "2026-10-16",
+   "what": "grayzone detail: feed verified 10-16 (lastBuildDate 10-14 18:55 UTC; 12 items, 08-15 → 10-14). Yesterday’s 0 was a parse error: Chrome renders the XML as text, so the DOM has no <item> nodes — parse document.body.textContent with DOMParser. Zero hits on the object: Nicaragua, MI6/Skripal, Edan Alexander, Palestine Action, Nepal, Pentagon propagandists, TPUSA, HTS delisting, ADC suit, MI5/BBC — nothing on the deal, Russia diesel or Hormuz in the window. LP member of the Diesel Index has no piece to cut; cadence ≈2/week.",
+   "by": "Claude"
+  }
+ ]
+}

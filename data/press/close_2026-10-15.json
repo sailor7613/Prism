@@ -1,0 +1,517 @@
+{
+ "schema": "press/parallelogram/v0",
+ "id": "close_2026-10-15",
+ "status": "claude-draft",
+ "kind": "baseline",
+ "title": "The Crunch, Booked",
+ "source": {
+  "program": "The Close",
+  "network": "Bloomberg",
+  "date": "2026-10-15",
+  "title": "Stocks Rotate as Tech & Chip Shares Slide",
+  "url": "https://www.youtube.com/watch?v=GEMw6ExKA_Y",
+  "length": 5513,
+  "transcript": "Parameters/03_Libraries/sources/TheClose_2026-10-15_transcript.md",
+  "segmentsCut": [
+   "2:04–2:16",
+   "29:01–29:51",
+   "39:21–39:57",
+   "42:38–42:51",
+   "51:04–51:33",
+   "1:04:21–1:08:05"
+  ]
+ },
+ "arc": "PG01",
+ "object": {
+  "label": "the refined-products crunch (diesel), as it reaches the balance sheet",
+  "layer": 1,
+  "zAxis": {
+   "pos": "bites (physical shortage; activity dents)",
+   "neg": "passes through (priced; surcharged; absorbed)"
+  }
+ },
+ "transform": "baseline",
+ "transformNote": "no principal in the room — the RI register on an ordinary day; the crunch a line item, not the headline",
+ "scoreboard": {
+  "dia": 8,
+  "tier": "fluid",
+  "declaredZ": null,
+  "readZ": -0.44,
+  "readZRange": [
+   0.0,
+   -0.8
+  ],
+  "stations": {
+   "RI": {
+    "dia": 8,
+    "spread": [
+     4,
+     16
+    ],
+    "readZ": -0.44,
+    "voices": {
+     "RB": {
+      "dia": 7,
+      "readZ": -0.33,
+      "n": 3
+     },
+     "KA": {
+      "dia": 11,
+      "readZ": -0.4,
+      "n": 2
+     },
+     "TS": {
+      "dia": 8,
+      "readZ": -0.5,
+      "n": 1
+     },
+     "TW": {
+      "dia": 9,
+      "readZ": -0.4,
+      "n": 3
+     },
+     "EN": {
+      "dia": 13,
+      "readZ": -0.35,
+      "n": 2
+     },
+     "TB": {
+      "dia": 6,
+      "readZ": -0.53,
+      "n": 6
+     }
+    }
+   },
+   "LI": null,
+   "LP": null,
+   "RP": null
+  },
+  "split": {
+   "topology": "none",
+   "station": "RI",
+   "strength": 0.0,
+   "note": "every line on the pass side (0.0 → −0.8); the station is aligned — sees the object five ways, never asks the Z question"
+  },
+  "mode": "aligned",
+  "lumens": 92,
+  "zRule": "every line carries a z, inferred where implied (Sailor 2026-10-13); inferred lines are marked zInferred with a zWhy",
+  "baseline": true,
+  "baselineNote": "the first daily Close cut under the 10-15 proposal: the rolling RI floor is the 7-day mean of baseline pieces; this cut is the only one in its window"
+ },
+ "names": {
+  "RB": "Romaine Bostick",
+  "KA": "Kristine Aquino",
+  "TS": "Tim Stenovec",
+  "TW": "Tim Walsh (KPMG US CEO)",
+  "EN": "Envestnet CIO (unnamed on tape)",
+  "TB": "Thomas Black (Bloomberg Opinion)"
+ },
+ "trace": {
+  "object": {
+   "x": 0,
+   "y": 0,
+   "z": -0.45
+  },
+  "shadow": {
+   "x": 0,
+   "y": 0,
+   "z": 0.0,
+   "note": "none named on this tape; placed at the object for the graphmap"
+  },
+  "predicates": {
+   "operative": [
+    {
+     "type": "T",
+     "label": "JBHT Q3: top line +20% incl. fuel surcharges; intermodal loads +8.5% (reported 10-15)",
+     "z": 0.9
+    },
+    {
+     "type": "T",
+     "label": "PPI at its fastest pace in 4+ years; retail sales ex autos & gas flat (week of 10-15)",
+     "z": 0.85
+    },
+    {
+     "type": "M",
+     "label": "intermodal ≈65% more fuel-efficient than truck; shippers substitute and the price follows",
+     "z": 0.7
+    },
+    {
+     "type": "M",
+     "label": "freight contracts reprice yearly; bid season from October",
+     "z": 0.6
+    },
+    {
+     "type": "B",
+     "label": "Hormuz not flowing freely \"for quite some time\" (Walsh, by statement)",
+     "z": 0.5
+    }
+   ],
+   "stated": [],
+   "challenge": []
+  },
+  "positions": [
+   {
+    "quadrant": "A",
+    "station": "LI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty, by-record: one source, one corner"
+   },
+   {
+    "quadrant": "B",
+    "station": "RI",
+    "fluid": "posts the record in order — the print, the strait, the surcharge, the loads — and never assembles it",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [
+     "fastest pace in four years",
+     "not flowing freely",
+     "diesel prices rising",
+     "a lot of this is oil",
+     "fuel surcharges",
+     "top line up 20%",
+     "intermodal",
+     "65% more fuel-efficient",
+     "bid season",
+     "loads up 8.5%"
+    ],
+    "denomKeywords": [],
+    "note": "aligned: zero vehicle words in seventeen lines"
+   },
+   {
+    "quadrant": "C",
+    "station": "LP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty, by-record — compare bp_2026-10-12_diesel"
+   },
+   {
+    "quadrant": "D",
+    "station": "RP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty, by-record — compare bp_2026-10-12_diesel"
+   }
+  ]
+ },
+ "lines": [
+  {
+   "t": 124,
+   "who": "RB",
+   "station": "RI",
+   "quote": "the PPI rose at its fastest pace in more than four years; retail sales ex motor vehicles and gas barely budged",
+   "touch": "T",
+   "z": -0.3,
+   "dia": 8,
+   "mode": "open",
+   "note": "dates the week's record: price into the index, activity flat. 'Jarring' is the one adjective",
+   "chapter": "The print",
+   "normX": 0.5478,
+   "normY": 0.4292,
+   "normZ": -0.225,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "price into the index, activity flat: passes"
+  },
+  {
+   "t": 1751,
+   "who": "TW",
+   "station": "RI",
+   "quote": "oil is not flowing freely in the Strait of Hormuz, and hasn't for quite some time; we're starting to see that show up in pressures — in inflation, in interest rates",
+   "touch": "O",
+   "z": -0.3,
+   "dia": 10,
+   "mode": "open",
+   "note": "→PG01: the supply constraint named, and where it lands — the price level and the rate, not the shelf",
+   "chapter": "The strait",
+   "normX": 0.5742,
+   "normY": 0.444,
+   "normZ": -0.225,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "'shows up in inflation and interest rates' is the price channel, not the shelf"
+  },
+  {
+   "t": 1772,
+   "who": "TW",
+   "station": "RI",
+   "quote": "the US economy has been incredibly resilient until this point; I expected the signals to show up earlier than they have",
+   "touch": "O",
+   "z": -0.5,
+   "dia": 12,
+   "mode": "aligned",
+   "note": "activity undented, by his own surprise. Sees the gap between the constraint and the economy; does not ask what is absorbing it",
+   "chapter": "The strait",
+   "normX": 0.5721,
+   "normY": 0.4298,
+   "normZ": -0.375,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "'resilient' is activity undented"
+  },
+  {
+   "t": 1784,
+   "who": "TW",
+   "station": "RI",
+   "quote": "with diesel prices rising, you've got the inflation pressure",
+   "touch": "O",
+   "z": -0.4,
+   "dia": 6,
+   "mode": "open",
+   "note": "the crunch named as diesel, landing as a price. Seven words",
+   "chapter": "The strait",
+   "normX": 0.5551,
+   "normY": 0.4451,
+   "normZ": -0.3,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "diesel named as a price pressure, nothing else"
+  },
+  {
+   "t": 2361,
+   "who": "KA",
+   "station": "RI",
+   "quote": "the concentration in the AI trade has given the market its resilience — it has survived higher rates, $100 oil",
+   "touch": "O",
+   "z": -0.6,
+   "dia": 14,
+   "mode": "aligned",
+   "note": "the crunch as weather already survived: priced and passed. Oil is a clause in a sentence about something else",
+   "chapter": "The Fed’s bind",
+   "normX": 0.5678,
+   "normY": 0.4157,
+   "normZ": -0.45,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "'survived $100 oil': absorbed"
+  },
+  {
+   "t": 2381,
+   "who": "EN",
+   "station": "RI",
+   "quote": "the AI trade has looked through all the geopolitical conflict; the Fed is facing weakness in employment and at the same time inflation is a problem — CPI and PPI not where we want them",
+   "touch": "T",
+   "z": -0.3,
+   "dia": 16,
+   "mode": "open",
+   "note": "dates the Fed's bind: price up, labor soft. The crunch is one input, unnamed here",
+   "chapter": "The Fed’s bind",
+   "normX": 0.5933,
+   "normY": 0.4314,
+   "normZ": -0.225,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "the crunch as one input to a price problem; labor soft for other reasons"
+  },
+  {
+   "t": 2566,
+   "who": "EN",
+   "station": "RI",
+   "quote": "inflation reports — a lot of this is oil; it is reverberating through, and he's going to have to be responsive to that",
+   "touch": "O",
+   "z": -0.4,
+   "dia": 10,
+   "mode": "open",
+   "note": "THE ATTRIBUTION: the print read back to oil. The crunch reaches the Fed as a price, not a shortage — 'reverberating' is the pass-through, heard",
+   "chapter": "The Fed’s bind",
+   "normX": 0.5746,
+   "normY": 0.4444,
+   "normZ": -0.3,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "'reverberating through' is pass-through heard at the Fed"
+  },
+  {
+   "t": 3072,
+   "who": "TS",
+   "station": "RI",
+   "quote": "the movement of goods is being affected by the pressure consumers face and companies paying higher prices — and fuel costs, how much more companies are paying to move those goods",
+   "touch": "O",
+   "z": -0.5,
+   "dia": 8,
+   "mode": "open",
+   "note": "fuel as a cost line on freight: the pass-through named before the earnings call",
+   "chapter": "The bell",
+   "normX": 0.5682,
+   "normY": 0.4486,
+   "normZ": -0.375,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "fuel as a cost line companies pay: passes"
+  },
+  {
+   "t": 3081,
+   "who": "KA",
+   "station": "RI",
+   "quote": "trucking is very much an indicator of consumer demand; pressure coming for consumers as we saw in the CPI and PPI data this week",
+   "touch": "O",
+   "z": -0.2,
+   "dia": 8,
+   "mode": "open",
+   "note": "sets up the test without running it: if the crunch bites, trucking shows it. The nearest the tape comes to a falsifier — and it is left as a remark",
+   "chapter": "The bell",
+   "normX": 0.5619,
+   "normY": 0.4412,
+   "normZ": -0.15,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a test set up, not run; leans pass because the week's data is price data"
+  },
+  {
+   "t": 3861,
+   "who": "RB",
+   "station": "RI",
+   "quote": "J.B. Hunt under pressure; earnings largely in line, $1.82; revenue about $3.69 billion",
+   "touch": "T",
+   "z": 0.0,
+   "dia": 4,
+   "mode": "open",
+   "note": "dates the record (Q3, reported 10-15)",
+   "chapter": "The invoice",
+   "normX": 0.5544,
+   "normY": 0.4556,
+   "normZ": 0.0,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a number; no claim on the crunch"
+  },
+  {
+   "t": 3886,
+   "who": "TB",
+   "station": "RI",
+   "quote": "the demand is not there; it is still a supply shortage — a truck-driver shortage story; that is what is pushing up rates",
+   "touch": "O",
+   "z": -0.2,
+   "dia": 6,
+   "mode": "open",
+   "note": "names a second object under the freight number: rates rise from labor, and the crunch rides along. The diesel is not the driver",
+   "chapter": "The invoice",
+   "normX": 0.5608,
+   "normY": 0.4514,
+   "normZ": -0.15,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "rates rise from labor; the crunch rides along, not biting"
+  },
+  {
+   "t": 3908,
+   "who": "TB",
+   "station": "RI",
+   "quote": "all of the top line at J.B. Hunt was up 20%, including fuel surcharges — that is built on much higher rates",
+   "touch": "O",
+   "z": -0.8,
+   "dia": 4,
+   "mode": "open",
+   "note": "THE PASS-THROUGH IN THE ACCOUNTS: the surcharge inside the revenue line; the crunch arrives as top-line growth. The line the cut exists for",
+   "chapter": "The invoice",
+   "normX": 0.5506,
+   "normY": 0.4514,
+   "normZ": -0.6,
+   "quadrant": "B"
+  },
+  {
+   "t": 3915,
+   "who": "TB",
+   "station": "RI",
+   "quote": "they have a cost problem as well because of the driver shortage — signing bonuses, safety bonuses",
+   "touch": "O",
+   "z": -0.3,
+   "dia": 8,
+   "mode": "open",
+   "note": "the cost side is labor, not fuel: the drivers bite, the diesel passes",
+   "chapter": "The invoice",
+   "normX": 0.5499,
+   "normY": 0.4307,
+   "normZ": -0.225,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "the cost that bites is labor; by contrast the fuel passes"
+  },
+  {
+   "t": 4006,
+   "who": "TB",
+   "station": "RI",
+   "quote": "intermodal — truck to train for the long haul — is going great; it is about 65% more fuel-efficient than a truck, so it helps shippers; people want intermodal, and that will push up prices",
+   "touch": "M",
+   "z": -0.6,
+   "dia": 8,
+   "mode": "open",
+   "note": "THE MECHANISM: the crunch routes shippers to the fuel-light mode and the price follows them there. Substitution, not shortage",
+   "chapter": "The invoice",
+   "normX": 0.56,
+   "normY": 0.4393,
+   "normZ": -0.45,
+   "quadrant": "B"
+  },
+  {
+   "t": 4027,
+   "who": "TB",
+   "station": "RI",
+   "quote": "contracts are negotiated on a yearly basis; they are underpriced right now, but bid season started in October — they will get higher prices and it will help margins",
+   "touch": "M",
+   "z": -0.7,
+   "dia": 6,
+   "mode": "open",
+   "note": "dates the lag: the pass-through is contractual and arrives on the calendar",
+   "chapter": "The invoice",
+   "normX": 0.5473,
+   "normY": 0.4383,
+   "normZ": -0.525,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "contractual repricing is pass-through with a calendar"
+  },
+  {
+   "t": 4040,
+   "who": "RB",
+   "station": "RI",
+   "quote": "intermodal up 20% year-over-year, loads themselves up 8.5% — that is healthy",
+   "touch": "T",
+   "z": -0.7,
+   "dia": 8,
+   "mode": "open",
+   "note": "the activity side: volumes up, not down. No dent in the fuel-light mode",
+   "chapter": "The invoice",
+   "normX": 0.5535,
+   "normY": 0.4334,
+   "normZ": -0.525,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "volumes up in the fuel-light mode: no dent"
+  },
+  {
+   "t": 4052,
+   "who": "TB",
+   "station": "RI",
+   "quote": "without a doubt — trucking rates and the spot market are up; that supports the increases in intermodal rates",
+   "touch": "T",
+   "z": -0.6,
+   "dia": 4,
+   "mode": "open",
+   "note": "the record, confirmed",
+   "chapter": "The invoice",
+   "normX": 0.5433,
+   "normY": 0.4447,
+   "normZ": -0.45,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "rates up across modes: the price carries it"
+  }
+ ],
+ "log": [
+  {
+   "date": "2026-10-15",
+   "what": "first cut; baseline kind; z on every line under the z rule; mode aligned (rule 5 exercised)",
+   "by": "Claude"
+  }
+ ]
+}

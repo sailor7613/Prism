@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" class="g4">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>BloomBurger · g4</title>
+<!-- ======================================================================
+     BLOOMBURGER — the terminal (2026-10-14 · Claude draft, overnight, for
+     Sailor's eye). Spec: Specs/G4_OS_and_the_Two_Modes_v2.md.
+
+     One program on the g4 desk with two faces of one body: the PAPER
+     (what Prism publishes — the Parallelogram, the Tracker's reading) and
+     the WIRE (what Prism collects). It opens on the paper. Functions are
+     keyed the way a terminal's are:   PG · SST · WIRE.
+
+     Routes (hash, so the navtool's back/forward is a real history):
+       #desk          the g4 desktop (three programs)
+       #pg            the paper — parallelograms, newest first
+       #pg/<id>       a piece, on the real graphmap
+       #sst           the Supply Shock Tracker's reading (the globe is in the villa)
+       #wire          the record — registers and series with their as-of dates
+       #codex/<word>  the Codex as a sheet over whatever you were reading
+
+     The bar is the Prism navtool: drag-and-snap = back/forward in the
+     layer you are in; hold = up a layer; the badge = the pull.
+     Serve from the workspace root (Serve the Workspace.command):
+       /Prism/bloomburger/
+     ====================================================================== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../src/css/prism-grammar.css?v=2">
+<link rel="stylesheet" href="../src/css/g4-os.css?v=1">
+<style>
+  * { box-sizing: border-box; }
+  html.embedded .g4-bar, html.embedded .g4-sky { display: none; }   /* inside the shell, the shell owns the bar and the sky */
+  html.embedded .g4-under-bar { padding-top: 52px; }   /* the navtool lies in the band above */
+  html.embedded .stage { top: 48px; }
+  html.embedded .g4-sheet { top: 0; }
+  body { margin: 0; min-height: 100vh; font-family: var(--serif); color: var(--ink); overflow-x: hidden; }
+  .view { display: none; } .view.on { display: block; }
+  .wrap { position: relative; z-index: 1; max-width: 1180px; margin: 0 auto; padding: 0 16px 80px; }
+  a { color: inherit; }
+
+  /* ── the paper's masthead */
+  .mast { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 16px; padding: 18px 0 10px; }
+  .mast h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(26px, 4vw, 40px); margin: 0; letter-spacing: .01em; line-height: 1; }
+  .mast h1 small { font-family: var(--mono); font-size: 10px; letter-spacing: .24em; text-transform: uppercase; color: var(--ink-low); display: block; margin-bottom: 8px; }
+  .mast .fn { display: flex; gap: 6px; }
+  .mast .fn .g4-pill { font-family: var(--mono); letter-spacing: .14em; font-size: 10px; }
+  .dek { font-style: italic; color: var(--ink-mid); font-size: 14px; max-width: 70ch; margin: 2px 0 18px; }
+
+  /* ── the front page */
+  .front { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+  .card { display: grid; grid-template-columns: 96px 1fr; gap: 14px; padding: 14px; text-decoration: none; border: 1px solid var(--g4-rule); background: var(--g4-glass); transition: border-color .2s, background .2s; border-radius: 4px; }
+  .card:hover { border-color: rgba(233,236,242,.4); background: rgba(233,236,242,.07); }
+  .card .fig { width: 96px; height: 96px; }
+  .card .k { font-family: var(--mono); font-size: 9.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-low); }
+  .card .t { font-size: 18px; line-height: 1.15; margin: 4px 0 6px; }
+  .card .s { font-family: var(--mono); font-size: 10.5px; color: var(--ink-mid); display: flex; flex-wrap: wrap; gap: 4px 10px; }
+  .card .s b { font-weight: 400; color: var(--ink); }
+  .card.lead { grid-column: 1 / -1; grid-template-columns: 160px 1fr; }
+  .card.lead .fig { width: 160px; height: 160px; }
+  .card.lead .t { font-size: 26px; }
+  .empty { color: var(--ink-low); font-style: italic; padding: 30px 0; }
+
+  /* ── the piece */
+  .piece .board { display: grid; grid-template-columns: repeat(auto-fit, minmax(128px, 1fr)); gap: 8px; margin: 0 0 14px; }
+  .tile { padding: 10px 12px; border: 1px solid var(--g4-rule-soft); background: rgba(6,11,26,.5); border-radius: 3px; }
+  .tile .l { font-family: var(--mono); font-size: 9.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-low); }
+  .tile .v { font-size: 26px; margin-top: 4px; line-height: 1; font-family: var(--serif); }
+  .tile .v small { font-family: var(--mono); font-size: 11px; color: var(--ink-low); margin-left: 4px; }
+  .tile .s { font-family: var(--mono); font-size: 10px; color: var(--ink-mid); margin-top: 5px; }
+  .LIc { color: rgb(184,58,58) } .RIc { color: rgb(56,104,168) } .LPc { color: rgb(58,138,82) } .RPc { color: rgb(184,120,40) } .Oc { color: #e8d9a8 }
+  .piece .split { display: grid; grid-template-columns: minmax(380px, 1fr) minmax(340px, 480px); gap: 22px; align-items: start; }
+  .stage { position: sticky; top: calc(var(--bar-h) + 8px); }
+  #map { width: 100%; aspect-ratio: 1 / 0.9; background: radial-gradient(ellipse at center, rgba(32,64,160,.16) 0%, transparent 70%); border: 1px solid var(--g4-rule); position: relative; overflow: hidden; border-radius: 3px; }
+  #map canvas { display: block; width: 100% !important; height: 100% !important; }
+  .readout { padding: 10px 12px; font-size: 12.5px; color: var(--ink-mid); min-height: 86px; border: 1px solid var(--g4-rule); border-top: 0; background: rgba(6,11,26,.55); }
+  .readout b { color: var(--ink); font-weight: 400; } .readout .q { font-style: italic; color: var(--ink); }
+  .scrub { padding: 10px 12px; border: 1px solid var(--g4-rule); border-top: 0; background: rgba(6,11,26,.55); font-family: var(--mono); font-size: 10px; color: var(--ink-mid); }
+  .scrub input[type=range] { width: 100%; -webkit-appearance: none; appearance: none; height: 2px; background: var(--g4-rule); outline: none; cursor: pointer; margin: 8px 0; }
+  .scrub input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 14px; height: 14px; border-radius: 50%; background: linear-gradient(#f7f8fb, #c9cfdb); border: 1px solid rgba(0,0,0,.5); }
+  .scrub .t { text-align: center; letter-spacing: .14em; } .scrub .t span { color: var(--ink); }
+  .scrub .row { display: flex; gap: 8px; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+  .legend { display: flex; flex-wrap: wrap; gap: 6px 12px; padding-top: 8px; }
+  .legend i { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 5px; vertical-align: 0; }
+  .tape h2 { font-family: var(--mono); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-low); font-weight: 400; margin: 22px 0 8px; padding-top: 10px; border-top: 1px solid var(--g4-rule-soft); }
+  .tape h2:first-child { margin-top: 0; border-top: 0; padding-top: 0; }
+  .line { padding: 10px 12px; margin: 6px 0; border: 1px solid var(--g4-rule-soft); background: rgba(6,11,26,.35); transition: border-color .25s, background .25s; cursor: pointer; border-radius: 3px; }
+  .line.active { border-color: rgba(233,236,242,.35); background: rgba(233,236,242,.05); }
+  .line .meta { display: flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 10px; color: var(--ink-mid); letter-spacing: .06em; }
+  .line .ts { color: var(--ink-low); font-variant-numeric: tabular-nums; }
+  .chip { display: inline-block; padding: 0 6px; border-radius: 9px; font-size: 9.5px; letter-spacing: .08em; color: #fff; line-height: 16px; }
+  .chip.LI{background:rgb(184,58,58)} .chip.RI{background:rgb(56,104,168)} .chip.LP{background:rgb(58,138,82)} .chip.RP{background:rgb(184,120,40)} .chip.O{background:#e8d9a8;color:#0c0b09}
+  .line q { display: block; font-size: 15px; margin: 6px 0 5px; quotes: "“" "”"; } .line q::before, .line q::after { color: var(--ink-low); }
+  .line .hi { color: var(--ink); }
+  .scores { display: flex; flex-wrap: wrap; gap: 4px 10px; font-family: var(--mono); font-size: 10.5px; color: var(--ink-mid); } .scores b { color: var(--ink); font-weight: 400; }
+  .scores .z.pos { color: var(--band-fluid) } .scores .z.neg { color: var(--band-denominated) }
+  .scores .touch { border: 1px solid var(--g4-rule); padding: 0 5px; border-radius: 3px; }
+  .note { font-size: 12px; color: var(--ink-mid); margin-top: 5px; font-style: italic; }
+  .piece .prose { font-size: 15.5px; line-height: 1.55; max-width: 66ch; }
+  .piece .prose p { margin: 0 0 1em; }
+  .foot { font-family: var(--mono); font-size: 10px; color: var(--ink-low); line-height: 1.7; margin-top: 30px; }
+  @media (max-width: 880px) {
+    .piece .split { grid-template-columns: 1fr; }
+    .stage { position: sticky; top: var(--bar-h-phone); z-index: 5; background: var(--g4-field); }
+    .readout, .legend { display: none; } #map { aspect-ratio: 1 / 0.72; }
+    .card.lead { grid-template-columns: 96px 1fr; } .card.lead .fig { width: 96px; height: 96px; } .card.lead .t { font-size: 20px; }
+  }
+
+  /* ── the tracker's reading / the wire */
+  .reading { display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: center; padding: 16px; border: 1px solid var(--g4-rule); border-radius: 4px; background: var(--g4-glass); }
+  .reading .big { font-size: 56px; line-height: 1; font-family: var(--serif); }
+  .reading .big small { font-size: 14px; color: var(--ink-low); font-family: var(--mono); display: block; letter-spacing: .14em; margin-top: 6px; }
+  .reading .verdict { font-family: var(--mono); font-size: 12px; letter-spacing: .22em; text-transform: uppercase; }
+  .wire .g4-row .n { font-size: 15px; } .wire .g4-row .n small { font-family: var(--mono); font-size: 10px; color: var(--ink-low); display: block; margin-top: 2px; letter-spacing: .1em; }
+  .wire .g4-row .d { font-family: var(--mono); font-size: 10.5px; color: var(--ink-mid); text-align: right; }
+  .wire .g4-row .d b { color: var(--ink); font-weight: 400; }
+
+  /* ── Codex sheet */
+  .codex h3 { font-family: var(--serif); font-weight: 400; font-size: 22px; margin: 0 0 6px; }
+  .codex .k { font-family: var(--mono); font-size: 9.5px; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-low); }
+  .codex p { font-size: 14px; line-height: 1.5; color: var(--ink-mid); }
+  .codex .x { position: absolute; top: 10px; right: 12px; }
+  .word { border-bottom: 1px dotted var(--ink-low); cursor: help; }
+</style>
+</head>
+<body>
+
+<!-- the sky is the desktop -->
+<div class="g4-sky"><canvas id="sky"></canvas></div>
+
+<!-- boot: the housing resolves, then crops out -->
+<div class="g4-housing" id="housing" hidden>
+  <div class="shell"><div class="glass"></div><div class="chin"><img src="../src/img/front/prism_mark.png" alt=""></div></div>
+</div>
+
+<!-- the bar is the navtool -->
+<div class="g4-bar" id="bar">
+  <div class="badge" id="badge" title="the DreamGetty"><img src="../src/img/front/prism_mark.png" alt="Prism"></div>
+  <div class="nav" id="nav">
+    <span class="hint l">◀ back</span><span class="hint r">forward ▶</span>
+    <img src="../src/img/prism_nav_full.png" alt="" draggable="false">
+  </div>
+  <div class="right"><span class="crumb opt" id="crumb"></span><b id="barName">BloomBurger</b><span class="opt" id="barFn">PG</span><span id="clock"></span></div>
+</div>
+
+<!-- ── DESK ── -->
+<section class="view" id="v-desk">
+  <div class="g4-desk">
+    <div class="tiles">
+      <a class="g4-tile" href="../v2/"><div class="ic">◭</div><div class="n">Prism</div><div class="s">the workstation</div></a>
+      <a class="g4-tile" href="#pg"><div class="ic">🍔</div><div class="n">BloomBurger</div><div class="s">the terminal</div></a>
+      <a class="g4-tile" href="#codex"><div class="ic">📖</div><div class="n">Codex</div><div class="s">the plain glossary</div></a>
+    </div>
+    <div class="g4-key" style="text-align:center">g4 · three programs · hold the bar to come back here</div>
+  </div>
+</section>
+
+<!-- ── THE PAPER ── -->
+<section class="view wrap g4-under-bar" id="v-pg">
+  <div class="mast">
+    <h1><small>BloomBurger · the paper</small>Parallelogram</h1>
+    <div class="fn g4-tabs"><a class="g4-pill on" href="#pg">PG</a><a class="g4-pill" href="#sst">SST</a><a class="g4-pill" href="#wire">WIRE</a></div>
+  </div>
+  <div class="dek">The day's discourse, reduced. Each parallelogram is one segment on one object, cut to the words that carry it, scored, and placed on the graphmap — for the reader who is tired of the news but wants to be in the know from a distance.</div>
+  <div class="front" id="front"></div>
+  <div class="foot">A parallelogram's figure is literal: join the four stations' composite readings and you get a four-sided shape whose skew is the segment's split. Dia is distance from the object; z is what the voice believes happened; <span class="word" data-w="lumens">Lumens</span> is how much of the object's light gets through.</div>
+</section>
+
+<!-- ── A PIECE ── -->
+<section class="view wrap g4-under-bar piece" id="v-piece">
+  <div class="g4-win">
+    <div class="title"><div class="dots"><i id="pClose" title="close — back to the paper" style="cursor:pointer"></i></div><div id="pTitleBar">—</div><div class="fn">PG</div></div>
+    <div class="body">
+      <div class="g4-key" id="pKicker"></div>
+      <h1 style="font-weight:400;font-size:clamp(26px,3.6vw,40px);line-height:1.08;margin:6px 0 6px" id="pTitle"></h1>
+      <div class="dek" id="pDek"></div>
+      <div class="board" id="board"></div>
+      <div class="split">
+        <div class="stage">
+          <div id="map"></div>
+          <div class="readout" id="readout"><b>The graphmap.</b> The object sits at the centre; its shadow stands above it on z, and the arrow between them is the transform. Each station reads from its corner — distance from the centre is Dia, height is what the voice believes happened. Scroll the tape.</div>
+          <div class="scrub">
+            <div class="t">TAPE <span id="tnow">0:00</span> / <span id="tlen">—</span></div>
+            <input type="range" id="scrubber" min="0" max="1" value="0" step="1">
+            <div class="row">
+              <span class="g4-tabs"><a class="g4-pill quiet on" id="showTrace" href="#">trace</a><a class="g4-pill quiet on" id="showPaths" href="#">worldlines</a><a class="g4-pill quiet" id="recenter" href="#">recentre</a></span>
+            </div>
+            <div class="legend">
+              <span><i style="background:rgb(184,58,58)"></i>LI</span><span><i style="background:rgb(56,104,168)"></i>RI</span><span><i style="background:rgb(58,138,82)"></i>LP</span><span><i style="background:rgb(184,120,40)"></i>RP</span>
+              <span><i style="background:#e8d9a8"></i>constitutive</span><span><i style="background:var(--band-fluid)"></i>z + delivers</span><span><i style="background:var(--band-denominated)"></i>z − doesn't</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="prose" id="prose"></div>
+          <div class="tape" id="tape"></div>
+        </div>
+      </div>
+      <div class="foot" id="pFoot"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SST ── -->
+<section class="view wrap g4-under-bar" id="v-sst">
+  <div class="mast">
+    <h1><small>BloomBurger · the paper</small>Supply Shock Tracker</h1>
+    <div class="fn g4-tabs"><a class="g4-pill" href="#pg">PG</a><a class="g4-pill on" href="#sst">SST</a><a class="g4-pill" href="#wire">WIRE</a></div>
+  </div>
+  <div class="dek">PG01's instrument: the share of traded energy sold in dollars, always with its denominator. One determination. The globe stands on the pedestal in the DreamGetty; this is the reading on the glass.</div>
+  <div id="sst"></div>
+</section>
+
+<!-- ── WIRE ── -->
+<section class="view wrap g4-under-bar wire" id="v-wire">
+  <div class="mast">
+    <h1><small>BloomBurger · the wire</small>The record</h1>
+    <div class="fn g4-tabs"><a class="g4-pill" href="#pg">PG</a><a class="g4-pill" href="#sst">SST</a><a class="g4-pill on" href="#wire">WIRE</a></div>
+  </div>
+  <div class="dek">Everything Prism collects, before reduction — registers and series with their as-of dates. The paper is made from this.</div>
+  <div id="wire"></div>
+</section>
+
+<!-- ── CODEX (a sheet) ── -->
+<div class="g4-sheet codex" id="codex">
+  <a class="g4-pill x" href="#" id="codexClose">close</a>
+  <div class="k">Codex</div>
+  <h3 id="cxWord">—</h3>
+  <p id="cxBody"></p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="../src/js/prism-graphmap.js?v=11"></script>
+<script>
+(function () {
+  'use strict';
+  const $ = s => document.querySelector(s);
+  const EMBEDDED = window.parent !== window;
+  if (EMBEDDED) document.documentElement.classList.add('embedded');
+  const fmt = s => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+  const zs = z => z == null ? '—' : (z > 0 ? '+' : '') + Number(z).toFixed(1);
+  const tier = d => d <= 33 ? 'fluid' : d <= 66 ? 'coalition' : 'denominated';
+  const COLH = { LI: '#b83a3a', RI: '#3868a8', LP: '#3a8a52', RP: '#b87828', O: '#e8d9a8' };
+  const COL = { LI: 0xb83a3a, RI: 0x3868a8, LP: 0x3a8a52, RP: 0xb87828, O: 0xe8d9a8 };
+
+  // ── the Codex: plain words, a priori (the "big headline" ruling) ──
+  const CODEX = {
+    object:   ['The object', 'The thing the discourse is about — a deal, a bill, a seat. Prism keeps it in one place so it can\'t be swapped for a person or a vibe while nobody is looking.'],
+    dia:      ['Dia', 'How far a statement stands from the object. 0–33 is a plain statement of belief; 34–66 is trying to win you over; 67–100 is spending political capital to make the point, bridge burnt.'],
+    z:        ['z', 'What the voice believes happened to the object. Up means it delivers; down means it doesn\'t. Every line carries one, inferred where it is only implied.'],
+    lumens:   ['Lumens', 'How much of the object\'s light gets through a piece of media — the mean, over scored lines, of (1 − Dia/100) for lines that touch the record, zero for lines that don\'t. Derived from the scores already on the page; it adds no judgment of its own.'],
+    station:  ['Station', 'Where a voice reads from. Left or right; institutional or populist. The axis places the station, not the reading.'],
+    parallelogram: ['parallelogram (little p)', 'One segment on one object, four corners scored. Join the four stations\' composite readings and you get a four-sided figure whose skew is the segment\'s split.'],
+    transform: ['The transform', 'What the discourse did to the object. A Z-assertion credits delivery before it happened.'],
+    touch:    ['Touch', 'What a line touches: O the object · O′ its shadow · F a figure (a person) · X a test it proposes.'],
+    split:    ['Split', 'Where the disagreement actually sits: between stations, or inside one.'],
+  };
+
+  // ── the sky (cheap; stars are the desktop) ──
+  (function sky() {
+    const c = $('#sky'), ctx = c.getContext('2d'); let stars = [];
+    function size() { c.width = innerWidth * devicePixelRatio; c.height = innerHeight * devicePixelRatio; stars = []; const n = Math.round((innerWidth * innerHeight) / 2600); for (let i = 0; i < n; i++) stars.push([Math.random() * c.width, Math.random() * c.height, Math.random() * 1.3 + .3, Math.random() * Math.PI * 2]); draw(0); }
+    function draw(t) { ctx.clearRect(0, 0, c.width, c.height); for (const s of stars) { const a = .25 + .55 * (0.5 + 0.5 * Math.sin(t / 1800 + s[3])); ctx.fillStyle = `rgba(245,240,232,${a})`; ctx.beginPath(); ctx.arc(s[0], s[1], s[2] * devicePixelRatio, 0, 6.283); ctx.fill(); } }
+    addEventListener('resize', size); size();
+    let last = 0; (function tick(t) { if (t - last > 120) { draw(t); last = t; } requestAnimationFrame(tick); })(0);
+  })();
+
+  // ── boot: the housing, once per session ──
+  (function boot() {
+    let seen = window.parent !== window;   // inside the shell, the shell boots
+    try { seen = seen || sessionStorage.getItem('g4_boot_v1') === '1'; } catch (e) {}
+    const h = $('#housing'); if (seen) { h.remove(); return; }
+    h.hidden = false; try { sessionStorage.setItem('g4_boot_v1', '1'); } catch (e) {}
+    setTimeout(() => { h.classList.add('done'); setTimeout(() => h.remove(), 400); }, 1800);
+  })();
+
+  // ── clock ──
+  (function clock() { const el = $('#clock'); const f = () => { const d = new Date(); el.textContent = d.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' }); }; f(); setInterval(f, 15000); })();
+
+  // ── router: desktop → program → object ──
+  const PROGRAMS = ['pg', 'sst', 'wire'];
+  let paperIndex = [];          // from data/press/index.json
+  const state = { layer: 'program', program: 'pg', piece: null };
+  const views = { desk: $('#v-desk'), pg: $('#v-pg'), piece: $('#v-piece'), sst: $('#v-sst'), wire: $('#v-wire') };
+  function show(name) { Object.values(views).forEach(v => v.classList.remove('on')); views[name].classList.add('on'); window.scrollTo(0, 0); }
+  function route() {
+    const h = location.hash.replace(/^#/, '') || 'pg';
+    const [head, ...rest] = h.split('/');
+    const codexOpen = head === 'codex';
+    if (codexOpen) { openCodex(rest[0] || 'object'); return; } else closeCodex();
+    if (head === 'desk') { if (EMBEDDED) { try { window.parent.postMessage({ type: 'g4:desk' }, '*'); } catch (e) {} location.hash = '#pg'; return; } state.layer = 'desk'; show('desk'); crumb('g4 · desktop'); bar('g4', ''); return; }
+    if (head === 'pg' && rest[0]) { state.layer = 'object'; state.program = 'pg'; state.piece = rest[0]; show('piece'); bar('BloomBurger', 'PG'); loadPiece(rest[0]); return; }
+    if (PROGRAMS.includes(head)) { state.layer = 'program'; state.program = head; state.piece = null; show(head); bar('BloomBurger', head.toUpperCase()); crumb('BloomBurger · ' + head.toUpperCase()); if (head === 'sst') loadSST(); if (head === 'wire') loadWire(); return; }
+    location.hash = '#pg';
+  }
+  function bar(n, f) { $('#barName').textContent = n; $('#barFn').textContent = f; tell(); }
+  function crumb(t) { $('#crumb').textContent = t; tell(); }
+  function tell() { if (!EMBEDDED) return; try { window.parent.postMessage({ type: 'g4:crumb', name: $('#barName').textContent, fn: $('#barFn').textContent, crumb: $('#crumb').textContent }, '*'); } catch (e) {} }
+  addEventListener('hashchange', route);
+
+  // ── the navtool: drag-and-snap, hold, the badge ──
+  (function navtool() {
+    const nav = $('#nav'), img = nav.querySelector('img');
+    let x0 = null, dx = 0, holdT = null, held = false, dragging = false;
+    const SNAP = 56, HOLD = 450;
+    function neighbours() {
+      if (state.layer === 'program') return { list: PROGRAMS, i: PROGRAMS.indexOf(state.program), go: k => location.hash = '#' + PROGRAMS[k] };
+      if (state.layer === 'object') { const ids = paperIndex.map(p => p.id); return { list: ids, i: ids.indexOf(state.piece), go: k => location.hash = '#pg/' + ids[k] }; }
+      return { list: [], i: -1, go: () => {} };
+    }
+    function up() { if (state.layer === 'object') location.hash = '#' + state.program; else if (state.layer === 'program') location.hash = '#desk'; }
+    addEventListener('message', e => { const m = e.data || {}; if (m.type !== 'g4:nav') return; const n = neighbours(); if (m.dir === 'up') up(); else if (m.dir === 'back' && n.i > 0) n.go(n.i - 1); else if (m.dir === 'forward' && n.i < n.list.length - 1) n.go(n.i + 1); });
+    nav.addEventListener('pointerdown', e => { x0 = e.clientX; dx = 0; held = false; dragging = false; nav.setPointerCapture(e.pointerId); holdT = setTimeout(() => { held = true; nav.classList.add('holding'); if (navigator.vibrate) navigator.vibrate(12); up(); }, HOLD); });
+    nav.addEventListener('pointermove', e => { if (x0 == null) return; dx = e.clientX - x0; if (Math.abs(dx) > 6) { dragging = true; clearTimeout(holdT); nav.classList.add('dragging'); img.style.setProperty('--nav-dx', Math.max(-120, Math.min(120, dx * .6)) + 'px'); } });
+    function end() {
+      if (x0 == null) return; clearTimeout(holdT); nav.classList.remove('dragging', 'holding');
+      img.style.setProperty('--nav-dx', '0px');
+      if (!held && dragging) { const n = neighbours(); if (dx <= -SNAP && n.i < n.list.length - 1) n.go(n.i + 1); else if (dx >= SNAP && n.i > 0) n.go(n.i - 1); }
+      x0 = null; dx = 0;
+    }
+    nav.addEventListener('pointerup', end); nav.addEventListener('pointercancel', end);
+    // keyboard, for the desktop app
+    addEventListener('keydown', e => { if (e.target.tagName === 'INPUT') return; const n = neighbours(); if (e.key === 'ArrowLeft' && n.i > 0) n.go(n.i - 1); if (e.key === 'ArrowRight' && n.i < n.list.length - 1) n.go(n.i + 1); if (e.key === 'Escape') { if ($('#codex').classList.contains('open')) closeCodex(); else up(); } });
+    // the badge is the pull — until the shell exists, it is the door to the villa
+    $('#badge').addEventListener('click', () => {
+      // inside the shell the badge IS the pull; on its own it is the door to the villa
+      if (window.parent !== window) { try { window.parent.postMessage({ type: 'g4:pull' }, '*'); return; } catch (e) {} }
+      const villa = location.hostname.endsWith('github.io') ? '/dreamgetty/' : '../../DreamGetty/dreamgetty/index.html'; location.href = villa;
+    });
+  })();
+
+  // ── the Codex as a sheet ──
+  function openCodex(w) { const e = CODEX[w] || CODEX.object; $('#cxWord').textContent = e[0]; $('#cxBody').textContent = e[1]; $('#codex').classList.add('open'); $('#cxWord').classList.remove('film'); void $('#cxWord').offsetWidth; $('#cxWord').classList.add('film'); }
+  function closeCodex() { $('#codex').classList.remove('open'); }
+  $('#codexClose').addEventListener('click', e => { e.preventDefault(); history.back(); });
+  document.addEventListener('click', e => { const w = e.target.closest('.word'); if (w) { e.preventDefault(); location.hash = '#codex/' + w.dataset.w; } });
+
+  // ── the figure: four station composites joined ──
+  // corners on the rose: LI top-left · RI top-right · LP bottom-left · RP bottom-right (the reader's corner labels)
+  function figureSVG(sb, size) {
+    const S = size || 96, c = S / 2, R = S * .42;
+    const corner = { LI: [-1, -1], RI: [1, -1], RP: [1, 1], LP: [-1, 1] };
+    const order = ['LI', 'RI', 'RP', 'LP'];
+    const pts = order.map(k => { const st = sb.stations && sb.stations[k]; const r = st && st.dia != null ? st.dia / 100 : 0; const [ux, uy] = corner[k]; return { k, x: c + ux * r * R, y: c + uy * r * R, empty: !st || st.dia == null }; });
+    const poly = pts.map(p => `${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(' ');
+    const uid = 'f' + Math.random().toString(36).slice(2, 7);
+    return `<svg class="fig" viewBox="0 0 ${S} ${S}" width="${S}" height="${S}" aria-hidden="true">
+      <defs><linearGradient id="${uid}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--film-0)"/><stop offset=".5" stop-color="var(--film-2)"/><stop offset="1" stop-color="var(--film-4)"/></linearGradient></defs>
+      <rect x="${c - R}" y="${c - R}" width="${2 * R}" height="${2 * R}" fill="none" stroke="rgba(233,236,242,.14)"/>
+      <line x1="${c - R}" y1="${c - R}" x2="${c + R}" y2="${c + R}" stroke="rgba(233,236,242,.08)"/><line x1="${c + R}" y1="${c - R}" x2="${c - R}" y2="${c + R}" stroke="rgba(233,236,242,.08)"/>
+      <polygon points="${poly}" fill="url(#${uid})" fill-opacity=".16" stroke="url(#${uid})" stroke-width="1.2"/>
+      ${pts.map(p => p.empty ? `<circle cx="${p.x}" cy="${p.y}" r="2.6" fill="none" stroke="${COLH[p.k]}" stroke-width="1"/>` : `<circle cx="${p.x}" cy="${p.y}" r="3" fill="${COLH[p.k]}"/>`).join('')}
+      <circle cx="${c}" cy="${c}" r="1.6" fill="#e8d9a8"/>
+    </svg>`;
+  }
+
+  // ── the front page ──
+  async function loadFront() {
+    const el = $('#front');
+    try { paperIndex = await fetch('../data/press/index.json', { cache: 'no-store' }).then(r => r.json()).then(j => j.pieces || []); } catch (e) { paperIndex = []; }
+    paperIndex.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+    if (!paperIndex.length) { el.innerHTML = '<div class="empty">Nothing on the wire yet. The first cut goes in data/press/index.json.</div>'; return; }
+    // the front page reads each piece's scoreboard for its figure
+    const full = await Promise.all(paperIndex.map(p => fetch('../data/press/' + p.id + '.json', { cache: 'no-store' }).then(r => r.json()).catch(() => null)));
+    el.innerHTML = paperIndex.map((p, i) => {
+      const D = full[i], sb = D ? D.scoreboard : { stations: {} };
+      const lead = i === 0;
+      return `<a class="card${lead ? ' lead' : ''}" href="#pg/${p.id}">
+        ${figureSVG(sb, lead ? 160 : 96)}
+        <div>
+          <div class="k">${p.program || (D && D.source.program) || ''} · ${p.date || ''} · ${p.arc || (D && D.arc) || ''}${p.status === 'claude-draft' ? ' · draft' : ''}</div>
+          <div class="t">${p.title || (D && D.title) || p.id}</div>
+          <div class="s">${sb.lumens != null ? `<span>Lumens <b class="${lead ? 'film' : ''}">${sb.lumens}</b></span>` : ''}${sb.dia != null ? `<span>Dia <b>${sb.dia}</b></span>` : ''}${sb.readZ != null ? `<span>read z <b>${zs(sb.readZ)}</b> vs declared <b>${zs(sb.declaredZ)}</b></span>` : ''}${sb.split ? `<span>split <b>${sb.split.topology} · ${sb.split.station}</b></span>` : ''}</div>
+          ${lead && p.dek ? `<div class="dek" style="margin:8px 0 0">${p.dek}</div>` : ''}
+        </div></a>`;
+    }).join('');
+  }
+
+  // ── a piece on the real graphmap ──
+  let g = null, gMounted = false, pieceCleanup = null;
+  async function loadPiece(id) {
+    if (pieceCleanup) { pieceCleanup(); pieceCleanup = null; }
+    let D; try { D = await fetch('../data/press/' + id + '.json', { cache: 'no-store' }).then(r => r.json()); } catch (e) { $('#pTitle').textContent = 'No such piece.'; return; }
+    const meta = paperIndex.find(p => p.id === id) || {};
+    crumb('PG · ' + (D.source.program || '') + ' · ' + D.source.date);
+    $('#pTitleBar').textContent = D.title;
+    $('#pKicker').textContent = `Parallelogram · ${D.arc} · ${D.source.program} · cut ${D.source.date}${D.status === 'claude-draft' ? ' · Claude draft, scores pending Sailor\'s ruling' : ''}`;
+    $('#pTitle').innerHTML = D.title.replace(/Reduced/, '<span class="film">Reduced</span>');
+    $('#pDek').textContent = meta.dek || `${D.source.program}, “${D.source.title}” — cut to the words that carry the object, scored, and placed on the graphmap.`;
+    $('#tlen').textContent = fmt(D.source.length);
+    const S = D.scoreboard, st = S.stations;
+    const tile = (cls, l, v, s) => `<div class="tile"><div class="l">${l}</div><div class="v ${cls}">${v}</div><div class="s">${s || ''}</div></div>`;
+    $('#board').innerHTML =
+      tile('', '<span class="word" data-w="lumens">Lumens</span>', `<span class="film">${S.lumens}</span>`, 'of the object’s light gets through') +
+      tile('', 'Segment <span class="word" data-w="dia">Dia</span>', S.dia, S.tier) +
+      tile('Oc', '<span class="word" data-w="transform">The transform</span>', `<span style="font-size:18px">${D.transform}</span>`, D.transformNote || (D.transform === 'Z-assertion' ? 'delivery credited before it happened' : '')) +
+      tile('Oc', 'Declared <span class="word" data-w="z">z</span>', zs(S.declaredZ), S.declaredZ == null ? 'no principal in the room' : 'the statements') +
+      tile('', 'Read z', `${zs(S.readZ)}<small>mean</small>`, `range ${zs(S.readZRange[0])} → ${zs(S.readZRange[1])}`) +
+      ['LP', 'RP', 'RI', 'LI'].map(k => st[k] ? tile(k + 'c', k, `${st[k].dia}<small>${st[k].spread[0]} → ${st[k].spread[1]}</small>`, '') : tile(k + 'c', k, '<span style="color:var(--ink-low)">—</span>', 'declared empty, by-record')).join('') +
+      tile('', '<span class="word" data-w="split">Split</span>', `<span style="font-size:18px">${S.split.topology} · ${S.split.station} · ${S.split.strength}</span>`, '');
+
+    // the prose, if the index carries it
+    $('#prose').innerHTML = (meta.lede ? `<p>${meta.lede}</p>` : '');
+
+    // graphmap — built once, re-used per piece
+    const mapEl = $('#map');
+    if (!g) {
+      g = PrismGraphmap.create({ container: mapEl, mode: 'analytical', capabilities: { orbit: true, zInput: true, zRender: true, diatribeSlider: false, clustering: 'individual' } });
+      g.mount(mapEl); gMounted = true;
+      g.setCornerLabels && g.setCornerLabels({ A: 'LI', B: 'RI', C: 'LP', D: 'RP' });
+      g.setBoundaryMode && g.setBoundaryMode('dual');
+      g.setBoundaryVisible && g.setBoundaryVisible(false);
+      g.setOrbit(0, -40); g.setZoom && g.setZoom(6.8);
+    } else { try { g.clearDots && g.clearDots(); g.clearPaths && g.clearPaths(); } catch (e) {} }
+    g.loadTrace(D.trace);
+    const L = D.lines;
+    L.forEach((p, i) => {
+      const col = p.station === 'O' ? COL.O : COL[p.station];
+      g.addDot(p.normX, p.normY, p.quadrant, p.normZ, { color: col, radius: p.station === 'O' ? 0.03 : 0.045, shape: p.station === 'O' ? 'diamond' : undefined, label: `${p.who} ${fmt(p.t)}`, meta: { i, t: p.t, who: p.who, dia: p.dia, z: p.z, mode: p.mode, touch: p.touch } });
+      g.setDotVisible(i, false);
+    });
+    const speakers = [...new Set(L.filter(p => p.station !== 'O').map(p => p.who))];
+    speakers.forEach(w => { const st0 = L.find(p => p.who === w).station; g.addPath([], { id: w, color: COL[st0], opacity: .55, dashed: true }); });
+
+    let activeIdx = -1, pathsOn = true;
+    function render(tsec, focus) {
+      $('#tnow').textContent = fmt(tsec);
+      const scr = $('#scrubber'); if (+scr.value !== tsec) scr.value = tsec;
+      const seen = {};
+      L.forEach((p, i) => { const on = p.t <= tsec; g.setDotVisible(i, on); g.setDotEmphasis(i, i === focus ? 1.8 : 1); if (on && p.station !== 'O') (seen[p.who] = seen[p.who] || []).push({ x: p.normX, y: p.normY, z: p.normZ }); });
+      speakers.forEach(w => g.setPath(w, pathsOn ? (seen[w] || []) : []));
+      const f = L[focus]; if (!f) return;
+      $('#readout').innerHTML = `<b>${fmt(f.t)} · ${D.names[f.who]}${f.station === 'O' ? '' : ' · ' + f.station}</b> — <span class="q">${f.quote.replace(/[«»]/g, '')}</span><br>` +
+        (f.dia == null ? `<b>constitutive</b> — the words are the object (or its shadow); unscored. Declared z ${zs(f.z)}.` : `Dia <b>${f.dia}</b> (${tier(f.dia)}) · z <b>${zs(f.z)}</b>${f.zInferred ? ' (inferred)' : ''} ${f.mode && f.mode !== '—' ? ' · ' + f.mode : ''} · touches <b>${f.touch}</b>. ${f.note || ''}`);
+    }
+    const scr = $('#scrubber'); scr.max = D.source.length; scr.value = 0;
+    const onScrub = e => { const t = +e.target.value; let i = -1; L.forEach((p, k) => { if (p.t <= t) i = k; }); if (i >= 0 && i !== activeIdx) { activeIdx = i; cards[i].scrollIntoView({ block: 'center' }); } render(t, i); };
+    scr.oninput = onScrub;
+    $('#showTrace').onclick = e => { e.preventDefault(); const on = e.currentTarget.classList.toggle('on'); g.setTraceVisible(on); };
+    $('#showPaths').onclick = e => { e.preventDefault(); pathsOn = e.currentTarget.classList.toggle('on'); render(+scr.value, activeIdx); };
+    $('#recenter').onclick = e => { e.preventDefault(); g.recenter && g.recenter(); };
+    g.onInspect && g.onInspect(d => { if (d && d.i != null && cards[d.i]) cards[d.i].scrollIntoView({ block: 'center' }); });
+
+    // the tape
+    const tape = $('#tape'); tape.innerHTML = '';
+    L.forEach((p, i) => {
+      if (p.chapter) { const h = document.createElement('h2'); h.textContent = p.chapter; tape.appendChild(h); }
+      const d = document.createElement('div'); d.className = 'line'; d.dataset.i = i;
+      const q = p.quote.replace(/«(.*?)»/g, '<span class="hi">$1</span>');
+      const ds = p.dia == null ? `<span><b>unscored</b> · constitutive</span>` : `<span>Dia <b>${p.dia}</b> · ${tier(p.dia)}</span>`;
+      const zz = p.z == null ? `<span>z —</span>` : `<span class="z ${p.z >= 0 ? 'pos' : 'neg'}">z ${zs(p.z)}${p.zInferred ? '<small>·inf</small>' : ''}</span>`;
+      d.innerHTML = `<div class="meta"><span class="ts">${fmt(p.t)}</span><span class="chip ${p.station}">${p.station === 'O' ? '@O' : p.station}</span><span>${D.names[p.who]}</span></div><q>${q}</q><div class="scores">${ds}${zz}<span class="touch">${p.touch}</span>${p.mode && p.mode !== 'constitutive' && p.mode !== '—' ? `<span>${p.mode}</span>` : ''}</div>${p.note ? `<div class="note">${p.note}</div>` : ''}`;
+      d.addEventListener('click', () => { activeIdx = i; render(p.t, i); });
+      tape.appendChild(d);
+    });
+    const cards = [...tape.querySelectorAll('.line')];
+    $('#pClose').onclick = () => { location.hash = '#pg'; };
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { const i = +e.target.dataset.i; cards.forEach(c => c.classList.toggle('active', +c.dataset.i === i)); if (i !== activeIdx) { activeIdx = i; const hi = e.target.querySelector('.hi'); if (hi) { hi.classList.remove('film', 'quick'); void hi.offsetWidth; hi.classList.add('film', 'quick'); } } render(L[i].t, i); } }), { rootMargin: '-42% 0px -50% 0px' });
+    cards.forEach(c => io.observe(c));
+    $('#pFoot').textContent = `Lumens is derived: the mean, over scored lines, of (1 − Dia/100) for lines that touch the record (O · T · B · M · X), zero for lines that don’t; constitutive lines excluded. z marked ·inf is inferred from the words under the z rule (every line carries one). Source transcript and cut in Parameters/09_Parallelograms/Press.`;
+    render(0, -1);
+    pieceCleanup = () => { io.disconnect(); };
+  }
+
+  // ── SST: the reading on the glass ──
+  async function loadSST() {
+    const el = $('#sst');
+    let A = null; try { A = await fetch('../data/active/active.json', { cache: 'no-store' }).then(r => r.json()); } catch (e) {}
+    const villa = location.hostname.endsWith('github.io') ? '/dreamgetty/' : '../../DreamGetty/dreamgetty/index.html';
+    const frame = A && A.frame ? A.frame : null;
+    const months = A && A.realization && A.realization.months ? A.realization.months : null;
+    el.innerHTML = `
+      <div class="reading">
+        <div class="big"><span class="film loop" id="sstShare">${A && A.realization && A.realization.share != null ? Math.round(A.realization.share * 100) + '%' : '—'}</span><small>sold in dollars</small></div>
+        <div>
+          <div class="verdict">${A && A.realization && A.realization.verdict ? A.realization.verdict : 'the pipeline writes the share'}</div>
+          <p style="color:var(--ink-mid);font-size:14px;margin:8px 0 10px">${frame && frame.object ? frame.object : 'PG01 — the petrogas-dollar. The share of traded energy settled in dollars, read over a panel of stations that report every month.'}</p>
+          <div class="g4-tabs"><a class="g4-pill" href="${villa}">🌍 to the pedestal</a><a class="g4-pill quiet" href="#wire">the series</a></div>
+        </div>
+      </div>
+      <div class="g4-rule"></div>
+      <div class="g4-key">Built ${A && A.builtAt ? A.builtAt.slice(0, 10) : '—'} · ${A && A.errors && A.errors.length ? A.errors.length + ' pipeline errors' : 'pipeline clean'} · the determination's history belongs to scripts/active-layer.js (owed)</div>`;
+  }
+
+  // ── WIRE: the record ──
+  async function loadWire() {
+    const el = $('#wire');
+    const files = [
+      ['press/index.json', 'The paper', 'parallelograms, newest first', j => `${(j.pieces || []).length} pieces`],
+      ['active/active.json', 'PG01 · the active layer', 'flows, accruals, events, hypotheses, statements', j => `built ${(j.builtAt || '').slice(0, 10)}`],
+      ['active/events.json', 'Detection series', 'what the stations saw, by as-of date', j => `${(j.rows || []).length} rows`],
+      ['active/statements.json', 'Principals', 'what they said, dated', j => `${(j.rows || []).length} rows`],
+      ['active/hypotheses.json', 'Hypotheses', 'the bets, with what falsifies them', j => `${(j.rows || j || []).length} rows`],
+      ['active/settlement.json', 'Settlement rules', 'the money, with its basis and confidence', j => `${(j.rules || []).length} rules · ${j.updated || ''}`],
+      ['active/accruals.json', 'Accruals', 'the sanctioned theatres, dashed', j => `${(j.rows || []).length} rows`],
+      ['active/price.json', 'Brent', 'the shadow', j => `${(j.rows || j.series || []).length} points`],
+      ['active/detection_gdelt.json', 'GDELT', 'the feed that failed; the shows read better', j => `${(j.rows || []).length} rows`],
+      ['bill_fetch_stats.json', 'Legislation', 'the tethered bills', j => Object.keys(j).length + ' fields'],
+    ];
+    const rows = await Promise.all(files.map(async ([f, n, s, fn]) => { try { const j = await fetch('../data/' + f, { cache: 'no-store' }).then(r => r.ok ? r.json() : null); return `<div class="g4-row"><div class="n">${n}<small>${f}</small></div><div class="d"><b>${j ? fn(j) : 'not on disk'}</b><br>${s}</div></div>`; } catch (e) { return `<div class="g4-row"><div class="n">${n}<small>${f}</small></div><div class="d">unreadable</div></div>`; } }));
+    el.innerHTML = rows.join('');
+  }
+
+  loadFront().then(route);
+})();
+</script>
+</body>
+</html>

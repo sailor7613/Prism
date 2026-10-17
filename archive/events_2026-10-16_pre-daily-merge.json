@@ -1,0 +1,690 @@
+{
+ "column": "detection",
+ "what": "The detection series' dated events — PG01 §6.2(b). Every row carries asOf (the day it was true; the window rule) and detected (the day it was reported). The gap is latency, measured. Hand-dated; the pipeline never writes here.",
+ "schema": {
+  "id": "evt-…",
+  "theater": "iran | russia | venezuela | settlement",
+  "kind": "strike | seizure | license | sanction | admission | order | statement | closure",
+  "asOf": "YYYY-MM-DD",
+  "detected": "YYYY-MM-DD",
+  "what": "one line",
+  "source": "where",
+  "pg01": "where it already sits in PG01, if it does"
+ },
+ "rows": [
+  {
+   "id": "evt-nspm2",
+   "theater": "iran",
+   "kind": "order",
+   "asOf": "2025-02-04",
+   "detected": "2025-02-04",
+   "what": "NSPM-2 signed — maximum pressure; Iran's exports to zero assigned to State and Treasury.",
+   "source": "White House memorandum",
+   "pg01": "TF01 (first member)"
+  },
+  {
+   "id": "evt-first-strikes",
+   "theater": "iran",
+   "kind": "strike",
+   "asOf": "2025-06",
+   "detected": "2025-06",
+   "what": "The first strikes — oil spike, safe-haven flow, the closure threat as predicate.",
+   "source": "PG01 series TF02 (ruled, unauthored)",
+   "pg01": "TF02"
+  },
+  {
+   "id": "evt-senate-dem-statement",
+   "theater": "iran",
+   "kind": "statement",
+   "asOf": "2026-03-06",
+   "detected": "2026-03-06",
+   "what": "Senate Democratic joint statement on the war's economics — gas prices, the Russian-oil general license; not one word on the dollar or invoicing.",
+   "source": "PG01 §4",
+   "pg01": "§4 accrual · P1 evidence"
+  },
+  {
+   "id": "evt-islamabad",
+   "theater": "settlement",
+   "kind": "admission",
+   "asOf": "2026-06-17",
+   "detected": "2026-06-17",
+   "what": "The Islamabad Memorandum — invoicing lands in paper before speech.",
+   "source": "PG01 series TF04 (ruled, unauthored)",
+   "pg01": "TF04"
+  },
+  {
+   "id": "evt-bessent-cnbc",
+   "theater": "settlement",
+   "kind": "admission",
+   "asOf": "2026-06-24",
+   "detected": "2026-06-24",
+   "what": "Bessent on CNBC names the object aloud; pickup runs as a market story, a sanctions-relief defence, a win.",
+   "source": "PG01 §1.3 calibration case",
+   "pg01": "TF05 (admitted 2026-09-10)"
+  },
+  {
+   "id": "evt-demotion-c2",
+   "theater": "settlement",
+   "kind": "statement",
+   "asOf": "2026-08-08",
+   "detected": "2026-08-08",
+   "what": "The demotion — 'just another body of water'; the cover completing itself.",
+   "source": "PG01 series TF06 (authored 2026-09-20)",
+   "pg01": "TF06"
+  },
+  {
+   "id": "evt-ru-shortages",
+   "theater": "russia",
+   "kind": "admission",
+   "asOf": "2026-08-14",
+   "detected": "2026-08-14",
+   "what": "Petrol shortages admitted in Russia; the #2 gasoline producer repeatedly suspended.",
+   "source": "PG01 §4 (Russian-theater accrual)",
+   "pg01": "§4 · P2 window opens"
+  },
+  {
+   "id": "evt-norsi",
+   "theater": "russia",
+   "kind": "strike",
+   "asOf": "2026-08-26",
+   "detected": "2026-08-27",
+   "what": "Ukraine strikes Lukoil's NORSI refinery (Nizhny Novgorod, Russia's 4th-largest; shut down per Reuters) in a claimed 16-target wave.",
+   "source": "Reuters via PG01 §4",
+   "pg01": "§4 accrual 2026-08-27"
+  },
+  {
+   "id": "evt-ru-diesel-license",
+   "theater": "russia",
+   "kind": "license",
+   "asOf": "2026-10-09",
+   "detected": "2026-10-09",
+   "what": "OFAC general license: Russian-origin diesel may be sold, delivered and imported into the US through April 2027; no debits to Russia's central bank, wealth fund or finance ministry accounts at US banks. Announced by Trump after a call with Putin; diesel $6.27/gal vs $3.67 a year earlier.",
+   "source": "The National 2026-10-09; CNBC, NPR, NBC, Ship & Bunker same day. No license number reported yet.",
+   "pg01": "§4 accrual · P2 window (08-14 → 11-30): the test case — coverage reads price, midterms, Putin; the license's one explicit term is about bank accounts"
+  },
+  {
+   "id": "evt-press-ru-storage-strike",
+   "theater": "russia",
+   "kind": "strike",
+   "asOf": "2026-10-11",
+   "detected": "2026-10-12",
+   "what": "Ukraine strikes Russia's largest oil storage and pumping facility overnight; Russia answers with cruise missiles — the energy ceasefire broken within hours, both sides.",
+   "source": "Press · Breaking Points 2026-10-12 (cut: Parameters/09_Parallelograms/Press/2026-10-12_BP_Diesel_Deal/cut.md) · SE 8:01 (T)",
+   "pg01": "PG01 §4 Russian-theater accrual (draft, 10-12)",
+   "press": {
+    "line": "8:01",
+    "who": "SE",
+    "station": "RP",
+    "touch": "T",
+    "dia": 12,
+    "z": -1.0
+   }
+  },
+  {
+   "id": "evt-press-ru-rejects-ceasefire",
+   "theater": "russia",
+   "kind": "statement",
+   "asOf": "2026-10-12",
+   "detected": "2026-10-12",
+   "what": "Russia rejects the ceasefire; Kyiv in blackout hours after; cruise-missile attacks.",
+   "source": "Press · Breaking Points 2026-10-12 (cut: Parameters/09_Parallelograms/Press/2026-10-12_BP_Diesel_Deal/cut.md) · SE 12:26 (T)",
+   "pg01": "",
+   "press": {
+    "line": "12:26",
+    "who": "SE",
+    "station": "RP",
+    "touch": "T",
+    "dia": 16,
+    "z": -1.0
+   }
+  },
+  {
+   "id": "evt-press-graham-act-bars-cargo",
+   "theater": "russia",
+   "kind": "sanction",
+   "asOf": "2026-10-11",
+   "detected": "2026-10-12",
+   "what": "Hours before the diesel statement, the Russia sanctions act is signed; an OFAC license cannot override statute; 30-day notice to Congress; CBP barred from clearing the cargo before the election. UNVERIFIED against primaries (the cut has only BP’s account).",
+   "source": "Press · Breaking Points 2026-10-12 (cut: Parameters/09_Parallelograms/Press/2026-10-12_BP_Diesel_Deal/cut.md) · SA 2:29 (X)",
+   "pg01": "the frame candidate (signing-day collision) — verify first",
+   "press": {
+    "line": "2:29",
+    "who": "SA",
+    "station": "RI",
+    "touch": "X",
+    "dia": 14,
+    "z": -0.9
+   },
+   "verified": false
+  },
+  {
+   "id": "evt-press-feb-desanction-precedent",
+   "theater": "iran",
+   "kind": "license",
+   "asOf": "2026-02-15",
+   "detected": "2026-10-12",
+   "what": "Early in the Iran war Iranian oil was desanctioned over gas prices, then reversed and blockaded — the dated precedent for the pattern.",
+   "source": "Press · Breaking Points 2026-10-12 (cut: Parameters/09_Parallelograms/Press/2026-10-12_BP_Diesel_Deal/cut.md) · KB 5:27 (B)",
+   "pg01": "PG01 members (Feb 2026)",
+   "press": {
+    "line": "5:27",
+    "who": "KB",
+    "station": "LP",
+    "touch": "B",
+    "dia": 32,
+    "z": -0.4
+   }
+  },
+  {
+   "id": "evt-press-weapons-for-refineries",
+   "theater": "russia",
+   "kind": "admission",
+   "asOf": "2026-10-11",
+   "detected": "2026-10-12",
+   "what": "The conditioning term made public: weapons procurement conditioned on refinery strikes — 'do whatever you want to Russia, don't hit the refineries'.",
+   "source": "Press · Breaking Points 2026-10-12 (cut: Parameters/09_Parallelograms/Press/2026-10-12_BP_Diesel_Deal/cut.md) · DT 9:08 / SE 13:46 (M)",
+   "pg01": "",
+   "press": {
+    "line": "13:46",
+    "who": "SE",
+    "station": "RP",
+    "touch": "M",
+    "z": -0.6
+   }
+  },
+  {
+   "id": "evt-press-ol-crack-record",
+   "theater": "products",
+   "kind": "price",
+   "asOf": "2026-09-29",
+   "detected": "2026-10-15",
+   "what": "Heating oil–WTI crack through $100 (≈$107): product ≈$230/bbl with WTI ≈$110, Brent ≈$120; Europe gas-oil crack ≈$74–75/t. By report of the tape; verify against CME HO/CL settlements.",
+   "source": "Press · Odd Lots 2026-10-05, recorded 09-29 (cut: Parameters/09_Parallelograms/Press/2026-10-05_OddLots_Fuel_Hedging/cut.md) · DK 18:36 (T)",
+   "pg01": "the crunch, sized in the price's units",
+   "press": {
+    "line": "18:36",
+    "who": "DK",
+    "station": "RI",
+    "touch": "T",
+    "dia": 6,
+    "z": 0.6
+   },
+   "verified": false
+  },
+  {
+   "id": "evt-press-ol-sing-jet-basis",
+   "theater": "products",
+   "kind": "price",
+   "asOf": "2026-09-29",
+   "detected": "2026-10-15",
+   "what": "Normalized to early Feb 2026: Brent +50%, Singapore jet > +100% — the Brent hedge misses the product. By report (Bloomberg terminal on tape); verify against Platts/Argus Singapore jet and Brent front-month.",
+   "source": "Press · Odd Lots 2026-10-05, recorded 09-29 (cut: Parameters/09_Parallelograms/Press/2026-10-05_OddLots_Fuel_Hedging/cut.md) · JW 19:55 (T)",
+   "pg01": "basis: the hedge and the molecule",
+   "press": {
+    "line": "19:55",
+    "who": "JW",
+    "station": "RI",
+    "touch": "T",
+    "dia": 8,
+    "z": 0.5
+   },
+   "verified": false
+  },
+  {
+   "id": "evt-press-ol-russia-diesel-out",
+   "theater": "russia",
+   "kind": "supply",
+   "asOf": "2026-09-29",
+   "detected": "2026-10-15",
+   "what": "Russia (second-largest diesel exporter) has banned diesel exports; a large volume is out of the complex; Europe short; London gas oil at a record. By report; verify the ban's date and scope against Russian government decree / Reuters.",
+   "source": "Press · Odd Lots 2026-10-05, recorded 09-29 (cut: Parameters/09_Parallelograms/Press/2026-10-05_OddLots_Fuel_Hedging/cut.md) · DK 45:52 (T, →PG01)",
+   "pg01": "PG01 §4 Russian theater — supply side of the crunch; the substrate of the 10-11 diesel statement (H1)",
+   "press": {
+    "line": "45:52",
+    "who": "DK",
+    "station": "RI",
+    "touch": "T",
+    "dia": 10,
+    "z": 0.7
+   },
+   "verified": false
+  },
+  {
+   "id": "evt-press-ol-activity-undented",
+   "theater": "us",
+   "kind": "activity",
+   "asOf": "2026-09-29",
+   "detected": "2026-10-15",
+   "what": "TSA checkpoint throughput at records; fares very high; bookings very high — the crunch has not dented air-travel activity (the pass-through side of Z). Verify against TSA weekly throughput.",
+   "source": "Press · Odd Lots 2026-10-05, recorded 09-29 (cut: Parameters/09_Parallelograms/Press/2026-10-05_OddLots_Fuel_Hedging/cut.md) · JW 3:55 / 51:29 (T)",
+   "pg01": "R1 (reader hypothesis) — the baseline's test",
+   "press": {
+    "line": "51:29",
+    "who": "JW",
+    "station": "RI",
+    "touch": "T",
+    "dia": 14,
+    "z": -0.9
+   },
+   "verified": false
+  },
+  {
+   "id": "evt-press-ol-export-ban-rhetoric",
+   "theater": "us",
+   "kind": "statement",
+   "asOf": "2026-09-29",
+   "detected": "2026-10-15",
+   "what": "Talk of a US diesel export ban; per the tape mostly rhetoric, and US heating oil fell rather than rose on it (PADD 3 → NY Harbor is seaborne; the East Coast buys European diesel). Verify the ban's status against DOE/White House statements.",
+   "source": "Press · Odd Lots 2026-10-05, recorded 09-29 (cut: Parameters/09_Parallelograms/Press/2026-10-05_OddLots_Fuel_Hedging/cut.md) · JW 45:09 / DK 46:15 (O)",
+   "pg01": "the jawbone read from RI: the instrument moved the number the other way",
+   "press": {
+    "line": "46:15",
+    "who": "DK",
+    "station": "RI",
+    "touch": "O",
+    "dia": 12,
+    "z": -0.6
+   },
+   "verified": false
+  },
+  {
+   "id": "evt-press-close-jbht-surcharge",
+   "theater": "us",
+   "kind": "activity",
+   "asOf": "2026-10-15",
+   "detected": "2026-10-15",
+   "what": "J.B. Hunt Q3 2026: revenue ≈$3.69B (in line), EPS $1.82; top line +20% y/y including fuel surcharges; intermodal revenue +20%, loads +8.5%; dedicated +10%. The diesel crunch arriving as top-line growth — the pass-through in a filing. By report of the tape; verify against the JBHT Q3 release / 10-Q.",
+   "source": "Press · The Close 2026-10-15, baseline (cut: Parameters/09_Parallelograms/Press/2026-10-15_TheClose_Baseline/cut.md) · TB 1:05:08, RB 1:07:20 (O/T)",
+   "pg01": "the crunch reaches the balance sheet: surcharged and booked; activity (loads) undented — pass-through side of Z",
+   "press": {
+    "line": "1:05:08",
+    "who": "TB",
+    "station": "RI",
+    "touch": "O",
+    "dia": 4,
+    "z": -0.8
+   },
+   "verified": false
+  },
+  {
+   "id": "evt-press-close-ppi-4yr",
+   "theater": "us",
+   "kind": "price",
+   "asOf": "2026-10-15",
+   "detected": "2026-10-15",
+   "what": "PPI rose at its fastest pace in more than four years (September print, released this week); retail sales ex motor vehicles and gas barely changed. Price into the index, activity flat. By report; verify against BLS PPI and Census retail sales releases (dates and figures).",
+   "source": "Press · The Close 2026-10-15, baseline (cut: Parameters/09_Parallelograms/Press/2026-10-15_TheClose_Baseline/cut.md) · RB 2:04 (T)",
+   "pg01": "the crunch in the price level; the Fed's bind (EN 42:46: \"a lot of this is oil\")",
+   "press": {
+    "line": "2:04",
+    "who": "RB",
+    "station": "RI",
+    "touch": "T",
+    "dia": 8,
+    "z": -0.3
+   },
+   "verified": false
+  },
+  {
+   "id": "evt-press-close-hormuz-walsh",
+   "theater": "gulf",
+   "kind": "statement",
+   "asOf": "2026-10-15",
+   "detected": "2026-10-15",
+   "what": "KPMG US CEO Tim Walsh, on air: oil \"not flowing freely in the Strait of Hormuz, and hasn't for quite some time\"; showing up in inflation and interest rates; \"with diesel prices rising, you've got the inflation pressure.\" A statement about flows by a reader, not a flow measure — the tracker's flow series is the record for this.",
+   "source": "Press · The Close 2026-10-15, baseline (cut: Parameters/09_Parallelograms/Press/2026-10-15_TheClose_Baseline/cut.md) · TW 29:11 / 29:44 (O, →PG01)",
+   "pg01": "PG01 layer 2 by statement: the constraint named from the C-suite; reads as a price, not a shortage",
+   "press": {
+    "line": "29:11",
+    "who": "TW",
+    "station": "RI",
+    "touch": "O",
+    "dia": 10,
+    "z": -0.3
+   },
+   "verified": false
+  },
+  {
+   "id": "evt-press-aj-kharkiv-after-statement",
+   "theater": "russia",
+   "kind": "strike",
+   "asOf": "2026-10-12",
+   "detected": "2026-10-15",
+   "what": "Russian drones continued targeting Ukrainian energy facilities, including a power plant in Kharkiv, after the 10-11 \"energy ceasefire\" statement (per Zelenskyy, reported 10-12). Verify date/time of the Kharkiv strike against Reuters / Ukrenergo.",
+   "source": "Press · Al Jazeera 2026-10-12 explainer (cut: Parameters/09_Parallelograms/Press/2026-10-12_AlJazeera_Energy_Ceasefire/cut.md) · AJ ¶11 (T)",
+   "pg01": "H2 falsifier — the ceasefire not in force within a day of being declared (Sailor: H2 falsified 10-12)",
+   "press": {
+    "line": "¶11",
+    "who": "AJ",
+    "station": "LI",
+    "touch": "T",
+    "dia": 6,
+    "z": -0.9
+   },
+   "verified": false
+  },
+  {
+   "id": "evt-press-aj-brent-1012",
+   "theater": "price",
+   "kind": "price",
+   "asOf": "2026-10-12",
+   "detected": "2026-10-15",
+   "what": "Brent ≈$103.04/bbl, WTI ≈$90.96 on Monday 10-12 following the ceasefire statement and the diesel deal. By report; verify against ICE/CME settlements.",
+   "source": "Press · Al Jazeera 2026-10-12 explainer (cut: Parameters/09_Parallelograms/Press/2026-10-12_AlJazeera_Energy_Ceasefire/cut.md) · AJ ¶20 (T)",
+   "pg01": "the price shadow: a few dollars of belief in delivery",
+   "press": {
+    "line": "¶20",
+    "who": "AJ",
+    "station": "LI",
+    "touch": "T",
+    "dia": 6,
+    "z": 0.2
+   },
+   "verified": false
+  },
+  {
+   "id": "evt-press-aj-diesel-record-sept",
+   "theater": "us",
+   "kind": "price",
+   "asOf": "2026-09-30",
+   "detected": "2026-10-15",
+   "what": "US retail diesel reached a record $6.52/gal in September 2026. By report; verify against EIA weekly retail diesel (date of the peak week).",
+   "source": "Press · Al Jazeera 2026-10-12 explainer (cut: Parameters/09_Parallelograms/Press/2026-10-12_AlJazeera_Energy_Ceasefire/cut.md) · AJ ¶37 (T)",
+   "pg01": "the crunch at the pump — the number the deal was announced against",
+   "press": {
+    "line": "¶37",
+    "who": "AJ",
+    "station": "LI",
+    "touch": "T",
+    "dia": 8,
+    "z": 0.0
+   },
+   "verified": false
+  },
+  {
+   "id": "evt-press-aj-g7-release",
+   "theater": "g7",
+   "kind": "agreement",
+   "asOf": "2026-10-08",
+   "detected": "2026-10-15",
+   "what": "G7 agreed \"last week\" (week of 10-05) to release 100 million barrels of emergency oil and diesel reserves, after pressure from Trump. Verify date and composition (crude vs product) against the G7 statement / IEA.",
+   "source": "Press · Al Jazeera 2026-10-12 explainer (cut: Parameters/09_Parallelograms/Press/2026-10-12_AlJazeera_Energy_Ceasefire/cut.md) · AJ ¶24 (T)",
+   "pg01": "the other instrument on the same object — a release, not a deal; also an objects-pass candidate for the register (an agreement with a holder)",
+   "press": {
+    "line": "¶24",
+    "who": "AJ",
+    "station": "LI",
+    "touch": "T",
+    "dia": 8,
+    "z": 0.0
+   },
+   "verified": false
+  },
+  {
+   "id": "evt-press-aj-waiver-series",
+   "theater": "us",
+   "kind": "ruling",
+   "asOf": "2026-03-12",
+   "detected": "2026-10-15",
+   "what": "March 5 2026: 30-day waiver for India to buy Russian oil stranded at sea; widened a week later to all countries for sanctioned Russian oil and products already on tankers; expiring April 11. Verify against OFAC general licenses.",
+   "source": "Press · Al Jazeera 2026-10-12 explainer (cut: Parameters/09_Parallelograms/Press/2026-10-12_AlJazeera_Energy_Ceasefire/cut.md) · AJ ¶30 (B)",
+   "pg01": "PG01 §4 — the series the 10-09 deal belongs to; the Graham-law critics' precedent",
+   "press": {
+    "line": "¶27",
+    "who": "AJ",
+    "station": "LI",
+    "touch": "B",
+    "dia": 10,
+    "z": -0.1
+   },
+   "verified": false
+  },
+  {
+   "id": "evt-press-tc-diesel-650",
+   "theater": "us",
+   "kind": "price",
+   "asOf": "2026-09-23",
+   "detected": "2026-10-15",
+   "what": "US retail diesel ≈$6.50/gal \"nationally\" as stated on the tape (consistent with AJ: record $6.52 in September). Verify against EIA weekly retail diesel for the week of 09-21.",
+   "source": "Press · Tucker Carlson 2026-09-23 (cut: Parameters/09_Parallelograms/Press/2026-09-23_TuckerCarlson_Refineries/cut.md) · TC 4:47 / 13:15 (T/O)",
+   "pg01": "the crunch at the pump, read from RP as a bite",
+   "press": {
+    "line": "4:47",
+    "who": "TC",
+    "station": "RP",
+    "touch": "T",
+    "dia": 10,
+    "z": 0.6
+   },
+   "verified": false
+  },
+  {
+   "id": "evt-press-tc-russia-capacity",
+   "theater": "russia",
+   "kind": "supply",
+   "asOf": "2026-09-23",
+   "detected": "2026-10-15",
+   "what": "Russian refining capacity hit by Ukrainian strikes: \"60% hit\" (Carlson 6:26) vs \"45% taken offline as of this month\" (Weichert 59:56) — two figures on one tape. Verify against Reuters/IEA monthly estimates of Russian refinery outages, September 2026.",
+   "source": "Press · Tucker Carlson 2026-09-23 (cut: Parameters/09_Parallelograms/Press/2026-09-23_TuckerCarlson_Refineries/cut.md) · TC 6:26, BW 59:56 (T)",
+   "pg01": "PG01 §4 Russian theater — the supply side of the crunch; the substrate of the 09-20 request and the 10-09 deal",
+   "press": {
+    "line": "59:56",
+    "who": "BW",
+    "station": "RP",
+    "touch": "T",
+    "dia": 8,
+    "z": 0.6
+   },
+   "verified": false
+  },
+  {
+   "id": "evt-press-tc-moscow-refinery-strike",
+   "theater": "russia",
+   "kind": "strike",
+   "asOf": "2026-09-22",
+   "detected": "2026-10-15",
+   "what": "Ukrainian drone/missile strike on the Moscow-area refinery \"ten miles from the Kremlin\" (BBC, via the tape), about a week after Trump's 09-20 request to stop striking diesel refining. Verify date and facility (Moscow Oil Refinery, Kapotnya?) against Reuters/BBC.",
+   "source": "Press · Tucker Carlson 2026-09-23 (cut: Parameters/09_Parallelograms/Press/2026-09-23_TuckerCarlson_Refineries/cut.md) · TC 32:11–32:58 (T, BBC clip)",
+   "pg01": "the record against the 09-20 request: not honored",
+   "press": {
+    "line": "32:43",
+    "who": "TC",
+    "station": "RP",
+    "touch": "T",
+    "dia": 20,
+    "z": 0.5
+   },
+   "verified": false
+  },
+  {
+   "id": "evt-press-tc-gulf-refineries",
+   "theater": "gulf",
+   "kind": "strike",
+   "asOf": "2026-09-23",
+   "detected": "2026-10-15",
+   "what": "\"Seven refineries in the Persian Gulf hit, destroyed, damaged or shut down so far in this war, by our count\" (Carlson). Verify against the tracker's OSINT series / Reuters.",
+   "source": "Press · Tucker Carlson 2026-09-23 (cut: Parameters/09_Parallelograms/Press/2026-09-23_TuckerCarlson_Refineries/cut.md) · TC 4:47 (T)",
+   "pg01": "PG01 Gulf theater — refining capacity removed, the other half of the crunch",
+   "press": {
+    "line": "4:47",
+    "who": "TC",
+    "station": "RP",
+    "touch": "T",
+    "dia": 10,
+    "z": 0.6
+   },
+   "verified": false
+  },
+  {
+   "id": "evt-press-bp2-tanker-sunk",
+   "theater": "gulf",
+   "kind": "strike",
+   "asOf": "2026-10-15",
+   "detected": "2026-10-15",
+   "what": "Singapore-flagged tanker sunk in the Strait of Hormuz (confirmed by Singapore per the tape); a second vessel sunk by projectile; attacks on shipping now > 20. Struck vs mined unclear. Verify against Reuters / UKMTO.",
+   "source": "Press · Breaking Points 2026-10-15 \"Saudi Under Siege\" (cut: Parameters/09_Parallelograms/Press/2026-10-15_BP_Hormuz/cut.md) · SE 6:26 (T)",
+   "pg01": "H6 falsifier — the record against the control claim",
+   "press": {
+    "line": "6:26",
+    "who": "SE",
+    "station": "RP",
+    "touch": "T",
+    "dia": 12,
+    "z": -0.8
+   },
+   "verified": false
+  },
+  {
+   "id": "evt-press-bp2-centcom-19m",
+   "theater": "gulf",
+   "kind": "statement",
+   "asOf": "2026-10-12",
+   "detected": "2026-10-15",
+   "what": "CENTCOM: ≈19 million barrels transited the Strait on Monday 10-12 under convoy/blockade; pre-war baseline cited on the tape ≈20M+ bbl/day without convoy. Verify against the CENTCOM release and Kpler transit data.",
+   "source": "Press · Breaking Points 2026-10-15 \"Saudi Under Siege\" (cut: Parameters/09_Parallelograms/Press/2026-10-15_BP_Hormuz/cut.md) · SE 7:40 (T)",
+   "pg01": "H6 — the Z-assertion (throughput as control) and its denominator",
+   "press": {
+    "line": "7:40",
+    "who": "SE",
+    "station": "RP",
+    "touch": "T",
+    "dia": 16,
+    "z": -0.6
+   },
+   "verified": false
+  },
+  {
+   "id": "evt-press-bp2-freight",
+   "theater": "price",
+   "kind": "price",
+   "asOf": "2026-10-15",
+   "detected": "2026-10-15",
+   "what": "Tanker freight through the Strait ≈$1.4M/day vs ≈$100k pre-war (Hochstein); ≈$35/bbl in freight alone (Saagar). Verify against Baltic/Clarksons VLCC rates.",
+   "source": "Press · Breaking Points 2026-10-15 \"Saudi Under Siege\" (cut: Parameters/09_Parallelograms/Press/2026-10-15_BP_Hormuz/cut.md) · AH 18:23 (O)",
+   "pg01": "PG01 layer 2 — the price of passage, in freight",
+   "press": {
+    "line": "18:23",
+    "who": "AH",
+    "station": "LI",
+    "touch": "O",
+    "dia": 8,
+    "z": -0.6
+   },
+   "verified": false
+  },
+  {
+   "id": "evt-press-bp2-iran-toll",
+   "theater": "gulf",
+   "kind": "statement",
+   "asOf": "2026-10-15",
+   "detected": "2026-10-15",
+   "what": "\"Increasing indications\" that countries are paying Iran for transit — some of the barrel count is tolled passage (Krystal, by report). A claim, not a record: verify against Reuters / Kpler / insurer reporting before it enters the tracker as fact.",
+   "source": "Press · Breaking Points 2026-10-15 \"Saudi Under Siege\" (cut: Parameters/09_Parallelograms/Press/2026-10-15_BP_Hormuz/cut.md) · KB 10:53 (X)",
+   "pg01": "PG01 layer 2 — who sets the price of passage; H6 falsifier if confirmed",
+   "press": {
+    "line": "10:53",
+    "who": "KB",
+    "station": "LP",
+    "touch": "X",
+    "dia": 12,
+    "z": -0.8
+   },
+   "verified": false
+  },
+  {
+   "id": "evt-press-bp2-riyadh-airport",
+   "theater": "gulf",
+   "kind": "strike",
+   "asOf": "2026-10-14",
+   "detected": "2026-10-15",
+   "what": "Houthi strike on Riyadh airport: ≥14 killed, ≈300 injured; aircraft on the ground 134 → 38 by noon 10-14; ≈$4B of aircraft evacuated; one written off, five damaged; ≈$400M insured damage; airport closed to Sunday midnight. Verify against Reuters / Saudi GACA.",
+   "source": "Press · Breaking Points 2026-10-15 \"Saudi Under Siege\" (cut: Parameters/09_Parallelograms/Press/2026-10-15_BP_Hormuz/cut.md) · SE 12:34 (T)",
+   "pg01": "PG01 §5 Gulf — the realized layer in the kingdom",
+   "press": {
+    "line": "12:34",
+    "who": "SE",
+    "station": "RP",
+    "touch": "T",
+    "dia": 8,
+    "z": -0.5
+   },
+   "verified": false
+  },
+  {
+   "id": "evt-press-bp2-pif-stadiums",
+   "theater": "gulf",
+   "kind": "ruling",
+   "asOf": "2026-10-15",
+   "detected": "2026-10-15",
+   "what": "Semafor: Saudi PIF to drop five of its proposed 2034 World Cup stadiums (three new; ten total) as it cuts signature domestic spending; Six Kings tennis postponed. Verify against Semafor / FIFA.",
+   "source": "Press · Breaking Points 2026-10-15 \"Saudi Under Siege\" (cut: Parameters/09_Parallelograms/Press/2026-10-15_BP_Hormuz/cut.md) · SE 22:32 (T)",
+   "pg01": "PG01 §5 Gulf — spending cut on the strait's account",
+   "press": {
+    "line": "22:32",
+    "who": "SE",
+    "station": "RP",
+    "touch": "T",
+    "dia": 10,
+    "z": -0.4
+   },
+   "verified": false
+  },
+  {
+   "id": "evt-press-bp2-zelenskyy-ft",
+   "theater": "russia",
+   "kind": "statement",
+   "asOf": "2026-10-15",
+   "detected": "2026-10-15",
+   "what": "Zelenskyy (FT interview, 10-15): Ukraine will keep striking Russian refineries regardless of US wishes; US reportedly reduced Starlink access to curb the drone campaign. Verify against the FT and Reuters.",
+   "source": "Press · Breaking Points 2026-10-15 \"Saudi Under Siege\" (cut: Parameters/09_Parallelograms/Press/2026-10-15_BP_Hormuz/cut.md) · SE 20:13 (T)",
+   "pg01": "H2 record — the ceasefire not honored by its other party",
+   "press": {
+    "line": "20:13",
+    "who": "SE",
+    "station": "RP",
+    "touch": "T",
+    "dia": 20,
+    "z": -0.7
+   },
+   "verified": false
+  },
+  {
+   "id": "evt-press-bp2-dark-tankers",
+   "theater": "us",
+   "kind": "ruling",
+   "asOf": "2026-10-15",
+   "detected": "2026-10-15",
+   "what": "US \"looking to unsanction\" non-Iranian \"dark\" tankers (Russian, Venezuelan) to free freight capacity (Saagar, by report). An executive action with a holder — a register candidate. Verify against OFAC / Treasury statements.",
+   "source": "Press · Breaking Points 2026-10-15 \"Saudi Under Siege\" (cut: Parameters/09_Parallelograms/Press/2026-10-15_BP_Hormuz/cut.md) · SE 20:52 (T)",
+   "pg01": "H1 record — the sanctions regime loosened to move the diesel; the Graham-law line",
+   "press": {
+    "line": "20:52",
+    "who": "SE",
+    "station": "RP",
+    "touch": "T",
+    "dia": 20,
+    "z": -0.7
+   },
+   "verified": false
+  },
+  {
+   "id": "evt-press-bp2-moab-plan",
+   "theater": "gulf",
+   "kind": "statement",
+   "asOf": "2026-10-15",
+   "detected": "2026-10-15",
+   "what": "Pentagon reportedly weighing use of the GBU-43/B MOAB against Iran, described internally as an \"information operation\" (by report on the tape). A strike decision — register candidate. Verify the originating report.",
+   "source": "Press · Breaking Points 2026-10-15 \"Saudi Under Siege\" (cut: Parameters/09_Parallelograms/Press/2026-10-15_BP_Hormuz/cut.md) · SE 2:03 (T)",
+   "pg01": "PG01 §5 — escalation as messaging; reader hypothesis R4 attached",
+   "press": {
+    "line": "2:03",
+    "who": "SE",
+    "station": "RP",
+    "touch": "T",
+    "dia": 18,
+    "z": -0.3
+   },
+   "verified": false
+  }
+ ]
+}

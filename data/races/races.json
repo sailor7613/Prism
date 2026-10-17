@@ -320,6 +320,15 @@
     },
     "rows": [
      {
+      "pollster": "University of Texas (per BP 10-15)",
+      "dates": "≈2026-10-14",
+      "talarico": null,
+      "paxton": null,
+      "margin": "Talarico +3",
+      "note": "margin only, as read on the tape (cited as the most accurate Texas pollster of 2024); toplines and field dates to verify against the release",
+      "verified": false
+     },
+     {
       "pollster": "Trafalgar",
       "dates": "2026-10-06 → 10-08",
       "talarico": 47,
@@ -389,6 +398,24 @@
       "what": "Paxton's runoff margin over the sitting senator",
       "value": "64 – 36",
       "src": ""
+     },
+     {
+      "what": "Fort Bend County (Barbara Jordan Research Center) — Talarico margin; Trump–Harris tied there in 2024",
+      "value": "+18 (county); ≈+2 projected statewide",
+      "src": "Press · Breaking Points 2026-10-15 \"Texans Republicans Panic\" (cut: Parameters/09_Parallelograms/Press/2026-10-15_BP_Texas_Trail/cut.md) · SE 6:06",
+      "verified": false
+     },
+     {
+      "what": "Gas prices ↔ Trump approval, near 1:1 (cross-arc: PG01 → slate)",
+      "value": "the segment's \"single most important dynamic\"",
+      "src": "Press · Breaking Points 2026-10-15 \"Texans Republicans Panic\" (cut: Parameters/09_Parallelograms/Press/2026-10-15_BP_Texas_Trail/cut.md) · KB 10:23 (M)",
+      "verified": false
+     },
+     {
+      "what": "AP: share saying Trump prioritizes \"people like me\"",
+      "value": "11% (56% of independents: not at all)",
+      "src": "Press · Breaking Points 2026-10-15 \"Texans Republicans Panic\" (cut: Parameters/09_Parallelograms/Press/2026-10-15_BP_Texas_Trail/cut.md) · SE 11:35",
+      "verified": false
      }
     ]
    },
@@ -497,6 +524,55 @@
       "object": "HB 82",
       "pays": "Delivered in Texas. The federal version is the hypothesis: does he carry it to the Senate floor in the 120th?",
       "src": "https://en.wikipedia.org/wiki/James_Talarico"
+     },
+     {
+      "id": "tx-s4",
+      "who": "paxton",
+      "date": "2026-10-14",
+      "said": "Abbott is struggling but he has a lot of money; she has none. My disadvantages: not having time to raise more money, the negative ads from a brutal primary, and a well-funded, well-known opponent.",
+      "verbatim": true,
+      "object": "the seat — his own position in the race",
+      "pays": "Pays 11-03: if he holds, the disadvantages were survivable; if he loses, his own ledger named the cause first.",
+      "src": "Press · Breaking Points 2026-10-15 \"Texans Republicans Panic\" (cut: Parameters/09_Parallelograms/Press/2026-10-15_BP_Texas_Trail/cut.md) · leaked audio 3:45–4:24 (date approximate — the tape says new; verify)"
+     },
+     {
+      "id": "tx-s5",
+      "who": "talarico",
+      "date": "2026-07",
+      "said": "A $25 million pledge for Black-voter turnout — door-knocking in Black neighborhoods, in-person events, church engagement (Houston town hall, July); on a coalition call: the money, time and effort to win.",
+      "verbatim": false,
+      "object": "the seat — his own turnout model",
+      "pays": "Pays 11-03 by the Black-vote share and turnout in Harris, Dallas, Fort Bend; before then, by whether the money arrives (an Austin operative told Fox it has not, 10-16).",
+      "src": "Fox News 10-16 (Briceno, Creitz) — surfaced by the 10-16 sweep; the July town hall is the primary to find",
+      "note": "Record on the trail, same report: CT-AACES' 10-05 event (325 registrants) cancelled flat during Talarico's ~two-week illness absence; the group calls the loss irrecoverable; no campaign reply in the report. Not a position — a sighting."
+     }
+    ]
+   },
+   "press": [
+    {
+     "id": "bp_2026-10-15_texas_trail",
+     "date": "2026-10-15",
+     "program": "Breaking Points",
+     "stations": "LP+RP (+ forecaster, LI pending)",
+     "dia": 19,
+     "readZ": 0.32,
+     "reads": "flips",
+     "file": "../data/press/bp_2026-10-15_texas_trail.json",
+     "note": "the first trail cut on the seat; z is belief about the outcome, paid 11-03, never weight"
+    }
+   ],
+   "money": {
+    "note": "Money on the seat — record, never weight and never z. Filed from the sweep; FEC primaries to verify.",
+    "rows": [
+     {
+      "id": "tx-m1",
+      "who": "Elon Musk → super PAC → a group backing Paxton",
+      "amount": "$158,000,000",
+      "date": "2026-09",
+      "filed": "2026-10-15 (FEC filings released Thursday)",
+      "what": "Musk gave $158M in September to a super PAC that immediately moved the same sum to a group backing Paxton; NYT: most of Paxton's money traces to one man; Paxton is vastly outraised by Talarico otherwise",
+      "src": "NYT 10-16 (Schleifer) — beta lede, ¶1–¶3 open · surfaced by the 10-16 sweep · FEC primary to pull",
+      "verified": false
      }
     ]
    }

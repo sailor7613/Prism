@@ -1,0 +1,103 @@
+{
+ "column": "detection",
+ "what": "Statements by principals, filed as hypotheses the STATEMENT makes about the realized layer — not ours. Each row: who said what, verbatim, dated by detection; what it implies about where the barrel goes and in what settlement; the observables that would show it; and what falsifies it. The ledger tracks whether the world moved the way the words implied. Hand-dated; the pipeline never writes here. (2026-10-10)",
+ "rows": [
+  {
+   "id": "S1",
+   "theater": "russia",
+   "speaker": "Trump",
+   "venue": "to reporters, the White House",
+   "asOf": "2026-10-10",
+   "detected": "2026-10-10",
+   "verbatim": [
+    "He better damn well stop",
+    "I suggest they get a new leader who can make a deal"
+   ],
+   "context": "One day after the OFAC general license on Russian diesel (evt-ru-diesel-license); the strikes referred to are Ukraine's campaign on Russian refineries (evt-norsi and after).",
+   "implies": "The US now has an interest in Russian refining capacity staying intact; the sanctions regime is being operated as a supply valve; the non-dollar barrel is being licensed back into dollar-settled supply.",
+   "observables": [
+    {
+     "id": "strikes",
+     "what": "Ukrainian strikes on Russian refineries (detection series, theater russia) — stop, slow, or continue at the September rate"
+    },
+    {
+     "id": "ru-distillate-exports",
+     "what": "Russian distillate exports recover (JODI / Comtrade products from Russia, importer-reported)"
+    },
+    {
+     "id": "us-diesel-from-russia",
+     "what": "Russian diesel lands in US ports (EIA distillate imports by origin, RUS)"
+    },
+    {
+     "id": "diesel-price",
+     "what": "US retail diesel falls from $6.27 (2026-10-09)"
+    }
+   ],
+   "falsifiedIf": "Refinery strikes continue at the September rate through November, or no Russian-origin distillate appears in US import data by December 2026.",
+   "outcome": "pending",
+   "outcomeDate": null,
+   "source": "EnergyNow 2026-10-10; Bloomberg, The Hill, Modern Diplomacy same day"
+  },
+  {
+   "id": "S2",
+   "theater": "russia",
+   "speaker": "Trump",
+   "venue": "post, weekend of 10-10/11 (per BP 10-12)",
+   "asOf": "2026-10-11",
+   "detected": "2026-10-12",
+   "verbatim": [
+    "Russia will immediately supply 300,000 tons",
+    "500,000 in November",
+    "3 million tons",
+    "diesel prices coming down in record numbers"
+   ],
+   "context": "The diesel deal as stated — H1. Declared z +1.0; the record inside the window: 300k t/mo ≈ 74 kb/d against ~3.66 mb/d US production; the statute bar (unverified); no CBP-cleared cargo.",
+   "hypothesis": "H1",
+   "source": "Press · Breaking Points 2026-10-12 (cut: Parameters/09_Parallelograms/Press/2026-10-12_BP_Diesel_Deal/cut.md) · DT 0:47 / 1:13",
+   "implies": "Delivery pre-credited: the schedule is spoken as done. The record inside the window is a few percent of US supply, a statute bar (unverified) and no cleared cargo — H1 is the test."
+  },
+  {
+   "id": "S3",
+   "theater": "russia",
+   "speaker": "Trump",
+   "venue": "post, 2026-10-11",
+   "asOf": "2026-10-11",
+   "detected": "2026-10-12",
+   "verbatim": [
+    "Effective immediately, there is an energy ceasefire",
+    "Both parties have agreed, do not break it"
+   ],
+   "context": "The energy ceasefire as stated — H2. Z-assertion in its purest form: delivery declared as already done; broken within hours by both sides (evt-press-ru-storage-strike, evt-press-ru-rejects-ceasefire).",
+   "hypothesis": "H2",
+   "source": "Press · Breaking Points 2026-10-12 (cut: Parameters/09_Parallelograms/Press/2026-10-12_BP_Diesel_Deal/cut.md) · DT 8:23",
+   "implies": "A ceasefire declared as already in force; both sides struck within hours — H2 falsified in its own window (draft; Sailor rules)."
+  },
+  {
+   "id": "S4",
+   "theater": "russia",
+   "speaker": "Zelensky",
+   "venue": "interview, 2026-10-11 (per BP 10-12)",
+   "asOf": "2026-10-11",
+   "detected": "2026-10-12",
+   "verbatim": [
+    "give us 60 days of total ceasefire and we organize elections"
+   ],
+   "context": "The counter-term with its own test — H3.",
+   "hypothesis": "H3",
+   "source": "Press · Breaking Points 2026-10-12 (cut: Parameters/09_Parallelograms/Press/2026-10-12_BP_Diesel_Deal/cut.md) · VZ 12:06",
+   "implies": "The one counter-term with its own test built in: sixty days, then an election — H3, open."
+  },
+  {
+   "id": "stmt-trump-2026-09-20-diesel-request",
+   "who": "Donald Trump",
+   "date": "2026-09-20",
+   "asOf": "2026-09-20",
+   "detected": "2026-10-15",
+   "what": "\"Mr. Zelensky has to stop knocking out diesel fuel in Russia… he's causing a shortage of diesel fuel. This isn't done by the Middle East… don't hit diesel fuel because that's hurting the world.\" (clip on the tape, 26:04–26:28; \"last Sunday\" relative to 09-23)",
+   "reads": "the crunch as a shortage (bites), cause located in the Ukrainian strikes — the predecessor statement to the 10-09 deal",
+   "z": 0.8,
+   "source": "Press · Tucker Carlson 2026-09-23 (cut: Parameters/09_Parallelograms/Press/2026-09-23_TuckerCarlson_Refineries/cut.md) · DT@O 26:04",
+   "verified": false
+  }
+ ]
+}
