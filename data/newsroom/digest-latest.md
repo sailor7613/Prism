@@ -1,10 +1,9 @@
 # Newsroom digest — 2026-10-17
 
-Register: 84 objects · this scan: 4 new, 1 seen again, 0 returned.
+Register: 86 objects · this scan: 2 new, 0 seen again, 0 returned.
 
-## Queued for drafting (2)
-- **Trump Waives New Sanctions Against Russia** — tariff/sanction · imposed · holder: the President · formed 2026-10-17 · 10 outlets (peak 10) · `obj_thepresi_against-russia-sanctions-trump`
-- **Trump Suspends New Russia Sanctions as Tensions With Ukraine Deepen** — tariff/sanction · imposed · holder: the President · formed 2026-10-17 · 4 outlets (peak 4) · `obj_thepresi_deepen-russia-sanctions-suspends`
+## Queued for drafting (0)
+- (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
 - none today
@@ -13,12 +12,10 @@ Register: 84 objects · this scan: 4 new, 1 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **Trump Suspends New Russia Sanctions as Tensions With Ukraine Deepen** — tariff/sanction · imposed · holder: the President · formed 2026-10-17 · 4 outlets (peak 4) · `obj_thepresi_deepen-russia-sanctions-suspends`
-- **Trump Waives New Sanctions Against Russia** — tariff/sanction · imposed · holder: the President · formed 2026-10-17 · 10 outlets (peak 10) · `obj_thepresi_against-russia-sanctions-trump`
-- **Trump waives Russia - related sanctions before they even kick in as Ukraine ties worsen** — tariff/sanction · imposed · holder: the President · formed 2026-10-17 · 3 outlets (peak 3) · `obj_thepresi_before-even-kick-related`
-- **Ex - Kentucky Cheerleader Sentenced For Infant Death** — indictment · charged · holder: ? · formed 2026-10-17 · 13 outlets (peak 13) · `obj_x_cheerleader-death-infant-kentucky`
+- **Trump puts new Russia sanctions that he recently signed into law on hold , citing national interest** — law · signed · holder: the President · formed 2026-10-17 · 3 outlets (peak 3) · `obj_thepresi_citing-hold-interest-into`
+- **Zelenskyy urges support for new US sanctions on Russia** — tariff/sanction · imposed · holder: ? · formed 2026-10-17 · 5 outlets (peak 5) · `obj_x_russia-sanctions-support-urges`
 
-## Watching (29)
+## Watching (30)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
 - **Former state senator sentenced to 16 months in child solicitation case** — indictment · charged · holder: the Senate · formed 2026-09-23 · 4 outlets (peak 4) · `obj_thesenat_case-child-former-months`
 - **CNN , MS NOW and Politico back at the White House after judge ordered Trump to lift ban** — ruling · ruled · holder: the House · formed 2026-09-24 · 18 outlets (peak 18) · `obj_thehouse_back-ban-cnn-house`
