@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-10-17T20:45:12.820Z · 18 legislative + 5 news (GDELT, 3d)
+// 2026-10-17T23:13:17.318Z · 18 legislative + 6 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1792269868964,
+    "ts": 1792278779276,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.793,
+      "salience": 0.792,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -262,7 +262,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1792269868964,
+    "ts": 1792278779276,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
@@ -519,7 +519,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1792269868964,
+    "ts": 1792278779275,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
@@ -1937,7 +1937,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1792269868964,
+    "ts": 1792278779276,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
@@ -2194,11 +2194,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1792269868964,
+    "ts": 1792278779276,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.74,
+      "salience": 0.739,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -2451,7 +2451,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1792269868964,
+    "ts": 1792278779275,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
@@ -3364,11 +3364,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1792269868964,
+    "ts": 1792278779276,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.636,
+      "salience": 0.635,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3892,11 +3892,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1792269868964,
+    "ts": 1792278779275,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.613,
+      "salience": 0.612,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4793,7 +4793,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1792269868964,
+    "ts": 1792278779275,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
@@ -5692,11 +5692,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1792269868964,
+    "ts": 1792278779275,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.408,
+      "salience": 0.407,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6971,7 +6971,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1792269868964,
+    "ts": 1792278779276,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
@@ -7891,7 +7891,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1792269868964,
+    "ts": 1792278779276,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
@@ -8801,7 +8801,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1792269868964,
+    "ts": 1792278779276,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
@@ -9719,7 +9719,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1792269868964,
+    "ts": 1792278779275,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
@@ -10599,11 +10599,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1792269868964,
+    "ts": 1792278779275,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.244,
+      "salience": 0.243,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11475,11 +11475,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1792269868963,
+    "ts": 1792278779274,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.052,
+      "salience": 0.051,
       "congressGovUrl": null,
       "votes": [
         {
@@ -12368,11 +12368,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1792269868964,
+    "ts": 1792278779275,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.045,
+      "salience": 0.044,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -13283,7 +13283,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1792269868964,
+    "ts": 1792278779275,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
@@ -14171,12 +14171,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_hold-into-law",
     "source": "news",
-    "ts": 1792269912818,
+    "ts": 1792278797313,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.973,
+      "salience": 0.958,
       "articles": [
         {
           "title": "Trump puts new Russia sanctions that he recently signed into law on hold , citing national interest",
@@ -14277,12 +14277,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_hold-puts-russia",
     "source": "news",
-    "ts": 1792269912817,
+    "ts": 1792278797313,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.914,
+      "salience": 0.899,
       "articles": [
         {
           "title": "Trump puts new Russia sanctions passed by Congress on hold",
@@ -14383,12 +14383,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_americans-appeals-court",
     "source": "news",
-    "ts": 1792269912817,
+    "ts": 1792278797312,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.809,
+      "salience": 0.794,
       "articles": [
         {
           "title": "Do Americans own the president papers ? Appeals court to weigh in",
@@ -14489,12 +14489,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_battleground-despite-divisions",
     "source": "news",
-    "ts": 1792269912817,
+    "ts": 1792278797313,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.715,
+      "salience": 0.7,
       "articles": [
         {
           "title": "The Latest : Trump will rally Georgia Republicans despite party divisions in the battleground state",
@@ -14565,14 +14565,64 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_100-announce-democrats",
+    "cid": "cand_news_before-days-effect",
     "source": "news",
-    "ts": 1792269912818,
+    "ts": 1792278797313,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.315,
+      "salience": 0.656,
+      "articles": [
+        {
+          "title": "Trump waives most Russia sanctions and tariffs days before they were to take effect",
+          "url": "https://fox11online.com/news/nation-world/trump-waives-most-russia-sanctions-and-tariffs-days-before-they-were-to-take-effect",
+          "domain": "fox11online.com",
+          "seendate": "2026-10-17T21:00:00Z",
+          "image": "https://fox11online.com/resources/media2/16x9/7413/1320/0x484/90/60d59f27-d59e-46aa-99a5-2c51f57df203-GettyImages2230320736.jpg"
+        },
+        {
+          "title": "Trump waives most Russia sanctions and tariffs days before they were to take effect",
+          "url": "https://bakersfieldnow.com/news/nation-world/trump-waives-most-russia-sanctions-and-tariffs-days-before-they-were-to-take-effect",
+          "domain": "bakersfieldnow.com",
+          "seendate": "2026-10-17T21:00:00Z",
+          "image": "https://bakersfieldnow.com/resources/media2/16x9/7413/1320/0x484/90/60d59f27-d59e-46aa-99a5-2c51f57df203-GettyImages2230320736.jpg"
+        },
+        {
+          "title": "Trump waives most Russia sanctions and tariffs days before they were to take effect",
+          "url": "https://local12.com/news/nation-world/trump-waives-most-russia-sanctions-and-tariffs-days-before-they-were-to-take-effect",
+          "domain": "local12.com",
+          "seendate": "2026-10-17T19:00:00Z",
+          "image": "https://local12.com/resources/media2/16x9/7413/1320/0x484/90/60d59f27-d59e-46aa-99a5-2c51f57df203-GettyImages2230320736.jpg"
+        },
+        {
+          "title": "Trump waives most Russia sanctions and tariffs days before they were to take effect",
+          "url": "https://katu.com/news/nation-world/trump-waives-most-russia-sanctions-and-tariffs-days-before-they-were-to-take-effect",
+          "domain": "katu.com",
+          "seendate": "2026-10-17T19:00:00Z",
+          "image": "https://katu.com/resources/media2/16x9/7413/1320/0x484/90/60d59f27-d59e-46aa-99a5-2c51f57df203-GettyImages2230320736.jpg"
+        }
+      ]
+    },
+    "title": "Trump waives most Russia sanctions and tariffs days before they were to take effect",
+    "summary": "2026-10-17 fox11online.com: Trump waives most Russia sanctions and tariffs days before they were to take effect\n2026-10-17 bakersfieldnow.com: Trump waives most Russia sanctions and tariffs days before they were to take effect\n2026-10-17 local12.com: Trump waives most Russia sanctions and tariffs days before they were to take effect\n2026-10-17 katu.com: Trump waives most Russia sanctions and tariffs days before they were to take effect",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_100-announce-democrats",
+    "source": "news",
+    "ts": 1792278797313,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.3,
       "articles": [
         {
           "title": "Senate Democrats announce recruitment of 100+ staffers for election observer program",
