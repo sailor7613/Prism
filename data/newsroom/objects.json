@@ -4390,7 +4390,7 @@
    "scans": 2,
    "outlets": 4,
    "peakOutlets": 8,
-   "status": "queued",
+   "status": "drafted",
    "permanence": {
     "silentDays": 18,
     "breaks": [
@@ -4402,8 +4402,21 @@
     ],
     "returns": []
    },
-   "inversions": [],
-   "drafts": {},
+   "inversions": [
+    {
+     "station": "D",
+     "lean": "D rim flips −0.7 → +0.5 against the 09-24 TRO draft (rdg_oq1spmhz7azt): holder changes from the judiciary (distrusted) to the President (trusted to keep the plane); anti-valent, draft-to-draft, no found reader",
+     "ruled": false
+    },
+    {
+     "station": "B",
+     "lean": "right-institutional coalition faults its own side’s pleading (no national-security reason on 09-18); no dated prior",
+     "ruled": false
+    }
+   ],
+   "drafts": {
+    "claude": "rdg_am1i9bcuma60"
+   },
    "live": null,
    "articles": [
     {
@@ -4474,9 +4487,24 @@
     "CNN , MS NOW , Politico ask judge to extend block on White House ban"
    ],
    "queuedOn": "2026-09-29",
-   "permanenceNote": "motion pending: outlets asked the judge 09-29 to extend the block; no ruling yet — left queued (§4c), Claude 2026-09-30",
+   "permanenceNote": "landed: preliminary injunction 2026-10-13, appealed 2026-10-14; the scan did not see it (no return); found by search. Publish attempt exit 5 (no token) — draft stays in drafts/claude. Claude 2026-10-17 UTC",
    "aliasCandidates": [
     "obj_afederal_access-cnn-house-judge"
+   ],
+   "draftedOn": "2026-10-16",
+   "corrections": [
+    {
+     "field": "formedOn",
+     "was": "2026-09-29",
+     "now": "2026-10-14",
+     "why": "the motion (09-29) was pending; the instrument formed with the preliminary injunction late 10-13 and the notice of appeal 10-14 — Claude 2026-10-17 UTC"
+    },
+    {
+     "field": "holder",
+     "was": "a federal court",
+     "now": "Judge Timothy J. Kelly (D.D.C.), D.C. Circuit on appeal",
+     "why": "names the court — Claude"
+    }
    ]
   },
   {
@@ -6868,14 +6896,27 @@
    "scans": 1,
    "outlets": 6,
    "peakOutlets": 6,
-   "status": "queued",
+   "status": "drafted",
    "permanence": {
     "silentDays": 1,
     "breaks": [],
     "returns": []
    },
-   "inversions": [],
-   "drafts": {},
+   "inversions": [
+    {
+     "station": "B",
+     "lean": "right-institutional turns against a Republican governor’s state power, siding with the Senate preemption bill S. 4668 (77–22, 2026-09-28)",
+     "ruled": false
+    },
+    {
+     "station": "A/C",
+     "lean": "athlete-rights left hesitates over an order that grants athletes eligibility because a Republican governor signed it; no dated prior",
+     "ruled": false
+    }
+   ],
+   "drafts": {
+    "claude": "rdg_zgkkvpr0f6kb"
+   },
    "live": null,
    "articles": [
     {
@@ -6922,7 +6963,23 @@
     }
    ],
    "aliases": [],
-   "queuedOn": "2026-10-16"
+   "queuedOn": "2026-10-16",
+   "draftedOn": "2026-10-16",
+   "corrections": [
+    {
+     "field": "holder",
+     "from": "a state",
+     "to": "Gov. Mike DeWine (Executive Order 2026-04D)",
+     "by": "Claude",
+     "on": "2026-10-16"
+    },
+    {
+     "field": "kind",
+     "note": "kept order; the order was signed 2026-10-13, trigger day kept at 2026-10-16 (the day the NCAA sued) — see the Reading window.why",
+     "by": "Claude",
+     "on": "2026-10-16"
+    }
+   ]
   },
   {
    "oid": "obj_thepresi_bar-did-exam-house",
@@ -6950,7 +7007,7 @@
    "scans": 1,
    "outlets": 3,
    "peakOutlets": 3,
-   "status": "queued",
+   "status": "dismissed",
    "permanence": {
     "silentDays": 1,
     "breaks": [],
@@ -6983,7 +7040,8 @@
     }
    ],
    "aliases": [],
-   "queuedOn": "2026-10-16"
+   "queuedOn": "2026-10-16",
+   "dismissedWhy": "No instrument: a press secretary saying she did not pass the bar exam is a personal disclosure, not a vote, order or law; the register’s kind (vote) and holder (the President) are both wrong — Claude 2026-10-16"
   },
   {
    "oid": "obj_x_escape-helping-hole-inmates",
@@ -7066,14 +7124,27 @@
    "scans": 1,
    "outlets": 14,
    "peakOutlets": 14,
-   "status": "queued",
+   "status": "drafted",
    "permanence": {
     "silentDays": 1,
     "breaks": [],
     "returns": []
    },
-   "inversions": [],
-   "drafts": {},
+   "inversions": [
+    {
+     "station": "B/D",
+     "lean": "states-run-elections right backing a federal suit to control which ballots California counts; no dated prior",
+     "ruled": false
+    },
+    {
+     "station": "A",
+     "lean": "left-institutional defending a state’s refusal to open a federal list; no dated prior",
+     "ruled": false
+    }
+   ],
+   "drafts": {
+    "claude": "rdg_9wjfhhpxcp0d"
+   },
    "live": null,
    "articles": [
     {
@@ -7134,7 +7205,25 @@
     }
    ],
    "aliases": [],
-   "queuedOn": "2026-10-16"
+   "queuedOn": "2026-10-16",
+   "draftedOn": "2026-10-16",
+   "corrections": [
+    {
+     "field": "formedOn",
+     "from": "2026-10-16",
+     "to": "2026-10-15",
+     "why": "suit filed Thursday 10-15; 10-16 is the NPR roundup’s report date",
+     "by": "Claude",
+     "on": "2026-10-16"
+    },
+    {
+     "field": "headline",
+     "note": "register headline bundles an unrelated Oregon school shooting; object is the DOJ suit only",
+     "by": "Claude",
+     "on": "2026-10-16"
+    }
+   ],
+   "permanenceNote": "return (lean): DHS’s earlier unsubstantiated 190,000 figure came back as a 20,000-name list in a suit — Claude 2026-10-16"
   },
   {
    "oid": "obj_afederal_abuse-actor-against-busfield",
@@ -7149,16 +7238,18 @@
     "against",
     "actor",
     "timothy",
-    "busfield"
+    "busfield",
+    "tosses",
+    "reports"
    ],
    "kind": "ruling",
    "verb": "ruled",
    "holder": "a federal court",
    "formedOn": "2026-10-17",
    "firstSeen": "2026-10-17T00:15:00Z",
-   "lastSeen": "2026-10-17T01:00:00Z",
-   "scans": 1,
-   "outlets": 7,
+   "lastSeen": "2026-10-17T05:30:00Z",
+   "scans": 2,
+   "outlets": 3,
    "peakOutlets": 7,
    "status": "queued",
    "permanence": {
@@ -7170,6 +7261,27 @@
    "drafts": {},
    "live": null,
    "articles": [
+    {
+     "title": "Judge tosses child sex abuse charges against actor Timothy Busfield : Reports",
+     "url": "https://www.fox7austin.com/news/judge-tosses-child-sex-abuse-charges-against-actor-timothy-busfield-reports",
+     "domain": "fox7austin.com",
+     "seendate": "2026-10-17T05:30:00Z",
+     "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/10/1280/720/1016_getty-busfield-scaled.jpg?ve=1&tl=1"
+    },
+    {
+     "title": "Judge tosses child sex abuse charges against actor Timothy Busfield : Reports",
+     "url": "https://www.fox10phoenix.com/news/judge-tosses-child-sex-abuse-charges-against-actor-timothy-busfield-reports",
+     "domain": "fox10phoenix.com",
+     "seendate": "2026-10-17T05:30:00Z",
+     "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/10/1280/720/1016_getty-busfield-scaled.jpg?ve=1&tl=1"
+    },
+    {
+     "title": "Judge tosses child sex abuse charges against actor Timothy Busfield : Reports",
+     "url": "https://www.fox5atlanta.com/news/judge-tosses-child-sex-abuse-charges-against-actor-timothy-busfield-reports",
+     "domain": "fox5atlanta.com",
+     "seendate": "2026-10-17T05:30:00Z",
+     "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/10/1280/720/1016_getty-busfield-scaled.jpg?ve=1&tl=1"
+    },
     {
      "title": "Judge dismisses child sex abuse charges against actor Timothy Busfield",
      "url": "https://www.cbsnews.com/news/timothy-busfield-judge-dismisses-child-sex-abuse-charges/",
@@ -7220,20 +7332,313 @@
      "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-10/16/2026-10-16T210319Z_3_LYNXMPEM9F1U3_RTROPTP_3_PEOPLE-TIMOTHY-BUSFIELD.JPG"
     }
    ],
+   "aliases": [
+    "Judge tosses child sex abuse charges against actor Timothy Busfield : Reports"
+   ],
+   "queuedOn": "2026-10-17"
+  },
+  {
+   "oid": "obj_thepresi_deepen-russia-sanctions-suspends",
+   "headline": "Trump Suspends New Russia Sanctions as Tensions With Ukraine Deepen",
+   "tokens": [
+    "trump",
+    "suspends",
+    "russia",
+    "sanctions",
+    "tensions",
+    "ukraine",
+    "deepen"
+   ],
+   "kind": "tariff/sanction",
+   "verb": "imposed",
+   "holder": "the President",
+   "formedOn": "2026-10-17",
+   "firstSeen": "2026-10-17T09:45:00Z",
+   "lastSeen": "2026-10-17T10:30:00Z",
+   "scans": 1,
+   "outlets": 4,
+   "peakOutlets": 4,
+   "status": "queued",
+   "permanence": {
+    "silentDays": 0,
+    "breaks": [],
+    "returns": []
+   },
+   "inversions": [],
+   "drafts": {},
+   "live": null,
+   "articles": [
+    {
+     "title": "Trump Suspends New Russia Sanctions as Tensions With Ukraine Deepen",
+     "url": "https://www.kvor.com/2026/10/17/trump-suspends-new-russia-sanctions-as-tensions-with-ukraine-deepen/",
+     "domain": "kvor.com",
+     "seendate": "2026-10-17T10:30:00Z",
+     "image": "https://media-cdn.socastsrm.com/wordpress/wp-content/blogs.dir/4023/files/2026/10/134578722-1200x675.jpg"
+    },
+    {
+     "title": "Trump Suspends New Russia Sanctions as Tensions With Ukraine Deepen",
+     "url": "https://www.1007thetiger.com/2026/10/17/trump-suspends-new-russia-sanctions-as-tensions-with-ukraine-deepen/",
+     "domain": "1007thetiger.com",
+     "seendate": "2026-10-17T10:30:00Z",
+     "image": "https://media-cdn.socastsrm.com/wordpress/wp-content/blogs.dir/4023/files/2026/10/134578722-1200x675.jpg"
+    },
+    {
+     "title": "Trump Suspends New Russia Sanctions as Tensions With Ukraine Deepen",
+     "url": "https://www.kabc.com/2026/10/17/trump-suspends-new-russia-sanctions-as-tensions-with-ukraine-deepen/",
+     "domain": "kabc.com",
+     "seendate": "2026-10-17T09:45:00Z",
+     "image": "https://media-cdn.socastsrm.com/wordpress/wp-content/blogs.dir/4023/files/2026/10/134578722-1200x675.jpg"
+    },
+    {
+     "title": "Trump Suspends New Russia Sanctions as Tensions With Ukraine Deepen",
+     "url": "https://www.1290wlby.com/2026/10/17/trump-suspends-new-russia-sanctions-as-tensions-with-ukraine-deepen/",
+     "domain": "1290wlby.com",
+     "seendate": "2026-10-17T09:45:00Z",
+     "image": "https://media-cdn.socastsrm.com/wordpress/wp-content/blogs.dir/4023/files/2026/10/134578722-1200x675.jpg"
+    }
+   ],
    "aliases": [],
    "queuedOn": "2026-10-17"
+  },
+  {
+   "oid": "obj_thepresi_against-russia-sanctions-trump",
+   "headline": "Trump Waives New Sanctions Against Russia",
+   "tokens": [
+    "trump",
+    "waives",
+    "sanctions",
+    "against",
+    "russia"
+   ],
+   "kind": "tariff/sanction",
+   "verb": "imposed",
+   "holder": "the President",
+   "formedOn": "2026-10-17",
+   "firstSeen": "2026-10-17T09:15:00Z",
+   "lastSeen": "2026-10-17T10:00:00Z",
+   "scans": 1,
+   "outlets": 10,
+   "peakOutlets": 10,
+   "status": "queued",
+   "permanence": {
+    "silentDays": 0,
+    "breaks": [],
+    "returns": []
+   },
+   "inversions": [],
+   "drafts": {},
+   "live": null,
+   "articles": [
+    {
+     "title": "Trump Waives New Sanctions Against Russia | NewsRadio 800 WVHU",
+     "url": "https://800wvhu.iheart.com/content/2026-10-17-trump-waives-new-sanctions-against-russia/",
+     "domain": "800wvhu.iheart.com",
+     "seendate": "2026-10-17T10:00:00Z",
+     "image": "https://i.iheart.com/v3/re/assets.getty/6ad2fa3d817d9bc345b686d0?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+    },
+    {
+     "title": "Trump Waives New Sanctions Against Russia",
+     "url": "https://wiba.iheart.com/content/2026-10-17-trump-waives-new-sanctions-against-russia/",
+     "domain": "wiba.iheart.com",
+     "seendate": "2026-10-17T09:45:00Z",
+     "image": "https://i.iheart.com/v3/re/assets.getty/6ad2fa3d817d9bc345b686d0?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+    },
+    {
+     "title": "Trump Waives New Sanctions Against Russia",
+     "url": "https://newsradio1290wtks.iheart.com/content/2026-10-17-trump-waives-new-sanctions-against-russia/",
+     "domain": "newsradio1290wtks.iheart.com",
+     "seendate": "2026-10-17T09:45:00Z",
+     "image": "https://i.iheart.com/v3/re/assets.getty/6ad2fa3d817d9bc345b686d0?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+    },
+    {
+     "title": "Trump Waives New Sanctions Against Russia | NewsRadio 104 . 9 WBUV",
+     "url": "https://newsradio1049.iheart.com/content/2026-10-17-trump-waives-new-sanctions-against-russia/",
+     "domain": "newsradio1049.iheart.com",
+     "seendate": "2026-10-17T09:45:00Z",
+     "image": "https://i.iheart.com/v3/re/assets.getty/6ad2fa3d817d9bc345b686d0?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+    },
+    {
+     "title": "Trump Waives New Sanctions Against Russia | News Talk 99 . 5 WRNO",
+     "url": "https://wrno.iheart.com/content/2026-10-17-trump-waives-new-sanctions-against-russia/",
+     "domain": "wrno.iheart.com",
+     "seendate": "2026-10-17T09:30:00Z",
+     "image": "https://i.iheart.com/v3/re/assets.getty/6ad2fa3d817d9bc345b686d0?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+    },
+    {
+     "title": "Trump Waives New Sanctions Against Russia",
+     "url": "https://wgiram.iheart.com/content/2026-10-17-trump-waives-new-sanctions-against-russia/",
+     "domain": "wgiram.iheart.com",
+     "seendate": "2026-10-17T09:30:00Z",
+     "image": "https://i.iheart.com/v3/re/assets.getty/6ad2fa3d817d9bc345b686d0?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+    },
+    {
+     "title": "Trump Waives New Sanctions Against Russia | NewsTalk 600 KCOL",
+     "url": "https://600kcol.iheart.com/content/2026-10-17-trump-waives-new-sanctions-against-russia/",
+     "domain": "600kcol.iheart.com",
+     "seendate": "2026-10-17T09:30:00Z",
+     "image": "https://i.iheart.com/v3/re/assets.getty/6ad2fa3d817d9bc345b686d0?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+    },
+    {
+     "title": "Trump Waives New Sanctions Against Russia",
+     "url": "https://talk1200boston.iheart.com/content/2026-10-17-trump-waives-new-sanctions-against-russia/",
+     "domain": "talk1200boston.iheart.com",
+     "seendate": "2026-10-17T09:15:00Z",
+     "image": "https://i.iheart.com/v3/re/assets.getty/6ad2fa3d817d9bc345b686d0?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+    }
+   ],
+   "aliases": [],
+   "queuedOn": "2026-10-17"
+  },
+  {
+   "oid": "obj_thepresi_before-even-kick-related",
+   "headline": "Trump waives Russia - related sanctions before they even kick in as Ukraine ties worsen",
+   "tokens": [
+    "trump",
+    "waives",
+    "russia",
+    "related",
+    "sanctions",
+    "before",
+    "they",
+    "even",
+    "kick",
+    "ukraine",
+    "ties",
+    "worsen"
+   ],
+   "kind": "tariff/sanction",
+   "verb": "imposed",
+   "holder": "the President",
+   "formedOn": "2026-10-17",
+   "firstSeen": "2026-10-17T09:30:00Z",
+   "lastSeen": "2026-10-17T10:00:00Z",
+   "scans": 1,
+   "outlets": 3,
+   "peakOutlets": 3,
+   "status": "watch",
+   "permanence": {
+    "silentDays": 0,
+    "breaks": [],
+    "returns": []
+   },
+   "inversions": [],
+   "drafts": {},
+   "live": null,
+   "articles": [
+    {
+     "title": "Trump waives Russia - related sanctions before they even kick in as Ukraine ties worsen - LocalNews8 . com",
+     "url": "https://localnews8.com/news/national-world/cnn-world/2026/10/16/trump-waives-russia-related-sanctions-before-they-even-kick-in-as-ukraine-ties-worsen-2/",
+     "domain": "localnews8.com",
+     "seendate": "2026-10-17T10:00:00Z",
+     "image": null
+    },
+    {
+     "title": "Trump waives Russia - related sanctions before they even kick in as Ukraine ties worsen",
+     "url": "https://keyt.com/news/national-world/cnn-world/2026/10/16/trump-waives-russia-related-sanctions-before-they-even-kick-in-as-ukraine-ties-worsen-2/",
+     "domain": "keyt.com",
+     "seendate": "2026-10-17T09:45:00Z",
+     "image": "https://keyt.b-cdn.net/2023/08/nc312-combined-commercial-slate-860x484.jpg"
+    },
+    {
+     "title": "Trump waives Russia - related sanctions before they even kick in as Ukraine ties worsen",
+     "url": "https://abc17news.com/news/national-world/cnn-world/2026/10/17/trump-waives-russia-related-sanctions-before-they-even-kick-in-as-ukraine-ties-worsen-2/",
+     "domain": "abc17news.com",
+     "seendate": "2026-10-17T09:30:00Z",
+     "image": "https://abc17news.b-cdn.net/abc17news.com/2026/05/ABC-17-News-website-default-image-1280x720-1-860x484.png"
+    }
+   ],
+   "aliases": []
+  },
+  {
+   "oid": "obj_x_cheerleader-death-infant-kentucky",
+   "headline": "Ex - Kentucky Cheerleader Sentenced For Infant Death",
+   "tokens": [
+    "kentucky",
+    "cheerleader",
+    "sentenced",
+    "infant",
+    "death"
+   ],
+   "kind": "indictment",
+   "verb": "charged",
+   "holder": null,
+   "formedOn": "2026-10-17",
+   "firstSeen": "2026-10-17T05:15:00Z",
+   "lastSeen": "2026-10-17T05:45:00Z",
+   "scans": 1,
+   "outlets": 13,
+   "peakOutlets": 13,
+   "status": "new",
+   "permanence": {
+    "silentDays": 0,
+    "breaks": [],
+    "returns": []
+   },
+   "inversions": [],
+   "drafts": {},
+   "live": null,
+   "articles": [
+    {
+     "title": "Ex - Kentucky Cheerleader Sentenced For Infant Death",
+     "url": "https://newsradio540.iheart.com/content/2026-10-17-ex-kentucky-cheerleader-sentenced-for-infants-death/",
+     "domain": "newsradio540.iheart.com",
+     "seendate": "2026-10-17T05:45:00Z",
+     "image": "https://i.iheart.com/v3/re/assets.getty/6ad2bff3a4959ea33b4a92ad?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+    },
+    {
+     "title": "Ex - Kentucky Cheerleader Sentenced For Infant Death | NewsRadio WKCY",
+     "url": "https://newsradiowkcy.iheart.com/content/2026-10-17-ex-kentucky-cheerleader-sentenced-for-infants-death/",
+     "domain": "newsradiowkcy.iheart.com",
+     "seendate": "2026-10-17T05:30:00Z",
+     "image": "https://i.iheart.com/v3/re/assets.getty/6ad2bff3a4959ea33b4a92ad?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+    },
+    {
+     "title": "Ex - Kentucky Cheerleader Sentenced For Infant Death | NewsRadio 1450 / 1370 WKIP",
+     "url": "https://1450wkip.iheart.com/content/2026-10-17-ex-kentucky-cheerleader-sentenced-for-infants-death/",
+     "domain": "1450wkip.iheart.com",
+     "seendate": "2026-10-17T05:30:00Z",
+     "image": "https://i.iheart.com/v3/re/assets.getty/6ad2bff3a4959ea33b4a92ad?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+    },
+    {
+     "title": "Ex - Kentucky Cheerleader Sentenced For Infant Death",
+     "url": "https://veropatriot.iheart.com/content/2026-10-17-ex-kentucky-cheerleader-sentenced-for-infants-death/",
+     "domain": "veropatriot.iheart.com",
+     "seendate": "2026-10-17T05:30:00Z",
+     "image": "https://i.iheart.com/v3/re/assets.getty/6ad2bff3a4959ea33b4a92ad?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+    },
+    {
+     "title": "Ex - Kentucky Cheerleader Sentenced For Infant Death",
+     "url": "https://1360kktx.iheart.com/content/2026-10-17-ex-kentucky-cheerleader-sentenced-for-infants-death/",
+     "domain": "1360kktx.iheart.com",
+     "seendate": "2026-10-17T05:30:00Z",
+     "image": "https://i.iheart.com/v3/re/assets.getty/6ad2bff3a4959ea33b4a92ad?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+    },
+    {
+     "title": "Ex - Kentucky Cheerleader Sentenced For Infant Death | News Radio 101 . 9 Big WAAX",
+     "url": "https://1019bigwaax.iheart.com/content/2026-10-17-ex-kentucky-cheerleader-sentenced-for-infants-death/",
+     "domain": "1019bigwaax.iheart.com",
+     "seendate": "2026-10-17T05:30:00Z",
+     "image": "https://i.iheart.com/v3/re/assets.getty/6ad2bff3a4959ea33b4a92ad?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+    },
+    {
+     "title": "Ex - Kentucky Cheerleader Sentenced For Infant Death",
+     "url": "https://wsyr.iheart.com/content/2026-10-17-ex-kentucky-cheerleader-sentenced-for-infants-death/",
+     "domain": "wsyr.iheart.com",
+     "seendate": "2026-10-17T05:15:00Z",
+     "image": "https://i.iheart.com/v3/re/assets.getty/6ad2bff3a4959ea33b4a92ad?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+    },
+    {
+     "title": "Ex - Kentucky Cheerleader Sentenced For Infant Death | Talk Radio 105 . 9",
+     "url": "https://knrs.iheart.com/content/2026-10-17-ex-kentucky-cheerleader-sentenced-for-infants-death/",
+     "domain": "knrs.iheart.com",
+     "seendate": "2026-10-17T05:15:00Z",
+     "image": "https://i.iheart.com/v3/re/assets.getty/6ad2bff3a4959ea33b4a92ad?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+    }
+   ],
+   "aliases": []
   }
  ],
  "scans": [
-  {
-   "on": "2026-10-01",
-   "at": "2026-10-01T10:23:01.760Z",
-   "articles": 83,
-   "clusters": 52,
-   "new": 1,
-   "queued": [],
-   "fixture": false
-  },
   {
    "on": "2026-10-01",
    "at": "2026-10-01T18:33:40.424Z",
@@ -7775,8 +8180,20 @@
     "obj_afederal_abuse-actor-against-busfield"
    ],
    "fixture": false
+  },
+  {
+   "on": "2026-10-17",
+   "at": "2026-10-17T11:02:27.040Z",
+   "articles": 155,
+   "clusters": 96,
+   "new": 4,
+   "queued": [
+    "obj_thepresi_against-russia-sanctions-trump",
+    "obj_thepresi_deepen-russia-sanctions-suspends"
+   ],
+   "fixture": false
   }
  ],
- "updatedAt": "2026-10-17T04:45:25.553Z",
- "overlayAppliedAt": "2026-10-03T06:07:23.349Z"
+ "updatedAt": "2026-10-17T11:02:27.040Z",
+ "overlayAppliedAt": "2026-10-17T02:09:39.226Z"
 }
