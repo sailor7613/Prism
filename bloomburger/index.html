@@ -255,18 +255,13 @@
   .view.g4-under-bar { padding-top: calc(var(--bar-h) + 34px + 10px); }
   html.embedded .g4-keys { top: 48px; }
   @media (max-width: 480px) { .g4-keys { top: var(--bar-h-phone); } .view.g4-under-bar { padding-top: calc(var(--bar-h-phone) + 34px + 8px); } }
-  /* ── the front page: three bands, one screen; the rack is the scroll window (blueprint §2) */
-  #v-pg.on { display: flex; flex-direction: column; height: 100vh; overflow: auto; padding-bottom: 10px; }
-  #v-pg > * { flex: 0 0 auto; }
-  /* short windows: the top bands give way so the rack keeps at least a third of the screen */
-  @media (max-height: 820px) { #v-pg .dek { display: none; } #v-pg .sec.first .gloss { display: none; } #v-pg .fod { grid-template-columns: 110px 1fr; } #v-pg .fod .fig { width: 110px; height: 110px; } #v-pg .fod .cn .m { display: none; } #v-pg .floor { display: none; } #v-pg .mast { padding-top: 6px; } }
-  @media (max-height: 680px) { #v-pg .sec.first { display: none; } #v-pg .fod .q { display: none; } }
+  /* ── the front page (10-17): the SST marquee + the burns fill the first screen; Parallelogram is below the fold */
   #v-pg .mast { padding: 10px 0 4px; } #v-pg .mast h1 { font-size: clamp(24px, 3.4vw, 34px); }
   #v-pg .dek { margin: 0 0 8px; font-size: 13px; }
   #v-pg .sec.first { margin-top: 0; } #v-pg .sec { margin: 10px 0 8px; }
   #v-pg .fod { padding: 12px 16px; margin-bottom: 8px; grid-template-columns: 150px 1fr; gap: 16px; } #v-pg .fod .fig { width: 150px; height: 150px; } #v-pg .fod h3 { font-size: clamp(18px, 2.2vw, 24px); } #v-pg .fod .q { margin-bottom: 8px; font-size: 14px; } #v-pg .fod .cn .z { font-size: 22px; } #v-pg .fod .verdict { margin-top: 8px; font-size: 13px; }
   #v-pg .floor { margin: 0 0 8px; padding: 7px 12px; }
-  .rack { flex: 1 1 auto !important; min-height: 200px; overflow: auto; border-top: 1px solid var(--g4-rule); border-bottom: 1px solid var(--g4-rule); }
+  .rack { min-height: 200px; border-top: 1px solid var(--g4-rule); border-bottom: 1px solid var(--g4-rule); }
   .prow { display: grid; grid-template-columns: 34px 1fr auto; gap: 2px 12px; align-items: center; padding: 8px 6px; border-bottom: 1px solid var(--g4-rule-soft); text-decoration: none; color: inherit; transition: background .15s; }
   .prow:hover { background: rgba(233,236,242,.05); } .prow:hover .t { color: #fff; }
   .prow .fig { width: 34px; height: 34px; grid-row: 1 / span 2; }
@@ -292,6 +287,63 @@
   .codex p { font-size: 14px; line-height: 1.5; color: var(--ink-mid); }
   .codex .x { position: absolute; top: 10px; right: 12px; }
   .word { border-bottom: 1px dotted var(--ink-low); cursor: help; }
+
+  /* ── explainers are tutorial copy (Sailor 10-17): kept in the page, tagged, hidden until a tutorial turns them on */
+  html:not(.tutorial) .tut, html:not(.tutorial) .sec .gloss, html:not(.tutorial) .view > .dek:not([id]) { display: none !important; }
+  /* ── the Dynamic Island: standalone, the bar sits under the status bar (the shell handles it when embedded) */
+  :root { --sat: env(safe-area-inset-top, 0px); }
+  html:not(.embedded) .g4-bar { box-sizing: border-box; height: calc(var(--bar-h) + var(--sat)); padding-top: var(--sat); }
+  html:not(.embedded) .g4-keys { top: calc(var(--bar-h) + var(--sat)); }
+  html:not(.embedded) .view.g4-under-bar { padding-top: calc(var(--bar-h) + var(--sat) + 34px + 10px); }
+  @media (max-width: 480px) { html:not(.embedded) .g4-bar { height: calc(var(--bar-h-phone) + var(--sat)); } html:not(.embedded) .g4-keys { top: calc(var(--bar-h-phone) + var(--sat)); } html:not(.embedded) .view.g4-under-bar { padding-top: calc(var(--bar-h-phone) + var(--sat) + 34px + 8px); } }
+
+  /* ── the marquee: the dollar's share as a needle (the SST, front and centre) */
+  .marquee { min-height: calc(100svh - 44px - 112px - 18px); display: grid; grid-template-rows: auto auto auto; align-content: center; gap: 10px; justify-items: center; text-align: center; padding: 8px 0 6px; cursor: pointer; text-decoration: none; color: inherit; }
+  html.embedded .view.g4-under-bar { padding-top: 92px; }
+  html.embedded .marquee { min-height: calc(100svh - 92px - 112px - 18px); }
+  html:not(.embedded) .marquee { min-height: calc(100svh - 44px - var(--sat) - 112px - 18px); }
+  .marquee .eb { font-family: var(--mono); font-size: 10px; letter-spacing: .26em; text-transform: uppercase; color: var(--ink-low); }
+  .marquee .q { font-family: var(--serif); font-size: clamp(20px, 3.2vw, 30px); margin: 6px 0 0; line-height: 1.15; }
+  .marquee svg.dial { width: min(620px, 100%); height: auto; display: block; margin: 0 auto; overflow: visible; }
+  .marquee .needle { transform-box: view-box; transform-origin: 300px 300px; transition: transform 2.2s cubic-bezier(.2,.9,.25,1.08); }
+  .marquee .bulb { transition: fill .3s, opacity .3s; }
+  .marquee .read { margin-top: -6px; }
+  .marquee .num { font-family: var(--serif); font-size: clamp(54px, 11vw, 96px); line-height: .95; letter-spacing: -.01em; }
+  .marquee .num small { font-size: .4em; margin-left: 2px; }
+  .marquee .vd { font-family: var(--mono); font-size: 12px; letter-spacing: .24em; margin-top: 8px; }
+  .marquee .vd b { padding: 2px 8px; border-radius: 2px; color: #0c0b09; }
+  .marquee .vd.FALLING b { background: var(--band-denominated, #c45a3c); } .marquee .vd.RISING b { background: var(--band-fluid, #5aa06a); } .marquee .vd.HOLDING b { background: #e9ecf2; }
+  .marquee .vd span { color: var(--ink-mid); margin-left: 10px; }
+  .marquee .den { font-family: var(--mono); font-size: 10px; letter-spacing: .12em; color: var(--ink-low); margin-top: 10px; }
+  @media (prefers-reduced-motion: reduce) { .marquee .needle { transition: none; } }
+
+  @media (max-width: 560px) { .marquee, html.embedded .marquee, html:not(.embedded) .marquee { min-height: 0; padding-top: 14px; } .burns { margin-top: 18px; } }
+  html.embedded body::before { content: ''; position: fixed; left: 0; right: 0; top: 0; height: 48px; z-index: 39; pointer-events: none; background: linear-gradient(180deg, var(--g4-field, #0a1226) 70%, rgba(10,18,38,0)); }
+  /* ── the burns: a film strip of the day's data points, one frame each */
+  .burns { position: relative; height: 112px; overflow: hidden; margin: 0 -16px; background: #07090f; border-top: 1px solid var(--g4-rule); border-bottom: 1px solid var(--g4-rule); }
+  .burns::before, .burns::after { content: ''; position: absolute; left: 0; right: 0; height: 10px; z-index: 2; pointer-events: none;
+    background: repeating-linear-gradient(90deg, transparent 0 9px, rgba(233,236,242,.16) 9px 17px, transparent 17px 26px); background-size: 26px 6px; background-repeat: repeat-x; background-position: 0 2px; }
+  .burns::before { top: 0; } .burns::after { bottom: 0; }
+  .burns .reel { display: flex; height: 100%; width: max-content; animation: reel 70s linear infinite; padding: 14px 0; box-sizing: border-box; }
+  .burns:hover .reel, .burns:active .reel { animation-play-state: paused; }
+  @keyframes reel { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) { .burns { overflow-x: auto; } .burns .reel { animation: none; } }
+  .burns .fr { flex: 0 0 auto; width: 168px; margin-right: 8px; padding: 8px 12px; box-sizing: border-box; background: linear-gradient(180deg, rgba(233,236,242,.05), rgba(233,236,242,.02)); border: 1px solid rgba(233,236,242,.1); border-radius: 2px; display: grid; grid-template-rows: auto 1fr auto; text-decoration: none; color: inherit; }
+  .burns .fr .k { font-family: var(--mono); font-size: 9px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-low); display: flex; justify-content: space-between; gap: 6px; white-space: nowrap; }
+  .burns .fr .k i { font-style: normal; }
+  .burns .fr .v { font-family: var(--serif); font-size: 26px; line-height: 1.1; align-self: center; white-space: nowrap; }
+  .burns .fr .v small { font-size: 13px; color: var(--ink-mid); margin-left: 2px; }
+  .burns .fr .d { font-family: var(--mono); font-size: 9.5px; color: var(--ink-mid); white-space: nowrap; }
+  .burns .fr .d .up { color: #8fc79c; } .burns .fr .d .dn { color: #e08a72; }
+  .burns .fr.flared { border-color: rgba(224,138,114,.45); }
+  .burns .fr.dark { opacity: .45; }
+
+  /* ── below the fold: Parallelogram */
+  .fold { padding-top: 22px; }
+  .pgmast { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 8px 0 6px; }
+  #pgmark { width: min(520px, 88vw); height: 112px; display: block; }
+  .pgmast small { font-family: var(--mono); font-size: 9.5px; letter-spacing: .26em; text-transform: uppercase; color: var(--ink-low); }
+  @media (max-width: 560px) { #pgmark { height: 78px; } }
 </style>
 </head>
 <body>
@@ -331,16 +383,18 @@
 
 <!-- ── THE PAPER ── -->
 <section class="view wrap g4-under-bar" id="v-pg">
-  <div class="mast">
-    <h1><small>BloomBurger · the paper</small>Parallelogram</h1>
+  <a class="marquee" id="marquee" href="#sst" aria-label="Supply Shock Tracker — the dollar's share of traded energy"></a>
+  <div class="burns" id="burns" aria-label="the day's data points"><div class="reel" id="reel"></div></div>
+  <div class="fold">
+    <div class="pgmast"><canvas id="pgmark" aria-label="Parallelogram"></canvas><small>the paper · the day's media, read on one object</small></div>
+    <div class="dek tut">The day's discourse, reduced. Each parallelogram is one segment on one object, cut to the words that carry it, scored, and placed on the graphmap — for the reader who is tired of the news but wants to be in the know from a distance.</div>
+    <div class="sec first tut"><div class="eb">what you are looking at</div><h2><span class="orn"></span>The day's media, read on one object</h2><div class="gloss">Every piece below is one show or article, reduced to the lines that touch the object and scored: how heated the words are (Dia), whether the voice thinks the thing delivers (z), and how much of the object's light gets through (Lumens).</div></div>
+    <div class="fod" id="fod" hidden></div>
+    <div class="floor" id="floor" hidden></div>
+    <div class="sec"><div class="eb">the paper</div><h2><span class="orn"></span>Parallelograms, newest first</h2><div class="gloss">Open one to read the tape on the graphmap. β marks a beta lede — read to the paywall only; ▣ marks the floor.</div></div>
+    <div class="rack" id="front"></div>
+    <div class="foot tut">A parallelogram's figure is literal: join the four stations' composite readings and you get a four-sided shape whose skew is the segment's split. Dia is distance from the object; z is what the voice believes happened; <span class="word" data-w="lumens">Lumens</span> is how much of the object's light gets through.</div>
   </div>
-  <div class="dek">The day's discourse, reduced. Each parallelogram is one segment on one object, cut to the words that carry it, scored, and placed on the graphmap — for the reader who is tired of the news but wants to be in the know from a distance.</div>
-  <div class="sec first"><div class="eb">what you are looking at</div><h2><span class="orn"></span>The day's media, read on one object</h2><div class="gloss">Every piece below is one show or article, reduced to the lines that touch the object and scored: how heated the words are (Dia), whether the voice thinks the thing delivers (z), and how much of the object's light gets through (Lumens).</div></div>
-  <div class="fod" id="fod" hidden></div>
-  <div class="floor" id="floor" hidden></div>
-  <div class="sec"><div class="eb">the paper</div><h2><span class="orn"></span>Parallelograms, newest first</h2><div class="gloss">Open one to read the tape on the graphmap. β marks a beta lede — read to the paywall only; ▣ marks the floor.</div></div>
-  <div class="rack" id="front"></div>
-  <div class="foot">A parallelogram's figure is literal: join the four stations' composite readings and you get a four-sided shape whose skew is the segment's split. Dia is distance from the object; z is what the voice believes happened; <span class="word" data-w="lumens">Lumens</span> is how much of the object's light gets through.</div>
 </section>
 
 <!-- ── A PIECE ── -->
@@ -356,7 +410,7 @@
       <div class="split">
         <div class="stage">
           <div id="map"></div>
-          <div class="readout" id="readout"><b>The graphmap.</b> The object sits at the centre; its shadow stands above it on z. Each station reads from its corner — distance from the centre is Dia (the inner ring is 33, the outer 66), height is what the voice believes happened. The dashed blue ring is the floor. Scroll the tape and the remarks land in order.</div>
+          <div class="readout tut" id="readout"><b>The graphmap.</b> The object sits at the centre; its shadow stands above it on z. Each station reads from its corner — distance from the centre is Dia (the inner ring is 33, the outer 66), height is what the voice believes happened. The dashed blue ring is the floor. Scroll the tape and the remarks land in order.</div>
           <div class="scrub">
             <div class="t">TAPE <span id="tnow">0:00</span> / <span id="tlen">—</span></div>
             <input type="range" id="scrubber" min="0" max="1" value="0" step="1">
@@ -444,6 +498,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="../src/js/prism-graphmap.js?v=11"></script>
+<script src="../src/js/tracker-core.js?v=1"></script>
 <script>
 (function () {
   'use strict';
@@ -512,7 +567,7 @@
     if (head === 'desk') { if (EMBEDDED) { try { window.parent.postMessage({ type: 'g4:desk' }, '*'); } catch (e) {} location.hash = '#pg'; return; } state.layer = 'desk'; show('desk'); crumb('g4 · desktop'); bar('g4', ''); return; }
     if (head === 'pub' && rest[0]) { state.layer = 'object'; state.program = 'sweep'; state.piece = rest[0]; show('pub'); bar('BloomBurger', 'SWEEP'); loadPub(rest[0]); return; }
     if (head === 'pg' && rest[0]) { state.layer = 'object'; state.program = 'pg'; state.piece = rest[0]; show('piece'); bar('BloomBurger', 'PG'); loadPiece(rest[0]); return; }
-    if (PROGRAMS.includes(head)) { state.layer = 'program'; state.program = head; state.piece = null; show(head); bar('BloomBurger', head.toUpperCase()); crumb('BloomBurger · ' + head.toUpperCase()); if (head === 'sst') loadSST(); if (head === 'wire') loadWire(); if (head === 'roster') loadRoster(); if (head === 'sweep') { loadMedia(); loadSweep(rest[0]); } return; }
+    if (PROGRAMS.includes(head)) { state.layer = 'program'; state.program = head; state.piece = null; show(head); bar('BloomBurger', head.toUpperCase()); crumb('BloomBurger · ' + head.toUpperCase()); if (head === 'pg') { loadMarquee(); filmMark($('#pgmark'), '../src/img/Parallelogram_logo_1.png', 2935 / 505, 'Parallelogram'); } if (head === 'sst') loadSST(); if (head === 'wire') loadWire(); if (head === 'roster') loadRoster(); if (head === 'sweep') { loadMedia(); loadSweep(rest[0]); } return; }
     location.hash = '#pg';
   }
   function bar(n, f) { $('#barName').textContent = n; $('#barFn').textContent = f; tell(); document.querySelectorAll('.g4-keys .k').forEach(k => k.classList.toggle('on', k.dataset.k === state.program && state.layer !== 'desk')); document.documentElement.classList.toggle('desk', state.layer === 'desk'); }
@@ -766,24 +821,128 @@
     pieceCleanup = () => { io.disconnect(); };
   }
 
+
+  // ── the marquee + the burns (10-17): the front page is the SST ──
+  // The determination is the villa's, shared through src/js/tracker-core.js — the needle and the pedestal read the same number.
+  let sstData = null;
+  async function sstLoad() {
+    if (sstData) return sstData;
+    const get = f => fetch('../data/active/' + f, { cache: 'no-store' }).then(r => r.ok ? r.json() : null).catch(() => null);
+    const [A, S] = await Promise.all([get('active.json'), get('settlement.json')]);
+    const T = A && window.PrismTracker ? window.PrismTracker.compute(A, S) : null;
+    sstData = { A, S, T, V: window.PrismTracker ? window.PrismTracker.verdict(T) : { word: '—' } };
+    return sstData;
+  }
+  const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const mlab = p => { const m = /^(\d{4})-(\d{2})/.exec(p || ''); return m ? MON[+m[2] - 1] + ' ' + m[1] : (p || '—'); };
+  const pct = (x, d) => x == null ? '—' : (x * 100).toFixed(d == null ? 1 : d);
+  // the dial: 50% at the left, 100% at the right — the share has lived above half the trade, so the dial starts there and says so
+  const LO = 50, HI = 100, CX = 300, CY = 300;
+  const ang = v => Math.PI * (1 - (Math.max(LO, Math.min(HI, v)) - LO) / (HI - LO));
+  const pt = (v, r) => [CX + r * Math.cos(ang(v)), CY - r * Math.sin(ang(v))];
+  const rot = v => (Math.max(LO, Math.min(HI, v)) - LO) / (HI - LO) * 180;
+  function dialSVG(T) {
+    const now = T && T.now.dollarShare != null ? T.now.dollarShare * 100 : null, ago = T && T.ago.dollarShare != null ? T.ago.dollarShare * 100 : null;
+    let o = `<svg class="dial" viewBox="0 0 600 330" aria-hidden="true"><defs>
+      <linearGradient id="mqArc" x1="0" x2="1"><stop offset="0" stop-color="var(--film-0)"/><stop offset=".5" stop-color="var(--film-2)"/><stop offset="1" stop-color="var(--film-4)"/></linearGradient>
+      <radialGradient id="mqGlow"><stop offset="0" stop-color="#ffe9a8" stop-opacity=".9"/><stop offset="1" stop-color="#ffe9a8" stop-opacity="0"/></radialGradient></defs>`;
+    // the track
+    const [ax, ay] = pt(LO, 230), [bx, by] = pt(HI, 230);
+    o += `<path d="M${ax},${ay} A230,230 0 0 1 ${bx},${by}" fill="none" stroke="url(#mqArc)" stroke-width="3" opacity=".7"/>`;
+    // the marquee bulbs: one per point; lit up to the reading
+    for (let v = LO; v <= HI; v++) { const [x, y] = pt(v, 262); const lit = now != null && v <= now; o += `<circle class="bulb" data-v="${v}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${v % 10 ? 3 : 4.4}" fill="${lit ? '#ffe9a8' : 'rgba(233,236,242,.14)'}"/>` + (lit && v % 5 === 0 ? `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="11" fill="url(#mqGlow)" opacity=".5"/>` : ''); }
+    // the scale
+    for (let v = LO; v <= HI; v += 5) { const [x1, y1] = pt(v, 230), [x2, y2] = pt(v, v % 10 ? 220 : 212); o += `<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="rgba(233,236,242,.5)" stroke-width="${v % 10 ? 1 : 1.6}"/>`; if (v % 10 === 0) { const [tx, ty] = pt(v, 192); o += `<text x="${tx.toFixed(1)}" y="${(ty + 4).toFixed(1)}" text-anchor="middle" font-family="var(--mono)" font-size="12" fill="rgba(233,236,242,.55)">${v}</text>`; } }
+    // the months: the trail the needle has walked
+    if (T) T.months.forEach((m, i) => { if (m.dollarShare == null) return; const [x, y] = pt(m.dollarShare * 100, 240); const a = .25 + .75 * (i / Math.max(1, T.months.length - 1)); o += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.2" fill="#e9ecf2" opacity="${a.toFixed(2)}"><title>${mlab(m.period)} · ${pct(m.dollarShare)}%</title></circle>`; });
+    // the ghost: where the needle stood at the start of the window
+    if (ago != null) { const [gx, gy] = pt(ago, 205); o += `<line x1="${CX}" y1="${CY}" x2="${gx.toFixed(1)}" y2="${gy.toFixed(1)}" stroke="rgba(233,236,242,.35)" stroke-width="2" stroke-dasharray="5 5"/>`; const [lx, ly] = pt(ago, 290); o += `<text x="${lx.toFixed(1)}" y="${(ly - 2).toFixed(1)}" text-anchor="middle" font-family="var(--mono)" font-size="10.5" letter-spacing="1" fill="rgba(233,236,242,.5)">${mlab(T.ago.period).toUpperCase()} · ${ago.toFixed(1)}</text>`; }
+    // the needle (drawn at 50, turned to the reading)
+    o += `<g class="needle" id="mqNeedle" style="transform:rotate(${rot(ago != null ? ago : LO)}deg)"><polygon points="${CX},${CY - 5} ${CX - 228},${CY} ${CX},${CY + 5} ${CX + 26},${CY}" fill="#f2efe6"/><circle cx="${CX - 228}" cy="${CY}" r="3" fill="#ffe9a8"/></g>`;
+    o += `<circle cx="${CX}" cy="${CY}" r="13" fill="#0c0b09" stroke="url(#mqArc)" stroke-width="2"/><circle cx="${CX}" cy="${CY}" r="4" fill="#e8d9a8"/>`;
+    return o + '</svg>';
+  }
+  async function loadMarquee() {
+    const el = $('#marquee'); if (!el || el.dataset.done) return; el.dataset.done = '1';
+    const { A, T, V } = await sstLoad();
+    const now = T && T.now.dollarShare != null ? T.now.dollarShare * 100 : null;
+    const d = T ? T.delta * 100 : null;
+    el.innerHTML = `<div><div class="eb">Supply Shock Tracker</div><div class="q">Is the dollar getting stronger or weaker?</div></div>
+      ${dialSVG(T)}
+      <div class="read"><div class="num film loop">${now == null ? '—' : now.toFixed(1)}<small>%</small></div>
+        <div class="vd ${V.word}"><b>${V.word}</b><span>${d == null ? '' : (d > 0 ? '+' : '−') + Math.abs(d).toFixed(1) + ' pts since ' + mlab(T.ago.period)}</span></div>
+        <div class="den">${T ? `of traded energy settled in dollars · ${mlab(T.now.period)} · ${pct(T.now.namedShare, 0)}% of trade named · ${pct(T.now.defaultShare, 0)}% of that by default rule · ${T.now.panelPresent.length}/${window.PrismTracker.PANEL.length} reporters` : 'the share cannot be read yet'}</div></div>`;
+    if (now != null) requestAnimationFrame(() => requestAnimationFrame(() => { const n = $('#mqNeedle'); if (n) n.style.transform = `rotate(${rot(now)}deg)`; }));
+    loadBurns(A, T);
+  }
+  // a frame is lit ○ when it holds a reading, flared ✶ when it moved past its line since the last point, dark ◌ when the series isn't there.
+  // (the Burns spec's states are for Readings; on the data strip they are a proposal — Sailor's ruling)
+  function loadBurns(A, T) {
+    const reel = $('#reel'); if (!reel) return;
+    const ser = (blk, key) => { try { const p = blk.series[key].points; return p && p.length ? { last: p[p.length - 1], prev: p.length > 1 ? p[p.length - 2] : null } : null; } catch (e) { return null; } };
+    const chg = (a, b, unit, dp, line) => { if (a == null || b == null) return { t: '', flare: false }; const x = a - b; return { t: `<span class="${x > 0 ? 'up' : x < 0 ? 'dn' : ''}">${x > 0 ? '▲' : x < 0 ? '▼' : '■'} ${Math.abs(x).toFixed(dp)}${unit}</span>`, flare: line != null && Math.abs(x) >= line }; };
+    const F = [];
+    const frame = (k, v, d, when, href, flare) => F.push({ k, v, d, when, href, st: v == null ? 'dark' : flare ? 'flared' : 'lit' });
+    if (T) {
+      const prev = T.months[T.nowIndex - 1];
+      const c = chg(T.now.dollarShare * 100, prev && prev.dollarShare != null ? prev.dollarShare * 100 : null, ' pts', 1, 1);
+      frame('$ share', pct(T.now.dollarShare) + '<small>%</small>', c.t + ' m/m', mlab(T.now.period), '#sst', c.flare);
+      frame('12-month', (T.delta > 0 ? '+' : '−') + Math.abs(T.delta * 100).toFixed(1) + '<small>pts</small>', 'from ' + pct(T.ago.dollarShare) + '%', mlab(T.ago.period) + '→', '#sst', Math.abs(T.delta) >= .03);
+      frame('named', pct(T.now.namedShare, 0) + '<small>%</small>', 'of trade with a rule', mlab(T.now.period), '#sst', false);
+      frame('Gulf → US', pct(T.now.us.gulfShare, 0) + '<small>%</small>', 'of US imports', mlab(T.now.period), '#sst', false);
+      frame('Americas → US', pct(T.now.us.hemiShare, 0) + '<small>%</small>', 'of US imports', mlab(T.now.period), '#sst', false);
+    } else frame('$ share', null, 'no reading', '', '#sst', false);
+    const price = (key, k, dp, pre, lineFrac) => { const s = A && A.price ? ser(A.price, key) : null; if (!s) return frame(k, null, 'no series', '', '#wire', false); const c = chg(s.last[1], s.prev && s.prev[1], '', dp, s.prev ? Math.abs(s.prev[1]) * lineFrac : null); frame(k, pre + Number(s.last[1]).toFixed(dp), c.t, s.last[0].slice(5), '#wire', c.flare); };
+    price('RBRTE', 'Brent', 2, '$', .03); price('RWTC', 'WTI', 2, '$', .03); price('EMM_EPMR_PTE_NUS_DPG', 'US gasoline', 2, '$', .03);
+    const flow = (key, k) => { const s = A && A.realization && A.realization.weekly ? ser(A.realization.weekly, key) : null; if (!s) return frame(k, null, 'no series', '', '#wire', false); const c = chg(s.last[1] / 1000, s.prev && s.prev[1] / 1000, 'M', 2, s.prev ? Math.abs(s.prev[1] / 1000) * .05 : null); frame(k, (s.last[1] / 1000).toFixed(2) + '<small>M bbl/d</small>', c.t + ' w/w', 'wk ' + s.last[0].slice(5), '#wire', c.flare); };
+    flow('WCRIMUS2', 'US crude imports'); flow('WCREXUS2', 'US crude exports');
+    const H = A && A.hypotheses ? A.hypotheses.rows || [] : []; const pend = H.filter(h => /pending/.test(h.outcome || '')).length;
+    frame('the bets', H.length ? `${pend}<small>/ ${H.length} open</small>` : null, H.length - pend ? (H.length - pend) + ' scored' : 'none scored yet', 'PG01', '#sst', false);
+    const g = { lit: '○', flared: '✶', dark: '◌' };
+    const html = F.map(f => `<a class="fr ${f.st}" href="${f.href}"><div class="k"><span>${f.k}</span><i>${g[f.st]}</i></div><div class="v">${f.v == null ? '—' : f.v}</div><div class="d">${f.d || ''}${f.when ? ' · ' + f.when : ''}</div></a>`).join('');
+    reel.innerHTML = html + html;   // twice, so the strip loops without a seam
+  }
+
+  // ── the Parallelogram wordmark: the painted mark on a lit plane, the same way as Prism's ──
+  function filmMark(cv, src, AR, alt) {
+    if (!cv || cv.dataset.done) return; cv.dataset.done = '1'; let renderer;
+    try { if (!window.THREE) throw 0; renderer = new THREE.WebGLRenderer({ canvas: cv, alpha: true, antialias: true }); } catch (e) { cv.outerHTML = `<img src="${src}" alt="${alt}" style="height:80px;max-width:88vw;filter:invert(1) hue-rotate(180deg);mix-blend-mode:screen">`; return; }
+    renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+    const scene = new THREE.Scene(), cam = new THREE.PerspectiveCamera(28, 1, 0.1, 50); cam.position.set(0, 0, 9);
+    const tex = new THREE.TextureLoader().load(src); tex.minFilter = THREE.LinearMipmapLinearFilter; tex.anisotropy = 8;
+    const vert = 'varying vec2 vUv; varying vec3 vN; varying vec3 vV; void main(){ vUv = uv; vec4 mv = modelViewMatrix * vec4(position,1.0); vN = normalize(normalMatrix * normal); vV = normalize(-mv.xyz); gl_Position = projectionMatrix * mv; }';
+    const frag = 'varying vec2 vUv; varying vec3 vN; varying vec3 vV; uniform sampler2D uMap; uniform float uT; void main(){ vec4 s = texture2D(uMap, vUv); float ink = 1.0 - min(1.0, (s.r + s.g + s.b) / 3.0); float f = 1.0 - abs(dot(normalize(vN), normalize(vV))); float t = vUv.x * 0.9 + f * 0.8 + uT; vec3 film = 0.5 + 0.5 * cos(6.2831853 * t * 1.3 / vec3(0.65, 0.532, 0.473)); vec3 col = mix(s.rgb, film, 0.28 + 0.45 * f); float a = max(ink, 1.0 - step(0.985, (s.r + s.g + s.b) / 3.0)) * s.a; gl_FragColor = vec4(col, a); }';
+    const mat = new THREE.ShaderMaterial({ vertexShader: vert, fragmentShader: frag, uniforms: { uMap: { value: tex }, uT: { value: 0 } }, transparent: true, depthWrite: false, side: THREE.DoubleSide });
+    const H = 1.1, plane = new THREE.Mesh(new THREE.PlaneGeometry(AR * H, H, 32, 8), mat); scene.add(plane);
+    const sc = document.createElement('canvas'); sc.width = 256; sc.height = 64; const sx = sc.getContext('2d');
+    const g = sx.createRadialGradient(128, 32, 6, 128, 32, 124); g.addColorStop(0, 'rgba(0,0,0,.42)'); g.addColorStop(1, 'rgba(0,0,0,0)'); sx.fillStyle = g; sx.fillRect(0, 0, 256, 64);
+    const shadow = new THREE.Mesh(new THREE.PlaneGeometry(AR * H * 1.15, H * 1.2), new THREE.MeshBasicMaterial({ map: new THREE.CanvasTexture(sc), transparent: true, depthWrite: false })); shadow.position.set(0.12, -0.26, -0.7); scene.add(shadow);
+    let tiltX = 0, tiltY = 0; const t0 = performance.now();
+    addEventListener('pointermove', e => { tiltX = (e.clientX / innerWidth - 0.5) * 0.5; tiltY = (e.clientY / innerHeight - 0.5) * 0.3; }, { passive: true });
+    addEventListener('deviceorientation', e => { if (e.gamma == null) return; tiltX = Math.max(-.4, Math.min(.4, e.gamma / 50)); tiltY = Math.max(-.25, Math.min(.25, (e.beta - 40) / 70)); }, { passive: true });
+    function size() { const r = cv.getBoundingClientRect(); if (!r.width) return; renderer.setSize(r.width, r.height, false); cam.aspect = r.width / r.height; cam.updateProjectionMatrix(); const want = Math.max(AR * H / 0.94 / cam.aspect, H / 0.8); cam.position.z = want / 2 / Math.tan(14 * Math.PI / 180); }
+    addEventListener('resize', size); size();
+    (function fr() { requestAnimationFrame(fr); if (document.hidden || !cv.isConnected) return; if (!cv.width || cv.width === 300) size(); mat.uniforms.uT.value = (performance.now() - t0) / 1000 * 0.03; plane.rotation.y += (tiltX - plane.rotation.y) * 0.08; plane.rotation.x += (tiltY - plane.rotation.x) * 0.08; shadow.rotation.copy(plane.rotation); renderer.render(scene, cam); })();
+  }
+
   // ── SST: the reading on the glass ──
   async function loadSST() {
     const el = $('#sst'); const esc = x => String(x == null ? '' : x).replace(/</g, '&lt;');
-    let A = null; try { A = await fetch('../data/active/active.json', { cache: 'no-store' }).then(r => r.json()); } catch (e) {}
+    const { A, T, V } = await sstLoad();
     const villa = location.hostname.endsWith('github.io') ? '/dreamgetty/' : '../../DreamGetty/dreamgetty/index.html';
     const last = pts => (pts && pts.length) ? pts[pts.length - 1] : null;
     const ser = (blk, key) => { try { return last(blk.series[key].points); } catch (e) { return null; } };
     const brent = A ? ser(A.price, 'RBRTE') : null, wti = A ? ser(A.price, 'RWTC') : null, diesel = A ? ser(A.price, 'EMM_EPMR_PTE_NUS_DPG') : null;
     const imp = A ? ser(A.realization.weekly, 'WCRIMUS2') : null, exp = A ? ser(A.realization.weekly, 'WCREXUS2') : null;
     const H = A && A.hypotheses ? A.hypotheses.rows || [] : []; const pending = H.filter(h => /pending/.test(h.outcome || '')).length;
-    const share = A && A.realization && A.realization.share != null ? Math.round(A.realization.share * 100) + '%' : null;
+    const share = T && T.now.dollarShare != null ? pct(T.now.dollarShare) + '%' : null;
     const bn = (glyph, v, l, gloss, cls) => `<div class="bn ${cls || ''}">${gl(glyph)}<div class="v">${v == null ? '—' : v}</div><div class="l">${l}${gloss ? `<i>${gloss}</i>` : ''}</div></div>`;
     el.innerHTML = `
       <div class="sec first"><div class="eb">the determination</div><h2><span class="orn"></span>Is the dollar getting stronger or weaker?</h2><div class="gloss">One number: the share of traded energy settled in dollars, with its denominator. Flows do not score z — they are the layer z is scored from. Until the pipeline writes the share, the board shows the record it will be computed from.</div></div>
       <div class="reading">
         <div class="big"><span class="film loop" id="sstShare">${share || '—'}</span><small>sold in dollars</small></div>
         <div>
-          <div class="verdict">${A && A.realization && A.realization.verdict ? esc(A.realization.verdict) : 'the pipeline writes the share'}</div>
+          <div class="verdict">${T ? esc(V.word) + ' · ' + (T.delta > 0 ? '+' : '−') + Math.abs(T.delta * 100).toFixed(1) + ' pts since ' + mlab(T.ago.period) : 'the share cannot be read yet'}</div>
           <p style="color:var(--ink-mid);font-size:14px;margin:8px 0 10px">${A && A.frame && A.frame.object ? esc(A.frame.object) : 'PG01 — the petrogas-dollar. The share of traded energy settled in dollars, read over a panel of stations that report every month.'}</p>
           <div class="g4-tabs"><a class="g4-pill" href="${villa}">🌍 to the pedestal</a><a class="g4-pill quiet" href="#wire">the series</a></div>
         </div>

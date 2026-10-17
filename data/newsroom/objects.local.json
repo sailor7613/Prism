@@ -1,6 +1,6 @@
 {
  "schema": "prism_object_overlay_v1",
- "updatedAt": "2026-10-17T02:09:39.226Z",
+ "updatedAt": "2026-10-17T12:09:00.000Z",
  "note": "Written ONLY by the drafting task (Sailor commits it). The scan owns objects.json and only reads this file. See scripts/newsroom/overlay.js.",
  "objects": {
   "obj_astate_bills-changes-elections-gavin": {
@@ -929,6 +929,66 @@
   "obj_thepresi_bar-did-exam-house": {
    "status": "dismissed",
    "dismissedWhy": "No instrument: a press secretary saying she did not pass the bar exam is a personal disclosure, not a vote, order or law; the register’s kind (vote) and holder (the President) are both wrong — Claude 2026-10-16"
+  },
+  "obj_afederal_abuse-actor-against-busfield": {
+   "status": "dismissed",
+   "dismissedWhy": "No public instrument: a New Mexico state district judge quashed the grand-jury indictment in one actor's criminal case on 2026-10-16, citing prosecutors withholding evidence from the grand jury. It is a procedural ruling in a single prosecution, not a law, order or policy the twelve stations can read as delivering, and authoring partisan first-person voices about child-abuse charges against a named person would not be beta-ready. The register's holder ('a federal court') and formedOn (10-17, the report date) are both wrong. If the state re-presents the case, or a grand-jury reform bill comes out of it, a later scan will see a new object. Claude's call, 06:0x UTC 10-17 run; reversible by Sailor.",
+   "corrections": [
+    {
+     "field": "holder",
+     "from": "a federal court",
+     "to": "New Mexico state district court (Second Judicial District)",
+     "by": "claude"
+    },
+    {
+     "field": "formedOn",
+     "from": "2026-10-17",
+     "to": "2026-10-16",
+     "by": "claude"
+    }
+   ]
+  },
+  "obj_thepresi_against-russia-sanctions-trump": {
+   "status": "drafted",
+   "drafts": {
+    "claude": "rdg_bnghg4rdiucp"
+   },
+   "draftedOn": "2026-10-17",
+   "inversions": [
+    {
+     "station": "B",
+     "lean": "rim +0.5 (trusts the Commander in Chief) against its center −0.3/−0.1 defending the 86–11 vote; prior: Senate 86–11 2026-08-07, House 262–159 2026-09-16",
+     "ruled": false
+    },
+    {
+     "station": "D",
+     "lean": "positive in every band on lifting pressure the same voters backed in September; no live-Reading prior",
+     "ruled": false
+    }
+   ],
+   "corrections": [
+    {
+     "field": "formedOn",
+     "from": "2026-10-17",
+     "to": "2026-10-16",
+     "by": "claude"
+    },
+    {
+     "field": "holder",
+     "from": "the President",
+     "to": "the President, under H.R. 5334 §115, with the Secretary of State",
+     "by": "claude"
+    }
+   ],
+   "aliasCandidates": [
+    "obj_thepresi_deepen-russia-sanctions-suspends",
+    "obj_thepresi_before-even-kick-related"
+   ],
+   "permanenceNote": "Not a return; one instrument filed three times by the 10-17 scans. Publish attempt exit 5 (no GITHUB_PUBLISH_TOKEN) — draft stays in drafts/claude."
+  },
+  "obj_thepresi_deepen-russia-sanctions-suspends": {
+   "status": "dismissed",
+   "dismissedWhy": "Same instrument as obj_thepresi_against-russia-sanctions-trump (the 2026-10-16 Graham Act waiver order), drafted as rdg_bnghg4rdiucp; a second headline, not a second object. Claude's call, 12:xx UTC 10-17 run; reversible by Sailor."
   }
  }
 }

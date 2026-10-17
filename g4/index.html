@@ -116,6 +116,20 @@
   #note { position: fixed; left: 50%; bottom: 7vh; transform: translateX(-50%); z-index: 20; font-family: var(--mono); font-size: 10px; letter-spacing: .24em; text-transform: uppercase; color: var(--ink-low); opacity: 0; transition: opacity .5s; pointer-events: none; white-space: nowrap; }
   #note.on { opacity: 1; }
   @media (prefers-reduced-motion: reduce) { #rig, #glare { transition: none !important; animation: none !important; } }
+
+  /* ── the Dynamic Island (10-17): standalone on a phone the status bar is translucent, so everything that hangs from the top drops by the safe area */
+  :root { --sat: env(safe-area-inset-top, 0px); }
+  #bar { box-sizing: border-box; height: calc(var(--bar-h) + var(--sat)); padding-top: var(--sat); }
+  #strip { top: calc(var(--bar-h) + var(--sat)); }
+  #navtool { top: calc(var(--bar-h) + var(--sat) - 10px); }
+  #prog { top: calc(var(--bar-h) + var(--sat)); height: calc(100% - var(--bar-h) - var(--sat)); }
+  #desk { top: calc(var(--bar-h) + var(--sat)); }
+  @media (max-width: 480px) {
+    #strip { top: calc(var(--bar-h-phone) + var(--sat)); }
+    #navtool { top: calc(var(--bar-h-phone) + var(--sat) - 10px); }
+    #prog { top: calc(var(--bar-h-phone) + var(--sat)); height: calc(100% - var(--bar-h-phone) - var(--sat)); }
+    #desk { top: calc(var(--bar-h-phone) + var(--sat)); }
+  }
 </style>
 </head>
 <body>
