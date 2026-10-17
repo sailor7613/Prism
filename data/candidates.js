@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-10-17T15:44:35.014Z · 18 legislative + 6 news (GDELT, 3d)
+// 2026-10-17T20:45:12.820Z · 18 legislative + 5 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1792251849443,
+    "ts": 1792269868964,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.794,
+      "salience": 0.793,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -262,11 +262,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1792251849443,
+    "ts": 1792269868964,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.784,
+      "salience": 0.783,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -519,11 +519,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1792251849442,
+    "ts": 1792269868964,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.749,
+      "salience": 0.748,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -1937,11 +1937,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1792251849443,
+    "ts": 1792269868964,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.748,
+      "salience": 0.747,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -2194,11 +2194,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1792251849443,
+    "ts": 1792269868964,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.741,
+      "salience": 0.74,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -2451,11 +2451,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1792251849443,
+    "ts": 1792269868964,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.678,
+      "salience": 0.677,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -3364,11 +3364,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1792251849443,
+    "ts": 1792269868964,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.637,
+      "salience": 0.636,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3892,11 +3892,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1792251849443,
+    "ts": 1792269868964,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.614,
+      "salience": 0.613,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4793,11 +4793,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1792251849443,
+    "ts": 1792269868964,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.421,
+      "salience": 0.42,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5692,11 +5692,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1792251849443,
+    "ts": 1792269868964,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.409,
+      "salience": 0.408,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6971,11 +6971,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1792251849443,
+    "ts": 1792269868964,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.328,
+      "salience": 0.327,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7891,11 +7891,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1792251849443,
+    "ts": 1792269868964,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.327,
+      "salience": 0.326,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -8801,11 +8801,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1792251849443,
+    "ts": 1792269868964,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.292,
+      "salience": 0.291,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9719,11 +9719,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1792251849443,
+    "ts": 1792269868964,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.249,
+      "salience": 0.248,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10599,11 +10599,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1792251849443,
+    "ts": 1792269868964,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.245,
+      "salience": 0.244,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11475,11 +11475,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4541",
     "source": "legislative",
-    "ts": 1792251849442,
+    "ts": 1792269868963,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4541",
-      "salience": 0.053,
+      "salience": 0.052,
       "congressGovUrl": null,
       "votes": [
         {
@@ -12368,11 +12368,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-1118",
     "source": "legislative",
-    "ts": 1792251849442,
+    "ts": 1792269868964,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-1118",
-      "salience": 0.046,
+      "salience": 0.045,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/1118",
       "votes": [
         {
@@ -13283,11 +13283,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-8823",
     "source": "legislative",
-    "ts": 1792251849442,
+    "ts": 1792269868964,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-8823",
-      "salience": 0.039,
+      "salience": 0.038,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/8823",
       "votes": [
         {
@@ -14171,13 +14171,27 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_hold-into-law",
     "source": "news",
-    "ts": 1792251875011,
+    "ts": 1792269912818,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.997,
+      "salience": 0.973,
       "articles": [
+        {
+          "title": "Trump puts new Russia sanctions that he recently signed into law on hold , citing national interest",
+          "url": "https://www.14news.com/2026/10/17/trump-puts-new-russia-sanctions-that-he-recently-signed-into-law-hold-citing-national-interest/",
+          "domain": "14news.com",
+          "seendate": "2026-10-17T16:30:00Z",
+          "image": "https://gray-wfie-prod.gtv-cdn.com/resizer/v2/Y6AH3ZVURJGXRN2TSDUMQEOMS4.jpg?auth=f9957225b84289687689c2bfbe5b54e5ec737b25395993ba866b630f6286d0eb&smart=true"
+        },
+        {
+          "title": "Trump puts new Russia sanctions that he recently signed into law on hold , citing national interest",
+          "url": "https://www.fox8live.com/2026/10/17/trump-puts-new-russia-sanctions-that-he-recently-signed-into-law-hold-citing-national-interest/",
+          "domain": "fox8live.com",
+          "seendate": "2026-10-17T16:15:00Z",
+          "image": "https://gray-wvue-prod.gtv-cdn.com/resizer/v2/Y6AH3ZVURJGXRN2TSDUMQEOMS4.jpg?auth=f9957225b84289687689c2bfbe5b54e5ec737b25395993ba866b630f6286d0eb&smart=true"
+        },
         {
           "title": "Trump puts new Russia sanctions that he recently signed into law on hold , citing national interest",
           "url": "https://www.ky3.com/2026/10/17/trump-puts-new-russia-sanctions-that-he-recently-signed-into-law-hold-citing-national-interest/",
@@ -14247,25 +14261,11 @@ window.PRISM_CANDIDATES = [
           "domain": "nbcchicago.com",
           "seendate": "2026-10-17T04:15:00Z",
           "image": "https://media.nbcchicago.com/2026/10/AP26290073446928.jpg?quality=85&strip=all"
-        },
-        {
-          "title": "Trump puts new Russia sanctions that he recently signed into law on hold – NBC4 Washington",
-          "url": "https://www.nbcwashington.com/news/politics/trump-russia-sanctions-hold-national-interest/4168582/",
-          "domain": "nbcwashington.com",
-          "seendate": "2026-10-17T04:00:00Z",
-          "image": "https://media.nbcwashington.com/2026/10/AP26290073446928.jpg?quality=85&strip=all"
-        },
-        {
-          "title": "Trump puts new Russia sanctions that he recently signed into law on hold , citing national interest",
-          "url": "https://www.ksat.com/news/politics/2026/10/17/trump-puts-new-russia-sanctions-passed-by-congress-on-hold-saying-waiver-is-in-us-national-interest/",
-          "domain": "ksat.com",
-          "seendate": "2026-10-17T03:00:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/IIAD6QPJPZD43ILHVD52UYEVHM.jpg?api_key=ksat_9a37fc89631abedf"
         }
       ]
     },
     "title": "Trump puts new Russia sanctions that he recently signed into law on hold , citing national interest",
-    "summary": "2026-10-17 ky3.com: Trump puts new Russia sanctions that he recently signed into law on hold , citing national interest\n2026-10-17 wtop.com: Trump puts new Russia sanctions that he recently signed into law on hold , citing national interest – WTOP News\n2026-10-17 timesfreepress.com: Trump puts new Russia sanctions that he recently signed into law on hold , citing national interest\n2026-10-17 news4jax.com: Trump puts new Russia sanctions that he recently signed into law on hold , citing national interest\n2026-10-17 nbcnewyork.com: Trump puts new Russia sanctions that he recently signed into law on hold – NBC New York\n2026-10-17 nbcdfw.com: Trump puts new Russia sanctions that he recently signed into law on hold – NBC 5 Dallas - Fort Worth",
+    "summary": "2026-10-17 14news.com: Trump puts new Russia sanctions that he recently signed into law on hold , citing national interest\n2026-10-17 fox8live.com: Trump puts new Russia sanctions that he recently signed into law on hold , citing national interest\n2026-10-17 ky3.com: Trump puts new Russia sanctions that he recently signed into law on hold , citing national interest\n2026-10-17 wtop.com: Trump puts new Russia sanctions that he recently signed into law on hold , citing national interest – WTOP News\n2026-10-17 timesfreepress.com: Trump puts new Russia sanctions that he recently signed into law on hold , citing national interest\n2026-10-17 news4jax.com: Trump puts new Russia sanctions that he recently signed into law on hold , citing national interest",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -14277,12 +14277,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_hold-puts-russia",
     "source": "news",
-    "ts": 1792251875010,
+    "ts": 1792269912817,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.945,
+      "salience": 0.914,
       "articles": [
         {
           "title": "Trump puts new Russia sanctions passed by Congress on hold",
@@ -14383,12 +14383,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_americans-appeals-court",
     "source": "news",
-    "ts": 1792251875010,
+    "ts": 1792269912817,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.841,
+      "salience": 0.809,
       "articles": [
         {
           "title": "Do Americans own the president papers ? Appeals court to weigh in",
@@ -14489,12 +14489,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_battleground-despite-divisions",
     "source": "news",
-    "ts": 1792251875010,
+    "ts": 1792269912817,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.801,
+      "salience": 0.715,
       "articles": [
         {
           "title": "The Latest : Trump will rally Georgia Republicans despite party divisions in the battleground state",
@@ -14533,13 +14533,6 @@ window.PRISM_CANDIDATES = [
         },
         {
           "title": "Trump will rally Georgia Republicans despite party divisions in battleground state",
-          "url": "https://www.wsls.com/news/politics/2026/10/16/trump-will-rally-georgia-republicans-despite-party-divisions-in-battleground-state/",
-          "domain": "wsls.com",
-          "seendate": "2026-10-16T06:45:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/OSTDIPSEAFFQZBZJO3Q5AUB6FU.jpg?api_key=wsls_8c3a4bc35af7684e"
-        },
-        {
-          "title": "Trump will rally Georgia Republicans despite party divisions in battleground state",
           "url": "https://www.clickondetroit.com/news/politics/2026/10/16/trump-will-rally-georgia-republicans-despite-party-divisions-in-battleground-state/",
           "domain": "clickondetroit.com",
           "seendate": "2026-10-16T06:15:00Z",
@@ -14558,75 +14551,11 @@ window.PRISM_CANDIDATES = [
           "domain": "news4jax.com",
           "seendate": "2026-10-16T05:45:00Z",
           "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/OSTDIPSEAFFQZBZJO3Q5AUB6FU.jpg?api_key=news4jax_3f10b25586458189"
-        },
-        {
-          "title": "Trump will rally Georgia Republicans despite party divisions in battleground state - Las Vegas Sun News",
-          "url": "https://lasvegassun.com/news/2026/oct/15/trump-will-rally-georgia-republicans-despite-party/",
-          "domain": "lasvegassun.com",
-          "seendate": "2026-10-16T05:30:00Z",
-          "image": null
         }
       ]
     },
     "title": "Trump will rally Georgia Republicans despite party divisions in battleground state",
-    "summary": "2026-10-16 wral.com: The Latest : Trump will rally Georgia Republicans despite party divisions in the battleground state\n2026-10-16 wboc.com: The Latest : Trump will rally Georgia Republicans despite party divisions in the battleground state\n2026-10-16 wsls.com: The Latest : Trump will rally Georgia Republicans despite party divisions in the battleground state\n2026-10-16 aol.com: Trump will rally Georgia Republicans despite party divisions in battleground state\n2026-10-16 yahoo.com: Trump will rally Georgia Republicans despite party divisions in battleground state\n2026-10-16 wsls.com: Trump will rally Georgia Republicans despite party divisions in battleground state",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_california-enforcement-feds",
-    "source": "news",
-    "ts": 1792251875011,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.525,
-      "articles": [
-        {
-          "title": "California sues feds over immigration enforcement",
-          "url": "https://homenewshere.com/national/news/article_b4d3de8d-1290-55d8-a713-c58ed1e75af3.html",
-          "domain": "homenewshere.com",
-          "seendate": "2026-10-16T07:45:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/homenewshere.com/content/tncms/custom/image/0e896112-c6fa-11e6-ba62-e7651b43ea5e.jpg"
-        },
-        {
-          "title": "California sues feds over immigration enforcement",
-          "url": "https://www.hazard-herald.com/news/national/california-sues-feds-over-immigration-enforcement/article_4969dbf8-68cf-5dac-a089-3a25a2add6d3.html",
-          "domain": "hazard-herald.com",
-          "seendate": "2026-10-16T04:45:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/hazard-herald.com/content/tncms/custom/image/13ce1438-8da1-11e7-89b3-47080abc53bf.png"
-        },
-        {
-          "title": "California sues feds over immigration enforcement",
-          "url": "https://www.sanfordherald.com/news/national/california-sues-feds-over-immigration-enforcement/article_3ca4a2bb-38dc-5065-a9c4-f32948fa58ed.html",
-          "domain": "sanfordherald.com",
-          "seendate": "2026-10-16T04:30:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/sanfordherald.com/content/tncms/custom/image/b1cbacb0-2f45-11eb-9ba1-cfc8b4ead4fc.png?crop=80%2C80%2C71%2C0"
-        },
-        {
-          "title": "California sues feds over immigration enforcement",
-          "url": "https://www.thedigitalcourier.com/news/national/california-sues-feds-over-immigration-enforcement/article_8a0af650-2893-5e48-964b-f9b7dc2cacc1.html",
-          "domain": "thedigitalcourier.com",
-          "seendate": "2026-10-16T02:15:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/thedigitalcourier.com/content/tncms/custom/image/d5c5849c-f9cb-11ef-a09f-13ffcb644ca4.png?crop=80%2C80%2C145%2C0"
-        },
-        {
-          "title": "California sues feds over immigration enforcement",
-          "url": "https://www.kten.com/news/california-sues-feds-over-immigration-enforcement/article_e1b20da9-274b-5302-9593-a2d8bd73f0b0.html",
-          "domain": "kten.com",
-          "seendate": "2026-10-16T00:45:00Z",
-          "image": null
-        }
-      ]
-    },
-    "title": "California sues feds over immigration enforcement",
-    "summary": "2026-10-16 homenewshere.com: California sues feds over immigration enforcement\n2026-10-16 hazard-herald.com: California sues feds over immigration enforcement\n2026-10-16 sanfordherald.com: California sues feds over immigration enforcement\n2026-10-16 thedigitalcourier.com: California sues feds over immigration enforcement\n2026-10-16 kten.com: California sues feds over immigration enforcement",
+    "summary": "2026-10-16 wral.com: The Latest : Trump will rally Georgia Republicans despite party divisions in the battleground state\n2026-10-16 wboc.com: The Latest : Trump will rally Georgia Republicans despite party divisions in the battleground state\n2026-10-16 wsls.com: The Latest : Trump will rally Georgia Republicans despite party divisions in the battleground state\n2026-10-16 aol.com: Trump will rally Georgia Republicans despite party divisions in battleground state\n2026-10-16 yahoo.com: Trump will rally Georgia Republicans despite party divisions in battleground state\n2026-10-16 clickondetroit.com: Trump will rally Georgia Republicans despite party divisions in battleground state",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -14638,12 +14567,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_100-announce-democrats",
     "source": "news",
-    "ts": 1792251875011,
+    "ts": 1792269912818,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.346,
+      "salience": 0.315,
       "articles": [
         {
           "title": "Senate Democrats announce recruitment of 100+ staffers for election observer program",

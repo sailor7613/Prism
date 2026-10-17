@@ -1,6 +1,6 @@
 # Newsroom digest — 2026-10-17
 
-Register: 86 objects · this scan: 2 new, 0 seen again, 0 returned.
+Register: 89 objects · this scan: 3 new, 1 seen again, 0 returned.
 
 ## Queued for drafting (0)
 - (nothing cleared the bar)
@@ -12,10 +12,11 @@ Register: 86 objects · this scan: 2 new, 0 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **Trump puts new Russia sanctions that he recently signed into law on hold , citing national interest** — law · signed · holder: the President · formed 2026-10-17 · 3 outlets (peak 3) · `obj_thepresi_citing-hold-interest-into`
-- **Zelenskyy urges support for new US sanctions on Russia** — tariff/sanction · imposed · holder: ? · formed 2026-10-17 · 5 outlets (peak 5) · `obj_x_russia-sanctions-support-urges`
+- **Trump waives most Russia sanctions and tariffs days before they were to take effect** — tariff/sanction · imposed · holder: the President · formed 2026-10-17 · 5 outlets (peak 5) · `obj_thepresi_before-days-effect-most`
+- **Trump decision to waive Russian sanctions outrages Congress , but no quick counter seen** — tariff/sanction · imposed · holder: the President · formed 2026-10-17 · 9 outlets (peak 9) · `obj_thepresi_congress-counter-decision-outrages`
+- **New Mexico judge tosses Timothy Busfield indictment , citing prosecutorial misconduct** — ruling · ruled · holder: a federal court · formed 2026-10-17 · 20 outlets (peak 20) · `obj_afederal_busfield-citing-indictment-judge`
 
-## Watching (30)
+## Watching (34)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
 - **Former state senator sentenced to 16 months in child solicitation case** — indictment · charged · holder: the Senate · formed 2026-09-23 · 4 outlets (peak 4) · `obj_thesenat_case-child-former-months`
 - **CNN , MS NOW and Politico back at the White House after judge ordered Trump to lift ban** — ruling · ruled · holder: the House · formed 2026-09-24 · 18 outlets (peak 18) · `obj_thehouse_back-ban-cnn-house`

@@ -7251,7 +7251,7 @@
    "scans": 2,
    "outlets": 3,
    "peakOutlets": 7,
-   "status": "queued",
+   "status": "dismissed",
    "permanence": {
     "silentDays": 0,
     "breaks": [],
@@ -7335,7 +7335,22 @@
    "aliases": [
     "Judge tosses child sex abuse charges against actor Timothy Busfield : Reports"
    ],
-   "queuedOn": "2026-10-17"
+   "queuedOn": "2026-10-17",
+   "corrections": [
+    {
+     "field": "holder",
+     "from": "a federal court",
+     "to": "New Mexico state district court (Second Judicial District)",
+     "by": "claude"
+    },
+    {
+     "field": "formedOn",
+     "from": "2026-10-17",
+     "to": "2026-10-16",
+     "by": "claude"
+    }
+   ],
+   "dismissedWhy": "No public instrument: a New Mexico state district judge quashed the grand-jury indictment in one actor's criminal case on 2026-10-16, citing prosecutors withholding evidence from the grand jury. It is a procedural ruling in a single prosecution, not a law, order or policy the twelve stations can read as delivering, and authoring partisan first-person voices about child-abuse charges against a named person would not be beta-ready. The register's holder ('a federal court') and formedOn (10-17, the report date) are both wrong. If the state re-presents the case, or a grand-jury reform bill comes out of it, a later scan will see a new object. Claude's call, 06:0x UTC 10-17 run; reversible by Sailor."
   },
   {
    "oid": "obj_thepresi_deepen-russia-sanctions-suspends",
@@ -7358,7 +7373,7 @@
    "scans": 1,
    "outlets": 4,
    "peakOutlets": 4,
-   "status": "queued",
+   "status": "dismissed",
    "permanence": {
     "silentDays": 0,
     "breaks": [],
@@ -7398,7 +7413,8 @@
     }
    ],
    "aliases": [],
-   "queuedOn": "2026-10-17"
+   "queuedOn": "2026-10-17",
+   "dismissedWhy": "Same instrument as obj_thepresi_against-russia-sanctions-trump (the 2026-10-16 Graham Act waiver order), drafted as rdg_bnghg4rdiucp; a second headline, not a second object. Claude's call, 12:xx UTC 10-17 run; reversible by Sailor."
   },
   {
    "oid": "obj_thepresi_against-russia-sanctions-trump",
@@ -7419,14 +7435,27 @@
    "scans": 1,
    "outlets": 10,
    "peakOutlets": 10,
-   "status": "queued",
+   "status": "drafted",
    "permanence": {
     "silentDays": 0,
     "breaks": [],
     "returns": []
    },
-   "inversions": [],
-   "drafts": {},
+   "inversions": [
+    {
+     "station": "B",
+     "lean": "rim +0.5 (trusts the Commander in Chief) against its center −0.3/−0.1 defending the 86–11 vote; prior: Senate 86–11 2026-08-07, House 262–159 2026-09-16",
+     "ruled": false
+    },
+    {
+     "station": "D",
+     "lean": "positive in every band on lifting pressure the same voters backed in September; no live-Reading prior",
+     "ruled": false
+    }
+   ],
+   "drafts": {
+    "claude": "rdg_bnghg4rdiucp"
+   },
    "live": null,
    "articles": [
     {
@@ -7487,7 +7516,27 @@
     }
    ],
    "aliases": [],
-   "queuedOn": "2026-10-17"
+   "queuedOn": "2026-10-17",
+   "draftedOn": "2026-10-17",
+   "corrections": [
+    {
+     "field": "formedOn",
+     "from": "2026-10-17",
+     "to": "2026-10-16",
+     "by": "claude"
+    },
+    {
+     "field": "holder",
+     "from": "the President",
+     "to": "the President, under H.R. 5334 §115, with the Secretary of State",
+     "by": "claude"
+    }
+   ],
+   "permanenceNote": "Not a return; one instrument filed three times by the 10-17 scans. Publish attempt exit 5 (no GITHUB_PUBLISH_TOKEN) — draft stays in drafts/claude.",
+   "aliasCandidates": [
+    "obj_thepresi_deepen-russia-sanctions-suspends",
+    "obj_thepresi_before-even-kick-related"
+   ]
   },
   {
    "oid": "obj_thepresi_before-even-kick-related",
@@ -7705,18 +7754,22 @@
     "urges",
     "support",
     "sanctions",
-    "russia"
+    "russia",
+    "trump",
+    "puts",
+    "them",
+    "hold"
    ],
    "kind": "tariff/sanction",
    "verb": "imposed",
-   "holder": null,
+   "holder": "the President",
    "formedOn": "2026-10-17",
    "firstSeen": "2026-10-17T13:30:00Z",
-   "lastSeen": "2026-10-17T14:45:00Z",
-   "scans": 1,
-   "outlets": 5,
-   "peakOutlets": 5,
-   "status": "new",
+   "lastSeen": "2026-10-17T19:30:00Z",
+   "scans": 2,
+   "outlets": 42,
+   "peakOutlets": 42,
+   "status": "watch",
    "permanence": {
     "silentDays": 0,
     "breaks": [],
@@ -7726,6 +7779,62 @@
    "drafts": {},
    "live": null,
    "articles": [
+    {
+     "title": "Zelenskyy urges support for new US sanctions on Russia after Trump puts them on hold",
+     "url": "https://www.wemu.org/npr-national-news/2026-10-17/zelenskyy-urges-support-for-new-us-sanctions-on-russia-after-trump-puts-them-on-hold",
+     "domain": "wemu.org",
+     "seendate": "2026-10-17T19:00:00Z",
+     "image": "http://npr-brightspot.s3.amazonaws.com/4b/96/d6b29b774dbcbbb820e6e569974b/ap26290438386008.jpg"
+    },
+    {
+     "title": "Zelenskyy urges support for new US sanctions on Russia put on hold by Trump",
+     "url": "http://www.reflector.com/news/national/zelenskyy-urges-support-for-new-us-sanctions-on-russia-put-on-hold-by-trump/article_ed3d7880-81f1-545c-b1f2-fd8d69845df3.html",
+     "domain": "reflector.com",
+     "seendate": "2026-10-17T19:00:00Z",
+     "image": "https://bloximages.newyork1.vip.townnews.com/reflector.com/content/tncms/assets/v3/editorial/b/dc/bdc2c7e5-d4d7-512f-b27c-d6798cc2adab/6ad352d7bdc0f.image.jpg?crop=1763%2C926%2C0%2C124"
+    },
+    {
+     "title": "Zelenskyy urges support for new US sanctions on Russia after Trump puts them on hold",
+     "url": "https://www.kalw.org/npr-news/2026-10-17/zelenskyy-urges-support-for-new-us-sanctions-on-russia-after-trump-puts-them-on-hold",
+     "domain": "kalw.org",
+     "seendate": "2026-10-17T19:00:00Z",
+     "image": "http://npr-brightspot.s3.amazonaws.com/4b/96/d6b29b774dbcbbb820e6e569974b/ap26290438386008.jpg"
+    },
+    {
+     "title": "Zelenskyy urges support for new US sanctions on Russia after Trump puts them on hold",
+     "url": "https://www.wamc.org/2026-10-17/zelenskyy-urges-support-for-new-us-sanctions-on-russia-after-trump-puts-them-on-hold",
+     "domain": "wamc.org",
+     "seendate": "2026-10-17T19:00:00Z",
+     "image": "http://npr-brightspot.s3.amazonaws.com/4b/96/d6b29b774dbcbbb820e6e569974b/ap26290438386008.jpg"
+    },
+    {
+     "title": "Zelenskyy urges support for new US sanctions on Russia after Trump puts them on hold",
+     "url": "https://www.wypr.org/2026-10-17/zelenskyy-urges-support-for-new-us-sanctions-on-russia-after-trump-puts-them-on-hold",
+     "domain": "wypr.org",
+     "seendate": "2026-10-17T19:00:00Z",
+     "image": "http://npr-brightspot.s3.amazonaws.com/4b/96/d6b29b774dbcbbb820e6e569974b/ap26290438386008.jpg"
+    },
+    {
+     "title": "Zelenskyy urges support for new US sanctions on Russia after Trump puts them on hold",
+     "url": "https://www.wutc.org/2026-10-17/zelenskyy-urges-support-for-new-us-sanctions-on-russia-after-trump-puts-them-on-hold",
+     "domain": "wutc.org",
+     "seendate": "2026-10-17T19:30:00Z",
+     "image": "http://npr-brightspot.s3.amazonaws.com/4b/96/d6b29b774dbcbbb820e6e569974b/ap26290438386008.jpg"
+    },
+    {
+     "title": "Zelenskyy urges support for new US sanctions on Russia after Trump puts them on hold",
+     "url": "https://www.nhpr.org/2026-10-17/zelenskyy-urges-support-for-new-us-sanctions-on-russia-after-trump-puts-them-on-hold",
+     "domain": "nhpr.org",
+     "seendate": "2026-10-17T19:30:00Z",
+     "image": "http://npr-brightspot.s3.amazonaws.com/4b/96/d6b29b774dbcbbb820e6e569974b/ap26290438386008.jpg"
+    },
+    {
+     "title": "Zelenskyy urges support for new US sanctions on Russia after Trump puts them on hold",
+     "url": "https://www.kyuk.org/2026-10-17/zelenskyy-urges-support-for-new-us-sanctions-on-russia-after-trump-puts-them-on-hold",
+     "domain": "kyuk.org",
+     "seendate": "2026-10-17T19:30:00Z",
+     "image": "http://npr-brightspot.s3.amazonaws.com/4b/96/d6b29b774dbcbbb820e6e569974b/ap26290438386008.jpg"
+    },
     {
      "title": "Zelenskyy urges support for new US sanctions on Russia",
      "url": "https://www.ketv.com/article/zelenskyy-support-new-us-sanctions-russia-trump-hold/74166472",
@@ -7753,31 +7862,272 @@
      "domain": "wisn.com",
      "seendate": "2026-10-17T13:30:00Z",
      "image": "https://kubrick.htvapps.com/htv-prod/images/5f8b8d70-edd7-4e24-bf80-1af14f533912.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
+    }
+   ],
+   "aliases": [
+    "Zelenskyy urges support for new US sanctions on Russia after Trump puts them on hold"
+   ]
+  },
+  {
+   "oid": "obj_thepresi_before-days-effect-most",
+   "headline": "Trump waives most Russia sanctions and tariffs days before they were to take effect",
+   "tokens": [
+    "trump",
+    "waives",
+    "most",
+    "russia",
+    "sanctions",
+    "tariffs",
+    "days",
+    "before",
+    "they",
+    "take",
+    "effect"
+   ],
+   "kind": "tariff/sanction",
+   "verb": "imposed",
+   "holder": "the President",
+   "formedOn": "2026-10-17",
+   "firstSeen": "2026-10-17T19:00:00Z",
+   "lastSeen": "2026-10-17T19:30:00Z",
+   "scans": 1,
+   "outlets": 5,
+   "peakOutlets": 5,
+   "status": "watch",
+   "permanence": {
+    "silentDays": 0,
+    "breaks": [],
+    "returns": []
+   },
+   "inversions": [],
+   "drafts": {},
+   "live": null,
+   "articles": [
+    {
+     "title": "Trump waives most Russia sanctions and tariffs days before they were to take effect",
+     "url": "https://local21news.com/news/nation-world/trump-waives-most-russia-sanctions-and-tariffs-days-before-they-were-to-take-effect",
+     "domain": "local21news.com",
+     "seendate": "2026-10-17T19:30:00Z",
+     "image": "https://local21news.com/resources/media2/16x9/7413/1320/0x484/90/60d59f27-d59e-46aa-99a5-2c51f57df203-GettyImages2230320736.jpg"
     },
     {
-     "title": "Zelenskyy urges support for new US sanctions on Russia",
-     "url": "https://www.kcci.com/article/zelenskyy-support-new-us-sanctions-russia-trump-hold/74166472",
-     "domain": "kcci.com",
-     "seendate": "2026-10-17T13:30:00Z",
-     "image": "https://kubrick.htvapps.com/htv-prod/images/5f8b8d70-edd7-4e24-bf80-1af14f533912.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
+     "title": "Trump waives most Russia sanctions and tariffs days before they were to take effect",
+     "url": "https://abc3340.com/news/nation-world/trump-waives-most-russia-sanctions-and-tariffs-days-before-they-were-to-take-effect",
+     "domain": "abc3340.com",
+     "seendate": "2026-10-17T19:00:00Z",
+     "image": "https://abc3340.com/resources/media2/16x9/7413/1320/0x484/90/60d59f27-d59e-46aa-99a5-2c51f57df203-GettyImages2230320736.jpg"
+    },
+    {
+     "title": "Trump waives most Russia sanctions and tariffs days before they were to take effect",
+     "url": "https://wchstv.com/news/nation-world/trump-waives-most-russia-sanctions-and-tariffs-days-before-they-were-to-take-effect",
+     "domain": "wchstv.com",
+     "seendate": "2026-10-17T19:00:00Z",
+     "image": "https://wchstv.com/resources/media2/16x9/7413/1320/0x484/90/60d59f27-d59e-46aa-99a5-2c51f57df203-GettyImages2230320736.jpg"
+    },
+    {
+     "title": "Trump waives most Russia sanctions and tariffs days before they were to take effect",
+     "url": "https://local12.com/news/nation-world/trump-waives-most-russia-sanctions-and-tariffs-days-before-they-were-to-take-effect",
+     "domain": "local12.com",
+     "seendate": "2026-10-17T19:00:00Z",
+     "image": "https://local12.com/resources/media2/16x9/7413/1320/0x484/90/60d59f27-d59e-46aa-99a5-2c51f57df203-GettyImages2230320736.jpg"
+    },
+    {
+     "title": "Trump waives most Russia sanctions and tariffs days before they were to take effect",
+     "url": "https://katu.com/news/nation-world/trump-waives-most-russia-sanctions-and-tariffs-days-before-they-were-to-take-effect",
+     "domain": "katu.com",
+     "seendate": "2026-10-17T19:00:00Z",
+     "image": "https://katu.com/resources/media2/16x9/7413/1320/0x484/90/60d59f27-d59e-46aa-99a5-2c51f57df203-GettyImages2230320736.jpg"
+    }
+   ],
+   "aliases": []
+  },
+  {
+   "oid": "obj_thepresi_congress-counter-decision-outrages",
+   "headline": "Trump decision to waive Russian sanctions outrages Congress , but no quick counter seen",
+   "tokens": [
+    "trump",
+    "decision",
+    "waive",
+    "russian",
+    "sanctions",
+    "outrages",
+    "congress",
+    "quick",
+    "counter",
+    "seen"
+   ],
+   "kind": "tariff/sanction",
+   "verb": "imposed",
+   "holder": "the President",
+   "formedOn": "2026-10-17",
+   "firstSeen": "2026-10-17T16:15:00Z",
+   "lastSeen": "2026-10-17T19:15:00Z",
+   "scans": 1,
+   "outlets": 9,
+   "peakOutlets": 9,
+   "status": "watch",
+   "permanence": {
+    "silentDays": 0,
+    "breaks": [],
+    "returns": []
+   },
+   "inversions": [],
+   "drafts": {},
+   "live": null,
+   "articles": [
+    {
+     "title": "Trump decision to waive Russian sanctions outrages Congress , but no quick counter seen",
+     "url": "https://www.news4jax.com/news/politics/2026/10/17/trumps-decision-to-waive-russian-sanctions-outrages-congress-but-no-quick-counter-seen/",
+     "domain": "news4jax.com",
+     "seendate": "2026-10-17T19:15:00Z",
+     "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/473X3WIMWZD47PJGXFAZ6CD7SY.jpg?api_key=news4jax_3f10b25586458189"
+    },
+    {
+     "title": "Trump decision to waive Russian sanctions outrages Congress , but no quick counter seen",
+     "url": "http://www.reflector.com/news/national/trumps-decision-to-waive-russian-sanctions-outrages-congress-but-no-quick-counter-seen/article_37772244-5ca8-5371-ac41-c175074f0cf2.html",
+     "domain": "reflector.com",
+     "seendate": "2026-10-17T19:00:00Z",
+     "image": "https://bloximages.newyork1.vip.townnews.com/reflector.com/content/tncms/assets/v3/editorial/5/04/504c6172-0375-5ff5-8a64-1d24f8f0e398/6ad3926203867.image.jpg?crop=1763%2C926%2C0%2C124"
+    },
+    {
+     "title": "Trump decision to waive Russian sanctions outrages Congress , but no quick counter seen",
+     "url": "http://www.dailyadvance.com/news/national/trumps-decision-to-waive-russian-sanctions-outrages-congress-but-no-quick-counter-seen/article_63f4a359-66c1-5e91-a412-31c7ca25fbc2.html",
+     "domain": "dailyadvance.com",
+     "seendate": "2026-10-17T19:00:00Z",
+     "image": "https://bloximages.newyork1.vip.townnews.com/dailyadvance.com/content/tncms/assets/v3/editorial/9/53/95366772-4aa1-532b-a2e9-fa29c63bcfc4/6ad3921dc4d33.image.jpg?crop=1763%2C926%2C0%2C124"
+    },
+    {
+     "title": "Trump decision to waive Russian sanctions outrages Congress , but no quick counter seen – The Virginian - Pilot",
+     "url": "https://www.pilotonline.com/2026/10/17/trumps-waive-russian-sanctions-outrages-congress/",
+     "domain": "pilotonline.com",
+     "seendate": "2026-10-17T19:00:00Z",
+     "image": "https://www.pilotonline.com/wp-content/uploads/2026/10/Trump_4_864-1.jpg"
+    },
+    {
+     "title": "Trump decision to waive Russian sanctions outrages Congress , but no quick counter seen",
+     "url": "https://www.aol.com/articles/trumps-decision-waive-russian-sanctions-150900000.html",
+     "domain": "aol.com",
+     "seendate": "2026-10-17T18:00:00Z",
+     "image": "https://hermes.media.static.aol.com/media/2026/10/17/3965ddd3-1b1b-3330-9d27-591aa77ebbd6/bf147534-c9ef-4536-9730-067f0f87ac91.jpg"
+    },
+    {
+     "title": "Trump decision to waive Russian sanctions outrages Congress",
+     "url": "https://www.wsbradio.com/news/politics/trumps-decision/WZNZ54YYKI3JHGMRVLNX7CMX6Q/",
+     "domain": "wsbradio.com",
+     "seendate": "2026-10-17T18:00:00Z",
+     "image": "https://cmg-cmg-rd-20021-prod.cdn.arcpublishing.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-1.images.arcpublishing.com%2Fcmg%2FTFSHE6Q55YZVHD7AIMZHTXGZVU.jpg?auth=05c30aab84d6fe61a19de3e130108f79170fd3bf619aa7764513455e919915ae&smart=true"
+    },
+    {
+     "title": "Trump decision to waive Russian sanctions outrages Congress",
+     "url": "https://www.wgauradio.com/news/politics/trumps-decision/WZNZ54YYKI3JHGMRVLNX7CMX6Q/",
+     "domain": "wgauradio.com",
+     "seendate": "2026-10-17T17:45:00Z",
+     "image": "https://cmg-cmg-rd-20015-prod.cdn.arcpublishing.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-1.images.arcpublishing.com%2Fcmg%2FTFSHE6Q55YZVHD7AIMZHTXGZVU.jpg?auth=05c30aab84d6fe61a19de3e130108f79170fd3bf619aa7764513455e919915ae&smart=true"
+    },
+    {
+     "title": "Trump decision to waive Russian sanctions outrages Congress , but no quick counter seen",
+     "url": "https://www.union-bulletin.com/news/national/trumps-decision-to-waive-russian-sanctions-outrages-congress-but-no-quick-counter-seen/article_865ed412-ffc0-5448-b0d5-10596b4e5033.html",
+     "domain": "union-bulletin.com",
+     "seendate": "2026-10-17T17:30:00Z",
+     "image": "https://bloximages.newyork1.vip.townnews.com/union-bulletin.com/content/tncms/assets/v3/editorial/4/be/4be27737-8d7e-5ad5-9a25-7e026a61598d/6ad39550e3817.image.jpg?crop=1763%2C926%2C0%2C124"
+    }
+   ],
+   "aliases": []
+  },
+  {
+   "oid": "obj_afederal_busfield-citing-indictment-judge",
+   "headline": "New Mexico judge tosses Timothy Busfield indictment , citing prosecutorial misconduct",
+   "tokens": [
+    "mexico",
+    "judge",
+    "tosses",
+    "timothy",
+    "busfield",
+    "indictment",
+    "citing",
+    "prosecutorial",
+    "misconduct"
+   ],
+   "kind": "ruling",
+   "verb": "ruled",
+   "holder": "a federal court",
+   "formedOn": "2026-10-17",
+   "firstSeen": "2026-10-17T17:30:00Z",
+   "lastSeen": "2026-10-17T19:30:00Z",
+   "scans": 1,
+   "outlets": 20,
+   "peakOutlets": 20,
+   "status": "watch",
+   "permanence": {
+    "silentDays": 0,
+    "breaks": [],
+    "returns": []
+   },
+   "inversions": [],
+   "drafts": {},
+   "live": null,
+   "articles": [
+    {
+     "title": "New Mexico judge tosses Timothy Busfield indictment , citing prosecutorial misconduct",
+     "url": "https://local21news.com/news/nation-world/new-mexico-judge-tosses-timothy-busfield-indictment-citing-prosecutorial-misconduct",
+     "domain": "local21news.com",
+     "seendate": "2026-10-17T19:30:00Z",
+     "image": "https://local21news.com/resources/media2/16x9/5090/1320/0x265/90/a9f76b2e-d968-48bb-8225-fc292e425c9a-GettyImages2256757374.jpg"
+    },
+    {
+     "title": "New Mexico judge tosses Timothy Busfield indictment , citing prosecutorial misconduct",
+     "url": "https://ktul.com/news/nation-world/new-mexico-judge-tosses-timothy-busfield-indictment-citing-prosecutorial-misconduct",
+     "domain": "ktul.com",
+     "seendate": "2026-10-17T19:15:00Z",
+     "image": "https://ktul.com/resources/media2/16x9/5090/1320/0x265/90/a9f76b2e-d968-48bb-8225-fc292e425c9a-GettyImages2256757374.jpg"
+    },
+    {
+     "title": "New Mexico judge tosses Timothy Busfield indictment , citing prosecutorial misconduct",
+     "url": "https://cbs4local.com/news/nation-world/new-mexico-judge-tosses-timothy-busfield-indictment-citing-prosecutorial-misconduct",
+     "domain": "cbs4local.com",
+     "seendate": "2026-10-17T19:00:00Z",
+     "image": "https://cbs4local.com/resources/media2/16x9/5090/1320/0x265/90/a9f76b2e-d968-48bb-8225-fc292e425c9a-GettyImages2256757374.jpg"
+    },
+    {
+     "title": "New Mexico judge tosses Timothy Busfield indictment , citing prosecutorial misconduct",
+     "url": "https://katu.com/news/nation-world/new-mexico-judge-tosses-timothy-busfield-indictment-citing-prosecutorial-misconduct",
+     "domain": "katu.com",
+     "seendate": "2026-10-17T19:00:00Z",
+     "image": "https://katu.com/resources/media2/16x9/5090/1320/0x265/90/a9f76b2e-d968-48bb-8225-fc292e425c9a-GettyImages2256757374.jpg"
+    },
+    {
+     "title": "New Mexico judge tosses Timothy Busfield indictment , citing prosecutorial misconduct",
+     "url": "https://abc3340.com/news/nation-world/new-mexico-judge-tosses-timothy-busfield-indictment-citing-prosecutorial-misconduct",
+     "domain": "abc3340.com",
+     "seendate": "2026-10-17T19:00:00Z",
+     "image": "https://abc3340.com/resources/media2/16x9/5090/1320/0x265/90/a9f76b2e-d968-48bb-8225-fc292e425c9a-GettyImages2256757374.jpg"
+    },
+    {
+     "title": "New Mexico judge tosses Timothy Busfield indictment , citing prosecutorial misconduct",
+     "url": "https://wchstv.com/news/nation-world/new-mexico-judge-tosses-timothy-busfield-indictment-citing-prosecutorial-misconduct",
+     "domain": "wchstv.com",
+     "seendate": "2026-10-17T19:00:00Z",
+     "image": "https://wchstv.com/resources/media2/16x9/5090/1320/0x265/90/a9f76b2e-d968-48bb-8225-fc292e425c9a-GettyImages2256757374.jpg"
+    },
+    {
+     "title": "New Mexico judge tosses Timothy Busfield indictment , citing prosecutorial misconduct",
+     "url": "https://newschannel9.com/news/nation-world/new-mexico-judge-tosses-timothy-busfield-indictment-citing-prosecutorial-misconduct",
+     "domain": "newschannel9.com",
+     "seendate": "2026-10-17T18:30:00Z",
+     "image": "https://newschannel9.com/resources/media2/16x9/5090/1320/0x265/90/a9f76b2e-d968-48bb-8225-fc292e425c9a-GettyImages2256757374.jpg"
+    },
+    {
+     "title": "New Mexico judge tosses Timothy Busfield indictment , citing prosecutorial misconduct",
+     "url": "https://kcby.com/news/nation-world/new-mexico-judge-tosses-timothy-busfield-indictment-citing-prosecutorial-misconduct",
+     "domain": "kcby.com",
+     "seendate": "2026-10-17T18:30:00Z",
+     "image": "https://kcby.com/resources/media2/16x9/5090/1320/0x265/90/a9f76b2e-d968-48bb-8225-fc292e425c9a-GettyImages2256757374.jpg"
     }
    ],
    "aliases": []
   }
  ],
  "scans": [
-  {
-   "on": "2026-10-02",
-   "at": "2026-10-02T01:16:25.883Z",
-   "articles": 133,
-   "clusters": 74,
-   "new": 2,
-   "queued": [
-    "obj_thepresi_approval-economic-falls-house",
-    "obj_dhs_guidance-ice-memo-rules"
-   ],
-   "fixture": false
-  },
   {
    "on": "2026-10-02",
    "at": "2026-10-02T09:58:23.358Z",
@@ -8319,8 +8669,17 @@
    "new": 2,
    "queued": [],
    "fixture": false
+  },
+  {
+   "on": "2026-10-17",
+   "at": "2026-10-17T20:48:41.280Z",
+   "articles": 274,
+   "clusters": 135,
+   "new": 3,
+   "queued": [],
+   "fixture": false
   }
  ],
- "updatedAt": "2026-10-17T15:47:44.034Z",
- "overlayAppliedAt": "2026-10-17T02:09:39.226Z"
+ "updatedAt": "2026-10-17T20:48:41.280Z",
+ "overlayAppliedAt": "2026-10-17T12:09:00.000Z"
 }
