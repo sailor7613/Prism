@@ -344,6 +344,33 @@
   #pgmark { width: min(520px, 88vw); height: 112px; display: block; }
   .pgmast small { font-family: var(--mono); font-size: 9.5px; letter-spacing: .26em; text-transform: uppercase; color: var(--ink-low); }
   @media (max-width: 560px) { #pgmark { height: 78px; } }
+
+  /* ── the day map + the feed (10-17): plain readout */
+  .day { border: 1px solid var(--g4-rule); background: var(--g4-glass); border-radius: 4px; padding: 12px 14px 14px; margin: 0 0 14px; }
+  .day .dd { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; margin-bottom: 10px; }
+  .day .dd::-webkit-scrollbar { display: none; }
+  .day .dd a { font-family: var(--mono); font-size: 10.5px; letter-spacing: .08em; padding: 4px 10px; border: 1px solid var(--g4-rule); border-radius: 2px; color: var(--ink-mid); text-decoration: none; white-space: nowrap; }
+  .day .dd a.on { background: #e9ecf2; color: #0c0b09; border-color: #e9ecf2; }
+  .day .db { display: grid; grid-template-columns: minmax(0, 340px) 1fr; gap: 20px; align-items: center; }
+  .day .dmap { width: 100%; height: auto; display: block; }
+  .day .rd .when { font-family: var(--serif); font-size: 26px; margin-bottom: 6px; }
+  .day .rd p { margin: 0 0 8px; font-size: 15px; line-height: 1.45; color: var(--ink); }
+  .day .rd p.x { color: var(--ink-mid); font-size: 14px; }
+  .day .rd .key { font-family: var(--mono); font-size: 10px; color: var(--ink-low); margin-top: 10px; }
+  .day .rd .key i { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin: 0 4px 0 8px; vertical-align: 0; }
+  .day .rd .key i:first-child { margin-left: 0; }
+  @media (max-width: 700px) { .day .db { grid-template-columns: 1fr; } }
+  .card { display: block; padding: 14px 4px; border-bottom: 1px solid var(--g4-rule-soft); text-decoration: none; color: inherit; }
+  .card:hover { background: rgba(233,236,242,.04); }
+  .card .o { font-family: var(--mono); font-size: 10.5px; letter-spacing: .06em; color: var(--ink-low); }
+  .card .o b { color: var(--ink-mid); font-weight: 500; }
+  .card .h { font-family: var(--serif); font-size: 19px; line-height: 1.2; margin: 4px 0 6px; }
+  .card .sd { font-size: 14.5px; line-height: 1.45; color: var(--ink-mid); max-width: 70ch; }
+  .card .r { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 8px; font-family: var(--mono); font-size: 10.5px; color: var(--ink-low); }
+  .card .r b { font-weight: 400; color: var(--ink); font-size: 13px; margin-left: 4px; }
+  .card .r b.neg, .says.neg { color: #e9967f; } .card .r b.pos, .says.pos { color: #8fd0a0; } .card .r b.mix, .says.mix { color: #d8d0b0; }
+  .says { font-size: .62em; }
+  .rack { border-bottom: 0; }
 </style>
 </head>
 <body>
@@ -389,9 +416,10 @@
     <div class="pgmast"><canvas id="pgmark" aria-label="Parallelogram"></canvas><small>the paper · the day's media, read on one object</small></div>
     <div class="dek tut">The day's discourse, reduced. Each parallelogram is one segment on one object, cut to the words that carry it, scored, and placed on the graphmap — for the reader who is tired of the news but wants to be in the know from a distance.</div>
     <div class="sec first tut"><div class="eb">what you are looking at</div><h2><span class="orn"></span>The day's media, read on one object</h2><div class="gloss">Every piece below is one show or article, reduced to the lines that touch the object and scored: how heated the words are (Dia), whether the voice thinks the thing delivers (z), and how much of the object's light gets through (Lumens).</div></div>
+    <div class="sec"><div class="eb">the day</div><h2><span class="orn"></span>Where the coverage landed</h2></div>
     <div class="fod" id="fod" hidden></div>
-    <div class="floor" id="floor" hidden></div>
-    <div class="sec"><div class="eb">the paper</div><h2><span class="orn"></span>Parallelograms, newest first</h2><div class="gloss">Open one to read the tape on the graphmap. β marks a beta lede — read to the paywall only; ▣ marks the floor.</div></div>
+    <div class="floor tut" id="floor" hidden></div>
+    <div class="sec"><div class="eb">the feed</div><h2><span class="orn"></span>Every segment, newest first</h2><div class="gloss">Open one to read the tape on the graphmap. β marks a beta lede — read to the paywall only; ▣ marks the floor.</div></div>
     <div class="rack" id="front"></div>
     <div class="foot tut">A parallelogram's figure is literal: join the four stations' composite readings and you get a four-sided shape whose skew is the segment's split. Dia is distance from the object; z is what the voice believes happened; <span class="word" data-w="lumens">Lumens</span> is how much of the object's light gets through.</div>
   </div>
@@ -406,7 +434,7 @@
       <h1 style="font-weight:400;font-size:clamp(26px,3.6vw,40px);line-height:1.08;margin:6px 0 6px" id="pTitle"></h1>
       <div class="dek" id="pDek"></div>
       <div class="board" id="board"></div>
-      <div class="marks" id="marks"></div>
+      <div class="marks tut" id="marks"></div>
       <div class="split">
         <div class="stage">
           <div id="map"></div>
@@ -635,6 +663,15 @@
   // in force on a date = mean Dia / Lumens of baseline pieces dated within the 7 days up to that date;
   // falls back to the nearest earlier baseline, then the nearest at all. A station reading, not neutral ground.
   let paperFull = {};            // id → full JSON, filled by loadFront
+  // the plain layer (data/press/plain.json): how the scores are worded on the page — Heat (Dia), Says (z), Clarity (Lumens)
+  let PLAIN = { stations: {}, topics: {}, pieces: {} };
+  const MONL = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const dlab = d => { const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(d || ''); return m ? MONL[+m[2] - 1] + ' ' + (+m[3]) : (d || ''); };
+  const stName = k => (PLAIN.stations || {})[k] || k;
+  const topicOf = id => { const t = (PLAIN.pieces[id] || {}).topic; return t && PLAIN.topics[t] ? Object.assign({ key: t }, PLAIN.topics[t]) : null; };
+  const saysWord = (id, z) => { const t = topicOf(id); if (z == null) return '—'; if (z > 0.15) return t ? t.pos : 'yes'; if (z < -0.15) return t ? t.neg : 'no'; return 'mixed'; };
+  const saysCls = z => z == null ? '' : z > 0.15 ? 'pos' : z < -0.15 ? 'neg' : 'mix';
+  const headline = (p, D) => (D && D.source && D.source.title) || p.title || p.id;
   let seen = [];                 // the objects pass: data/press/objects_seen.json
   function floorFor(date) {
     const base = paperIndex.filter(p => (p.kind === 'baseline' || (paperFull[p.id] && paperFull[p.id].scoreboard && paperFull[p.id].scoreboard.baseline)) && p.date)
@@ -649,28 +686,45 @@
   }
 
   // ── the figure of the day: the lead object's four corners, each from its newest full reading (beta ledes and the floor excluded), joined
+  let dayPick = null;
   function renderFOD() {
     const el = $('#fod'); if (!el) return;
-    const arc = 'PG01';
-    const cand = paperIndex.filter(p => p.arc === arc && !p.partial && p.kind !== 'baseline' && paperFull[p.id] && !(paperFull[p.id].scoreboard || {}).baseline);
-    if (!cand.length) { el.hidden = true; return; }
-    // group by object: the figure of the day is the object with the most corners spoken (ties: more pieces, then newest)
-    const key = p => ((paperFull[p.id].object || {}).label || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
-    const groups = {}; cand.forEach(p => { (groups[key(p)] = groups[key(p)] || []).push(p); });
-    const cornersOf = g => new Set(g.flatMap(p => Object.keys(paperFull[p.id].scoreboard.stations || {}).filter(k => paperFull[p.id].scoreboard.stations[k]))).size;
-    const pick = Object.values(groups).sort((a, b) => (cornersOf(b) - cornersOf(a)) || (b.length - a.length) || (b[0].date < a[0].date ? -1 : 1))[0];
-    const stations = {}, src = {};
-    ['LI', 'RI', 'LP', 'RP'].forEach(k => { const hit = pick.find(p => (paperFull[p.id].scoreboard.stations || {})[k]); if (hit) { stations[k] = paperFull[hit.id].scoreboard.stations[k]; src[k] = hit; } });
-    const spoke = Object.keys(stations); if (!spoke.length) { el.hidden = true; return; }
-    const obj = (paperFull[pick[0].id].object || {}); const zAxis = obj.zAxis || { pos: 'delivers', neg: 'does not' };
-    const neg = spoke.filter(k => stations[k].readZ < -0.05), pos = spoke.filter(k => stations[k].readZ > 0.05), silent = ['LI', 'RI', 'LP', 'RP'].filter(k => !stations[k]);
-    const verdict = `${neg.length ? `${neg.length === 1 ? 'one corner says' : neg.length === spoke.length ? (spoke.length === 4 ? 'all four corners say' : spoke.length + ' corners say') : neg.length + ' corners say'} <span class="film">${zAxis.neg}</span>` : ''}${pos.length ? `${neg.length ? ' · ' : ''}${pos.join(', ')} ${pos.length === 1 ? 'says' : 'say'} <span class="film">${zAxis.pos}</span>` : ''}${silent.length ? ` · ${silent.join(' and ')} ${silent.length === 1 ? 'has' : 'have'} not spoken` : ''}`;
-    const sb = { stations: Object.assign({ LI: null, RI: null, LP: null, RP: null }, stations) };
-    const dates = pick.map(p => p.date).sort(); const day = Math.round((new Date(dates[dates.length - 1] + 'T00:00:00Z') - new Date('2026-10-09T00:00:00Z')) / 864e5) + 1;
+    const days = [...new Set(paperIndex.map(p => p.date).filter(Boolean))].sort().reverse();
+    if (!days.length) { el.hidden = true; return; }
+    const day = dayPick && days.includes(dayPick) ? dayPick : days[0];
+    const items = paperIndex.filter(p => p.date === day && paperFull[p.id]);
+    // the map: left/right across, establishment/populist up/down; nearer the edge = more heated; colour = what it says
+    const S = 300, c = S / 2, R = S * .44;
+    const corner = { LI: [-1, -1], RI: [1, -1], LP: [-1, 1], RP: [1, 1] };
+    const dots = [];
+    items.forEach((p, n) => { const st = paperFull[p.id].scoreboard.stations || {}; Object.keys(st).forEach(k => { if (!st[k] || !corner[k]) return; const r = Math.max(.12, Math.min(1, (st[k].dia || 0) / 100 * 1.6)); const [ux, uy] = corner[k]; const j = (n % 3 - 1) * .07; dots.push({ p, k, x: c + ux * (r + j) * R * .7071 * 1.3, y: c + uy * (r - j) * R * .7071 * 1.3, z: st[k].readZ, dia: st[k].dia }); }); });
+    const col = z => z == null ? '#9aa3b5' : z > 0.15 ? '#7cc48e' : z < -0.15 ? '#e07a62' : '#c9c2a6';
+    const svg = `<svg class="dmap" viewBox="0 0 ${S} ${S}" aria-label="the day's coverage on one map">
+      <rect x="6" y="6" width="${S - 12}" height="${S - 12}" fill="none" stroke="rgba(233,236,242,.12)"/>
+      <line x1="${c}" y1="6" x2="${c}" y2="${S - 6}" stroke="rgba(233,236,242,.08)"/><line x1="6" y1="${c}" x2="${S - 6}" y2="${c}" stroke="rgba(233,236,242,.08)"/>
+      <circle cx="${c}" cy="${c}" r="${R * .45}" fill="none" stroke="rgba(233,236,242,.07)"/>
+      ${[['LI', 14, 22, 'start'], ['RI', S - 14, 22, 'end'], ['LP', 14, S - 14, 'start'], ['RP', S - 14, S - 14, 'end']].map(([k, x, y, a]) => `<text x="${x}" y="${y}" text-anchor="${a}" font-family="var(--mono)" font-size="9.5" letter-spacing=".5" fill="${COLH[k]}">${stName(k).toUpperCase()}</text>`).join('')}
+      <circle cx="${c}" cy="${c}" r="3" fill="#e8d9a8"/>
+      ${dots.map(d => `<a href="#pg/${d.p.id}"><circle cx="${d.x.toFixed(1)}" cy="${d.y.toFixed(1)}" r="9" fill="${col(d.z)}" fill-opacity=".85" stroke="#0c0b09" stroke-width="1.5"><title>${d.p.program} · Heat ${d.dia} · ${saysWord(d.p.id, d.z)}</title></circle><text x="${d.x.toFixed(1)}" y="${(d.y + 21).toFixed(1)}" text-anchor="middle" font-family="var(--mono)" font-size="9" fill="rgba(233,236,242,.75)">${(d.p.program || '').replace(/^The /, '')}</text></a>`).join('')}
+    </svg>`;
+    // the readout: plain sentences, per topic
+    const byT = {}; items.forEach(p => { const t = topicOf(p.id); const k = t ? t.key : 'other'; (byT[k] = byT[k] || { t, ps: [] }).ps.push(p); });
+    const n = x => x === 1 ? 'One' : x === 2 ? 'Two' : x === 3 ? 'Three' : x === 4 ? 'Four' : x === 5 ? 'Five' : String(x);
+    const lines = Object.values(byT).map(({ t, ps }) => {
+      const z = p => paperFull[p.id].scoreboard.readZ;
+      const names = arr => arr.length > 3 ? n(arr.length) + ' segments' : arr.map(p => p.program).join(arr.length === 2 ? ' and ' : ', ').replace(/, ([^,]*)$/, ', and $1');
+      const neg = ps.filter(p => z(p) < -0.15), pos = ps.filter(p => z(p) > 0.15), mix = ps.filter(p => !neg.includes(p) && !pos.includes(p));
+      const parts = []; if (neg.length) parts.push(`${names(neg)} said ${t ? t.neg : 'no'}.`); if (pos.length) parts.push(`${names(pos)} said ${t ? t.pos : 'yes'}.`); if (mix.length) parts.push(`${names(mix)} ${mix.length === 1 ? 'was' : 'were'} mixed.`);
+      return `<p><b>${t ? t.name : 'Other'}</b> — ${parts.join(' ')}</p>`;
+    });
+    const hot = items.slice().sort((a, b) => (paperFull[b.id].scoreboard.dia || 0) - (paperFull[a.id].scoreboard.dia || 0))[0];
+    const clear = items.slice().sort((a, b) => (paperFull[b.id].scoreboard.lumens || 0) - (paperFull[a.id].scoreboard.lumens || 0))[0];
+    if (items.length > 1) lines.push(`<p class="x">Most heated: <b>${hot.program}</b> (${paperFull[hot.id].scoreboard.dia}). Clearest: <b>${clear.program}</b> (${paperFull[clear.id].scoreboard.lumens}).</p>`);
     el.hidden = false;
-    el.innerHTML = `${figureSVG(sb, 220)}<div><div class="ob">the figure of the day · ${arc} · day ${day} of the window</div><h3>${obj.label || 'the object'}</h3><div class="q">${zAxis.pos} ↔ ${zAxis.neg}?</div>
-      <div class="corners">${['LI', 'RI', 'LP', 'RP'].map(k => { const st = stations[k]; return `<div class="cn" style="--c:${COLH[k]}"><div class="k">${gl(k)}${k}</div><div class="z${st ? '' : ' none'}">${st ? zs(st.readZ) : '—'}</div><div class="m">${st ? `Dia ${st.dia} · <a href="#pg/${src[k].id}" style="color:var(--ink-mid)">${src[k].program}</a> · ${src[k].date.slice(5)}` : 'has not spoken'}</div></div>`; }).join('')}</div>
-      <div class="verdict">${verdict}</div></div>`;
+    el.className = 'day';
+    el.innerHTML = `<div class="dd">${days.slice(0, 10).map(d => `<a href="#" data-day="${d}" class="${d === day ? 'on' : ''}">${dlab(d)}</a>`).join('')}</div>
+      <div class="db">${svg}<div class="rd"><div class="when">${dlab(day)}</div>${lines.join('')}<div class="key"><i style="background:#e07a62"></i>no <i style="background:#7cc48e"></i>yes <i style="background:#c9c2a6"></i>mixed · further out = more heated</div></div></div>`;
+    el.querySelectorAll('.dd a').forEach(a => a.addEventListener('click', e => { e.preventDefault(); dayPick = a.dataset.day; renderFOD(); }));
   }
 
   function renderFloor() {
@@ -679,7 +733,7 @@
     const f = today ? floorFor(today) : null;
     if (!f) { el.hidden = true; return; }
     el.hidden = false;
-    el.innerHTML = `<span class="k">The floor</span><span><b class="RIc">${f.dia}</b> <span class="k">Dia</span></span><span><b>${f.lumens}</b> <span class="k">Lumens</span></span><span class="k">RI · ${f.how} · ${f.n} cut${f.n === 1 ? '' : 's'} · as of ${f.asOf}</span><span>${f.programs}. Every parallelogram on this page is read against the floor in force on its date — a station reading, not neutral ground.</span>`;
+    el.innerHTML = `<span class="k">The floor</span><span><b class="RIc">${f.dia}</b> <span class="k">Dia</span></span><span><b>${f.lumens}</b> <span class="k">Lumens</span></span><span class="k">RI · ${f.how} · ${f.n} cut${f.n === 1 ? '' : 's'} · as of ${f.asOf}</span><span>${f.programs}.</span><span class="tut">Every parallelogram on this page is read against the floor in force on its date — a station reading, not neutral ground.</span>`;
   }
 
   // ── the front page ──
@@ -693,18 +747,19 @@
     // the front page reads each piece's scoreboard for its figure
     const full = await Promise.all(paperIndex.map(p => fetch('../data/press/' + p.id + '.json', { cache: 'no-store' }).then(r => r.json()).catch(() => null)));
     paperFull = {}; paperIndex.forEach((p, i) => { if (full[i]) paperFull[p.id] = full[i]; });
+    try { PLAIN = Object.assign(PLAIN, await fetch('../data/press/plain.json', { cache: 'no-store' }).then(r => r.json())); } catch (e) {}
     try { seen = await fetch('../data/press/objects_seen.json', { cache: 'no-store' }).then(r => r.json()).then(j => j.sightings || []); } catch (e) { seen = []; }
     renderFloor(); renderFOD();
     el.innerHTML = paperIndex.map((p, i) => {
       const D = full[i], sb = D ? D.scoreboard : { stations: {} };
-      const isBase = p.kind === 'baseline' || !!sb.baseline; const beta = p.partial || (D && D.partial);
-      const f = (!isBase && p.date) ? floorFor(p.date) : null;
+      const beta = p.partial || (D && D.partial);
       const corners = ['LI', 'RI', 'LP', 'RP'].filter(k => sb.stations && sb.stations[k]);
-      return `<a class="prow${isBase ? ' base' : ''}" href="#pg/${p.id}">
-        ${figureSVG(sb, 34)}
-        <div class="t">${p.title || (D && D.title) || p.id}${isBase ? '<span class="mk base">▣ the floor</span>' : ''}${beta ? '<span class="mk">β beta lede</span>' : ''}</div>
-        <div class="d">${p.dek || ''}</div>
-        <div class="s"><span class="cn">${corners.map(k => `<span class="${k}c">${gl(k)}</span>`).join('')}</span><span>Dia <b>${sb.dia != null ? sb.dia : '—'}</b></span><span>z <b>${zs(sb.readZ)}</b></span><span>☼ <b>${sb.lumens != null ? sb.lumens : '—'}</b>${f ? `<span style="color:var(--ink-low)"> / ${f.lumens}</span>` : ''}</span><span class="src">${p.program || (D && D.source.program) || ''} · ${(p.date || '').slice(5)}</span></div></a>`;
+      const said = (PLAIN.pieces[p.id] || {}).said || '';
+      return `<a class="card" href="#pg/${p.id}">
+        <div class="o"><b>${p.program || (D && D.source.program) || ''}</b> · ${dlab(p.date)} · ${corners.map(stName).join(' + ')}${beta ? ' · opening only (paywall)' : ''}</div>
+        <div class="h">${headline(p, D)}</div>
+        ${said ? `<div class="sd">${said}</div>` : ''}
+        <div class="r"><span>Heat <b>${sb.dia != null ? sb.dia : '—'}</b></span><span>Says <b class="${saysCls(sb.readZ)}">${saysWord(p.id, sb.readZ)}</b></span><span>Clarity <b>${sb.lumens != null ? sb.lumens : '—'}</b></span></div></a>`;
     }).join('');
   }
 
@@ -715,17 +770,23 @@
     let D; try { D = await fetch('../data/press/' + id + '.json', { cache: 'no-store' }).then(r => r.json()); } catch (e) { $('#pTitle').textContent = 'No such piece.'; return; }
     const meta = paperIndex.find(p => p.id === id) || {};
     crumb('PG · ' + (D.source.program || '') + ' · ' + D.source.date);
-    $('#pTitleBar').textContent = D.title;
+    $('#pTitleBar').textContent = D.source.program || D.title;
     $('#pKicker').textContent = `${D.scoreboard.baseline ? 'Baseline' : 'Parallelogram'}${D.partial ? ' · ' + D.partial + ' only' : ''}${D.horizon && D.horizon !== 'US' ? ' · ' + D.horizon + ' horizon' : ''} · ${D.arc} · ${D.source.program} · cut ${D.source.date}${D.status === 'claude-draft' ? ' · Claude draft, scores pending Sailor\'s ruling' : ''}`;
-    $('#pTitle').innerHTML = D.title.replace(/Reduced/, '<span class="film">Reduced</span>');
-    $('#pDek').textContent = meta.dek || `${D.source.program}, “${D.source.title}” — cut to the words that carry the object, scored, and placed on the graphmap.`;
+    $('#pKicker').textContent = `${D.source.program} · ${dlab(D.source.date)} · ${Object.keys(D.scoreboard.stations || {}).filter(k => D.scoreboard.stations[k]).map(stName).join(' + ')}${D.partial ? ' · opening only (paywall)' : ''}${D.status === 'claude-draft' ? ' · draft scores' : ''}`;
+    $('#pTitle').textContent = D.source.title || D.title;
+    $('#pDek').textContent = (PLAIN.pieces[id] || {}).said || meta.dek || '';
     const P = D.positions === 'paragraphs'; const fpos = P ? (t => '¶' + t) : fmt;
     $('#tlen').textContent = P ? '¶' + (D.source.paragraphs || D.source.length) : fmt(D.source.length);
     const S = D.scoreboard, st = S.stations;
     // the board: five numbers — glyph · value · one gloss. The long notes live behind lit words (the Codex), not on the board.
     const f = S.baseline ? null : floorFor(D.source.date);
     const bn = (glyph, v, l, gloss, cls) => `<div class="bn ${cls || ''}">${gl(glyph)}<div class="v">${v}</div><div class="l">${l}${gloss ? `<i>${gloss}</i>` : ''}</div></div>`;
+    const tp = topicOf(id);
     $('#board').innerHTML =
+      bn('dia', S.dia, 'Heat', '') +
+      bn(S.readZ < 0 ? 'zneg' : 'z', `<span class="says ${saysCls(S.readZ)}">${saysWord(id, S.readZ)}</span>`, 'Says', '') +
+      bn('lumens', `<span class="film">${S.lumens}</span>`, 'Clarity', '');
+    if (false) $('#board').innerHTML =
       bn('lumens', `<span class="film">${S.lumens}</span>`, '<span class="word" data-w="lumens">Lumens</span>', 'of the light gets through') +
       bn('dia', S.dia, '<span class="word" data-w="dia">Dia</span>', S.tier) +
       bn(S.readZ < 0 ? 'zneg' : 'z', `${zs(S.readZ)}`, 'read <span class="word" data-w="z">z</span>', S.readZ == null ? '' : S.readZ < -0.05 ? 'does not deliver' : S.readZ > 0.05 ? 'delivers' : 'even') +
@@ -867,7 +928,7 @@
     const { A, T, V } = await sstLoad();
     const now = T && T.now.dollarShare != null ? T.now.dollarShare * 100 : null;
     const d = T ? T.delta * 100 : null;
-    el.innerHTML = `<div><div class="eb">Supply Shock Tracker</div><div class="q">Is the dollar getting stronger or weaker?</div></div>
+    el.innerHTML = `<div><div class="q">Supply Shock Tracker</div><div class="eb" style="margin-top:6px">the dollar’s share of traded energy</div></div>
       ${dialSVG(T)}
       <div class="read"><div class="num film loop">${now == null ? '—' : now.toFixed(1)}<small>%</small></div>
         <div class="vd ${V.word}"><b>${V.word}</b><span>${d == null ? '' : (d > 0 ? '+' : '−') + Math.abs(d).toFixed(1) + ' pts since ' + mlab(T.ago.period)}</span></div>
