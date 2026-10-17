@@ -215,7 +215,7 @@
           '<div class="fr-door" id="frSeat"><div class="ic">' + ICON.seat + '</div><div class="k">your seat</div><div class="n">Your pins and burns</div><div class="l" id="frSeatLine">' + esc(opts.seat || 'take a seat') + '</div></div>' +
           '<a class="fr-door" href="?example"><div class="ic">' + ICON.ted + '</div><div class="k">ted</div><div class="n">The tour, again</div><div class="l">a small real law, three moves</div></a>' +
           '<a class="fr-door paper" href="../parallelogram/"><div class="ic">' + ICON.paper + '</div><div class="k">the election paper</div><div class="n">Is the race moving the needle?</div><div class="l" id="frPaperLine">laying out…</div></a>' +
-          '<a class="fr-door" href="https://sailor7613.github.io/dreamgetty/" target="_blank" rel="noopener"><div class="ic">' + ICON.codex + '</div><div class="k">the codex</div><div class="n">The words, defined</div><div class="l">object · settlement · the frame · z</div></a>' +
+          '<a class="fr-door" href="https://sailor7613.github.io/Prism/dreamgetty/" target="_blank" rel="noopener"><div class="ic">' + ICON.codex + '</div><div class="k">the codex</div><div class="n">The words, defined</div><div class="l">object · settlement · the frame · z</div></a>' +
         '</div>' +
       '</div>';
 

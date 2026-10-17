@@ -630,7 +630,7 @@
     $('#badge').addEventListener('click', () => {
       // inside the shell the badge IS the pull; on its own it is the door to the villa
       if (window.parent !== window) { try { window.parent.postMessage({ type: 'g4:pull' }, '*'); return; } catch (e) {} }
-      const villa = location.hostname.endsWith('github.io') ? '/dreamgetty/' : '../../DreamGetty/dreamgetty/index.html'; location.href = villa;
+      const villa = '../dreamgetty/'; location.href = villa;
     });
   })();
 
@@ -990,7 +990,7 @@
   async function loadSST() {
     const el = $('#sst'); const esc = x => String(x == null ? '' : x).replace(/</g, '&lt;');
     const { A, T, V } = await sstLoad();
-    const villa = location.hostname.endsWith('github.io') ? '/dreamgetty/' : '../../DreamGetty/dreamgetty/index.html';
+    const villa = '../dreamgetty/';
     const last = pts => (pts && pts.length) ? pts[pts.length - 1] : null;
     const ser = (blk, key) => { try { return last(blk.series[key].points); } catch (e) { return null; } };
     const brent = A ? ser(A.price, 'RBRTE') : null, wti = A ? ser(A.price, 'RWTC') : null, diesel = A ? ser(A.price, 'EMM_EPMR_PTE_NUS_DPG') : null;

@@ -167,7 +167,7 @@
   const $ = s => document.querySelector(s);
   const rig = $('#rig'), prog = $('#prog'), villa = $('#villa'), glare = $('#glare'), note = $('#note'), bar = $('#bar'), desk = $('#desk');
   const q = new URLSearchParams(location.search);
-  const VILLA_URL = (location.hostname.endsWith('github.io') ? '/dreamgetty/' : '../../DreamGetty/dreamgetty/index.html') + '?arrive=glass';
+  const VILLA_URL = '../dreamgetty/' + '?arrive=glass';
   const SMALL = 0.55;
   let mode = 'boot', villaBuilt = false, program = null, progFn = '';
   const showing = () => !program ? 'desk' : program === 'bloomburger' ? ('bloomburger:' + ((progFn || 'PG').toLowerCase())) : program;
