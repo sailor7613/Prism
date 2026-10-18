@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="apple-touch-icon" href="../pwa/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="../pwa/g4-icon-180.png">
 <title>g4</title>
 <!-- ======================================================================
      g4 — THE SHELL, THE FRONT DOOR (2026-10-14 · Claude draft, for Sailor's eye)
@@ -51,7 +51,7 @@
   /* the bar — flat chrome; the navtool pierces it */
   #bar { position: fixed; top: 0; left: 0; right: 0; height: var(--bar-h); z-index: 40;
     background-image: repeating-linear-gradient(0deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 3px), linear-gradient(var(--g4-chrome), var(--g4-chrome-2));
-    border-bottom: 1px solid rgba(0,0,0,0.28); box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset;
+    border-bottom: 1px solid rgba(0,0,0,0.45); box-shadow: 0 1px 0 rgba(255,255,255,0.08) inset;
     display: grid; grid-template-columns: auto 1fr auto; align-items: center; font-size: 11px; color: var(--g4-chrome-ink);
     user-select: none; -webkit-user-select: none; touch-action: none; transition: opacity .6s, transform .6s; }
   #glyph { height: var(--bar-h); width: 40px; display: grid; place-items: center; cursor: pointer; border-right: 1px solid rgba(0,0,0,.12); }
@@ -91,7 +91,7 @@
     box-shadow: 0 30px 80px rgba(0,0,0,.6), 0 0 0 1px rgba(0,0,0,.4), 0 1px 0 rgba(255,255,255,.8) inset; pointer-events: none; }
   #housing::after { content: ''; position: absolute; left: 6%; right: 6%; top: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--film-1), rgba(255,255,255,.9), var(--film-3), transparent); opacity: .8; }
   #housing .chin { position: absolute; left: 50%; bottom: calc(var(--chin) * .28); transform: translateX(-50%); height: calc(var(--chin) * .46); }
-  #housing .chin img { height: 100%; width: auto; mix-blend-mode: multiply; opacity: .85; }
+  #housing .chin img { height: 100%; width: auto; opacity: .95; }
   /* the glare: the villa's lamp on the glass — the same highlight the 3D G4 carries,
      held while the housing stands, fading as the glass fills the display; and a matte
      grain over it so the surface reads as a surface */
@@ -138,7 +138,7 @@
 <div class="g4-sky" id="sky"><canvas id="skyc"></canvas></div>
 <iframe id="villa" title="the DreamGetty" allow="fullscreen"></iframe>
 <div id="rig">
-  <div id="housing"><div class="chin"><img src="../src/img/front/prism_mark.png" alt=""></div></div>
+  <div id="housing"><div class="chin"><img src="../src/img/prism3d.png" alt=""></div></div>
   <div id="glass">
     <iframe id="prog" title="program"></iframe>
     <div id="desk">
@@ -154,7 +154,7 @@
   </div>
 </div>
 <div id="bar">
-  <div id="glyph" title="the desktop · hold for the room"><svg viewBox="0 0 40 30" aria-hidden="true"><g fill="none" stroke="#1d2433" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><rect x="6" y="2" width="28" height="18" rx="3"/><path d="M20 20 v4"/><path d="M12 28 c4 -4 12 -4 16 0"/></g><circle cx="20" cy="11" r="1.6" fill="#1d2433"/></svg></div>
+  <div id="glyph" title="the desktop · hold for the room"><svg viewBox="0 0 40 30" aria-hidden="true"><g fill="none" stroke="#eceef3" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><rect x="6" y="2" width="28" height="18" rx="3"/><path d="M20 20 v4"/><path d="M12 28 c4 -4 12 -4 16 0"/></g><circle cx="20" cy="11" r="1.6" fill="#1d2433"/></svg></div>
   <div class="mid"><b id="barName">g4</b><span class="fn" id="barFn"></span></div>
   <div class="right"><span class="crumb" id="crumb"></span><span id="clock"></span></div>
 </div>

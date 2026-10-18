@@ -13,10 +13,11 @@
 :root {
   --g4-field:        var(--bg, rgb(10, 18, 38));
   --g4-field-deep:   rgb(6, 11, 26);
-  --g4-chrome:       #e9ecf2;
-  --g4-chrome-2:     #d7dbe3;
-  --g4-chrome-ink:   #1d2433;
-  --g4-chrome-dim:   rgba(29, 36, 51, 0.55);
+  /* dark mode (Sailor 10-17): the bar is a soft gray, the type light */
+  --g4-chrome:       #4b4f57;
+  --g4-chrome-2:     #3d4048;
+  --g4-chrome-ink:   #eceef3;
+  --g4-chrome-dim:   rgba(236, 238, 243, 0.6);
   --g4-rule:         rgba(233, 236, 242, 0.14);
   --g4-rule-soft:    rgba(233, 236, 242, 0.07);
   --g4-glass:        rgba(233, 236, 242, 0.04);
@@ -69,7 +70,7 @@ html.g4, .g4 body { background: var(--g4-field); color: var(--ink, #f5f0e8); }
   height: var(--bar-h); display: grid; place-items: center; cursor: pointer;
   border-right: 1px solid rgba(0,0,0,0.12);
 }
-.g4-bar .badge img { height: calc(var(--bar-h) * .7); width: auto; mix-blend-mode: multiply; opacity: .9; }
+.g4-bar .badge img { height: calc(var(--bar-h) * .8); width: auto; opacity: .95; }
 .g4-bar .nav {
   position: relative; height: var(--bar-h); overflow: hidden; cursor: grab;
 }

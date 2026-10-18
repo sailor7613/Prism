@@ -22127,6 +22127,25 @@ const g4Screen = {
   domeBadge.position.set(0, domeR * 0.62, domeR * 0.78);
   domeBadge.rotation.x = -0.55;
   imacG4.add(domeBadge);
+  // THE PRISM IN THE DOME (2026-10-17, Sailor): the hand-drawn badge retires — on the chin and on the dome —
+  // and the navtool's glass prism lives in the G4's base dome instead, a piercing object half out of the
+  // plastic: the same thin film (cos 2π·λ/[650,532,473]) as the bar's prism, turning slowly.
+  badge.visible = false; domeBadge.visible = false;
+  (function domePrism() {
+    const vert = 'varying vec3 vN; varying vec3 vV; void main(){ vec4 mv = modelViewMatrix * vec4(position,1.0); vN = normalize(normalMatrix * normal); vV = normalize(-mv.xyz); gl_Position = projectionMatrix * mv; }';
+    const frag = 'varying vec3 vN; varying vec3 vV; uniform float uT; void main(){ float f = 1.0 - abs(dot(normalize(vN), normalize(vV))); float t = f * 1.1 + uT; vec3 c = 0.5 + 0.5 * cos(6.2831853 * t * 1.3 / vec3(0.65, 0.532, 0.473)); vec3 col = mix(vec3(0.75, 0.82, 1.0), c, 0.6); gl_FragColor = vec4(col, 0.95 * (0.35 + 0.65 * f)); }';
+    const mat = new THREE.ShaderMaterial({ vertexShader: vert, fragmentShader: frag, uniforms: { uT: { value: 0 } }, transparent: true, depthWrite: false, side: THREE.DoubleSide });
+    const tri = new THREE.Shape(); tri.moveTo(-0.5, -0.42); tri.lineTo(0.5, -0.42); tri.lineTo(0, 0.5); tri.closePath();
+    const geo = new THREE.ExtrudeGeometry(tri, { depth: 0.34, bevelEnabled: false }); geo.center();
+    const prism = new THREE.Mesh(geo, mat); prism.renderOrder = 4;
+    prism.add(new THREE.LineSegments(new THREE.EdgesGeometry(geo), new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.6, depthWrite: false })));
+    prism.scale.setScalar(domeR * 0.42);
+    prism.position.set(0, domeR * 0.66, domeR * 0.74);     // set into the dome's front, half out of the plastic
+    prism.rotation.x = -0.35;
+    imacG4.add(prism); imacG4.userData.domePrism = prism;
+    const t0 = performance.now();
+    (function spin() { requestAnimationFrame(spin); if (document.hidden) return; const t = (performance.now() - t0) / 1000; mat.uniforms.uT.value = t * 0.05; prism.rotation.y = Math.sin(t * 0.35) * 0.6; prism.position.y = domeR * 0.66 + Math.sin(t * 0.8) * domeR * 0.015; })();
+  })();
   // the housing's parts, kept by name so the screen can change its shape (the timeline)
   imacG4.userData.screenParts = { backPanel: backPanel, chin: chin, badge: badge };
 
