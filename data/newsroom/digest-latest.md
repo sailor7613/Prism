@@ -1,9 +1,10 @@
 # Newsroom digest — 2026-10-18
 
-Register: 89 objects · this scan: 0 new, 0 seen again, 0 returned.
+Register: 91 objects · this scan: 2 new, 0 seen again, 0 returned.
 
-## Queued for drafting (0)
-- (nothing cleared the bar)
+## Queued for drafting (2)
+- **Republicans break ranks with Trump over Russia sanctions waiver : Terrible misjudgment** — tariff/sanction · imposed · holder: the President · formed 2026-10-18 · 3 outlets (peak 3) · `obj_thepresi_break-misjudgment-ranks-republicans`
+- **Trump Delays Russia Sanctions for 60 Days as White House Reviews Economic Impact** — tariff/sanction · imposed · holder: the President · formed 2026-10-18 · 3 outlets (peak 3) · `obj_thepresi_days-delays-economic-house`
 
 ## Permanence breaks (went silent while unresolved)
 - none today
@@ -12,7 +13,8 @@ Register: 89 objects · this scan: 0 new, 0 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- none
+- **Republicans break ranks with Trump over Russia sanctions waiver : Terrible misjudgment** — tariff/sanction · imposed · holder: the President · formed 2026-10-18 · 3 outlets (peak 3) · `obj_thepresi_break-misjudgment-ranks-republicans`
+- **Trump Delays Russia Sanctions for 60 Days as White House Reviews Economic Impact** — tariff/sanction · imposed · holder: the President · formed 2026-10-18 · 3 outlets (peak 3) · `obj_thepresi_days-delays-economic-house`
 
 ## Watching (34)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
