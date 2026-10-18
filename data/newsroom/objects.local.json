@@ -1,994 +1,1011 @@
 {
- "schema": "prism_object_overlay_v1",
- "updatedAt": "2026-10-17T12:09:00.000Z",
- "note": "Written ONLY by the drafting task (Sailor commits it). The scan owns objects.json and only reads this file. See scripts/newsroom/overlay.js.",
- "objects": {
-  "obj_astate_bills-changes-elections-gavin": {
-   "status": "drafted",
-   "drafts": {
-    "claude": "rdg_4dj3rzbo1o12"
-   },
-   "draftedOn": "2026-09-23",
-   "corrections": [
-    {
-     "field": "formedOn",
-     "from": "2026-09-21",
-     "to": "2026-09-19",
-     "why": "The Governor signed the bills 09-19 (gov.ca.gov release, Democracy Center, LA); 09-21 is the day regional papers ran it — report date, not as-of date.",
-     "by": "Claude (drafting)",
-     "on": "2026-09-23"
+  "schema": "prism_object_overlay_v1",
+  "updatedAt": "2026-10-18T18:03:46.263Z",
+  "note": "Written ONLY by the drafting task (Sailor commits it). The scan owns objects.json and only reads this file. See scripts/newsroom/overlay.js.",
+  "objects": {
+    "obj_astate_bills-changes-elections-gavin": {
+      "status": "drafted",
+      "drafts": {
+        "claude": "rdg_4dj3rzbo1o12"
+      },
+      "draftedOn": "2026-09-23",
+      "corrections": [
+        {
+          "field": "formedOn",
+          "from": "2026-09-21",
+          "to": "2026-09-19",
+          "why": "The Governor signed the bills 09-19 (gov.ca.gov release, Democracy Center, LA); 09-21 is the day regional papers ran it — report date, not as-of date.",
+          "by": "Claude (drafting)",
+          "on": "2026-09-23"
+        },
+        {
+          "field": "holder",
+          "from": "a state",
+          "to": "the State of California — Governor Newsom, with the Secretary of State and Attorney General as custodians",
+          "why": "\"a state\" is the right kind, unnamed.",
+          "by": "Claude (drafting)",
+          "on": "2026-09-23"
+        }
+      ]
     },
-    {
-     "field": "holder",
-     "from": "a state",
-     "to": "the State of California — Governor Newsom, with the Secretary of State and Attorney General as custodians",
-     "why": "\"a state\" is the right kind, unnamed.",
-     "by": "Claude (drafting)",
-     "on": "2026-09-23"
-    }
-   ]
-  },
-  "obj_thepresi_ban-cnn-house-now": {
-   "status": "drafted",
-   "drafts": {
-    "claude": "rdg_bcmepstrq2bx"
-   },
-   "draftedOn": "2026-09-23",
-   "corrections": [
-    {
-     "field": "holder",
-     "from": "the President",
-     "to": "the three outlets as plaintiffs (the suit); delivery held by the D.D.C. court — the President holds the ban the suit challenges",
-     "why": "The object is the lawsuit filed 09-21; the President holds the instrument it attacks (ban posted 09-18, enforced 09-19), not the suit.",
-     "by": "Claude (drafting)",
-     "on": "2026-09-23"
-    }
-   ]
-  },
-  "obj_hhs_advisers-approval-blood-cancer": {
-   "status": "drafted",
-   "drafts": {
-    "claude": "rdg_lq7vkp5b6adh"
-   },
-   "draftedOn": "2026-09-23",
-   "corrections": [
-    {
-     "field": "holder",
-     "from": "HHS",
-     "to": "the FDA (CDRH) — the Molecular and Clinical Genetics Devices Panel voted; the FDA decides",
-     "why": "The panel is advisory; the approval is the FDA's. HHS is one level too high.",
-     "by": "Claude (drafting)",
-     "on": "2026-09-23"
+    "obj_thepresi_ban-cnn-house-now": {
+      "status": "drafted",
+      "drafts": {
+        "claude": "rdg_bcmepstrq2bx"
+      },
+      "draftedOn": "2026-09-23",
+      "corrections": [
+        {
+          "field": "holder",
+          "from": "the President",
+          "to": "the three outlets as plaintiffs (the suit); delivery held by the D.D.C. court — the President holds the ban the suit challenges",
+          "why": "The object is the lawsuit filed 09-21; the President holds the instrument it attacks (ban posted 09-18, enforced 09-19), not the suit.",
+          "by": "Claude (drafting)",
+          "on": "2026-09-23"
+        }
+      ]
     },
-    {
-     "field": "kind",
-     "from": "vote (queued on \"They'll vote\")",
-     "to": "vote — held 09-23, 7–2 benefit-risk",
-     "why": "Queued on the morning pre-vote headline; the vote landed the same afternoon, so it had finished forming inside the day.",
-     "by": "Claude (drafting)",
-     "on": "2026-09-23"
-    }
-   ]
-  },
-  "obj_thepresi_about-agreement-denmark-greenland": {
-   "status": "drafted",
-   "drafts": {
-    "claude": "rdg_hlsezybrwj8d"
-   },
-   "draftedOn": "2026-09-24",
-   "corrections": [
-    {
-     "field": "formedOn",
-     "from": "2026-09-23",
-     "to": "2026-09-22",
-     "why": "Signed at the UN on 09-22 (AP/ABC, White House release 09-22); 09-23 is the AP explainer's date - report date, not as-of date.",
-     "by": "Claude (drafting)",
-     "on": "2026-09-24"
+    "obj_hhs_advisers-approval-blood-cancer": {
+      "status": "drafted",
+      "drafts": {
+        "claude": "rdg_lq7vkp5b6adh"
+      },
+      "draftedOn": "2026-09-23",
+      "corrections": [
+        {
+          "field": "holder",
+          "from": "HHS",
+          "to": "the FDA (CDRH) — the Molecular and Clinical Genetics Devices Panel voted; the FDA decides",
+          "why": "The panel is advisory; the approval is the FDA's. HHS is one level too high.",
+          "by": "Claude (drafting)",
+          "on": "2026-09-23"
+        },
+        {
+          "field": "kind",
+          "from": "vote (queued on \"They'll vote\")",
+          "to": "vote — held 09-23, 7–2 benefit-risk",
+          "why": "Queued on the morning pre-vote headline; the vote landed the same afternoon, so it had finished forming inside the day.",
+          "by": "Claude (drafting)",
+          "on": "2026-09-23"
+        }
+      ]
     },
-    {
-     "field": "holder",
-     "from": "the President",
-     "to": "the President, with Denmark and Greenland as co-signatories; entry into force held by the Danish and Greenlandic parliaments",
-     "why": "Signed by three governments; takes effect only after parliamentary processes in the Kingdom and Greenland.",
-     "by": "Claude (drafting)",
-     "on": "2026-09-24"
-    }
-   ],
-   "inversions": [
-    {
-     "station": "C",
-     "bands": "fluid +0.3, coalition +0.4",
-     "lean": "anti-imperial left believes the deal delivers the American hold it opposes; its rim (-0.3) distrusts the White House to build it",
-     "prior": "none cited",
-     "ruled": false
+    "obj_thepresi_about-agreement-denmark-greenland": {
+      "status": "drafted",
+      "drafts": {
+        "claude": "rdg_hlsezybrwj8d"
+      },
+      "draftedOn": "2026-09-24",
+      "corrections": [
+        {
+          "field": "formedOn",
+          "from": "2026-09-23",
+          "to": "2026-09-22",
+          "why": "Signed at the UN on 09-22 (AP/ABC, White House release 09-22); 09-23 is the AP explainer's date - report date, not as-of date.",
+          "by": "Claude (drafting)",
+          "on": "2026-09-24"
+        },
+        {
+          "field": "holder",
+          "from": "the President",
+          "to": "the President, with Denmark and Greenland as co-signatories; entry into force held by the Danish and Greenlandic parliaments",
+          "why": "Signed by three governments; takes effect only after parliamentary processes in the Kingdom and Greenland.",
+          "by": "Claude (drafting)",
+          "on": "2026-09-24"
+        }
+      ],
+      "inversions": [
+        {
+          "station": "C",
+          "bands": "fluid +0.3, coalition +0.4",
+          "lean": "anti-imperial left believes the deal delivers the American hold it opposes; its rim (-0.3) distrusts the White House to build it",
+          "prior": "none cited",
+          "ruled": false
+        },
+        {
+          "station": "A",
+          "bands": "coalition -0.45",
+          "lean": "reads the deal as the status quo ('essentially returns') after treating the Greenland push as a real threat",
+          "prior": "January 2026 coverage (not a live Reading)",
+          "ruled": false
+        }
+      ],
+      "permanenceNote": "The 2019-2026 Greenland acquisition campaign re-formed as a basing amendment; the register never carried the earlier arc."
     },
-    {
-     "station": "A",
-     "bands": "coalition -0.45",
-     "lean": "reads the deal as the status quo ('essentially returns') after treating the Greenland push as a real threat",
-     "prior": "January 2026 coverage (not a live Reading)",
-     "ruled": false
-    }
-   ],
-   "permanenceNote": "The 2019-2026 Greenland acquisition campaign re-formed as a basing amendment; the register never carried the earlier arc."
-  },
-  "obj_afederal_against-des-dismisses-judge": {
-   "status": "drafted",
-   "drafts": {
-    "claude": "rdg_i0yeik2zloas"
-   },
-   "draftedOn": "2026-09-24",
-   "corrections": [
-    {
-     "field": "formedOn",
-     "from": "2026-09-24",
-     "to": "2026-09-23",
-     "why": "Ruling issued Wednesday 09-23 (AP, CNN, Courthouse News); stories landed after 00:00 UTC.",
-     "by": "Claude (drafting)",
-     "on": "2026-09-24"
+    "obj_afederal_against-des-dismisses-judge": {
+      "status": "drafted",
+      "drafts": {
+        "claude": "rdg_i0yeik2zloas"
+      },
+      "draftedOn": "2026-09-24",
+      "corrections": [
+        {
+          "field": "formedOn",
+          "from": "2026-09-24",
+          "to": "2026-09-23",
+          "why": "Ruling issued Wednesday 09-23 (AP, CNN, Courthouse News); stories landed after 00:00 UTC.",
+          "by": "Claude (drafting)",
+          "on": "2026-09-24"
+        },
+        {
+          "field": "holder",
+          "from": "a federal court",
+          "to": "the Iowa District Court for Polk County (Judge Scott J. Beattie) - a state court; delivery now with the Iowa Supreme Court on appeal",
+          "why": "The case returned to state court in October 2025; the dismissal is a state-court ruling.",
+          "by": "Claude (drafting)",
+          "on": "2026-09-24"
+        }
+      ],
+      "inversions": [
+        {
+          "station": "B",
+          "bands": "coalition -0.3 vs fluid +0.55",
+          "lean": "party line follows the President's appeal against its own fluid band's First Amendment doctrine",
+          "prior": "none cited",
+          "ruled": false
+        }
+      ]
     },
-    {
-     "field": "holder",
-     "from": "a federal court",
-     "to": "the Iowa District Court for Polk County (Judge Scott J. Beattie) - a state court; delivery now with the Iowa Supreme Court on appeal",
-     "why": "The case returned to state court in October 2025; the dismissal is a state-court ruling.",
-     "by": "Claude (drafting)",
-     "on": "2026-09-24"
-    }
-   ],
-   "inversions": [
-    {
-     "station": "B",
-     "bands": "coalition -0.3 vs fluid +0.55",
-     "lean": "party line follows the President's appeal against its own fluid band's First Amendment doctrine",
-     "prior": "none cited",
-     "ruled": false
-    }
-   ]
-  },
-  "obj_thehouse_abc-approved-elizabeth-halfway": {
-   "status": "drafted",
-   "drafts": {
-    "claude": "rdg_8dg7irjjh09x"
-   },
-   "draftedOn": "2026-09-25",
-   "corrections": [
-    {
-     "field": "holder",
-     "from": "the House",
-     "to": "the Federal Bureau of Prisons",
-     "why": "A BOP placement decision about Elizabeth Holmes; the House is a token match on \"halfway house\".",
-     "by": "Claude (drafting)",
-     "on": "2026-09-24"
+    "obj_thehouse_abc-approved-elizabeth-halfway": {
+      "status": "drafted",
+      "drafts": {
+        "claude": "rdg_8dg7irjjh09x"
+      },
+      "draftedOn": "2026-09-25",
+      "corrections": [
+        {
+          "field": "holder",
+          "from": "the House",
+          "to": "the Federal Bureau of Prisons",
+          "why": "A BOP placement decision about Elizabeth Holmes; the House is a token match on \"halfway house\".",
+          "by": "Claude (drafting)",
+          "on": "2026-09-24"
+        },
+        {
+          "field": "kind",
+          "from": "vote",
+          "to": "administrative decision (prison placement)",
+          "why": "Nothing was voted on.",
+          "by": "Claude (drafting)",
+          "on": "2026-09-24"
+        },
+        {
+          "field": "formedOn",
+          "from": "2026-09-24",
+          "to": "2026-09-23",
+          "why": "Placement appeared in the BOP record and was reported Wednesday 09-23 (ABC, CNN, SFist, TMZ); 09-24 is the syndicated copies' date.",
+          "by": "Claude (drafting)",
+          "on": "2026-09-25"
+        },
+        {
+          "on": "2026-09-26",
+          "field": "holder/kind",
+          "from": "the House / vote",
+          "to": "the Bureau of Prisons / order",
+          "why": "The scanner read 'halfway house' as the House. The instrument is a BOP prerelease-custody decision under 18 U.S.C. §3624(c)."
+        }
+      ],
+      "permanenceNote": "Thin political object: the politics is the pending commutation request (January 2026), outside the window. A clemency decision would be the arc's real object."
     },
-    {
-     "field": "kind",
-     "from": "vote",
-     "to": "administrative decision (prison placement)",
-     "why": "Nothing was voted on.",
-     "by": "Claude (drafting)",
-     "on": "2026-09-24"
+    "obj_afederal_access-cnn-house-judge": {
+      "status": "drafted",
+      "drafts": {
+        "claude": "rdg_oq1spmhz7azt"
+      },
+      "draftedOn": "2026-09-24",
+      "corrections": [
+        {
+          "field": "holder",
+          "from": "a federal court",
+          "to": "the U.S. District Court for D.C. (Judge Timothy J. Kelly), TRO; compliance held by the White House / Secret Service at the gate",
+          "why": "Right kind, unnamed; the order was refused at the gate in the morning and obeyed by about noon, so the gate is part of the holder.",
+          "by": "Claude (drafting)",
+          "on": "2026-09-24"
+        }
+      ],
+      "inversions": [
+        {
+          "station": "B",
+          "bands": "fluid -0.45 -> +0.15",
+          "lean": "sign flip against its prior on the suit, on a new fact (the order)",
+          "prior": "rdg_bcmepstrq2bx (Claude draft, 09-21 window) - draft-to-draft, not a found reader",
+          "ruled": false
+        }
+      ],
+      "aliasCandidates": [
+        "obj_thepresi_ban-cnn-house-now",
+        "obj_afederal_arguments-ban-hears-house",
+        "obj_afederal_administration-ban-court-house",
+        "obj_thepresi_ban-hearing-house-media",
+        "obj_thepresi_ban-court-despite-hearing",
+        "obj_thepresi_400-biden-did-fact"
+      ]
     },
-    {
-     "field": "formedOn",
-     "from": "2026-09-24",
-     "to": "2026-09-23",
-     "why": "Placement appeared in the BOP record and was reported Wednesday 09-23 (ABC, CNN, SFist, TMZ); 09-24 is the syndicated copies' date.",
-     "by": "Claude (drafting)",
-     "on": "2026-09-25"
+    "obj_afederal_000-650-ballots-california": {
+      "aliasCandidates": [
+        "obj_afederal_against-ballot-bianco-california"
+      ]
     },
-    {
-     "on": "2026-09-26",
-     "field": "holder/kind",
-     "from": "the House / vote",
-     "to": "the Bureau of Prisons / order",
-     "why": "The scanner read 'halfway house' as the House. The instrument is a BOP prerelease-custody decision under 18 U.S.C. §3624(c)."
-    }
-   ],
-   "permanenceNote": "Thin political object: the politics is the pending commutation request (January 2026), outside the window. A clemency decision would be the arc's real object."
-  },
-  "obj_afederal_access-cnn-house-judge": {
-   "status": "drafted",
-   "drafts": {
-    "claude": "rdg_oq1spmhz7azt"
-   },
-   "draftedOn": "2026-09-24",
-   "corrections": [
-    {
-     "field": "holder",
-     "from": "a federal court",
-     "to": "the U.S. District Court for D.C. (Judge Timothy J. Kelly), TRO; compliance held by the White House / Secret Service at the gate",
-     "why": "Right kind, unnamed; the order was refused at the gate in the morning and obeyed by about noon, so the gate is part of the holder.",
-     "by": "Claude (drafting)",
-     "on": "2026-09-24"
-    }
-   ],
-   "inversions": [
-    {
-     "station": "B",
-     "bands": "fluid -0.45 -> +0.15",
-     "lean": "sign flip against its prior on the suit, on a new fact (the order)",
-     "prior": "rdg_bcmepstrq2bx (Claude draft, 09-21 window) - draft-to-draft, not a found reader",
-     "ruled": false
-    }
-   ],
-   "aliasCandidates": [
-    "obj_thepresi_ban-cnn-house-now",
-    "obj_afederal_arguments-ban-hears-house",
-    "obj_afederal_administration-ban-court-house",
-    "obj_thepresi_ban-hearing-house-media",
-    "obj_thepresi_ban-court-despite-hearing",
-    "obj_thepresi_400-biden-did-fact"
-   ]
-  },
-  "obj_afederal_000-650-ballots-california": {
-   "aliasCandidates": [
-    "obj_afederal_against-ballot-bianco-california"
-   ]
-  },
-  "obj_afederal_against-ballot-bianco-california": {
-   "status": "drafted",
-   "drafts": {
-    "claude": "rdg_jy46cnvrpz57"
-   },
-   "draftedOn": "2026-09-25",
-   "corrections": [
-    {
-     "field": "formedOn",
-     "from": "2026-09-25",
-     "to": "2026-09-24",
-     "why": "Ruling issued Thursday 09-24 (CalMatters, CBS LA, gov.ca.gov 09-24); stories landed after 00:00 UTC.",
-     "by": "Claude (drafting)",
-     "on": "2026-09-25"
+    "obj_afederal_against-ballot-bianco-california": {
+      "status": "drafted",
+      "drafts": {
+        "claude": "rdg_jy46cnvrpz57"
+      },
+      "draftedOn": "2026-09-25",
+      "corrections": [
+        {
+          "field": "formedOn",
+          "from": "2026-09-25",
+          "to": "2026-09-24",
+          "why": "Ruling issued Thursday 09-24 (CalMatters, CBS LA, gov.ca.gov 09-24); stories landed after 00:00 UTC.",
+          "by": "Claude (drafting)",
+          "on": "2026-09-25"
+        },
+        {
+          "field": "holder",
+          "from": "a federal court",
+          "to": "the California Supreme Court (state), unanimous, Chief Justice Guerrero — Cervantes v. Bianco and Bonta v. Bianco; compliance held by Sheriff Chad Bianco, custody returns to the Riverside County Registrar of Voters under the Attorney General's supervision",
+          "why": "The state's high court, not a federal court.",
+          "by": "Claude (drafting)",
+          "on": "2026-09-25"
+        }
+      ],
+      "permanenceNote": "Alias of obj_afederal_000-650-ballots-california (same ruling, watch, 24 outlets). The seizure arc predates the register (March 2026 seizure, April 2026 interim order, 08-23 argument) and touches obj_astate_bills-changes-elections-gavin (09-19 package made ballot seizure a felony).",
+      "aliasCandidates": [
+        "obj_afederal_000-650-ballots-california"
+      ]
     },
-    {
-     "field": "holder",
-     "from": "a federal court",
-     "to": "the California Supreme Court (state), unanimous, Chief Justice Guerrero — Cervantes v. Bianco and Bonta v. Bianco; compliance held by Sheriff Chad Bianco, custody returns to the Riverside County Registrar of Voters under the Attorney General's supervision",
-     "why": "The state's high court, not a federal court.",
-     "by": "Claude (drafting)",
-     "on": "2026-09-25"
-    }
-   ],
-   "permanenceNote": "Alias of obj_afederal_000-650-ballots-california (same ruling, watch, 24 outlets). The seizure arc predates the register (March 2026 seizure, April 2026 interim order, 08-23 argument) and touches obj_astate_bills-changes-elections-gavin (09-19 package made ballot seizure a felony).",
-   "aliasCandidates": [
-    "obj_afederal_000-650-ballots-california"
-   ]
-  },
-  "obj_afederal_appeals-court-death-innocence": {
-   "status": "drafted",
-   "drafts": {
-    "claude": "rdg_5jbr8a80k7tq"
-   },
-   "draftedOn": "2026-09-25",
-   "corrections": [
-    {
-     "field": "formedOn",
-     "from": "2026-09-25",
-     "to": "2026-09-24",
-     "why": "Ruling issued Thursday 09-24 (AP, Texas Tribune, KRGV 09-24); stories landed after 00:00 UTC — report date, not as-of date.",
-     "by": "Claude (drafting)",
-     "on": "2026-09-25"
+    "obj_afederal_appeals-court-death-innocence": {
+      "status": "drafted",
+      "drafts": {
+        "claude": "rdg_5jbr8a80k7tq"
+      },
+      "draftedOn": "2026-09-25",
+      "corrections": [
+        {
+          "field": "formedOn",
+          "from": "2026-09-25",
+          "to": "2026-09-24",
+          "why": "Ruling issued Thursday 09-24 (AP, Texas Tribune, KRGV 09-24); stories landed after 00:00 UTC — report date, not as-of date.",
+          "by": "Claude (drafting)",
+          "on": "2026-09-25"
+        },
+        {
+          "field": "holder",
+          "from": "a federal court",
+          "to": "the Texas Court of Criminal Appeals (state), 5–4 unsigned opinion; delivery now with the federal courts on habeas and with Cameron County DA Luis Saenz, who says he will seek the sentence",
+          "why": "The CCA is Texas's highest criminal court, not a federal court.",
+          "by": "Claude (drafting)",
+          "on": "2026-09-25"
+        }
+      ],
+      "inversions": [
+        {
+          "who": "Cameron County DA Luis Saenz (actor, not a station)",
+          "prior": "2024: conceded the State withheld material evidence at trial (AP, cited in-window 09-24)",
+          "now": "2026-09-24: will 'seek to carry out the punishment verdict' (KRGV)",
+          "status": "candidate — reported, not ruled",
+          "by": "Claude (drafting)",
+          "on": "2026-09-25"
+        }
+      ],
+      "permanenceNote": "Long arc first seen at this ruling (death 2007, conviction 2008, stay 2022, innocence findings 2024). Next object: a federal filing or an execution-date motion."
     },
-    {
-     "field": "holder",
-     "from": "a federal court",
-     "to": "the Texas Court of Criminal Appeals (state), 5–4 unsigned opinion; delivery now with the federal courts on habeas and with Cameron County DA Luis Saenz, who says he will seek the sentence",
-     "why": "The CCA is Texas's highest criminal court, not a federal court.",
-     "by": "Claude (drafting)",
-     "on": "2026-09-25"
-    }
-   ],
-   "inversions": [
-    {
-     "who": "Cameron County DA Luis Saenz (actor, not a station)",
-     "prior": "2024: conceded the State withheld material evidence at trial (AP, cited in-window 09-24)",
-     "now": "2026-09-24: will 'seek to carry out the punishment verdict' (KRGV)",
-     "status": "candidate — reported, not ruled",
-     "by": "Claude (drafting)",
-     "on": "2026-09-25"
-    }
-   ],
-   "permanenceNote": "Long arc first seen at this ruling (death 2007, conviction 2008, stay 2022, innocence findings 2024). Next object: a federal filing or an execution-date motion."
-  },
-  "obj_afederal_ban-blocks-federal-judge": {
-   "status": "dismissed",
-   "corrections": [
-    {
-     "field": "formedOn",
-     "from": "2026-09-25",
-     "to": "2026-09-24",
-     "why": "The order is dated 2026-09-24; 09-25 is the report date, not the as-of date (§4c). Claude's call, 2026-09-26 run."
-    }
-   ],
-   "dismissedWhy": "Duplicate: same instrument as obj_afederal_access-cnn-house-judge — Judge Kelly's TRO restoring CNN/MS NOW/Politico hard passes, entered ~1 a.m. ET 2026-09-24, already drafted as rdg_oq1spmhz7azt. The 09-25 items are syndicated re-reports (one hiphopwired story on three sister sites), not a new order."
-  },
-  "obj_bill_hr-119-5334": {
-   "status": "drafted",
-   "drafts": {
-    "claude": "rdg_1fw5rn0x8jcj"
-   },
-   "draftedOn": "2026-09-26",
-   "corrections": [
-    {
-     "field": "formedOn",
-     "from": "2026-09-16",
-     "to": "2026-09-18",
-     "why": "09-16 is the House vote that cleared Congress; the President signed H.R. 5334 on Friday 09-18 (White House statement 09-18). The law finished forming at the signature.",
-     "by": "Claude (drafting)",
-     "on": "2026-09-27"
+    "obj_afederal_ban-blocks-federal-judge": {
+      "status": "dismissed",
+      "corrections": [
+        {
+          "field": "formedOn",
+          "from": "2026-09-25",
+          "to": "2026-09-24",
+          "why": "The order is dated 2026-09-24; 09-25 is the report date, not the as-of date (§4c). Claude's call, 2026-09-26 run."
+        }
+      ],
+      "dismissedWhy": "Duplicate: same instrument as obj_afederal_access-cnn-house-judge — Judge Kelly's TRO restoring CNN/MS NOW/Politico hard passes, entered ~1 a.m. ET 2026-09-24, already drafted as rdg_oq1spmhz7azt. The 09-25 items are syndicated re-reports (one hiphopwired story on three sister sites), not a new order."
     },
-    {
-     "field": "holder",
-     "from": "the House",
-     "to": "the President — holds implementation (due within 30 days) and a national-interest waiver over every sanction and tariff; Congress wrote it",
-     "why": "The House was the last chamber to act, not the holder of delivery.",
-     "by": "Claude (drafting)",
-     "on": "2026-09-27"
-    }
-   ],
-   "inversions": [
-    {
-     "station": "A",
-     "lean": true,
-     "prior": "CAATSA 2017 (House 419-3); House Democrats as the Ukraine/sanctions caucus since 2022",
-     "now": "152 of 210 House Democrats voted no on 2026-09-16, following Jeffries (Trump \"cannot be entrusted\" with tariff powers)",
-     "note": "Stated/operative displacement: a vote against the tariff key (operative), not against sanctions (stated). Reported, not ruled."
-    }
-   ],
-   "permanenceNote": "Return, renamed: the Sanctioning Russia Act of 2025 (S. 1241 / H.R. 2548, filed 2025-04-01) stalled through 2025 and returned after Graham died (2026-07-12) under his name, with Iran added, on a House vehicle (H.R. 5334, originally the SEED Act — the catalog still carries that title).",
-   "aliasCandidates": [
-    "Sanctioning Russia Act of 2025",
-    "S. 1241",
-    "H.R. 2548",
-    "Graham Russia sanctions bill"
-   ]
-  },
-  "obj_thepresi_approved-cancel-congressionally-funds": {
-   "status": "drafted",
-   "drafts": {
-    "claude": "rdg_yl1nla2fcy3v"
-   },
-   "draftedOn": "2026-09-26",
-   "corrections": [
-    {
-     "field": "formedOn",
-     "from": "2026-09-27",
-     "to": "2026-09-25",
-     "why": "The special message went to Congress Friday 09-25 (Newsweek 09-25 23:03 EDT; ABC \"Friday evening\"); 09-27 is the syndicated copies date — report date, not as-of date.",
-     "by": "Claude (drafting)",
-     "on": "2026-09-27"
+    "obj_bill_hr-119-5334": {
+      "status": "drafted",
+      "drafts": {
+        "claude": "rdg_1fw5rn0x8jcj"
+      },
+      "draftedOn": "2026-09-26",
+      "corrections": [
+        {
+          "field": "formedOn",
+          "from": "2026-09-16",
+          "to": "2026-09-18",
+          "why": "09-16 is the House vote that cleared Congress; the President signed H.R. 5334 on Friday 09-18 (White House statement 09-18). The law finished forming at the signature.",
+          "by": "Claude (drafting)",
+          "on": "2026-09-27"
+        },
+        {
+          "field": "holder",
+          "from": "the House",
+          "to": "the President — holds implementation (due within 30 days) and a national-interest waiver over every sanction and tariff; Congress wrote it",
+          "why": "The House was the last chamber to act, not the holder of delivery.",
+          "by": "Claude (drafting)",
+          "on": "2026-09-27"
+        }
+      ],
+      "inversions": [
+        {
+          "station": "A",
+          "lean": true,
+          "prior": "CAATSA 2017 (House 419-3); House Democrats as the Ukraine/sanctions caucus since 2022",
+          "now": "152 of 210 House Democrats voted no on 2026-09-16, following Jeffries (Trump \"cannot be entrusted\" with tariff powers)",
+          "note": "Stated/operative displacement: a vote against the tariff key (operative), not against sanctions (stated). Reported, not ruled."
+        }
+      ],
+      "permanenceNote": "Return, renamed: the Sanctioning Russia Act of 2025 (S. 1241 / H.R. 2548, filed 2025-04-01) stalled through 2025 and returned after Graham died (2026-07-12) under his name, with Iran added, on a House vehicle (H.R. 5334, originally the SEED Act — the catalog still carries that title).",
+      "aliasCandidates": [
+        "Sanctioning Russia Act of 2025",
+        "S. 1241",
+        "H.R. 2548",
+        "Graham Russia sanctions bill"
+      ]
     },
-    {
-     "field": "kind",
-     "from": "vote",
-     "to": "executive action — special rescission message under the Impoundment Control Act (2 U.S.C. §683)",
-     "why": "Nothing was voted on; the point of a pocket rescission is that no vote happens.",
-     "by": "Claude (drafting)",
-     "on": "2026-09-27"
+    "obj_thepresi_approved-cancel-congressionally-funds": {
+      "status": "drafted",
+      "drafts": {
+        "claude": "rdg_yl1nla2fcy3v"
+      },
+      "draftedOn": "2026-09-26",
+      "corrections": [
+        {
+          "field": "formedOn",
+          "from": "2026-09-27",
+          "to": "2026-09-25",
+          "why": "The special message went to Congress Friday 09-25 (Newsweek 09-25 23:03 EDT; ABC \"Friday evening\"); 09-27 is the syndicated copies date — report date, not as-of date.",
+          "by": "Claude (drafting)",
+          "on": "2026-09-27"
+        },
+        {
+          "field": "kind",
+          "from": "vote",
+          "to": "executive action — special rescission message under the Impoundment Control Act (2 U.S.C. §683)",
+          "why": "Nothing was voted on; the point of a pocket rescission is that no vote happens.",
+          "by": "Claude (drafting)",
+          "on": "2026-09-27"
+        },
+        {
+          "field": "holder",
+          "from": "the President",
+          "to": "the President through OMB (Director Russ Vought); delivery held by the calendar — the funds lapse at fiscal-year end, five days after the message — with Congress and the courts as the only brakes",
+          "why": "Right actor, but the instrument runs on the clock, not a signature.",
+          "by": "Claude (drafting)",
+          "on": "2026-09-27"
+        }
+      ],
+      "inversions": [
+        {
+          "station": "object",
+          "bands": "objectLayer",
+          "lean": "the 1974 Impoundment Control Act, written to stop presidential impoundment, is the vehicle of this one (y)",
+          "prior": "the Act itself (1974)",
+          "ruled": false
+        }
+      ],
+      "permanenceNote": "A RETURN: the first pocket rescission in nearly 50 years (late Aug 2025, $4.9B foreign aid) went quiet after the Supreme Court stay of Sept 2025 without a merits ruling; the same maneuver returns one year later on refugee and diversity money. The register never carried the 2025 arc.",
+      "aliasCandidates": [
+        "pocket rescission",
+        "$810 million rescission",
+        "Trump cancels $1B in approved funds"
+      ]
     },
-    {
-     "field": "holder",
-     "from": "the President",
-     "to": "the President through OMB (Director Russ Vought); delivery held by the calendar — the funds lapse at fiscal-year end, five days after the message — with Congress and the courts as the only brakes",
-     "why": "Right actor, but the instrument runs on the clock, not a signature.",
-     "by": "Claude (drafting)",
-     "on": "2026-09-27"
-    }
-   ],
-   "inversions": [
-    {
-     "station": "object",
-     "bands": "objectLayer",
-     "lean": "the 1974 Impoundment Control Act, written to stop presidential impoundment, is the vehicle of this one (y)",
-     "prior": "the Act itself (1974)",
-     "ruled": false
-    }
-   ],
-   "permanenceNote": "A RETURN: the first pocket rescission in nearly 50 years (late Aug 2025, $4.9B foreign aid) went quiet after the Supreme Court stay of Sept 2025 without a merits ruling; the same maneuver returns one year later on refugee and diversity money. The register never carried the 2025 arc.",
-   "aliasCandidates": [
-    "pocket rescission",
-    "$810 million rescission",
-    "Trump cancels $1B in approved funds"
-   ]
-  },
-  "obj_thepresi_hormuz-iran-open-proposal": {
-   "status": "drafted",
-   "drafts": {
-    "claude": "rdg_6gsmq4x22x20"
-   },
-   "draftedOn": "2026-09-27",
-   "corrections": [
-    {
-     "field": "formedOn",
-     "from": "2026-09-27",
-     "to": "2026-09-26",
-     "why": "Trump rejected the roadmap on record as he left the White House Saturday 09-26 (CBS; Times of Israel liveblog 09-26); 09-27 is the syndicated iHeart copies date — report date, not as-of date.",
-     "by": "Claude (drafting)",
-     "on": "2026-09-27"
+    "obj_thepresi_hormuz-iran-open-proposal": {
+      "status": "drafted",
+      "drafts": {
+        "claude": "rdg_6gsmq4x22x20"
+      },
+      "draftedOn": "2026-09-27",
+      "corrections": [
+        {
+          "field": "formedOn",
+          "from": "2026-09-27",
+          "to": "2026-09-26",
+          "why": "Trump rejected the roadmap on record as he left the White House Saturday 09-26 (CBS; Times of Israel liveblog 09-26); 09-27 is the syndicated iHeart copies date — report date, not as-of date.",
+          "by": "Claude (drafting)",
+          "on": "2026-09-27"
+        },
+        {
+          "field": "kind",
+          "from": "vote",
+          "to": "executive decision — the President refusing Iran's seven-day Hormuz roadmap, keeping the naval blockade (reimposed 07-14) in place",
+          "why": "Nothing was voted on. The instrument is the blockade; the refusal is the holder keeping it.",
+          "by": "Claude (drafting)",
+          "on": "2026-09-27"
+        }
+      ],
+      "inversions": [
+        {
+          "station": "D",
+          "bands": "coalition",
+          "lean": "the base that backed Trump as the end-foreign-wars candidate backs an open-ended blockade; the band registers it without reversing (partial)",
+          "prior": "2024 campaign positioning; no live Reading cited",
+          "ruled": false
+        }
+      ],
+      "permanenceNote": "A RETURN (lean): third pass of the reopen-for-relief bargain — April ceasefire reopening provisions, June Islamabad memorandum (collapsed by July), now the seven-day roadmap. The register never carried the April or June arcs.",
+      "aliasCandidates": [
+        "seven-day roadmap",
+        "Iran Hormuz proposal",
+        "Trump Strait"
+      ]
     },
-    {
-     "field": "kind",
-     "from": "vote",
-     "to": "executive decision — the President refusing Iran's seven-day Hormuz roadmap, keeping the naval blockade (reimposed 07-14) in place",
-     "why": "Nothing was voted on. The instrument is the blockade; the refusal is the holder keeping it.",
-     "by": "Claude (drafting)",
-     "on": "2026-09-27"
-    }
-   ],
-   "inversions": [
-    {
-     "station": "D",
-     "bands": "coalition",
-     "lean": "the base that backed Trump as the end-foreign-wars candidate backs an open-ended blockade; the band registers it without reversing (partial)",
-     "prior": "2024 campaign positioning; no live Reading cited",
-     "ruled": false
-    }
-   ],
-   "permanenceNote": "A RETURN (lean): third pass of the reopen-for-relief bargain — April ceasefire reopening provisions, June Islamabad memorandum (collapsed by July), now the seven-day roadmap. The register never carried the April or June arcs.",
-   "aliasCandidates": [
-    "seven-day roadmap",
-    "Iran Hormuz proposal",
-    "Trump Strait"
-   ]
-  },
-  "obj_thepresi_approved-biden-cutting-economy": {
-   "status": "drafted",
-   "drafts": {
-    "claude": "rdg_qsov81k3le2s"
-   },
-   "draftedOn": "2026-09-28",
-   "corrections": [
-    {
-     "field": "formedOn",
-     "from": "2026-09-27",
-     "to": "2026-09-28",
-     "why": "The final rule was released by DOT on 09-28. 09-26 was Trump saying he approved it (reported 09-27): an announcement, not the instrument.",
-     "by": "Claude (drafting)",
-     "on": "2026-09-28"
+    "obj_thepresi_approved-biden-cutting-economy": {
+      "status": "drafted",
+      "drafts": {
+        "claude": "rdg_qsov81k3le2s"
+      },
+      "draftedOn": "2026-09-28",
+      "corrections": [
+        {
+          "field": "formedOn",
+          "from": "2026-09-27",
+          "to": "2026-09-28",
+          "why": "The final rule was released by DOT on 09-28. 09-26 was Trump saying he approved it (reported 09-27): an announcement, not the instrument.",
+          "by": "Claude (drafting)",
+          "on": "2026-09-28"
+        },
+        {
+          "field": "holder",
+          "from": "the President",
+          "to": "NHTSA / the Department of Transportation (Secretary Duffy), on the President's approval",
+          "why": "The rule is NHTSA's under EPCA; the President approved it.",
+          "by": "Claude (drafting)",
+          "on": "2026-09-28"
+        }
+      ],
+      "inversions": [],
+      "permanenceNote": "A return (lean): third pass of the same standard. 2020 SAFE Vehicles Rule rollback, Biden 2022/2024 rules, now SAFE Vehicles Rule III. Penalties for missing it were zeroed in July 2025.",
+      "aliasCandidates": [
+        "obj_thepresi_back-biden-electric-era",
+        "Freedom Means Affordable Cars",
+        "SAFE Vehicles Rule III",
+        "CAFE rollback"
+      ]
     },
-    {
-     "field": "holder",
-     "from": "the President",
-     "to": "NHTSA / the Department of Transportation (Secretary Duffy), on the President's approval",
-     "why": "The rule is NHTSA's under EPCA; the President approved it.",
-     "by": "Claude (drafting)",
-     "on": "2026-09-28"
-    }
-   ],
-   "inversions": [],
-   "permanenceNote": "A return (lean): third pass of the same standard. 2020 SAFE Vehicles Rule rollback, Biden 2022/2024 rules, now SAFE Vehicles Rule III. Penalties for missing it were zeroed in July 2025.",
-   "aliasCandidates": [
-    "obj_thepresi_back-biden-electric-era",
-    "Freedom Means Affordable Cars",
-    "SAFE Vehicles Rule III",
-    "CAFE rollback"
-   ]
-  },
-  "obj_thepresi_billion-china-cuts-lists": {
-   "status": "drafted",
-   "drafts": {
-    "claude": "rdg_4ot3ind0ufll"
-   },
-   "draftedOn": "2026-09-28",
-   "corrections": [
-    {
-     "field": "holder",
-     "from": "the President",
-     "to": "the U.S. Trade Representative (Greer) with China's commerce ministry, under the President and Xi",
-     "why": "The lists were issued by USTR and MOFCOM; the President struck the deal at the 09-24 meeting.",
-     "by": "Claude (drafting)",
-     "on": "2026-09-28"
+    "obj_thepresi_billion-china-cuts-lists": {
+      "status": "drafted",
+      "drafts": {
+        "claude": "rdg_4ot3ind0ufll"
+      },
+      "draftedOn": "2026-09-28",
+      "corrections": [
+        {
+          "field": "holder",
+          "from": "the President",
+          "to": "the U.S. Trade Representative (Greer) with China's commerce ministry, under the President and Xi",
+          "why": "The lists were issued by USTR and MOFCOM; the President struck the deal at the 09-24 meeting.",
+          "by": "Claude (drafting)",
+          "on": "2026-09-28"
+        },
+        {
+          "field": "kind",
+          "from": "tariff/sanction (imposed)",
+          "to": "tariff/sanction (cut)",
+          "why": "The instrument lowers tariffs; nothing was imposed.",
+          "by": "Claude (drafting)",
+          "on": "2026-09-28"
+        }
+      ],
+      "inversions": [
+        {
+          "station": "B",
+          "bands": "fluid +0.45",
+          "lean": "China-hawk institutional right reads tariff cuts to China as the policy working; keeps its sign by holding that the chips leverage survives",
+          "prior": "tariff-as-leverage case, coverage since 2018 (not a live Reading)",
+          "ruled": false
+        }
+      ],
+      "permanenceNote": "A return (lean): the trade-truce arc (2025 escalation to 145%, 2025-10-30 Busan truce, 2026-09-24 Washington meeting). The register never carried the Busan arc.",
+      "aliasCandidates": [
+        "obj_thepresi_30b-china-cut-goods",
+        "30-for-30",
+        "US-China tariff lists"
+      ]
     },
-    {
-     "field": "kind",
-     "from": "tariff/sanction (imposed)",
-     "to": "tariff/sanction (cut)",
-     "why": "The instrument lowers tariffs; nothing was imposed.",
-     "by": "Claude (drafting)",
-     "on": "2026-09-28"
-    }
-   ],
-   "inversions": [
-    {
-     "station": "B",
-     "bands": "fluid +0.45",
-     "lean": "China-hawk institutional right reads tariff cuts to China as the policy working; keeps its sign by holding that the chips leverage survives",
-     "prior": "tariff-as-leverage case, coverage since 2018 (not a live Reading)",
-     "ruled": false
-    }
-   ],
-   "permanenceNote": "A return (lean): the trade-truce arc (2025 escalation to 145%, 2025-10-30 Busan truce, 2026-09-24 Washington meeting). The register never carried the Busan arc.",
-   "aliasCandidates": [
-    "obj_thepresi_30b-china-cut-goods",
-    "30-for-30",
-    "US-China tariff lists"
-   ]
-  },
-  "obj_thepresi_30b-china-cut-goods": {
-   "status": "dismissed",
-   "dismissedWhy": "Duplicate: same instrument as obj_thepresi_billion-china-cuts-lists (the reciprocal $30B lists released 2026-09-28), drafted as rdg_4ot3ind0ufll. Three Sinclair sites carrying one story.",
-   "aliasCandidates": [
-    "obj_thepresi_billion-china-cuts-lists"
-   ]
-  },
-  "obj_thepresi_broker-deal-even-iran": {
-   "status": "dismissed",
-   "dismissedWhy": "Duplicate: the headline instrument is Trump's rejection of Iran's seven-day Hormuz roadmap, already drafted as rdg_6gsmq4x22x20 (obj_thepresi_hormuz-iran-open-proposal). The 09-28 news is mediators working on a revised phased framework, with talks resuming; no new agreement, order or vote. Not a vote (register kind is wrong). If the revised deal lands, a later scan will see it as a new object.",
-   "permanenceNote": "Continuation of the Hormuz arc; per the 09-28 AP report, officials say the U.S. has not formally rejected the current proposal.",
-   "aliasCandidates": [
-    "obj_thepresi_hormuz-iran-open-proposal"
-   ]
-  },
-  "obj_thepresi_denies-iran-relief-report": {
-   "status": "dismissed",
-   "dismissedWhy": "No instrument: Trump's 2026-09-28 Truth Social denial of an Axios report (09-27) that U.S. negotiators were weighing Iran sanctions relief for nuclear concessions. No sanctions were imposed, lifted or ordered; the register's \"imposed\" is wrong. The 20 outlets are one iHeart syndicated story. Same indirect Iran talks as obj_thepresi_broker-deal-even-iran (dismissed 09-28) and the Hormuz rejection drafted as rdg_6gsmq4x22x20. If relief is actually granted or refused by order, a later scan will see it as a new object.",
-   "corrections": [
-    {
-     "field": "kind",
-     "was": "tariff/sanction · imposed",
-     "now": "denial of a press report (no instrument)",
-     "why": "nothing imposed or lifted"
-    }
-   ]
-  },
-  "obj_thepresi_iran-openness-rejects-relief": {
-   "status": "dismissed",
-   "dismissedWhy": "No instrument, and a duplicate: the same Trump denial (09-28) of the Axios sanctions-relief report already dismissed as obj_thepresi_denies-iran-relief-report. Today’s three outlets are one syndicated radio story (Reuters rewrite) adding Pezeshkian saying Iran is open to talks without coercion. Nothing voted, ordered, imposed or lifted; the register’s \"vote\" is wrong. If relief is granted or refused by order, or a deal is signed, a later scan will see a new object. Claude’s call, 2026-09-29 12:04 UTC run.",
-   "corrections": [
-    {
-     "field": "kind",
-     "was": "vote · voted",
-     "now": "denial of a press report (no instrument)",
-     "why": "nothing was voted on",
-     "by": "Claude (drafting)",
-     "on": "2026-09-29"
+    "obj_thepresi_30b-china-cut-goods": {
+      "status": "dismissed",
+      "dismissedWhy": "Duplicate: same instrument as obj_thepresi_billion-china-cuts-lists (the reciprocal $30B lists released 2026-09-28), drafted as rdg_4ot3ind0ufll. Three Sinclair sites carrying one story.",
+      "aliasCandidates": [
+        "obj_thepresi_billion-china-cuts-lists"
+      ]
     },
-    {
-     "field": "formedOn",
-     "was": "2026-09-29",
-     "now": "2026-09-28",
-     "why": "the denial was made 09-28 (US News/Hill/iHeart 09-28); 09-29 is the syndication date",
-     "by": "Claude (drafting)",
-     "on": "2026-09-29"
-    }
-   ],
-   "permanenceNote": "Continuation of the Hormuz/Iran-talks arc (rdg_6gsmq4x22x20); second register card for the same denial.",
-   "aliasCandidates": [
-    "obj_thepresi_denies-iran-relief-report",
-    "obj_thepresi_hormuz-iran-open-proposal"
-   ]
-  },
-  "obj_congress_234-congress-end-penny": {
-   "status": "drafted",
-   "drafts": {
-    "claude": "rdg_fv1bpfabq16p"
-   },
-   "draftedOn": "2026-09-29",
-   "inversions": [
-    {
-     "station": "A",
-     "band": "denominated",
-     "lean": true,
-     "note": "Rim negative on a bill a Democrat (Garcia) co-sponsored and no member opposed on the record; scores Trump's custody of the 2025 halt. A split inside the station, not a reversal of a prior."
-    }
-   ],
-   "corrections": [
-    {
-     "field": "formedOn",
-     "from": "2026-09-29",
-     "to": "2026-09-28",
-     "why": "AP (datelined 09-29) says the Senate passed it 'late Monday' = 2026-09-28; 09-29 is the report date."
+    "obj_thepresi_broker-deal-even-iran": {
+      "status": "dismissed",
+      "dismissedWhy": "Duplicate: the headline instrument is Trump's rejection of Iran's seven-day Hormuz roadmap, already drafted as rdg_6gsmq4x22x20 (obj_thepresi_hormuz-iran-open-proposal). The 09-28 news is mediators working on a revised phased framework, with talks resuming; no new agreement, order or vote. Not a vote (register kind is wrong). If the revised deal lands, a later scan will see it as a new object.",
+      "permanenceNote": "Continuation of the Hormuz arc; per the 09-28 AP report, officials say the U.S. has not formally rejected the current proposal.",
+      "aliasCandidates": [
+        "obj_thepresi_hormuz-iran-open-proposal"
+      ]
     },
-    {
-     "field": "holder",
-     "from": "Congress",
-     "to": "Congress (the Senate's 09-28 voice vote completing passage of H.R. 10167; signature pending)",
-     "why": "Names the vehicle; the bill number is Claude's read (AP doesn't print it)."
-    }
-   ],
-   "permanenceNote": "Return (lean): the penny arc — 2025-02 Trump directive and 2025 halt, 07-14 House and 08-07 Senate versions, 09-14 consolidated House vote, 09-28 final passage. The signature, when it lands, completes this object; it is not a new one."
-  },
-  "obj_thepresi_accord-development-firms-police": {
-   "status": "drafted",
-   "drafts": {
-    "claude": "rdg_8duj3r93ot5w"
-   },
-   "draftedOn": "2026-09-30",
-   "inversions": [
-    {
-     "station": "A",
-     "band": "fluid/denominated",
-     "lean": true,
-     "prior": "July 2023 White House voluntary AI commitments, welcomed by the institutional left (coverage, not a live Reading)",
-     "note": "voluntary pledge from largely the same companies now read as failing (−0.2 / −0.8); keyed to the holder"
-    }
-   ],
-   "corrections": [
-    {
-     "field": "formedOn",
-     "from": "2026-09-30",
-     "to": "2026-09-29",
-     "why": "East Room meeting and the Truth Social post of the signed accord were both Tuesday 09-29 (AP via Boston.com dated 09-29); 09-30 is the report date.",
-     "by": "Claude (drafting)",
-     "on": "2026-09-30"
+    "obj_thepresi_denies-iran-relief-report": {
+      "status": "dismissed",
+      "dismissedWhy": "No instrument: Trump's 2026-09-28 Truth Social denial of an Axios report (09-27) that U.S. negotiators were weighing Iran sanctions relief for nuclear concessions. No sanctions were imposed, lifted or ordered; the register's \"imposed\" is wrong. The 20 outlets are one iHeart syndicated story. Same indirect Iran talks as obj_thepresi_broker-deal-even-iran (dismissed 09-28) and the Hormuz rejection drafted as rdg_6gsmq4x22x20. If relief is actually granted or refused by order, a later scan will see it as a new object.",
+      "corrections": [
+        {
+          "field": "kind",
+          "was": "tariff/sanction · imposed",
+          "now": "denial of a press report (no instrument)",
+          "why": "nothing imposed or lifted"
+        }
+      ]
     },
-    {
-     "field": "holder",
-     "from": "the President",
-     "to": "the six signing companies (Anthropic, Google, Meta, OpenAI, Nvidia, Musk), with the President as convener and would-be overseer",
-     "why": "The companies make the commitments; Trump posted the accord and says he will name ~10 overseers.",
-     "by": "Claude (drafting)",
-     "on": "2026-09-30"
-    }
-   ],
-   "permanenceNote": "Return (lean): the 2023 voluntary-commitments arc (July 2023 commitments, EO 14110, revoked 2025-01-20). Publish attempted 2026-09-30, exit 5 (no GITHUB_PUBLISH_TOKEN); draft remains in drafts/claude."
-  },
-  "obj_afederal_arguments-ban-hears-house": {
-   "aliasCandidates": [
-    "obj_afederal_access-cnn-house-judge"
-   ],
-   "permanenceNote": "not yet an object on its own (hearing without ruling, 09-23); the ruling it awaited landed 09-24 and was drafted as obj_afederal_access-cnn-house-judge (rdg_oq1spmhz7azt) — left queued (§4c), Claude 2026-09-30"
-  },
-  "obj_afederal_ban-cnn-hold-house": {
-   "aliasCandidates": [
-    "obj_afederal_access-cnn-house-judge"
-   ],
-   "permanenceNote": "landed: preliminary injunction 2026-10-13, appealed 2026-10-14; the scan did not see it (no return); found by search. Publish attempt exit 5 (no token) — draft stays in drafts/claude. Claude 2026-10-17 UTC",
-   "status": "drafted",
-   "drafts": {
-    "claude": "rdg_am1i9bcuma60"
-   },
-   "draftedOn": "2026-10-16",
-   "inversions": [
-    {
-     "station": "D",
-     "lean": "D rim flips −0.7 → +0.5 against the 09-24 TRO draft (rdg_oq1spmhz7azt): holder changes from the judiciary (distrusted) to the President (trusted to keep the plane); anti-valent, draft-to-draft, no found reader",
-     "ruled": false
+    "obj_thepresi_iran-openness-rejects-relief": {
+      "status": "dismissed",
+      "dismissedWhy": "No instrument, and a duplicate: the same Trump denial (09-28) of the Axios sanctions-relief report already dismissed as obj_thepresi_denies-iran-relief-report. Today’s three outlets are one syndicated radio story (Reuters rewrite) adding Pezeshkian saying Iran is open to talks without coercion. Nothing voted, ordered, imposed or lifted; the register’s \"vote\" is wrong. If relief is granted or refused by order, or a deal is signed, a later scan will see a new object. Claude’s call, 2026-09-29 12:04 UTC run.",
+      "corrections": [
+        {
+          "field": "kind",
+          "was": "vote · voted",
+          "now": "denial of a press report (no instrument)",
+          "why": "nothing was voted on",
+          "by": "Claude (drafting)",
+          "on": "2026-09-29"
+        },
+        {
+          "field": "formedOn",
+          "was": "2026-09-29",
+          "now": "2026-09-28",
+          "why": "the denial was made 09-28 (US News/Hill/iHeart 09-28); 09-29 is the syndication date",
+          "by": "Claude (drafting)",
+          "on": "2026-09-29"
+        }
+      ],
+      "permanenceNote": "Continuation of the Hormuz/Iran-talks arc (rdg_6gsmq4x22x20); second register card for the same denial.",
+      "aliasCandidates": [
+        "obj_thepresi_denies-iran-relief-report",
+        "obj_thepresi_hormuz-iran-open-proposal"
+      ]
     },
-    {
-     "station": "B",
-     "lean": "right-institutional coalition faults its own side’s pleading (no national-security reason on 09-18); no dated prior",
-     "ruled": false
-    }
-   ],
-   "corrections": [
-    {
-     "field": "formedOn",
-     "was": "2026-09-29",
-     "now": "2026-10-14",
-     "why": "the motion (09-29) was pending; the instrument formed with the preliminary injunction late 10-13 and the notice of appeal 10-14 — Claude 2026-10-17 UTC"
+    "obj_congress_234-congress-end-penny": {
+      "status": "drafted",
+      "drafts": {
+        "claude": "rdg_fv1bpfabq16p"
+      },
+      "draftedOn": "2026-09-29",
+      "inversions": [
+        {
+          "station": "A",
+          "band": "denominated",
+          "lean": true,
+          "note": "Rim negative on a bill a Democrat (Garcia) co-sponsored and no member opposed on the record; scores Trump's custody of the 2025 halt. A split inside the station, not a reversal of a prior."
+        }
+      ],
+      "corrections": [
+        {
+          "field": "formedOn",
+          "from": "2026-09-29",
+          "to": "2026-09-28",
+          "why": "AP (datelined 09-29) says the Senate passed it 'late Monday' = 2026-09-28; 09-29 is the report date."
+        },
+        {
+          "field": "holder",
+          "from": "Congress",
+          "to": "Congress (the Senate's 09-28 voice vote completing passage of H.R. 10167; signature pending)",
+          "why": "Names the vehicle; the bill number is Claude's read (AP doesn't print it)."
+        }
+      ],
+      "permanenceNote": "Return (lean): the penny arc — 2025-02 Trump directive and 2025 halt, 07-14 House and 08-07 Senate versions, 09-14 consolidated House vote, 09-28 final passage. The signature, when it lands, completes this object; it is not a new one."
     },
-    {
-     "field": "holder",
-     "was": "a federal court",
-     "now": "Judge Timothy J. Kelly (D.D.C.), D.C. Circuit on appeal",
-     "why": "names the court — Claude"
-    }
-   ]
-  },
-  "obj_afederal_can-deport-judge-largest": {
-   "status": "drafted",
-   "drafts": {
-    "claude": "rdg_zjxak4ltqrk7"
-   },
-   "draftedOn": "2026-09-30",
-   "inversions": [],
-   "corrections": [
-    {
-     "field": "holder",
-     "from": "a federal court",
-     "to": "the Chicago Immigration Court (DOJ/EOIR), applying Secretary of State Rubio’s foreign-policy determination",
-     "why": "An immigration judge is an executive-branch (Justice Department) adjudicator, not an Article III federal court; the federal district court (Judge Hanlon) is a separate, earlier leg (the June 2026 release order)."
-    }
-   ],
-   "permanenceNote": "A return (lean): the INA §237(a)(4)(C) foreign-policy-ground arc — Khalil and Mahdawi (2025), Sarsour arrest 2026-03-30, release June 2026, removability ruling 2026-09-30; appeal due within 30 days."
-  },
-  "obj_thesenat_bill-block-congress-democrats": {
-   "status": "drafted",
-   "drafts": {
-    "claude": "rdg_2cs16s93dghl"
-   },
-   "draftedOn": "2026-09-30",
-   "inversions": [
-    {
-     "stations": "A, C",
-     "kind": "vote flip (lean, not ruled)",
-     "prior": "Senate HSGAC vote 2025-07-30: Democrats + Hawley advanced a stronger ban 8-7 (AP 2025-07-30)",
-     "now": "all 47 no votes on 2026-09-30 are Democratic; left centers still hold that a real ban delivers"
+    "obj_thepresi_accord-development-firms-police": {
+      "status": "drafted",
+      "drafts": {
+        "claude": "rdg_8duj3r93ot5w"
+      },
+      "draftedOn": "2026-09-30",
+      "inversions": [
+        {
+          "station": "A",
+          "band": "fluid/denominated",
+          "lean": true,
+          "prior": "July 2023 White House voluntary AI commitments, welcomed by the institutional left (coverage, not a live Reading)",
+          "note": "voluntary pledge from largely the same companies now read as failing (−0.2 / −0.8); keyed to the holder"
+        }
+      ],
+      "corrections": [
+        {
+          "field": "formedOn",
+          "from": "2026-09-30",
+          "to": "2026-09-29",
+          "why": "East Room meeting and the Truth Social post of the signed accord were both Tuesday 09-29 (AP via Boston.com dated 09-29); 09-30 is the report date.",
+          "by": "Claude (drafting)",
+          "on": "2026-09-30"
+        },
+        {
+          "field": "holder",
+          "from": "the President",
+          "to": "the six signing companies (Anthropic, Google, Meta, OpenAI, Nvidia, Musk), with the President as convener and would-be overseer",
+          "why": "The companies make the commitments; Trump posted the accord and says he will name ~10 overseers.",
+          "by": "Claude (drafting)",
+          "on": "2026-09-30"
+        }
+      ],
+      "permanenceNote": "Return (lean): the 2023 voluntary-commitments arc (July 2023 commitments, EO 14110, revoked 2025-01-20). Publish attempted 2026-09-30, exit 5 (no GITHUB_PUBLISH_TOKEN); draft remains in drafts/claude."
     },
-    {
-     "stations": "B, D",
-     "kind": "vote flip (lean, not ruled)",
-     "prior": "Trump called Hawley a second-tier senator over a ban covering the president (AP 2025-07-30)",
-     "now": "White House backed H.R. 7008, which exempts the president, on House passage (Forbes 2026-09-30)"
-    }
-   ],
-   "corrections": [
-    {
-     "field": "kind",
-     "from": "ruling",
-     "to": "vote",
-     "why": "A failed Senate motion to advance (53-47, 60 needed); no court or ruling involved."
-    }
-   ],
-   "permanenceNote": "A return (lean): the congressional stock-ban arc — STOCK Act 2012, Hawley committee vote 2025-07-30, House passage with voter ID 2026-07-22, Senate vote 2026-09-30."
-  },
-  "obj_thesenat_aimed-bill-bills-blocks": {
-   "status": "drafted",
-   "drafts": {
-    "claude": "rdg_o7di9vup43f8"
-   },
-   "draftedOn": "2026-10-01",
-   "inversions": [
-    {
-     "stations": "A, C",
-     "kind": "chamber flip (lean, not ruled)",
-     "prior": "House passed H.R. 9340 417-3 on 2026-09-16 (Daily Caller, Valley News Live 2026-09-30)",
-     "now": "43 of 47 Senate Democrats voted no on 2026-09-30, holding out for the GRID Savings Act; not a z flip"
-    }
-   ],
-   "corrections": [
-    {
-     "field": "kind",
-     "from": "ruling",
-     "to": "vote",
-     "why": "A failed Senate motion to advance (57-43, 60 needed); no court or ruling involved."
+    "obj_afederal_arguments-ban-hears-house": {
+      "aliasCandidates": [
+        "obj_afederal_access-cnn-house-judge"
+      ],
+      "permanenceNote": "not yet an object on its own (hearing without ruling, 09-23); the ruling it awaited landed 09-24 and was drafted as obj_afederal_access-cnn-house-judge (rdg_oq1spmhz7azt) — left queued (§4c), Claude 2026-09-30"
     },
-    {
-     "field": "bill",
-     "from": null,
-     "to": "hr-119-9340",
-     "why": "The blocked bill is H.R. 9340, the Ratepayer Protection Act (in catalog)."
-    }
-   ],
-   "permanenceNote": "A return (lean): the data-center-costs arc — White House Ratepayer Protection Pledge 2026-03-04 (expanded 07-23), House passage 09-16, the AI accord 09-29 (rdg_8duj3r93ot5w), Senate vote 09-30."
-  },
-  "obj_afederal_allowing-approves-buyout-close": {
-   "status": "drafted",
-   "drafts": {
-    "claude": "rdg_qdosaaksy41l"
-   },
-   "draftedOn": "2026-10-01",
-   "inversions": [],
-   "corrections": [
-    {
-     "field": "kind",
-     "from": "vote",
-     "to": "ruling",
-     "why": "A federal judge approving a consent decree (N.D. Cal., Martínez-Olguín, 2026-09-30); no vote."
+    "obj_afederal_ban-cnn-hold-house": {
+      "aliasCandidates": [
+        "obj_afederal_access-cnn-house-judge"
+      ],
+      "permanenceNote": "landed: preliminary injunction 2026-10-13, appealed 2026-10-14; the scan did not see it (no return); found by search. Publish attempt exit 5 (no token) — draft stays in drafts/claude. Claude 2026-10-17 UTC",
+      "status": "drafted",
+      "drafts": {
+        "claude": "rdg_am1i9bcuma60"
+      },
+      "draftedOn": "2026-10-16",
+      "inversions": [
+        {
+          "station": "D",
+          "lean": "D rim flips −0.7 → +0.5 against the 09-24 TRO draft (rdg_oq1spmhz7azt): holder changes from the judiciary (distrusted) to the President (trusted to keep the plane); anti-valent, draft-to-draft, no found reader",
+          "ruled": false
+        },
+        {
+          "station": "B",
+          "lean": "right-institutional coalition faults its own side’s pleading (no national-security reason on 09-18); no dated prior",
+          "ruled": false
+        }
+      ],
+      "corrections": [
+        {
+          "field": "formedOn",
+          "was": "2026-09-29",
+          "now": "2026-10-14",
+          "why": "the motion (09-29) was pending; the instrument formed with the preliminary injunction late 10-13 and the notice of appeal 10-14 — Claude 2026-10-17 UTC"
+        },
+        {
+          "field": "holder",
+          "was": "a federal court",
+          "now": "Judge Timothy J. Kelly (D.D.C.), D.C. Circuit on appeal",
+          "why": "names the court — Claude"
+        }
+      ]
     },
-    {
-     "field": "holder",
-     "from": "a federal court",
-     "to": "U.S. District Court, N.D. Cal. (Judge Araceli Martínez-Olguín); the decree binds Paramount and is enforced by the 12 states",
-     "why": "Names the court; the instrument is the decree, not the court."
-    }
-   ],
-   "permanenceNote": "Return (lean, unverified this run): the Ellison media arc (Skydance–Paramount 2025) extended to CNN; touches the White House press-ban cards."
-  },
-  "obj_dhs_guidance-ice-memo-rules": {
-   "status": "drafted",
-   "drafts": {
-    "claude": "rdg_64eiv0kp2d3u"
-   },
-   "draftedOn": "2026-10-01",
-   "corrections": [
-    {
-     "field": "formedOn",
-     "from": "2026-10-01",
-     "to": "2026-09-30",
-     "why": "The memo was signed Wednesday 09-30 (AP); 10-01 is the day the AP obtained and reported it — report date, not as-of date.",
-     "by": "Claude (drafting)",
-     "on": "2026-10-01"
+    "obj_afederal_can-deport-judge-largest": {
+      "status": "drafted",
+      "drafts": {
+        "claude": "rdg_zjxak4ltqrk7"
+      },
+      "draftedOn": "2026-09-30",
+      "inversions": [],
+      "corrections": [
+        {
+          "field": "holder",
+          "from": "a federal court",
+          "to": "the Chicago Immigration Court (DOJ/EOIR), applying Secretary of State Rubio’s foreign-policy determination",
+          "why": "An immigration judge is an executive-branch (Justice Department) adjudicator, not an Article III federal court; the federal district court (Judge Hanlon) is a separate, earlier leg (the June 2026 release order)."
+        }
+      ],
+      "permanenceNote": "A return (lean): the INA §237(a)(4)(C) foreign-policy-ground arc — Khalil and Mahdawi (2025), Sarsour arrest 2026-03-30, release June 2026, removability ruling 2026-09-30; appeal due within 30 days."
     },
-    {
-     "field": "holder",
-     "from": "DHS",
-     "to": "ICE Enforcement and Removal Operations (Marcos D. Charles, executive associate director)",
-     "why": "An internal ICE memo signed by the head of ERO, not by the DHS Secretary. DHS is one level too high.",
-     "by": "Claude (drafting)",
-     "on": "2026-10-01"
+    "obj_thesenat_bill-block-congress-democrats": {
+      "status": "drafted",
+      "drafts": {
+        "claude": "rdg_2cs16s93dghl"
+      },
+      "draftedOn": "2026-09-30",
+      "inversions": [
+        {
+          "stations": "A, C",
+          "kind": "vote flip (lean, not ruled)",
+          "prior": "Senate HSGAC vote 2025-07-30: Democrats + Hawley advanced a stronger ban 8-7 (AP 2025-07-30)",
+          "now": "all 47 no votes on 2026-09-30 are Democratic; left centers still hold that a real ban delivers"
+        },
+        {
+          "stations": "B, D",
+          "kind": "vote flip (lean, not ruled)",
+          "prior": "Trump called Hawley a second-tier senator over a ban covering the president (AP 2025-07-30)",
+          "now": "White House backed H.R. 7008, which exempts the president, on House passage (Forbes 2026-09-30)"
+        }
+      ],
+      "corrections": [
+        {
+          "field": "kind",
+          "from": "ruling",
+          "to": "vote",
+          "why": "A failed Senate motion to advance (53-47, 60 needed); no court or ruling involved."
+        }
+      ],
+      "permanenceNote": "A return (lean): the congressional stock-ban arc — STOCK Act 2012, Hawley committee vote 2025-07-30, House passage with voter ID 2026-07-22, Senate vote 2026-09-30."
     },
-    {
-     "field": "kind",
-     "from": "ruling",
-     "to": "agency guidance memo",
-     "why": "Nothing was ruled; it is internal operating guidance.",
-     "by": "Claude (drafting)",
-     "on": "2026-10-01"
-    }
-   ],
-   "inversions": [
-    {
-     "station": "B (and the administration as holder)",
-     "bands": "fluid +0.6, coalition +0.2",
-     "lean": "the right defended the President reversing the July pause on vehicle stops; eleven weeks later ICE leadership restricted the stops and B-fluid reads that as professionalism, B-coalition as a quieter version of the pause",
-     "prior": "CBS News, July 2026: pause 07-14, reversal 07-15 (coverage, not a live Reading)",
-     "ruled": false
-    }
-   ],
-   "permanenceNote": "A return (lean): the July vehicle-stop pause (07-14, reversed 07-15) re-formed as internal guidance on 09-30; the register never carried the July arc."
-  },
-  "obj_thepresi_approval-economic-falls-house": {
-   "status": "dismissed",
-   "dismissedWhy": "No instrument: a poll number and a remark about public relations. Nothing was voted, signed or ordered, so there is nothing for the stations to believe delivers. Dismissed by Claude (drafting) 2026-10-01; reversible by Sailor."
-  },
-  "obj_thesenat_ahead-ban-bills-block": {
-   "status": "drafted",
-   "drafts": {
-    "claude": "rdg_l9xd9omvnpa7"
-   },
-   "draftedOn": "2026-10-02",
-   "corrections": [
-    {
-     "field": "formedOn",
-     "from": "2026-10-02",
-     "to": "2026-09-30",
-     "why": "The cloture vote was Wednesday 09-30 (Senate Record Vote 253); 10-02 is the day the wire story was scanned — report date, not as-of date.",
-     "by": "Claude (drafting)",
-     "on": "2026-10-02"
+    "obj_thesenat_aimed-bill-bills-blocks": {
+      "status": "drafted",
+      "drafts": {
+        "claude": "rdg_o7di9vup43f8"
+      },
+      "draftedOn": "2026-10-01",
+      "inversions": [
+        {
+          "stations": "A, C",
+          "kind": "chamber flip (lean, not ruled)",
+          "prior": "House passed H.R. 9340 417-3 on 2026-09-16 (Daily Caller, Valley News Live 2026-09-30)",
+          "now": "43 of 47 Senate Democrats voted no on 2026-09-30, holding out for the GRID Savings Act; not a z flip"
+        }
+      ],
+      "corrections": [
+        {
+          "field": "kind",
+          "from": "ruling",
+          "to": "vote",
+          "why": "A failed Senate motion to advance (57-43, 60 needed); no court or ruling involved."
+        },
+        {
+          "field": "bill",
+          "from": null,
+          "to": "hr-119-9340",
+          "why": "The blocked bill is H.R. 9340, the Ratepayer Protection Act (in catalog)."
+        }
+      ],
+      "permanenceNote": "A return (lean): the data-center-costs arc — White House Ratepayer Protection Pledge 2026-03-04 (expanded 07-23), House passage 09-16, the AI accord 09-29 (rdg_8duj3r93ot5w), Senate vote 09-30."
     },
-    {
-     "field": "kind",
-     "from": "ruling",
-     "to": "cloture vote (motion to proceed, H.R. 7008)",
-     "why": "Nothing was ruled; the Senate voted 53–47 and 60 were needed.",
-     "by": "Claude (drafting)",
-     "on": "2026-10-02"
-    }
-   ],
-   "inversions": [
-    {
-     "station": "A",
-     "bands": "fluid −0.6, coalition −0.3",
-     "lean": "Senate Democrats have pressed for a congressional stock-trading ban; every one voted against proceeding to a bill with that title, citing the voter-ID rider and the loopholes",
-     "prior": "Hoodline 2026-09-30: Ossoff unanimous-consent request, June 2026 (coverage, not a live Reading)",
-     "ruled": false
+    "obj_afederal_allowing-approves-buyout-close": {
+      "status": "drafted",
+      "drafts": {
+        "claude": "rdg_qdosaaksy41l"
+      },
+      "draftedOn": "2026-10-01",
+      "inversions": [],
+      "corrections": [
+        {
+          "field": "kind",
+          "from": "vote",
+          "to": "ruling",
+          "why": "A federal judge approving a consent decree (N.D. Cal., Martínez-Olguín, 2026-09-30); no vote."
+        },
+        {
+          "field": "holder",
+          "from": "a federal court",
+          "to": "U.S. District Court, N.D. Cal. (Judge Araceli Martínez-Olguín); the decree binds Paramount and is enforced by the 12 states",
+          "why": "Names the court; the instrument is the decree, not the court."
+        }
+      ],
+      "permanenceNote": "Return (lean, unverified this run): the Ellison media arc (Skydance–Paramount 2025) extended to CNN; touches the White House press-ban cards."
     },
-    {
-     "station": "B / D (Republican leadership as holder)",
-     "bands": "D coalition −0.2 against D fluid +0.5",
-     "lean": "leadership gave the floor to the purchase-only House bill while the HONEST Act (S. 1498), a full ban from its own side, has sat on the calendar since 2025-12-10",
-     "prior": "Prism catalog: S. 1498, Calendar No. 294",
-     "ruled": false
-    }
-   ],
-   "permanenceNote": "A return (lean): the voter-ID bill that failed cloture 08-08 (S. 5271) came back tied to the stock bill."
-  },
-  "obj_astate_allowing-eligibility-executive-governor": {
-   "status": "drafted",
-   "drafts": {
-    "claude": "rdg_zgkkvpr0f6kb"
-   },
-   "draftedOn": "2026-10-16",
-   "inversions": [
-    {
-     "station": "B",
-     "lean": "right-institutional turns against a Republican governor’s state power, siding with the Senate preemption bill S. 4668 (77–22, 2026-09-28)",
-     "ruled": false
+    "obj_dhs_guidance-ice-memo-rules": {
+      "status": "drafted",
+      "drafts": {
+        "claude": "rdg_64eiv0kp2d3u"
+      },
+      "draftedOn": "2026-10-01",
+      "corrections": [
+        {
+          "field": "formedOn",
+          "from": "2026-10-01",
+          "to": "2026-09-30",
+          "why": "The memo was signed Wednesday 09-30 (AP); 10-01 is the day the AP obtained and reported it — report date, not as-of date.",
+          "by": "Claude (drafting)",
+          "on": "2026-10-01"
+        },
+        {
+          "field": "holder",
+          "from": "DHS",
+          "to": "ICE Enforcement and Removal Operations (Marcos D. Charles, executive associate director)",
+          "why": "An internal ICE memo signed by the head of ERO, not by the DHS Secretary. DHS is one level too high.",
+          "by": "Claude (drafting)",
+          "on": "2026-10-01"
+        },
+        {
+          "field": "kind",
+          "from": "ruling",
+          "to": "agency guidance memo",
+          "why": "Nothing was ruled; it is internal operating guidance.",
+          "by": "Claude (drafting)",
+          "on": "2026-10-01"
+        }
+      ],
+      "inversions": [
+        {
+          "station": "B (and the administration as holder)",
+          "bands": "fluid +0.6, coalition +0.2",
+          "lean": "the right defended the President reversing the July pause on vehicle stops; eleven weeks later ICE leadership restricted the stops and B-fluid reads that as professionalism, B-coalition as a quieter version of the pause",
+          "prior": "CBS News, July 2026: pause 07-14, reversal 07-15 (coverage, not a live Reading)",
+          "ruled": false
+        }
+      ],
+      "permanenceNote": "A return (lean): the July vehicle-stop pause (07-14, reversed 07-15) re-formed as internal guidance on 09-30; the register never carried the July arc."
     },
-    {
-     "station": "A/C",
-     "lean": "athlete-rights left hesitates over an order that grants athletes eligibility because a Republican governor signed it; no dated prior",
-     "ruled": false
-    }
-   ],
-   "corrections": [
-    {
-     "field": "holder",
-     "from": "a state",
-     "to": "Gov. Mike DeWine (Executive Order 2026-04D)",
-     "by": "Claude",
-     "on": "2026-10-16"
+    "obj_thepresi_approval-economic-falls-house": {
+      "status": "dismissed",
+      "dismissedWhy": "No instrument: a poll number and a remark about public relations. Nothing was voted, signed or ordered, so there is nothing for the stations to believe delivers. Dismissed by Claude (drafting) 2026-10-01; reversible by Sailor."
     },
-    {
-     "field": "kind",
-     "note": "kept order; the order was signed 2026-10-13, trigger day kept at 2026-10-16 (the day the NCAA sued) — see the Reading window.why",
-     "by": "Claude",
-     "on": "2026-10-16"
-    }
-   ]
-  },
-  "obj_thejusti_alleged-california-doj-kills": {
-   "status": "drafted",
-   "drafts": {
-    "claude": "rdg_9wjfhhpxcp0d"
-   },
-   "draftedOn": "2026-10-16",
-   "inversions": [
-    {
-     "station": "B/D",
-     "lean": "states-run-elections right backing a federal suit to control which ballots California counts; no dated prior",
-     "ruled": false
+    "obj_thesenat_ahead-ban-bills-block": {
+      "status": "drafted",
+      "drafts": {
+        "claude": "rdg_l9xd9omvnpa7"
+      },
+      "draftedOn": "2026-10-02",
+      "corrections": [
+        {
+          "field": "formedOn",
+          "from": "2026-10-02",
+          "to": "2026-09-30",
+          "why": "The cloture vote was Wednesday 09-30 (Senate Record Vote 253); 10-02 is the day the wire story was scanned — report date, not as-of date.",
+          "by": "Claude (drafting)",
+          "on": "2026-10-02"
+        },
+        {
+          "field": "kind",
+          "from": "ruling",
+          "to": "cloture vote (motion to proceed, H.R. 7008)",
+          "why": "Nothing was ruled; the Senate voted 53–47 and 60 were needed.",
+          "by": "Claude (drafting)",
+          "on": "2026-10-02"
+        }
+      ],
+      "inversions": [
+        {
+          "station": "A",
+          "bands": "fluid −0.6, coalition −0.3",
+          "lean": "Senate Democrats have pressed for a congressional stock-trading ban; every one voted against proceeding to a bill with that title, citing the voter-ID rider and the loopholes",
+          "prior": "Hoodline 2026-09-30: Ossoff unanimous-consent request, June 2026 (coverage, not a live Reading)",
+          "ruled": false
+        },
+        {
+          "station": "B / D (Republican leadership as holder)",
+          "bands": "D coalition −0.2 against D fluid +0.5",
+          "lean": "leadership gave the floor to the purchase-only House bill while the HONEST Act (S. 1498), a full ban from its own side, has sat on the calendar since 2025-12-10",
+          "prior": "Prism catalog: S. 1498, Calendar No. 294",
+          "ruled": false
+        }
+      ],
+      "permanenceNote": "A return (lean): the voter-ID bill that failed cloture 08-08 (S. 5271) came back tied to the stock bill."
     },
-    {
-     "station": "A",
-     "lean": "left-institutional defending a state’s refusal to open a federal list; no dated prior",
-     "ruled": false
-    }
-   ],
-   "corrections": [
-    {
-     "field": "formedOn",
-     "from": "2026-10-16",
-     "to": "2026-10-15",
-     "why": "suit filed Thursday 10-15; 10-16 is the NPR roundup’s report date",
-     "by": "Claude",
-     "on": "2026-10-16"
+    "obj_astate_allowing-eligibility-executive-governor": {
+      "status": "drafted",
+      "drafts": {
+        "claude": "rdg_zgkkvpr0f6kb"
+      },
+      "draftedOn": "2026-10-16",
+      "inversions": [
+        {
+          "station": "B",
+          "lean": "right-institutional turns against a Republican governor’s state power, siding with the Senate preemption bill S. 4668 (77–22, 2026-09-28)",
+          "ruled": false
+        },
+        {
+          "station": "A/C",
+          "lean": "athlete-rights left hesitates over an order that grants athletes eligibility because a Republican governor signed it; no dated prior",
+          "ruled": false
+        }
+      ],
+      "corrections": [
+        {
+          "field": "holder",
+          "from": "a state",
+          "to": "Gov. Mike DeWine (Executive Order 2026-04D)",
+          "by": "Claude",
+          "on": "2026-10-16"
+        },
+        {
+          "field": "kind",
+          "note": "kept order; the order was signed 2026-10-13, trigger day kept at 2026-10-16 (the day the NCAA sued) — see the Reading window.why",
+          "by": "Claude",
+          "on": "2026-10-16"
+        }
+      ]
     },
-    {
-     "field": "headline",
-     "note": "register headline bundles an unrelated Oregon school shooting; object is the DOJ suit only",
-     "by": "Claude",
-     "on": "2026-10-16"
-    }
-   ],
-   "permanenceNote": "return (lean): DHS’s earlier unsubstantiated 190,000 figure came back as a 20,000-name list in a suit — Claude 2026-10-16"
-  },
-  "obj_thepresi_bar-did-exam-house": {
-   "status": "dismissed",
-   "dismissedWhy": "No instrument: a press secretary saying she did not pass the bar exam is a personal disclosure, not a vote, order or law; the register’s kind (vote) and holder (the President) are both wrong — Claude 2026-10-16"
-  },
-  "obj_afederal_abuse-actor-against-busfield": {
-   "status": "dismissed",
-   "dismissedWhy": "No public instrument: a New Mexico state district judge quashed the grand-jury indictment in one actor's criminal case on 2026-10-16, citing prosecutors withholding evidence from the grand jury. It is a procedural ruling in a single prosecution, not a law, order or policy the twelve stations can read as delivering, and authoring partisan first-person voices about child-abuse charges against a named person would not be beta-ready. The register's holder ('a federal court') and formedOn (10-17, the report date) are both wrong. If the state re-presents the case, or a grand-jury reform bill comes out of it, a later scan will see a new object. Claude's call, 06:0x UTC 10-17 run; reversible by Sailor.",
-   "corrections": [
-    {
-     "field": "holder",
-     "from": "a federal court",
-     "to": "New Mexico state district court (Second Judicial District)",
-     "by": "claude"
+    "obj_thejusti_alleged-california-doj-kills": {
+      "status": "drafted",
+      "drafts": {
+        "claude": "rdg_9wjfhhpxcp0d"
+      },
+      "draftedOn": "2026-10-16",
+      "inversions": [
+        {
+          "station": "B/D",
+          "lean": "states-run-elections right backing a federal suit to control which ballots California counts; no dated prior",
+          "ruled": false
+        },
+        {
+          "station": "A",
+          "lean": "left-institutional defending a state’s refusal to open a federal list; no dated prior",
+          "ruled": false
+        }
+      ],
+      "corrections": [
+        {
+          "field": "formedOn",
+          "from": "2026-10-16",
+          "to": "2026-10-15",
+          "why": "suit filed Thursday 10-15; 10-16 is the NPR roundup’s report date",
+          "by": "Claude",
+          "on": "2026-10-16"
+        },
+        {
+          "field": "headline",
+          "note": "register headline bundles an unrelated Oregon school shooting; object is the DOJ suit only",
+          "by": "Claude",
+          "on": "2026-10-16"
+        }
+      ],
+      "permanenceNote": "return (lean): DHS’s earlier unsubstantiated 190,000 figure came back as a 20,000-name list in a suit — Claude 2026-10-16"
     },
-    {
-     "field": "formedOn",
-     "from": "2026-10-17",
-     "to": "2026-10-16",
-     "by": "claude"
-    }
-   ]
-  },
-  "obj_thepresi_against-russia-sanctions-trump": {
-   "status": "drafted",
-   "drafts": {
-    "claude": "rdg_bnghg4rdiucp"
-   },
-   "draftedOn": "2026-10-17",
-   "inversions": [
-    {
-     "station": "B",
-     "lean": "rim +0.5 (trusts the Commander in Chief) against its center −0.3/−0.1 defending the 86–11 vote; prior: Senate 86–11 2026-08-07, House 262–159 2026-09-16",
-     "ruled": false
+    "obj_thepresi_bar-did-exam-house": {
+      "status": "dismissed",
+      "dismissedWhy": "No instrument: a press secretary saying she did not pass the bar exam is a personal disclosure, not a vote, order or law; the register’s kind (vote) and holder (the President) are both wrong — Claude 2026-10-16"
     },
-    {
-     "station": "D",
-     "lean": "positive in every band on lifting pressure the same voters backed in September; no live-Reading prior",
-     "ruled": false
-    }
-   ],
-   "corrections": [
-    {
-     "field": "formedOn",
-     "from": "2026-10-17",
-     "to": "2026-10-16",
-     "by": "claude"
+    "obj_afederal_abuse-actor-against-busfield": {
+      "status": "dismissed",
+      "dismissedWhy": "No public instrument: a New Mexico state district judge quashed the grand-jury indictment in one actor's criminal case on 2026-10-16, citing prosecutors withholding evidence from the grand jury. It is a procedural ruling in a single prosecution, not a law, order or policy the twelve stations can read as delivering, and authoring partisan first-person voices about child-abuse charges against a named person would not be beta-ready. The register's holder ('a federal court') and formedOn (10-17, the report date) are both wrong. If the state re-presents the case, or a grand-jury reform bill comes out of it, a later scan will see a new object. Claude's call, 06:0x UTC 10-17 run; reversible by Sailor.",
+      "corrections": [
+        {
+          "field": "holder",
+          "from": "a federal court",
+          "to": "New Mexico state district court (Second Judicial District)",
+          "by": "claude"
+        },
+        {
+          "field": "formedOn",
+          "from": "2026-10-17",
+          "to": "2026-10-16",
+          "by": "claude"
+        }
+      ]
     },
-    {
-     "field": "holder",
-     "from": "the President",
-     "to": "the President, under H.R. 5334 §115, with the Secretary of State",
-     "by": "claude"
+    "obj_thepresi_against-russia-sanctions-trump": {
+      "status": "drafted",
+      "drafts": {
+        "claude": "rdg_bnghg4rdiucp"
+      },
+      "draftedOn": "2026-10-17",
+      "inversions": [
+        {
+          "station": "B",
+          "lean": "rim +0.5 (trusts the Commander in Chief) against its center −0.3/−0.1 defending the 86–11 vote; prior: Senate 86–11 2026-08-07, House 262–159 2026-09-16",
+          "ruled": false
+        },
+        {
+          "station": "D",
+          "lean": "positive in every band on lifting pressure the same voters backed in September; no live-Reading prior",
+          "ruled": false
+        }
+      ],
+      "corrections": [
+        {
+          "field": "formedOn",
+          "from": "2026-10-17",
+          "to": "2026-10-16",
+          "by": "claude"
+        },
+        {
+          "field": "holder",
+          "from": "the President",
+          "to": "the President, under H.R. 5334 §115, with the Secretary of State",
+          "by": "claude"
+        }
+      ],
+      "aliasCandidates": [
+        "obj_thepresi_deepen-russia-sanctions-suspends",
+        "obj_thepresi_before-even-kick-related",
+        "obj_thepresi_days-delays-economic-house",
+        "obj_thepresi_break-misjudgment-ranks-republicans"
+      ],
+      "permanenceNote": "Not a return; one instrument filed three times by the 10-17 scans. Publish attempt exit 5 (no GITHUB_PUBLISH_TOKEN) — draft stays in drafts/claude."
+    },
+    "obj_thepresi_deepen-russia-sanctions-suspends": {
+      "status": "dismissed",
+      "dismissedWhy": "Same instrument as obj_thepresi_against-russia-sanctions-trump (the 2026-10-16 Graham Act waiver order), drafted as rdg_bnghg4rdiucp; a second headline, not a second object. Claude's call, 12:xx UTC 10-17 run; reversible by Sailor."
+    },
+    "obj_thepresi_days-delays-economic-house": {
+      "status": "dismissed",
+      "dismissedWhy": "Same instrument as obj_thepresi_against-russia-sanctions-trump (the 2026-10-16 Graham Act waiver order), drafted as rdg_bnghg4rdiucp. The \"60-day delay\" is Rubio telling reporters on 10-17 that the President will take up to 60 days to weigh the economic impact; no new order or document. It falls after that draft's 10-16 close, so it stays out of its frame. Claude's call, 18:xx UTC 10-18 run; reversible by Sailor.",
+      "aliasCandidates": [
+        "obj_thepresi_against-russia-sanctions-trump"
+      ]
+    },
+    "obj_thepresi_break-misjudgment-ranks-republicans": {
+      "status": "dismissed",
+      "dismissedWhy": "Reaction to the same instrument as obj_thepresi_against-russia-sanctions-trump (the 2026-10-16 waiver), drafted as rdg_bnghg4rdiucp; no vote, bill or resolution. \"Terrible misjudgment\" is Nikki Haley on X; Cruz and Sen. Darline Graham statements; the Murkowski/Tillis/Curtis/Collins statement is on the diesel deal. Claude's call, 18:xx UTC 10-18 run; reversible by Sailor.",
+      "aliasCandidates": [
+        "obj_thepresi_against-russia-sanctions-trump"
+      ],
+      "permanenceNote": "Republican statements after the close bear on rdg_bnghg4rdiucp's station-B inversion lean (unruled), as coverage, not as a new object."
     }
-   ],
-   "aliasCandidates": [
-    "obj_thepresi_deepen-russia-sanctions-suspends",
-    "obj_thepresi_before-even-kick-related"
-   ],
-   "permanenceNote": "Not a return; one instrument filed three times by the 10-17 scans. Publish attempt exit 5 (no GITHUB_PUBLISH_TOKEN) — draft stays in drafts/claude."
-  },
-  "obj_thepresi_deepen-russia-sanctions-suspends": {
-   "status": "dismissed",
-   "dismissedWhy": "Same instrument as obj_thepresi_against-russia-sanctions-trump (the 2026-10-16 Graham Act waiver order), drafted as rdg_bnghg4rdiucp; a second headline, not a second object. Claude's call, 12:xx UTC 10-17 run; reversible by Sailor."
   }
- }
 }

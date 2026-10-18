@@ -914,7 +914,7 @@ const PrismGraphmap = (function () {
       velocityY: 0,
       sensitivity: 0.005,        // radians per pixel
       friction: 0.92,            // momentum decay per frame
-      pitchClamp: Math.PI * 50 / 180, // ±50° elevation
+      pitchClamp: Math.PI * (config.pitchClamp || 50) / 180, // ±50° elevation (10-18: config.pitchClamp lets a host lay the plane flat)
       zoom: config.zoom || 5.4,          // camera Z distance — matches buildCamera default
       zoomMin: config.zoomMin || 3.2,    // closest zoom (large graph)
       zoomMax: config.zoomMax || 9.0,    // farthest zoom (small graph) — configurable (v2 overscan)

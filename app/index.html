@@ -5,8 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Prism · g4</title>
 <!-- ======================================================================
-     PRISM, REMADE ON THE g4 — pane 1: THE OBJECTS (2026-10-14 · Claude draft)
-     Spec: Specs/G4_OS_and_the_Two_Modes_v2.md §7.
+     PRISM, REMADE ON THE g4 (2026-10-14 · Claude draft; 10-18: the six panels on one stage)
+     Spec: Specs/G4_OS_and_the_Two_Modes_v2.md §7 · Specs/Prism_UI_Map_v1.md (the six panels).
+
+     10-18 — THE SIX PANELS. The front door (#v-objects) is one screen: one graphmap that never
+     leaves, and six panels that are LAYERS pulled over it by the navtool — You · The field ·
+     Tracking above (the record), Diatribe · Prism · Compare below (today). The navtool is the
+     map: the layer comes from the panel's home side and the prism ends up opposite, as its
+     leading edge (upper row → prism low · lower row → prism high · left → prism right ·
+     right → prism left). Before you pick: the crowd. Hash: #p/<panel>; '' = the crowd.
+     Ted is on the centre panels only. The Reading (#reading/<rid>) keeps the dual triptych.
 
      Same concept, same layout, same order as v2 — rendered in the g4 OS.
      The window opens on the objects (the front door, 10-08): the HEADLINE
@@ -267,18 +275,31 @@
   .youdot { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; text-decoration: none; color: #0c0b09; font-size: 13px; background: linear-gradient(135deg, var(--film-0), var(--film-2), var(--film-4)); justify-self: end; align-self: start; }
   #v-you .youdot { display: none; }
 
-  /* ── the landing (10-17) */
-  #v-objects.wrap { padding-top: 14px; }
-  .lhead { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px; margin: 4px 0 6px; }
-  .lhead h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(22px, 5vw, 32px); line-height: 1.1; margin: 2px 0 0; }
-  .tedcirc { width: 52px; height: 52px; border-radius: 50%; overflow: hidden; display: block; background: radial-gradient(circle at 40% 35%, #26355e, #0c1430); border: 1px solid rgba(233,236,242,.25); }
+  /* ── THE SIX PANELS on one stage (10-18 — Specs/Prism_UI_Map_v1.md) ──
+     The view is one screen, no page scroll: header · [navtool slot] · the map · the band of pieces · [navtool slot].
+     The engaged panel's pieces live in #pband; the crowd's pieces float on and under the map. */
+  #v-objects.wrap { padding: 10px 16px 0; height: 100vh; height: 100dvh; display: flex; flex-direction: column; overflow: hidden; max-width: none; }
+  .lhead { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px; margin: 0 0 4px; flex: 0 0 auto; }
+  .lhead h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(18px, 4.4vw, 26px); line-height: 1.1; margin: 2px 0 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .tedcirc { width: 44px; height: 44px; border-radius: 50%; overflow: hidden; display: block; background: radial-gradient(circle at 40% 35%, #26355e, #0c1430); border: 1px solid rgba(233,236,242,.25); }
   .tedcirc img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.15) translateY(4%); }
-  .stage { position: relative; height: min(54vh, 470px); margin: 0 -16px; }
+  .tedcirc { display: none; }   /* (10-18) gone — Ted himself is the You piece; tap him */
+  .navslot { flex: 0 0 0; height: 0; transition: height .45s cubic-bezier(.2,.8,.2,1); }
+  .navslot.on { height: 78px; flex-basis: 78px; }
+  .main { flex: 1 1 auto; min-height: 0; display: grid; grid-template-rows: minmax(0, 1fr) auto; gap: 8px; }
+  .stage { position: relative; min-height: 0; margin: 0 -16px; }
   #hmap { position: absolute; inset: 0; }
-  #hmap canvas { display: block; width: 100% !important; height: 100% !important; }
-  .tsay { position: absolute; z-index: 3; max-width: 62%; padding: 10px 12px; border-radius: 10px 10px 10px 2px; background: rgba(233,236,242,.94); color: #0c0b09; font-size: 14.5px; line-height: 1.38; box-shadow: 0 6px 20px rgba(0,0,0,.35); transition: opacity .4s; pointer-events: none; }
+  #hmap canvas { display: block; inset: 0 !important; width: 100% !important; height: 100% !important; }   /* the factory's 12% overscan is undone here: the map fills the stage exactly */
+  .tsay { position: absolute; z-index: 3; max-width: min(62%, 400px); padding: 10px 12px; border-radius: 10px 10px 10px 2px; background: rgba(233,236,242,.94); color: #0c0b09; font-size: 14.5px; line-height: 1.38; box-shadow: 0 6px 20px rgba(0,0,0,.35); transition: opacity .4s; pointer-events: none; }
   .tsay.out { opacity: 0; }
-  .lrail { position: absolute; right: 10px; top: 30%; width: 118px; z-index: 2; display: flex; flex-direction: column; gap: 8px; }
+  .ptitle { position: absolute; left: 16px; top: 8px; z-index: 2; font-family: var(--mono); font-size: 9.5px; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-low); pointer-events: none; text-shadow: 0 1px 6px rgba(0,0,0,.8); }
+  /* the crowd's pieces on the map */
+  .lchip { position: absolute; z-index: 2; font-family: var(--mono); font-size: 10px; letter-spacing: .08em; color: var(--ink); text-decoration: none; padding: 6px 10px; border-radius: 14px; background: rgba(10,18,38,.72); border: 1px solid rgba(233,236,242,.16); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); transition: opacity .4s; }
+  .lchip b { font-weight: 400; color: var(--lt-cream); }
+  .lchip small { color: var(--ink-low); margin-left: 6px; letter-spacing: .14em; text-transform: uppercase; font-size: 8.5px; }
+  .fchip { left: 14px; top: 10px; }
+  .cchip { right: 14px; bottom: 12px; }
+  .lrail { position: absolute; right: 10px; top: 26%; width: 118px; z-index: 2; display: flex; flex-direction: column; gap: 8px; }
   .lcard { display: block; padding: 7px 8px; border: 1px solid rgba(233,236,242,.16); border-radius: 6px; background: rgba(10,18,38,.72); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); color: inherit; text-decoration: none; font-size: 12px; line-height: 1.3; transition: opacity .5s, transform .5s; transform: skewX(-6deg); }
   .lcard > * { transform: skewX(6deg); }
   .lcard.fade { opacity: 0; transform: skewX(-6deg) translateY(6px); }
@@ -286,57 +307,183 @@
   .lcard small { display: block; font-family: var(--mono); font-size: 9px; color: var(--ink-low); margin-top: 2px; }
   .lcard b { font-weight: 400; }
   .lcard .ag { font-family: var(--mono); font-size: 13px; }
-  .navdock { height: 64px; display: grid; place-items: center; position: relative; }
-  .navdock img { height: 52px; filter: drop-shadow(0 6px 10px rgba(0,0,0,.4)); }
-  html.embedded .navdock img { visibility: hidden; }   /* inside the G4 the real navtool settles here */
-  .band { position: relative; height: 150px; margin: 2px 0 14px; }
-  .bnd { position: absolute; inset: 0; transform: skewX(-14deg); border: 1px solid rgba(233,236,242,.18); background: linear-gradient(90deg, rgba(6,11,26,.7), rgba(20,32,64,.55)); border-radius: 3px; overflow: hidden; transition: opacity .45s; }
+  #v-objects:not([data-panel="crowd"]) .lchip, #v-objects:not([data-panel="crowd"]) .lrail { display: none; }
+  /* the crowd below the map: the raised navtool, the heat + diagnostics band, the event card */
+  .navdock { height: 60px; display: grid; place-items: center; position: relative; flex: 0 0 auto; }
+  .navdock img { height: 48px; filter: drop-shadow(0 6px 10px rgba(0,0,0,.4)); }
+  html.embedded .navdock img { visibility: hidden; }   /* inside the g4 the real navtool settles here */
+  .band { position: relative; height: 128px; margin: 0 0 8px; flex: 0 0 auto; cursor: pointer; }
+  .heat { position: absolute; left: 0; right: 0; top: 0; height: 22px; z-index: 3; display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: center; padding: 0 14px; font-family: var(--mono); font-size: 9px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-low); }
+  .heat .htrack { position: relative; height: 5px; border-radius: 3px; background: var(--lt-dial); opacity: .9; }
+  .heat .htrack i { position: absolute; top: -4px; width: 13px; height: 13px; border-radius: 50%; margin-left: -6px; background: radial-gradient(circle at 50% 45%, #fffaf0 0 30%, rgba(246,241,230,.85) 45%, rgba(246,241,230,.3) 70%, transparent); box-shadow: 0 0 10px 2px rgba(246,241,230,.35); }
+  .heat .hv { color: var(--ink); }
+  .bnd { position: absolute; left: 0; right: 0; top: 26px; bottom: 0; transform: skewX(-14deg); border: 1px solid rgba(233,236,242,.18); background: linear-gradient(90deg, rgba(6,11,26,.7), rgba(20,32,64,.55)); border-radius: 3px; overflow: hidden; transition: opacity .45s; }
   .bnd > * { transform: skewX(14deg); }
   .bnd.fade { opacity: 0; }
   #bndMap { position: absolute; left: -12%; right: -12%; top: 0; bottom: 0; }
   #bndMap canvas { display: block; width: 100% !important; height: 100% !important; }
   .bnd .bt, .bnd p { z-index: 2; text-shadow: 0 1px 6px rgba(0,0,0,.8); }
-  .bnd .bt { position: absolute; left: 18px; top: 8px; font-family: var(--mono); font-size: 9.5px; letter-spacing: .14em; text-transform: uppercase; }
+  .bnd .bt { position: absolute; left: 18px; top: 7px; font-family: var(--mono); font-size: 9.5px; letter-spacing: .14em; text-transform: uppercase; }
   .bnd .bt span { color: var(--ink-low); margin-left: 8px; }
-  .bnd p { position: absolute; left: 18px; right: 18px; bottom: 8px; margin: 0; font-size: 13px; line-height: 1.3; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .band .burns { position: absolute; inset: 0; margin: 0; height: 150px; }
-  .ecard { display: block; padding: 16px 18px; border: 1px solid var(--g4-rule); border-radius: 4px; background: rgba(6,11,26,.5); text-decoration: none; color: inherit; margin-bottom: 18px; }
-  .ecard .tag { font-family: var(--mono); font-size: 9.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-low); }
-  .ecard h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(24px, 5.5vw, 34px); line-height: 1.1; margin: 6px 0 8px; }
-  .ecard .pr { font-size: 16px; line-height: 1.45; margin: 0 0 8px; }
-  .ecard .fr { font-size: 14.5px; line-height: 1.55; color: var(--ink-mid); margin: 0 0 12px; }
-
-  /* ── the navtool summons: drag the prism left and Refraction floats in from the right; right, and Beam from the left */
-  .float { position: absolute; top: 5%; max-height: 88%; width: 80%; max-width: 420px; z-index: 4; padding: 14px 16px; box-sizing: border-box; border-radius: 6px; background: rgba(10,18,38,.88); border: 1px solid rgba(233,236,242,.22); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); overflow-y: auto; opacity: 0; pointer-events: none; transition: transform .45s cubic-bezier(.2,.8,.2,1), opacity .35s; box-shadow: 0 18px 40px rgba(0,0,0,.45); }
-  .float.dragging { transition: none; }
-  .fr { right: 4%; transform: translateX(calc(115% - var(--peek, 0px))) skewX(-3deg); }
-  .fl { left: 4%; transform: translateX(calc(-115% + var(--peek, 0px))) skewX(3deg); }
-  .float.on { opacity: 1; pointer-events: auto; transform: translateX(var(--back, 0px)) skewX(0deg); }
-  .float .pt { font-family: var(--mono); font-size: 9.5px; letter-spacing: .24em; text-transform: uppercase; color: var(--ink-low); margin-bottom: 10px; }
-  .float h3 { font-family: var(--serif); font-weight: 400; font-size: 19px; margin: 0 0 4px; line-height: 1.2; }
-  .float .k { font-family: var(--mono); font-size: 9.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-low); margin: 14px 0 6px; }
-  .float .law { padding: 8px 0; border-top: 1px solid var(--g4-rule-soft); font-size: 14px; }
-  .float .law small { display: block; font-family: var(--mono); font-size: 10px; color: var(--ink-low); margin-top: 2px; }
-  .float p { font-size: 14px; line-height: 1.45; color: var(--ink-mid); margin: 6px 0; }
-  .float a.go { display: inline-block; margin-top: 10px; font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); text-decoration: none; border: 1px solid var(--g4-rule); padding: 6px 12px; border-radius: 2px; }
-  .float .mrow { grid-template-columns: 34px 1fr auto; padding: 6px 2px; } .float .mrow img { width: 34px; height: 42px; }
+  .bnd p { position: absolute; left: 18px; right: 18px; bottom: 7px; margin: 0; font-size: 12.5px; font-style: italic; line-height: 1.3; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .band .burns { position: absolute; left: -16px; right: -16px; top: 26px; bottom: 0; margin: 0; height: auto; }
+  .ecard { display: block; padding: 10px 14px; border: 0; border-radius: 4px; background: rgba(6,11,26,.5); text-decoration: none; color: inherit; margin: 0 0 10px; flex: 0 0 auto; position: relative; }
+  .ecard::before { content: ''; position: absolute; left: 10%; right: 10%; top: 0; height: 18px; background: radial-gradient(60% 100% at 50% 0, rgba(246,241,230,.14), transparent); pointer-events: none; }
+  .ecard .tag { font-family: var(--mono); font-size: 9px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-low); }
+  .ecard h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(17px, 4.2vw, 24px); line-height: 1.15; margin: 4px 0 4px; }
+  .ecard .pr { font-size: 14px; line-height: 1.4; margin: 0; color: var(--ink-mid); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  #v-objects:not([data-panel="crowd"]) .navdock, #v-objects:not([data-panel="crowd"]) .band, #v-objects:not([data-panel="crowd"]) .ecard { display: none; }
+  /* the engaged panel's pieces: one band on the navtool's side of the map (phone); a side column on the beam or fan side (desktop) */
+  .pband { display: none; min-height: 0; max-height: 40vh; overflow-y: auto; padding: 2px 2px 10px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .pband::-webkit-scrollbar { display: none; }
+  #v-objects:not([data-panel="crowd"]) .pband { display: block; animation: slidein .45s cubic-bezier(.2,.8,.2,1); }
+  @keyframes slidein { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+  /* the band hugs the navtool: lower row → the navtool is high, so the pieces sit just under it and the map takes the bottom (thumb reach for the pin); upper row → map, pieces, navtool */
+  #v-objects[data-row="lower"] .main { grid-template-rows: auto minmax(0, 1fr); }
+  #v-objects[data-row="lower"] .pband { grid-row: 1; } #v-objects[data-row="lower"] .stage { grid-row: 2; }
+  #v-objects[data-row="lower"] .pband { max-height: 42vh; transition: max-height .45s cubic-bezier(.2,.8,.2,1); }
+  #v-objects[data-row="lower"].locked .pband { max-height: 64vh; }   /* locked: the responses get the room, the map keeps a thumb's worth */
+  #v-objects[data-col="l"] .pband { text-align: left; } #v-objects[data-col="r"] .pband .pt, #v-objects[data-col="r"] .pband h3 { text-align: right; }
+  @media (min-width: 900px) {
+    #v-objects:not([data-panel="crowd"])[data-col="l"] .main { grid-template-columns: minmax(300px, 380px) minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); }
+    #v-objects:not([data-panel="crowd"])[data-col="l"] .pband { grid-column: 1; grid-row: 1; max-height: none; }
+    #v-objects:not([data-panel="crowd"])[data-col="l"] .stage { grid-column: 2; grid-row: 1; }
+    #v-objects:not([data-panel="crowd"])[data-col="r"] .main { grid-template-columns: minmax(0, 1fr) minmax(300px, 380px); grid-template-rows: minmax(0, 1fr); }
+    #v-objects:not([data-panel="crowd"])[data-col="r"] .pband { grid-column: 2; grid-row: 1; max-height: none; }
+    #v-objects:not([data-panel="crowd"])[data-col="r"] .stage { grid-column: 1; grid-row: 1; }
+    #v-objects[data-row="lower"][data-col="l"] .main, #v-objects[data-row="lower"][data-col="r"] .main { grid-template-rows: minmax(0, 1fr); }
+  }
+  .pband .pt { font-family: var(--mono); font-size: 9.5px; letter-spacing: .24em; text-transform: uppercase; color: var(--ink-low); margin: 4px 0 8px; }
+  .pband h3 { font-family: var(--serif); font-weight: 400; font-size: 19px; margin: 0 0 4px; line-height: 1.2; }
+  .pband .k { font-family: var(--mono); font-size: 9.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-low); margin: 12px 0 6px; }
+  .pband p { font-size: 14px; line-height: 1.45; color: var(--ink-mid); margin: 6px 0; }
+  .pband p b { color: var(--ink); font-weight: 400; }
+  .pband .law { padding: 8px 0; border-top: 1px solid var(--g4-rule-soft); font-size: 14px; }
+  .pband .law small { display: block; font-family: var(--mono); font-size: 10px; color: var(--ink-low); margin-top: 2px; }
+  .pband a.go { display: inline-block; margin: 10px 8px 0 0; font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); text-decoration: none; border: 1px solid var(--g4-rule); padding: 6px 12px; border-radius: 2px; cursor: pointer; background: none; }
+  .pband a.go.lit { background: #e9ecf2; color: #0c0b09; border-color: #e9ecf2; }
+  .pband .mrow { grid-template-columns: 34px 1fr auto; padding: 6px 2px; } .pband .mrow img { width: 34px; height: 42px; }
+  .pband .rail { margin: 6px 0 4px; } .pband .rail .bands { font-size: 7.5px; letter-spacing: .04em; }
+  .pband .caps { margin-top: 10px; } .pband .cap { padding: 10px 12px; } .pband .cap p { font-size: 14px; }
+  .pband .ans { grid-template-columns: 1fr; gap: 8px; margin-top: 10px; } .pband .an { padding: 10px 12px; } .pband .an p { font-size: 14px; }
+  .pband .zline { display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: center; margin: 10px 0 4px; font-family: var(--mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-low); }
+  .pband .zline .track { position: relative; height: 8px; border-radius: 4px; background: linear-gradient(90deg, var(--lt-denominated), rgba(246,241,230,.3) 50%, var(--lt-fluid)); box-shadow: 0 0 14px rgba(246,241,230,.08); }
+  .pband .zline input[type=range] { position: absolute; left: -2px; right: -2px; top: -9px; width: calc(100% + 4px); height: 28px; margin: 0; -webkit-appearance: none; appearance: none; background: transparent; outline: none; }
+  .pband .zline input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%; background: radial-gradient(circle at 50% 45%, #fffaf0 0 30%, rgba(246,241,230,.85) 45%, rgba(246,241,230,.35) 70%, rgba(246,241,230,.08)); border: 0; box-shadow: 0 0 14px 3px rgba(246,241,230,.35); }
+  .pband .zline b { color: var(--ink); font-weight: 400; font-size: 15px; letter-spacing: 0; }
+  .pband .act { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
+  .pband .act .g4-key { margin-right: auto; }
+  .pband .tog { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 10px; }
+  .pband .tog span { font-family: var(--mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; padding: 5px 10px; border-radius: 12px; border: 1px solid var(--g4-rule); color: var(--ink-low); cursor: pointer; --c: var(--lt-cream); }
+  .pband .tog span.on { color: var(--c); border-color: color-mix(in srgb, var(--c) 45%, transparent); background: color-mix(in srgb, var(--c) 10%, transparent); text-shadow: 0 0 8px color-mix(in srgb, var(--c) 60%, transparent); }
+  .pband .cmp .r { grid-template-columns: 14px 1fr auto; }
+  .pband .objs { border-top: 1px solid var(--g4-rule); margin-top: 8px; }
+  .pband .objs a { display: grid; grid-template-columns: 1fr auto; gap: 10px; padding: 8px 2px; border-bottom: 1px solid var(--g4-rule-soft); text-decoration: none; color: inherit; font-size: 14px; }
+  .pband .objs a small { display: block; font-family: var(--mono); font-size: 9.5px; color: var(--ink-low); margin-top: 2px; }
+  .pband .objs a.on .st { color: var(--lt-gold); text-shadow: 0 0 8px rgba(224,183,122,.5); }
+  .pband .objs a .st { font-family: var(--mono); font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-low); white-space: nowrap; align-self: center; }
+  .pband .yid { grid-template-columns: 44px 1fr auto; } .pband .yav { width: 44px; height: 44px; font-size: 20px; } .pband .yid .nm { font-size: 18px; }
+  .pband .trail { display: grid; grid-template-columns: 1fr auto; gap: 10px; padding: 7px 0; border-top: 1px solid var(--g4-rule-soft); text-decoration: none; color: inherit; font-size: 14px; }
+  .pband .trail small { display: block; font-family: var(--mono); font-size: 9.5px; color: var(--ink-low); }
+  .pband .trail .sd { font-family: var(--mono); font-size: 10px; color: var(--ink-mid); text-align: right; align-self: center; }
+  .pband .diag { padding: 10px 12px; border-radius: 4px; background: rgba(6,11,26,.5); margin-top: 10px; font-size: 14px; line-height: 1.45; color: var(--ink-mid); position: relative; }
+  .pband .diag::before { content: ''; position: absolute; left: 10%; right: 10%; top: 0; height: 16px; background: radial-gradient(60% 100% at 50% 0, color-mix(in srgb, var(--c, var(--lt-cream)) 22%, transparent), transparent); pointer-events: none; }
+  .pband .diag b { color: var(--ink); font-weight: 400; }
+  .pband .msearch { margin: 6px 0; font-size: 14px; padding: 8px 10px; }
+  /* uncovered, not stacked (Sailor 10-18): blocks that appear only when the user does something */
+  .uncover { display: none; } .uncover.on { display: block; animation: slidein .4s cubic-bezier(.2,.8,.2,1); }
+  .rail.bare { margin: 2px 0 10px; }
+  .memreads { position: relative; height: 34px; margin: -4px 0 2px; font-family: var(--serif); font-style: italic; font-size: 13px; line-height: 1.3; color: var(--ink-mid); }
+  .memreads span { position: absolute; top: 0; width: 70%; opacity: 0; transition: opacity .35s; pointer-events: none; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .memreads span.on { opacity: 1; } .memreads .l { left: 0; text-align: left; } .memreads .r { right: 0; text-align: right; }
+  .memreads .kw { color: var(--ink); font-style: normal; }
+  .dialrow { display: grid; grid-template-columns: 1fr 34px; gap: 10px; align-items: center; }
+  .dialrow .rail { margin: 0; } .rail.bare input:disabled { cursor: default; }
+  .lock { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; text-decoration: none; color: var(--ink-low); font-size: 13px; border: 1px solid var(--g4-rule); transition: all .25s; }
+  .lock.on { color: #0c0b09; background: #e9ecf2; border-color: #e9ecf2; box-shadow: 0 0 14px rgba(246,241,230,.35); }
+  .resp { display: grid; gap: 6px; margin: 10px 0 4px; }
+  .resp .rl { display: grid; grid-template-columns: 10px 1fr; gap: 10px; align-items: start; padding: 8px 10px; border-radius: 4px; background: rgba(6,11,26,.45); text-decoration: none; color: var(--ink); font-size: 14px; line-height: 1.4; --c: var(--lt-cream); transition: background .2s; }
+  .resp .rl i { width: 8px; height: 8px; border-radius: 50%; margin-top: 6px; background: var(--c); box-shadow: 0 0 8px var(--c); }
+  .resp .rl.A { --c: var(--lt-blue); } .resp .rl.B { --c: var(--lt-red); } .resp .rl.C { --c: var(--lt-green); } .resp .rl.D { --c: var(--lt-gold); }
+  .resp .rl.on { background: color-mix(in srgb, var(--c) 12%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c) 40%, transparent); }
+  .resp .rl .kw { color: var(--film-rest); }
+  .resp.picked .rl:not(.on) { display: none; } .resp.picked.open .rl:not(.on) { display: grid; opacity: .7; }   /* after a stand, the other three fold away */
+  .ltiles { display: flex; gap: 8px; overflow-x: auto; padding: 2px 2px 8px; scrollbar-width: none; margin: 0 -2px; } .ltiles::-webkit-scrollbar { display: none; }
+  .ltile { flex: 0 0 auto; width: 92px; padding: 8px 8px 7px; border-radius: 8px; background: rgba(10,18,38,.6); text-decoration: none; color: inherit; font-size: 12px; line-height: 1.25; position: relative; transition: background .2s, box-shadow .2s; }
+  .ltile img { width: 100%; height: 86px; object-fit: cover; border-radius: 4px; display: block; margin-bottom: 6px; background: rgba(233,236,242,.06); }
+  .ltile b { font-weight: 400; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } .ltile small { display: block; font-family: var(--mono); font-size: 8.5px; color: var(--ink-low); margin-top: 2px; }
+  .ltile i { position: absolute; top: 6px; right: 6px; font-style: normal; font-family: var(--mono); font-size: 11px; padding: 2px 5px; border-radius: 8px; background: rgba(6,11,26,.75); }
+  .ltile.on { background: rgba(233,236,242,.1); box-shadow: 0 0 0 1px rgba(233,236,242,.35), 0 0 18px rgba(246,241,230,.15); }
+  .ltile.obj { width: 128px; --c: var(--lt-gold); } .ltile.obj::before { content: ''; position: absolute; left: 10%; right: 10%; top: 0; height: 14px; background: radial-gradient(60% 100% at 50% 0, color-mix(in srgb, var(--c) 28%, transparent), transparent); border-radius: 8px 8px 0 0; pointer-events: none; }
+  .ltile.obj b { white-space: normal; font-size: 12.5px; }
+  .ltile.obj em { display: block; font-style: normal; font-family: var(--mono); font-size: 8.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--lt-gold); margin-top: 5px; opacity: .85; }
+  .ldetail p { color: var(--ink-mid); } .ldetail .act .go { margin-top: 4px; }
+  .ltile i u { text-decoration: none; font-size: 9px; }
+  .ltile.mine { box-shadow: inset 0 0 0 1px rgba(246,241,230,.14); }
+  .stock { display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; align-items: baseline; margin: 6px 0 2px; }
+  .stock > b { font-family: var(--mono); font-size: 28px; font-weight: 400; line-height: 1; grid-row: 1 / span 2; align-self: center; }
+  .stock > span { font-family: var(--mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-low); } .stock em { font-style: normal; }
+  .stock .spark { display: block; } .stock small { display: block; font-family: var(--mono); font-size: 10px; color: var(--ink-low); letter-spacing: .08em; text-transform: uppercase; grid-column: 2; } .stock small b { font-weight: 400; }
+  .split { margin-top: 10px; display: none; } .split.on { display: block; }
+  .split .half { padding: 10px 12px; border-radius: 4px; background: rgba(6,11,26,.5); position: relative; --c: var(--lt-cream); }
+  .split .half::before { content: ''; position: absolute; left: 10%; right: 10%; top: 0; height: 14px; background: radial-gradient(60% 100% at 50% 0, color-mix(in srgb, var(--c) 22%, transparent), transparent); pointer-events: none; }
+  .split .half .k { margin: 0 0 4px; } .split .half p { margin: 0 0 4px; color: var(--ink); font-size: 14px; } .split .half .n { font-family: var(--mono); font-size: 10px; color: var(--ink-low); }
+  .split .delta { display: flex; justify-content: center; gap: 18px; font-family: var(--mono); font-size: 11px; color: var(--ink-mid); padding: 8px 0; position: relative; }
+  .split .delta::before { content: ''; position: absolute; left: 20%; right: 20%; top: 50%; height: 1px; background: linear-gradient(90deg, transparent, rgba(246,241,230,.25), transparent); z-index: -1; }
+  .pband .cmp .r { cursor: pointer; border-radius: 4px; padding: 6px 4px; } .pband .cmp .r.on { background: rgba(233,236,242,.07); }
+  .ticker { height: 24px; overflow: hidden; margin: -4px 0 6px; -webkit-mask: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+  .ticker .reel { display: inline-flex; align-items: center; white-space: nowrap; width: max-content; animation: reel 40s linear infinite; font-family: var(--mono); font-size: 10.5px; letter-spacing: .08em; color: var(--ink-low); }
+  .ticker .q b { font-weight: 400; } .ticker .q u { text-decoration: none; font-size: 9px; } .ticker i { font-style: normal; margin: 0 12px; opacity: .4; }
+  .ltile.news small { white-space: normal; line-height: 1.2; }
+  .cloud { display: flex; flex-wrap: wrap; gap: 6px 10px; justify-content: center; margin: 10px 0 2px; } .cloud span { font-family: var(--serif); font-style: italic; color: var(--ink-mid); font-size: calc(12px + 6px * var(--w, .5)); opacity: calc(.45 + .55 * var(--w, .5)); }
+  .delg { margin-top: 8px; } .delg .uncover { display: none; gap: 8px; align-items: center; flex-wrap: wrap; margin-top: 8px; } .delg .uncover.on { display: flex; }
+  .delg select, .delg input { background: rgba(233,236,242,.05); border: 1px solid var(--g4-rule); color: var(--ink); font: 13px var(--serif); padding: 7px 9px; border-radius: 3px; } .delg input { width: 86px; } .delg .go { margin: 0; }
+  .more { display: inline-block; font-family: var(--mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-low); text-decoration: none; margin: 8px 0 4px; }
+  /* the membrane (J_diagnostic §7): the cognitive surface between the fluid and the denominated readings, floating above the dial;
+     its disturbance is the reading — near-flat at fluid, pronounced when denominated; each end swells by how charged that side is */
+  .mem { position: relative; height: 112px; margin: 4px -4px 0; }
+  .mem canvas { display: block; width: 100% !important; height: 100% !important; }
+  .memcap { font-family: var(--serif); font-style: italic; font-size: 12.5px; color: var(--ink-low); text-align: center; margin: -2px 0 8px; }
+  .memcap b { color: var(--ink-mid); font-weight: 400; font-style: normal; }
+  .bnd .mem { position: absolute; inset: 0; height: auto; margin: 0; }
+  #bndMap { display: none; }
+  /* a station's line, opened beside its dot */
+  .linecard { position: absolute; z-index: 5; width: min(300px, 78%); padding: 10px 12px; border-radius: 6px; background: rgba(10,18,38,.92); border: 1px solid rgba(233,236,242,.18); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 10px 30px rgba(0,0,0,.45); }
+  .linecard .k { font-family: var(--mono); font-size: 9px; letter-spacing: .18em; text-transform: uppercase; margin-bottom: 6px; }
+  .linecard p { margin: 0; font-size: 14px; line-height: 1.45; color: var(--ink); } .linecard p .kw { color: var(--film-rest); }
+  .linecard .z { font-family: var(--mono); font-size: 10px; color: var(--ink-mid); margin-top: 6px; } .linecard .z b { font-weight: 400; color: var(--ink); }
+  .linecard a.go { display: inline-block; margin-top: 8px; font-family: var(--mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: #0c0b09; background: #e9ecf2; padding: 5px 10px; border-radius: 2px; cursor: pointer; text-decoration: none; }
 </style>
 </head>
 <body>
-<div class="wrap view on" id="v-objects">
-  <!-- the landing (Sailor's sketch, 10-17): elements from all six panels summoned around the graphmap as floating, piercing assets;
-       the navtool settles at the centre; the diagnostic band cycles the event's boundaries, then the burns -->
-  <div class="lhead"><div><div class="g4-key">Prism</div><h1 id="lTitle"></h1></div><a class="tedcirc" href="#you" title="you"><img src="../src/img/ted-head.png" alt=""></a></div>
-  <div class="stage" id="stage"><div id="hmap"></div><div class="tsay" id="tedSay" hidden></div><div class="lrail" id="lrail"></div><aside class="float fl" id="floatL"></aside><aside class="float fr" id="floatR"></aside></div>
+<div class="wrap view on" id="v-objects" data-panel="crowd" data-col="c" data-row="">
+  <!-- THE SIX PANELS (Specs/Prism_UI_Map_v1.md, 10-18): one graphmap that never leaves; each panel is a layer the
+       navtool pulls over it. Columns: you · the event · institutions. Rows: the record (upper) · today (lower).
+       The layer comes from the panel's home side and the navtool ends up opposite, as the layer's leading edge:
+       upper row → navtool low · lower row → navtool high · left column → prism right · right column → prism left.
+       Before you pick, the CROWD: one piece from each panel around the map. Tap a piece, or drag the prism. -->
+  <div class="lhead"><div><div class="g4-key" id="lKey">Prism</div><h1 id="lTitle"></h1></div><a class="tedcirc" href="#p/you" title="you"><img src="../src/img/ted-head.png" alt=""></a></div>
+  <div class="navslot top" id="slotTop"></div>
+  <div class="main" id="main">
+    <div class="stage" id="stage">
+      <div id="hmap"></div><div class="tsay" id="tedSay" hidden></div>
+      <a class="lchip fchip" id="fieldChip" href="#p/field"></a>
+      <div class="lrail" id="lrail"></div>
+      <a class="lchip cchip" id="cmpChip" href="#p/compare"></a>
+      <div class="ptitle" id="ptitle"></div>
+      <div class="linecard" id="lineCard" hidden></div>
+    </div>
+    <div class="pband" id="pband"></div>
+  </div>
   <div class="navdock" id="navdock"><img src="../src/img/prism3d.png" alt=""></div>
   <div class="band" id="band">
-    <div class="bnd" id="bnd"><div id="bndMap"></div><div class="bt"><b id="bndWho"></b><span id="bndBand"></span></div><p id="bndLine"></p></div>
+    <div class="heat" id="heat"><span class="hk"></span><div class="htrack"><i id="heatKnob"></i></div><span class="hv" id="heatVal"></span></div>
+    <div class="bnd" id="bnd"><div class="mem" id="memC"></div><div class="bt"><b id="bndWho"></b><span id="bndBand"></span></div><p id="bndLine"></p></div>
     <div class="burns" id="burns" hidden><div class="reel" id="reel"></div></div><span id="burnCount" hidden></span>
   </div>
-  <a class="head ecard" id="head" href="#"></a>
-  <div class="sec"><span class="g4-key">everything on the table · laws first</span><span class="g4-key" id="count"></span></div>
-  <div class="rows" id="rows"></div>
-  <div class="foot tut">Headline rule: the object that most recently changed state — a rule, not a hand. Object declarations marked by Claude await Sailor's ruling. <a href="#" id="classicLink" style="color:inherit">classic flow ↗</a></div>
+  <a class="head ecard" id="head" href="#p/prism"></a>
+  <div class="navslot bottom" id="slotBottom"></div>
+  <span id="count" hidden></span><div id="rows" hidden></div><a id="classicLink" hidden></a>
 </div>
 
 
@@ -481,17 +628,18 @@
   const stateDate = r => (r.centralObject && r.centralObject.stateDate) || r.date || '';
   const kindOrder = { law: 0, statute: 0, act: 0, order: 1, ruling: 2, bill: 3, proclamation: 4, license: 5, operation: 6, statement: 7, event: 8 };
   const sorted = live.slice().sort((a, b) => (kindOrder[(a.centralObject || {}).kind] ?? 9) - (kindOrder[(b.centralObject || {}).kind] ?? 9) || stateDate(b).localeCompare(stateDate(a)));
-  const headline = live.slice().sort((a, b) => stateDate(b).localeCompare(stateDate(a)))[0];
+  const TODAY = live.slice().sort((a, b) => stateDate(b).localeCompare(stateDate(a)))[0];
+  let headline = TODAY;   // the event on the stage: today's by the headline rule, or the one opened from the table (#reading/<rid>, 10-18)
   const open = r => `#reading/${encodeURIComponent(r.rid)}`;
   $('#classicLink').href = '../v2/?front=1';
 
-  if (headline) {
-    const co = headline.centralObject || {}, strip = t => String(t || '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
-    const h = $('#head'); h.href = open(headline);
+  function paintHead() { if (!headline) return;
+    const co = headline.centralObject || {};
+    const h = $('#head');   // the crowd's event card: the title and the question only; the story lives in the Prism panel (Sailor, 10-18)
     $('#lTitle').textContent = co.name || headline.title;
-    const fr = strip(headline.framing);
-    h.innerHTML = `<div class="tag">${co.state || co.kind || ''} · ${fmt(co.stateDate || headline.date)}</div><h2>${headline.title}</h2><p class="pr">${headline.prompt || ''}</p><p class="fr">${fr.length > 300 ? fr.slice(0, 300).replace(/\s+\S*$/, '') + '…' : fr}</p><span class="g4-pill go">read it →</span>`;
+    h.innerHTML = `<div class="tag">${co.state || co.kind || ''} · ${fmt(co.stateDate || headline.date)} · ${headline === TODAY ? "today's event" : 'on the table'}</div><h2>${headline.title}</h2><p class="pr">${headline.prompt || ''}</p>`;
   }
+  paintHead();
   $('#count').textContent = `${sorted.length} standing`;
   $('#rows').innerHTML = sorted.map(r => { const co = r.centralObject || {}; const st = (co.state || '').toLowerCase(); return `<a class="row" href="${open(r)}">
       <div class="when">${fmt(co.stateDate || r.date)}<b>${co.kind || 'object'}</b></div>
@@ -522,7 +670,7 @@
     $('#rdTitle').textContent = R.title; $('#rdCat').textContent = R.category || '';
     $('#rdPrompt').textContent = R.prompt || '';
     $('#rdFraming').innerHTML = lit(R.framing || '', R.framingKeywords);
-    $('#rdLaw').innerHTML = (R.tethers || []).map(t => `<div class="g4-row"><div class="n">${t.bill} · ${t.title}<small>${t.statusAsOf || ''}</small></div><div class="d">${t.relation}</div></div>`).join('') || '<div class="g4-key" style="padding:10px 0">no legislative tether declared</div>';
+    $('#rdLaw').innerHTML = (R.tethers || []).map(t => `<div class="g4-row"><div class="n">${t.bill ? t.bill + ' · ' : ''}${t.title}<small>${t.statusAsOf || ''}</small></div><div class="d">${t.relation}</div></div>`).join('') || '<div class="g4-key" style="padding:10px 0">no legislative tether declared</div>';
     pick = null; zUser = 0; $('#zIn').value = 0; pin = { x: 0.5, y: 0.5 };
     $('#zPos').textContent = (R.axes && R.axes.z && R.axes.z.pos) || 'delivers'; $('#zNeg').textContent = (R.axes && R.axes.z && R.axes.z.neg) || 'does not';
     setAperture(aperture); drawGraph(); goPane('beam'); renderUpper();
@@ -644,29 +792,34 @@
   // false (or open with ?live=1) when the pins should count.
   const REHEARSAL = !/[?&]live=1/.test(location.search);
   try { if (PrismDB.seed && !(PrismDB.getEvents() || []).length) PrismDB.seed(); } catch (e) {}   // a fresh device: the live tier into the store, as the classic flow does on load
-  const dbEvent = () => { try { return (PrismDB.getEvents() || []).find(e => e.rid === R.rid) || null; } catch (e) { return null; } };
+  const dbEventOf = rd => { try { return (PrismDB.getEvents() || []).find(e => e.rid === rd.rid) || null; } catch (e) { return null; } };
+  const dbEvent = () => dbEventOf(R);
   function seatNote() { if (REHEARSAL) { $('#seatNote').innerHTML = 'rehearsal · a commit stays in this browser'; return; } let b = null; try { b = PrismField.bound(); } catch (e) {} $('#seatNote').innerHTML = b ? `seated as <b style="color:var(--ink)">${b.name}</b> · <a href="#" id="unseat" style="color:inherit">leave</a>` : 'unseated · a commit stays on this device'; const u = $('#unseat'); if (u) u.addEventListener('click', ev => { ev.preventDefault(); try { PrismField.unbind(); } catch (e) {} seatNote(); }); }
   let pendingBurn = null;
-  async function burn(row) {
+  async function burn(row, rd, noteSel) {
+    rd = rd || R; const note = $(noteSel || '#fieldNote') || { set textContent(v) {}, set innerHTML(v) {} };
     let b = null; try { b = PrismField.bound(); } catch (e) {}
-    if (!b) { pendingBurn = row; openSeat(); return; }
-    $('#fieldNote').textContent = 'placing the burn…';
-    const evB = dbEvent() || {};
-    let r; try { r = await PrismField.pushBurn({ rid: R.rid, title: R.title, x: row.x, y: row.y, z: row.z, quad: row.quadrant, band: row.band, intensity: row.intensity || 50, words: '', tiles: [], device: evB.id || '' }); } catch (e) { r = { ok: false, error: e.message }; }
-    if (r && r.ok) { $('#fieldNote').innerHTML = `burn placed as <b>${b.name}</b> — it is public now.`; drawGraph._fieldFor = null; drawGraph(); }
-    else if (r && r.skipped) { $('#fieldNote').textContent = 'kept on this device (unseated).'; }
-    else { $('#fieldNote').textContent = 'the field did not take it: ' + ((r && r.error) || 'unknown'); }
+    if (!b) { pendingBurn = { row, rd, noteSel }; openSeat(); return; }
+    note.textContent = 'placing the burn…';
+    const evB = dbEventOf(rd) || {};
+    let r; try { r = await PrismField.pushBurn({ rid: rd.rid, title: rd.title, x: row.x, y: row.y, z: row.z, quad: row.quadrant, band: row.band, intensity: row.intensity || 50, words: '', tiles: [], device: evB.id || '' }); } catch (e) { r = { ok: false, error: e.message }; }
+    if (r && r.ok) { note.innerHTML = `burn placed as <b>${b.name}</b> — it is public now.`; drawGraph._fieldFor = null; if (R && rd === R) drawGraph(); try { fieldFresh = null; if (window.sixRepaint) sixRepaint(); } catch (e) {} }
+    else if (r && r.skipped) { note.textContent = 'kept on this device (unseated).'; }
+    else { note.textContent = 'the field did not take it: ' + ((r && r.error) || 'unknown'); }
   }
-  $('#commit').addEventListener('click', e => { e.preventDefault(); if (!R) return;
-    const q = quadOf(pin.x, pin.y), b = band(aperture);
-    const row = { rid: R.rid, at: new Date().toISOString(), aperture, side: sideOf(aperture), band: b, x: +pin.x.toFixed(4), y: +pin.y.toFixed(4), quadrant: q, answered: pick ? pick.q : null, z: +zUser.toFixed(3) };
+  let fieldFresh = null;
+  // one commit for both the Reading and the Prism panel: this device first, then the field (public, under the avatar)
+  function commitPin(rd, st, btnSel, noteSel) {
+    const q = quadOf(st.pin.x, st.pin.y), b = band(st.aperture), btn = $(btnSel), note = $(noteSel);
+    const row = { rid: rd.rid, at: new Date().toISOString(), aperture: st.aperture, side: sideOf(st.aperture), band: b, x: +st.pin.x.toFixed(4), y: +st.pin.y.toFixed(4), quadrant: q, answered: st.pick ? st.pick.q : null, z: +st.zUser.toFixed(3) };
     try { const all = JSON.parse(localStorage.getItem('g4.pins') || '[]'); all.push(row); localStorage.setItem('g4.pins', JSON.stringify(all)); } catch (err) {}
-    if (REHEARSAL) { $('#commit').textContent = 'pinned ✓'; $('#commit').classList.add('film'); $('#fieldNote').textContent = 'rehearsal — kept in this browser only.'; setTimeout(() => { $('#commit').textContent = 'commit the pin'; $('#commit').classList.remove('film'); }, 1600); return; }
-    // PrismDB: the same record the classic flow writes, so the Beam and the aggregate see it
-    try { const ev = dbEvent(); if (ev) { const saved = PrismDB.saveResponse({ eventId: ev.id, finalQuadrant: q, initialChoice: pick ? pick.q : q, pin: { x: pin.x, y: pin.y }, band: b, apertureBand: b, z: row.z, dialect: '', diatribeScore: aperture, diatribeSliderPosition: aperture }); row.intensity = saved && saved.intensity; } } catch (err) { console.warn('[g4] saveResponse', err && err.message); }
-    $('#commit').textContent = 'pinned ✓'; $('#commit').classList.add('film'); setTimeout(() => { $('#commit').textContent = 'commit the pin'; $('#commit').classList.remove('film'); }, 1600);
-    burn(row); try { paintBurns(); } catch (e) {}
-  });
+    const flash = () => { if (!btn) return; const was = btn.textContent; btn.textContent = 'pinned ✓'; btn.classList.add('film'); setTimeout(() => { btn.textContent = was; btn.classList.remove('film'); }, 1600); };
+    if (REHEARSAL) { flash(); if (note) note.textContent = 'rehearsal — kept in this browser only.'; return row; }
+    try { const ev = dbEventOf(rd); if (ev) { const saved = PrismDB.saveResponse({ eventId: ev.id, finalQuadrant: q, initialChoice: st.pick ? st.pick.q : q, pin: { x: st.pin.x, y: st.pin.y }, band: b, apertureBand: b, z: row.z, dialect: '', diatribeScore: st.aperture, diatribeSliderPosition: st.aperture }); row.intensity = saved && saved.intensity; } } catch (err) { console.warn('[g4] saveResponse', err && err.message); }
+    flash(); burn(row, rd, noteSel); try { paintBurns(); } catch (e) {}
+    return row;
+  }
+  $('#commit').addEventListener('click', e => { e.preventDefault(); if (!R) return; commitPin(R, { pin, aperture, pick, zUser }, '#commit', '#fieldNote'); });
   // the seat sheet
   function openSeat() { $('#seat').classList.add('open'); $('#seatErr').textContent = ''; setTimeout(() => $('#seatPass').focus(), 50); }
   function closeSeat() { $('#seat').classList.remove('open'); }
@@ -674,16 +827,16 @@
   document.querySelectorAll('#seat [data-way]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); const way = a.dataset.way; document.querySelectorAll('#seat [data-way]').forEach(x => { x.classList.toggle('on', x === a); x.classList.toggle('quiet', x !== a); }); $('#seatName').style.display = way === 'seat' ? 'block' : 'none'; $('#seatPass').placeholder = way === 'seat' ? 'my passcode' : 'the key'; }));
   $('#seatGo').addEventListener('click', async e => { e.preventDefault(); const way = document.querySelector('#seat [data-way].on').dataset.way; $('#seatErr').textContent = '…';
     let r; try { r = way === 'seat' ? await PrismField.knock($('#seatPass').value, $('#seatName').value) : await PrismField.knock($('#seatPass').value); } catch (err) { r = { ok: false, error: err.message }; }
-    if (r && r.ok) { $('#seatErr').textContent = ''; closeSeat(); seatNote(); if (pendingBurn) { const row = pendingBurn; pendingBurn = null; burn(row); } }
+    if (r && r.ok) { $('#seatErr').textContent = ''; closeSeat(); seatNote(); if (pendingBurn) { const pb = pendingBurn; pendingBurn = null; burn(pb.row, pb.rd, pb.noteSel); } }
     else $('#seatErr').textContent = (r && r.error) || 'refused'; });
   // ── compare, on the plane: you against the field, the stations, and the law ──
   const mean = rows => rows.length ? { x: rows.reduce((a, r) => a + r.x, 0) / rows.length, y: rows.reduce((a, r) => a + r.y, 0) / rows.length, z: rows.reduce((a, r) => a + (r.z || 0), 0) / rows.length, n: rows.length } : null;
   const nums = o => `x ${Math.round((o.x - 0.5) * 200)} · y ${Math.round((0.5 - o.y) * 200)} · z ${zs(o.z)}`;
   const dist = (a, b) => Math.hypot((a.x - b.x) * 2, (a.y - b.y) * 2, (a.z || 0) - (b.z || 0));
-  function lawPlacements() {
+  function lawPlacements(rd) {
     // a tether's own place on the plane, as declared in the Reading (quadrants, band, z)
-    const QC = { A: [0.25, 0.25], B: [0.75, 0.25], C: [0.25, 0.75], D: [0.75, 0.75] };
-    return (R.tethers || []).filter(t => t.place && t.place.quadrants && t.place.quadrants.length).map(t => {
+    rd = rd || R; const QC = { A: [0.25, 0.25], B: [0.75, 0.25], C: [0.25, 0.75], D: [0.75, 0.75] };
+    return (rd.tethers || []).filter(t => t.place && t.place.quadrants && t.place.quadrants.length).map(t => {
       const qs = t.place.quadrants; const cx = qs.reduce((a, q) => a + QC[q][0], 0) / qs.length, cy = qs.reduce((a, q) => a + QC[q][1], 0) / qs.length;
       const pull = { fluid: 0.35, coalition: 0.65, denominated: 0.95 }[t.place.band] || 0.5;   // the band is distance from the centre
       return { x: 0.5 + (cx - 0.5) * pull * 1.4, y: 0.5 + (cy - 0.5) * pull * 1.4, z: t.place.z || 0, bill: t.bill, title: t.title, relation: t.relation, why: t.place.why || '' };
@@ -775,6 +928,20 @@
     return { v: Math.round(Math.max(-100, Math.min(100, (wP * ag(U[pk], M[pk]) + wO * ag(U[ok], M[ok])) * 100))), derived: mp.derived, mp };
   }
   function agreement(m) { const L = latestPins(); const per = Object.keys(L).map(rid => Object.assign({ rid, pin: L[rid] }, agreeOn(m, L[rid], rid))); return per.length ? { v: Math.round(per.reduce((a, b) => a + b.v, 0) / per.length), per } : null; }
+  // ── the alignment "stock" (ported 10-18 from v2's alignSeries/alignSparkline, Sailor 07-11/13): per reading you've pinned, oldest → newest,
+  // the signed index vs you; the current value, the tick vs the previous reading, a sparkline; and a provisional line vs the aggregate (the field's centre)
+  function stockOf(m, frame) {
+    const pins = Object.values(latestPins()).sort((x, y) => (x.at || '').localeCompare(y.at || ''));
+    const series = pins.map(p => { let ref = p; if (frame === 'agg') { let fe = []; try { fe = PrismField.field(p.rid) || []; } catch (e) {} const mn = mean(fe.map(en => ({ x: en.x, y: en.y, z: en.z || 0 }))); if (!mn) return null; ref = mn; } return { rid: p.rid, value: agreeOn(m, ref, p.rid).v }; }).filter(Boolean);
+    const cur = series.length ? series[series.length - 1].value : null, prev = series.length > 1 ? series[series.length - 2].value : null;
+    return { series, current: cur, tick: cur != null && prev != null ? cur - prev : null };
+  }
+  const tickGlyph = t => t == null ? '' : t > 0 ? '▲' : t < 0 ? '▼' : '▬';
+  function sparkline(series) { if (!series || series.length < 2) return ''; const W = 120, H = 28, n = series.length, xs = i => Math.round(i / (n - 1) * (W - 4)) + 2, ys = v => Math.round((H - 2) - ((v + 100) / 200) * (H - 4)) + 1; const last = series[n - 1].value, col = last > 8 ? '#8fd0a0' : last < -8 ? '#e9967f' : '#d8d0b0'; return `<svg class="spark" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}"><line x1="0" y1="${ys(0)}" x2="${W}" y2="${ys(0)}" stroke="rgba(246,241,230,.14)" stroke-dasharray="2 2"/><polyline points="${series.map((p, i) => xs(i) + ',' + ys(p.value)).join(' ')}" fill="none" stroke="${col}" stroke-width="1.5" stroke-linejoin="round"/><circle cx="${xs(n - 1)}" cy="${ys(last)}" r="2.5" fill="${col}"/></svg>`; }
+  // your delegation (v2's trkDistrictAffordance / applyDistrict): your two senators and your representative, by state and district; following them is automatic
+  const delegation = () => { try { return PrismDB.getDelegation() || {}; } catch (e) { return {}; } };
+  const isDelegate = (m, d) => !!(d && d.state && m.state === d.state && ((m.chamber || '').toLowerCase() === 'senate' || (d.district != null && m.district === d.district)));
+  function setDelegationAndFollow(state, district) { try { PrismDB.setDelegation({ state, district: district === '' ? null : district }); } catch (e) {} const d = delegation(); MEMBERS.forEach(m => { if (isDelegate(m, d) && !followed().includes(m.bioguideId)) followToggle(m.bioguideId); }); }
   const sgn = v => (v > 0 ? '+' : v < 0 ? '−' : '±') + Math.abs(v);
   const agCls = v => v == null ? '' : v > 8 ? 'pos' : v < -8 ? 'neg' : 'mix';
   const isFol = id => followed().includes(id);
@@ -805,8 +972,8 @@
       ${pin ? `<line x1="${X(pin.x)}" y1="${X(pin.y)}" x2="${X(mp.x)}" y2="${X(mp.y)}" stroke="rgba(246,241,230,.28)"/><circle cx="${X(pin.x)}" cy="${X(pin.y)}" r="6" fill="none" stroke="#e9ecf2" stroke-width="1.6"/><text x="${X(pin.x)}" y="${(pin.y * S + 18).toFixed(1)}" text-anchor="middle" font-family="var(--mono)" font-size="9" fill="rgba(233,236,242,.7)">you</text>` : ''}
       <rect x="${(mp.x * S - 6).toFixed(1)}" y="${(mp.y * S - 6).toFixed(1)}" width="12" height="12" transform="rotate(45 ${X(mp.x)} ${X(mp.y)})" fill="${col}"/></svg>`;
   }
-  function renderMember(id) {
-    const m = MEMBERS.find(x => x.bioguideId === id); const el = $('#mbody');
+  function renderMember(id, target) {
+    const m = MEMBERS.find(x => x.bioguideId === id); const el = target || $('#mbody');
     if (!m) { el.innerHTML = '<p>No such member.</p>'; return; }
     const a = agreement(m), since = (m.terms || []).reduce((y, t) => Math.min(y, t.startYear || 9999), 9999);
     const last = a ? a.per.slice().sort((x, y) => (y.pin.at || '').localeCompare(x.pin.at || ''))[0] : null;
@@ -824,7 +991,7 @@
           <div class="ln"><span>Bills they signed onto</span><b>${m.cosponsorCount != null ? m.cosponsorCount : '—'}</b></div>
           <div class="ln"><span>Their bills move forward</span><b>${moves}</b></div></div>
       </div>`;
-    $('#mFol').addEventListener('click', () => { followToggle(id); renderMember(id); });
+    el.querySelector('#mFol').addEventListener('click', () => { followToggle(id); renderMember(id, target); if (target) { try { renderBand(SIX.panel); paint(); paintChips(); } catch (e) {} } });
   }
 
   // ── YOU (10-17 — the classic flow's profile card, door and notifications, in plain words) ──
@@ -952,12 +1119,25 @@
   }
 
 
-  // ════ THE LANDING (Sailor's sketch, 10-17) ════
-  // Everything here is summoned around the graphmap: Ted (in front, then off into the background), the moon at
-  // tonight's phase (far behind), a rolling column of what you follow, the navtool settled at the centre, and the
-  // diagnostic band — the event's four boundaries in turn, the most charged first, two rounds, then the burns.
+  // ════ THE SIX PANELS ON ONE STAGE (Specs/Prism_UI_Map_v1.md, 10-18) ════
+  // One graphmap (G) never leaves the screen. Each panel is a LAYER painted onto it, and a BAND of pieces beside it.
+  // The navtool is the map: the layer comes from the panel's home side and the prism ends up opposite, as the
+  // layer's leading edge — upper row → prism low · lower row → prism high · left column → prism right · right → left.
+  // Before you pick a panel, the CROWD: one piece of each panel around the map (Sailor's sketch, 10-17/18).
   if (EMBEDDED) document.documentElement.classList.add('embedded');
   const LAND = { g: null, ted: null, moon: null, built: false };
+  const GRID = { you: [0, 0], field: [1, 0], tracking: [2, 0], prism: [1, 1], compare: [2, 1] };   // [column, row] — the lower-left slot is empty for now (Diatribe retired 10-18: the dial and the membrane live on Prism)
+  const PANEL_NAME = { crowd: 'Prism', you: 'You', field: 'The field', tracking: 'Tracking', prism: 'Prism', compare: 'Compare' };
+  const NAV_T = [0.88, 0.5, 0.12];   // where the prism sits by column: left panels → prism right (the beam across the left) · right panels → prism left (the fan across the right)
+  const SIX = { panel: 'crowd', pin: { x: 0.5, y: 0.5 }, zUser: 0, aperture: 0, pick: null, placed: false, cmp: { field: true, stations: true, law: true, members: {}, objects: {} }, lens: 'everyone', locked: false, focus: null, against: null, intro: false };
+  // objects you follow (rulings, orders, laws from the table) — this browser, like the follows in rehearsal
+  const followedObjs = () => { try { return JSON.parse(localStorage.getItem('g4.followObj') || '[]'); } catch (e) { return []; } };
+  const toggleObj = rid => { const f = followedObjs(); const i = f.indexOf(rid); if (i >= 0) f.splice(i, 1); else f.push(rid); try { localStorage.setItem('g4.followObj', JSON.stringify(f)); } catch (e) {} };
+  const TRACKABLE = { law: 1, statute: 1, act: 1, order: 1, ruling: 1, proclamation: 1 };
+  const trackables = () => sorted.filter(r => TRACKABLE[((r.centralObject || {}).kind || '').toLowerCase()]);
+  // an object's place on the map, by text: its reading's declared law placement if it has one, else the mean of its stations at coalition
+  function objPlace(r) { const lp = lawPlacements(r)[0]; if (lp) return { x: lp.x, y: lp.y, z: lp.z || 0, how: 'placed by text' }; const Rs = r.responses || {}, pts = ['A', 'B', 'C', 'D'].filter(q => (Rs[q] || {}).coalition).map(q => ({ x: 0.5 + POSQ[q][0] * 0.55, y: 0.5 + POSQ[q][1] * 0.55, z: (Rs[q].coalition.z || 0) })); const m = mean(pts); return m ? Object.assign(m, { how: 'placed by its reading' }) : { x: 0.5, y: 0.5, z: 0, how: 'unplaced' }; }
+  let G = null;
   const MOON_SYN = 29.530588853, MOON_NEW = Date.UTC(2000, 0, 6, 18, 14) / 864e5;
   const moonAge = () => ((Date.now() / 864e5 - MOON_NEW) % MOON_SYN + MOON_SYN) % MOON_SYN;
   function moonMesh() {
@@ -969,171 +1149,434 @@
     const mat = new THREE.ShaderMaterial({ uniforms: { uL: { value: L }, uMap: { value: new THREE.CanvasTexture(cv) } },
       vertexShader: 'varying vec3 vN; varying vec2 vUv; void main(){ vN = normalize(mat3(modelMatrix) * normal); vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }',
       fragmentShader: 'uniform vec3 uL; uniform sampler2D uMap; varying vec3 vN; varying vec2 vUv; void main(){ float d = dot(normalize(vN), uL); float lit = smoothstep(-0.04, 0.10, d); vec3 c = texture2D(uMap, vUv).rgb; gl_FragColor = vec4(c * (0.06 + 0.98 * lit) + vec3(0.02,0.03,0.06), 1.0); }' });
-    const m = new THREE.Mesh(new THREE.SphereGeometry(1, 40, 28), mat);
-    return m;
+    return new THREE.Mesh(new THREE.SphereGeometry(1, 40, 28), mat);
   }
-  function buildLanding() {
+  // the pin you last committed on today's event comes back as the one you are standing on
+  (function restorePin() { if (!headline) return; const p = latestPins()[headline.rid]; if (p) { SIX.pin = { x: p.x, y: p.y }; SIX.zUser = p.z || 0; SIX.aperture = p.aperture || 0; SIX.placed = true; } })();
+  function buildStage() {
     if (LAND.built || !headline) return; const el = $('#hmap'); if (!el || !el.offsetWidth) return; LAND.built = true;
-    let gm; try { gm = PrismGraphmap.create({ container: el, mode: 'analytical', capabilities: { orbit: true, zInput: false, zRender: true, diatribeSlider: false, clustering: 'individual' } }); gm.mount(el); } catch (e) { console.warn('[landing]', e); return; }
-    LAND.g = gm;
-    try { gm.setBoundaryVisible && gm.setBoundaryVisible(false); gm.setOrbit(-6, -30); gm.setZoom && gm.setZoom(6.7); gm.setFocus && gm.setFocus(0.5, 0.56); gm.setCornerLabels && gm.setCornerLabels({ A: 'LI', B: 'RI', C: 'LP', D: 'RP' }); } catch (e) {}
-    // the event on the plane: its four corners (at the coalition band) and everyone's pins
-    const Rs = headline.responses || {}, POSQ = { A: [-0.5, -0.5], B: [0.5, -0.5], C: [-0.5, 0.5], D: [0.5, 0.5] }, COLQ = { A: 0x6094dc, B: 0xdc6060, C: 0x60a880, D: 0xc49c48 };
-    ['A', 'B', 'C', 'D'].forEach(q => { const r = (Rs[q] || {}).coalition || (Rs[q] || {}).fluid; if (!r) return; try { gm.addDot(0.5 + POSQ[q][0] * 0.55, 0.5 + POSQ[q][1] * 0.55, GMQ[q], (r.z || 0) * 0.75, { color: COLQ[q], radius: 0.045, label: QUAD[q] }); } catch (e) {} });
-    (async () => { try { await PrismField.pullField(headline.rid); (PrismField.field(headline.rid) || []).forEach(en => { try { gm.addDot(en.x, en.y, GMQ[en.quad] || 'C', (en.z || 0) * 0.75, { color: 0xf5f0e8, radius: 0.03, shape: 'diamond' }); } catch (e) {} }); } catch (e) {} })();
-    // the moon, far behind, upper left
-    try { const m = moonMesh(); m.scale.setScalar(1.3); m.position.set(6.2, 7.4, -30); gm.scene.add(m); LAND.moon = m; } catch (e) {}
-    // Ted
+    let gm; try { gm = PrismGraphmap.create({ container: el, mode: 'analytical', capabilities: { orbit: true, zInput: false, zRender: true, diatribeSlider: false, clustering: 'individual' } }); gm.mount(el); } catch (e) { console.warn('[stage]', e); return; }
+    LAND.g = G = gm;
+    try { gm.setBoundaryVisible && gm.setBoundaryVisible(false); gm.setOrbit(0, 0); gm.setZoom && gm.setZoom(6.4); gm.setFocus && gm.setFocus(0.5, 0.56); gm.setCornerLabels && gm.setCornerLabels({ A: 'LI', B: 'RI', C: 'LP', D: 'RP' }); } catch (e) {}
+    try { const m = moonMesh(); m.scale.setScalar(1.5); m.position.set(9.5, 8.2, -38); gm.scene.add(m); LAND.moon = m; } catch (e) {}
     try { LAND.ted = PrismGraphmap.buildCoyote(); LAND.ted.scale.setScalar(0.85); LAND.ted.visible = false; gm.scene.add(LAND.ted); } catch (e) {}
+    wireStage();
+    paint();
     tedScene();
+    // the crowd's intro: the plane lies flat, then pivots to show it is 3D (Sailor, 10-18)
+    setTimeout(() => { SIX.introDone = true; if (SIX.panel === 'crowd') orbitFor('crowd'); }, 1500);
   }
-  // Ted: walks in from the left, in front of the plane; says one thing; then wanders off into the background and lies down
-  const TED_LINES = () => {
-    const co = headline.centralObject || {};
-    return [`Today's on the table: ${co.name || headline.title}. ${headline.prompt || ''}`,
-      'Where do you land on this one? Tap the map, or read the story below first.',
-      'Drag the prism to move around. The C up top is the Codex — every word, and me, if you have a question.'];
-  };
+
+  // ── the layers ──
+  const COLQ = { A: 0x6094dc, B: 0xdc6060, C: 0x60a880, D: 0xc49c48 }, POSQ = { A: [-0.5, -0.5], B: [0.5, -0.5], C: [-0.5, 0.5], D: [0.5, 0.5] };
+  const fieldOf = () => { try { return PrismField.latestByResident ? PrismField.latestByResident(headline.rid) : PrismField.field(headline.rid); } catch (e) { return []; } };
+  function layerStations(gm) { const Rs = headline.responses || {}, b = band(SIX.aperture), dia = Math.max(0.35, Math.abs(SIX.aperture) / 100 * 0.9);
+    ['A', 'B', 'C', 'D'].forEach(q => { const r = (Rs[q] || {})[b] || (Rs[q] || {}).coalition || (Rs[q] || {}).fluid; if (!r) return; try { gm.addDot(0.5 + POSQ[q][0] * dia, 0.5 + POSQ[q][1] * dia, GMQ[q], (r.z || 0) * 0.75, { color: COLQ[q], radius: 0.042, label: QUAD[q], meta: { q } }); } catch (e) {} }); }
+  const S_AXIS = () => (headline.prevalentAxis === 'y' ? 'y' : 'x');
+  const lensed = ens => { const L = SIX.lens; if (L === 'near' && SIX.placed) return ens.filter(en => Math.hypot(en.x - SIX.pin.x, en.y - SIX.pin.y) < 0.3); if (L === 'side' && SIX.placed) { const k = S_AXIS(); return ens.filter(en => (en[k] < 0.5) === (SIX.pin[k] < 0.5)); } return ens; };
+  function layerField(gm) { lensed(fieldOf()).forEach(en => { try { gm.addDot(en.x, en.y, GMQ[en.quad] || 'C', (en.z || 0) * 0.75, { color: 0xf5f0e8, radius: 0.03, shape: 'diamond', label: PrismField.nameOf(en.author), meta: { burn: en.id } }); } catch (e) {} }); }
+  function layerLaw(gm) { lawPlacements(headline).forEach(l => { try { gm.addDot(l.x, l.y, GMQ[quadOf(l.x, l.y)], l.z * 0.75, { color: 0xd4aa52, radius: 0.045, shape: 'diamond', label: l.bill, meta: { cmp: 'law' } }); } catch (e) {} }); }
+  function layerMembers(gm, ids) { try { gm.clearContrastLine && gm.clearContrastLine(); } catch (e) {} (ids || followed()).map(id => MEMBERS.find(m => m.bioguideId === id)).filter(Boolean).forEach(m => { const pl = memberPosOn(m, headline.rid), z = num(m.deliveryZ) ?? 0, f = SIX.focus === m.bioguideId; try { gm.addMemberPin(pl.x, pl.y, m.party, { baseline: false, normZ: z, radius: f ? 0.13 : 0.09, portrait: portrait(m), bioguideId: m.bioguideId, name: m.name, chamber: m.chamber, method: pl.derived ? 'derived' : 'nominate', confidence: pl.derived ? 0.6 : 0.25 }); if (f) { try { gm.addDot(pl.x, pl.y, GMQ[quadOf(pl.x, pl.y)], z * 0.75 + 0.12, { color: (m.party || '').toUpperCase() === 'D' ? 0x8fb0e0 : (m.party || '').toUpperCase() === 'R' ? 0xe0948f : 0xe0b77a, radius: 0.02, label: (m.lastName || m.name) + (SIX.placed ? ' · ' + sgn(agreeOn(m, SIX.pin, headline.rid).v) : ''), meta: { focus: m.bioguideId } }); } catch (e2) {} } if (f && SIX.placed && gm.setContrastLine) gm.setContrastLine({ x: SIX.pin.x, y: SIX.pin.y, z: SIX.zUser }, { x: pl.x, y: pl.y, z }); } catch (e) {} }); try { gm.setMemberPinsVisible && gm.setMemberPinsVisible(true); } catch (e) {} }
+  function layerObjects(gm, rids) { (rids || followedObjs()).map(rid => READ_BY_ID[rid]).filter(Boolean).forEach(r => { const p = objPlace(r), co = r.centralObject || {}; try { gm.addDot(p.x, p.y, GMQ[quadOf(p.x, p.y)], (p.z || 0) * 0.75, { color: 0xd4aa52, radius: 0.045, shape: 'diamond', label: (co.name || r.title).slice(0, 26), meta: { obj: r.rid } }); } catch (e) {} }); }
+  function layerTrail(gm) { const L = latestPins(); Object.keys(L).forEach(rid => { const p = L[rid], r = READ_BY_ID[rid] || {}; if (rid === headline.rid) return; try { gm.addDot(p.x, p.y, GMQ[quadOf(p.x, p.y)], (p.z || 0) * 0.75, { color: 0xb9b4a8, radius: 0.028, label: ((r.centralObject || {}).name || r.title || '').slice(0, 28), meta: { trail: rid } }); } catch (e) {} }); }
+  function diagTrace() {   // the factory's diagnostic boundaries from the Reading (see the band below)
+    const Rs = headline.responses || {}, BANDS = ['fluid', 'coalition', 'denominated'], SIDEN = { A: 'Left establishment', B: 'Right establishment', C: 'Left populist', D: 'Right populist' };
+    const zOf = (q, b) => ((Rs[q] || {})[b] || {}).z || 0, dist = c => c < 0.25 ? 'Low' : c < 0.5 ? 'Moderate' : c < 0.75 ? 'High' : 'Very high';
+    const corners = ['A', 'B', 'C', 'D'].filter(q => Rs[q]).map(q => ({ q, charge: Math.max(...BANDS.map(b => Math.abs(zOf(q, b)))) }));
+    if (!corners.length) return null;
+    const shadowZ = corners.reduce((a, c) => a + zOf(c.q, 'denominated'), 0) / corners.length;
+    return { object: { x: 0, y: 0, z: 0 }, shadow: { x: 0, y: 0, z: Math.max(-0.9, Math.min(0.9, shadowZ)) }, positions: corners.map(c => ({ id: SIDEN[c.q].toUpperCase(), quadrant: c.q, distinguishability: dist(c.charge), fluid: 'plainly ' + zs(zOf(c.q, 'fluid')), denominated: 'pushed ' + zs(zOf(c.q, 'denominated')) })) };
+  }
+  // the keyword clouds: each quadrant's station rephrases itself as the heat rises — its lit words at the current band lie on the plane
+  function layerWords(gm, on) {
+    try { gm.clearAllWords && gm.clearAllWords(); } catch (e) {}
+    if (!on) return; const Rs = headline.responses || {}, b = band(SIX.aperture);
+    ['A', 'B', 'C', 'D'].forEach(q => { const r = (Rs[q] || {})[b]; if (!r) return; const words = [[r.xWord, 1], [r.yWord, 0.85]].concat((r.words || []).map((w, i) => [w, 0.55 - i * 0.08])).filter(w => w[0]).slice(0, 5).map(w => ({ text: String(w[0]), weight: Math.max(0.2, w[1]) }));
+      try { gm.setQuadrantWords(GMQ[q], words); gm.showQuadrantWords(GMQ[q], true); } catch (e) {} });
+  }
+  function layerBoundaries(gm) { const t = diagTrace(); if (!t) return; try { gm.setBoundaryMode && gm.setBoundaryMode('dual'); gm.loadTrace(t); ['object', 'shadow', 'vector', 'csMarkers'].forEach(l => gm.setTraceLayerVisible(l, false)); } catch (e) { console.warn('[diag]', e); } }
+  // paint the current panel's layer onto the one map; your pin stays on top in every layer
+  function paint() {
+    const gm = G; if (!gm || !headline) return; const P = SIX.panel;
+    try { gm.clearDots && gm.clearDots(); } catch (e) {} try { gm.clearMemberPins && gm.clearMemberPins(); gm.setMemberPinsVisible && gm.setMemberPinsVisible(false); } catch (e) {} try { gm.clearTrace && gm.clearTrace(); } catch (e) {}
+    if (P === 'crowd') { layerStations(gm); layerField(gm); }
+    else if (P === 'prism') layerStations(gm);
+    else if (P === 'field') { layerStations(gm); layerField(gm); }
+    else if (P === 'tracking') { layerMembers(gm); layerLaw(gm); layerObjects(gm); }
+    else if (P === 'compare') { const c = SIX.cmp; if (c.stations) layerStations(gm); if (c.field) layerField(gm); if (c.law) layerLaw(gm); const ids = Object.keys(c.members).filter(k => c.members[k]); if (ids.length) layerMembers(gm, ids); const oids = Object.keys(c.objects).filter(k => c.objects[k]); if (oids.length) layerObjects(gm, oids); }
+    else if (P === 'you') layerTrail(gm);
+    layerWords(gm, P === 'prism' || P === 'crowd' || P === 'field');
+    try { if (SIX.placed || P === 'prism') gm.setPin(SIX.pin.x, SIX.pin.y, GMQ[quadOf(SIX.pin.x, SIX.pin.y)], SIX.zUser * 0.75, { style: 'orb', ring: BANDCOL[band(SIX.aperture)] }); else gm.clearPin && gm.clearPin(); } catch (e) {}
+    paintHeat();
+  }
+  window.sixRepaint = paint; window.__six = () => ({ SIX, LAND, G, go, TED, MEM });
+  // the map lies flat (face on, pitch 0) to place a pin and tilts when a layer needs depth (Tracking, Compare, You)
+  function orbitFor(P) { const gm = G; if (!gm || (P === 'crowd' && !SIX.introDone)) return; const st = $('#stage'), wide = st.offsetHeight && st.offsetWidth / st.offsetHeight > 1.6; const o = { crowd: [-6, -32, 6.4], prism: [0, -4, 5.6], field: [0, -18, 6.3], diatribe: [-3, -14, 6.1], tracking: [-10, -34, 6.9], compare: [8, -34, 6.9], you: [-12, -36, 6.9] }[P] || [0, -30, 6.4]; try { gm.spinTo(o[0], o[1], 1400); gm.setZoom && gm.setZoom(wide ? o[2] - 1.1 : o[2]); gm.setFocus && gm.setFocus(0.5, P === 'crowd' ? 0.56 : 0.5); } catch (e) {} }
+
+  // ── the navtool: where the prism sits says which panel you are in ──
+  function dockNav() {
+    if (!EMBEDDED) return; const on = $('#v-objects').classList.contains('on'); if (!on) { tell({ type: 'g4:navdock', y: null }); return; }
+    const P = SIX.panel, row = P === 'crowd' ? -1 : GRID[P][1];
+    const slot = row === -1 ? $('#navdock') : row === 1 ? $('#slotTop') : $('#slotBottom');
+    const r = slot.getBoundingClientRect(), y = r.top + r.height / 2;
+    tell({ type: 'g4:navdock', y: r.height > 0 && y > 30 && y < innerHeight - 10 ? y : null });
+  }
+  addEventListener('resize', dockNav); try { new ResizeObserver(() => dockNav()).observe(document.body); } catch (e) {}
+  function go(P, quiet) {
+    if (!GRID[P] && P !== 'crowd') P = 'crowd';
+    if (quiet && SIX.shown === P) { dockNav(); return; }   // the hash caught up with a panel already on screen
+    const was = SIX.panel; SIX.panel = P; hideLine();
+    const v = $('#v-objects'); v.classList.toggle('locked', P === 'prism' && SIX.locked); v.dataset.panel = P; v.dataset.col = P === 'crowd' ? 'c' : ['l', 'c', 'r'][GRID[P][0]]; v.dataset.row = P === 'crowd' ? '' : GRID[P][1] ? 'lower' : 'upper';
+    $('#slotTop').classList.toggle('on', P !== 'crowd' && GRID[P][1] === 1); $('#slotBottom').classList.toggle('on', P !== 'crowd' && GRID[P][1] === 0);
+    $('#lKey').textContent = P === 'crowd' || P === 'prism' ? 'Prism' : 'Prism · ' + PANEL_NAME[P]; $('#ptitle').textContent = P === 'crowd' ? '' : PANEL_NAME[P];
+    tell({ type: 'g4:navpos', t: P === 'crowd' ? 0.5 : NAV_T[GRID[P][0]] });
+    tell({ type: 'g4:crumb', name: 'Prism', fn: PANEL_NAME[P].toUpperCase(), crumb: 'Prism · ' + (P === 'crowd' ? 'the event' : PANEL_NAME[P].toLowerCase()) });
+    renderBand(P); paint(); orbitFor(P); tedFor(P, was);
+    requestAnimationFrame(() => { dockNav(); try { G && G.resize && G.resize(); } catch (e) {} }); [250, 600, 1000].forEach(t => setTimeout(() => { dockNav(); try { G && G.resize && G.resize(); } catch (e) {} }, t));
+    SIX.shown = P;
+    if (!quiet) { const h = P === 'crowd' ? '' : '#p/' + P; if (location.hash.replace(/^#$/, '') !== h) location.hash = h; }
+  }
+  // dragging the prism: left/right changes the column, up/down the row; from the crowd a sideways drag reaches the upper row (the record), a vertical one the centre column
+  function stepFrom(P, dir) {
+    if (P === 'crowd') return dir === 'forward' ? 'tracking' : dir === 'back' ? 'you' : dir === 'rise' ? 'prism' : dir === 'sink' ? 'field' : 'crowd';
+    let [c, r] = GRID[P];
+    if (dir === 'forward') c = Math.min(2, c + 1); else if (dir === 'back') c = Math.max(0, c - 1); else if (dir === 'rise') r = 1; else if (dir === 'sink') r = 0;
+    return Object.keys(GRID).find(k => GRID[k][0] === c && GRID[k][1] === r) || P;   // an empty slot (lower left, for now): the prism stays where it is
+  }
+  // while the prism is being dragged, the band it is heading for peeks in
+  addEventListener('message', e => { const m = e.data || {}; if (m.type !== 'g4:navdrag' || !$('#v-objects').classList.contains('on')) return;
+    const dx = +m.dx || 0, dy = +m.dy || 0, pb = $('#pband'), st = $('#stage');
+    if (!dx && !dy) { pb.style.opacity = ''; st.style.transform = ''; return; }
+    st.style.transform = `translate(${dx * 0.12}px, ${dy * 0.08}px)`; if (SIX.panel !== 'crowd') pb.style.opacity = String(Math.max(0.35, 1 - Math.hypot(dx, dy) / 160));
+  });
+
+  // ── the stage takes the pin (Prism and Diatribe panels); in the crowd a tap on the map opens Prism, a tap on Ted opens You ──
+  let hitP = null, dragP = null;
+  function stageHit(e) {
+    const gm = G; if (!gm || !gm.camera || !gm.group) return null;
+    if (!hitP) { hitP = new THREE.Mesh(new THREE.PlaneGeometry(gm.GRAPH_SIZE * 1.4, gm.GRAPH_SIZE * 1.4), new THREE.MeshBasicMaterial({ visible: false })); gm.group.add(hitP); }
+    const r = gm.canvas.getBoundingClientRect(), v = new THREE.Vector2(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1);
+    const rc = new THREE.Raycaster(); rc.setFromCamera(v, gm.camera); const h = rc.intersectObject(hitP, false)[0]; if (!h) return null;
+    const lp = hitP.worldToLocal(h.point.clone()); return { x: Math.max(0, Math.min(1, lp.x / gm.GRAPH_SIZE + 0.5)), y: Math.max(0, Math.min(1, 0.5 - lp.y / gm.GRAPH_SIZE)) };
+  }
+  // the stations' lines: tap a station's dot and its line opens beside it, at your heat (no panel for the words — they belong next to the position)
+  function stationAt(h) { const Rs = headline.responses || {}, b = band(SIX.aperture), dia = Math.max(0.35, Math.abs(SIX.aperture) / 100 * 0.9); let best = null;
+    ['A', 'B', 'C', 'D'].forEach(q => { if (!(Rs[q] || {})[b]) return; const d = Math.hypot(h.x - (0.5 + POSQ[q][0] * dia), h.y - (0.5 + POSQ[q][1] * dia)); if (d < 0.11 && (!best || d < best.d)) best = { q, d }; }); return best && best.q; }
+  function showLine(q, e) { const r = ((headline.responses || {})[q] || {})[band(SIX.aperture)]; if (!r) return; const el = $('#lineCard'), st = $('#stage').getBoundingClientRect();
+    el.innerHTML = `<div class="k" style="color:${['#8fb0e0','#e0948f','#8cc79f','#e0b77a'][['A','B','C','D'].indexOf(q)]}">${QUAD[q]} · ${band(SIX.aperture)}</div><p>${lit(r.text || '', [r.xWord, r.yWord].concat(r.words || []))}</p><div class="z">z <b>${zs(r.z)}</b>${r.instrument && r.instrument.holder ? ` · ${r.instrument.trusted ? 'trusts' : 'doesn’t trust'} ${r.instrument.holder}` : ''}</div>${SIX.panel === 'prism' ? '<a class="go" data-stand="' + q + '">stand here</a>' : ''}`;
+    el.hidden = false; const x = e.clientX - st.left, y = e.clientY - st.top; el.style.left = Math.max(8, Math.min(st.width - el.offsetWidth - 8, x - el.offsetWidth / 2)) + 'px'; el.style.top = Math.max(8, Math.min(st.height - el.offsetHeight - 8, y - el.offsetHeight - 16)) + 'px';
+    const a = el.querySelector('[data-stand]'); if (a) a.addEventListener('click', ev => { ev.preventDefault(); const d = Math.max(0.35, Math.abs(SIX.aperture) / 100 * 0.9); SIX.pick = { q, band: band(SIX.aperture), r }; SIX.pin = { x: 0.5 + POSQ[q][0] * d, y: 0.5 + POSQ[q][1] * d }; SIX.zUser = r.z != null ? Math.round(r.z * 100) / 100 : 0; SIX.placed = true; const zi = $('#zP'); if (zi) { zi.value = Math.round(SIX.zUser * 100); const v = $('#zPVal'); if (v) v.textContent = zs(SIX.zUser); } paint(); renderPinNote(); hideLine(); }); }
+  // a legislator's profile in place (v2: "each legislator should have a sort of profile page") — the record page's content in the sheet, with follow
+  function openProfile(id) { if (!MEMBERS.find(x => x.bioguideId === id)) return; const body = $('#oBody'); body.innerHTML = ''; renderMember(id, body); $('#osheet').hidden = false; $('#osheet .in').scrollTop = 0; }
+  // an object's card in place: what it is, where it stands (by text), its law, open it on the stage, follow
+  function openObject(r) { if (!r) return; const c = r.centralObject || {}, p = objPlace(r), on = followedObjs().includes(r.rid), body = $('#oBody');
+    body.innerHTML = `<div class="m">${c.kind || 'object'} · ${c.state || ''} · ${fmt(c.stateDate || r.date)}</div><h3>${c.name || r.title}</h3><div class="m">${r.title}${c.holder ? ' · held by ' + c.holder : ''}</div>
+      <p style="font-size:14px;line-height:1.5;color:var(--ink);margin:10px 0">${r.prompt || ''}</p>
+      <div class="m">On the map: ${p.how} — x ${Math.round((p.x - 0.5) * 200)} · y ${Math.round((0.5 - p.y) * 200)} · z ${zs(p.z)}${SIX.placed && r === headline ? ' · <b style="color:var(--ink)">' + dist({ x: SIX.pin.x, y: SIX.pin.y, z: SIX.zUser }, p).toFixed(2) + '</b> from you' : ''}</div>
+      ${(r.tethers || []).length ? `<div class="m" style="margin-top:10px">the law</div>${(r.tethers || []).map(t => `<a class="lk" href="#">${t.bill ? t.bill + ' · ' : ''}${t.title}<small>${[t.relation, t.statusAsOf].filter(Boolean).join(' · ')}</small></a>`).join('')}` : ''}
+      <div class="act" style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap"><a class="go" href="${open(r)}" style="font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);text-decoration:none;border:1px solid var(--g4-rule);padding:6px 12px;border-radius:2px">${r === headline ? 'on the stage now' : 'open on the stage →'}</a><a class="go" href="#" id="objFol" style="font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:${on ? '#0c0b09' : 'var(--ink)'};background:${on ? '#e9ecf2' : 'none'};text-decoration:none;border:1px solid var(--g4-rule);padding:6px 12px;border-radius:2px">${on ? 'following ✓' : 'follow'}</a></div>`;
+    $('#objFol').addEventListener('click', e => { e.preventDefault(); toggleObj(r.rid); openObject(r); try { renderBand(SIX.panel); paint(); paintChips(); } catch (err) {} });
+    body.querySelectorAll('a.lk').forEach(a => a.addEventListener('click', e => e.preventDefault()));
+    $('#osheet').hidden = false; $('#osheet .in').scrollTop = 0; }
+  function openTether(t) { if (!t) return; const body = $('#oBody'); const pl = lawPlacements(headline).find(l => l.bill === t.bill);
+    body.innerHTML = `<div class="m">${t.relation || 'the law on this event'}${t.statusAsOf ? ' · ' + t.statusAsOf : ''}</div><h3>${t.bill || t.title || ''}</h3><div class="m">${t.bill ? (t.title || '') : (t.kind || '')}</div>
+      ${pl ? `<p style="font-size:14px;line-height:1.5;color:var(--ink);margin:10px 0">Placed by text: ${pl.why || 'from what the bill says'}.</p><div class="m">x ${Math.round((pl.x - 0.5) * 200)} · y ${Math.round((0.5 - pl.y) * 200)} · z ${zs(pl.z)}${SIX.placed ? ' · <b style="color:var(--ink)">' + dist({ x: SIX.pin.x, y: SIX.pin.y, z: SIX.zUser }, pl).toFixed(2) + '</b> from you' : ''}</div>` : '<p style="font-size:14px;color:var(--ink-mid);margin:10px 0">Tied to this event; not placed on the map yet.</p>'}`;
+    $('#osheet').hidden = false; $('#osheet .in').scrollTop = 0; }
+  function hideLine() { const el = $('#lineCard'); if (el) el.hidden = true; }
+  function tedHit(e) { const T = LAND.ted, gm = G; if (!T || !T.visible || !gm) return false; try { const v = T.localToWorld(new THREE.Vector3(0, 1.3, 0)).project(gm.camera), r = gm.canvas.getBoundingClientRect(); return Math.hypot((v.x * 0.5 + 0.5) * r.width - (e.clientX - r.left), (-v.y * 0.5 + 0.5) * r.height - (e.clientY - r.top)) < 70; } catch (err) { return false; } }
+  function wireStage() {
+    const cv = G.canvas; if (!cv || cv._sixwired) return; cv._sixwired = true;
+    cv.addEventListener('pointerdown', e => { const pinning = SIX.panel === 'prism' && SIX.locked; const h = stageHit(e); dragP = { x0: e.clientX, y0: e.clientY, moved: false, onPin: false, ted: SIX.panel === 'crowd' && tedHit(e) };
+      if (pinning && h) { const near = Math.hypot(h.x - SIX.pin.x, h.y - SIX.pin.y) < 0.09; dragP.onPin = near; if (near) { e.preventDefault(); e.stopImmediatePropagation(); cv.setPointerCapture(e.pointerId); } } }, true);
+    cv.addEventListener('pointermove', e => { if (!dragP) return; if (Math.hypot(e.clientX - dragP.x0, e.clientY - dragP.y0) > 4) dragP.moved = true; if (dragP.onPin) { const h = stageHit(e); if (h) { SIX.pin = h; SIX.placed = true; paint(); renderPinNote(); } e.preventDefault(); e.stopImmediatePropagation(); } }, true);
+    const end = e => { if (!dragP) return; const d = dragP; dragP = null;
+      if (!d.moved) { const h = stageHit(e); const st = h && stationAt(h);
+        if (st) { showLine(st, e); return; } hideLine();
+        if (SIX.panel === 'crowd') { go(d.ted ? 'you' : 'prism'); return; } if (SIX.panel === 'prism' && SIX.locked) { if (h) { SIX.pin = h; SIX.placed = true; paint(); renderPinNote(); } } }
+      if (d.onPin) { e.preventDefault(); e.stopImmediatePropagation(); } };
+    cv.addEventListener('pointerup', end, true); cv.addEventListener('pointercancel', () => { dragP = null; }, true);
+  }
+
+  // ── Ted: on the centre panels only (Sailor, 10-18). He comes in close, head and shoulders, says his one line, then wanders in the background ──
+  const TED_LINES = () => { const co = headline.centralObject || {}; return [`Today's on the table: ${co.name || headline.title}. ${headline.prompt || ''}`, 'Where do you land on this one? Tap the map, or drag the prism to look around.', 'The C up top is the Codex — every word, and me, if you have a question.']; };
+  const TED_CUES = { prism: 'Tap the map to place yourself. The dial below sets how hard you push.', field: 'Everyone who has placed themselves on this one. The ring is you.' };
+  // after his cue he lives in the far background, well behind the graphmap (Sailor, 10-18): four spots past the plane's edges, crossing behind it between them
+  const TED = { st: null, home: null, wander: [new THREE.Vector3(-2.6, -1.9, -4.2), new THREE.Vector3(2.4, -1.9, -4.8), new THREE.Vector3(2.9, -1.95, -3.6), new THREE.Vector3(-2.3, -2.0, -5.0)], wi: 0 };
   function tedScene() {
     const T = LAND.ted; if (!T) return;
     let n = 0; try { n = +(sessionStorage.getItem('g4.tedLine') || 0); sessionStorage.setItem('g4.tedLine', String(n + 1)); } catch (e) {}
     const line = TED_LINES()[n % 3];
-    const FLOOR = -1.55, inPath = new THREE.CatmullRomCurve3([new THREE.Vector3(-2.9, -1.12, 2.1), new THREE.Vector3(-1.9, -1.12, 2.0), new THREE.Vector3(-1.15, -1.12, 1.9), new THREE.Vector3(-0.72, -1.12, 1.85)]);
-    const outPath = new THREE.CatmullRomCurve3([new THREE.Vector3(-0.72, -1.12, 1.85), new THREE.Vector3(-0.5, -1.3, 1.5), new THREE.Vector3(0.1, -1.5, 1.2), new THREE.Vector3(0.6, -1.66, 1.0)]);
-    const U = T.userData, legs = U.legs || [], st = { phase: 'in', t0: performance.now() / 1000, yaw: 1.4, lieK: 0 };
+    // close to the camera, lower left: head and shoulders in the frame, the body cropped by the bottom edge
+    const inPath = new THREE.CatmullRomCurve3([new THREE.Vector3(-2.3, -1.5, 3.3), new THREE.Vector3(-1.5, -1.48, 3.45), new THREE.Vector3(-0.9, -1.46, 3.55), new THREE.Vector3(-0.5, -1.45, 3.6)]);
+    const outPath = new THREE.CatmullRomCurve3([new THREE.Vector3(-0.5, -1.45, 3.6), new THREE.Vector3(-1.9, -1.6, 2.4), new THREE.Vector3(-2.9, -1.8, 0.2), new THREE.Vector3(-3.1, -1.9, -2.4), TED.wander[0].clone()]);
+    const U = T.userData, legs = U.legs || [], st = { phase: 'in', t0: performance.now() / 1000, yaw: 1.4, lieK: 0, from: null, to: null, line }; TED.st = st;
     T.visible = true; const say = $('#tedSay');
-    function placeBubble() {
-      try { const cam = LAND.g.camera, v = T.localToWorld(new THREE.Vector3(0, 1.45, 0.5)).project(cam), r = $('#hmap').getBoundingClientRect();
-        say.style.left = Math.max(8, Math.min(r.width * 0.38, (v.x * 0.5 + 0.5) * r.width + 24)) + 'px'; say.style.top = Math.max(6, (-v.y * 0.5 + 0.5) * r.height - say.offsetHeight - 8) + 'px'; } catch (e) {}
-    }
+    function placeBubble() { try { const cam = G.camera, v = T.localToWorld(new THREE.Vector3(0, 1.45, 0.5)).project(cam), r = $('#hmap').getBoundingClientRect(); say.style.left = Math.max(8, Math.min(r.width * 0.4, (v.x * 0.5 + 0.5) * r.width + 24)) + 'px'; say.style.top = Math.max(6, (-v.y * 0.5 + 0.5) * r.height - say.offsetHeight - 8) + 'px'; } catch (e) {} }
+    TED.say = (t) => { st.line = t; say.textContent = t; say.hidden = false; say.classList.remove('out'); st.phase = 'talk'; st.t0 = performance.now() / 1000; };
     (function frame() {
-      if (!LAND.ted) return; requestAnimationFrame(frame); if (document.hidden) return;
+      if (!LAND.ted) return; requestAnimationFrame(frame); if (document.hidden || !T.visible) return;
       const now = performance.now() / 1000, a = now - st.t0; let gait = 0, P = null, Q = null;
-      if (st.phase === 'in') { const u = Math.min(1, a / 4.5), e = 1 - Math.pow(1 - u, 2); P = inPath.getPointAt(e); Q = inPath.getTangentAt(Math.min(.999, e)); gait = 1 - u * u; if (u >= 1) { st.phase = 'talk'; st.t0 = now; say.textContent = line; say.hidden = false; say.classList.remove('out'); } }
-      else if (st.phase === 'talk') { P = inPath.getPointAt(1); st.yaw += (0.35 - st.yaw) * 0.06; placeBubble(); if (a > Math.max(6.5, line.length * 0.065)) { st.phase = 'out'; st.t0 = now; say.classList.add('out'); setTimeout(() => { say.hidden = true; }, 450); } }
-      else if (st.phase === 'out') { const u = Math.min(1, a / 8), e = u < .5 ? 2 * u * u : 1 - Math.pow(-2 * u + 2, 2) / 2; P = outPath.getPointAt(e); Q = outPath.getTangentAt(Math.min(.999, e)); gait = Math.sin(u * Math.PI) * 0.9 + 0.1; if (u >= 1) { st.phase = 'rest'; st.t0 = now; } }
-      else { P = outPath.getPointAt(1); st.lieK = Math.min(1, st.lieK + 0.02); st.yaw += (0.15 - st.yaw) * 0.03; }
+      if (st.phase === 'in') { const u = Math.min(1, a / 4.2), e = 1 - Math.pow(1 - u, 2); P = inPath.getPointAt(e); Q = inPath.getTangentAt(Math.min(.999, e)); gait = 1 - u * u; if (u >= 1) { st.phase = 'talk'; st.t0 = now; say.textContent = st.line; say.hidden = false; say.classList.remove('out'); } }
+      else if (st.phase === 'talk') { P = st.from ? st.from.clone() : inPath.getPointAt(1); st.yaw += (0.25 - st.yaw) * 0.06; placeBubble(); if (a > Math.max(6, st.line.length * 0.065)) { st.phase = st.from ? 'wander' : 'out'; st.t0 = now; say.classList.add('out'); setTimeout(() => { say.hidden = true; }, 450); if (st.from) { st.to = TED.wander[(++TED.wi) % TED.wander.length]; st.dur = st.from.distanceTo(st.to) / 0.45; } } }
+      else if (st.phase === 'out') { const u = Math.min(1, a / 9), e = u < .5 ? 2 * u * u : 1 - Math.pow(-2 * u + 2, 2) / 2; P = outPath.getPointAt(e); Q = outPath.getTangentAt(Math.min(.999, e)); gait = Math.sin(u * Math.PI) * 0.9 + 0.1; if (u >= 1) { st.phase = 'wander'; st.t0 = now; st.from = TED.wander[0].clone(); st.to = TED.wander[1]; TED.wi = 1; st.dur = st.from.distanceTo(st.to) / 0.45; } }
+      else if (st.phase === 'wander') {   // a slow amble between a few spots in the background, with a pause at each
+        const u = Math.min(1, a / st.dur); P = st.from.clone().lerp(st.to, u); const d = st.to.clone().sub(st.from); Q = d.lengthSq() ? d.normalize() : null; gait = Math.sin(u * Math.PI) * 0.7 + 0.05;
+        if (u >= 1) { st.phase = 'pause'; st.t0 = now; st.from = st.to.clone(); gait = 0; }
+      }
+      else { P = st.from.clone(); gait = 0; st.yaw += (0.15 - st.yaw) * 0.02; if (a > 4 + (TED.wi % 3) * 2) { st.phase = 'wander'; st.t0 = now; st.to = TED.wander[(++TED.wi) % TED.wander.length]; st.dur = st.from.distanceTo(st.to) / 0.45; } }
       if (Q) st.yaw = Math.atan2(Q.x, Q.z);
-      const ph = now * 7.5, sw = o => Math.sin(ph + o) * 0.55 * gait, L = st.lieK;
-      // at rest he sits (the factory's sit: front legs straight, hind legs folded, nose up) and watches the plane
-      if (legs[0]) { legs[0].hip.rotation.x = 0.42 * L + sw(0); legs[0].knee.rotation.x = 0; }
-      if (legs[1]) { legs[1].hip.rotation.x = 0.42 * L + sw(Math.PI); legs[1].knee.rotation.x = 0; }
-      if (legs[2]) { legs[2].hip.rotation.x = -0.10 * L + sw(Math.PI); legs[2].knee.rotation.x = -1.04 * L; }
-      if (legs[3]) { legs[3].hip.rotation.x = -0.10 * L + sw(0); legs[3].knee.rotation.x = -1.04 * L; }
-      T.position.set(P.x, P.y - 0.10 * 0.85 / 0.5 * L + Math.abs(Math.sin(ph)) * 0.02 * gait, P.z); T.rotation.set(-0.30 * L, st.yaw, 0);
+      const ph = now * 7.5, sw = o => Math.sin(ph + o) * 0.55 * gait;
+      if (legs[0]) { legs[0].hip.rotation.x = sw(0); legs[0].knee.rotation.x = 0; } if (legs[1]) { legs[1].hip.rotation.x = sw(Math.PI); legs[1].knee.rotation.x = 0; }
+      if (legs[2]) { legs[2].hip.rotation.x = sw(Math.PI); legs[2].knee.rotation.x = 0; } if (legs[3]) { legs[3].hip.rotation.x = sw(0); legs[3].knee.rotation.x = 0; }
+      T.position.set(P.x, P.y + Math.abs(Math.sin(ph)) * 0.02 * gait, P.z); T.rotation.set(0, st.yaw, 0);
       if (U.head) { const talk = st.phase === 'talk'; U.head.rotation.y += ((talk ? 0.25 : 0) - U.head.rotation.y) * 0.08; U.head.rotation.x += ((talk ? -0.15 + Math.sin(now * 2) * 0.05 : 0.1) - U.head.rotation.x) * 0.08; }
       if (U.jaw) U.jaw.position.y = (1.11 - 1.20) - (st.phase === 'talk' ? (0.5 + 0.5 * Math.sin(now * 16)) * 0.03 : 0);
       if (U.tail) U.tail.rotation.y = Math.sin(now * (st.phase === 'talk' ? 6 : 2.2)) * (st.phase === 'talk' ? 0.8 : 0.3);
     })();
   }
-  // the rolling column: who and what you follow, the law tied to today's event
-  function railCards() {
+  function tedFor(P, was) {
+    const T = LAND.ted; if (!T) return; const centre = P === 'crowd' || P === 'prism' || P === 'field';
+    T.visible = centre; if (!centre) { $('#tedSay').hidden = true; return; }
+    if (P !== 'crowd' && TED.st && (TED.st.phase === 'in' || TED.st.phase === 'talk')) { const say = $('#tedSay'); say.classList.add('out'); setTimeout(() => { say.hidden = true; }, 300); TED.st.phase = 'out'; TED.st.t0 = performance.now() / 1000; TED.st.from = null; }
+    if (TED_CUES[P] && TED.st && TED.st.phase !== 'in' && TED.st.phase !== 'out') { let seen = {}; try { seen = JSON.parse(sessionStorage.getItem('g4.tedCues') || '{}'); } catch (e) {} if (!seen[P]) { seen[P] = 1; try { sessionStorage.setItem('g4.tedCues', JSON.stringify(seen)); } catch (e) {} if (TED.st.phase === 'pause' || TED.st.phase === 'wander') { TED.st.from = T.position.clone(); TED.say(TED_CUES[P]); } } }
+  }
+
+  // ── the crowd's pieces ──
+  function railCards() {   // the Tracking piece: rolling tiles — legislators, bills; tap one → Tracking
     const cards = [];
-    followed().map(id => MEMBERS.find(m => m.bioguideId === id)).filter(Boolean).slice(0, 6).forEach(m => { const a = agreement(m); cards.push(`<a class="lcard" href="#member/${m.bioguideId}"><img src="${portrait(m)}" alt=""><b>${m.lastName || m.name}</b>${a ? `<span class="ag ${agCls(a.v)}"> ${sgn(a.v)}</span>` : ''}<small>${(PARTY[(m.party || '').toUpperCase()] || '').slice(0, 3)} · ${m.state}</small></a>`); });
-    (headline.tethers || []).slice(0, 3).forEach(t => cards.push(`<a class="lcard" href="${open(headline)}"><b>${t.bill}</b><small>${t.relation || ''}</small></a>`));
-    if (!followed().length) cards.push('<a class="lcard" href="#refraction"><b>Follow someone in Congress</b><small>they show up here</small></a>');
+    const d = delegation(); followed().map(id => MEMBERS.find(m => m.bioguideId === id)).filter(Boolean).sort((x, y) => (isDelegate(y, d) ? 1 : 0) - (isDelegate(x, d) ? 1 : 0)).slice(0, 6).forEach(m => { const st = stockOf(m, 'you'); cards.push(`<a class="lcard" href="#p/tracking"><img src="${portrait(m)}" alt=""><b>${m.lastName || m.name}</b>${st.current != null ? `<span class="ag ${agCls(st.current)}"> ${sgn(st.current)}${st.tick != null ? ' ' + tickGlyph(st.tick) : ''}</span>` : ''}<small>${isDelegate(m, d) ? 'yours · ' : ''}${(PARTY[(m.party || '').toUpperCase()] || '').slice(0, 3)} · ${m.state}</small></a>`); });
+    (headline.tethers || []).slice(0, 3).forEach(t => cards.push(`<a class="lcard" href="#p/tracking"><b>${t.bill || (t.title || '').slice(0, 36)}</b><small>${t.relation || ''}</small></a>`));
+    followedObjs().map(rid => READ_BY_ID[rid]).filter(Boolean).slice(0, 4).forEach(r => { const c = r.centralObject || {}; cards.push(`<a class="lcard" href="#p/tracking"><b>${(c.name || r.title).slice(0, 40)}</b><small>${c.kind || 'object'} · ${c.state || ''}</small></a>`); });
+    if (!followed().length) cards.push('<a class="lcard" href="#p/tracking"><b>Follow someone in Congress</b><small>they show up here</small></a>');
     return cards;
   }
   function runRail() {
-    const el = $('#lrail'); const cards = railCards(); let i = 0;
-    const show = () => { const pick = [0, 1].map(k => cards[(i + k) % cards.length]).filter((c, k, arr) => c && (cards.length > 1 || k === 0)); el.querySelectorAll('.lcard').forEach(c => c.classList.add('fade')); setTimeout(() => { el.innerHTML = pick.join(''); el.querySelectorAll('.lcard').forEach(c => { c.classList.add('fade'); requestAnimationFrame(() => requestAnimationFrame(() => c.classList.remove('fade'))); }); }, 350); i = (i + 2) % Math.max(1, cards.length); };
-    show(); if (cards.length > 2) setInterval(() => { if (!document.hidden && $('#v-objects').classList.contains('on')) show(); }, 5200);
+    const el = $('#lrail'); let cards = railCards(), i = 0;
+    const show = () => { cards = railCards(); const pick = [0, 1].map(k => cards[(i + k) % cards.length]).filter((c, k, arr) => c && (cards.length > 1 || k === 0)); el.querySelectorAll('.lcard').forEach(c => c.classList.add('fade')); setTimeout(() => { el.innerHTML = pick.join(''); el.querySelectorAll('.lcard').forEach(c => { c.classList.add('fade'); requestAnimationFrame(() => requestAnimationFrame(() => c.classList.remove('fade'))); }); }, 350); i = (i + 2) % Math.max(1, cards.length); };
+    show(); setInterval(() => { if (!document.hidden && $('#v-objects').classList.contains('on') && SIX.panel === 'crowd') show(); }, 5200);
   }
-  // the diagnostic band: each corner's boundary — its z at fluid, coalition, denominated as one curve — most charged first
+  function paintChips() {   // the field's piece (everyone's pins + the count) and Compare's ("you vs ___")
+    const n = fieldOf().length; $('#fieldChip').innerHTML = `<b>${n}</b> pinned<small>the field</small>`;
+    const fol = followed(); $('#cmpChip').innerHTML = `you vs <b>${fol.length ? ((MEMBERS.find(m => m.bioguideId === fol[0]) || {}).lastName || 'the field') : 'the field'}</b><small>compare</small>`;
+  }
+  function paintHeat() {   // Diatribe's piece: the heat dial at your current read
+    const a = SIX.aperture, k = $('#heatKnob'); if (!k) return; k.style.left = ((a + 100) / 2) + '%'; $('#heatVal').textContent = SIX.placed ? (sideOf(a) ? (sideOf(a) === 'left' ? 'left · ' : 'right · ') : '') + band(a) : '';
+  }
+  $('#heat').addEventListener('click', () => go('prism')); $('#bnd').addEventListener('click', () => go('prism'));
+  // ── THE MEMBRANE (J_diagnostic §7, Sailor 10-18): one stretched plane floating above the dial, laid along the event's
+  // prevalent axis. Its disturbance is the reading: near-flat at fluid, pronounced when denominated has captured it (the
+  // register comes from the dial). Each end swells by how charged that side's two stations are at the current band, so you
+  // see which side of the axis wears. Beneath it, faintly, the shadow surface at the pushed z. Nothing sits on it.
+  const MEM = {};
+  const axisSides = () => { const pa = headline.prevalentAxis === 'y' ? 'y' : 'x'; return pa === 'x' ? { pa, L: ['A', 'C'], R: ['B', 'D'], nameL: 'the left', nameR: 'the right', colL: [0x8fb0e0, 0x8cc79f], colR: [0xe0948f, 0xe0b77a] } : { pa, L: ['A', 'B'], R: ['C', 'D'], nameL: 'the institutions', nameR: 'the populists', colL: [0x8fb0e0, 0xe0948f], colR: [0x8cc79f, 0xe0b77a] }; };
+  const chargeOf = (qs, b) => { const Rs = headline.responses || {}; const zz = qs.map(q => Math.abs(((Rs[q] || {})[b] || {}).z || 0)); return zz.length ? zz.reduce((x, y) => x + y, 0) / zz.length : 0; };
+  const zSide = (qs, b) => { const Rs = headline.responses || {}; const zz = qs.map(q => ((Rs[q] || {})[b] || {}).z || 0); return zz.length ? zz.reduce((x, y) => x + y, 0) / zz.length : 0; };
+  function memMount(key, el) {
+    if (!el || MEM[key] && MEM[key].el === el && el.querySelector('canvas')) return MEM[key];
+    if (MEM[key]) { try { MEM[key].renderer.dispose(); } catch (e) {} }
+    let renderer; try { renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true }); } catch (e) { return null; }
+    renderer.setPixelRatio(Math.min(devicePixelRatio, 2)); el.innerHTML = ''; el.appendChild(renderer.domElement);
+    const scene = new THREE.Scene(), cam = new THREE.PerspectiveCamera(26, 2, 0.1, 50); cam.position.set(0, -3.6, 0.9); cam.lookAt(0, 0.15, 0);   // (Sailor 10-18) not warped or stretched: rotated to nearly flat, seen from low, reaching across the whole width
+    scene.add(new THREE.AmbientLight(0xffffff, 0.75)); scene.add(new THREE.HemisphereLight(0xfff4e0, 0x8090c0, 0.7)); const L1 = new THREE.DirectionalLight(0xfff4e0, 0.7); L1.position.set(-2, -3, 3); scene.add(L1); const L2 = new THREE.DirectionalLight(0xb0c8ff, 0.4); L2.position.set(2, 1, 2); scene.add(L2);
+    const W = 7.4, H = 1.2, SX = 72, SY = 8;
+    const geo = new THREE.PlaneGeometry(W, H, SX, SY); const n = geo.attributes.position.count, colors = new Float32Array(n * 3); geo.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+    const mat = new THREE.MeshBasicMaterial({ vertexColors: true, transparent: true, opacity: 0.5, side: THREE.DoubleSide, depthWrite: false });   // unlit: colour as a field, the ripple read from the silhouette
+    const mesh = new THREE.Mesh(geo, mat); scene.add(mesh);
+    const edge = new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.PlaneGeometry(W, H, 1, 1)), new THREE.LineBasicMaterial({ color: 0xf6f1e6, transparent: true, opacity: 0.0 })); scene.add(edge);
+    const shadow = new THREE.Mesh(new THREE.PlaneGeometry(W, H, 1, 1), new THREE.MeshBasicMaterial({ color: 0x9060c0, transparent: true, opacity: 0.12, side: THREE.DoubleSide, depthWrite: false })); scene.add(shadow);
+    const M = { el, renderer, scene, cam, geo, mesh, shadow, colors, ampL: 0.3, ampR: 0.3, tier: 0.2, hL: 0, hR: 0, sL: 0, sR: 0, colL: [0x8fb0e0, 0x8cc79f], colR: [0xe0948f, 0xe0b77a], drop: 0.35, cur: { ampL: 0, ampR: 0, tier: 0, drop: 0, hL: 0, hR: 0, sL: 0, sR: 0 }, t0: performance.now() };
+    function size() { const r = el.getBoundingClientRect(); if (!r.width || !r.height) return; renderer.setSize(r.width, r.height, false); cam.aspect = r.width / r.height; cam.updateProjectionMatrix(); }
+    size(); try { new ResizeObserver(size).observe(el); } catch (e) {}
+    const cL = M.colL.map(c => new THREE.Color(c)), cR = M.colR.map(c => new THREE.Color(c)), cream = new THREE.Color(0xf6f1e6), tmp = new THREE.Color();
+    function paintColours() { const pos = geo.attributes.position; for (let i = 0; i < n; i++) { const u = pos.getX(i) / W + 0.5, v = pos.getY(i) / H + 0.5; const end = u < 0.5 ? cL[v < 0.5 ? 1 : 0] : cR[v < 0.5 ? 1 : 0]; const k = Math.pow(Math.abs(u - 0.5) * 2, 0.9); tmp.copy(cream).lerp(end, 0.35 + 0.65 * k); colors[i * 3] = tmp.r; colors[i * 3 + 1] = tmp.g; colors[i * 3 + 2] = tmp.b; } geo.attributes.color.needsUpdate = true; }
+    M.paintColours = () => { cL[0].set(M.colL[0]); cL[1].set(M.colL[1]); cR[0].set(M.colR[0]); cR[1].set(M.colR[1]); paintColours(); }; M.paintColours();
+    MEM[key] = M;
+    (function frame() { if (!MEM[key] || MEM[key] !== M) return; requestAnimationFrame(frame); if (document.hidden || !el.offsetWidth) return;
+      const t = (performance.now() - M.t0) / 1000, c = M.cur; ['ampL', 'ampR', 'tier', 'drop', 'hL', 'hR', 'sL', 'sR'].forEach(k => { c[k] += (M[k] - c[k]) * 0.06; });
+      const pos = geo.attributes.position;
+      for (let i = 0; i < n; i++) { const x = pos.getX(i), y = pos.getY(i), u = x / W + 0.5; const amp = (c.ampL * (1 - u) + c.ampR * u) * (0.05 + 0.95 * c.tier);
+        const w = Math.sin(x * 2.6 - t * 1.1) * 0.5 + Math.sin(x * 5.1 + y * 3.0 + t * 0.7) * 0.3 + Math.sin(y * 4.4 - t * 0.5 + x * 1.3) * 0.25 + Math.sin(x * 9.0 + t * 1.9) * 0.12 * c.tier;
+        pos.setZ(i, (c.hL * (1 - u) + c.hR * u) + w * amp * 0.11 + Math.sin(t * 0.4) * 0.006); }   // the sheet's height at each end is that side's plainly-said z (the object surface); a low ripple on it is the disturbance
+      pos.needsUpdate = true;
+      { const sp = shadow.geometry.attributes.position; for (let i = 0; i < sp.count; i++) { const u = sp.getX(i) / W + 0.5; sp.setZ(i, (c.sL * (1 - u) + c.sR * u) - 0.05); } sp.needsUpdate = true; }   // the shadow surface: each end at that side's pushed z
+      shadow.material.opacity = 0.06 + 0.12 * c.tier;
+      mesh.rotation.z = Math.sin(t * 0.17) * 0.015; renderer.render(scene, cam); })();
+    return M;
+  }
+  // set the membrane from the event at a register: 0..100 (the dial's |value|, or the event's own peak for the crowd)
+  function memSet(key, register) {
+    const M = MEM[key]; if (!M) return; const S = axisSides(); const reg = register != null ? register : Math.abs(SIX.aperture); const b = reg <= 33 ? 'fluid' : reg <= 66 ? 'coalition' : 'denominated';
+    M.ampL = 0.25 + chargeOf(S.L, b) * 1.1; M.ampR = 0.25 + chargeOf(S.R, b) * 1.1; M.tier = 0.12 + 0.88 * Math.pow(reg / 100, 1.3); M.drop = 0.15 + chargeOf(S.L.concat(S.R), 'denominated') * 0.8;
+    M.hL = zSide(S.L, b) * 0.32; M.hR = zSide(S.R, b) * 0.32; M.sL = zSide(S.L, 'denominated') * 0.32; M.sR = zSide(S.R, 'denominated') * 0.32;   // the factory's two surfaces: the object surface at the band's z, the shadow at the pushed z, per side
+    M.colL = S.colL; M.colR = S.colR; M.paintColours();
+    const cap = $(key === 'P' ? '#memCapP' : '#bndLine'); if (cap) { const verb = c => c > 0.5 ? 'wears when pushed' : c > 0.25 ? 'warms' : 'stays put'; cap.innerHTML = `<b>${S.nameL}</b> ${verb(chargeOf(S.L, 'denominated'))} · <b>${S.nameR}</b> ${verb(chargeOf(S.R, 'denominated'))}`; }
+  }
+  // the crowd's band: the membrane at the event's own temper (its most charged band), breathing; the burns take over for a while, then back
   function runBand() {
-    const Rs = headline.responses || {}, BANDS = ['fluid', 'coalition', 'denominated'];
-    const SIDEN = { A: 'Left establishment', B: 'Right establishment', C: 'Left populist', D: 'Right populist' }, COLH = { A: '#6094dc', B: '#dc6060', C: '#60a880', D: '#c49c48' };
-    const zOf = (q, b) => ((Rs[q] || {})[b] || {}).z || 0;
-    const corners = ['A', 'B', 'C', 'D'].filter(q => Rs[q]).map(q => { const peak = BANDS.reduce((m, b) => Math.abs(zOf(q, b)) > Math.abs(zOf(q, m)) ? b : m, 'fluid'); return { q, peak, charge: Math.max(...BANDS.map(b => Math.abs(zOf(q, b)))), line: (Rs[q][peak] || {}).text || '' }; }).sort((a, b) => b.charge - a.charge);
-    if (!corners.length) return;
-    // the factory's diagnostic boundaries, from the Reading: the object's surface on the plane, its shadow at where the corners
-    // land when pushed hard; each corner's warp is how charged it is (Low · Moderate · High · Very high)
-    const dist = c => c < 0.25 ? 'Low' : c < 0.5 ? 'Moderate' : c < 0.75 ? 'High' : 'Very high';
-    const shadowZ = corners.reduce((a, c) => a + zOf(c.q, 'denominated'), 0) / corners.length;
-    const trace = { object: { x: 0, y: 0, z: 0 }, shadow: { x: 0, y: 0, z: Math.max(-0.9, Math.min(0.9, shadowZ)) },
-      positions: corners.map(c => ({ id: SIDEN[c.q].toUpperCase(), quadrant: c.q, distinguishability: dist(c.charge), fluid: 'plainly ' + zs(zOf(c.q, 'fluid')), denominated: 'pushed ' + zs(zOf(c.q, 'denominated')) })) };
-    let bm = null; const CORNER = { A: [0.125, 0.125], B: [0.875, 0.125], C: [0.125, 0.875], D: [0.875, 0.875] };
-    function mountBand() {
-      const el = $('#bndMap'); if (bm || !el || !el.offsetWidth || typeof PrismGraphmap === 'undefined') return;
-      try { bm = PrismGraphmap.create({ container: el, mode: 'analytical', zoomMin: 1.0, capabilities: { orbit: false, zInput: false, zRender: true, diatribeSlider: false, clustering: 'individual' } }); bm.mount(el);
-        bm.setBoundaryVisible && bm.setBoundaryVisible(false); bm.setBoundaryMode && bm.setBoundaryMode('dual'); bm.loadTrace(trace); bm.setTraceLayerVisible && ['object', 'shadow', 'vector'].forEach(l => bm.setTraceLayerVisible(l, false));
-        const hasDiag = o => { let f = false; o.traverse(c => { if (c.userData && c.userData.isDiagnosticBoundary) f = true; }); return f; };
-        (bm.group ? bm.group.children : []).forEach(ch => { if (!hasDiag(ch)) ch.visible = false; });
-        bm.setOrbit(0, -16); bm.setZoom && bm.setZoom(1.7); } catch (e) { console.warn('[band]', e); bm = null; }
-    }
-    let i = 0, rounds = 0, spin = 0;
-    function draw(c) {
-      mountBand();
-      if (bm) { const [fx, fy] = CORNER[c.q]; try { bm.setFocus(fx, fy); spin = (spin + 1) % 2; bm.setOrbit(spin ? 18 : -18, -16); } catch (e) {} }
-      $('#bndWho').textContent = SIDEN[c.q]; $('#bndWho').style.color = COLH[c.q];
-      $('#bndBand').textContent = c.peak === 'denominated' ? 'most heated when pushed hard' : c.peak === 'coalition' ? 'most heated when arguing' : 'heated even plainly said';
-      $('#bndLine').textContent = '“' + String(c.line).replace(/<[^>]+>/g, '') + '”';
-    }
-    function step() {
-      if (document.hidden || !$('#v-objects').classList.contains('on')) return setTimeout(step, 1500);
-      if (rounds >= 2) {   // two rounds of boundaries, then the burns scroll through, then back
-        $('#bnd').classList.add('fade'); setTimeout(() => { $('#bnd').hidden = true; $('#burns').hidden = false; }, 450);
-        setTimeout(() => { $('#burns').hidden = true; $('#bnd').hidden = false; requestAnimationFrame(() => $('#bnd').classList.remove('fade')); rounds = 0; i = 0; step(); }, 30000);
-        return;
-      }
-      $('#bnd').classList.add('fade');
-      setTimeout(() => { draw(corners[i]); $('#bnd').classList.remove('fade'); i = (i + 1) % corners.length; if (i === 0) rounds++; setTimeout(step, 5000); }, 450);
-    }
-    step();
+    const mount = () => { const el = $('#memC'); if (!el || !el.offsetWidth) return false; memMount('C', el); memSet('C', crowdRegister()); $('#bndWho').textContent = ''; $('#bndBand').textContent = ''; return true; };
+    let on = true;
+    function step() { if (document.hidden || !$('#v-objects').classList.contains('on') || SIX.panel !== 'crowd') return setTimeout(step, 1500);
+      if (on) { if (!mount()) return setTimeout(step, 800); $('#bnd').classList.add('fade'); setTimeout(() => { $('#bnd').hidden = true; $('#burns').hidden = false; }, 450); on = false; setTimeout(step, 26000); }
+      else { $('#burns').hidden = true; $('#bnd').hidden = false; requestAnimationFrame(() => $('#bnd').classList.remove('fade')); on = true; setTimeout(step, 24000); } }
+    mount(); setTimeout(step, 24000);
   }
 
-  // ── the navtool summons the panels (Sailor 10-17: "move the prism and have the pages float in and out") ──
-  // side −1 = Beam (the object, and you on it) · 0 = the stage · +1 = Refraction (the law and the people on it).
-  LAND.side = 0;
-  function fillFloats() {
-    if (!headline) return; const co = headline.centralObject || {}, rid = headline.rid, mine = latestPins()[rid];
-    let n = 0; try { n = (PrismField.field(rid) || []).length; } catch (e) {}
-    $('#floatL').innerHTML = `<div class="pt">Beam</div><h3>${co.name || headline.title}</h3>
-      <p>${[co.kind, co.state, fmt(co.stateDate || headline.date)].filter(Boolean).join(' · ')}${co.holder ? '<br>Who holds it: ' + co.holder : ''}</p>
-      <div class="k">you on it</div><p>${mine ? `You stand <b style="color:var(--ink)">${SIDE[mine.quadrant] || ''}</b>, ${mine.band || ''}${mine.aperture ? (mine.aperture < 0 ? ', leaning left' : ', leaning right') : ''} · ${(mine.at || '').slice(0, 10)}` : 'You haven’t placed yourself on this one yet.'}</p>
-      <p>${n ? n + ' other' + (n === 1 ? '' : 's') + ' have pinned it.' : 'Nobody has pinned it yet.'}</p>
-      <a class="go" href="${open(headline)}">${mine ? 'look again →' : 'place yourself →'}</a>`;
-    const fol = followed().map(id => MEMBERS.find(m => m.bioguideId === id)).filter(Boolean);
-    $('#floatR').innerHTML = `<div class="pt">Refraction</div><h3>The law on this</h3>
-      ${(headline.tethers || []).map(t => `<div class="law">${t.bill} · ${t.title}<small>${[t.relation, t.statusAsOf].filter(Boolean).join(' · ')}</small></div>`).join('') || '<p>No law is tied to this one yet.</p>'}
-      <div class="k">your legislators</div>${fol.length ? fol.slice(0, 6).map(m => mRow(m, agreement(m))).join('') : '<p>Follow someone in Congress and they show up here, with how they line up with you.</p>'}
-      <a class="go" href="#refraction">${fol.length ? 'all your legislators →' : 'find someone →'}</a>`;
+  // ── the bands: each panel's pieces ──
+  const dialHTML = (id) => `<div class="rail"><div class="track"><input type="range" id="${id}" min="-100" max="100" value="${SIX.aperture}"></div>
+      <div class="bands"><span data-b="denominated">denominated</span><span data-b="coalition">coalition</span><span data-b="fluid">fluid</span><span data-b="coalition">coalition</span><span data-b="denominated">denominated</span></div>
+      <div class="sides"><span class="l">◀ the left's reading</span><span class="apr" id="${id}Read"></span><span class="r">the right's reading ▶</span></div></div>`;
+  const zHTML = (id) => { const ax = headline.axes || {}; return `<div class="zline"><span>${(ax.z && ax.z.neg) || 'does not'}</span><div class="track"><input type="range" id="${id}" min="-100" max="100" value="${Math.round(SIX.zUser * 100)}"></div><span>${(ax.z && ax.z.pos) || 'delivers'}</span></div><div class="g4-key" style="text-align:center">your z <b id="${id}Val" style="color:var(--ink);font-weight:400">${zs(SIX.zUser)}</b></div>`; };
+  function wireDial(id, after) { const el = $('#' + id); if (!el) return; const paintDial = () => { const a = SIX.aperture, b = band(a), side = sideOf(a); const rd = $('#' + id + 'Read'); if (rd) rd.textContent = (side ? (side === 'left' ? 'the left · ' : 'the right · ') : 'centre · ') + b + ' · ' + Math.abs(a); el.closest('.rail').querySelectorAll('.bands span').forEach((s, i) => s.classList.toggle('on', s.dataset.b === b && (b === 'fluid' || (side === 'left' ? i < 2 : side === 'right' ? i > 2 : false)))); el.closest('.rail').querySelectorAll('.sides .l, .sides .r').forEach(s => s.classList.toggle('on', (s.classList.contains('l') && side === 'left') || (s.classList.contains('r') && side === 'right'))); }; paintDial(); el.addEventListener('input', e => { SIX.aperture = +e.target.value; paintDial(); paint(); if (after) after(); }); }
+  function wireZ(id) { const el = $('#' + id); if (!el) return; el.addEventListener('input', e => { SIX.zUser = (+e.target.value) / 100; const v = $('#' + id + 'Val'); if (v) v.textContent = zs(SIX.zUser); paint(); renderPinNote(); }); }
+  function pinNote() { const q = quadOf(SIX.pin.x, SIX.pin.y), ax = headline.axes || {}; const side = SIX.pin.x < 0.5 ? (ax.x && ax.x.neg) || 'left' : (ax.x && ax.x.pos) || 'right', row = SIX.pin.y < 0.5 ? (ax.y && ax.y.pos) || 'institutional' : (ax.y && ax.y.neg) || 'populist'; return SIX.placed ? (SIX.pick ? `You stand with the <b>${QUAD[SIX.pick.q].replace(' · ', ' ')}</b> reading.` : `You stand <b>${side} · ${row}</b>.`) : 'Tap the map to place yourself.'; }
+  function renderPinNote() { const el = $('#pinNote'); if (el) el.innerHTML = pinNote(); const pb = $('#pinBlock'); if (pb && SIX.placed && SIX.locked) pb.classList.add('on'); const d = $('#diagNote'); if (d) d.innerHTML = diagNote(); }
+  function diagNote() {   // Diatribe's diagnostics: where your read sits against the station nearest your pin
+    if (!SIX.placed) return 'Place yourself on the map and the diagnostics read where you sit.';
+    const Rs = headline.responses || {}, b = band(SIX.aperture), q = quadOf(SIX.pin.x, SIX.pin.y), r = (Rs[q] || {})[b]; if (!r) return `No ${b} reading from ${QUAD[q]} on this one.`;
+    const dia = Math.max(0.35, Math.abs(SIX.aperture) / 100 * 0.9), sx = 0.5 + POSQ[q][0] * dia, sy = 0.5 + POSQ[q][1] * dia, d = Math.hypot(SIX.pin.x - sx, SIX.pin.y - sy), inside = d < 0.22, dz = Math.abs(SIX.zUser - (r.z || 0));
+    return `Your pin sits <b>${inside ? 'inside' : 'outside'}</b> the usual ${QUAD[q]} read at ${b}${inside ? '' : ' (' + (d > 0.4 ? 'well clear of it' : 'just past its edge') + ')'}. On z you are <b>${dz < 0.2 ? 'with them' : SIX.zUser > (r.z || 0) ? 'above them' : 'below them'}</b> (${zs(SIX.zUser)} against ${zs(r.z)}).`;
   }
-  function setSide(v) {
-    LAND.side = Math.max(-1, Math.min(1, v)); fillFloats();
-    $('#floatL').classList.toggle('on', LAND.side === -1); $('#floatR').classList.toggle('on', LAND.side === 1);
-    ['#floatL', '#floatR'].forEach(q => { $(q).style.removeProperty('--peek'); $(q).style.removeProperty('--back'); $(q).classList.remove('dragging'); });
-    tell({ type: 'g4:navpos', t: LAND.side === -1 ? 0.12 : LAND.side === 1 ? 0.86 : 0.5 });
-    tell({ type: 'g4:crumb', name: 'Prism', fn: LAND.side === -1 ? 'BEAM' : LAND.side === 1 ? 'REFRACTION' : 'PRISM', crumb: 'Prism' });
+  function stationsHTML(pickable) { const Rs = headline.responses || {}, b = band(SIX.aperture), side = sideOf(SIX.aperture), order = side === 'right' ? ['B', 'D', 'A', 'C'] : ['A', 'C', 'B', 'D'];
+    return `<div class="ans">${order.map(q => { const r = (Rs[q] || {})[b]; if (!r) return ''; const on = SIX.pick && SIX.pick.q === q; return `<div class="an ${q}${on ? ' on' : ''}" data-q="${q}"><div class="k"><span>${QUAD[q]}</span><span>${b}</span></div><p>${lit(r.text || '', [r.xWord, r.yWord].concat(r.words || []))}</p><div class="z ${r.z >= 0 ? 'pos' : 'neg'}">z <b>${zs(r.z)}</b></div></div>`; }).join('')}</div>`; }
+  function wireStations(root) { root.querySelectorAll('.an').forEach(el => el.addEventListener('click', () => { const q = el.dataset.q, b = band(SIX.aperture), r = ((headline.responses || {})[q] || {})[b]; if (!r) return; SIX.pick = { q, band: b, r }; SIX.zUser = r.z != null ? Math.round(r.z * 100) / 100 : 0; const d = Math.max(0.35, Math.abs(SIX.aperture) / 100 * 0.9); SIX.pin = { x: 0.5 + POSQ[q][0] * d, y: 0.5 + POSQ[q][1] * d }; SIX.placed = true; root.querySelectorAll('.an').forEach(x => x.classList.toggle('on', x === el)); const zi = root.querySelector('input[id^="z"]'); if (zi) { zi.value = Math.round(SIX.zUser * 100); const v = $('#' + zi.id + 'Val'); if (v) v.textContent = zs(SIX.zUser); } paint(); renderPinNote(); })); }
+  function renderBand(P) {
+    const pb = $('#pband'); if (P === 'crowd') { pb.innerHTML = ''; return; }
+    const co = headline.centralObject || {}, strip = t => String(t || '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+    if (P === 'prism') {   // today's event — kept bare (Sailor, 10-18: nothing should feel like homework). Title, question, the membrane, the dial.
+      // Everything else is uncovered by doing something: sliding shows that side's reading under the sheet's end; tapping the map shows where you
+      // stand and the commit; tapping a station opens its line; the story and the table hide behind "more".
+      const fr = strip(headline.framing);
+      pb.innerHTML = `<div class="g4-key">${co.state || co.kind || ''} · ${fmt(co.stateDate || headline.date)}</div><h3>${headline.title}</h3><p style="color:var(--ink)">${headline.prompt || ''}</p>
+        <div class="mem" id="memP"></div><div class="memreads"><span class="l" id="readL"></span><span class="r" id="readR"></span></div>
+        <div class="dialrow"><div class="rail bare"><div class="track"><input type="range" id="apP" min="-100" max="100" value="${SIX.aperture}" ${SIX.locked ? 'disabled' : ''}></div></div><a class="lock ${SIX.locked ? 'on' : ''}" id="lockGo" href="#" title="lock the dial">${SIX.locked ? '●' : '○'}</a></div>
+        <div class="uncover ${SIX.locked ? 'on' : ''}" id="respBlock"></div>
+        <div class="uncover" id="pinBlock"><p id="pinNote">${SIX.placed ? pinNote() : ''}</p><a class="more" id="zGo" href="#">does it deliver? ↓</a><div class="uncover" id="zBlock">${zHTML('zP')}</div><div class="act"><span class="g4-key" id="pinSeat"></span><a class="go lit" id="pinGo">commit the pin</a></div></div>
+        <a class="more" id="moreGo" href="#">more ↓</a>
+        <div class="uncover" id="moreBlock"><p>${fr}</p><div class="k">everything on the table · laws first</div><div class="objs">${sorted.map(r => { const c = r.centralObject || {}; return `<a href="${open(r)}">${c.name || r.title}<small>${fmt(c.stateDate || r.date)} · ${c.kind || 'object'}</small><span class="st">${c.state || ''}</span></a>`; }).join('')}</div></div>`;
+      $('#pinBlock').classList.toggle('on', SIX.placed && SIX.locked);
+      // the responses: after the lock, the four quadrant lines at the locked band — tap one to stand there
+      const responses = () => { const Rs = headline.responses || {}, b = band(SIX.aperture), side = sideOf(SIX.aperture), order = side === 'right' ? ['B', 'D', 'A', 'C'] : ['A', 'C', 'B', 'D'], el = $('#respBlock');
+        el.innerHTML = SIX.locked ? `<div class="resp ${SIX.pick ? 'picked' : ''}" id="respList">${order.map(q => { const r = (Rs[q] || {})[b]; if (!r) return ''; const on = SIX.pick && SIX.pick.q === q; return `<a href="#" class="rl ${q}${on ? ' on' : ''}" data-q="${q}"><i></i><span>${lit(r.text || '', [r.xWord, r.yWord].concat(r.words || []))}</span></a>`; }).join('')}</div>${SIX.locked && SIX.pick ? '<a class="more" id="othersGo" href="#">the others ↓</a>' : ''}` : '';
+        const og = $('#othersGo'); if (og) og.addEventListener('click', e => { e.preventDefault(); const on = $('#respList').classList.toggle('open'); og.textContent = on ? 'the others ↑' : 'the others ↓'; });
+        el.querySelectorAll('[data-q]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); const q = a.dataset.q, r = (Rs[q] || {})[b]; if (!r) return; const d = Math.max(0.35, Math.abs(SIX.aperture) / 100 * 0.9); SIX.pick = { q, band: b, r }; SIX.pin = { x: 0.5 + POSQ[q][0] * d, y: 0.5 + POSQ[q][1] * d }; SIX.zUser = r.z != null ? Math.round(r.z * 100) / 100 : 0; SIX.placed = true; const zi = $('#zP'); if (zi) { zi.value = Math.round(SIX.zUser * 100); const v = $('#zPVal'); if (v) v.textContent = zs(SIX.zUser); } paint(); renderPinNote(); responses(); })); };
+      responses();
+      $('#lockGo').addEventListener('click', e => { e.preventDefault(); SIX.locked = !SIX.locked; $('#v-objects').classList.toggle('locked', SIX.locked); setTimeout(() => { try { G && G.resize && G.resize(); } catch (err) {} }, 500); $('#lockGo').classList.toggle('on', SIX.locked); $('#lockGo').textContent = SIX.locked ? '●' : '○'; $('#apP').disabled = SIX.locked; $('#respBlock').classList.toggle('on', SIX.locked); if (!SIX.locked) { $('#pinBlock').classList.remove('on'); } responses(); paint(); hideLine(); });
+      const reads = () => { const D = headline.diatribe || {}, b = band(SIX.aperture), side = sideOf(SIX.aperture), key = sd => sd + ({ fluid: 'F', coalition: 'C', denominated: 'D' }[b]); const L = D[key('L')] || {}, Rr = D[key('R')] || {};
+        $('#readL').innerHTML = side === 'left' ? lit(L.text || '', L.keywords) : ''; $('#readR').innerHTML = side === 'right' ? lit(Rr.text || '', Rr.keywords) : ''; $('#readL').classList.toggle('on', side === 'left'); $('#readR').classList.toggle('on', side === 'right'); };
+      const ap = $('#apP'); ap.addEventListener('input', e => { SIX.aperture = +e.target.value; memSet('P'); paint(); reads(); hideLine(); }); ap.addEventListener('change', () => setTimeout(() => { $('#readL').classList.remove('on'); $('#readR').classList.remove('on'); }, 2600));
+      wireZ('zP'); memMount('P', $('#memP')); memSet('P'); $('#pinSeat').textContent = REHEARSAL ? 'rehearsal · a commit stays in this browser' : '';
+      $('#pinGo').addEventListener('click', e => { e.preventDefault(); if (!SIX.placed) return; commitPin(headline, SIX, '#pinGo', '#pinSeat'); paintChips(); });
+      $('#zGo').addEventListener('click', e => { e.preventDefault(); const on = $('#zBlock').classList.toggle('on'); $('#zGo').textContent = on ? 'does it deliver? ↑' : 'does it deliver? ↓'; });
+      $('#moreGo').addEventListener('click', e => { e.preventDefault(); const on = $('#moreBlock').classList.toggle('on'); $('#moreGo').textContent = on ? 'less ↑' : 'more ↓'; });
+    }
+    else if (P === 'field') {   // everyone's pins — one line, the lens; names behind "more"
+      const fe = fieldOf(), m = mean(fe.map(en => ({ x: en.x, y: en.y, z: en.z || 0 }))), me = { x: SIX.pin.x, y: SIX.pin.y, z: SIX.zUser };
+      const line = fe.length ? `<b>${fe.length}</b> ${fe.length === 1 ? 'person has' : 'people have'} placed themselves${m && SIX.placed ? (dist(me, m) < 0.35 ? ' — you sit close to the crowd' : ' — you sit out on your own') : ''}.` : 'Nobody has placed themselves yet — yours would be the first pin.';
+      pb.innerHTML = `<p style="color:var(--ink)">${line}</p>
+        <div class="tog" id="lensTog"><span data-l="everyone" class="${SIX.lens === 'everyone' ? 'on' : ''}" style="--c:var(--lt-cream)">everyone</span><span data-l="near" class="${SIX.lens === 'near' ? 'on' : ''}" style="--c:var(--lt-green)">near me</span><span data-l="side" class="${SIX.lens === 'side' ? 'on' : ''}" style="--c:var(--lt-gold)">my side</span></div>
+        ${fe.length ? `<a class="more" id="moreGo" href="#">who ↓</a><div class="uncover" id="moreBlock"><p>${fe.slice(0, 30).map(en => PrismField.nameOf(en.author)).join(' · ')}${fe.length > 30 ? ' …' : ''}</p>${m ? `<p>The field's centre: ${nums(m)}.</p>` : ''}</div>` : ''}`;
+      $('#lensTog').querySelectorAll('[data-l]').forEach(sp => sp.addEventListener('click', () => { if ((sp.dataset.l === 'near' || sp.dataset.l === 'side') && !SIX.placed) { sp.title = 'place yourself first'; return; } SIX.lens = sp.dataset.l; renderBand('field'); paint(); }));
+      const mg = $('#moreGo'); if (mg) mg.addEventListener('click', e => { e.preventDefault(); const on = $('#moreBlock').classList.toggle('on'); mg.textContent = on ? 'who ↑' : 'who ↓'; });
+    }
+    else if (P === 'tracking') {   // the legislators panel (10-18): tiles of who you follow; tap one and they light up on the map with a line from you
+      const del = delegation(), all = followed().map(id => MEMBERS.find(m => m.bioguideId === id)).filter(Boolean), objs = followedObjs().map(rid => READ_BY_ID[rid]).filter(Boolean);
+      const mine = all.filter(m => isDelegate(m, del)).sort((x, y) => ((x.chamber || '').toLowerCase() === 'senate' ? 0 : 1) - ((y.chamber || '').toLowerCase() === 'senate' ? 0 : 1)), fol = mine.concat(all.filter(m => !isDelegate(m, del)));
+      const F = SIX.focus && MEMBERS.find(m => m.bioguideId === SIX.focus);
+      const tile = m => { const st = stockOf(m, 'you'); return `<a href="#" class="ltile ${SIX.focus === m.bioguideId ? 'on' : ''} ${isDelegate(m, del) ? 'mine' : ''}" data-f="${m.bioguideId}"><img src="${portrait(m)}" alt=""><b>${m.lastName || m.name}</b><small>${isDelegate(m, del) ? 'yours · ' : ''}${(PARTY[(m.party || '').toUpperCase()] || '').slice(0, 3)} · ${m.state}</small>${st.current != null ? `<i class="${agCls(st.current)}">${sgn(st.current)}${st.tick != null ? ' <u>' + tickGlyph(st.tick) + '</u>' : ''}</i>` : ''}</a>`; };
+      const seat = del.state ? del.state + (del.district != null ? '-' + del.district : '') : '';
+      const delAff = `<div class="delg"><a href="#" id="delGo" class="more" style="margin:0">${del.state ? 'your district · ' + seat + ' ↓' : 'set your district — your senators and representative follow themselves ↓'}</a><div class="uncover" id="delForm"><select id="delState"><option value="">state</option>${Object.keys(STATES).map(k => `<option value="${k}" ${k === del.state ? 'selected' : ''}>${STATES[k]}</option>`).join('')}</select><input id="delDist" type="number" min="1" placeholder="district" value="${del.district != null ? del.district : ''}"><a class="go" id="delSave" href="#">save</a></div></div>`;
+      const otile = r => { const c = r.centralObject || {}, p = objPlace(r); return `<a href="#" class="ltile obj" data-fo="${r.rid}"><b>${(c.name || r.title).slice(0, 34)}</b><small>${c.kind || 'object'} · ${c.state || ''}</small><em>${p.how}</em></a>`; };
+      let detail = '';
+      if (F) { const st = stockOf(F, 'you'), sa = stockOf(F, 'agg'), p = memberPosOn(F, headline.rid), since = (F.terms || []).reduce((y, t) => Math.min(y, t.startYear || 9999), 9999);
+        let dp = null; try { const ev = dbEventOf(headline); dp = ev && PrismDB.getMemberPosition ? PrismDB.getMemberPosition(F.bioguideId, ev.id) : null; } catch (e) {}
+        const dz = num(F.deliveryZ);
+        detail = `<div class="ldetail"><div class="k" style="margin-top:4px">${F.name} · ${plainMeta(F)}${since < 9999 ? ' · since ' + since : ''}</div>
+          ${st.current != null ? `<div class="stock"><b class="${agCls(st.current)}">${sgn(st.current)}</b><span>vs you${st.tick != null ? ` · <em class="${st.tick > 0 ? 'pos' : st.tick < 0 ? 'neg' : ''}">${tickGlyph(st.tick)} ${Math.abs(st.tick)}</em> since your last pin` : ''}</span>${sparkline(st.series)}${sa.current != null ? `<small><b class="${agCls(sa.current)}">${sgn(sa.current)}</b> vs the field · provisional</small>` : ''}</div>` : '<p>Pin a reading and this prices how they line up with you, reading by reading.</p>'}
+          <p>On this event they are ${p.derived ? `<b>placed from their own words</b>${dp && dp.reasoning ? ' — ' + String(dp.reasoning).slice(0, 220) : ''}` : `<b>placed from their voting record</b>${dz != null ? ' · their bills move forward ' + (dz > 0.3 ? 'more often than most' : dz < -0.3 ? 'less often than most' : 'about as often as most') : ''}`}${SIX.placed ? '; the line on the map runs from you to them' : ''}.</p>
+          <div class="act"><a class="go" href="#p/compare" data-cmp="${F.bioguideId}">compare →</a><a class="go" href="#" data-prof="${F.bioguideId}">their record →</a><a class="go" href="#" data-unf="${F.bioguideId}">unfollow</a></div></div>`; }
+      // in the news: legislators named in the newsroom's objects (the burns)
+      const newsy = (() => { const out = []; (OBJS || []).slice(0, 40).forEach(o => { const h = String(o.headline || '').toLowerCase(); MEMBERS.forEach(m => { const ln = (m.lastName || '').toLowerCase(); if (ln.length > 3 && h.includes(ln) && !out.find(x => x.m === m)) out.push({ m, o }); }); }); return out.slice(0, 8); })();
+      pb.innerHTML = `${fol.length ? `<div class="ltiles">${fol.map(tile).join('')}</div><div class="ticker" id="stockTicker" hidden></div>` : '<p style="color:var(--ink)">Follow someone in Congress and they sit on the map, placed from their record.</p>'}${detail}${delAff}
+        ${newsy.length ? `<div class="k">in the news</div><div class="ltiles">${newsy.map(({ m, o }) => `<a href="#" class="ltile news" data-news="${m.bioguideId}"><img src="${portrait(m)}" alt=""><b>${m.lastName || m.name}</b><small>${clip(o.headline, 44)}</small>${followed().includes(m.bioguideId) ? '<i>✓</i>' : ''}</a>`).join('')}</div>` : ''}
+        ${objs.length || (headline.tethers || []).length ? `<div class="ltiles objs2">${objs.map(otile).join('')}${(headline.tethers || []).slice(0, 3).map((t, i) => `<a class="ltile obj" href="#" data-ft="${i}"><b>${t.bill || (t.title || '').slice(0, 40)}</b><small>${t.relation || 'on today\'s event'}</small><em>${t.place && t.place.quadrants ? 'placed by text' : 'the law on this event'}</em></a>`).join('')}</div>` : ''}
+        <a class="more" id="moreGo" href="#">+ follow someone ↓</a>
+        <div class="uncover" id="moreBlock"><input class="msearch" id="trkFind" type="search" placeholder="a name or a state" autocomplete="off"><div id="trkHits"></div>
+          <div class="k">laws, rulings and orders on the table</div><div class="objs">${trackables().map(r => { const c = r.centralObject || {}, on = followedObjs().includes(r.rid); return `<a href="#" data-obj="${r.rid}" class="${on ? 'on' : ''}">${c.name || r.title}<small>${c.kind || 'object'} · ${c.state || ''} · ${fmt(c.stateDate || r.date)}</small><span class="st">${on ? 'following ✓' : 'follow'}</span></a>`; }).join('')}</div>
+          <a class="go" href="#refraction">all your legislators →</a></div>`;
+      pb.querySelectorAll('[data-f]').forEach(t => t.addEventListener('click', e => { e.preventDefault(); SIX.focus = SIX.focus === t.dataset.f ? null : t.dataset.f; renderBand('tracking'); paint(); }));
+      $('#delGo').addEventListener('click', e => { e.preventDefault(); $('#delForm').classList.toggle('on'); });
+      pb.querySelectorAll('[data-news]').forEach(t => t.addEventListener('click', e => { e.preventDefault(); openProfile(t.dataset.news); }));
+      $('#delSave').addEventListener('click', e => { e.preventDefault(); const st = $('#delState').value; if (!st) return; setDelegationAndFollow(st, $('#delDist').value); renderBand('tracking'); paint(); paintChips(); });
+      pb.querySelectorAll('[data-fo]').forEach(t => t.addEventListener('click', e => { e.preventDefault(); openObject(READ_BY_ID[t.dataset.fo]); }));
+      pb.querySelectorAll('[data-ft]').forEach(t => t.addEventListener('click', e => { e.preventDefault(); openTether((headline.tethers || [])[+t.dataset.ft]); }));
+      pb.querySelectorAll('[data-unf]').forEach(t => t.addEventListener('click', e => { e.preventDefault(); followToggle(t.dataset.unf); SIX.focus = null; renderBand('tracking'); paint(); paintChips(); }));
+      pb.querySelectorAll('[data-cmp]').forEach(t => t.addEventListener('click', () => { SIX.cmp.members[t.dataset.cmp] = true; }));
+      pb.querySelectorAll('[data-prof]').forEach(t => t.addEventListener('click', e => { e.preventDefault(); openProfile(t.dataset.prof); }));
+      // the stock ticker: one quote per follow, greens leading (v2's alignment feed), scrolling under the tiles
+      const quotes = fol.map(m => ({ m, s: stockOf(m, 'you') })).filter(q => q.s.current != null).sort((a, b2) => b2.s.current - a.s.current);
+      const tk = $('#stockTicker'); if (tk) { if (!quotes.length) tk.hidden = true; else { tk.hidden = false; const html = quotes.map(q => `<span class="q ${agCls(q.s.current)}"><b>${sgn(q.s.current)}</b>${q.s.tick != null ? ' <u>' + tickGlyph(q.s.tick) + (q.s.tick ? Math.abs(q.s.tick) : '') + '</u>' : ''} ${(q.m.lastName || q.m.name).toUpperCase()}</span>`).join('<i>·</i>'); tk.innerHTML = `<div class="reel">${html}<i>·</i>${html}<i>·</i></div>`; } }
+      const find = () => { const t = ($('#trkFind').value || '').trim().toLowerCase(), res = $('#trkHits'); if (!t) { res.innerHTML = ''; return; } const hits = MEMBERS.filter(m => (m.name || '').toLowerCase().includes(t) || (m.state || '').toLowerCase() === t || (STATES[m.state] || '').toLowerCase().startsWith(t)).slice(0, 20); res.innerHTML = hits.map(m => mRow(m, null, true)).join('') || '<p>No one by that name or state.</p>'; res.querySelectorAll('[data-fol]').forEach(b => b.addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); followToggle(b.dataset.fol); SIX.focus = b.dataset.fol; renderBand('tracking'); paint(); paintChips(); })); };
+      $('#trkFind').addEventListener('input', find);
+      $('#moreGo').addEventListener('click', e => { e.preventDefault(); const on = $('#moreBlock').classList.toggle('on'); $('#moreGo').textContent = on ? '− close ↑' : '+ follow someone ↓'; if (on) setTimeout(() => $('#trkFind').focus(), 50); });
+      pb.querySelectorAll('[data-obj]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); toggleObj(a.dataset.obj); renderBand('tracking'); $('#moreBlock').classList.add('on'); $('#moreGo').textContent = '− close ↑'; paint(); paintChips(); }));
+    }
+    else if (P === 'compare') {   // the toggle dashboard: layer anything you track against you or the field on today's map
+      const c = SIX.cmp, fol = followed().map(id => MEMBERS.find(m => m.bioguideId === id)).filter(Boolean), me = { x: SIX.pin.x, y: SIX.pin.y, z: SIX.zUser };
+      const fe = fieldOf(), fm = mean(fe.map(en => ({ x: en.x, y: en.y, z: en.z || 0 }))), Rs = headline.responses || {}, b = band(SIX.aperture), dia = Math.max(0.35, Math.abs(SIX.aperture) / 100 * 0.9);
+      const stm = mean(['A', 'B', 'C', 'D'].filter(q => (Rs[q] || {})[b]).map(q => ({ x: 0.5 + POSQ[q][0] * dia, y: 0.5 + POSQ[q][1] * dia, z: ((Rs[q] || {})[b].z || 0) }))), law = lawPlacements(headline);
+      const row = (col, name, o, extra, key, line) => o ? `<div class="r ${SIX.against === key ? 'on' : ''}" data-ag="${key}" data-line="${(line || '').replace(/"/g, '&quot;')}" data-name="${name.replace(/"/g, '&quot;')}" data-col="${col}" data-x="${o.x}" data-y="${o.y}" data-z="${o.z || 0}"><i style="background:${col}"></i><span><b>${name}</b>${extra ? ' · ' + extra : ''}<br><span class="n">${nums(o)}${SIX.placed ? ' · <b>' + dist(me, o).toFixed(2) + '</b> from you' : ''}</span></span></div>` : '';
+      const myLine = SIX.pick ? String(SIX.pick.r.text || '') : (SIX.placed ? pinNote().replace(/<[^>]+>/g, '') : '');
+      const Rs2 = headline.responses || {}, stLine = ['A', 'B', 'C', 'D'].map(q => (Rs2[q] || {})[b]).filter(Boolean).map(r => String(r.text || '').replace(/<[^>]+>/g, '')).join(' / ');
+      pb.innerHTML = `<div class="tog" id="cmpTog"><span class="on" style="--c:var(--lt-cream)">you</span><span data-t="field" class="${c.field ? 'on' : ''}" style="--c:var(--lt-cream)">the field</span><span data-t="stations" class="${c.stations ? 'on' : ''}" style="--c:#8aa0c8">the stations</span><span data-t="law" class="${c.law ? 'on' : ''}" style="--c:var(--lt-gold)">the law</span>${followedObjs().map(rid => READ_BY_ID[rid]).filter(Boolean).map(r => `<span data-o="${r.rid}" class="${c.objects[r.rid] ? 'on' : ''}" style="--c:var(--lt-gold)">${((r.centralObject || {}).name || r.title).slice(0, 22)}</span>`).join('')}${fol.map(m => `<span data-m="${m.bioguideId}" class="${c.members[m.bioguideId] ? 'on' : ''}" style="--c:${(m.party || '').toUpperCase() === 'D' ? 'var(--lt-blue)' : (m.party || '').toUpperCase() === 'R' ? 'var(--lt-red)' : 'var(--lt-gold)'}">${m.lastName || m.name}</span>`).join('')}</div>
+        ${SIX.placed ? '' : '<p>Place yourself on Prism and every distance is measured from you.</p>'}
+        <div class="cmp">${c.field ? row('#f5f0e8', 'the field', fm, fm ? fm.n + ' pin' + (fm.n === 1 ? '' : 's') : '', 'field', fm ? 'the centre of everyone who has placed themselves on this event' : '') : ''}${c.stations ? row('#8aa0c8', 'the stations', stm, stm ? stm.n + ' at ' + b : '', 'stations', stLine) : ''}${c.law ? law.map(l => row('#d4aa52', l.bill, l, l.relation, 'law:' + l.bill, l.why || l.title)).join('') : ''}${followedObjs().map(rid => READ_BY_ID[rid]).filter(r => r && c.objects[r.rid]).map(r => { const p = objPlace(r); return row('#d4aa52', (r.centralObject || {}).name || r.title, p, p.how, 'obj:' + r.rid, String(r.prompt || '')); }).join('')}${fol.filter(m => c.members[m.bioguideId]).map(m => { const p = memberPosOn(m, headline.rid); let dp = null; try { const ev = dbEventOf(headline); dp = ev && PrismDB.getMemberPosition ? PrismDB.getMemberPosition(m.bioguideId, ev.id) : null; } catch (e) {} return row((m.party || '').toUpperCase() === 'D' ? '#6fa8dc' : '#e07474', m.name, { x: p.x, y: p.y, z: num(m.deliveryZ) ?? 0 }, p.derived ? 'from their words here' : 'from their record', 'm:' + m.bioguideId, p.derived && dp && dp.reasoning ? String(dp.reasoning) : (plainMeta(m) + (num(m.deliveryZ) != null ? ' · their bills move forward ' + (num(m.deliveryZ) > 0.3 ? 'more often than most' : num(m.deliveryZ) < -0.3 ? 'less often than most' : 'about as often as most') : ''))); }).join('')}</div>
+        <div class="split uncover" id="split"></div>`;
+      // the split (v2's compare, ported 10-18): tap a row → you on top, them beneath, Δ down the middle, the tether on the map
+      const split = () => { const r = pb.querySelector(`.r[data-ag="${SIX.against}"]`), el = $('#split'); pb.querySelectorAll('.r').forEach(x => x.classList.toggle('on', x === r)); if (!r || !SIX.placed) { el.classList.remove('on'); el.innerHTML = ''; try { G && G.clearContrastLine && G.clearContrastLine(); } catch (e) {} return; }
+        const o = { x: +r.dataset.x, y: +r.dataset.y, z: +r.dataset.z }, U = { x: Math.round((me.x - 0.5) * 200), y: Math.round((0.5 - me.y) * 200) }, T = { x: Math.round((o.x - 0.5) * 200), y: Math.round((0.5 - o.y) * 200) };
+        el.innerHTML = `<div class="half you"><div class="k">you · ${b}</div><p>${myLine ? lit(myLine, SIX.pick ? [SIX.pick.r.xWord, SIX.pick.r.yWord].concat(SIX.pick.r.words || []) : []) : '—'}</p><span class="n">${nums(me)}</span></div>
+          <div class="delta"><span>Δx ${sgn(T.x - U.x)}</span><span>Δy ${sgn(T.y - U.y)}</span><span>Δz ${(o.z - me.z >= 0 ? '+' : '') + (o.z - me.z).toFixed(2)}</span></div>
+          <div class="half them" style="--c:${r.dataset.col}"><div class="k">${r.dataset.name}</div><p>${r.dataset.line || '—'}</p><span class="n">${nums(o)}</span></div>
+          ${(() => { const words = (SIX.pick ? [SIX.pick.r.xWord, SIX.pick.r.yWord].concat(SIX.pick.r.words || []) : []).concat(String(r.dataset.line || '').split(/\s+/).filter(w => w.length > 6).slice(0, 4)).filter(Boolean).slice(0, 8); return words.length ? `<div class="cloud">${words.map((w, i) => `<span style="--w:${1 - i * 0.08}">${String(w).replace(/[^\w'’-]/g, '')}</span>`).join('')}</div>` : ''; })()}`;
+        el.classList.add('on'); try { G && G.setContrastLine && G.setContrastLine({ x: me.x, y: me.y, z: me.z }, o); } catch (e) {} };
+      pb.querySelectorAll('.r[data-ag]').forEach(r => r.addEventListener('click', () => { SIX.against = SIX.against === r.dataset.ag ? null : r.dataset.ag; split(); }));
+      split();
+      $('#cmpTog').querySelectorAll('span[data-t], span[data-m], span[data-o]').forEach(sp => sp.addEventListener('click', () => { if (sp.dataset.t) c[sp.dataset.t] = !c[sp.dataset.t]; else if (sp.dataset.o) c.objects[sp.dataset.o] = !c.objects[sp.dataset.o]; else c.members[sp.dataset.m] = !c.members[sp.dataset.m]; renderBand('compare'); paint(); }));
+    }
+    else if (P === 'you') {   // you: the avatar, one line of record; the trail behind "your pins"
+      const u = getUser(); let bnd = null; try { bnd = PrismField.bound(); } catch (e) {} const name = u.displayName || (bnd && bnd.name) || '';
+      const L = latestPins(), pins = Object.values(L).sort((x, y) => (y.at || '').localeCompare(x.at || '')); const byQ = {}; pins.forEach(p => { byQ[p.quadrant] = (byQ[p.quadrant] || 0) + 1; }); const home = Object.keys(byQ).sort((a, b2) => byQ[b2] - byQ[a])[0];
+      pb.innerHTML = `<div class="ycard" style="padding:12px"><div class="yid"><div class="yav">${(name || '◆').replace(/^the /, '').charAt(0).toUpperCase()}</div><div><div class="nm">${name || 'No name yet'}</div><div class="hd">${u.handle || (bnd ? 'signed in' : 'not signed in · pins stay on this phone')}</div></div><a class="go" href="#you" style="margin:0">profile →</a></div></div>
+        <p style="color:var(--ink)">${pins.length ? `<b>${pins.length}</b> pin${pins.length === 1 ? '' : 's'} so far${home ? `, most often <b>${SIDE[home]}</b>` : ''}.${pins.length > 1 ? ' The trail on the map is where each one landed.' : ''}` : 'Nothing yet. Place yourself on today\'s event and your trail starts here.'}</p>
+        ${pins.length ? `<a class="more" id="moreGo" href="#">your pins ↓</a><div class="uncover" id="moreBlock">${pins.map(p => { const r = READ_BY_ID[p.rid] || {}; return `<a class="trail" href="#reading/${encodeURIComponent(p.rid)}"><span>${(r.centralObject || {}).name || r.title || p.rid}<small>${(p.at || '').slice(0, 10)} · ${p.band || ''}${p.aperture ? ' · heat ' + Math.abs(p.aperture) + (p.aperture < 0 ? ' left' : ' right') : ''}</small></span><span class="sd">${SIDE[p.quadrant] || ''}<br>z ${zs(p.z)}</span></a>`; }).join('')}</div>` : ''}`;
+      const mg = $('#moreGo'); if (mg) mg.addEventListener('click', e => { e.preventDefault(); const on = $('#moreBlock').classList.toggle('on'); mg.textContent = on ? 'your pins ↑' : 'your pins ↓'; });
+    }
+    pb.scrollTop = 0;
   }
-  // while the prism is being dragged, the panel it's heading for follows the finger
-  addEventListener('message', e => { const m = e.data || {}; if (m.type !== 'g4:navdrag' || !$('#v-objects').classList.contains('on')) return;
-    const dx = +m.dx || 0, L = $('#floatL'), R = $('#floatR');
-    if (!dx) { [L, R].forEach(f => { f.classList.remove('dragging'); f.style.removeProperty('--peek'); f.style.removeProperty('--back'); f.style.opacity = ''; }); return; }
-    if (LAND.side === 0) { const f = dx < 0 ? R : L; f.classList.add('dragging'); f.style.setProperty('--peek', Math.abs(dx) * 1.6 + 'px'); f.style.opacity = Math.min(1, Math.abs(dx) / 90); }
-    else { const f = LAND.side === 1 ? R : L, closing = (LAND.side === 1 && dx > 0) || (LAND.side === -1 && dx < 0); if (closing) { f.classList.add('dragging'); f.style.setProperty('--back', dx * 1.6 + 'px'); } }
-  });
 
-  // the navtool settles here, at the centre of the landing (inside the G4 shell)
-  function dockNav() {
-    if (!EMBEDDED) return; const on = $('#v-objects').classList.contains('on'); const r = $('#navdock').getBoundingClientRect(), y = r.top + r.height / 2;
-    tell({ type: 'g4:navdock', y: on && y > 30 && y < innerHeight - 10 ? y : null });
+  // ── changing the event on the stage (10-18: the Reading view retired — every piece of it lives on the stage now) ──
+  function setEvent(r) {
+    if (!r || r === headline) return; headline = r;
+    SIX.pin = { x: 0.5, y: 0.5 }; SIX.zUser = 0; SIX.aperture = 0; SIX.pick = null; SIX.placed = false; SIX.locked = false; SIX.focus = null; SIX.lens = 'everyone';
+    const p = latestPins()[r.rid]; if (p) { SIX.pin = { x: p.x, y: p.y }; SIX.zUser = p.z || 0; SIX.aperture = p.aperture || 0; SIX.placed = true; }
+    paintHead(); paintChips(); paintHeat(); SIX.shown = null;
+    try { if (MEM.C) memSet('C', crowdRegister()); } catch (e) {}
+    (async () => { try { await PrismField.pullField(r.rid); } catch (e) {} paintChips(); if ($('#v-objects').classList.contains('on')) { paint(); if (SIX.panel === 'field' || SIX.panel === 'compare') renderBand(SIX.panel); } })();
   }
-  addEventListener('scroll', dockNav, { passive: true }); addEventListener('resize', dockNav);
-  function landing() { requestAnimationFrame(() => { buildLanding(); dockNav(); setSide(LAND.side || 0); }); [300, 900, 2000, 4000, 7000].forEach(t => setTimeout(dockNav, t)); }
-  try { new ResizeObserver(() => dockNav()).observe(document.body); } catch (e) {}
-  if (headline) { setTimeout(() => { runRail(); runBand(); }, 300); }
+  function crowdRegister() { const S = axisSides(), peak = ['fluid', 'coalition', 'denominated'].map(b => ({ b, c: chargeOf(S.L.concat(S.R), b) })).sort((x, y) => y.c - x.c)[0]; return { fluid: 20, coalition: 50, denominated: 84 }[peak.b]; }
+  function landing() { requestAnimationFrame(() => { buildStage(); paintChips(); go(SIX.panel, true); }); }
+  if (headline) { setTimeout(() => { runRail(); runBand(); paintChips(); paintHeat(); }, 300); (async () => { try { await PrismField.pullField(headline.rid); } catch (e) {} paintChips(); if ($('#v-objects').classList.contains('on')) { paint(); if (SIX.panel === 'field' || SIX.panel === 'compare') renderBand(SIX.panel); } })(); }
 
   // ── routing ──
-  function route() { routeInner(); try { if ((document.querySelector('.view.on') || {}).id === 'v-objects') landing(); else tell({ type: 'g4:navdock', y: null }); } catch (e) {} try { codexFor((document.querySelector('.view.on') || {}).id, (location.hash.split('/')[1] || '')); } catch (e) {} }
+  function route() { routeInner(); try { if ((document.querySelector('.view.on') || {}).id === 'v-objects') landing(); else { SIX.shown = null; tell({ type: 'g4:navdock', y: null }); } } catch (e) {} try { codexFor((document.querySelector('.view.on') || {}).id, (location.hash.split('/')[1] || '')); } catch (e) {} }
   function routeInner() {
     const h = location.hash.replace(/^#/, ''); const [head, id] = h.split('/');
-    if (head === 'reading' && id) { showReading(decodeURIComponent(id)); return; }
-    if (head === 'you') { showView('v-you'); renderYou(); tell({ type: 'g4:crumb', name: 'Prism', fn: 'YOU', crumb: 'Prism · you' }); return; }
-    if (head === 'refraction') { showView('v-refr'); renderRefr(); refrSearch(); tell({ type: 'g4:crumb', name: 'Prism', fn: 'REFRACTION', crumb: 'Prism · your legislators' }); tell({ type: 'g4:navpos', t: 0.86 }); return; }
-    if (head === 'member' && id) { showView('v-member'); renderMember(id); tell({ type: 'g4:crumb', name: 'Prism', fn: 'REFRACTION', crumb: 'Prism · ' + ((MEMBERS.find(m => m.bioguideId === id) || {}).name || 'member') }); return; }
+    if (head === 'reading' && id) { const r = READ_BY_ID[decodeURIComponent(id)]; if (r) { setEvent(r); SIX.panel = 'prism'; showView('v-objects'); return; } }
+    if (head === 'you') { showView('v-you'); renderYou(); tell({ type: 'g4:crumb', name: 'Prism', fn: 'YOU', crumb: 'Prism · you' }); tell({ type: 'g4:navpos', t: 0.88 }); return; }
+    if (head === 'refraction') { showView('v-refr'); renderRefr(); refrSearch(); tell({ type: 'g4:crumb', name: 'Prism', fn: 'TRACKING', crumb: 'Prism · your legislators' }); tell({ type: 'g4:navpos', t: 0.12 }); return; }
+    if (head === 'member' && id) { showView('v-member'); renderMember(id); tell({ type: 'g4:crumb', name: 'Prism', fn: 'TRACKING', crumb: 'Prism · ' + ((MEMBERS.find(m => m.bioguideId === id) || {}).name || 'member') }); tell({ type: 'g4:navpos', t: 0.12 }); return; }
+    SIX.panel = (head === 'p' && id && GRID[id]) ? id : 'crowd';
     showView('v-objects');
-    tell({ type: 'g4:crumb', name: 'Prism', fn: 'BEAM', crumb: 'Prism · the objects' }); tell({ type: 'g4:navpos', t: 0.12 });
     window.scrollTo(0, 0);
   }
   addEventListener('hashchange', route); route();
@@ -1142,13 +1585,13 @@
   addEventListener('message', e => { const m = e.data || {}; if (m.type !== 'g4:nav') return;
     const v = (document.querySelector('.view.on') || {}).id, today = headline ? '#reading/' + encodeURIComponent(headline.rid) : '';
     if (v === 'v-reading') { const i = PANES.indexOf(pane);
-      if (m.dir === 'up') location.hash = '';
-      else if (m.dir === 'forward') { if (i < PANES.length - 1) goPane(PANES[i + 1]); else location.hash = '#refraction'; }
-      else if (m.dir === 'back') { if (i > 0) goPane(PANES[i - 1]); else location.hash = ''; } }
-    else if (v === 'v-refr') { if (m.dir === 'back') location.hash = today; else if (m.dir === 'up') location.hash = ''; else if (m.dir === 'forward') location.hash = '#you'; }
-    else if (v === 'v-member') { if (m.dir === 'up' || m.dir === 'back') location.hash = '#refraction'; }
-    else if (v === 'v-you') { if (m.dir === 'back') location.hash = '#refraction'; else if (m.dir === 'up') location.hash = ''; }
-    else { [$('#floatL'), $('#floatR')].forEach(f => { f.style.opacity = ''; }); if (m.dir === 'up') { if (LAND.side) setSide(0); else tell({ type: 'g4:desk' }); } else if (m.dir === 'forward') setSide(LAND.side + 1); else if (m.dir === 'back') setSide(LAND.side - 1); }
+      if (m.dir === 'up') location.hash = '#p/prism';
+      else if (m.dir === 'forward') { if (i < PANES.length - 1) goPane(PANES[i + 1]); else location.hash = '#p/tracking'; }
+      else if (m.dir === 'back') { if (i > 0) goPane(PANES[i - 1]); else location.hash = '#p/prism'; } }
+    else if (v === 'v-refr') { if (m.dir === 'back' || m.dir === 'up') location.hash = '#p/tracking'; }
+    else if (v === 'v-member') { if (m.dir === 'up' || m.dir === 'back') location.hash = '#p/tracking'; }
+    else if (v === 'v-you') { if (m.dir === 'back' || m.dir === 'up') location.hash = '#p/you'; }
+    else { $('#pband').style.opacity = ''; $('#stage').style.transform = ''; if (m.dir === 'up') { if (SIX.panel !== 'crowd') go('crowd'); else tell({ type: 'g4:desk' }); } else go(stepFrom(SIX.panel, m.dir)); }
   });
 })();
 </script>

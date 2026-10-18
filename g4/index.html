@@ -26,14 +26,17 @@
      three.js in a canvas nothing clips, turning to the pointer (and the
      phone's tilt). Its function is constant and its meaning is Prism's:
      where the prism sits on the line is where you are in the reading.
-       drag ◀ ▶ and let go      back / forward in the program's own layer
+       drag ◀ ▶ and let go      back / forward in the program's own layer (Prism: the column)
+       drag ▲ ▼ and let go      rise / sink (10-18 — Prism: the row of the six panels)
        hold (≈450 ms)           up ONE layer, never further
      The glyph answers "where am I in the machine"; the navtool answers
      "where am I in the reading". (Spec v2 §3, revised 10-14.)
      Programs talk to the shell: {type:'g4:crumb', name, fn, crumb} sets the
      bar's words; {type:'g4:navpos', t:0..1} sets where the prism sits on
      its line; {type:'g4:desk'} asks for the desktop; {type:'g4:pull'}
-     pulls. The shell sends {type:'g4:nav', dir:'back'|'forward'|'up'}.
+     pulls. The shell sends {type:'g4:nav', dir:'back'|'forward'|'rise'|'sink'|'up'}
+     and, while the prism is dragged, {type:'g4:navdrag', dx, dy}; {type:'g4:navdock', y}
+     from a program settles the navtool at y inside it (null = back under the bar).
      THE PULL and THE WAY BACK: the rig (glass + housing) shrinks with the
      live page on it; the villa is built on the first pull (?arrive=glass)
      and crossfades in when it says dg:ready; dg:glass brings the glass
@@ -73,7 +76,8 @@
   #bar .right .crumb { font-size: 9px; letter-spacing: .14em; text-transform: uppercase; white-space: nowrap; }
   @media (max-width: 480px) { #bar { --bar-h: var(--bar-h-phone); } #bar .right .crumb { display: none; } #bar .mid .fn { display: none; } }
   /* the piercing object: lies on the glass just under the bar; nothing clips it */
-  #navtool { position: fixed; top: calc(var(--bar-h) - 10px); left: 0; width: 100%; height: 84px; z-index: 41; pointer-events: none; transition: opacity .6s; }
+  #navtool { position: fixed; top: calc(var(--bar-h) - 10px); left: 0; width: 100%; height: 84px; z-index: 41; pointer-events: none; transition: opacity .6s, top .55s cubic-bezier(.2,.8,.2,1); }   /* (10-18) the prism travels between its places */
+  #strip { transition: top .55s cubic-bezier(.2,.8,.2,1); }
   #navtool.away { opacity: 0; }
   @media (max-width: 480px) { #navtool { top: calc(var(--bar-h-phone) - 10px); } }
 
@@ -281,13 +285,16 @@
   })();
   // ── the navtool's strip: where am I in the reading ──
   (function strip() {
-    const st = $('#strip'); let x0 = null, dx = 0, holdT = null, held = false, dragging = false;
-    const SNAP = 56, HOLD = 450;
+    // (10-18, the six panels) the drag is two-dimensional: left/right changes the column, up/down the row.
+    // While dragging, the program hears {dx, dy}; on release it hears one direction — back/forward (x) or
+    // rise/sink (y), whichever the finger moved more. The prism follows the finger a little both ways.
+    const st = $('#strip'), nt = $('#navtool'); let x0 = null, y0 = null, dx = 0, dy = 0, holdT = null, held = false, dragging = false;
+    const SNAP = 56, HOLD = 450, clampD = v => Math.max(-120, Math.min(120, v));
     function toProg(dir) { try { prog.contentWindow && prog.contentWindow.postMessage({ type: 'g4:nav', dir }, '*'); } catch (e) {} }
     function up() { if (program) toProg('up'); }
-    st.addEventListener('pointerdown', e => { if (mode !== 'glass') return; x0 = e.clientX; dx = 0; held = dragging = false; st.setPointerCapture(e.pointerId); holdT = setTimeout(() => { held = true; if (navigator.vibrate) navigator.vibrate(12); up(); }, HOLD); });
-    st.addEventListener('pointermove', e => { if (x0 == null) return; dx = e.clientX - x0; if (!dragging && Math.abs(dx) > 6) { clearTimeout(holdT); dragging = true; st.classList.add('dragging'); } if (dragging) { nav.setDrag(Math.max(-120, Math.min(120, dx))); try { prog.contentWindow && prog.contentWindow.postMessage({ type: 'g4:navdrag', dx: Math.max(-120, Math.min(120, dx)) }, '*'); } catch (e2) {} } });
-    function end() { if (x0 == null) return; clearTimeout(holdT); st.classList.remove('dragging'); nav.setDrag(0); try { prog.contentWindow && prog.contentWindow.postMessage({ type: 'g4:navdrag', dx: 0 }, '*'); } catch (e2) {} if (!held && dragging) { if (dx <= -SNAP) toProg('forward'); else if (dx >= SNAP) toProg('back'); } x0 = null; dx = 0; }
+    st.addEventListener('pointerdown', e => { if (mode !== 'glass') return; x0 = e.clientX; y0 = e.clientY; dx = dy = 0; held = dragging = false; st.setPointerCapture(e.pointerId); holdT = setTimeout(() => { held = true; if (navigator.vibrate) navigator.vibrate(12); up(); }, HOLD); });
+    st.addEventListener('pointermove', e => { if (x0 == null) return; dx = e.clientX - x0; dy = e.clientY - y0; if (!dragging && Math.hypot(dx, dy) > 6) { clearTimeout(holdT); dragging = true; st.classList.add('dragging'); } if (dragging) { nav.setDrag(clampD(dx)); nt.style.transform = `translateY(${clampD(dy) * 0.45}px)`; try { prog.contentWindow && prog.contentWindow.postMessage({ type: 'g4:navdrag', dx: clampD(dx), dy: clampD(dy) }, '*'); } catch (e2) {} } });
+    function end() { if (x0 == null) return; clearTimeout(holdT); st.classList.remove('dragging'); nav.setDrag(0); nt.style.transform = ''; try { prog.contentWindow && prog.contentWindow.postMessage({ type: 'g4:navdrag', dx: 0, dy: 0 }, '*'); } catch (e2) {} if (!held && dragging) { if (Math.abs(dy) > Math.abs(dx)) { if (dy <= -SNAP) toProg('rise'); else if (dy >= SNAP) toProg('sink'); } else { if (dx <= -SNAP) toProg('forward'); else if (dx >= SNAP) toProg('back'); } } x0 = y0 = null; dx = dy = 0; }
     st.addEventListener('pointerup', end); st.addEventListener('pointercancel', end);
     addEventListener('keydown', e => {
       if (e.target.tagName === 'INPUT') return;
@@ -295,6 +302,8 @@
       if (mode !== 'glass') return;
       if (e.altKey && e.key === 'ArrowLeft') toProg('back');
       if (e.altKey && e.key === 'ArrowRight') toProg('forward');
+      if (e.altKey && e.key === 'ArrowUp') toProg('rise');
+      if (e.altKey && e.key === 'ArrowDown') toProg('sink');
       if (e.key === 'Escape') up();
     });
   })();
@@ -370,7 +379,7 @@
       const nt = $('#navtool');
       const sp = $('#strip');
       if (m.y == null) { nt.style.top = ''; nt.classList.remove('docked'); sp.style.top = ''; sp.classList.remove('docked'); }
-      else { const top = prog.getBoundingClientRect().top + m.y - 42; nt.style.top = top + 'px'; nt.classList.add('docked'); sp.style.top = (top + 18) + 'px'; sp.classList.add('docked'); }   // the drag strip goes with it: you move the prism where it sits
+      else { const top = prog.offsetTop + m.y - 42; nt.style.top = top + 'px'; nt.classList.add('docked'); sp.style.top = (top + 18) + 'px'; sp.classList.add('docked'); }   // the drag strip goes with it: you move the prism where it sits (offsetTop, not the client rect: the rig may be mid-scale at boot)
     }
     else if (m.type === 'dg:ready') land();
     else if (m.type === 'dg:glass') glass();
