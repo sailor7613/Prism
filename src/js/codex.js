@@ -53,7 +53,10 @@
 
   function build() {
     if (S.built) return; S.built = true; css();
-    const g = document.createElement('button'); g.className = 'cx-glyph'; g.type = 'button'; g.title = 'the Codex'; g.textContent = '¶';
+    const g = document.createElement('button'); g.className = 'cx-glyph'; g.type = 'button'; g.title = 'the Codex'; g.innerHTML = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M18.6 6.4A8.4 8.4 0 1 0 18.6 17.6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M9.2 9.2l5.6 5.6M14.8 9.2l-5.6 5.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+    // inside the G4 shell the Codex button lives in the bar; the floating one is for a program opened on its own
+    if (root.parent !== root) g.style.display = 'none';
+    addEventListener('message', e => { if ((e.data || {}).type === 'g4:codex') { if (S.open) close(); else open(); } });
     const scrim = document.createElement('div'); scrim.className = 'cx-scrim';
     const p = document.createElement('aside'); p.className = 'cx-panel'; p.setAttribute('aria-label', 'the Codex');
     p.innerHTML = `<div class="cx-ted"><canvas id="cdxTed"></canvas><div class="cx-say" id="cdxSay"></div><button class="cx-x" id="cdxX">close</button></div>
