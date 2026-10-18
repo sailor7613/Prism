@@ -2691,9 +2691,15 @@ const PrismGraphmap = (function () {
       var fs = fontSize || 32;
       cvs.width = 1024;
       cvs.height = 128;
-      ctx.font = 'bold italic ' + fs + 'px Georgia';
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
+      if (config.wordsLegible) {   // (10-18, the g4 stage) upright, cream, a dark halo — words that read on the plane
+        ctx.font = '600 ' + fs + 'px Georgia';
+        ctx.shadowColor = 'rgba(6,11,26,0.85)'; ctx.shadowBlur = fs * 0.5; ctx.shadowOffsetX = 0; ctx.shadowOffsetY = 1;
+        ctx.fillStyle = '#f6f1e6'; ctx.fillText(text, 512, 64);
+        ctx.shadowBlur = 0; ctx.fillStyle = color || '#f6f1e6'; ctx.globalAlpha = 0.35; ctx.fillText(text, 512, 64); ctx.globalAlpha = 1;
+      } else {
+      ctx.font = 'bold italic ' + fs + 'px Georgia';
       ctx.shadowColor = 'rgba(255,255,255,0.8)';
       ctx.shadowBlur = fs * 0.45;
       ctx.shadowOffsetX = 0;
@@ -2703,6 +2709,7 @@ const PrismGraphmap = (function () {
       ctx.strokeText(text, 512, 64);
       ctx.fillStyle = color || 'rgba(245,240,232,0.6)';
       ctx.fillText(text, 512, 64);
+      }
       var tex = new THREE.CanvasTexture(cvs);
       var mat = new THREE.MeshBasicMaterial({ map: tex, transparent: true, depthTest: false, depthWrite: false, side: THREE.DoubleSide });
       var wt = (typeof weight === 'number') ? weight : 0.5;

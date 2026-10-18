@@ -79,6 +79,8 @@
   #navtool { position: fixed; top: calc(var(--bar-h) - 10px); left: 0; width: 100%; height: 84px; z-index: 41; pointer-events: none; transition: opacity .6s, top .55s cubic-bezier(.2,.8,.2,1); }   /* (10-18) the prism travels between its places */
   #strip { transition: top .55s cubic-bezier(.2,.8,.2,1); }
   #navtool.away { opacity: 0; }
+  #navtool.holding { animation: g4-hold 3s linear forwards; }   /* the prism brightens over the three seconds of a hold */
+  @keyframes g4-hold { from { filter: brightness(1); } to { filter: brightness(1.9) drop-shadow(0 0 18px rgba(246,241,230,.6)); } }
   @media (max-width: 480px) { #navtool { top: calc(var(--bar-h-phone) - 10px); } }
 
   /* programs: one iframe under the bar */
@@ -289,12 +291,12 @@
     // While dragging, the program hears {dx, dy}; on release it hears one direction — back/forward (x) or
     // rise/sink (y), whichever the finger moved more. The prism follows the finger a little both ways.
     const st = $('#strip'), nt = $('#navtool'); let x0 = null, y0 = null, dx = 0, dy = 0, holdT = null, held = false, dragging = false;
-    const SNAP = 56, HOLD = 450, clampD = v => Math.max(-120, Math.min(120, v));
+    const SNAP = 56, HOLD = 3000, clampD = v => Math.max(-120, Math.min(120, v));   // (10-18, Sailor) hold the prism three seconds and it snaps back to the centre
     function toProg(dir) { try { prog.contentWindow && prog.contentWindow.postMessage({ type: 'g4:nav', dir }, '*'); } catch (e) {} }
     function up() { if (program) toProg('up'); }
-    st.addEventListener('pointerdown', e => { if (mode !== 'glass') return; x0 = e.clientX; y0 = e.clientY; dx = dy = 0; held = dragging = false; st.setPointerCapture(e.pointerId); holdT = setTimeout(() => { held = true; if (navigator.vibrate) navigator.vibrate(12); up(); }, HOLD); });
+    st.addEventListener('pointerdown', e => { if (mode !== 'glass') return; x0 = e.clientX; y0 = e.clientY; dx = dy = 0; held = dragging = false; st.setPointerCapture(e.pointerId); nt.classList.add('holding'); holdT = setTimeout(() => { held = true; nt.classList.remove('holding'); if (navigator.vibrate) navigator.vibrate(12); up(); }, HOLD); });
     st.addEventListener('pointermove', e => { if (x0 == null) return; dx = e.clientX - x0; dy = e.clientY - y0; if (!dragging && Math.hypot(dx, dy) > 6) { clearTimeout(holdT); dragging = true; st.classList.add('dragging'); } if (dragging) { nav.setDrag(clampD(dx)); nt.style.transform = `translateY(${clampD(dy) * 0.45}px)`; try { prog.contentWindow && prog.contentWindow.postMessage({ type: 'g4:navdrag', dx: clampD(dx), dy: clampD(dy) }, '*'); } catch (e2) {} } });
-    function end() { if (x0 == null) return; clearTimeout(holdT); st.classList.remove('dragging'); nav.setDrag(0); nt.style.transform = ''; try { prog.contentWindow && prog.contentWindow.postMessage({ type: 'g4:navdrag', dx: 0, dy: 0 }, '*'); } catch (e2) {} if (!held && dragging) { if (Math.abs(dy) > Math.abs(dx)) { if (dy <= -SNAP) toProg('rise'); else if (dy >= SNAP) toProg('sink'); } else { if (dx <= -SNAP) toProg('forward'); else if (dx >= SNAP) toProg('back'); } } x0 = y0 = null; dx = dy = 0; }
+    function end() { if (x0 == null) return; clearTimeout(holdT); nt.classList.remove('holding'); st.classList.remove('dragging'); nav.setDrag(0); nt.style.transform = ''; try { prog.contentWindow && prog.contentWindow.postMessage({ type: 'g4:navdrag', dx: 0, dy: 0 }, '*'); } catch (e2) {} if (!held && dragging) { if (Math.abs(dy) > Math.abs(dx)) { if (dy <= -SNAP) toProg('rise'); else if (dy >= SNAP) toProg('sink'); } else { if (dx <= -SNAP) toProg('forward'); else if (dx >= SNAP) toProg('back'); } } x0 = y0 = null; dx = dy = 0; }
     st.addEventListener('pointerup', end); st.addEventListener('pointercancel', end);
     addEventListener('keydown', e => {
       if (e.target.tagName === 'INPUT') return;

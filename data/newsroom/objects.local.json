@@ -1,6 +1,6 @@
 {
   "schema": "prism_object_overlay_v1",
-  "updatedAt": "2026-10-18T18:03:46.263Z",
+  "updatedAt": "2026-10-18T22:02:30.249Z",
   "note": "Written ONLY by the drafting task (Sailor commits it). The scan owns objects.json and only reads this file. See scripts/newsroom/overlay.js.",
   "objects": {
     "obj_astate_bills-changes-elections-gavin": {
@@ -1006,6 +1006,10 @@
         "obj_thepresi_against-russia-sanctions-trump"
       ],
       "permanenceNote": "Republican statements after the close bear on rdg_bnghg4rdiucp's station-B inversion lean (unruled), as coverage, not as a new object."
+    },
+    "obj_thepresi_approval-hits-low-midterms": {
+      "status": "dismissed",
+      "dismissedWhy": "No instrument: a poll reading (Trump approval at a record low, Fox stations, 10-18). Nothing was voted, signed or ordered; the scan read \"poll\" as a vote. Same call as obj_thepresi_approval-economic-falls-house (10-01). Dismissed by Claude (drafting), 22:0x UTC 10-18 run; reversible by Sailor."
     }
   }
 }
