@@ -41,7 +41,7 @@
      exists in both rooms — and goes back into the room once you are there.
      ====================================================================== -->
 <link rel="stylesheet" href="../src/css/prism-grammar.css?v=2">
-<link rel="stylesheet" href="../src/css/g4-os.css?v=1">
+<link rel="stylesheet" href="../src/css/g4-os.css?v=2">
 <style>
   * { box-sizing: border-box; }
   html, body { margin: 0; height: 100%; background: var(--g4-field-deep); overflow: hidden; }
@@ -148,9 +148,9 @@
     <iframe id="prog" title="program"></iframe>
     <div id="desk">
       <div class="tiles">
-        <a class="g4-tile" href="#prism"><div class="ic">◭</div><div class="n">Prism</div><div class="s">the workstation</div></a>
-        <a class="g4-tile" href="#bloomburger"><div class="ic">🍔</div><div class="n">BloomBurger</div><div class="s">the terminal</div></a>
-        <a class="g4-tile" href="#codex"><div class="ic">📖</div><div class="n">Codex</div><div class="s">the plain glossary</div></a>
+        <a class="g4-tile" href="#prism"><div class="ic lit"><img src="../src/img/prism3d.png" alt="" style="width:58px;height:58px;object-fit:contain"></div><div class="n">Prism</div><div class="s">the workstation</div></a>
+        <a class="g4-tile" href="#bloomburger"><div class="ic lit"><svg viewBox="0 0 64 64" width="58" height="58" aria-hidden="true"><defs><linearGradient id="icArc" x1="0" x2="1"><stop offset="0" stop-color="var(--film-0)"/><stop offset=".5" stop-color="var(--film-2)"/><stop offset="1" stop-color="var(--film-4)"/></linearGradient><filter id="icSoft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.4"/></filter><radialGradient id="icLit"><stop offset="0" stop-color="#fffaf0"/><stop offset="1" stop-color="#f6f1e6" stop-opacity="0"/></radialGradient></defs><path d="M10 44 A22 22 0 0 1 54 44" fill="none" stroke="url(#icArc)" stroke-width="7" opacity=".45" filter="url(#icSoft)"/><path d="M10 44 A22 22 0 0 1 54 44" fill="none" stroke="url(#icArc)" stroke-width="1.2" opacity=".8"/><path d="M32 44 L47 28" stroke="#f6f1e6" stroke-width="4" opacity=".35" filter="url(#icSoft)"/><path d="M32 44 L47 28" stroke="#f6f1e6" stroke-width="1.6" stroke-linecap="round"/><circle cx="47.5" cy="27.5" r="6" fill="url(#icLit)" opacity=".8"/><circle cx="32" cy="44" r="2.2" fill="#f6f1e6"/></svg></div><div class="n">BloomBurger</div><div class="s">the terminal</div></a>
+        <a class="g4-tile" href="#codex"><div class="ic lit"><span class="film loop" style="font-family:Georgia,serif;font-size:40px;line-height:1;text-shadow:0 0 14px rgba(246,241,230,.35)">¶</span></div><div class="n">Codex</div><div class="s">the plain glossary</div></a>
       </div>
       <div class="g4-key">g4 · three programs · tap the glyph to come back here · hold it to see the room</div>
       <div class="g4-key" style="opacity:.5"><a href="#classic" style="text-decoration:none;color:inherit">prism · classic ↗</a></div>
@@ -168,7 +168,7 @@
 <div id="note"></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="../src/js/prism-light.js?v=1"></script>
+<script src="../src/js/prism-light.js?v=2"></script>
 <script>
 (function () {
   'use strict';

@@ -36,6 +36,20 @@
   --film-4: rgb(255, 212, 236);
   --film-rest: var(--ink, #f5f0e8);
 
+  /* THE LIGHT (10-18 design pass) — Prism's four colours as light, not paint.
+     Lifted the way the graphmap plane lifts them: soft, milky, readable on
+     the navy. Use these for marks and type on the glass; the deep originals
+     (#b83a3a #3868a8 #3a8a52 #b87828) stay for lit 3D surfaces only. */
+  --lt-cream: #f6f1e6;
+  --lt-red:   #e0948f;
+  --lt-gold:  #e0b77a;
+  --lt-green: #8cc79f;
+  --lt-blue:  #8fb0e0;
+  --lt-spectrum: linear-gradient(90deg, var(--lt-red), var(--lt-gold), var(--lt-green), var(--lt-blue));
+  /* the Diatribe bands as light; the dial blends band into band, no hard stops */
+  --lt-fluid: #93d3ab; --lt-coalition: #e8b47e; --lt-denominated: #e89692;
+  --lt-dial: linear-gradient(90deg, var(--lt-denominated) 0%, var(--lt-denominated) 12%, var(--lt-coalition) 21%, var(--lt-coalition) 29%, var(--lt-fluid) 38%, var(--lt-fluid) 62%, var(--lt-coalition) 71%, var(--lt-coalition) 79%, var(--lt-denominated) 88%, var(--lt-denominated) 100%);
+
   --bar-h: 24px;
   --bar-h-phone: 28px;
 }
@@ -109,6 +123,9 @@ html.g4, .g4 body { background: var(--g4-field); color: var(--ink, #f5f0e8); }
 .g4-tile { font-family: var(--g4-os); }
 .g4-tile .n { font-size: 15px; font-weight: 600; color: rgba(245,240,232,.72); } .g4-tile .s { font-size: 11px; font-style: italic; color: rgba(245,240,232,.38); margin-top: 3px; }
 .g4-tile .ic { background: rgba(var(--g4-blue-rgb), 0.07); border-color: rgba(var(--g4-blue-rgb), 0.18); border-radius: 10px; }
+/* (10-18) a lit icon: the box is a soft pool of light, not a bordered square */
+.g4-tile .ic.lit { border-color: transparent; border-radius: 18px; background: radial-gradient(closest-side, rgba(246,241,230,.10), rgba(var(--g4-blue-rgb), .08) 70%, rgba(var(--g4-blue-rgb), .02)); transition: background .3s; }
+.g4-tile:hover .ic.lit, .g4-tile:focus-visible .ic.lit { border-color: transparent; background: radial-gradient(closest-side, rgba(246,241,230,.18), rgba(var(--g4-blue-rgb), .12) 70%, rgba(var(--g4-blue-rgb), .03)); }
 
 /* ── a window ────────────────────────────────────────────── */
 .g4-win {
@@ -243,3 +260,24 @@ html.g4, .g4 body { background: var(--g4-field); color: var(--ink, #f5f0e8); }
   100% { transform: scale(2.6); opacity: 1; }
 }
 .g4-housing.done { opacity: 0; }
+
+/* ── THE LIGHT: colour is a field, never a stripe (10-18) ─────────
+   Learned from the graphmap's base plane: colours meet without a seam
+   and settle into one milky blend. So on the glass:
+   · .lt-edge   — a soft glow of var(--c) rising from a card's top edge,
+                  in place of a hard coloured border.
+   · .lt-tag    — a word lit by a soft blush of var(--c), in place of a
+                  filled pill.
+   · .lt-dot    — a small soft light of var(--c), in place of a flat swatch.
+   · .lt-rule   — a rule that is the spectrum, fading at both ends.      */
+.lt-edge { position: relative; }
+.lt-edge::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 34px; pointer-events: none; border-radius: inherit;
+  background: radial-gradient(70% 100% at 50% 0%, color-mix(in srgb, var(--c, var(--lt-cream)) 34%, transparent), transparent 78%); }
+.lt-tag { display: inline-block; padding: 3px 12px; border-radius: 999px; color: var(--c, var(--lt-cream));
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--c, var(--lt-cream)) 26%, transparent), transparent);
+  text-shadow: 0 0 10px color-mix(in srgb, var(--c, var(--lt-cream)) 55%, transparent); }
+.lt-dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--c, var(--lt-cream));
+  box-shadow: 0 0 8px 1px color-mix(in srgb, var(--c, var(--lt-cream)) 60%, transparent); }
+.lt-rule { height: 1px; border: 0; background: var(--lt-spectrum); opacity: .55;
+  -webkit-mask: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent); mask: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent); }
+

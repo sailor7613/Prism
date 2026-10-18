@@ -1900,6 +1900,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="../src/js/prism-light.js?v=2"></script>  <!-- THE LIGHT: the beam + spectrum shared with the g4 navtool (2026-10-18) -->
 <script src="satellite.min.js"></script>
 <script>
 // ============================================================
@@ -22132,19 +22133,49 @@ const g4Screen = {
   // plastic: the same thin film (cos 2π·λ/[650,532,473]) as the bar's prism, turning slowly.
   badge.visible = false; domeBadge.visible = false;
   (function domePrism() {
+    // THE LOGO IN THE DOME (2026-10-18, Sailor: "make this 3d logo the new logo on the 3d dg g4 … live in the base
+    // dome of the g4 and pierce through"). The logo is the prism WITH its light: the prism is set into the dome, its
+    // front breaking the plastic; white light comes in through the dome's left wall, and the spectrum leaves through
+    // the right wall into the room (src/js/prism-light.js, the same light as the bar's navtool). What is inside the
+    // plastic shows faintly through it — the Venus's ghost rule (drawn only where something stands in front).
+    // The light holds still; only the prism turns.
     const vert = 'varying vec3 vN; varying vec3 vV; void main(){ vec4 mv = modelViewMatrix * vec4(position,1.0); vN = normalize(normalMatrix * normal); vV = normalize(-mv.xyz); gl_Position = projectionMatrix * mv; }';
-    const frag = 'varying vec3 vN; varying vec3 vV; uniform float uT; void main(){ float f = 1.0 - abs(dot(normalize(vN), normalize(vV))); float t = f * 1.1 + uT; vec3 c = 0.5 + 0.5 * cos(6.2831853 * t * 1.3 / vec3(0.65, 0.532, 0.473)); vec3 col = mix(vec3(0.75, 0.82, 1.0), c, 0.6); gl_FragColor = vec4(col, 0.95 * (0.35 + 0.65 * f)); }';
-    const mat = new THREE.ShaderMaterial({ vertexShader: vert, fragmentShader: frag, uniforms: { uT: { value: 0 } }, transparent: true, depthWrite: false, side: THREE.DoubleSide });
+    const frag = 'varying vec3 vN; varying vec3 vV; uniform float uT; uniform float uA; void main(){ float f = 1.0 - abs(dot(normalize(vN), normalize(vV))); float t = f * 1.1 + uT; vec3 c = 0.5 + 0.5 * cos(6.2831853 * t * 1.3 / vec3(0.65, 0.532, 0.473)); vec3 col = mix(vec3(0.75, 0.82, 1.0), c, 0.6); gl_FragColor = vec4(col, uA * (0.35 + 0.65 * f)); }';
+    const mat = new THREE.ShaderMaterial({ vertexShader: vert, fragmentShader: frag, uniforms: { uT: { value: 0 }, uA: { value: 0.95 } }, transparent: true, depthWrite: false, side: THREE.DoubleSide });
     const tri = new THREE.Shape(); tri.moveTo(-0.5, -0.42); tri.lineTo(0.5, -0.42); tri.lineTo(0, 0.5); tri.closePath();
     const geo = new THREE.ExtrudeGeometry(tri, { depth: 0.34, bevelEnabled: false }); geo.center();
     const prism = new THREE.Mesh(geo, mat); prism.renderOrder = 4;
     prism.add(new THREE.LineSegments(new THREE.EdgesGeometry(geo), new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.6, depthWrite: false })));
-    prism.scale.setScalar(domeR * 0.42);
-    prism.position.set(0, domeR * 0.66, domeR * 0.74);     // set into the dome's front, half out of the plastic
-    prism.rotation.x = -0.35;
-    imacG4.add(prism); imacG4.userData.domePrism = prism;
+    // the buried half, seen through the plastic: the same film as a tint, only where the dome is in front
+    const ghostMat = new THREE.ShaderMaterial({ vertexShader: vert, fragmentShader: frag, uniforms: { uT: mat.uniforms.uT, uA: { value: 0.5 } }, transparent: true, depthWrite: false, depthFunc: THREE.GreaterDepth, side: THREE.DoubleSide });
+    const ghost = new THREE.Mesh(geo, ghostMat); ghost.renderOrder = 997; ghost.scale.setScalar(0.999); prism.add(ghost);
+    ghost.add(new THREE.LineSegments(new THREE.EdgesGeometry(geo), new THREE.LineBasicMaterial({ color: 0x9fb4d8, transparent: true, opacity: 0.45, depthWrite: false, depthFunc: THREE.GreaterDepth })));
+    const S = domeR * 0.5;
+    const seat = new THREE.Group();                         // the logo's frame: on the dome's front, leaning back with it
+    seat.position.set(0, domeR * 0.58, domeR * 0.66);
+    seat.rotation.x = -0.42;
+    seat.scale.setScalar(S);
+    seat.add(prism);
+    imacG4.add(seat); imacG4.userData.domePrism = prism; imacG4.userData.domeLogo = seat;
+    let light = null;
+    try {
+      if (window.PrismLight) {
+        light = window.PrismLight.create(THREE, { depthTest: true, fadeEnds: true, ghost: 0.4, beamW: 0.15, spread: 0.55, drop: 0.12, z: -0.02 });
+        light.layout({ left: -5.2, right: 6.5 });         // in prism units: ~0.57 m of beam in, ~0.72 m of spectrum out
+        light.group.position.z = -0.06;                    // a little inside, so both walls of the dome are pierced
+        seat.add(light.group);
+      }
+    } catch (e) { console.warn('[g4] the dome light did not build:', e && e.message); }
+    // the desk prism retires: the dome carries the navtool's prism now (code kept, hidden)
+    try { if (imacPivot.userData.deskPrism) imacPivot.userData.deskPrism.visible = false; } catch (e) {}
     const t0 = performance.now();
-    (function spin() { requestAnimationFrame(spin); if (document.hidden) return; const t = (performance.now() - t0) / 1000; mat.uniforms.uT.value = t * 0.05; prism.rotation.y = Math.sin(t * 0.35) * 0.6; prism.position.y = domeR * 0.66 + Math.sin(t * 0.8) * domeR * 0.015; })();
+    (function spin() {
+      requestAnimationFrame(spin); if (document.hidden) return;
+      const t = (performance.now() - t0) / 1000;
+      mat.uniforms.uT.value = t * 0.05;
+      prism.rotation.y = Math.sin(t * 0.35) * 0.3;
+      if (light) light.update(t, prism.rotation.y / 0.6);
+    })();
   })();
   // the housing's parts, kept by name so the screen can change its shape (the timeline)
   imacG4.userData.screenParts = { backPanel: backPanel, chin: chin, badge: badge };
@@ -27586,25 +27617,52 @@ function drawG4Codex(ctx, W, H, hdrH, cream, blue, S) {
   }
 }
 
+// (2026-10-18, the light pass) the desktop's icons are lit the way the glass's are: each sits in a soft pool of
+// light, not a bordered box — Prism is the 3D prism itself, BloomBurger is its needle striking a soft dial, the
+// Codex is its ¶ glowing.
+const g4PrismIcon = new Image();
+g4PrismIcon.onload = function () { try { g4Screen.needsRedraw = true; if (typeof redrawG4Screen === 'function') redrawG4Screen(); } catch (e) {} };
+g4PrismIcon.src = '../src/img/prism3d.png';
 function drawG4Desktop(ctx, W, H, hdrH, cream, blue, S) {
   const apps = [
-    { id: 'prism', glyph: '✳', name: 'Prism Workstation', sub: 'the graphmap tools' },
-    { id: 'bloomburger', glyph: '🍔', name: 'BloomBurger', sub: 'the terminal · PG · SST · WIRE' },   // 2026-10-14: the tracker folded in as SST (spec v2 §2)
-    { id: 'codex', glyph: '📖', name: 'Codex', sub: 'the plain glossary' },
+    { id: 'prism', name: 'Prism Workstation', sub: 'the graphmap tools' },
+    { id: 'bloomburger', name: 'BloomBurger', sub: 'the terminal · PG · SST · WIRE' },   // 2026-10-14: the tracker folded in as SST (spec v2 §2)
+    { id: 'codex', name: 'Codex', sub: 'the plain glossary' },
   ];
   const cw = Math.round(215 * S), ch = Math.round(190 * S), gap = Math.round(24 * S);
   const x0 = W / 2 - (apps.length * cw + (apps.length - 1) * gap) / 2, y0 = hdrH + Math.round(150 * S);
   apps.forEach(function (a, i) {
     const x = x0 + i * (cw + gap);
     g4Screen.hitRegions.push({ x: x, y: y0, w: cw, h: ch, action: 'openApp', data: a.id });
-    ctx.fillStyle = blue + '0.07)';
-    ctx.strokeStyle = blue + '0.18)';
-    ctx.lineWidth = 1.5;
-    ctx.beginPath(); ctx.roundRect(x, y0, cw, ch, 10); ctx.fill(); ctx.stroke();
+    const cx = x + cw / 2, cy = y0 + Math.round(70 * S), R = Math.round(62 * S);
+    // the pool of light
+    const pool = ctx.createRadialGradient(cx, cy, 0, cx, cy, R);
+    pool.addColorStop(0, 'rgba(246,241,230,' + op(0.12) + ')'); pool.addColorStop(0.65, blue + '0.07)'); pool.addColorStop(1, blue + '0)');
+    ctx.fillStyle = pool; ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2); ctx.fill();
+    ctx.save();
+    if (a.id === 'prism') {
+      const sz = Math.round(78 * S);
+      if (g4PrismIcon.complete && g4PrismIcon.naturalWidth) ctx.drawImage(g4PrismIcon, cx - sz / 2, cy - sz / 2, sz, sz);
+    } else if (a.id === 'bloomburger') {
+      const r = Math.round(30 * S), by = cy + Math.round(14 * S);
+      const g = ctx.createLinearGradient(cx - r, 0, cx + r, 0);
+      g.addColorStop(0, 'rgb(236,219,255)'); g.addColorStop(0.5, 'rgb(214,255,226)'); g.addColorStop(1, 'rgb(255,212,236)');
+      ctx.strokeStyle = g; ctx.lineCap = 'round';
+      ctx.shadowColor = 'rgba(246,241,230,0.6)'; ctx.shadowBlur = 10 * S;
+      ctx.globalAlpha = 0.9; ctx.lineWidth = 2 * S; ctx.beginPath(); ctx.arc(cx, by, r, Math.PI, 0); ctx.stroke();
+      const a2 = -Math.PI * 0.27, nx = cx + Math.cos(a2) * r * 0.95, ny = by + Math.sin(a2) * r * 0.95;
+      ctx.strokeStyle = 'rgba(246,241,230,0.95)'; ctx.lineWidth = 2.4 * S; ctx.beginPath(); ctx.moveTo(cx, by); ctx.lineTo(nx, ny); ctx.stroke();
+      ctx.shadowBlur = 16 * S; ctx.fillStyle = 'rgba(255,250,240,0.9)'; ctx.beginPath(); ctx.arc(nx, ny, 2.6 * S, 0, Math.PI * 2); ctx.fill();
+      ctx.beginPath(); ctx.arc(cx, by, 2.6 * S, 0, Math.PI * 2); ctx.fill();
+    } else {
+      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.font = Math.round(56 * S) + 'px Georgia';
+      ctx.shadowColor = 'rgba(246,241,230,0.55)'; ctx.shadowBlur = 14 * S;
+      ctx.fillStyle = cream + op(0.85) + ')';
+      ctx.fillText('¶', cx, cy);
+    }
+    ctx.restore();
     ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-    ctx.font = Math.round(52 * S) + 'px Georgia';
-    ctx.fillStyle = cream + op(0.75) + ')';
-    ctx.fillText(a.glyph, x + cw / 2, y0 + Math.round(70 * S));
     ctx.font = '600 ' + Math.round(17 * S) + 'px Georgia';
     ctx.fillStyle = cream + op(0.6) + ')';
     ctx.fillText(a.name, x + cw / 2, y0 + Math.round(135 * S));

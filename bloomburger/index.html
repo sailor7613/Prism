@@ -29,7 +29,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../src/css/prism-grammar.css?v=2">
-<link rel="stylesheet" href="../src/css/g4-os.css?v=1">
+<link rel="stylesheet" href="../src/css/g4-os.css?v=2">
 <style>
   * { box-sizing: border-box; }
   html.embedded .g4-bar, html.embedded .g4-sky { display: none; }   /* inside the shell, the shell owns the bar and the sky */
@@ -63,11 +63,11 @@
   .card.lead .t { font-size: 26px; }
   .empty { color: var(--ink-low); font-style: italic; padding: 30px 0; }
   /* ── the floor: the rolling RI baseline every parallelogram is read against */
-  .floor { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; margin: -6px 0 16px; padding: 10px 14px; border: 1px solid var(--g4-rule-soft); border-left: 2px solid rgb(56,104,168); background: rgba(6,11,26,.45); border-radius: 3px; font-family: var(--mono); font-size: 10.5px; color: var(--ink-mid); }
+  .floor { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; margin: -6px 0 16px; padding: 10px 14px; border: 1px solid var(--g4-rule-soft); border-left: 2px solid var(--lt-blue); background: rgba(6,11,26,.45); border-radius: 3px; font-family: var(--mono); font-size: 10.5px; color: var(--ink-mid); }
   .floor .k { font-size: 9.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-low); }
   .floor b { font-weight: 400; color: var(--ink); font-family: var(--serif); font-size: 20px; line-height: 1; }
-  .floor .RIc { color: rgb(56,104,168); }
-  .card.baseline { border-left: 2px solid rgb(56,104,168); }
+  .floor .RIc { color: var(--lt-red); }
+  .card.baseline { box-shadow: inset 14px 0 18px -14px color-mix(in srgb, var(--lt-red) 70%, transparent); }
   /* ── the roster */
   .roster { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
   .corner { border: 1px solid var(--g4-rule); background: var(--g4-glass); border-radius: 4px; padding: 12px 14px; }
@@ -78,9 +78,9 @@
   .src .n { font-size: 14px; } .src .n small { font-family: var(--mono); font-size: 9.5px; color: var(--ink-low); margin-left: 6px; letter-spacing: .1em; }
   .src .m { font-family: var(--mono); font-size: 10px; color: var(--ink-mid); grid-column: 1 / -1; }
   .src .st { font-family: var(--mono); font-size: 9.5px; letter-spacing: .12em; text-transform: uppercase; }
-  .src .st.read { color: rgb(58,138,82); } .src .st.stale { color: rgb(184,120,40); } .src .st.never { color: var(--ink-low); } .src .st.proposed { color: var(--ink-low); font-style: italic; }
+  .src .st.read { color: var(--lt-green); } .src .st.stale { color: var(--lt-gold); } .src .st.never { color: var(--ink-low); } .src .st.proposed { color: var(--ink-low); font-style: italic; }
   .corner.thin { border-color: rgba(184,120,40,.45); }
-  .card .k .base { color: rgb(56,104,168); letter-spacing: .2em; }
+  .card .k .base { color: var(--lt-red); letter-spacing: .2em; }
   .card .s .vs { color: var(--ink-low); }
   /* ── the sweep: what the index baskets caught today */
   .sweep-days { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 14px; }
@@ -102,14 +102,14 @@
   .qi .m { font-family: var(--mono); font-size: 10px; color: var(--ink-low); margin-top: 4px; }
   .qi .m i { color: #e8d9a8; font-style: normal; }
   .qi .sort { font-family: var(--mono); font-size: 10px; line-height: 1.45; color: var(--ink-mid); }
-  .qi .sort .cut { color: rgb(58,138,82); } .qi .sort .cut a { color: inherit; } .qi .sort .q { color: var(--ink-low); }
-  .sweep-note { font-family: var(--mono); font-size: 10.5px; color: var(--ink-mid); border-left: 2px solid #e8d9a8; padding: 8px 12px; margin: 14px 0 0; line-height: 1.5; }
+  .qi .sort .cut { color: var(--lt-green); } .qi .sort .cut a { color: inherit; } .qi .sort .q { color: var(--ink-low); }
+  .sweep-note { font-family: var(--mono); font-size: 10.5px; color: var(--ink-mid); box-shadow: inset 14px 0 18px -14px rgba(232,217,168,.7); padding: 8px 12px; margin: 14px 0 0; line-height: 1.5; }
   /* ── objects on this tape (the objects pass) */
   .seen { margin: 18px 0 0; border-top: 1px solid var(--g4-rule-soft); padding-top: 12px; }
   .seen .k { font-family: var(--mono); font-size: 9.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-low); margin-bottom: 8px; }
   .seen ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
   .seen li { display: grid; grid-template-columns: 92px 1fr; gap: 10px; font-size: 13px; line-height: 1.35; }
-  .seen li .ds { font-family: var(--mono); font-size: 9.5px; letter-spacing: .12em; text-transform: uppercase; color: rgb(56,104,168); padding-top: 3px; }
+  .seen li .ds { font-family: var(--mono); font-size: 9.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--lt-blue); padding-top: 3px; }
   .seen li .ds.cand { color: var(--ink-low); }
   .seen li .m { font-family: var(--mono); font-size: 10px; color: var(--ink-low); }
 
@@ -119,7 +119,7 @@
   .tile .v { font-size: 26px; margin-top: 4px; line-height: 1; font-family: var(--serif); }
   .tile .v small { font-family: var(--mono); font-size: 11px; color: var(--ink-low); margin-left: 4px; }
   .tile .s { font-family: var(--mono); font-size: 10px; color: var(--ink-mid); margin-top: 5px; }
-  .LIc { color: rgb(184,58,58) } .RIc { color: rgb(56,104,168) } .LPc { color: rgb(58,138,82) } .RPc { color: rgb(184,120,40) } .Oc { color: #e8d9a8 }
+  .LIc { color: var(--lt-blue) } .RIc { color: var(--lt-red) } .LPc { color: var(--lt-green) } .RPc { color: var(--lt-gold) } .Oc { color: #e8d9a8 }
   .piece .split { display: grid; grid-template-columns: minmax(380px, 1fr) minmax(340px, 480px); gap: 22px; align-items: start; }
   .tapewin { max-height: calc(100vh - var(--bar-h) - 34px - 40px); overflow: auto; padding-right: 6px; border-top: 1px solid var(--g4-rule-soft); border-bottom: 1px solid var(--g4-rule-soft); scroll-padding: 40%; }
   @media (max-width: 880px) { .tapewin { max-height: none; overflow: visible; border: 0; } }
@@ -141,8 +141,8 @@
   .line.active { border-color: rgba(233,236,242,.35); background: rgba(233,236,242,.05); }
   .line .meta { display: flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 10px; color: var(--ink-mid); letter-spacing: .06em; }
   .line .ts { color: var(--ink-low); font-variant-numeric: tabular-nums; }
-  .chip { display: inline-block; padding: 0 6px; border-radius: 9px; font-size: 9.5px; letter-spacing: .08em; color: #fff; line-height: 16px; }
-  .chip.LI{background:rgb(184,58,58)} .chip.RI{background:rgb(56,104,168)} .chip.LP{background:rgb(58,138,82)} .chip.RP{background:rgb(184,120,40)} .chip.O{background:#e8d9a8;color:#0c0b09}
+  .chip { display: inline-block; padding: 0 8px; border-radius: 9px; font-size: 9.5px; letter-spacing: .08em; line-height: 16px; color: var(--c); background: radial-gradient(closest-side, color-mix(in srgb, var(--c) 26%, transparent), transparent); text-shadow: 0 0 8px color-mix(in srgb, var(--c) 50%, transparent); }
+  .chip.LI{--c:var(--lt-blue)} .chip.RI{--c:var(--lt-red)} .chip.LP{--c:var(--lt-green)} .chip.RP{--c:var(--lt-gold)} .chip.O{--c:#e8d9a8}
   .line q { display: block; font-size: 15px; margin: 6px 0 5px; quotes: "“" "”"; } .line q::before, .line q::after { color: var(--ink-low); }
   .line .hi { color: var(--ink); }
   .scores { display: flex; flex-wrap: wrap; gap: 4px 10px; font-family: var(--mono); font-size: 10.5px; color: var(--ink-mid); } .scores b { color: var(--ink); font-weight: 400; }
@@ -174,8 +174,9 @@
   .media .ch { grid-column: 1 / -1; display: flex; align-items: baseline; gap: 10px; font-family: var(--mono); font-size: 9.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-low); margin: 8px 0 -2px; }
   .media .ch b { font-family: var(--serif); font-size: 15px; letter-spacing: 0; text-transform: none; }
   .media .ch i { flex: 1; height: 1px; background: var(--g4-rule-soft); }
-  .mtile { display: block; text-decoration: none; color: inherit; border: 1px solid var(--g4-rule); background: var(--g4-glass); border-radius: 4px; padding: 11px 12px 10px; border-top: 2px solid var(--c, var(--g4-rule)); transition: border-color .2s, background .2s; position: relative; min-height: 118px; }
-  .mtile:hover { background: rgba(233,236,242,.07); border-color: rgba(233,236,242,.4); border-top-color: var(--c); }
+  .mtile { display: block; text-decoration: none; color: inherit; border: 1px solid var(--g4-rule); background: var(--g4-glass); border-radius: 4px; padding: 11px 12px 10px; transition: border-color .2s, background .2s; position: relative; min-height: 118px; }
+  .mtile::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 40px; pointer-events: none; border-radius: 4px 4px 0 0; background: radial-gradient(75% 100% at 50% 0%, color-mix(in srgb, var(--c, transparent) 30%, transparent), transparent 80%); }   /* the station's colour as light, not a stripe (10-18) */
+  .mtile:hover { background: rgba(233,236,242,.07); border-color: rgba(233,236,242,.28); }
   .mtile .n { font-size: 16px; line-height: 1.15; margin-bottom: 2px; padding-right: 34px; }
   .mtile .st { font-family: var(--mono); font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-low); }
   .mtile .st.proposed { font-style: italic; }
@@ -185,7 +186,7 @@
   .mtile .nums b small { font-family: var(--mono); font-size: 9px; color: var(--ink-low); margin-left: 3px; }
   .mtile .nums b.dim { color: var(--ink-low); }
   .mtile .m { font-family: var(--mono); font-size: 9.5px; color: var(--ink-mid); line-height: 1.5; }
-  .mtile .m .ok { color: rgb(58,138,82); } .mtile .m .stale { color: rgb(184,120,40); } .mtile .m .never { color: var(--ink-low); }
+  .mtile .m .ok { color: var(--lt-green); } .mtile .m .stale { color: var(--lt-gold); } .mtile .m .never { color: var(--ink-low); }
   .mtile .sun { position: absolute; top: 9px; right: 10px; width: 22px; height: 22px; }
   .mtile.beta .nums b.lum::after { content: 'β'; font-family: var(--mono); font-size: 9px; color: #e8d9a8; margin-left: 3px; vertical-align: top; }
   /* ── a publication's page */
@@ -233,7 +234,7 @@
   .fod h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(22px, 3vw, 30px); margin: 4px 0 2px; line-height: 1.1; }
   .fod .q { font-style: italic; color: var(--ink-mid); font-size: 15px; margin-bottom: 12px; }
   .fod .corners { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; max-width: 520px; }
-  .fod .cn { border-top: 2px solid var(--c); padding-top: 6px; }
+  .fod .cn { padding-top: 8px; position: relative; } .fod .cn::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--c), transparent); box-shadow: 0 0 10px 1px color-mix(in srgb, var(--c) 45%, transparent); }
   .fod .cn .k { font-family: var(--mono); font-size: 9.5px; letter-spacing: .16em; color: var(--c); display: flex; align-items: center; gap: 5px; }
   .fod .cn .z { font-family: var(--serif); font-size: 26px; line-height: 1.05; margin-top: 2px; }
   .fod .cn .z.none { color: var(--ink-low); }
@@ -265,11 +266,11 @@
   .prow { display: grid; grid-template-columns: 34px 1fr auto; gap: 2px 12px; align-items: center; padding: 8px 6px; border-bottom: 1px solid var(--g4-rule-soft); text-decoration: none; color: inherit; transition: background .15s; }
   .prow:hover { background: rgba(233,236,242,.05); } .prow:hover .t { color: #fff; }
   .prow .fig { width: 34px; height: 34px; grid-row: 1 / span 2; }
-  .prow .t { font-size: 16px; line-height: 1.15; } .prow .t .mk { font-family: var(--mono); font-size: 9px; letter-spacing: .14em; color: #e8d9a8; margin-left: 8px; vertical-align: 2px; } .prow .t .mk.base { color: rgb(56,104,168); }
+  .prow .t { font-size: 16px; line-height: 1.15; } .prow .t .mk { font-family: var(--mono); font-size: 9px; letter-spacing: .14em; color: #e8d9a8; margin-left: 8px; vertical-align: 2px; } .prow .t .mk.base { color: var(--lt-red); }
   .prow .d { font-size: 12px; color: var(--ink-mid); line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; grid-column: 2; }
   .prow .s { grid-column: 3; grid-row: 1 / span 2; font-family: var(--mono); font-size: 10.5px; color: var(--ink-mid); display: flex; gap: 14px; align-items: center; white-space: nowrap; }
   .prow .s b { color: var(--ink); font-weight: 400; font-size: 13px; } .prow .s .cn { display: inline-flex; gap: 2px; width: 64px; } .prow .s .src { color: var(--ink-low); min-width: 150px; text-align: right; }
-  .prow.base { border-left: 2px solid rgb(56,104,168); }
+  .prow.base { box-shadow: inset 14px 0 18px -14px color-mix(in srgb, var(--lt-red) 70%, transparent); }
   @media (max-width: 880px) { .prow { grid-template-columns: 28px 1fr; } .prow .fig { width: 28px; height: 28px; } .prow .s { grid-column: 2; grid-row: auto; flex-wrap: wrap; gap: 6px 10px; font-size: 10px; } .prow .s .src { min-width: 0; text-align: left; } .prow .d { display: none; } }
 
   /* ── the tracker's reading / the wire */
@@ -311,8 +312,8 @@
   .marquee .num { font-family: var(--serif); font-size: clamp(54px, 11vw, 96px); line-height: .95; letter-spacing: -.01em; }
   .marquee .num small { font-size: .4em; margin-left: 2px; }
   .marquee .vd { font-family: var(--mono); font-size: 12px; letter-spacing: .24em; margin-top: 8px; }
-  .marquee .vd b { padding: 2px 8px; border-radius: 2px; color: #0c0b09; }
-  .marquee .vd.FALLING b { background: var(--band-denominated, #c45a3c); } .marquee .vd.RISING b { background: var(--band-fluid, #5aa06a); } .marquee .vd.HOLDING b { background: #e9ecf2; }
+  .marquee .vd b { font-weight: 400; padding: 4px 16px; border-radius: 999px; color: var(--c); background: radial-gradient(closest-side, color-mix(in srgb, var(--c) 30%, transparent), transparent); text-shadow: 0 0 12px color-mix(in srgb, var(--c) 60%, transparent); }
+  .marquee .vd.FALLING b { --c: var(--lt-red); } .marquee .vd.RISING b { --c: var(--lt-green); } .marquee .vd.HOLDING b { --c: var(--lt-cream); }   /* lit, not filled (10-18) */
   .marquee .vd span { color: var(--ink-mid); margin-left: 10px; }
   .marquee .den { font-family: var(--mono); font-size: 10px; letter-spacing: .12em; color: var(--ink-low); margin-top: 10px; }
   @media (prefers-reduced-motion: reduce) { .marquee .needle { transition: none; } }
@@ -320,23 +321,29 @@
   @media (max-width: 560px) { .marquee, html.embedded .marquee, html:not(.embedded) .marquee { min-height: 0; padding-top: 14px; } .burns { margin-top: 18px; } }
   html.embedded body::before { content: ''; position: fixed; left: 0; right: 0; top: 0; height: 48px; z-index: 39; pointer-events: none; background: linear-gradient(180deg, var(--g4-field, #0a1226) 70%, rgba(10,18,38,0)); }
   /* ── the burns: a film strip of the day's data points, one frame each */
-  .burns { position: relative; height: 112px; overflow: hidden; margin: 0 -16px; background: #07090f; border-top: 1px solid var(--g4-rule); border-bottom: 1px solid var(--g4-rule); }
-  .burns::before, .burns::after { content: ''; position: absolute; left: 0; right: 0; height: 10px; z-index: 2; pointer-events: none;
-    background: repeating-linear-gradient(90deg, transparent 0 9px, rgba(233,236,242,.16) 9px 17px, transparent 17px 26px); background-size: 26px 6px; background-repeat: repeat-x; background-position: 0 2px; }
+  /* (10-18) frames held to the light: the strip is dark film, each frame is lit from behind — a soft warm field,
+     no hard borders; the state is the colour of the light, not of a line. The strip fades out at both ends. */
+  .burns { position: relative; height: 112px; overflow: hidden; margin: 0 -16px; background: linear-gradient(180deg, rgba(4,6,12,.0), rgba(4,6,12,.75) 14%, rgba(4,6,12,.75) 86%, rgba(4,6,12,0));
+    -webkit-mask: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+  .burns::before, .burns::after { content: ''; position: absolute; left: 0; right: 0; height: 8px; z-index: 2; pointer-events: none;
+    background: radial-gradient(3px 2.2px at 13px 4px, rgba(246,241,230,.22) 70%, transparent 100%); background-size: 26px 8px; background-repeat: repeat-x; }
   .burns::before { top: 0; } .burns::after { bottom: 0; }
   .burns .reel { display: flex; height: 100%; width: max-content; animation: reel 70s linear infinite; padding: 14px 0; box-sizing: border-box; }
   .burns:hover .reel, .burns:active .reel { animation-play-state: paused; }
   @keyframes reel { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   @media (prefers-reduced-motion: reduce) { .burns { overflow-x: auto; } .burns .reel { animation: none; } }
-  .burns .fr { flex: 0 0 auto; width: 168px; margin-right: 8px; padding: 8px 12px; box-sizing: border-box; background: linear-gradient(180deg, rgba(233,236,242,.05), rgba(233,236,242,.02)); border: 1px solid rgba(233,236,242,.1); border-radius: 2px; display: grid; grid-template-rows: auto 1fr auto; text-decoration: none; color: inherit; }
+  .burns .fr { --c: #f3e3c0; flex: 0 0 auto; width: 168px; margin-right: 8px; padding: 8px 12px; box-sizing: border-box; border-radius: 6px; display: grid; grid-template-rows: auto 1fr auto; text-decoration: none; color: inherit;
+    background: radial-gradient(90% 80% at 50% 50%, color-mix(in srgb, var(--c) 20%, transparent), color-mix(in srgb, var(--c) 7%, transparent) 60%, color-mix(in srgb, var(--c) 2%, transparent));
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c) 6%, transparent); transition: background .4s; }
+  .burns .fr:hover { background: radial-gradient(90% 80% at 50% 50%, color-mix(in srgb, var(--c) 30%, transparent), color-mix(in srgb, var(--c) 10%, transparent) 60%, color-mix(in srgb, var(--c) 3%, transparent)); }
   .burns .fr .k { font-family: var(--mono); font-size: 9px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-low); display: flex; justify-content: space-between; gap: 6px; white-space: nowrap; }
   .burns .fr .k i { font-style: normal; }
   .burns .fr .v { font-family: var(--serif); font-size: 26px; line-height: 1.1; align-self: center; white-space: nowrap; }
   .burns .fr .v small { font-size: 13px; color: var(--ink-mid); margin-left: 2px; }
-  .burns .fr .d { font-family: var(--mono); font-size: 9.5px; color: var(--ink-mid); white-space: nowrap; }
-  .burns .fr .d .up { color: #8fc79c; } .burns .fr .d .dn { color: #e08a72; }
-  .burns .fr.flared { border-color: rgba(224,138,114,.45); }
-  .burns .fr.dark { opacity: .45; }
+  .burns .fr .d { font-family: var(--mono); font-size: 9.5px; color: var(--ink-mid); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .burns .fr .d .up { color: var(--lt-green); } .burns .fr .d .dn { color: var(--lt-red); }
+  .burns .fr.flared { --c: var(--lt-red); } .burns .fr.flared .k i { color: var(--lt-red); text-shadow: 0 0 8px var(--lt-red); }
+  .burns .fr.dark { opacity: .45; --c: rgba(246,241,230,.4); }
 
   /* ── below the fold: Parallelogram */
   .fold { padding-top: 22px; }
@@ -451,7 +458,7 @@
               <span class="g4-tabs"><a class="g4-pill quiet on" id="showTrace" href="#">trace</a><a class="g4-pill quiet on" id="showPaths" href="#">worldlines</a><a class="g4-pill quiet" id="recenter" href="#">recentre</a></span>
             </div>
             <div class="legend">
-              <span><i style="background:rgb(184,58,58)"></i>LI</span><span><i style="background:rgb(56,104,168)"></i>RI</span><span><i style="background:rgb(58,138,82)"></i>LP</span><span><i style="background:rgb(184,120,40)"></i>RP</span>
+              <span><i style="background:var(--lt-blue)"></i>LI</span><span><i style="background:var(--lt-red)"></i>RI</span><span><i style="background:var(--lt-green)"></i>LP</span><span><i style="background:var(--lt-gold)"></i>RP</span>
               <span><i style="background:#e8d9a8"></i>constitutive</span><span><i style="background:var(--band-fluid)"></i>z + delivers</span><span><i style="background:var(--band-denominated)"></i>z − doesn't</span>
             </div>
           </div>
@@ -543,8 +550,8 @@
   const fmt = s => { s = Math.round(s || 0); const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), x = s % 60; return h ? `${h}:${String(m).padStart(2, '0')}:${String(x).padStart(2, '0')}` : `${m}:${String(x).padStart(2, '0')}`; };
   const zs = z => z == null ? '—' : Math.abs(z) < 0.05 ? '0.0' : (z > 0 ? '+' : '') + Number(z).toFixed(1);
   const tier = d => d <= 33 ? 'fluid' : d <= 66 ? 'coalition' : 'denominated';
-  const COLH = { LI: '#b83a3a', RI: '#3868a8', LP: '#3a8a52', RP: '#b87828', O: '#e8d9a8' };
-  const COL = { LI: 0xb83a3a, RI: 0x3868a8, LP: 0x3a8a52, RP: 0xb87828, O: 0xe8d9a8 };
+  const COLH = { LI: '#8fb0e0', RI: '#e0948f', LP: '#8cc79f', RP: '#e0b77a', O: '#e8d9a8' };   // the light versions (10-18); COL below stays deep for the lit 3D plane
+  const COL = { LI: 0x3868a8, RI: 0xb83a3a,   /* (10-18) matched to the plane: left blue, right red */ LP: 0x3a8a52, RP: 0xb87828, O: 0xe8d9a8 };
 
   // ── the glyph sheet (Prism/src/glyphs.svg), injected once so <use href="#g-…"> resolves everywhere ──
   fetch('../src/glyphs.svg', { cache: 'no-store' }).then(r => r.text()).then(t => { const d = document.createElement('div'); d.innerHTML = t; document.body.prepend(d.firstElementChild); }).catch(() => {});
@@ -922,10 +929,18 @@
     const now = T && T.now.dollarShare != null ? T.now.dollarShare * 100 : null, ago = T && T.ago.dollarShare != null ? T.ago.dollarShare * 100 : null;
     let o = `<svg class="dial" viewBox="0 0 600 330" aria-hidden="true"><defs>
       <linearGradient id="mqArc" x1="0" x2="1"><stop offset="0" stop-color="var(--film-0)"/><stop offset=".5" stop-color="var(--film-2)"/><stop offset="1" stop-color="var(--film-4)"/></linearGradient>
-      <radialGradient id="mqGlow"><stop offset="0" stop-color="#ffe9a8" stop-opacity=".9"/><stop offset="1" stop-color="#ffe9a8" stop-opacity="0"/></radialGradient></defs>`;
+      <radialGradient id="mqGlow"><stop offset="0" stop-color="#ffe9a8" stop-opacity=".9"/><stop offset="1" stop-color="#ffe9a8" stop-opacity="0"/></radialGradient>
+      <linearGradient id="mqBeam" gradientUnits="userSpaceOnUse" x1="${CX}" y1="0" x2="${CX - 228}" y2="0"><stop offset="0" stop-color="#f6f1e6" stop-opacity=".45"/><stop offset=".6" stop-color="#f6f1e6" stop-opacity=".92"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+      <radialGradient id="mqLit"><stop offset="0" stop-color="#fffaf0" stop-opacity=".95"/><stop offset=".35" stop-color="#f6f1e6" stop-opacity=".45"/><stop offset="1" stop-color="#f6f1e6" stop-opacity="0"/></radialGradient>
+      <radialGradient id="mqHub"><stop offset="0" stop-color="#f6f1e6" stop-opacity=".28"/><stop offset="1" stop-color="#f6f1e6" stop-opacity="0"/></radialGradient>
+      <filter id="mqSoft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="7"/></filter>
+      <filter id="mqHalo" x="-10%" y="-200%" width="120%" height="500%"><feGaussianBlur stdDeviation="3.5"/></filter></defs>`;
+    // (10-18) the light pass: the track is a soft band of the film's colours under a fine line; the needle is a beam of
+    // white light from the hub, brightest where it meets the dial; the ghost is a faint shaft. No dashes, no hard wedge.
     // the track
     const [ax, ay] = pt(LO, 230), [bx, by] = pt(HI, 230);
-    o += `<path d="M${ax},${ay} A230,230 0 0 1 ${bx},${by}" fill="none" stroke="url(#mqArc)" stroke-width="3" opacity=".7"/>`;
+    o += `<path d="M${ax},${ay} A230,230 0 0 1 ${bx},${by}" fill="none" stroke="url(#mqArc)" stroke-width="20" opacity=".34" filter="url(#mqSoft)"/>`;
+    o += `<path d="M${ax},${ay} A230,230 0 0 1 ${bx},${by}" fill="none" stroke="url(#mqArc)" stroke-width="1.4" opacity=".6"/>`;
     // the marquee bulbs: one per point; lit up to the reading
     for (let v = LO; v <= HI; v++) { const [x, y] = pt(v, 262); const lit = now != null && v <= now; o += `<circle class="bulb" data-v="${v}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${v % 10 ? 3 : 4.4}" fill="${lit ? '#ffe9a8' : 'rgba(233,236,242,.14)'}"/>` + (lit && v % 5 === 0 ? `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="11" fill="url(#mqGlow)" opacity=".5"/>` : ''); }
     // the scale
@@ -933,10 +948,10 @@
     // the months: the trail the needle has walked
     if (T) T.months.forEach((m, i) => { if (m.dollarShare == null) return; const [x, y] = pt(m.dollarShare * 100, 240); const a = .25 + .75 * (i / Math.max(1, T.months.length - 1)); o += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.2" fill="#e9ecf2" opacity="${a.toFixed(2)}"><title>${mlab(m.period)} · ${pct(m.dollarShare)}%</title></circle>`; });
     // the ghost: where the needle stood at the start of the window
-    if (ago != null) { const [gx, gy] = pt(ago, 205); o += `<line x1="${CX}" y1="${CY}" x2="${gx.toFixed(1)}" y2="${gy.toFixed(1)}" stroke="rgba(233,236,242,.35)" stroke-width="2" stroke-dasharray="5 5"/>`; const [lx, ly] = pt(ago, 290); o += `<text x="${lx.toFixed(1)}" y="${(ly - 2).toFixed(1)}" text-anchor="middle" font-family="var(--mono)" font-size="10.5" letter-spacing="1" fill="rgba(233,236,242,.5)">${mlab(T.ago.period).toUpperCase()} · ${ago.toFixed(1)}</text>`; }
+    if (ago != null) { const [gx, gy] = pt(ago, 205); o += `<line x1="${CX}" y1="${CY}" x2="${gx.toFixed(1)}" y2="${gy.toFixed(1)}" stroke="#f6f1e6" stroke-width="7" stroke-linecap="round" opacity=".10" filter="url(#mqHalo)"/><line x1="${CX}" y1="${CY}" x2="${gx.toFixed(1)}" y2="${gy.toFixed(1)}" stroke="#f6f1e6" stroke-width="1" opacity=".22"/>`; const [lx, ly] = pt(ago, 290); o += `<text x="${lx.toFixed(1)}" y="${(ly - 2).toFixed(1)}" text-anchor="middle" font-family="var(--mono)" font-size="10.5" letter-spacing="1" fill="rgba(233,236,242,.5)">${mlab(T.ago.period).toUpperCase()} · ${ago.toFixed(1)}</text>`; }
     // the needle (drawn at 50, turned to the reading)
-    o += `<g class="needle" id="mqNeedle" style="transform:rotate(${rot(ago != null ? ago : LO)}deg)"><polygon points="${CX},${CY - 5} ${CX - 228},${CY} ${CX},${CY + 5} ${CX + 26},${CY}" fill="#f2efe6"/><circle cx="${CX - 228}" cy="${CY}" r="3" fill="#ffe9a8"/></g>`;
-    o += `<circle cx="${CX}" cy="${CY}" r="13" fill="#0c0b09" stroke="url(#mqArc)" stroke-width="2"/><circle cx="${CX}" cy="${CY}" r="4" fill="#e8d9a8"/>`;
+    o += `<g class="needle" id="mqNeedle" style="transform:rotate(${rot(ago != null ? ago : LO)}deg)"><polygon points="${CX},${CY - 9} ${CX - 228},${CY - 3} ${CX - 228},${CY + 3} ${CX},${CY + 9}" fill="#f6f1e6" opacity=".42" filter="url(#mqHalo)"/><polygon points="${CX},${CY - 3.6} ${CX - 228},${CY - 1.1} ${CX - 228},${CY + 1.1} ${CX},${CY + 3.6}" fill="url(#mqBeam)"/><circle cx="${CX - 228}" cy="${CY}" r="24" fill="url(#mqLit)"/><circle cx="${CX - 228}" cy="${CY}" r="2" fill="#fffaf0"/></g>`;
+    o += `<circle cx="${CX}" cy="${CY}" r="26" fill="url(#mqHub)"/><circle cx="${CX}" cy="${CY}" r="8" fill="#0a0d16" stroke="rgba(246,241,230,.35)" stroke-width="1"/><circle cx="${CX}" cy="${CY}" r="3" fill="#f6f1e6"/>`;
     return o + '</svg>';
   }
   async function loadMarquee() {
@@ -1083,7 +1098,7 @@
           return `<div class="src"><div class="n"><a href="#pub/${s.id}" style="text-decoration:none">${s.name}</a>${s.role === 'baseline' ? '<small>BASELINE</small>' : ''}${s.horizon && s.horizon !== 'US' && s.horizon !== '—' ? `<small>${s.horizon}</small>` : ''}</div><div class="st ${st[0]}">${st[1]}</div><div class="m">${s.cadence} · ${s.route}${nums}</div></div>`; }).join('')}
       </div>`; }).join('');
     let IDX = null; try { IDX = await fetch('../data/press/indices.json', { cache: 'no-store' }).then(r => r.json()); } catch (e) {}
-    const idxHtml = IDX && IDX.indices ? IDX.indices.map(x => `<div class="corner" style="grid-column:1/-1;border-left:2px solid #e8d9a8"><div class="h"><span><b>${x.name}</b> · index v${x.version} · ${x.status}</span><small>${x.cadence} · object: ${x.object}</small></div>${x.members.map(m => `<div class="src"><div class="n">${m.source}<small>${m.corner}</small></div><div class="st ${m.status && m.status.startsWith('ruled') ? 'read' : 'proposed'}">${m.status}</div><div class="m">${m.route}${m.stationRuling ? ' · ruling: ' + m.stationRuling : ''}${m.access ? ' · ' + m.access : ''}</div></div>`).join('')}<div class="src"><div class="n">floor</div><div class="st read">separate</div><div class="m">${x.floorMember} — the floor is vertical (everyone against the terminal), the index is horizontal (the four corners against each other)</div></div></div>`).join('') : '';
+    const idxHtml = IDX && IDX.indices ? IDX.indices.map(x => `<div class="corner" style="grid-column:1/-1;box-shadow:inset 14px 0 18px -14px #e8d9a8"><div class="h"><span><b>${x.name}</b> · index v${x.version} · ${x.status}</span><small>${x.cadence} · object: ${x.object}</small></div>${x.members.map(m => `<div class="src"><div class="n">${m.source}<small>${m.corner}</small></div><div class="st ${m.status && m.status.startsWith('ruled') ? 'read' : 'proposed'}">${m.status}</div><div class="m">${m.route}${m.stationRuling ? ' · ruling: ' + m.stationRuling : ''}${m.access ? ' · ' + m.access : ''}</div></div>`).join('')}<div class="src"><div class="n">floor</div><div class="st read">separate</div><div class="m">${x.floorMember} — the floor is vertical (everyone against the terminal), the index is horizontal (the four corners against each other)</div></div></div>`).join('') : '';
     const wire = R.sources.filter(s => s.station === 'wire');
     el.innerHTML = `<div class="sec first"><div class="eb">the roster</div><h2><span class="orn"></span>Four corners, three voices each</h2><div class="gloss">A corner is an interval: three or more ruled voices per quadrant, so a station’s spread can be seen. Thin corners are outlined. Each voice carries its Lumens, Dia and z from its cuts; open one for everything we have on it.</div></div>` + html + `<div class="sec"><div class="eb">the indices</div><h2><span class="orn"></span>Fixed baskets, swept daily</h2><div class="gloss">An index reads one object through the same four publications every day; the composite per corner is the day’s value. Beta ledes never enter it.</div></div>` + idxHtml + (wire.length ? `<div class="corner" style="grid-column:1/-1"><div class="h"><span><b>the wire</b> · the record's register</span><small>never a station reading</small></div>${wire.map(s => `<div class="src"><div class="n">${s.name}</div><div class="st read">continuous</div><div class="m">${s.notes}</div></div>`).join('')}</div>` : '');
   }

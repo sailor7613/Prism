@@ -29,7 +29,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../src/css/prism-grammar.css?v=2">
-<link rel="stylesheet" href="../src/css/g4-os.css?v=1">
+<link rel="stylesheet" href="../src/css/g4-os.css?v=2">
 <style>
   * { box-sizing: border-box; }
   body { margin: 0; min-height: 100vh; font-family: var(--serif); color: var(--ink); background: transparent; }
@@ -66,9 +66,9 @@
   .row .obj { font-size: 16px; line-height: 1.2; }
   .row .obj small { display: block; font-family: var(--mono); font-size: 10px; color: var(--ink-low); margin-top: 3px; letter-spacing: .04em; }
   .row .st { font-family: var(--mono); font-size: 9.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-low); white-space: nowrap; }
-  .row .st.decided, .row .st.enacted, .row .st.law { color: var(--band-fluid); }
-  .row .st.pending, .row .st.proposed, .row .st.introduced { color: var(--band-coalition); }
-  .row .st.vacated, .row .st.blocked, .row .st.failed { color: var(--band-denominated); }
+  .row .st.decided, .row .st.enacted, .row .st.law { color: var(--lt-fluid); }
+  .row .st.pending, .row .st.proposed, .row .st.introduced { color: var(--lt-coalition); }
+  .row .st.vacated, .row .st.blocked, .row .st.failed { color: var(--lt-denominated); }
   .foot { font-family: var(--mono); font-size: 10px; color: var(--ink-low); line-height: 1.7; margin-top: 26px; }
   @media (max-width: 560px) { .row { grid-template-columns: 1fr; gap: 4px; } .row .st { justify-self: start; } .mast { grid-template-columns: 1fr; } #mark { height: 80px; } }
 
@@ -91,14 +91,15 @@
   .rail .bands { display: grid; grid-template-columns: 16.5% 17% 33% 17% 16.5%; font-family: var(--mono); font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-low); margin-top: 7px; text-align: center; }
   .rail .bands span { padding: 0 3px; line-height: 1.3; } .rail .bands span:first-child { text-align: left; padding-left: 0; } .rail .bands span:last-child { text-align: right; padding-right: 0; }
   .rail .bands span.on { color: var(--ink); }
-  .rail .track { position: relative; height: 10px; border-radius: 5px; border: 1px solid rgba(0,0,0,.4); background: linear-gradient(90deg, var(--band-denominated) 0 16.5%, var(--band-coalition) 16.5% 33.5%, var(--band-fluid) 33.5% 66.5%, var(--band-coalition) 66.5% 83.5%, var(--band-denominated) 83.5%); opacity: .9; box-shadow: 0 1px 0 rgba(255,255,255,.15) inset, 0 1px 2px rgba(0,0,0,.4); }
-  .rail .track::after { content: ''; position: absolute; left: 50%; top: -4px; bottom: -4px; width: 1px; background: rgba(233,236,242,.5); }
+  .rail .track { position: relative; height: 8px; border-radius: 4px; background: var(--lt-dial); opacity: .92; }
+  .rail .track::before { content: ''; position: absolute; inset: -3px 0; border-radius: 8px; background: var(--lt-dial); filter: blur(7px); opacity: .45; z-index: -1; pointer-events: none; }   /* (10-18) the dial as light: bands blend, a soft glow beneath */
+  .rail .track::after { content: ''; position: absolute; left: 50%; top: -4px; bottom: -4px; width: 1px; background: linear-gradient(180deg, transparent, rgba(246,241,230,.6), transparent); }
   .rail .sides { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 9.5px; letter-spacing: .14em; text-transform: uppercase; margin-top: 8px; }
   .rail .sides .l { color: var(--side-left); } .rail .sides .r { color: var(--side-right); } .rail .sides span { opacity: .5; } .rail .sides span.on { opacity: 1; }
   .cap { transition: opacity .25s; } .cap.ghost { opacity: .42; } .cap.on { border-color: rgba(233,236,242,.4); }
   .rail input[type=range] { position: absolute; left: -2px; right: -2px; top: -9px; width: calc(100% + 4px); height: 28px; margin: 0; -webkit-appearance: none; appearance: none; background: transparent; outline: none; cursor: grab; }
-  .rail input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%; background: linear-gradient(#f7f8fb, #c9cfdb); border: 1px solid rgba(0,0,0,.55); box-shadow: 0 1px 0 rgba(255,255,255,.8) inset, 0 2px 4px rgba(0,0,0,.45); }
-  .rail input[type=range]::-moz-range-thumb { width: 22px; height: 22px; border-radius: 50%; background: linear-gradient(#f7f8fb, #c9cfdb); border: 1px solid rgba(0,0,0,.55); }
+  .rail input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%; background: radial-gradient(circle at 50% 45%, #fffaf0 0 30%, rgba(246,241,230,.85) 45%, rgba(246,241,230,.35) 70%, rgba(246,241,230,.08)); border: 0; box-shadow: 0 0 14px 3px rgba(246,241,230,.35); }   /* (10-18) the knob is a point of light */
+  .rail input[type=range]::-moz-range-thumb { width: 22px; height: 22px; border-radius: 50%; background: radial-gradient(circle at 50% 45%, #fffaf0 0 30%, rgba(246,241,230,.85) 45%, rgba(246,241,230,.35) 70%, rgba(246,241,230,.08)); border: 0; box-shadow: 0 0 14px 3px rgba(246,241,230,.35); }
   .rail .read { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 10.5px; color: var(--ink-mid); margin-top: 10px; }
   .rail .read b { color: var(--ink); font-weight: 400; }
   .caps { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 18px; }
@@ -116,7 +117,7 @@
   .an .k { font-family: var(--mono); font-size: 9.5px; letter-spacing: .18em; text-transform: uppercase; margin-bottom: 8px; display: flex; justify-content: space-between; }
   .an.A .k { color: var(--quad-a); } .an.B .k { color: var(--quad-b); } .an.C .k { color: var(--quad-c); } .an.D .k { color: var(--quad-d); }
   .an p { font-size: 15px; line-height: 1.5; margin: 0; color: var(--ink); } .an p .kw { color: var(--film-rest); text-decoration: underline dotted var(--ink-low); }
-  .an .z { font-family: var(--mono); font-size: 10.5px; margin-top: 8px; color: var(--ink-mid); } .an .z b { font-weight: 400; } .an .z.pos b { color: var(--band-fluid); } .an .z.neg b { color: var(--band-denominated); }
+  .an .z { font-family: var(--mono); font-size: 10.5px; margin-top: 8px; color: var(--ink-mid); } .an .z b { font-weight: 400; } .an .z.pos b { color: var(--lt-fluid); } .an .z.neg b { color: var(--lt-denominated); }
   .an .why { font-size: 12px; font-style: italic; color: var(--ink-low); margin-top: 4px; }
   @media (max-width: 640px) { .ans { grid-template-columns: 1fr; } }
 
@@ -127,9 +128,9 @@
   .zrail { padding: 14px 16px; border: 1px solid var(--g4-rule); border-radius: 4px; background: rgba(6,11,26,.5); }
   .zrail .k { font-family: var(--mono); font-size: 9.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-low); }
   .zrail .pole { font-size: 13px; color: var(--ink-mid); margin: 6px 0; } .zrail .pole b { color: var(--ink); font-weight: 400; }
-  .zrail .track { position: relative; height: 10px; border-radius: 5px; border: 1px solid rgba(0,0,0,.4); background: linear-gradient(90deg, var(--band-denominated), rgba(233,236,242,.25) 50%, var(--band-fluid)); margin: 12px 0; }
+  .zrail .track { position: relative; height: 8px; border-radius: 4px; background: linear-gradient(90deg, var(--lt-denominated), rgba(246,241,230,.3) 50%, var(--lt-fluid)); margin: 12px 0; box-shadow: 0 0 14px rgba(246,241,230,.08); }
   .zrail input[type=range] { position: absolute; left: -2px; right: -2px; top: -9px; width: calc(100% + 4px); height: 28px; margin: 0; -webkit-appearance: none; appearance: none; background: transparent; outline: none; }
-  .zrail input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%; background: linear-gradient(#f7f8fb, #c9cfdb); border: 1px solid rgba(0,0,0,.55); box-shadow: 0 2px 4px rgba(0,0,0,.45); }
+  .zrail input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%; background: radial-gradient(circle at 50% 45%, #fffaf0 0 30%, rgba(246,241,230,.85) 45%, rgba(246,241,230,.35) 70%, rgba(246,241,230,.08)); border: 0; box-shadow: 0 0 14px 3px rgba(246,241,230,.35); }
   .zrail .val { font-family: var(--mono); font-size: 22px; color: var(--ink); } .zrail .val small { font-size: 10px; color: var(--ink-low); margin-left: 6px; letter-spacing: .14em; }
   .zrail .picked { font-size: 13px; color: var(--ink-mid); line-height: 1.45; margin-top: 10px; border-top: 1px solid var(--g4-rule-soft); padding-top: 10px; }
   .zrail .picked b { color: var(--ink); font-weight: 400; }
@@ -200,20 +201,26 @@
   .yrow .sd { font-family: var(--mono); font-size: 10.5px; color: var(--ink-mid); text-align: right; }
 
   /* ── BURNS: the newsroom's watch list as a film strip (10-17, from the classic flow; Burns spec v2 §2) */
-  .burns { position: relative; height: 104px; overflow: hidden; margin: 0 -16px 14px; background: #07090f; border-top: 1px solid var(--g4-rule); border-bottom: 1px solid var(--g4-rule); }
-  .burns::before, .burns::after { content: ''; position: absolute; left: 0; right: 0; height: 9px; z-index: 2; pointer-events: none; background: repeating-linear-gradient(90deg, transparent 0 9px, rgba(233,236,242,.16) 9px 17px, transparent 17px 26px); background-size: 26px 6px; background-repeat: repeat-x; background-position: 0 2px; }
+  /* (10-18) frames held to the light — same as BloomBurger's strip: dark film, each frame lit from behind, the state is
+     the colour of its light (watching cream · turned around gold · has a reading green · flared red), no hard borders */
+  .burns { position: relative; height: 104px; overflow: hidden; margin: 0 -16px 14px; background: linear-gradient(180deg, rgba(4,6,12,0), rgba(4,6,12,.75) 14%, rgba(4,6,12,.75) 86%, rgba(4,6,12,0));
+    -webkit-mask: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+  .burns::before, .burns::after { content: ''; position: absolute; left: 0; right: 0; height: 8px; z-index: 2; pointer-events: none; background: radial-gradient(3px 2.2px at 13px 4px, rgba(246,241,230,.22) 70%, transparent 100%); background-size: 26px 8px; background-repeat: repeat-x; }
   .burns::before { top: 0; } .burns::after { bottom: 0; }
   .burns .reel { display: flex; height: 100%; width: max-content; padding: 13px 0; box-sizing: border-box; animation: reel 160s linear infinite; }
   .burns:hover .reel, .burns:active .reel { animation-play-state: paused; }
   @keyframes reel { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   @media (prefers-reduced-motion: reduce) { .burns { overflow-x: auto; } .burns .reel { animation: none; } }
-  .burns .fr { flex: 0 0 auto; width: 190px; margin-right: 8px; padding: 7px 11px; box-sizing: border-box; border: 1px solid rgba(233,236,242,.1); border-radius: 2px; background: rgba(233,236,242,.03); display: grid; grid-template-rows: auto 1fr auto; text-decoration: none; color: inherit; cursor: pointer; }
+  .burns .fr { --c: #f3e3c0; flex: 0 0 auto; width: 190px; margin-right: 8px; padding: 7px 11px; box-sizing: border-box; border-radius: 6px; display: grid; grid-template-rows: auto 1fr auto; text-decoration: none; color: inherit; cursor: pointer;
+    background: radial-gradient(90% 80% at 50% 50%, color-mix(in srgb, var(--c) 20%, transparent), color-mix(in srgb, var(--c) 7%, transparent) 60%, color-mix(in srgb, var(--c) 2%, transparent)); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c) 6%, transparent); transition: background .4s; }
+  .burns .fr:hover { background: radial-gradient(90% 80% at 50% 50%, color-mix(in srgb, var(--c) 30%, transparent), color-mix(in srgb, var(--c) 10%, transparent) 60%, color-mix(in srgb, var(--c) 3%, transparent)); }
   .burns .fr .k { font-family: var(--mono); font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-low); display: flex; justify-content: space-between; gap: 6px; }
   .burns .fr .k i { font-style: normal; white-space: nowrap; }
   .burns .fr .h { font-size: 13.5px; line-height: 1.25; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; align-self: center; }
   .burns .fr .d { font-family: var(--mono); font-size: 9.5px; color: var(--ink-low); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .burns .fr.exposed .k i { color: var(--band-fluid); } .burns .fr.burnt { border-color: rgba(212,170,82,.5); } .burns .fr.burnt .k i { color: var(--band-coalition); }
-  .burns .fr.dark { opacity: .5; } .burns .fr.flared { border-color: rgba(224,138,114,.45); } .burns .fr.flared .k i { color: var(--band-denominated); }
+  .burns .fr.exposed { --c: var(--lt-green); } .burns .fr.burnt { --c: var(--lt-gold); } .burns .fr.flared { --c: var(--lt-red); }
+  .burns .fr.exposed .k i, .burns .fr.burnt .k i, .burns .fr.flared .k i { color: var(--c); text-shadow: 0 0 8px var(--c); }
+  .burns .fr.dark { opacity: .5; --c: rgba(246,241,230,.4); }
   .osheet { position: fixed; inset: 0; z-index: 60; background: rgba(4,6,12,.6); display: grid; place-items: end center; }
   .osheet[hidden] { display: none; }
   .osheet .in { width: min(560px, 100%); max-height: 80vh; overflow: auto; background: #0e1424; border: 1px solid var(--g4-rule); border-radius: 8px 8px 0 0; padding: 18px 18px 28px; box-sizing: border-box; position: relative; }
@@ -243,7 +250,7 @@
   .panel .rail { margin-top: 6px; }
   .uprow { display: grid; grid-template-columns: 1fr auto; gap: 10px; padding: 7px 0; border-top: 1px solid var(--g4-rule-soft); font-size: 14px; text-decoration: none; color: inherit; }
   .uprow small { display: block; font-family: var(--mono); font-size: 9.5px; color: var(--ink-low); }
-  .uprow .bar { width: 90px; height: 6px; border-radius: 3px; background: linear-gradient(90deg, var(--band-denominated) 0 16.5%, var(--band-coalition) 16.5% 33.5%, var(--band-fluid) 33.5% 66.5%, var(--band-coalition) 66.5% 83.5%, var(--band-denominated) 83.5%); position: relative; align-self: center; opacity: .8; }
+  .uprow .bar { width: 90px; height: 6px; border-radius: 3px; background: var(--lt-dial); position: relative; align-self: center; opacity: .8; }
   .uprow .bar i { position: absolute; top: -3px; width: 2px; height: 12px; background: #fff; }
   .upmap { width: 100%; max-width: 280px; display: block; margin: 0 auto; }
   .upnote { font-family: var(--mono); font-size: 10px; color: var(--ink-low); margin-top: 8px; text-align: center; }
@@ -266,12 +273,12 @@
   .lhead h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(22px, 5vw, 32px); line-height: 1.1; margin: 2px 0 0; }
   .tedcirc { width: 52px; height: 52px; border-radius: 50%; overflow: hidden; display: block; background: radial-gradient(circle at 40% 35%, #26355e, #0c1430); border: 1px solid rgba(233,236,242,.25); }
   .tedcirc img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.15) translateY(4%); }
-  .stage { position: relative; height: min(48vh, 400px); margin: 0 -16px; }
+  .stage { position: relative; height: min(54vh, 470px); margin: 0 -16px; }
   #hmap { position: absolute; inset: 0; }
   #hmap canvas { display: block; width: 100% !important; height: 100% !important; }
   .tsay { position: absolute; z-index: 3; max-width: 62%; padding: 10px 12px; border-radius: 10px 10px 10px 2px; background: rgba(233,236,242,.94); color: #0c0b09; font-size: 14.5px; line-height: 1.38; box-shadow: 0 6px 20px rgba(0,0,0,.35); transition: opacity .4s; pointer-events: none; }
   .tsay.out { opacity: 0; }
-  .lrail { position: absolute; right: 10px; top: 14px; width: 118px; z-index: 2; display: flex; flex-direction: column; gap: 8px; }
+  .lrail { position: absolute; right: 10px; top: 30%; width: 118px; z-index: 2; display: flex; flex-direction: column; gap: 8px; }
   .lcard { display: block; padding: 7px 8px; border: 1px solid rgba(233,236,242,.16); border-radius: 6px; background: rgba(10,18,38,.72); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); color: inherit; text-decoration: none; font-size: 12px; line-height: 1.3; transition: opacity .5s, transform .5s; transform: skewX(-6deg); }
   .lcard > * { transform: skewX(6deg); }
   .lcard.fade { opacity: 0; transform: skewX(-6deg) translateY(6px); }
@@ -282,15 +289,17 @@
   .navdock { height: 64px; display: grid; place-items: center; position: relative; }
   .navdock img { height: 52px; filter: drop-shadow(0 6px 10px rgba(0,0,0,.4)); }
   html.embedded .navdock img { visibility: hidden; }   /* inside the G4 the real navtool settles here */
-  .band { position: relative; height: 112px; margin: 2px 0 14px; }
+  .band { position: relative; height: 150px; margin: 2px 0 14px; }
   .bnd { position: absolute; inset: 0; transform: skewX(-14deg); border: 1px solid rgba(233,236,242,.18); background: linear-gradient(90deg, rgba(6,11,26,.7), rgba(20,32,64,.55)); border-radius: 3px; overflow: hidden; transition: opacity .45s; }
   .bnd > * { transform: skewX(14deg); }
   .bnd.fade { opacity: 0; }
-  .bnd svg { position: absolute; left: 6%; right: 6%; top: 18px; height: 54px; width: 88%; transform: skewX(14deg); }
+  #bndMap { position: absolute; left: -12%; right: -12%; top: 0; bottom: 0; }
+  #bndMap canvas { display: block; width: 100% !important; height: 100% !important; }
+  .bnd .bt, .bnd p { z-index: 2; text-shadow: 0 1px 6px rgba(0,0,0,.8); }
   .bnd .bt { position: absolute; left: 18px; top: 8px; font-family: var(--mono); font-size: 9.5px; letter-spacing: .14em; text-transform: uppercase; }
   .bnd .bt span { color: var(--ink-low); margin-left: 8px; }
   .bnd p { position: absolute; left: 18px; right: 18px; bottom: 8px; margin: 0; font-size: 13px; line-height: 1.3; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .band .burns { position: absolute; inset: 0; margin: 0; height: 112px; }
+  .band .burns { position: absolute; inset: 0; margin: 0; height: 150px; }
   .ecard { display: block; padding: 16px 18px; border: 1px solid var(--g4-rule); border-radius: 4px; background: rgba(6,11,26,.5); text-decoration: none; color: inherit; margin-bottom: 18px; }
   .ecard .tag { font-family: var(--mono); font-size: 9.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-low); }
   .ecard h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(24px, 5.5vw, 34px); line-height: 1.1; margin: 6px 0 8px; }
@@ -306,7 +315,7 @@
   <div class="stage" id="stage"><div id="hmap"></div><div class="tsay" id="tedSay" hidden></div><div class="lrail" id="lrail"></div></div>
   <div class="navdock" id="navdock"><img src="../src/img/prism3d.png" alt=""></div>
   <div class="band" id="band">
-    <div class="bnd" id="bnd"><svg id="bndWave" viewBox="0 0 300 70" preserveAspectRatio="none"></svg><div class="bt"><b id="bndWho"></b><span id="bndBand"></span></div><p id="bndLine"></p></div>
+    <div class="bnd" id="bnd"><div id="bndMap"></div><div class="bt"><b id="bndWho"></b><span id="bndBand"></span></div><p id="bndLine"></p></div>
     <div class="burns" id="burns" hidden><div class="reel" id="reel"></div></div><span id="burnCount" hidden></span>
   </div>
   <a class="head ecard" id="head" href="#"></a>
@@ -776,9 +785,9 @@
     const S = 220, X = v => (v * S).toFixed(1), col = { D: '#6fa8dc', R: '#e07474' }[(party || '').toUpperCase()] || '#e0b84c';
     return `<svg class="mmap" viewBox="0 0 ${S} ${S}"><rect x=".5" y=".5" width="${S - 1}" height="${S - 1}" fill="rgba(233,236,242,.02)" stroke="rgba(233,236,242,.14)"/>
       <line x1="${S / 2}" y1="0" x2="${S / 2}" y2="${S}" stroke="rgba(233,236,242,.1)"/><line x1="0" y1="${S / 2}" x2="${S}" y2="${S / 2}" stroke="rgba(233,236,242,.1)"/>
-      <text x="8" y="16" font-family="var(--mono)" font-size="8.5" fill="#b83a3a">LEFT EST.</text><text x="${S - 8}" y="16" text-anchor="end" font-family="var(--mono)" font-size="8.5" fill="#3868a8">RIGHT EST.</text>
-      <text x="8" y="${S - 8}" font-family="var(--mono)" font-size="8.5" fill="#3a8a52">LEFT POP.</text><text x="${S - 8}" y="${S - 8}" text-anchor="end" font-family="var(--mono)" font-size="8.5" fill="#b87828">RIGHT POP.</text>
-      ${pin ? `<line x1="${X(pin.x)}" y1="${X(pin.y)}" x2="${X(mp.x)}" y2="${X(mp.y)}" stroke="rgba(233,236,242,.3)" stroke-dasharray="3 3"/><circle cx="${X(pin.x)}" cy="${X(pin.y)}" r="6" fill="none" stroke="#e9ecf2" stroke-width="1.6"/><text x="${X(pin.x)}" y="${(pin.y * S + 18).toFixed(1)}" text-anchor="middle" font-family="var(--mono)" font-size="9" fill="rgba(233,236,242,.7)">you</text>` : ''}
+      <text x="8" y="16" font-family="var(--mono)" font-size="8.5" fill="#8fb0e0">LEFT EST.</text><text x="${S - 8}" y="16" text-anchor="end" font-family="var(--mono)" font-size="8.5" fill="#e0948f">RIGHT EST.</text>
+      <text x="8" y="${S - 8}" font-family="var(--mono)" font-size="8.5" fill="#8cc79f">LEFT POP.</text><text x="${S - 8}" y="${S - 8}" text-anchor="end" font-family="var(--mono)" font-size="8.5" fill="#e0b77a">RIGHT POP.</text>
+      ${pin ? `<line x1="${X(pin.x)}" y1="${X(pin.y)}" x2="${X(mp.x)}" y2="${X(mp.y)}" stroke="rgba(246,241,230,.28)"/><circle cx="${X(pin.x)}" cy="${X(pin.y)}" r="6" fill="none" stroke="#e9ecf2" stroke-width="1.6"/><text x="${X(pin.x)}" y="${(pin.y * S + 18).toFixed(1)}" text-anchor="middle" font-family="var(--mono)" font-size="9" fill="rgba(233,236,242,.7)">you</text>` : ''}
       <rect x="${(mp.x * S - 6).toFixed(1)}" y="${(mp.y * S - 6).toFixed(1)}" width="12" height="12" transform="rotate(45 ${X(mp.x)} ${X(mp.y)})" fill="${col}"/></svg>`;
   }
   function renderMember(id) {
@@ -952,15 +961,15 @@
     if (LAND.built || !headline) return; const el = $('#hmap'); if (!el || !el.offsetWidth) return; LAND.built = true;
     let gm; try { gm = PrismGraphmap.create({ container: el, mode: 'analytical', capabilities: { orbit: true, zInput: false, zRender: true, diatribeSlider: false, clustering: 'individual' } }); gm.mount(el); } catch (e) { console.warn('[landing]', e); return; }
     LAND.g = gm;
-    try { gm.setBoundaryVisible && gm.setBoundaryVisible(false); gm.setOrbit(0, -42); gm.setZoom && gm.setZoom(7.4); gm.setCornerLabels && gm.setCornerLabels({ A: 'LI', B: 'RI', C: 'LP', D: 'RP' }); } catch (e) {}
+    try { gm.setBoundaryVisible && gm.setBoundaryVisible(false); gm.setOrbit(-6, -30); gm.setZoom && gm.setZoom(6.7); gm.setFocus && gm.setFocus(0.5, 0.56); gm.setCornerLabels && gm.setCornerLabels({ A: 'LI', B: 'RI', C: 'LP', D: 'RP' }); } catch (e) {}
     // the event on the plane: its four corners (at the coalition band) and everyone's pins
     const Rs = headline.responses || {}, POSQ = { A: [-0.5, -0.5], B: [0.5, -0.5], C: [-0.5, 0.5], D: [0.5, 0.5] }, COLQ = { A: 0x6094dc, B: 0xdc6060, C: 0x60a880, D: 0xc49c48 };
     ['A', 'B', 'C', 'D'].forEach(q => { const r = (Rs[q] || {}).coalition || (Rs[q] || {}).fluid; if (!r) return; try { gm.addDot(0.5 + POSQ[q][0] * 0.55, 0.5 + POSQ[q][1] * 0.55, GMQ[q], (r.z || 0) * 0.75, { color: COLQ[q], radius: 0.045, label: QUAD[q] }); } catch (e) {} });
     (async () => { try { await PrismField.pullField(headline.rid); (PrismField.field(headline.rid) || []).forEach(en => { try { gm.addDot(en.x, en.y, GMQ[en.quad] || 'C', (en.z || 0) * 0.75, { color: 0xf5f0e8, radius: 0.03, shape: 'diamond' }); } catch (e) {} }); } catch (e) {} })();
     // the moon, far behind, upper left
-    try { const m = moonMesh(); m.scale.setScalar(1.4); m.position.set(-6.4, 7.6, -30); gm.scene.add(m); LAND.moon = m; } catch (e) {}
+    try { const m = moonMesh(); m.scale.setScalar(1.3); m.position.set(6.2, 7.4, -30); gm.scene.add(m); LAND.moon = m; } catch (e) {}
     // Ted
-    try { LAND.ted = PrismGraphmap.buildCoyote(); LAND.ted.scale.setScalar(0.6); LAND.ted.visible = false; gm.scene.add(LAND.ted); } catch (e) {}
+    try { LAND.ted = PrismGraphmap.buildCoyote(); LAND.ted.scale.setScalar(0.85); LAND.ted.visible = false; gm.scene.add(LAND.ted); } catch (e) {}
     tedScene();
   }
   // Ted: walks in from the left, in front of the plane; says one thing; then wanders off into the background and lies down
@@ -974,13 +983,13 @@
     const T = LAND.ted; if (!T) return;
     let n = 0; try { n = +(sessionStorage.getItem('g4.tedLine') || 0); sessionStorage.setItem('g4.tedLine', String(n + 1)); } catch (e) {}
     const line = TED_LINES()[n % 3];
-    const FLOOR = -1.7, inPath = new THREE.CatmullRomCurve3([new THREE.Vector3(-4.4, FLOOR, 1.9), new THREE.Vector3(-2.9, FLOOR, 1.75), new THREE.Vector3(-1.6, FLOOR, 1.6), new THREE.Vector3(-0.85, FLOOR, 1.5)]);
-    const outPath = new THREE.CatmullRomCurve3([new THREE.Vector3(-0.85, FLOOR, 1.5), new THREE.Vector3(-1.7, FLOOR, 0.6), new THREE.Vector3(-2.6, FLOOR, -0.9), new THREE.Vector3(-2.9, FLOOR, -2.6)]);
+    const FLOOR = -1.55, inPath = new THREE.CatmullRomCurve3([new THREE.Vector3(-2.9, -1.12, 2.1), new THREE.Vector3(-1.9, -1.12, 2.0), new THREE.Vector3(-1.15, -1.12, 1.9), new THREE.Vector3(-0.72, -1.12, 1.85)]);
+    const outPath = new THREE.CatmullRomCurve3([new THREE.Vector3(-0.72, -1.12, 1.85), new THREE.Vector3(-0.5, -1.3, 1.5), new THREE.Vector3(0.1, -1.5, 1.2), new THREE.Vector3(0.6, -1.66, 1.0)]);
     const U = T.userData, legs = U.legs || [], st = { phase: 'in', t0: performance.now() / 1000, yaw: 1.4, lieK: 0 };
     T.visible = true; const say = $('#tedSay');
     function placeBubble() {
       try { const cam = LAND.g.camera, v = T.localToWorld(new THREE.Vector3(0, 1.45, 0.5)).project(cam), r = $('#hmap').getBoundingClientRect();
-        say.style.left = Math.max(8, Math.min(r.width * 0.36, (v.x * 0.5 + 0.5) * r.width - 10)) + 'px'; say.style.top = Math.max(6, (-v.y * 0.5 + 0.5) * r.height - say.offsetHeight - 8) + 'px'; } catch (e) {}
+        say.style.left = Math.max(8, Math.min(r.width * 0.38, (v.x * 0.5 + 0.5) * r.width + 24)) + 'px'; say.style.top = Math.max(6, (-v.y * 0.5 + 0.5) * r.height - say.offsetHeight - 8) + 'px'; } catch (e) {}
     }
     (function frame() {
       if (!LAND.ted) return; requestAnimationFrame(frame); if (document.hidden) return;
@@ -988,14 +997,15 @@
       if (st.phase === 'in') { const u = Math.min(1, a / 4.5), e = 1 - Math.pow(1 - u, 2); P = inPath.getPointAt(e); Q = inPath.getTangentAt(Math.min(.999, e)); gait = 1 - u * u; if (u >= 1) { st.phase = 'talk'; st.t0 = now; say.textContent = line; say.hidden = false; say.classList.remove('out'); } }
       else if (st.phase === 'talk') { P = inPath.getPointAt(1); st.yaw += (0.35 - st.yaw) * 0.06; placeBubble(); if (a > Math.max(6.5, line.length * 0.065)) { st.phase = 'out'; st.t0 = now; say.classList.add('out'); setTimeout(() => { say.hidden = true; }, 450); } }
       else if (st.phase === 'out') { const u = Math.min(1, a / 8), e = u < .5 ? 2 * u * u : 1 - Math.pow(-2 * u + 2, 2) / 2; P = outPath.getPointAt(e); Q = outPath.getTangentAt(Math.min(.999, e)); gait = Math.sin(u * Math.PI) * 0.9 + 0.1; if (u >= 1) { st.phase = 'rest'; st.t0 = now; } }
-      else { P = outPath.getPointAt(1); st.lieK = Math.min(1, st.lieK + 0.01); st.yaw += (0.6 - st.yaw) * 0.03; }
+      else { P = outPath.getPointAt(1); st.lieK = Math.min(1, st.lieK + 0.02); st.yaw += (0.15 - st.yaw) * 0.03; }
       if (Q) st.yaw = Math.atan2(Q.x, Q.z);
       const ph = now * 7.5, sw = o => Math.sin(ph + o) * 0.55 * gait, L = st.lieK;
-      if (legs[0]) { legs[0].hip.rotation.x = -1.25 * L + sw(0); legs[0].knee.rotation.x = 0.35 * L; }
-      if (legs[1]) { legs[1].hip.rotation.x = -1.25 * L + sw(Math.PI); legs[1].knee.rotation.x = 0.35 * L; }
-      if (legs[2]) { legs[2].hip.rotation.x = -1.15 * L + sw(Math.PI); legs[2].knee.rotation.x = 1.55 * L; }
-      if (legs[3]) { legs[3].hip.rotation.x = -1.15 * L + sw(0); legs[3].knee.rotation.x = 1.55 * L; }
-      T.position.set(P.x, FLOOR - 0.27 * 0.6 / 0.5 * L + Math.abs(Math.sin(ph)) * 0.02 * gait, P.z); T.rotation.set(0, st.yaw, 0);
+      // at rest he sits (the factory's sit: front legs straight, hind legs folded, nose up) and watches the plane
+      if (legs[0]) { legs[0].hip.rotation.x = 0.42 * L + sw(0); legs[0].knee.rotation.x = 0; }
+      if (legs[1]) { legs[1].hip.rotation.x = 0.42 * L + sw(Math.PI); legs[1].knee.rotation.x = 0; }
+      if (legs[2]) { legs[2].hip.rotation.x = -0.10 * L + sw(Math.PI); legs[2].knee.rotation.x = -1.04 * L; }
+      if (legs[3]) { legs[3].hip.rotation.x = -0.10 * L + sw(0); legs[3].knee.rotation.x = -1.04 * L; }
+      T.position.set(P.x, P.y - 0.10 * 0.85 / 0.5 * L + Math.abs(Math.sin(ph)) * 0.02 * gait, P.z); T.rotation.set(-0.30 * L, st.yaw, 0);
       if (U.head) { const talk = st.phase === 'talk'; U.head.rotation.y += ((talk ? 0.25 : 0) - U.head.rotation.y) * 0.08; U.head.rotation.x += ((talk ? -0.15 + Math.sin(now * 2) * 0.05 : 0.1) - U.head.rotation.x) * 0.08; }
       if (U.jaw) U.jaw.position.y = (1.11 - 1.20) - (st.phase === 'talk' ? (0.5 + 0.5 * Math.sin(now * 16)) * 0.03 : 0);
       if (U.tail) U.tail.rotation.y = Math.sin(now * (st.phase === 'talk' ? 6 : 2.2)) * (st.phase === 'talk' ? 0.8 : 0.3);
@@ -1016,15 +1026,30 @@
   }
   // the diagnostic band: each corner's boundary — its z at fluid, coalition, denominated as one curve — most charged first
   function runBand() {
-    const Rs = headline.responses || {}, BANDS = ['fluid', 'coalition', 'denominated'], COLH = { A: '#6094dc', B: '#dc6060', C: '#60a880', D: '#c49c48' };
-    const corners = ['A', 'B', 'C', 'D'].filter(q => Rs[q]).map(q => { const zs3 = BANDS.map(b => (Rs[q][b] || {}).z || 0); const peak = BANDS.reduce((m, b) => Math.abs((Rs[q][b] || {}).z || 0) > Math.abs((Rs[q][m] || {}).z || 0) ? b : m, 'fluid'); return { q, zs3, peak, charge: Math.max(...zs3.map(Math.abs)), line: (Rs[q][peak] || {}).text || '' }; }).sort((a, b) => b.charge - a.charge);
+    const Rs = headline.responses || {}, BANDS = ['fluid', 'coalition', 'denominated'];
+    const SIDEN = { A: 'Left establishment', B: 'Right establishment', C: 'Left populist', D: 'Right populist' }, COLH = { A: '#6094dc', B: '#dc6060', C: '#60a880', D: '#c49c48' };
+    const zOf = (q, b) => ((Rs[q] || {})[b] || {}).z || 0;
+    const corners = ['A', 'B', 'C', 'D'].filter(q => Rs[q]).map(q => { const peak = BANDS.reduce((m, b) => Math.abs(zOf(q, b)) > Math.abs(zOf(q, m)) ? b : m, 'fluid'); return { q, peak, charge: Math.max(...BANDS.map(b => Math.abs(zOf(q, b)))), line: (Rs[q][peak] || {}).text || '' }; }).sort((a, b) => b.charge - a.charge);
     if (!corners.length) return;
-    let i = 0, rounds = 0;
-    const SIDEN = { A: 'Left establishment', B: 'Right establishment', C: 'Left populist', D: 'Right populist' };
+    // the factory's diagnostic boundaries, from the Reading: the object's surface on the plane, its shadow at where the corners
+    // land when pushed hard; each corner's warp is how charged it is (Low · Moderate · High · Very high)
+    const dist = c => c < 0.25 ? 'Low' : c < 0.5 ? 'Moderate' : c < 0.75 ? 'High' : 'Very high';
+    const shadowZ = corners.reduce((a, c) => a + zOf(c.q, 'denominated'), 0) / corners.length;
+    const trace = { object: { x: 0, y: 0, z: 0 }, shadow: { x: 0, y: 0, z: Math.max(-0.9, Math.min(0.9, shadowZ)) },
+      positions: corners.map(c => ({ id: SIDEN[c.q].toUpperCase(), quadrant: c.q, distinguishability: dist(c.charge), fluid: 'plainly ' + zs(zOf(c.q, 'fluid')), denominated: 'pushed ' + zs(zOf(c.q, 'denominated')) })) };
+    let bm = null; const CORNER = { A: [0.125, 0.125], B: [0.875, 0.125], C: [0.125, 0.875], D: [0.875, 0.875] };
+    function mountBand() {
+      const el = $('#bndMap'); if (bm || !el || !el.offsetWidth || typeof PrismGraphmap === 'undefined') return;
+      try { bm = PrismGraphmap.create({ container: el, mode: 'analytical', zoomMin: 1.0, capabilities: { orbit: false, zInput: false, zRender: true, diatribeSlider: false, clustering: 'individual' } }); bm.mount(el);
+        bm.setBoundaryVisible && bm.setBoundaryVisible(false); bm.setBoundaryMode && bm.setBoundaryMode('dual'); bm.loadTrace(trace); bm.setTraceLayerVisible && ['object', 'shadow', 'vector'].forEach(l => bm.setTraceLayerVisible(l, false));
+        const hasDiag = o => { let f = false; o.traverse(c => { if (c.userData && c.userData.isDiagnosticBoundary) f = true; }); return f; };
+        (bm.group ? bm.group.children : []).forEach(ch => { if (!hasDiag(ch)) ch.visible = false; });
+        bm.setOrbit(0, -16); bm.setZoom && bm.setZoom(1.7); } catch (e) { console.warn('[band]', e); bm = null; }
+    }
+    let i = 0, rounds = 0, spin = 0;
     function draw(c) {
-      const W = 300, H = 70, xs = [20, 150, 280], ys = c.zs3.map(z => H / 2 - z * H * 0.42);
-      const d = `M0 ${H / 2} C 10 ${H / 2}, ${xs[0] - 10} ${ys[0]}, ${xs[0]} ${ys[0]} S ${xs[1] - 40} ${ys[1]}, ${xs[1]} ${ys[1]} S ${xs[2] - 40} ${ys[2]}, ${xs[2]} ${ys[2]} L ${W} ${ys[2]}`;
-      $('#bndWave').innerHTML = `<line x1="0" y1="${H / 2}" x2="${W}" y2="${H / 2}" stroke="rgba(233,236,242,.15)" stroke-dasharray="3 4"/><path d="${d}" fill="none" stroke="${COLH[c.q]}" stroke-width="2.4" vector-effect="non-scaling-stroke"/>${xs.map((x, k) => `<circle cx="${x}" cy="${ys[k]}" r="3.2" fill="${COLH[c.q]}"/>`).join('')}`;
+      mountBand();
+      if (bm) { const [fx, fy] = CORNER[c.q]; try { bm.setFocus(fx, fy); spin = (spin + 1) % 2; bm.setOrbit(spin ? 18 : -18, -16); } catch (e) {} }
       $('#bndWho').textContent = SIDEN[c.q]; $('#bndWho').style.color = COLH[c.q];
       $('#bndBand').textContent = c.peak === 'denominated' ? 'most heated when pushed hard' : c.peak === 'coalition' ? 'most heated when arguing' : 'heated even plainly said';
       $('#bndLine').textContent = '“' + String(c.line).replace(/<[^>]+>/g, '') + '”';
@@ -1047,7 +1072,7 @@
     tell({ type: 'g4:navdock', y: on && y > 30 && y < innerHeight - 10 ? y : null });
   }
   addEventListener('scroll', dockNav, { passive: true }); addEventListener('resize', dockNav);
-  function landing() { requestAnimationFrame(() => { buildLanding(); dockNav(); }); [300, 900, 2000, 4000].forEach(t => setTimeout(dockNav, t)); }
+  function landing() { requestAnimationFrame(() => { buildLanding(); dockNav(); }); [300, 900, 2000, 4000, 7000].forEach(t => setTimeout(dockNav, t)); }
   try { new ResizeObserver(() => dockNav()).observe(document.body); } catch (e) {}
   if (headline) { setTimeout(() => { runRail(); runBand(); }, 300); }
 

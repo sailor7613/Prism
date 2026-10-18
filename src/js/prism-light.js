@@ -26,6 +26,9 @@
 // Keep the light flat on the glass: put light.group in a group that only
 // follows the prism's x — turn the prism, not the light (a turned ray ten
 // units long swings off the band).
+// In a 3D room: create(THREE, { depthTest: true, fadeEnds: true, ghost: 0.35 })
+// — the rays respect depth, come out of and die into the air, and show
+// faintly through whatever stands in front of them.
 // ============================================================
 (function (root) {
   'use strict';
@@ -43,13 +46,13 @@
   ].join('\n');
 
   const BEAM_FRAG = [
-    'varying vec2 vUv; uniform float uT; uniform float uA;', FILM,
+    'varying vec2 vUv; uniform float uT; uniform float uA; uniform float uFade;', FILM,
     'void main(){',
     '  float u = vUv.x, d = vUv.y - 0.5;',
     '  float core = exp(-d*d / 0.012);',            // the shaft
     '  float halo = exp(-d*d / 0.09) * 0.28;',      // the air around it
     '  float a = (core + halo) * mix(0.42, 1.0, smoothstep(0.0, 1.0, u));',
-    '  a *= smoothstep(0.0, 0.04, u);',
+    '  a *= smoothstep(0.0, 0.04, u) * mix(1.0, smoothstep(0.0, 0.55, u), uFade);',   // in a room the beam comes out of the air
     '  vec3 col = mix(CREAM, film(u * 0.6 - uT * 1.6), 0.035 + 0.06 * halo);',
     '  col = mix(col, vec3(1.0), core * 0.35);',
     '  gl_FragColor = vec4(col, a * uA);',
@@ -67,7 +70,7 @@
 
   // Prism's four colours, softened the way the plane softens them
   const FAN_FRAG = [
-    'varying vec2 vUv; uniform float uT; uniform float uA; uniform float uTilt; uniform float uLen;',
+    'varying vec2 vUv; uniform float uT; uniform float uA; uniform float uTilt; uniform float uLen; uniform float uFade;',
     'uniform vec3 uC0; uniform vec3 uC1; uniform vec3 uC2; uniform vec3 uC3;', FILM,
     'void main(){',
     '  float u = vUv.x, v = vUv.y;',                // u: prism → edge; v: top → bottom
@@ -84,6 +87,7 @@
     '  col = mix(col, f * 0.55 + CREAM * 0.45, 0.08 + 0.26 * tilt);',   // the backside sheen
     '  float a = smoothstep(0.0, 0.2, v) * smoothstep(1.0, 0.8, v);',  // feathered, never cut
     '  a *= smoothstep(0.0, 0.06, uu) * mix(0.92, 0.86, u);',           // dense out to the edge
+    '  a *= mix(1.0, 1.0 - smoothstep(0.45, 1.0, u), uFade);',            // in a room it dies into the air
     '  gl_FragColor = vec4(col, a * uA);',
     '}'].join('\n');
 
@@ -120,8 +124,8 @@
     const col = h => new THREE.Color(h);
     const mat = (frag, extra) => new THREE.ShaderMaterial({
       vertexShader: VERT, fragmentShader: frag,
-      uniforms: Object.assign({ uT: { value: 0 }, uA: { value: opts.alpha != null ? opts.alpha : 1 } }, extra || {}),
-      transparent: true, depthWrite: false, depthTest: false, side: THREE.DoubleSide,
+      uniforms: Object.assign({ uT: { value: 0 }, uA: { value: opts.alpha != null ? opts.alpha : 1 }, uFade: { value: opts.fadeEnds ? 1 : 0 } }, extra || {}),
+      transparent: true, depthWrite: false, depthTest: !!opts.depthTest, side: THREE.DoubleSide,
     });
     const beamM = mat(BEAM_FRAG), innerM = mat(INNER_FRAG);
     const fanM = mat(FAN_FRAG, {
@@ -133,6 +137,17 @@
     [beam, inner, fan].forEach(m => { m.renderOrder = 0; m.frustumCulled = false; });
     inner.renderOrder = 1.5;   // the light inside the glass draws over the glass body (prism = 1, its edges = 2)
     const group = new THREE.Group(); group.add(fan, beam, inner);
+    // opts.ghost (a 3D room): the light is drawn again, quieter, wherever something stands in front of
+    // it (depthFunc Greater) — so it pierces walls and plastic the way the Venus's ghost pierces the columns.
+    // Normal blending by default (a tint that reads on pale plastic); opts.ghostBlend 'add' for dark surroundings.
+    // The ghost shares every uniform with its ray except its own strength.
+    if (opts.ghost) [beam, inner, fan].forEach(m => {
+      const gu = {}; for (const k in m.material.uniforms) gu[k] = m.material.uniforms[k];
+      gu.uA = { value: opts.ghost };
+      const gm = new THREE.ShaderMaterial({ vertexShader: VERT, fragmentShader: m.material.fragmentShader, uniforms: gu,
+        transparent: true, depthWrite: false, depthTest: true, depthFunc: THREE.GreaterDepth, blending: opts.ghostBlend === 'add' ? THREE.AdditiveBlending : THREE.NormalBlending, side: THREE.DoubleSide });
+      const g = new THREE.Mesh(m.geometry, gm); g.renderOrder = 998; g.frustumCulled = false; group.add(g);
+    });
 
     const L = Object.assign({ beamY: -0.02, beamW: opts.beamW || 0.16, exitTop: 0.08, exitBot: -0.13, spread: opts.spread || 0.46, drop: opts.drop != null ? opts.drop : 0.05, z: opts.z != null ? opts.z : -0.05 }, opts.layout || {});
     function layout(o) {
