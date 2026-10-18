@@ -222,13 +222,50 @@
   .osheet .m { font-family: var(--mono); font-size: 10.5px; color: var(--ink-low); line-height: 1.7; }
   .osheet a.lk { display: block; padding: 8px 0; border-top: 1px solid var(--g4-rule-soft); color: var(--ink); text-decoration: none; font-size: 14px; }
   .osheet a.lk small { display: block; font-family: var(--mono); font-size: 10px; color: var(--ink-low); }
+
+  /* ── the dual triptych (10-17 — Spec v06 §3): Beam · Prism · Refraction below; Diatribe · the field · Spectrum above, pulled down */
+  #v-reading.wrap { max-width: 1500px; }
+  .pullbar { display: block; margin: 0 auto 8px; width: 72px; height: 20px; background: none; border: 0; cursor: pointer; padding: 0; }
+  .pullbar span { display: block; height: 4px; border-radius: 2px; background: rgba(233,236,242,.28); margin: 8px 10px; transition: background .2s; }
+  .pullbar:hover span { background: rgba(233,236,242,.5); }
+  html.parallax .pullbar span { background: linear-gradient(90deg, var(--film-0), var(--film-2), var(--film-4)); }
+  .tri { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.55fr) minmax(0, 1fr); gap: 14px; align-items: start; transition: transform .45s cubic-bezier(.2,.8,.2,1); }
+  .tri.upper { display: none; margin-bottom: 14px; }
+  html.parallax .tri.upper { display: grid; margin-left: 5%; animation: drop .4s cubic-bezier(.2,.8,.2,1); }
+  html.parallax .tri.lower { margin-right: 5%; }
+  @keyframes drop { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: none; } }
+  .panel { border: 1px solid var(--g4-rule); border-radius: 4px; background: rgba(6,11,26,.38); padding: 14px 16px; min-width: 0; box-sizing: border-box; }
+  .tri.upper .panel { background: rgba(233,236,242,.035); max-height: 44vh; overflow-y: auto; }
+  .panel > .pt { font-family: var(--mono); font-size: 9.5px; letter-spacing: .24em; text-transform: uppercase; color: var(--ink-low); margin-bottom: 10px; }
+  .panel .graph { grid-template-columns: 1fr; margin-top: 14px; }
+  .panel .caps, .panel .ans { grid-template-columns: 1fr; }
+  .panel[data-p="refr"] .cmp, .panel[data-p="refr"] .trk { margin-top: 10px; }
+  .panel .rail { margin-top: 6px; }
+  .uprow { display: grid; grid-template-columns: 1fr auto; gap: 10px; padding: 7px 0; border-top: 1px solid var(--g4-rule-soft); font-size: 14px; text-decoration: none; color: inherit; }
+  .uprow small { display: block; font-family: var(--mono); font-size: 9.5px; color: var(--ink-low); }
+  .uprow .bar { width: 90px; height: 6px; border-radius: 3px; background: linear-gradient(90deg, var(--band-denominated) 0 16.5%, var(--band-coalition) 16.5% 33.5%, var(--band-fluid) 33.5% 66.5%, var(--band-coalition) 66.5% 83.5%, var(--band-denominated) 83.5%); position: relative; align-self: center; opacity: .8; }
+  .uprow .bar i { position: absolute; top: -3px; width: 2px; height: 12px; background: #fff; }
+  .upmap { width: 100%; max-width: 280px; display: block; margin: 0 auto; }
+  .upnote { font-family: var(--mono); font-size: 10px; color: var(--ink-low); margin-top: 8px; text-align: center; }
+  @media (max-width: 999px) {
+    .tri { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 0; margin: 0 -16px; scrollbar-width: none; overscroll-behavior-x: contain; }
+    .tri::-webkit-scrollbar { display: none; }
+    .tri .panel { flex: 0 0 100%; scroll-snap-align: start; border-radius: 0; border-left: 0; border-right: 0; }
+    html.parallax .tri.upper { display: flex; margin-left: -16px; animation: none; } html.parallax .tri.lower { margin-right: -16px; }
+    .tri.upper { height: 40vh; } .tri.upper .panel { height: 100%; overflow-y: auto; }
+    .tri.lower { align-items: flex-start; transition: height .25s; }
+    .rail .bands { font-size: 7.5px; letter-spacing: .04em; }
+  }
+  /* YOU: a small round glyph in the corner of each page (10-17: the mast buttons went; the navtool moves between views) */
+  .youdot { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; text-decoration: none; color: #0c0b09; font-size: 13px; background: linear-gradient(135deg, var(--film-0), var(--film-2), var(--film-4)); justify-self: end; align-self: start; }
+  #v-you .youdot { display: none; }
 </style>
 </head>
 <body>
 <div class="wrap view on" id="v-objects">
   <div class="mast">
     <canvas id="mark" aria-label="Prism"></canvas>
-    <div class="fn g4-tabs"><a class="g4-pill on" href="#beam" title="the object, before reading">BEAM</a><a class="g4-pill quiet" href="#prism" title="the Reading — set your aperture">PRISM</a><a class="g4-pill quiet" href="#refraction" title="what it splits into">REFRACTION</a><a class="g4-pill quiet youpill" href="#you">YOU</a></div>
+    <a class="youdot" href="#you" title="you">◆</a>
   </div>
   <div class="dek tut">The objects standing — each a law, an order, a ruling, a thing with a date on it — and the discourse moving across them. Pick one; the Reading is what people said, placed against what the thing is.</div>
   <div class="sec" style="margin-top:6px"><span class="g4-key">burns · what the newsroom is watching</span><span class="g4-key" id="burnCount"></span></div>
@@ -243,8 +280,7 @@
 <div class="osheet" id="osheet" hidden><div class="in"><a href="#" class="x" id="oClose">close</a><div id="oBody"></div></div></div>
 
 <div class="wrap view" id="v-refr">
-  <div class="mast"><div><div class="g4-key">Prism</div><h1 class="vt">Your legislators</h1></div>
-    <div class="fn g4-tabs"><a class="g4-pill quiet" href="#">BEAM</a><a class="g4-pill quiet tab-prism" href="#">PRISM</a><a class="g4-pill on" href="#refraction">REFRACTION</a><a class="g4-pill quiet youpill" href="#you">YOU</a></div></div>
+  <div class="mast"><div><div class="g4-key">Prism</div><h1 class="vt">Your legislators</h1></div><a class="youdot" href="#you" title="you">◆</a></div>
   <div class="g4-key" id="refrNote" style="margin:4px 0 10px"></div>
   <div class="mlist" id="refrList"></div>
   <div class="sec"><span class="g4-key">find anyone in Congress</span><span class="g4-key" id="refrCount"></span></div>
@@ -253,75 +289,66 @@
 </div>
 
 <div class="wrap view" id="v-member">
-  <div class="mast"><div><a class="g4-key" href="#refraction" style="color:inherit;text-decoration:none">← your legislators</a></div>
-    <div class="fn g4-tabs"><a class="g4-pill quiet" href="#">BEAM</a><a class="g4-pill quiet tab-prism" href="#">PRISM</a><a class="g4-pill on" href="#refraction">REFRACTION</a><a class="g4-pill quiet youpill" href="#you">YOU</a></div></div>
+  <div class="mast"><div><a class="g4-key" href="#refraction" style="color:inherit;text-decoration:none">← your legislators</a></div><a class="youdot" href="#you" title="you">◆</a></div>
   <div id="mbody"></div>
 </div>
 
 
 <div class="wrap view" id="v-you">
-  <div class="mast"><div><div class="g4-key">Prism</div><h1 class="vt">You</h1></div>
-    <div class="fn g4-tabs"><a class="g4-pill quiet" href="#">BEAM</a><a class="g4-pill quiet tab-prism" href="#">PRISM</a><a class="g4-pill quiet" href="#refraction">REFRACTION</a><a class="g4-pill on youpill" href="#you">YOU</a></div></div>
+  <div class="mast"><div><div class="g4-key">Prism</div><h1 class="vt">You</h1></div><a class="youdot" href="#you" title="you">◆</a></div>
   <div id="youBody"></div>
 </div>
 
 <div class="wrap view" id="v-reading">
   <div class="rd-head">
-    <div><div class="tag" id="rdTag"></div><div class="chip" id="rdChip"></div><h1 id="rdTitle"></h1><div class="g4-key" id="rdCat"></div></div>
-    <div class="fn g4-tabs"><a class="g4-pill on" data-pane="event">BEAM</a><a class="g4-pill quiet" data-pane="diatribe">PRISM</a><a class="g4-pill quiet" data-pane="answers">REFRACTION</a></div>
+    <div><div class="tag" id="rdTag"></div><div class="chip tut" id="rdChip"></div><h1 id="rdTitle"></h1><div class="g4-key" id="rdCat"></div></div>
   </div>
+  <button class="pullbar" id="pull" aria-label="parallax"><span></span></button>
 
-  <section class="pane on" data-pane="event">
-    <div class="prompt" id="rdPrompt"></div>
-    <div class="framing" id="rdFraming"></div>
-    <div class="law" id="rdLaw"></div>
-    <div class="next"><a class="g4-pill" href="#" data-go="diatribe">set your aperture →</a></div>
-  </section>
-
-  <section class="pane" data-pane="diatribe">
-    <div class="g4-key">the diatribe · set your aperture — how hard you'd push this in an argument</div>
-    <div class="rail">
-      <div class="track"><input type="range" id="aperture" min="-100" max="100" value="0"></div>
-      <div class="bands"><span data-b="denominated">denominated<br>bridge burnt</span><span data-b="coalition">coalition<br>winning you over</span><span data-b="fluid">fluid<br>a plain statement</span><span data-b="coalition">coalition<br>winning you over</span><span data-b="denominated">denominated<br>bridge burnt</span></div>
-      <div class="sides"><span class="l">◀ push the left's reading</span><span id="apRead">centre · fluid</span><span class="r">push the right's reading ▶</span></div>
-    </div>
-    <div class="caps"><div class="cap left"><div class="k">the left reads</div><p id="capL"></p></div><div class="cap right"><div class="k">the right reads</div><p id="capR"></p></div></div>
-    <div class="next"><a class="g4-pill quiet" href="#" data-go="event">← the object</a><a class="g4-pill" href="#" data-go="answers">the answers →</a></div>
-  </section>
-
-  <section class="pane" data-pane="answers">
-    <div class="g4-key">four stations, at your aperture · pick the one you'd say</div>
-    <div class="ans" id="ans"></div>
-    <div class="next"><a class="g4-pill quiet" href="#" data-go="diatribe">← the aperture</a><a class="g4-pill" href="#" data-go="graph" id="toGraph">place it on the plane →</a></div>
-  </section>
-
-  <section class="pane" data-pane="graph">
-    <div class="g4-key">the plane · where your answer stands, and what you believe happened</div>
-    <div class="graph">
-      <div id="gmap"></div>
-      <div class="zrail">
-        <div class="k">where you stand</div>
-        <div class="pole" id="standing">tap the plane to place your pin · drag it to move it · drag elsewhere to turn the plane</div>
-        <div class="g4-rule"></div>
-        <div class="k">z · what happened to the object</div>
-        <div class="pole">↑ <b id="zPos"></b></div>
-        <div class="track"><input type="range" id="zIn" min="-100" max="100" value="0"></div>
-        <div class="pole">↓ <b id="zNeg"></b></div>
-        <div class="val" id="zVal">0.0<small>your z</small></div>
-        <div class="picked" id="picked"></div>
-        <div class="picked" id="fieldNote"></div>
-        <div class="cmp" id="cmp"></div>
-        <div class="trk">
-          <div class="g4-key">the legislators · on the plane</div>
-          <input id="trkQ" placeholder="a name, or a state (CA, TX…)" autocomplete="off">
-          <div class="res" id="trkRes"></div>
-          <div id="trkList"></div>
-        </div>
-        <div class="next"><span class="g4-key" id="seatNote" style="align-self:center;margin-right:auto"></span><a class="g4-pill" href="#" id="commit">commit the pin</a></div>
+  <!-- the dual triptych (Spec v06 §3): the upper row is the parallax layer, pulled down over the action layer -->
+  <div class="tri upper" id="triU">
+    <section class="panel" data-p="diatribe"><div class="pt">Diatribe</div><div id="upD"></div></section>
+    <section class="panel" data-p="field"><div class="pt">The field</div><div id="upF"></div></section>
+    <section class="panel" data-p="spectrum"><div class="pt">Spectrum</div><div id="upS"></div></section>
+  </div>
+  <div class="tri lower" id="triL">
+    <section class="panel" data-p="beam"><div class="pt">Beam</div>
+      <div class="prompt" id="rdPrompt"></div>
+      <div class="framing" id="rdFraming"></div>
+      <div class="law" id="rdLaw"></div>
+    </section>
+    <section class="panel" data-p="prism"><div class="pt">Prism</div>
+      <div class="rail">
+        <div class="track"><input type="range" id="aperture" min="-100" max="100" value="0"></div>
+        <div class="bands"><span data-b="denominated">denominated<i class="tut"><br>bridge burnt</i></span><span data-b="coalition">coalition<i class="tut"><br>winning you over</i></span><span data-b="fluid">fluid<i class="tut"><br>a plain statement</i></span><span data-b="coalition">coalition<i class="tut"><br>winning you over</i></span><span data-b="denominated">denominated<i class="tut"><br>bridge burnt</i></span></div>
+        <div class="sides"><span class="l tut">◀ push the left's reading</span><span id="apRead">centre · fluid</span><span class="r tut">push the right's reading ▶</span></div>
       </div>
-    </div>
-    <div class="next"><a class="g4-pill quiet" href="#" data-go="answers">← the answers</a></div>
-  </section>
+      <div class="caps"><div class="cap left"><div class="k">the left reads</div><p id="capL"></p></div><div class="cap right"><div class="k">the right reads</div><p id="capR"></p></div></div>
+      <div class="ans" id="ans"></div>
+      <div class="graph">
+        <div id="gmap"></div>
+        <div class="zrail">
+          <div class="pole" id="standing"></div>
+          <div class="g4-rule"></div>
+          <div class="pole">↑ <b id="zPos"></b></div>
+          <div class="track"><input type="range" id="zIn" min="-100" max="100" value="0"></div>
+          <div class="pole">↓ <b id="zNeg"></b></div>
+          <div class="val" id="zVal">0.0<small>your z</small></div>
+          <div class="picked" id="picked"></div>
+          <div class="next"><span class="g4-key" id="seatNote" style="align-self:center;margin-right:auto"></span><a class="g4-pill" href="#" id="commit">commit the pin</a></div>
+        </div>
+      </div>
+    </section>
+    <section class="panel" data-p="refr"><div class="pt">Refraction</div>
+      <div class="picked" id="fieldNote"></div>
+      <div class="cmp" id="cmp"></div>
+      <div class="trk">
+        <input id="trkQ" placeholder="add a legislator — a name, or a state" autocomplete="off">
+        <div class="res" id="trkRes"></div>
+        <div id="trkList"></div>
+      </div>
+    </section>
+  </div>
 </div>
 
 <div class="g4-sheet" id="seat" style="font-family:var(--serif)">
@@ -344,6 +371,10 @@
 <script src="../data/prism_members.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="../src/js/prism-graphmap.js?v=11"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="../src/js/dg-pierce.js?v=1"></script>
+<script src="../src/js/ted-config.js"></script>
+<script src="../src/js/codex.js?v=1"></script>
 <script>
 (function () {
   'use strict';
@@ -409,15 +440,15 @@
 
   // ── the Reading ──
   // panes in order; the navtool's prism sits where you are on the line
-  const PANES = ['event', 'diatribe', 'answers', 'graph'];
-  const NAVPOS = { event: 0.14, diatribe: 0.5, answers: 0.74, graph: 0.88 };
-  const FNKEY = { event: 'BEAM', diatribe: 'PRISM', answers: 'REFRACTION', graph: 'REFRACTION' };
+  const PANES = ['beam', 'prism', 'refr'];
+  const NAVPOS = { beam: 0.12, prism: 0.5, refr: 0.86 };
+  const FNKEY = { beam: 'BEAM', prism: 'PRISM', refr: 'REFRACTION' };
   const band = d => { const a = Math.abs(d); return a <= 33 ? 'fluid' : a <= 66 ? 'coalition' : 'denominated'; };
   const sideOf = d => d < -2 ? 'left' : d > 2 ? 'right' : null;
   const lit = (text, words) => { let t = text; (words || []).filter(Boolean).sort((a, b) => b.length - a.length).forEach(w => { const re = new RegExp('(' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'i'); t = t.replace(re, '<span class="kw film quick">$1</span>'); }); return t; };
   const QUAD = { A: 'left · institutional', B: 'right · institutional', C: 'left · populist', D: 'right · populist' };
   const zs = z => z == null ? '—' : (z > 0 ? '+' : '') + Number(z).toFixed(1);
-  let R = null, pane = 'event', aperture = 0, pick = null, zUser = 0, g = null, pin = { x: 0.5, y: 0.5 };
+  let dg = null, R = null, pane = 'event', aperture = 0, pick = null, zUser = 0, g = null, pin = { x: 0.5, y: 0.5 };
   const BANDCOL = { fluid: '#54c88a', coalition: '#e89448', denominated: '#e85858' };
   const GMQ = { A: 'B', B: 'A', C: 'C', D: 'D' };   // the graphmap names its quadrants the other way round (v2's GM_QUAD)
   const quadOf = (x, y) => (y < 0.5 ? (x < 0.5 ? 'A' : 'B') : (x < 0.5 ? 'C' : 'D'));   // top = institutional
@@ -426,7 +457,7 @@
     R = SEED.find(r => r.rid === rid); if (!R) { location.hash = ''; return; }
     showView('v-reading');
     const co = R.centralObject || {};
-    $('#rdTag').textContent = `${co.kind || 'object'} · ${co.state || ''} ${fmt(co.stateDate || R.date)} · window closes ${fmt((R.window || {}).close)}${R.status === 'draft' ? ' · draft' : ''}`;
+    $('#rdTag').textContent = `${co.state || co.kind || ''} · ${fmt(co.stateDate || R.date)}`;
     $('#rdChip').innerHTML = `<i></i><span class="k">what it is</span><span>${co.name || ''}</span>`;
     $('#rdTitle').textContent = R.title; $('#rdCat').textContent = R.category || '';
     $('#rdPrompt').textContent = R.prompt || '';
@@ -434,7 +465,7 @@
     $('#rdLaw').innerHTML = (R.tethers || []).map(t => `<div class="g4-row"><div class="n">${t.bill} · ${t.title}<small>${t.statusAsOf || ''}</small></div><div class="d">${t.relation}</div></div>`).join('') || '<div class="g4-key" style="padding:10px 0">no legislative tether declared</div>';
     pick = null; zUser = 0; $('#zIn').value = 0; pin = { x: 0.5, y: 0.5 };
     $('#zPos').textContent = (R.axes && R.axes.z && R.axes.z.pos) || 'delivers'; $('#zNeg').textContent = (R.axes && R.axes.z && R.axes.z.neg) || 'does not';
-    setAperture(aperture); goPane('event');
+    setAperture(aperture); drawGraph(); goPane('beam'); renderUpper();
   }
   function setAperture(v) {
     aperture = +v; const b = band(aperture), side = sideOf(aperture), a = Math.abs(aperture);
@@ -447,26 +478,57 @@
     $('.cap.left').classList.toggle('ghost', side === 'right'); $('.cap.right').classList.toggle('ghost', side === 'left');
     $('.cap.left').classList.toggle('on', side === 'left'); $('.cap.right').classList.toggle('on', side === 'right');
     renderAnswers();
+    if (g && R && pane) drawGraph();
   }
   function renderAnswers() {
     const b = band(aperture), Rs = R.responses || {};
     const side = sideOf(aperture), order = side === 'right' ? ['B', 'D', 'A', 'C'] : ['A', 'C', 'B', 'D'];
     $('#ans').innerHTML = order.map(q => { const r = (Rs[q] || {})[b]; if (!r) return ''; const on = pick && pick.q === q; const away = side && ((side === 'left') !== (q === 'A' || q === 'C'));
       return `<div class="an ${q}${on ? ' on' : ''}" data-q="${q}"${away ? ' style="opacity:.55"' : ''}><div class="k"><span>${QUAD[q]}</span><span>${b}</span></div><p>${lit(r.text || '', [r.xWord, r.yWord].concat(r.words || []))}</p><div class="z ${r.z >= 0 ? 'pos' : 'neg'}">z <b>${zs(r.z)}</b>${r.instrument && r.instrument.holder ? ` · ${r.instrument.trusted ? 'trusts' : 'doesn’t trust'} ${r.instrument.holder}` : ''}</div>${r.zReason ? `<div class="why">${r.zReason}</div>` : ''}</div>`; }).join('');
-    document.querySelectorAll('.an').forEach(el => el.addEventListener('click', () => { const q = el.dataset.q; pick = { q, band: b, r: (Rs[q] || {})[b] }; zUser = pick.r.z != null ? Math.round(pick.r.z * 100) / 100 : 0; $('#zIn').value = Math.round(zUser * 100); const d = Math.abs(aperture) / 100 * 0.9; pin = { x: 0.5 + ({ A: -1, B: 1, C: -1, D: 1 })[q] * 0.5 * d, y: 0.5 + ({ A: -1, B: 1, C: 1, D: -1 })[q] * 0.5 * d * -1 }; document.querySelectorAll('.an').forEach(x => x.classList.toggle('on', x === el)); }));
+    document.querySelectorAll('.an').forEach(el => el.addEventListener('click', () => { const q = el.dataset.q; pick = { q, band: b, r: (Rs[q] || {})[b] }; zUser = pick.r.z != null ? Math.round(pick.r.z * 100) / 100 : 0; $('#zIn').value = Math.round(zUser * 100); const d = Math.abs(aperture) / 100 * 0.9; pin = { x: 0.5 + ({ A: -1, B: 1, C: -1, D: 1 })[q] * 0.5 * d, y: 0.5 + ({ A: -1, B: 1, C: 1, D: -1 })[q] * 0.5 * d * -1 }; document.querySelectorAll('.an').forEach(x => x.classList.toggle('on', x === el)); drawGraph(); }));
   }
-  function goPane(name) {
-    pane = name; document.querySelectorAll('.pane').forEach(p => p.classList.toggle('on', p.dataset.pane === name));
-    document.querySelectorAll('#v-reading .fn .g4-pill').forEach(x => { const on = (x.dataset.pane === name) || (name === 'graph' && x.dataset.pane === 'answers'); x.classList.toggle('on', on); x.classList.toggle('quiet', !on); });
-    tell({ type: 'g4:crumb', name: 'Prism', fn: FNKEY[name], crumb: 'Prism · ' + R.title });
-    tell({ type: 'g4:navpos', t: NAVPOS[name] });
-    if (name === 'graph') drawGraph();
-    window.scrollTo(0, 0);
+  const narrow = () => matchMedia('(max-width: 999px)').matches;
+  function goPane(name, quiet) {
+    pane = PANES.includes(name) ? name : 'beam';
+    if (!quiet) { const el = document.querySelector('#triL .panel[data-p="' + pane + '"]'); if (el) { if (narrow()) $('#triL').scrollTo({ left: el.offsetLeft - $('#triL').offsetLeft, behavior: 'smooth' }); else el.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); } }
+    tell({ type: 'g4:crumb', name: 'Prism', fn: FNKEY[pane], crumb: 'Prism · ' + R.title });
+    tell({ type: 'g4:navpos', t: NAVPOS[pane] });
+    fitRow();
   }
+  function fitRow() { const L = $('#triL'); if (!narrow()) { L.style.height = ''; return; } const el = L.querySelector('.panel[data-p="' + pane + '"]'); if (el) L.style.height = el.offsetHeight + 'px'; }
+  addEventListener('resize', () => { if (R) fitRow(); });
+  // the phone: one panel at a time; the strip's position is the navtool's position, and the two rows move together
+  (function rows() {
+    let t = null;
+    $('#triL').addEventListener('scroll', () => { const L = $('#triL'); if ($('#triU').offsetParent) $('#triU').scrollLeft = L.scrollLeft; clearTimeout(t); t = setTimeout(() => { if (!R || !narrow()) return; const i = Math.round(L.scrollLeft / Math.max(1, L.clientWidth)); if (PANES[i] && PANES[i] !== pane) goPane(PANES[i], true); else fitRow(); }, 120); }, { passive: true });
+    $('#triU').addEventListener('scroll', () => { const U = $('#triU'); if (Math.abs($('#triL').scrollLeft - U.scrollLeft) > 2) $('#triL').scrollLeft = U.scrollLeft; }, { passive: true });
+  })();
+  // the parallax: pull the bar (tap it, or drag down from the title) and the upper triptych drops in
+  function setParallax(on) { document.documentElement.classList.toggle('parallax', on); if (on) { renderUpper(); requestAnimationFrame(() => { $('#triU').scrollLeft = $('#triL').scrollLeft; }); } }
+  $('#pull').addEventListener('click', () => setParallax(!document.documentElement.classList.contains('parallax')));
+  (function pullGesture() { let y0 = null; const h = document.querySelector('#v-reading .rd-head');
+    h.addEventListener('touchstart', e => { y0 = e.touches[0].clientY; }, { passive: true });
+    h.addEventListener('touchmove', e => { if (y0 == null) return; const dy = e.touches[0].clientY - y0; if (dy > 50) { setParallax(true); y0 = null; } else if (dy < -50) { setParallax(false); y0 = null; } }, { passive: true });
+    h.addEventListener('touchend', () => { y0 = null; }); })();
+  function renderUpper() {
+    if (!R || !document.documentElement.classList.contains('parallax')) return;
+    // Diatribe: how hard you've pushed, reading by reading
+    const pins = Object.values(latestPins()).sort((x, y) => (y.at || '').localeCompare(x.at || ''));
+    $('#upD').innerHTML = pins.length ? pins.map(p => { const r = READ_BY_ID[p.rid] || {}; const ap = p.aperture != null ? p.aperture : 0; return `<a class="uprow" href="#reading/${encodeURIComponent(p.rid)}"><span>${(r.centralObject || {}).name || r.title || p.rid}<small>${p.band || band(ap)}${ap ? ' · ' + (ap < 0 ? 'left' : 'right') : ''}</small></span><span class="bar"><i style="left:calc(${(ap + 100) / 2}% - 1px)"></i></span></a>`; }).join('') : '<div class="upnote">Your pins show up here.</div>';
+    // the field: everyone's pins on this reading, and yours
+    const fe = fieldEntries(); const S = 220, X = v => (v * S).toFixed(1);
+    $('#upF').innerHTML = `<svg class="upmap" viewBox="0 0 ${S} ${S}"><rect x=".5" y=".5" width="${S - 1}" height="${S - 1}" fill="rgba(233,236,242,.02)" stroke="rgba(233,236,242,.14)"/><line x1="${S / 2}" y1="0" x2="${S / 2}" y2="${S}" stroke="rgba(233,236,242,.1)"/><line x1="0" y1="${S / 2}" x2="${S}" y2="${S / 2}" stroke="rgba(233,236,242,.1)"/>
+      ${fe.map(en => `<rect x="${(en.x * S - 4).toFixed(1)}" y="${(en.y * S - 4).toFixed(1)}" width="8" height="8" transform="rotate(45 ${X(en.x)} ${X(en.y)})" fill="#f5f0e8" opacity=".8"><title>${PrismField.nameOf(en.author)}</title></rect>`).join('')}
+      <circle cx="${X(pin.x)}" cy="${X(pin.y)}" r="6" fill="none" stroke="#e9ecf2" stroke-width="1.6"/></svg><div class="upnote">${fe.length ? fe.length + ' pinned · ◇ everyone · ○ you' : 'nobody has pinned this yet · ○ you'}</div>`;
+    // Spectrum: who in Congress stands closest to your pin on this reading
+    const ranked = MEMBERS.map(m => ({ m, a: agreeOn(m, pin, R.rid) })).sort((x, y) => y.a.v - x.a.v);
+    $('#upS').innerHTML = ranked.slice(0, 8).map(r => mRow(r.m, r.a)).join('') + '<div class="upnote">closest to your pin, of ' + MEMBERS.length + '</div>';
+  }
+
   function drawGraph() {
     const el = $('#gmap');
     if (!g) {
-      try { g = PrismGraphmap.create({ container: el, mode: 'analytical', capabilities: { orbit: true, zInput: true, zRender: true, diatribeSlider: false, clustering: 'individual' } }); g.mount(el); g.setBoundaryVisible && g.setBoundaryVisible(false); g.setOrbit(0, -40); g.setZoom && g.setZoom(6.8); wirePlane(); } catch (e) { el.innerHTML = '<div class="g4-key" style="padding:20px">the plane could not be drawn here</div>'; return; }
+      try { g = PrismGraphmap.create({ container: el, mode: 'analytical', capabilities: { orbit: true, zInput: true, zRender: true, diatribeSlider: false, clustering: 'individual' } }); g.mount(el); g.setBoundaryVisible && g.setBoundaryVisible(false); g.setOrbit(0, -40); g.setZoom && g.setZoom(6.8); wirePlane(); try { dg = window.DGPierce ? DGPierce.attach(g, { venus: '../dreamgetty/venus_de_milo_aphrodite_of_milos/scene.gltf' }) : null; } catch (e2) { console.warn('[dg]', e2); } } catch (e) { el.innerHTML = '<div class="g4-key" style="padding:20px">the plane could not be drawn here</div>'; return; }
     }
     try { g.clearDots && g.clearDots(); } catch (e) {}
     try { g.setCornerLabels && g.setCornerLabels({ A: 'LI', B: 'RI', C: 'LP', D: 'RP' }); } catch (e) {}
@@ -482,8 +544,9 @@
     drawMembers();
     if (drawGraph._fieldFor !== R.rid) { drawGraph._fieldFor = R.rid; pullField(); }
     drawPad();
+    renderUpper();
     $('#zVal').innerHTML = `${zs(zUser)}<small>your z</small>`;
-    $('#picked').innerHTML = pick ? `<b>${QUAD[pick.q]} · ${pick.band}</b><br>${pick.r.text}` : 'pick an answer on the previous pane, or stand with none and set z alone.';
+    $('#picked').innerHTML = pick ? `<b>${QUAD[pick.q]} · ${pick.band}</b><br>${pick.r.text}` : '';
   }
   // the plane takes the pin directly: a tap places it, a drag on it moves it,
   // a drag anywhere else turns the plane (the graphmap's own orbit)
@@ -506,7 +569,7 @@
   }
   function wirePlane() {
     const cv = g.canvas; if (!cv || cv._g4wired) return; cv._g4wired = true;
-    cv.addEventListener('pointerdown', e => { const h = planeHit(e); if (!h) return; const near = Math.hypot(h.x - pin.x, h.y - pin.y) < 0.09; drag = { x0: e.clientX, y0: e.clientY, onPin: near, moved: false }; if (near) { e.preventDefault(); e.stopImmediatePropagation(); cv.setPointerCapture(e.pointerId); } }, true);
+    cv.addEventListener('pointerdown', e => { const h = planeHit(e); if (!h) return; if (dg) dg.start(); const near = Math.hypot(h.x - pin.x, h.y - pin.y) < 0.09; drag = { x0: e.clientX, y0: e.clientY, onPin: near, moved: false }; if (near) { e.preventDefault(); e.stopImmediatePropagation(); cv.setPointerCapture(e.pointerId); } }, true);
     cv.addEventListener('pointermove', e => { if (!drag) return; if (Math.hypot(e.clientX - drag.x0, e.clientY - drag.y0) > 4) drag.moved = true; if (drag.onPin) { const h = planeHit(e); if (h) { pin = h; drawGraph(); } e.preventDefault(); e.stopImmediatePropagation(); } }, true);
     const end = e => { if (!drag) return; if (!drag.moved) { const h = planeHit(e); if (h) { pin = h; drawGraph(); } } if (drag.onPin) { e.preventDefault(); e.stopImmediatePropagation(); } drag = null; };
     cv.addEventListener('pointerup', end, true); cv.addEventListener('pointercancel', () => { drag = null; }, true);
@@ -579,12 +642,12 @@
     try { if (st) g.addDot(st.x, st.y, GMQ[quadOf(st.x, st.y)], st.z * 0.75, { color: 0x8aa0c8, radius: 0.035, label: 'the stations', meta: { cmp: 'stations' } }); } catch (e) {}
     law.forEach(l => { try { g.addDot(l.x, l.y, GMQ[quadOf(l.x, l.y)], l.z * 0.75, { color: 0xd4aa52, radius: 0.045, shape: 'diamond', label: l.bill, meta: { cmp: 'law' } }); } catch (e) {} });
     const row = (col, shape, name, o, extra) => o ? `<div class="r"><i class="${shape}" style="background:${col}"></i><span><b>${name}</b>${extra ? ' · ' + extra : ''}<br><span class="n">${nums(o)} · <b>${dist(me, o).toFixed(2)}</b> from you</span></span></div>` : '';
-    $('#cmp').innerHTML = `<div class="g4-key" style="margin-bottom:4px">against</div>` +
+    $('#cmp').innerHTML = `` +
       row('#f5f0e8', '', 'the field', field, field ? field.n + ' burn' + (field.n === 1 ? '' : 's') : '') +
       (device && device.n > 1 ? row('#b9b4a8', '', 'the aggregate', device, device.n + ' pins on this device, seeded and yours') : '') +
       row('#8aa0c8', '', 'the stations', st, st ? st.n + ' at ' + b : '') +
       law.map(l => row('#d4aa52', 'd', l.bill, l, l.relation)).join('') +
-      (!field && !law.length ? `<div class="r"><i></i><span class="n">nobody in the field yet, and no law placed on this Reading</span></div>` : '');
+      (false ? '' : '');
   }
   // ── the legislators: the Reading's derived positions, plus the ones you follow ──
   const MEMBERS = Array.isArray(window.PRISM_MEMBERS_DATA) ? window.PRISM_MEMBERS_DATA : [];
@@ -610,7 +673,7 @@
       rows.push({ m, pl, derived: !!dp, followed: isF });
     });
     try { g.setMemberPinsVisible && g.setMemberPinsVisible(true); } catch (e) {}
-    $('#trkList').innerHTML = rows.map(r => `<div class="m"><i class="${(r.m.party || 'I').toUpperCase()}"></i><span><b>${r.m.name}</b> <small>${r.m.meta || ''} · ${r.derived ? 'placed on this Reading' : r.pl.method} · z ${zs(r.pl.z)}</small></span>${r.followed ? `<span class="x" data-unfollow="${r.m.bioguideId}">unfollow</span>` : '<span class="x">derived</span>'}</div>`).join('') || `<div class="m"><i></i><span class="g4-key">follow a legislator to place them on the plane</span><span></span></div>`;
+    $('#trkList').innerHTML = rows.map(r => `<div class="m"><i class="${(r.m.party || 'I').toUpperCase()}"></i><span><b>${r.m.name}</b> <small>${r.m.meta || ''} · ${r.derived ? 'placed on this Reading' : r.pl.method} · z ${zs(r.pl.z)}</small></span>${r.followed ? `<span class="x" data-unfollow="${r.m.bioguideId}">unfollow</span>` : '<span class="x">derived</span>'}</div>`).join('') || '';
     $('#trkList').querySelectorAll('[data-unfollow]').forEach(x => x.addEventListener('click', () => toggleFollow(x.dataset.unfollow)));
   }
   (function trackerSearch() {
@@ -626,7 +689,7 @@
   // the field: everyone's burns on this Reading, as diamonds on the plane
   function fieldEntries() { try { return PrismField.latestByResident ? PrismField.latestByResident(R.rid) : PrismField.field(R.rid); } catch (e) { return []; } }
   function drawFieldDots() { fieldEntries().forEach(en => { try { g.addDot(en.x, en.y, GMQ[en.quad] || 'C', (en.z || 0) * 0.75, { color: 0xf5f0e8, radius: 0.03, shape: 'diamond', label: PrismField.nameOf(en.author), meta: { burn: en.id } }); } catch (e) {} }); }
-  async function pullField() { try { await PrismField.pullField(R.rid); } catch (e) {} const n = fieldEntries(); $('#fieldNote').innerHTML = n.length ? `${n.length} in the field: ${n.slice(0, 6).map(en => PrismField.nameOf(en.author)).join(' · ')}${n.length > 6 ? ' …' : ''}` : 'nobody has pinned this Reading yet.'; drawGraph(); }
+  async function pullField() { try { await PrismField.pullField(R.rid); } catch (e) {} const n = fieldEntries(); $('#fieldNote').innerHTML = n.length ? `${n.length} in the field: ${n.slice(0, 6).map(en => PrismField.nameOf(en.author)).join(' · ')}${n.length > 6 ? ' …' : ''}` : 'nobody has pinned this yet.'; drawGraph(); }
   seatNote();
 
 
@@ -808,8 +871,29 @@
   function showView(id) { document.querySelectorAll('.view').forEach(v => v.classList.toggle('on', v.id === id)); window.scrollTo(0, 0); }
   document.querySelectorAll('.tab-prism').forEach(a => { a.href = headline ? '#reading/' + encodeURIComponent(headline.rid) : '#'; });
 
+
+  // ── the Codex (10-17): one shared glossary + Ted; each view says which words it uses and what's on screen ──
+  if (window.Codex) Codex.init({ codexUrl: '../data/codex.json' });
+  const stripTags = t => String(t || '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+  function codexFor(v, id) {
+    if (!window.Codex) return;
+    if (v === 'v-reading' && R) {
+      const co = R.centralObject || {};
+      Codex.setContext({ page: 'Prism · a reading', terms: ['object', 'reading', 'dial', 'z', 'sides', 'graphmap', 'pin', 'field', 'legislators'], context: () => {
+        const D = R.diatribe || {}; const ax = R.axes || {};
+        return [`Reading: ${R.title}`, `What it is about: ${co.name || ''} (${co.kind || ''}, ${co.state || ''} ${co.stateDate || ''})`, `The question: ${R.prompt || ''}`, `The story: ${stripTags(R.framing).slice(0, 900)}`,
+          `z on this reading: up = ${(ax.z && ax.z.pos) || 'delivers'}, down = ${(ax.z && ax.z.neg) || 'does not'}`,
+          `The person's dial: ${band(aperture)}${sideOf(aperture) ? ', leaning ' + sideOf(aperture) : ', centre'} (${aperture})`,
+          `Their pin: ${SIDE[quadOf(pin.x, pin.y)] || ''}, z ${zs(zUser)}${pick ? `; they picked the ${QUAD[pick.q]} answer: "${stripTags(pick.r.text).slice(0, 240)}"` : ''}`].join('\n'); } });
+    } else if (v === 'v-refr') Codex.setContext({ page: 'Prism · your legislators', terms: ['legislators', 'sides', 'pin'], context: () => 'Following: ' + followed().map(id => (MEMBERS.find(m => m.bioguideId === id) || {}).name).filter(Boolean).join(', ') });
+    else if (v === 'v-member') { const m = MEMBERS.find(x => x.bioguideId === id) || {}; Codex.setContext({ page: 'Prism · a member of Congress', terms: ['legislators', 'sides'], context: () => { const a = agreement(m); return `${m.name} — ${plainMeta(m)}. Bills written ${m.sponsorCount}, signed onto ${m.cosponsorCount}. Lines up with the person: ${a ? a.v : 'no pins yet'}.`; } }); }
+    else if (v === 'v-you') Codex.setContext({ page: 'Prism · you', terms: ['pin', 'field', 'reading'], context: '' });
+    else Codex.setContext({ page: 'Prism · everything on the table', terms: ['object', 'reading', 'burns', 'g4'], context: () => 'Readings open: ' + sorted.map(r => (r.centralObject || {}).name || r.title).join('; ') });
+  }
+
   // ── routing ──
-  function route() {
+  function route() { routeInner(); try { codexFor((document.querySelector('.view.on') || {}).id, (location.hash.split('/')[1] || '')); } catch (e) {} }
+  function routeInner() {
     const h = location.hash.replace(/^#/, ''); const [head, id] = h.split('/');
     if (head === 'reading' && id) { showReading(decodeURIComponent(id)); return; }
     if (head === 'you') { showView('v-you'); renderYou(); tell({ type: 'g4:crumb', name: 'Prism', fn: 'YOU', crumb: 'Prism · you' }); return; }
@@ -823,10 +907,16 @@
 
   // ── the navtool's words from the shell ──
   addEventListener('message', e => { const m = e.data || {}; if (m.type !== 'g4:nav') return;
-    if (R) { const i = PANES.indexOf(pane); if (m.dir === 'up') location.hash = ''; else if (m.dir === 'forward' && i < PANES.length - 1) goPane(PANES[i + 1]); else if (m.dir === 'back' && i > 0) goPane(PANES[i - 1]); }
-    else { const ids = sorted.map(r => r.rid); if (m.dir === 'up') tell({ type: 'g4:desk' }); else if (m.dir === 'forward' && ids.length) location.hash = '#reading/' + ids[0]; }
+    const v = (document.querySelector('.view.on') || {}).id, today = headline ? '#reading/' + encodeURIComponent(headline.rid) : '';
+    if (v === 'v-reading') { const i = PANES.indexOf(pane);
+      if (m.dir === 'up') location.hash = '';
+      else if (m.dir === 'forward') { if (i < PANES.length - 1) goPane(PANES[i + 1]); else location.hash = '#refraction'; }
+      else if (m.dir === 'back') { if (i > 0) goPane(PANES[i - 1]); else location.hash = ''; } }
+    else if (v === 'v-refr') { if (m.dir === 'back') location.hash = today; else if (m.dir === 'up') location.hash = ''; else if (m.dir === 'forward') location.hash = '#you'; }
+    else if (v === 'v-member') { if (m.dir === 'up' || m.dir === 'back') location.hash = '#refraction'; }
+    else if (v === 'v-you') { if (m.dir === 'back') location.hash = '#refraction'; else if (m.dir === 'up') location.hash = ''; }
+    else { if (m.dir === 'up') tell({ type: 'g4:desk' }); else if (m.dir === 'forward' && today) location.hash = today; }
   });
-  document.querySelectorAll('#v-objects .fn .g4-pill').forEach(p => p.addEventListener('click', e => { e.preventDefault(); const k = p.getAttribute('href').slice(1); tell({ type: 'g4:navpos', t: k === 'beam' ? 0.12 : k === 'prism' ? 0.5 : 0.86 }); if (k === 'refraction') location.hash = '#refraction'; else if (k === 'you') location.hash = '#you'; else if (k === 'prism' && headline) location.hash = '#reading/' + encodeURIComponent(headline.rid); }));
 })();
 </script>
 </body>

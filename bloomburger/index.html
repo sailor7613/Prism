@@ -532,6 +532,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="../src/js/prism-graphmap.js?v=11"></script>
 <script src="../src/js/tracker-core.js?v=1"></script>
+<script src="../src/js/ted-config.js"></script>
+<script src="../src/js/codex.js?v=1"></script>
 <script>
 (function () {
   'use strict';
@@ -640,7 +642,7 @@
   })();
 
   // ── the Codex as a sheet ──
-  function openCodex(w) { const e = PIECE_CODEX[w] || CODEX[w] || CODEX.object; $('#cxWord').textContent = e[0]; $('#cxBody').textContent = e[1]; $('#codex').classList.add('open'); $('#cxWord').classList.remove('film'); void $('#cxWord').offsetWidth; $('#cxWord').classList.add('film'); }
+  function openCodex(w) { if (window.Codex && Codex.lookup(w)) { Codex.open(w); if (location.hash.indexOf('#codex') === 0) history.replaceState(null, '', '#' + (state.program || 'pg')); return; } const e = PIECE_CODEX[w] || CODEX[w] || CODEX.object; $('#cxWord').textContent = e[0]; $('#cxBody').textContent = e[1]; $('#codex').classList.add('open'); $('#cxWord').classList.remove('film'); void $('#cxWord').offsetWidth; $('#cxWord').classList.add('film'); }
   function closeCodex() { $('#codex').classList.remove('open'); }
   $('#codexClose').addEventListener('click', e => { e.preventDefault(); history.back(); });
   document.addEventListener('click', e => { const w = e.target.closest('.word'); if (w) { e.preventDefault(); location.hash = '#codex/' + w.dataset.w; } });
@@ -1183,7 +1185,23 @@
       ${S.route ? `<div class="sweep-note">route · ${esc(S.route)}</div>` : ''}`;
   }
 
-  loadFront().then(route);
+
+  // ── the Codex plug-in (10-17): shared entries + Ted; each view says which words it uses and what's on screen ──
+  if (window.Codex) Codex.init({ codexUrl: '../data/codex.json' });
+  function codexFor() {
+    if (!window.Codex) return;
+    const h = location.hash.replace(/^#/, '') || 'pg', [head, id] = h.split('/');
+    if (head === 'pg' && id) {
+      const p = paperIndex.find(x => x.id === id) || {}, D = paperFull[id] || {}, sb = D.scoreboard || {};
+      Codex.setContext({ page: 'BloomBurger · a segment', terms: ['parallelogram', 'heat', 'says', 'clarity', 'sides'], context: () => `Segment: ${p.program || ''}, ${p.date || ''} — "${(D.source || {}).title || p.title || ''}". What it said: ${(PLAIN.pieces[id] || {}).said || ''}. Heat ${sb.dia}, Says ${saysWord(id, sb.readZ)}, Clarity ${sb.lumens}. Side: ${Object.keys(sb.stations || {}).filter(k => sb.stations[k]).map(stName).join(' + ')}.` });
+    } else if (head === 'pg') {
+      Codex.setContext({ page: 'BloomBurger · front page', terms: ['sst', 'parallelogram', 'heat', 'says', 'clarity', 'sides'], context: () => { const T = sstData && sstData.T; return (T ? `Supply Shock Tracker: ${(T.now.dollarShare * 100).toFixed(1)}% of traded energy settled in dollars (${T.now.period}), ${T.delta < 0 ? 'down' : 'up'} ${Math.abs(T.delta * 100).toFixed(1)} points since ${T.ago.period}.` : '') + ' Latest segments: ' + paperIndex.slice(0, 5).map(p => `${p.program} (${p.date}): ${(PLAIN.pieces[p.id] || {}).said || p.title}`).join(' | '); } });
+    } else if (head === 'sst') Codex.setContext({ page: 'BloomBurger · Supply Shock Tracker', terms: ['sst'], context: () => { const T = sstData && sstData.T; return T ? `${(T.now.dollarShare * 100).toFixed(1)}% in dollars (${T.now.period}); ${(T.ago.dollarShare * 100).toFixed(1)}% in ${T.ago.period}.` : ''; } });
+    else Codex.setContext({ page: 'BloomBurger · ' + head, terms: ['parallelogram', 'clarity', 'heat', 'bloomburger'], context: '' });
+  }
+  addEventListener('hashchange', () => setTimeout(codexFor, 0));
+
+  loadFront().then(route).then(codexFor);
 })();
 </script>
 </body>

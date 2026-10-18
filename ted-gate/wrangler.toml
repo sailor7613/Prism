@@ -1,0 +1,10 @@
+name = "ted-gate"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+
+# NO SECRETS IN THIS FILE. ANTHROPIC_API_KEY is set with `wrangler secret put`
+# by "Deploy Ted Gate.command". The KV id names the bin that counts questions per
+# day (the limits); it is not a secret.
+[[kv_namespaces]]
+binding = "TED"
+id = "REPLACE_WITH_KV_ID"

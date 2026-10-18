@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en" class="g4">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>BloomBurger · g4</title>
+<!-- ======================================================================
+     BLOOMBURGER — the terminal (2026-10-14 · Claude draft, overnight, for
+     Sailor's eye). Spec: Specs/G4_OS_and_the_Two_Modes_v2.md.
+
+     One program on the g4 desk with two faces of one body: the PAPER
+     (what Prism publishes — the Parallelogram, the Tracker's reading) and
+     the WIRE (what Prism collects). It opens on the paper. Functions are
+     keyed the way a terminal's are:   PG · SST · WIRE.
+
+     Routes (hash, so the navtool's back/forward is a real history):
+       #desk          the g4 desktop (three programs)
+       #pg            the paper — parallelograms, newest first
+       #pg/<id>       a piece, on the real graphmap
+       #sst           the Supply Shock Tracker's reading (the globe is in the villa)
+       #wire          the record — registers and series with their as-of dates
+       #codex/<word>  the Codex as a sheet over whatever you were reading
+
+     The bar is the Prism navtool: drag-and-snap = back/forward in the
+     layer you are in; hold = up a layer; the badge = the pull.
+     Serve from the workspace root (Serve the Workspace.command):
+       /Prism/bloomburger/
+     ====================================================================== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../src/css/prism-grammar.css?v=2">
+<link rel="stylesheet" href="../src/css/g4-os.css?v=1">
+<style>
+  * { box-sizing: border-box; }
+  html.embedded .g4-bar, html.embedded .g4-sky { display: none; }   /* inside the shell, the shell owns the bar and the sky */
+  html.embedded .g4-under-bar { padding-top: 52px; }   /* the navtool lies in the band above */
+  html.embedded .stage { top: 48px; }
+  html.embedded .g4-sheet { top: 0; }
+  body { margin: 0; min-height: 100vh; font-family: var(--serif); color: var(--ink); overflow-x: hidden; }
+  .view { display: none; } .view.on { display: block; }
+  .wrap { position: relative; z-index: 1; max-width: 1180px; margin: 0 auto; padding: 0 16px 80px; }
+  a { color: inherit; }
+
+  /* ── the paper's masthead */
+  .mast { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 16px; padding: 18px 0 10px; }
+  .mast h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(26px, 4vw, 40px); margin: 0; letter-spacing: .01em; line-height: 1; }
+  .mast h1 small { font-family: var(--mono); font-size: 10px; letter-spacing: .24em; text-transform: uppercase; color: var(--ink-low); display: block; margin-bottom: 8px; }
+  .mast .fn { display: flex; gap: 6px; }
+  .mast .fn .g4-pill { font-family: var(--mono); letter-spacing: .14em; font-size: 10px; }
+  .dek { font-style: italic; color: var(--ink-mid); font-size: 14px; max-width: 70ch; margin: 2px 0 18px; }
+
+  /* ── the front page */
+  .front { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+  .card { display: grid; grid-template-columns: 96px 1fr; gap: 14px; padding: 14px; text-decoration: none; border: 1px solid var(--g4-rule); background: var(--g4-glass); transition: border-color .2s, background .2s; border-radius: 4px; }
+  .card:hover { border-color: rgba(233,236,242,.4); background: rgba(233,236,242,.07); }
+  .card .fig { width: 96px; height: 96px; }
+  .card .k { font-family: var(--mono); font-size: 9.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-low); }
+  .card .t { font-size: 18px; line-height: 1.15; margin: 4px 0 6px; }
+  .card .s { font-family: var(--mono); font-size: 10.5px; color: var(--ink-mid); display: flex; flex-wrap: wrap; gap: 4px 10px; }
+  .card .s b { font-weight: 400; color: var(--ink); }
+  .card.lead { grid-column: 1 / -1; grid-template-columns: 160px 1fr; }
+  .card.lead .fig { width: 160px; height: 160px; }
+  .card.lead .t { font-size: 26px; }
+  .empty { color: var(--ink-low); font-style: italic; padding: 30px 0; }
+  /* ── the floor: the rolling RI baseline every parallelogram is read against */
+  .floor { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; margin: -6px 0 16px; padding: 10px 14px; border: 1px solid var(--g4-rule-soft); border-left: 2px solid rgb(56,104,168); background: rgba(6,11,26,.45); border-radius: 3px; font-family: var(--mono); font-size: 10.5px; color: var(--ink-mid); }
+  .floor .k { font-size: 9.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-low); }
+  .floor b { font-weight: 400; color: var(--ink); font-family: var(--serif); font-size: 20px; line-height: 1; }
+  .floor .RIc { color: rgb(56,104,168); }
+  .card.baseline { border-left: 2px solid rgb(56,104,168); }
+  /* ── the roster */
+  .roster { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+  .corner { border: 1px solid var(--g4-rule); background: var(--g4-glass); border-radius: 4px; padding: 12px 14px; }
+  .corner .h { display: flex; justify-content: space-between; align-items: baseline; font-family: var(--mono); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; margin-bottom: 8px; }
+  .corner .h b { font-family: var(--serif); font-size: 22px; letter-spacing: 0; text-transform: none; }
+  .corner .h small { color: var(--ink-low); }
+  .src { display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; padding: 7px 0; border-top: 1px solid var(--g4-rule-soft); }
+  .src .n { font-size: 14px; } .src .n small { font-family: var(--mono); font-size: 9.5px; color: var(--ink-low); margin-left: 6px; letter-spacing: .1em; }
+  .src .m { font-family: var(--mono); font-size: 10px; color: var(--ink-mid); grid-column: 1 / -1; }
+  .src .st { font-family: var(--mono); font-size: 9.5px; letter-spacing: .12em; text-transform: uppercase; }
+  .src .st.read { color: rgb(58,138,82); } .src .st.stale { color: rgb(184,120,40); } .src .st.never { color: var(--ink-low); } .src .st.proposed { color: var(--ink-low); font-style: italic; }
+  .corner.thin { border-color: rgba(184,120,40,.45); }
+  .card .k .base { color: rgb(56,104,168); letter-spacing: .2em; }
+  .card .s .vs { color: var(--ink-low); }
+  /* ── the sweep: what the index baskets caught today */
+  .sweep-days { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 14px; }
+  .sweep-days a { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; padding: 4px 10px; border: 1px solid var(--g4-rule-soft); border-radius: 999px; color: var(--ink-mid); text-decoration: none; }
+  .sweep-days a.on { border-color: #e8d9a8; color: var(--ink); }
+  .pubs { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-bottom: 18px; }
+  .pub { border: 1px solid var(--g4-rule); background: var(--g4-glass); border-radius: 4px; padding: 10px 12px; }
+  .pub .h { display: flex; justify-content: space-between; align-items: baseline; font-family: var(--mono); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; }
+  .pub .h b { font-family: var(--serif); font-size: 17px; letter-spacing: 0; text-transform: none; }
+  .pub .nums { display: flex; gap: 18px; margin: 8px 0 4px; font-family: var(--mono); font-size: 10px; color: var(--ink-low); letter-spacing: .14em; text-transform: uppercase; }
+  .pub .nums b { display: block; font-family: var(--serif); font-size: 24px; color: var(--ink); letter-spacing: 0; text-transform: none; line-height: 1.1; }
+  .pub .m { font-family: var(--mono); font-size: 10px; color: var(--ink-mid); line-height: 1.45; }
+  .pub.dead { border-color: rgba(184,120,40,.45); }
+  .queue { border-top: 1px solid var(--g4-rule); }
+  .qi { display: grid; grid-template-columns: 54px 1fr 220px; gap: 4px 14px; padding: 10px 0; border-bottom: 1px solid var(--g4-rule-soft); }
+  .qi .st { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; padding-top: 4px; }
+  .qi .t { font-size: 15px; line-height: 1.3; } .qi .t a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--g4-rule-soft); }
+  .qi .d { font-size: 12.5px; color: var(--ink-mid); line-height: 1.4; margin-top: 2px; }
+  .qi .m { font-family: var(--mono); font-size: 10px; color: var(--ink-low); margin-top: 4px; }
+  .qi .m i { color: #e8d9a8; font-style: normal; }
+  .qi .sort { font-family: var(--mono); font-size: 10px; line-height: 1.45; color: var(--ink-mid); }
+  .qi .sort .cut { color: rgb(58,138,82); } .qi .sort .cut a { color: inherit; } .qi .sort .q { color: var(--ink-low); }
+  .sweep-note { font-family: var(--mono); font-size: 10.5px; color: var(--ink-mid); border-left: 2px solid #e8d9a8; padding: 8px 12px; margin: 14px 0 0; line-height: 1.5; }
+  /* ── objects on this tape (the objects pass) */
+  .seen { margin: 18px 0 0; border-top: 1px solid var(--g4-rule-soft); padding-top: 12px; }
+  .seen .k { font-family: var(--mono); font-size: 9.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-low); margin-bottom: 8px; }
+  .seen ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+  .seen li { display: grid; grid-template-columns: 92px 1fr; gap: 10px; font-size: 13px; line-height: 1.35; }
+  .seen li .ds { font-family: var(--mono); font-size: 9.5px; letter-spacing: .12em; text-transform: uppercase; color: rgb(56,104,168); padding-top: 3px; }
+  .seen li .ds.cand { color: var(--ink-low); }
+  .seen li .m { font-family: var(--mono); font-size: 10px; color: var(--ink-low); }
+
+  /* ── the piece */
+  .tile { padding: 10px 12px; border: 1px solid var(--g4-rule-soft); background: rgba(6,11,26,.5); border-radius: 3px; }
+  .tile .l { font-family: var(--mono); font-size: 9.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-low); }
+  .tile .v { font-size: 26px; margin-top: 4px; line-height: 1; font-family: var(--serif); }
+  .tile .v small { font-family: var(--mono); font-size: 11px; color: var(--ink-low); margin-left: 4px; }
+  .tile .s { font-family: var(--mono); font-size: 10px; color: var(--ink-mid); margin-top: 5px; }
+  .LIc { color: rgb(184,58,58) } .RIc { color: rgb(56,104,168) } .LPc { color: rgb(58,138,82) } .RPc { color: rgb(184,120,40) } .Oc { color: #e8d9a8 }
+  .piece .split { display: grid; grid-template-columns: minmax(380px, 1fr) minmax(340px, 480px); gap: 22px; align-items: start; }
+  .tapewin { max-height: calc(100vh - var(--bar-h) - 34px - 40px); overflow: auto; padding-right: 6px; border-top: 1px solid var(--g4-rule-soft); border-bottom: 1px solid var(--g4-rule-soft); scroll-padding: 40%; }
+  @media (max-width: 880px) { .tapewin { max-height: none; overflow: visible; border: 0; } }
+  .stage { position: sticky; top: calc(var(--bar-h) + 8px); }
+  #map { width: 100%; aspect-ratio: 1 / 0.9; background: radial-gradient(ellipse at center, rgba(32,64,160,.16) 0%, transparent 70%); border: 1px solid var(--g4-rule); position: relative; overflow: hidden; border-radius: 3px; }
+  #map canvas { display: block; width: 100% !important; height: 100% !important; }
+  .readout { padding: 10px 12px; font-size: 12.5px; color: var(--ink-mid); min-height: 86px; border: 1px solid var(--g4-rule); border-top: 0; background: rgba(6,11,26,.55); }
+  .readout b { color: var(--ink); font-weight: 400; } .readout .q { font-style: italic; color: var(--ink); }
+  .scrub { padding: 10px 12px; border: 1px solid var(--g4-rule); border-top: 0; background: rgba(6,11,26,.55); font-family: var(--mono); font-size: 10px; color: var(--ink-mid); }
+  .scrub input[type=range] { width: 100%; -webkit-appearance: none; appearance: none; height: 2px; background: var(--g4-rule); outline: none; cursor: pointer; margin: 8px 0; }
+  .scrub input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 14px; height: 14px; border-radius: 50%; background: linear-gradient(#f7f8fb, #c9cfdb); border: 1px solid rgba(0,0,0,.5); }
+  .scrub .t { text-align: center; letter-spacing: .14em; } .scrub .t span { color: var(--ink); }
+  .scrub .row { display: flex; gap: 8px; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+  .legend { display: flex; flex-wrap: wrap; gap: 6px 12px; padding-top: 8px; }
+  .legend i { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 5px; vertical-align: 0; }
+  .tape h2 { font-family: var(--mono); font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-low); font-weight: 400; margin: 22px 0 8px; padding-top: 10px; border-top: 1px solid var(--g4-rule-soft); }
+  .tape h2:first-child { margin-top: 0; border-top: 0; padding-top: 0; }
+  .line { padding: 10px 12px; margin: 6px 0; border: 1px solid var(--g4-rule-soft); background: rgba(6,11,26,.35); transition: border-color .25s, background .25s; cursor: pointer; border-radius: 3px; }
+  .line.active { border-color: rgba(233,236,242,.35); background: rgba(233,236,242,.05); }
+  .line .meta { display: flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 10px; color: var(--ink-mid); letter-spacing: .06em; }
+  .line .ts { color: var(--ink-low); font-variant-numeric: tabular-nums; }
+  .chip { display: inline-block; padding: 0 6px; border-radius: 9px; font-size: 9.5px; letter-spacing: .08em; color: #fff; line-height: 16px; }
+  .chip.LI{background:rgb(184,58,58)} .chip.RI{background:rgb(56,104,168)} .chip.LP{background:rgb(58,138,82)} .chip.RP{background:rgb(184,120,40)} .chip.O{background:#e8d9a8;color:#0c0b09}
+  .line q { display: block; font-size: 15px; margin: 6px 0 5px; quotes: "“" "”"; } .line q::before, .line q::after { color: var(--ink-low); }
+  .line .hi { color: var(--ink); }
+  .scores { display: flex; flex-wrap: wrap; gap: 4px 10px; font-family: var(--mono); font-size: 10.5px; color: var(--ink-mid); } .scores b { color: var(--ink); font-weight: 400; }
+  .scores .z.pos { color: var(--band-fluid) } .scores .z.neg { color: var(--band-denominated) }
+  .scores .touch { border: 1px solid var(--g4-rule); padding: 0 5px; border-radius: 3px; }
+  .note { font-size: 12px; color: var(--ink-mid); margin-top: 5px; font-style: italic; }
+  .piece .prose { font-size: 15.5px; line-height: 1.55; max-width: 66ch; }
+  .piece .prose p { margin: 0 0 1em; }
+  .foot { font-family: var(--mono); font-size: 10px; color: var(--ink-low); line-height: 1.7; margin-top: 30px; }
+  @media (max-width: 880px) {
+    .piece .split { grid-template-columns: 1fr; }
+    .stage { position: sticky; top: var(--bar-h-phone); z-index: 5; background: var(--g4-field); }
+    .readout, .legend { display: none; } #map { aspect-ratio: 1 / 0.72; }
+    .card.lead { grid-template-columns: 96px 1fr; } .card.lead .fig { width: 96px; height: 96px; } .card.lead .t { font-size: 20px; }
+  }
+
+
+  /* ── section headers: eyebrow · title · one plain line · a ruled ornament (Sailor 10-16: "people get what's happening") */
+  .sec { display: grid; grid-template-columns: 1fr; gap: 5px; margin: 22px 0 12px; }
+  .sec .eb { grid-column: 1 / -1; font-family: var(--mono); font-size: 9.5px; letter-spacing: .24em; text-transform: uppercase; color: var(--ink-low); }
+  .sec h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(20px, 2.6vw, 26px); margin: 0; line-height: 1; letter-spacing: .005em; }
+  .sec .gloss { font-style: italic; color: var(--ink-mid); font-size: 13px; max-width: 72ch; line-height: 1.45; }
+  .sec::after { content: ''; height: 1px; background: linear-gradient(90deg, rgba(233,236,242,.42), rgba(233,236,242,.08) 60%, transparent); margin-top: 6px; }
+  .sec .orn { display: inline-block; width: 10px; height: 10px; border: 1px solid rgba(233,236,242,.5); transform: rotate(45deg); margin-right: 8px; vertical-align: 1px; }
+  .sec.first { margin-top: 6px; }
+  .roster .sec, .media .sec { grid-column: 1 / -1; }
+  /* ── the media we track: one tile per publication, refreshed by every sweep */
+  .media { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .media .ch { grid-column: 1 / -1; display: flex; align-items: baseline; gap: 10px; font-family: var(--mono); font-size: 9.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-low); margin: 8px 0 -2px; }
+  .media .ch b { font-family: var(--serif); font-size: 15px; letter-spacing: 0; text-transform: none; }
+  .media .ch i { flex: 1; height: 1px; background: var(--g4-rule-soft); }
+  .mtile { display: block; text-decoration: none; color: inherit; border: 1px solid var(--g4-rule); background: var(--g4-glass); border-radius: 4px; padding: 11px 12px 10px; border-top: 2px solid var(--c, var(--g4-rule)); transition: border-color .2s, background .2s; position: relative; min-height: 118px; }
+  .mtile:hover { background: rgba(233,236,242,.07); border-color: rgba(233,236,242,.4); border-top-color: var(--c); }
+  .mtile .n { font-size: 16px; line-height: 1.15; margin-bottom: 2px; padding-right: 34px; }
+  .mtile .st { font-family: var(--mono); font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-low); }
+  .mtile .st.proposed { font-style: italic; }
+  .mtile .nums { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; margin: 9px 0 6px; }
+  .mtile .nums span { font-family: var(--mono); font-size: 8.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-low); }
+  .mtile .nums b { display: block; font-family: var(--serif); font-weight: 400; font-size: 22px; line-height: 1; color: var(--ink); letter-spacing: 0; text-transform: none; margin-top: 2px; }
+  .mtile .nums b small { font-family: var(--mono); font-size: 9px; color: var(--ink-low); margin-left: 3px; }
+  .mtile .nums b.dim { color: var(--ink-low); }
+  .mtile .m { font-family: var(--mono); font-size: 9.5px; color: var(--ink-mid); line-height: 1.5; }
+  .mtile .m .ok { color: rgb(58,138,82); } .mtile .m .stale { color: rgb(184,120,40); } .mtile .m .never { color: var(--ink-low); }
+  .mtile .sun { position: absolute; top: 9px; right: 10px; width: 22px; height: 22px; }
+  .mtile.beta .nums b.lum::after { content: 'β'; font-family: var(--mono); font-size: 9px; color: #e8d9a8; margin-left: 3px; vertical-align: top; }
+  /* ── a publication's page */
+  .pub .board { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; margin: 0 0 6px; }
+  .pub .rows { border-top: 1px solid var(--g4-rule); }
+  .pub .row { display: grid; grid-template-columns: 92px 1fr auto; gap: 4px 14px; padding: 9px 0; border-bottom: 1px solid var(--g4-rule-soft); align-items: baseline; text-decoration: none; color: inherit; }
+  .pub .row:hover .t { color: #fff; }
+  .pub .row .d { font-family: var(--mono); font-size: 10px; color: var(--ink-low); letter-spacing: .06em; }
+  .pub .row .t { font-size: 15px; line-height: 1.3; } .pub .row .t small { font-family: var(--mono); font-size: 10px; color: var(--ink-low); margin-left: 8px; letter-spacing: .08em; }
+  .pub .row .s { font-family: var(--mono); font-size: 10.5px; color: var(--ink-mid); white-space: nowrap; } .pub .row .s b { color: var(--ink); font-weight: 400; }
+  .pub .row .m { grid-column: 2 / -1; font-family: var(--mono); font-size: 10px; color: var(--ink-low); line-height: 1.45; }
+  .pub .notes { font-size: 14px; line-height: 1.5; color: var(--ink-mid); max-width: 70ch; }
+  .scrollwin { max-height: 52vh; overflow: auto; border-top: 1px solid var(--g4-rule); border-bottom: 1px solid var(--g4-rule); }
+  @media (max-width: 880px) { .scrollwin { max-height: none; } .mtile .nums b { font-size: 19px; } }
+
+
+  /* ── glyphs (Prism/src/glyphs.svg, injected at boot) */
+  .gl { width: 14px; height: 14px; display: inline-block; vertical-align: -2px; color: currentColor; }
+  .gl.big { width: 18px; height: 18px; }
+  /* ── the board: five numbers, glyph · value · one gloss (blueprint §3) */
+  .piece .board { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; margin: 2px 0 10px; border: 1px solid var(--g4-rule); background: rgba(6,11,26,.5); border-radius: 3px; }
+  .piece .board .bn { padding: 12px 14px 10px; border-right: 1px solid var(--g4-rule-soft); display: grid; grid-template-columns: 22px 1fr; grid-template-rows: auto auto; column-gap: 8px; align-items: center; }
+  .piece .board .bn:last-child { border-right: 0; }
+  .piece .board .bn .gl { grid-row: 1 / span 2; width: 20px; height: 20px; align-self: start; margin-top: 4px; color: var(--ink-low); }
+  .piece .board .bn .v { font-family: var(--serif); font-size: 30px; line-height: 1; letter-spacing: -.01em; }
+  .piece .board .bn .v small { font-family: var(--mono); font-size: 10px; color: var(--ink-low); margin-left: 5px; letter-spacing: .04em; }
+  .piece .board .bn .l { font-family: var(--mono); font-size: 9px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-low); margin-top: 5px; }
+  .piece .board .bn .l .word { border-bottom-color: rgba(233,236,242,.3); }
+  .piece .board .bn .l i { font-style: normal; color: var(--ink-mid); text-transform: none; letter-spacing: .02em; margin-left: 6px; }
+  .piece .marks { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px; margin: 0 0 14px; font-family: var(--mono); font-size: 10.5px; color: var(--ink-mid); }
+  .piece .marks .mk { display: inline-flex; align-items: center; gap: 6px; }
+  .piece .marks .mk b { color: var(--ink); font-weight: 400; }
+  .piece .marks .mk .word { color: var(--ink); }
+  .piece .marks .mk.beta { color: #e8d9a8; } .piece .marks .mk.beta b { color: #e8d9a8; }
+  .piece .marks .mk.empty { color: var(--ink-low); }
+  .line .meta .tg { display: inline-flex; align-items: center; gap: 4px; }
+  .line .meta .tg .gl { width: 12px; height: 12px; color: var(--ink-mid); }
+  @media (max-width: 880px) { .piece .board { grid-template-columns: repeat(3, minmax(0, 1fr)); } .piece .board .bn { border-bottom: 1px solid var(--g4-rule-soft); } .piece .board .bn .v { font-size: 24px; } }
+
+
+  /* ── the figure of the day: the lead object's four corners, joined (blueprint §2) */
+  .fod { display: grid; grid-template-columns: 220px 1fr; gap: 20px; align-items: center; padding: 16px 18px; border: 1px solid var(--g4-rule); background: var(--g4-glass); border-radius: 4px; margin: 0 0 14px; }
+  .fod .fig { width: 220px; height: 220px; }
+  .fod .ob { font-family: var(--mono); font-size: 9.5px; letter-spacing: .22em; text-transform: uppercase; color: var(--ink-low); }
+  .fod h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(22px, 3vw, 30px); margin: 4px 0 2px; line-height: 1.1; }
+  .fod .q { font-style: italic; color: var(--ink-mid); font-size: 15px; margin-bottom: 12px; }
+  .fod .corners { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; max-width: 520px; }
+  .fod .cn { border-top: 2px solid var(--c); padding-top: 6px; }
+  .fod .cn .k { font-family: var(--mono); font-size: 9.5px; letter-spacing: .16em; color: var(--c); display: flex; align-items: center; gap: 5px; }
+  .fod .cn .z { font-family: var(--serif); font-size: 26px; line-height: 1.05; margin-top: 2px; }
+  .fod .cn .z.none { color: var(--ink-low); }
+  .fod .cn .m { font-family: var(--mono); font-size: 9.5px; color: var(--ink-low); line-height: 1.4; }
+  .fod .verdict { margin-top: 12px; font-size: 14px; color: var(--ink); }
+  .fod .verdict .film { font-weight: 400; }
+  @media (max-width: 720px) { .fod { grid-template-columns: 1fr; } .fod .fig { width: 180px; height: 180px; margin: 0 auto; } .fod .corners { grid-template-columns: repeat(2, 1fr); } }
+
+
+  /* ── the key strip: the terminal's function keys, under the bar (blueprint §1) */
+  .g4-keys { position: fixed; top: var(--bar-h); left: 0; right: 0; height: 34px; z-index: 40; display: flex; align-items: center; gap: 6px; padding: 0 16px; background: rgba(10,18,38,.82); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid var(--g4-rule-soft); font-family: var(--mono); font-size: 10px; letter-spacing: .16em; overflow-x: auto; scrollbar-width: none; }
+  .g4-keys::-webkit-scrollbar { display: none; }
+  .g4-keys .grp { font-size: 8.5px; color: var(--ink-low); margin: 0 4px 0 2px; white-space: nowrap; }
+  .g4-keys .k { padding: 3px 11px; border: 1px solid var(--g4-rule); border-radius: 2px; color: var(--ink-mid); text-decoration: none; white-space: nowrap; transition: background .15s, color .15s; }
+  .g4-keys .k:hover { color: var(--ink); border-color: rgba(233,236,242,.4); }
+  .g4-keys .k.on { background: #e9ecf2; color: #0c0b09; border-color: #e9ecf2; }
+  .g4-keys .sp { width: 22px; text-align: center; color: var(--ink-low); }
+  html.desk .g4-keys { display: none; }
+  .view.g4-under-bar { padding-top: calc(var(--bar-h) + 34px + 10px); }
+  html.embedded .g4-keys { top: 48px; }
+  @media (max-width: 480px) { .g4-keys { top: var(--bar-h-phone); } .view.g4-under-bar { padding-top: calc(var(--bar-h-phone) + 34px + 8px); } }
+  /* ── the front page (10-17): the SST marquee + the burns fill the first screen; Parallelogram is below the fold */
+  #v-pg .mast { padding: 10px 0 4px; } #v-pg .mast h1 { font-size: clamp(24px, 3.4vw, 34px); }
+  #v-pg .dek { margin: 0 0 8px; font-size: 13px; }
+  #v-pg .sec.first { margin-top: 0; } #v-pg .sec { margin: 10px 0 8px; }
+  #v-pg .fod { padding: 12px 16px; margin-bottom: 8px; grid-template-columns: 150px 1fr; gap: 16px; } #v-pg .fod .fig { width: 150px; height: 150px; } #v-pg .fod h3 { font-size: clamp(18px, 2.2vw, 24px); } #v-pg .fod .q { margin-bottom: 8px; font-size: 14px; } #v-pg .fod .cn .z { font-size: 22px; } #v-pg .fod .verdict { margin-top: 8px; font-size: 13px; }
+  #v-pg .floor { margin: 0 0 8px; padding: 7px 12px; }
+  .rack { min-height: 200px; border-top: 1px solid var(--g4-rule); border-bottom: 1px solid var(--g4-rule); }
+  .prow { display: grid; grid-template-columns: 34px 1fr auto; gap: 2px 12px; align-items: center; padding: 8px 6px; border-bottom: 1px solid var(--g4-rule-soft); text-decoration: none; color: inherit; transition: background .15s; }
+  .prow:hover { background: rgba(233,236,242,.05); } .prow:hover .t { color: #fff; }
+  .prow .fig { width: 34px; height: 34px; grid-row: 1 / span 2; }
+  .prow .t { font-size: 16px; line-height: 1.15; } .prow .t .mk { font-family: var(--mono); font-size: 9px; letter-spacing: .14em; color: #e8d9a8; margin-left: 8px; vertical-align: 2px; } .prow .t .mk.base { color: rgb(56,104,168); }
+  .prow .d { font-size: 12px; color: var(--ink-mid); line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; grid-column: 2; }
+  .prow .s { grid-column: 3; grid-row: 1 / span 2; font-family: var(--mono); font-size: 10.5px; color: var(--ink-mid); display: flex; gap: 14px; align-items: center; white-space: nowrap; }
+  .prow .s b { color: var(--ink); font-weight: 400; font-size: 13px; } .prow .s .cn { display: inline-flex; gap: 2px; width: 64px; } .prow .s .src { color: var(--ink-low); min-width: 150px; text-align: right; }
+  .prow.base { border-left: 2px solid rgb(56,104,168); }
+  @media (max-width: 880px) { .prow { grid-template-columns: 28px 1fr; } .prow .fig { width: 28px; height: 28px; } .prow .s { grid-column: 2; grid-row: auto; flex-wrap: wrap; gap: 6px 10px; font-size: 10px; } .prow .s .src { min-width: 0; text-align: left; } .prow .d { display: none; } }
+
+  /* ── the tracker's reading / the wire */
+  .reading { display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: center; padding: 16px; border: 1px solid var(--g4-rule); border-radius: 4px; background: var(--g4-glass); }
+  .reading .big { font-size: 56px; line-height: 1; font-family: var(--serif); }
+  .reading .big small { font-size: 14px; color: var(--ink-low); font-family: var(--mono); display: block; letter-spacing: .14em; margin-top: 6px; }
+  .reading .verdict { font-family: var(--mono); font-size: 12px; letter-spacing: .22em; text-transform: uppercase; }
+  .wire .g4-row .n { font-size: 15px; } .wire .g4-row .n small { font-family: var(--mono); font-size: 10px; color: var(--ink-low); display: block; margin-top: 2px; letter-spacing: .1em; }
+  .wire .g4-row .d { font-family: var(--mono); font-size: 10.5px; color: var(--ink-mid); text-align: right; }
+  .wire .g4-row .d b { color: var(--ink); font-weight: 400; }
+
+  /* ── Codex sheet */
+  .codex h3 { font-family: var(--serif); font-weight: 400; font-size: 22px; margin: 0 0 6px; }
+  .codex .k { font-family: var(--mono); font-size: 9.5px; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-low); }
+  .codex p { font-size: 14px; line-height: 1.5; color: var(--ink-mid); }
+  .codex .x { position: absolute; top: 10px; right: 12px; }
+  .word { border-bottom: 1px dotted var(--ink-low); cursor: help; }
+
+  /* ── explainers are tutorial copy (Sailor 10-17): kept in the page, tagged, hidden until a tutorial turns them on */
+  html:not(.tutorial) .tut, html:not(.tutorial) .sec .gloss, html:not(.tutorial) .view > .dek:not([id]) { display: none !important; }
+  /* ── the Dynamic Island: standalone, the bar sits under the status bar (the shell handles it when embedded) */
+  :root { --sat: env(safe-area-inset-top, 0px); }
+  html:not(.embedded) .g4-bar { box-sizing: border-box; height: calc(var(--bar-h) + var(--sat)); padding-top: var(--sat); }
+  html:not(.embedded) .g4-keys { top: calc(var(--bar-h) + var(--sat)); }
+  html:not(.embedded) .view.g4-under-bar { padding-top: calc(var(--bar-h) + var(--sat) + 34px + 10px); }
+  @media (max-width: 480px) { html:not(.embedded) .g4-bar { height: calc(var(--bar-h-phone) + var(--sat)); } html:not(.embedded) .g4-keys { top: calc(var(--bar-h-phone) + var(--sat)); } html:not(.embedded) .view.g4-under-bar { padding-top: calc(var(--bar-h-phone) + var(--sat) + 34px + 8px); } }
+
+  /* ── the marquee: the dollar's share as a needle (the SST, front and centre) */
+  .marquee { min-height: calc(100svh - 44px - 112px - 18px); display: grid; grid-template-rows: auto auto auto; align-content: center; gap: 10px; justify-items: center; text-align: center; padding: 8px 0 6px; cursor: pointer; text-decoration: none; color: inherit; }
+  html.embedded .view.g4-under-bar { padding-top: 92px; }
+  html.embedded .marquee { min-height: calc(100svh - 92px - 112px - 18px); }
+  html:not(.embedded) .marquee { min-height: calc(100svh - 44px - var(--sat) - 112px - 18px); }
+  .marquee .eb { font-family: var(--mono); font-size: 10px; letter-spacing: .26em; text-transform: uppercase; color: var(--ink-low); }
+  .marquee .q { font-family: var(--serif); font-size: clamp(20px, 3.2vw, 30px); margin: 6px 0 0; line-height: 1.15; }
+  .marquee svg.dial { width: min(620px, 100%); height: auto; display: block; margin: 0 auto; overflow: visible; }
+  .marquee .needle { transform-box: view-box; transform-origin: 300px 300px; transition: transform 2.2s cubic-bezier(.2,.9,.25,1.08); }
+  .marquee .bulb { transition: fill .3s, opacity .3s; }
+  .marquee .read { margin-top: -6px; }
+  .marquee .num { font-family: var(--serif); font-size: clamp(54px, 11vw, 96px); line-height: .95; letter-spacing: -.01em; }
+  .marquee .num small { font-size: .4em; margin-left: 2px; }
+  .marquee .vd { font-family: var(--mono); font-size: 12px; letter-spacing: .24em; margin-top: 8px; }
+  .marquee .vd b { padding: 2px 8px; border-radius: 2px; color: #0c0b09; }
+  .marquee .vd.FALLING b { background: var(--band-denominated, #c45a3c); } .marquee .vd.RISING b { background: var(--band-fluid, #5aa06a); } .marquee .vd.HOLDING b { background: #e9ecf2; }
+  .marquee .vd span { color: var(--ink-mid); margin-left: 10px; }
+  .marquee .den { font-family: var(--mono); font-size: 10px; letter-spacing: .12em; color: var(--ink-low); margin-top: 10px; }
+  @media (prefers-reduced-motion: reduce) { .marquee .needle { transition: none; } }
+
+  @media (max-width: 560px) { .marquee, html.embedded .marquee, html:not(.embedded) .marquee { min-height: 0; padding-top: 14px; } .burns { margin-top: 18px; } }
+  html.embedded body::before { content: ''; position: fixed; left: 0; right: 0; top: 0; height: 48px; z-index: 39; pointer-events: none; background: linear-gradient(180deg, var(--g4-field, #0a1226) 70%, rgba(10,18,38,0)); }
+  /* ── the burns: a film strip of the day's data points, one frame each */
+  .burns { position: relative; height: 112px; overflow: hidden; margin: 0 -16px; background: #07090f; border-top: 1px solid var(--g4-rule); border-bottom: 1px solid var(--g4-rule); }
+  .burns::before, .burns::after { content: ''; position: absolute; left: 0; right: 0; height: 10px; z-index: 2; pointer-events: none;
+    background: repeating-linear-gradient(90deg, transparent 0 9px, rgba(233,236,242,.16) 9px 17px, transparent 17px 26px); background-size: 26px 6px; background-repeat: repeat-x; background-position: 0 2px; }
+  .burns::before { top: 0; } .burns::after { bottom: 0; }
+  .burns .reel { display: flex; height: 100%; width: max-content; animation: reel 70s linear infinite; padding: 14px 0; box-sizing: border-box; }
+  .burns:hover .reel, .burns:active .reel { animation-play-state: paused; }
+  @keyframes reel { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) { .burns { overflow-x: auto; } .burns .reel { animation: none; } }
+  .burns .fr { flex: 0 0 auto; width: 168px; margin-right: 8px; padding: 8px 12px; box-sizing: border-box; background: linear-gradient(180deg, rgba(233,236,242,.05), rgba(233,236,242,.02)); border: 1px solid rgba(233,236,242,.1); border-radius: 2px; display: grid; grid-template-rows: auto 1fr auto; text-decoration: none; color: inherit; }
+  .burns .fr .k { font-family: var(--mono); font-size: 9px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-low); display: flex; justify-content: space-between; gap: 6px; white-space: nowrap; }
+  .burns .fr .k i { font-style: normal; }
+  .burns .fr .v { font-family: var(--serif); font-size: 26px; line-height: 1.1; align-self: center; white-space: nowrap; }
+  .burns .fr .v small { font-size: 13px; color: var(--ink-mid); margin-left: 2px; }
+  .burns .fr .d { font-family: var(--mono); font-size: 9.5px; color: var(--ink-mid); white-space: nowrap; }
+  .burns .fr .d .up { color: #8fc79c; } .burns .fr .d .dn { color: #e08a72; }
+  .burns .fr.flared { border-color: rgba(224,138,114,.45); }
+  .burns .fr.dark { opacity: .45; }
+
+  /* ── below the fold: Parallelogram */
+  .fold { padding-top: 22px; }
+  .pgmast { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 8px 0 6px; }
+  #pgmark { width: min(520px, 88vw); height: 112px; display: block; }
+  .pgmast small { font-family: var(--mono); font-size: 9.5px; letter-spacing: .26em; text-transform: uppercase; color: var(--ink-low); }
+  @media (max-width: 560px) { #pgmark { height: 78px; } }
+
+  /* ── the day map + the feed (10-17): plain readout */
+  .day { border: 1px solid var(--g4-rule); background: var(--g4-glass); border-radius: 4px; padding: 12px 14px 14px; margin: 0 0 14px; }
+  .day .dd { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; margin-bottom: 10px; }
+  .day .dd::-webkit-scrollbar { display: none; }
+  .day .dd a { font-family: var(--mono); font-size: 10.5px; letter-spacing: .08em; padding: 4px 10px; border: 1px solid var(--g4-rule); border-radius: 2px; color: var(--ink-mid); text-decoration: none; white-space: nowrap; }
+  .day .dd a.on { background: #e9ecf2; color: #0c0b09; border-color: #e9ecf2; }
+  .day .db { display: grid; grid-template-columns: minmax(0, 340px) 1fr; gap: 20px; align-items: center; }
+  .day .dmap { width: 100%; height: 340px; display: block; position: relative; border-radius: 3px; overflow: hidden; background: radial-gradient(ellipse at 50% 40%, rgba(40,60,110,.35), rgba(0,0,0,0) 70%); }
+  .day .dlist { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 8px; font-family: var(--mono); font-size: 10.5px; }
+  .day .dlist a { color: var(--ink); text-decoration: none; white-space: nowrap; }
+  .day .dlist a i { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
+  .day .dlist a span { color: var(--ink-low); margin-left: 6px; }
+  .day .rd .when { font-family: var(--serif); font-size: 26px; margin-bottom: 6px; }
+  .day .rd p { margin: 0 0 8px; font-size: 15px; line-height: 1.45; color: var(--ink); }
+  .day .rd p.x { color: var(--ink-mid); font-size: 14px; }
+  .day .rd .key { font-family: var(--mono); font-size: 10px; color: var(--ink-low); margin-top: 10px; }
+  .day .rd .key i { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin: 0 4px 0 8px; vertical-align: 0; }
+  .day .rd .key i:first-child { margin-left: 0; }
+  @media (max-width: 700px) { .day .db { grid-template-columns: 1fr; } }
+  .card { display: block; padding: 14px 4px; border-bottom: 1px solid var(--g4-rule-soft); text-decoration: none; color: inherit; }
+  .card:hover { background: rgba(233,236,242,.04); }
+  .card .o { font-family: var(--mono); font-size: 10.5px; letter-spacing: .06em; color: var(--ink-low); }
+  .card .o b { color: var(--ink-mid); font-weight: 500; }
+  .card .h { font-family: var(--serif); font-size: 19px; line-height: 1.2; margin: 4px 0 6px; }
+  .card .sd { font-size: 14.5px; line-height: 1.45; color: var(--ink-mid); max-width: 70ch; }
+  .card .r { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 8px; font-family: var(--mono); font-size: 10.5px; color: var(--ink-low); }
+  .card .r b { font-weight: 400; color: var(--ink); font-size: 13px; margin-left: 4px; }
+  .card .r b.neg, .says.neg { color: #e9967f; } .card .r b.pos, .says.pos { color: #8fd0a0; } .card .r b.mix, .says.mix { color: #d8d0b0; }
+  .says { font-size: .62em; }
+  .rack { border-bottom: 0; }
+  @media (display-mode: standalone) and (max-width: 480px) { #clock { display: none; } }
+</style>
+</head>
+<body>
+
+<!-- the sky is the desktop -->
+<div class="g4-sky"><canvas id="sky"></canvas></div>
+
+<!-- boot: the housing resolves, then crops out -->
+<div class="g4-housing" id="housing" hidden>
+  <div class="shell"><div class="glass"></div><div class="chin"><img src="../src/img/front/prism_mark.png" alt=""></div></div>
+</div>
+
+<!-- the bar is the navtool -->
+<div class="g4-bar" id="bar">
+  <div class="badge" id="badge" title="the DreamGetty"><img src="../src/img/front/prism_mark.png" alt="Prism"></div>
+  <div class="nav" id="nav">
+    <span class="hint l">◀ back</span><span class="hint r">forward ▶</span>
+    <img src="../src/img/prism_nav_full.png" alt="" draggable="false">
+  </div>
+  <div class="right"><span class="crumb opt" id="crumb"></span><b id="barName">BloomBurger</b><span class="opt" id="barFn">PG</span><span id="clock"></span></div>
+</div>
+
+<!-- the key strip: published | collected -->
+<nav class="g4-keys" id="keys"><span class="grp">published</span><a class="k" data-k="pg" href="#pg">PG</a><a class="k" data-k="sst" href="#sst">SST</a><span class="sp">·</span><span class="grp">collected</span><a class="k" data-k="sweep" href="#sweep">SWEEP</a><a class="k" data-k="roster" href="#roster">ROSTER</a><a class="k" data-k="wire" href="#wire">WIRE</a></nav>
+
+<!-- ── DESK ── -->
+<section class="view" id="v-desk">
+  <div class="g4-desk">
+    <div class="tiles">
+      <a class="g4-tile" href="../v2/"><div class="ic">◭</div><div class="n">Prism</div><div class="s">the workstation</div></a>
+      <a class="g4-tile" href="#pg"><div class="ic">🍔</div><div class="n">BloomBurger</div><div class="s">the terminal</div></a>
+      <a class="g4-tile" href="#codex"><div class="ic">📖</div><div class="n">Codex</div><div class="s">the plain glossary</div></a>
+    </div>
+    <div class="g4-key" style="text-align:center">g4 · three programs · hold the bar to come back here</div>
+  </div>
+</section>
+
+<!-- ── THE PAPER ── -->
+<section class="view wrap g4-under-bar" id="v-pg">
+  <a class="marquee" id="marquee" href="#sst" aria-label="Supply Shock Tracker — the dollar's share of traded energy"></a>
+  <div class="burns" id="burns" aria-label="the day's data points"><div class="reel" id="reel"></div></div>
+  <div class="fold">
+    <div class="pgmast"><canvas id="pgmark" aria-label="Parallelogram"></canvas><small>the paper · the day's media, read on one object</small></div>
+    <div class="dek tut">The day's discourse, reduced. Each parallelogram is one segment on one object, cut to the words that carry it, scored, and placed on the graphmap — for the reader who is tired of the news but wants to be in the know from a distance.</div>
+    <div class="sec first tut"><div class="eb">what you are looking at</div><h2><span class="orn"></span>The day's media, read on one object</h2><div class="gloss">Every piece below is one show or article, reduced to the lines that touch the object and scored: how heated the words are (Dia), whether the voice thinks the thing delivers (z), and how much of the object's light gets through (Lumens).</div></div>
+    <div class="sec"><div class="eb">the day</div><h2><span class="orn"></span>Where the coverage landed</h2></div>
+    <div class="fod" id="fod" hidden></div>
+    <div class="floor tut" id="floor" hidden></div>
+    <div class="sec"><div class="eb">the feed</div><h2><span class="orn"></span>Every segment, newest first</h2><div class="gloss">Open one to read the tape on the graphmap. β marks a beta lede — read to the paywall only; ▣ marks the floor.</div></div>
+    <div class="rack" id="front"></div>
+    <div class="foot tut">A parallelogram's figure is literal: join the four stations' composite readings and you get a four-sided shape whose skew is the segment's split. Dia is distance from the object; z is what the voice believes happened; <span class="word" data-w="lumens">Lumens</span> is how much of the object's light gets through.</div>
+  </div>
+</section>
+
+<!-- ── A PIECE ── -->
+<section class="view wrap g4-under-bar piece" id="v-piece">
+  <div class="g4-win">
+    <div class="title"><div class="dots"><i id="pClose" title="close — back to the paper" style="cursor:pointer"></i></div><div id="pTitleBar">—</div><div class="fn">PG</div></div>
+    <div class="body">
+      <div class="g4-key" id="pKicker"></div>
+      <h1 style="font-weight:400;font-size:clamp(26px,3.6vw,40px);line-height:1.08;margin:6px 0 6px" id="pTitle"></h1>
+      <div class="dek" id="pDek"></div>
+      <div class="board" id="board"></div>
+      <div class="marks tut" id="marks"></div>
+      <div class="split">
+        <div class="stage">
+          <div id="map"></div>
+          <div class="readout tut" id="readout"><b>The graphmap.</b> The object sits at the centre; its shadow stands above it on z. Each station reads from its corner — distance from the centre is Dia (the inner ring is 33, the outer 66), height is what the voice believes happened. The dashed blue ring is the floor. Scroll the tape and the remarks land in order.</div>
+          <div class="scrub">
+            <div class="t">TAPE <span id="tnow">0:00</span> / <span id="tlen">—</span></div>
+            <input type="range" id="scrubber" min="0" max="1" value="0" step="1">
+            <div class="row">
+              <span class="g4-tabs"><a class="g4-pill quiet on" id="showTrace" href="#">trace</a><a class="g4-pill quiet on" id="showPaths" href="#">worldlines</a><a class="g4-pill quiet" id="recenter" href="#">recentre</a></span>
+            </div>
+            <div class="legend">
+              <span><i style="background:rgb(184,58,58)"></i>LI</span><span><i style="background:rgb(56,104,168)"></i>RI</span><span><i style="background:rgb(58,138,82)"></i>LP</span><span><i style="background:rgb(184,120,40)"></i>RP</span>
+              <span><i style="background:#e8d9a8"></i>constitutive</span><span><i style="background:var(--band-fluid)"></i>z + delivers</span><span><i style="background:var(--band-denominated)"></i>z − doesn't</span>
+            </div>
+          </div>
+        </div>
+        <div class="tapewin" id="tapewin">
+          <div class="prose" id="prose"></div>
+          <div class="tape" id="tape"></div>
+          <div id="seenfold"></div>
+        </div>
+      </div>
+      <div class="foot" id="pFoot"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SST ── -->
+<section class="view wrap g4-under-bar" id="v-sst">
+  <div class="mast">
+    <h1><small>BloomBurger · the paper</small>Supply Shock Tracker</h1>
+  </div>
+  <div class="dek">PG01's instrument: the share of traded energy sold in dollars, always with its denominator. One determination. The globe stands on the pedestal in the DreamGetty; this is the reading on the glass.</div>
+  <div id="sst"></div>
+</section>
+
+<!-- ── WIRE ── -->
+<section class="view wrap g4-under-bar wire" id="v-wire">
+  <div class="mast">
+    <h1><small>BloomBurger · the wire</small>The record</h1>
+  </div>
+  <div class="dek">Everything Prism collects, before reduction — registers and series with their as-of dates. The paper is made from this.</div>
+  <div id="wire"></div>
+</section>
+
+<!-- ── ROSTER ── -->
+<section class="view wrap g4-under-bar" id="v-roster">
+  <div class="mast">
+    <h1><small>BloomBurger · the paper</small>The roster</h1>
+  </div>
+  <div class="dek">The media Parallelogram tracks — scanned every time it publishes. A corner is an interval: three or more voices per quadrant, so a station's spread can be seen. Shows are readers, never the detector.</div>
+  <div class="roster" id="roster"></div>
+</section>
+
+<!-- ── SWEEP ── -->
+<section class="view wrap g4-under-bar" id="v-sweep">
+  <div class="mast">
+    <h1><small>BloomBurger · the wire</small>The sweep</h1>
+  </div>
+  <div class="dek">The media Parallelogram tracks, one tile each. Every sweep refreshes them: what the publication put out, what touched the object, and how it has been reading — its Lumens, its Dia, where it stands on z. Open a tile to see everything we have on that source.</div>
+  <div class="sec first"><div class="eb">the media we track</div><h2><span class="orn"></span>Check in on a publication</h2><div class="gloss">Lumens is how much of the object's light gets through its coverage (higher is clearer); Dia is how heated its words run; z is where it stands on the lead object — does the thing deliver?</div></div>
+  <div class="media" id="media"><div class="empty">Loading the roster…</div></div>
+  <div class="sec"><div class="eb">today's catch</div><h2><span class="orn"></span>What the sweep brought in</h2><div class="gloss">Headlines, deks and openings that touched the object, and where each one was sorted: cut into a parallelogram, filed to the tracker, the register, or the slate.</div></div>
+  <div class="sweep-days" id="sweep-days"></div>
+  <div id="sweep"></div>
+</section>
+
+<!-- ── A PUBLICATION ── -->
+<section class="view wrap g4-under-bar pub" id="v-pub">
+  <div class="g4-win">
+    <div class="title"><div class="dots"><i id="pubClose" title="close — back to the sweep" style="cursor:pointer"></i></div><div id="pubTitleBar">—</div><div class="fn">SWEEP</div></div>
+    <div class="body">
+      <div class="g4-key" id="pubKicker"></div>
+      <h1 style="font-weight:400;font-size:clamp(26px,3.6vw,40px);line-height:1.08;margin:6px 0 6px" id="pubTitle"></h1>
+      <div class="dek" id="pubDek"></div>
+      <div class="board" id="pubBoard"></div>
+      <div id="pubBody"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CODEX (a sheet) ── -->
+<div class="g4-sheet codex" id="codex">
+  <a class="g4-pill x" href="#" id="codexClose">close</a>
+  <div class="k">Codex</div>
+  <h3 id="cxWord">—</h3>
+  <p id="cxBody"></p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="../src/js/prism-graphmap.js?v=11"></script>
+<script src="../src/js/tracker-core.js?v=1"></script>
+<script>
+(function () {
+  'use strict';
+  const $ = s => document.querySelector(s);
+  const EMBEDDED = window.parent !== window;
+  if (EMBEDDED) document.documentElement.classList.add('embedded');
+  const fmt = s => { s = Math.round(s || 0); const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), x = s % 60; return h ? `${h}:${String(m).padStart(2, '0')}:${String(x).padStart(2, '0')}` : `${m}:${String(x).padStart(2, '0')}`; };
+  const zs = z => z == null ? '—' : Math.abs(z) < 0.05 ? '0.0' : (z > 0 ? '+' : '') + Number(z).toFixed(1);
+  const tier = d => d <= 33 ? 'fluid' : d <= 66 ? 'coalition' : 'denominated';
+  const COLH = { LI: '#b83a3a', RI: '#3868a8', LP: '#3a8a52', RP: '#b87828', O: '#e8d9a8' };
+  const COL = { LI: 0xb83a3a, RI: 0x3868a8, LP: 0x3a8a52, RP: 0xb87828, O: 0xe8d9a8 };
+
+  // ── the glyph sheet (Prism/src/glyphs.svg), injected once so <use href="#g-…"> resolves everywhere ──
+  fetch('../src/glyphs.svg', { cache: 'no-store' }).then(r => r.text()).then(t => { const d = document.createElement('div'); d.innerHTML = t; document.body.prepend(d.firstElementChild); }).catch(() => {});
+  const gl = (name, cls) => `<svg class="gl${cls ? ' ' + cls : ''}"><use href="#g-${name}"/></svg>`;
+  const TOUCH_GLYPH = { O: 'O', "O′": 'O2', F: 'F', X: 'X', T: 'T', B: 'B', M: 'M' };
+  const PIECE_CODEX = {};   // entries a piece adds for its own lit words (the transform, the split, the beta note)
+
+  // ── the Codex: plain words, a priori (the "big headline" ruling) ──
+  const CODEX = {
+    object:   ['The object', 'The thing the discourse is about — a deal, a bill, a seat. Prism keeps it in one place so it can\'t be swapped for a person or a vibe while nobody is looking.'],
+    dia:      ['Dia', 'How far a statement stands from the object. 0–33 is a plain statement of belief; 34–66 is trying to win you over; 67–100 is spending political capital to make the point, bridge burnt.'],
+    z:        ['z', 'What the voice believes happened to the object. Up means it delivers; down means it doesn\'t. Every line carries one, inferred where it is only implied.'],
+    lumens:   ['Lumens', 'How much of the object\'s light gets through a piece of media — the mean, over scored lines, of (1 − Dia/100) for lines that touch the record, zero for lines that don\'t. Derived from the scores already on the page; it adds no judgment of its own.'],
+    station:  ['Station', 'Where a voice reads from. Left or right; institutional or populist. The axis places the station, not the reading.'],
+    depth: ['Depth', 'For a lede cut: distinct touches on the record (object · T · B · M · X) across the headline, dek and opening, divided by the lines scored. A lede that restates its headline three times scores one touch in three lines; one that dates, sizes and names a mechanism scores three. Whether people are "reading the title over and over" (Sailor, 10-15), as a number.'],
+    parallelogram: ['parallelogram (little p)', 'One segment on one object, four corners scored. Join the four stations\' composite readings and you get a four-sided figure whose skew is the segment\'s split.'],
+    transform: ['The transform', 'What the discourse did to the object. A Z-assertion credits delivery before it happened.'],
+    touch:    ['Touch', 'What a line touches: O the object · O′ its shadow · F a figure (a person) · X a test it proposes.'],
+    floor:    ['The floor', 'The rolling RI baseline — the mean Dia and Lumens of the business press\'s own daily readings (The Close) over the seven days up to a piece\'s date. A station reading, not neutral ground: every parallelogram is read against it.'],
+    split:    ['Split', 'Where the disagreement actually sits: between stations, or inside one.'],
+  };
+
+  // ── the sky (cheap; stars are the desktop) ──
+  (function sky() {
+    const c = $('#sky'), ctx = c.getContext('2d'); let stars = [];
+    function size() { c.width = innerWidth * devicePixelRatio; c.height = innerHeight * devicePixelRatio; stars = []; const n = Math.round((innerWidth * innerHeight) / 2600); for (let i = 0; i < n; i++) stars.push([Math.random() * c.width, Math.random() * c.height, Math.random() * 1.3 + .3, Math.random() * Math.PI * 2]); draw(0); }
+    function draw(t) { ctx.clearRect(0, 0, c.width, c.height); for (const s of stars) { const a = .25 + .55 * (0.5 + 0.5 * Math.sin(t / 1800 + s[3])); ctx.fillStyle = `rgba(245,240,232,${a})`; ctx.beginPath(); ctx.arc(s[0], s[1], s[2] * devicePixelRatio, 0, 6.283); ctx.fill(); } }
+    addEventListener('resize', size); size();
+    let last = 0; (function tick(t) { if (t - last > 120) { draw(t); last = t; } requestAnimationFrame(tick); })(0);
+  })();
+
+  // ── boot: the housing, once per session ──
+  (function boot() {
+    let seen = window.parent !== window;   // inside the shell, the shell boots
+    try { seen = seen || sessionStorage.getItem('g4_boot_v1') === '1'; } catch (e) {}
+    const h = $('#housing'); if (seen) { h.remove(); return; }
+    h.hidden = false; try { sessionStorage.setItem('g4_boot_v1', '1'); } catch (e) {}
+    setTimeout(() => { h.classList.add('done'); setTimeout(() => h.remove(), 400); }, 1800);
+  })();
+
+  // ── clock ──
+  (function clock() { const el = $('#clock'); const f = () => { const d = new Date(); el.textContent = d.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' }); }; f(); setInterval(f, 15000); })();
+
+  // ── router: desktop → program → object ──
+  const PROGRAMS = ['pg', 'sst', 'wire', 'roster', 'sweep'];
+  let paperIndex = [];          // from data/press/index.json
+  const state = { layer: 'program', program: 'pg', piece: null };
+  const views = { desk: $('#v-desk'), pg: $('#v-pg'), piece: $('#v-piece'), sst: $('#v-sst'), wire: $('#v-wire'), roster: $('#v-roster'), sweep: $('#v-sweep'), pub: $('#v-pub') };
+  function show(name) { Object.values(views).forEach(v => v.classList.remove('on')); views[name].classList.add('on'); window.scrollTo(0, 0); }
+  function route() {
+    const h = location.hash.replace(/^#/, '') || 'pg';
+    const [head, ...rest] = h.split('/');
+    const codexOpen = head === 'codex';
+    if (codexOpen) { openCodex(rest[0] || 'object'); return; } else closeCodex();
+    if (head === 'desk') { if (EMBEDDED) { try { window.parent.postMessage({ type: 'g4:desk' }, '*'); } catch (e) {} location.hash = '#pg'; return; } state.layer = 'desk'; show('desk'); crumb('g4 · desktop'); bar('g4', ''); return; }
+    if (head === 'pub' && rest[0]) { state.layer = 'object'; state.program = 'sweep'; state.piece = rest[0]; show('pub'); bar('BloomBurger', 'SWEEP'); loadPub(rest[0]); return; }
+    if (head === 'pg' && rest[0]) { state.layer = 'object'; state.program = 'pg'; state.piece = rest[0]; show('piece'); bar('BloomBurger', 'PG'); loadPiece(rest[0]); return; }
+    if (PROGRAMS.includes(head)) { state.layer = 'program'; state.program = head; state.piece = null; show(head); bar('BloomBurger', head.toUpperCase()); crumb('BloomBurger · ' + head.toUpperCase()); if (head === 'pg') { loadMarquee(); filmMark($('#pgmark'), '../src/img/Parallelogram_logo_1.png', 2935 / 505, 'Parallelogram'); } if (head === 'sst') loadSST(); if (head === 'wire') loadWire(); if (head === 'roster') loadRoster(); if (head === 'sweep') { loadMedia(); loadSweep(rest[0]); } return; }
+    location.hash = '#pg';
+  }
+  function bar(n, f) { $('#barName').textContent = n; $('#barFn').textContent = f; tell(); document.querySelectorAll('.g4-keys .k').forEach(k => k.classList.toggle('on', k.dataset.k === state.program && state.layer !== 'desk')); document.documentElement.classList.toggle('desk', state.layer === 'desk'); }
+  function crumb(t) { $('#crumb').textContent = t; tell(); }
+  function tell() { if (!EMBEDDED) return; try { window.parent.postMessage({ type: 'g4:crumb', name: $('#barName').textContent, fn: $('#barFn').textContent, crumb: $('#crumb').textContent }, '*'); } catch (e) {} }
+  addEventListener('hashchange', route);
+
+  // ── the navtool: drag-and-snap, hold, the badge ──
+  (function navtool() {
+    const nav = $('#nav'), img = nav.querySelector('img');
+    let x0 = null, dx = 0, holdT = null, held = false, dragging = false;
+    const SNAP = 56, HOLD = 450;
+    function neighbours() {
+      if (state.layer === 'program') return { list: PROGRAMS, i: PROGRAMS.indexOf(state.program), go: k => location.hash = '#' + PROGRAMS[k] };
+      if (state.layer === 'object') { const ids = paperIndex.map(p => p.id); return { list: ids, i: ids.indexOf(state.piece), go: k => location.hash = '#pg/' + ids[k] }; }
+      return { list: [], i: -1, go: () => {} };
+    }
+    function up() { if (state.layer === 'object') location.hash = '#' + state.program; else if (state.layer === 'program') location.hash = '#desk'; }
+    addEventListener('message', e => { const m = e.data || {}; if (m.type !== 'g4:nav') return; const n = neighbours(); if (m.dir === 'up') up(); else if (m.dir === 'back' && n.i > 0) n.go(n.i - 1); else if (m.dir === 'forward' && n.i < n.list.length - 1) n.go(n.i + 1); });
+    nav.addEventListener('pointerdown', e => { x0 = e.clientX; dx = 0; held = false; dragging = false; nav.setPointerCapture(e.pointerId); holdT = setTimeout(() => { held = true; nav.classList.add('holding'); if (navigator.vibrate) navigator.vibrate(12); up(); }, HOLD); });
+    nav.addEventListener('pointermove', e => { if (x0 == null) return; dx = e.clientX - x0; if (Math.abs(dx) > 6) { dragging = true; clearTimeout(holdT); nav.classList.add('dragging'); img.style.setProperty('--nav-dx', Math.max(-120, Math.min(120, dx * .6)) + 'px'); } });
+    function end() {
+      if (x0 == null) return; clearTimeout(holdT); nav.classList.remove('dragging', 'holding');
+      img.style.setProperty('--nav-dx', '0px');
+      if (!held && dragging) { const n = neighbours(); if (dx <= -SNAP && n.i < n.list.length - 1) n.go(n.i + 1); else if (dx >= SNAP && n.i > 0) n.go(n.i - 1); }
+      x0 = null; dx = 0;
+    }
+    nav.addEventListener('pointerup', end); nav.addEventListener('pointercancel', end);
+    // keyboard, for the desktop app
+    addEventListener('keydown', e => { if (e.target.tagName === 'INPUT') return; const n = neighbours(); if (e.key === 'ArrowLeft' && n.i > 0) n.go(n.i - 1); if (e.key === 'ArrowRight' && n.i < n.list.length - 1) n.go(n.i + 1); if (e.key === 'Escape') { if ($('#codex').classList.contains('open')) closeCodex(); else up(); } });
+    // the badge is the pull — until the shell exists, it is the door to the villa
+    $('#badge').addEventListener('click', () => {
+      // inside the shell the badge IS the pull; on its own it is the door to the villa
+      if (window.parent !== window) { try { window.parent.postMessage({ type: 'g4:pull' }, '*'); return; } catch (e) {} }
+      const villa = '../dreamgetty/'; location.href = villa;
+    });
+  })();
+
+  // ── the Codex as a sheet ──
+  function openCodex(w) { const e = PIECE_CODEX[w] || CODEX[w] || CODEX.object; $('#cxWord').textContent = e[0]; $('#cxBody').textContent = e[1]; $('#codex').classList.add('open'); $('#cxWord').classList.remove('film'); void $('#cxWord').offsetWidth; $('#cxWord').classList.add('film'); }
+  function closeCodex() { $('#codex').classList.remove('open'); }
+  $('#codexClose').addEventListener('click', e => { e.preventDefault(); history.back(); });
+  document.addEventListener('click', e => { const w = e.target.closest('.word'); if (w) { e.preventDefault(); location.hash = '#codex/' + w.dataset.w; } });
+
+  // ── the figure: four station composites joined ──
+  // corners on the rose: LI top-left · RI top-right · LP bottom-left · RP bottom-right (the reader's corner labels)
+  function figureSVG(sb, size) {
+    const S = size || 96, c = S / 2, R = S * .42;
+    const corner = { LI: [-1, -1], RI: [1, -1], RP: [1, 1], LP: [-1, 1] };
+    const order = ['LI', 'RI', 'RP', 'LP'];
+    const pts = order.map(k => { const st = sb.stations && sb.stations[k]; const r = st && st.dia != null ? st.dia / 100 : 0; const [ux, uy] = corner[k]; return { k, x: c + ux * r * R, y: c + uy * r * R, empty: !st || st.dia == null }; });
+    const poly = pts.map(p => `${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(' ');
+    const uid = 'f' + Math.random().toString(36).slice(2, 7);
+    return `<svg class="fig" viewBox="0 0 ${S} ${S}" width="${S}" height="${S}" aria-hidden="true">
+      <defs><linearGradient id="${uid}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--film-0)"/><stop offset=".5" stop-color="var(--film-2)"/><stop offset="1" stop-color="var(--film-4)"/></linearGradient></defs>
+      <rect x="${c - R}" y="${c - R}" width="${2 * R}" height="${2 * R}" fill="none" stroke="rgba(233,236,242,.14)"/>
+      <line x1="${c - R}" y1="${c - R}" x2="${c + R}" y2="${c + R}" stroke="rgba(233,236,242,.08)"/><line x1="${c + R}" y1="${c - R}" x2="${c - R}" y2="${c + R}" stroke="rgba(233,236,242,.08)"/>
+      <polygon points="${poly}" fill="url(#${uid})" fill-opacity=".16" stroke="url(#${uid})" stroke-width="1.2"/>
+      ${pts.map(p => p.empty ? `<circle cx="${p.x}" cy="${p.y}" r="2.6" fill="none" stroke="${COLH[p.k]}" stroke-width="1"/>` : `<circle cx="${p.x}" cy="${p.y}" r="3" fill="${COLH[p.k]}"/>`).join('')}
+      <circle cx="${c}" cy="${c}" r="1.6" fill="#e8d9a8"/>
+    </svg>`;
+  }
+
+  // ── the floor: the rolling RI baseline (The Close, daily; Sailor's proposal 10-15) ──
+  // in force on a date = mean Dia / Lumens of baseline pieces dated within the 7 days up to that date;
+  // falls back to the nearest earlier baseline, then the nearest at all. A station reading, not neutral ground.
+  let paperFull = {};            // id → full JSON, filled by loadFront
+  // the plain layer (data/press/plain.json): how the scores are worded on the page — Heat (Dia), Says (z), Clarity (Lumens)
+  let PLAIN = { stations: {}, topics: {}, pieces: {} };
+  const MONL = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const dlab = d => { const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(d || ''); return m ? MONL[+m[2] - 1] + ' ' + (+m[3]) : (d || ''); };
+  const stName = k => (PLAIN.stations || {})[k] || k;
+  const topicOf = id => { const t = (PLAIN.pieces[id] || {}).topic; return t && PLAIN.topics[t] ? Object.assign({ key: t }, PLAIN.topics[t]) : null; };
+  const saysWord = (id, z) => { const t = topicOf(id); if (z == null) return '—'; if (z > 0.15) return t ? t.pos : 'yes'; if (z < -0.15) return t ? t.neg : 'no'; return 'mixed'; };
+  const saysCls = z => z == null ? '' : z > 0.15 ? 'pos' : z < -0.15 ? 'neg' : 'mix';
+  const headline = (p, D) => (D && D.source && D.source.title) || p.title || p.id;
+  let seen = [];                 // the objects pass: data/press/objects_seen.json
+  function floorFor(date) {
+    const base = paperIndex.filter(p => (p.kind === 'baseline' || (paperFull[p.id] && paperFull[p.id].scoreboard && paperFull[p.id].scoreboard.baseline)) && p.date)
+      .map(p => { const sb = paperFull[p.id] && paperFull[p.id].scoreboard || {}; return { id: p.id, date: p.date, dia: sb.dia != null ? sb.dia : p.dia, lumens: sb.lumens != null ? sb.lumens : p.lumens, program: p.program || (paperFull[p.id] && paperFull[p.id].source.program) }; })
+      .filter(b => b.dia != null);
+    if (!base.length) return null;
+    const d0 = new Date(date + 'T00:00:00Z'), day = 864e5;
+    let win = base.filter(b => { const t = new Date(b.date + 'T00:00:00Z'); return t <= d0 && d0 - t <= 7 * day; }), how = 'rolling 7-day';
+    if (!win.length) { const earlier = base.filter(b => b.date <= date).sort((a, b) => b.date.localeCompare(a.date)); win = earlier.length ? [earlier[0]] : [base.slice().sort((a, b) => a.date.localeCompare(b.date))[0]]; how = 'nearest'; }
+    const m = k => Math.round(win.reduce((a, b) => a + b[k], 0) / win.length);
+    return { dia: m('dia'), lumens: m('lumens'), n: win.length, how, asOf: win.map(b => b.date).sort().pop(), programs: [...new Set(win.map(b => b.program))].join(', ') };
+  }
+
+  // ── the figure of the day: the lead object's four corners, each from its newest full reading (beta ledes and the floor excluded), joined
+  let dayPick = null, gDay = null;
+  function dayGraph(dots) {
+    const el = $('#dayMap'); if (!el || typeof PrismGraphmap === 'undefined') return;
+    if (!el.offsetWidth) { const ro = new ResizeObserver(() => { if (el.offsetWidth && el.isConnected) { ro.disconnect(); dayGraph(dots); } }); ro.observe(el); return; }   // the paper may still be hidden at load
+    requestAnimationFrame(() => {
+      try {
+        if (!gDay) gDay = PrismGraphmap.create({ container: el, mode: 'analytical', capabilities: { orbit: true, zInput: false, zRender: true, diatribeSlider: false, clustering: 'individual' } });
+        gDay.mount(el); try { gDay.clearDots && gDay.clearDots(); gDay.clearPaths && gDay.clearPaths(); } catch (e) {}
+        gDay.setCornerLabels && gDay.setCornerLabels({ A: 'Left est.', B: 'Right est.', C: 'Left pop.', D: 'Right pop.' });
+        gDay.setBoundaryVisible && gDay.setBoundaryVisible(false);
+        gDay.setOrbit(0, -40); gDay.setZoom && gDay.setZoom(6.8);
+        const rad = dia => 0.055 + (dia / 100) * 0.38;
+        [[33, .16], [66, .10]].forEach(([dia, op]) => { const r = rad(dia), pts = []; for (let i = 0; i <= 72; i++) { const a = i / 72 * Math.PI * 2; pts.push({ x: 0.5 + r * Math.cos(a), y: 0.5 + r * Math.sin(a), z: 0 }); } gDay.addPath(pts, { id: 'ring-' + dia, color: 0xe9ecf2, opacity: op }); });
+        gDay.addDot(0.5, 0.5, 'T', 0, { color: COL.O, radius: 0.03, shape: 'diamond', label: 'the story' });
+        dots.forEach(d => gDay.addDot(d.x, d.y, d.q, d.z * 0.75, { color: COL[d.k], radius: 0.05, label: `${d.p.program} · Heat ${d.dia} · ${saysWord(d.p.id, d.z)}`, meta: { id: d.p.id } }));
+        gDay.onInspect && gDay.onInspect(d => { if (d && d.id) location.hash = '#pg/' + d.id; });
+      } catch (e) { console.warn('[day map]', e); }
+    });
+  }
+  function renderFOD() {
+    const el = $('#fod'); if (!el) return;
+    const days = [...new Set(paperIndex.map(p => p.date).filter(Boolean))].sort().reverse();
+    if (!days.length) { el.hidden = true; return; }
+    const day = dayPick && days.includes(dayPick) ? dayPick : days[0];
+    const items = paperIndex.filter(p => p.date === day && paperFull[p.id]);
+    // the map: the real graphmap. Side = which corner; distance from the centre = heat; height = what it says (up yes, down no).
+    const QD = { LI: ['A', -1, -1], RI: ['B', 1, -1], LP: ['C', -1, 1], RP: ['D', 1, 1] };
+    const dots = [];
+    items.forEach((p, n) => { const st = paperFull[p.id].scoreboard.stations || {}; Object.keys(st).forEach(k => { if (!st[k] || !QD[k]) return; const [q, ux, uy] = QD[k]; const r = 0.055 + ((st[k].dia || 0) / 100) * 0.38; const ang = (45 + ((n * 0.37) % 1 - 0.5) * 30) * Math.PI / 180; dots.push({ p, k, q, x: 0.5 + ux * r * Math.cos(ang), y: 0.5 + uy * r * Math.sin(ang), z: st[k].readZ || 0, dia: st[k].dia }); }); });
+    // the readout: plain sentences, per topic
+    const byT = {}; items.forEach(p => { const t = topicOf(p.id); const k = t ? t.key : 'other'; (byT[k] = byT[k] || { t, ps: [] }).ps.push(p); });
+    const n = x => x === 1 ? 'One' : x === 2 ? 'Two' : x === 3 ? 'Three' : x === 4 ? 'Four' : x === 5 ? 'Five' : String(x);
+    const lines = Object.values(byT).map(({ t, ps }) => {
+      const z = p => paperFull[p.id].scoreboard.readZ;
+      const names = arr => arr.length > 3 ? n(arr.length) + ' segments' : arr.map(p => p.program).join(arr.length === 2 ? ' and ' : ', ').replace(/, ([^,]*)$/, ', and $1');
+      const neg = ps.filter(p => z(p) < -0.15), pos = ps.filter(p => z(p) > 0.15), mix = ps.filter(p => !neg.includes(p) && !pos.includes(p));
+      const parts = []; if (neg.length) parts.push(`${names(neg)} said ${t ? t.neg : 'no'}.`); if (pos.length) parts.push(`${names(pos)} said ${t ? t.pos : 'yes'}.`); if (mix.length) parts.push(`${names(mix)} ${mix.length === 1 ? 'was' : 'were'} mixed.`);
+      return `<p><b>${t ? t.name : 'Other'}</b> — ${parts.join(' ')}</p>`;
+    });
+    const hot = items.slice().sort((a, b) => (paperFull[b.id].scoreboard.dia || 0) - (paperFull[a.id].scoreboard.dia || 0))[0];
+    const clear = items.slice().sort((a, b) => (paperFull[b.id].scoreboard.lumens || 0) - (paperFull[a.id].scoreboard.lumens || 0))[0];
+    if (items.length > 1) lines.push(`<p class="x">Most heated: <b>${hot.program}</b> (${paperFull[hot.id].scoreboard.dia}). Clearest: <b>${clear.program}</b> (${paperFull[clear.id].scoreboard.lumens}).</p>`);
+    el.hidden = false;
+    el.className = 'day';
+    el.innerHTML = `<div class="dd">${days.slice(0, 10).map(d => `<a href="#" data-day="${d}" class="${d === day ? 'on' : ''}">${dlab(d)}</a>`).join('')}</div>
+      <div class="db"><div class="dmapwrap"><div id="dayMap" class="dmap"></div><div class="dlist">${dots.map(d => `<a href="#pg/${d.p.id}"><i style="background:${COLH[d.k]}"></i>${d.p.program}<span>Heat ${d.dia} · ${saysWord(d.p.id, d.z)}</span></a>`).join('')}</div></div><div class="rd"><div class="when">${dlab(day)}</div>${lines.join('')}<div class="key">Each dot is one segment. Side: where it comes from. Further out: more heated. Higher: says yes; lower: says no. Drag to turn it.</div></div></div>`;
+    dayGraph(dots);
+    el.querySelectorAll('.dd a').forEach(a => a.addEventListener('click', e => { e.preventDefault(); dayPick = a.dataset.day; renderFOD(); }));
+  }
+
+  function renderFloor() {
+    const el = $('#floor'); if (!el) return;
+    const today = paperIndex.length ? paperIndex.map(p => p.date).sort().pop() : null;
+    const f = today ? floorFor(today) : null;
+    if (!f) { el.hidden = true; return; }
+    el.hidden = false;
+    el.innerHTML = `<span class="k">The floor</span><span><b class="RIc">${f.dia}</b> <span class="k">Dia</span></span><span><b>${f.lumens}</b> <span class="k">Lumens</span></span><span class="k">RI · ${f.how} · ${f.n} cut${f.n === 1 ? '' : 's'} · as of ${f.asOf}</span><span>${f.programs}.</span><span class="tut">Every parallelogram on this page is read against the floor in force on its date — a station reading, not neutral ground.</span>`;
+  }
+
+  // ── the front page ──
+  async function loadFront() {
+    const el = $('#front');
+    try { paperIndex = await fetch('../data/press/index.json', { cache: 'no-store' }).then(r => r.json()).then(j => j.pieces || []); } catch (e) { paperIndex = []; }
+    paperIndex.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+    // the lead is the newest full read, not a beta lede and not the floor (the floor has its own strip)
+    { const li = paperIndex.findIndex(p => !p.partial && p.kind !== 'baseline'); if (li > 0) paperIndex.unshift(paperIndex.splice(li, 1)[0]); }
+    if (!paperIndex.length) { el.innerHTML = '<div class="empty">Nothing on the wire yet. The first cut goes in data/press/index.json.</div>'; return; }
+    // the front page reads each piece's scoreboard for its figure
+    const full = await Promise.all(paperIndex.map(p => fetch('../data/press/' + p.id + '.json', { cache: 'no-store' }).then(r => r.json()).catch(() => null)));
+    paperFull = {}; paperIndex.forEach((p, i) => { if (full[i]) paperFull[p.id] = full[i]; });
+    try { PLAIN = Object.assign(PLAIN, await fetch('../data/press/plain.json', { cache: 'no-store' }).then(r => r.json())); } catch (e) {}
+    try { seen = await fetch('../data/press/objects_seen.json', { cache: 'no-store' }).then(r => r.json()).then(j => j.sightings || []); } catch (e) { seen = []; }
+    renderFloor(); renderFOD();
+    el.innerHTML = paperIndex.map((p, i) => {
+      const D = full[i], sb = D ? D.scoreboard : { stations: {} };
+      const beta = p.partial || (D && D.partial);
+      const corners = ['LI', 'RI', 'LP', 'RP'].filter(k => sb.stations && sb.stations[k]);
+      const said = (PLAIN.pieces[p.id] || {}).said || '';
+      return `<a class="card" href="#pg/${p.id}">
+        <div class="o"><b>${p.program || (D && D.source.program) || ''}</b> · ${dlab(p.date)} · ${corners.map(stName).join(' + ')}${beta ? ' · opening only (paywall)' : ''}</div>
+        <div class="h">${headline(p, D)}</div>
+        ${said ? `<div class="sd">${said}</div>` : ''}
+        <div class="r"><span>Heat <b>${sb.dia != null ? sb.dia : '—'}</b></span><span>Says <b class="${saysCls(sb.readZ)}">${saysWord(p.id, sb.readZ)}</b></span><span>Clarity <b>${sb.lumens != null ? sb.lumens : '—'}</b></span></div></a>`;
+    }).join('');
+  }
+
+  // ── a piece on the real graphmap ──
+  let g = null, gMounted = false, pieceCleanup = null;
+  async function loadPiece(id) {
+    if (pieceCleanup) { pieceCleanup(); pieceCleanup = null; }
+    let D; try { D = await fetch('../data/press/' + id + '.json', { cache: 'no-store' }).then(r => r.json()); } catch (e) { $('#pTitle').textContent = 'No such piece.'; return; }
+    const meta = paperIndex.find(p => p.id === id) || {};
+    crumb('PG · ' + (D.source.program || '') + ' · ' + D.source.date);
+    $('#pTitleBar').textContent = D.source.program || D.title;
+    $('#pKicker').textContent = `${D.scoreboard.baseline ? 'Baseline' : 'Parallelogram'}${D.partial ? ' · ' + D.partial + ' only' : ''}${D.horizon && D.horizon !== 'US' ? ' · ' + D.horizon + ' horizon' : ''} · ${D.arc} · ${D.source.program} · cut ${D.source.date}${D.status === 'claude-draft' ? ' · Claude draft, scores pending Sailor\'s ruling' : ''}`;
+    $('#pKicker').textContent = `${D.source.program} · ${dlab(D.source.date)} · ${Object.keys(D.scoreboard.stations || {}).filter(k => D.scoreboard.stations[k]).map(stName).join(' + ')}${D.partial ? ' · opening only (paywall)' : ''}${D.status === 'claude-draft' ? ' · draft scores' : ''}`;
+    $('#pTitle').textContent = D.source.title || D.title;
+    $('#pDek').textContent = (PLAIN.pieces[id] || {}).said || meta.dek || '';
+    const P = D.positions === 'paragraphs'; const fpos = P ? (t => '¶' + t) : fmt;
+    $('#tlen').textContent = P ? '¶' + (D.source.paragraphs || D.source.length) : fmt(D.source.length);
+    const S = D.scoreboard, st = S.stations;
+    // the board: five numbers — glyph · value · one gloss. The long notes live behind lit words (the Codex), not on the board.
+    const f = S.baseline ? null : floorFor(D.source.date);
+    const bn = (glyph, v, l, gloss, cls) => `<div class="bn ${cls || ''}">${gl(glyph)}<div class="v">${v}</div><div class="l">${l}${gloss ? `<i>${gloss}</i>` : ''}</div></div>`;
+    const tp = topicOf(id);
+    $('#board').innerHTML =
+      bn('dia', S.dia, 'Heat', '') +
+      bn(S.readZ < 0 ? 'zneg' : 'z', `<span class="says ${saysCls(S.readZ)}">${saysWord(id, S.readZ)}</span>`, 'Says', '') +
+      bn('lumens', `<span class="film">${S.lumens}</span>`, 'Clarity', '');
+    if (false) $('#board').innerHTML =
+      bn('lumens', `<span class="film">${S.lumens}</span>`, '<span class="word" data-w="lumens">Lumens</span>', 'of the light gets through') +
+      bn('dia', S.dia, '<span class="word" data-w="dia">Dia</span>', S.tier) +
+      bn(S.readZ < 0 ? 'zneg' : 'z', `${zs(S.readZ)}`, 'read <span class="word" data-w="z">z</span>', S.readZ == null ? '' : S.readZ < -0.05 ? 'does not deliver' : S.readZ > 0.05 ? 'delivers' : 'even') +
+      bn('declared', zs(S.declaredZ), 'declared z', S.declaredZ == null ? 'no principal in the room' : 'what the principal said') +
+      (S.baseline
+        ? bn('floor', '<span style="font-size:20px">this is it</span>', 'the floor', 'the RI baseline', 'RIc')
+        : f ? bn('floorline', `${f.dia}<small>· ☼ ${f.lumens}</small>`, 'against the <span class="word" data-w="floor">floor</span>', `${f.how} · ${f.asOf.slice(5)}`) : bn('floorline', '—', 'the floor', 'none in force'));
+    // the marks line: the transform, the split, the corners, beta — each a lit word that opens its note
+    PIECE_CODEX['transform:' + id] = ['The transform · ' + D.transform, (D.transformNote || '') + (D.transformNoteLong ? ' ' + D.transformNoteLong : '') + ' — What the discourse did to the object. A Z-assertion credits delivery before it happened; an inversion reads the object through its opposite; a relocation keeps its sign and changes its address.'];
+    PIECE_CODEX['split:' + id] = ['Split · ' + (S.split.topology === 'none' ? 'none' : `${S.split.topology} · ${S.split.station} · ${S.split.strength}`), (S.split.note || 'Where the disagreement sits: between stations, or inside one.')];
+    if (D.partial) PIECE_CODEX['beta:' + id] = ['Beta lede', (D.partialNote || '') + ' Excluded from corner composites and indices until read in full (ruled 10-16).'];
+    if (D.depth) PIECE_CODEX['depth:' + id] = ['Depth · ' + D.depth.value, (D.depth.note || '') + ' ' + (D.depth.what || '')];
+    const mk = (glyph, html, cls) => `<span class="mk ${cls || ''}">${gl(glyph)}${html}</span>`;
+    $('#marks').innerHTML =
+      mk('transform', `<span class="word" data-w="transform:${id}">${D.transform}</span>`) +
+      mk('split', `split <span class="word" data-w="split:${id}">${S.split.topology === 'none' ? 'none' : S.split.topology + ' · ' + S.split.station}</span>`) +
+      ['LI', 'RI', 'LP', 'RP'].map(k => st[k] ? `<span class="mk ${k}c">${gl(k)}<b>${st[k].dia}</b> <span style="color:var(--ink-low)">${st[k].spread[0]}→${st[k].spread[1]}</span></span>` : `<span class="mk ${k}c empty">${gl(k)}—</span>`).join('') +
+      (D.partial ? mk('beta', `<span class="word" data-w="beta:${id}">${D.partial}</span>`, 'beta') : '') +
+      (D.depth ? mk('dia', `depth <span class="word" data-w="depth:${id}">${D.depth.value}</span>`) : '') +
+      (S.mode ? mk('obj', `<span style="color:var(--ink-low)">${S.mode}</span>`) : '');
+
+    // the prose, if the index carries it
+    const mine = seen.filter(x => x.piece === id);
+    $('#prose').innerHTML = (meta.lede ? `<p class="tut">${meta.lede}</p>` : ''); $('#seenfold').innerHTML = (mine.length ? `<div class="seen"><div class="k">Objects on this tape · ${mine.length} · sorted by the schema</div><ul>${mine.map(x => {
+      const cand = x.match && x.match.candidate; const ds = (x.match && x.match.dataset) || 'none';
+      return `<li><span class="ds${cand ? ' cand' : ''}">${cand ? 'candidate' : ds}</span><span>${x.object}${x.analog && x.analog.ref ? ` <span class="m">· ${x.analog.type || 'analog'}: ${x.analog.ref}</span>` : ''}${x.match && x.match.as ? ` <span class="m">· ${x.match.as}</span>` : ''}${x.scored ? '' : ' <span class="m">· not scored</span>'}</span></li>`; }).join('')}</ul></div>` : '');
+
+    // graphmap — built once, re-used per piece
+    const mapEl = $('#map');
+    if (!g) {
+      g = PrismGraphmap.create({ container: mapEl, mode: 'analytical', capabilities: { orbit: true, zInput: true, zRender: true, diatribeSlider: false, clustering: 'individual' } });
+      g.mount(mapEl); gMounted = true;
+      g.setCornerLabels && g.setCornerLabels({ A: 'LI', B: 'RI', C: 'LP', D: 'RP' });
+      g.setBoundaryMode && g.setBoundaryMode('dual');
+      g.setBoundaryVisible && g.setBoundaryVisible(false);
+      g.setOrbit(0, -40); g.setZoom && g.setZoom(6.8);
+    } else { try { g.clearDots && g.clearDots(); g.clearPaths && g.clearPaths(); } catch (e) {} }
+    g.loadTrace(D.trace);
+    // the diagnostic boundaries (blueprint §3): the fluid ring at Dia 33, the denominated ring at 66, the floor as a dashed ring — same radius rule as press-build.place()
+    (function rings() {
+      const rad = dia => 0.055 + (dia / 100) * 0.38;
+      const ring = (dia, opts) => { const r = rad(dia), pts = []; for (let i = 0; i <= 72; i++) { const a = i / 72 * Math.PI * 2; pts.push({ x: 0.5 + r * Math.cos(a), y: 0.5 + r * Math.sin(a), z: 0 }); } g.addPath(pts, Object.assign({ id: 'ring-' + dia }, opts)); };
+      ring(33, { color: 0xe9ecf2, opacity: .16 }); ring(66, { color: 0xe9ecf2, opacity: .10 });
+      if (!S.baseline && f) ring(f.dia, { color: COL.RI, opacity: .55, dashed: true, id: 'ring-floor' });
+    })();
+    const L = D.lines;
+    L.forEach((p, i) => {
+      const col = p.station === 'O' ? COL.O : COL[p.station];
+      g.addDot(p.normX, p.normY, p.quadrant, p.normZ, { color: col, radius: p.station === 'O' ? 0.03 : 0.045, shape: p.station === 'O' ? 'diamond' : undefined, label: `${p.who} ${fpos(p.t)}`, meta: { i, t: p.t, who: p.who, dia: p.dia, z: p.z, mode: p.mode, touch: p.touch } });
+      g.setDotVisible(i, false);
+    });
+    const speakers = [...new Set(L.filter(p => p.station !== 'O').map(p => p.who))];
+    speakers.forEach(w => { const st0 = L.find(p => p.who === w).station; g.addPath([], { id: w, color: COL[st0], opacity: .55, dashed: true }); });
+
+    let activeIdx = -1, pathsOn = true;
+    function render(tsec, focus) {
+      $('#tnow').textContent = fpos(tsec);
+      const scr = $('#scrubber'); if (+scr.value !== tsec) scr.value = tsec;
+      const seen = {};
+      L.forEach((p, i) => { const on = p.t <= tsec; g.setDotVisible(i, on); g.setDotEmphasis(i, i === focus ? 1.8 : 1); if (on && p.station !== 'O') (seen[p.who] = seen[p.who] || []).push({ x: p.normX, y: p.normY, z: p.normZ }); });
+      speakers.forEach(w => g.setPath(w, pathsOn ? (seen[w] || []) : []));
+      const f = L[focus]; if (!f) return;
+      $('#readout').innerHTML = `<b>${fpos(f.t)} · ${D.names[f.who]}${f.station === 'O' ? '' : ' · ' + f.station}</b> — <span class="q">${f.quote.replace(/[«»]/g, '')}</span><br>` +
+        (f.dia == null ? `<b>constitutive</b> — the words are the object (or its shadow); unscored. Declared z ${zs(f.z)}.` : `Dia <b>${f.dia}</b> (${tier(f.dia)}) · z <b>${zs(f.z)}</b>${f.zInferred ? ' (inferred)' : ''} ${f.mode && f.mode !== '—' ? ' · ' + f.mode : ''} · touches <b>${f.touch}</b>. ${f.note || ''}`);
+    }
+    const scr = $('#scrubber'); scr.max = D.source.length; scr.value = 0;
+    const onScrub = e => { const t = +e.target.value; let i = -1; L.forEach((p, k) => { if (p.t <= t) i = k; }); if (i >= 0 && i !== activeIdx) { activeIdx = i; cards[i].scrollIntoView({ block: 'center' }); } render(t, i); };
+    scr.oninput = onScrub;
+    $('#showTrace').onclick = e => { e.preventDefault(); const on = e.currentTarget.classList.toggle('on'); g.setTraceVisible(on); };
+    $('#showPaths').onclick = e => { e.preventDefault(); pathsOn = e.currentTarget.classList.toggle('on'); render(+scr.value, activeIdx); };
+    $('#recenter').onclick = e => { e.preventDefault(); g.recenter && g.recenter(); };
+    g.onInspect && g.onInspect(d => { if (d && d.i != null && cards[d.i]) cards[d.i].scrollIntoView({ block: 'center' }); });
+
+    // the tape
+    const tape = $('#tape'); tape.innerHTML = '';
+    let lastChapter = null;
+    L.forEach((p, i) => {
+      if (p.chapter && p.chapter !== lastChapter) { const h = document.createElement('h2'); h.textContent = p.chapter; tape.appendChild(h); lastChapter = p.chapter; }
+      const d = document.createElement('div'); d.className = 'line'; d.dataset.i = i;
+      const q = p.quote.replace(/«(.*?)»/g, '<span class="hi">$1</span>');
+      const ds = p.dia == null ? `<span><b>unscored</b> · constitutive</span>` : `<span>Dia <b>${p.dia}</b> · ${tier(p.dia)}</span>`;
+      const zz = p.z == null ? `<span>z —</span>` : `<span class="z ${p.z >= 0 ? 'pos' : 'neg'}">z ${zs(p.z)}${p.zInferred ? '<small>·inf</small>' : ''}</span>`;
+      d.innerHTML = `<div class="meta"><span class="ts">${fpos(p.t)}</span><span class="chip ${p.station}">${p.station === 'O' ? '@O' : p.station}</span><span>${D.names[p.who]}</span></div><q>${q}</q><div class="scores">${ds}${zz}<span class="touch tg">${TOUCH_GLYPH[p.touch] ? gl(TOUCH_GLYPH[p.touch]) : ''}${p.touch}</span>${p.mode && p.mode !== 'constitutive' && p.mode !== '—' ? `<span>${p.mode}</span>` : ''}</div>${p.note ? `<div class="note">${p.note}</div>` : ''}`;
+      d.addEventListener('click', () => { activeIdx = i; render(p.t, i); });
+      tape.appendChild(d);
+    });
+    const cards = [...tape.querySelectorAll('.line')];
+    $('#pClose').onclick = () => { location.hash = '#pg'; };
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { const i = +e.target.dataset.i; cards.forEach(c => c.classList.toggle('active', +c.dataset.i === i)); if (i !== activeIdx) { activeIdx = i; const hi = e.target.querySelector('.hi'); if (hi) { hi.classList.remove('film', 'quick'); void hi.offsetWidth; hi.classList.add('film', 'quick'); } } render(L[i].t, i); } }), { root: matchMedia('(max-width: 880px)').matches ? null : $('#tapewin'), rootMargin: '-42% 0px -50% 0px' });
+    cards.forEach(c => io.observe(c));
+    $('#pFoot').textContent = `Lumens is derived: the mean, over scored lines, of (1 − Dia/100) for lines that touch the record (O · T · B · M · X), zero for lines that don’t; constitutive lines excluded. z marked ·inf is inferred from the words under the z rule (every line carries one). Source transcript and cut in Parameters/09_Parallelograms/Press.`;
+    render(0, -1);
+    pieceCleanup = () => { io.disconnect(); };
+  }
+
+
+  // ── the marquee + the burns (10-17): the front page is the SST ──
+  // The determination is the villa's, shared through src/js/tracker-core.js — the needle and the pedestal read the same number.
+  let sstData = null;
+  async function sstLoad() {
+    if (sstData) return sstData;
+    const get = f => fetch('../data/active/' + f, { cache: 'no-store' }).then(r => r.ok ? r.json() : null).catch(() => null);
+    const [A, S] = await Promise.all([get('active.json'), get('settlement.json')]);
+    const T = A && window.PrismTracker ? window.PrismTracker.compute(A, S) : null;
+    sstData = { A, S, T, V: window.PrismTracker ? window.PrismTracker.verdict(T) : { word: '—' } };
+    return sstData;
+  }
+  const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const mlab = p => { const m = /^(\d{4})-(\d{2})/.exec(p || ''); return m ? MON[+m[2] - 1] + ' ' + m[1] : (p || '—'); };
+  const pct = (x, d) => x == null ? '—' : (x * 100).toFixed(d == null ? 1 : d);
+  // the dial: 50% at the left, 100% at the right — the share has lived above half the trade, so the dial starts there and says so
+  const LO = 50, HI = 100, CX = 300, CY = 300;
+  const ang = v => Math.PI * (1 - (Math.max(LO, Math.min(HI, v)) - LO) / (HI - LO));
+  const pt = (v, r) => [CX + r * Math.cos(ang(v)), CY - r * Math.sin(ang(v))];
+  const rot = v => (Math.max(LO, Math.min(HI, v)) - LO) / (HI - LO) * 180;
+  function dialSVG(T) {
+    const now = T && T.now.dollarShare != null ? T.now.dollarShare * 100 : null, ago = T && T.ago.dollarShare != null ? T.ago.dollarShare * 100 : null;
+    let o = `<svg class="dial" viewBox="0 0 600 330" aria-hidden="true"><defs>
+      <linearGradient id="mqArc" x1="0" x2="1"><stop offset="0" stop-color="var(--film-0)"/><stop offset=".5" stop-color="var(--film-2)"/><stop offset="1" stop-color="var(--film-4)"/></linearGradient>
+      <radialGradient id="mqGlow"><stop offset="0" stop-color="#ffe9a8" stop-opacity=".9"/><stop offset="1" stop-color="#ffe9a8" stop-opacity="0"/></radialGradient></defs>`;
+    // the track
+    const [ax, ay] = pt(LO, 230), [bx, by] = pt(HI, 230);
+    o += `<path d="M${ax},${ay} A230,230 0 0 1 ${bx},${by}" fill="none" stroke="url(#mqArc)" stroke-width="3" opacity=".7"/>`;
+    // the marquee bulbs: one per point; lit up to the reading
+    for (let v = LO; v <= HI; v++) { const [x, y] = pt(v, 262); const lit = now != null && v <= now; o += `<circle class="bulb" data-v="${v}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${v % 10 ? 3 : 4.4}" fill="${lit ? '#ffe9a8' : 'rgba(233,236,242,.14)'}"/>` + (lit && v % 5 === 0 ? `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="11" fill="url(#mqGlow)" opacity=".5"/>` : ''); }
+    // the scale
+    for (let v = LO; v <= HI; v += 5) { const [x1, y1] = pt(v, 230), [x2, y2] = pt(v, v % 10 ? 220 : 212); o += `<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="rgba(233,236,242,.5)" stroke-width="${v % 10 ? 1 : 1.6}"/>`; if (v % 10 === 0) { const [tx, ty] = pt(v, 192); o += `<text x="${tx.toFixed(1)}" y="${(ty + 4).toFixed(1)}" text-anchor="middle" font-family="var(--mono)" font-size="12" fill="rgba(233,236,242,.55)">${v}</text>`; } }
+    // the months: the trail the needle has walked
+    if (T) T.months.forEach((m, i) => { if (m.dollarShare == null) return; const [x, y] = pt(m.dollarShare * 100, 240); const a = .25 + .75 * (i / Math.max(1, T.months.length - 1)); o += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.2" fill="#e9ecf2" opacity="${a.toFixed(2)}"><title>${mlab(m.period)} · ${pct(m.dollarShare)}%</title></circle>`; });
+    // the ghost: where the needle stood at the start of the window
+    if (ago != null) { const [gx, gy] = pt(ago, 205); o += `<line x1="${CX}" y1="${CY}" x2="${gx.toFixed(1)}" y2="${gy.toFixed(1)}" stroke="rgba(233,236,242,.35)" stroke-width="2" stroke-dasharray="5 5"/>`; const [lx, ly] = pt(ago, 290); o += `<text x="${lx.toFixed(1)}" y="${(ly - 2).toFixed(1)}" text-anchor="middle" font-family="var(--mono)" font-size="10.5" letter-spacing="1" fill="rgba(233,236,242,.5)">${mlab(T.ago.period).toUpperCase()} · ${ago.toFixed(1)}</text>`; }
+    // the needle (drawn at 50, turned to the reading)
+    o += `<g class="needle" id="mqNeedle" style="transform:rotate(${rot(ago != null ? ago : LO)}deg)"><polygon points="${CX},${CY - 5} ${CX - 228},${CY} ${CX},${CY + 5} ${CX + 26},${CY}" fill="#f2efe6"/><circle cx="${CX - 228}" cy="${CY}" r="3" fill="#ffe9a8"/></g>`;
+    o += `<circle cx="${CX}" cy="${CY}" r="13" fill="#0c0b09" stroke="url(#mqArc)" stroke-width="2"/><circle cx="${CX}" cy="${CY}" r="4" fill="#e8d9a8"/>`;
+    return o + '</svg>';
+  }
+  async function loadMarquee() {
+    const el = $('#marquee'); if (!el || el.dataset.done) return; el.dataset.done = '1';
+    const { A, T, V } = await sstLoad();
+    const now = T && T.now.dollarShare != null ? T.now.dollarShare * 100 : null;
+    const d = T ? T.delta * 100 : null;
+    el.innerHTML = `<div><div class="q">Supply Shock Tracker</div><div class="eb" style="margin-top:6px">the dollar’s share of traded energy</div></div>
+      ${dialSVG(T)}
+      <div class="read"><div class="num film loop">${now == null ? '—' : now.toFixed(1)}<small>%</small></div>
+        <div class="vd ${V.word}"><b>${V.word}</b><span>${d == null ? '' : (d > 0 ? '+' : '−') + Math.abs(d).toFixed(1) + ' pts since ' + mlab(T.ago.period)}</span></div>
+        <div class="den">${T ? `of traded energy settled in dollars · ${mlab(T.now.period)} · ${pct(T.now.namedShare, 0)}% of trade named · ${pct(T.now.defaultShare, 0)}% of that by default rule · ${T.now.panelPresent.length}/${window.PrismTracker.PANEL.length} reporters` : 'the share cannot be read yet'}</div></div>`;
+    if (now != null) requestAnimationFrame(() => requestAnimationFrame(() => { const n = $('#mqNeedle'); if (n) n.style.transform = `rotate(${rot(now)}deg)`; }));
+    loadBurns(A, T);
+  }
+  // a frame is lit ○ when it holds a reading, flared ✶ when it moved past its line since the last point, dark ◌ when the series isn't there.
+  // (the Burns spec's states are for Readings; on the data strip they are a proposal — Sailor's ruling)
+  function loadBurns(A, T) {
+    const reel = $('#reel'); if (!reel) return;
+    const ser = (blk, key) => { try { const p = blk.series[key].points; return p && p.length ? { last: p[p.length - 1], prev: p.length > 1 ? p[p.length - 2] : null } : null; } catch (e) { return null; } };
+    const chg = (a, b, unit, dp, line) => { if (a == null || b == null) return { t: '', flare: false }; const x = a - b; return { t: `<span class="${x > 0 ? 'up' : x < 0 ? 'dn' : ''}">${x > 0 ? '▲' : x < 0 ? '▼' : '■'} ${Math.abs(x).toFixed(dp)}${unit}</span>`, flare: line != null && Math.abs(x) >= line }; };
+    const F = [];
+    const frame = (k, v, d, when, href, flare) => F.push({ k, v, d, when, href, st: v == null ? 'dark' : flare ? 'flared' : 'lit' });
+    if (T) {
+      const prev = T.months[T.nowIndex - 1];
+      const c = chg(T.now.dollarShare * 100, prev && prev.dollarShare != null ? prev.dollarShare * 100 : null, ' pts', 1, 1);
+      frame('$ share', pct(T.now.dollarShare) + '<small>%</small>', c.t + ' m/m', mlab(T.now.period), '#sst', c.flare);
+      frame('12-month', (T.delta > 0 ? '+' : '−') + Math.abs(T.delta * 100).toFixed(1) + '<small>pts</small>', 'from ' + pct(T.ago.dollarShare) + '%', mlab(T.ago.period) + '→', '#sst', Math.abs(T.delta) >= .03);
+      frame('named', pct(T.now.namedShare, 0) + '<small>%</small>', 'of trade with a rule', mlab(T.now.period), '#sst', false);
+      frame('Gulf → US', pct(T.now.us.gulfShare, 0) + '<small>%</small>', 'of US imports', mlab(T.now.period), '#sst', false);
+      frame('Americas → US', pct(T.now.us.hemiShare, 0) + '<small>%</small>', 'of US imports', mlab(T.now.period), '#sst', false);
+    } else frame('$ share', null, 'no reading', '', '#sst', false);
+    const price = (key, k, dp, pre, lineFrac) => { const s = A && A.price ? ser(A.price, key) : null; if (!s) return frame(k, null, 'no series', '', '#wire', false); const c = chg(s.last[1], s.prev && s.prev[1], '', dp, s.prev ? Math.abs(s.prev[1]) * lineFrac : null); frame(k, pre + Number(s.last[1]).toFixed(dp), c.t, s.last[0].slice(5), '#wire', c.flare); };
+    price('RBRTE', 'Brent', 2, '$', .03); price('RWTC', 'WTI', 2, '$', .03); price('EMM_EPMR_PTE_NUS_DPG', 'US gasoline', 2, '$', .03);
+    const flow = (key, k) => { const s = A && A.realization && A.realization.weekly ? ser(A.realization.weekly, key) : null; if (!s) return frame(k, null, 'no series', '', '#wire', false); const c = chg(s.last[1] / 1000, s.prev && s.prev[1] / 1000, 'M', 2, s.prev ? Math.abs(s.prev[1] / 1000) * .05 : null); frame(k, (s.last[1] / 1000).toFixed(2) + '<small>M bbl/d</small>', c.t + ' w/w', 'wk ' + s.last[0].slice(5), '#wire', c.flare); };
+    flow('WCRIMUS2', 'US crude imports'); flow('WCREXUS2', 'US crude exports');
+    const H = A && A.hypotheses ? A.hypotheses.rows || [] : []; const pend = H.filter(h => /pending/.test(h.outcome || '')).length;
+    frame('the bets', H.length ? `${pend}<small>/ ${H.length} open</small>` : null, H.length - pend ? (H.length - pend) + ' scored' : 'none scored yet', 'PG01', '#sst', false);
+    const g = { lit: '○', flared: '✶', dark: '◌' };
+    const html = F.map(f => `<a class="fr ${f.st}" href="${f.href}"><div class="k"><span>${f.k}</span><i>${g[f.st]}</i></div><div class="v">${f.v == null ? '—' : f.v}</div><div class="d">${f.d || ''}${f.when ? ' · ' + f.when : ''}</div></a>`).join('');
+    reel.innerHTML = html + html;   // twice, so the strip loops without a seam
+  }
+
+  // ── the Parallelogram wordmark: the painted mark on a lit plane, the same way as Prism's ──
+  function filmMark(cv, src, AR, alt) {
+    if (!cv || cv.dataset.done) return; cv.dataset.done = '1'; let renderer;
+    try { if (!window.THREE) throw 0; renderer = new THREE.WebGLRenderer({ canvas: cv, alpha: true, antialias: true }); } catch (e) { cv.outerHTML = `<img src="${src}" alt="${alt}" style="height:80px;max-width:88vw;filter:invert(1) hue-rotate(180deg);mix-blend-mode:screen">`; return; }
+    renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+    const scene = new THREE.Scene(), cam = new THREE.PerspectiveCamera(28, 1, 0.1, 50); cam.position.set(0, 0, 9);
+    const tex = new THREE.TextureLoader().load(src); tex.minFilter = THREE.LinearMipmapLinearFilter; tex.anisotropy = 8;
+    const vert = 'varying vec2 vUv; varying vec3 vN; varying vec3 vV; void main(){ vUv = uv; vec4 mv = modelViewMatrix * vec4(position,1.0); vN = normalize(normalMatrix * normal); vV = normalize(-mv.xyz); gl_Position = projectionMatrix * mv; }';
+    const frag = 'varying vec2 vUv; varying vec3 vN; varying vec3 vV; uniform sampler2D uMap; uniform float uT; void main(){ vec4 s = texture2D(uMap, vUv); float ink = 1.0 - min(1.0, (s.r + s.g + s.b) / 3.0); float f = 1.0 - abs(dot(normalize(vN), normalize(vV))); float t = vUv.x * 0.9 + f * 0.8 + uT; vec3 film = 0.5 + 0.5 * cos(6.2831853 * t * 1.3 / vec3(0.65, 0.532, 0.473)); vec3 col = mix(s.rgb, film, 0.28 + 0.45 * f); float a = max(ink, 1.0 - step(0.985, (s.r + s.g + s.b) / 3.0)) * s.a; gl_FragColor = vec4(col, a); }';
+    const mat = new THREE.ShaderMaterial({ vertexShader: vert, fragmentShader: frag, uniforms: { uMap: { value: tex }, uT: { value: 0 } }, transparent: true, depthWrite: false, side: THREE.DoubleSide });
+    const H = 1.1, plane = new THREE.Mesh(new THREE.PlaneGeometry(AR * H, H, 32, 8), mat); scene.add(plane);
+    const sc = document.createElement('canvas'); sc.width = 256; sc.height = 64; const sx = sc.getContext('2d');
+    const g = sx.createRadialGradient(128, 32, 6, 128, 32, 124); g.addColorStop(0, 'rgba(0,0,0,.42)'); g.addColorStop(1, 'rgba(0,0,0,0)'); sx.fillStyle = g; sx.fillRect(0, 0, 256, 64);
+    const shadow = new THREE.Mesh(new THREE.PlaneGeometry(AR * H * 1.15, H * 1.2), new THREE.MeshBasicMaterial({ map: new THREE.CanvasTexture(sc), transparent: true, depthWrite: false })); shadow.position.set(0.12, -0.26, -0.7); scene.add(shadow);
+    let tiltX = 0, tiltY = 0; const t0 = performance.now();
+    addEventListener('pointermove', e => { tiltX = (e.clientX / innerWidth - 0.5) * 0.5; tiltY = (e.clientY / innerHeight - 0.5) * 0.3; }, { passive: true });
+    addEventListener('deviceorientation', e => { if (e.gamma == null) return; tiltX = Math.max(-.4, Math.min(.4, e.gamma / 50)); tiltY = Math.max(-.25, Math.min(.25, (e.beta - 40) / 70)); }, { passive: true });
+    function size() { const r = cv.getBoundingClientRect(); if (!r.width) return; renderer.setSize(r.width, r.height, false); cam.aspect = r.width / r.height; cam.updateProjectionMatrix(); const want = Math.max(AR * H / 0.94 / cam.aspect, H / 0.8); cam.position.z = want / 2 / Math.tan(14 * Math.PI / 180); }
+    addEventListener('resize', size); size();
+    (function fr() { requestAnimationFrame(fr); if (document.hidden || !cv.isConnected) return; if (!cv.width || cv.width === 300) size(); mat.uniforms.uT.value = (performance.now() - t0) / 1000 * 0.03; plane.rotation.y += (tiltX - plane.rotation.y) * 0.08; plane.rotation.x += (tiltY - plane.rotation.x) * 0.08; shadow.rotation.copy(plane.rotation); renderer.render(scene, cam); })();
+  }
+
+  // ── SST: the reading on the glass ──
+  async function loadSST() {
+    const el = $('#sst'); const esc = x => String(x == null ? '' : x).replace(/</g, '&lt;');
+    const { A, T, V } = await sstLoad();
+    const villa = '../dreamgetty/';
+    const last = pts => (pts && pts.length) ? pts[pts.length - 1] : null;
+    const ser = (blk, key) => { try { return last(blk.series[key].points); } catch (e) { return null; } };
+    const brent = A ? ser(A.price, 'RBRTE') : null, wti = A ? ser(A.price, 'RWTC') : null, diesel = A ? ser(A.price, 'EMM_EPMR_PTE_NUS_DPG') : null;
+    const imp = A ? ser(A.realization.weekly, 'WCRIMUS2') : null, exp = A ? ser(A.realization.weekly, 'WCREXUS2') : null;
+    const H = A && A.hypotheses ? A.hypotheses.rows || [] : []; const pending = H.filter(h => /pending/.test(h.outcome || '')).length;
+    const share = T && T.now.dollarShare != null ? pct(T.now.dollarShare) + '%' : null;
+    const bn = (glyph, v, l, gloss, cls) => `<div class="bn ${cls || ''}">${gl(glyph)}<div class="v">${v == null ? '—' : v}</div><div class="l">${l}${gloss ? `<i>${gloss}</i>` : ''}</div></div>`;
+    el.innerHTML = `
+      <div class="sec first"><div class="eb">the determination</div><h2><span class="orn"></span>Is the dollar getting stronger or weaker?</h2><div class="gloss">One number: the share of traded energy settled in dollars, with its denominator. Flows do not score z — they are the layer z is scored from. Until the pipeline writes the share, the board shows the record it will be computed from.</div></div>
+      <div class="reading">
+        <div class="big"><span class="film loop" id="sstShare">${share || '—'}</span><small>sold in dollars</small></div>
+        <div>
+          <div class="verdict">${T ? esc(V.word) + ' · ' + (T.delta > 0 ? '+' : '−') + Math.abs(T.delta * 100).toFixed(1) + ' pts since ' + mlab(T.ago.period) : 'the share cannot be read yet'}</div>
+          <p style="color:var(--ink-mid);font-size:14px;margin:8px 0 10px">${A && A.frame && A.frame.object ? esc(A.frame.object) : 'PG01 — the petrogas-dollar. The share of traded energy settled in dollars, read over a panel of stations that report every month.'}</p>
+          <div class="g4-tabs"><a class="g4-pill" href="${villa}">🌍 to the pedestal</a><a class="g4-pill quiet" href="#wire">the series</a></div>
+        </div>
+      </div>
+      <div class="piece"><div class="board" style="margin-top:10px">
+        ${bn('z', brent ? '$' + Math.round(brent[1]) : null, 'Brent', brent ? 'spot · ' + brent[0].slice(5) : 'no series')}
+        ${bn('z', wti ? '$' + Math.round(wti[1]) : null, 'WTI', wti ? 'spot · ' + wti[0].slice(5) : 'no series')}
+        ${bn('dia', diesel ? '$' + Number(diesel[1]).toFixed(2) : null, 'US retail gasoline', diesel ? 'regular · EIA · ' + diesel[0].slice(5) : 'no series')}
+        ${bn('T', imp ? Math.round(imp[1] / 1000 * 10) / 10 + '<small>M</small>' : null, 'crude imports', imp ? 'bbl/d · week of ' + imp[0].slice(5) : 'no series')}
+        ${bn('T', exp ? Math.round(exp[1] / 1000 * 10) / 10 + '<small>M</small>' : null, 'crude exports', exp ? 'bbl/d · week of ' + exp[0].slice(5) : 'no series')}
+        ${bn('obj', H.length ? `${pending}<small>/ ${H.length}</small>` : null, 'hypotheses', 'pending on the arc')}
+      </div></div>
+      <div class="sec"><div class="eb">the arc’s bets</div><h2><span class="orn"></span>What PG01 says will happen</h2><div class="gloss">Each hypothesis carries a z target and what would falsify it. The record scores them; the Press only files the record.</div></div>
+      <div class="pub"><div class="rows">${H.map(h => `<div class="row"><div class="d">${esc(h.id)}${h.window ? '<br>' + esc((h.window.start || '').slice(5)) + ' → ' + esc((h.window.end || '').slice(5)) : ''}</div><div class="t">${esc(h.short || h.stated || '')}<small>${esc(h.who || '')}</small></div><div class="s">z target <b>${zs(h.zTarget)}</b> · <b>${esc(h.outcome || '')}</b></div>${h.falsifiedIf ? `<div class="m">falsified if: ${esc(h.falsifiedIf)}</div>` : ''}</div>`).join('') || '<div class="empty">No hypotheses on the arc.</div>'}</div></div>
+      <div class="g4-key" style="margin-top:12px">Built ${A && A.builtAt ? A.builtAt.slice(0, 10) : '—'} · ${A && A.errors && A.errors.length ? A.errors.length + ' pipeline errors' : 'pipeline clean'} · the determination’s history belongs to scripts/active-layer.js (owed)</div>`;
+  }
+
+  // ── WIRE: the record ──
+  async function loadWire() {
+    const el = $('#wire');
+    const files = [
+      ['press/index.json', 'The paper', 'parallelograms, newest first', j => `${(j.pieces || []).length} pieces`],
+      ['active/active.json', 'PG01 · the active layer', 'flows, accruals, events, hypotheses, statements', j => `built ${(j.builtAt || '').slice(0, 10)}`],
+      ['active/events.json', 'Detection series', 'what the stations saw, by as-of date', j => `${(j.rows || []).length} rows`],
+      ['active/statements.json', 'Principals', 'what they said, dated', j => `${(j.rows || []).length} rows`],
+      ['active/hypotheses.json', 'Hypotheses', 'the bets, with what falsifies them', j => `${(j.rows || j || []).length} rows`],
+      ['active/settlement.json', 'Settlement rules', 'the money, with its basis and confidence', j => `${(j.rules || []).length} rules · ${j.updated || ''}`],
+      ['active/accruals.json', 'Accruals', 'the sanctioned theatres, dashed', j => `${(j.rows || []).length} rows`],
+      ['active/price.json', 'Brent', 'the shadow', j => `${(j.rows || j.series || []).length} points`],
+      ['active/detection_gdelt.json', 'GDELT', 'the feed that failed; the shows read better', j => `${(j.rows || []).length} rows`],
+      ['bill_fetch_stats.json', 'Legislation', 'the tethered bills', j => Object.keys(j).length + ' fields'],
+    ];
+    const rows = await Promise.all(files.map(async ([f, n, s, fn]) => { try { const j = await fetch('../data/' + f, { cache: 'no-store' }).then(r => r.ok ? r.json() : null); return `<div class="g4-row"><div class="n">${n}<small>${f}</small></div><div class="d"><b>${j ? fn(j) : 'not on disk'}</b><br>${s}</div></div>`; } catch (e) { return `<div class="g4-row"><div class="n">${n}<small>${f}</small></div><div class="d">unreadable</div></div>`; } }));
+    // the intake tray: what the objects pass shed that the register doesn't hold yet — Sailor promotes or dismisses (Press is objects_seen's only writer)
+    await mediaData();
+    const esc = x => String(x == null ? '' : x).replace(/</g, '&lt;');
+    const tray = (MEDIA.seen || []).filter(x => x.kind === 'register-intake').sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+    const prog = x => { const P = paperIndex.find(p => p.id === x.piece); return P ? `<a href="#pg/${P.id}" style="color:var(--ink-mid)">${esc(P.program)} · ${esc(P.date.slice(5))}</a>` : esc(x.program || ''); };
+    el.innerHTML = `<div class="sec first"><div class="eb">the record</div><h2><span class="orn"></span>Registers and series, with their as-of dates</h2><div class="gloss">Everything Prism collects, before reduction. The paper is made from this.</div></div>` + rows.join('') +
+      `<div class="sec"><div class="eb">the intake tray</div><h2><span class="orn"></span>Objects waiting on a ruling</h2><div class="gloss">Named on a tape, not yet on the register. Each one carries a holder and an analog where the tape gave them; promoting or dismissing is Sailor's.</div></div>
+       <div class="rows pub scrollwin" style="max-height:46vh">${tray.map(x => `<div class="row"><div class="d">${esc(x.date || '')}</div><div class="t">${esc(x.object)}${x.holder ? `<small>${esc(x.holder)}</small>` : ''}</div><div class="s">${(x.analog || {}).type ? `<b>${esc(x.analog.type)}</b> · ` : ''}${esc((x.match || {}).ref || '')}</div><div class="m">${prog(x)}${(x.analog || {}).ref ? ' · analog: ' + esc(x.analog.ref) : ''}</div></div>`).join('') || '<div class="empty">The tray is empty.</div>'}</div>`;
+  }
+
+  // ── the roster: the stated list, by corner, with what has been read this week ──
+  async function loadRoster() {
+    const el = $('#roster'); await mediaData(); let R = MEDIA.roster; if (!R || !R.sources) { el.innerHTML = '<div class="empty">No roster on disk.</div>'; return; }
+    const today = paperIndex.length ? paperIndex.map(p => p.date).sort().pop() : new Date().toISOString().slice(0, 10);
+    const d0 = new Date(today + 'T00:00:00Z'), day = 864e5;
+    const norm = x => (x || '').toLowerCase().replace(/\s*\(.*?\)\s*/g, '').trim();
+    const lastCutFor = src => { const hits = piecesFor(src).map(p => p.date).sort(); return hits.pop() || src.lastCut; };
+    const corners = [['LI', 'A', 'left · institutional'], ['RI', 'B', 'right · institutional'], ['LP', 'C', 'left · populist'], ['RP', 'D', 'right · populist']];
+    const html = corners.map(([k, q, label]) => {
+      const list = R.sources.filter(s => s.station === k || (s.station || '').split('+').includes(k));
+      const ruled = list.filter(s => s.status === 'ruled');
+      const readWeek = list.filter(s => { const c = lastCutFor(s); return c && (d0 - new Date(c + 'T00:00:00Z')) <= 7 * day; }).length;
+      const thin = ruled.length < (R.targetPerQuadrant || 3);
+      return `<div class="corner${thin ? ' thin' : ''}"><div class="h"><span><b class="${k}c">${k}</b> · ${label}</span><small>${ruled.length} ruled · ${list.length - ruled.length} proposed · ${readWeek} read this week</small></div>
+        ${list.map(s => { const c = lastCutFor(s); const age = c ? Math.round((d0 - new Date(c + 'T00:00:00Z')) / day) : null;
+          const st = s.status !== 'ruled' ? ['proposed', 'proposed'] : c == null ? ['never', 'not yet cut'] : age <= 7 ? ['read', `cut ${c}`] : ['stale', `last ${c}`];
+          const pm = pubModel(s); const nums = pm.lum != null ? ` · ☼ <b style="color:var(--ink)">${pm.lum}</b> · Dia <b style="color:var(--ink)">${pm.dia}</b>${pm.z != null ? ` · z <b style="color:var(--ink)">${zs(pm.z)}</b>` : ''}${pm.betaOnly ? ' β' : ''}` : '';
+          return `<div class="src"><div class="n"><a href="#pub/${s.id}" style="text-decoration:none">${s.name}</a>${s.role === 'baseline' ? '<small>BASELINE</small>' : ''}${s.horizon && s.horizon !== 'US' && s.horizon !== '—' ? `<small>${s.horizon}</small>` : ''}</div><div class="st ${st[0]}">${st[1]}</div><div class="m">${s.cadence} · ${s.route}${nums}</div></div>`; }).join('')}
+      </div>`; }).join('');
+    let IDX = null; try { IDX = await fetch('../data/press/indices.json', { cache: 'no-store' }).then(r => r.json()); } catch (e) {}
+    const idxHtml = IDX && IDX.indices ? IDX.indices.map(x => `<div class="corner" style="grid-column:1/-1;border-left:2px solid #e8d9a8"><div class="h"><span><b>${x.name}</b> · index v${x.version} · ${x.status}</span><small>${x.cadence} · object: ${x.object}</small></div>${x.members.map(m => `<div class="src"><div class="n">${m.source}<small>${m.corner}</small></div><div class="st ${m.status && m.status.startsWith('ruled') ? 'read' : 'proposed'}">${m.status}</div><div class="m">${m.route}${m.stationRuling ? ' · ruling: ' + m.stationRuling : ''}${m.access ? ' · ' + m.access : ''}</div></div>`).join('')}<div class="src"><div class="n">floor</div><div class="st read">separate</div><div class="m">${x.floorMember} — the floor is vertical (everyone against the terminal), the index is horizontal (the four corners against each other)</div></div></div>`).join('') : '';
+    const wire = R.sources.filter(s => s.station === 'wire');
+    el.innerHTML = `<div class="sec first"><div class="eb">the roster</div><h2><span class="orn"></span>Four corners, three voices each</h2><div class="gloss">A corner is an interval: three or more ruled voices per quadrant, so a station’s spread can be seen. Thin corners are outlined. Each voice carries its Lumens, Dia and z from its cuts; open one for everything we have on it.</div></div>` + html + `<div class="sec"><div class="eb">the indices</div><h2><span class="orn"></span>Fixed baskets, swept daily</h2><div class="gloss">An index reads one object through the same four publications every day; the composite per corner is the day’s value. Beta ledes never enter it.</div></div>` + idxHtml + (wire.length ? `<div class="corner" style="grid-column:1/-1"><div class="h"><span><b>the wire</b> · the record's register</span><small>never a station reading</small></div>${wire.map(s => `<div class="src"><div class="n">${s.name}</div><div class="st read">continuous</div><div class="m">${s.notes}</div></div>`).join('')}</div>` : '');
+  }
+
+
+  // ── the media we track: a standing tile per publication, refreshed by every sweep (Sailor 10-16) ──
+  const MEDIA = { roster: null, sweeps: null, seen: null };
+  const normName = x => (x || '').toLowerCase().replace(/\s*\(.*?\)\s*/g, '').replace(/[^a-z0-9 ]/g, '').trim();
+  const piecesFor = src => { const names = [src.name, ...(src.programs || [])].map(normName); return paperIndex.filter(p => { const q = normName(p.program); return q && names.includes(q); }); };
+  const mean = xs => xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : null;
+  async function mediaData() {
+    if (!MEDIA.roster) { try { MEDIA.roster = await fetch('../data/press/roster.json', { cache: 'no-store' }).then(r => r.json()); } catch (e) { MEDIA.roster = { sources: [] }; } }
+    if (!MEDIA.sweeps) {
+      let dates = []; try { dates = (await fetch('../data/press/sweeps/index.json', { cache: 'no-store' }).then(r => r.json())).dates || []; } catch (e) {}
+      const all = await Promise.all(dates.slice().sort().map(async d => { try { return await fetch(`../data/press/sweeps/sweep_${d}.json`, { cache: 'no-store' }).then(r => r.json()); } catch (e) { return null; } }));
+      MEDIA.sweeps = all.filter(Boolean);
+    }
+    if (!MEDIA.seen) { try { MEDIA.seen = (await fetch('../data/press/objects_seen.json', { cache: 'no-store' }).then(r => r.json())).sightings || []; } catch (e) { MEDIA.seen = []; } }
+    return MEDIA;
+  }
+  function pubModel(src) {
+    const pieces = piecesFor(src).slice().sort((a, b) => (a.date < b.date ? 1 : -1));
+    const full = pieces.filter(p => !p.partial), ledes = pieces.filter(p => p.partial);
+    const basis = full.length ? full : ledes;
+    const lum = basis.length ? Math.round(mean(basis.map(p => p.lumens).filter(x => x != null))) : null;
+    const dia = basis.length ? Math.round(mean(basis.map(p => p.dia).filter(x => x != null))) : null;
+    const lead = basis.filter(p => p.arc === 'PG01' && p.readZ != null);
+    const z = lead.length ? +mean(lead.map(p => p.readZ)).toFixed(2) : null;
+    const lastCut = pieces[0] ? pieces[0].date : src.lastCut || null;
+    const sw = (MEDIA.sweeps || []).map(S => ({ date: S.date, p: src.sweepKey ? (S.publications || {})[src.sweepKey] : null })).filter(x => x.p);
+    const last = sw.length ? sw[sw.length - 1] : null;
+    return { src, pieces, full, ledes, lum, dia, z, lastCut, sweeps: sw, lastSweep: last, betaOnly: !full.length && !!ledes.length };
+  }
+  const sunSVG = v => { const r = 7, c = 11, f = v == null ? 0 : Math.max(0, Math.min(1, v / 100)); const rays = [...Array(8)].map((_, i) => { const a = i * Math.PI / 4; return `<line x1="${c + Math.cos(a) * 9}" y1="${c + Math.sin(a) * 9}" x2="${c + Math.cos(a) * 11}" y2="${c + Math.sin(a) * 11}"/>`; }).join(''); return `<svg class="sun" viewBox="0 0 22 22" fill="none" stroke="#e8d9a8" stroke-width="1"><circle cx="${c}" cy="${c}" r="${r}"/><circle cx="${c}" cy="${c}" r="${r * f}" fill="#e8d9a8" stroke="none" opacity=".85"/>${rays}</svg>`; };
+  function ageWord(d0, d) { if (!d) return null; return Math.round((d0 - new Date(d + 'T00:00:00Z')) / 864e5); }
+  async function loadMedia() {
+    const el = $('#media'); await mediaData();
+    const R = MEDIA.roster; const today = new Date().toISOString().slice(0, 10); const d0 = new Date(today + 'T00:00:00Z');
+    const corners = [['LI', 'left · institutional', 'LI'], ['RI', 'right · institutional', 'RI'], ['LP', 'left · populist', 'LP'], ['RP', 'right · populist', 'RP']];
+    const esc = x => String(x == null ? '' : x).replace(/</g, '&lt;');
+    const tile = m => { const s = m.src; const st = (s.station || '').split('+')[0]; const a = ageWord(d0, m.lastCut); const sa = m.lastSweep ? ageWord(d0, m.lastSweep.date) : null;
+      const readLine = m.lastCut ? `<span class="${a <= 7 ? 'ok' : 'stale'}">read ${esc(m.lastCut)}</span>` : `<span class="never">not yet cut</span>`;
+      const sweepLine = m.lastSweep ? ` · swept ${sa === 0 ? 'today' : sa === 1 ? 'yesterday' : esc(m.lastSweep.date)} <b style="color:var(--ink)">${m.lastSweep.p.items}</b>/<b style="color:var(--ink)">${m.lastSweep.p.hits}</b>` : s.lastScanned ? ` · scanned ${esc(s.lastScanned)}` : '';
+      return `<a class="mtile${m.betaOnly ? ' beta' : ''}" href="#pub/${esc(s.id)}" style="--c:${COLH[st] || 'var(--g4-rule)'}">${sunSVG(m.lum)}<div class="n">${esc(s.name)}</div><div class="st${s.status !== 'ruled' ? ' proposed' : ''}"><span class="${st}c">${esc(s.station)}</span> · ${esc(s.status)}${s.role === 'baseline' ? ' · the floor' : ''}${s.horizon && s.horizon !== 'US' ? ' · ' + esc(s.horizon) : ''}</div>
+        <div class="nums"><span>lumens<b class="lum${m.lum == null ? ' dim' : ''}">${m.lum == null ? '—' : m.lum}</b></span><span>dia<b class="${m.dia == null ? 'dim' : ''}">${m.dia == null ? '—' : m.dia}</b></span><span>z<b class="${m.z == null ? 'dim' : ''}">${m.z == null ? '—' : zs(m.z)}</b></span></div>
+        <div class="m">${readLine} · ${m.pieces.length} cut${m.pieces.length === 1 ? '' : 's'}${sweepLine}</div></a>`; };
+    const models = R.sources.filter(s => s.station !== 'wire').map(pubModel);
+    el.innerHTML = corners.map(([k, label]) => { const list = models.filter(m => (m.src.station || '').split('+').includes(k)); if (!list.length) return ''; const ruled = list.filter(m => m.src.status === 'ruled').length; return `<div class="ch"><b class="${k}c">${k}</b> ${label} <i></i> ${ruled} ruled · ${list.length - ruled} proposed</div>` + list.sort((a, b) => (b.pieces.length - a.pieces.length) || a.src.name.localeCompare(b.src.name)).map(tile).join(''); }).join('');
+  }
+  async function loadPub(id) {
+    await mediaData(); if (!paperIndex.length) await loadFront();
+    const src = (MEDIA.roster.sources || []).find(s => s.id === id); if (!src) { $('#pubTitle').textContent = 'No such publication.'; return; }
+    const m = pubModel(src); const esc = x => String(x == null ? '' : x).replace(/</g, '&lt;'); const st = (src.station || '').split('+')[0];
+    $('#pubTitleBar').textContent = src.name; $('#pubKicker').innerHTML = `<span class="${st}c">${esc(src.station)}</span> · ${esc(src.status)}${src.role === 'baseline' ? ' · the floor' : ''} · ${esc(src.cadence || '')} · ${esc(src.route || '')}`;
+    $('#pubTitle').textContent = src.name; crumb('BloomBurger · SWEEP · ' + src.name);
+    $('#pubDek').textContent = src.notes || '';
+    const tileN = (l, v, s) => `<div class="tile"><div class="l">${l}</div><div class="v">${v == null ? '—' : v}</div>${s ? `<div class="s">${s}</div>` : ''}</div>`;
+    $('#pubBoard').innerHTML = tileN('lumens', m.lum, m.betaOnly ? 'beta ledes only' : `${m.full.length} full read${m.full.length === 1 ? '' : 's'}`) + tileN('dia', m.dia, m.dia == null ? '' : tier(m.dia)) + tileN('z · the lead object', m.z == null ? null : zs(m.z), m.z == null ? 'has not spoken' : m.z < 0 ? 'does not deliver' : 'delivers') + tileN('cuts', m.pieces.length, m.ledes.length ? `${m.ledes.length} beta` : '') + tileN('last read', m.lastCut ? m.lastCut.slice(5) : '—', m.lastCut ? m.lastCut.slice(0, 4) : 'not yet cut') + tileN('last swept', m.lastSweep ? m.lastSweep.date.slice(5) : (src.lastScanned ? src.lastScanned.slice(5) : '—'), m.lastSweep ? `${m.lastSweep.p.items} swept · ${m.lastSweep.p.hits} hits` : (src.lastScanned ? 'scanned by hand' : ''));
+    const cuts = m.pieces.map(p => `<a class="row" href="#pg/${esc(p.id)}"><div class="d">${esc(p.date)}</div><div class="t">${esc(p.title)}${p.partial ? `<small>${esc(p.partial)}</small>` : ''}${p.kind === 'baseline' ? '<small>BASELINE</small>' : ''}</div><div class="s">Dia <b>${p.dia}</b> · z <b>${zs(p.readZ)}</b> · ☼ <b>${p.lumens}</b></div><div class="m">${esc(p.dek || '')}</div></a>`).join('');
+    const sweeps = m.sweeps.slice().reverse().map(x => `<div class="row"><div class="d">${esc(x.date)}</div><div class="t">${x.p.items} swept · ${x.p.hits} hit${x.p.hits === 1 ? '' : 's'}<small>${(x.p.feeds || []).length} feed${(x.p.feeds || []).length === 1 ? '' : 's'}</small></div><div class="s"><a href="#sweep/${esc(x.date)}" style="color:var(--ink-mid)">the catch →</a></div>${x.p.note ? `<div class="m">${esc(x.p.note)}</div>` : ''}</div>`).join('');
+    const ids = new Set(m.pieces.map(p => p.id)); const seen = (MEDIA.seen || []).filter(x => ids.has(x.piece));
+    const seenHtml = seen.map(x => `<div class="row"><div class="d">${esc(x.date)}</div><div class="t">${esc(x.object)}</div><div class="s">${esc((x.match || {}).dataset || x.kind || '')}</div></div>`).join('');
+    $('#pubBody').innerHTML = `
+      <div class="sec"><div class="eb">its parallelograms</div><h2><span class="orn"></span>What we have cut from it</h2><div class="gloss">${m.pieces.length ? 'Newest first. Open one to read the tape on the graphmap.' : 'Nothing cut yet — the station is on the roster and the next sweep or scan feeds it.'}</div></div>
+      <div class="rows">${cuts || ''}</div>
+      <div class="sec"><div class="eb">the sweeps</div><h2><span class="orn"></span>What it has put out</h2><div class="gloss">${m.sweeps.length ? 'Each line is one sweep: how many items the feeds carried and how many touched the object.' : (src.route || '').includes('youtube') ? 'A show: scanned by transcript when it airs, not swept by feed.' : 'Not in an index basket yet — no mechanical sweep; scanned by hand.'}</div></div>
+      <div class="rows">${sweeps || ''}</div>
+      ${seen.length ? `<div class="sec"><div class="eb">objects it surfaced</div><h2><span class="orn"></span>What the objects pass found on its tapes</h2><div class="gloss">Everything named on its tapes that Prism keeps somewhere, and where it was sorted.</div></div><div class="rows scrollwin">${seenHtml}</div>` : ''}
+      <div class="sec"><div class="eb">the station</div><h2><span class="orn"></span>Where it reads from</h2><div class="gloss">The axis places the station, not the reading; a station's ruling is Sailor's.</div></div>
+      <div class="notes"><b class="${st}c">${esc(src.station)}</b> — ${esc(src.status)}${src.horizon ? ' · horizon: ' + esc(src.horizon) : ''}${src.channel ? ' · ' + esc(src.channel) : ''}${src.url ? ' · ' + esc(src.url) : ''}<br>${esc(src.notes || '')}</div>`;
+    $('#pubClose').onclick = e => { e.preventDefault(); location.hash = '#sweep'; };
+  }
+
+  // ── the sweep: the day's catch from the index baskets (reads sweeps/index.json → sweeps/sweep_<date>.json + objects_seen.json) ──
+  async function loadSweep(date) {
+    const el = $('#sweep'), days = $('#sweep-days');
+    let M; try { M = await fetch('../data/press/sweeps/index.json', { cache: 'no-store' }).then(r => r.json()); } catch (e) { el.innerHTML = '<div class="empty">No sweeps on disk. Run: python3 Prism/scripts/press-pull.py sweep</div>'; return; }
+    const dates = (M.dates || []).slice().sort().reverse(); if (!dates.length) { el.innerHTML = '<div class="empty">No sweeps yet.</div>'; return; }
+    const d = dates.includes(date) ? date : dates[0];
+    days.innerHTML = dates.map(x => `<a class="${x === d ? 'on' : ''}" href="#sweep/${x}">${x}</a>`).join('');
+    let S; try { S = await fetch(`../data/press/sweeps/sweep_${d}.json`, { cache: 'no-store' }).then(r => r.json()); } catch (e) { el.innerHTML = `<div class="empty">sweep_${d}.json missing.</div>`; return; }
+    let SEEN = []; try { SEEN = (await fetch('../data/press/objects_seen.json', { cache: 'no-store' }).then(r => r.json())).sightings || []; } catch (e) {}
+    const esc = x => String(x == null ? '' : x).replace(/</g, '&lt;');
+    const stc = st => (st || '').replace(/[^A-Z]/g, '').slice(0, 2) + 'c';
+    const pubs = Object.entries(S.publications || {}).map(([k, p]) => `<div class="pub${p.items === 0 ? ' dead' : ''}"><div class="h"><span><b class="${stc(p.station)}">${esc(k)}</b> · ${esc(p.station)}</span><small>${(p.feeds || []).length} feed${(p.feeds || []).length === 1 ? '' : 's'}</small></div><div class="nums"><span>swept<b>${p.items}</b></span><span>hits<b>${p.hits}</b></span></div><div class="m">${esc(p.note || '')}</div></div>`).join('');
+    const totals = Object.values(S.publications || {}).reduce((a, p) => ({ items: a.items + (p.items || 0), hits: a.hits + (p.hits || 0) }), { items: 0, hits: 0 });
+    const pieceFor = id => paperIndex.find(p => id && id.startsWith(p.id));
+    const queue = (S.queue || []).map(q => {
+      const matched = Object.entries(q.matched || {}).map(([o, ts]) => `<i>${esc(o)}</i> ${ts.map(esc).join(' · ')}`).join(' &nbsp; ');
+      const cutId = (q.cut || '').split(' ')[0]; const P = pieceFor(cutId);
+      const cutHtml = P ? `<div class="cut">cut → <a href="#pg/${P.id}">${esc(P.title)}</a>${P.partial ? ' · ' + esc(P.partial) : ''} · Dia ${P.dia} · z ${P.readZ}</div>` : q.cut && /^[a-z]+_\d{4}/.test(q.cut) ? `<div class="cut">cut → ${esc(q.cut)}</div>` : `<div class="q">${esc(q.cut || 'queued')}</div>`;
+      const seen = P ? SEEN.filter(x => x.piece === P.id) : [];
+      const seenHtml = seen.length ? `<div class="m">${seen.length} sighting${seen.length === 1 ? '' : 's'} sorted: ${[...new Set(seen.map(x => (x.match || {}).dataset).filter(Boolean))].map(esc).join(' · ')}</div>` : '';
+      return `<div class="qi"><div class="st ${stc(q.station)}">${esc(q.station)}</div><div><div class="t">${q.link ? `<a href="${esc(q.link)}" target="_blank" rel="noopener">${esc(q.title)}</a>` : esc(q.title)}</div>${q.dek ? `<div class="d">${esc(q.dek)}</div>` : ''}<div class="m">${esc(q.publication)} · ${esc(q.published || '')}${matched ? ' &nbsp; matched: ' + matched : ''}</div>${seenHtml}</div><div class="sort">${esc(q.sort || '')}${cutHtml}</div></div>`;
+    }).join('');
+    el.innerHTML = `<div class="floor"><span class="k">${esc(d)}</span><span>index <b style="font-size:14px">${esc(S.index || '—')}</b></span><span class="k">objects</span><span>${(S.objects || []).map(esc).join(' · ')}</span><span class="k">swept</span><b>${totals.items}</b><span class="k">hits</span><b>${totals.hits}</b><span class="k">queued</span><b>${(S.queue || []).length}</b><span class="k">cut</span><b>${(S.queue || []).filter(q => pieceFor((q.cut || '').split(' ')[0])).length}</b></div>
+      <div class="queue">${queue || '<div class="empty">Nothing matched.</div>'}</div>
+      ${S.composite && S.composite.note ? `<div class="sweep-note"><b>composite</b> · ${esc(S.composite.note)}</div>` : ''}
+      ${S.route ? `<div class="sweep-note">route · ${esc(S.route)}</div>` : ''}`;
+  }
+
+  loadFront().then(route);
+})();
+</script>
+</body>
+</html>
