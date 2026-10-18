@@ -305,6 +305,21 @@
   .ecard h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(24px, 5.5vw, 34px); line-height: 1.1; margin: 6px 0 8px; }
   .ecard .pr { font-size: 16px; line-height: 1.45; margin: 0 0 8px; }
   .ecard .fr { font-size: 14.5px; line-height: 1.55; color: var(--ink-mid); margin: 0 0 12px; }
+
+  /* ── the navtool summons: drag the prism left and Refraction floats in from the right; right, and Beam from the left */
+  .float { position: absolute; top: 5%; max-height: 88%; width: 80%; max-width: 420px; z-index: 4; padding: 14px 16px; box-sizing: border-box; border-radius: 6px; background: rgba(10,18,38,.88); border: 1px solid rgba(233,236,242,.22); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); overflow-y: auto; opacity: 0; pointer-events: none; transition: transform .45s cubic-bezier(.2,.8,.2,1), opacity .35s; box-shadow: 0 18px 40px rgba(0,0,0,.45); }
+  .float.dragging { transition: none; }
+  .fr { right: 4%; transform: translateX(calc(115% - var(--peek, 0px))) skewX(-3deg); }
+  .fl { left: 4%; transform: translateX(calc(-115% + var(--peek, 0px))) skewX(3deg); }
+  .float.on { opacity: 1; pointer-events: auto; transform: translateX(var(--back, 0px)) skewX(0deg); }
+  .float .pt { font-family: var(--mono); font-size: 9.5px; letter-spacing: .24em; text-transform: uppercase; color: var(--ink-low); margin-bottom: 10px; }
+  .float h3 { font-family: var(--serif); font-weight: 400; font-size: 19px; margin: 0 0 4px; line-height: 1.2; }
+  .float .k { font-family: var(--mono); font-size: 9.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-low); margin: 14px 0 6px; }
+  .float .law { padding: 8px 0; border-top: 1px solid var(--g4-rule-soft); font-size: 14px; }
+  .float .law small { display: block; font-family: var(--mono); font-size: 10px; color: var(--ink-low); margin-top: 2px; }
+  .float p { font-size: 14px; line-height: 1.45; color: var(--ink-mid); margin: 6px 0; }
+  .float a.go { display: inline-block; margin-top: 10px; font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); text-decoration: none; border: 1px solid var(--g4-rule); padding: 6px 12px; border-radius: 2px; }
+  .float .mrow { grid-template-columns: 34px 1fr auto; padding: 6px 2px; } .float .mrow img { width: 34px; height: 42px; }
 </style>
 </head>
 <body>
@@ -312,7 +327,7 @@
   <!-- the landing (Sailor's sketch, 10-17): elements from all six panels summoned around the graphmap as floating, piercing assets;
        the navtool settles at the centre; the diagnostic band cycles the event's boundaries, then the burns -->
   <div class="lhead"><div><div class="g4-key">Prism</div><h1 id="lTitle"></h1></div><a class="tedcirc" href="#you" title="you"><img src="../src/img/ted-head.png" alt=""></a></div>
-  <div class="stage" id="stage"><div id="hmap"></div><div class="tsay" id="tedSay" hidden></div><div class="lrail" id="lrail"></div></div>
+  <div class="stage" id="stage"><div id="hmap"></div><div class="tsay" id="tedSay" hidden></div><div class="lrail" id="lrail"></div><aside class="float fl" id="floatL"></aside><aside class="float fr" id="floatR"></aside></div>
   <div class="navdock" id="navdock"><img src="../src/img/prism3d.png" alt=""></div>
   <div class="band" id="band">
     <div class="bnd" id="bnd"><div id="bndMap"></div><div class="bt"><b id="bndWho"></b><span id="bndBand"></span></div><p id="bndLine"></p></div>
@@ -1066,13 +1081,46 @@
     }
     step();
   }
+
+  // ── the navtool summons the panels (Sailor 10-17: "move the prism and have the pages float in and out") ──
+  // side −1 = Beam (the object, and you on it) · 0 = the stage · +1 = Refraction (the law and the people on it).
+  LAND.side = 0;
+  function fillFloats() {
+    if (!headline) return; const co = headline.centralObject || {}, rid = headline.rid, mine = latestPins()[rid];
+    let n = 0; try { n = (PrismField.field(rid) || []).length; } catch (e) {}
+    $('#floatL').innerHTML = `<div class="pt">Beam</div><h3>${co.name || headline.title}</h3>
+      <p>${[co.kind, co.state, fmt(co.stateDate || headline.date)].filter(Boolean).join(' · ')}${co.holder ? '<br>Who holds it: ' + co.holder : ''}</p>
+      <div class="k">you on it</div><p>${mine ? `You stand <b style="color:var(--ink)">${SIDE[mine.quadrant] || ''}</b>, ${mine.band || ''}${mine.aperture ? (mine.aperture < 0 ? ', leaning left' : ', leaning right') : ''} · ${(mine.at || '').slice(0, 10)}` : 'You haven’t placed yourself on this one yet.'}</p>
+      <p>${n ? n + ' other' + (n === 1 ? '' : 's') + ' have pinned it.' : 'Nobody has pinned it yet.'}</p>
+      <a class="go" href="${open(headline)}">${mine ? 'look again →' : 'place yourself →'}</a>`;
+    const fol = followed().map(id => MEMBERS.find(m => m.bioguideId === id)).filter(Boolean);
+    $('#floatR').innerHTML = `<div class="pt">Refraction</div><h3>The law on this</h3>
+      ${(headline.tethers || []).map(t => `<div class="law">${t.bill} · ${t.title}<small>${[t.relation, t.statusAsOf].filter(Boolean).join(' · ')}</small></div>`).join('') || '<p>No law is tied to this one yet.</p>'}
+      <div class="k">your legislators</div>${fol.length ? fol.slice(0, 6).map(m => mRow(m, agreement(m))).join('') : '<p>Follow someone in Congress and they show up here, with how they line up with you.</p>'}
+      <a class="go" href="#refraction">${fol.length ? 'all your legislators →' : 'find someone →'}</a>`;
+  }
+  function setSide(v) {
+    LAND.side = Math.max(-1, Math.min(1, v)); fillFloats();
+    $('#floatL').classList.toggle('on', LAND.side === -1); $('#floatR').classList.toggle('on', LAND.side === 1);
+    ['#floatL', '#floatR'].forEach(q => { $(q).style.removeProperty('--peek'); $(q).style.removeProperty('--back'); $(q).classList.remove('dragging'); });
+    tell({ type: 'g4:navpos', t: LAND.side === -1 ? 0.12 : LAND.side === 1 ? 0.86 : 0.5 });
+    tell({ type: 'g4:crumb', name: 'Prism', fn: LAND.side === -1 ? 'BEAM' : LAND.side === 1 ? 'REFRACTION' : 'PRISM', crumb: 'Prism' });
+  }
+  // while the prism is being dragged, the panel it's heading for follows the finger
+  addEventListener('message', e => { const m = e.data || {}; if (m.type !== 'g4:navdrag' || !$('#v-objects').classList.contains('on')) return;
+    const dx = +m.dx || 0, L = $('#floatL'), R = $('#floatR');
+    if (!dx) { [L, R].forEach(f => { f.classList.remove('dragging'); f.style.removeProperty('--peek'); f.style.removeProperty('--back'); f.style.opacity = ''; }); return; }
+    if (LAND.side === 0) { const f = dx < 0 ? R : L; f.classList.add('dragging'); f.style.setProperty('--peek', Math.abs(dx) * 1.6 + 'px'); f.style.opacity = Math.min(1, Math.abs(dx) / 90); }
+    else { const f = LAND.side === 1 ? R : L, closing = (LAND.side === 1 && dx > 0) || (LAND.side === -1 && dx < 0); if (closing) { f.classList.add('dragging'); f.style.setProperty('--back', dx * 1.6 + 'px'); } }
+  });
+
   // the navtool settles here, at the centre of the landing (inside the G4 shell)
   function dockNav() {
     if (!EMBEDDED) return; const on = $('#v-objects').classList.contains('on'); const r = $('#navdock').getBoundingClientRect(), y = r.top + r.height / 2;
     tell({ type: 'g4:navdock', y: on && y > 30 && y < innerHeight - 10 ? y : null });
   }
   addEventListener('scroll', dockNav, { passive: true }); addEventListener('resize', dockNav);
-  function landing() { requestAnimationFrame(() => { buildLanding(); dockNav(); }); [300, 900, 2000, 4000, 7000].forEach(t => setTimeout(dockNav, t)); }
+  function landing() { requestAnimationFrame(() => { buildLanding(); dockNav(); setSide(LAND.side || 0); }); [300, 900, 2000, 4000, 7000].forEach(t => setTimeout(dockNav, t)); }
   try { new ResizeObserver(() => dockNav()).observe(document.body); } catch (e) {}
   if (headline) { setTimeout(() => { runRail(); runBand(); }, 300); }
 
@@ -1100,7 +1148,7 @@
     else if (v === 'v-refr') { if (m.dir === 'back') location.hash = today; else if (m.dir === 'up') location.hash = ''; else if (m.dir === 'forward') location.hash = '#you'; }
     else if (v === 'v-member') { if (m.dir === 'up' || m.dir === 'back') location.hash = '#refraction'; }
     else if (v === 'v-you') { if (m.dir === 'back') location.hash = '#refraction'; else if (m.dir === 'up') location.hash = ''; }
-    else { if (m.dir === 'up') tell({ type: 'g4:desk' }); else if (m.dir === 'forward' && today) location.hash = today; }
+    else { [$('#floatL'), $('#floatR')].forEach(f => { f.style.opacity = ''; }); if (m.dir === 'up') { if (LAND.side) setSide(0); else tell({ type: 'g4:desk' }); } else if (m.dir === 'forward') setSide(LAND.side + 1); else if (m.dir === 'back') setSide(LAND.side - 1); }
   });
 })();
 </script>

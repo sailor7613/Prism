@@ -141,9 +141,10 @@
     // it (depthFunc Greater) — so it pierces walls and plastic the way the Venus's ghost pierces the columns.
     // Normal blending by default (a tint that reads on pale plastic); opts.ghostBlend 'add' for dark surroundings.
     // The ghost shares every uniform with its ray except its own strength.
+    const ghostU = [];
     if (opts.ghost) [beam, inner, fan].forEach(m => {
       const gu = {}; for (const k in m.material.uniforms) gu[k] = m.material.uniforms[k];
-      gu.uA = { value: opts.ghost };
+      gu.uA = { value: opts.ghost }; ghostU.push(gu.uA);
       const gm = new THREE.ShaderMaterial({ vertexShader: VERT, fragmentShader: m.material.fragmentShader, uniforms: gu,
         transparent: true, depthWrite: false, depthTest: true, depthFunc: THREE.GreaterDepth, blending: opts.ghostBlend === 'add' ? THREE.AdditiveBlending : THREE.NormalBlending, side: THREE.DoubleSide });
       const g = new THREE.Mesh(m.geometry, gm); g.renderOrder = 998; g.frustumCulled = false; group.add(g);
@@ -165,7 +166,9 @@
       beamM.uniforms.uT.value = s; innerM.uniforms.uT.value = s; fanM.uniforms.uT.value = s;
       fanM.uniforms.uTilt.value = tilt || 0;
     }
-    function setAlpha(a) { [beamM, innerM, fanM].forEach(m => { m.uniforms.uA.value = a; }); }
+    // setAlpha(a): the whole light, ghosts included, at a (0 = out, 1 = as built) — for fading it in and out
+    const baseA = opts.alpha != null ? opts.alpha : 1;
+    function setAlpha(a) { [beamM, innerM, fanM].forEach(m => { m.uniforms.uA.value = baseA * a; }); ghostU.forEach(u => { u.value = opts.ghost * a; }); group.visible = a > 0.001; }
     return { group, beam, inner, fan, layout, update, setAlpha };
   }
 

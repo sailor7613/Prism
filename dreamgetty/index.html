@@ -1900,7 +1900,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
-<script src="../src/js/prism-light.js?v=2"></script>  <!-- THE LIGHT: the beam + spectrum shared with the g4 navtool (2026-10-18) -->
+<script src="../src/js/prism-light.js?v=3"></script>  <!-- THE LIGHT: the beam + spectrum shared with the g4 navtool (2026-10-18) -->
 <script src="satellite.min.js"></script>
 <script>
 // ============================================================
@@ -22163,7 +22163,7 @@ const g4Screen = {
         light = window.PrismLight.create(THREE, { depthTest: true, fadeEnds: true, ghost: 0.4, beamW: 0.15, spread: 0.55, drop: 0.12, z: -0.02 });
         light.layout({ left: -5.2, right: 6.5 });         // in prism units: ~0.57 m of beam in, ~0.72 m of spectrum out
         light.group.position.z = -0.06;                    // a little inside, so both walls of the dome are pierced
-        seat.add(light.group);
+        seat.add(light.group); imacG4.userData.domeLight = light;
       }
     } catch (e) { console.warn('[g4] the dome light did not build:', e && e.message); }
     // the desk prism retires: the dome carries the navtool's prism now (code kept, hidden)
@@ -22257,6 +22257,8 @@ function updateCamera() {
   // the fly-over owns the wheel outright while it runs — neither the
   // follow-lock nor the idle orbit gets a frame of it
   if (typeof flyoverTick === 'function' && flyoverTick()) return;
+  // the G4's voyage between the glass and the room owns the camera the same way (2026-10-18)
+  if (typeof g4VoyageTick === 'function' && g4VoyageTick()) return;
   // the observatory chair owns the camera the same way while you lie in
   // it (2026-08-11) — the first attempt parked a phantom target 200 up
   // and rode the orbit at radius 199, which the rig's own clamp quietly
@@ -27192,6 +27194,20 @@ function redrawG4Screen() {
              : g4State.app === 'tracker' ? 'iMac G4 · BloomBurger · SST'
              : 'iMac G4', Math.round(65 * S), Math.round(28 * S));
 
+  // THE GLASS KEY (2026-10-18): the navtool's prism, top centre of the header — push it and the screen
+  // floats up into the glass (embedded in the g4 shell), or opens the g4 (standalone)
+  (function () {
+    var gw = Math.round(118 * S), gh = Math.round(36 * S), gx = Math.round(W / 2 - gw / 2), gy = Math.round(8 * S);
+    g4Screen.hitRegions.push({ x: gx, y: gy, w: gw, h: gh, action: 'glass' });
+    var pool = ctx.createRadialGradient(W / 2, gy + gh / 2, 0, W / 2, gy + gh / 2, gw * 0.6);
+    pool.addColorStop(0, 'rgba(246,241,230,' + op(0.10) + ')'); pool.addColorStop(1, 'rgba(246,241,230,0)');
+    ctx.fillStyle = pool; ctx.fillRect(gx - 10, gy - 4, gw + 20, gh + 8);
+    var isz = Math.round(28 * S);
+    if (typeof g4PrismIcon !== 'undefined' && g4PrismIcon && g4PrismIcon.complete && g4PrismIcon.naturalWidth) ctx.drawImage(g4PrismIcon, gx + Math.round(10 * S), gy + (gh - isz) / 2, isz, isz);
+    ctx.fillStyle = cream + op(0.55) + ')'; ctx.font = Math.round(11 * S) + 'px Georgia'; ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
+    ctx.letterSpacing = '2px'; ctx.fillText('GLASS', gx + Math.round(46 * S), gy + gh / 2); ctx.letterSpacing = '0px';
+  })();
+
   // ⌂ back to the desktop, whenever an application is open
   if (g4State.app) {
     var dtW = Math.round(90 * S), dtX = W - Math.round(285 * S);
@@ -27620,7 +27636,7 @@ function drawG4Codex(ctx, W, H, hdrH, cream, blue, S) {
 // (2026-10-18, the light pass) the desktop's icons are lit the way the glass's are: each sits in a soft pool of
 // light, not a bordered box — Prism is the 3D prism itself, BloomBurger is its needle striking a soft dial, the
 // Codex is its ¶ glowing.
-const g4PrismIcon = new Image();
+var g4PrismIcon = new Image();   // var: the header's GLASS key may draw before this line runs
 g4PrismIcon.onload = function () { try { g4Screen.needsRedraw = true; if (typeof redrawG4Screen === 'function') redrawG4Screen(); } catch (e) {} };
 g4PrismIcon.src = '../src/img/prism3d.png';
 function drawG4Desktop(ctx, W, H, hdrH, cream, blue, S) {
@@ -28664,6 +28680,8 @@ function handleG4ScreenClick(region) {
     redrawG4Screen();
     // Also sync HTML panel tabs for float mode
     switchG4Tab(region.data);
+  } else if (region.action === 'glass') {
+    g4ToGlass();
   } else if (region.action === 'float') {
     floatG4Screen();
   } else if (region.action === 'dock') {
@@ -29409,7 +29427,206 @@ animate();
 // The eye starts a hand's width off the G4's screen, looking at it, and the
 // approach pulls it back to arm's length — the desk. No door, no walk: you
 // did not come in from the beach. The way back is a message to the shell.
-function g4ArriveFromGlass(app) {
+// ── THE VOYAGE between the glass and the room (2026-10-18, Sailor) ──────────
+// "the g4 is in float mode in front of the graphmap pedestal, and clicking out
+// of glass, first pulls the display back, and then it resizes to the physical
+// g4 and rests on the g4 base, the prism falling out of the display and
+// floating down to the base … toggle back into glass mode by pushing something
+// on the 3D display, and having it float in to glass mode."
+//   ARRIVAL  0 hold    the screen floats in front of the pedestal, framed at
+//                      exactly the size the glass shrank to (?s=) — the shell
+//                      crossfades onto it, so it is one object
+//            1 back    the eye pulls back: the screen hangs before the pedestal
+//            2 settle  the screen shrinks to the machine's size and flies home
+//                      onto the arm; the eye follows to the G4
+//            3 fall    the prism drops out of the display and floats down into
+//                      the dome; the light comes up through the plastic
+//   RETURN   (the GLASS key on the screen's header)
+//            1 rise    the light goes out; the prism lifts out of the dome and
+//                      goes back into the display
+//            2 float   the screen lifts off the arm and comes up to fill the
+//                      display; the shell crossfades the glass in over it
+// The voyage owns the camera while it runs (g4VoyageTick, before the orbit).
+var g4Voyage = { run: null };   // var: updateCamera runs once during the build, before this line
+var _vq = new THREE.Quaternion(), _vv = new THREE.Vector3();
+function g4Ease(t) { t = Math.max(0, Math.min(1, t)); return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; }
+function g4EaseOut(t) { t = Math.max(0, Math.min(1, t)); return 1 - Math.pow(1 - t, 3); }
+function g4Now() { return performance.now() / 1000; }
+function g4FocusG4() { return focusTargets.find(function (f) { return f.name === 'iMac G4'; }); }
+function g4FocusPedestal() { return focusTargets.find(function (f) { return f.name === (pedestalMode === 'tracker' ? 'Tracker' : 'Graphmap'); }) || g4FocusG4(); }
+// where the docked screen sits in the world
+function g4DockedPose() {
+  imacG4.updateMatrixWorld(true);
+  const m = new THREE.Matrix4().compose(imacG4.userData.screenLocalPos, new THREE.Quaternion().setFromEuler(imacG4.userData.screenLocalRot), new THREE.Vector3(1, 1, 1));
+  m.premultiply(imacG4.matrixWorld);
+  const p = new THREE.Vector3(), q = new THREE.Quaternion(), sc = new THREE.Vector3(); m.decompose(p, q, sc);
+  return { p: p, q: q, k: sc.x };
+}
+function g4Undock() {
+  const sg = imacG4.userData.screenGroup; if (!sg || sg.parent === scene) return sg;
+  const wp = new THREE.Vector3(), wq = new THREE.Quaternion(), ws = new THREE.Vector3();
+  sg.getWorldPosition(wp); sg.getWorldQuaternion(wq); sg.getWorldScale(ws);
+  sg.parent.remove(sg); scene.add(sg); sg.position.copy(wp); sg.quaternion.copy(wq); sg.scale.copy(ws);
+  sg.traverse(function (c) { if (c.isMesh || c.isLine) c.renderOrder = 50; });
+  return sg;
+}
+function g4Redock() {
+  const sg = imacG4.userData.screenGroup; if (!sg) return;
+  if (sg.parent !== imacG4) { sg.parent.remove(sg); imacG4.add(sg); }
+  sg.position.copy(imacG4.userData.screenLocalPos); sg.quaternion.identity(); sg.rotation.copy(imacG4.userData.screenLocalRot); sg.scale.set(1, 1, 1);
+  sg.traverse(function (c) { if (c.isMesh || c.isLine) c.renderOrder = 0; });
+}
+// the screen face's centre, in the screen group's own space (the face sits above the chin)
+// while the screen floats close to the eye it draws over the room (paintings and ghosts otherwise show through it)
+function g4ScreenOverlay(on) {
+  const sg = imacG4.userData.screenGroup; if (!sg) return;
+  let i = 0;
+  sg.traverse(function (c) {
+    if (!c.material || Array.isArray(c.material)) return;
+    const m = c.material;
+    // also into the living-pierce pass (drawn after the residents — the globe, Ted), last of all
+    if (on) { if (!c.userData._ov) c.userData._ov = { t: m.transparent, d: m.depthTest, r: c.renderOrder, l: c.layers.mask }; m.transparent = true; m.depthTest = false; c.renderOrder = 1000 + (i++); if (typeof PIERCE_LAYER !== 'undefined') c.layers.set(PIERCE_LAYER); m.needsUpdate = true; }
+    else if (c.userData._ov) { m.transparent = c.userData._ov.t; m.depthTest = c.userData._ov.d; c.renderOrder = c.userData._ov.r; c.layers.mask = c.userData._ov.l; delete c.userData._ov; m.needsUpdate = true; }
+  });
+}
+function g4FaceOffset() { const f = imacG4.userData.screenFace; return f ? f.position.clone() : new THREE.Vector3(); }
+// the distance at which a face (w × h, scaled k) spans `fill` of the display, fitted inside
+function g4FitDistance(k, fill) {
+  const f = imacG4.userData.screenFace, w = f.geometry.parameters.width * k, h = f.geometry.parameters.height * k;
+  const vf = camera.fov * Math.PI / 180, hf = 2 * Math.atan(Math.tan(vf / 2) * camera.aspect);
+  return Math.max((h / 2) / Math.tan(vf / 2), (w / 2) / Math.tan(hf / 2)) / Math.max(0.05, fill);
+}
+// place the group so its FACE centre is at c, turned by q, scaled k
+function g4PlaceFace(sg, c, q, k) { sg.quaternion.copy(q); sg.scale.setScalar(k); sg.position.copy(c).sub(g4FaceOffset().multiplyScalar(k).applyQuaternion(q)); }
+function g4ScreenTop(sg) {   // where the navtool lives on the display: the top centre of the face
+  const f = imacG4.userData.screenFace; f.updateMatrixWorld(true);
+  return new THREE.Vector3(0, f.geometry.parameters.height / 2 - 0.05, 0.03).applyMatrix4(f.matrixWorld);
+}
+function g4ReleaseCamera(look) {   // hand the eye back to the orbit, as an approach does when it lands
+  camTarget.copy(look);
+  const dx = camera.position.x - camTarget.x, dy = camera.position.y - camTarget.y, dz = camera.position.z - camTarget.z;
+  camRadius = Math.sqrt(dx * dx + dy * dy + dz * dz); camPhi = Math.acos(dy / camRadius); camTheta = Math.atan2(dx, dz);
+  targetTheta = camTheta; targetPhi = camPhi; targetRadius = camRadius;
+  approach.active = false; approach.released = true; autoOrbit = false; lastInteraction = Date.now();
+  try { showNavBar(); updateNavBar(); } catch (e) {}
+}
+// the falling / rising prism: the dome's own prism, borrowed for the trip
+function g4TravelPrism() {
+  if (g4Voyage.prism) return g4Voyage.prism;
+  const src = imacG4.userData.domePrism; if (!src) return null;
+  const p = new THREE.Mesh(src.geometry, src.material); p.renderOrder = 60;
+  p.add(new THREE.LineSegments(new THREE.EdgesGeometry(src.geometry), new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.6, depthWrite: false })));
+  p.visible = false; scene.add(p); g4Voyage.prism = p; return p;
+}
+function g4SeatPose() {
+  const seat = imacG4.userData.domeLogo; seat.updateMatrixWorld(true);
+  const p = new THREE.Vector3(), q = new THREE.Quaternion(), sc = new THREE.Vector3(); seat.matrixWorld.decompose(p, q, sc);
+  return { p: p, q: q, k: sc.x };
+}
+function g4DomeShow(prismOn, lightA) {
+  try { imacG4.userData.domePrism.visible = prismOn; } catch (e) {}
+  try { const L = imacG4.userData.domeLight; if (L) L.setAlpha(lightA); } catch (e) {}
+}
+// a point on a quadratic curve a → b bending through c
+function g4Bez(a, c, b, t, out) { const u = 1 - t; return out.set(u * u * a.x + 2 * u * t * c.x + t * t * b.x, u * u * a.y + 2 * u * t * c.y + t * t * b.y, u * u * a.z + 2 * u * t * c.z + t * t * b.z); }
+
+function g4VoyageTick() {
+  const R = g4Voyage && g4Voyage.run; if (!R) return false;
+  const t = g4Now() - R.t0, sg = imacG4.userData.screenGroup;
+  if (R.kind === 'arrive') {
+    if (R.phase === 'hold') {   // framed exactly as the glass left it; waiting for the shell's crossfade
+      camera.position.copy(R.c0); camera.lookAt(R.face);
+      if (t > R.holdMax) g4VoyageGo();
+      return true;
+    }
+    const T1 = 1.7, T2 = 2.6, T3 = 1.9, T4 = 1.2;   // back · settle · fall · the light comes up
+    if (t < T1) {                                   // 1 · the eye pulls back from the floating screen
+      const e = g4Ease(t / T1);
+      camera.position.lerpVectors(R.c0, R.P, e);
+      camera.lookAt(_vv.lerpVectors(R.face, R.L.clone().lerp(R.face, 0.35), e));
+      return true;
+    }
+    if (t < T1 + T2) {                              // 2 · the screen goes home; the eye follows
+      const u = (t - T1) / T2, e = g4Ease(u), es = g4Ease(Math.min(1, u * 1.15));   // the screen leads a little
+      const D = R.dock || (R.dock = g4DockedPose());   // the screen stays drawn over the room while it flies (a piercing object) — off when it lands
+      _vq.copy(R.qF).slerp(D.q, es);
+      sg.quaternion.copy(_vq); sg.scale.setScalar(R.kF + (D.k - R.kF) * es);
+      const lift = Math.sin(Math.PI * es) * 0.35;   // an arc, not a slide
+      sg.position.lerpVectors(R.pF, D.p, es); sg.position.y += lift;
+      camera.position.lerpVectors(R.P, R.G.camPos, e);
+      camera.lookAt(_vv.lerpVectors(R.L.clone().lerp(R.face, 0.35), R.G.lookAt, e));
+      return true;
+    }
+    if (!R.docked) { R.docked = true; g4ScreenOverlay(false); g4Redock(); camera.position.copy(R.G.camPos); camera.lookAt(R.G.lookAt); }
+    const tf = t - T1 - T2;
+    const P = g4TravelPrism();
+    if (tf < T3 && P) {                             // 3 · the prism falls out of the display and floats down to the dome
+      if (!R.fall) { const S = g4SeatPose(); const a = g4ScreenTop(sg); const fwd = new THREE.Vector3(0, 0, 1).applyQuaternion(sg.getWorldQuaternion(new THREE.Quaternion()));
+        R.fall = { a: a, b: S.p, c: a.clone().lerp(S.p, 0.5).add(fwd.multiplyScalar(0.28)), qa: sg.getWorldQuaternion(new THREE.Quaternion()), qb: S.q, ka: S.k * 1.9, kb: S.k }; P.visible = true; }
+      const F = R.fall, e = g4EaseOut(tf / T3);
+      g4Bez(F.a, F.c, F.b, e, P.position);
+      P.quaternion.copy(F.qa).slerp(F.qb, e); P.rotateY((1 - e) * Math.PI * 1.5); P.rotateZ(Math.sin(tf * 2.4) * 0.25 * (1 - e));
+      P.scale.setScalar(F.ka + (F.kb - F.ka) * e);
+      camera.position.copy(R.G.camPos); camera.lookAt(R.G.lookAt);
+      return true;
+    }
+    if (P) P.visible = false;
+    const tl = tf - T3;
+    g4DomeShow(true, Math.min(1, tl / T4));         // 4 · home: the light comes up through the plastic
+    if (tl < T4) { camera.position.copy(R.G.camPos); camera.lookAt(R.G.lookAt); return true; }
+    g4Voyage.run = null; activeFocus = R.G; g4ReleaseCamera(R.G.lookAt);
+    try { redrawG4Screen(); } catch (e) {}
+    return false;
+  }
+  if (R.kind === 'return') {
+    const T1 = 1.1, T2 = 1.5;
+    const P = g4TravelPrism();
+    if (t < T1) {                                   // 1 · the light goes out; the prism rises back into the display
+      if (!R.rise) { const S = g4SeatPose(); const a = g4ScreenTop(sg); const fwd = new THREE.Vector3(0, 0, 1).applyQuaternion(sg.getWorldQuaternion(new THREE.Quaternion()));
+        R.rise = { a: S.p, b: a, c: a.clone().lerp(S.p, 0.5).add(fwd.multiplyScalar(0.22)), qa: S.q, qb: sg.getWorldQuaternion(new THREE.Quaternion()), ka: S.k, kb: S.k * 1.6 };
+        g4DomeShow(false, 1); if (P) P.visible = true; }
+      const F = R.rise, e = g4Ease(t / T1);
+      g4DomeShow(false, Math.max(0, 1 - t / (T1 * 0.5)));
+      if (P) { g4Bez(F.a, F.c, F.b, e, P.position); P.quaternion.copy(F.qa).slerp(F.qb, e); P.rotateY(e * Math.PI); P.scale.setScalar(F.ka + (F.kb - F.ka) * e); }
+      camera.position.copy(R.cam); camera.lookAt(R.look);
+      return true;
+    }
+    if (P) P.visible = false;
+    if (!R.lifted) { R.lifted = true; g4Undock(); g4ScreenOverlay(true); R.pa = sg.position.clone(); R.qa = sg.quaternion.clone(); R.ka = sg.scale.x;
+      // the end pose: the face filling the display, square to the eye, the eye holding still
+      const dir = new THREE.Vector3(0, 0, -1).applyQuaternion(camera.quaternion);
+      R.faceEnd = camera.position.clone().add(dir.multiplyScalar(g4FitDistance(1, 1.0))); R.qEnd = camera.quaternion.clone(); }
+    const u = (t - T1) / T2, e = g4Ease(u);
+    if (u < 1) {                                    // 2 · the screen floats up to fill the display
+      _vq.copy(R.qa).slerp(R.qEnd, e);
+      const startFace = R.pa.clone().add(g4FaceOffset().multiplyScalar(R.ka).applyQuaternion(R.qa));
+      const c = startFace.lerp(R.faceEnd, e); c.y += Math.sin(Math.PI * e) * 0.12;
+      g4PlaceFace(sg, c, _vq, R.ka);
+      camera.position.copy(R.cam); camera.lookAt(R.look);
+      return true;
+    }
+    if (!R.sent) { R.sent = true; g4PlaceFace(sg, R.faceEnd, R.qEnd, R.ka);
+      try { if (window.parent !== window) window.parent.postMessage({ type: 'dg:glass' }, '*'); else location.href = '../g4/'; } catch (e) {} }
+    camera.position.copy(R.cam); camera.lookAt(R.look);
+    if (t > T1 + T2 + 1.4) {                        // the glass is up; put the room back quietly behind it
+      g4ScreenOverlay(false); g4Redock(); g4DomeShow(true, 1); g4Voyage.run = null;
+      const G = g4FocusG4(); if (G) { camera.position.copy(G.camPos); activeFocus = G; g4ReleaseCamera(G.lookAt); }
+      return false;
+    }
+    return true;
+  }
+  return false;
+}
+function g4VoyageGo() { const R = g4Voyage.run; if (R && R.kind === 'arrive' && R.phase === 'hold') { R.phase = 'go'; R.t0 = g4Now(); } }
+function g4ToGlass() {
+  if (g4Voyage.run) return;
+  try { if (g4State.screenLocked) { g4State.screenLocked = false; } if (g4State.floatMode) { g4State.floatMode = false; g4State.floatExpanded = false; } } catch (e) {}
+  try { if (typeof g4Tracker !== 'undefined' && g4Tracker.mode) g4TrackerLeave(); } catch (e) {}
+  approach.active = false; autoOrbit = false;
+  g4Voyage.run = { kind: 'return', t0: g4Now(), cam: camera.position.clone(), look: camTarget.clone() };
+}
+
+function g4ArriveFromGlass(app, fill) {
   window.G4_ARRIVE = true;
   try { tourSeenFlag.session = true; } catch (e) {}
   // CONTINUITY (2026-10-14): the glass hands over what it was showing, and the
@@ -29424,40 +29641,44 @@ function g4ArriveFromGlass(app) {
     g4State.visible = true;
     redrawG4Screen();
   } catch (e) {}
-  const t = focusTargets.find(function (f) { return f.name === 'iMac G4'; });
-  if (!t) return;
-  try { if (activeFocus && activeFocus !== t) releaseFocus(); } catch (e) {}
-  try {
-    // start where the screen fills the display: on the screen's own normal, at
-    // the distance where its height spans the vertical field of view
-    const face = imacG4.userData.screenFace; face.updateMatrixWorld(true);
-    const centre = new THREE.Vector3().setFromMatrixPosition(face.matrixWorld);
-    const normal = new THREE.Vector3(0, 0, 1).transformDirection(face.matrixWorld).normalize();
-    const scrH = face.geometry.parameters.height, scrW = face.geometry.parameters.width;
-    const vfov = camera.fov * Math.PI / 180, hfov = 2 * Math.atan(Math.tan(vfov / 2) * camera.aspect);
-    const d = Math.max((scrH / 2) / Math.tan(vfov / 2), (scrW / 2) / Math.tan(hfov / 2)) * 0.98;
-    camera.position.copy(centre.clone().add(normal.multiplyScalar(d)));
-    camTarget.copy(centre);
-    g4State.visible = true;
-    focusOn(t);
-    approach.duration = 2.6;   // the pull is slower than a click
-    try { if (typeof hideG4Panel === 'function') hideG4Panel(); } catch (e) {}   // the glass's own HTML pane stays shut; the screen is a texture here
-  } catch (e) {}
+  const G = g4FocusG4(), Ped = g4FocusPedestal();
+  if (!G || !imacG4.userData.screenGroup) { try { if (window.parent !== window) window.parent.postMessage({ type: 'dg:ready' }, '*'); } catch (e) {} return; }
+  try { if (activeFocus) activeFocus = null; } catch (e) {}
+  try { if (typeof g4Tracker !== 'undefined' && g4Tracker.mode) g4TrackerLeave(); } catch (e) {}
+  try { g4State.floatMode = false; g4State.screenLocked = false; } catch (e) {}
+  approach.active = false; autoOrbit = false;
+  // 0 · the screen floats in front of the pedestal, square to the pedestal's vantage
+  // the eye's resting place is behind the pedestal's own vantage, so the pedestal and what stands on it are in
+  // view behind the screen; the screen floats between, nearer the eye than anything on the pedestal
+  const L = Ped.lookAt.clone(), dirP = Ped.camPos.clone().sub(L), d0 = dirP.length(); dirP.normalize();
+  const P = L.clone().add(dirP.clone().multiplyScalar(d0 * 1.75));
+  const spot = L.clone().add(dirP.clone().multiplyScalar(d0 * 1.2));
+  const vf = camera.fov * Math.PI / 180, hf = 2 * Math.atan(Math.tan(vf / 2) * camera.aspect);
+  const viewW = 2 * spot.distanceTo(P) * Math.tan(hf / 2);
+  const kF = Math.max(1, 0.34 * viewW / imacG4.userData.screenFace.geometry.parameters.width);   // a little under half the view wide, seen from where the eye comes to rest
+  const dummy = new THREE.Object3D(); dummy.position.copy(spot); dummy.lookAt(P);
+  const sg = g4Undock();
+  g4PlaceFace(sg, spot, dummy.quaternion, kF); g4ScreenOverlay(true);
+  // the eye: on the face's normal, at the distance where the face spans what the glass shrank to
+  const s = Math.max(0.2, Math.min(1, +fill || 0.55));
+  const normal = new THREE.Vector3(0, 0, 1).applyQuaternion(dummy.quaternion);
+  const c0 = spot.clone().add(normal.multiplyScalar(g4FitDistance(kF, s)));
+  g4DomeShow(false, 0);                              // the prism is still in the display; the dome waits for it
+  g4Voyage.run = { kind: 'arrive', phase: 'hold', t0: g4Now(), holdMax: window.parent !== window ? 4 : 0.6,
+    c0: c0, face: spot.clone(), P: P, L: L, G: G, pF: sg.position.clone(), qF: sg.quaternion.clone(), kF: kF };
+  camera.position.copy(c0); camera.lookAt(spot);
+  try { redrawG4Screen(); } catch (e) {}
   try { if (window.parent !== window) window.parent.postMessage({ type: 'dg:ready' }, '*'); } catch (e) {}
-  if (window.parent !== window && !document.getElementById('g4-glass-btn')) {
-    const b = document.createElement('button');
-    b.id = 'g4-glass-btn'; b.type = 'button'; b.textContent = '↑ the glass';
-    b.title = 'back into the g4 — the screen comes up to fill your display';
-    b.style.cssText = 'position:fixed;right:14px;bottom:14px;z-index:9999;height:26px;padding:0 12px;border-radius:13px;border:1px solid rgba(0,0,0,.35);background:linear-gradient(#f7f8fb,#d9dde6);color:#1d2433;font:11px "Lucida Grande","Segoe UI",system-ui,sans-serif;cursor:pointer;box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 1px 2px rgba(0,0,0,.3)';
-    b.addEventListener('click', function () { try { window.parent.postMessage({ type: 'dg:glass' }, '*'); } catch (e) {} });
-    document.body.appendChild(b);
-  }
 }
 (function () {
   let q; try { q = new URLSearchParams(location.search); } catch (e) { return; }
-  if (q.get('arrive') === 'glass') g4ArriveFromGlass(q.get('app'));
-  // every pull after the first: the shell keeps the villa and asks again
-  window.addEventListener('message', function (e) { if (e.data && e.data.type === 'g4:arrive') g4ArriveFromGlass(e.data.app); });
+  if (q.get('arrive') === 'glass') g4ArriveFromGlass(q.get('app'), q.get('s'));
+  // every pull after the first: the shell keeps the villa and asks again; 'g4:go' = the glass has crossfaded away
+  window.addEventListener('message', function (e) {
+    const m = e.data || {};
+    if (m.type === 'g4:arrive') g4ArriveFromGlass(m.app, m.s);
+    else if (m.type === 'g4:go') g4VoyageGo();
+  });
 })();
 
 console.log('[Dream Getty v6] Scene loaded. Meshes:', (() => { let c = 0; scene.traverse(o => { if (o.isMesh) c++; }); return c; })());

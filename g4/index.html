@@ -168,7 +168,7 @@
 <div id="note"></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="../src/js/prism-light.js?v=2"></script>
+<script src="../src/js/prism-light.js?v=3"></script>
 <script>
 (function () {
   'use strict';
@@ -286,8 +286,8 @@
     function toProg(dir) { try { prog.contentWindow && prog.contentWindow.postMessage({ type: 'g4:nav', dir }, '*'); } catch (e) {} }
     function up() { if (program) toProg('up'); }
     st.addEventListener('pointerdown', e => { if (mode !== 'glass') return; x0 = e.clientX; dx = 0; held = dragging = false; st.setPointerCapture(e.pointerId); holdT = setTimeout(() => { held = true; if (navigator.vibrate) navigator.vibrate(12); up(); }, HOLD); });
-    st.addEventListener('pointermove', e => { if (x0 == null) return; dx = e.clientX - x0; if (!dragging && Math.abs(dx) > 6) { clearTimeout(holdT); dragging = true; st.classList.add('dragging'); } if (dragging) nav.setDrag(Math.max(-120, Math.min(120, dx))); });
-    function end() { if (x0 == null) return; clearTimeout(holdT); st.classList.remove('dragging'); nav.setDrag(0); if (!held && dragging) { if (dx <= -SNAP) toProg('forward'); else if (dx >= SNAP) toProg('back'); } x0 = null; dx = 0; }
+    st.addEventListener('pointermove', e => { if (x0 == null) return; dx = e.clientX - x0; if (!dragging && Math.abs(dx) > 6) { clearTimeout(holdT); dragging = true; st.classList.add('dragging'); } if (dragging) { nav.setDrag(Math.max(-120, Math.min(120, dx))); try { prog.contentWindow && prog.contentWindow.postMessage({ type: 'g4:navdrag', dx: Math.max(-120, Math.min(120, dx)) }, '*'); } catch (e2) {} } });
+    function end() { if (x0 == null) return; clearTimeout(holdT); st.classList.remove('dragging'); nav.setDrag(0); try { prog.contentWindow && prog.contentWindow.postMessage({ type: 'g4:navdrag', dx: 0 }, '*'); } catch (e2) {} if (!held && dragging) { if (dx <= -SNAP) toProg('forward'); else if (dx >= SNAP) toProg('back'); } x0 = null; dx = 0; }
     st.addEventListener('pointerup', end); st.addEventListener('pointercancel', end);
     addEventListener('keydown', e => {
       if (e.target.tagName === 'INPUT') return;
@@ -315,33 +315,36 @@
     }));
   }
 
-  // ── the pull ──
+  // ── the pull (10-18: the voyage) ──
+  // The display pulls back first (the glass shrinks to SMALL inside its housing). The villa frames its
+  // floating screen at exactly that size (s=SMALL) in front of the pedestal and says dg:ready; the glass
+  // crossfades onto it — one object — and then 'g4:go' sets the villa's half of the voyage running:
+  // the eye pulls back, the screen flies home to the arm, the prism drops into the dome.
   function pull() {
     if (mode !== 'glass') return;
-    mode = 'pulling'; pull._landed = false;
+    mode = 'pulling'; pull._landed = false; pull._t0 = performance.now();
     rig.classList.remove('flat'); $('#sky').style.opacity = '.35';
     glare.classList.add('go');                        // the room's light finds the glass
+    setScale(SMALL, 900, 'cubic-bezier(.3,0,.1,1)'); // always: the display pulls back first
     const first = !villaBuilt;
-    if (first) setScale(SMALL, 1300, 'cubic-bezier(.3,0,.1,1)');   // only while the villa builds: the housing waits in the dark
-    if (first) { villaBuilt = true; villa.src = VILLA_URL + '&app=' + encodeURIComponent(showing()); setTimeout(() => { if (mode === 'pulling' && !pull._landed) { rig.classList.add('cue'); say('the villa is waking'); } }, 1400); }
+    if (first) { villaBuilt = true; villa.src = VILLA_URL + '&app=' + encodeURIComponent(showing()) + '&s=' + SMALL; setTimeout(() => { if (mode === 'pulling' && !pull._landed) { rig.classList.add('cue'); say('the villa is waking'); } }, 1400); }
     villa.classList.add('on');
-    if (!first) setTimeout(() => villa.contentWindow && villa.contentWindow.postMessage({ type: 'g4:arrive', app: showing() }, '*'), 300);
-    pull._t = setTimeout(() => land(), first ? 20000 : 2500);
+    if (!first) setTimeout(() => villa.contentWindow && villa.contentWindow.postMessage({ type: 'g4:arrive', app: showing(), s: SMALL }, '*'), 300);
+    pull._t = setTimeout(() => land(), first ? 20000 : 3500);
   }
   function land() {
     if (mode !== 'pulling') return;
     clearTimeout(pull._t); pull._landed = true;
     rig.classList.remove('cue'); say('');
-    // the glass comes back up to fill the display (if it shrank to wait), then the
-    // villa's eye — already at the screen, filling the display the same way — takes
-    // over and pulls back itself. One object, two rooms.
-    const wait = rig.style.transform && rig.style.transform !== 'none' ? 650 : 0;
-    if (wait) setScale(1, 650);
+    const wait = Math.max(0, 950 - (performance.now() - pull._t0));   // let the glass finish pulling back
     setTimeout(() => {
       villa.classList.add('lit');
-      rig.style.transition = 'opacity 800ms ease-in'; rig.style.opacity = '0';
-      setTimeout(() => barAway(true), 300);   // the object goes back into the room
-      setTimeout(() => { rig.classList.add('hidden'); prog.classList.add('asleep'); glare.classList.remove('go'); mode = 'villa'; }, 850);
+      rig.style.transition = 'opacity 650ms ease-in'; rig.style.opacity = '0';
+      setTimeout(() => barAway(true), 200);   // the object goes back into the room
+      setTimeout(() => {
+        rig.classList.add('hidden'); prog.classList.add('asleep'); glare.classList.remove('go'); mode = 'villa';
+        try { villa.contentWindow.postMessage({ type: 'g4:go' }, '*'); } catch (e) {}
+      }, 680);
     }, wait);
   }
   function glass() {
@@ -365,8 +368,9 @@
     else if (m.type === 'g4:navpos') nav.setPos(m.t);
     else if (m.type === 'g4:navdock') {   // a program asks the navtool to settle inside it (Prism's landing: the centre of the page)
       const nt = $('#navtool');
-      if (m.y == null) { nt.style.top = ''; nt.classList.remove('docked'); }
-      else { const top = prog.getBoundingClientRect().top + m.y - 42; nt.style.top = top + 'px'; nt.classList.add('docked'); nav.setPos(0.5); }
+      const sp = $('#strip');
+      if (m.y == null) { nt.style.top = ''; nt.classList.remove('docked'); sp.style.top = ''; sp.classList.remove('docked'); }
+      else { const top = prog.getBoundingClientRect().top + m.y - 42; nt.style.top = top + 'px'; nt.classList.add('docked'); sp.style.top = (top + 18) + 'px'; sp.classList.add('docked'); }   // the drag strip goes with it: you move the prism where it sits
     }
     else if (m.type === 'dg:ready') land();
     else if (m.type === 'dg:glass') glass();

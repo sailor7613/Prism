@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" class="g4">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0a1226">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="../pwa/g4-icon-180.png">
+<title>g4</title>
+<!-- ======================================================================
+     g4 — THE SHELL, THE FRONT DOOR (2026-10-14 · Claude draft, for Sailor's eye)
+     Spec: Specs/G4_OS_and_the_Two_Modes_v2.md §1, §3, §4 (+ the piercing rule, §5a).
+
+     One page owns everything. The shell draws the OS: the sky, the bar, the
+     desktop, the housing. Programs are pages in one iframe under the bar:
+       #desk                 the g4 desktop (drawn here)
+       #prism                Prism — ../v2/
+       #bloomburger          BloomBurger — ../bloomburger/#pg (PG · SST · WIRE, pieces)
+       #codex                the Codex — a sheet over BloomBurger for now
+     THE BAR is the machine's menu bar: the g4 glyph at the left (tap = the
+     desktop, from anywhere; hold = THE PULL), the program's name and its
+     function keys, the clock. Flat chrome. Under it, on the glass, lies
+     THE NAVTOOL — a PIERCING OBJECT: a lit prism splitting a beam, drawn in
+     three.js in a canvas nothing clips, turning to the pointer (and the
+     phone's tilt). Its function is constant and its meaning is Prism's:
+     where the prism sits on the line is where you are in the reading.
+       drag ◀ ▶ and let go      back / forward in the program's own layer
+       hold (≈450 ms)           up ONE layer, never further
+     The glyph answers "where am I in the machine"; the navtool answers
+     "where am I in the reading". (Spec v2 §3, revised 10-14.)
+     Programs talk to the shell: {type:'g4:crumb', name, fn, crumb} sets the
+     bar's words; {type:'g4:navpos', t:0..1} sets where the prism sits on
+     its line; {type:'g4:desk'} asks for the desktop; {type:'g4:pull'}
+     pulls. The shell sends {type:'g4:nav', dir:'back'|'forward'|'up'}.
+     THE PULL and THE WAY BACK: the rig (glass + housing) shrinks with the
+     live page on it; the villa is built on the first pull (?arrive=glass)
+     and crossfades in when it says dg:ready; dg:glass brings the glass
+     back. The bar stays through the pull — the navtool is the thing that
+     exists in both rooms — and goes back into the room once you are there.
+     ====================================================================== -->
+<link rel="stylesheet" href="../src/css/prism-grammar.css?v=2">
+<link rel="stylesheet" href="../src/css/g4-os.css?v=2">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--g4-field-deep); overflow: hidden; }
+  body { font-family: var(--g4-ui); color: var(--ink); }
+  .g4-sky { z-index: 0; transition: opacity .8s; }
+
+  /* the bar — flat chrome; the navtool pierces it */
+  #bar { position: fixed; top: 0; left: 0; right: 0; height: var(--bar-h); z-index: 40;
+    background-image: repeating-linear-gradient(0deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 3px), linear-gradient(var(--g4-chrome), var(--g4-chrome-2));
+    border-bottom: 1px solid rgba(0,0,0,0.45); box-shadow: 0 1px 0 rgba(255,255,255,0.08) inset;
+    display: grid; grid-template-columns: auto 1fr auto; align-items: center; font-size: 11px; color: var(--g4-chrome-ink);
+    user-select: none; -webkit-user-select: none; touch-action: none; transition: opacity .6s, transform .6s; }
+  #glyph { height: var(--bar-h); width: 40px; display: grid; place-items: center; cursor: pointer; border-right: 1px solid rgba(0,0,0,.12); }
+  #glyph svg { height: 15px; width: auto; display: block; }
+  #glyph:active svg, #glyph.holding svg { transform: scale(.92); }
+  #glyph.holding { background: rgba(0,0,0,.06); }
+  #bar .mid { padding-left: 12px; display: flex; gap: 14px; align-items: center; }
+  #bar .mid b { color: var(--g4-chrome-ink); font-weight: 600; }
+  #bar .mid .fn { font-family: var(--mono); font-size: 10px; letter-spacing: .18em; color: var(--g4-chrome-dim); }
+  #bar.away { opacity: 0; transform: translateY(-100%); pointer-events: none; }
+  #strip { position: fixed; left: 0; right: 0; top: var(--bar-h); height: 44px; z-index: 42; cursor: grab; touch-action: none; }
+  #strip:active { cursor: grabbing; }
+  #strip .hint { position: absolute; top: 50%; transform: translateY(-50%); font-family: var(--mono); font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-low); opacity: 0; transition: opacity .2s; pointer-events: none; }
+  #strip .hint.l { left: 14px; } #strip .hint.r { right: 14px; }
+  #strip.dragging .hint { opacity: 1; }
+  #strip.away { opacity: 0; pointer-events: none; }
+  @media (max-width: 480px) { #strip { top: var(--bar-h-phone); } }
+  #bar .right { padding: 0 10px; display: flex; gap: 12px; align-items: center; height: var(--bar-h); color: var(--g4-chrome-dim); letter-spacing: .04em; justify-self: end; }
+  #bar .right .crumb { font-size: 9px; letter-spacing: .14em; text-transform: uppercase; white-space: nowrap; }
+  @media (max-width: 480px) { #bar { --bar-h: var(--bar-h-phone); } #bar .right .crumb { display: none; } #bar .mid .fn { display: none; } }
+  /* the piercing object: lies on the glass just under the bar; nothing clips it */
+  #navtool { position: fixed; top: calc(var(--bar-h) - 10px); left: 0; width: 100%; height: 84px; z-index: 41; pointer-events: none; transition: opacity .6s; }
+  #navtool.away { opacity: 0; }
+  @media (max-width: 480px) { #navtool { top: calc(var(--bar-h-phone) - 10px); } }
+
+  /* programs: one iframe under the bar */
+  #rig { position: fixed; inset: 0; z-index: 10; transform-origin: 50% 50%; will-change: transform, opacity; }
+  #rig.hidden { display: none; }
+  #glass { position: absolute; inset: 0; background: var(--g4-field); overflow: hidden; border-radius: 1.2vmin; box-shadow: 0 0 0 1px rgba(0,0,0,.5) inset; }
+  #rig.flat #glass { border-radius: 0; box-shadow: none; }
+  #prog { position: absolute; left: 0; right: 0; top: var(--bar-h); bottom: 0; width: 100%; height: calc(100% - var(--bar-h)); border: 0; display: block; background: var(--g4-field); }
+  @media (max-width: 480px) { #prog { top: var(--bar-h-phone); height: calc(100% - var(--bar-h-phone)); } }
+  #prog.asleep, #prog.off { display: none; }
+  #housing { position: absolute; inset: calc(var(--bz) * -1) calc(var(--bz) * -1) calc((var(--bz) + var(--chin)) * -1) calc(var(--bz) * -1);
+    --bz: 4.2vmin; --chin: 7vmin; border-radius: calc(var(--bz) * 1.1);
+    background-image: repeating-linear-gradient(0deg, rgba(0,0,0,0.025) 0 1px, transparent 1px 3px), linear-gradient(160deg, #f4f5f8, #cfd4dd);
+    box-shadow: 0 30px 80px rgba(0,0,0,.6), 0 0 0 1px rgba(0,0,0,.4), 0 1px 0 rgba(255,255,255,.8) inset; pointer-events: none; }
+  #housing::after { content: ''; position: absolute; left: 6%; right: 6%; top: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--film-1), rgba(255,255,255,.9), var(--film-3), transparent); opacity: .8; }
+  #housing .chin { position: absolute; left: 50%; bottom: calc(var(--chin) * .28); transform: translateX(-50%); height: calc(var(--chin) * .46); }
+  #housing .chin img { height: 100%; width: auto; opacity: .95; }
+  /* the glare: the villa's lamp on the glass — the same highlight the 3D G4 carries,
+     held while the housing stands, fading as the glass fills the display; and a matte
+     grain over it so the surface reads as a surface */
+  #glare { position: absolute; inset: 0; pointer-events: none; opacity: 0;
+    background:
+      radial-gradient(ellipse 58% 42% at 22% 8%, rgba(255,255,255,.34), rgba(255,255,255,.10) 38%, transparent 70%),
+      linear-gradient(160deg, rgba(255,255,255,.07) 0%, transparent 42%),
+      radial-gradient(ellipse 40% 26% at 78% 96%, rgba(190,232,255,.16), transparent 70%);
+    transition: opacity .9s ease-out; }
+  #glare::after { content: ''; position: absolute; inset: 0; opacity: .35; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .18 0'/></filter><rect width='120' height='120' filter='url(%23n)'/></svg>"); }
+  #glare.go { opacity: 1; transition: opacity .5s ease-in; }
+
+  /* the desktop, drawn by the shell on the glass */
+  #desk { position: absolute; inset: 0; top: var(--bar-h); display: none; place-content: center; gap: 28px; padding: 40px 16px; text-align: center; }
+  #desk.on { display: grid; }
+  #desk .tiles { display: flex; gap: 28px; flex-wrap: wrap; justify-content: center; }
+
+  #villa { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; z-index: 5; opacity: 0; pointer-events: none; background: #000; display: none; }
+  #villa.on { display: block; } #villa.lit { opacity: 1; pointer-events: auto; transition: opacity .9s; }
+  #rig.cue { animation: g4-cue 2.8s ease-in-out infinite alternate; }
+  @keyframes g4-cue { from { transform: scale(var(--s, .55)) rotateY(-4deg); } to { transform: scale(var(--s, .55)) rotateY(4deg); } }
+  #note { position: fixed; left: 50%; bottom: 7vh; transform: translateX(-50%); z-index: 20; font-family: var(--mono); font-size: 10px; letter-spacing: .24em; text-transform: uppercase; color: var(--ink-low); opacity: 0; transition: opacity .5s; pointer-events: none; white-space: nowrap; }
+  #note.on { opacity: 1; }
+  @media (prefers-reduced-motion: reduce) { #rig, #glare { transition: none !important; animation: none !important; } }
+
+  /* ── the Dynamic Island (10-17): standalone on a phone the status bar is translucent, so everything that hangs from the top drops by the safe area */
+  :root { --sat: env(safe-area-inset-top, 0px); }
+  #bar { box-sizing: border-box; height: calc(var(--bar-h) + var(--sat)); padding-top: var(--sat); }
+  #strip { top: calc(var(--bar-h) + var(--sat)); }
+  #navtool { top: calc(var(--bar-h) + var(--sat) - 10px); }
+  #prog { top: calc(var(--bar-h) + var(--sat)); height: calc(100% - var(--bar-h) - var(--sat)); }
+  #desk { top: calc(var(--bar-h) + var(--sat)); }
+  @media (max-width: 480px) {
+    #strip { top: calc(var(--bar-h-phone) + var(--sat)); }
+    #navtool { top: calc(var(--bar-h-phone) + var(--sat) - 10px); }
+    #prog { top: calc(var(--bar-h-phone) + var(--sat)); height: calc(100% - var(--bar-h-phone) - var(--sat)); }
+    #desk { top: calc(var(--bar-h-phone) + var(--sat)); }
+  }
+  /* the phone already shows its own clock above the bar when installed — one clock, not two (10-17) */
+  @media (display-mode: standalone) and (max-width: 480px) { #clock { display: none; } }
+  /* the Codex lives in the bar (Sailor's sketch 10-17): a C with an X in its hollow */
+  #cdxBtn { background: none; border: 0; padding: 0; margin: 0 0 0 2px; height: var(--bar-h); width: 26px; display: grid; place-items: center; color: var(--g4-chrome-ink); cursor: pointer; }
+  #cdxBtn svg { width: 17px; height: 17px; display: block; }
+  #cdxBtn:active svg { transform: scale(.9); }
+  @media (max-width: 480px) { #bar .right #clock { display: none; } }
+</style>
+</head>
+<body>
+<div class="g4-sky" id="sky"><canvas id="skyc"></canvas></div>
+<iframe id="villa" title="the DreamGetty" allow="fullscreen"></iframe>
+<div id="rig">
+  <div id="housing"><div class="chin"><img src="../src/img/prism3d.png" alt=""></div></div>
+  <div id="glass">
+    <iframe id="prog" title="program"></iframe>
+    <div id="desk">
+      <div class="tiles">
+        <a class="g4-tile" href="#prism"><div class="ic lit"><img src="../src/img/prism3d.png" alt="" style="width:58px;height:58px;object-fit:contain"></div><div class="n">Prism</div><div class="s">the workstation</div></a>
+        <a class="g4-tile" href="#bloomburger"><div class="ic lit"><svg viewBox="0 0 64 64" width="58" height="58" aria-hidden="true"><defs><linearGradient id="icArc" x1="0" x2="1"><stop offset="0" stop-color="var(--film-0)"/><stop offset=".5" stop-color="var(--film-2)"/><stop offset="1" stop-color="var(--film-4)"/></linearGradient><filter id="icSoft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.4"/></filter><radialGradient id="icLit"><stop offset="0" stop-color="#fffaf0"/><stop offset="1" stop-color="#f6f1e6" stop-opacity="0"/></radialGradient></defs><path d="M10 44 A22 22 0 0 1 54 44" fill="none" stroke="url(#icArc)" stroke-width="7" opacity=".45" filter="url(#icSoft)"/><path d="M10 44 A22 22 0 0 1 54 44" fill="none" stroke="url(#icArc)" stroke-width="1.2" opacity=".8"/><path d="M32 44 L47 28" stroke="#f6f1e6" stroke-width="4" opacity=".35" filter="url(#icSoft)"/><path d="M32 44 L47 28" stroke="#f6f1e6" stroke-width="1.6" stroke-linecap="round"/><circle cx="47.5" cy="27.5" r="6" fill="url(#icLit)" opacity=".8"/><circle cx="32" cy="44" r="2.2" fill="#f6f1e6"/></svg></div><div class="n">BloomBurger</div><div class="s">the terminal</div></a>
+        <a class="g4-tile" href="#codex"><div class="ic lit"><span class="film loop" style="font-family:Georgia,serif;font-size:40px;line-height:1;text-shadow:0 0 14px rgba(246,241,230,.35)">¶</span></div><div class="n">Codex</div><div class="s">the plain glossary</div></a>
+      </div>
+      <div class="g4-key">g4 · three programs · tap the glyph to come back here · hold it to see the room</div>
+      <div class="g4-key" style="opacity:.5"><a href="#classic" style="text-decoration:none;color:inherit">prism · classic ↗</a></div>
+    </div>
+    <div id="glare"></div>
+  </div>
+</div>
+<div id="bar">
+  <div id="glyph" title="the desktop · hold for the room"><svg viewBox="0 0 40 30" aria-hidden="true"><g fill="none" stroke="#eceef3" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><rect x="6" y="2" width="28" height="18" rx="3"/><path d="M20 20 v4"/><path d="M12 28 c4 -4 12 -4 16 0"/></g><circle cx="20" cy="11" r="1.6" fill="#1d2433"/></svg></div>
+  <div class="mid"><b id="barName">g4</b><span class="fn" id="barFn"></span></div>
+  <div class="right"><span class="crumb" id="crumb"></span><span id="clock"></span><button id="cdxBtn" type="button" title="the Codex" aria-label="the Codex"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.6 6.4A8.4 8.4 0 1 0 18.6 17.6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M9.2 9.2l5.6 5.6M14.8 9.2l-5.6 5.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+</div>
+<canvas id="navtool"></canvas>
+<div id="strip"><span class="hint l">◀ back</span><span class="hint r">forward ▶</span></div>
+<div id="note"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="../src/js/prism-light.js?v=2"></script>
+<script>
+(function () {
+  'use strict';
+  const $ = s => document.querySelector(s);
+  document.getElementById('cdxBtn').addEventListener('click', () => { try { document.getElementById('prog').contentWindow.postMessage({ type: 'g4:codex' }, '*'); } catch (e) {} });
+  const rig = $('#rig'), prog = $('#prog'), villa = $('#villa'), glare = $('#glare'), note = $('#note'), bar = $('#bar'), desk = $('#desk');
+  const q = new URLSearchParams(location.search);
+  const VILLA_URL = '../dreamgetty/' + '?arrive=glass';
+  const SMALL = 0.55;
+  let mode = 'boot', villaBuilt = false, program = null, progFn = '';
+  const showing = () => !program ? 'desk' : program === 'bloomburger' ? ('bloomburger:' + ((progFn || 'PG').toLowerCase())) : program;
+
+  // ── the sky ──
+  (function sky() {
+    const c = $('#skyc'), ctx = c.getContext('2d'); let stars = [];
+    function size() { c.width = innerWidth * devicePixelRatio; c.height = innerHeight * devicePixelRatio; stars = []; const n = Math.round((innerWidth * innerHeight) / 2600); for (let i = 0; i < n; i++) stars.push([Math.random() * c.width, Math.random() * c.height, Math.random() * 1.3 + .3, Math.random() * 6.283]); draw(0); }
+    function draw(t) { ctx.clearRect(0, 0, c.width, c.height); for (const s of stars) { const a = .25 + .55 * (0.5 + 0.5 * Math.sin(t / 1800 + s[3])); ctx.fillStyle = `rgba(245,240,232,${a})`; ctx.beginPath(); ctx.arc(s[0], s[1], s[2] * devicePixelRatio, 0, 6.283); ctx.fill(); } }
+    addEventListener('resize', size); size();
+    let last = 0; (function tick(t) { if (mode !== 'villa' && t - last > 120) { draw(t); last = t; } requestAnimationFrame(tick); })(0);
+  })();
+  (function clock() { const el = $('#clock'); const f = () => { el.textContent = new Date().toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' }); }; f(); setInterval(f, 15000); })();
+
+  // ── THE PIERCING OBJECT: the navtool ──
+  // A glass prism, a beam in from the left, the fan out to the right; the
+  // thin film is the Venus ghost's own formula (cos 2π·λ/[650,532,473]).
+  // It turns to the pointer, and to the phone's tilt, and throws a shadow
+  // on the chrome. Nothing clips it: it overflows the bar on both sides.
+  const nav = (function () {
+    const cv = $('#navtool');
+    let renderer; try { renderer = new THREE.WebGLRenderer({ canvas: cv, alpha: true, antialias: true }); } catch (e) { cv.style.display = 'none'; return { setDrag: () => {} }; }
+    renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+    const scene = new THREE.Scene();
+    const cam = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.1, 50); cam.position.set(0, 0, 10);
+    const group = new THREE.Group(); scene.add(group);
+    const filmVert = 'varying vec3 vN; varying vec3 vV; void main(){ vec4 mv = modelViewMatrix * vec4(position,1.0); vN = normalize(normalMatrix * normal); vV = normalize(-mv.xyz); gl_Position = projectionMatrix * mv; }';
+    const filmFrag = 'varying vec3 vN; varying vec3 vV; uniform float uT; uniform float uA; void main(){ float f = 1.0 - abs(dot(normalize(vN), normalize(vV))); float t = f * 1.1 + uT; vec3 c = 0.5 + 0.5 * cos(6.2831853 * t * 1.3 / vec3(0.65, 0.532, 0.473)); vec3 base = vec3(0.75, 0.82, 1.0); vec3 col = mix(base, c, 0.6); gl_FragColor = vec4(col, uA * (0.35 + 0.65 * f)); }';
+    const film = new THREE.ShaderMaterial({ vertexShader: filmVert, fragmentShader: filmFrag, uniforms: { uT: { value: 0 }, uA: { value: 0.95 } }, transparent: true, depthWrite: false, side: THREE.DoubleSide });
+    const tri = new THREE.Shape(); tri.moveTo(-0.5, -0.42); tri.lineTo(0.5, -0.42); tri.lineTo(0, 0.5); tri.closePath();
+    const prismGeo = new THREE.ExtrudeGeometry(tri, { depth: 0.34, bevelEnabled: false }); prismGeo.center();
+    const prism = new THREE.Mesh(prismGeo, film); group.add(prism);
+    prism.add(new THREE.LineSegments(new THREE.EdgesGeometry(prismGeo), new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.55 })));
+    // THE LIGHT (src/js/prism-light.js, 10-18 design pass): white light in, one
+    // soft spectrum out, in the graphmap plane's language — colour as a field,
+    // never a stripe. The rays live in their own group that follows the prism's
+    // place on the line but does not turn with it: the light stays flat on the
+    // glass and reaches both edges; only the prism turns to you. The beam runs
+    // from the left edge to the prism, the spectrum always reaches the right
+    // edge, dense out to it, feathered so it never sits heavily on the page.
+    prism.renderOrder = 1; prism.children[0].renderOrder = 2;
+    const rays = new THREE.Group(); scene.add(rays);
+    const light = PrismLight.create(THREE, { spread: 0.46, drop: 0.05 }); rays.add(light.group);
+    function layRays() {
+      const gx = group.position.x;                               // the prism's place on the line
+      rays.position.x = gx;
+      light.layout({ left: -aspect * 1.1 - gx - 0.5, right: aspect * 1.1 - gx + 0.5 });   // the display's edges, in the rays' space
+    }
+    const shadow = new THREE.Mesh(new THREE.CircleGeometry(0.7, 24), new THREE.MeshBasicMaterial({ color: 0x000000, transparent: true, opacity: 0.16, depthWrite: false })); shadow.position.set(0.14, -0.36, -0.5); shadow.scale.set(1.25, 0.3, 1); scene.add(shadow);
+    let aspect = 1, tiltX = 0, tiltY = 0, dx = 0, pos = 0.5; const t0 = performance.now();
+    function size() { const w = innerWidth, h = 84; renderer.setSize(w, h, false); aspect = w / h; cam.left = -aspect * 1.1; cam.right = aspect * 1.1; cam.top = 1.1; cam.bottom = -1.1; cam.updateProjectionMatrix(); }
+    addEventListener('resize', size); size();
+    addEventListener('pointermove', e => { tiltX = (e.clientX / innerWidth - 0.5) * 0.9; tiltY = (e.clientY / innerHeight - 0.5) * 0.5; }, { passive: true });
+    addEventListener('deviceorientation', e => { if (e.gamma == null) return; tiltX = Math.max(-0.6, Math.min(0.6, e.gamma / 45)); tiltY = Math.max(-0.4, Math.min(0.4, (e.beta - 40) / 60)); }, { passive: true });
+    (function frame() {
+      requestAnimationFrame(frame);
+      if (document.hidden || cv.classList.contains('away')) return;
+      const secs = (performance.now() - t0) / 1000;
+      film.uniforms.uT.value = secs * 0.05;
+      light.update(secs, group.rotation.y / 0.8);
+      group.rotation.y += (tiltX * 0.9 - group.rotation.y) * 0.08;
+      group.rotation.x += (tiltY * 0.6 - group.rotation.x) * 0.08;
+      const home = (pos - 0.5) * 2 * aspect * 1.1 * 0.78;                       // where the prism sits on its line (Prism: where you are)
+      group.position.x += (home + dx / 90 * aspect * 0.6 - group.position.x) * 0.16;
+      shadow.position.x = group.position.x + 0.12;
+      layRays();
+      renderer.render(scene, cam);
+    })();
+    return { setDrag: v => { dx = v; }, setPos: t => { pos = Math.max(0, Math.min(1, +t || 0)); } };
+  })();
+
+  // ── routing: the desk, and programs in the one iframe ──
+  // local serves: a fresh fetch of the program on every reload (the browser otherwise keeps the
+  // iframe's document from its cache while the shell around it reloads)
+  const STAMP = /^(localhost|127\.|\[::1\])/.test(location.hostname) ? String(Date.now()) : '';
+  const withStamp = src => { if (!STAMP) return src; const i = src.indexOf('#'); const base = i >= 0 ? src.slice(0, i) : src, hash = i >= 0 ? src.slice(i) : ''; return base + (base.includes('?') ? '&' : '?') + 'v=' + STAMP + hash; };
+  const PROGRAMS = {
+    prism:       { name: 'Prism',       fn: 'BEAM', src: '../app/' },
+    classic:     { name: 'Prism',       fn: 'classic', src: '../v2/' },
+    bloomburger: { name: 'BloomBurger', fn: 'PG', src: '../bloomburger/#pg' },
+    codex:       { name: 'Codex',       fn: '',   src: '../bloomburger/#codex/object' },
+  };
+  function route() {
+    const h = location.hash.replace(/^#/, '') || 'desk';
+    const head = h.split('/')[0];
+    if (head === 'desk' || !PROGRAMS[head]) { program = null; desk.classList.add('on'); prog.classList.add('off'); setBar('g4', '', 'desktop'); nav.setPos(0.5); return; }
+    const P = PROGRAMS[head];
+    desk.classList.remove('on'); prog.classList.remove('off');
+    if (program !== head) { program = head; prog.src = withStamp(P.src); nav.setPos(head === 'bloomburger' ? 0.5 : 0.12); }
+    setBar(P.name, P.fn, P.name.toUpperCase());
+  }
+  function setBar(name, fn, crumb) { $('#barName').textContent = name; $('#barFn').textContent = fn || ''; $('#crumb').textContent = crumb || ''; }
+  addEventListener('hashchange', route);
+
+  // ── the glyph: where am I in the machine ──
+  (function glyph() {
+    const g = $('#glyph'); let t = null, held = false;
+    g.addEventListener('pointerdown', e => { if (mode !== 'glass') return; held = false; g.classList.add('holding'); t = setTimeout(() => { held = true; g.classList.remove('holding'); if (navigator.vibrate) navigator.vibrate(12); pull(); }, 520); });
+    const end = () => { clearTimeout(t); g.classList.remove('holding'); };
+    g.addEventListener('pointerup', () => { end(); if (!held && mode === 'glass') location.hash = '#desk'; });
+    g.addEventListener('pointercancel', end); g.addEventListener('pointerleave', end);
+  })();
+  // ── the navtool's strip: where am I in the reading ──
+  (function strip() {
+    const st = $('#strip'); let x0 = null, dx = 0, holdT = null, held = false, dragging = false;
+    const SNAP = 56, HOLD = 450;
+    function toProg(dir) { try { prog.contentWindow && prog.contentWindow.postMessage({ type: 'g4:nav', dir }, '*'); } catch (e) {} }
+    function up() { if (program) toProg('up'); }
+    st.addEventListener('pointerdown', e => { if (mode !== 'glass') return; x0 = e.clientX; dx = 0; held = dragging = false; st.setPointerCapture(e.pointerId); holdT = setTimeout(() => { held = true; if (navigator.vibrate) navigator.vibrate(12); up(); }, HOLD); });
+    st.addEventListener('pointermove', e => { if (x0 == null) return; dx = e.clientX - x0; if (!dragging && Math.abs(dx) > 6) { clearTimeout(holdT); dragging = true; st.classList.add('dragging'); } if (dragging) { nav.setDrag(Math.max(-120, Math.min(120, dx))); try { prog.contentWindow && prog.contentWindow.postMessage({ type: 'g4:navdrag', dx: Math.max(-120, Math.min(120, dx)) }, '*'); } catch (e2) {} } });
+    function end() { if (x0 == null) return; clearTimeout(holdT); st.classList.remove('dragging'); nav.setDrag(0); try { prog.contentWindow && prog.contentWindow.postMessage({ type: 'g4:navdrag', dx: 0 }, '*'); } catch (e2) {} if (!held && dragging) { if (dx <= -SNAP) toProg('forward'); else if (dx >= SNAP) toProg('back'); } x0 = null; dx = 0; }
+    st.addEventListener('pointerup', end); st.addEventListener('pointercancel', end);
+    addEventListener('keydown', e => {
+      if (e.target.tagName === 'INPUT') return;
+      if ((e.metaKey || e.ctrlKey) && e.shiftKey && e.key.toLowerCase() === 'd') { e.preventDefault(); mode === 'villa' ? glass() : pull(); return; }
+      if (mode !== 'glass') return;
+      if (e.altKey && e.key === 'ArrowLeft') toProg('back');
+      if (e.altKey && e.key === 'ArrowRight') toProg('forward');
+      if (e.key === 'Escape') up();
+    });
+  })();
+
+  function setScale(s, ms, ease) { rig.style.transition = ms ? `transform ${ms}ms ${ease || 'cubic-bezier(.4,0,.2,1)'}, opacity ${Math.min(ms, 600)}ms` : 'none'; rig.style.setProperty('--s', s); rig.style.transform = s === 1 ? 'none' : `scale(${s})`; }
+  function say(t) { note.textContent = t || ''; note.classList.toggle('on', !!t); }
+  function barAway(v) { bar.classList.toggle('away', v); $('#navtool').classList.toggle('away', v); $('#strip').classList.toggle('away', v); }
+
+  // ── boot ──
+  function boot() {
+    route();
+    rig.style.opacity = '0'; setScale(0.6, 0); barAway(true);
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      rig.style.transition = 'opacity .45s'; rig.style.opacity = '1';
+      setTimeout(() => glare.classList.add('go'), 250);
+      setTimeout(() => { setScale(1, 950); glare.classList.remove('go'); }, 1250);
+      setTimeout(() => { rig.classList.add('flat'); barAway(false); mode = 'glass'; }, 2250);
+    }));
+  }
+
+  // ── the pull ──
+  function pull() {
+    if (mode !== 'glass') return;
+    mode = 'pulling'; pull._landed = false;
+    rig.classList.remove('flat'); $('#sky').style.opacity = '.35';
+    glare.classList.add('go');                        // the room's light finds the glass
+    const first = !villaBuilt;
+    if (first) setScale(SMALL, 1300, 'cubic-bezier(.3,0,.1,1)');   // only while the villa builds: the housing waits in the dark
+    if (first) { villaBuilt = true; villa.src = VILLA_URL + '&app=' + encodeURIComponent(showing()); setTimeout(() => { if (mode === 'pulling' && !pull._landed) { rig.classList.add('cue'); say('the villa is waking'); } }, 1400); }
+    villa.classList.add('on');
+    if (!first) setTimeout(() => villa.contentWindow && villa.contentWindow.postMessage({ type: 'g4:arrive', app: showing() }, '*'), 300);
+    pull._t = setTimeout(() => land(), first ? 20000 : 2500);
+  }
+  function land() {
+    if (mode !== 'pulling') return;
+    clearTimeout(pull._t); pull._landed = true;
+    rig.classList.remove('cue'); say('');
+    // the glass comes back up to fill the display (if it shrank to wait), then the
+    // villa's eye — already at the screen, filling the display the same way — takes
+    // over and pulls back itself. One object, two rooms.
+    const wait = rig.style.transform && rig.style.transform !== 'none' ? 650 : 0;
+    if (wait) setScale(1, 650);
+    setTimeout(() => {
+      villa.classList.add('lit');
+      rig.style.transition = 'opacity 800ms ease-in'; rig.style.opacity = '0';
+      setTimeout(() => barAway(true), 300);   // the object goes back into the room
+      setTimeout(() => { rig.classList.add('hidden'); prog.classList.add('asleep'); glare.classList.remove('go'); mode = 'villa'; }, 850);
+    }, wait);
+  }
+  function glass() {
+    if (mode !== 'villa') return;
+    mode = 'returning'; say('');
+    prog.classList.remove('asleep'); rig.classList.remove('hidden');
+    rig.style.opacity = '0'; setScale(1, 0); rig.classList.remove('flat'); glare.classList.add('go');
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      rig.style.transition = 'opacity .7s'; rig.style.opacity = '1';
+      villa.classList.remove('lit');
+      setTimeout(() => glare.classList.remove('go'), 900);
+      setTimeout(() => { rig.classList.add('flat'); $('#sky').style.opacity = '1'; villa.classList.remove('on'); barAway(false); mode = 'glass'; }, 1300);
+    }));
+  }
+
+  addEventListener('message', e => {
+    const m = e.data || {};
+    if (m.type === 'g4:pull') pull();
+    else if (m.type === 'g4:desk') location.hash = '#desk';
+    else if (m.type === 'g4:crumb') { progFn = m.fn || ''; setBar(m.name || (program && PROGRAMS[program].name) || 'g4', m.fn, m.crumb); }
+    else if (m.type === 'g4:navpos') nav.setPos(m.t);
+    else if (m.type === 'g4:navdock') {   // a program asks the navtool to settle inside it (Prism's landing: the centre of the page)
+      const nt = $('#navtool');
+      const sp = $('#strip');
+      if (m.y == null) { nt.style.top = ''; nt.classList.remove('docked'); sp.style.top = ''; sp.classList.remove('docked'); }
+      else { const top = prog.getBoundingClientRect().top + m.y - 42; nt.style.top = top + 'px'; nt.classList.add('docked'); sp.style.top = (top + 18) + 'px'; sp.classList.add('docked'); }   // the drag strip goes with it: you move the prism where it sits
+    }
+    else if (m.type === 'dg:ready') land();
+    else if (m.type === 'dg:glass') glass();
+  });
+
+  boot();
+  if (q.get('pull') === '1') setTimeout(pull, 2600);
+  window.g4Shell = { pull, glass, state: () => mode };
+})();
+</script>
+</body>
+</html>
