@@ -1,9 +1,9 @@
 # Newsroom digest — 2026-10-18
 
-Register: 93 objects · this scan: 2 new, 1 seen again, 0 returned.
+Register: 93 objects · this scan: 0 new, 0 seen again, 0 returned.
 
-## Queued for drafting (1)
-- **Trump approval hits record low as midterms near : poll** — vote · voted · holder: the President · formed 2026-10-18 · 11 outlets (peak 11) · `obj_thepresi_approval-hits-low-midterms`
+## Queued for drafting (0)
+- (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
 - none today
@@ -12,8 +12,7 @@ Register: 93 objects · this scan: 2 new, 1 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **Robin Rocky Myers , Black man once sentenced to death for Ludie Mae Tucker murder , learns lawyer John Edmond Mays defended KKK** — indictment · charged · holder: ? · formed 2026-10-18 · 5 outlets (peak 5) · `obj_x_black-death-defended-edmond`
-- **Trump approval hits record low as midterms near : poll** — vote · voted · holder: the President · formed 2026-10-18 · 11 outlets (peak 11) · `obj_thepresi_approval-hits-low-midterms`
+- none
 
 ## Watching (34)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
