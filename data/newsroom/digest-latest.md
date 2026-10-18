@@ -1,6 +1,6 @@
 # Newsroom digest — 2026-10-17
 
-Register: 89 objects · this scan: 3 new, 1 seen again, 0 returned.
+Register: 89 objects · this scan: 0 new, 1 seen again, 0 returned.
 
 ## Queued for drafting (0)
 - (nothing cleared the bar)
@@ -12,9 +12,7 @@ Register: 89 objects · this scan: 3 new, 1 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **Trump waives most Russia sanctions and tariffs days before they were to take effect** — tariff/sanction · imposed · holder: the President · formed 2026-10-17 · 5 outlets (peak 5) · `obj_thepresi_before-days-effect-most`
-- **Trump decision to waive Russian sanctions outrages Congress , but no quick counter seen** — tariff/sanction · imposed · holder: the President · formed 2026-10-17 · 9 outlets (peak 9) · `obj_thepresi_congress-counter-decision-outrages`
-- **New Mexico judge tosses Timothy Busfield indictment , citing prosecutorial misconduct** — ruling · ruled · holder: a federal court · formed 2026-10-17 · 20 outlets (peak 20) · `obj_afederal_busfield-citing-indictment-judge`
+- none
 
 ## Watching (34)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
