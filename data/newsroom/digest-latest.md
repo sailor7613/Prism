@@ -1,6 +1,6 @@
-# Newsroom digest — 2026-10-18
+# Newsroom digest — 2026-10-19
 
-Register: 93 objects · this scan: 0 new, 0 seen again, 0 returned.
+Register: 93 objects · this scan: 0 new, 2 seen again, 0 returned.
 
 ## Queued for drafting (0)
 - (nothing cleared the bar)
