@@ -1,9 +1,9 @@
 # Newsroom digest — 2026-10-19
 
-Register: 94 objects · this scan: 1 new, 0 seen again, 0 returned.
+Register: 95 objects · this scan: 1 new, 1 seen again, 0 returned.
 
-## Queued for drafting (1)
-- **Trump signs Melania - backed order to close women health research gaps** — law · signed · holder: the President · formed 2026-10-19 · 14 outlets (peak 14) · `obj_thepresi_backed-close-gaps-health`
+## Queued for drafting (0)
+- (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
 - none today
@@ -12,7 +12,7 @@ Register: 94 objects · this scan: 1 new, 0 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **Trump signs Melania - backed order to close women health research gaps** — law · signed · holder: the President · formed 2026-10-19 · 14 outlets (peak 14) · `obj_thepresi_backed-close-gaps-health`
+- **Raúl Castro charged with conspiracy to commit murder in 1996 plane downing** — indictment · charged · holder: ? · formed 2026-10-19 · 3 outlets (peak 3) · `obj_x_1996-castro-charged-commit`
 
 ## Watching (34)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
