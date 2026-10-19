@@ -1,0 +1,16 @@
+file:///sessions/rcw-01pjc79qyryzrpnbyxtwqrxx/mnt/PARALLELOGRAM%20PRISM/Prism/node_modules/puppeteer-core/lib/puppeteer/node/BrowserLauncher.js:392
+            throw new Error(`Could not find ${getBrowserTypeDisplayName(browserType)} (ver. ${browserVersion}). This can occur if either\n` +
+                  ^
+
+Error: Could not find Chrome (ver. 155.0.8059.79). This can occur if either
+ 1. you did not perform an installation before running the script (e.g. `npx puppeteer browsers install chrome`) or
+ 2. your cache path is incorrectly configured (which is: /sessions/rcw-01pjc79qyryzrpnbyxtwqrxx/.cache/puppeteer).
+For (2), check out our guide on configuring puppeteer at https://pptr.dev/guides/configuration.
+    at ChromeLauncher.resolveExecutablePath (file:///sessions/rcw-01pjc79qyryzrpnbyxtwqrxx/mnt/PARALLELOGRAM%20PRISM/Prism/node_modules/puppeteer-core/lib/puppeteer/node/BrowserLauncher.js:392:19)
+    at async ChromeLauncher.computeLaunchArguments (file:///sessions/rcw-01pjc79qyryzrpnbyxtwqrxx/mnt/PARALLELOGRAM%20PRISM/Prism/node_modules/puppeteer-core/lib/puppeteer/node/ChromeLauncher.js:92:19)
+    at async ChromeLauncher.launch (file:///sessions/rcw-01pjc79qyryzrpnbyxtwqrxx/mnt/PARALLELOGRAM%20PRISM/Prism/node_modules/puppeteer-core/lib/puppeteer/node/BrowserLauncher.js:95:28)
+    at async ChromeLauncher.launch (file:///sessions/rcw-01pjc79qyryzrpnbyxtwqrxx/mnt/PARALLELOGRAM%20PRISM/Prism/node_modules/puppeteer-core/lib/puppeteer/node/ChromeLauncher.js:39:16)
+    at async PuppeteerNode.launch (file:///sessions/rcw-01pjc79qyryzrpnbyxtwqrxx/mnt/PARALLELOGRAM%20PRISM/Prism/node_modules/puppeteer-core/lib/puppeteer/node/PuppeteerNode.js:124:16)
+    at async /sessions/rcw-01pjc79qyryzrpnbyxtwqrxx/mnt/PARALLELOGRAM PRISM/Prism/scripts/show/render.js:32:19
+
+Node.js v22.23.2

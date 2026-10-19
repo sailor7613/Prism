@@ -65,7 +65,7 @@
   #bar .mid b { color: var(--g4-chrome-ink); font-weight: 600; }
   #bar .mid .fn { font-family: var(--mono); font-size: 10px; letter-spacing: .18em; color: var(--g4-chrome-dim); }
   #bar.away { opacity: 0; transform: translateY(-100%); pointer-events: none; }
-  #strip { position: fixed; left: 0; right: 0; top: var(--bar-h); height: 44px; z-index: 42; cursor: grab; touch-action: none; }
+  #strip { position: fixed; left: 0; right: 0; top: var(--bar-h); height: 60px; z-index: 42; cursor: grab; touch-action: none; }
   #strip:active { cursor: grabbing; }
   #strip .hint { position: absolute; top: 50%; transform: translateY(-50%); font-family: var(--mono); font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-low); opacity: 0; transition: opacity .2s; pointer-events: none; }
   #strip .hint.l { left: 14px; } #strip .hint.r { right: 14px; }
@@ -76,8 +76,8 @@
   #bar .right .crumb { font-size: 9px; letter-spacing: .14em; text-transform: uppercase; white-space: nowrap; }
   @media (max-width: 480px) { #bar { --bar-h: var(--bar-h-phone); } #bar .right .crumb { display: none; } #bar .mid .fn { display: none; } }
   /* the piercing object: lies on the glass just under the bar; nothing clips it */
-  #navtool { position: fixed; top: calc(var(--bar-h) - 10px); left: 0; width: 100%; height: 84px; z-index: 41; pointer-events: none; transition: opacity .6s, top .55s cubic-bezier(.2,.8,.2,1); }   /* (10-18) the prism travels between its places */
-  #strip { transition: top .55s cubic-bezier(.2,.8,.2,1); }
+  #navtool { position: fixed; top: calc(var(--bar-h) - 10px); left: 0; width: 100%; height: 84px; z-index: 41; pointer-events: none; transition: opacity .6s, top .45s cubic-bezier(.2,.8,.2,1); }   /* (10-18) the prism travels between its places */
+  #strip { transition: top .45s cubic-bezier(.2,.8,.2,1); }
   #navtool.away { opacity: 0; }
   #navtool.holding { animation: g4-hold 3s linear forwards; }   /* the prism brightens over the three seconds of a hold */
   @keyframes g4-hold { from { filter: brightness(1); } to { filter: brightness(1.9) drop-shadow(0 0 18px rgba(246,241,230,.6)); } }
@@ -246,7 +246,8 @@
       group.rotation.y += (tiltX * 0.9 - group.rotation.y) * 0.08;
       group.rotation.x += (tiltY * 0.6 - group.rotation.x) * 0.08;
       const home = (pos - 0.5) * 2 * aspect * 1.1 * 0.78;                       // where the prism sits on its line (Prism: where you are)
-      group.position.x += (home + dx / 90 * aspect * 0.6 - group.position.x) * 0.16;
+      const px = (2 * aspect * 1.1) / innerWidth;                                 // one screen pixel in the line's units: the prism rides under the finger (10-18)
+      group.position.x += (home + dx * px - group.position.x) * (dx ? 0.42 : 0.14);
       shadow.position.x = group.position.x + 0.12;
       layRays();
       renderer.render(scene, cam);
@@ -291,11 +292,11 @@
     // While dragging, the program hears {dx, dy}; on release it hears one direction — back/forward (x) or
     // rise/sink (y), whichever the finger moved more. The prism follows the finger a little both ways.
     const st = $('#strip'), nt = $('#navtool'); let x0 = null, y0 = null, dx = 0, dy = 0, holdT = null, held = false, dragging = false;
-    const SNAP = 56, HOLD = 3000, clampD = v => Math.max(-120, Math.min(120, v));   // (10-18, Sailor) hold the prism three seconds and it snaps back to the centre
+    const SNAP = 56, HOLD = 3000, clampD = v => Math.max(-200, Math.min(200, v));   // (10-18, Sailor) hold the prism three seconds and it snaps back to the centre
     function toProg(dir) { try { prog.contentWindow && prog.contentWindow.postMessage({ type: 'g4:nav', dir }, '*'); } catch (e) {} }
     function up() { if (program) toProg('up'); }
     st.addEventListener('pointerdown', e => { if (mode !== 'glass') return; x0 = e.clientX; y0 = e.clientY; dx = dy = 0; held = dragging = false; st.setPointerCapture(e.pointerId); nt.classList.add('holding'); holdT = setTimeout(() => { held = true; nt.classList.remove('holding'); if (navigator.vibrate) navigator.vibrate(12); up(); }, HOLD); });
-    st.addEventListener('pointermove', e => { if (x0 == null) return; dx = e.clientX - x0; dy = e.clientY - y0; if (!dragging && Math.hypot(dx, dy) > 6) { clearTimeout(holdT); dragging = true; st.classList.add('dragging'); } if (dragging) { nav.setDrag(clampD(dx)); nt.style.transform = `translateY(${clampD(dy) * 0.45}px)`; try { prog.contentWindow && prog.contentWindow.postMessage({ type: 'g4:navdrag', dx: clampD(dx), dy: clampD(dy) }, '*'); } catch (e2) {} } });
+    st.addEventListener('pointermove', e => { if (x0 == null) return; dx = e.clientX - x0; dy = e.clientY - y0; if (!dragging && Math.hypot(dx, dy) > 3) { clearTimeout(holdT); dragging = true; st.classList.add('dragging'); } if (dragging) { nav.setDrag(clampD(dx)); nt.style.transform = `translateY(${clampD(dy) * 0.6}px)`; try { prog.contentWindow && prog.contentWindow.postMessage({ type: 'g4:navdrag', dx: clampD(dx), dy: clampD(dy) }, '*'); } catch (e2) {} } });
     function end() { if (x0 == null) return; clearTimeout(holdT); nt.classList.remove('holding'); st.classList.remove('dragging'); nav.setDrag(0); nt.style.transform = ''; try { prog.contentWindow && prog.contentWindow.postMessage({ type: 'g4:navdrag', dx: 0, dy: 0 }, '*'); } catch (e2) {} if (!held && dragging) { if (Math.abs(dy) > Math.abs(dx)) { if (dy <= -SNAP) toProg('rise'); else if (dy >= SNAP) toProg('sink'); } else { if (dx <= -SNAP) toProg('forward'); else if (dx >= SNAP) toProg('back'); } } x0 = y0 = null; dx = dy = 0; }
     st.addEventListener('pointerup', end); st.addEventListener('pointercancel', end);
     addEventListener('keydown', e => {
@@ -381,7 +382,7 @@
       const nt = $('#navtool');
       const sp = $('#strip');
       if (m.y == null) { nt.style.top = ''; nt.classList.remove('docked'); sp.style.top = ''; sp.classList.remove('docked'); }
-      else { const top = prog.offsetTop + m.y - 42; nt.style.top = top + 'px'; nt.classList.add('docked'); sp.style.top = (top + 18) + 'px'; sp.classList.add('docked'); }   // the drag strip goes with it: you move the prism where it sits (offsetTop, not the client rect: the rig may be mid-scale at boot)
+      else { const top = prog.offsetTop + m.y - 42; nt.style.top = top + 'px'; nt.classList.add('docked'); sp.style.top = (top + 10) + 'px'; sp.classList.add('docked'); }   // the drag strip goes with it: you move the prism where it sits (offsetTop, not the client rect: the rig may be mid-scale at boot)
     }
     else if (m.type === 'dg:ready') land();
     else if (m.type === 'dg:glass') glass();

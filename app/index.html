@@ -340,8 +340,8 @@
   #v-objects[data-panel="prism"] .stage { transition: transform .8s cubic-bezier(.2,.8,.2,1), opacity .6s; }
   #v-objects[data-panel="prism"][data-stage="dial"] .stage, #v-objects[data-panel="prism"][data-stage="responses"] .stage { transform: translateY(-110%); opacity: 0; pointer-events: none; }
   #v-objects[data-panel="prism"][data-stage="dial"] .pband, #v-objects[data-panel="prism"][data-stage="responses"] .pband { max-height: none; }
-  #v-objects[data-panel="prism"][data-stage="map"] .pband { max-height: 38vh; }
-  #v-objects[data-panel="prism"][data-stage="map"] .pband > p:first-of-type, #v-objects[data-panel="prism"][data-stage="responses"] .pband > p:first-of-type { display: none; }   /* the question has been read by now */
+  #v-objects[data-panel="prism"][data-stage="map"] .pband, #v-objects[data-panel="prism"][data-stage="z"] .pband { max-height: 38vh; }
+  #v-objects[data-panel="prism"][data-stage="map"] .pband > p:first-of-type, #v-objects[data-panel="prism"][data-stage="z"] .pband > p:first-of-type, #v-objects[data-panel="prism"][data-stage="responses"] .pband > p:first-of-type { display: none; }   /* the question has been read by now */
   .memblock { transition: transform .6s cubic-bezier(.4,0,.2,1), opacity .45s; }
   .memblock.away { transform: translateY(-60px); opacity: 0; height: 0; overflow: hidden; margin: 0; pointer-events: none; }
   /* the band hugs the navtool: lower row → the navtool is high, so the pieces sit just under it and the map takes the bottom (thumb reach for the pin); upper row → map, pieces, navtool */
@@ -459,7 +459,20 @@
   .qtexts .qt i { width: 7px; height: 7px; border-radius: 50%; margin-top: 5px; background: var(--c); box-shadow: 0 0 8px var(--c); }
   .qtexts .qt.A { --c: var(--lt-blue); } .qtexts .qt.B { --c: var(--lt-red); } .qtexts .qt.C { --c: var(--lt-green); } .qtexts .qt.D { --c: var(--lt-gold); }
   .qtexts .qt.on { box-shadow: 0 0 0 1px color-mix(in srgb, var(--c) 55%, transparent), 0 0 18px color-mix(in srgb, var(--c) 30%, transparent); }
+  .qtexts.settled .qt { width: auto; max-width: 46%; padding: 4px 9px; border-radius: 12px; grid-template-columns: 8px auto; }
+  .qtexts.settled .qt span { display: none; } .qtexts .qt b { display: none; font-weight: 400; font-family: var(--mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--c); white-space: nowrap; } .qtexts.settled .qt b { display: block; }
+  .qtexts.settled .qt i { margin-top: 3px; }
   .qtexts .qt:nth-child(2) { transition-delay: .08s; } .qtexts .qt:nth-child(3) { transition-delay: .16s; } .qtexts .qt:nth-child(4) { transition-delay: .24s; }
+  /* the peek: the panel you're dragging toward, sliding in from its home side by the drag's progress */
+  .peek { position: fixed; z-index: 30; pointer-events: none; padding: 14px 16px; border-radius: 8px; background: rgba(10,18,38,.9); border: 1px solid rgba(233,236,242,.18); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 18px 40px rgba(0,0,0,.45); width: min(260px, 70vw); --p: 0; opacity: var(--p); transition: opacity .12s; }
+  .peek[hidden] { display: none; }
+  .peek .k { font-family: var(--mono); font-size: 10px; letter-spacing: .24em; text-transform: uppercase; color: var(--lt-cream); margin: 0 0 6px; }
+  .peek p { margin: 0; font-size: 14px; line-height: 1.4; color: var(--ink-mid); }
+  .peek[data-from="right"] { right: 0; top: 40%; transform: translateX(calc((1 - var(--p)) * 110%)) translateX(-12px); }
+  .peek[data-from="left"] { left: 0; top: 40%; transform: translateX(calc((1 - var(--p)) * -110%)) translateX(12px); }
+  .peek[data-from="top"] { left: 50%; top: 0; transform: translateX(-50%) translateY(calc((1 - var(--p)) * -120%)) translateY(70px); }
+  .peek[data-from="bottom"] { left: 50%; bottom: 0; transform: translateX(-50%) translateY(calc((1 - var(--p)) * 120%)) translateY(-90px); }
+  .pband, .stage, .band, .ecard, .navdock { transition: opacity .25s, transform .25s; }
   /* a station's line, opened beside its dot */
   .linecard { position: absolute; z-index: 5; width: min(300px, 78%); padding: 10px 12px; border-radius: 6px; background: rgba(10,18,38,.92); border: 1px solid rgba(233,236,242,.18); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 10px 30px rgba(0,0,0,.45); }
   .linecard .k { font-family: var(--mono); font-size: 9px; letter-spacing: .18em; text-transform: uppercase; margin-bottom: 6px; }
@@ -488,6 +501,7 @@
       <div class="linecard" id="lineCard" hidden></div>
       <div class="qtexts" id="qtexts"></div>
     </div>
+    <div class="peek" id="peek" hidden></div>
     <div class="pband" id="pband"></div>
   </div>
   <div class="navdock" id="navdock"><img src="../src/img/prism3d.png" alt=""></div>
@@ -1166,7 +1180,7 @@
     return new THREE.Mesh(new THREE.SphereGeometry(1, 40, 28), mat);
   }
   // the pin you last committed on today's event comes back as the one you are standing on
-  (function restorePin() { if (!headline) return; const p = latestPins()[headline.rid]; if (p) { SIX.pin = { x: p.x, y: p.y }; SIX.zUser = p.z || 0; SIX.aperture = p.aperture || 0; SIX.placed = true; } })();
+  (function restorePin() { if (!headline) return; const p = latestPins()[headline.rid]; if (p) { SIX.pin = { x: p.x, y: p.y }; SIX.zUser = p.z || 0; SIX.aperture = p.aperture || 0; SIX.placed = true; SIX.locked = true; SIX.zStage = true; } })();
   function buildStage() {
     if (LAND.built || !headline) return; const el = $('#hmap'); if (!el || !el.offsetWidth) return; LAND.built = true;
     let gm; try { gm = PrismGraphmap.create({ container: el, mode: 'analytical', wordsLegible: true, capabilities: { orbit: true, zInput: false, zRender: true, diatribeSlider: false, clustering: 'individual' } }); gm.mount(el); } catch (e) { console.warn('[stage]', e); return; }
@@ -1226,7 +1240,7 @@
   }
   window.sixRepaint = paint; window.__six = () => ({ SIX, LAND, G, go, TED, MEM, renderBand, paint });
   // the map lies flat (face on, pitch 0) to place a pin and tilts when a layer needs depth (Tracking, Compare, You)
-  function orbitFor(P) { const gm = G; if (!gm || (P === 'crowd' && !SIX.introDone)) return; const st = $('#stage'), wide = st.offsetHeight && st.offsetWidth / st.offsetHeight > 1.6; const o = { crowd: [-6, -32, 6.4], prism: [0, -4, 5.6], field: [0, -18, 6.8], diatribe: [-3, -14, 6.1], tracking: [-10, -34, 6.9], compare: [8, -34, 6.9], you: [-12, -36, 6.9] }[P] || [0, -30, 6.4]; try { gm.spinTo(o[0], o[1], 1400); gm.setZoom && gm.setZoom(wide ? o[2] - 1.1 : o[2]); gm.setFocus && gm.setFocus(0.5, P === 'crowd' ? 0.56 : 0.5); } catch (e) {} }
+  function orbitFor(P) { const gm = G; if (!gm || (P === 'crowd' && !SIX.introDone)) return; const st = $('#stage'), wide = st.offsetHeight && st.offsetWidth / st.offsetHeight > 1.6; const o = { crowd: [-6, -32, 6.4], prism: SIX.zStage && SIX.placed ? [-14, -46, 6.9] : [0, -4, 5.6], field: [0, -18, 6.8], diatribe: [-3, -14, 6.1], tracking: [-10, -34, 6.9], compare: [8, -34, 6.9], you: [-12, -36, 6.9] }[P] || [0, -30, 6.4]; try { gm.spinTo(o[0], o[1], 1400); gm.setZoom && gm.setZoom(wide ? o[2] - 1.1 : o[2]); gm.setFocus && gm.setFocus(0.5, P === 'crowd' ? 0.56 : 0.5); } catch (e) {} }
 
   // ── the navtool: where the prism sits says which panel you are in ──
   function dockNav() {
@@ -1259,10 +1273,29 @@
     return Object.keys(GRID).find(k => GRID[k][0] === c && GRID[k][1] === r) || P;   // an empty slot (lower left, for now): the prism stays where it is
   }
   // while the prism is being dragged, the band it is heading for peeks in
+  // while the prism is dragged, the panel you're heading for comes in with your finger (Sailor, 10-18: "an immediate effect when I start
+  // using it, with elements gradually moving"): its card slides in from its home side by the drag's progress; the current band and the map give way
+  const PEEK = { target: null };
+  function peekLine(P) {   // one line that says what that panel is, with its live number
+    if (P === 'crowd') return 'back to the crowd';
+    if (P === 'field') { const n = fieldOf().length; return n ? `${n} ${n === 1 ? 'person has' : 'people have'} placed themselves` : 'nobody has placed themselves yet'; }
+    if (P === 'tracking') { const n = followed().length; return n ? `${n} you follow, placed on the map` : 'follow someone in Congress'; }
+    if (P === 'compare') return 'lay anyone you track against you';
+    if (P === 'you') { const n = Object.keys(latestPins()).length; return n ? `${n} pin${n === 1 ? '' : 's'} — your trail` : 'your record starts with a pin'; }
+    if (P === 'prism') return SIX.placed ? "where you stand on today's event" : "place yourself on today's event";
+    return '';
+  }
   addEventListener('message', e => { const m = e.data || {}; if (m.type !== 'g4:navdrag' || !$('#v-objects').classList.contains('on')) return;
-    const dx = +m.dx || 0, dy = +m.dy || 0, pb = $('#pband'), st = $('#stage');
-    if (!dx && !dy) { pb.style.opacity = ''; st.style.transform = ''; return; }
-    st.style.transform = `translate(${dx * 0.12}px, ${dy * 0.08}px)`; if (SIX.panel !== 'crowd') pb.style.opacity = String(Math.max(0.35, 1 - Math.hypot(dx, dy) / 160));
+    const dx = +m.dx || 0, dy = +m.dy || 0, pb = $('#pband'), st = $('#stage'), pk = $('#peek'), crowdBits = [$('#band'), $('#head'), $('#navdock')];
+    if (!dx && !dy) { pb.style.opacity = ''; pb.style.transform = ''; st.style.transform = ''; st.style.opacity = ''; crowdBits.forEach(b => { b.style.opacity = ''; b.style.transform = ''; }); pk.classList.remove('on'); setTimeout(() => { if (!pk.classList.contains('on')) { pk.hidden = true; PEEK.target = null; } }, 350); return; }
+    const dir = Math.abs(dy) > Math.abs(dx) ? (dy < 0 ? 'rise' : 'sink') : (dx < 0 ? 'forward' : 'back');
+    const target = stepFrom(SIX.panel, dir), p = Math.min(1, Math.hypot(dx, dy) / 90);
+    st.style.transform = `translate(${dx * 0.15}px, ${dy * 0.1}px)`; st.style.opacity = String(1 - p * 0.35);
+    pb.style.opacity = String(1 - p * 0.85); pb.style.transform = `translate(${dx * 0.3}px, ${dy * 0.3}px)`;
+    crowdBits.forEach(b => { b.style.opacity = String(1 - p * 0.7); b.style.transform = `translate(${dx * 0.2}px, ${dy * 0.2}px)`; });
+    if (target === SIX.panel) { pk.classList.remove('on'); return; }
+    if (PEEK.target !== target) { PEEK.target = target; pk.innerHTML = `<div class="k">${PANEL_NAME[target]}</div><p>${peekLine(target)}</p>`; pk.dataset.from = dir === 'forward' ? 'right' : dir === 'back' ? 'left' : dir === 'sink' ? 'top' : 'bottom'; pk.hidden = false; }
+    pk.classList.add('on'); pk.style.setProperty('--p', p.toFixed(3));
   });
 
   // ── the stage takes the pin (Prism and Diatribe panels); in the crowd a tap on the map opens Prism, a tap on Ted opens You ──
@@ -1302,8 +1335,9 @@
   function qtexts(on) {
     const el = $('#qtexts'); QT.on = on; if (!on) { el.innerHTML = ''; el.classList.remove('on'); return; }
     const Rs = headline.responses || {}, b = band(SIX.aperture);
-    el.innerHTML = ['A', 'B', 'C', 'D'].map(q => { const r = (Rs[q] || {})[b]; if (!r) return ''; return `<div class="qt ${q} ${SIX.pick && SIX.pick.q === q ? 'on' : ''}" data-q="${q}"><i></i><span>${String(r.text || '').replace(/<[^>]+>/g, '').slice(0, 90)}${String(r.text || '').length > 90 ? '…' : ''}</span></div>`; }).join('');
-    el.querySelectorAll('.qt').forEach(d => d.addEventListener('click', () => { const q = d.dataset.q, r = (Rs[q] || {})[b]; if (!r) return; const dd = Math.max(0.35, Math.abs(SIX.aperture) / 100 * 0.9); SIX.pick = { q, band: b, r }; SIX.pin = { x: 0.5 + POSQ[q][0] * dd, y: 0.5 + POSQ[q][1] * dd }; SIX.zUser = r.z != null ? Math.round(r.z * 100) / 100 : 0; const zi = $('#zP'); if (zi) { zi.value = Math.round(SIX.zUser * 100); const v = $('#zPVal'); if (v) v.textContent = zs(SIX.zUser); } el.querySelectorAll('.qt').forEach(x => x.classList.toggle('on', x === d)); paint(); renderPinNote(); }));
+    el.innerHTML = ['A', 'B', 'C', 'D'].map(q => { const r = (Rs[q] || {})[b]; if (!r) return ''; return `<div class="qt ${q} ${SIX.pick && SIX.pick.q === q ? 'on' : ''}" data-q="${q}"><i></i><span>${String(r.text || '').replace(/<[^>]+>/g, '').slice(0, 90)}${String(r.text || '').length > 90 ? '…' : ''}</span><b>${r.xWord || r.yWord || QUAD[q]}</b></div>`; }).join('');
+    setTimeout(() => { if (QT.on) el.classList.add('settled'); }, 2200);   // the texts settle into their one word on the station; tap to read the whole line
+    el.querySelectorAll('.qt').forEach(d => d.addEventListener('click', e => { const q = d.dataset.q, r = (Rs[q] || {})[b]; if (!r) return; if (el.classList.contains('settled') && !(SIX.pick && SIX.pick.q === q)) { /* a tap on another station: stand there */ } else if (el.classList.contains('settled')) { showLine(q, e); return; } const dd = Math.max(0.35, Math.abs(SIX.aperture) / 100 * 0.9); SIX.pick = { q, band: b, r }; SIX.pin = { x: 0.5 + POSQ[q][0] * dd, y: 0.5 + POSQ[q][1] * dd }; SIX.zUser = r.z != null ? Math.round(r.z * 100) / 100 : 0; const zi = $('#zP'); if (zi) { zi.value = Math.round(SIX.zUser * 100); const v = $('#zPVal'); if (v) v.textContent = zs(SIX.zUser); } el.querySelectorAll('.qt').forEach(x => x.classList.toggle('on', x === d)); paint(); renderPinNote(); }));
     requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add('on')));
     (function tick() { if (!QT.on) return; requestAnimationFrame(tick); const gm = G; if (!gm || !gm.camera || document.hidden) return; const r = gm.canvas.getBoundingClientRect(), dia = Math.max(0.35, Math.abs(SIX.aperture) / 100 * 0.9);
       el.querySelectorAll('.qt').forEach(d => { const q = d.dataset.q, nx = 0.5 + POSQ[q][0] * dia, ny = 0.5 + POSQ[q][1] * dia; const v = new THREE.Vector3((nx - 0.5) * gm.GRAPH_SIZE, (0.5 - ny) * gm.GRAPH_SIZE, 0.08); gm.group.localToWorld(v); v.project(gm.camera); const x = (v.x * 0.5 + 0.5) * r.width, y = (-v.y * 0.5 + 0.5) * r.height; d.style.left = Math.max(4, Math.min(r.width - d.offsetWidth - 4, x - d.offsetWidth / 2)) + 'px'; d.style.top = Math.max(4, Math.min(r.height - d.offsetHeight - 4, y + (POSQ[q][1] < 0 ? -d.offsetHeight - 12 : 12))) + 'px'; }); })();
@@ -1319,7 +1353,7 @@
       if (!d.moved) { const h = stageHit(e); const st = h && stationAt(h);
         if (SIX.panel === 'field' && h) { hideLine(); const fe = lensed(fieldOf()); let best = null; fe.forEach(en => { const dd = Math.hypot(en.x - h.x, en.y - h.y); if (dd < 0.07 && (!best || dd < best.dd)) best = { en, dd }; }); if (best) { SIX.voice = SIX.voice === best.en.id ? null : best.en.id; renderBand('field'); paint(); return; } if (st) { showLine(st, e); return; } if (SIX.voice) { SIX.voice = null; renderBand('field'); paint(); } return; }
         if (st) { showLine(st, e); return; } hideLine();
-        if (SIX.panel === 'crowd') { go(d.ted ? 'you' : 'prism'); return; } if (SIX.panel === 'prism' && SIX.locked && SIX.placed) { if (h) { SIX.pin = h; paint(); renderPinNote(); } } }
+        if (SIX.panel === 'crowd') { go(d.ted ? 'you' : 'prism'); return; } if (SIX.panel === 'prism' && SIX.locked && SIX.placed) { if (h) { SIX.pin = h; SIX.pick = null; paint(); renderPinNote(); } } }
       if (d.onPin) { e.preventDefault(); e.stopImmediatePropagation(); } };
     cv.addEventListener('pointerup', end, true); cv.addEventListener('pointercancel', () => { dragP = null; }, true);
   }
@@ -1338,7 +1372,7 @@
     const outPath = new THREE.CatmullRomCurve3([new THREE.Vector3(-0.5, -1.45, 3.6), new THREE.Vector3(-1.9, -1.6, 2.4), new THREE.Vector3(-2.9, -1.8, 0.2), new THREE.Vector3(-3.1, -1.9, -2.4), TED.wander[0].clone()]);
     const U = T.userData, legs = U.legs || [], st = { phase: 'in', t0: performance.now() / 1000, yaw: 1.4, lieK: 0, from: null, to: null, line }; TED.st = st;
     T.visible = true; const say = $('#tedSay');
-    function placeBubble() { try { const cam = G.camera, v = T.localToWorld(new THREE.Vector3(0, 1.45, 0.5)).project(cam), r = $('#hmap').getBoundingClientRect(); say.style.left = Math.max(8, Math.min(r.width * 0.4, (v.x * 0.5 + 0.5) * r.width + 24)) + 'px'; say.style.top = Math.max(6, (-v.y * 0.5 + 0.5) * r.height - say.offsetHeight - 8) + 'px'; } catch (e) {} }
+    function placeBubble() { try { const cam = G.camera, v = T.localToWorld(new THREE.Vector3(0, 1.45, 0.5)).project(cam), r = $('#hmap').getBoundingClientRect(); say.style.left = Math.max(8, Math.min(r.width - say.offsetWidth - 8, (v.x * 0.5 + 0.5) * r.width + 24)) + 'px'; say.style.top = Math.max(6, (-v.y * 0.5 + 0.5) * r.height - say.offsetHeight - 8) + 'px'; } catch (e) {} }
     TED.say = (t) => { st.line = t; say.textContent = t; say.hidden = false; say.classList.remove('out'); st.phase = 'talk'; st.t0 = performance.now() / 1000; };
     (function frame() {
       if (!LAND.ted) return; requestAnimationFrame(frame); if (document.hidden || !T.visible) return;
@@ -1459,7 +1493,7 @@
   function wireDial(id, after) { const el = $('#' + id); if (!el) return; const paintDial = () => { const a = SIX.aperture, b = band(a), side = sideOf(a); const rd = $('#' + id + 'Read'); if (rd) rd.textContent = (side ? (side === 'left' ? 'the left · ' : 'the right · ') : 'centre · ') + b + ' · ' + Math.abs(a); el.closest('.rail').querySelectorAll('.bands span').forEach((s, i) => s.classList.toggle('on', s.dataset.b === b && (b === 'fluid' || (side === 'left' ? i < 2 : side === 'right' ? i > 2 : false)))); el.closest('.rail').querySelectorAll('.sides .l, .sides .r').forEach(s => s.classList.toggle('on', (s.classList.contains('l') && side === 'left') || (s.classList.contains('r') && side === 'right'))); }; paintDial(); el.addEventListener('input', e => { SIX.aperture = +e.target.value; paintDial(); paint(); if (after) after(); }); }
   function wireZ(id) { const el = $('#' + id); if (!el) return; el.addEventListener('input', e => { SIX.zUser = (+e.target.value) / 100; const v = $('#' + id + 'Val'); if (v) v.textContent = zs(SIX.zUser); paint(); renderPinNote(); }); }
   function pinNote() { const q = quadOf(SIX.pin.x, SIX.pin.y), ax = headline.axes || {}; const side = SIX.pin.x < 0.5 ? (ax.x && ax.x.neg) || 'left' : (ax.x && ax.x.pos) || 'right', row = SIX.pin.y < 0.5 ? (ax.y && ax.y.pos) || 'institutional' : (ax.y && ax.y.neg) || 'populist'; return SIX.placed ? (SIX.pick ? `You stand with the <b>${QUAD[SIX.pick.q].replace(' · ', ' ')}</b> reading.` : `You stand <b>${side} · ${row}</b>.`) : 'Tap the map to place yourself.'; }
-  function renderPinNote() { const el = $('#pinNote'); if (el) el.innerHTML = pinNote(); const pb = $('#pinBlock'); if (pb && SIX.placed && SIX.locked) pb.classList.add('on'); const d = $('#diagNote'); if (d) d.innerHTML = diagNote(); }
+  function renderPinNote() { const el = $('#pinNote'); if (el) el.innerHTML = pinNote(); const zn = $('#zNote'); if (zn && SIX.stage === 'z') zn.innerHTML = `${pinNote()} Now how far it <b>${((headline.axes || {}).z || {}).pos || 'delivers'}</b> — slide, and your pin rises or falls between the planes.`; const pb = $('#pinBlock'); if (pb && SIX.placed && SIX.locked) pb.classList.add('on'); const d = $('#diagNote'); if (d) d.innerHTML = diagNote(); }
   function diagNote() {   // Diatribe's diagnostics: where your read sits against the station nearest your pin
     if (!SIX.placed) return 'Place yourself on the map and the diagnostics read where you sit.';
     const Rs = headline.responses || {}, b = band(SIX.aperture), q = quadOf(SIX.pin.x, SIX.pin.y), r = (Rs[q] || {})[b]; if (!r) return `No ${b} reading from ${QUAD[q]} on this one.`;
@@ -1479,15 +1513,18 @@
         <div class="memblock" id="memBlock"><div class="mem" id="memP"></div><div class="memreads"><span class="l" id="readL"></span><span class="r" id="readR"></span></div>
           <div class="dialrow"><div class="rail bare"><div class="track"><input type="range" id="apP" min="-100" max="100" value="${SIX.aperture}"></div></div><a class="lock" id="lockGo" href="#" title="lock the dial">○</a></div><div class="g4-key" style="text-align:right;margin-top:4px">slide, then lock</div></div>
         <div class="uncover" id="respBlock"></div>
-        <div class="uncover" id="pinBlock"><p id="pinNote"></p>${zHTML('zP')}<div class="act"><span class="g4-key" id="pinSeat"></span><a class="go lit" id="pinGo">commit the pin</a><a class="more" id="backGo" href="#" style="margin:0 0 0 auto">↑ change your heat</a></div></div>
+        <div class="uncover" id="standBlock"><p id="pinNote"></p><div class="act"><a class="go lit" id="zStageGo" href="#">does it deliver? →</a><a class="more" id="backGo" href="#" style="margin:0 0 0 auto">↑ change your heat</a></div></div>
+        <div class="uncover" id="pinBlock"><p id="zNote"></p>${zHTML('zP')}<div class="act"><span class="g4-key" id="pinSeat"></span><a class="go lit" id="pinGo">commit the pin</a><a class="more" id="backGo2" href="#" style="margin:0 0 0 auto">↑ change your stand</a></div></div>
         <a class="more" id="moreGo" href="#">more ↓</a>
         <div class="uncover" id="moreBlock"><p>${fr}</p><div class="k">everything on the table · laws first</div><div class="objs">${sorted.map(r => { const c = r.centralObject || {}; return `<a href="${open(r)}">${c.name || r.title}<small>${fmt(c.stateDate || r.date)} · ${c.kind || 'object'}</small><span class="st">${c.state || ''}</span></a>`; }).join('')}</div></div>`;
       const Rs = headline.responses || {};
-      const stage = () => {   // which stage we're in, from the state: placed → the map; locked → the responses; else the dial
-        const st = SIX.placed && SIX.locked ? 'map' : SIX.locked ? 'responses' : 'dial'; SIX.stage = st; const v = $('#v-objects'); v.dataset.stage = st;
-        $('#memBlock').classList.toggle('away', st !== 'dial'); $('#respBlock').classList.toggle('on', st === 'responses'); $('#pinBlock').classList.toggle('on', st === 'map');
-        try { if (G && G.setBoundaryVisible) { if (st === 'map') { const ax = headline.axes || {}; G.setBoundaryContent && G.setBoundaryContent({ positive: { text: (ax.z && ax.z.pos) || 'delivers' }, negative: { text: (ax.z && ax.z.neg) || 'does not' } }); } G.setBoundaryVisible(st === 'map'); } } catch (e) {}   // the z planes come up with the map, in the event's own words
-        if (st === 'map') { $('#pinNote').innerHTML = pinNote(); setTimeout(() => { try { G && G.resize && G.resize(); } catch (e) {} qtexts(true); }, 450); } else qtexts(false);
+      const stage = () => {   // the stages, from the state: dial → responses (locked) → map (placed) → z (SIX.zStage) — one thing at a time
+        const st = SIX.placed && SIX.locked ? (SIX.zStage ? 'z' : 'map') : SIX.locked ? 'responses' : 'dial'; SIX.stage = st; const v = $('#v-objects'); v.dataset.stage = st;
+        $('#memBlock').classList.toggle('away', st !== 'dial'); $('#respBlock').classList.toggle('on', st === 'responses'); $('#standBlock').classList.toggle('on', st === 'map'); $('#pinBlock').classList.toggle('on', st === 'z');
+        try { if (G && G.setBoundaryVisible) { if (st === 'z') { const ax = headline.axes || {}; G.setBoundaryContent && G.setBoundaryContent({ positive: { text: (ax.z && ax.z.pos) || 'delivers' }, negative: { text: (ax.z && ax.z.neg) || 'does not' } }); } G.setBoundaryVisible(st === 'z'); } } catch (e) {}   // the z planes come up at the z stage, in the event's own words
+        if (st === 'map') { $('#pinNote').innerHTML = pinNote(); setTimeout(() => { try { G && G.resize && G.resize(); } catch (e) {} qtexts(true); }, 450); try { G && G.spinTo(0, -4, 900); } catch (e) {} }
+        else if (st === 'z') { qtexts(false); $('#zNote').innerHTML = `${pinNote()} Now how far it <b>${((headline.axes || {}).z || {}).pos || 'delivers'}</b> — slide, and your pin rises or falls between the planes.`; try { G && G.spinTo(-14, -46, 1100); G.setZoom && G.setZoom(6.9); setTimeout(() => { try { G.resize(); } catch (e) {} }, 500); } catch (e) {} }
+        else qtexts(false);
         paint();
       };
       const responses = () => { const b = band(SIX.aperture), side = sideOf(SIX.aperture), order = side === 'right' ? ['B', 'D', 'A', 'C'] : ['A', 'C', 'B', 'D'], el = $('#respBlock');
@@ -1495,7 +1532,9 @@
         el.querySelectorAll('[data-q]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); const q = a.dataset.q, r = (Rs[q] || {})[b]; if (!r) return; const d = Math.max(0.35, Math.abs(SIX.aperture) / 100 * 0.9); SIX.pick = { q, band: b, r }; SIX.pin = { x: 0.5 + POSQ[q][0] * d, y: 0.5 + POSQ[q][1] * d }; SIX.zUser = r.z != null ? Math.round(r.z * 100) / 100 : 0; SIX.placed = true; const zi = $('#zP'); if (zi) { zi.value = Math.round(SIX.zUser * 100); const v = $('#zPVal'); if (v) v.textContent = zs(SIX.zUser); } el.querySelectorAll('.rl').forEach(x => x.classList.toggle('on', x === a)); setTimeout(stage, 350); })); };
       responses();
       $('#lockGo').addEventListener('click', e => { e.preventDefault(); SIX.locked = true; $('#lockGo').textContent = '●'; $('#lockGo').classList.add('on'); responses(); hideLine(); stage(); });
-      $('#backGo').addEventListener('click', e => { e.preventDefault(); SIX.locked = false; SIX.placed = false; SIX.pick = null; $('#lockGo').textContent = '○'; $('#lockGo').classList.remove('on'); stage(); });
+      $('#backGo').addEventListener('click', e => { e.preventDefault(); SIX.locked = false; SIX.placed = false; SIX.pick = null; SIX.zStage = false; $('#lockGo').textContent = '○'; $('#lockGo').classList.remove('on'); stage(); });
+      $('#zStageGo').addEventListener('click', e => { e.preventDefault(); SIX.zStage = true; stage(); });
+      $('#backGo2').addEventListener('click', e => { e.preventDefault(); SIX.zStage = false; stage(); });
       const reads = () => { const D = headline.diatribe || {}, b = band(SIX.aperture), side = sideOf(SIX.aperture), key = sd => sd + ({ fluid: 'F', coalition: 'C', denominated: 'D' }[b]); const L = D[key('L')] || {}, Rr = D[key('R')] || {};
         $('#readL').innerHTML = side === 'left' ? lit(L.text || '', L.keywords) : ''; $('#readR').innerHTML = side === 'right' ? lit(Rr.text || '', Rr.keywords) : ''; $('#readL').classList.toggle('on', side === 'left'); $('#readR').classList.toggle('on', side === 'right'); };
       const ap = $('#apP'); ap.addEventListener('input', e => { SIX.aperture = +e.target.value; memSet('P'); paintHeat(); paint(); reads(); hideLine(); }); ap.addEventListener('change', () => setTimeout(() => { $('#readL').classList.remove('on'); $('#readR').classList.remove('on'); }, 2600));
@@ -1595,8 +1634,8 @@
   // ── changing the event on the stage (10-18: the Reading view retired — every piece of it lives on the stage now) ──
   function setEvent(r) {
     if (!r || r === headline) return; headline = r;
-    SIX.pin = { x: 0.5, y: 0.5 }; SIX.zUser = 0; SIX.aperture = 0; SIX.pick = null; SIX.placed = false; SIX.locked = false; SIX.focus = null; SIX.voice = null; SIX.against = null; SIX.lens = 'everyone';
-    const p = latestPins()[r.rid]; if (p) { SIX.pin = { x: p.x, y: p.y }; SIX.zUser = p.z || 0; SIX.aperture = p.aperture || 0; SIX.placed = true; }
+    SIX.pin = { x: 0.5, y: 0.5 }; SIX.zUser = 0; SIX.aperture = 0; SIX.pick = null; SIX.placed = false; SIX.locked = false; SIX.zStage = false; SIX.focus = null; SIX.voice = null; SIX.against = null; SIX.lens = 'everyone';
+    const p = latestPins()[r.rid]; if (p) { SIX.pin = { x: p.x, y: p.y }; SIX.zUser = p.z || 0; SIX.aperture = p.aperture || 0; SIX.placed = true; SIX.locked = true; SIX.zStage = true; }
     paintHead(); paintChips(); paintHeat(); SIX.shown = null;
     try { if (MEM.C) memSet('C', crowdRegister()); } catch (e) {}
     (async () => { try { await PrismField.pullField(r.rid); } catch (e) {} paintChips(); if ($('#v-objects').classList.contains('on')) { paint(); if (SIX.panel === 'field' || SIX.panel === 'compare') renderBand(SIX.panel); } })();

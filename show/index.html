@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Parallelogram Report · set</title>
+<!-- ======================================================================
+     THE SET — Ted at the desk, the graphmap behind him. 2026-10-18.
+     Reads ../data/show/<id>.json (the episode: beats of script + map cues)
+     and ../data/press/<piece>.json (the parallelogram hung on the map).
+     If ../data/show/<id>/timeline.json exists (written by scripts/show/tts.py)
+     the beats start where the audio says; otherwise starts are estimated.
+
+     Open by hand (serve the Prism root, port 5500):
+        /show/?s=ep01_reduced_diesel            → plays with audio if present
+        /show/?s=ep01_reduced_diesel&aspect=16:9
+     Captured by scripts/show/render.js:
+        /show/?s=<id>&capture=1   → no clocks run; the page exposes
+        window.SHOW = { ready, duration, seek(t), level(v) } and the
+        renderer steps it frame by frame.
+     ====================================================================== -->
+<style>
+  :root { --paper:#0c0b09; --paper-2:#14120e; --ink:#e8e2d6; --dim:#8a8375; --ghost:#55503f; --gold:#d4a94e; --warm:#c9a06a;
+          --LI:rgb(184,58,58); --RI:rgb(56,104,168); --LP:rgb(58,138,82); --RP:rgb(184,120,40); }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { background:#000; color:var(--ink); font-family:Georgia,'Times New Roman',serif; overflow:hidden; height:100%; }
+  #frame { position:relative; width:1080px; height:1920px; background:var(--paper); overflow:hidden; transform-origin:top left; }
+  #frame.wide { width:1920px; height:1080px; }
+  #map { position:absolute; left:0; top:0; width:100%; height:66%; background:radial-gradient(ellipse at 50% 40%,#1a1710 0%,var(--paper) 70%); }
+  #frame.wide #map { height:100%; }
+  #map canvas { display:block; width:100% !important; height:100% !important; }
+  #ted { position:absolute; left:0; bottom:0; width:100%; height:58%; pointer-events:none; }
+  #frame.wide #ted { left:auto; right:0; width:46%; height:78%; }
+  #ted canvas { display:block; width:100% !important; height:100% !important; }
+  #mast { position:absolute; top:44px; left:52px; right:52px; display:flex; justify-content:space-between; align-items:baseline; letter-spacing:.18em; text-transform:uppercase; font-size:22px; color:var(--gold); }
+  #mast small { font-size:16px; color:var(--dim); letter-spacing:.14em; }
+  #board { position:absolute; top:100px; left:52px; display:flex; gap:12px; }
+  .tile { background:rgba(20,18,14,.82); border:1px solid #2a261e; padding:10px 14px; min-width:120px; }
+  .tile .l { font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:var(--dim); }
+  .tile .v { font-size:34px; line-height:1; margin-top:4px; color:var(--gold); }
+  .tile.O .v { color:#e8d9a8; } .tile.red .v { color:#b07070; } .tile.green .v { color:#7fae8b; }
+  #lower { position:absolute; left:52px; right:52px; bottom:300px; }
+  #frame.wide #lower { right:50%; bottom:150px; }
+  #kicker { font-size:18px; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); background:rgba(12,11,9,.85); display:inline-block; padding:8px 14px; border-left:4px solid var(--gold); }
+  #caption { font-size:44px; line-height:1.2; margin-top:10px; background:rgba(12,11,9,.86); padding:18px 22px; display:inline-block; max-width:100%; }
+  #frame.wide #caption { font-size:36px; }
+  #words { position:absolute; left:52px; right:52px; bottom:150px; font-size:38px; line-height:1.3; color:var(--ink); text-align:center; }
+  #frame.wide #words { right:50%; bottom:60px; text-align:left; font-size:30px; }
+  #words b { color:var(--gold); font-weight:normal; }
+  #ticker { position:absolute; left:0; right:0; bottom:0; height:92px; background:#000; border-top:1px solid #2a261e; overflow:hidden; display:flex; align-items:center; }
+  #frame.wide #ticker { height:64px; }
+  #tape { white-space:nowrap; font-size:30px; letter-spacing:.06em; color:var(--dim); will-change:transform; }
+  #frame.wide #tape { font-size:22px; }
+  #tape .LI{color:var(--LI)} #tape .RI{color:var(--RI)} #tape .LP{color:var(--LP)} #tape .RP{color:var(--RP)} #tape .O{color:#e8d9a8}
+  #tape .sep { color:var(--ghost); padding:0 22px; }
+  #endcard { position:absolute; inset:0; background:var(--paper); display:none; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:26px; padding:60px; }
+  #endcard .a { font-size:56px; color:var(--gold); letter-spacing:.06em; }
+  #endcard .b { font-size:28px; color:var(--dim); max-width:800px; line-height:1.4; }
+  #endcard .c { font-size:22px; color:var(--ghost); letter-spacing:.2em; text-transform:uppercase; }
+  #ctl { position:fixed; left:12px; bottom:12px; z-index:9; font:13px system-ui; color:#999; background:rgba(0,0,0,.7); padding:8px 10px; border-radius:6px; }
+  #ctl button { font:13px system-ui; margin-right:8px; }
+  .capture #ctl { display:none; }
+</style>
+</head>
+<body>
+<div id="frame">
+  <div id="map"></div>
+  <div id="mast"><span id="mastL">The Parallelogram Report</span><small id="mastR"></small></div>
+  <div id="board"></div>
+  <div id="ted"></div>
+  <div id="lower"><div id="kicker"></div><br><div id="caption"></div></div>
+  <div id="words"></div>
+  <div id="ticker"><div id="tape"></div></div>
+  <div id="endcard"><div class="a"></div><div class="b"></div><div class="c"></div></div>
+</div>
+<div id="ctl"><button id="play">play</button><button id="stop">stop</button><span id="clock">0.0</span> s</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="../src/js/prism-graphmap.js?v=11"></script>
+<script>
+(async function () {
+  const Q = new URLSearchParams(location.search);
+  const ID = Q.get('s') || 'ep01_reduced_diesel';
+  const CAPTURE = Q.get('capture') === '1';
+  if (CAPTURE) document.body.classList.add('capture');
+
+  const EP = await fetch('../data/show/' + ID + '.json').then(r => r.json());
+  const ASPECT = Q.get('aspect') || EP.aspect || '9:16';
+  const frame = document.getElementById('frame');
+  if (ASPECT === '16:9') frame.classList.add('wide');
+  const W = ASPECT === '16:9' ? 1920 : 1080, H = ASPECT === '16:9' ? 1080 : 1920;
+  function fit() { if (CAPTURE) { frame.style.transform = ''; return; } const s = Math.min(innerWidth / W, innerHeight / H); frame.style.transform = `scale(${s})`; }
+  fit(); addEventListener('resize', fit);
+
+  const P = await fetch('../data/press/' + EP.piece + '.json').then(r => r.json());
+  let TL = null;
+  try { const r = await fetch('../data/show/' + ID + '/timeline.json'); if (r.ok) TL = await r.json(); } catch (e) {}
+
+  // ── beats with start/end (from the audio when it exists, else estimated at 2.6 words/s + a .6 s breath)
+  const beats = EP.beats.map(b => ({ ...b }));
+  if (TL && TL.beats) {
+    const byId = Object.fromEntries(TL.beats.map(b => [b.id, b]));
+    beats.forEach(b => { const t = byId[b.id]; if (t) { b.start = t.start; b.end = t.end; b.words = t.words || null; } });
+  } else {
+    let t = 0.4;
+    beats.forEach(b => { b.start = t; t += b.text.split(/\s+/).length / 2.6 + 0.6; b.end = t; b.words = null; });
+  }
+  const END_HOLD = 3.0;
+  const DURATION = (TL && TL.duration) ? TL.duration + END_HOLD : beats[beats.length - 1].end + END_HOLD;
+
+  // ── masthead + scoreboard
+  const S = P.scoreboard;
+  const zs = z => z == null ? '—' : (z > 0 ? '+' : '') + z.toFixed(1);
+  document.getElementById('mastR').textContent = `${EP.segment} · ${P.source.program} · ${P.source.date}`;
+  const tile = (cls, l, v) => `<div class="tile ${cls}"><div class="l">${l}</div><div class="v">${v}</div></div>`;
+  document.getElementById('board').innerHTML =
+    tile('O', 'Declared z', zs(S.declaredZ)) + tile('red', 'Read z', zs(S.readZ)) + tile('', 'Dia', S.dia) + tile('', 'Lumens', S.lumens);
+
+  // ── the ticker: every scored line of the piece, station-coloured, newest reading last
+  const fmt = s => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+  const tapeHTML = P.lines.map(p => `<span class="${p.station}">${p.station === 'O' ? '@O' : p.station}</span> ${P.names[p.who] || p.who} ${fmt(p.t)}${p.dia == null ? '' : ' · Dia ' + p.dia}${p.z == null ? '' : ' · z ' + zs(p.z)}<span class="sep">◆</span>`).join('');
+  const tape = document.getElementById('tape'); tape.innerHTML = tapeHTML + tapeHTML;
+  const TAPE_SPEED = 120; // px per second
+
+  // ── the graphmap behind the desk
+  const COL = { LI: 0xb83a3a, RI: 0x3868a8, LP: 0x3a8a52, RP: 0xb87828, O: 0xe8d9a8 };
+  const mapEl = document.getElementById('map');
+  const g = PrismGraphmap.create({ container: mapEl, mode: 'analytical',
+    capabilities: { orbit: false, zInput: false, zRender: true, diatribeSlider: false, clustering: 'individual' } });
+  g.mount(mapEl);
+  g.setCornerLabels && g.setCornerLabels({ A: 'LI', B: 'RI', C: 'LP', D: 'RP' });
+  g.loadTrace(P.trace);
+  g.setBoundaryMode && g.setBoundaryMode('dual');
+  g.setBoundaryVisible && g.setBoundaryVisible(false);
+  const L = P.lines;
+  L.forEach((p, i) => {
+    g.addDot(p.normX, p.normY, p.quadrant, p.normZ, {
+      color: p.station === 'O' ? COL.O : COL[p.station], radius: p.station === 'O' ? 0.035 : 0.055,
+      shape: p.station === 'O' ? 'diamond' : undefined, label: '', meta: { i } });
+    g.setDotVisible(i, false);
+  });
+  const speakers = [...new Set(L.filter(p => p.station !== 'O').map(p => p.who))];
+  speakers.forEach(w => { const st0 = L.find(p => p.who === w).station; g.addPath([], { id: w, color: COL[st0], opacity: .55, dashed: true }); });
+
+  // ── Ted at the desk: his own transparent canvas in front of the map
+  const tedEl = document.getElementById('ted');
+  const TW = tedEl.clientWidth || 1080, TH = tedEl.clientHeight || 1100;
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, preserveDrawingBuffer: true });
+  renderer.setPixelRatio(1); renderer.setSize(TW, TH); renderer.setClearColor(0x000000, 0);
+  tedEl.appendChild(renderer.domElement);
+  const scene = new THREE.Scene();
+  const cam = new THREE.PerspectiveCamera(32, TW / TH, 0.1, 50);
+  cam.position.set(0, 1.25, 3.2); cam.lookAt(0, 1.05, 0);
+  scene.add(new THREE.HemisphereLight(0xfff2dc, 0x1a1408, 0.9));
+  const key = new THREE.DirectionalLight(0xffe2b8, 1.25); key.position.set(-1.6, 3.2, 2.4); scene.add(key);
+  const rim = new THREE.DirectionalLight(0x8fb0ff, 0.6); rim.position.set(1.8, 2.2, -1.5); scene.add(rim);
+  // the desk: a dark slab on a plinth, a brass edge, a name plate
+  const desk = new THREE.Group();
+  const wood = new THREE.MeshStandardMaterial({ color: 0x2b2118, roughness: 0.55, metalness: 0.05 });
+  const top = new THREE.Mesh(new THREE.BoxGeometry(2.6, 0.08, 0.9), wood); top.position.set(0, 0.86, 0.55); desk.add(top);
+  const front = new THREE.Mesh(new THREE.BoxGeometry(2.6, 0.78, 0.06), new THREE.MeshStandardMaterial({ color: 0x1b1510, roughness: 0.7 })); front.position.set(0, 0.43, 0.97); desk.add(front);
+  const brass = new THREE.Mesh(new THREE.BoxGeometry(2.62, 0.02, 0.92), new THREE.MeshStandardMaterial({ color: 0xd4a94e, roughness: 0.3, metalness: 0.8 })); brass.position.set(0, 0.91, 0.55); desk.add(brass);
+  const plate = (() => {
+    const c = document.createElement('canvas'); c.width = 512; c.height = 128; const x = c.getContext('2d');
+    x.fillStyle = '#d4a94e'; x.fillRect(0, 0, 512, 128); x.fillStyle = '#0c0b09'; x.font = '600 56px Georgia'; x.textAlign = 'center'; x.textBaseline = 'middle';
+    x.fillText('TED TURNER', 256, 66); return new THREE.CanvasTexture(c); })();
+  const plateM = new THREE.Mesh(new THREE.PlaneGeometry(0.72, 0.18), new THREE.MeshStandardMaterial({ map: plate, roughness: 0.4, metalness: 0.5 }));
+  plateM.position.set(0.0, 0.62, 1.001); desk.add(plateM);
+  scene.add(desk);
+  // Ted: the factory's coyote, seated behind the desk (hind legs folded, chest up, head to camera)
+  const ted = PrismGraphmap.buildCoyote();
+  ted.scale.setScalar(1.15); ted.position.set(0, 0.0, 0.05); ted.rotation.y = 0;
+  const U = ted.userData;
+  if (U.legs) { U.legs[2].hip.rotation.x = -1.3; U.legs[3].hip.rotation.x = -1.3; U.legs[2].knee.rotation.x = 1.6; U.legs[3].knee.rotation.x = 1.6; }
+  ted.rotation.x = -0.12;                 // chest up a touch
+  scene.add(ted);
+  const jawRest = U.jaw ? U.jaw.position.y : 0; const jawRestZ = U.jaw ? U.jaw.position.z : 0;
+  let level = 0, headTarget = 'camera';
+  function poseTed(t) {
+    const breathe = Math.sin(t * 1.3) * 0.006;
+    ted.position.y = breathe;
+    if (U.head) {
+      const look = headTarget === 'map' ? { x: -0.18, y: 0.55 } : { x: 0.02, y: 0.0 };
+      U.head.rotation.y += (look.y - U.head.rotation.y) * 0.08;
+      U.head.rotation.x += (look.x - U.head.rotation.x) * 0.08;
+      U.head.rotation.z = Math.sin(t * 0.7) * 0.02;
+    }
+    if (U.jaw) { U.jaw.position.y = jawRest - level * 0.05; U.jaw.position.z = jawRestZ + level * 0.015; }
+    if (U.ears) { U.ears[0].rotation.z = -0.1 + Math.sin(t * 2.1) * 0.03 * (1 + level); U.ears[1].rotation.z = 0.1 - Math.sin(t * 1.7) * 0.03 * (1 + level); }
+    if (U.tail) U.tail.rotation.y = Math.sin(t * 2.2) * 0.12;
+  }
+
+  // ── the clock: one seek(t) draws everything for that moment
+  const kicker = document.getElementById('kicker'), caption = document.getElementById('caption'), words = document.getElementById('words');
+  const endcard = document.getElementById('endcard');
+  if (EP.endcard) { const e = EP.endcard.lines; endcard.children[0].textContent = e[0] || ''; endcard.children[1].textContent = e[1] || ''; endcard.children[2].textContent = e[2] || ''; }
+  let cur = null;
+  function beatAt(t) { let b = null; for (const x of beats) if (t >= x.start) b = x; return b; }
+  function applyMap(m, t, b) {
+    if (!m) return;
+    if (m.orbit) g.setOrbit(m.orbit[0], m.orbit[1]);
+    if (m.zoom && g.setZoom) g.setZoom(m.zoom);
+    g.setTraceVisible && g.setTraceVisible(!!m.trace);
+    // reveal: tape seconds shown so far; the lines arrive across the beat rather than all at once
+    let upto;
+    if (m.reveal === 'all') upto = 1e9;
+    else { const prev = (() => { const i = beats.indexOf(b); for (let k = i - 1; k >= 0; k--) { const r = beats[k].map && beats[k].map.reveal; if (r != null) return r === 'all' ? 1e9 : r; } return 0; })();
+      const f = Math.min(1, Math.max(0, (t - b.start) / Math.max(0.1, (b.end - b.start) * 0.6)));
+      upto = prev + (m.reveal - prev) * f; }
+    const seen = {};
+    L.forEach((p, i) => { const on = p.t <= upto; g.setDotVisible(i, on); g.setDotEmphasis && g.setDotEmphasis(i, m.focus === i ? 2.2 : 1); if (on && p.station !== 'O') (seen[p.who] = seen[p.who] || []).push({ x: p.normX, y: p.normY, z: p.normZ }); });
+    speakers.forEach(w => g.setPath(w, m.paths ? (seen[w] || []) : []));
+  }
+  function seek(t) {
+    const b = beatAt(t);
+    const over = TL && TL.duration ? t >= TL.duration : (b && b === beats[beats.length - 1] && t >= b.end);
+    endcard.style.display = over ? 'flex' : 'none';
+    if (b) {
+      if (b !== cur) { cur = b; kicker.textContent = `${EP.segment} · ${b.id}`; caption.textContent = b.caption || ''; headTarget = b.ted || 'camera'; }
+      applyMap(b.map, t, b);
+      if (b.words) {
+        const lit = b.words.filter(w => w.s <= t).slice(-9);
+        words.innerHTML = lit.map((w, i) => i === lit.length - 1 ? `<b>${w.w}</b>` : w.w).join(' ');
+      } else words.textContent = '';
+    }
+    if (TL && TL.envelope && TL.fps) { const i = Math.floor(t * TL.fps); level = TL.envelope[i] || 0; }
+    else if (b && !CAPTURE) level = t < b.end ? 0.35 + 0.35 * Math.abs(Math.sin(t * 9)) : 0;
+    tape.style.transform = `translateX(${-((t * TAPE_SPEED) % (tape.scrollWidth / 2))}px)`;
+    poseTed(t);
+    renderer.render(scene, cam);
+    document.getElementById('clock').textContent = t.toFixed(1);
+  }
+
+  // ── preview clock (never runs under capture)
+  let raf = null, t0 = 0, audio = null;
+  if (!CAPTURE) {
+    audio = new Audio('../data/show/' + ID + '/audio.mp3'); audio.onerror = () => { audio = null; };
+    const tick = () => { const t = audio && !audio.paused ? audio.currentTime : (performance.now() - t0) / 1000; seek(t); if (t < DURATION) raf = requestAnimationFrame(tick); };
+    document.getElementById('play').onclick = () => { t0 = performance.now(); if (audio) { audio.currentTime = 0; audio.play().catch(() => {}); } cancelAnimationFrame(raf); tick(); };
+    document.getElementById('stop').onclick = () => { cancelAnimationFrame(raf); if (audio) audio.pause(); };
+  }
+  seek(0);
+  window.SHOW = { ready: true, duration: DURATION, fps: EP.fps || 24, seek, level: v => { level = v; }, aspect: ASPECT, width: W, height: H };
+})();
+</script>
+</body>
+</html>
