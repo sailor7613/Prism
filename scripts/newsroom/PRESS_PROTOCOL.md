@@ -1,10 +1,10 @@
 # The daily cut — protocol for the Press task
 
-*v1 · 2026-10-19 · Sailor + Claude. This file is the canonical instruction the daily Press task follows. Edit it here; the task reads it fresh each run. It sits beside `AUTHORING_PROTOCOL.md` (the newsroom's Readings) and borrows its rules on git, overlays and reporting.*
+*v1.1 · 2026-10-20 (transcripts from the Mac; the daily slop) · v1 2026-10-19 · Sailor + Claude. This file is the canonical instruction the daily Press task follows. Edit it here; the task reads it fresh each run. It sits beside `AUTHORING_PROTOCOL.md` (the newsroom's Readings) and borrows its rules on git, overlays and reporting.*
 
 ## What this is
 
-Every morning the **press sweep** (GitHub Action, `scripts/press-sweep.py`, 05:45 PT) commits
+Every morning the **daily slop** (GitHub Action: the register from GDELT, then `scripts/press-sweep.py` over the roster, then the Reddit clips; 05:45 PT) commits
 `data/press/sweeps/sweep_<date>.json`: every source on the roster swept, every item matched
 against `data/press/terms.json`, the hits queued, captions for the YouTube hits in
 `data/press/transcripts/<date>/`. This task turns the queue into **cuts** — Press pieces the paper
@@ -19,10 +19,12 @@ in full. Rulings are never made here; anomalies are reported.
 - The day's sweep: `https://raw.githubusercontent.com/sailor7613/Prism/main/data/press/sweeps/sweep_<date>.json`
   (fetch from the Mac's shell with curl; the cloud container cannot reach GitHub raw). If today's
   file is missing, use the newest date in `…/sweeps/index.json` and say so in the note.
-- Transcripts the Action pulled: same path under `data/press/transcripts/<date>/`. A queue row
-  with `transcript: null` and a `videoId` means YouTube refused the runner — pull it from the Mac
-  shell: `python3 Prism/scripts/press-pull.py youtube <link> --program "<name>"` (yt-dlp must be
-  installed there; if it isn't, note the row as *transcript owed* and move on).
+- Transcripts: YouTube refuses caption pulls from GitHub's runners and from this shell, so they are
+  pulled on the Mac itself by `Pull the Transcripts.command` (06:30 timer, or by hand) into
+  `Prism/data/press/transcripts/<date>/` **on disk** — read them from the connected folder, not from
+  GitHub raw. The local `Prism/data/press/sweeps/sweep_<date>.json` (if present) is the sweep with
+  `transcript` filled in; prefer it over the GitHub copy. A YouTube hit with no transcript on disk is
+  *transcript owed*: note it, don't score it from its title. Never try to pull captions from here.
 - The grammar (on disk): `Parameters/09_Parallelograms/Press/README.md` (the line, the cut, the
   two kinds, the baseline's five rules), `Parameters/00_Architecture/Trace_Formula_v1.md`, the
   Codex `Prism/data/codex.json`. Exemplar cuts: `Parameters/09_Parallelograms/Press/2026-10-15_BP_Hormuz/`

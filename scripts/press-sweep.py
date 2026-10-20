@@ -19,12 +19,13 @@ media tiles already read: publications[<sweepKey>] {station, items, hits, note},
 (the manifest), and stamps lastScanned + sweepKey on the roster. The cut (scoring) is not done here —
 that is the 07:00 PT Claude task (scripts/newsroom/PRESS_PROTOCOL.md).
 """
-import argparse, datetime as dt, email.utils, json, os, re, subprocess, sys, urllib.request, xml.etree.ElementTree as ET
+import argparse, datetime as dt, email.utils, json, os, re, subprocess, sys, time, urllib.request, xml.etree.ElementTree as ET
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PRISM = os.path.abspath(os.path.join(HERE, '..'))
 PRESS = os.path.join(PRISM, 'data', 'press')
 ROSTER = os.path.join(PRESS, 'roster.json')
+ROSTER_SOURCES = []
 TERMS = os.path.join(PRESS, 'terms.json')
 SWEEPS = os.path.join(PRESS, 'sweeps')
 TRANSCRIPTS = os.path.join(PRESS, 'transcripts')
@@ -150,15 +151,49 @@ def register_objects(days=14):
         if len(toks) >= 2: out[o['oid']] = toks[:8]
     return out
 
+def pull_transcripts(date):
+    """The transcript step, run on the Mac itself (YouTube refuses caption pulls from GitHub's runners and the Cowork
+    shells can't reach YouTube at all). Reads sweeps/sweep_<date>.json from disk, or from GitHub raw if the Mac
+    hasn't pulled yet, fills `transcript` on every YouTube hit that lacks one, and writes the file back locally."""
+    path = os.path.join(SWEEPS, f'sweep_{date}.json')
+    try: rep = json.load(open(path, encoding='utf-8'))
+    except Exception:
+        try:
+            rep = json.loads(get(f'https://raw.githubusercontent.com/sailor7613/Prism/main/data/press/sweeps/sweep_{date}.json?t={int(dt.datetime.now().timestamp())}'))
+            log(f'(sweep_{date}.json not on disk yet — using the copy on GitHub)')
+        except Exception as e:
+            log(f'no sweep for {date} on disk or on GitHub ({str(e)[:80]}) — run the daily slop first'); return 1
+    roster = {s['id']: s for s in json.load(open(ROSTER, encoding='utf-8'))['sources']}
+    tdir = os.path.join(TRANSCRIPTS, date); n = done = 0
+    for q in rep.get('queue', []):
+        if not q.get('videoId') or q.get('transcript'): continue
+        if q.get('skipTranscript'): continue
+        n += 1
+        out = os.path.join(tdir, f"{q.get('source', q.get('publication'))}_{q['videoId']}.md")
+        if os.path.exists(out): q['transcript'] = os.path.relpath(out, PRISM); done += 1; continue
+        name = roster.get(q.get('source'), {}).get('name', q.get('publication'))
+        log(f"{q.get('source','?'):16s} {(q.get('title') or '')[:70]}")
+        got = pull_captions(q['link'], out, name, q.get('title') or '', date)
+        if got: q['transcript'] = got; done += 1
+        else: q['transcriptTried'] = dt.datetime.now(dt.timezone.utc).isoformat()
+        time.sleep(1.5)
+    os.makedirs(SWEEPS, exist_ok=True)
+    json.dump(rep, open(path, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    log(f'\n{done} of {n} transcripts on disk for {date} → {os.path.relpath(tdir, PRISM)}  (sweep file updated locally; commit in GitHub Desktop)')
+    return 0
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--days', type=float, default=1.25, help='window back from now (default 1.25 days so a late upload is never missed between runs)')
     ap.add_argument('--only', default='', help='comma list of roster ids')
     ap.add_argument('--no-captions', action='store_true')
     ap.add_argument('--date', default=dt.date.today().isoformat())
+    ap.add_argument('--pull-transcripts', action='store_true', help="Mac only: read the day's sweep (local, else GitHub raw) and pull captions for the YouTube hits that have none")
     a = ap.parse_args()
+    if a.pull_transcripts: return pull_transcripts(a.date)
 
     roster = json.load(open(ROSTER, encoding='utf-8'))
+    global ROSTER_SOURCES; ROSTER_SOURCES = roster['sources']
     terms = json.load(open(TERMS, encoding='utf-8')) if os.path.exists(TERMS) else {}
     objects = {k: [t.lower() for t in v] for k, v in terms.get('objects', {}).items()}   # standing objects: any one term matches
     register = register_objects(days=14)                                                 # GDELT's register: two tokens must match
@@ -200,12 +235,17 @@ def sweep_source(src, sid, key, a, objects, register, report, tdir):
             report['publications'][key] = {'station': src.get('station'), 'items': 0, 'hits': 0, 'note': 'no feed on file — add `feeds` to the roster entry'}
             log(f'{sid:16s} {src.get("station",""):5s} no feed'); return
 
+        # a show that shares a channel with other roster shows (Bloomberg's @markets carries four) keeps only
+        # the uploads whose title names its program; otherwise every show would sweep the whole channel
+        shared = src.get('channel') and sum(1 for x in ROSTER_SOURCES if x.get('channel') == src.get('channel')) > 1
+        progs = [p.lower() for p in (src.get('programs') or [src.get('name', '')]) if p]
         items = {}
         for f in feeds:
             try: xml = get(f)
             except Exception as e: note.append(f'feed failed {f.split("//")[-1][:50]} ({str(e)[:60]})'); continue
             for it in rss_items(xml, f):
                 if it['published'] and it['published'] < since: continue
+                if shared and it.get('videoId') and not any(p in (it['title'] or '').lower() for p in progs): continue
                 if it['link'] not in items: items[it['link']] = it
         hits = []
         baseline = bool(src.get('baseline'))
@@ -255,4 +295,4 @@ def finish(report, roster, a):
 
 
 if __name__ == '__main__':
-    main()
+    sys.exit(main() or 0)

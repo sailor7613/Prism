@@ -36,14 +36,27 @@ VIDEO_HOSTS = ('youtube.com', 'youtu.be', 'x.com', 'twitter.com', 'tiktok.com', 
 def log(*a): print(*a, flush=True)
 
 
-def get_json(url, tries=3):
+def get_json(url, tries=2):
     for i in range(tries):
         try:
-            return json.loads(urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=30).read())
+            return json.loads(urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=20).read())
         except Exception as e:
             err = e
-            time.sleep(2 + 3 * i)
+            if url.startswith('https://www.reddit.com') and i == 0: url = url.replace('https://www.reddit.com', 'https://old.reddit.com')
+            time.sleep(3)
     raise err
+
+
+def reddit_token():
+    """Reddit's official API (free). Reddit blocks anonymous reads from GitHub's runners; with a registered
+    'script' app (REDDIT_CLIENT_ID / REDDIT_CLIENT_SECRET in the Action's secrets) reads go through oauth.reddit.com."""
+    cid, sec = os.environ.get('REDDIT_CLIENT_ID'), os.environ.get('REDDIT_CLIENT_SECRET')
+    if not (cid and sec): return None
+    import base64
+    req = urllib.request.Request('https://www.reddit.com/api/v1/access_token', data=b'grant_type=client_credentials',
+                                 headers=dict(UA, Authorization='Basic ' + base64.b64encode(f'{cid}:{sec}'.encode()).decode()))
+    try: return json.loads(urllib.request.urlopen(req, timeout=20).read()).get('access_token')
+    except Exception as e: log(f'reddit auth failed: {str(e)[:80]} — falling back to anonymous reads'); return None
 
 
 def host_of(url):
@@ -73,8 +86,12 @@ def main():
     roster_names = {s['name'].lower(): s['id'] for s in roster['sources']}
 
     clips, failed = [], []
+    token = reddit_token()
+    if token: UA['Authorization'] = 'Bearer ' + token
+    base = 'https://oauth.reddit.com' if token else 'https://www.reddit.com'
+    log('reddit: ' + ('official API (app keys found)' if token else 'anonymous reads (no app keys; GitHub runners are usually blocked)'))
     for sub, corner in BASKET:
-        url = f'https://www.reddit.com/r/{sub}/top.json?t=day&limit={a.limit}&raw_json=1'
+        url = f'{base}/r/{sub}/top.json?t=day&limit={a.limit}&raw_json=1'
         try: d = get_json(url)
         except Exception as e:
             failed.append({'subreddit': sub, 'why': str(e)[:100]}); log(f'r/{sub:20s} failed: {str(e)[:80]}'); continue
