@@ -1,9 +1,10 @@
-# Newsroom digest — 2026-10-19
+# Newsroom digest — 2026-10-20
 
-Register: 95 objects · this scan: 1 new, 1 seen again, 0 returned.
+Register: 100 objects · this scan: 5 new, 0 seen again, 0 returned.
 
-## Queued for drafting (0)
-- (nothing cleared the bar)
+## Queued for drafting (2)
+- **Trump signs executive order aimed at improving women health** — law · signed · holder: the President · formed 2026-10-19 · 11 outlets (peak 11) · `obj_thepresi_aimed-executive-health-improving`
+- **Pro - Palestinian activist Mahmoud Khalil appeals to Supreme Court to sue Trump admin over free speech** — suit · sued · holder: a federal court · formed 2026-10-19 · 3 outlets (peak 3) · `obj_afederal_activist-admin-appeals-court`
 
 ## Permanence breaks (went silent while unresolved)
 - none today
@@ -12,7 +13,11 @@ Register: 95 objects · this scan: 1 new, 1 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **Raúl Castro charged with conspiracy to commit murder in 1996 plane downing** — indictment · charged · holder: ? · formed 2026-10-19 · 3 outlets (peak 3) · `obj_x_1996-castro-charged-commit`
+- **Leader of Kenyan doomsday cult that left more than 400 followers dead convicted of 191 murders** — indictment · charged · holder: ? · formed 2026-10-19 · 3 outlets (peak 3) · `obj_x_191-400-convicted-cult`
+- **28 noncitizens charged with election fraud in California , feds say** — indictment · charged · holder: ? · formed 2026-10-19 · 3 outlets (peak 3) · `obj_x_california-charged-election-feds`
+- **What to know about Kenya starvation cult after its leader is convicted on 191 murder charges** — indictment · charged · holder: ? · formed 2026-10-19 · 6 outlets (peak 6) · `obj_x_191-about-charges-convicted`
+- **Trump signs executive order aimed at improving women health** — law · signed · holder: the President · formed 2026-10-19 · 11 outlets (peak 11) · `obj_thepresi_aimed-executive-health-improving`
+- **Pro - Palestinian activist Mahmoud Khalil appeals to Supreme Court to sue Trump admin over free speech** — suit · sued · holder: a federal court · formed 2026-10-19 · 3 outlets (peak 3) · `obj_afederal_activist-admin-appeals-court`
 
 ## Watching (34)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
