@@ -1,0 +1,19 @@
+{
+ "schema": "press/terms/v0",
+ "what": "Object → literal match terms (lowercase substrings) for the daily sweep. Sweep everything, cut only what touches. The cut task extends this file after each objects pass (new objects it sorted into a data set get a key here); Sailor prunes. Keep terms short and literal; a term that matches noise costs a cut's attention.",
+ "index": "roster",
+ "objects": {
+  "diesel": ["diesel", "refiner", "hormuz", "strait of", "tanker", "oil price", "crude", "opec", "brent", "gasoline", "fuel price", "energy ceasefire", "russian fuel", "petrol"],
+  "russia-sanctions": ["sanction", "graham act", "waiver", "secondary tariff"],
+  "iran": ["iran", "tehran", "houthi", "irgc"],
+  "dollar": ["petrodollar", "dollar", "yuan settlement", "de-dollar", "brics"],
+  "tariffs": ["tariff", "section 232", "section 301", "trade deal", "refund"],
+  "tx-sen": ["talarico", "paxton", "texas senate", "abbott", "hinojosa"],
+  "me-sen": ["collins", "troy jackson", "maine senate", "platner"],
+  "midterms": ["midterm", "senate race", "house race", "early voting", "poll shows", "polling"],
+  "housing": ["road to housing", "investor acquisition", "housing act", "home prices", "mortgage rate"],
+  "chips": ["tsmc", "chip tariff", "semiconductor", "export control", "nvidia"],
+  "shutdown": ["shutdown", "continuing resolution", "appropriations", "ndaa"],
+  "venezuela": ["venezuela", "maduro", "caracas"]
+ }
+}

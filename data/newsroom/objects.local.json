@@ -1,6 +1,6 @@
 {
   "schema": "prism_object_overlay_v1",
-  "updatedAt": "2026-10-18T22:02:30.249Z",
+  "updatedAt": "2026-10-20T10:03:50.973Z",
   "note": "Written ONLY by the drafting task (Sailor commits it). The scan owns objects.json and only reads this file. See scripts/newsroom/overlay.js.",
   "objects": {
     "obj_astate_bills-changes-elections-gavin": {
@@ -1010,6 +1010,44 @@
     "obj_thepresi_approval-hits-low-midterms": {
       "status": "dismissed",
       "dismissedWhy": "No instrument: a poll reading (Trump approval at a record low, Fox stations, 10-18). Nothing was voted, signed or ordered; the scan read \"poll\" as a vote. Same call as obj_thepresi_approval-economic-falls-house (10-01). Dismissed by Claude (drafting), 22:0x UTC 10-18 run; reversible by Sailor."
+    },
+    "obj_thepresi_aimed-executive-health-improving": {
+      "status": "drafted",
+      "drafts": {
+        "claude": "rdg_l2r4qmev3gsv"
+      },
+      "draftedOn": "2026-10-20",
+      "inversions": [],
+      "corrections": [],
+      "aliasCandidates": [
+        "obj_thepresi_backed-close-gaps-health"
+      ],
+      "permanenceNote": "Not a return. The same order also filed as obj_thepresi_backed-close-gaps-health (queued 10-19 from the pre-signing headline); dismissed as the same instrument."
+    },
+    "obj_thepresi_backed-close-gaps-health": {
+      "status": "dismissed",
+      "dismissedWhy": "Same instrument as obj_thepresi_aimed-executive-health-improving: the 2026-10-19 order 'Advancing Women's Health to Improve Outcomes in All Phases of Life', drafted as rdg_l2r4qmev3gsv. This oid came from the pre-signing 'set to sign' headline. Dismissed by Claude (drafting), 05:xx UTC 10-20 run; reversible by Sailor.",
+      "aliasCandidates": [
+        "obj_thepresi_aimed-executive-health-improving"
+      ]
+    },
+    "obj_afederal_158-court-each-killing": {
+      "status": "dismissed",
+      "dismissedWhy": "No U.S. public instrument: a Mexican court sentencing three men to 158 years each for three killings (reported 10-20; appears to be the Baja California case over the 2024 murders of two Australian and one American surfer). A single foreign criminal case, not a vote, order or law any station can believe delivers. The register's holder (\"a federal court\") and kind (indictment) are both wrong. Dismissed by Claude (drafting) 10:0x UTC 2026-10-20 run; reversible by Sailor.",
+      "corrections": [
+        {
+          "field": "holder",
+          "from": "a federal court",
+          "to": "a Mexican court (foreign)",
+          "by": "claude"
+        },
+        {
+          "field": "kind",
+          "from": "indictment",
+          "to": "sentencing",
+          "by": "claude"
+        }
+      ]
     }
   }
 }

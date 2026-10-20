@@ -1,0 +1,34 @@
+# The Press's daily sweep (2026-10-19): every source on the roster → data/press/sweeps/sweep_<date>.json
+# + captions for the hits → data/press/transcripts/<date>/. Keyless. Runs here because the Cowork shells
+# can't reach the publishers or YouTube. The 07:00 PT Claude task reads the result from GitHub raw and cuts.
+name: press sweep
+on:
+  schedule:
+    - cron: '45 12 * * *'      # 05:45 Pacific (PDT) — after the newsroom scan (05:30), before the cut task (07:00)
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: press-sweep
+  cancel-in-progress: false
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q yt-dlp
+      - name: sweep the roster (non-fatal per source; captions non-fatal per video)
+        run: python3 scripts/press-sweep.py
+      - name: commit the sweep + transcripts + roster stamps
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/press/sweeps data/press/transcripts data/press/roster.json
+          git diff --cached --quiet && { echo "no change"; exit 0; }
+          git commit -m "press sweep: $(date -u +%F) — roster swept"
+          git pull --rebase
+          git push

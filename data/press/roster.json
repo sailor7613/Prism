@@ -24,7 +24,8 @@
    "lastScanned": "2026-10-15",
    "programs": [
     "The Daily Show"
-   ]
+   ],
+   "sweepKey": "daily-show"
   },
   {
    "id": "al-jazeera",
@@ -40,7 +41,8 @@
    "lastScanned": "2026-10-15",
    "programs": [
     "Al Jazeera"
-   ]
+   ],
+   "sweepKey": "al-jazeera"
   },
   {
    "id": "ms-now",
@@ -53,7 +55,8 @@
    "horizon": "US",
    "notes": "LI, cable; the populist voice without the comic register. Cut from clips, date by air date.",
    "lastCut": "2026-10-15",
-   "lastScanned": "2026-10-16"
+   "lastScanned": "2026-10-16",
+   "sweepKey": "ms-now"
   },
   {
    "id": "npr-pbs",
@@ -66,7 +69,8 @@
    "horizon": "US",
    "notes": "LI, public; fetchable transcripts. NPR member stations republish the AP wire — that is the record's register, not an NPR reading.",
    "lastCut": null,
-   "lastScanned": "2026-10-15"
+   "lastScanned": "2026-10-15",
+   "sweepKey": "npr-pbs"
   },
   {
    "id": "atlantic",
@@ -79,7 +83,8 @@
    "horizon": "US",
    "notes": "LI reader on foreign policy / economics; surface-bound expected. Nothing on the diesel deal as of 10-15.",
    "lastCut": null,
-   "lastScanned": "2026-10-15"
+   "lastScanned": "2026-10-15",
+   "sweepKey": "atlantic"
   },
   {
    "id": "the-close",
@@ -96,7 +101,9 @@
    "lastScanned": "2026-10-16",
    "programs": [
     "The Close"
-   ]
+   ],
+   "sweepKey": "the-close",
+   "baseline": true
   },
   {
    "id": "odd-lots",
@@ -113,7 +120,8 @@
    "programs": [
     "Odd Lots"
    ],
-   "scanNote": "week of 10-12: AI risk, Hyperliquid, France — nothing on the object"
+   "scanNote": "week of 10-12: AI risk, Hyperliquid, France — nothing on the object",
+   "sweepKey": "odd-lots"
   },
   {
    "id": "surveillance",
@@ -129,7 +137,8 @@
    "lastScanned": null,
    "programs": [
     "Bloomberg Surveillance"
-   ]
+   ],
+   "sweepKey": "surveillance"
   },
   {
    "id": "bloomberg-streams",
@@ -142,7 +151,8 @@
    "horizon": "US",
    "notes": "Sailor 10-14: scan the daily streaming transcripts as beta data for BloomBurger. The pull is the same yt-dlp route; the cut is only where a register object appears.",
    "lastCut": null,
-   "lastScanned": null
+   "lastScanned": null,
+   "sweepKey": "bloomberg-streams"
   },
   {
    "id": "breaking-points",
@@ -158,7 +168,8 @@
    "lastScanned": "2026-10-16",
    "programs": [
     "Breaking Points"
-   ]
+   ],
+   "sweepKey": "breaking-points"
   },
   {
    "id": "secular-talk",
@@ -171,7 +182,8 @@
    "horizon": "US",
    "notes": "LP σ; higher baseline Dia expected.",
    "lastCut": null,
-   "lastScanned": null
+   "lastScanned": null,
+   "sweepKey": "secular-talk"
   },
   {
    "id": "hasan",
@@ -184,7 +196,8 @@
    "horizon": "US",
    "notes": "LP σ, youngest audience; use the clips channel, date by stream date.",
    "lastCut": null,
-   "lastScanned": null
+   "lastScanned": null,
+   "sweepKey": "hasan"
   },
   {
    "id": "chapo",
@@ -196,7 +209,8 @@
    "horizon": "US",
    "notes": "LP at the far edge; Patreon episodes stay out.",
    "lastCut": null,
-   "lastScanned": null
+   "lastScanned": null,
+   "sweepKey": "chapo"
   },
   {
    "id": "tcn",
@@ -214,7 +228,8 @@
    "programs": [
     "Tucker Carlson",
     "Tucker Carlson Network"
-   ]
+   ],
+   "sweepKey": "tcn"
   },
   {
    "id": "free-press",
@@ -246,7 +261,8 @@
    "lastCut": null,
    "lastScanned": "2026-10-16",
    "ruledOn": "2026-10-15",
-   "scanNote": "#516 (10-10): the war as satire, no reading of the deal or H6; a Trump “small price to pay” clip filed as a statement candidate"
+   "scanNote": "#516 (10-10): the war as satire, no reading of the deal or H6; a Trump “small price to pay” clip filed as a statement candidate",
+   "sweepKey": "tim-dillon"
   },
   {
    "id": "nyt",
@@ -299,7 +315,7 @@
    "horizon": "US",
    "notes": "LP member of the Diesel Index, at the far edge — anti-establishment left on foreign policy. Feed verified 10-16; nothing on the deal in the window.",
    "lastCut": null,
-   "lastScanned": "2026-10-16"
+   "lastScanned": "2026-10-19-test"
   },
   {
    "id": "wire",
@@ -311,7 +327,8 @@
    "horizon": "—",
    "notes": "the record's register: dated T/B predicates for the tracker and the register, never a station reading.",
    "lastCut": null,
-   "lastScanned": "2026-10-15"
+   "lastScanned": "2026-10-15",
+   "sweepKey": "wire"
   }
  ],
  "log": [
@@ -330,5 +347,6 @@
    "what": "NYT, Fox, Grayzone added as sources (the Diesel Index members); programs aliases + sweepKey for the media tiles",
    "by": "Claude"
   }
- ]
+ ],
+ "sweep": "press-sweep.py (GitHub Action, 05:45 PT daily) sweeps every source here; `feeds` on an entry overrides the script's table; `baseline: true` = the floor, always queued; `channelId` is cached by the sweep."
 }

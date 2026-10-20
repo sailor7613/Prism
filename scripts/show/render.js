@@ -47,8 +47,11 @@ const clip = opt('--clip', null);   // a block id: render only that block's span
   await page.waitForFunction('window.SHOW && window.SHOW.ready', { timeout: 60000 });
   const info = await page.evaluate(() => ({ duration: SHOW.duration, fps: SHOW.fps, w: SHOW.width, h: SHOW.height, aspect: SHOW.aspect }));
   const fps = +opt('--fps', info.fps || 24);
-  if (set === 'villa' && scale !== 1) { info.w = Math.round(info.w * scale); info.h = Math.round(info.h * scale); }   // the villa fills the viewport; scale = a smaller viewport
-  await page.setViewport({ width: info.w, height: info.h, deviceScaleFactor: 1 });
+  // The villa lays itself out by CSS viewport width (a narrower one is its phone layout, with another camera), so a
+  // scaled villa render keeps the full CSS viewport and shrinks the pixels with deviceScaleFactor instead.
+  const dsf = (set === 'villa' && scale !== 1) ? scale : 1;
+  await page.setViewport({ width: info.w, height: info.h, deviceScaleFactor: dsf });
+  if (dsf !== 1) { info.cssW = info.w; info.cssH = info.h; info.w = Math.round(info.w * dsf); info.h = Math.round(info.h * dsf); }
   await new Promise(r => setTimeout(r, 1500));           // let the graphmap settle after the resize
   let t0s = 0, t1s = info.duration;
   if (clip) { const blks = await page.evaluate(() => SHOW.blocks || []); const blk = blks.find(b => b.id === clip); if (!blk) { console.error('no block ' + clip + '; have: ' + blks.map(b => b.id).join(', ')); process.exit(4); }
@@ -59,7 +62,7 @@ const clip = opt('--clip', null);   // a block id: render only that block's span
   for (let i = first; i < total; i += step) {
     await page.evaluate(t => SHOW.seek(t), i / fps);
     await page.evaluate(() => new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r))));
-    await page.screenshot({ path: path.join(frames, `f${String(i).padStart(6, '0')}.png`), type: 'png', clip: { x: 0, y: 0, width: info.w, height: info.h } });
+    await page.screenshot({ path: path.join(frames, `f${String(i).padStart(6, '0')}.png`), type: 'png', clip: { x: 0, y: 0, width: info.cssW || info.w, height: info.cssH || info.h } });
     if (i % (fps * 5) === 0) process.stdout.write(`\r  ${(((i - first) / (total - first)) * 100).toFixed(0)}%  ${(((Date.now() - t0) / 1000) | 0)} s`);
   }
   console.log('\r  100%');
