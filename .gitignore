@@ -24,3 +24,11 @@ push-gate/.wrangler/
 # ted-gate: the deploy tool (never committed)
 ted-gate/node_modules/
 ted-gate/.wrangler/
+
+# the show (scripts/show): puppeteer install and rendered output
+node_modules/
+data/show/*/frames/
+data/show/*/beats/
+data/show/*/*.mp4
+data/show/*/*.mp3
+data/show/*/concat.txt

@@ -18,4 +18,6 @@ module.exports = {
   EIA_API_KEY: 'paste-your-eia-key-here',
   // optional — UN Comtrade full endpoint (free: comtradeplus.un.org → My account → subscription key); without it scripts/comtrade.js uses the keyless preview
   COMTRADE_KEY: '',
+  // the show's voice (scripts/show/tts.py) — elevenlabs.io → Profile → API keys
+  ELEVENLABS_API_KEY: 'paste-your-elevenlabs-key-here',
 };

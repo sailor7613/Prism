@@ -280,6 +280,7 @@
   #v-objects.wrap { padding: 10px 16px 0; height: 100vh; height: 100dvh; display: flex; flex-direction: column; overflow: hidden; max-width: none; }
   .lhead { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px; margin: 0 0 4px; flex: 0 0 auto; }
   .lhead h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(18px, 4.4vw, 26px); line-height: 1.1; margin: 2px 0 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .pname { display: block; font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--ink-mid); margin-top: 2px; } .pname:empty { display: none; }
   .tedcirc { width: 44px; height: 44px; border-radius: 50%; overflow: hidden; display: block; background: radial-gradient(circle at 40% 35%, #26355e, #0c1430); border: 1px solid rgba(233,236,242,.25); }
   .tedcirc img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.15) translateY(4%); }
   .tedcirc { display: none; }   /* (10-18) gone — Ted himself is the You piece; tap him */
@@ -324,11 +325,16 @@
   .bnd .bt span { color: var(--ink-low); margin-left: 8px; }
   .bnd p { position: absolute; left: 18px; right: 18px; bottom: 7px; margin: 0; font-size: 12.5px; font-style: italic; line-height: 1.3; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .band .burns { position: absolute; left: -16px; right: -16px; top: 36px; bottom: 0; margin: 0; height: auto; }
-  .ecard { display: block; padding: 8px 14px 10px; border: 0; border-radius: 4px; background: rgba(6,11,26,.5); text-decoration: none; color: inherit; margin: 0 0 6px; flex: 0 0 auto; position: relative; }
+  .ecard { display: block; padding: 12px 16px 13px; border: 0; border-radius: 4px; background: rgba(6,11,26,.5); text-decoration: none; color: inherit; margin: 0 0 6px; flex: 0 0 auto; position: relative; }
   .ecard::before { content: ''; position: absolute; left: 10%; right: 10%; top: 0; height: 18px; background: radial-gradient(60% 100% at 50% 0, rgba(246,241,230,.14), transparent); pointer-events: none; }
   .ecard .tag { font-family: var(--mono); font-size: 9px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-low); }
   .ecard h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(17px, 4.2vw, 24px); line-height: 1.15; margin: 4px 0 4px; }
-  .ecard .pr { font-size: 14px; line-height: 1.4; margin: 0; color: var(--ink-mid); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .ecard .pr { font-size: 16px; line-height: 1.4; margin: 4px 0 0; color: var(--ink); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  /* the frame: a thin iridescent line, the Venus's film, drifting slowly (Sailor 10-18: "some colour, maybe some iridescence with a frame border") */
+  .ecard::after { content: ''; position: absolute; inset: 0; border-radius: 5px; padding: 1px; background: linear-gradient(110deg, var(--film-0) 0%, var(--film-1) 18%, rgba(255,250,240,.95) 30%, var(--film-2) 42%, var(--film-3) 60%, var(--film-4) 78%, var(--film-1) 100%); background-size: 260% 100%; -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask-composite: exclude; opacity: .8; animation: filmsweep 9s linear infinite; pointer-events: none; }
+  .ecard::before { content: ''; position: absolute; inset: -1px; border-radius: 6px; box-shadow: 0 0 14px rgba(190,170,230,.22), inset 0 0 18px rgba(190,170,230,.08); pointer-events: none; animation: filmglow 9s ease-in-out infinite; }   /* the soft glow that makes the line read as light */
+  @keyframes filmsweep { from { background-position: 130% 0; } to { background-position: -130% 0; } }
+  @keyframes filmglow { 0%, 100% { opacity: .5; } 50% { opacity: 1; } }
   #v-objects:not([data-panel="crowd"]) .navdock, #v-objects:not([data-panel="crowd"]) .band, #v-objects:not([data-panel="crowd"]) .ecard { display: none; }
   /* the engaged panel's pieces: one band on the navtool's side of the map (phone); a side column on the beam or fan side (desktop) */
   .pband { display: none; min-height: 0; max-height: 40vh; overflow-y: auto; padding: 2px 2px 10px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
@@ -340,8 +346,8 @@
   #v-objects[data-panel="prism"] .stage { transition: transform .8s cubic-bezier(.2,.8,.2,1), opacity .6s; }
   #v-objects[data-panel="prism"][data-stage="dial"] .stage, #v-objects[data-panel="prism"][data-stage="responses"] .stage { transform: translateY(-110%); opacity: 0; pointer-events: none; }
   #v-objects[data-panel="prism"][data-stage="dial"] .pband, #v-objects[data-panel="prism"][data-stage="responses"] .pband { max-height: none; }
-  #v-objects[data-panel="prism"][data-stage="map"] .pband, #v-objects[data-panel="prism"][data-stage="z"] .pband { max-height: 38vh; }
-  #v-objects[data-panel="prism"][data-stage="map"] .pband > p:first-of-type, #v-objects[data-panel="prism"][data-stage="z"] .pband > p:first-of-type, #v-objects[data-panel="prism"][data-stage="responses"] .pband > p:first-of-type { display: none; }   /* the question has been read by now */
+  #v-objects[data-panel="prism"][data-stage="map"] .pband { max-height: 38vh; } #v-objects[data-panel="prism"][data-stage="review"] .pband { max-height: 52vh; }
+  #v-objects[data-panel="prism"][data-stage="map"] .pband > p:first-of-type, #v-objects[data-panel="prism"][data-stage="review"] .pband > p:first-of-type, #v-objects[data-panel="prism"][data-stage="responses"] .pband > p:first-of-type { display: none; }   /* the question has been read by now */
   .memblock { transition: transform .6s cubic-bezier(.4,0,.2,1), opacity .45s; }
   .memblock.away { transform: translateY(-60px); opacity: 0; height: 0; overflow: hidden; margin: 0; pointer-events: none; }
   /* the band hugs the navtool: lower row → the navtool is high, so the pieces sit just under it and the map takes the bottom (thumb reach for the pin); upper row → map, pieces, navtool */
@@ -358,9 +364,9 @@
     #v-objects:not([data-panel="crowd"])[data-col="r"] .stage { grid-column: 1; grid-row: 1; }
     #v-objects[data-row="lower"][data-col="l"] .main, #v-objects[data-row="lower"][data-col="r"] .main { grid-template-rows: minmax(0, 1fr); }
   }
-  .pband .pt { font-family: var(--mono); font-size: 9.5px; letter-spacing: .24em; text-transform: uppercase; color: var(--ink-low); margin: 4px 0 8px; }
+  .pband .pt { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--ink-mid); margin: 4px 0 8px; }
   .pband h3 { font-family: var(--serif); font-weight: 400; font-size: 19px; margin: 0 0 4px; line-height: 1.2; }
-  .pband .k { font-family: var(--mono); font-size: 9.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-low); margin: 12px 0 6px; }
+  .pband .k { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--ink-mid); margin: 12px 0 6px; }
   .pband p { font-size: 14px; line-height: 1.45; color: var(--ink-mid); margin: 6px 0; }
   .pband p b { color: var(--ink); font-weight: 400; }
   .pband .law { padding: 8px 0; border-top: 1px solid var(--g4-rule-soft); font-size: 14px; }
@@ -395,6 +401,7 @@
   .pband .diag::before { content: ''; position: absolute; left: 10%; right: 10%; top: 0; height: 16px; background: radial-gradient(60% 100% at 50% 0, color-mix(in srgb, var(--c, var(--lt-cream)) 22%, transparent), transparent); pointer-events: none; }
   .pband .diag b { color: var(--ink); font-weight: 400; }
   .pband .msearch { margin: 6px 0; font-size: 14px; padding: 8px 10px; }
+  .hint { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--ink-mid); margin-right: auto; }
   /* uncovered, not stacked (Sailor 10-18): blocks that appear only when the user does something */
   .uncover { display: none; } .uncover.on { display: block; animation: slidein .4s cubic-bezier(.2,.8,.2,1); }
   .rail.bare { margin: 2px 0 10px; }
@@ -435,16 +442,20 @@
   .split .half .k { margin: 0 0 4px; } .split .half p { margin: 0 0 4px; color: var(--ink); font-size: 14px; } .split .half .n { font-family: var(--mono); font-size: 10px; color: var(--ink-low); }
   .split .delta { display: flex; justify-content: center; gap: 18px; font-family: var(--mono); font-size: 11px; color: var(--ink-mid); padding: 8px 0; position: relative; }
   .split .delta::before { content: ''; position: absolute; left: 20%; right: 20%; top: 50%; height: 1px; background: linear-gradient(90deg, transparent, rgba(246,241,230,.25), transparent); z-index: -1; }
-  .pband .cmp .r { cursor: pointer; border-radius: 4px; padding: 6px 4px; } .pband .cmp .r.on { background: rgba(233,236,242,.07); }
+  .pband .cmp .r { cursor: pointer; border-radius: 4px; padding: 6px 4px; } .pband .cmp .r.on { background: rgba(233,236,242,.07); } .pband .cmp .r .n { white-space: normal; }
   .voice { font-size: 14px; line-height: 1.5; color: var(--ink-mid); margin: 4px 0 8px; } .voice b { color: var(--ink); font-weight: 400; } .voice .go { margin: 0 0 0 6px; padding: 3px 8px; font-size: 9.5px; }
   .ticker { height: 24px; overflow: hidden; margin: -4px 0 6px; -webkit-mask: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
   .ticker .reel { display: inline-flex; align-items: center; white-space: nowrap; width: max-content; animation: reel 40s linear infinite; font-family: var(--mono); font-size: 10.5px; letter-spacing: .08em; color: var(--ink-low); }
   .ticker .q b { font-weight: 400; } .ticker .q u { text-decoration: none; font-size: 9px; } .ticker i { font-style: normal; margin: 0 12px; opacity: .4; }
   .ltile.news small { white-space: normal; line-height: 1.2; }
   .cloud { display: flex; flex-wrap: wrap; gap: 6px 10px; justify-content: center; margin: 10px 0 2px; } .cloud span { font-family: var(--serif); font-style: italic; color: var(--ink-mid); font-size: calc(12px + 6px * var(--w, .5)); opacity: calc(.45 + .55 * var(--w, .5)); }
+  .review .rv { display: grid; grid-template-columns: 96px 1fr; gap: 10px; padding: 7px 0; border-top: 1px solid var(--g4-rule-soft); font-size: 14px; } .review .rv:first-child { border-top: 0; }
+  .review .rv span { font-family: var(--serif); font-style: italic; color: var(--ink-low); } .review .rv b { font-weight: 400; color: var(--ink); line-height: 1.4; }
+  .cmplabels { position: absolute; inset: 0; z-index: 3; pointer-events: none; } .cmplabels .cl { position: absolute; font-family: var(--mono); font-size: 10px; padding: 2px 6px; border-radius: 8px; background: rgba(10,18,38,.8); color: var(--c, var(--lt-cream)); text-shadow: 0 0 6px color-mix(in srgb, var(--c, var(--lt-cream)) 50%, transparent); }
+  .tog.lenses { margin-top: -2px; } .tog.lenses span { border-style: dashed; }
   .delg { margin-top: 8px; } .delg .uncover { display: none; gap: 8px; align-items: center; flex-wrap: wrap; margin-top: 8px; } .delg .uncover.on { display: flex; }
   .delg select, .delg input { background: rgba(233,236,242,.05); border: 1px solid var(--g4-rule); color: var(--ink); font: 13px var(--serif); padding: 7px 9px; border-radius: 3px; } .delg input { width: 86px; } .delg .go { margin: 0; }
-  .more { display: inline-block; font-family: var(--mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-low); text-decoration: none; margin: 8px 0 4px; }
+  .more { display: inline-block; font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--ink-mid); text-decoration: none; margin: 8px 0 4px; }   /* the small uncover links, in the same quiet italic as the hints (no grey mono headers — Sailor, 10-18) */
   /* the membrane (J_diagnostic §7): the cognitive surface between the fluid and the denominated readings, floating above the dial;
      its disturbance is the reading — near-flat at fluid, pronounced when denominated; each end swells by how charged that side is */
   .mem { position: relative; height: 112px; margin: 4px -4px 0; }
@@ -473,6 +484,8 @@
   .peek[data-from="top"] { left: 50%; top: 0; transform: translateX(-50%) translateY(calc((1 - var(--p)) * -120%)) translateY(70px); }
   .peek[data-from="bottom"] { left: 50%; bottom: 0; transform: translateX(-50%) translateY(calc((1 - var(--p)) * 120%)) translateY(-90px); }
   .pband, .stage, .band, .ecard, .navdock { transition: opacity .25s, transform .25s; }
+  #v-objects .main, #v-objects .band, #v-objects .ecard, #v-objects .navdock { transition: opacity .5s cubic-bezier(.2,.8,.2,1), transform .5s cubic-bezier(.2,.8,.2,1); }
+  #v-objects.switching .main, #v-objects.switching .band, #v-objects.switching .ecard, #v-objects.switching .navdock { opacity: 0; transform: scale(.985); transition: none; }
   /* a station's line, opened beside its dot */
   .linecard { position: absolute; z-index: 5; width: min(300px, 78%); padding: 10px 12px; border-radius: 6px; background: rgba(10,18,38,.92); border: 1px solid rgba(233,236,242,.18); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 10px 30px rgba(0,0,0,.45); }
   .linecard .k { font-family: var(--mono); font-size: 9px; letter-spacing: .18em; text-transform: uppercase; margin-bottom: 6px; }
@@ -488,7 +501,7 @@
        The layer comes from the panel's home side and the navtool ends up opposite, as the layer's leading edge:
        upper row → navtool low · lower row → navtool high · left column → prism right · right column → prism left.
        Before you pick, the CROWD: one piece from each panel around the map. Tap a piece, or drag the prism. -->
-  <div class="lhead"><div><div class="g4-key" id="lKey">Prism</div><h1 id="lTitle"></h1></div><a class="tedcirc" href="#p/you" title="you"><img src="../src/img/ted-head.png" alt=""></a></div>
+  <div class="lhead"><div><h1 id="lTitle"></h1><em class="pname" id="lKey"></em></div><a class="tedcirc" href="#p/you" title="you"><img src="../src/img/ted-head.png" alt=""></a></div>
   <a class="head ecard" id="head" href="#p/prism"></a>
   <div class="navslot top" id="slotTop"></div>
   <div class="main" id="main">
@@ -500,6 +513,7 @@
       <div class="ptitle" id="ptitle"></div>
       <div class="linecard" id="lineCard" hidden></div>
       <div class="qtexts" id="qtexts"></div>
+      <div class="cmplabels" id="cmpLabels"></div>
     </div>
     <div class="peek" id="peek" hidden></div>
     <div class="pband" id="pband"></div>
@@ -661,13 +675,16 @@
   const open = r => `#reading/${encodeURIComponent(r.rid)}`;
   $('#classicLink').href = '../v2/?front=1';
 
+  // the crowd's one-line lede: the reading's own, else data/ledes.json (Claude drafts for Sailor's edit), else the prompt (Sailor 10-18: "a little snappier with the copy")
+  let LEDES = {}; const ledeOf = r => r.lede || LEDES[r.rid] || r.prompt || '';
   function paintHead() { if (!headline) return;
     const co = headline.centralObject || {};
-    const h = $('#head');   // the crowd's event card: the title and the question only; the story lives in the Prism panel (Sailor, 10-18)
+    const h = $('#head');   // the crowd's event card: the lede in plain words, no title (the header carries the object's name) — sits above the map
     $('#lTitle').textContent = co.name || headline.title;
-    h.innerHTML = `<div class="tag">${co.state || co.kind || ''} · ${fmt(co.stateDate || headline.date)} · ${headline === TODAY ? "today's event" : 'on the table'}</div><h2>${headline.title}</h2><p class="pr">${headline.prompt || ''}</p>`;   // sits above the map now (Sailor, 10-18)
+    h.innerHTML = `<p class="pr">${ledeOf(headline)}</p>`;   // no grey sub-headers (Sailor, 10-18)
   }
   paintHead();
+  fetch('../data/ledes.json', { cache: 'no-store' }).then(r => r.json()).then(j => { LEDES = j || {}; paintHead(); }).catch(() => {});
   $('#count').textContent = `${sorted.length} standing`;
   $('#rows').innerHTML = sorted.map(r => { const co = r.centralObject || {}; const st = (co.state || '').toLowerCase(); return `<a class="row" href="${open(r)}">
       <div class="when">${fmt(co.stateDate || r.date)}<b>${co.kind || 'object'}</b></div>
@@ -1155,7 +1172,7 @@
   if (EMBEDDED) document.documentElement.classList.add('embedded');
   const LAND = { g: null, ted: null, moon: null, built: false };
   const GRID = { you: [0, 0], field: [1, 0], tracking: [2, 0], prism: [1, 1], compare: [2, 1] };   // [column, row] — the lower-left slot is empty for now (Diatribe retired 10-18: the dial and the membrane live on Prism)
-  const PANEL_NAME = { crowd: 'Prism', you: 'You', field: 'The field', tracking: 'Tracking', prism: 'Prism', compare: 'Compare' };
+  const PANEL_NAME = { crowd: 'Prism', you: 'You', field: 'The field', tracking: 'Tracking', prism: 'Prism', compare: 'Alongside' };   // Compare → Alongside (10-19): you, alongside what you track
   const NAV_T = [0.88, 0.5, 0.12];   // where the prism sits by column: left panels → prism right (the beam across the left) · right panels → prism left (the fan across the right)
   const SIX = { panel: 'crowd', pin: { x: 0.5, y: 0.5 }, zUser: 0, aperture: 0, pick: null, placed: false, cmp: { field: true, stations: true, law: true, members: {}, objects: {} }, lens: 'everyone', locked: false, focus: null, against: null, voice: null, intro: false };
   // objects you follow (rulings, orders, laws from the table) — this browser, like the follows in rehearsal
@@ -1206,6 +1223,27 @@
   function layerLaw(gm) { lawPlacements(headline).forEach(l => { try { gm.addDot(l.x, l.y, GMQ[quadOf(l.x, l.y)], l.z * 0.75, { color: 0xd4aa52, radius: 0.045, shape: 'diamond', label: l.bill, meta: { cmp: 'law' } }); } catch (e) {} }); }
   function layerMembers(gm, ids) { try { gm.clearContrastLine && gm.clearContrastLine(); } catch (e) {} (ids || followed()).map(id => MEMBERS.find(m => m.bioguideId === id)).filter(Boolean).forEach(m => { const pl = memberPosOn(m, headline.rid), z = num(m.deliveryZ) ?? 0, f = SIX.focus === m.bioguideId; try { gm.addMemberPin(pl.x, pl.y, m.party, { baseline: false, normZ: z, radius: f ? 0.13 : 0.09, portrait: portrait(m), bioguideId: m.bioguideId, name: m.name, chamber: m.chamber, method: pl.derived ? 'derived' : 'nominate', confidence: pl.derived ? 0.6 : 0.25 }); if (f) { try { gm.addDot(pl.x, pl.y, GMQ[quadOf(pl.x, pl.y)], z * 0.75 + 0.12, { color: (m.party || '').toUpperCase() === 'D' ? 0x8fb0e0 : (m.party || '').toUpperCase() === 'R' ? 0xe0948f : 0xe0b77a, radius: 0.02, label: (m.lastName || m.name) + (SIX.placed ? ' · ' + sgn(agreeOn(m, SIX.pin, headline.rid).v) : ''), meta: { focus: m.bioguideId } }); } catch (e2) {} } if (f && SIX.placed && gm.setContrastLine) gm.setContrastLine({ x: SIX.pin.x, y: SIX.pin.y, z: SIX.zUser }, { x: pl.x, y: pl.y, z }); } catch (e) {} }); try { gm.setMemberPinsVisible && gm.setMemberPinsVisible(true); } catch (e) {} }
   function layerObjects(gm, rids) { (rids || followedObjs()).map(rid => READ_BY_ID[rid]).filter(Boolean).forEach(r => { const p = objPlace(r), co = r.centralObject || {}; try { gm.addDot(p.x, p.y, GMQ[quadOf(p.x, p.y)], (p.z || 0) * 0.75, { color: 0xd4aa52, radius: 0.045, shape: 'diamond', label: (co.name || r.title).slice(0, 26), meta: { obj: r.rid } }); } catch (e) {} }); }
+  // ALONGSIDE on the map (10-19): a line from you to each subject with its distance on it; the lenses draw the dialogue —
+  // over time: your trail paired with theirs across the readings you've pinned · says vs votes: a dashed line from their words to their record · at your heat: a line from each rep to the station nearest them
+  function layerAlongside(gm) {
+    try { gm.clearPaths && gm.clearPaths(); } catch (e) {}
+    const S = SIX.cmpSubjects || [], c = SIX.cmp, me = { x: SIX.pin.x, y: SIX.pin.y, z: SIX.zUser };
+    if (SIX.placed) S.forEach(s => { try { gm.addPath([me, s.o], { color: parseInt(s.col.replace('#', ''), 16), opacity: SIX.against === s.key ? 0.9 : 0.42, id: 'to:' + s.key }); } catch (e) {} });
+    if (c.lens === 'time') { const L = latestPins(), pins = Object.values(L).sort((x, y) => (x.at || '').localeCompare(y.at || ''));
+      if (pins.length > 1) { try { gm.addPath(pins.map(p => ({ x: p.x, y: p.y, z: p.z || 0 })), { color: 0xf5f0e8, opacity: 0.7, id: 'trail:you' }); pins.forEach((p, i) => { if (p.rid !== headline.rid) gm.addDot(p.x, p.y, GMQ[quadOf(p.x, p.y)], (p.z || 0) * 0.75, { color: 0xf5f0e8, radius: 0.02 + i * 0.004, label: '', meta: { trail: p.rid } }); }); } catch (e) {} }
+      S.filter(s => s.m).forEach(s => { const pts = pins.map(p => { const q = memberPosOn(s.m, p.rid); return { x: q.x, y: q.y, z: num(s.m.deliveryZ) ?? 0 }; }); if (pts.length > 1) { try { gm.addPath(pts, { color: parseInt(s.col.replace('#', ''), 16), opacity: 0.7, id: 'trail:' + s.key }); pins.forEach((p, i) => { try { gm.addPath([{ x: p.x, y: p.y, z: p.z || 0 }, pts[i]], { color: parseInt(s.col.replace('#', ''), 16), opacity: 0.18, dashed: true }); } catch (e) {} }); } catch (e) {} } }); }
+    if (c.lens === 'says') S.filter(s => s.m && s.derived).forEach(s => { try { gm.addPath([s.o, { x: s.record.x, y: s.record.y, z: s.record.z }], { color: parseInt(s.col.replace('#', ''), 16), opacity: 0.6, dashed: true, id: 'says:' + s.key }); gm.addDot(s.record.x, s.record.y, GMQ[quadOf(s.record.x, s.record.y)], (s.record.z || 0) * 0.75, { color: parseInt(s.col.replace('#', ''), 16), radius: 0.028, shape: 'diamond', label: (s.m.lastName || '') + ' · record', meta: { record: s.key } }); } catch (e) {} });
+    if (c.lens === 'heat') { const Rs = headline.responses || {}, b = band(SIX.aperture), dia = Math.max(0.35, Math.abs(SIX.aperture) / 100 * 0.9);
+      S.filter(s => s.m).forEach(s => { let best = null; ['A', 'B', 'C', 'D'].filter(q => (Rs[q] || {})[b]).forEach(q => { const st = { x: 0.5 + POSQ[q][0] * dia, y: 0.5 + POSQ[q][1] * dia, z: ((Rs[q] || {})[b] || {}).z || 0 }; const d = dist(s.o, st); if (!best || d < best.d) best = { st, d }; }); if (best) { try { gm.addPath([s.o, best.st], { color: 0x8aa0c8, opacity: 0.55, dashed: true, id: 'heat:' + s.key }); } catch (e) {} } }); }
+  }
+  // the distances, written on the lines (HTML labels projected to each line's midpoint)
+  const CL = { on: false };
+  function cmpLabels(on) { const el = $('#cmpLabels'); CL.on = on; if (!on) { el.innerHTML = ''; return; }
+    const S = SIX.cmpSubjects || [], me = { x: SIX.pin.x, y: SIX.pin.y, z: SIX.zUser }; if (!SIX.placed) { el.innerHTML = ''; return; }
+    el.innerHTML = S.map(s => `<span class="cl" data-k="${s.key}" style="--c:${s.col}">${dist(me, s.o).toFixed(2)}</span>`).join('');
+    (function tick() { if (!CL.on) return; requestAnimationFrame(tick); const gm = G; if (!gm || !gm.camera || document.hidden) return; const r = gm.canvas.getBoundingClientRect();
+      el.querySelectorAll('.cl').forEach(d => { const s = S.find(x => x.key === d.dataset.k); if (!s) return; const mx = (me.x + s.o.x) / 2, my = (me.y + s.o.y) / 2, mz = (me.z + (s.o.z || 0)) / 2; const v = new THREE.Vector3((mx - 0.5) * gm.GRAPH_SIZE, (0.5 - my) * gm.GRAPH_SIZE, mz * gm.Z_EXTENT * 0.8); gm.group.localToWorld(v); v.project(gm.camera); d.style.left = ((v.x * 0.5 + 0.5) * r.width - d.offsetWidth / 2) + 'px'; d.style.top = ((-v.y * 0.5 + 0.5) * r.height - d.offsetHeight / 2) + 'px'; }); })();
+  }
   function layerTrail(gm) { const L = latestPins(); Object.keys(L).forEach(rid => { const p = L[rid], r = READ_BY_ID[rid] || {}; if (rid === headline.rid) return; try { gm.addDot(p.x, p.y, GMQ[quadOf(p.x, p.y)], (p.z || 0) * 0.75, { color: 0xb9b4a8, radius: 0.028, label: ((r.centralObject || {}).name || r.title || '').slice(0, 28), meta: { trail: rid } }); } catch (e) {} }); }
   function diagTrace() {   // the factory's diagnostic boundaries from the Reading (see the band below)
     const Rs = headline.responses || {}, BANDS = ['fluid', 'coalition', 'denominated'], SIDEN = { A: 'Left establishment', B: 'Right establishment', C: 'Left populist', D: 'Right populist' };
@@ -1232,7 +1270,8 @@
     else if (P === 'prism') layerStations(gm);
     else if (P === 'field') { layerStations(gm); layerField(gm); }
     else if (P === 'tracking') { layerMembers(gm); layerLaw(gm); layerObjects(gm); }
-    else if (P === 'compare') { const c = SIX.cmp; if (c.stations) layerStations(gm); if (c.field) layerField(gm); if (c.law) layerLaw(gm); const ids = Object.keys(c.members).filter(k => c.members[k]); if (ids.length) layerMembers(gm, ids); const oids = Object.keys(c.objects).filter(k => c.objects[k]); if (oids.length) layerObjects(gm, oids); }
+    else if (P === 'compare') { const c = SIX.cmp; if (c.stations) layerStations(gm); if (c.field) layerField(gm); if (c.law) layerLaw(gm); const ids = Object.keys(c.members).filter(k => c.members[k]); if (ids.length) layerMembers(gm, ids); const oids = Object.keys(c.objects).filter(k => c.objects[k]); if (oids.length) layerObjects(gm, oids); layerAlongside(gm); cmpLabels(true); }
+    if (P !== 'compare') { try { gm.clearPaths && gm.clearPaths(); } catch (e) {} cmpLabels(false); }
     else if (P === 'you') layerTrail(gm);
     layerWords(gm, P === 'prism' || P === 'crowd');
     try { if (SIX.placed || P === 'prism') gm.setPin(SIX.pin.x, SIX.pin.y, GMQ[quadOf(SIX.pin.x, SIX.pin.y)], SIX.zUser * 0.75, { style: 'orb', ring: BANDCOL[band(SIX.aperture)] }); else gm.clearPin && gm.clearPin(); } catch (e) {}
@@ -1254,10 +1293,12 @@
   function go(P, quiet) {
     if (!GRID[P] && P !== 'crowd') P = 'crowd';
     if (quiet && SIX.shown === P) { dockNav(); return; }   // the hash caught up with a panel already on screen
-    const was = SIX.panel; SIX.panel = P; hideLine(); if (P !== 'prism') { delete $('#v-objects').dataset.stage; qtexts(false); try { G && G.setBoundaryVisible && G.setBoundaryVisible(false); } catch (e) {} }
+    const was = SIX.panel; SIX.panel = P; hideLine();
+    { const v0 = $('#v-objects'); v0.classList.add('switching'); setTimeout(() => v0.classList.remove('switching'), 60); }   // the view eases through the change rather than cutting (Sailor 10-18)
+    if (P !== 'prism') { delete $('#v-objects').dataset.stage; qtexts(false); try { G && G.setBoundaryVisible && G.setBoundaryVisible(false); } catch (e) {} }
     const v = $('#v-objects'); v.dataset.panel = P; v.dataset.col = P === 'crowd' ? 'c' : ['l', 'c', 'r'][GRID[P][0]]; v.dataset.row = P === 'crowd' ? '' : GRID[P][1] ? 'lower' : 'upper';
     $('#slotTop').classList.toggle('on', P !== 'crowd' && GRID[P][1] === 1); $('#slotBottom').classList.toggle('on', P !== 'crowd' && GRID[P][1] === 0);
-    $('#lKey').textContent = P === 'crowd' || P === 'prism' ? 'Prism' : 'Prism · ' + PANEL_NAME[P]; $('#ptitle').textContent = P === 'crowd' ? '' : PANEL_NAME[P];
+    $('#lKey').textContent = P === 'crowd' || P === 'prism' ? '' : PANEL_NAME[P].toLowerCase(); $('#ptitle').textContent = '';
     tell({ type: 'g4:navpos', t: P === 'crowd' ? 0.5 : NAV_T[GRID[P][0]] });
     tell({ type: 'g4:crumb', name: 'Prism', fn: PANEL_NAME[P].toUpperCase(), crumb: 'Prism · ' + (P === 'crowd' ? 'the event' : PANEL_NAME[P].toLowerCase()) });
     renderBand(P); paint(); orbitFor(P); tedFor(P, was);
@@ -1280,7 +1321,7 @@
     if (P === 'crowd') return 'back to the crowd';
     if (P === 'field') { const n = fieldOf().length; return n ? `${n} ${n === 1 ? 'person has' : 'people have'} placed themselves` : 'nobody has placed themselves yet'; }
     if (P === 'tracking') { const n = followed().length; return n ? `${n} you follow, placed on the map` : 'follow someone in Congress'; }
-    if (P === 'compare') return 'lay anyone you track against you';
+    if (P === 'compare') return 'you, alongside what you track';
     if (P === 'you') { const n = Object.keys(latestPins()).length; return n ? `${n} pin${n === 1 ? '' : 's'} — your trail` : 'your record starts with a pin'; }
     if (P === 'prism') return SIX.placed ? "where you stand on today's event" : "place yourself on today's event";
     return '';
@@ -1359,7 +1400,7 @@
   }
 
   // ── Ted: on the centre panels only (Sailor, 10-18). He comes in close, head and shoulders, says his one line, then wanders in the background ──
-  const TED_LINES = () => { const co = headline.centralObject || {}; return [`Today's on the table: ${co.name || headline.title}. ${headline.prompt || ''}`, 'Where do you land on this one? Tap the map, or drag the prism to look around.', 'The C up top is the Codex — every word, and me, if you have a question.']; };
+  const TED_LINES = () => { const co = headline.centralObject || {}; return [`That's today's on the table. Where do you land on it?`, 'Where do you land on this one? Tap the map, or drag the prism to look around.', 'The C up top is the Codex — every word, and me, if you have a question.']; };
   const TED_CUES = { prism: 'Tap the map to place yourself. The dial below sets how hard you push.', field: 'Everyone who has placed themselves on this one. The ring is you.' };
   // after his cue he lives in the far background, well behind the graphmap (Sailor, 10-18): four spots past the plane's edges, crossing behind it between them
   const TED = { st: null, home: null, wander: [new THREE.Vector3(-2.6, -1.9, -4.2), new THREE.Vector3(2.4, -1.9, -4.8), new THREE.Vector3(2.9, -1.95, -3.6), new THREE.Vector3(-2.3, -2.0, -5.0)], wi: 0 };
@@ -1408,17 +1449,16 @@
     const d = delegation(); followed().map(id => MEMBERS.find(m => m.bioguideId === id)).filter(Boolean).sort((x, y) => (isDelegate(y, d) ? 1 : 0) - (isDelegate(x, d) ? 1 : 0)).slice(0, 6).forEach(m => { const st = stockOf(m, 'you'); cards.push(`<a class="lcard" href="#p/tracking"><img src="${portrait(m)}" alt=""><b>${m.lastName || m.name}</b>${st.current != null ? `<span class="ag ${agCls(st.current)}"> ${sgn(st.current)}${st.tick != null ? ' ' + tickGlyph(st.tick) : ''}</span>` : ''}<small>${isDelegate(m, d) ? 'yours · ' : ''}${(PARTY[(m.party || '').toUpperCase()] || '').slice(0, 3)} · ${m.state}</small></a>`); });
     (headline.tethers || []).slice(0, 3).forEach(t => cards.push(`<a class="lcard" href="#p/tracking"><b>${t.bill || (t.title || '').slice(0, 36)}</b><small>${t.relation || ''}</small></a>`));
     followedObjs().map(rid => READ_BY_ID[rid]).filter(Boolean).slice(0, 4).forEach(r => { const c = r.centralObject || {}; cards.push(`<a class="lcard" href="#p/tracking"><b>${(c.name || r.title).slice(0, 40)}</b><small>${c.kind || 'object'} · ${c.state || ''}</small></a>`); });
-    if (!followed().length) cards.push('<a class="lcard" href="#p/tracking"><b>Follow someone in Congress</b><small>they show up here</small></a>');
     return cards;
   }
   function runRail() {
     const el = $('#lrail'); let cards = railCards(), i = 0;
-    const show = () => { cards = railCards(); const pick = [0, 1].map(k => cards[(i + k) % cards.length]).filter((c, k, arr) => c && (cards.length > 1 || k === 0)); el.querySelectorAll('.lcard').forEach(c => c.classList.add('fade')); setTimeout(() => { el.innerHTML = pick.join(''); el.querySelectorAll('.lcard').forEach(c => { c.classList.add('fade'); requestAnimationFrame(() => requestAnimationFrame(() => c.classList.remove('fade'))); }); }, 350); i = (i + 2) % Math.max(1, cards.length); };
-    show(); setInterval(() => { if (!document.hidden && $('#v-objects').classList.contains('on') && SIX.panel === 'crowd') show(); }, 5200);
+    const show = () => { cards = railCards(); el.hidden = !cards.length; if (!cards.length) return; const pick = [0, 1].map(k => cards[(i + k) % cards.length]).filter((c, k, arr) => c && (cards.length > 1 || k === 0)); el.querySelectorAll('.lcard').forEach(c => c.classList.add('fade')); setTimeout(() => { el.innerHTML = pick.join(''); el.querySelectorAll('.lcard').forEach(c => { c.classList.add('fade'); requestAnimationFrame(() => requestAnimationFrame(() => c.classList.remove('fade'))); }); }, 350); i = (i + 2) % Math.max(1, cards.length); };
+    el.hidden = !cards.length; show(); setInterval(() => { if (!document.hidden && $('#v-objects').classList.contains('on') && SIX.panel === 'crowd') show(); }, 5200);
   }
   function paintChips() {   // the field's piece (everyone's pins + the count) and Compare's ("you vs ___")
     const n = fieldOf().length; $('#fieldChip').innerHTML = `<b>${n}</b> pinned<small>the field</small>`;
-    const fol = followed(); $('#cmpChip').innerHTML = `you vs <b>${fol.length ? ((MEMBERS.find(m => m.bioguideId === fol[0]) || {}).lastName || 'the field') : 'the field'}</b><small>compare</small>`;
+    const fol = followed(); $('#cmpChip').innerHTML = `you, alongside <b>${fol.length ? ((MEMBERS.find(m => m.bioguideId === fol[0]) || {}).lastName || 'the field') : 'the field'}</b>`;
   }
   function paintHeat() {   // the crowd's dial at your current read
     const a = SIX.aperture, k = $('#heatIn'); if (!k) return; if (+k.value !== a) k.value = a; $('#heatVal').textContent = (sideOf(a) ? (sideOf(a) === 'left' ? 'left · ' : 'right · ') : '') + band(a);
@@ -1493,7 +1533,13 @@
   function wireDial(id, after) { const el = $('#' + id); if (!el) return; const paintDial = () => { const a = SIX.aperture, b = band(a), side = sideOf(a); const rd = $('#' + id + 'Read'); if (rd) rd.textContent = (side ? (side === 'left' ? 'the left · ' : 'the right · ') : 'centre · ') + b + ' · ' + Math.abs(a); el.closest('.rail').querySelectorAll('.bands span').forEach((s, i) => s.classList.toggle('on', s.dataset.b === b && (b === 'fluid' || (side === 'left' ? i < 2 : side === 'right' ? i > 2 : false)))); el.closest('.rail').querySelectorAll('.sides .l, .sides .r').forEach(s => s.classList.toggle('on', (s.classList.contains('l') && side === 'left') || (s.classList.contains('r') && side === 'right'))); }; paintDial(); el.addEventListener('input', e => { SIX.aperture = +e.target.value; paintDial(); paint(); if (after) after(); }); }
   function wireZ(id) { const el = $('#' + id); if (!el) return; el.addEventListener('input', e => { SIX.zUser = (+e.target.value) / 100; const v = $('#' + id + 'Val'); if (v) v.textContent = zs(SIX.zUser); paint(); renderPinNote(); }); }
   function pinNote() { const q = quadOf(SIX.pin.x, SIX.pin.y), ax = headline.axes || {}; const side = SIX.pin.x < 0.5 ? (ax.x && ax.x.neg) || 'left' : (ax.x && ax.x.pos) || 'right', row = SIX.pin.y < 0.5 ? (ax.y && ax.y.pos) || 'institutional' : (ax.y && ax.y.neg) || 'populist'; return SIX.placed ? (SIX.pick ? `You stand with the <b>${QUAD[SIX.pick.q].replace(' · ', ' ')}</b> reading.` : `You stand <b>${side} · ${row}</b>.`) : 'Tap the map to place yourself.'; }
-  function renderPinNote() { const el = $('#pinNote'); if (el) el.innerHTML = pinNote(); const zn = $('#zNote'); if (zn && SIX.stage === 'z') zn.innerHTML = `${pinNote()} Now how far it <b>${((headline.axes || {}).z || {}).pos || 'delivers'}</b> — slide, and your pin rises or falls between the planes.`; const pb = $('#pinBlock'); if (pb && SIX.placed && SIX.locked) pb.classList.add('on'); const d = $('#diagNote'); if (d) d.innerHTML = diagNote(); }
+  // the review (stage 4): everything you've said on one card — your heat, the reading you stood with, where your pin sits — then lock in z
+  function renderReview() { const el = $('#review'); if (!el) return; const a = SIX.aperture, side = sideOf(a), b = band(a), q = quadOf(SIX.pin.x, SIX.pin.y), ax = headline.axes || {};
+    el.innerHTML = `<div class="rv"><span>your heat</span><b>${side ? side + ' · ' : ''}${b}${a ? ' · ' + Math.abs(a) : ''}</b></div>
+      <div class="rv"><span>you stood with</span><b>${SIX.pick ? QUAD[SIX.pick.q] + ' — “' + String(SIX.pick.r.text || '').replace(/<[^>]+>/g, '').slice(0, 90) + (String(SIX.pick.r.text || '').length > 90 ? '…' : '') + '”' : 'your own spot, ' + QUAD[q]}</b></div>
+      <div class="rv"><span>your pin</span><b>${SIX.pin.x < 0.5 ? (ax.x && ax.x.neg) || 'left' : (ax.x && ax.x.pos) || 'right'} · ${SIX.pin.y < 0.5 ? (ax.y && ax.y.pos) || 'institutional' : (ax.y && ax.y.neg) || 'populist'}</b></div>
+      <em class="hint" style="display:block;margin:10px 0 2px">Last thing: how far it ${(ax.z && ax.z.pos) || 'delivers'}. Slide, and your pin rises or falls between the planes.</em>`; }
+  function renderPinNote() { const el = $('#pinNote'); if (el) el.innerHTML = pinNote(); if (SIX.stage === 'review') renderReview(); const pb = $('#pinBlock'); if (pb && SIX.placed && SIX.locked) pb.classList.add('on'); const d = $('#diagNote'); if (d) d.innerHTML = diagNote(); }
   function diagNote() {   // Diatribe's diagnostics: where your read sits against the station nearest your pin
     if (!SIX.placed) return 'Place yourself on the map and the diagnostics read where you sit.';
     const Rs = headline.responses || {}, b = band(SIX.aperture), q = quadOf(SIX.pin.x, SIX.pin.y), r = (Rs[q] || {})[b]; if (!r) return `No ${b} reading from ${QUAD[q]} on this one.`;
@@ -1509,44 +1555,47 @@
     if (P === 'prism') {   // today's event, in stages (Sailor, 10-18): the dial → it floats away and the responses come in as text → the texts float
       // onto the graphmap as it floats in from above → z (the z planes come up) → commit. One thing at a time, never a dogpile.
       const fr = strip(headline.framing);
-      pb.innerHTML = `<div class="g4-key">${co.state || co.kind || ''} · ${fmt(co.stateDate || headline.date)}</div><h3>${headline.title}</h3><p style="color:var(--ink)">${headline.prompt || ''}</p>
+      pb.innerHTML = `<h3>${headline.title}</h3><p style="color:var(--ink)">${headline.prompt || ''}</p>
         <div class="memblock" id="memBlock"><div class="mem" id="memP"></div><div class="memreads"><span class="l" id="readL"></span><span class="r" id="readR"></span></div>
-          <div class="dialrow"><div class="rail bare"><div class="track"><input type="range" id="apP" min="-100" max="100" value="${SIX.aperture}"></div></div><a class="lock" id="lockGo" href="#" title="lock the dial">○</a></div><div class="g4-key" style="text-align:right;margin-top:4px">slide, then lock</div></div>
+          <div class="rail bare"><div class="track"><input type="range" id="apP" min="-100" max="100" value="${SIX.aperture}"></div></div>
+          <div class="act" style="margin-top:12px"><em class="hint" id="dialHint">slide to how hard you'd push</em><a class="go lit" id="lockGo" href="#" style="opacity:.35">lock it in →</a></div></div>
         <div class="uncover" id="respBlock"></div>
-        <div class="uncover" id="standBlock"><p id="pinNote"></p><div class="act"><a class="go lit" id="zStageGo" href="#">does it deliver? →</a><a class="more" id="backGo" href="#" style="margin:0 0 0 auto">↑ change your heat</a></div></div>
-        <div class="uncover" id="pinBlock"><p id="zNote"></p>${zHTML('zP')}<div class="act"><span class="g4-key" id="pinSeat"></span><a class="go lit" id="pinGo">commit the pin</a><a class="more" id="backGo2" href="#" style="margin:0 0 0 auto">↑ change your stand</a></div></div>
+        <div class="uncover" id="standBlock"><p id="pinNote"></p><div class="act"><a class="go lit" id="zStageGo" href="#">review →</a><a class="more" id="backGo" href="#" style="margin:0 0 0 auto">↑ change your heat</a></div></div>
+        <div class="uncover" id="pinBlock"><div class="review" id="review"></div>${zHTML('zP')}<div class="act"><span class="hint" id="pinSeat"></span><a class="go lit" id="pinGo">commit the pin</a><a class="more" id="backGo2" href="#" style="margin:0 0 0 auto">↑ change your stand</a></div></div>
         <a class="more" id="moreGo" href="#">more ↓</a>
         <div class="uncover" id="moreBlock"><p>${fr}</p><div class="k">everything on the table · laws first</div><div class="objs">${sorted.map(r => { const c = r.centralObject || {}; return `<a href="${open(r)}">${c.name || r.title}<small>${fmt(c.stateDate || r.date)} · ${c.kind || 'object'}</small><span class="st">${c.state || ''}</span></a>`; }).join('')}</div></div>`;
       const Rs = headline.responses || {};
       const stage = () => {   // the stages, from the state: dial → responses (locked) → map (placed) → z (SIX.zStage) — one thing at a time
-        const st = SIX.placed && SIX.locked ? (SIX.zStage ? 'z' : 'map') : SIX.locked ? 'responses' : 'dial'; SIX.stage = st; const v = $('#v-objects'); v.dataset.stage = st;
-        $('#memBlock').classList.toggle('away', st !== 'dial'); $('#respBlock').classList.toggle('on', st === 'responses'); $('#standBlock').classList.toggle('on', st === 'map'); $('#pinBlock').classList.toggle('on', st === 'z');
-        try { if (G && G.setBoundaryVisible) { if (st === 'z') { const ax = headline.axes || {}; G.setBoundaryContent && G.setBoundaryContent({ positive: { text: (ax.z && ax.z.pos) || 'delivers' }, negative: { text: (ax.z && ax.z.neg) || 'does not' } }); } G.setBoundaryVisible(st === 'z'); } } catch (e) {}   // the z planes come up at the z stage, in the event's own words
+        const st = SIX.placed && SIX.locked ? (SIX.zStage ? 'review' : 'map') : SIX.locked ? 'responses' : 'dial'; SIX.stage = st; const v = $('#v-objects'); v.dataset.stage = st;
+        $('#memBlock').classList.toggle('away', st !== 'dial'); $('#respBlock').classList.toggle('on', st === 'responses'); $('#standBlock').classList.toggle('on', st === 'map'); $('#pinBlock').classList.toggle('on', st === 'review');
+        try { if (G && G.setBoundaryVisible) { if (st === 'review') { const ax = headline.axes || {}; G.setBoundaryContent && G.setBoundaryContent({ positive: { text: (ax.z && ax.z.pos) || 'delivers' }, negative: { text: (ax.z && ax.z.neg) || 'does not' } }); } G.setBoundaryVisible(st === 'review'); } } catch (e) {}   // the z planes come up at the z stage, in the event's own words
         if (st === 'map') { $('#pinNote').innerHTML = pinNote(); setTimeout(() => { try { G && G.resize && G.resize(); } catch (e) {} qtexts(true); }, 450); try { G && G.spinTo(0, -4, 900); } catch (e) {} }
-        else if (st === 'z') { qtexts(false); $('#zNote').innerHTML = `${pinNote()} Now how far it <b>${((headline.axes || {}).z || {}).pos || 'delivers'}</b> — slide, and your pin rises or falls between the planes.`; try { G && G.spinTo(-14, -46, 1100); G.setZoom && G.setZoom(6.9); setTimeout(() => { try { G.resize(); } catch (e) {} }, 500); } catch (e) {} }
+        else if (st === 'review') { qtexts(false); renderReview(); try { G && G.spinTo(-14, -46, 1100); G.setZoom && G.setZoom(6.9); setTimeout(() => { try { G.resize(); } catch (e) {} }, 500); } catch (e) {} }
         else qtexts(false);
         paint();
       };
       const responses = () => { const b = band(SIX.aperture), side = sideOf(SIX.aperture), order = side === 'right' ? ['B', 'D', 'A', 'C'] : ['A', 'C', 'B', 'D'], el = $('#respBlock');
-        el.innerHTML = `<div class="g4-key" style="margin-bottom:8px">${b} · ${side ? 'the ' + side + ' first' : 'the four stations'} · tap the one nearest your own</div><div class="resp" id="respList">${order.map(q => { const r = (Rs[q] || {})[b]; if (!r) return ''; return `<a href="#" class="rl ${q}" data-q="${q}"><i></i><span>${lit(r.text || '', [r.xWord, r.yWord].concat(r.words || []))}</span></a>`; }).join('')}</div>`;
+        el.innerHTML = `<em class="hint" style="display:block;margin-bottom:8px">${b}, ${side ? 'the ' + side + ' first' : 'the four stations'} — tap the one nearest your own</em><div class="resp" id="respList">${order.map(q => { const r = (Rs[q] || {})[b]; if (!r) return ''; return `<a href="#" class="rl ${q}" data-q="${q}"><i></i><span>${lit(r.text || '', [r.xWord, r.yWord].concat(r.words || []))}</span></a>`; }).join('')}</div>`;
         el.querySelectorAll('[data-q]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); const q = a.dataset.q, r = (Rs[q] || {})[b]; if (!r) return; const d = Math.max(0.35, Math.abs(SIX.aperture) / 100 * 0.9); SIX.pick = { q, band: b, r }; SIX.pin = { x: 0.5 + POSQ[q][0] * d, y: 0.5 + POSQ[q][1] * d }; SIX.zUser = r.z != null ? Math.round(r.z * 100) / 100 : 0; SIX.placed = true; const zi = $('#zP'); if (zi) { zi.value = Math.round(SIX.zUser * 100); const v = $('#zPVal'); if (v) v.textContent = zs(SIX.zUser); } el.querySelectorAll('.rl').forEach(x => x.classList.toggle('on', x === a)); setTimeout(stage, 350); })); };
       responses();
-      $('#lockGo').addEventListener('click', e => { e.preventDefault(); SIX.locked = true; $('#lockGo').textContent = '●'; $('#lockGo').classList.add('on'); responses(); hideLine(); stage(); });
-      $('#backGo').addEventListener('click', e => { e.preventDefault(); SIX.locked = false; SIX.placed = false; SIX.pick = null; SIX.zStage = false; $('#lockGo').textContent = '○'; $('#lockGo').classList.remove('on'); stage(); });
+      $('#lockGo').addEventListener('click', e => { e.preventDefault(); SIX.locked = true; responses(); hideLine(); stage(); });
+      $('#backGo').addEventListener('click', e => { e.preventDefault(); SIX.locked = false; SIX.placed = false; SIX.pick = null; SIX.zStage = false; $('#lockGo').style.opacity = '1'; stage(); });
       $('#zStageGo').addEventListener('click', e => { e.preventDefault(); SIX.zStage = true; stage(); });
       $('#backGo2').addEventListener('click', e => { e.preventDefault(); SIX.zStage = false; stage(); });
       const reads = () => { const D = headline.diatribe || {}, b = band(SIX.aperture), side = sideOf(SIX.aperture), key = sd => sd + ({ fluid: 'F', coalition: 'C', denominated: 'D' }[b]); const L = D[key('L')] || {}, Rr = D[key('R')] || {};
         $('#readL').innerHTML = side === 'left' ? lit(L.text || '', L.keywords) : ''; $('#readR').innerHTML = side === 'right' ? lit(Rr.text || '', Rr.keywords) : ''; $('#readL').classList.toggle('on', side === 'left'); $('#readR').classList.toggle('on', side === 'right'); };
-      const ap = $('#apP'); ap.addEventListener('input', e => { SIX.aperture = +e.target.value; memSet('P'); paintHeat(); paint(); reads(); hideLine(); }); ap.addEventListener('change', () => setTimeout(() => { $('#readL').classList.remove('on'); $('#readR').classList.remove('on'); }, 2600));
+      const ap = $('#apP'); ap.addEventListener('input', e => { SIX.aperture = +e.target.value; memSet('P'); paintHeat(); paint(); reads(); hideLine(); $('#lockGo').style.opacity = '1'; $('#dialHint').textContent = (sideOf(SIX.aperture) ? 'the ' + sideOf(SIX.aperture) + ' · ' : '') + band(SIX.aperture) + ' — then lock'; }); ap.addEventListener('change', () => setTimeout(() => { $('#readL').classList.remove('on'); $('#readR').classList.remove('on'); }, 2600));
       wireZ('zP'); memMount('P', $('#memP')); memSet('P'); $('#pinSeat').textContent = REHEARSAL ? 'rehearsal · a commit stays in this browser' : '';
-      $('#pinGo').addEventListener('click', e => { e.preventDefault(); if (!SIX.placed) return; commitPin(headline, SIX, '#pinGo', '#pinSeat'); paintChips(); });
+      $('#pinGo').addEventListener('click', e => { e.preventDefault(); if (!SIX.placed) return; commitPin(headline, SIX, '#pinGo', '#pinSeat'); paintChips();
+        // stage 6: the pin is burnt; the navtool drops to the bottom and the aggregate layer comes over the map
+        setTimeout(() => go('field'), 1100); });
       $('#moreGo').addEventListener('click', e => { e.preventDefault(); const on = $('#moreBlock').classList.toggle('on'); $('#moreGo').textContent = on ? 'less ↑' : 'more ↓'; });
-      if (SIX.locked) { $('#lockGo').textContent = '●'; $('#lockGo').classList.add('on'); }
+      if (SIX.aperture) $('#lockGo').style.opacity = '1';
       stage();
     }
     else if (P === 'field') {   // everyone's pins — one line, the lens; names behind "more"
       const fe = fieldOf(), m = mean(fe.map(en => ({ x: en.x, y: en.y, z: en.z || 0 }))), me = { x: SIX.pin.x, y: SIX.pin.y, z: SIX.zUser };
-      const line = fe.length ? `<b>${fe.length}</b> ${fe.length === 1 ? 'person has' : 'people have'} placed themselves${m && SIX.placed ? (dist(me, m) < 0.35 ? ' — you sit close to the crowd' : ' — you sit out on your own') : ''}.` : 'Nobody has placed themselves yet — yours would be the first pin.';
+      const line = fe.length ? `<b>${fe.length}</b> ${fe.length === 1 ? 'person has' : 'people have'} placed themselves${m && SIX.placed ? (dist(me, m) < 0.35 ? ' — you sit close to the crowd' : ' — you sit out on your own') : ''}.` : (SIX.placed ? `Your pin is on the map${REHEARSAL ? ' — in rehearsal it stays on this phone' : ', the first one here'}.` : 'Nobody has placed themselves yet — yours would be the first pin.');
       const V = SIX.voice && fe.find(en => en.id === SIX.voice);
       pb.innerHTML = `<p style="color:var(--ink)">${line}</p>${V ? `<div class="voice"><b>${PrismField.nameOf(V.author)}</b> stands ${SIDE[V.quad] || ''}${V.band ? ', ' + V.band : ''}${SIX.placed ? ` — <b>${dist({ x: SIX.pin.x, y: SIX.pin.y, z: SIX.zUser }, V).toFixed(2)}</b> from you` : ''}.${V.words ? ' “' + String(V.words).slice(0, 140) + '”' : ''} <a class="go" href="#p/compare" data-vcmp="${V.id}">compare →</a></div>` : (fe.length ? '<p class="g4-key">tap a pin to see who</p>' : '')}
         <div class="tog" id="lensTog"><span data-l="everyone" class="${SIX.lens === 'everyone' ? 'on' : ''}" style="--c:var(--lt-cream)">everyone</span><span data-l="near" class="${SIX.lens === 'near' ? 'on' : ''}" style="--c:var(--lt-green)">near me</span><span data-l="side" class="${SIX.lens === 'side' ? 'on' : ''}" style="--c:var(--lt-gold)">my side</span></div>
@@ -1573,7 +1622,7 @@
           <div class="act"><a class="go" href="#p/compare" data-cmp="${F.bioguideId}">compare →</a><a class="go" href="#" data-prof="${F.bioguideId}">their record →</a><a class="go" href="#" data-unf="${F.bioguideId}">unfollow</a></div></div>`; }
       // in the news: legislators named in the newsroom's objects (the burns)
       const newsy = (() => { const out = []; (OBJS || []).slice(0, 40).forEach(o => { const h = String(o.headline || '').toLowerCase(); MEMBERS.forEach(m => { const ln = (m.lastName || '').toLowerCase(); if (ln.length > 3 && h.includes(ln) && !out.find(x => x.m === m)) out.push({ m, o }); }); }); return out.slice(0, 8); })();
-      pb.innerHTML = `${fol.length ? `<div class="ltiles">${fol.map(tile).join('')}</div><div class="ticker" id="stockTicker" hidden></div>` : '<p style="color:var(--ink)">Follow someone in Congress and they sit on the map, placed from their record.</p>'}${detail}${delAff}
+      pb.innerHTML = `${fol.length ? `<div class="ltiles">${fol.map(tile).join('')}</div><div class="ticker" id="stockTicker" hidden></div>` : ''}${detail}${delAff}
         ${newsy.length ? `<div class="k">in the news</div><div class="ltiles">${newsy.map(({ m, o }) => `<a href="#" class="ltile news" data-news="${m.bioguideId}"><img src="${portrait(m)}" alt=""><b>${m.lastName || m.name}</b><small>${clip(o.headline, 44)}</small>${followed().includes(m.bioguideId) ? '<i>✓</i>' : ''}</a>`).join('')}</div>` : ''}
         ${objs.length || (headline.tethers || []).length ? `<div class="ltiles objs2">${objs.map(otile).join('')}${(headline.tethers || []).slice(0, 3).map((t, i) => `<a class="ltile obj" href="#" data-ft="${i}"><b>${t.bill || (t.title || '').slice(0, 40)}</b><small>${t.relation || 'on today\'s event'}</small><em>${t.place && t.place.quadrants ? 'placed by text' : 'the law on this event'}</em></a>`).join('')}</div>` : ''}
         <a class="more" id="moreGo" href="#">+ follow someone ↓</a>
@@ -1597,28 +1646,43 @@
       $('#moreGo').addEventListener('click', e => { e.preventDefault(); const on = $('#moreBlock').classList.toggle('on'); $('#moreGo').textContent = on ? '− close ↑' : '+ follow someone ↓'; if (on) setTimeout(() => $('#trkFind').focus(), 50); });
       pb.querySelectorAll('[data-obj]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); toggleObj(a.dataset.obj); renderBand('tracking'); $('#moreBlock').classList.add('on'); $('#moreGo').textContent = '− close ↑'; paint(); paintChips(); }));
     }
-    else if (P === 'compare') {   // the toggle dashboard: layer anything you track against you or the field on today's map
+    else if (P === 'compare') {   // ALONGSIDE (10-19): you on today's map with lines to everything you lay next to you, ranked closest → farthest;
+      // three lenses put your responses in dialogue with the reps': over time (your trail paired with theirs), says vs votes, at your heat
       const c = SIX.cmp, fol = followed().map(id => MEMBERS.find(m => m.bioguideId === id)).filter(Boolean), me = { x: SIX.pin.x, y: SIX.pin.y, z: SIX.zUser };
       const fe = fieldOf(), fm = mean(fe.map(en => ({ x: en.x, y: en.y, z: en.z || 0 }))), Rs = headline.responses || {}, b = band(SIX.aperture), dia = Math.max(0.35, Math.abs(SIX.aperture) / 100 * 0.9);
-      const stm = mean(['A', 'B', 'C', 'D'].filter(q => (Rs[q] || {})[b]).map(q => ({ x: 0.5 + POSQ[q][0] * dia, y: 0.5 + POSQ[q][1] * dia, z: ((Rs[q] || {})[b].z || 0) }))), law = lawPlacements(headline);
-      const row = (col, name, o, extra, key, line) => o ? `<div class="r ${SIX.against === key ? 'on' : ''}" data-ag="${key}" data-line="${(line || '').replace(/"/g, '&quot;')}" data-name="${name.replace(/"/g, '&quot;')}" data-col="${col}" data-x="${o.x}" data-y="${o.y}" data-z="${o.z || 0}"><i style="background:${col}"></i><span><b>${name}</b>${extra ? ' · ' + extra : ''}<br><span class="n">${nums(o)}${SIX.placed ? ' · <b>' + dist(me, o).toFixed(2) + '</b> from you' : ''}</span></span></div>` : '';
-      const myLine = SIX.pick ? String(SIX.pick.r.text || '') : (SIX.placed ? pinNote().replace(/<[^>]+>/g, '') : '');
-      const Rs2 = headline.responses || {}, stLine = ['A', 'B', 'C', 'D'].map(q => (Rs2[q] || {})[b]).filter(Boolean).map(r => String(r.text || '').replace(/<[^>]+>/g, '')).join(' / ');
-      pb.innerHTML = `<div class="tog" id="cmpTog"><span class="on" style="--c:var(--lt-cream)">you</span><span data-t="field" class="${c.field ? 'on' : ''}" style="--c:var(--lt-cream)">the field</span><span data-t="stations" class="${c.stations ? 'on' : ''}" style="--c:#8aa0c8">the stations</span><span data-t="law" class="${c.law ? 'on' : ''}" style="--c:var(--lt-gold)">the law</span>${followedObjs().map(rid => READ_BY_ID[rid]).filter(Boolean).map(r => `<span data-o="${r.rid}" class="${c.objects[r.rid] ? 'on' : ''}" style="--c:var(--lt-gold)">${((r.centralObject || {}).name || r.title).slice(0, 22)}</span>`).join('')}${fol.map(m => `<span data-m="${m.bioguideId}" class="${c.members[m.bioguideId] ? 'on' : ''}" style="--c:${(m.party || '').toUpperCase() === 'D' ? 'var(--lt-blue)' : (m.party || '').toUpperCase() === 'R' ? 'var(--lt-red)' : 'var(--lt-gold)'}">${m.lastName || m.name}</span>`).join('')}</div>
-        ${SIX.placed ? '' : '<p>Place yourself on Prism and every distance is measured from you.</p>'}
-        <div class="cmp">${c.field ? row('#f5f0e8', 'the field', fm, fm ? fm.n + ' pin' + (fm.n === 1 ? '' : 's') : '', 'field', fm ? 'the centre of everyone who has placed themselves on this event' : '') : ''}${(SIX.against || '').startsWith('voice:') ? (() => { const en = fe.find(x => 'voice:' + x.id === SIX.against); return en ? row('#f5f0e8', PrismField.nameOf(en.author), { x: en.x, y: en.y, z: en.z || 0 }, (SIDE[en.quad] || '') + (en.band ? ' · ' + en.band : ''), 'voice:' + en.id, en.words ? String(en.words) : '') : ''; })() : ''}${c.stations ? row('#8aa0c8', 'the stations', stm, stm ? stm.n + ' at ' + b : '', 'stations', stLine) : ''}${c.law ? law.map(l => row('#d4aa52', l.bill, l, l.relation, 'law:' + l.bill, l.why || l.title)).join('') : ''}${followedObjs().map(rid => READ_BY_ID[rid]).filter(r => r && c.objects[r.rid]).map(r => { const p = objPlace(r); return row('#d4aa52', (r.centralObject || {}).name || r.title, p, p.how, 'obj:' + r.rid, String(r.prompt || '')); }).join('')}${fol.filter(m => c.members[m.bioguideId]).map(m => { const p = memberPosOn(m, headline.rid); let dp = null; try { const ev = dbEventOf(headline); dp = ev && PrismDB.getMemberPosition ? PrismDB.getMemberPosition(m.bioguideId, ev.id) : null; } catch (e) {} return row((m.party || '').toUpperCase() === 'D' ? '#6fa8dc' : '#e07474', m.name, { x: p.x, y: p.y, z: num(m.deliveryZ) ?? 0 }, p.derived ? 'from their words here' : 'from their record', 'm:' + m.bioguideId, p.derived && dp && dp.reasoning ? String(dp.reasoning) : (plainMeta(m) + (num(m.deliveryZ) != null ? ' · their bills move forward ' + (num(m.deliveryZ) > 0.3 ? 'more often than most' : num(m.deliveryZ) < -0.3 ? 'less often than most' : 'about as often as most') : ''))); }).join('')}</div>
+      const stPos = q => ({ x: 0.5 + POSQ[q][0] * dia, y: 0.5 + POSQ[q][1] * dia, z: ((Rs[q] || {})[b] || {}).z || 0 });
+      const stm = mean(['A', 'B', 'C', 'D'].filter(q => (Rs[q] || {})[b]).map(stPos)), law = lawPlacements(headline);
+      const nearestStation = o => { let best = null; ['A', 'B', 'C', 'D'].filter(q => (Rs[q] || {})[b]).forEach(q => { const d = dist(o, stPos(q)); if (!best || d < best.d) best = { q, d }; }); return best; };
+      const side = o => (o.x < 0.5 ? 'left' : 'right'), row2 = o => (o.y < 0.5 ? 'institutional' : 'populist');
+      const phrase = o => { if (!SIX.placed) return ''; const same = side(o) === side(me), sameRow = row2(o) === row2(me); const dz = (o.z || 0) - me.z; return `${same && sameRow ? 'with you' : same ? 'your side, the other row' : sameRow ? 'your row, the other side' : 'across from you'}${Math.abs(dz) > 0.25 ? (dz > 0 ? ' · above you on delivery' : ' · below you on delivery') : ''}`; };
+      // the subjects: everything toggled on, as {key, name, col, o (x,y,z), extra, line}
+      const S = [];
+      if (c.field && fm) S.push({ key: 'field', name: 'the field', col: '#f5f0e8', o: fm, extra: fm.n + ' pin' + (fm.n === 1 ? '' : 's'), line: 'the centre of everyone who has placed themselves on this event' });
+      if ((SIX.against || '').startsWith('voice:')) { const en = fe.find(x => 'voice:' + x.id === SIX.against); if (en) S.push({ key: 'voice:' + en.id, name: PrismField.nameOf(en.author), col: '#f5f0e8', o: { x: en.x, y: en.y, z: en.z || 0 }, extra: (SIDE[en.quad] || '') + (en.band ? ' · ' + en.band : ''), line: en.words ? String(en.words) : '' }); }
+      if (c.stations && stm) S.push({ key: 'stations', name: 'the stations', col: '#8aa0c8', o: stm, extra: stm.n + ' at ' + b, line: ['A', 'B', 'C', 'D'].map(q => (Rs[q] || {})[b]).filter(Boolean).map(r => String(r.text || '').replace(/<[^>]+>/g, '')).join(' / ') });
+      if (c.law) law.forEach(l => S.push({ key: 'law:' + l.bill, name: l.bill, col: '#d4aa52', o: l, extra: l.relation, line: l.why || l.title }));
+      followedObjs().map(rid => READ_BY_ID[rid]).filter(r => r && c.objects[r.rid]).forEach(r => { const p = objPlace(r); S.push({ key: 'obj:' + r.rid, name: (r.centralObject || {}).name || r.title, col: '#d4aa52', o: p, extra: p.how, line: String(r.prompt || '') }); });
+      fol.filter(m => c.members[m.bioguideId]).forEach(m => { const p = memberPosOn(m, headline.rid); let dp = null; try { const ev = dbEventOf(headline); dp = ev && PrismDB.getMemberPosition ? PrismDB.getMemberPosition(m.bioguideId, ev.id) : null; } catch (e) {} const dz = num(m.deliveryZ);
+        S.push({ key: 'm:' + m.bioguideId, name: m.name, m, col: (m.party || '').toUpperCase() === 'D' ? '#6fa8dc' : (m.party || '').toUpperCase() === 'R' ? '#e07474' : '#e0b84c', o: { x: p.x, y: p.y, z: dz ?? 0 }, derived: p.derived, record: placeMember(m), extra: p.derived ? 'from their words here' : 'from their record', line: p.derived && dp && dp.reasoning ? String(dp.reasoning) : (plainMeta(m) + (dz != null ? ' · their bills move forward ' + (dz > 0.3 ? 'more often than most' : dz < -0.3 ? 'less often than most' : 'about as often as most') : '')) }); });
+      if (SIX.placed) S.sort((a, b2) => dist(me, a.o) - dist(me, b2.o));
+      SIX.cmpSubjects = S;
+      const chip = (k, on, col, label, attr) => `<span ${attr} class="${on ? 'on' : ''}" style="--c:${col}">${label}</span>`;
+      pb.innerHTML = `<div class="tog" id="cmpTog">${chip('', true, 'var(--lt-cream)', 'you', '')}${chip('field', c.field, 'var(--lt-cream)', 'the field', 'data-t="field"')}${chip('stations', c.stations, '#8aa0c8', 'the stations', 'data-t="stations"')}${chip('law', c.law, 'var(--lt-gold)', 'the law', 'data-t="law"')}${followedObjs().map(rid => READ_BY_ID[rid]).filter(Boolean).map(r => chip('', c.objects[r.rid], 'var(--lt-gold)', ((r.centralObject || {}).name || r.title).slice(0, 22), `data-o="${r.rid}"`)).join('')}${fol.map(m => chip('', c.members[m.bioguideId], (m.party || '').toUpperCase() === 'D' ? 'var(--lt-blue)' : (m.party || '').toUpperCase() === 'R' ? 'var(--lt-red)' : 'var(--lt-gold)', m.lastName || m.name, `data-m="${m.bioguideId}"`)).join('')}</div>
+        <div class="tog lenses" id="cmpLens"><em class="hint" style="margin:0 6px 0 0">lenses</em>${chip('', c.lens === 'time', 'var(--lt-cream)', 'over time', 'data-l="time"')}${chip('', c.lens === 'says', 'var(--lt-cream)', 'says vs votes', 'data-l="says"')}${chip('', c.lens === 'heat', 'var(--lt-cream)', 'at your heat', 'data-l="heat"')}</div>
+        ${SIX.placed ? '' : '<p>Place yourself on Prism first — every line and distance here runs from your pin.</p>'}
+        <div class="cmp" id="cmpRows">${S.map((s, i) => `<div class="r ${SIX.against === s.key ? 'on' : ''}" data-ag="${s.key}"><i style="background:${s.col}"></i><span><b>${s.name}</b>${s.extra ? ' · ' + s.extra : ''}<br><span class="n">${SIX.placed ? `<b>${dist(me, s.o).toFixed(2)}</b> away · ${phrase(s.o)}` : nums(s.o)}${c.lens === 'heat' && s.m ? (() => { const ns = nearestStation(s.o); return ns ? ` · nearest the ${QUAD[ns.q]} line` : ''; })() : ''}${c.lens === 'says' && s.m ? (s.derived ? ` · their words sit <b>${dist(s.o, { x: s.record.x, y: s.record.y, z: s.record.z }).toFixed(2)}</b> from their record` : ' · no words of theirs on this event yet') : ''}${c.lens === 'time' && s.m ? (() => { const st = stockOf(s.m, 'you'); return st.current != null ? ` · <b>${sgn(st.current)}</b> with you across ${st.series.length} reading${st.series.length === 1 ? '' : 's'}` : ''; })() : ''}</span></span></div>`).join('')}${S.length ? '' : '<p>Toggle the field, the stations, the law, or someone you follow, and they go on the map with a line from you.</p>'}</div>
         <div class="split uncover" id="split"></div>`;
-      // the split (v2's compare, ported 10-18): tap a row → you on top, them beneath, Δ down the middle, the tether on the map
-      const split = () => { const r = pb.querySelector(`.r[data-ag="${SIX.against}"]`), el = $('#split'); pb.querySelectorAll('.r').forEach(x => x.classList.toggle('on', x === r)); if (!r || !SIX.placed) { el.classList.remove('on'); el.innerHTML = ''; try { G && G.clearContrastLine && G.clearContrastLine(); } catch (e) {} return; }
-        const o = { x: +r.dataset.x, y: +r.dataset.y, z: +r.dataset.z }, U = { x: Math.round((me.x - 0.5) * 200), y: Math.round((0.5 - me.y) * 200) }, T = { x: Math.round((o.x - 0.5) * 200), y: Math.round((0.5 - o.y) * 200) };
+      const myLine = SIX.pick ? String(SIX.pick.r.text || '') : (SIX.placed ? pinNote().replace(/<[^>]+>/g, '') : '');
+      const split = () => { const s = S.find(x => x.key === SIX.against), el = $('#split'); pb.querySelectorAll('.r').forEach(x => x.classList.toggle('on', s && x.dataset.ag === s.key)); if (!s || !SIX.placed) { el.classList.remove('on'); el.innerHTML = ''; return; }
+        const o = s.o, U = { x: Math.round((me.x - 0.5) * 200), y: Math.round((0.5 - me.y) * 200) }, T = { x: Math.round((o.x - 0.5) * 200), y: Math.round((0.5 - o.y) * 200) };
         el.innerHTML = `<div class="half you"><div class="k">you · ${b}</div><p>${myLine ? lit(myLine, SIX.pick ? [SIX.pick.r.xWord, SIX.pick.r.yWord].concat(SIX.pick.r.words || []) : []) : '—'}</p><span class="n">${nums(me)}</span></div>
           <div class="delta"><span>Δx ${sgn(T.x - U.x)}</span><span>Δy ${sgn(T.y - U.y)}</span><span>Δz ${(o.z - me.z >= 0 ? '+' : '') + (o.z - me.z).toFixed(2)}</span></div>
-          <div class="half them" style="--c:${r.dataset.col}"><div class="k">${r.dataset.name}</div><p>${r.dataset.line || '—'}</p><span class="n">${nums(o)}</span></div>
-          ${(() => { const words = (SIX.pick ? [SIX.pick.r.xWord, SIX.pick.r.yWord].concat(SIX.pick.r.words || []) : []).concat(String(r.dataset.line || '').split(/\s+/).filter(w => w.length > 6).slice(0, 4)).filter(Boolean).slice(0, 8); return words.length ? `<div class="cloud">${words.map((w, i) => `<span style="--w:${1 - i * 0.08}">${String(w).replace(/[^\w'’-]/g, '')}</span>`).join('')}</div>` : ''; })()}`;
-        el.classList.add('on'); try { G && G.setContrastLine && G.setContrastLine({ x: me.x, y: me.y, z: me.z }, o); } catch (e) {} };
-      pb.querySelectorAll('.r[data-ag]').forEach(r => r.addEventListener('click', () => { SIX.against = SIX.against === r.dataset.ag ? null : r.dataset.ag; split(); }));
-      split();
+          <div class="half them" style="--c:${s.col}"><div class="k">${s.name}</div><p>${s.line || '—'}</p><span class="n">${nums(o)}</span></div>`;
+        el.classList.add('on'); };
+      pb.querySelectorAll('.r[data-ag]').forEach(r => r.addEventListener('click', () => { SIX.against = SIX.against === r.dataset.ag ? null : r.dataset.ag; split(); paint(); }));
       $('#cmpTog').querySelectorAll('span[data-t], span[data-m], span[data-o]').forEach(sp => sp.addEventListener('click', () => { if (sp.dataset.t) c[sp.dataset.t] = !c[sp.dataset.t]; else if (sp.dataset.o) c.objects[sp.dataset.o] = !c.objects[sp.dataset.o]; else c.members[sp.dataset.m] = !c.members[sp.dataset.m]; renderBand('compare'); paint(); }));
+      $('#cmpLens').querySelectorAll('span[data-l]').forEach(sp => sp.addEventListener('click', () => { c.lens = c.lens === sp.dataset.l ? null : sp.dataset.l; renderBand('compare'); paint(); }));
+      split();
     }
     else if (P === 'you') {   // you: the avatar, one line of record; the trail behind "your pins"
       const u = getUser(); let bnd = null; try { bnd = PrismField.bound(); } catch (e) {} const name = u.displayName || (bnd && bnd.name) || '';

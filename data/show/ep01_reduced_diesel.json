@@ -1,68 +1,167 @@
 {
-  "schema": "show/episode/v0",
+  "schema": "show/episode/v1",
   "id": "ep01_reduced_diesel",
   "show": "The Parallelogram Report",
-  "segment": "The Reduced",
   "title": "The Diesel Deal, Reduced",
   "piece": "bp_2026-10-12_diesel",
   "aspect": "9:16",
   "fps": 24,
-  "voice": { "provider": "elevenlabs", "voice_id": "", "model_id": "eleven_multilingual_v2", "stability": 0.45, "similarity": 0.8, "style": 0.2 },
-  "notes": "Ted at the desk; the graphmap behind him with the piece hung on it. Each beat is one TTS call; starts come from the audio (timeline.json). map.reveal = tape seconds of the piece shown so far ('all' = whole tape). map.focus = line index to brighten.",
-  "beats": [
-    { "id": "open",
-      "text": "The Diesel Deal. Reduced.",
-      "caption": "The Diesel Deal, Reduced",
-      "map": { "reveal": 0, "orbit": [0, -40], "zoom": 7.2, "trace": true },
-      "ted": "camera" },
-
-    { "id": "source",
-      "text": "Breaking Points, October twelfth. Seventeen minutes on the energy ceasefire. Krystal, Saagar, and a few people they quoted. Here's what the segment was actually about.",
-      "caption": "Breaking Points · Oct 12 · 17:07",
-      "map": { "reveal": 0, "orbit": [0, -40], "zoom": 7.2 },
-      "ted": "camera" },
-
-    { "id": "scoreboard",
-      "text": "The scoreboard. The object is the diesel deal. Trump declared it delivered. Plus one, all the way. The show read it as not delivered. Minus point seven. Segment Dia is forty-six. That's the oscillation zone. Lumens: forty-one. Less than half the light got through.",
-      "caption": "Declared z +1.0 · Read z −0.73 · Dia 46 · Lumens 41",
-      "map": { "reveal": "all", "orbit": [0, -40], "zoom": 6.8, "trace": true },
-      "ted": "map" },
-
-    { "id": "line1",
-      "text": "Three lines carried it. One. Gregory Brew, on the numbers. Three hundred thousand tons a month is seventy-four thousand barrels a day. The U.S. makes three point six six million. That's a few percent. Dia ten. Clean reading. Touches the object directly.",
-      "caption": "Brew · RI · Dia 10 · z −0.6 · \u201ca few percent\u201d",
-      "map": { "reveal": 100, "focus": 4, "orbit": [18, -36], "zoom": 6.2 },
-      "ted": "map" },
-
-    { "id": "line2",
-      "text": "Two. The sanctions analysts. Hours before the deal, he signed the Graham sanctions act. An OFAC license cannot override a statute. Thirty-day notice. Dia fourteen. That's a method line. It says how you'd check.",
-      "caption": "Sanctions analysts · RI · Dia 14 · z −0.9 · method",
-      "map": { "reveal": 150, "focus": 6, "orbit": [18, -36], "zoom": 6.2 },
-      "ted": "map" },
-
-    { "id": "line3",
-      "text": "Three. Krystal, at the end. He literally invented this ceasefire out of whole cloth. Dia seventy-eight. Inverted lens. Same object, read through what she thinks of the man. Still lands at minus one.",
-      "caption": "Ball · LP · Dia 78 · z −1.0 · inverted lens",
-      "map": { "reveal": 920, "focus": 31, "orbit": [-18, -36], "zoom": 6.2 },
-      "ted": "map" },
-
-    { "id": "gap",
-      "text": "The gap. Everybody on the show landed in the same place: not delivered. Minus point seven, minus point nine, minus one. The split isn't left versus right. It's inside the left panel. Krystal's lines run from twenty to eighty-six Dia on the same object. Same conclusion, very different amounts of light.",
-      "caption": "Split · intra · LP · 0.6",
-      "map": { "reveal": "all", "orbit": [0, -40], "zoom": 6.8, "paths": true },
-      "ted": "camera" },
-
-    { "id": "lumens",
-      "text": "Lumens, forty-one. Of the lines that touched the record, a bit less than half got through clean. The rest was about the man. That's not a judgment. It's a reading. The deal said three million tons by the end of the year. We'll know in December.",
-      "caption": "Lumens 41 · the deal says 3M tons by year end",
-      "map": { "reveal": "all", "orbit": [0, -28], "zoom": 7.4, "trace": true },
-      "ted": "camera" },
-
-    { "id": "out",
-      "text": "That's the Diesel Deal, reduced. I'm Ted Turner. This has been the Parallelogram Report.",
-      "caption": "theparallelogram.report",
-      "map": { "reveal": "all", "orbit": [0, -40], "zoom": 7.6 },
-      "ted": "camera" }
+  "voice": {
+    "provider": "elevenlabs",
+    "voice_id": "2w1RxrmT0SAHYrUVv0HU",
+    "model_id": "eleven_multilingual_v2",
+    "stability": 0.45,
+    "similarity": 0.8,
+    "style": 0.2
+  },
+  "notes": "v1: blocks that clip (Specs/Parallelogram_Report_Format_and_Style_v1.md). This file is the Reduced block alone, for the clip; the full episode one adds the monologue, the Codex and the Ledger as blocks before/after it. Each beat is one TTS call; starts come from the audio (timeline.json). map.reveal = tape seconds of the piece shown so far ('all' = whole tape). map.focus = line index to brighten. ted: camera|map.",
+  "blocks": [
+    {
+      "id": "reduced",
+      "title": "The Reduced",
+      "clip": true,
+      "beats": [
+        {
+          "id": "open",
+          "text": "The Diesel Deal. Reduced.",
+          "caption": "The Diesel Deal, Reduced",
+          "map": {
+            "reveal": 0,
+            "orbit": [
+              0,
+              -40
+            ],
+            "zoom": 7.2,
+            "trace": true
+          },
+          "ted": "camera"
+        },
+        {
+          "id": "source",
+          "text": "Breaking Points, October twelfth. Seventeen minutes on the energy ceasefire. Here's what it was actually about.",
+          "caption": "Breaking Points · Oct 12 · 17:07",
+          "map": {
+            "reveal": 0,
+            "orbit": [
+              0,
+              -40
+            ],
+            "zoom": 7.2
+          },
+          "ted": "camera"
+        },
+        {
+          "id": "scoreboard",
+          "text": "Trump said: done. Delivered. The show said: nope. Not even close. And the whole segment ran right down the middle. Half noise, half signal. Forty-one lumens. That's how much light got through. Hold that number.",
+          "caption": "Declared +1.0 · Read −0.7 · Lumens 41",
+          "map": {
+            "reveal": "all",
+            "orbit": [
+              0,
+              -40
+            ],
+            "zoom": 6.8,
+            "trace": true
+          },
+          "ted": "map"
+        },
+        {
+          "id": "line1",
+          "text": "Three lines did the work. One. Gregory Brew does the math. Three hundred thousand tons a month? That's seventy-four thousand barrels a day. We make three point six million. So, a rounding error. Cleanest line in the show.",
+          "caption": "Brew · “a few percent” · Dia 10, the cleanest read",
+          "map": {
+            "reveal": 100,
+            "focus": 4,
+            "orbit": [
+              18,
+              -36
+            ],
+            "zoom": 6.2
+          },
+          "ted": "map"
+        },
+        {
+          "id": "line2",
+          "text": "Two. The sanctions guys. Hours before the deal, Trump signed the Graham sanctions bill. And a license can't beat a law. That's not an opinion. That's a how-to-check.",
+          "caption": "Sanctions analysts · “a license can't override statute”",
+          "map": {
+            "reveal": 150,
+            "focus": 6,
+            "orbit": [
+              18,
+              -36
+            ],
+            "zoom": 6.2
+          },
+          "ted": "map"
+        },
+        {
+          "id": "line3",
+          "text": "Three. Krystal. He invented this ceasefire out of whole cloth. Same conclusion as Brew. She just got there through what she thinks of the guy.",
+          "caption": "Ball · “out of whole cloth” · Dia 78, read through the man",
+          "map": {
+            "reveal": 920,
+            "focus": 31,
+            "orbit": [
+              -18,
+              -36
+            ],
+            "zoom": 6.2
+          },
+          "ted": "map"
+        },
+        {
+          "id": "gap",
+          "text": "And that's the gap. Everybody landed in the same place. Not delivered. The split isn't left versus right. It's how much of each line was about the deal, and how much was about the man.",
+          "caption": "The gap: same conclusion, different amounts of light",
+          "map": {
+            "reveal": "all",
+            "orbit": [
+              0,
+              -40
+            ],
+            "zoom": 6.8,
+            "paths": true
+          },
+          "ted": "camera"
+        },
+        {
+          "id": "lumens",
+          "text": "Forty-one lumens. Less than half the light got through. The deal says three million tons by Christmas. We'll check in December.",
+          "caption": "Lumens 41 · the deal says 3M tons by year end",
+          "map": {
+            "reveal": "all",
+            "orbit": [
+              0,
+              -28
+            ],
+            "zoom": 7.4,
+            "trace": true
+          },
+          "ted": "camera"
+        },
+        {
+          "id": "out",
+          "text": "That's the Diesel Deal, reduced. I'm Ted Turner. This is the Parallelogram Report.",
+          "caption": "theparallelogram.report",
+          "map": {
+            "reveal": "all",
+            "orbit": [
+              0,
+              -40
+            ],
+            "zoom": 7.6
+          },
+          "ted": "camera"
+        }
+      ]
+    }
   ],
-  "endcard": { "lines": ["The Parallelogram Report", "Ted is a coyote. His voice is synthesized from the producer's.", "prism · the Dream Getty"] }
+  "endcard": {
+    "lines": [
+      "The Parallelogram Report",
+      "Ted is a coyote. His voice is synthesized from the producer’s.",
+      "Prism · the Dream Getty"
+    ]
+  }
 }

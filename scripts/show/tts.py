@@ -5,10 +5,10 @@ The voice — one audio file per beat, concatenated, with the timing the set nee
   python3 scripts/show/tts.py ep01_reduced_diesel            # ElevenLabs, Sailor's cloned voice
   python3 scripts/show/tts.py ep01_reduced_diesel --dry      # silence of the right length (no key needed)
 
-Reads   data/show/<id>.json           (the beats; voice.voice_id)
+Reads   data/show/<id>.json           (blocks of beats; voice.voice_id)
 Writes  data/show/<id>/beats/<n>_<id>.mp3
         data/show/<id>/audio.mp3      (all beats, a short breath between)
-        data/show/<id>/timeline.json  { duration, fps, beats:[{id,start,end,words:[{w,s,e}]}], envelope:[0..1 per frame] }
+        data/show/<id>/timeline.json  { duration, fps, beats:[{id,block,start,end,words:[{w,s,e}]}], blocks:[{id,title,clip,start,end}], envelope:[0..1 per frame] }
         data/show/<id>/captions.srt
 
 The key: ELEVENLABS_API_KEY in the environment, or ELEVENLABS_API_KEY in scripts/secrets.local.js.
@@ -115,15 +115,19 @@ def main():
     if not dry and not api: print('no ELEVENLABS_API_KEY — run with --dry, or add the key (see the docstring)'); sys.exit(2)
     if not dry and not voice.get('voice_id'): print('voice.voice_id is empty in the episode json — paste the clone\'s id (see the docstring)'); sys.exit(2)
 
-    t = 0.4; timeline = []; parts = []
-    for n, b in enumerate(ep['beats']):
+    # v1: blocks that clip. Each block's beats run in order; a block's start/end lands in timeline.blocks.
+    blocks = ep.get('blocks') or [{'id': 'all', 'title': ep.get('segment', ''), 'clip': True, 'beats': ep['beats']}]
+    flat = [(blk, bt) for blk in blocks for bt in blk['beats']]
+    t = 0.4; timeline = []; parts = []; block_times = {}
+    for n, (blk, b) in enumerate(flat):
         path = os.path.join(out, 'beats', f"{n:02d}_{b['id']}.mp3")
         if dry:
             words, dur = estimate_words(b['text'], t); silence(dur, path)
         else:
             audio, words = eleven(b['text'], voice, api); open(path, 'wb').write(audio)
             dur = ffprobe_duration(path); words = [{'w': w['w'], 's': t + w['s'], 'e': t + w['e']} for w in words]
-        timeline.append({'id': b['id'], 'start': t, 'end': t + dur, 'words': words}); parts.append((path, dur))
+        timeline.append({'id': b['id'], 'block': blk['id'], 'start': t, 'end': t + dur, 'words': words}); parts.append((path, dur))
+        bt_ = block_times.setdefault(blk['id'], {'id': blk['id'], 'title': blk.get('title', ''), 'clip': bool(blk.get('clip')), 'start': t, 'end': t + dur}); bt_['end'] = t + dur
         print(f"  {b['id']:<12} {t:7.2f} → {t + dur:7.2f}  ({len(words)} words)")
         t += dur + BREATH
 
@@ -140,7 +144,7 @@ def main():
     rm(lst)
     duration = ffprobe_duration(audio_path)
     env = [] if dry else envelope(audio_path, fps)
-    json.dump({'duration': duration, 'fps': fps, 'beats': timeline, 'envelope': env, 'dry': dry}, open(os.path.join(out, 'timeline.json'), 'w'))
+    json.dump({'duration': duration, 'fps': fps, 'beats': timeline, 'blocks': list(block_times.values()), 'envelope': env, 'dry': dry}, open(os.path.join(out, 'timeline.json'), 'w'))
     srt(timeline, os.path.join(out, 'captions.srt'))
     print(f"audio {duration:.1f}s → {audio_path}\ntimeline → {out}/timeline.json" + ("  (dry: silence, no envelope)" if dry else ""))
 
