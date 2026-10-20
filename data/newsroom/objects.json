@@ -8552,7 +8552,7 @@
    "scans": 2,
    "outlets": 5,
    "peakOutlets": 14,
-   "status": "queued",
+   "status": "dismissed",
    "permanence": {
     "silentDays": 1,
     "breaks": [],
@@ -8627,7 +8627,11 @@
     }
    ],
    "aliases": [],
-   "queuedOn": "2026-10-19"
+   "queuedOn": "2026-10-19",
+   "aliasCandidates": [
+    "obj_thepresi_aimed-executive-health-improving"
+   ],
+   "dismissedWhy": "Same instrument as obj_thepresi_aimed-executive-health-improving: the 2026-10-19 order 'Advancing Women's Health to Improve Outcomes in All Phases of Life', drafted as rdg_l2r4qmev3gsv. This oid came from the pre-signing 'set to sign' headline. Dismissed by Claude (drafting), 05:xx UTC 10-20 run; reversible by Sailor."
   },
   {
    "oid": "obj_x_1996-castro-charged-commit",
@@ -8917,14 +8921,16 @@
    "scans": 1,
    "outlets": 11,
    "peakOutlets": 11,
-   "status": "queued",
+   "status": "drafted",
    "permanence": {
     "silentDays": 0,
     "breaks": [],
     "returns": []
    },
    "inversions": [],
-   "drafts": {},
+   "drafts": {
+    "claude": "rdg_l2r4qmev3gsv"
+   },
    "live": null,
    "articles": [
     {
@@ -8985,7 +8991,13 @@
     }
    ],
    "aliases": [],
-   "queuedOn": "2026-10-20"
+   "queuedOn": "2026-10-20",
+   "draftedOn": "2026-10-20",
+   "corrections": [],
+   "permanenceNote": "Not a return. The same order also filed as obj_thepresi_backed-close-gaps-health (queued 10-19 from the pre-signing headline); dismissed as the same instrument.",
+   "aliasCandidates": [
+    "obj_thepresi_backed-close-gaps-health"
+   ]
   },
   {
    "oid": "obj_afederal_activist-admin-appeals-court",
@@ -9072,7 +9084,7 @@
    "scans": 1,
    "outlets": 9,
    "peakOutlets": 9,
-   "status": "queued",
+   "status": "dismissed",
    "permanence": {
     "silentDays": 0,
     "breaks": [],
@@ -9140,7 +9152,22 @@
     }
    ],
    "aliases": [],
-   "queuedOn": "2026-10-20"
+   "queuedOn": "2026-10-20",
+   "corrections": [
+    {
+     "field": "holder",
+     "from": "a federal court",
+     "to": "a Mexican court (foreign)",
+     "by": "claude"
+    },
+    {
+     "field": "kind",
+     "from": "indictment",
+     "to": "sentencing",
+     "by": "claude"
+    }
+   ],
+   "dismissedWhy": "No U.S. public instrument: a Mexican court sentencing three men to 158 years each for three killings (reported 10-20; appears to be the Baja California case over the 2024 murders of two Australian and one American surfer). A single foreign criminal case, not a vote, order or law any station can believe delivers. The register's holder (\"a federal court\") and kind (indictment) are both wrong. Dismissed by Claude (drafting) 10:0x UTC 2026-10-20 run; reversible by Sailor."
   },
   {
    "oid": "obj_x_australian-charged-driver-federal",
@@ -9227,15 +9254,6 @@
   }
  ],
  "scans": [
-  {
-   "on": "2026-10-05",
-   "at": "2026-10-05T15:05:25.406Z",
-   "articles": 0,
-   "clusters": 0,
-   "new": 0,
-   "queued": [],
-   "fixture": false
-  },
   {
    "on": "2026-10-05",
    "at": "2026-10-05T22:10:42.048Z",
@@ -9787,8 +9805,17 @@
    "new": 1,
    "queued": [],
    "fixture": false
+  },
+  {
+   "on": "2026-10-20",
+   "at": "2026-10-20T17:20:23.073Z",
+   "articles": 159,
+   "clusters": 105,
+   "new": 0,
+   "queued": [],
+   "fixture": false
   }
  ],
- "updatedAt": "2026-10-20T14:26:39.946Z",
- "overlayAppliedAt": "2026-10-18T22:02:30.249Z"
+ "updatedAt": "2026-10-20T17:20:23.073Z",
+ "overlayAppliedAt": "2026-10-20T10:03:50.973Z"
 }
