@@ -78,7 +78,7 @@ def rss_items(xml_bytes, feed):
     for it in root.iter('item'):  # RSS
         link = (it.findtext('link') or it.findtext('guid') or '').strip()
         if not link: continue
-        body = strip_html(it.findtext('content:encoded', NS) or it.findtext('itunes:summary', NS) or '')
+        body = strip_html(it.findtext('content:encoded', default='', namespaces=NS) or it.findtext('itunes:summary', default='', namespaces=NS) or '')
         out.append({'title': strip_html(it.findtext('title')), 'dek': strip_html(it.findtext('description'))[:600],
                     'opening': body[:1500], 'published': parse_date(it.findtext('pubDate')), 'link': link, 'feed': feed})
     for e in root.iter('{http://www.w3.org/2005/Atom}entry'):  # Atom
@@ -108,6 +108,9 @@ def pull_captions(video_url, out_md, program, title, date):
             subprocess.run(['yt-dlp', '--skip-download', '--write-sub', '--write-auto-sub', '--sub-lang', 'en.*,en',
                             '--sub-format', 'vtt', '--no-warnings', '-o', os.path.join(td, 'v'), video_url],
                            check=True, capture_output=True, timeout=240)
+        except subprocess.CalledProcessError as e:
+            err = (e.stderr or b'').decode('utf-8', 'ignore').strip().splitlines()
+            log(f'    captions refused: {err[-1][:160] if err else e}'); return None
         except Exception as e:
             log(f'    captions failed: {str(e)[:160]}'); return None
         vtts = sorted(glob.glob(os.path.join(td, 'v*.vtt')))
@@ -131,6 +134,22 @@ def pull_captions(video_url, out_md, program, title, date):
     return os.path.relpath(out_md, PRISM)
 
 
+STOP = set("""the a an of to in on for and or with by from at as is are was were be been that this these those it its his her their they them he she we you our your not no yes new says said say after before over under into out up down off about amid against between more most less than then now today week month year signs signed sign bills bill meant stop stops changes change trump biden president administration house senate court state federal government plan plans deal order ruling rule law act vote votes passes passed""".split())
+
+def register_objects(days=14):
+    """GDELT's register (data/newsroom/objects.json, written by the newsroom scan) → {oid: [distinctive tokens]}.
+    Objects seen in the window and not dismissed. Matching needs two tokens so 'trump' alone never queues a piece."""
+    p = os.path.join(PRISM, 'data', 'newsroom', 'objects.json')
+    try: reg = json.load(open(p, encoding='utf-8'))
+    except Exception: return {}
+    since = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=days)).isoformat()
+    out = {}
+    for o in reg.get('objects', []):
+        if o.get('status') == 'dismissed' or (o.get('lastSeen') or '') < since: continue
+        toks = [t.lower() for t in (o.get('tokens') or []) if len(t) > 3 and t.lower() not in STOP and t.isalpha()]
+        if len(toks) >= 2: out[o['oid']] = toks[:8]
+    return out
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--days', type=float, default=1.25, help='window back from now (default 1.25 days so a late upload is never missed between runs)')
@@ -141,10 +160,11 @@ def main():
 
     roster = json.load(open(ROSTER, encoding='utf-8'))
     terms = json.load(open(TERMS, encoding='utf-8')) if os.path.exists(TERMS) else {}
-    objects = {k: [t.lower() for t in v] for k, v in terms.get('objects', {}).items()}
+    objects = {k: [t.lower() for t in v] for k, v in terms.get('objects', {}).items()}   # standing objects: any one term matches
+    register = register_objects(days=14)                                                 # GDELT's register: two tokens must match
     since = dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=a.days)
     only = {s.strip() for s in a.only.split(',') if s.strip()}
-    report = {'schema': 'press/sweep/v1', 'date': a.date, 'index': terms.get('index', 'roster'), 'objects': sorted(objects),
+    report = {'schema': 'press/sweep/v1', 'date': a.date, 'index': terms.get('index', 'roster'), 'objects': sorted(objects), 'registerObjects': len(register),
               'route': 'press-sweep.py on the GitHub Action (keyless; captions via yt-dlp, non-fatal)',
               'publications': {}, 'queue': [], 'log': []}
     tdir = os.path.join(TRANSCRIPTS, a.date)
@@ -154,6 +174,17 @@ def main():
         if only and sid not in only: continue
         if sid == 'wire': continue
         key = src.get('sweepKey') or sid; src['sweepKey'] = key
+        try:
+            sweep_source(src, sid, key, a, objects, register, report, tdir)
+        except Exception as e:
+            report['publications'][key] = {'station': src.get('station'), 'items': 0, 'hits': 0, 'note': f'sweep crashed: {type(e).__name__}: {str(e)[:120]}'}
+            log(f'{sid:16s} {src.get("station",""):5s} CRASHED {type(e).__name__}: {str(e)[:120]}')
+
+    finish(report, roster, a)
+
+
+def sweep_source(src, sid, key, a, objects, register, report, tdir):
+        since = dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=a.days)
         route = (src.get('route') or '').lower()
         feeds, note = [], []
         if src.get('feeds'): feeds = list(src['feeds'])
@@ -167,7 +198,7 @@ def main():
         if 'rss' in route and sid in PODCASTS: feeds.append(PODCASTS[sid])
         if not feeds:
             report['publications'][key] = {'station': src.get('station'), 'items': 0, 'hits': 0, 'note': 'no feed on file — add `feeds` to the roster entry'}
-            log(f'{sid:16s} {src.get("station",""):5s} no feed'); continue
+            log(f'{sid:16s} {src.get("station",""):5s} no feed'); return
 
         items = {}
         for f in feeds:
@@ -182,6 +213,9 @@ def main():
             hay = (it['title'] + ' ' + it['dek'] + ' ' + it['opening']).lower()
             matched = {o: [t for t in ts if t in hay] for o, ts in objects.items()}
             matched = {o: t for o, t in matched.items() if t}
+            for oid, toks in register.items():
+                got = [t for t in toks if re.search(r'\b' + re.escape(t) + r'\b', hay)]
+                if len(got) >= 2: matched[oid] = got
             if matched or baseline:
                 hits.append(dict(it, publication=key, source=sid, station=src.get('station'), matched=matched, baseline=baseline))
         # captions for the YouTube hits (the baseline always; others only when matched)
@@ -197,6 +231,8 @@ def main():
         src['lastScanned'] = a.date
         log(f'{sid:16s} {src.get("station",""):5s} swept {len(items):4d}  hits {len(hits)}' + (f'  [{"; ".join(note)}]' if note else ''))
 
+
+def finish(report, roster, a):
     report['queue'].sort(key=lambda q: q.get('published') or '', reverse=True)
     os.makedirs(SWEEPS, exist_ok=True)
     path = os.path.join(SWEEPS, f'sweep_{a.date}.json')
