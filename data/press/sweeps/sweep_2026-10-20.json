@@ -1,0 +1,3042 @@
+{
+ "schema": "press/sweep/v1",
+ "date": "2026-10-20",
+ "index": "roster",
+ "objects": [
+  "chips",
+  "diesel",
+  "dollar",
+  "housing",
+  "iran",
+  "me-sen",
+  "midterms",
+  "russia-sanctions",
+  "shutdown",
+  "tariffs",
+  "tx-sen",
+  "venezuela"
+ ],
+ "registerObjects": 19,
+ "route": "press-sweep.py on the GitHub Action (keyless; captions via yt-dlp, non-fatal)",
+ "publications": {
+  "daily-show": {
+   "station": "LI",
+   "items": 7,
+   "hits": 4,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCwWhs_6x42TyRM4Wstoq8HA"
+   ],
+   "note": null
+  },
+  "al-jazeera": {
+   "station": "LI",
+   "items": 25,
+   "hits": 6,
+   "feeds": [
+    "www.aljazeera.com/xml/rss/all.xml"
+   ],
+   "note": null
+  },
+  "ms-now": {
+   "station": "LI",
+   "items": 15,
+   "hits": 12,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCaXkIU1QidjPwiAYu6GcHjg"
+   ],
+   "note": null
+  },
+  "npr-pbs": {
+   "station": "LI",
+   "items": 33,
+   "hits": 14,
+   "feeds": [
+    "feeds.npr.org/1001/rss.xml",
+    "feeds.npr.org/1014/rss.xml",
+    "www.pbs.org/newshour/feeds/rss/headlines"
+   ],
+   "note": null
+  },
+  "atlantic": {
+   "station": "LI",
+   "items": 13,
+   "hits": 0,
+   "feeds": [
+    "www.theatlantic.com/feed/all/"
+   ],
+   "note": null
+  },
+  "the-close": {
+   "station": "RI",
+   "items": 15,
+   "hits": 15,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "odd-lots": {
+   "station": "RI",
+   "items": 15,
+   "hits": 5,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "surveillance": {
+   "station": "RI",
+   "items": 15,
+   "hits": 5,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "bloomberg-streams": {
+   "station": "RI",
+   "items": 15,
+   "hits": 5,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "breaking-points": {
+   "station": "LP+RP",
+   "items": 8,
+   "hits": 5,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCDRIjKy6eZOvKtOELtTdeUA"
+   ],
+   "note": null
+  },
+  "secular-talk": {
+   "station": "LP",
+   "items": 8,
+   "hits": 2,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCldfgbzNILYZA4dmDt4Cd6A"
+   ],
+   "note": null
+  },
+  "hasan": {
+   "station": "LP",
+   "items": 1,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCnI_h3e6b5jGLfly2SY57SA"
+   ],
+   "note": null
+  },
+  "chapo": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "note": "no feed on file — add `feeds` to the roster entry"
+  },
+  "tcn": {
+   "station": "RP",
+   "items": 5,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCjjBjVc0b1cIpNGEeZtS2lg"
+   ],
+   "note": null
+  },
+  "freepress": {
+   "station": "RP",
+   "items": 9,
+   "hits": 6,
+   "feeds": [
+    "www.thefp.com/feed"
+   ],
+   "note": null
+  },
+  "tim-dillon": {
+   "station": "RP",
+   "items": 0,
+   "hits": 0,
+   "note": "no feed on file — add `feeds` to the roster entry"
+  },
+  "nyt": {
+   "station": "LI",
+   "items": 86,
+   "hits": 30,
+   "feeds": [
+    "rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/World.xml",
+    "feeds.simplecast.com/54nAGcIl"
+   ],
+   "note": null
+  },
+  "fox": {
+   "station": "RI?",
+   "items": 65,
+   "hits": 37,
+   "feeds": [
+    "moxie.foxnews.com/google-publisher/latest.xml",
+    "moxie.foxnews.com/google-publisher/politics.xml",
+    "moxie.foxnews.com/google-publisher/world.xml",
+    "moxie.foxbusiness.com/google-publisher/latest.xml"
+   ],
+   "note": null
+  },
+  "grayzone": {
+   "station": "LP",
+   "items": 1,
+   "hits": 0,
+   "feeds": [
+    "thegrayzone.com/feed/"
+   ],
+   "note": null
+  },
+  "shapiro": {
+   "station": "RP",
+   "items": 7,
+   "hits": 3,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCxUQLGMbb2cI8CqiwZ0WhAQ"
+   ],
+   "note": null
+  },
+  "kirk": {
+   "station": "RP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UC5c3D4wNyZlhx71OLQ74Kow"
+   ],
+   "note": null
+  }
+ },
+ "queue": [
+  {
+   "title": "This GOP Congress is enabling a 'historic level of corruption and grift': Fmr. Dep. NSA",
+   "dek": "President Trump is continuing his midterm blitz as GOP candidates seek to distance themselves from his policies. Sen. Thom Tillis is blaming Trump's staff for \"really s***y\" ideas. Political strategist Sawyer Hackett, former Deputy National Security Advisor Ben Rhodes and North Carolina Democratic Party Chair Anderson Clayton join Alicia Menendez to discuss. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here ms.now/membership MS NOW is the go-to destination for domestic and international breaking news,",
+   "opening": "",
+   "published": "2026-10-20T17:04:51+00:00",
+   "link": "https://www.youtube.com/watch?v=WMJ9gE5aOP4",
+   "videoId": "WMJ9gE5aOP4",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "Trump supporting the Russians would be 'major error': Fmr. Ambassador to Ukraine",
+   "dek": "President Trump is receiving backlash for saying Russia \"has been fine on Ukraine\" and his policy lifting sanctions on Russia. Former U.S. Ambassador to Ukraine William Taylor joins Peter Alexander to share his reaction to how Trump is handling the conflict. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important storie",
+   "opening": "",
+   "published": "2026-10-20T17:03:21+00:00",
+   "link": "https://www.youtube.com/watch?v=5vc0UppIaMQ",
+   "videoId": "5vc0UppIaMQ",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "russia-sanctions": [
+     "sanction"
+    ],
+    "obj_thepresi_against-russia-sanctions-trump": [
+     "sanctions",
+     "russia"
+    ],
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "sanctions",
+     "ukraine"
+    ],
+    "obj_thepresi_citing-hold-interest-into": [
+     "russia",
+     "sanctions"
+    ],
+    "obj_x_russia-sanctions-support-urges": [
+     "sanctions",
+     "russia"
+    ],
+    "obj_thepresi_before-days-effect-most": [
+     "russia",
+     "sanctions"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "Montana Senate race raising ALARM BELLS for GOP",
+   "dek": "The Senate race in red Montana is raising alarm bells for the GOP with just two weeks to go ahead of the midterms. Independent Senate candidate Seth Bodnar joins Peter Alexander to share why he believes he can win. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: https://www.ms.now/",
+   "opening": "",
+   "published": "2026-10-20T17:02:33+00:00",
+   "link": "https://www.youtube.com/watch?v=W6M-l3FtQ90",
+   "videoId": "W6M-l3FtQ90",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm",
+     "senate race"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "'The Voter Files': Iowa independents on who to BELIEVE if Trump CHALLENGES midterm results",
+   "dek": "MS NOW contributor Elise Jordan joins Morning Joe to discuss the latest installment of ‘The Voter Files,’ where she speaks directly with voters in key states through a series of focus groups, listening to the people who will decide the 2026 midterms. In the latest installment, Jordan sat down with Iowa independent voters from small towns and rural communities outside Des Moines. Most lean Republican, and all voted for President Trump in 2024, but nearly all say they did so with reservations. Looking ahead to the day after the election, Jordan asked them what it would take for them to believe T",
+   "opening": "",
+   "published": "2026-10-20T16:55:54+00:00",
+   "link": "https://www.youtube.com/watch?v=7eKBxmunHw4",
+   "videoId": "7eKBxmunHw4",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "LIVE: Donald Trump and J.D. Vance make an announcement with midterms two weeks away",
+   "dek": "Watch live as President Trump and Vice President J.D. Vance make an announcement at the White House as the countdown to the midterms hits the two week mark. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: https://www.ms.now/ #trump #midterms",
+   "opening": "",
+   "published": "2026-10-20T16:35:36+00:00",
+   "link": "https://www.youtube.com/watch?v=nMnO3AYCYVE",
+   "videoId": "nMnO3AYCYVE",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "'Never met a dictator he didn't love': Commentator slams Trump as 'raging narcissist'",
+   "dek": "There is growing bipartisan backlash to President Trump's handling of the Russia-Ukraine war. Also, the White House posted a \"third world\" message about the riots in France. MS NOW Senior National Security Reporter David Rohde has more details. MediasTouch Journalist Adam Mockler, Democratic Strategist Basil Smikle, Bloomberg Businessweek Journalist Max Chafkin, and Rolling Stone Magazine Politics Reporter Nikki McCann Ramirez join the Group Chat with Stephanie Ruhle to share their reaction. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msn",
+   "opening": "",
+   "published": "2026-10-20T16:33:46+00:00",
+   "link": "https://www.youtube.com/watch?v=taYicK8WuS4",
+   "videoId": "taYicK8WuS4",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "ukraine"
+    ],
+    "obj_thepresi_citing-hold-interest-into": [
+     "russia",
+     "national"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "Macron lines up more Gulf diesel as France battles soaring fuel prices",
+   "dek": "The UAE and Bahrain deals increase French commitments to 295,000 tonnes a month, just over 10 percent of consumption.",
+   "opening": "",
+   "published": "2026-10-20T16:33:43+00:00",
+   "link": "https://www.aljazeera.com/economy/2026/10/20/macron-lines-up-more-gulf-diesel-as-france-battles-soaring-fuel?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "diesel",
+     "fuel price"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Rubio Travels to India to Strengthen Economic Ties Amid Strained U.S. Relations",
+   "dek": "The secretary of state will meet with Asia’s richest men in Mumbai as Washington continues negotiations over a trade deal with India.",
+   "opening": "",
+   "published": "2026-10-20T16:32:18+00:00",
+   "link": "https://www.nytimes.com/2026/10/20/world/asia/marco-rubio-india-us-trade-deal.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "tariffs": [
+     "trade deal"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Desperate Republicans ABANDON Trump Ahead of Election",
+   "dek": "Krystal and Saagar discuss Republicans abandoning Trump as his polling hits record lows. Logan Phillips: https://www.racetothewh.com/ Sign up for a PREMIUM Breaking Points subscriptions for full early access to uncut shows and LIVE AMAs with the hosts every week: https://breakingpoints.supercast.com/ Merch Store: https://shop.breakingpoints.com/ To listen to Breaking Points as a podcast, check them out on Apple and Spotify Apple: https://podcasts.apple.com/us/podcast/breaking-points-with-krystal-and-saagar/id1570045623 Spotify: https://open.spotify.com/show/4Kbsy61zJSzPxNZZ3PKbXl Instagram: ht",
+   "opening": "",
+   "published": "2026-10-20T16:30:30+00:00",
+   "link": "https://www.youtube.com/watch?v=gr7s5IXZGgs",
+   "videoId": "gr7s5IXZGgs",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "midterms": [
+     "polling"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "Will ICE Agents Really Show Up at Polling Places",
+   "dek": "Start your morning with 15 minutes of what matters — and none of what doesn’t. Welcome to Morning Wire. 🔔 Subscribe and catch new episodes every day at 5:00 AM CT 🚨 Tired of the ads? Join DailyWire+ today and watch Morning Wire, along with all of our live news coverage, ad-free: https://bit.ly/3RzxiDM #MorningWire #Podcast #JohnBickley #GeorgiaHowe #GlobalNews #News #Politics",
+   "opening": "",
+   "published": "2026-10-20T16:28:58+00:00",
+   "link": "https://www.youtube.com/shorts/Lyetlh0I5zU",
+   "videoId": "Lyetlh0I5zU",
+   "publication": "shapiro",
+   "source": "shapiro",
+   "station": "RP",
+   "matched": {
+    "midterms": [
+     "polling"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "Heading to France? Amid Recent Unrest, Here’s What to Know",
+   "dek": "Rioting over affordability and public education has swept through Paris and other French cities, and there may be more to come.",
+   "opening": "",
+   "published": "2026-10-20T16:24:34+00:00",
+   "link": "https://www.nytimes.com/2026/10/20/travel/france-travel-riots.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_x_191-about-charges-convicted": [
+     "what",
+     "know"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Qatar says only negotiations can resolve regional tensions",
+   "dek": "Qatar says diplomatic efforts are ongoing to de-escalate regional tensions and reopen the Strait of Hormuz.",
+   "opening": "",
+   "published": "2026-10-20T16:21:01+00:00",
+   "link": "https://www.aljazeera.com/video/newsfeed/2026/10/20/qatar-says-only-negotiations-can-resolve-regional-tensions?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "hormuz",
+     "strait of"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Justin J. Pearson on the FIGHT to WIN Tennessee district redrawn by GOP gerrymandering",
+   "dek": "State Rep. Justin J. Pearson joins Morning Joe to discuss his congressional campaign to win Tennessee’s newly redistricted 9th Congressional District. In May, Republican state lawmakers held a special session to redraw Tennessee’s congressional maps at the request of President Donald Trump. The new map divides Memphis — once a majority-Black district and historically Democratic stronghold — into three separate districts. Pearson talks about GOP gerrymandering and the issues most important to Tennessee voters. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://ww",
+   "opening": "",
+   "published": "2026-10-20T16:09:33+00:00",
+   "link": "https://www.youtube.com/watch?v=2Z5whB5CH5A",
+   "videoId": "2Z5whB5CH5A",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "obj_x_black-death-defended-edmond": [
+     "black",
+     "once"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "DEM SUPERMAJORITY?: WILD Midterm Scenarios IN PLAY",
+   "dek": "Krystal and Saagar discuss the potential for huge polling misses in the 2026 midterms. Logan Phillips: https://www.racetothewh.com/ Sign up for a PREMIUM Breaking Points subscriptions for full early access to uncut shows and LIVE AMAs with the hosts every week: https://breakingpoints.supercast.com/ Merch Store: https://shop.breakingpoints.com/ To listen to Breaking Points as a podcast, check them out on Apple and Spotify Apple: https://podcasts.apple.com/us/podcast/breaking-points-with-krystal-and-saagar/id1570045623 Spotify: https://open.spotify.com/show/4Kbsy61zJSzPxNZZ3PKbXl Instagram: http",
+   "opening": "",
+   "published": "2026-10-20T16:02:36+00:00",
+   "link": "https://www.youtube.com/watch?v=jLphAQU2P58",
+   "videoId": "jLphAQU2P58",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "midterms": [
+     "midterm",
+     "polling"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "Lavrov backs Tehran, but does Russia also gain from the US-Iran crisis?",
+   "dek": "Moscow pledges support to its sanctioned ally, but analysts say the war Iran wants to end has filled Russia’s coffers.",
+   "opening": "",
+   "published": "2026-10-20T16:01:01+00:00",
+   "link": "https://www.aljazeera.com/news/2026/10/20/lavrov-backs-tehran-but-does-russia-also-gain-from-the-us-iran-crisis?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "russia-sanctions": [
+     "sanction"
+    ],
+    "iran": [
+     "iran",
+     "tehran"
+    ],
+    "obj_x_russia-sanctions-support-urges": [
+     "support",
+     "russia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "‘You have to sacrifice’: Trump voters stay loyal as US midterms approach",
+   "dek": "Rising economic pain confronting US voters has not translated into a loss of faith among Trump’s most loyal supporters.",
+   "opening": "",
+   "published": "2026-10-20T15:57:47+00:00",
+   "link": "https://www.aljazeera.com/news/2026/10/20/you-have-to-sacrifice-trump-voters-stay-loyal-as-us-midterms-approach?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Republican National Committee Moves $50 Million to Help Midterm Candidates in Huge Cash Transfer",
+   "dek": "The party apparatus is taking advantage of its enormous war chest, as well as a Supreme Court campaign-finance ruling this year, to send tens of millions into congressional races.",
+   "opening": "",
+   "published": "2026-10-20T15:55:45+00:00",
+   "link": "https://www.nytimes.com/2026/10/20/us/politics/republicans-midterm-election-cash-transfer.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Citadel's Esposito on Bank Partners, Fixed Income Growth and Prediction Markets",
+   "dek": "Citadel Securities President Jim Esposito discusses the firm's relationship with banks, plans to grow in the fixed income market and his views on prediction markets with Bloomberg's Dani Burger on the sidelines of Citadel's annual Future of Global Markets Conference in New York. -------- More on Bloomberg Television and Markets Like this video? Subscribe and turn on notifications so you don't miss any videos from Bloomberg Markets & Finance: https://tinyurl.com/ysu5b8a9 Visit http://www.bloomberg.com for business news & analysis, up-to-the-minute market data, features, profiles and more. Conne",
+   "opening": "",
+   "published": "2026-10-20T15:30:04+00:00",
+   "link": "https://www.youtube.com/watch?v=jxOxmUE-EzY",
+   "videoId": "jxOxmUE-EzY",
+   "publication": "the-close",
+   "source": "the-close",
+   "station": "RI",
+   "matched": {},
+   "baseline": true,
+   "transcript": null
+  },
+  {
+   "title": "Trump Announces $8 Billion Plan to Cover Farm Losses",
+   "dek": "Under the Harvest Fuel Relief program, the Agriculture Department will provide economic aid for farmers hurt by high diesel prices.",
+   "opening": "",
+   "published": "2026-10-20T15:21:49+00:00",
+   "link": "https://www.nytimes.com/2026/10/20/business/trump-farmer-bailout.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "diesel"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Bloomberg Surveillance 10/20/2026",
+   "dek": "Jonathan Ferro, Lisa Abramowicz and Annmarie Hordern speak daily with leaders and decision makers from Wall Street to Washington and beyond. No other program better positions investors and executives for the trading day than \"Bloomberg Surveillance.\" Chapters: 00:00 AI IPO Stress, Big Tech Earnings and GM Results 04:28 AI Benefits Will Broaden Beyond Tech — Angelo Kourkafas, Edward Jones 16:49 Texas Election Could Be a ‘Category Five’ AI Risk — Ed Mills, Raymond James 26:20 GM Narrows Outlook, Unveils $20 Billion Buyback 30:06 2027 Will Test Premium Airline Demand — Tom Fitzgerald, TD Cowen 40",
+   "opening": "",
+   "published": "2026-10-20T15:21:14+00:00",
+   "link": "https://www.youtube.com/watch?v=LF-xV92nVX0",
+   "videoId": "LF-xV92nVX0",
+   "publication": "the-close",
+   "source": "the-close",
+   "station": "RI",
+   "matched": {},
+   "baseline": true,
+   "transcript": null
+  },
+  {
+   "title": "Trump Tariffs on Canada Spark Latest Lawsuit Over Trade Powers",
+   "dek": "Once again, the president’s ability to wage a trade war without Congress will come before a court that has repeatedly ruled against him.",
+   "opening": "",
+   "published": "2026-10-20T15:18:04+00:00",
+   "link": "https://www.nytimes.com/2026/10/20/business/trump-tariffs-canada-lawsuit.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "tariffs": [
+     "tariff"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "A.I. Fortunes Could Bring Critical Funds to Global Health. The Scramble Is On.",
+   "dek": "Expected windfalls from I.P.O.s are drawing health leaders into a race for billions in new philanthropic dollars. A fragile aid system may be upended.",
+   "opening": "",
+   "published": "2026-10-20T15:15:18+00:00",
+   "link": "https://www.nytimes.com/2026/10/20/us/politics/ai-fortunes-could-bring-critical-funds-to-global-health-the-scramble-is-on.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Europe Needs to Help End Ukraine War, Draghi Says",
+   "dek": "Mario Draghi, the former ECB head and former Italian prime minister, says Europe has to play a large role in ending the war between Russia and Ukraine. He says what happens in Ukraine, will define the relationship between the US and Europe. He speaks to Bloomberg's Lisa Abramowicz at the Citadel Securities Conference in New York. -------- More on Bloomberg Television and Markets Like this video? Subscribe and turn on notifications so you don't miss any videos from Bloomberg Markets & Finance: https://tinyurl.com/ysu5b8a9 Visit http://www.bloomberg.com for business news & analysis, up-to-the-mi",
+   "opening": "",
+   "published": "2026-10-20T15:02:50+00:00",
+   "link": "https://www.youtube.com/watch?v=U_y1PHBTM2I",
+   "videoId": "U_y1PHBTM2I",
+   "publication": "the-close",
+   "source": "the-close",
+   "station": "RI",
+   "matched": {
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "ukraine"
+    ]
+   },
+   "baseline": true,
+   "transcript": null
+  },
+  {
+   "title": "Europe Needs to Help End Ukraine War, Draghi Says",
+   "dek": "Mario Draghi, the former ECB head and former Italian prime minister, says Europe has to play a large role in ending the war between Russia and Ukraine. He says what happens in Ukraine, will define the relationship between the US and Europe. He speaks to Bloomberg's Lisa Abramowicz at the Citadel Securities Conference in New York. -------- More on Bloomberg Television and Markets Like this video? Subscribe and turn on notifications so you don't miss any videos from Bloomberg Markets & Finance: https://tinyurl.com/ysu5b8a9 Visit http://www.bloomberg.com for business news & analysis, up-to-the-mi",
+   "opening": "",
+   "published": "2026-10-20T15:02:50+00:00",
+   "link": "https://www.youtube.com/watch?v=U_y1PHBTM2I",
+   "videoId": "U_y1PHBTM2I",
+   "publication": "odd-lots",
+   "source": "odd-lots",
+   "station": "RI",
+   "matched": {
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "ukraine"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "Europe Needs to Help End Ukraine War, Draghi Says",
+   "dek": "Mario Draghi, the former ECB head and former Italian prime minister, says Europe has to play a large role in ending the war between Russia and Ukraine. He says what happens in Ukraine, will define the relationship between the US and Europe. He speaks to Bloomberg's Lisa Abramowicz at the Citadel Securities Conference in New York. -------- More on Bloomberg Television and Markets Like this video? Subscribe and turn on notifications so you don't miss any videos from Bloomberg Markets & Finance: https://tinyurl.com/ysu5b8a9 Visit http://www.bloomberg.com for business news & analysis, up-to-the-mi",
+   "opening": "",
+   "published": "2026-10-20T15:02:50+00:00",
+   "link": "https://www.youtube.com/watch?v=U_y1PHBTM2I",
+   "videoId": "U_y1PHBTM2I",
+   "publication": "surveillance",
+   "source": "surveillance",
+   "station": "RI",
+   "matched": {
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "ukraine"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "Europe Needs to Help End Ukraine War, Draghi Says",
+   "dek": "Mario Draghi, the former ECB head and former Italian prime minister, says Europe has to play a large role in ending the war between Russia and Ukraine. He says what happens in Ukraine, will define the relationship between the US and Europe. He speaks to Bloomberg's Lisa Abramowicz at the Citadel Securities Conference in New York. -------- More on Bloomberg Television and Markets Like this video? Subscribe and turn on notifications so you don't miss any videos from Bloomberg Markets & Finance: https://tinyurl.com/ysu5b8a9 Visit http://www.bloomberg.com for business news & analysis, up-to-the-mi",
+   "opening": "",
+   "published": "2026-10-20T15:02:50+00:00",
+   "link": "https://www.youtube.com/watch?v=U_y1PHBTM2I",
+   "videoId": "U_y1PHBTM2I",
+   "publication": "bloomberg-streams",
+   "source": "bloomberg-streams",
+   "station": "RI",
+   "matched": {
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "ukraine"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "'Desperation': Political commentator says Paxton keeps 'stepping on the rake' ahead of midterms",
+   "dek": "In the final days until election, President Trump is set hold another rally in Texas for Republican Senate candidate Ken Paxton. MS NOW National Reporter Rosa Flores shares what she is hearing from voters there. MediasTouch Journalist Adam Mockler, Democratic Strategist Basil Smikle, Bloomberg Businessweek Journalist Max Chafkin, and Rolling Stone Magazine Politics Reporter Nikki McCann Ramirez join the Group Chat with Stephanie Ruhle to share their analysis. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join ",
+   "opening": "",
+   "published": "2026-10-20T14:56:46+00:00",
+   "link": "https://www.youtube.com/watch?v=WdJHEYR946s",
+   "videoId": "WdJHEYR946s",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "tx-sen": [
+     "paxton"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thepresi_citing-hold-interest-into": [
+     "hold",
+     "national"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "'Region is SUFFERING': NYT's Mara Gay reveals midterm mood of Texas border voters",
+   "dek": "Mara Gay, opinion writer for The New York Times, joins Morning Joe to discuss the latest piece she co-authored and its accompanying video feature, titled \"Things Are Bad: How Texas Border Voters Feel Ahead of the Midterms.\" For the piece, she traveled to the Rio Grande Valley in South Texas near the U.S.-Mexico border. The area has long been a Democratic stronghold, but in 2024, the region swung to President Trump. Gay shared what she learned from the voters she spoke with there. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an",
+   "opening": "",
+   "published": "2026-10-20T14:50:55+00:00",
+   "link": "https://www.youtube.com/watch?v=SlAe4qAZyeQ",
+   "videoId": "SlAe4qAZyeQ",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "Midterms Are a Clearing Event for Risk, Says Citadel's Rubner",
+   "dek": "The upcoming US midterm elections are being used as a clearing event for risk says Scott Rubner, Citadel Securities head of equity & equity derivatives strategy. He says this is the time \"AI can outperform again.\" He speaks to Bloomberg's Dani Burger. -------- More on Bloomberg Television and Markets Like this video? Subscribe and turn on notifications so you don't miss any videos from Bloomberg Markets & Finance: https://tinyurl.com/ysu5b8a9 Visit http://www.bloomberg.com for business news & analysis, up-to-the-minute market data, features, profiles and more. Connect with Bloomberg Television",
+   "opening": "",
+   "published": "2026-10-20T14:41:25+00:00",
+   "link": "https://www.youtube.com/watch?v=Q_0D4NFI61M",
+   "videoId": "Q_0D4NFI61M",
+   "publication": "the-close",
+   "source": "the-close",
+   "station": "RI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": true,
+   "transcript": null
+  },
+  {
+   "title": "Midterms Are a Clearing Event for Risk, Says Citadel's Rubner",
+   "dek": "The upcoming US midterm elections are being used as a clearing event for risk says Scott Rubner, Citadel Securities head of equity & equity derivatives strategy. He says this is the time \"AI can outperform again.\" He speaks to Bloomberg's Dani Burger. -------- More on Bloomberg Television and Markets Like this video? Subscribe and turn on notifications so you don't miss any videos from Bloomberg Markets & Finance: https://tinyurl.com/ysu5b8a9 Visit http://www.bloomberg.com for business news & analysis, up-to-the-minute market data, features, profiles and more. Connect with Bloomberg Television",
+   "opening": "",
+   "published": "2026-10-20T14:41:25+00:00",
+   "link": "https://www.youtube.com/watch?v=Q_0D4NFI61M",
+   "videoId": "Q_0D4NFI61M",
+   "publication": "odd-lots",
+   "source": "odd-lots",
+   "station": "RI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "Midterms Are a Clearing Event for Risk, Says Citadel's Rubner",
+   "dek": "The upcoming US midterm elections are being used as a clearing event for risk says Scott Rubner, Citadel Securities head of equity & equity derivatives strategy. He says this is the time \"AI can outperform again.\" He speaks to Bloomberg's Dani Burger. -------- More on Bloomberg Television and Markets Like this video? Subscribe and turn on notifications so you don't miss any videos from Bloomberg Markets & Finance: https://tinyurl.com/ysu5b8a9 Visit http://www.bloomberg.com for business news & analysis, up-to-the-minute market data, features, profiles and more. Connect with Bloomberg Television",
+   "opening": "",
+   "published": "2026-10-20T14:41:25+00:00",
+   "link": "https://www.youtube.com/watch?v=Q_0D4NFI61M",
+   "videoId": "Q_0D4NFI61M",
+   "publication": "surveillance",
+   "source": "surveillance",
+   "station": "RI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "Midterms Are a Clearing Event for Risk, Says Citadel's Rubner",
+   "dek": "The upcoming US midterm elections are being used as a clearing event for risk says Scott Rubner, Citadel Securities head of equity & equity derivatives strategy. He says this is the time \"AI can outperform again.\" He speaks to Bloomberg's Dani Burger. -------- More on Bloomberg Television and Markets Like this video? Subscribe and turn on notifications so you don't miss any videos from Bloomberg Markets & Finance: https://tinyurl.com/ysu5b8a9 Visit http://www.bloomberg.com for business news & analysis, up-to-the-minute market data, features, profiles and more. Connect with Bloomberg Television",
+   "opening": "",
+   "published": "2026-10-20T14:41:25+00:00",
+   "link": "https://www.youtube.com/watch?v=Q_0D4NFI61M",
+   "videoId": "Q_0D4NFI61M",
+   "publication": "bloomberg-streams",
+   "source": "bloomberg-streams",
+   "station": "RI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "Pakistan army chief in Tehran: Can diplomacy prevent new US-Iran fighting?",
+   "dek": "With new talk of escalation, Islamabad is trying to revive negotiations without alienating Tehran, Riyadh or Washington.",
+   "opening": "",
+   "published": "2026-10-20T14:39:50+00:00",
+   "link": "https://www.aljazeera.com/news/2026/10/20/pakistan-army-chief-in-tehran-can-diplomacy-prevent-new-us-iran-fighting?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran",
+     "tehran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "James Talarico on the Rage Economy, Billionaires and Flipping Texas",
+   "dek": "Our interview with James Talarico, the Democratic nominee for Senate in Texas.",
+   "opening": "",
+   "published": "2026-10-20T14:38:32+00:00",
+   "link": "https://www.nytimes.com/2026/10/20/podcasts/the-daily/james-talarico-interview-texas-midterms.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "tx-sen": [
+     "talarico"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Yemeni City of Taiz Running Out of Essentials as Houthis Close in",
+   "dek": "The Iranian-backed Houthi militia has cut road access to Taiz, one of Yemen’s largest cities, besieging it. Officials there warn of an impending humanitarian disaster.",
+   "opening": "",
+   "published": "2026-10-20T14:28:28+00:00",
+   "link": "https://www.nytimes.com/2026/10/20/world/middleeast/yemen-taiz-houthi-siege.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran",
+     "houthi"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Why Does Saudi Arabia Struggle to Stop Houthi Attacks?",
+   "dek": "The Saudi military has expensive equipment, but the missiles and drones used by the Yemeni militia are difficult to detect and stop.",
+   "opening": "",
+   "published": "2026-10-20T14:23:37+00:00",
+   "link": "https://www.nytimes.com/2026/10/15/world/middleeast/saudi-arabia-defense-houthi-attacks-yemen.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "houthi"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "France Toughens Its Response To Protests After Riots and Looting",
+   "dek": "After violence and vandalism rocked France, officials in the country have admitted failure. What happens next? Oliver Crook explains. -------- More on Bloomberg Television and Markets Like this video? Subscribe and turn on notifications so you don't miss any videos from Bloomberg Markets & Finance: https://tinyurl.com/ysu5b8a9 Visit http://www.bloomberg.com for business news & analysis, up-to-the-minute market data, features, profiles and more. Connect with Bloomberg Television on: X: https://twitter.com/BloombergTV Facebook: https://www.facebook.com/BloombergTelevision Instagram: https://www.",
+   "opening": "",
+   "published": "2026-10-20T14:23:28+00:00",
+   "link": "https://www.youtube.com/shorts/17AH6dUEwmE",
+   "videoId": "17AH6dUEwmE",
+   "publication": "the-close",
+   "source": "the-close",
+   "station": "RI",
+   "matched": {},
+   "baseline": true,
+   "transcript": null
+  },
+  {
+   "title": "Jeff Yan Plans to Bring the Entire Financial Industry onto Hyperliquid",
+   "dek": "In August, President Trump said the CFTC was working on bringing a crypto platform called Hyperliquid into the United States \"in a fully compliant and legal fashion.” What exactly is Hyperliquid? CEO and Co-founder Jeff Yan joins Joe Weisenthal and Tracy Alloway on the Odd Lots podcast to explain how the platform works and how he plans to bring the entire financial industry onto Hyperliquid. -------- More on Bloomberg Television and Markets Like this video? Subscribe and turn on notifications so you don't miss any videos from Bloomberg Markets & Finance: https://tinyurl.com/ysu5b8a9 Visit http",
+   "opening": "",
+   "published": "2026-10-20T14:21:09+00:00",
+   "link": "https://www.youtube.com/shorts/qcwpzxyMezU",
+   "videoId": "qcwpzxyMezU",
+   "publication": "the-close",
+   "source": "the-close",
+   "station": "RI",
+   "matched": {},
+   "baseline": true,
+   "transcript": null
+  },
+  {
+   "title": "'Band-Aid on a flesh wound': Economics expert on Trump's $8B promise to farmers",
+   "dek": "President Trump is promising an $8 billion bailout to farmers dealing with high fuel prices. Also, a new September survey found President Trump's immigration crackdown is making it much harder to build homes. Vice President of General Economics for the Cato Institute Scott Lincicome and U.S. Editor for The Economist Charlotte Howard join Stephanie Ruhle to share their insights. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here ms.now/membership MS NOW is the go-to destination for domestic and internat",
+   "opening": "",
+   "published": "2026-10-20T14:20:47+00:00",
+   "link": "https://www.youtube.com/watch?v=suq-1dDZifk",
+   "videoId": "suq-1dDZifk",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "fuel price"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "Is the U.S. now an ally of Russia? Trump has ALWAYS had a ‘man crush on Putin’: Nichols",
+   "dek": "The Washington Post reports the White House is holding up the transfer of Patriot missiles to Ukraine. This as President Trump told reporters Russia has been “fine.” Staff Writer at The Atlantic Tom Nichols joins Stephanie Ruhle to discuss. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click",
+   "opening": "",
+   "published": "2026-10-20T14:20:02+00:00",
+   "link": "https://www.youtube.com/watch?v=9zskli-HSV0",
+   "videoId": "9zskli-HSV0",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "ukraine"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "The Case for Mamdani-Style Populism",
+   "dek": "As inflation shows little sign of cooling, the Fed keeps reaching for the same lever: higher interest rates, even at the risk of higher unemployment. But what if there is another way? Isabella Weber, an economics professor at Amherst College, joins Max Chafkin on the Everybody's Business podcast to discuss why affordable essentials for every citizen should be the priority of a democracy and why the idea of strategic price controls is gaining momentum. -------- More on Bloomberg Television and Markets Like this video? Subscribe and turn on notifications so you don't miss any videos from Bloombe",
+   "opening": "",
+   "published": "2026-10-20T14:19:32+00:00",
+   "link": "https://www.youtube.com/shorts/PIHtcbx0_6I",
+   "videoId": "PIHtcbx0_6I",
+   "publication": "the-close",
+   "source": "the-close",
+   "station": "RI",
+   "matched": {},
+   "baseline": true,
+   "transcript": null
+  },
+  {
+   "title": "For Three Buffetts, a $150 Billion Puzzle Over Warren’s Riches",
+   "dek": "Warren Buffett is worth an estimated $150 billion. He's also promised to divest himself of his vast wealth before he dies. Except it's hard when the pot keeps growing. So his three children are stepping in to spread it around. Alexandre Rajbhandari explains -------- More on Bloomberg Television and Markets Like this video? Subscribe and turn on notifications so you don't miss any videos from Bloomberg Markets & Finance: https://tinyurl.com/ysu5b8a9 Visit http://www.bloomberg.com for business news & analysis, up-to-the-minute market data, features, profiles and more. Connect with Bloomberg Tele",
+   "opening": "",
+   "published": "2026-10-20T14:18:29+00:00",
+   "link": "https://www.youtube.com/shorts/59OOOcgN9UI",
+   "videoId": "59OOOcgN9UI",
+   "publication": "the-close",
+   "source": "the-close",
+   "station": "RI",
+   "matched": {},
+   "baseline": true,
+   "transcript": null
+  },
+  {
+   "title": "Odd Lots: Don Wilson on the GPU Market’s Trillion-Dollar Question",
+   "dek": "On this episode of the Odd Lots podcast, Don Wilson, founder and CEO of DRW, joins Tracy Alloway and Joe Weisenthal to discuss his ongoing quest to launch a GPU futures market and his take on credit concerns around neocloud CoreWeave. This was recorded live at Chicago's City Winery. -------- More on Bloomberg Television and Markets Like this video? Subscribe and turn on notifications so you don't miss any videos from Bloomberg Markets & Finance: https://tinyurl.com/ysu5b8a9 Visit http://www.bloomberg.com for business news & analysis, up-to-the-minute market data, features, profiles and more. C",
+   "opening": "",
+   "published": "2026-10-20T14:18:05+00:00",
+   "link": "https://www.youtube.com/shorts/XsC7_Ejzd5w",
+   "videoId": "XsC7_Ejzd5w",
+   "publication": "the-close",
+   "source": "the-close",
+   "station": "RI",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": true,
+   "transcript": null
+  },
+  {
+   "title": "Odd Lots: Don Wilson on the GPU Market’s Trillion-Dollar Question",
+   "dek": "On this episode of the Odd Lots podcast, Don Wilson, founder and CEO of DRW, joins Tracy Alloway and Joe Weisenthal to discuss his ongoing quest to launch a GPU futures market and his take on credit concerns around neocloud CoreWeave. This was recorded live at Chicago's City Winery. -------- More on Bloomberg Television and Markets Like this video? Subscribe and turn on notifications so you don't miss any videos from Bloomberg Markets & Finance: https://tinyurl.com/ysu5b8a9 Visit http://www.bloomberg.com for business news & analysis, up-to-the-minute market data, features, profiles and more. C",
+   "opening": "",
+   "published": "2026-10-20T14:18:05+00:00",
+   "link": "https://www.youtube.com/shorts/XsC7_Ejzd5w",
+   "videoId": "XsC7_Ejzd5w",
+   "publication": "odd-lots",
+   "source": "odd-lots",
+   "station": "RI",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "Odd Lots: Don Wilson on the GPU Market’s Trillion-Dollar Question",
+   "dek": "On this episode of the Odd Lots podcast, Don Wilson, founder and CEO of DRW, joins Tracy Alloway and Joe Weisenthal to discuss his ongoing quest to launch a GPU futures market and his take on credit concerns around neocloud CoreWeave. This was recorded live at Chicago's City Winery. -------- More on Bloomberg Television and Markets Like this video? Subscribe and turn on notifications so you don't miss any videos from Bloomberg Markets & Finance: https://tinyurl.com/ysu5b8a9 Visit http://www.bloomberg.com for business news & analysis, up-to-the-minute market data, features, profiles and more. C",
+   "opening": "",
+   "published": "2026-10-20T14:18:05+00:00",
+   "link": "https://www.youtube.com/shorts/XsC7_Ejzd5w",
+   "videoId": "XsC7_Ejzd5w",
+   "publication": "surveillance",
+   "source": "surveillance",
+   "station": "RI",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "Odd Lots: Don Wilson on the GPU Market’s Trillion-Dollar Question",
+   "dek": "On this episode of the Odd Lots podcast, Don Wilson, founder and CEO of DRW, joins Tracy Alloway and Joe Weisenthal to discuss his ongoing quest to launch a GPU futures market and his take on credit concerns around neocloud CoreWeave. This was recorded live at Chicago's City Winery. -------- More on Bloomberg Television and Markets Like this video? Subscribe and turn on notifications so you don't miss any videos from Bloomberg Markets & Finance: https://tinyurl.com/ysu5b8a9 Visit http://www.bloomberg.com for business news & analysis, up-to-the-minute market data, features, profiles and more. C",
+   "opening": "",
+   "published": "2026-10-20T14:18:05+00:00",
+   "link": "https://www.youtube.com/shorts/XsC7_Ejzd5w",
+   "videoId": "XsC7_Ejzd5w",
+   "publication": "bloomberg-streams",
+   "source": "bloomberg-streams",
+   "station": "RI",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "Odd Lots: Music Legend David Byrne on Being Rediscovered",
+   "dek": "History is littered with ideas that have been tossed aside, only for them to gain relevance at some later date. On this episode of the Odd Lots podcast, legendary musician David Byrne joins Joe Weisenthal and Tracy Alloway to discuss \"the Minsky Moment\" and his own experience of having his music rediscovered by a new generation. -------- More on Bloomberg Television and Markets Like this video? Subscribe and turn on notifications so you don't miss any videos from Bloomberg Markets & Finance: https://tinyurl.com/ysu5b8a9 Visit http://www.bloomberg.com for business news & analysis, up-to-the-min",
+   "opening": "",
+   "published": "2026-10-20T14:17:49+00:00",
+   "link": "https://www.youtube.com/shorts/MzqYDIwudng",
+   "videoId": "MzqYDIwudng",
+   "publication": "the-close",
+   "source": "the-close",
+   "station": "RI",
+   "matched": {},
+   "baseline": true,
+   "transcript": null
+  },
+  {
+   "title": "RBC considers blocking Meta’s Muse AI agent, CEO Dave McKay says",
+   "dek": "Royal Bank of Canada is considering blocking Muse, Meta Platform’s popular artificial intelligence agent, from accessing the bank’s customer information, RBC Chief Executive Officer Dave McKay said.",
+   "opening": "",
+   "published": "2026-10-20T14:04:42+00:00",
+   "link": "https://www.youtube.com/shorts/Y-pDya96NZo",
+   "videoId": "Y-pDya96NZo",
+   "publication": "the-close",
+   "source": "the-close",
+   "station": "RI",
+   "matched": {},
+   "baseline": true,
+   "transcript": null
+  },
+  {
+   "title": "When Idaho Banned Abortion, OB-GYNs Fled. The Doctors Who Stayed Are Cracking.",
+   "dek": "From childbirth to miscarriages, women’s health care in the state has become increasingly dangerous.",
+   "opening": "",
+   "published": "2026-10-20T13:40:27+00:00",
+   "link": "https://www.nytimes.com/2026/10/20/magazine/idaho-abortion-ban-ob-gyns.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_aimed-executive-health-improving": [
+     "women",
+     "health"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "‘Just what Hillary Clinton predicted’: Joe revisits 2016 ‘puppet’ debate moment",
+   "dek": "At a presidential debate in 2016, former Secretary of State Hillary Clinton suggested Donald Trump was a “puppet” to the Russian president willing to “spout the Putin line.” Joe ticks through the ways in which Trump has since supported Putin, including suspending new sanctions and antagonizing Ukrainian President Volodymyr Zelenskyy. “It’s just what Hillary Clinton predicted,” he says. #putin #russia #ukraine #donaldtrump #news #politics MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become an MS NOW Member! Join us here http://ms.no",
+   "opening": "",
+   "published": "2026-10-20T13:27:49+00:00",
+   "link": "https://www.youtube.com/shorts/mrKCIn793ug",
+   "videoId": "mrKCIn793ug",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "russia-sanctions": [
+     "sanction"
+    ],
+    "obj_thepresi_against-russia-sanctions-trump": [
+     "sanctions",
+     "russia"
+    ],
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "sanctions",
+     "ukraine"
+    ],
+    "obj_thepresi_citing-hold-interest-into": [
+     "russia",
+     "sanctions"
+    ],
+    "obj_x_russia-sanctions-support-urges": [
+     "zelenskyy",
+     "sanctions",
+     "russia"
+    ],
+    "obj_thepresi_before-days-effect-most": [
+     "russia",
+     "sanctions"
+    ],
+    "obj_thepresi_congress-counter-decision-outrages": [
+     "russian",
+     "sanctions"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "US envoy Barrack defends decision to join Israel in war on Iran",
+   "dek": "US envoy Tom Barrack says President Trump did not follow Israel in going to war against Iran.",
+   "opening": "",
+   "published": "2026-10-20T13:20:33+00:00",
+   "link": "https://www.aljazeera.com/video/newsfeed/2026/10/20/20-10-iran-us-envoy-barrack-trump-war?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Driver charged with intentionally injuring Australian federal lawmaker",
+   "dek": "Brendan Nugent, from nearby Tarrawingee, was charged with intentionally causing serious injury, dangerous driving causing serious injury and causing harm to a federal official, police said in a statement on Tuesday.",
+   "opening": "",
+   "published": "2026-10-20T13:08:08-04:00",
+   "link": "https://www.pbs.org/newshour/world/driver-charged-with-intentionally-injuring-australian-federal-lawmaker",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_x_australian-charged-driver-federal": [
+     "driver",
+     "charged",
+     "intentionally",
+     "injuring",
+     "australian",
+     "lawmaker"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Christian Pulisic showed up on Megan Moroney's lock screen picture after the Victoria's Secret Fashion Show",
+   "dek": "Megan Moroney&apos;s phone lock screen appeared to feature Christian Pulisic as she left the Victoria&apos;s Secret Fashion Show after-party, fueling dating rumors.",
+   "opening": "Has Christian Pulisic moved up to lock screen picture material for Megan Moroney ? That's the word on the street after the country singer's lock screen on her phone appeared to show the USMNT star. This is round three of the dating rumors by my count, anyway. There was the rooftop bar sighting in Nashville and her trip to Italy that included her wearing what looked like one of his jerseys. As someone who isn't up on all the lock screen protocols, I don’t know if a friend makes the cut or not. That said, it seems like it would be reserved for someone of more significance. But what do I know? THE CRAIG CARTON SHOW–UNFILTERED, UNAPOLOGETIC AND UNMISSABLE. DOWNLOAD HIS DAILY PODCAST NOW! Moroney, after performing during the Victoria's Secret Fashion Show, was leaving the event's after-party when the lock screen was spotted. You can see the picture of her leaving here and assign any significance you'd like to it. I'd like to shift the focus, if I may, to something else that took place at the fashion show involving the singer. Yes, she made a dream of hers come true by performing a few songs on the runway, and that's great. But it was a moment on the red carpet prior to the show that grabbed my attention. A heartwarming moment where she gave people a look at the person behind the persona. BYU TIGHT END'S 'DWTS' GIRLFRIEND ON HAND FOR GAME WINNING CATCH BEFORE HITTING VICTORIA'S SECRET RED CARPET It came with a simple story about overcoming an unexpected challenge. She was asked wha",
+   "published": "2026-10-20T13:03:25-04:00",
+   "link": "https://www.foxnews.com/outkick-sports/christian-pulisic-showed-megan-moroney-lock-screen-picture-victorias-secret-fashion-show",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_191-about-charges-convicted": [
+     "what",
+     "know"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Sunny Hostin re-visits 'problematic' Kamala Harris answer on 'The View' as hosts question her 2028 potential",
+   "dek": "Sunny Hostin called Kamala Harris&apos; answer on &quot;The View&quot; a &quot;problematic&quot; moment, revealing exactly what she expected the vice president to say.",
+   "opening": "\"The View\" co-host Sunny Hostin revisited her widely-discussed 2024 question to former Vice President Kamala Harris during an event on Monday, calling the former Democratic presidential nominee's answer and refusal to distance herself from former President Joe Biden at the time \"problematic.\" Brian Teta, the talk show's executive producer and host of its \" Behind the Table \" podcast, selected the moment as Hostin's most memorable on the show. He said it was a \"seminal moment\" in the 2024 election cycle. Hostin described the question as a \"gift\" and said she thought Harris would have to distance herself from Biden because of his approval ratings at the time. She also said \"The View\" was the perfect venue to ask the question, calling the liberal show's audience \"her people.\" \"I actually thought the answer was going to be, you know, ‘We had a lot of wins in this administration. I was there for those wins, but I, as a woman of color, as a child of immigrants, as I have a different lived experience, and I intend to bring that lived experience with me into the White House. I will do this. I will do that. I will do this. I will do that. I will do that.’ That was what I was expecting. I was not expecting, 'Not a single thing comes to mind.' And I knew honestly when she said it that it was really problematic,\" Hostin said. KAMALA HARRIS CALLS TO EXPAND SUPREME COURT, ADD STATES IF DEMS TAKE CONGRESS The co-hosts noted that the moment was discussed in books published after the 2024 ele",
+   "published": "2026-10-20T13:02:58-04:00",
+   "link": "https://www.foxnews.com/media/sunny-hostin-revisits-problematic-kamala-harris-answer-view-hosts-question-2028-potential",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_191-about-charges-convicted": [
+     "what",
+     "know"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "This Week in Canada: Breaking Up Is Hard to Do",
+   "dek": "In the latest This Week in Canada newsletter: Alberta&#8217;s separatism vote went down to defeat, but the overtaxation, overregulation, and other grievances that fueled the movement are as entrenched as ever, writes Rupa Subramanya.",
+   "opening": "Welcome back to This Week in Canada, where Monday&#8217;s defeat of the separatism referendum in Alberta isn&#8217;t anywhere close to the end of the forces that put the question on the ballot. Let&#8217;s jump right in! The most serious challenge to Canada&#8217;s national unity in more than three decades is officially over. Alberta isn&#8217;t going anywhere. But that doesn&#8217;t change the fact that separatists got this far over something that was considered a fringe cause until recently. And the story of how they did it is about much more than Alberta separatism. It&#8217;s about a deeper disillusionment among Canadian conservatives&#8212;and why some of them still see Alberta as a refuge from a country that they no longer recognize. First, the numbers. Results as of early Tuesday morning showed about 76 percent in favor of remaining in Canada and 24 percent supporting a binding vote on whether to leave. The results were decisive but hardly a surprise. For months, nearly every voter survey pointed in the same direction , and even the most sanguine separatists foresaw defeat on Monday. Ross Douthat. Abigail Shrier. Douglas Murray. Niall Ferguson. Coleman Hughes. Caitlin Flanagan. Nellie Bowles. Arthur Brooks. Kat Rosenfield. Tyler Cowen. The voices you trust, all in one place. For a limited time only, subscribe for 20% off The Free Press . Subscribe for 20% off As the results started to come in, I remembered many of the people I have spoken to about separatism since my f",
+   "published": "2026-10-20T13:02:42+00:00",
+   "link": "https://www.thefp.com/p/this-week-in-canada-breaking-up-is-hard-to-do",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "obj_thepresi_citing-hold-interest-into": [
+     "recently",
+     "national"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Bruce Blakeman hammers Dem Gov Hochul, Mamdani over subway safety during NYC campaign ride",
+   "dek": "Bruce Blakeman rode the NYC subway to slam Kathy Hochul as the &quot;most pro-criminal governor,&quot; vowing more police and more conductors on trains.",
+   "opening": "Striking a Make America Safe Again tone, Republican New York gubernatorial candidate Bruce Blakeman blasted Democratic Gov. Kathy Hochul as the \"most pro-criminal governor\" during a Monday campaign event riding the New York City subway system, which has been plagued by violent crimes and commuter safety fears. \"I have not heard from one person, and from all the people, that it's safer on the subways and public transportation in New York,\" Blakeman said as he rode the subway. \"I've heard just the opposite. Everybody says they feel less safe.\" \"So we want them to feel safe,\" he said. VIOLENT TRANSIT ATTACKS IN ATLANTA, NEW YORK AND CHARLOTTE FUEL CALLS FOR TOUGHER TRACKING OF REPEAT OFFENDERS Blakeman, a Nassau County executive, is a former commissioner of the Port Authority of New York and New Jersey. Now running for governor, he was campaigning Monday in the densely populated city, which is overwhelmingly a Democratic stranglehold. \"Hire more police officers, hire more conductors, clean up our subways and get help for those who are emotionally ill – get them help that they need; not have them roam around our subways,\" Blakeman told reporters as he rode the subway, targeting both the governor and New York City Mayor Zohran Mamdani in the deep-blue area. MAMDANI UNVEILS SWEEPING NYPD USE-OF-FORCE REVIEW, BUT STOPS SHORT OF FULFILLING KEY CAMPAIGN PROMISES \"The crime in the subways has gone up tremendously under Kathy Hochul and Zohran Mamdani,\" Blakeman lamented. \"They are not ",
+   "published": "2026-10-20T12:35:28-04:00",
+   "link": "https://www.foxnews.com/politics/bruce-blakeman-hammers-dem-gov-hochul-mamdani-subway-safety-nyc-campaign-ride",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_astate_allowing-eligibility-executive-governor": [
+     "governor",
+     "executive"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "BetMGM Bonus Code FOXNEWS: Unlock $1500 in First Bet Cover on Any NBA Opening Day Game",
+   "dek": "Use BetMGM bonus code FOXNEWS to get up to $1,500 in bonus bets if your first wager loses on NBA Opening Day.",
+   "opening": "The NBA has returned and is delivering three great games today. Six of the premier teams are taking center stage, and BetMGM wants you to get involved in the action with promo code FOXNEWS , offering $1,500 in bonus bets if your first wager loses. The first game of the season takes place in the early afternoon, with the Celtics going to Detroit and taking on the Pistons. Boston will look to figure out how they can get Paul George and Mitchell Robinson involved in the new-look offense. The Pistons were able to take the top spot in the East last season, but really didn’t make any significant additions in the offseason. They added John Collins to replace Tobias Harris. Odds are subject to change Philadelphia is one of the teams with the brightest outlooks in the NBA. They have revamped their team with major additions. They traded for Jaylen Brown, a former NBA Finals MVP. Then they signed LeBron James as a free agent. Their starting five might be the best in the entire NBA. The Knicks are coming off winning an NBA championship, but they didn’t really make an addition to the team; they lost Mitchell Robinson. They do have the main five starters still on the roster, though. Odds are subject to change The Oklahoma City Thunder are coming into the game without making too many additions to their roster. They added Aday Mara, who could be a big piece for their defense. The bench is still deep and one of the best in basketball. The Spurs fell short in the NBA Championship last season. ",
+   "published": "2026-10-20T12:35:10-04:00",
+   "link": "https://www.foxnews.com/outkick-betting/betmgm-bonus-code-foxnews-unlock-1500-first-bet-cover-any-nba-opening-day-game",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "me-sen": [
+     "collins"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "UK to Send Fighter Jets to Help Defend Saudi Arabia From Houthi Attacks",
+   "dek": "R.A.F. Typhoon fighter jets will be deployed to protect infrastructure in Saudi Arabia, Britain said, after a spike in attacks by the Iran-backed Houthi militia.",
+   "opening": "",
+   "published": "2026-10-20T12:34:57+00:00",
+   "link": "https://www.nytimes.com/2026/10/20/world/europe/uk-saudi-arabia-houthis-raf-typhoon-fighter-jets.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran",
+     "houthi"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "WATCH: Rubio honors U.S.-India relations at America 250 celebration in Mumbai",
+   "dek": "Secretary of State Marco Rubio held talks with India's foreign minister in Mumbai on Tuesday as the two countries seek to deepen energy cooperation and move closer to finalizing a trade deal.",
+   "opening": "",
+   "published": "2026-10-20T12:32:18-04:00",
+   "link": "https://www.pbs.org/newshour/world/watch-rubio-honors-u-s-india-relations-at-america-250-celebration-in-mumbai",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "tariffs": [
+     "trade deal"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Food delivery favorite forced to fork over millions after DOJ alleged discrimination against American workers",
+   "dek": "The Department of Justice reached a $5 million settlement with Instacart over allegations the company discriminated against American job applicants.",
+   "opening": "FIRST ON FOX: Popular grocery delivery company Instacart has reached a multimillion-dollar settlement with the Department of Justice (DOJ) after it was accused of discriminating against American workers. The DOJ's Civil Rights Division says it has reached a $5 million settlement with Maplebear Inc., which operates the delivery service used by Americans to get groceries sent to their front doors. The resolution addresses allegations that the company purposefully discriminated against U.S. and American workers based on country of origin, which the DOJ says violates the Immigration and Nationality Act (INA) and Title VII of the Civil Rights Act of 1964 (Title VII). The company, according to the Justice Department, was abusing the Permanent Labor Certification (PERM) process by placing undue burdens on American applicants by requiring them to physically mail applications to the company, deviating from Instacart's standard electronic application process. The scheme occurred from December 2023 through February 2026. TRUMP ADMINISTRATION PROPOSES ENDING 60-DAY GRACE PERIOD AFTER JOB LOSS FOR H-1B, OTHER VISA HOLDERS \"This significant resolution marks the 15th settlement agreement the Civil Rights Division has reached under my leadership to protect U.S. workers,\" Assistant Attorney General Harmeet K. Dhillon said. \"Our record demonstrates that the Justice Department is holding companies who prefer workers with temporary employment visas accountable. We will not stop fighting for U.S.",
+   "published": "2026-10-20T12:13:36-04:00",
+   "link": "https://www.foxnews.com/politics/food-delivery-favorite-forced-fork-over-millions-doj-alleged-discrimination-american-workers",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Las Vegas tourist accused of harming flamingo at iconic hotel in drunken encounter caught on video",
+   "dek": "Surveillance footage showed Mitchell Fairbarn carrying a flamingo through an elevator at the Las Vegas Strip hotel before the bird was found injured.",
+   "opening": "A Canadian tourist who took a flamingo from its habitat at a popular Las Vegas Strip hotel and carried it through the property was found guilty Monday of animal cruelty after prosecutors argued the bird was injured during the bizarre encounter. The Associated Press reported that Mitchell Fairbarn, of Ontario, Canada, was convicted of felony and misdemeanor animal cruelty charges after jurors deliberated for about five hours. The case stemmed from a March 3 incident at the Flamingo Las Vegas Hotel and Casino, where Fairbarn removed a 27-year-old Chilean flamingo named Peachy from its enclosure and brought the bird to his hotel room. UKRAINIAN INFLUENCERS FILMED THEMSELVES SITTING ON TOP OF SEA TURTLE WHILE IT TRIES TO LAY EGGS Surveillance footage presented during the trial showed Fairbarn holding the flamingo inside an elevator and carrying it through a hotel hallway as the bird squawked. Prosecutors argued Fairbarn deliberately caused the bird pain, pointing to footage of him pulling Peachy by its feet and feathers found on the hotel floor. CALIFORNIA TEEN FACES PRISON AFTER VIRAL VIDEO SHOWS HIM SQUARING UP, REPEATEDLY KICKING SEA LION IN THE FACE Las Vegas police were called after hotel security reported the flamingo missing from its enclosure. When authorities found Peachy, the flamingo was missing seven or eight feathers, had blood on its feathers and suffered injuries to its wings. VIRAL BUSINESSMAN WHO ALLEGEDLY BRAGGED ABOUT WEALTH CHARGED IN FEDERAL ENDANGERED SPECIE",
+   "published": "2026-10-20T12:12:26-04:00",
+   "link": "https://www.foxnews.com/us/las-vegas-tourist-accused-harming-flamingo-iconic-hotel-drunken-encounter-caught-video",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thejusti_alleged-california-doj-kills": [
+     "teen",
+     "california"
+    ],
+    "obj_x_california-charged-election-feds": [
+     "charged",
+     "california"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "CBS boss fuels left-wing uproar amid report she urged staff to probe alleged El-Sayed, Muslim Brotherhood ties",
+   "dek": "Bari Weiss reportedly pushed CBS News journalists to investigate Abdul El-Sayed&apos;s alleged Muslim Brotherhood ties, sparking backlash from far-left critics.",
+   "opening": "CBS News editor-in-chief Bari Weiss is taking heat from the left yet again, this time over a report urging her staff to probe Democratic Michigan Senate candidate Abdul El-Sayed's potential ties to the Muslim Brotherhood. Semafor reported Sunday that Weiss \"personally advocated for CBS News journalists to pursue numerous story angles related to El-Sayed’s supposed sympathy towards the Muslim Brotherhood.\" The report cited two anonymous CBS News staffers who were aggrieved by Weiss' directive. Anonymous CBS News staffers complaining about their boss to liberal media outlets has become commonplace in the media industry. CONTROVERSY OVER ABDUL EL-SAYED'S FAMILY TIES TO MUSLIM BROTHERHOOD IGNORED, DOWNPLAYED BY LIBERAL MEDIA NewsBusters executive editor Tim Graham believes disgruntled CBS News employees constantly offering anonymous quotes to liberal publications in an effort to smear Weiss \"helps reinforce\" the longstanding bias toward the left. \"She’s making them do difficult things,\" Graham told Fox News Digital . \"Can we look into whether Abdul El-Sayed has ties to the Muslim Brotherhood, like his family says they do? How dare you,\" Graham quipped. \"You’re not supposed to do stories that might make Democrats look bad.\" While Weiss’ defenders have suggested staffers are essentially irked that she asked them to do journalism, progressives lashed out against Weiss over the latest report. \"A rightwing, pro-Israel, anti-Muslim troll who has zero qualifications to be running nation",
+   "published": "2026-10-20T12:07:35-04:00",
+   "link": "https://www.foxnews.com/media/cbs-boss-fuels-left-wing-uproar-amid-report-urged-staff-probe-alleged-el-sayed-muslim-brotherhood-ties",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_before-even-kick-related": [
+     "related",
+     "ties"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Denver mother fights for her daughter's education as advocates make nationwide school choice push",
+   "dek": "Mariah Wakefield used ACE Scholarships to find the right school for her daughter and now wants every parent to know about the federal tax credit.",
+   "opening": "FIRST ON FOX: Facing limited options, Denver resident Mariah Wakefield was determined to find a school that suited her adoptive daughter Jasiya’s unique gifts. \"Not that the school system was a terrible idea, she just needed a little bit more for her to succeed,\" Wakefield told Fox News Digital, noting that Jasiya was formerly enrolled in Denver Public Schools. The bond between Wakefield and Jasiya runs deep. Wakefield became Jasiya’s legal guardian after the girl's mother died in 2013, when Jasiya was just 4 years old. TRUMP ADMINISTRATION TOUTS ‘HARD RESET’ FOR AMERICAN SCHOOLS, VOWS TO PUT PARENTS ‘BACK IN CHARGE’ In the years that followed, Wakefield navigated significant adversity, including household changes and personal instability while grappling with bereavement and incarceration. Throughout the turbulence — and as other children moved in and out of the home — Mariah prioritized Jasiya’s future. Help arrived at a pivotal moment through ACE Scholarships, a national Scholarship Granting Organization (SGO) that stepped in to help Wakefield enroll Jasiya in a school where she could thrive. Now, Wakefield wants every parent to know about the organization — especially as ACE launches a nationwide awareness campaign centered around President Donald Trump’s federal school choice initiative . The program, centered on the Education Freedom Tax Credit (EFTC), allows individual taxpayers to receive up to a $1,700 dollar-for-dollar federal tax credit for cash contributions to qua",
+   "published": "2026-10-20T12:00:25-04:00",
+   "link": "https://www.foxnews.com/media/denver-mother-fights-her-daughters-education-advocates-make-nationwide-school-choice-push",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "AI Fears Return With Data Center IPO Flop; SpaceX, Netflix Earnings",
+   "dek": "US equity futures slip, pausing an AI recovery in stocks, after South Korean data center company Elice plunged in its trading debut. Ukrainian President Volodymyr Zelenskyy heads to Norway for fresh peace talks as tensions with the US deepens. SpaceX, Netflix, General Motors, RTX, and Northrop are set to report earnings. Jeanne Sun of Citigroup Global Markets joins \"Bloomberg Brief\" to discuss her outlook for this earnings season. Chapters: 00:00:00 - Bloomberg Brief begins 00:03:15 - Paul Dobson on Data Center Jitters and Japanese Bonds 00:08:23 - Matt Bloxham on Anthropic Deal and SpaceX 00:",
+   "opening": "",
+   "published": "2026-10-20T11:46:39+00:00",
+   "link": "https://www.youtube.com/watch?v=ZPMGnIr8vnQ",
+   "videoId": "ZPMGnIr8vnQ",
+   "publication": "the-close",
+   "source": "the-close",
+   "station": "RI",
+   "matched": {},
+   "baseline": true,
+   "transcript": null
+  },
+  {
+   "title": "'Grand Theft Auto VI' release set to cost US economy staggering amount as gamers plan PTO days",
+   "dek": "Experts predict a $1 billion economic hit when &quot;Grand Theft Auto VI&quot; drops November 19, as workers nationwide are already lining up sick days.",
+   "opening": "The \" Grand Theft Auto VI \" saga has taken a ton of twists and turns in the past year. From delays to leaks and even the \"digital release\" controversy, GTA VI has been in the news cycle for so long that it's hard to believe this will all be coming to an end next month. On November 19, the world will finally get to experience a video game that has been over a decade in the making. UNKNOWN HACKER ALLEGEDLY LEAKS SEVERAL MINUTES OF GRAND THEFT AUTO VI GAMEPLAY AHEAD OF NETFLIX REVEAL In what could be one of the most anticipated video games of all-time, \"Grand Theft Auto VI's\" release date will likely be a seismic event in terms of the national economy. That's not me being hyperbolic, either, as experts are predicting the economy of the United States to take a $1 billion hit the day GTA drops. It turns out so many people have already lined up their sick days for November 19 and 20 that it's making national news. Sorry for anyone doing so that I just outed with this article, but that is insane. I can't remember a game causing this much of a stir. Even hotly anticipated releases like \"Halo\" and \"Call of Duty\" weren't decimating the workforce the way GTA is doing. And remember, we are still a month away from the game actually coming out. This is just the fallout from the planners getting their ducks in a row. Can you imagine how many people will call in sick the day of the release? MIAMI HEAT TEASE RELEASE OF NEW 'VICE CITY' JERSEYS ON THE NIGHT BEFORE 'GRAND THEFT AUTO VI' RELEASE ",
+   "published": "2026-10-20T11:38:19-04:00",
+   "link": "https://www.foxnews.com/outkick-sports/grand-theft-auto-vi-release-cost-us-economy-staggering-amount-gamers-plan-pto-days",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_before-days-effect-most": [
+     "days",
+     "take"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Gimmick or giveback? Even some Trump supporters don't expect to get $5,000 checks after midterms",
+   "dek": "The offering of government checks has become a go-to tactic for President Donald Trump when he faces a political jam.",
+   "opening": "",
+   "published": "2026-10-20T11:27:05-04:00",
+   "link": "https://www.pbs.org/newshour/politics/gimmick-or-giveback-even-some-trump-supporters-dont-expect-to-get-5000-checks-after-midterms",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "FanDuel Promo Code: Get $350 on the Opening Week of the NBA Season, Celtics-Pistons Opener",
+   "dek": "Use the FanDuel promo code to bet $5 and earn up to $350 in bonus bets during NBA Opening Week, including the Celtics-Pistons opener.",
+   "opening": "The NBA returns to action with three NBA games tipping off tonight to get the season started. FanDuel is offering new users a chance to be part of the game with an offer of betting $5 to earn $350 in bonuses. Bet $5 per day for seven straight days and earn a $50 bonus bet token each day. The Boston Celtics are on a quest to return to the top of the East, but there are many teams standing in their way. The first of which is tonight’s Detroit team that held the top spot in the regular season last year. The Pistons have one of the better young guards in the league, Cade Cunningham. The Celtics are built around a combination of guys, but their roster continues to change each year. They have Paul George and Jayson Tatum leading the way, but Derrick White is the silent hero. White is one of the better defenders in the game, and he is a strong shooter and scorer as well. His scoring should see an increase this year without Jaylen Brown on the roster. The Pistons didn’t really make many changes from last season. They added John Collins, replacing Tobias Harris. Collins is not as good a scorer, but might be a better rebounder and defender than Harris. Perhaps he can get some lobs and open threes from Cunningham. This game, 76ers vs. Knicks, and Thunder vs. Spurs give us the opening night for the NBA. FanDuel is offering new users a chance to wager on tonight’s game. New users can bet $5 on today’s game to earn a $50 bonus bet. Wager $5+ for seven straight days to earn a $50 bonus bet ",
+   "published": "2026-10-20T11:16:39-04:00",
+   "link": "https://www.foxnews.com/outkick-betting/fanduel-promo-code-get-350-opening-week-nba-season-celtics-pistons-opener",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "me-sen": [
+     "collins"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Underdog Promo Code FOXNEWS: Play $10, Get $50 on NBA Opening Day, Celtics-Pistons, Knicks-76ers",
+   "dek": "Use Underdog promo code FOXNEWS to play $5 and earn $100 in bonuses on NBA Opening Day, featuring Celtics-Pistons and 76ers-Knicks.",
+   "opening": "It is like Christmas morning because we get the gift of basketball returning to our screens as the NBA starts up. We have three games on the slate, and Underdog is offering new users the promo code FOXNEWS to play $10 on any game and earn $50 in bonuses. Wager $10 and earn a $10 token; repeat that process for five days to earn the full $50. The Celtics are coming to Detroit to take on the Pistons. Boston is looking to return to glory, just a few years removed from a championship. Detroit is a few years removed from being one of the worst teams in the league, but they’ve found themselves with a competitive team that tries hard. Let’s look at the career stats of both of their team’s superstars and how they stack up against each other: We have two unveilings tonight. We see the Knicks unveil their championship banner, and we also see the 76ers unveil their new roster. New York will be rocking, raising their banner to the rafters. However, they are doing it in front of a team that lost to them in the postseason last year. The 76ers are one of this year’s favorites to dethrone the Knicks. New York is essentially running back their championship roster. The 76ers made two big additions in the offseason: LeBron James and Jaylen Brown. Those two, coupled with Joel Embiid and Tyrese Maxey (and even VJ Edgecombe), could provide an unstoppable big four. We could see a preview of potentially the Eastern Conference Finals if things align.",
+   "published": "2026-10-20T11:15:32-04:00",
+   "link": "https://www.foxnews.com/outkick-betting/underdog-promo-code-foxnews-play-5-get-100-nba-opening-day-celtics-pistons-knicks-76ers",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_before-days-effect-most": [
+     "days",
+     "take"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Fanatics Sportsbook Promo Code FOXNEWS350: Bet $20, Get $350 on the NBA Season Opener, Celtics-Pistons",
+   "dek": "Claim Fanatics Sportsbook promo code FOXNEWS350 to get $350 in FanCash after placing a $20 wager on the Celtics-Pistons NBA season opener.",
+   "opening": "The NBA season is just about to tip off, and we have three games of action today with some excellent matchups. Fanatics Sportsbook is offering new users a chance to celebrate with promo code FOXNEWS350 to earn $350 on a $20 wager on today’s NBA slate. The Boston Celtics head into Detroit to take on the upstart Pistons. Last season, the Pistons ended the season with the top seed in the Eastern Conference. The Celtics had a playoff meltdown against the 76ers and then dismantled their star duo. Jaylen Brown was shipped off to Philadelphia (and he plays later today if you’re interested). Now they have Paul George in his place, and they’ve added Mitchell Robinson to the roster. This isn’t as deep or as talented as their championship team, but Jayson Tatum may be on a mission to prove they kept the right guy. The Detroit Pistons are just a few years removed from being one of the worst teams in the NBA. The turnaround is complete, and the goal now is sustaining it. They have one of the best young guards in the league, Cade Cunningham. John Collins is a nice addition to the team, but clearly he isn’t a perfect fit anywhere, as this is already his fifth team in 10 seasons. They resigned Jalen Duren, and now they look to run it back and get the 1st seed once again. Get in on this action with an early tip-off at 3:00 ET, with Fanatics Sportsbook offering new users promo code FOXNEWS350 to provide $350 in FanCash from a $20 wager. Odds are subject to change",
+   "published": "2026-10-20T11:15:09-04:00",
+   "link": "https://www.foxnews.com/outkick-betting/fanatics-sportsbook-promo-code-foxnews350-bet-20-get-350-nba-season-opener-celtics-pistons",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "me-sen": [
+     "collins"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "France could face even worse destruction with second weekend of planned riots, State Dept warns",
+   "dek": "An internal State Department document warns antifascist protests near Marine Le Pen&apos;s National Rally congress in Orléans could spark new unrest.",
+   "opening": "FIRST ON FOX : The State Department warns that antifascist groups are planning to participate in a \"potentially more confrontational protest\" this weekend as the far-right National Rally holds its political convention just days after widespread riots overwhelmed police and exposed major security failures. As party leader Marine Le Pen prepares for the gathering on Oct. 24–25 in Orléans, France, an internal document obtained by Fox News Digital cautions that antagonists are planning more demonstrations near the convention venue that could \"expose further security shortcomings and deepen political tensions.\" The warning comes at a particularly dangerous political moment for President Emmanuel Macron, considering the same unrest that exposed his government's security vulnerabilities could also give National Rally and center-right parties an opening to challenge his record, according to the State Department assessment. GLOBAL 'CHAOS INC' GROWS TO 101 GROUPS WITH PLANS FOR NEW ROUNDS OF DEMONSTRATIONS Now, French authorities face another high-stakes security test as demonstrators prepare to converge on the congress of a party that could benefit politically from the previous unrest. The demonstrations are expected to coincide with the National Rally's two-day party congress , where Le Pen is set to launch her presidential campaign. Left-wing parties, unions and activist groups are planning a march Saturday, while antifascist groups have announced plans for a separate protest Sunday",
+   "published": "2026-10-20T11:14:02-04:00",
+   "link": "https://www.foxnews.com/politics/france-face-worse-destruction-second-weekend-planned-riots-state-dept-warns",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_191-400-convicted-cult": [
+     "leader",
+     "left"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Macron jets out of riot-torn France for Gulf trip as political pressure mounts",
+   "dek": "French President Emmanuel Macron left for Kuwait energy talks as riots raged, drawing sharp criticism from Marine Le Pen and Jean-Luc Mélenchon.",
+   "opening": "French President Emmanuel Macron pressed ahead with a trip to the Arabian Gulf as violent riots rocked France, fueling fresh criticism of his leadership as his government struggled to contain the unrest. What began weeks earlier as purportedly student-led demonstrations over classroom conditions escalated into widespread riots involving a range of political and ideological factions across France over the weekend. Images and videos posted to social media on Saturday and Sunday showed groups of men waving foreign flags while engaging in acts of destruction on the streets of France's major cities. A Fox News Digital investigation found that communist organizations, Islamic advocacy groups, labor unions and environmental activists were involved in the unrest. Amid this backdrop, Macron was planning a trip to the Arabian Gulf for energy negotiations. The chaos in his country did not dissuade him from traveling. He left for Kuwait on Sunday, shortly after denouncing the \"unbridled\" violence of the rioters in a nationwide address. WHERE'S MACRON? FRENCH LEADER BLASTED FOR ATTENDING CONCERT AS RIOTS ESCALATED The French president, defending his travel to the Arabian Gulf, noted that heightened fuel prices were, in his telling, one of the causes behind the ongoing riots. French officials say that they have arrested over 2,500 people in connection with the demonstrations. Though Macron acknowledges failures in security, he declined the resignation of his interior minister. Macron recei",
+   "published": "2026-10-20T11:03:56-04:00",
+   "link": "https://www.foxnews.com/politics/macron-jets-riot-torn-france-gulf-trip-political-pressure-mounts",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "fuel price"
+    ],
+    "obj_x_191-400-convicted-cult": [
+     "leader",
+     "left"
+    ],
+    "obj_x_191-about-charges-convicted": [
+     "what",
+     "leader"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Australian Lawmaker Helen Haines Remains in Critical Condition After Car Attack",
+   "dek": "Helen Haines, an independent, remained in critical condition after she was struck by a vehicle. A 43-year-old man was charged and will appear in court on Wednesday.",
+   "opening": "",
+   "published": "2026-10-20T10:59:49+00:00",
+   "link": "https://www.nytimes.com/2026/10/20/world/asia/helen-haines-mp-attacked-wangaratta-australia.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_x_australian-charged-driver-federal": [
+     "charged",
+     "australian",
+     "lawmaker"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "AI Fears Roar Back, Tech Earnings on Deck",
+   "dek": "A rebound in the artificial intelligence trade sputtered after the dismal debut of a South Korean data center firm revived concerns about whether the technology’s spending boom can last. Seoul’s Kospi Index fell 3.8% on a fresh bout of weakness in two of the world’s biggest memory makers, Samsung Electronics Co. and SK Hynix Inc. AI infrastructure group Elice Inc. suffered the worst opening day for a sizable company on the bourse, even after an initial public offering that was 400 times subscribed. The Opening Trade has everything you need to know as markets open across Europe. With analysis y",
+   "opening": "",
+   "published": "2026-10-20T10:58:38+00:00",
+   "link": "https://www.youtube.com/watch?v=UcrY_a_WwwI",
+   "videoId": "UcrY_a_WwwI",
+   "publication": "the-close",
+   "source": "the-close",
+   "station": "RI",
+   "matched": {},
+   "baseline": true,
+   "transcript": null
+  },
+  {
+   "title": "Putin Seeking to Destabilize Europe, German Chancellor Warns",
+   "dek": "German Chancellor Friedrich Merz warned against complacency over the dangers posed by Russia, saying that President Vladimir Putin is seeking to not only defeat Ukraine, but to also undermine democracy in Europe. French protests largely died down after authorities rolled out tougher security measures, including targeted curfews, following protests over the weekend that degenerated into violence, vandalism and looting. UK joblessness fell and employers added jobs, according to official figures that give an unexpected boost to Chancellor of the Exchequer John Healey ahead of his crucial budget n",
+   "opening": "",
+   "published": "2026-10-20T10:22:07+00:00",
+   "link": "https://www.youtube.com/watch?v=DslMjbwixiY",
+   "videoId": "DslMjbwixiY",
+   "publication": "the-close",
+   "source": "the-close",
+   "station": "RI",
+   "matched": {
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "ukraine"
+    ]
+   },
+   "baseline": true,
+   "transcript": null
+  },
+  {
+   "title": "Putin Seeking to Destabilize Europe, German Chancellor Warns",
+   "dek": "German Chancellor Friedrich Merz warned against complacency over the dangers posed by Russia, saying that President Vladimir Putin is seeking to not only defeat Ukraine, but to also undermine democracy in Europe. French protests largely died down after authorities rolled out tougher security measures, including targeted curfews, following protests over the weekend that degenerated into violence, vandalism and looting. UK joblessness fell and employers added jobs, according to official figures that give an unexpected boost to Chancellor of the Exchequer John Healey ahead of his crucial budget n",
+   "opening": "",
+   "published": "2026-10-20T10:22:07+00:00",
+   "link": "https://www.youtube.com/watch?v=DslMjbwixiY",
+   "videoId": "DslMjbwixiY",
+   "publication": "odd-lots",
+   "source": "odd-lots",
+   "station": "RI",
+   "matched": {
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "ukraine"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "Putin Seeking to Destabilize Europe, German Chancellor Warns",
+   "dek": "German Chancellor Friedrich Merz warned against complacency over the dangers posed by Russia, saying that President Vladimir Putin is seeking to not only defeat Ukraine, but to also undermine democracy in Europe. French protests largely died down after authorities rolled out tougher security measures, including targeted curfews, following protests over the weekend that degenerated into violence, vandalism and looting. UK joblessness fell and employers added jobs, according to official figures that give an unexpected boost to Chancellor of the Exchequer John Healey ahead of his crucial budget n",
+   "opening": "",
+   "published": "2026-10-20T10:22:07+00:00",
+   "link": "https://www.youtube.com/watch?v=DslMjbwixiY",
+   "videoId": "DslMjbwixiY",
+   "publication": "surveillance",
+   "source": "surveillance",
+   "station": "RI",
+   "matched": {
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "ukraine"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "Putin Seeking to Destabilize Europe, German Chancellor Warns",
+   "dek": "German Chancellor Friedrich Merz warned against complacency over the dangers posed by Russia, saying that President Vladimir Putin is seeking to not only defeat Ukraine, but to also undermine democracy in Europe. French protests largely died down after authorities rolled out tougher security measures, including targeted curfews, following protests over the weekend that degenerated into violence, vandalism and looting. UK joblessness fell and employers added jobs, according to official figures that give an unexpected boost to Chancellor of the Exchequer John Healey ahead of his crucial budget n",
+   "opening": "",
+   "published": "2026-10-20T10:22:07+00:00",
+   "link": "https://www.youtube.com/watch?v=DslMjbwixiY",
+   "videoId": "DslMjbwixiY",
+   "publication": "bloomberg-streams",
+   "source": "bloomberg-streams",
+   "station": "RI",
+   "matched": {
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "ukraine"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "JD Vance declines to endorse Netanyahu for reelection, says he's focusing on midterms",
+   "dek": "\"I endorse American candidates, and that's where I'm focused on the midterms,\" Vice President JD Vance said.",
+   "opening": "",
+   "published": "2026-10-20T10:01:59-04:00",
+   "link": "https://www.pbs.org/newshour/politics/jd-vance-declines-to-endorse-netanyahu-for-reelection-says-hes-focusing-on-midterms",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump’s Turn Toward Moscow. Plus. . .",
+   "dek": "In today's Front Page: Aaron MacLean on Trump's turn toward Moscow. A report from the aftermath of the French riots. The scientist who won his life back. Arthur Brooks interviews his AI clone. And more.",
+   "opening": "It&#8217;s Tuesday, October 20. This is The Front Page , your daily window into the world of The Free Press &#8212;and our take on the world at large. Today: Nora Bussigny reports from the aftermath of the Paris protests. Suzy Weiss catches up with David Sabatini after his courtroom win. Arthur Brooks meets his machine. And much more. But first: The Putin pivot. The leaders of the U.S., Russia, and China may soon sit down to decide Ukraine&#8217;s fate&#8212;without Volodymyr Zelensky at the table. According to The Wall Street Journal , Vladimir Putin pitched the summit during a phone call with Trump earlier this month, the same call in which the two struck a deal for the U.S. to buy Russian diesel . Since then, Trump has waived sanctions against Moscow and lashed out at Zelensky, saying the Ukrainian leader doesn&#8217;t really want the war to end. The Trump administration insists its posture toward Russia has not changed, but Aaron MacLean says the evidence suggests otherwise. From the diesel deal to reports that Washington may be withholding early warnings of incoming Russian missiles from Ukraine, he sees &#8220;a gangster foreign policy&#8221; emerging. Under that approach, America looks out for itself and no longer bothers to pretend otherwise. And if a summit does happen after the midterms, Aaron asks, what&#8217;s to stop Trump from striking a grand bargain&#8212;pushing Ukraine into a deal Moscow likes in exchange for Russia and China leaning on Iran to accept one Wa",
+   "published": "2026-10-20T10:00:40+00:00",
+   "link": "https://www.thefp.com/p/trumps-turn-toward-moscow-plus-paris-fires-douglas-murray",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "diesel": [
+     "diesel"
+    ],
+    "russia-sanctions": [
+     "sanction"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thepresi_against-russia-sanctions-trump": [
+     "sanctions",
+     "russia"
+    ],
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "sanctions",
+     "ukraine"
+    ],
+    "obj_thepresi_citing-hold-interest-into": [
+     "russia",
+     "sanctions"
+    ],
+    "obj_x_russia-sanctions-support-urges": [
+     "sanctions",
+     "russia"
+    ],
+    "obj_thepresi_before-days-effect-most": [
+     "russia",
+     "sanctions",
+     "take"
+    ],
+    "obj_thepresi_congress-counter-decision-outrages": [
+     "russian",
+     "sanctions"
+    ],
+    "obj_x_191-about-charges-convicted": [
+     "what",
+     "leader"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "James Talarico on the Rage Economy, Billionaires and Flipping Texas",
+   "dek": "James Talarico is asking Texas to do something it hasn’t done in nearly 40 years: Elect a Democrat to the U.S. Senate. It won’t be easy. It will take a vast coalition of Democrats, independents and Republicans in a bright red state that President Trump won by about 14 percentage points in 2024 — and where Republicans have plowed hundreds of millions of dollars into beating Mr. Talarico. And yet, poll after poll shows that Mr. Talarico could pull it off and defeat his Republican rival, Ken Paxton, the Texas attorney general and a Trump ally.&nbsp; On Monday, nearly two weeks before Election Day",
+   "opening": "James Talarico is asking Texas to do something it hasn’t done in nearly 40 years: Elect a Democrat to the U.S. Senate. It won’t be easy. It will take a vast coalition of Democrats, independents and Republicans in a bright red state that President Trump won by about 14 percentage points in 2024 — and where Republicans have plowed hundreds of millions of dollars into beating Mr. Talarico. And yet, poll after poll shows that Mr. Talarico could pull it off and defeat his Republican rival, Ken Paxton, the Texas attorney general and a Trump ally.&nbsp; On Monday, nearly two weeks before Election Day, Michael Barbaro spoke with Mr. Talarico about the kind of race he’s running, why it has succeeded so far in appealing to Republicans and what he wants Democrats to do if they flip control of the Senate on Nov. 3. Guest: James Talarico, the Democratic nominee for Senate in Texas. Background reading:&nbsp; Top Democrats, who have long been hesitant to spend money in Texas, have started to back Mr. Talarico . For more information on today’s episode, visit nytimes.com/thedaily . Transcripts of each episode will be made available by the next workday. Subscribe today at nytimes.com/podcasts or on Apple Podcasts, Spotify and Amazon Music. You can also subscribe via your favorite podcast app here https://www.nytimes.com/activate-access/audio?source=podcatcher . For more podcasts and narrated articles, download The New York Times app at nytimes.com/app. Hosted by Simplecast, an AdsWizz company.",
+   "published": "2026-10-20T09:45:00+00:00",
+   "link": "https://www.nytimes.com/the-daily",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ],
+    "tx-sen": [
+     "talarico",
+     "paxton"
+    ],
+    "midterms": [
+     "poll shows"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Bush family royalty backs Democrat in battle to flip Texas blue",
+   "dek": "Barbara Bush donated $2,500 to a PAC supporting James Talarico&apos;s Texas Senate race against Ken Paxton, using her real name in public FEC filings.",
+   "opening": "Texas Democratic Senate hopeful James Talarico got a big-name boost from a surprising corner of the Republican Party as former first daughter Barbara Bush recently donated to the main PAC supporting his campaign. Former President George W. Bush has had a strained relationship with President Donald Trump dating back to the 2016 campaign, when Trump mocked both his mother and brother. But the donation by Bush’s daughter, the twin sister of NBC host Jenna Bush Hager, comes at a crucial time for Republicans’ hopes of holding the U.S. Senate. Fox News Digital confirmed through FEC filings that Barbara Bush — who shares the name of the late first lady, her grandmother — contributed $2,500 to Lone Star Rising PAC this quarter. The PAC accounts for almost all the outside spending supporting Talarico, according to Houston Public Media . TALARICO SAYS THE DIVIDE IS 'TOP VS. BOTTOM' — THEN HEADS TO ONE OF AMERICA'S RICHEST DONOR ENCLAVES While the amount is smaller than contributions from some other big-name donors, including The Eagles’ Don Henley , who gave $150,000 to the PAC, analysts said it is notable that Bush did not make an effort to conceal her politically famous identity. \"She didn’t give it to a 501(c)(4), in which her contribution would’ve been completely anonymous. She gave it to a PAC that reports all the money in and out,\" Texas campaign finance expert Andrew Cates told Houston Public Media . GEORGE W BUSH RAISES MONEY FOR REPUBLICANS, BUT NOT KEY SENATE CANDIDATE Barbar",
+   "published": "2026-10-20T09:36:40-04:00",
+   "link": "https://www.foxnews.com/politics/bush-family-royalty-backs-democrat-battle-flip-texas-blue",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "tx-sen": [
+     "talarico",
+     "paxton",
+     "texas senate"
+    ],
+    "midterms": [
+     "senate race"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Torched cars, ransacked businesses: Anti-Sharia crusader warns France 'civil war' could be imported to US",
+   "dek": "A top House Republican blames France riots on mass migration, warning America could face the same future if it doesn&apos;t learn from the Paris chaos.",
+   "opening": "EXCLUSIVE: The top House Republican overseeing Europe policy is blaming the riots roiling French cities on mass migration, and warning the U.S. could soon follow suit. Rep. Keith Self, R-Texas, told Fox News Digital that he was not surprised by the violent demonstrations across France — and moreover, argued they were a long time coming. \"They've been allowing this to happen for years and years, so they are reaping what they sowed,\" Self said. \"We're also trying to get a handle on our mass migration consequences, just like France should have done years ago. That's why I say this is a lesson to America. We are watching the future of America in France and the U.K., frankly.\" Self is the chairman of the Subcommittee on Europe in the House Foreign Affairs Committee. He is also a co-founder alongside Rep. Chip Roy, R-Texas, of the Sharia-Free America Caucus. VIOLENT FAR-LEFT RIOTS IN FRANCE ARE 'CHILLING WARNING' FOR AMERICANS AT HOME, MIKE JOHNSON SAYS Democrats have criticized the group as Islamophobic, and it's been condemned by groups like the U.S. Council of Muslim Organizations. But Self doubled down on his beliefs, suggesting France's growing Muslim population is at least partially responsible for the riots. \"They've got, what, 7% now are Muslims in France? And, you know, when you reach that percentage — and very concentrated in some large cities — that gives you the tipping point that everybody talks about,\" he argued. Islam is the second-most popular religion in metropolit",
+   "published": "2026-10-20T09:28:06-04:00",
+   "link": "https://www.foxnews.com/politics/torched-cars-ransacked-businesses-anti-sharia-crusader-warns-france-civil-war-could-imported-us",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_191-about-charges-convicted": [
+     "what",
+     "know"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Iran, Taunting Trump Over Gas Prices, Braces for Aftermath of Midterm Elections",
+   "dek": "The midterm elections appear to be a factor for both sides in the war as President Trump weighs his next steps.",
+   "opening": "",
+   "published": "2026-10-20T09:01:54+00:00",
+   "link": "https://www.nytimes.com/2026/10/20/us/politics/iran-trump-midterm-elections.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Fox News Power Rankings: Trump country at a crossroads",
+   "dek": "Rural voters are wavering on the GOP as cost of living, unemployment and AI data centers reshape the political landscape in heartland states.",
+   "opening": "Republicans have had their share of good and bad election nights this century, but they’ve usually been able to count on the heartland. Once evenly divided, rural voters have become substantially more Republican over the last two decades. Nearly two-thirds of these voters backed President Trump in the 2024 election. REPUBLICANS FACE BRUTAL MIDTERM HEADWINDS. SIX FORCES COULD HELP THEM DEFY HISTORY. Today, just under half of rural voters say they’ll support the GOP again in November. Like other groups, rural Americans are concerned about paying the bills. Nineteen percent said the rising cost of living is their biggest economic problem in a recent survey , with gas and energy costs not far behind. The Trump administration has, in part, tried to counter those anxieties by talking about job growth and the AI boom, but rural voters are frustrated about those issues too. Less than a quarter of rural voters say the economy is in good shape, and unemployment is a focal point: 8% called a lack of jobs and unemployment their biggest economic issue, and only 28% thought there were good or excellent job opportunities in their communities. DAVID MARCUS: ON THE GROUND IN MIDDLE AMERICA, FOUR ISSUES WILL DECIDE THE SENATE, AND NONE ARE AFFORDABILITY Data centers are part of the story too. Only 2% called it their biggest economic problem, but that number is larger than it seems. For 1 in 50 rural voters, data centers are a bigger problem than housing, the cost of living, or getting a job. T",
+   "published": "2026-10-20T09:00:03-04:00",
+   "link": "https://www.foxnews.com/politics/fox-news-power-rankings-trump-country-crossroads",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Saudi Arabia Delays Flagship Investment Summit to 2027 After Houthi Attacks",
+   "dek": "Saudi Arabia moves its flagship FII investment summit to 2027 as Houthi attacks disrupt travel and put the kingdom’s investment ambitions under scrutiny. Riyadh’s airport limits traffic following the attacks, adding to the challenges facing the gathering. Asian shares decline despite a recovery in US technology stocks. Renewed buying in chipmakers lifts the Nasdaq after the recent selloff and reduces demand for Treasuries as a haven. Oil fluctuates near a five-month peak, with Brent around $110 as Middle East risks and uncertainty over diesel supplies persist. Natixis Emerging Asia Senior Econ",
+   "opening": "",
+   "published": "2026-10-20T08:53:53+00:00",
+   "link": "https://www.youtube.com/watch?v=XizzOIcYKHM",
+   "videoId": "XizzOIcYKHM",
+   "publication": "the-close",
+   "source": "the-close",
+   "station": "RI",
+   "matched": {
+    "diesel": [
+     "diesel",
+     "brent"
+    ],
+    "iran": [
+     "houthi"
+    ]
+   },
+   "baseline": true,
+   "transcript": null
+  },
+  {
+   "title": "Saudi Arabia Delays Flagship Investment Summit to 2027 After Houthi Attacks",
+   "dek": "Saudi Arabia moves its flagship FII investment summit to 2027 as Houthi attacks disrupt travel and put the kingdom’s investment ambitions under scrutiny. Riyadh’s airport limits traffic following the attacks, adding to the challenges facing the gathering. Asian shares decline despite a recovery in US technology stocks. Renewed buying in chipmakers lifts the Nasdaq after the recent selloff and reduces demand for Treasuries as a haven. Oil fluctuates near a five-month peak, with Brent around $110 as Middle East risks and uncertainty over diesel supplies persist. Natixis Emerging Asia Senior Econ",
+   "opening": "",
+   "published": "2026-10-20T08:53:53+00:00",
+   "link": "https://www.youtube.com/watch?v=XizzOIcYKHM",
+   "videoId": "XizzOIcYKHM",
+   "publication": "odd-lots",
+   "source": "odd-lots",
+   "station": "RI",
+   "matched": {
+    "diesel": [
+     "diesel",
+     "brent"
+    ],
+    "iran": [
+     "houthi"
+    ]
+   },
+   "baseline": false,
+   "transcript": "data/press/transcripts/2026-10-20/odd-lots_XizzOIcYKHM.md"
+  },
+  {
+   "title": "Saudi Arabia Delays Flagship Investment Summit to 2027 After Houthi Attacks",
+   "dek": "Saudi Arabia moves its flagship FII investment summit to 2027 as Houthi attacks disrupt travel and put the kingdom’s investment ambitions under scrutiny. Riyadh’s airport limits traffic following the attacks, adding to the challenges facing the gathering. Asian shares decline despite a recovery in US technology stocks. Renewed buying in chipmakers lifts the Nasdaq after the recent selloff and reduces demand for Treasuries as a haven. Oil fluctuates near a five-month peak, with Brent around $110 as Middle East risks and uncertainty over diesel supplies persist. Natixis Emerging Asia Senior Econ",
+   "opening": "",
+   "published": "2026-10-20T08:53:53+00:00",
+   "link": "https://www.youtube.com/watch?v=XizzOIcYKHM",
+   "videoId": "XizzOIcYKHM",
+   "publication": "surveillance",
+   "source": "surveillance",
+   "station": "RI",
+   "matched": {
+    "diesel": [
+     "diesel",
+     "brent"
+    ],
+    "iran": [
+     "houthi"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "Saudi Arabia Delays Flagship Investment Summit to 2027 After Houthi Attacks",
+   "dek": "Saudi Arabia moves its flagship FII investment summit to 2027 as Houthi attacks disrupt travel and put the kingdom’s investment ambitions under scrutiny. Riyadh’s airport limits traffic following the attacks, adding to the challenges facing the gathering. Asian shares decline despite a recovery in US technology stocks. Renewed buying in chipmakers lifts the Nasdaq after the recent selloff and reduces demand for Treasuries as a haven. Oil fluctuates near a five-month peak, with Brent around $110 as Middle East risks and uncertainty over diesel supplies persist. Natixis Emerging Asia Senior Econ",
+   "opening": "",
+   "published": "2026-10-20T08:53:53+00:00",
+   "link": "https://www.youtube.com/watch?v=XizzOIcYKHM",
+   "videoId": "XizzOIcYKHM",
+   "publication": "bloomberg-streams",
+   "source": "bloomberg-streams",
+   "station": "RI",
+   "matched": {
+    "diesel": [
+     "diesel",
+     "brent"
+    ],
+    "iran": [
+     "houthi"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "Houthi Strikes Kill Dozens in Yemeni Desert Military Camp, Officials Say",
+   "dek": "The Iranian-backed militia struck with ballistic missiles deep in government-held central Yemen, in what appeared to be among the deadliest attacks of the renewed war.",
+   "opening": "",
+   "published": "2026-10-20T08:53:27+00:00",
+   "link": "https://www.nytimes.com/2026/10/19/world/middleeast/houthis-strike-yemen-military-camp.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran",
+     "houthi"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "DOJ sends grand jury subpoenas to Philadelphia DA Krasner after judge's referral, sources say",
+   "dek": "Grand jury subpoenas target Philadelphia District Attorney Larry Krasner&apos;s office after a federal judge referred him to the DOJ for investigation.",
+   "opening": "The Justice Department sent grand jury subpoenas to Democratic Philadelphia District Attorney Larry Krasner's office in recent days, Fox News has learned. Two sources briefed on the subpoenas say they are related to potential obstruction of justice relating to the handling of cases before federal judges. The sources said the subpoenas came as a result of a federal judge referring Krasner and his top deputy to the DOJ for possible criminal investigation. Krasner's office did not immediately respond to a request for comment. The DOJ declined to comment. FEDERAL JUDGE REFERS PHILADELPHIA DA LARRY KRASNER TO DOJ FOR POSSIBLE CRIMINAL INVESTIGATION Reports of the subpoenas come more than a month after U.S. District Judge Paul Diamond referred Krasner and his deputy, Matthew Stiegler, to the DOJ, saying evidence uncovered in a murder conviction case could constitute false statements, perjury, obstruction of justice and conspiracy. Neither man has been charged. DELETED EMAIL DETAILS ALLEGED TRUMP-TARGETING PUSH INSIDE LETITIA JAMES’ OFFICE: ‘FIND AND PURSUE CRIMES’ Diamond also disqualified Krasner and Stiegler from the case but declined to disqualify the entire DA's office. The judge alleged that Krasner and Stiegler sought to pressure prosecutors into presenting a false narrative to the court and that Krasner warned of \"consequences\" if staff alerted the court to an internal conflict. BIDEN-ERA FEDERAL PROSECUTOR HIT WITH CRIMINAL INVESTIGATION REFERRAL OVER ALLEGED FALSE STATEMEN",
+   "published": "2026-10-20T08:49:16-04:00",
+   "link": "https://www.foxnews.com/politics/doj-sends-grand-jury-subpoenas-philadelphia-da-krasner-after-judges-referral-sources-say",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_1996-castro-charged-commit": [
+     "charged",
+     "conspiracy",
+     "murder"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Iran regime under pressure as rebel groups escalate attacks in volatile southeast",
+   "dek": "A coalition of armed rebel groups is stepping up attacks against Iranian regime forces in the country&apos;s volatile southeast, raising questions about Tehran&apos;s grip on the region.",
+   "opening": "A new coalition of Iranian opposition groups in the restive southeastern provinces of Sistan and Baluchistan and Kerman in the Islamic Republic have launched a string of armed attacks against the clerical regime in the region. The six strikes claimed by the coalition known as the People’s Fighters Front (JMM) have contributed to instability in the provinces, raising pressing questions about whether armed resistance against the clerical regime in Tehran will spread and if the regime can retain control over Sistan and Baluchistan, which is a majority Iranian Sunni province. Iran is largely a Shiite Muslim country, and the minority Iranian Sunni population has faced discrimination over the decades. Sistan and Baluchistan is the second largest of the 31 Iranian provinces. MOJTABA KHAMENEI DEFIES ‘MALICIOUS’ ATTACKS AS US ARMY ZEROES IN ON IRAN’S 350,000 TROOPS Mardo Soghom, an Iran expert who has written extensively about the Islamic Republic, told Fox News Digital, \"The Sunni unrest can stretch the regime's military and internal security capabilities and have a psychological impact on its forces, in addition to what they experienced during the 40-day operation by the U.S. and Israel . The armed groups would not be able to establish control of the south-east, but they can seriously weaken the regime's control.\" He added, \"Whether these forces are receiving assistance from the Islamic Republic's adversaries — being that the Gulf Arab states or even Israel and the U.S. — remains an",
+   "published": "2026-10-20T07:51:48-04:00",
+   "link": "https://www.foxnews.com/world/iran-regime-under-pressure-rebel-groups-escalate-attacks-volatile-southeast",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran",
+     "tehran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump announces $8B bailout for farmers to cover diesel cost surge amid attacks on global supply",
+   "dek": "President Donald Trump announced the $8 billion Harvest Fuel Relief program at a Kansas rally to offset rising diesel costs for farmers during harvest season.",
+   "opening": "President Donald Trump announced an $8 billion Harvest Fuel Relief payment to farmers this harvest season to offset rising diesel costs and other increased input expenses amid disruptions to the global energy supply caused by attacks from Iran and its terrorist proxies in the Middle East. \"And some more goodies — you know, I always heard that when you're president, you have a little bit of an advantage, and I sort of see why now, actually, I sort of see why: Tonight, I'm also pleased to announce that the Department of Agriculture will be launching a new Harvest Fuel Relief program , providing our farmers with $8 billion in support to offset diesel costs during this harvest season,\" Trump said at a rally at the Heartland Credit Union Arena in Park City, Kansas, near Wichita, stumping for Sen. Roger Marshall, R-Kan. \"And Roger Marshall is the leader who fought for that to happen. Roger got it to happen. Good job, Roger.\" USDA CREDITS TRUMP TRADE DEALS AS AGRICULTURAL DEFICIT SHRINKS, FARM SECTOR GAINS GROUND Trump compared this farmer bailout fund to the $12 billion Farmer Bridge Assistance (FBA) program given earlier this year and the total of $28 billion given to farmers in his first administration, including $12 billion before the 2018 midterms. \"And when the Republicans win, we will pass even more funding for our farmers,\" Trump continued. \"We love our farmers. \"I just gave the farmers $12 billion, and in my first term, I gave them $28 billion, if you remember. And that cam",
+   "published": "2026-10-20T07:38:45-04:00",
+   "link": "https://www.foxbusiness.com/energy/trump-announces-8b-bailout-farmers-cover-diesel-cost-surge-amid-attacks-global-supply",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "diesel"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "tariffs": [
+     "trade deal"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_191-about-charges-convicted": [
+     "know",
+     "leader"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Talarico skips Bernie Sanders rally in Texas, campaigns separately as Senate race heats up",
+   "dek": "James Talarico held a Fort Worth rally while Bernie Sanders headlined a separate El Paso event promoting his Texas Senate bid against Ken Paxton.",
+   "opening": "Democratic Texas Senate candidate James Talarico skipped a Monday night rally headlined by Sen. Bernie Sanders , I-Vt., in El Paso, instead holding campaign events hundreds of miles away in North Texas as his closely watched race against Republican Attorney General Ken Paxton enters its final weeks. Sanders appeared at the Abraham Chavez Theatre alongside former Rep. Beto O'Rourke and Democratic Reps. Greg Casar and Veronica Escobar as early voting began ahead of the Nov. 3 midterm elections. Talarico, meanwhile, held a rally at North Crowley High School in Fort Worth as part of his \"Clear Eyes, Full Hearts\" campaign tour, following an earlier campaign stop in Denton. JAMES TALARICO RESURFACES AFTER EXTENDED ABSENCE AS HIS CAMPAIGN PUSHES BACK Fox News Digital reached out to Talarico's campaign for comment on why the candidate held a separate event instead of campaigning with the other Democrats, who used the El Paso event to promote his Senate bid and criticize Republican campaign spending. \"They have spent, so far, $368 million just against one man, the next senator from the state of Texas, James Talarico. That's how desperate, how scared and how panicked they are right now,\" O'Rourke told supporters. DEMOCRATS SEE NEW CHANCES TO FLIP RED STATES — BUT A $400M GOP SPENDING ADVANTAGE COULD DERAIL THEIR PLANS Casar also expressed support for Talarico, telling the crowd that electing him would help advance Democrats' legislative priorities. Sanders, who did not mention Talarico",
+   "published": "2026-10-20T07:29:54-04:00",
+   "link": "https://www.foxnews.com/politics/talarico-skips-bernie-sanders-rally-texas-campaigns-separately-senate-race-heats",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "tx-sen": [
+     "talarico",
+     "paxton",
+     "texas senate"
+    ],
+    "midterms": [
+     "midterm",
+     "senate race",
+     "early voting"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump’s Push for Deals With Russia Powers His Frustration With Ukraine",
+   "dek": "The series of recent steps by the president that seem to favor Vladimir Putin reflect his intensifying desire to normalize the relationship with Moscow even if it means further undercutting Ukraine.",
+   "opening": "",
+   "published": "2026-10-20T07:19:14+00:00",
+   "link": "https://www.nytimes.com/2026/10/19/us/politics/trump-russia-deals.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "even",
+     "ukraine"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "DOJ charges 28 with voting crimes. And, TikTok ignored staff's child safety concerns",
+   "dek": "The Justice Department has charged 28 people in California with voting crimes as Election Day nears. And, TikTok staff raised child safety concerns with executives, who failed to act, court records show.",
+   "opening": "The Justice Department has charged 28 people in California with voting crimes as Election Day nears. And, TikTok staff raised child safety concerns with executives, who failed to act, court records show. (Image credit: Imen Ben Youssef / Hans Lucas)",
+   "published": "2026-10-20T07:04:49-04:00",
+   "link": "https://www.npr.org/2026/10/20/g-s1-148877/up-first-newsletter-california-elections-doj-midterms-trump-tiktok",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_x_california-charged-election-feds": [
+     "charged",
+     "election",
+     "california"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Midwest pro-Trump state could hold key to Republicans' midterm hopes",
+   "dek": "Tom Emmer warns Iowa GOP supporters that turnout will decide whether House Republicans keep their majority as three districts face tough races.",
+   "opening": "DES MOINES, Iowa — House Republicans are pinning hopes of keeping their majority on a state that President Donald Trump won by roughly 13 points in November 2024. And while Iowa has leaned red in recent years, Republicans are now finding themselves defending three of its four congressional districts as polls give Democrats more hope by the day that the key to a blue wave runs through the Midwest. But Republicans are dismissing public perception surveys as a political cudgel used by the media and the left to discourage GOP voters, while insisting the results will come down to one thing. \"Nobody knows what's going to happen on November 3. But I'm here to tell you, if our people show up, we win. If our people don't show up … then we're going to be scratching and clawing to hang on to every inch that we've got,\" House Majority Whip Tom Emmer, R-Minn., told a room of GOP supporters in Dubuque, Iowa, on Thursday. MEDIA NARRATIVE PREDICTING BLUE WAVE IN KEY BATTLEGROUND STATE NOT MESHING WITH LOCAL REPUBLICANS: 'FIRED UP' Fox News Digital joined Emmer and several other House Republicans on a two-district swing in Iowa late last week. The No. 3 House GOP leader spent his afternoon at an event for congressional candidate Joe Mitchell in Iowa’s 2nd Congressional District, followed by a fundraiser for Rep. Zach Nunn, R-Iowa, in Des Moines in the evening. At both events, he argued that polling showing Democrats with a growing advantage was incorrect, but he and others are still warning t",
+   "published": "2026-10-20T07:00:47-04:00",
+   "link": "https://www.foxnews.com/politics/midwest-pro-trump-state-could-hold-key-republicans-midterm-hopes",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm",
+     "polling"
+    ],
+    "obj_x_191-400-convicted-cult": [
+     "leader",
+     "left"
+    ],
+    "obj_x_191-about-charges-convicted": [
+     "what",
+     "leader"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump puts fraudsters on notice with $25M whistleblower program offering cash for tips that deliver",
+   "dek": "President Donald Trump and Vice President JD Vance will unveil a $25 million fraud whistleblower program offering up to $30,000 for tips leading to convictions.",
+   "opening": "EXCLUSIVE - President Donald Trump is putting cash behind his crackdown on taxpayer fraud, preparing to offer Americans rewards for tips that help bring fraudsters to justice. Trump and Vice President JD Vance will unveil a $25 million Fraud Whistleblower Incentive Program (WHIP) during a Tuesday afternoon announcement with the Task Force to Eliminate Fraud in the Oval Office, a White House official told Fox News Digital. WHIP will offer eligible tipsters up to $30,000 if their information leads to a successful fraud conviction or a significant federal enforcement action, the official said. TRUMP'S WAR ON FRAUD EXPANDS AS TREASURY LAUNCHES NEW SITE WITH WHISTLEBLOWER INCENTIVES Trump also plans to present independent journalist Nick Shirley with a $10,000 check for his work exposing suspected fraud in Minnesota, according to the official. \"Every day, President Trump’s Task Force to Eliminate Fraud is zeroing in on the rampant abuse of taxpayer dollars and giving Americans the accountability they deserve. This administration has zero tolerance for individuals who steal from Americans,\" White House spokeswoman Lauren Bis told Fox News Digital. EXCLUSIVE: NICK SHIRLEY FIRES BACK AT MINNESOTA CRITICS: 'NUMBERS DON'T LIE, AND CONVICTIONS DON'T LIE' The Justice Department will administer the new program, and Americans will be able to submit tips through fraud.gov, the official said. The initiative aims to encourage both independent journalists and everyday Americans to flag suspect",
+   "published": "2026-10-20T06:01:04-04:00",
+   "link": "https://www.foxnews.com/politics/trump-puts-fraudsters-notice-25m-whistleblower-program-offering-cash-tips-deliver",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Voters prepare to weigh-in on Trump's economy as costs continue to surge",
+   "dek": "Gas prices surged 9.1% in September as consumer prices rose 3.7% annually, putting Trump&apos;s promise to lower costs to the test before midterms.",
+   "opening": "While Americans prepare to cast their ballots for who should control Congress and their local governments, the cost of filling a gas tank, paying rent and buying a home is becoming a defining test of the economy leading up to the 2026 midterms. The latest inflation report underscores the challenge facing President Donald Trump and Republicans as they campaign on the economy and the vow to improve conditions for American consumers. Trump returned to the White House promising to lower costs and is now campaigning for GOP candidates in key races — but the reality is something quite different. With Election Day two weeks away, rising prices are testing whether voters feel like Republicans have done enough to improve the economy and their financial well-being. AMERICAN-MADE GOODS ALSO GOT MORE EXPENSIVE UNDER TRUMP TARIFFS, NEW RESEARCH FINDS And that pressure showed up in the latest inflation report, which found consumer prices rose 3.7% over the past year and 0.6% in September alone. The Consumer Price Index (CPI) tracks the prices households pay for a broad range of goods and services, from food and gasoline to housing and medical care. Gasoline was a major driver, with its index jumping 9.1% for the month. But the gas to fill up the tank is not the only fuel cost putting pressure on households. The diesel used to power trucks, farm equipment and freight trains is also surging, which has raised the cost of moving groceries, packages and building materials — another charge that ",
+   "published": "2026-10-20T06:00:43-04:00",
+   "link": "https://www.foxnews.com/politics/voters-prepare-weigh-trumps-economy-costs-continue-surge-2-weeks-before-midterms",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "diesel",
+     "gasoline"
+    ],
+    "tariffs": [
+     "tariff"
+    ],
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Ilhan Omar's sister questioned by feds after dramatic DC home raid",
+   "dek": "Ilhan Omar&apos;s older sister Sahra Noor was questioned by federal investigators in connection with the immigration fraud probe following the DHS raid.",
+   "opening": "EXCLUSIVE: Rep. Ilhan Omar 's older sister was questioned by federal investigators last week in relation to an immigration fraud probe into the congresswoman, Fox News Digital has learned. Three sources familiar with the investigation said Sahra Noor voluntarily spoke with the investigators after the high-profile Monday morning raid on the residence Omar shares with her husband in Washington, D.C. It is not clear the scope of the conversation Noor had with investigators. Like Omar, Noor came to the United States as a child fleeing the civil war in Somalia. She currently lives in Kenya, according to her LinkedIn page, but has been in the United States promoting her new book, \"Salt in the Snow: A Somali Immigrant Story.\" The House lawmaker's sister canceled a Minnesota stop on the book tour last week amid the fallout of the raid and the ensuing interview with authorities. ILHAN OMAR'S SISTER SKIPS BOOK TOUR EVENT AMID WEEK OF CHAOS FOLLOWING RAID ON PROGRESSIVE'S DC HOME The book event, which was scheduled for Thursday, Oct. 15, 2026, at the University of Minnesota Rochester, was promoted online by Garden Party Books, a local bookstore that listed itself as a \"proud supporter\" of the event alongside the university and the Rochester Public Library. A representative from Garden Party Books told Fox News Digital last week that the event was canceled because Noor had a \"family emergency.\" It is now revealed that last week she was questioned by federal investigators. Omar’s D.C. hom",
+   "published": "2026-10-20T05:00:33-04:00",
+   "link": "https://www.foxnews.com/politics/ilhan-omars-sister-questioned-feds-after-dramatic-dc-home-raid",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_california-charged-election-feds": [
+     "fraud",
+     "feds"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Top Trump ally warns Republican Party 'dead' if it loses key voting bloc ahead of midterms",
+   "dek": "A top Senate Republican warns the GOP could be &quot;dead as a party&quot; if working-class voters abandon Republicans over economy and gas price woes.",
+   "opening": "A top Senate Republican warned that the same voting bloc that has propelled the GOP to power over the last decade is at risk of turning its back on the party during this election cycle. For decades, White, working-class voters often aligned themselves with the Democratic Party , giving Democrats a stranglehold on Congress until the 1990s and often favoring the Democratic candidate atop the presidential ticket. President Donald Trump’s entrance onto the political scene and victory in 2016 solidified a shift that was years in the making, giving Republicans a strong base of working-class support. But with the state of the economy, Sen. Bernie Moreno, R-Ohio, a top ally of Trump’s on Capitol Hill, warned that the GOP’s steady base could head for the exits. FOX NEWS POLL: SQUEEZED BY COSTS, FRUSTRATED VOTERS TURN TO THE DEMOCRATS \"This is the whole deal,\" Moreno told Fox News Digital. \"It's the whole deal. If we don't hang on to those working-class voters, we're dead as a party. That's why I say with no hyperbole, if President Trump hadn’t won in 2016, the Republican Party would be dead. Because the Republican Party had abandoned working-class Americans.\" \"Ironically, the Democrats abandoned working Americans, and there was a void — President Trump filled it,\" he continued. \"That's why he won.\" Trump has consistently performed highly with White, working-class voters each time he has run for office, scoring between 66% and 67% of their vote between 2016 and 2024, according to a var",
+   "published": "2026-10-20T05:00:29-04:00",
+   "link": "https://www.foxnews.com/politics/top-trump-ally-warns-republican-party-dead-loses-key-voting-bloc-ahead-midterms",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Morning news brief",
+   "dek": "Trump presses to find an end to the war in Ukraine while courting Russia, campaigning reaches fever pitch with Election Day two weeks away, DOJ charges 28 people in California with voting crimes.",
+   "opening": "Trump presses to find an end to the war in Ukraine while courting Russia, campaigning reaches fever pitch with Election Day two weeks away, DOJ charges 28 people in California with voting crimes.",
+   "published": "2026-10-20T04:50:27-04:00",
+   "link": "https://www.npr.org/2026/10/20/nx-s1-6003501/morning-news-brief",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "ukraine"
+    ],
+    "obj_x_california-charged-election-feds": [
+     "election",
+     "california"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Paris Protests Erupt Over High Fuel Costs & Trump Cuts Diesel Deal with Russia | The Daily Show",
+   "dek": "Paris is burning, Trump is back to kissing Putin’s ass, and there’s a new war to blame for bank-breaking gas prices. Jon Stewart examines the headlines, including the protests that literally set Paris on fire while President Macron enjoyed a Celine Dion concert. Plus, American allegiances in the Russia-Ukraine war are called into question as Trump signs a diesel deal worth billions with Putin, and Jon gets some key players on the phone to work out why Ukraine is having trouble accessing Elon Musk’s Starlink cell service. #DailyShow #Paris #Russia #Starlink 0:00 - Jon Stewart's TDS Welcome 0:25",
+   "opening": "",
+   "published": "2026-10-20T04:39:40+00:00",
+   "link": "https://www.youtube.com/watch?v=JjI3TM__A5o",
+   "videoId": "JjI3TM__A5o",
+   "publication": "daily-show",
+   "source": "daily-show",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "diesel"
+    ],
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "ukraine"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "Rogers argues El-Sayed is vulnerable with 2 traditionally Democratic blocs as Obama heads to Michigan",
+   "dek": "Mike Rogers argues Abdul El-Sayed may lose Black and Jewish voters in Michigan&apos;s Senate race during a Sean Hannity town hall on key demographics.",
+   "opening": "Republicans made their pitch to Michigan voters at a Fox News town hall Monday night, with GOP Senate nominee Mike Rogers arguing Democrat Abdul El-Sayed is vulnerable among Black and Jewish voters as one of the nation's most closely watched Senate races enters its final two weeks. Fox News host Sean Hannity also spoke with Republican gubernatorial nominee Rep. John James and House GOP Conference Chair Lisa McClain, R-Mich., as the candidates sought to tie Michigan Democrats to government spending, socialism and the party's progressive wing ahead of Nov. 3. Early on in the night, Rogers argued that his opponent, El-Sayed, could underperform among a handful of key demographics that traditionally support Democratic candidates, presenting political opportunities for Republicans. EL-SAYED GRILLED ON PIKER, ISRAEL AND SOCIALIST TIES AFTER MIKE ROGERS SKIPS SENATE DEBATE Hannity pressed Rogers about El-Sayed's past criticism of former President Barack Obama, whom El-Sayed described as \"not the right choice\" to advance a progressive agenda following Obama's 2012 re-election. \"He is dismissive in Detroit. We have just dozens of Black pastors that we have talked to, neighborhood leaders in the city of Detroit that we’ve talked to. They’re looking for a change,\" Rogers said. Notably, Obama is scheduled to campaign with El-Sayed in Detroit on Oct. 24 and has released a video urging voters to support the Democratic nominee. ROGERS WARNS MICHIGAN VOTERS AGAINST EL-SAYED’S ‘EXTREME’ AGENDA",
+   "published": "2026-10-20T04:00:32-04:00",
+   "link": "https://www.foxnews.com/politics/rogers-argues-el-sayed-vulnerable-traditionally-democratic-blocs-obama-heads-michigan",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "senate race"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "David Corn - Trump’s Man Crush on Putin & “How Russia Won” | The Daily Show",
+   "dek": "Best-selling author and Washington bureau chief for Mother Jones, David Corn, sits down with Jon Stewart to discuss his latest book, \"How Russia Won: Donald Trump, Vladimir Putin, and the Fight for America.\" They talk about Trump’s fixation on teaming up with Vladimir Putin, how Trump’s “man crush” on Putin drove him to sign a diesel fuel deal with Russia in spite of the war in Ukraine, Putin embodying Trump’s dream of wealth with full authority, and how Trump employs the theory of “big f**ks small.” #DailyShow #Russia #Trump #Putin Subscribe to The Daily Show: https://www.youtube.com/channel/",
+   "opening": "",
+   "published": "2026-10-20T03:30:34+00:00",
+   "link": "https://www.youtube.com/watch?v=IRUhdhS29Vc",
+   "videoId": "IRUhdhS29Vc",
+   "publication": "daily-show",
+   "source": "daily-show",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "diesel"
+    ],
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "ukraine"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "Trump Rallies Red States Amid Fears About G.O.P. Voter Enthusiasm as Midterms Near",
+   "dek": "The president’s swing is taking him to states including South Carolina and Kansas that were not seen as competitive just a few months ago.",
+   "opening": "",
+   "published": "2026-10-20T02:37:48+00:00",
+   "link": "https://www.nytimes.com/2026/10/19/us/politics/trump-midterm-rally-red-states.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Is Trump Getting Ready to Trade Ukraine for Iran?",
+   "dek": "As the president eases pressure on Russia, he is moving toward a foreign policy with no major postwar precedent: pursuing America&#8217;s interests at the expense of its allies, writes Aaron MacLean.",
+   "opening": "Who are you going to believe: the Trump administration, or your lying eyes? Evidence accumulates by the day that President Donald Trump, feeling political pressure over high diesel prices (which are largely a consequence of the war in Iran) and further incensed by Ukrainian president Volodymyr Zelensky&#8217;s refusal to stop his attacks on Russian refineries, is aligning with Russia. The immediate goals of this alignment certainly look like they are to lower prices by allowing the purchase of Russian fuel (or at least look like every effort to reduce prices is being made before the midterms) and to pressure the Ukrainians into a peace deal&#8212;on terms that Kyiv would consider a surrender. The list goes on. The Trump administration has also waived new punitive measures passed by Congress to pressure Russia. It has reportedly imposed restrictions on Ukraine military&#8217;s use of digital tools provided by Elon Musk&#8217;s SpaceX (as claimed by the Ukrainians but generally denied by the administration). And the Trump administration may even be withholding some of the early warnings Ukrainians previously received from the U.S. on Russian ballistic missile launches (ditto). News broke on Sunday that during their October 9 phone call, Vladimir Putin pitched Trump on a trilateral meeting with China&#8217;s Xi Jinping to discuss ending the war in Ukraine, potentially on the sidelines of an upcoming multilateral summit being held in scenic Shenzhen. Trump appears not to have rej",
+   "published": "2026-10-20T01:38:00+00:00",
+   "link": "https://www.thefp.com/p/is-trump-getting-ready-to-trade-ukraine-for-russia",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "diesel": [
+     "diesel",
+     "refiner",
+     "russian fuel"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "even",
+     "ukraine"
+    ],
+    "obj_thepresi_congress-counter-decision-outrages": [
+     "russian",
+     "congress"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Melania Trump Announces White House Women’s Health Initiative",
+   "dek": "The effort comes as Republicans are struggling to win over female voters two weeks before the midterm elections.",
+   "opening": "",
+   "published": "2026-10-20T01:10:10+00:00",
+   "link": "https://www.nytimes.com/2026/10/19/us/politics/melania-trump-women-health.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thepresi_aimed-executive-health-improving": [
+     "women",
+     "health"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump Kills Hegseth's Firing Squad Livestream & What's in Guilfoyle's Burn Book? | The Daily Show",
+   "dek": "Ronny Chieng and Daily Show writer Jason O. Gilbert discuss Trump pulling the plug on Pete Hegseth's push for a livestreamed execution of the Fort Hood shooter, new (and now former) White House Press Secretary Katie Zacharia's \"lawyer\" controversy, reports that ousted ambassador Kimberly Guilfoyle has a \"burn book\" that could damage the Trump family, and how a rogue AI agent deleted an entire season of an upcoming Swedish reality show. Plus, the pair looks at how Democrats Jon Ossoff and James Talarico are running circles around their MAGA midterm opponents, and Ronny reveals how he broke his ",
+   "opening": "",
+   "published": "2026-10-20T01:08:44+00:00",
+   "link": "https://www.youtube.com/watch?v=A9OuNrlbENw",
+   "videoId": "A9OuNrlbENw",
+   "publication": "daily-show",
+   "source": "daily-show",
+   "station": "LI",
+   "matched": {
+    "tx-sen": [
+     "talarico"
+    ],
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "Gilbert Bigio, Haitian Tycoon Linked to Gangs, Dies at 91",
+   "dek": "Reportedly the wealthiest man in the poorest country in the Western Hemisphere, Gilbert Bigio was sanctioned for ties to criminal gangs. He was 91.",
+   "opening": "",
+   "published": "2026-10-20T00:34:01+00:00",
+   "link": "https://www.nytimes.com/2026/10/19/world/americas/gilbert-bigio-dead.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "russia-sanctions": [
+     "sanction"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Inside France’s Night of Terror",
+   "dek": "&#8216;My apartment door was shaking from the blows they were landing. . . . They managed to get into the entryway by hammering away at it; they even left a trace of blood and smashed the mailboxes,&#8217; writes Nora Bussigny.",
+   "opening": "&#8220;You bourgeois bitch, we&#8217;re going to rape you!&#8221; That is what young French protesters shouted at Rapha&#235;lle, a young Parisian mother, after she tried to stop them from looting the small shop below her apartment on Saturday. As she spoke with me on Monday, her voice trembled. I saw her relive the civil war&#8211;like scenes that all of France has just watched unfold. The demonstration began at 2 p.m. on Saturday, when protesters gathered to chant against the uncertain future of high school students, rising fuel prices, and falling purchasing power. By late afternoon, they had been eclipsed by hordes of rioters: thousands of mostly young people, dressed in black, faces masked, storming into shops across the country to loot and steal whatever they could, from Sephora&#8217;s Huda Beauty palettes to brand-new Foot Locker sneakers. Ross Douthat. Abigail Shrier. Douglas Murray. Niall Ferguson. Coleman Hughes. Caitlin Flanagan. Nellie Bowles. Arthur Brooks. Kat Rosenfield. Tyler Cowen. The voices you trust, all in one place. For a limited time only, subscribe for 20% off The Free Press . Subscribe now As the sun went down, a parallel riot emerged in Limoges, a city in west-central France known for its porcelain. There, around 6 p.m., they set the city hall ablaze. Cars on fire, buildings dilapidated, broken glass on every major street: The apocalyptic sight of Paris has left its residents traumatized. Rapha&#235;lle, who was in her apartment with her husband and",
+   "published": "2026-10-19T22:57:31+00:00",
+   "link": "https://www.thefp.com/p/inside-frances-night-of-terror",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "diesel": [
+     "fuel price"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The French Teen Maimed During School Unrest by Tear Gas Grenade",
+   "dek": "The police’s treatment of the student last month sheds light on how a wave of school unrest evolved into national protests that spilled into widespread riots on Saturday.",
+   "opening": "",
+   "published": "2026-10-19T22:20:21+00:00",
+   "link": "https://www.nytimes.com/2026/10/19/world/europe/france-protests-violence-police-response.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_thejusti_alleged-california-doj-kills": [
+     "teen",
+     "school"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Cult Leader Convicted of Mass Murder by Court in Kenya",
+   "dek": "Paul Nthenge Mackenzie told his doomsday followers in a remote forest to fast for salvation. He faced trial after hundreds of bodies were exhumed.",
+   "opening": "",
+   "published": "2026-10-19T21:57:02+00:00",
+   "link": "https://www.nytimes.com/2026/10/19/world/africa/kenya-cult-deaths-paul-mackenzie-court-ruling.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_x_191-400-convicted-cult": [
+     "leader",
+     "doomsday",
+     "cult",
+     "followers",
+     "convicted"
+    ],
+    "obj_x_191-about-charges-convicted": [
+     "kenya",
+     "cult",
+     "leader",
+     "convicted",
+     "murder"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "DOJ Charges 28 California Residents With Voting-Related Crimes Amid Trump’s Voter Fraud Push",
+   "dek": "The effort by the Trump administration comes as it wages a broader fight with California officials over voter rolls.",
+   "opening": "",
+   "published": "2026-10-19T21:49:41+00:00",
+   "link": "https://www.nytimes.com/2026/10/19/us/politics/doj-california-voting-crimes-trump-midterms.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_x_california-charged-election-feds": [
+     "fraud",
+     "california"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Evening Wire: Feds CRACK DOWN on California Voter Fraud & French President Leaves Country Amid Riots",
+   "dek": "Federal agents crack down on voter fraud in California, Trump announces the construction of a new golf course in D.C., and Macron leaves the country as France burns. I’m Georgia Howe with Daily Wire Executive Editor John Bickley. It’s Monday, October 19th, and this is Evening Wire. Get the facts first with Evening Wire. - - - Ep. 3150 - - - Wake up with new Morning Wire merch: https://bit.ly/4lIubt3 - - - Today’s Sponsor: Lean - LEAN is a doctor-developed, non-prescription weight-loss supplement designed to support weight loss in three ways: helping convert stored fat into energy, helping main",
+   "opening": "",
+   "published": "2026-10-19T21:30:38+00:00",
+   "link": "https://www.youtube.com/watch?v=S1kCl4UP3Ps",
+   "videoId": "S1kCl4UP3Ps",
+   "publication": "shapiro",
+   "source": "shapiro",
+   "station": "RP",
+   "matched": {
+    "obj_x_california-charged-election-feds": [
+     "fraud",
+     "california",
+     "feds"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "JD Vance declines to endorse Netanyahu despite Trump's strong backing",
+   "dek": "Vice President JD Vance said he will not weigh in on Israel&apos;s upcoming election after Trump threw his support behind Netanyahu&apos;s reelection bid.",
+   "opening": "Vice President JD Vance declined to endorse Israeli Prime Minister Benjamin Netanyahu's reelection bid, saying he intends to stay out of Israel's election despite President Donald Trump throwing his support behind the Israeli leader. During an interview Monday with Mark Halperin on \" 2WAY Tonight ,\" Vance said his focus remains on U.S. candidates ahead of the midterms, Politico reported . \"The president has the most effective endorsement in American or international political history,\" Vance said. \"I endorse American candidates , and that’s where I’m focused on in the midterms. So I’m not getting involved in Israeli elections.\" OMAR RAID DRAWS OMINOUS WARNING FROM VANCE AS HE BLASTS PROGRESSIVE REP'S 'RAGE' TOWARD AMERICA However, Vance made clear that his decision should not be interpreted as opposition to Netanyahu. \"I’m not anti-endorsing him. I’m not pro-endorsing him. I’m not getting involved in Israeli elections,\" the vice president added. The comments come one day after Trump gave Netanyahu his \"Complete and Total Endorsement\" in a lengthy Truth Social post, praising the prime minister as a key U.S. ally and partner in confronting Iran . \" Bibi Netanyahu has been a Great Warrior Prime Minister, and an even greater Partner for Peace in combatting the Islamic Republic of Iran,\" Trump wrote. TRUMP SAYS NETANYAHU NEEDS TO BE RE-ELECTED, OR ELSE US WILL HAVE TO 'FINISH THE JOB’ AGAINST IRAN ALONE Trump said Netanyahu had remained strong despite intense political pressure. \"",
+   "published": "2026-10-19T20:45:41-04:00",
+   "link": "https://www.foxnews.com/politics/jd-vance-declines-endorse-netanyahu-despite-trumps-strong-backing",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "‘EVACUATE NOW’: Iran Defense Minister’s DIRE WARNING of MASS US CASUALTIES! | The Kyle Kulinski Show",
+   "dek": "Support The Show On Patreon!: https://www.patreon.com/seculartalk Subscribe to Krystal Kyle & Friends On Substack!: https://krystalkyleandfriends.substack.com Join our Discord!: https://discord.gg/teyN4ce Follow Kyle on Twitter: http://www.twitter.com/kylekulinski \"The first time I ever really listened to Kyle Kulinski’s show was in the back of a cab last summer. The driver had his phone hooked up through the stereo and was pumping out an episode through the car speakers — loudly, as if looking to convert a captive audience. “Do you like Kyle Kulinski?” The driver, Ahmed, was a recent immigran",
+   "opening": "",
+   "published": "2026-10-19T20:45:35+00:00",
+   "link": "https://www.youtube.com/watch?v=mlkgWMB6PVg",
+   "videoId": "mlkgWMB6PVg",
+   "publication": "secular-talk",
+   "source": "secular-talk",
+   "station": "LP",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "Republicans Barely Mention Trump in Political Ads Ahead of the Midterms",
+   "dek": "Only a small fraction of recent G.O.P. broadcast and streaming ads mention the president, according to a Times analysis of ad data.",
+   "opening": "",
+   "published": "2026-10-19T20:35:14+00:00",
+   "link": "https://www.nytimes.com/2026/10/19/us/politics/trump-midterms-republican-political-ads.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Mahmoud Khalil Appeals to Supreme Court to Halt Deportation",
+   "dek": "Mr. Khalil had recently graduated from Columbia when he was arrested by ICE agents and became the face of the Trump administration’s crackdown on pro-Palestinian demonstrations.",
+   "opening": "",
+   "published": "2026-10-19T20:31:52+00:00",
+   "link": "https://www.nytimes.com/2026/10/19/us/politics/supreme-court-mahmoud-khalil-deportation.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_activist-admin-appeals-court": [
+     "palestinian",
+     "mahmoud",
+     "khalil",
+     "appeals",
+     "supreme"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "‘BLOODBATH’: GOP Pollster Says MAGA IS F*CKED For Midterms | The Kyle Kulinski Show",
+   "dek": "Support The Show On Patreon!: https://www.patreon.com/seculartalk Subscribe to Krystal Kyle & Friends On Substack!: https://krystalkyleandfriends.substack.com Join our Discord!: https://discord.gg/teyN4ce Follow Kyle on Twitter: http://www.twitter.com/kylekulinski \"The first time I ever really listened to Kyle Kulinski’s show was in the back of a cab last summer. The driver had his phone hooked up through the stereo and was pumping out an episode through the car speakers — loudly, as if looking to convert a captive audience. “Do you like Kyle Kulinski?” The driver, Ahmed, was a recent immigran",
+   "opening": "",
+   "published": "2026-10-19T20:15:23+00:00",
+   "link": "https://www.youtube.com/watch?v=emf8CY4D4q0",
+   "videoId": "emf8CY4D4q0",
+   "publication": "secular-talk",
+   "source": "secular-talk",
+   "station": "LP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "Australian Lawmaker Helen Haines Injured After Attack, Prime Minister Says",
+   "dek": "A suspect is in custody and the country’s counterterrorism team was activated after Helen Haines, 65, was struck by a car outside her office.",
+   "opening": "",
+   "published": "2026-10-19T20:08:21+00:00",
+   "link": "https://www.nytimes.com/2026/10/19/world/australia/helen-haines-mp-attacked-wangaratta-australia.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_x_australian-charged-driver-federal": [
+     "australian",
+     "lawmaker"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "María Corina Machado on Venezuela’s Future and Her Relationship With the Trump Administration",
+   "dek": "Blocked from entering her country, Venezuela’s opposition leader spoke with The Times about her efforts to return and her relationship with the Trump administration.",
+   "opening": "",
+   "published": "2026-10-19T19:09:33+00:00",
+   "link": "https://www.nytimes.com/2026/10/19/world/americas/maria-corina-machado-venezuela-trump.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "venezuela": [
+     "venezuela"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump escalates clash with Zelenskyy as Russia continues deadly attacks on Ukraine",
+   "dek": "The war of words between President Trump and Ukraine's Volodymyr Zelenskyy reached another fever pitch on Monday. Trump again excoriated the embattled Ukrainian leader, putting more pressure on Zelenskyy than on the man in Moscow who started this war, Vladimir Putin. The president's comments come after the U.S. has limited a key technology that Ukraine relies on. Nick Schifrin reports.",
+   "opening": "",
+   "published": "2026-10-19T18:55:00-04:00",
+   "link": "https://www.pbs.org/newshour/show/trump-escalates-clash-with-zelenskyy-as-russia-continues-deadly-attacks-on-ukraine",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "ukraine"
+    ],
+    "obj_x_russia-sanctions-support-urges": [
+     "zelenskyy",
+     "russia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "U.S. must put pressure on Russia so Putin ends the war, Ukrainian official says",
+   "dek": "As Ukraine and Russia trade attacks, President Trump has exempted Russia from sanctions, widening his rift with Ukrainian President Zelenskyy. To discuss the latest developments, Geoff Bennett spoke with Denys Sienik, Ukraine's Deputy Ambassador to the U.S.",
+   "opening": "",
+   "published": "2026-10-19T18:50:35-04:00",
+   "link": "https://www.pbs.org/newshour/show/u-s-must-put-pressure-on-russia-so-putin-ends-the-war-ukrainian-official-says",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "russia-sanctions": [
+     "sanction"
+    ],
+    "obj_thepresi_against-russia-sanctions-trump": [
+     "sanctions",
+     "russia"
+    ],
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "sanctions",
+     "ukraine"
+    ],
+    "obj_thepresi_citing-hold-interest-into": [
+     "russia",
+     "sanctions"
+    ],
+    "obj_x_russia-sanctions-support-urges": [
+     "zelenskyy",
+     "sanctions",
+     "russia"
+    ],
+    "obj_thepresi_before-days-effect-most": [
+     "russia",
+     "sanctions"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "A new poll shows what voters are thinking 2 weeks out from Election Day",
+   "dek": "Midterm election day is just over two weeks away. What are some numbers on the mind of voters?",
+   "opening": "Midterm election day is just over two weeks away. What are some numbers on the mind of voters?",
+   "published": "2026-10-19T18:35:59-04:00",
+   "link": "https://www.npr.org/2026/10/19/nx-s1-6007856/a-new-poll-shows-what-voters-are-thinking-2-weeks-out-from-election-day",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm",
+     "poll shows"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Ohio becomes midterm battleground after years of Republican wins",
+   "dek": "In recent presidential elections, Ohio has become a reliably Republican state. But in this year's midterms, it's once again a battleground. The races for governor and U.S. Senate are both seen as toss-ups by The Cook Political Report, and there are a handful of competitive House districts. Liz Landers reports on how national issues are affecting Ohio voters as they prepare to head to the polls.",
+   "opening": "",
+   "published": "2026-10-19T18:35:56-04:00",
+   "link": "https://www.pbs.org/newshour/show/ohio-becomes-midterm-battleground-after-years-of-republican-wins",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_astate_allowing-eligibility-executive-governor": [
+     "ohio",
+     "governor"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Tamara Keith and Carrie Dann on Trump's approval rating hitting a record low",
+   "dek": "NPR's Tamara Keith and Carrie Dann of the Cook Political Report with Amy Walter join Geoff Bennett to discuss the latest political news, including a new poll putting President Trump's approval rating at a record low, the amount of money being spent on Senate races, Trump escalating his feud with Ukraine's president and Trump's attempts to remake Washington.",
+   "opening": "",
+   "published": "2026-10-19T18:30:45-04:00",
+   "link": "https://www.pbs.org/newshour/show/tamara-keith-and-carrie-dann-on-trumps-approval-rating-hitting-a-record-low",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "senate race"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Saudi Arabia Postpones Its FII Investment Event After Houthi Attacks",
+   "dek": "The Future Investment Initiative, a centerpiece of Saudi efforts to diversify its economy from its reliance on the energy industry, was set to begin next week.",
+   "opening": "",
+   "published": "2026-10-19T18:21:02+00:00",
+   "link": "https://www.nytimes.com/2026/10/19/business/saudi-investment-fii-houthis.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "houthi"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "DOJ charges 28 in California with voting crimes as election tensions escalate",
+   "dek": "The DOJ also filed an emergency request in federal court to stop California from processing ballots returned by people on the voter rolls the federal government says are \"likely noncitizens.\"",
+   "opening": "The DOJ also filed an emergency request in federal court to stop California from processing ballots returned by people on the voter rolls the federal government says are \"likely noncitizens.\" (Image credit: Frederic J. Brown)",
+   "published": "2026-10-19T18:10:06-04:00",
+   "link": "https://www.npr.org/2026/10/19/nx-s1-6007908/election-tensions-escalate-in-california-as-doj-charges-28-people-with-voting-crimes",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_thejusti_alleged-california-doj-kills": [
+     "california",
+     "noncitizens"
+    ],
+    "obj_x_california-charged-election-feds": [
+     "noncitizens",
+     "election",
+     "california"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Beleaguered Macron cites US-Iran war as factor in protests amid Trump, Vance criticism",
+   "dek": "French President Emmanuel Macron cited the Iran war and its impact on fuel and living costs while addressing the ongoing protests and unrest across France.",
+   "opening": "The embattled French President Emmanuel Macron on Sunday pinned some of the blame on the U.S. war against the terrorist regime in Iran for the widespread riots and looting unfolding across France . The controversial passage referring to the Iran war from his televised speech triggered criticism from some experts. Macron said that \"demonstrators expressed concern about the cost of living and the price of fuel. Both are driven by the conflict launched in the Persian Gulf, a conflict in which France has taken no part but whose consequences we are suffering.\" He added, \"I fully understand their concern. It is being expressed in several other European capitals as well. That is why I have taken several initiatives at the international level to secure our fuel and our gas and to act on energy markets.\" Macron announced that he would be traveling to the Gulf on a three-nation stop to discuss the energy crisis. FRANCE’S TEEN RIOTS TAKE EXPLOSIVE NEW TURN AS GOVERNMENT POINTS FINGER AT HARD LEFT It is unclear which demonstrators Macron signaled out for alleged concerns about fuel prices. Fox News Digital reported on Monday on the inner workings of the large-scale riots with many of the groups named seeking to abolish the free enterprise system. Macron stressed that those who have tried \"to bring down the republic will be held accountable.\" President Donald Trump told reporters on Monday that, \"I said the first time I met Macron, I said, you got to close up your borders. You're going to",
+   "published": "2026-10-19T18:02:58-04:00",
+   "link": "https://www.foxnews.com/world/beleaguered-macron-cites-us-iran-war-factor-protests-amid-trump-vance-criticism",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "fuel price"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "obj_thejusti_alleged-california-doj-kills": [
+     "teen",
+     "alleged"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "From France to Albania, how social unrest is fueling protests across Europe",
+   "dek": "Rising food and fuel prices, a lack of funding for education, the state of public services, and access to housing have created the perfect breeding ground for a fall of protests across Europe.",
+   "opening": "",
+   "published": "2026-10-19T18:00:53-04:00",
+   "link": "https://www.pbs.org/newshour/world/from-france-to-albania-how-social-unrest-is-fueling-protests-across-europe",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "fuel price"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Activist Mahmoud Khalil asks Supreme Court to let judges quickly reverse immigration detentions",
+   "dek": "Khalil, a lawful permanent U.S. resident, was detained by immigration authorities last year because of his participation in pro-Palestinian demonstrations at Columbia University in the spring of 2024.",
+   "opening": "",
+   "published": "2026-10-19T17:42:41-04:00",
+   "link": "https://www.pbs.org/newshour/politics/activist-mahmoud-khalil-asks-supreme-court-to-let-judges-quickly-reverse-immigration-detentions",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_activist-admin-appeals-court": [
+     "palestinian",
+     "activist",
+     "mahmoud",
+     "khalil",
+     "supreme"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "LARRY KUDLOW: No leading Dems have condemned Senator Elissa Slotkin’s Bolshevik weaponization of Republicans",
+   "dek": "Her point is to bring political prosecution to young Republican staffers working for the president",
+   "opening": "We all know Senator Elissa Slotkin hit a new low in lawfare and weaponization jihad, with her remarks at the University of Chicago last week, but what’s particularly interesting is that I can’t seem to find any leading Democrat who disagrees with Ms. Slotkin’s pledge to punish young people for working in a Republican administration. So far all the objections are coming from either Republican officials or Republican leaning commentators, but nothing from Democrats. Surprise, surprise. Don’t you remember President Biden and the party of democracy? And all those awful things that President Trump did undermining American democracy, which have basically come to nothing? Indeed, as Victor Davis Hanson writes in \"The Counterrevolution: The Fall and Rise of Donald Trump and the MAGA Movement,\" every time Jack Smith or Alvin Bragg or Letitia James or Fani Willis brought even crazier and crazier lawsuits against Mr. Trump, his popularity went up, not down. This was one of the key turning points in Mr. Trump’s successful comeback to win the 2024 election. So here goes Ms. Slotkin, not even pretending to bring legal charges, insisting that: \"I want to look at these signature cases and not just focus on the president, but on the people who enabled him. I want young people coming out of school to say, should I go work for the Trump administration? Like, that sounds fun, I might get an opportunity. I want them to be like, Lord, that might be buying myself a ton of problems that I don’t want",
+   "published": "2026-10-19T17:41:45-04:00",
+   "link": "https://www.foxbusiness.com/politics/larry-kudlow-no-leading-dems-have-condemned-senator-elissa-slotkins-bolshevik-weaponization-republicans",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_191-about-charges-convicted": [
+     "what",
+     "know"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Can Ukraine Win Without America?",
+   "dek": "Retired Australian major general Mick Ryan explains why Russia is struggling on the battlefield and why Trump may be Putin&#8217;s best hope.",
+   "opening": "Russia is losing ground in eastern Ukraine and suffering mounting casualties. So why is the White House handing Vladimir Putin a lifeline? Retired Australian Army major general Mick Ryan, author of the newsletter Futura Doctrina , joins Aaron MacLean to examine the links between the Iran war and Ukraine, and explains why Ukraine&#8217;s battlefield successes a&#8230; Read more",
+   "published": "2026-10-19T17:20:55+00:00",
+   "link": "https://www.thefp.com/p/can-ukraine-win-war-with-russia-without-america-putin-trump",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "ukraine"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump ENDORSES Flailing BIBI As Israel Plots IRAN WAR Restart",
+   "dek": "Krystal and Saagar discuss Trump endorsing flailing Bibi ahead of election. Sign Up For 30 Day Free BP Trial: https://breakingpoints.supercast.com/ Sign up for a PREMIUM Breaking Points subscriptions for full early access to uncut shows and LIVE AMAs with the hosts every week: https://breakingpoints.supercast.com/ Merch Store: https://shop.breakingpoints.com/ To listen to Breaking Points as a podcast, check them out on Apple and Spotify Apple: https://podcasts.apple.com/us/podcast/breaking-points-with-krystal-and-saagar/id1570045623 Spotify: https://open.spotify.com/show/4Kbsy61zJSzPxNZZ3PKbXl",
+   "opening": "",
+   "published": "2026-10-19T17:00:19+00:00",
+   "link": "https://www.youtube.com/watch?v=edp71QQyKjg",
+   "videoId": "edp71QQyKjg",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "Mass Casualty Base Fire What We Know About the Tragedy",
+   "dek": "Start your morning with 15 minutes of what matters — and none of what doesn’t. Welcome to Morning Wire. 🔔 Subscribe and catch new episodes every day at 5:00 AM CT 🚨 Tired of the ads? Join DailyWire+ today and watch Morning Wire, along with all of our live news coverage, ad-free: https://bit.ly/3RzxiDM #MorningWire #Podcast #JohnBickley #GeorgiaHowe #GlobalNews #News #Politics",
+   "opening": "",
+   "published": "2026-10-19T16:46:35+00:00",
+   "link": "https://www.youtube.com/shorts/5KFZFz_vMmQ",
+   "videoId": "5KFZFz_vMmQ",
+   "publication": "shapiro",
+   "source": "shapiro",
+   "station": "RP",
+   "matched": {
+    "obj_x_191-about-charges-convicted": [
+     "what",
+     "know"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "A Town Hall with Vice President J.D. Vance",
+   "dek": "Vice President J.D. Vance discusses ICE, the economy, corruption, midterms, and more in a CBS News town hall moderated by Tony Dokoupil.",
+   "opening": "CBS Evening News anchor Tony Dokoupil is joined by Vice President J.D. Vance in Flat Rock, Michigan, for a town hall, where they discuss Immigration and Customs Enforcement, the economy, corruption, midterms, and more. Read more",
+   "published": "2026-10-19T16:38:19+00:00",
+   "link": "https://www.thefp.com/p/a-town-hall-with-vice-president-jd-vance",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "DEVASTATING: JD Vance CONFRONTED By Iran War Widower",
+   "dek": "Krystal and Saagar discuss a devastating JD Vance townhall where he is confronted by a husband who lost his wife during the Iran war. Sign Up For 30 Day Free BP Trial: https://breakingpoints.supercast.com/ Sign up for a PREMIUM Breaking Points subscriptions for full early access to uncut shows and LIVE AMAs with the hosts every week: https://breakingpoints.supercast.com/ Merch Store: https://shop.breakingpoints.com/ To listen to Breaking Points as a podcast, check them out on Apple and Spotify Apple: https://podcasts.apple.com/us/podcast/breaking-points-with-krystal-and-saagar/id1570045623 Spo",
+   "opening": "",
+   "published": "2026-10-19T16:30:07+00:00",
+   "link": "https://www.youtube.com/watch?v=wo_h--MsMPA",
+   "videoId": "wo_h--MsMPA",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "Trump renews push to rename New Mexico ‘New America,’ touts higher home values and incomes",
+   "dek": "President Trump urged New Mexico to rename itself &quot;New America,&quot; claiming the change would boost home values and incomes, while taking a swipe at state elections.",
+   "opening": "President Donald Trump is giving New Mexico another branding pitch, urging the state to swap \"Mexico\" for \"America\" and suggesting the change could boost everything from home values to state pride. \"New Mexico should immediately change its name to New America. We are not Mexico, we are the United States of America!\" Trump wrote on Truth Social. \"The name would add great value and prestige to the State! Home Values and Incomes would rise, and you would be even prouder while saluting our beautiful American Flag!\" The president also worked in a swipe at the state’s elections. AFTER 'LAKE AMERICA,' TRUMP SUGGESTS A NEW NAME FOR THE STATE OF NEW MEXICO \"Maybe even the Crooked Elections, that New Mexico is known for, would become honest again!\" he wrote. MAP IT: DOJ ILLEGAL VOTING CRACKDOWN SWEEPS 17 STATES AS RAZOR-THIN ELECTIONS FACE SCRUTINY Trump offered no evidence in the post to support his election allegation or explain how a name change would increase property values and incomes. The suggestion revives an idea Trump floated last month, when he shared a map showing \"Mexico\" crossed out in red and replaced with \"America.\" The White House amplified that post on its official X account. TRUMP TAUNTS CANADA ON RENAMING LAKE ONTARIO THE 'LAKE AMERICA' AMID RISING BORDER TRADE RIFT Trump also pitched the change during remarks at the RNC Midterm Convention on Sept. 9, suggesting neighboring New Mexico become \"New America\" and claiming the idea was popular. \"You have a neighboring st",
+   "published": "2026-10-19T16:16:02-04:00",
+   "link": "https://www.foxnews.com/politics/trump-renews-push-rename-new-mexico-new-america-touts-higher-home-values-incomes",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "OIL SPIKES As Brutal Iran Hormuz Strikes COVERED UP",
+   "dek": "Krystal and Saagar discuss oil spikes as Hormuz strikes covered up. Sign up for a PREMIUM Breaking Points subscriptions for full early access to uncut shows and LIVE AMAs with the hosts every week: https://breakingpoints.supercast.com/ Merch Store: https://shop.breakingpoints.com/ To listen to Breaking Points as a podcast, check them out on Apple and Spotify Apple: https://podcasts.apple.com/us/podcast/breaking-points-with-krystal-and-saagar/id1570045623 Spotify: https://open.spotify.com/show/4Kbsy61zJSzPxNZZ3PKbXl Instagram: https://www.instagram.com/breakingpoints/ Facebook: https://www.face",
+   "opening": "",
+   "published": "2026-10-19T16:00:11+00:00",
+   "link": "https://www.youtube.com/watch?v=TvzYWtdJNVo",
+   "videoId": "TvzYWtdJNVo",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "diesel": [
+     "hormuz"
+    ],
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "Capitalism needs a newer pitch as socialism gains ground, economist says",
+   "dek": "Sam Gregg argues free market advocates must use moral language, not just policy talk, to counter democratic socialism&apos;s rising appeal in U.S. politics.",
+   "opening": "The rise of socialism in U.S. politics has free market advocates looking for new ways to make the case for preserving public support for capitalism and economic freedom. Sam Gregg, president of the American Institute for Economic Research, spoke with FOX Business and noted that in recent years there has been \"a rise on the political left of people who describe themselves as democratic socialists,\" adding that these \"are not people of your old-style Democratic Party, these are not your JFK Democrats.\" \"These are people who fundamentally disagree with the economic settings of the United States, and they want the U.S. to essentially look much more like what you might call a European social democracy,\" he said. \"Those of us who believe in free markets , I think, really need to improve our game in terms of persuading people on the right and the left as to why these bad policies don't work,\" Gregg said. JEFF BEZOS SAYS SOCIALISM GAINS TRACTION BECAUSE OF 'REAL AFFORDABILITY PROBLEMS,' LACK OF REAL SOLUTIONS \"People who are free marketers are very good at talking about policy… What we're less good at is invoking the type of moral language that is necessary if you want to persuade people,\" he said. \"People will be persuaded up to a point by economic arguments, but they're also wanting to know that they're doing the right thing, they're doing the good thing.\" Gregg said that free market arguments need to not only highlight economic prosperity and wealth that capitalism can deliver, bu",
+   "published": "2026-10-19T15:26:03-04:00",
+   "link": "https://www.foxbusiness.com/economy/capitalism-needs-newer-pitch-socialism-gains-ground-economist-says",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_191-about-charges-convicted": [
+     "what",
+     "know"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump vs. Conservatives calling James Talarico a gay freak #dailyshow",
+   "dek": "",
+   "opening": "",
+   "published": "2026-10-19T15:23:15+00:00",
+   "link": "https://www.youtube.com/shorts/Th8eKaRjfCA",
+   "videoId": "Th8eKaRjfCA",
+   "publication": "daily-show",
+   "source": "daily-show",
+   "station": "LI",
+   "matched": {
+    "tx-sen": [
+     "talarico"
+    ]
+   },
+   "baseline": false,
+   "transcript": null
+  },
+  {
+   "title": "Hungary and Poland defend tough migration policies as France reels from violent unrest",
+   "dek": "Violent unrest in France and Italy fuels the migration debate as Hungary and Poland defend tougher border controls and warn Europe against repeating past mistakes.",
+   "opening": "As images of burning cars and historic buildings in France and Italy ricochet across Europe, leaders in Hungary and Poland are seizing the moment, not to address the unrest, but to redefine the migration debate. Both Hungary and Poland have laid down markers on allowing migrants into their nations. Even to the point of being fined and sanctioned by the European Union courts for refusing to open their gates to unchecked immigration, in Hungary’s case under former Prime Minister Viktor Orbán, while Poland faced sanctions in 2025. Eurostat’s latest available figures show that in 2025 France had almost 10 million and Italy about 7 million foreign-born residents. Poland had roughly 1 million foreign-born residents, while Hungary had less than 700,000, with most born in other EU countries and in Poland’s case about half came from Ukraine. TRUMP, WALTZ LINK FRANCE RIOTS TO MASS IMMIGRATION AS THOUSANDS ARE ARRESTED Reacting to the violence, Hungary’s Prime Minister Péter Magyar posted on X that, \"Europe can count on Hungary.\" He stated that, \"In the face of this senseless destruction and unjustified violence, perhaps it is now clear to everyone why Hungary advocates the strictest possible approach to migration, and why we will not weaken our border protection or immigration policy under any pressure.\" It is a sentiment echoed by Magyar’s Polish counterpart, Donald Tusk posted : \"Poland will not repeat the mistakes of other European countries, nor will it pay for them,\" he wrote on S",
+   "published": "2026-10-19T15:21:01-04:00",
+   "link": "https://www.foxnews.com/world/hungary-poland-defend-tough-migration-policies-france-reels-from-violent-unrest",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "russia-sanctions": [
+     "sanction"
+    ],
+    "obj_thepresi_before-even-kick-related": [
+     "sanctions",
+     "even",
+     "ukraine"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Smithsonian screening dispute puts museum's commitment to diverse views on trial: 'Right kind of Black?'",
+   "dek": "The Smithsonian National Museum of African American History declined a public screening of &quot;White Guilt,&quot; a documentary by filmmaker Eli Steele.",
+   "opening": "FIRST ON FOX — A Black conservative filmmaker is challenging the Smithsonian to explain why his documentary questioning progressive views on race has yet to secure a public screening at its African American history museum, which has previously showcased films examining systemic racism. \"White Guilt,\" directed and co-produced by Eli Steele, is based on a book by his father, noted Black conservative academic Shelby Steele. The younger Steele, who is Black, Jewish and deaf, has drawn on his own experiences to challenge prevailing views on race and identity. The documentary argues that White guilt over America's racial history, along with fears of being labeled racist, has pushed institutions to prioritize racial identity over individual merit. The dispute comes as the Smithsonian faces mounting pressure from President Donald Trump and his administration over allegations of ideological bias in its portrayal of American history. The White House has accused the institution of promoting progressive narratives and threatened to restrict federal support, escalating a broader battle over whose perspectives are represented in the nation's museums. SMITHSONIAN AMERICA 250 EXHIBIT FEATURES 3X MORE LIBERAL ITEMS THAN CONSERVATIVE ONES Steele provided communications to Fox News Digital showing that the museum declined his proposed screening dates and offered him a private rental option instead. The filmmaker says the museum has yet to respond to his request for alternative dates for a publi",
+   "published": "2026-10-19T15:12:41-04:00",
+   "link": "https://www.foxnews.com/politics/smithsonian-screening-dispute-puts-museums-commitment-diverse-views-trial-right-kind-black",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_citing-hold-interest-into": [
+     "puts",
+     "national"
+    ],
+    "obj_x_russia-sanctions-support-urges": [
+     "support",
+     "puts"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Reporter’s Notebook: Senate sneaks in one last political play before voters have their say",
+   "dek": "Senate Republicans forced a vote on the Ratepayer Protection Act to curb data center utility costs, but Democrats call it a toothless political ploy.",
+   "opening": "In politics, you sometimes just do what you can. All 100 duly chosen and sworn U.S. senators understood why the Senate met for a week at the end of September. Yes there was the college sports bill. Yes there was the confirmation of Labor Secretary Keith Sonderling. Yes there was a big hearing with former special counsel Jack Smith. But you’d be badly mistaken if you thought both sides were really there to hammer out a package to bring down the cost of living for Americans. Don’t take my word for it. Take the word of the senators. REPORTER'S NOTEBOOK: A GUIDE TO THE COLLEGE SPORTS VOTE AND SENATE’S OHIO SHOWDOWN You are correct to say that Democrats blocked two bills that Republicans say voters really want. One was a measure to diminish the costs consumers pay for data centers and a plan to restrict stock trades by lawmakers. The latter bill even included a voter ID requirement – crucial to the GOP and its base. But Republican senators knew that Democrats wouldn’t accept these proposals. This was about politics. And Democratic senators wouldn’t accept any of the GOP’s legislative propositions, either. So let’s start with the Ratepayer Protection Act . Both sides know that voters are tripped out about AI and utterly losing it when it comes to data centers. An internal GOP memo in August revealed that the party was especially leery of what this meant for Sen. Jon Husted, R-Ohio Republican Ohio Gov. Mike DeWine appointed Husted to the Senate last year to succeed Vice President JD",
+   "published": "2026-10-19T15:07:35-04:00",
+   "link": "https://www.foxnews.com/politics/reporters-notebook-senate-sneaks-one-last-political-play-before-voters-have-their-say",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_191-about-charges-convicted": [
+     "what",
+     "know"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Republicans Are Vastly Outspending Democrats on Senate Races",
+   "dek": "With Republicans seen as less likely to hold their majority in the House, the party is focusing more on the battle for the Senate, where it is vastly outspending Democrats on ads.",
+   "opening": "",
+   "published": "2026-10-19T14:00:59+00:00",
+   "link": "https://www.nytimes.com/2026/10/19/us/politics/midterms-republican-spending-edge.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "senate race"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How a Trillion-Dollar Industry Launders Illegal Gold",
+   "dek": "The line between dirty and clean gold is an industry fiction. Wall Street and governments profit off gold from criminals, gangsters and those who exploit children.",
+   "opening": "",
+   "published": "2026-10-19T13:33:10+00:00",
+   "link": "https://www.nytimes.com/2026/10/19/world/africa/dirty-gold-industry-coverup-launder-madagascar.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Treasury identifies $270 million in suspicious activity tied to possible federal student aid fraud",
+   "dek": "The Treasury Department flagged $270 million in suspicious transactions tied to federal student aid fraud, including ghost student schemes.",
+   "opening": "The Treasury Department has identified approximately $270 million in suspicious financial activity potentially linked to fraud targeting federal student aid programs, the agency told FOX Business exclusively. Treasury’s Financial Crimes Enforcement Network (FinCEN) has referred the findings to federal investigators for further review. The referrals are part of the Trump administration’s broader effort to combat fraud and protect taxpayer dollars. \"Federal student aid is intended to expand educational opportunities, not line the pockets of fraudsters who steal from students pursuing their education and hardworking taxpayers,\" Treasury Secretary Scott Bessent wrote in a statement before its Monday public release. \"The Trump administration will not tolerate criminals who exploit government programs for personal gain. Treasury is working with financial institutions and law enforcement to identify these fraud schemes, recover stolen funds, and hold those responsible accountable.\" VANCE TASK FORCE UNCOVERS $22.2B IN SUSPECTED PANDEMIC-ERA LOAN FRAUD FinCEN issued an alert to financial institutions in July warning about fraud schemes involving federal student aid refunds. Schools and payment contractors often issue aid refunds electronically, with transaction descriptions that may include the word \"refund\" along with the school’s name or initials. The alert noted that criminals may move stolen aid through money mules, shell companies and fraudulent bank accounts to conceal the funds",
+   "published": "2026-10-19T12:56:51-04:00",
+   "link": "https://www.foxbusiness.com/politics/treasury-identifies-270-million-suspicious-activity-tied-possible-federal-student-aid-fraud",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ],
+    "tariffs": [
+     "refund"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump Is Pushing Ukraine to Surrender to Russia, Zelensky Says",
+   "dek": "President Volodymyr Zelensky said he didn’t want to believe that Washington wanted an end to the war at Ukraine’s expense. “But that’s how it looks,” he added.",
+   "opening": "",
+   "published": "2026-10-19T12:39:50+00:00",
+   "link": "https://www.nytimes.com/2026/10/19/world/europe/trump-zelensky-putin-ukraine-war.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "ukraine"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump administration commits up to $42M to revive stalled Northeast natural gas pipeline",
+   "dek": "The Energy Department is backing the proposed Constitution Pipeline with up to $42 million as developers seek to bring the Northeast natural gas project online by 2028.",
+   "opening": "The Trump administration is putting up to $42 million in federal funding behind efforts to revive a long-stalled natural gas pipeline connecting Pennsylvania's Marcellus Shale with energy markets in New York and the Northeast. The Department of Energy announced Monday that the funding, provided under Title III of the Defense Production Act, will support permitting and pre-construction work on the proposed Constitution Pipeline as the administration seeks to expand energy infrastructure and lower regional energy costs. Energy Secretary Chris Wright told FOX Business on Monday that the funding would help advance environmental and permitting work needed before construction can begin. \"The answer to high prices is more supply to push prices down,\" Wright said. \"The answer to get to the ragged edge of blackouts is more electric generation, more energy for home heating as well.\" TRUMP SAYS RUSSIA HAS AGREED TO DELIVER MILLIONS IN DIESEL FUEL AFTER ‘HIGHLY SUCCESSFUL DISCUSSION’ The proposed 125-mile pipeline would transport up to 650,000 dekatherms of natural gas per day from northeastern Pennsylvania into New York, connecting with existing interstate pipeline systems serving Northeast markets. Williams Companies, a U.S. energy infrastructure company, is targeting the fourth quarter of 2028 for the pipeline to enter service, pending regulatory approvals. Wright said the administration hopes construction can begin next spring, with the pipeline entering service in time for the winte",
+   "published": "2026-10-19T08:30:20-04:00",
+   "link": "https://www.foxbusiness.com/energy/trump-administration-commits-42m-revive-stalled-northeast-natural-gas-pipeline",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "diesel"
+    ],
+    "obj_x_russia-sanctions-support-urges": [
+     "support",
+     "russia"
+    ]
+   },
+   "baseline": false
+  }
+ ],
+ "log": []
+}
