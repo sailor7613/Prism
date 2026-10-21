@@ -1,9 +1,10 @@
-# Newsroom digest — 2026-10-20
+# Newsroom digest — 2026-10-21
 
-Register: 103 objects · this scan: 1 new, 0 seen again, 0 returned.
+Register: 107 objects · this scan: 4 new, 0 seen again, 0 returned.
 
-## Queued for drafting (0)
-- (nothing cleared the bar)
+## Queued for drafting (2)
+- **DOJ asks judge to block 20 , 000 ballots in California if demands not met** — ruling · ruled · holder: a federal court · formed 2026-10-21 · 13 outlets (peak 13) · `obj_afederal_000-asks-ballots-block`
+- **Borders on the absurd . California fights Trump lawsuit to set aside 20 , 000 ballots** — suit · sued · holder: the President · formed 2026-10-21 · 3 outlets (peak 3) · `obj_thepresi_000-absurd-aside-ballots`
 
 ## Permanence breaks (went silent while unresolved)
 - none today
@@ -12,7 +13,10 @@ Register: 103 objects · this scan: 1 new, 0 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods** — suit · sued · holder: the President · formed 2026-10-20 · 4 outlets (peak 4) · `obj_thepresi_canadian-challenging-files-food`
+- **Importer sues over $40M in cheese duties under 1930 tariff law** — suit · sued · holder: ? · formed 2026-10-21 · 4 outlets (peak 4) · `obj_x_1930-40m-cheese-duties`
+- **Borders on the absurd . California fights Trump lawsuit to set aside 20 , 000 ballots** — suit · sued · holder: the President · formed 2026-10-21 · 3 outlets (peak 3) · `obj_thepresi_000-absurd-aside-ballots`
+- **DOJ asks judge to block 20 , 000 ballots in California if demands not met** — ruling · ruled · holder: a federal court · formed 2026-10-21 · 13 outlets (peak 13) · `obj_afederal_000-asks-ballots-block`
+- **Beijing blasts US sanctions on 5 Chinese firms tied to ex - Google engineer** — tariff/sanction · imposed · holder: ? · formed 2026-10-21 · 6 outlets (peak 6) · `obj_x_beijing-blasts-chinese-engineer`
 
 ## Watching (35)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
