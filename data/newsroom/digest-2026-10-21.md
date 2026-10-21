@@ -1,9 +1,9 @@
 # Newsroom digest — 2026-10-21
 
-Register: 108 objects · this scan: 1 new, 0 seen again, 0 returned.
+Register: 113 objects · this scan: 5 new, 0 seen again, 0 returned.
 
-## Queued for drafting (1)
-- **OpenAI president urges AI safeguards as group he funds opposes regulation** — rule · ruled (agency) · holder: the President · formed 2026-10-21 · 3 outlets (peak 3) · `obj_thepresi_funds-group-openai-opposes`
+## Queued for drafting (0)
+- (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
 - none today
@@ -12,9 +12,13 @@ Register: 108 objects · this scan: 1 new, 0 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **OpenAI president urges AI safeguards as group he funds opposes regulation** — rule · ruled (agency) · holder: the President · formed 2026-10-21 · 3 outlets (peak 3) · `obj_thepresi_funds-group-openai-opposes`
+- **Supreme Court leaves block on Trump restrictions on transgender inmate medical care** — ruling · ruled · holder: a federal court · formed 2026-10-21 · 28 outlets (peak 28) · `obj_afederal_block-care-court-inmate`
+- **Supreme Court upholds pause on Trump anti - trans prison policy** — ruling · ruled · holder: a federal court · formed 2026-10-21 · 9 outlets (peak 9) · `obj_afederal_anti-court-pause-policy`
+- **Appeals Court Unanimously Strikes Down California No Vigilantes Act On Federal Grounds** — ruling · ruled · holder: a federal court · formed 2026-10-21 · 22 outlets (peak 22) · `obj_afederal_act-appeals-california-court`
+- **Sentenced to death at 17 , at 68 , quilt artist receives solo museum exhibition** — indictment · charged · holder: ? · formed 2026-10-21 · 7 outlets (peak 7) · `obj_x_artist-death-exhibition-museum`
+- **UK approves a natural gas project off Scotland despite environmental concerns** — vote · voted · holder: ? · formed 2026-10-21 · 5 outlets (peak 5) · `obj_x_approves-concerns-despite-environmental`
 
-## Watching (35)
+## Watching (38)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
 - **Former state senator sentenced to 16 months in child solicitation case** — indictment · charged · holder: the Senate · formed 2026-09-23 · 4 outlets (peak 4) · `obj_thesenat_case-child-former-months`
 - **CNN , MS NOW and Politico back at the White House after judge ordered Trump to lift ban** — ruling · ruled · holder: the House · formed 2026-09-24 · 18 outlets (peak 18) · `obj_thehouse_back-ban-cnn-house`

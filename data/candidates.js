@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-10-21T12:04:02.356Z · 15 legislative + 8 news (GDELT, 3d)
+// 2026-10-21T17:24:21.034Z · 15 legislative + 8 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1792584205151,
+    "ts": 1792603399071,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.777,
+      "salience": 0.776,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -262,11 +262,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1792584205151,
+    "ts": 1792603399071,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.767,
+      "salience": 0.766,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -519,11 +519,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1792584205150,
+    "ts": 1792603399070,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.732,
+      "salience": 0.731,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -1937,11 +1937,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1792584205151,
+    "ts": 1792603399071,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.731,
+      "salience": 0.73,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -2194,11 +2194,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1792584205150,
+    "ts": 1792603399071,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.723,
+      "salience": 0.722,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -2451,11 +2451,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1792584205150,
+    "ts": 1792603399071,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.661,
+      "salience": 0.66,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -3364,11 +3364,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1792584205151,
+    "ts": 1792603399071,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.62,
+      "salience": 0.619,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3892,11 +3892,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1792584205150,
+    "ts": 1792603399071,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.597,
+      "salience": 0.596,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4793,11 +4793,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1792584205150,
+    "ts": 1792603399071,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.404,
+      "salience": 0.403,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5692,11 +5692,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1792584205150,
+    "ts": 1792603399071,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.392,
+      "salience": 0.391,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6971,11 +6971,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1792584205151,
+    "ts": 1792603399071,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.311,
+      "salience": 0.31,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7891,11 +7891,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1792584205151,
+    "ts": 1792603399071,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.31,
+      "salience": 0.309,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -8801,11 +8801,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1792584205150,
+    "ts": 1792603399071,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.275,
+      "salience": 0.274,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9719,11 +9719,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1792584205150,
+    "ts": 1792603399071,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.232,
+      "salience": 0.231,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10599,11 +10599,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1792584205150,
+    "ts": 1792603399071,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.228,
+      "salience": 0.227,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11475,12 +11475,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_campaigns-injects-into",
     "source": "news",
-    "ts": 1792584242352,
+    "ts": 1792603461032,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.984,
+      "salience": 0.951,
       "articles": [
         {
           "title": "RNC Injects $50 Million Into Midterm Campaigns",
@@ -11581,12 +11581,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_canadian-challenging-files",
     "source": "news",
-    "ts": 1792584242350,
+    "ts": 1792603461029,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.934,
+      "salience": 0.901,
       "articles": [
         {
           "title": "New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods - Las Vegas Sun News",
@@ -11604,17 +11604,17 @@ window.PRISM_CANDIDATES = [
         },
         {
           "title": "New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods",
-          "url": "https://www.greeleytribune.com/2026/10/20/canada-tariffs-legality/",
-          "domain": "greeleytribune.com",
-          "seendate": "2026-10-21T01:15:00Z",
-          "image": "https://www.greeleytribune.com/wp-content/uploads/2026/10/Healthcare_Drug_Prices_6_36__8b4e13-1.jpg"
-        },
-        {
-          "title": "New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods",
           "url": "https://www.troyrecord.com/2026/10/20/canada-tariffs-legality/",
           "domain": "troyrecord.com",
           "seendate": "2026-10-21T01:15:00Z",
           "image": "https://www.troyrecord.com/wp-content/uploads/2026/10/Healthcare_Drug_Prices_6_36__8b4e13-1.jpg"
+        },
+        {
+          "title": "New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods",
+          "url": "https://www.greeleytribune.com/2026/10/20/canada-tariffs-legality/",
+          "domain": "greeleytribune.com",
+          "seendate": "2026-10-21T01:15:00Z",
+          "image": "https://www.greeleytribune.com/wp-content/uploads/2026/10/Healthcare_Drug_Prices_6_36__8b4e13-1.jpg"
         },
         {
           "title": "A New Jersey food importer files a lawsuit challenging Trump 50 % tariffs on Canadian goods",
@@ -11675,7 +11675,7 @@ window.PRISM_CANDIDATES = [
       ]
     },
     "title": "A New Jersey food importer files a lawsuit challenging Trump 50 % tariffs on Canadian goods",
-    "summary": "2026-10-21 lasvegassun.com: New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods - Las Vegas Sun News\n2026-10-21 lasvegassun.com: A New Jersey food importer files a lawsuit challenging Trump 50 % tariffs on Canadian goods - Las Vegas Sun News\n2026-10-21 greeleytribune.com: New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods\n2026-10-21 troyrecord.com: New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods\n2026-10-21 wral.com: A New Jersey food importer files a lawsuit challenging Trump 50 % tariffs on Canadian goods\n2026-10-21 clickondetroit.com: A New Jersey food importer files a lawsuit challenging Trump 50 % tariffs on Canadian goods",
+    "summary": "2026-10-21 lasvegassun.com: New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods - Las Vegas Sun News\n2026-10-21 lasvegassun.com: A New Jersey food importer files a lawsuit challenging Trump 50 % tariffs on Canadian goods - Las Vegas Sun News\n2026-10-21 troyrecord.com: New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods\n2026-10-21 greeleytribune.com: New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods\n2026-10-21 wral.com: A New Jersey food importer files a lawsuit challenging Trump 50 % tariffs on Canadian goods\n2026-10-21 clickondetroit.com: A New Jersey food importer files a lawsuit challenging Trump 50 % tariffs on Canadian goods",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -11687,12 +11687,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ban-court-supreme",
     "source": "news",
-    "ts": 1792584242351,
+    "ts": 1792603461031,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.871,
+      "salience": 0.838,
       "articles": [
         {
           "title": "Supreme Court agrees to review federal home distilling ban",
@@ -11793,12 +11793,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_blitz-campaign-farmer",
     "source": "news",
-    "ts": 1792584242350,
+    "ts": 1792603461029,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.799,
+      "salience": 0.766,
       "articles": [
         {
           "title": "Trump heads to Kansas to rally farmer votes in latest stop on midterm campaign blitz - Boston News , Weather , Sports",
@@ -11871,12 +11871,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_base-bets-competitive",
     "source": "news",
-    "ts": 1792584242352,
+    "ts": 1792603461032,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.796,
+      "salience": 0.762,
       "articles": [
         {
           "title": "Trump bets on his base to rescue Republicans in increasingly competitive races",
@@ -11949,12 +11949,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_approval-hits-low",
     "source": "news",
-    "ts": 1792584242352,
+    "ts": 1792603461032,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.717,
+      "salience": 0.408,
       "articles": [
         {
           "title": "Trump approval hits record low as midterms near : poll",
@@ -11990,53 +11990,11 @@ window.PRISM_CANDIDATES = [
           "domain": "fox4news.com",
           "seendate": "2026-10-18T17:30:00Z",
           "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/10/1280/720/gettyimages-2299378687-scaled.jpg?ve=1&tl=1"
-        },
-        {
-          "title": "Trump approval hits record low as midterms near : poll",
-          "url": "https://www.fox9.com/news/trump-approval-hits-record-low-midterms-near-poll",
-          "domain": "fox9.com",
-          "seendate": "2026-10-18T16:15:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/10/1280/720/gettyimages-2299378687-scaled.jpg?ve=1&tl=1"
-        },
-        {
-          "title": "Trump approval hits record low as midterms near : poll",
-          "url": "https://www.fox5dc.com/news/trump-approval-hits-record-low-midterms-near-poll",
-          "domain": "fox5dc.com",
-          "seendate": "2026-10-18T16:15:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/10/1280/720/gettyimages-2299378687-scaled.jpg?ve=1&tl=1"
-        },
-        {
-          "title": "Trump approval hits record low as midterms near : poll",
-          "url": "https://www.fox13news.com/news/trump-approval-hits-record-low-midterms-near-poll",
-          "domain": "fox13news.com",
-          "seendate": "2026-10-18T15:45:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/10/1280/720/gettyimages-2299378687-scaled.jpg?ve=1&tl=1"
-        },
-        {
-          "title": "Trump approval hits record low as midterms near : poll",
-          "url": "https://www.fox32chicago.com/news/trump-approval-hits-record-low-midterms-near-poll",
-          "domain": "fox32chicago.com",
-          "seendate": "2026-10-18T15:45:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/10/1280/720/gettyimages-2299378687-scaled.jpg?ve=1&tl=1"
-        },
-        {
-          "title": "Trump approval hits record low as midterms near : poll",
-          "url": "https://www.fox5ny.com/news/trump-approval-hits-record-low-midterms-near-poll",
-          "domain": "fox5ny.com",
-          "seendate": "2026-10-18T15:15:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/10/1280/720/gettyimages-2299378687-scaled.jpg?ve=1&tl=1"
-        },
-        {
-          "title": "Trump approval hits record low as midterms near : poll",
-          "url": "https://www.fox7austin.com/news/trump-approval-hits-record-low-midterms-near-poll",
-          "domain": "fox7austin.com",
-          "seendate": "2026-10-18T15:15:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/10/1280/720/gettyimages-2299378687-scaled.jpg?ve=1&tl=1"
         }
       ]
     },
     "title": "Trump approval hits record low as midterms near : poll",
-    "summary": "2026-10-19 fox10phoenix.com: Trump approval hits record low as midterms near : poll\n2026-10-18 fox29.com: Trump approval hits record low as midterms near : poll\n2026-10-18 fox2detroit.com: Trump approval hits record low as midterms near : poll\n2026-10-18 fox26houston.com: Trump approval hits record low as midterms near : poll\n2026-10-18 fox4news.com: Trump approval hits record low as midterms near : poll\n2026-10-18 fox9.com: Trump approval hits record low as midterms near : poll",
+    "summary": "2026-10-19 fox10phoenix.com: Trump approval hits record low as midterms near : poll\n2026-10-18 fox29.com: Trump approval hits record low as midterms near : poll\n2026-10-18 fox2detroit.com: Trump approval hits record low as midterms near : poll\n2026-10-18 fox26houston.com: Trump approval hits record low as midterms near : poll\n2026-10-18 fox4news.com: Trump approval hits record low as midterms near : poll",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -12048,12 +12006,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_aapi-adults-democrats",
     "source": "news",
-    "ts": 1792584242350,
+    "ts": 1792603461029,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.459,
+      "salience": 0.371,
       "articles": [
         {
           "title": "The Latest : Democrats gain ground with AAPI adults as trust in GOP fades , poll finds",
@@ -12082,18 +12040,11 @@ window.PRISM_CANDIDATES = [
           "domain": "idahostatejournal.com",
           "seendate": "2026-10-19T15:45:00Z",
           "image": "https://bloximages.chicago2.vip.townnews.com/idahostatejournal.com/content/tncms/assets/v3/editorial/1/2b/12ba801a-db24-54f1-8b57-aef6c8a640fb/6ad570b9799ae.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "The Latest : Democrats gain ground with AAPI adults as trust in GOP fades , poll finds",
-          "url": "https://www.nvdaily.com/associated_press_national/the-latest-democrats-gain-ground-with-aapi-adults-as-trust-in-gop-fades-poll-finds/article_c3afe7a5-eb23-5d64-aa0e-cae6ee5bd193.html",
-          "domain": "nvdaily.com",
-          "seendate": "2026-10-19T15:45:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/nvdaily.com/content/tncms/assets/v3/editorial/c/d8/cd84aa52-203b-5414-ba73-6a283e30b397/6ad5700e749fc.image.jpg?crop=1763%2C926%2C0%2C124"
         }
       ]
     },
     "title": "The Latest : Democrats gain ground with AAPI adults as trust in GOP fades , poll finds",
-    "summary": "2026-10-19 clickorlando.com: The Latest : Democrats gain ground with AAPI adults as trust in GOP fades , poll finds\n2026-10-19 yankton.net: The Latest : Democrats gain ground with AAPI adults as trust in GOP fades , poll finds\n2026-10-19 yakimaherald.com: The Latest : Democrats gain ground with AAPI adults as trust in GOP fades , poll finds\n2026-10-19 idahostatejournal.com: The Latest : Democrats gain ground with AAPI adults as trust in GOP fades , poll finds\n2026-10-19 nvdaily.com: The Latest : Democrats gain ground with AAPI adults as trust in GOP fades , poll finds",
+    "summary": "2026-10-19 clickorlando.com: The Latest : Democrats gain ground with AAPI adults as trust in GOP fades , poll finds\n2026-10-19 yankton.net: The Latest : Democrats gain ground with AAPI adults as trust in GOP fades , poll finds\n2026-10-19 yakimaherald.com: The Latest : Democrats gain ground with AAPI adults as trust in GOP fades , poll finds\n2026-10-19 idahostatejournal.com: The Latest : Democrats gain ground with AAPI adults as trust in GOP fades , poll finds",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -12105,12 +12056,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_could-election-final",
     "source": "news",
-    "ts": 1792584242353,
+    "ts": 1792603461032,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.365,
+      "salience": 0.332,
       "articles": [
         {
           "title": "The midterm election outcomes that could shape Trump final two years | HOT 96 | The Tri State # 1 Hit Music Station",
