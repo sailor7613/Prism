@@ -1,19 +1,18 @@
-# Newsroom digest — 2026-10-21
+# Newsroom digest — 2026-10-22
 
-Register: 115 objects · this scan: 2 new, 3 seen again, 0 returned.
+Register: 116 objects · this scan: 1 new, 1 seen again, 0 returned.
 
-## Queued for drafting (0)
-- (nothing cleared the bar)
+## Queued for drafting (1)
+- **Carney says Trump tariffs hurt Americans as US Embassy alleges Canadian interference** — tariff/sanction · imposed · holder: the President · formed 2026-10-22 · 4 outlets (peak 4) · `obj_thepresi_alleges-americans-canadian-carney`
 
 ## Permanence breaks (went silent while unresolved)
-- none today
+- **New Mexico judge tosses Timothy Busfield indictment , citing prosecutorial misconduct** — ruling · ruled · holder: a federal court · formed 2026-10-17 · 15 outlets (peak 24) · `obj_afederal_busfield-citing-indictment-judge` · silent 5d after 3 scans
 
 ## Returned after a break
 - none today
 
 ## New objects (all)
-- **Trumpadmin asks Supreme Court to lift halt on Big Bend border wall** — ruling · ruled · holder: a federal court · formed 2026-10-21 · 5 outlets (peak 5) · `obj_afederal_asks-bend-big-border`
-- **Dems sue to block Trump from usurping state authority in elections** — ruling · ruled · holder: the President · formed 2026-10-21 · 4 outlets (peak 4) · `obj_thepresi_authority-block-dems-elections`
+- **Carney says Trump tariffs hurt Americans as US Embassy alleges Canadian interference** — tariff/sanction · imposed · holder: the President · formed 2026-10-22 · 4 outlets (peak 4) · `obj_thepresi_alleges-americans-canadian-carney`
 
 ## Watching (40)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
