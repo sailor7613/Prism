@@ -23,10 +23,9 @@
   "Accruals stay accruals.",
   "Prism sees it through Readings."
  ],
- "builtAt": "2026-10-21T18:40:05.799Z",
+ "builtAt": "2026-10-22T18:30:43.066Z",
  "errors": [
-  "GDELT russia: gave up: https://api.gdeltproject.org/api/v2/doc/doc?query=russia%20(refinery%20OR%20urals%20OR%20%22oil%20exports%22%20OR%20tanker)&mode=timelinevol&format=json&timespan=90d",
-  "GDELT venezuela: gave up: https://api.gdeltproject.org/api/v2/doc/doc?query=venezuela%20(oil%20OR%20chevron%20OR%20pdvsa%20OR%20sanctions)&mode=timelinevol&format=json&timespan=90d"
+  "GDELT settlement: fetch failed"
  ],
  "realization": {
   "importsByOrigin": {
@@ -8549,7 +8548,7 @@
     }
    }
   },
-  "fetchedAt": "2026-10-21T18:37:42.634Z",
+  "fetchedAt": "2026-10-22T18:28:57.062Z",
   "column": "realization",
   "guard": "Flows do not score Z; they are the layer Z is scored from (PG01 §6.3.1).",
   "distillateImportsByOrigin": {
@@ -9484,18 +9483,10 @@
    "202607",
    "202608"
   ],
-  "fetchedAt": "2026-10-21T18:37:38.518Z",
+  "fetchedAt": "2026-10-22T18:28:52.891Z",
   "keyed": false,
   "errors": [
-   "Türkiye products 202601: HTTP 403",
-   "Türkiye products 202602: HTTP 403",
-   "Türkiye products 202603: HTTP 403",
-   "Türkiye products 202604: HTTP 403",
-   "Türkiye products 202605: HTTP 403",
-   "Türkiye products 202606: HTTP 403",
-   "Türkiye products 202607: HTTP 403",
    "Türkiye products 202608: HTTP 403",
-   "United States crude 202509: HTTP 403",
    "United States crude 202510: HTTP 403",
    "United States crude 202511: HTTP 403",
    "United States crude 202512: HTTP 403",
@@ -22910,6 +22901,136 @@
     "cmd": "products",
     "kt": 2.9,
     "usdM": 3.6
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Angola",
+    "partnerCode": 24,
+    "cmd": "crude",
+    "kt": 113.5,
+    "usdM": 59.5
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Brazil",
+    "partnerCode": 76,
+    "cmd": "crude",
+    "kt": 1178.4,
+    "usdM": 536.8
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Canada",
+    "partnerCode": 124,
+    "cmd": "crude",
+    "kt": 18919.1,
+    "usdM": 7398.6
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Guyana",
+    "partnerCode": 328,
+    "cmd": "crude",
+    "kt": 539,
+    "usdM": 244.4
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Iraq",
+    "partnerCode": 368,
+    "cmd": "crude",
+    "kt": 511.5,
+    "usdM": 221.4
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Kazakhstan",
+    "partnerCode": 398,
+    "cmd": "crude",
+    "kt": 424,
+    "usdM": 189.9
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Kuwait",
+    "partnerCode": 414,
+    "cmd": "crude",
+    "kt": 111.7,
+    "usdM": 49.1
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Libya",
+    "partnerCode": 434,
+    "cmd": "crude",
+    "kt": 233.6,
+    "usdM": 115.5
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Mexico",
+    "partnerCode": 484,
+    "cmd": "crude",
+    "kt": 1536.7,
+    "usdM": 625.8
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Nigeria",
+    "partnerCode": 566,
+    "cmd": "crude",
+    "kt": 781.9,
+    "usdM": 373.8
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Saudi Arabia",
+    "partnerCode": 682,
+    "cmd": "crude",
+    "kt": 1155.7,
+    "usdM": 513.4
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "UAE",
+    "partnerCode": 784,
+    "cmd": "crude",
+    "kt": 400,
+    "usdM": 183
+   },
+   {
+    "period": "2025-09",
+    "reporter": "United States",
+    "reporterCode": 842,
+    "partner": "Venezuela",
+    "partnerCode": 862,
+    "cmd": "crude",
+    "kt": 377.6,
+    "usdM": 146.8
    }
   ]
  },
@@ -24849,7 +24970,11 @@
      ],
      [
       "2026-10-21",
-      1.4808
+      1.4398
+     ],
+     [
+      "2026-10-22",
+      2.8414
      ]
     ]
    },
@@ -25211,7 +25336,19 @@
      ],
      [
       "2026-10-19",
-      0.2762
+      0.2362
+     ],
+     [
+      "2026-10-20",
+      0.2237
+     ],
+     [
+      "2026-10-21",
+      0.2468
+     ],
+     [
+      "2026-10-22",
+      0.3571
      ]
     ]
    },
@@ -25920,6 +26057,38 @@
      [
       "2026-10-10",
       0.1634
+     ],
+     [
+      "2026-10-15",
+      0.1438
+     ],
+     [
+      "2026-10-16",
+      0.1683
+     ],
+     [
+      "2026-10-17",
+      0.0776
+     ],
+     [
+      "2026-10-18",
+      0.1169
+     ],
+     [
+      "2026-10-19",
+      0.076
+     ],
+     [
+      "2026-10-20",
+      0.1189
+     ],
+     [
+      "2026-10-21",
+      0.0832
+     ],
+     [
+      "2026-10-22",
+      0.1824
      ]
     ]
    }
@@ -25931,7 +26100,7 @@
    "venezuela": "venezuela (oil OR chevron OR pdvsa OR sanctions)",
    "settlement": "(oil OR crude) (yuan OR petrodollar OR \"dollar settlement\" OR \"non-dollar\" OR invoicing)"
   },
-  "fetchedAt": "2026-10-21T18:40:05.794Z"
+  "fetchedAt": "2026-10-22T18:30:43.061Z"
  },
  "price": {
   "series": {
@@ -27711,7 +27880,7 @@
    }
   },
   "what": "The shadow: what the institutional stations read (PG01 §6.2c). Kept last.",
-  "fetchedAt": "2026-10-21T18:37:43.746Z",
+  "fetchedAt": "2026-10-22T18:28:58.461Z",
   "column": "price"
  }
 }
