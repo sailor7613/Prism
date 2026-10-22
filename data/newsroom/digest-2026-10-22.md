@@ -1,9 +1,9 @@
 # Newsroom digest — 2026-10-22
 
-Register: 122 objects · this scan: 5 new, 0 seen again, 0 returned.
+Register: 124 objects · this scan: 2 new, 2 seen again, 0 returned.
 
-## Queued for drafting (1)
-- **Federal judge orders Trump to sit for deposition in his defamation lawsuit against BBC** — suit · sued · holder: the President · formed 2026-10-22 · 11 outlets (peak 11) · `obj_thepresi_against-bbc-defamation-deposition`
+## Queued for drafting (0)
+- (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
 - **New Mexico judge tosses Timothy Busfield indictment , citing prosecutorial misconduct** — ruling · ruled · holder: a federal court · formed 2026-10-17 · 15 outlets (peak 24) · `obj_afederal_busfield-citing-indictment-judge` · silent 5d after 3 scans
@@ -12,13 +12,10 @@ Register: 122 objects · this scan: 5 new, 0 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **Powerful Democratic Virginia lawmaker Lucas is accused of leading a marijuana criminal conspiracy** — indictment · charged · holder: ? · formed 2026-10-22 · 5 outlets (peak 5) · `obj_x_accused-conspiracy-criminal-democratic`
-- **Federal judge orders Trump to sit for deposition in his defamation lawsuit against BBC** — suit · sued · holder: the President · formed 2026-10-22 · 11 outlets (peak 11) · `obj_thepresi_against-bbc-defamation-deposition`
-- **Does hearing laughter help orangutans learn ?** — hearing · compelled · holder: ? · formed 2026-10-22 · 3 outlets (peak 3) · `obj_x_does-hearing-help-laughter`
-- **Kissimmee Mayor Arrested , Charged with Grand Theft , Fraud** — indictment · charged · holder: ? · formed 2026-10-22 · 3 outlets (peak 3) · `obj_x_arrested-charged-fraud-grand`
-- **DOJ : Virginia state Sen . L . Louise Lucas charged with drug trafficking , money laundering** — indictment · charged · holder: the Justice Department · formed 2026-10-22 · 9 outlets (peak 9) · `obj_thejusti_charged-doj-drug-laundering`
+- **Calley Means , senior adviser to RFK Jr . at HHS , resigns from Trump administration** — appointment · personnel · holder: HHS · formed 2026-10-22 · 4 outlets (peak 4) · `obj_hhs_administration-adviser-calley-hhs`
+- **Zuckerberg strikes deal with Meta to stay in CA as billionaire tax vote looms** — agreement · agreed · holder: ? · formed 2026-10-22 · 3 outlets (peak 3) · `obj_x_billionaire-deal-looms-meta`
 
-## Watching (41)
+## Watching (42)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
 - **Former state senator sentenced to 16 months in child solicitation case** — indictment · charged · holder: the Senate · formed 2026-09-23 · 4 outlets (peak 4) · `obj_thesenat_case-child-former-months`
 - **CNN , MS NOW and Politico back at the White House after judge ordered Trump to lift ban** — ruling · ruled · holder: the House · formed 2026-09-24 · 18 outlets (peak 18) · `obj_thehouse_back-ban-cnn-house`

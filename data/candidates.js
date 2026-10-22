@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-10-22T17:21:28.545Z · 15 legislative + 8 news (GDELT, 3d)
+// 2026-10-22T21:46:36.265Z · 15 legislative + 12 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1792689641252,
+    "ts": 1792705541443,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.771,
+      "salience": 0.77,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -262,11 +262,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1792689641252,
+    "ts": 1792705541443,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.762,
+      "salience": 0.761,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -519,11 +519,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1792689641251,
+    "ts": 1792705541442,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.727,
+      "salience": 0.726,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -1937,11 +1937,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1792689641252,
+    "ts": 1792705541443,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.726,
+      "salience": 0.725,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -2194,11 +2194,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1792689641252,
+    "ts": 1792705541443,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.718,
+      "salience": 0.717,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -2451,11 +2451,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1792689641251,
+    "ts": 1792705541443,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.656,
+      "salience": 0.655,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -3364,11 +3364,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1792689641252,
+    "ts": 1792705541443,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.614,
+      "salience": 0.613,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3892,7 +3892,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1792689641252,
+    "ts": 1792705541443,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
@@ -4793,11 +4793,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1792689641252,
+    "ts": 1792705541443,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.399,
+      "salience": 0.398,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5692,11 +5692,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1792689641251,
+    "ts": 1792705541443,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.386,
+      "salience": 0.385,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6971,11 +6971,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1792689641252,
+    "ts": 1792705541443,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.306,
+      "salience": 0.305,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7891,7 +7891,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1792689641252,
+    "ts": 1792705541443,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
@@ -8801,11 +8801,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1792689641252,
+    "ts": 1792705541443,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.27,
+      "salience": 0.269,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9719,11 +9719,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1792689641251,
+    "ts": 1792705541443,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.227,
+      "salience": 0.226,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10599,11 +10599,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1792689641251,
+    "ts": 1792705541443,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.222,
+      "salience": 0.221,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11475,12 +11475,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_canadian-challenging-files",
     "source": "news",
-    "ts": 1792689688538,
+    "ts": 1792705596259,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.931,
+      "salience": 0.903,
       "articles": [
         {
           "title": "New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods",
@@ -11579,14 +11579,120 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_campaigns-injects-into",
+    "cid": "cand_news_could-election-final",
     "source": "news",
-    "ts": 1792689688541,
+    "ts": 1792705596259,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.801,
+      "salience": 0.897,
+      "articles": [
+        {
+          "title": "The midterm election outcomes that could shape Trump final two years",
+          "url": "https://www.pineandlakes.com/news/national/the-midterm-election-outcomes-that-could-shape-trumps-final-two-years",
+          "domain": "pineandlakes.com",
+          "seendate": "2026-10-22T05:15:00Z",
+          "image": "https://forum-communications-production-web.s3.us-west-2.amazonaws.com/brightspot/d2/e4/54402b09eb7910bb2dd97a5dd1d0/2026-10-19t100809z-1-lynxmpem9i0tx-rtroptp-4-usa-election-scenarios.JPG"
+        },
+        {
+          "title": "The midterm election outcomes that could shape Trump final two years",
+          "url": "https://www.jamestownsun.com/news/national/the-midterm-election-outcomes-that-could-shape-trumps-final-two-years",
+          "domain": "jamestownsun.com",
+          "seendate": "2026-10-22T05:15:00Z",
+          "image": "https://forum-communications-production-web.s3.us-west-2.amazonaws.com/brightspot/d2/e4/54402b09eb7910bb2dd97a5dd1d0/2026-10-19t100809z-1-lynxmpem9i0tx-rtroptp-4-usa-election-scenarios.JPG"
+        },
+        {
+          "title": "The midterm election outcomes that could shape Trump final two years",
+          "url": "https://www.newscenter1.tv/news/national/the-midterm-election-outcomes-that-could-shape-trumps-final-two-years",
+          "domain": "newscenter1.tv",
+          "seendate": "2026-10-22T04:45:00Z",
+          "image": "https://forum-communications-production-web.s3.us-west-2.amazonaws.com/brightspot/d2/e4/54402b09eb7910bb2dd97a5dd1d0/2026-10-19t100809z-1-lynxmpem9i0tx-rtroptp-4-usa-election-scenarios.JPG"
+        },
+        {
+          "title": "The midterm election outcomes that could shape Trump final two years",
+          "url": "https://www.bemidjipioneer.com/news/national/the-midterm-election-outcomes-that-could-shape-trumps-final-two-years",
+          "domain": "bemidjipioneer.com",
+          "seendate": "2026-10-22T04:15:00Z",
+          "image": "https://forum-communications-production-web.s3.us-west-2.amazonaws.com/brightspot/d2/e4/54402b09eb7910bb2dd97a5dd1d0/2026-10-19t100809z-1-lynxmpem9i0tx-rtroptp-4-usa-election-scenarios.JPG"
+        },
+        {
+          "title": "The midterm election outcomes that could shape Trump final two years",
+          "url": "https://www.grandforksherald.com/news/national/the-midterm-election-outcomes-that-could-shape-trumps-final-two-years",
+          "domain": "grandforksherald.com",
+          "seendate": "2026-10-22T04:00:00Z",
+          "image": "https://forum-communications-production-web.s3.us-west-2.amazonaws.com/brightspot/d2/e4/54402b09eb7910bb2dd97a5dd1d0/2026-10-19t100809z-1-lynxmpem9i0tx-rtroptp-4-usa-election-scenarios.JPG"
+        },
+        {
+          "title": "The midterm election outcomes that could shape Trump final two years",
+          "url": "https://www.capjournal.com/news/national/the-midterm-election-outcomes-that-could-shape-trumps-final-two-years",
+          "domain": "capjournal.com",
+          "seendate": "2026-10-22T04:00:00Z",
+          "image": "https://forum-communications-production-web.s3.us-west-2.amazonaws.com/brightspot/d2/e4/54402b09eb7910bb2dd97a5dd1d0/2026-10-19t100809z-1-lynxmpem9i0tx-rtroptp-4-usa-election-scenarios.JPG"
+        },
+        {
+          "title": "The midterm election outcomes that could shape Trump final two years",
+          "url": "https://www.wctrib.com/news/national/the-midterm-election-outcomes-that-could-shape-trumps-final-two-years",
+          "domain": "wctrib.com",
+          "seendate": "2026-10-22T04:00:00Z",
+          "image": "https://forum-communications-production-web.s3.us-west-2.amazonaws.com/brightspot/d2/e4/54402b09eb7910bb2dd97a5dd1d0/2026-10-19t100809z-1-lynxmpem9i0tx-rtroptp-4-usa-election-scenarios.JPG"
+        },
+        {
+          "title": "The midterm election outcomes that could shape Trump final two years",
+          "url": "https://www.postbulletin.com/news/national/the-midterm-election-outcomes-that-could-shape-trumps-final-two-years",
+          "domain": "postbulletin.com",
+          "seendate": "2026-10-22T03:45:00Z",
+          "image": "https://forum-communications-production-web.s3.us-west-2.amazonaws.com/brightspot/d2/e4/54402b09eb7910bb2dd97a5dd1d0/2026-10-19t100809z-1-lynxmpem9i0tx-rtroptp-4-usa-election-scenarios.JPG"
+        },
+        {
+          "title": "The midterm election outcomes that could shape Trump final two years",
+          "url": "https://www.superiortelegram.com/news/national/the-midterm-election-outcomes-that-could-shape-trumps-final-two-years",
+          "domain": "superiortelegram.com",
+          "seendate": "2026-10-22T03:45:00Z",
+          "image": "https://forum-communications-production-web.s3.us-west-2.amazonaws.com/brightspot/d2/e4/54402b09eb7910bb2dd97a5dd1d0/2026-10-19t100809z-1-lynxmpem9i0tx-rtroptp-4-usa-election-scenarios.JPG"
+        },
+        {
+          "title": "The midterm election outcomes that could shape Trump final two years",
+          "url": "https://www.parkrapidsenterprise.com/news/national/the-midterm-election-outcomes-that-could-shape-trumps-final-two-years",
+          "domain": "parkrapidsenterprise.com",
+          "seendate": "2026-10-22T03:30:00Z",
+          "image": "https://forum-communications-production-web.s3.us-west-2.amazonaws.com/brightspot/d2/e4/54402b09eb7910bb2dd97a5dd1d0/2026-10-19t100809z-1-lynxmpem9i0tx-rtroptp-4-usa-election-scenarios.JPG"
+        },
+        {
+          "title": "The midterm election outcomes that could shape Trump final two years",
+          "url": "https://www.dglobe.com/news/national/the-midterm-election-outcomes-that-could-shape-trumps-final-two-years",
+          "domain": "dglobe.com",
+          "seendate": "2026-10-22T03:30:00Z",
+          "image": "https://forum-communications-production-web.s3.us-west-2.amazonaws.com/brightspot/d2/e4/54402b09eb7910bb2dd97a5dd1d0/2026-10-19t100809z-1-lynxmpem9i0tx-rtroptp-4-usa-election-scenarios.JPG"
+        },
+        {
+          "title": "The midterm election outcomes that could shape Trump final two years",
+          "url": "https://www.perhamfocus.com/news/national/the-midterm-election-outcomes-that-could-shape-trumps-final-two-years",
+          "domain": "perhamfocus.com",
+          "seendate": "2026-10-22T03:15:00Z",
+          "image": "https://forum-communications-production-web.s3.us-west-2.amazonaws.com/brightspot/d2/e4/54402b09eb7910bb2dd97a5dd1d0/2026-10-19t100809z-1-lynxmpem9i0tx-rtroptp-4-usa-election-scenarios.JPG"
+        }
+      ]
+    },
+    "title": "The midterm election outcomes that could shape Trump final two years",
+    "summary": "2026-10-22 pineandlakes.com: The midterm election outcomes that could shape Trump final two years\n2026-10-22 jamestownsun.com: The midterm election outcomes that could shape Trump final two years\n2026-10-22 newscenter1.tv: The midterm election outcomes that could shape Trump final two years\n2026-10-22 bemidjipioneer.com: The midterm election outcomes that could shape Trump final two years\n2026-10-22 grandforksherald.com: The midterm election outcomes that could shape Trump final two years\n2026-10-22 capjournal.com: The midterm election outcomes that could shape Trump final two years",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_campaigns-injects-into",
+    "source": "news",
+    "ts": 1792705596261,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.773,
       "articles": [
         {
           "title": "RNC Injects $50 Million Into Midterm Campaigns",
@@ -11687,12 +11793,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_caps-court-fly",
     "source": "news",
-    "ts": 1792689688541,
+    "ts": 1792705596261,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.747,
+      "salience": 0.719,
       "articles": [
         {
           "title": "Republicans fly past former spending caps nixed by US Supreme Court",
@@ -11758,12 +11864,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_colleagues-conservative-controversial",
     "source": "news",
-    "ts": 1792689688539,
+    "ts": 1792705596260,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.694,
+      "salience": 0.666,
       "articles": [
         {
           "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
@@ -11829,12 +11935,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ban-court-distilling",
     "source": "news",
-    "ts": 1792689688539,
+    "ts": 1792705596259,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.688,
+      "salience": 0.661,
       "articles": [
         {
           "title": "Supreme Court agrees to review federal home distilling ban",
@@ -11905,20 +12011,6 @@ window.PRISM_CANDIDATES = [
           "domain": "knrs.iheart.com",
           "seendate": "2026-10-19T22:00:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6ad64fd00ce7f2c3d1a8ed4c?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Supreme Court Will Review Federal Ban On Home Distilling Spirits",
-          "url": "https://wrak.iheart.com/content/2026-10-19-supreme-court-will-review-federal-ban-on-home-distilling-spirits/",
-          "domain": "wrak.iheart.com",
-          "seendate": "2026-10-19T21:45:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ad64fd00ce7f2c3d1a8ed4c?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Supreme Court Will Review Federal Ban On Home Distilling Spirits",
-          "url": "https://kcjb910.iheart.com/content/2026-10-19-supreme-court-will-review-federal-ban-on-home-distilling-spirits/",
-          "domain": "kcjb910.iheart.com",
-          "seendate": "2026-10-19T21:45:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ad64fd00ce7f2c3d1a8ed4c?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         }
       ]
     },
@@ -11933,71 +12025,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_could-election-final",
-    "source": "news",
-    "ts": 1792689688538,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.642,
-      "articles": [
-        {
-          "title": "The midterm election outcomes that could shape Trump final two years",
-          "url": "https://www.grandforksherald.com/news/national/the-midterm-election-outcomes-that-could-shape-trumps-final-two-years",
-          "domain": "grandforksherald.com",
-          "seendate": "2026-10-22T04:00:00Z",
-          "image": "https://forum-communications-production-web.s3.us-west-2.amazonaws.com/brightspot/d2/e4/54402b09eb7910bb2dd97a5dd1d0/2026-10-19t100809z-1-lynxmpem9i0tx-rtroptp-4-usa-election-scenarios.JPG"
-        },
-        {
-          "title": "The midterm election outcomes that could shape Trump final two years",
-          "url": "https://www.postbulletin.com/news/national/the-midterm-election-outcomes-that-could-shape-trumps-final-two-years",
-          "domain": "postbulletin.com",
-          "seendate": "2026-10-22T03:45:00Z",
-          "image": "https://forum-communications-production-web.s3.us-west-2.amazonaws.com/brightspot/d2/e4/54402b09eb7910bb2dd97a5dd1d0/2026-10-19t100809z-1-lynxmpem9i0tx-rtroptp-4-usa-election-scenarios.JPG"
-        },
-        {
-          "title": "The midterm election outcomes that could shape Trump final two years",
-          "url": "https://www.parkrapidsenterprise.com/news/national/the-midterm-election-outcomes-that-could-shape-trumps-final-two-years",
-          "domain": "parkrapidsenterprise.com",
-          "seendate": "2026-10-22T03:30:00Z",
-          "image": "https://forum-communications-production-web.s3.us-west-2.amazonaws.com/brightspot/d2/e4/54402b09eb7910bb2dd97a5dd1d0/2026-10-19t100809z-1-lynxmpem9i0tx-rtroptp-4-usa-election-scenarios.JPG"
-        },
-        {
-          "title": "The midterm election outcomes that could shape Trump final two years",
-          "url": "https://www.dglobe.com/news/national/the-midterm-election-outcomes-that-could-shape-trumps-final-two-years",
-          "domain": "dglobe.com",
-          "seendate": "2026-10-22T03:30:00Z",
-          "image": "https://forum-communications-production-web.s3.us-west-2.amazonaws.com/brightspot/d2/e4/54402b09eb7910bb2dd97a5dd1d0/2026-10-19t100809z-1-lynxmpem9i0tx-rtroptp-4-usa-election-scenarios.JPG"
-        },
-        {
-          "title": "The midterm election outcomes that could shape Trump final two years",
-          "url": "https://www.wahpetondailynews.com/news/national/the-midterm-election-outcomes-that-could-shape-trumps-final-two-years",
-          "domain": "wahpetondailynews.com",
-          "seendate": "2026-10-22T03:00:00Z",
-          "image": "https://forum-communications-production-web.s3.us-west-2.amazonaws.com/brightspot/d2/e4/54402b09eb7910bb2dd97a5dd1d0/2026-10-19t100809z-1-lynxmpem9i0tx-rtroptp-4-usa-election-scenarios.JPG"
-        }
-      ]
-    },
-    "title": "The midterm election outcomes that could shape Trump final two years",
-    "summary": "2026-10-22 grandforksherald.com: The midterm election outcomes that could shape Trump final two years\n2026-10-22 postbulletin.com: The midterm election outcomes that could shape Trump final two years\n2026-10-22 parkrapidsenterprise.com: The midterm election outcomes that could shape Trump final two years\n2026-10-22 dglobe.com: The midterm election outcomes that could shape Trump final two years\n2026-10-22 wahpetondailynews.com: The midterm election outcomes that could shape Trump final two years",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_base-bets-competitive",
     "source": "news",
-    "ts": 1792689688541,
+    "ts": 1792705596261,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.613,
+      "salience": 0.64,
       "articles": [
         {
           "title": "Trump bets on his base to rescue Republicans in increasingly competitive races",
@@ -12026,6 +12061,13 @@ window.PRISM_CANDIDATES = [
           "domain": "13wham.com",
           "seendate": "2026-10-20T18:45:00Z",
           "image": "https://13wham.com/resources/media2/16x9/5577/1320/0x367/90/801821e2-88f0-471b-b212-ce3da51efdec-GettyImages2301049589.jpg"
+        },
+        {
+          "title": "Trump bets on his base to rescue Republicans in increasingly competitive races",
+          "url": "https://bakersfieldnow.com/news/nation-world/trump-bets-on-his-base-to-rescue-republicans-in-increasingly-competitive-races-midterm-elections-congress-majority-politics",
+          "domain": "bakersfieldnow.com",
+          "seendate": "2026-10-20T18:45:00Z",
+          "image": "https://bakersfieldnow.com/resources/media2/16x9/5577/1320/0x367/90/801821e2-88f0-471b-b212-ce3da51efdec-GettyImages2301049589.jpg"
         },
         {
           "title": "Trump bets on his base to rescue Republicans in increasingly competitive races",
@@ -12058,7 +12100,7 @@ window.PRISM_CANDIDATES = [
       ]
     },
     "title": "Trump bets on his base to rescue Republicans in increasingly competitive races",
-    "summary": "2026-10-20 wwmt.com: Trump bets on his base to rescue Republicans in increasingly competitive races\n2026-10-20 news3lv.com: Trump bets on his base to rescue Republicans in increasingly competitive races\n2026-10-20 fox17.com: Trump bets on his base to rescue Republicans in increasingly competitive races\n2026-10-20 13wham.com: Trump bets on his base to rescue Republicans in increasingly competitive races\n2026-10-20 wcti12.com: Trump bets on his base to rescue Republicans in increasingly competitive races\n2026-10-20 wpde.com: Trump bets on his base to rescue Republicans in increasingly competitive races",
+    "summary": "2026-10-20 wwmt.com: Trump bets on his base to rescue Republicans in increasingly competitive races\n2026-10-20 news3lv.com: Trump bets on his base to rescue Republicans in increasingly competitive races\n2026-10-20 fox17.com: Trump bets on his base to rescue Republicans in increasingly competitive races\n2026-10-20 13wham.com: Trump bets on his base to rescue Republicans in increasingly competitive races\n2026-10-20 bakersfieldnow.com: Trump bets on his base to rescue Republicans in increasingly competitive races\n2026-10-20 wcti12.com: Trump bets on his base to rescue Republicans in increasingly competitive races",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -12070,13 +12112,20 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_blitz-campaign-farmer",
     "source": "news",
-    "ts": 1792689688538,
+    "ts": 1792705596259,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.436,
+      "salience": 0.588,
       "articles": [
+        {
+          "title": "Trump heads to Kansas to rally farmer votes in latest stop on midterm campaign blitz - Boston News , Weather , Sports",
+          "url": "https://whdh.com/news/trump-heads-to-kansas-to-rally-farmers-votes-in-latest-stop-on-midterm-campaign-blitz/",
+          "domain": "whdh.com",
+          "seendate": "2026-10-20T21:30:00Z",
+          "image": null
+        },
         {
           "title": "The Latest : Trump heads to Kansas to rally farmer votes in latest stop on midterm campaign blitz | Associated Press National",
           "url": "https://www.nvdaily.com/associated_press_national/the-latest-trump-heads-to-kansas-to-rally-farmers-votes-in-latest-stop-on-midterm/article_c3afe7a5-eb23-5d64-aa0e-cae6ee5bd193.html",
@@ -12120,16 +12169,202 @@ window.PRISM_CANDIDATES = [
           "image": "https://bloximages.chicago2.vip.townnews.com/erienewsnow.com/content/tncms/custom/image/b278f54b-830b-4f05-9350-cb090f41a0d4.png"
         },
         {
-          "title": "The Latest : Trump heads to Kansas to rally farmer votes in latest stop on midterm campaign blitz",
-          "url": "https://www.ksat.com/news/politics/2026/10/19/the-latest-democrats-gain-ground-with-aapi-adults-as-trust-in-gop-fades-poll-finds/",
-          "domain": "ksat.com",
-          "seendate": "2026-10-19T21:30:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/CQSO2HW475HDPAM4Q6NO3TP2AQ.jpg?api_key=ksat_9a37fc89631abedf"
+          "title": "The Latest : Trump heads to Kansas to rally farmer votes in latest stop on midterm campaign blitz | Nation & World",
+          "url": "http://www.hngnews.com/nation_world/the-latest-trump-heads-to-kansas-to-rally-farmers-votes-in-latest-stop-on-midterm/article_a1a83324-9a99-5117-a6a1-2ad3513a65e1.html",
+          "domain": "hngnews.com",
+          "seendate": "2026-10-19T22:45:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/hngnews.com/content/tncms/assets/v3/editorial/0/4a/04a67ec9-31e6-5e49-afbc-00d91e5fd2fd/6ad61164e1668.image.jpg?crop=1763%2C926%2C0%2C124"
         }
       ]
     },
     "title": "The Latest : Trump heads to Kansas to rally farmer votes in latest stop on midterm campaign blitz",
-    "summary": "2026-10-20 nvdaily.com: The Latest : Trump heads to Kansas to rally farmer votes in latest stop on midterm campaign blitz | Associated Press National\n2026-10-20 aol.com: The Latest : Trump heads to Kansas to rally farmer votes in latest stop on midterm campaign blitz\n2026-10-20 woonsocketcall.com: The Latest : Trump heads to Kansas to rally farmer votes in latest stop on midterm campaign blitz | National And World News\n2026-10-19 kdhnews.com: The Latest : Trump heads to Kansas to rally farmer votes in latest stop on midterm campaign blitz | News\n2026-10-19 wataugademocrat.com: The Latest : Trump heads to Kansas to rally farmer votes in latest stop on midterm campaign blitz | National\n2026-10-19 erienewsnow.com: The Latest : Trump heads to Kansas to rally farmer votes in latest stop on midterm campaign blitz | Politics",
+    "summary": "2026-10-20 whdh.com: Trump heads to Kansas to rally farmer votes in latest stop on midterm campaign blitz - Boston News , Weather , Sports\n2026-10-20 nvdaily.com: The Latest : Trump heads to Kansas to rally farmer votes in latest stop on midterm campaign blitz | Associated Press National\n2026-10-20 aol.com: The Latest : Trump heads to Kansas to rally farmer votes in latest stop on midterm campaign blitz\n2026-10-20 woonsocketcall.com: The Latest : Trump heads to Kansas to rally farmer votes in latest stop on midterm campaign blitz | National And World News\n2026-10-19 kdhnews.com: The Latest : Trump heads to Kansas to rally farmer votes in latest stop on midterm campaign blitz | News\n2026-10-19 wataugademocrat.com: The Latest : Trump heads to Kansas to rally farmer votes in latest stop on midterm campaign blitz | National",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_2026-about-ashley",
+    "source": "news",
+    "ts": 1792705596261,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.52,
+      "articles": [
+        {
+          "title": "Iowa 2026 Senate race : What to know about Josh Turek vs Ashley Hinson",
+          "url": "https://www.fox6now.com/news/iowa-2026-senate-josh-turek-ashley-hinson",
+          "domain": "fox6now.com",
+          "seendate": "2026-10-21T21:45:00Z",
+          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/10/1280/720/ashley-hison-and-josh-turek.jpg?ve=1&tl=1"
+        },
+        {
+          "title": "Iowa 2026 Senate race : What to know about Josh Turek vs Ashley Hinson",
+          "url": "https://www.fox5dc.com/news/iowa-2026-senate-josh-turek-ashley-hinson",
+          "domain": "fox5dc.com",
+          "seendate": "2026-10-21T21:30:00Z",
+          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/10/1280/720/ashley-hison-and-josh-turek.jpg?ve=1&tl=1"
+        },
+        {
+          "title": "Iowa 2026 Senate race : What to know about Josh Turek vs Ashley Hinson",
+          "url": "https://www.fox9.com/news/iowa-2026-senate-josh-turek-ashley-hinson",
+          "domain": "fox9.com",
+          "seendate": "2026-10-21T20:15:00Z",
+          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/10/1280/720/ashley-hison-and-josh-turek.jpg?ve=1&tl=1"
+        },
+        {
+          "title": "Iowa 2026 Senate race : What to know about Josh Turek vs Ashley Hinson",
+          "url": "https://www.fox2detroit.com/news/iowa-2026-senate-josh-turek-ashley-hinson",
+          "domain": "fox2detroit.com",
+          "seendate": "2026-10-21T17:30:00Z",
+          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/10/1280/720/ashley-hison-and-josh-turek.jpg?ve=1&tl=1"
+        }
+      ]
+    },
+    "title": "Iowa 2026 Senate race : What to know about Josh Turek vs Ashley Hinson",
+    "summary": "2026-10-21 fox6now.com: Iowa 2026 Senate race : What to know about Josh Turek vs Ashley Hinson\n2026-10-21 fox5dc.com: Iowa 2026 Senate race : What to know about Josh Turek vs Ashley Hinson\n2026-10-21 fox9.com: Iowa 2026 Senate race : What to know about Josh Turek vs Ashley Hinson\n2026-10-21 fox2detroit.com: Iowa 2026 Senate race : What to know about Josh Turek vs Ashley Hinson",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_2026-facts-fast",
+    "source": "news",
+    "ts": 1792705596261,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.491,
+      "articles": [
+        {
+          "title": "2026 In Review Fast Facts",
+          "url": "https://krdo.com/news/national-world/cnn-national/2026/10/21/2026-in-review-fast-facts/",
+          "domain": "krdo.com",
+          "seendate": "2026-10-22T02:00:00Z",
+          "image": "https://krdo.b-cdn.net/2026/01/KRDO13-Default-Image_2026-860x484.jpg"
+        },
+        {
+          "title": "2026 In Review Fast Facts",
+          "url": "https://kesq.com/news/national-world/cnn-national/2026/10/21/2026-in-review-fast-facts/",
+          "domain": "kesq.com",
+          "seendate": "2026-10-21T19:45:00Z",
+          "image": "https://kesq.b-cdn.net/2023/08/kesq-860x484.jpg"
+        },
+        {
+          "title": "2026 In Review Fast Facts - LocalNews8 . com",
+          "url": "https://localnews8.com/news/national-world/cnn-national/2026/10/21/2026-in-review-fast-facts/",
+          "domain": "localnews8.com",
+          "seendate": "2026-10-21T17:30:00Z",
+          "image": null
+        }
+      ]
+    },
+    "title": "2026 In Review Fast Facts",
+    "summary": "2026-10-22 krdo.com: 2026 In Review Fast Facts\n2026-10-21 kesq.com: 2026 In Review Fast Facts\n2026-10-21 localnews8.com: 2026 In Review Fast Facts - LocalNews8 . com",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_democrat-election-faith",
+    "source": "news",
+    "ts": 1792705596261,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.423,
+      "articles": [
+        {
+          "title": "Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds",
+          "url": "https://www.clickorlando.com/news/politics/2026/10/21/democrats-faith-in-election-results-is-falling-but-still-exceeds-republicans-ap-norc-poll-finds/",
+          "domain": "clickorlando.com",
+          "seendate": "2026-10-21T15:00:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/ECWVBLPKU5GT3HI7ORQFQV6N2Q.jpg?api_key=clickorlando_488cff2bcc157b2e"
+        },
+        {
+          "title": "Democrat faith in election results is falling , AP - NORC poll finds",
+          "url": "https://www.chicagotribune.com/2026/10/21/democrats-republicans-election-results-ap-norc-poll/",
+          "domain": "chicagotribune.com",
+          "seendate": "2026-10-21T14:30:00Z",
+          "image": "https://www.chicagotribune.com/wp-content/uploads/2026/10/No_Kings_Protest_Seattle_61626-1.jpg"
+        },
+        {
+          "title": "Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds",
+          "url": "https://www.aol.com/articles/democrats-faith-election-results-falling-103321000.html",
+          "domain": "aol.com",
+          "seendate": "2026-10-21T13:00:00Z",
+          "image": "https://hermes.media.static.aol.com/media/2026/10/21/bea9e255-2213-363e-ba11-0eb30d8c3670/7e4bf768-9699-4295-bf8f-30d38af43c4e.jpg"
+        }
+      ]
+    },
+    "title": "Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds",
+    "summary": "2026-10-21 clickorlando.com: Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds\n2026-10-21 chicagotribune.com: Democrat faith in election results is falling , AP - NORC poll finds\n2026-10-21 aol.com: Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_agenda-complicate-could",
+    "source": "news",
+    "ts": 1792705596261,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.365,
+      "articles": [
+        {
+          "title": "Trump Russia moves could complicate lame - duck agenda – Press Telegram",
+          "url": "https://www.presstelegram.com/2026/10/20/trumps-russia-moves-could-complicate-lame-duck-agenda/",
+          "domain": "presstelegram.com",
+          "seendate": "2026-10-20T21:00:00Z",
+          "image": "https://www.presstelegram.com/wp-content/uploads/2026/10/Trump_Ukraine_Russia_65897-1.jpg"
+        },
+        {
+          "title": "Trump Russia moves could complicate lame - duck agenda – Boston Herald",
+          "url": "https://www.bostonherald.com/2026/10/20/trumps-russia-moves-could-complicate-lame-duck-agenda/",
+          "domain": "bostonherald.com",
+          "seendate": "2026-10-20T18:45:00Z",
+          "image": "https://www.bostonherald.com/wp-content/uploads/2026/10/Trump_Ukraine_Russia_65897-1.jpg"
+        },
+        {
+          "title": "Trump Russia moves could complicate lame - duck agenda – Wilkes - Barre Citizen Voice",
+          "url": "https://www.citizensvoice.com/2026/10/20/trumps-russia-moves-could-complicate-lame-duck-agenda/",
+          "domain": "citizensvoice.com",
+          "seendate": "2026-10-20T18:45:00Z",
+          "image": "https://www.citizensvoice.com/wp-content/uploads/2026/10/Trump_Ukraine_Russia_65897-1.jpg"
+        },
+        {
+          "title": "Trump Russia moves could complicate lame - duck agenda – Daily Press",
+          "url": "https://www.dailypress.com/2026/10/20/trumps-russia-moves-could-complicate-lame-duck-agenda/",
+          "domain": "dailypress.com",
+          "seendate": "2026-10-20T18:45:00Z",
+          "image": "https://www.dailypress.com/wp-content/uploads/2026/10/Trump_Ukraine_Russia_65897-1.jpg"
+        }
+      ]
+    },
+    "title": "Trump Russia moves could complicate lame - duck agenda – Daily Press",
+    "summary": "2026-10-20 presstelegram.com: Trump Russia moves could complicate lame - duck agenda – Press Telegram\n2026-10-20 bostonherald.com: Trump Russia moves could complicate lame - duck agenda – Boston Herald\n2026-10-20 citizensvoice.com: Trump Russia moves could complicate lame - duck agenda – Wilkes - Barre Citizen Voice\n2026-10-20 dailypress.com: Trump Russia moves could complicate lame - duck agenda – Daily Press",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
