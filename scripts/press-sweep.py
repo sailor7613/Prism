@@ -171,6 +171,8 @@ def pull_transcripts(date):
         n += 1
         out = os.path.join(tdir, f"{q.get('source', q.get('publication'))}_{q['videoId']}.md")
         if os.path.exists(out): q['transcript'] = os.path.relpath(out, PRISM); done += 1; continue
+        import glob as _g; same = _g.glob(os.path.join(tdir, f"*_{q['videoId']}.md"))   # the same video already pulled under another show's name
+        if same: q['transcript'] = os.path.relpath(same[0], PRISM); done += 1; continue
         name = roster.get(q.get('source'), {}).get('name', q.get('publication'))
         log(f"{q.get('source','?'):16s} {(q.get('title') or '')[:70]}")
         got = pull_captions(q['link'], out, name, q.get('title') or '', date)

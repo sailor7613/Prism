@@ -1,6 +1,6 @@
 {
   "schema": "prism_object_overlay_v1",
-  "updatedAt": "2026-10-20T10:03:50.973Z",
+  "updatedAt": "2026-10-22T00:18:49.870Z",
   "note": "Written ONLY by the drafting task (Sailor commits it). The scan owns objects.json and only reads this file. See scripts/newsroom/overlay.js.",
   "objects": {
     "obj_astate_bills-changes-elections-gavin": {
@@ -924,7 +924,11 @@
           "on": "2026-10-16"
         }
       ],
-      "permanenceNote": "return (lean): DHS’s earlier unsubstantiated 190,000 figure came back as a 20,000-name list in a suit — Claude 2026-10-16"
+      "permanenceNote": "return (lean): DHS’s earlier unsubstantiated 190,000 figure came back as a 20,000-name list in a suit — Claude 2026-10-16 | post-close (not in frame): DOJ moved for a TRO/PI to segregate the ballots and announced charges against 28 green-card holders (10-19); Bonta filed opposition, \"borders on the absurd\" (10-20); no ruling yet. A ruling on the motion would be a new object — Claude 2026-10-22",
+      "aliasCandidates": [
+        "obj_afederal_000-asks-ballots-block",
+        "obj_thepresi_000-absurd-aside-ballots"
+      ]
     },
     "obj_thepresi_bar-did-exam-house": {
       "status": "dismissed",
@@ -1045,6 +1049,54 @@
           "field": "kind",
           "from": "indictment",
           "to": "sentencing",
+          "by": "claude"
+        }
+      ]
+    },
+    "obj_afederal_000-asks-ballots-block": {
+      "status": "dismissed",
+      "dismissedWhy": "Same instrument as obj_thejusti_alleged-california-doj-kills (United States v. California, C.D. Cal., filed 10-15; drafted as rdg_9wjfhhpxcp0d \"The Thumb Drive\"). The 10-19 TRO/PI motion asks the same court for the same hold on ~20,000 ballots; nothing has been ruled. A ruling on the motion would be a new object. Dismissed by Claude (drafting) 00:1x UTC 2026-10-22 run; reversible by Sailor.",
+      "corrections": [
+        {
+          "field": "holder",
+          "from": "a federal court",
+          "to": "the Justice Department (movant); the court has not ruled",
+          "by": "claude"
+        },
+        {
+          "field": "kind",
+          "from": "ruling",
+          "to": "motion (pending)",
+          "by": "claude"
+        }
+      ]
+    },
+    "obj_thepresi_000-absurd-aside-ballots": {
+      "status": "dismissed",
+      "dismissedWhy": "Same instrument as obj_thejusti_alleged-california-doj-kills (United States v. California, filed 10-15; rdg_9wjfhhpxcp0d). This is California's 10-20 opposition brief (Bonta: \"borders on the absurd\"): reaction to the suit, no new instrument. Dismissed by Claude (drafting) 00:1x UTC 2026-10-22 run; reversible by Sailor.",
+      "corrections": [
+        {
+          "field": "holder",
+          "from": "the President",
+          "to": "the Justice Department (plaintiff); this is the state's opposition filing",
+          "by": "claude"
+        }
+      ]
+    },
+    "obj_thepresi_funds-group-openai-opposes": {
+      "status": "dismissed",
+      "dismissedWhy": "No instrument. Reuters (10-21) on the gap between Greg Brockman's calls for AI safeguards and his $25M personal donation to Leading the Future, a super PAC backing federal preemption of state AI laws. Nothing was voted, signed, ordered or ruled; the scan read \"regulation\" as a rule and OpenAI's president as the President. If federal preemption moves as a bill or order, that is the object. Dismissed by Claude (drafting) 00:1x UTC 2026-10-22 run; reversible by Sailor.",
+      "corrections": [
+        {
+          "field": "holder",
+          "from": "the President",
+          "to": "none (OpenAI president Greg Brockman, a private donor)",
+          "by": "claude"
+        },
+        {
+          "field": "kind",
+          "from": "rule",
+          "to": "none (campaign-finance coverage)",
           "by": "claude"
         }
       ]

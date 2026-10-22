@@ -94,6 +94,15 @@
   .pub .nums b { display: block; font-family: var(--serif); font-size: 24px; color: var(--ink); letter-spacing: 0; text-transform: none; line-height: 1.1; }
   .pub .m { font-family: var(--mono); font-size: 10px; color: var(--ink-mid); line-height: 1.45; }
   .pub.dead { border-color: rgba(184,120,40,.45); }
+  .reg-win { max-height: 46vh; } .catch-win { max-height: 62vh; }
+  .qi.reg .sort .vc { display: block; white-space: nowrap; } .qi.reg .sort .vc b { font-size: 16px; margin-right: 4px; }
+  .qi.reg .st, .qi.clip .st { font-size: 10px; letter-spacing: .08em; }
+  .qi .sort b.lit { color: var(--film, #e8d8a0); }
+  .qi .sort b.quiet { opacity: .45; }
+  .rchip { display: inline-block; margin-top: 4px; font: 500 10px/1 var(--mono, ui-monospace, monospace); letter-spacing: .06em; text-transform: uppercase; padding: 3px 6px; border: 1px solid var(--g4-rule); border-radius: 3px; opacity: .8; }
+  .rchip.queued, .rchip.new { border-color: var(--film, #e8d8a0); opacity: 1; }
+  .rchip.drafted { opacity: .6; }
+  .chan { display: inline-block; margin: 2px 10px 2px 0; } .chan small { display: block; opacity: .6; } .chan.on { color: var(--ink-mid); }
   .queue { border-top: 1px solid var(--g4-rule); }
   .qi { display: grid; grid-template-columns: 54px 1fr 220px; gap: 4px 14px; padding: 10px 0; border-bottom: 1px solid var(--g4-rule-soft); }
   .qi .st { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; padding-top: 4px; }
@@ -123,6 +132,7 @@
   .piece .split { display: grid; grid-template-columns: minmax(380px, 1fr) minmax(340px, 480px); gap: 22px; align-items: start; }
   .tapewin { max-height: calc(100vh - var(--bar-h) - 34px - 40px); overflow: auto; padding-right: 6px; border-top: 1px solid var(--g4-rule-soft); border-bottom: 1px solid var(--g4-rule-soft); scroll-padding: 40%; }
   @media (max-width: 880px) { .tapewin { max-height: none; overflow: visible; border: 0; } }
+  @media (max-width: 880px) { .qi { grid-template-columns: 44px 1fr; } .qi .sort { grid-column: 2; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; } .qi.reg .sort .vc { display: inline; } .qi .d { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; } }
   .stage { position: sticky; top: calc(var(--bar-h) + 8px); }
   #map { width: 100%; aspect-ratio: 1 / 0.9; background: radial-gradient(ellipse at center, rgba(32,64,160,.16) 0%, transparent 70%); border: 1px solid var(--g4-rule); position: relative; overflow: hidden; border-radius: 3px; }
   #map canvas { display: block; width: 100% !important; height: 100% !important; }
@@ -406,7 +416,7 @@
 </div>
 
 <!-- the key strip: published | collected -->
-<nav class="g4-keys" id="keys"><span class="grp">published</span><a class="k" data-k="pg" href="#pg">PG</a><a class="k" data-k="sst" href="#sst">SST</a><span class="sp">·</span><span class="grp">collected</span><a class="k" data-k="sweep" href="#sweep">SWEEP</a><a class="k" data-k="roster" href="#roster">ROSTER</a><a class="k" data-k="wire" href="#wire">WIRE</a></nav>
+<nav class="g4-keys" id="keys"><span class="grp">published</span><a class="k" data-k="pg" href="#pg">PG</a><a class="k" data-k="sst" href="#sst">SST</a><span class="sp">·</span><span class="grp">collected</span><a class="k" data-k="sweep" href="#slop">SLOP</a><a class="k" data-k="wire" href="#wire">WIRE</a></nav>
 
 <!-- ── DESK ── -->
 <section class="view" id="v-desk">
@@ -501,23 +511,27 @@
   <div class="roster" id="roster"></div>
 </section>
 
-<!-- ── SWEEP ── -->
+<!-- ── SLOP (the daily slop: the register · the roster · the clips · the catch) ── -->
 <section class="view wrap g4-under-bar" id="v-sweep">
   <div class="mast">
-    <h1><small>BloomBurger · the wire</small>The sweep</h1>
+    <h1><small>BloomBurger · the wire</small>The daily slop</h1>
   </div>
-  <div class="dek">The media Parallelogram tracks, one tile each. Every sweep refreshes them: what the publication put out, what touched the object, and how it has been reading — its Lumens, its Dia, where it stands on z. Open a tile to see everything we have on that source.</div>
-  <div class="sec first"><div class="eb">the media we track</div><h2><span class="orn"></span>Check in on a publication</h2><div class="gloss">Lumens is how much of the object's light gets through its coverage (higher is clearer); Dia is how heated its words run; z is where it stands on the lead object — does the thing deliver?</div></div>
-  <div class="media" id="media"><div class="empty">Loading the roster…</div></div>
-  <div class="sec"><div class="eb">today's catch</div><h2><span class="orn"></span>What the sweep brought in</h2><div class="gloss">Headlines, deks and openings that touched the object, and where each one was sorted: cut into a parallelogram, filed to the tracker, the register, or the slate.</div></div>
+  <div class="dek">One scan of the day's news, every morning. First what actually formed — laws, orders, rulings, votes — read off the world's press. Then what the shows and papers we follow said about it. Then what got passed around.</div>
   <div class="sweep-days" id="sweep-days"></div>
+  <div class="sec first"><div class="eb">the register</div><h2><span class="orn"></span>What formed today</h2><div class="gloss">Each row is one object: something that finished forming on a day, under a holder. Outlets is how many places carried it; voices is how many of the shows we follow touched it. An object nobody we follow touched is the quiet kind.</div></div>
+  <div id="register"><div class="empty">Loading the register…</div></div>
+  <div class="sec"><div class="eb">the roster</div><h2><span class="orn"></span>Who said what about it</h2><div class="gloss">One tile per show or publication we follow, refreshed every morning: what it put out, what touched an object, and how it has been reading — Lumens (how much of the object's light gets through), Dia (how heated), z (does the thing deliver). Open a tile for everything we have on it. <a href="#roster" style="color:var(--ink-mid)">The four corners →</a></div></div>
+  <div class="media" id="media"><div class="empty">Loading the roster…</div></div>
+  <div class="sec"><div class="eb">the clips</div><h2><span class="orn"></span>What got passed around</h2><div class="gloss">The most-shared video posts across a balanced set of political forums today, and the shows they came from. A show we don't follow yet shows up here first; adding it is a ruling.</div></div>
+  <div id="clips"><div class="empty">Loading the clips…</div></div>
+  <div class="sec"><div class="eb">the catch</div><h2><span class="orn"></span>Every piece that touched an object</h2><div class="gloss">Headlines, deks and openings from the roster that matched an object on the register or a standing object, and where each one was sorted: cut into a parallelogram, filed to the tracker, the register, or the slate.</div></div>
   <div id="sweep"></div>
 </section>
 
 <!-- ── A PUBLICATION ── -->
 <section class="view wrap g4-under-bar pub" id="v-pub">
   <div class="g4-win">
-    <div class="title"><div class="dots"><i id="pubClose" title="close — back to the sweep" style="cursor:pointer"></i></div><div id="pubTitleBar">—</div><div class="fn">SWEEP</div></div>
+    <div class="title"><div class="dots"><i id="pubClose" title="close — back to the slop" style="cursor:pointer"></i></div><div id="pubTitleBar">—</div><div class="fn">SLOP</div></div>
     <div class="body">
       <div class="g4-key" id="pubKicker"></div>
       <h1 style="font-weight:400;font-size:clamp(26px,3.6vw,40px);line-height:1.08;margin:6px 0 6px" id="pubTitle"></h1>
@@ -596,20 +610,21 @@
   (function clock() { const el = $('#clock'); const f = () => { const d = new Date(); el.textContent = d.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' }); }; f(); setInterval(f, 15000); })();
 
   // ── router: desktop → program → object ──
-  const PROGRAMS = ['pg', 'sst', 'wire', 'roster', 'sweep'];
+  const PROGRAMS = ['pg', 'sst', 'wire', 'roster', 'sweep', 'slop'];
   let paperIndex = [];          // from data/press/index.json
   const state = { layer: 'program', program: 'pg', piece: null };
   const views = { desk: $('#v-desk'), pg: $('#v-pg'), piece: $('#v-piece'), sst: $('#v-sst'), wire: $('#v-wire'), roster: $('#v-roster'), sweep: $('#v-sweep'), pub: $('#v-pub') };
   function show(name) { Object.values(views).forEach(v => v.classList.remove('on')); views[name].classList.add('on'); window.scrollTo(0, 0); }
   function route() {
     const h = location.hash.replace(/^#/, '') || 'pg';
-    const [head, ...rest] = h.split('/');
+    let [head, ...rest] = h.split('/');
+    if (head === 'slop') head = 'sweep';
     const codexOpen = head === 'codex';
     if (codexOpen) { openCodex(rest[0] || 'object'); return; } else closeCodex();
     if (head === 'desk') { if (EMBEDDED) { try { window.parent.postMessage({ type: 'g4:desk' }, '*'); } catch (e) {} location.hash = '#pg'; return; } state.layer = 'desk'; show('desk'); crumb('g4 · desktop'); bar('g4', ''); return; }
-    if (head === 'pub' && rest[0]) { state.layer = 'object'; state.program = 'sweep'; state.piece = rest[0]; show('pub'); bar('BloomBurger', 'SWEEP'); loadPub(rest[0]); return; }
+    if (head === 'pub' && rest[0]) { state.layer = 'object'; state.program = 'sweep'; state.piece = rest[0]; show('pub'); bar('BloomBurger', 'SLOP'); loadPub(rest[0]); return; }
     if (head === 'pg' && rest[0]) { state.layer = 'object'; state.program = 'pg'; state.piece = rest[0]; show('piece'); bar('BloomBurger', 'PG'); loadPiece(rest[0]); return; }
-    if (PROGRAMS.includes(head)) { state.layer = 'program'; state.program = head; state.piece = null; show(head); bar('BloomBurger', head.toUpperCase()); crumb('BloomBurger · ' + head.toUpperCase()); if (head === 'pg') { loadMarquee(); filmMark($('#pgmark'), '../src/img/Parallelogram_logo_1.png', 2935 / 505, 'Parallelogram'); } if (head === 'sst') loadSST(); if (head === 'wire') loadWire(); if (head === 'roster') loadRoster(); if (head === 'sweep') { loadMedia(); loadSweep(rest[0]); } return; }
+    if (PROGRAMS.includes(head)) { state.layer = 'program'; state.program = head; state.piece = null; show(head); bar('BloomBurger', head === 'sweep' ? 'SLOP' : head.toUpperCase()); crumb('BloomBurger · ' + (head === 'sweep' ? 'the daily slop' : head.toUpperCase())); if (head === 'pg') { loadMarquee(); filmMark($('#pgmark'), '../src/img/Parallelogram_logo_1.png', 2935 / 505, 'Parallelogram'); } if (head === 'sst') loadSST(); if (head === 'wire') loadWire(); if (head === 'roster') loadRoster(); if (head === 'sweep') { loadRegister(rest[0]); loadMedia(); loadClips(rest[0]); loadSweep(rest[0]); } return; }
     location.hash = '#pg';
   }
   function bar(n, f) { $('#barName').textContent = n; $('#barFn').textContent = f; tell(); document.querySelectorAll('.g4-keys .k').forEach(k => k.classList.toggle('on', k.dataset.k === state.program && state.layer !== 'desk')); document.documentElement.classList.toggle('desk', state.layer === 'desk'); }
@@ -1158,7 +1173,7 @@
     const tileN = (l, v, s) => `<div class="tile"><div class="l">${l}</div><div class="v">${v == null ? '—' : v}</div>${s ? `<div class="s">${s}</div>` : ''}</div>`;
     $('#pubBoard').innerHTML = tileN('lumens', m.lum, m.betaOnly ? 'beta ledes only' : `${m.full.length} full read${m.full.length === 1 ? '' : 's'}`) + tileN('dia', m.dia, m.dia == null ? '' : tier(m.dia)) + tileN('z · the lead object', m.z == null ? null : zs(m.z), m.z == null ? 'has not spoken' : m.z < 0 ? 'does not deliver' : 'delivers') + tileN('cuts', m.pieces.length, m.ledes.length ? `${m.ledes.length} beta` : '') + tileN('last read', m.lastCut ? m.lastCut.slice(5) : '—', m.lastCut ? m.lastCut.slice(0, 4) : 'not yet cut') + tileN('last swept', m.lastSweep ? m.lastSweep.date.slice(5) : (src.lastScanned ? src.lastScanned.slice(5) : '—'), m.lastSweep ? `${m.lastSweep.p.items} swept · ${m.lastSweep.p.hits} hits` : (src.lastScanned ? 'scanned by hand' : ''));
     const cuts = m.pieces.map(p => `<a class="row" href="#pg/${esc(p.id)}"><div class="d">${esc(p.date)}</div><div class="t">${esc(p.title)}${p.partial ? `<small>${esc(p.partial)}</small>` : ''}${p.kind === 'baseline' ? '<small>BASELINE</small>' : ''}</div><div class="s">Dia <b>${p.dia}</b> · z <b>${zs(p.readZ)}</b> · ☼ <b>${p.lumens}</b></div><div class="m">${esc(p.dek || '')}</div></a>`).join('');
-    const sweeps = m.sweeps.slice().reverse().map(x => `<div class="row"><div class="d">${esc(x.date)}</div><div class="t">${x.p.items} swept · ${x.p.hits} hit${x.p.hits === 1 ? '' : 's'}<small>${(x.p.feeds || []).length} feed${(x.p.feeds || []).length === 1 ? '' : 's'}</small></div><div class="s"><a href="#sweep/${esc(x.date)}" style="color:var(--ink-mid)">the catch →</a></div>${x.p.note ? `<div class="m">${esc(x.p.note)}</div>` : ''}</div>`).join('');
+    const sweeps = m.sweeps.slice().reverse().map(x => `<div class="row"><div class="d">${esc(x.date)}</div><div class="t">${x.p.items} swept · ${x.p.hits} hit${x.p.hits === 1 ? '' : 's'}<small>${(x.p.feeds || []).length} feed${(x.p.feeds || []).length === 1 ? '' : 's'}</small></div><div class="s"><a href="#slop/${esc(x.date)}" style="color:var(--ink-mid)">the catch →</a></div>${x.p.note ? `<div class="m">${esc(x.p.note)}</div>` : ''}</div>`).join('');
     const ids = new Set(m.pieces.map(p => p.id)); const seen = (MEDIA.seen || []).filter(x => ids.has(x.piece));
     const seenHtml = seen.map(x => `<div class="row"><div class="d">${esc(x.date)}</div><div class="t">${esc(x.object)}</div><div class="s">${esc((x.match || {}).dataset || x.kind || '')}</div></div>`).join('');
     $('#pubBody').innerHTML = `
@@ -1169,16 +1184,52 @@
       ${seen.length ? `<div class="sec"><div class="eb">objects it surfaced</div><h2><span class="orn"></span>What the objects pass found on its tapes</h2><div class="gloss">Everything named on its tapes that Prism keeps somewhere, and where it was sorted.</div></div><div class="rows scrollwin">${seenHtml}</div>` : ''}
       <div class="sec"><div class="eb">the station</div><h2><span class="orn"></span>Where it reads from</h2><div class="gloss">The axis places the station, not the reading; a station's ruling is Sailor's.</div></div>
       <div class="notes"><b class="${st}c">${esc(src.station)}</b> — ${esc(src.status)}${src.horizon ? ' · horizon: ' + esc(src.horizon) : ''}${src.channel ? ' · ' + esc(src.channel) : ''}${src.url ? ' · ' + esc(src.url) : ''}<br>${esc(src.notes || '')}</div>`;
-    $('#pubClose').onclick = e => { e.preventDefault(); location.hash = '#sweep'; };
+    $('#pubClose').onclick = e => { e.preventDefault(); location.hash = '#slop'; };
+  }
+
+  // ── the register band (the daily slop, 10-20): GDELT's objects for the day, with how many roster voices touched each ──
+  async function loadRegister(date) {
+    const el = $('#register'); const esc = x => String(x == null ? '' : x).replace(/</g, '&lt;');
+    let R; try { R = await fetch('../data/newsroom/objects.json', { cache: 'no-store' }).then(r => r.json()); } catch (e) { el.innerHTML = '<div class="empty">No register on disk (data/newsroom/objects.json).</div>'; return; }
+    const objs = R.objects || []; const scans = (R.scans || []); const lastScan = (R.updatedAt || (scans.length ? scans[scans.length - 1].at : '') || '').slice(0, 10);
+    const d = date || lastScan;
+    let S = null; try { S = await fetch(`../data/press/sweeps/sweep_${d}.json`, { cache: 'no-store' }).then(r => r.json()); } catch (e) {}
+    const voices = {}; (S && S.queue || []).forEach(q => Object.keys(q.matched || {}).forEach(o => { if (o.startsWith('obj_')) (voices[o] = voices[o] || new Set()).add(q.source || q.publication); }));
+    const dayOf = x => (x || '').slice(0, 10); const since = new Date(new Date(d + 'T00:00:00Z').getTime() - 14 * 864e5).toISOString().slice(0, 10);   // the roster is matched against two weeks of the register
+    const isToday = o => dayOf(o.firstSeen) === d || dayOf(o.formedOn) === d;
+    const today = objs.filter(o => o.status !== 'dismissed' && dayOf(o.lastSeen) >= since && dayOf(o.firstSeen) <= d)
+      .sort((a, b) => (isToday(b) - isToday(a)) || (voices[b.oid] ? voices[b.oid].size : 0) - (voices[a.oid] ? voices[a.oid].size : 0) || (b.outlets || 0) - (a.outlets || 0));
+    const formedToday = today.filter(isToday).length;
+    const breaks = objs.filter(o => (o.permanence || {}).breaks && o.permanence.breaks.some(x => String(x).slice(0, 10) === d || (x && x.on || '').slice(0, 10) === d));
+    const returns = objs.filter(o => (o.permanence || {}).returns && o.permanence.returns.some(x => String(x).slice(0, 10) === d || (x && x.on || '').slice(0, 10) === d));
+    const chip = st => `<span class="rchip ${esc(st)}">${esc(st)}</span>`;
+    const row = o => { const v = voices[o.oid] ? voices[o.oid].size : 0; return `<div class="qi reg"><div class="st">${esc((o.kind || '').toUpperCase().slice(0, 6))}</div><div><div class="t">${esc(o.headline)}</div><div class="m">${isToday(o) ? '<b>today</b> · ' : ''}${esc(o.verb)}${o.holder ? ' · ' + esc(o.holder) : ''} · formed ${esc(o.formedOn)} · ${o.outlets || 0} outlet${o.outlets === 1 ? '' : 's'}${o.peakOutlets > (o.outlets || 0) ? ` (peak ${o.peakOutlets})` : ''}${o.drafts && o.drafts.claude ? ' · drafted' : ''}</div></div><div class="sort"><span class="vc"><b class="${v ? 'lit' : 'quiet'}">${v}</b> <small>voice${v === 1 ? '' : 's'}</small></span>${chip(o.status)}</div></div>`; };
+    el.innerHTML = `<div class="floor"><span class="k">${esc(d)}</span><span class="k">formed today</span><b>${formedToday}</b><span class="k">in the window</span><b>${today.length}</b><span class="k">touched by a voice</span><b>${today.filter(o => voices[o.oid]).length}</b><span class="k">breaks</span><b>${breaks.length}</b><span class="k">returns</span><b>${returns.length}</b><span class="k">on the register</span><b>${objs.filter(o => o.status !== 'dismissed').length}</b></div>
+      <div class="queue scrollwin reg-win">${today.length ? today.map(row).join('') : '<div class="empty">Nothing formed on this day, or the register has not scanned it yet.</div>'}</div>
+      ${breaks.length || returns.length ? `<div class="sweep-note"><b>permanence</b> · ${breaks.map(o => 'break: ' + esc(o.headline)).concat(returns.map(o => 'return: ' + esc(o.headline))).join(' · ')}</div>` : ''}`;
+  }
+
+  // ── the clips band: what got passed around (data/press/clips/clips_<date>.json, written by the daily slop) ──
+  async function loadClips(date) {
+    const el = $('#clips'); const esc = x => String(x == null ? '' : x).replace(/</g, '&lt;');
+    let M; try { M = await fetch('../data/press/clips/index.json', { cache: 'no-store' }).then(r => r.json()); } catch (e) { el.innerHTML = '<div class="empty">No clips on disk yet — the daily slop writes them.</div>'; return; }
+    const dates = (M.dates || []).slice().sort().reverse(); if (!dates.length) { el.innerHTML = '<div class="empty">No clips yet.</div>'; return; }
+    const d = dates.includes(date) ? date : dates[0];
+    let C; try { C = await fetch(`../data/press/clips/clips_${d}.json`, { cache: 'no-store' }).then(r => r.json()); } catch (e) { el.innerHTML = '<div class="empty">clips file missing.</div>'; return; }
+    const cands = C.candidates || [], clips = (C.clips || []).slice(0, 8), chans = (C.channels || []).slice(0, 6);
+    if (!clips.length) { el.innerHTML = `<div class="empty">${(C.failed || []).length ? 'The forums refused the scan today (' + C.failed.length + ' of ' + (C.basket || []).length + ' blocked) — the clips return when the official API keys are in place.' : 'No video posts crossed the bar today.'}</div>`; return; }
+    const cl = clips.map(c => `<div class="qi clip"><div class="st">${esc(c.corner)}</div><div><div class="t"><a href="${esc(c.link)}" target="_blank" rel="noopener">${esc(c.videoTitle || c.title)}</a></div><div class="m">r/${esc(c.subreddit)} · ${esc(c.host)}${c.channel ? ' · ' + esc(c.channel) : ''}</div></div><div class="sort"><b>${c.score >= 1000 ? (c.score / 1000).toFixed(1) + 'k' : c.score}</b><small>points</small></div></div>`).join('');
+    const ch = chans.map(e => `<span class="chan${e.onRoster ? ' on' : ''}">${esc(e.channel)}<small>${e.clips} clip${e.clips === 1 ? '' : 's'}${e.onRoster ? ' · on the roster' : ''}</small></span>`).join('');
+    el.innerHTML = `<div class="queue">${cl}</div><div class="sweep-note"><b>the shows behind them</b> · ${ch}${cands.length ? ` &nbsp; <a href="#wire" style="color:var(--ink-mid)">${cands.length} not on the roster — waiting in the tray →</a>` : ''}</div>`;
   }
 
   // ── the sweep: the day's catch from the index baskets (reads sweeps/index.json → sweeps/sweep_<date>.json + objects_seen.json) ──
   async function loadSweep(date) {
     const el = $('#sweep'), days = $('#sweep-days');
-    let M; try { M = await fetch('../data/press/sweeps/index.json', { cache: 'no-store' }).then(r => r.json()); } catch (e) { el.innerHTML = '<div class="empty">No sweeps on disk. Run: python3 Prism/scripts/press-pull.py sweep</div>'; return; }
+    let M; try { M = await fetch('../data/press/sweeps/index.json', { cache: 'no-store' }).then(r => r.json()); } catch (e) { el.innerHTML = '<div class="empty">No slop on disk yet — the daily slop (GitHub, 05:45) writes it.</div>'; return; }
     const dates = (M.dates || []).slice().sort().reverse(); if (!dates.length) { el.innerHTML = '<div class="empty">No sweeps yet.</div>'; return; }
     const d = dates.includes(date) ? date : dates[0];
-    days.innerHTML = dates.map(x => `<a class="${x === d ? 'on' : ''}" href="#sweep/${x}">${x}</a>`).join('');
+    days.innerHTML = dates.map(x => `<a class="${x === d ? 'on' : ''}" href="#slop/${x}">${x}</a>`).join('');
     let S; try { S = await fetch(`../data/press/sweeps/sweep_${d}.json`, { cache: 'no-store' }).then(r => r.json()); } catch (e) { el.innerHTML = `<div class="empty">sweep_${d}.json missing.</div>`; return; }
     let SEEN = []; try { SEEN = (await fetch('../data/press/objects_seen.json', { cache: 'no-store' }).then(r => r.json())).sightings || []; } catch (e) {}
     const esc = x => String(x == null ? '' : x).replace(/</g, '&lt;');
@@ -1187,15 +1238,15 @@
     const totals = Object.values(S.publications || {}).reduce((a, p) => ({ items: a.items + (p.items || 0), hits: a.hits + (p.hits || 0) }), { items: 0, hits: 0 });
     const pieceFor = id => paperIndex.find(p => id && id.startsWith(p.id));
     const queue = (S.queue || []).map(q => {
-      const matched = Object.entries(q.matched || {}).map(([o, ts]) => `<i>${esc(o)}</i> ${ts.map(esc).join(' · ')}`).join(' &nbsp; ');
+      const matched = Object.entries(q.matched || {}).map(([o, ts]) => `<i>${esc(o.startsWith('obj_') ? 'register' : o)}</i> ${ts.map(esc).join(' · ')}`).join(' &nbsp; ');
       const cutId = (q.cut || '').split(' ')[0]; const P = pieceFor(cutId);
       const cutHtml = P ? `<div class="cut">cut → <a href="#pg/${P.id}">${esc(P.title)}</a>${P.partial ? ' · ' + esc(P.partial) : ''} · Dia ${P.dia} · z ${P.readZ}</div>` : q.cut && /^[a-z]+_\d{4}/.test(q.cut) ? `<div class="cut">cut → ${esc(q.cut)}</div>` : `<div class="q">${esc(q.cut || 'queued')}</div>`;
       const seen = P ? SEEN.filter(x => x.piece === P.id) : [];
       const seenHtml = seen.length ? `<div class="m">${seen.length} sighting${seen.length === 1 ? '' : 's'} sorted: ${[...new Set(seen.map(x => (x.match || {}).dataset).filter(Boolean))].map(esc).join(' · ')}</div>` : '';
-      return `<div class="qi"><div class="st ${stc(q.station)}">${esc(q.station)}</div><div><div class="t">${q.link ? `<a href="${esc(q.link)}" target="_blank" rel="noopener">${esc(q.title)}</a>` : esc(q.title)}</div>${q.dek ? `<div class="d">${esc(q.dek)}</div>` : ''}<div class="m">${esc(q.publication)} · ${esc(q.published || '')}${matched ? ' &nbsp; matched: ' + matched : ''}</div>${seenHtml}</div><div class="sort">${esc(q.sort || '')}${cutHtml}</div></div>`;
+      return `<div class="qi"><div class="st ${stc(q.station)}">${esc(q.station)}</div><div><div class="t">${q.link ? `<a href="${esc(q.link)}" target="_blank" rel="noopener">${esc(q.title)}</a>` : esc(q.title)}</div>${q.dek ? `<div class="d">${esc(q.dek.length > 260 ? q.dek.slice(0, 257).replace(/\s+\S*$/, '') + '…' : q.dek)}</div>` : ''}<div class="m">${esc(q.publication)} · ${esc(q.published || '')}${matched ? ' &nbsp; matched: ' + matched : ''}</div>${seenHtml}</div><div class="sort">${esc(q.sort || '')}${cutHtml}</div></div>`;
     }).join('');
-    el.innerHTML = `<div class="floor"><span class="k">${esc(d)}</span><span>index <b style="font-size:14px">${esc(S.index || '—')}</b></span><span class="k">objects</span><span>${(S.objects || []).map(esc).join(' · ')}</span><span class="k">swept</span><b>${totals.items}</b><span class="k">hits</span><b>${totals.hits}</b><span class="k">queued</span><b>${(S.queue || []).length}</b><span class="k">cut</span><b>${(S.queue || []).filter(q => pieceFor((q.cut || '').split(' ')[0])).length}</b></div>
-      <div class="queue">${queue || '<div class="empty">Nothing matched.</div>'}</div>
+    el.innerHTML = `<div class="floor"><span class="k">${esc(d)}</span><span>standing objects</span><span>${(S.objects || []).map(esc).join(' · ')}</span><span class="k">from the register</span><b>${S.registerObjects || 0}</b><span class="k">swept</span><b>${totals.items}</b><span class="k">hits</span><b>${totals.hits}</b><span class="k">queued</span><b>${(S.queue || []).length}</b><span class="k">cut</span><b>${(S.queue || []).filter(q => pieceFor((q.cut || '').split(' ')[0])).length}</b></div>
+      <div class="queue scrollwin catch-win">${queue || '<div class="empty">Nothing matched.</div>'}</div>
       ${S.composite && S.composite.note ? `<div class="sweep-note"><b>composite</b> · ${esc(S.composite.note)}</div>` : ''}
       ${S.route ? `<div class="sweep-note">route · ${esc(S.route)}</div>` : ''}`;
   }
