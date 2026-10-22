@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-10-22T05:04:43.666Z · 15 legislative + 8 news (GDELT, 3d)
+// 2026-10-22T12:06:42.403Z · 15 legislative + 8 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1792645428545,
+    "ts": 1792670786325,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.773,
+      "salience": 0.772,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -262,11 +262,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1792645428545,
+    "ts": 1792670786325,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.764,
+      "salience": 0.763,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -519,11 +519,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1792645428543,
+    "ts": 1792670786324,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.729,
+      "salience": 0.728,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -1937,11 +1937,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1792645428545,
+    "ts": 1792670786325,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.728,
+      "salience": 0.727,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -2194,11 +2194,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1792645428545,
+    "ts": 1792670786325,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.72,
+      "salience": 0.719,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -2451,11 +2451,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1792645428544,
+    "ts": 1792670786324,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.658,
+      "salience": 0.657,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -3364,11 +3364,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1792645428545,
+    "ts": 1792670786325,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.617,
+      "salience": 0.615,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3892,11 +3892,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1792645428544,
+    "ts": 1792670786325,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.594,
+      "salience": 0.592,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4793,11 +4793,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1792645428545,
+    "ts": 1792670786325,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.401,
+      "salience": 0.4,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5692,11 +5692,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1792645428544,
+    "ts": 1792670786324,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.388,
+      "salience": 0.387,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6971,11 +6971,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1792645428545,
+    "ts": 1792670786325,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.308,
+      "salience": 0.307,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7891,11 +7891,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1792645428545,
+    "ts": 1792670786325,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.307,
+      "salience": 0.305,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -8801,11 +8801,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1792645428545,
+    "ts": 1792670786325,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.272,
+      "salience": 0.271,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9719,11 +9719,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1792645428544,
+    "ts": 1792670786324,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.229,
+      "salience": 0.228,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10599,11 +10599,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1792645428544,
+    "ts": 1792670786324,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.224,
+      "salience": 0.223,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11473,14 +11473,120 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_campaigns-injects-into",
+    "cid": "cand_news_canadian-challenging-files",
     "source": "news",
-    "ts": 1792645483662,
+    "ts": 1792670802399,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.878,
+      "salience": 0.963,
+      "articles": [
+        {
+          "title": "New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods",
+          "url": "https://www.themorningsun.com/2026/10/20/canada-tariffs-legality/",
+          "domain": "themorningsun.com",
+          "seendate": "2026-10-22T06:15:00Z",
+          "image": "https://www.themorningsun.com/wp-content/uploads/2026/10/Healthcare_Drug_Prices_6_36__8b4e13-1.jpg"
+        },
+        {
+          "title": "New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods - Las Vegas Sun News",
+          "url": "https://lasvegassun.com/news/2026/oct/20/new-jersey-food-importer-files-lawsuit-challenging/",
+          "domain": "lasvegassun.com",
+          "seendate": "2026-10-21T01:30:00Z",
+          "image": null
+        },
+        {
+          "title": "A New Jersey food importer files a lawsuit challenging Trump 50 % tariffs on Canadian goods - Las Vegas Sun News",
+          "url": "https://lasvegassun.com/news/2026/oct/20/a-new-jersey-food-importer-files-a-lawsuit-challen/",
+          "domain": "lasvegassun.com",
+          "seendate": "2026-10-21T01:30:00Z",
+          "image": null
+        },
+        {
+          "title": "New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods",
+          "url": "https://www.troyrecord.com/2026/10/20/canada-tariffs-legality/",
+          "domain": "troyrecord.com",
+          "seendate": "2026-10-21T01:15:00Z",
+          "image": "https://www.troyrecord.com/wp-content/uploads/2026/10/Healthcare_Drug_Prices_6_36__8b4e13-1.jpg"
+        },
+        {
+          "title": "New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods",
+          "url": "https://www.greeleytribune.com/2026/10/20/canada-tariffs-legality/",
+          "domain": "greeleytribune.com",
+          "seendate": "2026-10-21T01:15:00Z",
+          "image": "https://www.greeleytribune.com/wp-content/uploads/2026/10/Healthcare_Drug_Prices_6_36__8b4e13-1.jpg"
+        },
+        {
+          "title": "A New Jersey food importer files a lawsuit challenging Trump 50 % tariffs on Canadian goods",
+          "url": "https://www.wral.com/news/ap/3c309-new-jersey-food-importer-files-lawsuit-challenging-trumps-50-tariffs-on-canadian-goods/",
+          "domain": "wral.com",
+          "seendate": "2026-10-21T00:30:00Z",
+          "image": "https://images.wral.com/c60afd33-19bc-5b8c-ba36-08c3ea07b069"
+        },
+        {
+          "title": "A New Jersey food importer files a lawsuit challenging Trump 50 % tariffs on Canadian goods",
+          "url": "https://www.clickondetroit.com/business/2026/10/20/new-jersey-food-importer-files-lawsuit-challenging-trumps-50-tariffs-on-canadian-goods/",
+          "domain": "clickondetroit.com",
+          "seendate": "2026-10-21T00:30:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/REQ5655GDZBUTHWH4U3J2AA3QA.jpg?api_key=clickondetroit_06f87fefb2123598"
+        },
+        {
+          "title": "New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods",
+          "url": "https://www.winchesterstar.com/associated_press/washington/new-jersey-food-importer-files-lawsuit-challenging-trumps-50-tariffs-on-canadian-goods/article_677471ba-14c5-5d1f-818c-4644c6291bcb.html",
+          "domain": "winchesterstar.com",
+          "seendate": "2026-10-21T00:30:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/winchesterstar.com/content/tncms/assets/v3/editorial/f/96/f96515e7-dd8e-5966-91af-68051f1df2f5/6ac782d34a659.image.jpg?crop=1827%2C959%2C0%2C87"
+        },
+        {
+          "title": "New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods",
+          "url": "https://www.orlandosentinel.com/2026/10/20/canada-tariffs-legality/",
+          "domain": "orlandosentinel.com",
+          "seendate": "2026-10-21T00:15:00Z",
+          "image": "https://www.orlandosentinel.com/wp-content/uploads/2026/10/Healthcare_Drug_Prices_6_36__8b4e13-1.jpg"
+        },
+        {
+          "title": "New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods",
+          "url": "https://www.reporterherald.com/2026/10/20/canada-tariffs-legality/",
+          "domain": "reporterherald.com",
+          "seendate": "2026-10-21T00:00:00Z",
+          "image": "https://www.reporterherald.com/wp-content/uploads/2026/10/Healthcare_Drug_Prices_6_36__8b4e13-1.jpg"
+        },
+        {
+          "title": "A New Jersey food importer files a lawsuit challenging Trump 50 % tariffs on Canadian goods",
+          "url": "https://www.wsls.com/business/2026/10/20/new-jersey-food-importer-files-lawsuit-challenging-trumps-50-tariffs-on-canadian-goods/",
+          "domain": "wsls.com",
+          "seendate": "2026-10-20T23:45:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/REQ5655GDZBUTHWH4U3J2AA3QA.jpg?api_key=wsls_8c3a4bc35af7684e"
+        },
+        {
+          "title": "New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods",
+          "url": "https://www.fortmorgantimes.com/2026/10/20/canada-tariffs-legality/",
+          "domain": "fortmorgantimes.com",
+          "seendate": "2026-10-20T23:30:00Z",
+          "image": "https://www.fortmorgantimes.com/wp-content/uploads/2026/10/Healthcare_Drug_Prices_6_36__8b4e13-1.jpg"
+        }
+      ]
+    },
+    "title": "A New Jersey food importer files a lawsuit challenging Trump 50 % tariffs on Canadian goods",
+    "summary": "2026-10-22 themorningsun.com: New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods\n2026-10-21 lasvegassun.com: New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods - Las Vegas Sun News\n2026-10-21 lasvegassun.com: A New Jersey food importer files a lawsuit challenging Trump 50 % tariffs on Canadian goods - Las Vegas Sun News\n2026-10-21 troyrecord.com: New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods\n2026-10-21 greeleytribune.com: New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods\n2026-10-21 wral.com: A New Jersey food importer files a lawsuit challenging Trump 50 % tariffs on Canadian goods",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_campaigns-injects-into",
+    "source": "news",
+    "ts": 1792670802401,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.834,
       "articles": [
         {
           "title": "RNC Injects $50 Million Into Midterm Campaigns",
@@ -11579,120 +11685,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_canadian-challenging-files",
-    "source": "news",
-    "ts": 1792645483658,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.828,
-      "articles": [
-        {
-          "title": "New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods - Las Vegas Sun News",
-          "url": "https://lasvegassun.com/news/2026/oct/20/new-jersey-food-importer-files-lawsuit-challenging/",
-          "domain": "lasvegassun.com",
-          "seendate": "2026-10-21T01:30:00Z",
-          "image": null
-        },
-        {
-          "title": "A New Jersey food importer files a lawsuit challenging Trump 50 % tariffs on Canadian goods - Las Vegas Sun News",
-          "url": "https://lasvegassun.com/news/2026/oct/20/a-new-jersey-food-importer-files-a-lawsuit-challen/",
-          "domain": "lasvegassun.com",
-          "seendate": "2026-10-21T01:30:00Z",
-          "image": null
-        },
-        {
-          "title": "New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods",
-          "url": "https://www.troyrecord.com/2026/10/20/canada-tariffs-legality/",
-          "domain": "troyrecord.com",
-          "seendate": "2026-10-21T01:15:00Z",
-          "image": "https://www.troyrecord.com/wp-content/uploads/2026/10/Healthcare_Drug_Prices_6_36__8b4e13-1.jpg"
-        },
-        {
-          "title": "New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods",
-          "url": "https://www.greeleytribune.com/2026/10/20/canada-tariffs-legality/",
-          "domain": "greeleytribune.com",
-          "seendate": "2026-10-21T01:15:00Z",
-          "image": "https://www.greeleytribune.com/wp-content/uploads/2026/10/Healthcare_Drug_Prices_6_36__8b4e13-1.jpg"
-        },
-        {
-          "title": "A New Jersey food importer files a lawsuit challenging Trump 50 % tariffs on Canadian goods",
-          "url": "https://www.wral.com/news/ap/3c309-new-jersey-food-importer-files-lawsuit-challenging-trumps-50-tariffs-on-canadian-goods/",
-          "domain": "wral.com",
-          "seendate": "2026-10-21T00:30:00Z",
-          "image": "https://images.wral.com/c60afd33-19bc-5b8c-ba36-08c3ea07b069"
-        },
-        {
-          "title": "A New Jersey food importer files a lawsuit challenging Trump 50 % tariffs on Canadian goods",
-          "url": "https://www.clickondetroit.com/business/2026/10/20/new-jersey-food-importer-files-lawsuit-challenging-trumps-50-tariffs-on-canadian-goods/",
-          "domain": "clickondetroit.com",
-          "seendate": "2026-10-21T00:30:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/REQ5655GDZBUTHWH4U3J2AA3QA.jpg?api_key=clickondetroit_06f87fefb2123598"
-        },
-        {
-          "title": "New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods",
-          "url": "https://www.winchesterstar.com/associated_press/washington/new-jersey-food-importer-files-lawsuit-challenging-trumps-50-tariffs-on-canadian-goods/article_677471ba-14c5-5d1f-818c-4644c6291bcb.html",
-          "domain": "winchesterstar.com",
-          "seendate": "2026-10-21T00:30:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/winchesterstar.com/content/tncms/assets/v3/editorial/f/96/f96515e7-dd8e-5966-91af-68051f1df2f5/6ac782d34a659.image.jpg?crop=1827%2C959%2C0%2C87"
-        },
-        {
-          "title": "New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods",
-          "url": "https://www.orlandosentinel.com/2026/10/20/canada-tariffs-legality/",
-          "domain": "orlandosentinel.com",
-          "seendate": "2026-10-21T00:15:00Z",
-          "image": "https://www.orlandosentinel.com/wp-content/uploads/2026/10/Healthcare_Drug_Prices_6_36__8b4e13-1.jpg"
-        },
-        {
-          "title": "New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods",
-          "url": "https://www.reporterherald.com/2026/10/20/canada-tariffs-legality/",
-          "domain": "reporterherald.com",
-          "seendate": "2026-10-21T00:00:00Z",
-          "image": "https://www.reporterherald.com/wp-content/uploads/2026/10/Healthcare_Drug_Prices_6_36__8b4e13-1.jpg"
-        },
-        {
-          "title": "A New Jersey food importer files a lawsuit challenging Trump 50 % tariffs on Canadian goods",
-          "url": "https://www.wsls.com/business/2026/10/20/new-jersey-food-importer-files-lawsuit-challenging-trumps-50-tariffs-on-canadian-goods/",
-          "domain": "wsls.com",
-          "seendate": "2026-10-20T23:45:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/REQ5655GDZBUTHWH4U3J2AA3QA.jpg?api_key=wsls_8c3a4bc35af7684e"
-        },
-        {
-          "title": "New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods",
-          "url": "https://www.fortmorgantimes.com/2026/10/20/canada-tariffs-legality/",
-          "domain": "fortmorgantimes.com",
-          "seendate": "2026-10-20T23:30:00Z",
-          "image": "https://www.fortmorgantimes.com/wp-content/uploads/2026/10/Healthcare_Drug_Prices_6_36__8b4e13-1.jpg"
-        },
-        {
-          "title": "New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods",
-          "url": "https://www.citizensvoice.com/2026/10/20/canada-tariffs-legality/",
-          "domain": "citizensvoice.com",
-          "seendate": "2026-10-20T23:00:00Z",
-          "image": "https://www.citizensvoice.com/wp-content/uploads/2026/10/Healthcare_Drug_Prices_6_36__8b4e13-1.jpg"
-        }
-      ]
-    },
-    "title": "A New Jersey food importer files a lawsuit challenging Trump 50 % tariffs on Canadian goods",
-    "summary": "2026-10-21 lasvegassun.com: New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods - Las Vegas Sun News\n2026-10-21 lasvegassun.com: A New Jersey food importer files a lawsuit challenging Trump 50 % tariffs on Canadian goods - Las Vegas Sun News\n2026-10-21 troyrecord.com: New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods\n2026-10-21 greeleytribune.com: New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods\n2026-10-21 wral.com: A New Jersey food importer files a lawsuit challenging Trump 50 % tariffs on Canadian goods\n2026-10-21 clickondetroit.com: A New Jersey food importer files a lawsuit challenging Trump 50 % tariffs on Canadian goods",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_colleagues-conservative-controversial",
     "source": "news",
-    "ts": 1792645483661,
+    "ts": 1792670802400,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.77,
+      "salience": 0.726,
       "articles": [
         {
           "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
@@ -11758,12 +11758,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ban-court-supreme",
     "source": "news",
-    "ts": 1792645483661,
+    "ts": 1792670802400,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.765,
+      "salience": 0.721,
       "articles": [
         {
           "title": "Supreme Court agrees to review federal home distilling ban",
@@ -11864,12 +11864,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_caps-court-fly",
     "source": "news",
-    "ts": 1792645483662,
+    "ts": 1792670802401,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.645,
+      "salience": 0.601,
       "articles": [
         {
           "title": "Republicans fly past former spending caps nixed by US Supreme Court",
@@ -11914,12 +11914,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_base-bets-competitive",
     "source": "news",
-    "ts": 1792645483662,
+    "ts": 1792670802401,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.635,
+      "salience": 0.591,
       "articles": [
         {
           "title": "Trump bets on his base to rescue Republicans in increasingly competitive races",
@@ -11985,12 +11985,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_blitz-campaign-farmer",
     "source": "news",
-    "ts": 1792645483659,
+    "ts": 1792670802399,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.513,
+      "salience": 0.469,
       "articles": [
         {
           "title": "The Latest : Trump heads to Kansas to rally farmer votes in latest stop on midterm campaign blitz | Associated Press National",
@@ -12056,12 +12056,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_aapi-adults-democrats",
     "source": "news",
-    "ts": 1792645483659,
+    "ts": 1792670802399,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.298,
+      "salience": 0.254,
       "articles": [
         {
           "title": "The Latest : Democrats gain ground with AAPI adults as trust in GOP fades , poll finds",
