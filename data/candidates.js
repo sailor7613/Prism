@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-10-22T12:06:42.403Z · 15 legislative + 8 news (GDELT, 3d)
+// 2026-10-22T17:21:28.545Z · 15 legislative + 8 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1792670786325,
+    "ts": 1792689641252,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.772,
+      "salience": 0.771,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -262,11 +262,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1792670786325,
+    "ts": 1792689641252,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.763,
+      "salience": 0.762,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -519,11 +519,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1792670786324,
+    "ts": 1792689641251,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.728,
+      "salience": 0.727,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -1937,11 +1937,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1792670786325,
+    "ts": 1792689641252,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.727,
+      "salience": 0.726,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -2194,11 +2194,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1792670786325,
+    "ts": 1792689641252,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.719,
+      "salience": 0.718,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -2451,11 +2451,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1792670786324,
+    "ts": 1792689641251,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.657,
+      "salience": 0.656,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -3364,11 +3364,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1792670786325,
+    "ts": 1792689641252,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.615,
+      "salience": 0.614,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3892,11 +3892,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1792670786325,
+    "ts": 1792689641252,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.592,
+      "salience": 0.591,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4793,11 +4793,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1792670786325,
+    "ts": 1792689641252,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.4,
+      "salience": 0.399,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5692,11 +5692,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1792670786324,
+    "ts": 1792689641251,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.387,
+      "salience": 0.386,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6971,11 +6971,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1792670786325,
+    "ts": 1792689641252,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.307,
+      "salience": 0.306,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7891,11 +7891,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1792670786325,
+    "ts": 1792689641252,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.305,
+      "salience": 0.304,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -8801,11 +8801,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1792670786325,
+    "ts": 1792689641252,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.271,
+      "salience": 0.27,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9719,11 +9719,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1792670786324,
+    "ts": 1792689641251,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.228,
+      "salience": 0.227,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10599,11 +10599,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1792670786324,
+    "ts": 1792689641251,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.223,
+      "salience": 0.222,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11475,12 +11475,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_canadian-challenging-files",
     "source": "news",
-    "ts": 1792670802399,
+    "ts": 1792689688538,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.963,
+      "salience": 0.931,
       "articles": [
         {
           "title": "New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods",
@@ -11581,12 +11581,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_campaigns-injects-into",
     "source": "news",
-    "ts": 1792670802401,
+    "ts": 1792689688541,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.834,
+      "salience": 0.801,
       "articles": [
         {
           "title": "RNC Injects $50 Million Into Midterm Campaigns",
@@ -11685,14 +11685,85 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_colleagues-conservative-controversial",
+    "cid": "cand_news_caps-court-fly",
     "source": "news",
-    "ts": 1792670802400,
+    "ts": 1792689688541,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.726,
+      "salience": 0.747,
+      "articles": [
+        {
+          "title": "Republicans fly past former spending caps nixed by US Supreme Court",
+          "url": "https://mymixfm.com/2026/10/21/republicans-fly-past-former-spending-caps-nixed-by-us-supreme-court/",
+          "domain": "mymixfm.com",
+          "seendate": "2026-10-22T03:15:00Z",
+          "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-10/21/2026-10-21T224843Z_2_LYNXMPEM9K23T_RTROPTP_3_USA-COURT-CAMPAIGN-FINANCE.JPG"
+        },
+        {
+          "title": "Republicans fly past former spending caps nixed by US Supreme Court",
+          "url": "https://whtc.com/2026/10/21/republicans-fly-past-former-spending-caps-nixed-by-us-supreme-court/",
+          "domain": "whtc.com",
+          "seendate": "2026-10-22T01:15:00Z",
+          "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-10/21/2026-10-21T224843Z_2_LYNXMPEM9K23T_RTROPTP_3_USA-COURT-CAMPAIGN-FINANCE.JPG"
+        },
+        {
+          "title": "Republicans fly past former spending caps nixed by US Supreme Court",
+          "url": "https://wabx.net/2026/10/21/republicans-fly-past-former-spending-caps-nixed-by-us-supreme-court/",
+          "domain": "wabx.net",
+          "seendate": "2026-10-22T01:15:00Z",
+          "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-10/21/2026-10-21T224843Z_2_LYNXMPEM9K23T_RTROPTP_3_USA-COURT-CAMPAIGN-FINANCE.JPG"
+        },
+        {
+          "title": "Republicans fly past former spending caps nixed by US Supreme Court",
+          "url": "https://whbl.com/2026/10/21/republicans-fly-past-former-spending-caps-nixed-by-us-supreme-court/",
+          "domain": "whbl.com",
+          "seendate": "2026-10-22T01:00:00Z",
+          "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-10/21/2026-10-21T224843Z_2_LYNXMPEM9K23T_RTROPTP_3_USA-COURT-CAMPAIGN-FINANCE.JPG"
+        },
+        {
+          "title": "Republicans fly past former spending caps nixed by US Supreme Court",
+          "url": "https://wsau.com/2026/10/21/republicans-fly-past-former-spending-caps-nixed-by-us-supreme-court/",
+          "domain": "wsau.com",
+          "seendate": "2026-10-22T00:45:00Z",
+          "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-10/21/2026-10-21T224843Z_2_LYNXMPEM9K23T_RTROPTP_3_USA-COURT-CAMPAIGN-FINANCE.JPG"
+        },
+        {
+          "title": "Republicans fly past former spending caps nixed by US Supreme Court",
+          "url": "https://kelo.com/2026/10/21/republicans-fly-past-former-spending-caps-nixed-by-us-supreme-court/",
+          "domain": "kelo.com",
+          "seendate": "2026-10-22T00:45:00Z",
+          "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-10/21/2026-10-21T224843Z_2_LYNXMPEM9K23T_RTROPTP_3_USA-COURT-CAMPAIGN-FINANCE.JPG"
+        },
+        {
+          "title": "Republicans fly past former spending caps nixed by US Supreme Court",
+          "url": "https://hot96.com/2026/10/21/republicans-fly-past-former-spending-caps-nixed-by-us-supreme-court/",
+          "domain": "hot96.com",
+          "seendate": "2026-10-22T00:15:00Z",
+          "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-10/21/2026-10-21T224843Z_2_LYNXMPEM9K23T_RTROPTP_3_USA-COURT-CAMPAIGN-FINANCE.JPG"
+        }
+      ]
+    },
+    "title": "Republicans fly past former spending caps nixed by US Supreme Court",
+    "summary": "2026-10-22 mymixfm.com: Republicans fly past former spending caps nixed by US Supreme Court\n2026-10-22 whtc.com: Republicans fly past former spending caps nixed by US Supreme Court\n2026-10-22 wabx.net: Republicans fly past former spending caps nixed by US Supreme Court\n2026-10-22 whbl.com: Republicans fly past former spending caps nixed by US Supreme Court\n2026-10-22 wsau.com: Republicans fly past former spending caps nixed by US Supreme Court\n2026-10-22 kelo.com: Republicans fly past former spending caps nixed by US Supreme Court",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_colleagues-conservative-controversial",
+    "source": "news",
+    "ts": 1792689688539,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.694,
       "articles": [
         {
           "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
@@ -11756,14 +11827,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_ban-court-supreme",
+    "cid": "cand_news_ban-court-distilling",
     "source": "news",
-    "ts": 1792670802400,
+    "ts": 1792689688539,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.721,
+      "salience": 0.688,
       "articles": [
         {
           "title": "Supreme Court agrees to review federal home distilling ban",
@@ -11862,47 +11933,54 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_caps-court-fly",
+    "cid": "cand_news_could-election-final",
     "source": "news",
-    "ts": 1792670802401,
+    "ts": 1792689688538,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.601,
+      "salience": 0.642,
       "articles": [
         {
-          "title": "Republicans fly past former spending caps nixed by US Supreme Court",
-          "url": "https://whbl.com/2026/10/21/republicans-fly-past-former-spending-caps-nixed-by-us-supreme-court/",
-          "domain": "whbl.com",
-          "seendate": "2026-10-22T01:00:00Z",
-          "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-10/21/2026-10-21T224843Z_2_LYNXMPEM9K23T_RTROPTP_3_USA-COURT-CAMPAIGN-FINANCE.JPG"
+          "title": "The midterm election outcomes that could shape Trump final two years",
+          "url": "https://www.grandforksherald.com/news/national/the-midterm-election-outcomes-that-could-shape-trumps-final-two-years",
+          "domain": "grandforksherald.com",
+          "seendate": "2026-10-22T04:00:00Z",
+          "image": "https://forum-communications-production-web.s3.us-west-2.amazonaws.com/brightspot/d2/e4/54402b09eb7910bb2dd97a5dd1d0/2026-10-19t100809z-1-lynxmpem9i0tx-rtroptp-4-usa-election-scenarios.JPG"
         },
         {
-          "title": "Republicans fly past former spending caps nixed by US Supreme Court",
-          "url": "https://wsau.com/2026/10/21/republicans-fly-past-former-spending-caps-nixed-by-us-supreme-court/",
-          "domain": "wsau.com",
-          "seendate": "2026-10-22T00:45:00Z",
-          "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-10/21/2026-10-21T224843Z_2_LYNXMPEM9K23T_RTROPTP_3_USA-COURT-CAMPAIGN-FINANCE.JPG"
+          "title": "The midterm election outcomes that could shape Trump final two years",
+          "url": "https://www.postbulletin.com/news/national/the-midterm-election-outcomes-that-could-shape-trumps-final-two-years",
+          "domain": "postbulletin.com",
+          "seendate": "2026-10-22T03:45:00Z",
+          "image": "https://forum-communications-production-web.s3.us-west-2.amazonaws.com/brightspot/d2/e4/54402b09eb7910bb2dd97a5dd1d0/2026-10-19t100809z-1-lynxmpem9i0tx-rtroptp-4-usa-election-scenarios.JPG"
         },
         {
-          "title": "Republicans fly past former spending caps nixed by US Supreme Court",
-          "url": "https://kelo.com/2026/10/21/republicans-fly-past-former-spending-caps-nixed-by-us-supreme-court/",
-          "domain": "kelo.com",
-          "seendate": "2026-10-22T00:45:00Z",
-          "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-10/21/2026-10-21T224843Z_2_LYNXMPEM9K23T_RTROPTP_3_USA-COURT-CAMPAIGN-FINANCE.JPG"
+          "title": "The midterm election outcomes that could shape Trump final two years",
+          "url": "https://www.parkrapidsenterprise.com/news/national/the-midterm-election-outcomes-that-could-shape-trumps-final-two-years",
+          "domain": "parkrapidsenterprise.com",
+          "seendate": "2026-10-22T03:30:00Z",
+          "image": "https://forum-communications-production-web.s3.us-west-2.amazonaws.com/brightspot/d2/e4/54402b09eb7910bb2dd97a5dd1d0/2026-10-19t100809z-1-lynxmpem9i0tx-rtroptp-4-usa-election-scenarios.JPG"
         },
         {
-          "title": "Republicans fly past former spending caps nixed by US Supreme Court",
-          "url": "https://hot96.com/2026/10/21/republicans-fly-past-former-spending-caps-nixed-by-us-supreme-court/",
-          "domain": "hot96.com",
-          "seendate": "2026-10-22T00:15:00Z",
-          "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-10/21/2026-10-21T224843Z_2_LYNXMPEM9K23T_RTROPTP_3_USA-COURT-CAMPAIGN-FINANCE.JPG"
+          "title": "The midterm election outcomes that could shape Trump final two years",
+          "url": "https://www.dglobe.com/news/national/the-midterm-election-outcomes-that-could-shape-trumps-final-two-years",
+          "domain": "dglobe.com",
+          "seendate": "2026-10-22T03:30:00Z",
+          "image": "https://forum-communications-production-web.s3.us-west-2.amazonaws.com/brightspot/d2/e4/54402b09eb7910bb2dd97a5dd1d0/2026-10-19t100809z-1-lynxmpem9i0tx-rtroptp-4-usa-election-scenarios.JPG"
+        },
+        {
+          "title": "The midterm election outcomes that could shape Trump final two years",
+          "url": "https://www.wahpetondailynews.com/news/national/the-midterm-election-outcomes-that-could-shape-trumps-final-two-years",
+          "domain": "wahpetondailynews.com",
+          "seendate": "2026-10-22T03:00:00Z",
+          "image": "https://forum-communications-production-web.s3.us-west-2.amazonaws.com/brightspot/d2/e4/54402b09eb7910bb2dd97a5dd1d0/2026-10-19t100809z-1-lynxmpem9i0tx-rtroptp-4-usa-election-scenarios.JPG"
         }
       ]
     },
-    "title": "Republicans fly past former spending caps nixed by US Supreme Court",
-    "summary": "2026-10-22 whbl.com: Republicans fly past former spending caps nixed by US Supreme Court\n2026-10-22 wsau.com: Republicans fly past former spending caps nixed by US Supreme Court\n2026-10-22 kelo.com: Republicans fly past former spending caps nixed by US Supreme Court\n2026-10-22 hot96.com: Republicans fly past former spending caps nixed by US Supreme Court",
+    "title": "The midterm election outcomes that could shape Trump final two years",
+    "summary": "2026-10-22 grandforksherald.com: The midterm election outcomes that could shape Trump final two years\n2026-10-22 postbulletin.com: The midterm election outcomes that could shape Trump final two years\n2026-10-22 parkrapidsenterprise.com: The midterm election outcomes that could shape Trump final two years\n2026-10-22 dglobe.com: The midterm election outcomes that could shape Trump final two years\n2026-10-22 wahpetondailynews.com: The midterm election outcomes that could shape Trump final two years",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -11914,12 +11992,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_base-bets-competitive",
     "source": "news",
-    "ts": 1792670802401,
+    "ts": 1792689688541,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.591,
+      "salience": 0.613,
       "articles": [
         {
           "title": "Trump bets on his base to rescue Republicans in increasingly competitive races",
@@ -11934,6 +12012,13 @@ window.PRISM_CANDIDATES = [
           "domain": "news3lv.com",
           "seendate": "2026-10-20T21:00:00Z",
           "image": "https://news3lv.com/resources/media2/16x9/5577/1320/0x367/90/801821e2-88f0-471b-b212-ce3da51efdec-GettyImages2301049589.jpg"
+        },
+        {
+          "title": "Trump bets on his base to rescue Republicans in increasingly competitive races",
+          "url": "https://fox17.com/news/beyond-the-podium/trump-bets-on-his-base-to-rescue-republicans-in-increasingly-competitive-races-midterm-elections-congress-majority-politics",
+          "domain": "fox17.com",
+          "seendate": "2026-10-20T21:00:00Z",
+          "image": "https://fox17.com/resources/media2/16x9/5577/1320/0x367/90/801821e2-88f0-471b-b212-ce3da51efdec-GettyImages2301049589.jpg"
         },
         {
           "title": "Trump bets on his base to rescue Republicans in increasingly competitive races",
@@ -11973,7 +12058,7 @@ window.PRISM_CANDIDATES = [
       ]
     },
     "title": "Trump bets on his base to rescue Republicans in increasingly competitive races",
-    "summary": "2026-10-20 wwmt.com: Trump bets on his base to rescue Republicans in increasingly competitive races\n2026-10-20 news3lv.com: Trump bets on his base to rescue Republicans in increasingly competitive races\n2026-10-20 13wham.com: Trump bets on his base to rescue Republicans in increasingly competitive races\n2026-10-20 wcti12.com: Trump bets on his base to rescue Republicans in increasingly competitive races\n2026-10-20 wpde.com: Trump bets on his base to rescue Republicans in increasingly competitive races\n2026-10-20 local12.com: Trump bets on his base to rescue Republicans in increasingly competitive races",
+    "summary": "2026-10-20 wwmt.com: Trump bets on his base to rescue Republicans in increasingly competitive races\n2026-10-20 news3lv.com: Trump bets on his base to rescue Republicans in increasingly competitive races\n2026-10-20 fox17.com: Trump bets on his base to rescue Republicans in increasingly competitive races\n2026-10-20 13wham.com: Trump bets on his base to rescue Republicans in increasingly competitive races\n2026-10-20 wcti12.com: Trump bets on his base to rescue Republicans in increasingly competitive races\n2026-10-20 wpde.com: Trump bets on his base to rescue Republicans in increasingly competitive races",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -11985,12 +12070,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_blitz-campaign-farmer",
     "source": "news",
-    "ts": 1792670802399,
+    "ts": 1792689688538,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.469,
+      "salience": 0.436,
       "articles": [
         {
           "title": "The Latest : Trump heads to Kansas to rally farmer votes in latest stop on midterm campaign blitz | Associated Press National",
@@ -12045,56 +12130,6 @@ window.PRISM_CANDIDATES = [
     },
     "title": "The Latest : Trump heads to Kansas to rally farmer votes in latest stop on midterm campaign blitz",
     "summary": "2026-10-20 nvdaily.com: The Latest : Trump heads to Kansas to rally farmer votes in latest stop on midterm campaign blitz | Associated Press National\n2026-10-20 aol.com: The Latest : Trump heads to Kansas to rally farmer votes in latest stop on midterm campaign blitz\n2026-10-20 woonsocketcall.com: The Latest : Trump heads to Kansas to rally farmer votes in latest stop on midterm campaign blitz | National And World News\n2026-10-19 kdhnews.com: The Latest : Trump heads to Kansas to rally farmer votes in latest stop on midterm campaign blitz | News\n2026-10-19 wataugademocrat.com: The Latest : Trump heads to Kansas to rally farmer votes in latest stop on midterm campaign blitz | National\n2026-10-19 erienewsnow.com: The Latest : Trump heads to Kansas to rally farmer votes in latest stop on midterm campaign blitz | Politics",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_aapi-adults-democrats",
-    "source": "news",
-    "ts": 1792670802399,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.254,
-      "articles": [
-        {
-          "title": "The Latest : Democrats gain ground with AAPI adults as trust in GOP fades , poll finds",
-          "url": "https://www.clickorlando.com/news/politics/2026/10/19/the-latest-democrats-gain-ground-with-aapi-adults-as-trust-in-gop-fades-poll-finds/",
-          "domain": "clickorlando.com",
-          "seendate": "2026-10-19T17:30:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/URUZGNTC2FGXVJMMMLNBQQARCE.jpg?api_key=clickorlando_488cff2bcc157b2e"
-        },
-        {
-          "title": "The Latest : Democrats gain ground with AAPI adults as trust in GOP fades , poll finds",
-          "url": "https://www.yankton.net/news/national_ap/article_1f9f184e-e915-5437-ae21-b913e54fd013.html",
-          "domain": "yankton.net",
-          "seendate": "2026-10-19T17:30:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/yankton.net/content/tncms/custom/image/4c91c334-88e5-11e7-b820-e722d3f7a1ed.jpg"
-        },
-        {
-          "title": "The Latest : Democrats gain ground with AAPI adults as trust in GOP fades , poll finds",
-          "url": "https://www.yakimaherald.com/news/nation_and_world/nation/the-latest-democrats-gain-ground-with-aapi-adults-as-trust-in-gop-fades-poll-finds/article_cc4e97e1-7822-5aa7-b465-e156ec4ffb22.html",
-          "domain": "yakimaherald.com",
-          "seendate": "2026-10-19T16:45:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/yakimaherald.com/content/tncms/assets/v3/editorial/f/52/f52a45f2-47da-53ad-a4df-9fa1548f5645/6ad61138d81f0.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "The Latest : Democrats gain ground with AAPI adults as trust in GOP fades , poll finds",
-          "url": "https://www.idahostatejournal.com/news/national/the-latest-democrats-gain-ground-with-aapi-adults-as-trust-in-gop-fades-poll-finds/article_a042609d-fda4-59d5-9457-92923e797970.html",
-          "domain": "idahostatejournal.com",
-          "seendate": "2026-10-19T15:45:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/idahostatejournal.com/content/tncms/assets/v3/editorial/1/2b/12ba801a-db24-54f1-8b57-aef6c8a640fb/6ad570b9799ae.image.jpg?crop=1763%2C926%2C0%2C124"
-        }
-      ]
-    },
-    "title": "The Latest : Democrats gain ground with AAPI adults as trust in GOP fades , poll finds",
-    "summary": "2026-10-19 clickorlando.com: The Latest : Democrats gain ground with AAPI adults as trust in GOP fades , poll finds\n2026-10-19 yankton.net: The Latest : Democrats gain ground with AAPI adults as trust in GOP fades , poll finds\n2026-10-19 yakimaherald.com: The Latest : Democrats gain ground with AAPI adults as trust in GOP fades , poll finds\n2026-10-19 idahostatejournal.com: The Latest : Democrats gain ground with AAPI adults as trust in GOP fades , poll finds",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,

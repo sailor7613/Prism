@@ -1,9 +1,9 @@
 # Newsroom digest — 2026-10-22
 
-Register: 116 objects · this scan: 0 new, 0 seen again, 0 returned.
+Register: 117 objects · this scan: 1 new, 0 seen again, 0 returned.
 
-## Queued for drafting (0)
-- (nothing cleared the bar)
+## Queued for drafting (1)
+- **Pentagon Approves DHS Testing Of Heat Ray At Border** — vote · voted · holder: the Pentagon · formed 2026-10-22 · 9 outlets (peak 9) · `obj_thepenta_approves-border-dhs-heat`
 
 ## Permanence breaks (went silent while unresolved)
 - **New Mexico judge tosses Timothy Busfield indictment , citing prosecutorial misconduct** — ruling · ruled · holder: a federal court · formed 2026-10-17 · 15 outlets (peak 24) · `obj_afederal_busfield-citing-indictment-judge` · silent 5d after 3 scans
@@ -12,7 +12,7 @@ Register: 116 objects · this scan: 0 new, 0 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- none
+- **Pentagon Approves DHS Testing Of Heat Ray At Border** — vote · voted · holder: the Pentagon · formed 2026-10-22 · 9 outlets (peak 9) · `obj_thepenta_approves-border-dhs-heat`
 
 ## Watching (40)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
