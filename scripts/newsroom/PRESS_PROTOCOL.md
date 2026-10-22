@@ -21,7 +21,7 @@ in full. Rulings are never made here; anomalies are reported.
   file is missing, use the newest date in `…/sweeps/index.json` and say so in the note.
 - Transcripts: YouTube refuses caption pulls from GitHub's runners and from this shell, so they are
   pulled on the Mac itself by `Pull the Transcripts.command` (06:30 timer, or by hand) into
-  `Prism/data/press/transcripts/<date>/` **on disk** — read them from the connected folder, not from
+  `Transcripts/press/<date>/` at the workspace root **on disk** (outside the Prism repo and gitignored — raw transcripts are never committed or published) — read them from the connected folder, not from
   GitHub raw. The local `Prism/data/press/sweeps/sweep_<date>.json` (if present) is the sweep with
   `transcript` filled in; prefer it over the GitHub copy. A YouTube hit with no transcript on disk is
   *transcript owed*: note it, don't score it from its title. Never try to pull captions from here.

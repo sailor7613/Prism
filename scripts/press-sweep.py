@@ -26,9 +26,10 @@ PRISM = os.path.abspath(os.path.join(HERE, '..'))
 PRESS = os.path.join(PRISM, 'data', 'press')
 ROSTER = os.path.join(PRESS, 'roster.json')
 ROSTER_SOURCES = []
+LAST_429 = False
 TERMS = os.path.join(PRESS, 'terms.json')
 SWEEPS = os.path.join(PRESS, 'sweeps')
-TRANSCRIPTS = os.path.join(PRESS, 'transcripts')
+TRANSCRIPTS = os.path.join(PRISM, '..', 'Transcripts', 'press')   # outside the Prism repo, gitignored at the workspace: raw material stays on the Mac
 UA = {'User-Agent': 'Mozilla/5.0 (compatible; prism-press-sweep/1.0)'}
 NS = {'atom': 'http://www.w3.org/2005/Atom', 'content': 'http://purl.org/rss/1.0/modules/content/',
       'itunes': 'http://www.itunes.com/dtds/podcast-1.0.dtd', 'media': 'http://search.yahoo.com/mrss/',
@@ -111,6 +112,7 @@ def pull_captions(video_url, out_md, program, title, date):
                            check=True, capture_output=True, timeout=240)
         except subprocess.CalledProcessError as e:
             err = (e.stderr or b'').decode('utf-8', 'ignore').strip().splitlines()
+            global LAST_429; LAST_429 = any('429' in l for l in err)
             log(f'    captions refused: {err[-1][:160] if err else e}'); return None
         except Exception as e:
             log(f'    captions failed: {str(e)[:160]}'); return None
@@ -164,24 +166,27 @@ def pull_transcripts(date):
         except Exception as e:
             log(f'no sweep for {date} on disk or on GitHub ({str(e)[:80]}) — run the daily slop first'); return 1
     roster = {s['id']: s for s in json.load(open(ROSTER, encoding='utf-8'))['sources']}
-    tdir = os.path.join(TRANSCRIPTS, date); n = done = 0
+    tdir = os.path.join(TRANSCRIPTS, date); n = done = 0; backoff = 0
     for q in rep.get('queue', []):
         if not q.get('videoId') or q.get('transcript'): continue
         if q.get('skipTranscript'): continue
         n += 1
         out = os.path.join(tdir, f"{q.get('source', q.get('publication'))}_{q['videoId']}.md")
-        if os.path.exists(out): q['transcript'] = os.path.relpath(out, PRISM); done += 1; continue
+        if os.path.exists(out): q['transcript'] = os.path.relpath(out, os.path.join(PRISM, '..')); done += 1; continue
         import glob as _g; same = _g.glob(os.path.join(tdir, f"*_{q['videoId']}.md"))   # the same video already pulled under another show's name
-        if same: q['transcript'] = os.path.relpath(same[0], PRISM); done += 1; continue
+        if same: q['transcript'] = os.path.relpath(same[0], os.path.join(PRISM, '..')); done += 1; continue
         name = roster.get(q.get('source'), {}).get('name', q.get('publication'))
         log(f"{q.get('source','?'):16s} {(q.get('title') or '')[:70]}")
         got = pull_captions(q['link'], out, name, q.get('title') or '', date)
-        if got: q['transcript'] = got; done += 1
-        else: q['transcriptTried'] = dt.datetime.now(dt.timezone.utc).isoformat()
-        time.sleep(1.5)
+        if got: q['transcript'] = os.path.relpath(os.path.join(PRISM, got), os.path.join(PRISM, '..')); done += 1; backoff = 0
+        else:
+            q['transcriptTried'] = dt.datetime.now(dt.timezone.utc).isoformat()
+            backoff = min(backoff + 1, 4)
+            if LAST_429: log(f'    YouTube is rate-limiting — pausing {20 * backoff}s'); time.sleep(20 * backoff)
+        time.sleep(4)
     os.makedirs(SWEEPS, exist_ok=True)
     json.dump(rep, open(path, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-    log(f'\n{done} of {n} transcripts on disk for {date} → {os.path.relpath(tdir, PRISM)}  (sweep file updated locally; commit in GitHub Desktop)')
+    log(f'\n{done} of {n} transcripts on disk for {date} → {os.path.relpath(tdir, os.path.join(PRISM, ".."))}  (outside the repo; the sweep file is updated locally — commit it in GitHub Desktop)')
     return 0
 
 def main():

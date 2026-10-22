@@ -90,6 +90,8 @@ def main():
     if token: UA['Authorization'] = 'Bearer ' + token
     base = 'https://oauth.reddit.com' if token else 'https://www.reddit.com'
     log('reddit: ' + ('official API (app keys found)' if token else 'anonymous reads (no app keys; GitHub runners are usually blocked)'))
+    if not token and os.environ.get('GITHUB_ACTIONS'):
+        log('no Reddit app keys on the Action — leaving the clips to the Mac (Pull the Transcripts.command runs this scan from a home connection)'); return 0
     for sub, corner in BASKET:
         url = f'{base}/r/{sub}/top.json?t=day&limit={a.limit}&raw_json=1'
         try: d = get_json(url)
@@ -139,4 +141,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    sys.exit(main() or 0)
