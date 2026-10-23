@@ -1,0 +1,2662 @@
+{
+ "schema": "press/sweep/v1",
+ "date": "2026-10-23",
+ "index": "roster",
+ "objects": [
+  "chips",
+  "diesel",
+  "dollar",
+  "housing",
+  "iran",
+  "me-sen",
+  "midterms",
+  "russia-sanctions",
+  "shutdown",
+  "tariffs",
+  "tx-sen",
+  "venezuela"
+ ],
+ "registerObjects": 42,
+ "route": "press-sweep.py on the GitHub Action (keyless; captions via yt-dlp, non-fatal)",
+ "publications": {
+  "daily-show": {
+   "station": "LI",
+   "items": 7,
+   "hits": 3,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCwWhs_6x42TyRM4Wstoq8HA"
+   ],
+   "note": null
+  },
+  "al-jazeera": {
+   "station": "LI",
+   "items": 25,
+   "hits": 9,
+   "feeds": [
+    "www.aljazeera.com/xml/rss/all.xml"
+   ],
+   "note": null
+  },
+  "ms-now": {
+   "station": "LI",
+   "items": 15,
+   "hits": 7,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCaXkIU1QidjPwiAYu6GcHjg"
+   ],
+   "note": null
+  },
+  "npr-pbs": {
+   "station": "LI",
+   "items": 35,
+   "hits": 19,
+   "feeds": [
+    "feeds.npr.org/1001/rss.xml",
+    "feeds.npr.org/1014/rss.xml",
+    "www.pbs.org/newshour/feeds/rss/headlines"
+   ],
+   "note": null
+  },
+  "atlantic": {
+   "station": "LI",
+   "items": 18,
+   "hits": 2,
+   "feeds": [
+    "www.theatlantic.com/feed/all/"
+   ],
+   "note": null
+  },
+  "the-close": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "odd-lots": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "surveillance": {
+   "station": "RI",
+   "items": 1,
+   "hits": 1,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "bloomberg-streams": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "breaking-points": {
+   "station": "LP+RP",
+   "items": 10,
+   "hits": 5,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCDRIjKy6eZOvKtOELtTdeUA"
+   ],
+   "note": null
+  },
+  "secular-talk": {
+   "station": "LP",
+   "items": 10,
+   "hits": 1,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCldfgbzNILYZA4dmDt4Cd6A"
+   ],
+   "note": null
+  },
+  "hasan": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCnI_h3e6b5jGLfly2SY57SA"
+   ],
+   "note": null
+  },
+  "chapo": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "note": "no feed on file — add `feeds` to the roster entry"
+  },
+  "tcn": {
+   "station": "RP",
+   "items": 2,
+   "hits": 1,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCjjBjVc0b1cIpNGEeZtS2lg"
+   ],
+   "note": null
+  },
+  "freepress": {
+   "station": "RP",
+   "items": 11,
+   "hits": 5,
+   "feeds": [
+    "www.thefp.com/feed"
+   ],
+   "note": null
+  },
+  "tim-dillon": {
+   "station": "RP",
+   "items": 0,
+   "hits": 0,
+   "note": "no feed on file — add `feeds` to the roster entry"
+  },
+  "nyt": {
+   "station": "LI",
+   "items": 89,
+   "hits": 28,
+   "feeds": [
+    "rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/World.xml",
+    "feeds.simplecast.com/54nAGcIl"
+   ],
+   "note": null
+  },
+  "fox": {
+   "station": "RI?",
+   "items": 67,
+   "hits": 45,
+   "feeds": [
+    "moxie.foxnews.com/google-publisher/latest.xml",
+    "moxie.foxnews.com/google-publisher/politics.xml",
+    "moxie.foxnews.com/google-publisher/world.xml",
+    "moxie.foxbusiness.com/google-publisher/latest.xml"
+   ],
+   "note": null
+  },
+  "grayzone": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "thegrayzone.com/feed/"
+   ],
+   "note": null
+  },
+  "shapiro": {
+   "station": "RP",
+   "items": 5,
+   "hits": 1,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCxUQLGMbb2cI8CqiwZ0WhAQ"
+   ],
+   "note": null
+  },
+  "kirk": {
+   "station": "RP",
+   "items": 2,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCVrK_pMRp_q8IelpfUCTGLQ"
+   ],
+   "note": null
+  }
+ },
+ "queue": [
+  {
+   "title": "Under U.S. Watch, Venezuela Grapples With Tensions Over Democracy",
+   "dek": "President Trump says Venezuela is not ready for elections, and he focuses instead on its oil. But Secretary of State Marco Rubio is nudging talks between opposing politicians.",
+   "opening": "",
+   "published": "2026-10-23T17:15:01+00:00",
+   "link": "https://www.nytimes.com/2026/10/23/us/politics/venezuela-trump-rubio-elections.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "venezuela": [
+     "venezuela"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Indonesia seizes more than a tonne of ketamine from tanker",
+   "dek": "Indonesian authorities seized 1.16 tonnes of ketamine from a Malaysian vessel in the Strait of Malacca.",
+   "opening": "",
+   "published": "2026-10-23T17:00:22+00:00",
+   "link": "https://www.aljazeera.com/video/newsfeed/2026/10/23/aje-onl-nf_indonesia-seizes-more-than-a-tonne-of-ketamine-231026?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "strait of",
+     "tanker"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "BREAKING: Trump admin seeks to BLOCK Alaska Senate result if Dems WIN",
+   "dek": "The Trump administration is looking to block the results of Alaska's Senate race if Democrat Mary Peltola beats GOP incumbent Dan Sullivan. MS NOW Justice and Intelligence Reporter Ken Dilanian has more details. New York Times Chief White House Correspondent Peter Baker joins Alicia Menendez to discuss. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more c",
+   "opening": "",
+   "published": "2026-10-23T16:56:52+00:00",
+   "link": "https://www.youtube.com/watch?v=Ez0FoX5qL5c",
+   "videoId": "Ez0FoX5qL5c",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "senate race"
+    ],
+    "obj_thepresi_authority-block-dems-elections": [
+     "dems",
+     "block"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "TX Voters OVERWHELM Polls w HUGE Turnout",
+   "dek": "The Friday crew discusses early votes surging in Texas ahead of the midterm elections on November 3rd. Theo: https://theoelections.com; https://x.com/theoelections Sign up for a PREMIUM Breaking Points subscriptions for full early access to uncut shows and LIVE AMAs with the hosts every week: https://breakingpoints.supercast.com/ Merch Store: https://shop.breakingpoints.com/ To listen to Breaking Points as a podcast, check them out on Apple and Spotify Apple: https://podcasts.apple.com/us/podcast/breaking-points-with-krystal-and-saagar/id1570045623 Spotify: https://open.spotify.com/show/4Kbsy6",
+   "opening": "",
+   "published": "2026-10-23T16:52:46+00:00",
+   "link": "https://www.youtube.com/watch?v=92UhuMC6t1I",
+   "videoId": "92UhuMC6t1I",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump Officials Seek Block on Alaska Senate Race Results if the Republican Dan Sullivan Loses",
+   "dek": "The Justice Department, in a highly unusual court filing, argued that confusion over candidates with similar names could taint the election result.",
+   "opening": "",
+   "published": "2026-10-23T16:46:17+00:00",
+   "link": "https://www.nytimes.com/2026/10/23/us/politics/justice-dept-alaska-senate-race-sullivan.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "senate race"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Israeli roadblocks disrupt schools and medical care in West Bank village",
+   "dek": "Residents of Madama describe being cut off from hospitals, schools, and olive groves as Israeli forces blockade village.",
+   "opening": "",
+   "published": "2026-10-23T16:37:59+00:00",
+   "link": "https://www.aljazeera.com/news/2026/10/23/israeli-roadblocks-disrupt-schools-and-medical-care-in-west-bank-village?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_block-care-court-inmate": [
+     "medical",
+     "care"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Joe: Trump’s shameful defense of Ramaswamy ad takes voters back to Epstein files",
+   "dek": "With just eleven days to go before the midterm elections, Joe blasts President Donald Trump for defending an ad from Ohio Republican gubernatorial candidate Vivek Ramaswamy featuring Democratic opponent Amy Acton’s estranged mother. The controversy, Joe says, will only remind voters of the Epstein files. Acton has said her mother stood by and fled the state with her stepfather after he was charged with raping Amy as a child. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become an MS NOW Member! Join us here http://ms.now/membership ",
+   "opening": "",
+   "published": "2026-10-23T16:36:23+00:00",
+   "link": "https://www.youtube.com/shorts/kKsdrq9Og_c",
+   "videoId": "kKsdrq9Og_c",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "‘Are we prepared?’: Rep. Tom Suozzi sounds the alarm over munitions",
+   "dek": "New York Democratic Rep. Tom Suozzi, who is running for reelection on Long Island, calls attention to the issue of munitions shortages. Suozzi, who once served on the House Armed Services committee, calls for hearings on the topic, telling Morning Joe: “I don’t even know” what the “status of our munitions are.” MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. ",
+   "opening": "",
+   "published": "2026-10-23T16:34:01+00:00",
+   "link": "https://www.youtube.com/shorts/Npu_J3Uro0s",
+   "videoId": "Npu_J3Uro0s",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "obj_x_191-about-charges-convicted": [
+     "what",
+     "know"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "European, Middle East ministers urge US-Iran diplomacy, not new attacks",
+   "dek": "A further escalation would &#039;create nothing but losers&#039;, the French foreign minister warns after joint Istanbul meeting .",
+   "opening": "",
+   "published": "2026-10-23T16:29:51+00:00",
+   "link": "https://www.aljazeera.com/news/2026/10/23/european-middle-east-ministers-urge-us-iran-diplomacy-not-new-attacks?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Answers with Andrew Weissmann: Can Congress stop Trump from purchasing diesel from Russia?",
+   "dek": "This week, MS NOW Legal Analyst Andrew Weissmann answers more questions from MS NOW Members in his exclusive series \"Answers with Andrew Weissmann\" including if Congress has the power to stop Trump from purchasing diesel from Russia, the extent to Trump's presidential immunity and if presidential pardons for financial crimes can result in the funds being reclaimed by the U.S. government. Become a Member today to watch the full episode here: https://www.ms.now/answers-andrew-weissmann/watch/how-far-does-trump-s-presidential-immunity-go-2518327363650 MS NOW: My Source for News, Opinion, and the ",
+   "opening": "",
+   "published": "2026-10-23T16:28:13+00:00",
+   "link": "https://www.youtube.com/watch?v=BKXKagtnaSw",
+   "videoId": "BKXKagtnaSw",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "diesel"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Midterms BLOODBATH? Dems SHOCK in Deep Red NC w Richard Ojeda",
+   "dek": "The Friday crew breaks down the potential for a midterm bloodbath as Dems surge in deep red states. Richard Ojeda: https://ojedafornc.com Sign up for a PREMIUM Breaking Points subscriptions for full early access to uncut shows and LIVE AMAs with the hosts every week: https://breakingpoints.supercast.com/ Merch Store: https://shop.breakingpoints.com/ To listen to Breaking Points as a podcast, check them out on Apple and Spotify Apple: https://podcasts.apple.com/us/podcast/breaking-points-with-krystal-and-saagar/id1570045623 Spotify: https://open.spotify.com/show/4Kbsy61zJSzPxNZZ3PKbXl Instagram",
+   "opening": "",
+   "published": "2026-10-23T16:26:59+00:00",
+   "link": "https://www.youtube.com/watch?v=FKs1QdTPHkg",
+   "videoId": "FKs1QdTPHkg",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Global Oil Price Hits $117 a Barrel, Highest Since April",
+   "dek": "Investors have grown increasingly concerned that the war in Iran could escalate again, putting energy supplies at greater risk.",
+   "opening": "",
+   "published": "2026-10-23T16:14:44+00:00",
+   "link": "https://www.nytimes.com/2026/10/23/business/energy-environment/oil-prices-iran-war.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "oil price"
+    ],
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "'HEAT or GROCERIES': Mary Petlota says Alaska voters face TOUGH choices because of Trump policies",
+   "dek": "Former Rep. Mary Peltola joins Morning Joe to discuss her Alaska Senate campaign against Sen. Dan Sullivan and the economic pressures she says voters face. She points to rising heating, grocery and fuel costs, and describes how tariffs and diesel prices affect Alaska businesses and remote communities. Peltola argues that Democrats should prioritize driving down costs first if they win the Senate. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination",
+   "opening": "",
+   "published": "2026-10-23T16:13:13+00:00",
+   "link": "https://www.youtube.com/watch?v=J6QyU2tz_qE",
+   "videoId": "J6QyU2tz_qE",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "diesel"
+    ],
+    "tariffs": [
+     "tariff"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "'I'm pissed off, it's bulls--t': Trump voters in Michigan not happy about tariffs",
+   "dek": "MS NOW Reporter Alex Tabet traveled to Michigan ahead of early voting and spoke with Trump voters about how they feel about the president's economic policies. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: https://www.ms.now/ #Trump #Michigan #Tariffs",
+   "opening": "",
+   "published": "2026-10-23T16:12:16+00:00",
+   "link": "https://www.youtube.com/watch?v=peyqem5ZaIE",
+   "videoId": "peyqem5ZaIE",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "tariffs": [
+     "tariff"
+    ],
+    "midterms": [
+     "early voting"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Big Names Flock to Ruby-Red Florida to Sway Voters in Unexpectedly Close Contests",
+   "dek": "President Trump will rally on Friday in a Republican state where Democrats have their eye on several House races.",
+   "opening": "",
+   "published": "2026-10-23T16:09:51+00:00",
+   "link": "https://www.nytimes.com/2026/10/23/us/politics/florida-republicans-midterms-.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "house race"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Why Anger About Data Centers and Energy Prices May Not Swing Votes",
+   "dek": "In Ohio, many voters say their frustration about the increase in electricity and fuel prices and the growth of data centers won’t influence whom they vote for.",
+   "opening": "",
+   "published": "2026-10-23T16:00:09+00:00",
+   "link": "https://www.nytimes.com/2026/10/23/business/energy-environment/ohio-election-gas-prices.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "fuel price"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "‘Foreign policy is the economy’: How Iran war is shaping US midterm vote",
+   "dek": "Democrats are framing the conflict as an affordability issue to criticise Republican candidates backed by Trump.",
+   "opening": "",
+   "published": "2026-10-23T15:51:29+00:00",
+   "link": "https://www.aljazeera.com/news/2026/10/23/foreign-policy-is-the-economy-how-iran-war-is-shaping-us-midterm-vote?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump's DOJ SUES to BLOCK Alaska election RESULTS if GOP loses",
+   "dek": "The Department of Justice has sued the state of Alaska to effectively force Alaska to set aside the results of the 2026 Senate race if anyone other than the Republican incumbent Sen. Dan Sullivan wins. They allege any other result would be based on \"voter confusion\" because of another \"Dan Sullivan\" on the ballot. MS NOW's Peter Alexander has the latest. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking ",
+   "opening": "",
+   "published": "2026-10-23T15:49:44+00:00",
+   "link": "https://www.youtube.com/shorts/aa8ezPzfMxE",
+   "videoId": "aa8ezPzfMxE",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "senate race"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The Maine Senate race is coming down to core issues like \"Is it okay to bang your second cousin?\"",
+   "dek": "",
+   "opening": "",
+   "published": "2026-10-23T15:31:55+00:00",
+   "link": "https://www.youtube.com/shorts/L5DkxfIpvII",
+   "videoId": "L5DkxfIpvII",
+   "publication": "daily-show",
+   "source": "daily-show",
+   "station": "LI",
+   "matched": {
+    "me-sen": [
+     "maine senate"
+    ],
+    "midterms": [
+     "senate race"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How a U.K. Official’s Wife Set Off a Debate Over Free Speech and Palestinians",
+   "dek": "Sarah Helm, who is married to Britain’s national security adviser, posted of her support for the author Sally Rooney and a banned pro-Palestinian activist group. A furor ensued.",
+   "opening": "",
+   "published": "2026-10-23T15:23:56+00:00",
+   "link": "https://www.nytimes.com/2026/10/23/world/europe/uk-powell-sarah-helm-palestine.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_activist-admin-appeals-court": [
+     "palestinian",
+     "activist",
+     "free"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Heading to France? Amid Recent Unrest, Here’s What to Know",
+   "dek": "Demonstrations are expected to continue this weekend in Paris and other French cities. Some museums and tourist sites will be closed, and visitors should expect a strong police presence.",
+   "opening": "",
+   "published": "2026-10-23T15:19:00+00:00",
+   "link": "https://www.nytimes.com/2026/10/20/travel/france-travel-riots.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_x_191-about-charges-convicted": [
+     "what",
+     "know"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Bloomberg Surveillance 10/23/2026",
+   "dek": "Jonathan Ferro, Lisa Abramowicz and Annmarie Hordern speak daily with leaders and decision makers from Wall Street to Washington and beyond. No other program better positions investors and executives for the trading day than \"Bloomberg Surveillance.\" Chapters: 00:00 Credit Stress, Tech Rout and Oil Surge 04:09 Bonds Are Working Again as Tech Risk Rises — Matt Miskin, Manulife John Hancock Investments 18:57 US Could Resume Iran Strikes After Midterms — Jon Lieber, Eurasia Group 30:16 Blue Wave Would Be Negative for Tech — Dan Ives, Yorkville Ives & Co 40:56 Fed Likely to Hold, Then Hike in Dece",
+   "opening": "",
+   "published": "2026-10-23T15:18:02+00:00",
+   "link": "https://www.youtube.com/watch?v=1cpN2NvJepQ",
+   "videoId": "1cpN2NvJepQ",
+   "publication": "surveillance",
+   "source": "surveillance",
+   "station": "RI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "What to know as Brazil prepares for tense presidential run-off",
+   "dek": "Polls show leftist incumbent Lula closing gap on right-wing rival Flavio Bolsonaro ahead of second round of voting.",
+   "opening": "",
+   "published": "2026-10-23T14:56:05+00:00",
+   "link": "https://www.aljazeera.com/news/2026/10/23/what-to-know-as-brazil-prepares-for-tense-presidential-run-off?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "obj_x_191-about-charges-convicted": [
+     "what",
+     "know"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "I Came to France with Nothing. My Bakery in Paris Was Destroyed by Rioters.",
+   "dek": "After arriving as an emigrant from Africa, I worked so hard to build a business. After it was attacked last weekend, a revolutionary young woman told me on live television that it didn&#8217;t matter, writes Jhemima Sheilha.",
+   "opening": "How could anyone defend last weekend&#8217;s violent protests in France? In Paris alone, about 450 businesses were damaged, and about half of those were looted, according to authorities. Shopkeepers saw their livelihoods destroyed, their employees attacked, and their faith in the French Republic deeply shaken. But defending the rioters was exactly what influencer and college student Lola-Fleur Whittaker did on Monday night during a French television program called &#8220;La Grande Confrontation.&#8221; &#8220;Vos boutiques, c&#8217;est bien mignon,&#8221; she said mockingly , which translates to &#8220;Your shops, so sweet.&#8221; That was too much for Jhemima Sheilha, who was also on the program, to bear in silence. &#8220;It&#8217;s my life, Lola,&#8221; said Sheilha , whose new shop near Place de la R&#233;publique, Caff&#233; Urban Bakery, was smashed with sledgehammers and ransacked. &#8220;What justifies terrorizing people&#8217;s lives?&#8221; Whittaker rolled her eyes. We asked Sheilha, 36, to describe what happened at the bakery she and her husband spent five years toiling to open, how she confronted the looters who took everything, and why she believes her business is now at risk of crumbling, along with France itself. &#8212;The Editors When I arrived in France in August 1999, I did not know my father. I had been raised by my uncle and my aunt after the death of my mother, Henriette, an activist in the Democratic Republic of the Congo who campaigned against the cou",
+   "published": "2026-10-23T14:53:38+00:00",
+   "link": "https://www.thefp.com/p/i-came-to-france-with-nothing-jhemima-sheilha",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "obj_x_191-about-charges-convicted": [
+     "what",
+     "know"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Niall Ferguson: The Method to Trump’s Foreign Policy Madness",
+   "dek": "To understand Trump&#8217;s approach to Ukraine, Iran, and China, look to Richard Nixon. The president&#8217;s instinct for superpower dealmaking reflects a hard-nosed realism, backed by the American economy, writes Niall Ferguson.",
+   "opening": "Each episode of the satirical 1970s show Soap always began with a convoluted plot summary. The catchphrase in the intro was: &#8220; Confused? You won&#8217;t be .&#8221; Confused is how many people today feel about U.S. foreign policy. A Free Press editor recently put it this way: If China, Russia, North Korea, and Iran are an Axis of Aggressors and we&#8217;re at war with them, why is it so hard to identify enemies and allies? Democrats who just voted to pass almost $2 billion in aid to Ukraine (with an assist from a small group of Republicans) are simultaneously promoting candidates who want to end support for the Iron Dome for Israel, which is at war with Iran and its satellites, who are attacking an assortment of our partial allies and getting help from Russia and China. [Vice President] J.D. Vance talked about the moderates in Iran who want peace during his ill-fated ceasefire; Turkey works with the Axis but is part of NATO; France, Belgium, Spain, and the Netherlands import Russian gas; Hungary uses a Russian pipeline, etc. How can we be in &#8220;Cold War II&#8221; if those are our allies? Whose false narrative are we living in? Having coined the phrase Cold War II and encouraged the use of the term Axis , I get so much of this kind of thing these days that I feel like a geopolitical agony aunt. &#8220;Why is Musk fucking with Ukraine?&#8221; a friend messaged me on Wednesday, referring to reports that Elon Musk green-lit a slowdown in the military-grade Starlink cove",
+   "published": "2026-10-23T14:50:44+00:00",
+   "link": "https://www.thefp.com/p/niall-ferguson-the-method-to-trumps-nixon-realism",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "ukraine"
+    ],
+    "obj_thepresi_citing-hold-interest-into": [
+     "russia",
+     "recently"
+    ],
+    "obj_x_russia-sanctions-support-urges": [
+     "support",
+     "russia"
+    ],
+    "obj_thepresi_before-days-effect-most": [
+     "russia",
+     "days"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Republicans Cut Taxes to Win the Midterms. It May Not Work Out.",
+   "dek": "Among the stakes in next month’s election is the long-running question of whether tax cuts can shape how people vote.",
+   "opening": "",
+   "published": "2026-10-23T14:24:54+00:00",
+   "link": "https://www.nytimes.com/2026/10/23/business/salt-cap-midterm-elections.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump’s Tariffs Slow America’s Access to Canada’s Cheese",
+   "dek": "Just as they were finding a toehold stateside, artisanal producers got caught in a trade war.",
+   "opening": "",
+   "published": "2026-10-23T14:09:33+00:00",
+   "link": "https://www.nytimes.com/2026/10/23/dining/canada-cheese-trump-tariffs.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "tariffs": [
+     "tariff"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Melania Trump ‘secured ceasefire’ in Ukrainian city of Oleshky: White House",
+   "dek": "White House says &#039;localised&#039; ceasefire to take effect, as Russia and Ukraine say timing being determined.",
+   "opening": "",
+   "published": "2026-10-23T13:39:06+00:00",
+   "link": "https://www.aljazeera.com/news/2026/10/23/white-house-says-melania-trump-secured-a-ceasefire-in-ukraines-oleshky?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "ukraine"
+    ],
+    "obj_thepresi_before-days-effect-most": [
+     "russia",
+     "take",
+     "effect"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "DAVID MARCUS: In blue Maine, nobody believes Susan Collins will lose until they see it",
+   "dek": "Susan Collins faces Democrat Troy Jackson in Maine&apos;s senate race, but voters in Bangor say her three decades of familiarity may be impossible to beat.",
+   "opening": "There are two elements of the Senate race in Maine that truly stand out on the ground. One is that this is a small state, at least in terms of population. The other is that Susan Collins has been a senator here for three decades. The upshot is that almost everyone I've met here has met her. Philip, a lifelong Mainer in his 70s from Bangor, told me in an accent straight out of \"Murder, She Wrote\": \"It would be stupid, in my opinion, not to vote for Susan, she's chairman of the appropriations committee, and she's brought a lot of money to the state,\" adding, \"we've got new fire stations in every little town you can think of.\" The appreciation for Collins among ordinary Mainers represents the daunting uphill battle Democrat Troy Jackson faces in a race where polls give him a slight lead, but the word on the street has him dead in the water. COLLINS INSISTS SOCIALIST RIVAL WON'T BEAT HER AS MAINE'S MONEY MACHINE: 'YOU'LL LOSE BIG TIME' Speaking of fire stations, I met Andy and Hank, both firefighters, at Seasons restaurant in Bangor. And just like Philip, they can't really see Collins going down. \"We've all met her,\" Andy said of \"Susan,\" not \"Collins,\" adding, \"She's an institution in Maine, I can't believe that Jackson can beat her.\" Hank was hardly alone. Everyone I spoke to at Seasons seemed to agree, even the Democrats, who have a unique affection for Collins. As the burly Hank put it, \"I'll believe she loses when I see it.\" SUSAN COLLINS DEFIES BLUE-STATE HEADWINDS IN CRUCI",
+   "published": "2026-10-23T13:23:22-04:00",
+   "link": "https://www.foxnews.com/opinion/david-marcus-blue-maine-nobody-believes-susan-collins-lose-until-see",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "me-sen": [
+     "collins",
+     "troy jackson"
+    ],
+    "midterms": [
+     "senate race"
+    ],
+    "shutdown": [
+     "appropriations"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "There Are Solutions to This Crazy Economy. Voters Will Hate Them.",
+   "dek": "Ahead of the midterms, Natasha Sarin and Catherine Rampell unpack the state of the economy — and how much responsibility the president bears for it.",
+   "opening": "",
+   "published": "2026-10-23T13:17:49+00:00",
+   "link": "https://www.nytimes.com/2026/10/23/opinion/trump-economy-artificial-intelligence-midterms.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump ordered to testify in $10bn BBC lawsuit discovery: What happens now?",
+   "dek": "Trump could face sanctions, including dismissal of his lawsuit, if he fails to cooperate with questioning.",
+   "opening": "",
+   "published": "2026-10-23T13:17:46+00:00",
+   "link": "https://www.aljazeera.com/news/2026/10/23/trump-ordered-to-testify-in-10bn-bbc-lawsuit-discovery-what-happens-now?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "russia-sanctions": [
+     "sanction"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Russia drops cluster bombs on Ukraine as Kyiv consolidates front line",
+   "dek": "Russia’s territorial gains this year are effectively nil as it heads into trilateral talks with Ukraine, US.",
+   "opening": "",
+   "published": "2026-10-23T13:17:18+00:00",
+   "link": "https://www.aljazeera.com/news/2026/10/23/russia-drops-cluster-bombs-on-ukraine-as-kyiv-consolidates-front-line?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "ukraine"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Immigrants seeking U.S. citizenship targeted in Trump administration's illegal voting crackdown",
+   "dek": "Most of the immigrants targeted by federal authorities in California this week for alleged voter fraud had applied for U.S. citizenship and now face charges related to lying on forms or during interviews. Those charges could lead to years in prison and thwart their efforts to naturalize.",
+   "opening": "",
+   "published": "2026-10-23T13:15:29-04:00",
+   "link": "https://www.pbs.org/newshour/politics/immigrants-seeking-u-s-citizenship-targeted-in-trump-administrations-illegal-voting-crackdown",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_thejusti_alleged-california-doj-kills": [
+     "california",
+     "alleged"
+    ],
+    "obj_x_california-charged-election-feds": [
+     "fraud",
+     "california"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "State Department says Trump is 'spot on' with France protests after Macron decries 'stupid' comments",
+   "dek": "The State Department says Trump is &quot;spot on&quot; about France&apos;s protests and mass migration after Emmanuel Macron criticized comments from world leaders.",
+   "opening": "The State Department told Fox News Digital that President Donald Trump's views on France are \"spot on\" after French President Emmanuel Macron criticized foreign leaders for making \"unacceptable and stupid comments\" about the protests rocking the European country. Speaking at a midterms rally on Monday, Trump said that \"the migrants have taken over France\" and that the country should close its borders following a weekend of anti-government demonstrations that evolved into rioting and looting. He added that France, a \"once great nation,\" is \"being conquered, looted and burned to the ground by migrants, jihadists and communists who hate Christianity\" and \"the Western civilization itself.\" Macron then claimed Wednesday that \"there was foreign manipulation of information\" following the protests, including AI-generated images that showed scenes that never happened in France, which gave way to \"unacceptable and stupid comments from many people including foreign leaders.\" Macron said he was referring to Trump, \"among others,\" and also mentioned, \"We’ve had people claiming that we were invaded by hordes of migrants and Islamists, which is completely false,\" The Associated Press reported. When asked for a reaction to Macron's remarks, State Department spokesperson Tommy Pigott told Fox News Digital that Trump \"is on point as he is consistently on point.\" \"He has been clear about the dangers of mass migration for years, especially since the beginning of this administration, but certainl",
+   "published": "2026-10-23T13:07:07-04:00",
+   "link": "https://www.foxnews.com/world/state-department-says-trump-spot-on-france-protests-macron-decries-stupid-comments",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Emmy-winning TV producer charged with stalking ex-wife, longtime news anchor, days after divorce",
+   "dek": "Emmy-winning North Carolina TV producer Randall Saunders Kerr allegedly drove near a home daily despite a protective order after his divorce.",
+   "opening": "An Emmy-winning North Carolina television news producer accused of stalking his former wife allegedly climbed through a second-story bathroom window, tracked her movements and repeatedly appeared near her home before she obtained a domestic violence protective order. Randall Saunders Kerr, 55, was arrested Oct. 20 and charged with felony stalking and misdemeanor violation of a domestic violence protective order after allegedly driving near the home of his former wife, longtime WRAL anchor Lynda Loveland, multiple times a day. Court records obtained by Fox News Digital, including an arrest warrant and a December 2025 complaint, detail months of alleged harassment that left Loveland fearing for her safety. NY COP CALLS FOR POLICE PROTECTIONS AFTER PROTESTER HE ARRESTED SHOWED UP TO HIS HOUSE, HARASSED HIS FAMILY \"I'm scared I'm going to wake up one night and see him standing there in my room,\" Loveland wrote in the complaint. The October arrest warrant alleges Kerr drove within 300 yards of Loveland's home \"multiple times daily\" between Oct. 13 and Oct. 18, including along a street behind the property. FLEETWOOD MAC'S LINDSEY BUCKINGHAM'S ALLEGED STALKER ARRESTED AFTER ATTACK ON GUITARIST Loveland filed for protection in Wake County District Court on Dec. 19, 2025, accusing Kerr of monitoring her movements, contacting her against her wishes and repeatedly appearing near her home after their separation. YOUR PHONE MAY REVEAL DOCTOR, CHURCH AND PHARMACY VISITS In a timeline attac",
+   "published": "2026-10-23T13:06:54-04:00",
+   "link": "https://www.foxnews.com/us/emmy-winning-tv-producer-charged-stalking-ex-wife-longtime-news-anchor-days-after-divorce",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_arrested-charged-fraud-grand": [
+     "arrested",
+     "charged"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump Asked Musk to Reverse Starshield Restrictions on Ukraine",
+   "dek": "The call from the president about the Starshield network came after officials in Ukraine reported that they found new limits on the use of military drones in their war against Russia.",
+   "opening": "",
+   "published": "2026-10-23T13:05:59+00:00",
+   "link": "https://www.nytimes.com/2026/10/22/us/politics/starshield-outage-ukraine-musk-trump.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "ukraine"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Reporter's Notebook: Congress braces for post-election game of musical chairs as leadership battles loom",
+   "dek": "Capitol Hill braces for leadership elections as Mike Johnson, Hakeem Jeffries, John Thune and Chuck Schumer all face uncertain futures ahead.",
+   "opening": "Capitol Hill is about to embark on a biennial game of musical chairs. Everyone needs to find a seat when the music stops. Those who don’t are out. There are four sets of leadership elections pending in Congress over the next few weeks. House Republicans and Democrats will pick their top leaders. The same with Senate Republicans and Democrats. The entire House must elect a speaker when the new Congress convenes on Jan. 3. The full Senate chooses the majority leader. That’s decided individually by the majority party in the Senate. We anticipate a scramble for leadership positions in the days following the election, depending on which party captures the majority of each body for the new Congress. JORDAN EMERGES AS POTENTIAL NEXT GOP LEADER IF DEMS SEIZE HOUSE Let’s start with House Republicans. If Republicans maintain control of the House, the GOP will likely maintain its current leadership team of House Speaker Mike Johnson , R-La., Majority Leader Steve Scalise, R-La., and Majority Whip Tom Emmer, R-Minn. However, if the GOP loses control of the House, recriminations — and an epic game of vicious political musical chairs likely commences. The reason? In the minority, a party only has two top leadership positions compared to three in the majority. Will Johnson slide to minority leader? Does he want that slot? Does President Donald Trump want him in that position? Or someone else? Regardless, whoever Trump wants as the top House Republican is the one who gets that slot in the ne",
+   "published": "2026-10-23T12:57:01-04:00",
+   "link": "https://www.foxnews.com/politics/reporters-notebook-congress-braces-post-election-game-musical-chairs-leadership-battles-loom",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_authority-block-dems-elections": [
+     "dems",
+     "elections"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Russia-Ukraine talks planned for November in UAE: Kremlin",
+   "dek": "The US-brokered talks are the first planned talks since negotiations stopped earlier this year.",
+   "opening": "",
+   "published": "2026-10-23T12:54:44+00:00",
+   "link": "https://www.aljazeera.com/news/2026/10/23/russia-ukraine-talks-planned-for-november-in-uae-kremlin?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "ukraine"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The Epstein Files Produce an Unlikely Weapon for the Houthi Messaging Wars",
+   "dek": "The Yemeni militia is using the culture of its sworn enemies in the renewed fighting with Saudi Arabia.",
+   "opening": "",
+   "published": "2026-10-23T12:18:37+00:00",
+   "link": "https://www.nytimes.com/2026/10/23/world/middleeast/houthis-saudi-arabia-propaganda-epstein.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "houthi"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "American Airlines says airfares could stay elevated even if fuel prices drop",
+   "dek": "American Airlines CFO Devon May said airfares will likely stay elevated even if oil prices drop, citing the carrier&apos;s $1.9 billion fuel costs.",
+   "opening": "American Airlines issued a warning that airfares are likely to remain elevated even if there's a decline in oil prices after losses the carrier suffered earlier in the year amid surging fuel costs. The carrier's CFO, Devon May, told the Financial Times that \"if fuel comes down, I think airfares probably stay largely where they're at right now.\" \"If fuel prices go up, we need to generate higher yield, we need to generate higher fares to offset that higher fuel price,\" May said. American Airlines on Thursday released its earnings for the third quarter, reporting deeper losses in 2026 and updating its forecast to reflect anticipated losses between $1 and $1.60 a share on an adjusted basis this year. Its July forecast ranged from a loss of 65 cents and a profit of 65 cents. MAJOR AIRLINES CUT FLIGHTS AS HIGHER JET FUEL PRICES HIT CARRIERS May told the FT that airlines' ticket prices hadn't fully recovered in real terms since the disruptions caused by the COVID-19 pandemic , saying that the price hikes \"ideally should have happened back in 2024, but the industry found itself in an oversupply environment.\" \"This was the first year that everything came together in a way that we were able to push yields back up to where they were seven years ago in real terms,\" May told the outlet. AMERICAN AIRLINES ADDS $1,000 TRUMP ACCOUNT MATCH FOR WORKERS' CHILDREN The company reported a 19% year-over-year increase in third quarter revenue , which was above the high end of its previous guidance r",
+   "published": "2026-10-23T12:12:47-04:00",
+   "link": "https://www.foxbusiness.com/markets/american-airlines-warns-airfares-stay-elevated-even-oil-prices-drop-after-record-fuel-costs",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "oil price",
+     "fuel price"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Four fraternity pledges arrested on hazing allegations after teen forced into truck: cops",
+   "dek": "Four Phi Delta Theta pledges at Texas State University were arrested on misdemeanor hazing charges after an 18-year-old was allegedly forced into a truck.",
+   "opening": "Four pledges at a Texas State University fraternity were arrested on Tuesday after an 18-year-old was allegedly forced into a pickup truck and heard screaming, according to police. Police officers received several calls about men who were allegedly forcing another man into a blue pickup truck at around 10:40 p.m. on Tuesday, Russell Wilde, public safety communications specialist for the city of San Marcos, told Fox News Digital. According to KSAT, a probable cause affidavit by law enforcement stated that an 18-year-old man was forced into a truck with his mouth taped shut and was yelling for help and to be let go. THREE COLLEGE FRATS IN CROSSHAIRS AS HAZING CLAIMS OF BOOZE, BURNS AND HOSPITAL TRIPS SPARK CRACKDOWN: SCHOOL Officers later located the truck at the Arba Apartments in San Marcos and determined the incident involved Texas State University Phi Delta Theta fraternity pledges, according to court documents. Police took the following students into custody: William Oldner, 19, Noah Lara, 20, Tyler Fogg, 18, and Wyatt Carr, 18. THE FRAT OMERTÀ: WHISTLEBLOWER WARNS OF ‘CODE OF SILENCE’ AFTER OLE MISS DEATHS, ALLEGED PENN STATE COKE RING The 18-year-old who was forced into the pickup truck is an active member of the fraternity and was not injured. Wilde said they were taking part in a tradition that was part of their fraternity initiation. SEND US A TIP \"Those involved told officers the incident was a tradition,\" Wilde said. All men were arrested on misdemeanor hazing charg",
+   "published": "2026-10-23T12:10:11-04:00",
+   "link": "https://www.foxnews.com/us/four-fraternity-pledges-arrested-hazing-allegations-teen-forced-truck-cops",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thejusti_alleged-california-doj-kills": [
+     "teen",
+     "school",
+     "alleged"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "A Tech Rotation Roils the Markets, Again",
+   "dek": "Investors are bracing for a one-two punch: rising oil prices and concerns about the soaring costs of the artificial intelligence buildout.",
+   "opening": "",
+   "published": "2026-10-23T11:42:50+00:00",
+   "link": "https://www.nytimes.com/2026/10/23/business/dealbook/tech-rotation-nasdaq-ai.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "oil price"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Supreme Court allows New Hampshire to fully ban student IDs for voting in midterms",
+   "dek": "The Supreme Court cleared the way Thursday for New Hampshire to fully ban the use of student IDs for voting during the midterm elections.",
+   "opening": "",
+   "published": "2026-10-23T11:41:49-04:00",
+   "link": "https://www.pbs.org/newshour/politics/supreme-court-allows-new-hampshire-to-fully-ban-student-ids-for-voting-in-midterms",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Two massive elk lock antlers in feisty Colorado fight captured on stunning wildlife footage",
+   "dek": "Video captures two massive elk locking antlers in a fierce Colorado fight as wildlife photographers document an unforgettable night of bugling.",
+   "opening": "Another incredible nature video has hit the web. We've been on an incredible run here at OutKick when it comes to OutKick Outdoors , nature and wildlife footage. It never gets old as people are always captivated by animals in their natural habits.....or people behaving like idiots around animals. It's always gold. GOLFER DISTRACTED BY 'A NICE RACK' SHANKS TEE SHOT IN THE DIRECTION OF LARGE BULL ELK, WISELY GRABS A NEW BALL That now includes some wild footage of some elk. Good Bull Outdoors shared a video this week on Instagram of a pair of massive elk locking antlers in a feisty scrap in Colorado. \"Our moose steak dinner was interrupted by bugling elk tonight so what do a couple of elk obsessed wildlife photographers do? We pack up the pup and roll out to get some video,\" the caption states, in part. It continues, \"Crazy doesn’t really describe the evening. A big 6x7 bugling while swimming across the lake, a 15 minute long fight, a second fight in a place we could hear but not see, a bull repeatedly walking down the road trying to get to cows inside the fairgrounds, a gunshot coming from the road which we found out was a policeman shooting a wounded elk calf hit by a car, and another bull jumping out towards our truck and nearly hitting it as he ran by. What a night!\" Check out the wild video below, and let me know your thoughts at David.Hookstead@outkick.com . People in the comments had plenty of reactions to share. One person wrote, \"All pumped up, showing their strength!\" ",
+   "published": "2026-10-23T11:26:20-04:00",
+   "link": "https://www.foxnews.com/outkick-culture/two-massive-elk-lock-antlers-feisty-colorado-fight-captured-stunning-wildlife-footage",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_191-about-charges-convicted": [
+     "what",
+     "know"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "2 ex-FBI officials charged with making false statements about Hunter Biden's laptop",
+   "dek": "Two former FBI intelligence officials who specialized in foreign election interference were charged Friday with making false statements about their roles in investigating the origins of Hunter Biden's laptop in the run-up to the 2020 presidential election.",
+   "opening": "",
+   "published": "2026-10-23T11:19:31-04:00",
+   "link": "https://www.pbs.org/newshour/politics/2-ex-fbi-officials-charged-with-making-false-statements-about-hunter-bidens-laptop",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_x_california-charged-election-feds": [
+     "charged",
+     "election"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Most Voters Believe the Midterm Elections Will Be Accurate, Poll Finds",
+   "dek": "But about half expressed concerns that Republicans could try to overturn the results, a New York Times/Siena poll found.",
+   "opening": "",
+   "published": "2026-10-23T11:15:48+00:00",
+   "link": "https://www.nytimes.com/2026/10/23/us/politics/election-integrity-trust-poll.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump administration files lawsuit to block possible Democratic win in Alaska Senate race",
+   "dek": "This move has sparked concerns about a lengthy battle between the U.S. government and states over election certification.",
+   "opening": "",
+   "published": "2026-10-23T11:14:18-04:00",
+   "link": "https://www.pbs.org/newshour/politics/trump-administration-files-lawsuit-to-block-possible-democratic-win-in-alaska-senate-race",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "senate race"
+    ],
+    "obj_thepresi_canadian-challenging-files-food": [
+     "files",
+     "lawsuit"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Israeli military says 2 soldiers were killed in the West Bank attack that also left 2 gunmen dead",
+   "dek": "Two Israeli soldiers were killed in an attack in the occupied West Bank on Friday morning that also left two suspected gunmen dead, the military said, violence that is likely to heighten political tensions and security concerns ahead of Israel's parliamentary election next week.",
+   "opening": "",
+   "published": "2026-10-23T11:06:27-04:00",
+   "link": "https://www.pbs.org/newshour/world/israeli-military-says-2-soldiers-were-killed-in-the-west-bank-attack-that-also-left-2-gunmen-dead",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_x_191-400-convicted-cult": [
+     "left",
+     "dead"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Chicago's 12-language ballots make elections 'harder to monitor,' Illinois GOP chair warns",
+   "dek": "Illinois Republican Party chairman warns Chicago&apos;s 12-language ballot system is &quot;big city virtue signaling&quot; that creates oversight gaps for election judges.",
+   "opening": "Chicago voters can cast ballots in 12 different languages this election, an expansion that Illinois Republican Party Chairman Bob Grogan warns is making an already complicated election system harder to independently monitor. Grogan told Fox News Digital the proliferation of versions in languages such as Tagalog, Gujarati and Urdu creates additional challenges for election judges and party observers tasked with ensuring voters receive accurate ballots. He also questioned how many voters need some of the translations, arguing that many immigrants who speak those languages also speak English. \"It's a solution in search of a problem,\" Grogan told Fox News Digital. \"It's big city virtue signaling.\" TRUMP ADMIN SUED OVER ALLEGED ILLEGAL COLLECTION OF SENSITIVE VOTER DATA FROM 47 STATES Chicago voters can cast ballots in 12 different languages: English, Spanish, Chinese, Hindi, Korean, Tagalog, Polish, Gujarati, Urdu, Ukrainian, Arabic and Russian. Section 203 of the U.S. Voting Rights Act requires the Chicago Board of Elections to make materials and ballots available in certain precincts for Spanish, Chinese and Hindi speakers, a spokesperson for the elections agency told Fox News Digital. The Board includes the other non-English languages to \"maintain uniformity with the languages used by the Cook County Clerk's office under a county ordinance, so that all voters throughout Cook County are afforded equal voting opportunities,\" the spokesperson added. But Grogan, a former DuPage Co",
+   "published": "2026-10-23T11:05:54-04:00",
+   "link": "https://www.foxnews.com/politics/chicagos-12-language-ballots-make-elections-harder-monitor-illinois-gop-chair-warns",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_administration-federal-halt-investigation": [
+     "voting",
+     "states"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Sheriff says evidence 'leaning one way' in shooting deaths of disabled toddler and grandparents: report",
+   "dek": "A mysterious 911 call with a whispered &quot;help&quot; led Tuscarawas County deputies to a Gnadenhutten, Ohio, home where three bodies were found inside.",
+   "opening": "Mystery is surrounding the deaths of a toddler and his two grandparents after the three of them were discovered dead by investigators. It happened inside a home in Gnadenhutten, Ohio. The Tuscarawas County Sheriff's Office confirmed deputies responded to a 911 call where \"a voice softly says the word 'help'\" on Wednesday, the agency said in a release . They arrived to find Kozzar Lotut, who was just 22 months old, Melissa Campbell, 51, and Gale Sanders, 67, deceased with apparent gunshot wounds. Fox News Digital confirmed their identities with the Tuscarawas Coroner's Office. RETIRED POLICE SERGEANT SHOOTS DEPUTY CHIEF WIFE AND THEIR DAUGHTER IN WEALTHY, COASTAL ENCLAVE HOME The deaths are being investigated as a murder-suicide, according to Sheriff Orvis L. Campbell. \"Right now, if I had to say the evidence was leaning one way, it’s definitely leaning towards a murder-suicide. We’re pretty confident, you know, that it happened within the home,\" he told WOIO . The toddler's grandparents cared for the baby, who had \"medical disabilities,\" he said. FORMER CORRECTIONS OFFICER ACCUSED OF KILLING WIFE, FORCING KIDS TO HELP FOLLOW THE FOX TRUE CRIME TEAM ON X Campbell appeared to work as a registered nurse at New Philadelphia Health Care Center in Ohio before her death. 📩 Send me a story idea: kelsie.cairns@fox.com 📸 Instagram: kelsiecairns_tv 🎥 Facebook: Kelsie Cairns SIGN UP TO GET THE LATEST TRUE CRIME NEWS As for how deputies made the grim discovery — first responders had diffi",
+   "published": "2026-10-23T11:05:52-04:00",
+   "link": "https://www.foxnews.com/us/sheriff-says-evidence-leaning-one-way-shooting-deaths-disabled-toddler-grandparents-report",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_191-about-charges-convicted": [
+     "know",
+     "murder"
+    ],
+    "obj_afederal_block-care-court-inmate": [
+     "medical",
+     "care"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Ex-FBI officials arrested in Hunter Biden laptop probe as testimony comes under scrutiny",
+   "dek": "Two former FBI officials face charges for allegedly lying to Congress about their roles in investigating Hunter Biden&apos;s laptop and foreign ties.",
+   "opening": "The Department of Justice charged two former FBI officials with lying to Congress about their involvement in FBI investigations into Hunter Biden, including matters involving his laptop. Former FBI officials Nikki Cole Floris and Bradley Benavides, according to the DOJ, falsely denied involvement in the investigations into former President Joe Biden’s son when speaking to Congress. Both surrendered Friday on arrest warrants, according to the DOJ. \"Lying to Congress by anyone strikes at the heart of our democratic system, but when senior FBI agents lie to Congress believing they are above the law, it’s time to bring the hammer of justice down on them,\" U.S. Attorney Jeanine Pirro said of the charges. \"When senior officials entrusted with safeguarding our nation’s security choose deception over duty, they undermine the very institutions they swore to uphold. Today’s action makes clear that no one is above the law, and we will hold accountable all who obstruct the truth.\" FBI CO-DEPUTY DIRECTOR ANDREW BAILEY RESIGNS AFTER YEAR IN ROLE The Justice Department claims to possess evidence that shows Benavides discussed the laptop story with others in the FBI, contradicting his testimony that he learned about the story from Wikipedia. Similarly, the department says that it has evidence Floris discussed Hunter Biden with members of the FBI’s Foreign Influence Task Force (FITF), despite testifying to the contrary. A statement of facts filed by the DOJ points to 2023 testimony that Flori",
+   "published": "2026-10-23T11:04:49-04:00",
+   "link": "https://www.foxnews.com/politics/ex-fbi-officials-arrested-hunter-biden-laptop-probe-testimony-scrutiny",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_arrested-charged-fraud-grand": [
+     "arrested",
+     "charged"
+    ],
+    "obj_hhs_administration-adviser-calley-hhs": [
+     "senior",
+     "resigns"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "LeBron James doubles down with sneaky golf hip turns during national anthem after Trump's 'total disgrace' dig",
+   "dek": "LeBron James responded to Trump&apos;s Truth Social attack with more golf swing hip turns during the national anthem before the 76ers-Cavaliers game.",
+   "opening": "Hours after President Donald Trump ripped his national anthem golf swing antics, LeBron James appeared to double down by working on his golf hip turns during Thursday's night's anthem before the Philadelphia 76ers faced the Cleveland Cavaliers. In what was a clear shot back at Trump, LeBron, who wouldn't dare disrespect the Chinese anthem, was seen standing normally during the national anthem before sending a signal back to Trump that sure looked like hip turns that golfers would use during warmups. The Philadelphia Inquirer called hip turns \"stretching.\" The golf world knows better. TRUMP BLASTS LEBRON JAMES AS A 'TOTAL DISGRACE' OVER HIS NATIONAL ANTHEM ANTICS DURING 76ERS DEBUT Earlier Thursday, Trump unleashed on the Chinese sympathizer. \"While listening to our National Anthem, LeBron James disrespects our Country! I said right from the beginning that he’s no good, a TOTAL DISGRACE,\" Trump wrote on Truth Social. \"LeBron James should apologize to all of those Great American Warriors and Heroes who died for the American Flag, and all that our Country stands for!\" This is the video that had Trump, a noted golfer fanatic himself, fuming mad. During a campaign stop Thursday night, Trump continued to hammer away. \"What about LeBron James? Did you see that deal?\" Trump asked voters in Iowa. \"He's practicing his golf swing. I said, what the hell is that? I don't understand it.\" PRESIDENTS CUP HERO JACOB BRIDGEMAN JOINS PRESIDENT TRUMP ON STAGE IN SOUTH CAROLINA, LEADS CLEMSON CHA",
+   "published": "2026-10-23T10:45:24-04:00",
+   "link": "https://www.foxnews.com/outkick-sports/lebron-james-doubles-sneaky-golf-hip-turns-national-anthem-trump-total-disgrace-dig",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_beijing-blasts-chinese-engineer": [
+     "blasts",
+     "chinese"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Kristin Cavallari cut father out of her life after he crossed ‘major line’ involving her kids",
+   "dek": "Kristin Cavallari says her father crossed a major line involving her kids but has never once tried to repair their now-fractured relationship.",
+   "opening": "Kristin Cavallari cut her father out of her life after he crossed an unforgivable line with her children and revealed he never made a single attempt to repair their fractured relationship. The former reality star opened up about the bitter family fallout on her podcast, \"Let's Be Honest with Kristin Cavallari.\" \"I cut my dad out of my life because he crossed a major line — a major line — and it involved my kids, and you don't get to do that actually, you know? And that's another boundary and really obviously pissed him off, and he's never once tried to get back into my life, which I think is pretty telling,\" she said. KRISTIN CAVALLARI SAYS SHE LEARNED A PAINFUL $250K LESSON INVOLVING HER FATHER AT 22 While Cavallari doesn't speak to her dad, she said she doesn't hold a grudge either. \"I would never wanna carry that around of like, ‘F--- my dad,’ you know? I think what he did to my kids was pretty bad,\" she explained. \"But also my kids and I have talked about it a million times, and we've worked through it, but [it] like really affected them and will probably have affected them for the rest of their lives and, and none of us, my kids included, are carrying around anger towards him.\" \"And actually, my dad will text my kids periodically and that's fine. I'm not stopping that.\" GET ENTERTAINMENT SCOOP DELIVERED RIGHT TO YOUR EMAIL BY CLICKING HERE But Cavallari wasn't about to let her bitter family feud dictate her children's relationship with their grandfather. Despite cutting ",
+   "published": "2026-10-23T10:41:15-04:00",
+   "link": "https://www.foxnews.com/entertainment/kristin-cavallari-cut-father-life-crossed-major-line-involving-kids",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_191-about-charges-convicted": [
+     "what",
+     "know"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "College football team draws embarrassingly small crowd for what turns into Thursday night thriller",
+   "dek": "Memphis Tigers drew an embarrassingly thin crowd for their Thursday night college football game against East Carolina despite being 5-2 on the season.",
+   "opening": "What an amazing night of football we got Thursday night, huh? The Bears beat the Patriots in a thriller in Chicago, and we had two overtime games down in the college ranks. Appalachian State upset JMU, 34-31, in Boone, while East Carolina blew a double-digit lead in Memphis en route to a 41-34 loss. Those are the nights we dream about during the dog days of summer, folks. When you're sitting through another insufferable WNBA game in July, just a reminder that you're GRINDING away for fall nights like we got on Thursday. COLLEGE FOOTBALL CHAOS: HISTORIC UPSETS, ARCH MANNING'S FIASCO, CLOCK CONTROVERSY AND CFP RAMIFICATIONS ARISE They're the best, and they don't stick around for long. We get maybe a dozen of them a year if we're a lucky. Last night was one of them. I hope you all took advantage. Now, you know one fanbase who did not take advantage of last night's glorious fall night of football? The so-called \"fans\" of the Memphis Tigers , who apparently forgot the fellas were scheduled to play on Thursday this week. Take a look: Goodness gracious. The \"official\" box score lists last night's attendance at over 27,000. Surely it filled in a bit after kickoff, but I don't see how they got to 27K. Seems ambitious to me. It's a bad look. There's no way around it, and no reason to sugarcoat it. It's just a bad look for Memphis and its fans. \"But Zach, it was a Thursday night!\" So? What does that mean? Are the kids not allowed to go to Thursday night games? Is there a rule in Memphis",
+   "published": "2026-10-23T10:14:43-04:00",
+   "link": "https://www.foxnews.com/outkick-sports/college-football-team-draws-embarrassingly-small-crowd-thursday-night-thriller",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_before-days-effect-most": [
+     "days",
+     "take"
+    ],
+    "obj_x_191-about-charges-convicted": [
+     "what",
+     "know"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Jackson again publicly breaks with Supreme Court as justices side with GOP in last-minute voter ID fight",
+   "dek": "Ketanji Brown Jackson publicly dissented as the Supreme Court let New Hampshire block student ID cards as ballot identification for midterm elections.",
+   "opening": "Supreme Court Justice Ketanji Brown Jackson was the lone public dissenter in a Thursday decision allowing New Hampshire to block the use of student ID cards in the upcoming midterm elections. Other justices on the court cited the longstanding precedent \"that lower federal courts should ordinarily not alter the election rules on the eve of an election,\" and said that lower courts failed to argue that the specific case in New Hampshire warranted an exception to the tradition. Jackson, however, argued the proximity to an election should not get in the way of properly applying the law. \"I respectfully dissent because — even, and perhaps especially, when an election is looming — I would not disturb a clearly justifiable federal-court order issued to ensure that the public receives accurate information about a State’s electoral processes,\" she wrote. FEDERAL JUDGE BLOCKS INDIANA BAN ON STUDENT ID FOR VOTING The underlying dispute stems from a law signed in April that went into effect in June, striking student ID cards from the list of forms of identification that election officials can accept when an individual requests a ballot. A voting rights group sued New Hampshire on the grounds that the law illegally discriminated against young voters by making it more difficult for them to vote. New Hampshire Secretary of State David Scanlan then issued guidance saying that student IDs could not be used to establish voter identity, even as supporting evidence under the state's alternative v",
+   "published": "2026-10-23T10:11:24-04:00",
+   "link": "https://www.foxnews.com/politics/jackson-publicly-breaks-supreme-court-justices-side-gop-last-minute-voter-id-fight",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_afederal_block-care-court-inmate": [
+     "supreme",
+     "block"
+    ],
+    "obj_thepresi_authority-block-dems-elections": [
+     "block",
+     "elections"
+    ],
+    "obj_thepresi_administration-federal-halt-investigation": [
+     "judge",
+     "voting"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Melania Trump helps secure a ceasefire deal in Russian-occupied Oleshky, the White House says&nbsp;",
+   "dek": "First lady Melania Trump has brokered an upcoming ceasefire between Russia and Ukraine in the war-ravaged Ukrainian city of Oleshky to allow for humanitarian aid and the evacuation of civilians, the White House announced on Friday.",
+   "opening": "",
+   "published": "2026-10-23T10:05:11-04:00",
+   "link": "https://www.pbs.org/newshour/world/melania-trump-helps-secure-a-ceasefire-deal-in-russian-occupied-oleshky-the-white-house-says",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "ukraine"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "TGIF: The Deepfake of the Deepfake",
+   "dek": "Today in TGIF: The newest MAGA scam, &#8216;scuffles&#8217; in France, Foursquare sunsets, Starlink stutters in Ukraine, and more!",
+   "opening": "Hello, and welcome back to the week in review. I&#8217;m Nellie Bowles, and this is your brain on TGIF . &#8594; Is Trump privatizing Social Security?: Trump Accounts are turning into a very interesting little charitable financial vehicle. Elon Musk announced this week that he&#8217;ll be giving SpaceX shares &#8220; to every kid in America .&#8221; The shares will apparently be distributed through Trump Accounts. And now the plan is to expand Trump Accounts to anyone under 40 (Gen X screwed again). It&#8217;s starting to look a little like a new Social Security system being built in parallel. And the exciting twist: This one can actually invest in the stock market and, like, grow. Wouldn&#8217;t that be something? Everyone gets to go for a fun ride with SpaceX stock. By the way, as a CEO, it&#8217;s a great way to sway the public in your favor: All of America&#8217;s children are by default invested in the success of this one company? Perfect. I could see this being a great tool for embattled CEOs in general, even on a smaller scale. Sue my sweet company ? You mean you want to punish all the children in Memphis who received these shares? You monster. &#8594; Congress is going to flip, adjust your scams appropriately: Alert! Alert! The House and Senate are likely both flipping, and will have a Democratic majority. Nate Silver gives Democrats the edge (to be fair, others think it&#8217;s more of a toss-up ). Everyone, please adjust your scams. Drop the word America from your N",
+   "published": "2026-10-23T10:03:32+00:00",
+   "link": "https://www.thefp.com/p/tgif-the-deepfake-of-the-deepfake-trump-elon-starlink-ukraine",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "obj_thepresi_before-even-kick-related": [
+     "even",
+     "ukraine"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The Kremlin says a first tanker of Russian diesel sets sail for the U.S. despite Ukraine's protests",
+   "dek": "A first tanker carrying Russian diesel to the United States under a new import agreement has set sail, the Kremlin said Friday, two weeks after President Donald Trump said he struck a deal with President Vladimir Putin despite Moscow's invasion of Ukraine.",
+   "opening": "",
+   "published": "2026-10-23T09:52:53-04:00",
+   "link": "https://www.pbs.org/newshour/world/the-kremlin-says-a-first-tanker-of-russian-diesel-sets-sail-for-the-u-s-despite-ukraines-protests",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "diesel",
+     "tanker"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The Battle Over Black Representation in the South",
+   "dek": "The approach to this year’s midterms has brought two hugely consequential changes to voting for Black Americans: the gutting of the Voting Rights Act, and redistricting. In the wake of those actions, efforts are underway to mobilize Black voters in the South. In Mississippi, the Senate battle is being seen as a sleeper race, and the Black Democrat running has a chance of flipping the seat, but state lawmakers are trying to redraw the maps and do away with their one majority Black district. Today, Emily Cochrane, a reporter covering the American South for The New York Times, addresses the impli",
+   "opening": "The approach to this year’s midterms has brought two hugely consequential changes to voting for Black Americans: the gutting of the Voting Rights Act, and redistricting. In the wake of those actions, efforts are underway to mobilize Black voters in the South. In Mississippi, the Senate battle is being seen as a sleeper race, and the Black Democrat running has a chance of flipping the seat, but state lawmakers are trying to redraw the maps and do away with their one majority Black district. Today, Emily Cochrane, a reporter covering the American South for The New York Times, addresses the implications for voters across the region — not just in the midterms, but for years to come. Guest: Emily Cochrane , a national reporter for The New York Times covering the American South. Background reading:&nbsp; Black Democratic candidates running in the South have implored Black voters to go to the polls in response to the gutting of the Voting Rights Act . High-profile Democrats across the country have some hope in Scott Colom’s bid for a seat in the Senate . Photo: Anna Foley/The New York Times For more information on today’s episode, visit nytimes.com/thedaily . Transcripts of each episode will be made available by the next workday.&nbsp; For more information on today’s episode, visit nytimes.com/thedaily . Transcripts of each episode will be made available by the next workday. Subscribe today at nytimes.com/podcasts or on Apple Podcasts, Spotify and Amazon Music. You can also subscrib",
+   "published": "2026-10-23T09:45:00+00:00",
+   "link": "https://www.nytimes.com/the-daily",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Ilhan Omar hit with expulsion threat as GOP lawmaker vows to boot her from Congress over DOJ probe",
+   "dek": "Rep. Randy Fine says he plans to pursue House expulsion of Rep. Ilhan Omar if the Justice Department finds her guilty of immigration fraud.",
+   "opening": "EXCLUSIVE: Rep. Randy Fine, R-Fla., told Fox News Digital that he plans to pursue an effort to expel Rep. Ilhan Omar , D-Minn., if the Justice Department finds her guilty of immigration fraud. Fine, a member of the House Freedom Caucus, made the comments after Fox News Digital reported that a federal court filing identified Omar under the name \"Ilhan Nur Said Elmi,\" also listing \"Ilhan Abdullahi Omar\" as an alias. The filing has raised questions about Omar’s identity and immigration records but does not establish that she committed fraud. \"I assume that she’s not a citizen, so we might not even have to do that,\" Fine said. \"You can’t be in Congress if you’re not a citizen of the United States, but if it isn’t automatic, I absolutely will demand expulsion immediately.\" ILHAN OMAR IS NOT THE MINNESOTA CONGRESSWOMAN’S 'REAL NAME': SOURCES Omar is a naturalized U.S. citizen. She was born in Somalia and became a U.S. citizen in 2000. She has denied wrongdoing and called the investigation politically motivated. Fine said Democrats would attempt to block any Republican effort to censure or expel Omar. HOMAN SAYS ILHAN OMAR COULD BE STRIPPED OF NATURALIZATION, DEPORTED IF IMMIGRATION FRAUD IS PROVEN \"I don’t think Democrats think you should have to be American. They don’t believe in borders,\" Fine said. \"They’ve made that clear. They don’t believe in America.\" The House has the constitutional authority to expel a member , but doing so requires a two-thirds vote. A criminal investigat",
+   "published": "2026-10-23T09:27:34-04:00",
+   "link": "https://www.foxnews.com/politics/ilhan-omar-hit-expulsion-threat-gop-lawmaker-vows-boot-her-from-congress-over-doj-probe",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_authority-block-dems-elections": [
+     "block",
+     "authority"
+    ],
+    "obj_thepresi_administration-federal-halt-investigation": [
+     "investigation",
+     "states"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Fifty Antifa groups in France join vast network to ensure chaos in weekend protests",
+   "dek": "A Fox News Digital investigation identified 50 militant Antifa cells mobilizing protesters to descend on Orléans for the National Rally congress.",
+   "opening": "FIRST ON FOX : Some 50 radical Antifa cells in a wider network of nearly 300 groups are mobilizing to ensure this weekend's demonstrations in France devolve into chaos and mayhem, Fox News Digital has learned. Self-described Antifa groups are working with a sprawling network of communist, socialist, far-left and anti-Israel groups to mobilize on two fronts this weekend: an \"anti-fascist village\" against conservative leader Marine Le Pen's National Rally in the city of Orléans and nationwide protests called Acte II to replicate last week's violent riots. A Fox News Digital investigation has mapped 287 groups in France's expanding protest ecosystem, including 50 explicitly Antifa organizations, 27 explicitly communist, socialist, Trotskyist or revolutionary-left organizations, 24 labor unions and an expanding coalition of far-left anti-Israel, migrant-rights, environmental, feminist, transgender and other activist organizations. The demonstrations, which claim to be about youth education, include just 27 student and youth organizations. The coordination comes amid a wider transnational campaign of mayhem organized by communist, socialist and leftist groups in Greece, Italy, Spain, India and elsewhere. Fox News Digital has compiled a running who's who of organizations in what has been dubbed \"Chaos Inc.\" and will keep updating the directory. The size of the mobilization represents a huge expansion from the original 54 organizations identified in last weekend's riots. The number ",
+   "published": "2026-10-23T08:31:17-04:00",
+   "link": "https://www.foxnews.com/world/first-fox-50-antifa-groups-france-mobilize-growing-network-287-organizations-chaos-inc",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_191-400-convicted-cult": [
+     "leader",
+     "left"
+    ],
+    "obj_x_191-about-charges-convicted": [
+     "what",
+     "leader"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "43 years after Beirut terror attack killed 241 Americans, rabbi recalls chaplains’ extraordinary response",
+   "dek": "On the 43rd anniversary of the Beirut barracks terror attack that killed 241 Americans, a rabbi recalls how he and two Christian chaplains rushed to aid the wounded and comfort the survivors.",
+   "opening": "Rabbi Arnold Resnicoff never intended to be in Beirut in Lebanon, on Oct. 23, 1983, when suicide bombers drove explosive-laden trucks into Marine Corps barracks, killing 241 American service members. But as Resnicoff told Fox News Digital, his presence during that event and advocacy thereafter would bring solace and support for a multitude of American service members, leading to his strong belief that \"a coincidence is just God acting anonymously.\" Tasked to the U.S. Navy’s 6th Fleet, Resnicoff was part of a three-chaplain team supporting service members across 40 ships stationed in the Mediterranean. On Friday, Oct. 21, Resnicoff arrived in Beirut to perform a memorial service for a Jewish Marine who had been killed in the line of duty. Navy leadership wanted to send him back to the boat the following day, but as an observant Jew, he refused to travel on the Sabbath. IRAN OFFICIAL ADMITS COUNTRY’S ROLE IN TERROR BOMBING THAT KILLED 241 US MILITARY MEMBERS: REPORT Resnicoff woke early on the morning of Oct. 23 and was brushing his teeth at 6:22 a.m. when his building began to shake violently. As doors came off their hinges and windows exploded, Resnicoff and others took cover on the floor, believing their building had been hit by a rocket or mortars. When the ruckus stopped, the men began to hear \"these terrible, terrible screams\" coming from the building 50 yards away from where Protestant minister Danny Wheeler lived with a host of Marines. Whenever Resnicoff visited Beirut",
+   "published": "2026-10-23T08:17:46-04:00",
+   "link": "https://www.foxnews.com/world/43-years-after-beirut-terror-attack-killed-241-americans-rabbi-recalls-chaplains-extraordinary-response",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Military reinforcements move to Mideast. And, millions of Americans vote early",
+   "dek": "Military reinforcements are heading to the Middle East and some personnel have left the region, pointing to a potential attack on Iran. And, millions of Americans have already voted in the midterms.",
+   "opening": "Military reinforcements are heading to the Middle East and some personnel have left the region, pointing to a potential attack on Iran. And, millions of Americans have already voted in the midterms. (Image credit: Finn Gomez)",
+   "published": "2026-10-23T07:22:25-04:00",
+   "link": "https://www.npr.org/2026/10/23/g-s1-149514/up-first-newsletter-iran-war-midterm-voting-trump-bbc",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "White House blasts Biden border policies ahead of Trump Florida visit, citing brutal hammer killing",
+   "dek": "President Donald Trump&apos;s Fort Myers rally spotlights the brazen hammer killing of a Florida mother by a Haitian national the White House says was released under Biden&apos;s border policies.",
+   "opening": "EXCLUSIVE – The White House is highlighting the brutal hammer killing of a Florida mother as President Donald Trump prepares to headline a midterm rally in Fort Myers on Friday, with a spokesperson telling Fox News Digital that the case demonstrates the consequences of former President Joe Biden's border policies. Trump is scheduled to speak at 2 p.m. at Florida Gulf Coast University's Alico Arena ahead of the Nov. 3 midterm elections. The White House is pointing to the killing in the same city as it prepares to put a spotlight on the president's immigration enforcement record. \"A few short months ago, an illegal alien barbarically killed a woman outside of a gas station in Fort Myers by hitting her on the head with a hammer multiple times,\" White House spokeswoman Lauren Bis told Fox News Digital exclusively. DEM-LED PUSH TO EXTEND PROTECTIONS FOR HAITIANS FACES OUTRAGE AFTER BRUTAL HAMMER KILLING \"This heinous murderer was RELEASED into the country by the Biden administration. Not only did the Biden administration release him into the country, but they then gave him Temporary Protected Status. This is the result of Democrats open-border policies. If you import the third world, you become the third world.\" Trump previously condemned the killing in an April Truth Social post, calling the surveillance video \"one of the most vicious things you will ever see\" and blaming the Biden administration for allowing the suspect into the country. \"This one killing should be enough for th",
+   "published": "2026-10-23T07:00:04-04:00",
+   "link": "https://www.foxnews.com/politics/white-house-blasts-biden-border-policies-ahead-trump-florida-visit-citing-brutal-hammer-killing",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thepresi_citing-hold-interest-into": [
+     "citing",
+     "national"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How Congress could address Social Security insolvency – and the hidden cost",
+   "dek": "Federal budget rules could mask Social Security&apos;s looming insolvency by scoring general revenue transfers as costless, warns a Penn Wharton expert.",
+   "opening": "Social Security is expected to reach insolvency within a decade, and with the key safety net program facing the prospect of automatic benefit cuts when that occurs, a critical debate over the cost of replacing that revenue could be obscured by a budget rule. Kent Smetters, faculty director of the Penn Wharton Budget Model, spoke exclusively with FOX Business about a new report that details how federal budget rules assume Social Security benefits would be paid in full using general revenue transfers when the program's trust funds reach insolvency in about six or seven years. \"What the law actually says is that when the trust fund depletes, benefits have to be reduced to a level that's consistent with just the monthly payroll taxes that come in. We estimate that to be about a 15% reduction of benefits, which is sizable,\" Smetters said, adding that the cut would apply to newcomers and existing enrollees alike. FEDERAL BUDGET DEFICIT HITS $2T AS NATIONAL DEBT COSTS SURGE Smetters published a report explaining that a separate law covers how the nonpartisan Congressional Budget Office (CBO) would score the cost of trust fund depletion and general fund transfers to appear as if there was no cost to shifting borrowing to the general fund as spending continues. \"We all know that's just like the left hand paying the right hand or vice versa. It doesn't do anything to solve the actual funding problem. But nonetheless, that's going to score as though it's costless, zero dollars, even tho",
+   "published": "2026-10-23T07:00:03-04:00",
+   "link": "https://www.foxbusiness.com/politics/how-congress-could-address-social-security-insolvency-hidden-cost",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ],
+    "obj_x_191-about-charges-convicted": [
+     "what",
+     "know"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump's midterm campaign tour stops in Iowa",
+   "dek": "Republicans are facing a tough fight in Iowa. President Trump's campaign tour stopped in the state in hopes of rallying voters.",
+   "opening": "Republicans are facing a tough fight in Iowa. President Trump's campaign tour stopped in the state in hopes of rallying voters.",
+   "published": "2026-10-23T06:36:09-04:00",
+   "link": "https://www.npr.org/2026/10/23/nx-s1-6009838/trumps-midterm-campaign-tour-stops-in-iowa",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump sidelines sweeping Russia sanctions as GOP allies warn pressure on Putin is slipping",
+   "dek": "Trump waived most new Russia sanctions from the Graham Act, drawing sharp Republican criticism over whether Vladimir Putin believes the threats.",
+   "opening": "President Donald Trump is holding back on sweeping new economic penalties Congress handed him to squeeze Russia. He is betting that keeping those sanctions in reserve will help bring Vladimir Putin to the negotiating table, a strategy drawing criticism from Republican allies amid questions about whether Moscow believes he will ever use them. Over roughly a week, the administration waived most of the new Russia sanctions and tariffs enacted last month while separately easing restrictions on Russian diesel exports, moves one foreign policy expert described as Trump's most significant effort yet to unwind economic pressure on Moscow. \"It's probably the biggest effort that the Trump administration has made to start unwinding the U.S. sanctions architecture that's been in place against Russia since 2022 or even earlier in some cases,\" Hal Brands, a senior fellow at the American Enterprise Institute and professor at the Johns Hopkins School of Advanced International Studies, told Fox News Digital. TRUMP TRIES DIFFERENT APPROACH WITH RUSSIA TO BRING AMERICANS RELIEF AMID ONGOING WAR WITH UKRAINE Trump argues that imposing the new penalties could drive Russia away from peace negotiations. But Brands said repeatedly holding back economic punishment risks convincing Putin that Washington is unwilling to follow through on its threats. \"The threat of imposition may lose some credibility if over a period of time you've demonstrated that you would prefer not to impose those penalties in th",
+   "published": "2026-10-23T06:00:17-04:00",
+   "link": "https://www.foxnews.com/politics/trump-sidelines-sweeping-russia-sanctions-gop-allies-warn-pressure-putin-slipping",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "diesel"
+    ],
+    "russia-sanctions": [
+     "sanction",
+     "graham act"
+    ],
+    "tariffs": [
+     "tariff"
+    ],
+    "obj_thepresi_against-russia-sanctions-trump": [
+     "sanctions",
+     "russia"
+    ],
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "sanctions",
+     "even",
+     "ukraine"
+    ],
+    "obj_thepresi_citing-hold-interest-into": [
+     "russia",
+     "sanctions"
+    ],
+    "obj_x_russia-sanctions-support-urges": [
+     "sanctions",
+     "russia"
+    ],
+    "obj_thepresi_before-days-effect-most": [
+     "russia",
+     "sanctions",
+     "tariffs"
+    ],
+    "obj_thepresi_congress-counter-decision-outrages": [
+     "russian",
+     "sanctions",
+     "congress"
+    ],
+    "obj_thepresi_alleges-americans-canadian-carney": [
+     "tariffs",
+     "americans"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump pushback, Biden 'disaster' and gender surprise: 5 key moments from Kansas Senate debate",
+   "dek": "Republican Sen. Roger Marshall and Democrat Adam Hamilton clashed over Trump, transgender athletes and AI in a heated Kansas Senate debate on Wednesday.",
+   "opening": "Sen. Roger Marshall, R-Kan., and Democratic challenger Adam Hamilton sparred over President Donald Trump, immigration, Iran, transgender athletes, artificial intelligence and personal controversies during a contentious Kansas Senate debate Wednesday night. The hourlong showdown came less than two weeks before Election Day as Marshall seeks a second term and Hamilton, a longtime pastor, tries to become the first Democrat elected to the U.S. Senate from Kansas since 1932. The race has drawn increased national attention as Republicans and Democrats battle for control of the Senate, with Trump traveling to Kansas earlier this week to campaign for Marshall. Here are five moments that stood out from Wednesday night's debate. SLEEPER SENATE RACE EMERGES AS UNEXPECTED HEADACHE FOR REPUBLICANS AHEAD OF MIDTERMS The debate wasted little time getting contentious, opening with questions about controversies that have fueled attacks against both candidates. Marshall was confronted with a New York Times review that found his former medical practice sued more than 700 patients over unpaid bills. \"Every year we gave away $3 to $4 million of charity, but we also had a business,\" Marshall responded. \"We had 300 employees, we had a mortgage payment, we had electric.\" Hamilton, meanwhile, was questioned about his handling of allegations involving a volunteer at his church's summer camp who was accused of sexual abuse. Hamilton acknowledged that he should have ensured the individual did not return",
+   "published": "2026-10-23T06:00:04-04:00",
+   "link": "https://www.foxnews.com/politics/trump-pushback-biden-disaster-gender-surprise-5-key-moments-from-kansas-senate-debate",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm",
+     "senate race"
+    ],
+    "obj_afederal_block-care-court-inmate": [
+     "transgender",
+     "medical"
+    ],
+    "obj_x_accused-conspiracy-criminal-democratic": [
+     "democratic",
+     "accused"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Antifa supporter charged with stealing GOP campaign signs in NY race to replace Stefanik",
+   "dek": "An Antifa member was allegedly caught on video stealing Anthony Constantino&apos;s campaign signs in the NY-21 race to succeed Elise Stefanik in Congress.",
+   "opening": "A New York man was arrested after he was allegedly captured on video stealing campaign signs belonging to Republican congressional candidate Anthony Constantino while driving his employer’s vehicle. Josef Marris was charged with two counts of criminal possession of stolen property, according to the Essex County Sheriff’s Office. He was also fired from East Branch Organics, according to Constantino’s campaign. Constantino, who is running in New York’s 21st Congressional District, said the alleged thefts were intended to intimidate his supporters. TRUMP ENDORSES STICKER MULE CEO WHO BATTLED OFFICIALS OVER 100-FOOT PRO-TRUMP SIGN FOR STEFANIK'S HOUSE SEAT \"My campaign has lost more than $100,000 to sign theft and vandalism,\" Constantino told Fox News Digital. \"There are now multiple attempts to intimidate my supporters by people who are clearly pro-crime and pro-violence. The media needs to stop pretending this is a both-sides problem.\" Constantino’s campaign alleged that Marris carried out the thefts on behalf of Democratic candidate Blake Gendebien. Gendebien’s campaign did not respond to Fox News Digital’s request for comment. TOP ELECTION SCHEMES ROILING KEY MIDTERM RACES AS BOTH PARTIES ACCUSE RIVALS OF TRICKERY Constantino also criticized Gendebien in a post on X, writing that the Democrat \"is surrounded by FAR LEFT EXTREMISTS.\" WE NEED TO TALK TO COMMUNISTS BECAUSE THERE IS SO MUCH THEY NEED TO LEARN Marris has described himself as a communist and an Antifa supporter, acc",
+   "published": "2026-10-23T05:30:31-04:00",
+   "link": "https://www.foxnews.com/politics/antifa-supporter-charged-stealing-gop-campaign-signs-ny-race-replace-stefanik",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_california-charged-election-feds": [
+     "charged",
+     "election"
+    ],
+    "obj_x_arrested-charged-fraud-grand": [
+     "arrested",
+     "charged",
+     "theft"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "What's behind the early voting surge? It's more than voter enthusiasm, expert says",
+   "dek": "Nearly 21 million Americans have voted early in the midterms. MIT political scientist Charles Stewart explains what's driving the surge and why it may not mean higher overall turnout.",
+   "opening": "Nearly 21 million Americans have voted early in the midterms. MIT political scientist Charles Stewart explains what's driving the surge and why it may not mean higher overall turnout. (Image credit: Finn Gomez)",
+   "published": "2026-10-23T04:42:03-04:00",
+   "link": "https://www.npr.org/2026/10/23/nx-s1-6012308/midterm-elections-early-voting-data",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm",
+     "early voting"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump must sit for a deposition in his BBC defamation lawsuit, judge rules",
+   "dek": "A magistrate judge orders President Trump to sit for a deposition in a case he's brought against the BBC for defamation.",
+   "opening": "A magistrate judge orders President Trump to sit for a deposition in a case he's brought against the BBC for defamation.",
+   "published": "2026-10-23T04:41:38-04:00",
+   "link": "https://www.npr.org/2026/10/23/nx-s1-6012695/trump-must-sit-for-a-deposition-in-his-bbc-defamation-lawsuit-judge-rules",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_against-bbc-defamation-deposition": [
+     "judge",
+     "orders",
+     "deposition",
+     "defamation",
+     "lawsuit"
+    ],
+    "obj_thepresi_administration-federal-halt-investigation": [
+     "judge",
+     "orders"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump Administration Asks Appeals Court to Intervene in California Mail Ballot Suit",
+   "dek": "The Justice Department sought to jump-start a lawsuit aimed at compelling the state to not count as many as 20,000 mail ballots it claims were sent to noncitizens.",
+   "opening": "",
+   "published": "2026-10-23T04:32:19+00:00",
+   "link": "https://www.nytimes.com/2026/10/22/us/politics/trump-california-mail-ballot-lawsuit.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_thejusti_alleged-california-doj-kills": [
+     "california",
+     "noncitizens"
+    ],
+    "obj_x_california-charged-election-feds": [
+     "noncitizens",
+     "california"
+    ],
+    "obj_afederal_act-appeals-california-court": [
+     "appeals",
+     "california"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Two suspected gunmen dead, two IDF soldiers killed in West Bank shooting",
+   "dek": "Two suspected gunmen were killed by the IDF after a shooting near Judea Junction in the southern West Bank left five Israelis wounded on Friday.",
+   "opening": "Two Israeli Defense Forces soldiers were killed and three other people were wounded by two suspected gunmen, who were also killed, in a shooting Friday in the southern West Bank, officials said. Staff Sergeant Ron Yonatan Roytman, aged 23, from Ashkelon, a squad commander in the Ari Battalion (775), Search and Rescue Brigade and Sergeant Yuval Shai Svilem, aged 20, from Hod Hasharon, a combat soldier in the Ari Battalion, Search and Rescue Brigade, both died as a result of the attack, according to the Israel Defense Forces. The IDF reported that it responded to a shooting in the Judea Junction area Friday and killed two people it identified as \" terrorists. \" Hours after the attack, Israel ordered the army to prepare for a full closure of the West Bank, according to the Associated Press. Israeli Prime Minister Benjamin Netanyahu held an emergency meeting of his Security Cabinet, claiming Hamas was \"planning a major attack aimed at murdering innocent civilians.\" Netanyahu also said a large scale operation in the West Bank is to begin soon. INSIDE ISRAEL'S MISSION TO TRAIN CIVILIANS TO STOP THE NEXT OCT 7-LIKE TERROR ATTACK \"Our brave soldiers thwarted this attack with courage and determination,\" Netanyahu said. ISRAELI COMBAT MEDICINE SLASHES IDF DEATHS AFTER OCT 7, DRAWS US MILITARY INTEREST The identities of the suspected gunmen were not immediately released, but the Israeli army did identify them as Palestinians from Hebron armed with an M16 rifle and a handgun. Israeli int",
+   "published": "2026-10-23T04:05:06-04:00",
+   "link": "https://www.foxnews.com/world/two-suspected-gunmen-dead-two-idf-soldiers-killed-west-bank-shooting",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_191-400-convicted-cult": [
+     "left",
+     "dead"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump's MAGA faithful send warning to Republicans ahead of high-stakes midterm elections",
+   "dek": "Trump supporters at his Sioux City rally back Republicans but voice growing frustration over high prices, the Iran war and Election Day turnout.",
+   "opening": "SIOUX CITY, Iowa — President Donald Trump 's loyal base of supporters still have his and Republicans’ back in Iowa, but some are growing concerned over lingering issues, like the economy and gridlock in Congress, as Election Day nears. Trump and Republicans ran on a platform of lowering inflation, halting \"forever wars\" and repairing an economy that they say was wrecked by former President Joe Biden and his administration. But prices are still high, and the war in Iran is still ongoing, causing a spike in fuel prices that have stuck around heading into Nov. 3. Outside of Trump’s rally in Sioux City, Iowa, where the president was set to rile up support for Rep. Ashley Hinson, R-Iowa, in a tightening Senate race against Iowa state Rep. Josh Turek, his supporters who spoke with Fox News Digital still backed Republicans but expressed hope that change would soon come. VOTERS PREPARE TO WEIGH-IN ON TRUMP'S ECONOMY AS COSTS CONTINUE TO SURGE Beth Fitzl, an Iowa voter, said of Trump that she didn’t \"agree with everything he does, but in the end, he's here for us.\" \"This is the way I see it,\" Fitzl told Fox News Digital. \"He's like the Packers, OK? They may be getting in deep, but they always pull it off in the end, and I truly think he's going to do something to turn it around. I really think he's going to pull something to turn it around.\" Chuck Jones, a veteran and Purple Heart recipient who made the trek from Minnesota for the Iowa rally, was frustrated about the divisive, tribal ",
+   "published": "2026-10-23T04:00:38-04:00",
+   "link": "https://www.foxnews.com/politics/trumps-maga-faithful-send-warning-republicans-ahead-high-stakes-midterm-elections",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "fuel price"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm",
+     "senate race"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Supreme Court blocks use of student IDs as voter identification in New Hampshire",
+   "dek": "The Supreme Court allowed New Hampshire to reject student IDs at the polls ahead of midterm elections, warning of voter confusion too close to an election.",
+   "opening": "The U.S. Supreme Court on Thursday allowed New Hampshire officials to reject student IDs as a valid form of identification when voters cast their ballots in next month's midterm elections. A lower court judge previously found that state officials had improperly gone further than a new law restricting the use of student IDs to obtain a ballot, ruling that officials still had to consider student IDs alongside other evidence when voters lacked other means of verifying their identity. But the Supreme Court took issue with the judge intervening this close to the elections. ARIZONA VOTER LAW FIGHT REACHES SCOTUS AS ELECTION GROUPS WARN ‘ABSURD’ CONSEQUENCE COULD ENSUE The high court has said orders handed down too close to an election can cause voter confusion, an idea known as the Purcell Principle. The court cited the recent legal back-and-forth over Missouri’s redistricting maps. \"Here, the District Court did not point to anything that would justify deviating from that principle,\" the majority wrote in its opinion. Justice Ketanji Brown Jackson dissented, saying the rule did not apply since the lower court judge was helping ensure the public received accurate information. JACKSON RIPS INTO SUPREME COURT COLLEAGUES' 'SERIOUS LEGAL ERROR' ON TRUMP MAIL-IN VOTING ORDER \"When a federal court determines that material misrepresentations are being made about a State’s election rules, an injunction to prohibit that conduct does not contribute to public confusion, it prevents that very p",
+   "published": "2026-10-23T02:44:19-04:00",
+   "link": "https://www.foxnews.com/politics/supreme-court-blocks-student-ids-voter-identification-new-hampshire",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thepresi_against-bbc-defamation-deposition": [
+     "judge",
+     "orders"
+    ],
+    "obj_thepresi_administration-federal-halt-investigation": [
+     "judge",
+     "orders",
+     "voting"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump Is Hot for Tim Scott & Susan Collins Side-Eyes Troy Jackson's Second Cousin | The Daily Show",
+   "dek": "Midterm mania continues with competitive races turning deep-red states purple, or at least… burgundy red? Ronny Chieng breaks down the headlines, including Trump professing his love for Sen. Tim Scott and bragging about his favorite presidential side hustle: renaming bodies of water. Plus, Michael Kosta defends Maine Senate candidate Troy Jackson after Susan Collins points out that his family tree has some funky branches. #DailyShow #SusanCollins #Mississippi #Trump 0:00 - High-Stakes Debate in Michigan Could Determine Senate Race 1:10 - Democrats Becoming Popular in Historically Red States 2:",
+   "opening": "",
+   "published": "2026-10-23T02:00:51+00:00",
+   "link": "https://www.youtube.com/watch?v=LTc4kp_liiI",
+   "videoId": "LTc4kp_liiI",
+   "publication": "daily-show",
+   "source": "daily-show",
+   "station": "LI",
+   "matched": {
+    "me-sen": [
+     "collins",
+     "troy jackson",
+     "maine senate"
+    ],
+    "midterms": [
+     "midterm",
+     "senate race"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Taco Bell, PepsiCo extend partnership through 2036, keeping Mountain Dew Baja Blast on menu",
+   "dek": "PepsiCo and Taco Bell locked in an 11-year renewal that keeps Mountain Dew Baja Blast on menus through 2036, a major win for the brand after KFC announced its switch to Coca-Cola.",
+   "opening": "PepsiCo and Taco Bell are extending their decades-long partnership for another 11 years, keeping Pepsi beverages — including the fan-favorite Mountain Dew Baja Blast — at participating U.S. restaurants through 2036. The partnership covers Taco Bell, Taco Bell Cantina and Live Más Café locations nationwide, PepsiCo announced Thursday. By renewing their longstanding partnership, PepsiCo and Taco Bell have ensured that one of their most recognizable products will remain on the menu. KFC REPLACING PEPSI WITH COCA-COLA AT 3,700 US RESTAURANTS AFTER NEARLY FOUR DECADES Mountain Dew Baja Blast — the popular beverage created through the Taco Bell-PepsiCo partnership that has grown into a billion-dollar brand – will remain available alongside Pepsi, Pepsi Zero Sugar, Mountain Dew, Starry and Baja Midnight. \"Some of PepsiCo’s best foodservice innovations have come from partnerships that challenge us to think differently, and Taco Bell has always brought that energy,\" PepsiCo Global Away from Home President Anne Fink said in a statement. PEPSICO RAISING PRICES ON DORITOS, RUFFLES, SUNCHIPS AND SOME SODAS AFTER RECENT CUTS \"Together, we have co-created products consumers love, from the iconic Mountain Dew Baja Blast to DORITOS Locos Tacos,\" Fink continued. \"What makes this partnership special is how we bring together Taco Bell’s connection to culture with PepsiCo’s consumer insights, culinary capabilities and beverage expertise to create what’s next. We’re excited about what we can build",
+   "published": "2026-10-23T02:00:48-04:00",
+   "link": "https://www.foxbusiness.com/retail/taco-bell-pepsico-extend-partnership-through-2036-keeping-mountain-dew-baja-blast-menu",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Evan Gershkovich: My Time as a Prisoner in Putin’s Russia",
+   "dek": "The Wall Street Journal reporter spent 491 days in Russian prison. The Free Press talks to him about hostage diplomacy, the FSB sting that caught him, and what Putin still gets wrong about him.",
+   "opening": "&#8220;Well, there&#8217;s nothing much I can do. I&#8217;m here, I can&#8217;t get out of here, and honestly, it&#8217;s interesting. I get to see the system from the inside. I&#8217;m a reporter, after all&#8212;a voyeur&#8212;and this is the ultimate voyeurism.&#8221; That&#8217;s what Wall Street Journal reporter Evan Gershkovich told himself at the end of his first 24 hours in Moscow&#8217;s Lefortovo prison, where he landed shortly after the FSB, Russia&#8217;s primary domestic security and intelligence agency, arrested him on trumped-up espionage charges in March 2023. Then he turned on the TV in his cell and found a state talk show discussing his case. &#8220;As cynical as it sounds,&#8221; one host said, &#8220;we&#8217;ve replenished our [prisoner] exchange fund.&#8221; The exchange itself came 491 days later, in August 2024, in the form of the largest prisoner swap between Russia and the West since the Cold War. Gershkovich&#8217;s account of those days, and of the country that took him as a bargaining chip four decades after his parents left it, is the subject of his new memoir, This Cursed Beautiful Land . I spoke to Gershkovich this week, at a time when Moscow appears to be replenishing its exchange fund once again. On October 13, Russia announced it had detained a Japanese correspondent on the same espionage charge it used against Gershkovich. Four days earlier, Montenegro detained and promptly expelled a Kremlin-linked Russian war blogger. The same day, Dmitry",
+   "published": "2026-10-23T01:40:20+00:00",
+   "link": "https://www.thefp.com/p/evan-gershkovich-my-time-as-prisoner-journalist-war-ukraine-russia-putin",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "obj_thepresi_before-days-effect-most": [
+     "russia",
+     "days"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Pete Ricketts’s Wealth Puts Class at the Center of Nebraska’s Senate Race",
+   "dek": "In a year when the wealth of the rich soared while workers lost ground to inflation, class has become political, especially in the Nebraska Senate race.",
+   "opening": "",
+   "published": "2026-10-23T01:04:08+00:00",
+   "link": "https://www.nytimes.com/2026/10/22/us/politics/pete-ricketts-billionaire-nebraska-senate-race.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "senate race"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Blanche won't rule out DOJ blocking election certification in 'doomsday' scenario",
+   "dek": "Attorney General Todd Blanche refused to rule out Department of Justice intervention in midterm election certification, citing hypothetical &quot;doomsday&quot; scenarios.",
+   "opening": "Attorney General Todd Blanche refused to rule out whether the Department of Justice could seek to intervene in states’ midterm election certification processes, saying there are extreme scenarios that could prompt federal action. Speaking to reporters in Virginia on Thursday, Blanche said it was not his intention to \"improperly interfere with elections,\" but declined to rule out federal involvement if a \"doomsday scenario\" were to happen. \"Of course, there’s scenarios that we can all come up with hypothetically, you know, some doomsday scenario, for example, right?\" he said. \"So, I don’t think it’s proper to make any kind of conclusory statements about what’s going to happen in the future, because I have no idea what’s happening in the future.\" Blanche said he could not say there were no circumstances under which the DOJ would get involved. NEWSOM SPARS WITH TRUMP-APPOINTED PROSECUTOR OVER 20,000 SUSPECTED NONCITIZENS ON VOTER ROLLS \"Of course, I’m not going to say that,\" he said. \"But am I planning my days around the election to be somewhere to not certify? Of course not, no, not at all.\" The DOJ's role in elections is limited under the Constitution and federal law, allowing it primarily to safeguard civil rights and prosecute people who violate election law. Federal law does not specifically authorize the department to challenge ballots or delay a state's certification of election results. Under the Constitution and federal law, U.S. elections are run by state and local off",
+   "published": "2026-10-23T00:53:19-04:00",
+   "link": "https://www.foxnews.com/politics/blanche-wont-rule-out-doj-blocking-election-certification-doomsday-scenario",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_california-charged-election-feds": [
+     "noncitizens",
+     "election"
+    ],
+    "obj_x_191-about-charges-convicted": [
+     "what",
+     "know"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Key Trump Health Adviser Resigns Ahead of Midterm Elections",
+   "dek": "Calley Means, who helped unite Robert F. Kennedy Jr. and President Trump, pushed food reforms but grew frustrated with stalled progress on the MAHA agenda.",
+   "opening": "",
+   "published": "2026-10-22T23:33:19+00:00",
+   "link": "https://www.nytimes.com/2026/10/22/us/politics/calley-means-resigns-rfk-trump.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_hhs_administration-adviser-calley-hhs": [
+     "calley",
+     "means",
+     "adviser",
+     "resigns"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Fetterman STABS DEMS IN THE BACK Right Before Midterms | The Kyle Kulinski Show",
+   "dek": "Support The Show On Patreon!: https://www.patreon.com/seculartalk Subscribe to Krystal Kyle & Friends On Substack!: https://krystalkyleandfriends.substack.com Join our Discord!: https://discord.gg/teyN4ce Follow Kyle on Twitter: http://www.twitter.com/kylekulinski \"The first time I ever really listened to Kyle Kulinski’s show was in the back of a cab last summer. The driver had his phone hooked up through the stereo and was pumping out an episode through the car speakers — loudly, as if looking to convert a captive audience. “Do you like Kyle Kulinski?” The driver, Ahmed, was a recent immigran",
+   "opening": "",
+   "published": "2026-10-22T23:30:23+00:00",
+   "link": "https://www.youtube.com/watch?v=rzq8gE1OMVA",
+   "videoId": "rzq8gE1OMVA",
+   "publication": "secular-talk",
+   "source": "secular-talk",
+   "station": "LP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The Ad Dividing the Republican Party",
+   "dek": "Trump got behind a much-criticized spot in the Ohio governor’s race.",
+   "opening": "",
+   "published": "2026-10-22T23:15:45+00:00",
+   "link": "https://www.nytimes.com/2026/10/22/us/politics/ohio-governor-ad-ramaswamy-acton.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_astate_allowing-eligibility-executive-governor": [
+     "ohio",
+     "governor"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "We Asked an Expert How to Survive Cancer. His Answer SHOCKED Us.",
+   "dek": "Tucker on the potential new groundbreaking way to cure cancer. Watch the full conversation here: https://www.youtube.com/watch?v=mgZaT-OriO8 Watch more here: https://watchtcn.co/49CDF2t #TuckerCarlson #cancer #science #health #DonaldTrump #BobbyKennedy #medical #transgender #BigPharma #immunesystem #crime #vaccines #news #politics #podcast",
+   "opening": "",
+   "published": "2026-10-22T23:00:33+00:00",
+   "link": "https://www.youtube.com/watch?v=7KFkZgWY5ZQ",
+   "videoId": "7KFkZgWY5ZQ",
+   "publication": "tcn",
+   "source": "tcn",
+   "station": "RP",
+   "matched": {
+    "obj_afederal_block-care-court-inmate": [
+     "transgender",
+     "medical"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "What Dueling Visits by Ocasio-Cortez and Manchin Say About Maine’s Senate Race",
+   "dek": "Senator Susan Collins, a Republican in a tight race, is keying her closing pitch to the middle, while her progressive challenger, Troy Jackson, is seeking to excite the left.",
+   "opening": "",
+   "published": "2026-10-22T22:40:14+00:00",
+   "link": "https://www.nytimes.com/2026/10/22/us/politics/maine-aoc-jackson-collins-manchin-senate.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "me-sen": [
+     "collins",
+     "troy jackson"
+    ],
+    "midterms": [
+     "senate race"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "'I basically snapped': New Jersey mayor charges at resident during chaotic council meeting",
+   "dek": "Video captures New Jersey Republican Mayor Matthew Bianchini lunging at a resident during a Pemberton Township council meeting before being restrained.",
+   "opening": "A New Jersey Republican mayor charged toward a resident during a chaotic township council meeting this week and had to be physically restrained as he shouted threats at the man, dramatic video shows. Pemberton Township Mayor Matthew Bianchini, a Republican, rushed toward the resident during Wednesday night's meeting before several people intervened and pulled him away. The resident, Michael Sawka, is a vocal critic of the mayor, according to WPVI-TV . \"I'm getting you,\" Bianchini can be heard shouting. FORMER GAMBINO ASSOCIATE TURNED NEW JERSEY COUNCILMAN ACCUSED OF RUNNING LOANSHARKING RING WHILE IN OFFICE Video of the meeting shows Bianchini lunging toward Sawka before being restrained by others in attendance. As he was removed, Bianchini could be heard shouting additional threats at Sawka, including profanity. Following the meeting, Bianchini admitted that he lost his temper. \"I just basically snapped,\" Bianchini told WPVI. \"I hate to put it this way, but it's a long time coming.\" The mayor acknowledged that his conduct was inappropriate. SLAIN NEW JERSEY MOM'S AUTOPSY REPORT RELEASED MONTHS AFTER STABBING DEATH AT HOME \"I should not have said that,\" he told the station. \"That was wrong. It was in the heat of the moment. I'm not gonna get anybody.\" The confrontation happened while a recently fired township employee was addressing the council. Bianchini and members of his family told WPVI that Sawka and another resident made rude comments toward the mayor's wife and daughte",
+   "published": "2026-10-22T21:42:39-04:00",
+   "link": "https://www.foxnews.com/politics/i-basically-snapped-new-jersey-mayor-charges-resident-chaotic-council-meeting",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_arrested-charged-fraud-grand": [
+     "mayor",
+     "charged"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Evening Wire: Democrat Power Broker Indicted In Drug Bust & Ilhan Omar Flees DC?",
+   "dek": "Ilhan Omar says she’s moving out of DC, Michigan senate candidates square off on the debate stage, and a Virginia lawmaker is involved in a drug bust. Get the facts first with Evening Wire. - - - Ep. 3156 - - - Wake up with new Morning Wire merch: https://bit.ly/4lIubt3 - - - Today’s Sponsor: Lean - LEAN is a doctor-developed, non-prescription weight-loss supplement designed to support weight loss in three ways: helping convert stored fat into energy, helping maintain healthy blood sugar, and helping manage appetite and that constant food noise that can make staying on track so difficult. Go t",
+   "opening": "",
+   "published": "2026-10-22T21:30:29+00:00",
+   "link": "https://www.youtube.com/watch?v=oJDqFGuvWn8",
+   "videoId": "oJDqFGuvWn8",
+   "publication": "shapiro",
+   "source": "shapiro",
+   "station": "RP",
+   "matched": {
+    "obj_x_accused-conspiracy-criminal-democratic": [
+     "virginia",
+     "lawmaker"
+    ],
+    "obj_thejusti_charged-doj-drug-laundering": [
+     "virginia",
+     "drug"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "A Venezuelan billionaire found a great way to get out of bribery charges: by doing more bribery",
+   "dek": "",
+   "opening": "",
+   "published": "2026-10-22T21:30:09+00:00",
+   "link": "https://www.youtube.com/shorts/T437Xl1xvMw",
+   "videoId": "T437Xl1xvMw",
+   "publication": "daily-show",
+   "source": "daily-show",
+   "station": "LI",
+   "matched": {
+    "venezuela": [
+     "venezuela"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Above Iran’s Capital, a Trump Impersonator Dances in a Jail Cell",
+   "dek": "The Islamic republic has long used billboards in Tehran to mock its opponents and hammer home its messaging, but this piece of performance propaganda is perhaps the most eccentric yet.",
+   "opening": "",
+   "published": "2026-10-22T21:25:08+00:00",
+   "link": "https://www.nytimes.com/2026/10/22/world/europe/iran-trump-impersonator-billboard.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran",
+     "tehran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "RFK Jr. adviser Calley Means resigns amid growing MAHA discontent over lack of progress",
+   "dek": "Calley Means, a top adviser to Health Secretary Robert F. Kennedy Jr. and a chief advocate for the Make America Healthy Again movement, resigned from his position with the Trump administration Thursday.",
+   "opening": "",
+   "published": "2026-10-22T20:51:44-04:00",
+   "link": "https://www.pbs.org/newshour/politics/rfk-jr-adviser-calley-means-resigns-amid-growing-maha-discontent-over-lack-of-progress",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_hhs_administration-adviser-calley-hhs": [
+     "calley",
+     "means",
+     "adviser",
+     "resigns"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "NYC votes to end nearly 170-year-old horse carriage tradition as Trump blasts ban, drivers threaten lawsuit",
+   "dek": "The Transport Workers Union threatened federal court action after the New York City Council voted 40-7 to ban horse-drawn carriages by June 2028.",
+   "opening": "The New York City Council voted Thursday to ban horse-drawn carriages by June 2028, moving to end a nearly 170-year tradition after the death of a teenager in Central Park and prompting threats of legal action from carriage drivers. The council voted 40-7, with two abstentions, to approve Romanch's Law, named after 18-year-old Romanch Mahajan, who died in June after being thrown from a runaway carriage in Central Park. The legislation would phase out the industry by June 1, 2028, while requiring Mayor Zohran Mamdani's administration to develop a transition program for more than 150 active carriage drivers and other workers. The plan would include job training, career counseling and employment referrals, although financial compensation is not guaranteed. MAMDANI PRAISED OVER MOVE TO DISMANTLE CONTROVERSIAL NYC INDUSTRY — BUT INSIDERS SAY THERE’S MORE TO THE STORY President Donald Trump weighed in on the decision Thursday, criticizing the move to eliminate one of New York City's longtime tourist attractions. \"The Horse-drawn Carriage in New York City is a quintessential New York experience. So sad that, for political reasons, we will see it go!\" he wrote on Truth Social. The Transport Workers Union (TWU), which represents carriage industry workers , threatened to challenge the ban in federal court and seek a temporary restraining order. Union representatives accused City Council Speaker Julie Menin of failing to adequately consult drivers whose livelihoods are at stake. MAN KIL",
+   "published": "2026-10-22T19:32:56-04:00",
+   "link": "https://www.foxnews.com/politics/nyc-votes-end-nearly-170-year-old-horse-carriage-tradition-trump-blasts-ban-drivers-threaten-lawsuit",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_2028-ban-carriages-central": [
+     "central",
+     "park",
+     "horse",
+     "drawn",
+     "carriages"
+    ],
+    "obj_x_ban-carriage-central-council": [
+     "council",
+     "central",
+     "park",
+     "carriage"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Mortgage Rates Remain Above 7%, Pushing Home Prices Lower in Some Areas",
+   "dek": "The 30-year, fixed-rate mortgage dropped slightly to 7.32 percent as prospective home buyers continue to struggle with affordability. But home prices are starting to drop in some areas.",
+   "opening": "",
+   "published": "2026-10-22T19:18:58+00:00",
+   "link": "https://www.nytimes.com/2026/10/22/business/mortgage-rates-housing-costs.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "housing": [
+     "home prices",
+     "mortgage rate"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Teacher injured in Oregon school shooting says she had no chance to protect students",
+   "dek": "A teacher wounded in last week's attack on a special education classroom at an Oregon elementary school never had a chance to try to shelter any of the children inside, she said Wednesday in a statement issued by a family friend.",
+   "opening": "",
+   "published": "2026-10-22T19:06:50-04:00",
+   "link": "https://www.pbs.org/newshour/nation/teacher-injured-in-oregon-school-shooting-says-she-had-no-chance-to-protect-students",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_thejusti_alleged-california-doj-kills": [
+     "oregon",
+     "school"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "DOJ opens investigation into Trump ally Corey Lewandowski",
+   "dek": "The Justice Department is probing Corey Lewandowski after a criminal referral from Homeland Security investigators, according to a source.",
+   "opening": "The Justice Department (DOJ) has launched an investigation into longtime Trump advisor Corey Lewandowski , a source familiar with the matter told Fox News. The probe stems from a criminal referral sent to the Justice Department by the Department of Homeland Security’s inspector general, marking a legal escalation for the high-profile political figure. Asked about the inquiry by reporters outside the White House, President Donald Trump said he wants his staff held accountable and that he had \"heard something about it.\" \"All I know is I want my people to be honest,\" Trump said. TRUMP'S NEW PRESS SECRETARY OUT OF A JOB JUST DAYS AFTER ROCKY DEBUT \"If they're not going to be honest, they have to be prosecuted,\" Trump warned, adding that dishonesty amounts to \"stealing from me as president.\" \"They are stealing from me. So, I want my people to be honest. And if they're not honest, I'll have my DOJ go and do whatever they have to do.\" OBAMA-APPOINTED JUDGE AT CENTER OF TRUMP'S ANTI-WEAPONIZATION FUND CASE HIT WITH MISCONDUCT CLAIM Adam Trigg, an attorney for Lewandowski, said his client has not been contacted by the Justice Department and denies any wrongdoing. \"Mr. Lewandowski has not been contacted by the Justice Department regarding any investigation, and he denies any wrongdoing when he was proudly serving his country in a voluntary capacity,\" Trigg said in a statement posted on Lewandowski's X account. Lewandowski is a longtime political ally of Trump who previously served as a",
+   "published": "2026-10-22T19:03:37-04:00",
+   "link": "https://www.foxnews.com/politics/doj-opens-investigation-trump-ally-corey-lewandowski",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_administration-federal-halt-investigation": [
+     "judge",
+     "investigation"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "DOJ monitoring plans and DHS voter checks raise concerns of election interference",
+   "dek": "With the midterm elections less than two weeks away, a new legal battle is raising questions about the federal government's role in policing who is eligible to vote. A federal judge in California has blocked a Department of Homeland Security effort to identify noncitizens on voter rolls. White House correspondent Liz Landers reports.",
+   "opening": "",
+   "published": "2026-10-22T18:55:44-04:00",
+   "link": "https://www.pbs.org/newshour/show/doj-monitoring-plans-and-dhs-voter-checks-raise-concerns-of-election-interference",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thejusti_alleged-california-doj-kills": [
+     "california",
+     "noncitizens"
+    ],
+    "obj_x_california-charged-election-feds": [
+     "noncitizens",
+     "election",
+     "california"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "News Wrap: Virginia state senator charged with running criminal marijuana enterprise",
+   "dek": "In our news wrap Thursday, federal authorities charged Virginia state Sen. Louise Lucas with running a criminal marijuana enterprise, New York City lawmakers voted to ban horse-drawn carriage rides in Central Park and a judge in Florida ordered President Trump to sit for a deposition in his $10 billion lawsuit against the BBC, or the case could be dismissed.",
+   "opening": "",
+   "published": "2026-10-22T18:50:52-04:00",
+   "link": "https://www.pbs.org/newshour/show/news-wrap-virginia-state-senator-charged-with-running-criminal-marijuana-enterprise",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_x_accused-conspiracy-criminal-democratic": [
+     "virginia",
+     "lucas",
+     "marijuana"
+    ],
+    "obj_thepresi_against-bbc-defamation-deposition": [
+     "judge",
+     "deposition",
+     "lawsuit"
+    ],
+    "obj_thejusti_charged-doj-drug-laundering": [
+     "virginia",
+     "louise",
+     "lucas",
+     "charged"
+    ],
+    "obj_x_2028-ban-carriages-central": [
+     "central",
+     "park",
+     "horse",
+     "drawn"
+    ],
+    "obj_x_ban-carriage-central-council": [
+     "central",
+     "park",
+     "carriage"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Hakeem Jeffries Launches Final Midterm Sprint for House Majority",
+   "dek": "The minority leader plans to kick off campaigning in a Hudson Valley, New York, district that is one of the most competitive in the country.",
+   "opening": "",
+   "published": "2026-10-22T18:49:51+00:00",
+   "link": "https://www.nytimes.com/2026/10/22/us/politics/hakeem-jeffries-hudson-valley-campaign-midterms.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Iran says 7 oil tankers damaged in Strait of Hormuz, and other Middle East news",
+   "dek": "Iran's state television reported that seven oil tankers either caught fire or were damaged by mines overnight Wednesday into Thursday after being targeted or striking naval mines in the Strait of Hormuz.",
+   "opening": "",
+   "published": "2026-10-22T18:48:30-04:00",
+   "link": "https://www.pbs.org/newshour/world/iran-says-7-oil-tankers-damaged-in-strait-of-hormuz-and-other-middle-east-news",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "hormuz",
+     "strait of",
+     "tanker"
+    ],
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "What Maine voters are saying about the Collins-Jackson Senate race",
+   "dek": "One of the most closely watched Senate races in the country is unfolding in Maine, where five-term Republican Susan Collins faces a tough challenge from Democrat Troy Jackson, a former logger and state legislator. The race is rated a toss-up, with both parties fighting for a seat that could determine control of the Senate. Lisa Desjardins reports from Maine.",
+   "opening": "",
+   "published": "2026-10-22T18:45:13-04:00",
+   "link": "https://www.pbs.org/newshour/show/what-maine-voters-are-saying-about-the-collins-jackson-senate-race",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "me-sen": [
+     "collins",
+     "troy jackson"
+    ],
+    "midterms": [
+     "senate race"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Inside the race to build Patriot missiles as stocks run low",
+   "dek": "Ukrainians are desperate for more defense systems to repel Russia's relentless onslaught of drones and ballistic missiles. For the missiles, no system is more valuable than the U.S. Patriot interceptor. But years of use in Ukraine and by the U.S. and allies in the war with Iran have depleted thin stocks. Special correspondent Mike Cerre has an exclusive look at the Patriot manufacturing process.",
+   "opening": "",
+   "published": "2026-10-22T18:40:53-04:00",
+   "link": "https://www.pbs.org/newshour/show/inside-the-race-to-build-patriot-missiles-as-stocks-run-low",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "ukraine"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Quest Diagnostics confirms patient information accessed in cyberattack, systems temporarily shut down",
+   "dek": "Quest Diagnostics temporarily suspended access to several systems following a cyberattack involving patient information.",
+   "opening": "Quest Diagnostics confirmed that patient health information or personally identifiable information was involved in a cybersecurity breach that prompted the medical testing giant to temporarily suspend access to several systems. The New Jersey -based company said Thursday that it disabled access to its Quanum Lab Services Manager (LSM) platform after discovering unauthorized access Wednesday. Quest expects to restore full functionality as soon as Friday. The platform allows certain healthcare providers to order laboratory tests and access results. Quest said it believes some patient data was accessed but is still investigating the specific information involved and how many people may have been affected. FOOD LION, STOP &amp; SHOP AND HANNAFORD WEBSITES FACE OUTAGES AFTER CYBERSECURITY ISSUE The company also temporarily paused access to its Essential Insights and LabHQ systems as a precaution, although it said no data was accessed on those systems. Despite the temporary restrictions, Quest said its core business operations remain unaffected and its ability to serve patients has not been materially disrupted. Healthcare providers who normally use Quanum LSM can continue placing orders through paper requisitions or the company's Quanum eLabs platform. Other electronic ordering systems remain operational. Quest said it has stopped the unauthorized access and is working to restore the affected system. The company does not expect testing delays for clients who do not use Quanum LSM.",
+   "published": "2026-10-22T18:13:48-04:00",
+   "link": "https://www.foxbusiness.com/technology/major-medical-testing-company-quest-diagnostics-hit-cyberattack-patient-records-risk",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_canadian-challenging-files-food": [
+     "jersey",
+     "food"
+    ],
+    "obj_afederal_block-care-court-inmate": [
+     "restrictions",
+     "medical"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Why Many Voters Are Unhappy With the Economy",
+   "dek": "With the midterms approaching, the economy is a top concern for voters. Our chief economic correspondent, Ben Casselman, describes which aspects of the economy have voters so frustrated.",
+   "opening": "",
+   "published": "2026-10-22T18:13:37+00:00",
+   "link": "https://www.nytimes.com/video/business/100000011216716/why-many-voters-are-unhappy-with-the-economy.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Houthi Strike on Saudi Airport Kills 2 as U.S. Tells Some Diplomats to Leave",
+   "dek": "The airport is in Dammam, which is near the headquarters of oil giant Saudi Aramco. For weeks, Yemen’s Iran-backed Houthi militia has been attacking the kingdom’s aviation and energy sectors.",
+   "opening": "",
+   "published": "2026-10-22T18:07:36+00:00",
+   "link": "https://www.nytimes.com/2026/10/22/world/middleeast/saudi-houthis-yemen-dammam-airport.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran",
+     "houthi"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Fox News Poll: Nail-biter in Maine Senate race",
+   "dek": "Susan Collins and Troy Jackson are deadlocked at 49% in the Maine Senate race as Trump&apos;s job approval sits 25 points underwater in the state.",
+   "opening": "Maine voters are in a negative mood this election season. Only 12% say their family is better off financially compared to two years ago, and more than 6 in 10 disapprove of President Donald Trump’s job performance, including 2 in 10 Republicans. FOX NEWS POLL: TEXAS SENATE RACE GALLOPING TOWARD A PHOTO FINISH A Fox News survey of Maine likely voters finds that mood weighs on Republican Sen. Susan Collins, as 53% are concerned she votes with Trump too much. By contrast, 46% are concerned Democratic challenger Troy Jackson is too liberal. FOX NEWS POLL: GENDER GAP AND POCKETBOOK PAIN SHAPE OHIO SENATE RACE Despite those views, the horse race shows the candidates tied, with Jackson and Collins at 49% apiece. All survey interviews were completed after the candidates’ Oct. 15 debate. Collins, who first won her seat about three decades ago, is seeking a sixth term. She’s the only GOP senator running for re-election this year from a state Trump lost in 2024 (by 7 points). In 2020, Collins won by nearly 9 points. Democrats view Maine as a must-win seat in their effort to take control of the Senate. When voters are asked about control of the U.S. Senate, 53% prefer a Democratic-led Senate vs. 45% who want the Republicans to remain in charge. While almost all Jackson supporters want Democratic control (96%), Collins supporters are more divided: 89% want a GOP-led chamber, but 9% prefer Democratic leadership. Collins will need to overcome the energy on the left, as far more Democrats (7",
+   "published": "2026-10-22T18:00:02-04:00",
+   "link": "https://www.foxnews.com/politics/fox-news-poll-nail-biter-maine-senate-race",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "tx-sen": [
+     "texas senate"
+    ],
+    "me-sen": [
+     "collins",
+     "troy jackson",
+     "maine senate"
+    ],
+    "midterms": [
+     "senate race"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump’s Gamble to End the Iran War",
+   "dek": "",
+   "opening": "",
+   "published": "2026-10-22T17:41:50-04:00",
+   "link": "https://www.theatlantic.com/national-security/2026/10/trump-iran-war-strikes-after-midterms/689121/?utm_source=feed",
+   "videoId": null,
+   "publication": "atlantic",
+   "source": "atlantic",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "LARRY KUDLOW: The end is near for Iran",
+   "dek": "Trump’s remarks suggest chances are rising for a decisive strike after the election on the regime at Tehran",
+   "opening": "\"As soon as the war ends, you know, we beat the hell out of Iran as soon as the war ends and it’ll end one way or the other very quickly.\" President Trump said this Tuesday night at Greenville, North Carolina. And as my friend and former colleague, the former energy secretary, Dan Brouillette, told me last evening, when Mr. Trump \"says he’s going to do something, there’s a pretty good doggone chance he’s gonna do it.\" That means we’re going to bomb Iran. Immediately after the election. To me, it’s very clear Mr. Trump has no interest in phony Iranian peace discussions or deals. He is well aware of their bad faith that they lie, cheat, and steal their way through life as radical Islamists work to hold on to their own power aggrandizement. Put it another way, they basically just want to keep lining their pockets and keep stealing the Iranian people’s monies. Scott Bessent, the Treasury man, best since World War II, has shut down their economy. The naval blockade is working. The Iranian fleet of shadow tankers in Asia and Communist China’s waters has completely run out. That’s all. Go ahead. Dry it up, of course. Mr. Trump has been meeting with Prime Minister Benjamin Netanyahu, and he issued a sterling endorsement of Bibi’s reelection next Tuesday. That’s the Israeli election. So the stage has been set. Even the New York Times is running a long piece today on how America and Israel are drawing \"plans for renewed strikes on Iran after elections.\" Now, to be sure, the plans have ",
+   "published": "2026-10-22T17:36:58-04:00",
+   "link": "https://www.foxbusiness.com/politics/larry-kudlow-end-near-iran",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "tanker"
+    ],
+    "iran": [
+     "iran",
+     "tehran"
+    ],
+    "obj_thepresi_citing-hold-interest-into": [
+     "hold",
+     "interest"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "MAGA POLLSTER: 'ITS OVER' GOP Doomsday Is Here",
+   "dek": "Krystal and Saagar discuss the dire state of polling for the GOP going into the midterms. Rich Baris: https://peoplespundit.locals.com/ Sign up for a PREMIUM Breaking Points subscriptions for full early access to uncut shows and LIVE AMAs with the hosts every week: https://breakingpoints.supercast.com/ Merch Store: https://shop.breakingpoints.com/ To listen to Breaking Points as a podcast, check them out on Apple and Spotify Apple: https://podcasts.apple.com/us/podcast/breaking-points-with-krystal-and-saagar/id1570045623 Spotify: https://open.spotify.com/show/4Kbsy61zJSzPxNZZ3PKbXl Instagram: ",
+   "opening": "",
+   "published": "2026-10-22T17:30:32+00:00",
+   "link": "https://www.youtube.com/watch?v=DdaeDUorPFs",
+   "videoId": "DdaeDUorPFs",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "midterms": [
+     "midterm",
+     "polling"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump rally exposes surprising cracks in MAGA base as Republicans face midterm test",
+   "dek": "President Donald Trump&apos;s Clemson rally revealed GOP fractures over the Iran war, funding and immigration as one student eyes crossing party lines.",
+   "opening": "President Donald Trump's rally in South Carolina Wednesday revealed mixed feelings among his supporters as frustrations over the economy, immigration and the war with Iran collide with the stakes of November's midterm elections. While some rallygoers urged fellow Republicans to look past their frustrations and turn out in November, one Clemson University student who once proudly wore a Trump hat said he was considering voting Democratic. \"I was a big Trump supporter,\" Grant Frady explained. \"But, recently, I didn't support him for the 2024 election. I feel like there's too many special interests involved. I feel like what he said to the public was that he was anti-war. He was wanting to boost the economy. He said that he was just going to put America first, and I just feel like we haven't.\" Trump traveled to South Carolina to rally support for Republican Sen. Darline Graham, who faces an unexpectedly competitive challenge from Democrat Annie Andrews in a state that has long favored Republicans. TRUMP REAFFIRMS ICE ARREST POLICY AFTER CONFUSING GUIDANCE SPARKS ALARM AMONG AGENTS \"And he also, he said he was going to deport all the illegal immigrants . We haven't seen enough to really say that. I feel like he's just overstating. I feel he's causing too many problems for what he's really benefiting. We haven't gotten that many illegal immigrants out, and look how much problems we have with ICE.\" The economic concerns come as Americans continue to grapple with the cost of living,",
+   "published": "2026-10-22T17:10:46-04:00",
+   "link": "https://www.foxnews.com/politics/trump-rally-exposes-surprising-cracks-maga-base-republicans-face-midterm-test",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "obj_afederal_anti-court-pause-policy": [
+     "anti",
+     "policy"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Singham-linked nonprofits defy House ultimatum, blast 'MAGA-led witch hunt'",
+   "dek": "The People&apos;s Forum and BreakThrough News rejected House Ways and Means Committee demands, accusing Jason Smith&apos;s probe of violating First Amendment rights.",
+   "opening": "Two nonprofits linked to Marxist tech tycoon Neville Roy Singham have rejected a congressional ultimatum to turn over financial records, accusing lawmakers of using a foreign-influence investigation to target their political views and violate their First Amendment rights . The People's Forum Inc., a New York City-based activist hub, and BreakThrough News, a far-left nonprofit media outlet, fired back in letters to Tuesday the powerful House Ways and Means Committee , which threatened to depose their leaders — and Singham personally — if the organizations failed to comply with earlier subpoenas for financial records. The People's Forum blasted the latest congressional crackdown as a \"MAGA-led witch hunt.\" BreakThrough News and its supporters accuse the committee of targeting the outlet over its coverage of Israel and immigration enforcement, while lawmakers maintain the probe concerns the organizations' finances and structure. HOUSE PANEL WARNS SINGHAM-LINKED NONPROFITS: COMPLY WITH SUBPOENAS OR FACE CONGRESS The showdown comes as the Republican-led committee, headed by Chairman Jason Smith, R-Mo., investigates whether millions of dollars flowing through Singham's network of tax-exempt nonprofits are being used to advance Chinese Communist Party interests in the United States. \"This approach is tantamount to holding the staff of BreakThrough News hostage,\" attorneys for BreakThrough News wrote in their Oct. 20 response, accusing the committee of threatening seven newsroom empl",
+   "published": "2026-10-22T17:09:18-04:00",
+   "link": "https://www.foxnews.com/politics/singham-linked-nonprofits-defy-house-ultimatum-blast-maga-led-witch-hunt",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ],
+    "obj_thepresi_administration-federal-halt-investigation": [
+     "investigation",
+     "states"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Hegseth unleashes Trump's 'Arsenal of Freedom' with warning to defense giants",
+   "dek": "Pete Hegseth&apos;s video showcases missile launches and production lines as the Trump administration&apos;s &quot;Arsenal of Freedom&quot; campaign targets Pentagon red tape.",
+   "opening": "Secretary of War Pete Hegseth put weapons manufacturers on notice Thursday as the Trump administration pushes to cut Pentagon red tape, expand competition and accelerate American weapons production as part of its \"Arsenal of Freedom\" initiative. In a video shared on X , Hegseth highlighted Washington's drive to overhaul defense procurement, expand private-sector competition and speed up production of advanced weapons systems. \"The Arsenal of Freedom has been UNLEASHED,\" Hegseth posted. AMERICA FACES A CRISIS IN OUR MILITARY ARSENAL THAT TRUMP IS RACING TO FIX The video features missile launches, naval weapons systems firing, ammunition production lines and workers signing munitions for U.S. forces. Hegseth also stressed that performance, not a contractor's name, should determine which companies supply America's military. \"I don’t care what company is on the side of the rocket. Don't care. The only thing we ask ourselves is, is it the best?\" Hegseth said in the video. \"The technology that you build for our missiles, interceptors and hypersonic weapons is what allows the War Department to achieve peace through strength,\" Hegseth continued. \"And that mission comes with a non-negotiable mandate straight from the Resolute Desk and President Trump: build more and build faster.\" MORE THAN HALF OF SOME US WEAPONS STOCKPILES USED IN IRAN WAR, RAISING CONCERNS ABOUT CHINA THREAT Hegseth framed the manufacturing push as central to strengthening American military readiness and deterring ",
+   "published": "2026-10-22T17:08:44-04:00",
+   "link": "https://www.foxnews.com/politics/hegseth-unleashes-trumps-arsenal-freedom-warning-defense-giants",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "A.I. and Its Dangers Are Embedded In the Midterm Elections",
+   "dek": "The midterms are the first elections in which artificial intelligence is integrated into every major social media platform. Efforts to blunt its harms are uneven.",
+   "opening": "",
+   "published": "2026-10-22T17:07:44+00:00",
+   "link": "https://www.nytimes.com/2026/10/22/business/media/ai-disinfo-chatbots-elections.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Professor Pape: Trump's Iran Strike Gamble SHATTERS Presidency",
+   "dek": "Krystal and Saagar are joined by Professor Pape to discuss the massive gamble Trump is taking with a potential renewed Iran war. Robert Pape: https://escalationtrap.substack.com/ Sign up for a PREMIUM Breaking Points subscriptions for full early access to uncut shows and LIVE AMAs with the hosts every week: https://breakingpoints.supercast.com/ Merch Store: https://shop.breakingpoints.com/ To listen to Breaking Points as a podcast, check them out on Apple and Spotify Apple: https://podcasts.apple.com/us/podcast/breaking-points-with-krystal-and-saagar/id1570045623 Spotify: https://open.spotify.",
+   "opening": "",
+   "published": "2026-10-22T16:30:40+00:00",
+   "link": "https://www.youtube.com/watch?v=MeaWhnhKVyU",
+   "videoId": "MeaWhnhKVyU",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "DOJ moves to boot two federal judges from immigration cases over remarks to media: 'Extraordinarily imprudent'",
+   "dek": "Two Minnesota federal judges who criticized Trump&apos;s Operation Metro Surge in a report published by the New York Times now face DOJ recusal motions tied to their immigration cases.",
+   "opening": "Two Minnesota federal judges who took the unusual step of publicly criticizing the Trump administration’s immigration crackdown to the New York Times are now fighting the administration’s efforts to disqualify them from cases involving immigration enforcement. One of those judges, Patrick Schiltz, is overseeing the Justice Department’s effort to strip U. S. citizenship from Salah Osman Ahmed, a Somali-born man who pleaded guilty in 2009 to providing material support to terrorists after joining al- Shabaab. The other, John Tunheim, is presiding over the prosecution of a South African national accused of falsely claiming U. S. citizenship and illegally voting in the 2024 election. The Justice Department filed separate motions asking Schiltz and Tunheim to recuse themselves, arguing that their participation in the New York Times report criticizing President Donald Trump's Operation Metro Surge has raised questions about whether they can fairly preside over the cases. \"Impartiality is imperative to ensuring public trust in our Nation’s judiciary,\" the Justice Department said in a statement posted to X this week. \"Judge Schiltz’s and Judge Tunheim’s on-the-record participation in a recent highly partisan New York Times Article, along with Judge Schiltz’s subsequent public comments, unquestionably calls into doubt whether they can be impartial in these cases.\" OBAMA-APPOINTED JUDGE AT CENTER OF TRUMP'S ANTI-WEAPONIZATION FUND CASE HIT WITH MISCONDUCT CLAIM The Justice Department's ",
+   "published": "2026-10-22T16:15:16-04:00",
+   "link": "https://www.foxnews.com/politics/doj-moves-boot-two-federal-judges-immigration-cases-over-remarks-media-extraordinarily-imprudent",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_administration-federal-halt-investigation": [
+     "judge",
+     "voting"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "TROOPS EVACUATED As Massive New Iran Strikes Planned",
+   "dek": "Krystal and Saagar discuss troops and diplomats being pulled back as Trump plots a massive Iran escalation. Sign Up For 30 Day Free BP Trial: https://breakingpoints.supercast.com/ Sign up for a PREMIUM Breaking Points subscriptions for full early access to uncut shows and LIVE AMAs with the hosts every week: https://breakingpoints.supercast.com/ Merch Store: https://shop.breakingpoints.com/ To listen to Breaking Points as a podcast, check them out on Apple and Spotify Apple: https://podcasts.apple.com/us/podcast/breaking-points-with-krystal-and-saagar/id1570045623 Spotify: https://open.spotify",
+   "opening": "",
+   "published": "2026-10-22T16:00:16+00:00",
+   "link": "https://www.youtube.com/watch?v=WSDULteO1_A",
+   "videoId": "WSDULteO1_A",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Lockheed Martin unveils 10-year framework to produce 850 F-35 fighter jets for the US military",
+   "dek": "Lockheed Martin&apos;s 10-year F-35 framework covers 850 aircraft for the U.S. military, but the deal still needs congressional approval to move forward.",
+   "opening": "Lockheed Martin on Thursday announced a new production and sustainment framework for the F-35 Lightning II, which will see the company produce 850 aircraft for the U.S. military over the next 10 years. The framework also includes associated initial spares, 10 years of modification kits and sustainment and international customer orders at a continued production rate of 156 aircraft per year. The F-35 Lightning II is a multirole fifth-generation fighter with stealth capabilities used by three branches of the U.S. military and a number of American allies around the world. \"This multiyear framework strengthens the way we can plan and invest in the F-35 enterprise,\" said Lockheed Martin CEO Jim Taiclet. TRUMP TURNS NATO SPENDING FIGHT INTO WIN FOR US DEFENSE COMPANIES \"With the greater certainty that comes from the U.S. government's transformative approach to F-35 production and sustainment, we can make the upfront investments needed to expand capacity, improve efficiency and build a more resilient supply chain,\" Taiclet explained. \"That's good for the taxpayer, good for our suppliers and, most importantly, good for the United States and its allies.\" The new framework is pending multiyear authority and appropriations from Congress which would, if granted, allow the company and the F-35 Joint Program Office to finalize contract terms, pricing and schedules under a formal contract award. Lockheed said the agreement is expected to save billions of dollars through the use of long-term",
+   "published": "2026-10-22T15:55:01-04:00",
+   "link": "https://www.foxbusiness.com/politics/lockheed-martin-unveils-10-year-framework-produce-850-f-35-fighter-jets-us-military",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ],
+    "shutdown": [
+     "appropriations"
+    ],
+    "obj_thepresi_administration-federal-halt-investigation": [
+     "orders",
+     "states"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "UK makes major energy move with North Sea project, and new gas supplies could arrive this winter",
+   "dek": "Britain&apos;s new North Sea gas field could come online this winter, producing an estimated 40 million barrels of oil equivalent over up to 11 years, according to a British ambassador.",
+   "opening": "Britain's newly approved Jackdaw gas field in the North Sea gas project could begin producing gas \"as soon as this winter,\" potentially bringing a new source of domestic energy online within months, according to the country's ambassador to the United States. British Ambassador to the U.S. Sir Christian Turner joined FOX Business' Stuart Varney on \" Varney &amp; Co. \" to discuss the project's timeline, its potential economic impact and Britain's approach to energy security. The project is part of Britain's effort to maintain domestic oil and gas supplies alongside other energy sources. Turner described the approval as a practical step toward meeting the country's long-term energy needs rather than a departure from its broader energy approach. TRUMP ADMINISTRATION COMMITS UP TO $42M TO REVIVE STALLED NORTHEAST NATURAL GAS PIPELINE \"I think this is a pragmatic decision about our long-term energy mix. We've always accepted that we're going to need a mix of energy supply for the U.K. that will include oil and gas. And the good thing about this field, which we announced yesterday, is that the gas can come online very quickly as soon as this winter,\" Turner said. Turner said the field is expected to operate for roughly 11 years and produce approximately 40 million barrels of oil equivalent over its lifetime. He estimated that output would represent about 6% of Britain's domestic gas production at its peak, while the project could generate roughly $3.8 billion in economic benefits an",
+   "published": "2026-10-22T15:29:45-04:00",
+   "link": "https://www.foxbusiness.com/media/uk-makes-major-energy-move-new-gas-supplies-could-arrive-winter",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_approves-concerns-despite-environmental": [
+     "natural",
+     "project"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Discount chain opening new stores across 7 states in October",
+   "dek": "The Pennsylvania-headquartered discount chain is expanding across seven states with a series of new store openings throughout the month.",
+   "opening": "Discount chain Ollie's Bargain Outlet is expanding its footprint with a wave of new store openings across seven states this month. The Pennsylvania-headquartered retailer is opening locations in Minnesota, New York, Ohio, Illinois, North Carolina, New Jersey and Maine throughout October, according to the company's website. The latest openings include a store in Baxter, Minnesota, Oct. 28, followed by locations in Waterville, Maine, and Dover, New Jersey, Oct. 29. Ollie's opened stores in Geneva, New York, and Hutchinson, Minnesota, Oct. 7. AMAZON TO HIRE MORE THAN 300,000 US WORKERS FOR HOLIDAY SHOPPING RUSH The chain followed with four openings on Oct. 21 in Newark, New York; Cleveland, Ohio; Mattoon, Illinois; and Wilkesboro, North Carolina . Another North Carolina location opened in Asheboro Oct. 22. The expansion comes as consumers continue to contend with higher prices and look for ways to stretch their household budgets. Ollie's specializes in selling \"real brands at real bargain prices,\" with products ranging from household goods and electronics to food and toys, according to its website. SAM’S CLUB EXPANDS THANKSGIVING MEAL, KEEPING COST UNDER $10 A PERSON AS INFLATION WEIGHS ON CONSUMERS The new locations include: MARSHALLS EXPANDS FOOTPRINT WITH NEW STORES OPENING IN 6 STATES The retailer also opened new locations across several states in September, including Minnesota, Indiana, Florida, West Virginia, Louisiana, Wisconsin and Ohio, among others.",
+   "published": "2026-10-22T15:28:59-04:00",
+   "link": "https://www.foxbusiness.com/retail/discount-chain-opening-new-stores-across-7-states-october",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_canadian-challenging-files-food": [
+     "jersey",
+     "food"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Putin Nears a Prize: Restoring Ties With the U.S. While Giving Up Nothing",
+   "dek": "Russia has sought to separate the war in Ukraine from potential business deals and diplomacy with the United States. Its efforts now appear to be working.",
+   "opening": "",
+   "published": "2026-10-22T15:22:53+00:00",
+   "link": "https://www.nytimes.com/2026/10/22/world/europe/putin-trump-ukraine-war.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_before-even-kick-related": [
+     "russia",
+     "ukraine",
+     "ties"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Supreme Court justice turns on her own court with dire warning about American democracy",
+   "dek": "Elena Kagan argued the Supreme Court&apos;s gerrymandering and campaign finance rulings are destabilizing democracy and driving political polarization.",
+   "opening": "Supreme Court Justice Elena Kagan made the case that recent rulings from the conservative-majority high court are destabilizing democracy, suggesting that it isn't working \"as well as it should.\" The remarks from the liberal justice came during a closed discussion before faculty and students at Catholic University's law school in Washington, D.C. The discussion between Kagan and law professor Joel Alicea Alicia, who previously clerked for Justice Samuel Alito, comes just weeks after the Supreme Court began its new term, during which it's expected to rule in major cases that will determine the scope of gun rights and state election integrity laws, among other issues. The conversation also comes less than two weeks before the midterm elections as President Donald Trump and Republican state lawmakers have pushed for new congressional maps drawn to favor Republicans and bolster their chances of maintaining control of the House. Democratic-led states have responded by redrawing their own maps, fueling ongoing lawsuits and court battles. SUPREME COURT KICKS OFF NEW TERM WITH FRESH QUESTIONS OVER ITS LEGITIMACY AND ITS FUTURE Kagan pointed to the Supreme Court’s 2019 ruling in Rucho v. Common Cause , in which she dissented, as the beginning of a \"race to the bottom.\" She argued that the decision, which barred federal courts from invalidating maps solely because they unfairly favor one political party, deprived \"masses of citizens\" of their \"rights to voting equality.\" Kagan suggeste",
+   "published": "2026-10-22T15:19:06-04:00",
+   "link": "https://www.foxnews.com/politics/supreme-court-justice-turns-her-own-court-dire-warning-about-american-democracy",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thepresi_administration-federal-halt-investigation": [
+     "voting",
+     "states"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Ilhan Omar says she lives 'paycheck to paycheck' as DOJ probes financial disclosures",
+   "dek": "Ilhan Omar claims she lives &quot;paycheck to paycheck,&quot; despite earning $174,000 and facing scrutiny over financial disclosures tied to Tim Mynett.",
+   "opening": "Rep. Ilhan Omar, D-Minn., described herself as a member of the \"working class\" who lives \"paycheck to paycheck\" during an interview with MS NOW host Chris Hayes on Wednesday night. \"I mean, it’s, you know, working — working class, I guess, like paycheck to paycheck still,\" Omar said. \"We’ve got four kids, and we live, I think, like a basic life. I have a Toyota Camry that’s from 2016.\" Omar's characterization of her finances comes despite her $174,000 annual congressional salary and scrutiny over financial disclosures that once listed assets tied to her husband as being worth as much as $30 million. The comments came during Omar’s first public appearance since Homeland Security Investigations (HSI) agents searched her Washington, D.C., residence on Oct. 12 as part of an investigation into possible immigration-related offenses. ILHAN OMAR BELIEVES TRUMP RAID ON HOME WAS MEANT TO 'INTIMIDATE AND SCARE PEOPLE' FROM VOTING Since the raid, the representative has used the investigation twice as a reason to publicly fundraise. \"That goes a long way as we fight Trump and his administration for trying to intimidate me and so many people right before the midterm elections,\" Omar said in a video she uploaded to social media on Wednesday. \"We know that they’re running scared. We’re not going to be intimidated. We’re not going to be silenced.\" The Democratic National Committee has also sent out its own fundraising email based on Omar’s campaign request for money. \"It’s Ilhan Omar — Trump’",
+   "published": "2026-10-22T15:18:04-04:00",
+   "link": "https://www.foxnews.com/politics/ilhan-omar-says-she-lives-paycheck-paycheck-doj-probes-financial-disclosures",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thepresi_administration-federal-halt-investigation": [
+     "voting",
+     "investigation"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Federal judge restricts DHS field operations looking for noncitizen voters",
+   "dek": "The judge found the department's field operations to identify noncitizens who voted likely violated the Voting Rights Act, which bars voter intimidation.",
+   "opening": "The judge found the department's field operations to identify noncitizens who voted likely violated the Voting Rights Act, which bars voter intimidation. (Image credit: Frederic J. Brown)",
+   "published": "2026-10-22T15:16:20-04:00",
+   "link": "https://www.npr.org/2026/10/22/nx-s1-6012682/judge-dhs-noncitizen-voting-operations",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_administration-federal-halt-investigation": [
+     "judge",
+     "noncitizen",
+     "voting"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Ilhan Omar is not the Minnesota congresswoman’s 'real name': sources",
+   "dek": "Federal investigators say the congresswoman&apos;s real name is Ilhan Nur Said Elmi, as U.S. Attorney Jeanine Pirro moves to keep the warrant sealed.",
+   "opening": "Ilhan Omar is not the \"real name\" of the Minnesota congresswoman, Fox News Digital has learned. Her real name is Ilhan Nur Said Elmi, according to two people familiar with the ongoing investigation into the Somali-born congresswoman, including a law enforcement source. And if proven in court that Omar has lived her \"entire life under an alias,\" a former Minnesota federal immigration judge tells Fox News Digital that every single form she ever filled out could be \"called into question.\" On Wednesday, U.S. District Attorney for the District of Columbia Jeanine Pirro filed a motion seeking to prevent the federal search warrant for the congresswoman’s home from being unsealed, which was requested by several media outlets. The motion says the federal government is not yet finished executing the search warrant, and that it shouldn’t be unsealed yet. \"Before the Court are three Applications to unseal ex parte materials and proceedings related to a federal search warrant for the personal residence in the District of Columbia of Congresswoman Ilhan Nur Said Elmi, a/k/a Ilhan Abdullahi Omar…\" the motion begins. \"That's not her real name,\" one source said when asked why the motion used the \"a/k/a Ilhan Adbullahi Omar\" language. After publication, a spokesperson from Omar's office provided a statement to Fox News Digital disputing the report. \"This is completely false. Ilhan Omar is her real name,\" the spokesperson said, followed by an attack on Fox News. In a second statement, Omar's sp",
+   "published": "2026-10-22T14:54:03-04:00",
+   "link": "https://www.foxnews.com/politics/ilhan-omar-not-minnesota-congresswoman-real-name-sources",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_administration-federal-halt-investigation": [
+     "judge",
+     "investigation"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Tough Love: Should I Homeschool My Kids?",
+   "dek": "A mom&#8217;s blood boils when her kid says his classmates were &#8216;watching bubbles float across the screen and were supposed to count them.&#8217; Is it time to take drastic action? Our advice columnist weighs in.",
+   "opening": "Dear Abigail, My husband and I are having a hard time agreeing on how to educate our three children. I want to start homeschooling, but he&#8217;s not sure. I&#8217;m a stay-at-home mom, and while some days are exhausting, I feel incredibly lucky to have had this time with our children. We&#8217;ve generally started them in very part-time preschool around age 3, followed by part-time pre-K. But our oldest just started kindergarten, and the transition to full-day elementary school has been much harder for me than I expected. With the rush to get everyone out the door in the morning&#8212;then the scramble to fit in dinner, sports, activities, and family time in the two or three hours left in the afternoon&#8212;I find myself mourning the slower days we had before. My kindergartner comes home overstimulated and full of pent-up energy, which often gets released by fighting with his siblings. Over the past two years, I have also become increasingly concerned about what is happening with technology in public schools. We live in one of the best public school districts in our state. But at our neighborhood elementary school, children are using Chromebooks beginning in kindergarten. My son has come home singing commercial jingles from ads that appeared before YouTube videos played by his teacher. For the past seven months, I have been petitioning our school district, meeting with leadership, and building a local parent community, to address concerns about EdTech and AI in the classro",
+   "published": "2026-10-22T14:30:55+00:00",
+   "link": "https://www.thefp.com/p/tough-love-should-i-homeschool-my-kids-tough-love",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "obj_thepresi_before-days-effect-most": [
+     "days",
+     "take"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Ken Griffin secures $3.3B loan for NYC skyscraper after earlier Mamdani feud",
+   "dek": "Vornado, Ken Griffin and Rudin finalized a deal to develop a 1.9 million-square-foot Manhattan office tower, with Citadel leasing more than 1 million square feet.",
+   "opening": "Billionaire hedge fund founder Ken Griffin , Vornado Realty Trust and Rudin have finalized a joint venture to develop a 66-story Manhattan office skyscraper, securing a $3.3 billion construction loan for the project. Vornado announced Wednesday that it had finalized the joint venture with Griffin and New York real estate firm Rudin to develop the 1.9 million-square-foot tower at 350 Park Avenue. Under the joint venture, an affiliate of Griffin, the founder and CEO of Citadel, will own 60% of the project, while Vornado will hold a 36% stake and Rudin will retain the remaining 4%. Citadel Enterprise Americas LLC has signed a lease for 1.05 million square feet of office space in the skyscraper, representing more than half of the building's planned office space, according to Vornado. META AGREES TO LET MARK ZUCKERBERG REMAIN IN CALIFORNIA AMID PROPOSED BILLIONAIRE WEALTH TAX The project moves forward despite a feud earlier this year between Griffin and New York City Mayor Zohran Mamdani. The controversy started in April, when Mamdani recorded a video in front of Griffin's penthouse, calling him out as a wealthy hedge fund owner who would be subject to the mayor's pied-à-terre tax , which is levied on high-value residential properties whose owners don't live in the city full-time. The tax took effect in July. Griffin responded, calling the personal attack \"creepy and weird,\" saying that it put him in harm's way and demonstrated a \"profound lack of judgment\" on Mamdani's part. Cita",
+   "published": "2026-10-22T14:22:34-04:00",
+   "link": "https://www.foxbusiness.com/real-estate/ken-griffin-secures-3-3b-loan-nyc-skyscraper-after-earlier-mamdani-feud",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_approves-concerns-despite-environmental": [
+     "project",
+     "despite"
+    ],
+    "obj_x_billionaire-deal-looms-meta": [
+     "zuckerberg",
+     "meta",
+     "billionaire"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "A Congressional District Where the Iran War Is Personal",
+   "dek": "",
+   "opening": "",
+   "published": "2026-10-22T14:18:03-04:00",
+   "link": "https://www.theatlantic.com/politics/2026/10/iran-war-virginia-midterms/688948/?utm_source=feed",
+   "videoId": null,
+   "publication": "atlantic",
+   "source": "atlantic",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Zuckerberg’s Big Deal to Stay in California",
+   "dek": "The agreement that Mark Zuckerberg, Meta’s chief executive, cut to stay in California underscores businesses’ fears about a major tax proposal.",
+   "opening": "",
+   "published": "2026-10-22T12:07:43+00:00",
+   "link": "https://www.nytimes.com/2026/10/22/business/dealbook/zuckerbergs-big-deal.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_x_billionaire-deal-looms-meta": [
+     "zuckerberg",
+     "meta",
+     "stay"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "NYC comptroller faces questions over Israel Bonds reversal as CEO challenges financial rationale",
+   "dek": "New York City&apos;s comptroller is facing scrutiny over his decision not to restore a decades-old Israel Bonds investment practice after repeatedly pledging during his campaign to bring it back.",
+   "opening": "New York City has taken another step away from its longstanding financial relationship with Israel, as Comptroller Mark Levine declined to restore a nearly 50-year investment tradition involving Israel Bonds. City Comptroller Mark Levine is facing questions over his decision not to restore purchases of Israel Bonds, reportedly reversing a campaign pledge as the organization's CEO questioned his financial justification, saying his office only learned of the decision through news reports. The controversy has critics asking if the Mamdani administration's anti-Israel sentiment influenced Levine's reversal and whether political considerations are affecting a financial decision that could mean New York City is passing up a reliable investment opportunity. BOND YIELDS ARE HOVERING NEAR MULTI-YEAR HIGHS: WHAT IT MEANS FOR YOUR WALLET Israel Bonds President and CEO Dani Naveh responded to Levine's financial rationale in an interview with FOX Business, pointing to competitive interest rates, Israel's record of repayment and continued investments by other American governments, including New York State. \"We learned of the comptroller's decision when it was reported,\" Naveh said. \"The city's former comptroller had already broken with a 50-year tradition of investing in Israel Bonds, a tradition his predecessors kept even during times when Israel's economy was vulnerable. We had hoped his successor would reverse that decision because, until recently, he had pledged many times\" to restore ",
+   "published": "2026-10-22T10:18:34-04:00",
+   "link": "https://www.foxbusiness.com/fox-news-world/nyc-comptroller-faces-questions-over-israel-bonds-reversal-ceo-challenges-financial-rationale",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_citing-hold-interest-into": [
+     "recently",
+     "interest"
+    ]
+   },
+   "baseline": false
+  }
+ ],
+ "log": []
+}
