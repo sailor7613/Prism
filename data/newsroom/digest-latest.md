@@ -1,19 +1,24 @@
-# Newsroom digest — 2026-10-22
+# Newsroom digest — 2026-10-23
 
-Register: 124 objects · this scan: 2 new, 2 seen again, 0 returned.
+Register: 128 objects · this scan: 4 new, 0 seen again, 0 returned.
 
-## Queued for drafting (0)
-- (nothing cleared the bar)
+## Queued for drafting (2)
+- **Trump and crypto firm sued for profiting from foreign government** — suit · sued · holder: the President · formed 2026-10-23 · 4 outlets (peak 4) · `obj_thepresi_crypto-firm-foreign-government`
+- **Federal judge orders Trump administration to halt noncitizen voting investigation in 9 states** — ruling · ruled · holder: the President · formed 2026-10-23 · 4 outlets (peak 4) · `obj_thepresi_administration-federal-halt-investigation`
 
 ## Permanence breaks (went silent while unresolved)
-- **New Mexico judge tosses Timothy Busfield indictment , citing prosecutorial misconduct** — ruling · ruled · holder: a federal court · formed 2026-10-17 · 15 outlets (peak 24) · `obj_afederal_busfield-citing-indictment-judge` · silent 5d after 3 scans
+- **Zelenskyy urges support for new US sanctions on Russia** — tariff/sanction · imposed · holder: the President · formed 2026-10-17 · 5 outlets (peak 42) · `obj_x_russia-sanctions-support-urges` · silent 5d after 3 scans
+- **Trump waives most Russia sanctions and tariffs days before they were to take effect** — tariff/sanction · imposed · holder: the President · formed 2026-10-17 · 12 outlets (peak 12) · `obj_thepresi_before-days-effect-most` · silent 5d after 2 scans
+- **Robin Rocky Myers , Black man once sentenced to death for Ludie Mae Tucker murder , learns lawyer John Edmond Mays defended KKK** — indictment · charged · holder: ? · formed 2026-10-18 · 5 outlets (peak 5) · `obj_x_black-death-defended-edmond` · silent 5d after 2 scans
 
 ## Returned after a break
 - none today
 
 ## New objects (all)
-- **Calley Means , senior adviser to RFK Jr . at HHS , resigns from Trump administration** — appointment · personnel · holder: HHS · formed 2026-10-22 · 4 outlets (peak 4) · `obj_hhs_administration-adviser-calley-hhs`
-- **Zuckerberg strikes deal with Meta to stay in CA as billionaire tax vote looms** — agreement · agreed · holder: ? · formed 2026-10-22 · 3 outlets (peak 3) · `obj_x_billionaire-deal-looms-meta`
+- **Trump and crypto firm sued for profiting from foreign government** — suit · sued · holder: the President · formed 2026-10-23 · 4 outlets (peak 4) · `obj_thepresi_crypto-firm-foreign-government`
+- **Federal judge orders Trump administration to halt noncitizen voting investigation in 9 states** — ruling · ruled · holder: the President · formed 2026-10-23 · 4 outlets (peak 4) · `obj_thepresi_administration-federal-halt-investigation`
+- **NYC votes to ban Central Park horse - drawn carriages by 2028** — vote · voted · holder: ? · formed 2026-10-23 · 16 outlets (peak 16) · `obj_x_2028-ban-carriages-central`
+- **NYC Council Votes To Ban Central Park Carriage Horses** — vote · voted · holder: ? · formed 2026-10-23 · 12 outlets (peak 12) · `obj_x_ban-carriage-central-council`
 
 ## Watching (42)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
