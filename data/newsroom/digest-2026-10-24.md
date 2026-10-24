@@ -1,6 +1,6 @@
 # Newsroom digest — 2026-10-24
 
-Register: 134 objects · this scan: 1 new, 0 seen again, 0 returned.
+Register: 135 objects · this scan: 1 new, 0 seen again, 0 returned.
 
 ## Queued for drafting (0)
 - (nothing cleared the bar)
@@ -12,9 +12,9 @@ Register: 134 objects · this scan: 1 new, 0 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **Trump Administration Rolls Back Some Canada Tariffs** — rule · ruled (agency) · holder: the President · formed 2026-10-24 · 37 outlets (peak 37) · `obj_thepresi_administration-back-canada-rolls`
+- **Sexual harassment rules for Congress are under review** — ruling · ruled · holder: Congress · formed 2026-10-24 · 15 outlets (peak 15) · `obj_congress_congress-harassment-review-rules`
 
-## Watching (44)
+## Watching (45)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
 - **Former state senator sentenced to 16 months in child solicitation case** — indictment · charged · holder: the Senate · formed 2026-09-23 · 4 outlets (peak 4) · `obj_thesenat_case-child-former-months`
 - **CNN , MS NOW and Politico back at the White House after judge ordered Trump to lift ban** — ruling · ruled · holder: the House · formed 2026-09-24 · 18 outlets (peak 18) · `obj_thehouse_back-ban-cnn-house`

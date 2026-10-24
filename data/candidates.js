@@ -1,11 +1,11 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-10-24T11:18:20.191Z · 15 legislative + 13 news (GDELT, 3d)
+// 2026-10-24T16:05:47.062Z · 15 legislative + 12 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1792840648995,
+    "ts": 1792857909873,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
@@ -262,11 +262,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1792840648995,
+    "ts": 1792857909873,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.754,
+      "salience": 0.753,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -519,11 +519,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1792840648994,
+    "ts": 1792857909872,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.719,
+      "salience": 0.718,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -1937,11 +1937,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1792840648995,
+    "ts": 1792857909873,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.718,
+      "salience": 0.717,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -2194,11 +2194,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1792840648994,
+    "ts": 1792857909873,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.71,
+      "salience": 0.709,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -2451,11 +2451,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1792840648994,
+    "ts": 1792857909873,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.648,
+      "salience": 0.647,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -3364,11 +3364,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1792840648995,
+    "ts": 1792857909873,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.607,
+      "salience": 0.606,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3892,11 +3892,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1792840648994,
+    "ts": 1792857909873,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.584,
+      "salience": 0.583,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4793,11 +4793,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1792840648994,
+    "ts": 1792857909873,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.391,
+      "salience": 0.39,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5692,11 +5692,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1792840648994,
+    "ts": 1792857909873,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.378,
+      "salience": 0.377,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6971,11 +6971,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1792840648995,
+    "ts": 1792857909873,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.298,
+      "salience": 0.297,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7891,11 +7891,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1792840648995,
+    "ts": 1792857909873,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.297,
+      "salience": 0.296,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -8801,11 +8801,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1792840648994,
+    "ts": 1792857909873,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.262,
+      "salience": 0.261,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9719,11 +9719,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1792840648994,
+    "ts": 1792857909873,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.219,
+      "salience": 0.218,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10599,11 +10599,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1792840648994,
+    "ts": 1792857909873,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.214,
+      "salience": 0.213,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11473,14 +11473,120 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_adds-canadian-imports",
+    "cid": "cand_news_been-big-decade",
     "source": "news",
-    "ts": 1792840700187,
+    "ts": 1792857947059,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.912,
+      "salience": 0.993,
+      "articles": [
+        {
+          "title": "This decade has been missing its big - impact midterm",
+          "url": "https://www.kpbs.org/news/politics/2026/10/24/this-decade-has-been-missing-its-big-impact-midterm",
+          "domain": "kpbs.org",
+          "seendate": "2026-10-24T15:00:00Z",
+          "image": "https://npr-brightspot.s3.amazonaws.com/b5/1a/2d05c4ac4f62901f6a888b8b18e2/gettyimages-1076708612.jpg"
+        },
+        {
+          "title": "This decade has been missing its big - impact midterm",
+          "url": "https://radio.wpsu.org/2026-10-24/this-decade-has-been-missing-its-big-impact-midterm",
+          "domain": "radio.wpsu.org",
+          "seendate": "2026-10-24T14:45:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/b5/1a/2d05c4ac4f62901f6a888b8b18e2/gettyimages-1076708612.jpg"
+        },
+        {
+          "title": "This decade has been missing its big - impact midterm",
+          "url": "https://www.wncw.org/2026-10-24/this-decade-has-been-missing-its-big-impact-midterm",
+          "domain": "wncw.org",
+          "seendate": "2026-10-24T14:45:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/b5/1a/2d05c4ac4f62901f6a888b8b18e2/gettyimages-1076708612.jpg"
+        },
+        {
+          "title": "This decade has been missing its big - impact midterm",
+          "url": "https://www.aspenpublicradio.org/2026-10-24/this-decade-has-been-missing-its-big-impact-midterm",
+          "domain": "aspenpublicradio.org",
+          "seendate": "2026-10-24T14:15:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/b5/1a/2d05c4ac4f62901f6a888b8b18e2/gettyimages-1076708612.jpg"
+        },
+        {
+          "title": "This decade has been missing its big - impact midterm",
+          "url": "https://www.wfae.org/united-states-world/2026-10-24/this-decade-has-been-missing-its-big-impact-midterm",
+          "domain": "wfae.org",
+          "seendate": "2026-10-24T14:15:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/b5/1a/2d05c4ac4f62901f6a888b8b18e2/gettyimages-1076708612.jpg"
+        },
+        {
+          "title": "This decade has been missing its big - impact midterm",
+          "url": "https://www.wmuk.org/npr-news/2026-10-24/this-decade-has-been-missing-its-big-impact-midterm",
+          "domain": "wmuk.org",
+          "seendate": "2026-10-24T14:00:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/b5/1a/2d05c4ac4f62901f6a888b8b18e2/gettyimages-1076708612.jpg"
+        },
+        {
+          "title": "This decade has been missing its big - impact midterm",
+          "url": "https://www.kbia.org/2026-10-24/this-decade-has-been-missing-its-big-impact-midterm",
+          "domain": "kbia.org",
+          "seendate": "2026-10-24T14:00:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/b5/1a/2d05c4ac4f62901f6a888b8b18e2/gettyimages-1076708612.jpg"
+        },
+        {
+          "title": "This decade has been missing its big - impact midterm",
+          "url": "https://www.wglt.org/2026-10-24/this-decade-has-been-missing-its-big-impact-midterm",
+          "domain": "wglt.org",
+          "seendate": "2026-10-24T13:45:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/b5/1a/2d05c4ac4f62901f6a888b8b18e2/gettyimages-1076708612.jpg"
+        },
+        {
+          "title": "This decade has been missing its big - impact midterm",
+          "url": "https://www.wvxu.org/news-from-npr/2026-10-24/this-decade-has-been-missing-its-big-impact-midterm",
+          "domain": "wvxu.org",
+          "seendate": "2026-10-24T13:45:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/b5/1a/2d05c4ac4f62901f6a888b8b18e2/gettyimages-1076708612.jpg"
+        },
+        {
+          "title": "This decade has been missing its big - impact midterm",
+          "url": "https://www.kvpr.org/npr-news/2026-10-24/this-decade-has-been-missing-its-big-impact-midterm",
+          "domain": "kvpr.org",
+          "seendate": "2026-10-24T13:45:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/b5/1a/2d05c4ac4f62901f6a888b8b18e2/gettyimages-1076708612.jpg"
+        },
+        {
+          "title": "This decade has been missing its big - impact midterm",
+          "url": "https://www.interlochenpublicradio.org/2026-10-24/this-decade-has-been-missing-its-big-impact-midterm",
+          "domain": "interlochenpublicradio.org",
+          "seendate": "2026-10-24T13:45:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/b5/1a/2d05c4ac4f62901f6a888b8b18e2/gettyimages-1076708612.jpg"
+        },
+        {
+          "title": "This decade has been missing its big - impact midterm",
+          "url": "https://www.upr.org/npr-news/2026-10-24/this-decade-has-been-missing-its-big-impact-midterm",
+          "domain": "upr.org",
+          "seendate": "2026-10-24T13:45:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/b5/1a/2d05c4ac4f62901f6a888b8b18e2/gettyimages-1076708612.jpg"
+        }
+      ]
+    },
+    "title": "This decade has been missing its big - impact midterm",
+    "summary": "2026-10-24 kpbs.org: This decade has been missing its big - impact midterm\n2026-10-24 radio.wpsu.org: This decade has been missing its big - impact midterm\n2026-10-24 wncw.org: This decade has been missing its big - impact midterm\n2026-10-24 aspenpublicradio.org: This decade has been missing its big - impact midterm\n2026-10-24 wfae.org: This decade has been missing its big - impact midterm\n2026-10-24 wmuk.org: This decade has been missing its big - impact midterm",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_adds-canadian-imports",
+    "source": "news",
+    "ts": 1792857947060,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.882,
       "articles": [
         {
           "title": "Trump lifts tariffs on some Canadian imports , adds others in sweeping revision",
@@ -11560,12 +11666,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_alaska-department-justice",
     "source": "news",
-    "ts": 1792840700186,
+    "ts": 1792857947058,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.91,
+      "salience": 0.88,
       "articles": [
         {
           "title": "Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
@@ -11645,12 +11751,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ban-court-hampshire",
     "source": "news",
-    "ts": 1792840700186,
+    "ts": 1792857947059,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.82,
+      "salience": 0.79,
       "articles": [
         {
           "title": "Supreme Court lets New Hampshire ban student IDs for voting",
@@ -11735,78 +11841,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_been-big-decade",
-    "source": "news",
-    "ts": 1792840700187,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.775,
-      "articles": [
-        {
-          "title": "This decade has been missing its big - impact midterm",
-          "url": "https://www.wuft.org/2026-10-24/this-decade-has-been-missing-its-big-impact-midterm",
-          "domain": "wuft.org",
-          "seendate": "2026-10-24T10:30:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/b5/1a/2d05c4ac4f62901f6a888b8b18e2/gettyimages-1076708612.jpg"
-        },
-        {
-          "title": "This decade has been missing its big - impact midterm",
-          "url": "https://www.kmxt.org/2026-10-24/this-decade-has-been-missing-its-big-impact-midterm",
-          "domain": "kmxt.org",
-          "seendate": "2026-10-24T10:15:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/b5/1a/2d05c4ac4f62901f6a888b8b18e2/gettyimages-1076708612.jpg"
-        },
-        {
-          "title": "This decade has been missing its big - impact midterm",
-          "url": "https://kansaspublicradio.org/npr-news/2026-10-24/this-decade-has-been-missing-its-big-impact-midterm",
-          "domain": "kansaspublicradio.org",
-          "seendate": "2026-10-24T10:15:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/b5/1a/2d05c4ac4f62901f6a888b8b18e2/gettyimages-1076708612.jpg"
-        },
-        {
-          "title": "This decade has been missing its big - impact midterm",
-          "url": "https://www.ypradio.org/npr-news/2026-10-24/this-decade-has-been-missing-its-big-impact-midterm",
-          "domain": "ypradio.org",
-          "seendate": "2026-10-24T10:15:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/b5/1a/2d05c4ac4f62901f6a888b8b18e2/gettyimages-1076708612.jpg"
-        },
-        {
-          "title": "This decade has been missing its big - impact midterm",
-          "url": "https://www.kunm.org/npr-news/2026-10-24/this-decade-has-been-missing-its-big-impact-midterm",
-          "domain": "kunm.org",
-          "seendate": "2026-10-24T10:00:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/b5/1a/2d05c4ac4f62901f6a888b8b18e2/gettyimages-1076708612.jpg"
-        },
-        {
-          "title": "This decade has been missing its big - impact midterm",
-          "url": "https://www.ktep.org/politics/2026-10-24/this-decade-has-been-missing-its-big-impact-midterm",
-          "domain": "ktep.org",
-          "seendate": "2026-10-24T09:45:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/b5/1a/2d05c4ac4f62901f6a888b8b18e2/gettyimages-1076708612.jpg"
-        }
-      ]
-    },
-    "title": "This decade has been missing its big - impact midterm",
-    "summary": "2026-10-24 wuft.org: This decade has been missing its big - impact midterm\n2026-10-24 kmxt.org: This decade has been missing its big - impact midterm\n2026-10-24 kansaspublicradio.org: This decade has been missing its big - impact midterm\n2026-10-24 ypradio.org: This decade has been missing its big - impact midterm\n2026-10-24 kunm.org: This decade has been missing its big - impact midterm\n2026-10-24 ktep.org: This decade has been missing its big - impact midterm",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_could-election-final",
     "source": "news",
-    "ts": 1792840700185,
+    "ts": 1792857947058,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.662,
+      "salience": 0.632,
       "articles": [
         {
           "title": "The midterm election outcomes that could shape Trump final two years",
@@ -11907,12 +11949,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_colleagues-conservative-controversial",
     "source": "news",
-    "ts": 1792840700186,
+    "ts": 1792857947059,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.597,
+      "salience": 0.567,
       "articles": [
         {
           "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
@@ -12004,113 +12046,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_democrat-election-faith",
-    "source": "news",
-    "ts": 1792840700187,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.573,
-      "articles": [
-        {
-          "title": "Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds",
-          "url": "https://www.clickorlando.com/news/politics/2026/10/21/democrats-faith-in-election-results-is-falling-but-still-exceeds-republicans-ap-norc-poll-finds/",
-          "domain": "clickorlando.com",
-          "seendate": "2026-10-21T15:00:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/ECWVBLPKU5GT3HI7ORQFQV6N2Q.jpg?api_key=clickorlando_488cff2bcc157b2e"
-        },
-        {
-          "title": "Democrat faith in election results is falling , AP - NORC poll finds",
-          "url": "https://www.chicagotribune.com/2026/10/21/democrats-republicans-election-results-ap-norc-poll/",
-          "domain": "chicagotribune.com",
-          "seendate": "2026-10-21T14:30:00Z",
-          "image": "https://www.chicagotribune.com/wp-content/uploads/2026/10/No_Kings_Protest_Seattle_61626-1.jpg"
-        },
-        {
-          "title": "Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds",
-          "url": "https://www.wsls.com/news/politics/2026/10/21/democrats-faith-in-election-results-is-falling-but-still-exceeds-republicans-ap-norc-poll-finds/",
-          "domain": "wsls.com",
-          "seendate": "2026-10-21T14:00:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/ECWVBLPKU5GT3HI7ORQFQV6N2Q.jpg?api_key=wsls_8c3a4bc35af7684e"
-        },
-        {
-          "title": "Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds",
-          "url": "https://www.bangordailynews.com/2026/10/21/nation/democrats-faith-in-election-results-is-falling-but-still-exceeds-republicans-ap-norc-poll-finds/",
-          "domain": "bangordailynews.com",
-          "seendate": "2026-10-21T13:30:00Z",
-          "image": "https://i0.wp.com/bdn-data.s3.amazonaws.com/uploads/2026/10/preview-1140.jpg?fit=1024%2C682&ssl=1"
-        },
-        {
-          "title": "Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds",
-          "url": "https://www.aol.com/articles/democrats-faith-election-results-falling-103321000.html",
-          "domain": "aol.com",
-          "seendate": "2026-10-21T13:00:00Z",
-          "image": "https://hermes.media.static.aol.com/media/2026/10/21/bea9e255-2213-363e-ba11-0eb30d8c3670/7e4bf768-9699-4295-bf8f-30d38af43c4e.jpg"
-        },
-        {
-          "title": "Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds",
-          "url": "https://isp.netscape.com:443/news/story/0001/20261021/bf94ad991939cb3ac0fed623c2f2c7b2",
-          "domain": "isp.netscape.com",
-          "seendate": "2026-10-21T13:00:00Z",
-          "image": null
-        },
-        {
-          "title": "Democrat faith in election results falling but exceeds GOP : poll",
-          "url": "https://www.sun-sentinel.com/2026/10/21/democrats-election-results-poll/",
-          "domain": "sun-sentinel.com",
-          "seendate": "2026-10-21T13:00:00Z",
-          "image": "https://www.sun-sentinel.com/wp-content/uploads/2026/10/No_Kings_Protest_Seattle_61626-1.jpg"
-        },
-        {
-          "title": "Democrat faith in election results falling but exceeds GOP : poll",
-          "url": "https://www.dailynews.com/2026/10/21/democrats-election-results-poll/",
-          "domain": "dailynews.com",
-          "seendate": "2026-10-21T12:30:00Z",
-          "image": "https://www.dailynews.com/wp-content/uploads/2026/10/No_Kings_Protest_Seattle_61626-1.jpg"
-        },
-        {
-          "title": "Democrat faith in election results falling but exceeds GOP : poll",
-          "url": "https://www.mercurynews.com/2026/10/21/democrats-election-results-poll/",
-          "domain": "mercurynews.com",
-          "seendate": "2026-10-21T12:00:00Z",
-          "image": "https://www.mercurynews.com/wp-content/uploads/2026/10/No_Kings_Protest_Seattle_61626-1.jpg"
-        },
-        {
-          "title": "Democrat faith in election results falling but exceeds GOP : poll",
-          "url": "https://www.sandiegouniontribune.com/2026/10/21/democrats-election-results-poll/",
-          "domain": "sandiegouniontribune.com",
-          "seendate": "2026-10-21T12:00:00Z",
-          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/10/No_Kings_Protest_Seattle_61626-1.jpg"
-        },
-        {
-          "title": "Democrat faith in election results falling but exceeds GOP : poll",
-          "url": "https://www.pilotonline.com/2026/10/21/democrats-election-results-poll/",
-          "domain": "pilotonline.com",
-          "seendate": "2026-10-21T12:00:00Z",
-          "image": "https://www.pilotonline.com/wp-content/uploads/2026/10/No_Kings_Protest_Seattle_61626-1.jpg"
-        }
-      ]
-    },
-    "title": "Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds",
-    "summary": "2026-10-21 clickorlando.com: Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds\n2026-10-21 chicagotribune.com: Democrat faith in election results is falling , AP - NORC poll finds\n2026-10-21 wsls.com: Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds\n2026-10-21 bangordailynews.com: Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds\n2026-10-21 aol.com: Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds\n2026-10-21 isp.netscape.com: Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_caps-court-fly",
     "source": "news",
-    "ts": 1792840700186,
+    "ts": 1792857947059,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.485,
+      "salience": 0.455,
       "articles": [
         {
           "title": "Republicans fly past former spending caps nixed by US Supreme Court",
@@ -12176,12 +12119,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_big-boost-control",
     "source": "news",
-    "ts": 1792840700186,
+    "ts": 1792857947059,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.42,
+      "salience": 0.39,
       "articles": [
         {
           "title": "The Latest : Many states deciding control of the Senate are seeing a big boost in early voting",
@@ -12226,12 +12169,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_behind-democracy-ford",
     "source": "news",
-    "ts": 1792840700187,
+    "ts": 1792857947060,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.377,
+      "salience": 0.347,
       "articles": [
         {
           "title": "The Ford Foundation , one of the world largest grantmakers , will throw more weight behind democracy",
@@ -12269,12 +12212,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_2026-about-ashley",
     "source": "news",
-    "ts": 1792840700187,
+    "ts": 1792857947060,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.34,
+      "salience": 0.31,
       "articles": [
         {
           "title": "Iowa 2026 Senate race : What to know about Josh Turek vs Ashley Hinson",
@@ -12326,12 +12269,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_2026-about-collins",
     "source": "news",
-    "ts": 1792840700187,
+    "ts": 1792857947060,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.288,
+      "salience": 0.258,
       "articles": [
         {
           "title": "Maine 2026 Senate race : What to know about Susan Collins vs . Troy Jackson",
@@ -12376,12 +12319,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_2026-facts-fast",
     "source": "news",
-    "ts": 1792840700187,
+    "ts": 1792857947059,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.257,
+      "salience": 0.227,
       "articles": [
         {
           "title": "2026 In Review Fast Facts",
