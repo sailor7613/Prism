@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-10-23T21:32:29.658Z · 15 legislative + 11 news (GDELT, 3d)
+// 2026-10-24T04:49:30.775Z · 15 legislative + 11 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1792791087409,
+    "ts": 1792817316545,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.766,
+      "salience": 0.765,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -262,11 +262,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1792791087409,
+    "ts": 1792817316545,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.757,
+      "salience": 0.755,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -519,11 +519,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1792791087408,
+    "ts": 1792817316544,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.721,
+      "salience": 0.72,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -1937,11 +1937,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1792791087409,
+    "ts": 1792817316545,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.721,
+      "salience": 0.719,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -2194,11 +2194,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1792791087409,
+    "ts": 1792817316544,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.713,
+      "salience": 0.711,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -2451,11 +2451,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1792791087409,
+    "ts": 1792817316544,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.651,
+      "salience": 0.649,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -3364,11 +3364,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1792791087409,
+    "ts": 1792817316545,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.609,
+      "salience": 0.608,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3892,11 +3892,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1792791087409,
+    "ts": 1792817316544,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.586,
+      "salience": 0.585,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4793,11 +4793,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1792791087409,
+    "ts": 1792817316544,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.393,
+      "salience": 0.392,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5692,11 +5692,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1792791087409,
+    "ts": 1792817316544,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.381,
+      "salience": 0.38,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6971,11 +6971,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1792791087409,
+    "ts": 1792817316545,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.301,
+      "salience": 0.299,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7891,11 +7891,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1792791087409,
+    "ts": 1792817316545,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.299,
+      "salience": 0.298,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -8801,11 +8801,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1792791087409,
+    "ts": 1792817316545,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.265,
+      "salience": 0.263,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9719,11 +9719,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1792791087409,
+    "ts": 1792817316544,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.221,
+      "salience": 0.22,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10599,11 +10599,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1792791087409,
+    "ts": 1792817316544,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.217,
+      "salience": 0.216,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11475,12 +11475,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ban-court-hampshire",
     "source": "news",
-    "ts": 1792791149655,
+    "ts": 1792817370770,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.906,
+      "salience": 0.86,
       "articles": [
         {
           "title": "Supreme Court lets New Hampshire ban student IDs for voting",
@@ -11565,103 +11565,68 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_canadian-challenging-files",
+    "cid": "cand_news_alaska-department-justice",
     "source": "news",
-    "ts": 1792791149653,
+    "ts": 1792817370769,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.754,
+      "salience": 0.82,
       "articles": [
         {
-          "title": "New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods",
-          "url": "https://www.themorningsun.com/2026/10/20/canada-tariffs-legality/",
-          "domain": "themorningsun.com",
-          "seendate": "2026-10-22T06:15:00Z",
-          "image": "https://www.themorningsun.com/wp-content/uploads/2026/10/Healthcare_Drug_Prices_6_36__8b4e13-1.jpg"
+          "title": "Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
+          "url": "http://www.reflector.com/news/national/trump-says-he-ordered-the-justice-departments-lawsuit-over-alaskas-us-senate-race/article_59cdda97-cce7-5ff8-a1db-ba6ead6c27cc.html",
+          "domain": "reflector.com",
+          "seendate": "2026-10-24T02:30:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/reflector.com/content/tncms/assets/v3/editorial/2/2c/22c6c055-c383-5c31-963f-ba1838d14c6c/6adb7454ebfa0.image.jpg?crop=1763%2C926%2C0%2C124"
         },
         {
-          "title": "New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods - Las Vegas Sun News",
-          "url": "https://lasvegassun.com/news/2026/oct/20/new-jersey-food-importer-files-lawsuit-challenging/",
-          "domain": "lasvegassun.com",
-          "seendate": "2026-10-21T01:30:00Z",
-          "image": null
+          "title": "Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
+          "url": "https://www.wdio.com/ap-top-news/ap-top-news-us-headlines/trump-says-he-ordered-the-justice-departments-lawsuit-over-alaskas-us-senate-race/",
+          "domain": "wdio.com",
+          "seendate": "2026-10-24T00:00:00Z",
+          "image": "https://www.wdio.com/wp-content/uploads/apimg/2026/10/Trump_7_641.jpg"
         },
         {
-          "title": "A New Jersey food importer files a lawsuit challenging Trump 50 % tariffs on Canadian goods - Las Vegas Sun News",
-          "url": "https://lasvegassun.com/news/2026/oct/20/a-new-jersey-food-importer-files-a-lawsuit-challen/",
-          "domain": "lasvegassun.com",
-          "seendate": "2026-10-21T01:30:00Z",
-          "image": null
+          "title": "Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
+          "url": "http://www.postregister.com/news/national/trump-says-he-ordered-the-justice-departments-lawsuit-over-alaskas-us-senate-race/article_b7994b6a-53d8-554e-baf2-ed905cdd7c62.html",
+          "domain": "postregister.com",
+          "seendate": "2026-10-23T23:15:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/postregister.com/content/tncms/assets/v3/editorial/a/69/a69beaf3-9110-50dd-9fce-c1ef9255fa7d/6adae70d44c10.image.jpg?crop=1763%2C926%2C0%2C124"
         },
         {
-          "title": "New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods",
-          "url": "https://www.troyrecord.com/2026/10/20/canada-tariffs-legality/",
-          "domain": "troyrecord.com",
-          "seendate": "2026-10-21T01:15:00Z",
-          "image": "https://www.troyrecord.com/wp-content/uploads/2026/10/Healthcare_Drug_Prices_6_36__8b4e13-1.jpg"
+          "title": "Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
+          "url": "https://www.ksl.com:443/article/news/us/trump-says-he-ordered-the-justice-departments-lawsuit-over-alaskas-us-senate-race/51640222",
+          "domain": "ksl.com",
+          "seendate": "2026-10-23T23:00:00Z",
+          "image": "https://img.ksl.com/slc/3206/320661/32066177.jpg?filter=kslv2/responsive_story_lg"
         },
         {
-          "title": "New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods",
-          "url": "https://www.greeleytribune.com/2026/10/20/canada-tariffs-legality/",
-          "domain": "greeleytribune.com",
-          "seendate": "2026-10-21T01:15:00Z",
-          "image": "https://www.greeleytribune.com/wp-content/uploads/2026/10/Healthcare_Drug_Prices_6_36__8b4e13-1.jpg"
+          "title": "Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
+          "url": "https://www.erienewsnow.com/news/politics/trump-says-he-ordered-the-justice-departments-lawsuit-over-alaskas-us-senate-race/article_ba22c5e4-779e-5119-9d47-f9fb5e071861.html",
+          "domain": "erienewsnow.com",
+          "seendate": "2026-10-23T23:00:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/erienewsnow.com/content/tncms/custom/image/b278f54b-830b-4f05-9350-cb090f41a0d4.png"
         },
         {
-          "title": "A New Jersey food importer files a lawsuit challenging Trump 50 % tariffs on Canadian goods",
-          "url": "https://www.wral.com/news/ap/3c309-new-jersey-food-importer-files-lawsuit-challenging-trumps-50-tariffs-on-canadian-goods/",
-          "domain": "wral.com",
-          "seendate": "2026-10-21T00:30:00Z",
-          "image": "https://images.wral.com/c60afd33-19bc-5b8c-ba36-08c3ea07b069"
+          "title": "Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
+          "url": "https://www.kold.com/2026/10/23/trump-administration-files-lawsuit-block-possible-democratic-win-alaska-senate-race/",
+          "domain": "kold.com",
+          "seendate": "2026-10-23T23:00:00Z",
+          "image": "https://gray-kold-prod.gtv-cdn.com/resizer/v2/2FH3EXCFWND6PM4BUQE6DODDXI.jpg?auth=9fff51b07661ce090d60db13e4e97bc9941f157051108e191260403164e4ab5d&smart=true"
         },
         {
-          "title": "A New Jersey food importer files a lawsuit challenging Trump 50 % tariffs on Canadian goods",
-          "url": "https://www.clickondetroit.com/business/2026/10/20/new-jersey-food-importer-files-lawsuit-challenging-trumps-50-tariffs-on-canadian-goods/",
-          "domain": "clickondetroit.com",
-          "seendate": "2026-10-21T00:30:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/REQ5655GDZBUTHWH4U3J2AA3QA.jpg?api_key=clickondetroit_06f87fefb2123598"
-        },
-        {
-          "title": "New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods",
-          "url": "https://www.winchesterstar.com/associated_press/washington/new-jersey-food-importer-files-lawsuit-challenging-trumps-50-tariffs-on-canadian-goods/article_677471ba-14c5-5d1f-818c-4644c6291bcb.html",
-          "domain": "winchesterstar.com",
-          "seendate": "2026-10-21T00:30:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/winchesterstar.com/content/tncms/assets/v3/editorial/f/96/f96515e7-dd8e-5966-91af-68051f1df2f5/6ac782d34a659.image.jpg?crop=1827%2C959%2C0%2C87"
-        },
-        {
-          "title": "New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods",
-          "url": "https://www.orlandosentinel.com/2026/10/20/canada-tariffs-legality/",
-          "domain": "orlandosentinel.com",
-          "seendate": "2026-10-21T00:15:00Z",
-          "image": "https://www.orlandosentinel.com/wp-content/uploads/2026/10/Healthcare_Drug_Prices_6_36__8b4e13-1.jpg"
-        },
-        {
-          "title": "New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods",
-          "url": "https://www.reporterherald.com/2026/10/20/canada-tariffs-legality/",
-          "domain": "reporterherald.com",
-          "seendate": "2026-10-21T00:00:00Z",
-          "image": "https://www.reporterherald.com/wp-content/uploads/2026/10/Healthcare_Drug_Prices_6_36__8b4e13-1.jpg"
-        },
-        {
-          "title": "A New Jersey food importer files a lawsuit challenging Trump 50 % tariffs on Canadian goods",
-          "url": "https://www.wsls.com/business/2026/10/20/new-jersey-food-importer-files-lawsuit-challenging-trumps-50-tariffs-on-canadian-goods/",
-          "domain": "wsls.com",
-          "seendate": "2026-10-20T23:45:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/REQ5655GDZBUTHWH4U3J2AA3QA.jpg?api_key=wsls_8c3a4bc35af7684e"
-        },
-        {
-          "title": "New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods",
-          "url": "https://www.fortmorgantimes.com/2026/10/20/canada-tariffs-legality/",
-          "domain": "fortmorgantimes.com",
-          "seendate": "2026-10-20T23:30:00Z",
-          "image": "https://www.fortmorgantimes.com/wp-content/uploads/2026/10/Healthcare_Drug_Prices_6_36__8b4e13-1.jpg"
+          "title": "Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
+          "url": "https://www.nvdaily.com/associated_press_national/trump-says-he-ordered-the-justice-departments-lawsuit-over-alaskas-us-senate-race/article_a34cf9da-e8d1-53dd-8fae-4b8bba957dff.html",
+          "domain": "nvdaily.com",
+          "seendate": "2026-10-23T23:00:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/nvdaily.com/content/tncms/assets/v3/editorial/7/76/776ca88f-0c0a-50b7-a64a-dac580f518cf/6adaeb79bc88b.image.jpg?crop=1763%2C926%2C0%2C124"
         }
       ]
     },
-    "title": "A New Jersey food importer files a lawsuit challenging Trump 50 % tariffs on Canadian goods",
-    "summary": "2026-10-22 themorningsun.com: New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods\n2026-10-21 lasvegassun.com: New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods - Las Vegas Sun News\n2026-10-21 lasvegassun.com: A New Jersey food importer files a lawsuit challenging Trump 50 % tariffs on Canadian goods - Las Vegas Sun News\n2026-10-21 troyrecord.com: New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods\n2026-10-21 greeleytribune.com: New Jersey food importer files lawsuit challenging Trump 50 % tariffs on Canadian goods\n2026-10-21 wral.com: A New Jersey food importer files a lawsuit challenging Trump 50 % tariffs on Canadian goods",
+    "title": "Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
+    "summary": "2026-10-24 reflector.com: Trump says he ordered the Justice Department lawsuit over Alaska US Senate race\n2026-10-24 wdio.com: Trump says he ordered the Justice Department lawsuit over Alaska US Senate race\n2026-10-23 postregister.com: Trump says he ordered the Justice Department lawsuit over Alaska US Senate race\n2026-10-23 ksl.com: Trump says he ordered the Justice Department lawsuit over Alaska US Senate race\n2026-10-23 erienewsnow.com: Trump says he ordered the Justice Department lawsuit over Alaska US Senate race\n2026-10-23 kold.com: Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -11673,12 +11638,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_could-election-final",
     "source": "news",
-    "ts": 1792791149653,
+    "ts": 1792817370768,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.748,
+      "salience": 0.703,
       "articles": [
         {
           "title": "The midterm election outcomes that could shape Trump final two years",
@@ -11777,14 +11742,113 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_campaigns-injects-into",
+    "cid": "cand_news_colleagues-conservative-controversial",
     "source": "news",
-    "ts": 1792791149655,
+    "ts": 1792817370769,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.625,
+      "salience": 0.637,
+      "articles": [
+        {
+          "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
+          "url": "https://13wham.com/news/nation-world/supreme-courts-justice-elena-kagan-criticizes-conservative-colleagues-over-controversial-rulings-president-trump-democrats-republicans-gop-rrt",
+          "domain": "13wham.com",
+          "seendate": "2026-10-21T18:45:00Z",
+          "image": "https://13wham.com/resources/media2/16x9/6000/1320/0x522/90/f7e3afc2-5519-4f14-92c0-56d6dffa66b3-GettyImages2286095857.jpg"
+        },
+        {
+          "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
+          "url": "https://cbs12.com/news/nation-world/supreme-courts-justice-elena-kagan-criticizes-conservative-colleagues-over-controversial-rulings-president-trump-democrats-republicans-gop-rrt",
+          "domain": "cbs12.com",
+          "seendate": "2026-10-21T18:45:00Z",
+          "image": "https://cbs12.com/resources/media2/16x9/6000/1320/0x522/90/f7e3afc2-5519-4f14-92c0-56d6dffa66b3-GettyImages2286095857.jpg"
+        },
+        {
+          "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
+          "url": "https://kval.com/news/nation-world/supreme-courts-justice-elena-kagan-criticizes-conservative-colleagues-over-controversial-rulings-president-trump-democrats-republicans-gop-rrt",
+          "domain": "kval.com",
+          "seendate": "2026-10-21T18:45:00Z",
+          "image": "https://kval.com/resources/media2/16x9/6000/1320/0x522/90/f7e3afc2-5519-4f14-92c0-56d6dffa66b3-GettyImages2286095857.jpg"
+        },
+        {
+          "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
+          "url": "https://abc3340.com/news/nation-world/supreme-courts-justice-elena-kagan-criticizes-conservative-colleagues-over-controversial-rulings-president-trump-democrats-republicans-gop-rrt",
+          "domain": "abc3340.com",
+          "seendate": "2026-10-21T18:45:00Z",
+          "image": "https://abc3340.com/resources/media2/16x9/6000/1320/0x522/90/f7e3afc2-5519-4f14-92c0-56d6dffa66b3-GettyImages2286095857.jpg"
+        },
+        {
+          "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
+          "url": "https://fox23.com/news/nation-world/supreme-courts-justice-elena-kagan-criticizes-conservative-colleagues-over-controversial-rulings-president-trump-democrats-republicans-gop-rrt",
+          "domain": "fox23.com",
+          "seendate": "2026-10-21T18:15:00Z",
+          "image": "https://fox23.com/resources/media2/16x9/6000/1320/0x522/90/f7e3afc2-5519-4f14-92c0-56d6dffa66b3-GettyImages2286095857.jpg"
+        },
+        {
+          "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
+          "url": "https://wgme.com/news/nation-world/supreme-courts-justice-elena-kagan-criticizes-conservative-colleagues-over-controversial-rulings-president-trump-democrats-republicans-gop-rrt",
+          "domain": "wgme.com",
+          "seendate": "2026-10-21T18:15:00Z",
+          "image": "https://wgme.com/resources/media2/16x9/6000/1320/0x522/90/f7e3afc2-5519-4f14-92c0-56d6dffa66b3-GettyImages2286095857.jpg"
+        },
+        {
+          "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
+          "url": "https://katu.com/news/nation-world/supreme-courts-justice-elena-kagan-criticizes-conservative-colleagues-over-controversial-rulings-president-trump-democrats-republicans-gop-rrt",
+          "domain": "katu.com",
+          "seendate": "2026-10-21T18:00:00Z",
+          "image": "https://katu.com/resources/media2/16x9/6000/1320/0x522/90/f7e3afc2-5519-4f14-92c0-56d6dffa66b3-GettyImages2286095857.jpg"
+        },
+        {
+          "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
+          "url": "https://bakersfieldnow.com/news/nation-world/supreme-courts-justice-elena-kagan-criticizes-conservative-colleagues-over-controversial-rulings-president-trump-democrats-republicans-gop-rrt",
+          "domain": "bakersfieldnow.com",
+          "seendate": "2026-10-21T18:00:00Z",
+          "image": "https://bakersfieldnow.com/resources/media2/16x9/6000/1320/0x522/90/f7e3afc2-5519-4f14-92c0-56d6dffa66b3-GettyImages2286095857.jpg"
+        },
+        {
+          "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
+          "url": "https://fox23maine.com/news/nation-world/supreme-courts-justice-elena-kagan-criticizes-conservative-colleagues-over-controversial-rulings-president-trump-democrats-republicans-gop-rrt",
+          "domain": "fox23maine.com",
+          "seendate": "2026-10-21T18:00:00Z",
+          "image": "https://fox23maine.com/resources/media2/16x9/6000/1320/0x522/90/f7e3afc2-5519-4f14-92c0-56d6dffa66b3-GettyImages2286095857.jpg"
+        },
+        {
+          "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
+          "url": "https://kcby.com/news/nation-world/supreme-courts-justice-elena-kagan-criticizes-conservative-colleagues-over-controversial-rulings-president-trump-democrats-republicans-gop-rrt",
+          "domain": "kcby.com",
+          "seendate": "2026-10-21T17:30:00Z",
+          "image": "https://kcby.com/resources/media2/16x9/6000/1320/0x522/90/f7e3afc2-5519-4f14-92c0-56d6dffa66b3-GettyImages2286095857.jpg"
+        },
+        {
+          "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
+          "url": "https://komonews.com/news/nation-world/supreme-courts-justice-elena-kagan-criticizes-conservative-colleagues-over-controversial-rulings-president-trump-democrats-republicans-gop-rrt",
+          "domain": "komonews.com",
+          "seendate": "2026-10-21T17:15:00Z",
+          "image": "https://komonews.com/resources/media2/16x9/6000/1320/0x522/90/f7e3afc2-5519-4f14-92c0-56d6dffa66b3-GettyImages2286095857.jpg"
+        }
+      ]
+    },
+    "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
+    "summary": "2026-10-21 13wham.com: Supreme Court Kagan criticizes conservative colleagues over controversial rulings\n2026-10-21 cbs12.com: Supreme Court Kagan criticizes conservative colleagues over controversial rulings\n2026-10-21 kval.com: Supreme Court Kagan criticizes conservative colleagues over controversial rulings\n2026-10-21 abc3340.com: Supreme Court Kagan criticizes conservative colleagues over controversial rulings\n2026-10-21 fox23.com: Supreme Court Kagan criticizes conservative colleagues over controversial rulings\n2026-10-21 wgme.com: Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_campaigns-injects-into",
+    "source": "news",
+    "ts": 1792817370770,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.579,
       "articles": [
         {
           "title": "RNC Injects $50 Million Into Midterm Campaigns",
@@ -11885,12 +11949,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_caps-court-fly",
     "source": "news",
-    "ts": 1792791149655,
+    "ts": 1792817370771,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.571,
+      "salience": 0.525,
       "articles": [
         {
           "title": "Republicans fly past former spending caps nixed by US Supreme Court",
@@ -11954,85 +12018,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_colleagues-conservative-controversial",
-    "source": "news",
-    "ts": 1792791149653,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.518,
-      "articles": [
-        {
-          "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
-          "url": "https://13wham.com/news/nation-world/supreme-courts-justice-elena-kagan-criticizes-conservative-colleagues-over-controversial-rulings-president-trump-democrats-republicans-gop-rrt",
-          "domain": "13wham.com",
-          "seendate": "2026-10-21T18:45:00Z",
-          "image": "https://13wham.com/resources/media2/16x9/6000/1320/0x522/90/f7e3afc2-5519-4f14-92c0-56d6dffa66b3-GettyImages2286095857.jpg"
-        },
-        {
-          "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
-          "url": "https://cbs12.com/news/nation-world/supreme-courts-justice-elena-kagan-criticizes-conservative-colleagues-over-controversial-rulings-president-trump-democrats-republicans-gop-rrt",
-          "domain": "cbs12.com",
-          "seendate": "2026-10-21T18:45:00Z",
-          "image": "https://cbs12.com/resources/media2/16x9/6000/1320/0x522/90/f7e3afc2-5519-4f14-92c0-56d6dffa66b3-GettyImages2286095857.jpg"
-        },
-        {
-          "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
-          "url": "https://kval.com/news/nation-world/supreme-courts-justice-elena-kagan-criticizes-conservative-colleagues-over-controversial-rulings-president-trump-democrats-republicans-gop-rrt",
-          "domain": "kval.com",
-          "seendate": "2026-10-21T18:45:00Z",
-          "image": "https://kval.com/resources/media2/16x9/6000/1320/0x522/90/f7e3afc2-5519-4f14-92c0-56d6dffa66b3-GettyImages2286095857.jpg"
-        },
-        {
-          "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
-          "url": "https://fox23.com/news/nation-world/supreme-courts-justice-elena-kagan-criticizes-conservative-colleagues-over-controversial-rulings-president-trump-democrats-republicans-gop-rrt",
-          "domain": "fox23.com",
-          "seendate": "2026-10-21T18:15:00Z",
-          "image": "https://fox23.com/resources/media2/16x9/6000/1320/0x522/90/f7e3afc2-5519-4f14-92c0-56d6dffa66b3-GettyImages2286095857.jpg"
-        },
-        {
-          "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
-          "url": "https://katu.com/news/nation-world/supreme-courts-justice-elena-kagan-criticizes-conservative-colleagues-over-controversial-rulings-president-trump-democrats-republicans-gop-rrt",
-          "domain": "katu.com",
-          "seendate": "2026-10-21T18:00:00Z",
-          "image": "https://katu.com/resources/media2/16x9/6000/1320/0x522/90/f7e3afc2-5519-4f14-92c0-56d6dffa66b3-GettyImages2286095857.jpg"
-        },
-        {
-          "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
-          "url": "https://bakersfieldnow.com/news/nation-world/supreme-courts-justice-elena-kagan-criticizes-conservative-colleagues-over-controversial-rulings-president-trump-democrats-republicans-gop-rrt",
-          "domain": "bakersfieldnow.com",
-          "seendate": "2026-10-21T18:00:00Z",
-          "image": "https://bakersfieldnow.com/resources/media2/16x9/6000/1320/0x522/90/f7e3afc2-5519-4f14-92c0-56d6dffa66b3-GettyImages2286095857.jpg"
-        },
-        {
-          "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
-          "url": "https://komonews.com/news/nation-world/supreme-courts-justice-elena-kagan-criticizes-conservative-colleagues-over-controversial-rulings-president-trump-democrats-republicans-gop-rrt",
-          "domain": "komonews.com",
-          "seendate": "2026-10-21T17:15:00Z",
-          "image": "https://komonews.com/resources/media2/16x9/6000/1320/0x522/90/f7e3afc2-5519-4f14-92c0-56d6dffa66b3-GettyImages2286095857.jpg"
-        }
-      ]
-    },
-    "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
-    "summary": "2026-10-21 13wham.com: Supreme Court Kagan criticizes conservative colleagues over controversial rulings\n2026-10-21 cbs12.com: Supreme Court Kagan criticizes conservative colleagues over controversial rulings\n2026-10-21 kval.com: Supreme Court Kagan criticizes conservative colleagues over controversial rulings\n2026-10-21 fox23.com: Supreme Court Kagan criticizes conservative colleagues over controversial rulings\n2026-10-21 katu.com: Supreme Court Kagan criticizes conservative colleagues over controversial rulings\n2026-10-21 bakersfieldnow.com: Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_big-boost-control",
     "source": "news",
-    "ts": 1792791149653,
+    "ts": 1792817370769,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.506,
+      "salience": 0.46,
       "articles": [
         {
           "title": "The Latest : Many states deciding control of the Senate are seeing a big boost in early voting",
@@ -12077,12 +12070,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_democrat-election-faith",
     "source": "news",
-    "ts": 1792791149655,
+    "ts": 1792817370771,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.439,
+      "salience": 0.449,
       "articles": [
         {
           "title": "Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds",
@@ -12125,6 +12118,13 @@ window.PRISM_CANDIDATES = [
           "domain": "isp.netscape.com",
           "seendate": "2026-10-21T13:00:00Z",
           "image": null
+        },
+        {
+          "title": "Democrat faith in election results falling but exceeds GOP : poll",
+          "url": "https://www.mercurynews.com/2026/10/21/democrats-election-results-poll/",
+          "domain": "mercurynews.com",
+          "seendate": "2026-10-21T12:00:00Z",
+          "image": "https://www.mercurynews.com/wp-content/uploads/2026/10/No_Kings_Protest_Seattle_61626-1.jpg"
         }
       ]
     },
@@ -12141,12 +12141,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_2026-about-ashley",
     "source": "news",
-    "ts": 1792791149655,
+    "ts": 1792817370771,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.426,
+      "salience": 0.381,
       "articles": [
         {
           "title": "Iowa 2026 Senate race : What to know about Josh Turek vs Ashley Hinson",
@@ -12198,12 +12198,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_2026-facts-fast",
     "source": "news",
-    "ts": 1792791149655,
+    "ts": 1792817370771,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.343,
+      "salience": 0.297,
       "articles": [
         {
           "title": "2026 In Review Fast Facts",
@@ -12241,12 +12241,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_2026-about-collins",
     "source": "news",
-    "ts": 1792791149655,
+    "ts": 1792817370771,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.319,
+      "salience": 0.274,
       "articles": [
         {
           "title": "Maine 2026 Senate race : What to know about Susan Collins vs . Troy Jackson",

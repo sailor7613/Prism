@@ -1,22 +1,25 @@
-# Newsroom digest — 2026-10-23
+# Newsroom digest — 2026-10-24
 
-Register: 129 objects · this scan: 1 new, 0 seen again, 0 returned.
+Register: 133 objects · this scan: 4 new, 1 seen again, 0 returned.
 
-## Queued for drafting (0)
-- (nothing cleared the bar)
+## Queued for drafting (3)
+- **Trump lifts tariffs on some Canadian imports , adds others in sweeping revision** — tariff/sanction · imposed · holder: the President · formed 2026-10-24 · 25 outlets (peak 25) · `obj_thepresi_adds-canadian-imports-lifts`
+- **Trump signs executive order lowering housing costs** — law · signed · holder: the President · formed 2026-10-23 · 14 outlets (peak 14) · `obj_thepresi_costs-executive-housing-lowering`
+- **Trump says he ordered the Justice Department lawsuit over Alaska US Senate race** — suit · sued · holder: the Supreme Court · formed 2026-10-23 · 7 outlets (peak 7) · `obj_thesupre_alaska-department-justice-lawsuit`
 
 ## Permanence breaks (went silent while unresolved)
-- **Zelenskyy urges support for new US sanctions on Russia** — tariff/sanction · imposed · holder: the President · formed 2026-10-17 · 5 outlets (peak 42) · `obj_x_russia-sanctions-support-urges` · silent 5d after 3 scans
-- **Trump waives most Russia sanctions and tariffs days before they were to take effect** — tariff/sanction · imposed · holder: the President · formed 2026-10-17 · 12 outlets (peak 12) · `obj_thepresi_before-days-effect-most` · silent 5d after 2 scans
-- **Robin Rocky Myers , Black man once sentenced to death for Ludie Mae Tucker murder , learns lawyer John Edmond Mays defended KKK** — indictment · charged · holder: ? · formed 2026-10-18 · 5 outlets (peak 5) · `obj_x_black-death-defended-edmond` · silent 5d after 2 scans
+- none today
 
 ## Returned after a break
 - none today
 
 ## New objects (all)
-- **Attorney : Execution team questioned Pike IV lines before failed lethal injection** — vote · voted · holder: ? · formed 2026-10-23 · 9 outlets (peak 9) · `obj_x_attorney-before-execution-failed`
+- **Trump says he ordered the Justice Department lawsuit over Alaska US Senate race** — suit · sued · holder: the Supreme Court · formed 2026-10-23 · 7 outlets (peak 7) · `obj_thesupre_alaska-department-justice-lawsuit`
+- **Trump signs executive order lowering housing costs** — law · signed · holder: the President · formed 2026-10-23 · 14 outlets (peak 14) · `obj_thepresi_costs-executive-housing-lowering`
+- **2 ex - FBI officials charged with lying about involvement in investigation into Hunter Biden laptop** — indictment · charged · holder: the Justice Department · formed 2026-10-23 · 3 outlets (peak 3) · `obj_thejusti_about-biden-charged-fbi`
+- **Trump lifts tariffs on some Canadian imports , adds others in sweeping revision** — tariff/sanction · imposed · holder: the President · formed 2026-10-24 · 25 outlets (peak 25) · `obj_thepresi_adds-canadian-imports-lifts`
 
-## Watching (42)
+## Watching (43)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
 - **Former state senator sentenced to 16 months in child solicitation case** — indictment · charged · holder: the Senate · formed 2026-09-23 · 4 outlets (peak 4) · `obj_thesenat_case-child-former-months`
 - **CNN , MS NOW and Politico back at the White House after judge ordered Trump to lift ban** — ruling · ruled · holder: the House · formed 2026-09-24 · 18 outlets (peak 18) · `obj_thehouse_back-ban-cnn-house`
