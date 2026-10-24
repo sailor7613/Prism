@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-10-24T04:49:30.775Z · 15 legislative + 11 news (GDELT, 3d)
+// 2026-10-24T11:18:20.191Z · 15 legislative + 13 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1792817316545,
+    "ts": 1792840648995,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.765,
+      "salience": 0.763,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -262,11 +262,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1792817316545,
+    "ts": 1792840648995,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.755,
+      "salience": 0.754,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -519,11 +519,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1792817316544,
+    "ts": 1792840648994,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.72,
+      "salience": 0.719,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -1937,11 +1937,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1792817316545,
+    "ts": 1792840648995,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.719,
+      "salience": 0.718,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -2194,11 +2194,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1792817316544,
+    "ts": 1792840648994,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.711,
+      "salience": 0.71,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -2451,11 +2451,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1792817316544,
+    "ts": 1792840648994,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.649,
+      "salience": 0.648,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -3364,11 +3364,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1792817316545,
+    "ts": 1792840648995,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.608,
+      "salience": 0.607,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3892,11 +3892,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1792817316544,
+    "ts": 1792840648994,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.585,
+      "salience": 0.584,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4793,11 +4793,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1792817316544,
+    "ts": 1792840648994,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.392,
+      "salience": 0.391,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5692,11 +5692,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1792817316544,
+    "ts": 1792840648994,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.38,
+      "salience": 0.378,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6971,11 +6971,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1792817316545,
+    "ts": 1792840648995,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.299,
+      "salience": 0.298,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7891,11 +7891,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1792817316545,
+    "ts": 1792840648995,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.298,
+      "salience": 0.297,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -8801,11 +8801,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1792817316545,
+    "ts": 1792840648994,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.263,
+      "salience": 0.262,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9719,11 +9719,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1792817316544,
+    "ts": 1792840648994,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.22,
+      "salience": 0.219,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10599,11 +10599,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1792817316544,
+    "ts": 1792840648994,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.216,
+      "salience": 0.214,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11473,14 +11473,184 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_ban-court-hampshire",
+    "cid": "cand_news_adds-canadian-imports",
     "source": "news",
-    "ts": 1792817370770,
+    "ts": 1792840700187,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.86,
+      "salience": 0.912,
+      "articles": [
+        {
+          "title": "Trump lifts tariffs on some Canadian imports , adds others in sweeping revision",
+          "url": "https://wwmt.com/news/nation-world/trump-lifts-tariffs-on-some-canadian-imports-adds-others-in-sweeping-revision",
+          "domain": "wwmt.com",
+          "seendate": "2026-10-24T06:00:00Z",
+          "image": "https://wwmt.com/resources/media2/16x9/4932/1320/0x1/90/5de0e901-3b15-44e0-9ecf-32eedb1ff918-GettyImages23003691221.jpg"
+        },
+        {
+          "title": "Trump lifts tariffs on some Canadian imports , adds others in sweeping revision",
+          "url": "https://upnorthlive.com/news/nation-world/trump-lifts-tariffs-on-some-canadian-imports-adds-others-in-sweeping-revision",
+          "domain": "upnorthlive.com",
+          "seendate": "2026-10-24T05:45:00Z",
+          "image": "https://upnorthlive.com/resources/media2/16x9/4932/1320/0x1/90/5de0e901-3b15-44e0-9ecf-32eedb1ff918-GettyImages23003691221.jpg"
+        },
+        {
+          "title": "Trump lifts tariffs on some Canadian imports , adds others in sweeping revision",
+          "url": "https://fox17.com/news/nation-world/trump-lifts-tariffs-on-some-canadian-imports-adds-others-in-sweeping-revision",
+          "domain": "fox17.com",
+          "seendate": "2026-10-24T05:45:00Z",
+          "image": "https://fox17.com/resources/media2/16x9/4932/1320/0x1/90/5de0e901-3b15-44e0-9ecf-32eedb1ff918-GettyImages23003691221.jpg"
+        },
+        {
+          "title": "Trump lifts tariffs on some Canadian imports , adds others in sweeping revision",
+          "url": "https://komonews.com/news/nation-world/trump-lifts-tariffs-on-some-canadian-imports-adds-others-in-sweeping-revision",
+          "domain": "komonews.com",
+          "seendate": "2026-10-24T05:30:00Z",
+          "image": "https://komonews.com/resources/media2/16x9/4932/1320/0x1/90/5de0e901-3b15-44e0-9ecf-32eedb1ff918-GettyImages23003691221.jpg"
+        },
+        {
+          "title": "Trump lifts tariffs on some Canadian imports , adds others in sweeping revision",
+          "url": "https://kval.com/news/nation-world/trump-lifts-tariffs-on-some-canadian-imports-adds-others-in-sweeping-revision",
+          "domain": "kval.com",
+          "seendate": "2026-10-24T05:30:00Z",
+          "image": "https://kval.com/resources/media2/16x9/4932/1320/0x1/90/5de0e901-3b15-44e0-9ecf-32eedb1ff918-GettyImages23003691221.jpg"
+        },
+        {
+          "title": "Trump lifts tariffs on some Canadian imports , adds others in sweeping revision",
+          "url": "https://kfdm.com/news/nation-world/trump-lifts-tariffs-on-some-canadian-imports-adds-others-in-sweeping-revision",
+          "domain": "kfdm.com",
+          "seendate": "2026-10-24T05:15:00Z",
+          "image": "https://kfdm.com/resources/media2/16x9/4932/1320/0x1/90/5de0e901-3b15-44e0-9ecf-32eedb1ff918-GettyImages23003691221.jpg"
+        },
+        {
+          "title": "Trump lifts tariffs on some Canadian imports , adds others in sweeping revision",
+          "url": "https://wcti12.com/news/nation-world/trump-lifts-tariffs-on-some-canadian-imports-adds-others-in-sweeping-revision",
+          "domain": "wcti12.com",
+          "seendate": "2026-10-24T03:00:00Z",
+          "image": "https://wcti12.com/resources/media2/16x9/4932/1320/0x1/90/5de0e901-3b15-44e0-9ecf-32eedb1ff918-GettyImages23003691221.jpg"
+        },
+        {
+          "title": "Trump lifts tariffs on some Canadian imports , adds others in sweeping revision",
+          "url": "https://foxbaltimore.com/news/nation-world/trump-lifts-tariffs-on-some-canadian-imports-adds-others-in-sweeping-revision",
+          "domain": "foxbaltimore.com",
+          "seendate": "2026-10-24T03:00:00Z",
+          "image": "https://foxbaltimore.com/resources/media2/16x9/4932/1320/0x1/90/5de0e901-3b15-44e0-9ecf-32eedb1ff918-GettyImages23003691221.jpg"
+        },
+        {
+          "title": "Trump lifts tariffs on some Canadian imports , adds others in sweeping revision",
+          "url": "https://bakersfieldnow.com/news/nation-world/trump-lifts-tariffs-on-some-canadian-imports-adds-others-in-sweeping-revision",
+          "domain": "bakersfieldnow.com",
+          "seendate": "2026-10-24T02:45:00Z",
+          "image": "https://bakersfieldnow.com/resources/media2/16x9/4932/1320/0x1/90/5de0e901-3b15-44e0-9ecf-32eedb1ff918-GettyImages23003691221.jpg"
+        }
+      ]
+    },
+    "title": "Trump lifts tariffs on some Canadian imports , adds others in sweeping revision",
+    "summary": "2026-10-24 wwmt.com: Trump lifts tariffs on some Canadian imports , adds others in sweeping revision\n2026-10-24 upnorthlive.com: Trump lifts tariffs on some Canadian imports , adds others in sweeping revision\n2026-10-24 fox17.com: Trump lifts tariffs on some Canadian imports , adds others in sweeping revision\n2026-10-24 komonews.com: Trump lifts tariffs on some Canadian imports , adds others in sweeping revision\n2026-10-24 kval.com: Trump lifts tariffs on some Canadian imports , adds others in sweeping revision\n2026-10-24 kfdm.com: Trump lifts tariffs on some Canadian imports , adds others in sweeping revision",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_alaska-department-justice",
+    "source": "news",
+    "ts": 1792840700186,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.91,
+      "articles": [
+        {
+          "title": "Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
+          "url": "https://www.texarkanagazette.com/news/2026/oct/23/trump-says-he-ordered-the-justice-departments/",
+          "domain": "texarkanagazette.com",
+          "seendate": "2026-10-24T05:45:00Z",
+          "image": "https://wehco.media.clients.ellingtoncms.com/static-4/teaser_images/www.texarkanagazette.com_default.jpg"
+        },
+        {
+          "title": "Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
+          "url": "https://www.azfamily.com/2026/10/23/trump-administration-files-lawsuit-block-possible-democratic-win-alaska-senate-race/",
+          "domain": "azfamily.com",
+          "seendate": "2026-10-24T05:15:00Z",
+          "image": "https://gray-kpho-prod.gtv-cdn.com/resizer/v2/2FH3EXCFWND6PM4BUQE6DODDXI.jpg?auth=9fff51b07661ce090d60db13e4e97bc9941f157051108e191260403164e4ab5d&smart=true"
+        },
+        {
+          "title": "Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
+          "url": "http://www.reflector.com/news/national/trump-says-he-ordered-the-justice-departments-lawsuit-over-alaskas-us-senate-race/article_59cdda97-cce7-5ff8-a1db-ba6ead6c27cc.html",
+          "domain": "reflector.com",
+          "seendate": "2026-10-24T02:30:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/reflector.com/content/tncms/assets/v3/editorial/2/2c/22c6c055-c383-5c31-963f-ba1838d14c6c/6adb7454ebfa0.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
+        {
+          "title": "Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
+          "url": "https://www.wdio.com/ap-top-news/ap-top-news-us-headlines/trump-says-he-ordered-the-justice-departments-lawsuit-over-alaskas-us-senate-race/",
+          "domain": "wdio.com",
+          "seendate": "2026-10-24T00:00:00Z",
+          "image": "https://www.wdio.com/wp-content/uploads/apimg/2026/10/Trump_7_641.jpg"
+        },
+        {
+          "title": "Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
+          "url": "http://www.postregister.com/news/national/trump-says-he-ordered-the-justice-departments-lawsuit-over-alaskas-us-senate-race/article_b7994b6a-53d8-554e-baf2-ed905cdd7c62.html",
+          "domain": "postregister.com",
+          "seendate": "2026-10-23T23:15:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/postregister.com/content/tncms/assets/v3/editorial/a/69/a69beaf3-9110-50dd-9fce-c1ef9255fa7d/6adae70d44c10.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
+        {
+          "title": "Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
+          "url": "https://www.ksl.com:443/article/news/us/trump-says-he-ordered-the-justice-departments-lawsuit-over-alaskas-us-senate-race/51640222",
+          "domain": "ksl.com",
+          "seendate": "2026-10-23T23:00:00Z",
+          "image": "https://img.ksl.com/slc/3206/320661/32066177.jpg?filter=kslv2/responsive_story_lg"
+        },
+        {
+          "title": "Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
+          "url": "https://www.erienewsnow.com/news/politics/trump-says-he-ordered-the-justice-departments-lawsuit-over-alaskas-us-senate-race/article_ba22c5e4-779e-5119-9d47-f9fb5e071861.html",
+          "domain": "erienewsnow.com",
+          "seendate": "2026-10-23T23:00:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/erienewsnow.com/content/tncms/custom/image/b278f54b-830b-4f05-9350-cb090f41a0d4.png"
+        },
+        {
+          "title": "Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
+          "url": "https://www.kold.com/2026/10/23/trump-administration-files-lawsuit-block-possible-democratic-win-alaska-senate-race/",
+          "domain": "kold.com",
+          "seendate": "2026-10-23T23:00:00Z",
+          "image": "https://gray-kold-prod.gtv-cdn.com/resizer/v2/2FH3EXCFWND6PM4BUQE6DODDXI.jpg?auth=9fff51b07661ce090d60db13e4e97bc9941f157051108e191260403164e4ab5d&smart=true"
+        },
+        {
+          "title": "Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
+          "url": "https://www.nvdaily.com/associated_press_national/trump-says-he-ordered-the-justice-departments-lawsuit-over-alaskas-us-senate-race/article_a34cf9da-e8d1-53dd-8fae-4b8bba957dff.html",
+          "domain": "nvdaily.com",
+          "seendate": "2026-10-23T23:00:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/nvdaily.com/content/tncms/assets/v3/editorial/7/76/776ca88f-0c0a-50b7-a64a-dac580f518cf/6adaeb79bc88b.image.jpg?crop=1763%2C926%2C0%2C124"
+        }
+      ]
+    },
+    "title": "Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
+    "summary": "2026-10-24 texarkanagazette.com: Trump says he ordered the Justice Department lawsuit over Alaska US Senate race\n2026-10-24 azfamily.com: Trump says he ordered the Justice Department lawsuit over Alaska US Senate race\n2026-10-24 reflector.com: Trump says he ordered the Justice Department lawsuit over Alaska US Senate race\n2026-10-24 wdio.com: Trump says he ordered the Justice Department lawsuit over Alaska US Senate race\n2026-10-23 postregister.com: Trump says he ordered the Justice Department lawsuit over Alaska US Senate race\n2026-10-23 ksl.com: Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_ban-court-hampshire",
+    "source": "news",
+    "ts": 1792840700186,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.82,
       "articles": [
         {
           "title": "Supreme Court lets New Hampshire ban student IDs for voting",
@@ -11565,68 +11735,61 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_alaska-department-justice",
+    "cid": "cand_news_been-big-decade",
     "source": "news",
-    "ts": 1792817370769,
+    "ts": 1792840700187,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.82,
+      "salience": 0.775,
       "articles": [
         {
-          "title": "Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
-          "url": "http://www.reflector.com/news/national/trump-says-he-ordered-the-justice-departments-lawsuit-over-alaskas-us-senate-race/article_59cdda97-cce7-5ff8-a1db-ba6ead6c27cc.html",
-          "domain": "reflector.com",
-          "seendate": "2026-10-24T02:30:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/reflector.com/content/tncms/assets/v3/editorial/2/2c/22c6c055-c383-5c31-963f-ba1838d14c6c/6adb7454ebfa0.image.jpg?crop=1763%2C926%2C0%2C124"
+          "title": "This decade has been missing its big - impact midterm",
+          "url": "https://www.wuft.org/2026-10-24/this-decade-has-been-missing-its-big-impact-midterm",
+          "domain": "wuft.org",
+          "seendate": "2026-10-24T10:30:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/b5/1a/2d05c4ac4f62901f6a888b8b18e2/gettyimages-1076708612.jpg"
         },
         {
-          "title": "Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
-          "url": "https://www.wdio.com/ap-top-news/ap-top-news-us-headlines/trump-says-he-ordered-the-justice-departments-lawsuit-over-alaskas-us-senate-race/",
-          "domain": "wdio.com",
-          "seendate": "2026-10-24T00:00:00Z",
-          "image": "https://www.wdio.com/wp-content/uploads/apimg/2026/10/Trump_7_641.jpg"
+          "title": "This decade has been missing its big - impact midterm",
+          "url": "https://www.kmxt.org/2026-10-24/this-decade-has-been-missing-its-big-impact-midterm",
+          "domain": "kmxt.org",
+          "seendate": "2026-10-24T10:15:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/b5/1a/2d05c4ac4f62901f6a888b8b18e2/gettyimages-1076708612.jpg"
         },
         {
-          "title": "Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
-          "url": "http://www.postregister.com/news/national/trump-says-he-ordered-the-justice-departments-lawsuit-over-alaskas-us-senate-race/article_b7994b6a-53d8-554e-baf2-ed905cdd7c62.html",
-          "domain": "postregister.com",
-          "seendate": "2026-10-23T23:15:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/postregister.com/content/tncms/assets/v3/editorial/a/69/a69beaf3-9110-50dd-9fce-c1ef9255fa7d/6adae70d44c10.image.jpg?crop=1763%2C926%2C0%2C124"
+          "title": "This decade has been missing its big - impact midterm",
+          "url": "https://kansaspublicradio.org/npr-news/2026-10-24/this-decade-has-been-missing-its-big-impact-midterm",
+          "domain": "kansaspublicradio.org",
+          "seendate": "2026-10-24T10:15:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/b5/1a/2d05c4ac4f62901f6a888b8b18e2/gettyimages-1076708612.jpg"
         },
         {
-          "title": "Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
-          "url": "https://www.ksl.com:443/article/news/us/trump-says-he-ordered-the-justice-departments-lawsuit-over-alaskas-us-senate-race/51640222",
-          "domain": "ksl.com",
-          "seendate": "2026-10-23T23:00:00Z",
-          "image": "https://img.ksl.com/slc/3206/320661/32066177.jpg?filter=kslv2/responsive_story_lg"
+          "title": "This decade has been missing its big - impact midterm",
+          "url": "https://www.ypradio.org/npr-news/2026-10-24/this-decade-has-been-missing-its-big-impact-midterm",
+          "domain": "ypradio.org",
+          "seendate": "2026-10-24T10:15:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/b5/1a/2d05c4ac4f62901f6a888b8b18e2/gettyimages-1076708612.jpg"
         },
         {
-          "title": "Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
-          "url": "https://www.erienewsnow.com/news/politics/trump-says-he-ordered-the-justice-departments-lawsuit-over-alaskas-us-senate-race/article_ba22c5e4-779e-5119-9d47-f9fb5e071861.html",
-          "domain": "erienewsnow.com",
-          "seendate": "2026-10-23T23:00:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/erienewsnow.com/content/tncms/custom/image/b278f54b-830b-4f05-9350-cb090f41a0d4.png"
+          "title": "This decade has been missing its big - impact midterm",
+          "url": "https://www.kunm.org/npr-news/2026-10-24/this-decade-has-been-missing-its-big-impact-midterm",
+          "domain": "kunm.org",
+          "seendate": "2026-10-24T10:00:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/b5/1a/2d05c4ac4f62901f6a888b8b18e2/gettyimages-1076708612.jpg"
         },
         {
-          "title": "Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
-          "url": "https://www.kold.com/2026/10/23/trump-administration-files-lawsuit-block-possible-democratic-win-alaska-senate-race/",
-          "domain": "kold.com",
-          "seendate": "2026-10-23T23:00:00Z",
-          "image": "https://gray-kold-prod.gtv-cdn.com/resizer/v2/2FH3EXCFWND6PM4BUQE6DODDXI.jpg?auth=9fff51b07661ce090d60db13e4e97bc9941f157051108e191260403164e4ab5d&smart=true"
-        },
-        {
-          "title": "Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
-          "url": "https://www.nvdaily.com/associated_press_national/trump-says-he-ordered-the-justice-departments-lawsuit-over-alaskas-us-senate-race/article_a34cf9da-e8d1-53dd-8fae-4b8bba957dff.html",
-          "domain": "nvdaily.com",
-          "seendate": "2026-10-23T23:00:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/nvdaily.com/content/tncms/assets/v3/editorial/7/76/776ca88f-0c0a-50b7-a64a-dac580f518cf/6adaeb79bc88b.image.jpg?crop=1763%2C926%2C0%2C124"
+          "title": "This decade has been missing its big - impact midterm",
+          "url": "https://www.ktep.org/politics/2026-10-24/this-decade-has-been-missing-its-big-impact-midterm",
+          "domain": "ktep.org",
+          "seendate": "2026-10-24T09:45:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/b5/1a/2d05c4ac4f62901f6a888b8b18e2/gettyimages-1076708612.jpg"
         }
       ]
     },
-    "title": "Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
-    "summary": "2026-10-24 reflector.com: Trump says he ordered the Justice Department lawsuit over Alaska US Senate race\n2026-10-24 wdio.com: Trump says he ordered the Justice Department lawsuit over Alaska US Senate race\n2026-10-23 postregister.com: Trump says he ordered the Justice Department lawsuit over Alaska US Senate race\n2026-10-23 ksl.com: Trump says he ordered the Justice Department lawsuit over Alaska US Senate race\n2026-10-23 erienewsnow.com: Trump says he ordered the Justice Department lawsuit over Alaska US Senate race\n2026-10-23 kold.com: Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
+    "title": "This decade has been missing its big - impact midterm",
+    "summary": "2026-10-24 wuft.org: This decade has been missing its big - impact midterm\n2026-10-24 kmxt.org: This decade has been missing its big - impact midterm\n2026-10-24 kansaspublicradio.org: This decade has been missing its big - impact midterm\n2026-10-24 ypradio.org: This decade has been missing its big - impact midterm\n2026-10-24 kunm.org: This decade has been missing its big - impact midterm\n2026-10-24 ktep.org: This decade has been missing its big - impact midterm",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -11638,12 +11801,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_could-election-final",
     "source": "news",
-    "ts": 1792817370768,
+    "ts": 1792840700185,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.703,
+      "salience": 0.662,
       "articles": [
         {
           "title": "The midterm election outcomes that could shape Trump final two years",
@@ -11744,12 +11907,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_colleagues-conservative-controversial",
     "source": "news",
-    "ts": 1792817370769,
+    "ts": 1792840700186,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.637,
+      "salience": 0.597,
       "articles": [
         {
           "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
@@ -11841,103 +12004,96 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_campaigns-injects-into",
+    "cid": "cand_news_democrat-election-faith",
     "source": "news",
-    "ts": 1792817370770,
+    "ts": 1792840700187,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.579,
+      "salience": 0.573,
       "articles": [
         {
-          "title": "RNC Injects $50 Million Into Midterm Campaigns",
-          "url": "https://wmrn.iheart.com/content/2026-10-21-rnc-injects-50-million-into-midterm-campaigns/",
-          "domain": "wmrn.iheart.com",
-          "seendate": "2026-10-21T09:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ad83f310ce7f2c3d1a8ed80?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds",
+          "url": "https://www.clickorlando.com/news/politics/2026/10/21/democrats-faith-in-election-results-is-falling-but-still-exceeds-republicans-ap-norc-poll-finds/",
+          "domain": "clickorlando.com",
+          "seendate": "2026-10-21T15:00:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/ECWVBLPKU5GT3HI7ORQFQV6N2Q.jpg?api_key=clickorlando_488cff2bcc157b2e"
         },
         {
-          "title": "RNC Injects $50 Million Into Midterm Campaigns",
-          "url": "https://800wvhu.iheart.com/content/2026-10-21-rnc-injects-50-million-into-midterm-campaigns/",
-          "domain": "800wvhu.iheart.com",
-          "seendate": "2026-10-21T09:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ad83f310ce7f2c3d1a8ed80?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "Democrat faith in election results is falling , AP - NORC poll finds",
+          "url": "https://www.chicagotribune.com/2026/10/21/democrats-republicans-election-results-ap-norc-poll/",
+          "domain": "chicagotribune.com",
+          "seendate": "2026-10-21T14:30:00Z",
+          "image": "https://www.chicagotribune.com/wp-content/uploads/2026/10/No_Kings_Protest_Seattle_61626-1.jpg"
         },
         {
-          "title": "RNC Injects $50 Million Into Midterm Campaigns",
-          "url": "https://klvi.iheart.com/content/2026-10-21-rnc-injects-50-million-into-midterm-campaigns/",
-          "domain": "klvi.iheart.com",
-          "seendate": "2026-10-21T08:45:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ad83f310ce7f2c3d1a8ed80?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds",
+          "url": "https://www.wsls.com/news/politics/2026/10/21/democrats-faith-in-election-results-is-falling-but-still-exceeds-republicans-ap-norc-poll-finds/",
+          "domain": "wsls.com",
+          "seendate": "2026-10-21T14:00:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/ECWVBLPKU5GT3HI7ORQFQV6N2Q.jpg?api_key=wsls_8c3a4bc35af7684e"
         },
         {
-          "title": "RNC Injects $50 Million Into Midterm Campaigns",
-          "url": "https://wsfcam.iheart.com/content/2026-10-21-rnc-injects-50-million-into-midterm-campaigns/",
-          "domain": "wsfcam.iheart.com",
-          "seendate": "2026-10-21T08:45:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ad83f310ce7f2c3d1a8ed80?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds",
+          "url": "https://www.bangordailynews.com/2026/10/21/nation/democrats-faith-in-election-results-is-falling-but-still-exceeds-republicans-ap-norc-poll-finds/",
+          "domain": "bangordailynews.com",
+          "seendate": "2026-10-21T13:30:00Z",
+          "image": "https://i0.wp.com/bdn-data.s3.amazonaws.com/uploads/2026/10/preview-1140.jpg?fit=1024%2C682&ssl=1"
         },
         {
-          "title": "RNC Injects $50 Million Into Midterm Campaigns",
-          "url": "https://whyn.iheart.com/content/2026-10-21-rnc-injects-50-million-into-midterm-campaigns/",
-          "domain": "whyn.iheart.com",
-          "seendate": "2026-10-21T08:45:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ad83f310ce7f2c3d1a8ed80?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds",
+          "url": "https://www.aol.com/articles/democrats-faith-election-results-falling-103321000.html",
+          "domain": "aol.com",
+          "seendate": "2026-10-21T13:00:00Z",
+          "image": "https://hermes.media.static.aol.com/media/2026/10/21/bea9e255-2213-363e-ba11-0eb30d8c3670/7e4bf768-9699-4295-bf8f-30d38af43c4e.jpg"
         },
         {
-          "title": "RNC Injects $50 Million Into Midterm Campaigns",
-          "url": "https://newsradio540.iheart.com/content/2026-10-21-rnc-injects-50-million-into-midterm-campaigns/",
-          "domain": "newsradio540.iheart.com",
-          "seendate": "2026-10-21T08:45:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ad83f310ce7f2c3d1a8ed80?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds",
+          "url": "https://isp.netscape.com:443/news/story/0001/20261021/bf94ad991939cb3ac0fed623c2f2c7b2",
+          "domain": "isp.netscape.com",
+          "seendate": "2026-10-21T13:00:00Z",
+          "image": null
         },
         {
-          "title": "RNC Injects $50 Million Into Midterm Campaigns",
-          "url": "https://knst.iheart.com/content/2026-10-21-rnc-injects-50-million-into-midterm-campaigns/",
-          "domain": "knst.iheart.com",
-          "seendate": "2026-10-21T08:45:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ad83f310ce7f2c3d1a8ed80?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "Democrat faith in election results falling but exceeds GOP : poll",
+          "url": "https://www.sun-sentinel.com/2026/10/21/democrats-election-results-poll/",
+          "domain": "sun-sentinel.com",
+          "seendate": "2026-10-21T13:00:00Z",
+          "image": "https://www.sun-sentinel.com/wp-content/uploads/2026/10/No_Kings_Protest_Seattle_61626-1.jpg"
         },
         {
-          "title": "RNC Injects $50 Million Into Midterm Campaigns",
-          "url": "https://600wrec.iheart.com/content/2026-10-21-rnc-injects-50-million-into-midterm-campaigns/",
-          "domain": "600wrec.iheart.com",
-          "seendate": "2026-10-21T08:45:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ad83f310ce7f2c3d1a8ed80?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "Democrat faith in election results falling but exceeds GOP : poll",
+          "url": "https://www.dailynews.com/2026/10/21/democrats-election-results-poll/",
+          "domain": "dailynews.com",
+          "seendate": "2026-10-21T12:30:00Z",
+          "image": "https://www.dailynews.com/wp-content/uploads/2026/10/No_Kings_Protest_Seattle_61626-1.jpg"
         },
         {
-          "title": "RNC Injects $50 Million Into Midterm Campaigns",
-          "url": "https://600kcol.iheart.com/content/2026-10-21-rnc-injects-50-million-into-midterm-campaigns/",
-          "domain": "600kcol.iheart.com",
-          "seendate": "2026-10-21T08:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ad83f310ce7f2c3d1a8ed80?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "Democrat faith in election results falling but exceeds GOP : poll",
+          "url": "https://www.mercurynews.com/2026/10/21/democrats-election-results-poll/",
+          "domain": "mercurynews.com",
+          "seendate": "2026-10-21T12:00:00Z",
+          "image": "https://www.mercurynews.com/wp-content/uploads/2026/10/No_Kings_Protest_Seattle_61626-1.jpg"
         },
         {
-          "title": "RNC Injects $50 Million Into Midterm Campaigns | News Talk 99 . 5 WRNO",
-          "url": "https://wrno.iheart.com/content/2026-10-21-rnc-injects-50-million-into-midterm-campaigns/",
-          "domain": "wrno.iheart.com",
-          "seendate": "2026-10-21T08:00:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ad83f310ce7f2c3d1a8ed80?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "Democrat faith in election results falling but exceeds GOP : poll",
+          "url": "https://www.sandiegouniontribune.com/2026/10/21/democrats-election-results-poll/",
+          "domain": "sandiegouniontribune.com",
+          "seendate": "2026-10-21T12:00:00Z",
+          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/10/No_Kings_Protest_Seattle_61626-1.jpg"
         },
         {
-          "title": "RNC Injects $50 Million Into Midterm Campaigns | NewsRadio 1000 KTOK",
-          "url": "https://ktok.iheart.com/content/2026-10-21-rnc-injects-50-million-into-midterm-campaigns/",
-          "domain": "ktok.iheart.com",
-          "seendate": "2026-10-21T08:00:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ad83f310ce7f2c3d1a8ed80?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "RNC Injects $50 Million Into Midterm Campaigns | News Radio 920 AM & 104 . 7 FM",
-          "url": "https://newsradiori.iheart.com/content/2026-10-21-rnc-injects-50-million-into-midterm-campaigns/",
-          "domain": "newsradiori.iheart.com",
-          "seendate": "2026-10-21T08:00:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ad83f310ce7f2c3d1a8ed80?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "Democrat faith in election results falling but exceeds GOP : poll",
+          "url": "https://www.pilotonline.com/2026/10/21/democrats-election-results-poll/",
+          "domain": "pilotonline.com",
+          "seendate": "2026-10-21T12:00:00Z",
+          "image": "https://www.pilotonline.com/wp-content/uploads/2026/10/No_Kings_Protest_Seattle_61626-1.jpg"
         }
       ]
     },
-    "title": "RNC Injects $50 Million Into Midterm Campaigns",
-    "summary": "2026-10-21 wmrn.iheart.com: RNC Injects $50 Million Into Midterm Campaigns\n2026-10-21 800wvhu.iheart.com: RNC Injects $50 Million Into Midterm Campaigns\n2026-10-21 klvi.iheart.com: RNC Injects $50 Million Into Midterm Campaigns\n2026-10-21 wsfcam.iheart.com: RNC Injects $50 Million Into Midterm Campaigns\n2026-10-21 whyn.iheart.com: RNC Injects $50 Million Into Midterm Campaigns\n2026-10-21 newsradio540.iheart.com: RNC Injects $50 Million Into Midterm Campaigns",
+    "title": "Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds",
+    "summary": "2026-10-21 clickorlando.com: Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds\n2026-10-21 chicagotribune.com: Democrat faith in election results is falling , AP - NORC poll finds\n2026-10-21 wsls.com: Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds\n2026-10-21 bangordailynews.com: Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds\n2026-10-21 aol.com: Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds\n2026-10-21 isp.netscape.com: Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -11949,12 +12105,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_caps-court-fly",
     "source": "news",
-    "ts": 1792817370771,
+    "ts": 1792840700186,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.525,
+      "salience": 0.485,
       "articles": [
         {
           "title": "Republicans fly past former spending caps nixed by US Supreme Court",
@@ -12020,12 +12176,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_big-boost-control",
     "source": "news",
-    "ts": 1792817370769,
+    "ts": 1792840700186,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.46,
+      "salience": 0.42,
       "articles": [
         {
           "title": "The Latest : Many states deciding control of the Senate are seeing a big boost in early voting",
@@ -12068,68 +12224,40 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_democrat-election-faith",
+    "cid": "cand_news_behind-democracy-ford",
     "source": "news",
-    "ts": 1792817370771,
+    "ts": 1792840700187,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.449,
+      "salience": 0.377,
       "articles": [
         {
-          "title": "Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds",
-          "url": "https://www.clickorlando.com/news/politics/2026/10/21/democrats-faith-in-election-results-is-falling-but-still-exceeds-republicans-ap-norc-poll-finds/",
-          "domain": "clickorlando.com",
-          "seendate": "2026-10-21T15:00:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/ECWVBLPKU5GT3HI7ORQFQV6N2Q.jpg?api_key=clickorlando_488cff2bcc157b2e"
+          "title": "The Ford Foundation , one of the world largest grantmakers , will throw more weight behind democracy",
+          "url": "https://www.ksat.com/news/politics/2026/10/22/the-ford-foundation-one-of-the-worlds-largest-grantmakers-will-throw-more-weight-behind-democracy/",
+          "domain": "ksat.com",
+          "seendate": "2026-10-22T21:15:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/LZ5VLVMQNJBCJDUULO2T56SBMM.jpg?api_key=ksat_9a37fc89631abedf"
         },
         {
-          "title": "Democrat faith in election results is falling , AP - NORC poll finds",
-          "url": "https://www.chicagotribune.com/2026/10/21/democrats-republicans-election-results-ap-norc-poll/",
-          "domain": "chicagotribune.com",
-          "seendate": "2026-10-21T14:30:00Z",
-          "image": "https://www.chicagotribune.com/wp-content/uploads/2026/10/No_Kings_Protest_Seattle_61626-1.jpg"
+          "title": "The Ford Foundation , one of the world largest grantmakers , will throw more weight behind democracy",
+          "url": "http://www.thegazette.com/news/national/the-ford-foundation-one-of-the-worlds-largest-grantmakers-will-throw-more-weight-behind-democracy/article_837db4fb-69b3-5e28-b31f-c25843175bc7.html",
+          "domain": "thegazette.com",
+          "seendate": "2026-10-22T19:15:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/thegazette.com/content/tncms/assets/v3/editorial/0/bd/0bde3cb4-e7ce-5554-9964-19f137d61262/6ada3c538c10f.image.jpg?crop=5000%2C2625%2C0%2C354"
         },
         {
-          "title": "Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds",
-          "url": "https://www.wsls.com/news/politics/2026/10/21/democrats-faith-in-election-results-is-falling-but-still-exceeds-republicans-ap-norc-poll-finds/",
-          "domain": "wsls.com",
-          "seendate": "2026-10-21T14:00:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/ECWVBLPKU5GT3HI7ORQFQV6N2Q.jpg?api_key=wsls_8c3a4bc35af7684e"
-        },
-        {
-          "title": "Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds",
-          "url": "https://www.bangordailynews.com/2026/10/21/nation/democrats-faith-in-election-results-is-falling-but-still-exceeds-republicans-ap-norc-poll-finds/",
-          "domain": "bangordailynews.com",
-          "seendate": "2026-10-21T13:30:00Z",
-          "image": "https://i0.wp.com/bdn-data.s3.amazonaws.com/uploads/2026/10/preview-1140.jpg?fit=1024%2C682&ssl=1"
-        },
-        {
-          "title": "Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds",
-          "url": "https://www.aol.com/articles/democrats-faith-election-results-falling-103321000.html",
-          "domain": "aol.com",
-          "seendate": "2026-10-21T13:00:00Z",
-          "image": "https://hermes.media.static.aol.com/media/2026/10/21/bea9e255-2213-363e-ba11-0eb30d8c3670/7e4bf768-9699-4295-bf8f-30d38af43c4e.jpg"
-        },
-        {
-          "title": "Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds",
-          "url": "https://isp.netscape.com:443/news/story/0001/20261021/bf94ad991939cb3ac0fed623c2f2c7b2",
-          "domain": "isp.netscape.com",
-          "seendate": "2026-10-21T13:00:00Z",
-          "image": null
-        },
-        {
-          "title": "Democrat faith in election results falling but exceeds GOP : poll",
-          "url": "https://www.mercurynews.com/2026/10/21/democrats-election-results-poll/",
-          "domain": "mercurynews.com",
-          "seendate": "2026-10-21T12:00:00Z",
-          "image": "https://www.mercurynews.com/wp-content/uploads/2026/10/No_Kings_Protest_Seattle_61626-1.jpg"
+          "title": "The Ford Foundation , one of the world largest grantmakers , will throw more weight behind democracy",
+          "url": "https://www.news4jax.com/news/politics/2026/10/22/the-ford-foundation-one-of-the-worlds-largest-grantmakers-will-throw-more-weight-behind-democracy/",
+          "domain": "news4jax.com",
+          "seendate": "2026-10-22T17:45:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/LZ5VLVMQNJBCJDUULO2T56SBMM.jpg?api_key=news4jax_3f10b25586458189"
         }
       ]
     },
-    "title": "Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds",
-    "summary": "2026-10-21 clickorlando.com: Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds\n2026-10-21 chicagotribune.com: Democrat faith in election results is falling , AP - NORC poll finds\n2026-10-21 wsls.com: Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds\n2026-10-21 bangordailynews.com: Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds\n2026-10-21 aol.com: Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds\n2026-10-21 isp.netscape.com: Democrat faith in election results is falling but still exceeds Republican , AP - NORC poll finds",
+    "title": "The Ford Foundation , one of the world largest grantmakers , will throw more weight behind democracy",
+    "summary": "2026-10-22 ksat.com: The Ford Foundation , one of the world largest grantmakers , will throw more weight behind democracy\n2026-10-22 thegazette.com: The Ford Foundation , one of the world largest grantmakers , will throw more weight behind democracy\n2026-10-22 news4jax.com: The Ford Foundation , one of the world largest grantmakers , will throw more weight behind democracy",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -12141,12 +12269,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_2026-about-ashley",
     "source": "news",
-    "ts": 1792817370771,
+    "ts": 1792840700187,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.381,
+      "salience": 0.34,
       "articles": [
         {
           "title": "Iowa 2026 Senate race : What to know about Josh Turek vs Ashley Hinson",
@@ -12196,14 +12324,64 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_2026-facts-fast",
+    "cid": "cand_news_2026-about-collins",
     "source": "news",
-    "ts": 1792817370771,
+    "ts": 1792840700187,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.297,
+      "salience": 0.288,
+      "articles": [
+        {
+          "title": "Maine 2026 Senate race : What to know about Susan Collins vs . Troy Jackson",
+          "url": "https://www.fox2detroit.com/news/key-senate-race-maine-what-know",
+          "domain": "fox2detroit.com",
+          "seendate": "2026-10-21T22:15:00Z",
+          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/10/1280/720/maine-senate-race.jpeg?ve=1&tl=1"
+        },
+        {
+          "title": "Maine 2026 Senate race : What to know about Susan Collins vs . Troy Jackson",
+          "url": "https://www.fox5dc.com/news/key-senate-race-maine-what-know",
+          "domain": "fox5dc.com",
+          "seendate": "2026-10-21T21:30:00Z",
+          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/10/1280/720/maine-senate-race.jpeg?ve=1&tl=1"
+        },
+        {
+          "title": "Maine 2026 Senate race : What to know about Susan Collins vs . Troy Jackson",
+          "url": "https://www.fox7austin.com/news/key-senate-race-maine-what-know",
+          "domain": "fox7austin.com",
+          "seendate": "2026-10-21T20:45:00Z",
+          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/10/1280/720/maine-senate-race.jpeg?ve=1&tl=1"
+        },
+        {
+          "title": "Maine 2026 Senate race : What to know about Susan Collins vs . Troy Jackson",
+          "url": "https://www.fox9.com/news/key-senate-race-maine-what-know",
+          "domain": "fox9.com",
+          "seendate": "2026-10-21T20:15:00Z",
+          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/10/1280/720/maine-senate-race.jpeg?ve=1&tl=1"
+        }
+      ]
+    },
+    "title": "Maine 2026 Senate race : What to know about Susan Collins vs . Troy Jackson",
+    "summary": "2026-10-21 fox2detroit.com: Maine 2026 Senate race : What to know about Susan Collins vs . Troy Jackson\n2026-10-21 fox5dc.com: Maine 2026 Senate race : What to know about Susan Collins vs . Troy Jackson\n2026-10-21 fox7austin.com: Maine 2026 Senate race : What to know about Susan Collins vs . Troy Jackson\n2026-10-21 fox9.com: Maine 2026 Senate race : What to know about Susan Collins vs . Troy Jackson",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_2026-facts-fast",
+    "source": "news",
+    "ts": 1792840700187,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.257,
       "articles": [
         {
           "title": "2026 In Review Fast Facts",
@@ -12230,49 +12408,6 @@ window.PRISM_CANDIDATES = [
     },
     "title": "2026 In Review Fast Facts",
     "summary": "2026-10-22 krdo.com: 2026 In Review Fast Facts\n2026-10-21 kesq.com: 2026 In Review Fast Facts\n2026-10-21 localnews8.com: 2026 In Review Fast Facts - LocalNews8 . com",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_2026-about-collins",
-    "source": "news",
-    "ts": 1792817370771,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.274,
-      "articles": [
-        {
-          "title": "Maine 2026 Senate race : What to know about Susan Collins vs . Troy Jackson",
-          "url": "https://www.fox2detroit.com/news/key-senate-race-maine-what-know",
-          "domain": "fox2detroit.com",
-          "seendate": "2026-10-21T22:15:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/10/1280/720/maine-senate-race.jpeg?ve=1&tl=1"
-        },
-        {
-          "title": "Maine 2026 Senate race : What to know about Susan Collins vs . Troy Jackson",
-          "url": "https://www.fox5dc.com/news/key-senate-race-maine-what-know",
-          "domain": "fox5dc.com",
-          "seendate": "2026-10-21T21:30:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/10/1280/720/maine-senate-race.jpeg?ve=1&tl=1"
-        },
-        {
-          "title": "Maine 2026 Senate race : What to know about Susan Collins vs . Troy Jackson",
-          "url": "https://www.fox9.com/news/key-senate-race-maine-what-know",
-          "domain": "fox9.com",
-          "seendate": "2026-10-21T20:15:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/10/1280/720/maine-senate-race.jpeg?ve=1&tl=1"
-        }
-      ]
-    },
-    "title": "Maine 2026 Senate race : What to know about Susan Collins vs . Troy Jackson",
-    "summary": "2026-10-21 fox2detroit.com: Maine 2026 Senate race : What to know about Susan Collins vs . Troy Jackson\n2026-10-21 fox5dc.com: Maine 2026 Senate race : What to know about Susan Collins vs . Troy Jackson\n2026-10-21 fox9.com: Maine 2026 Senate race : What to know about Susan Collins vs . Troy Jackson",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,

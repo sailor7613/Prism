@@ -1,11 +1,9 @@
 # Newsroom digest — 2026-10-24
 
-Register: 133 objects · this scan: 4 new, 1 seen again, 0 returned.
+Register: 134 objects · this scan: 1 new, 0 seen again, 0 returned.
 
-## Queued for drafting (3)
-- **Trump lifts tariffs on some Canadian imports , adds others in sweeping revision** — tariff/sanction · imposed · holder: the President · formed 2026-10-24 · 25 outlets (peak 25) · `obj_thepresi_adds-canadian-imports-lifts`
-- **Trump signs executive order lowering housing costs** — law · signed · holder: the President · formed 2026-10-23 · 14 outlets (peak 14) · `obj_thepresi_costs-executive-housing-lowering`
-- **Trump says he ordered the Justice Department lawsuit over Alaska US Senate race** — suit · sued · holder: the Supreme Court · formed 2026-10-23 · 7 outlets (peak 7) · `obj_thesupre_alaska-department-justice-lawsuit`
+## Queued for drafting (0)
+- (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
 - none today
@@ -14,12 +12,9 @@ Register: 133 objects · this scan: 4 new, 1 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **Trump says he ordered the Justice Department lawsuit over Alaska US Senate race** — suit · sued · holder: the Supreme Court · formed 2026-10-23 · 7 outlets (peak 7) · `obj_thesupre_alaska-department-justice-lawsuit`
-- **Trump signs executive order lowering housing costs** — law · signed · holder: the President · formed 2026-10-23 · 14 outlets (peak 14) · `obj_thepresi_costs-executive-housing-lowering`
-- **2 ex - FBI officials charged with lying about involvement in investigation into Hunter Biden laptop** — indictment · charged · holder: the Justice Department · formed 2026-10-23 · 3 outlets (peak 3) · `obj_thejusti_about-biden-charged-fbi`
-- **Trump lifts tariffs on some Canadian imports , adds others in sweeping revision** — tariff/sanction · imposed · holder: the President · formed 2026-10-24 · 25 outlets (peak 25) · `obj_thepresi_adds-canadian-imports-lifts`
+- **Trump Administration Rolls Back Some Canada Tariffs** — rule · ruled (agency) · holder: the President · formed 2026-10-24 · 37 outlets (peak 37) · `obj_thepresi_administration-back-canada-rolls`
 
-## Watching (43)
+## Watching (44)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
 - **Former state senator sentenced to 16 months in child solicitation case** — indictment · charged · holder: the Senate · formed 2026-09-23 · 4 outlets (peak 4) · `obj_thesenat_case-child-former-months`
 - **CNN , MS NOW and Politico back at the White House after judge ordered Trump to lift ban** — ruling · ruled · holder: the House · formed 2026-09-24 · 18 outlets (peak 18) · `obj_thehouse_back-ban-cnn-house`
