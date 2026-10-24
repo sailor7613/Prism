@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-10-24T16:05:47.062Z · 15 legislative + 12 news (GDELT, 3d)
+// 2026-10-24T20:59:44.668Z · 15 legislative + 9 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1792857909873,
+    "ts": 1792875552856,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.763,
+      "salience": 0.762,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -262,11 +262,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1792857909873,
+    "ts": 1792875552856,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.753,
+      "salience": 0.752,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -519,11 +519,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1792857909872,
+    "ts": 1792875552855,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.718,
+      "salience": 0.717,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -1937,11 +1937,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1792857909873,
+    "ts": 1792875552856,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.717,
+      "salience": 0.716,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -2194,11 +2194,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1792857909873,
+    "ts": 1792875552855,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.709,
+      "salience": 0.708,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -2451,11 +2451,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1792857909873,
+    "ts": 1792875552855,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.647,
+      "salience": 0.646,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -3364,11 +3364,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1792857909873,
+    "ts": 1792875552856,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.606,
+      "salience": 0.605,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3892,11 +3892,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1792857909873,
+    "ts": 1792875552855,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.583,
+      "salience": 0.582,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4793,11 +4793,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1792857909873,
+    "ts": 1792875552855,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.39,
+      "salience": 0.389,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5692,7 +5692,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1792857909873,
+    "ts": 1792875552855,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
@@ -6971,11 +6971,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1792857909873,
+    "ts": 1792875552856,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.297,
+      "salience": 0.296,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7891,11 +7891,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1792857909873,
+    "ts": 1792875552856,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.296,
+      "salience": 0.295,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -8801,11 +8801,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1792857909873,
+    "ts": 1792875552855,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.261,
+      "salience": 0.26,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9719,11 +9719,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1792857909873,
+    "ts": 1792875552855,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.218,
+      "salience": 0.217,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10599,7 +10599,7 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1792857909873,
+    "ts": 1792875552855,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
@@ -11475,12 +11475,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_been-big-decade",
     "source": "news",
-    "ts": 1792857947059,
+    "ts": 1792875584663,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.993,
+      "salience": 0.963,
       "articles": [
         {
           "title": "This decade has been missing its big - impact midterm",
@@ -11581,12 +11581,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_adds-canadian-imports",
     "source": "news",
-    "ts": 1792857947060,
+    "ts": 1792875584664,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.882,
+      "salience": 0.851,
       "articles": [
         {
           "title": "Trump lifts tariffs on some Canadian imports , adds others in sweeping revision",
@@ -11666,12 +11666,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_alaska-department-justice",
     "source": "news",
-    "ts": 1792857947058,
+    "ts": 1792875584663,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.88,
+      "salience": 0.85,
       "articles": [
         {
           "title": "Trump says he ordered the Justice Department lawsuit over Alaska US Senate race",
@@ -11751,12 +11751,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ban-court-hampshire",
     "source": "news",
-    "ts": 1792857947059,
+    "ts": 1792875584664,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.79,
+      "salience": 0.759,
       "articles": [
         {
           "title": "Supreme Court lets New Hampshire ban student IDs for voting",
@@ -11843,12 +11843,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_could-election-final",
     "source": "news",
-    "ts": 1792857947058,
+    "ts": 1792875584662,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.632,
+      "salience": 0.602,
       "articles": [
         {
           "title": "The midterm election outcomes that could shape Trump final two years",
@@ -11947,113 +11947,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_colleagues-conservative-controversial",
-    "source": "news",
-    "ts": 1792857947059,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.567,
-      "articles": [
-        {
-          "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
-          "url": "https://13wham.com/news/nation-world/supreme-courts-justice-elena-kagan-criticizes-conservative-colleagues-over-controversial-rulings-president-trump-democrats-republicans-gop-rrt",
-          "domain": "13wham.com",
-          "seendate": "2026-10-21T18:45:00Z",
-          "image": "https://13wham.com/resources/media2/16x9/6000/1320/0x522/90/f7e3afc2-5519-4f14-92c0-56d6dffa66b3-GettyImages2286095857.jpg"
-        },
-        {
-          "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
-          "url": "https://cbs12.com/news/nation-world/supreme-courts-justice-elena-kagan-criticizes-conservative-colleagues-over-controversial-rulings-president-trump-democrats-republicans-gop-rrt",
-          "domain": "cbs12.com",
-          "seendate": "2026-10-21T18:45:00Z",
-          "image": "https://cbs12.com/resources/media2/16x9/6000/1320/0x522/90/f7e3afc2-5519-4f14-92c0-56d6dffa66b3-GettyImages2286095857.jpg"
-        },
-        {
-          "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
-          "url": "https://kval.com/news/nation-world/supreme-courts-justice-elena-kagan-criticizes-conservative-colleagues-over-controversial-rulings-president-trump-democrats-republicans-gop-rrt",
-          "domain": "kval.com",
-          "seendate": "2026-10-21T18:45:00Z",
-          "image": "https://kval.com/resources/media2/16x9/6000/1320/0x522/90/f7e3afc2-5519-4f14-92c0-56d6dffa66b3-GettyImages2286095857.jpg"
-        },
-        {
-          "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
-          "url": "https://abc3340.com/news/nation-world/supreme-courts-justice-elena-kagan-criticizes-conservative-colleagues-over-controversial-rulings-president-trump-democrats-republicans-gop-rrt",
-          "domain": "abc3340.com",
-          "seendate": "2026-10-21T18:45:00Z",
-          "image": "https://abc3340.com/resources/media2/16x9/6000/1320/0x522/90/f7e3afc2-5519-4f14-92c0-56d6dffa66b3-GettyImages2286095857.jpg"
-        },
-        {
-          "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
-          "url": "https://fox23.com/news/nation-world/supreme-courts-justice-elena-kagan-criticizes-conservative-colleagues-over-controversial-rulings-president-trump-democrats-republicans-gop-rrt",
-          "domain": "fox23.com",
-          "seendate": "2026-10-21T18:15:00Z",
-          "image": "https://fox23.com/resources/media2/16x9/6000/1320/0x522/90/f7e3afc2-5519-4f14-92c0-56d6dffa66b3-GettyImages2286095857.jpg"
-        },
-        {
-          "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
-          "url": "https://wgme.com/news/nation-world/supreme-courts-justice-elena-kagan-criticizes-conservative-colleagues-over-controversial-rulings-president-trump-democrats-republicans-gop-rrt",
-          "domain": "wgme.com",
-          "seendate": "2026-10-21T18:15:00Z",
-          "image": "https://wgme.com/resources/media2/16x9/6000/1320/0x522/90/f7e3afc2-5519-4f14-92c0-56d6dffa66b3-GettyImages2286095857.jpg"
-        },
-        {
-          "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
-          "url": "https://katu.com/news/nation-world/supreme-courts-justice-elena-kagan-criticizes-conservative-colleagues-over-controversial-rulings-president-trump-democrats-republicans-gop-rrt",
-          "domain": "katu.com",
-          "seendate": "2026-10-21T18:00:00Z",
-          "image": "https://katu.com/resources/media2/16x9/6000/1320/0x522/90/f7e3afc2-5519-4f14-92c0-56d6dffa66b3-GettyImages2286095857.jpg"
-        },
-        {
-          "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
-          "url": "https://bakersfieldnow.com/news/nation-world/supreme-courts-justice-elena-kagan-criticizes-conservative-colleagues-over-controversial-rulings-president-trump-democrats-republicans-gop-rrt",
-          "domain": "bakersfieldnow.com",
-          "seendate": "2026-10-21T18:00:00Z",
-          "image": "https://bakersfieldnow.com/resources/media2/16x9/6000/1320/0x522/90/f7e3afc2-5519-4f14-92c0-56d6dffa66b3-GettyImages2286095857.jpg"
-        },
-        {
-          "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
-          "url": "https://fox23maine.com/news/nation-world/supreme-courts-justice-elena-kagan-criticizes-conservative-colleagues-over-controversial-rulings-president-trump-democrats-republicans-gop-rrt",
-          "domain": "fox23maine.com",
-          "seendate": "2026-10-21T18:00:00Z",
-          "image": "https://fox23maine.com/resources/media2/16x9/6000/1320/0x522/90/f7e3afc2-5519-4f14-92c0-56d6dffa66b3-GettyImages2286095857.jpg"
-        },
-        {
-          "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
-          "url": "https://kcby.com/news/nation-world/supreme-courts-justice-elena-kagan-criticizes-conservative-colleagues-over-controversial-rulings-president-trump-democrats-republicans-gop-rrt",
-          "domain": "kcby.com",
-          "seendate": "2026-10-21T17:30:00Z",
-          "image": "https://kcby.com/resources/media2/16x9/6000/1320/0x522/90/f7e3afc2-5519-4f14-92c0-56d6dffa66b3-GettyImages2286095857.jpg"
-        },
-        {
-          "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
-          "url": "https://komonews.com/news/nation-world/supreme-courts-justice-elena-kagan-criticizes-conservative-colleagues-over-controversial-rulings-president-trump-democrats-republicans-gop-rrt",
-          "domain": "komonews.com",
-          "seendate": "2026-10-21T17:15:00Z",
-          "image": "https://komonews.com/resources/media2/16x9/6000/1320/0x522/90/f7e3afc2-5519-4f14-92c0-56d6dffa66b3-GettyImages2286095857.jpg"
-        }
-      ]
-    },
-    "title": "Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
-    "summary": "2026-10-21 13wham.com: Supreme Court Kagan criticizes conservative colleagues over controversial rulings\n2026-10-21 cbs12.com: Supreme Court Kagan criticizes conservative colleagues over controversial rulings\n2026-10-21 kval.com: Supreme Court Kagan criticizes conservative colleagues over controversial rulings\n2026-10-21 abc3340.com: Supreme Court Kagan criticizes conservative colleagues over controversial rulings\n2026-10-21 fox23.com: Supreme Court Kagan criticizes conservative colleagues over controversial rulings\n2026-10-21 wgme.com: Supreme Court Kagan criticizes conservative colleagues over controversial rulings",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_caps-court-fly",
     "source": "news",
-    "ts": 1792857947059,
+    "ts": 1792875584664,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.455,
+      "salience": 0.424,
       "articles": [
         {
           "title": "Republicans fly past former spending caps nixed by US Supreme Court",
@@ -12119,12 +12020,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_big-boost-control",
     "source": "news",
-    "ts": 1792857947059,
+    "ts": 1792875584664,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.39,
+      "salience": 0.359,
       "articles": [
         {
           "title": "The Latest : Many states deciding control of the Senate are seeing a big boost in early voting",
@@ -12169,12 +12070,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_behind-democracy-ford",
     "source": "news",
-    "ts": 1792857947060,
+    "ts": 1792875584664,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.347,
+      "salience": 0.317,
       "articles": [
         {
           "title": "The Ford Foundation , one of the world largest grantmakers , will throw more weight behind democracy",
@@ -12210,147 +12111,54 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_2026-about-ashley",
+    "cid": "cand_news_campaign-colleague-collins",
     "source": "news",
-    "ts": 1792857947060,
+    "ts": 1792875584664,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.31,
+      "salience": 0.247,
       "articles": [
         {
-          "title": "Iowa 2026 Senate race : What to know about Josh Turek vs Ashley Hinson",
-          "url": "https://www.fox6now.com/news/iowa-2026-senate-josh-turek-ashley-hinson",
-          "domain": "fox6now.com",
-          "seendate": "2026-10-21T21:45:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/10/1280/720/ashley-hison-and-josh-turek.jpg?ve=1&tl=1"
+          "title": "Maine Sen . Collins enlists ex - Democratic colleague Manchin in campaign",
+          "url": "https://www.twincities.com/2026/10/21/election-2026-maine-senate-collins-manchin/",
+          "domain": "twincities.com",
+          "seendate": "2026-10-22T01:15:00Z",
+          "image": "https://www.twincities.com/wp-content/uploads/2026/10/Election_2_26_Maine_Senate_5538_-1.jpg"
         },
         {
-          "title": "Iowa 2026 Senate race : What to know about Josh Turek vs Ashley Hinson",
-          "url": "https://www.fox5dc.com/news/iowa-2026-senate-josh-turek-ashley-hinson",
-          "domain": "fox5dc.com",
-          "seendate": "2026-10-21T21:30:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/10/1280/720/ashley-hison-and-josh-turek.jpg?ve=1&tl=1"
+          "title": "Maine Sen . Collins enlists ex - Democratic colleague Manchin in campaign",
+          "url": "https://www.sun-sentinel.com/2026/10/21/election-2026-maine-senate-collins-manchin/",
+          "domain": "sun-sentinel.com",
+          "seendate": "2026-10-22T01:00:00Z",
+          "image": "https://www.sun-sentinel.com/wp-content/uploads/2026/10/Election_2_26_Maine_Senate_5538_-1.jpg"
         },
         {
-          "title": "Iowa 2026 Senate race : What to know about Josh Turek vs Ashley Hinson",
-          "url": "https://www.fox7austin.com/news/iowa-2026-senate-josh-turek-ashley-hinson",
-          "domain": "fox7austin.com",
-          "seendate": "2026-10-21T20:45:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/10/1280/720/ashley-hison-and-josh-turek.jpg?ve=1&tl=1"
+          "title": "Maine Sen . Collins enlists ex - Democratic colleague Manchin in campaign",
+          "url": "https://www.orlandosentinel.com/2026/10/21/election-2026-maine-senate-collins-manchin/",
+          "domain": "orlandosentinel.com",
+          "seendate": "2026-10-22T00:30:00Z",
+          "image": "https://www.orlandosentinel.com/wp-content/uploads/2026/10/Election_2_26_Maine_Senate_5538_-1.jpg"
         },
         {
-          "title": "Iowa 2026 Senate race : What to know about Josh Turek vs Ashley Hinson",
-          "url": "https://www.fox9.com/news/iowa-2026-senate-josh-turek-ashley-hinson",
-          "domain": "fox9.com",
-          "seendate": "2026-10-21T20:15:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/10/1280/720/ashley-hison-and-josh-turek.jpg?ve=1&tl=1"
+          "title": "Maine Sen . Collins enlists ex - Democratic colleague Manchin in campaign",
+          "url": "https://www.orlandosentinel.com/2026/10/21/election-2026-maine-senate-collins-manchin-2/",
+          "domain": "orlandosentinel.com",
+          "seendate": "2026-10-22T00:30:00Z",
+          "image": "https://www.orlandosentinel.com/wp-content/uploads/2026/10/Election_2_26_Maine_Senate_5538_-1_6020c3.jpg"
         },
         {
-          "title": "Iowa 2026 Senate race : What to know about Josh Turek vs Ashley Hinson",
-          "url": "https://www.fox2detroit.com/news/iowa-2026-senate-josh-turek-ashley-hinson",
-          "domain": "fox2detroit.com",
-          "seendate": "2026-10-21T17:30:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/10/1280/720/ashley-hison-and-josh-turek.jpg?ve=1&tl=1"
+          "title": "Maine Sen . Collins enlists ex - Democratic colleague Manchin in campaign",
+          "url": "https://www.bostonherald.com/2026/10/21/election-2026-maine-senate-collins-manchin/",
+          "domain": "bostonherald.com",
+          "seendate": "2026-10-21T23:00:00Z",
+          "image": "https://www.bostonherald.com/wp-content/uploads/2026/10/Election_2_26_Maine_Senate_5538_-1.jpg"
         }
       ]
     },
-    "title": "Iowa 2026 Senate race : What to know about Josh Turek vs Ashley Hinson",
-    "summary": "2026-10-21 fox6now.com: Iowa 2026 Senate race : What to know about Josh Turek vs Ashley Hinson\n2026-10-21 fox5dc.com: Iowa 2026 Senate race : What to know about Josh Turek vs Ashley Hinson\n2026-10-21 fox7austin.com: Iowa 2026 Senate race : What to know about Josh Turek vs Ashley Hinson\n2026-10-21 fox9.com: Iowa 2026 Senate race : What to know about Josh Turek vs Ashley Hinson\n2026-10-21 fox2detroit.com: Iowa 2026 Senate race : What to know about Josh Turek vs Ashley Hinson",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_2026-about-collins",
-    "source": "news",
-    "ts": 1792857947060,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.258,
-      "articles": [
-        {
-          "title": "Maine 2026 Senate race : What to know about Susan Collins vs . Troy Jackson",
-          "url": "https://www.fox2detroit.com/news/key-senate-race-maine-what-know",
-          "domain": "fox2detroit.com",
-          "seendate": "2026-10-21T22:15:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/10/1280/720/maine-senate-race.jpeg?ve=1&tl=1"
-        },
-        {
-          "title": "Maine 2026 Senate race : What to know about Susan Collins vs . Troy Jackson",
-          "url": "https://www.fox5dc.com/news/key-senate-race-maine-what-know",
-          "domain": "fox5dc.com",
-          "seendate": "2026-10-21T21:30:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/10/1280/720/maine-senate-race.jpeg?ve=1&tl=1"
-        },
-        {
-          "title": "Maine 2026 Senate race : What to know about Susan Collins vs . Troy Jackson",
-          "url": "https://www.fox7austin.com/news/key-senate-race-maine-what-know",
-          "domain": "fox7austin.com",
-          "seendate": "2026-10-21T20:45:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/10/1280/720/maine-senate-race.jpeg?ve=1&tl=1"
-        },
-        {
-          "title": "Maine 2026 Senate race : What to know about Susan Collins vs . Troy Jackson",
-          "url": "https://www.fox9.com/news/key-senate-race-maine-what-know",
-          "domain": "fox9.com",
-          "seendate": "2026-10-21T20:15:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/10/1280/720/maine-senate-race.jpeg?ve=1&tl=1"
-        }
-      ]
-    },
-    "title": "Maine 2026 Senate race : What to know about Susan Collins vs . Troy Jackson",
-    "summary": "2026-10-21 fox2detroit.com: Maine 2026 Senate race : What to know about Susan Collins vs . Troy Jackson\n2026-10-21 fox5dc.com: Maine 2026 Senate race : What to know about Susan Collins vs . Troy Jackson\n2026-10-21 fox7austin.com: Maine 2026 Senate race : What to know about Susan Collins vs . Troy Jackson\n2026-10-21 fox9.com: Maine 2026 Senate race : What to know about Susan Collins vs . Troy Jackson",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_2026-facts-fast",
-    "source": "news",
-    "ts": 1792857947059,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.227,
-      "articles": [
-        {
-          "title": "2026 In Review Fast Facts",
-          "url": "https://krdo.com/news/national-world/cnn-national/2026/10/21/2026-in-review-fast-facts/",
-          "domain": "krdo.com",
-          "seendate": "2026-10-22T02:00:00Z",
-          "image": "https://krdo.b-cdn.net/2026/01/KRDO13-Default-Image_2026-860x484.jpg"
-        },
-        {
-          "title": "2026 In Review Fast Facts",
-          "url": "https://kesq.com/news/national-world/cnn-national/2026/10/21/2026-in-review-fast-facts/",
-          "domain": "kesq.com",
-          "seendate": "2026-10-21T19:45:00Z",
-          "image": "https://kesq.b-cdn.net/2023/08/kesq-860x484.jpg"
-        },
-        {
-          "title": "2026 In Review Fast Facts - LocalNews8 . com",
-          "url": "https://localnews8.com/news/national-world/cnn-national/2026/10/21/2026-in-review-fast-facts/",
-          "domain": "localnews8.com",
-          "seendate": "2026-10-21T17:30:00Z",
-          "image": null
-        }
-      ]
-    },
-    "title": "2026 In Review Fast Facts",
-    "summary": "2026-10-22 krdo.com: 2026 In Review Fast Facts\n2026-10-21 kesq.com: 2026 In Review Fast Facts\n2026-10-21 localnews8.com: 2026 In Review Fast Facts - LocalNews8 . com",
+    "title": "Maine Sen . Collins enlists ex - Democratic colleague Manchin in campaign",
+    "summary": "2026-10-22 twincities.com: Maine Sen . Collins enlists ex - Democratic colleague Manchin in campaign\n2026-10-22 sun-sentinel.com: Maine Sen . Collins enlists ex - Democratic colleague Manchin in campaign\n2026-10-22 orlandosentinel.com: Maine Sen . Collins enlists ex - Democratic colleague Manchin in campaign\n2026-10-22 orlandosentinel.com: Maine Sen . Collins enlists ex - Democratic colleague Manchin in campaign\n2026-10-21 bostonherald.com: Maine Sen . Collins enlists ex - Democratic colleague Manchin in campaign",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
