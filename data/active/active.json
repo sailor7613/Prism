@@ -23,10 +23,10 @@
   "Accruals stay accruals.",
   "Prism sees it through Readings."
  ],
- "builtAt": "2026-10-24T17:23:33.749Z",
+ "builtAt": "2026-10-25T17:36:52.286Z",
  "errors": [
-  "GDELT iran: gave up: https://api.gdeltproject.org/api/v2/doc/doc?query=iran%20(oil%20OR%20tanker%20OR%20hormuz%20OR%20sanctions%20OR%20strike)&mode=timelinevol&format=json&timespan=90d",
-  "GDELT venezuela: gave up: https://api.gdeltproject.org/api/v2/doc/doc?query=venezuela%20(oil%20OR%20chevron%20OR%20pdvsa%20OR%20sanctions)&mode=timelinevol&format=json&timespan=90d"
+  "GDELT russia: gave up: https://api.gdeltproject.org/api/v2/doc/doc?query=russia%20(refinery%20OR%20urals%20OR%20%22oil%20exports%22%20OR%20tanker)&mode=timelinevol&format=json&timespan=90d",
+  "GDELT settlement: gave up: https://api.gdeltproject.org/api/v2/doc/doc?query=(oil%20OR%20crude)%20(yuan%20OR%20petrodollar%20OR%20%22dollar%20settlement%22%20OR%20%22non-dollar%22%20OR%20invoicing)&mode=timelinevol&format=json&timespan=90d"
  ],
  "realization": {
   "importsByOrigin": {
@@ -8549,7 +8549,7 @@
     }
    }
   },
-  "fetchedAt": "2026-10-24T17:20:52.848Z",
+  "fetchedAt": "2026-10-25T17:34:21.749Z",
   "column": "realization",
   "guard": "Flows do not score Z; they are the layer Z is scored from (PG01 §6.3.1).",
   "distillateImportsByOrigin": {
@@ -9484,12 +9484,9 @@
    "202607",
    "202608"
   ],
-  "fetchedAt": "2026-10-24T17:20:48.877Z",
+  "fetchedAt": "2026-10-25T17:34:18.058Z",
   "keyed": false,
   "errors": [
-   "Türkiye products 202512: HTTP 403",
-   "Türkiye products 202601: HTTP 403",
-   "Türkiye products 202602: HTTP 403",
    "Türkiye products 202603: HTTP 403",
    "Türkiye products 202604: HTTP 403",
    "Türkiye products 202605: HTTP 403",
@@ -22781,6 +22778,136 @@
     "cmd": "products",
     "kt": 3.6,
     "usdM": 3.7
+   },
+   {
+    "period": "2025-12",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Algeria",
+    "partnerCode": 12,
+    "cmd": "products",
+    "kt": 0,
+    "usdM": 0
+   },
+   {
+    "period": "2025-12",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Canada",
+    "partnerCode": 124,
+    "cmd": "products",
+    "kt": 0.1,
+    "usdM": 0.4
+   },
+   {
+    "period": "2025-12",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "China",
+    "partnerCode": 156,
+    "cmd": "products",
+    "kt": 0,
+    "usdM": 0.1
+   },
+   {
+    "period": "2025-12",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Iran",
+    "partnerCode": 364,
+    "cmd": "products",
+    "kt": 0.2,
+    "usdM": 0.2
+   },
+   {
+    "period": "2025-12",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Iraq",
+    "partnerCode": 368,
+    "cmd": "products",
+    "kt": 183.8,
+    "usdM": 60
+   },
+   {
+    "period": "2025-12",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Kazakhstan",
+    "partnerCode": 398,
+    "cmd": "products",
+    "kt": 231.6,
+    "usdM": 93.8
+   },
+   {
+    "period": "2025-12",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Mexico",
+    "partnerCode": 484,
+    "cmd": "products",
+    "kt": 0,
+    "usdM": 0
+   },
+   {
+    "period": "2025-12",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Qatar",
+    "partnerCode": 634,
+    "cmd": "products",
+    "kt": 3.6,
+    "usdM": 4
+   },
+   {
+    "period": "2025-12",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Russia",
+    "partnerCode": 643,
+    "cmd": "products",
+    "kt": 1436.4,
+    "usdM": 914.3
+   },
+   {
+    "period": "2025-12",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "Saudi Arabia",
+    "partnerCode": 682,
+    "cmd": "products",
+    "kt": 69.2,
+    "usdM": 45.3
+   },
+   {
+    "period": "2025-12",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "India",
+    "partnerCode": 699,
+    "cmd": "products",
+    "kt": 69.9,
+    "usdM": 49.7
+   },
+   {
+    "period": "2025-12",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "UAE",
+    "partnerCode": 784,
+    "cmd": "products",
+    "kt": 0.2,
+    "usdM": 0.3
+   },
+   {
+    "period": "2025-12",
+    "reporter": "Türkiye",
+    "reporterCode": 792,
+    "partner": "United States",
+    "partnerCode": 842,
+    "cmd": "products",
+    "kt": 2.9,
+    "usdM": 3.6
    }
   ]
  },
@@ -24724,7 +24851,19 @@
      ],
      [
       "2026-10-22",
-      2.8414
+      1.6146
+     ],
+     [
+      "2026-10-23",
+      1.2438
+     ],
+     [
+      "2026-10-24",
+      1.3952
+     ],
+     [
+      "2026-10-25",
+      1.2906
      ]
     ]
    },
@@ -25858,7 +25997,19 @@
      ],
      [
       "2026-10-22",
-      0.1824
+      0.1018
+     ],
+     [
+      "2026-10-23",
+      0.0765
+     ],
+     [
+      "2026-10-24",
+      0.1572
+     ],
+     [
+      "2026-10-25",
+      0.1124
      ]
     ]
    }
@@ -25870,7 +26021,7 @@
    "venezuela": "venezuela (oil OR chevron OR pdvsa OR sanctions)",
    "settlement": "(oil OR crude) (yuan OR petrodollar OR \"dollar settlement\" OR \"non-dollar\" OR invoicing)"
   },
-  "fetchedAt": "2026-10-24T17:23:33.744Z"
+  "fetchedAt": "2026-10-25T17:36:52.281Z"
  },
  "price": {
   "series": {
@@ -27650,7 +27801,7 @@
    }
   },
   "what": "The shadow: what the institutional stations read (PG01 §6.2c). Kept last.",
-  "fetchedAt": "2026-10-24T17:20:53.897Z",
+  "fetchedAt": "2026-10-25T17:34:22.917Z",
   "column": "price"
  }
 }
