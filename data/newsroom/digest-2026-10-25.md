@@ -1,6 +1,6 @@
 # Newsroom digest — 2026-10-25
 
-Register: 136 objects · this scan: 0 new, 0 seen again, 0 returned.
+Register: 137 objects · this scan: 1 new, 0 seen again, 0 returned.
 
 ## Queued for drafting (0)
 - (nothing cleared the bar)
@@ -12,7 +12,7 @@ Register: 136 objects · this scan: 0 new, 0 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- none
+- **Red flag laws : Where they are banned , passed in the US** — vote · voted · holder: ? · formed 2026-10-25 · 4 outlets (peak 4) · `obj_x_banned-flag-laws-passed`
 
 ## Watching (45)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
