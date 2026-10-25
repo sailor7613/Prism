@@ -1,9 +1,9 @@
 # Newsroom digest — 2026-10-25
 
-Register: 137 objects · this scan: 0 new, 1 seen again, 0 returned.
+Register: 138 objects · this scan: 1 new, 0 seen again, 0 returned.
 
-## Queued for drafting (0)
-- (nothing cleared the bar)
+## Queued for drafting (1)
+- **Senate Dems Seek Dismissal Of DOJ Alaska Election Lawsuit** — suit · sued · holder: the Justice Department · formed 2026-10-25 · 7 outlets (peak 7) · `obj_thejusti_alaska-dems-dismissal-doj`
 
 ## Permanence breaks (went silent while unresolved)
 - none today
@@ -12,7 +12,7 @@ Register: 137 objects · this scan: 0 new, 1 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- none
+- **Senate Dems Seek Dismissal Of DOJ Alaska Election Lawsuit** — suit · sued · holder: the Justice Department · formed 2026-10-25 · 7 outlets (peak 7) · `obj_thejusti_alaska-dems-dismissal-doj`
 
 ## Watching (45)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
