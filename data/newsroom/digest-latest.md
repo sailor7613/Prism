@@ -1,9 +1,9 @@
 # Newsroom digest — 2026-10-26
 
-Register: 140 objects · this scan: 2 new, 2 seen again, 0 returned.
+Register: 140 objects · this scan: 0 new, 1 seen again, 0 returned.
 
-## Queued for drafting (1)
-- **Blanche defends DOJ lawsuit blocking Alaska Senate results if Republican loses** — suit · sued · holder: the Justice Department · formed 2026-10-25 · 3 outlets (peak 3) · `obj_thejusti_alaska-blanche-blocking-defends`
+## Queued for drafting (0)
+- (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
 - **Supreme Court upholds pause on Trump anti - trans prison policy** — ruling · ruled · holder: a federal court · formed 2026-10-21 · 9 outlets (peak 9) · `obj_afederal_anti-court-pause-policy` · silent 5d after 2 scans
@@ -14,8 +14,7 @@ Register: 140 objects · this scan: 2 new, 2 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **Blanche defends DOJ lawsuit blocking Alaska Senate results if Republican loses** — suit · sued · holder: the Justice Department · formed 2026-10-25 · 3 outlets (peak 3) · `obj_thejusti_alaska-blanche-blocking-defends`
-- **Lula is declared winner of Brazil election as Bolsonaro rejects results** — vote · voted · holder: ? · formed 2026-10-26 · 5 outlets (peak 5) · `obj_x_bolsonaro-brazil-declared-election`
+- none
 
 ## Watching (45)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
