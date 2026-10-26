@@ -1,12 +1,14 @@
-# Newsroom digest — 2026-10-25
+# Newsroom digest — 2026-10-26
 
-Register: 138 objects · this scan: 0 new, 2 seen again, 0 returned.
+Register: 138 objects · this scan: 0 new, 0 seen again, 0 returned.
 
 ## Queued for drafting (0)
 - (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
-- none today
+- **Supreme Court upholds pause on Trump anti - trans prison policy** — ruling · ruled · holder: a federal court · formed 2026-10-21 · 9 outlets (peak 9) · `obj_afederal_anti-court-pause-policy` · silent 5d after 2 scans
+- **Appeals Court Unanimously Strikes Down California No Vigilantes Act On Federal Grounds** — ruling · ruled · holder: a federal court · formed 2026-10-21 · 10 outlets (peak 22) · `obj_afederal_act-appeals-california-court` · silent 5d after 2 scans
+- **Sentenced to death at 17 , at 68 , quilt artist receives solo museum exhibition** — indictment · charged · holder: ? · formed 2026-10-21 · 6 outlets (peak 7) · `obj_x_artist-death-exhibition-museum` · silent 5d after 2 scans
 
 ## Returned after a break
 - none today
