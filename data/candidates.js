@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-10-27T22:25:52.640Z · 15 legislative + 6 news (GDELT, 3d)
+// 2026-10-28T05:56:31.578Z · 15 legislative + 3 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1793139921583,
+    "ts": 1793166976488,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.748,
+      "salience": 0.747,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -262,11 +262,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1793139921583,
+    "ts": 1793166976488,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.739,
+      "salience": 0.737,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -519,11 +519,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1793139921583,
+    "ts": 1793166976488,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.703,
+      "salience": 0.701,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -776,11 +776,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1793139921583,
+    "ts": 1793166976488,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.695,
+      "salience": 0.693,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -1033,11 +1033,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1793139921582,
+    "ts": 1793166976487,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.633,
+      "salience": 0.631,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -1946,11 +1946,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1793139921582,
+    "ts": 1793166976487,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.628,
+      "salience": 0.627,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -3092,11 +3092,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1793139921583,
+    "ts": 1793166976488,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.591,
+      "salience": 0.59,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3620,11 +3620,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1793139921582,
+    "ts": 1793166976487,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.568,
+      "salience": 0.567,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4521,11 +4521,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1793139921582,
+    "ts": 1793166976488,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.375,
+      "salience": 0.374,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5420,11 +5420,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1793139921581,
+    "ts": 1793166976487,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.363,
+      "salience": 0.362,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6699,11 +6699,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1793139921583,
+    "ts": 1793166976488,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.283,
+      "salience": 0.281,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7619,11 +7619,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1793139921583,
+    "ts": 1793166976488,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.281,
+      "salience": 0.28,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -8529,11 +8529,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1793139921583,
+    "ts": 1793166976488,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.247,
+      "salience": 0.245,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9447,11 +9447,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1793139921582,
+    "ts": 1793166976487,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.203,
+      "salience": 0.202,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10327,11 +10327,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1793139921582,
+    "ts": 1793166976487,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.199,
+      "salience": 0.198,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11203,12 +11203,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_criticizes-midterm-obama",
     "source": "news",
-    "ts": 1793139952636,
+    "ts": 1793166991574,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.621,
+      "salience": 0.574,
       "articles": [
         {
           "title": "Obama Criticizes Trump , Ramaswamy In Midterm Rallies | NewsRadio WKCY",
@@ -11309,12 +11309,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_alaska-dems-dismissal",
     "source": "news",
-    "ts": 1793139952635,
+    "ts": 1793166991574,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.507,
+      "salience": 0.46,
       "articles": [
         {
           "title": "Senate Dems Seek Dismissal Of DOJ Alaska Election Lawsuit | NewsTalk WMEQ",
@@ -11380,12 +11380,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_arkansas-competitive-democrats",
     "source": "news",
-    "ts": 1793139952636,
+    "ts": 1793166991575,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.418,
+      "salience": 0.371,
       "articles": [
         {
           "title": "In Arkansas , Democrats see an opening at the edge of the competitive midterms map",
@@ -11433,163 +11433,6 @@ window.PRISM_CANDIDATES = [
     },
     "title": "In Arkansas , Democrats see an opening at the edge of the competitive midterms map",
     "summary": "2026-10-25 kalw.org: In Arkansas , Democrats see an opening at the edge of the competitive midterms map\n2026-10-25 knpr.org: In Arkansas , Democrats see an opening at the edge of the competitive midterms map\n2026-10-25 capeandislands.org: In Arkansas , Democrats see an opening at the edge of the competitive midterms map\n2026-10-25 wnyc.org: In Arkansas , Democrats see an opening at the edge of the competitive midterms map\n2026-10-25 houstonpublicmedia.org: In Arkansas , Democrats see an opening at the edge of the competitive midterms map\n2026-10-25 kpbs.org: In Arkansas , Democrats see an opening at the edge of the competitive midterms map",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_assails-cruelty-indecency",
-    "source": "news",
-    "ts": 1793139952635,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.364,
-      "articles": [
-        {
-          "title": "Obama , in Midwest , assails  cruelty  and indecency from Trump and his allies in the midterm campaign - WSVN 7News | Miami News , Weather , Sports",
-          "url": "https://wsvn.com/news/us-world/obama-rallying-ohio-michigan-voters/",
-          "domain": "wsvn.com",
-          "seendate": "2026-10-25T12:45:00Z",
-          "image": null
-        },
-        {
-          "title": "Obama , in Midwest , assails  cruelty  and indecency from Trump and his allies in the midterm campaign",
-          "url": "http://www.thegazette.com/news/national/obama-in-midwest-assails-cruelty-and-indecency-from-trump-and-his-allies-in-the-midterm/article_5481418e-2084-51ab-90ff-2ce489219d40.html",
-          "domain": "thegazette.com",
-          "seendate": "2026-10-25T03:30:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/thegazette.com/content/tncms/assets/v3/editorial/4/d5/4d564a82-70a2-5a6b-8e53-f106bda6b795/6ac3caaac609d.image.jpg?crop=3463%2C1818%2C0%2C248"
-        },
-        {
-          "title": "Obama assails  cruelty  and indecency from Trump ahead of midterm",
-          "url": "https://www.wmur.com/article/obama-assails-cruelty-and-indecency-from-trump-midterm/74238426",
-          "domain": "wmur.com",
-          "seendate": "2026-10-24T23:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/5e170992-7094-47ea-abb3-a3268883e90a.png?crop=1.00xw%3A0.751xh%3B0%2C0.0171xh"
-        },
-        {
-          "title": "Obama assails  cruelty  and indecency from Trump ahead of midterm",
-          "url": "https://www.wtae.com/article/obama-assails-cruelty-and-indecency-from-trump-midterm/74238426",
-          "domain": "wtae.com",
-          "seendate": "2026-10-24T23:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/5e170992-7094-47ea-abb3-a3268883e90a.png?crop=1.00xw%3A0.751xh%3B0%2C0.0171xh"
-        },
-        {
-          "title": "Obama assails  cruelty  and indecency from Trump ahead of midterm",
-          "url": "https://www.wlwt.com/article/obama-assails-cruelty-and-indecency-from-trump-midterm/74238426",
-          "domain": "wlwt.com",
-          "seendate": "2026-10-24T23:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/5e170992-7094-47ea-abb3-a3268883e90a.png?crop=1.00xw%3A0.751xh%3B0%2C0.0171xh"
-        }
-      ]
-    },
-    "title": "Obama assails  cruelty  and indecency from Trump ahead of midterm",
-    "summary": "2026-10-25 wsvn.com: Obama , in Midwest , assails  cruelty  and indecency from Trump and his allies in the midterm campaign - WSVN 7News | Miami News , Weather , Sports\n2026-10-25 thegazette.com: Obama , in Midwest , assails  cruelty  and indecency from Trump and his allies in the midterm campaign\n2026-10-24 wmur.com: Obama assails  cruelty  and indecency from Trump ahead of midterm\n2026-10-24 wtae.com: Obama assails  cruelty  and indecency from Trump ahead of midterm\n2026-10-24 wlwt.com: Obama assails  cruelty  and indecency from Trump ahead of midterm",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_acton-estranged-mother",
-    "source": "news",
-    "ts": 1793139952635,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.314,
-      "articles": [
-        {
-          "title": "Obama slams Ramaswamy ad using Acton estranged mother :  No office is worth stooping  ",
-          "url": "https://ktul.com/news/nation-world/obama-slams-ramaswamy-ad-using-actons-estranged-mother-no-office-is-worth-stooping",
-          "domain": "ktul.com",
-          "seendate": "2026-10-25T04:45:00Z",
-          "image": "https://ktul.com/resources/media2/16x9/3076/1320/0x106/90/3893fe75-bc23-4ff7-b039-9b4f6575a63e-GettyImages2301371050.jpg"
-        },
-        {
-          "title": "Obama slams Ramaswamy ad using Acton estranged mother :  No office is worth stooping  ",
-          "url": "https://myfox28columbus.com/news/nation-world/obama-slams-ramaswamy-ad-using-actons-estranged-mother-no-office-is-worth-stooping",
-          "domain": "myfox28columbus.com",
-          "seendate": "2026-10-25T04:45:00Z",
-          "image": "https://myfox28columbus.com/resources/media2/16x9/3076/1320/0x106/90/3893fe75-bc23-4ff7-b039-9b4f6575a63e-GettyImages2301371050.jpg"
-        },
-        {
-          "title": "Obama slams Ramaswamy ad using Acton estranged mother :  No office is worth stooping  ",
-          "url": "https://wset.com/news/nation-world/obama-slams-ramaswamy-ad-using-actons-estranged-mother-no-office-is-worth-stooping",
-          "domain": "wset.com",
-          "seendate": "2026-10-25T03:30:00Z",
-          "image": "https://wset.com/resources/media2/16x9/3076/1320/0x106/90/3893fe75-bc23-4ff7-b039-9b4f6575a63e-GettyImages2301371050.jpg"
-        },
-        {
-          "title": "Obama slams Ramaswamy ad using Acton estranged mother :  No office is worth stooping  ",
-          "url": "https://13wham.com/news/nation-world/obama-slams-ramaswamy-ad-using-actons-estranged-mother-no-office-is-worth-stooping",
-          "domain": "13wham.com",
-          "seendate": "2026-10-25T03:30:00Z",
-          "image": "https://13wham.com/resources/media2/16x9/3076/1320/0x106/90/3893fe75-bc23-4ff7-b039-9b4f6575a63e-GettyImages2301371050.jpg"
-        },
-        {
-          "title": "Obama slams Ramaswamy ad using Acton estranged mother :  No office is worth stooping  ",
-          "url": "https://nbc16.com/news/nation-world/obama-slams-ramaswamy-ad-using-actons-estranged-mother-no-office-is-worth-stooping",
-          "domain": "nbc16.com",
-          "seendate": "2026-10-25T03:30:00Z",
-          "image": "https://nbc16.com/resources/media2/16x9/3076/1320/0x106/90/3893fe75-bc23-4ff7-b039-9b4f6575a63e-GettyImages2301371050.jpg"
-        }
-      ]
-    },
-    "title": "Obama slams Ramaswamy ad using Acton estranged mother :  No office is worth stooping  ",
-    "summary": "2026-10-25 ktul.com: Obama slams Ramaswamy ad using Acton estranged mother :  No office is worth stooping  \n2026-10-25 myfox28columbus.com: Obama slams Ramaswamy ad using Acton estranged mother :  No office is worth stooping  \n2026-10-25 wset.com: Obama slams Ramaswamy ad using Acton estranged mother :  No office is worth stooping  \n2026-10-25 13wham.com: Obama slams Ramaswamy ad using Acton estranged mother :  No office is worth stooping  \n2026-10-25 nbc16.com: Obama slams Ramaswamy ad using Acton estranged mother :  No office is worth stooping  ",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_america-bolsonaro-brazil",
-    "source": "news",
-    "ts": 1793139952635,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.226,
-      "articles": [
-        {
-          "title": "Brazil faces a tense Lula vs Bolsonaro runoff with US influence over Latin America at stake",
-          "url": "https://mymotherlode.com/news/national/general-election/11250700/brazil-faces-a-tense-lula-vs-bolsonaro-runoff-with-us-influence-over-latin-america-at-stake.html",
-          "domain": "mymotherlode.com",
-          "seendate": "2026-10-25T08:15:00Z",
-          "image": "https://mymotherlode.com/wp-content/uploads/2026/10/AP_c7feb5f425a0445f9a5186a15333c42e_3ff70d9820.jpg"
-        },
-        {
-          "title": "Brazil faces a tense Lula vs Bolsonaro runoff with US influence over Latin America at stake",
-          "url": "https://www.news4jax.com/news/world/2026/10/25/brazil-faces-a-tense-lula-vs-bolsonaro-runoff-with-us-influence-over-latin-america-at-stake/",
-          "domain": "news4jax.com",
-          "seendate": "2026-10-25T05:30:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/6FQCCKS47NCCPGFBURZRQZGHZQ.jpg?api_key=news4jax_3f10b25586458189"
-        },
-        {
-          "title": "Brazil faces a tense Lula vs Bolsonaro runoff with US influence over Latin America at stake",
-          "url": "http://www.goskagit.com/news/world/brazil-faces-a-tense-lula-vs-bolsonaro-runoff-with-us-influence-over-latin-america-at/article_2cd94b2e-b39e-5672-a164-2a92b554026e.html",
-          "domain": "goskagit.com",
-          "seendate": "2026-10-25T05:30:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/goskagit.com/content/tncms/assets/v3/editorial/8/06/8063010f-f7a8-59d1-b621-c347c53d51c3/6add3616b1644.image.jpg?crop=1763%2C926%2C0%2C124"
-        }
-      ]
-    },
-    "title": "Brazil faces a tense Lula vs Bolsonaro runoff with US influence over Latin America at stake",
-    "summary": "2026-10-25 mymotherlode.com: Brazil faces a tense Lula vs Bolsonaro runoff with US influence over Latin America at stake\n2026-10-25 news4jax.com: Brazil faces a tense Lula vs Bolsonaro runoff with US influence over Latin America at stake\n2026-10-25 goskagit.com: Brazil faces a tense Lula vs Bolsonaro runoff with US influence over Latin America at stake",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,

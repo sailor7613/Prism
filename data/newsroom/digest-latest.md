@@ -1,14 +1,12 @@
-# Newsroom digest — 2026-10-27
+# Newsroom digest — 2026-10-28
 
-Register: 140 objects · this scan: 0 new, 1 seen again, 0 returned.
+Register: 140 objects · this scan: 0 new, 0 seen again, 0 returned.
 
 ## Queued for drafting (0)
 - (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
-- **Trumpadmin asks Supreme Court to lift halt on Big Bend border wall** — ruling · ruled · holder: a federal court · formed 2026-10-21 · 3 outlets (peak 5) · `obj_afederal_asks-bend-big-border` · silent 5d after 2 scans
-- **Federal judge orders Trump to sit for deposition in his defamation lawsuit against BBC** — suit · sued · holder: the President · formed 2026-10-22 · 29 outlets (peak 29) · `obj_thepresi_against-bbc-defamation-deposition` · silent 5d after 2 scans
-- **DOJ : Virginia state Sen . L . Louise Lucas charged with drug trafficking , money laundering** — indictment · charged · holder: the Justice Department · formed 2026-10-22 · 4 outlets (peak 9) · `obj_thejusti_charged-doj-drug-laundering` · silent 5d after 2 scans
+- none today
 
 ## Returned after a break
 - none today
