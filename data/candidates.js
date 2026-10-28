@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-10-28T13:14:23.241Z · 15 legislative + 4 news (GDELT, 3d)
+// 2026-10-28T20:23:46.543Z · 15 legislative + 4 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1793193245673,
+    "ts": 1793218992498,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.745,
+      "salience": 0.744,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -262,11 +262,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1793193245673,
+    "ts": 1793218992498,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.736,
+      "salience": 0.734,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -519,11 +519,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1793193245673,
+    "ts": 1793218992498,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.7,
+      "salience": 0.699,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -776,11 +776,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1793193245673,
+    "ts": 1793218992498,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.692,
+      "salience": 0.691,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -1033,11 +1033,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1793193245672,
+    "ts": 1793218992497,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.63,
+      "salience": 0.629,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -1946,11 +1946,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1793193245672,
+    "ts": 1793218992497,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.626,
+      "salience": 0.624,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -3092,11 +3092,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1793193245673,
+    "ts": 1793218992498,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.588,
+      "salience": 0.587,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3620,11 +3620,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1793193245673,
+    "ts": 1793218992497,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.565,
+      "salience": 0.564,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4521,11 +4521,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1793193245673,
+    "ts": 1793218992497,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.373,
+      "salience": 0.371,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5420,11 +5420,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1793193245672,
+    "ts": 1793218992497,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.36,
+      "salience": 0.359,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6699,11 +6699,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1793193245673,
+    "ts": 1793218992498,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.28,
+      "salience": 0.279,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7619,11 +7619,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1793193245673,
+    "ts": 1793218992498,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.279,
+      "salience": 0.277,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -8529,11 +8529,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1793193245673,
+    "ts": 1793218992498,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.244,
+      "salience": 0.243,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9447,11 +9447,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1793193245672,
+    "ts": 1793218992497,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.201,
+      "salience": 0.199,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10327,11 +10327,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1793193245672,
+    "ts": 1793218992497,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.196,
+      "salience": 0.195,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11201,14 +11201,71 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_companies-diesel-imports",
+    "cid": "cand_news_blasts-house-needed",
     "source": "news",
-    "ts": 1793193263237,
+    "ts": 1793219026539,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.47,
+      "salience": 0.48,
+      "articles": [
+        {
+          "title": "Trump says White House needed repainting and repairs , blasts Obama over upkeep",
+          "url": "https://wcti12.com/news/nation-world/president-donald-trump-says-white-house-needed-repainting-and-repairs-blasts-barack-obama-over-upkeep-ballroom-the-cheesecake-factories-rose-garden-north-portico-east-wing-x-socials-menu",
+          "domain": "wcti12.com",
+          "seendate": "2026-10-27T05:15:00Z",
+          "image": "https://wcti12.com/resources/media2/16x9/8076/1320/0x421/90/71478b14-769d-43bc-ab00-6f6527fa6c11-GettyImages2301181302.jpg"
+        },
+        {
+          "title": "Trump says White House needed repainting and repairs , blasts Obama over upkeep",
+          "url": "https://fox17.com/news/nation-world/president-donald-trump-says-white-house-needed-repainting-and-repairs-blasts-barack-obama-over-upkeep-ballroom-the-cheesecake-factories-rose-garden-north-portico-east-wing-x-socials-menu",
+          "domain": "fox17.com",
+          "seendate": "2026-10-27T05:15:00Z",
+          "image": "https://fox17.com/resources/media2/16x9/8076/1320/0x421/90/71478b14-769d-43bc-ab00-6f6527fa6c11-GettyImages2301181302.jpg"
+        },
+        {
+          "title": "Trump says White House needed repainting and repairs , blasts Obama over upkeep",
+          "url": "https://fox56.com/news/nation-world/president-donald-trump-says-white-house-needed-repainting-and-repairs-blasts-barack-obama-over-upkeep-ballroom-the-cheesecake-factories-rose-garden-north-portico-east-wing-x-socials-menu",
+          "domain": "fox56.com",
+          "seendate": "2026-10-27T05:15:00Z",
+          "image": "https://fox56.com/resources/media2/16x9/8076/1320/0x421/90/71478b14-769d-43bc-ab00-6f6527fa6c11-GettyImages2301181302.jpg"
+        },
+        {
+          "title": "Trump says White House needed repainting and repairs , blasts Obama over upkeep",
+          "url": "https://ktxs.com/news/nation-world/president-donald-trump-says-white-house-needed-repainting-and-repairs-blasts-barack-obama-over-upkeep-ballroom-the-cheesecake-factories-rose-garden-north-portico-east-wing-x-socials-menu",
+          "domain": "ktxs.com",
+          "seendate": "2026-10-27T05:15:00Z",
+          "image": "https://ktxs.com/resources/media2/16x9/8076/1320/0x421/90/71478b14-769d-43bc-ab00-6f6527fa6c11-GettyImages2301181302.jpg"
+        },
+        {
+          "title": "Trump says White House needed repainting and repairs , blasts Obama over upkeep",
+          "url": "https://wgxa.tv/news/nation-world/president-donald-trump-says-white-house-needed-repainting-and-repairs-blasts-barack-obama-over-upkeep-ballroom-the-cheesecake-factories-rose-garden-north-portico-east-wing-x-socials-menu",
+          "domain": "wgxa.tv",
+          "seendate": "2026-10-27T05:15:00Z",
+          "image": "https://wgxa.tv/resources/media2/16x9/8076/1320/0x421/90/71478b14-769d-43bc-ab00-6f6527fa6c11-GettyImages2301181302.jpg"
+        }
+      ]
+    },
+    "title": "Trump says White House needed repainting and repairs , blasts Obama over upkeep",
+    "summary": "2026-10-27 wcti12.com: Trump says White House needed repainting and repairs , blasts Obama over upkeep\n2026-10-27 fox17.com: Trump says White House needed repainting and repairs , blasts Obama over upkeep\n2026-10-27 fox56.com: Trump says White House needed repainting and repairs , blasts Obama over upkeep\n2026-10-27 ktxs.com: Trump says White House needed repainting and repairs , blasts Obama over upkeep\n2026-10-27 wgxa.tv: Trump says White House needed repainting and repairs , blasts Obama over upkeep",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_companies-diesel-imports",
+    "source": "news",
+    "ts": 1793219026539,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.425,
       "articles": [
         {
           "title": "Oil Companies Warned Over Russian Diesel Imports | Newstalk 1400 , 104 . 5 , and 105 . 9 WJMX",
@@ -11251,85 +11308,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_alaska-dems-dismissal",
-    "source": "news",
-    "ts": 1793193263237,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.415,
-      "articles": [
-        {
-          "title": "Senate Dems Seek Dismissal Of DOJ Alaska Election Lawsuit | NewsTalk WMEQ",
-          "url": "https://wmeq.iheart.com/content/2026-10-25-senate-dems-seek-dismissal-of-dojs-alaska-election-lawsuit/",
-          "domain": "wmeq.iheart.com",
-          "seendate": "2026-10-25T18:00:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/68cb8baa238a0f0a18c05aee?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Senate Dems Seek Dismissal Of DOJ Alaska Election Lawsuit",
-          "url": "https://720thevoice.iheart.com/content/2026-10-25-senate-dems-seek-dismissal-of-dojs-alaska-election-lawsuit/",
-          "domain": "720thevoice.iheart.com",
-          "seendate": "2026-10-25T18:00:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/68cb8baa238a0f0a18c05aee?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Senate Dems Seek Dismissal Of DOJ Alaska Election Lawsuit",
-          "url": "https://newsradio1290wtks.iheart.com/content/2026-10-25-senate-dems-seek-dismissal-of-dojs-alaska-election-lawsuit/",
-          "domain": "newsradio1290wtks.iheart.com",
-          "seendate": "2026-10-25T18:00:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/68cb8baa238a0f0a18c05aee?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Senate Dems Seek Dismissal Of DOJ Alaska Election Lawsuit",
-          "url": "https://1190kex.iheart.com/content/2026-10-25-senate-dems-seek-dismissal-of-dojs-alaska-election-lawsuit/",
-          "domain": "1190kex.iheart.com",
-          "seendate": "2026-10-25T18:00:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/68cb8baa238a0f0a18c05aee?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Senate Dems Seek Dismissal Of DOJ Alaska Election Lawsuit",
-          "url": "https://newstalk1230.iheart.com/content/2026-10-25-senate-dems-seek-dismissal-of-dojs-alaska-election-lawsuit/",
-          "domain": "newstalk1230.iheart.com",
-          "seendate": "2026-10-25T18:00:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/68cb8baa238a0f0a18c05aee?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Senate Dems Seek Dismissal Of DOJ Alaska Election Lawsuit",
-          "url": "https://650keni.iheart.com/content/2026-10-25-senate-dems-seek-dismissal-of-dojs-alaska-election-lawsuit/",
-          "domain": "650keni.iheart.com",
-          "seendate": "2026-10-25T18:00:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/68cb8baa238a0f0a18c05aee?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Senate Dems Seek Dismissal Of DOJ Alaska Election Lawsuit",
-          "url": "https://wtag.iheart.com/content/2026-10-25-senate-dems-seek-dismissal-of-dojs-alaska-election-lawsuit/",
-          "domain": "wtag.iheart.com",
-          "seendate": "2026-10-25T18:00:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/68cb8baa238a0f0a18c05aee?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        }
-      ]
-    },
-    "title": "Senate Dems Seek Dismissal Of DOJ Alaska Election Lawsuit",
-    "summary": "2026-10-25 wmeq.iheart.com: Senate Dems Seek Dismissal Of DOJ Alaska Election Lawsuit | NewsTalk WMEQ\n2026-10-25 720thevoice.iheart.com: Senate Dems Seek Dismissal Of DOJ Alaska Election Lawsuit\n2026-10-25 newsradio1290wtks.iheart.com: Senate Dems Seek Dismissal Of DOJ Alaska Election Lawsuit\n2026-10-25 1190kex.iheart.com: Senate Dems Seek Dismissal Of DOJ Alaska Election Lawsuit\n2026-10-25 newstalk1230.iheart.com: Senate Dems Seek Dismissal Of DOJ Alaska Election Lawsuit\n2026-10-25 650keni.iheart.com: Senate Dems Seek Dismissal Of DOJ Alaska Election Lawsuit",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_ainsley-earhardt-florida",
     "source": "news",
-    "ts": 1793193263237,
+    "ts": 1793219026540,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.333,
+      "salience": 0.288,
       "articles": [
         {
           "title": "Sean Hannity And Ainsley Earhardt Tie The Knot In Florida",
@@ -11372,40 +11358,47 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_alaska-blanche-blocking",
+    "cid": "cand_news_attacks-democrats-medicaid",
     "source": "news",
-    "ts": 1793193263237,
+    "ts": 1793219026540,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.278,
+      "salience": 0.288,
       "articles": [
         {
-          "title": "Blanche defends DOJ lawsuit blocking Alaska Senate results if Republican loses",
-          "url": "https://www.krcu.org/2026-10-25/blanche-defends-doj-lawsuit-blocking-alaska-senate-results-if-republican-loses",
-          "domain": "krcu.org",
+          "title": "Republicans Struggle On Democrats Medicaid Attacks",
+          "url": "https://ktok.iheart.com/content/2026-10-26-republicans-struggle-on-democrats-medicaid-attacks/",
+          "domain": "ktok.iheart.com",
           "seendate": "2026-10-26T07:15:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/ce/4f/f29bb039483ea9e51572e8f660d8/ap26294709681244.jpg"
+          "image": "https://i.iheart.com/v3/re/assets.getty/6adedd18a079d731c06005d7?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "Blanche defends DOJ lawsuit blocking Alaska Senate results if Republican loses",
-          "url": "https://www.wncw.org/2026-10-25/blanche-defends-doj-lawsuit-blocking-alaska-senate-results-if-republican-loses",
-          "domain": "wncw.org",
-          "seendate": "2026-10-25T19:15:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/ce/4f/f29bb039483ea9e51572e8f660d8/ap26294709681244.jpg"
+          "title": "Republicans Struggle On Democrats Medicaid Attacks",
+          "url": "https://wsfcam.iheart.com/content/2026-10-26-republicans-struggle-on-democrats-medicaid-attacks/",
+          "domain": "wsfcam.iheart.com",
+          "seendate": "2026-10-26T07:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6adedd18a079d731c06005d7?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "Blanche defends DOJ lawsuit blocking Alaska Senate results if Republican loses",
-          "url": "https://www.kunr.org/us-headlines/2026-10-25/blanche-defends-doj-lawsuit-blocking-alaska-senate-results-if-republican-loses",
-          "domain": "kunr.org",
-          "seendate": "2026-10-25T19:15:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/ce/4f/f29bb039483ea9e51572e8f660d8/ap26294709681244.jpg"
+          "title": "Republicans Struggle On Democrats Medicaid Attacks | KFYR 550 AM / 99 . 7 FM",
+          "url": "https://kfyr.iheart.com/content/2026-10-26-republicans-struggle-on-democrats-medicaid-attacks/",
+          "domain": "kfyr.iheart.com",
+          "seendate": "2026-10-26T07:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6adedd18a079d731c06005d7?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Republicans Struggle On Democrats Medicaid Attacks",
+          "url": "https://knst.iheart.com/content/2026-10-26-republicans-struggle-on-democrats-medicaid-attacks/",
+          "domain": "knst.iheart.com",
+          "seendate": "2026-10-26T07:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6adedd18a079d731c06005d7?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         }
       ]
     },
-    "title": "Blanche defends DOJ lawsuit blocking Alaska Senate results if Republican loses",
-    "summary": "2026-10-26 krcu.org: Blanche defends DOJ lawsuit blocking Alaska Senate results if Republican loses\n2026-10-25 wncw.org: Blanche defends DOJ lawsuit blocking Alaska Senate results if Republican loses\n2026-10-25 kunr.org: Blanche defends DOJ lawsuit blocking Alaska Senate results if Republican loses",
+    "title": "Republicans Struggle On Democrats Medicaid Attacks",
+    "summary": "2026-10-26 ktok.iheart.com: Republicans Struggle On Democrats Medicaid Attacks\n2026-10-26 wsfcam.iheart.com: Republicans Struggle On Democrats Medicaid Attacks\n2026-10-26 kfyr.iheart.com: Republicans Struggle On Democrats Medicaid Attacks | KFYR 550 AM / 99 . 7 FM\n2026-10-26 knst.iheart.com: Republicans Struggle On Democrats Medicaid Attacks",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
