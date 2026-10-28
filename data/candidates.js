@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-10-28T05:56:31.578Z · 15 legislative + 3 news (GDELT, 3d)
+// 2026-10-28T13:14:23.241Z · 15 legislative + 4 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1793166976488,
+    "ts": 1793193245673,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.747,
+      "salience": 0.745,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -262,11 +262,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1793166976488,
+    "ts": 1793193245673,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.737,
+      "salience": 0.736,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -519,11 +519,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1793166976488,
+    "ts": 1793193245673,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.701,
+      "salience": 0.7,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -776,11 +776,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1793166976488,
+    "ts": 1793193245673,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.693,
+      "salience": 0.692,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -1033,11 +1033,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1793166976487,
+    "ts": 1793193245672,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.631,
+      "salience": 0.63,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -1946,11 +1946,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1793166976487,
+    "ts": 1793193245672,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.627,
+      "salience": 0.626,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -3092,11 +3092,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1793166976488,
+    "ts": 1793193245673,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.59,
+      "salience": 0.588,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3620,11 +3620,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1793166976487,
+    "ts": 1793193245673,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.567,
+      "salience": 0.565,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4521,11 +4521,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1793166976488,
+    "ts": 1793193245673,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.374,
+      "salience": 0.373,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5420,11 +5420,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1793166976487,
+    "ts": 1793193245672,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.362,
+      "salience": 0.36,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6699,11 +6699,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1793166976488,
+    "ts": 1793193245673,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.281,
+      "salience": 0.28,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7619,11 +7619,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1793166976488,
+    "ts": 1793193245673,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.28,
+      "salience": 0.279,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -8529,11 +8529,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1793166976488,
+    "ts": 1793193245673,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.245,
+      "salience": 0.244,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9447,11 +9447,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1793166976487,
+    "ts": 1793193245672,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.202,
+      "salience": 0.201,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10327,11 +10327,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1793166976487,
+    "ts": 1793193245672,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.198,
+      "salience": 0.196,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11201,103 +11201,47 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_criticizes-midterm-obama",
+    "cid": "cand_news_companies-diesel-imports",
     "source": "news",
-    "ts": 1793166991574,
+    "ts": 1793193263237,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.574,
+      "salience": 0.47,
       "articles": [
         {
-          "title": "Obama Criticizes Trump , Ramaswamy In Midterm Rallies | NewsRadio WKCY",
-          "url": "https://newsradiowkcy.iheart.com/content/2026-10-25-obama-criticizes-trump-ramaswamy-in-midterm-rallies/",
-          "domain": "newsradiowkcy.iheart.com",
-          "seendate": "2026-10-25T09:45:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6add86316a8b45bbf7044d36?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "Oil Companies Warned Over Russian Diesel Imports | Newstalk 1400 , 104 . 5 , and 105 . 9 WJMX",
+          "url": "https://newstalk1400online.iheart.com/content/2026-10-27-oil-companies-warned-over-russian-diesel-imports/",
+          "domain": "newstalk1400online.iheart.com",
+          "seendate": "2026-10-27T05:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6ae0096c6e6dc8463e48157e?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "Obama Criticizes Trump , Ramaswamy In Midterm Rallies",
-          "url": "https://wrno.iheart.com/content/2026-10-25-obama-criticizes-trump-ramaswamy-in-midterm-rallies/",
-          "domain": "wrno.iheart.com",
-          "seendate": "2026-10-25T09:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6add86316a8b45bbf7044d36?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "Oil Companies Warned Over Russian Diesel Imports",
+          "url": "https://woc1420.iheart.com/content/2026-10-27-oil-companies-warned-over-russian-diesel-imports/",
+          "domain": "woc1420.iheart.com",
+          "seendate": "2026-10-27T05:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6ae0096c6e6dc8463e48157e?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "Obama Criticizes Trump , Ramaswamy In Midterm Rallies | WJBO Newsradio 1150 AM & 98 . 7 FM",
-          "url": "https://wjbo.iheart.com/content/2026-10-25-obama-criticizes-trump-ramaswamy-in-midterm-rallies/",
-          "domain": "wjbo.iheart.com",
-          "seendate": "2026-10-25T09:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6add86316a8b45bbf7044d36?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "Oil Companies Warned Over Russian Diesel Imports",
+          "url": "https://newsradio1170.iheart.com/content/2026-10-27-oil-companies-warned-over-russian-diesel-imports/",
+          "domain": "newsradio1170.iheart.com",
+          "seendate": "2026-10-27T05:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6ae0096c6e6dc8463e48157e?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "Obama Criticizes Trump , Ramaswamy In Midterm Rallies | Talk Radio 105 . 9",
-          "url": "https://knrs.iheart.com/content/2026-10-25-obama-criticizes-trump-ramaswamy-in-midterm-rallies/",
-          "domain": "knrs.iheart.com",
-          "seendate": "2026-10-25T09:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6add86316a8b45bbf7044d36?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Obama Criticizes Trump , Ramaswamy In Midterm Rallies",
-          "url": "https://whyn.iheart.com/content/2026-10-25-obama-criticizes-trump-ramaswamy-in-midterm-rallies/",
-          "domain": "whyn.iheart.com",
-          "seendate": "2026-10-25T08:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6add86316a8b45bbf7044d36?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Obama Criticizes Trump , Ramaswamy In Midterm Rallies | NewsTalk WMEQ",
-          "url": "https://wmeq.iheart.com/content/2026-10-25-obama-criticizes-trump-ramaswamy-in-midterm-rallies/",
-          "domain": "wmeq.iheart.com",
-          "seendate": "2026-10-25T08:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6add86316a8b45bbf7044d36?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Obama Criticizes Trump , Ramaswamy In Midterm Rallies",
-          "url": "https://wonw1280.iheart.com/content/2026-10-25-obama-criticizes-trump-ramaswamy-in-midterm-rallies/",
-          "domain": "wonw1280.iheart.com",
-          "seendate": "2026-10-25T08:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6add86316a8b45bbf7044d36?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Obama Criticizes Trump , Ramaswamy In Midterm Rallies",
-          "url": "https://1190kex.iheart.com/content/2026-10-25-obama-criticizes-trump-ramaswamy-in-midterm-rallies/",
-          "domain": "1190kex.iheart.com",
-          "seendate": "2026-10-25T08:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6add86316a8b45bbf7044d36?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Obama Criticizes Trump , Ramaswamy In Midterm Rallies",
-          "url": "https://600wmtradio.iheart.com/content/2026-10-25-obama-criticizes-trump-ramaswamy-in-midterm-rallies/",
-          "domain": "600wmtradio.iheart.com",
-          "seendate": "2026-10-25T08:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6add86316a8b45bbf7044d36?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Obama Criticizes Trump , Ramaswamy In Midterm Rallies | KFYR 550 AM / 99 . 7 FM",
-          "url": "https://kfyr.iheart.com/content/2026-10-25-obama-criticizes-trump-ramaswamy-in-midterm-rallies/",
-          "domain": "kfyr.iheart.com",
-          "seendate": "2026-10-25T08:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6add86316a8b45bbf7044d36?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Obama Criticizes Trump , Ramaswamy In Midterm Rallies | Newsradio WFLA Orlando",
-          "url": "https://wflaorlando.iheart.com/content/2026-10-25-obama-criticizes-trump-ramaswamy-in-midterm-rallies/",
-          "domain": "wflaorlando.iheart.com",
-          "seendate": "2026-10-25T08:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6add86316a8b45bbf7044d36?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Obama Criticizes Trump , Ramaswamy In Midterm Rallies",
-          "url": "https://khvhradio.iheart.com/content/2026-10-25-obama-criticizes-trump-ramaswamy-in-midterm-rallies/",
-          "domain": "khvhradio.iheart.com",
-          "seendate": "2026-10-25T08:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6add86316a8b45bbf7044d36?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+          "title": "Oil Companies Warned Over Russian Diesel Imports",
+          "url": "https://wccfradio.iheart.com/content/2026-10-27-oil-companies-warned-over-russian-diesel-imports/",
+          "domain": "wccfradio.iheart.com",
+          "seendate": "2026-10-27T05:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6ae0096c6e6dc8463e48157e?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         }
       ]
     },
-    "title": "Obama Criticizes Trump , Ramaswamy In Midterm Rallies",
-    "summary": "2026-10-25 newsradiowkcy.iheart.com: Obama Criticizes Trump , Ramaswamy In Midterm Rallies | NewsRadio WKCY\n2026-10-25 wrno.iheart.com: Obama Criticizes Trump , Ramaswamy In Midterm Rallies\n2026-10-25 wjbo.iheart.com: Obama Criticizes Trump , Ramaswamy In Midterm Rallies | WJBO Newsradio 1150 AM & 98 . 7 FM\n2026-10-25 knrs.iheart.com: Obama Criticizes Trump , Ramaswamy In Midterm Rallies | Talk Radio 105 . 9\n2026-10-25 whyn.iheart.com: Obama Criticizes Trump , Ramaswamy In Midterm Rallies\n2026-10-25 wmeq.iheart.com: Obama Criticizes Trump , Ramaswamy In Midterm Rallies | NewsTalk WMEQ",
+    "title": "Oil Companies Warned Over Russian Diesel Imports",
+    "summary": "2026-10-27 newstalk1400online.iheart.com: Oil Companies Warned Over Russian Diesel Imports | Newstalk 1400 , 104 . 5 , and 105 . 9 WJMX\n2026-10-27 woc1420.iheart.com: Oil Companies Warned Over Russian Diesel Imports\n2026-10-27 newsradio1170.iheart.com: Oil Companies Warned Over Russian Diesel Imports\n2026-10-27 wccfradio.iheart.com: Oil Companies Warned Over Russian Diesel Imports",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -11309,12 +11253,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_alaska-dems-dismissal",
     "source": "news",
-    "ts": 1793166991574,
+    "ts": 1793193263237,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.46,
+      "salience": 0.415,
       "articles": [
         {
           "title": "Senate Dems Seek Dismissal Of DOJ Alaska Election Lawsuit | NewsTalk WMEQ",
@@ -11378,61 +11322,90 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_arkansas-competitive-democrats",
+    "cid": "cand_news_ainsley-earhardt-florida",
     "source": "news",
-    "ts": 1793166991575,
+    "ts": 1793193263237,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.371,
+      "salience": 0.333,
       "articles": [
         {
-          "title": "In Arkansas , Democrats see an opening at the edge of the competitive midterms map",
-          "url": "https://www.kalw.org/npr-news/2026-10-25/in-arkansas-democrats-see-an-opening-at-the-edge-of-the-competitive-midterms-map",
-          "domain": "kalw.org",
-          "seendate": "2026-10-25T12:30:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/3f/ae/c43cf9cb45db9916b6b2ab75bd3d/hallie-shoffner-hope-campaign-stop.jpeg"
+          "title": "Sean Hannity And Ainsley Earhardt Tie The Knot In Florida",
+          "url": "https://knst.iheart.com/content/2026-10-26-sean-hannity-and-ainsley-earhardt-tie-the-knot-in-florida/",
+          "domain": "knst.iheart.com",
+          "seendate": "2026-10-26T07:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6adef2a20bc03b06a2b9370f?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "In Arkansas , Democrats see an opening at the edge of the competitive midterms map",
-          "url": "https://knpr.org/npr/2026-10-25/in-arkansas-democrats-see-an-opening-at-the-edge-of-the-competitive-midterms-map",
-          "domain": "knpr.org",
-          "seendate": "2026-10-25T11:00:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/3f/ae/c43cf9cb45db9916b6b2ab75bd3d/hallie-shoffner-hope-campaign-stop.jpeg"
+          "title": "Sean Hannity And Ainsley Earhardt Tie The Knot In Florida",
+          "url": "https://ktok.iheart.com/content/2026-10-26-sean-hannity-and-ainsley-earhardt-tie-the-knot-in-florida/",
+          "domain": "ktok.iheart.com",
+          "seendate": "2026-10-26T07:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6adef2a20bc03b06a2b9370f?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "In Arkansas , Democrats see an opening at the edge of the competitive midterms map",
-          "url": "https://www.capeandislands.org/2026-10-25/in-arkansas-democrats-see-an-opening-at-the-edge-of-the-competitive-midterms-map",
-          "domain": "capeandislands.org",
-          "seendate": "2026-10-25T11:00:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/3f/ae/c43cf9cb45db9916b6b2ab75bd3d/hallie-shoffner-hope-campaign-stop.jpeg"
+          "title": "Sean Hannity And Ainsley Earhardt Tie The Knot In Florida",
+          "url": "https://wsfcam.iheart.com/content/2026-10-26-sean-hannity-and-ainsley-earhardt-tie-the-knot-in-florida/",
+          "domain": "wsfcam.iheart.com",
+          "seendate": "2026-10-26T07:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6adef2a20bc03b06a2b9370f?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "In Arkansas , Democrats see an opening at the edge of the competitive midterms map",
-          "url": "https://wnyc.org/npr/nx-s1-6009402",
-          "domain": "wnyc.org",
-          "seendate": "2026-10-25T10:30:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/3f/ae/c43cf9cb45db9916b6b2ab75bd3d/hallie-shoffner-hope-campaign-stop.jpeg"
-        },
-        {
-          "title": "In Arkansas , Democrats see an opening at the edge of the competitive midterms map",
-          "url": "https://www.houstonpublicmedia.org/npr/2026/10/25/nx-s1-6009402/in-arkansas-democrats-see-an-opening-at-the-edge-of-the-competitive-midterms-map/",
-          "domain": "houstonpublicmedia.org",
-          "seendate": "2026-10-25T10:15:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/3f/ae/c43cf9cb45db9916b6b2ab75bd3d/hallie-shoffner-hope-campaign-stop.jpeg"
-        },
-        {
-          "title": "In Arkansas , Democrats see an opening at the edge of the competitive midterms map",
-          "url": "https://www.kpbs.org/news/national/2026/10/25/in-arkansas-democrats-see-an-opening-at-the-edge-of-the-competitive-midterms-map",
-          "domain": "kpbs.org",
-          "seendate": "2026-10-25T10:15:00Z",
-          "image": "https://npr-brightspot.s3.amazonaws.com/3f/ae/c43cf9cb45db9916b6b2ab75bd3d/hallie-shoffner-hope-campaign-stop.jpeg"
+          "title": "Sean Hannity And Ainsley Earhardt Tie The Knot In Florida",
+          "url": "https://kfyr.iheart.com/content/2026-10-26-sean-hannity-and-ainsley-earhardt-tie-the-knot-in-florida/",
+          "domain": "kfyr.iheart.com",
+          "seendate": "2026-10-26T07:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6adef2a20bc03b06a2b9370f?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         }
       ]
     },
-    "title": "In Arkansas , Democrats see an opening at the edge of the competitive midterms map",
-    "summary": "2026-10-25 kalw.org: In Arkansas , Democrats see an opening at the edge of the competitive midterms map\n2026-10-25 knpr.org: In Arkansas , Democrats see an opening at the edge of the competitive midterms map\n2026-10-25 capeandislands.org: In Arkansas , Democrats see an opening at the edge of the competitive midterms map\n2026-10-25 wnyc.org: In Arkansas , Democrats see an opening at the edge of the competitive midterms map\n2026-10-25 houstonpublicmedia.org: In Arkansas , Democrats see an opening at the edge of the competitive midterms map\n2026-10-25 kpbs.org: In Arkansas , Democrats see an opening at the edge of the competitive midterms map",
+    "title": "Sean Hannity And Ainsley Earhardt Tie The Knot In Florida",
+    "summary": "2026-10-26 knst.iheart.com: Sean Hannity And Ainsley Earhardt Tie The Knot In Florida\n2026-10-26 ktok.iheart.com: Sean Hannity And Ainsley Earhardt Tie The Knot In Florida\n2026-10-26 wsfcam.iheart.com: Sean Hannity And Ainsley Earhardt Tie The Knot In Florida\n2026-10-26 kfyr.iheart.com: Sean Hannity And Ainsley Earhardt Tie The Knot In Florida",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_alaska-blanche-blocking",
+    "source": "news",
+    "ts": 1793193263237,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.278,
+      "articles": [
+        {
+          "title": "Blanche defends DOJ lawsuit blocking Alaska Senate results if Republican loses",
+          "url": "https://www.krcu.org/2026-10-25/blanche-defends-doj-lawsuit-blocking-alaska-senate-results-if-republican-loses",
+          "domain": "krcu.org",
+          "seendate": "2026-10-26T07:15:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/ce/4f/f29bb039483ea9e51572e8f660d8/ap26294709681244.jpg"
+        },
+        {
+          "title": "Blanche defends DOJ lawsuit blocking Alaska Senate results if Republican loses",
+          "url": "https://www.wncw.org/2026-10-25/blanche-defends-doj-lawsuit-blocking-alaska-senate-results-if-republican-loses",
+          "domain": "wncw.org",
+          "seendate": "2026-10-25T19:15:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/ce/4f/f29bb039483ea9e51572e8f660d8/ap26294709681244.jpg"
+        },
+        {
+          "title": "Blanche defends DOJ lawsuit blocking Alaska Senate results if Republican loses",
+          "url": "https://www.kunr.org/us-headlines/2026-10-25/blanche-defends-doj-lawsuit-blocking-alaska-senate-results-if-republican-loses",
+          "domain": "kunr.org",
+          "seendate": "2026-10-25T19:15:00Z",
+          "image": "http://npr-brightspot.s3.amazonaws.com/ce/4f/f29bb039483ea9e51572e8f660d8/ap26294709681244.jpg"
+        }
+      ]
+    },
+    "title": "Blanche defends DOJ lawsuit blocking Alaska Senate results if Republican loses",
+    "summary": "2026-10-26 krcu.org: Blanche defends DOJ lawsuit blocking Alaska Senate results if Republican loses\n2026-10-25 wncw.org: Blanche defends DOJ lawsuit blocking Alaska Senate results if Republican loses\n2026-10-25 kunr.org: Blanche defends DOJ lawsuit blocking Alaska Senate results if Republican loses",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
