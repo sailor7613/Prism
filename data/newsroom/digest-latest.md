@@ -1,4 +1,4 @@
-# Newsroom digest — 2026-10-29
+# Newsroom digest — 2026-10-30
 
 Register: 140 objects · this scan: 0 new, 0 seen again, 0 returned.
 
@@ -6,9 +6,8 @@ Register: 140 objects · this scan: 0 new, 0 seen again, 0 returned.
 - (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
-- **Trump lifts tariffs on some Canadian imports , adds others in sweeping revision** — tariff/sanction · imposed · holder: the President · formed 2026-10-24 · 25 outlets (peak 25) · `obj_thepresi_adds-canadian-imports-lifts` · silent 5d after 2 scans
-- **Sexual harassment rules for Congress are under review** — ruling · ruled · holder: Congress · formed 2026-10-24 · 15 outlets (peak 15) · `obj_congress_congress-harassment-review-rules` · silent 5d after 3 scans
-- **How Title IX investigations work and why experts say the system failed Cornell Jane Doe** — vote · voted · holder: ? · formed 2026-10-24 · 5 outlets (peak 5) · `obj_x_cornell-doe-experts-failed` · silent 5d after 3 scans
+- **Red flag laws : Where they are banned , passed in the US** — vote · voted · holder: ? · formed 2026-10-25 · 3 outlets (peak 4) · `obj_x_banned-flag-laws-passed` · silent 5d after 6 scans
+- **Senate Dems Seek Dismissal Of DOJ Alaska Election Lawsuit** — suit · sued · holder: the Justice Department · formed 2026-10-25 · 7 outlets (peak 7) · `obj_thejusti_alaska-dems-dismissal-doj` · silent 5d after 8 scans
 
 ## Returned after a break
 - none today
