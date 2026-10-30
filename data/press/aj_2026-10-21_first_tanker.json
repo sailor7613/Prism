@@ -1,0 +1,365 @@
+{
+ "schema": "press/parallelogram/v0",
+ "id": "aj_2026-10-21_first_tanker",
+ "status": "claude-draft",
+ "kind": "parallelogram",
+ "title": "The First Tanker, Sized",
+ "source": {
+  "program": "Al Jazeera English",
+  "network": "Al Jazeera (Reuters, republished)",
+  "format": "print wire",
+  "date": "2026-10-21",
+  "title": "Russia to send first diesel tanker to the US amid Trump deal",
+  "byline": "Reuters (credited 'Al Jazeera, Reuters')",
+  "url": "https://www.aljazeera.com/economy/2026/10/21/russia-to-send-first-diesel-tanker-to-the-us-amid-trump-deal",
+  "length": 9,
+  "paragraphs": 9,
+  "transcript": "Parameters/09_Parallelograms/Press/2026-10-21_AlJazeera_First_Tanker/source.md",
+  "note": "a wire story republished — the record's register under an LI masthead. Cut as LI with the non-US horizon flag, as aj_2026-10-12_energy_ceasefire was (also Reuters-credited); whether a wire republication reads as a station is a ruling owed (roster: 'wire — never a station reading')"
+ },
+ "positions": "paragraphs",
+ "horizon": "non-US",
+ "arc": "PG01",
+ "object": {
+  "label": "H1 — the Russian diesel deal (PG01 layer 1): the cargo",
+  "layer": 1,
+  "zAxis": {
+   "pos": "delivers",
+   "neg": "does not"
+  }
+ },
+ "transform": "Z-assertion",
+ "transformNote": "delivery credited before cargo (the 10-09 terms: 300,000 t 'immediately'). Today the first cargo is dated and sized — 40,000 t, Thursday 10-22, port withheld — and the wire restates the schedule beside it without doing the arithmetic. The cut does: 13% of the first tranche, thirteen days after 'immediately'",
+ "names": {
+  "AJ": "the article (Reuters narration, via Al Jazeera)",
+  "AN": "Alexander Novak (Russia's deputy prime minister — the seller; constitutive, @O)",
+  "SW": "Steve Witkoff (US envoy — the buyer's side; constitutive, @O)",
+  "DT": "Donald Trump (the terms, as previously reported; constitutive, @O — the principal)",
+  "UM": "Ukraine's Ministry of Defence (reported)",
+  "AAA": "the American Automobile Association (price data, reported)"
+ },
+ "trace": {
+  "object": {
+   "x": 0,
+   "y": 0,
+   "z": 0.1
+  },
+  "shadow": {
+   "x": 0,
+   "y": 0,
+   "z": 1.0
+  },
+  "shadowNote": "the 10-09 terms: 300,000 t immediately, 500,000 t in November, 1,000,000 t 'immediately thereafter' — the Z-assertion, restated in ¶8",
+  "predicates": {
+   "operative": [
+    {
+     "type": "T",
+     "label": "first tanker sails Thursday 10-22; 40,000 t; US port unnamed (Novak, ¶1–¶2)",
+     "z": 0.3
+    },
+    {
+     "type": "T",
+     "label": "Russia's diesel export ban lifted 10-09, imposed for domestic shortages after drone strikes (¶3)",
+     "z": 0.2
+    },
+    {
+     "type": "T",
+     "label": "AAA diesel $6.31/gal, down from $6.51 a month earlier; midterms under two weeks (¶9)",
+     "z": -0.2
+    }
+   ],
+   "stated": [
+    {
+     "type": "O",
+     "label": "'Additional shipments will follow, of course' (Novak) · 'preparing deliveries of several vessels… right now', needing financing (Witkoff)",
+     "z": 0.75
+    }
+   ],
+   "challenge": [
+    {
+     "type": "X",
+     "label": "drone strikes disabled at least half of Russia's refining capacity, forcing cuts at its top diesel refineries (Ukraine MoD, ¶4)",
+     "z": -0.5
+    }
+   ]
+  },
+  "positions": [
+   {
+    "quadrant": "A",
+    "station": "LI",
+    "fluid": "40,000 tonnes · Thursday · the ban lifted 9 October · $6.31 down from $6.51 · half of refining capacity",
+    "denominated": "—",
+    "distinguishability": "High",
+    "fluidKeywords": [
+     "40,000 tonnes",
+     "Thursday",
+     "undisclosed port",
+     "9 October",
+     "at least half",
+     "$6.31",
+     "$6.51",
+     "two weeks"
+    ],
+    "denomKeywords": [],
+    "note": "the lowest-Dia LI reading on the deal so far (NYT lede 17, the Daily 20, MS NOW 33): a wire has no frames. Read z +0.09 against a declared +1.0 — the gap is the whole piece. Non-US horizon"
+   },
+   {
+    "quadrant": "B",
+    "station": "RI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — the floor's last touch on the deal is 10-16 ('what the President saw as a remedy'); no Close on disk since"
+   },
+   {
+    "quadrant": "C",
+    "station": "LP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — Breaking Points 10-21 is on Iran escalation; transcript owed"
+   },
+   {
+    "quadrant": "D",
+    "station": "RP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — Shapiro 10-20 'Trump Promises Diesel Relief' is in the queue, transcript owed"
+   }
+  ]
+ },
+ "log": [
+  {
+   "date": "2026-10-22",
+   "what": "daily cut (the 10-21 sweep; today's sweep file missing, newest used). Nine paragraphs read in full via fetch; reductions filed, no quotation over fifteen words. Novak and Witkoff stationed @O as the deal's two sides (my call — ruling owed); Trump the principal",
+   "by": "Claude"
+  }
+ ],
+ "scoreboard": {
+  "dia": 10,
+  "tier": "fluid",
+  "declaredZ": 1.0,
+  "readZ": 0.09,
+  "readZRange": [
+   0.4,
+   -0.5
+  ],
+  "stations": {
+   "LI": {
+    "dia": 10,
+    "spread": [
+     6,
+     14
+    ],
+    "readZ": 0.09,
+    "voices": {
+     "AJ": {
+      "dia": 10,
+      "readZ": 0.18,
+      "n": 6
+     },
+     "UM": {
+      "dia": 14,
+      "readZ": -0.5,
+      "n": 1
+     }
+    }
+   },
+   "RI": null,
+   "LP": null,
+   "RP": null
+  },
+  "split": {
+   "topology": "none",
+   "station": "LI",
+   "strength": 0.0,
+   "note": "one voice (the wire) at Dia 6–14; the constitutive lines sit at +0.7 → +1.0 and the record at −0.5 → +0.4. The split is not between stations today — it is between the principal's schedule and the cargo's size"
+  },
+  "lumens": 90,
+  "zRule": "every line carries a z, inferred where implied (Sailor 2026-10-13); inferred lines are marked zInferred with a zWhy",
+  "mode": "open"
+ },
+ "lines": [
+  {
+   "t": 0,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "Russia to send first diesel tanker to the US — Thursday, to an undisclosed port",
+   "touch": "T",
+   "z": 0.3,
+   "dia": 10,
+   "mode": "open",
+   "note": "THE DOOR: headline and dek. 'First' concedes that thirteen days after 'immediately' nothing has moved; 'undisclosed' withholds the one fact a delivery is",
+   "chapter": "The door",
+   "normX": 0.422,
+   "normY": 0.4493,
+   "normZ": 0.225,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a dated first sailing leans delivers; a withheld port holds it back"
+  },
+  {
+   "t": 1,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "Novak told reporters the first diesel tanker bound for the US would sail Thursday, under the deal with Trump",
+   "touch": "T",
+   "z": 0.4,
+   "dia": 8,
+   "mode": "open",
+   "note": "the sailing, dated 10-22, by the seller's deputy PM",
+   "chapter": "The cargo",
+   "normX": 0.4511,
+   "normY": 0.43,
+   "normZ": 0.3,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a sailing date is delivery beginning"
+  },
+  {
+   "t": 2,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "the vessel carries 40,000 tonnes; Novak did not name the US destination port",
+   "touch": "T",
+   "z": 0.1,
+   "dia": 6,
+   "mode": "open",
+   "note": "THE SIZE: 40,000 t against the terms' 300,000 t 'immediately' — 13% of the first tranche. The lowest-Dia line on the paper's deal file; the arithmetic is the cut's, not the wire's",
+   "chapter": "The cargo",
+   "normX": 0.4533,
+   "normY": 0.4378,
+   "normZ": 0.075,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a cargo sized at an eighth of the promise delivers a little"
+  },
+  {
+   "t": 3,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "Moscow lifted its diesel export ban on 9 October — imposed to address domestic shortages caused by drone attacks",
+   "touch": "T",
+   "z": 0.2,
+   "dia": 10,
+   "mode": "open",
+   "note": "the enabling act in Russia's own register, dated to the deal's day: the seller was under an export ban when it sold",
+   "chapter": "The cargo",
+   "normX": 0.4417,
+   "normY": 0.4276,
+   "normZ": 0.15,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a ban lifted is the cargo's precondition met"
+  },
+  {
+   "t": 4,
+   "who": "UM",
+   "station": "LI",
+   "quote": "Ukraine's defence ministry: drone strikes disabled at least half of Russia's refining capacity, forcing diesel cuts at its major refineries",
+   "touch": "X",
+   "z": -0.5,
+   "dia": 14,
+   "mode": "open",
+   "note": "THE CHALLENGE: the seller's capacity by the striker's count — H2's record (falsified 10-12) returns as H1's constraint. Stationed with the publication, as reported",
+   "chapter": "The constraint",
+   "normX": 0.4293,
+   "normY": 0.4181,
+   "normZ": -0.375,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a seller at half capacity under a domestic shortage cannot fill the schedule"
+  },
+  {
+   "t": 5,
+   "who": "AN",
+   "station": "O",
+   "quote": "Additional shipments will follow, of course",
+   "touch": "O",
+   "z": 0.8,
+   "dia": null,
+   "mode": "open",
+   "note": "the seller's own delivery claim, citing leader-level agreements and 'within its capacity' — constitutive, never Dia-scored",
+   "chapter": "The two sides",
+   "normX": 0.5,
+   "normY": 0.5,
+   "normZ": 0.6,
+   "quadrant": "T"
+  },
+  {
+   "t": 6,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "US envoy Steve Witkoff, meeting Putin in St Petersburg, backed Novak's comments",
+   "touch": "T",
+   "z": 0.3,
+   "dia": 12,
+   "mode": "open",
+   "note": "the buyer's side present, in person, in the seller's city",
+   "chapter": "The two sides",
+   "normX": 0.4293,
+   "normY": 0.4284,
+   "normZ": 0.225,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "an envoy in the room is the deal still being made"
+  },
+  {
+   "t": 7,
+   "who": "SW",
+   "station": "O",
+   "quote": "We are preparing deliveries of several vessels, the tankers, right now — needing financing; and fertiliser in large quantities",
+   "touch": "O",
+   "z": 0.7,
+   "dia": null,
+   "mode": "open",
+   "note": "constitutive: the principal's envoy. 'Needing financing' is the clause that un-credits the schedule — a cargo that still needs financing has not been paid for; the settlement layer reads unknown. Fertiliser widens the deal past H1's terms",
+   "chapter": "The two sides",
+   "normX": 0.5,
+   "normY": 0.5,
+   "normZ": 0.525,
+   "quadrant": "T"
+  },
+  {
+   "t": 8,
+   "who": "DT",
+   "station": "O",
+   "quote": "300,000 tonnes (2.25 million barrels), then 500,000 tonnes in November, then 1 million tonnes immediately thereafter",
+   "touch": "O",
+   "z": 1.0,
+   "dia": null,
+   "mode": "open",
+   "note": "THE Z-ASSERTION, restated by the wire without the arithmetic: the schedule H1 is tested against. The principal",
+   "chapter": "The schedule",
+   "normX": 0.5,
+   "normY": 0.5,
+   "normZ": 0.75,
+   "quadrant": "T"
+  },
+  {
+   "t": 9,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "US drivers still face high pump prices, especially diesel — AAA $6.31 a gallon, down from $6.51 a month earlier — with the midterms under two weeks away",
+   "touch": "T",
+   "z": -0.2,
+   "dia": 12,
+   "mode": "open",
+   "note": "THE PRICE AND THE CLOCK: the shadow column ($6.31; MS NOW read $6.32 on 10-15) and the slate's clock in one sentence. The twenty cents fell before any cargo moved",
+   "chapter": "The clock",
+   "normX": 0.4224,
+   "normY": 0.436,
+   "normZ": -0.15,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "relief that arrived before the cargo is not the deal delivering"
+  }
+ ]
+}

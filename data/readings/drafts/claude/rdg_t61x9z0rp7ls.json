@@ -1,0 +1,487 @@
+{
+  "centralObject": {
+    "kind": "object",
+    "ref": "Executive order 'Decreasing Housing Costs for the American People', signed by President Trump 2026-10-22 (White House fact sheet)",
+    "name": "The housing-cost order of 2026-10-22: a mortgage-insurance cancellation pilot, a permanent title-insurance alternative on some refinances, lower VA and USDA loan rates, and a manufactured-housing task force",
+    "place": {
+      "quadrants": [
+        "B",
+        "C"
+      ],
+      "band": "coalition",
+      "z": 0.15,
+      "why": "The order moves real but small closing and insurance costs through FHFA, VA and USDA while leaving the 7.32% rate and the supply shortage alone, so it presses the institutional right's GSE-and-title-industry caution and the populist left's claim that nothing reaches ordinary buyers."
+    }
+  },
+  "tethers": [
+    {
+      "statute": "Homeowners Protection Act of 1998",
+      "cite": "12 U.S.C. §4901 et seq.",
+      "title": "Cancellation and termination of private mortgage insurance",
+      "enacted": "1998-07-29",
+      "relation": "adjacent",
+      "why": "The standing law ends private mortgage insurance automatically at 78% of the home's original value; the order's FHFA pilot would cancel it on equity measured at current market value, going past the statute's floor administratively. Claude's identification; the fact sheet cites no authority.",
+      "place": {
+        "quadrants": [
+          "A",
+          "B"
+        ],
+        "band": "fluid",
+        "z": 0.5,
+        "why": "Stated and left: a 1998 floor that does deliver cancellation, slowly, on original value; the pilot is argued against it at the mechanism. Claude's place, not the blind author's."
+      }
+    },
+    {
+      "billId": "hr-119-6644",
+      "bill": "H.R. 6644",
+      "title": "21st Century ROAD to Housing Act",
+      "relation": "adjacent",
+      "statusAsOf": "Became Public Law No: 119-101, 2026-07-11, without signature (catalog)",
+      "why": "Congress's housing law of this year works the supply and investor side (the 350-home cap Treasury implements); the order works the transaction-cost side by executive action beside it, and neither touches the mortgage rate.",
+      "inDb": true,
+      "place": {
+        "quadrants": [
+          "A",
+          "B"
+        ],
+        "band": "coalition",
+        "z": 0.2,
+        "why": "As placed on the Unsigned Ban: in force, and whether it changes who buys a house is decided in Treasury's rule and the carve-outs. Claude's place, carried from rdg_mu7ban350hom."
+      }
+    }
+  ],
+  "linkedBills": [
+    "hr-119-6644"
+  ],
+  "title": "The Premium",
+  "category": "Economic Policy · Housing · Executive Orders",
+  "date": "2026-10-22",
+  "prompt": "Cheaper insurance, cheaper title, cheaper VA and USDA loans, at 7.32%. Does the order lower what a house costs?",
+  "framing": "On Thursday, October 22, 2026, President Trump signed an executive order, “Decreasing Housing Costs for the American People.” It directs the Federal Housing Finance Agency to pilot cancelling mortgage insurance on certain future loans once borrowers reach required equity measured at current market value, and to make permanent a pilot letting Fannie Mae and Freddie Mac accept a cheaper alternative to lender's title insurance on some refinances. It tells the Agriculture and Veterans Affairs departments to lower rates on the single-family loans they make, and creates a manufactured-housing task force chaired by HUD Secretary Scott Turner and FHFA Director Bill Pulte. The order did not touch the 30-year fixed rate, which Freddie Mac put at 7.32% that week, after September pending home sales hit a record low.",
+  "framingKeywords": [
+    "mortgage insurance",
+    "title insurance",
+    "7.32%",
+    "manufactured housing",
+    "VA loans"
+  ],
+  "prevalentAxis": "x",
+  "split": {
+    "topology": "axis",
+    "strength": 0.6,
+    "seam": "Whether cutting insurance, title and agency-loan costs counts as lowering what a house costs when the 7.32% rate and the supply shortage are untouched.",
+    "rationale": "Right stations read the marginal cuts as real savings delivered by trusted agencies and a trusted President; left stations read them as too small and too narrowly targeted to matter against frozen sales. The split runs cleanly along x, with populist corners hotter on both sides and the institutional corners conceding more at the mechanism.",
+    "zPattern": {
+      "centers": {
+        "A": -0.2,
+        "B": 0.5,
+        "C": -0.4,
+        "D": 0.3
+      },
+      "rims": {
+        "A": -0.8,
+        "B": 0.8,
+        "C": -0.9,
+        "D": 0.9
+      },
+      "note": "Centers are fluid z; coalition z: A -0.3, B 0.4, C -0.5, D 0.3. Object's own z 0.15."
+    },
+    "ruledBy": null,
+    "date": "2026-10-22"
+  },
+  "antiValentBand": "fluid",
+  "antiValentRationale": "At the mechanism all four corners agree the order leaves the 30-year rate and supply alone and that the VA, USDA and title pieces save some money, so they differ mainly on whether that's enough to count.",
+  "axes": {
+    "x": {
+      "pos": "Right",
+      "neg": "Left"
+    },
+    "y": {
+      "pos": "Institutional",
+      "neg": "Populist"
+    },
+    "z": {
+      "pos": "the order delivers: buyers and refinancers pay less each month and at closing, and factory-built homes widen what's affordable",
+      "neg": "it doesn't: savings at the margins of a market frozen by 7% rates and short supply, aimed at the midterms"
+    }
+  },
+  "responses": {
+    "A": {
+      "fluid": {
+        "z": -0.2,
+        "zReason": "The mortgage insurance change is only a pilot on future loans and the title waiver covers some refinances, so neither touches the monthly rate or the shortage of homes that's driving cost.",
+        "instrument": {
+          "holder": "FHFA under Bill Pulte, with HUD's Scott Turner",
+          "trusted": false
+        },
+        "text": "The Homeowners Protection Act already ends private mortgage insurance at 78% of original value, so a pilot measuring equity at current value is a tweak for future loans, not relief for today's buyers. And swapping lender's title insurance on some refinances helps the few people refinancing at 7.32%. Where's the supply piece?",
+        "xWord": "regulation",
+        "yWord": "pilot",
+        "words": [
+          "a tweak for future loans",
+          "Homeowners Protection Act",
+          "Where's the supply piece?"
+        ],
+        "source": ""
+      },
+      "coalition": {
+        "z": -0.3,
+        "zReason": "The savings depend on Fannie and Freddie pricing and on agencies following through, and none of it reaches the rate that froze pending sales at a record low.",
+        "instrument": {
+          "holder": "FHFA and the President's housing agencies",
+          "trusted": false
+        },
+        "text": "The people I vote with are already calling this a midterm stunt, and I get why, with the election under two weeks out. But I'd rather argue the mechanism: a cheaper title alternative is a decent idea. It just doesn't move a 7.32% mortgage.",
+        "xWord": "oversight",
+        "yWord": "mechanism",
+        "words": [
+          "a midterm stunt",
+          "argue the mechanism",
+          "doesn't move a 7.32% mortgage"
+        ],
+        "source": ""
+      },
+      "denominated": {
+        "z": -0.8,
+        "zReason": "Seen as campaign product, the order's purpose is the headline, not the closing table.",
+        "instrument": {
+          "holder": "the Trump White House",
+          "trusted": false
+        },
+        "text": "It's a campaign flyer printed on FHFA letterhead.",
+        "xWord": "campaign",
+        "yWord": "letterhead",
+        "words": [
+          "campaign flyer",
+          "FHFA letterhead"
+        ],
+        "source": ""
+      }
+    },
+    "B": {
+      "fluid": {
+        "z": 0.5,
+        "zReason": "Measuring equity at current market value lets mortgage insurance drop sooner than the 78%-of-original-value rule, and a title alternative cuts a fixed closing cost on refinances.",
+        "instrument": {
+          "holder": "FHFA Director Bill Pulte and HUD Secretary Scott Turner",
+          "trusted": true
+        },
+        "text": "If your home's appreciated, why should you keep paying mortgage insurance until you hit 78% of a value from years ago? Measuring equity at current market value fixes that, and letting Fannie and Freddie accept a cheaper title alternative cuts real dollars at closing. These are sound, contained changes run through agencies that know the risk.",
+        "xWord": "market",
+        "yWord": "agencies",
+        "words": [
+          "current market value",
+          "cheaper title alternative",
+          "sound, contained changes"
+        ],
+        "source": ""
+      },
+      "coalition": {
+        "z": 0.4,
+        "zReason": "The cost cuts are real at the margin, but the rate and supply problems the order skips are what set the price of a house.",
+        "instrument": {
+          "holder": "FHFA and HUD",
+          "trusted": true
+        },
+        "text": "The people I vote with are calling this the affordability answer, and that oversells it. The mortgage insurance and title changes do save buyers money, and the manufactured-housing task force builds on the March order on regulatory barriers. But nobody should pretend it touches 7.32%.",
+        "xWord": "deregulation",
+        "yWord": "taskforce",
+        "words": [
+          "the affordability answer",
+          "manufactured-housing task force",
+          "nobody should pretend"
+        ],
+        "source": ""
+      },
+      "denominated": {
+        "z": 0.8,
+        "zReason": "Under the banner, the order stands for a government that cuts costs instead of adding them.",
+        "instrument": {
+          "holder": "President Trump",
+          "trusted": true
+        },
+        "text": "Trump cut the red tape and the fees, and that's what the American Dream looks like.",
+        "xWord": "freedom",
+        "yWord": "dream",
+        "words": [
+          "red tape",
+          "American Dream"
+        ],
+        "source": ""
+      }
+    },
+    "C": {
+      "fluid": {
+        "z": -0.4,
+        "zReason": "The savings go to people who already qualify and can buy or refinance, while record-low pending sales show most renters are priced out by rates and supply.",
+        "instrument": {
+          "holder": "Trump and Pulte at FHFA",
+          "trusted": false
+        },
+        "text": "Who's refinancing at 7.32%? The title break goes to people who already own, and the mortgage insurance pilot only applies to loans that haven't been written yet. Meanwhile pending sales hit a record low and permits are at a three-and-a-half-year low.",
+        "xWord": "renters",
+        "yWord": "refinancing",
+        "words": [
+          "Who's refinancing at 7.32%?",
+          "people who already own",
+          "record low"
+        ],
+        "source": ""
+      },
+      "coalition": {
+        "z": -0.5,
+        "zReason": "Without rate relief or new supply, small savings at closing don't change who can afford to buy.",
+        "instrument": {
+          "holder": "the White House housing agencies",
+          "trusted": false
+        },
+        "text": "The people I organize with are calling it crumbs, and I'm mostly with them. I'll give credit on VA and USDA lowering their loan rates, that's real for veterans and rural families. But the ROAD Act's cap on big investors did more than this, and it isn't Trump's.",
+        "xWord": "investors",
+        "yWord": "families",
+        "words": [
+          "calling it crumbs",
+          "VA and USDA",
+          "cap on big investors"
+        ],
+        "source": ""
+      },
+      "denominated": {
+        "z": -0.9,
+        "zReason": "In this frame the order exists to protect the people already winning the housing market.",
+        "instrument": {
+          "holder": "Trump and his donors",
+          "trusted": false
+        },
+        "text": "Crumbs off the landlords' table, served right before an election.",
+        "xWord": "landlords",
+        "yWord": "crumbs",
+        "words": [
+          "Crumbs",
+          "landlords' table"
+        ],
+        "source": ""
+      }
+    },
+    "D": {
+      "fluid": {
+        "z": 0.3,
+        "zReason": "VA and USDA rate cuts reach veterans and rural buyers directly, and factory-built homes are the cheapest path to ownership if the task force clears the rules.",
+        "instrument": {
+          "holder": "President Trump, through VA, USDA and the Turner–Pulte task force",
+          "trusted": true
+        },
+        "text": "Lower rates on VA and USDA loans means a veteran or a family out in farm country pays less, period. And manufactured homes are how working people actually buy, if Washington stops strangling them. The 30-year rate's still ugly, but that's not the President's knob.",
+        "xWord": "veterans",
+        "yWord": "Washington",
+        "words": [
+          "VA and USDA loans",
+          "manufactured homes",
+          "still ugly"
+        ],
+        "source": ""
+      },
+      "coalition": {
+        "z": 0.3,
+        "zReason": "The direct-loan and manufactured-housing pieces help, but agency follow-through and a 7% rate can still swallow the gain.",
+        "instrument": {
+          "holder": "President Trump",
+          "trusted": true
+        },
+        "text": "Folks at the rallies are saying Trump just fixed housing, and I want that to be true. The VA and manufactured-housing pieces are the right target. But I've watched agencies sit on orders before, and Turner himself says building's crippled by red tape.",
+        "xWord": "rallies",
+        "yWord": "agencies",
+        "words": [
+          "Trump just fixed housing",
+          "the right target",
+          "crippled by red tape"
+        ],
+        "source": ""
+      },
+      "denominated": {
+        "z": 0.9,
+        "zReason": "Under the banner, Trump delivering for forgotten homebuyers is the whole meaning of the order.",
+        "instrument": {
+          "holder": "President Trump",
+          "trusted": true
+        },
+        "text": "Trump's putting a house back in reach for the forgotten man.",
+        "xWord": "Trump",
+        "yWord": "forgotten",
+        "words": [
+          "back in reach",
+          "forgotten man"
+        ],
+        "source": ""
+      }
+    }
+  },
+  "diatribe": {
+    "LF": {
+      "text": "The mortgage insurance pilot only touches future loans, and the 78% rule already exists. I want to know where the supply is.",
+      "side": "left",
+      "band": "fluid",
+      "keywords": [
+        "mortgage insurance pilot",
+        "future loans",
+        "where the supply is"
+      ]
+    },
+    "LC": {
+      "text": "My friends call it a midterm stunt and they're not wrong about the timing. I still think the title alternative is a decent idea that just can't move 7.32%.",
+      "side": "left",
+      "band": "coalition",
+      "keywords": [
+        "My friends",
+        "midterm stunt",
+        "can't move 7.32%"
+      ]
+    },
+    "LD": {
+      "text": "I see a campaign flyer on FHFA letterhead.",
+      "side": "left",
+      "band": "denominated",
+      "keywords": [
+        "campaign flyer",
+        "FHFA letterhead"
+      ]
+    },
+    "RF": {
+      "text": "I shouldn't pay mortgage insurance against a value from years ago. Measuring at current market value is plain common sense.",
+      "side": "right",
+      "band": "fluid",
+      "keywords": [
+        "mortgage insurance",
+        "current market value",
+        "common sense"
+      ]
+    },
+    "RC": {
+      "text": "The folks I rally with say Trump fixed housing, and I want to believe it. The VA and manufactured-home pieces help, but the rate is still the rate.",
+      "side": "right",
+      "band": "coalition",
+      "keywords": [
+        "The folks I rally with",
+        "Trump fixed housing",
+        "the rate is still the rate"
+      ]
+    },
+    "RD": {
+      "text": "I'm watching Trump hand the American Dream back to the forgotten man.",
+      "side": "right",
+      "band": "denominated",
+      "keywords": [
+        "Trump",
+        "American Dream",
+        "forgotten man"
+      ]
+    }
+  },
+  "diatribeLayer": "stated",
+  "objectLayer": {
+    "declared": "stated",
+    "stated": "An order cutting specific costs of buying and refinancing a home: mortgage insurance, title insurance, VA and USDA loan rates, and barriers to manufactured housing.",
+    "operative": "An affordability signal before the midterms, run through FHFA and the GSEs under Pulte, that leaves rates and supply where they were.",
+    "inversion": "The stated object is the price of a home; the operative object is the price of closing and insurance, so the order lowers what a transaction costs more than what a house costs."
+  },
+  "window": {
+    "close": "2026-10-22",
+    "why": "The object finished forming when the President signed the order on Thursday 2026-10-22 (White House fact sheet dated that day; AP via Hawaii Tribune-Herald, MortgagePoint and Insurance Journal all say Thursday). The register's formedOn (10-23) is the report date. Rate (7.32%) is Freddie Mac's survey for the week of signing; the September sales and starts data were released 10-21. Declared at authoring, before any z.",
+    "ruledBy": null,
+    "ruledOn": null
+  },
+  "meta": {
+    "dialecticsRef": "obj_thepresi_costs-executive-housing-lowering",
+    "status": "draft",
+    "source": "Claude draft — daily newsroom drafting (scheduled), authored z-first against Trace Formula v1 per scripts/newsroom/AUTHORING_PROTOCOL.md v1.5. Filed to drafts/claude. Rulings: none.",
+    "editHistory": [
+      {
+        "at": "2026-10-24T05:19:21.000Z",
+        "by": "Claude (scheduled drafting)",
+        "what": "authored: object -> window -> frame from in-window sources -> central object + tethers -> sweep -> axes/split -> twelve + object z (blind subagent) -> diatribe/layers -> sweep"
+      }
+    ],
+    "aiDeltas": [],
+    "frameFirst": {
+      "date": "2026-10-22",
+      "by": "Claude, under §4c (window declared at authoring; sweep before z). Object NOT ruled — Claude's read, correctable by Sailor.",
+      "status": "Frame authored before any z; the twelve, the Diatribe and the object's own z authored blind z-first by a subagent (meta.blindAuthoring). Stations unruled.",
+      "objectLean": {
+        "stated": "an order lowering the costs of buying and refinancing a home",
+        "operative": "transaction-cost cuts (insurance, title, agency-loan rates) that leave the 7% rate and supply alone",
+        "inversion": "lean, not ruled: it lowers what a closing costs more than what a house costs"
+      },
+      "titleLean": "'The Premium' — Claude's; Sailor names Readings",
+      "sourcesInWindow": [
+        "White House fact sheet (2026-10-22): 'Decreasing Housing Costs for the American People'; FHFA mortgage-insurance cancellation pilot on current market value; title-insurance waiver pilot made permanent; manufactured-housing task force (HUD + FHFA co-chairs); USDA and VA to reduce single-family loan rates; no authority cited",
+        "AP via Hawaii Tribune-Herald (2026-10-23, signed Thursday): record-low NAR pending sales for September; starts −4.6%, permits at a 3½-year low; Freddie Mac 30-year 7.32% this week after 7.40% the week before",
+        "MortgagePoint (2026-10-23): task force chaired by Pulte and Turner; Turner: 'home building has been crippled by regulatory red tape'",
+        "Insurance Journal (2026-10-23): mortgage-insurance pilot limited to future mortgages; GSEs may accept automated title review instead of lender's policy on certain refinances"
+      ],
+      "background_preWindow": [
+        "Executive Order 14394, 'Removing Regulatory Barriers to Affordable Home Construction', 2026-03-13",
+        "ROAD to Housing Act, Public Law 119-101, 2026-07-11, without signature (catalog; the Unsigned Ban, rdg_mu7ban350hom)",
+        "Homeowners Protection Act of 1998: PMI terminates at 78% of original value",
+        "Pulte's 10-17 post on credit reports and LLPA decisions 'before year end' — background, not the object"
+      ]
+    },
+    "framingAudit": {
+      "date": "2026-10-22",
+      "by": "Claude — frame-first authoring under §4c; sweep run BEFORE any z. Not a ruling.",
+      "window": "2026-10-22 (declared, see window.why)",
+      "verifiedInWindow": [
+        "signed Thursday 2026-10-22 — White House fact sheet, AP, MortgagePoint, Insurance Journal",
+        "order title — fact sheet 'Related' listing",
+        "four directives — fact sheet, AP",
+        "'certain future loans' — Insurance Journal",
+        "task force chairs Turner and Pulte — MortgagePoint, fact sheet",
+        "7.32% that week — Freddie Mac via AP",
+        "September pending sales record low — NAR via AP (released 10-21)",
+        "\"Decreasing Housing Costs for the American People.\" — the order title, signed 2026-10-22 (White House fact sheet Related listing)"
+      ],
+      "keptUnverifiedDate": [],
+      "deliberatelyExcluded_afterWindow": [
+        "reactions and analysis published 10-23 or later that add facts beyond the order (none load-bearing found)"
+      ],
+      "excludedInWindow": [
+        "Trump's wish to use AI to speed the market — reported, not a directive",
+        "Pulte's credit-report/LLPA remarks — pre-window, not the object"
+      ]
+    },
+    "blindAuthoring": {
+      "date": "2026-10-24",
+      "author": "Claude (general-purpose subagent) — blind: given the frame, prompt, keywords, axes, the object, a short dated background, R-0921-1 and the voice rules only; no other Reading, no register, no web",
+      "zFirst": true,
+      "instrumentOnAll12": true,
+      "objectZ": "The object's own place (z 0.15, quadrants B+C, band coalition) authored by the same subagent, with the twelve, before the words.",
+      "rulings": "NONE — every station awaits Sailor's ruling. z, zReason and instrument as authored; wording fixes after hand-back listed in edits.",
+      "edits": [
+        "A.coalition text: cut 'that the Biden-era pilot people liked too' — a claim not in the frame or background. Claude, after hand-back.",
+        "C.coalition zReason: 'a few hundred dollars at closing' → 'small savings at closing' — the figure was invented. Claude.",
+        "objectLayer.inversion: trimmed 'plus the political cost of affordability'. Claude.",
+        "Rim and diatribe signs untouched; tether places are Claude's."
+      ],
+      "authorNote": "I trust D-coalition's positive z least: a populist-right voter who doubts agency follow-through and sees the rate untouched could easily land at or below zero. A-fluid's mild negative is also soft, since an institutional left reader might score the title pilot's savings as a modest positive."
+    },
+    "newsroomFindings": {
+      "inversionLeans": [],
+      "permanence": "Not a return. First appearance of this order in the register. Adjacent, not an alias: the ROAD to Housing Act (the Unsigned Ban, rdg_mu7ban350hom) and the March EO 14394 are the same housing-cost object through other instruments."
+    },
+    "holderCorrection": {
+      "was": "formedOn 2026-10-23",
+      "now": "formedOn 2026-10-22",
+      "why": "Signed Thursday 10-22 per the White House fact sheet and AP; 10-23 is the report date. Holder (the President, executed through FHFA, HUD, USDA, VA) is correct; the register's kind 'law' is loose — it is an executive order, not a statute."
+    }
+  },
+  "rid": "rdg_t61x9z0rp7ls",
+  "ridLineage": "minted 2026-10-24 (UTC) by the scheduled newsroom drafting task; filed directly to drafts/claude",
+  "schema": "reading/v1",
+  "formulaVersion": "1",
+  "updatedAt": "2026-10-24T05:19:21.000Z",
+  "authorTier": "claude",
+  "newsroom": {
+    "oid": "obj_thepresi_costs-executive-housing-lowering",
+    "queuedOn": "2026-10-24",
+    "draftedOn": "2026-10-24"
+  },
+  "images": []
+}

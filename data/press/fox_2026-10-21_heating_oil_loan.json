@@ -1,0 +1,435 @@
+{
+ "schema": "press/parallelogram/v0",
+ "id": "fox_2026-10-21_heating_oil_loan",
+ "status": "claude-draft",
+ "kind": "parallelogram",
+ "title": "One Tanker's Worth, Borrowed",
+ "source": {
+  "program": "Fox Business",
+  "network": "Fox Business (foxbusiness.com)",
+  "format": "print",
+  "date": "2026-10-21",
+  "title": "Energy Dept to loan part of home heating oil reserve to ease prices, drawing bipartisan praise",
+  "byline": "Eric Revell",
+  "url": "https://www.foxbusiness.com/politics/energy-dept-loan-part-home-heating-oil-reserve-ease-prices-drawing-bipartisan-praise",
+  "length": 12,
+  "paragraphs": 12,
+  "transcript": "Parameters/09_Parallelograms/Press/2026-10-21_FoxBusiness_Heating_Oil_Loan/source.md",
+  "note": "published 10-21 14:58 ET. Fox's station on the roster is 'RI?' — proposed, ruling owed; scored as RI on the 10-20 precedent (fox_2026-10-20_hormuz_mines), the Diesel Index's RI seat, flag on the figure. Read in full via fetch; reductions filed, no quotation over fifteen words"
+ },
+ "positions": "paragraphs",
+ "horizon": null,
+ "arc": "PG01",
+ "object": {
+  "label": "H1 — the Russian diesel deal (PG01 layer 1): the price leg (H1c — 'diesel prices will come down')",
+  "layer": 1,
+  "zAxis": {
+   "pos": "prices come down by the deal",
+   "neg": "they do not — relief is sourced elsewhere, or not at all"
+  }
+ },
+ "transform": "Z-assertion",
+ "transformNote": "the promise of 10-09/10-11: Russian diesel 'immediately', and prices 'will be coming down'. Twelve days on, the executive reaches for a reserve: 315,000 barrels of distillate loaned from the Northeast Home Heating Oil Reserve, landing by 11-13, to be returned with a premium before the 2027-28 season. The cut does the arithmetic the page does not: 315,000 bbl of distillate ≈ 42,000 t — one Russian tanker's worth (the first cargo, 40,000 t, sailed 10-22), borrowed from next winter. The relief the page records is not the deal's; the page never mentions the deal",
+ "names": {
+  "FX": "the article (Fox Business narration, Eric Revell)",
+  "CW": "Chris Wright (Energy Secretary — the holder of the act; constitutive, @O; the principal on this page — Trump's promise is not restated in the body)",
+  "SC": "Sen. Susan Collins (R-Maine; a seat on the slate, me-sen) — reported, stationed with the publication",
+  "AK": "Sen. Angus King (I-Maine) — reported, stationed with the publication"
+ },
+ "trace": {
+  "object": {
+   "x": 0,
+   "y": 0,
+   "z": -0.2
+  },
+  "shadow": {
+   "x": 0,
+   "y": 0,
+   "z": 1.0
+  },
+  "shadowNote": "'diesel prices for Americans and the world will be coming down' (H4, 10-11) and the 10-09 schedule — the Z-assertion; absent from this page except as a related-link headline",
+  "predicates": {
+   "operative": [
+    {
+     "type": "T",
+     "label": "DOE loans up to 315,000 bbl (≈ one-third) of the 1M-bbl Northeast Home Heating Oil Reserve; releases complete by 11-13; bids due 10-27 (¶1–¶2, ¶10–¶12)",
+     "z": -0.2
+    },
+    {
+     "type": "T",
+     "label": "a loan, not a sale: the same volume plus a premium returns before the 2027-28 season (¶3)",
+     "z": -0.1
+    },
+    {
+     "type": "T",
+     "label": "heating oil +70% from a year ago; the release adds 13% to New England supply; half of Maine households on fuel oil (Collins, ¶6–¶7)",
+     "z": -0.3
+    },
+    {
+     "type": "T",
+     "label": "the cause named by King: 'since the beginning of the Iran War' — not Ukraine's refinery strikes (the principal's cause of 10-15) (¶8)",
+     "z": -0.4
+    }
+   ],
+   "stated": [
+    {
+     "type": "O",
+     "label": "Wright: 'committed to doing everything in our power to lower energy costs'; 'a temporary measure to solve a temporary supply disruption'; build the Constitution Pipeline (¶4–¶5)",
+     "z": 0.45
+    }
+   ],
+   "challenge": [
+    {
+     "type": "X",
+     "label": "the act is credited to the Maine senators' letter, not to the deal; the deal is nowhere in the body (¶4; absence)",
+     "z": -0.3
+    }
+   ]
+  },
+  "positions": [
+   {
+    "quadrant": "A",
+    "station": "LI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — the NYT carries the same release (10-21, 'U.S. to Tap Heating Oil Reserves Ahead of Midterm Elections', 315,000 bbl, 'too small to make much of a difference' per its dek); nytimes.com is blocked from the cut's fetch today, so the LI read is owed as a beta lede"
+   },
+   {
+    "quadrant": "B",
+    "station": "RI",
+    "fluid": "315,000 barrels · one million · one-third · 13% · 70% · Nov. 13 · Oct. 27 · 150,000 per site · 25,000 minimum · plus a premium · 2027-28",
+    "denominated": "bipartisan praise · through the roof",
+    "distinguishability": "High",
+    "fluidKeywords": [
+     "315,000 barrels",
+     "one-third",
+     "ultra-low sulfur distillate",
+     "plus a premium",
+     "2027-28",
+     "13%",
+     "70%",
+     "Nov. 13",
+     "Oct. 27",
+     "Constitution Pipeline"
+    ],
+    "denomKeywords": [
+     "bipartisan praise",
+     "through the roof",
+     "doing everything in our power"
+    ],
+    "note": "the RI corner (station proposed) reads the price leg of the deal through an executive act that does not mention the deal. Read z −0.21: every dated fact on the page says the price is being answered from a reserve, on a loan, after the election. The only + reads are the holder's own"
+   },
+   {
+    "quadrant": "C",
+    "station": "LP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — Breaking Points 10-22 is on the Iran escalation; transcripts owed"
+   },
+   {
+    "quadrant": "D",
+    "station": "RP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — Shapiro 10-20 'Trump promises diesel relief' and 10-21 Evening Wire in the queue, transcripts owed"
+   }
+  ]
+ },
+ "log": [
+  {
+   "date": "2026-10-23",
+   "what": "daily cut (the 10-22 sweep; today's sweep file missing at run time, newest used). Twelve paragraphs read in full via the cloud fetch (the Mac's shell cannot reach foxbusiness.com); eleven scored, two constitutive. Wright stationed @O as the act's holder and made the principal of the page (my call — Trump's promise is the shadow but is not on the page); the two senators stationed with the publication as reported voices (the 10-15 guest ruling, owed). The tonnage arithmetic (315,000 bbl ≈ 42,000 t) is the cut's",
+   "by": "Claude"
+  }
+ ],
+ "scoreboard": {
+  "dia": 14,
+  "tier": "fluid",
+  "declaredZ": 0.45,
+  "readZ": -0.21,
+  "readZRange": [
+   0.0,
+   -0.4
+  ],
+  "stations": {
+   "LI": null,
+   "RI": {
+    "dia": 14,
+    "spread": [
+     6,
+     36
+    ],
+    "readZ": -0.21,
+    "voices": {
+     "AK": {
+      "dia": 29,
+      "readZ": -0.35,
+      "n": 2
+     },
+     "FX": {
+      "dia": 10,
+      "readZ": -0.16,
+      "n": 7
+     },
+     "SC": {
+      "dia": 13,
+      "readZ": -0.25,
+      "n": 2
+     }
+    }
+   },
+   "LP": null,
+   "RP": null
+  },
+  "split": {
+   "topology": "none",
+   "station": "RI",
+   "strength": 0.0,
+   "note": "one station, one sign: the record at 6–22, the two frames (the headline's 'bipartisan praise', King's 'through the roof') at 26–36. No voice on the page reads the price as coming down by the deal; the holder reads it as coming down by the reserve, temporarily"
+  },
+  "lumens": 73,
+  "zRule": "every line carries a z, inferred where implied (Sailor 2026-10-13); inferred lines are marked zInferred with a zWhy",
+  "mode": "open"
+ },
+ "lines": [
+  {
+   "t": 0,
+   "who": "FX",
+   "station": "RI",
+   "quote": "Energy Dept to loan part of home heating oil reserve to ease prices, drawing bipartisan praise",
+   "touch": "F",
+   "z": -0.3,
+   "dia": 26,
+   "mode": "open",
+   "note": "THE DOOR: 'ease' and 'bipartisan praise' — the frame is consensus; the headline withholds the size (a third of the reserve) and the cause (the war). 'Loan' is the honest word and it is in the headline",
+   "chapter": "The door",
+   "normX": 0.629,
+   "normY": 0.4162,
+   "normZ": -0.225,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a reserve loaned to ease prices concedes the deal has not"
+  },
+  {
+   "t": 1,
+   "who": "FX",
+   "station": "RI",
+   "quote": "DOE plans to loan up to about one-third of the emergency heating oil reserve to ease price pressures as global conflicts constrain supply",
+   "touch": "T",
+   "z": -0.3,
+   "dia": 10,
+   "mode": "open",
+   "note": "sized as a fraction; the cause is 'global conflicts' — unnamed, plural. The deal that was to be the remedy is absent",
+   "chapter": "The act",
+   "normX": 0.5533,
+   "normY": 0.4238,
+   "normZ": -0.225,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a third of the emergency reserve going out twelve days after the deal is relief sourced elsewhere"
+  },
+  {
+   "t": 2,
+   "who": "FX",
+   "station": "RI",
+   "quote": "up to 315,000 barrels from the Northeast Home Heating Oil Reserve, which holds one million barrels of ultra-low sulfur distillate at four sites",
+   "touch": "T",
+   "z": -0.2,
+   "dia": 6,
+   "mode": "open",
+   "note": "THE SIZE: 315,000 bbl of distillate ≈ 42,000 t — one Russian tanker's worth (the first cargo, 40,000 t, sailed 10-22). The arithmetic is the cut's; the page sets the number beside nothing",
+   "chapter": "The act",
+   "normX": 0.5467,
+   "normY": 0.4378,
+   "normZ": -0.15,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "one cargo's worth from a domestic reserve, where the schedule said 300,000 t from Russia"
+  },
+  {
+   "t": 3,
+   "who": "FX",
+   "station": "RI",
+   "quote": "borrowers must return the same volume plus a premium before the 2027-28 heating season",
+   "touch": "T",
+   "z": -0.1,
+   "dia": 8,
+   "mode": "open",
+   "note": "a loan, not a sale: the barrels come back with interest. The relief is borrowed from next winter",
+   "chapter": "The act",
+   "normX": 0.5535,
+   "normY": 0.4335,
+   "normZ": -0.075,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "relief that must be repaid with a premium is not a price coming down"
+  },
+  {
+   "t": 4,
+   "who": "CW",
+   "station": "O",
+   "quote": "committed to doing everything in our power to lower energy costs; the exchange directed after receiving Senators Collins' and King's letter",
+   "touch": "O",
+   "z": 0.6,
+   "dia": null,
+   "mode": "open",
+   "note": "constitutive — the act's holder. The cause he names for the act is the letter, not the deal; the deal is not in his statement",
+   "chapter": "The holder",
+   "normX": 0.5,
+   "normY": 0.5,
+   "normZ": 0.45,
+   "quadrant": "T"
+  },
+  {
+   "t": 5,
+   "who": "CW",
+   "station": "O",
+   "quote": "a temporary measure to solve a temporary supply disruption; build the Constitution Pipeline and replace home heating oil with natural gas",
+   "touch": "O",
+   "z": 0.3,
+   "dia": null,
+   "mode": "open",
+   "note": "the holder's own clock ('temporary', twice) and his real answer — a pipeline years out. The remedy he names is not the one the principal named on 10-11",
+   "chapter": "The holder",
+   "normX": 0.5,
+   "normY": 0.5,
+   "normZ": 0.225,
+   "quadrant": "T"
+  },
+  {
+   "t": 6,
+   "who": "SC",
+   "station": "RI",
+   "quote": "approximately half of Maine households rely on fuel oil; the release should put downward pressure on home heating oil costs",
+   "touch": "T",
+   "z": -0.2,
+   "dia": 18,
+   "mode": "open",
+   "note": "a senator whose seat is on the slate (me-sen) credits a federal act thirteen days before the election. 'Should' is the tense; the pressure is anticipated",
+   "chapter": "The senators",
+   "normX": 0.5867,
+   "normY": 0.4122,
+   "normZ": -0.15,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a release that 'should' put downward pressure is relief hoped for, not read"
+  },
+  {
+   "t": 7,
+   "who": "SC",
+   "station": "RI",
+   "quote": "a 13% increase in New England home heating oil supplies; heating oil costs have risen 70% from a year ago",
+   "touch": "T",
+   "z": -0.3,
+   "dia": 8,
+   "mode": "open",
+   "note": "THE PRICE: +70% year on year, twelve days after the deal; 13% of supply against 70% of price. The lowest-Dia line on the page",
+   "chapter": "The senators",
+   "normX": 0.5621,
+   "normY": 0.4413,
+   "normZ": -0.225,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "seventy percent up is the price not coming down"
+  },
+  {
+   "t": 8,
+   "who": "AK",
+   "station": "RI",
+   "quote": "Maine has been hit especially hard by the run-up in fuel prices since the beginning of the Iran War",
+   "touch": "T",
+   "z": -0.4,
+   "dia": 22,
+   "mode": "open",
+   "note": "THE CAUSE NAMED: the war, by the independent — not Ukraine's refinery strikes (the principal's cause of 10-15, msnow_2026-10-15). The arc's cause stated in the RI corner",
+   "chapter": "The senators",
+   "normX": 0.6039,
+   "normY": 0.4083,
+   "normZ": -0.3,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a run-up dated to the war's start is a price the deal has not touched"
+  },
+  {
+   "t": 9,
+   "who": "AK",
+   "station": "RI",
+   "quote": "the cost is absolutely through the roof; the release should provide some help",
+   "touch": "F",
+   "z": -0.3,
+   "dia": 36,
+   "mode": "open",
+   "note": "'through the roof' is the page's one verdict word; 'some help' is the measure of the act in the senator's own mouth",
+   "chapter": "The senators",
+   "normX": 0.648,
+   "normY": 0.378,
+   "normZ": -0.225,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "'some help' against 'through the roof' is relief smaller than the gap"
+  },
+  {
+   "t": 10,
+   "who": "FX",
+   "station": "RI",
+   "quote": "releases to be completed by Nov. 13 from Boston, South Portland and New Haven",
+   "touch": "T",
+   "z": -0.1,
+   "dia": 8,
+   "mode": "open",
+   "note": "THE CLOCK: the barrels land ten days after the election (11-03). The act is announced before the vote and delivered after it",
+   "chapter": "The clock",
+   "normX": 0.5677,
+   "normY": 0.4479,
+   "normZ": -0.075,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "relief dated after the election is not relief before it"
+  },
+  {
+   "t": 11,
+   "who": "FX",
+   "station": "RI",
+   "quote": "no more than 150,000 barrels per site; 25,000-barrel minimum offer; competitive among retailers and terminal holders",
+   "touch": "T",
+   "z": 0.0,
+   "dia": 6,
+   "mode": "open",
+   "note": "the mechanics — the only line on the page that is pure instrument",
+   "chapter": "The clock",
+   "normX": 0.5632,
+   "normY": 0.4547,
+   "normZ": 0.0,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "mechanics read neither way"
+  },
+  {
+   "t": 12,
+   "who": "FX",
+   "station": "RI",
+   "quote": "bids due Tuesday, Oct. 27",
+   "touch": "T",
+   "z": -0.1,
+   "dia": 6,
+   "mode": "open",
+   "note": "dated: the act becomes barrels on 10-27 at the earliest, a week before the vote",
+   "chapter": "The clock",
+   "normX": 0.5647,
+   "normY": 0.4569,
+   "normZ": -0.075,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a bid date a week out is relief still on paper"
+  }
+ ]
+}

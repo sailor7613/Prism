@@ -1,0 +1,428 @@
+{
+ "schema": "press/parallelogram/v0",
+ "id": "fox_2026-10-24_couple_of_hours",
+ "status": "claude-draft",
+ "kind": "parallelogram",
+ "title": "A Couple of Hours",
+ "source": {
+  "program": "Fox Business",
+  "network": "Fox Business (foxbusiness.com, Politics)",
+  "format": "print",
+  "date": "2026-10-24",
+  "title": "First Russian diesel tanker heads to New York after Trump's deal with Putin to lower fuel prices",
+  "byline": "Brie Stimson",
+  "url": "https://www.foxbusiness.com/politics/first-russian-diesel-tanker-heads-new-york-after-trumps-deal-putin-lower-fuel-prices",
+  "length": 12,
+  "paragraphs": 12,
+  "transcript": "Parameters/09_Parallelograms/Press/2026-10-24_FoxBusiness_First_Tanker_Sailed/source.md",
+  "note": "published 10-24 17:48 ET; in the 10-25 sweep (today's sweep_2026-10-26.json was not on GitHub or on disk at run time; the newest in GitHub's index.json, 10-25, was used). Fox's station on the roster is 'RI?' — proposed, ruling owed; scored as RI on the 10-20/10-21/10-23 precedents, the Diesel Index's RI seat, flag on the figure. Read in full via the cloud fetch; reductions filed, no quotation over fifteen words. A short page: twelve paragraphs around an 'America Reports' clip"
+ },
+ "positions": "paragraphs",
+ "horizon": null,
+ "arc": "PG01",
+ "object": {
+  "label": "H1 — the Russian diesel deal (PG01 layer 1): the cargo leg, sized — the first tanker (40,000 t) at sea for New York against the deal's schedule (300,000 t 'immediately') and the price at the pump ($6)",
+  "layer": 1,
+  "zAxis": {
+   "pos": "delivers — the cargo is the deal arriving and the price comes down by it",
+   "neg": "does not — the cargo is a fraction of the promise and hours of demand; the price is set elsewhere"
+  }
+ },
+ "transform": "Z-assertion",
+ "transformNote": "the shadow is on the page in capitals: diesel 'COMING DOWN, IN RECORD NUMBERS, AND FAST' (the principal, Truth Social, 10-09/10-11), with US control of the Strait named as the other cause. The page sets beside it the first cargo (40,000 t, one-eighth of the 'immediately' tranche), the pump ($6+), the waiver (the 10-23 object restated) and one reader who sizes the cargo at 'a couple of hours' of US demand — the same arithmetic the AP wire gave on 10-23 (≈300,000 bbl ≈ 7% of a day). The record and the reader agree on the size; only the holder reads it as relief",
+ "names": {
+  "FX": "the article (Fox Business narration, Brie Stimson)",
+  "DT": "Donald Trump (the deal's holder; constitutive, @O; the principal — quoted from the 10-09/10-11 statement and the Truth Social post)",
+  "DP": "Dmitry Peskov (Kremlin spokesperson — the seller's voice; constitutive, @O, on the 10-21 Novak precedent)",
+  "AP": "Maj. Gen. Arnold Punaro, USMC (ret.) (to Fox News, 'America Reports') — reported, stationed with the publication"
+ },
+ "trace": {
+  "object": {
+   "x": 0,
+   "y": 0,
+   "z": -0.2
+  },
+  "shadow": {
+   "x": 0,
+   "y": 0,
+   "z": 1.0
+  },
+  "shadowNote": "'COMING DOWN, IN RECORD NUMBERS, AND FAST' — the deal as the price's cure; the page prices the first cargo at a couple of hours of demand and the pump above $6 the week it sails",
+  "predicates": {
+   "operative": [
+    {
+     "type": "T",
+     "label": "a tanker with 40,000 t of Russian diesel left for New York 'earlier this week' (¶1); the first Russian diesel to the US since 2023 (¶12)",
+     "z": 0.1
+    },
+    {
+     "type": "T",
+     "label": "US diesel above $6 a gallon the week the cargo sails (¶2)",
+     "z": -0.3
+    },
+    {
+     "type": "T",
+     "label": "the deal's schedule: 300,000 t immediately · 500,000 t in November · 1,000,000 t after · 3,000,000 t more 'within a short period' (¶8–¶10) — the first cargo is one-eighth of the first tranche",
+     "z": 0.0
+    },
+    {
+     "type": "T",
+     "label": "most Graham Act sanctions on Russia and on buyers of Russian fuel waived after the deal (¶4) — the 10-23 object restated",
+     "z": -0.1
+    }
+   ],
+   "stated": [
+    {
+     "type": "O",
+     "label": "Trump: the schedule, from 'a highly successful discussion'; with US control of the Strait, diesel prices 'COMING DOWN, IN RECORD NUMBERS, AND FAST' (¶9–¶10); Peskov: 'The first oil tanker has sailed off to customers' — regular supplies will continue (¶3)",
+     "z": 0.9
+    }
+   ],
+   "challenge": [
+    {
+     "type": "X",
+     "label": "Punaro: 40,000 t is 'a couple of hours' of US diesel demand (¶5); the purchase funds Russia's war — turn the tanker around (¶6)",
+     "z": -0.65
+    }
+   ]
+  },
+  "positions": [
+   {
+    "quadrant": "A",
+    "station": "LI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — the LI reads of the cargo are AJ 10-21 (the Reuters report, read z +0.09) and the AP wire via PBS 10-23 (the record's register); MS NOW 10-23 (Weissmann, 'Can Congress stop Trump…') and 10-25 (Wes Moore, 'people are pissed'; the Obama highlights with 'diesel' in the dek) are transcripts owed; NYT 10-23 '$117' and 10-24 'High Airfares' are site-blocked"
+   },
+   {
+    "quadrant": "B",
+    "station": "RI",
+    "fluid": "40,000 tons · New York · earlier this week · $6 per gallon · Oct. 9 · 300,000 · 500,000 · 1,000,000 · 3,000,000 · since 2023 · Graham Act · midterm elections · couple of hours",
+    "denominated": "fueling their war machine · never going to stop with Ukraine · turn the tanker around · COMING DOWN, IN RECORD NUMBERS, AND FAST",
+    "distinguishability": "High",
+    "fluidKeywords": [
+     "40,000 tons",
+     "New York",
+     "$6 per gallon",
+     "Oct. 9",
+     "300,000 tons",
+     "500,000 tons",
+     "1,000,000 tons",
+     "since 2023",
+     "Graham Act",
+     "couple of hours"
+    ],
+    "denomKeywords": [
+     "fueling their war machine",
+     "never going to stop with Ukraine",
+     "turn the tanker around"
+    ],
+    "note": "the RI corner (station proposed) carries the cargo as record (the article, 8–18) and one reader who sizes it and then leaves it for Putin's intentions (20 → 58 → 66). Read z −0.2: the article reads the cargo as sailing and the price as up; the general reads it as hours of demand and as a war funded. The + reads are the holders' own (Trump, Peskov)"
+   },
+   {
+    "quadrant": "C",
+    "station": "LP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — Breaking Points, Secular Talk, Hasan, Grayzone and Bad Faith all 0 items in the 10-25 sweep (a Saturday); earlier BP/Secular Talk hits are transcripts owed"
+   },
+   {
+    "quadrant": "D",
+    "station": "RP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — Shapiro 4 items/0 hits, TCN 2/0, Kirk 4/1 (a noise match on 'collins'), the Free Press 0 items; Tim Dillon and Chapo have no feed on file"
+   }
+  ]
+ },
+ "log": [
+  {
+   "date": "2026-10-26",
+   "what": "daily cut (the 10-25 sweep; sweep_2026-10-26.json missing at run time, the newest on GitHub used; the 10-24 sweep was never cut — no task ran on 10-25). Twelve paragraphs read in full via the cloud fetch; ten scored, three constitutive. Trump @O as the deal's holder and principal (the 10-21 AJ precedent); Peskov @O as the seller's voice (the Novak precedent); Punaro stationed with the publication (the 10-15 guest ruling, owed). Chosen over the day's other Fox hit on the arc ('Iran's oil lifeline is drying up', 10-25 04:00 — the blockade's effect on Iran's revenue, an H6-adjacent page) because this page is H1 in its own words and the newest hit on an object with a live window; one Fox cut per day",
+   "by": "Claude"
+  }
+ ],
+ "scoreboard": {
+  "dia": 22,
+  "tier": "fluid",
+  "declaredZ": 0.95,
+  "readZ": -0.2,
+  "readZRange": [
+   0.2,
+   -0.7
+  ],
+  "stations": {
+   "LI": null,
+   "RI": {
+    "dia": 22,
+    "spread": [
+     8,
+     66
+    ],
+    "readZ": -0.2,
+    "voices": {
+     "AP": {
+      "dia": 48,
+      "readZ": -0.6,
+      "n": 3
+     },
+     "FX": {
+      "dia": 11,
+      "readZ": -0.03,
+      "n": 7
+     }
+    }
+   },
+   "LP": null,
+   "RP": null
+  },
+  "split": {
+   "topology": "none",
+   "station": "RI",
+   "strength": 0.0,
+   "note": "one station, two readers: the article at 8–18 reading the cargo as record, the general at 20–66 reading it as hours of demand and then as Putin's war. The split on the page is between the holders (+0.8 → +1.0: sailed, continuing, coming down fast) and the corner (−0.2): the same cargo, read as relief by the parties to it and as a rounding error by the reader"
+  },
+  "lumens": 62,
+  "zRule": "every line carries a z, inferred where implied (Sailor 2026-10-13); inferred lines are marked zInferred with a zWhy",
+  "mode": "open"
+ },
+ "lines": [
+  {
+   "t": 0,
+   "who": "FX",
+   "station": "RI",
+   "quote": "First Russian diesel tanker heads to New York after Trump's deal with Putin to lower fuel prices",
+   "touch": "F",
+   "z": 0.1,
+   "dia": 18,
+   "mode": "open",
+   "note": "THE DOOR: the deal's purpose is in the headline's last four words; the dek sizes the cargo (40,000 t), dates it (the first since 2023) and prices the pump ($6) in one sentence — the page's whole argument before the body",
+   "chapter": "The door",
+   "normX": 0.6035,
+   "normY": 0.4328,
+   "normZ": 0.075,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a tanker headed to New York 'to lower fuel prices' is the deal read as delivering"
+  },
+  {
+   "t": 1,
+   "who": "FX",
+   "station": "RI",
+   "quote": "a tanker with 40,000 tons of diesel left for New York from Russia earlier this week, following the deal to release millions of tons into the global supply",
+   "touch": "T",
+   "z": 0.2,
+   "dia": 10,
+   "mode": "open",
+   "note": "THE CARGO: sized, bound, dated to the week; the deal restated at 'millions of tons' — the page's largest number is the promise, its smallest the ship",
+   "chapter": "The cargo",
+   "normX": 0.5533,
+   "normY": 0.4238,
+   "normZ": 0.15,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a cargo at sea is the deal moving"
+  },
+  {
+   "t": 2,
+   "who": "FX",
+   "station": "RI",
+   "quote": "diesel has shot to more than $6 per gallon",
+   "touch": "T",
+   "z": -0.3,
+   "dia": 8,
+   "mode": "open",
+   "note": "THE PRICE: $6 — the first time a Press cut has the pump above six. The week the relief sails, the price is a record. The lowest-Dia line on the page",
+   "chapter": "The price",
+   "normX": 0.5513,
+   "normY": 0.4317,
+   "normZ": -0.225,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a pump above $6 the week the cargo sails is a price not yet coming down"
+  },
+  {
+   "t": 3,
+   "who": "DP",
+   "station": "O",
+   "quote": "The first oil tanker has sailed off to customers — regular supplies will continue",
+   "touch": "O",
+   "z": 0.8,
+   "dia": null,
+   "mode": "open",
+   "note": "constitutive — the seller's voice (Friday 10-23). 'Customers', plural, and 'regular': the seller reads one tanker as a series",
+   "chapter": "The seller",
+   "normX": 0.5,
+   "normY": 0.5,
+   "normZ": 0.6,
+   "quadrant": "T"
+  },
+  {
+   "t": 4,
+   "who": "FX",
+   "station": "RI",
+   "quote": "after the deal, Trump also waived most sanctions on Russia and on buyers of Russian fuel under the Graham Act, backed by the late Sen. Lindsey Graham",
+   "touch": "T",
+   "z": -0.1,
+   "dia": 12,
+   "mode": "open",
+   "note": "the sanctions leg restated — yesterday's object (fox_2026-10-23) in one sentence, with the sponsor's name as the record has it (the 10-23 page printed 'Darline')",
+   "chapter": "The waiver",
+   "normX": 0.5657,
+   "normY": 0.4238,
+   "normZ": -0.075,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a waiver named beside the cargo is the price of the cargo, paid in sanctions"
+  },
+  {
+   "t": 5,
+   "who": "AP",
+   "station": "RI",
+   "quote": "40,000 tons would supply only a couple of hours of U.S. diesel demand",
+   "touch": "X",
+   "z": -0.6,
+   "dia": 20,
+   "mode": "open",
+   "note": "THE SIZE, BY A READER: 'a couple of hours'. The cut's arithmetic: 40,000 t ≈ 300,000 bbl against ≈4 mb/d of US distillate demand is ≈1.8 hours — the general's figure and the AP's '7% of a day' (10-23) are the same number said two ways",
+   "chapter": "The size",
+   "normX": 0.5889,
+   "normY": 0.4038,
+   "normZ": -0.45,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a cargo worth two hours of demand is relief sized at a rounding error"
+  },
+  {
+   "t": 6,
+   "who": "AP",
+   "station": "RI",
+   "quote": "lowering prices is legitimate, but buying Russian diesel is fueling their war machine — after the missile attack on Kyiv that killed civilians and cut the grid, turn the tanker around",
+   "touch": "F",
+   "z": -0.7,
+   "dia": 58,
+   "mode": "open",
+   "note": "the oscillation zone: the object conceded in the first clause ('legitimate'), the verdict in the second ('war machine'), the prescription in the third ('turn it around'). Pattern: the instrument becomes the adversary's weapon",
+   "chapter": "The reader",
+   "normX": 0.6936,
+   "normY": 0.3041,
+   "normZ": -0.525,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a tanker to be turned around is the deal read as a transfer to the seller, not relief to the buyer"
+  },
+  {
+   "t": 7,
+   "who": "AP",
+   "station": "RI",
+   "quote": "Putin aims to regain the former Soviet territory and was never going to stop with Ukraine",
+   "touch": "F",
+   "z": -0.5,
+   "dia": 66,
+   "mode": "surface-bound",
+   "note": "the top of the oscillation zone: the line has left the diesel for the adversary's intentions — right domain (the seller), wrong plane (not the cargo, not the price). Surface-bound",
+   "chapter": "The reader",
+   "normX": 0.7222,
+   "normY": 0.2899,
+   "normZ": -0.375,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a seller who will not stop at Ukraine is a deal read as feeding the next war, not this price"
+  },
+  {
+   "t": 8,
+   "who": "FX",
+   "station": "RI",
+   "quote": "under the Oct. 9 deal, Putin agreed to supply diesel in stages, as described in Trump's statement",
+   "touch": "T",
+   "z": 0.0,
+   "dia": 8,
+   "mode": "open",
+   "note": "the instrument dated: Oct. 9. 'In stages' — the schedule is the deal; the cargo is the first stage's first eighth",
+   "chapter": "The schedule",
+   "normX": 0.564,
+   "normY": 0.4435,
+   "normZ": 0.0,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a deal in stages reads neither way until the stages arrive"
+  },
+  {
+   "t": 9,
+   "who": "DT",
+   "station": "O",
+   "quote": "300,000 tons immediately, 500,000 tons in November, and 1,000,000 tons right after — from a highly successful discussion with Putin",
+   "touch": "O",
+   "z": 0.9,
+   "dia": null,
+   "mode": "open",
+   "note": "constitutive — the terms, by the holder (the 10-11 statement; the AJ 10-12 and BP 10-12 cuts carry the same numbers). 'Immediately' is now fifteen days old and one-eighth delivered",
+   "chapter": "The holder",
+   "normX": 0.5,
+   "normY": 0.5,
+   "normZ": 0.675,
+   "quadrant": "T"
+  },
+  {
+   "t": 10,
+   "who": "DT",
+   "station": "O",
+   "quote": "Russia will deliver 3,000,000 more tons within a short period; with U.S. control of the Strait of Hormuz and this deal, diesel prices are COMING DOWN, IN RECORD NUMBERS, AND FAST",
+   "touch": "O",
+   "z": 1.0,
+   "dia": null,
+   "mode": "open",
+   "note": "constitutive — the shadow in capitals, and H6 asserted in the same sentence ('U.S. control of the Strait') — marked: the two layers of PG01 named as one cause by the holder. Not Dia-scored",
+   "chapter": "The holder",
+   "normX": 0.5,
+   "normY": 0.5,
+   "normZ": 0.75,
+   "quadrant": "T"
+  },
+  {
+   "t": 11,
+   "who": "FX",
+   "station": "RI",
+   "quote": "Trump faced pressure from Republicans to reduce diesel prices before the midterm elections",
+   "touch": "T",
+   "z": -0.2,
+   "dia": 14,
+   "mode": "open",
+   "note": "THE CLOCK: the vote. The gas↔votes predicate from the RI corner — the deal dated by the election it precedes (the cargo lands 11-07 per Kpler, four days after; not on this page)",
+   "chapter": "The clock",
+   "normX": 0.588,
+   "normY": 0.437,
+   "normZ": -0.15,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a price to be reduced before the election is a deal whose delivery date is the vote"
+  },
+  {
+   "t": 12,
+   "who": "FX",
+   "station": "RI",
+   "quote": "the first Russian diesel delivered to the U.S. from the Kremlin since 2023",
+   "touch": "T",
+   "z": 0.1,
+   "dia": 8,
+   "mode": "open",
+   "note": "the record word: 'first since 2023' (the AP has July 2023). The page's close is the dek's middle clause — the cargo as precedent, not as quantity",
+   "chapter": "The record",
+   "normX": 0.5711,
+   "normY": 0.4527,
+   "normZ": 0.075,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a first delivery since 2023 is a channel reopened, not a price moved"
+  }
+ ]
+}

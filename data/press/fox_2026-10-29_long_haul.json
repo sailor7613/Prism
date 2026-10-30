@@ -1,0 +1,551 @@
+{
+ "schema": "press/parallelogram/v0",
+ "id": "fox_2026-10-29_long_haul",
+ "status": "claude-draft",
+ "kind": "parallelogram",
+ "title": "The Long Haul",
+ "source": {
+  "program": "Fox News",
+  "network": "Fox News (foxnews.com, Politics)",
+  "format": "print",
+  "date": "2026-10-29",
+  "title": "Sky-high gas prices aren't shaking Trump's MAGA faithful in oil country as supporters warn of bigger threat",
+  "byline": "Ashley J. DiMella",
+  "url": "https://www.foxnews.com/politics/sky-high-gas-prices-arent-shaking-trumps-maga-faithful-oil-country-supporters-warn-bigger-threat",
+  "length": 22,
+  "paragraphs": 22,
+  "transcript": "Parameters/09_Parallelograms/Press/2026-10-29_Fox_Long_Haul/source.md",
+  "note": "published 10-29 13:35 ET; the 10-29 sweep (matched on 'gasoline', 'midterm', 'venezuela'). Fox's station on the roster is 'RI?' — proposed, ruling owed; scored as RI on the 10-20/21/23/24/27 precedents, flag on the figure. Read in full via the cloud fetch; reductions filed, no quotation over twelve words. A rally page: the article, four voters, the White House as reported, and the holder, from Lubbock and Corpus Christi (the rallies undated on the page; the price dated to Wednesday 10-28). The newest Fox hit on the live object; chosen over the Fox Power Rankings update (10-29 09:00, South Carolina to toss-up — the slate), the Libertarians page (Iran once, as Joe Kent's reason) and the Houthi/WFP page (the force's edge, no price); my call"
+ },
+ "positions": "paragraphs",
+ "horizon": "US",
+ "arc": "PG01",
+ "object": {
+  "label": "H1 — the Russian diesel deal (PG01 layer 1): the price leg (H1c) at the pump, read at two Texas rallies — national regular gasoline $4.25 on Wednesday against $3.05 a year earlier, up nearly 40% (AAA, ¶5); the holder's clock restated ('come down really fast', 'very, very rapidly' — ¶7–¶8) and the cure renamed: the Venezuela energy deal, the first million barrels 'free' and refined in Texas, 65 billion barrels of reserves (¶6, ¶9–¶11). Russian diesel, the Strait, the cargo and the waiver are not on the page; the voters read the price as 'the long haul'",
+  "layer": 1,
+  "zAxis": {
+   "pos": "prices come down by the deal — soon — and the voters feel it before November 3",
+   "neg": "they do not — the pump is forty percent up on a year ago, the cure on the page now carries a different seller's name, and the audience reads the price as a cost of keeping the republic"
+  }
+ },
+ "transform": "Z-assertion",
+ "transformNote": "the shadow is the holder's promise — diesel 'COMING DOWN, IN RECORD NUMBERS, AND FAST' (10-11), 'come down soon' (10-24), now 'really fast' and 'very, very rapidly' at Lubbock. The page puts the pump beside it ($4.25 against $3.05, +40%) and the cure beside that — and the cure has changed its name: not Russian diesel, not the Strait, but a million Venezuelan barrels 'free to taxpayers' and 65 billion in reserves, with 'lower consumer costs expected eventually' in the administration's own clause (¶10). 'Very, very rapidly' and 'eventually' sit two paragraphs apart. The voters do not dispute the number; they read it as the long haul, and move the threat from the pump to the republic",
+ "names": {
+  "FX": "the article (Fox News Digital narration, Ashley J. DiMella)",
+  "DT": "Donald Trump (at the Lubbock and Corpus Christi rallies, as reported) — the deal's holder; constitutive, @O; the principal — never Dia-scored",
+  "WH": "the White House (as reported by the article) — the holder's office; reported, stationed with the publication",
+  "S1": "an unnamed Lubbock supporter (to Fox News Digital) — reported, stationed with the publication",
+  "SE": "Stephen Elsher (rallygoer, Corpus Christi) — reported, stationed with the publication",
+  "SZ": "Susie (rallygoer, Corpus Christi; surname withheld) — reported, stationed with the publication",
+  "ET": "Elizabeth Trigo (rallygoer, Lubbock, with her daughters) — reported, stationed with the publication"
+ },
+ "trace": {
+  "object": {
+   "x": 0,
+   "y": 0,
+   "z": -0.4
+  },
+  "shadow": {
+   "x": 0,
+   "y": 0,
+   "z": 1.0
+  },
+  "shadowNote": "'going to come down really fast' / 'very, very rapidly' — the holder's clock, fifth phrasing, at Lubbock; the cure beside it is Venezuelan, and the administration's own clock for it is 'eventually' (¶10)",
+  "predicates": {
+   "operative": [
+    {
+     "type": "T",
+     "label": "national average regular gasoline ≈$4.25 on Wednesday 10-28, up nearly 40% from ≈$3.05 a year earlier (AAA, ¶5)",
+     "z": -0.5
+    },
+    {
+     "type": "T",
+     "label": "the first million barrels of Venezuelan oil announced at Corpus Christi — 'at no cost to taxpayers' per the White House, to be refined in Texas (¶9); the broader deal: US majority control of ≈65 billion barrels of proven Venezuelan reserves (¶11)",
+     "z": 0.1
+    },
+    {
+     "type": "T",
+     "label": "the administration's own clock for the Venezuela deal: lower consumer costs 'expected eventually' (¶10)",
+     "z": 0.1
+    }
+   ],
+   "stated": [
+    {
+     "type": "O",
+     "label": "Trump at Lubbock: the country is making a fortune while people pay more at the pump; gas prices will come down really fast / very, very rapidly (¶7–¶8)",
+     "z": 0.9
+    }
+   ],
+   "challenge": []
+  },
+  "positions": [
+   {
+    "quadrant": "A",
+    "station": "LI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — AJ is cut today on the same leg from the farm (one cut per source); MS NOW 10-29 'affordability' (Gura) and NPR/PBS 10-29 'Inflation heats up again' (gas drove the increase; oil above $100 against under $70 pre-war) are the LI reads of the same pump — transcript owed / robots-blocked"
+   },
+   {
+    "quadrant": "B",
+    "station": "RI",
+    "fluid": "$4.25 · $3.05 · 40% · Wednesday · a million barrels · 65 billion · Lubbock · Corpus Christi · AAA · next year · two years",
+    "denominated": "sky-high · the faithful · the long haul · a fortune · our republic · besieging · socialism · communists · opportunity · the future",
+    "distinguishability": "High",
+    "fluidKeywords": [
+     "$4.25",
+     "$3.05",
+     "40%",
+     "a million barrels",
+     "65 billion",
+     "Wednesday",
+     "refined in Texas",
+     "eventually"
+    ],
+    "denomKeywords": [
+     "sky-high",
+     "the faithful",
+     "the long haul",
+     "our republic",
+     "socialism",
+     "opportunity"
+    ],
+    "note": "Fox (RI?, proposed) reads the price with a date and a size (¶5 at 6) and lets four voters read it as patience and then leave it for the republic (36–70). Read z −0.04: the article's number sits at −0.5, the cure's paragraphs at +0.1, the voters at zero — a page that reports the pump up forty percent and the audience unmoved"
+   },
+   {
+    "quadrant": "C",
+    "station": "LP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — Breaking Points 10-29 'Bibi FREAKS … IRAN STRIKE' and 10-28 'UAE … Houthis' owed; Secular Talk on Bolsonaro (off-object)"
+   },
+   {
+    "quadrant": "D",
+    "station": "RP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — the Free Press is cut today as a beta lede on the force (fp_2026-10-29_strike_inevitable_lede), runs as data; Shapiro ×2 owed (Alaska; the Evening Wire); TCN and Kirk 0 hits"
+   }
+  ]
+ },
+ "log": [
+  {
+   "date": "2026-10-29",
+   "what": "daily cut over the 10-29 sweep (GitHub raw; no local copy, no transcripts on disk). Twenty-two paragraphs read in full via the cloud fetch; seventeen scored and two constitutive (Trump @O, the principal — declared +0.9). Object declared on H1c at the pump, the Give Him Time (10-27) precedent: the same page shape five days on, with the pump now a national figure and the cure renamed Venezuela. The holder's ballot lines (¶15–¶16) left unscored as off-object and sorted to the slate in the pass. Chosen as the newest Fox hit on the live object; one Fox cut per day; my call",
+   "by": "Claude"
+  }
+ ],
+ "scoreboard": {
+  "dia": 33,
+  "tier": "fluid",
+  "declaredZ": 0.9,
+  "readZ": -0.04,
+  "readZRange": [
+   0.2,
+   -0.5
+  ],
+  "stations": {
+   "LI": null,
+   "RI": {
+    "dia": 33,
+    "spread": [
+     6,
+     70
+    ],
+    "readZ": -0.04,
+    "voices": {
+     "ET": {
+      "dia": 49,
+      "readZ": 0.0,
+      "n": 3
+     },
+     "FX": {
+      "dia": 22,
+      "readZ": -0.12,
+      "n": 9
+     },
+     "S1": {
+      "dia": 44,
+      "readZ": 0.1,
+      "n": 1
+     },
+     "SE": {
+      "dia": 39,
+      "readZ": 0.05,
+      "n": 2
+     },
+     "SZ": {
+      "dia": 70,
+      "readZ": 0.0,
+      "n": 1
+     },
+     "WH": {
+      "dia": 24,
+      "readZ": 0.2,
+      "n": 1
+     }
+    }
+   },
+   "LP": null,
+   "RP": null
+  },
+  "split": {
+   "topology": "none",
+   "station": "RI",
+   "strength": 0.0,
+   "note": "one station, two planes: the article (the price dated and sized, the cure reported with its new name and its slower clock — 6–18) and the voters (the price as the long haul, then the republic, socialism, opportunity — 36–70). The voters do not dispute the article's forty percent; they relocate the threat. No migration inside one voice on the price; Trigo climbs 46 → 52 on the future and the term, off the object"
+  },
+  "lumens": 25,
+  "zRule": "every line carries a z, inferred where implied (Sailor 2026-10-13); inferred lines are marked zInferred with a zWhy",
+  "mode": "open"
+ },
+ "lines": [
+  {
+   "t": 0,
+   "who": "FX",
+   "station": "RI",
+   "quote": "sky-high gas prices aren't shaking the MAGA faithful in oil country; supporters warn of a bigger threat",
+   "touch": "F",
+   "z": -0.2,
+   "dia": 30,
+   "mode": "open",
+   "note": "THE DOOR: the price is 'sky-high' and the audience 'the faithful' in one hed; the threat is already somewhere else",
+   "chapter": "The door",
+   "normX": 0.6417,
+   "normY": 0.408,
+   "normZ": -0.15,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a sky-high pump that does not shake the faithful is a price not yet down for them"
+  },
+  {
+   "t": 2,
+   "who": "FX",
+   "station": "RI",
+   "quote": "gas prices soaring ahead of the midterms; the rising costs aren't shaking loyalty; some warn the country's future is at stake",
+   "touch": "T",
+   "z": -0.3,
+   "dia": 18,
+   "mode": "open",
+   "note": "the lede: the price, the vote and the relocation in one sentence",
+   "chapter": "The door",
+   "normX": 0.5741,
+   "normY": 0.4013,
+   "normZ": -0.225,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "soaring before the midterms is a cure not yet arrived"
+  },
+  {
+   "t": 3,
+   "who": "S1",
+   "station": "RI",
+   "quote": "I do experience that costs are high, but I'm in for the long haul",
+   "touch": "F",
+   "z": 0.1,
+   "dia": 44,
+   "mode": "open",
+   "note": "THE TITLE — the gas↔votes predicate answered by patience (Texas edition of 'give him time', 10-27 ¶7); the voter grants the number and extends the clock",
+   "chapter": "The long haul",
+   "normX": 0.6393,
+   "normY": 0.3269,
+   "normZ": 0.075,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "the long haul is a price read as temporary by the one paying it"
+  },
+  {
+   "t": 4,
+   "who": "FX",
+   "station": "RI",
+   "quote": "Lubbock and Corpus Christi, two cities tied to oil and gas; voters acknowledge the squeeze, remain behind the president; socialism adds urgency",
+   "touch": "T",
+   "z": -0.2,
+   "dia": 14,
+   "mode": "open",
+   "note": "the setting — oil country reading its own product's price",
+   "chapter": "The door",
+   "normX": 0.5707,
+   "normY": 0.4181,
+   "normZ": -0.15,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a squeeze acknowledged in oil country is a price up where it is produced"
+  },
+  {
+   "t": 5,
+   "who": "FX",
+   "station": "RI",
+   "quote": "national average regular ≈$4.25 Wednesday, up nearly 40% from ≈$3.05 a year earlier (AAA)",
+   "touch": "T",
+   "z": -0.5,
+   "dia": 6,
+   "mode": "open",
+   "note": "THE PRICE, DATED AND SIZED — the page's lowest line; a national figure where the 10-27 page had Georgia's. Gasoline, not diesel: the other leg of H1c, and the page does not mention the one the deal is for",
+   "chapter": "The record",
+   "normX": 0.5528,
+   "normY": 0.4428,
+   "normZ": -0.375,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "forty percent in a year is a cure not yet at the pump"
+  },
+  {
+   "t": 6,
+   "who": "FX",
+   "station": "RI",
+   "quote": "Trump acknowledged the higher costs; pointed to increased American oil production and the Venezuela energy deal as steps toward bringing prices down",
+   "touch": "F",
+   "z": -0.1,
+   "dia": 16,
+   "mode": "open",
+   "note": "THE CURE RENAMED — reported: the holder's steps are production and Venezuela; Russian diesel, the cargo, the Strait are not in the sentence",
+   "chapter": "The cure",
+   "normX": 0.5814,
+   "normY": 0.4176,
+   "normZ": -0.075,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a cure with a new name is the old cure not yet felt"
+  },
+  {
+   "t": 7,
+   "who": "DT",
+   "station": "O",
+   "quote": "our country is making a fortune while people have to pay more at the pump; gas prices are going to come down really fast",
+   "touch": "O",
+   "z": 0.9,
+   "dia": null,
+   "mode": "open",
+   "note": "constitutive — THE HOLDER'S CLOCK, fifth phrasing: 'COMING DOWN, IN RECORD NUMBERS, AND FAST' (10-11) → 'immediately' (the 300,000 t) → 'soon' (10-24, Perry) → 'really fast' (Lubbock). The fortune and the pump in one sentence — the holder states both sides of H1c himself. Not Dia-scored",
+   "chapter": "The holder",
+   "normX": 0.5,
+   "normY": 0.5,
+   "normZ": 0.675,
+   "quadrant": "T"
+  },
+  {
+   "t": 8,
+   "who": "DT",
+   "station": "O",
+   "quote": "the ones we care about are our people at the pump; the numbers will fall very, very rapidly",
+   "touch": "O",
+   "z": 0.9,
+   "dia": null,
+   "mode": "open",
+   "note": "constitutive — the clock again, two words faster; the audience named as the object's. Not Dia-scored",
+   "chapter": "The holder",
+   "normX": 0.5,
+   "normY": 0.5,
+   "normZ": 0.675,
+   "quadrant": "T"
+  },
+  {
+   "t": 9,
+   "who": "FX",
+   "station": "RI",
+   "quote": "at Corpus Christi Trump announced the first million barrels of Venezuelan oil — at no cost to taxpayers per the White House, to be refined in Texas",
+   "touch": "T",
+   "z": 0.1,
+   "dia": 12,
+   "mode": "open",
+   "note": "THE NEW CARGO: a million barrels from a different seller, 'free'. The deal's own cargo (40,000 t at sea for New York, fox 10-24) is not on the page; neither is the deal",
+   "chapter": "The cure",
+   "normX": 0.5776,
+   "normY": 0.436,
+   "normZ": 0.075,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a million barrels landed is a cure arriving — from Venezuela, not from the deal"
+  },
+  {
+   "t": 10,
+   "who": "FX",
+   "station": "RI",
+   "quote": "the administration presents the agreement as expanding supply and supporting jobs, with lower consumer costs expected eventually",
+   "touch": "F",
+   "z": 0.1,
+   "dia": 28,
+   "mode": "open",
+   "note": "'EVENTUALLY' — the administration's clock for its own cure, two paragraphs from 'very, very rapidly'; the slowest phrasing on the Press",
+   "chapter": "The cure",
+   "normX": 0.6279,
+   "normY": 0.4016,
+   "normZ": 0.075,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "'eventually' is a cure the office dates later than the holder"
+  },
+  {
+   "t": 11,
+   "who": "WH",
+   "station": "RI",
+   "quote": "the broader deal would give the US majority control over about 65 billion barrels of proven Venezuelan reserves",
+   "touch": "T",
+   "z": 0.2,
+   "dia": 24,
+   "mode": "open",
+   "note": "the cure sized as reserves, undated — supply promised, not a price moved; 'majority control' is the 10-11 'U.S. control' sentence with a new country in it",
+   "chapter": "The cure",
+   "normX": 0.6189,
+   "normY": 0.4149,
+   "normZ": 0.15,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "sixty-five billion barrels of control is supply promised, not a pump moved"
+  },
+  {
+   "t": 12,
+   "who": "SE",
+   "station": "RI",
+   "quote": "the economy is my top midterm concern; Republicans can fix it",
+   "touch": "F",
+   "z": 0.0,
+   "dia": 36,
+   "mode": "open",
+   "note": "the voter's object is 'the economy'; the price inside it, unnamed",
+   "chapter": "The long haul",
+   "normX": 0.6596,
+   "normY": 0.3937,
+   "normZ": 0.0,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "an economy to be fixed reads neither way on the pump"
+  },
+  {
+   "t": 13,
+   "who": "SE",
+   "station": "RI",
+   "quote": "without the Republicans in charge we won't go that direction; hoping next year is better",
+   "touch": "F",
+   "z": 0.1,
+   "dia": 42,
+   "mode": "open",
+   "note": "'NEXT YEAR' — the voter's clock, past the election; the third clock on the page after 'really fast' and 'eventually'",
+   "chapter": "The long haul",
+   "normX": 0.6208,
+   "normY": 0.3227,
+   "normZ": 0.075,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "next year is a cure the voter dates past November 3"
+  },
+  {
+   "t": 14,
+   "who": "FX",
+   "station": "RI",
+   "quote": "Democrats under pressure from the progressive wing; democratic socialist candidates gaining prominence",
+   "touch": "F",
+   "z": 0.0,
+   "dia": 34,
+   "mode": "vacancy",
+   "note": "the article's pivot off the price — vacancy",
+   "chapter": "The bigger threat",
+   "normX": 0.6088,
+   "normY": 0.3514,
+   "normZ": 0.0,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a progressive wing reads neither way on the pump"
+  },
+  {
+   "t": 17,
+   "who": "FX",
+   "station": "RI",
+   "quote": "some concerns extend beyond affordability; socialism threatens the nation's future",
+   "touch": "F",
+   "z": 0.0,
+   "dia": 40,
+   "mode": "vacancy",
+   "note": "THE RELOCATION, in the article's own voice — 'beyond affordability' is the price left behind; vacancy",
+   "chapter": "The bigger threat",
+   "normX": 0.6386,
+   "normY": 0.3463,
+   "normZ": 0.0,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a threat beyond affordability is the pump no longer the object"
+  },
+  {
+   "t": 18,
+   "who": "SZ",
+   "station": "RI",
+   "quote": "we can't lose our republic; Democrats, socialists and communists are besieging the country",
+   "touch": "F",
+   "z": 0.0,
+   "dia": 70,
+   "mode": "vacancy",
+   "note": "the page's peak — denominated; the 'bigger threat' of the hed in a voter's mouth; vacancy",
+   "chapter": "The bigger threat",
+   "normX": 0.723,
+   "normY": 0.2691,
+   "normZ": 0.0,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a republic to be lost reads neither way on the pump"
+  },
+  {
+   "t": 19,
+   "who": "ET",
+   "station": "RI",
+   "quote": "the midterms are about the future and the opportunities for the next generation",
+   "touch": "F",
+   "z": 0.0,
+   "dia": 46,
+   "mode": "vacancy",
+   "note": "the object replaced by 'the future'; vacancy",
+   "chapter": "The bigger threat",
+   "normX": 0.6651,
+   "normY": 0.3402,
+   "normZ": 0.0,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "the next generation's opportunity reads neither way on the pump"
+  },
+  {
+   "t": 20,
+   "who": "ET",
+   "station": "RI",
+   "quote": "opportunity is the key issue; Trump is on the side of opportunity",
+   "touch": "F",
+   "z": 0.0,
+   "dia": 48,
+   "mode": "vacancy",
+   "note": "vacancy",
+   "chapter": "The bigger threat",
+   "normX": 0.6761,
+   "normY": 0.3408,
+   "normZ": 0.0,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a side of opportunity reads neither way on the pump"
+  },
+  {
+   "t": 21,
+   "who": "ET",
+   "station": "RI",
+   "quote": "keep fighting the war on drugs and resisting socialism over his remaining two years",
+   "touch": "F",
+   "z": 0.0,
+   "dia": 52,
+   "mode": "vacancy",
+   "note": "'TWO YEARS' — the fourth clock on the page, the holder's term; the price not in it; vacancy",
+   "chapter": "The bigger threat",
+   "normX": 0.693,
+   "normY": 0.337,
+   "normZ": 0.0,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "two years is a window with no price in it"
+  }
+ ]
+}

@@ -1,0 +1,557 @@
+{
+ "schema": "press/parallelogram/v0",
+ "id": "fox_2026-10-20_hormuz_mines",
+ "status": "claude-draft",
+ "kind": "parallelogram",
+ "title": "Not Open for Business",
+ "source": {
+  "program": "Fox News",
+  "network": "Fox News Digital (foxnews.com)",
+  "format": "print",
+  "date": "2026-10-20",
+  "title": "Sea mine crisis re-emerges in Strait of Hormuz as Tehran urges Washington to accept deal",
+  "byline": "Emma Bussey",
+  "url": "https://www.foxnews.com/world/sea-mine-crisis-re-emerges-strait-hormuz-tehran-urges-washington-accept-deal",
+  "length": 27,
+  "paragraphs": 27,
+  "transcript": "Parameters/09_Parallelograms/Press/2026-10-20_Fox_Hormuz_Mines/source.md",
+  "note": "published 10-20 14:26 ET (created 10-18, modified 10-20). Fox's station on the roster is 'RI?' — proposed, ruling owed (RI by institution, or RP). Scored here as RI, the Diesel Index's RI member, so the corner can be read; the flag rides on the figure"
+ },
+ "positions": "paragraphs",
+ "stationNote": "RI proposed — Fox's station ruling is owed (roster 10-16: RI by institution with a populist voice, or RP?)",
+ "arc": "PG01",
+ "object": {
+  "label": "US control of the Strait of Hormuz (H6, proposed) — throughput as control",
+  "layer": 1,
+  "zAxis": {
+   "pos": "open under US control",
+   "neg": "not — passage priced by Iran, insurers, freight"
+  }
+ },
+ "transform": "Z-assertion",
+ "transformNote": "CENTCOM's 'open under US control' (10-12) read against its own falsifier: H6 falls if a commercial vessel is sunk or disabled in the Strait within 14 days of 10-15. Fox reports Iran's claim that two tankers struck mines on 10-17 and one was left immobilized — the falsifier's terms, sighted, by the adversary's claim; the record (a named hull, an insurer, Kpler) is owed. The regulator says the one recognized route still has mines on it. The cut does not rule H6; it reports that its test has a dated sighting",
+ "names": {
+  "FX": "the article (Fox narration, Emma Bussey)",
+  "AD": "Arsenio Dominguez (IMO secretary-general, to Fox News Digital)",
+  "IR": "the IRGC navy / IRNA, via Reuters (reported)",
+  "MR": "Mohsen Rezaei (Iran's Supreme National Security Council, via Reuters/IRNA; reported)",
+  "AA": "Abbas Araghchi (Iran's foreign minister, via Reuters; reported)"
+ },
+ "trace": {
+  "object": {
+   "x": 0,
+   "y": 0,
+   "z": -0.55
+  },
+  "shadow": {
+   "x": 0,
+   "y": 0,
+   "z": 1.0
+  },
+  "shadowNote": "CENTCOM's 19M barrels (10-12): the Strait open by count",
+  "predicates": {
+   "operative": [
+    {
+     "type": "T",
+     "label": "Iran claims two tankers caught fire after striking mines, 10-17; ≈2M barrels of crude aboard; the second left immobilized (¶1, ¶6, ¶8)",
+     "z": -0.65
+    },
+    {
+     "type": "T",
+     "label": "IMO: mines remain on the one recognized route (the 1968 traffic separation scheme); Iran's corridor confirmed, not approved (¶3, ¶12, ¶13)",
+     "z": -0.6
+    },
+    {
+     "type": "T",
+     "label": "Iran's corridor charges IRGC-administered tolls and fees, rejected by the US and the IMO (¶9)",
+     "z": -0.6
+    },
+    {
+     "type": "T",
+     "label": "attacks on commercial vessels have surged over the past two weeks; Tehran says it changed tactics (¶22–¶23)",
+     "z": -0.65
+    }
+   ],
+   "stated": [
+    {
+     "type": "F",
+     "label": "'crisis' · 'unauthorized' · 'insufficient' · 'had not authorized'",
+     "z": -0.55
+    }
+   ],
+   "challenge": [
+    {
+     "type": "X",
+     "label": "Fox asked CENTCOM for comment; no response reported (¶27) — the principal silent on its own assertion",
+     "z": -0.3
+    }
+   ]
+  },
+  "positions": [
+   {
+    "quadrant": "B",
+    "station": "RI",
+    "fluid": "two tankers · 10-17 · 2 million barrels · one immobilized · the 1968 scheme · tolls and fees · a seven-day proposal",
+    "denominated": "crisis · unauthorized corridor · insufficient",
+    "distinguishability": "High",
+    "fluidKeywords": [
+     "two oil tankers",
+     "Oct. 17",
+     "2 million barrels",
+     "immobilized",
+     "1968",
+     "tolls and fees",
+     "seven days",
+     "past two weeks"
+    ],
+    "denomKeywords": [
+     "crisis",
+     "unauthorized",
+     "insufficient",
+     "not safe"
+    ],
+    "note": "the first RI-corner reading on H6 (the Close reads the barrel's price, not the Strait). Read z −0.56: the regulator and the adversary agree the Strait is not open as it was; the principal does not answer. Station proposed"
+   },
+   {
+    "quadrant": "A",
+    "station": "LI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty on H6 today — compare nyt_2026-10-15_gulf_oil_flowing_lede (+0.1, beta); MS NOW 10-21 reads the theater, not the Strait (msnow_2026-10-21_only_voice_of_reason, surface-bound)"
+   },
+   {
+    "quadrant": "C",
+    "station": "LP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty today — the standing LP readings are BP 10-15 (−0.8) and 10-16 (−0.55); BP 10-21 'massive Iran escalation' transcript owed"
+   },
+   {
+    "quadrant": "D",
+    "station": "RP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty today — Saagar 10-15 (−0.6) stands"
+   }
+  ]
+ },
+ "log": [
+  {
+   "date": "2026-10-22",
+   "what": "daily cut (the 10-21 sweep, which carries 10-20 items). Twenty-seven paragraphs read in full via fetch; seventeen scored; reductions filed, no quotation over fifteen words. Iranian officials and the IMO stationed with the publication as reported voices (my call — the 10-15 guest ruling, owed)",
+   "by": "Claude"
+  }
+ ],
+ "scoreboard": {
+  "dia": 16,
+  "tier": "fluid",
+  "declaredZ": null,
+  "readZ": -0.56,
+  "readZRange": [
+   -0.3,
+   -0.8
+  ],
+  "stations": {
+   "LI": null,
+   "RI": {
+    "dia": 16,
+    "spread": [
+     8,
+     34
+    ],
+    "readZ": -0.56,
+    "voices": {
+     "AA": {
+      "dia": 20,
+      "readZ": -0.8,
+      "n": 1
+     },
+     "AD": {
+      "dia": 11,
+      "readZ": -0.55,
+      "n": 6
+     },
+     "FX": {
+      "dia": 15,
+      "readZ": -0.53,
+      "n": 9
+     },
+     "IR": {
+      "dia": 20,
+      "readZ": -0.6,
+      "n": 2
+     },
+     "MR": {
+      "dia": 34,
+      "readZ": -0.5,
+      "n": 1
+     }
+    }
+   },
+   "LP": null,
+   "RP": null
+  },
+  "split": {
+   "topology": "none",
+   "station": "RI",
+   "strength": 0.0,
+   "note": "one station, one sign (−0.3 → −0.8). The record (Dominguez, the Reuters lines) sits at 8–16; the frames (the headline, Iran's 'had not authorized', Rezaei's 'insufficient') at 28–34. No voice on the tape reads the Strait as open"
+  },
+  "lumens": 73,
+  "zRule": "every line carries a z, inferred where implied (Sailor 2026-10-13); inferred lines are marked zInferred with a zWhy",
+  "mode": "open"
+ },
+ "lines": [
+  {
+   "t": 0,
+   "who": "FX",
+   "station": "RI",
+   "quote": "Sea mine crisis re-emerges in Strait of Hormuz as Tehran urges Washington to accept deal",
+   "touch": "F",
+   "z": -0.5,
+   "dia": 30,
+   "mode": "open",
+   "note": "THE DOOR: 'crisis' is the vehicle, 're-emerges' dates it (the mines were cleared once — the headline's own link), 'urges' puts the deal in Tehran's hands",
+   "chapter": "The door",
+   "normX": 0.6417,
+   "normY": 0.408,
+   "normZ": -0.375,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a re-emerging mine crisis is not a controlled strait"
+  },
+  {
+   "t": 1,
+   "who": "FX",
+   "station": "RI",
+   "quote": "Iran claimed Oct. 17 that two oil tankers caught fire after striking mines in the Strait",
+   "touch": "T",
+   "z": -0.6,
+   "dia": 14,
+   "mode": "open",
+   "note": "THE FALSIFIER'S SIGHTING: H6 falls on a commercial vessel sunk or disabled within 14 days of 10-15. Two days in, by the adversary's claim. Verify: a hull name, an insurer, Kpler",
+   "chapter": "The claim",
+   "normX": 0.562,
+   "normY": 0.4113,
+   "normZ": -0.45,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "two tankers burning on mines reads against control, if the claim holds"
+  },
+  {
+   "t": 2,
+   "who": "FX",
+   "station": "RI",
+   "quote": "the IMO warned mines pose a serious threat to vessels; Tehran keeps its own unauthorized shipping corridor inside its territorial waters",
+   "touch": "T",
+   "z": -0.5,
+   "dia": 18,
+   "mode": "open",
+   "note": "two routes on one strait: the regulator's and Iran's. 'Unauthorized' is Fox's word for Iran's corridor; Iran's word for the IMO route is the same (¶7)",
+   "chapter": "The claim",
+   "normX": 0.5741,
+   "normY": 0.4013,
+   "normZ": -0.375,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a strait with two competing routes is priced by whoever holds the safe one"
+  },
+  {
+   "t": 3,
+   "who": "AD",
+   "station": "RI",
+   "quote": "the information we have is that they still have mines in the traffic separation scheme; while the conflict is ongoing it is very difficult to use third parties to verify",
+   "touch": "T",
+   "z": -0.6,
+   "dia": 10,
+   "mode": "open",
+   "note": "THE INSTRUMENT'S OWN BLINDNESS: the regulator says it cannot verify the record — the horizon named by the body that keeps the chart",
+   "chapter": "The regulator",
+   "normX": 0.5583,
+   "normY": 0.4276,
+   "normZ": -0.45,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "an unverifiable minefield on the recognized route is not control"
+  },
+  {
+   "t": 4,
+   "who": "AD",
+   "station": "RI",
+   "quote": "we cannot guarantee that a vessel intending to transit that route will not be hit by a mine",
+   "touch": "M",
+   "z": -0.6,
+   "dia": 12,
+   "mode": "open",
+   "note": "the mechanism: no guarantee → no insurance → no passage at the old price (L2-toll-2's freight line, from the regulator's side)",
+   "chapter": "The regulator",
+   "normX": 0.5657,
+   "normY": 0.4238,
+   "normZ": -0.45,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a passage no one can guarantee is a passage priced by risk"
+  },
+  {
+   "t": 6,
+   "who": "IR",
+   "station": "RI",
+   "quote": "both tankers were reportedly carrying about 2 million barrels of crude",
+   "touch": "T",
+   "z": -0.5,
+   "dia": 12,
+   "mode": "open",
+   "note": "the cargo sized — a tenth of CENTCOM's daily count, on two hulls",
+   "chapter": "The claim",
+   "normX": 0.5707,
+   "normY": 0.4284,
+   "normZ": -0.375,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "two million barrels stopped is throughput lost"
+  },
+  {
+   "t": 7,
+   "who": "IR",
+   "station": "RI",
+   "quote": "the ships allegedly turned off positioning and radar and used a route Iran had not authorized",
+   "touch": "F",
+   "z": -0.7,
+   "dia": 28,
+   "mode": "open",
+   "note": "IRAN'S FRAME: the hit as the ship's fault for refusing the toll road. Who authorizes passage is the object itself, stated from the other side",
+   "chapter": "The claim",
+   "normX": 0.6173,
+   "normY": 0.3891,
+   "normZ": -0.525,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a strait where Iran authorizes the route is Iran's to price"
+  },
+  {
+   "t": 8,
+   "who": "FX",
+   "station": "RI",
+   "quote": "the second tanker was left immobilized after hitting a mine (Reuters)",
+   "touch": "T",
+   "z": -0.7,
+   "dia": 8,
+   "mode": "open",
+   "note": "THE FALSIFIER'S TERM: 'disabled' is H6's word; 'immobilized' is the wire's. The lowest-Dia line in the cut",
+   "chapter": "The claim",
+   "normX": 0.564,
+   "normY": 0.4435,
+   "normZ": -0.525,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a hull immobilized in the Strait is the falsifier, literally"
+  },
+  {
+   "t": 9,
+   "who": "FX",
+   "station": "RI",
+   "quote": "Tehran's passage inside its waters charges IRGC-administered tolls and fees, which Washington and the IMO reject",
+   "touch": "T",
+   "z": -0.6,
+   "dia": 14,
+   "mode": "open",
+   "note": "L2-toll-1 (Krystal, 10-15: countries are paying Iran for passage) now stated from the RI corner, as a fact the US 'rejects' — rejecting a toll is not the same as not paying it",
+   "chapter": "The toll",
+   "normX": 0.5835,
+   "normY": 0.4312,
+   "normZ": -0.45,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a tolled corridor is passage priced by Iran"
+  },
+  {
+   "t": 12,
+   "who": "AD",
+   "station": "RI",
+   "quote": "the one transit route is not safe, because mines remain on it",
+   "touch": "T",
+   "z": -0.7,
+   "dia": 10,
+   "mode": "open",
+   "note": "the recognized route (1968) declared unsafe by its keeper",
+   "chapter": "The regulator",
+   "normX": 0.5774,
+   "normY": 0.4484,
+   "normZ": -0.525,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "the only lawful route unsafe is the Strait closed in law"
+  },
+  {
+   "t": 13,
+   "who": "AD",
+   "station": "RI",
+   "quote": "the IMO has confirmation of Iran's temporary route but has not approved it; any other route must come to the organization for review",
+   "touch": "T",
+   "z": -0.4,
+   "dia": 12,
+   "mode": "open",
+   "note": "the status of Iran's corridor, exactly: confirmed, unapproved, unreviewed",
+   "chapter": "The regulator",
+   "normX": 0.5567,
+   "normY": 0.4169,
+   "normZ": -0.3,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "an unapproved corridor in use is a fact on the water, not on the chart"
+  },
+  {
+   "t": 17,
+   "who": "FX",
+   "station": "RI",
+   "quote": "amid stalled US–Iran talks on ending the conflict and restoring shipping",
+   "touch": "T",
+   "z": -0.3,
+   "dia": 16,
+   "mode": "open",
+   "note": "'restoring shipping' concedes shipping is not restored — the article's own Z, in passing",
+   "chapter": "The talks",
+   "normX": 0.5776,
+   "normY": 0.414,
+   "normZ": -0.225,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "shipping still to be restored is not shipping under control"
+  },
+  {
+   "t": 18,
+   "who": "MR",
+   "station": "RI",
+   "quote": "Washington's latest response is insufficient; the US accepted some of Iran's seven conditions; Tehran has stopped responding",
+   "touch": "F",
+   "z": -0.5,
+   "dia": 34,
+   "mode": "open",
+   "note": "the adversary's frame on the talks; 'seven conditions' is the only sized thing in it. The hottest line in the cut",
+   "chapter": "The talks",
+   "normX": 0.6279,
+   "normY": 0.3675,
+   "normZ": -0.375,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a counterparty that stops responding holds the pace"
+  },
+  {
+   "t": 20,
+   "who": "AA",
+   "station": "RI",
+   "quote": "Iran sent a proposal through Qatar: the Strait could reopen and traffic resume within seven days",
+   "touch": "O",
+   "z": -0.8,
+   "dia": 20,
+   "mode": "open",
+   "note": "THE COUNTER-OBJECT: 'could reopen' concedes closed. The Z-assertion read backwards from Tehran — the Strait's opening offered as Iran's to give, on a seven-day clock",
+   "chapter": "The talks",
+   "normX": 0.5972,
+   "normY": 0.4121,
+   "normZ": -0.6,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a reopening offered by Iran is a strait Iran holds"
+  },
+  {
+   "t": 22,
+   "who": "FX",
+   "station": "RI",
+   "quote": "attacks on commercial vessels around Hormuz have surged over the past two weeks",
+   "touch": "T",
+   "z": -0.7,
+   "dia": 12,
+   "mode": "open",
+   "note": "the rate, undated and uncounted (BP 10-16 had 'a couple a day'; NYT 10-15 had 26 in October)",
+   "chapter": "The rate",
+   "normX": 0.579,
+   "normY": 0.4377,
+   "normZ": -0.525,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a surging attack rate is the loss-rate reading, from RI"
+  },
+  {
+   "t": 23,
+   "who": "FX",
+   "station": "RI",
+   "quote": "senior Iranian officials told Reuters Tehran has changed its tactics for attacking commercial ships in that period",
+   "touch": "T",
+   "z": -0.6,
+   "dia": 16,
+   "mode": "open",
+   "note": "the adversary's own admission of the rate — a detection-series row (tactics changed, ≈10-06 → 10-20)",
+   "chapter": "The rate",
+   "normX": 0.5933,
+   "normY": 0.4315,
+   "normZ": -0.45,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "an adversary announcing new tactics is not deterred"
+  },
+  {
+   "t": 25,
+   "who": "AD",
+   "station": "RI",
+   "quote": "not open for business in the way that it was before the conflict started",
+   "touch": "O",
+   "z": -0.6,
+   "dia": 8,
+   "mode": "open",
+   "note": "THE RECORD LINE: the regulator reads H6 in H6's own word — 'open' — and says not. The title",
+   "chapter": "The regulator",
+   "normX": 0.5473,
+   "normY": 0.4289,
+   "normZ": -0.45,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "not open as before is the object stated, from the chart's keeper"
+  },
+  {
+   "t": 26,
+   "who": "AD",
+   "station": "RI",
+   "quote": "the IMO is preparing to resume operations, but not until the root causes are addressed",
+   "touch": "M",
+   "z": -0.4,
+   "dia": 14,
+   "mode": "open",
+   "note": "the regulator's own window: open when the conflict ends, not before",
+   "chapter": "The regulator",
+   "normX": 0.5629,
+   "normY": 0.412,
+   "normZ": -0.3,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a resumption conditioned on the war's end is a strait closed for the war's length"
+  },
+  {
+   "t": 27,
+   "who": "FX",
+   "station": "RI",
+   "quote": "Fox News Digital contacted CENTCOM for comment; no response",
+   "touch": "X",
+   "z": -0.3,
+   "dia": 10,
+   "mode": "open",
+   "note": "THE CHALLENGE, BY ABSENCE: H6's principal asked about its own assertion and silent. The line the cut turns on",
+   "chapter": "The principal",
+   "normX": 0.5566,
+   "normY": 0.4262,
+   "normZ": -0.225,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a principal that does not answer does not restate the count"
+  }
+ ]
+}

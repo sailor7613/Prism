@@ -2462,6 +2462,3417 @@
     "ref": "roster: odd-lots scanned 10-16, not cut"
    },
    "scored": false
+  },
+  {
+   "id": "see-aj-1021-first-cargo",
+   "piece": "aj_2026-10-21_first_tanker",
+   "program": "Al Jazeera English (Reuters)",
+   "date": "2026-10-21",
+   "t": [
+    "¶1–¶2",
+    "¶5"
+   ],
+   "object": "H1's first cargo: one tanker, 40,000 t of diesel, sails Thursday 10-22 to an undisclosed US port (Novak); 'additional shipments will follow'",
+   "kind": "statement",
+   "holder": "the Russian government (Novak) — the seller",
+   "analog": {
+    "type": "statement",
+    "ref": "the 10-09 terms: 300,000 t immediately · 500,000 t November · 1,000,000 t thereafter",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1 record — the delivery's first dated row; 13% of the first tranche on day 13. Tracker detection row, verified: false (hull name / AIS / port owed); realization series Russia → US, settlement: unknown"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 10,
+   "z": 0.09,
+   "reduced": "first diesel tanker to the US sails Thursday; 40,000 tonnes; port not named"
+  },
+  {
+   "id": "see-aj-1021-export-ban",
+   "piece": "aj_2026-10-21_first_tanker",
+   "program": "Al Jazeera English (Reuters)",
+   "date": "2026-10-21",
+   "t": [
+    "¶3"
+   ],
+   "object": "Russia's diesel export ban lifted 10-09 — imposed to address domestic shortages after drone strikes on refineries",
+   "kind": "ruling",
+   "holder": "the Russian government",
+   "analog": {
+    "type": "law",
+    "ref": "a foreign executive act with a date, lifted the day the deal was announced",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "candidate — the seller's own export ban as a dated object; PG01 statement"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 10,
+   "z": 0.2,
+   "reduced": "Moscow lifted its diesel export ban on 9 October"
+  },
+  {
+   "id": "see-aj-1021-refining-half",
+   "piece": "aj_2026-10-21_first_tanker",
+   "program": "Al Jazeera English (Reuters)",
+   "date": "2026-10-21",
+   "t": [
+    "¶4"
+   ],
+   "object": "drone strikes disabled at least half of Russia's refining capacity, forcing diesel cuts at major refineries (Ukraine's MoD)",
+   "kind": "supply",
+   "holder": null,
+   "analog": {
+    "type": "statement",
+    "ref": "H2 — Ukrainian strikes on Russian refining (falsified 10-12); the Daily 10-14 had '~half' too",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H2 later sighting · tracker (supply) — a belligerent's count, verify"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 14,
+   "z": -0.5,
+   "reduced": "at least half of Russia's refining capacity knocked out"
+  },
+  {
+   "id": "see-aj-1021-financing-fertiliser",
+   "piece": "aj_2026-10-21_first_tanker",
+   "program": "Al Jazeera English (Reuters)",
+   "date": "2026-10-21",
+   "t": [
+    "¶7"
+   ],
+   "object": "Witkoff: several tankers being prepared 'right now', needing financing; Russia could also supply fertiliser in large quantities",
+   "kind": "statement",
+   "holder": "the US envoy (Witkoff) — the buyer's side",
+   "analog": {
+    "type": "agreement",
+    "ref": "H1's terms — financing unmentioned in the 10-09 terms; fertiliser outside them",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "candidate — a terms amendment (fertiliser) and the settlement layer named as unfinished ('needing financing'); PG01 H1 record"
+   },
+   "scored": false,
+   "reduced": "preparing deliveries of several vessels, needing financing; fertiliser too"
+  },
+  {
+   "id": "see-aj-1021-diesel-price",
+   "piece": "aj_2026-10-21_first_tanker",
+   "program": "Al Jazeera English (Reuters)",
+   "date": "2026-10-21",
+   "t": [
+    "¶9"
+   ],
+   "object": "AAA diesel $6.31/gal, down from $6.51 a month earlier; the midterms under two weeks away",
+   "kind": "price",
+   "holder": null,
+   "analog": {
+    "type": "price",
+    "ref": "MS NOW 10-15 read $6.32; the gas↔approval predicate (X-gas-votes-1..3)",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "price shadow (retail diesel) · slate: fourth sighting of the gas↔approval predicate, with the clock attached"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 12,
+   "z": -0.2,
+   "reduced": "diesel $6.31, down from $6.51; two weeks to the midterms"
+  },
+  {
+   "id": "see-aj-1021-france-diesel",
+   "piece": null,
+   "program": "Al Jazeera English",
+   "date": "2026-10-21",
+   "t": [
+    "headline + dek"
+   ],
+   "object": "Macron's surprise Saudi visit; France secures extra diesel supplies (energy, security, infrastructure with MBS)",
+   "kind": "agreement",
+   "holder": "France / Saudi Arabia",
+   "analog": {
+    "type": "agreement",
+    "ref": "the diesel deal (H1) — a second buyer securing diesel by state visit; the EU theater of the crunch",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "realization series (Saudi → France, settlement unknown) — sighted from the sweep's dek only; not cut (one AJ cut per day)"
+   },
+   "scored": false,
+   "reduced": "France secures extra diesel supplies from Saudi Arabia"
+  },
+  {
+   "id": "see-fox-1020-mines",
+   "piece": "fox_2026-10-20_hormuz_mines",
+   "program": "Fox News Digital",
+   "date": "2026-10-20",
+   "t": [
+    "¶1",
+    "¶5–¶8"
+   ],
+   "object": "two oil tankers caught fire after striking mines in the Strait of Hormuz on 10-17, ≈2M barrels of crude aboard; the second left immobilized (IRGC navy / IRNA via Reuters)",
+   "kind": "strike",
+   "holder": null,
+   "analog": {
+    "type": "statement",
+    "ref": "H6's falsifier: a commercial vessel sunk or disabled within 14 days of 10-15",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 falsifier sighting, inside the window — an adversary's claim; tracker detection row (as-of 10-17, detected 10-18/10-20), verified: false — hull names, flags, an insurer or Kpler owed"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 11,
+   "z": -0.65,
+   "reduced": "two tankers struck mines Oct. 17; one immobilized; ~2M barrels"
+  },
+  {
+   "id": "see-fox-1020-corridor-tolls",
+   "piece": "fox_2026-10-20_hormuz_mines",
+   "program": "Fox News Digital",
+   "date": "2026-10-20",
+   "t": [
+    "¶2",
+    "¶9",
+    "¶13"
+   ],
+   "object": "Iran's shipping corridor inside its territorial waters — IRGC-administered tolls and fees; confirmed to the IMO, not approved; rejected by the US and the IMO",
+   "kind": "ruling",
+   "holder": "the IRGC (Iran)",
+   "analog": {
+    "type": "statement",
+    "ref": "L2-toll-1 (Krystal 10-15: countries paying Iran for passage); L2-toll-2 (Hochstein's $1M/ship)",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "candidate — the corridor as a standing act with a holder; PG01 statement L2-toll-5 (the toll road stated from the RI corner)"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 14,
+   "z": -0.6,
+   "reduced": "Tehran's corridor charges IRGC tolls and fees, which the US and IMO reject"
+  },
+  {
+   "id": "see-fox-1020-imo-route",
+   "piece": "fox_2026-10-20_hormuz_mines",
+   "program": "Fox News Digital",
+   "date": "2026-10-20",
+   "t": [
+    "¶3",
+    "¶12",
+    "¶25"
+   ],
+   "object": "the IMO: mines remain on the one recognized route (the 1968 traffic separation scheme); verification impossible while the conflict runs; the Strait 'not open for business in the way that it was'",
+   "kind": "statement",
+   "holder": "the IMO (Dominguez)",
+   "analog": {
+    "type": "ruling",
+    "ref": "H6 (CENTCOM: open under US control)",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 record — the regulator's reading in the object's own word · tracker (the route's status)"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 9,
+   "z": -0.63,
+   "reduced": "mines still on the recognized route; not open as before the conflict"
+  },
+  {
+   "id": "see-fox-1020-seven-day",
+   "piece": "fox_2026-10-20_hormuz_mines",
+   "program": "Fox News Digital",
+   "date": "2026-10-20",
+   "t": [
+    "¶18–¶21"
+   ],
+   "object": "Iran's seven-day proposal through Qatar: the Strait reopens and traffic resumes within seven days; the US accepted some of seven conditions; Tehran has 'stopped responding' (Rezaei, Araghchi)",
+   "kind": "agreement",
+   "holder": "Iran (SNSC / MFA) → the US, via Qatar",
+   "analog": {
+    "type": "agreement",
+    "ref": "the energy ceasefire (H2, falsified 10-12) — an agreement whose delivery is the object",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "candidate — an agreement in negotiation, as-of ≈10-18, detected 10-20; the scan/record decides"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 27,
+   "z": -0.65,
+   "reduced": "the Strait could reopen within seven days under Iran's proposal; Washington's reply 'insufficient'"
+  },
+  {
+   "id": "see-fox-1020-attack-rate",
+   "piece": "fox_2026-10-20_hormuz_mines",
+   "program": "Fox News Digital",
+   "date": "2026-10-20",
+   "t": [
+    "¶22–¶23"
+   ],
+   "object": "attacks on commercial vessels around Hormuz surged over the past two weeks; senior Iranian officials say Tehran changed its tactics",
+   "kind": "activity",
+   "holder": null,
+   "analog": {
+    "type": "statement",
+    "ref": "the loss-rate layer (BP 10-16: a couple hit a day; NYT 10-15: 26 struck in October)",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "the fleet layer (hulls hit) — uncounted here; PG01 detection series (tactics changed ≈10-06 → 10-20)"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 14,
+   "z": -0.65,
+   "reduced": "attacks surged over two weeks; tactics changed"
+  },
+  {
+   "id": "see-fox-1020-centcom-silent",
+   "piece": "fox_2026-10-20_hormuz_mines",
+   "program": "Fox News Digital",
+   "date": "2026-10-20",
+   "t": [
+    "¶27"
+   ],
+   "object": "CENTCOM asked for comment on the mines and the corridor; no response reported",
+   "kind": "none",
+   "holder": "CENTCOM",
+   "analog": {
+    "type": "statement",
+    "ref": "H6's principal (CENTCOM, 10-12)",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 — the principal's non-restatement, logged"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 10,
+   "z": -0.3,
+   "reduced": "CENTCOM contacted; no response"
+  },
+  {
+   "id": "see-msnow-1021-bahrain-base",
+   "piece": "msnow_2026-10-21_only_voice_of_reason",
+   "program": "MS NOW",
+   "date": "2026-10-21",
+   "t": [
+    "3:58–4:38"
+   ],
+   "object": "Iran's retaliatory attacks blew up several buildings on the Navy's biggest base in the Middle East (Bahrain): $400M of damage; essential operators evacuated, spouses and minor children left behind for weeks (Sridhar, five evacuees)",
+   "kind": "strike",
+   "holder": null,
+   "analog": {
+    "type": "statement",
+    "ref": "H6 — the Fifth Fleet's base is the convoys' instrument",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 record by report (the base hit and priced) · tracker detection row (as-of 'the start of the war', detected 10-21), verified: false — a Navy/DoD damage assessment is the primary"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 13,
+   "z": -0.5,
+   "reduced": "$400 million of damage on the Navy's biggest base in the Middle East; families left behind"
+  },
+  {
+   "id": "see-msnow-1021-casualties",
+   "piece": "msnow_2026-10-21_only_voice_of_reason",
+   "program": "MS NOW",
+   "date": "2026-10-21",
+   "t": [
+    "3:13"
+   ],
+   "object": "21 killed, 865 wounded in action, billions spent; assets husbanded into the region (Anderson)",
+   "kind": "figure",
+   "holder": null,
+   "analog": {
+    "type": "statement",
+    "ref": "the theater's cost — PG01 detection series",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "the theater's cost, verified: false — the DoD casualty release is the primary"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 14,
+   "z": -0.6,
+   "reduced": "21 soldiers lost, 865 wounded, billions spent"
+  },
+  {
+   "id": "see-msnow-1021-eight-months",
+   "piece": "msnow_2026-10-21_only_voice_of_reason",
+   "program": "MS NOW",
+   "date": "2026-10-21",
+   "t": [
+    "6:39–7:00"
+   ],
+   "object": "eight months into the war; 8,300 soldiers, sailors, airmen, marines and family members 120 miles from Iran when it opened; no noncombatant evacuation ordered first (Anderson)",
+   "kind": "statement",
+   "holder": "the Department of Defense",
+   "analog": {
+    "type": "ruling",
+    "ref": "a noncombatant evacuation order — the executive act that was not issued",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "candidate — the NEO not ordered (holder DoD); PG01 statement dating the war's opening to ≈February 2026"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 20,
+   "z": -0.5,
+   "reduced": "eight months in; 8,300 people 120 miles from Iran; no evacuation first"
+  },
+  {
+   "id": "see-msnow-1021-safe-haven",
+   "piece": "msnow_2026-10-21_only_voice_of_reason",
+   "program": "MS NOW",
+   "date": "2026-10-21",
+   "t": [
+    "5:06–5:27"
+   ],
+   "object": "the safe-haven entitlement — DoD's financial and logistical support for families under the authorized evacuation from Bahrain — which the families say is being withdrawn or left unresolved",
+   "kind": "ruling",
+   "holder": "the Department of Defense",
+   "analog": {
+    "type": null,
+    "ref": "none on the register — a benefit with a holder and a status",
+    "pg": null
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "candidate — an entitlement (executive) with a holder and a contested status; the scan/record decides"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 22,
+   "z": -0.3,
+   "reduced": "the safe-haven entitlement; families feel hung out to dry"
+  },
+  {
+   "id": "see-msnow-1021-inner-circle",
+   "piece": "msnow_2026-10-21_only_voice_of_reason",
+   "program": "MS NOW",
+   "date": "2026-10-21",
+   "t": [
+    "0:07",
+    "1:04",
+    "2:26",
+    "5:55"
+   ],
+   "object": "Don Jr. opposed the war from the start (The Atlantic, two sources); Vance privately opposed; Joint Chiefs chairman Caine raised concerns in July; Vance to a military widow: failures conceded, 'first time I've heard of this'",
+   "kind": "statement",
+   "holder": "the administration (reported; Vance on tape)",
+   "analog": {
+    "type": "statement",
+    "ref": "the war's standing inside the principal's own circle",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "a reading of the war's political standing before the midterms — context, not a race object; the Vance clip is a PG01 constitutive statement (S-vance-1021)"
+   },
+   "scored": false,
+   "reduced": "Don Jr., Vance and Caine opposed or concerned; Vance concedes failures"
+  },
+  {
+   "id": "see-fox-1021-nehhor-loan",
+   "piece": "fox_2026-10-21_heating_oil_loan",
+   "program": "Fox Business",
+   "date": "2026-10-21",
+   "t": [
+    "¶1–¶3",
+    "¶10–¶12"
+   ],
+   "object": "DOE loans up to 315,000 bbl (≈ one-third) of the 1M-bbl Northeast Home Heating Oil Reserve; bids due 10-27; releases by 11-13 from Boston, South Portland, New Haven; returned in kind plus a premium before 2027-28",
+   "kind": "ruling",
+   "holder": "the Department of Energy",
+   "analog": {
+    "type": "ruling",
+    "ref": "the US export-ban rhetoric (see-ol-1005-us-export-ban); the farm $8B relief (NYT/Shapiro 10-20) — the executive-release series",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "cand-nehhor-loan",
+    "candidate": true,
+    "related": "PG01 H1c record — the price leg answered by a reserve, not a cargo; tracker supply row, verified: false until the RFP awards"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 8,
+   "z": -0.2,
+   "reduced": "315,000 bbl ULSD loaned (≈42,000 t — one tanker's worth, the cut's arithmetic); by 11-13; plus a premium"
+  },
+  {
+   "id": "see-fox-1021-heating-oil-70",
+   "piece": "fox_2026-10-21_heating_oil_loan",
+   "program": "Fox Business",
+   "date": "2026-10-21",
+   "t": [
+    "¶7"
+   ],
+   "object": "heating oil costs +70% from a year ago; the release adds 13% to New England home heating oil supply (Collins' press release)",
+   "kind": "price",
+   "holder": null,
+   "analog": {
+    "type": "price",
+    "ref": "the AAA diesel series (see-aj-1021-diesel-price)",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "price shadow — distillate, retail (New England); PG01 H1c record"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 8,
+   "z": -0.3,
+   "reduced": "+70% y/y; +13% supply"
+  },
+  {
+   "id": "see-fox-1021-cause-iran-war",
+   "piece": "fox_2026-10-21_heating_oil_loan",
+   "program": "Fox Business",
+   "date": "2026-10-21",
+   "t": [
+    "¶8"
+   ],
+   "object": "the run-up in fuel prices 'since the beginning of the Iran War' (Sen. King) — the cause named, against the principal's cause of 10-15 (Ukraine's refinery strikes)",
+   "kind": "statement",
+   "holder": "Sen. Angus King",
+   "analog": {
+    "type": "statement",
+    "ref": "stmt-trump-diesel-blames-ukraine (see-msnow-1015-trump-blames-ukraine)",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statements — the cause of the crunch as stated from the RI corner"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 22,
+   "z": -0.4,
+   "reduced": "hit especially hard since the beginning of the Iran War"
+  },
+  {
+   "id": "see-fox-1021-me-sen-credit",
+   "piece": "fox_2026-10-21_heating_oil_loan",
+   "program": "Fox Business",
+   "date": "2026-10-21",
+   "t": [
+    "¶4",
+    "¶6"
+   ],
+   "object": "the release followed the Maine senators' letter; Collins credited with the act thirteen days before the vote; half of Maine households on fuel oil",
+   "kind": "slate",
+   "holder": "Sen. Susan Collins",
+   "analog": {
+    "type": "statement",
+    "ref": "a federal act credited to a seat on the slate",
+    "pg": null
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "me-sen — context, not a prediction (X-me-sen-1021)"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 18,
+   "z": -0.2,
+   "reduced": "Collins: pleased the administration responded"
+  },
+  {
+   "id": "see-fox-1021-constitution-pipeline",
+   "piece": "fox_2026-10-21_heating_oil_loan",
+   "program": "Fox Business",
+   "date": "2026-10-21",
+   "t": [
+    "¶5"
+   ],
+   "object": "Wright urges New York and New England governors to build the Constitution Pipeline and replace home heating oil with natural gas",
+   "kind": "ruling",
+   "holder": "NY / New England governors; FERC (approval sought)",
+   "analog": {
+    "type": "ruling",
+    "ref": "the UK's Jackdaw approval (NYT 10-20/21) — a supply ruling",
+    "pg": null
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "cand-constitution-pipeline",
+    "candidate": true
+   },
+   "scored": false,
+   "station": null,
+   "dia": null,
+   "z": null,
+   "permanence": "low",
+   "reduced": "a standing ask, no filing"
+  },
+  {
+   "id": "see-fox-1021-temporary",
+   "piece": "fox_2026-10-21_heating_oil_loan",
+   "program": "Fox Business",
+   "date": "2026-10-21",
+   "t": [
+    "¶5"
+   ],
+   "object": "'a temporary measure to solve a temporary supply disruption' — the crunch dated as temporary by its remedy's holder (Wright)",
+   "kind": "statement",
+   "holder": "Chris Wright (Energy Secretary)",
+   "analog": {
+    "type": "statement",
+    "ref": "H1 — the deal's own 'immediately'",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statements — S-wright-1021 (constitutive, hypotheses.json)"
+   },
+   "scored": false,
+   "station": "O",
+   "dia": null,
+   "z": 0.3,
+   "reduced": "temporary, twice"
+  },
+  {
+   "id": "see-aj-1022-post-election-strikes",
+   "piece": "aj_2026-10-22_regime_change",
+   "program": "Al Jazeera English",
+   "date": "2026-10-22",
+   "t": [
+    "¶2",
+    "¶21–¶22"
+   ],
+   "object": "an Israeli proposal for renewed strikes on Iran refused by Trump this week on timing, not for good (FT, via AJ); the mirror of the NYT's 10-21 report of US–Israeli plans for strikes after the 11-03 midterms (NPR 10-22 and Breaking Points 10-22 ×2 carry the same)",
+   "kind": "statement",
+   "holder": "the US and Israel (reported); Netanyahu on the record for the aim",
+   "analog": {
+    "type": "statement",
+    "ref": "the MOAB plan (see-bp2-1015-moab) — a plan reported before an act",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "cand-post-election-strikes",
+    "candidate": true,
+    "related": "slate01 (the force) · PG01 §5 — seen in five sources this week; a primary is owed · 10-26: tenth-plus sighting (AJ 10-25 CENTCOM explainer: options ready; a third carrier by end-November; 'another little Epic Fury'); the weekend of 10-24/25 passed without a strike on the roster's record"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 10,
+   "z": -0.3,
+   "reduced": "refused now, not later; planned for after the election"
+  },
+  {
+   "id": "see-aj-1022-primary-objective",
+   "piece": "aj_2026-10-22_regime_change",
+   "program": "Al Jazeera English",
+   "date": "2026-10-22",
+   "t": [
+    "¶1",
+    "¶7",
+    "¶9"
+   ],
+   "object": "toppling Iran's government remains Israel's 'primary objective' (Netanyahu, this week; 1996 and March 2026 quoted: 'there has to be a ground component')",
+   "kind": "statement",
+   "holder": "Benjamin Netanyahu",
+   "analog": {
+    "type": "statement",
+    "ref": "a principal's aim with his own falsifier on the page",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statements — S-netanyahu-1022 (constitutive, hypotheses.json); slate01 the force"
+   },
+   "scored": false,
+   "station": "O",
+   "dia": null,
+   "z": 0.9,
+   "reduced": "primary objective; a ground component"
+  },
+  {
+   "id": "see-aj-1022-israel-election",
+   "piece": "aj_2026-10-22_regime_change",
+   "program": "Al Jazeera English",
+   "date": "2026-10-22",
+   "t": [
+    "¶1"
+   ],
+   "object": "Israel's national elections 'next week'; Netanyahu's poll support declining — the second principal's clock beside 11-03",
+   "kind": "vote",
+   "holder": "Israel",
+   "analog": {
+    "type": "vote",
+    "ref": "the Midterm Slate's own clock",
+    "pg": null
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "cand-israel-election",
+    "candidate": true
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 16,
+   "z": 0.3,
+   "reduced": "elections next week (date not stated on the page)"
+  },
+  {
+   "id": "see-aj-1022-antiship-stock",
+   "piece": "aj_2026-10-22_regime_change",
+   "program": "Al Jazeera English",
+   "date": "2026-10-22",
+   "t": [
+    "¶17–¶18"
+   ],
+   "object": "Iran's antiship missile stockpiles probably remain large — easy to produce, older Chinese designs built in-house, the southern mountains as shelter; sizeable missile stocks overall (Kaushal, RUSI)",
+   "kind": "supply",
+   "holder": null,
+   "analog": {
+    "type": "statement",
+    "ref": "L2-toll — who sets the price of passage",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 record by estimate — the stock that prices the Strait; tracker detection row, verified: false"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 10,
+   "z": -0.5,
+   "reduced": "antiship stockpiles probably remain large"
+  },
+  {
+   "id": "see-aj-1022-strait-spared",
+   "piece": "aj_2026-10-22_regime_change",
+   "program": "Al Jazeera English",
+   "date": "2026-10-22",
+   "t": [
+    "¶24"
+   ],
+   "object": "if Israel attacks without the US, Iran may retaliate on Israeli territory and avoid US targets and disruption to the Strait of Hormuz (Coningham, RUSI)",
+   "kind": "statement",
+   "holder": null,
+   "analog": {
+    "type": "statement",
+    "ref": "H6 — who chooses whether the Strait closes",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "reader's hypothesis R-coningham-1022 — stays out of the tracker (readers' tests rule, 10-15)"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 16,
+   "z": -0.2,
+   "reduced": "alone, Israel is hit and the Strait is spared"
+  },
+  {
+   "id": "see-aj-1022-kurds-dropped",
+   "piece": "aj_2026-10-22_regime_change",
+   "program": "Al Jazeera English",
+   "date": "2026-10-22",
+   "t": [
+    "¶14–¶15"
+   ],
+   "object": "arming Kurdish opposition groups was discussed by the administration in March and never advanced — they lacked the capability against the IRGC (CNN, citing Kurdish and US officials)",
+   "kind": "statement",
+   "holder": "the administration (reported)",
+   "analog": {
+    "type": "statement",
+    "ref": "the only ground force weighed",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "later sighting (as-of March 2026)"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 10,
+   "z": -0.5,
+   "permanence": "low",
+   "reduced": "discussed in March, never advanced"
+  },
+  {
+   "id": "see-aj-1022-interceptors",
+   "piece": "aj_2026-10-22_regime_change",
+   "program": "Al Jazeera English",
+   "date": "2026-10-22",
+   "t": [
+    "¶19–¶20"
+   ],
+   "object": "Israel's interceptor stocks depleted by previous exchanges; expensive interceptors against cheap Iranian drones strain supply in a long exchange (Coningham)",
+   "kind": "supply",
+   "holder": null,
+   "analog": {
+    "type": "price",
+    "ref": "the cost layer of the force",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "supply — unverified; an analyst's estimate"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 14,
+   "z": -0.4,
+   "reduced": "interceptors depleted; cheap drones vs expensive interceptors"
+  },
+  {
+   "id": "see-aj-1022-two-rounds",
+   "piece": "aj_2026-10-22_regime_change",
+   "program": "Al Jazeera English",
+   "date": "2026-10-22",
+   "t": [
+    "¶2",
+    "¶8"
+   ],
+   "object": "the record: the June 2025 war and the campaign launched 2026-02-28; the government did not fall; calls with Trump Sunday 10-18 and a Hegseth visit to Israel",
+   "kind": "statement",
+   "holder": null,
+   "analog": {
+    "type": "statement",
+    "ref": "PG01 §5 — the war's dated rounds",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "§5 events, dated (context)"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 12,
+   "z": -0.3,
+   "reduced": "two rounds, no fall; Sunday's calls"
+  },
+  {
+   "id": "see-aj-1023-istanbul-meeting",
+   "piece": "aj_2026-10-23_eight_ministers",
+   "program": "Al Jazeera English",
+   "date": "2026-10-23",
+   "t": [
+    "¶1",
+    "¶2",
+    "¶3"
+   ],
+   "object": "the eight-nation Istanbul meeting on the Strait of Hormuz (E3 + R4 + Italy, 10-23): no participant supports another attack on Iran",
+   "kind": "statement",
+   "holder": "the eight foreign ministries (host: Türkiye)",
+   "analog": {
+    "type": "statement",
+    "ref": "the E3 statements on the JCPOA"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 record — eight governments convene on the Strait"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 11,
+   "z": -0.27,
+   "reduced": "eight countries; Friday; Istanbul; zero of eight for a strike"
+  },
+  {
+   "id": "see-aj-1023-r4-statement",
+   "piece": "aj_2026-10-23_eight_ministers",
+   "program": "Al Jazeera English",
+   "date": "2026-10-23",
+   "t": [
+    "¶15",
+    "¶16",
+    "¶17",
+    "¶18"
+   ],
+   "object": "the R4 joint statement (Türkiye, Saudi Arabia, Pakistan, Egypt): full resumption of secure passage through Hormuz; rejects measures restricting lawful navigation; Houthi escalation condemned; Israeli occupation named the source of instability",
+   "kind": "statement",
+   "holder": "the R4 foreign ministers",
+   "analog": {
+    "type": "statement",
+    "ref": "the E3 joint statements on the JCPOA — a signed text read by the stations"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": null,
+    "candidate": true,
+    "related": "cand-istanbul-format"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 16,
+   "z": -0.6,
+   "reduced": "full resumption of secure passage; restrictor unnamed",
+   "why": "a dated joint text by four governments on the object; the restrictor (Iran's mines/toll or the US blockade) is not named — the shadow's shape. Candidate; the scan/record decides"
+  },
+  {
+   "id": "see-aj-1023-reopen-hormuz",
+   "piece": "aj_2026-10-23_eight_ministers",
+   "program": "Al Jazeera English",
+   "date": "2026-10-23",
+   "t": [
+    "¶7",
+    "¶8"
+   ],
+   "object": "Tajani: de-escalation to guarantee freedom of navigation; dialogue to reopen Hormuz",
+   "kind": "statement",
+   "holder": "Italy's foreign minister",
+   "analog": {
+    "type": "statement",
+    "ref": "PG01 H6 — the Strait read as closed by a G7 minister",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 record"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 16,
+   "z": -0.55,
+   "reduced": "guarantee freedom of navigation; reopen Hormuz"
+  },
+  {
+   "id": "see-aj-1023-barrack-weekend",
+   "piece": "aj_2026-10-23_eight_ministers",
+   "program": "Al Jazeera English",
+   "date": "2026-10-23",
+   "t": [
+    "¶9",
+    "¶10",
+    "¶11"
+   ],
+   "object": "Barrack (US ambassador to Türkiye, X podcast): Washington could 'absolutely' strike Iran this weekend; Trump open to a deal; the aim 'rebalancing', not regime change",
+   "kind": "statement",
+   "holder": "the US executive (via its envoy)",
+   "analog": {
+    "type": "ruling",
+    "ref": "the MOAB plan — a planned executive act with a date"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": null,
+    "candidate": true,
+    "related": "cand-post-election-strikes"
+   },
+   "scored": true,
+   "station": "O",
+   "dia": null,
+   "z": 0.45,
+   "reduced": "this weekend; not regime change; rebalancing",
+   "why": "UPDATE to cand-post-election-strikes: the date moved from 'after 11-03' (NYT 10-21) to 'this weekend'; the aim stated against Netanyahu's 'primary objective' (aj_2026-10-22). Eighth sighting in three days by the deks (Kudlow 10-22, NPR Up First 10-23 also). A primary is still owed"
+  },
+  {
+   "id": "see-aj-1023-barrot-prices",
+   "piece": "aj_2026-10-23_eight_ministers",
+   "program": "Al Jazeera English",
+   "date": "2026-10-23",
+   "t": [
+    "¶5"
+   ],
+   "object": "Barrot: further escalation would seriously affect hydrocarbon prices — 'nothing but losers'",
+   "kind": "statement",
+   "holder": "France's foreign minister",
+   "analog": {
+    "type": "price",
+    "ref": "PG01 §5 — the crunch's next leg priced forward",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "price shadow — no number; a forward cause statement"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 28,
+   "z": -0.4,
+   "reduced": "nothing but losers; hydrocarbon prices"
+  },
+  {
+   "id": "see-aj-1023-mecca-pact",
+   "piece": "aj_2026-10-23_eight_ministers",
+   "program": "Al Jazeera English",
+   "date": "2026-10-23",
+   "t": [
+    "¶19",
+    "¶20",
+    "¶21",
+    "¶22",
+    "¶23"
+   ],
+   "object": "the Mecca Joint Defence Agreement — Türkiye, Pakistan, Saudi Arabia; launched August 2026; 'not aimed at any specific country'; open to Egypt (undecided)",
+   "kind": "agreement",
+   "holder": "Türkiye, Pakistan, Saudi Arabia",
+   "analog": {
+    "type": "agreement",
+    "ref": "the US–Taiwan agreement of 2026-01-15 (rdg_ms51urghz7zi) — a signed instrument"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": null,
+    "candidate": true,
+    "related": "cand-mecca-pact"
+   },
+   "scored": false,
+   "reduced": "trilateral pact; August; open to Egypt",
+   "why": "first sighting on the Press; a standing instrument with a date. Low permanence until a second sighting"
+  },
+  {
+   "id": "see-aj-1023-houthi-front",
+   "piece": "aj_2026-10-23_eight_ministers",
+   "program": "Al Jazeera English",
+   "date": "2026-10-23",
+   "t": [
+    "¶17",
+    "¶23",
+    "¶24"
+   ],
+   "object": "the Houthi–Saudi front: the R4 condemn the escalation; Sisi: any measure to protect Saudi Arabia; a series of deadly attacks on the kingdom",
+   "kind": "activity",
+   "holder": null,
+   "analog": {
+    "type": null,
+    "ref": "the second chokepoint — bench (Fox 10-21, NYT 10-22, AP/PBS 10-22, BP 10-22)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "§5 context — the second chokepoint, fifth source this week"
+   },
+   "scored": false,
+   "reduced": "Houthis condemned; Egypt would protect Saudi Arabia"
+  },
+  {
+   "id": "see-aj-1023-seven-tankers-wire",
+   "piece": "aj_2026-10-23_eight_ministers",
+   "program": "Al Jazeera English",
+   "date": "2026-10-23",
+   "t": [
+    "wire"
+   ],
+   "object": "AP via PBS NewsHour (10-22 18:48 ET): Iran's state TV — 7 oil tankers damaged overnight 10-21/22 in the Strait (4 fires during transfers, 3 mined); Lloyd's List: night transits in a US-protected lane near Oman, AIS off, transfers in the Gulf of Oman; Aramco: East-West pipeline 2 → 7 million b/d",
+   "kind": "activity",
+   "holder": null,
+   "analog": {
+    "type": null,
+    "ref": "PG01 H6 — the lane's throughput and its price",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "detection rows — verified: false until the primaries (IRGC navy; Lloyd's List; Aramco)"
+   },
+   "scored": false,
+   "reduced": "7 tankers; night lane under US protection; E-W pipeline 7 mb/d",
+   "why": "the record's register (AP), not a reading — cross-referenced by the AJ cut; AJ's own 10-23 report of the seven ships is recommended on the page, uncut"
+  },
+  {
+   "id": "see-fox-1023-graham-waiver",
+   "piece": "fox_2026-10-23_sanctions_waived",
+   "program": "Fox News",
+   "date": "2026-10-23",
+   "t": [
+    "¶3",
+    "¶17",
+    "¶21",
+    "¶22"
+   ],
+   "object": "the Graham Act waiver: most of the Act's new sanctions and tariffs on Russia and major purchasers of Russian energy waived under the Act's own waiver authority; the certification to Congress ('would impede' peace now; later, 'incentivize resolution'); Trump's written statement Sunday 10-18",
+   "kind": "ruling",
+   "holder": "the President",
+   "analog": {
+    "type": "ruling",
+    "ref": "the Section 232 tariff with eight exceptions (rdg_ms51urghz7zi) — a law's own off-switch used"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": null,
+    "candidate": true,
+    "related": "cand-graham-act-waiver"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 8,
+   "z": -0.25,
+   "reduced": "most new penalties waived within a month of signing; the certification",
+   "why": "the deal's legal instrument — seen twice this week (Fox 10-23; AP via PBS 10-23 ¶7 'later put on hold'). Candidate; a primary (the Federal Register notice / the certification text) is owed"
+  },
+  {
+   "id": "see-fox-1023-diesel-easing",
+   "piece": "fox_2026-10-23_sanctions_waived",
+   "program": "Fox News",
+   "date": "2026-10-23",
+   "t": [
+    "¶3",
+    "¶25",
+    "¶26"
+   ],
+   "object": "the Russian diesel export restrictions eased 'to ease global fuel prices'; Wright: a 'carrot' for de-escalation",
+   "kind": "statement",
+   "holder": "the Department of Energy / the President",
+   "analog": {
+    "type": "statement",
+    "ref": "H1 — the deal's instrument",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1 record · statement S-wright-1023"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 12,
+   "z": -0.2,
+   "reduced": "eased to ease prices; a carrot"
+  },
+  {
+   "id": "see-fox-1023-graham-act",
+   "piece": "fox_2026-10-23_sanctions_waived",
+   "program": "Fox News",
+   "date": "2026-10-23",
+   "t": [
+    "¶13",
+    "¶16"
+   ],
+   "object": "the Lindsey O. Graham Sanctioning Russia and Iran Act: signed September 2026; Senate 86-11; steep tariffs on Russia and major purchasers of Russian energy; sanctions on Russian financial institutions and foreign entities dealing with them (no percentages on the page; the AP via PBS 10-23: tariffs up to 100% on the top five importers)",
+   "kind": "law",
+   "holder": "Congress / the President",
+   "analog": {
+    "type": "law",
+    "ref": "russia-sanctions (terms: 'graham act') — already on the register's terms"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "russia-sanctions",
+    "candidate": false
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 30,
+   "z": -0.4,
+   "reduced": "signed September; 86-11; steep tariffs; waiver authority written in"
+  },
+  {
+   "id": "see-fox-1023-cause-ukraine",
+   "piece": "fox_2026-10-23_sanctions_waived",
+   "program": "Fox News",
+   "date": "2026-10-23",
+   "t": [
+    "¶26"
+   ],
+   "object": "the cause of the diesel strain restated by the principal: Ukraine's strikes on Russian refineries",
+   "kind": "statement",
+   "holder": "the President",
+   "analog": {
+    "type": "statement",
+    "ref": "PG01 — the contested cause (msnow_2026-10-15 the principal; fox_2026-10-21 King: the Iran War; NYT 10-22 dek: diesel and trade)",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statement — the cause, third sighting"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 14,
+   "z": -0.2,
+   "reduced": "Ukrainian refinery strikes strain diesel markets"
+  },
+  {
+   "id": "see-fox-1023-brands-18-months",
+   "piece": "fox_2026-10-23_sanctions_waived",
+   "program": "Fox News",
+   "date": "2026-10-23",
+   "t": [
+    "¶4",
+    "¶6",
+    "¶24",
+    "¶27"
+   ],
+   "object": "Brands (AEI): the biggest unwinding of sanctions since 2022; the threat 'may lose some credibility'; eighteen months without appetite to squeeze Russia's energy exports; the diesel relief 'fairly marginal' to Moscow",
+   "kind": "statement",
+   "holder": null,
+   "analog": {
+    "type": "statement",
+    "ref": "PG01 H1 — a reader's sizing of the deal's two legs",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "reader's test (R-brands-1023) — stays out of the tracker (the 10-15 ruling)"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 21,
+   "z": -0.45,
+   "reduced": "biggest since 2022; 18 months; fairly marginal"
+  },
+  {
+   "id": "see-fox-1023-authors-dissent",
+   "piece": "fox_2026-10-23_sanctions_waived",
+   "program": "Fox News",
+   "date": "2026-10-23",
+   "t": [
+    "¶8",
+    "¶9",
+    "¶11",
+    "¶13",
+    "¶14",
+    "¶15"
+   ],
+   "object": "the law's Republican authors read the waiver as pressure let go: Britt (at the signing; 'darkest point'), Capito (timing coordinated), Tillis ('86-11'; 'beyond irresponsible'; 'unconscionable'), the sponsor named on the page as Darline Graham (Trump-endorsed; 'would choose to keep the pressure')",
+   "kind": "statement",
+   "holder": null,
+   "analog": {
+    "type": "statement",
+    "ref": "PG01 H1 — the holder's party on the holder's instrument",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "context — Britt, Capito, Tillis, Graham: filed as context if any seat is on the Midterm Slate (not checked here); the name discrepancy on the page filed as printed"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 44,
+   "z": -0.56,
+   "reduced": "86-11; beyond irresponsible; would choose to keep the pressure"
+  },
+  {
+   "id": "see-fox-1023-first-cargo-wire",
+   "piece": "fox_2026-10-23_sanctions_waived",
+   "program": "Fox News",
+   "date": "2026-10-23",
+   "t": [
+    "wire"
+   ],
+   "object": "AP via PBS NewsHour (10-23 09:52 ET): the Kremlin says the first tanker of Russian diesel has sailed — 40,000 t (Novak) ≈ 300,000 bbl ≈ 7% of one day's US diesel consumption; Kpler: bound for New York, due 2026-11-07, the first Russian diesel to the US since July 2023; Zelenskyy: 'a weak decision by strong partners'; Trump asked Kyiv to halt refinery strikes",
+   "kind": "activity",
+   "holder": "Russia (the seller); the US buyer unnamed",
+   "analog": {
+    "type": "activity",
+    "ref": "H1 — the cargo (see-aj-1021-first-tanker: port withheld → New York, 11-07)",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "flow row — verified: false until Kpler/the arrival"
+   },
+   "scored": false,
+   "reduced": "40,000 t; New York; due 11-07 — four days after the vote",
+   "why": "the record's register (AP), not a reading — cross-referenced by the Fox cut, which does not carry the cargo · third sighting Fox 10-24 (see-fox-1024-first-cargo): 'earlier this week'; Peskov 'regular supplies will continue'"
+  },
+  {
+   "id": "see-fox-1023-ukraine-table",
+   "piece": "fox_2026-10-23_sanctions_waived",
+   "program": "Fox News",
+   "date": "2026-10-23",
+   "t": [
+    "¶21",
+    "¶33"
+   ],
+   "object": "the Russia–Ukraine settlement track: the waiver 'for the table'; US–Ukraine relations read as diverging; the Kremlin names November in the UAE (AJ 10-23, in the queue)",
+   "kind": "statement",
+   "holder": null,
+   "analog": {
+    "type": null,
+    "ref": "none on the Press — bench (NYT 10-22 'Putin Nears a Prize', AJ 10-23 ×2, FP 10-23 TGIF by their deks)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "§5 context — the deal's stated purpose; permanence: low on the Press"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 20,
+   "z": -0.4,
+   "reduced": "not drive Russia from the table; diverging"
+  },
+  {
+   "id": "see-fox-1024-first-cargo",
+   "piece": "fox_2026-10-24_couple_of_hours",
+   "program": "Fox Business",
+   "date": "2026-10-24",
+   "t": [
+    "¶1",
+    "¶3",
+    "¶12"
+   ],
+   "object": "the first cargo: a tanker with 40,000 t of Russian diesel left for New York 'earlier this week' (the week of 10-19); Peskov (Friday 10-23): sailed to customers, regular supplies will continue; the first Russian diesel to the US since 2023",
+   "kind": "activity",
+   "holder": "Russia (the seller); the US buyer unnamed on the page",
+   "analog": {
+    "type": "activity",
+    "ref": "H1 — the cargo: third sighting of the same ship (see-aj-1021-first-tanker → see-fox-1023-first-cargo-wire → this)",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "flow row — verified: false until the arrival (Kpler: New York, due 11-07)"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 9,
+   "z": 0.15,
+   "reduced": "40,000 tons; New York; earlier this week; regular supplies will continue"
+  },
+  {
+   "id": "see-fox-1024-pump-six",
+   "piece": "fox_2026-10-24_couple_of_hours",
+   "program": "Fox Business",
+   "date": "2026-10-24",
+   "t": [
+    "¶2"
+   ],
+   "object": "US diesel above $6 a gallon in the week of 10-19 (no source named on the page) — the first Press sighting of the pump above six",
+   "kind": "price",
+   "holder": null,
+   "analog": {
+    "type": "price",
+    "ref": "H1c — the price leg (the AAA series the 10-21 AJ cut carries)",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "price row — verified: false until the AAA/EIA figure is pulled"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 8,
+   "z": -0.3,
+   "reduced": "more than $6 per gallon"
+  },
+  {
+   "id": "see-fox-1024-schedule-capitals",
+   "piece": "fox_2026-10-24_couple_of_hours",
+   "program": "Fox Business",
+   "date": "2026-10-24",
+   "t": [
+    "¶8",
+    "¶9",
+    "¶10"
+   ],
+   "object": "the deal's schedule restated by the holder: 300,000 t immediately · 500,000 t November · 1,000,000 t after · 3,000,000 t more 'within a short period'; 'COMING DOWN, IN RECORD NUMBERS, AND FAST'; US control of the Strait of Hormuz named as co-cause in the same sentence",
+   "kind": "statement",
+   "holder": "the President",
+   "analog": {
+    "type": "statement",
+    "ref": "H1 — the terms (already on the Press from the 10-12 cuts); the Strait clause is a sighting for H6 (the 10-20 Fox object: 'open under US control')",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1 record restated; H6 asserted by the holder — a sighting for H6's file"
+   },
+   "scored": false,
+   "reduced": "300,000 immediately — one-eighth at sea fifteen days later; US control of the Strait + the deal → prices down fast",
+   "why": "constitutive lines, @O, never Dia-scored"
+  },
+  {
+   "id": "see-fox-1024-punaro-hours",
+   "piece": "fox_2026-10-24_couple_of_hours",
+   "program": "Fox Business",
+   "date": "2026-10-24",
+   "t": [
+    "¶5",
+    "¶6",
+    "¶7"
+   ],
+   "object": "Punaro (USMC ret.): 40,000 t is 'a couple of hours' of US diesel demand; the purchase funds Russia's war (the Kyiv missile attack); 'never going to stop with Ukraine' — turn the tanker around",
+   "kind": "statement",
+   "holder": null,
+   "analog": {
+    "type": "statement",
+    "ref": "the AP's arithmetic (see-fox-1023-first-cargo-wire: ≈300,000 bbl ≈ 7% of a day) — the same size, said by a reader",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "reader's test — stays out of the tracker (Sailor 10-15 on readers' tests)"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 48,
+   "z": -0.6,
+   "reduced": "a couple of hours; fueling their war machine; turn the tanker around"
+  },
+  {
+   "id": "see-fox-1024-kyiv-strike",
+   "piece": "fox_2026-10-24_couple_of_hours",
+   "program": "Fox Business",
+   "date": "2026-10-24",
+   "t": [
+    "¶6"
+   ],
+   "object": "a Russian missile attack on Kyiv that killed civilians and knocked out the grid (undated on the page; 'recent')",
+   "kind": "activity",
+   "holder": "Russia",
+   "analog": {
+    "type": null,
+    "ref": "none on the Press — bench, the Ukraine track (see-fox-1023-ukraine-table)"
+   },
+   "match": {
+    "dataset": null,
+    "ref": "sighting, permanence: low on the Press; the AP/Reuters wire is the record"
+   },
+   "scored": false,
+   "reduced": "missile attack on Kyiv; civilians killed; the grid"
+  },
+  {
+   "id": "see-fox-1024-votes-pressure",
+   "piece": "fox_2026-10-24_couple_of_hours",
+   "program": "Fox Business",
+   "date": "2026-10-24",
+   "t": [
+    "¶11"
+   ],
+   "object": "Republican pressure on Trump to reduce diesel prices before the midterm elections — the gas↔votes predicate from the RI corner",
+   "kind": "statement",
+   "holder": null,
+   "analog": {
+    "type": "statement",
+    "ref": "the gas↔votes predicate — sixth sighting (NPR 10-21, NYT 10-22/10-23, MS NOW 10-23, Fox 10-24)"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "context — the price as the vote's clock; not a race"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 14,
+   "z": -0.2,
+   "reduced": "pressure to reduce diesel prices before the midterms"
+  },
+  {
+   "id": "see-aj-1025-eu-bill",
+   "piece": "aj_2026-10-25_europe_pays",
+   "program": "Al Jazeera English",
+   "date": "2026-10-25",
+   "t": [
+    "¶25",
+    "¶26"
+   ],
+   "object": "von der Leyen (10-16): Europe's imported fossil-fuel bill up €106bn; gas prices up about 140% since late February; diesel prices doubled — the price leg from outside the US horizon",
+   "kind": "price",
+   "holder": "the European Commission (the figure's source)",
+   "analog": {
+    "type": "price",
+    "ref": "H1c — the price leg (the US pump above $6, see-fox-1024-pump-six, the same day)",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "price row — verified: false until the Commission's 10-16 text is pulled"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 10,
+   "z": -0.6,
+   "reduced": "+€106bn; gas +140%; diesel doubled"
+  },
+  {
+   "id": "see-aj-1025-brent-path",
+   "piece": "aj_2026-10-25_europe_pays",
+   "program": "Al Jazeera English",
+   "date": "2026-10-25",
+   "t": [
+    "¶27"
+   ],
+   "object": "Brent $72.48 on 2026-02-27 → $126.41 at end-April → still above $100 on 10-25; Gulf supply disruption and Hormuz shipping restrictions named as the cause",
+   "kind": "price",
+   "holder": null,
+   "analog": {
+    "type": "price",
+    "ref": "H1c — the benchmark; the NYT 10-23 '$117' headline (β) sits inside this path",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "price row — verified: false until the series is pulled"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 8,
+   "z": -0.5,
+   "reduced": "$72.48 → $126.41 → above $100"
+  },
+  {
+   "id": "see-aj-1025-europe-stocks",
+   "piece": "aj_2026-10-25_europe_pays",
+   "program": "Al Jazeera English",
+   "date": "2026-10-25",
+   "t": [
+    "¶31"
+   ],
+   "object": "Washington pressed Europe to release emergency diesel stocks (undated on the page); the Russian diesel restrictions eased 'to lower prices' (fifth sighting of the easing); Ukraine and its supporters warned the revenue bolsters Moscow",
+   "kind": "statement",
+   "holder": "the US executive (a request of IEA/EU members' reserves)",
+   "analog": {
+    "type": "statement",
+    "ref": "the NEHHOR loan (fox_2026-10-21_heating_oil_loan) — a reserve opened as relief; the IEA coordinated releases of 2022",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "cand-europe-stock-release",
+    "candidate": true,
+    "related": "PG01 H1 — the deal's third act of relief if it happened; a primary is owed (an IEA or Commission statement; whether any member released)"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 12,
+   "z": -0.2,
+   "reduced": "release emergency diesel stocks; Russian diesel eased to lower prices; Ukraine warned"
+  },
+  {
+   "id": "see-aj-1025-urea",
+   "piece": "aj_2026-10-25_europe_pays",
+   "program": "Al Jazeera English",
+   "date": "2026-10-25",
+   "t": [
+    "¶29"
+   ],
+   "object": "Hilborne (KCL): the Gulf is a nitrogen-fertiliser hub; urea prices up roughly 70%; shipping firms face higher insurance premiums and longer reroutes",
+   "kind": "price",
+   "holder": null,
+   "analog": {
+    "type": "price",
+    "ref": "the crunch in another register — fertiliser and freight (Sailor 10-16: one object through many registers)",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "price row — verified: false; a reader's figure until the fertiliser index is pulled"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 14,
+   "z": -0.4,
+   "reduced": "urea +≈70%; insurance premiums; longer reroutes"
+  },
+  {
+   "id": "see-aj-1025-barrot-again",
+   "piece": "aj_2026-10-25_europe_pays",
+   "program": "Al Jazeera English",
+   "date": "2026-10-25",
+   "t": [
+    "¶12",
+    "¶13"
+   ],
+   "object": "Barrot (Istanbul, 10-23), re-reported: further escalation 'would create nothing but losers' and hurt hydrocarbon prices; the eight would urge 'utmost restraint' — another escalation unaffordable",
+   "kind": "statement",
+   "holder": null,
+   "analog": {
+    "type": "statement",
+    "ref": "see the 10-23 AJ cut (aj_2026-10-23_eight_ministers ¶5) — the same line, second sighting; cand-istanbul-format second sighting",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "§5 — the next strike priced into hydrocarbons by a European minister; cand-istanbul-format seen twice"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 32,
+   "z": -0.4,
+   "reduced": "nothing but losers; hydrocarbon prices; unaffordable"
+  },
+  {
+   "id": "see-aj-1025-uk-bases-hormuz",
+   "piece": "aj_2026-10-25_europe_pays",
+   "program": "Al Jazeera English",
+   "date": "2026-10-25",
+   "t": [
+    "¶19"
+   ],
+   "object": "Britain's base authorisation: withheld for the opening attacks → limited defensive strikes → expanded to missile sites threatening Hormuz shipping (undated on the page)",
+   "kind": "ruling",
+   "holder": "the UK government",
+   "analog": {
+    "type": null,
+    "ref": "H6 — the Strait as a target set; no analog on the Press"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 context — the Strait read as not open from a third capital"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 10,
+   "z": -0.2,
+   "reduced": "bases for strikes on missile sites threatening Hormuz shipping"
+  },
+  {
+   "id": "see-aj-1025-spain-airspace",
+   "piece": "aj_2026-10-25_europe_pays",
+   "program": "Al Jazeera English",
+   "date": "2026-10-25",
+   "t": [
+    "¶21",
+    "¶22"
+   ],
+   "object": "Spain refused use of Rota and Morón and closed its airspace to US aircraft involved in the war; Trump: Spain 'terrible', trade threatened, 'nothing to do with Spain' (undated acts)",
+   "kind": "ruling",
+   "holder": "the Spanish government; the President (the reply)",
+   "analog": {
+    "type": null,
+    "ref": "none on the Press"
+   },
+   "match": {
+    "dataset": null,
+    "ref": "sighting, permanence: low — a government's act with a dated reply; not a Press object"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 8,
+   "z": -0.1,
+   "reduced": "Rota and Morón refused; airspace closed; 'nothing to do with Spain'"
+  },
+  {
+   "id": "see-aj-1025-vdl-migration",
+   "piece": "aj_2026-10-25_europe_pays",
+   "program": "Al Jazeera English",
+   "date": "2026-10-25",
+   "t": [
+    "¶25"
+   ],
+   "object": "von der Leyen: 'renewed hope for the people of Iran' (February, after Khamenei's death) → 'households and industry are paying the price' (10-16) — one voice, eight months",
+   "kind": "statement",
+   "holder": null,
+   "analog": {
+    "type": "statement",
+    "ref": "Rule 5 migration — the Press's demonstration case for the week",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "§5 — a reader's migration from the war's purpose to the war's bill"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 38,
+   "z": -0.4,
+   "reduced": "renewed hope → paying the price"
+  },
+  {
+   "id": "see-aj-1025-merz-dirty-work",
+   "piece": "aj_2026-10-25_europe_pays",
+   "program": "Al Jazeera English",
+   "date": "2026-10-25",
+   "t": [
+    "¶5",
+    "¶6"
+   ],
+   "object": "Merz, June 2025 (Israel's campaign): 'the dirty work Israel is doing for all of us' — recalled on X by Iran's FM spokesman Baghaei (Sunday 10-25) against Berlin's warnings now; Schiller's abyss",
+   "kind": "statement",
+   "holder": null,
+   "analog": {
+    "type": "statement",
+    "ref": "a statement whose window closed (June 2025), used by a party to the war"
+   },
+   "match": {
+    "dataset": "readings",
+    "ref": "later sighting — filed, never reopens the window (window rule §4c)"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 59,
+   "z": -0.2,
+   "reduced": "dirty work; abyss"
+  },
+  {
+   "id": "see-aj-1025-protests-seven",
+   "piece": "aj_2026-10-25_europe_pays",
+   "program": "Al Jazeera English",
+   "date": "2026-10-25",
+   "t": [
+    "¶32",
+    "¶33",
+    "¶35",
+    "¶36"
+   ],
+   "object": "cost-of-living protests across seven countries (France, Belgium, Italy, Spain, Portugal, Greece, Albania), 10-24/25; della Porta: anti-war sentiment central to the young; 'stolen'; wars connected to genocide",
+   "kind": "activity",
+   "holder": null,
+   "analog": {
+    "type": null,
+    "ref": "none on the Press — context for H1c's politics (NPR 10-25 Milan; Fox 10-24 France ≈1,000 arrested; NYT 10-24 Albania carry the same)"
+   },
+   "match": {
+    "dataset": null,
+    "ref": "sighting, permanence: low; the street as the price's register"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 49,
+   "z": -0.28,
+   "reduced": "seven countries; anti-war; stolen; genocide"
+  },
+  {
+   "id": "see-aj-1025-centcom-plans",
+   "piece": null,
+   "program": "Al Jazeera English",
+   "date": "2026-10-25",
+   "t": [
+    "¶1–¶11 (fetched, not cut)"
+   ],
+   "object": "CENTCOM has follow-up strike options ready if the White House authorises (The Hill); the Pentagon told CENTCOM to finish preparing for major combat operations — energy, infrastructure, nuclear sites (Axios); joint US–Israel post-midterm plans (NYT); Trump, Friday 10-23: 'may do another little Epic Fury' (the 2-28 codename); Saturday: a strike could come 'tomorrow', or a 'big, beautiful' deal; the USS Theodore Roosevelt group, ≈10,000 soldiers and the 13th MEU to the region by end-November; DNI Clayton memo to Rubio (Friday): Iran 'substantially increased efforts' to target US personnel, plots at 'advanced stages'; embassy staffing cut at several posts",
+   "kind": "statement",
+   "holder": "the US executive (reported); no order on the page",
+   "analog": {
+    "type": "statement",
+    "ref": "cand-post-election-strikes — tenth-plus sighting; the date has moved: after 11-03 (NYT 10-21) → this weekend (Barrack 10-23) → 'tomorrow' / hinted Sunday (Trump 10-24/25)",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "cand-post-election-strikes",
+    "candidate": true,
+    "related": "slate01 (the force); the 10-25 sweep carries no strike — the weekend passed without one on the roster's record; a primary (an order, a strike) is still owed"
+   },
+   "scored": false,
+   "reduced": "options ready; a third carrier; 'another little Epic Fury'; no order",
+   "why": "not cut — one AJ cut per day (the Europe explainer, newer, on H1); read in full and filed"
+  },
+  {
+   "id": "see-aj-1025-irgc-offensive-doctrine",
+   "piece": null,
+   "program": "Al Jazeera English",
+   "date": "2026-10-25",
+   "t": [
+    "¶16",
+    "¶17 (fetched, not cut)"
+   ],
+   "object": "IRGC spokesman Mohebi (Wednesday 10-21): Iran's doctrine shifted from defensive to 'offensive' — threatening countries hosting US attack bases; Reuters (Iranian security officials): plans to target Gulf undersea communications cables if attacks resume; Iran's army (Sunday 10-25, Tasnim): a US LUCAS drone downed over Bandar Abbas",
+   "kind": "statement",
+   "holder": "Iran (the IRGC; the army)",
+   "analog": {
+    "type": "statement",
+    "ref": "the Houthi barrage near Mecca (AJ 10-25) and the Riyadh airport strikes (NYT 10-25) as the doctrine's analogs on the record"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "detection rows — verified: false (the drone; the cables plan); the doctrine a statement with a date"
+   },
+   "scored": false,
+   "reduced": "offensive doctrine; undersea cables; a drone over Bandar Abbas",
+   "why": "not cut; filed from the fetched text"
+  },
+  {
+   "id": "see-aj-1025-october-attacks",
+   "piece": null,
+   "program": "Al Jazeera English",
+   "date": "2026-10-25",
+   "t": [
+    "¶21 (fetched, not cut)"
+   ],
+   "object": "October is the worst month for attacks on ships near the Strait of Hormuz since the war began in February — more than 120 attacks reported; Iran claims seven tankers damaged this week (the AP/PBS 10-22 record)",
+   "kind": "activity",
+   "holder": null,
+   "analog": {
+    "type": "activity",
+    "ref": "H6 — the Strait priced by attack count (see the 7-tanker record, 10-22)",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "flow row — verified: false until the UKMTO/JMIC count is pulled"
+   },
+   "scored": false,
+   "reduced": "120+ attacks in October; the worst month",
+   "why": "not cut; filed from the fetched text"
+  },
+  {
+   "id": "see-aj-1025-oil-slick-uae",
+   "piece": null,
+   "program": "Al Jazeera English",
+   "date": "2026-10-25",
+   "t": [
+    "newsfeed 12:05 (42 s video; two-sentence description)"
+   ],
+   "object": "an oil slick washing up on the UAE shoreline; beaches closed in Umm Al Quwain and Ras Al-Khaimah; a crude tanker reportedly struck an Iranian-laid naval mine near the Strait in early October",
+   "kind": "activity",
+   "holder": null,
+   "analog": {
+    "type": "activity",
+    "ref": "H6 — the mines (fox_2026-10-20_hormuz_mines) now on a beach; 'a tanker on the bottom of a strait' (Sailor 10-16)",
+    "pg": "PG01"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "detection row — verified: false; the UAE authorities' notice is the primary"
+   },
+   "scored": false,
+   "reduced": "oil slick; beaches closed; a mined tanker",
+   "why": "not cut — a 42-second newsfeed with a two-sentence description; filed"
+  },
+  {
+   "id": "see-pbs-1024-embassy-drawdown",
+   "piece": null,
+   "program": "NPR / PBS NewsHour",
+   "date": "2026-10-24",
+   "t": [
+    "dek (not fetched)"
+   ],
+   "object": "AP via PBS (10-24): the US is reducing staffing at four Middle East embassies; DNI Jay Clayton's memo to Rubio (Friday 10-23): intelligence that Iran 'has substantially increased efforts to target' US personnel",
+   "kind": "ruling",
+   "holder": "the State Department",
+   "analog": {
+    "type": "ruling",
+    "ref": "the Saudi departure order (NYT 10-24 'Advanced Stages', β) — the same memo"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "detection row — verified: false; the record's register (AP), not a reading"
+   },
+   "scored": false,
+   "reduced": "four embassies; 'substantially increased efforts'",
+   "why": "the AP wire — the record's register, not cut; by its dek only"
+  },
+  {
+   "id": "see-aj-1027-reopening-terms",
+   "piece": "aj_2026-10-27_who_breaks_first",
+   "program": "Al Jazeera English",
+   "date": "2026-10-27",
+   "t": [
+    "¶14"
+   ],
+   "object": "Rezaei (SNSC secretary, 'last week'): Hormuz reopens only after the US suspends sanctions, unfreezes assets, lifts the naval blockade and gives assurances against new strikes; forces ready to respond, including by invading neighbours and hitting US-used bases",
+   "kind": "statement",
+   "holder": "Iran's Supreme National Security Council",
+   "analog": {
+    "type": "agreement",
+    "ref": "the June 2026 Pakistan–Qatar memorandum (the same items, agreed once); the Tajani line (aj 10-23)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 — constitutive statement; hypothesis H6-terms-1027; register-intake candidate cand-iran-reopening-terms"
+   },
+   "scored": true,
+   "reduced": "'only after' — four items",
+   "why": "the Strait's terms by its holder; the first constitutive H6 statement from the Iranian side on the Press; a primary (the SNSC text) owed"
+  },
+  {
+   "id": "see-aj-1027-june-mou",
+   "piece": "aj_2026-10-27_who_breaks_first",
+   "program": "Al Jazeera English",
+   "date": "2026-10-27",
+   "t": [
+    "¶9",
+    "¶10"
+   ],
+   "object": "a June 2026 memorandum brokered by Pakistan and Qatar — reopen the Strait, end the blockade of Iranian ports, conditions for nuclear talks — unravelled in July: weeks of US strikes, then Iranian retaliation on US assets and Gulf energy infrastructure",
+   "kind": "agreement",
+   "holder": "Iran · the US (brokers: Pakistan, Qatar)",
+   "analog": {
+    "type": "agreement",
+    "ref": "H2, the energy ceasefire (falsified 10-12) — a pause that did not hold"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 — the record; an agreement whose window closed (July): later sighting, never reopened (window rule §4c)"
+   },
+   "scored": true,
+   "reduced": "reopen · end the blockade · unravelled in July",
+   "why": "a reopening already failed once this year — the record against the holder's 'U.S. control'"
+  },
+  {
+   "id": "see-aj-1027-october-attacks",
+   "piece": "aj_2026-10-27_who_breaks_first",
+   "program": "Al Jazeera English",
+   "date": "2026-10-27",
+   "t": [
+    "¶27"
+   ],
+   "object": "October recorded the highest number of attacks on commercial shipping around Hormuz (Washington Institute for Near East Policy data); Strait shipping far below pre-war levels",
+   "kind": "activity",
+   "holder": "Iran (as the page attributes the attacks)",
+   "analog": {
+    "type": "activity",
+    "ref": "see-aj-1025-october-attacks (120+, unsourced) — second sighting, now sourced"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "detection row — verified: false until the Institute's table is pulled"
+   },
+   "scored": true,
+   "reduced": "the most since the war began",
+   "why": "second sighting of October-as-worst; the page's lowest-Dia line"
+  },
+  {
+   "id": "see-aj-1027-brent-117",
+   "piece": "aj_2026-10-27_who_breaks_first",
+   "program": "Al Jazeera English",
+   "date": "2026-10-27",
+   "t": [
+    "¶28"
+   ],
+   "object": "Brent above $117 a barrel last week against about $72 pre-war, following Iranian attacks on tankers",
+   "kind": "price",
+   "holder": "—",
+   "analog": {
+    "type": "price",
+    "ref": "see-aj-1025-brent-path ($72.48 → $126.41 → above $100); the NYT 10-23 '$116' (β)"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "price row — verified: false; the restrictor named (the first LI attribution this week)"
+   },
+   "scored": true,
+   "reduced": "$117 · $72 · Iranian attacks on tankers",
+   "why": "who prices the Strait, eighth sighting — and the first LI page to name the actor"
+  },
+  {
+   "id": "see-aj-1027-diesel-doubled-us",
+   "piece": "aj_2026-10-27_who_breaks_first",
+   "program": "Al Jazeera English",
+   "date": "2026-10-27",
+   "t": [
+    "¶17"
+   ],
+   "object": "the war has driven up energy prices, especially diesel, which has nearly doubled — farmers, small businesses, inflation, affordability (undated; no cure named)",
+   "kind": "price",
+   "holder": "—",
+   "analog": {
+    "type": "price",
+    "ref": "von der Leyen 10-16 (aj 10-25 ¶26: Europe's diesel doubled); see-fox-1024-pump-six ($6)"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "price row — verified: false; H1c on the page once, the deal absent"
+   },
+   "scored": true,
+   "reduced": "nearly doubled",
+   "why": "the third 'doubled' in three days (Europe 10-25, the US 10-27); no page has it coming down"
+  },
+  {
+   "id": "see-aj-1027-trump-deal-date",
+   "piece": "aj_2026-10-27_who_breaks_first",
+   "program": "Al Jazeera English",
+   "date": "2026-10-27",
+   "t": [
+    "¶13"
+   ],
+   "object": "Trump, Sunday 10-25: 'do I make a deal with them'; earlier: no attacks on Iran before the November 3 midterms",
+   "kind": "statement",
+   "holder": "the US executive (Trump)",
+   "analog": {
+    "type": "statement",
+    "ref": "see-aj-1022-post-election-strikes — the November 3 clock restated"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statement — the shadow's holder on the deal and the date, not the Strait; cand-post-election-strikes eleventh-plus sighting"
+   },
+   "scored": true,
+   "reduced": "do I make a deal · not before November 3",
+   "why": "constitutive @O at z 0.0 — the Strait not in his sentence; the force's first clock"
+  },
+  {
+   "id": "see-aj-1027-israel-vote-force",
+   "piece": "aj_2026-10-27_who_breaks_first",
+   "program": "Al Jazeera English",
+   "date": "2026-10-27",
+   "t": [
+    "¶22",
+    "¶23"
+   ],
+   "object": "Israel's election Tuesday 10-27: a Netanyahu defeat could complicate renewed joint attacks — experts call him the main force behind Trump's greenlight; an Eisenkot win would not necessarily soften Israel on Iran",
+   "kind": "statement",
+   "holder": "—",
+   "analog": {
+    "type": "statement",
+    "ref": "NYT 10-27 'Netanyahu Pushed for Attack on Iran Ahead of Israeli Election' (β, by headline) — the same, from the Israeli side"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "context — the force's second clock; cand-post-election-strikes"
+   },
+   "scored": true,
+   "reduced": "Tuesday · the main force behind the greenlight",
+   "why": "the force marked, not the object; the vote as the strike's switch, hedged by the page"
+  },
+  {
+   "id": "see-aj-1027-mecca-tehran",
+   "piece": "aj_2026-10-27_who_breaks_first",
+   "program": "Al Jazeera English",
+   "date": "2026-10-27",
+   "t": [
+    "¶3",
+    "¶32",
+    "¶33"
+   ],
+   "object": "Monday 10-26: senior officials of Saudi Arabia, Pakistan and Türkiye — the August Mecca defence pact's signatories — met Iranian officials in Tehran and pledged to continue talks on regional security, after weeks of Houthi attacks on Saudi Arabia",
+   "kind": "statement",
+   "holder": "Saudi Arabia · Pakistan · Türkiye · Iran",
+   "analog": {
+    "type": "agreement",
+    "ref": "cand-gulf-pact (the 10-23 key) — third sighting, now in Tehran"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "candidate — cand-gulf-pact, third sighting; a joint statement is the primary, owed"
+   },
+   "scored": true,
+   "reduced": "the Mecca pact's three, in Tehran",
+   "why": "the second chokepoint as context; the pact sighted at the Strait's holder's table"
+  },
+  {
+   "id": "see-aj-1027-china-envoy",
+   "piece": "aj_2026-10-27_who_breaks_first",
+   "program": "Al Jazeera English",
+   "date": "2026-10-27",
+   "t": [
+    "¶2"
+   ],
+   "object": "China announced Tuesday 10-27 it will 'soon' send an envoy to regional countries to help avoid another escalation",
+   "kind": "statement",
+   "holder": "China (the foreign ministry, as the page has it)",
+   "analog": {
+    "type": "statement",
+    "ref": "none on the Press"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "sighting, permanence: low — a dated delivery claim; verify by the envoy's arrival"
+   },
+   "scored": true,
+   "reduced": "an envoy, soon",
+   "why": "no analog on the Press; kept for the 'broad impact, no analog' case"
+  },
+  {
+   "id": "see-aj-1027-reuters-ipsos-34",
+   "piece": "aj_2026-10-27_who_breaks_first",
+   "program": "Al Jazeera English",
+   "date": "2026-10-27",
+   "t": [
+    "¶16",
+    "¶18"
+   ],
+   "object": "Reuters/Ipsos, earlier this month: 34% approve of Trump's handling of the conflict, his lowest in either term; 53–47, 218–214; reports citing Iranian officials: Tehran may be prolonging talks to deny Trump a win before the elections",
+   "kind": "statement",
+   "holder": "—",
+   "analog": {
+    "type": "statement",
+    "ref": "see-bp4-gas-votes · see-daily-1014-gas-votes — the predicate, ninth sighting, from Tehran's side"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "context — the gas↔votes predicate inverted: the price as Tehran's lever on the vote"
+   },
+   "scored": true,
+   "reduced": "34 percent · deny Trump a win",
+   "why": "reported, not ruled; the Pew 65% on the Fox page the same day"
+  },
+  {
+   "id": "see-aj-1027-moscow-forum",
+   "piece": null,
+   "program": "Al Jazeera English",
+   "date": "2026-10-27",
+   "t": [
+    "dek (13:26 page); newsfeed 15:49 — not cut"
+   ],
+   "object": "Qatar's emir met Iran's Pezeshkian in Moscow at Russia's energy forum; 'energy cooperation' and bilateral relations discussed (Iranian state media)",
+   "kind": "statement",
+   "holder": "Iran · Qatar · Russia (host)",
+   "analog": {
+    "type": "statement",
+    "ref": "Peskov 10-23 'regular supplies will continue' (fox 10-24) — the deal's seller as host"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "candidate — cand-moscow-energy-forum; seen once, by dek; the forum's record or a joint statement is the primary, owed"
+   },
+   "scored": false,
+   "reduced": "energy cooperation, in Moscow",
+   "why": "the deal's seller hosting the Strait's holder and a Gulf LNG exporter in the deal's third week — filed from a dek, not read (one AJ cut per day)"
+  },
+  {
+   "id": "see-fox-1027-georgia-gas-366",
+   "piece": "fox_2026-10-27_give_him_time",
+   "program": "Fox News",
+   "date": "2026-10-27",
+   "t": [
+    "¶10",
+    "dek"
+   ],
+   "object": "Georgia gasoline averages about $3.66 a gallon against $2.72 in February before the war (AAA by link) — up 94 cents; Iranian attacks on commercial vessels and threats to Hormuz shipping pushed oil prices up worldwide",
+   "kind": "price",
+   "holder": "—",
+   "analog": {
+    "type": "price",
+    "ref": "see-fox-1024-pump-six (diesel above $6) — two fuels, two pages"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "price row — verified: false until the AAA table is pulled; H1c gasoline, the first state average on the Press; H6 named as the cause"
+   },
+   "scored": true,
+   "reduced": "$3.66 · $2.72 · February · Hormuz shipping",
+   "why": "the restrictor named by Fox and AJ on the same day; the holder's 'U.S. control' on neither page"
+  },
+  {
+   "id": "see-fox-1027-come-down-soon",
+   "piece": "fox_2026-10-27_give_him_time",
+   "program": "Fox News",
+   "date": "2026-10-27",
+   "t": [
+    "¶14"
+   ],
+   "object": "Trump at the Perry rally (Saturday 10-24): oil prices will come down soon; inflation 1.7% over the past three months",
+   "kind": "statement",
+   "holder": "the US executive (Trump) — the deal's holder",
+   "analog": {
+    "type": "statement",
+    "ref": "fox 10-24 ¶10 'COMING DOWN, IN RECORD NUMBERS, AND FAST' (10-11) — the clock's fourth phrasing"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1 — constitutive statement; hypothesis H1-soon-1024 (falsifier: the pump does not fall toward February by the midterms)"
+   },
+   "scored": true,
+   "reduced": "come down soon · 1.7%",
+   "why": "the cure's name has dropped out of the holder's sentence; only the direction and the clock remain — reported as a series across sittings, not a Rule 5 migration"
+  },
+  {
+   "id": "see-fox-1027-bls-37",
+   "piece": "fox_2026-10-27_give_him_time",
+   "program": "Fox News",
+   "date": "2026-10-27",
+   "t": [
+    "¶15"
+   ],
+   "object": "BLS: the annual CPI was 3.7% in September — a different period from the holder's 1.7% three-month figure (the article's check)",
+   "kind": "price",
+   "holder": "the Bureau of Labor Statistics",
+   "analog": {
+    "type": "price",
+    "ref": "none on the Press — the first CPI row"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "record row — verified: false until the BLS release is pulled"
+   },
+   "scored": true,
+   "reduced": "3.7% · September",
+   "why": "the article measured; the Press does not say the holder lied"
+  },
+  {
+   "id": "see-fox-1027-give-him-time",
+   "piece": "fox_2026-10-27_give_him_time",
+   "program": "Fox News",
+   "date": "2026-10-27",
+   "t": [
+    "¶7",
+    "¶11",
+    "¶13"
+   ],
+   "object": "voters at the Perry rally: 'give him time' (Barkman); 'temporarily' higher pump prices worth paying (Taylor); gas prices 'wouldn't matter' against a nuclear attack (Taylor)",
+   "kind": "statement",
+   "holder": "readers (rallygoers)",
+   "analog": {
+    "type": "statement",
+    "ref": "fox 10-26 Port Huron: 'short term pain for long term gain', 'a small cost we temporarily pay' (not cut)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statement — the shadow adopted as patience; the gas↔votes predicate from the paying side, tenth sighting"
+   },
+   "scored": true,
+   "reduced": "give him time · temporarily · wouldn't matter",
+   "why": "the horizon guard applies: a high Dia says the line has left the price, never that the voter cannot find it"
+  },
+  {
+   "id": "see-fox-1027-georgia-slate",
+   "piece": "fox_2026-10-27_give_him_time",
+   "program": "Fox News",
+   "date": "2026-10-27",
+   "t": [
+    "¶4",
+    "¶5",
+    "¶10",
+    "¶22",
+    "¶40"
+   ],
+   "object": "Georgia: approval 36 / disapproval 64; Pew ≈65% disapprove of the Iran actions; Collins v. Ossoff (Ossoff by 1.22% in the 2021 runoff; Trump Georgia by 2.2% in 2024); Jackson for governor; Taylor: the midterms an 'uphill battle'; the Collins campaign's statement",
+   "kind": "statement",
+   "holder": "—",
+   "analog": {
+    "type": "statement",
+    "ref": "the slate (Georgia governor — msnow 10-25 row); me-sen matched on 'collins' — a noise match (Mike, not Susan)"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "context — the Georgia Senate race is not a slate object; the predicate's register"
+   },
+   "scored": true,
+   "reduced": "36/64 · 65% · 1.22% · 2.2% · uphill",
+   "why": "filed as context; the me-sen term 'collins' produces noise on every Georgia page — Sailor prunes"
+  },
+  {
+   "id": "see-fox-1026-port-huron",
+   "piece": null,
+   "program": "Fox News",
+   "date": "2026-10-26",
+   "t": [
+    "¶6",
+    "¶8",
+    "¶9",
+    "¶11 — read in full, not cut"
+   ],
+   "object": "Port Huron, Michigan (Steinhauser): nearly 20 rally voters; Fox News poll 36% approval nationally, 95% among MAGA voters; 'short term pain for long term gain' (Taggart), 'a small cost we temporarily pay' (Bacheller), 'it always gets worse first' (Kemp), 'Iran needed to be dealt with' (Mocan); no dollar figure on the page",
+   "kind": "statement",
+   "holder": "readers (rallygoers)",
+   "analog": {
+    "type": "statement",
+    "ref": "see-fox-1027-give-him-time — the same adoption of the clock two days earlier"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statement — the shadow adopted as patience; slate — the 95/36 split"
+   },
+   "scored": false,
+   "reduced": "short term pain · temporarily · 95% / 36%",
+   "why": "one Fox cut per day; the Perry page carries the price, this one the sharper poll split"
+  },
+  {
+   "id": "see-foxbiz-1026-economic-outcast",
+   "piece": null,
+   "program": "Fox Business",
+   "date": "2026-10-26",
+   "t": [
+    "opening (the sweep) — not read in full"
+   ],
+   "object": "Bessent (Brian Kilmeade Show): 'the Iranians are panicked; the economy is collapsing'; an eight-week Treasury effort, Operation Economic Outcast, building on the blockade to cut Iran's foreign banking and commercial channels; Iran's GDP could fall 20–25%",
+   "kind": "tariff/sanction",
+   "holder": "the US Treasury (Bessent)",
+   "analog": {
+    "type": "tariff/sanction",
+    "ref": "the Graham Act waiver (fox 10-23) — the same Treasury loosening Russia's fuel the week it tightens Iran's; the blockade as the base"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "candidate — cand-economic-outcast; seen once, by opening; a Treasury release is the primary, owed"
+   },
+   "scored": false,
+   "reduced": "Operation Economic Outcast · 20–25%",
+   "why": "the force's finance — the pressure Beauchamp's 'who breaks first' (aj 10-27 ¶30) is a race against; not cut (one Fox cut per day)"
+  },
+  {
+   "id": "see-surv-1027-iran-talks-chapter",
+   "piece": null,
+   "program": "Bloomberg Surveillance",
+   "date": "2026-10-27",
+   "t": [
+    "chapter title 17:33 (the dek) — transcript owed"
+   ],
+   "object": "'Iran Talks Unlikely to Resolve Core Differences' — Lt. Gen. Karen Gibson (ret.), Academy Securities; the 10-27 programme (42SaCJ3fv38)",
+   "kind": "statement",
+   "holder": "—",
+   "analog": {
+    "type": "statement",
+    "ref": "aj 10-27 ¶6/¶14 — the terms, from the RI corner"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 — the RI read of the day's object, by chapter title only; transcript owed"
+   },
+   "scored": false,
+   "reduced": "core differences",
+   "why": "Surveillance's first hit since 10-23; the Close still 0 items — the RI corner's only voice today is a chapter title"
+  },
+  {
+   "id": "see-aj-1027b-blockade-since-july",
+   "piece": "aj_2026-10-27_eyes_to_the_sky",
+   "program": "Al Jazeera English",
+   "date": "2026-10-27",
+   "t": [
+    "¶14"
+   ],
+   "object": "the US naval blockade of Iran's southern ports — in place since July; Iran's oil exports halted, trade disrupted; with sanctions, Iranians poorer and more isolated; the holder threatens to prolong it",
+   "kind": "activity",
+   "holder": "the US (Trump)",
+   "analog": {
+    "type": "activity",
+    "ref": "see-aj-1027-reopening-terms — the blockade as one of Rezaei's four terms; here as the instrument with a date"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 — the record (the lock from Washington's end); tracker detection row, verified: false until a CENTCOM/Treasury primary or an export series is pulled"
+   },
+   "scored": true,
+   "reduced": "since July — oil exports halted",
+   "why": "second Press sighting of the blockade as a dated instrument; the page's lowest-Dia line",
+   "dia": 6,
+   "z": -0.7
+  },
+  {
+   "id": "see-aj-1027b-readiness-coming-days",
+   "piece": "aj_2026-10-27_eyes_to_the_sky",
+   "program": "Al Jazeera English",
+   "date": "2026-10-27",
+   "t": [
+    "¶13"
+   ],
+   "object": "US media: the military is ready to attack Iran in the coming days if ordered; Trump's repeated threats to strike power plants, bridges and civilian infrastructure if hostilities resume",
+   "kind": "activity",
+   "holder": "the US (Trump)",
+   "analog": {
+    "type": "activity",
+    "ref": "see-aj-1025 CENTCOM page — options ready; the 13th MEU; the third carrier"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "cand-post-election-strikes — twelfth-plus sighting; the shortest clock yet ('the coming days'); primary owed"
+   },
+   "scored": true,
+   "reduced": "ready in the coming days if ordered",
+   "why": "three clocks on the force now on one page (after November 3; the coming days; the Israeli vote)",
+   "dia": 12,
+   "z": -0.6
+  },
+  {
+   "id": "see-aj-1027b-trump-civilisation",
+   "piece": "aj_2026-10-27_eyes_to_the_sky",
+   "program": "Al Jazeera English",
+   "date": "2026-10-27",
+   "t": [
+    "¶12"
+   ],
+   "object": "Trump (as reported, undated): the 'death of a civilisation' in Iran; the map might look different after the war",
+   "kind": "statement",
+   "holder": "Donald Trump",
+   "analog": {
+    "type": "statement",
+    "ref": "the 10-11 'U.S. control of the Strait' — the same holder's other sentence"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 — constitutive statement by the force's holder; hypothesis H6-force-1027"
+   },
+   "scored": false,
+   "reduced": "death of a civilisation",
+   "why": "@O, not Dia-scored; the shadow's holder on the instrument that keeps the water shut",
+   "z": -0.7
+  },
+  {
+   "id": "see-aj-1027b-katz-stone-age",
+   "piece": "aj_2026-10-27_eyes_to_the_sky",
+   "program": "Al Jazeera English",
+   "date": "2026-10-27",
+   "t": [
+    "¶15"
+   ],
+   "object": "Israel Katz (defence minister, as reported): strike Iranian infrastructure again, energy facilities included — 'back into the Stone Age'",
+   "kind": "statement",
+   "holder": "Israel (Katz)",
+   "analog": {
+    "type": "statement",
+    "ref": "the 12-day war (last year); the energy plants struck once already (¶10)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 — constitutive (the other holder); slate01 (the force) — the Israeli clock's holder-side"
+   },
+   "scored": false,
+   "reduced": "back into the Stone Age",
+   "why": "@O; the Israeli vote changes the method, not the goal, by the article",
+   "z": -0.8
+  },
+  {
+   "id": "see-aj-1027b-june-mou-later",
+   "piece": "aj_2026-10-27_eyes_to_the_sky",
+   "program": "Al Jazeera English",
+   "date": "2026-10-27",
+   "t": [
+    "¶3"
+   ],
+   "object": "attacks fell sharply after the June Washington–Tehran memorandum; fears have returned; many analysts expect strikes to resume after the elections",
+   "kind": "agreement",
+   "holder": "Iran · the US",
+   "analog": {
+    "type": "agreement",
+    "ref": "see-aj-1027-june-mou (unravelled in July)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 — later sighting of a closed-window agreement (window rule §4c); second Press sighting"
+   },
+   "scored": true,
+   "reduced": "fell sharply after June",
+   "why": "the memorandum as the record of the one quiet stretch",
+   "dia": 14,
+   "z": -0.4
+  },
+  {
+   "id": "see-aj-1027b-incomes-cut",
+   "piece": "aj_2026-10-27_eyes_to_the_sky",
+   "program": "Al Jazeera English",
+   "date": "2026-10-27",
+   "t": [
+    "¶9"
+   ],
+   "object": "a Tehran resident (Shayan, 32): the US blockade and sanctions have reduced most people's incomes; those who hoped for an overthrow are disillusioned",
+   "kind": "statement",
+   "holder": "—",
+   "analog": {
+    "type": "statement",
+    "ref": "fox 10-27 ¶10 — the pump up with Iranian attacks as the cause; the same price from the other shore"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1c's mirror — the price from Tehran's end of the water; a statement, not a tracker row (no figure)"
+   },
+   "scored": true,
+   "reduced": "incomes cut by the blockade",
+   "why": "the Press has now read the price from both shores on consecutive pages, each naming the other side's hand",
+   "dia": 26,
+   "z": -0.5
+  },
+  {
+   "id": "see-aj-1027b-un-crackdown-finding",
+   "piece": "aj_2026-10-27_eyes_to_the_sky",
+   "program": "Al Jazeera English",
+   "date": "2026-10-27",
+   "t": [
+    "¶8"
+   ],
+   "object": "January's nationwide protests — thousands of civilians believed killed; the UN says the security forces' crackdown amounted to crimes against humanity",
+   "kind": "ruling",
+   "holder": "the UN (the finding); Iran's security forces (the acts)",
+   "analog": {
+    "type": "ruling",
+    "ref": "none on the Press"
+   },
+   "match": {
+    "dataset": "sighting",
+    "ref": "permanence: low — no analog; the register's intake decides"
+   },
+   "scored": true,
+   "reduced": "crimes against humanity",
+   "why": "surface-bound on this cut (right domain, another plane); whether it is a candidate is a ruling owed",
+   "dia": 20,
+   "z": -0.2,
+   "permanence": "low"
+  },
+  {
+   "id": "see-aj-1027b-israel-opposition-aims",
+   "piece": "aj_2026-10-27_eyes_to_the_sky",
+   "program": "Al Jazeera English",
+   "date": "2026-10-27",
+   "t": [
+    "¶16",
+    "¶17",
+    "¶18",
+    "¶19"
+   ],
+   "object": "Israel's opposition (Eisenkot, Bennett, Lapid, Golan) praised the US-Israeli attacks; aims: uranium removed, the programme dismantled, the 'axis of resistance' eliminated; Eisenkot: force cannot topple the Republic — change must come from Iranians",
+   "kind": "statement",
+   "holder": "Israel's opposition",
+   "analog": {
+    "type": "statement",
+    "ref": "see-aj-1027-israel-vote-force — the Israeli clock"
+   },
+   "match": {
+    "dataset": "slate01",
+    "ref": "the force — context for the Israeli vote (result not on the page; polls closed after publication)"
+   },
+   "scored": true,
+   "reduced": "one goal, two methods",
+   "why": "the vote changes the method, not the goal, by the article and by the resident",
+   "dia": 28,
+   "z": -0.3
+  },
+  {
+   "id": "see-aj-1027b-street-detector",
+   "piece": "aj_2026-10-27_eyes_to_the_sky",
+   "program": "Al Jazeera English",
+   "date": "2026-10-27",
+   "t": [
+    "¶21",
+    "¶22"
+   ],
+   "object": "warning groups formed across the country to alert one another to strikes on hearing fighter jets; domestic apps and texts because the authorities may impose further internet shutdowns",
+   "kind": "activity",
+   "holder": "— (the street); Iran's authorities (the shutdowns)",
+   "analog": {
+    "type": "activity",
+    "ref": "none on the Press"
+   },
+   "match": {
+    "dataset": "sighting",
+    "ref": "permanence: low — the street's own detector; the state's inward clock"
+   },
+   "scored": true,
+   "reduced": "jets overhead; shutdowns if needed",
+   "why": "the page's one instrument built by the readers",
+   "dia": 19,
+   "z": -0.4,
+   "permanence": "low"
+  },
+  {
+   "id": "see-aj-1027-gecf-moscow-read",
+   "piece": null,
+   "program": "Al Jazeera English",
+   "date": "2026-10-27",
+   "t": [
+    "¶1",
+    "¶3",
+    "¶4 (13:26 page, read in full — 6 ¶)"
+   ],
+   "object": "Pezeshkian and Qatar's emir Tamim met on the sidelines of the 8th Gas Exporting Countries Forum summit in Moscow (10-27); 'energy cooperation' and bilateral ties discussed; the talks did not address the war",
+   "kind": "agreement",
+   "holder": "Russia (host) · Iran · Qatar",
+   "analog": {
+    "type": "activity",
+    "ref": "see-aj-1027 Moscow page by dek (cand-moscow-energy-forum, first sighting)"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "cand-moscow-energy-forum — second sighting, now read: the deal's seller hosting the Strait's holder and a Gulf LNG exporter; new terms key gecf (proposed, prune)"
+   },
+   "scored": false,
+   "reduced": "GECF summit — energy cooperation",
+   "why": "seen twice this week; the war not on the agenda by the page; a GECF communiqué is the primary, owed"
+  },
+  {
+   "id": "see-aj-1027-qatar-tehran-delegation",
+   "piece": null,
+   "program": "Al Jazeera English",
+   "date": "2026-10-27",
+   "t": [
+    "¶5",
+    "¶6 (13:26 page)"
+   ],
+   "object": "Qatar's foreign ministry spokesman (Tuesday): Doha is mediating to end the nearly eight-month war and urged Iran to stop threatening Gulf states; a Qatari delegation visited Tehran to support mediation and a path to a resolution with Washington",
+   "kind": "activity",
+   "holder": "Qatar",
+   "analog": {
+    "type": "activity",
+    "ref": "the June memorandum (Qatar a broker); cand-gulf-pact's Monday visit to Tehran (aj 10-27 ¶3)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 — context: the June broker back in Tehran the same week as the Mecca pact's signatories; NYT 10-27 'Flurry of Diplomacy' (β) is the same flurry from the US side"
+   },
+   "scored": false,
+   "reduced": "stop threatening Gulf states",
+   "why": "the Strait's reopening-by-terms track, from the broker's side; a joint statement owed"
+  },
+  {
+   "id": "see-fox-1027-october-survey",
+   "piece": "fox_2026-10-27_two_electorates",
+   "program": "Fox News",
+   "date": "2026-10-27",
+   "t": [
+    "¶16",
+    "¶17",
+    "¶18"
+   ],
+   "object": "Fox October survey: approval 44% (last pre-war) → 36%; Iran tied to inflation 85%, gas prices 83%, government leadership 79%, the war 75%; Democrats preferred +16 inflation, +12 gas prices, +11 leadership, +9 foreign policy",
+   "kind": "statement",
+   "holder": "— (Fox News polling)",
+   "analog": {
+    "type": "statement",
+    "ref": "the gas↔votes predicate — ten sightings as a sentence (fox 10-24 ¶11, fox 10-27 ¶22, aj 10-27 ¶18); Port Huron's 95/36 split"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1c — frame predicate measured (eleventh sighting; first by number from the RI corner); slate — the national register"
+   },
+   "scored": true,
+   "reduced": "gas 83% · D+12 · 44 → 36",
+   "why": "a poll is a reading of the audience, not a price — no tracker row; the holder's 'soon' given seven days by his own corner",
+   "dia": 6,
+   "z": -0.4
+  },
+  {
+   "id": "see-fox-1027-generic-ballot",
+   "piece": "fox_2026-10-27_two_electorates",
+   "program": "Fox News",
+   "date": "2026-10-27",
+   "t": [
+    "¶3"
+   ],
+   "object": "NYT/Siena (last week): Democrats +11 on the generic ballot; Fox's national poll in agreement",
+   "kind": "statement",
+   "holder": "—",
+   "analog": {
+    "type": "statement",
+    "ref": "MS NOW 10-27 'Dems up 11' (owed); NPR 10-27 final-poll pages (blocked)"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "context — the national register, seven days out"
+   },
+   "scored": true,
+   "reduced": "+11",
+   "why": "the same number on three corners' pages in one day",
+   "dia": 10,
+   "z": -0.2
+  },
+  {
+   "id": "see-fox-1027-rankings-senate",
+   "piece": "fox_2026-10-27_two_electorates",
+   "program": "Fox News",
+   "date": "2026-10-27",
+   "t": [
+    "¶25",
+    "¶27",
+    "¶29",
+    "¶33",
+    "¶36",
+    "¶40"
+   ],
+   "object": "the final Power Rankings, Senate: Democrats favored in 48, Republicans 47 (ceilings 53 / 52); Texas 49–49 (Fox); Ohio Brown 52–47, Toss-up → Lean D; Maine a toss-up (Collins); South Carolina Likely R → Lean R (the primary 52–48 after a Trump rally); Mississippi Solid R → Likely R (Hyde-Smith v. Colom; Trump's rally)",
+   "kind": "statement",
+   "holder": "— (Fox News Power Rankings)",
+   "analog": {
+    "type": "statement",
+    "ref": "the slate's register; fox 10-27 06:00 'deadlocked race' (Texas, not cut); NPR 10-27 Mississippi pages (blocked)"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "tx-sen · me-sen · the Senate map — context, filed"
+   },
+   "scored": true,
+   "reduced": "48 / 47 · 49–49 · Lean D Ohio",
+   "why": "the RI corner's own map; the price absent from every line of it",
+   "dia": 10,
+   "z": 0.0
+  },
+  {
+   "id": "see-fox-1027-rankings-house-gov",
+   "piece": "fox_2026-10-27_two_electorates",
+   "program": "Fox News",
+   "date": "2026-10-27",
+   "t": [
+    "¶43",
+    "¶44",
+    "¶45",
+    "¶46",
+    "¶47",
+    "¶48",
+    "¶54"
+   ],
+   "object": "House: Democrats' floor 223 (240 / 252 on good nights); Republicans 195 → ≈212; nineteen shifts toward Democrats this week — polling, top-of-ticket strength, rural erosion; KY-6 (Trump +15) Lean R → Toss-up; Ohio governor (Acton v. Ramaswamy) Toss-up → Lean D after the ad",
+   "kind": "statement",
+   "holder": "— (Fox News Power Rankings)",
+   "analog": {
+    "type": "statement",
+    "ref": "the slate's register"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "the House and governors' map — context, filed; 'rural erosion' sorted to H1c as a statement (the first electorate's geography)"
+   },
+   "scored": true,
+   "reduced": "223 · nineteen shifts · rural erosion",
+   "why": "the only shift line that names a cause",
+   "dia": 12,
+   "z": -0.1
+  },
+  {
+   "id": "see-fp-1027-us-canada-tariffs",
+   "piece": null,
+   "program": "The Free Press",
+   "date": "2026-10-27",
+   "t": [
+    "N5 (the Front Page, 10-27, read to the paywall)"
+   ],
+   "object": "the US and Canada reportedly negotiating a deal to lower tariffs on steel and autos after August's collapse of talks; possibly before next week's midterms",
+   "kind": "agreement",
+   "holder": "the US · Canada",
+   "analog": {
+    "type": "agreement",
+    "ref": "the tariffs terms key; no Press sighting on file"
+   },
+   "match": {
+    "dataset": "readings",
+    "ref": "tariffs — the Reading's window not known to this task; filed as context, verified: false"
+   },
+   "scored": false,
+   "reduced": "steel and autos; before the midterms",
+   "why": "by a news bullet only; a primary (an announcement) owed",
+   "partial": "headline + bullet"
+  },
+  {
+   "id": "see-fox-1029-national-pump",
+   "piece": "fox_2026-10-29_long_haul",
+   "program": "Fox News",
+   "date": "2026-10-29",
+   "t": [
+    "¶5"
+   ],
+   "object": "national average regular gasoline ≈$4.25 on Wednesday 10-28, up nearly 40% from ≈$3.05 a year earlier (AAA)",
+   "kind": "price",
+   "holder": "— (AAA, as cited)",
+   "analog": {
+    "type": "price",
+    "ref": "Georgia $3.66 v. $2.72 (fox 10-27 ¶10); the $6 diesel pump (fox 10-24)"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "price row — verified: false (the AAA series is the primary); PG01 H1c — the pump, national"
+   },
+   "scored": true,
+   "reduced": "$4.25 · +40% · Wednesday",
+   "why": "gasoline, not diesel — the other leg of H1c; the page does not mention the fuel the deal is for",
+   "dia": 6,
+   "z": -0.5
+  },
+  {
+   "id": "see-fox-1029-really-fast",
+   "piece": "fox_2026-10-29_long_haul",
+   "program": "Fox News",
+   "date": "2026-10-29",
+   "t": [
+    "¶7",
+    "¶8"
+   ],
+   "object": "Trump at Lubbock: the country is making a fortune while people pay more at the pump; gas prices will come down 'really fast' / 'very, very rapidly'",
+   "kind": "statement",
+   "holder": "Donald Trump",
+   "analog": {
+    "type": "statement",
+    "ref": "the holder's clock — 'AND FAST' (10-11) → 'immediately' → 'soon' (10-24, Perry) → 'really fast' (Lubbock); fifth phrasing"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1 — constitutive statement; hypotheses.json C-trump-1029-really-fast (falsifier: AAA national average on 11-03 at or above $4.25)"
+   },
+   "scored": true,
+   "reduced": "a fortune · the pump · really fast",
+   "why": "the holder states both halves of H1c in one sentence; no cure named in the sentence",
+   "dia": null,
+   "z": 0.9
+  },
+  {
+   "id": "see-fox-1029-venezuela-deal",
+   "piece": "fox_2026-10-29_long_haul",
+   "program": "Fox News",
+   "date": "2026-10-29",
+   "t": [
+    "¶6",
+    "¶9",
+    "¶10",
+    "¶11"
+   ],
+   "object": "the Venezuela energy deal: the first million barrels of Venezuelan oil announced at Corpus Christi — 'at no cost to US taxpayers' per the White House, to be refined in Texas; the broader deal: US majority control over ≈65 billion barrels of proven reserves; 'lower consumer costs expected eventually'",
+   "kind": "agreement",
+   "holder": "the US (the White House) · Venezuela",
+   "analog": {
+    "type": "agreement",
+    "ref": "the Russian diesel deal (PG01 H1) — a state-to-state fuel arrangement sold as a price cure; the dark-tankers sighting (bp2 10-15) named Venezuelan tankers once"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": null,
+    "candidate": true,
+    "priority": "high",
+    "event": "cand-venezuela-energy-deal",
+    "note": "the terms key 'venezuela' exists — if a Venezuela Reading has an open window this sorts there instead; scored on this page as H1's cure renamed (ruling owed)"
+   },
+   "scored": true,
+   "reduced": "a million barrels free · 65 billion · eventually",
+   "why": "first Press sighting of the deal as a cure; a White House fact sheet or a refinery receipt is the primary",
+   "dia": 12,
+   "z": 0.1
+  },
+  {
+   "id": "see-fox-1029-eventually",
+   "piece": "fox_2026-10-29_long_haul",
+   "program": "Fox News",
+   "date": "2026-10-29",
+   "t": [
+    "¶10"
+   ],
+   "object": "the administration's clock for its own cure: lower consumer costs 'expected eventually'",
+   "kind": "statement",
+   "holder": "the administration (as reported)",
+   "analog": {
+    "type": "statement",
+    "ref": "the holder's clocks on the Press — the slowest phrasing yet, two paragraphs from 'very, very rapidly'"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1c — statement"
+   },
+   "scored": true,
+   "reduced": "eventually",
+   "why": "four clocks on one page: really fast · eventually · next year · two years — only the holder's lands before 11-03",
+   "dia": 28,
+   "z": 0.1
+  },
+  {
+   "id": "see-fox-1029-long-haul",
+   "piece": "fox_2026-10-29_long_haul",
+   "program": "Fox News",
+   "date": "2026-10-29",
+   "t": [
+    "¶3",
+    "¶13",
+    "¶21"
+   ],
+   "object": "the voters' clocks at the Texas rallies: 'I'm in for the long haul'; 'hoping next year is better'; 'his remaining two years'",
+   "kind": "statement",
+   "holder": "— (rallygoers, as reported)",
+   "analog": {
+    "type": "statement",
+    "ref": "the gas↔votes predicate — 'give him time' (fox 10-27 ¶7), 'temporarily', 'worth paying'; thirteenth sighting"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1c — frame predicate (the predicate answered by patience, Texas edition)"
+   },
+   "scored": true,
+   "reduced": "the long haul · next year · two years",
+   "why": "the voters grant the number and extend the clock, then move the threat to the republic",
+   "dia": 44,
+   "z": 0.1
+  },
+  {
+   "id": "see-fox-1029-ballot-frame",
+   "piece": "fox_2026-10-29_long_haul",
+   "program": "Fox News",
+   "date": "2026-10-29",
+   "t": [
+    "¶15",
+    "¶16"
+   ],
+   "object": "Trump's ballot frame at Lubbock: the 'radical left Democrat communist' agenda — taxes, Texas oil and gas jobs, the border; 'the choice in this election is very simple'",
+   "kind": "statement",
+   "holder": "Donald Trump",
+   "analog": {
+    "type": "statement",
+    "ref": "the rally frame (Perry 10-24; Port Huron 10-26)"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "tx-sen — context (with fox 10-28 'Dueling rallies', not cut)"
+   },
+   "scored": false,
+   "reduced": "very simple",
+   "why": "the holder off the object — not scored under @O; sorted to the slate"
+  },
+  {
+   "id": "see-aj-1029-diesel-budget",
+   "piece": "aj_2026-10-29_what_to_plant",
+   "program": "Al Jazeera English",
+   "date": "2026-10-29",
+   "t": [
+    "¶14",
+    "¶15"
+   ],
+   "object": "University of Arkansas extension budget (Loy): urea peaked ≈39% over budget; diesel ran ≈72% above budget across the seasons; ≈$343m added cost for Arkansas alone",
+   "kind": "price",
+   "holder": "— (University of Arkansas extension)",
+   "analog": {
+    "type": "price",
+    "ref": "diesel 'nearly doubled' (aj 10-27 ¶17); 'up fifty percent' (fp 10-13); the $6 pump (fox 10-24) — all markets or pumps; this is a buyer's budget"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "price row — verified: false (the extension budget is the primary); PG01 H1c — the first diesel figure from a buyer on the Press"
+   },
+   "scored": true,
+   "reduced": "diesel 72% over · urea 39% · $343m",
+   "why": "the fuel the deal is for, as a line in a budget; the page's lowest line",
+   "dia": 6,
+   "z": -0.6
+  },
+  {
+   "id": "see-aj-1029-strait-planting",
+   "piece": "aj_2026-10-29_what_to_plant",
+   "program": "Al Jazeera English",
+   "date": "2026-10-29",
+   "t": [
+    "¶13",
+    "¶4"
+   ],
+   "object": "after the Iran war hit and the Strait of Hormuz was blocked, fertiliser costs jumped during spring planting; fuel and fertiliser rose sharply after the war began",
+   "kind": "realization",
+   "holder": "—",
+   "analog": {
+    "type": "realization",
+    "ref": "H6 — the Strait as the cause of the price (fox 10-27 ¶10 for the Georgia pump; aj 10-25 ¶19)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 — later sighting; the farm's cause dated to the water, spring planting"
+   },
+   "scored": true,
+   "reduced": "the Strait blocked · spring planting",
+   "why": "the water, not the seller, is the farm's tap; the deal is not on the page",
+   "dia": 10,
+   "z": -0.5
+  },
+  {
+   "id": "see-aj-1029-fuel-relief-8bn",
+   "piece": "aj_2026-10-29_what_to_plant",
+   "program": "Al Jazeera English",
+   "date": "2026-10-29",
+   "t": [
+    "¶16"
+   ],
+   "object": "the $8bn fuel relief program for farmers, announced by Trump 'last week' (≈the week of 10-20), after $12bn in 2025 tariff-related aid; split across 50 states it would cover under half of the Arkansas estimate (the article's arithmetic)",
+   "kind": "agreement",
+   "holder": "the US (Trump; USDA?)",
+   "analog": {
+    "type": "agreement",
+    "ref": "the 2025 tariff aid ($12bn, on the page); the 2018–19 trade-war payments"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": null,
+    "candidate": true,
+    "priority": "medium",
+    "event": "cand-fuel-relief-8bn",
+    "note": "the holder's relief as cash where the deal promised a price; new terms key farm-relief (proposed, prune)"
+   },
+   "scored": true,
+   "reduced": "$8bn · under half",
+   "why": "first Press sighting; a USDA/White House announcement is the primary",
+   "dia": 14,
+   "z": -0.2
+  },
+  {
+   "id": "see-aj-1029-bankruptcies",
+   "piece": "aj_2026-10-29_what_to_plant",
+   "program": "Al Jazeera English",
+   "date": "2026-10-29",
+   "t": [
+    "¶18",
+    "¶12"
+   ],
+   "object": "farm bankruptcies Q1–Q3 2026 +19% on 2025 and +73% on 2024 (U of Arkansas National Agricultural Law Center); Arkansas rice acreage the lowest since the 1970s",
+   "kind": "realization",
+   "holder": "—",
+   "analog": {
+    "type": "realization",
+    "ref": "no Press sighting on file"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "detection rows — verified: false"
+   },
+   "scored": true,
+   "reduced": "+19% · +73% · the 1970s",
+   "why": "the crunch as a count, from the buyer's state",
+   "dia": 8,
+   "z": -0.4
+  },
+  {
+   "id": "see-aj-1029-farm-polls",
+   "piece": "aj_2026-10-29_what_to_plant",
+   "program": "Al Jazeera English",
+   "date": "2026-10-29",
+   "t": [
+    "¶5",
+    "¶32",
+    "¶33"
+   ],
+   "object": "Farm Journal (April): 35% of farmers who usually vote Republican and 15% who always do undecided; Purdue (September): a majority of surveyed farmers say the country is on the wrong track, the first time this term; Democrats expected to gain as voters respond to high prices",
+   "kind": "statement",
+   "holder": "— (polls, as cited)",
+   "analog": {
+    "type": "statement",
+    "ref": "the gas↔votes predicate — Fox October survey (fox 10-27 ¶17–¶18, by number from the seller's side); twelfth sighting"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1c — frame predicate measured from the buyer's side; slate — context"
+   },
+   "scored": true,
+   "reduced": "35% undecided · the wrong track",
+   "why": "the predicate polled from the field; doubted and then affirmed by the page's own expert",
+   "dia": 10,
+   "z": -0.1
+  },
+  {
+   "id": "see-aj-1029-ar-sen",
+   "piece": "aj_2026-10-29_what_to_plant",
+   "program": "Al Jazeera English",
+   "date": "2026-10-29",
+   "t": [
+    "¶6",
+    "¶8",
+    "¶34",
+    "¶39"
+   ],
+   "object": "AR-Sen: Hallie Shoffner (D, a sixth-generation farmer who closed 2,000 acres in 2025) v. Tom Cotton (R), a race centred on costs; Cotton far outspending, funded by groups including AIPAC and leaders at Anthropic and Palantir; Texas and Kansas 'could elect Democratic senators for the first time in decades'; WI-3 and NC-1; the DCCC behind Chris Jones in AR-2",
+   "kind": "activity",
+   "holder": "—",
+   "analog": {
+    "type": "activity",
+    "ref": "the slate's red-state races (tx-sen; fox 10-27 Power Rankings)"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "context — no AR-Sen key in terms.json"
+   },
+   "scored": true,
+   "reduced": "Shoffner v. Cotton · centred on costs",
+   "why": "the slate's Arkansas race with the price as its object; Shoffner stationed, not @O",
+   "dia": 20,
+   "z": -0.1
+  },
+  {
+   "id": "see-aj-1029-end-the-war",
+   "piece": "aj_2026-10-29_what_to_plant",
+   "program": "Al Jazeera English",
+   "date": "2026-10-29",
+   "t": [
+    "¶27"
+   ],
+   "object": "Shoffner's cure, if elected: end the Iran war; predictable trade policy; local processing; a strong Farm Bill",
+   "kind": "statement",
+   "holder": "Hallie Shoffner (candidate)",
+   "analog": {
+    "type": "statement",
+    "ref": "the holder's cures (the deal; Venezuela; $8bn) — the challenger names the cause instead"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1c — statement (the challenger's cure)"
+   },
+   "scored": true,
+   "reduced": "end the war",
+   "why": "the price read as the war's, not the market's",
+   "dia": 34,
+   "z": -0.3
+  },
+  {
+   "id": "see-aj-1029-tariffs-inputs",
+   "piece": "aj_2026-10-29_what_to_plant",
+   "program": "Al Jazeera English",
+   "date": "2026-10-29",
+   "t": [
+    "¶10",
+    "¶23"
+   ],
+   "object": "the 2025 tariffs and the 2018 trade war with China as input-cost drivers (Loy); trade-war and tariff uncertainty on Shoffner's 2,000 acres",
+   "kind": "tariff/sanction",
+   "holder": "the US",
+   "analog": {
+    "type": "tariff/sanction",
+    "ref": "the tariffs terms key; the US–Canada deal sighting (fp 10-27)"
+   },
+   "match": {
+    "dataset": "readings",
+    "ref": "tariffs — the Reading's window not known to this task; context, verified: false"
+   },
+   "scored": true,
+   "reduced": "the 2025 tariffs · uncertainty",
+   "why": "marked, not scored as a second object",
+   "dia": 22,
+   "z": -0.2
+  },
+  {
+   "id": "see-fp-1029-strike-inevitable",
+   "piece": "fp_2026-10-29_strike_inevitable_lede",
+   "program": "The Free Press",
+   "date": "2026-10-29",
+   "t": [
+    "hed",
+    "dek"
+   ],
+   "object": "'why another Iran strike looks inevitable'; 'can Trump force Tehran into a deal?' — a School of War episode (MacLean, Doran), the episode unheard",
+   "kind": "statement",
+   "holder": "— (The Free Press / Aaron MacLean)",
+   "analog": {
+    "type": "statement",
+    "ref": "cand-post-election-strikes — twelfth-plus sighting (aj 10-27 ×2, three clocks; Barrack 10-23)"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": null,
+    "candidate": true,
+    "related": "cand-post-election-strikes",
+    "note": "thirteenth-plus sighting; the first from the RP corner by title; no date, no order — a primary still owed"
+   },
+   "scored": true,
+   "reduced": "inevitable · a deal?",
+   "why": "a beta lede — the door with no room; depth 0.2, Lumens 0",
+   "dia": 40,
+   "z": -0.6,
+   "partial": "beta lede"
+  },
+  {
+   "id": "see-fp-1029-war-votes",
+   "piece": "fp_2026-10-29_strike_inevitable_lede",
+   "program": "The Free Press",
+   "date": "2026-10-29",
+   "t": [
+    "¶1a"
+   ],
+   "object": "'will Iran cost Republicans the midterms?'",
+   "kind": "statement",
+   "holder": "Aaron MacLean",
+   "analog": {
+    "type": "statement",
+    "ref": "the gas↔votes predicate with the price removed (fox 10-27 ¶17–¶18; fox 10-29; aj 10-29)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statement — the war↔votes predicate from the RP corner; slate — context"
+   },
+   "scored": true,
+   "reduced": "cost Republicans the midterms?",
+   "why": "the price does not exist on the page",
+   "dia": 36,
+   "z": -0.2,
+   "partial": "beta lede"
+  },
+  {
+   "id": "see-fp-1028-netanyahu-regime",
+   "piece": "fp_2026-10-28_go_from_here_lede",
+   "program": "The Free Press",
+   "date": "2026-10-28",
+   "t": [
+    "dek",
+    "¶3 (read to the wall)"
+   ],
+   "object": "Gur: Netanyahu's bloc 53 / Eisenkot 48 / the Arab parties 19 of 120; no path to 61; 'may have done just well enough for his highest priority: bringing down the Iranian regime' (dek)",
+   "kind": "statement",
+   "holder": "— (Haviv Rettig Gur)",
+   "analog": {
+    "type": "statement",
+    "ref": "cand-post-election-strikes — the Israeli vote as the method's clock (aj 10-27 'eyes to the sky'); the aj 10-22 regime-change cut"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": null,
+    "candidate": true,
+    "related": "cand-post-election-strikes",
+    "note": "the RP corner reads the Israeli result as the strike's enabler; filed, not scored (not cut — one FP cut per day; the Doran page chosen) · 10-30: scored as a beta lede (fp_2026-10-28_go_from_here_lede) — dek b, z −0.5, Dia 40; fourteenth-plus sighting of the candidate"
+   },
+   "scored": true,
+   "reduced": "53 · 48 · 19 · the Iranian regime",
+   "why": "six visible paragraphs of coalition arithmetic; Iran in the dek only",
+   "partial": "headline + dek + opening"
+  },
+  {
+   "id": "see-nyt-1029-vance-letter",
+   "piece": null,
+   "program": "The New York Times",
+   "date": "2026-10-29",
+   "t": [
+    "hed",
+    "dek (site-blocked)"
+   ],
+   "object": "Vance's letter to an Iranian official proposing an immediate resumption of comprehensive talks, including on Iran's nuclear program",
+   "kind": "statement",
+   "holder": "JD Vance (the holder's office)",
+   "analog": {
+    "type": "statement",
+    "ref": "the Qatar delegation in Tehran (aj 10-27 Moscow page ¶5–¶6); 'Flurry of Diplomacy' (NYT 10-27, β); the Mecca pact"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 — later sighting (the deal's side of the force, from the holder's office); register-intake — a primary (the letter) owed"
+   },
+   "scored": false,
+   "reduced": "restart the talks",
+   "why": "β — hed + dek only (NYT site-blocked); the fourth mediation sighting in three days",
+   "partial": "headline + dek"
+  },
+  {
+   "id": "see-nyt-1028-rdif-acknowledged",
+   "piece": null,
+   "program": "The New York Times",
+   "date": "2026-10-28",
+   "t": [
+    "hed",
+    "dek (site-blocked)"
+   ],
+   "object": "Trump officials discussing sanctions relief for a Russian state investment fund (RDIF), a Russian official acknowledges, as part of the Ukraine talks",
+   "kind": "tariff/sanction",
+   "holder": "the US · Russia",
+   "analog": {
+    "type": "tariff/sanction",
+    "ref": "the RDIF easing (NYT 10-27, β, one sighting); the four earlier Russia-sanctions easings on the Press"
+   },
+   "match": {
+    "dataset": "readings",
+    "ref": "russia-sanctions — second sighting, now acknowledged by Moscow; β, filed not scored; a Treasury action is the primary"
+   },
+   "scored": false,
+   "reduced": "RDIF relief · acknowledged",
+   "why": "β — hed + dek only; the deal's seller's fund, a second day",
+   "partial": "headline + dek"
+  },
+  {
+   "id": "see-pbs-1029-inflation-gas",
+   "piece": null,
+   "program": "PBS NewsHour / AP",
+   "date": "2026-10-29",
+   "t": [
+    "¶1–¶12"
+   ],
+   "object": "inflation heats up again days before the midterms — rising gas prices drove much of the increase; renewed violence in the Middle East has kept oil above $100 a barrel, up from below $70 before the Iran war; prices also rose outside fuel",
+   "kind": "price",
+   "holder": "— (the October PCE / CPI release, as reported)",
+   "analog": {
+    "type": "price",
+    "ref": "Brent above $100 (aj 10-25 ¶28; $117 aj 10-27); NYT 10-29 'Inflation Accelerated in October, PCE Index Shows' (β, site-blocked)"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "price row — verified: false (BEA PCE, AAA are the primaries); PG01 H1c — the same release as fox_2026-10-29_little_surprise, with the cause named"
+   },
+   "scored": false,
+   "reduced": "PCE +3.6% y/y Sept (3.4% Aug), +0.5% m/m (highest since May) · gas drove much of the rise · oil above $100 v. below $70 before the Iran war · gasoline ≈$4.25 nationwide v. the 2024 pledge of under $2 · core 3.1% · real after-tax incomes −0.3% in Sept · Fed held 10-28, a December hike likelier",
+   "why": "read in full 10-30 (the cloud fetch reached pbs.org today). AP wire (Christopher Rugaber) republished by PBS NewsHour — the record's register by the roster's note on AP via NPR/PBS, so filed to the tracker, not scored as an LI reading; the wire names the cause (gas, the war) that the Fox Business read of the same release (fox_2026-10-29_little_surprise) does not. Ruling owed: whether PBS running it is a reading",
+   "partial": null
+  },
+  {
+   "id": "see-fox-1029-pce-september",
+   "piece": "fox_2026-10-29_little_surprise",
+   "program": "Fox Business",
+   "date": "2026-10-29",
+   "t": [
+    "¶2–¶3",
+    "¶5–¶6"
+   ],
+   "object": "September PCE: +0.5% m/m, +3.6% y/y (3.4% in August); core +0.3% / 3.1% (3.0%); goods +3.9%, services +3.5% — Commerce Department / BEA, Thursday 10-29; in line with LSEG's economists",
+   "kind": "price",
+   "holder": "— (the BEA release, as reported)",
+   "analog": {
+    "type": "price",
+    "ref": "CPI September (fox teaser; nyt 10-29 'Inflation Accelerated', β); the AP wire on PBS 10-29 (see-pbs-1029-inflation-gas) — same release, cause named"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "price row — verified: false (the BEA release is the primary); PG01 H1c — the price leg at the index"
+   },
+   "scored": true,
+   "reduced": "+0.5% · 3.6% · 3.1% · in line",
+   "why": "the page's record; the deal's price measured without the deal on the page"
+  },
+  {
+   "id": "see-fox-1029-savings-rate",
+   "piece": "fox_2026-10-29_little_surprise",
+   "program": "Fox Business",
+   "date": "2026-10-29",
+   "t": [
+    "¶7"
+   ],
+   "object": "personal savings rate 3.8% of disposable income in September, from 4.0% in August; 6.2% at the April 2025 peak, 5.6% in January 2026",
+   "kind": "realization",
+   "holder": "— (BEA, as reported)",
+   "analog": {
+    "type": "realization",
+    "ref": "the AP wire's 'tapping savings or credit' and real after-tax incomes −0.3% (PBS 10-29, filed)"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "detection row — verified: false; PG01 H1c — who pays the price"
+   },
+   "scored": true,
+   "reduced": "3.8% from 4%",
+   "why": "the page's one line on who pays"
+  },
+  {
+   "id": "see-fox-1029-q3-gdp",
+   "piece": "fox_2026-10-29_little_surprise",
+   "program": "Fox Business",
+   "date": "2026-10-29",
+   "t": [
+    "¶9"
+   ],
+   "object": "Q3 2026 GDP +3.4% annualized, advance estimate (3.2% expected; two revisions to come) — BEA, 10-29",
+   "kind": "realization",
+   "holder": "— (BEA, as reported)",
+   "analog": {
+    "type": "realization",
+    "ref": "npr 10-29 'data shows the U.S. economy is doing well' (robots-blocked; hed/dek: 3.4%, affordability)"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "context row — verified: false; off the object"
+   },
+   "scored": true,
+   "reduced": "3.4% v. 3.2%",
+   "why": "growth beside the price; reads neither way"
+  },
+  {
+   "id": "see-fox-1029-oil-spike-clause",
+   "piece": "fox_2026-10-29_little_surprise",
+   "program": "Fox Business",
+   "date": "2026-10-29",
+   "t": [
+    "¶13"
+   ],
+   "object": "McCann (Edward Jones): 'as oil prices spike and financial conditions tighten' — headwinds to cool activity toward year end; the Fed's no-hike decision questioned",
+   "kind": "statement",
+   "holder": "James McCann (Edward Jones), as quoted",
+   "analog": {
+    "type": "statement",
+    "ref": "the AP wire's 'oil above $100 … the Iran war' (PBS 10-29) — the same cause with a figure and a name"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1c — statement; the corner's one sentence on the war's price, no figure"
+   },
+   "scored": true,
+   "reduced": "oil prices spike",
+   "why": "the only cause on the page"
+  },
+  {
+   "id": "see-fox-1029-december-fomc",
+   "piece": "fox_2026-10-29_little_surprise",
+   "program": "Fox Business",
+   "date": "2026-10-29",
+   "t": [
+    "¶14–¶16"
+   ],
+   "object": "the December FOMC as the page's clock: CME FedWatch 79.6% for a 25-bp hike (84.2% a day earlier, 73.3% a week earlier), to 4.00–4.25%; Warsh 'reluctant to provide strong signals' at the 10-28 meeting (McCann); possibly one more hike in 2027",
+   "kind": "activity",
+   "holder": "the Federal Reserve (the 10-28 FOMC, as reported)",
+   "analog": {
+    "type": "activity",
+    "ref": "fox 10-28 'Federal Reserve makes interest rate decision ahead of midterms'; nyt 10-28 'Fed Will Hold Fewer Rate-Setting Meetings' (not cut)"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": null,
+    "candidate": true,
+    "priority": "low",
+    "event": "cand-december-fomc-hike",
+    "note": "a dated event on the price's axis; new terms key fed (proposed, prune). Also a tracker detection row (FedWatch, verified: false)"
+   },
+   "scored": true,
+   "reduced": "79.6% · December · 4.00–4.25%",
+   "why": "the clock this page substitutes for the holder's"
+  },
+  {
+   "id": "see-fox-1029-market-open",
+   "piece": "fox_2026-10-29_little_surprise",
+   "program": "Fox Business",
+   "date": "2026-10-29",
+   "t": [
+    "¶17–¶18"
+   ],
+   "object": "Thursday's open: S&P 500 −0.4%, Dow −0.3%, Nasdaq −1.4%",
+   "kind": "activity",
+   "holder": "—",
+   "analog": null,
+   "match": {
+    "dataset": null,
+    "ref": "sighting, permanence: low"
+   },
+   "scored": false,
+   "reduced": "−0.4 · −0.3 · −1.4",
+   "why": "off the object; not scored"
+  },
+  {
+   "id": "see-fp-1028-israel-result",
+   "piece": "fp_2026-10-28_go_from_here_lede",
+   "program": "The Free Press",
+   "date": "2026-10-28",
+   "t": [
+    "¶2"
+   ],
+   "object": "Israel's election result, Tuesday 10-27: Netanyahu's coalition 53 of 120 Knesset seats, Eisenkot's bloc 48, the two Arab parties 19; none at 61; exit polls Tuesday night had the opposition ahead (Gur)",
+   "kind": "vote",
+   "holder": "— (the Israeli electorate; the Central Elections Committee is the primary)",
+   "analog": {
+    "type": "vote",
+    "ref": "see-aj-1022-israel-election (cand-israel-election — the vote before the result); fox 10-29 'Netanyahu falls short of majority', nyt 10-28 'Didn't Win … Far From Out', npr 10-28 'political gridlock' (not cut)"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "cand-israel-election",
+    "candidate": true,
+    "note": "the 10-22 candidate's event has happened; the record's register (AP/Reuters) is the primary — verified: false; ruling owed whether it closes as a register object or sorts to slate01 as the force's context"
+   },
+   "scored": true,
+   "reduced": "53 · 48 · 19 · none at 61",
+   "why": "the vote's record on the force's page — the page's lowest line"
+  },
+  {
+   "id": "see-fp-1028-coalition-math",
+   "piece": "fp_2026-10-28_go_from_here_lede",
+   "program": "The Free Press",
+   "date": "2026-10-28",
+   "t": [
+    "¶3–¶4"
+   ],
+   "object": "the coalition mechanics as Gur reads them: no minority government without the Arab parties' abstention, which they won't give; defectors from Eisenkot's bloc the only route to 61",
+   "kind": "statement",
+   "holder": "Haviv Rettig Gur",
+   "analog": {
+    "type": "statement",
+    "ref": "see-aj-1027-israel-vote-force — the vote as able to complicate renewed joint attacks (aj 10-27)"
+   },
+   "match": {
+    "dataset": "slate01",
+    "ref": "context — the force's second clock: a government not yet formed"
+   },
+   "scored": true,
+   "reduced": "no path without defectors",
+   "why": "the condition under the dek's 'well enough', unstated as such"
+  },
+  {
+   "id": "see-npr-1029-economy-doing-well",
+   "piece": null,
+   "program": "NPR",
+   "date": "2026-10-29",
+   "t": [
+    "hed",
+    "dek (robots-blocked)"
+   ],
+   "object": "'With days to go before the midterms, data shows the U.S. economy is doing well' — GDP 3.4% in Q3, the last major read before the vote; many Americans continue to struggle with affordability",
+   "kind": "realization",
+   "holder": "— (BEA, as reported)",
+   "analog": {
+    "type": "realization",
+    "ref": "see-fox-1029-q3-gdp (the same figure on the RI page)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1c — the LI corner's own read of the release (not the AP wire), blocked; slate — context"
+   },
+   "scored": false,
+   "reduced": "3.4% · affordability",
+   "why": "robots-blocked; filed from the feed's hed and dek",
+   "partial": "headline + dek"
   }
  ],
  "log": [
@@ -2543,6 +5954,46 @@
   {
    "date": "2026-10-16",
    "what": "Odd Lots week scanned: no cut; Hyperliquid perps filed as a tracker sighting",
+   "by": "Claude"
+  },
+  {
+   "date": "2026-10-22",
+   "what": "daily cut over the 10-21 sweep (today's sweep file missing; newest used): aj_2026-10-21_first_tanker (H1's first cargo, 40,000 t), fox_2026-10-20_hormuz_mines (H6's falsifier sighted by Iran's claim; the IMO's route), msnow_2026-10-21_only_voice_of_reason (the theater: Bahrain's base, the count). 17 sightings; 6 register candidates. The floor carried over (no Close on disk 10-20/10-21 — the @markets feed filed Surveillance, Pulse and Horizons under every RI program)",
+   "by": "Claude"
+  },
+  {
+   "date": "2026-10-23",
+   "what": "daily cut over the 10-22 sweep (today's sweep file missing at run time; newest used): fox_2026-10-21_heating_oil_loan (H1's price leg — 315,000 bbl ≈ one tanker's worth, loaned; +70% y/y), aj_2026-10-22_regime_change (the force — the primary objective priced; the post-election strike plan mirrored). 14 sightings; 5 register candidates (the NEHHOR loan, the Constitution Pipeline, the post-election strikes, Israel's election; the farm/reserve release series noted). The floor carried over; close_2026-10-16 ages out of the 7-day window today — no Close on disk since 10-16. Third cut not made: every remaining full-text source was blocked (NYT, NPR, The Atlantic) or already used today (Fox, AJ); LP/RP all transcript-owed",
+   "by": "Claude"
+  },
+  {
+   "date": "2026-10-24",
+   "what": "daily cut over the 10-23 sweep (today's sweep file missing at run time; newest used): aj_2026-10-23_eight_ministers (H6 — eight ministers meet on the Strait; 'reopen Hormuz'; a US envoy dates the strike to 'this weekend', aim 'not regime change'), fox_2026-10-23_sanctions_waived (H1's sanctions leg — the Graham Act waiver read by the law's authors; the diesel 'fairly marginal'). 16 sightings; 3 new register candidates (the Istanbul format, the Mecca pact, the Graham Act waiver) and 1 update (post-election strikes: the date moved). Two wire records (AP via PBS — a newly reachable route; the record's register, not a reading): 7 tankers 10-22; the first cargo to New York due 11-07. The floor: none in force — close_2026-10-16 aged out 10-23; the-close 0 items for the fourth sweep. Third cut not made: RP's only fetchable hit (FP, Ferguson) never reaches the object in its visible paragraphs; LP/RP tapes transcript-owed; NYT/Atlantic blocked, NPR robots-blocked",
+   "by": "Claude"
+  },
+  {
+   "date": "2026-10-26",
+   "what": "daily cut over the 10-25 sweep (today's sweep file missing at run time; newest on GitHub used; the 10-24 sweep was never cut — no task ran Saturday or Sunday): fox_2026-10-24_couple_of_hours (H1's cargo leg sized — the first tanker at sea, the pump above $6, 'a couple of hours' of demand = the AP's 7% of a day), aj_2026-10-25_europe_pays (H1c from Europe — diesel doubled, +€106bn, Brent >$100; the deal as a request of Europe's stocks; von der Leyen's migration). 20 sightings; 1 new register candidate (the European stock release); 2 updated (the post-election strikes — tenth-plus sighting, the weekend passed without one; the Graham Act waiver — fourth). Four not-cut pages filed from fetched text or deks (CENTCOM plans; the IRGC doctrine; 120+ October attacks; the UAE oil slick; the embassy drawdown). The floor: none in force — the-close 0 items for the sixth sweep. Third cut not made: no LP/RP source published a hit on a live object; NPR robots-blocked, NYT site-blocked, MS NOW ×7 transcripts owed",
+   "by": "Claude"
+  },
+  {
+   "date": "2026-10-27",
+   "what": "daily cut over the 10-27 sweep (from GitHub raw, on time; no local copy; the 10-26 sweep was never cut — the 10-26 run used 10-25 — and is written to disk uncut, 117 rows): aj_2026-10-27_who_breaks_first (H6 from Tehran's side — the Strait as Iran's leverage and 'control', reopening behind Rezaei's four terms, October's attacks a record, Brent $117 on Iranian tanker attacks; Rezaei @O as the principal, declared z −0.8), fox_2026-10-27_give_him_time (H1c at the pump — Georgia gasoline $3.66 vs $2.72, the Strait as the cause; 'come down soon' @O +0.9 against a read of −0.03; the BLS check). 19 sightings; 3 new register candidates (Iran's reopening terms; the Moscow energy forum; Operation Economic Outcast); 2 updated (the post-election strikes — eleventh-plus, two clocks; the Mecca pact — third, in Tehran). Four not-cut pages filed (Port Huron; Bessent; the Moscow page; the Surveillance chapter). The floor: none in force — the-close 0 items for the eighth sweep. Third cut not made: LP/RP published no fetchable text on a live object; every RP/LP hit is a transcript owed or a Free Press page on the Israeli vote or the midterms",
+   "by": "Claude"
+  },
+  {
+   "date": "2026-10-28",
+   "what": "daily cut over the 10-27 sweep's remaining rows — no 10-28 sweep on GitHub or on disk at 07:01 PT (GitHub's sweeps/index.json ends at 10-27; the Action's 05:45 PT commit had not landed), so the newest sweep was used per the protocol: aj_2026-10-27_eyes_to_the_sky (H6 from the force's side, read from Tehran's street — the blockade since July as the lock, the post-election strikes as the clock, the holder's 'control' as the instrument that keeps the water shut; Trump @O declared −0.7 on this axis; read −0.36; Dia 26; Lumens 38), fox_2026-10-27_two_electorates (H1c as the RI corner's own poll — gas 83%, D+12, approval 44 → 36; no price, no holder; read −0.11; Dia 18; Lumens 47). 16 sightings; 0 new register candidates; 2 updated (the post-election strikes — twelfth-plus, three clocks on one page; the Moscow energy forum — second sighting, now read: the GECF summit). Three not-cut pages filed (the AJ Moscow page in full; the Free Press Front Page to the paywall; the slate from the Power Rankings). The floor: none in force — the-close 0 items in the 10-27 sweep (eighth running); no new sweep. Third cut not made: LP/RP published no fetchable text on a live object (BP ×6 and TCN owed; the Free Press's Front Page has no Iran and no price; Shapiro 0 hits). New terms key gecf (proposed, prune). Rulings owed at the foot of each cut.md",
+   "by": "Claude"
+  },
+  {
+   "date": "2026-10-29",
+   "what": "daily cut over the 10-29 sweep (GitHub raw; no local copy; no transcripts on disk — the Mac's 06:30 pull has failed five mornings with 'Operation not permitted' per _session_tmp/transcripts.log): fox_2026-10-29_long_haul (H1c at the Texas pump — $4.25 v. $3.05, +40 percent; the holder's clock 'really fast' / 'very, very rapidly', declared +0.9; the cure renamed Venezuela, with 'eventually' as the administration's own clock; read −0.04; Dia 33; Lumens 25), aj_2026-10-29_what_to_plant (H1c as a farm input — diesel 72 percent over an Arkansas extension budget, the first diesel figure from a buyer; the Strait as the spring cause; the $8bn fuel relief as the holder's cash answer, under half; read −0.24; Dia 22; Lumens 52 — a page the sweep matched on 'midterm' only), fp_2026-10-29_strike_inevitable_lede (β — a podcast page's hed, dek and one teaser paragraph; Lumens 0, depth 0.2; runs as data). 20 sightings; 2 new register candidates (cand-venezuela-energy-deal, cand-fuel-relief-8bn); 1 updated (cand-post-election-strikes — thirteenth-plus, the first from the RP corner by title; the Gur essay filed). Four not-cut pages filed (FP Gur 10-28; NYT Vance letter 10-29 β; NYT RDIF 10-28 β; PBS inflation 10-29 blocked). The floor: none in force — the-close 0 items in the 10-28 and 10-29 sweeps (ninth and tenth running). New terms key farm-relief (proposed, prune). The Mac link dropped mid-run after the cuts and the index were written; these registrations landed on the retry. Rulings owed at the foot of each cut.md",
+   "by": "Claude"
+  },
+  {
+   "date": "2026-10-30",
+   "what": "daily cut over the 10-29 sweep's uncut rows (no 10-30 sweep on GitHub at 06:56 PT — the daily slop's commits have landed at ≈11:45 PT five days running, after this task fires; no transcripts on disk — the Mac's 06:30 pull still refused, sixth morning). Two cuts, no floor: fox_2026-10-29_little_surprise (H1c at the index — September PCE 3.6%, core 3.1%, savings 3.8%; the only cause a guest's 'oil prices spike'; the Fed's December clock in place of the holder's; read −0.21; Dia 22; Lumens 60; mode method-occluded, the first on the Press), fp_2026-10-28_go_from_here_lede (β — Gur's post-election essay to the wall; the result 53/48/19 read as 'well enough' for the regime's fall; the object once, in the dek; Dia 29, Lumens 43, depth 0.25; runs as data). 9 sightings added (→ 243); 2 filed sightings updated (see-fp-1028-netanyahu-regime now scored; see-pbs-1029-inflation-gas read in full — AP wire on PBS, filed to the tracker as the record's register, not scored, ruling owed); 1 new register candidate (cand-december-fomc-hike, low); cand-israel-election's event has happened (ruling owed). New terms key fed (proposed, prune). The floor: none in force — the-close 0 items (eleventh sweep running by the 10-29 file). Rulings owed at the foot of each cut.md",
    "by": "Claude"
   }
  ]

@@ -1,0 +1,493 @@
+{
+  "centralObject": {
+    "kind": "object",
+    "ref": "Order of U.S. District Judge Araceli Martínez-Olguín, N.D. Cal. (Oakland), in the suit of the California Nurses Association, National Nurses United, the Voto Latino Foundation, San Francisco and Santa Clara County against DHS, issued late 2026-10-21",
+    "name": "The Oakland order of 2026-10-21: DHS barred, in nine states until polls close, from election-related field operations and interviews likely to involve U.S. citizens under its Unlawful Voter Initiative, paused two days for appeal",
+    "place": {
+      "quadrants": [
+        "B",
+        "D"
+      ],
+      "band": "coalition",
+      "z": 0.25,
+      "why": "The order targets the exact mechanism, armed home interviews of likely citizens, and runs to poll close; but it covers nine states, is paused two days for appeal, and turns on how DHS reads 'likely to involve U.S. citizens', so it probably lands, narrowly."
+    }
+  },
+  "tethers": [
+    {
+      "statute": "Voting Rights Act of 1965, §11(b)",
+      "cite": "52 U.S.C. § 10307(b)",
+      "title": "Intimidation, threats or coercion of any person for voting, or for urging or aiding any person to vote",
+      "enacted": "1965-08-06",
+      "relation": "invokes",
+      "why": "The judge found the plaintiffs likely to succeed on the Voting Rights Act's bar on intimidating voter assistance and mobilization (CBS, Fox, 10-21/22). The coverage does not print the section number; §11(b) is the provision with that text — Claude's identification.",
+      "place": {
+        "quadrants": [
+          "B",
+          "D"
+        ],
+        "band": "coalition",
+        "z": 0.3,
+        "why": "The 1965 bar on intimidating people who help others vote, reached here against a federal agency's door-to-door interviews; it lands as far as the order does. Claude's place, not the blind author's."
+      }
+    },
+    {
+      "billId": "hr-119-22",
+      "bill": "H.R. 22",
+      "title": "SAVE Act (Safeguard American Voter Eligibility Act)",
+      "relation": "adjacent",
+      "statusAsOf": "Passed House 2025-04-10; received in the Senate, no further action (catalog)",
+      "why": "The proof-of-citizenship registration bill is the legislative answer to the same worry the Unlawful Voter Initiative pursues administratively; stalled, it leaves the check to DHS field work and voter-roll matching, which is what the order restrains.",
+      "inDb": true,
+      "place": {
+        "quadrants": [
+          "A",
+          "C"
+        ],
+        "band": "denominated",
+        "z": -0.3,
+        "why": "Stalled in the Senate for eighteen months, it presses on the left's registration access and does not deliver; the probe exists partly in its absence. Claude's place."
+      }
+    }
+  ],
+  "linkedBills": [
+    "hr-119-22"
+  ],
+  "title": "The Knock",
+  "category": "Elections · Courts · Immigration",
+  "date": "2026-10-21",
+  "prompt": "Agents at the door, a judge at the gate. Does the order stop the knock without stopping the probe?",
+  "framing": "Late on Wednesday, October 21, 2026, U.S. District Judge Araceli Martínez-Olguín in Oakland ordered the Department of Homeland Security to stop election-related field operations and interviews likely to involve U.S. citizens under its “Unlawful Voter Initiative” in nine states, among them California, Georgia, New York and Pennsylvania, until polls close on Election Day. She found the nurses' unions, Voto Latino and two California local governments that sued likely to win their Voting Rights Act claim that armed agents interviewing people at home intimidates those who help others vote, and called the target list, built from voter rolls and commercial data, prone to “a high likelihood of error.” She did not hold that investigating noncitizen voting is unlawful, and paused the order two days for an appeal.",
+  "framingKeywords": [
+    "door knocks",
+    "noncitizen voting",
+    "Voting Rights Act",
+    "the target list",
+    "intimidation"
+  ],
+  "prevalentAxis": "x",
+  "split": {
+    "topology": "axis",
+    "strength": 0.55,
+    "seam": "Whether the order shields voters from intimidation or shields noncitizen voting from scrutiny; delivery belief runs along x, with C sitting off the axis on compliance doubt.",
+    "rationale": "Delivery belief splits mainly left/right (A positive, B and D negative). The left breaks from a clean axis because C doubts DHS compliance rather than the merits, so the seam leans along x and C sits off it.",
+    "zPattern": {
+      "centers": {
+        "A": 0.5,
+        "B": 0.1,
+        "C": -0.1,
+        "D": -0.5
+      },
+      "rims": {
+        "A": 0.7,
+        "B": -0.7,
+        "C": -0.6,
+        "D": -0.8
+      },
+      "note": "Centers are fluid z; coalition z: A 0.3, B -0.2, C -0.2, D -0.3. Object's own z 0.25."
+    },
+    "ruledBy": null,
+    "date": "2026-10-21"
+  },
+  "antiValentBand": "coalition",
+  "antiValentRationale": "At the coalition band each side concedes the other's best fact (the right admits the list catches citizens, the left admits the order is narrow and paused), so z draws toward ±0.3 and the stations share the same doubt about the appeal.",
+  "axes": {
+    "x": {
+      "pos": "Right",
+      "neg": "Left"
+    },
+    "y": {
+      "pos": "Institutional",
+      "neg": "Populist"
+    },
+    "z": {
+      "pos": "the order delivers: the door knocks on citizens stop before the election, and the probe has to find noncitizens without frightening voters",
+      "neg": "the order doesn't deliver: an appeal or a narrow reading keeps agents at the doors, or the order shields noncitizen voting from scrutiny"
+    }
+  },
+  "responses": {
+    "A": {
+      "fluid": {
+        "z": 0.5,
+        "zReason": "The order is aimed at the method, not the investigation: it stops citizen-likely door interviews until polls close and leaves DHS free to check noncitizen voting by other means, which is the line §11(b) draws.",
+        "instrument": {
+          "holder": "the federal court in Oakland",
+          "trusted": true
+        },
+        "text": "I think the order does the narrow thing it should. It stops armed agents interviewing likely citizens at their doors before the election, and it doesn't say DHS can't look for noncitizen voting. The two-day pause for appeal is the part I'm watching.",
+        "xWord": "voters",
+        "yWord": "court",
+        "words": [
+          "the narrow thing",
+          "armed agents",
+          "two-day pause"
+        ],
+        "source": ""
+      },
+      "coalition": {
+        "z": 0.3,
+        "zReason": "The ruling holds on the merits, but it rests on harm to voter assistance and not the right to vote, and the people the speaker votes with are already treating it as a total victory that an appeal could undo.",
+        "instrument": {
+          "holder": "the federal court in Oakland",
+          "trusted": true
+        },
+        "text": "I'm glad the judge called the target list error-prone, and I think the order should hold. But the people I vote with are calling it democracy saved, and it's a preliminary order in nine states, built on harm to the people who help others vote. If the appeals court narrows it, I'd rather nobody had promised that much.",
+        "xWord": "voters",
+        "yWord": "appeal",
+        "words": [
+          "error-prone",
+          "the people I vote with",
+          "democracy saved"
+        ],
+        "source": ""
+      },
+      "denominated": {
+        "z": 0.7,
+        "zReason": "To this speaker the court is the guardian against voter suppression, so its order delivers by definition.",
+        "instrument": {
+          "holder": "the courts",
+          "trusted": true
+        },
+        "text": "Voter suppression just got stopped at the door. The rule of law still works.",
+        "xWord": "suppression",
+        "yWord": "law",
+        "words": [
+          "voter suppression",
+          "rule of law"
+        ],
+        "source": ""
+      }
+    },
+    "B": {
+      "fluid": {
+        "z": 0.1,
+        "zReason": "The order is narrow on paper, but 'likely to involve U.S. citizens' is vague enough that it may freeze lawful verification of naturalized voters while the appeal plays out.",
+        "instrument": {
+          "holder": "the federal district court",
+          "trusted": true
+        },
+        "text": "I'll give the judge this: she didn't say checking for noncitizen voting is illegal. But how is an agent supposed to know who's likely a citizen before the interview that's meant to settle exactly that? I expect the appeals court to tighten that line.",
+        "xWord": "verification",
+        "yWord": "appeal",
+        "words": [
+          "noncitizen voting",
+          "likely a citizen",
+          "appeals court"
+        ],
+        "source": ""
+      },
+      "coalition": {
+        "z": -0.2,
+        "zReason": "Even if the order is defensible, the speaker expects it to stall verification in nine states through the election, while noticing that the people he votes with skip past the twelve-minute reviews and the bad data.",
+        "instrument": {
+          "holder": "the federal district court",
+          "trusted": false
+        },
+        "text": "Twelve-minute reviews off a list built from commercial data isn't how I'd run an investigation, and I'll say that. Still, the people I vote with are calling this one judge against election integrity, and the order does freeze the probe's main tool in nine states until Election Day.",
+        "xWord": "integrity",
+        "yWord": "investigation",
+        "words": [
+          "Twelve-minute reviews",
+          "the people I vote with",
+          "election integrity"
+        ],
+        "source": ""
+      },
+      "denominated": {
+        "z": -0.7,
+        "zReason": "To this speaker an activist bench is protecting fraud, so the order cannot deliver anything honest.",
+        "instrument": {
+          "holder": "an activist judge",
+          "trusted": false
+        },
+        "text": "Another activist judge shielding illegal voting right before an election.",
+        "xWord": "illegal",
+        "yWord": "activist",
+        "words": [
+          "activist judge",
+          "shielding illegal voting"
+        ],
+        "source": ""
+      }
+    },
+    "C": {
+      "fluid": {
+        "z": -0.1,
+        "zReason": "A paper order paused two days, limited to nine states and to interviews 'likely' involving citizens, depends on DHS policing itself, and the fear from the knocks has already spread.",
+        "instrument": {
+          "holder": "the court, enforced against DHS",
+          "trusted": true
+        },
+        "text": "I'm glad a judge said the knock itself is intimidation. But it's paused two days, it's nine states, and DHS gets to decide who's likely a citizen. The neighbors I drive to the polls already heard about agents at the door.",
+        "xWord": "neighbors",
+        "yWord": "knock",
+        "words": [
+          "the knock itself",
+          "two days",
+          "agents at the door"
+        ],
+        "source": ""
+      },
+      "coalition": {
+        "z": -0.2,
+        "zReason": "The win came through the unions' voter-assistance work, but the people the speaker organizes with treat the court as the finish line while compliance on the ground goes unchecked.",
+        "instrument": {
+          "holder": "the court",
+          "trusted": false
+        },
+        "text": "The people I organize with are celebrating a court order like the doors are safe now. I'm not sure they are. The order only exists because nurses kept helping people vote, and that work is what keeps them safe, not a ruling DHS can appeal.",
+        "xWord": "nurses",
+        "yWord": "doors",
+        "words": [
+          "The people I organize with",
+          "court order",
+          "doors are safe"
+        ],
+        "source": ""
+      },
+      "denominated": {
+        "z": -0.6,
+        "zReason": "This speaker sees the state as the hunter, and a court order does not stop the hunt.",
+        "instrument": {
+          "holder": "the state",
+          "trusted": false
+        },
+        "text": "It's an immigrant hunt with a voter-roll costume, and a judge gave them two days' head start.",
+        "xWord": "immigrant",
+        "yWord": "hunt",
+        "words": [
+          "immigrant hunt",
+          "two days' head start"
+        ],
+        "source": ""
+      }
+    },
+    "D": {
+      "fluid": {
+        "z": -0.5,
+        "zReason": "A ban on in-person interviews of 'likely' citizens strips out the one step DHS uses to resolve mismatches, so suspected noncitizen voters go unchecked until after the election.",
+        "instrument": {
+          "holder": "a federal judge in Oakland",
+          "trusted": false
+        },
+        "text": "If you can't knock on the door, how do you find out whether someone voted before they naturalized? I want every vote checked, and this order pulls the check right before the election. Nine states, and Georgia and Pennsylvania are on the list.",
+        "xWord": "checked",
+        "yWord": "door",
+        "words": [
+          "knock on the door",
+          "every vote checked",
+          "Nine states"
+        ],
+        "source": ""
+      },
+      "coalition": {
+        "z": -0.3,
+        "zReason": "The speaker still expects the order to blunt the probe, but concedes the target list hit citizens and notices the people he rallies with won't admit it.",
+        "instrument": {
+          "holder": "a federal judge in Oakland",
+          "trusted": false
+        },
+        "text": "I'll admit a list built off voter rolls and commercial data is going to catch citizens, and nobody I know wants armed agents at a citizen's house. But the people I rally with only hear that the judge stopped the probe, and I think the order slows it to a crawl anyway.",
+        "xWord": "citizens",
+        "yWord": "probe",
+        "words": [
+          "the people I rally with",
+          "armed agents",
+          "stopped the probe"
+        ],
+        "source": ""
+      },
+      "denominated": {
+        "z": -0.8,
+        "zReason": "To this speaker the system is rigged to protect illegal voting, and the order is proof.",
+        "instrument": {
+          "holder": "the rigged system",
+          "trusted": false
+        },
+        "text": "Rigged. They caught illegals on the rolls and a California judge locked the door.",
+        "xWord": "illegals",
+        "yWord": "rigged",
+        "words": [
+          "Rigged",
+          "locked the door"
+        ],
+        "source": ""
+      }
+    }
+  },
+  "diatribe": {
+    "LF": {
+      "text": "The order stops armed agents from interviewing likely citizens at their homes before the election, and it still lets DHS look for noncitizen voting. That's the line the Voting Rights Act draws.",
+      "side": "left",
+      "band": "fluid",
+      "keywords": [
+        "The order",
+        "armed agents",
+        "noncitizen voting",
+        "Voting Rights Act"
+      ]
+    },
+    "LC": {
+      "text": "The people I vote with are calling this democracy saved, but it's a paused preliminary order in nine states. I want it to hold, and I don't want to oversell it before the appeal.",
+      "side": "left",
+      "band": "coalition",
+      "keywords": [
+        "The people I vote with",
+        "democracy saved",
+        "the appeal"
+      ]
+    },
+    "LD": {
+      "text": "It's voter suppression with a badge, and a judge finally said so.",
+      "side": "left",
+      "band": "denominated",
+      "keywords": [
+        "voter suppression",
+        "with a badge"
+      ]
+    },
+    "RF": {
+      "text": "The order bans the interviews meant to resolve the mismatches, right before the election. I want every vote checked, and the appeal should restore that.",
+      "side": "right",
+      "band": "fluid",
+      "keywords": [
+        "The order",
+        "every vote checked",
+        "the appeal"
+      ]
+    },
+    "RC": {
+      "text": "The people I rally with won't admit the target list hits citizens, and I think it does. I still think this order slows the check on noncitizen voting to a crawl.",
+      "side": "right",
+      "band": "coalition",
+      "keywords": [
+        "The people I rally with",
+        "the target list",
+        "noncitizen voting"
+      ]
+    },
+    "RD": {
+      "text": "Rigged: an activist judge is shielding illegal voters days before the election.",
+      "side": "right",
+      "band": "denominated",
+      "keywords": [
+        "activist judge",
+        "Rigged",
+        "illegal voters"
+      ]
+    }
+  },
+  "diatribeLayer": "stated",
+  "objectLayer": {
+    "declared": "stated",
+    "stated": "Under the Voting Rights Act, DHS must stop election-related field operations and interviews likely to involve U.S. citizens in nine states until polls close.",
+    "operative": "A preliminary order paused two days for appeal, whose reach depends on how DHS reads 'likely to involve U.S. citizens' and on the appeals court, and whose standing rests on harm to voter assistance, not on the right to vote.",
+    "inversion": "By limiting the method rather than the investigation, the order leaves the noncitizen probe lawful, yet both rims read it as total: one side as the probe ended, the other as voters made safe."
+  },
+  "window": {
+    "close": "2026-10-21",
+    "why": "The object finished forming when Judge Martínez-Olguín issued the order late Wednesday 2026-10-21 (CBS, Axios, Fox, AP via KNOE — all date the ruling Wednesday). The register's formedOn (10-23) is the report date of the AP rewrite, and its holder ('the President') is the party the order binds through DHS, not the holder. Declared at authoring, before any z.",
+    "ruledBy": null,
+    "ruledOn": null
+  },
+  "meta": {
+    "dialecticsRef": "obj_thepresi_administration-federal-halt-investigation",
+    "status": "draft",
+    "source": "Claude draft — daily newsroom drafting (scheduled), authored z-first against Trace Formula v1 per scripts/newsroom/AUTHORING_PROTOCOL.md v1.5. Filed to drafts/claude. Rulings: none.",
+    "editHistory": [
+      {
+        "at": "2026-10-23T06:10:38.084Z",
+        "by": "Claude (scheduled drafting)",
+        "what": "authored: object -> window -> frame from in-window sources -> central object + tethers -> sweep -> axes/split -> twelve + object z (blind subagent) -> diatribe/layers -> sweep"
+      }
+    ],
+    "aiDeltas": [],
+    "frameFirst": {
+      "date": "2026-10-21",
+      "by": "Claude, under §4c (window declared at authoring; sweep before z). Object NOT ruled — Claude's read, correctable by Sailor.",
+      "status": "Frame authored before any z; the twelve, the Diatribe and the object's own z authored blind z-first by a subagent (meta.blindAuthoring). Stations unruled.",
+      "objectLean": {
+        "stated": "DHS barred from citizen-likely election field interviews in nine states until polls close",
+        "operative": "a method limit, paused for appeal, whose reach turns on 'likely to involve U.S. citizens'",
+        "inversion": "lean, not ruled: the order restrains the knock, not the probe"
+      },
+      "titleLean": "'The Knock' — Claude's; Sailor names Readings",
+      "sourcesInWindow": [
+        "CBS News (updated 2026-10-22, ruling late 10-21): order bars DHS 'elections-related field operations and field interviews' in nine states when likely to involve people officials 'know, suspect, or should reasonably know or suspect are U.S. citizens'; until polls close on Election Day; effect delayed to 5 p.m. Friday for appeal; VRA intimidation claim; plaintiffs CNA, NNU, Protect Democracy counsel",
+        "Axios (2026-10-22): ruled late Wednesday; 'substantial evidence' of 'intimidating conduct'; target list from voter rolls and commercial data; 'high likelihood of error'; nine priority states named",
+        "Fox News (2026-10-22): likely to succeed on the VRA's 'prohibition of intimidating voter assistance and mobilization'; did not find investigating noncitizen voting unlawful; government conceded some citizens may have been looked at",
+        "AP via KNOE/WKTV/WALB (2026-10-23): plaintiffs CNA, NNU, Voto Latino Foundation, San Francisco, Santa Clara County; standing on harm to voter assistance, not members' own vote"
+      ],
+      "background_preWindow": [
+        "DHS/HSI 'Unlawful Voter Initiative'; investigators told to target naturalized citizens; 'surge' from late August 2026 with reviews of no more than 12 minutes (AP, from the ruling's findings)",
+        "Schumer–Padilla whistleblower report, September 2026",
+        "DOJ suits against ~30 states for unredacted voter rolls, lost so far (AP)",
+        "SAVE Act H.R. 22 passed House 2025-04-10 (catalog)"
+      ]
+    },
+    "framingAudit": {
+      "date": "2026-10-21",
+      "by": "Claude — frame-first authoring under §4c; sweep run BEFORE any z. Not a ruling.",
+      "window": "2026-10-21 (declared, see window.why)",
+      "verifiedInWindow": [
+        "ruling late Wednesday 2026-10-21 — CBS, Axios, Fox",
+        "scope: election-related field operations and interviews likely to involve U.S. citizens, nine states, until polls close — CBS, Axios",
+        "states named in the frame (California, Georgia, New York, Pennsylvania) — Axios list of nine",
+        "VRA intimidation claim likely to succeed — CBS, Fox",
+        "\"a high likelihood of error.\" — the judge's words in the 2026-10-21 order (Axios, AP); target list from voter rolls and commercial data",
+        "\"Unlawful Voter Initiative\" — DHS's name for the program, in use before and through 2026-10-21 (Axios, AP)",
+        "did not hold investigating noncitizen voting unlawful — Fox, CBS",
+        "paused two days for appeal (to 5 p.m. Friday) — CBS, Fox; written as a span so no post-window date enters the frame",
+        "plaintiffs: nurses' unions, Voto Latino, San Francisco, Santa Clara County — AP"
+      ],
+      "keptUnverifiedDate": [],
+      "deliberatelyExcluded_afterWindow": [
+        "DHS spokesperson's statement ('no plans to question or investigate people we believe to be U.S. citizens'), dated 2026-10-22 — given to no station as fact",
+        "any appeal filing or Ninth Circuit action dated 10-22 or later (none verified)",
+        "the calendar date the pause ends (10-23) and Election Day's date (11-03), written as spans/'Election Day'"
+      ],
+      "excludedInWindow": [
+        "the 12-minute review and naturalized-citizen targeting findings — in the ruling, kept as background for length",
+        "standing finding (voter assistance, not members' vote) — background"
+      ]
+    },
+    "blindAuthoring": {
+      "date": "2026-10-23",
+      "author": "Claude (general-purpose subagent) — blind: given the frame, prompt, keywords, axes, the object, a short dated background, R-0921-1 and the voice rules only; no other Reading, no register, no web",
+      "zFirst": true,
+      "instrumentOnAll12": true,
+      "objectZ": "The object's own place (z 0.25, quadrants B+D, band coalition) authored by the same subagent, with the twelve, before the words.",
+      "rulings": "NONE — every station awaits Sailor's ruling. z, zReason and instrument as authored; wording fixes after hand-back listed in edits.",
+      "edits": [
+        "B.denominated text: 'the week before an election' → 'right before an election' (the order is 13 days out). Claude, after hand-back.",
+        "RD text: 'a week out' → 'days before the election'; keywords reordered so keywords[0] is what replaced the object ('activist judge'). Claude.",
+        "D.fluid text: 'none of the ones I'd call easy' → 'Georgia and Pennsylvania are on the list' (clearer, verified). Claude.",
+        "D.coalition text: dropped 'honestly'. Claude.",
+        "LC text: 'stayed' → 'paused' (the order delays its own effect; no stay was entered). Claude.",
+        "Rim and diatribe signs untouched."
+      ],
+      "authorNote": "B fluid's sign (+0.1) is the one I trust least: an institutional conservative could as easily read the vague 'likely citizen' standard as freezing the probe, which would make it negative. I gave C negative z across all bands even though the order is a left win, because populist distrust of DHS compliance and the two-day pause felt more decisive than the merits."
+    },
+    "newsroomFindings": {
+      "inversionLeans": [],
+      "permanence": "Not a return. First appearance of this order in the register. Adjacent, not an alias: the DOJ v. California ballot suit (obj_thejusti_alleged-california-doj-kills, rdg_9wjfhhpxcp0d) is the same administration's noncitizen-voting push through a different instrument."
+    },
+    "holderCorrection": {
+      "was": "the President",
+      "now": "the federal court (Judge Araceli Martínez-Olguín, N.D. Cal.); the order binds DHS",
+      "why": "The court issued the order; the administration is the party it restrains. Also formedOn: was 2026-10-23 (report date), now 2026-10-21 (ruling date)."
+    }
+  },
+  "rid": "rdg_i97dtiumkmo2",
+  "ridLineage": "minted 2026-10-23 (UTC) by the scheduled newsroom drafting task; filed directly to drafts/claude",
+  "schema": "reading/v1",
+  "formulaVersion": "1",
+  "updatedAt": "2026-10-23T06:10:38.084Z",
+  "authorTier": "claude",
+  "newsroom": {
+    "oid": "obj_thepresi_administration-federal-halt-investigation",
+    "queuedOn": "2026-10-23",
+    "draftedOn": "2026-10-23"
+  },
+  "images": []
+}

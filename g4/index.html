@@ -148,7 +148,7 @@
 </head>
 <body>
 <div class="g4-sky" id="sky"><canvas id="skyc"></canvas></div>
-<iframe id="villa" title="the DreamGetty" allow="fullscreen"></iframe>
+<iframe id="villa" title="the DreamGetty" allow="autoplay; fullscreen"></iframe>
 <div id="rig">
   <div id="housing"><div class="chin"><img src="../src/img/prism3d.png" alt=""></div></div>
   <div id="glass">
@@ -345,6 +345,21 @@
     if (!first) setTimeout(() => villa.contentWindow && villa.contentWindow.postMessage({ type: 'g4:arrive', app: showing(), s: SMALL }, '*'), 300);
     pull._t = setTimeout(() => land(), first ? 20000 : 3500);
   }
+  // ── the Report (2026-10-26): BloomBurger asks for the show; the glass pulls back the same way, and the room
+  //    behind it is the villa at Ted's desk (dreamgetty/?show=). The villa then holds the show — the next ordinary
+  //    pull rebuilds it as the room. dream-news says dg:ready when the show is loaded; g4:go starts it playing.
+  function showReport(m) {
+    if (mode !== 'glass') return;
+    mode = 'pulling'; pull._landed = false; pull._t0 = performance.now();
+    rig.classList.remove('flat'); $('#sky').style.opacity = '.35';
+    glare.classList.add('go');
+    setScale(SMALL, 900, 'cubic-bezier(.3,0,.1,1)');
+    villaBuilt = false;
+    villa.src = '../dreamgetty/?show=' + encodeURIComponent(m.show || 'ep01') + '&aspect=16:9&shell=1' + (m.at ? '&at=' + encodeURIComponent(m.at) : '');
+    villa.classList.add('on');
+    setTimeout(() => { if (mode === 'pulling' && !pull._landed) { rig.classList.add('cue'); say('the Report is setting up'); } }, 1400);
+    pull._t = setTimeout(() => land(), 25000);
+  }
   function land() {
     if (mode !== 'pulling') return;
     clearTimeout(pull._t); pull._landed = true;
@@ -363,6 +378,7 @@
   function glass() {
     if (mode !== 'villa') return;
     mode = 'returning'; say('');
+    try { villa.contentWindow && villa.contentWindow.postMessage({ type: 'g4:hide' }, '*'); } catch (e) {}
     prog.classList.remove('asleep'); rig.classList.remove('hidden');
     rig.style.opacity = '0'; setScale(1, 0); rig.classList.remove('flat'); glare.classList.add('go');
     requestAnimationFrame(() => requestAnimationFrame(() => {
@@ -376,6 +392,7 @@
   addEventListener('message', e => {
     const m = e.data || {};
     if (m.type === 'g4:pull') pull();
+    else if (m.type === 'g4:show') showReport(m);
     else if (m.type === 'g4:desk') location.hash = '#desk';
     else if (m.type === 'g4:crumb') { progFn = m.fn || ''; setBar(m.name || (program && PROGRAMS[program].name) || 'g4', m.fn, m.crumb); }
     else if (m.type === 'g4:navpos') nav.setPos(m.t);

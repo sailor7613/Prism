@@ -1,0 +1,615 @@
+{
+ "schema": "press/parallelogram/v0",
+ "id": "aj_2026-10-22_regime_change",
+ "status": "claude-draft",
+ "kind": "parallelogram",
+ "title": "The Primary Objective, Priced",
+ "source": {
+  "program": "Al Jazeera English",
+  "network": "Al Jazeera (explainer)",
+  "format": "print",
+  "date": "2026-10-22",
+  "title": "Netanyahu promises Iran regime change: Can Israel topple Tehran government?",
+  "byline": "Caolán Magee",
+  "url": "https://www.aljazeera.com/news/2026/10/22/netanyahu-promises-iran-regime-change-can-israel-topple-tehran-government",
+  "length": 27,
+  "paragraphs": 27,
+  "transcript": "Parameters/09_Parallelograms/Press/2026-10-22_AlJazeera_Regime_Change/source.md",
+  "note": "AJ's own explainer (the cuttable form, per the roster) — not a wire. Non-US horizon, flagged. Read in full via the cloud fetch; reductions filed, no quotation over fifteen words"
+ },
+ "positions": "paragraphs",
+ "horizon": "non-US",
+ "arc": "PG01",
+ "object": {
+  "label": "the next offensive against Iran — the force (slate01) · the war that made the crunch (PG01 §5); the Strait touched at ¶18 and ¶24",
+  "layer": 1,
+  "zAxis": {
+   "pos": "renewed strikes come, with Washington in them, and the government falls",
+   "neg": "they do not — no US, no ground, no fall"
+  }
+ },
+ "transform": "Z-assertion",
+ "transformNote": "Netanyahu's 'primary objective' (regime change) asserted thirty years running — 1996 to Congress, March 2026 ('a ground component'), this week with his own election seven days out. The page prices it: airpower degrades, does not topple; no ground force exists (the Kurds were weighed in March and dropped); Washington has not signed (the FT: an Israeli proposal for renewed strikes refused — on timing). The NYT's 10-21 report (US–Israeli plans for strikes after the midterms) is the same object from the other side; nytimes.com is blocked from the cut's fetch and NPR's digest of it is robots-blocked, so this is the day's only full read on the object",
+ "names": {
+  "AJ": "the article (Al Jazeera narration, Caolán Magee)",
+  "BN": "Benjamin Netanyahu (Israel's prime minister — the principal of the objective; constitutive, @O; quoted from 1996 and March 2026)",
+  "UC": "Urban Coningham (RUSI research fellow, to Al Jazeera) — reported, stationed with the publication",
+  "CK": "Caglar Kurc (Abdullah Gul University, to Al Jazeera) — reported, stationed with the publication",
+  "SK": "Sidharth Kaushal (RUSI senior research fellow, to Al Jazeera) — reported, stationed with the publication",
+  "FT": "the Financial Times (reported, ¶22)",
+  "CNN": "CNN, citing Kurdish and US officials (reported, ¶15)"
+ },
+ "trace": {
+  "object": {
+   "x": 0,
+   "y": 0,
+   "z": -0.4
+  },
+  "shadow": {
+   "x": 0,
+   "y": 0,
+   "z": 1.0
+  },
+  "shadowNote": "'primary objective' — the government's fall as the war's aim, asserted; the record shows two rounds (June 2025; from 02-28) and no fall",
+  "predicates": {
+   "operative": [
+    {
+     "type": "T",
+     "label": "calls with Trump on Sunday (10-18); Hegseth in Israel; no sign Washington agreed to join another offensive (¶2)",
+     "z": -0.3
+    },
+    {
+     "type": "T",
+     "label": "two rounds already — June 2025 and the campaign from 02-28 — and the government did not fall (¶8)",
+     "z": -0.3
+    },
+    {
+     "type": "T",
+     "label": "the FT: an Israeli proposal for renewed strikes failed to win Trump's approval; the dispute was timing, not a permanent no (¶22)",
+     "z": -0.3
+    },
+    {
+     "type": "T",
+     "label": "CNN: arming Kurdish groups discussed in March, never advanced (¶15)",
+     "z": -0.5
+    },
+    {
+     "type": "T",
+     "label": "Iran's antiship missile stocks probably remain large — the stock that prices the Strait (Kaushal, ¶18)",
+     "z": -0.5
+    }
+   ],
+   "stated": [
+    {
+     "type": "O",
+     "label": "'primary objective' (this week) · 'the most dangerous of these regimes is Iran' (1996) · 'there has to be a ground component' (March)",
+     "z": 0.9
+    }
+   ],
+   "challenge": [
+    {
+     "type": "X",
+     "label": "Kurc: no regime change without troops on the ground for years; the US would not undertake another (¶11, ¶27)",
+     "z": -0.6
+    }
+   ]
+  },
+  "positions": [
+   {
+    "quadrant": "A",
+    "station": "LI",
+    "fluid": "Sunday · Hegseth · 1996 · June 2025 · February 28 · March · the Kurds · GBU-57 · Fordow · Natanz · interceptor stocks · antiship missiles · the FT · next week",
+    "denominated": "genocide in Gaza · widely shunned",
+    "distinguishability": "High",
+    "fluidKeywords": [
+     "primary objective",
+     "Sunday",
+     "Hegseth",
+     "1996",
+     "June 2025",
+     "February 28",
+     "ground component",
+     "Kurdish groups",
+     "GBU-57",
+     "Fordow",
+     "Natanz",
+     "antiship",
+     "interceptor",
+     "Financial Times",
+     "next week"
+    ],
+    "denomKeywords": [
+     "genocide",
+     "widely shunned",
+     "promises"
+    ],
+    "note": "the non-US LI corner reads the force through its instruments: what airpower does and does not do, what a ground force would cost, what Washington has and has not signed. Read z −0.32 against a declared +0.9. One verdict line (¶25) carries the masthead's own word; everything else is dated or attributed. Non-US horizon"
+   },
+   {
+    "quadrant": "B",
+    "station": "RI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — Fox 10-21 'US pulls personnel from Saudi Arabia' and the NYT 10-21 strike-plans report are in the queue (Fox: one cut per day, used on the reserve loan; NYT: blocked, beta owed)"
+   },
+   {
+    "quadrant": "C",
+    "station": "LP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — Breaking Points 10-22 ×2 (Pape on the 'gamble'; 'troops evacuated as massive new strikes planned') are on this object; transcripts owed"
+   },
+   {
+    "quadrant": "D",
+    "station": "RP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — Saagar's half of the same two BP episodes; transcripts owed. slate01 predicts the populist stations loud on the force: two episodes in one day is the loudness, unread"
+   }
+  ]
+ },
+ "log": [
+  {
+   "date": "2026-10-23",
+   "what": "daily cut (the 10-22 sweep; today's sweep file missing at run time, newest used). Twenty-seven paragraphs read in full via the cloud fetch; twenty scored, two constitutive. Netanyahu @O as the objective's principal (my call); the three analysts and the two cited outlets stationed with the publication as reported voices (the 10-15 guest ruling, owed). The object is declared on slate01's force layer and PG01 §5, not on H6 — the Strait is touched twice (¶18, ¶24) and those lines are marked",
+   "by": "Claude"
+  }
+ ],
+ "scoreboard": {
+  "dia": 16,
+  "tier": "fluid",
+  "declaredZ": 0.9,
+  "readZ": -0.32,
+  "readZRange": [
+   0.3,
+   -0.6
+  ],
+  "stations": {
+   "LI": {
+    "dia": 16,
+    "spread": [
+     10,
+     40
+    ],
+    "readZ": -0.32,
+    "voices": {
+     "AJ": {
+      "dia": 18,
+      "readZ": -0.29,
+      "n": 10
+     },
+     "CK": {
+      "dia": 17,
+      "readZ": -0.53,
+      "n": 3
+     },
+     "SK": {
+      "dia": 11,
+      "readZ": -0.45,
+      "n": 2
+     },
+     "UC": {
+      "dia": 15,
+      "readZ": -0.2,
+      "n": 5
+     }
+    }
+   },
+   "RI": null,
+   "LP": null,
+   "RP": null
+  },
+  "split": {
+   "topology": "none",
+   "station": "LI",
+   "strength": 0.0,
+   "note": "one station, one sign below the principal: the record and the analysts at 10–20, the headline at 30, the masthead's verdict at 40. The split on the page is between the principal (+1.0, thirty years) and every instrument the page names (−0.2 → −0.6)"
+  },
+  "lumens": 77,
+  "zRule": "every line carries a z, inferred where implied (Sailor 2026-10-13); inferred lines are marked zInferred with a zWhy",
+  "mode": "open"
+ },
+ "lines": [
+  {
+   "t": 0,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "Netanyahu promises Iran regime change: can Israel topple Tehran's government?",
+   "touch": "F",
+   "z": -0.2,
+   "dia": 30,
+   "mode": "open",
+   "note": "THE DOOR: a promise and a question — the headline carries its own doubt. 'Promises' is the frame; the question is the cut's",
+   "chapter": "The door",
+   "normX": 0.3583,
+   "normY": 0.408,
+   "normZ": -0.15,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a promise the headline questions is read as not yet"
+  },
+  {
+   "t": 1,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "toppling Iran's government remains Israel's 'primary objective', as his poll support declines before national elections next week",
+   "touch": "T",
+   "z": 0.3,
+   "dia": 16,
+   "mode": "open",
+   "note": "the aim restated against a second clock — Israel's election, seven days out — beside the US one (11-03). Two principals, two votes, one object",
+   "chapter": "The objective",
+   "normX": 0.4337,
+   "normY": 0.4051,
+   "normZ": 0.225,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "an objective restated a week before an election leans toward the next strike"
+  },
+  {
+   "t": 2,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "after calls with Trump on Sunday and Hegseth's visit, no sign Washington agreed to join another offensive, let alone removal of the leadership",
+   "touch": "T",
+   "z": -0.3,
+   "dia": 10,
+   "mode": "open",
+   "note": "THE GAP: the partner has not signed. Dated (Sunday 10-18); the visit is the record",
+   "chapter": "The objective",
+   "normX": 0.4442,
+   "normY": 0.4256,
+   "normZ": -0.225,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "no sign of Washington is no next offensive with Washington in it"
+  },
+  {
+   "t": 3,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "analysts: Israel has the firepower to do serious damage but no clear plan to turn gains into the government's fall; a ground invasion would take far more",
+   "touch": "T",
+   "z": -0.4,
+   "dia": 20,
+   "mode": "open",
+   "note": "the page's thesis, attributed in the plural; the instrument named (ground) and its absence",
+   "chapter": "The objective",
+   "normX": 0.4179,
+   "normY": 0.398,
+   "normZ": -0.3,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "firepower without a plan for the fall is damage, not change"
+  },
+  {
+   "t": 4,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "a state that survived two rounds and can still retaliate against Israel and the Gulf neighbours hosting US assets; Washington has found no credible way to force its terms",
+   "touch": "T",
+   "z": -0.4,
+   "dia": 18,
+   "mode": "open",
+   "note": "the Gulf hosts are the arc's own ground — Bahrain's base, priced at $400M on 10-21 (msnow). 'No credible way' is the page's reading of the US position",
+   "chapter": "The objective",
+   "normX": 0.4194,
+   "normY": 0.4066,
+   "normZ": -0.3,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a state that survived twice and can still hit the hosts is not falling on the third"
+  },
+  {
+   "t": 5,
+   "who": "UC",
+   "station": "LI",
+   "quote": "Israel could again establish air superiority and strike Iranian targets — offensive stockpiles and aerial refuelling",
+   "touch": "T",
+   "z": 0.2,
+   "dia": 14,
+   "mode": "open",
+   "note": "capability conceded by the analyst; the one line on the page that leans toward the strike",
+   "chapter": "The firepower",
+   "normX": 0.4266,
+   "normY": 0.4205,
+   "normZ": 0.15,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "air superiority available is a strike available"
+  },
+  {
+   "t": 7,
+   "who": "BN",
+   "station": "O",
+   "quote": "the most dangerous of these regimes is Iran — a cruel despotism wed to a fanatic militancy",
+   "touch": "O",
+   "z": 1.0,
+   "dia": null,
+   "mode": "open",
+   "note": "constitutive — the principal to Congress, July 1996. As-of date 1996: thirty years of the same object. Never Dia-scored",
+   "chapter": "The principal",
+   "normX": 0.5,
+   "normY": 0.5,
+   "normZ": 0.75,
+   "quadrant": "T"
+  },
+  {
+   "t": 8,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "the June 2025 war and the campaign launched on February 28 gave him the intervention he sought; the government did not fall",
+   "touch": "T",
+   "z": -0.3,
+   "dia": 12,
+   "mode": "open",
+   "note": "THE RECORD: two rounds, both dated, one outcome. The object's own history on the page",
+   "chapter": "The record",
+   "normX": 0.4246,
+   "normY": 0.4334,
+   "normZ": -0.225,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "two rounds without a fall read against a third producing one"
+  },
+  {
+   "t": 9,
+   "who": "BN",
+   "station": "O",
+   "quote": "you can't do it only from the air — there has to be a ground component",
+   "touch": "O",
+   "z": 0.8,
+   "dia": null,
+   "mode": "open",
+   "note": "constitutive — the principal, March 2026. His own falsifier: no ground, no fall. The page then shows there is no ground",
+   "chapter": "The principal",
+   "normX": 0.5,
+   "normY": 0.5,
+   "normZ": 0.6,
+   "quadrant": "T"
+  },
+  {
+   "t": 10,
+   "who": "CK",
+   "station": "LI",
+   "quote": "airpower can degrade military capabilities but cannot fully destroy them; well-hidden systems would survive",
+   "touch": "T",
+   "z": -0.4,
+   "dia": 16,
+   "mode": "open",
+   "note": "the instrument's limit stated as a rule",
+   "chapter": "The firepower",
+   "normX": 0.4082,
+   "normY": 0.4294,
+   "normZ": -0.3,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "what airpower cannot destroy is what survives the next strike"
+  },
+  {
+   "t": 11,
+   "who": "CK",
+   "station": "LI",
+   "quote": "overthrow would require deploying troops and staying for years; the covert methods of earlier attacks cannot be assumed to work again",
+   "touch": "T",
+   "z": -0.6,
+   "dia": 14,
+   "mode": "open",
+   "note": "the ground component priced in years; the covert route discounted",
+   "chapter": "The firepower",
+   "normX": 0.412,
+   "normY": 0.437,
+   "normZ": -0.45,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "troops for years that no one has committed is no fall"
+  },
+  {
+   "t": 13,
+   "who": "UC",
+   "station": "LI",
+   "quote": "human intelligence assets on the ground and cyberattacks could feature, but using them burns them — a concrete military gain becomes the test",
+   "touch": "T",
+   "z": -0.3,
+   "dia": 18,
+   "mode": "open",
+   "note": "'use and burn': the covert instrument priced by what it costs to spend",
+   "chapter": "The firepower",
+   "normX": 0.4305,
+   "normY": 0.398,
+   "normZ": -0.225,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "assets that burn when used are a one-time strike, not a campaign"
+  },
+  {
+   "t": 15,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "CNN, citing Kurdish and US officials: arming Kurdish opposition groups was discussed in March and never advanced — they lacked the capability against the IRGC",
+   "touch": "T",
+   "z": -0.5,
+   "dia": 10,
+   "mode": "open",
+   "note": "the only ground force weighed, dated (March), dropped, attributed. The lowest-Dia line on the page",
+   "chapter": "The ground",
+   "normX": 0.4425,
+   "normY": 0.4269,
+   "normZ": -0.375,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "the one proxy ground force considered and dropped is no ground force"
+  },
+  {
+   "t": 17,
+   "who": "SK",
+   "station": "LI",
+   "quote": "Iran likely still holds sizeable missile stocks, even if damage to targeting systems limits their effect",
+   "touch": "T",
+   "z": -0.4,
+   "dia": 12,
+   "mode": "open",
+   "note": "the retaliation layer, sized as 'sizeable' — the analyst's honest vagueness",
+   "chapter": "The retaliation",
+   "normX": 0.4326,
+   "normY": 0.4253,
+   "normZ": -0.3,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a stock that survives is a cost the next strike pays"
+  },
+  {
+   "t": 18,
+   "who": "SK",
+   "station": "LI",
+   "quote": "antiship missile stockpiles probably remain large — easy to produce, older Chinese designs brought in-house, the southern mountains for shelter",
+   "touch": "T",
+   "z": -0.5,
+   "dia": 10,
+   "mode": "open",
+   "note": "THE STRAIT'S LAYER: the antiship stock is what prices passage (H6 — who sets the price of the Strait). Marked: this line reads H6, not the declared object",
+   "chapter": "The retaliation",
+   "normX": 0.4354,
+   "normY": 0.4331,
+   "normZ": -0.375,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a large antiship stock is a strait still priced by Iran"
+  },
+  {
+   "t": 19,
+   "who": "UC",
+   "station": "LI",
+   "quote": "Israel's interceptor stocks were depleted by previous exchanges; expensive interceptors against cheap drones strain supply in a long exchange",
+   "touch": "T",
+   "z": -0.4,
+   "dia": 14,
+   "mode": "open",
+   "note": "the exchange rate of the war — interceptor against drone — stated as the constraint on duration",
+   "chapter": "The retaliation",
+   "normX": 0.4223,
+   "normY": 0.4248,
+   "normZ": -0.3,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "depleted interceptors make a long campaign the costlier side's"
+  },
+  {
+   "t": 21,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "US participation unlikely: diverging interests between Tel Aviv and Washington; Trump under pressure to avoid renewed escalation before the midterms",
+   "touch": "T",
+   "z": -0.5,
+   "dia": 18,
+   "mode": "open",
+   "note": "THE CLOCK: the US election as the brake, in the page's own reading. The NYT's 10-21 plans are for after it",
+   "chapter": "Washington",
+   "normX": 0.4057,
+   "normY": 0.4204,
+   "normZ": -0.375,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a partner braking until the election is no offensive before it"
+  },
+  {
+   "t": 22,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "the Financial Times: an Israeli proposal for renewed strikes failed to win Trump's approval — a disagreement over immediate action, not a permanent rejection",
+   "touch": "T",
+   "z": -0.3,
+   "dia": 10,
+   "mode": "open",
+   "note": "the day's object from the other side: refused now, not later. Pairs with the NYT 10-21 report (plans for after the midterms) — the same window from two papers",
+   "chapter": "Washington",
+   "normX": 0.4269,
+   "normY": 0.4424,
+   "normZ": -0.225,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a proposal refused on timing is the next strike deferred, not denied"
+  },
+  {
+   "t": 23,
+   "who": "UC",
+   "station": "LI",
+   "quote": "without Trump, no GBU-57s — the 30,000-pound bunker-busters B-2s dropped on Fordow and Natanz in June 2025",
+   "touch": "T",
+   "z": -0.3,
+   "dia": 12,
+   "mode": "open",
+   "note": "the one instrument Israel cannot supply itself, named and dated",
+   "chapter": "Washington",
+   "normX": 0.4189,
+   "normY": 0.4405,
+   "normZ": -0.225,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "the deep sites unreachable without Washington is the objective unreachable alone"
+  },
+  {
+   "t": 24,
+   "who": "UC",
+   "station": "LI",
+   "quote": "if Israel attacked without US support, Iran might retaliate on Israeli territory and avoid US targets and disruption to the Strait of Hormuz",
+   "touch": "T",
+   "z": -0.2,
+   "dia": 16,
+   "mode": "open",
+   "note": "H6 touched: the Strait as Iran's instrument, withheld by choice. Marked: this line reads H6. A reader's hypothesis, not the record",
+   "chapter": "Washington",
+   "normX": 0.4044,
+   "normY": 0.4347,
+   "normZ": -0.15,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a strait Iran chooses not to close is a strait Iran controls"
+  },
+  {
+   "t": 25,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "Israel is already widely shunned over its genocide in Gaza; this could isolate it further",
+   "touch": "F",
+   "z": -0.3,
+   "dia": 40,
+   "mode": "open",
+   "note": "the masthead's own verdict word, unattributed — the page's one denominated line. Non-US horizon: the word is the publication's register, flagged, not scored as a US reading",
+   "chapter": "Washington",
+   "normX": 0.3854,
+   "normY": 0.3276,
+   "normZ": -0.225,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "isolation named is a cost the next strike adds"
+  },
+  {
+   "t": 27,
+   "who": "CK",
+   "station": "LI",
+   "quote": "you cannot change a regime unless you deploy troops and stay for some years; Israel cannot control Iran, and the US would not undertake another — decades",
+   "touch": "T",
+   "z": -0.6,
+   "dia": 20,
+   "mode": "open",
+   "note": "THE CLOSE: the falsifier the principal set in March, returned by the analyst as the answer. 'Decades' is the page's last number",
+   "chapter": "The close",
+   "normX": 0.4203,
+   "normY": 0.3961,
+   "normZ": -0.45,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a change priced in decades that no one will buy is no change"
+  }
+ ]
+}

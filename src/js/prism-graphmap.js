@@ -1055,6 +1055,7 @@ const PrismGraphmap = (function () {
       // The orbit capability only gates pointer-drag input, not rotation itself.
       group.rotation.y = orbit.yaw + morphOffset.y;
       group.rotation.x = orbit.pitch + morphOffset.x;
+      group.rotation.z = orbit.spin || 0;   // v2 additive (2026-10-21): spin the plane in its own surface (turntable)
 
       // ── Apply focus (shift group so focus point is at rotation center) ──
       group.position.x = -orbit.focusX;
@@ -2372,6 +2373,12 @@ const PrismGraphmap = (function () {
       return instance;
     }
 
+    // v2 additive (2026-10-21, the Fukuyama runs): turntable spin, and read access to the camera
+    // and graph group so a host page can project dots to the screen.
+    function setSpin(deg) { orbit.spin = (deg || 0) * Math.PI / 180; return instance; }
+    function getCamera() { return camera; }
+    function getGroup() { return group; }
+
     function getZoom() {
       return orbit.zoom;
     }
@@ -3389,6 +3396,7 @@ const PrismGraphmap = (function () {
 
       // Orbit
       setOrbit,
+      setSpin, getCamera, getGroup,
       getOrbit,
       setZoom,
       getZoom,

@@ -1,0 +1,1204 @@
+{
+ "schema": "show/episode/v2",
+ "id": "ep01",
+ "show": "The Parallelogram Report",
+ "title": "Episode One · Two Words",
+ "aspect": "16:9",
+ "fps": 30,
+ "endHold": 1.0,
+ "voice": {
+  "provider": "elevenlabs",
+  "voice_id": "2w1RxrmT0SAHYrUVv0HU",
+  "model_id": "eleven_multilingual_v2",
+  "stability": 0.45,
+  "similarity": 0.8,
+  "style": 0.2
+ },
+ "notes": "v2 (2026-10-25): beats have a type. text = one voice call (as v1). clip = a cut from a clip file: src (file stem in clipsDir), in/out in seconds inside the clip file, layout full|pedestal|beside, piece + line = the press line this clip is, so it lands on the map as it plays. land = a short beat on the map alone (the stage camera): the line's dot drops in with its Dia. clips[src].in = seconds on the source tape where the clip file starts, so a press line's t maps to clip-local t − in. Every beat is padded to whole frames by tts.py; cuts are hard. Script: data/show/ep01_script_v1.md. Blocks 1–5 are in (cold open, the question, welcome, you deserve better, the modes); blocks 6–7 (the three moments scored, the Ledger + sign-off) are still to be written in here. Each block renders as its own clip with render.js --clip <id>.",
+ "pieces": [
+  "shapiro_2026-10-16_roadster",
+  "badfaith_2026-10-22_the_word",
+  "tcn_2026-04-06_apffel_socialism"
+ ],
+ "clipsDir": "Transcripts/show/ep01/clips",
+ "clips": {
+  "shapiro_01_open": {
+   "in": 13
+  },
+  "shapiro_02_pools": {
+   "in": 345
+  },
+  "shapiro_03_fascism": {
+   "in": 580
+  },
+  "shapiro_04_communism": {
+   "in": 792
+  },
+  "shapiro_05_senate": {
+   "in": 1544
+  },
+  "tucker_01_socialism": {
+   "in": 6672
+  },
+  "badfaith_01_coldopen": {
+   "in": 20
+  },
+  "badfaith_02_realsocialist": {
+   "in": 2348
+  },
+  "badfaith_03_theword": {
+   "in": 3336
+  }
+ },
+ "blocks": [
+  {
+   "id": "coldopen",
+   "title": "",
+   "chrome": "bug",
+   "clip": true,
+   "beats": [
+    {
+     "id": "co_pools",
+     "type": "clip",
+     "src": "shapiro_02_pools",
+     "in": 9.4,
+     "out": 15.1,
+     "layout": "full",
+     "piece": "shapiro_2026-10-16_roadster",
+     "line": 1,
+     "note": "But what makes all of this possible? Free, available pools of capital in a deregulated economy."
+    },
+    {
+     "id": "co_pools_land",
+     "type": "land",
+     "dur": 1.5,
+     "piece": "shapiro_2026-10-16_roadster",
+     "line": 1,
+     "orbit": [
+      0,
+      -40
+     ],
+     "zoom": 7.0
+    },
+    {
+     "id": "co_shapiro",
+     "type": "clip",
+     "src": "shapiro_04_communism",
+     "in": 87.25,
+     "out": 90.03,
+     "layout": "full",
+     "piece": "shapiro_2026-10-16_roadster",
+     "line": 12,
+     "note": "So what am I saying here? I'm saying capitalism is great and communism sucks."
+    },
+    {
+     "id": "co_shapiro_land",
+     "type": "land",
+     "dur": 1.5,
+     "piece": "shapiro_2026-10-16_roadster",
+     "line": 12,
+     "orbit": [
+      0,
+      -40
+     ],
+     "zoom": 7.0
+    },
+    {
+     "id": "co_gray",
+     "type": "clip",
+     "src": "badfaith_03_theword",
+     "in": 59.4,
+     "out": 66.0,
+     "layout": "full",
+     "piece": "badfaith_2026-10-22_the_word",
+     "line": 6,
+     "note": "what they mean by socialism is that like they thought Bernie Sanders was cool in 2016 and maybe we should have a little healthcare"
+    },
+    {
+     "id": "co_gray_land",
+     "type": "land",
+     "dur": 1.5,
+     "piece": "badfaith_2026-10-22_the_word",
+     "line": 6,
+     "orbit": [
+      -14,
+      -40
+     ],
+     "zoom": 7.0
+    },
+    {
+     "id": "co_yugo",
+     "type": "clip",
+     "src": "shapiro_04_communism",
+     "in": 74.7,
+     "out": 82.9,
+     "layout": "full",
+     "piece": "shapiro_2026-10-16_roadster",
+     "line": 11,
+     "note": "there was one woman who was driving a Yugo across the Mackinac Bridge in Michigan. She was blown off the bridge by a gust of wind and died."
+    },
+    {
+     "id": "co_yugo_land",
+     "type": "land",
+     "dur": 1.5,
+     "piece": "shapiro_2026-10-16_roadster",
+     "line": 11,
+     "orbit": [
+      14,
+      -40
+     ],
+     "zoom": 7.0
+    },
+    {
+     "id": "co_apffel",
+     "type": "clip",
+     "src": "tucker_01_socialism",
+     "in": 61.55,
+     "out": 65.92,
+     "layout": "full",
+     "piece": "tcn_2026-04-06_apffel_socialism",
+     "line": 6,
+     "note": "and I don't like the word socialist with the, with the, the weight it carries"
+    },
+    {
+     "id": "co_apffel_land",
+     "type": "land",
+     "dur": 1.8,
+     "piece": "tcn_2026-04-06_apffel_socialism",
+     "line": 6,
+     "orbit": [
+      0,
+      -36
+     ],
+     "zoom": 6.6
+    }
+   ]
+  },
+  {
+   "id": "question",
+   "title": "",
+   "chrome": "bug",
+   "clip": false,
+   "beats": [
+    {
+     "id": "q_two_years",
+     "type": "text",
+     "text": "Can you do two more years of this?",
+     "caption": "",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "ted": "camera"
+    }
+   ]
+  },
+  {
+   "id": "welcome",
+   "title": "Welcome",
+   "chrome": "full",
+   "clip": true,
+   "beats": [
+    {
+     "id": "w_welcome",
+     "type": "text",
+     "text": "Welcome to the Parallelogram Report. I'm Ted Turner. Sailor. Media mogul. Coyote, wandering the Getty Villa past midnight in the American Dream. Before we get into tonight's clips, let's address the elephant in the room.",
+     "caption": "Ted Turner · media mogul · coyote",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "ted": "camera",
+     "elephant": {
+      "from": [
+       15,
+       -21.5
+      ],
+      "to": [
+       -15,
+       -19
+      ],
+      "lead": 0.04
+     }
+    },
+    {
+     "id": "w_sonnetbot",
+     "type": "text",
+     "text": "This is a new kind of thing. I'm a sonnetbot. Sailor is real. He lives in Newport Beach. I'm what he thinks, put through Claude, an AI, and read in a copy of his voice.",
+     "caption": "Ted is a sonnetbot. Sailor is real.",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "ted": "camera"
+    },
+    {
+     "id": "w_prism",
+     "type": "text",
+     "text": "He built a program called Prism. He calls it a Bloomberg terminal for political economy. We use it to read the news. Here's how. We don't tell you who's right. We measure how much of what somebody said was actually about the thing they were talking about. Same ruler. Left and right.",
+     "caption": "Prism: a Bloomberg terminal for political economy",
+     "map": {
+      "orbit": [
+       12,
+       -36
+      ],
+      "zoom": 6.6,
+      "paths": true
+     },
+     "ted": "map"
+    },
+    {
+     "id": "w_tonight",
+     "type": "text",
+     "text": "Tonight: what three of the biggest voices in media do with two words. Capitalism. Communism.",
+     "caption": "Tonight: two words",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.0
+     },
+     "ted": "camera"
+    }
+   ]
+  },
+  {
+   "id": "better",
+   "title": "You deserve better",
+   "chrome": "full",
+   "clip": true,
+   "beats": [
+    {
+     "id": "yd_scrolling",
+     "type": "text",
+     "text": "Why are we scrolling? Honestly. Why are we still looking? Because we want to pay attention. We want to watch the news. We want to read good journalism. We want to know what's going on. And we know how rotted out it all is right now.",
+     "caption": "Why are we still looking?",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "ted": "camera"
+    },
+    {
+     "id": "yd_junk",
+     "type": "text",
+     "text": "So here's the thing I want to say first. The political media you're getting doesn't tell you where the power actually is. It's junk. And you're better than it.",
+     "caption": "You're better than it",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "ted": "camera"
+    },
+    {
+     "id": "yd_1992",
+     "type": "text",
+     "text": "I was born in 1992. Same year a guy named Francis Fukuyama published a book called The End of History. The argument, roughly: liberal democracy won. The big fights were over.",
+     "caption": "1992 · The End of History",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "ted": "camera"
+    },
+    {
+     "id": "yd_ladder",
+     "type": "text",
+     "text": "And that's pretty much how they taught us the world. If you grew up middle class in California in the 90s, the world came with clear terms. One culture. A short list of news everybody watched. And you knew the ladder. The evening news. The LA Times. And if you wanted to think harder, there was The Atlantic, NPR, The New Republic. You could climb.",
+     "caption": "The ladder: the evening news · the LA Times · The Atlantic",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "ted": "camera"
+    },
+    {
+     "id": "yd_paper",
+     "type": "text",
+     "text": "My dad used to come home with the paper from Starbucks. He'd read it in the morning, then again at night while my mom cooked dinner. And he'd hand me the sections as he finished them. Front page. Business. California.",
+     "caption": "Front page · Business · California",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "ted": "camera"
+    },
+    {
+     "id": "yd_911",
+     "type": "text",
+     "text": "I was nine on 9/11. I didn't get it at first. Buildings, things happen. By that night I got it. Then Iraq. And it was all in the paper, right? The link to al-Qaeda was thin. You could read that. My teacher brought in a political cartoon about cutting Social Security to pay for the war, and had us figure out what it meant.",
+     "caption": "2001 · 2003 · it was all in the paper",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "ted": "camera"
+    },
+    {
+     "id": "yd_benefit",
+     "type": "text",
+     "text": "And everybody kind of said, okay. Maybe the case isn't great. But something's going on over there, and we have to do something. We gave it the benefit of the doubt.",
+     "caption": "The benefit of the doubt",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "ted": "camera"
+    },
+    {
+     "id": "yd_pattern",
+     "type": "text",
+     "text": "That's the pattern. Good faith, extended past the facts. Over and over. And here's what gets me. None of it is hard to understand. The world they taught us in school is legible. You can read it. And we keep getting told it's too complicated to know.",
+     "caption": "Good faith, extended past the facts",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "ted": "camera"
+    },
+    {
+     "id": "yd_2008",
+     "type": "text",
+     "text": "2008. COVID. If you'd told anyone in 1995 that a Republican president would send almost every American a check, they'd have said that's impossible. That's not how the system works. Then it happened. And then house prices did what they did. The world keeps doing things the rules said couldn't happen.",
+     "caption": "The world keeps doing things the rules said couldn't happen",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "ted": "camera"
+    },
+    {
+     "id": "yd_words",
+     "type": "text",
+     "text": "And the conversation we get about it? Still capitalism versus communism. Socialism. Fascism. Words thrown around with no regard for what they mean.",
+     "caption": "Capitalism · communism · socialism · fascism",
+     "map": {
+      "orbit": [
+       12,
+       -36
+      ],
+      "zoom": 6.6,
+      "paths": true
+     },
+     "ted": "map"
+    },
+    {
+     "id": "yd_internet",
+     "type": "text",
+     "text": "Look, the internet did two things at once. It rotted our media. And it also opened everything up. Anybody can publish. People are making weird, funny, sometimes beautiful things every day. Most people can only hold one of those thoughts at a time. You have to hold both.",
+     "caption": "The internet did two things at once",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "ted": "camera"
+    },
+    {
+     "id": "yd_sixty",
+     "type": "text",
+     "text": "I'm 34. What's the news going to look like when I'm 60? If it's still people screaming capitalism and communism at each other, it's not going to be better for our kids.",
+     "caption": "What's the news going to look like when I'm 60?",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "ted": "camera"
+    },
+    {
+     "id": "yd_history",
+     "type": "text",
+     "text": "We've been handed all of history. Every record, every book, every photograph. We can see more clearly than anyone ever could. That's exactly why this is so painful to watch.",
+     "caption": "We've been handed all of history",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "ted": "camera"
+    },
+    {
+     "id": "yd_wayback",
+     "type": "text",
+     "text": "This isn't about changing the world. It's not a political revolution. It's about giving curious, reasonably literate people a way back into the conversation. One that's worth their time.",
+     "caption": "A way back into the conversation",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.0
+     },
+     "ted": "camera"
+    }
+   ]
+  },
+  {
+   "id": "modes",
+   "title": "The modes",
+   "chrome": "full",
+   "clip": true,
+   "beats": [
+    {
+     "id": "m_back",
+     "type": "text",
+     "text": "Let's go back to those clips. Three shows. One word.",
+     "caption": "Three shows · one word",
+     "map": {
+      "orbit": [
+       12,
+       -36
+      ],
+      "zoom": 6.6,
+      "paths": true
+     },
+     "ted": "map"
+    },
+    {
+     "id": "m_shapiro",
+     "type": "text",
+     "text": "Ben Shapiro: communism sucks. His proof? California's high-speed rail.",
+     "caption": "Shapiro: communism sucks",
+     "piece": "shapiro_2026-10-16_roadster",
+     "map": {
+      "orbit": [
+       12,
+       -36
+      ],
+      "zoom": 6.6,
+      "paths": true,
+      "focus": 12
+     },
+     "ted": "map"
+    },
+    {
+     "id": "m_apffel",
+     "type": "text",
+     "text": "On Tucker, Nathan Apffel: I don't like the word socialist, with the weight it carries. Then he says it anyway.",
+     "caption": "Apffel on Tucker: the weight it carries",
+     "piece": "tcn_2026-04-06_apffel_socialism",
+     "map": {
+      "orbit": [
+       12,
+       -36
+      ],
+      "zoom": 6.6,
+      "paths": true,
+      "focus": 6
+     },
+     "ted": "map"
+    },
+    {
+     "id": "m_gray",
+     "type": "text",
+     "text": "Jennifer Welch, who hosts the podcast I've Had It, on a clip Gray plays: I wish I didn't have to use the word socialism. And Briahna Joy Gray, on Bad Faith: what they mean by it is, maybe we should have a little healthcare.",
+     "caption": "Welch · Gray: maybe a little healthcare",
+     "piece": "badfaith_2026-10-22_the_word",
+     "map": {
+      "orbit": [
+       12,
+       -36
+      ],
+      "zoom": 6.6,
+      "paths": true,
+      "focus": 6
+     },
+     "ted": "map"
+    },
+    {
+     "id": "m_fight",
+     "type": "text",
+     "text": "Right. Left. Center-left. Everybody's fighting about the word. Nobody's talking about the thing.",
+     "caption": "Everybody's fighting about the word",
+     "map": {
+      "orbit": [
+       12,
+       -36
+      ],
+      "zoom": 6.6,
+      "paths": true
+     },
+     "ted": "map"
+    },
+    {
+     "id": "m_three",
+     "type": "text",
+     "text": "So here's the thing. Capitalism, socialism and communism are not three teams. They're three modes. And every economy runs all three. At the same time.",
+     "caption": "Not three teams. Three modes.",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "ted": "camera"
+    },
+    {
+     "id": "m_coast",
+     "type": "text",
+     "text": "Take the California coast. Capitalism sees lots, hotels, a jetty. Socialism is the town that plans it. Communism is the ocean: in California, the shore below the high tide line belongs to everybody.",
+     "caption": "The California coast: all three, one afternoon",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "ted": "camera"
+    },
+    {
+     "id": "m_where",
+     "type": "text",
+     "text": "Same beach. Same afternoon. The question is never which one. It's where, and how much.",
+     "caption": "Never which one. Where, and how much.",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "ted": "camera"
+    },
+    {
+     "id": "m_serious",
+     "type": "text",
+     "text": "And look. This isn't podcast stuff. Serious people have been here.",
+     "caption": "Serious people have been here",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "ted": "camera"
+    },
+    {
+     "id": "m_fukuyama",
+     "type": "text",
+     "text": "1992. Francis Fukuyama, The End of History. He looks at South Korea and Taiwan. He admits planning played a bigger role there than here. Then he files the whole miracle under capitalism.",
+     "caption": "Fukuyama, 1992: The End of History",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "ted": "camera"
+    },
+    {
+     "id": "m_growth",
+     "type": "text",
+     "text": "He measures all three modes by one thing: growth. What a society might look like if it wanted something other than more. That never comes up.",
+     "caption": "One ruler: growth",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "ted": "camera"
+    },
+    {
+     "id": "m_leo",
+     "type": "text",
+     "text": "Now, this May. Pope Leo the Fourteenth, his first encyclical. Magnifica Humanitas. It says the goods of the earth are meant for everybody first. God gave the earth to the whole human race. Private property is real, it says. But never absolute.",
+     "caption": "Leo XIV, May 2026: Magnifica Humanitas",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "ted": "camera"
+    },
+    {
+     "id": "m_subsid",
+     "type": "text",
+     "text": "And then the next principle: groups should provide for themselves, at the smallest level that can handle it. It even puts data and algorithms on the list of things meant for everyone.",
+     "caption": "Data and algorithms: meant for everyone",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "ted": "camera"
+    },
+    {
+     "id": "m_ranked",
+     "type": "text",
+     "text": "That's all three modes. Ranked. From the oldest institution in the West. The Church never bought the either-or.",
+     "caption": "All three modes, ranked",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "ted": "camera"
+    },
+    {
+     "id": "m_capitalism",
+     "type": "text",
+     "text": "So let's say them plainly. Capitalism is looking at a pile of rocks and seeing a road. Looking at a row of houses and seeing money. It's the hard reality of surviving and building. You can make anything out of anything.",
+     "caption": "Capitalism: a pile of rocks, and a road",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "ted": "camera"
+    },
+    {
+     "id": "m_communism",
+     "type": "text",
+     "text": "Communism is what we share because none of us chose to be here. Nobody's born with a contract for the mineral rights. Or for language. We don't charge babies to learn to talk. Universal public school is communist. Capitalism needs it. You need people who can read, to take orders and to buy things. Water out of the tap is communist too.",
+     "caption": "Communism: what we share because none of us chose to be here",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "ted": "camera"
+    },
+    {
+     "id": "m_socialism",
+     "type": "text",
+     "text": "Socialism is groups. Kings and queens become executives and philanthropies. Peasants become factory workers and middle managers. A private school is socialist: families pooling money so their kids keep their place. City people, suburb people, people who want families, people who don't. Socialism is how a society shares uneven resources between those groups so the whole thing keeps going. Done badly, it's feudalism.",
+     "caption": "Socialism: groups",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "ted": "camera"
+    },
+    {
+     "id": "m_fascism",
+     "type": "text",
+     "text": "Fascism, while we're here: the state working for capital, and nothing else.",
+     "caption": "Fascism: the state working for capital",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "ted": "camera"
+    },
+    {
+     "id": "m_agree",
+     "type": "text",
+     "text": "The right and the left already agree on more than they think. Tucker and the Chapo guys are mad about the same things. COVID money. Ukraine. What it costs to live. They just can't talk, because of the words.",
+     "caption": "They already agree on more than they think",
+     "map": {
+      "orbit": [
+       12,
+       -36
+      ],
+      "zoom": 6.6,
+      "paths": true
+     },
+     "ted": "map"
+    },
+    {
+     "id": "m_right",
+     "type": "text",
+     "text": "So to the right: affordable college, communities setting their own terms. That's socialism. You can have it.",
+     "caption": "To the right: that's socialism. You can have it.",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "ted": "camera"
+    },
+    {
+     "id": "m_left",
+     "type": "text",
+     "text": "To the left: there's a lot of capitalism in the China you admire. And turning raw material into anything isn't the enemy.",
+     "caption": "To the left: it isn't the enemy",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "ted": "camera"
+    },
+    {
+     "id": "m_numbers",
+     "type": "text",
+     "text": "So let's put numbers on it.",
+     "caption": "Numbers",
+     "map": {
+      "orbit": [
+       12,
+       -36
+      ],
+      "zoom": 6.6,
+      "paths": true
+     },
+     "ted": "map"
+    }
+   ]
+  },
+  {
+   "id": "scores",
+   "title": "How to read the map",
+   "beats": [
+    {
+     "id": "s_intro",
+     "type": "text",
+     "text": "Before we go back to those clips, here's how to read the map. Three numbers. That's it.",
+     "caption": "Three numbers",
+     "ted": "map",
+     "map": {
+      "paths": true
+     }
+    },
+    {
+     "id": "s_dia",
+     "type": "text",
+     "text": "Dia. Short for diatribe. It's how charged somebody is, zero to a hundred. And it comes in three bands.",
+     "caption": "Dia: how charged someone is",
+     "ted": "map",
+     "map": {
+      "orbit": [
+       0,
+       -25
+      ]
+     }
+    },
+    {
+     "id": "s_bands1",
+     "type": "text",
+     "text": "Zero to thirty-three is fluid. You just say what you think. You're not defending it and you're not selling it. You can still be surprised.",
+     "caption": "0–33: fluid",
+     "ted": "map"
+    },
+    {
+     "id": "s_bands2",
+     "type": "text",
+     "text": "Thirty-four to sixty-six is coalition. Now you're making a case. You want people on your side, and you'll go a few rounds to get them.",
+     "caption": "34–66: coalition",
+     "ted": "map"
+    },
+    {
+     "id": "s_bands3",
+     "type": "text",
+     "text": "Sixty-seven and up is denominated. You've stopped trying to persuade anybody. You'll burn a bridge to make the point. The thing you started out talking about is gone, and what's left is your side.",
+     "caption": "67–100: denominated",
+     "ted": "map"
+    },
+    {
+     "id": "s_bands4",
+     "type": "text",
+     "text": "On the map, those are the three rings. The further out a dot lands, the hotter the line.",
+     "caption": "The further out, the hotter",
+     "ted": "map",
+     "piece": "shapiro_2026-10-16_roadster",
+     "map": {
+      "focus": 12,
+      "paths": true
+     }
+    },
+    {
+     "id": "s_z",
+     "type": "text",
+     "text": "Z. That's whether they think they're winning. Not whether they win the argument. Whether the thing they care about is actually happening. Above the plane, it's delivering for them. Below the plane, it isn't.",
+     "caption": "Z: do they think they're winning?",
+     "ted": "map",
+     "map": {
+      "orbit": [
+       30,
+       -38
+      ],
+      "zoom": 5.4,
+      "paths": false
+     }
+    },
+    {
+     "id": "s_lumens",
+     "type": "text",
+     "text": "And lumens. How much of the actual thing they can see. When they're talking about the thing, the light gets through. When they're talking about their side, it goes dim.",
+     "caption": "Lumens: how much of the thing they can see",
+     "ted": "camera"
+    },
+    {
+     "id": "s_go",
+     "type": "text",
+     "text": "Okay. Let's read them.",
+     "caption": "Let's read them",
+     "ted": "camera"
+    }
+   ]
+  },
+  {
+   "id": "reading",
+   "title": "The reading",
+   "beats": [
+    {
+     "id": "r_tucker_in",
+     "type": "text",
+     "text": "April. Tucker's show. His guest makes documentaries about the money in megachurches. Watch the dots.",
+     "caption": "Tucker Carlson and Nathan Apffel",
+     "ted": "camera",
+     "piece": "tcn_2026-04-06_apffel_socialism"
+    },
+    {
+     "id": "r_tucker_1",
+     "type": "clip",
+     "src": "tucker_01_socialism",
+     "in": 4.0,
+     "out": 39.6,
+     "layout": "reading",
+     "piece": "tcn_2026-04-06_apffel_socialism"
+    },
+    {
+     "id": "r_t1",
+     "type": "text",
+     "text": "Tucker's asking a question, and he puts himself in it. Any of us with excess money. That's low. Ten. Close to the middle.",
+     "caption": "A question, not a verdict",
+     "ted": "map",
+     "piece": "tcn_2026-04-06_apffel_socialism",
+     "map": {
+      "focus": 0
+     }
+    },
+    {
+     "id": "r_tucker_2",
+     "type": "clip",
+     "src": "tucker_01_socialism",
+     "in": 39.6,
+     "out": 76.0,
+     "layout": "reading",
+     "piece": "tcn_2026-04-06_apffel_socialism"
+    },
+    {
+     "id": "r_t2",
+     "type": "text",
+     "text": "Here's the moment. Capitalism should not be anywhere near Christianity. That's the hottest it gets. Thirty-eight. Then he says the word. He says he doesn't like the weight it carries. He tells you what he means by it. Twenty-four. The heat goes down.",
+     "caption": "He defines the word, and the heat goes down",
+     "ted": "map",
+     "piece": "tcn_2026-04-06_apffel_socialism",
+     "map": {
+      "focus": 6
+     }
+    },
+    {
+     "id": "r_tucker_3",
+     "type": "clip",
+     "src": "tucker_01_socialism",
+     "in": 76.0,
+     "out": 115.2,
+     "layout": "reading",
+     "piece": "tcn_2026-04-06_apffel_socialism"
+    },
+    {
+     "id": "r_t3",
+     "type": "text",
+     "text": "Greed. Not a system. A thing you can check in your own life.",
+     "caption": "Greed: a thing you can check",
+     "ted": "camera",
+     "piece": "tcn_2026-04-06_apffel_socialism"
+    },
+    {
+     "id": "r_t_score",
+     "type": "text",
+     "text": "Let's sit on Tucker's numbers for a second. The whole segment: Dia twenty-one. That's fluid. Nobody's burning a bridge. Apffel climbs to thirty-eight when he says capitalism shouldn't be anywhere near Christianity. That's the coalition band. He's arguing now. Then he defines his word and drops back to twenty-four. Tucker never gets above twenty-two.",
+     "caption": "Tucker's segment: fluid",
+     "ted": "camera",
+     "piece": "tcn_2026-04-06_apffel_socialism",
+     "card": "score"
+    },
+    {
+     "id": "r_t_score2",
+     "type": "text",
+     "text": "Now the z. Minus point five, for both of them. Below the plane. They think they're losing. The thing they care about, a church that isn't a business, isn't happening. That's the interesting part. Two guys on a right-wing show, keeping the heat low, and both of them think the thing they love has been bought. Fifty-five lumens. More than half the light gets through.",
+     "caption": "Both below the plane",
+     "ted": "map",
+     "piece": "tcn_2026-04-06_apffel_socialism",
+     "card": "score",
+     "map": {
+      "orbit": [
+       30,
+       -38
+      ],
+      "zoom": 7.4
+     }
+    },
+    {
+     "id": "r_bf_in",
+     "type": "text",
+     "text": "This week. Bad Faith, with Briahna Joy Gray. Listen to how she frames the moment.",
+     "caption": "Bad Faith with Briahna Joy Gray",
+     "ted": "camera",
+     "piece": "badfaith_2026-10-22_the_word"
+    },
+    {
+     "id": "r_badfaith_0",
+     "type": "clip",
+     "src": "badfaith_02_realsocialist",
+     "in": 6.6,
+     "out": 42.7,
+     "layout": "reading",
+     "piece": "badfaith_2026-10-22_the_word"
+    },
+    {
+     "id": "r_bf0",
+     "type": "text",
+     "text": "Midterms in two weeks, then general election season. That's the question we opened with, from the left. Then she turns on her own side.",
+     "caption": "The same question, from the left",
+     "ted": "camera",
+     "piece": "badfaith_2026-10-22_the_word"
+    },
+    {
+     "id": "r_badfaith_1",
+     "type": "clip",
+     "src": "badfaith_03_theword",
+     "in": 0.5,
+     "out": 44.0,
+     "layout": "reading",
+     "piece": "badfaith_2026-10-22_the_word"
+    },
+    {
+     "id": "r_badfaith",
+     "type": "clip",
+     "src": "badfaith_03_theword",
+     "in": 44.0,
+     "out": 96.0,
+     "layout": "reading",
+     "piece": "badfaith_2026-10-22_the_word"
+    },
+    {
+     "id": "r_b1",
+     "type": "text",
+     "text": "Jennifer Welch, in the clip Gray plays: very regulated capitalism with a safety net. That's two modes running at once. Fourteen. She said it exactly right, and she wishes she didn't have to say the word. Then Abdul El-Sayed asks the real question. Is the problem capitalism, or the way big corporations ate the system that's supposed to regulate it?",
+     "caption": "Two modes at once, said exactly right",
+     "ted": "map",
+     "piece": "badfaith_2026-10-22_the_word",
+     "map": {
+      "focus": 8
+     }
+    },
+    {
+     "id": "r_b_score",
+     "type": "text",
+     "text": "Bad Faith's numbers. Thirty-seven. That's the coalition band. Gray is making a case, and she wants you with her. She climbs all the way to sixty-two, on a little healthcare. That's right at the edge of denominated.",
+     "caption": "Bad Faith: coalition",
+     "ted": "camera",
+     "piece": "badfaith_2026-10-22_the_word",
+     "card": "score"
+    },
+    {
+     "id": "r_b_score2",
+     "type": "text",
+     "text": "And the z splits. Gray is at minus point five five. She thinks the agenda is being given away. Welch is plus point three. She thinks regulated capitalism with a safety net can deliver. Same clip, opposite readings on whether it's working. Forty lumens.",
+     "caption": "The z splits",
+     "ted": "map",
+     "piece": "badfaith_2026-10-22_the_word",
+     "card": "score",
+     "map": {
+      "orbit": [
+       -30,
+       -38
+      ],
+      "zoom": 7.4
+     }
+    },
+    {
+     "id": "r_sh_in",
+     "type": "text",
+     "text": "Ben Shapiro. The day after Tesla flew a car. He starts on how capital works.",
+     "caption": "Ben Shapiro on the Roadster",
+     "ted": "camera",
+     "piece": "shapiro_2026-10-16_roadster"
+    },
+    {
+     "id": "r_shapiro_1",
+     "type": "clip",
+     "src": "shapiro_02_pools",
+     "in": 3.0,
+     "out": 16.0,
+     "layout": "reading",
+     "piece": "shapiro_2026-10-16_roadster"
+    },
+    {
+     "id": "r_s1",
+     "type": "text",
+     "text": "That's an argument. You can check it. Twenty-eight. Then this.",
+     "caption": "An argument you can check",
+     "ted": "map",
+     "piece": "shapiro_2026-10-16_roadster",
+     "map": {
+      "focus": 1
+     }
+    },
+    {
+     "id": "r_shapiro_2",
+     "type": "clip",
+     "src": "shapiro_04_communism",
+     "in": 2.5,
+     "out": 41.0,
+     "layout": "reading",
+     "piece": "shapiro_2026-10-16_roadster"
+    },
+    {
+     "id": "r_shapiro_3",
+     "type": "clip",
+     "src": "shapiro_04_communism",
+     "in": 73.5,
+     "out": 90.5,
+     "layout": "reading",
+     "piece": "shapiro_2026-10-16_roadster"
+    },
+    {
+     "id": "r_s2",
+     "type": "text",
+     "text": "Seventy. Eighty. Seventy-six. A woman blown off a bridge, as proof about an economic system. And it ends here.",
+     "caption": "A death, as proof about a system",
+     "ted": "map",
+     "piece": "shapiro_2026-10-16_roadster",
+     "map": {
+      "focus": 11
+     }
+    },
+    {
+     "id": "r_shapiro_4",
+     "type": "clip",
+     "src": "shapiro_05_senate",
+     "in": 8.0,
+     "out": 22.5,
+     "layout": "reading",
+     "piece": "shapiro_2026-10-16_roadster"
+    },
+    {
+     "id": "r_s3",
+     "type": "text",
+     "text": "A car. Then a ranking of the world's economies. Then a Senate seat.",
+     "caption": "A car, then a Senate seat",
+     "ted": "camera",
+     "piece": "shapiro_2026-10-16_roadster",
+     "card": "score"
+    }
+   ]
+  },
+  {
+   "id": "cross",
+   "title": "Where they cross",
+   "beats": [
+    {
+     "id": "x_mirror",
+     "type": "text",
+     "text": "Now put them on one map. Shapiro and Gray land in opposite corners, almost the same distance out, doing the same move. Each one knocks down the easiest version of the other side. So many in America calling for communism. Maybe a little healthcare.",
+     "caption": "Mirror images",
+     "ted": "map",
+     "map": {
+      "paths": true,
+      "orbit": [
+       0,
+       -35
+      ]
+     }
+    },
+    {
+     "id": "x_middle",
+     "type": "text",
+     "text": "Now the middle. Apffel and Welch. Opposite sides. Both say they don't like the word. Both tell you what they mean by it. They're the two dots closest to the center.",
+     "caption": "The middle",
+     "ted": "map",
+     "map": {
+      "paths": true,
+      "zoom": 5.6
+     }
+    },
+    {
+     "id": "x_height",
+     "type": "text",
+     "text": "And look at the height. Shapiro is way above the plane. He thinks he's winning. Gray and Apffel are below it. They think they're losing. Both sides get hot. So heat isn't about winning or losing. It's about how far you've drifted from the thing.",
+     "caption": "Heat isn't about winning",
+     "ted": "map",
+     "map": {
+      "paths": true,
+      "orbit": [
+       35,
+       -38
+      ],
+      "zoom": 7.4
+     }
+    },
+    {
+     "id": "x_board",
+     "type": "text",
+     "text": "So. Tucker's segment: Dia twenty-one, fifty-five lumens. Bad Faith: thirty-seven, forty lumens. Shapiro: fifty-three, twenty-two lumens. Same word. Same month. Same ruler, left and right. That's the new thing.",
+     "caption": "Same word, same ruler, left and right",
+     "ted": "camera"
+    }
+   ]
+  }
+ ]
+}

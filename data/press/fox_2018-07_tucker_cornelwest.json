@@ -1,0 +1,279 @@
+{
+ "schema": "press/parallelogram/v0",
+ "kind": "parallelogram",
+ "positions": "seconds",
+ "horizon": null,
+ "arc": null,
+ "transform": "none",
+ "id": "fox_2018-07_tucker_cornelwest",
+ "status": "claude-draft",
+ "title": "Basically On Board",
+ "show": "ep01",
+ "source": {
+  "program": "Tucker Carlson Tonight",
+  "network": "Fox News (YouTube)",
+  "format": "tape",
+  "date": "2018-07-03",
+  "title": "Tucker takes on Cornel West over Democratic socialism",
+  "url": "https://www.youtube.com/watch?v=kuc6C2_Txmw",
+  "length": 584,
+  "transcript": "Transcripts/show/ep01/clipsubs_kuc6C2_Txmw.en-orig.vtt",
+  "note": "air date approximate (early July 2018, after Ocasio-Cortez's primary); upload is from that week. Exchange 2:32–4:23, played whole so 'on board' keeps its 'but the details' and 'never worked anywhere'"
+ },
+ "object": {
+  "label": "Democratic socialism as the left's program (2018, after Ocasio-Cortez's primary)",
+  "layer": 1,
+  "zAxis": {
+   "pos": "it delivers dignity for ordinary people",
+   "neg": "it hasn't worked anywhere / the current system fails them"
+  }
+ },
+ "transformNote": "read for the show: Tucker in 2018 agreeing with the aim of democratic socialism, then pressing on the record",
+ "names": {
+  "TC": "Tucker Carlson (host)",
+  "CW": "Cornel West (guest)"
+ },
+ "trace": {
+  "object": {
+   "x": 0,
+   "y": 0,
+   "z": -0.24
+  },
+  "shadow": {
+   "x": 0,
+   "y": 0,
+   "z": 0.4
+  },
+  "shadowNote": "the aim held in common: dignity for ordinary people",
+  "predicates": {
+   "operative": [],
+   "stated": [],
+   "challenge": []
+  },
+  "positions": [
+   {
+    "quadrant": "A",
+    "station": "LI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — cut for the show"
+   },
+   {
+    "quadrant": "B",
+    "station": "RI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — cut for the show"
+   },
+   {
+    "quadrant": "C",
+    "station": "LP",
+    "fluid": "decency · our goals are the same",
+    "denominated": "—",
+    "distinguishability": "Medium",
+    "fluidKeywords": [
+     "decency",
+     "fairness"
+    ],
+    "denomKeywords": [],
+    "note": "guest"
+   },
+   {
+    "quadrant": "D",
+    "station": "RP",
+    "fluid": "basically on board · dignity · the details",
+    "denominated": "never actually worked anywhere",
+    "distinguishability": "High",
+    "fluidKeywords": [
+     "dignity",
+     "details"
+    ],
+    "denomKeywords": [
+     "Venezuela",
+     "toilet paper"
+    ],
+    "note": "host"
+   }
+  ]
+ },
+ "log": [
+  {
+   "date": "2026-10-27",
+   "what": "cut for The Parallelogram Report ep. 1 (Sailor's 10-27 park memo: more Tucker, Briahna's positive definition). Speaker attribution and all scores are Claude's proposals",
+   "by": "Claude"
+  }
+ ],
+ "scoreboard": {
+  "dia": 29,
+  "tier": "fluid",
+  "declaredZ": null,
+  "readZ": -0.24,
+  "readZRange": [
+   0.3,
+   -0.7
+  ],
+  "stations": {
+   "LI": null,
+   "RI": null,
+   "LP": {
+    "dia": 26,
+    "spread": [
+     18,
+     30
+    ],
+    "readZ": -0.03,
+    "voices": {
+     "CW": {
+      "dia": 26,
+      "readZ": -0.03,
+      "n": 4
+     }
+    }
+   },
+   "RP": {
+    "dia": 33,
+    "spread": [
+     12,
+     46
+    ],
+    "readZ": -0.53,
+    "voices": {
+     "TC": {
+      "dia": 33,
+      "readZ": -0.53,
+      "n": 3
+     }
+    }
+   }
+  },
+  "split": {
+   "topology": "2-corner",
+   "station": null,
+   "strength": 0.3,
+   "note": "host and guest agree on the aim, split on the record"
+  },
+  "lumens": 51,
+  "zRule": "every line carries a z, inferred where implied (Sailor 2026-10-13); inferred lines are marked zInferred with a zWhy",
+  "mode": "open"
+ },
+ "lines": [
+  {
+   "t": 155,
+   "who": "TC",
+   "station": "RP",
+   "quote": "can you point to an extant example of it that works? Venezuela… does it work?",
+   "touch": "O",
+   "z": -0.5,
+   "dia": 40,
+   "mode": "open",
+   "note": "the test, with the hard case first",
+   "chapter": "The test",
+   "normX": 0.6497,
+   "normY": 0.643,
+   "normZ": -0.375,
+   "quadrant": "D"
+  },
+  {
+   "t": 167,
+   "who": "CW",
+   "station": "LP",
+   "quote": "no… some are bad, some are medium, some work better — but the commitment is to the dignity of ordinary people",
+   "touch": "O",
+   "z": -0.2,
+   "dia": 26,
+   "mode": "open",
+   "note": "concedes, then names the commitment",
+   "chapter": "The test",
+   "normX": 0.39,
+   "normY": 0.6075,
+   "normZ": -0.15,
+   "quadrant": "C"
+  },
+  {
+   "t": 190,
+   "who": "CW",
+   "station": "LP",
+   "quote": "it's not an ism, brother — it's about decency, fairness, the accountability of the powerful",
+   "touch": "F",
+   "z": -0.2,
+   "dia": 30,
+   "mode": "open",
+   "note": "renames the word into its aim",
+   "chapter": "The test",
+   "normX": 0.3861,
+   "normY": 0.6249,
+   "normZ": -0.15,
+   "quadrant": "C"
+  },
+  {
+   "t": 214,
+   "who": "TC",
+   "station": "RP",
+   "quote": "if that's what democratic socialism is, I'm basically on board… current systems make it hard for them to have dignity… but the details",
+   "touch": "O",
+   "z": -0.4,
+   "dia": 12,
+   "mode": "open",
+   "note": "agrees with the aim; the system is failing them",
+   "chapter": "On board",
+   "normX": 0.566,
+   "normY": 0.5759,
+   "normZ": -0.3,
+   "quadrant": "D"
+  },
+  {
+   "t": 231,
+   "who": "CW",
+   "station": "LP",
+   "quote": "Einstein, Helen Keller, Eugene Debs, Martin Luther King Jr. — they're all democratic socialists",
+   "touch": "F",
+   "z": 0.3,
+   "dia": 30,
+   "mode": "open",
+   "note": "borrowed authority, not the object",
+   "chapter": "On board",
+   "normX": 0.3704,
+   "normY": 0.6085,
+   "normZ": 0.225,
+   "quadrant": "C"
+  },
+  {
+   "t": 244,
+   "who": "TC",
+   "station": "RP",
+   "quote": "has it struck you as interesting that it's never actually worked anywhere… Venezuela… they don't have toilet paper",
+   "touch": "O",
+   "z": -0.7,
+   "dia": 46,
+   "mode": "open",
+   "note": "back to the hard case; the coalition move",
+   "chapter": "Never worked",
+   "normX": 0.6794,
+   "normY": 0.6436,
+   "normZ": -0.525,
+   "quadrant": "D"
+  },
+  {
+   "t": 252,
+   "who": "CW",
+   "station": "LP",
+   "quote": "our goals are the same — how do we get there is the question",
+   "touch": "O",
+   "z": 0.0,
+   "dia": 18,
+   "mode": "open",
+   "note": "puts the disagreement where it is: means, not ends",
+   "chapter": "Never worked",
+   "normX": 0.416,
+   "normY": 0.5904,
+   "normZ": 0.0,
+   "quadrant": "C"
+  }
+ ]
+}

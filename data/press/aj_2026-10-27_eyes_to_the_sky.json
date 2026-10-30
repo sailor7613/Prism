@@ -1,0 +1,648 @@
+{
+ "schema": "press/parallelogram/v0",
+ "id": "aj_2026-10-27_eyes_to_the_sky",
+ "status": "claude-draft",
+ "kind": "parallelogram",
+ "title": "Eyes to the Sky",
+ "source": {
+  "program": "Al Jazeera English",
+  "network": "Al Jazeera (own report, Tehran voices)",
+  "format": "print",
+  "date": "2026-10-27",
+  "title": "Iranians brace for renewed attacks after Israeli, US elections",
+  "byline": "Al Jazeera Staff",
+  "url": "https://www.aljazeera.com/news/2026/10/27/iranians-will-their-eyes-on-the-sky-for-bomb-when-israeli-us-elections-end",
+  "length": 23,
+  "paragraphs": 23,
+  "transcript": "Parameters/09_Parallelograms/Press/2026-10-27_AlJazeera_Eyes_To_The_Sky/source.md",
+  "note": "published 10-27 13:23 (page metadata, zone not stated); the 10-27 sweep (matched on 'iran'). Cut on 10-28 because no 10-28 sweep existed at run time (07:01 PT; GitHub's sweeps/index.json ends at 10-27) — the protocol's 'newest date' rule; the 10-27 queue's remaining rows were the day's queue. Newest unmarked AJ hit on a live object after yesterday's cut (the Moscow page 13:26 is six paragraphs and the 15:49 item is a video newsfeed — both filed in the pass, not cut). Non-US horizon, flagged. Read in full via the cloud fetch; reductions filed, no quotation over twelve words. A street page: the article, two anonymous Tehran residents, one X user; the force's two holders (Trump, Katz) as reported; Israel's opposition as reported"
+ },
+ "positions": "paragraphs",
+ "horizon": "non-US",
+ "arc": "PG01",
+ "object": {
+  "label": "H6 — the Strait of Hormuz (PG01 layer 2), read from the force's side of the water and from Tehran's street: the naval blockade of Iran's southern ports (in place since July, Iran's oil exports halted — ¶14) as the instrument that keeps the water shut from Washington's end, and the strikes promised for after the two elections (¶3, ¶13, ¶15, ¶20) as the force's clock; the page's own subject is the street waiting for the jets. The Strait is not named on the page; the deal and the price are not on it",
+  "layer": 2,
+  "zAxis": {
+   "pos": "the force relents — the blockade lifts, no renewed strikes, the water reopens under the holder's 'U.S. control' and prices come down by it (the 10-11 words)",
+   "neg": "it does not — the blockade is prolonged by the holder's own threat, the strikes resume after the elections, and the water stays shut from both ends"
+  }
+ },
+ "transform": "Z-assertion",
+ "transformNote": "the shadow is the holder's 'U.S. control of the Strait of Hormuz' (10-11) as half the cure for prices 'COMING DOWN'. On this page the same holder's sentence is the opposite instrument: prolong the blockade of Iran's ports (¶14), strike the power plants and bridges if hostilities resume (¶13), 'death of a civilisation' (¶12). The control the shadow promised reopens the water; the control the page reports keeps it shut. Two sentences, one hand, sixteen days apart — reported as a series across sittings, not ruled",
+ "names": {
+  "AJ": "the article (Al Jazeera narration, staff)",
+  "DT": "Donald Trump (threats, undated on the page, as reported; US media on the military's readiness) — constitutive, @O: the force's holder and the shadow's holder; the principal — never Dia-scored",
+  "IK": "Israel Katz (Israel's defence minister, as reported) — constitutive, @O: the other force's holder on the page; never Dia-scored",
+  "SJ": "Sajad, 37, Tehran resident (anonymous for security; to Al Jazeera) — reported, stationed with the publication",
+  "SH": "Shayan, 32, Tehran resident (to Al Jazeera) — reported, stationed with the publication",
+  "GE": "Gadi Eisenkot (Israeli opposition leader, as reported) — reported, stationed with the publication; a reader of the force, not its holder",
+  "AL": "Ali (a user on X, as quoted) — reported, stationed with the publication"
+ },
+ "trace": {
+  "object": {
+   "x": 0,
+   "y": 0,
+   "z": -0.6
+  },
+  "shadow": {
+   "x": 0,
+   "y": 0,
+   "z": 1.0
+  },
+  "shadowNote": "'U.S. control of the Strait' reopening the water and bringing prices down — the holder's 10-11 words; on this page the holder's reported sentence is the blockade prolonged and the plants struck",
+  "predicates": {
+   "operative": [
+    {
+     "type": "T",
+     "label": "the naval blockade of Iran's southern ports, in place since July, has halted Iran's oil exports and disrupted trade; with sanctions it has made Iranians poorer and more isolated (¶14)",
+     "z": -0.7
+    },
+    {
+     "type": "T",
+     "label": "attacks fell sharply after the June Washington–Tehran memorandum; many analysts expect strikes to resume after the elections; US media: the military ready to attack in the coming days if ordered (¶3, ¶13)",
+     "z": -0.5
+    },
+    {
+     "type": "T",
+     "label": "since February 28: bombings, a blockade, sanctions; January's protests, thousands believed killed, a UN finding of crimes against humanity (¶2, ¶8)",
+     "z": -0.3
+    }
+   ],
+   "stated": [
+    {
+     "type": "O",
+     "label": "Trump (as reported): 'death of a civilisation'; the map different after the war; major strikes on power plants and bridges if hostilities resume; the blockade prolonged (¶12–¶14)",
+     "z": -0.7
+    },
+    {
+     "type": "O",
+     "label": "Katz (as reported): strike Iranian infrastructure again, energy facilities included — 'back into the Stone Age' (¶15)",
+     "z": -0.8
+    }
+   ],
+   "challenge": [
+    {
+     "type": "X",
+     "label": "Eisenkot (as reported): military action cannot realistically topple the Islamic Republic; change must come from Iranians (¶19)",
+     "z": -0.2
+    }
+   ]
+  },
+  "positions": [
+   {
+    "quadrant": "A",
+    "station": "LI",
+    "fluid": "November 3 · February 28 · June · July · January · 1979 · 12-day war · thousands · 90 million · oil exports halted · power plants · bridges · energy facilities",
+    "denominated": "homeland sellers · death of a civilisation · Stone Age · axis of resistance · eyes to the sky",
+    "distinguishability": "High",
+    "fluidKeywords": [
+     "November 3",
+     "February 28",
+     "June memorandum",
+     "since July",
+     "oil exports",
+     "power plants",
+     "bridges",
+     "energy facilities",
+     "thousands"
+    ],
+    "denomKeywords": [
+     "homeland sellers",
+     "death of a civilisation",
+     "Stone Age",
+     "axis of resistance",
+     "eyes to the sky",
+     "more fighting"
+    ],
+    "note": "AJ (LI, non-US horizon) reads the force from the street it falls on: the article at 6–22 with the instrument dated (the blockade since July) and the clock placed (after the elections; the coming days if ordered); the residents at 26–48 reading the force as certain whoever wins; the X user at 56. Read z −0.36: no line on the page has the water reopening; the lowest lines are the record of the lock. The two holders' words are the most denominated on the page and are not scored (@O)"
+   },
+   {
+    "quadrant": "B",
+    "station": "RI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — Fox is cut today on the Power Rankings (one cut per source); Surveillance 10-27 names the talks in a chapter title (transcript owed); The Close 0 items for the eighth sweep"
+   },
+   {
+    "quadrant": "C",
+    "station": "LP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — Breaking Points 10-27 'Bibi Iran Plot' and 10-26 'Oil Market ON THE BRINK' are the LP reads of the force and the price (transcripts owed)"
+   },
+   {
+    "quadrant": "D",
+    "station": "RP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — TCN 10-26 on Trump and Netanyahu owed; the Free Press's Front Page (10-27) read to the paywall: Israel's vote, no Iran, no price; Shapiro 0 hits"
+   }
+  ]
+ },
+ "log": [
+  {
+   "date": "2026-10-28",
+   "what": "daily cut over the 10-27 sweep's remaining rows (no 10-28 sweep on GitHub or on disk at 07:01 PT; GitHub's index ends at 10-27 — the newest used, per the protocol). Twenty-three paragraphs read in full via the cloud fetch; twenty-one scored, two constitutive (Trump @O as the force's holder and the shadow's — the principal, declared z −0.7 on this axis; Katz @O, z −0.8). Object declared on H6 from the force's side — the blockade as the instrument, the post-election strikes as the clock — with the Strait unnamed on the page; the alternative reading (a slate01/force sighting with no live object, not to be scored) is listed under rulings owed. Chosen over the Moscow page (six paragraphs, filed) and the 15:49 newsfeed (video, no text); my call, reversible. One AJ cut per day",
+   "by": "Claude"
+  }
+ ],
+ "scoreboard": {
+  "dia": 26,
+  "tier": "fluid",
+  "declaredZ": -0.7,
+  "readZ": -0.36,
+  "readZRange": [
+   0.0,
+   -0.7
+  ],
+  "stations": {
+   "LI": {
+    "dia": 26,
+    "spread": [
+     6,
+     56
+    ],
+    "readZ": -0.36,
+    "voices": {
+     "AJ": {
+      "dia": 20,
+      "readZ": -0.34,
+      "n": 15
+     },
+     "AL": {
+      "dia": 56,
+      "readZ": -0.6,
+      "n": 1
+     },
+     "GE": {
+      "dia": 32,
+      "readZ": -0.2,
+      "n": 1
+     },
+     "SH": {
+      "dia": 30,
+      "readZ": -0.33,
+      "n": 3
+     },
+     "SJ": {
+      "dia": 42,
+      "readZ": -0.55,
+      "n": 2
+     }
+    }
+   },
+   "RI": null,
+   "LP": null,
+   "RP": null
+  },
+  "split": {
+   "topology": "none",
+   "station": "LI",
+   "strength": 0.0,
+   "note": "one station, two planes: the record (the article — the blockade dated, the memorandum, the readiness, the shutdown warnings: 6–22) and the street (two residents and an X user reading the force as certain and the water as a thing that cannot be changed from where they stand: 26–56). Shayan moves 26 → 30 → 34 across three lines (Rule 5 inside one voice, within the fluid band); no voice reads the water as reopening"
+  },
+  "lumens": 38,
+  "zRule": "every line carries a z, inferred where implied (Sailor 2026-10-13); inferred lines are marked zInferred with a zWhy",
+  "mode": "open"
+ },
+ "lines": [
+  {
+   "t": 0,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "Iranians brace for renewed attacks after the elections; strikes teased, particularly against civilian infrastructure",
+   "touch": "F",
+   "z": -0.5,
+   "dia": 22,
+   "mode": "open",
+   "note": "THE DOOR: the dek names the force's target class (civilian infrastructure) and its clock (the elections). 'Brace' is the page's verdict word",
+   "chapter": "The door",
+   "normX": 0.3838,
+   "normY": 0.4245,
+   "normZ": -0.375,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a street bracing for strikes after the vote is a water not reopening before it"
+  },
+  {
+   "t": 1,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "Israelis have voted on Netanyahu; the US midterms on November 3",
+   "touch": "T",
+   "z": -0.1,
+   "dia": 8,
+   "mode": "open",
+   "note": "the two clocks, dated — placement",
+   "chapter": "The clocks",
+   "normX": 0.4511,
+   "normY": 0.43,
+   "normZ": -0.075,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "two election dates read neither way on the water by themselves"
+  },
+  {
+   "t": 2,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "since February 28: bombings, a blockade, sanctions",
+   "touch": "T",
+   "z": -0.4,
+   "dia": 10,
+   "mode": "open",
+   "note": "the record's three instruments in one line; the blockade is H6's lock from Washington's end",
+   "chapter": "The record",
+   "normX": 0.4442,
+   "normY": 0.4256,
+   "normZ": -0.3,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a blockade listed among the war's instruments is a water shut from both ends"
+  },
+  {
+   "t": 3,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "attacks fell sharply after the June memorandum; war fears have returned; many analysts expect strikes to resume after the elections",
+   "touch": "T",
+   "z": -0.4,
+   "dia": 14,
+   "mode": "open",
+   "note": "the June MoU as the record (second Press sighting; aj 10-27 ¶9) and the clock set by 'many analysts' — attributed, undated",
+   "chapter": "The record",
+   "normX": 0.4322,
+   "normY": 0.4157,
+   "normZ": -0.3,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "strikes expected after the elections are a force not relenting before them"
+  },
+  {
+   "t": 4,
+   "who": "SJ",
+   "station": "LI",
+   "quote": "more fighting whoever wins, Netanyahu or Eisenkot",
+   "touch": "F",
+   "z": -0.6,
+   "dia": 36,
+   "mode": "open",
+   "note": "the street's first verdict: the Israeli clock does not change the force. Oscillation band",
+   "chapter": "The street",
+   "normX": 0.3747,
+   "normY": 0.3548,
+   "normZ": -0.45,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "more fighting regardless of the winner is a water that stays shut regardless"
+  },
+  {
+   "t": 5,
+   "who": "SJ",
+   "station": "LI",
+   "quote": "Israeli rhetoric aims to overthrow the Islamic Republic, in power since 1979",
+   "touch": "F",
+   "z": -0.5,
+   "dia": 48,
+   "mode": "open",
+   "note": "the force's purpose as the resident reads it — regime change (the `iran-strikes` terms); denominated toward the oscillation ceiling",
+   "chapter": "The street",
+   "normX": 0.3389,
+   "normY": 0.3256,
+   "normZ": -0.375,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a force aimed at the regime is a force with no price to relent for"
+  },
+  {
+   "t": 6,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "opposition exists inside and outside Iran; cyber operations make online reactions hard to measure",
+   "touch": "F",
+   "z": 0.0,
+   "dia": 30,
+   "mode": "vacancy",
+   "note": "off the water — the page measuring its own instrument; vacancy",
+   "chapter": "The record",
+   "normX": 0.3812,
+   "normY": 0.3798,
+   "normZ": 0.0,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "reactions hard to measure read neither way on the water"
+  },
+  {
+   "t": 7,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "pro-Israeli Iranians called 'homeland sellers'; cooperation punished under national-security charges",
+   "touch": "T",
+   "z": 0.0,
+   "dia": 40,
+   "mode": "vacancy",
+   "note": "the state's denomination quoted; the water absent; vacancy",
+   "chapter": "The record",
+   "normX": 0.3496,
+   "normY": 0.3578,
+   "normZ": 0.0,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a charge for cooperation reads neither way on the water"
+  },
+  {
+   "t": 8,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "January's protests, thousands believed killed; the UN: crimes against humanity by the security forces",
+   "touch": "T",
+   "z": -0.2,
+   "dia": 20,
+   "mode": "surface-bound",
+   "note": "the record of the crackdown — right domain, a different plane from the water (surface-bound). Filed in the pass; no analog on the Press",
+   "chapter": "The record",
+   "normX": 0.4018,
+   "normY": 0.4133,
+   "normZ": -0.15,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a crackdown on the record is a force answered inward, not a water reopened"
+  },
+  {
+   "t": 9,
+   "who": "SH",
+   "station": "LI",
+   "quote": "those who hoped for an overthrow are disillusioned; the blockade and sanctions have cut most incomes",
+   "touch": "F",
+   "z": -0.5,
+   "dia": 26,
+   "mode": "open",
+   "note": "THE BLOCKADE AT THE COUNTER — the instrument's effect in Tehran, by a resident: the H1c mirror (the price from the other end of the water)",
+   "chapter": "The street",
+   "normX": 0.3813,
+   "normY": 0.4022,
+   "normZ": -0.375,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a blockade that cuts incomes is a water shut and paid for on this side too"
+  },
+  {
+   "t": 10,
+   "who": "SH",
+   "station": "LI",
+   "quote": "views shifted after US and Israeli comments and strikes on infrastructure — oil and gas, power, steel",
+   "touch": "F",
+   "z": -0.4,
+   "dia": 30,
+   "mode": "open",
+   "note": "the force's past targets named (oil and gas first); the resident reads the threats as already enacted once",
+   "chapter": "The street",
+   "normX": 0.366,
+   "normY": 0.397,
+   "normZ": -0.3,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "strikes on oil and gas already made are a force that has not relented"
+  },
+  {
+   "t": 11,
+   "who": "SH",
+   "station": "LI",
+   "quote": "most Iranians have no real choice and want stability and peace",
+   "touch": "F",
+   "z": -0.1,
+   "dia": 34,
+   "mode": "open",
+   "note": "Rule 5 inside one voice: 26 → 30 → 34 across three lines — the resident's Dia rising as the water leaves the sentence",
+   "chapter": "The street",
+   "normX": 0.3503,
+   "normY": 0.3927,
+   "normZ": -0.075,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a wish for peace reads the force as the only variable"
+  },
+  {
+   "t": 12,
+   "who": "DT",
+   "station": "O",
+   "quote": "'death of a civilisation'; the map might look different after the war",
+   "touch": "O",
+   "z": -0.7,
+   "dia": null,
+   "mode": "open",
+   "note": "constitutive — THE FORCE'S HOLDER, as reported and undated: the shadow's holder ('U.S. control', 10-11) in his other sentence. Not Dia-scored",
+   "chapter": "The holder",
+   "normX": 0.5,
+   "normY": 0.5,
+   "normZ": -0.525,
+   "quadrant": "T"
+  },
+  {
+   "t": 13,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "repeated threats to strike power plants, bridges, civilian infrastructure if hostilities resume; US media: the military ready to attack in the coming days if ordered",
+   "touch": "T",
+   "z": -0.6,
+   "dia": 12,
+   "mode": "open",
+   "note": "THE READINESS: the force's clock at its shortest on the page ('the coming days if ordered') — the article attributes it to US media, not to the holder; `cand-post-election-strikes`, twelfth-plus sighting",
+   "chapter": "The record",
+   "normX": 0.4433,
+   "normY": 0.4169,
+   "normZ": -0.45,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a military ready in days is a force that has not relented"
+  },
+  {
+   "t": 14,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "the other threat: prolong the naval blockade of Iran's southern ports, in place since July — oil exports halted, trade disrupted; with sanctions, poorer and more isolated",
+   "touch": "T",
+   "z": -0.7,
+   "dia": 6,
+   "mode": "open",
+   "note": "THE INSTRUMENT, DATED, WITH ITS EFFECT: H6's lock from Washington's end — since July, Iran's oil exports at zero by it. The page's lowest-Dia line. The holder's 'control' of the water on the 10-11 page is this blockade on this one",
+   "chapter": "The record",
+   "normX": 0.454,
+   "normY": 0.4372,
+   "normZ": -0.525,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a blockade prolonged by the holder's threat is a water the holder keeps shut"
+  },
+  {
+   "t": 15,
+   "who": "IK",
+   "station": "O",
+   "quote": "strike Iranian infrastructure again, energy facilities included; 'back into the Stone Age'",
+   "touch": "O",
+   "z": -0.8,
+   "dia": null,
+   "mode": "open",
+   "note": "constitutive — the other force's holder (Israel's defence minister), as reported. Not Dia-scored",
+   "chapter": "The holder",
+   "normX": 0.5,
+   "normY": 0.5,
+   "normZ": -0.6,
+   "quadrant": "T"
+  },
+  {
+   "t": 16,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "Eisenkot, Bennett, Lapid and Golan praised the US-Israeli attacks, this war and last year's 12-day war",
+   "touch": "T",
+   "z": -0.3,
+   "dia": 16,
+   "mode": "open",
+   "note": "the record of the opposition's position — the Israeli clock does not change the force (the resident's ¶4, confirmed by the article)",
+   "chapter": "The vote",
+   "normX": 0.4254,
+   "normY": 0.4114,
+   "normZ": -0.225,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "an opposition that praised the attacks is a vote that does not relent the force"
+  },
+  {
+   "t": 17,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "the uranium stockpiles removed, the programme dismantled, the 'axis of resistance' eliminated",
+   "touch": "F",
+   "z": -0.3,
+   "dia": 30,
+   "mode": "open",
+   "note": "the opposition's aims as the article frames them; the force's purpose stated from the other side",
+   "chapter": "The vote",
+   "normX": 0.3868,
+   "normY": 0.3745,
+   "normZ": -0.225,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "aims stated as removal and dismantling are a force with its purpose intact"
+  },
+  {
+   "t": 18,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "government and opposition share the goal of overthrowing Iran's establishment; they differ on methods",
+   "touch": "F",
+   "z": -0.3,
+   "dia": 28,
+   "mode": "open",
+   "note": "the article's verdict on the Israeli vote: one goal, two methods",
+   "chapter": "The vote",
+   "normX": 0.3879,
+   "normY": 0.3839,
+   "normZ": -0.225,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "one goal with two methods is a force whose clock the vote does not stop"
+  },
+  {
+   "t": 19,
+   "who": "GE",
+   "station": "LI",
+   "quote": "military action cannot realistically topple the Islamic Republic; change must come from Iranians",
+   "touch": "F",
+   "z": -0.2,
+   "dia": 32,
+   "mode": "open",
+   "note": "the challenge predicate: the force's own side doubting its purpose — a reader, stationed with the publication",
+   "chapter": "The vote",
+   "normX": 0.3731,
+   "normY": 0.3772,
+   "normZ": -0.15,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a force doubted by its own side is still a force not yet relented"
+  },
+  {
+   "t": 20,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "some Iranians are mentally preparing for conflict once the elections end",
+   "touch": "F",
+   "z": -0.5,
+   "dia": 30,
+   "mode": "open",
+   "note": "the clock restated as the street's expectation",
+   "chapter": "The street",
+   "normX": 0.3746,
+   "normY": 0.3867,
+   "normZ": -0.375,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a street preparing for conflict after the vote is a water not reopening before it"
+  },
+  {
+   "t": 21,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "groups formed with friends across the country to warn one another of strikes if they hear fighter jets overhead",
+   "touch": "T",
+   "z": -0.5,
+   "dia": 18,
+   "mode": "open",
+   "note": "THE STREET'S DETECTOR: the page's one instrument built by the readers themselves — jets overhead as the primary",
+   "chapter": "The street",
+   "normX": 0.4057,
+   "normY": 0.4204,
+   "normZ": -0.375,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a warning network for jets is a force expected, sized by ear"
+  },
+  {
+   "t": 22,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "domestic apps or texts, because the authorities may impose further internet and communication shutdowns",
+   "touch": "T",
+   "z": -0.3,
+   "dia": 20,
+   "mode": "open",
+   "note": "the state's own clock on the force (a shutdown 'if needed') — the inward answer, dated to the same window",
+   "chapter": "The street",
+   "normX": 0.3971,
+   "normY": 0.4189,
+   "normZ": -0.225,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a shutdown prepared for is a force expected by the state too"
+  },
+  {
+   "t": 23,
+   "who": "AL",
+   "station": "LI",
+   "quote": "ninety million people have their eyes to the sky for war",
+   "touch": "F",
+   "z": -0.6,
+   "dia": 56,
+   "mode": "open",
+   "note": "THE TITLE: the page's most denominated line and its last — the force read as weather. Oscillation band, near its ceiling",
+   "chapter": "The street",
+   "normX": 0.2841,
+   "normY": 0.3415,
+   "normZ": -0.45,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "eyes to the sky are a water nobody on the page expects to reopen"
+  }
+ ]
+}

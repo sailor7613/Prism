@@ -1,0 +1,504 @@
+{
+  "centralObject": {
+    "kind": "object",
+    "ref": "Complaint, Greenberg v. Trump, No. 1:26-cv-03686 (D.D.C.), filed 2026-10-22",
+    "name": "The emoluments complaint of 2026-10-22: a Circle shareholder, suing on Circle's behalf, asks the D.C. federal court to bar the President from foreign payments without Congress's consent and to return World Liberty's UAE-linked profits",
+    "place": {
+      "quadrants": [
+        "B",
+        "D"
+      ],
+      "band": "coalition",
+      "z": -0.55,
+      "why": "The complaint presses the President's side and the courts to say whether the Foreign Emoluments Clause reaches foreign money paid into a President's crypto business, but a Circle shareholder suing on the company's behalf without Circle has a thin standing theory, and the first-term emoluments suits ended moot and recovered nothing."
+    }
+  },
+  "tethers": [
+    {
+      "statute": "Foreign Emoluments Clause",
+      "cite": "U.S. Const. art. I, § 9, cl. 8",
+      "title": "No officeholder shall, without the consent of Congress, accept any present, emolument, office or title from any king, prince or foreign state",
+      "enacted": "1788-06-21",
+      "relation": "invokes",
+      "why": "Both counts against the President rest on it (AP via Spokesman, Bloomberg via Quartz, Spectrum, 10-22). Ratification date from background, not re-verified this run.",
+      "place": {
+        "quadrants": [
+          "B",
+          "D"
+        ],
+        "band": "coalition",
+        "z": -0.4,
+        "why": "A clause with no statute to enforce it; the first-term suits ended moot and recovered nothing, so it bears on the President's side mostly as argument. Claude's place, not the blind author's."
+      }
+    },
+    {
+      "billId": "s-119-1668",
+      "bill": "S. 1668",
+      "title": "End Crypto Corruption Act of 2025",
+      "relation": "adjacent",
+      "statusAsOf": "Reported; placed on the Senate Legislative Calendar 2025-05-08, no floor vote (catalog)",
+      "why": "Merkley's bill would bar the President and family from issuing or profiting from crypto assets: the statutory version of what the suit asks a court to do through the Clause.",
+      "inDb": true,
+      "place": {
+        "quadrants": [
+          "B",
+          "D"
+        ],
+        "band": "fluid",
+        "z": -0.6,
+        "why": "On the calendar seventeen months without a vote; it names the conduct and does not move. Claude's place."
+      }
+    },
+    {
+      "billId": "s-119-1582",
+      "bill": "S. 1582",
+      "title": "GENIUS Act",
+      "relation": "adjacent",
+      "statusAsOf": "Public Law 119-27, signed 2025-07-18 (catalog)",
+      "why": "The stablecoin law under which USD1 and Circle's USDC both operate; it regulates issuers and does not reach a President's family stake, which leaves the Clause as the suit's only hook.",
+      "inDb": true,
+      "place": {
+        "quadrants": [
+          "A",
+          "C"
+        ],
+        "band": "fluid",
+        "z": 0.3,
+        "why": "In force and delivering on its own object (stablecoin rules), it presses on the left mainly by what it left out. Claude's place."
+      }
+    }
+  ],
+  "linkedBills": [
+    "s-119-1668",
+    "s-119-1582"
+  ],
+  "title": "The Rival's Shareholder",
+  "category": "Law · Courts · Crypto",
+  "date": "2026-10-22",
+  "prompt": "A rival's shareholder sues over a foreign stake. Can the Emoluments Clause reach a President's crypto?",
+  "framing": "On Thursday, October 22, 2026, J. Benjamin Greenberg, a former Circle engineer who holds shares in the stablecoin company, sued the President in federal court in Washington under the Constitution's Foreign Emoluments Clause. He alleges two violations: more than $75.5 million the President took in after inauguration from the sale of a 49% stake in World Liberty Financial, the crypto venture he co-founded with his sons, to a firm backed by UAE national security adviser Sheikh Tahnoon bin Zayed; and a $2 billion Binance investment paid in World Liberty's USD1 stablecoin by an Abu Dhabi fund Tahnoon chairs. Suing for Circle, a World Liberty rival, he asks the court to bar foreign payments without Congress's consent and order the profits returned. Circle says it took no part; World Liberty calls the claims meritless; the White House, frivolous.",
+  "framingKeywords": [
+    "emoluments",
+    "World Liberty",
+    "the UAE",
+    "stablecoin",
+    "Circle shareholder"
+  ],
+  "prevalentAxis": "x",
+  "split": {
+    "topology": "peel",
+    "strength": 0.45,
+    "seam": "The left-institutional rim against everyone else: eleven of twelve stations expect no delivery, mostly on standing.",
+    "rationale": "Eleven of the twelve stations, centers and rims on both sides, read the suit as not delivering, mostly because of standing. Only the left-institutional rim peels away to a positive read, because it trusts the D.C. court and takes the foreign money itself as the whole case.",
+    "zPattern": {
+      "centers": {
+        "A": -0.1,
+        "B": -0.6,
+        "C": -0.6,
+        "D": -0.75
+      },
+      "rims": {
+        "A": 0.6,
+        "B": -0.85,
+        "C": -0.9,
+        "D": -0.9
+      },
+      "note": "Centers are fluid z; coalition z: A -0.3, B -0.5, C -0.45, D -0.5. Object's own z -0.55."
+    },
+    "ruledBy": null,
+    "date": "2026-10-22"
+  },
+  "antiValentBand": "denominated",
+  "antiValentRationale": "The sign flips only at the denominated band: A's rim turns positive by trusting the court, while every other rim stays deeply negative through distrust of the plaintiff, the court or the President, so the rims spread furthest apart in sign while the centers broadly agree on a standing dismissal.",
+  "axes": {
+    "x": {
+      "pos": "Right",
+      "neg": "Left"
+    },
+    "y": {
+      "pos": "Institutional",
+      "neg": "Populist"
+    },
+    "z": {
+      "pos": "the suit delivers: a court reaches the President's foreign crypto money and the Clause gets teeth",
+      "neg": "the suit doesn't deliver: a rival's shareholder is thrown out on standing, or the suit is a stunt that changes nothing"
+    }
+  },
+  "responses": {
+    "A": {
+      "fluid": {
+        "z": -0.1,
+        "zReason": "A Circle shareholder claiming competitive injury from USD1 is a better standing theory than the first-term suits had, but the court has to settle standing before it can reach any of the money.",
+        "instrument": {
+          "holder": "the D.C. federal court",
+          "trusted": true
+        },
+        "text": "I think the Emoluments Clause plainly covers $75.5 million from a firm backed by the UAE's national security adviser, but the first question this court has to answer is standing. A Circle shareholder claiming competitive injury might get further than the last round did, though I'd bet on a long fight over who's allowed to sue before anyone touches the money.",
+        "xWord": "emoluments",
+        "yWord": "standing",
+        "words": [
+          "the Emoluments Clause",
+          "competitive injury",
+          "who's allowed to sue"
+        ],
+        "source": ""
+      },
+      "coalition": {
+        "z": -0.3,
+        "zReason": "The competitor-injury theory is real, but the speaker remembers the first-term suits ending moot and sees their own side treating a complaint filed the same day as if it had already won.",
+        "instrument": {
+          "holder": "the D.C. federal court",
+          "trusted": true
+        },
+        "text": "I want the Emoluments Clause enforced, and a stablecoin rival losing ground to USD1 is a real injury I can see a judge taking seriously. But the people I vote with are already treating this complaint like the verdict, and I watched that same hope get mooted out last time.",
+        "xWord": "enforced",
+        "yWord": "judge",
+        "words": [
+          "the people I vote with",
+          "a real injury",
+          "mooted out"
+        ],
+        "source": ""
+      },
+      "denominated": {
+        "z": 0.6,
+        "zReason": "At the rim the speaker trusts a Washington court to see foreign money flowing into the President's coin and rule on that alone, so the standing question drops out.",
+        "instrument": {
+          "holder": "the D.C. federal court",
+          "trusted": true
+        },
+        "text": "This is the corruption case the courts finally can't dodge: UAE money, the President's coin, and a judge in Washington.",
+        "xWord": "corruption",
+        "yWord": "courts",
+        "words": [
+          "the corruption case",
+          "can't dodge"
+        ],
+        "source": ""
+      }
+    },
+    "B": {
+      "fluid": {
+        "z": -0.6,
+        "zReason": "A shareholder suing on Circle's behalf while Circle stays out has a weak Article III injury, and a court applying ordinary standing rules dismisses before the merits.",
+        "instrument": {
+          "holder": "the D.C. federal court",
+          "trusted": true
+        },
+        "text": "I take the Foreign Emoluments Clause seriously, and money from Sheikh Tahnoon's circle is exactly what it was written about. But I don't see how a shareholder suing on Circle's behalf, without Circle, gets past standing, and I'd rather the court say so cleanly than invent a new path to sue a sitting President.",
+        "xWord": "Clause",
+        "yWord": "court",
+        "words": [
+          "the Foreign Emoluments Clause",
+          "gets past standing",
+          "sue a sitting President"
+        ],
+        "source": ""
+      },
+      "coalition": {
+        "z": -0.5,
+        "zReason": "Standing doctrine should end the case, but the speaker notices their own side brushing off the substance of a $2 billion foreign payment, which loosens the confidence somewhat.",
+        "instrument": {
+          "holder": "the D.C. federal court",
+          "trusted": true
+        },
+        "text": "I expect the court to toss this on standing, and I think that's the right answer under Article III. What bothers me is how fast the people I vote with wave off a $2 billion Abu Dhabi payment in USD1, as if the Clause only matters when the other party holds office.",
+        "xWord": "Clause",
+        "yWord": "court",
+        "words": [
+          "the people I vote with",
+          "Article III",
+          "wave off"
+        ],
+        "source": ""
+      },
+      "denominated": {
+        "z": -0.85,
+        "zReason": "At the rim the plaintiff is seen as a partisan vehicle with no real claim, so nothing comes of the suit.",
+        "instrument": {
+          "holder": "the plaintiff",
+          "trusted": false
+        },
+        "text": "A competitor's shareholder suing the President over crypto is lawfare dressed up as constitutional law.",
+        "xWord": "lawfare",
+        "yWord": "plaintiff",
+        "words": [
+          "lawfare",
+          "dressed up as constitutional law"
+        ],
+        "source": ""
+      }
+    },
+    "C": {
+      "fluid": {
+        "z": -0.6,
+        "zReason": "The claim is sound on the text, but the earlier emoluments suits got back no money and stopped nothing, and the speaker doesn't expect the federal courts to make a sitting President pay anything back.",
+        "instrument": {
+          "holder": "the D.C. federal court",
+          "trusted": false
+        },
+        "text": "The Emoluments Clause says no foreign money without Congress, and $75.5 million from a UAE-backed buyer is foreign money. But I watched the last emoluments suits end with nothing paid back, and I don't trust a federal court to claw a dime out of the President's crypto now.",
+        "xWord": "foreign",
+        "yWord": "trust",
+        "words": [
+          "The Emoluments Clause",
+          "nothing paid back",
+          "claw a dime"
+        ],
+        "source": ""
+      },
+      "coalition": {
+        "z": -0.45,
+        "zReason": "Pinning accountability on a crypto competitor's shareholder suit sends a public grievance through a private market fight, and that route seldom gets the money returned.",
+        "instrument": {
+          "holder": "the plaintiff",
+          "trusted": false
+        },
+        "text": "I want the stablecoin money traced back to Tahnoon and returned. Still, the people I organize with are cheering a Circle shareholder, and I'm not sure a crypto rival's lawsuit is the hill to stand on when Merkley's bill to bar the family from profiting on crypto still sits without a floor vote.",
+        "xWord": "stablecoin",
+        "yWord": "organize",
+        "words": [
+          "the people I organize with",
+          "a crypto rival's lawsuit",
+          "without a floor vote"
+        ],
+        "source": ""
+      },
+      "denominated": {
+        "z": -0.9,
+        "zReason": "At the rim the suit is just one set of crypto interests against another, and the President keeps the money either way.",
+        "instrument": {
+          "holder": "the President",
+          "trusted": false
+        },
+        "text": "It's one crypto grift fighting another, and the billionaires win either way.",
+        "xWord": "billionaires",
+        "yWord": "grift",
+        "words": [
+          "crypto grift",
+          "the billionaires win"
+        ],
+        "source": ""
+      }
+    },
+    "D": {
+      "fluid": {
+        "z": -0.75,
+        "zReason": "The assets sit in a trust and the plaintiff's injury is a competitor's business loss, so the speaker expects a dismissal on standing before any money question comes up.",
+        "instrument": {
+          "holder": "the plaintiff",
+          "trusted": false
+        },
+        "text": "I don't see a real injury here: his assets sit in a trust his kids run, and nobody at World Liberty works for the government. A former Circle engineer suing on behalf of World Liberty's rival looks like a business grudge to me, and I expect it gets thrown out on standing.",
+        "xWord": "trust",
+        "yWord": "grudge",
+        "words": [
+          "a trust his kids run",
+          "a business grudge",
+          "thrown out on standing"
+        ],
+        "source": ""
+      },
+      "coalition": {
+        "z": -0.5,
+        "zReason": "The speaker still expects the suit to die on standing, but admits the size of the UAE payment is a real question their own side won't let anyone ask.",
+        "instrument": {
+          "holder": "the D.C. federal court",
+          "trusted": false
+        },
+        "text": "I think this suit dies on standing, and I'm fine with that. But I'll admit a $2 billion payment from a fund the UAE's security chief chairs makes me uneasy, and the people I rally with won't even let that question get asked.",
+        "xWord": "UAE",
+        "yWord": "rally",
+        "words": [
+          "the people I rally with",
+          "makes me uneasy",
+          "dies on standing"
+        ],
+        "source": ""
+      },
+      "denominated": {
+        "z": -0.9,
+        "zReason": "At the rim a Washington court is distrusted and the suit is read as a repeat of the first-term cases that went nowhere.",
+        "instrument": {
+          "holder": "the D.C. federal court",
+          "trusted": false
+        },
+        "text": "It's lawfare, same as the last emoluments circus, and it'll go nowhere.",
+        "xWord": "lawfare",
+        "yWord": "circus",
+        "words": [
+          "lawfare",
+          "emoluments circus",
+          "go nowhere"
+        ],
+        "source": ""
+      }
+    }
+  },
+  "diatribe": {
+    "LF": {
+      "text": "I keep coming back to the Emoluments Clause: $75.5 million from a Tahnoon-backed buyer is the textbook case, and the only real question is whether a Circle shareholder has standing to bring it.",
+      "side": "left",
+      "band": "fluid",
+      "keywords": [
+        "the Emoluments Clause",
+        "the textbook case",
+        "standing"
+      ]
+    },
+    "LC": {
+      "text": "I want this to work, but the people I vote with are celebrating a complaint that hasn't survived a motion to dismiss yet.",
+      "side": "left",
+      "band": "coalition",
+      "keywords": [
+        "the people I vote with",
+        "a motion to dismiss",
+        "celebrating"
+      ]
+    },
+    "LD": {
+      "text": "It's corruption, plain and simple, and putting it in a stablecoin doesn't change that.",
+      "side": "left",
+      "band": "denominated",
+      "keywords": [
+        "corruption",
+        "plain and simple"
+      ]
+    },
+    "RF": {
+      "text": "I read the Foreign Emoluments Clause as a real limit, but a rival's shareholder suing without Circle on board is the wrong plaintiff, and the court should say so.",
+      "side": "right",
+      "band": "fluid",
+      "keywords": [
+        "the Foreign Emoluments Clause",
+        "the wrong plaintiff",
+        "the court should say so"
+      ]
+    },
+    "RC": {
+      "text": "I expect a dismissal, but the people I vote with shrugging at a $2 billion UAE payment in USD1 isn't a principle I'd want turned against my side later.",
+      "side": "right",
+      "band": "coalition",
+      "keywords": [
+        "the people I vote with",
+        "a dismissal",
+        "shrugging"
+      ]
+    },
+    "RD": {
+      "text": "It's lawfare from a competitor, and the President's critics are going to lose again.",
+      "side": "right",
+      "band": "denominated",
+      "keywords": [
+        "lawfare",
+        "lose again"
+      ]
+    }
+  },
+  "diatribeLayer": "stated",
+  "objectLayer": {
+    "declared": "stated",
+    "stated": "A Foreign Emoluments Clause claim brought on Circle's behalf, seeking to bar foreign payments without Congress's consent and to recover profits from the World Liberty stake sale and the USD1-paid Binance investment.",
+    "operative": "A test of whether anyone outside government has standing to police a President's foreign-linked crypto income, with competitive injury in the stablecoin market as the hook.",
+    "inversion": "The constitutional claim rides on a commercial rivalry: the Clause gets teeth only if a court accepts a competitor's market loss as the harm, which makes the case look like the business grudge its defendants call it."
+  },
+  "window": {
+    "close": "2026-10-22",
+    "why": "The object finished forming when the complaint was filed Thursday 2026-10-22 in D.D.C. (AP via Spokesman-Review, Spectrum News, Bloomberg via Quartz — all 10-22). The register's formedOn (10-23) is the UTC scan date, and its holder ('the President') is the defendant; the instrument is the plaintiff's complaint, which the court now holds. Declared at authoring, before any z.",
+    "ruledBy": null,
+    "ruledOn": null
+  },
+  "meta": {
+    "dialecticsRef": "obj_thepresi_crypto-firm-foreign-government",
+    "status": "draft",
+    "source": "Claude draft — daily newsroom drafting (scheduled), authored z-first against Trace Formula v1 per scripts/newsroom/AUTHORING_PROTOCOL.md v1.5. Filed to drafts/claude. Rulings: none.",
+    "editHistory": [
+      {
+        "at": "2026-10-23T06:11:08.853Z",
+        "by": "Claude (scheduled drafting)",
+        "what": "authored: object -> window -> frame from in-window sources -> central object + tethers -> sweep -> axes/split -> twelve + object z (blind subagent) -> diatribe/layers -> sweep"
+      }
+    ],
+    "aiDeltas": [],
+    "frameFirst": {
+      "date": "2026-10-22",
+      "by": "Claude, under §4c (window declared at authoring; sweep before z). Object NOT ruled — Claude's read, correctable by Sailor.",
+      "status": "Frame authored before any z; the twelve, the Diatribe and the object's own z authored blind z-first by a subagent (meta.blindAuthoring). Stations unruled.",
+      "objectLean": {
+        "stated": "a Foreign Emoluments Clause suit to bar UAE-linked payments and claw back World Liberty profits",
+        "operative": "a standing test: can a competitor's shareholder police a President's foreign crypto income",
+        "inversion": "lean, not ruled: the constitutional claim rides on a market rivalry"
+      },
+      "titleLean": "'The Rival's Shareholder' — Claude's; Sailor names Readings",
+      "sourcesInWindow": [
+        "AP via Spokesman-Review (2026-10-22): Greenberg v. Trump, No. 26-cv-03686, D.D.C., filed Thursday; Circle shareholder; Foreign Emoluments Clause; 49% stake for $500 million to a Tahnoon-backed vehicle; MGX used USD1 to buy a $2 billion Binance stake; relief: block violations, disgorgement, damages; Circle and World Liberty (David Wachsman) responses",
+        "Spectrum News (2026-10-22): J. Benjamin Greenberg, Circle engineer 2016–2018; defendants incl. WLF, holding companies, Witkoff, DT Marks DEFI LLC; more than $75.5 million received after he became president; 2025 Nvidia chip approval; August 2026 conditional bank approval; White House (Lauren Bis): assets in a trust, no conflicts",
+        "Bloomberg via Quartz (2026-10-22): counsel Matt Pelikan (Evergreen Legal); White House (Anna Kelly) called the suit 'frivolous'; first-term suits recovered nothing"
+      ],
+      "background_preWindow": [
+        "World Liberty stake sale and MGX/Binance USD1 deal, 2025 (dates of each not given in the in-window coverage)",
+        "2025 disclosure (filed July 2026): crypto earnings above $1.2–1.4 billion; $263 million to family entities from a January 2025 stake purchase",
+        "Commerce approval of Nvidia chip sales to a Tahnoon-chaired Abu Dhabi AI firm, 2025; OCC preliminary conditional approval of WLTC trust bank, August 2026",
+        "First-term emoluments suits vacated as moot, January 2021",
+        "CLARITY Act (H.R. 3633) Senate cloture on the motion to proceed rejected 2026-09-15 (catalog)"
+      ]
+    },
+    "framingAudit": {
+      "date": "2026-10-22",
+      "by": "Claude — frame-first authoring under §4c; sweep run BEFORE any z. Not a ruling.",
+      "window": "2026-10-22 (declared, see window.why)",
+      "verifiedInWindow": [
+        "filed Thursday 2026-10-22, D.D.C., No. 26-cv-03686 — AP, Quartz",
+        "J. Benjamin Greenberg, former Circle engineer, Circle shareholder, suing derivatively for Circle — AP, Spectrum, Quartz",
+        "$75.5 million received after he became president from the sale of a 49% stake to a Tahnoon-backed firm — Spectrum (amount), AP/Quartz (49%)",
+        "$2 billion Binance investment paid in USD1 by an Abu Dhabi fund Tahnoon chairs — AP, Quartz",
+        "relief: bar foreign payments without Congress's consent; return profits — AP, Spectrum, Quartz",
+        "Circle took no part; World Liberty: meritless; White House: \"frivolous\" — AP, Quartz (all 10-22)"
+      ],
+      "keptUnverifiedDate": [],
+      "deliberatelyExcluded_afterWindow": [
+        "any reaction or filing dated 2026-10-23 or later"
+      ],
+      "excludedInWindow": [
+        "Witkoff and DT Marks DEFI LLC as defendants — kept out for length",
+        "the Nvidia chip and OCC bank approvals the complaint cites — background, not counts",
+        "Circle's competitive-harm count against World Liberty — given to the blind author as the standing hook"
+      ]
+    },
+    "blindAuthoring": {
+      "date": "2026-10-23",
+      "author": "Claude (general-purpose subagent) — blind: given the frame, prompt, keywords, axes, the object, a short dated background, R-0921-1 and the voice rules only; no other Reading, no register, no web",
+      "zFirst": true,
+      "instrumentOnAll12": true,
+      "objectZ": "The object's own place (z -0.55, quadrants B+D, band coalition) authored by the same subagent, with the twelve, before the words.",
+      "rulings": "NONE — every station awaits Sailor's ruling. z, zReason and instrument as authored; wording fixes after hand-back listed in edits.",
+      "edits": [
+        "D.fluid text: 'the man's assets' → 'his assets'. Claude, after hand-back.",
+        "A.coalition zReason: 'only just filed' → 'filed the same day'. Claude.",
+        "No sign, z or keyword changes."
+      ],
+      "authorNote": "I trust A's rim sign (+0.6) least. The rim rule forces it positive once the court is trusted, but even the most committed left-institutional voice has the moot 2021 endings in memory, so it could plausibly sit closer to zero. A fluid at -0.1 may also be too generous. What surprised me is how much B and C agree on z for opposite reasons: B trusts the court to dismiss, and C distrusts the court to pay anything back."
+    },
+    "newsroomFindings": {
+      "inversionLeans": [],
+      "permanence": "Not a return. First appearance of the World Liberty emoluments suit in the register. Related object watched earlier: the CLARITY Act cloture failure (obj_bill_hr-119-3633), which coverage ties to the President's crypto conflicts."
+    },
+    "holderCorrection": {
+      "was": "the President",
+      "now": "the plaintiff (J. Benjamin Greenberg, derivatively for Circle) and the D.D.C. court that must decide; the President is the defendant",
+      "why": "Kind 'suit' is right; the scan made the defendant the holder."
+    }
+  },
+  "rid": "rdg_dmcbs16912ua",
+  "ridLineage": "minted 2026-10-23 (UTC) by the scheduled newsroom drafting task; filed directly to drafts/claude",
+  "schema": "reading/v1",
+  "formulaVersion": "1",
+  "updatedAt": "2026-10-23T06:11:08.853Z",
+  "authorTier": "claude",
+  "newsroom": {
+    "oid": "obj_thepresi_crypto-firm-foreign-government",
+    "queuedOn": "2026-10-23",
+    "draftedOn": "2026-10-23"
+  },
+  "images": []
+}

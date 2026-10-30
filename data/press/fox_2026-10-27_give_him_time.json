@@ -1,0 +1,519 @@
+{
+ "schema": "press/parallelogram/v0",
+ "id": "fox_2026-10-27_give_him_time",
+ "status": "claude-draft",
+ "kind": "parallelogram",
+ "title": "Give Him Time",
+ "source": {
+  "program": "Fox News",
+  "network": "Fox News (foxnews.com, Politics)",
+  "format": "print",
+  "date": "2026-10-27",
+  "title": "Trump supporters confront Iran, affordability concerns with a message for critics: 'Give him time'",
+  "byline": "Elaine Mallon",
+  "url": "https://www.foxnews.com/politics/trump-supporters-confront-iran-affordability-concerns-message-critics-give-him-time",
+  "length": 41,
+  "paragraphs": 41,
+  "transcript": "Parameters/09_Parallelograms/Press/2026-10-27_Fox_Give_Him_Time/source.md",
+  "note": "published 10-27 06:00 ET (created 10-26 21:08 ET); the 10-27 sweep (matched on 'iran', 'collins', 'midterm', 'house race'). Fox's station on the roster is 'RI?' — proposed, ruling owed; scored as RI on the 10-20/10-21/10-23/10-24 precedents, the Diesel Index's RI seat, flag on the figure. Read in full via the cloud fetch; reductions filed, no quotation over twelve words. A rally page: the article, four voters, a nominee, a spokesperson and the holder, from Perry, Georgia, Saturday 10-24. Chosen over the day's other Fox rally page (Port Huron, Michigan, 10-26 18:00 — the same page with no dollar figure) because this one carries the price with a date and a cause and the holder's own clock; my call"
+ },
+ "positions": "paragraphs",
+ "horizon": "US",
+ "arc": "PG01",
+ "object": {
+  "label": "H1 — the Russian diesel deal (PG01 layer 1): the price leg (H1c) at the pump, read at a rally — Georgia gas $3.66 against $2.72 in February (¶10), the Strait named by the article as the cause (H6 marked), the holder's clock restated at the rally ('oil prices will come down soon', ¶14) and adopted by the voters as patience ('give him time', 'temporarily', 'worth paying'); the gas↔votes predicate from the voters' side",
+  "layer": 1,
+  "zAxis": {
+   "pos": "prices come down by the deal — soon",
+   "neg": "they do not — the pump is a dollar up on February with the Strait as its cause, and 'soon' is a voter's patience, not a date"
+  }
+ },
+ "transform": "Z-assertion",
+ "transformNote": "the shadow is the holder's promise — diesel 'COMING DOWN, IN RECORD NUMBERS, AND FAST' (10-11), now 'oil prices will come down soon' at a rally (10-24). The page puts the pump beside it ($3.66 vs $2.72, with the Strait as the cause) and lets four voters read the gap: the price is temporary, a cost worth paying, give him time. The deal, the cargo, the waiver and diesel itself are not on the page; the cure's name has dropped out of the holder's sentence and only its clock remains — 'soon', undated, the fourth phrasing of the clock in sixteen days",
+ "names": {
+  "FX": "the article (Fox News narration, Elaine Mallon)",
+  "DT": "Donald Trump (at the Perry rally, Saturday 10-24, as reported) — the deal's holder; constitutive, @O; the principal — never Dia-scored",
+  "GB": "Gloria Barkman (rallygoer, Perry) — reported, stationed with the publication",
+  "JT": "Jim Taylor (rallygoer; Air Force veteran) — reported, stationed with the publication",
+  "TB": "TJ Barb (rallygoer, Perry) — reported, stationed with the publication",
+  "JS": "John Salvesen (Republican nominee, GA-5) — reported, stationed with the publication",
+  "MS": "Meyer Siegfried (Collins campaign spokesperson, to Fox News Digital) — reported, stationed with the publication"
+ },
+ "trace": {
+  "object": {
+   "x": 0,
+   "y": 0,
+   "z": -0.3
+  },
+  "shadow": {
+   "x": 0,
+   "y": 0,
+   "z": 1.0
+  },
+  "shadowNote": "'oil prices will come down soon' — the holder's clock at the rally; the page's one price is a dollar up on February and its cause is the Strait",
+  "predicates": {
+   "operative": [
+    {
+     "type": "T",
+     "label": "Georgia gas ≈$3.66 a gallon vs $2.72 in February before the war (AAA by link); Iranian attacks on vessels and threats to Hormuz shipping pushed oil prices up worldwide (¶10)",
+     "z": -0.5
+    },
+    {
+     "type": "T",
+     "label": "BLS: annual CPI 3.7% in September — a different period from the holder's 1.7% three-month figure (¶15)",
+     "z": -0.3
+    },
+    {
+     "type": "T",
+     "label": "approval 36 / disapproval 64; Pew ≈65% disapprove of the Iran actions; the Ossoff seat by 1.22% in 2021, Georgia by 2.2% in 2024 (¶4, ¶5, ¶10)",
+     "z": -0.2
+    }
+   ],
+   "stated": [
+    {
+     "type": "O",
+     "label": "Trump at the rally: oil prices will come down soon; inflation 1.7% over three months (¶14)",
+     "z": 0.9
+    }
+   ],
+   "challenge": []
+  },
+  "positions": [
+   {
+    "quadrant": "A",
+    "station": "LI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — AJ is cut today on the Strait (one cut per source); MS NOW's 'affordability crisis' (Michigan, 17:11) and NPR's Mississippi and Ohio pages are the LI reads of the same rally-season object — transcripts owed / robots-blocked"
+   },
+   {
+    "quadrant": "B",
+    "station": "RI",
+    "fluid": "$3.66 · $2.72 · February · 36% · 64% · 65% · 1.22% · 2.2% · November 3 · 1.7% · 3.7% · September · three months · Saturday",
+    "denominated": "give him time · best president · worth paying · wouldn't matter · can't be bought · full force · uphill battle · radical leftist · workhorse",
+    "distinguishability": "High",
+    "fluidKeywords": [
+     "$3.66",
+     "$2.72",
+     "February",
+     "Hormuz shipping",
+     "36%",
+     "65% disapprove",
+     "1.7%",
+     "3.7%",
+     "November 3"
+    ],
+    "denomKeywords": [
+     "give him time",
+     "temporarily",
+     "worth paying",
+     "wouldn't matter",
+     "can't be bought",
+     "full force",
+     "radical leftist"
+    ],
+    "note": "Fox (RI?, proposed) reads the pump at a rally: the article at 6–16 with the price dated, caused and checked; the voters at 30–62 reading the price as patience. Read z −0.03: the article's record lines are below zero and the voters' lines sit at zero or just above — the two cancel to a page that reads the price as temporary without a date"
+   },
+   {
+    "quadrant": "C",
+    "station": "LP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — Breaking Points 10-26 'Oil Market ON THE BRINK' is the LP read (transcript owed); the rest 0 hits or absent"
+   },
+   {
+    "quadrant": "D",
+    "station": "RP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — Shapiro's Evening Wire owed; the Free Press's hits are Israel's vote and the midterms' 'stop the steal'; Kirk 0 hits"
+   }
+  ]
+ },
+ "log": [
+  {
+   "date": "2026-10-27",
+   "what": "daily cut (the 10-27 sweep, from GitHub raw). Forty-one blocks fetched, twenty-six body paragraphs reduced; sixteen scored, one constitutive (Trump @O, the principal, declared z +0.9 — 'come down soon'). Object declared on H1c at the pump with H6 marked (¶10) — the second cut of the day on PG01; chosen over the Port Huron page (10-26) because this one has the price with a date and a cause and the holder's own clock, and over Fox Business 10-26 'Bessent: Iran's economy collapsing' (Operation Economic Outcast; the blockade; filed in the pass from its opening) because that page is the force's finance, not the price. One Fox cut per day; my call",
+   "by": "Claude"
+  }
+ ],
+ "scoreboard": {
+  "dia": 33,
+  "tier": "fluid",
+  "declaredZ": 0.9,
+  "readZ": -0.03,
+  "readZRange": [
+   0.3,
+   -0.5
+  ],
+  "stations": {
+   "LI": null,
+   "RI": {
+    "dia": 33,
+    "spread": [
+     6,
+     62
+    ],
+    "readZ": -0.03,
+    "voices": {
+     "FX": {
+      "dia": 11,
+      "readZ": -0.18,
+      "n": 6
+     },
+     "GB": {
+      "dia": 49,
+      "readZ": 0.2,
+      "n": 2
+     },
+     "JS": {
+      "dia": 50,
+      "readZ": 0.0,
+      "n": 1
+     },
+     "JT": {
+      "dia": 38,
+      "readZ": 0.05,
+      "n": 4
+     },
+     "MS": {
+      "dia": 62,
+      "readZ": 0.0,
+      "n": 1
+     },
+     "TB": {
+      "dia": 52,
+      "readZ": 0.0,
+      "n": 2
+     }
+    }
+   },
+   "LP": null,
+   "RP": null
+  },
+  "split": {
+   "topology": "none",
+   "station": "RI",
+   "strength": 0.0,
+   "note": "one station, two planes: the article (the price dated and caused, the holder's number checked against the BLS — 6–16) and the voters (the price as patience, a cost, a thing that would not matter — 30–62). The voters do not disagree with the article's number; they read it as temporary. No migration inside one voice on the page; Barkman moves from 'give him time' (40) to 'full force' (58) but on different objects"
+  },
+  "lumens": 29,
+  "zRule": "every line carries a z, inferred where implied (Sailor 2026-10-13); inferred lines are marked zInferred with a zWhy",
+  "mode": "open"
+ },
+ "lines": [
+  {
+   "t": 0,
+   "who": "FX",
+   "station": "RI",
+   "quote": "supporters confront Iran, affordability concerns with a message for critics: give him time — backed him despite $3.66 gas and 36% approval",
+   "touch": "F",
+   "z": 0.1,
+   "dia": 24,
+   "mode": "open",
+   "note": "THE DOOR: the dek carries the page's two numbers and the hed carries its clock. 'Give him time' is the shadow's 'soon' in the voter's mouth",
+   "chapter": "The door",
+   "normX": 0.6226,
+   "normY": 0.4204,
+   "normZ": 0.075,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a price met with 'give him time' is a price not yet down, read as coming"
+  },
+  {
+   "t": 3,
+   "who": "FX",
+   "station": "RI",
+   "quote": "standing by him amid affordability concerns and higher gas prices stemming from the Iran war",
+   "touch": "T",
+   "z": -0.2,
+   "dia": 14,
+   "mode": "open",
+   "note": "the thesis; the cause named (the war), not yet the Strait; 'higher' without a figure",
+   "chapter": "The door",
+   "normX": 0.5678,
+   "normY": 0.4157,
+   "normZ": -0.15,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "higher gas prices stemming from the war are a price the deal has not moved"
+  },
+  {
+   "t": 4,
+   "who": "FX",
+   "station": "RI",
+   "quote": "approval 36%, disapproval 64%; Saturday's rally with Jackson, Collins and House candidates",
+   "touch": "T",
+   "z": -0.2,
+   "dia": 8,
+   "mode": "open",
+   "note": "the record: the poll and the slate; placement",
+   "chapter": "The record",
+   "normX": 0.5558,
+   "normY": 0.4353,
+   "normZ": -0.15,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "an approval at 36 at the rally is a cure not yet felt by the room outside it"
+  },
+  {
+   "t": 5,
+   "who": "FX",
+   "station": "RI",
+   "quote": "Ossoff by 1.22% in the January 2021 runoff; Trump Georgia by 2.2% in 2024; act as if he is on the ballot November 3",
+   "touch": "T",
+   "z": 0.0,
+   "dia": 10,
+   "mode": "open",
+   "note": "the slate's register — two margins and the date; reads neither way on the price",
+   "chapter": "The record",
+   "normX": 0.5631,
+   "normY": 0.4317,
+   "normZ": 0.0,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "two margins and a date read neither way on the pump"
+  },
+  {
+   "t": 7,
+   "who": "GB",
+   "station": "RI",
+   "quote": "people are upset about gas prices and the rest; give him time and they will see improvement",
+   "touch": "F",
+   "z": 0.3,
+   "dia": 40,
+   "mode": "open",
+   "note": "THE TITLE: the delivery claim adopted by a voter, with no date — 'time' is the unit. The shadow's clock ('FAST', 10-11; 'soon', 10-24) read as patience",
+   "chapter": "The voters",
+   "normX": 0.6504,
+   "normY": 0.3578,
+   "normZ": 0.225,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a price that needs time is a price read as coming down, later"
+  },
+  {
+   "t": 10,
+   "who": "FX",
+   "station": "RI",
+   "quote": "Georgia gas about $3.66 a gallon against $2.72 in February before the war; Iranian attacks on vessels and threats to Hormuz shipping pushed oil prices up worldwide; Pew: about 65% disapprove of the Iran actions",
+   "touch": "T",
+   "z": -0.5,
+   "dia": 6,
+   "mode": "open",
+   "note": "THE PRICE, DATED, WITH ITS CAUSE — H6 MARKED: the pump up 94 cents on February with the Strait as the article's cause ('Iranian attacks', 'threats to Hormuz shipping' — the restrictor named, as AJ named it the same day); the deal is not the cure here because it is not on the page. The page's lowest-Dia line",
+   "chapter": "The price",
+   "normX": 0.5617,
+   "normY": 0.4526,
+   "normZ": -0.375,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a pump a dollar up on February with the Strait as its cause is a price the deal has not moved"
+  },
+  {
+   "t": 11,
+   "who": "JT",
+   "station": "RI",
+   "quote": "temporarily higher pump prices are worth paying to keep Iran from a nuclear weapon",
+   "touch": "F",
+   "z": 0.2,
+   "dia": 22,
+   "mode": "open",
+   "note": "'temporarily' — the second clock on the page, undated; the price priced against the war's purpose (the 10-26 Port Huron voters' line, 'short term pain for long term gain')",
+   "chapter": "The voters",
+   "normX": 0.6127,
+   "normY": 0.4193,
+   "normZ": 0.15,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a price called temporary is a price read as coming down, undated"
+  },
+  {
+   "t": 12,
+   "who": "JT",
+   "station": "RI",
+   "quote": "most proud of what the president has done in Iran",
+   "touch": "F",
+   "z": 0.1,
+   "dia": 48,
+   "mode": "vacancy",
+   "note": "the oscillation zone: the price has left the line for the war; vacancy (the object absent)",
+   "chapter": "The voters",
+   "normX": 0.6976,
+   "normY": 0.3684,
+   "normZ": 0.075,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "pride in the war reads the price as the war's, not the deal's"
+  },
+  {
+   "t": 13,
+   "who": "JT",
+   "station": "RI",
+   "quote": "gas prices really wouldn't matter against a nuclear attack on the US",
+   "touch": "F",
+   "z": 0.0,
+   "dia": 52,
+   "mode": "vacancy",
+   "note": "the price read out of the line by a larger object — the Protocol's verdict-over-object pattern; vacancy",
+   "chapter": "The voters",
+   "normX": 0.6422,
+   "normY": 0.2913,
+   "normZ": 0.0,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a price that would not matter is a price not read at all"
+  },
+  {
+   "t": 14,
+   "who": "DT",
+   "station": "O",
+   "quote": "oil prices will come down soon; inflation 1.7% over the past three months",
+   "touch": "O",
+   "z": 0.9,
+   "dia": null,
+   "mode": "open",
+   "note": "constitutive — THE HOLDER'S CLOCK, fourth phrasing: 'COMING DOWN, IN RECORD NUMBERS, AND FAST' (10-11) → 'immediately' (the 300,000 t) → 'soon' (10-24). The cure's name (Russian diesel, the Strait) has dropped out of the sentence; only the direction and the clock remain. Not Dia-scored",
+   "chapter": "The holder",
+   "normX": 0.5,
+   "normY": 0.5,
+   "normZ": 0.675,
+   "quadrant": "T"
+  },
+  {
+   "t": 15,
+   "who": "FX",
+   "station": "RI",
+   "quote": "the BLS annual CPI was 3.7% in September — a different period from the 1.7% three-month figure",
+   "touch": "T",
+   "z": -0.3,
+   "dia": 6,
+   "mode": "open",
+   "note": "THE CHECK: the article sets the record's number beside the holder's and names the difference (period, not rate). The page's lowest-Dia line with ¶10; the Press does not say the holder lied — it says the article measured",
+   "chapter": "The price",
+   "normX": 0.5481,
+   "normY": 0.4388,
+   "normZ": -0.225,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "an inflation checked against the BLS is a cure not yet in the official number"
+  },
+  {
+   "t": 19,
+   "who": "TB",
+   "station": "RI",
+   "quote": "investing in children is significant; Trump will start giving kids financial intelligence",
+   "touch": "F",
+   "z": 0.0,
+   "dia": 44,
+   "mode": "vacancy",
+   "note": "off the object (Trump Accounts); vacancy — filed in the pass as a slate sighting",
+   "chapter": "The voters",
+   "normX": 0.6597,
+   "normY": 0.3455,
+   "normZ": 0.0,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a line about children's accounts reads neither way on the pump"
+  },
+  {
+   "t": 21,
+   "who": "GB",
+   "station": "RI",
+   "quote": "does not want the country lost; full force for Trump and the Republicans",
+   "touch": "F",
+   "z": 0.1,
+   "dia": 58,
+   "mode": "vacancy",
+   "note": "the page's most denominated voter line: 'lost', 'full force' — the price nowhere; vacancy",
+   "chapter": "The voters",
+   "normX": 0.7104,
+   "normY": 0.3223,
+   "normZ": 0.075,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a country not to be lost is a price not in the sentence"
+  },
+  {
+   "t": 22,
+   "who": "JT",
+   "station": "RI",
+   "quote": "the midterms an uphill battle; Trump's backing matters for a candidate he knew less",
+   "touch": "F",
+   "z": -0.1,
+   "dia": 30,
+   "mode": "open",
+   "note": "the gas↔votes predicate from the voters' side: 'uphill' is the only line on the page where a supporter reads the vote as at risk",
+   "chapter": "The slate",
+   "normX": 0.6328,
+   "normY": 0.3954,
+   "normZ": -0.075,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "an uphill battle at $3.66 is a price read as costing votes, by the side paying"
+  },
+  {
+   "t": 25,
+   "who": "TB",
+   "station": "RI",
+   "quote": "he can't be bought, so his endorsements can be trusted",
+   "touch": "F",
+   "z": 0.0,
+   "dia": 60,
+   "mode": "vacancy",
+   "note": "denominated; the endorsement as the object; vacancy",
+   "chapter": "The slate",
+   "normX": 0.6566,
+   "normY": 0.2643,
+   "normZ": 0.0,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a holder who can't be bought reads neither way on the pump"
+  },
+  {
+   "t": 33,
+   "who": "JS",
+   "station": "RI",
+   "quote": "Ossoff terrible; Collins the superior candidate if he can get his message out",
+   "touch": "F",
+   "z": 0.0,
+   "dia": 50,
+   "mode": "vacancy",
+   "note": "the nominee's frame on the race; vacancy",
+   "chapter": "The slate",
+   "normX": 0.6853,
+   "normY": 0.3398,
+   "normZ": 0.0,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a superior candidate reads neither way on the pump"
+  },
+  {
+   "t": 40,
+   "who": "MS",
+   "station": "RI",
+   "quote": "passed the Laken Riley Act, cut taxes; the only candidate who can beat radical leftist Ossoff; a bipartisan workhorse",
+   "touch": "F",
+   "z": 0.0,
+   "dia": 62,
+   "mode": "vacancy",
+   "note": "the page's most denominated line, by the campaign: 'radical leftist', 'workhorse' — the price nowhere; vacancy",
+   "chapter": "The slate",
+   "normX": 0.6819,
+   "normY": 0.2734,
+   "normZ": 0.0,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a campaign statement reads neither way on the pump"
+  }
+ ]
+}

@@ -27821,7 +27821,7 @@ function drawG4Press(ctx, W, H, hdrH, cream, blue, S) {
     ctx.fillText(p.title || p.id, tx, top + Math.round(46 * S));
     ctx.font = Math.round(11.5 * S) + 'px Georgia'; ctx.fillStyle = cream + opF(0.45) + ')';
     const zs = function (z) { return z == null ? '—' : (z > 0 ? '+' : '') + Number(z).toFixed(1); };
-    ctx.fillText(sb ? ('Lumens ' + sb.lumens + '   ·   Dia ' + sb.dia + ' (' + sb.tier + ')   ·   read z ' + zs(sb.readZ) + ' vs declared ' + zs(sb.declaredZ) + '   ·   split ' + sb.split.topology + ' · ' + sb.split.station) : 'reading the scores…', tx, top + Math.round(66 * S));
+    ctx.fillText(sb ? ('Lumens ' + sb.lumens + '   ·   Diatribe ' + sb.dia + ' (' + sb.tier + ')   ·   read z ' + zs(sb.readZ) + ' vs declared ' + zs(sb.declaredZ) + '   ·   split ' + sb.split.topology + ' · ' + sb.split.station) : 'reading the scores…', tx, top + Math.round(66 * S));
     if (p.dek) {
       ctx.font = 'italic ' + Math.round(11.5 * S) + 'px Georgia'; ctx.fillStyle = cream + opF(0.4) + ')';
       let line = '', words = String(p.dek).split(' '), yy = top + Math.round(84 * S), maxW = cwid - (tx - cx) - Math.round(12 * S);

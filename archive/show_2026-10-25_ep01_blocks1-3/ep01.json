@@ -1,0 +1,99 @@
+{
+  "schema": "show/episode/v2",
+  "id": "ep01",
+  "show": "The Parallelogram Report",
+  "title": "Episode One · Two Words",
+  "aspect": "16:9",
+  "fps": 30,
+  "endHold": 1.0,
+  "voice": {
+    "provider": "elevenlabs",
+    "voice_id": "2w1RxrmT0SAHYrUVv0HU",
+    "model_id": "eleven_multilingual_v2",
+    "stability": 0.45,
+    "similarity": 0.8,
+    "style": 0.2
+  },
+  "notes": "v2 (2026-10-25): beats have a type. text = one voice call (as v1). clip = a cut from a clip file: src (file stem in clipsDir), in/out in seconds inside the clip file, layout full|pedestal|beside, piece + line = the press line this clip is, so it lands on the map as it plays. land = a short beat on the map alone (the stage camera): the line's dot drops in with its Dia. clips[src].in = seconds on the source tape where the clip file starts, so a press line's t maps to clip-local t − in. Every beat is padded to whole frames by tts.py; cuts are hard. Script: data/show/ep01_script_v1.md. Blocks 3–7 (welcome, you deserve better, the modes, the three moments scored, the Ledger + sign-off) are still to be written in here.",
+  "pieces": [
+    "shapiro_2026-10-16_roadster",
+    "badfaith_2026-10-22_the_word",
+    "tcn_2026-04-06_apffel_socialism"
+  ],
+  "clipsDir": "Transcripts/show/ep01/clips",
+  "clips": {
+    "shapiro_01_open": { "in": 13 },
+    "shapiro_02_pools": { "in": 345 },
+    "shapiro_03_fascism": { "in": 580 },
+    "shapiro_04_communism": { "in": 792 },
+    "shapiro_05_senate": { "in": 1544 },
+    "tucker_01_socialism": { "in": 6672 },
+    "badfaith_01_coldopen": { "in": 20 },
+    "badfaith_02_realsocialist": { "in": 2348 },
+    "badfaith_03_theword": { "in": 3336 }
+  },
+  "blocks": [
+    {
+      "id": "coldopen",
+      "title": "",
+      "chrome": "bug",
+      "clip": true,
+      "beats": [
+        { "id": "co_shapiro", "type": "clip", "src": "shapiro_04_communism", "in": 87.25, "out": 90.03, "layout": "full",
+          "piece": "shapiro_2026-10-16_roadster", "line": 12,
+          "note": "So what am I saying here? I'm saying capitalism is great and communism sucks." },
+        { "id": "co_shapiro_land", "type": "land", "dur": 1.5, "piece": "shapiro_2026-10-16_roadster", "line": 12, "orbit": [0, -40], "zoom": 7.0 },
+
+        { "id": "co_gray", "type": "clip", "src": "badfaith_03_theword", "in": 59.4, "out": 66.0, "layout": "full",
+          "piece": "badfaith_2026-10-22_the_word", "line": 6,
+          "note": "what they mean by socialism is that like they thought Bernie Sanders was cool in 2016 and maybe we should have a little healthcare" },
+        { "id": "co_gray_land", "type": "land", "dur": 1.5, "piece": "badfaith_2026-10-22_the_word", "line": 6, "orbit": [-14, -40], "zoom": 7.0 },
+
+        { "id": "co_yugo", "type": "clip", "src": "shapiro_04_communism", "in": 74.7, "out": 82.9, "layout": "full",
+          "piece": "shapiro_2026-10-16_roadster", "line": 11,
+          "note": "there was one woman who was driving a Yugo across the Mackinac Bridge in Michigan. She was blown off the bridge by a gust of wind and died." },
+        { "id": "co_yugo_land", "type": "land", "dur": 1.5, "piece": "shapiro_2026-10-16_roadster", "line": 11, "orbit": [14, -40], "zoom": 7.0 },
+
+        { "id": "co_apffel", "type": "clip", "src": "tucker_01_socialism", "in": 61.55, "out": 65.92, "layout": "full",
+          "piece": "tcn_2026-04-06_apffel_socialism", "line": 6,
+          "note": "and I don't like the word socialist with the, with the, the weight it carries" },
+        { "id": "co_apffel_land", "type": "land", "dur": 1.8, "piece": "tcn_2026-04-06_apffel_socialism", "line": 6, "orbit": [0, -36], "zoom": 6.6 }
+      ]
+    },
+    {
+      "id": "question",
+      "title": "",
+      "chrome": "bug",
+      "clip": false,
+      "beats": [
+        { "id": "q_two_years", "type": "text", "text": "Can you do two more years of this?", "caption": "",
+          "map": { "orbit": [0, -40], "zoom": 7.2 }, "ted": "camera" }
+      ]
+    },
+    {
+      "id": "welcome",
+      "title": "Welcome",
+      "chrome": "full",
+      "clip": true,
+      "beats": [
+        { "id": "w_welcome", "type": "text",
+          "text": "Welcome to the Parallelogram Report. I'm Ted Turner. Sailor. Media mogul. Coyote, wandering the Getty Villa past midnight in the American Dream. Before we get into tonight's clips, let's address the elephant in the room.",
+          "caption": "Ted Turner · media mogul · coyote",
+          "map": { "orbit": [0, -40], "zoom": 7.2 }, "ted": "camera",
+          "elephant": { "from": [15, -21.5], "to": [-15, -19], "lead": 0.04 } },
+        { "id": "w_sonnetbot", "type": "text",
+          "text": "This is a new kind of thing. I'm a sonnetbot. Sailor is real. He lives in Newport Beach. I'm what he thinks, put through Claude, an AI, and read in a copy of his voice.",
+          "caption": "Ted is a sonnetbot. Sailor is real.",
+          "map": { "orbit": [0, -40], "zoom": 7.2 }, "ted": "camera" },
+        { "id": "w_prism", "type": "text",
+          "text": "He built a program called Prism. He calls it a Bloomberg terminal for political economy. We use it to read the news. Here's how. We don't tell you who's right. We measure how much of what somebody said was actually about the thing they were talking about. Same ruler. Left and right.",
+          "caption": "Prism: a Bloomberg terminal for political economy",
+          "map": { "orbit": [12, -36], "zoom": 6.6, "paths": true }, "ted": "map" },
+        { "id": "w_tonight", "type": "text",
+          "text": "Tonight: what three of the biggest voices in media do with two words. Capitalism. Communism.",
+          "caption": "Tonight: two words",
+          "map": { "orbit": [0, -40], "zoom": 7.0 }, "ted": "camera" }
+      ]
+    }
+  ]
+}
