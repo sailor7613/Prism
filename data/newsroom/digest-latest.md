@@ -1,4 +1,4 @@
-# Newsroom digest — 2026-10-31
+# Newsroom digest — 2026-11-01
 
 Register: 140 objects · this scan: 0 new, 0 seen again, 0 returned.
 
@@ -6,8 +6,7 @@ Register: 140 objects · this scan: 0 new, 0 seen again, 0 returned.
 - (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
-- **Blanche defends DOJ lawsuit blocking Alaska Senate results if Republican loses** — suit · sued · holder: the Justice Department · formed 2026-10-25 · 3 outlets (peak 3) · `obj_thejusti_alaska-blanche-blocking-defends` · silent 5d after 7 scans
-- **Lula is declared winner of Brazil election as Bolsonaro rejects results** — vote · voted · holder: ? · formed 2026-10-26 · 5 outlets (peak 5) · `obj_x_bolsonaro-brazil-declared-election` · silent 5d after 7 scans
+- none today
 
 ## Returned after a break
 - none today
