@@ -1,0 +1,2236 @@
+{
+ "schema": "press/sweep/v1",
+ "date": "2026-11-02",
+ "index": "roster",
+ "objects": [
+  "chips",
+  "diesel",
+  "dollar",
+  "housing",
+  "iran",
+  "me-sen",
+  "midterms",
+  "russia-sanctions",
+  "shutdown",
+  "tariffs",
+  "tx-sen",
+  "venezuela"
+ ],
+ "registerObjects": 41,
+ "route": "press-sweep.py on the GitHub Action (keyless; captions via yt-dlp, non-fatal)",
+ "publications": {
+  "daily-show": {
+   "station": "LI",
+   "items": 4,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCwWhs_6x42TyRM4Wstoq8HA"
+   ],
+   "note": null
+  },
+  "al-jazeera": {
+   "station": "LI",
+   "items": 25,
+   "hits": 8,
+   "feeds": [
+    "www.aljazeera.com/xml/rss/all.xml"
+   ],
+   "note": null
+  },
+  "ms-now": {
+   "station": "LI",
+   "items": 15,
+   "hits": 9,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCaXkIU1QidjPwiAYu6GcHjg"
+   ],
+   "note": null
+  },
+  "npr-pbs": {
+   "station": "LI",
+   "items": 32,
+   "hits": 12,
+   "feeds": [
+    "feeds.npr.org/1001/rss.xml",
+    "feeds.npr.org/1014/rss.xml",
+    "www.pbs.org/newshour/feeds/rss/headlines"
+   ],
+   "note": null
+  },
+  "atlantic": {
+   "station": "LI",
+   "items": 14,
+   "hits": 1,
+   "feeds": [
+    "www.theatlantic.com/feed/all/"
+   ],
+   "note": null
+  },
+  "the-close": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "odd-lots": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "surveillance": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "bloomberg-streams": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "breaking-points": {
+   "station": "LP+RP",
+   "items": 5,
+   "hits": 2,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCDRIjKy6eZOvKtOELtTdeUA"
+   ],
+   "note": null
+  },
+  "secular-talk": {
+   "station": "LP",
+   "items": 4,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCldfgbzNILYZA4dmDt4Cd6A"
+   ],
+   "note": null
+  },
+  "hasan": {
+   "station": "LP",
+   "items": 1,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCnI_h3e6b5jGLfly2SY57SA"
+   ],
+   "note": null
+  },
+  "chapo": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "note": "no feed on file — add `feeds` to the roster entry"
+  },
+  "tcn": {
+   "station": "RP",
+   "items": 4,
+   "hits": 2,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCjjBjVc0b1cIpNGEeZtS2lg"
+   ],
+   "note": null
+  },
+  "freepress": {
+   "station": "RP",
+   "items": 9,
+   "hits": 6,
+   "feeds": [
+    "www.thefp.com/feed"
+   ],
+   "note": null
+  },
+  "tim-dillon": {
+   "station": "RP",
+   "items": 0,
+   "hits": 0,
+   "note": "no feed on file — add `feeds` to the roster entry"
+  },
+  "nyt": {
+   "station": "LI",
+   "items": 73,
+   "hits": 28,
+   "feeds": [
+    "rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/World.xml",
+    "feeds.simplecast.com/54nAGcIl"
+   ],
+   "note": null
+  },
+  "fox": {
+   "station": "RI?",
+   "items": 49,
+   "hits": 34,
+   "feeds": [
+    "moxie.foxnews.com/google-publisher/latest.xml",
+    "moxie.foxnews.com/google-publisher/politics.xml",
+    "moxie.foxnews.com/google-publisher/world.xml",
+    "moxie.foxbusiness.com/google-publisher/latest.xml"
+   ],
+   "note": null
+  },
+  "grayzone": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "thegrayzone.com/feed/"
+   ],
+   "note": null
+  },
+  "shapiro": {
+   "station": "RP",
+   "items": 3,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCxUQLGMbb2cI8CqiwZ0WhAQ"
+   ],
+   "note": null
+  },
+  "kirk": {
+   "station": "RP",
+   "items": 6,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCVrK_pMRp_q8IelpfUCTGLQ"
+   ],
+   "note": null
+  }
+ },
+ "queue": [
+  {
+   "title": "In Run-Up to Midterms, Legacy of 2020 Looms Large Over Justice Dept.",
+   "dek": "The refusal of top department officials to acknowledge Donald J. Trump’s loss that year is the engine driving an intensifying effort to intercede in state administration of elections.",
+   "opening": "",
+   "published": "2026-11-02T21:49:51+00:00",
+   "link": "https://www.nytimes.com/2026/11/02/us/politics/midterms-2020-election-justice-department.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thesupre_alaska-department-justice-lawsuit": [
+     "justice",
+     "department"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "What to Know About the Florida Plane Crash That Killed 9",
+   "dek": "A small jet plummeted to the ground on Sunday, exploding into a fireball and killing everyone on board. The authorities did not immediately release information about the victims.",
+   "opening": "",
+   "published": "2026-11-02T21:38:30+00:00",
+   "link": "https://www.nytimes.com/2026/11/01/us/learjet-crash-florida-palm-beach.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_x_191-about-charges-convicted": [
+     "what",
+     "know"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "'One of the most uncomfortable interviews I've ever seen': Michigan Dem Party Chair on Stevens",
+   "dek": "Democrats are hoping to make gains this midterm election across GOP strongholds in the Midwest. In Michigan, Democratic Senate nominee Abdul El-Sayed has seen a fundraising surge after Rep. Haley Stevens endorsed his opponent Mike Rogers. Michigan Democratic Party Chair Curtis Hertel and Iowa Democratic Party Chair Rita Hart join Alicia Menendez with their analysis. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Subscribe to MS NOW’s We the People Newsletter for exclusive content from your favorite MS NOW anchors. Sign up now for fre",
+   "opening": "",
+   "published": "2026-11-02T21:25:57+00:00",
+   "link": "https://www.youtube.com/watch?v=OplxHWo96OY",
+   "videoId": "OplxHWo96OY",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "‘Work to do’: Authorities give update on Florida private jet crash",
+   "dek": "Officials have provided an update on the investigation into Sunday’s deadly Learjet crash in Florida.",
+   "opening": "",
+   "published": "2026-11-02T21:23:31+00:00",
+   "link": "https://www.aljazeera.com/video/newsfeed/2026/11/2/work-to-do-authorities-give-update-on-florida-private-jet-crash?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "obj_thejusti_about-biden-charged-fbi": [
+     "officials",
+     "investigation"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "El-Sayed rallies with Sen. Elizabeth Warren on final day before midterms",
+   "dek": "Watch live as Democratic Michigan Senate candidate Abdul El-Sayed rallies with Sen. Elizabeth Warren, D-MA, on the final day before the key midterm election. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: https://www.ms.now/ #Midterms #Michigan #El-Sayed",
+   "opening": "",
+   "published": "2026-11-02T21:00:10+00:00",
+   "link": "https://www.youtube.com/watch?v=CN5GLY0n5gc",
+   "videoId": "CN5GLY0n5gc",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "'What the hell?': Psaki assesses bizarre Stevens betrayal in Michigan",
+   "dek": "Jen Psaki shares her political assessment of Rep. Haley Stevens' bizarre surprise betrayal of Abdul El-Sayed in the Michigan Senate race. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: https://www.ms.now/ #abdulelsayed #haleystevens #michigan",
+   "opening": "",
+   "published": "2026-11-02T20:59:06+00:00",
+   "link": "https://www.youtube.com/shorts/DDRP3VKCCDs",
+   "videoId": "DDRP3VKCCDs",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "senate race"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Mamdani’s progressive allies vie for seats in Congress",
+   "dek": "Three New York City progressive Democrats are expected to win their midterm congressional races in Tuesday&#039;s election.",
+   "opening": "",
+   "published": "2026-11-02T20:48:56+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/2/mamdanis-progressive-allies-vie-for-seats-in-congress?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "America Votes",
+   "dek": "We answer your questions about the midterm elections and what they will mean for the world.",
+   "opening": "",
+   "published": "2026-11-02T20:46:29+00:00",
+   "link": "https://www.nytimes.com/2026/11/02/world/midterm-elections-questions-trump-fifa.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump Administration Said to Plan Rolling Back Pregnancy-Related Job Protections",
+   "dek": "The Biden era law was meant to help women stay in the workplace, but some conservatives say rules to enact it went too far with coverage for abortion and fertility treatment.",
+   "opening": "",
+   "published": "2026-11-02T20:44:39+00:00",
+   "link": "https://www.nytimes.com/2026/11/02/business/economy/eeoc-trump-administration-pregnancy-fertility-abortion.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_administration-back-canada-rolls": [
+     "back",
+     "some"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "HBCU student raises money to drive classmates to the polls after GOP curbs campus voting",
+   "dek": "\"We really knew that we had a fight ahead of us, and we were prepared and ready to take that fight on.” Terrence \"Olu\" Rouse, a senior at North Carolina A&T, co-founded Protect Ours NC after the state’s election board voted to curb campus early voting at the largest HBCU in the country. He opens up about the fight to get students to the ballot box. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, ",
+   "opening": "",
+   "published": "2026-11-02T20:35:04+00:00",
+   "link": "https://www.youtube.com/shorts/0jmTC8mLWw0",
+   "videoId": "0jmTC8mLWw0",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "early voting"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Gulf Economies, Torn by War in Iran, Desperately Need a Return to Normal",
+   "dek": "States like Saudi Arabia and the United Arab Emirates that have worked to rebalance from a dependence on energy have seen growth plunge in a year of strife.",
+   "opening": "",
+   "published": "2026-11-02T20:34:54+00:00",
+   "link": "https://www.nytimes.com/2026/11/02/business/iran-war-gulf-economies.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump’s Immigration Crackdown Backlash Poses Challenge for Republicans in the Midterms",
+   "dek": "President Trump promised to end the chaos at the southern border. But deadly ICE shootings and high-profile raids have shaken many voters.",
+   "opening": "",
+   "published": "2026-11-02T20:29:52+00:00",
+   "link": "https://www.nytimes.com/2026/11/02/us/politics/trump-immigration-crackdown-backlash-republicans.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Iran Says It Would Reopen Strait of Hormuz in 2 Days as Part of U.S. Deal",
+   "dek": "Iranian officials spoke of some progress in negotiating to reopen the strait even as they prepared for all-out war. A Qatari delegation arrived in Tehran on Monday to meet with the foreign minister to continue talks.",
+   "opening": "",
+   "published": "2026-11-02T20:25:33+00:00",
+   "link": "https://www.nytimes.com/2026/11/02/world/middleeast/iran-deal-strait-of-hormuz.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "hormuz",
+     "strait of"
+    ],
+    "iran": [
+     "iran",
+     "tehran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Judge Dismisses Trump Lawsuit Demanding Harvard Admissions Data",
+   "dek": "Trump administration officials had sought admissions data from Harvard, including student application essays, to see if the school was complying with a court decision banning affirmative action.",
+   "opening": "",
+   "published": "2026-11-02T20:13:41+00:00",
+   "link": "https://www.nytimes.com/2026/11/02/us/harvard-admissions-trump-lawsuit-dismissed.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_against-bbc-defamation-deposition": [
+     "judge",
+     "lawsuit"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "CISA Retreats From Election Security Ahead of Midterms",
+   "dek": "Protecting the vote was once considered among the top priorities of the Cybersecurity and Infrastructure Security Agency. Now it barely mentions the issue.",
+   "opening": "",
+   "published": "2026-11-02T20:07:28+00:00",
+   "link": "https://www.nytimes.com/2026/11/02/us/politics/cisa-election-security-midterms.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump’s Tariffs Are On the Ballot in Michigan",
+   "dek": "The levies as well as trade fighting with Canada are facing a test in the state, where voters appear skeptical of free trade but also of the president’s erratic approach.",
+   "opening": "",
+   "published": "2026-11-02T20:05:13+00:00",
+   "link": "https://www.nytimes.com/2026/11/02/business/economy/trump-tariffs-midterms-michigan.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "tariffs": [
+     "tariff"
+    ],
+    "obj_thepresi_administration-back-canada-rolls": [
+     "canada",
+     "tariffs"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "LIVE: Trump speaks at the Reflecting Pool the day before the midterms",
+   "dek": "Watch as President Donald Trump delivers remarks at the Lincoln Memorial Reflecting Pool one day before the midterms. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: https://www.ms.now/ #Trump #Midterms #ReflectingPool",
+   "opening": "",
+   "published": "2026-11-02T19:57:54+00:00",
+   "link": "https://www.youtube.com/watch?v=NbEiAm5Y2Qw",
+   "videoId": "NbEiAm5Y2Qw",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Judge Throws Out Charges Against Former F.B.I. Officials",
+   "dek": "The magistrate judge, Zia M. Faruqui, said the case was a rushed, political prosecution ordered by the White House intended to affect the midterm elections.",
+   "opening": "",
+   "published": "2026-11-02T19:34:11+00:00",
+   "link": "https://www.nytimes.com/2026/11/02/us/politics/judge-fbi-agents-charges-midterms.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Will Trump’s Comments About Jon Husted’s Physique Help Him Win the Ohio Senate Race?",
+   "dek": "The president has repeatedly complimented Senator Jon Husted’s body. For better or worse, it has caught the attention of voters and raised Mr. Husted’s profile in a key midterm race.",
+   "opening": "",
+   "published": "2026-11-02T19:27:03+00:00",
+   "link": "https://www.nytimes.com/2026/11/02/us/politics/trump-husted-body-comments.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm",
+     "senate race"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump asks Supreme Court to block 20,000 California ballots before midterms",
+   "dek": "California says any move to block ballots from suspected noncitizens could disenfranchise eligible US voters.",
+   "opening": "",
+   "published": "2026-11-02T19:06:52+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/2/trump-asks-supreme-court-to-block-20000-california-ballots-before-midterms?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_california-charged-election-feds": [
+     "noncitizens",
+     "california"
+    ],
+    "obj_afederal_block-care-court-inmate": [
+     "supreme",
+     "block"
+    ],
+    "obj_afederal_asks-bend-big-border": [
+     "asks",
+     "supreme"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "BEST AD OF THE MIDTERMS: Talarico VS Elon Musk",
+   "dek": "Krystal and Saagar discuss how Vivek screwed his campaign with an ad featuring Amy Acton's estranged mother. Faiz Shakir: https://x.com/fshakir?lang=en Ryan Girdusky: https://natpop.substack.com/ Sign up for a PREMIUM Breaking Points subscriptions for full early access to uncut shows and LIVE AMAs with the hosts every week: https://breakingpoints.supercast.com/ Merch Store: https://shop.breakingpoints.com/ To listen to Breaking Points as a podcast, check them out on Apple and Spotify Apple: https://podcasts.apple.com/us/podcast/breaking-points-with-krystal-and-saagar/id1570045623 Spotify: http",
+   "opening": "",
+   "published": "2026-11-02T19:00:04+00:00",
+   "link": "https://www.youtube.com/watch?v=LDZVKemSn6g",
+   "videoId": "LDZVKemSn6g",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "tx-sen": [
+     "talarico"
+    ],
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Iran pushing accelerated plan for ceasefire talks with US",
+   "dek": "Tehran says plan has been condensed and can be implemented within two days as it continues talks with mediators.",
+   "opening": "",
+   "published": "2026-11-02T18:49:26+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/2/iran-pushing-accelerated-plan-for-ceasefire-talks-with-us?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran",
+     "tehran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "LIVE: El Sayed rallies after BOMBSHELL Stevens surprise",
+   "dek": "Watch live as Michigan Democratic Senate candidate Abdul El-Sayed and Michigan Senator Elissa Slotkin (D) rally together in Flint, Michigan one day before the midterms. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: https://www.ms.now/ #Michigan #midterms",
+   "opening": "",
+   "published": "2026-11-02T18:46:40+00:00",
+   "link": "https://www.youtube.com/watch?v=JqC2hXWf2l8",
+   "videoId": "JqC2hXWf2l8",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump Administration Asks Supreme Court to Intervene in California Ballot Case",
+   "dek": "In an emergency application, administration lawyers asked the justices to immediately order California to set aside 20,000 mail-in ballots.",
+   "opening": "",
+   "published": "2026-11-02T18:35:37+00:00",
+   "link": "https://www.nytimes.com/2026/11/02/us/politics/trump-supreme-court-california-ballots.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_asks-bend-big-border": [
+     "asks",
+     "supreme"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump Floats Pre-Emptive Pardons for Allies if Democrats Take Congress in Midterms",
+   "dek": "“We just have to protect those people,” President Trump said in an interview, when asked about potential investigations of allies and administration officials if Democrats won control of Congress.",
+   "opening": "",
+   "published": "2026-11-02T18:35:07+00:00",
+   "link": "https://www.nytimes.com/2026/11/02/us/politics/trump-pardons-democrats-congress-control.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "US petrol prices dip ahead of midterms as voters eye costs",
+   "dek": "Diesel prices ease to $6.29 per gallon, offering slight relief amid a global fuel demand squeeze.",
+   "opening": "",
+   "published": "2026-11-02T18:32:30+00:00",
+   "link": "https://www.aljazeera.com/economy/2026/11/2/us-petrol-prices-dip-ahead-of-midterms-as-voters-eye-costs?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "diesel",
+     "petrol"
+    ],
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "What Are Voters’ Top Concerns? Midterm Election Polls Point to the Economy.",
+   "dek": "Our polls suggest the economy is biggest motivator of voters’ choices in these midterm elections and that Democrats are more trusted to fix things.",
+   "opening": "",
+   "published": "2026-11-02T18:30:05+00:00",
+   "link": "https://www.nytimes.com/2026/11/02/us/politics/midterm-election-polls-trump-economy-immigration.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Field of competitive House races EXPANDS in Dems' favor",
+   "dek": "New polling is giving Democrats a strong edge when it comes to retaking the House majority. Rep. Jason Crow (D-CO), co-chair of the DCCC's \"Red to Blue\" battleground program, joins Alicia Menendez to share more on his party's strategy to flip the House. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of ",
+   "opening": "",
+   "published": "2026-11-02T18:27:03+00:00",
+   "link": "https://www.youtube.com/watch?v=kcxYnix9ASo",
+   "videoId": "kcxYnix9ASo",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "house race",
+     "polling"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "'The fate of the free world is at stake!': Sen. Warren slams Stevens' endorsement",
+   "dek": "Tomorrow, America's high-stakes midterm elections will take place and all eyes are on Michigan, Texas and other key states. MS NOW Chief Political Reporter Chris Jansing, MS NOW Senior White House Reporter Vaughn Hillyard, MS NOW Senior Congressional Reporter Ali Vitali and MS NOW White House Reporter Laura Barrón-López join Alicia Menendez with the latest updates. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here ms.now/membership MS NOW is the go-to destination for domestic and international breakin",
+   "opening": "",
+   "published": "2026-11-02T18:26:06+00:00",
+   "link": "https://www.youtube.com/watch?v=qkZYB_pNPvs",
+   "videoId": "qkZYB_pNPvs",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Will Dems' dreams of Texas become a reality? Polling average finds Talarico has an edge over Paxton",
+   "dek": "One of the most highly-anticipated races tomorrow will be the Texas Senate race between Democrat James Talarico and Republican Ken Paxton. MS NOW Reporter Jake Traylor joins Peter Alexander with the latest from Arlington, Texas. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: https",
+   "opening": "",
+   "published": "2026-11-02T18:24:32+00:00",
+   "link": "https://www.youtube.com/watch?v=M5dlES_crBM",
+   "videoId": "M5dlES_crBM",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "tx-sen": [
+     "talarico",
+     "paxton",
+     "texas senate"
+    ],
+    "midterms": [
+     "senate race",
+     "polling"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Judge dismisses charges against FBI agents involved in Hunter Biden case",
+   "dek": "A federal judge tossed charges accusing two former FBI officials of lying to Congress about Hunter Biden investigation.",
+   "opening": "",
+   "published": "2026-11-02T18:10:26+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/2/judge-dismisses-charges-against-fbi-agents-involved-in-hunter-biden-case?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_administration-federal-halt-investigation": [
+     "judge",
+     "investigation"
+    ],
+    "obj_thejusti_about-biden-charged-fbi": [
+     "officials",
+     "lying",
+     "investigation",
+     "hunter"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump, Vance campaign with candidates on last day before US midterms",
+   "dek": "President Donald Trump closes his midterm campaign push at the Reflecting Pool, urging supporters to vote.",
+   "opening": "",
+   "published": "2026-11-02T17:07:14+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/2/trump-vance-and-candidates-make-final-push-before-us-midterms?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Ryan Grim PREDICTION: DEM SUPERMAJORITY",
+   "dek": "Krystal, Saagar, Ryan and Emily discuss their predictions for the midterm elections. Sign up for a PREMIUM Breaking Points subscriptions for full early access to uncut shows and LIVE AMAs with the hosts every week: https://breakingpoints.supercast.com/ Merch Store: https://shop.breakingpoints.com/ To listen to Breaking Points as a podcast, check them out on Apple and Spotify Apple: https://podcasts.apple.com/us/podcast/breaking-points-with-krystal-and-saagar/id1570045623 Spotify: https://open.spotify.com/show/4Kbsy61zJSzPxNZZ3PKbXl Instagram: https://www.instagram.com/breakingpoints/ Facebook:",
+   "opening": "",
+   "published": "2026-11-02T17:00:35+00:00",
+   "link": "https://www.youtube.com/watch?v=XUfLWeZhDVQ",
+   "videoId": "XUfLWeZhDVQ",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump Returns to Reflecting Pool, Now Refilled After Botched Renovation",
+   "dek": "The president will make his closing arguments before the midterm elections at a landmark that came to symbolize his administration’s dysfunction.",
+   "opening": "",
+   "published": "2026-11-02T16:31:11+00:00",
+   "link": "https://www.nytimes.com/2026/11/02/us/politics/trump-reflecting-pool-refilled-botched-repairs.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Battleground Dem touts bipartisan record, but can’t name single issue she’d work with Trump on",
+   "dek": "Democratic Senate candidate Peggy Flanagan touted her bipartisan record but couldn&apos;t name one Trump policy she&apos;d support, citing &quot;continued grift.&quot;",
+   "opening": "A Democratic Senate candidate in Minnesota touted her bipartisan record Sunday but could not name a single issue she would work with President Donald Trump on, instead accusing his administration of \"continued grift.\" The exchange came as Lt. Gov. Peggy Flanagan, Minnesota’s Democratic Senate nominee, campaigns against Republican Michele Tafoya in a race Republicans see as a rare opportunity to flip a traditionally blue state. Flanagan’s answer underscored the sharply partisan nature of the Minnesota race, where she has cast Tafoya as a rubber stamp for Trump and pledged to oppose the administration at nearly every turn. \"I just want to be really clear that I’ve got a long track record of working with folks on the other side of the aisle,\" Flanagan told Fox News' Bill Melugin when asked if there were any policies she could see herself working with Trump on. Flanagan pointed to her work at the Children’s Defense Fund–Minnesota and her time in the Minnesota Legislature, where she served alongside a Republican majority and helped pass bipartisan legislation, as evidence of her ability to work across the aisle. \"I think that, you know, that proves that I have the ability to work with folks,\" she continued. PEGGY FLANAGAN DEMANDS EXPANDING THE SUPREME COURT AND ABOLIHING ICE Flanagan’s bipartisan pitch comes against the backdrop of a campaign built around opposing Trump’s agenda. She has called for dismantling ICE , passing Medicare for All , and reversing the administration’s Med",
+   "published": "2026-11-02T16:30:44-04:00",
+   "link": "https://www.foxnews.com/politics/battleground-dem-touts-bipartisan-record-cant-name-single-issue-shed-work-trump",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_afederal_anti-court-pause-policy": [
+     "supreme",
+     "policy"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "JACKSON THOMPSON: Sophie Cunningham says she hired '24/7' security amid claim of FBI intervention",
+   "dek": "Sophie Cunningham says she hired 24/7 security that will travel with her, revealing the precaution on her &quot;No Hesitation&quot; podcast amid stalking concerns.",
+   "opening": "Indiana Fever guard Sophie Cunningham says she has hired security to travel with her around the clock, revealing a new precaution after recently describing concerns involving stalkers. \"I’ve definitely hired security,\" Cunningham said on her \"No Hesitation\" podcast with basketball trainer Drew Hanlen. \"And they’re going to start traveling with me actually next week, 24/7.\" Cunningham said the attention has spread well beyond the places where basketball fans previously recognized her. \"Now it’s like it doesn’t matter what state, what city,\" she said. \"It’s everywhere.\" The disclosure follows her appearance on Theo Von’s \"This Past Weekend\" podcast, where she said she believed the FBI was watching approximately 20 people over concerns involving her. Cunningham did not identify those individuals or explain the agency’s involvement. Her estimate and description of the FBI’s role have not been independently verified. JACKSON THOMPSON: SOPHIE CUNNINGHAM CLAIMS FBI IS WATCHING 20 PEOPLE FOR HER, ON WNBA ANTHEM CONTROVERSY In June, Indiana prosecutors charged Kevin Singh with felony stalking and intimidation and misdemeanor harassment in a case involving Cunningham. According to court documents cited by The Associated Press, Cunningham told investigators that the unwanted contact had caused her to have nightmares and stay home more frequently. The charges were allegations. On \"No Hesitation,\" Hanlen brought up her earlier stalking comments while asking how her increased visibility ha",
+   "published": "2026-11-02T16:14:20-04:00",
+   "link": "https://www.foxnews.com/outkick-sports/jackson-thompson-sophie-cunningham-hired-24-7-security-amid-claim-fbi-intervention",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thejusti_about-biden-charged-fbi": [
+     "charged",
+     "involvement"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Charley Hull dumps out SI swimsuit content from a boat, NFL player whiffs & college football's growing problem",
+   "dek": "Miami Dolphins rookie Chris Johnson&apos;s stunning sack whiff on Drake Maye left fans stunned, while college football attendance woes keep growing.",
+   "opening": "'Nightcaps' is a daily column that catches you up on the biggest sports, news and culture stories you may have missed while pretending to do work at your desk. It runs Monday-Friday on OutKick.com . How we doing, folks? Let's start this week — and this month — with a quick pulse check. Halloween is behind us. October is, sadly, behind us. We fell back yesterday morning. We're now less than 24 hours out from the midterms . Down here in Florida, it literally has not stopped raining since Saturday night. I've lived through dozens of hurricanes and millions of summer storms in my 30 years in the Sunshine State, and I've never seen anything quite like this. Just constant rain. Every road is flooded. My yard and the lake behind me are indistinguishable at this point. I have to use four-wheel drive to get down my dirt road, and even then, it's dicey. As for tomorrow's election ... So far today — and it's noon at the time of this writing — I've received 14 different texts and three calls. Some folks think Florida is turning blue. Others think we'll have this thing wrapped up by dinnertime. My official prediction, as OutKick's unofficial Florida guy: We'll stay red, but it won't be the landslide we've grown accustomed to. On a concerned scale of 1-10, I'm around a 4.6 right now. I was 0 in 2024, and 2 in 2022 for reference. Anyway, let's talk sports for a bit and leave all that other nonsense behind. Welcome to a Monday Nightcaps — the one where LPGA star Charley Hull starts Thanksgiv",
+   "published": "2026-11-02T16:06:07-04:00",
+   "link": "https://www.foxnews.com/outkick-sports/charley-hull-dumps-si-swimsuit-content-boat-nfl-player-whiffs-college-football-growing-problem",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thepresi_adds-canadian-imports-lifts": [
+     "some",
+     "others"
+    ],
+    "obj_thepresi_administration-back-canada-rolls": [
+     "back",
+     "some"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "China steps up Middle East diplomacy with Iran and Oman meetings",
+   "dek": "Beijing urges dialogue on US-Iran war, sends envoy to Gulf as Xi hosts first Omani head of state visit since 1978.",
+   "opening": "",
+   "published": "2026-11-02T16:03:52+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/2/china-steps-up-middle-east-diplomacy-with-iran-and-oman-meetings?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Tucker Exposes the Donor Class",
+   "dek": "To submit your question for the next edition of AskTucker, join us at tuckercarlson.com/join Watch the full conversation here: https://youtu.be/Nm0gukcI3b8 Watch more here: https://watchtcn.co/49CDF2t #TuckerCarlson #CharlieKirk #midterms #Trump #thirdparty #datacenters #Republicanparty #socialism #Democrats #JamesTalarico #politicians #Islam #news #politics #podcast",
+   "opening": "",
+   "published": "2026-11-02T16:00:04+00:00",
+   "link": "https://www.youtube.com/watch?v=xpaYfMPXFhA",
+   "videoId": "xpaYfMPXFhA",
+   "publication": "tcn",
+   "source": "tcn",
+   "station": "RP",
+   "matched": {
+    "tx-sen": [
+     "talarico"
+    ],
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Two bucks go viral tossing each other around in the woods during brawl at Redwood National Park",
+   "dek": "Part of getting out in nature is witnessing it up close, as hikers at Redwood National Park learned when rutting bucks crashed onto their boardwalk.",
+   "opening": "Part of getting out in nature is witnessing some nature. A group of people in Redwood National Park had a front row seat to some nature when a couple of bucks smashing antlers came tumbling down the side of a hill. The hikers were \"just exploring the Redwood forest\" when the nature arrived. After sliding across the boardwalk, the two deer resumed their battle just a few feet away from the group, who, let's be honest, were way too close for comfort. The deer tossed each other around the woods a little, you know classic rutting season behavior , before launching each other over the side of another small hill. The commentary on this now-viral battle is amazing. CLICK HERE FOR MORE COVERAGE FROM OUTKICK OUTDOORS The only thing better than the up-close and personal battle, and the play-by-play that accompanied it, is the comment section on the Instagram post . Here we are being sucked back in by technology while trying to enjoy nature. It just goes to show you that not all technology is bad. A place where you can weigh in with thoughts like \"Shoulda started taking bets on the trail. Missed opportunity\" still has some value. COYOTES CHOOSE THE FRONT OF A COUPLE'S SOUTHERN CALIFORNIA CABIN FOR AN EARLY MORNING SCRAP Where else would we go for the delicate balance of slightly useful information and smart ass responses? Enjoy:",
+   "published": "2026-11-02T15:59:37-04:00",
+   "link": "https://www.foxnews.com/outkick-sports/two-bucks-go-viral-tossing-each-other-around-woods-during-brawl-redwood-national-park",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_administration-back-canada-rolls": [
+     "back",
+     "some"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Early Voting Turnout Offers Promising Signs for Democrats",
+   "dek": "Early voting figures tell an incomplete story, but strong turnout among key demographics stood out in critical Senate battlegrounds.",
+   "opening": "",
+   "published": "2026-11-02T15:57:32+00:00",
+   "link": "https://www.nytimes.com/2026/11/02/us/politics/early-vote-turnout-senate-battlegrounds.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "early voting"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Multiple people killed, others injured in shooting near California beach",
+   "dek": "The Monterey County Sheriff&apos;s Office said multiple people were killed in a shooting along Jetty Road in Moss Landing shortly after midnight.",
+   "opening": "Multiple people were killed and others injured in a shooting near a California beach early Monday, authorities said. The Monterey County Sheriff's Office said in a press release that deputies and detectives responded to a shooting along Jetty Road in Moss Landing shortly after midnight. \"There are multiple fatalities and casualties confirmed,\" the sheriff's office said. North County Fire Protection Chief Jess Cortez said crews found two people with gunshot wounds to the chest and another person with minor injuries, according to FOX 2 KTVU . ONE DEAD, 6 INJURED AFTER GUNFIRE ERUPTS AT UNSANCTIONED CALIFORNIA PARTY THAT DREW HUNDREDS: SHERIFF The two gunshot victims were pronounced dead at the scene, while the injured person was taken to a hospital, Cortez told the station. Authorities have not said how many people were killed or injured in total or provided details about what led to the shooting . California State Parks Police closed Jetty Road and Moss Landing State Beach at the request of the sheriff's office as the investigation continued. SHOOTING AT FLORIDA BEACH 'TEEN TAKEOVER' LEAVES 17-YEAR-OLD HOSPITALIZED WITH GUNSHOT WOUND \"There is no active threat to the Moss Landing Community at this time,\" the sheriff's office said. \"This is an active investigation , and no further information will be released at this time.\" State Sen. John Laird called the shooting an \"unspeakable horror\" and offered his condolences to those affected. FLORIDA WOMAN, 70, OPENS FIRE INSIDE PORT O",
+   "published": "2026-11-02T15:53:59-04:00",
+   "link": "https://www.foxnews.com/us/multiple-people-killed-injured-shooting-near-california-beach",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "russia-sanctions": [
+     "sanction"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "In an Alaska fishing community, the Dan Sullivan episode takes an ominous turn",
+   "dek": "In Petersburg, Alaska, nobody has seen Dan J. Sullivan for weeks. Sullivan's rustic home stood dark a day after FBI agents paid a visit to friends who donated to his campaign to unseat the Republican senator with the same first and last name.",
+   "opening": "",
+   "published": "2026-11-02T15:38:06-05:00",
+   "link": "https://www.pbs.org/newshour/politics/in-an-alaska-fishing-community-the-dan-sullivan-episode-takes-an-ominous-turn",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_thejusti_alaska-blanche-blocking-defends": [
+     "alaska",
+     "republican"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Lions say 'preliminary indications are positive' for linebacker Jack Campbell after neck injury",
+   "dek": "Jack Campbell&apos;s Detroit Lions said preliminary indications are positive after his neck injury, but key questions about mobility remain unanswered.",
+   "opening": "There is good news for Detroit Lions linebacker Jack Campbell, per the team, but details of his condition and whether he has motion in his extremities remain scarce following Monday's latest update. The Lions on Monday announced \"preliminary indications are positive\" for Campbell's condition. But \"out of respect for Jack and his family, we will not share further information at this time.\" \"It's positive, you know?\" coach Dan Campbell told reporters. \"So your prayers are working. Please continue to do that.\" Campbell, no relation to Jack Campbell, went so far as to call his defensive captain's condition \"a small setback.\" PACKERS WR CHRISTIAN WATSON GETS CHECKED AT HOSPITAL AFTER SCARY INJURY, SOMEHOW RETURNS TO LAMBEAU FIELD And while this is uplifting and paints a picture that the player's medical situation is trending in a good direction, it leaves a lot unclear. Specifically, no one has said whether Campbell has regained full or any mobility since he was removed from the Ford Field turf on Sunday on an immobility stretcher and cart. Despite the vague nature of the situation, Dan Campbell shared how he and several of the team's players visited Jack Campbell and his family at the hospital on Sunday evening. \"I got to go see him last night. It was good. It was positive,\" Dan Campbell said. \"… Got to see his parents, talk to his wife. And everybody's in good spirits. \"And it's about the recovery and it's a small setback. That's the family. They're, you know, very positive.\" Th",
+   "published": "2026-11-02T14:59:31-04:00",
+   "link": "https://www.foxnews.com/outkick-sports/lions-preliminary-indications-positive-linebacker-jack-campbell-neck-injury",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_afederal_block-care-court-inmate": [
+     "leaves",
+     "medical"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Billionaire tax puts California’s economic future before midterm voters",
+   "dek": "The Golden State&apos;s Proposition 40 billionaire tax could raise far less than $100 billion as wealthy residents flee California before the vote.",
+   "opening": "California voters are set to cast their ballots to determine the fate of a proposed billionaire tax that could see the Golden State lose wealthy residents and may not deliver the revenue advocates hope for. The ballot measure, known as Proposition 40, would impose a one-time 5% wealth tax on taxpayers and trusts with assets in excess of $1 billion and use the revenue to fund state healthcare programs, public education and food assistance. The tax would be payable over five years and covered assets would include businesses, securities, art, collectibles and intellectual property – though real property, pensions and certain retirement accounts would be exempt. The threat of the wealth tax, which as drafted would apply retroactively to those who were California residents as of Jan. 1, 2026, has caused some prominent billionaires to move out of the state or relocate businesses – including Google co-founders Larry Page and Sergey Brin, Oracle founder Larry Ellison and PayPal co-founder Peter Thiel. Max Levchin, the billionaire co-founder of Affirm Holdings, told Bloomberg on Monday that he would \"probably\" leave California if voters pass the wealth tax. \"I love California. I think it’s beautiful,\" Levchin said. \"But the notion of the popular opinion saying ‘Actually, we’re totally OK with asset seizure because we just really, really need it,’ I just think that is so wrong.\" Proponents of the billionaire tax argue that it would bring in about $100 billion in revenue from the roughl",
+   "published": "2026-11-02T14:58:00-04:00",
+   "link": "https://www.foxbusiness.com/economy/billionaire-tax-puts-californias-economic-future-before-midterm-voters",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Pentagon's top spies tasked with 'no-fail' mission as Hegseth puts foreign midterm meddling in crosshairs",
+   "dek": "Secretary of War Pete Hegseth&apos;s September directive mobilizes the entire Defense Intelligence Enterprise for midterm election security overseas.",
+   "opening": "Ever since the 2016 presidential election that first got President Donald Trump elected and the ensuing Russiagate scandal, there has been increased scrutiny on foreign meddling in U.S. elections and threats to the American voting system. Now, 10 years later, Secretary of War Pete Hegseth is directing his entire intelligence and spy forces to ensure foreign adversaries do not interfere in Tuesday's midterms. The Pentagon chief has ordered America's military intelligence and cyber agencies to mobilize against foreign threats to the 2026 elections by directing his department's sprawling intelligence apparatus to make election security a priority in what he calls a \"no-fail mission.\" The September directive reaches beyond U.S. Cyber Command and the National Security Agency , instructing the entire Defense Intelligence Enterprise — including agencies responsible for military and geospatial intelligence — to \"mobilize every authorized asset, capability, and partnership\" against foreign election threats. HOW TO WATCH CRITICAL 2026 MIDTERM ELECTION RACES IN TX, OH, MI, WI, GA, IA, NV, ME AND FL The order puts some of the military's most sophisticated intelligence capabilities behind a mission that has grown considerably since Russia's interference in the 2016 presidential election. But with Americans preparing to vote, the extent to which Hegseth's directive has changed the Pentagon's existing election-security operations remains unclear. The Department of War declined to provide Fo",
+   "published": "2026-11-02T14:54:55-04:00",
+   "link": "https://www.foxnews.com/politics/pentagons-top-spies-tasked-no-fail-mission-hegseth-puts-foreign-midterm-meddling-crosshairs",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thepresi_alleges-americans-canadian-carney": [
+     "americans",
+     "interference"
+    ],
+    "obj_thesupre_alaska-department-justice-lawsuit": [
+     "ordered",
+     "department"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "WATCH: Bodycam shows marina shootout with sailboat pirate in wealthy seaside resort town",
+   "dek": "Bodycam video captures the intense shootout between Newport, Rhode Island, police and a suspected thief who allegedly stole a sailboat from New Jersey.",
+   "opening": "Tense moments were caught on camera during a deadly shootout between police officers and a suspected boat thief in Newport, Rhode Island . The Newport Police Department on Friday released video from the incident that happened in August. During that incident on Aug. 26, officers received a call about a stolen sailboat in Newport Harbor. The suspect opened fire seconds after they arrived, police said. Officers returned fire, and one of them was heard numerous times on his own bodycam recording saying he had been hit shot in the leg. CONNECTICUT POLICE OFFICERS SHOT, SUSPECT KILLED AFTER ATTEMPTED ARREST SPARKS HECTIC CHASE The suspect was eventually shot and pronounced dead on scene. The stolen sailboat matched the description of a boat named \"Pathfinder\" that was reported stolen from Liberty Harbor Marina in Jersey City, New Jersey. FOLLOW THE FOX TRUE CRIME TEAM ON X Police confirm to Fox News Digital that Brendan Norris, 27, is the suspect who allegedly stole the boat from the marina and traveled from New Jersey to Rhode Island Fox News Digital reached out to the Newport Police Department. SIGN UP TO GET THE LATEST TRUE CRIME NEWS LISTEN TO THE NEW 'CRIME &amp; JUSTICE WITH DONNA ROTUNNO' PODCAST In a few social posts shared in August, people claiming to be friends of the boat's owner shared posts asking the public to keep an eye out for the missing vessel, which is a \"2 masted Yawl Hinckley Bermuda 40,\" the post said. GET BREAKING NEWS BY EMAIL Following the video's release",
+   "published": "2026-11-02T14:46:33-04:00",
+   "link": "https://www.foxnews.com/us/watch-bodycam-shows-marina-shootout-sailboat-pirate-wealthy-seaside-resort-town",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thesupre_alaska-department-justice-lawsuit": [
+     "justice",
+     "department"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "I'm Mike Rogers. This is why I want Michigan's vote for Senate",
+   "dek": "Abdul El-Sayed&apos;s Green New Deal policies and gas-powered car ban could raise utility rates and kill Michigan manufacturing jobs, his opponent warns.",
+   "opening": "When my wife Kristi and I decided to enter this race over a year and a half ago, we knew that the stakes in this election were high. The Michigan we both grew up in — our home — was barely recognizable. Our state’s education ranking is now 45th in the nation. We have the highest utility rates in the Midwest. The next generation of Michiganders is being pushed out of our state as housing costs skyrocket and job opportunities move elsewhere. We knew that Michigan needed a United States senator who was going to champion working families and get our state back on track. That is why we got into this fight to begin with: to lower housing costs, get our kids reading again and bring manufacturing jobs back to our state. It has always been about serving Michigan and putting our state first. That promise to fight for YOU has not changed. But after the Democratic primary election on Aug. 4, something did change. Our race became a fight for the very soul of our state and country. There has never been more on the line. 2026 MIDTERMS STATE OF PLAY: KEY RACES UNFOLD AS STEVENS, EL-SAYED BATTLE IN MICHIGAN Costs are incredibly high for Michiganders, and my Democratic opponent Abdul El-Sayed’s extreme Green New Deal policies would burden hardworking families even more. His gas-powered car ban would put auto manufacturing workers out of a job. The energy policies El-Sayed has supported could drive utility and gasoline costs even higher for Michigan families. El-Sayed’s \" Medicare for All\" plan",
+   "published": "2026-11-02T14:45:57-04:00",
+   "link": "https://www.foxnews.com/opinion/mike-rogers-michigans-vote-senate",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "gasoline"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thepresi_costs-executive-housing-lowering": [
+     "housing",
+     "costs"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "I'm Dr Abdul El-Sayed. This is why I want Michigan's vote for Senate",
+   "dek": "Democrat Abdul El-Sayed makes his case against Republican Mike Rogers in the Michigan Senate race, citing tariffs, gas prices, and healthcare as key campaign issues.",
+   "opening": "Earlier this month, our campaign kicked off a week-long town hall tour in Northern Michigan and the Upper Peninsula. Many of our stops were in towns Trump won by thirty points. Pundits laughed in our faces. My opponent told reporters we should expect \"a cold welcome.\" But I went anyway. EL-SAYED RALLYGOERS URGE 'MAJOR CHANGE', CASH HANDOUTS TO FIGHT COST CRISIS I went for the mom in Escanaba who shared her excitement that this was the first political rally she’d attended in her life — not because she’d lacked interest, but because \"no one ever comes to Escanaba.\" I heard that kind of thing a lot. In Iron Mountain, Marquette, Sault Ste. Marie, Petoskey, Midland, and Caro, I spoke with Michiganders who had felt ignored and overlooked by our politics. FOX NEWS POLL: MICHIGAN VOTERS SPLIT BETWEEN EL-SAYED AND ROGERS Both parties are to blame for this feeling of neglect all across the UP and Northern Michigan. Republicans take these voters for granted. Most Democrats don’t even bother campaigning there. I’m running for Senate because no Michigander deserves to be left behind. That’s why we’ve held over 700 events in over 120 cities. I’ve sat down with Michiganders from all walks of life, all of whom are hurting from the Rogers-Trump agenda and are hungry for change. We’re seeing historic momentum in unlikely places. Rural districts, from Escanaba to Port Huron to Cadillac, are showing up and showing out for our campaign. Hundreds of former Trump voters line up for hours to attend ",
+   "published": "2026-11-02T14:45:13-04:00",
+   "link": "https://www.foxnews.com/opinion/dr-abdul-el-sayed-why-want-michigans-vote-senate",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "tariffs": [
+     "tariff"
+    ],
+    "midterms": [
+     "senate race"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "El-Sayed's silence over mom's FBI questioning raises transparency concerns",
+   "dek": "Abdul El-Sayed&apos;s mother was questioned by the FBI after a 2004 raid on the Islamic American Relief Agency, but the Senate candidate says he has no ties.",
+   "opening": "Michigan Democratic Senate candidate Abdul El-Sayed is facing renewed scrutiny from Republican critics over his mother's questioning by federal investigators more than two decades ago as part of an investigation into an Islamic charity where she worked. El-Sayed's Republican opponent, former Rep. Mike Rogers, R-Mich., accused the Democratic candidate of misleading Michigan voters about his views on the Muslim Brotherhood, pointing to reported associations involving members of El-Sayed's family. El-Sayed previously told Fox News that he has \"never been\" and will \"never be\" a member of the Muslim Brotherhood. Fox News Digital is not aware of any direct ties between El-Sayed and the organization. El-Sayed's campaign did not respond to Fox News Digital's request for comment. CONTROVERSY OVER ABDUL EL-SAYED'S FAMILY TIES TO MUSLIM BROTHERHOOD IGNORED, DOWNPLAYED BY LIBERAL MEDIA \"Michiganders cannot trust Abdul El-Sayed. He lies about his physician credentials , his family life, and about how much his disastrous policies will cost Michigan's families,\" a spokesperson for Rogers told Fox News Digital. \"Tell the truth, Abdul.\" El-Sayed has not publicly addressed the details of his mother's questioning by federal investigators or the raid on the offices of the Islamic charity where she worked since the Washington Free Beacon resurfaced the reports last month. Federal authorities raided the Missouri office of the Islamic American Relief Agency (IARA), where El-Sayed's mother, Fatten E",
+   "published": "2026-11-02T14:33:03-04:00",
+   "link": "https://www.foxnews.com/politics/el-sayeds-silence-over-moms-fbi-questioning-raises-transparency-concerns",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_accused-conspiracy-criminal-democratic": [
+     "democratic",
+     "accused"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Apple News maintains left-leaning tilt under new CEO John Ternus, conservative watchdog group says",
+   "dek": "The Media Research Center says Apple News promoted only 11 stories from right-leaning outlets out of 504 published in October&apos;s first 27 days.",
+   "opening": "Apple News continues to push content from left-leaning news organizations and frame information about President Donald Trump in a negative light, according to studies conducted by the Media Research Center (MRC). The MRC, a conservative media watchdog, previously found Apple News took a \"decidedly leftist turn\" after comparing content during the final month of former CEO Tim Cook’s tenure to the first month after new CEO John Ternus took control on Sept 1. The group then monitored Apple News through October and found the news aggregator continued to largely promote left-leaning outlets in the lead up to midterm elections. Apple News promoted only 11 stories from right-leaning outlets out of a total of 504 published stories through the first 27 days of October, according to the MRC. More than two out of every three stories came from a publication that media bias rating site AllSides considers left-leaning, as 67.3% were from liberal outlets and only 2% came from right-leaning outlets. APPLE, GOOGLE NEWS ALGORITHMS SUPPRESSED NEGATIVE STORIES ON MICHIGAN SENATE HOPEFUL EL-SAYED, STUDY SAYS The study found that Apple News, which comes preinstalled on every iPhone in America, was consistent with the percentage of stories from left-leaning outlets in each month since Ternus took control and noticed a slight bump in content from right-leaning outlets in his second month at the helm. However, nearly half of the content from right-leaning organizations was framed negatively against e",
+   "published": "2026-11-02T14:30:09-04:00",
+   "link": "https://www.foxnews.com/media/apple-news-maintains-left-leaning-tilt-under-new-ceo-john-ternus-conservative-watchdog-group-says",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Mike Rogers dishes on how shock Haley Stevens endorsement unfolded hours before Election Day",
+   "dek": "GOP Senate candidate Mike Rogers defended Dem Rep Haley Stevens as top Democrats erupted over her decision to cross party lines and endorse him over Abdul El-Sayed just before Election Day.",
+   "opening": "Michigan Republican U.S. Senate candidate Mike Rogers praised Democratic Rep. Haley Stevens for putting America ahead of her party Monday while accusing Democrats of viciously attacking the congresswoman after she stunned her party by endorsing him over Democratic candidate Abdul El-Sayed . Rogers told Brian Kilmeade on the \"Brian Kilmeade Show\" that Stevens’ endorsement \"flipped this thing upside down,\" saying the congresswoman called him Sunday morning while he was on his way to church before ultimately deciding to publicly back his campaign following her bruising primary loss to El-Sayed. \"This is a congresswoman who just stood up and said, 'America is more important than my party right now,'\" Rogers said. \"And we cannot elect somebody who is so anti-Jewish, who is divisive, who's angry, who was mean about his politics. It's just the wrong thing to do.\" EL SAYED'S LEFT-WING ALLIES ATTACK 'EVIL' STEVENS AFTER BOMBSHELL ROGERS ENDORSEMENT Rogers' comments came as Fox News reported Monday that Stevens' endorsement triggered backlash from top Democrats, including Senate Minority Leader Chuck Schumer , D-N.Y., and former House Speaker Nancy Pelosi, D-Calif. Schumer called the move a \"despicable betrayal,\" while Pelosi accused Stevens of \"dangerously\" betraying Michigan families by backing Rogers. The endorsement marked a dramatic break for Stevens, who had stopped short of explicitly endorsing El-Sayed in the weeks after losing the Democratic primary but continued to publicly a",
+   "published": "2026-11-02T14:29:06-04:00",
+   "link": "https://www.foxnews.com/politics/mike-rogers-dishes-shock-haley-stevens-endorsement-unfolded-hours-election-day",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_191-400-convicted-cult": [
+     "leader",
+     "left"
+    ],
+    "obj_x_accused-conspiracy-criminal-democratic": [
+     "democratic",
+     "accused"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Golf cult hero Michael Block shares wild quote about his wife and kids amid impressive PGA Tour Champions run",
+   "dek": "Michael Block assured fans he still has the same wife and kids after his impressive $600,000-plus run on the PGA Tour Champions senior circuit.",
+   "opening": "Whether you love the guy, hate the guy or this is the first time you're being introduced to the man, the universal truth about Michael Block is that he is one of one. Block, a longtime PGA teaching professional, grabbed a stranglehold on the golf world at the 2023 PGA Championship when he finished tied for 15th and hit a hole-in-one during the final round while playing alongside Rory McIlroy . The Block inevitably cooled off for a bit after experiencing a nearly indescribable moment on a major championship stage, but the California native turned 50 in June, and the Block is hot again. CLICK HERE FOR MORE OUTKICK SPORTS COVERAGE Block made his PGA Tour Champions debut two weeks after hitting the half-century mark and pieced together an impressive T-9 finish. Since then, he's made 10 more starts on the senior circuit and has been mightily impressive with three Top 5 finishes along the way. This past weekend he finished T-10 at the Simmons Bank Championship, and while the finish was nice and the $51,000 payday probably felt good in the pocket, the real treat was a quote he delivered after his opening round 66. THE CRAIG CARTON SHOW–UNFILTERED, UNAPOLOGETIC AND UNMISSABLE. DOWNLOAD HIS DAILY PODCAST NOW! Block felt obliged to go on record to let the world know he has, in fact, not left his wife or children in the midst of his impressive stint on the senior tour. \"I mean, yes, of course, the money's a part of being on the PGA Tour Champions. But to me, I still drive the same car, ",
+   "published": "2026-11-02T14:27:42-04:00",
+   "link": "https://www.foxnews.com/outkick-sports/golf-cult-hero-michael-block-shares-wild-quote-wife-kids-amid-impressive-pga-tour-champions-run",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_191-400-convicted-cult": [
+     "cult",
+     "left"
+    ],
+    "obj_x_191-about-charges-convicted": [
+     "know",
+     "cult"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Vance's campaign blitz puts him at the forefront of the GOP's midterm push, as insiders praise packed schedule",
+   "dek": "Vice President JD Vance has held 19 rallies since September as GOP strategists say his midterm election blitz offers a preview of a potential 2028 run.",
+   "opening": "SWANTON, Ohio — As Republicans rally ahead of a midterm election that will determine whether the GOP maintains control of both chambers of Congress, Vice President JD Vance is taking to the campaign trail once again to speak with voters in New York and Ohio on Monday. Vance’s role in the midterm blitz has been eyed by many top GOP strategists and insiders who say his actions on the trail could offer insight into what a 2028 run might look like for the 42-year-old vice president. \"Vice President Vance is constantly on the road,\" House Majority Whip Tom Emmer, R-Minn., told Fox News Digital. \"I believe he's been in just shy of 50 battleground districts and or states this cycle. He's been a workhorse. I mean you look at Donald J. Trump , who's out there constantly. He just doesn't stop. And of course, people don't maybe notice than the vice president is keeping a schedule himself that is frankly incredibly impressive.\" EXCLUSIVE: INSIDE VANCE'S INTIMATE CAPITOL HILL HUDDLE AS REPUBLICANS CONFRONT TOUGH MIDTERM TERRAIN Vance has held 19 rallies since the GOP midterm convention in early September and dozens of events across the country prior to the convention in Dallas. His role in the midterm has fueled further speculation about his potential run for president in 2028 . Former White House Press Secretary Sean Spicer explained that his midterm campaign efforts add to his resume, but that his fundraising abilities and his role as finance chair of the Republican National Committee w",
+   "published": "2026-11-02T14:23:00-04:00",
+   "link": "https://www.foxnews.com/politics/vances-campaign-blitz-puts-him-forefront-gops-midterm-push-insiders-praise-packed-schedule",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Judge accuses DOJ of 'weaponization,' tosses case against ex-FBI officials",
+   "dek": "The judge said he was \"deeply troubled\" by the mistakes and rushed nature of the case over the FBI's Hunter Biden probes — one of several politically charged DOJ actions ahead of the midterms.",
+   "opening": "The judge said he was \"deeply troubled\" by the mistakes and rushed nature of the case over the FBI's Hunter Biden probes — one of several politically charged DOJ actions ahead of the midterms. (Image credit: Craig Hudson)",
+   "published": "2026-11-02T13:54:01-05:00",
+   "link": "https://www.npr.org/2026/11/02/g-s1-151242/judge-tosses-case-fbi-officials-hunter-biden",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thejusti_about-biden-charged-fbi": [
+     "officials",
+     "charged",
+     "hunter"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "What to know about the Affordable Care Act's open enrollment period",
+   "dek": "People signing up for health insurance coverage under the Affordable Care Act for 2027 should expect higher premiums and fewer options. The enrollment period starts Sunday and ends in mid-January.",
+   "opening": "",
+   "published": "2026-11-02T13:53:45-05:00",
+   "link": "https://www.pbs.org/newshour/health/what-to-know-about-the-affordable-care-acts-open-enrollment-period",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_x_191-about-charges-convicted": [
+     "what",
+     "know"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "House Dems demand Haley Stevens' exile as Jeffries reveals deadline on deciding her fate",
+   "dek": "House Democratic leaders are considering action against Haley Stevens after her surprise endorsement of Mike Rogers in the Michigan Senate race over Abdul El-Sayed.",
+   "opening": "House Democratic leaders are holding off on deciding whether to punish Rep. Haley Stevens, D-Mich., after she endorsed a Republican in Michigan's Senate race, drawing calls from fellow Democrats for her removal from the party's House caucus. Stevens endorsed former Rep. Mike Rogers, R-Mich., over Democratic Senate nominee Abdul El-Sayed , a former public health official, on Nov. 1 — just two days before Tuesday's midterm elections. The decision prompted sharp criticism from Democrats, including lawmakers who want Stevens expelled from the House Democratic Caucus, but party leaders are waiting until after the elections to address her future. HALEY STEVENS RIPPED BY FELLOW DEMS FOR REFUSING TO EXPLICITLY BACK EL-SAYED: 'STAY THE F--- OFF TELEVISION' A senior Democratic aide told Fox News Digital that House Democratic Caucus Chairman Pete Aguilar, D-Calif., would likely support House Minority Leader Hakeem Jeffries, D-N.Y., in his response to Stevens' endorsement. HALEY STEVENS' FIANCE HAMMERS EL-SAYED, SAYS HE'LL VOTE FOR ROGERS \"Haley Stevens made a terrible decision, blindsided everyone and isolated herself from the House Democratic caucus. We will have a discussion about appropriate next steps upon our return,\" Jeffries told POLITICO. Spokespeople for Jeffries and Aguilar did not respond to Fox News Digital's requests for comment. Stevens, a four-term lawmaker, is leaving Congress at the end of the year after narrowly losing Michigan's Democratic Senate primary to El-Sayed. ",
+   "published": "2026-11-02T13:31:31-04:00",
+   "link": "https://www.foxnews.com/politics/house-dems-demand-haley-stevens-exile-jeffries-reveals-deadline-deciding-her-fate",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm",
+     "senate race"
+    ],
+    "obj_thepresi_authority-block-dems-elections": [
+     "dems",
+     "elections"
+    ],
+    "obj_x_accused-conspiracy-criminal-democratic": [
+     "democratic",
+     "lawmaker"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump administration promised farmers $15 billion in weeks before midterms",
+   "dek": "President Donald Trump's administration has made $15 billion worth of promises to agriculture producers in the last few weeks before the midterm elections.",
+   "opening": "",
+   "published": "2026-11-02T13:25:17-05:00",
+   "link": "https://www.pbs.org/newshour/politics/trump-administration-promised-farmers-15-billion-in-weeks-before-midterms",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Parties End the Midterm Election With Their Closing Arguments",
+   "dek": "Republicans, worried about losing control of Congress, are sending dire warnings about the opposing party. Democrats are trying to keep their focus on affordability, corruption and President Trump.",
+   "opening": "",
+   "published": "2026-11-02T13:23:50+00:00",
+   "link": "https://www.nytimes.com/2026/11/02/us/politics/midterm-elections.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump administration appeals to Supreme Court to sideline 20,000 disputed California mail ballots",
+   "dek": "President Donald Trump's administration has appealed to the Supreme Court in its push to require California election officials to set aside thousands of disputed mail ballots.",
+   "opening": "",
+   "published": "2026-11-02T12:53:40-05:00",
+   "link": "https://www.pbs.org/newshour/politics/trump-administration-asks-supreme-court-to-sideline-20000-disputed-california-mail-ballots",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_x_california-charged-election-feds": [
+     "election",
+     "california"
+    ],
+    "obj_afederal_activist-admin-appeals-court": [
+     "appeals",
+     "supreme"
+    ],
+    "obj_afederal_act-appeals-california-court": [
+     "appeals",
+     "california"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Here's when polls are closing in your state this midterm election",
+   "dek": "While tens of millions of Americans have already cast their early votes in the 2026 midterm elections, millions more are expected to vote in person on Election Day.",
+   "opening": "",
+   "published": "2026-11-02T12:46:35-05:00",
+   "link": "https://www.pbs.org/newshour/politics/heres-when-polls-are-closing-in-your-state-this-midterm-election",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Union boss stuns with major Republican endorsement as election nears",
+   "dek": "Teamsters president endorsed Senate Republican Ashley Moody in the Florida Senate race, marking a major break from traditional union Democratic ties.",
+   "opening": "The leader of one of the nation’s oldest and largest unions stunned political observers by issuing a surprise endorsement for a Senate Republican stalwart over the weekend. Teamsters General President Sean O’Brien, who famously nearly came to blows with now-Secretary of Homeland Security Markwayne Mullin during a Senate hearing before ultimately becoming acquaintances, issued a ringing endorsement of Sen. Ashley Moody, R-Fla., signaling a major break from national union sentiment that has tended to favor Democrats. \"Just voted in the State of Florida for the first time, and very proud to have cast a ballot for Sen. Ashley Moody,\" O’Brien, whose 123-year-old union is about 1.3 million-strong, announced Sunday. 5 TAKEAWAYS FROM FLORIDA SENATE PRIMARY: GOP SEN ASHLEY MOODY WILL FACE DSA'S NIXON \"Sen. Moody has been extremely helpful working with the Teamsters to protect workers’ pensions, defend good-paying jobs, and support well-funded union apprenticeship programs.\" \"The Teamsters look forward to working with Sen. Moody in her role on the Senate HELP Committee to pass the Faster Labor Contracts Act and get this critical legislation signed into law to protect American workers,\" he added. FRUSTRATED BLUE-COLLAR UNION BOSSES RIP SOCIALIST POLITICIANS, WARN OF LABOR EXODUS FROM DEM PARTY O’Brien, a self-described \"lifelong Democrat,\" previously spoke at the 2024 Republican National Convention, but emphasized at the time that the Democratic Party had snubbed his request to speak at",
+   "published": "2026-11-02T12:11:56-04:00",
+   "link": "https://www.foxnews.com/politics/union-boss-stuns-major-republican-endorsement-election-nears",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "senate race"
+    ],
+    "obj_x_does-hearing-help-laughter": [
+     "hearing",
+     "help"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Talarico campaigns alongside Democrat who called ICE 'new KKK' and demanded its abolition",
+   "dek": "James Talarico praised Frederick Haynes III at a Texas rally, a congressional candidate who compared ICE to the KKK and called to abolish it.",
+   "opening": "James Talarico, a U.S. Senate candidate in Texas, briefly praised Frederick Haynes III, a Democratic congressional candidate who compared President Donald Trump's immigration enforcement efforts to the KKK, at a get-out-the-vote event on Thursday as part of his Clear Eyes Full Hearts tour. \"Give it up for your next congressman, Dr. Freddy Haynes. Thank you, Dr. Haynes, for those kind words and for your service to this community,\" Talarico said, following an introduction and speech from Haynes. Although Talarico has not issued a formal endorsement of Haynes, the moment is notable for Talarico as he pitches himself as a Democrat who can represent the values of the Republican-leaning Lone Star State — and as he tries to distance himself from controversy over past remarks Republicans have characterized as woke. TALARICO RALLY WARMUP ACT CALLS FOR ABOLISHING ICE, CONTRASTING SENATE HOPEFUL'S MESSAGE Haynes, the pastor of Friendship-West Baptist Church, has framed many of his political views in the context of race and did so again on the event with Talarico. \"You transformed ICE into the new KKK and brought about terror in this nation,\" Haynes said of Trump's use of Immigration and Customs Enforcement (ICE). \"It’s time to melt ICE. It’s time to abolish ICE,\" Haynes added. Haynes is running to fill the seat of Rep. Jasmine Crockett, D-Texas, the incumbent in Texas' 30th Congressional District who gave up her seat in a Senate bid she ultimately lost. During his campaign, Haynes has f",
+   "published": "2026-11-02T12:05:11-04:00",
+   "link": "https://www.foxnews.com/politics/talarico-campaigns-alongside-democrat-called-ice-new-kkk-demanded-abolition",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "tx-sen": [
+     "talarico"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "DOJ appeals to Supreme Court to reverse block on segregating 20K California ballots",
+   "dek": "The Justice Department asked the Supreme Court to temporarily block rulings denying its bid to segregate over 20,000 California mail-in ballots.",
+   "opening": "The Justice Department asked the Supreme Court to temporarily block lower-court rulings that denied its request to segregate more than 20,000 California mail-in ballots cast by people it says are likely not U.S. citizens. The DOJ argues the limited injunction would preserve the ballots while their eligibility is investigated, without canceling any votes. California and the federal government dispute whether the ballots are unlawful. \"Once illegally cast ballots are counted and commingled with lawful votes, the resulting harm is impossible to remedy,\" the Justice Department wrote in a court filing. JUDGE REJECTS DOJ REQUEST TO BLOCK CALIFORNIA FROM IMMEDIATELY COUNTING BALLOTS LINKED TO ALLEGED NONCITIZENS The 9th U.S. Circuit Court of Appeals rejected the request Friday, with Judge Patrick Bumatay dissenting, as did a federal judge in Los Angeles last week. The case remains under review, and the DOJ is seeking relief while the matter proceeds. California says its safeguards against noncitizen voting are robust and argues the federal list may contain errors that could disenfranchise eligible voters. The lower courts also cited the state’s authority over election procedures and warned that granting the request could jeopardize the election. DOJ HAS VERIFIED 20,000 NONCITIZENS ON CALIFORNIA VOTER ROLLS, FEDERAL PROSECUTOR SAYS The case stems from an Oct. 15 Justice Department lawsuit alleging that California is impeding enforcement of a federal law barring noncitizens from votin",
+   "published": "2026-11-02T11:50:29-04:00",
+   "link": "https://www.foxnews.com/politics/doj-appeals-supreme-court-reverse-block-segregating-20k-california-ballots",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_california-charged-election-feds": [
+     "noncitizens",
+     "election",
+     "california"
+    ],
+    "obj_afederal_activist-admin-appeals-court": [
+     "appeals",
+     "supreme"
+    ],
+    "obj_afederal_block-care-court-inmate": [
+     "supreme",
+     "block"
+    ],
+    "obj_afederal_act-appeals-california-court": [
+     "appeals",
+     "california"
+    ],
+    "obj_thepresi_authority-block-dems-elections": [
+     "block",
+     "authority"
+    ],
+    "obj_thepresi_against-bbc-defamation-deposition": [
+     "judge",
+     "lawsuit"
+    ],
+    "obj_thepresi_administration-federal-halt-investigation": [
+     "judge",
+     "noncitizen",
+     "voting"
+    ],
+    "obj_thesupre_alaska-department-justice-lawsuit": [
+     "justice",
+     "department",
+     "lawsuit"
+    ],
+    "obj_thejusti_alaska-dems-dismissal-doj": [
+     "election",
+     "lawsuit"
+    ],
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "election",
+     "rejects"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Judge dismisses charges against ex-FBI agents accused of lying about Hunter Biden, citing 'weaponization'",
+   "dek": "The Justice Department may still have an opportunity to pursue a grand jury indictment against the ex-FBI officials.",
+   "opening": "",
+   "published": "2026-11-02T11:38:34-05:00",
+   "link": "https://www.pbs.org/newshour/politics/judge-dismisses-charges-against-ex-fbi-agents-accused-of-lying-about-hunter-biden-citing-weaponization",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_thesupre_alaska-department-justice-lawsuit": [
+     "justice",
+     "department"
+    ],
+    "obj_thejusti_about-biden-charged-fbi": [
+     "officials",
+     "lying",
+     "hunter"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Best places to retire: 10 US cities ranked for affordability, quality of life",
+   "dek": "Midland, Michigan, tops the list of best places to retire, with affordable communities in Florida, Texas and other states also ranking in the top 10.",
+   "opening": "Millions of Americans reach retirement age each year, and choosing where to spend their later years can be a major financial and lifestyle decision. Midland, Michigan , claimed the top spot in U.S. News &amp; World Report's ranking of the best places to retire, with a median home value of $206,176, well below the national average of $359,870. U.S. News &amp; World Report ranked the top places to retire in the country based on factors including housing affordability, quality of life, healthcare, desirability and the job market. The latest list includes communities across eight states, with Texas and Florida each represented twice. Housing costs vary widely among the top-ranked communities. Altoona, Pennsylvania, has the lowest median home value on the list at $115,035, while The Woodlands, Texas, has the highest at $472,814. HOW MUCH INCOME AMERICANS NEED TO RETIRE COMFORTABLY IN EVERY STATE The rankings also highlight a range of options for retirees , from small, affordable towns with low housing costs to larger communities with stronger household incomes and more amenities. Here are the 10 best places to retire in 2027, according to U.S. News &amp; World Report: Midland took the top spot with a median home value of $206,176 – significantly below the national average of $359,870 – and an average monthly rent of $790. The city of about 42,800 people also has an average commute time of just 13.6 minutes and received an 8.7 out of 10 cost-of-living score. About 21% of Midland re",
+   "published": "2026-11-02T11:36:06-04:00",
+   "link": "https://www.foxbusiness.com/lifestyle/best-places-retire-10-us-cities-ranked-affordability-quality-life",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_costs-executive-housing-lowering": [
+     "housing",
+     "costs"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "DOJ asks for Supreme Court to intervene on California ballot demands",
+   "dek": "On the eve of the Nov. 3 election, the Trump administration is hoping the Supreme Court will reverse lower courts that rejected its request to order California to set aside the ballots of thousands of people it says are \"likely\" noncitizens.",
+   "opening": "On the eve of the Nov. 3 election, the Trump administration is hoping the Supreme Court will reverse lower courts that rejected its request to order California to set aside the ballots of thousands of people it says are \"likely\" noncitizens. (Image credit: Saul Loeb)",
+   "published": "2026-11-02T11:34:17-05:00",
+   "link": "https://www.npr.org/2026/11/02/nx-s1-6023802/supreme-court-california-voting-ballots-trump",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_x_california-charged-election-feds": [
+     "noncitizens",
+     "election",
+     "california"
+    ],
+    "obj_afederal_asks-bend-big-border": [
+     "asks",
+     "supreme"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Mamdani, Hasan Piker among radical left-wing voices erupting over Haley Stevens' endorsement switch",
+   "dek": "Chuck Schumer, Hakeem Jeffries and top Democrats unleashed fury at Haley Stevens after her endorsement of Republican Mike Rogers before Tuesday.",
+   "opening": "Prominent Democrats and left-wing voices nationwide exploded with fury after Rep. Haley Stevens, D-Mich., endorsed Republican Mike Rogers in the final stretch of Michigan's U.S. Senate race over the weekend. In her video posted to social media on Sunday after attending church service with Rogers, Stevens noted how Democratic candidate Abdul El-Sayed told her to \"stay away\" from his campaign and slammed him for embracing radical steamer Hasan Piker — who was among those criticizing the endorsement. \"Working class people’s lives are on the ballot on Tuesday—their healthcare, their rent, their bills,\" New York City Mayor Zohran Mamdani said in an X post. \"Haley Stevens just betrayed them by endorsing the very Republican she said she wanted to run against.\" Michigan Democratic Party Chair Curtis Hertel said on X shortly after the endorsement: \"Congresswoman Stevens is not a current member of the Michigan Democratic Party, nor will she be in the future.\" EL SAYED'S LEFT-WING ALLIES ATTACK 'EVIL' STEVENS AFTER BOMBSHELL ROGERS ENDORSEMENT Stevens, who will leave Congress in January, lost the Democratic primary to El-Sayed earlier this year. She was widely viewed as the moderate, establishment candidate compared to the more progressive, left-wing policies of her opponent. On Sunday, Stevens abandoned the party in the final hours of the Senate campaign as Democrats seek to win back control of the upper chamber. \"This is a despicable betrayal from Rep. Stevens,\" Senate Minority Leader",
+   "published": "2026-11-02T11:15:46-04:00",
+   "link": "https://www.foxnews.com/politics/mamdani-hasan-piker-radical-left-wing-voices-erupting-haley-stevens-endorsement-switch",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "senate race"
+    ],
+    "obj_x_191-400-convicted-cult": [
+     "leader",
+     "left"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Iran's delegation has left negotiations in Qatar after a tense weekend. Here's where things stand",
+   "dek": "There are fears that Netanyahu could be pushing for new strikes in an effort to stay in power.",
+   "opening": "",
+   "published": "2026-11-02T11:02:18-05:00",
+   "link": "https://www.pbs.org/newshour/world/irans-delegation-has-left-negotiations-in-qatar-after-a-tense-weekend-heres-where-things-stand",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "obj_x_billionaire-deal-looms-meta": [
+     "strikes",
+     "stay"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Haley Stevens’s Election Eve Surprise. Plus. . .",
+   "dek": "In today&#8217;s Front Page, James Kirchick and Mark Halperin on a surprise endorsement in Michigan. Tyler Cowen on the bipartisan flight from economics. The Florida tax fight dividing Republicans. RFK Jr.&#8217;s new hire. And more.",
+   "opening": "It&#8217;s Monday, November 2. This is The Front Page , your daily window into the world of The Free Press &#8212;and our take on the world at large. Today: Why economics loses no matter who wins in the midterms. Josh Code meets the woman who spent 14 years on psychiatric drugs and is now joining HHS to fix the system. Mark Manson on why happiness is overrated. And much more. But first: the Michigan midterm bombshell. Just when we thought Election Day would arrive without the usual late &#8220;October surprise,&#8221; Michigan&#8217;s Senate race took an unforgettable November turn. Yesterday, Rep. Haley Stevens, who narrowly lost the Democratic primary to Abdul El-Sayed in August, endorsed El-Sayed&#8217;s Republican opponent, Mike Rogers. The last-minute change of heart caught everyone off guard, but it reflects a truth that&#8217;s easy to forget in today&#8217;s politics: Some fissures run deeper than the line between parties. Stevens made her move after El-Sayed refused to condemn an ad from a supporter&#8217;s PAC that blamed Israel for the rising cost of Americans&#8217; groceries. With control of the Senate potentially hinging on Michigan, Democratic leaders were quick to denounce her. But is she a traitor, or a Democrat putting her country over her party? James Kirchick argues it&#8217;s the latter. Two years ago, he notes Democrats welcomed Liz Cheney&#8217;s endorsement of Elissa Slotkin for Michigan&#8217;s other Senate seat as an act of political courage. Now tha",
+   "published": "2026-11-02T11:02:11+00:00",
+   "link": "https://www.thefp.com/p/haley-stevens-election-michigan-alaska-hhs-marathon",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "midterms": [
+     "midterm",
+     "senate race"
+    ],
+    "obj_thejusti_alaska-blanche-blocking-defends": [
+     "republican",
+     "loses"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Judge tosses case against ex-FBI officials accused of lying to Congress about Hunter Biden investigation",
+   "dek": "A federal judge dismissed the case against two FBI officials in the Hunter Biden probe, accusing Trump and Kash Patel of directing a &quot;rush job.&quot;",
+   "opening": "A federal judge tossed criminal charges against two former FBI officials accused of lying to Congress about the Hunter Biden investigation Monday, delivering a blistering rebuke of the prosecution and accusing the Trump administration's Justice Department of weaponizing the justice system. U.S. Magistrate Judge Zia Faruqui dismissed the criminal complaint against former FBI officials Nikki Cole Floris and Bradley Benavides from the bench, sharply criticizing the government's handling of the prosecution. \"What has transpired here cannot be described as anything other than weaponization,\" Faruqui said, describing the case as a \"rush job\" directed by President Donald Trump and FBI Director Kash Patel. The case stemmed from allegations that the officials lied to Congress about their knowledge of Hunter Biden’s laptop and the bureau’s handling of investigations involving him ahead of the 2020 presidential election. EX-FBI OFFICIALS ARRESTED IN HUNTER BIDEN LAPTOP PROBE AS TESTIMONY COMES UNDER SCRUTINY The ruling capped a series of hearings in which Faruqui questioned the government's decision to pursue the case through a criminal complaint rather than a grand jury indictment and blasted prosecutors for attempting to add another charge without first securing judicial approval. Republicans have long accused the FBI of improperly handling information about Hunter Biden ahead of the 2020 presidential election, alleging that political bias influenced the bureau's decisions. Prosecutor",
+   "published": "2026-11-02T10:58:33-04:00",
+   "link": "https://www.foxnews.com/politics/judge-tosses-case-against-ex-fbi-officials-accused-lying-congress-hunter-biden-investigation",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_arrested-charged-fraud-grand": [
+     "arrested",
+     "grand"
+    ],
+    "obj_thepresi_administration-federal-halt-investigation": [
+     "judge",
+     "investigation"
+    ],
+    "obj_thesupre_alaska-department-justice-lawsuit": [
+     "justice",
+     "department"
+    ],
+    "obj_thejusti_about-biden-charged-fbi": [
+     "officials",
+     "lying",
+     "investigation",
+     "hunter",
+     "laptop"
+    ],
+    "obj_x_cornell-doe-experts-failed": [
+     "investigations",
+     "system"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "A Political Rebellion in the Rio Grande Valley",
+   "dek": "Warning: This episode contains strong language. In the midterm elections, one of the regions expected to swing away from President Trump and toward Democrats is the Rio Grande Valley of Texas, where life has been transformed by his administration’s crackdown on immigration. Lynsea Garrison, a producer for “The Daily,” has been reporting on that shift and on the unlikely group leading the charge. Guest: Lynsea Garrison , a senior producer on “The Daily.” Background reading:&nbsp; Hispanic voters on the Texas border have soured on Mr. Trump . Opinion video: How Texas border voters feel ahead of ",
+   "opening": "Warning: This episode contains strong language. In the midterm elections, one of the regions expected to swing away from President Trump and toward Democrats is the Rio Grande Valley of Texas, where life has been transformed by his administration’s crackdown on immigration. Lynsea Garrison, a producer for “The Daily,” has been reporting on that shift and on the unlikely group leading the charge. Guest: Lynsea Garrison , a senior producer on “The Daily.” Background reading:&nbsp; Hispanic voters on the Texas border have soured on Mr. Trump . Opinion video: How Texas border voters feel ahead of the midterms . Photo: Tamir Kalifa for The New York Times For more information on today’s episode, visit nytimes.com/thedaily . Transcripts of each episode will be made available by the next workday. Subscribe today at nytimes.com/podcasts or on Apple Podcasts, Spotify and Amazon Music. You can also subscribe via your favorite podcast app here https://www.nytimes.com/activate-access/audio?source=podcatcher . For more podcasts and narrated articles, download The New York Times app at nytimes.com/app. Hosted by Simplecast, an AdsWizz company. See pcm.adswizz.com for information about our collection and use of personal data for advertising.",
+   "published": "2026-11-02T10:50:24+00:00",
+   "link": "https://www.nytimes.com/the-daily",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "When Will We Know Election Outcomes? Don’t Hold Your Breath.",
+   "dek": "Experts say it could take days and even weeks before winners are known in key states including Maine, Alaska, Arizona and California that could determine who controls Congress.",
+   "opening": "",
+   "published": "2026-11-02T10:04:51+00:00",
+   "link": "https://www.nytimes.com/2026/11/02/us/politics/election-vote-counts.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_x_california-charged-election-feds": [
+     "election",
+     "california"
+    ],
+    "obj_thejusti_alaska-dems-dismissal-doj": [
+     "alaska",
+     "election"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Can a Progressive Win a Swing State?",
+   "dek": "Dr. Abdul El-Sayed is a progressive Democrat looking to win a Senate race in Michigan. Our national political correspondent Shane Goldmacher explains why a victory for El-Sayed could have broader implications for 2028.",
+   "opening": "",
+   "published": "2026-11-02T10:04:45+00:00",
+   "link": "https://www.nytimes.com/video/us/politics/100000011250893/can-a-progressive-win-a-swing-state.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "senate race"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Elon Musk Spends $474 Million on the 2026 Midterm Elections",
+   "dek": "Never before has a single ultrawealthy person who was not running for office spent this much during a single election cycle.",
+   "opening": "",
+   "published": "2026-11-02T10:04:42+00:00",
+   "link": "https://www.nytimes.com/2026/11/02/us/politics/elon-musk-midterm-spending.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Senate Control After the Midterms: Party Switches, Ties and Wild Cards",
+   "dek": "The likelihood of a slim majority leaves room for several hard-to-predict scenarios that could affect the balance of power.",
+   "opening": "",
+   "published": "2026-11-02T10:03:42+00:00",
+   "link": "https://www.nytimes.com/2026/11/02/us/politics/senate-midterms-tie-independents-wild-cards.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Midterm Elections: Who Is Winning the Race for Congress?",
+   "dek": "We’re one day away from the midterms. Here’s the state of play.",
+   "opening": "",
+   "published": "2026-11-02T10:03:33+00:00",
+   "link": "https://www.nytimes.com/2026/11/02/us/politics/congress-races-midterms.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Can a Republican Win in a Democratic State?",
+   "dek": "Senator Susan Collins, a Republican, is running for re-election in Maine, a state that has voted against President Trump three times. Our national political correspondent Shane Goldmacher explains how Republicans hope that she can distance herself enough from Mr. Trump to win.",
+   "opening": "",
+   "published": "2026-11-02T10:03:15+00:00",
+   "link": "https://www.nytimes.com/video/us/politics/100000011237418/can-a-republican-win-in-a-democratic-state.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "me-sen": [
+     "collins"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How The New York Times Is Covering the Midterm Elections",
+   "dek": "More than 400 journalists across at least 30 states will interview voters, break down results and identify trends.",
+   "opening": "",
+   "published": "2026-11-02T10:02:41+00:00",
+   "link": "https://www.nytimes.com/2026/11/02/insider/new-york-times-midterm-elections.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "WATCH: Trump officially reopens Lincoln Memorial Reflecting Pool on eve of midterm elections",
+   "dek": "It was an unusual closing argument for Republicans to keep control of Congress. But it conforms with the way the president has devoted considerable time, attention and money in his second term on beautifying his Washington surroundings.",
+   "opening": "",
+   "published": "2026-11-02T09:55:57-05:00",
+   "link": "https://www.pbs.org/newshour/politics/watch-live-trump-delivers-last-pitch-before-midterms-at-reflecting-pool-site-of-botched-renovation",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Steve Hilton rallies at 'symbol of 16 years of Democrat failure' in closing days of California race",
+   "dek": "Steve Hilton rallied in Pacific Palisades, calling the wildfire devastation a symbol of 16 years of Democratic failure ahead of Tuesday&apos;s election.",
+   "opening": "Republican California gubernatorial candidate Steve Hilton rallied Sunday in Pacific Palisades, a Los Angeles neighborhood devastated by the January 2025 wildfires, blaming Democratic leadership for the destruction and slow recovery just days before voters will choose the state's next governor. \"I’m so sorry. And it’s so sad about what happened because it could and should have been avoided,\" Hilton told supporters and residents. \"This place is a symbol of 16 years of Democrat failure.\" The Palisades Fire burned more than 23,000 acres and destroyed roughly 6,800 structures, many of them homes. Fueled by powerful winds and dry conditions, the blaze displaced tens of thousands of residents and devastated large sections of the community, leaving a massive rebuilding effort in its wake. JURY DEADLOCKS IN FEDERAL TRIAL OF MAN ACCUSED OF STARTING DEADLY PALISADES FIRE IN LOS ANGELES Hilton argued that the disaster and its aftermath reflected broader failures of California's Democratic leadership, from wildfire prevention and emergency response to rebuilding efforts. \"These are not random, disconnected events,\" Hilton said. \"These are what has gone wrong in the state of California over 16 years of one-party rule.\" Democrats have held California's governorship for the past 16 years. Hilton faces Democrat Xavier Becerra , a former state attorney general and Health and Human Services secretary under President Joe Biden, in Tuesday's election to succeed term-limited Gov. Gavin Newsom. Hi",
+   "published": "2026-11-02T08:05:05-04:00",
+   "link": "https://www.foxnews.com/politics/steve-hilton-rallies-symbol-16-years-democrat-failure-closing-days-california-race",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_california-charged-election-feds": [
+     "election",
+     "california"
+    ],
+    "obj_x_accused-conspiracy-criminal-democratic": [
+     "powerful",
+     "democratic",
+     "accused"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Democrats Show Strength in Final Days of Race for the Senate, New Polls Find",
+   "dek": "Democrats are up in Michigan, Texas, Kansas, Maine and Ohio, have an edge in Alaska and are effectively tied with Republicans in Iowa, new New York Times/Siena polls found.",
+   "opening": "",
+   "published": "2026-11-02T07:49:17+00:00",
+   "link": "https://www.nytimes.com/2026/11/01/us/politics/times-siena-poll-senate.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_thesupre_alaska-department-justice-lawsuit": [
+     "alaska",
+     "race"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Poll flashes warning signs for Republicans in 7 battleground Senate races",
+   "dek": "Senate polls show Democrats leading in Texas, Kansas, Ohio, Maine and Alaska, with Trump&apos;s approval at just 38% across the seven battlegrounds.",
+   "opening": "Republicans are trailing Democrats in seven key Senate battlegrounds, including longtime GOP strongholds Texas and Kansas, according to a poll released Sunday, just days before the midterm elections . The New York Times/Siena poll found Democratic candidates leading in five states currently represented by Republican senators — Alaska, Kansas, Maine, Ohio and Texas — while the race in Iowa is virtually tied. In Michigan, the only Democratic-held Senate seat surveyed, the party's candidate holds a double-digit lead. Don Levy, executive director of the Siena Research Institute, said the results suggest Democrats could capture control of the Senate, though he cautioned that several races remain within the poll's margin of error. SENATE CONTROL IS A COIN FLIP — AND DEMOCRATS’ PATH RUNS THROUGH TRUMP COUNTRY \"While a blue wave and Democratic control of the Senate is, according to our polls, a distinct possibility, with so many races within the poll's total margin of error, a Senate majority for either party remains possible,\" Levy said. The findings are particularly striking in Texas, which has not elected a Democrat to the Senate since 1988, and Kansas, where Democrats have not won a Senate race since 1932. In Texas, Democratic state lawmaker James Talarico leads Republican Attorney General Ken Paxton 50% to 43% among likely voters. In Kansas, Democrat Adam Hamilton leads Republican Sen. Roger Marshall 49% to 44%. The poll also found former Democratic Sen. Sherrod Brown leading Re",
+   "published": "2026-11-02T07:44:59-04:00",
+   "link": "https://www.foxnews.com/politics/poll-flashes-warning-signs-republicans-7-battleground-senate-races",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "tx-sen": [
+     "talarico",
+     "paxton"
+    ],
+    "midterms": [
+     "midterm",
+     "senate race"
+    ],
+    "obj_x_accused-conspiracy-criminal-democratic": [
+     "democratic",
+     "lawmaker",
+     "leading"
+    ],
+    "obj_thesupre_alaska-department-justice-lawsuit": [
+     "alaska",
+     "race"
+    ],
+    "obj_thejusti_alaska-blanche-blocking-defends": [
+     "alaska",
+     "results",
+     "republican"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump takes midterm campaign blitz to historic stage for grand finale before Election Day",
+   "dek": "President Donald Trump brings his whirlwind midterm campaign to a close in Washington, D.C., after weeks of rallies, celebrity appearances and memorable moments on the road.",
+   "opening": "President Donald Trump is set to deliver his closing midterm campaign message Monday at the Lincoln Memorial Reflecting Pool in Washington, D.C., capping a weekslong campaign blitz that has taken him across more than 20 states as Republicans fight to maintain control of Congress in Tuesday's elections. Trump is scheduled to speak at 2 p.m. ET and participate in nine tele-rallies throughout the day, following in-person campaign stops in Iowa and Kansas on Sunday. The president has made 30 in-person political appearances since August, including more than 27 rallies in October, with a longtime adviser who has joined him on the road offering a behind-the-scenes look at the travel, logistics and memorable moments along the way. LEAVITT SAYS TRUMP IS DEFYING MIDTERM HEADWINDS AS HE BARNSTORMS COUNTRY Alex Bruesewitz, a senior adviser to Trump's 2024 presidential campaign who has accompanied him on roughly 10 to 15 trips in recent weeks, told Fox News Digital that organizing rallies for a sitting president presents challenges far different from those of a traditional campaign. \"It's actually much different than the campaign,\" Bruesewitz said. \"When you're doing an event moving the current president of the United States, the logistics that go into it are nuts.\" The operation requires extensive coordination among White House staff, Republican operatives, campaign aides and advance teams, with the White House Office of Political Affairs, Office of Public Liaison and Republican National",
+   "published": "2026-11-02T07:25:02-04:00",
+   "link": "https://www.foxnews.com/politics/trump-takes-midterm-campaign-blitz-historic-stage-grand-finale-before-election-day",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_hhs_administration-adviser-calley-hhs": [
+     "senior",
+     "adviser"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Michigan Dem claims Stevens shot down Rogers endorsement rumor hours before turning on El-Sayed",
+   "dek": "Haley Stevens told Rep. Debbie Dingell at midnight the Rogers endorsement was just a rumor. Five hours later, she stood beside him at a Detroit church.",
+   "opening": "The decision by Rep. Haley Stevens, D-Mich., to endorse Republican Senate nominee Mike Rogers was apparently a sudden change of heart, and tied to the Abdul El-Sayed campaign's stay-away order this weekend. Rep. Debbie Dingell, D-Mich., said Stevens told her Saturday night that reports of an impending Rogers endorsement were not accurate. \"It's very hard,\" Dingell told local FOX 2 on Sunday night. \"Haley Stevens told me at midnight last night this was all a rumor and was not true.\" DEMOCRAT HALEY STEVENS ENDORSES GOP SENATE NOMINEE MIKE ROGERS AT DETROIT CHURCH Five hours later, Stevens was standing shoulder to shoulder with Rogers at a Detroit church service. \"She texted me at 7:45, watching you on MS NOW, heart, heart,\" Dingell continued. \"And by the way, I talked to her. Look, I'm just upset. I'm very concerned. It's sad, but I don't want to be distracted anymore.\" The Detroit church event was intended to bring unity for El-Sayed's campaign, because Stevens had won the Black vote, but instead, after being told by the Democratic nominee to stay away, she unified with Rogers. FORMER RIVAL DODGES FULL-THROATED EL-SAYED ENDORSEMENT AFTER BITTER SENATE PRIMARY \"We got a phone call this morning and, you know, there's been a lot of unfortunate activity, I think,\" Rogers told FOX 2 Detroit. \"Abdul discarded Haley Stevens, was rude to Haley Stevens, has been rude, I think, to many in the African-American community. At least that's what they're telling me. And I think this just boil",
+   "published": "2026-11-02T07:23:23-04:00",
+   "link": "https://www.foxnews.com/politics/michigan-dem-claims-stevens-shot-down-rogers-endorsement-rumor-hours-before-turning-el-sayed",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_191-about-charges-convicted": [
+     "what",
+     "know"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Haley Stevens backs Mike Rogers. And, Gulf states brace for potential attack on Iran",
+   "dek": "Democrats in Michigan are considering their options after Haley Stevens endorsed GOP candidate Mike Rogers for Senate. And the Gulf states are bracing for a possible U.S. attack on Iran after the midterms.",
+   "opening": "Democrats in Michigan are considering their options after Haley Stevens endorsed GOP candidate Mike Rogers for Senate. And the Gulf states are bracing for a possible U.S. attack on Iran after the midterms. (Image credit: Finn Gomez)",
+   "published": "2026-11-02T07:19:54-05:00",
+   "link": "https://www.npr.org/2026/11/02/g-s1-151215/up-first-newsletter-michigan-senate-iran-war-supreme-court-colorado-catholic-church",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The GOP reveals a fresh $100B talking point as the battle for Congress looms",
+   "dek": "Kelly Loeffler says the SBA delivered $100 billion to Main Street businesses for a second straight year under Trump&apos;s tax and trade policies.",
+   "opening": "EXCLUSIVE: With both parties vying to convince voters they have the better answer on the economy, Small Business Administrator Kelly Loeffler is pointing to $100 billion in support for local employers as proof that Trump’s policies are working. \"We just recorded our second consecutive year of getting $100 billion to Main Street businesses,\" Loeffler told Fox News Digital, crediting Trump’s tax cuts, deregulation and trade policies. SMALL BUSINESS OWNERS BUILT THE AMERICAN DREAM. DEMOCRATS WANT TO TAKE IT FROM YOU The economic debate could help determine which party controls Congress, as both parties try to persuade voters their policies will improve household finances and business prospects. Loeffler said the business owners she meets want to expand but need confidence that Washington will support long-term investment . They most often tell her they need more skilled workers, she said. DSA-BACKED CANDIDATES ARE WINNING PRIMARIES AND THEIR VISION FOR AMERICA IS VERY DIFFERENT \"What they can’t tolerate is having Washington say that they’re gonna massively regulate them, massively tax them,\" she said. The Small Business Administration said it guaranteed 62,205 loans worth $39.5 billion through its 7(a) and 504 programs in fiscal 2026, its third-highest loan volume on record. The agency’s $100 billion total also includes private investment, disaster aid and business support. The SBA said the 43-day government shutdown halted lending through its main loan programs for nearly two m",
+   "published": "2026-11-02T06:00:28-04:00",
+   "link": "https://www.foxnews.com/politics/gop-reveals-fresh-100b-talking-point-battle-congress-looms",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "shutdown": [
+     "shutdown"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How to watch critical 2026 midterm election races in TX, OH, MI, WI, GA, IA, NV, ME and FL",
+   "dek": "Nine battleground states hold the key to control of Congress as Republicans defend majorities and Democrats eye Senate pickups in the 2026 midterms.",
+   "opening": "Control of Congress is on the line Tuesday as voters decide pivotal Senate and House races across the country, while closely watched contests for governor will shape the political landscape in key states during President Donald Trump's second term. Republicans are fighting to defend their congressional majorities as Democrats seek gains in battlegrounds from Texas and Georgia to Michigan and Maine. Open seats, vulnerable incumbents and competitive statewide races have put nine states at the center of the fight for power in Washington and state capitals. With races stretching across multiple time zones, here are the key contests to watch, when polls close and how to follow live results as Election Night unfolds. 2026 ELECTION DAY LIVE UPDATES Texas voters face two major statewide showdowns, with Republican Attorney General Ken Paxton battling Democratic state Rep. James Talarico for the Senate seat held by outgoing Republican John Cornyn, while GOP Gov. Greg Abbott seeks a historic fourth term against Democratic state Rep. Gina Hinojosa. TRUMP WON THIS RELIABLY RED STATE BY DOUBLE DIGITS. NOW A DEADLOCKED RACE IS BRINGING HIM BACK The Senate contest has emerged as an unusually competitive race in a state that has not elected a Democrat to the Senate since Lloyd Bentsen in 1988, pitting Paxton's conservative appeal and history of legal controversies against Talarico's campaign focused on political change. Meanwhile, Abbott's reelection bid offers another test of Republican domi",
+   "published": "2026-11-02T05:00:41-04:00",
+   "link": "https://www.foxnews.com/politics/how-watch-critical-2026-midterm-election-races-tx-oh-mi-wi-ga-ia-nv-me-fl",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "tx-sen": [
+     "talarico",
+     "paxton",
+     "abbott",
+     "hinojosa"
+    ],
+    "midterms": [
+     "midterm",
+     "house race"
+    ],
+    "obj_thejusti_alaska-dems-dismissal-doj": [
+     "seek",
+     "election"
+    ],
+    "obj_thejusti_alaska-blanche-blocking-defends": [
+     "results",
+     "republican"
+    ],
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "election",
+     "results"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "What Vance's midterm push reveals about his potential 2028 bid",
+   "dek": "Vance's delivery is different from the president's but his speeches contain plenty of MAGA DNA.",
+   "opening": "Vance's delivery is different from the president's but his speeches contain plenty of MAGA DNA. (Image credit: ALEX WROBLEWSKI)",
+   "published": "2026-11-02T05:00:00-05:00",
+   "link": "https://www.npr.org/2026/11/02/nx-s1-6023159/what-vances-midterm-push-reveals-about-his-potential-2028-bid",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How Haley Stevens Trimmed El-Sayed’s Sails",
+   "dek": "By endorsing the Republican, she broke her formal rival&#8217;s odds. To win, El-Sayed may now need a blue tsunami, writes Mark Halperin.",
+   "opening": "Don&#8217;t miss our live election special Tuesday night with 2WAY, from 8 p.m. until midnight ET, featuring Mark Halperin, Will Rahn, and a lineup of Free Press writers following the results. Mark your calendars here . &#8212;The Editors It may be the ultimate shocking but not surprising twist of the Democratic Party&#8217;s 2026 midterm cycle, in an election season that has witnessed Graham Platner dropping out of the Maine Senate race amid accusations of sexual misconduct, James Talarico vanishing from the Texas campaign trail for nearly a fortnight, and Mary Peltola&#8217;s team apparently coaxing a second Dan Sullivan onto the Alaska ballot to distract voters from her Republican opponent, incumbent senator Dan S. Sullivan. On Sunday, Michigan congresswoman Haley Stevens, who lost the Senate primary in August after a rancorous battle with Abdul El-Sayed, endorsed his Republican opponent, former congressman Mike Rogers, appearing with Rogers at a morning service at Detroit&#8217;s Perfecting Church, and then releasing a video offering her full support. &#8220;Hey, Michigan&#8221; she began , &#8220;As you may have seen, our Democratic nominee for U.S. Senate, Abdul, said I was no longer welcome in his campaign and that I should stay away. And he&#8217;s right&#8212;that&#8217;s why I am endorsing Mike Rogers for the U.S. Senate today.&#8221; Stevens called the Michigan race &#8220;the conscience of the Senate, and our Michigan moment,&#8221; and said &#8220;I&#8217;m just ",
+   "published": "2026-11-02T03:33:19+00:00",
+   "link": "https://www.thefp.com/p/haley-stevens-abdul-el-sayed-michigan",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "tx-sen": [
+     "talarico"
+    ],
+    "me-sen": [
+     "maine senate",
+     "platner"
+    ],
+    "midterms": [
+     "midterm",
+     "senate race"
+    ],
+    "obj_thesupre_alaska-department-justice-lawsuit": [
+     "alaska",
+     "race"
+    ],
+    "obj_thejusti_alaska-dems-dismissal-doj": [
+     "alaska",
+     "election"
+    ],
+    "obj_thejusti_alaska-blanche-blocking-defends": [
+     "alaska",
+     "results",
+     "republican"
+    ],
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "election",
+     "results"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "She Spent 14 Years on Psychiatric Drugs. Now She’s Joining HHS to Fix the System.",
+   "dek": "Laura Delano is one of America&#8217;s most prominent critics of antidepressant overprescription. She tells Josh Code why she&#8217;s taking her fight to Washington.",
+   "opening": "&#8220;I once believed deeply that the only reason I was alive was because I was on psych meds,&#8221; Laura Delano told me. From age 13 until 27, doctors prescribed her a total of 19 psychiatric medications, including antidepressants and antipsychotics. Now, she&#8217;s taking on a role in the federal government to curb the overprescription of those same drugs. Monday is Delano&#8217;s first day as a senior policy adviser in Robert F. Kennedy Jr.&#8217;s Department of Health and Human Services, where she will help him set guidance for tapering off antidepressants. Her appointment comes six months after Kennedy announced a &#8220; MAHA Action Plan &#8221; to reduce the &#8220;overuse&#8221; of antidepressants, &#8220;especially among children.&#8221; Delano was, in many ways, the obvious choice to help him. For years, she has been highlighting the risks posed by psychiatric drug dependence, before rising to national prominence in 2024 thanks to her best-selling memoir, Unshrunk . The book details her tumultuous life story, from her upbringing in a privileged Greenwich, Connecticut family (yes, that Delano), to a 2008 suicide attempt and multiple hospitalizations, to a shocking realization: Her pills were making her worse, not better. Mark your calendars. The Free Press and 2WAY are teaming up for a real-time interactive election night special, November 3 from 8 p.m. ET until late. See you there. Join us for election night In 2010, Delano began to taper off her meds&#8212;goin",
+   "published": "2026-11-02T02:34:27+00:00",
+   "link": "https://www.thefp.com/p/laura-delano-maha-hhs-rfk-psychiatry",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "obj_hhs_administration-adviser-calley-hhs": [
+     "senior",
+     "adviser"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The Tax Fight Splitting the Right in Florida",
+   "dek": "A new Republican-backed property tax amendment in Florida has Democrats saying they don&#8217;t support &#8216;defunding the police.&#8217; One county sheriff said the fight is &#8216;turning politics on its head,' writes Frannie Block.",
+   "opening": "Grady Judd of Polk County, Florida, isn&#8217;t your typical sheriff. The 72-year-old career law enforcement officer has amassed nearly four million followers on social media, where he shares stories of unfolding cases with a deadpan Southern drawl and the blunt delivery of a seasoned stand-up comic. In one clip, he calls a prostitute dressed in drag &#8220; Coyote Ugly &#8220;&#8221;; in another , he shows up to a news conference announcing a drug bust wearing a gold chain, stating &#8220;I got their drip, I got their money, we got their guns, we got their dope.&#8221; His most popular video &#8212;where he details the arrest of an 18-year-old for threatening to shoot up a McDonald&#8217;s after the store messed up his order (he refers to the man as a &#8220;McNut&#8221;)&#8212;has been viewed over 21 million times. &#8220;It&#8217;s just another day in the office,&#8221; Judd told me. He&#8217;s squeezing in the time to give me a call between meetings, just a week ahead of Florida&#8217;s November 3 election, where he&#8217;s leveraged his large following to emerge as one of the state&#8217;s loudest voices against a proposed constitutional amendment to lower property taxes across the state. If it passes by a 60 percent vote on Tuesday, the amendment will increase the state&#8217;s current homestead exemption from $50,000 to $150,000 in 2027, and $250,000 in 2028. Those in favor argue the proposal will bring much-needed tax relief to Floridians who are struggling with the r",
+   "published": "2026-11-02T01:42:35+00:00",
+   "link": "https://www.thefp.com/p/florida-frannie-block-grady-judd-tax-police",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "obj_thejusti_charged-doj-drug-laundering": [
+     "drug",
+     "money"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "When ‘Country over Party’ Goes Only One Way",
+   "dek": "Haley Stevens is being called a traitor, but by reversing her endorsement of Abdul El-Sayed, she is showing exactly the kind of courage moderate Democrats once cheered, writes James Kirchick.",
+   "opening": "Running for Senate two years ago, Michigan Democratic congresswoman Elissa Slotkin proudly accepted an endorsement from her former Republican colleague Liz Cheney. &#8220;It is a privilege to be here in Grand Rapids, the hometown of former President Gerald Ford,&#8221; Slotkin said to a room full of people holding &#8220;Republicans for Slotkin&#8221; and &#8220;Country over Party&#8221; placards. The 38th president, who also happened to be a Republican, &#8220;was a leader who understood courage in public service and putting your country over your party.&#8221; Cheney, who co-chaired the House committee investigating the events of January 6th, 2021, was the most popular Republican among Democrats at the time, and deservedly so. Though a rock-ribbed conservative her entire life and the daughter of a man whom liberals reviled during his tenure as vice president, Cheney simply couldn&#8217;t countenance Donald Trump&#8217;s attempt to overturn a democratic election. For choosing country over party, she lost her seat in Congress. Fast-forward to the weekend before the 2026 midterms, when another of Slotkin&#8217;s congressional colleagues, this one a fellow Democrat from Michigan, decided that she too could no longer stomach the burgeoning extremism in her party. Mark your calendars. The Free Press and 2WAY are teaming up for a real-time interactive election night special, November 3 from 8 p.m. ET until late. See you there. Join us for election night &#8220;Anyone who makes an ",
+   "published": "2026-11-02T00:37:21+00:00",
+   "link": "https://www.thefp.com/p/haley-stevens-abdul-el-sayed-michigan-senate",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "\"You Can Prepare to be Overthrown\": Tucker on the Breaking Point of the Two-Party System",
+   "dek": "To submit your question for the next edition of AskTucker, join us at tuckercarlson.com/join Watch the full conversation here: https://youtu.be/Nm0gukcI3b8 Watch more here: https://watchtcn.co/49CDF2t #TuckerCarlson #CharlieKirk #midterms #Trump #thirdparty #datacenters #Republicanparty #socialism #Democrats #JamesTalarico #politicians #Islam #news #politics #podcast",
+   "opening": "",
+   "published": "2026-11-02T00:00:22+00:00",
+   "link": "https://www.youtube.com/watch?v=eRnp3KYt0CA",
+   "videoId": "eRnp3KYt0CA",
+   "publication": "tcn",
+   "source": "tcn",
+   "station": "RP",
+   "matched": {
+    "tx-sen": [
+     "talarico"
+    ],
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Tyler Cowen: No Matter Who Wins the Midterms, Economics Will Lose",
+   "dek": "Both parties used to craft their policies with the help of the best economic minds. Now they are driven almost entirely by politics and vibes, writes Tyler Cowen.",
+   "opening": "As a lifelong economist, I am distraught at what is happening to my profession. What I observe is economists losing status. Economists used to be highly respected figures, and nowadays, even when they are not pilloried, they are often simply ignored. There is an ongoing bipartisan flight from economic reasoning. And as voters go to the polls this week, neither Republicans nor Democrats are offering anything like a rigorous plan for economic growth. If we look at the 1960s, the John F. Kennedy and Lyndon Baines Johnson administrations brought James Tobin, Robert Solow, Kenneth Arrow (all three later Nobel laureates), Arthur Okun, Walter Heller, Gardner Ackley, Otto Eckstein, and Walt Rostow into government. Those were all names with significant academic heft who could count among the world&#8217;s leading macroeconomists. Nobel laureate Paul Samuelson served as a consultant to the government. Heller and some of the others helped to shape the Kennedy-Johnson tax cut of 1964. That cluster of talent and its influence should come as no surprise. This was an age of elites, of love for science, of the moon landing project, and of network news shows with an establishment bent. Americans were used to deferring to elites, who had won World War II for them, and who were not out there making fools of themselves on the internet. With the Cold War raging, Americans felt their government had to get it right. Mark your calendars. The Free Press and 2WAY are teaming up for a real-time interac",
+   "published": "2026-11-01T22:25:20+00:00",
+   "link": "https://www.thefp.com/p/tyler-cowen-economics-populism-midterms",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thepresi_adds-canadian-imports-lifts": [
+     "some",
+     "others"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Collins accuses Schumer of pushing attack ads filled with 'outright lies' in tight Maine race",
+   "dek": "Collins said Democrats are using a national political strategy to distract voters from local issues, while the latest Fox News poll shows her Maine Senate race tied at 49%.",
+   "opening": "Sen. Susan Collins on Sunday blasted Senate Minority Leader Chuck Schumer and the Democratic Party over what she described as a wave of false attack ads targeting her and other Republican candidates, saying she has never seen a campaign with \"so many outright lies.\" She made the remarks during an interview with Fox News on Sunday, just two days before Election Day in Maine, where she is seeking re-election in a closely watched race against Democratic rival Troy Jackson. According to the latest Fox News poll, the two candidates are tied at 49%. Collins accused Democrats of following \"Chuck Schumer's playbook,\" pointing to attack ads she said were nearly identical to those targeting other Republican lawmakers. MANCHIN CALLS SCHUMER 'CRAZY' FOR TRYING TO OUST GOP SENATOR IN CRUCIAL SENATE SHOWDOWN \"One of the outrageous, completely false ads against me had to do with Jeffrey Epstein. And it turns out, in talking to two of my colleagues who are in tough races, that they had virtually identical ads run against them. So this is part of Chuck Schumer's playbook,\" she said. \"There are a lot of differences between my opponent and me, but I've never seen a campaign with so many outright lies. It's very frustrating,\" she added. Collins further accused Democrats of trying to shift the focus away from local issues and toward divisive national political battles. \"It's certainly an attempt by my opponent and Chuck Schumer and their allies to nationalize this race,\" she said. SENATE CONTROL ",
+   "published": "2026-11-01T22:18:02-04:00",
+   "link": "https://www.foxnews.com/politics/collins-accuses-schumer-pushing-attack-ads-filled-outright-lies-tight-maine-race",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "me-sen": [
+     "collins",
+     "troy jackson",
+     "maine senate"
+    ],
+    "midterms": [
+     "senate race",
+     "poll shows"
+    ],
+    "obj_x_191-about-charges-convicted": [
+     "what",
+     "leader"
+    ],
+    "obj_x_accused-conspiracy-criminal-democratic": [
+     "democratic",
+     "accused"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Syria Weighs Joining Saudi Mutual Defense Pact as Yemen War Rages",
+   "dek": "A move to join Saudi Arabia’s agreement with Turkey and Pakistan could entangle more countries in the kingdom’s escalating conflict between the Iran-backed Houthis.",
+   "opening": "",
+   "published": "2026-11-01T20:08:50+00:00",
+   "link": "https://www.nytimes.com/2026/10/31/world/middleeast/syria-saudi-defense-pact.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran",
+     "houthi"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Iranian ‘ghost fleet’ filmed evading US blockade en route to China, UANI says",
+   "dek": "Smaller Iranian ghost fleet tankers are slipping past the U.S. naval blockade carrying sanctioned LPG fuel to China via a shadowy Malaysia anchorage.",
+   "opening": "Small Iranian \"ghost fleet\" tankers are slipping past the U.S. naval blockade and smuggling sanctioned liquefied petroleum gas (LPG) to China through a shadowy maritime hub off Malaysia, according to U.S. investigators who covertly filmed one of the vessels en route in September. United Against Nuclear Iran (UANI), which conducted the months-long probe, said at least nine similar tankers carrying Iranian oil or LPG have also evaded U.S. restrictions in the Strait of Hormuz since Washington reinstated the Iranian port blockade in July. UANI identified one of the sanctioned tankers as the SOGL. It allegedly escaped the blockade on Sept. 1 carrying approximately 500,000 barrels of Iranian LPG after collecting it at an Iranian port in August. The vessel then traveled thousands of miles to a Malaysian offshore anchorage, where UANI filmed the vessel receiving fuel and other services offshore. The ship then traveled on to China, where the organization said it discharged its Iranian cargo. IRAN’S $800M OIL SMUGGLING SCHEME USES TANKERS POSING AS IRAQI SHIPS TO DODGE BLOCKADE \"This tanker had loaded its Iranian LPG from Assaluyeh Port, Iran, in late August. It then breached the U.S. blockade and made its way to a Malaysian anchorage,\" Jemima Shelley, a senior analyst at UANI, explained. \"What this shows us is that some vessels are managing to breach the U.S. maritime blockade ,\" Shelley said of the footage shared exclusively with Fox News Digital. \"Most vessels aren't, but since the ",
+   "published": "2026-11-01T19:28:38-04:00",
+   "link": "https://www.foxnews.com/world/iranian-ghost-fleet-filmed-evading-us-blockade-en-route-china-uani-says",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "hormuz",
+     "strait of",
+     "tanker",
+     "petrol"
+    ],
+    "russia-sanctions": [
+     "sanction"
+    ],
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "DOJ set to appeal ruling in Alaska Senate race dispute over ‘Decoy Dan’",
+   "dek": "A federal judge rejected the DOJ&apos;s lawsuit to delay Alaska Senate election certification over the Dan Sullivan candidate controversy.",
+   "opening": "A federal judge on Sunday dismissed the Justice Department’s lawsuit seeking to delay certification of Alaska’s Senate election amid the \"Decoy Dan\" controversy, rejecting the Trump administration’s bid two days before the midterm elections. The DOJ said it would appeal. The lawsuit centered on two candidates with similar names: Republican Sen. Dan S. Sullivan and challenger Daniel J. Sullivan Jr. The DOJ lawsuit sought to delay or block certification while investigating whether voter confusion may have affected the outcome. DEM BUCKS PARTY OVER ALLEGED ALASKA VOTE-SIPHONING EFFORT: 'NEITHER PARTY SHOULD BE DOING IT' U.S. District Judge Sharon Gleason said the government had not shown how the requested investigation could identify voters’ intent while protecting ballot secrecy. She also said the relief sought would intrude on Alaska’s responsibility to run its elections. The DOJ said it would appeal, arguing the judge dismissed the case on procedural grounds without addressing its claim that Sullivan Jr. entered the race to confuse voters. The case now heads to the 9th U.S. Circuit Court of Appeals. The dispute has roiled the campaign in recent days. The New York Times reported that people connected to Democratic nominee Mary Peltola’s campaign helped recruit Sullivan Jr. to run as a spoiler. Peltola has denied involvement, and Sullivan Jr. has denied coordinating with her campaign. Sen. Sullivan said Sunday he would accept the results of Tuesday’s election, even as the Trump",
+   "published": "2026-11-01T18:16:21-04:00",
+   "link": "https://www.foxnews.com/politics/doj-set-appeal-ruling-alaska-senate-race-dispute-over-decoy-dan",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm",
+     "senate race"
+    ],
+    "obj_afederal_act-appeals-california-court": [
+     "appeals",
+     "grounds"
+    ],
+    "obj_thepresi_authority-block-dems-elections": [
+     "block",
+     "elections"
+    ],
+    "obj_thepresi_against-bbc-defamation-deposition": [
+     "judge",
+     "lawsuit"
+    ],
+    "obj_thepresi_administration-federal-halt-investigation": [
+     "judge",
+     "investigation"
+    ],
+    "obj_thesupre_alaska-department-justice-lawsuit": [
+     "justice",
+     "department",
+     "lawsuit",
+     "alaska",
+     "race"
+    ],
+    "obj_thejusti_about-biden-charged-fbi": [
+     "involvement",
+     "investigation"
+    ],
+    "obj_thejusti_alaska-dems-dismissal-doj": [
+     "alaska",
+     "election",
+     "lawsuit"
+    ],
+    "obj_thejusti_alaska-blanche-blocking-defends": [
+     "lawsuit",
+     "alaska",
+     "results",
+     "republican"
+    ],
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "election",
+     "results"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump Searches for a Fall Guy to Blame for Iran",
+   "dek": "",
+   "opening": "",
+   "published": "2026-11-01T14:16:17-05:00",
+   "link": "https://www.theatlantic.com/national-security/2026/11/trump-advisers-iran-war/689247/?utm_source=feed",
+   "videoId": null,
+   "publication": "atlantic",
+   "source": "atlantic",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Connecticut Dem Sen Chris Murphy hospitalized Saturday for stroke",
+   "dek": "Sen. Chris Murphy, D-Conn., was rushed to Johns Hopkins after suffering a stroke Saturday while attending his son&apos;s hockey game, his chief of staff says.",
+   "opening": "Sen. Chris Murphy, D-Conn., was hospitalized after experiencing a stroke, his chief of staff Allison Herwitt said in a statement released Sunday. Murphy, who is not running in the midterms but has been stumping for Democrats, began feeling numbness in his arm Saturday afternoon while at his son’s hockey game and was taken to a local hospital before being transferred to Johns Hopkins for further monitoring, according to Allison Herwitt. WHAT TO DO IF SOMEONE IS HAVING A STROKE, AFTER JILL BIDEN REVEALED DEBATE-NIGHT FEARS \"He was taken to a local hospital, where it was discovered he had experienced a stroke. He was transferred to Johns Hopkins for further monitoring and is responding well to treatment,\" she said in a statement. \"The doctors are encouraged by his progress, he is awake and alert, and we are optimistic he will make a full recovery.\" Murphy was first elected to the Senate in 2013 and has been viewed as a potential 2028 Democratic presidential primary candidate. He has spent the past several weeks on the campaign trail with Democrats as he stumped to help retake control of the Senate majority in the midterm elections. He had been scheduled to campaign for Democrats in New Hampshire on Sunday. Murphy is 53 years old, born August 3, 1973.",
+   "published": "2026-11-01T13:33:11-04:00",
+   "link": "https://www.foxnews.com/politics/connecticut-dem-sen-chris-murphy-hospitalized-stroke",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Democrat Haley Stevens endorses GOP Senate nominee Mike Rogers at Detroit church",
+   "dek": "Haley Stevens stood next to Mike Rogers at a Detroit church after Abdul El-Sayed&apos;s campaign withdrew her invitation over the antisemitic ad dispute.",
+   "opening": "Rep. Haley Stevens, D-Mich., endorsed Republican Senate candidate Mike Rogers on Sunday amid Democratic infighting that has roiled the Michigan Senate race. The endorsement came on the heels of Stevens' appearance alongside Rogers at Detroit’s Perfecting Church, where Fox News confirmed she attended a service. Stevens lost in the primary to fellow Democrat Abdul El-Sayed, and has been critical of his unwillingness to condemn the overt antisemitism of some of his supporters. \"Hey Michigan, as you may have seen, our Democratic nominee for U.S. Senate, Abdul [El-Sayed] said that I was no longer welcome in his campaign and that I should stay away and he's right. And that's why I'm endorsing Mike Rogers for the United States Senate today,\" Stevens said in a video posted on X. Stevens said she remains \"a very proud Democrat\" who loves Michigan but could not support El-Sayed, citing his backing from political streamer Hasan Piker. \"I'm honored to have Haley Stevens support today. I'm honored to have earned that vote,\" Rogers told reporters gathered outside the church. \"This is more a statement about standing together against hate and the future of this state and this country than it is anything else,\" he added. The appearance came after Stevens was disinvited from a planned church event with El-Sayed, the man who narrowly defeated her in Michigan’s August Democratic primary. The reversal left Stevens at the same church as Rogers, El-Sayed’s Republican opponent. HALEY STEVENS RIPPED ",
+   "published": "2026-11-01T12:04:03-04:00",
+   "link": "https://www.foxnews.com/politics/haley-stevens-appears-alongside-gop-rival-mike-rogers-detroit-church",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "senate race"
+    ]
+   },
+   "baseline": false
+  }
+ ],
+ "log": []
+}
