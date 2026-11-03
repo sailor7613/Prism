@@ -23,9 +23,12 @@
   "Accruals stay accruals.",
   "Prism sees it through Readings."
  ],
- "builtAt": "2026-11-02T22:48:44.345Z",
+ "builtAt": "2026-11-03T20:40:15.291Z",
  "errors": [
-  "GDELT russia: gave up: https://api.gdeltproject.org/api/v2/doc/doc?query=russia%20(refinery%20OR%20urals%20OR%20%22oil%20exports%22%20OR%20tanker)&mode=timelinevol&format=json&timespan=90d"
+  "GDELT iran: gave up: https://api.gdeltproject.org/api/v2/doc/doc?query=iran%20(oil%20OR%20tanker%20OR%20hormuz%20OR%20sanctions%20OR%20strike)&mode=timelinevol&format=json&timespan=90d",
+  "GDELT russia: gave up: https://api.gdeltproject.org/api/v2/doc/doc?query=russia%20(refinery%20OR%20urals%20OR%20%22oil%20exports%22%20OR%20tanker)&mode=timelinevol&format=json&timespan=90d",
+  "GDELT venezuela: gave up: https://api.gdeltproject.org/api/v2/doc/doc?query=venezuela%20(oil%20OR%20chevron%20OR%20pdvsa%20OR%20sanctions)&mode=timelinevol&format=json&timespan=90d",
+  "GDELT settlement: fetch failed"
  ],
  "realization": {
   "importsByOrigin": {
@@ -8756,7 +8759,7 @@
     }
    }
   },
-  "fetchedAt": "2026-11-02T22:46:29.587Z",
+  "fetchedAt": "2026-11-03T20:36:52.262Z",
   "column": "realization",
   "guard": "Flows do not score Z; they are the layer Z is scored from (PG01 §6.3.1).",
   "distillateImportsByOrigin": {
@@ -9707,15 +9710,19 @@
    "202608",
    "202609"
   ],
-  "fetchedAt": "2026-11-02T22:46:24.839Z",
+  "fetchedAt": "2026-11-03T20:36:47.476Z",
   "keyed": false,
   "errors": [
-   "Türkiye products 202601: HTTP 403",
+   "Türkiye crude 202609: HTTP 403",
+   "Türkiye products 202510: HTTP 403",
+   "Türkiye products 202511: HTTP 403",
+   "Türkiye products 202512: HTTP 403",
    "Türkiye products 202602: HTTP 403",
    "Türkiye products 202603: HTTP 403",
    "Türkiye products 202604: HTTP 403",
    "Türkiye products 202605: HTTP 403",
    "Türkiye products 202606: HTTP 403",
+   "Türkiye products 202607: HTTP 403",
    "Türkiye products 202608: HTTP 403",
    "Türkiye products 202609: HTTP 403",
    "United States crude 202510: HTTP 403",
@@ -21613,416 +21620,6 @@
     "cmd": "products",
     "kt": 7,
     "usdM": 9.8
-   },
-   {
-    "period": "2025-10",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "Brazil",
-    "partnerCode": 76,
-    "cmd": "products",
-    "kt": 0,
-    "usdM": 0
-   },
-   {
-    "period": "2025-10",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "Canada",
-    "partnerCode": 124,
-    "cmd": "products",
-    "kt": 0.1,
-    "usdM": 0.3
-   },
-   {
-    "period": "2025-10",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "China",
-    "partnerCode": 156,
-    "cmd": "products",
-    "kt": 0,
-    "usdM": 0.6
-   },
-   {
-    "period": "2025-10",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "Iran",
-    "partnerCode": 364,
-    "cmd": "products",
-    "kt": 0.1,
-    "usdM": 0.1
-   },
-   {
-    "period": "2025-10",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "Iraq",
-    "partnerCode": 368,
-    "cmd": "products",
-    "kt": 188.7,
-    "usdM": 59.6
-   },
-   {
-    "period": "2025-10",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "Kazakhstan",
-    "partnerCode": 398,
-    "cmd": "products",
-    "kt": 279.5,
-    "usdM": 119.8
-   },
-   {
-    "period": "2025-10",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "Kuwait",
-    "partnerCode": 414,
-    "cmd": "products",
-    "kt": 48,
-    "usdM": 34.6
-   },
-   {
-    "period": "2025-10",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "Malaysia",
-    "partnerCode": 458,
-    "cmd": "products",
-    "kt": 0.1,
-    "usdM": 0.1
-   },
-   {
-    "period": "2025-10",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "Qatar",
-    "partnerCode": 634,
-    "cmd": "products",
-    "kt": 3,
-    "usdM": 3.1
-   },
-   {
-    "period": "2025-10",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "Russia",
-    "partnerCode": 643,
-    "cmd": "products",
-    "kt": 1018.5,
-    "usdM": 657
-   },
-   {
-    "period": "2025-10",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "Saudi Arabia",
-    "partnerCode": 682,
-    "cmd": "products",
-    "kt": 257.2,
-    "usdM": 161.8
-   },
-   {
-    "period": "2025-10",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "India",
-    "partnerCode": 699,
-    "cmd": "products",
-    "kt": 26,
-    "usdM": 18.2
-   },
-   {
-    "period": "2025-10",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "UAE",
-    "partnerCode": 784,
-    "cmd": "products",
-    "kt": 0.2,
-    "usdM": 0.5
-   },
-   {
-    "period": "2025-10",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "United States",
-    "partnerCode": 842,
-    "cmd": "products",
-    "kt": 7.1,
-    "usdM": 7.6
-   },
-   {
-    "period": "2025-11",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "Algeria",
-    "partnerCode": 12,
-    "cmd": "products",
-    "kt": 0,
-    "usdM": 0
-   },
-   {
-    "period": "2025-11",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "Canada",
-    "partnerCode": 124,
-    "cmd": "products",
-    "kt": 0.1,
-    "usdM": 0.3
-   },
-   {
-    "period": "2025-11",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "China",
-    "partnerCode": 156,
-    "cmd": "products",
-    "kt": 0.1,
-    "usdM": 0.1
-   },
-   {
-    "period": "2025-11",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "Iran",
-    "partnerCode": 364,
-    "cmd": "products",
-    "kt": 0.3,
-    "usdM": 0.2
-   },
-   {
-    "period": "2025-11",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "Iraq",
-    "partnerCode": 368,
-    "cmd": "products",
-    "kt": 162.7,
-    "usdM": 52.7
-   },
-   {
-    "period": "2025-11",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "Kazakhstan",
-    "partnerCode": 398,
-    "cmd": "products",
-    "kt": 153.5,
-    "usdM": 64.6
-   },
-   {
-    "period": "2025-11",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "Kuwait",
-    "partnerCode": 414,
-    "cmd": "products",
-    "kt": 64.2,
-    "usdM": 46.5
-   },
-   {
-    "period": "2025-11",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "Malaysia",
-    "partnerCode": 458,
-    "cmd": "products",
-    "kt": 0,
-    "usdM": 0.1
-   },
-   {
-    "period": "2025-11",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "Qatar",
-    "partnerCode": 634,
-    "cmd": "products",
-    "kt": 10.4,
-    "usdM": 9.4
-   },
-   {
-    "period": "2025-11",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "Russia",
-    "partnerCode": 643,
-    "cmd": "products",
-    "kt": 1044.4,
-    "usdM": 672.2
-   },
-   {
-    "period": "2025-11",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "Saudi Arabia",
-    "partnerCode": 682,
-    "cmd": "products",
-    "kt": 171.9,
-    "usdM": 114.8
-   },
-   {
-    "period": "2025-11",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "India",
-    "partnerCode": 699,
-    "cmd": "products",
-    "kt": 104.7,
-    "usdM": 77.5
-   },
-   {
-    "period": "2025-11",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "UAE",
-    "partnerCode": 784,
-    "cmd": "products",
-    "kt": 0.1,
-    "usdM": 0.1
-   },
-   {
-    "period": "2025-11",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "United States",
-    "partnerCode": 842,
-    "cmd": "products",
-    "kt": 3.6,
-    "usdM": 3.7
-   },
-   {
-    "period": "2025-12",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "Algeria",
-    "partnerCode": 12,
-    "cmd": "products",
-    "kt": 0,
-    "usdM": 0
-   },
-   {
-    "period": "2025-12",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "Canada",
-    "partnerCode": 124,
-    "cmd": "products",
-    "kt": 0.1,
-    "usdM": 0.4
-   },
-   {
-    "period": "2025-12",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "China",
-    "partnerCode": 156,
-    "cmd": "products",
-    "kt": 0,
-    "usdM": 0.1
-   },
-   {
-    "period": "2025-12",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "Iran",
-    "partnerCode": 364,
-    "cmd": "products",
-    "kt": 0.2,
-    "usdM": 0.2
-   },
-   {
-    "period": "2025-12",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "Iraq",
-    "partnerCode": 368,
-    "cmd": "products",
-    "kt": 183.8,
-    "usdM": 60
-   },
-   {
-    "period": "2025-12",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "Kazakhstan",
-    "partnerCode": 398,
-    "cmd": "products",
-    "kt": 231.6,
-    "usdM": 93.8
-   },
-   {
-    "period": "2025-12",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "Mexico",
-    "partnerCode": 484,
-    "cmd": "products",
-    "kt": 0,
-    "usdM": 0
-   },
-   {
-    "period": "2025-12",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "Qatar",
-    "partnerCode": 634,
-    "cmd": "products",
-    "kt": 3.6,
-    "usdM": 4
-   },
-   {
-    "period": "2025-12",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "Russia",
-    "partnerCode": 643,
-    "cmd": "products",
-    "kt": 1436.4,
-    "usdM": 914.3
-   },
-   {
-    "period": "2025-12",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "Saudi Arabia",
-    "partnerCode": 682,
-    "cmd": "products",
-    "kt": 69.2,
-    "usdM": 45.3
-   },
-   {
-    "period": "2025-12",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "India",
-    "partnerCode": 699,
-    "cmd": "products",
-    "kt": 69.9,
-    "usdM": 49.7
-   },
-   {
-    "period": "2025-12",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "UAE",
-    "partnerCode": 784,
-    "cmd": "products",
-    "kt": 0.2,
-    "usdM": 0.3
-   },
-   {
-    "period": "2025-12",
-    "reporter": "Türkiye",
-    "reporterCode": 792,
-    "partner": "United States",
-    "partnerCode": 842,
-    "cmd": "products",
-    "kt": 2.9,
-    "usdM": 3.6
    }
   ]
  },
@@ -25176,7 +24773,7 @@
    "venezuela": "venezuela (oil OR chevron OR pdvsa OR sanctions)",
    "settlement": "(oil OR crude) (yuan OR petrodollar OR \"dollar settlement\" OR \"non-dollar\" OR invoicing)"
   },
-  "fetchedAt": "2026-11-02T22:48:44.339Z"
+  "fetchedAt": "2026-11-03T20:40:15.287Z"
  },
  "price": {
   "series": {
@@ -26963,12 +26560,16 @@
      [
       "2026-10-26",
       4.269
+     ],
+     [
+      "2026-11-02",
+      4.153
      ]
     ]
    }
   },
   "what": "The shadow: what the institutional stations read (PG01 §6.2c). Kept last.",
-  "fetchedAt": "2026-11-02T22:46:30.668Z",
+  "fetchedAt": "2026-11-03T20:36:53.266Z",
   "column": "price"
  }
 }
