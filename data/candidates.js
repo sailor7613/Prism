@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-11-03T11:04:42.464Z · 15 legislative + 5 news (GDELT, 3d)
+// 2026-11-03T19:38:47.113Z · 15 legislative + 6 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1793703828927,
+    "ts": 1793734713133,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.719,
+      "salience": 0.717,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -262,11 +262,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1793703828927,
+    "ts": 1793734713133,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.71,
+      "salience": 0.708,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -519,11 +519,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1793703828927,
+    "ts": 1793734713133,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.674,
+      "salience": 0.672,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -776,11 +776,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1793703828926,
+    "ts": 1793734713133,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.666,
+      "salience": 0.664,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -1033,11 +1033,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1793703828926,
+    "ts": 1793734713132,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.604,
+      "salience": 0.602,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -1946,11 +1946,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1793703828925,
+    "ts": 1793734713132,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.599,
+      "salience": 0.598,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -3092,11 +3092,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1793703828926,
+    "ts": 1793734713133,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.562,
+      "salience": 0.561,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3620,11 +3620,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1793703828926,
+    "ts": 1793734713132,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.539,
+      "salience": 0.538,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4521,11 +4521,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1793703828926,
+    "ts": 1793734713133,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.346,
+      "salience": 0.345,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5420,11 +5420,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1793703828926,
+    "ts": 1793734713132,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.296,
+      "salience": 0.295,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6562,11 +6562,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1793703828926,
+    "ts": 1793734713133,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.254,
+      "salience": 0.252,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7482,11 +7482,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1793703828927,
+    "ts": 1793734713133,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.252,
+      "salience": 0.251,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -8392,11 +8392,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1793703828926,
+    "ts": 1793734713133,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.218,
+      "salience": 0.216,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9310,11 +9310,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1793703828926,
+    "ts": 1793734713132,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.174,
+      "salience": 0.173,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10190,11 +10190,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1793703828926,
+    "ts": 1793734713132,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.17,
+      "salience": 0.168,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11064,61 +11064,47 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_democrat-end-kansas",
+    "cid": "cand_news_admissions-dismisses-harvard",
     "source": "news",
-    "ts": 1793703882460,
+    "ts": 1793734727109,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.725,
+      "salience": 0.618,
       "articles": [
         {
-          "title": "Kansas Democrat targets Trump voter support as Senate race nears end",
-          "url": "https://wjla.com/news/nation-world/kansas-democrat-adam-hamilton-targets-president-trump-voters-support-as-senate-race-midterm-election-nears-end-rrt",
-          "domain": "wjla.com",
-          "seendate": "2026-11-03T02:15:00Z",
-          "image": "https://wjla.com/resources/media2/16x9/6000/1320/0x109/90/a2c9c444-5118-4cc2-b998-7160511acccc-GettyImages2302723808.jpg"
+          "title": "Judge Dismisses Trump Suit Over Harvard Admissions Records",
+          "url": "https://1190kex.iheart.com/content/2026-11-03-judge-dismisses-trump-suit-over-harvard-admissions-records/",
+          "domain": "1190kex.iheart.com",
+          "seendate": "2026-11-03T11:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6ae97cb8a079d731c06006dd?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "Kansas Democrat targets Trump voter support as Senate race nears end",
-          "url": "https://wwmt.com/news/nation-world/kansas-democrat-adam-hamilton-targets-president-trump-voters-support-as-senate-race-midterm-election-nears-end-rrt",
-          "domain": "wwmt.com",
-          "seendate": "2026-11-03T02:15:00Z",
-          "image": "https://wwmt.com/resources/media2/16x9/6000/1320/0x109/90/a2c9c444-5118-4cc2-b998-7160511acccc-GettyImages2302723808.jpg"
+          "title": "Judge Dismisses Trump Suit Over Harvard Admissions Records",
+          "url": "https://wflaorlando.iheart.com/content/2026-11-03-judge-dismisses-trump-suit-over-harvard-admissions-records/",
+          "domain": "wflaorlando.iheart.com",
+          "seendate": "2026-11-03T11:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6ae97cb8a079d731c06006dd?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "Kansas Democrat targets Trump voter support as Senate race nears end",
-          "url": "https://kfdm.com/news/nation-world/kansas-democrat-adam-hamilton-targets-president-trump-voters-support-as-senate-race-midterm-election-nears-end-rrt",
-          "domain": "kfdm.com",
-          "seendate": "2026-11-03T02:15:00Z",
-          "image": "https://kfdm.com/resources/media2/16x9/6000/1320/0x109/90/a2c9c444-5118-4cc2-b998-7160511acccc-GettyImages2302723808.jpg"
+          "title": "Judge Dismisses Trump Suit Over Harvard Admissions Records",
+          "url": "https://wflanews.iheart.com/content/2026-11-03-judge-dismisses-trump-suit-over-harvard-admissions-records/",
+          "domain": "wflanews.iheart.com",
+          "seendate": "2026-11-03T11:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6ae97cb8a079d731c06006dd?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "Kansas Democrat targets Trump voter support as Senate race nears end",
-          "url": "https://upnorthlive.com/news/nation-world/kansas-democrat-adam-hamilton-targets-president-trump-voters-support-as-senate-race-midterm-election-nears-end-rrt",
-          "domain": "upnorthlive.com",
-          "seendate": "2026-11-03T02:15:00Z",
-          "image": "https://upnorthlive.com/resources/media2/16x9/6000/1320/0x109/90/a2c9c444-5118-4cc2-b998-7160511acccc-GettyImages2302723808.jpg"
-        },
-        {
-          "title": "Kansas Democrat targets Trump voter support as Senate race nears end",
-          "url": "https://okcfox.com/news/nation-world/kansas-democrat-adam-hamilton-targets-president-trump-voters-support-as-senate-race-midterm-election-nears-end-rrt",
-          "domain": "okcfox.com",
-          "seendate": "2026-11-03T02:15:00Z",
-          "image": "https://okcfox.com/resources/media2/16x9/6000/1320/0x109/90/a2c9c444-5118-4cc2-b998-7160511acccc-GettyImages2302723808.jpg"
-        },
-        {
-          "title": "Kansas Democrat targets Trump voter support as Senate race nears end",
-          "url": "https://fox23maine.com/news/nation-world/kansas-democrat-adam-hamilton-targets-president-trump-voters-support-as-senate-race-midterm-election-nears-end-rrt",
-          "domain": "fox23maine.com",
-          "seendate": "2026-11-03T02:15:00Z",
-          "image": "https://fox23maine.com/resources/media2/16x9/6000/1320/0x109/90/a2c9c444-5118-4cc2-b998-7160511acccc-GettyImages2302723808.jpg"
+          "title": "Judge Dismisses Trump Suit Over Harvard Admissions Records | News Radio 101 . 9 Big WAAX",
+          "url": "https://1019bigwaax.iheart.com/content/2026-11-03-judge-dismisses-trump-suit-over-harvard-admissions-records/",
+          "domain": "1019bigwaax.iheart.com",
+          "seendate": "2026-11-03T11:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6ae97cb8a079d731c06006dd?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         }
       ]
     },
-    "title": "Kansas Democrat targets Trump voter support as Senate race nears end",
-    "summary": "2026-11-03 wjla.com: Kansas Democrat targets Trump voter support as Senate race nears end\n2026-11-03 wwmt.com: Kansas Democrat targets Trump voter support as Senate race nears end\n2026-11-03 kfdm.com: Kansas Democrat targets Trump voter support as Senate race nears end\n2026-11-03 upnorthlive.com: Kansas Democrat targets Trump voter support as Senate race nears end\n2026-11-03 okcfox.com: Kansas Democrat targets Trump voter support as Senate race nears end\n2026-11-03 fox23maine.com: Kansas Democrat targets Trump voter support as Senate race nears end",
+    "title": "Judge Dismisses Trump Suit Over Harvard Admissions Records",
+    "summary": "2026-11-03 1190kex.iheart.com: Judge Dismisses Trump Suit Over Harvard Admissions Records\n2026-11-03 wflaorlando.iheart.com: Judge Dismisses Trump Suit Over Harvard Admissions Records\n2026-11-03 wflanews.iheart.com: Judge Dismisses Trump Suit Over Harvard Admissions Records\n2026-11-03 1019bigwaax.iheart.com: Judge Dismisses Trump Suit Over Harvard Admissions Records | News Radio 101 . 9 Big WAAX",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -11130,12 +11116,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_ballots-california-court",
     "source": "news",
-    "ts": 1793703882460,
+    "ts": 1793734727109,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.67,
+      "salience": 0.616,
       "articles": [
         {
           "title": "Supreme Court rejects Trump push on California ballots",
@@ -11187,12 +11173,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_congress-control-fight",
     "source": "news",
-    "ts": 1793703882460,
+    "ts": 1793734727109,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.67,
+      "salience": 0.616,
       "articles": [
         {
           "title": "Trump makes final midterm pitch as Republican fight to keep control of Congress",
@@ -11244,12 +11230,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_appeal-ballot-court",
     "source": "news",
-    "ts": 1793703882460,
+    "ts": 1793734727109,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.615,
+      "salience": 0.561,
       "articles": [
         {
           "title": "Supreme Court Denies Trump Mail - In Ballot Appeal",
@@ -11292,14 +11278,64 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_half-identify-independent",
+    "cid": "cand_news_democrat-end-kansas",
     "source": "news",
-    "ts": 1793703882460,
+    "ts": 1793734727110,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.56,
+      "salience": 0.561,
+      "articles": [
+        {
+          "title": "Kansas Democrat targets Trump voter support as Senate race nears end",
+          "url": "https://wjla.com/news/nation-world/kansas-democrat-adam-hamilton-targets-president-trump-voters-support-as-senate-race-midterm-election-nears-end-rrt",
+          "domain": "wjla.com",
+          "seendate": "2026-11-03T02:15:00Z",
+          "image": "https://wjla.com/resources/media2/16x9/6000/1320/0x109/90/a2c9c444-5118-4cc2-b998-7160511acccc-GettyImages2302723808.jpg"
+        },
+        {
+          "title": "Kansas Democrat targets Trump voter support as Senate race nears end",
+          "url": "https://wwmt.com/news/nation-world/kansas-democrat-adam-hamilton-targets-president-trump-voters-support-as-senate-race-midterm-election-nears-end-rrt",
+          "domain": "wwmt.com",
+          "seendate": "2026-11-03T02:15:00Z",
+          "image": "https://wwmt.com/resources/media2/16x9/6000/1320/0x109/90/a2c9c444-5118-4cc2-b998-7160511acccc-GettyImages2302723808.jpg"
+        },
+        {
+          "title": "Kansas Democrat targets Trump voter support as Senate race nears end",
+          "url": "https://kfdm.com/news/nation-world/kansas-democrat-adam-hamilton-targets-president-trump-voters-support-as-senate-race-midterm-election-nears-end-rrt",
+          "domain": "kfdm.com",
+          "seendate": "2026-11-03T02:15:00Z",
+          "image": "https://kfdm.com/resources/media2/16x9/6000/1320/0x109/90/a2c9c444-5118-4cc2-b998-7160511acccc-GettyImages2302723808.jpg"
+        },
+        {
+          "title": "Kansas Democrat targets Trump voter support as Senate race nears end",
+          "url": "https://upnorthlive.com/news/nation-world/kansas-democrat-adam-hamilton-targets-president-trump-voters-support-as-senate-race-midterm-election-nears-end-rrt",
+          "domain": "upnorthlive.com",
+          "seendate": "2026-11-03T02:15:00Z",
+          "image": "https://upnorthlive.com/resources/media2/16x9/6000/1320/0x109/90/a2c9c444-5118-4cc2-b998-7160511acccc-GettyImages2302723808.jpg"
+        }
+      ]
+    },
+    "title": "Kansas Democrat targets Trump voter support as Senate race nears end",
+    "summary": "2026-11-03 wjla.com: Kansas Democrat targets Trump voter support as Senate race nears end\n2026-11-03 wwmt.com: Kansas Democrat targets Trump voter support as Senate race nears end\n2026-11-03 kfdm.com: Kansas Democrat targets Trump voter support as Senate race nears end\n2026-11-03 upnorthlive.com: Kansas Democrat targets Trump voter support as Senate race nears end",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_half-identify-independent",
+    "source": "news",
+    "ts": 1793734727109,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.506,
       "articles": [
         {
           "title": "Nearly half of voters identify as independent . Will it make Washington more moderate ? ",
