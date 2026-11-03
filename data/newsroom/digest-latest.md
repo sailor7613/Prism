@@ -1,9 +1,9 @@
 # Newsroom digest — 2026-11-03
 
-Register: 143 objects · this scan: 2 new, 1 seen again, 0 returned.
+Register: 143 objects · this scan: 0 new, 1 seen again, 0 returned.
 
-## Queued for drafting (1)
-- **Judge Dismisses Trump Suit Over Harvard Admissions Records** — ruling · ruled · holder: a federal court · formed 2026-11-03 · 4 outlets (peak 4) · `obj_afederal_admissions-dismisses-harvard-judge`
+## Queued for drafting (0)
+- (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
 - none today
@@ -12,8 +12,7 @@ Register: 143 objects · this scan: 2 new, 1 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **Judge Dismisses Trump Suit Over Harvard Admissions Records** — ruling · ruled · holder: a federal court · formed 2026-11-03 · 4 outlets (peak 4) · `obj_afederal_admissions-dismisses-harvard-judge`
-- **California cosmetic dermatologist convicted in stunning case of Medicare fraud** — indictment · charged · holder: ? · formed 2026-11-03 · 6 outlets (peak 6) · `obj_x_california-case-convicted-cosmetic`
+- none
 
 ## Watching (45)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
