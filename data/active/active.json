@@ -23,12 +23,11 @@
   "Accruals stay accruals.",
   "Prism sees it through Readings."
  ],
- "builtAt": "2026-11-03T20:40:15.291Z",
+ "builtAt": "2026-11-04T20:56:19.676Z",
  "errors": [
   "GDELT iran: gave up: https://api.gdeltproject.org/api/v2/doc/doc?query=iran%20(oil%20OR%20tanker%20OR%20hormuz%20OR%20sanctions%20OR%20strike)&mode=timelinevol&format=json&timespan=90d",
   "GDELT russia: gave up: https://api.gdeltproject.org/api/v2/doc/doc?query=russia%20(refinery%20OR%20urals%20OR%20%22oil%20exports%22%20OR%20tanker)&mode=timelinevol&format=json&timespan=90d",
-  "GDELT venezuela: gave up: https://api.gdeltproject.org/api/v2/doc/doc?query=venezuela%20(oil%20OR%20chevron%20OR%20pdvsa%20OR%20sanctions)&mode=timelinevol&format=json&timespan=90d",
-  "GDELT settlement: fetch failed"
+  "GDELT settlement: gave up: https://api.gdeltproject.org/api/v2/doc/doc?query=(oil%20OR%20crude)%20(yuan%20OR%20petrodollar%20OR%20%22dollar%20settlement%22%20OR%20%22non-dollar%22%20OR%20invoicing)&mode=timelinevol&format=json&timespan=90d"
  ],
  "realization": {
   "importsByOrigin": {
@@ -8160,6 +8159,10 @@
       [
        "2026-10-23",
        4854
+      ],
+      [
+       "2026-10-30",
+       3675
       ]
      ]
     },
@@ -8754,12 +8757,16 @@
       [
        "2026-10-23",
        6374
+      ],
+      [
+       "2026-10-30",
+       6374
       ]
      ]
     }
    }
   },
-  "fetchedAt": "2026-11-03T20:36:52.262Z",
+  "fetchedAt": "2026-11-04T20:52:38.034Z",
   "column": "realization",
   "guard": "Flows do not score Z; they are the layer Z is scored from (PG01 §6.3.1).",
   "distillateImportsByOrigin": {
@@ -9710,13 +9717,14 @@
    "202608",
    "202609"
   ],
-  "fetchedAt": "2026-11-03T20:36:47.476Z",
+  "fetchedAt": "2026-11-04T20:52:28.645Z",
   "keyed": false,
   "errors": [
    "Türkiye crude 202609: HTTP 403",
    "Türkiye products 202510: HTTP 403",
    "Türkiye products 202511: HTTP 403",
    "Türkiye products 202512: HTTP 403",
+   "Türkiye products 202601: HTTP 403",
    "Türkiye products 202602: HTTP 403",
    "Türkiye products 202603: HTTP 403",
    "Türkiye products 202604: HTTP 403",
@@ -24762,6 +24770,10 @@
      [
       "2026-10-27",
       0.0451
+     ],
+     [
+      "2026-11-03",
+      0.1939
      ]
     ]
    }
@@ -24773,7 +24785,7 @@
    "venezuela": "venezuela (oil OR chevron OR pdvsa OR sanctions)",
    "settlement": "(oil OR crude) (yuan OR petrodollar OR \"dollar settlement\" OR \"non-dollar\" OR invoicing)"
   },
-  "fetchedAt": "2026-11-03T20:40:15.287Z"
+  "fetchedAt": "2026-11-04T20:56:19.671Z"
  },
  "price": {
   "series": {
@@ -25368,6 +25380,10 @@
      [
       "2026-10-23",
       107.17
+     ],
+     [
+      "2026-10-30",
+      105.59
      ]
     ]
    },
@@ -25962,6 +25978,10 @@
      [
       "2026-10-23",
       121.02
+     ],
+     [
+      "2026-10-30",
+      121.17
      ]
     ]
    },
@@ -26569,7 +26589,7 @@
    }
   },
   "what": "The shadow: what the institutional stations read (PG01 §6.2c). Kept last.",
-  "fetchedAt": "2026-11-03T20:36:53.266Z",
+  "fetchedAt": "2026-11-04T20:52:43.133Z",
   "column": "price"
  }
 }
