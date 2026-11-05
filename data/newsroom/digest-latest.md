@@ -1,4 +1,4 @@
-# Newsroom digest — 2026-11-04
+# Newsroom digest — 2026-11-05
 
 Register: 143 objects · this scan: 0 new, 1 seen again, 0 returned.
 
