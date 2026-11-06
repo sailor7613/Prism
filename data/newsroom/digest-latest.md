@@ -1,10 +1,9 @@
 # Newsroom digest — 2026-11-06
 
-Register: 146 objects · this scan: 3 new, 0 seen again, 0 returned.
+Register: 148 objects · this scan: 2 new, 0 seen again, 0 returned.
 
-## Queued for drafting (2)
-- **A judge blocks construction of Trump arch moments after it won federal approval** — ruling · ruled · holder: a federal court · formed 2026-11-06 · 25 outlets (peak 25) · `obj_afederal_approval-arch-blocks-construction`
-- **DOJ Seeks To Overturn Steve Bannon Conviction** — ruling · ruled · holder: the Justice Department · formed 2026-11-06 · 17 outlets (peak 17) · `obj_thejusti_bannon-conviction-doj-overturn`
+## Queued for drafting (1)
+- **Judge blocks Trump 250 - foot triumphal arch hours after final planning approval** — ruling · ruled · holder: a federal court · formed 2026-11-06 · 9 outlets (peak 9) · `obj_afederal_250-approval-arch-blocks`
 
 ## Permanence breaks (went silent while unresolved)
 - none today
@@ -13,11 +12,10 @@ Register: 146 objects · this scan: 3 new, 0 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **A judge blocks construction of Trump arch moments after it won federal approval** — ruling · ruled · holder: a federal court · formed 2026-11-06 · 25 outlets (peak 25) · `obj_afederal_approval-arch-blocks-construction`
-- **Trump Declares Oval Office A National Monument** — law · signed · holder: ? · formed 2026-11-06 · 21 outlets (peak 21) · `obj_x_declares-monument-national-office`
-- **DOJ Seeks To Overturn Steve Bannon Conviction** — ruling · ruled · holder: the Justice Department · formed 2026-11-06 · 17 outlets (peak 17) · `obj_thejusti_bannon-conviction-doj-overturn`
+- **Judge blocks Trump 250 - foot triumphal arch hours after final planning approval** — ruling · ruled · holder: a federal court · formed 2026-11-06 · 9 outlets (peak 9) · `obj_afederal_250-approval-arch-blocks`
+- **Ukrainian President Zelenskyy presses Western allies for clear postwar security guarantees** — vote · voted · holder: the President · formed 2026-11-06 · 3 outlets (peak 3) · `obj_thepresi_allies-clear-guarantees-postwar`
 
-## Watching (45)
+## Watching (46)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
 - **Former state senator sentenced to 16 months in child solicitation case** — indictment · charged · holder: the Senate · formed 2026-09-23 · 4 outlets (peak 4) · `obj_thesenat_case-child-former-months`
 - **CNN , MS NOW and Politico back at the White House after judge ordered Trump to lift ban** — ruling · ruled · holder: the House · formed 2026-09-24 · 18 outlets (peak 18) · `obj_thehouse_back-ban-cnn-house`
